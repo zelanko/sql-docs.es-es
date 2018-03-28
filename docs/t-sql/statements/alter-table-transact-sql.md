@@ -1,16 +1,16 @@
 ---
 title: ALTER TABLE (Transact-SQL) | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 08/07/2017
 ms.prod: sql-non-specified
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
-ms.service: 
+ms.service: ''
 ms.component: t-sql|statements
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - WAIT_AT_LOW_PRIORITY
@@ -61,22 +61,24 @@ helpviewer_keywords:
 - dropping columns
 - table changes [SQL Server]
 ms.assetid: f1745145-182d-4301-a334-18f799d361d1
-caps.latest.revision: 
+caps.latest.revision: ''
 author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: Active
-ms.openlocfilehash: 62bb3df1044b6acc580daefc75ace88bca441e53
-ms.sourcegitcommit: 82c9868b5bf95e5b0c68137ba434ddd37fc61072
+ms.openlocfilehash: b4a725960612c90a4619cf16587df0f67a68a3ba
+ms.sourcegitcommit: 6e16d1616985d65484c72f5e0f34fb2973f828f4
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/22/2018
+ms.lasthandoff: 03/16/2018
 ---
 # <a name="alter-table-transact-sql"></a>ALTER TABLE (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
 
   Modifica una definición de tabla al alterar, agregar o quitar columnas y restricciones, reasignar y regenerar particiones, o deshabilitar o habilitar restricciones y desencadenadores.  
-  
+
+[!INCLUDE[ssMIlimitation](../../includes/sql-db-mi-limitation.md)]
+
  ![Icono de vínculo de tema](../../database-engine/configure-windows/media/topic-link.gif "Icono de vínculo de tema") [Convenciones de sintaxis de Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>Sintaxis  
@@ -375,7 +377,7 @@ A continuación se indican los criterios de *type_name* en una columna modificad
   
  Solo se aplica al tipo de datos **xml** para asociar un esquema XML con el tipo. Antes de escribir una columna **xml** en una colección de esquemas, la colección de esquemas debe crearse en la base de datos mediante el uso de [CREATE XML SCHEMA COLLECTION](../../t-sql/statements/create-xml-schema-collection-transact-sql.md).  
   
-COLLATE \< *collation_name* > Especifica la nueva intercalación para la columna alterada. Si no se especifica, se asigna a la columna la intercalación predeterminada de la base de datos. El nombre de intercalación puede ser un nombre de intercalación de Windows o un nombre de intercalación de SQL. Para obtener una lista y más información, vea [Nombre de intercalación de Windows &#40;Transact-SQL&#41;](../../t-sql/statements/windows-collation-name-transact-sql.md) y [Nombre de intercalación de SQL Server &#40;Transact-SQL&#41;](../../t-sql/statements/sql-server-collation-name-transact-sql.md).  
+COLLATE \< *collation_name* > Especifica la nueva intercalación para la columna alterada. Si no se especifica, se asigna a la columna la intercalación predeterminada de la base de datos. El nombre de intercalación puede ser un nombre de intercalación de Windows o un nombre de intercalación de SQL. Para obtener una lista y más información, vea [Windows Collation Name &#40;Transact-SQL&#41;](../../t-sql/statements/windows-collation-name-transact-sql.md) (Nombre de intercalación de Windows &#40;Transact-SQL&#41;) y [SQL Server Collation Name &#40;Transact-SQL&#41;](../../t-sql/statements/sql-server-collation-name-transact-sql.md) (Nombre de intercalación de SQL Server &#40;Transact-SQL&#41;).  
   
  La cláusula COLLATE se puede usar para cambiar únicamente las intercalaciones de las columnas con tipos de datos **char**, **varchar**, **nchar** y **nvarchar**. Para modificar la intercalación de una columna de tipo de datos de alias definido por el usuario, debe ejecutar distintas instrucciones ALTER TABLE para cambiar la columna por un tipo de datos del sistema de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] y modificar su intercalación, y a continuación volver a modificar la columna para que sea un tipo de datos de alias.  
   
@@ -407,7 +409,7 @@ ALTER TABLE MyTable ALTER COLUMN NullCOl NVARCHAR(20) NOT NULL;
 > Si se especifica NULL o NOT NULL con ALTER COLUMN, también se debe especificar *new_data_type* [(*precision* [, *scale* ])]. Si el tipo de datos, la precisión y la escala no se cambian, especifique los valores actuales de la columna.  
   
  [ {ADD | DROP} ROWGUIDCOL ]  
- **Se aplica a**: desde [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] hasta [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] y [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)].  
+ **Se aplica a**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] a [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] y [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)].  
   
  Especifica que la propiedad ROWGUIDCOL se agrega a la columna indicada o se quita de ella. ROWGUIDCOL indica que la columna es una columna GUID de fila. Solo se puede designar una columna **uniqueidentifier** por tabla como columna ROWGUIDCOL y la propiedad ROWGUIDCOL solo se puede asignar a una columna **uniqueidentifier**. ROWGUIDCOL no puede asignarse a una columna de un tipo de datos definido por el usuario.  
   
@@ -419,12 +421,12 @@ ALTER TABLE MyTable ALTER COLUMN NullCOl NVARCHAR(20) NOT NULL;
  Las columnas calculadas que se utilizan como columna de partición de una tabla con particiones deben marcarse explícitamente como PERSISTED.  
   
  DROP NOT FOR REPLICATION  
- **Se aplica a**: desde [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] hasta [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] y [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)].  
+ **Se aplica a**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] a [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] y [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)].  
   
  Especifica que los valores de columnas de identidad se incrementan cuando los agentes de replicación realizan operaciones de inserción. Esta cláusula solo se puede especificar si *column_name* es una columna de identidad.  
   
  SPARSE  
- Indica que la columna es una columna dispersa. El almacenamiento de columnas dispersas está optimizado para los valores NULL. Las columnas dispersas no se pueden designar como NOT NULL. Al convertir una columna de dispersa a no dispersa o viceversa, se bloquea la tabla durante la ejecución del comando. Es posible que tenga que usar la cláusula REBUILD para recuperar espacio. Para obtener restricciones adicionales y más información sobre columnas dispersas, vea [Usar columnas dispersas](../../relational-databases/tables/use-sparse-columns.md).  
+ Indica que la columna es una columna dispersa. El almacenamiento de columnas dispersas está optimizado para los valores NULL. Las columnas dispersas no se pueden designar como NOT NULL. Al convertir una columna de dispersa a no dispersa o viceversa, se bloquea la tabla durante la ejecución del comando. Es posible que tenga que usar la cláusula REBUILD para recuperar espacio. Para conocer otras restricciones y leer más información sobre columnas dispersas, vea [Usar columnas dispersas](../../relational-databases/tables/use-sparse-columns.md).  
   
  ADD MASKED WITH ( FUNCTION = ' *mask_function* ')  
  **Se aplica a**: desde [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] hasta [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] y [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)].  
@@ -564,7 +566,7 @@ WITH CHECK | WITH NOCHECK
  OFF  
  Los bloqueos de tabla se aplican durante la operación de índice. Una operación de índice sin conexión para crear, volver a crear o quitar un índice clúster, o para volver a crear o quitar un índice no clúster, adquiere un bloqueo de modificación del esquema (Sch-M) de la tabla. Esto evita que todos los usuarios tengan acceso a la tabla subyacente durante la operación. Una operación de índice sin conexión que crea un índice no clúster adquiere un bloqueo compartido (S) en la tabla. Esto evita que se realicen actualizaciones en la tabla subyacente, pero permite la realización de operaciones de lectura, como instrucciones SELECT. Se permiten operaciones multiproceso de regeneración del montón.  
   
- Para obtener más información, vea [Cómo funcionan las operaciones de índice en línea](../../relational-databases/indexes/how-online-index-operations-work.md).  
+ Para más información, vea [Cómo funcionan las operaciones de índice en línea](../../relational-databases/indexes/how-online-index-operations-work.md).  
   
 > [!NOTE]  
 >  Las operaciones de índices en línea no están disponibles en todas las ediciones de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Para obtener más información, consulte [Ediciones y características admitidas de SQL Server 2016](../../sql-server/editions-and-supported-features-for-sql-server-2016.md).  
@@ -575,7 +577,7 @@ WITH CHECK | WITH NOCHECK
  Especifica una ubicación a la que mover las filas de datos que se encuentran en el nivel hoja del índice clúster. La tabla se mueve a la nueva ubicación. Esta opción solo se aplica a las restricciones que crean un índice clúster.  
   
 > [!NOTE]  
->  En este contexto, el valor predeterminado no es una palabra clave. Es un identificador para el grupo de archivos predeterminado y debe delimitarse, como en MOVE TO **"**default**"** o MOVE TO **[**default**]**. Si se especifica **"**default**"**, la opción QUOTED_IDENTIFIER debe estar ON para la sesión actual. Esta es la configuración predeterminada. Para obtener más información, vea [SET QUOTED_IDENTIFIER &#40;Transact-SQL&#41;](../../t-sql/statements/set-quoted-identifier-transact-sql.md).  
+>  En este contexto, el valor predeterminado no es una palabra clave. Es un identificador para el grupo de archivos predeterminado y debe delimitarse, como en MOVE TO **"**default**"** o MOVE TO **[**default**]**. Si se especifica **"**default**"**, la opción QUOTED_IDENTIFIER debe ser ON para la sesión actual. Esta es la configuración predeterminada. Para obtener más información, vea [SET QUOTED_IDENTIFIER &#40;Transact-SQL&#41;](../../t-sql/statements/set-quoted-identifier-transact-sql.md).  
   
  { CHECK | NOCHECK } CONSTRAINT  
  Especifica si *constraint_name* está habilitado o deshabilitado. Esta opción solo se puede utilizar con las restricciones FOREIGN KEY y CHECK. Cuando se especifica NOCHECK, la restricción se deshabilita y las posteriores inserciones o actualizaciones de la columna no se validan con las condiciones de la restricción. Las restricciones DEFAULT, PRIMARY KEY y UNIQUE no se pueden deshabilitar.  
@@ -653,14 +655,14 @@ Para **CAMBIAR** de restricción al utilizar la replicación, vea [Replicar tabl
  SET **(** SYSTEM_VERSIONING **=** { OFF | ON [ ( HISTORY_TABLE = schema_name . history_table_name [ , DATA_CONSISTENCY_CHECK = { **ON** | OFF } ]  ) ] } **)**  
  **Se aplica a**: desde [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] hasta [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] y [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)].  
   
- Habilita o deshabilita el control de versiones del sistema de una tabla. Para habilitar el control de versiones del sistema de una tabla, el sistema comprueba que se cumplan los requisitos de restricción del tipo de datos, de la restricción de nulabilidad y de la clave principal para el control de versiones del sistema. Si no se utiliza el argumento HISTORY_TABLE, el sistema genera una nueva tabla de historial que coincide con el esquema de la tabla actual, creando un vínculo entre las dos tablas, y permite que el sistema registre el historial de cada registro de la tabla actual en la tabla de historial. El nombre de esta tabla de historial será `MSSQL_TemporalHistoryFor<primary_table_object_id>`. Si el argumento HISTORY_TABLE se utiliza para crear un vínculo a un historial existente y para utilizarlo, se crea el vínculo entre la tabla actual y la tabla especificada. Al crear un vínculo a una tabla de historial existente, puede realizar una comprobación de coherencia de datos. Esta comprobación de coherencia de datos garantiza que los registros existentes no se superpongan. La comprobación de coherencia de datos se realiza de manera predeterminada. Para obtener más información, consulte [Temporal Tables](../../relational-databases/tables/temporal-tables.md).  
+ Habilita o deshabilita el control de versiones del sistema de una tabla. Para habilitar el control de versiones del sistema de una tabla, el sistema comprueba que se cumplan los requisitos de restricción del tipo de datos, de la restricción de nulabilidad y de la clave principal para el control de versiones del sistema. Si no se utiliza el argumento HISTORY_TABLE, el sistema genera una nueva tabla de historial que coincide con el esquema de la tabla actual, creando un vínculo entre las dos tablas, y permite que el sistema registre el historial de cada registro de la tabla actual en la tabla de historial. El nombre de esta tabla de historial será `MSSQL_TemporalHistoryFor<primary_table_object_id>`. Si se usa el argumento HISTORY_TABLE para crear un vínculo a un historial existente y usarlo, dicho vínculo se crea entre la tabla actual y la tabla especificada. Al crear un vínculo a una tabla de historial existente, puede realizar una comprobación de coherencia de datos. Esta comprobación de coherencia de datos garantiza que los registros existentes no se superponen. La comprobación de coherencia de datos se realiza de manera predeterminada. Para obtener más información, consulte [Temporal Tables](../../relational-databases/tables/temporal-tables.md).  
   
 HISTORY_RETENTION_PERIOD = { **INFINITE** | number {DAY | DAYS | WEEK |  WEEKS | MONTH | MONTHS | YEAR | YEARS} } **Se aplica a**:  [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)].  
 
 Especifica la retención finita o infinita de los datos del historial en la tabla temporal. Si se omite, se presupone la retención infinita.
   
  SET **(** LOCK_ESCALATION = { AUTO | TABLE | DISABLE } **)**  
- **Se aplica a**: desde [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] hasta [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] y [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)].  
+ **Se aplica a**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] a [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] y [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)].  
   
  Especifica los métodos permitidos de extensión de bloqueo para una tabla.  
   
@@ -683,7 +685,7 @@ TABLE
  Utilice la sintaxis de REBUILD PARTITION para volver a generar una partición única en una tabla con particiones.  
   
  PARTITION = ALL  
- **Se aplica a**: desde [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] hasta [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] y [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)].  
+ **Se aplica a**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] a [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] y [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)].  
   
  Vuelve a generar todas las particiones al cambiar los valores de compresión de la partición.  
   
@@ -695,7 +697,7 @@ TABLE
  Para obtener una descripción completa de las opciones de recompilación, vea [index_option &#40;Transact-SQL&#41;](../../t-sql/statements/alter-table-index-option-transact-sql.md).  
   
  DATA_COMPRESSION  
- **Se aplica a**: desde [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] hasta [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] y [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)].  
+ **Se aplica a**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] a [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] y [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)].  
   
  Especifica la opción de compresión de datos para la tabla, el número de partición o el intervalo de particiones especificados. Las opciones son las siguientes:  
   
@@ -709,16 +711,16 @@ TABLE
  La tabla o las particiones especificadas se comprimen utilizando la compresión de página. Esto no se aplica a las tablas de almacén de columnas.  
   
  COLUMNSTORE  
- **Se aplica a**: desde [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] hasta [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] y [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)].  
+ **Se aplica a**: [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] a [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] y [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)].  
   
  Solo se aplica a tablas de almacén de columnas. COLUMNSTORE especifica que se descomprima una partición que se comprimió con la opción COLUMNSTORE_ARCHIVE. Cuando se restauran los datos, seguirán estando comprimidos con la compresión de almacén de columnas que se usa para todas las tablas de almacén de columnas.  
   
  COLUMNSTORE_ARCHIVE  
- **Se aplica a**: desde [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] hasta [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] y [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)].  
+ **Se aplica a**: [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] a [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] y [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)].  
   
  Solo se aplica a las tablas de almacén de columnas almacenadas con un índice clúster de almacén de columnas. COLUMNSTORE_ARCHIVE comprimirá aún más la partición especificada a un tamaño mínimo. Esto se puede usar para el archivado o para otras situaciones que requieran menos almacenamiento y en las que pueda permitirse más tiempo para el almacenamiento y recuperación.  
   
- Para volver a generar al mismo tiempo varias particiones, vea [index_option &#40;Transact-SQL&#41;](../../t-sql/statements/alter-table-index-option-transact-sql.md). Si la tabla no tiene un índice clúster, al cambiar la compresión de datos se vuelven a generar el montón y los índices no clúster. Para obtener más información sobre la compresión, vea [Compresión de datos](../../relational-databases/data-compression/data-compression.md).  
+ Para volver a generar al mismo tiempo varias particiones, vea [index_option &#40;Transact-SQL&#41;](../../t-sql/statements/alter-table-index-option-transact-sql.md). Si la tabla no tiene un índice clúster, al cambiar la compresión de datos se vuelven a generar el montón y los índices no clúster. Para más información sobre la compresión, vea [Compresión de datos](../../relational-databases/data-compression/data-compression.md).  
   
  ONLINE **=** { ON  | **OFF** } \<tal como se aplica a single_partition_rebuild_option>  
  Especifica si una única partición de las tablas subyacentes y los índices asociados están disponibles para realizar consultas y modificar datos durante la operación de indización. El valor predeterminado es OFF. REBUILD se puede realizar como una operación ONLINE.  
@@ -727,13 +729,13 @@ TABLE
  Los bloqueos de tabla de larga duración no se mantienen durante la operación de indización. Requiere un bloqueo S en la tabla al principio de la recompilación del índice y un bloqueo Sch-M en la tabla en el extremo de la recompilación de índice en línea. Aunque ambos bloqueos son bloqueos de metadatos cortos, especialmente el bloqueo Sch-M debe esperar a que todas las transacciones de bloqueo se completen. Durante el tiempo de espera, bloqueo Sch-M bloquea las demás transacciones que esperen a este bloqueo al tener acceso a la misma tabla.  
   
 > [!NOTE]  
->  La regeneración de índices en línea puede establecer las opciones *low_priority_lock_wait* que se describen más adelante en esta sección.  
+>  La regeneración de índice en línea puede establecer las opciones *low_priority_lock_wait* que se describen más adelante en esta sección.  
   
  OFF  
  Los bloqueos de tabla se aplican durante la operación de índice. Esto evita que todos los usuarios tengan acceso a la tabla subyacente durante la operación.  
   
  *column_set_name* XML COLUMN_SET FOR ALL_SPARSE_COLUMNS  
- **Se aplica a**: desde [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] hasta [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] y [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)].  
+ **Se aplica a**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] a [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] y [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)].  
   
  Es el nombre del conjunto de columnas. Un conjunto de columnas es una representación XML sin tipo que combina todas las columnas dispersas de una tabla en una salida estructurada. No se puede agregar un conjunto de columnas a una tabla que contenga columnas dispersas. Para obtener más información sobre los conjuntos de columnas, vea [Usar conjuntos de columnas](../../relational-databases/tables/use-column-sets.md).  
   
@@ -761,11 +763,11 @@ TABLE
   
  **Habilitar Stretch Database para una tabla**  
   
- Al habilitar Stretch para una tabla especificando `ON`, también tiene que especificar `MIGRATION_STATE = OUTBOUND` para empezar a migrar los datos inmediatamente o `MIGRATION_STATE = PAUSED` para posponer la migración de datos. El valor predeterminado es `MIGRATION_STATE = OUTBOUND`. Para obtener más información sobre la habilitación de Stretch para una tabla, vea [Enable Stretch Database for a table](../../sql-server/stretch-database/enable-stretch-database-for-a-table.md) (Habilitar Stretch Database para una tabla).  
+ Al habilitar Stretch para una tabla especificando `ON`, también tiene que especificar `MIGRATION_STATE = OUTBOUND` para empezar a migrar los datos inmediatamente o `MIGRATION_STATE = PAUSED` para posponer la migración de datos. El valor predeterminado es `MIGRATION_STATE = OUTBOUND`. Para más información sobre la habilitación de Stretch para una tabla, vea [Enable Stretch Database for a table](../../sql-server/stretch-database/enable-stretch-database-for-a-table.md) (Habilitar Stretch Database para una tabla).  
   
- **Requisitos previos**. Para poder habilitar Stretch para una tabla, primero tendrá que habilitar Stretch en el servidor y en la base de datos. Para obtener más información, vea [Enable Stretch Database for a database](../../sql-server/stretch-database/enable-stretch-database-for-a-database.md).  
+ **Requisitos previos**. Para poder habilitar Stretch para una tabla, primero tiene que habilitar Stretch en el servidor y en la base de datos. Para obtener más información, vea [Enable Stretch Database for a database](../../sql-server/stretch-database/enable-stretch-database-for-a-database.md).  
   
- **Permisos**. Para habilitar Stretch para una base de datos o tabla, se requieren permisos db_owner. Además, para habilitar Stretch para una tabla, también se requieren permisos ALTER en la tabla.  
+ **Permisos**. Para habilitar Stretch para una base de datos o una tabla se necesitan permisos db_owner. Además, para habilitar Stretch para una tabla, también se requieren permisos ALTER en la tabla.  
   
  **Deshabilitar Stretch Database para una tabla**  
   
@@ -796,7 +798,7 @@ ALTER TABLE \<table_name>
 [ FILTER_PREDICATE = { null | *predicate* } ]  
  **Se aplica a**: [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].  
   
- También especifica un predicado de filtro para seleccionar las filas que se migrarán desde una tabla que contiene datos históricos y datos actuales. El predicado debe llamar a una función determinista con valores de tabla insertada. Para obtener más información, consulte [Enable Stretch Database para una tabla](../../sql-server/stretch-database/enable-stretch-database-for-a-table.md) (Habilitar Stretch Database para una tabla) y [Seleccionar las filas que se van a migrar mediante una función de filtro &#40;Stretch Database&#41;](../../sql-server/stretch-database/select-rows-to-migrate-by-using-a-filter-function-stretch-database.md).   
+ Especifica opcionalmente un predicado de filtro para seleccionar las filas que se migrarán desde una tabla que contiene datos históricos y datos actuales. El predicado debe llamar a una función determinista con valores de tabla insertada. Para obtener más información, consulte [Enable Stretch Database para una tabla](../../sql-server/stretch-database/enable-stretch-database-for-a-table.md) (Habilitar Stretch Database para una tabla) y [Seleccionar las filas que se van a migrar mediante una función de filtro &#40;Stretch Database&#41;](../../sql-server/stretch-database/select-rows-to-migrate-by-using-a-filter-function-stretch-database.md).   
   
 > [!IMPORTANT]  
 >  Si se indica un predicado de filtro que tiene un rendimiento bajo, la migración de datos también tendrá un rendimiento bajo. Stretch Database aplica el predicado de filtro a la tabla mediante el operador CROSS APPLY.  
@@ -814,12 +816,12 @@ ALTER TABLE \<table_name>
   
      Esta operación conlleva gastos de transferencia de datos y no se puede cancelar.  
   
--   Especifique `PAUSED` para pausar o posponer la migración de datos. Para obtener más información, consulte [Pausa y reanudación de la migración de datos &#40;Stretch Database&#41;](../../sql-server/stretch-database/pause-and-resume-data-migration-stretch-database.md).  
+-   Especifique `PAUSED` para pausar o posponer la migración de datos. Para más información, vea [Pausa y reanudación de la migración de datos &#40;Stretch Database&#41;](../../sql-server/stretch-database/pause-and-resume-data-migration-stretch-database.md).  
   
 WAIT_AT_LOW_PRIORITY  
- **Se aplica a**: desde [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] hasta [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] y [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)].  
+ **Se aplica a**: [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] a [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] y [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)].  
   
- Una recompilación de índices en línea tiene que esperar a las operaciones de bloqueo en esta tabla. **WAIT_AT_LOW_PRIORITY** indica que la operación de recompilación de índices en línea esperará a los bloqueos de prioridad baja, de forma que otras operaciones podrán continuar mientras espera la operación de generación de índices en línea. La omisión de la opción **WAIT AT LOW PRIORITY** es equivalente a `WAIT_AT_LOW_PRIORITY ( MAX_DURATION = 0 minutes, ABORT_AFTER_WAIT = NONE)`.  
+ Una recompilación de índices en línea tiene que esperar a las operaciones de bloqueo en esta tabla. **WAIT_AT_LOW_PRIORITY** indica que la operación de regeneración de índice en línea esperará a los bloqueos de prioridad baja, de forma que otras operaciones podrán continuar mientras la operación de generación de índice en línea está en espera. La omisión de la opción **WAIT AT LOW PRIORITY** es equivalente a `WAIT_AT_LOW_PRIORITY ( MAX_DURATION = 0 minutes, ABORT_AFTER_WAIT = NONE)`.  
   
  MAX_DURATION = *time* [**MINUTES** ]  
  **Se aplica a**: desde [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] hasta [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] y [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)].  
@@ -827,7 +829,7 @@ WAIT_AT_LOW_PRIORITY
  El tiempo de espera (valor entero especificado en minutos) que **SWITCH** o los bloqueos de la operación de recompilación de índices en línea esperarán con prioridad baja al ejecutar el comando DDL. Si la operación se bloquea durante el tiempo de **MAX_DURATION**, se ejecutará una de las acciones **ABORT_AFTER_WAIT**. El tiempo de **MAX_DURATION** siempre es en minutos y la palabra **MINUTES** puede omitirse.  
   
  ABORT_AFTER_WAIT = [**NONE** | **SELF** | **BLOCKERS** } ]  
- **Se aplica a**: desde [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] hasta [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] y [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)].  
+ **Se aplica a**: [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] a [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] y [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)].  
   
  Ninguno  
  Se continúa esperando al bloqueo con prioridad normal.  
@@ -917,7 +919,7 @@ Para quitar un índice clúster, se necesita un espacio temporal en disco del mi
  Al quitar las columnas NTEXT, la limpieza de los datos eliminados se produce como una operación serializada en todas las filas. Esto puede requerir un tiempo sustancial. Al quitar una columna NTEXT de una tabla con un gran número de filas, actualice la columna NTEXT con el valor NULL en primer lugar y luego quite la columna. Esto puede hacerse con operaciones en paralelo y puede ser mucho más rápido.  
   
 ## <a name="online-index-rebuild"></a>Volver a generar índice en línea  
- Para ejecutar la instrucción DDL para regenerar el índice en línea, todas las transacciones activas de bloqueo que se ejecutan en una tabla determinada deben completarse. Cuando la regeneración de índice en línea se ejecuta, bloquea todas las nuevas transacciones que están listas para iniciar la ejecución en esta tabla. Aunque la vigencia del bloqueo para volver a generar el índice en línea es muy corta, si se espera a que las transacciones abiertas en una tabla dada se completen y se bloquean las nuevas transacciones que se inician, se podría afectar significativamente al rendimiento, produciendo un retraso o un tiempo de espera en la carga de trabajo y se limitaría mucho el acceso a la tabla base. La opción **WAIT_AT_LOW_PRIORITY** permite al DBA administrar los bloqueos S-lock y Sch-M necesarios para las regeneraciones de índice en línea y seleccionar una de las tres opciones. En los tres casos, si durante el tiempo de espera ( `(MAX_DURATION =n [minutes])` ) no hay actividades de bloqueo, la regeneración de índice en línea se ejecuta inmediatamente sin esperar y termina la instrucción DDL.  
+ Para ejecutar la instrucción DDL para regenerar el índice en línea, todas las transacciones activas de bloqueo que se ejecutan en una tabla determinada deben completarse. Cuando la regeneración de índice en línea se ejecuta, bloquea todas las nuevas transacciones que están listas para iniciar la ejecución en esta tabla. Aunque la vigencia del bloqueo para volver a generar el índice en línea es muy corta, si se espera a que las transacciones abiertas en una tabla dada se completen y se bloquean las nuevas transacciones que se inician, se podría afectar significativamente al rendimiento, produciendo un retraso o un tiempo de espera en la carga de trabajo y se limitaría mucho el acceso a la tabla base. Con la opción **WAIT_AT_LOW_PRIORITY**, el DBA puede administrar los bloqueos S-lock y Sch-M necesarios para las regeneraciones de índice en línea y seleccionar una de las tres opciones. En los tres casos, si durante el tiempo de espera ( `(MAX_DURATION =n [minutes])` ) no hay actividades de bloqueo, la regeneración de índice en línea se ejecuta inmediatamente sin esperar y termina la instrucción DDL.  
   
 ## <a name="compatibility-support"></a>Soporte de compatibilidad  
  La instrucción ALTER TABLE solo permite nombres de tabla de dos partes (esquema.objeto). En [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)], la especificación de un nombre de tabla con uno de los siguientes formatos produce el error 117 en tiempo de compilación.  
@@ -1071,7 +1073,7 @@ GO
 #### <a name="g-creating-a-primary-key-constraint-with-index-options"></a>G. Crear una restricción PRIMARY KEY con opciones de índice  
  En el ejemplo siguiente se crea la restricción PRIMARY KEY `PK_TransactionHistoryArchive_TransactionID` y se establecen las opciones `FILLFACTOR`, `ONLINE` y `PAD_INDEX`. El índice clúster resultante tendrá el mismo nombre que la restricción.  
   
-**Se aplica a**: desde [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] hasta [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] y [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)].  
+**Se aplica a**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] a [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] y [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)].  
   
 ```sql  
 USE AdventureWorks2012;  
@@ -1313,7 +1315,7 @@ REBUILD WITH (DATA_COMPRESSION = PAGE);
   
  En el ejemplo siguiente se cambia la compresión de una tabla con particiones. La sintaxis `REBUILD PARTITION = 1` hace que solo se vuelva a generar la partición número `1`.  
   
-**Se aplica a**: desde [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] hasta [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] y [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)].  
+**Se aplica a**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] a [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] y [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)].  
   
 ```sql  
 ALTER TABLE PartitionTable1   
@@ -1323,7 +1325,7 @@ GO
   
 La misma operación que utiliza la sintaxis alternativa siguiente hace que se vuelvan a generar todas las particiones de la tabla.  
   
-**Se aplica a**: desde [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] hasta [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] y [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)].  
+**Se aplica a**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] a [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] y [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)].  
   
 ```sql  
 ALTER TABLE PartitionTable1   
@@ -1331,12 +1333,12 @@ REBUILD PARTITION = ALL
 WITH (DATA_COMPRESSION = PAGE ON PARTITIONS(1) ) ;  
 ```  
   
- Para obtener más ejemplos de la compresión de datos, vea [Compresión de datos](../../relational-databases/data-compression/data-compression.md).  
+ Para obtener más ejemplos de compresión de datos, vea [Compresión de datos](../../relational-databases/data-compression/data-compression.md).  
   
 #### <a name="b-modifying-a-columnstore-table-to-change-archival-compression"></a>B. Modificar una tabla de almacén de columnas para cambiar la compresión de archivo  
  En el ejemplo siguiente se comprime aún más una partición de tabla de almacén de columnas aplicando un algoritmo de compresión adicional. Esto reduce la tabla a un tamaño mínimo, pero también aumenta el tiempo necesario para el almacenamiento y la recuperación. Esto resulta útil para el archivado o para otras situaciones que requieran menos espacio y en las que pueda permitirse más tiempo para el almacenamiento y recuperación.  
   
-**Se aplica a**: desde [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] hasta [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] y [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)].  
+**Se aplica a**: [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] a [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] y [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)].  
   
 ```sql  
 ALTER TABLE PartitionTable1   
@@ -1346,7 +1348,7 @@ GO
   
 En el siguiente ejemplo se descomprime una partición de tabla de almacén de columnas que se comprimió con la opción COLUMNSTORE_ARCHIVE. Cuando se restauran los datos, seguirán estando comprimidos con la compresión de almacén de columnas que se usa para todas las tablas de almacén de columnas.  
   
-**Se aplica a**: desde [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] hasta [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] y [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)].  
+**Se aplica a**: [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] a [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] y [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)].  
   
 ```sql  
 ALTER TABLE PartitionTable1   
@@ -1371,7 +1373,7 @@ GO
 #### <a name="d-allowing-lock-escalation-on-partitioned-tables"></a>D. Permitir la extensión de bloqueo en tablas con particiones  
  En el ejemplo siguiente se habilita la extensión de bloqueo al nivel de partición en una tabla con particiones. Si la tabla no tiene particiones, la extensión de bloqueo se establece en el nivel TABLE.  
   
-**Se aplica a**: desde [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] hasta [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] y [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)].  
+**Se aplica a**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] a [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] y [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)].  
   
 ```sql  
 ALTER TABLE dbo.T1 SET (LOCK_ESCALATION = AUTO);  
@@ -1381,7 +1383,7 @@ GO
 #### <a name="e-configuring-change-tracking-on-a-table"></a>E. Configurar el seguimiento de cambios en una tabla  
  En el ejemplo siguiente se habilita el seguimiento de cambios en la tabla `Person.Person`.  
   
-**Se aplica a**: desde [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] hasta [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] y [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)].  
+**Se aplica a**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] a [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] y [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)].  
   
 ```sql  
 USE AdventureWorks2012;  
@@ -1403,7 +1405,7 @@ WITH (TRACK_COLUMNS_UPDATED = ON)
   
 En el ejemplo siguiente se deshabilita el seguimiento de cambios en la tabla `Person.Person`.  
   
-**Se aplica a**: desde [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] hasta [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] y [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)].  
+**Se aplica a**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] a [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] y [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)].  
   
 ```sql  
 USE AdventureWorks2012;  
@@ -1482,7 +1484,7 @@ GO
 #### <a name="a-online-index-rebuild-using-low-priority-wait-options"></a>A. Volver a generar el índice en línea mediante opciones de espera de prioridad baja  
  En el ejemplo siguiente se muestra cómo realizar una regeneración de índice en línea que especifica las opciones de espera de prioridad baja.  
   
-**Se aplica a**: desde [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] hasta [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] y [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)].  
+**Se aplica a**: [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] a [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] y [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)].  
   
 ```sql  
 ALTER TABLE T1   
@@ -1498,7 +1500,7 @@ REBUILD WITH
 #### <a name="b-online-alter-column"></a>B. Alteración de columna en línea  
  En el ejemplo siguiente se muestra cómo realizar una operación de alteración de columna con la opción ONLINE.  
   
-**Se aplica a**: desde [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] hasta [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] y [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)].  
+**Se aplica a**: [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] a [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] y [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)].  
   
 ```sql  
 CREATE TABLE dbo.doc_exy (column_a INT ) ;  
@@ -1516,7 +1518,7 @@ GO
 ###  <a name="system_versioning"></a> Control de versiones del sistema  
  Los cuatro ejemplos siguientes le ayudarán a familiarizarse con la sintaxis para usar el control de versiones del sistema. Para obtener más ayuda, consulte [Introducción a las tablas temporales con versión del sistema](../../relational-databases/tables/getting-started-with-system-versioned-temporal-tables.md).  
   
-**Se aplica a**: desde [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] hasta [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] y [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)].  
+**Se aplica a**: [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] a [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] y [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)].  
   
 #### <a name="a-add-system-versioning-to-existing-tables"></a>A. Agregar el control de versiones del sistema a las tablas existentes  
  En el ejemplo siguiente se muestra cómo agregar el control de versiones del sistema a una tabla existente y cómo crear una futura tabla de historial. En este ejemplo se supone que hay una tabla existente denominada `InsurancePolicy` con una clave principal definida. En este ejemplo se rellenan las columnas de período recién creadas para las versiones de sistema utilizando los valores predeterminados para los tiempos de inicio y finalización porque estos valores no pueden ser null. En este ejemplo se utiliza la cláusula HIDDEN para garantizar que las aplicaciones existentes que interactúan con la tabla actual no se vean afectadas.  También se usa HISTORY_RETENTION_PERIOD, que solo está disponible en [!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)]. 

@@ -1,27 +1,28 @@
 ---
-title: 'PDO:: BeginTransaction | Documentos de Microsoft'
-ms.custom: 
+title: PDO::beginTransaction | Microsoft Docs
+ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql-non-specified
 ms.prod_service: drivers
-ms.service: 
+ms.service: ''
 ms.component: php
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: drivers
-ms.tgt_pltfrm: 
+ms.technology:
+- drivers
+ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: 4d5db438-9df7-4d22-9907-3ddc63bd2220
-caps.latest.revision: "10"
+caps.latest.revision: ''
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 131edab231009e63c32a3c5b7a4d6ffccfc7d407
-ms.sourcegitcommit: 2713f8e7b504101f9298a0706bacd84bf2eaa174
+ms.openlocfilehash: 51a04874f23dcae77347d85ad0ebd284a1e3b03c
+ms.sourcegitcommit: 2e130e9f3ce8a7ffe373d7fba8b09e937c216386
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/18/2017
+ms.lasthandoff: 03/28/2018
 ---
 # <a name="pdobegintransaction"></a>PDO::beginTransaction
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]
@@ -39,13 +40,13 @@ bool PDO::beginTransaction();
 Se devuelve el valor True si la llamada al método se realizó correctamente; en caso contrario, se devuelve False.  
   
 ## <a name="remarks"></a>Comentarios  
-Cuando finalice la transacción iniciada con PDO::beginTransaction, se llamará a [PDO::commit](../../connect/php/pdo-commit.md) o [PDO::rollback](../../connect/php/pdo-rollback.md) .  
+Finaliza la transacción iniciada con PDO:: BeginTransaction cuando [PDO:: Commit](../../connect/php/pdo-commit.md) o [PDO:: Rollback](../../connect/php/pdo-rollback.md) se llama.  
   
 El valor de PDO::ATTR_AUTOCOMMIT no afecta a PDO::beginTransaction.  
   
 No se permiten llamar a PDO::beginTransaction antes de  finalizar la transacción PDO::beginTransaction anterior con PDO::rollback o PDO::commit.  
   
-Si se produce un error en este método, la conexión volverá al modo de confirmación automática.  
+La conexión vuelve al modo de confirmación automática si se produce un error en este método.  
   
 En la versión 2.0 de los [!INCLUDE[ssDriverPHP](../../includes/ssdriverphp_md.md)], se agregó compatibilidad con PDO.  
   
@@ -66,6 +67,7 @@ En el ejemplo siguiente se utiliza una base de datos denominada "Test" y una tab
 ```  
   
 ## <a name="see-also"></a>Vea también  
-[Clase PDO](../../connect/php/pdo-class.md)  
-[PDO](http://go.microsoft.com/fwlink/?LinkID=187441)  
+[Clase PDO](../../connect/php/pdo-class.md)
+
+[PDO](http://php.net/manual/book.pdo.php)  
   

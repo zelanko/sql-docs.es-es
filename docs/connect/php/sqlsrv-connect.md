@@ -1,17 +1,19 @@
 ---
-title: sqlsrv_connect | Documentos de Microsoft
-ms.custom: 
-ms.date: 01/19/2017
+title: sqlsrv_connect | Microsoft Docs
+ms.custom: ''
+ms.date: 03/26/2018
 ms.prod: sql-non-specified
 ms.prod_service: drivers
-ms.service: 
+ms.service: ''
 ms.component: php
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: drivers
-ms.tgt_pltfrm: 
+ms.technology:
+- drivers
+ms.tgt_pltfrm: ''
 ms.topic: article
-apiname: sqlsrv_connect
+apiname:
+- sqlsrv_connect
 apitype: NA
 helpviewer_keywords:
 - connecting to the server
@@ -19,16 +21,16 @@ helpviewer_keywords:
 - connection pooling support
 - sqlsrv_connect
 ms.assetid: 37836b49-258e-45ce-9549-b8bd85d6952d
-caps.latest.revision: "67"
+caps.latest.revision: ''
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: On Demand
-ms.openlocfilehash: f87b73eee57279a1f3b8bd39abb8f8986076b653
-ms.sourcegitcommit: 2713f8e7b504101f9298a0706bacd84bf2eaa174
+ms.openlocfilehash: ae4132e7235ced3ab6863093a043365d91f2aa49
+ms.sourcegitcommit: 2e130e9f3ce8a7ffe373d7fba8b09e937c216386
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/18/2017
+ms.lasthandoff: 03/28/2018
 ---
 # <a name="sqlsrvconnect"></a>sqlsrv_connect
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]
@@ -43,11 +45,11 @@ sqlsrv_connect( string $serverName [, array $connectionInfo])
 ```  
   
 #### <a name="parameters"></a>Parámetros  
-*$serverName*: una cadena que especifica el nombre del servidor con el que se está estableciendo una conexión. Se puede incluir un nombre de instancia (por ejemplo, "miServidor\nombreDeInstancia") o el número de puerto (por ejemplo, "miServidor, 1521") como parte de esta cadena. Para obtener una descripción completa de las opciones disponibles en este parámetro, consulte la palabra clave Server en la sección Palabras clave de la cadena de conexión del controlador ODBC del artículo [Usar palabras clave de cadena de conexión con SQL Server Native Client](http://go.microsoft.com/fwlink/?LinkId=105504).  
+*$serverName*: una cadena que especifica el nombre del servidor con el que se está estableciendo una conexión. Se puede incluir un nombre de instancia (por ejemplo, "miServidor\nombreDeInstancia") o el número de puerto (por ejemplo, "miServidor, 1521") como parte de esta cadena. Para obtener una descripción completa de las opciones disponibles para este parámetro, vea la palabra clave Server en la sección palabras clave de cadena de conexión de controlador de ODBC de [Using Connection String Keywords with SQL Native Client](../../relational-databases/native-client/applications/using-connection-string-keywords-with-sql-server-native-client.md).  
   
-A partir de la versión 3.0 de los [!INCLUDE[ssDriverPHP](../../includes/ssdriverphp_md.md)], también puede especificar una instancia de LocalDB con `"(localdb)\instancename"`. Para obtener más información, consulte [PHP Driver for SQL Server Support for LocalDB](../../connect/php/php-driver-for-sql-server-support-for-localdb.md).  
+A partir de la versión 3.0 de los [!INCLUDE[ssDriverPHP](../../includes/ssdriverphp_md.md)], también puede especificar una instancia de LocalDB con `"(localdb)\instancename"`. Para obtener más información, consulte [admite LocalDB](../../connect/php/php-driver-for-sql-server-support-for-localdb.md).  
   
-También, a partir de la versión 3.0 de los [!INCLUDE[ssDriverPHP](../../includes/ssdriverphp_md.md)], puede especificar un nombre de red virtual para conectarse a un grupo de disponibilidad AlwaysOn. Para obtener más información sobre el soporte de [!INCLUDE[ssDriverPHP](../../includes/ssdriverphp_md.md)] para [!INCLUDE[ssHADR](../../includes/sshadr_md.md)], vea [Controlador PHP para el soporte de SQL Server para la alta disponibilidad con recuperación ante desastres](../../connect/php/php-driver-for-sql-server-support-for-high-availability-disaster-recovery.md).  
+También, a partir de la versión 3.0 de los [!INCLUDE[ssDriverPHP](../../includes/ssdriverphp_md.md)], puede especificar un nombre de red virtual para conectarse a un grupo de disponibilidad AlwaysOn. Para obtener más información acerca de [!INCLUDE[ssDriverPHP](../../includes/ssdriverphp_md.md)] compatibilidad con [!INCLUDE[ssHADR](../../includes/sshadr_md.md)], consulte [compatibilidad con alta disponibilidad y recuperación ante desastres](../../connect/php/php-driver-for-sql-server-support-for-high-availability-disaster-recovery.md).  
   
 *$connectionInfo* [opcional]: una asociativa **matriz** que contiene atributos de conexión (por ejemplo, **matriz**("Database" = > "AdventureWorks")). Consulte [Connection Options](../../connect/php/connection-options.md) para obtener una lista de las claves admitidas para la matriz.  
   
@@ -93,7 +95,9 @@ sqlsrv_close( $conn);
 ```  
   
 ## <a name="see-also"></a>Vea también  
-[Referencia de API del controlador SQLSRV](../../connect/php/sqlsrv-driver-api-reference.md)  
-[Connecting to the Server](../../connect/php/connecting-to-the-server.md)  
+[Referencia de API del controlador SQLSRV](../../connect/php/sqlsrv-driver-api-reference.md)
+
+[Connecting to the Server](../../connect/php/connecting-to-the-server.md)
+
 [Sobre los ejemplos de código de la documentación](../../connect/php/about-code-examples-in-the-documentation.md)  
   

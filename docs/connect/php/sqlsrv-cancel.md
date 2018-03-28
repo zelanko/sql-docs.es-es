@@ -1,32 +1,34 @@
 ---
-title: sqlsrv_cancel | Documentos de Microsoft
-ms.custom: 
+title: sqlsrv_cancel | Microsoft Docs
+ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql-non-specified
 ms.prod_service: drivers
-ms.service: 
+ms.service: ''
 ms.component: php
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: drivers
-ms.tgt_pltfrm: 
+ms.technology:
+- drivers
+ms.tgt_pltfrm: ''
 ms.topic: article
-apiname: sqlsrv_cancel
+apiname:
+- sqlsrv_cancel
 apitype: NA
 helpviewer_keywords:
 - sqlsrv_cancel
 - API Reference, sqlsrv_cancel
 ms.assetid: 75798c9b-f711-445d-9b8f-ba4d405ca50a
-caps.latest.revision: "32"
+caps.latest.revision: ''
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 3d16a6d3407f6533cbf9a0b3ed9ad440a8ad2ab1
-ms.sourcegitcommit: 2713f8e7b504101f9298a0706bacd84bf2eaa174
+ms.openlocfilehash: 71de874d6f89bdec64011eb054f2de259bd47b01
+ms.sourcegitcommit: 2e130e9f3ce8a7ffe373d7fba8b09e937c216386
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/18/2017
+ms.lasthandoff: 03/28/2018
 ---
 # <a name="sqlsrvcancel"></a>sqlsrv_cancel
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]
@@ -47,7 +49,7 @@ sqlsrv_cancel( resource $stmt)
 Se devuelve un valor booleano **True** si la operación se realiza correctamente. De lo contrario, se devuelve el valor **False**.  
   
 ## <a name="example"></a>Ejemplo  
-En el siguiente ejemplo se ejecuta una consulta en la base de datos de [AdventureWorks](http://go.microsoft.com/fwlink/?LinkID=67739) y, después, se usan y cuentan los resultados hasta que la variable *$salesTotal* alcanza una cantidad especificada. Luego se descartan los resultados restantes de la consulta. En el ejemplo se da por hecho que SQL Server y la base de datos de AdventureWorks están instalados en el equipo local. Los resultados se agregan a la consola cuando se ejecuta el ejemplo en la línea de comandos.  
+El ejemplo siguiente se dirige el [AdventureWorks](https://github.com/Microsoft/sql-server-samples/tree/master/samples/databases/adventure-works) para ejecutar una consulta de base de datos, a continuación, consume y recuento de los resultados hasta que la variable *$salesTotal* alcanza una cantidad especificada. Luego se descartan los resultados restantes de la consulta. En el ejemplo se da por hecho que SQL Server y la base de datos de AdventureWorks están instalados en el equipo local. Los resultados se agregan a la consola cuando se ejecuta el ejemplo en la línea de comandos.  
   
 ```  
 <?php  
@@ -100,9 +102,14 @@ sqlsrv_cancel( $stmt);
 Una instrucción preparada y ejecutada mediante la combinación de [sqlsrv_prepare](../../connect/php/sqlsrv-prepare.md) y [sqlsrv_execute](../../connect/php/sqlsrv-execute.md) puede volver a ejecutar con **sqlsrv_execute** después de llamar a **sqlsrv_cancel**. Una instrucción que se ejecuta con [sqlsrv_query](../../connect/php/sqlsrv-query.md) no se puede volver a ejecutar después de llamar a **sqlsrv_cancel**.  
   
 ## <a name="see-also"></a>Vea también  
-[Referencia de API del controlador SQLSRV](../../connect/php/sqlsrv-driver-api-reference.md)  
-[Conexión al servidor](../../connect/php/connecting-to-the-server.md)  
-[Recuperación de datos](../../connect/php/retrieving-data.md)  
-[Sobre los ejemplos de código de la documentación](../../connect/php/about-code-examples-in-the-documentation.md)  
-[sqlsrv_free_stmt](../../connect/php/sqlsrv-free-stmt.md)  
+[Referencia de API del controlador SQLSRV](../../connect/php/sqlsrv-driver-api-reference.md)
+
+[Conexión al servidor](../../connect/php/connecting-to-the-server.md)
+
+[Recuperación de datos](../../connect/php/retrieving-data.md)
+
+[Sobre los ejemplos de código de la documentación](../../connect/php/about-code-examples-in-the-documentation.md)
+
+[sqlsrv_free_stmt](../../connect/php/sqlsrv-free-stmt.md)
+
   

@@ -1,34 +1,34 @@
 ---
-title: "Introducción a la arquitectura de servicios de aprendizaje de máquina de SQL Server | Documentos de Microsoft"
-ms.custom: 
+title: Introducción a la arquitectura de servicios de aprendizaje de máquina de SQL Server | Documentos de Microsoft
+ms.custom: ''
 ms.date: 11/03/2017
 ms.prod: machine-learning-services
 ms.prod_service: machine-learning-services
-ms.service: 
-ms.component: 
-ms.reviewer: 
+ms.service: ''
+ms.component: ''
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: 
-ms.tgt_pltfrm: 
+ms.technology: ''
+ms.tgt_pltfrm: ''
 ms.topic: article
 author: jeannt
 ms.author: jeannt
 manager: cgronlund
 ms.workload: Inactive
-ms.openlocfilehash: 4272a0f421bc8286fc9be7be44e3b7ef8cc13905
-ms.sourcegitcommit: 99102cdc867a7bdc0ff45e8b9ee72d0daade1fd3
+ms.openlocfilehash: 7993a93eec3bd657f4d37fbbbfbb16dd514453fa
+ms.sourcegitcommit: 2e130e9f3ce8a7ffe373d7fba8b09e937c216386
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/11/2018
+ms.lasthandoff: 03/28/2018
 ---
 # <a name="architecture-overview-for-sql-server-machine-learning-services"></a>Introducción a la arquitectura de servicios de aprendizaje de máquina de SQL Server 
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
 
-En este tema se describe los objetivos de la biblioteca extensibility framework que admite la ejecución del script de Python y R en SQL Server.
+Este artículo describen los objetivos de la biblioteca extensibility framework que admite la ejecución del script de Python y R en SQL Server.
 
 También proporciona una visión general de cómo la arquitectura está diseñada para cumplir estos objetivos, cómo se admiten y ejecuta SQL Server y las ventajas de la integración de R y Python.
 
-En general, el marco de extensibilidad es casi idéntico para R y Python, con algunas diferencias menores en los detalles de los iniciadores que se llaman, opciones de configuración y así sucesivamente. Para obtener más información acerca de la implementación para un idioma específico, vea estos temas:
+En general, el marco de extensibilidad es casi idéntico para R y Python, con algunas diferencias menores en los detalles de los iniciadores que se llaman, opciones de configuración y así sucesivamente. Para obtener más información acerca de la implementación para un idioma específico, vea estos artículos:
 
 - [Introducción a la arquitectura de SQL Server R Services](r/architecture-overview-sql-server-r.md)
 - [Introducción a la arquitectura de Python en SQL Server](python/architecture-overview-sql-server-python.md)

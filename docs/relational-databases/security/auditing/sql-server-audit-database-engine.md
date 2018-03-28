@@ -1,16 +1,16 @@
 ---
 title: SQL Server Audit (motor de base de datos) | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 11/21/2016
 ms.prod: sql-non-specified
 ms.prod_service: database-engine
-ms.service: 
+ms.service: ''
 ms.component: security
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 f1_keywords:
 - audit
@@ -18,21 +18,23 @@ helpviewer_keywords:
 - SQL Server Audit
 - audits [SQL Server], SQL Server Audit
 ms.assetid: 0c1fca2e-f22b-4fe8-806f-c87806664f00
-caps.latest.revision: 
+caps.latest.revision: ''
 author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: Active
-ms.openlocfilehash: 02c5d20286c4bcf688e9570a85d58ac89e2ffd06
-ms.sourcegitcommit: 45e4efb7aa828578fe9eb7743a1a3526da719555
+ms.openlocfilehash: 3ca903d27dc667095e8db79e3a92e8cb85737004
+ms.sourcegitcommit: 6e16d1616985d65484c72f5e0f34fb2973f828f4
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 03/16/2018
 ---
 # <a name="sql-server-audit-database-engine"></a>SQL Server Audit (motor de base de datos)
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
 
   La*auditoría* de una instancia de [!INCLUDE[ssDEnoversion](../../../includes/ssdenoversion-md.md)] o de una base de datos individual implica el seguimiento y registro de los eventos que se producen en [!INCLUDE[ssDE](../../../includes/ssde-md.md)]. La auditoría de[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] permite crear auditorías de servidor, que pueden contener especificaciones de auditoría de servidor para los eventos de servidor, y especificaciones de auditoría de base de datos para los eventos de base de datos. Los eventos auditados se pueden escribir en los registros de eventos o en los archivos de auditoría.  
+  
+[!INCLUDE[ssMIlimitation](../../../includes/sql-db-mi-limitation.md)]
   
  Hay varios niveles de auditoría disponibles para [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)], dependiendo de los requisitos gubernamentales o normativos de cada instalación. [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Audit proporciona las herramientas y los procesos necesarios para habilitar, almacenar y ver auditorías en varios objetos de servidor y de base de datos.  
   
@@ -131,7 +133,7 @@ ms.lasthandoff: 11/21/2017
 ### <a name="database-mirroring-and-sql-server-audit"></a>Creación de reflejo de la base de datos y SQL Server Audit  
  Una base de datos en la que se haya definido una especificación de auditoría de base de datos y que use la creación de reflejo de la base de datos incluirá la especificación de auditoría de base de datos. Para poder trabajar correctamente en la instancia de SQL reflejada, se deben configurar los elementos siguientes:  
   
--   El servidor reflejado debe tener una auditoría con el mismo GUID para permitir que la especificación de auditoría de base de datos escriba registros de auditoría. Esto se puede configurar mediante el comando CREATE AUDIT WITH GUID**=***\<GUID de Auditoría de servidor de origen*>.  
+-   El servidor reflejado debe tener una auditoría con el mismo GUID para permitir que la especificación de auditoría de base de datos escriba registros de auditoría. Esto se puede configurar mediante el comando CREATE AUDIT WITH GUID**=***\<GUID de auditoría de servidor de origen*>.  
   
 -   En el caso de los destinos de archivo binario, la cuenta de servicio del servidor reflejado debe tener los permisos adecuados para la ubicación en la que se escribe la pista de auditoría.  
   
@@ -188,7 +190,7 @@ ms.lasthandoff: 11/21/2017
 > [!CAUTION]  
 >  De la misma forma que las entidades de seguridad del rol sysadmin pueden manipular cualquier componente de auditoría, las del rol db_owner pueden manipular las especificaciones de auditoría en una base de datos. [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Audit comprobará si un inicio de sesión que crea o modifica una especificación de auditoría tiene al menos el permiso ALTER ANY DATABASE AUDIT. Sin embargo, no realiza ninguna validación al adjuntar una base de datos. Como norma, debería otorgar la misma confianza a las especificaciones de auditoría de base de datos que a las entidades de seguridad que tienen el rol sysadmin o db_owner.  
   
-## <a name="related-tasks"></a>Tareas relacionadas  
+## <a name="related-tasks"></a>Related Tasks  
  [Crear una auditoría de servidor y una especificación de auditoría de servidor](../../../relational-databases/security/auditing/create-a-server-audit-and-server-audit-specification.md)  
   
  [Crear una especificación de auditoría de servidor y de auditoría de base de datos](../../../relational-databases/security/auditing/create-a-server-audit-and-database-audit-specification.md)  
@@ -216,7 +218,7 @@ ms.lasthandoff: 11/21/2017
  [Microsoft TechNet: SQL Server TechCenter: Seguridad y protección de SQL Server 2005](http://go.microsoft.com/fwlink/?LinkId=101152)  
  Proporciona información actualizada sobre la seguridad de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] .  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Ver también  
  [Grupos de acciones y acciones de SQL Server Audit](../../../relational-databases/security/auditing/sql-server-audit-action-groups-and-actions.md)   
  [Registros de SQL Server Audit](../../../relational-databases/security/auditing/sql-server-audit-records.md)  
   

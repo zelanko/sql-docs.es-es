@@ -1,33 +1,35 @@
 ---
-title: "Cómo: controlar errores y advertencias con el controlador SQLSRV | Documentos de Microsoft"
-ms.custom: 
+title: 'Cómo: controlar errores y advertencias con el controlador SQLSRV | Documentos de Microsoft'
+ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql-non-specified
 ms.prod_service: drivers
-ms.service: 
+ms.service: ''
 ms.component: php
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: drivers
-ms.tgt_pltfrm: 
+ms.technology:
+- drivers
+ms.tgt_pltfrm: ''
 ms.topic: article
-helpviewer_keywords: errors and warnings
+helpviewer_keywords:
+- errors and warnings
 ms.assetid: fa231d60-4c06-4137-89e8-097c28638c5d
-caps.latest.revision: "18"
+caps.latest.revision: ''
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 02aa17ddd031d351510f600f60dcd99b42a5d6e5
-ms.sourcegitcommit: 2713f8e7b504101f9298a0706bacd84bf2eaa174
+ms.openlocfilehash: 4b7e2c9157cf37ab35987ebc9bb6a4d6615f80ba
+ms.sourcegitcommit: 2e130e9f3ce8a7ffe373d7fba8b09e937c216386
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/18/2017
+ms.lasthandoff: 03/28/2018
 ---
 # <a name="how-to-handle-errors-and-warnings-using-the-sqlsrv-driver"></a>Cómo controlar errores y advertencias con el controlador SQLSRV
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]
 
-De forma predeterminada, el controlador SQLSRV trata las advertencias como errores; una llamada a una función de **sqlsrv** que genera un error o una advertencia devolverá el valor **False**. En este tema se muestra cómo desactivar este comportamiento predeterminado y cómo controlar las advertencias y los errores por separado.  
+De forma predeterminada, el controlador SQLSRV trata las advertencias como errores; una llamada a un **sqlsrv** devuelve la función que genera un error o una advertencia **false**. En este tema se muestra cómo desactivar este comportamiento predeterminado y cómo controlar las advertencias y los errores por separado.  
   
 > [!NOTE]  
 > El comportamiento predeterminado de tratar las advertencias como errores cuenta con algunas excepciones. Sin embargo, las advertencias que corresponden a los valores 01000, 01001, 01003 y 01S02 de SQLSTATE nunca se tratan como errores.  
@@ -43,11 +45,11 @@ En el ejemplo de código siguiente se usa dos funciones definidas por el usuario
   
 4.  Muestra las horas de vacaciones restantes de cada empleado.  
   
-Tenga en cuenta que en la primera llamada a un **sqlsrv** función ([sqlsrv_configure](../../connect/php/sqlsrv-configure.md)), las advertencias se tratan como errores. Como las advertencias se agregan a la colección de errores, no se requiere comprobar las advertencias y los errores por separado. No obstante, en las llamadas posteriores a las funciones de **sqlsrv** , las advertencias no se deben tratar como errores, por lo que debe comprobar explícitamente tanto las advertencias como los errores.  
+En la primera llamada a un **sqlsrv** función ([sqlsrv_configure](../../connect/php/sqlsrv-configure.md)), las advertencias se tratan como errores. Como las advertencias se agregan a la colección de errores, no se requiere comprobar las advertencias y los errores por separado. No obstante, en las llamadas posteriores a las funciones de **sqlsrv** , las advertencias no se deben tratar como errores, por lo que debe comprobar explícitamente tanto las advertencias como los errores.  
   
 Observe también que en el código de ejemplo se comprueban los errores después de cada llamada a una función de **sqlsrv** . Este es el método recomendado.  
   
-En este ejemplo se da por hecho que SQL Server y la base de datos de [AdventureWorks](http://go.microsoft.com/fwlink/?LinkID=67739) están instalados en el equipo local. Los resultados se agregan a la consola cuando se ejecuta el ejemplo en la línea de comandos. Cuando se ejecuta el ejemplo en una nueva instalación de la base de datos de AdventureWorks, se generan 3 advertencias y 2 errores. Las dos primeras advertencias son advertencias estándar que se emiten cuando se conecta a una base de datos. La tercera se genera debido a que las horas de vacaciones disponibles de un empleado se actualizan a un valor menor que cero. Los errores se producen debido a que las horas de vacaciones disponibles de un empleado se actualizan a un valor menor que 40 horas, lo que constituye una infracción de una restricción de la tabla.  
+En este ejemplo se da por supuesto que SQL Server y el [AdventureWorks](https://github.com/Microsoft/sql-server-samples/tree/master/samples/databases/adventure-works) base de datos se instalan en el equipo local. Los resultados se agregan a la consola cuando se ejecuta el ejemplo en la línea de comandos. Cuando se ejecuta el ejemplo en una nueva instalación de la base de datos de AdventureWorks, se generan 3 advertencias y 2 errores. Las dos primeras advertencias son advertencias estándar que se emiten cuando se conecta a una base de datos. La tercera se genera debido a que las horas de vacaciones disponibles de un empleado se actualizan a un valor menor que cero. Los errores se producen debido a que las horas de vacaciones disponibles de un empleado se actualizan a un valor menor que 40 horas, lo que constituye una infracción de una restricción de la tabla.  
   
 ```  
 <?php  
@@ -205,6 +207,7 @@ function DisplayWarnings()
 ```  
   
 ## <a name="see-also"></a>Vea también  
-[Cómo configurar el control de errores y advertencias con el controlador SQLSRV](../../connect/php/how-to-configure-error-and-warning-handling-using-the-sqlsrv-driver.md)  
+[Cómo configurar el control de errores y advertencias con el controlador SQLSRV](../../connect/php/how-to-configure-error-and-warning-handling-using-the-sqlsrv-driver.md)
+
 [Referencia de API del controlador SQLSRV](../../connect/php/sqlsrv-driver-api-reference.md)  
   

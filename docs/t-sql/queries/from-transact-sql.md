@@ -1,16 +1,16 @@
 ---
 title: FROM (Transact-SQL) | Microsoft Docs
-ms.custom: 
-ms.date: 08/09/2017
+ms.custom: ''
+ms.date: 03/16/2018
 ms.prod: sql-non-specified
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
-ms.service: 
+ms.service: ''
 ms.component: t-sql|queries
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - JOIN
@@ -36,16 +36,16 @@ helpviewer_keywords:
 - UPDATE statement [SQL Server], FROM clause
 - derived tables
 ms.assetid: 36b19e68-94f6-4539-aeb1-79f5312e4263
-caps.latest.revision: 
+caps.latest.revision: ''
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ms.workload: Active
-ms.openlocfilehash: c1abc4a060dd275ba2f8500e88d634a5ba9244ee
-ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
+ms.openlocfilehash: 0a78b022ae6b344531130c55fb08bfc3684f8e23
+ms.sourcegitcommit: 0d904c23663cebafc48609671156c5ccd8521315
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/25/2018
+ms.lasthandoff: 03/19/2018
 ---
 # <a name="from-transact-sql"></a>FROM (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -137,11 +137,15 @@ FROM { <table_source> [ ,...n ] }
   
 <table_source> ::=   
 {  
-    [ database_name . [ schema_name ] . | schema_name . ] table_or_view_name [ AS ] table_or_view_alias  
+    [ database_name . [ schema_name ] . | schema_name . ] table_or_view_name [ AS ] table_or_view_alias 
+    [<tablesample_clause>]  
     | derived_table [ AS ] table_alias [ ( column_alias [ ,...n ] ) ]  
     | <joined_table>  
 }  
   
+<tablesample_clause> ::=
+    TABLESAMPLE ( sample_number [ PERCENT ] ) -- SQL Data Warehouse only  
+ 
 <joined_table> ::=   
 {  
     <table_source> <join_type> <table_source> ON search_condition   
@@ -218,7 +222,7 @@ FROM { <table_source> [ ,...n ] }
  *derived_table*  
  Es una subconsulta que recupera filas de la base de datos. *derived_table* se usa como entrada para la consulta externa.  
   
- *derived* *_table* puede usar la característica de constructor con valores de tabla de [!INCLUDE[tsql](../../includes/tsql-md.md)] para especificar varias filas. Por ejemplo, `SELECT * FROM (VALUES (1, 2), (3, 4), (5, 6), (7, 8), (9, 10) ) AS MyTable(a, b);`. Para obtener más información, vea [Constructor con valores de tabla &#40;Transact-SQL&#41;](../../t-sql/queries/table-value-constructor-transact-sql.md).  
+ *derived* *_table* puede usar la característica de constructor con valores de tabla de [!INCLUDE[tsql](../../includes/tsql-md.md)] para especificar varias filas. Por ejemplo, `SELECT * FROM (VALUES (1, 2), (3, 4), (5, 6), (7, 8), (9, 10) ) AS MyTable(a, b);`. Para más información, vea [Constructor con valores de tabla &#40;Transact-SQL&#41;](../../t-sql/queries/table-value-constructor-transact-sql.md).  
   
  *column_alias*  
  Es un alias opcional para sustituir el nombre de una columna en el conjunto de resultados de la tabla derivada. Incluya un alias de columna para cada columna de la lista de selección y delimite la lista de alias de columna con paréntesis.  
@@ -230,8 +234,10 @@ FROM { <table_source> [ ,...n ] }
   
  Especifica que se devuelva una versión determinada de los datos de la tabla temporal especificada y su tabla de historial de versiones del sistema vinculada.  
   
-\<tablesample_clause>  
- Especifica que se devuelva un ejemplo de los datos de la tabla. El ejemplo puede ser aproximado. Esta cláusula se puede utilizar en cualquier tabla principal o combinada de una instrucción SELECT, UPDATE o DELETE. TABLESAMPLE no se puede especificar con vistas.  
+### <a name="tablesample-clause"></a>Cláusula Tablesample
+**Se aplica a:** SQL Server y SQL Database 
+ 
+ Especifica que se devuelva un ejemplo de los datos de la tabla. El ejemplo puede ser aproximado. Esta cláusula se puede usar en cualquier tabla principal o combinada de una instrucción SELECT o UPDATE. TABLESAMPLE no se puede especificar con vistas.  
   
 > [!NOTE]  
 >  Cuando se utiliza TABLESAMPLE en bases de datos que se actualizan a [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], el nivel de compatibilidad de la base de datos se establece en 110 o superior y no se permite PIVOT en una consulta de expresión de tabla común (CTE) recursiva. Para obtener más información, vea [Nivel de compatibilidad de ALTER DATABASE &#40;Transact-SQL&#41;](../../t-sql/statements/alter-database-transact-sql-compatibility-level.md).  
@@ -254,13 +260,22 @@ FROM { <table_source> [ ,...n ] }
  *repeat_seed*  
  Es una expresión de tipo entero constante utilizada por [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] para generar un número aleatorio. *repeat_seed* es **bigint**. Si no se especifica *repeat_seed*, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] asigna un valor de forma aleatoria. Para un valor *repeat_seed* específico, el resultado del muestreo es siempre el mismo si no se ha aplicado ningún cambio a la tabla. La expresión *repeat_seed* debe evaluarse como un entero mayor que cero.  
   
- \<joined_table>  
- Es un conjunto de resultados producto de dos o más tablas. Para varias combinaciones, utilice paréntesis para cambiar el orden natural de las combinaciones.  
+### <a name="tablesample-clause"></a>Cláusula Tablesample
+**Se aplica a:** SQL Data Warehouse
+
+ Especifica que se devuelva un ejemplo de los datos de la tabla. El ejemplo puede ser aproximado. Esta cláusula se puede usar en cualquier tabla principal o combinada de una instrucción SELECT o UPDATE. TABLESAMPLE no se puede especificar con vistas. 
+
+ PERCENT  
+ Especifica que se debe recuperar de la tabla el porcentaje *sample_number* de filas. Si se especifica PERCENT, SQL Data Warehouse devuelve un valor aproximado del porcentaje especificado. Si se especifica PERCENT, la expresión *sample_number* debe evaluarse como un valor comprendido entre 0 y 100.  
+
+
+### <a name="joined-table"></a>Tabla combinada 
+Las tablas combinadas son un conjunto de resultados producto de dos o más tablas. Para varias combinaciones, utilice paréntesis para cambiar el orden natural de las combinaciones.  
   
-\<join_type>  
- Especifica el tipo de operación de combinación.  
+### <a name="join-type"></a>Tipo de combinación
+Especifica el tipo de operación de combinación.  
   
- **INNER**  
+ INNER  
  Especifica que se devuelvan todos los pares de filas coincidentes. Rechaza las filas no coincidentes de las dos tablas. Si no se especifica ningún tipo de combinación, éste es el valor predeterminado.  
   
  FULL [ OUTER ]  
@@ -272,8 +287,8 @@ FROM { <table_source> [ ,...n ] }
  RIGHT [OUTER]  
  Especifica que todas las filas de la tabla derecha que no cumplan la condición de combinación se incluyan en el conjunto de resultados, con las columnas de resultados de la otra tabla establecidas en NULL, además de todas las filas devueltas por la combinación interna.  
   
-\<join_hint>  
- En [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] y [!INCLUDE[ssSDS](../../includes/sssds-md.md)], especifica que el optimizador de consultas de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] debe usar una sugerencia de combinación o un algoritmo de ejecución por cada combinación especificada en la cláusula FROM de la consulta. Para obtener más información, vea [Sugerencias de combinación &#40;Transact-SQL&#41;](../../t-sql/queries/hints-transact-sql-join.md).  
+### <a name="join-hint"></a>Sugerencia de combinación  
+En [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] y [!INCLUDE[ssSDS](../../includes/sssds-md.md)], especifica que el optimizador de consultas de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] debe usar una sugerencia de combinación o un algoritmo de ejecución por cada combinación especificada en la cláusula FROM de la consulta. Para obtener más información, vea [Sugerencias de combinación &#40;Transact-SQL&#41;](../../t-sql/queries/hints-transact-sql-join.md).  
   
  En [!INCLUDE[ssSDW](../../includes/sssdw-md.md)] y [!INCLUDE[ssPDW](../../includes/sspdw-md.md)], estas sugerencias de combinación se aplican a combinaciones INNER en dos columnas no compatibles de distribución. Para mejorar el rendimiento de las consultas, puede restringir la cantidad de movimiento de datos que se produce durante el procesamiento de consultas. Las sugerencias de combinación permitidas para [!INCLUDE[ssSDW](../../includes/sssdw-md.md)] y [!INCLUDE[ssPDW](../../includes/sspdw-md.md)] son:  
   
@@ -324,6 +339,8 @@ ON (p.ProductID = v.ProductID);
  *right_table_source*  
  Es un origen de tabla según se ha definido en el argumento anterior. Para obtener más información, vea la sección Comentarios.  
   
+### <a name="pivot-clause"></a>Cláusula PIVOT
+
  *table_source* PIVOT \<pivot_clause>  
  Especifica que el argumento *table_source* se dinamice según *pivot_column*. *table_source* es una tabla o expresión de tabla. El resultado es una tabla que contiene todas las columnas de *table_source*, excepto *pivot_column* y *value_column*. Las columnas de *table_source*, excepto *pivot_column* y *value_column*, se denominan columnas de agrupamiento del operador dinámico. Para obtener más información sobre PIVOT y UNPIVOT, vea [Usar PIVOT y UNPIVOT](../../t-sql/queries/from-using-pivot-and-unpivot.md).  
   
@@ -854,6 +871,14 @@ FROM DimProduct AS dp
 INNER REDISTRIBUTE JOIN FactInternetSales AS fis  
     ON dp.ProductKey = fis.ProductKey;  
 ```  
+
+### <a name="v-using-tablesample-to-read-data-from-a-sample-of-rows-in-a-table"></a>V. Usar TABLESAMPLE para leer datos de un ejemplo de filas de una tabla  
+ En el siguiente ejemplo se utiliza `TABLESAMPLE` en la cláusula `FROM` para devolver aproximadamente el `10` por ciento de todas las filas de la tabla `Customer`.  
+  
+```sql    
+SELECT *  
+FROM Sales.Customer TABLESAMPLE SYSTEM (10 PERCENT) ;
+```
   
 ## <a name="see-also"></a>Ver también  
  [CONTAINSTABLE &#40;Transact-SQL&#41;](../../relational-databases/system-functions/containstable-transact-sql.md)   
@@ -862,6 +887,6 @@ INNER REDISTRIBUTE JOIN FactInternetSales AS fis
  [INSERT &#40;Transact-SQL&#41;](../../t-sql/statements/insert-transact-sql.md)   
  [OPENQUERY &#40;Transact-SQL&#41;](../../t-sql/functions/openquery-transact-sql.md)   
  [OPENROWSET &#40;Transact-SQL&#41;](../../t-sql/functions/openrowset-transact-sql.md)   
- [Operators &#40;Transact-SQL&#41;](../../t-sql/language-elements/operators-transact-sql.md)   
+ [Operadores &#40;Transact-SQL&#41;](../../t-sql/language-elements/operators-transact-sql.md)   
  [UPDATE &#40;Transact-SQL&#41;](../../t-sql/queries/update-transact-sql.md)   
  [WHERE &#40;Transact-SQL&#41;](../../t-sql/queries/where-transact-sql.md)  

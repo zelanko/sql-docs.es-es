@@ -1,33 +1,35 @@
 ---
-title: sqlsrv_query | Documentos de Microsoft
-ms.custom: 
+title: sqlsrv_query | Microsoft Docs
+ms.custom: ''
 ms.date: 10/24/2017
 ms.prod: sql-non-specified
 ms.prod_service: drivers
-ms.service: 
+ms.service: ''
 ms.component: php
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: drivers
-ms.tgt_pltfrm: 
+ms.technology:
+- drivers
+ms.tgt_pltfrm: ''
 ms.topic: article
-apiname: sqlsrv_query
+apiname:
+- sqlsrv_query
 apitype: NA
 helpviewer_keywords:
 - sqlsrv_query
 - executing queries
 - API Reference, sqlsrv_query
 ms.assetid: 9fa7c4c8-4da8-4299-9893-f61815055aa3
-caps.latest.revision: "46"
+caps.latest.revision: ''
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: On Demand
-ms.openlocfilehash: de82748f8888a02104e5365817096d0ffb79a182
-ms.sourcegitcommit: 2713f8e7b504101f9298a0706bacd84bf2eaa174
+ms.openlocfilehash: 9fb6aaec1fa37e9d8b5c3f54c1a84ee0ea4f3aea
+ms.sourcegitcommit: 2e130e9f3ce8a7ffe373d7fba8b09e937c216386
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/18/2017
+ms.lasthandoff: 03/28/2018
 ---
 # <a name="sqlsrvquery"></a>sqlsrv_query
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]
@@ -60,16 +62,16 @@ sqlsrv_query(resource $conn, string $tsql [, array $params [, array $options]])
   
     La descripción de cada elemento de la matriz está en la tabla siguiente:  
   
-    |Elemento|Descripción|  
+    |Elemento|Description|  
     |-----------|---------------|  
     |*$value*|Un valor literal, una variable PHP o una variable por referencia PHP.|  
-    |*$direction*[opcional]|Uno de los siguientes **SQLSRV_PARAM_\***  constantes que se utilizan para indicar la dirección del parámetro: **SQLSRV_PARAM_IN**, **SQLSRV_PARAM_OUT**, **SQLSRV_PARAM_INOUT**. El valor predeterminado es **SQLSRV_PARAM_IN**.<br /><br />Para obtener más información acerca de las constantes PHP, consulte [constantes &#40; Controladores de Microsoft para PHP para SQL Server &#41; ](../../connect/php/constants-microsoft-drivers-for-php-for-sql-server.md).|  
-    |*$phpType*[opcional]|A **SQLSRV_PHPTYPE_\***  constante que especifica el tipo de datos PHP del valor devuelto.<br /><br />Para obtener más información acerca de las constantes PHP, consulte [constantes &#40; Controladores de Microsoft para PHP para SQL Server &#41; ](../../connect/php/constants-microsoft-drivers-for-php-for-sql-server.md).|  
-    |*$sqlType*[opcional]|A **SQLSRV_SQLTYPE_\***  constante que especifica el tipo de datos de SQL Server del valor de entrada.<br /><br />Para obtener más información acerca de las constantes PHP, consulte [constantes &#40; Controladores de Microsoft para PHP para SQL Server &#41; ](../../connect/php/constants-microsoft-drivers-for-php-for-sql-server.md).|  
+    |*$direction*[opcional]|Uno de los siguientes **SQLSRV_PARAM_\***  constantes que se utilizan para indicar la dirección del parámetro: **SQLSRV_PARAM_IN**, **SQLSRV_PARAM_OUT**, **SQLSRV_PARAM_INOUT**. El valor predeterminado es **SQLSRV_PARAM_IN**.<br /><br />Para obtener más información acerca de las constantes PHP, consulte [constantes &#40;Microsoft Drivers for PHP para SQL Server&#41;](../../connect/php/constants-microsoft-drivers-for-php-for-sql-server.md).|  
+    |*$phpType*[opcional]|A **SQLSRV_PHPTYPE_\***  constante que especifica el tipo de datos PHP del valor devuelto.<br /><br />Para obtener más información acerca de las constantes PHP, consulte [constantes &#40;Microsoft Drivers for PHP para SQL Server&#41;](../../connect/php/constants-microsoft-drivers-for-php-for-sql-server.md).|  
+    |*$sqlType*[opcional]|A **SQLSRV_SQLTYPE_\***  constante que especifica el tipo de datos de SQL Server del valor de entrada.<br /><br />Para obtener más información acerca de las constantes PHP, consulte [constantes &#40;Microsoft Drivers for PHP para SQL Server&#41;](../../connect/php/constants-microsoft-drivers-for-php-for-sql-server.md).|  
   
 *$options* [opcional]: una matriz asociativa que establece las propiedades de la consulta. Las claves admitidas son las siguientes:  
   
-|Key|Valores admitidos:|Descripción|  
+|Key|Valores admitidos:|Description|  
 |-------|--------------------|---------------|  
 |QueryTimeout|Valor entero positivo.|Establece el tiempo de espera de consulta en segundos. De forma predeterminada, el controlador espera indefinidamente para obtener los resultados.|  
 |SendStreamParamsAtExec|**True** o **False**<br /><br />El valor predeterminado es **true**.|Configura el controlador para enviar todos los datos en la ejecución de secuencia (**true**), o para enviar datos de la secuencia en fragmentos (**false**). De manera predeterminada, este valor se establece como **True**. Para obtener más información, consulte [sqlsrv_send_stream_data](../../connect/php/sqlsrv-send-stream-data.md).|  
@@ -84,7 +86,7 @@ El **sqlsrv_query** función es ideal para consultas únicas y debe ser la opci�
 Para obtener más información, consulte [How to: Retrieve Output Parameters Using the SQLSRV Driver](../../connect/php/how-to-retrieve-output-parameters-using-the-sqlsrv-driver.md).  
   
 ## <a name="example"></a>Ejemplo  
-En el siguiente ejemplo, se inserta una fila única en la tabla *Sales.SalesOrderDetail* de la base de datos de AdventureWorks. En el ejemplo se da por hecho que SQL Server y la base de datos de [AdventureWorks](http://go.microsoft.com/fwlink/?LinkID=67739) están instalados en el equipo local. Los resultados se agregan a la consola cuando se ejecuta el ejemplo en la línea de comandos.  
+En el siguiente ejemplo, se inserta una fila única en la tabla *Sales.SalesOrderDetail* de la base de datos de AdventureWorks. El ejemplo supone que SQL Server y el [AdventureWorks](https://github.com/Microsoft/sql-server-samples/tree/master/samples/databases/adventure-works) base de datos se instalan en el equipo local. Los resultados se agregan a la consola cuando se ejecuta el ejemplo en la línea de comandos.  
   
 > [!NOTE]  
 > Aunque en el ejemplo siguiente se utiliza una instrucción INSERT para mostrar el uso de **sqlsrv_query** para la ejecución de una instrucción única, el concepto se aplica a cualquier instrucción de Transact-SQL.  
@@ -131,7 +133,7 @@ sqlsrv_close($conn);
 ```  
   
 ## <a name="example"></a>Ejemplo  
-En el ejemplo siguiente se actualiza un campo en el *Sales.SalesOrderDetail* tabla de la base de datos de AdventureWorks. En el ejemplo se da por hecho que SQL Server y la base de datos de [AdventureWorks](http://go.microsoft.com/fwlink/?LinkID=67739) están instalados en el equipo local. Los resultados se agregan a la consola cuando se ejecuta el ejemplo en la línea de comandos.  
+En el ejemplo siguiente se actualiza un campo en el *Sales.SalesOrderDetail* tabla de la base de datos de AdventureWorks. El ejemplo supone que SQL Server y el [AdventureWorks](https://github.com/Microsoft/sql-server-samples/tree/master/samples/databases/adventure-works) base de datos se instalan en el equipo local. Los resultados se agregan a la consola cuando se ejecuta el ejemplo en la línea de comandos.  
   
 ```  
 <?php  
@@ -196,8 +198,13 @@ sqlsrv_close($conn);
 
 ## <a name="see-also"></a>Vea también  
 [Referencia de API del controlador SQLSRV](../../connect/php/sqlsrv-driver-api-reference.md)  
-[Cómo realizar consultas con parámetros](../../connect/php/how-to-perform-parameterized-queries.md)  
+
+[Realización de consultas con parámetros](../../connect/php/how-to-perform-parameterized-queries.md)  
+
 [Sobre los ejemplos de código de la documentación](../../connect/php/about-code-examples-in-the-documentation.md)  
-[Cómo enviar datos como una secuencia](../../connect/php/how-to-send-data-as-a-stream.md)  
+
+[Envío de datos como una secuencia](../../connect/php/how-to-send-data-as-a-stream.md)  
+
 [Uso de parámetros direccionales](../../connect/php/using-directional-parameters.md)  
+
   

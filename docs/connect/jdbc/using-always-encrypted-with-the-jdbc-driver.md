@@ -1,28 +1,28 @@
 ---
 title: Con Always Encrypted con el controlador JDBC | Documentos de Microsoft
-ms.custom: 
+ms.custom: ''
 ms.date: 3/14/2018
 ms.prod: sql-non-specified
 ms.prod_service: drivers
-ms.service: 
+ms.service: ''
 ms.component: jdbc
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - drivers
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: 271c0438-8af1-45e5-b96a-4b1cabe32707
-caps.latest.revision: 
+caps.latest.revision: ''
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: On Demand
-ms.openlocfilehash: 5a32f8269bb6787087b54d161c50cf6f06488482
-ms.sourcegitcommit: 8e897b44a98943dce0f7129b1c7c0e695949cc3b
+ms.openlocfilehash: 425f965c37e1d148a267566bd1980eb345cadfc6
+ms.sourcegitcommit: 2e130e9f3ce8a7ffe373d7fba8b09e937c216386
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/21/2018
+ms.lasthandoff: 03/28/2018
 ---
 # <a name="using-always-encrypted-with-the-jdbc-driver"></a>Uso de Always Encrypted con el controlador JDBC
 [!INCLUDE[Driver_JDBC_Download](../../includes/driver_jdbc_download.md)]
@@ -408,7 +408,7 @@ El **sendTimeAsDatetime** propiedad de conexión se usa para configurar la forma
 Para obtener más información acerca de esta propiedad, vea [java.sql.Time cómo configurar los valores se envían al servidor](configuring-how-java-sql-time-values-are-sent-to-the-server.md).
 
 ### <a name="configuring-how-string-values-are-sent-to-the-server"></a>Configurar cómo se envían los valores de cadena para el servidor
-El **sendStringParametersAsUnicode** propiedad de conexión se utiliza para configurar cómo se envían los valores de cadena a SQL Server. Si se establece en true, parámetros de cadena se envía al servidor en formato Unicode. Si establece en false, parámetros de cadena se envían en formato de no Unicode, como MBCS, Unicode o ASCII. El valor predeterminado de esta propiedad es true. Cuando se habilita Always Encrypted y se cifra una columna char/varchar/varchar(max), el valor de **sendStringParametersAsUnicode** debe establecerse en true (o se deja como el valor predeterminado). Si esta propiedad se establece en false, el controlador iniciará una excepción al insertar datos en una columna cifrada char/varchar/varchar(max). Para obtener más información acerca de esta propiedad, vea [estableciendo las propiedades de conexión](../../connect/jdbc/setting-the-connection-properties.md).
+El **sendStringParametersAsUnicode** propiedad de conexión se utiliza para configurar cómo se envían los valores de cadena a SQL Server. Si se establece en true, parámetros de cadena se envía al servidor en formato Unicode. Si establece en false, parámetros de cadena se envían en formato de no Unicode, como MBCS, Unicode o ASCII. El valor predeterminado de esta propiedad es true. Cuando se habilita Always Encrypted y se cifra una columna char/varchar/varchar(max), el valor de **sendStringParametersAsUnicode** debe establecerse en false. Si esta propiedad se establece en true, el controlador iniciará una excepción al descifrar los datos de una columna cifrada char/varchar/varchar(max) con caracteres Unicode. Para obtener más información acerca de esta propiedad, vea [estableciendo las propiedades de conexión](../../connect/jdbc/setting-the-connection-properties.md).
   
 ## <a name="retrieving-and-modifying-data-in-encrypted-columns"></a>Recuperar y modificar datos en columnas cifradas
 Una vez que habilite Always Encrypted para consultas de la aplicación, puede usar las API de JDBC estándar para recuperar o modificar datos en las columnas de la base de datos cifrada. Si la aplicación tiene los permisos necesarios de la base de datos y puede tener acceso a la clave maestra de columna, el controlador, se cifrarán los parámetros de consulta destinadas a columnas cifradas y descifrar los datos que se recuperan de las columnas cifradas.

@@ -1,33 +1,35 @@
 ---
-title: sqlsrv_fetch_array | Documentos de Microsoft
-ms.custom: 
-ms.date: 01/19/2017
+title: sqlsrv_fetch_array | Microsoft Docs
+ms.custom: ''
+ms.date: 03/26/2018
 ms.prod: sql-non-specified
 ms.prod_service: drivers
-ms.service: 
+ms.service: ''
 ms.component: php
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: drivers
-ms.tgt_pltfrm: 
+ms.technology:
+- drivers
+ms.tgt_pltfrm: ''
 ms.topic: article
-apiname: sqlsrv_fetch_array
+apiname:
+- sqlsrv_fetch_array
 apitype: NA
 helpviewer_keywords:
 - sqlsrv_fetch_array
 - retrieving data, as an array
 - API Reference, sqlsrv_fetch_array
 ms.assetid: 69270b9e-0791-42f4-856d-412da39dea63
-caps.latest.revision: "52"
+caps.latest.revision: ''
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: On Demand
-ms.openlocfilehash: 63fd8fa0274ed5e83774d6d9929023fe58ad6553
-ms.sourcegitcommit: 2713f8e7b504101f9298a0706bacd84bf2eaa174
+ms.openlocfilehash: 087d26284d99ee0021acded71b7bb5a2ff3e2cd6
+ms.sourcegitcommit: 2e130e9f3ce8a7ffe373d7fba8b09e937c216386
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/18/2017
+ms.lasthandoff: 03/28/2018
 ---
 # <a name="sqlsrvfetcharray"></a>sqlsrv_fetch_array
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]
@@ -46,7 +48,7 @@ sqlsrv_fetch_array( resource $stmt[, int $fetchType [, row[, ]offset]])
   
 *$fetchType* [opcional]: una constante predefinida. Este parámetro puede tomar uno de los valores que se muestran en la siguiente tabla:  
   
-|Valor|Description|  
+|Value|Description|  
 |---------|---------------|  
 |SQLSRV_FETCH_NUMERIC|La siguiente fila de datos se devuelve como una matriz numérica.|  
 |SQLSRV_FETCH_ASSOC|La siguiente fila de datos se devuelve como una matriz asociativa. Las claves de matriz son los nombres de columna del conjunto de resultados.|  
@@ -87,7 +89,7 @@ SELECT SCOPE_IDENTITY() AS PictureID
 Si un conjunto de resultados contiene varias columnas sin nombre, se asignará el valor de la última columna sin nombre a clave de la cadena vacía ("").  
   
 ## <a name="example"></a>Ejemplo  
-En el siguiente ejemplo se recupera cada fila de un conjunto de resultados como una **matriz**asociativa. En el ejemplo se da por hecho que SQL Server y la base de datos de [AdventureWorks](http://go.microsoft.com/fwlink/?LinkID=67739) están instalados en el equipo local. Los resultados se agregan a la consola cuando se ejecuta el ejemplo en la línea de comandos.  
+En el siguiente ejemplo se recupera cada fila de un conjunto de resultados como una **matriz**asociativa. En el ejemplo se da por supuesto que el servidor SQL Server y el [AdventureWorks](https://github.com/Microsoft/sql-server-samples/tree/master/samples/databases/adventure-works) base de datos se instalan en el equipo local. Los resultados se agregan a la consola cuando se ejecuta el ejemplo en la línea de comandos.  
   
 ```  
 <?php  
@@ -130,7 +132,7 @@ En el siguiente ejemplo se recupera cada fila de un conjunto de resultados como 
   
 En el ejemplo se recupera información del producto desde la *Purchasing.PurchaseOrderDetail* tabla de la base de datos de AdventureWorks para productos que tienen una fecha especificada y una cantidad mantenida en existencias (*StockQty*) menor que un valor especificado.  
   
-En el ejemplo se da por hecho que SQL Server y la base de datos de [AdventureWorks](http://go.microsoft.com/fwlink/?LinkID=67739) están instalados en el equipo local. Los resultados se agregan a la consola cuando se ejecuta el ejemplo en la línea de comandos.  
+El ejemplo supone que SQL Server y el [AdventureWorks](https://github.com/Microsoft/sql-server-samples/tree/master/samples/databases/adventure-works) base de datos se instalan en el equipo local. Los resultados se agregan a la consola cuando se ejecuta el ejemplo en la línea de comandos.  
   
 ```  
 <?php  
@@ -186,8 +188,11 @@ La función **sqlsrv_fetch_array** siempre devuelve datos según los [Default PH
 Si se recupera un campo sin nombre, la clave asociativa del elemento de matriz asociativa será una cadena vacía (""). Para obtener más información, vea [sqlsrv_fetch_array](../../connect/php/sqlsrv-fetch-array.md).  
   
 ## <a name="see-also"></a>Vea también  
-[Referencia de API del controlador SQLSRV](../../connect/php/sqlsrv-driver-api-reference.md)  
-[Recuperación de datos](../../connect/php/retrieving-data.md)  
-[Sobre los ejemplos de código de la documentación](../../connect/php/about-code-examples-in-the-documentation.md)  
-[Guía de programación para el controlador SQL para PHP](../../connect/php/programming-guide-for-php-sql-driver.md)
+[Referencia de API del controlador SQLSRV](../../connect/php/sqlsrv-driver-api-reference.md)
+
+[Recuperación de datos](../../connect/php/retrieving-data.md)
+
+[Sobre los ejemplos de código de la documentación](../../connect/php/about-code-examples-in-the-documentation.md)
+
+[Programación de guía para los controladores de Microsoft para PHP para SQL Server](../../connect/php/programming-guide-for-php-sql-driver.md)
   

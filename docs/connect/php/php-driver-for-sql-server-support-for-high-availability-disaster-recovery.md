@@ -1,29 +1,30 @@
 ---
-title: Controlador PHP para SQL Server High Availability, Disaster Recovery | Documentos de Microsoft
-ms.custom: 
-ms.date: 01/19/2017
+title: Compatibilidad con alta disponibilidad, recuperación ante desastres para los controladores de Microsoft para PHP para SQL Server | Documentos de Microsoft
+ms.custom: ''
+ms.date: 03/26/2018
 ms.prod: sql-non-specified
 ms.prod_service: drivers
-ms.service: 
+ms.service: ''
 ms.component: php
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: drivers
-ms.tgt_pltfrm: 
+ms.technology:
+- drivers
+ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: 73a80821-d345-4fea-b076-f4aabeb4af3e
-caps.latest.revision: "15"
+caps.latest.revision: ''
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: a4777aa2ffac5b3932815dee65eb237337d95784
-ms.sourcegitcommit: 2713f8e7b504101f9298a0706bacd84bf2eaa174
+ms.openlocfilehash: ee0be974c5998d531e20ed64c871ca85892aa46f
+ms.sourcegitcommit: 2e130e9f3ce8a7ffe373d7fba8b09e937c216386
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/18/2017
+ms.lasthandoff: 03/28/2018
 ---
-# <a name="php-driver-for-sql-server-support-for-high-availability-disaster-recovery"></a>Controlador PHP para el soporte de SQL Server para la alta disponibilidad con recuperación ante desastres
+# <a name="support-for-high-availability-disaster-recovery"></a>Compatibilidad con recuperación ante desastres de alta disponibilidad
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]
 
 Este tema se describen [!INCLUDE[ssDriverPHP](../../includes/ssdriverphp_md.md)] compatibilidad del (agregada en la versión 3.0) alta disponibilidad y recuperación ante desastres-- [!INCLUDE[ssHADR](../../includes/sshadr_md.md)].  Se agregó compatibilidad para [!INCLUDE[ssHADR](../../includes/sshadr_md.md)] en [!INCLUDE[ssSQL11](../../includes/sssql11_md.md)]. Para obtener más información acerca de [!INCLUDE[ssHADR](../../includes/sshadr_md.md)], vea los Libros en pantalla de [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] .  
@@ -38,11 +39,11 @@ Si no se está conectando a un agente de escucha del grupo de disponibilidad y s
 ## <a name="connecting-with-multisubnetfailover"></a>Conectarse a MultiSubnetFailover  
 El **MultiSubnetFailover** propiedad de conexión indica que la aplicación se implementa en un grupo de disponibilidad o instancia de clúster de conmutación por error y que la [!INCLUDE[ssDriverPHP](../../includes/ssdriverphp_md.md)] intentará conectarse a la base de datos en el servidor principal [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] direcciones de la instancia intenta conectarse a todas las direcciones IP. Cuando **MultiSubnetFailover = true** se especifica para una conexión, el cliente lo reintenta intentos de conexión TCP más rápidamente que los intervalos de retransmisión TCP del sistema operativo de forma predeterminada. Esto permite una reconexión más rápida después de la conmutación por error de un grupo de disponibilidad AlwaysOn o una instancia de clúster de conmutación por error AlwaysOn, y es aplicable a instancias de clúster de conmutación por error y grupos de disponibilidad de una y varias subredes.  
   
-Especifique siempre **MultiSubnetFailover = True** al conectarse a un agente de escucha del grupo de disponibilidad de SQL Server 2012 o una instancia de clúster de conmutación por error de SQL Server 2012. **MultiSubnetFailover** habilita una conmutación por error más rápida para todos los grupos de disponibilidad y la instancia del clúster de conmutación por error en SQL Server 2012 y reducirá significativamente el tiempo de la conmutación por error en las topologías AlwaysOn únicas y de varias subredes. En un clúster de conmutación por error de varias subredes, el cliente intentará conexiones en paralelo. Durante una conmutación por error de subred, el [!INCLUDE[ssDriverPHP](../../includes/ssdriverphp_md.md)] seguirá Reintentando la conexión TCP.  
+Especifique siempre **MultiSubnetFailover = True** al conectarse a un agente de escucha del grupo de disponibilidad de SQL Server 2012 o una instancia de clúster de conmutación por error de SQL Server 2012. **MultiSubnetFailover** habilita más rápida conmutación por error para todos los grupos de disponibilidad y una instancia de clúster de conmutación por error de SQL Server 2012 y reduce considerablemente el tiempo de conmutación por error para las topologías de AlwaysOn y de varias subredes. En un clúster de conmutación por error de varias subredes, el cliente intentará conexiones en paralelo. Durante una conmutación por error de subred, el [!INCLUDE[ssDriverPHP](../../includes/ssdriverphp_md.md)] seguirá Reintentando la conexión TCP.  
   
 Para obtener más información sobre las palabras clave de cadena de conexión en [!INCLUDE[ssDriverPHP](../../includes/ssdriverphp_md.md)], consulte [opciones de conexión](../../connect/php/connection-options.md).  
   
-Especificar **MultiSubnetFailover = true** al conectarse a algo distinto de un agente de escucha del grupo de disponibilidad o la instancia de clúster de conmutación por error puede producir un impacto negativo en el rendimiento y no se admite.  
+Especificar **MultiSubnetFailover = true** al conectarse a algo distinto de un agente de escucha del grupo de disponibilidad o una instancia de clúster de conmutación por error puede producir un impacto negativo en el rendimiento y no se admite.  
   
 Utilice las siguientes instrucciones para conectarse a un servidor de un grupo de disponibilidad :  
   
@@ -83,7 +84,7 @@ Una base de datos puede permitir o denegar la lectura de las cargas de trabajo e
 La palabra clave **ApplicationIntent** se usa para habilitar el enrutamiento de solo lectura.  
   
 ## <a name="read-only-routing"></a>Enrutamiento de solo lectura  
-El enrutamiento de solo lectura es una característica que puede garantizar la disponibilidad de una réplica de solo lectura de una base de datos. Para habilitar el enrutamiento de solo lectura:  
+El enrutamiento de solo lectura es una característica que puede asegurar la disponibilidad de una réplica de solo lectura de una base de datos. Para habilitar el enrutamiento de solo lectura:  
   
 1.  Debe conectarse siempre a un agente de escucha de grupo de disponibilidad Always On.  
   
@@ -93,7 +94,7 @@ El enrutamiento de solo lectura es una característica que puede garantizar la d
   
 Es posible que varias conexiones con enrutamiento de solo lectura no se conecten todas a la misma réplica de solo lectura. Los cambios en la sincronización de la base de datos o los cambios en la configuración de enrutamiento del servidor pueden producir conexiones de cliente para réplicas de solo lectura diferentes. Para asegurarse de que todas las solicitudes de solo lectura se conectan a la misma réplica de solo lectura, no pase un agente de escucha de grupo de disponibilidad a la palabra clave de cadena de conexión **Server**. En su lugar, especifique el nombre de la instancia de solo lectura.  
   
-El enrutamiento de solo lectura puede tardar más en conectarse al servidor principal porque el enrutamiento de solo lectura se conecta primero al servidor principal y luego busca el mejor secundario legible disponible. Por ello, debe aumentar el tiempo de espera de inicio de sesión.  
+El enrutamiento de solo lectura puede tardar más tiempo que la conexión a la réplica principal, ya que primero se conecta a la réplica principal y después busca la mejor réplica secundaria legible disponible. En este caso, se debe aumentar el tiempo de espera de inicio de sesión.  
   
 ## <a name="see-also"></a>Vea también  
 [Conexión al servidor](../../connect/php/connecting-to-the-server.md)  

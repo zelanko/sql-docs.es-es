@@ -1,27 +1,28 @@
 ---
-title: 'PDO:: GetAttribute | Documentos de Microsoft'
-ms.custom: 
+title: PDO::getAttribute | Microsoft Docs
+ms.custom: ''
 ms.date: 07/13/2017
 ms.prod: sql-non-specified
 ms.prod_service: drivers
-ms.service: 
+ms.service: ''
 ms.component: php
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: drivers
-ms.tgt_pltfrm: 
+ms.technology:
+- drivers
+ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: c81833ea-8b8a-459d-8f24-920098da994d
-caps.latest.revision: "20"
+caps.latest.revision: ''
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: d07bb348e196f1aad4bb38835e726e0b94d82298
-ms.sourcegitcommit: 2713f8e7b504101f9298a0706bacd84bf2eaa174
+ms.openlocfilehash: 0b9930a752a9347a2d5a72e9e1871eac42be3800
+ms.sourcegitcommit: 2e130e9f3ce8a7ffe373d7fba8b09e937c216386
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/18/2017
+ms.lasthandoff: 03/28/2018
 ---
 # <a name="pdogetattribute"></a>PDO::getAttribute
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]
@@ -44,7 +45,7 @@ Si se ejecuta correctamente, devuelve el valor de una opción de conexión, el a
 ## <a name="remarks"></a>Comentarios  
 En la tabla siguiente se incluye la lista de atributos admitidos.  
   
-|Attribute|Procesado mediante|Valores admitidos:|Description|  
+|Atributo|Procesado mediante|Valores admitidos:|Description|  
 |-------------|----------------|--------------------|---------------|  
 |PDO::ATTR_CASE|PDO|PDO::CASE_LOWER<br /><br />PDO::CASE_NATURAL<br /><br />PDO::CASE_UPPER|Especifica el uso de mayúsculas y minúsculas en los nombres de columna. PDO::CASE_LOWER obliga a que los nombres de columna usen minúsculas, PDO::CASE_NATURAL deja el nombre de columna que devuelve la base de datos y PDO::CASE_UPPER fuerza que los nombres de columna estén en mayúsculas.<br /><br />El valor predeterminado es PDO::CASE_NATURAL.<br /><br />Este atributo también puede establecerse utilizando PDO::setAttribute.|  
 |PDO::ATTR_CLIENT_VERSION|[!INCLUDE[ssDriverPHP](../../includes/ssdriverphp_md.md)]|Matriz de cadenas|Describe las versiones del controlador y las bibliotecas relacionadas. Devuelve una matriz con los siguientes elementos: versión de ODBC (*MajorVer*. *MinorVer*), [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] nombre de DLL de Native Client y la versión, [!INCLUDE[ssDriverPHP](../../includes/ssdriverphp_md.md)] versión (*MajorVer*. *MinorVer*. *BuildNumber*. *Revisión*)|  
@@ -55,7 +56,7 @@ En la tabla siguiente se incluye la lista de atributos admitidos.
 |PDO::ATTR_SERVER_INFO|[!INCLUDE[ssDriverPHP](../../includes/ssdriverphp_md.md)]|Matriz de 3 elementos|Devuelve la base de datos actual, la versión de SQL Server y la instancia de SQL Server.|  
 |PDO::ATTR_SERVER_VERSION|[!INCLUDE[ssDriverPHP](../../includes/ssdriverphp_md.md)]|String|Indica la versión de SQL Server (*principal*. *Secundaria*. *Número de compilación*)|  
 |PDO::ATTR_STRINGIFY_FETCHES|PDO|Consultar la documentación de PDO|Consulte la documentación de PDO.|  
-|PDO::SQLSRV_ATTR_CLIENT_BUFFER_MAX_KB_SIZE|[!INCLUDE[ssDriverPHP](../../includes/ssdriverphp_md.md)]|1 para el límite de memoria PHP.|Configura el tamaño de búfer que contiene el conjunto de resultados de un cursor de cliente.<br /><br />El valor predeterminado es 10240 KB (10 MB).<br /><br />Para obtener más información acerca de los cursores de cliente, consulte [tipos de Cursor &#40; Controlador SQLSRV &#41; ](../../connect/php/cursor-types-sqlsrv-driver.md).|  
+|PDO::SQLSRV_ATTR_CLIENT_BUFFER_MAX_KB_SIZE|[!INCLUDE[ssDriverPHP](../../includes/ssdriverphp_md.md)]|1 para el límite de memoria PHP.|Configura el tamaño de búfer que contiene el conjunto de resultados de un cursor de cliente.<br /><br />El valor predeterminado es 10240 KB (10 MB).<br /><br />Para obtener más información acerca de los cursores de cliente, consulte [tipos de Cursor &#40;controlador SQLSRV&#41;](../../connect/php/cursor-types-sqlsrv-driver.md).|  
 |PDO::SQLSRV_ATTR_DIRECT_QUERY|[!INCLUDE[ssDriverPHP](../../includes/ssdriverphp_md.md)]|true<br /><br />false|Especifica la ejecución de la consulta directa o preparada. Para obtener más información, vea [Direct Statement Execution and Prepared Statement Execution in the PDO_SQLSRV Driver (Ejecución de la instrucción preparada o directa en el controlador PDO_SQLSRV)](../../connect/php/direct-statement-execution-prepared-statement-execution-pdo-sqlsrv-driver.md).|  
 |PDO::SQLSRV_ATTR_ENCODING|[!INCLUDE[ssDriverPHP](../../includes/ssdriverphp_md.md)]|PDO::SQLSRV_ENCODING_UTF8<br /><br />PDO::SQLSRV_ENCODING_SYSTEM|Especifica el juego de caracteres que utiliza el controlador para comunicarse con el servidor.<br /><br />El valor predeterminado es PDO::SQLSRV_ENCODING_UTF8.|  
 |PDO::SQLSRV_ATTR_FETCHES_NUMERIC_TYPE|[!INCLUDE[ssDriverPHP](../../includes/ssdriverphp_md.md)]|true o false|Controla capturas numéricos de las columnas con tipos SQL numéricos (bit, integer, smallint, tinyint, float o real).<br /><br />Cuando marca de la opción de conexión ATTR_STRINGIFY_FETCHES está activada, incluso cuando SQLSRV_ATTR_FETCHES_NUMERIC_TYPE está activado, el valor devuelto es una cadena.<br /><br />Cuando el tipo devuelto de PDO en la columna de enlace es PDO_PARAM_INT, el valor devuelto de una columna de tipo entero es un tipo int aunque SQLSRV_ATTR_FETCHES_NUMERIC_TYPE está desactivada.|  
@@ -94,6 +95,7 @@ print_r($conn->getAttribute( PDO::ATTR_CLIENT_VERSION ));
 ```  
   
 ## <a name="see-also"></a>Vea también  
-[Clase PDO](../../connect/php/pdo-class.md)  
-[PDO](http://go.microsoft.com/fwlink/?LinkID=187441)  
+[Clase PDO](../../connect/php/pdo-class.md)
+
+[PDO](http://php.net/manual/book.pdo.php)  
   

@@ -1,16 +1,16 @@
 ---
 title: CREATE TABLE (Transact-SQL) | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 08/10/2017
 ms.prod: sql-non-specified
 ms.prod_service: database-engine, sql-database
-ms.service: 
+ms.service: ''
 ms.component: t-sql|statements
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - FILESTREAM_TSQL
@@ -49,28 +49,30 @@ helpviewer_keywords:
 - number of columns per table
 - maximum number of bytes per row
 ms.assetid: 1e068443-b9ea-486a-804f-ce7b6e048e8b
-caps.latest.revision: 
+caps.latest.revision: ''
 author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: Active
-ms.openlocfilehash: ad0dd6ed4d8006a596ac05c35730a8132368d5df
-ms.sourcegitcommit: 2208a909ab09af3b79c62e04d3360d4d9ed970a7
+ms.openlocfilehash: 33705d53cf51fa0aa32c386ff5cdf3fae54383ff
+ms.sourcegitcommit: 6e16d1616985d65484c72f5e0f34fb2973f828f4
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/02/2018
+ms.lasthandoff: 03/16/2018
 ---
 # <a name="create-table-transact-sql"></a>CREATE TABLE (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
   Crea una nueva tabla en [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] y [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)].  
   
+[!INCLUDE[ssMIlimitation](../../includes/sql-db-mi-limitation.md)]
+
 > [!NOTE]   
 >  Para la sintaxis de [!INCLUDE[ssSDW](../../includes/sssdw-md.md)], vea [CREATE TABLE (Azure SQL Data Warehouse)](../../t-sql/statements/create-table-azure-sql-data-warehouse.md).
   
  ![Icono de vínculo de tema](../../database-engine/configure-windows/media/topic-link.gif "Icono de vínculo de tema") [Convenciones de sintaxis de Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
-## <a name="syntax"></a>Sintaxis  
+## <a name="simple-syntax"></a>Sintaxis simple  
   
 ```  
 --Simple CREATE TABLE Syntax (common if not using options)  
@@ -80,7 +82,7 @@ CREATE TABLE
 [ ; ]  
 ```  
   
-## <a name="syntax"></a>Sintaxis  
+## <a name="full-syntax"></a>Sintaxis completa  
   
 ```  
 --Disk-Based CREATE TABLE Syntax  
@@ -517,7 +519,7 @@ Especifica que se creará un índice en la tabla. Puede tratarse de un índice a
  INDEX *index_name* [ NONCLUSTERED ] COLUMNSTORE (*column_name* [ ,... *n* ] )  
    
   
-**Se aplica a**: [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] hasta [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] y [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)].
+**Se aplica a**: [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] a [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] y [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)].
   
  Especifica que se creará un índice de almacén de columnas no en clúster en la tabla. La tabla subyacente puede ser un montón de almacenamiento de filas o un índice agrupado, o incluso puede ser un índice de almacén de columnas agrupado. En todos los casos, al crear un índice de almacén de columnas no en clúster en una tabla, se almacena una segunda copia de los datos de las columnas en el índice.  
   
@@ -777,14 +779,14 @@ CREATE TABLE t4( c1 int, c2 int, INDEX ix_1 NONCLUSTERED (c1,c2))
  COLUMNSTORE  
    
   
-**Se aplica a**: [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] hasta [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] y [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)].
+**Se aplica a**: [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] a [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] y [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)].
   
  Solo se aplica a los índices de almacén de columnas, incluidos los clúster y no clúster. COLUMNSTORE especifica que se comprimirá con la compresión de almacén de columnas que ofrezca el mejor rendimiento. Es la elección habitual.  
   
  COLUMNSTORE_ARCHIVE  
    
   
-**Se aplica a**: [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] hasta [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] y [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)].  
+**Se aplica a**: [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] a [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] y [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)].  
   
  Solo se aplica a los índices de almacén de columnas, incluidos los clúster y no clúster. COLUMNSTORE_ARCHIVE comprimirá aún más la partición o la tabla especificada a un tamaño mínimo. Esto se puede usar para el archivado o para otras situaciones que requieran un tamaño de almacenamiento mínimo y pueda permitirse más tiempo para el almacenamiento y recuperación.  
   
@@ -939,7 +941,7 @@ DATA_COMPRESSION = PAGE ON PARTITIONS (3, 5)
  MEMORY_OPTIMIZED  
    
   
-**Se aplica a**: [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] hasta [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] y [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)].  
+**Se aplica a**: [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] a [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] y [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)].  
   
  El valor ON indica si la tabla está optimizada para memoria. Las tablas optimizadas para memoria forman parte de la característica OLTP en memoria, que se usa para mejorar el rendimiento del procesamiento de transacciones. Para empezar con OLTP en memoria, vea [Inicio rápido 1: Tecnologías de OLTP en memoria para acelerar el rendimiento de Transact-SQL](../../relational-databases/in-memory-oltp/survey-of-initial-areas-in-in-memory-oltp.md). Para más información sobre las tablas optimizadas para memoria, vea [Tablas con optimización para memoria](../../relational-databases/in-memory-oltp/memory-optimized-tables.md).  
   
@@ -948,7 +950,7 @@ DATA_COMPRESSION = PAGE ON PARTITIONS (3, 5)
  DURABILITY  
    
   
-**Se aplica a**: [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] hasta [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] y [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)].   
+**Se aplica a**: [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] a [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] y [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)].   
   
  El valor de SCHEMA_AND_DATA indica que la tabla es duradera, lo que significa que los cambios se conservan en disco y sobreviven al reinicio o la conmutación por error.  SCHEMA_AND_DATA es el valor predeterminado.  
   
@@ -960,7 +962,7 @@ DATA_COMPRESSION = PAGE ON PARTITIONS (3, 5)
  BUCKET_COUNT  
    
   
-**Se aplica a**: [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] hasta [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] y [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]. 
+**Se aplica a**: [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] a [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] y [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]. 
   
  Indica el número de cubos que se deben crear en el índice hash. El valor máximo para BUCKET_COUNT en índices hash es 1 073 741 824. Para más información sobre los números de cubos, vea [Índices de las tablas con optimización para memoria](../../relational-databases/in-memory-oltp/indexes-for-memory-optimized-tables.md).  
   
@@ -969,14 +971,14 @@ DATA_COMPRESSION = PAGE ON PARTITIONS (3, 5)
  INDEX  
    
   
-**Se aplica a**: [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] hasta [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] y [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]. 
+**Se aplica a**: [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] a [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] y [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]. 
   
 Los índices de columna y de tabla se pueden especificar como parte de la instrucción CREATE TABLE. Para más información sobre cómo agregar y quitar índices en tablas optimizadas para memoria, vea [Modificar tablas con optimización para memoria](../../relational-databases/in-memory-oltp/altering-memory-optimized-tables.md).
   
  HASH  
    
   
-**Se aplica a**: [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] hasta [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] y [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]. 
+**Se aplica a**: [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] a [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] y [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]. 
   
  Indica que se ha creado un índice HASH.  
   
@@ -1223,7 +1225,7 @@ SELECT * FROM tempdb.sys.database_files
   
 -   Un índice creado para una restricción no se puede quitar usando DROP INDEX; la restricción debe quitarse con ALTER TABLE. Un índice creado para una restricción y usado por ella se puede volver a generar mediante ALTER INDEX...REBUILD. Para obtener más información, vea [Reorganizar y volver a generar índices](../../relational-databases/indexes/reorganize-and-rebuild-indexes.md).  
   
--   Los nombres de restricción deben seguir las reglas de los [identificadores](../../relational-databases/databases/database-identifiers.md), excepto en que el nombre no puede empezar por un signo de número (#). Si no se proporciona el parámetro *constraint_name*, se asigna a la restricción un nombre generado por el sistema. El nombre de la restricción aparece en todos los mensajes de error relativos a infracciones de la restricción.  
+-   Los nombres de restricción deben seguir las reglas de los [identificadores](../../relational-databases/databases/database-identifiers.md), excepto en que el nombre no puede empezar por un signo de número (#). Si *constraint_name* no se proporciona, se asigna a la restricción un nombre generado por el sistema. El nombre de la restricción aparece en todos los mensajes de error relativos a infracciones de la restricción.  
   
 -   Cuando se infringe una restricción en una instrucción INSERT, UPDATE o DELETE, la instrucción finaliza. Sin embargo, si SET XACT_ABORT se establece en OFF y la instrucción forma parte de una transacción explícita, continúa el procesamiento de la transacción. Si SET XACT_ABORT se establece en ON, se revierte toda la transacción. La instrucción ROLLBACK TRANSACTION también se puede usar con la definición de transacción al comprobar la función del sistema @@ERROR.  
   

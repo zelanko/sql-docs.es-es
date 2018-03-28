@@ -1,30 +1,31 @@
 ---
 title: Tipos de datos PHP predeterminados | Documentos de Microsoft
-ms.custom: 
+ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql-non-specified
 ms.prod_service: drivers
-ms.service: 
+ms.service: ''
 ms.component: php
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: drivers
-ms.tgt_pltfrm: 
+ms.technology:
+- drivers
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - default data types
 - converting data types
 ms.assetid: b66c301d-3d20-45b8-a112-225d8f01c0bd
-caps.latest.revision: "40"
+caps.latest.revision: ''
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 7ff008fdf5cd27300da5912c5347f8c7089bdf53
-ms.sourcegitcommit: 2713f8e7b504101f9298a0706bacd84bf2eaa174
+ms.openlocfilehash: ac611fe1d08c157dd9f6b4a67298ba318b62053f
+ms.sourcegitcommit: 2e130e9f3ce8a7ffe373d7fba8b09e937c216386
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/18/2017
+ms.lasthandoff: 03/28/2018
 ---
 # <a name="default-php-data-types"></a>Tipos de datos PHP predeterminados
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]
@@ -44,17 +45,17 @@ En la tabla siguiente se muestra el tipo de datos de SQL Server (el tipo de dato
 |bit|Integer|caracteres de 8 bits<sup>1</sup>|  
 |char|String|caracteres de 8 bits<sup>1</sup>|  
 |date<sup>4</sup>|Fecha y hora|No aplicable|  
-|fecha y hora<sup>4</sup>|Fecha y hora|No aplicable|  
+|datetime<sup>4</sup>|Fecha y hora|No aplicable|  
 |datetime2<sup>4</sup>|Fecha y hora|No aplicable|  
 |datetimeoffset<sup>4</sup>|Fecha y hora|No aplicable|  
 |decimal|String|caracteres de 8 bits<sup>1</sup>|  
 |float|Float|caracteres de 8 bits<sup>1</sup>|  
 |geography|Stream|Binaria<sup>3</sup>|  
 |geometry|Stream|Binaria<sup>3</sup>|  
-|imagen<sup>5</sup>|Stream<sup>2</sup>|Binaria<sup>3</sup>|  
+|image<sup>5</sup>|Stream<sup>2</sup>|Binaria<sup>3</sup>|  
 |int|Integer|caracteres de 8 bits<sup>1</sup>|  
 |money|String|caracteres de 8 bits<sup>1</sup>|  
-|nchar|String|caracteres de 8 bits<sup>1</sup>|  
+|NCHAR|String|caracteres de 8 bits<sup>1</sup>|  
 |numeric|String|caracteres de 8 bits<sup>1</sup>|  
 |nvarchar|String|caracteres de 8 bits<sup>1</sup>|  
 |nvarchar(MAX)|Stream<sup>2</sup>|caracteres de 8 bits<sup>1</sup>|  
@@ -64,12 +65,12 @@ En la tabla siguiente se muestra el tipo de datos de SQL Server (el tipo de dato
 |smallint|Integer|caracteres de 8 bits<sup>1</sup>|  
 |smallmoney|String|caracteres de 8 bits<sup>1</sup>|  
 |sql_variant<sup>7</sup>|String|caracteres de 8 bits<sup>1</sup>|  
-|texto<sup>8</sup>|Stream<sup>2</sup>|caracteres de 8 bits<sup>1</sup>|  
+|text<sup>8</sup>|Stream<sup>2</sup>|caracteres de 8 bits<sup>1</sup>|  
 |time<sup>4</sup>|Fecha y hora|No aplicable|  
-|timestamp|String|caracteres de 8 bits<sup>1</sup>|  
+|TIMESTAMP|String|caracteres de 8 bits<sup>1</sup>|  
 |tinyint|Integer|caracteres de 8 bits<sup>1</sup>|  
 |UDT|Stream<sup>2</sup>|Binaria<sup>3</sup>|  
-|uniqueidentifier|Cadena<sup>9</sup>|caracteres de 8 bits<sup>1</sup>|  
+|uniqueidentifier|String<sup>9</sup>|caracteres de 8 bits<sup>1</sup>|  
 |varbinary|Stream<sup>2</sup>|Binaria<sup>3</sup>|  
 |varbinary(MAX)|Stream<sup>2</sup>|Binaria<sup>3</sup>|  
 |varchar|String|caracteres de 8 bits<sup>1</sup>|  
@@ -77,9 +78,9 @@ En la tabla siguiente se muestra el tipo de datos de SQL Server (el tipo de dato
 |xml|Stream<sup>2</sup>|caracteres de 8 bits<sup>1</sup>|  
   
 
-1.  Los datos se devuelven en caracteres de 8 bits tal y como se especifica en la página de códigos de la configuración regional de Windows del sistema. Los caracteres multibyte, o aquellos que no tengan una correspondencia con esta página de códigos, se sustituirán por un carácter de signo de interrogación de cierre (?) de un solo byte.  
+1.  Los datos se devuelven en caracteres de 8 bits tal y como se especifica en la página de códigos de la configuración regional de Windows del sistema. Los caracteres de varios bytes o caracteres que no se asignen en esta página de códigos se sustituirán por un carácter de un solo byte de signo de interrogación (?).  
   
-2.  Si [sqlsrv_fetch_array](../../connect/php/sqlsrv-fetch-array.md) o [sqlsrv_fetch_object](../../connect/php/sqlsrv-fetch-object.md) se utilizan para recuperar datos con el tipo de datos PHP predeterminado Secuencia, los datos se devolverán como una cadena con la misma codificación que la secuencia. Por ejemplo, si se recupera un tipo binario de SQL Server mediante **sqlsrv_fetch_array**, el tipo de valor predeterminado devuelto será una cadena binaria.  
+2.  Si [sqlsrv_fetch_array](../../connect/php/sqlsrv-fetch-array.md) o [sqlsrv_fetch_object](../../connect/php/sqlsrv-fetch-object.md) es usa para recuperar los datos que tiene un tipo PHP predeterminado de secuencia, se devuelven los datos como una cadena con la misma codificación que la secuencia. Por ejemplo, si un binario de SQL Server se recupera tipo mediante el uso de **sqlsrv_fetch_array**, el valor devuelto predeterminado es de tipo de una cadena binaria.  
   
 3.  Los datos se devuelven del servidor como una secuencia de bytes sin procesar, sin que se realicen procesos de codificación o traducción.  
 
@@ -99,24 +100,28 @@ En la tabla siguiente se muestra el tipo de datos de SQL Server (el tipo de dato
  
  
 ## <a name="other-new-sql-server-2008-data-types-and-features"></a>Otras características y tipos de datos de SQL Server 2008 nuevos  
-No se admiten tipos de datos que son nuevas en SQL Server 2008 y que existen fuera de las columnas (por ejemplo, los parámetros con valores de tabla) en el [!INCLUDE[ssDriverPHP](../../includes/ssdriverphp_md.md)]. En la siguiente tabla se resume la compatibilidad de PHP con las nuevas características de SQL Server 2008.  
+No se admiten tipos de datos que son nuevas en SQL Server 2008 y que existen fuera de las columnas (por ejemplo, los parámetros con valores de tabla) en el [!INCLUDE[ssDriverPHP](../../includes/ssdriverphp_md.md)]. En la tabla siguiente se resume la compatibilidad PHP para las nuevas características de SQL Server 2008.  
   
 |Característica|Compatibilidad de PHP|  
 |-----------|---------------|  
-|Parámetro con valores de tabla|No|  
+|Parámetro con valores de tabla|no|  
 |Columnas dispersas|Parcial|  
 |Compresión de bits Null|Sí|  
 |Tipos de datos CLR definidos por el usuario (UDT) de gran tamaño|Sí|  
-|Nombre de entidad de seguridad de servicio|No|  
+|Nombre de entidad de seguridad de servicio|no|  
 |MERGE|Sí|  
 |FILESTREAM|Parcial|  
   
 En el caso de que la compatibilidad del tipo en cuestión sea parcial, no se podrán realizar consultas mediante programación del tipo de datos de la columna.  
   
 ## <a name="see-also"></a>Vea también  
-[Constantes &#40;controladores de Microsoft para PHP para SQL Server&#41;](../../connect/php/constants-microsoft-drivers-for-php-for-sql-server.md)  
-[Converting Data Types](../../connect/php/converting-data-types.md)  
-[Tipos de datos PHP](http://go.microsoft.com/fwlink/?LinkId=109071)  
-[Tipos de datos (Transact-SQL)](http://go.microsoft.com/fwlink/?LinkId=109068)  
+[Constantes &#40;controladores de Microsoft para PHP para SQL Server&#41;](../../connect/php/constants-microsoft-drivers-for-php-for-sql-server.md)
+
+[Converting Data Types](../../connect/php/converting-data-types.md)
+
+[Tipos de PHP](http://php.net/manual/en/language.types.php)
+
+[Tipos de datos (Transact-SQL)](../../t-sql/data-types/data-types-transact-sql.md)
+
 [sqlsrv_field_metadata](../../connect/php/sqlsrv-field-metadata.md)  
   

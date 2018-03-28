@@ -1,16 +1,16 @@
 ---
 title: sp_execute_external_script (Transact-SQL) | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 01/22/2018
 ms.prod: sql-non-specified
 ms.prod_service: database-engine
-ms.service: 
+ms.service: ''
 ms.component: system-stored-procedures
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - sp_execute_external_script_TSQL
@@ -22,16 +22,16 @@ dev_langs:
 helpviewer_keywords:
 - sp_execute_external_script
 ms.assetid: de4e1fcd-0e1a-4af3-97ee-d1becc7f04df
-caps.latest.revision: 
+caps.latest.revision: ''
 author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 283db0150613d9d956cf5b0ec6b6fd295bc4444b
-ms.sourcegitcommit: d7dcbcebbf416298f838a39dd5de6a46ca9f77aa
+ms.openlocfilehash: 487b669cc7d664194cd769bde564faec9454479b
+ms.sourcegitcommit: 2e130e9f3ce8a7ffe373d7fba8b09e937c216386
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/23/2018
+ms.lasthandoff: 03/28/2018
 ---
 # <a name="spexecuteexternalscript-transact-sql"></a>sp_execute_external_script (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md.md)]
@@ -44,7 +44,7 @@ ms.lasthandoff: 01/23/2018
 
 ```
 sp_execute_external_script   
-    @language = N'language,   
+    @language = N'language',   
     @script = N'script'  
     [ , @input_data_1 = N'input_data_1' ]   
     [ , @input_data_1_name = N'input_data_1_name' ]   
@@ -55,12 +55,12 @@ sp_execute_external_script
 ```
 
 ## <a name="arguments"></a>Argumentos
- @language= N'*lenguaje*'  
+ @language = N'*lenguaje*'  
  Indica el lenguaje de script. *idioma* es **sysname**.  
 
  Los valores válidos son `Python` o `R`. 
   
- @script= N'*script*'  
+ @script = N'*script*'  
  Secuencia de comandos de idiomas externos especificada como una entrada literal o una variable. *secuencia de comandos* es **nvarchar (max)**.  
   
  [ @input_data_1_name = N'*input_data_1_name*' ]  
@@ -103,7 +103,7 @@ De forma predeterminada, los conjuntos de resultados devueltos por este procedim
 
 En [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], [!INCLUDE[rsql_productname](../../includes/rsql-productname-md.md)] consta de un componente de servidor instalado con [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]y un conjunto de herramientas de la estación de trabajo y bibliotecas de conectividad que conectan a los científicos de datos al entorno de alto rendimiento de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Debe instalar los componentes durante de aprendizaje automático [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] el programa de instalación para habilitar la ejecución de scripts externos. Para obtener más información, consulte [configurar servicios de aprendizaje de máquina de SQL Server](../../advanced-analytics/r/set-up-sql-server-r-services-in-database.md).  
   
-Puede controlar los recursos que usa scripts externos mediante la configuración de un grupo de recursos externos. Para obtener más información, vea [CREATE EXTERNAL RESOURCE POOL &#40;Transact-SQL&#41;](../../t-sql/statements/create-external-resource-pool-transact-sql.md). Puede obtenerse información sobre la carga de trabajo de las vistas de catálogo del regulador de recursos, vistas de administración dinámica y contadores. Para obtener más información, vea [vistas de catálogo del regulador de recursos &#40; Transact-SQL &#41; ](../../relational-databases/system-catalog-views/resource-governor-catalog-views-transact-sql.md), [Regulador de recursos relacionados con vistas de administración dinámica &#40; Transact-SQL &#41; ](../../relational-databases/system-dynamic-management-views/resource-governor-related-dynamic-management-views-transact-sql.md), y [objeto las secuencias de comandos de SQL Server, externo](../../relational-databases/performance-monitor/sql-server-external-scripts-object.md).  
+Puede controlar los recursos que usa scripts externos mediante la configuración de un grupo de recursos externos. Para obtener más información, vea [CREATE EXTERNAL RESOURCE POOL &#40;Transact-SQL&#41;](../../t-sql/statements/create-external-resource-pool-transact-sql.md). Puede obtenerse información sobre la carga de trabajo de las vistas de catálogo del regulador de recursos, vistas de administración dinámica y contadores. Para obtener más información, consulte [vistas de catálogo del regulador de recursos &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/resource-governor-catalog-views-transact-sql.md), [relacionados Dynamic Management Views de regulador de recursos &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/resource-governor-related-dynamic-management-views-transact-sql.md)y [ Objeto de Scripts de SQL Server, externo](../../relational-databases/performance-monitor/sql-server-external-scripts-object.md).  
 
 Ejecución del script Monitor con [sys.dm_external_script_requests](../../relational-databases/system-dynamic-management-views/sys-dm-external-script-requests.md) y [sys.dm_external_script_execution_stats](../../relational-databases/system-dynamic-management-views/sys-dm-external-script-execution-stats.md). 
 
@@ -208,19 +208,19 @@ END;
 GO
 ```
 
-Para generar un modelo similar mediante Python, cambiaría el identificador de idioma de `@language=N'R'` a `@language = N'Python'`y realice las modificaciones necesarias para la `@script` argumento. De lo contrario, todos los parámetros de función igual que en R.
+Para generar un modelo similar mediante Python, tendría que cambiar el identificador de idioma de `@language=N'R'` a `@language = N'Python'`y realizar las modificaciones necesarias para el argumento `@script`. En caso contrario, todos los parámetros funcionan del mismo modo que para R.
 
 ### <a name="c-create-a-python-model-and-generate-scores-from-it"></a>C. Crear un modelo de Python y generar puntuaciones a partir de ella
 
-Este ejemplo muestra cómo utilizar sp\_ejecutar\_externo\_secuencia de comandos para generar puntuaciones en un modelo simple de Python. 
+En este ejemplo se muestra cómo usar sp\_execute\_external\_script para generar puntuaciones en un modelo simple de Python. 
 
 ```sql
 CREATE PROCEDURE [dbo].[py_generate_customer_scores]
 AS
 BEGIN
 
-## Input query to generate the customer data
-DECLARE @input_query NVARCHAR(MAX) = N'SELECT customer, orders, items, cost FROM dbo.Sales.Orders`
+-- Input query to generate the customer data
+DECLARE @input_query NVARCHAR(MAX) = N'SELECT customer, orders, items, cost FROM dbo.Sales.Orders'
 
 EXEC sp_execute_external_script @language = N'Python', @script = N'
 import pandas as pd
@@ -244,9 +244,9 @@ END;
 GO
 ```
 
-Encabezados de columna que se utiliza en el código de Python no son de salida a SQL Server; por lo tanto, use la instrucción con resultados para especificar los nombres de columna y tipos de datos para SQL.
+Los encabezados de columna usados en el código Python no se envían como resultados a SQL Server, así que use la instrucción WITH RESULTS para especificar los nombres de columna y los tipos de datos para SQL.
 
-Para puntuar, también puede utilizar nativo [PREDICT](../../t-sql/queries/predict-transact-sql.md) función, que es normalmente más rápido porque evita llamar en tiempo de ejecución de Python o R.
+Para puntuar, también puede usar la función nativa [PREDICT](../../t-sql/queries/predict-transact-sql.md), que es normalmente más rápida porque evita llamar al runtime de Python o R.
 
 ## <a name="see-also"></a>Vea también
 
@@ -256,9 +256,9 @@ Para puntuar, también puede utilizar nativo [PREDICT](../../t-sql/queries/predi
  [SQL Server R Services](../../advanced-analytics/r/sql-server-r-services.md)   
  [Problemas conocidos de servicios de aprendizaje de máquina SQL Server](../../advanced-analytics/known-issues-for-sql-server-machine-learning-services.md)   
  [CREATE EXTERNAL LIBRARY &#40;Transact-SQL&#41;](../../t-sql/statements/create-external-library-transact-sql.md)  
- [sp_prepare &#40; Transact SQL &#41;](../../relational-databases/system-stored-procedures/sp-prepare-transact-sql.md)   
+ [sp_prepare &#40;Transact SQL&#41;](../../relational-databases/system-stored-procedures/sp-prepare-transact-sql.md)   
  [sp_configure &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-configure-transact-sql.md)   
- [Opción de configuración de servidor scripts externos habilitados](../../database-engine/configure-windows/external-scripts-enabled-server-configuration-option.md)   
+ [Opción de configuración del servidor external scripts enabled](../../database-engine/configure-windows/external-scripts-enabled-server-configuration-option.md)   
  [SERVERPROPERTY &#40;Transact-SQL&#41;](../../t-sql/functions/serverproperty-transact-sql.md)   
  [External Scripts (objeto de SQL Server)](../../relational-databases/performance-monitor/sql-server-external-scripts-object.md)  
 [sys.dm_external_script_requests](../../relational-databases/system-dynamic-management-views/sys-dm-external-script-requests.md)  

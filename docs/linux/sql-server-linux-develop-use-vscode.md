@@ -1,6 +1,6 @@
 ---
-title: "Use la extensión de mssql de código de Visual Studio para SQL Server | Documentos de Microsoft"
-description: "Este tutorial muestra cómo utilizar la extensión mssql para el código de VS. Esta extensión le permite editar y ejecutar scripts de Transact-SQL en el código de VS."
+title: Use la extensión de mssql de código de Visual Studio para SQL Server | Documentos de Microsoft
+description: Este tutorial muestra cómo utilizar la extensión mssql para el código de VS. Esta extensión le permite editar y ejecutar scripts de Transact-SQL en el código de VS.
 author: erickangMSFT
 ms.author: erickang
 manager: craigg
@@ -8,18 +8,18 @@ ms.date: 03/17/2017
 ms.topic: article
 ms.prod: sql-non-specified
 ms.prod_service: database-engine
-ms.service: 
-ms.component: 
+ms.service: ''
+ms.component: ''
 ms.suite: sql
 ms.technology: database-engine
 ms.assetid: 9766ee75-32d3-4045-82a6-4c7968bdbaa6
 ms.custom: sql-linux
 ms.workload: Active
-ms.openlocfilehash: caf053ca9dc50df6d3433a11e992e097f2147d7a
-ms.sourcegitcommit: f02598eb8665a9c2dc01991c36f27943701fdd2d
+ms.openlocfilehash: fa3fb3c1d807698ddf1fa28c6c710956a75d30ea
+ms.sourcegitcommit: 2e130e9f3ce8a7ffe373d7fba8b09e937c216386
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/13/2018
+ms.lasthandoff: 03/28/2018
 ---
 # <a name="use-visual-studio-code-to-create-and-run-transact-sql-scripts-for-sql-server"></a>Usar código de Visual Studio para crear y ejecutar secuencias de comandos de Transact-SQL para SQL Server
 
@@ -97,7 +97,7 @@ Los pasos siguientes muestran cómo conectarse a SQL Server con el código de VS
 
    | Configuración | Description |
    |-----|-----|
-   | **Nombre del servidor** | El nombre de instancia de SQL Server. Para este tutorial, utilice **localhost** para conectarse a la instancia de SQL Server local en su equipo. Si se conecta a un servidor SQL remoto, escriba el nombre de la máquina de SQL Server de destino o su dirección IP. |
+   | **Nombre del servidor** | El nombre de instancia de SQL Server. Para este tutorial, utilice **localhost** para conectarse a la instancia de SQL Server local en su equipo. Si se conecta a un servidor SQL remoto, escriba el nombre de la máquina de SQL Server de destino o su dirección IP. Si tiene que especificar un puerto para la instancia de SQL Server, use una coma para separar el nombre de. Por ejemplo para un servidor local que se ejecuta en el puerto 1401 escriba **localhost, 1401**. |
    | **[Opcional] Nombre de base de datos** | La base de datos que desea usar. Para fines de este tutorial, no se especifica una base de datos y presione **ENTRAR** para continuar. |
    | **Nombre de usuario.** | Escriba el nombre de un usuario con acceso a una base de datos en el servidor. Para este tutorial, utilice el valor predeterminado **SA** cuenta creada durante la instalación de SQL Server. |
    | **Contraseña (inicio de sesión de SQL)** | Escriba la contraseña del usuario especificado. | 

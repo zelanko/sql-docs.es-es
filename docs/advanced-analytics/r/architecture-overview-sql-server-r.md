@@ -1,33 +1,33 @@
 ---
-title: "Información general de la arquitectura (SQL Server R Services) | Microsoft Docs"
-ms.custom: 
+title: Información general de la arquitectura (SQL Server R Services) | Microsoft Docs
+ms.custom: ''
 ms.date: 07/11/2017
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.prod: machine-learning-services
 ms.prod_service: machine-learning-services
 ms.component: r
-ms.technology: 
-ms.tgt_pltfrm: 
+ms.technology: ''
+ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: 6c4a4f66-ea3e-4a73-acf2-6c8aeafc94b0
-caps.latest.revision: 
+caps.latest.revision: ''
 author: jeannt
 ms.author: jeannt
 manager: cgronlund
 ms.workload: Inactive
-ms.openlocfilehash: d23b15bd823c9054d9ddc7f1077bda80614686bd
-ms.sourcegitcommit: 99102cdc867a7bdc0ff45e8b9ee72d0daade1fd3
+ms.openlocfilehash: 7ef5e5efd0e1efb1817e4b9d1577d3b0a8a82051
+ms.sourcegitcommit: 2e130e9f3ce8a7ffe373d7fba8b09e937c216386
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/11/2018
+ms.lasthandoff: 03/28/2018
 ---
 # <a name="architecture-overview-for-r-in-sql-server"></a>Introducción a la arquitectura de R en SQL Server
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
 
 Esta sección proporciona información general sobre la arquitectura de servicios de SQL Server 2016 R y de servicios de aprendizaje de máquina de SQL Server de 2017.
 
-La arquitectura de la arquitectura de extensibilidad es la misma o muy similar para SQL Server 2016 y versiones SQL Server de 2017 y similares también para R y Python. Sin embargo, para simplificar el análisis, este tema describen sólo los componentes de R, incluidos los nuevos componentes agregados en el motor de base de datos de SQL Server para admitir la ejecución de scripts externos, la seguridad, las bibliotecas de R y la interoperabilidad con código abierto R.
+La arquitectura de la arquitectura de extensibilidad es la misma o muy similar para SQL Server 2016 y versiones SQL Server de 2017 y similares también para R y Python. Sin embargo, para simplificar el análisis, este artículo describe sólo los componentes de R, incluidos los nuevos componentes agregados en el motor de base de datos de SQL Server para admitir la ejecución de scripts externos, la seguridad, las bibliotecas de R y la interoperabilidad con código abierto R.
 
 Se proporcionan detalles adicionales en los vínculos de cada sección.
 

@@ -1,27 +1,28 @@
 ---
 title: Conectar al servidor | Documentos de Microsoft
-ms.custom: 
-ms.date: 01/19/2017
+ms.custom: ''
+ms.date: 03/26/2018
 ms.prod: sql-non-specified
 ms.prod_service: drivers
-ms.service: 
+ms.service: ''
 ms.component: php
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: drivers
-ms.tgt_pltfrm: 
+ms.technology:
+- drivers
+ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: c251a239-e0bd-4f45-9207-b76651072dd0
-caps.latest.revision: "44"
+caps.latest.revision: ''
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: On Demand
-ms.openlocfilehash: c8f04b08517de9b21e5e3104b43b18db0324a863
-ms.sourcegitcommit: 2713f8e7b504101f9298a0706bacd84bf2eaa174
+ms.openlocfilehash: 818a71b8e0bc60168602e7fc0228c21319d08a21
+ms.sourcegitcommit: 2e130e9f3ce8a7ffe373d7fba8b09e937c216386
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/18/2017
+ms.lasthandoff: 03/28/2018
 ---
 # <a name="connecting-to-the-server"></a>Conexión al servidor
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]
@@ -32,7 +33,7 @@ Los [!INCLUDE[ssDriverPHP](../../includes/ssdriverphp_md.md)] pueden conectarse 
 
 ## <a name="in-this-section"></a>En esta sección  
 
-|Tema|Descripción|  
+|Tema|Description|  
 |---------|---------------|  
 |[Cómo conectarse mediante la autenticación de Windows](../../connect/php/how-to-connect-using-windows-authentication.md)|Describe cómo establecer una conexión mediante la autenticación de Windows.|  
 |[Cómo conectarse mediante la autenticación de SQL Server](../../connect/php/how-to-connect-using-sql-server-authentication.md)|Describe cómo establecer una conexión con autenticación de SQL Server.|  
@@ -41,11 +42,12 @@ Los [!INCLUDE[ssDriverPHP](../../includes/ssdriverphp_md.md)] pueden conectarse 
 |[Agrupar conexiones](../../connect/php/connection-pooling-microsoft-drivers-for-php-for-sql-server.md)|Proporciona información acerca de la agrupación de conexiones en el controlador.|  
 |[Deshabilitar los conjuntos de resultados activos múltiples (MARS)](../../connect/php/how-to-disable-multiple-active-resultsets-mars.md)|Describe cómo deshabilitar la característica MARS al establecer una conexión.|  
 |[Opciones de conexión](../../connect/php/connection-options.md)|Enumera las opciones que se permiten en la matriz asociativa que contiene atributos de conexión.|  
-|[Controlador PHP para el soporte de SQL Server para LocalDB](../../connect/php/php-driver-for-sql-server-support-for-localdb.md)|Describe la compatibilidad de los [!INCLUDE[ssDriverPHP](../../includes/ssdriverphp_md.md)] con la característica LocalDB, que se agregó en [!INCLUDE[ssSQL11](../../includes/sssql11_md.md)].|  
-|[Controlador PHP para el soporte de SQL Server para la alta disponibilidad con recuperación ante desastres](../../connect/php/php-driver-for-sql-server-support-for-high-availability-disaster-recovery.md)|Describe cómo se puede configurar la aplicación para aprovechar las ventajas de la recuperación ante desastres de alta disponibilidad y funciones de agregan en [!INCLUDE[ssSQL11](../../includes/sssql11_md.md)].|  
+|[Compatibilidad con LocalDB](../../connect/php/php-driver-for-sql-server-support-for-localdb.md)|Describe la compatibilidad de los [!INCLUDE[ssDriverPHP](../../includes/ssdriverphp_md.md)] con la característica LocalDB, que se agregó en [!INCLUDE[ssSQL11](../../includes/sssql11_md.md)].|  
+|[Compatibilidad con alta disponibilidad, recuperación ante desastres](../../connect/php/php-driver-for-sql-server-support-for-high-availability-disaster-recovery.md)|Describe cómo se puede configurar la aplicación para aprovechar las ventajas de la recuperación ante desastres de alta disponibilidad y funciones de agregan en [!INCLUDE[ssSQL11](../../includes/sssql11_md.md)].|  
 |[Conexión a Microsoft Azure SQL Database](../../connect/php/connecting-to-microsoft-azure-sql-database.md)|Describe cómo conectarse a una base de datos de SQL Azure.|  
 |[Resistencia de conexión](../../connect/php/connection-resiliency.md)|Describe la característica de resistencia de conexión que restablece las conexiones interrumpidas.|  
 
 ## <a name="see-also"></a>Vea también  
-[Guía de programación para el controlador SQL para PHP](../../connect/php/programming-guide-for-php-sql-driver.md)
-[aplicación de ejemplo &#40; Controlador SQLSRV &#41;](../../connect/php/example-application-sqlsrv-driver.md)  
+[Programación de guía para los controladores de Microsoft para PHP para SQL Server](../../connect/php/programming-guide-for-php-sql-driver.md)
+
+[Aplicación de ejemplo &#40;controlador SQLSRV&#41;](../../connect/php/example-application-sqlsrv-driver.md)  

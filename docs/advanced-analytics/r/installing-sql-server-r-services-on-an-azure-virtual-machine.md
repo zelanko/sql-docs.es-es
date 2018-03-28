@@ -1,52 +1,38 @@
 ---
-title: "Instalar características de aprendizaje de máquina de SQL Server en una máquina virtual de Azure | Documentos de Microsoft"
-ms.custom: 
-ms.date: 10/31/2017
-ms.reviewer: 
+title: Instalar características de aprendizaje de máquina de SQL Server en una máquina virtual de Azure | Documentos de Microsoft
+ms.custom: ''
+ms.date: 03/21/2018
+ms.reviewer: ''
 ms.suite: sql
 ms.prod: machine-learning-services
 ms.prod_service: machine-learning-services
 ms.component: r
-ms.technology: 
-ms.tgt_pltfrm: 
+ms.technology: ''
+ms.tgt_pltfrm: ''
 ms.topic: article
-ms.assetid: c3c223b8-75c4-412e-a319-d57ecf6533af
-caps.latest.revision: 
-author: jeannt
-ms.author: jeannt
-manager: cgronlund
+ms.assetid: ''
+caps.latest.revision: ''
+author: HeidiSteen
+ms.author: heidist
+manager: cgronlun
 ms.workload: Inactive
-ms.openlocfilehash: 572aeffdc0d3c06a4c3bda17e3f3d438b2819183
-ms.sourcegitcommit: 8e897b44a98943dce0f7129b1c7c0e695949cc3b
+ms.openlocfilehash: d2f0f38086c7725e14261afa9a40f29b212b748f
+ms.sourcegitcommit: 2e130e9f3ce8a7ffe373d7fba8b09e937c216386
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/21/2018
+ms.lasthandoff: 03/28/2018
 ---
-# <a name="installing-sql-server-machine-learning-features-on-an-azure-virtual-machine"></a>Instalación de características en una máquina virtual de Azure de aprendizaje de automático de SQL Server
+# <a name="install-sql-server-machine-learning-features-on-an-azure-virtual-machine"></a>Instalar características en una máquina virtual de Azure de aprendizaje de automático de SQL Server
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
  
-Si implementa una máquina virtual de Azure que incluye [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)], ahora puede seleccionar el aprendizaje automático como una característica que se agregará a la instancia cuando se crea la máquina virtual.
+Se recomienda utilizar la [ciencia de datos virtual machine](ttps://docs.microsoft.com/azure/machine-learning/data-science-virtual-machine/provision-vm), pero si desea que una máquina virtual que tiene solo servicios de aprendizaje de SQL Server de 2017 máquinas o SQL Server 2016 R Services, este artículo le guía a través de los pasos.
 
-+ [Crear una nueva máquina virtual que incluye SQL Server 2016 y R Services](#new)
-+ [Agregar características de aprendizaje de máquina a una máquina virtual existente con SQL Server 2016](#existing)
+## <a name="create-a-virtual-machine-on-azure"></a>Crear una máquina virtual en Azure
 
-> [!NOTE]
-> ¡Máquinas virtuales están ahora disponibles para SQL Server 2017! Vea [este anuncio](https://azure.microsoft.com/blog/announcing-new-azure-vm-images-sql-server-2017-on-linux-and-windows/) para obtener más información.
-> 
-> R también está disponible como una característica de vista previa de la base de datos de SQL Azure. Para obtener más información, consulte [usar R en la base de datos de SQL Azure](../r/using-r-in-azure-sql-database.md).
-
-## <a name="create-a-new-sql-server-2017-virtual-machine"></a>Crear una nueva máquina virtual de SQL Server 2017
-
-Para usar R o Python en SQL Server 2017, asegúrese de obtener una máquina virtual de Windows. [!INCLUDE[sscurrentlong-md](../../includes/sscurrentlong-md.md)] en Linux es compatible con fast [puntuación nativo](../sql-native-scoring.md) utilizando la función de PREDICCIÓN de T-SQL, pero otra características de aprendizaje automático no están disponibles todavía en esta edición.
-
-Para obtener una lista de ofertas de VM de SQL Server, consulte este artículo: [información general de SQL Server en máquinas virtuales de Azure (Windows)](https://docs.microsoft.com/azure/virtual-machines/windows/sql/virtual-machines-windows-sql-server-iaas-overview).
-
-### <a name="new"></a>Crear una nueva VM de Enterprise de SQL Server con aprendizaje automático
-
-1. En el portal de Azure, haga clic en máquinas virtuales y, a continuación, haga clic en nuevo.
-2. Seleccione la edición Enterprise SQL Server de 2017.
+1. En el portal de Azure en la lista del lado izquierdo, haga clic en **máquinas virtuales** y, a continuación, haga clic en **agregar**.
+2. Búsqueda de SQL Server de 2017 Enterprise Edition o SQL Server 2016 Enterprise Edition.
 3. Configure el nombre de servidor y los permisos de cuenta y seleccione un plan de precios.
-4. En **configuración de SQL Server** (paso 4 del Asistente para instalación VM), busque **servicios de aprendizaje de máquina (Advanced Analytics)** y haga clic en **habilitar**.
+4. En **configuración de SQL Server** (paso 4 del Asistente para instalación VM), busque **servicios de aprendizaje de máquina (Advanced Analytics)** (o **R Services** para SQL Server 2016) y haga clic en  **Habilitar**.
 5. Revise el resumen de validación y haga clic en **Aceptar**.
 6. Cuando la máquina virtual esté lista, conéctese a ella y abra SQL Server Management Studio, que ya está preinstalado. Aprendizaje automático está listo para ejecutarse.
 7. Para confirmarlo, puede abrir una nueva ventana de consulta y ejecutar una instrucción sencilla como la siguiente, en la que se usa R para generar una secuencia de números del 1 al 10.
@@ -113,7 +99,3 @@ Para obtener más información, consulte [instalar SQL Server 2016 R Services](.
   TCP/IP es necesaria para las conexiones de bucle invertido. Si recibe el siguiente error, habilite TCP/IP en la máquina virtual que es compatible con la instancia:
 
   "DBNETLIB; SQL Server no existe o se denegó el acceso"
-
-## <a name="related-resources"></a>Recursos relacionados
-
-[Uso de R en la base de datos SQL Azure](../r/using-r-in-azure-sql-database.md)

@@ -1,30 +1,31 @@
 ---
-title: "Cómo: especificar los tipos de datos PHP | Documentos de Microsoft"
-ms.custom: 
+title: 'Cómo: especificar los tipos de datos PHP | Documentos de Microsoft'
+ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql-non-specified
 ms.prod_service: drivers
-ms.service: 
+ms.service: ''
 ms.component: php
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: drivers
-ms.tgt_pltfrm: 
+ms.technology:
+- drivers
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - converting data types
 - streaming data
 ms.assetid: fee6e6b8-aad9-496b-84a2-18d2950470a4
-caps.latest.revision: "32"
+caps.latest.revision: ''
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 0a0374a32d2798a28cfe3e27ab557921763eea36
-ms.sourcegitcommit: 2713f8e7b504101f9298a0706bacd84bf2eaa174
+ms.openlocfilehash: b12a1042d4090a9e2369f602010199dea54431ed
+ms.sourcegitcommit: 2e130e9f3ce8a7ffe373d7fba8b09e937c216386
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/18/2017
+ms.lasthandoff: 03/28/2018
 ---
 # <a name="how-to-specify-php-data-types"></a>Cómo especificar tipos de datos PHP
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]
@@ -37,14 +38,14 @@ En los pasos siguientes se resume cómo especificar los tipos de datos PHP cuand
   
 2.  Haga que una fila de datos esté disponible para su lectura con [sqlsrv_fetch](../../connect/php/sqlsrv-fetch.md).  
   
-3.  Recupere los datos de campo de una fila devuelta mediante [sqlsrv_get_field](../../connect/php/sqlsrv-get-field.md) con el tipo de datos PHP deseado especificado como el tercer parámetro opcional. Si no se especifica el tercer parámetro opcional, los datos se devolverán según los tipos de datos PHP predeterminado. Para obtener información sobre los tipos de valor devueltos de PHP predeterminado, consulte [Default PHP Data Types](../../connect/php/default-php-data-types.md).  
+3.  Recupere los datos de campo de una fila devuelta mediante [sqlsrv_get_field](../../connect/php/sqlsrv-get-field.md) con el tipo de datos PHP deseado especificado como el tercer parámetro opcional. Si no se especifica el tercer parámetro opcional, se devuelven datos según los tipos PHP predeterminado. Para obtener información sobre los tipos de valor devueltos de PHP predeterminado, consulte [Default PHP Data Types](../../connect/php/default-php-data-types.md).  
   
-    Para obtener información sobre las constantes que se usan para especificar el tipo de datos PHP, consulte la sección de PHPTYPE de [constantes &#40; Controladores de Microsoft para PHP para SQL Server &#41; ](../../connect/php/constants-microsoft-drivers-for-php-for-sql-server.md).  
+    Para obtener información sobre las constantes que se usan para especificar el tipo de datos PHP, consulte la sección de PHPTYPE de [constantes &#40;Microsoft Drivers for PHP para SQL Server&#41;](../../connect/php/constants-microsoft-drivers-for-php-for-sql-server.md).  
   
 ## <a name="example"></a>Ejemplo  
-En el ejemplo siguiente se recuperan las filas de la tabla *Production.ProductReview* de la base de datos de AdventureWorks. En cada fila devuelta, el campo *ReviewDate* se recupera como una cadena, y el campo *Comments* , como una secuencia. Los datos de la secuencia se muestran mediante la función PHP [fpassthru](http://php.net/manual/en/function.fpassthru.php) .  
+En el ejemplo siguiente se recuperan las filas de la tabla *Production.ProductReview* de la base de datos de AdventureWorks. En cada fila devuelta, el *ReviewDate* campo se recupera como una cadena y la *comentarios* campo se recupera como una secuencia. Los datos de la secuencia se muestran mediante la función PHP [fpassthru](http://php.net/manual/en/function.fpassthru.php) .  
   
-En el ejemplo se da por hecho que SQL Server y la base de datos de [AdventureWorks](http://go.microsoft.com/fwlink/?LinkID=67739) están instalados en el equipo local. Los resultados se agregan a la consola cuando se ejecuta el ejemplo en la línea de comandos.  
+El ejemplo supone que SQL Server y el [AdventureWorks](https://github.com/Microsoft/sql-server-samples/tree/master/samples/databases/adventure-works) base de datos se instalan en el equipo local. Los resultados se agregan a la consola cuando se ejecuta el ejemplo en la línea de comandos.  
   
 ```  
 <?php  
@@ -111,8 +112,11 @@ Recuperación del cuarto campo (*comentarios*) como una secuencia es para fines 
 > La función [sqlsrv_field_metadata](../../connect/php/sqlsrv-field-metadata.md) proporciona una forma de obtener información de los campos, incluidos los datos de los tipos, antes de ejecutar una consulta.  
   
 ## <a name="see-also"></a>Vea también  
-[Recuperación de datos](../../connect/php/retrieving-data.md)  
-[Sobre los ejemplos de código de la documentación](../../connect/php/about-code-examples-in-the-documentation.md)  
-[Cómo recuperar parámetros de salida con el controlador SQLSRV](../../connect/php/how-to-retrieve-output-parameters-using-the-sqlsrv-driver.md)  
+[Recuperación de datos](../../connect/php/retrieving-data.md)
+
+[Sobre los ejemplos de código de la documentación](../../connect/php/about-code-examples-in-the-documentation.md)
+
+[Recuperación de parámetros de salida con el controlador SQLSRV](../../connect/php/how-to-retrieve-output-parameters-using-the-sqlsrv-driver.md)
+
 [How to: Retrieve Input and Output Parameters Using the SQLSRV Driver](../../connect/php/how-to-retrieve-input-and-output-parameters-using-the-sqlsrv-driver.md)  
   

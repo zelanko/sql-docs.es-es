@@ -1,99 +1,100 @@
 ---
-title: Carga del controlador SQL para PHP | Documentos de Microsoft
-ms.custom: 
-ms.date: 01/19/2017
+title: Carga los controladores de Microsoft para PHP para SQL Server | Documentos de Microsoft
+ms.custom: ''
+ms.date: 03/26/2018
 ms.prod: sql-non-specified
 ms.prod_service: drivers
-ms.service: 
+ms.service: ''
 ms.component: php
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: drivers
-ms.tgt_pltfrm: 
+ms.technology:
+- drivers
+ms.tgt_pltfrm: ''
 ms.topic: article
-helpviewer_keywords: loading the driver
+helpviewer_keywords:
+- loading the driver
 ms.assetid: e5c114c5-8204-49c2-94eb-62ca63f5d3ec
-caps.latest.revision: "42"
+caps.latest.revision: ''
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Active
-ms.openlocfilehash: 90ba63857ea38481577083d2a85999e789dfcb84
-ms.sourcegitcommit: 2713f8e7b504101f9298a0706bacd84bf2eaa174
+ms.openlocfilehash: 5a21dcd1f7f416a7bdade75e1648aec9795680a1
+ms.sourcegitcommit: 2e130e9f3ce8a7ffe373d7fba8b09e937c216386
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/18/2017
+ms.lasthandoff: 03/28/2018
 ---
-# <a name="loading-the-php-sql-driver"></a>Carga del controlador SQL para PHP
+# <a name="loading-the-microsoft-drivers-for-php-for-sql-server"></a>Carga de los controladores de Microsoft para PHP para SQL Server
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]
 
-En este tema se proporcionan instrucciones para cargar los [!INCLUDE[ssDriverPHP](../../includes/ssdriverphp_md.md)] en el espacio del proceso PHP.  
+Esta página proporciona instrucciones para cargar el [!INCLUDE[ssDriverPHP](../../includes/ssdriverphp_md.md)] en el archivo PHP espacio del proceso.  
   
-Hay dos opciones para cargar un controlador: cuando se inicia PHP o en el runtime del script PHP.  
+Puede descargar los controladores creada previamente para su plataforma de la [Microsoft Drivers for PHP para SQL Server](https://github.com/Microsoft/msphpsql/releases) página de Github del proyecto. Cada paquete de instalación contiene los archivos de controlador SQLSRV y PDO_SQLSRV en variantes uniproceso y no un subproceso. En Windows, también están disponibles en las variantes de 32 bits y 64 bits. Vea [requisitos del sistema para Drivers de Microsoft para PHP para SQL Server](../../connect/php/system-requirements-for-the-php-sql-driver.md) para obtener una lista de los archivos de controlador que se encuentran en cada paquete. El archivo del controlador debe coincidir con la versión PHP, la arquitectura y la threadedness de su entorno de PHP.
+
+En Linux y Mac OS, los controladores o bien se pueden instalar mediante PECL, como se encuentra en la [tutorial de instalación](../../connect/php/installation-tutorial-linux-mac.md).
   
 ## <a name="moving-the-driver-file-into-your-extension-directory"></a>Traslado del archivo del controlador al directorio de extensión  
-Con independencia del procedimiento que se use, el primer paso será colocar el archivo del controlador en un directorio donde se encuentre el runtime PHP. Por lo tanto, coloque el archivo del controlador en el directorio de extensión PHP. Vea [Requisitos del sistema para el controlador SQL para PHP](../../connect/php/system-requirements-for-the-php-sql-driver.md) para obtener una lista de los archivos de controladores que se instalan con los [!INCLUDE[ssDriverPHP](../../includes/ssdriverphp_md.md)].  
-  
-Si es necesario, especifique la ubicación del directorio del archivo del controlador en el archivo de configuración de PHP (php.ini) mediante la **extension_dir** opción. Por ejemplo, si el archivo del controlador se coloca en el directorio c:\php\ext, utilice esta opción:  
+El archivo del controlador debe encontrarse en un directorio donde encuentre el runtime PHP. Es más fácil para el archivo del controlador se coloca en el directorio de extensión PHP predeterminado - para buscar el directorio predeterminado, ejecute `php -i | sls extension_dir` en Windows o `php -i | grep extension_dir` en Linux/macOS. Si no se usa el directorio de extensión de manera predeterminada, especifique un directorio en el archivo de configuración de PHP (php.ini) mediante la **extension_dir** opción. Por ejemplo, en Windows, si ha colocado el archivo del controlador en su `c:\php\ext` directory, agregue la siguiente línea a php.ini:
   
 ```  
 extension_dir = "c:\PHP\ext"  
-```  
-  
-## <a name="loading-the-driver-at-php-startup"></a>Carga del controlador al iniciar PHP  
-Para cargar los [!INCLUDE[ssDriverPHP](../../includes/ssdriverphp_md.md)] cuando se inicie PHP, mueva primero un archivo del controlador al directorio de extensión. A continuación, siga estos pasos:  
-  
-1.  Para habilitar la **SQLSRV** controlador, modificar **php.ini** agregando la línea siguiente a la sección de extensión o modificando la línea que ya existe:  
-  
-    En Windows (este ejemplo utiliza la versión 4.0 del controlador seguro para subprocesos para PHP 7): 
-    ```  
-    extension=php_sqlsrv_7_ts.dll  
-    ```  
-    En Linux (este ejemplo utiliza la versión como instalados por PECL): 
-    ```  
-    extension=sqlsrv.so  
-    ```  
-    Para habilitar la **PDO_SQLSRV** controlador, modificar **php.ini** agregando la línea siguiente a la sección de extensión o modificando la línea que ya existe:  
-  
-    En Windows (este ejemplo utiliza la versión 4.0 del controlador seguro para subprocesos para PHP 7):
-    ```  
-    extension=php_pdo_sqlsrv_7_ts.dll  
-    ```  
-    En Linux (este ejemplo utiliza la versión como instalados por PECL):
-    ```  
-    extension=pdo_sqlsrv.so  
-    ```  
-  
-2.  Si desea utilizar el **PDO_SQLSRV** controlador, la extensión de los objetos de datos de PHP (PDO) debe estar disponible como extensión integrada o como una extensión cargada dinámicamente. Si tiene que cargar el controlador PDO_SQLSRV dinámicamente, el archivo php_pdo.dll (o pdo.so en Linux) debe estar presente en el directorio de extensión y la siguiente línea debe estar en el archivo php.ini:
+```
 
-    En Windows:  
+## <a name="loading-the-driver-at-php-startup"></a>Carga del controlador al iniciar PHP  
+Para cargar el controlador SQLSRV cuando se inicia PHP, mueva primero un archivo de controlador al directorio de extensión. A continuación, siga estos pasos:  
+  
+1.  Para habilitar la **SQLSRV** controlador, modificar **php.ini** agregando la siguiente línea a la sección de extensión, cambiar el nombre de archivo según corresponda:  
+  
+    En Windows: 
+    ```  
+    extension=php_sqlsrv_72_ts.dll  
+    ```  
+    En Linux, si ha descargado los archivos binarios creada previamente para su distribución: 
+    ```  
+    extension=php_sqlsrv_72_nts.so  
+    ```
+    Si ha compilado el SQLSRV binario de origen o con PECL, en su lugar, se denomina sqlsrv.so:
+    ```
+    extension=sqlsrv.so
+    ```
+  
+2.  Para habilitar la **PDO_SQLSRV** controlador, la extensión de los objetos de datos de PHP (PDO) debe estar disponible como extensión integrada o como una extensión cargada dinámicamente.
+
+    En Windows, los binarios PHP predeterminados incluyen PDO integrado, por lo que no es necesario modificar php.ini para cargarla. Si, sin embargo, se compila PHP de origen y especifica una extensión PDO independiente que se crea, se denominará `php_pdo.dll`, y debe copiarlo en el directorio de extensión y agregue la siguiente línea a php.ini:  
     ```
     extension=php_pdo.dll  
-    ```  
-    En Linux:  
     ```
-    extension=pdo.so  
-    ```  
+    En Linux, si ha instalado PHP mediante Administrador de paquetes de su sistema, PDO probablemente se instala como una extensión cargada dinámicamente denominada pdo.so. La extensión PDO debe cargarse antes de la extensión PDO_SQLSRV o se producirá un error de carga. Las extensiones se cargan normalmente utilizando los archivos .ini individuales y se leen estos archivos después de php.ini. Por lo tanto, si pdo.so se carga a través de su propio archivo. ini, se requiere un archivo independiente que carga el controlador PDO_SQLSRV después PDO. 
+
+    Para averiguar qué directorio se encuentran los archivos .ini específica de la extensión, ejecute `php --ini` y tenga en cuenta el directorio que aparece en `Scan for additional .ini files in:`. Busque el archivo que carga pdo.so, es probable que viene precedida por un número, como 10 pdo.ini. El prefijo numérico indica el orden de carga de los archivos .ini, mientras se cargan archivos que no tienen un prefijo numérico por orden alfabético. Cree un archivo para cargar el archivo del controlador PDO_SQLSRV llamado a 30-pdo_sqlsrv.ini (cualquier número mayor que la que se antepone a works pdo.ini) o pdo_sqlsrv.ini (si pdo.ini no viene precedida por un número) y agregue la siguiente línea, cambiar el nombre de archivo como apropiados:  
+    ```
+    extension=php_pdo_sqlsrv_72_nts.so
+    ```
+    Como con SQLSRV, si ha compilado el PDO_SQLSRV binario de origen o con PECL, en su lugar, se denominará pdo_sqlsrv.so:
+    ```
+    extension=pdo_sqlsrv.so
+    ```
+    Copie este archivo en el directorio que contiene los demás archivos ini. 
+
+    Si ha compilado PHP de origen con la compatibilidad integrada de PDO, no necesita un archivo .ini independiente, y puede agregar la línea adecuada anteriormente a php.ini.
   
 3.  Reinicie el servidor web.  
   
 > [!NOTE]  
-> Para determinar si el controlador se ha cargado correctamente, ejecute un script que llame [phpinfo()](http://go.microsoft.com/fwlink/?LinkId=108678).  
+> Para determinar si el controlador se ha cargado correctamente, ejecute un script que llame [phpinfo()](http://php.net/manual/en/function.phpinfo.php).  
   
-Para obtener más información sobre las directivas de **php.ini** , consulte el artículo [Descripción de las directivas del núcleo de php.ini](http://go.microsoft.com/fwlink/?LinkId=105817).  
-  
-## <a name="loading-the-driver-at-php-script-runtime"></a>Carga del controlador en el runtime del script PHP  
-Para cargar los [!INCLUDE[ssDriverPHP](../../includes/ssdriverphp_md.md)] en el runtime del script, mueva primero un archivo del controlador al directorio de extensión. A continuación, incluya la línea siguiente al principio del script PHP que coincida con el nombre de archivo del controlador:  
-  
-```  
-dl('php_pdo_sqlsrv_7_ts.dll');  
-```  
-  
-Para obtener más información sobre las funciones PHP relacionadas con la carga dinámica de extensiones, vea [dl](http://go.microsoft.com/fwlink/?LinkId=105818) y [extension_loaded.](http://go.microsoft.com/fwlink/?LinkId=105819)  
+Para obtener más información acerca de **php.ini** directivas, consulte [descripción de las directivas de php.ini core](http://php.net/manual/en/ini.core.php).  
   
 ## <a name="see-also"></a>Vea también  
-[Introducción al controlador SQL para PHP](../../connect/php/getting-started-with-the-php-sql-driver.md)
-[Requisitos del sistema para el controlador SQL para PHP](../../connect/php/system-requirements-for-the-php-sql-driver.md)
-[Guía de programación para el controlador SQL para PHP](../../connect/php/programming-guide-for-php-sql-driver.md)
-[Referencia de API del controlador SQLSRV](../../connect/php/sqlsrv-driver-api-reference.md)  
+[Introducción a los controladores de Microsoft para PHP para SQL Server](../../connect/php/getting-started-with-the-php-sql-driver.md)
+
+[Requisitos del sistema para los controladores de Microsoft para PHP para SQL Server](../../connect/php/system-requirements-for-the-php-sql-driver.md)
+
+[Programación de guía para los controladores de Microsoft para PHP para SQL Server](../../connect/php/programming-guide-for-php-sql-driver.md)
+
+[Referencia de API del controlador SQLSRV](../../connect/php/sqlsrv-driver-api-reference.md)
+
+[Referencia de API del controlador PDO_SQLSRV](../../connect/php/pdo-sqlsrv-driver-reference.md)  
   

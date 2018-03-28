@@ -1,24 +1,24 @@
 ---
 title: Instalar equipo con SQL Server de 2017 aprendizaje Services (en bases de datos) en Windows | Documentos de Microsoft
-ms.custom: 
+ms.custom: ''
 ms.date: 03/20/2018
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.prod: machine-learning-services
 ms.prod_service: machine-learning-services
 ms.component: python
-ms.technology: 
-ms.tgt_pltfrm: 
+ms.technology: ''
+ms.tgt_pltfrm: ''
 ms.topic: article
 author: HeidiSteen
 ms.author: heidist
 manager: cgronlun
 ms.workload: On Demand
-ms.openlocfilehash: 1904517351a23bfa736549a249d77be2932b3c07
-ms.sourcegitcommit: 8e897b44a98943dce0f7129b1c7c0e695949cc3b
+ms.openlocfilehash: a620e7ede1976fbbc50c0c81a595f002410403c8
+ms.sourcegitcommit: 2e130e9f3ce8a7ffe373d7fba8b09e937c216386
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/21/2018
+ms.lasthandoff: 03/28/2018
 ---
 # <a name="install-sql-server-2017-machine-learning-services-in-database-on-windows"></a>Instalar equipo con SQL Server de 2017 aprendizaje Services (en bases de datos) en Windows 
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
@@ -29,7 +29,7 @@ Este artículo explica cómo instalar el componente de aprendizaje de máquina m
 
 ## <a name="bkmk_prereqs"> </a> Lista de comprobación previa a la instalación
 
-+ Se requiere SQL Server 2017. Si tiene SQL Server 2016, instale [SQL Server 2016 R Services (In-Database)](sql-r-services-windows-install.md) en su lugar.
++ El programa de instalación de SQL Server 2017 es necesario si va a instalar servicios de aprendizaje de máquina con compatibilidad con idiomas de R, Python o ambos. Si en su lugar tiene los medios de instalación de SQL Server 2016, puede instalar [SQL Server 2016 R Services (In-Database)](sql-r-services-windows-install.md) para obtener compatibilidad con idiomas de R.
 
 + Se requiere una instancia del motor de base de datos. No se puede instalar solo R o características de Python, a pesar de que puede agregarlos incrementalmente a una instancia existente.
 
@@ -67,7 +67,7 @@ En instalaciones locales, debe ejecutar el programa de instalación como adminis
   
          Para usar R y Python con SQL Server, debe instalar una instancia del motor de base de datos. Puede usar el valor predeterminado o una instancia con nombre.
   
-    -   **Servicios (en bases de datos) de aprendizaje automático**
+    -   **Machine Learning Services (en base de datos)**
   
          Esta opción instala los servicios de base de datos que admiten R y la ejecución del script de Python.
 

@@ -1,16 +1,16 @@
 ---
 title: Sugerencias de consulta (Transact-SQL) | Microsoft Docs
-ms.custom: 
-ms.date: 08/09/2017
+ms.custom: ''
+ms.date: 03/11/2018
 ms.prod: sql-non-specified
 ms.prod_service: database-engine, sql-database
-ms.service: 
+ms.service: ''
 ms.component: t-sql|queries
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - Query_Hint_TSQL
@@ -57,16 +57,16 @@ helpviewer_keywords:
 - EXTERNALPUSHDOWN query hint
 - USE HINT query hint
 ms.assetid: 66fb1520-dcdf-4aab-9ff1-7de8f79e5b2d
-caps.latest.revision: 
+caps.latest.revision: ''
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ms.workload: Active
-ms.openlocfilehash: 0a3c74aa7b1da86c6d0ac54025d337700019465d
-ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
+ms.openlocfilehash: f13c32bbc1852c06a88df7a9ab24443be9d1c4d5
+ms.sourcegitcommit: 6b1618aa3b24bf6759b00a820e09c52c4996ca10
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/25/2018
+ms.lasthandoff: 03/15/2018
 ---
 # <a name="hints-transact-sql---query"></a>Sugerencias (Transact-SQL): consulta
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -74,7 +74,7 @@ ms.lasthandoff: 01/25/2018
   Sugerencias de consulta especifica que en toda la consulta se deben utilizar las sugerencias especificadas. Afectan a todos los operadores de la instrucción. Si hay un argumento UNION implicado en la consulta principal, solo la última consulta que implique una operación UNION puede contener la cláusula OPTION. Las sugerencias de consulta se especifican como parte de la [cláusula OPTION](../../t-sql/queries/option-clause-transact-sql.md). Si una o varias sugerencias de consulta provocan que el optimizador de consultas no genere un plan válido, se produce el error 8622.  
   
 > [!CAUTION]  
->  Como el optimizador de consultas de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] suele seleccionar el mejor plan de ejecución para las consultas, se recomienda que solo los desarrolladores y administradores de bases de datos experimentados usen estas sugerencias y que lo hagan como último recurso.  
+> Como el optimizador de consultas de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] suele seleccionar el mejor plan de ejecución para las consultas, se recomienda que solo los desarrolladores y administradores de bases de datos experimentados usen estas sugerencias y que lo hagan como último recurso.  
   
  **Se aplica a:**  
   
@@ -153,7 +153,7 @@ ms.lasthandoff: 01/25/2018
  { LOOP | MERGE | HASH } JOIN  
  Especifica que todas las operaciones de combinación se realicen mediante LOOP JOIN, MERGE JOIN o HASH JOIN en toda la consulta. Si se especifica más de una sugerencia de combinación, el optimizador seleccionará la estrategia menos costosa de entre las permitidas.  
   
- Si, en la misma consulta, en la cláusula FROM se especifica también una sugerencia de combinación para una pareja de tablas específica, la sugerencia de combinación tendrá prioridad en la combinación de las dos tablas aunque aún se deban respetar las sugerencias de consulta. Por tanto, es posible que la sugerencia de combinación para la pareja de tablas solo restrinja la selección de los métodos de combinación permitidos en la sugerencia de consulta. Para más información, vea [Sugerencias de combinación &#40;Transact-SQL&#41;](../../t-sql/queries/hints-transact-sql-join.md).  
+ Si, en la misma consulta, en la cláusula FROM se especifica también una sugerencia de combinación para una pareja de tablas específica, la sugerencia de combinación tendrá prioridad en la combinación de las dos tablas aunque aún se deban respetar las sugerencias de consulta. Por tanto, es posible que la sugerencia de combinación para la pareja de tablas solo restrinja la selección de los métodos de combinación permitidos en la sugerencia de consulta. Para obtener más información, vea [Sugerencias de combinación &#40;Transact-SQL&#41;](../../t-sql/queries/hints-transact-sql-join.md).  
   
  EXPAND VIEWS  
  Especifica que las vistas indizadas se expanden y que el optimizador de consultas no considerará ninguna vista indizada como sustituto de una parte de la consulta. Una vista se expande cuando se reemplaza el nombre de la vista por la definición de la vista en el texto de la consulta.  
@@ -171,7 +171,7 @@ ms.lasthandoff: 01/25/2018
  Especifica que el orden de combinación que indica la sintaxis de la consulta se mantenga durante la optimización de la consulta. El uso de FORCE ORDER no afecta al posible comportamiento de inversión de roles del optimizador de consultas.  
   
 > [!NOTE]  
->  En una instrucción MERGE, se obtiene acceso a la tabla de origen antes que a la tabla de destino como el orden de combinación predeterminado, a menos que se especifique la cláusula WHEN SOURCE NOT MATCHED. Al especificar FORCE ORDER, se conserva este comportamiento predeterminado.  
+> En una instrucción MERGE, se obtiene acceso a la tabla de origen antes que a la tabla de destino como el orden de combinación predeterminado, a menos que se especifique la cláusula WHEN SOURCE NOT MATCHED. Al especificar FORCE ORDER, se conserva este comportamiento predeterminado.  
   
  { FORCE | DISABLE } EXTERNALPUSHDOWN  
  Fuerza o deshabilita la aplicación del cálculo de expresiones válidas en Hadoop. Solo se aplica a las consultas que usan PolyBase. No se aplicará a Azure Storage.  
@@ -202,24 +202,24 @@ ms.lasthandoff: 01/25/2018
   
  Invalida la opción de configuración **Grado máximo de paralelismo** de **sp_configure** y Resource Governor para la consulta que especifica esta opción. La sugerencia de consulta MAXDOP puede superar el valor configurado con sp_configure. Si MAXDOP supera el valor configurado con Resource Governor, el [!INCLUDE[ssDE](../../includes/ssde-md.md)] usa el valor MAXDOP de Resource Governor, descrito en [ALTER WORKLOAD GROUP &#40;Transact-SQL&#41;](../../t-sql/statements/alter-workload-group-transact-sql.md). Se pueden aplicar todas las reglas semánticas usadas con la opción de configuración **Grado máximo de paralelismo** cuando se usa la sugerencia de consulta MAXDOP. Para obtener más información, vea [Configure the max degree of parallelism Server Configuration Option](../../database-engine/configure-windows/configure-the-max-degree-of-parallelism-server-configuration-option.md).  
   
-> [!WARNING]  
+> [!WARNING]     
 > Si MAXDOP se establece en cero, el servidor elige el grado máximo de paralelismo.  
   
- MAXRECURSION *number*  
- Especifica el número máximo de recursiones permitidas para esta consulta. *number* es un entero no negativo entre 0 y 32767. Cuando se especifica 0, no se aplica ningún límite. Si no se especifica esta opción, el límite predeterminado para el servidor es 100.  
+ MAXRECURSION *number*     
+ Especifica el número máximo de recursiones permitidas para esta consulta. *number* es un entero no negativo entre 0 y 32 767. Cuando se especifica 0, no se aplica ningún límite. Si no se especifica esta opción, el límite predeterminado para el servidor es 100.  
   
  Cuando se alcanza el número predeterminado o especificado para el límite de MAXRECURSION durante la ejecución de la consulta, la consulta finaliza y se devuelve un error.  
   
  Debido a este error, todos los efectos de la instrucción se revierten. Si la instrucción es una instrucción SELECT, es posible que no se devuelva ningún resultado o que los resultados sean parciales. Puede que los resultados parciales no incluyan todas las filas de los niveles de recursividad que superen el nivel de recursividad máximo especificado.  
   
- Para más información, vea [WITH common_table_expression &#40;Transact-SQL&#41;](../../t-sql/queries/with-common-table-expression-transact-sql.md).  
+ Para más información, vea [WITH common_table_expression &#40;Transact-SQL&#41;](../../t-sql/queries/with-common-table-expression-transact-sql.md).     
   
- NO_PERFORMANCE_SPOOL  
+ NO_PERFORMANCE_SPOOL    
  **Se aplica a**: desde [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] hasta [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].  
   
  Impide que se agregue un operador de cola de impresión a planes de consulta (excepto a los planes en los que se requiere que la cola de impresión garantice una semántica de actualización válida). En algunos escenarios, el operador de cola de impresión puede reducir el rendimiento. Por ejemplo, la cola de impresión usa tempdb, y puede producirse la contención de tempdb si se ejecutan muchas consultas simultáneas con las operaciones de cola de impresión.  
   
- OPTIMIZE FOR ( *@variable_name* { UNKNOWN | = *literal_constant }* [ **,** ...*n* ] )  
+ OPTIMIZE FOR ( *@variable_name* { UNKNOWN | = *literal_constant }* [ **,** ...*n* ] )     
  Indica al optimizador de consultas que utilice un valor concreto para una variable local cuando la consulta se compila y optimiza. El valor se utiliza solo durante la optimización de la consulta y no durante la ejecución de la misma.  
   
  *@variable_name*  
@@ -238,13 +238,14 @@ ms.lasthandoff: 01/25/2018
   
  Si se usan OPTIMIZE FOR @variable_name = *literal_constant* y OPTIMIZE FOR UNKNOWN en la misma sugerencia de consulta, el optimizador de consultas usará el valor *literal_constant* especificado para un valor determinado y UNKNOWN para los valores de las variables restantes. Los valores se usan solo durante la optimización de la consulta y no durante la ejecución de la misma.  
   
- PARAMETERIZATION { SIMPLE | FORCED }  
+ PARAMETERIZATION { SIMPLE | FORCED }     
  Especifica las reglas de parametrización que aplica el optimizador de consultas de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] cuando se compila la consulta.  
   
 > [!IMPORTANT]  
-> La sugerencia de consulta PARAMETERIZATION solo puede especificarse en una guía de plan. No se puede especificar directamente en una consulta.  
+> La sugerencia de consulta PARAMETERIZATION solo se puede especificar en una guía de plan para invalidar la configuración actual de la opción SET de base de datos PARAMETERIZATION. No se puede especificar directamente en una consulta.    
+> Para más información, vea [Especificar el comportamiento de parametrización de consultas por medio de guías de plan](../../relational-databases/performance/specify-query-parameterization-behavior-by-using-plan-guides.md).
   
- SIMPLE indica al optimizador de consultas para que intente la parametrización simple. FORCED indica al optimizador que intente la parametrización forzada. La sugerencia de consulta PARAMETERIZATION se utiliza para invalidar la configuración actual de la opción SET de base de datos PARAMETERIZATION de una guía de plan. Para más información, vea [Especificar el comportamiento de parametrización de consultas por medio de guías de plan](../../relational-databases/performance/specify-query-parameterization-behavior-by-using-plan-guides.md).  
+ SIMPLE indica al optimizador de consultas para que intente la parametrización simple. FORCED indica al optimizador de consultas que intente la parametrización forzada. Para más información, vea [Parametrización forzada en la guía de arquitectura de procesamiento de consultas](../../relational-databases/query-processing-architecture-guide.md#ForcedParam) y [Parametrización simple en la guía de arquitectura de procesamiento de consultas](../../relational-databases/query-processing-architecture-guide.md#SimpleParam).  
   
  RECOMPILE  
  Indica a [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] que descarte el plan generado para la consulta una vez ejecutada, obligando así al optimizador de consultas a que vuelva a compilar un plan de consulta la próxima vez que se ejecute la misma consulta. Sin especificar RECOMPILE, el [!INCLUDE[ssDE](../../includes/ssde-md.md)] almacena en la memoria caché planes de consulta y los reutiliza. Cuando se compilan planes de consulta, la sugerencia de consulta RECOMPILE utiliza los valores actuales de cualquier variable local de la consulta y, si la consulta está en un procedimiento almacenado, los valores actuales enviados a cualquier parámetro.  
@@ -256,12 +257,12 @@ ms.lasthandoff: 01/25/2018
   
  Si no es posible realizar tal plan, el optimizador de consultas devuelve un error en lugar de diferir la detección de errores hasta la ejecución de la consulta. Las filas pueden contener columnas de longitud variable; el [!INCLUDE[ssDE](../../includes/ssde-md.md)] permite definir filas con un tamaño potencial máximo que supere la capacidad del [!INCLUDE[ssDE](../../includes/ssde-md.md)] para procesarlas. Normalmente, a pesar del tamaño potencial máximo, una aplicación almacena filas cuyo tamaño real se encuentra dentro de los límites que puede procesar el [!INCLUDE[ssDE](../../includes/ssde-md.md)]. Si el [!INCLUDE[ssDE](../../includes/ssde-md.md)] encuentra una fila demasiado larga, devuelve un error de ejecución.  
  
-<a name="use_hint"></a> USE HINT ( **'***hint_name***'** )  
- **Se aplica a:** [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (a partir de [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)]) y [!INCLUDE[ssSDS](../../includes/sssds-md.md)].
+<a name="use_hint"></a> USE HINT ( **'***hint_name***'** )    
+ **Se aplica a**: se aplica a [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (a partir de [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] SP1) y a [!INCLUDE[ssSDS](../../includes/sssds-md.md)].
  
- Proporciona una o varias sugerencias adicionales para el procesador de consultas según lo especificado mediante un nombre de sugerencia **entre comillas simples**. 
+ Proporciona una o varias sugerencias adicionales para el procesador de consultas según lo especificado mediante un nombre de sugerencia **entre comillas simples**.   
 
- Se admiten los siguientes nombres de sugerencia:
+ Se admiten los siguientes nombres de sugerencia:    
  
 *  "DISABLE_OPTIMIZED_NESTED_LOOP"  
  Indica al procesador de consultas que no use una operación de ordenación (ordenación por lotes) para las combinaciones de bucle anidado optimizadas cuando se genera un plan de consulta. Es equivalente a la [marca de seguimiento](../../t-sql/database-console-commands/dbcc-traceon-trace-flags-transact-sql.md) 2340.
@@ -285,11 +286,12 @@ ms.lasthandoff: 01/25/2018
 > [!TIP]
 > Los nombres de sugerencia no distinguen mayúsculas de minúsculas.
   
-  Puede consultar la lista de todos los nombres de USE HINT compatibles mediante la vista de administración dinámica [sys.dm_exec_valid_use_hints](../../relational-databases/system-dynamic-management-views/sys-dm-exec-valid-use-hints-transact-sql.md).
+  Puede consultar la lista de todos los nombres de USE HINT compatibles mediante la vista de administración dinámica [sys.dm_exec_valid_use_hints](../../relational-databases/system-dynamic-management-views/sys-dm-exec-valid-use-hints-transact-sql.md).    
+  
 > [!IMPORTANT] 
-> Algunas sugerencias USE HINT pueden entrar en conflicto con las marcas de seguimiento habilitadas a nivel global o de sesión, o con las opciones de configuración con ámbito de base de datos. En este caso, la sugerencia de nivel de consulta (USE HINT) siempre tiene prioridad. Si una sugerencia USE HINT entra en conflicto con otra sugerencia de consulta o una marca de seguimiento habilitada en el nivel de consulta (por ejemplo, mediante QUERYTRACEON), SQL Server generará un error al intentar ejecutar la consulta. 
+> Algunas sugerencias USE HINT pueden entrar en conflicto con las marcas de seguimiento habilitadas a nivel global o de sesión, o con las opciones de configuración con ámbito de base de datos. En este caso, la sugerencia de nivel de consulta (USE HINT) siempre tiene prioridad. Si una sugerencia USE HINT entra en conflicto con otra sugerencia de consulta o una marca de seguimiento habilitada en el nivel de consulta (por ejemplo, mediante QUERYTRACEON), [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] generará un error al intentar ejecutar la consulta. 
 
- USE PLAN N**'***xml_plan***'**  
+ USE PLAN N**'***xml_plan***'**     
  Fuerza al optimizador de consultas a usar un plan de consulta existente en una consulta especificada por **'***xml_plan***'**. USE PLAN no puede especificarse con las instrucciones INSERT, UPDATE, MERGE ni DELETE.  
   
 TABLE HINT **(***exposed_object_name* [ **,** \<table_hint> [ [**,** ]...*n* ] ] **)** Aplica la sugerencia de la tabla especificada a la tabla o vista que corresponde a *exposed_object_name*. Se recomienda usar una sugerencia de tabla como una sugerencia de consulta únicamente en el contexto de una [guía de plan](../../relational-databases/performance/plan-guides.md).  
@@ -310,7 +312,7 @@ TABLE HINT **(***exposed_object_name* [ **,** \<table_hint> [ [**,** ]...*n* ] ]
 > Al especificar FORCESEEK con parámetros se limita el número de planes que el optimizador puede considerar en comparación con cuando se especifica FORCESEEK sin parámetros. Esto puede producir un error "No se puede generar el plan" en más casos. En una versión futura, las modificaciones internas realizadas en el optimizador pueden permitir que se consideren más planes.  
   
 ## <a name="remarks"></a>Notas  
- No se pueden especificar sugerencias de consulta en una instrucción INSERT excepto cuando se usa una cláusula SELECT en la instrucción.  
+ No se pueden especificar sugerencias de consulta en una instrucción INSERT, excepto cuando se usa una cláusula SELECT en la instrucción.  
   
  Solo se pueden especificar sugerencias de consulta en la consulta de nivel superior, no en las subconsultas. Cuando se especifica una sugerencia de tabla como una sugerencia de consulta, la sugerencia se puede especificar en la consulta de nivel superior o en una subconsulta, pero el valor especificado para *exposed_object_name* en la cláusula TABLE HINT debe coincidir exactamente con el nombre expuesto en la consulta o subconsulta.  
   
@@ -320,15 +322,10 @@ TABLE HINT **(***exposed_object_name* [ **,** \<table_hint> [ [**,** ]...*n* ] ]
  Cuando se especifican como una sugerencia de consulta, las sugerencias de tabla INDEX, FORCESCAN y FORCESEEK son válidas para los objetos siguientes:  
   
 -   Tablas  
-  
 -   Vistas  
-  
 -   Vistas indizadas  
-  
 -   Expresiones de tabla comunes (la sugerencia se debe especificar en la instrucción SELECT cuyo conjunto de resultados rellena la expresión de tabla común)  
-  
 -   Vistas de administración dinámica  
-  
 -   Subconsultas con nombre  
   
  Se pueden especificar las sugerencias de tabla INDEX, FORCESCAN y FORCESEEK como sugerencias de consulta para una consulta que no tenga ninguna sugerencia de tabla existente, o bien se pueden usar para reemplazar en la consulta las respectivas sugerencias INDEX, FORCESCAN o FORCESEEK existentes. Las sugerencias de tabla distintas de INDEX, FORCESCAN y FORCESEEK no están permitidas como sugerencias de consulta, a menos que la consulta ya tenga una cláusula WITH que especifique la sugerencia de tabla. En este caso, también se debe especificar una consulta coincidente como sugerencia de consulta mediante el uso de TABLE HINT en la cláusula OPTION para conservar la semántica de la consulta. Por ejemplo, si la consulta contiene la sugerencia de tabla NOLOCK, la cláusula OPTION del parámetro **@hints** de la guía de plan también debe contener la sugerencia NOLOCK. Vea el ejemplo K. Cuando se especifica una sugerencia de tabla distinta de INDEX, FORCESCAN o FORCESEEK mediante TABLE HINT en la cláusula OPTION sin una sugerencia de consulta coincidente, o viceversa, se genera el error 8702 (que indica que la cláusula OPTION puede hacer que la semántica de la consulte cambie) y se produce un error en la consulta.  
@@ -338,7 +335,7 @@ TABLE HINT **(***exposed_object_name* [ **,** \<table_hint> [ [**,** ]...*n* ] ]
 ### <a name="a-using-merge-join"></a>A. Usar MERGE JOIN  
  En el siguiente ejemplo se especifica que la operación JOIN de la consulta se realiza mediante una combinación MERGE JOIN. En el ejemplo se usa la base de datos [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)].  
   
-```  
+```sql  
 SELECT *   
 FROM Sales.Customer AS c  
 INNER JOIN Sales.CustomerAddress AS ca ON c.CustomerID = ca.CustomerID  
@@ -350,7 +347,7 @@ GO
 ### <a name="b-using-optimize-for"></a>B. Usar OPTIMIZE FOR  
  En el ejemplo siguiente se indica al optimizador de consultas que use el valor `'Seattle'`para la variable local `@city_name` y que use datos estadísticos para determinar el valor de la variable local `@postal_code` al optimizar la consulta. En el ejemplo se usa la base de datos [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)].  
   
-```  
+```sql  
 DECLARE @city_name nvarchar(30);  
 DECLARE @postal_code nvarchar(15);  
 SET @city_name = 'Ascheim';  
@@ -389,7 +386,7 @@ GO
 ### <a name="d-using-merge-union"></a>D. Usar MERGE UNION  
  En el ejemplo siguiente se usa la sugerencia de consulta MERGE UNION. En el ejemplo se usa la base de datos [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)].  
   
-```  
+```sql  
 SELECT *  
 FROM HumanResources.Employee AS e1  
 UNION  
@@ -402,7 +399,7 @@ GO
 ### <a name="e-using-hash-group-and-fast"></a>E. Usar HASH GROUP y FAST  
  En el ejemplo siguiente se usan las sugerencias de consulta HASH GROUP y FAST. En el ejemplo se usa la base de datos [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)].  
   
-```  
+```sql  
 SELECT ProductID, OrderQty, SUM(LineTotal) AS Total  
 FROM Sales.SalesOrderDetail  
 WHERE UnitPrice < $5.00  
@@ -417,7 +414,7 @@ GO
   
 **Se aplica a**: desde [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] hasta [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].  
   
-```  
+```sql  
 SELECT ProductID, OrderQty, SUM(LineTotal) AS Total  
 FROM Sales.SalesOrderDetail  
 WHERE UnitPrice < $5.00  
@@ -430,7 +427,7 @@ GO
 ### <a name="g-using-index"></a>G. Usar INDEX  
  Los ejemplos siguientes usan la sugerencia INDEX. El primer ejemplo especifica un índice único. El segundo ejemplo especifica varios índices para obtener una única referencia de tabla. En ambos ejemplos, como la sugerencia INDEX se aplica a una tabla que usa un alias, la cláusula TABLE HINT también debe especificar el mismo alias que el nombre del objeto expuesto. En el ejemplo se usa la base de datos [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)].  
   
-```  
+```sql  
 EXEC sp_create_plan_guide   
     @name = N'Guide1',   
     @stmt = N'SELECT c.LastName, c.FirstName, e.Title  
@@ -458,7 +455,7 @@ GO
 ### <a name="h-using-forceseek"></a>H. Usar FORCESEEK  
  En el siguiente ejemplo se utiliza la sugerencia de tabla FORCESEEK. Como la sugerencia INDEX se aplica a una tabla que usa un nombre de dos partes, la cláusula TABLE HINT también debe especificar el mismo nombre de dos partes que el nombre del objeto expuesto. En el ejemplo se usa la base de datos [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)].  
   
-```  
+```sql  
 EXEC sp_create_plan_guide   
     @name = N'Guide3',   
     @stmt = N'SELECT c.LastName, c.FirstName, HumanResources.Employee.Title  
@@ -476,7 +473,7 @@ GO
 ### <a name="i-using-multiple-table-hints"></a>I. Usar varias sugerencias de tabla  
  El ejemplo siguiente aplica la sugerencia INDEX a una tabla y la sugerencia FORCESEEK a otra. En el ejemplo se usa la base de datos [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)].  
   
-```  
+```sql  
 EXEC sp_create_plan_guide   
     @name = N'Guide4',   
     @stmt = N'SELECT e.ManagerID, c.LastName, c.FirstName, e.Title  
@@ -494,7 +491,7 @@ GO
 ### <a name="j-using-table-hint-to-override-an-existing-table-hint"></a>J. Usar TABLE HINT para invalidar una sugerencia de tabla existente  
  El ejemplo siguiente muestra cómo usar la sugerencia TABLE HINT sin especificar una sugerencia para anular temporalmente el comportamiento de la sugerencia de tabla INDEX que se especificó en la cláusula FROM de la consulta. En el ejemplo se usa la base de datos [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)].  
   
-```  
+```sql  
 EXEC sp_create_plan_guide   
     @name = N'Guide5',   
     @stmt = N'SELECT e.ManagerID, c.LastName, c.FirstName, e.Title  
@@ -511,7 +508,7 @@ GO
 ### <a name="k-specifying-semantics-affecting-table-hints"></a>K. Especificar sugerencias de tabla que afectan a la semántica  
  El ejemplo siguiente contiene dos sugerencias de tabla en la consulta: NOLOCK, que afecta a la semántica, e INDEX, que no la afecta. Para conservar la semántica de la consulta, la sugerencia NOLOCK se especifica en la cláusula OPTIONS de la guía de plan. Además de la sugerencia NOLOCK, las sugerencias INDEX y FORCESEEK se especifican y reemplazan la sugerencia INDEX que no afecta a la semántica en la consulta cuando la instrucción se compila y optimiza. En el ejemplo se usa la base de datos [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)].  
   
-```  
+```sql  
 EXEC sp_create_plan_guide   
     @name = N'Guide6',   
     @stmt = N'SELECT c.LastName, c.FirstName, e.Title  
@@ -528,7 +525,7 @@ GO
   
  El ejemplo siguiente muestra un método alternativo para conservar la semántica de la consulta y permitir al optimizador elegir un índice distinto del índice que se especificó en la sugerencia de tabla. Esto se consigue especificando la sugerencia NOLOCK en la cláusula OPTIONS (porque afecta a la semántica) y especificando la palabra clave TABLE HINT solamente con una referencia de tabla y ninguna sugerencia INDEX. En el ejemplo se usa la base de datos [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)].  
   
-```  
+```sql  
 EXEC sp_create_plan_guide   
     @name = N'Guide7',   
     @stmt = N'SELECT c.LastName, c.FirstName, e.Title  
@@ -547,7 +544,7 @@ GO
   
 **Se aplica a**: [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)], [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)].  
   
-```  
+```sql  
 SELECT * FROM Person.Address  
 WHERE City = 'SEATTLE' AND PostalCode = 98104
 OPTION (RECOMPILE, USE HINT ('ASSUME_MIN_SELECTIVITY_FOR_FILTER_ESTIMATES', 'DISABLE_PARAMETER_SNIFFING')); 
@@ -555,7 +552,7 @@ GO
 ```  
     
 ## <a name="see-also"></a>Ver también  
- [Sugerencias &#40;Transact-SQL&#41;](../../t-sql/queries/hints-transact-sql.md)   
+ [Hints &#40;Transact-SQL&#41;](../../t-sql/queries/hints-transact-sql.md)   
  [sp_create_plan_guide &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-create-plan-guide-transact-sql.md)   
  [sp_control_plan_guide &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-control-plan-guide-transact-sql.md)  
  [Marcas de seguimiento](../../t-sql/database-console-commands/dbcc-traceon-trace-flags-transact-sql.md)

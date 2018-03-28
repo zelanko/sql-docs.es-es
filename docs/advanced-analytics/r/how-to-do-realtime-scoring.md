@@ -1,29 +1,29 @@
 ---
-title: "Cómo realizar la puntuación en tiempo real o puntuación nativo de SQL Server | Documentos de Microsoft"
-ms.custom: 
+title: Cómo realizar la puntuación en tiempo real o puntuación nativo de SQL Server | Documentos de Microsoft
+ms.custom: ''
 ms.date: 11/09/2017
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.prod: machine-learning-services
 ms.prod_service: machine-learning-services
 ms.component: r
-ms.technology: 
-ms.tgt_pltfrm: 
+ms.technology: ''
+ms.tgt_pltfrm: ''
 ms.topic: article
 author: jeannt
 ms.author: jeannt
 manager: cgronlund
 ms.workload: Inactive
-ms.openlocfilehash: 9287a85017df7b05b3b354a855811ea528a3ad79
-ms.sourcegitcommit: 99102cdc867a7bdc0ff45e8b9ee72d0daade1fd3
+ms.openlocfilehash: 2a79ab351f109959a743fecfb4cb6a0d186c6892
+ms.sourcegitcommit: 2e130e9f3ce8a7ffe373d7fba8b09e937c216386
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/11/2018
+ms.lasthandoff: 03/28/2018
 ---
 # <a name="how-to-perform-realtime-scoring-or-native-scoring-in-sql-server"></a>Cómo realizar la puntuación en tiempo real o puntuación nativo de SQL Server
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
 
-Este tema proporciona instrucciones y código de ejemplo de cómo ejecutar el en tiempo real de la puntuación y las características nativas de puntuación de 2017 de SQL Server y SQL Server 2016. El objetivo de puntuación en tiempo real y de puntuación nativo es mejorar el rendimiento de las operaciones de puntuación de lotes pequeños.
+Este artículo proporciona instrucciones y código de ejemplo de cómo ejecutar el en tiempo real de la puntuación y las características nativas de puntuación de 2017 de SQL Server y SQL Server 2016. El objetivo de puntuación en tiempo real y de puntuación nativo es mejorar el rendimiento de las operaciones de puntuación de lotes pequeños.
 
 Tanto en tiempo real de puntuación y de puntuación nativo están diseñados para permitir el uso de un modelo de aprendizaje sin tener que instalar R. automático Todo lo que necesita hacer es obtener un modelo previamente entrenado en un formato compatible y lo guarda en una base de datos de SQL Server.
 
@@ -178,7 +178,7 @@ Si se produce un error, "Error durante la ejecución de la función de PREDICCI�
 
 Esta sección describen los pasos necesarios para configurar **en tiempo real** predicción y proporciona un ejemplo de cómo llamar a la función desde código T-SQL.
 
-### <a name ="bkmk_enableRtScoring"></a>Paso 1. Habilitar el procedimiento de puntuación de en tiempo real
+### <a name ="bkmk_enableRtScoring"></a> Paso 1. Habilitar el procedimiento de puntuación de en tiempo real
 
 Debe habilitar esta característica para cada base de datos que desea usar para puntuar. El administrador del servidor debe ejecutar la utilidad de línea de comandos, RegisterRExt.exe, que se incluye con el paquete RevoScaleR.
 
@@ -202,7 +202,7 @@ Debe habilitar esta característica para cada base de datos que desea usar para 
 3. RegisterRExt.exe crea los siguientes objetos:
 
     + Ensamblados de confianza
-    + El procedimiento almacenado`sp_rxPredict`
+    + El procedimiento almacenado `sp_rxPredict`
     + Un nuevo rol de base de datos, `rxpredict_users`. El Administrador de base de datos puede utilizar esta función para conceder permiso a los usuarios que utilizan la funcionalidad de puntuación en tiempo real.
 
 4. Agregue los usuarios que necesitan ejecutar `sp_rxPredict` a la nueva función.
@@ -221,7 +221,7 @@ model <- rxSerializeModel(model.name, realtimeScoringOnly = TRUE)
 
 ### <a name="step-3-call-sprxpredict"></a>Paso 3. Llamar a sp_rxPredict
 
-Se llama a sp\_rxPredict como haría con cualquier otro procedimiento almacenado. En la versión actual, el procedimiento almacenado toma dos parámetros:  _@model_  para el modelo en formato binario, y  _@inputData_  para que los datos que se va a usar para determinar la puntuación, definen como una consulta SQL válida .
+Se llama a sp\_rxPredict como haría con cualquier otro procedimiento almacenado. En la versión actual, el procedimiento almacenado toma dos parámetros: _@model_ para el modelo en formato binario, y _@inputData_ para que los datos que se va a usar para determinar la puntuación, definen como una consulta SQL válida .
 
 Dado que el formato binario es el mismo que se utiliza la función de PREDICCIÓN, puede usar la tabla de datos y modelos del ejemplo anterior.
 
@@ -246,7 +246,7 @@ EXEC sp_rxPredict
 
 ## <a name="disable-realtime-scoring"></a>Deshabilitar la puntuación en tiempo real
 
-Para deshabilitar la funcionalidad de puntuación en tiempo real, abra un símbolo del sistema con privilegios elevados y ejecute el siguiente comando:`RegisterRExt.exe /uninstallrts /database:<database_name> [/instance:name]`
+Para deshabilitar la funcionalidad de puntuación en tiempo real, abra un símbolo del sistema con privilegios elevados y ejecute el siguiente comando: `RegisterRExt.exe /uninstallrts /database:<database_name> [/instance:name]`
 
 ## <a name="realtime-scoring-in-microsoft-r-server-or-machine-learning-server"></a>En tiempo real de puntuación en Microsoft R Server o servidor de aprendizaje de máquina
 

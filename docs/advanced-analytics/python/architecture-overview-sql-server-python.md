@@ -1,29 +1,29 @@
 ---
 title: Arquitectura | Documentos de Microsoft
-ms.custom: 
+ms.custom: ''
 ms.date: 11/03/2017
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.prod: machine-learning-services
 ms.prod_service: machine-learning-services
 ms.component: python
-ms.technology: 
-ms.tgt_pltfrm: 
+ms.technology: ''
+ms.tgt_pltfrm: ''
 ms.topic: article
 author: jeannt
 ms.author: jeannt
 manager: cgronlund
 ms.workload: Inactive
-ms.openlocfilehash: 5ca823bc7094c77a31cfd3178294cd49a360d77a
-ms.sourcegitcommit: 99102cdc867a7bdc0ff45e8b9ee72d0daade1fd3
+ms.openlocfilehash: 1cea2b772ec098a5354727ac9eca012ef443e3e6
+ms.sourcegitcommit: 2e130e9f3ce8a7ffe373d7fba8b09e937c216386
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/11/2018
+ms.lasthandoff: 03/28/2018
 ---
 # <a name="architecture-overview-for-machine-learning-services-with-python"></a>Introducción a la arquitectura de servicios de aprendizaje de máquina a Python
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
 
-Este tema proporciona información general sobre cómo Python se integra con SQL Server, incluido el modelo de seguridad, los componentes en el motor de base de datos que admiten la ejecución de scripts externos y nuevos componentes que permiten la interoperabilidad de Python con SQL Server. Para obtener más información, vea los temas vinculados.
+Este artículo proporciona información general sobre cómo Python se integra con SQL Server, incluido el modelo de seguridad, los componentes en el motor de base de datos que admiten la ejecución de scripts externos y nuevos componentes que permiten la interoperabilidad de Python con SQL Server. Para obtener más información, vea los artículos vinculados.
 
 > [!IMPORTANT]
 > Compatibilidad con Python está disponible a partir de 2017 CTP 2.0 de SQL Server. Esta característica de versión preliminar está sujeta a cambios.

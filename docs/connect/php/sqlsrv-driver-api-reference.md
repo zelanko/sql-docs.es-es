@@ -1,27 +1,28 @@
 ---
 title: Referencia de API del controlador SQLSRV | Documentos de Microsoft
-ms.custom: 
-ms.date: 01/19/2017
+ms.custom: ''
+ms.date: 03/26/2018
 ms.prod: sql-non-specified
 ms.prod_service: drivers
-ms.service: 
+ms.service: ''
 ms.component: php
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: drivers
-ms.tgt_pltfrm: 
+ms.technology:
+- drivers
+ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: 0b55da26-ddeb-4e89-872a-91e0aba57103
-caps.latest.revision: "42"
+caps.latest.revision: ''
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: On Demand
-ms.openlocfilehash: 48d43c13a850e057d675d3abaaec612bc51723e1
-ms.sourcegitcommit: 2713f8e7b504101f9298a0706bacd84bf2eaa174
+ms.openlocfilehash: e8055aee892d75a9dc7f5b4c9ac4248184578f9b
+ms.sourcegitcommit: 2e130e9f3ce8a7ffe373d7fba8b09e937c216386
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/18/2017
+ms.lasthandoff: 03/28/2018
 ---
 # <a name="sqlsrv-driver-api-reference"></a>Referencia de API del controlador SQLSRV
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]
@@ -61,11 +62,14 @@ El controlador SQLSRV contiene las siguientes funciones:
 |[sqlsrv_server_info](../../connect/php/sqlsrv-server-info.md)|Proporciona información de la acción.|  
   
 ## <a name="reference"></a>Referencia  
-[Manual de PHP](http://go.microsoft.com/fwlink/?LinkId=105500)  
+[PHP Manual](http://php.net/manual)  
   
 ## <a name="see-also"></a>Vea también  
-[Introducción al controlador SQL para PHP](../../connect/php/overview-of-the-php-sql-driver.md)
-[constantes &#40; Controladores de Microsoft para PHP para SQL Server &#41;](../../connect/php/constants-microsoft-drivers-for-php-for-sql-server.md)  
-[Guía de programación para el controlador SQL para PHP](../../connect/php/programming-guide-for-php-sql-driver.md)
-[Introducción al controlador SQL para PHP](../../connect/php/getting-started-with-the-php-sql-driver.md)
+[Información general sobre controladores de Microsoft para PHP para SQL Server](../../connect/php/overview-of-the-php-sql-driver.md)
+
+[Constantes &#40;controladores de Microsoft para PHP para SQL Server&#41;](../../connect/php/constants-microsoft-drivers-for-php-for-sql-server.md)
+
+[Programación de guía para los controladores de Microsoft para PHP para SQL Server](../../connect/php/programming-guide-for-php-sql-driver.md)
+
+[Introducción a los controladores de Microsoft para PHP para SQL Server](../../connect/php/getting-started-with-the-php-sql-driver.md)
   

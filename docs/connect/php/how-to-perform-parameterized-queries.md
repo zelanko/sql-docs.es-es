@@ -1,30 +1,31 @@
 ---
-title: "Cómo: realizar consultas con parámetros | Documentos de Microsoft"
-ms.custom: 
-ms.date: 01/19/2017
+title: 'Cómo: realizar consultas con parámetros | Documentos de Microsoft'
+ms.custom: ''
+ms.date: 03/26/2018
 ms.prod: sql-non-specified
 ms.prod_service: drivers
-ms.service: 
+ms.service: ''
 ms.component: php
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: drivers
-ms.tgt_pltfrm: 
+ms.technology:
+- drivers
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - updating data
 - parameterized queries
 ms.assetid: dc7d0ede-a9b6-4ce2-977e-4d1e7ec2131c
-caps.latest.revision: "31"
+caps.latest.revision: ''
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 946380fdce8f3ac0d976840e569e35db077a4202
-ms.sourcegitcommit: 2713f8e7b504101f9298a0706bacd84bf2eaa174
+ms.openlocfilehash: 23660f3d7ddbaf45ac39674c4eba23092e3ae2d2
+ms.sourcegitcommit: 2e130e9f3ce8a7ffe373d7fba8b09e937c216386
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/18/2017
+ms.lasthandoff: 03/28/2018
 ---
 # <a name="how-to-perform-parameterized-queries"></a>Cómo realizar consultas con parámetros
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]
@@ -37,7 +38,7 @@ Los pasos para realizar una consulta con parámetros se pueden resumir en cuatro
   
 2.  Inicialice o actualice las variables PHP de los marcadores de posición en la consulta de Transact-SQL.  
   
-3.  Utilice las variables PHP del paso 2 para crear o actualizar una matriz de valores de parámetro que se corresponden, en orden, con los marcadores de posición de la cadena de Transact-SQL.  
+3.  Use las variables PHP del paso 2 para crear o actualizar una matriz de valores de parámetros que corresponden a los marcadores de posición de parámetro en la cadena de Transact-SQL. Los valores de parámetro de la matriz deben ser en el mismo orden que los marcadores de posición diseñado para representarlos.
   
 4.  Ejecute la consulta:  
   
@@ -55,7 +56,7 @@ En el ejemplo siguiente se actualiza la cantidad en un id. de producto especific
   
 Después, en el ejemplo, se realiza una consulta en la base de datos para comprobar que la cantidad se ha actualizado correctamente. El id. de producto es un parámetro de la consulta SELECT.  
   
-En el ejemplo se da por hecho que SQL Server y la base de datos de [AdventureWorks](http://go.microsoft.com/fwlink/?LinkID=67739) están instalados en el equipo local. Los resultados se agregan a la consola cuando se ejecuta el ejemplo en la línea de comandos.  
+El ejemplo supone que SQL Server y el [AdventureWorks](https://github.com/Microsoft/sql-server-samples/tree/master/samples/databases/adventure-works) base de datos se instalan en el equipo local. Los resultados se agregan a la consola cuando se ejecuta el ejemplo en la línea de comandos.  
   
 ```  
 <?php  
@@ -121,7 +122,7 @@ En el ejemplo anterior se usa la función **sqlsrv_query** para ejecutar consult
 ## <a name="example"></a>Ejemplo  
 En el ejemplo siguiente se muestra el enlace implícito de variables cuando se usa la función **sqlsrv_prepare** . En el ejemplo se insertan varios pedidos de ventas en la tabla *Sales.SalesOrderDetail* . El *$params* matriz se enlaza a la instrucción (*$stmt*) cuando **sqlsrv_prepare** se llama. Antes de cada ejecución de una consulta que inserta un nuevo pedido de ventas en la tabla, la matriz *$params* se actualiza con los nuevos valores correspondientes a los detalles del pedido de ventas. En la siguiente ejecución de la consulta se utilizan los nuevos valores de parámetro.  
   
-En el ejemplo se da por hecho que SQL Server y la base de datos de [AdventureWorks](http://go.microsoft.com/fwlink/?LinkID=67739) están instalados en el equipo local. Los resultados se agregan a la consola cuando se ejecuta el ejemplo en la línea de comandos.  
+El ejemplo supone que SQL Server y el [AdventureWorks](https://github.com/Microsoft/sql-server-samples/tree/master/samples/databases/adventure-works) base de datos se instalan en el equipo local. Los resultados se agregan a la consola cuando se ejecuta el ejemplo en la línea de comandos.  
   
 ```  
 <?php  
@@ -194,8 +195,11 @@ sqlsrv_close( $conn);
 ```  
   
 ## <a name="see-also"></a>Vea también  
-[Convertir tipos de datos](../../connect/php/converting-data-types.md)  
-[Consideraciones de seguridad para el controlador SQL para PHP](../../connect/php/security-considerations-for-php-sql-driver.md)
-[Sobre los ejemplos de código de la documentación](../../connect/php/about-code-examples-in-the-documentation.md)  
+[Conversión de tipos de datos](../../connect/php/converting-data-types.md)
+
+[Consideraciones de seguridad para los controladores de Microsoft para PHP para SQL Server](../../connect/php/security-considerations-for-php-sql-driver.md)
+
+[Sobre los ejemplos de código de la documentación](../../connect/php/about-code-examples-in-the-documentation.md)
+
 [sqlsrv_rows_affected](../../connect/php/sqlsrv-rows-affected.md)  
   

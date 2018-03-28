@@ -1,27 +1,28 @@
 ---
-title: 'Pdostatement:: Bindparam | Documentos de Microsoft'
-ms.custom: 
+title: PDOStatement::bindParam | Microsoft Docs
+ms.custom: ''
 ms.date: 10/24/2017
 ms.prod: sql-non-specified
 ms.prod_service: drivers
-ms.service: 
+ms.service: ''
 ms.component: php
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: drivers
-ms.tgt_pltfrm: 
+ms.technology:
+- drivers
+ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: 65212058-2632-47a4-ba7d-2206883abf09
-caps.latest.revision: "17"
+caps.latest.revision: ''
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 61cecbcd76ba7c28135cd4ed306dad1c0ea0830c
-ms.sourcegitcommit: 2713f8e7b504101f9298a0706bacd84bf2eaa174
+ms.openlocfilehash: 0d4dea9ea34f0a2b41db42f641b89ea074139643
+ms.sourcegitcommit: 2e130e9f3ce8a7ffe373d7fba8b09e937c216386
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/18/2017
+ms.lasthandoff: 03/28/2018
 ---
 # <a name="pdostatementbindparam"></a>PDOStatement::bindParam
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]
@@ -40,7 +41,7 @@ $*parámetro*: un identificador de parámetro (mixto). En una instrucción que u
   
 &$*variable*: el nombre (mixto) de la variable PHP para enlazar con el parámetro de instrucción SQL.  
   
-$*data_type*: una constante PDO:: param_ * opcional (valor entero). Valor predeterminado es PDO:: param_str.  
+$*data_type*: An optional (integer) PDO::PARAM_* constant. Valor predeterminado es PDO:: param_str.  
   
 $*longitud*: una longitud opcional (valor entero) del tipo de datos. Puede especificar PDO:: sqlsrv_param_out_default_size para indicar el tamaño predeterminado al usar PDO:: param_int o PDO:: param_bool en $*data_type*.  
   
@@ -146,6 +147,7 @@ $stmt->execute();
 
 
 ## <a name="see-also"></a>Vea también  
-[Clase PDOStatement](../../connect/php/pdostatement-class.md)  
-[PDO](http://go.microsoft.com/fwlink/?LinkID=187441)  
+[Clase PDOStatement](../../connect/php/pdostatement-class.md)
+
+[PDO](http://php.net/manual/book.pdo.php)  
   

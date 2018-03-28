@@ -1,27 +1,28 @@
 ---
-title: 'PDO:: Prepare | Documentos de Microsoft'
-ms.custom: 
+title: PDO::prepare | Microsoft Docs
+ms.custom: ''
 ms.date: 07/10/2017
 ms.prod: sql-non-specified
 ms.prod_service: drivers
-ms.service: 
+ms.service: ''
 ms.component: php
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: drivers
-ms.tgt_pltfrm: 
+ms.technology:
+- drivers
+ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: a8b16fdc-c748-49be-acf2-a6ac7432d16b
-caps.latest.revision: "28"
+caps.latest.revision: ''
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 34fa1a4f5bfa9e37f698e15e835285e836a8d959
-ms.sourcegitcommit: 2713f8e7b504101f9298a0706bacd84bf2eaa174
+ms.openlocfilehash: 6fbac9059daa4af74aaeea4c6007d5ae1bf84a00
+ms.sourcegitcommit: 2e130e9f3ce8a7ffe373d7fba8b09e937c216386
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/18/2017
+ms.lasthandoff: 03/28/2018
 ---
 # <a name="pdoprepare"></a>PDO::prepare
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]
@@ -50,7 +51,7 @@ En la tabla siguiente se enumera los posibles *key_pair* valores.
   
 |Key|Description|  
 |-------|---------------|  
-|PDO::ATTR_CURSOR|Especifica el comportamiento del cursor. El valor predeterminado es PDO::CURSOR_FWDONLY. PDO::CURSOR_SCROLL es un cursor estático.<br /><br />Por ejemplo, `array( PDO::ATTR_CURSOR => PDO::CURSOR_FWDONLY )`.<br /><br />Si utiliza PDO::CURSOR_SCROLL, puede utilizar PDO::SQLSRV_ATTR_CURSOR_SCROLL_TYPE, que se describe a continuación.<br /><br />Vea [tipos de Cursor &#40; Controlador PDO_SQLSRV &#41; ](../../connect/php/cursor-types-pdo-sqlsrv-driver.md) para obtener más información sobre los conjuntos de resultados y los cursores en el controlador PDO_SQLSRV.|  
+|PDO::ATTR_CURSOR|Especifica el comportamiento del cursor. El valor predeterminado es PDO::CURSOR_FWDONLY. PDO::CURSOR_SCROLL es un cursor estático.<br /><br />Por ejemplo, `array( PDO::ATTR_CURSOR => PDO::CURSOR_FWDONLY )`.<br /><br />Si utiliza PDO::CURSOR_SCROLL, puede utilizar PDO::SQLSRV_ATTR_CURSOR_SCROLL_TYPE, que se describe a continuación.<br /><br />Vea [tipos de Cursor &#40;controlador PDO_SQLSRV&#41; ](../../connect/php/cursor-types-pdo-sqlsrv-driver.md) para obtener más información sobre los conjuntos de resultados y los cursores en el controlador PDO_SQLSRV.|  
 |PDO::ATTR_EMULATE_PREPARES|Cuando PDO:: attr_emulate_prepares está activada, los marcadores de posición en una instrucción preparada se sustituye por parámetros enlazados. Una instrucción SQL completa con ningún marcador de posición, a continuación, se envía a la base de datos en ejecución. <br /><br />PDO:: attr_emulate_prepares puede utilizarse para omitir algunas restricciones en SQL Server. Por ejemplo, SQL Server no admite parámetros con nombre o posicionales en algunas cláusulas de Transact-SQL. Además, SQL Server tiene un límite de 2100 parámetros de enlace.<br /><br />Puede establecer el atributo PDO:: attr_emulate_prepares como true. Por ejemplo:<br /><br />`PDO::ATTR_EMULATE_PREPARES => true`<br /><br />De manera predeterminada, este atributo está establecido como False.<br /><br />**Nota:** La seguridad de las consultas con parámetros no está activada cuando se usa `PDO::ATTR_EMULATE_PREPARES => true`. La aplicación debe asegurarse de que los datos que se enlaza a los parámetros no contienen código malintencionado de Transact-SQL.<br /><br />**Limitaciones:**: dado que los parámetros no se enlazan mediante la característica de consulta con parámetros de la base de datos, no se admiten parámetros input_output y de salida.|  
 |PDO::SQLSRV_ATTR_ENCODING|PDO::SQLSRV_ENCODING_UTF8 (valor predeterminado)<br /><br />PDO::SQLSRV_ENCODING_SYSTEM<br /><br />PDO::SQLSRV_ENCODING_BINARY|  
 |PDO::SQLSRV_ATTR_DIRECT_QUERY|Cuando es True, especifica la ejecución de una consulta directa. False implica la ejecución de una instrucción preparada. Para obtener más información sobre PDO:: sqlsrv_attr_direct_query, consulte [Direct Statement Execution and Prepared Statement Execution en el controlador PDO_SQLSRV](../../connect/php/direct-statement-execution-prepared-statement-execution-pdo-sqlsrv-driver.md).|  
@@ -64,9 +65,9 @@ array(PDO::ATTR_CURSOR => PDO::CURSOR_SCROLL, PDO::SQLSRV_ATTR_CURSOR_SCROLL_TYP
   
 En la siguiente tabla se muestran los posibles valores para PDO::SQLSRV_ATTR_CURSOR_SCROLL_TYPE.  
   
-|Valor|Description|  
+|Value|Description|  
 |---------|---------------|  
-|PDO::SQLSRV_CURSOR_BUFFERED|Crea un cursor estático de cliente (en búfer). Para obtener más información acerca de los cursores de cliente, consulte [tipos de Cursor &#40; Controlador PDO_SQLSRV &#41; ](../../connect/php/cursor-types-pdo-sqlsrv-driver.md).|  
+|PDO::SQLSRV_CURSOR_BUFFERED|Crea un cursor estático de cliente (en búfer). Para obtener más información acerca de los cursores de cliente, consulte [tipos de Cursor &#40;controlador PDO_SQLSRV&#41;](../../connect/php/cursor-types-pdo-sqlsrv-driver.md).|  
 |PDO::SQLSRV_CURSOR_DYNAMIC|Crea un cursor dinámico de servidor (no almacenado en búfer), que le permite acceder a las filas en cualquier orden y reflejará los cambios de la base de datos.|  
 |PDO::SQLSRV_CURSOR_KEYSET_DRIVEN|Crea un cursor de conjunto de claves de servidor. Los cursores de conjunto de claves no actualizan el recuento de filas si se elimina una fila de la tabla (las filas eliminadas se devuelven sin valores).|  
 |PDO::SQLSRV_CURSOR_STATIC|Crea un cursor estático de servidor, que le permite acceder a las filas en cualquier orden, pero no reflejará los cambios de la base de datos.<br /><br />PDO::ATTR_CURSOR => PDO::CURSOR_SCROLL implica PDO::SQLSRV_ATTR_CURSOR_SCROLL_TYPE => PDO::SQLSRV_CURSOR_STATIC.|  
@@ -101,7 +102,7 @@ $stmt = null
 ```  
   
 ## <a name="example"></a>Ejemplo  
-En este ejemplo se muestra cómo utilizar el método PDO::prepare con un cursor de cliente. Para obtener un ejemplo que muestra un cursor de servidor, consulte [tipos de Cursor &#40; Controlador PDO_SQLSRV &#41; ](../../connect/php/cursor-types-pdo-sqlsrv-driver.md).  
+En este ejemplo se muestra cómo utilizar el método PDO::prepare con un cursor de cliente. Para obtener un ejemplo que muestra un cursor de servidor, consulte [tipos de Cursor &#40;controlador PDO_SQLSRV&#41;](../../connect/php/cursor-types-pdo-sqlsrv-driver.md).  
   
 ```  
 <?php  
@@ -141,6 +142,7 @@ print_r($row);
 ```  
   
 ## <a name="see-also"></a>Vea también  
-[Clase PDO](../../connect/php/pdo-class.md)  
-[PDO](http://go.microsoft.com/fwlink/?LinkID=187441)  
+[Clase PDO](../../connect/php/pdo-class.md)
+
+[PDO](http://php.net/manual/book.pdo.php)  
   

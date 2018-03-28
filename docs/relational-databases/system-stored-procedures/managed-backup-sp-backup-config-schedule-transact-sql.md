@@ -1,16 +1,16 @@
 ---
 title: managed_backup.sp_backup_config_schedule (Transact-SQL) | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 06/10/2016
 ms.prod: sql-non-specified
 ms.prod_service: database-engine
-ms.service: 
+ms.service: ''
 ms.component: system-stored-procedures
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - sp_backup_config_schedule_TSQL
@@ -23,16 +23,16 @@ helpviewer_keywords:
 - managed_backup.sp_backup_config_schedule
 - sp_backup_config_schedule
 ms.assetid: 82541160-d1df-4061-91a5-6868dd85743a
-caps.latest.revision: 
+caps.latest.revision: ''
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: d3ba08667f9eebe37cc5493903b714ee1bf0d67f
-ms.sourcegitcommit: c556eaf60a49af7025db35b7aa14beb76a8158c5
+ms.openlocfilehash: 6325c940487b37fea083a923a20f884bd872a0b4
+ms.sourcegitcommit: 2e130e9f3ce8a7ffe373d7fba8b09e937c216386
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/03/2018
+ms.lasthandoff: 03/28/2018
 ---
 # <a name="managedbackupspbackupconfigschedule-transact-sql"></a>managed_backup.sp_backup_config_schedule (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md.md)]
@@ -64,7 +64,7 @@ EXEC managed_backup.sp_backup_config_schedule
  El tipo de frecuencia de la operación de copia de seguridad administrada, que se puede establecer en 'Daily' o 'Semanal'.  
   
  @days_of_week  
- Los días de la semana para las copias de seguridad cuando @full_backup_freq_type está establecida en semanal. Especificar nombres de cadena completa como "Lunes".  También puede especificar más de nombre de un día, separado por comas. Por ejemplo 'lunes, el miércoles, el viernes'.  
+ Los días de la semana para las copias de seguridad cuando @full_backup_freq_type está establecida en semanal. Especificar nombres de cadena completa como "Lunes".  También puede especificar más de nombre de un día, separado por barras verticales. Por ejemplo N'Monday | El miércoles | El viernes '.  
   
  @backup_begin_time  
  La hora de inicio de la ventana de copia de seguridad. No se iniciarán las copias de seguridad fuera del período de tiempo, que se define mediante una combinación de @backup_begin_time y @backup_duration.  
@@ -73,7 +73,7 @@ EXEC managed_backup.sp_backup_config_schedule
  La duración del intervalo de tiempo de copia de seguridad. Tenga en cuenta que no hay ninguna garantía de que las copias de seguridad se completará durante el período de tiempo definido por @backup_begin_time y @backup_duration. No se cancelarán las operaciones de copia de seguridad que se inician en este período pero superan la duración de la ventana.  
   
  @log_backup_freq  
- Esto determina la frecuencia de las copias de seguridad del registro de transacciones. Estas copias de seguridad se realizan a intervalos regulares, en lugar de en la programación especificada para las copias de seguridad de base de datos. @log_backup_freqpuede ser en minutos u horas y 0 es válido, lo que indica que no hay copias de seguridad del registro. Deshabilitar las copias de seguridad de registro solo sea adecuado para las bases de datos con un modelo de recuperación simple.  
+ Esto determina la frecuencia de las copias de seguridad del registro de transacciones. Estas copias de seguridad se realizan a intervalos regulares, en lugar de en la programación especificada para las copias de seguridad de base de datos. @log_backup_freq puede ser en minutos u horas y 0 es válido, lo que indica que no hay copias de seguridad del registro. Deshabilitar las copias de seguridad de registro solo sea adecuado para las bases de datos con un modelo de recuperación simple.  
   
 > [!NOTE]  
 >  Si cambia el modelo de recuperación de simple a full, debe volver a configurar el log_backup_freq de 0 a un valor distinto de cero.  

@@ -1,30 +1,31 @@
 ---
-title: "Cómo: recuperar datos binarios como una secuencia con el controlador SQLSRV | Documentos de Microsoft"
-ms.custom: 
+title: 'Cómo: recuperar datos binarios como una secuencia con el controlador SQLSRV | Documentos de Microsoft'
+ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql-non-specified
 ms.prod_service: drivers
-ms.service: 
+ms.service: ''
 ms.component: php
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: drivers
-ms.tgt_pltfrm: 
+ms.technology:
+- drivers
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - retrieving data, as a binary stream
 - streaming data
 ms.assetid: cd8d6382-abe6-48ee-9d10-4e6c52c0cb9a
-caps.latest.revision: "21"
+caps.latest.revision: ''
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: fcc77b9da09f1cc59afb06cbd4a562213479251f
-ms.sourcegitcommit: 2713f8e7b504101f9298a0706bacd84bf2eaa174
+ms.openlocfilehash: f992cf6f54469da63d910e2fb1d53be4b026e06b
+ms.sourcegitcommit: 2e130e9f3ce8a7ffe373d7fba8b09e937c216386
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/18/2017
+ms.lasthandoff: 03/28/2018
 ---
 # <a name="how-to-retrieve-binary-data-as-a-stream-using-the-sqlsrv-driver"></a>Cómo recuperar datos binarios como una secuencia mediante el controlador SQLSRV
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]
@@ -38,9 +39,9 @@ Al utilizar las secuencias para recuperar datos binarios, como las imágenes, se
 ## <a name="example"></a>Ejemplo  
 En el ejemplo siguiente se recuperan datos binarios (en este caso, una imagen) de la tabla *Production.ProductPhoto* de la base de datos de AdventureWorks. La imagen se recupera como una secuencia y se muestra en el explorador.  
   
-El proceso de recuperación de los datos de la imagen como una secuencia se realiza utilizando [sqlsrv_fetch](../../connect/php/sqlsrv-fetch.md) y [sqlsrv_get_field](../../connect/php/sqlsrv-get-field.md) con el tipo de valor devuelto como una secuencia binaria. El tipo de valor devuelto se especifica mediante la constante **SQLSRV_PHPTYPE_STREAM**. Para obtener información acerca de **sqlsrv** constantes, vea [constantes &#40; Controladores de Microsoft para PHP para SQL Server &#41; ](../../connect/php/constants-microsoft-drivers-for-php-for-sql-server.md).  
+El proceso de recuperación de los datos de la imagen como una secuencia se realiza utilizando [sqlsrv_fetch](../../connect/php/sqlsrv-fetch.md) y [sqlsrv_get_field](../../connect/php/sqlsrv-get-field.md) con el tipo de valor devuelto como una secuencia binaria. El tipo de valor devuelto se especifica mediante la constante **SQLSRV_PHPTYPE_STREAM**. Para obtener información acerca de **sqlsrv** constantes, vea [constantes &#40;Microsoft Drivers for PHP para SQL Server&#41;](../../connect/php/constants-microsoft-drivers-for-php-for-sql-server.md).  
   
-En el ejemplo se da por hecho que SQL Server y la base de datos de [AdventureWorks](http://go.microsoft.com/fwlink/?LinkID=67739) están instalados en el equipo local. Los resultados se agregan al explorador cuando se ejecuta el ejemplo en el explorador.  
+El ejemplo supone que SQL Server y el [AdventureWorks](https://github.com/Microsoft/sql-server-samples/tree/master/samples/databases/adventure-works) base de datos se instalan en el equipo local. Los resultados se agregan al explorador cuando se ejecuta el ejemplo en el explorador.  
   
 ```  
 <?php  
@@ -96,7 +97,9 @@ sqlsrv_close( $conn);
 Al especificar el tipo de valor devuelto en el ejemplo, se demuestra cómo especificar el tipo de valor devuelto PHP como una secuencia binaria. Técnicamente, no es necesario en el ejemplo porque el *LargePhoto* campo tiene SQL Server tipo varbinary (max) y, por tanto, se devuelve como una secuencia binaria de forma predeterminada. Para obtener información sobre los tipos de datos PHP predeterminados, consulte [Default PHP Data Types](../../connect/php/default-php-data-types.md). Para obtener información sobre cómo especificar los tipos de valor devueltos PHP, consulte [How to: Specify PHP Data Types](../../connect/php/how-to-specify-php-data-types.md).  
   
 ## <a name="see-also"></a>Vea también  
-[Recuperación de datos](../../connect/php/retrieving-data.md)  
-[Recuperación de datos como una secuencia con el controlador SQLSRV](../../connect/php/retrieving-data-as-a-stream-using-the-sqlsrv-driver.md)  
+[Recuperación de datos](../../connect/php/retrieving-data.md)
+
+[Recuperación de datos como una secuencia con el controlador SQLSRV](../../connect/php/retrieving-data-as-a-stream-using-the-sqlsrv-driver.md)
+
 [Sobre los ejemplos de código de la documentación](../../connect/php/about-code-examples-in-the-documentation.md)  
   

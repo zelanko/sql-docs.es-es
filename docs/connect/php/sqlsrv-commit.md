@@ -1,33 +1,35 @@
 ---
-title: sqlsrv_commit | Documentos de Microsoft
-ms.custom: 
-ms.date: 01/19/2017
+title: sqlsrv_commit | Microsoft Docs
+ms.custom: ''
+ms.date: 03/26/2018
 ms.prod: sql-non-specified
 ms.prod_service: drivers
-ms.service: 
+ms.service: ''
 ms.component: php
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: drivers
-ms.tgt_pltfrm: 
+ms.technology:
+- drivers
+ms.tgt_pltfrm: ''
 ms.topic: article
-apiname: sqlsrv_commit
+apiname:
+- sqlsrv_commit
 apitype: NA
 helpviewer_keywords:
 - transaction support
 - API Reference, sqlsrv_commit
 - sqlsrv_commit
 ms.assetid: bad67571-61ad-45b5-b4ff-677e3544f809
-caps.latest.revision: "16"
+caps.latest.revision: ''
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 7e5e7a7229f50cd5b0b28a07b6999d0891c97abc
-ms.sourcegitcommit: 2713f8e7b504101f9298a0706bacd84bf2eaa174
+ms.openlocfilehash: 4369ee83288767b477fc881204ff6491974f3a8b
+ms.sourcegitcommit: 2e130e9f3ce8a7ffe373d7fba8b09e937c216386
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/18/2017
+ms.lasthandoff: 03/28/2018
 ---
 # <a name="sqlsrvcommit"></a>sqlsrv_commit
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]
@@ -58,7 +60,7 @@ En el ejemplo siguiente, se ejecutan dos consultas como parte de una transacció
   
 La primera consulta del ejemplo inserta un nuevo pedido de ventas en la tabla *Sales.SalesOrderDetail* de la base de datos de AdventureWorks. El pedido corresponde a 5 unidades del producto con el id. de producto 709. La segunda consulta reduce en 5 unidades la cantidad de inventario del id. de producto 709. Estas consultas se incluyen en una transacción, ya que ambas deben realizarse correctamente para que la base de datos refleje con precisión el estado de los pedidos y la disponibilidad de los productos.  
   
-En el ejemplo se da por hecho que SQL Server y la base de datos de [AdventureWorks](http://go.microsoft.com/fwlink/?LinkID=67739) están instalados en el equipo local. Los resultados se agregan a la consola cuando se ejecuta el ejemplo en la línea de comandos.  
+El ejemplo supone que SQL Server y el [AdventureWorks](https://github.com/Microsoft/sql-server-samples/tree/master/samples/databases/adventure-works) base de datos se instalan en el equipo local. Los resultados se agregan a la consola cuando se ejecuta el ejemplo en la línea de comandos.  
   
 ```  
 <?php  
@@ -129,7 +131,9 @@ Con el fin de resaltar el comportamiento de las transacciones, en el ejemplo ant
 > No utilice instrucciones de Transact-SQL incrustadas para realizar transacciones. Por ejemplo, para iniciar una transacción, no ejecute una instrucción con "BEGIN TRANSACTION" como consulta de Transact-SQL. No se puede garantizar el comportamiento transaccional esperado cuando se usa Transact-SQL incrustadas para realizar transacciones.  
   
 ## <a name="see-also"></a>Vea también  
-[Referencia de API del controlador SQLSRV](../../connect/php/sqlsrv-driver-api-reference.md)  
-[Cómo realizar transacciones](../../connect/php/how-to-perform-transactions.md)  
-[Información general sobre el controlador SQL para PHP](../../connect/php/overview-of-the-php-sql-driver.md)
+[Referencia de API del controlador SQLSRV](../../connect/php/sqlsrv-driver-api-reference.md)
+
+[Realización de transacciones](../../connect/php/how-to-perform-transactions.md)
+
+[Información general sobre controladores de Microsoft para PHP para SQL Server](../../connect/php/overview-of-the-php-sql-driver.md)
   

@@ -1,27 +1,28 @@
 ---
-title: "Recuperación de datos | Documentos de Microsoft"
-ms.custom: 
-ms.date: 01/19/2017
+title: Recuperación de datos | Documentos de Microsoft
+ms.custom: ''
+ms.date: 03/26/2018
 ms.prod: sql-non-specified
 ms.prod_service: drivers
-ms.service: 
+ms.service: ''
 ms.component: php
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: drivers
-ms.tgt_pltfrm: 
+ms.technology:
+- drivers
+ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: 3414992c-61c0-4e7d-b509-72517e52c1bb
-caps.latest.revision: "42"
+caps.latest.revision: ''
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 54cd9cef5cf2d0c7a1af40028adfb5340823e94b
-ms.sourcegitcommit: 2713f8e7b504101f9298a0706bacd84bf2eaa174
+ms.openlocfilehash: 8f7482d5980d1e7a51479d9884623390b3e20fa5
+ms.sourcegitcommit: 2e130e9f3ce8a7ffe373d7fba8b09e937c216386
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/18/2017
+ms.lasthandoff: 03/28/2018
 ---
 # <a name="retrieving-data"></a>Recuperación de datos
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]
@@ -75,7 +76,7 @@ Puede ver cuántas filas se encuentran en un conjunto de resultados si especific
   
 ## <a name="in-this-section"></a>En esta sección  
   
-|Tema|Descripción|  
+|Tema|Description|  
 |---------|---------------|  
 |[Recuperación de datos como una cadena](../../connect/php/retrieving-data-as-a-stream-using-the-sqlsrv-driver.md)|Proporciona una visión general de cómo transmitir datos del servidor y proporciona vínculos a casos de uso específicos.|  
 |[Uso de parámetros direccionales](../../connect/php/using-directional-parameters.md)|Describe cómo usar parámetros direccionales cuando se llama a un procedimiento almacenado.|  
@@ -86,6 +87,7 @@ Puede ver cuántas filas se encuentran en un conjunto de resultados si especific
 [Cómo especificar tipos de datos PHP](../../connect/php/how-to-specify-php-data-types.md)  
   
 ## <a name="see-also"></a>Vea también  
-[Guía de programación para el controlador SQL para PHP](../../connect/php/programming-guide-for-php-sql-driver.md)
+[Programación de guía para los controladores de Microsoft para PHP para SQL Server](../../connect/php/programming-guide-for-php-sql-driver.md)
+
 [Recuperación de datos](../../connect/php/retrieving-data.md)  
   

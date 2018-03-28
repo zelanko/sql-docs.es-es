@@ -1,42 +1,43 @@
 ---
-title: "Cómo: enviar datos como una secuencia | Documentos de Microsoft"
-ms.custom: 
-ms.date: 01/19/2017
+title: 'Cómo: enviar datos como una secuencia | Documentos de Microsoft'
+ms.custom: ''
+ms.date: 03/26/2018
 ms.prod: sql-non-specified
 ms.prod_service: drivers
-ms.service: 
+ms.service: ''
 ms.component: php
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: drivers
-ms.tgt_pltfrm: 
+ms.technology:
+- drivers
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - updating data
 - streaming data
 ms.assetid: ab6b95d6-b6e6-4bd7-a18c-50f2918f7532
-caps.latest.revision: "30"
+caps.latest.revision: ''
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: fe89454453e105ca264f5e04aacb8581dfb81cac
-ms.sourcegitcommit: 2713f8e7b504101f9298a0706bacd84bf2eaa174
+ms.openlocfilehash: b1821f922e9c45340365abf680f5f46a61d6eb1e
+ms.sourcegitcommit: 2e130e9f3ce8a7ffe373d7fba8b09e937c216386
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/18/2017
+ms.lasthandoff: 03/28/2018
 ---
 # <a name="how-to-send-data-as-a-stream"></a>Cómo enviar datos como una secuencia
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]
 
-Los [!INCLUDE[ssDriverPHP](../../includes/ssdriverphp_md.md)] aprovechan las secuencias de PHP para enviar objetos de gran tamaño al servidor. En los ejemplos de este tema se muestra cómo enviar datos como una secuencia. En el primer ejemplo se utiliza el controlador SQLSRV para mostrar el comportamiento predeterminado, que consiste en enviar todos los datos de secuencia en el momento de ejecución de la consulta. En el segundo ejemplo se utiliza el controlador SQLSRV para mostrar cómo enviar hasta ocho kilobytes (8 kB) de datos de secuencia a la vez al servidor.  
+Los [!INCLUDE[ssDriverPHP](../../includes/ssdriverphp_md.md)] aprovechan las secuencias de PHP para enviar objetos de gran tamaño al servidor. En los ejemplos de este tema se muestra cómo enviar datos como una secuencia. En el primer ejemplo se utiliza el controlador SQLSRV para mostrar el comportamiento predeterminado, que consiste en enviar todos los datos de secuencia en el momento de ejecución de la consulta. El segundo ejemplo usa el controlador SQLSRV para demostrar cómo enviar hasta ocho kilobytes (8 kB) de datos de secuencia a la vez en el servidor.  
   
 En el tercer ejemplo se muestra cómo enviar datos de secuencia al servidor con el controlador PDO_SQLSRV.  
   
-## <a name="example"></a>Ejemplo  
+## <a name="example-sending-stream-data-at-execution"></a>Ejemplo: Enviar datos de secuencia en ejecución
 En el ejemplo siguiente se inserta una fila en la tabla *Production.ProductReview* de la base de datos de AdventureWorks. Los comentarios del cliente (*$comments*) se abren como una secuencia con PHP [fopen](http://php.net/manual/en/function.fopen.php) función y, a continuación, se transmiten al servidor tras la ejecución de la consulta.  
   
-En el ejemplo se da por hecho que SQL Server y la base de datos de [AdventureWorks](http://go.microsoft.com/fwlink/?LinkID=67739) están instalados en el equipo local. Todos los resultados se agregan a la consola.  
+El ejemplo supone que SQL Server y el [AdventureWorks](https://github.com/Microsoft/sql-server-samples/tree/master/samples/databases/adventure-works) base de datos se instalan en el equipo local. Todos los resultados se agregan a la consola.  
   
 ```  
 <?php  
@@ -89,10 +90,10 @@ sqlsrv_close( $conn);
 ?>  
 ```  
   
-## <a name="example"></a>Ejemplo  
-El ejemplo siguiente es el mismo que el anterior, pero en él se ha desactivado el comportamiento predeterminado de enviar todos los datos de secuencia en el momento de la ejecución. En este ejemplo se utiliza [sqlsrv_send_stream_data](../../connect/php/sqlsrv-send-stream-data.md) para enviar datos de secuencia al servidor. Se envía hasta ocho kilobytes (8 KB) de datos con cada llamada a **sqlsrv_send_stream_data**. El script cuenta el número de llamadas realizadas por **sqlsrv_send_stream_data** y muestra el recuento en la consola.  
+## <a name="example-sending-stream-data-using-sqlsrvsendstreamdata"></a>Ejemplo: Envío de flujo de datos mediante sqlsrv_send_stream_data
+El ejemplo siguiente es el mismo que el ejemplo anterior, pero se ha desactivado el comportamiento predeterminado de enviar todos los datos de la secuencia en ejecución. En este ejemplo se utiliza [sqlsrv_send_stream_data](../../connect/php/sqlsrv-send-stream-data.md) para enviar datos de secuencia al servidor. Se envía hasta ocho kilobytes (8 kB) de datos con cada llamada a **sqlsrv_send_stream_data**. El script cuenta el número de llamadas realizadas por **sqlsrv_send_stream_data** y muestra el recuento en la consola.  
   
-En el ejemplo se da por hecho que SQL Server y la base de datos de [AdventureWorks](http://go.microsoft.com/fwlink/?LinkID=67739) están instalados en el equipo local. Todos los resultados se agregan a la consola.  
+El ejemplo supone que SQL Server y el [AdventureWorks](https://github.com/Microsoft/sql-server-samples/tree/master/samples/databases/adventure-works) base de datos se instalan en el equipo local. Todos los resultados se agregan a la consola.  
   
 ```  
 <?php  
@@ -156,7 +157,7 @@ sqlsrv_close( $conn);
   
 Aunque los ejemplos de este tema envían datos de caracteres al servidor, pueden enviarse datos en cualquier formato como una secuencia. Por ejemplo, también puede utilizar las técnicas que se muestran en este tema para enviar imágenes en formato binario como secuencias.  
   
-## <a name="example"></a>Ejemplo  
+## <a name="example-sending-an-image-as-a-stream"></a>Ejemplo: Enviar una imagen como una secuencia 
   
 ```  
 <?php  
@@ -176,7 +177,9 @@ Aunque los ejemplos de este tema envían datos de caracteres al servidor, pueden
 ```  
   
 ## <a name="see-also"></a>Vea también  
-[Actualización de datos &#40;controladores de Microsoft para PHP para SQL Server&#41;](../../connect/php/updating-data-microsoft-drivers-for-php-for-sql-server.md)  
-[Recuperación de datos como una secuencia con el controlador SQLSRV](../../connect/php/retrieving-data-as-a-stream-using-the-sqlsrv-driver.md)  
+[Actualización de datos &#40;controladores de Microsoft para PHP para SQL Server&#41;](../../connect/php/updating-data-microsoft-drivers-for-php-for-sql-server.md)
+
+[Recuperación de datos como una secuencia con el controlador SQLSRV](../../connect/php/retrieving-data-as-a-stream-using-the-sqlsrv-driver.md)
+
 [Sobre los ejemplos de código de la documentación](../../connect/php/about-code-examples-in-the-documentation.md)  
   

@@ -1,26 +1,26 @@
 ---
-title: "SQL Server Machine Learning Services: disponibilidad de las características entre ediciones | Documentos de Microsoft"
-ms.custom: 
+title: 'SQL Server Machine Learning Services: disponibilidad de las características entre ediciones | Documentos de Microsoft'
+ms.custom: ''
 ms.date: 03/17/2018
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.prod: machine-learning-services
 ms.prod_service: machine-learning-services
 ms.component: r
-ms.technology: 
-ms.tgt_pltfrm: 
+ms.technology: ''
+ms.tgt_pltfrm: ''
 ms.topic: article
-ms.assetid: 
-caps.latest.revision: 
+ms.assetid: ''
+caps.latest.revision: ''
 author: HeidiSteen
 ms.author: heidist
 manager: cgronlun
 ms.workload: Inactive
-ms.openlocfilehash: 4322211bcc3a5466976368b9562ed3e95ad7e331
-ms.sourcegitcommit: 8e897b44a98943dce0f7129b1c7c0e695949cc3b
+ms.openlocfilehash: 50c9f2c8f1039ce0bba25ed9c6b7c5564c1d10d2
+ms.sourcegitcommit: 2e130e9f3ce8a7ffe373d7fba8b09e937c216386
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/21/2018
+ms.lasthandoff: 03/28/2018
 ---
 # <a name="feature-availability-across-editions-of-sql-server-machine-learning-services"></a>Disponibilidad de las características entre ediciones de SQL Server Machine Learning Services
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
@@ -28,9 +28,9 @@ ms.lasthandoff: 03/21/2018
  Características de aprendizaje de máquina están disponibles en SQL Server 2016 y 2017 de SQL Server. Este artículo enumera las ediciones que proporciona la característica, describe las limitaciones que se aplican en ediciones específicas y enumera capacidades disponibles únicamente en determinadas ediciones.
 
 
-## <a name="sql-server-2017-machine-learning-features"></a>Características de aprendizaje automático de SQL Server de 2017
+## <a name="sql-server-2017-features"></a>Características de SQL Server 2017
 
-Las ediciones Enterprise y Developer tienen la misma cobertura de característica para que pueda crear soluciones para una instalación de Enterprise sin incurrir en el mismo costo. Aunque las ediciones son funcionalmente equivlanet, no se admite el uso de la edición Developer para entornos de producción.
+Las ediciones Enterprise y Developer tienen la misma cobertura de característica para que pueda crear soluciones para una instalación de Enterprise sin incurrir en el mismo costo. Aunque las ediciones son funcionalmente equivalentes, no se admite el uso de la edición Developer para entornos de producción.
 
 La diferencia entre la integración básica y avanzada es la escala. Integración avanzada puede usar todos los núcleos disponibles para el procesamiento paralelo de conjuntos de datos en cualquier tamaño que puede dar cabida su equipo. La integración básica se limita a 2 núcleos y conjuntos de datos de conexión en la memoria. 
 

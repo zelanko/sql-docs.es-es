@@ -1,28 +1,30 @@
 ---
-title: "Cómo: realizar transacciones | Documentos de Microsoft"
-ms.custom: 
+title: 'Cómo: realizar transacciones | Documentos de Microsoft'
+ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql-non-specified
 ms.prod_service: drivers
-ms.service: 
+ms.service: ''
 ms.component: php
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: drivers
-ms.tgt_pltfrm: 
+ms.technology:
+- drivers
+ms.tgt_pltfrm: ''
 ms.topic: article
-helpviewer_keywords: transaction support
+helpviewer_keywords:
+- transaction support
 ms.assetid: f4643b85-f929-4919-8951-23394bc5bfa7
-caps.latest.revision: "32"
+caps.latest.revision: ''
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: a759dbf523ff275f20436919b5f093225b2693e5
-ms.sourcegitcommit: 2713f8e7b504101f9298a0706bacd84bf2eaa174
+ms.openlocfilehash: 15f4ba792e7657125c6964f098c6c1f7a9fe83f0
+ms.sourcegitcommit: 2e130e9f3ce8a7ffe373d7fba8b09e937c216386
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/18/2017
+ms.lasthandoff: 03/28/2018
 ---
 # <a name="how-to-perform-transactions"></a>Cómo realizar transacciones
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]
@@ -58,7 +60,7 @@ Los pasos para ejecutar una transacción se pueden resumir del siguiente modo:
   
     De forma predeterminada, la [!INCLUDE[ssDriverPHP](../../includes/ssdriverphp_md.md)] está en modo de confirmación automática. Es decir, todas las consultas se confirman de forma automática cuando se realizan correctamente, salvo que se hayan designado como parte de una transacción explícita mediante **sqlsrv_begin_transaction**.  
   
-    Si una transacción explícita no se confirma con **sqlsrv_commit**, se revertirá al cierre de la conexión o al término de la secuencia de comandos.  
+    Si una transacción explícita no se confirma con **sqlsrv_commit**, ésta se revierte al cierre de la conexión o al término de la secuencia de comandos.  
   
     No utilice instrucciones de Transact-SQL incrustadas para realizar transacciones. Por ejemplo, para iniciar una transacción, no ejecute una instrucción con "BEGIN TRANSACTION" como consulta de Transact-SQL. No se puede garantizar que las transacciones se comporten de la forma esperada cuando se utilizan instrucciones de Transact-SQL incrustadas para realizar transacciones.  
   
@@ -66,7 +68,7 @@ Los pasos para ejecutar una transacción se pueden resumir del siguiente modo:
   
 ## <a name="example"></a>Ejemplo  
   
-### <a name="description"></a>Descripción  
+### <a name="description"></a>Description  
 En el ejemplo siguiente se ejecutan varias consultas como parte de una transacción. Si todas las consultas se realizan correctamente, la transacción se confirma. Si se produce un error en cualquiera de las consultas, se revierte la transacción.  
   
 En el ejemplo se trata de eliminar un pedido de ventas de la tabla *Sales.SalesOrderDetail* y ajustar los niveles de inventario de productos en la tabla *Product.ProductInventory* de cada producto del pedido de ventas. Estas consultas se incluyen en una transacción, ya que todas las consultas deben realizarse correctamente con el fin de que la base de datos refleje con precisión el estado de los pedidos y la disponibilidad de los productos.  
@@ -75,7 +77,7 @@ En la primera consulta del ejemplo se recuperan los id. de producto y las cantid
   
 Las consultas posteriores (eliminación del pedido de ventas y actualización de las cantidades del inventario de productos) forman parte de la transacción.  
   
-En el ejemplo se da por hecho que SQL Server y la base de datos de [AdventureWorks](http://go.microsoft.com/fwlink/?LinkID=67739) están instalados en el equipo local. Los resultados se agregan a la consola cuando se ejecuta el ejemplo en la línea de comandos.  
+El ejemplo supone que SQL Server y el [AdventureWorks](https://github.com/Microsoft/sql-server-samples/tree/master/samples/databases/adventure-works) base de datos se instalan en el equipo local. Los resultados se agregan a la consola cuando se ejecuta el ejemplo en la línea de comandos.  
   
 ### <a name="code"></a>código  
   
@@ -155,10 +157,12 @@ function perform_trans_ops($conn, $orderId)
 ```  
   
 ### <a name="comments"></a>Comentarios  
-Con el fin de resaltar el comportamiento de las transacciones, en el ejemplo anterior no se incluyen algunos controles de errores recomendados. En las aplicaciones de producción, se recomienda realizar la comprobación de la posible presencia de errores en todas las llamadas a una función de **sqlsrv** y controlar tales errores del modo pertinente.  
+Con el fin de resaltar el comportamiento de las transacciones, en el ejemplo anterior no se incluyen algunos controles de errores recomendados. Para una aplicación de producción, le recomendamos que compruebe las llamadas a un **sqlsrv** funcionar para los errores y controlarlos según corresponda.
   
 ## <a name="see-also"></a>Vea también  
-[Actualización de datos &#40;controladores de Microsoft para PHP para SQL Server&#41;](../../connect/php/updating-data-microsoft-drivers-for-php-for-sql-server.md)  
-[Transacciones (motor de base de datos)](http://go.microsoft.com/fwlink/?LinkId=105862)  
+[Actualización de datos &#40;controladores de Microsoft para PHP para SQL Server&#41;](../../connect/php/updating-data-microsoft-drivers-for-php-for-sql-server.md)
+
+[Transacciones (motor de base de datos)](https://msdn.microsoft.com/library/ms190612.aspx)
+
 [Sobre los ejemplos de código de la documentación](../../connect/php/about-code-examples-in-the-documentation.md)  
   

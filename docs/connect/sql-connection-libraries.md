@@ -1,23 +1,23 @@
 ---
 title: Bibliotecas de conexiones de bases de datos de SQL de Microsoft | Documentos de Microsoft
-description: "Proporciona vínculos de descarga para los módulos que permiten la conexión a Microsoft SQL Server y base de datos de SQL Azure, desde una variedad de lenguajes de programación de cliente."
+description: Proporciona vínculos de descarga para los módulos que permiten la conexión a Microsoft SQL Server y base de datos de SQL Azure, desde una variedad de lenguajes de programación de cliente.
 author: MightyPen
-ms.service: 
+ms.service: ''
 ms.component: connect
 ms.suite: sql
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.technology: dbe-data-tier-apps
-ms.custom: 
+ms.custom: ''
 ms.workload: data-management
 ms.topic: article
 ms.date: 08/09/2017
 ms.author: genemi
-ms.openlocfilehash: 9c85a5e40ca7d3b6e35cdb09fc4becbe5c9c65c3
-ms.sourcegitcommit: 1a3584a60c12521ba5b4b12a18d8cb32b1f2d555
+ms.openlocfilehash: 33df5e13dcdeb205a1dbc9fa9c1a5dc7efc754c2
+ms.sourcegitcommit: 2e130e9f3ce8a7ffe373d7fba8b09e937c216386
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/28/2018
+ms.lasthandoff: 03/28/2018
 ---
 # <a name="connection-modules-for-microsoft-sql-databases"></a>Módulos de conexión para bases de datos SQL de Microsoft
 
@@ -60,7 +60,7 @@ although the FWLink is less precise than is http://github.com/Microsoft/msphpsql
 | C++      | [ODBC](http://docs.microsoft.com/sql/connect/odbc/download-odbc-driver-for-sql-server) |
 | Java     | [JDBC](http://www.microsoft.com/download/details.aspx?id=55539) |
 | Node.js  | [Controlador de Node.js, las instrucciones de instalación](http://docs.microsoft.com/sql/connect/node-js/step-1-configure-development-environment-for-node-js-development) |
-| PHP      | *Sistema operativo:*<br /><br />[Controladores de Windows para PHP](https://www.microsoft.com/download/details.aspx?id=55642)<br />[Ubuntu o MacOS PHP controlador, desde Github](http://github.com/Microsoft/msphpsql/tree/dev#install-unix) |
+| PHP      | *Sistema operativo:*<br /><br />[Controladores de Windows para PHP](https://www.microsoft.com/download/details.aspx?id=55642)<br />[Linux o Mac OS controlador PHP desde Github](http://github.com/Microsoft/msphpsql/) |
 | Python   | [pyodbc, las instrucciones de instalación](http://docs.microsoft.com/sql/connect/python/pyodbc/step-1-configure-development-environment-for-pyodbc-python-development)<br />[Descargar ODBC](http://docs.microsoft.com/sql/connect/odbc/download-odbc-driver-for-sql-server) |
 | Ruby     | [Controlador Ruby, las instrucciones de instalación](https://docs.microsoft.com/sql/connect/ruby/step-1-configure-development-environment-for-ruby-development)<br />[Página de descarga Ruby](https://rubyinstaller.org/downloads/) |
 | &nbsp; | <br /> |
@@ -90,7 +90,7 @@ En la tabla siguiente se muestra ejemplos de marcos de trabajo de asignación re
 ## <a name="build-an-app-webpages"></a>Generar una aplicación las páginas Web
 
 
-[http://AKA.ms/sqldev](http://aka.ms/sqldev) le lleva a un conjunto de *compilación una aplicación* las páginas Web. Las páginas Web proporcionan información acerca de diversas combinaciones de idioma, el sistema operativo y el controlador de conexión de SQL de la programación. Entre la información proporcionada por las páginas de generar una aplicación Web se encuentran los siguientes elementos:
+[http://aka.ms/sqldev](http://aka.ms/sqldev) le lleva a un conjunto de *compilación una aplicación* las páginas Web. Las páginas Web proporcionan información acerca de diversas combinaciones de idioma, el sistema operativo y el controlador de conexión de SQL de la programación. Entre la información proporcionada por las páginas de generar una aplicación Web se encuentran los siguientes elementos:
 
 - Obtener más información acerca de cómo empezar a trabajar desde el principio, para cada combinación de idioma, sistema operativo + controlador.
     - Instrucciones para instalar a los controladores más recientes de conexión de SQL.

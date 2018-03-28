@@ -1,31 +1,31 @@
 ---
-title: "Crear un grupo de recursos para el aprendizaje automático | Documentos de Microsoft"
-ms.custom: 
+title: Crear un grupo de recursos para el aprendizaje automático | Documentos de Microsoft
+ms.custom: ''
 ms.date: 11/13/2017
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.prod: machine-learning-services
 ms.prod_service: machine-learning-services
 ms.component: r
-ms.technology: 
-ms.tgt_pltfrm: 
+ms.technology: ''
+ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: c7f7f6e4-774d-4b45-b94a-f06c51718475
-caps.latest.revision: 
+caps.latest.revision: ''
 author: jeannt
 ms.author: jeannt
 manager: cgronlund
 ms.workload: Inactive
-ms.openlocfilehash: dc7a1c26f38cb63cf678f71ec6b889f6051f5387
-ms.sourcegitcommit: 99102cdc867a7bdc0ff45e8b9ee72d0daade1fd3
+ms.openlocfilehash: 449b9b46b3f371ef7eca89a488201cdad05c232d
+ms.sourcegitcommit: 2e130e9f3ce8a7ffe373d7fba8b09e937c216386
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/11/2018
+ms.lasthandoff: 03/28/2018
 ---
 # <a name="create-a-resource-pool-for-machine-learning"></a>Crear un grupo de recursos para el aprendizaje automático
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
 
-Este tema describe cómo puede crear un grupo de recursos específicamente para administrar cargas de trabajo de aprendizaje de máquina en SQL Server. Se supone que ya ha instalado y habilitado el características, de aprendizaje automático y volver a configurar la instancia para admitir la administración específica más de los recursos utilizados por un proceso externo, como R o Python.
+Este artículo describe cómo puede crear un grupo de recursos específicamente para administrar cargas de trabajo de aprendizaje de máquina en SQL Server. Se supone que ya ha instalado y habilitado el características, de aprendizaje automático y volver a configurar la instancia para admitir la administración específica más de los recursos utilizados por un proceso externo, como R o Python.
 
 El proceso incluye varios pasos:
 
@@ -175,7 +175,7 @@ Para comprobar que se han realizado los cambios, debe comprobar la configuració
     |2|predeterminados|Media|25|0|0|0|0|2|2|
     |256|ds_wg|Media|25|0|0|0|0|2|256|
   
-2.  Use la nueva vista de catálogo, [sys.resource_governor_external_resource_pools &#40; Transact-SQL &#41; ](../../relational-databases/system-catalog-views/sys-resource-governor-external-resource-pools-transact-sql.md), para ver todos los grupos de recursos externos.
+2.  Use la nueva vista de catálogo, [sys.resource_governor_external_resource_pools &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-resource-governor-external-resource-pools-transact-sql.md), para ver todos los grupos de recursos externos.
   
     ```sql
     SELECT * FROM sys.resource_governor_external_resource_pools;
@@ -203,7 +203,7 @@ Para comprobar que se han realizado los cambios, debe comprobar la configuració
 Para obtener más información acerca de cómo administrar los recursos del servidor, vea:
 
 +  [Regulador de recursos](../../relational-databases/resource-governor/resource-governor.md) 
-+ [Regulador de recursos relacionados con vistas de administración dinámica &#40; Transact-SQL &#41;](../../relational-databases/system-dynamic-management-views/resource-governor-related-dynamic-management-views-transact-sql.md)
++ [Vistas de administración dinámica relacionadas con el regulador de recursos &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/resource-governor-related-dynamic-management-views-transact-sql.md)
 
 Para obtener información general de la regulación de recursos para el aprendizaje automático, vea:
 

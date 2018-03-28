@@ -1,29 +1,29 @@
 ---
 title: Interoperabilidad de Python con SQL Server | Documentos de Microsoft
-ms.custom: 
+ms.custom: ''
 ms.date: 11/03/2017
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.prod: machine-learning-services
 ms.prod_service: machine-learning-services
 ms.component: python
-ms.technology: 
-ms.tgt_pltfrm: 
+ms.technology: ''
+ms.tgt_pltfrm: ''
 ms.topic: article
 author: jeannt
 ms.author: jeannt
 manager: cgronlund
 ms.workload: Inactive
-ms.openlocfilehash: 1edd059c283a0f780f6dd1419d70ed2bedb23f03
-ms.sourcegitcommit: 99102cdc867a7bdc0ff45e8b9ee72d0daade1fd3
+ms.openlocfilehash: 3477c941d81f860996776cf89bfc3ffe7dbc81af
+ms.sourcegitcommit: 2e130e9f3ce8a7ffe373d7fba8b09e937c216386
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/11/2018
+ms.lasthandoff: 03/28/2018
 ---
 # <a name="python-interoperability-with-sql-server"></a>Interoperabilidad de Python con SQL Server
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
 
-En este tema se describe los componentes de Python que se instalan si se habilita la característica **Machine Learning Services (In-Database)** y seleccione Python como lenguaje.
+Este artículo describen los componentes de Python que se instalan si se habilita la característica **Machine Learning Services (In-Database)** y seleccione Python como lenguaje.
 
 ## <a name="python-components"></a>Componentes de Python
 

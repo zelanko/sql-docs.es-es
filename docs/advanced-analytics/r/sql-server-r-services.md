@@ -1,32 +1,32 @@
 ---
 title: SQL Server del equipo aprendizaje y R Services (In-Database) | Documentos de Microsoft
 ms.date: 03/16/2018
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.prod: machine-learning-services
 ms.prod_service: machine-learning-services
 ms.component: r
-ms.technology: 
-ms.tgt_pltfrm: 
+ms.technology: ''
+ms.tgt_pltfrm: ''
 ms.topic: article
-ms.assetid: 
-caps.latest.revision: 
+ms.assetid: ''
+caps.latest.revision: ''
 author: HeidiSteen
 ms.author: heidist
 manager: cgronlun
 ms.workload: Active
-ms.openlocfilehash: 0d5bb56717eefa50a219db051eb611a82974a0bc
-ms.sourcegitcommit: 8e897b44a98943dce0f7129b1c7c0e695949cc3b
+ms.openlocfilehash: f84f61721bca14a78694a9df6c7af8b7f7d74ea7
+ms.sourcegitcommit: 2e130e9f3ce8a7ffe373d7fba8b09e937c216386
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/21/2018
+ms.lasthandoff: 03/28/2018
 ---
 # <a name="sql-server-machine-learning-and-r-services-in-database"></a>SQL Server del equipo aprendizaje y R Services (en bases de datos)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
 
 Una instalación de base de datos de aprendizaje automático funciona en el contexto de una instancia de motor de base de datos de SQL Server, proporcionar soporte de script externo de R y Python para los datos residentes en la instancia de SQL Server. Dado que aprendizaje automático se integra con [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], puede realizar el análisis en lugar donde residen los datos y eliminar los costos y riesgos de seguridad asociados con el movimiento de datos.
 
-Dado que el motor de base de datos es de varias instancias, puede instalar más de una instancia en bases de datos análisis de, o incluso más antiguos y más recientes versiones en paralelo. Incluyen opciones [Machine Learning Services (In-Database) de SQL Server de 2017](../install/sql-machine-learning-standalone-windows-install.md) con R y Python, o [R Services (en-base de datos) de SQL Server 2016](../install/sql-r-standalone-windows-install.md) con solo R. 
+Dado que el motor de base de datos es de varias instancias, puede instalar más de una instancia en bases de datos análisis de, o incluso más antiguos y más recientes versiones en paralelo. Incluyen opciones [Machine Learning Services (In-Database) de SQL Server de 2017](../install/sql-machine-learning-standalone-windows-install.md) con R y Python, o [SQL Server 2016 R Services (In-Database)](../install/sql-r-standalone-windows-install.md) con solo R. 
 
 También se pueden instalar componentes de aprendizaje de máquina como instancia independiente [servidores independientes](r-server-standalone.md). Por lo general, se recomienda que trate (independiente) y (en bases de datos) instalaciones como mutuamente exclusivos para evitar la contención de recursos, pero si tiene suficientes recursos, no hay ninguna prohibición en instalar ambos en el mismo equipo físico.
 

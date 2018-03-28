@@ -1,16 +1,16 @@
 ---
 title: SERVERPROPERTY (Transact-SQL) | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 03/02/2017
 ms.prod: sql-non-specified
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
-ms.service: 
+ms.service: ''
 ms.component: t-sql|functions
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - SERVERPROPERTY_TSQL
@@ -25,22 +25,24 @@ helpviewer_keywords:
 - instances of SQL Server, property information
 - server properties [SQL Server]
 ms.assetid: 11e166fa-3dd2-42d8-ac4b-04f18c612c4a
-caps.latest.revision: 
+caps.latest.revision: ''
 author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: Active
-ms.openlocfilehash: f619623b90b784d9d44bc76c99daf3d9802cb8a0
-ms.sourcegitcommit: 45e4efb7aa828578fe9eb7743a1a3526da719555
+ms.openlocfilehash: be72828789c74d599c003100c98db93b1ec937e4
+ms.sourcegitcommit: 8e897b44a98943dce0f7129b1c7c0e695949cc3b
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 03/21/2018
 ---
 # <a name="serverproperty-transact-sql"></a>SERVERPROPERTY (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
 
   Devuelve información de la propiedad acerca de la instancia del servidor.  
-  
+
+[!INCLUDE[ssMIlimitation](../../includes/sql-db-mi-limitation.md)]
+
  ![Icono de vínculo de tema](../../database-engine/configure-windows/media/topic-link.gif "Icono de vínculo de tema") [Convenciones de sintaxis de Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>Sintaxis  
@@ -58,7 +60,7 @@ SERVERPROPERTY ( 'propertyname' )
 |BuildClrVersion|Versión de Common Language Runtime (CLR) de [!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] que se usó al generar la instancia de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].<br /><br /> NULL = La entrada no es válida, es un error o no es aplicable.<br /><br /> Tipo de datos base: **nvarchar(128)**|  
 |Intercalación|El nombre de la intercalación predeterminada para el servidor.<br /><br /> NULL = La entrada no es válida o es un error.<br /><br /> Tipo de datos base: **nvarchar(128)**|  
 |CollationID|Id. de la intercalación de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].<br /><br /> Tipo de datos base: **int**|  
-|ComparisonStyle|El estilo de comparación de Windows de la intercalación.<br /><br /> Tipo de datos base: **int**|  
+|ComparisonStyle|Estilo de comparación de Windows de la intercalación.<br /><br /> Tipo de datos base: **int**|  
 |ComputerNamePhysicalNetBIOS|El nombre NetBIOS del equipo local en el que se está ejecutando la instancia de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].<br /><br /> En el caso de una instancia en clúster de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] en un clúster de conmutación por error, este valor cambia conforme la instancia de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] se conmuta por error con otros nodos del clúster de conmutación por error.<br /><br /> En una instancia independiente de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], este valor permanece constante y devuelve el mismo valor que la propiedad MachineName.<br /><br /> **Nota**: Si la instancia de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] se encuentra en un clúster de conmutación por error y quiere obtener el nombre de la instancia en el clúster de conmutación por error, use la propiedad MachineName.<br /><br /> NULL = La entrada no es válida, es un error o no es aplicable.<br /><br /> Tipo de datos base: **nvarchar(128)**|  
 |Edición|Edición de producto instalada de la instancia de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Use el valor de esta propiedad para determinar las características y los límites, como por ejemplo [Límites de la capacidad de cálculo de cada edición de SQL Server](../../sql-server/compute-capacity-limits-by-edition-of-sql-server.md). Las versiones de 64 bits del [!INCLUDE[ssDE](../../includes/ssde-md.md)] anexan (64 bits) a la versión.<br /><br /> Devuelve:<br /><br /> 'Enterprise Edition'<br /><br /> Enterprise Edition: licencia basada en núcleo<br /><br /> 'Enterprise Evaluation Edition'<br /><br /> 'Business Intelligence Edition'<br /><br /> 'Developer Edition'<br /><br /> 'Express Edition'<br /><br /> 'Express Edition with Advanced Services'<br /><br /> 'Standard Edition'<br /><br /> 'Web Edition'<br /><br /> 'SQL Azure' indica [!INCLUDE[ssSDS](../../includes/sssds-md.md)] o [!INCLUDE[ssDW](../../includes/ssdw-md.md)]<br /><br /> Tipo de datos base: **nvarchar(128)**|  
 |EditionID|EditionID representa la edición instalada de la instancia de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Use el valor de esta propiedad para determinar las características y los límites, como por ejemplo [Límites de la capacidad de cálculo de cada edición de SQL Server](../../sql-server/compute-capacity-limits-by-edition-of-sql-server.md).<br /><br /> 1804890536 = Enterprise<br /><br /> 1872460670 = Enterprise Edition: licencia basada en núcleo<br /><br /> 610778273= Enterprise Evaluation<br /><br /> 284895786 = Business Intelligence<br /><br /> -2117995310 = Developer<br /><br /> -1592396055 = Express<br /><br /> -133711905= Express con Advanced Services<br /><br /> -1534726760 = Standard<br /><br /> 1293598313 = Web<br /><br /> 1674378470 = SQL Database o SQL Data Warehouse<br /><br /> Tipo de base de datos: **bigint**|  
@@ -75,7 +77,7 @@ SERVERPROPERTY ( 'propertyname' )
 |IsLocalDB|**Se aplica a**: desde [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] hasta [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].<br /><br /> El servidor es una instancia de [!INCLUDE[ssExpress](../../includes/ssexpress-md.md)] LocalDB.<br /><br /> NULL = La entrada no es válida, es un error o no es aplicable.|  
 |IsPolybaseInstalled|**Se aplica a**: [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].<br /><br /> Devuelve un valor que indica si la instancia del servidor tiene instalada la característica PolyBase.<br /><br /> 0 = PolyBase no está instalada.<br /><br /> 1 = PolyBase está instalada.<br /><br /> Tipo de datos base: **int**|  
 |IsSingleUser|El servidor está en modo de usuario único.<br /><br /> 1 = Usuario único.<br /><br /> 0 = Usuario no único.<br /><br /> NULL = La entrada no es válida, es un error o no es aplicable.<br /><br /> Tipo de datos base: **int**|  
-|IsXTPSupported|**Se aplica a**: SQL Server (de [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] a [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]), [!INCLUDE[ssSDS](../../includes/sssds-md.md)].<br /><br /> El servidor admite OLTP en memoria.<br /><br /> 1= El servidor admite OLTP en memoria.<br /><br /> 0= El servidor no admite OLTP en memoria.<br /><br /> NULL = La entrada no es válida, es un error o no es aplicable.<br /><br /> Tipo de datos base: **int**|  
+|IsXTPSupported|**Se aplica a**: SQL Server (desde [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] hasta [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]), [!INCLUDE[ssSDS](../../includes/sssds-md.md)].<br /><br /> El servidor admite OLTP en memoria.<br /><br /> 1= El servidor admite OLTP en memoria.<br /><br /> 0= El servidor no admite OLTP en memoria.<br /><br /> NULL = La entrada no es válida, es un error o no es aplicable.<br /><br /> Tipo de datos base: **int**|  
 |LCID|Identificador de configuración regional (LCID) de Windows de la intercalación.<br /><br /> Tipo de datos base: **int**|  
 |LicenseType|Sin usar. El producto de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] no conserva ni mantiene la información sobre la licencia. Siempre devuelve DISABLED.<br /><br /> Tipo de datos base: **nvarchar(128)**|  
 |MachineName|Nombre del equipo con Windows en el que se está ejecutando la instancia del servidor.<br /><br /> Para una instancia en clúster, una instancia de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] que se ejecuta en el Servicio de Cluster Server de Microsoft, devuelve el nombre del servidor virtual.<br /><br /> NULL = La entrada no es válida, es un error o no es aplicable.<br /><br /> Tipo de datos base: **nvarchar(128)**|  
@@ -83,7 +85,7 @@ SERVERPROPERTY ( 'propertyname' )
 |ProcessID|Identificador de proceso del servicio [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. ProcessID es útil para identificar a qué Sqlservr.exe pertenece esta instancia.<br /><br /> NULL = La entrada no es válida, es un error o no es aplicable.<br /><br /> Tipo de datos base: **int**|  
 |ProductBuild|**Se aplica a**: [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] a partir de octubre de 2015.<br /><br /> Número de compilación.|  
 |ProductBuildType|**Se aplica a**: [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] hasta la versión actual en actualizaciones a partir de finales de 2015.<br /><br /> Tipo de compilación de la compilación actual.<br /><br /> Devuelve una de las siguientes opciones:<br /><br /> OD = versión a petición de un cliente específico.<br /><br /> GDR = versión de distribución general publicada en Windows Update.<br /><br /> NULL<br />= No aplicable.|  
-|ProductLevel|Nivel de la versión de la instancia de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].<br /><br /> Devuelve una de las siguientes opciones:<br /><br /> 'RTM' = Versión comercial original<br /><br /> 'SP*n*' = Versión de Service Pack<br /><br /> 'CTP*n*', = versión Community Technology Preview<br /><br /> Tipo de datos base: **nvarchar(128)**|  
+|ProductLevel|Nivel de la versión de la instancia de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].<br /><br /> Devuelve una de las siguientes opciones:<br /><br /> 'RTM' = Versión comercial original<br /><br /> 'SP*n*' = versión de Service Pack<br /><br /> 'CTP*n*', = versión de Community Technology Preview<br /><br /> Tipo de datos base: **nvarchar(128)**|  
 |ProductMajorVersion|**Se aplica a**: [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] hasta la versión actual en actualizaciones a partir de finales de 2015.<br /><br /> Versión principal.|  
 |ProductMinorVersion|**Se aplica a**: [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] hasta la versión actual en actualizaciones a partir de finales de 2015.<br /><br /> Versión secundaria.|  
 |ProductUpdateLevel|**Se aplica a**: [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] hasta la versión actual en actualizaciones a partir de finales de 2015.<br /><br /> Nivel de actualización de la compilación actual. CU indica una actualización acumulativa.<br /><br /> Devuelve una de las siguientes opciones:<br /><br /> CU*n* = Actualización acumulativa<br /><br /> NULL<br />= No aplicable.|  

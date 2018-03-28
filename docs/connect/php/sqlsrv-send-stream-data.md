@@ -1,33 +1,35 @@
 ---
-title: sqlsrv_send_stream_data | Documentos de Microsoft
-ms.custom: 
+title: sqlsrv_send_stream_data | Microsoft Docs
+ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql-non-specified
 ms.prod_service: drivers
-ms.service: 
+ms.service: ''
 ms.component: php
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: drivers
-ms.tgt_pltfrm: 
+ms.technology:
+- drivers
+ms.tgt_pltfrm: ''
 ms.topic: article
-apiname: sqlsrv_send_stream_data
+apiname:
+- sqlsrv_send_stream_data
 apitype: NA
 helpviewer_keywords:
 - sqlsrv_send_stream_data
 - API Reference, sqlsrv_send_stream_data
 - streaming data
 ms.assetid: 826c2d45-694f-42b8-b12b-cd4523a31883
-caps.latest.revision: "32"
+caps.latest.revision: ''
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 0fae36ffda842365145e07b6846965cdc45b6c05
-ms.sourcegitcommit: 2713f8e7b504101f9298a0706bacd84bf2eaa174
+ms.openlocfilehash: 7c8ea12c087a5702776a596f1f5b989e04733078
+ms.sourcegitcommit: 2e130e9f3ce8a7ffe373d7fba8b09e937c216386
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/18/2017
+ms.lasthandoff: 03/28/2018
 ---
 # <a name="sqlsrvsendstreamdata"></a>sqlsrv_send_stream_data
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]
@@ -51,7 +53,7 @@ sqlsrv_send_stream_data( resource $stmt)
 Se devuelve el valor booleano **True** si hay más datos que se van a enviar. De lo contrario, se devuelve el valor **False**.  
   
 ## <a name="example"></a>Ejemplo  
-En el ejemplo siguiente, se abre una reseña del producto como una secuencia y se envía al servidor. El comportamiento predeterminado de enviar todos los datos de secuencia en el momento de la ejecución está deshabilitado. En el ejemplo se da por hecho que SQL Server y la base de datos de [AdventureWorks](http://go.microsoft.com/fwlink/?LinkID=67739) están instalados en el equipo local. Los resultados se agregan a la consola cuando se ejecuta el ejemplo en la línea de comandos.  
+En el ejemplo siguiente, se abre una reseña del producto como una secuencia y se envía al servidor. El comportamiento predeterminado de enviar todos los datos de secuencia en el momento de la ejecución está deshabilitado. El ejemplo supone que SQL Server y el [AdventureWorks](https://github.com/Microsoft/sql-server-samples/tree/master/samples/databases/adventure-works) base de datos se instalan en el equipo local. Los resultados se agregan a la consola cuando se ejecuta el ejemplo en la línea de comandos.  
   
 ```  
 <?php  
@@ -101,6 +103,8 @@ sqlsrv_close( $conn);
   
 ## <a name="see-also"></a>Vea también  
 [Referencia de API del controlador SQLSRV](../../connect/php/sqlsrv-driver-api-reference.md)  
+
 [Actualización de datos &#40;controladores de Microsoft para PHP para SQL Server&#41;](../../connect/php/updating-data-microsoft-drivers-for-php-for-sql-server.md)  
+
 [Sobre los ejemplos de código de la documentación](../../connect/php/about-code-examples-in-the-documentation.md)  
   

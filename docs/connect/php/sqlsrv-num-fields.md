@@ -1,37 +1,39 @@
 ---
-title: sqlsrv_num_fields | Documentos de Microsoft
-ms.custom: 
-ms.date: 01/19/2017
+title: sqlsrv_num_fields | Microsoft Docs
+ms.custom: ''
+ms.date: 03/23/2017
 ms.prod: sql-non-specified
 ms.prod_service: drivers
-ms.service: 
+ms.service: ''
 ms.component: php
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: drivers
-ms.tgt_pltfrm: 
+ms.technology:
+- drivers
+ms.tgt_pltfrm: ''
 ms.topic: article
-apiname: sqlsrv_num_fields
+apiname:
+- sqlsrv_num_fields
 apitype: NA
 helpviewer_keywords:
 - sqlsrv_num_fields
 - API Reference, sqlsrv_num_fields
 ms.assetid: 03ca1860-01ed-408c-862a-57a7355de4bf
-caps.latest.revision: "17"
+caps.latest.revision: ''
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 978f04e3796cc104844ca86e3ac74b1c24cc10e1
-ms.sourcegitcommit: 2713f8e7b504101f9298a0706bacd84bf2eaa174
+ms.openlocfilehash: 80028fcf1b4a1c3d947bef49c2a4edc617f9d2d1
+ms.sourcegitcommit: 2e130e9f3ce8a7ffe373d7fba8b09e937c216386
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/18/2017
+ms.lasthandoff: 03/28/2018
 ---
 # <a name="sqlsrvnumfields"></a>sqlsrv_num_fields
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]
 
-Recupera el número de campos de un conjunto de resultados activo. Tenga en cuenta que se puede llamar a **sqlsrv_num_fields** en cualquier instrucción preparada, con independencia de que sea anterior o posterior a la ejecución.  
+Recupera el número de campos de un conjunto de resultados activo. Esta función se puede llamar en cualquier instrucción preparada, antes o después de la ejecución.  
   
 ## <a name="syntax"></a>Sintaxis  
   
@@ -47,9 +49,9 @@ sqlsrv_num_fields( resource $stmt)
 Establece un valor entero que representa el número de campos del conjunto de resultados activo. Si se produce un error, se devuelve el valor booleano **False** .  
   
 ## <a name="example"></a>Ejemplo  
-En el ejemplo siguiente se ejecuta una consulta para recuperar todos los campos de las primeras tres filas en la tabla *HumanResources.Department* de la base de datos de Adventureworks. La función **sqlsrv_num_fields** determina el número de campos del conjunto de resultados. Gracias a esto, los datos pueden mostrarse repitiéndose a través de los campos de cada fila devuelta.  
+En el ejemplo siguiente se ejecuta una consulta para recuperar todos los campos de las primeras tres filas en la *HumanResources.Department* tabla de la base de datos de AdventureWorks. La función **sqlsrv_num_fields** determina el número de campos del conjunto de resultados. Gracias a esto, los datos pueden mostrarse repitiéndose a través de los campos de cada fila devuelta.  
   
-En el ejemplo se da por hecho que SQL Server y la base de datos de [AdventureWorks](http://go.microsoft.com/fwlink/?LinkID=67739) están instalados en el equipo local. Los resultados se agregan a la consola cuando se ejecuta el ejemplo en la línea de comandos.  
+El ejemplo supone que SQL Server y el [AdventureWorks](https://github.com/Microsoft/sql-server-samples/tree/master/samples/databases/adventure-works) base de datos se instalan en el equipo local. Los resultados se agregan a la consola cuando se ejecuta el ejemplo en la línea de comandos.  
   
 ```  
 <?php  
@@ -96,6 +98,8 @@ sqlsrv_close( $conn );
   
 ## <a name="see-also"></a>Vea también  
 [Referencia de API del controlador SQLSRV](../../connect/php/sqlsrv-driver-api-reference.md)  
+
 [sqlsrv_field_metadata](../../connect/php/sqlsrv-field-metadata.md)  
+
 [Sobre los ejemplos de código de la documentación](../../connect/php/about-code-examples-in-the-documentation.md)  
   

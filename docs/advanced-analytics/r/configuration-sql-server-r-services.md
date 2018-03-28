@@ -1,26 +1,26 @@
 ---
-title: "Configuración y administración | Documentos de Microsoft"
-ms.custom: 
+title: Configuración y administración | Documentos de Microsoft
+ms.custom: ''
 ms.date: 05/31/2016
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.prod: machine-learning-services
 ms.prod_service: machine-learning-services
 ms.component: r
-ms.technology: 
-ms.tgt_pltfrm: 
+ms.technology: ''
+ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: e0fd4554-60c6-4181-ac4c-2e366fb434f6
-caps.latest.revision: 
+caps.latest.revision: ''
 author: jeannt
 ms.author: jeannt
 manager: cgronlund
 ms.workload: Inactive
-ms.openlocfilehash: 63448281d0e1d135a52bc1c9d0c8afa097a87596
-ms.sourcegitcommit: 99102cdc867a7bdc0ff45e8b9ee72d0daade1fd3
+ms.openlocfilehash: f130f4a300351bb8384362affddc595aadf92148
+ms.sourcegitcommit: 2e130e9f3ce8a7ffe373d7fba8b09e937c216386
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/11/2018
+ms.lasthandoff: 03/28/2018
 ---
 # <a name="configuration-and-management"></a>Configuración y administración
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
@@ -40,7 +40,7 @@ Este artículo contiene vínculos a información más detallada sobre cómo conf
 
 ## <a name="r-package-management"></a>Administración de paquetes de R
 
-Estos temas describe cómo instalar nuevos paquetes de R en la instancia de SQL Server, administrar las bibliotecas de paquete de R y restaurar las bibliotecas de paquete después de una restauración de base de datos.
+Estos artículos describe cómo instalar nuevos paquetes de R en la instancia de SQL Server, administrar las bibliotecas de paquete de R y restaurar las bibliotecas de paquete después de una restauración de base de datos.
 
 + [Instalar y administrar paquetes de R](installing-and-managing-r-packages.md)
 + [Instalar nuevos paquetes de R](install-additional-r-packages-on-sql-server.md)
@@ -52,7 +52,7 @@ Estos temas describe cómo instalar nuevos paquetes de R en la instancia de SQL 
 
 ## <a name="service-configuration"></a>Configuración del servicio
 
-Estos temas describe cómo realizar cambios en la arquitectura subyacente del servicio y cómo administrar a las entidades de seguridad asociadas con el servicio de extensibilidad.
+Estos artículos describen cómo realizar cambios en la arquitectura subyacente del servicio y cómo administrar a las entidades de seguridad asociadas con el servicio de extensibilidad.
 
 + [Consideraciones de seguridad](security-considerations-for-the-r-runtime-in-sql-server.md)
 + [Modificar el grupo de cuentas de usuario de SQL Server R Services](../../advanced-analytics/r/modify-the-user-account-pool-for-sql-server-r-services.md)
@@ -62,7 +62,7 @@ Estos temas describe cómo realizar cambios en la arquitectura subyacente del se
 
 ## <a name="resource-governance"></a>Regulación de recursos
 
-Estos temas describe cómo implementar la administración de recursos para los trabajos de R o Python mediante la característica de regulador de recursos que estará disponible en la edición Enterprise.
+Estos artículos describen cómo implementar la administración de recursos para los trabajos de R o Python mediante la característica de regulador de recursos que estará disponible en la edición Enterprise.
 
 + [Regulación de recursos para R Services](../../advanced-analytics/r/resource-governance-for-r-services.md)
 + [Cómo crear un grupo de recursos para R](../../advanced-analytics/r/how-to-create-a-resource-pool-for-r.md)
@@ -73,7 +73,7 @@ Vea también:
 
 ## <a name="initial-setup"></a>Instalación inicial
 
-Encontrará ayuda adicional relacionada con la instalación y configuración iniciales en estos temas:
+Encontrará ayuda adicional relacionada con la instalación y configuración iniciales en estos artículos:
 
 + [Preguntas más frecuentes sobre actualización e instalación](../r/upgrade-and-installation-faq-sql-server-r-services.md)
 + [Consideraciones de seguridad](../r/security-considerations-for-the-r-runtime-in-sql-server.md)

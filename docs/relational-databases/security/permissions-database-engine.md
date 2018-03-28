@@ -1,16 +1,16 @@
 ---
 title: Permisos (motor de base de datos) | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 01/03/2017
 ms.prod: sql-non-specified
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
-ms.service: 
+ms.service: ''
 ms.component: security
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 f1_keywords:
 - sql13.swb.databaseuser.permissions.database.f1--May use common.permissions
@@ -21,16 +21,16 @@ helpviewer_keywords:
 - security [SQL Server], permissions
 - naming conventions [SQL Server]
 ms.assetid: f28e3dea-24e6-4a81-877b-02ec4c7e36b9
-caps.latest.revision: 
+caps.latest.revision: ''
 author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: Active
-ms.openlocfilehash: a1648f5ecd3170b2b60c157e4debb25d7c7f793a
-ms.sourcegitcommit: 4edac878b4751efa57601fe263c6b787b391bc7c
+ms.openlocfilehash: 0932d368e23c01e181dbe94e3d27ce71e8c1b0f4
+ms.sourcegitcommit: 6b1618aa3b24bf6759b00a820e09c52c4996ca10
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/19/2018
+ms.lasthandoff: 03/15/2018
 ---
 # <a name="permissions-database-engine"></a>Permisos (motor de base de datos)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -39,7 +39,7 @@ ms.lasthandoff: 02/19/2018
   
 El número total de permisos para [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)] y [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)] es 237. La mayoría de los permisos se aplica a todas las plataformas, pero otros no. Por ejemplo, no se puede conceder permisos de nivel de servidor en SQL Database, y algunos permisos solo tienen sentido en [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)]. [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] expuso 230 permisos. [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] expuso 219 permisos. [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] expuso 214 permisos. [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)] expuso 195 permisos. El tema [sys.fn_builtin_permissions](../../relational-databases/system-functions/sys-fn-builtin-permissions-transact-sql.md) especifica qué temas se encuentran en las versiones recientes. El gráfico siguiente muestra los permisos y las relaciones entre ellos. Algunos de los permisos de nivel superior (como `CONTROL SERVER`) se muestran varias veces. Haga clic en la imagen para descargar el **póster de los permisos de los motores de bases de datos** en formato pdf.  
   
-[![Permisos de motor de base de datos](../../relational-databases/security/media/database-engine-permissions.PNG)](http://go.microsoft.com/fwlink/?LinkId=229142)
+[![Permisos de motor de base de datos](../../relational-databases/security/media/database-engine-permissions.PNG)](https://aka.ms/sql-permissions-poster)
 
 Una vez que comprenda los permisos, aplique los permisos de nivel de servidor a los inicios de sesión y usuarios de permisos de nivel de base de datos con las instrucciones [GRANT](../../t-sql/statements/grant-transact-sql.md), [REVOKE](../../t-sql/statements/revoke-transact-sql.md)y [DENY](../../t-sql/statements/deny-transact-sql.md) . Por ejemplo:   
 ```sql
@@ -102,7 +102,7 @@ Para obtener consejos acerca de cómo planificar un sistema de permisos, consult
      El permiso de REFERENCES es necesario en un objeto para crear FUNCTION o VIEW con la cláusula `WITH SCHEMABINDING` que hace referencia a ese objeto.  
   
 ## <a name="chart-of-sql-server-permissions"></a>Gráfico de los permisos de SQL Server  
- Para obtener un gráfico con tamaño cartel de todos los permisos del [!INCLUDE[ssDE](../../includes/ssde-md.md)] en formato PDF, vea [http://go.microsoft.com/fwlink/?LinkId=229142](http://go.microsoft.com/fwlink/?LinkId=229142).  
+ Para ver un gráfico de tamaño cartel de todos los permisos del [!INCLUDE[ssDE](../../includes/ssde-md.md)] en formato PDF, vea [https://aka.ms/sql-permissions-poster](https://aka.ms/sql-permissions-poster).  
   
 ##  <a name="_securables"></a> Permisos aplicables a elementos protegibles específicos  
  En la siguiente tabla se enumeran los principales tipos de permisos y los tipos de elementos protegibles a los que se pueden aplicar.  
@@ -115,7 +115,7 @@ Para obtener consejos acerca de cómo planificar un sistema de permisos, consult
 |Ejecute|Tipos de CLR, scripts externos, procedimientos ([!INCLUDE[tsql](../../includes/tsql-md.md)] y CLR), funciones escalares y de agregado ([!INCLUDE[tsql](../../includes/tsql-md.md)] y CLR) y sinónimos|  
 |IMPERSONATE|Inicios de sesión y usuarios|  
 |INSERT|Sinónimos, tablas y columnas, vistas y columnas. El permiso se puede conceder en el nivel de base de datos, en el de esquema o en el de objeto.|  
-|RECEIVE|[!INCLUDE[ssSB](../../includes/sssb-md.md)] colas|  
+|RECEIVE|Colas de[!INCLUDE[ssSB](../../includes/sssb-md.md)] |  
 |REFERENCES|AGGREGATE,<br />ASSEMBLY,<br />ASYMMETRIC KEY,<br />CERTIFICATE,<br />CONTRACT,<br />DATABASE,<br />DATABASE SCOPED CREDENTIAL,<br />FULLTEXT CATALOG,<br />FULLTEXT STOPLIST,<br />FUNCTION,<br />MESSAGE TYPE,<br />PROCEDURE,<br />QUEUE, <br />RULE,<br />SCHEMA,<br />SEARCH PROPERTY LIST,<br />SEQUENCE OBJECT, <br />SYMMETRIC KEY,<br />SYNONYM,<br />TABLE,<br />TYPE,<br />VIEW y<br />XML SCHEMA COLLECTION|  
 |SELECT|Sinónimos, tablas y columnas, vistas y columnas. El permiso se puede conceder en el nivel de base de datos, en el de esquema o en el de objeto.|  
 |TAKE OWNERSHIP|Todas las clases de objetos excepto DATABASE SCOPED CONFIGURATION, LOGIN, SERVER y USER.|  

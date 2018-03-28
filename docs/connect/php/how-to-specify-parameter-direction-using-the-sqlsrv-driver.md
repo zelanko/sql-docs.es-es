@@ -1,33 +1,35 @@
 ---
-title: "Cómo: especificar la dirección de parámetro con el controlador SQLSRV | Documentos de Microsoft"
-ms.custom: 
+title: 'Cómo: especificar la dirección de parámetro con el controlador SQLSRV | Documentos de Microsoft'
+ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql-non-specified
 ms.prod_service: drivers
-ms.service: 
+ms.service: ''
 ms.component: php
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: drivers
-ms.tgt_pltfrm: 
+ms.technology:
+- drivers
+ms.tgt_pltfrm: ''
 ms.topic: article
-helpviewer_keywords: stored procedure support
+helpviewer_keywords:
+- stored procedure support
 ms.assetid: 1209eeca-df75-4283-96dc-714f39956b95
-caps.latest.revision: "16"
+caps.latest.revision: ''
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 692d1cd432a7d156a4bb9d8cc2c3bfcf57c02d6d
-ms.sourcegitcommit: 2713f8e7b504101f9298a0706bacd84bf2eaa174
+ms.openlocfilehash: b4004fa498c01e73c99204bb0d36ac4bded66a9b
+ms.sourcegitcommit: 2e130e9f3ce8a7ffe373d7fba8b09e937c216386
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/18/2017
+ms.lasthandoff: 03/28/2018
 ---
 # <a name="how-to-specify-parameter-direction-using-the-sqlsrv-driver"></a>Cómo especificar la dirección del parámetro con el controlador SQLSRV
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]
 
-En este tema se describe cómo utilizar el controlador SQLSRV para especificar la dirección del parámetro cuando se llama a un procedimiento almacenado. Tenga en cuenta que la dirección del parámetro se especifica cuando se crea un parámetro de matriz (paso 3) que se pasa a [sqlsrv_query](../../connect/php/sqlsrv-query.md) o [sqlsrv_prepare](../../connect/php/sqlsrv-prepare.md).  
+En este tema se describe cómo utilizar el controlador SQLSRV para especificar la dirección del parámetro cuando se llama a un procedimiento almacenado. La dirección del parámetro se especifica al construir una matriz de parámetros (paso 3) que se pasa a [sqlsrv_query](../../connect/php/sqlsrv-query.md) o [sqlsrv_prepare](../../connect/php/sqlsrv-prepare.md).  
   
 ### <a name="to-specify-parameter-direction"></a>Pasos para especificar la dirección de parámetro  
   
@@ -38,7 +40,7 @@ En este tema se describe cómo utilizar el controlador SQLSRV para especificar l
     ```  
   
     > [!NOTE]  
-    > Se recomienda llamar a procedimientos almacenados mediante sintaxis canónica. Para obtener más información sobre la sintaxis canónica, consulte [Llamar a un procedimiento almacenado](http://go.microsoft.com/fwlink/?linkid=119517).  
+    > Se recomienda llamar a procedimientos almacenados mediante sintaxis canónica. Para obtener más información sobre la sintaxis canónica, consulte [al llamar a un procedimiento almacenado](../../relational-databases/native-client-odbc-stored-procedures/calling-a-stored-procedure.md).  
   
 2.  Inicialice o actualice las variables PHP de los marcadores de posición en la consulta de Transact-SQL. Por ejemplo, en el siguiente código se inicializan los dos parámetros correspondientes al procedimiento almacenado UpdateVacationHours:  
   
@@ -88,6 +90,7 @@ En este tema se describe cómo utilizar el controlador SQLSRV para especificar l
     ```  
   
 ## <a name="see-also"></a>Vea también  
-[Cómo recuperar parámetros de salida con el controlador SQLSRV](../../connect/php/how-to-retrieve-output-parameters-using-the-sqlsrv-driver.md)  
+[Recuperación de parámetros de salida con el controlador SQLSRV](../../connect/php/how-to-retrieve-output-parameters-using-the-sqlsrv-driver.md)
+
 [How to: Retrieve Input and Output Parameters Using the SQLSRV Driver](../../connect/php/how-to-retrieve-input-and-output-parameters-using-the-sqlsrv-driver.md)  
   

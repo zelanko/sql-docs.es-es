@@ -3,25 +3,25 @@ title: Crear flujos de trabajo de BI con R | Documentos de Microsoft
 ms.custom:
 - SQL2016_New_Updated
 ms.date: 04/18/2017
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.prod: machine-learning-services
 ms.prod_service: machine-learning-services
 ms.component: r
-ms.technology: 
-ms.tgt_pltfrm: 
+ms.technology: ''
+ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: 34c3b1c2-97db-4cea-b287-c7f4fe4ecc1b
-caps.latest.revision: 
+caps.latest.revision: ''
 author: jeannt
 ms.author: jeannt
 manager: cgronlund
 ms.workload: Inactive
-ms.openlocfilehash: dcfd7571f5dd555e6654eb65c4bbb7852f82feff
-ms.sourcegitcommit: 99102cdc867a7bdc0ff45e8b9ee72d0daade1fd3
+ms.openlocfilehash: bd006f20f65b386a4351534e639b3b60db7e76de
+ms.sourcegitcommit: 2e130e9f3ce8a7ffe373d7fba8b09e937c216386
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/11/2018
+ms.lasthandoff: 03/28/2018
 ---
 # <a name="creating-bi-workflows-with-r"></a>Crear flujos de trabajo de BI con R
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
@@ -30,9 +30,9 @@ Una base de datos relacional es una tecnología altamente optimizada que ofrece 
 
 En cambio, tradicionalmente generalmente se basaban soluciones en R sobre cómo importar datos de varios orígenes, a menudo, en formato CSV, para realizar el modelado y la exploración de datos adicional. Tales prácticas no solo son poco eficaces, sino que entrañan riesgos.
 
-En este tema se describe los escenarios de integración para R con SQL Server que evitar los riesgos y los riesgos de seguridad que se pueden producir si se desarrollan soluciones de aprendizaje de máquina fuera de la base de datos comunes.
+En este artículo se describe los escenarios de integración para R con SQL Server que evitar los riesgos y los riesgos de seguridad que se pueden producir si se desarrollan soluciones de aprendizaje de máquina fuera de la base de datos comunes.
 
-También se describen algunos ejemplos de aplicaciones de business intelligence, en particular, Integration Services y Reportng Services, pueden interactuar con el código de R y consumir datos o los gráficos generados mediante R.
+También se describen algunos ejemplos de aplicaciones de business intelligence, en particular, Integration Services y Reporting Services, pueden interactuar con el código de R y consumir datos o los gráficos generados mediante R.
 
 Se aplica a: servicios de aprendizaje de automático de SQL Server 2016 R Services, SQL Server de 2017
 
@@ -44,7 +44,7 @@ Un objetivo clave del diseño de la integración de aprendizaje automático con 
 
 + Velocidad. Las bases de datos están optimizadas para operaciones basadas en conjuntos. Las recientes innovaciones realizadas en bases de datos como tablas en memoria realizar resúmenes y agregaciones con suma y son un complemento perfecto para ciencia de datos.
 
-+ Facilidad de implementación y la integración. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]es el punto central de operaciones para muchas otras tareas de administración de datos y aplicaciones. Mediante el uso de datos que residen en la base de datos o almacenamiento de informes, se asegura de que los datos utilizados por las soluciones de aprendizaje automático están coherente y actualizado. 
++ Facilidad de implementación y la integración. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] es el punto central de operaciones para muchas otras tareas de administración de datos y aplicaciones. Mediante el uso de datos que residen en la base de datos o almacenamiento de informes, se asegura de que los datos utilizados por las soluciones de aprendizaje automático están coherente y actualizado. 
 
 + Eficacia en la nube y locales. En lugar de procesar datos en R, puede confiar en las canalizaciones de datos empresariales incluidos [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] y Azure Data Factory. Los informes de análisis o de resultados son sencillos a través de Power BI o [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)].
 
@@ -56,7 +56,7 @@ Los flujos de trabajo de ciencia de datos son tremendamente iterativos y conllev
 
 Como [!INCLUDE[rsql_productname](../../includes/rsql-productname-md.md)] permite realizar operaciones complejas en R a través de Transact-SQL y de procedimientos almacenados, se pueden integrar las tareas específicas de R con los procesos de ETL existentes sin tener que emplear tiempo en volver a desarrollar. En su lugar de llevar a cabo una cadena de tareas que utilizan mucha memoria en R, preparación de los datos se puede optimizar mediante las herramientas más eficaces, incluidos los [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] y [!INCLUDE[tsql](../../includes/tsql-md.md)]. 
 
-Estos son algunos ideass de cómo automatizar los datos de procesamiento de un dmodeling canalizaciones mediante [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]:
+A continuación presentamos algunas ideas sobre cómo automatizar el procesamiento de datos y modelado canalizaciones mediante [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]:
 
 + Use [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] tareas para crear características de datos necesarios en la base de datos SQL
 + Usar bifurcaciones condicionales para alternar el contexto de ejecución de trabajos de R
@@ -75,7 +75,7 @@ Esta entrada de blog muestra las técnicas básicas para manipular el código de
 
 + Realizar la puntuación en el modelo mediante las tareas Script y Ejecutar SQL
 
-##  <a name="bkmk_ssrs"></a>Usar Reporting Services para la visualización
+##  <a name="bkmk_ssrs"></a> Usar Reporting Services para la visualización
 
 Aunque R puede crear gráficos y visualizaciones interesantes, no se integra bien con orígenes de datos externos, lo que significa que cada gráfico debe representarse individualmente. El uso compartido también puede ser difícil.
 

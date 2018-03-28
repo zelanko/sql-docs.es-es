@@ -1,24 +1,24 @@
 ---
 title: Regulador de recursos para Python | Documentos de Microsoft
-ms.custom: 
+ms.custom: ''
 ms.date: 03/30/2017
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.prod: machine-learning-services
 ms.prod_service: machine-learning-services
 ms.component: python
-ms.technology: 
-ms.tgt_pltfrm: 
+ms.technology: ''
+ms.tgt_pltfrm: ''
 ms.topic: article
 author: jeannt
 ms.author: jeannt
 manager: cgronlund
 ms.workload: Inactive
-ms.openlocfilehash: 8accb9b8e050340ff980a1b5d9f1faf9283d8b89
-ms.sourcegitcommit: 99102cdc867a7bdc0ff45e8b9ee72d0daade1fd3
+ms.openlocfilehash: c1bf3fb84629310c09f0dc181f6b7eaa6707fa88
+ms.sourcegitcommit: 2e130e9f3ce8a7ffe373d7fba8b09e937c216386
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/11/2018
+ms.lasthandoff: 03/28/2018
 ---
 # <a name="resource-governance-for-python"></a>Regulador de recursos para Python
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
@@ -64,7 +64,7 @@ Encontrará una buena introducción a la terminología y los conceptos generales
 
 ## <a name="resource-management-using-resource-governor"></a>Administración de recursos mediante el regulador de recursos
 
-Si es la primera vez que usa el regulador de recursos, en este tema se incluye un tutorial rápido sobre cómo modificar los recursos predeterminados de instancia y crear un grupo de recursos externos: [Cómo crear un grupo de recursos para R](../../advanced-analytics/r-services/how-to-create-a-resource-pool-for-r.md).
+Si es nuevo en el regulador de recursos, consulte este artículo para ver un tutorial rápido de cómo modificar los recursos de instancia predeterminada y crear un nuevo grupo de recursos externos: [Cómo: crear un grupo de recursos para R](../../advanced-analytics/r-services/how-to-create-a-resource-pool-for-r.md)
 
 Puede usar el *grupo de recursos externo* mecanismo para administrar los recursos utilizados por los ejecutables admitidos siguientes:
 

@@ -1,17 +1,19 @@
 ---
-title: sqlsrv_next_result | Documentos de Microsoft
-ms.custom: 
+title: sqlsrv_next_result | Microsoft Docs
+ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql-non-specified
 ms.prod_service: drivers
-ms.service: 
+ms.service: ''
 ms.component: php
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: drivers
-ms.tgt_pltfrm: 
+ms.technology:
+- drivers
+ms.tgt_pltfrm: ''
 ms.topic: article
-apiname: sqlsrv_next_result
+apiname:
+- sqlsrv_next_result
 apitype: NA
 helpviewer_keywords:
 - multiple result sets
@@ -19,16 +21,16 @@ helpviewer_keywords:
 - stored procedure support
 - API Reference, sqlsrv_next_result
 ms.assetid: 41270d16-0003-417c-b837-ea51439654cd
-caps.latest.revision: "26"
+caps.latest.revision: ''
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: fb34a1e134bf13f797157fbe49d1cb210fb4f036
-ms.sourcegitcommit: 2713f8e7b504101f9298a0706bacd84bf2eaa174
+ms.openlocfilehash: 1158706ba73a97a358e43bbe32e84bd85f926409
+ms.sourcegitcommit: 2e130e9f3ce8a7ffe373d7fba8b09e937c216386
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/18/2017
+ms.lasthandoff: 03/28/2018
 ---
 # <a name="sqlsrvnextresult"></a>sqlsrv_next_result
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]
@@ -55,9 +57,9 @@ Si el resultado siguiente se activó correctamente, se devuelve el valor boolean
 En el ejemplo siguiente se crea y ejecuta un procedimiento almacenado que inserta una reseña de producto en la tabla *Production.ProductReview* y, luego, selecciona todas las reseñas del producto especificado. Tras la ejecución del procedimiento almacenado, el primer resultado (el número de filas afectadas por la consulta de INSERCIÓN en el procedimiento almacenado) se consume sin llamar a **sqlsrv_next_result**. El resultado siguiente (es decir, las filas devueltas por la consulta SELECT en el procedimiento almacenado) estará disponible mediante una llamada a **sqlsrv_next_result** y consume mediante [sqlsrv_fetch_array](../../connect/php/sqlsrv-fetch-array.md).  
   
 > [!NOTE]  
-> Se recomienda llamar a procedimientos almacenados mediante sintaxis canónica. Para obtener más información sobre la sintaxis canónica, consulte [Llamar a un procedimiento almacenado](http://go.microsoft.com/fwlink/?linkid=119517).  
+> Se recomienda llamar a procedimientos almacenados mediante sintaxis canónica. Para obtener más información sobre la sintaxis canónica, consulte [al llamar a un procedimiento almacenado](../../relational-databases/native-client-odbc-stored-procedures/calling-a-stored-procedure.md).  
   
-En el ejemplo se da por hecho que SQL Server y la base de datos de [AdventureWorks](http://go.microsoft.com/fwlink/?LinkID=67739) están instalados en el equipo local. Los resultados se agregan a la consola cuando se ejecuta el ejemplo en la línea de comandos.  
+El ejemplo supone que SQL Server y el [AdventureWorks](https://github.com/Microsoft/sql-server-samples/tree/master/samples/databases/adventure-works) base de datos se instalan en el equipo local. Los resultados se agregan a la consola cuando se ejecuta el ejemplo en la línea de comandos.  
   
 ```  
 <?php  
@@ -190,7 +192,7 @@ En el ejemplo siguiente se ejecuta una consulta por lotes que recupera informaci
 > [!NOTE]  
 > El resultado de la primera (o único) devuelto por una consulta por lotes o procedimiento almacenado está activo sin una llamada a **sqlsrv_next_result**.  
   
-En el ejemplo se usa la tabla *Purchasing.ProductReview* de la base de datos de [AdventureWorks](http://go.microsoft.com/fwlink/?linkid=67739) y se da por hecho que esta base de datos está instalada en el servidor. Los resultados se agregan a la consola cuando se ejecuta el ejemplo en la línea de comandos.  
+El ejemplo se utiliza la *Purchasing.ProductReview* tabla de la [AdventureWorks](https://github.com/Microsoft/sql-server-samples/tree/master/samples/databases/adventure-works) base de datos y se da por supuesto que esta base de datos está instalado en el servidor. Los resultados se agregan a la consola cuando se ejecuta el ejemplo en la línea de comandos.  
   
 ```  
 <?php  
@@ -270,9 +272,14 @@ sqlsrv_close( $conn );
 ```  
   
 ## <a name="see-also"></a>Vea también  
-[Referencia de API del controlador SQLSRV](../../connect/php/sqlsrv-driver-api-reference.md)  
-[Sobre los ejemplos de código de la documentación](../../connect/php/about-code-examples-in-the-documentation.md)  
-[Recuperación de datos](../../connect/php/retrieving-data.md)  
-[Actualización de datos &#40;controladores de Microsoft para PHP para SQL Server&#41;](../../connect/php/updating-data-microsoft-drivers-for-php-for-sql-server.md)  
-[Aplicación de ejemplo &#40;controlador SQLSRV&#41;](../../connect/php/example-application-sqlsrv-driver.md)  
+[Referencia de API del controlador SQLSRV](../../connect/php/sqlsrv-driver-api-reference.md)
+
+[Sobre los ejemplos de código de la documentación](../../connect/php/about-code-examples-in-the-documentation.md)
+
+[Recuperación de datos](../../connect/php/retrieving-data.md)
+
+[Actualización de datos &#40;controladores de Microsoft para PHP para SQL Server&#41;](../../connect/php/updating-data-microsoft-drivers-for-php-for-sql-server.md)
+
+[Aplicación de ejemplo &#40;controlador SQLSRV&#41;](../../connect/php/example-application-sqlsrv-driver.md)
+
   

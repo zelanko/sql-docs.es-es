@@ -1,16 +1,16 @@
 ---
 title: OPENDATASOURCE (Transact-SQL) | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql-non-specified
 ms.prod_service: sql-database
-ms.service: 
+ms.service: ''
 ms.component: t-sql|functions
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - OPENDATASOURCE
@@ -25,22 +25,24 @@ helpviewer_keywords:
 - OLE DB data sources [SQL Server]
 - ad hoc connection information
 ms.assetid: 5510b846-9cde-4687-8798-be9a273aad31
-caps.latest.revision: 
+caps.latest.revision: ''
 author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: e2ddb99a84c910c89aedaa086eb10e3f9de7abb9
-ms.sourcegitcommit: 45e4efb7aa828578fe9eb7743a1a3526da719555
+ms.openlocfilehash: b839da305714566169a95dc3636c00eac9286e94
+ms.sourcegitcommit: 3ed9be04cc7fb9ab1a9ec230c298ad2932acc71b
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 03/17/2018
 ---
 # <a name="opendatasource-transact-sql"></a>OPENDATASOURCE (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-asdbmi-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdbmi-xxxx-xxx-md.md)]
 
   Proporciona información de conexión ad hoc como parte de un nombre de objeto de cuatro partes sin utilizar un nombre de servidor vinculado.  
-  
+
+[!INCLUDE[ssMIlimitation](../../includes/sql-db-mi-limitation.md)]
+
  ![Icono de vínculo de tema](../../database-engine/configure-windows/media/topic-link.gif "Icono de vínculo de tema") [Convenciones de sintaxis de Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>Sintaxis  
@@ -55,7 +57,7 @@ OPENDATASOURCE ( provider_name, init_string )
  Es el nombre registrado como PROGID del proveedor OLE DB utilizado para obtener acceso al origen de datos. *provider_name* es un tipo de datos **char** que carece de valor predeterminado.  
   
  *init_string*  
- Es la cadena de conexión que se pasa a la interfaz IDataInitialize del proveedor de destino. La sintaxis de la cadena del proveedor se basa en pares de palabra clave y valor separados por signos de punto y coma; por ejemplo: **'***keyword1*=*value***;***keyword2*=*value***'**.  
+ Es la cadena de conexión que se pasa a la interfaz IDataInitialize del proveedor de destino. La sintaxis de la cadena del proveedor se basa en pares de palabra clave y valor separados por signos de punto y coma; por ejemplo: **'***palabraClave1*=*valor***;***palabraClave2*=*valor***'**.  
   
  Para conocer los pares de palabra clave y valor admitidos, vea [!INCLUDE[msCoName](../../includes/msconame-md.md)] Data Access SDK. En esta documentación se define la sintaxis básica. En la siguiente tabla se muestran las palabras clave más utilizadas en el argumento *init_string*.  
   

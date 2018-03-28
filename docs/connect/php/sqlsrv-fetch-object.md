@@ -1,33 +1,35 @@
 ---
-title: sqlsrv_fetch_object | Documentos de Microsoft
-ms.custom: 
+title: sqlsrv_fetch_object | Microsoft Docs
+ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql-non-specified
 ms.prod_service: drivers
-ms.service: 
+ms.service: ''
 ms.component: php
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: drivers
-ms.tgt_pltfrm: 
+ms.technology:
+- drivers
+ms.tgt_pltfrm: ''
 ms.topic: article
-apiname: sqlsrv_fetch_object
+apiname:
+- sqlsrv_fetch_object
 apitype: NA
 helpviewer_keywords:
 - sqlsrv_fetch_object
 - API Reference, sqlsrv_fetch_object
 - retrieving data, as an object
 ms.assetid: 4ce2df2c-083a-4a4d-a1e2-e866e63707d5
-caps.latest.revision: "31"
+caps.latest.revision: ''
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 68c6e32e4aa090dc76d80e176f7653815c80335b
-ms.sourcegitcommit: 2713f8e7b504101f9298a0706bacd84bf2eaa174
+ms.openlocfilehash: 87477c1d30607d71e49729f73105905a2f64767a
+ms.sourcegitcommit: 2e130e9f3ce8a7ffe373d7fba8b09e937c216386
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/18/2017
+ms.lasthandoff: 03/28/2018
 ---
 # <a name="sqlsrvfetchobject"></a>sqlsrv_fetch_object
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]
@@ -94,7 +96,7 @@ Si los resultados que devuelve esta consulta se recuperan con **sqlsrv_fetch_obj
 `SELECT SCOPE_IDENTITY() AS PictureID`  
   
 ## <a name="example"></a>Ejemplo  
-En el siguiente ejemplo se recupera cada fila de un conjunto de resultados como un objeto PHP. En el ejemplo se da por hecho que SQL Server y la base de datos de [AdventureWorks](http://go.microsoft.com/fwlink/?LinkID=67739) están instalados en el equipo local. Los resultados se agregan a la consola cuando se ejecuta el ejemplo en la línea de comandos.  
+En el siguiente ejemplo se recupera cada fila de un conjunto de resultados como un objeto PHP. En el ejemplo se da por supuesto que el servidor SQL Server y el [AdventureWorks](https://github.com/Microsoft/sql-server-samples/tree/master/samples/databases/adventure-works) base de datos se instalan en el equipo local. Los resultados se agregan a la consola cuando se ejecuta el ejemplo en la línea de comandos.  
   
 ```  
 <?php  
@@ -143,7 +145,7 @@ En el ejemplo siguiente se recupera cada fila de un conjunto de resultados como 
   
 -   La propiedad privada *UnitPrice* se rellena con el valor del campo *UnitPrice* .  
   
-En el ejemplo se da por hecho que SQL Server y la base de datos de [AdventureWorks](http://go.microsoft.com/fwlink/?LinkID=67739) están instalados en el equipo local. Los resultados se agregan a la consola cuando se ejecuta el ejemplo en la línea de comandos.  
+El ejemplo supone que SQL Server y el [AdventureWorks](https://github.com/Microsoft/sql-server-samples/tree/master/samples/databases/adventure-works) base de datos se instalan en el equipo local. Los resultados se agregan a la consola cuando se ejecuta el ejemplo en la línea de comandos.  
   
 ```  
 <?php  
@@ -248,6 +250,8 @@ Si los resultados que devuelve esta consulta se recuperan con **sqlsrv_fetch_obj
   
 ## <a name="see-also"></a>Vea también  
 [Recuperación de datos](../../connect/php/retrieving-data.md)  
+
 [Sobre los ejemplos de código de la documentación](../../connect/php/about-code-examples-in-the-documentation.md)  
+
 [Referencia de API del controlador SQLSRV](../../connect/php/sqlsrv-driver-api-reference.md)  
   

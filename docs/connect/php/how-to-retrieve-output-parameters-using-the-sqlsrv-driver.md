@@ -1,33 +1,35 @@
 ---
-title: "Cómo: recuperar parámetros de salida con el controlador SQLSRV | Documentos de Microsoft"
-ms.custom: 
+title: 'Cómo: recuperar parámetros de salida con el controlador SQLSRV | Documentos de Microsoft'
+ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql-non-specified
 ms.prod_service: drivers
-ms.service: 
+ms.service: ''
 ms.component: php
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: drivers
-ms.tgt_pltfrm: 
+ms.technology:
+- drivers
+ms.tgt_pltfrm: ''
 ms.topic: article
-helpviewer_keywords: stored procedure support
+helpviewer_keywords:
+- stored procedure support
 ms.assetid: 1157bab7-6ad1-4bdb-a81c-662eea3e7fcd
-caps.latest.revision: "14"
+caps.latest.revision: ''
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 7aadbe6a38e8d91c31a76ddd85dc7f5ab6fbc556
-ms.sourcegitcommit: 2713f8e7b504101f9298a0706bacd84bf2eaa174
+ms.openlocfilehash: 6e1bd65cb80407049d7fe5518b1f687481aa6515
+ms.sourcegitcommit: 2e130e9f3ce8a7ffe373d7fba8b09e937c216386
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/18/2017
+ms.lasthandoff: 03/28/2018
 ---
 # <a name="how-to-retrieve-output-parameters-using-the-sqlsrv-driver"></a>Cómo recuperar parámetros de salida con el controlador SQLSRV
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]
 
-En este tema se muestra cómo llamar a un procedimiento almacenado en el que se ha definido un parámetro como parámetro de salida. Tenga en cuenta que cuando se recupera un parámetro de salida o uno de entrada/salida, se deben utilizar todos los resultados que devuelve el procedimiento almacenado antes de que pueda accederse al valor del parámetro devuelto.  
+En este tema se muestra cómo llamar a un procedimiento almacenado en el que se ha definido un parámetro como parámetro de salida. Cuando recupera un parámetro de entrada/salida o de salida, todos los resultados devueltos por el procedimiento almacenado deben utilizarse antes de que el valor del parámetro devuelto sea accesible.  
   
 > [!NOTE]  
 > Las variables que se inicializan o actualizan a **Null**, **DateTime**o tipos de secuencia no se pueden usar como parámetros de salida.  
@@ -43,9 +45,9 @@ En el ejemplo siguiente se llama a un procedimiento almacenado que devuelve las 
 Dado que el procedimiento almacenado solo devuelve un resultado, *$salesYTD* contiene el valor devuelto del parámetro de salida inmediatamente después de ejecutar el procedimiento almacenado.  
   
 > [!NOTE]  
-> Se recomienda llamar a procedimientos almacenados mediante sintaxis canónica. Para obtener más información sobre la sintaxis canónica, consulte [Llamar a un procedimiento almacenado](http://go.microsoft.com/fwlink/?linkid=119517).  
+> Se recomienda llamar a procedimientos almacenados mediante sintaxis canónica. Para obtener más información sobre la sintaxis canónica, consulte [al llamar a un procedimiento almacenado](../../relational-databases/native-client-odbc-stored-procedures/calling-a-stored-procedure.md).  
   
-En el ejemplo se da por hecho que SQL Server y la base de datos de [AdventureWorks](http://go.microsoft.com/fwlink/?LinkID=67739) están instalados en el equipo local. Los resultados se agregan a la consola cuando se ejecuta el ejemplo en la línea de comandos.  
+El ejemplo supone que SQL Server y el [AdventureWorks](https://github.com/Microsoft/sql-server-samples/tree/master/samples/databases/adventure-works) base de datos se instalan en el equipo local. Los resultados se agregan a la consola cuando se ejecuta el ejemplo en la línea de comandos.  
   
 ```  
 <?php  
@@ -126,7 +128,9 @@ sqlsrv_close( $conn);
 ```  
   
 ## <a name="see-also"></a>Vea también  
-[Cómo especificar la dirección del parámetro con el controlador SQLSRV](../../connect/php/how-to-specify-parameter-direction-using-the-sqlsrv-driver.md)  
-[How to: Retrieve Input and Output Parameters Using the SQLSRV Driver](../../connect/php/how-to-retrieve-input-and-output-parameters-using-the-sqlsrv-driver.md)  
+[Especificación de la dirección del parámetro con el controlador SQLSRV](../../connect/php/how-to-specify-parameter-direction-using-the-sqlsrv-driver.md)
+
+[Recuperación de parámetros de entrada y salida con el controlador SQLSRV](../../connect/php/how-to-retrieve-input-and-output-parameters-using-the-sqlsrv-driver.md)
+
 [Recuperación de datos](../../connect/php/retrieving-data.md)  
   

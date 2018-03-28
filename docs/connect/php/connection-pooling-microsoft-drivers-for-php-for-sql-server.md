@@ -1,28 +1,30 @@
 ---
-title: "Agrupación de conexiones (controladores de Microsoft para PHP para SQL Server) | Documentos de Microsoft"
-ms.custom: 
+title: Agrupación de conexiones (controladores de Microsoft para PHP para SQL Server) | Documentos de Microsoft
+ms.custom: ''
 ms.date: 07/10/2017
 ms.prod: sql-non-specified
 ms.prod_service: drivers
-ms.service: 
+ms.service: ''
 ms.component: php
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: drivers
-ms.tgt_pltfrm: 
+ms.technology:
+- drivers
+ms.tgt_pltfrm: ''
 ms.topic: article
-helpviewer_keywords: connection pooling support
+helpviewer_keywords:
+- connection pooling support
 ms.assetid: 4d9a83d4-08de-43a1-975c-0a94005edc94
-caps.latest.revision: "14"
+caps.latest.revision: ''
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 5edf501c5a3a46fd30d21c4c5fdad81711c539d5
-ms.sourcegitcommit: 2713f8e7b504101f9298a0706bacd84bf2eaa174
+ms.openlocfilehash: 287cba2cbca687ef5006ae0410b2cd6a0f2598b7
+ms.sourcegitcommit: 2e130e9f3ce8a7ffe373d7fba8b09e937c216386
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/18/2017
+ms.lasthandoff: 03/28/2018
 ---
 # <a name="connection-pooling-microsoft-drivers-for-php-for-sql-server"></a>Agrupación de conexiones (controladores de Microsoft para PHP para SQL Server)
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]
@@ -37,13 +39,13 @@ A continuación, se muestran consideraciones importantes que hay tener cuenta so
   
 -   Al cerrar la conexión, la conexión vuelve al grupo.  
   
-Para obtener más información sobre la agrupación de conexiones, consulte [Driver Manager Connection Pooling](http://go.microsoft.com/fwlink/?linkid=119622)(Agrupación de conexiones del Administrador de controladores).  
+Para obtener más información acerca de la agrupación de conexiones, vea [Driver Manager Connection Pooling](../../odbc/reference/develop-app/driver-manager-connection-pooling.md).  
   
 ## <a name="enablingdisabling-connection-pooling"></a>Agrupación de conexiones de habilitar/deshabilitar
 ### <a name="windows"></a>Windows
 También puede forzar el controlador para crear una nueva conexión (en lugar de buscar una conexión equivalente en la agrupación de conexiones) estableciendo el valor de la *ConnectionPooling* atributo en la cadena de conexión para **false**  (o 0).  
   
-Si el *ConnectionPooling* se omite el atributo de la cadena de conexión o si se establece en **true** (o 1), el controlador solo creará una nueva conexión si no existe una conexión equivalente en el grupo de conexiones.  
+Si el *ConnectionPooling* se omite el atributo de la cadena de conexión o si se establece en **true** (o 1), el controlador solo crea una nueva conexión si no existe una conexión equivalente en el grupo de conexiones.  
   
 Para obtener información sobre otros atributos de conexión, consulte [Connection Options](../../connect/php/connection-options.md).  
 ### <a name="linux-and-mac-os-x"></a>Linux y Mac OS X
@@ -66,6 +68,7 @@ Pooling=No
 ```
   
 ## <a name="see-also"></a>Vea también  
-[Cómo conectarse mediante la autenticación de Windows](../../connect/php/how-to-connect-using-windows-authentication.md)  
-[Cómo conectarse mediante la autenticación de SQL Server](../../connect/php/how-to-connect-using-sql-server-authentication.md)  
+[Conexión mediante la autenticación de Windows](../../connect/php/how-to-connect-using-windows-authentication.md)
+
+[Conexión mediante la autenticación de SQL Server](../../connect/php/how-to-connect-using-sql-server-authentication.md)  
   

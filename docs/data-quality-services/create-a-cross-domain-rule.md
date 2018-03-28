@@ -1,30 +1,31 @@
 ---
 title: Crear una regla entre dominios | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 11/22/2011
 ms.prod: sql-non-specified
 ms.prod_service: data-quality-services
-ms.service: 
+ms.service: ''
 ms.component: data-quality-services
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: data-quality-services
-ms.tgt_pltfrm: 
+ms.technology:
+- data-quality-services
+ms.tgt_pltfrm: ''
 ms.topic: article
 f1_keywords:
 - sql13.dqs.dm.testcdrule.f1
 - sql13.dqs.dm.cdrules.f1
 ms.assetid: 0f3f5ba4-cc47-4d66-866e-371a042d1f21
-caps.latest.revision: "13"
+caps.latest.revision: ''
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: c321ea317846b43f2c69d4a64f4bc3daeff9048c
-ms.sourcegitcommit: 6c54e67818ec7b0a2e3c1f6e8aca0fdf65e6625f
+ms.openlocfilehash: 9a9d5e5885832d83f27e061f2a54987a8c8e4f8a
+ms.sourcegitcommit: 34766933e3832ca36181641db4493a0d2f4d05c6
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/19/2018
+ms.lasthandoff: 03/22/2018
 ---
 # <a name="create-a-cross-domain-rule"></a>Crear una regla entre dominios
   En este tema se describe cómo crear una regla entre dominios para un dominio compuesto en una base de conocimiento de [!INCLUDE[ssDQSnoversion](../includes/ssdqsnoversion-md.md)] (DQS). Una regla entre dominios comprueba la relación entre los valores de los dominios individuales incluidos en un dominio compuesto. Una regla entre dominios debe cumplirse en todo el dominio compuesto para que los valores de dominio se consideren precisos y compatibles con los requisitos empresariales. Las reglas entre dominios se utilizan para validar, corregir y normalizar valores de dominio.  

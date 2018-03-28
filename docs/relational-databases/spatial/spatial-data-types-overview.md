@@ -1,16 +1,16 @@
 ---
-title: "Información general de los tipos de datos espaciales | Microsoft Docs"
-ms.custom: 
+title: Información general de los tipos de datos espaciales | Microsoft Docs
+ms.custom: ''
 ms.date: 11/01/2016
 ms.prod: sql-non-specified
 ms.prod_service: database-engine, sql-database
-ms.service: 
+ms.service: ''
 ms.component: spatial
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - dbe-spatial
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - geometry data type [SQL Server], understanding
@@ -18,25 +18,22 @@ helpviewer_keywords:
 - planar spatial data [SQL Server], geometry data type
 - spatial data types [SQL Server]
 ms.assetid: 1615db50-69de-4778-8be6-4e058c00ccd4
-caps.latest.revision: 
+caps.latest.revision: ''
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: a1eae19761ec8afa2ddf6491314d3f6ce5930f37
-ms.sourcegitcommit: 37f0b59e648251be673389fa486b0a984ce22c81
+ms.openlocfilehash: 27b4acf9192c74ec3c9535d9ed35a477c5a5f5d0
+ms.sourcegitcommit: 34766933e3832ca36181641db4493a0d2f4d05c6
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/12/2018
+ms.lasthandoff: 03/22/2018
 ---
 # <a name="spatial-data-types-overview"></a>Información general de los tipos de datos espaciales
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
   
 Hay dos tipos de datos espaciales. El tipo de datos **geometry** admite datos planares o euclidianos (planisferio). El tipo de datos **geometry** se ajusta tanto a las características simples de Open Geospatial Consortium (OGC) para la especificación SQL versión 1.1.0 como a SQL MM (estándar ISO).
 Además, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] admite el tipo de datos **geography** , que almacena datos elipsoidales (tierra redonda), como coordenadas de latitud y longitud GPS.
-
-> [!IMPORTANT]  
->  Para obtener una descripción detallada y ejemplos de las características espaciales introducidas en [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)], incluidas las mejoras en los tipos de datos espaciales, descargue las notas del producto [Nuevas características espaciales de SQL Server Code-Named "Denali"](http://go.microsoft.com/fwlink/?LinkId=226407).  
 
 ##  <a name="objects"></a> Objetos de datos espaciales  
 Los tipos de datos **geometry** y **geography** admiten dieciséis objetos de datos espaciales o tipos de instancia. Pero solo se pueden *crear instancias*de once de estos tipos de instancia; puede crear y trabajar con estas instancias (o crear instancias de ellas) en una base de datos. Estas instancias obtienen determinadas propiedades de sus tipos de datos primarios que los distinguen como **Points**, **LineStrings, CircularStrings**, **CompoundCurves**, **Polygons**, **CurvePolygons** o como varias instancias de **geometry** o **geography** en una **GeometryCollection**. El tipo**Geography** tiene un tipo de instancia adicional, **FullGlobe**.  

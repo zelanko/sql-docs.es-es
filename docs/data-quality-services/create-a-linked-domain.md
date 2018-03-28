@@ -1,28 +1,30 @@
 ---
 title: Crear un dominio vinculado | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 11/08/2011
 ms.prod: sql-non-specified
 ms.prod_service: data-quality-services
-ms.service: 
+ms.service: ''
 ms.component: data-quality-services
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: data-quality-services
-ms.tgt_pltfrm: 
+ms.technology:
+- data-quality-services
+ms.tgt_pltfrm: ''
 ms.topic: article
-f1_keywords: sql13.dqs.kb.linkeddomain.f1
+f1_keywords:
+- sql13.dqs.kb.linkeddomain.f1
 ms.assetid: fd99d422-c53d-4d7c-9cdd-303c703683b6
-caps.latest.revision: "20"
+caps.latest.revision: ''
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 30f25b5b1c71f6a84bdd114173c8fc04c0b3902d
-ms.sourcegitcommit: 6c54e67818ec7b0a2e3c1f6e8aca0fdf65e6625f
+ms.openlocfilehash: f1df4d63e629778e5665dd87ea69ffec0dbcbbaa
+ms.sourcegitcommit: 34766933e3832ca36181641db4493a0d2f4d05c6
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/19/2018
+ms.lasthandoff: 03/22/2018
 ---
 # <a name="create-a-linked-domain"></a>Crear dominio vinculado
   En este tema se describe cómo crear un dominio vinculado en una base de conocimiento de [!INCLUDE[ssDQSnoversion](../includes/ssdqsnoversion-md.md)] (DQS). Los dominios vinculados se crean a partir de otros dominios previamente existentes, y heredan todos los valores, reglas y propiedades de los dominios a los que están vinculados, con la excepción del nombre y la descripción. Es posible administrar un conjunto de dominios vinculados como si fuera un único dominio. Al vincular un dominio al otro, se crea un dominio que hereda su contenido de otro dominio.  

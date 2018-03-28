@@ -1,31 +1,32 @@
 ---
 title: Crear una directiva de coincidencia | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 03/01/2017
 ms.prod: sql-non-specified
 ms.prod_service: data-quality-services
-ms.service: 
+ms.service: ''
 ms.component: data-quality-services
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: data-quality-services
-ms.tgt_pltfrm: 
+ms.technology:
+- data-quality-services
+ms.tgt_pltfrm: ''
 ms.topic: article
 f1_keywords:
 - sql13.dqs.kb.kbmatchingmap.f1
 - sql13.dqs.kb.kbmatchingpolicy.f1
 - sql13.dqs.kb.kbmatchingresults.f1
 ms.assetid: cce77a06-ca31-47b6-8146-22edf001d605
-caps.latest.revision: "43"
+caps.latest.revision: ''
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 0cffe1699c221e37e353cad1269f675aac89db15
-ms.sourcegitcommit: 6c54e67818ec7b0a2e3c1f6e8aca0fdf65e6625f
+ms.openlocfilehash: 5c9fe7a9614c1b389362edd0b40284508329fc1b
+ms.sourcegitcommit: 34766933e3832ca36181641db4493a0d2f4d05c6
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/19/2018
+ms.lasthandoff: 03/22/2018
 ---
 # <a name="create-a-matching-policy"></a>Crear una directiva de coincidencia
   En este tema se describe cómo crear una directiva de coincidencia en una base de conocimiento de [!INCLUDE[ssDQSnoversion](../includes/ssdqsnoversion-md.md)] (DQS). El proceso de búsqueda de coincidencias se prepara en DQS ejecutando la actividad Directiva de coincidencia con los datos de ejemplo. En esta actividad creará y probará una o varias reglas de coincidencia en la directiva y después publicará la base de conocimiento para poner a disposición pública las reglas de coincidencia. Solo puede haber una directiva de coincidencia en cada base de conocimiento, pero esta directiva puede contener varias reglas de coincidencia.  

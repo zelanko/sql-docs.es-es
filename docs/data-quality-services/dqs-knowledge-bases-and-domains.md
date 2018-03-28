@@ -1,27 +1,28 @@
 ---
 title: Bases de conocimiento y dominios de DQS | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 10/01/2012
 ms.prod: sql-non-specified
 ms.prod_service: data-quality-services
-ms.service: 
+ms.service: ''
 ms.component: data-quality-services
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: data-quality-services
-ms.tgt_pltfrm: 
+ms.technology:
+- data-quality-services
+ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: b5879041-db1e-4c6c-b49a-33784ade2942
-caps.latest.revision: "32"
+caps.latest.revision: ''
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 039357d36d63b485eff66febbf4bf1df53a0e359
-ms.sourcegitcommit: 6c54e67818ec7b0a2e3c1f6e8aca0fdf65e6625f
+ms.openlocfilehash: c1323581e2546d233ab86d4c51fd0b3b0edb6fce
+ms.sourcegitcommit: 34766933e3832ca36181641db4493a0d2f4d05c6
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/19/2018
+ms.lasthandoff: 03/22/2018
 ---
 # <a name="dqs-knowledge-bases-and-domains"></a>Bases de conocimiento y dominios de DQS
   En este tema se describe lo qué es una base de conocimiento en [!INCLUDE[ssDQSnoversion](../includes/ssdqsnoversion-md.md)] (DQS). Para limpiar datos, debe tener conocimiento sobre los datos. Para preparar el conocimiento de un proyecto de calidad de datos, se crea y mantiene una base de conocimiento (BC) que DQS puede usar para identificar datos incorrectos o no válidos. Con DQS puede usar procesos asistidos por PC y procesos interactivos para crear, compilar y actualizar la base de conocimiento. El conocimiento de una base de conocimiento se mantiene en dominios, donde cada uno de ellos es específico para un campo de datos. La base de conocimiento es un repositorio de conocimiento sobre los datos que le permite comprenderlos y mantener su integridad.  

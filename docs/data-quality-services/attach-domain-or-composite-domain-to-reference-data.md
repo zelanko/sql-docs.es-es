@@ -1,30 +1,31 @@
 ---
 title: Adjuntar un dominio o un dominio compuesto a datos de referencia | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 03/01/2017
 ms.prod: sql-non-specified
 ms.prod_service: data-quality-services
-ms.service: 
+ms.service: ''
 ms.component: data-quality-services
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: data-quality-services
-ms.tgt_pltfrm: 
+ms.technology:
+- data-quality-services
+ms.tgt_pltfrm: ''
 ms.topic: article
 f1_keywords:
 - sql13.dqs.dm.refdata.f1
 - sql13.dqs.dm.refcatalog.f1
 ms.assetid: 36af981c-d0d0-4dc6-afe5-bbb3c97845dc
-caps.latest.revision: "17"
+caps.latest.revision: ''
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: d87911a70dd4f1c891fade863804af7c7f5fd3ea
-ms.sourcegitcommit: 6c54e67818ec7b0a2e3c1f6e8aca0fdf65e6625f
+ms.openlocfilehash: c0003fa4b17f1246592bf7362dc11cf4b3bd6cab
+ms.sourcegitcommit: 34766933e3832ca36181641db4493a0d2f4d05c6
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/19/2018
+ms.lasthandoff: 03/22/2018
 ---
 # <a name="attach-domain-or-composite-domain-to-reference-data"></a>Adjuntar un dominio o un dominio compuesto a datos de referencia
   En este tema se describe cómo adjuntar dominios o dominios compuestos de una base de conocimiento de calidad de datos a un servicio de datos de referencia en Windows Azure Marketplace para generar conocimiento con los datos de referencia de alta calidad. Cada servicio de datos de referencia contiene un esquema (columnas de datos). Después de adjuntar un dominio o un dominio compuesto a un servicio de datos de referencia, debe asignar el dominio adjunto o los dominios individuales dentro del dominio compuesto adjunto a las columnas adecuadas de un esquema del servicio de datos de referencia. Adjuntar un dominio compuesto a un servicio de datos de referencia permite adjuntar solo un dominio a un servicio de datos de referencia y, a continuación, asignar los dominios individuales incluidos en el dominio compuesto a las columnas adecuadas del esquema del servicio de datos de referencia.  

@@ -1,27 +1,28 @@
 ---
 title: Administrar un dominio | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 07/31/2012
 ms.prod: sql-non-specified
 ms.prod_service: data-quality-services
-ms.service: 
+ms.service: ''
 ms.component: data-quality-services
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: data-quality-services
-ms.tgt_pltfrm: 
+ms.technology:
+- data-quality-services
+ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: c5ab71a3-0dac-45b1-be8e-93bf7e0e03ce
-caps.latest.revision: "13"
+caps.latest.revision: ''
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 4ca23eae8c1593e9bc5d8a9a58402b6a46d7603d
-ms.sourcegitcommit: 6c54e67818ec7b0a2e3c1f6e8aca0fdf65e6625f
+ms.openlocfilehash: 7e988d58dc4f160ae85273762173d129c2cc9c2c
+ms.sourcegitcommit: 34766933e3832ca36181641db4493a0d2f4d05c6
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/19/2018
+ms.lasthandoff: 03/22/2018
 ---
 # <a name="managing-a-domain"></a>Administrar un dominio
   En este tema se describe el uso de los dominios en [!INCLUDE[ssDQSnoversion](../includes/ssdqsnoversion-md.md)] (DQS). Un dominio contiene una representación semántica de los datos de un campo determinado del origen de datos que se va a analizar. Un dominio forma parte de la base de conocimiento creada para un origen de datos, y todo el conocimiento obtenido mediante el análisis de un origen de datos de ejemplo o la importación de datos se agrega a los dominios definidos en ella. El conocimiento de dichos dominios se utiliza posteriormente para realizar las tareas de limpieza y de búsqueda de coincidencias en un proyecto de calidad de datos. Los dominios son el núcleo de todas las actividades de Data Quality Services.  

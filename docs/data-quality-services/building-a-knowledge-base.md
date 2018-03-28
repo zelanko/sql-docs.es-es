@@ -1,27 +1,28 @@
 ---
 title: Crear una base de conocimiento | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 07/31/2012
 ms.prod: sql-non-specified
 ms.prod_service: data-quality-services
-ms.service: 
+ms.service: ''
 ms.component: data-quality-services
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: data-quality-services
-ms.tgt_pltfrm: 
+ms.technology:
+- data-quality-services
+ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: 51eff161-6ecd-4ee4-8187-1dd8ef4814bd
-caps.latest.revision: "10"
+caps.latest.revision: ''
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: d2c40fcf9fb82db4a56e8d2985fab67190df8b1f
-ms.sourcegitcommit: 6c54e67818ec7b0a2e3c1f6e8aca0fdf65e6625f
+ms.openlocfilehash: efa8807737e6c307b51b5edc9da2a048096285ef
+ms.sourcegitcommit: 34766933e3832ca36181641db4493a0d2f4d05c6
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/19/2018
+ms.lasthandoff: 03/22/2018
 ---
 # <a name="building-a-knowledge-base"></a>Crear una base de conocimiento
   Una base de conocimiento de [!INCLUDE[ssDQSnoversion](../includes/ssdqsnoversion-md.md)] (DQS) es un repositorio de conocimiento sobre los datos que le permite comprenderlos y mantener su integridad. Una base de conocimiento consta de dominios, cada uno de los cuales representa los datos de un campo de datos. DQS utiliza la base de conocimiento para realizar la limpieza de datos y la eliminación de datos duplicados en una base de datos. Para preparar la base de conocimiento para la limpieza de datos, puede ejecutar un análisis asistido por PC de una muestra de los datos, así como administrar de forma interactiva los valores de los dominios. DQS le permite importar conocimiento, crear reglas y relaciones, cambiar los valores de los datos directamente y utilizar una base de datos predeterminada.  

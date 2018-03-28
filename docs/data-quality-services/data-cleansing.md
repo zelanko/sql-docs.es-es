@@ -1,27 +1,28 @@
 ---
 title: Limpieza de datos | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 10/01/2012
 ms.prod: sql-non-specified
 ms.prod_service: data-quality-services
-ms.service: 
+ms.service: ''
 ms.component: data-quality-services
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: data-quality-services
-ms.tgt_pltfrm: 
+ms.technology:
+- data-quality-services
+ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: e67136cc-f8c6-4cb3-ba0b-c966c636256c
-caps.latest.revision: "31"
+caps.latest.revision: ''
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
+manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: a20f02bf8c2e0c39c15e3b8209c43673fe697f28
-ms.sourcegitcommit: 6c54e67818ec7b0a2e3c1f6e8aca0fdf65e6625f
+ms.openlocfilehash: 2932ba3a3eeb2c043745486c536d4e0a04bcc496
+ms.sourcegitcommit: 34766933e3832ca36181641db4493a0d2f4d05c6
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/19/2018
+ms.lasthandoff: 03/22/2018
 ---
 # <a name="data-cleansing"></a>Data Cleansing
   La limpieza de datos es el proceso de analizar la calidad de los datos en un origen de datos; para ello, se aprueban o rechazan manualmente las sugerencias del sistema y, de esta manera, se hacen modificaciones en los datos. La limpieza de datos en [!INCLUDE[ssDQSnoversion](../includes/ssdqsnoversion-md.md)] (DQS) incluye un proceso asistido por PC que analiza cómo se ajustan los datos al conocimiento de una base de conocimiento y un proceso interactivo que permite al administrador de datos revisar y modificar los resultados obtenidos en los procesos asistidos por PC con el fin de garantizar que la limpieza de datos resulta exactamente como se deseaba efectuar.  

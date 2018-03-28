@@ -1,15 +1,15 @@
 ---
-title: "Documentación de SQL Server | Microsoft Docs"
+title: Documentación de SQL Server | Microsoft Docs
 ms.date: 02/28/2018
 ms.prod: sql-non-specified
 ms.prod_service: sql-non-specified
-ms.service: 
+ms.service: ''
 ms.component: sql-non-specified
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.custom: 
-ms.technology: 
-ms.tgt_pltfrm: 
+ms.custom: ''
+ms.technology: ''
+ms.tgt_pltfrm: ''
 ms.topic: article
 f1_keywords:
 - sql13.portal.f1
@@ -22,16 +22,16 @@ helpviewer_keywords:
 - Books Online [SQL Server], home page
 - portal page [SQL Server]
 ms.assetid: 674933a8-e423-4d44-a39b-2a997e2c2333
-caps.latest.revision: 
+caps.latest.revision: ''
 author: craigg-msft
 ms.author: craigg
 manager: jhubbard
 ms.workload: Active
-ms.openlocfilehash: 84c0a18929883f0a58e75ed5ce20900d0bdf09e7
-ms.sourcegitcommit: 1a3584a60c12521ba5b4b12a18d8cb32b1f2d555
+ms.openlocfilehash: 8868bbce17a31e72d55cbdca3e7badb00e66666e
+ms.sourcegitcommit: ccb05cb5a4cccaf7ffa9e85a4684fa583bab914e
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/28/2018
+ms.lasthandoff: 03/22/2018
 ---
 # <a name="sql-server-documentation"></a>Documentación de SQL Server
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -69,11 +69,13 @@ SQL Server es una pieza fundamental de la plataforma de datos de Microsoft. SQL 
 |![Master Data Services](../sql-server/media/master-data-services.png)|**[Master Data Services](../master-data-services/master-data-services-installation-and-configuration.md)**<br /><br /> [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] es la solución de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] para la administración de datos maestros. Una solución basada en [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] ayuda a asegurarse de que los informes y los análisis se basan en la información correcta. Con [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)], se crea un repositorio central de los datos maestros y se mantiene un registro auditable y protegible de los mismos a medida que van cambiando con el tiempo.|
 
 ## <a name="migrate-and-move-data"></a>Migrar y mover los datos
+
 - [Importar y exportar datos con el Asistente para importación y exportación de SQL Server](../integration-services/import-export-data/import-and-export-data-with-the-sql-server-import-and-export-wizard.md)
 - [Microsoft Data Migration Assistant](https://www.microsoft.com/download/details.aspx?id=53595)
 - [Migración de su base de datos SQL Server a Azure SQL Database](https://docs.microsoft.com/azure/sql-database/sql-database-migrate-your-sql-server-database)
 
 ## <a name="earlier-sql-server-versions"></a>Versiones anteriores de SQL Server
+
 - [Vínculos e información del Centro de actualizaciones de SQL Server sobre todas las versiones compatibles](https://msdn.microsoft.com/library/ff803383.aspx)
 - [Documentación de SQL Server 2014](https://msdn.microsoft.com/library/ms130214(v=sql.120).aspx)
 - [Documentación de SQL Server 2012](https://technet.microsoft.com/library/bb418433(v=sql.10).aspx)
@@ -81,9 +83,12 @@ SQL Server es una pieza fundamental de la plataforma de datos de Microsoft. SQL 
 - [Documentación de SQL Server 2008](https://msdn.microsoft.com/library/hh994727(v=sql.10).aspx)
 - [Documentación archivada de SQL Server 2005](https://msdn.microsoft.com/library/hh278313(v=sql.10).aspx)
 
-## <a name="samples"></a>Ejemplos  
+## <a name="samples"></a>Ejemplos
+
 - [Base de datos de ejemplo de Wide World Importers](https://msdn.microsoft.com/library/mt734199(v=sql.1).aspx)
 - [Bases de datos de ejemplo y scripts de AdventureWorks para SQL Server 2016](https://www.microsoft.com/download/details.aspx?id=49502) 
-- [Ejemplos de SQL Server en GitHub](https://github.com/Microsoft/sql-server-samples) 
-   
+- [Ejemplos de SQL Server en GitHub](https://github.com/Microsoft/sql-server-samples)
+
 [!INCLUDE[get-help-options](../includes/paragraph-content/get-help-options.md)]
+
+[!INCLUDE[contribute-to-content](../includes/paragraph-content/contribute-to-content.md)]

@@ -1,31 +1,32 @@
 ---
 title: Importar valores desde un archivo de Excel a un dominio | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 03/01/2017
 ms.prod: sql-non-specified
 ms.prod_service: data-quality-services
-ms.service: 
+ms.service: ''
 ms.component: data-quality-services
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: data-quality-services
-ms.tgt_pltfrm: 
+ms.technology:
+- data-quality-services
+ms.tgt_pltfrm: ''
 ms.topic: article
 f1_keywords:
 - sql13.dqs.kb.importfailing.f1
 - sql13.dqs.kb.importselect.f1
 - sql13.dqs.kb.failingvalues.f1
 ms.assetid: 04cde693-2043-477f-8417-fcc463ca7195
-caps.latest.revision: "26"
+caps.latest.revision: ''
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 9d4e8bb9372d6e9e19e674160f9039422cd87ebc
-ms.sourcegitcommit: 6c54e67818ec7b0a2e3c1f6e8aca0fdf65e6625f
+ms.openlocfilehash: c6331f1f695bb2e1c9974d27d8af76e03da55315
+ms.sourcegitcommit: 34766933e3832ca36181641db4493a0d2f4d05c6
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/19/2018
+ms.lasthandoff: 03/22/2018
 ---
 # <a name="import-values-from-an-excel-file-into-a-domain"></a>Importar valores desde un archivo de Excel a un dominio
   En este tema se describe cómo importar valores desde un archivo de Excel a un dominio de [!INCLUDE[ssDQSnoversion](../includes/ssdqsnoversion-md.md)] (DQS). El uso de un archivo de Excel para importar valores de dominio en la aplicación [!INCLUDE[ssDQSClient](../includes/ssdqsclient-md.md)] simplifica el proceso de generación del conocimiento, lo que permite ahorrar tiempo y esfuerzo. Permite a quienes tienen una lista de valores de datos válidos en un archivo de Excel o en un archivo de texto importar dichos valores en un dominio. Desde un archivo de Excel es posible importar valores de dominio en uno o varios dominios de una base de conocimiento. (Vea [Importar dominios desde un archivo de Excel a la detección del conocimiento](../data-quality-services/import-domains-from-an-excel-file-in-knowledge-discovery.md) para obtener más información sobre cómo importar dominios a una base de conocimiento). No se admite la exportación a un archivo Excel.  
@@ -109,7 +110,7 @@ ms.lasthandoff: 01/19/2018
   
 -   Cada fila representa un valor de dominio.  
   
--   La primera fila puede representar los nombres de dominio o el primer valor o registro de datos, dependiendo del valor de la casilla **Usar la primera fila como encabezado** . Si selecciona **Use First Row as header** al utilizar un archivo .xslx o .xls, los nombres de columna que sean NULL se convertirán automáticamente en F*n*, y se agregará un número a las columnas que estén duplicadas.  
+-   La primera fila puede representar los nombres de dominio o el primer valor o registro de datos, dependiendo del valor de la casilla **Usar la primera fila como encabezado** . Si selecciona **Usar la primera fila como encabezado** al utilizar un archivo .xslx o .xls, los nombres de columna que sean NULL se convertirán automáticamente en F*n*, y se agregará un número a las columnas que estén duplicadas.  
   
 -   Si cancela la operación de importación antes de que finalice, la operación se revertirá y no se importará ningún dato.  
   

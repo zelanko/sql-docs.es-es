@@ -1,17 +1,19 @@
 ---
 title: 'Tutorial: SQL Server Management Studio (SSMS) | Microsoft Docs'
-ms.custom: 
+ms.custom: ''
 ms.date: 08/30/2017
 ms.prod: sql-non-specified
 ms.prod_service: sql-tools
-ms.service: 
+ms.service: ''
 ms.component: ssms-tutorial
-ms.reviewer: 
+ms.reviewer: sstein
 ms.suite: sql
-ms.technology: tools-ssms
-ms.tgt_pltfrm: 
+ms.technology:
+- tools-ssms
+ms.tgt_pltfrm: ''
 ms.topic: article
-f1_keywords: sql13.tutorialstart.ssms.f1
+f1_keywords:
+- sql13.tutorialstart.ssms.f1
 helpviewer_keywords:
 - projects [SQL Server Management Studio], tutorials
 - templates [SQL Server], SQL Server Management Studio
@@ -23,16 +25,16 @@ helpviewer_keywords:
 - SQL Server Management Studio [SQL Server], tutorials
 - scripts [SQL Server], SQL Server Management Studio
 ms.assetid: d2bade70-07cf-4d94-b5d2-88aecb538ed1
-caps.latest.revision: "22"
-author: stevestein
-ms.author: sstein
+caps.latest.revision: ''
+author: MashaMSFT
+ms.author: mathoma
 manager: craigg
 ms.workload: Active
-ms.openlocfilehash: 5e6ca96ba58cb6f32cdceb4a310ba5b94ce290ef
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: 9a1cbac9e3eef44384313792d92f38ac90cce5e1
+ms.sourcegitcommit: 8e897b44a98943dce0f7129b1c7c0e695949cc3b
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 03/21/2018
 ---
 # <a name="tutorial-sql-server-management-studio"></a>Tutorial: SQL Server Management Studio
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -40,29 +42,50 @@ ms.lasthandoff: 12/21/2017
 El tutorial de SQL Server Management Studio (SSMS) le muestra el entorno integrado para administrar la infraestructura de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] presenta una interfaz gráfica para configurar, supervisar y administrar instancias de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. También permite implementar, supervisar y actualizar los componentes de capa de datos usados por las aplicaciones, como bases de datos. [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] también proporciona editores de lenguaje de [!INCLUDE[tsql](../../includes/tsql-md.md)], MDX, DMX y XML para editar y depurar scripts.  
   
 ## <a name="what-you-will-learn"></a>Aprendizaje  
-Este tutorial le ayudará a entender cómo se presenta la información en SSMS y cómo aprovechar las ventajas de sus características.
+
+Estos tutoriales le ayudarán a entender cómo se presenta la información en SSMS y cómo aprovechar las ventajas de sus características.
   
-La mejor forma de familiarizarse con SSMS es practicar. Este tutorial le mostrará cómo administrar los componentes de SSMS y cómo localizar las características que utiliza habitualmente.  
+La mejor forma de familiarizarse con SSMS es practicar. Estos tutoriales le permitirán familiarizarse con las distintas características disponibles en SSMS.  Estos tutoriales le mostrarán a administrar los componentes de SSMS y a localizar las características que utiliza habitualmente.  
+
+A continuación se muestran los temas que se tratan en los tutoriales: 
+
   
-El tutorial está compuesto por tres lecciones:  
+- [Tutorial: Conectarse a SQL Server y efectuar consultas con SSMS](connect-query-sql-server.md)
+
+    En esta sección aprenderá a conectarse a su instancia de SQL Server. También aprenderá algunos comandos básicos de Transact-SQL (T-SQL) para crear y consultar una base de datos nueva. 
+
+- [Tutorial: Crear scripts de objetos en SSMS](scripting-ssms.md)
+
+    En esta sección aprenderá a crear scripts de distintos objetos en SSMS, incluidas las bases de datos y las consultas. 
+
+- [Tutorial: Usar plantillas en SSMS](templates-ssms.md)
+   
+    En esta sección aprenderá a trabajar con las plantillas predefinidas en SSMS. 
+
+- [Tutorial: Configuración de SSMS](ssms-configuration.md)
+
+    En esta sección aprenderá los conceptos básicos de la configuración del entorno de SSMS. 
   
-[Lección 1: Navegación básica en SQL Server Management Studio](lesson-1-basic-navigation-in-sql-server-management-studio.md)  
-En esta lección, aprenderá a utilizar los componentes de [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)], a configurar nuevamente el diseño del entorno y a restaurar el diseño predeterminado.  
-  
-[Lección 2: Escribir Transact-SQL](lesson-2-writing-transact-sql.md)  
-En esta lección, aprenderá a abrir el Editor de consultas, a administrar código y a utilizar otras características del editor.  
-  
-[Lección 3: Trabajar con plantillas, soluciones, proyectos de script](lesson-3-working-with-templates-solutions-and-script-projects.md)  
-En esta lección, aprenderá a usar las plantillas y a organizar los scripts en soluciones y proyectos.  
+
+- [Tutorial: Otras recomendaciones y trucos al usar SSMS](ssms-tricks.md)
+
+    En esta sección aprenderá otras recomendaciones y trucos a la hora de usar SSMS. El tutorial incluye las siguientes lecciones:
+    - Agregar y quitar marcas de comentario del texto
+    - Aplicar sangría al texto
+    - Filtrar objetos en el Explorador de objetos
+    - Acceder al registro de errores de SQL Server
+    - Buscar el nombre de su instancia. 
+ 
   
 ## <a name="requirements"></a>Requisitos  
 Este tutorial está destinado a los administradores de bases de datos con experiencia y a los desarrolladores de bases de datos que no están familiarizados con [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)], pero que conocen los conceptos relacionados con las bases de datos y [!INCLUDE[tsql](../../includes/tsql-md.md)] .  
   
 Para usar este tutorial, debe tener el software siguiente instalado:  
 
-  
--   Instale la última versión de [SQL Server Management Studio (SSMS)](../download-sql-server-management-studio-ssms.md).  
--   SQL Server 2016 o una versión posterior con la base de datos de ejemplo AdventureWorks. Para instalar la base de datos de ejemplo AdventureWorks, vea [AdventureWorks2014](https://github.com/Microsoft/sql-server-samples/releases/tag/adventureworks2014) e instale la base de datos AdventureWorks2014 (OLTP).  
+  -   Instale la última versión de [SQL Server Management Studio (SSMS)](../download-sql-server-management-studio-ssms.md).  
+
+En la primera sección se explica cómo crear una base de datos, aunque aquí encontrará otras bases de datos de ejemplo: [Bases de datos de ejemplo AdventureWorks](https://github.com/Microsoft/sql-server-samples/releases). Aquí encontrará instrucciones para restaurar bases de datos en SSMS: [Restaurar una base de datos](https://docs.microsoft.com/en-us/sql/relational-databases/backup-restore/restore-a-database-backup-using-ssms). 
+
 
   
 ## <a name="see-also"></a>Ver también  

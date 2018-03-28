@@ -1,16 +1,16 @@
 ---
 title: CREATE DATABASE (Azure SQL Database) | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 02/13/2018
-ms.prod: 
+ms.prod: ''
 ms.prod_service: sql-database
-ms.reviewer: 
+ms.reviewer: ''
 ms.service: sql-database
 ms.component: t-sql|statements
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - SERVICE_OBJECTIVE
@@ -29,22 +29,24 @@ helpviewer_keywords:
 - EDITION SQL Database
 - MAXSIZE SQL Database
 ms.assetid: 22b167f7-ae86-490b-adb3-ec02ca1c1508
-caps.latest.revision: 
+caps.latest.revision: ''
 author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: c61660015eb2f613148ad58b72386e42eb797db9
-ms.sourcegitcommit: aebbfe029badadfd18c46d5cd6456ea861a4e86d
+ms.openlocfilehash: 6d06fb220e8ec0df0ba5aab4fe5983c928d6a732
+ms.sourcegitcommit: 0d904c23663cebafc48609671156c5ccd8521315
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/14/2018
+ms.lasthandoff: 03/19/2018
 ---
 # <a name="create-database-azure-sql-database"></a>CREATE DATABASE (Azure SQL Database)
 [!INCLUDE[tsql-appliesto-xxxxxx-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-xxxxxx-asdb-xxxx-xxx-md.md)]
 
   Crea una nueva base de datos.  
-  
+
+[!INCLUDE[ssMIlimitation](../../includes/sql-db-mi-limitation.md)]
+
 ## <a name="syntax"></a>Sintaxis  
   
 ``` 
@@ -159,7 +161,7 @@ Especifica la intercalación predeterminada del catálogo de metadatos. *DATABAS
  *source_database_name*  
  El nombre de la base de datos que se va a copiar.  
   
- [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] no admite los argumentos y las opciones siguientes al usar la instrucción `CREATE DATABASE`:  
+ [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] no admite los argumentos y las opciones siguientes cuando se usa la instrucción `CREATE DATABASE`:  
   
 -   Los parámetros relacionados con la ubicación física del archivo, como \<filespec> y \<filegroup>  
   

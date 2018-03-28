@@ -1,27 +1,27 @@
 ---
-title: "Preparación de los datos de Excel para informes móviles de Reporting Services | Microsoft Docs"
-ms.custom: 
+title: Preparación de los datos de Excel para informes móviles de Reporting Services | Microsoft Docs
+ms.custom: ''
 ms.date: 02/08/2016
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
-ms.service: 
+ms.service: ''
 ms.component: mobile-reports
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: pro-bi
-ms.technology: 
-ms.tgt_pltfrm: 
+ms.technology: ''
+ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: 16698f8d-bfc7-4eca-9e97-82c99d8bc08e
-caps.latest.revision: "14"
+caps.latest.revision: ''
 author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: b9f739a009fe8b80ce5005e8145b3fd95648e6f9
-ms.sourcegitcommit: 7e117bca721d008ab106bbfede72f649d3634993
+ms.openlocfilehash: 57440dd767e421cb1448d8d365ebf894edbd065a
+ms.sourcegitcommit: 6b1618aa3b24bf6759b00a820e09c52c4996ca10
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/09/2018
+ms.lasthandoff: 03/15/2018
 ---
 # <a name="prepare-excel-data-for-reporting-services-mobile-reports"></a>Preparación de los datos de Excel para informes móviles de Reporting Services
   
@@ -56,7 +56,7 @@ Al preparar un archivo de Excel como un conjunto de datos para un informe móvil
   
 Como puede ver en el ejemplo anterior, la primera fila contiene el nombre de la métrica de esa columna. [!INCLUDE[PRODUCT_NAME](../../includes/ss-mobilereptpub-short.md)] conserva estos encabezados de columna para que resulte más fácil hacer referencia a las columnas en la configuración del elemento de la galería. Sin embargo, los encabezados de columna no tienen un carácter obligatorio. Si faltan, el [!INCLUDE[PRODUCT_NAME](../../includes/ss-mobilereptpub-short.md)] genera encabezados utilizando la convención A, B, C..., AA, BB... (y así sucesivamente) de Excel.  
   
-[!INCLUDE[PRODUCT_NAME](../../includes/ss-mobilereptpub-short.md)]detecta automáticamente los encabezados de la primera fila al importar hojas de cálculo de Excel con la comparación de los tipos de datos de las dos primeras celdas en cada columna. Si no coinciden los tipos de datos de las dos primeras celdas de cualquier columna, se determina que la primera fila contiene encabezados de columna. Por lo tanto, si una tabla tiene encabezados de columna numéricos, escriba una cadena antes de los nombres de los encabezados para que se detecten como tales en el proceso de importación.  
+[!INCLUDE[PRODUCT_NAME](../../includes/ss-mobilereptpub-short.md)] detecta automáticamente los encabezados de la primera fila al importar hojas de cálculo de Excel con la comparación de los tipos de datos de las dos primeras celdas en cada columna. Si no coinciden los tipos de datos de las dos primeras celdas de cualquier columna, se determina que la primera fila contiene encabezados de columna. Por lo tanto, si una tabla tiene encabezados de columna numéricos, escriba una cadena antes de los nombres de los encabezados para que se detecten como tales en el proceso de importación.  
   
 ## <a name="cells"></a>Celdas  
   

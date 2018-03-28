@@ -1,29 +1,29 @@
 ---
 title: TDE - Bring Your Own Key (BYOK) - Azure SQL | Microsoft Docs
-description: "Compatibilidad entre Bring Your Own Key (BYOK) y el cifrado de datos transparente (TDE) con Azure Key Vault para SQL Database y SQL Data Warehouse. Descripción general, ventajas, cómo funciona, consideraciones y recomendaciones de TDE con BYOK."
-keywords: 
+description: Compatibilidad entre Bring Your Own Key (BYOK) y el cifrado de datos transparente (TDE) con Azure Key Vault para SQL Database y SQL Data Warehouse. Descripción general, ventajas, cómo funciona, consideraciones y recomendaciones de TDE con BYOK.
+keywords: ''
 services: sql-database
-documentationcenter: 
+documentationcenter: ''
 author: aliceku
 manager: craigg
-ms.prod: 
-ms.reviewer: 
+ms.prod: ''
+ms.reviewer: ''
 ms.suite: sql
 ms.prod_service: sql-database, sql-data-warehouse
 ms.service: sql-database
-ms.custom: 
+ms.custom: ''
 ms.component: security
 ms.workload: On Demand
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.devlang: na
 ms.topic: article
-ms.date: 01/31/2018
+ms.date: 03/16/2018
 ms.author: aliceku
-ms.openlocfilehash: 1fdb7da4fe1276a66494873fc38aa15ae67bae27
-ms.sourcegitcommit: 99102cdc867a7bdc0ff45e8b9ee72d0daade1fd3
+ms.openlocfilehash: ae89e8496ce8f2aec87d80e36ce7b48acfd6a8cf
+ms.sourcegitcommit: 8e897b44a98943dce0f7129b1c7c0e695949cc3b
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/11/2018
+ms.lasthandoff: 03/21/2018
 ---
 # <a name="transparent-data-encryption-with-bring-your-own-key-preview-support-for-azure-sql-database-and-data-warehouse"></a>Cifrado de datos transparente compatible con Bring Your Own Key (versión preliminar) para Azure SQL Database y SQL Data Warehouse
 [!INCLUDE[appliesto-xx-asdb-asdw-xxx-md](../../../includes/appliesto-xx-asdb-asdw-xxx-md.md)]
@@ -69,10 +69,10 @@ Cuando TDE se configura por primera vez para usar un protector del TDE de Key Va
 - Use un almacén de claves con la opción de [eliminación temporal](https://docs.microsoft.com/azure/key-vault/key-vault-ovw-soft-delete) habilitada para protegerlo de una pérdida de datos en caso de que se eliminen por error una clave o un almacén de claves:  
   - Los recursos eliminados temporalmente se conservan durante un período de tiempo determinado de 90 días, a menos que se recuperen o purguen.
   - Las acciones de **recuperación** y **purga** tienen permisos propios asociados a una directiva de acceso al almacén de claves. 
-- Conceda al servidor lógico acceso al almacén de datos usando su identidad de Azure Active Directory (AAD).  Si se usa la IU del portal, la identidad de AAD se crea automáticamente y los permisos de acceso al almacén de claves se conceden al servidor.  Al utilizar PowerShell para configurar TDE con BYOK, se debe crear la identidad de AAD y comprobar su finalización. Vea [Configuración de TDE con BYOK](transparent-data-encryption-byok-azure-sql-configure.md) para recibir instrucciones paso a paso para usar PowerShell.
+- Conceda al servidor lógico acceso al almacén de datos usando su identidad de Azure Active Directory (Azure AD).  Si se usa la IU del portal, la identidad de Azure AD se crea automáticamente y los permisos de acceso al almacén de claves se conceden al servidor.  Al utilizar PowerShell para configurar TDE con BYOK, se debe crear la identidad de Azure AD y comprobar su finalización. Vea [Configuración de TDE con BYOK](transparent-data-encryption-byok-azure-sql-configure.md) para recibir instrucciones paso a paso para usar PowerShell.
 
   >[!NOTE]
-  >Si la identidad de AAD **se elimina por error, o bien si se revocan los permisos del servidor** mediante la directiva de acceso al almacén de claves, el servidor perderá acceso al almacén de claves.
+  >Si la identidad de Azure AD **se elimina por error, o bien si se revocan los permisos del servidor** mediante la directiva de acceso al almacén de claves, el servidor perderá acceso al almacén de claves.
   >
   
 - Habilite la auditoría y los informes en todas las claves de cifrado: Key Vault proporciona registros que son fáciles de insertar en otras herramientas de administración de eventos e información de seguridad (SIEM). Operations Management Suite (OMS) [Log Analytics](https://docs.microsoft.com/azure/log-analytics/log-analytics-azure-key-vault) es un ejemplo de un servicio que ya está integrado.
@@ -115,6 +115,12 @@ En el segundo caso, es necesario configurar almacenes de Azure Key Vault redunda
 
 Para asegurarse de que el acceso continuo al protector del TDE en Azure Key Vault esté garantizado durante una conmutación por error, debe configurarse antes de replicar una base de datos o aplicarle la conmutación por error en un servidor secundario. Tanto los servidores principales como los secundarios deben almacenar copias de los protectores del TDE en todos los almacenes Azure Key Vault, lo que significa que en este ejemplo se almacenan las mismas claves en ambos almacenes de claves.
 
+Se necesita una base de datos secundaria con un almacén de claves secundario para efectuar la redundancia en el escenario Geo-DR (se admite un máximo de cuatro elementos secundarios).  El encadenamiento, que implica la creación de una base de datos secundaria para un elemento secundario, no se admite.  Durante el período de configuración inicial, el servicio confirma que los permisos están configurados correctamente para los almacenes de claves principal y secundario.  Es importante mantener estos permisos y comprobar periódicamente que siguen vigentes.
+
+>[!NOTE]
+>Al asignar la identidad del servidor a un servidor principal y a uno secundario, la identidad debe asignarse primero al servidor secundario.
+>
+
 Para agregar una clave de un almacén de claves a otro use el cmdlet [Add-AzureRmSqlServerKeyVaultKey](https://docs.microsoft.com/en-us/powershell/module/azurerm.sql/add-azurermsqlserverkeyvaultkey).
 
  ```powershell
@@ -149,4 +155,7 @@ Para mitigarlo, ejecute el cmdlet [Get-AzureRmSqlServerKeyVaultKey](/powershell/
    ```
 Para más información sobre la recuperación de copia de seguridad para SQL Database, vea [Recuperación de una Base de datos SQL de Azure mediante copias de seguridad automatizadas](https://docs.microsoft.com/azure/sql-database/sql-database-recovery-using-backups). Si quiere saber más sobre la recuperación de copias de seguridad para SQL Data Warehouse, vea [Restauración de SQL Data Warehouse](https://docs.microsoft.com/azure/sql-data-warehouse/sql-data-warehouse-restore-database-overview).
 
-Para la copia de seguridad de archivos de registro tenga también en cuenta que los archivos de registro que se han copiado permanecen cifrados con el sistema de cifrado de TDE original, aunque se haya cambiado de protector de TDE y la base de datos use ahora un nuevo protector de TDE.  Durante la restauración, se necesitarán las dos claves para restaurar la base de datos.  Si el archivo de registro está usando un protector de TDE almacenado en Azure Key Vault, se necesitará esta clave durante la restauración, aunque mientras tanto se haya cambiado la base de datos para usar TDE administrado del servicio.   
+
+Para la copia de seguridad de archivos de registro tenga también en cuenta que los archivos de registro que se han copiado permanecen cifrados con el sistema de cifrado de TDE original, aunque se haya cambiado de protector de TDE y la base de datos use ahora un nuevo protector de TDE.  Durante la restauración, se necesitarán las dos claves para restaurar la base de datos.  Si el archivo de registro está usando un protector de TDE almacenado en Azure Key Vault, se necesitará esta clave durante la restauración, aunque mientras tanto se haya cambiado la base de datos para usar TDE administrado del servicio.
+
+

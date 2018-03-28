@@ -1,25 +1,25 @@
 ---
-title: "Aprovisionar una máquina virtual para el aprendizaje automático de Azure | Documentos de Microsoft"
-ms.custom: 
+title: Aprovisionar una máquina virtual para el aprendizaje automático de Azure | Documentos de Microsoft
+ms.custom: ''
 ms.date: 10/31/2017
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.prod: machine-learning-services
 ms.prod_service: machine-learning-services
 ms.component: r
-ms.technology: 
-ms.tgt_pltfrm: 
+ms.technology: ''
+ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: c8826df7-aa67-4768-baa9-bdc875c4a766
-caps.latest.revision: 
+caps.latest.revision: ''
 author: jeannt
 ms.author: jeannt
 manager: cgronlund
 ms.openlocfilehash: 62e1c347a3c5ee110e6865cd8c13ade76ba62b80
-ms.sourcegitcommit: 99102cdc867a7bdc0ff45e8b9ee72d0daade1fd3
+ms.sourcegitcommit: 270de8a0260fa3c0ecc37f91eec4a5aee9b9834a
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/11/2018
+ms.lasthandoff: 03/27/2018
 ---
 # <a name="provision-a-virtual-machine-for-machine-learning-on-azure"></a>Aprovisionar una máquina virtual para el aprendizaje automático de Azure
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
@@ -130,7 +130,7 @@ Para obtener instrucciones, consulte [configuración del servidor de aprendizaje
 
 No se necesita configuración adicional si desea utilizar paquetes como RevoScaleR o MicrosoftML.
 
-## <a name="bkmk_list"></a>Lista de máquinas virtuales
+## <a name="bkmk_list"></a> Lista de máquinas virtuales
 
 Actualmente, las siguientes máquinas virtuales están disponibles para el aprendizaje automático con SQL Server:
 

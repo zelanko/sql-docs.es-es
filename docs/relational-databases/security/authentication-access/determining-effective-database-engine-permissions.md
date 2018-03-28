@@ -1,36 +1,36 @@
 ---
 title: Determinar los permisos efectivos del motor de base de datos | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 01/03/2017
 ms.prod: sql-non-specified
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
-ms.service: 
+ms.service: ''
 ms.component: security
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - permissions, effective
 - effective permissions
 ms.assetid: 273ea09d-60ee-47f5-8828-8bdc7a3c3529
-caps.latest.revision: 
+caps.latest.revision: ''
 author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 5c940b6382349630be1de89e5fde8db3991500bb
-ms.sourcegitcommit: 2208a909ab09af3b79c62e04d3360d4d9ed970a7
+ms.openlocfilehash: 4d93f80a8a662edd4e84309aa95803dc0e3cc57c
+ms.sourcegitcommit: 6b1618aa3b24bf6759b00a820e09c52c4996ca10
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/02/2018
+ms.lasthandoff: 03/15/2018
 ---
 # <a name="determining-effective-database-engine-permissions"></a>Determinar los permisos efectivos del motor de base de datos
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
 
-En este tema se describe cómo determinar quién tiene permisos para varios objetos en el motor de base de datos de SQL Server. SQL Server implementa dos sistemas de permisos para el motor de base de datos. Un sistema anterior de roles fijos tiene permisos preconfigurados. A partir de SQL Server 2005 está disponible un sistema más flexible y preciso. (La información de este tema también es aplicable a SQL Server, a partir de la versión 2005. Ciertos tipos de permisos no están disponibles en algunas versiones de SQL Server).
+En este artículo se describe cómo determinar quién tiene permisos para varios objetos en el motor de base de datos de SQL Server. SQL Server implementa dos sistemas de permisos para el motor de base de datos. Un sistema anterior de roles fijos tiene permisos preconfigurados. A partir de SQL Server 2005 está disponible un sistema más flexible y preciso. (La información de este artículo también es aplicable a SQL Server, a partir de la versión 2005. Ciertos tipos de permisos no están disponibles en algunas versiones de SQL Server).
 
 >  [!IMPORTANT] 
 >  * Los permisos efectivos son la suma de ambos sistemas de permiso. 
@@ -55,9 +55,9 @@ En este tema se describe cómo determinar quién tiene permisos para varios obje
 
 ## <a name="older-fixed-role-permission-system"></a>Sistema anterior de permisos de rol fijo
 
-Los roles fijos de servidor y los roles fijos de base de datos tienen permisos preconfigurados que no se pueden cambiar. Para determinar quién es miembro del rol fijo de servidor, ejecute la consulta siguiente.    
+Los roles fijos de servidor y los roles fijos de base de datos tienen permisos preconfigurados que no se pueden cambiar. Para determinar quién es miembro del rol fijo de servidor, ejecute la siguiente consulta:    
 >  [!NOTE] 
->  No se aplica a SQL Database ni SQL Data Warehouse, donde los permisos de nivel de servidor no están disponibles. La columna `is_fixed_role` de `sys.server_principals` se agregó en SQL Server 2012. No es necesaria para las versiones anteriores de SQL Server.  
+>  No se aplica a SQL Database ni a SQL Data Warehouse, donde el permiso de nivel de servidor no está disponible. La columna `is_fixed_role` de `sys.server_principals` se agregó en SQL Server 2012. No es necesaria para las versiones anteriores de SQL Server.  
 ```sql
 SELECT SP1.name AS ServerRoleName, 
  isnull (SP2.name, 'No members') AS LoginName   
@@ -89,11 +89,11 @@ Para comprender los permisos concedidos a cada rol, vea las descripciones de rol
 
 ## <a name="newer-granular-permission-system"></a>Sistema de permisos granulares más reciente
 
-Este sistema es muy flexible, lo que significa que puede ser complicado si los usuarios que lo configuran quieren que sea muy preciso. Eso no es necesariamente algo negativo; espero que mi entidad financiera sea precisa. Para simplificar las cosas, ayuda a crear roles, asignar permisos a roles y, después, agregar los grupos de usuarios a los roles. Y es más fácil si el equipo de desarrollo de base de datos separa la actividad por esquemas y, después, concede permisos de rol a un esquema completo en lugar de a procedimientos o tablas individuales. Pero la realidad es compleja y hay que asumir que las necesidades empresariales crean requisitos de seguridad inesperados.   
+Este sistema es flexible, lo que significa que puede ser complicado si los usuarios que lo configuran quieren que sea preciso. Para simplificar las cosas, ayuda a crear roles, asignar permisos a roles y, después, agregar los grupos de usuarios a los roles. Y es más fácil si el equipo de desarrollo de base de datos separa la actividad por esquemas y, después, concede permisos de rol a un esquema completo en lugar de a procedimientos o tablas individuales. Las situaciones reales son complejos y las necesidades empresariales pueden dar lugar a requisitos de seguridad inesperados.   
 
-El gráfico siguiente muestra los permisos y las relaciones entre ellos. Algunos de los permisos de nivel superior (como `CONTROL SERVER`) se muestran varias veces. En este tema, el póster es demasiado pequeño para leerlo. Haga clic en la imagen para descargar el **póster de los permisos de los motores de bases de datos** en formato pdf.  
+El gráfico siguiente muestra los permisos y las relaciones entre ellos. Algunos de los permisos de nivel superior (como `CONTROL SERVER`) se muestran varias veces. En este artículo, el póster es demasiado pequeño para leerlo. Haga clic en la imagen para descargar el **póster de los permisos de los motores de bases de datos** en formato pdf.  
   
- [![Permisos de los motores de bases de datos](../../../relational-databases/security/media/database-engine-permissions.PNG)](http://go.microsoft.com/fwlink/?LinkId=229142)
+ [![Permisos de los motores de bases de datos](../../../relational-databases/security/media/database-engine-permissions.PNG)](https://aka.ms/sql-permissions-poster)
 
 ### <a name="security-classes"></a>Clases Security
 
@@ -105,7 +105,7 @@ Los permisos se conceden a entidades de seguridad. Las entidades de seguridad pu
 
 Cuando un usuario de Windows se conecta con un inicio de sesión basado en un grupo de Windows, es posible que algunas actividades requieran SQL Server para crear un inicio de sesión o un usuario para representar al usuario concreto de Windows. Por ejemplo, un grupo de Windows (Ingenieros) contiene usuarios (María, Luis, Juan) y el grupo Ingenieros tiene una cuenta de usuario de base de datos. Si María tiene permiso y crea una tabla, es posible que se cree un usuario (María) para que sea el propietario de la tabla. O bien, si se deniega a Luis un permiso que el resto del grupo Ingenieros tiene, entonces debe crearse el usuario Luis para realizar un seguimiento de la denegación del permiso.
 
-Recuerde que es posible que un usuario de Windows sea miembro de más de un grupo de Windows (por ejemplo, Ingenieros y Administradores). Los permisos concedidos o denegados al inicio de sesión de Ingenieros, al inicio de sesión de Administradores, concedidos o denegados al usuario de forma individual y concedidos o denegados a los roles de los que el usuario es miembro, se agregan y se evalúan para los permisos efectivos. La función `HAS_PERMS_BY_NAME` puede mostrar si un usuario o un inicio de sesión tiene un permiso concreto. Pero no hay ninguna manera obvia de determinar el origen de la concesión o denegación del permiso. Se debe estudiar la lista de permisos y quizás experimentar mediante prueba y error.
+Recuerde que es posible que un usuario de Windows sea miembro de más de un grupo de Windows (por ejemplo, Ingenieros y Administradores). Los permisos concedidos o denegados al inicio de sesión de Ingenieros, al inicio de sesión de Administradores, concedidos o denegados al usuario de forma individual y concedidos o denegados a los roles de los que el usuario es miembro, se agregan y se evalúan para los permisos efectivos. La función `HAS_PERMS_BY_NAME` puede mostrar si un usuario o un inicio de sesión tiene un permiso concreto. Pero no hay ninguna manera obvia de determinar el origen de la concesión o denegación del permiso. Estudie la lista de permisos y, si procede, experimente mediante prueba y error.
 
 ## <a name="useful-queries"></a>Consultas útiles
 

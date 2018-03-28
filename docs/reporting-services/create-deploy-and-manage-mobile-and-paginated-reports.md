@@ -1,16 +1,16 @@
 ---
 title: Reporting Services (SSRS) | Microsoft Docs
-description: "Obtenga información sobre herramientas y servicios para informes de Reporting Services móviles y paginados e informes de Power BI en local."
-ms.custom: 
+description: Obtenga información sobre herramientas y servicios para informes de Reporting Services móviles y paginados e informes de Power BI en local.
+ms.custom: ''
 ms.date: 07/01/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-sharepoint, reporting-services-native
-ms.service: 
+ms.service: ''
 ms.component: reporting-services
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: pro-bi
-ms.technology: 
-ms.tgt_pltfrm: 
+ms.technology: ''
+ms.tgt_pltfrm: ''
 ms.topic: get-started-article
 helpviewer_keywords:
 - reports [Reporting Services]
@@ -19,16 +19,16 @@ helpviewer_keywords:
 - Reporting Services
 - SQL Server Reporting Services
 ms.assetid: b8d18d3d-9db0-43e7-8286-7b46cc3a37ed
-caps.latest.revision: 
+caps.latest.revision: ''
 author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.workload: Active
-ms.openlocfilehash: 85377a9d96bbaa8d7d94dacafc0989d3089ff7dd
-ms.sourcegitcommit: 7e117bca721d008ab106bbfede72f649d3634993
+ms.openlocfilehash: 6deaece7d2dd01ebf831820c2e026044f80651de
+ms.sourcegitcommit: 3ed9be04cc7fb9ab1a9ec230c298ad2932acc71b
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/09/2018
+ms.lasthandoff: 03/17/2018
 ---
 # <a name="what-is-sql-server-reporting-services-ssrs"></a>¿Qué es SQL Server Reporting Services (SSRS)?
 
@@ -36,7 +36,7 @@ ms.lasthandoff: 01/09/2018
 
 [!INCLUDE [ssrs-previous-versions](../includes/ssrs-previous-versions.md)]
 
-Cree, implemente y administre informes móviles y paginados de Reporting Services e informes de Power BI en local con la gama de servicios y herramientas listos para usar que ofrecen SQL Server Reporting Services (SSRS) y Power BI.
+Cree, implemente y administre informes móviles y paginados de Reporting Services de forma local con la gama de servicios y herramientas listos para usar que ofrece SQL Server Reporting Services (SSRS).
 
 ![Todo SQL Server Reporting Services](../reporting-services/media/ss-reporting-services-all-together.png "Todo SQL Server Reporting Services")
 
@@ -48,7 +48,7 @@ Para SQL Server 2016, Reporting Services ofrece un conjunto actualizado de produ
 
 * **Informes paginados "tradicionales"** actualizados, de modo que pueda crear informes de aspecto moderno, con herramientas actualizadas y nuevas características para crearlos.
 * **Nuevos informes móviles** con un diseño con capacidad de respuesta que se adapta a diferentes dispositivos y a las distintas formas en que los sostiene.
-* **Un portal web moderno** que puede ver en cualquier explorador moderno. En el nuevo portal, puede organizar y mostrar informes paginados y móviles y KPI de Reporting Services, además de informes de Power BI Desktop. También puede almacenar libros de Excel en el portal.
+* **Un portal web moderno** que puede ver en cualquier explorador moderno. En el nuevo portal, puede organizar y mostrar informes paginados y móviles y KPI de Reporting Services. También puede almacenar libros de Excel en el portal.
 
 Siga leyendo para obtener más información sobre estos productos.
 
@@ -90,13 +90,13 @@ Puede crear estos informes móviles en la nueva aplicación [Publicador de infor
 
 ![ssrs-web-portal](../reporting-services/media/ssrs-web-portal.png)
 
-Para los usuarios finales de Reporting Services en modo nativo, la entrada principal es un portal web moderno que se puede ver en cualquier explorador moderno. En el nuevo portal puede acceder a todos los informes paginados y móviles y KPI de Reporting Services, además de a los informes de Power BI Desktop. Más información sobre [informes de Power BI en Reporting Services](../reporting-services/power-bi-reports-in-reporting-services.md).  
+Para los usuarios finales de Reporting Services en modo nativo, la entrada principal es un portal web moderno que se puede ver en cualquier explorador moderno. En el nuevo portal puede acceder a todos los informes paginados y móviles y KPI de Reporting Services.
 
 Puede aplicar su propia marca personalizada al portal web y puede crear KPI directamente en él. Los KPI pueden hacer que en el explorador aparezcan métricas empresariales clave para que pueda echarles un vistazo sin tener que abrir ningún informe. 
 
 El nuevo portal web es una versión totalmente nueva del Administrador de informes. Ahora se trata de una aplicación HTML5 de una sola página y basada en estándares, para la que los exploradores modernos están optimizados: Microsoft Edge, Internet Explorer 10 y 11, Chrome, Firefox, Safari y todos los exploradores principales.
 
-El contenido del portal web está organizado por tipo: informes móviles y paginados y KPI de Reporting Services, más informes de Power BI Desktop, libros de Excel, conjuntos de datos compartidos y orígenes de datos compartidos que se usan como bloques de creación de los informes. Puede almacenarlos y administrarlos con seguridad aquí, en la jerarquía de carpetas tradicional. Puede etiquetar sus favoritos y administrar el contenido si dispone de ese rol.
+El contenido del portal web está organizado por tipo: informes móviles y paginados y KPI de Reporting Services, libros de Excel, conjuntos de datos compartidos y orígenes de datos compartidos que se usan como bloques de creación de los informes. Puede almacenarlos y administrarlos con seguridad aquí, en la jerarquía de carpetas tradicional. Puede etiquetar sus favoritos y administrar el contenido si dispone de ese rol.
 
 También puede seguir programando el procesamiento de informes, obtener acceso a los informes a petición y suscribirse a informes publicados en el nuevo portal web.
 
@@ -119,6 +119,5 @@ Más [documentación para desarrolladores de Reporting Services](../reporting-se
 * [Instalar Reporting Services](../reporting-services/install-windows/install-reporting-services.md)  
 * [Instalar el Generador de informes](../reporting-services/install-windows/install-report-builder.md)   
 * [Descargar SQL Server Data Tools (SSDT)](http://go.microsoft.com/fwlink/?LinkID=616714)  
-* [Informes de Power BI en Reporting Services](../reporting-services/power-bi-reports-in-reporting-services.md)
 
 ¿Tiene alguna pregunta más? [Puede plantear sus dudas en el foro de Reporting Services](http://go.microsoft.com/fwlink/?LinkId=620231).

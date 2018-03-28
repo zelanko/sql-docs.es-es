@@ -1,34 +1,34 @@
 ---
-title: DBCC SHRINKLOG (Azure SQL Data Warehouse) | Microsoft Docs
-ms.custom: 
-ms.date: 07/17/2017
+title: DBCC SHRINKLOG (Almacenamiento de datos paralelos) | Microsoft Docs
+ms.custom: ''
+ms.date: 03/16/2018
 ms.prod: sql-non-specified
 ms.prod_service: sql-data-warehouse, pdw
-ms.service: 
+ms.service: ''
 ms.component: t-sql|database-console-commands
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 dev_langs:
 - TSQL
-caps.latest.revision: 
+caps.latest.revision: ''
 author: barbkess
 ms.author: barbkess
 manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: d06917a784e507ab5568e28b4d34273f5fe71063
-ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
+ms.openlocfilehash: fc02884ed88c056eb2a7fedb57f7de701377ee37
+ms.sourcegitcommit: 3ed9be04cc7fb9ab1a9ec230c298ad2932acc71b
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/25/2018
+ms.lasthandoff: 03/17/2018
 ---
-# <a name="dbcc-shrinklog-azure-sql-data-warehouse"></a>DBCC SHRINKLOG (Azure SQL Data Warehouse)
-[!INCLUDE[tsql-appliesto-xxxxxx-xxxx-asdw-pdw-md](../../includes/tsql-appliesto-xxxxxx-xxxx-asdw-pdw-md.md)]
+# <a name="dbcc-shrinklog-parallel-data-warehouse"></a>DBCC SHRINKLOG (Almacenamiento de datos paralelos)
+[!INCLUDE[tsql-appliesto-xxxxxx-xxxx-xxxx-pdw-md](../../includes/tsql-appliesto-xxxxxx-xxxx-xxxx-pdw-md.md)]
 
-Reduce el tamaño del registro de transacciones *en el dispositivo* para la base de datos actual de [!INCLUDE[ssSDW](../../includes/sssdw-md.md)] o [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]. Los datos se desfragmentan con el fin de reducir el registro de transacciones. Con el paso del tiempo, el registro de transacciones de la base de datos puede fragmentarse y volverse ineficaz. Use DBCC SHRINKLOG para reducir la fragmentación y el tamaño del registro.
+Reduce el tamaño del registro de transacciones *en el dispositivo* para la base de datos actual de [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]. Los datos se desfragmentan con el fin de reducir el registro de transacciones. Con el paso del tiempo, el registro de transacciones de la base de datos puede fragmentarse y volverse ineficaz. Use DBCC SHRINKLOG para reducir la fragmentación y el tamaño del registro.
   
 ![Icono de vínculo a temas](../../database-engine/configure-windows/media/topic-link.gif "Topic link icon") [Convenciones de sintaxis de Transact-SQL &#40;Transact-SQL&#41;](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)
   
@@ -56,7 +56,7 @@ Requiere el permiso ALTER SERVER STATE.
 ## <a name="general-remarks"></a>Notas generales  
 DBCC SHRINKLOG no cambia el tamaño de registro almacenado en los metadatos para la base de datos. Los metadatos siguen conteniendo el parámetro LOG_SIZE especificado en la instrucción CREATE DATABASE o ALTER DATABASE.
   
-## <a name="examples-includesssdwincludessssdw-mdmd-and-includesspdwincludessspdw-mdmd"></a>Ejemplos: [!INCLUDE[ssSDW](../../includes/sssdw-md.md)] y [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
+## <a name="examples"></a>Ejemplos 
 ### <a name="a-shrink-the-transaction-log-to-the-original-size-specified-by-create-database"></a>A. Reducción del registro de transacciones al tamaño original especificado por CREATE DATABASE.  
 Imagine que el registro de transacciones de la base de datos Addresses se estableció en 100 MB al crear dicha base de datos. Es decir, la instrucción CREATE DATABASE para Addresses tenía LOG_SIZE = 100 MB. Supongamos que el registro ha aumentado a 150 MB y quiere reducirlo de nuevo a 100 MB.
   

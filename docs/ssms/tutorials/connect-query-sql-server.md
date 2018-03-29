@@ -10,21 +10,23 @@ ms.suite: sql
 ms.prod_service: sql-tools
 ms.reviewer: sstein
 manager: craigg
-ms.openlocfilehash: 7b389c5b58dc0afde077f70e2fd8bec7c6cac4d0
-ms.sourcegitcommit: 8e897b44a98943dce0f7129b1c7c0e695949cc3b
+ms.openlocfilehash: 6f4110a0ae1b4ca349cc9b990cc9a32f7d41764d
+ms.sourcegitcommit: ccb05cb5a4cccaf7ffa9e85a4684fa583bab914e
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/21/2018
+ms.lasthandoff: 03/22/2018
 ---
 # <a name="tutorial-connect-and-query-sql-server-using-sql-server-management-studio"></a>Tutorial: Conectarse a SQL Server y efectuar consultas con SQL Server Management Studio
 En este tutorial aprenderá a usar SQL Server Management Studio (SSMS) para conectarse a su instancia de SQL Server y a ejecutar algunos comandos básicos de Transact-SQL (T-SQL). En este artículo se muestra cómo hacer lo siguiente:
-    - [Conectarse a un servidor SQL Server](#connect-to-a-sql-server)
-    - [Crear una base de datos (**TutorialDB**)](#create-a-database)
-    - [Crear una tabla (**Customers**) en la nueva base de datos](#create-a-table)
-    - [Insertar filas en la nueva tabla **Customers**](#insert-rows)
-    - [Consultar la tabla **Customers** y ver los resultados](#view-query-results)
-    - [Usar la tabla de la ventana de consulta para comprobar las propiedades de la conexión](#verify-your-query-window-connection-properties)
-    - [Cambiar el servidor al que está conectada la ventana de consulta](#change-server-connection-within-query-window)
+
+> [!div class="checklist"]
+> * [Conectarse a un servidor SQL Server](#connect-to-a-sql-server)
+> * [Crear una base de datos (**TutorialDB**)](#create-a-database)
+> * [Crear una tabla (**Customers**) en la nueva base de datos](#create-a-table)
+> * [Insertar filas en la nueva tabla **Customers**](#insert-rows)
+> * [Consultar la tabla **Customers** y ver los resultados](#view-query-results)
+> * [Usar la tabla de la ventana de consulta para comprobar las propiedades de la conexión](#verify-your-query-window-connection-properties)
+> * [Cambiar el servidor al que está conectada la ventana de consulta](#change-server-connection-within-query-window)
 
 
 ## <a name="prerequisites"></a>Prerequisites

@@ -1,28 +1,29 @@
 ---
 title: Nivel de compatibilidad para los modelos tabulares en Analysis Services | Documentos de Microsoft
-ms.custom: 
-ms.date: 10/16/2017
+ms.custom: ''
+ms.date: 03/30/2018
 ms.prod: analysis-services
 ms.prod_service: analysis-services, azure-analysis-services
-ms.service: 
+ms.service: ''
 ms.component: data-mining
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: pro-bi
-ms.technology: 
-ms.tgt_pltfrm: 
+ms.technology: ''
+ms.tgt_pltfrm: ''
 ms.topic: article
-f1_keywords: sql13.asvs.bidtoolset.versioncompat.f1
+f1_keywords:
+- sql13.asvs.bidtoolset.versioncompat.f1
 ms.assetid: 8943d78d-4a73-4be8-ad14-3d428f5abd06
-caps.latest.revision: "27"
+caps.latest.revision: 27
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: On Demand
-ms.openlocfilehash: 4dcc372bb9eac9887a06923cf517e4375ec1bbcb
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+ms.openlocfilehash: 6fbd08b52c50e8ea010f4fcc6664176935457322
+ms.sourcegitcommit: 8f1d1363e18e0c32ff250617ab6cb2da2147bf8e
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 04/03/2018
 ---
 # <a name="compatibility-level-for-analysis-services-tabular-models"></a>Nivel de compatibilidad para los modelos tabulares de Analysis Services
 [!INCLUDE[ssas-appliesto-sqlas-aas](../../includes/ssas-appliesto-sqlas-aas.md)]
@@ -34,7 +35,7 @@ ms.lasthandoff: 01/08/2018
 Características principales en el nivel de compatibilidad de 1400 incluyen:
 
 *  Nueva infraestructura para la conectividad de datos e importarlos en los modelos tabulares con compatibilidad para TOM APIs y secuencias de comandos de TMSL. Esto habilita la compatibilidad con orígenes de datos adicionales, como el almacenamiento de blobs de Azure. Los orígenes de datos adicionales incluyen en futuras actualizaciones.
-*  Transformación de datos y capacidades de mashup de datos mediante el uso de expresiones de obtención de datos y M.
+*  Transformación de datos y capacidades de mashup de datos mediante el uso de expresiones de obtención de datos y M en SSDT.
 *  Medidas ahora admiten una propiedad de las filas de detalles con una expresión de DAX, habilitar herramientas de BI como Microsoft Excel exploración en profundidad para datos detallados de un informe de agregado. Por ejemplo, cuando los usuarios finales ver total de ventas de una región y el mes, pueden ver los detalles del pedido asociados. 
 *  Seguridad de nivel de objeto para los nombres de tabla y columna, además de los datos dentro de ellos.
 *  Compatibilidad mejorada para las jerarquías desiguales.
@@ -48,10 +49,10 @@ Características principales en el nivel de compatibilidad de 1400 incluyen:
 |**Nivel de compatibilidad**|**Versión del servidor**| 
 |1400|Servicios de análisis de Azure, SQL Server de 2017 |  
 |1200|Servicios de análisis de Azure, SQL Server de 2017, SQL Server 2016| 
-|1103|SQL Server de 2017 *, SQL Server 2016, SQL Server 2014, SQL Server 2012 SP1|  
-|1100|SQL Server de 2017 *, SQL Server 2016, SQL Server 2014, SQL Server 2012 SP1, SQL Server 2012| 
+|1103|SQL Server 2017*, SQL Server 2016, SQL Server 2014, SQL Server 2012 SP1|  
+|1100|SQL Server 2017*, SQL Server 2016, SQL Server 2014, SQL Server 2012 SP1, SQL Server 2012| 
 
-\*niveles de compatibilidad 1100 y 1103 están desusados en SQL Server 2017.
+\* niveles de compatibilidad 1100 y 1103 están desusados en SQL Server 2017.
   
 ## <a name="set-compatibility-level"></a>Definir el nivel de compatibilidad 
  Al crear un nuevo proyecto de modelo tabular en SQL Server Data Tools (SSDT), puede especificar el nivel de compatibilidad en el **Diseñador de modelos tabulares** cuadro de diálogo. 

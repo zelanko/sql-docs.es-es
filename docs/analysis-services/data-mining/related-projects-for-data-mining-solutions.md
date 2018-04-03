@@ -1,31 +1,31 @@
 ---
-title: "Proyectos relacionados para soluciones de minería de datos | Documentos de Microsoft"
-ms.custom: 
+title: Proyectos relacionados para soluciones de minería de datos | Documentos de Microsoft
+ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: analysis-services
 ms.prod_service: analysis-services
-ms.service: 
+ms.service: ''
 ms.component: data-mining
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: pro-bi
-ms.technology: 
-ms.tgt_pltfrm: 
+ms.technology: ''
+ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: dc26489a-4c27-4b89-8215-6d245427c350
-caps.latest.revision: 
+caps.latest.revision: 12
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: 7eebc2ae561e47481734c80dbc8f77ad381f4193
-ms.sourcegitcommit: d8ab09ad99e9ec30875076acee2ed303d61049b7
+ms.openlocfilehash: 8093acbb0886699bcb9c781c636b37f249f96bee
+ms.sourcegitcommit: 8f1d1363e18e0c32ff250617ab6cb2da2147bf8e
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/23/2018
+ms.lasthandoff: 04/03/2018
 ---
 # <a name="related-projects-for-data-mining-solutions"></a>Proyectos relacionados en las soluciones de minería de datos
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
-Lo mínimo que se requiere para una solución de minería de datos es el proyecto de minería de datos, que define los orígenes de datos, las vistas del origen de datos, las estructuras y los modelos de minería de datos. Sin embargo, cuando los modelos de minería de datos se utilizan en la toma de decisiones diaria, es importante que la minería de datos se integre con otra parte de una solución de predicción de análisis, que puede incluir estos procesos y componentes:  
+  Lo mínimo que se requiere para una solución de minería de datos es el proyecto de minería de datos, que define los orígenes de datos, las vistas del origen de datos, las estructuras y los modelos de minería de datos. Sin embargo, cuando los modelos de minería de datos se utilizan en la toma de decisiones diaria, es importante que la minería de datos se integre con otra parte de una solución de predicción de análisis, que puede incluir estos procesos y componentes:  
   
 -   Preparación y selección de datos y variables. Incluye la limpieza de datos, la administración metadatos y la integración de orígenes de datos, y la conversión, combinación y carga de datos en un almacenamiento de datos.  
   
@@ -48,7 +48,7 @@ Lo mínimo que se requiere para una solución de minería de datos es el proyect
  [Indización semántica](#bkmk_SemSearch)  
   
 ##  <a name="bkmk_SSIS"></a> SQL Server Integration Services  
- [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] proporciona los componentes y las características necesarias para las fases de entrenamiento y de preparación de los datos de un proyecto de minería de datos. Aunque puede realizar numerosas tareas de preparación o de limpieza de datos con otras herramientas, como scripts, [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] presenta numerosas ventajas para la minería de datos:  
+ [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]Proporciona los componentes y características que son necesarias para las fases de entrenamiento de un proyecto de minería de datos y la preparación de los datos. Aunque puede realizar numerosas tareas de preparación o de limpieza de datos con otras herramientas, como scripts, [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] presenta numerosas ventajas para la minería de datos:  
   
 -   Representa las tareas como parte de un flujo de trabajo, que puede repetirse, automatizarse, bifurcarse y ampliarse.  
   
@@ -209,6 +209,6 @@ Lo mínimo que se requiere para una solución de minería de datos es el proyect
   
 ## <a name="see-also"></a>Vea también  
  [Soluciones de modelos multidimensionales ](../../analysis-services/multidimensional-models/multidimensional-model-solutions-ssas.md)   
- [Soluciones de modelos tabulares](../../analysis-services/tabular-models/tabular-model-solutions-ssas-tabular.md)  
+ [Soluciones de modelos tabulares](../../analysis-services/tabular-models/tabular-models-ssas.md)  
   
   

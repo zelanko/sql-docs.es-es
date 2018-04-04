@@ -1,31 +1,34 @@
 ---
-title: "Ejecutar el análisis de Asistente para la implementación de servicios | Documentos de Microsoft"
-ms.custom: 
-ms.date: 03/14/2017
+title: Ejecutar el análisis de Asistente para la implementación de servicios | Documentos de Microsoft
+ms.custom: ''
+ms.date: 03/27/2018
 ms.prod: analysis-services
 ms.prod_service: analysis-services
-ms.service: 
+ms.service: ''
 ms.component: data-mining
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: pro-bi
-ms.technology: 
-ms.tgt_pltfrm: 
+ms.technology: ''
+ms.tgt_pltfrm: ''
 ms.topic: article
-helpviewer_keywords: Analysis Services Deployment Wizard, running
+helpviewer_keywords:
+- Analysis Services Deployment Wizard, running
 ms.assetid: 3a38d489-4625-4878-bd18-c6f903be33df
-caps.latest.revision: "41"
+caps.latest.revision: ''
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: On Demand
-ms.openlocfilehash: 2d6a1102ed83493e25e3e73a0b77d035c2e299d9
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+ms.openlocfilehash: 61a2c558fca710d9fa6df37b998cddca6125c3c6
+ms.sourcegitcommit: d6881107b51e1afe09c2d8b88b98d075589377de
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 03/28/2018
 ---
 # <a name="running-the-analysis-services-deployment-wizard"></a>Ejecutar el Asistente para la implementación de Analysis Services
-[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]Cuando se usa el [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] Asistente de implementación para implementar un [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] proyecto, puede ejecutar el Asistente de las maneras siguientes:  
+[!INCLUDE[ssas-appliesto-sqlas-all-aas](../../includes/ssas-appliesto-sqlas-all-aas.md)]
+
+  El [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] Asistente para la implementación se puede ejecutar lo siguiente:  
   
 -   **Interactivamente** cuando se ejecuta interactivamente, el [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] Asistente de implementación genera un script de implementación basado en los archivos de entrada, tal y como han sido modificados interactivamente mediante la entrada del usuario. El asistente solo aplica las modificaciones del usuario al script de implementación. El asistente no modifica los archivos de entrada. Para obtener más información acerca de los archivos de entrada, vea [Understanding the Input Files Used to Create the Deployment Script](../../analysis-services/multidimensional-models/deployment-script-files-input-used-to-create-deployment-script.md).  
   
@@ -41,7 +44,7 @@ ms.lasthandoff: 01/08/2018
   
 #### <a name="to-run-the-analysis-services-deployment-wizard-interactively"></a>Para ejecutar interactivamente el Asistente para la implementación de Analysis Services  
   
--   En el menú **Inicio**, elija **Todos los programas**, **Microsoft SQL Server**, **Analysis Services**y, a continuación, haga clic en **Asistente para la implementación**.  
+-   Haga clic en **iniciar** > **de Microsoft SQL Server** > **Asistente para la implementación**.  
   
      O bien  
   
@@ -73,12 +76,12 @@ ms.lasthandoff: 01/08/2018
   
 #### <a name="to-run-the-analysis-services-deployment-wizard-at-the-command-prompt"></a>Para ejecutar el Asistente para la implementación de Analysis Services desde el símbolo del sistema  
   
-1.  Abra un símbolo del sistema y vaya a la carpeta C:Archivos de programa (x86)\Microsoft SQL Server\120\Tools\Binn\ManagementStudio.  
+1.  Abra un símbolo del sistema y desplácese a la \Microsoft SQL Server\140\Tools\Binn\ManagementStudio C:\Program Files (x86)  
   
 2.  Escriba **Microsoft.AnalysisServices.Deployment.exe** seguido de los modificadores correspondientes al modo en que desee ejecutar el asistente.  
   
 ## <a name="see-also"></a>Vea también  
  [Descripción del script de implementación de Analysis Services](../../analysis-services/multidimensional-models/understanding-the-analysis-services-deployment-script.md)   
- [Implementar soluciones con el Asistente para la implementación](../../analysis-services/multidimensional-models/deploy-model-solutions-using-the-deployment-wizard.md)  
+ [Implementar soluciones con el Asistente para implementación](../../analysis-services/multidimensional-models/deploy-model-solutions-using-the-deployment-wizard.md)  
   
   

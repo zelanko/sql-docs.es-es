@@ -1,16 +1,16 @@
 ---
 title: RESTORE VERIFYONLY (Transact-SQL) | Microsoft Docs
-ms.custom: 
-ms.date: 03/15/2017
+ms.custom: ''
+ms.date: 03/30/2018
 ms.prod: sql-non-specified
 ms.prod_service: sql-database
-ms.service: 
+ms.service: ''
 ms.component: t-sql|statements
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - VERIFYONLY
@@ -25,26 +25,28 @@ helpviewer_keywords:
 - verifying backups
 - checking backups
 ms.assetid: cba3b6a0-b48e-4c94-812b-5b3cbb408bd6
-caps.latest.revision: 
+caps.latest.revision: 64
 author: barbkess
 ms.author: barbkess
 manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: b5cd93baf9fc13bd5333f5589dbb56413091671a
-ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
+ms.openlocfilehash: b85303faa74d981462cfe1e59c19158df086ecd1
+ms.sourcegitcommit: 059fc64ba858ea2adaad2db39f306a8bff9649c2
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/25/2018
+ms.lasthandoff: 04/04/2018
 ---
 # <a name="restore-statements---verifyonly-transact-sql"></a>Instrucciones RESTORE: VERIFYONLY (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-asdbmi-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdbmi-xxxx-xxx-md.md )]
 
   Comprueba la copia de seguridad, pero no la restaura, y comprueba si el conjunto de la copia de seguridad se ha completado y se puede leer en su totalidad. Sin embargo, RESTORE VERIFYONLY no intenta comprobar la estructura de los datos que contienen los volúmenes de la copia de seguridad. En [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], RESTORE VERIFYONLY se ha mejorado para realizar comprobaciones adicionales en los datos a fin de aumentar la probabilidad de detectar errores. El objetivo es acercarse lo máximo posible a una operación de restauración real de forma práctica. Para obtener más información, vea la sección Notas.  
   
+[!INCLUDE[ssMIlimitation](../../includes/sql-db-mi-limitation.md)]
+
  Si la copia de seguridad es válida, [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] devuelve un mensaje de operación correcta.  
   
 > [!NOTE]  
->  Para obtener las descripciones de los argumentos, vea [RESTORE Arguments &#40;Transact-SQL&#41;](../../t-sql/statements/restore-statements-arguments-transact-sql.md) (Argumentos de RESTORE [Transact-SQL]).  
+>  Para obtener las descripciones de los argumentos, vea [Argumentos de RESTORE &#40;Transact-SQL&#41;](../../t-sql/statements/restore-statements-arguments-transact-sql.md).  
   
  ![Icono de vínculo de tema](../../database-engine/configure-windows/media/topic-link.gif "Icono de vínculo de tema") [Convenciones de sintaxis de Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   

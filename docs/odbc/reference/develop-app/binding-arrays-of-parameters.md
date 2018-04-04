@@ -1,31 +1,32 @@
 ---
-title: "Las matrices de parámetros de enlace | Documentos de Microsoft"
-ms.custom: 
+title: Las matrices de parámetros de enlace | Documentos de Microsoft
+ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql-non-specified
 ms.prod_service: drivers
-ms.service: 
+ms.service: ''
 ms.component: odbc
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: drivers
-ms.tgt_pltfrm: 
+ms.technology:
+- drivers
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - binding parameter arrays [ODBC]
 - arrays of parameter values [ODBC]
 - parameter arrays [ODBC]
 ms.assetid: 037afe23-052d-4f3a-8aa7-45302b199ad0
-caps.latest.revision: "14"
+caps.latest.revision: 14
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: ad5bb4e2281802c231b4dc7abcfd356c8ca4b72c
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: 09b3a3c732b34a5a1a7a1d98e2ebe9740069f72e
+ms.sourcegitcommit: 8f1d1363e18e0c32ff250617ab6cb2da2147bf8e
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 04/03/2018
 ---
 # <a name="binding-arrays-of-parameters"></a>Las matrices de parámetros de enlace
 Las aplicaciones que utilizan matrices de parámetros de enlazar las matrices a los parámetros en la instrucción SQL. Hay dos estilos de enlace:  
@@ -41,7 +42,7 @@ Las aplicaciones que utilizan matrices de parámetros de enlazar las matrices a 
   
  El enlace es el valor predeterminado. La aplicación también puede cambiar desde el enlace para el enlace estableciendo el atributo de instrucción SQL_ATTR_PARAM_BIND_TYPE. La ilustración siguiente muestra cómo funciona el enlace.  
   
- ![Muestra cómo columna &#45; enlace conveniente funciona](../../../odbc/reference/develop-app/media/pr31.gif "pr31")  
+ ![Muestra cómo columna&#45;inteligente enlace funciona](../../../odbc/reference/develop-app/media/pr31.gif "pr31")  
   
  Por ejemplo, el siguiente código enlaza matrices de 10 elementos a los parámetros para las columnas PartID, descripción y el precio y ejecuta una instrucción para insertar 10 filas. Utiliza el enlace.  
   
@@ -59,9 +60,9 @@ SQLINTEGER     PartIDIndArray[ARRAY_SIZE], DescLenOrIndArray[ARRAY_SIZE],
 SQLUSMALLINT   i, ParamStatusArray[ARRAY_SIZE];  
 SQLULEN ParamsProcessed;  
   
-memset(DescLenOrIndArray, 0, sizeof(DescLenOrIndArray);  
-memset(PartIDIndArray, 0, sizeof(PartIDIndArray);  
-memset(PriceIndArray, 0, sizeof(PriceIndArray);  
+memset(DescLenOrIndArray, 0, sizeof(DescLenOrIndArray));  
+memset(PartIDIndArray, 0, sizeof(PartIDIndArray));  
+memset(PriceIndArray, 0, sizeof(PriceIndArray));  
   
 // Set the SQL_ATTR_PARAM_BIND_TYPE statement attribute to use  
 // column-wise binding.  
@@ -134,7 +135,7 @@ Address = Bound Address + ((Row Number - 1) * Structure Size) + Offset
   
  donde las filas se numeran del 1 al tamaño del conjunto de parámetros. El desplazamiento, si ha definido, es el valor al que señala el atributo de instrucción SQL_ATTR_PARAM_BIND_OFFSET_PTR. La ilustración siguiente muestra cómo funciona el enlace. Los parámetros se pueden colocar en la estructura en cualquier orden, pero se muestran en orden secuencial para mayor claridad.  
   
- ![Muestra cómo de fila &#45; enlace conveniente funciona](../../../odbc/reference/develop-app/media/pr32.gif "pr32")  
+ ![Muestra cómo fila&#45;inteligente enlace funciona](../../../odbc/reference/develop-app/media/pr32.gif "pr32")  
   
  El código siguiente crea una estructura con elementos para los valores que se va a almacenar en las columnas PartID, descripción y el precio. A continuación, asigna una matriz de 10 elementos de estas estructuras y enlaza con parámetros para las columnas PartID, descripción y el precio, mediante el enlace de modo de fila. A continuación, ejecuta una instrucción para insertar 10 filas.  
   

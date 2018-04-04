@@ -1,16 +1,16 @@
 ---
 title: Instrucciones RESTORE para restaurar, recuperar y administrar copias de seguridad (Transact-SQL) | Microsoft Docs
-ms.custom: 
-ms.date: 03/17/2017
+ms.custom: ''
+ms.date: 03/30/2018
 ms.prod: sql-non-specified
 ms.prod_service: sql-database
-ms.service: 
+ms.service: ''
 ms.component: t-sql|statements
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 dev_langs:
 - TSQL
@@ -24,22 +24,24 @@ helpviewer_keywords:
 - file restores [SQL Server], RESTORE statement
 - transaction log backups [SQL Server], RESTORE statement
 ms.assetid: fb29a151-f312-4f85-b857-5deeca0de8ce
-caps.latest.revision: 
+caps.latest.revision: 15
 author: barbkess
 ms.author: barbkess
 manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: d756c4fb9f299abe88ef46c14726f613e8f66497
-ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
+ms.openlocfilehash: fb1072cbbf427633248c765506de9742021030ab
+ms.sourcegitcommit: 059fc64ba858ea2adaad2db39f306a8bff9649c2
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/25/2018
+ms.lasthandoff: 04/04/2018
 ---
 # <a name="restore-statements-for-restoring-recovering-and-managing-backups-transact-sql"></a>Instrucciones RESTORE para restaurar, recuperar y administrar copias de seguridad (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2012-asdbmi-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-asdbmi-xxxx-xxx-md.md )]
 
   En esta sección se describen las instrucciones RESTORE relacionadas con las copias de seguridad. Además de la instrucción RESTORE {DATABASE | LOG} principal para restaurar y recuperar copias de seguridad, hay una serie de instrucciones RESTORE auxiliares que le ayudan a administrar las copias de seguridad y a planear las secuencias de restauración. Los comandos RESTORE auxiliares son: RESTORE FILELISTONLY, RESTORE HEADERONLY, RESTORE LABELONLY, RESTORE REWINDONLY y RESTORE VERIFYONLY.  
   
+[!INCLUDE[ssMIlimitation](../../includes/sql-db-mi-limitation.md)]
+
 > [!IMPORTANT]  
 >  En versiones anteriores de SQL Server, cualquier usuario podía obtener información sobre los conjuntos de copia de seguridad y los dispositivos de copia de seguridad mediante las instrucciones Transact-SQL RESTORE FILELISTONLY, RESTORE HEADERONLY, RESTORE LABELONLY y RESTORE VERIFYONLY. Dado que estas instrucciones revelan información sobre el contenido de los archivos de copia de seguridad, en [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] y versiones posteriores requieren el permiso CREATE DATABASE. Este requisito proporciona una protección más completa que en versiones anteriores de los archivos de copia de seguridad y de la información que contienen. Para obtener información sobre este permiso, vea [GRANT &#40;permisos de base de datos de Transact-SQL&#41;](../../t-sql/statements/grant-database-permissions-transact-sql.md).  
   

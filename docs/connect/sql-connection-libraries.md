@@ -11,13 +11,13 @@ ms.technology: dbe-data-tier-apps
 ms.custom: ''
 ms.workload: data-management
 ms.topic: article
-ms.date: 08/09/2017
+ms.date: 03/29/2018
 ms.author: genemi
-ms.openlocfilehash: 33df5e13dcdeb205a1dbc9fa9c1a5dc7efc754c2
-ms.sourcegitcommit: 2e130e9f3ce8a7ffe373d7fba8b09e937c216386
+ms.openlocfilehash: c1f0f197fbc01863ab06164282d2d007c2bd8214
+ms.sourcegitcommit: 8f1d1363e18e0c32ff250617ab6cb2da2147bf8e
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/28/2018
+ms.lasthandoff: 04/03/2018
 ---
 # <a name="connection-modules-for-microsoft-sql-databases"></a>Módulos de conexión para bases de datos SQL de Microsoft
 
@@ -27,7 +27,6 @@ Este artículo contiene vínculos de descarga a los módulos de conexión o *con
 - MacOS
 - Windows
 
-
 #### <a name="oop-to-relational-mismatch"></a>Error de coincidencia de programación orientada a objetos a relacional
 
 *Relacional*: los programas de cliente que se escriben en un lenguaje de (OOP) de programación orientada a objetos a menudo utilizan controladores para SQL Server que devuelven datos consultados en un formato que es más relacional que orientado a objetos. Uso de ADO.NET en C# es un ejemplo. La programación orientada a objetos relacionales discrepancia de formato a veces hace que el código de programación orientada a objetos sea más difícil de escribir y entender.
@@ -35,7 +34,6 @@ Este artículo contiene vínculos de descarga a los módulos de conexión o *con
 *ORM*: otros controladores o marcos de devuelvan los datos consultados en el formato de la programación orientada a objetos, evitar la falta de coincidencia. Estos controladores de trabajo se espera que las clases se han definido para que coincida con las columnas de datos de tablas SQL. El controlador, a continuación, realiza la *asignación objeto-relacional* (ORM) para devolver los datos consultados como una instancia de una clase. Entity Framework (EF de Microsoft) en C# e hibernación para Java, son dos ejemplos.
 
 El presente artículo dedica secciones independientes para estos dos tipos de controladores de conexión.
-
 
 <a name="anchor-20-drivers-relational-access" />
 
@@ -53,18 +51,16 @@ PHP driver in Github.com also uses this FWLink:  http://go.microsoft.com/fwlink/
 although the FWLink is less precise than is http://github.com/Microsoft/msphpsql/tree/dev#install-unix .
 -->
 
-
 | Lenguaje | Descargue el controlador SQL |
 | :------- | :---------------------- |
-| C#       | [ADO.NET](http://www.microsoft.com/net/download/)<br /><br />[Núcleo de. NET, para Ubuntu Linux](https://www.microsoft.com/net/core#Ubuntu)<br />[Núcleo de. NET, para MacOS](https://www.microsoft.com/net/core#macos)<br />[Núcleo de. NET, para Windows](https://www.microsoft.com/net/core) |
-| C++      | [ODBC](http://docs.microsoft.com/sql/connect/odbc/download-odbc-driver-for-sql-server) |
-| Java     | [JDBC](http://www.microsoft.com/download/details.aspx?id=55539) |
-| Node.js  | [Controlador de Node.js, las instrucciones de instalación](http://docs.microsoft.com/sql/connect/node-js/step-1-configure-development-environment-for-node-js-development) |
-| PHP      | *Sistema operativo:*<br /><br />[Controladores de Windows para PHP](https://www.microsoft.com/download/details.aspx?id=55642)<br />[Linux o Mac OS controlador PHP desde Github](http://github.com/Microsoft/msphpsql/) |
-| Python   | [pyodbc, las instrucciones de instalación](http://docs.microsoft.com/sql/connect/python/pyodbc/step-1-configure-development-environment-for-pyodbc-python-development)<br />[Descargar ODBC](http://docs.microsoft.com/sql/connect/odbc/download-odbc-driver-for-sql-server) |
-| Ruby     | [Controlador Ruby, las instrucciones de instalación](https://docs.microsoft.com/sql/connect/ruby/step-1-configure-development-environment-for-ruby-development)<br />[Página de descarga Ruby](https://rubyinstaller.org/downloads/) |
+| C# | [ADO.NET](http://www.microsoft.com/net/download/)<br /><br />[Núcleo de. NET, para Ubuntu Linux](https://www.microsoft.com/net/core#Ubuntu)<br />[Núcleo de. NET, para MacOS](https://www.microsoft.com/net/core#macos)<br />[Núcleo de. NET, para Windows](https://www.microsoft.com/net/core) |
+| C++ | [ODBC](./odbc/download-odbc-driver-for-sql-server.md)<br /><br />[OLE DB](./oledb/oledb-driver-for-sql-server-programming.md) |
+| Java | [JDBC](./jdbc/microsoft-jdbc-driver-for-sql-server.md) |
+| Node.js | [Controlador de Node.js, las instrucciones de instalación](./node-js/step-1-configure-development-environment-for-node-js-development.md) |
+| PHP | *Sistema operativo:*<br /><br />[Controladores de Windows para PHP](https://www.microsoft.com/download/details.aspx?id=55642)<br />[Linux o Mac OS controlador PHP desde Github](http://github.com/Microsoft/msphpsql/) |
+| Python | [pyodbc, las instrucciones de instalación](./python/pyodbc/step-1-configure-development-environment-for-pyodbc-python-development.md)<br />[Descargar ODBC](./odbc/download-odbc-driver-for-sql-server.md) |
+| Ruby | [Controlador Ruby, las instrucciones de instalación](./ruby/step-1-configure-development-environment-for-ruby-development.md)<br />[Página de descarga Ruby](https://rubyinstaller.org/downloads/) |
 | &nbsp; | <br /> |
-
 
 <a name="anchor-40-drivers-orm-access" />
 
@@ -82,14 +78,11 @@ En la tabla siguiente se muestra ejemplos de marcos de trabajo de asignación re
 | Node.js | [Sequelize ORM](http://docs.sequelizejs.com) |
 | Python | [Django](http://www.djangoproject.com/) |
 | Ruby | [Ruby sobre raíles](http://rubyonrails.org/) |
-| &nbsp; | <br /> |
 
 
 <a name="anchor-60-build-an-app-webpages" />
 
 ## <a name="build-an-app-webpages"></a>Generar una aplicación las páginas Web
-
-
 [http://aka.ms/sqldev](http://aka.ms/sqldev) le lleva a un conjunto de *compilación una aplicación* las páginas Web. Las páginas Web proporcionan información acerca de diversas combinaciones de idioma, el sistema operativo y el controlador de conexión de SQL de la programación. Entre la información proporcionada por las páginas de generar una aplicación Web se encuentran los siguientes elementos:
 
 - Obtener más información acerca de cómo empezar a trabajar desde el principio, para cada combinación de idioma, sistema operativo + controlador.
@@ -99,24 +92,16 @@ En la tabla siguiente se muestra ejemplos de marcos de trabajo de asignación re
     - Ejemplos de código ORM.
     - Demostraciones de índice de almacén de columnas para un rendimiento mucho más rápido.
 
-
 #### <a name="first-page-of-build-an-app-webpages"></a>Primera página, de las páginas de generar una aplicación Web
-
 ![Generar una aplicación las páginas Web, primera captura de pantalla de página][image-ref-163-buildanapp-webpages-first-page]
 
-
 #### <a name="menu-for-java---ubuntu-of-build-an-app-webpages"></a>Menú de Java - Ubuntu, de las páginas de generar una aplicación Web
-
 ![Generar una aplicación las páginas Web, menú Ubuntu de Java][image-ref-167-buildanapp-webpages-menu-java-ubuntu]
-
 
 &nbsp;
 
-
 ## <a name="related-links"></a>Vínculos relacionados
-
 - [Ejemplos de código para conectarse a la base de datos de SQL de Azure en la nube, con Java y otros lenguajes](http://docs.microsoft.com/azure/sql-database/sql-database-connect-query-java).
-
 
 <!-- Image references -->
 

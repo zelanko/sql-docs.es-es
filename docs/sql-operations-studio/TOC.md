@@ -13,6 +13,7 @@
 ## [Copias de seguridad y restauración](tutorial-backup-restore-sql-server.md)
 # Guías de procedimientos
 ## [Paneles y widgets de datos](insight-widgets.md)
+## [Extensiones](extensions.md)
 ## [Fragmentos de código](code-snippets.md)
 ## [Terminal integrada (PowerShell, Bash)](integrated-terminal.md)
 ## [Métodos abreviados de teclado](keyboard-shortcuts.md)

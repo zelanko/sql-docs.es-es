@@ -10,21 +10,22 @@ ms.suite: sql
 ms.prod_service: sql-tools
 ms.reviewer: sstein
 manager: craigg
-ms.openlocfilehash: c9ede90c1232469797f85af353c7e3fced6851b5
-ms.sourcegitcommit: 8e897b44a98943dce0f7129b1c7c0e695949cc3b
+ms.openlocfilehash: 8cdb4f258f62b425be78e9f6b4628d69e304c7ba
+ms.sourcegitcommit: ccb05cb5a4cccaf7ffa9e85a4684fa583bab914e
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/21/2018
+ms.lasthandoff: 03/22/2018
 ---
 # <a name="tutorial-sql-server-management-studio-components-and-configuration"></a>Tutorial: Componentes y configuración de SQL Server Management Studio
 En este tutorial se describen los distintos componentes de ventana que hay en SQL Server Management Studio (SSMS), así como algunas opciones de configuración básicas para el área de trabajo. En este artículo aprenderá lo siguiente: 
-- Los distintos componentes que conforman el entorno de SSMS
-- Cambiar el diseño del entorno y restablecerlo al diseño predeterminado
-- Maximizar el editor de consultas
-- Cambiar algunas opciones básicas, como las siguientes:
-    - Cambiar la fuente
-    - Configurar las opciones de inicio
-    - Restablecer la configuración predeterminada.
+
+> [!div class="checklist"]
+> * Los distintos componentes que conforman el entorno de SSMS
+> * Cambiar el diseño del entorno y restablecerlo al diseño predeterminado
+> * Maximizar el editor de consultas
+> * Cambiar la fuente 
+> * Configurar las opciones de inicio 
+> * Restablecer la configuración predeterminada. 
 
 ## <a name="prerequisites"></a>Prerequisites
 Para llevar a cabo este tutorial necesita tener SQL Server Management Studio.  
@@ -60,7 +61,7 @@ En esta sección se describen los distintos componentes de ventana disponibles e
 
     
 
-## <a name="changing-the-environmental-layout"></a>Cambiar el diseño del entorno 
+## <a name="change-the-environmental-layout"></a>Cambio del diseño del entorno 
 En esta sección se describe la manipulación del diseño del entorno (por ejemplo, mover las distintas ventanas). 
 
 -  Todos los componentes de ventana se pueden mover manteniendo presionado el título y arrastrando la ventana. 
@@ -90,7 +91,7 @@ En esta sección se describe la manipulación del diseño del entorno (por ejemp
  
     ![Restablecer diseño de la ventana](media/ssms-configuration/resetwindowlayout.png)
     
-## <a name="maximizing-query-editor"></a>Maximizar el Editor de consultas
+## <a name="maximize-query-editor"></a>Maximizar el editor de consultas
 El editor de consultas se puede maximizar al modo de pantalla completa.
 
 1. Haga clic en cualquier parte de la ventana del editor de consultas.
@@ -100,7 +101,7 @@ Este método abreviado de teclado funciona con cualquier ventana de documento.
 
 
 
-## <a name="changing-basic-settings"></a>Cambiar la configuración básica
+## <a name="change-basic-settings"></a>Cambio de la configuración básica
 En esta sección se describe cómo modificar algunas opciones básicas en SSMS. Estas opciones están en la opción de menú **Herramientas**:
 
   ![Menú Herramientas](media/ssms-configuration/tools.png)
@@ -110,18 +111,32 @@ En esta sección se describe cómo modificar algunas opciones básicas en SSMS. 
 
     ![Personalizar la barra de herramientas](media/ssms-configuration/toolbar.png)
 
+### <a name="change-the-font"></a>Cambio del tamaño de fuente
 - La fuente se puede cambiar en el menú **Herramientas** > **Opciones** > **Fuentes y colores**:
 
      ![Fuentes y colores](media/ssms-configuration/fontsandcolors.png)
 
+### <a name="change-the-startup-options"></a>Cambio de las opciones de inicio
 - Las opciones de inicio determinan el aspecto del área de trabajo la primera vez que se inicia SSMS. Se pueden configurar en el menú **Herramientas** > **Opciones** > **Inicio**:
  
     ![Opciones de inicio](media/ssms-configuration/startup.png)
 
+### <a name="reset-settings-to-default"></a>Restablecimiento de la configuración predeterminada
 - Todas estas opciones se pueden exportar e importar desde el menú **Herramientas** > **Importar y exportar opciones**. 
 
     ![Opciones de importación + exportación](media/ssms-configuration/settings.png)
     - Aquí también puede restablecer toda la configuración a los valores predeterminados. 
+
+
+## <a name="next-steps"></a>Pasos siguientes
+En el artículo siguiente se le enseñarán algunos trucos y consejos adicionales para usar SSMS, como dónde encontrar el registro de errores de SQL Server o el nombre de instancia de SQL. 
+
+Vaya al siguiente artículo para obtener más información
+> [!div class="nextstepaction"]
+> [Botón de pasos siguientes](ssms-tricks.md)
+ 
+ 
+
 
 
 

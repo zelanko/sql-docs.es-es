@@ -1,16 +1,16 @@
 ---
 title: RESTORE LABELONLY (Transact-SQL) | Microsoft Docs
-ms.custom: 
-ms.date: 03/15/2017
+ms.custom: ''
+ms.date: 03/30/2018
 ms.prod: sql-non-specified
 ms.prod_service: sql-database
-ms.service: 
+ms.service: ''
 ms.component: t-sql|statements
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - LABELONLY
@@ -23,21 +23,22 @@ helpviewer_keywords:
 - RESTORE LABELONLY statement
 - backup media [SQL Server], content information
 ms.assetid: 7cf0641e-0d55-4ffb-9500-ecd6ede85ae5
-caps.latest.revision: 
+caps.latest.revision: 46
 author: barbkess
 ms.author: barbkess
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: c5cbf694abdf86a5e5e13f2799f5b1f4b808a498
-ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
+ms.openlocfilehash: 85c38eace9b7de36553016ec3fc64e187b05d02b
+ms.sourcegitcommit: 059fc64ba858ea2adaad2db39f306a8bff9649c2
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/25/2018
+ms.lasthandoff: 04/04/2018
 ---
 # <a name="restore-statements---labelonly-transact-sql"></a>Instrucciones RESTORE: LABELONLY (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
-
+[!INCLUDE[tsql-appliesto-ss2008-asdbmi-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdbmi-xxxx-xxx-md.md )]
   Devuelve un conjunto de resultados que contiene información acerca del medio de copia de seguridad identificado por el dispositivo de copia de seguridad dado.  
+
+[!INCLUDE[ssMIlimitation](../../includes/sql-db-mi-limitation.md)]
   
 > [!NOTE]  
 >  Para obtener las descripciones de los argumentos, vea [Argumentos de RESTORE &#40;Transact-SQL&#41;](../../t-sql/statements/restore-statements-arguments-transact-sql.md).  
@@ -109,7 +110,7 @@ FROM <backup_device>
  Opcionalmente, la operación de copia de seguridad puede especificar contraseñas para un conjunto de medios. Si se ha definido una contraseña en un conjunto de medios, debe especificar la contraseña correcta en la instrucción RESTORE. Esta contraseña impide operaciones de restauración y anexiones no autorizadas de los conjuntos de copia de seguridad en medios que usan herramientas de [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. No obstante, la contraseña no impide que se sobrescriba el medio con la opción FORMAT de la instrucción BACKUP.  
   
 > [!IMPORTANT]  
->  El nivel de protección que proporciona esta contraseña es bajo. El objetivo es impedir una restauración incorrecta con las herramientas de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], ya sea por parte de usuarios autorizados o no autorizados. No impide la lectura de los datos de las copias de seguridad por otros medios o el reemplazo de la contraseña. [!INCLUDE[ssNoteDepFutureAvoid](../../includes/ssnotedepfutureavoid-md.md)]El procedimiento recomendado para proteger las copias de seguridad consiste en almacenar las cintas de copia de seguridad en una ubicación segura o hacer una copia de seguridad en archivos de disco protegidos mediante las listas de control de acceso (ACL) adecuadas. Las ACL se deben establecer en el directorio raíz en el que se crean las copias de seguridad.  
+>  El nivel de protección que proporciona esta contraseña es bajo. El objetivo es impedir una restauración incorrecta con las herramientas de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], ya sea por parte de usuarios autorizados o no autorizados. No impide la lectura de los datos de las copias de seguridad por otros medios o el reemplazo de la contraseña. [!INCLUDE[ssNoteDepFutureAvoid](../../includes/ssnotedepfutureavoid-md.md)]El procedimiento recomendado para proteger las copias de seguridad consiste en almacenar las cintas de copia de seguridad en una ubicación segura o en hacer una copia de seguridad en archivos de disco protegidos con las listas de control de acceso (ACL) adecuadas. Las ACL se deben establecer en el directorio raíz en el que se crean las copias de seguridad.  
   
 ### <a name="permissions"></a>Permisos  
  En [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] y versiones posteriores, la obtención de información sobre un conjunto de copia de seguridad o un dispositivo de copia de seguridad requiere el permiso CREATE DATABASE. Para obtener más información, vea [GRANT &#40;permisos de base de datos de Transact-SQL&#41;](../../t-sql/statements/grant-database-permissions-transact-sql.md).  

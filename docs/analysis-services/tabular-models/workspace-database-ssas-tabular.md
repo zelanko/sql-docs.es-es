@@ -1,31 +1,31 @@
 ---
-title: "Base de datos del área de trabajo | Documentos de Microsoft"
-ms.custom: 
-ms.date: 02/21/2018
+title: Base de datos del área de trabajo de SQL Server Data Tools | Documentos de Microsoft
+ms.custom: ''
+ms.date: 03/30/2018
 ms.prod: analysis-services
 ms.prod_service: analysis-services, azure-analysis-services
-ms.service: 
+ms.service: ''
 ms.component: data-mining
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: pro-bi
-ms.technology: 
-ms.tgt_pltfrm: 
+ms.technology: ''
+ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: 662daf08-a514-44a7-8675-44644aa454a2
-caps.latest.revision: 
+caps.latest.revision: 24
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: On Demand
-ms.openlocfilehash: 2ab6a38542e9c6702edcf98401db0796fc5e78e4
-ms.sourcegitcommit: d8ab09ad99e9ec30875076acee2ed303d61049b7
+ms.openlocfilehash: ad6297a1485d710b6ef34cca88a5610efd6e7c9e
+ms.sourcegitcommit: 8f1d1363e18e0c32ff250617ab6cb2da2147bf8e
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/23/2018
+ms.lasthandoff: 04/03/2018
 ---
 # <a name="workspace-database"></a>Base de datos del área de trabajo 
 [!INCLUDE[ssas-appliesto-sqlas-aas](../../includes/ssas-appliesto-sqlas-aas.md)]
-La base de datos del área del trabajo de modelos tabulares, utilizada durante la creación de modelos, se crea cuando se crea un nuevo proyecto de modelos tabulares en [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)].
+  La base de datos del área del trabajo de modelos tabulares, utilizada durante la creación de modelos, se crea cuando se crea un nuevo proyecto de modelos tabulares en [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)].
   
 ## <a name="specifying-a-workspace-instance"></a>Especificar una instancia del área de trabajo  
   Al crear un proyecto de modelo tabular en SSDT, puede especificar una instancia de Analysis Services para usarla al crear el proyecto. A partir de la versión de septiembre de 2016 (14.0.60918.0) de [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)], se introducen dos modos para especificar una instancia del área de trabajo al crear un proyecto de modelo tabular. 
@@ -94,6 +94,6 @@ Mediante las propiedades de la Base de datos del área de trabajo y del Servidor
  Puede usar SQL Server Management Studio (SSMS) para conectarse a un servidor de [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] que hospeda una base de datos del área de trabajo. Por lo general, no es necesaria ninguna administración de la base de datos del área de trabajo; la excepción es cuando hay que separar o eliminar una base de datos del área de trabajo, operación que debe realizarse desde [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]. No utilice [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] para administrar la base de datos del área de trabajo mientras el proyecto está abierto en el diseñador de modelos. Si lo hace, podría provocar la pérdida de datos.
    
 ## <a name="see-also"></a>Vea también  
-[Propiedades del modelo](../../analysis-services/tabular-models/model-properties-ssas-tabular.md) 
+[Propiedades de modelo](../../analysis-services/tabular-models/model-properties-ssas-tabular.md) 
   
   

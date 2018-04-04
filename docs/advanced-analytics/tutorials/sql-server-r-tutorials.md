@@ -3,28 +3,27 @@ title: Tutoriales de SQL Server R | Documentos de Microsoft
 ms.custom:
 - SQL2016_New_Updated
 ms.date: 08/29/2017
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.prod: machine-learning-services
 ms.prod_service: machine-learning-services
-ms.component: 
-ms.technology: 
-ms.tgt_pltfrm: 
+ms.component: ''
+ms.technology: ''
+ms.tgt_pltfrm: ''
 ms.topic: tutorial
 applies_to:
 - SQL Server 2016
 dev_langs:
 - R
-caps.latest.revision: 
-author: jeannt
-ms.author: jeannt
-manager: cgronlund
+ms.author: heidist
+author: HeidiSteen
+manager: cgronlun
 ms.workload: On Demand
-ms.openlocfilehash: a2fd60a40950710972c6e9507b3c9545e86840ff
-ms.sourcegitcommit: 99102cdc867a7bdc0ff45e8b9ee72d0daade1fd3
+ms.openlocfilehash: 34fee91978a27e38fca6092a98596c701cfd32eb
+ms.sourcegitcommit: 059fc64ba858ea2adaad2db39f306a8bff9649c2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/11/2018
+ms.lasthandoff: 04/04/2018
 ---
 # <a name="sql-server-r-tutorials"></a>Tutoriales de SQL Server R
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
@@ -113,7 +112,7 @@ Para usar estos tutoriales y ejemplos, debe instalar uno de los siguientes produ
 
 Después de ejecutar el programa de instalación de SQL Server, no olvide estos pasos importantes:
 
-+ Habilitar la característica de ejecución de script externo mediante la ejecución`sp_configure 'external scripts enabled', 1`
++ Habilitar la característica de ejecución de script externo mediante la ejecución `sp_configure 'external scripts enabled', 1`
 + Reiniciar el servidor
 + Asegúrese de que el servicio que llama el tiempo de ejecución externo tiene los permisos necesarios
 + Asegúrese de que la cuenta de usuario de Windows o inicio de sesión SQL tiene los permisos necesarios para conectarse al servidor, para leer los datos y para crear los objetos de base de datos requeridos por el ejemplo

@@ -1,30 +1,28 @@
 ---
-title: "Crear características de datos mediante R y SQL (tutorial) | Documentos de Microsoft"
-ms.custom: 
+title: Crear características de datos mediante R y SQL (tutorial) | Documentos de Microsoft
+ms.custom: ''
 ms.date: 08/23/2017
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.prod: machine-learning-services
 ms.prod_service: machine-learning-services
-ms.component: 
-ms.technology: 
-ms.tgt_pltfrm: 
+ms.component: ''
+ms.technology: ''
+ms.tgt_pltfrm: ''
 ms.topic: tutorial
 applies_to:
 - SQL Server 2016
 dev_langs:
 - R
-ms.assetid: 4981d4eb-0874-4fe9-82e1-edf99890e27a
-caps.latest.revision: 
-author: jeannt
-ms.author: jeannt
-manager: cgronlund
+ms.author: heidist
+author: HeidiSteen
+manager: cgronlun
 ms.workload: Inactive
-ms.openlocfilehash: 9b447f8c8faa834bea4360844308e468bf15d89c
-ms.sourcegitcommit: 99102cdc867a7bdc0ff45e8b9ee72d0daade1fd3
+ms.openlocfilehash: ecbdc28ac530dcee1ba9f5a3820d999ad4e0fcd9
+ms.sourcegitcommit: 059fc64ba858ea2adaad2db39f306a8bff9649c2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/11/2018
+ms.lasthandoff: 04/04/2018
 ---
 # <a name="create-data-features-using-r-and-sql-walkthrough"></a>Crear características de datos mediante R y SQL (tutorial)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
@@ -242,7 +240,7 @@ También puede intentar usar esto con el ejemplo de función personalizada de SQ
 Las horas pueden variar considerablemente, según la velocidad de la red y la configuración del hardware. En las configuraciones que hemos probado, el [!INCLUDE[tsql](../../includes/tsql-md.md)] enfoque de función era más rápido que utilizar una función de R personalizada. Por lo tanto, hemos uso el [!INCLUDE[tsql](../../includes/tsql-md.md)] función para estos cálculos en los siguientes pasos.
 
 > [!TIP]
-> Uso de ingeniería de características muy a menudo, [!INCLUDE[tsql](../../includes/tsql-md.md)] será más rápido que R. Por ejemplo, T-SQL incluye rápida basada en ventanas y las funciones de clasificación que se pueden aplicar a los cálculos de ciencia de datos comunes como gradual medias móviles y  *n* -iconos. Elija el método más eficaz en función de los datos y la tarea.
+> Uso de ingeniería de características muy a menudo, [!INCLUDE[tsql](../../includes/tsql-md.md)] será más rápido que R. Por ejemplo, T-SQL incluye rápida basada en ventanas y las funciones de clasificación que se pueden aplicar a los cálculos de ciencia de datos comunes como gradual medias móviles y *n*-iconos. Elija el método más eficaz en función de los datos y la tarea.
 
 ## <a name="next-lesson"></a>Lección siguiente
 

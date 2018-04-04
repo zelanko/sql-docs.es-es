@@ -1,27 +1,25 @@
 ---
-title: "Convertir código de R para usarlo en R Services | Microsoft Docs"
+title: Convertir código de R para usarlo en R Services | Microsoft Docs
 ms.date: 12/20/2017
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.prod: machine-learning-services
 ms.prod_service: machine-learning-services
 ms.component: r
-ms.technology: 
-ms.tgt_pltfrm: 
+ms.technology: ''
+ms.tgt_pltfrm: ''
 ms.topic: article
 dev_langs:
 - R
-ms.assetid: 0b11ab52-b2f9-4a4f-b1ab-68ba09c8adcc
-caps.latest.revision: 
-author: jeannt
-ms.author: jeannt
-manager: cgronlund
+ms.author: heidist
+author: HeidiSteen
+manager: cgronlun
 ms.workload: Inactive
-ms.openlocfilehash: 802ad1ee49920db65eadccfb29650c649c339d48
-ms.sourcegitcommit: 99102cdc867a7bdc0ff45e8b9ee72d0daade1fd3
+ms.openlocfilehash: 669f52d499b9479e23266af91c04e6bc084bb8ea
+ms.sourcegitcommit: 059fc64ba858ea2adaad2db39f306a8bff9649c2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/11/2018
+ms.lasthandoff: 04/04/2018
 ---
 # <a name="converting-r-code-for-execution-in-database"></a>Convertir código de R para ejecución en bases de datos
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
@@ -34,7 +32,7 @@ Sin embargo, el código puede requerir cambios sustanciales si cualquiera de los
 
 + Utilizar bibliotecas de R que acceder a la red o que no se puede instalar en SQL Server.
 + El código realiza las llamadas independientes a orígenes de datos fuera de SQL Server, como las hojas de cálculo de Excel, archivos en recursos compartidos y otras bases de datos. 
-+ Desea ejecutar el código de la  *@script*  parámetro de [sp_execute_external_script](../../relational-databases/system-stored-procedures/sp-execute-external-script-transact-sql.md) y también parametrizar el procedimiento almacenado.
++ Desea ejecutar el código de la *@script* parámetro de [sp_execute_external_script](../../relational-databases/system-stored-procedures/sp-execute-external-script-transact-sql.md) y también parametrizar el procedimiento almacenado.
 + La solución original incluye varios pasos que podrían ser más eficaces en un entorno de producción si ejecuta de forma independiente, como la preparación de datos o de ingeniería de característica frente a modelo de entrenamiento, la puntuación o informes.
 + Desea mejorar optimizar el rendimiento cambiando las bibliotecas, mediante la ejecución en paralelo, o descargar algunos procesamientos a SQL Server. 
 

@@ -1,30 +1,28 @@
 ---
 title: Implementar el modelo de R y usarla en SQL (tutorial) | Documentos de Microsoft
-ms.custom: 
+ms.custom: ''
 ms.date: 07/26/2017
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.prod: machine-learning-services
 ms.prod_service: machine-learning-services
-ms.component: 
-ms.technology: 
-ms.tgt_pltfrm: 
+ms.component: ''
+ms.technology: ''
+ms.tgt_pltfrm: ''
 ms.topic: tutorial
 applies_to:
 - SQL Server 2016
 dev_langs:
 - R
-ms.assetid: f28a7aac-6d08-4781-ad28-b48d18cc16a0
-caps.latest.revision: 
-author: jeannt
-ms.author: jeannt
-manager: cgronlund
+ms.author: heidist
+author: HeidiSteen
+manager: cgronlun
 ms.workload: Inactive
-ms.openlocfilehash: 771683f472af17292de62fb1591539f1215ebf57
-ms.sourcegitcommit: 99102cdc867a7bdc0ff45e8b9ee72d0daade1fd3
+ms.openlocfilehash: de43bd77f7a5537265fb7cb74a59e326010a9f71
+ms.sourcegitcommit: 059fc64ba858ea2adaad2db39f306a8bff9649c2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/11/2018
+ms.lasthandoff: 04/04/2018
 ---
 # <a name="deploy-the-r-model-and-use-it-in-sql"></a>Implementar el modelo de R y usarla en SQL
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
@@ -71,9 +69,9 @@ Un procedimiento almacenado para la puntuación del lote se creó cuando se ejec
     END
     ```
 
-    + Utilizar una instrucción SELECT para llamar el modelo almacenado desde una tabla de SQL. El modelo se recupera de la tabla como **varbinary (max)** datos almacenados en la variable SQL  _@lmodel2_ y se pasa como parámetro *mod* al sistema almacenado procedimiento [sp_execute_external_script](../../relational-databases/system-stored-procedures/sp-execute-external-script-transact-sql.md).
+    + Utilizar una instrucción SELECT para llamar el modelo almacenado desde una tabla de SQL. El modelo se recupera de la tabla como **varbinary (max)** datos almacenados en la variable SQL _@lmodel2_y se pasa como parámetro *mod* al sistema almacenado procedimiento [sp_execute_external_script](../../relational-databases/system-stored-procedures/sp-execute-external-script-transact-sql.md).
 
-    + Los datos que se usan como entradas para la puntuación se define como una consulta SQL y se almacena como una cadena en la variable SQL  _@input_ . Cuando se recuperan datos de la base de datos, se almacenan en una trama de datos denominada *InputDataSet*, que es simplemente el nombre predeterminado para los datos de entrada para el [sp_execute_external_script](../../relational-databases/system-stored-procedures/sp-execute-external-script-transact-sql.md) procedimiento; puede definir otro nombre de variable si es necesario mediante el parámetro   *_@input_data_1_name_*  .
+    + Los datos que se usan como entradas para la puntuación se define como una consulta SQL y se almacena como una cadena en la variable SQL _@input_. Cuando se recuperan datos de la base de datos, se almacenan en una trama de datos denominada *InputDataSet*, que es simplemente el nombre predeterminado para los datos de entrada para el [sp_execute_external_script](../../relational-databases/system-stored-procedures/sp-execute-external-script-transact-sql.md) procedimiento; puede definir otro nombre de variable si es necesario mediante el parámetro *_@input_data_1_name_*.
 
     + Para generar las puntuaciones, el procedimiento almacenado llama a la función `rxPredict` de la biblioteca **RevoScaleR** .
 

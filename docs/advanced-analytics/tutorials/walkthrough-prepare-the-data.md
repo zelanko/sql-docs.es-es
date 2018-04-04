@@ -1,30 +1,28 @@
 ---
 title: Preparar los datos de uso de PowerShell (tutorial) | Documentos de Microsoft
-ms.custom: 
+ms.custom: ''
 ms.date: 11/10/2017
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.prod: machine-learning-services
 ms.prod_service: machine-learning-services
-ms.component: 
-ms.technology: 
-ms.tgt_pltfrm: 
+ms.component: ''
+ms.technology: ''
+ms.tgt_pltfrm: ''
 ms.topic: tutorial
 applies_to:
 - SQL Server 2016
 dev_langs:
 - R
-ms.assetid: 65fd41d4-c94e-4929-a24a-20e792a86579
-caps.latest.revision: 
-author: jeannt
-ms.author: jeannt
-manager: cgronlund
+ms.author: heidist
+author: HeidiSteen
+manager: cgronlun
 ms.workload: On Demand
-ms.openlocfilehash: a1ed4da0aca0b2876e2162c012aabc6c4043c567
-ms.sourcegitcommit: 99102cdc867a7bdc0ff45e8b9ee72d0daade1fd3
+ms.openlocfilehash: fbe74b101642ecabe0478a9d5b459e59f277da04
+ms.sourcegitcommit: 059fc64ba858ea2adaad2db39f306a8bff9649c2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/11/2018
+ms.lasthandoff: 04/04/2018
 ---
 # <a name="prepare-the-data-using-powershell-walkthrough"></a>Preparar los datos de uso de PowerShell (tutorial)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
@@ -112,7 +110,7 @@ Hay muchas maneras diferentes que puede instalar paquetes en SQL Server. Por eje
     install.packages("RODBC", lib=grep("Program Files", .libPaths(), value=TRUE)[1])
     ```
 
-    - Este ejemplo utiliza la función de R grep para buscar el vector de rutas de acceso disponibles y encontrar la ruta de acceso que incluya "Archivos de programa". Para obtener más información, consulte [http://www.rdocumentation.org/packages/base/functions/grep](http://www.rdocumentation.org/packages/base/functions/grep).
+    - Este ejemplo utiliza la función de R grep para buscar el vector de rutas de acceso disponibles y encontrar la ruta de acceso que incluya "Archivos de programa". Para obtener más información, consulte [ http://www.rdocumentation.org/packages/base/functions/grep ](http://www.rdocumentation.org/packages/base/functions/grep).
 
     - Si cree que ya están instalados los paquetes, compruebe la lista de paquetes instalados ejecutando `installed.packages()`.
 
@@ -277,7 +275,7 @@ Al descargar los archivos desde el repositorio de GitHub, obtendrá el siguiente
 
 Los datos son una muestra representativa del conjunto de datos de taxis de Nueva York, que contiene los registros de más de 173 millones de carreras individuales en 2013, incluidas las tarifas y las propinas pagadas por cada carrera. Para que sea más fácil trabajar con los datos, el equipo de ciencia de datos de Microsoft redujo el tamaño del muestreo para obtener solo un 1 % de los datos.  Estos datos se han compartido en un contenedor de almacenamiento de blobs público en Azure, en formato .CSV. Los datos de origen están un archivo sin comprimir, justo debajo de 350 MB.
 
-+ Public dataset: [NYC Taxi and Limousine Commission] (http://www.nyc.gov/html/tlc/html/about/trip_record_data.shtml)
++ Conjunto de datos público: [NYC Taxi y Limousine Comisión] ()http://www.nyc.gov/html/tlc/html/about/trip_record_data.shtml)
 
 + [Generar modelos de aprendizaje automático de Azure en el conjunto de datos de Nueva York Taxi] (https://blogs.technet.microsoft.com/machinelearning/2015/04/02/building-azure-ml-models-on-the-nyc-taxi-dataset/.
 

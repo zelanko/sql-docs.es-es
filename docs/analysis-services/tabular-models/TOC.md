@@ -1,18 +1,19 @@
-# [Información general](tabular-models-ssas.md)  
-
-# [Creación de modelos tabulares](tabular-model-solutions-ssas-tabular.md)  
+# [Modelos tabulares](tabular-models-ssas.md)  
+## [Nivel de compatibilidad](compatibility-level-for-tabular-models-in-analysis-services.md)  
+## [Orígenes de datos admitidos en modelos tabulares 1400](data-sources-supported-ssas-tabular-1400.md)  
 ## [Orígenes de datos admitidos en modelos tabulares 1200](data-sources-supported-ssas-tabular.md)  
 ## [Tipos de datos compatibles](data-types-supported-ssas-tabular.md)  
+
+# Creación de modelos tabulares
 ## [Diseñador de modelos tabulares](tabular-model-designer-ssas.md)  
 ## [Base de datos del área de trabajo](workspace-database-ssas-tabular.md)  
-## [Nivel de compatibilidad](compatibility-level-for-tabular-models-in-analysis-services.md)  
 
 ## [Proyectos de modelos tabulares](tabular-model-projects-ssas-tabular.md)  
 ### [Crear un nuevo proyecto de modelo tabular](create-a-new-tabular-model-project-analysis-services.md)  
 ### [Importación desde Analysis Services](import-from-analysis-services-ssas-tabular.md)  
 ### [Importación desde Power Pivot](import-from-power-pivot-ssas-tabular.md)  
 
-## [Propiedades](properties-ssas-tabular.md)  
+## Propiedades
 ### [Power View: Propiedades de informes](power-view-reporting-properties-ssas-tabular.md)  
 ### [Power View: Configurar un conjunto de campos predeterminado](power-view-configure-default-field-set-for-reports.md)  
 ### [Power View: Configurar propiedades del comportamiento de las tablas](power-view-configure-table-behavior-properties-for-reports.md)  
@@ -23,6 +24,8 @@
 ### [Configurar las propiedades predeterminadas de modelado de datos y de implementación](configure-default-data-modeling-and-deployment-properties-ssas-tabular.md)  
 
 ## Importar datos
+
+### [Orígenes de datos admitidos en modelos tabulares 1400](data-sources-supported-ssas-tabular-1400.md)  
 ### [Orígenes de datos admitidos en modelos tabulares 1200](data-sources-supported-ssas-tabular.md)  
 ### [Tipos de datos compatibles](data-types-supported-ssas-tabular.md)  
 ### [Suplantación](impersonation-ssas-tabular.md)  

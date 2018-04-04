@@ -1,31 +1,31 @@
 ---
-title: "Diseñador de modelos tabulares | Documentos de Microsoft"
-ms.date: 10/19/2017
+title: Diseñador de modelos tabulares en SQL Server Data Tools | Documentos de Microsoft
+ms.date: 03/30/2018
 ms.prod: analysis-services
 ms.prod_service: analysis-services, azure-analysis-services
-ms.service: 
+ms.service: ''
 ms.component: data-mining
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: pro-bi
-ms.custom: 
-ms.technology: 
-ms.tgt_pltfrm: 
+ms.custom: ''
+ms.technology: ''
+ms.tgt_pltfrm: ''
 ms.topic: article
 f1_keywords:
 - sql13.ASVS.BIDTOOLSET.TOPLEVSEMMODUIENTRY.F1
 ms.assetid: 45735c57-2a95-4e45-8994-7242df6c9c5f
-caps.latest.revision: 
+caps.latest.revision: 22
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: On Demand
-ms.openlocfilehash: 98eb6a35d2dba7c71dcd857ffdfbe08c6e8bd17c
-ms.sourcegitcommit: d8ab09ad99e9ec30875076acee2ed303d61049b7
+ms.openlocfilehash: 062505fcf50d84cb853cff541dc0cf6ed6ee0f3e
+ms.sourcegitcommit: 8f1d1363e18e0c32ff250617ab6cb2da2147bf8e
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/23/2018
+ms.lasthandoff: 04/03/2018
 ---
-# <a name="tabular-model-designer-ssas"></a>Diseñador de modelos tabulares (SSAS)
+# <a name="tabular-model-designer"></a>Diseñador de modelos tabulares
 [!INCLUDE[ssas-appliesto-sqlas-aas](../../includes/ssas-appliesto-sqlas-aas.md)]
 El diseñador de modelos tabulares forma parte de [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)], integrado con Microsoft [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)], con plantillas adicionales de tipo de proyecto para el desarrollo específico de soluciones de modelos tabulares profesionales.  [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] se instala como una descarga web gratuita. Vea [Descargar SQL Server Data Tools (SSDT)](../../ssdt/download-sql-server-data-tools-ssdt.md) para más información.    
   
@@ -140,6 +140,5 @@ El diseñador de modelos tabulares forma parte de [!INCLUDE[ssBIDevStudioFull](.
   
 ## <a name="see-also"></a>Vea también  
  [Proyectos de modelos tabulares](../../analysis-services/tabular-models/tabular-model-projects-ssas-tabular.md)   
- [Propiedades](../../analysis-services/tabular-models/properties-ssas-tabular.md)  
   
   

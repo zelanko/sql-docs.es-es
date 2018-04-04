@@ -1,19 +1,19 @@
 ---
 title: Novedades de Master Data Services (MDS) | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 07/08/2016
 ms.prod: sql-non-specified
 ms.prod_service: mds
-ms.service: 
+ms.service: ''
 ms.component: non-specific
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - master-data-services
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: ad530f60-d480-4457-ba7a-93a10c8a1695
-caps.latest.revision: 
+caps.latest.revision: ''
 author: leolimsft
 ms.author: lle
 manager: craigg
@@ -43,7 +43,7 @@ ms.lasthandoff: 03/05/2018
   
  Las mejoras de rendimiento permiten crear modelos más grandes, cargar datos de manera más eficaz y obtener un mejor rendimiento general. Esto incluye la mejora del rendimiento del complemento para Microsoft Excel, que se ha optimizado para reducir los tiempos de carga de datos y habilitar el complemento para administrar entidades mayores.  
   
- Para obtener más información sobre el complemento para Microsoft Excel, vea [Master Data Services Add-in for Microsoft Excel](../master-data-services/microsoft-excel-add-in/master-data-services-add-in-for-microsoft-excel.md).  
+ Para obtener más información sobre el complemento para Microsoft Excel, vea [Complemento Master Data Services para Microsoft Excel](../master-data-services/microsoft-excel-add-in/master-data-services-add-in-for-microsoft-excel.md).  
   
  Se incluyen las siguientes mejoras de características.  
   

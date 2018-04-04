@@ -1,41 +1,39 @@
 ---
-title: "Novedades de los índices de almacén de columnas | Microsoft Docs"
-ms.custom: 
-ms.date: 12/1/2017
+title: Novedades de los índices de almacén de columnas | Microsoft Docs
+ms.custom: ''
+ms.date: 03/20/2018
 ms.prod: sql-non-specified
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
-ms.service: 
+ms.service: ''
 ms.component: indexes
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
-ms.assetid: 1fe5ea05-5b19-45a4-9b7a-8ae5ca367897
-caps.latest.revision: 
 author: barbkess
 ms.author: barbkess
 manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 74b0f562bc50496df5fdbf88edac546e503d8718
-ms.sourcegitcommit: 37f0b59e648251be673389fa486b0a984ce22c81
+ms.openlocfilehash: f1a9ab49828410519b1aa5a36eb0804d4d7b50a5
+ms.sourcegitcommit: ccb05cb5a4cccaf7ffa9e85a4684fa583bab914e
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/12/2018
+ms.lasthandoff: 03/22/2018
 ---
 # <a name="columnstore-indexes---what39s-new"></a>Novedades de los índices de almacén de columnas
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
 
-  Resumen de las características de almacén de columnas disponibles en cada versión de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] y en las últimas versiones de [!INCLUDE[ssSDS](../../includes/sssds-md.md)] Premium Edition, [!INCLUDE[ssSDW](../../includes/sssdw-md.md)] y [!INCLUDE[ssPDW](../../includes/sspdw-md.md)].  
+  Resumen de las características de almacén de columnas disponibles en cada versión de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] y en las últimas versiones de [!INCLUDE[ssSDS](../../includes/sssds-md.md)], [!INCLUDE[ssSDW](../../includes/sssdw-md.md)] y [!INCLUDE[ssPDW](../../includes/sspdw-md.md)].  
 
  > [!NOTE]
- > En el caso de [!INCLUDE[ssSDS](../../includes/sssds-md.md)], los índices de almacén de columnas solo están disponibles en Premium Edition.
+ > Para [!INCLUDE[ssSDS](../../includes/sssds-md.md)], los índices de almacén de columnas están disponibles en los niveles SQL Database Premium y Standard (S3 y versiones posteriores). Para SQL Server (2016 SP1 y versiones posteriores), los índices de almacén de columnas están disponibles en todas las ediciones. Para SQL Server (2016 y versiones anteriores), los índices de almacén de columnas solo están disponibles en Enterprise Edition.
  
 ## <a name="feature-summary-for-product-releases"></a>Resumen de las características para cada versión del producto  
  En esta tabla se resumen las características fundamentales de los índices de almacén de columnas y los productos en los que están disponibles.  
 
-|Característica de índice de almacén de columnas|[!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]|[!INCLUDE[ssSQL14](../../includes/sssql14-md.md)]|[!INCLUDE[ssSQL15](../../includes/sssql15-md.md)]|[!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)]|[!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)] Premium Edition|[!INCLUDE[ssSDW](../../includes/sssdw-md.md)]|  
+|Característica de índice de almacén de columnas|[!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]|[!INCLUDE[ssSQL14](../../includes/sssql14-md.md)]|[!INCLUDE[ssSQL15](../../includes/sssql15-md.md)]|[!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)]|[!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)]|[!INCLUDE[ssSDW](../../includes/sssdw-md.md)]|  
 |-------------------------------|---------------------------|---------------------------|---------------------------|--------------------------------------------|-------------------------|---|  
 |Ejecución de lotes de consultas multiproceso|sí|sí|sí|sí|sí|sí| 
 |Ejecución de lotes para las consultas de un solo subproceso|||sí|sí|sí|sí|  

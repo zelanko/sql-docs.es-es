@@ -102,8 +102,8 @@
 ## [Minería de datos](data-mining-tutorials-analysis-services.md)  
 
 # Instrucciones
-## [Modelado tabular](../analysis-services/tabular-models/tabular-models-ssas.md)
-## [Modelado multidimensional](../analysis-services/multidimensional-models/multidimensional-models-ssas.md)
+## [Modelos tabulares](../analysis-services/tabular-models/tabular-models-ssas.md)
+## [Modelos multidimensionales](../analysis-services/multidimensional-models/multidimensional-models-ssas.md)
 ## [Minería de datos](../analysis-services/data-mining/data-mining-ssas.md)
 ## [Power Pivot para SharePoint](../analysis-services/power-pivot-sharepoint/power-pivot-for-sharepoint-ssas.md)
 ## [Administrar servidores](../analysis-services/instances/analysis-services-instance-management.md)

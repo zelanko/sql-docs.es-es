@@ -1,29 +1,29 @@
 ---
-title: "Tabla de tecnología ADO | Documentos de Microsoft"
-ms.custom: 
+title: Tabla de tecnología ADO | Documentos de Microsoft
+ms.custom: ''
 ms.date: 01/19/2017
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.prod: sql-non-specified
 ms.prod_service: drivers
-ms.service: 
+ms.service: ''
 ms.component: ado
-ms.technology: "“drivers”"
+ms.technology: drivers
 ms.topic: article
 helpviewer_keywords:
 - ADO, technologies
 ms.assetid: 38c8ad3c-d6f1-40f6-a394-bbba6ed861e5
-caps.latest.revision: 
+caps.latest.revision: 15
 author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: d6ab214b72913118e12d1ce1a7db67e0e00dc118
-ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
+ms.openlocfilehash: ab203bab4b9fd5d83a9ca71a1e32ae97577172c6
+ms.sourcegitcommit: 8f1d1363e18e0c32ff250617ab6cb2da2147bf8e
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/09/2018
+ms.lasthandoff: 04/03/2018
 ---
 # <a name="products-and-technologies-table"></a>Productos y tecnologías tabla
 En la tabla siguiente se enumera los productos de Microsoft, herramientas y tecnologías que se tratan en la Guía del programador de ADO. Se proporcionan vínculos, siempre que sea posible, a temas relevantes en la guía.

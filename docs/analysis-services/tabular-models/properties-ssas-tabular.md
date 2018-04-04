@@ -1,31 +1,31 @@
 ---
 title: Propiedades | Documentos de Microsoft
-ms.custom: 
+ms.custom: ''
 ms.date: 03/01/2017
 ms.prod: analysis-services
 ms.prod_service: analysis-services, azure-analysis-services
-ms.service: 
+ms.service: ''
 ms.component: data-mining
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: pro-bi
-ms.technology: 
-ms.tgt_pltfrm: 
+ms.technology: ''
+ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: a59d3448-8619-4044-923b-8effba926dfa
-caps.latest.revision: 
+caps.latest.revision: 16
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
 ms.openlocfilehash: a609149d5f561519e6971f2c8c737d678315bb33
-ms.sourcegitcommit: d8ab09ad99e9ec30875076acee2ed303d61049b7
+ms.sourcegitcommit: 9f4330a4b067deea396b8567747a6771f35e6eee
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/23/2018
+ms.lasthandoff: 03/31/2018
 ---
 # <a name="properties"></a>Propiedades 
 [!INCLUDE[ssas-appliesto-sqlas-aas](../../includes/ssas-appliesto-sqlas-aas.md)]
-Los proyectos de modelos tabulares de [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] tienen varias propiedades que definen el comportamiento del proyecto, el modelo, los informes y la implementación. Los valores de las propiedades se almacenan en formato XML en el archivo Model.bim; sin embargo, todas las propiedades descritas en esta sección se pueden configurar en las ventanas **Propiedades** de [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)].  
+  Los proyectos de modelos tabulares de [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] tienen varias propiedades que definen el comportamiento del proyecto, el modelo, los informes y la implementación. Los valores de las propiedades se almacenan en formato XML en el archivo Model.bim; sin embargo, todas las propiedades descritas en esta sección se pueden configurar en las ventanas **Propiedades** de [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)].  
   
 ## <a name="related-tasks"></a>Tareas relacionadas  
   

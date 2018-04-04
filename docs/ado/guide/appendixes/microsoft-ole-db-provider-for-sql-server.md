@@ -2,34 +2,36 @@
 title: Proveedor Microsoft OLE DB para SQL Server | Documentos de Microsoft
 ms.prod: sql-non-specified
 ms.prod_service: drivers
-ms.service: 
+ms.service: ''
 ms.component: ado
 ms.technology:
 - drivers
-ms.custom: 
+ms.custom: ''
 ms.date: 01/19/2017
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - providers [ADO], OLE DB provider for SQL Server
 - OLE DB provider for SQL Server [ADO]
 - SQLOLEDB [ADO]
 ms.assetid: 99bc40c4-9181-4ca1-a06f-9a1a914a0b7b
-caps.latest.revision: 
+caps.latest.revision: 19
 author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.workload: Active
-ms.openlocfilehash: 3d7be2d6b7f9be8105723b8781106b50da678b11
-ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
+ms.openlocfilehash: 69e32ae7ddb254e18d0789f22bb6471da17a0c5e
+ms.sourcegitcommit: 9f4330a4b067deea396b8567747a6771f35e6eee
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/09/2018
+ms.lasthandoff: 03/30/2018
 ---
 # <a name="microsoft-ole-db-provider-for-sql-server-overview"></a>Proveedor Microsoft OLE DB para Introducción a SQL Server
 El proveedor Microsoft OLE DB para SQL Server, SQLOLEDB, permite que ADO tener acceso a Microsoft SQL Server.
+
+**Nota:** no se recomienda utilizar este controlador para el nuevo desarrollo. El nuevo proveedor de OLE DB se llama el [controlador OLE DB de Microsoft para SQL Server](../../../connect/oledb/oledb-driver-for-sql-server.md) (MSOLEDBSQL) que se actualizará con las últimas características de servidor en el futuro.
 
 ## <a name="connection-string-parameters"></a>Parámetros de cadena de conexión
  Para conectarse a este proveedor, establezca el *proveedor* argumento pasado a la [ConnectionString](../../../ado/reference/ado-api/connectionstring-property-ado.md) propiedad:

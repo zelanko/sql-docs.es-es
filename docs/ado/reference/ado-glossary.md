@@ -1,28 +1,28 @@
 ---
 title: Glosario de ADO | Documentos de Microsoft
-ms.custom: 
+ms.custom: ''
 ms.date: 01/19/2017
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.prod: sql-non-specified
 ms.prod_service: drivers
-ms.service: 
+ms.service: ''
 ms.component: ado
-ms.technology: "“drivers”"
+ms.technology: drivers
 ms.topic: article
 helpviewer_keywords:
 - ADO, glossary
 ms.assetid: b0478836-4123-4357-969a-c5784fc28be5
-caps.latest.revision: 
+caps.latest.revision: 15
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: ed92b88736cdc579ddee67dff313f8aad3c69b71
-ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
+ms.openlocfilehash: f24e579d2cd1802b42ce4ae2cbc2d8b5b8e447e6
+ms.sourcegitcommit: 8f1d1363e18e0c32ff250617ab6cb2da2147bf8e
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/09/2018
+ms.lasthandoff: 04/03/2018
 ---
 # <a name="ado-glossary"></a>Glosario de ADO
 En este tema define los términos relacionados con ADO.  
@@ -54,7 +54,7 @@ En este tema define los términos relacionados con ADO.
  Una asignación entre un campo en una tabla y una variable. En las extensiones de Visual C++ de ADO, **Recordset** campos se asignan a variables de C o C++.  
   
  bitmask  
- Un valor numérico destinado a una comparación de valores de bit a bit con otros valores numéricos, normalmente para marcar opciones en parámetros o valores devueltos. Esta comparación se suele realizar mediante operadores lógicos bit a bit, como **y** y **o** en Visual Basic,  **&**  y **&#124;** en C++.  
+ Un valor numérico destinado a una comparación de valores de bit a bit con otros valores numéricos, normalmente para marcar opciones en parámetros o valores devueltos. Esta comparación se suele realizar mediante operadores lógicos bit a bit, como **y** y **o** en Visual Basic, **&** y **&#124;** en C++.  
   
  Por ejemplo, la propiedad ADO **FieldAttributeEnum** valores pueden utilizarse como máscaras de bits para determinar los atributos de un campo. Suponga que desea determinar si un campo se puede actualizar. Puede comprobar con la siguiente expresión en Visual Basic:`Field.Attributes AND adFldUpdatable`  
   
@@ -165,7 +165,7 @@ En este tema define los términos relacionados con ADO.
   
 ## <a name="e"></a>E  
  Enumeración  
- Una lista de constantes con nombre. Los valores enumerados no necesitan ser únicos. Sin embargo, el nombre de cada valor debe ser único dentro del ámbito donde se define la enumeración. En ADO, las enumeraciones se utilizan para parámetros numéricos y valores devuelven, para agregar significado al código de ADO y para proteger al programador de los valores numéricos (que pueden variar de una versión a otra). Por ejemplo, para abrir una variable static **Recordset**, use la **adOpenStatic** valor enumerado:`Recordset.Open ,,adOpenStatic`  
+ Una lista de constantes con nombre. Los valores enumerados no necesitan ser únicos. Sin embargo, el nombre de cada valor debe ser único dentro del ámbito donde se define la enumeración. En ADO, las enumeraciones se utilizan para parámetros numéricos y valores devuelven, para agregar significado al código de ADO y para proteger al programador de los valores numéricos (que pueden variar de una versión a otra). Por ejemplo, para abrir una variable static **Recordset**, use la **adOpenStatic** valor enumerado: `Recordset.Open ,,adOpenStatic`  
   
  También se denomina *constante enumerada*. Vea también *constante*.  
   

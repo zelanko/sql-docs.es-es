@@ -1,15 +1,16 @@
 ---
 title: Administrar eventos | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql-non-specified
 ms.prod_service: sql-tools
-ms.service: 
+ms.service: ''
 ms.component: ssms-agent
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: tools-ssms
-ms.tgt_pltfrm: 
+ms.technology:
+- tools-ssms
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - event forwarding servers [SQL Server]
@@ -20,19 +21,24 @@ helpviewer_keywords:
 - alerts [SQL Server], management servers
 - SQL Server Agent alerts, management servers
 ms.assetid: 8f4ee7f5-80df-49fd-b2b8-d020e04b6e1b
-caps.latest.revision: "5"
+caps.latest.revision: ''
 author: stevestein
 ms.author: sstein
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: aaa831f2f09c12a02fa997a912bd9d0b97ec6cba
-ms.sourcegitcommit: b6116b434d737d661c09b78d0f798c652cf149f3
+ms.openlocfilehash: fd3d47987a13cd3b16e7bdfaf71439986ded9a13
+ms.sourcegitcommit: 34766933e3832ca36181641db4493a0d2f4d05c6
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/17/2018
+ms.lasthandoff: 03/22/2018
 ---
 # <a name="manage-events"></a>Administrar eventos
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] Puede reenviar todos los mensajes de eventos que tengan o superen un nivel de gravedad de error específico a una instancia de [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]. Esto se denomina *reenvío de eventos*. El servidor de reenvío es un servidor dedicado que también puede ser un servidor maestro. Puede utilizar el reenvío de eventos para centralizar la administración de alertas para un grupo de servidores, con lo que se reduce la carga de trabajo de los servidores con un alto grado de utilización.  
+[!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
+
+> [!IMPORTANT]  
+> En [Instancia administrada de Azure SQL Database](https://docs.microsoft.com/azure/sql-database/sql-database-managed-instance), la mayoría de las características de agente SQL Server son compatibles actualmente, aunque no todas. Vea [Diferencias de T-SQL en Instancia administrada de Azure SQL Database](https://docs.microsoft.com/azure/sql-database/sql-database-managed-instance-transact-sql-information#sql-server-agent) para obtener más información.
+
+Puede reenviar todos los mensajes de eventos que tengan o superen un nivel de gravedad de error específico a una instancia de [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] . Esto se denomina *reenvío de eventos*. El servidor de reenvío es un servidor dedicado que también puede ser un servidor maestro. Puede utilizar el reenvío de eventos para centralizar la administración de alertas para un grupo de servidores, con lo que se reduce la carga de trabajo de los servidores con un alto grado de utilización.  
   
 Un servidor que recibe eventos para un grupo de servidores distintos se denomina *servidor de administración de alertas*. En un entorno multiservidor, el servidor maestro se designa como servidor de administración de alertas.  
   

@@ -19,19 +19,21 @@ helpviewer_keywords:
 - solutions [SQL Server Management Studio], tutorials
 - SQL Server Management Studio [SQL Server], tutorials
 - scripts [SQL Server], SQL Server Management Studio
-ms.openlocfilehash: 2ee56bc26c22f91af7bf156ea967c19b61eab881
-ms.sourcegitcommit: 8e897b44a98943dce0f7129b1c7c0e695949cc3b
+ms.openlocfilehash: bc20cc573c6b0890e5b16f4876636534f9fbb916
+ms.sourcegitcommit: ccb05cb5a4cccaf7ffa9e85a4684fa583bab914e
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/21/2018
+ms.lasthandoff: 03/22/2018
 ---
 # <a name="tutorial-script-objects-in-sql-server-management-studio"></a>Tutorial: Crear scripts de objetos en SQL Server Management Studio
 En este tutorial aprenderá a generar scripts de Transact-SQL (T-SQL) para distintos objetos de SQL Server Management Studio.  En este tutorial encontrará ejemplos de cómo crear scripts de los siguientes objetos: 
- - Consultas al llevar a cabo acciones en la GUI
- - Bases de datos de dos formas diferentes ("Script As" [Generar script como] y "Generar script")
- - Tablas
- - Procedimientos almacenados
- - Eventos extendidos
+
+> [!div class="checklist"]
+> * Consultas al llevar a cabo acciones en la GUI
+> * Bases de datos de dos formas diferentes ("Script As" [Generar script como] y "Generar script")
+> * Tablas
+> * Procedimientos almacenados
+> * Eventos extendidos
 
 El resumen de este tutorial es que se pueden crear scripts de todos los objetos del **Explorador de objetos**. Para ello, se debe hacer clic con el botón derecho en un objeto y seleccionar la opción **Script Object As** (Crear script de objeto como). 
 
@@ -41,14 +43,13 @@ Para llevar a cabo este tutorial necesita tener SQL Server Management Studio, ac
 
 - Instale [SQL Server Management Studio](https://docs.microsoft.com/en-us/sql/ssms/download-sql-server-management-studio-ssms).
 - Instale [SQL Server 2017 Developer Edition](https://www.microsoft.com/en-us/sql-server/sql-server-downloads).
-- Descargar una [Base de datos de ejemplo AdventureWorks](https://github.com/Microsoft/sql-server-samples/releases). 
-    - Aquí encontrará instrucciones para restaurar bases de datos en SSMS: [Restaurar una base de datos](https://docs.microsoft.com/en-us/sql/relational-databases/backup-restore/restore-a-database-backup-using-ssms). 
+- Descargar una [Base de datos de ejemplo AdventureWorks](https://github.com/Microsoft/sql-server-samples/releases). Aquí encontrará instrucciones para restaurar bases de datos en SSMS: [Restaurar una base de datos](https://docs.microsoft.com/en-us/sql/relational-databases/backup-restore/restore-a-database-backup-using-ssms). 
 
 
 ## <a name="script-queries-from-gui"></a>Crear scripts de consultas desde la interfaz gráfica de usuario
 Siempre que lleve a cabo una tarea con la interfaz gráfica de usuario (GUI) en SSMS, también puede generar el código de T-SQL asociado a esa tarea. En los siguientes ejemplos se muestra cómo hacerlo al hacer una copia de seguridad de una base de datos y al reducir el registro de transacciones.  Estos mismos pasos se pueden aplicar a cualquier acción que se lleve a cabo con la GUI. 
 
-### <a name="scriptt-sql-when-backing-up-a-database"></a>Crear un script de T-SQL al hacer una copia de seguridad de una base de datos
+### <a name="script-t-sql-when-backing-up-a-database"></a>Creación de un script de T-SQL al hacer una copia de seguridad de una base de datos
 1. Conéctese a su servidor SQL Server.
 2. Expanda el nodo **Bases de datos** .
 3. Haga clic con el botón derecho en la base de datos > **Tareas** > **Copia de seguridad**:
@@ -82,7 +83,7 @@ Siempre que lleve a cabo una tarea con la interfaz gráfica de usuario (GUI) en 
     ![Pegar el script](media/scripting-ssms/paste.png)
 
 
-## <a name="script-databases"></a>Crear un script de bases de datos
+## <a name="script-databases"></a>Creación un script de bases de datos
 En la siguiente sección se describe cómo crear un script de la base de datos con la opción **Script As** (Generar script como) y con la opción **Generar scripts**.  Con la opción **Script As** (Generar script como) se volverán a crear las opciones de base de datos y de configuración para este. Con la opción **Generar scripts** se crearán scripts de todos los objetos de la base de datos, pero no de los datos. Para incluir los datos en el script, deberá usar el [Asistente para importación y exportación](https://docs.microsoft.com/en-us/sql/integration-services/import-export-data/start-the-sql-server-import-and-export-wizard).  
 
 

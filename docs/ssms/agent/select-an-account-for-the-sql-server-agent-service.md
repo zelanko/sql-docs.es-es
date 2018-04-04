@@ -1,15 +1,16 @@
 ---
 title: Seleccionar una cuenta para el servicio Agente SQL Server | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 05/04/2017
 ms.prod: sql-non-specified
 ms.prod_service: sql-tools
-ms.service: 
+ms.service: ''
 ms.component: ssms-agent
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: tools-ssms
-ms.tgt_pltfrm: 
+ms.technology:
+- tools-ssms
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - roles [SQL Server], SQL Server Agent
@@ -23,19 +24,24 @@ helpviewer_keywords:
 - Windows domain accounts [SQL Server]
 - security [SQL Server], SQL Server Agent
 ms.assetid: fe658e32-9e6b-4147-a189-7adc3bd28fe7
-caps.latest.revision: "5"
+caps.latest.revision: ''
 author: stevestein
 ms.author: sstein
 manager: craigg
 ms.workload: Active
-ms.openlocfilehash: 1e6dcf9b100cd47eb2611d5b050cff4fbe1ad804
-ms.sourcegitcommit: b6116b434d737d661c09b78d0f798c652cf149f3
+ms.openlocfilehash: 741329aa268425de8d355fb0ec5074261ade9d5d
+ms.sourcegitcommit: 34766933e3832ca36181641db4493a0d2f4d05c6
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/17/2018
+ms.lasthandoff: 03/22/2018
 ---
 # <a name="select-an-account-for-the-sql-server-agent-service"></a>Seleccionar una cuenta para el servicio Agente SQL Server
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] La cuenta de inicio del servicio define la cuenta de [!INCLUDE[msCoName](../../includes/msconame_md.md)] Windows en la que se ejecuta el Agente [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] y sus permisos de red. [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] se ejecuta como una cuenta de usuario especificada. Se puede seleccionar una cuenta para el servicio del Agente [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] mediante el Administrador de configuración de [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] , donde se pueden elegir las opciones siguientes:  
+[!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
+
+> [!IMPORTANT]  
+> En [Instancia administrada de Azure SQL Database](https://docs.microsoft.com/azure/sql-database/sql-database-managed-instance), la mayoría de las características de agente SQL Server son compatibles actualmente, aunque no todas. Vea [Diferencias de T-SQL en Instancia administrada de Azure SQL Database](https://docs.microsoft.com/azure/sql-database/sql-database-managed-instance-transact-sql-information#sql-server-agent) para obtener más información.
+
+La cuenta de inicio del servicio define la cuenta de [!INCLUDE[msCoName](../../includes/msconame_md.md)] Windows en la que se ejecuta el Agente [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] y sus permisos de red. [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] se ejecuta como una cuenta de usuario especificada. Se puede seleccionar una cuenta para el servicio del Agente [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] mediante el Administrador de configuración de [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] , donde se pueden elegir las opciones siguientes:  
   
 -   **Cuenta integrada**. Puede elegirla de una lista con las siguientes cuentas de servicio de Windows integradas:  
   

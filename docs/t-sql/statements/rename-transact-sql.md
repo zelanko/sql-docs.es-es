@@ -1,28 +1,28 @@
 ---
 title: RENAME (Transact-SQL) | Microsoft Docs
-ms.custom: 
-ms.date: 11/20/2017
-ms.prod: 
+ms.custom: ''
+ms.date: 03/21/2018
+ms.prod: ''
 ms.prod_service: sql-data-warehouse, pdw
-ms.reviewer: 
+ms.reviewer: ''
 ms.service: sql-data-warehouse
 ms.component: t-sql|statements
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 ms.assetid: 0907cfd9-33a6-4fa6-91da-7d6679fee878
-caps.latest.revision: 
+caps.latest.revision: ''
 author: barbkess
 ms.author: barbkess
 manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 3c08b4d991717d877ca33cd2d136d0dbf0d30483
-ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
+ms.openlocfilehash: 1766a9e1dbe040ed120aaaf5d35fe0ab858c4e7a
+ms.sourcegitcommit: 34766933e3832ca36181641db4493a0d2f4d05c6
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/25/2018
+ms.lasthandoff: 03/22/2018
 ---
 # <a name="rename-transact-sql"></a>RENAME (Transact-SQL)
 [!INCLUDE[tsql-appliesto-xxxxxx-xxxx-asdw-pdw-md](../../includes/tsql-appliesto-xxxxxx-xxxx-asdw-pdw-md.md)]
@@ -30,7 +30,7 @@ ms.lasthandoff: 01/25/2018
   Cambia el nombre de una tabla creada por el usuario en [!INCLUDE[ssSDW](../../includes/sssdw-md.md)]. Cambia el nombre de una tabla o base de datos creada por el usuario en [!INCLUDE[ssPDW](../../includes/sspdw-md.md)].  
   
 > [!NOTE]  
->  Para cambiar el nombre de una base de datos en [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], use el procedimiento almacenado [sp_renamedb &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-renamedb-transact-sql.md). Para cambiar el nombre de una base de datos en Azure SQL Database, use la instrucción [ALTER DATABASE (Azure SQL Database)](/statements/alter-database-azure-sql-database.md). 
+>  Para cambiar el nombre de una base de datos en [!INCLUDE[ssSDW](../../includes/sssdw-md.md)], use [ALTER DATABASE (Azure SQL Data Warehouse](alter-database-azure-sql-data-warehouse.md).  Para cambiar el nombre de una base de datos en Azure SQL Database, use la instrucción [ALTER DATABASE (Azure SQL Database)](alter-database-azure-sql-database.md). Para cambiar el nombre de una base de datos en [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], use el procedimiento almacenado [sp_renamedb &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-renamedb-transact-sql.md).
   
 ## <a name="syntax"></a>Sintaxis  
   
@@ -38,7 +38,7 @@ ms.lasthandoff: 01/25/2018
 -- Syntax for Azure SQL Data Warehouse  
   
 -- Rename a table.  
-RENAME OBJECT [ :: ]  [ [ database_name .  [schema_name ] ] . ] | [schema_name . ] ] table_name TO new_table_name  
+RENAME OBJECT [::] [ [ database_name .  [schema_name ] ] . ] | [schema_name . ] ] table_name TO new_table_name  
 [;]  
   
 ```  
@@ -56,14 +56,12 @@ RENAME DATABASE [::] database_name TO new_database_name
 ```  
   
 ## <a name="arguments"></a>Argumentos  
- RENAME OBJECT [::]   
-          [ [*database_name* . [ *schema_name* ] . ] | [ *schema_name* . ] ]*table_name* TO *new_table_name*  
+ RENAME OBJECT [::] [ [*database_name* . [ *schema_name* ] . ] | [ *schema_name* . ] ]*table_name* TO *new_table_name*  
  **SE APLICA A:** [!INCLUDE[ssSDW](../../includes/sssdw-md.md)], [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
   
  Sirve para cambiar el nombre de una tabla definida por el usuario. Especifique la tabla cuyo nombre va a cambiar por un nombre de una, dos o tres partes.    Especifique la nueva tabla *new_table_name* como un nombre de una sola parte.  
   
- RENAME DATABASE [::]   
-          [ *database_name* TO *new_database_name*  
+ RENAME DATABASE [::] [ *database_name* TO *new_database_name*  
  **SE APLICA A:** [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
   
  Sirve para cambiar el nombre de una base de datos definida por el usuario de *database_name* a *new_database_name*.  El nombre de una base de datos no se puede cambiar a ninguno de los siguientes nombres de base de datos reservados de [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]:  
@@ -87,7 +85,7 @@ RENAME DATABASE [::] database_name TO new_database_name
 -   DWQueue  
   
 ## <a name="permissions"></a>Permisos  
- Para ejecutar este comando, necesita este permiso:  
+ Para ejecutar este comando, necesita el permiso siguiente:  
   
 -   Permiso **ALTER** en la tabla.  
    
@@ -98,10 +96,10 @@ RENAME DATABASE [::] database_name TO new_database_name
 El nombre de tablas externas, índices o vistas no se puede cambiar. En lugar de cambiarlo, puede quitar la tabla externa, índice o vista en cuestión y, luego, volver a crearlo con el nuevo nombre.
 
 ### <a name="cannot-rename-a-table-in-use"></a>No se puede cambiar el nombre de una tabla en uso  
- No se puede cambiar el nombre una tabla o una base de datos mientras estas están en uso. Cambiar el nombre de una tabla requiere un bloqueo exclusivo en dicha tabla. Si la tabla está en uso, puede que tenga que finalizar las sesiones que la estén usando. Para ello, puede usar el comando KILL. Use KILL con precaución, ya que cuando una sesión se finaliza, se revertirán todos los trabajos que no estén confirmados. Las sesiones en SQL Data Warehouse llevan el prefijo "SID". Cuando invoque el comando KILL, deberá incluir ese prefijo, así como el número de la sesión. En este ejemplo se muestra una lista de sesiones activas o inactivas y, luego, finaliza la sesión "SID1234".  
+ No se puede cambiar el nombre una tabla o una base de datos mientras estas están en uso. Cambiar el nombre de una tabla requiere un bloqueo exclusivo en dicha tabla. Si la tabla está en uso, puede que tenga que finalizar las sesiones que la estén usando. Para ello, puede usar el comando KILL. Use KILL con precaución, ya que cuando una sesión se finaliza, se revertirán todos los trabajos que no estén confirmados. Las sesiones en SQL Data Warehouse llevan el prefijo "SID". Incluya "SID" y el número de sesión al invocar el comando KILL. En este ejemplo se muestra una lista de sesiones activas o inactivas y, luego, finaliza la sesión "SID1234".  
   
 ### <a name="views-are-not-updated"></a>Las vistas no se actualizan  
- Al cambiar el nombre de una base de datos, todas las vistas que usan el nombre de la base de datos anterior dejarán de ser válidas. Esto ocurre con las vistas tanto dentro como fuera de la base de datos. Por ejemplo, si se cambia el nombre de la base de datos Sales, una vista que contenga `SELECT * FROM Sales.dbo.table1` dejará de ser válida. Para resolver este problema, puede abstenerse de usar nombres de tres partes en las vistas, o bien actualizar las vistas para que hagan referencia al nombre de la nueva base de datos.  
+ Al cambiar el nombre de una base de datos, todas las vistas que usan el nombre de la base de datos anterior dejarán de ser válidas. Este comportamiento se produce con las vistas tanto dentro como fuera de la base de datos. Por ejemplo, si se cambia el nombre de la base de datos Sales, una vista que contenga `SELECT * FROM Sales.dbo.table1` dejará de ser válida. Para resolver este problema, puede abstenerse de usar nombres de tres partes en las vistas, o bien actualizar las vistas para que hagan referencia al nombre de la nueva base de datos.  
   
  Al cambiar el nombre de una tabla, las vistas no se actualizan para que hagan referencia el nuevo nombre de tabla. Cada vista (ya sea dentro o fuera de la base de datos) que haga referencia al nombre de tabla anterior dejará de ser válida. Para resolver este problema, puede actualizar cada vista para que haga referencia al nombre de la nueva tabla.  
   
@@ -141,7 +139,7 @@ RENAME OBJECT mydb.dbo.Customer TO Customer1;
 ### <a name="c-move-a-table-to-a-different-schema"></a>C. Mover una tabla a otro esquema  
  **SE APLICA A:** [!INCLUDE[ssSDW](../../includes/sssdw-md.md)], [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
   
- Si trata de mover el objeto a otro esquema, use [ALTER SCHEMA &#40;Transact-SQL&#41;](../../t-sql/statements/alter-schema-transact-sql.md). En el siguiente ejemplo se mueve el elemento de tabla desde el esquema product al esquema dbo.  
+ Si trata de mover el objeto a otro esquema, use [ALTER SCHEMA &#40;Transact-SQL&#41;](../../t-sql/statements/alter-schema-transact-sql.md). Por ejemplo, con la siguiente instrucción se mueve el elemento de tabla desde el esquema product al esquema dbo.  
   
 ```  
 ALTER SCHEMA dbo TRANSFER OBJECT::product.item;  
@@ -150,7 +148,7 @@ ALTER SCHEMA dbo TRANSFER OBJECT::product.item;
 ### <a name="d-terminate-sessions-before-renaming-a-table"></a>D. Terminar las sesiones antes de cambiar el nombre de una tabla  
  **SE APLICA A:** [!INCLUDE[ssSDW](../../includes/sssdw-md.md)], [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
   
- Es importante recordar que no se puede cambiar el nombre una tabla mientras está en uso. Cambiar el nombre de una tabla requiere un bloqueo exclusivo en dicha tabla. Si la tabla está en uso, puede que tenga que finalizar la sesión que la esté usando. Para ello, puede usar el comando KILL. Use KILL con precaución, ya que cuando una sesión se finaliza, se revertirán todos los trabajos que no estén confirmados. Las sesiones en SQL Data Warehouse llevan el prefijo "SID". Cuando invoque el comando KILL, deberá incluir ese prefijo, así como el número de la sesión. En este ejemplo se muestra una lista de sesiones activas o inactivas y, luego, finaliza la sesión "SID1234".  
+ Es importante recordar que no se puede cambiar el nombre una tabla mientras está en uso. Cambiar el nombre de una tabla requiere un bloqueo exclusivo en dicha tabla. Si la tabla está en uso, puede que tenga que finalizar la sesión que la esté usando. Para ello, puede usar el comando KILL. Use KILL con precaución, ya que cuando una sesión se finaliza, se revertirán todos los trabajos que no estén confirmados. Las sesiones en SQL Data Warehouse llevan el prefijo "SID". Cuando invoque el comando KILL, deberá incluir "SID", así como el número de la sesión. En este ejemplo se muestra una lista de sesiones activas o inactivas y, luego, finaliza la sesión "SID1234".  
   
 ```  
 -- View a list of the current sessions  

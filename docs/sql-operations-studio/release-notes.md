@@ -1,28 +1,45 @@
 ---
-title: "Notas de la versión de Microsoft SQL operaciones Studio (versión preliminar) | Documentos de Microsoft"
-description: "Notas de la versión de Microsoft SQL operaciones Studio (versión preliminar)"
+title: Notas de la versión de Microsoft SQL operaciones Studio (versión preliminar) | Documentos de Microsoft
+description: Notas de la versión de Microsoft SQL operaciones Studio (versión preliminar)
 ms.custom: tools|sos
-ms.date: 02/15/2018
+ms.date: 03/28/2018
 ms.prod: sql-non-specified
 ms.reviewer: alayu; erickang; sstein
 ms.suite: sql
 ms.prod_service: sql-tools
 ms.component: sos
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 author: stevestein
 ms.author: sstein
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 1b8c5e3cce8f84f0565c764a47d3f3b7c1709454
-ms.sourcegitcommit: 4edac878b4751efa57601fe263c6b787b391bc7c
+ms.openlocfilehash: ba86403e791af25de4f7bcd8b1cbd7b5f188897b
+ms.sourcegitcommit: d6881107b51e1afe09c2d8b88b98d075589377de
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/19/2018
+ms.lasthandoff: 03/28/2018
 ---
 # <a name="sql-operations-studio-preview-release-notes"></a>Notas de la versión de las operaciones de SQL Studio (versión preliminar)
 
-**[Descargue la versión preliminar pública de febrero](download.md)**
+**[Descargue la versión preliminar pública de marzo](download.md)**
+
+## <a name="march-2018-march-public-preview"></a>De 2018 de marzo (vista previa pública de marzo)
+
+fecha de lanzamiento: 28 de marzo de 2018  
+versión: 0.27.3
+
+El *marzo Public Preview* continúa solucionar los problemas de GitHub superiores y se concentra en mejorar nuestra historia de extensibilidad. Habilitar específicamente el Administrador de extensiones, mejora la administración de panel y proporcionar el Agente SQL y las extensiones de visión. Esta versión incluye las siguientes mejoras:
+
+- Mejorar el modelo de extensibilidad de panel para admitir la visión con fichas y paneles de configuración.
+   - Administrador de extensiones permite simple adquisición de extensiones.
+   - Extensiones de panel para sp_whoisactive de [whoisactive.com](http://www.whoisactive.com).
+   - Para obtener más información, consulte [ampliar la funcionalidad de las operaciones de SQL Studio](extensions.md).
+- Agregar más [API de extensibilidad para la conexión y el objeto explorer](https://github.com/Microsoft/sqlopsstudio/wiki/Extensibility-API) administración.
+- Prosiga para arreglar afecta a los clientes importantes [GitHub problemas](https://github.com/Microsoft/sqlopsstudio/issues).
+
+Para obtener más información, consulte el [registro de cambios](https://github.com/Microsoft/sqlopsstudio/blob/master/CHANGELOG.md).
+
 
 ## <a name="february-2018-february-public-preview"></a>Febrero de 2018 (vista previa pública de febrero)
 
@@ -63,8 +80,6 @@ El *Public Preview de enero* incluye algunas sugerencias sobre características 
 - Corregir errores de secuencias de comandos de separación de arrastrar y colocar.
 - Corregir incorrectos de los iconos anclados menú Inicio.
 - Corregir falta la cuenta de Azure icono de personalización de marca.
-
-Para obtener más información, consulte el [registro de cambios](https://github.com/Microsoft/sqlopsstudio/blob/master/CHANGELOG.md).
 
 
 ## <a name="december-2017-december-public-preview"></a>Diciembre de 2017 (vista previa pública de diciembre)

@@ -18,18 +18,20 @@ helpviewer_keywords:
 - Transact-SQL tutorials
 - SQL Server Management Studio [SQL Server], tutorials
 - scripts [SQL Server], SQL Server Management Studio
-ms.openlocfilehash: 05a9883ff436991e5ee830ce1561ecced0fa9b60
-ms.sourcegitcommit: 8e897b44a98943dce0f7129b1c7c0e695949cc3b
+ms.openlocfilehash: a01586f4ab3d002e33b7679f6fe2e5a165f260e1
+ms.sourcegitcommit: ccb05cb5a4cccaf7ffa9e85a4684fa583bab914e
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/21/2018
+ms.lasthandoff: 03/22/2018
 ---
 # <a name="tutorial-using-templates-within-sql-server-management-studio"></a>Tutorial: Usar plantillas en SQL Server Management Studio
 En este tutorial se presentan las plantillas predefinidas de Transact-SQL (T-SQL) que están disponibles en SQL Server Management Studio (SSMS). En este artículo aprenderá a:
-    - Usar el Explorador de plantillas para generar scripts de T-SQL
-    - Editar una plantilla existente 
-    - Buscar las plantillas en el disco
-    - Crear una plantilla
+
+> [!div class="checklist"]
+> * Usar el Explorador de plantillas para generar scripts de T-SQL
+> * Editar una plantilla existente 
+> * Buscar las plantillas en el disco
+> * Crear una plantilla
    
 
 ## <a name="prerequisites"></a>Prerequisites
@@ -74,7 +76,7 @@ También puede editar las plantillas existentes en el **Explorador de plantillas
 6. Vuelva a abrir la plantilla que acaba de guardar. Las ediciones deberían aparecer ahí.
  
 
-## <a name="locate-the-templates-on-disk"></a>Buscar las plantillas en el disco
+## <a name="locate-the-templates-on-disk"></a>Búsqueda de plantillas en el disco
 Cuando una plantilla esté abierta, podrá buscarla en el disco.
 
 1. Seleccione una plantilla en el **Explorador de plantillas** > **Editar**.
@@ -83,16 +85,16 @@ Cuando una plantilla esté abierta, podrá buscarla en el disco.
     ![Plantillas en el disco](media/templates-ssms/templatesondisk.png)
   
 
-## <a name="create-a-new-template"></a>Crear una plantilla
+## <a name="create-a-new-template"></a>Creación de una plantilla
 En el **Explorador de plantillas** también puede crear plantillas. Estos pasos le enseñarán a crear una carpeta y, después, una plantilla dentro de esa carpeta, aunque con estos pasos también puede crear una plantilla personalizada dentro de las carpetas existentes. 
 
 1. Abra el **Explorador de plantillas**.
-2. Haga clic con el botón derecho en Plantillas de SQL Server > **Nuevo** > **Carpeta**. 
+2. Haga clic con el botón derecho en Plantillas de SQL Server > **Nuevo** > **Carpeta**.
 3. Asigne a esta carpeta el nombre **Plantillas personalizadas**:
 
     ![Crear plantillas personalizadas](media/templates-ssms/creatingcustomtemplate.png)
 
-4. Haga clic con el botón derecho en la carpeta **Plantillas personalizadas** que acaba de crear > **Nuevo** > **Plantilla** > asigne un nombre a la plantilla. 
+4. Haga clic con el botón derecho en la carpeta **Plantillas personalizadas** que acaba de crear > **Nuevo** > **Plantilla** > asigne un nombre a la plantilla:
  
     ![Crear una plantilla personalizada](media/templates-ssms/createnewtemplate.png)
    
@@ -108,4 +110,4 @@ En el siguiente artículo se proporcionan algunas recomendaciones y trucos adici
 
 Vaya al siguiente artículo para obtener más información
 > [!div class="nextstepaction"]
-> [Botón de pasos siguientes](ssms-tricks.md))
+> [Botón de pasos siguientes](ssms-tricks.md)

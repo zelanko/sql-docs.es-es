@@ -1,16 +1,16 @@
 ---
 title: BINARY_CHECKSUM  (Transact-SQL) | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 07/24/2017
 ms.prod: sql-non-specified
 ms.prod_service: sql-data-warehouse, database-engine, sql-database
-ms.service: 
+ms.service: ''
 ms.component: t-sql|functions
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - BINARY_CHECKSUM
@@ -21,16 +21,16 @@ helpviewer_keywords:
 - BINARY_CHECKSUM function
 - binary [SQL Server], checksum values
 ms.assetid: 07fece4d-58e3-446e-a3b5-92fe24d2d1fb
-caps.latest.revision: 
+caps.latest.revision: 21
 author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: c5fd777c7ce4ecc4530c47a2e8eb8bb1e14ce2d5
-ms.sourcegitcommit: 45e4efb7aa828578fe9eb7743a1a3526da719555
+ms.openlocfilehash: 9ff8368877b3fb2153685554f1484b5fbbcc7c3a
+ms.sourcegitcommit: 059fc64ba858ea2adaad2db39f306a8bff9649c2
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 04/04/2018
 ---
 # <a name="binarychecksum--transact-sql"></a>BINARY_CHECKSUM  (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-asdw-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-asdw-xxx-md.md)]
@@ -50,7 +50,10 @@ BINARY_CHECKSUM ( * | expression [ ,...n ] )
 Especifica que el cálculo se realiza en todas las columnas de la tabla. BINARY_CHECKSUM no incluye en el cálculo las columnas que tienen tipos de datos no comparables. Entre los tipos de datos no comparables se incluyen **text**, **ntext**, **image**, **cursor**, **xml** y los tipos definidos por el usuario no comparables de Common Language Runtime (CLR).
   
 *expression*  
-Es una [expression](../../t-sql/language-elements/expressions-transact-sql.md) de cualquier tipo. BINARY_CHECKSUM no incluye en el cálculo las expresiones que tienen tipos de datos no comparables.
+Es una [expresión](../../t-sql/language-elements/expressions-transact-sql.md) de cualquier tipo. BINARY_CHECKSUM no incluye en el cálculo las expresiones que tienen tipos de datos no comparables.
+
+## <a name="return-types"></a>Tipos devueltos  
+ **int**
   
 ## <a name="remarks"></a>Notas  
 BINARY_CHECKSUM(*), calculado en cualquier fila de una tabla, devuelve el mismo valor siempre que la fila no se modifique posteriormente. BINARY_CHECKSUM cumple las propiedades de una función hash: si se aplica BINARY_CHECKSUM sobre dos listas de expresiones, devuelve el mismo valor si los elementos correspondientes de las dos listas tienen el mismo tipo y son iguales cuando se comparan utilizando el operador igual (=). En esta definición, la comparación de valores NULL de un tipo específico se consideran como iguales. Si uno de los valores de la lista de expresiones cambia, la suma de comprobación de la lista generalmente también cambia. No obstante, existe una pequeña posibilidad de que la suma de comprobación no cambie. Por este motivo, no se recomienda usar BINARY_CHECKSUM para detectar si han cambiado los valores, a menos que la aplicación pueda tolerar perder un cambio ocasionalmente. Es más aconsejable usar HashBytes. Cuando se especifica un algoritmo hash MD5, la probabilidad de que HashBytes devuelva el mismo resultado de dos entradas diferentes es mucho menor que la de que lo haga BINARY_CHECKSUM.

@@ -1,25 +1,23 @@
 ---
-title: "Modificar el grupo de cuentas de usuario para el aprendizaje automático de SQL Server | Documentos de Microsoft"
+title: Modificar el grupo de cuentas de usuario para el aprendizaje automático de SQL Server | Documentos de Microsoft
 ms.date: 11/03/2017
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.prod: machine-learning-services
 ms.prod_service: machine-learning-services
 ms.component: r
-ms.technology: 
-ms.tgt_pltfrm: 
+ms.technology: ''
+ms.tgt_pltfrm: ''
 ms.topic: article
-ms.assetid: 58b79170-5731-46b5-af8c-21164d28f3b0
-caps.latest.revision: 
-author: jeannt
-ms.author: jeannt
-manager: cgronlund
+ms.author: heidist
+author: HeidiSteen
+manager: cgronlun
 ms.workload: Inactive
-ms.openlocfilehash: d12de2f8298e23d5396d7caf2496b293f1bf28ed
-ms.sourcegitcommit: 99102cdc867a7bdc0ff45e8b9ee72d0daade1fd3
+ms.openlocfilehash: 7c1efa87fef881a8b88b0967716ec062cf95e64f
+ms.sourcegitcommit: 059fc64ba858ea2adaad2db39f306a8bff9649c2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/11/2018
+ms.lasthandoff: 04/04/2018
 ---
 # <a name="modify-the-user-account-pool-for-sql-server-machine-learning"></a>Modificar el grupo de cuentas de usuario para el aprendizaje automático de SQL Server
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
@@ -43,7 +41,7 @@ De forma predeterminada, el grupo de cuentas de usuario contiene 20 cuentas de u
 
 Si más de una instancia usa el aprendizaje automático, el equipo tendrá varios grupos de usuarios. Un grupo no se pueden compartir entre instancias.
 
-### <a name = "HowToChangeGroup"></a>Cómo cambiar el número de cuentas de trabajo
+### <a name = "HowToChangeGroup"> </a>Cómo cambiar el número de cuentas de trabajo
 
 Para modificar el número de usuarios del grupo de cuentas, debe modificar las propiedades del servicio [!INCLUDE[rsql_launchpad](../../includes/rsql-launchpad-md.md)] tal y como se describe a continuación.
 

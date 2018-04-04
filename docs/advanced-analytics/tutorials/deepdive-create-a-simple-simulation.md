@@ -1,31 +1,29 @@
 ---
-title: "Cree una simulación simple (SQL y R profundización) | Documentos de Microsoft"
-ms.custom: 
+title: Cree una simulación simple (SQL y R profundización) | Documentos de Microsoft
+ms.custom: ''
 ms.date: 12/14/2017
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.prod: machine-learning-services
 ms.prod_service: machine-learning-services
-ms.component: 
-ms.technology: 
-ms.tgt_pltfrm: 
+ms.component: ''
+ms.technology: ''
+ms.tgt_pltfrm: ''
 ms.topic: tutorial
 applies_to:
 - SQL Server 2016
 - SQL Server 2017
 dev_langs:
 - R
-ms.assetid: f420b816-ddab-4a1a-89b9-c8285a2d33a3
-caps.latest.revision: 
-author: jeannt
-ms.author: jeannt
-manager: cgronlund
+ms.author: heidist
+author: HeidiSteen
+manager: cgronlun
 ms.workload: Inactive
-ms.openlocfilehash: cc613d303fa3200c3460face71399223e00272e6
-ms.sourcegitcommit: 99102cdc867a7bdc0ff45e8b9ee72d0daade1fd3
+ms.openlocfilehash: ca76aef56ef731d9190a8f40d8b4af2e9b04ca00
+ms.sourcegitcommit: 059fc64ba858ea2adaad2db39f306a8bff9649c2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/11/2018
+ms.lasthandoff: 04/04/2018
 ---
 # <a name="create-a-simple-simulation-sql-and-r-deep-dive"></a>Cree una simulación simple (SQL y R profundización)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
@@ -133,8 +131,8 @@ Si desea experimentar con estas técnicas con un conjunto de datos mayor de 10 m
 Para volver a utilizar este tutorial con los archivos de datos más grandes, descargar los datos y, a continuación, modifique cada uno de los orígenes de datos como sigue:
 
 1. Modifique las variables de `ccFraudCsv` y `ccScoreCsv` para que apunte a los nuevos archivos de datos
-2. Cambiar el nombre de la tabla que se hace referencia en *sqlFraudTable* a`ccFraud10`
-3. Cambiar el nombre de la tabla que se hace referencia en *sqlScoreTable* a`ccFraudScore10`
+2. Cambiar el nombre de la tabla que se hace referencia en *sqlFraudTable* a `ccFraud10`
+3. Cambiar el nombre de la tabla que se hace referencia en *sqlScoreTable* a `ccFraudScore10`
 
 ## <a name="additional-samples"></a>Ejemplos adicionales
 

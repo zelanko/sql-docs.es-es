@@ -1,26 +1,24 @@
 ---
 title: Rendimiento de los servicios de R - resultados y los recursos | Documentos de Microsoft
-ms.custom: 
+ms.custom: ''
 ms.date: 11/09/2017
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.prod: machine-learning-services
 ms.prod_service: machine-learning-services
 ms.component: r
-ms.technology: 
-ms.tgt_pltfrm: 
+ms.technology: ''
+ms.tgt_pltfrm: ''
 ms.topic: article
-ms.assetid: 0e902312-ad9c-480d-b82f-b871cd1052d9
-caps.latest.revision: 
-author: jeannt
-ms.author: jeannt
-manager: cgronlund
+ms.author: heidist
+author: HeidiSteen
+manager: cgronlun
 ms.workload: Inactive
-ms.openlocfilehash: 83c3590714660201d7411c360958f9ff4263240b
-ms.sourcegitcommit: 99102cdc867a7bdc0ff45e8b9ee72d0daade1fd3
+ms.openlocfilehash: 1a0d74c293f092e2c1eb3d9273c97d75b7034dfb
+ms.sourcegitcommit: 059fc64ba858ea2adaad2db39f306a8bff9649c2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/11/2018
+ms.lasthandoff: 04/04/2018
 ---
 # <a name="performance-for-r-services-results-and-resources"></a>Rendimiento de los servicios de R: resultados y recursos
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
@@ -136,7 +134,7 @@ En este experimento, `rxLinMod` se usó con la tabla *airlineWithIntCol*. El Pla
 
 **Alto rendimiento** opción de energía:
 
-| Nombre de la prueba | Ejecutar\# | Tiempo transcurrido | Promedio de tiempo |
+| Nombre de la prueba | Ejecutar \# | Tiempo transcurrido | Promedio de tiempo |
 |-----------|--------|--------------|--------------|
 | IntCol    | 1      | 3,57 segundos |              |
 |           | 2      | 3,45 segundos |              |
@@ -155,7 +153,7 @@ En este experimento, `rxLinMod` se usó con la tabla *airlineWithIntCol*. El Pla
 
 Opción de energía **Equilibrado**:
 
-| Nombre de la prueba | Ejecutar\# | Tiempo transcurrido | Promedio de tiempo |
+| Nombre de la prueba | Ejecutar \# | Tiempo transcurrido | Promedio de tiempo |
 |-----------|--------|--------------|--------------|
 | IntCol    | 1      | 3,89 segundos |              |
 |           | 2      | 4,15 segundos |              |

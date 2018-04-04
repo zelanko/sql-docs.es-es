@@ -14,11 +14,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 2c5abc032936bb63b50becd9f37300f294e14eb9
-ms.sourcegitcommit: d6881107b51e1afe09c2d8b88b98d075589377de
+ms.openlocfilehash: b52d06c5981a994ccb5ef3ace486ee0f6a946c38
+ms.sourcegitcommit: 059fc64ba858ea2adaad2db39f306a8bff9649c2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/28/2018
+ms.lasthandoff: 04/04/2018
 ---
 # <a name="download-and-install-sql-operations-studio-preview"></a>Descargue e instale las operaciones de SQL Studio (versión preliminar)
 
@@ -63,9 +63,18 @@ Esta versión de [!INCLUDE[name-sos](../includes/name-sos-short.md)] incluye una
 1. Descargar [ [!INCLUDE[name-sos](../includes/name-sos-short.md)] para Linux](https://go.microsoft.com/fwlink/?linkid=870840).
 1. Para extraer el archivo e inicie [!INCLUDE[name-sos](../includes/name-sos-short.md)], abra una nueva ventana de Terminal y escriba los siguientes comandos:
 
+   **Instalación de Debian:**
    ```bash
    cd ~
    sudo dpkg -i ./Downloads/sqlops-linux-<version string>.deb
+
+   sqlops
+   ```
+
+   **Instalación de RPM:**
+   ```bash
+   cd ~
+   yum install ./Downloads/sqlops-linux-<version string>.rpm
 
    sqlops
    ```

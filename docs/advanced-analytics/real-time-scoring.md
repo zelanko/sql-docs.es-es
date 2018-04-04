@@ -1,25 +1,25 @@
 ---
-title: "En tiempo real de puntuación | Documentos de Microsoft"
-ms.custom: 
+title: En tiempo real de puntuación | Documentos de Microsoft
+ms.custom: ''
 ms.date: 11/03/2017
 ms.prod: machine-learning-services
 ms.prod_service: machine-learning-services
-ms.service: 
-ms.component: 
-ms.reviewer: 
+ms.service: ''
+ms.component: ''
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: 
-ms.tgt_pltfrm: 
+ms.technology: ''
+ms.tgt_pltfrm: ''
 ms.topic: article
-author: jeannt
-ms.author: jeannt
-manager: cgronlund
+author: HeidiSteen
+ms.author: heidist
+manager: cgronlun
 ms.workload: Inactive
-ms.openlocfilehash: a8a37b57e5704136280360258223927c7d960eea
-ms.sourcegitcommit: 99102cdc867a7bdc0ff45e8b9ee72d0daade1fd3
+ms.openlocfilehash: f8473280725732f92d1156a65ea087677b3af170
+ms.sourcegitcommit: 059fc64ba858ea2adaad2db39f306a8bff9649c2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/11/2018
+ms.lasthandoff: 04/04/2018
 ---
 # <a name="realtime-scoring"></a>En tiempo real de puntuación
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
@@ -83,8 +83,8 @@ Para obtener información sobre en tiempo real de puntuación en un entorno dist
 
   + [rxLinMod](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/rxlinmod) \*
   + [rxLogit](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/rxlogit) \*
-  + [rxBTrees](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/rxbtrees)\*
-  + [rxDtree](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/rxdtree)\*
+  + [rxBTrees](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/rxbtrees) \*
+  + [rxDtree](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/rxdtree) \*
   + [rxdForest](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/rxdforest) \*
   
   Los modelos se marcan con \* también son compatibles con la puntuación nativo con la función de PREDICCIÓN.
@@ -118,7 +118,7 @@ No se admiten los siguientes tipos de modelo:
 
 ### <a name="known-issues"></a>Problemas conocidos
 
-+ `sp_rxPredict`Devuelve un mensaje correcta cuando se pasa un valor NULL como el modelo: "System.Data.SqlTypes.SqlNullValueException:Data en Null".
++ `sp_rxPredict` Devuelve un mensaje correcta cuando se pasa un valor NULL como el modelo: "System.Data.SqlTypes.SqlNullValueException:Data en Null".
 
 ## <a name="next-steps"></a>Pasos siguientes
 

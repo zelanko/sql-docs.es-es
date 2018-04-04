@@ -1,27 +1,25 @@
 ---
-title: "Configuración las opciones avanzadas para servicios de aprendizaje de máquina | Documentos de Microsoft"
+title: Configuración las opciones avanzadas para servicios de aprendizaje de máquina | Documentos de Microsoft
 ms.custom:
 - SQL2016_New_Updated
 ms.date: 10/31/2017
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.prod: machine-learning-services
 ms.prod_service: machine-learning-services
 ms.component: r
-ms.technology: 
-ms.tgt_pltfrm: 
+ms.technology: ''
+ms.tgt_pltfrm: ''
 ms.topic: article
-ms.assetid: 8d73fd98-0c61-4a62-94bb-75658195f2a6
-caps.latest.revision: 
-author: jeannt
-ms.author: jeannt
-manager: cgronlund
+ms.author: heidist
+author: HeidiSteen
+manager: cgronlun
 ms.workload: Inactive
-ms.openlocfilehash: 042e36faee599de3ff31a6bbb8dee32f0a6999cf
-ms.sourcegitcommit: 99102cdc867a7bdc0ff45e8b9ee72d0daade1fd3
+ms.openlocfilehash: 6001d30a38b1362db8b259d29fffbfcc268f706c
+ms.sourcegitcommit: 059fc64ba858ea2adaad2db39f306a8bff9649c2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/11/2018
+ms.lasthandoff: 04/04/2018
 ---
 # <a name="advanced-configuration-options-for-machine-learning-services"></a>Opciones de configuración avanzada de servicios de aprendizaje de máquina
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
@@ -30,7 +28,7 @@ Este artículo describe los cambios que pueden realizar después de la instalaci
 
 **Se aplica a:** servicios de aprendizaje de automático de SQL Server 2016 R Services, SQL Server de 2017
 
-##  <a name="bkmk_Provisioning"></a>Cuentas de usuario adicional de aprovisionamiento para la máquina aprendizaje
+##  <a name="bkmk_Provisioning"></a> Cuentas de usuario adicional de aprovisionamiento para la máquina aprendizaje
 
 Script externo de los procesos de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] se ejecutan en el contexto de las cuentas de usuario local con pocos privilegios. Estos procesos en ejecución en cuentas con pocos privilegios individuales tiene las siguientes ventajas:
 
@@ -51,7 +49,7 @@ A los recursos confidenciales protext en el [!INCLUDE[ssNoVersion](../../include
 
 Para obtener más información acerca de cómo realizar cambios en el grupo de cuentas de usuario, consulte [modificar el grupo de cuentas de usuario para servicios de aprendizaje de máquina de SQL Server](../../advanced-analytics/r/modify-the-user-account-pool-for-sql-server-r-services.md).
 
-##  <a name="bkmk_ManagingMemory"></a>Administrar la memoria utilizada por los procesos de script externo
+##  <a name="bkmk_ManagingMemory"></a> Administrar la memoria utilizada por los procesos de script externo
 
 De forma predeterminada, los tiempos de ejecución de script externo para el aprendizaje automático se limitan a no más del 20% de memoria total de la máquina. Depende de su sistema, pero en general, podría encontrar este límite es insuficiente para tareas de aprendizaje de máquina graves como entrenar un modelo o de predicción en varias filas de datos. 
 
@@ -75,7 +73,7 @@ Si se modifica la cuenta de servicio, asegúrese de usar la aplicación **Direct
 
 Para más información sobre los permisos para ejecutar servicios de SQL Server, vea [Configurar los permisos y las cuentas de servicio de Windows](https://msdn.microsoft.com/library/ms143504.aspx#Windows).
 
-##  <a name="bkmk_ChangingConfig"></a>Cambiar las opciones avanzadas del servicio
+##  <a name="bkmk_ChangingConfig"></a> Cambiar las opciones avanzadas del servicio
 
 En las versiones anteriores de SQL Server 2016 R Services, puede cambiar algunas propiedades del servicio mediante la edición de la [!INCLUDE[rsql_productname](../../includes/rsql-productname-md.md)] archivo de configuración. 
 
@@ -93,7 +91,7 @@ Sin embargo, este archivo ya no se utiliza para cambiar las configuraciones. Rec
 
 **Para modificar la configuración de depuración**
 
-Algunas propiedades solo pueden cambiarse mediante el uso de archivo de configuración del Launchpad, que podría ser útil en casos limitados, como la depuración. El archivo de configuración se crea durante la [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] el programa de instalación y de forma predeterminada, se guarda como un archivo de texto sin formato en la siguiente ubicación:`<instance path>\binn\rlauncher.config`
+Algunas propiedades solo pueden cambiarse mediante el uso de archivo de configuración del Launchpad, que podría ser útil en casos limitados, como la depuración. El archivo de configuración se crea durante la [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] el programa de instalación y de forma predeterminada, se guarda como un archivo de texto sin formato en la siguiente ubicación: `<instance path>\binn\rlauncher.config`
 
 Para realizar cambios en este archivo, debe ser administrador en el equipo que ejecuta [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Si edita el archivo, se recomienda realizar una copia de seguridad antes de guardar los cambios.
 

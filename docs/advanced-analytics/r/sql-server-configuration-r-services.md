@@ -1,26 +1,24 @@
 ---
-title: "Configuración de SQL Server (R Services) | Microsoft Docs"
-ms.custom: 
+title: Configuración de SQL Server (R Services) | Microsoft Docs
+ms.custom: ''
 ms.date: 07/26/2017
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.prod: machine-learning-services
 ms.prod_service: machine-learning-services
 ms.component: r
-ms.technology: 
-ms.tgt_pltfrm: 
+ms.technology: ''
+ms.tgt_pltfrm: ''
 ms.topic: article
-ms.assetid: 4b08969f-b90b-46b3-98e7-0bf7734833fc
-caps.latest.revision: 
-author: jeannt
-ms.author: jeannt
-manager: cgronlund
+ms.author: heidist
+author: HeidiSteen
+manager: cgronlun
 ms.workload: Inactive
-ms.openlocfilehash: 5716fced7dd2be49c580222b9ae155451cf8f426
-ms.sourcegitcommit: 99102cdc867a7bdc0ff45e8b9ee72d0daade1fd3
+ms.openlocfilehash: 794a15c6673a06ea261f66129035ea62ea31cb0e
+ms.sourcegitcommit: 059fc64ba858ea2adaad2db39f306a8bff9649c2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/11/2018
+ms.lasthandoff: 04/04/2018
 ---
 # <a name="sql-server-configuration-for-use-with-r"></a>Configuración de SQL Server para su uso con R
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
@@ -126,7 +124,7 @@ La regulación de recursos de SQL Server le permite centralizar la supervisión 
 
 El valor predeterminado para el consumo de memoria por scripts externos se limita a 20% de la memoria total disponible para SQL Server. Este límite se aplica de forma predeterminada para asegurarse de que todas las tareas que se basan en el servidor de base de datos no se ven gravemente afectadas por los trabajos de larga ejecución R. Pero el administrador de bases de datos puede cambiar estos límites. En muchos casos, el límite de 20% no es suficiente para admitir las cargas de trabajo de aprendizaje de automático grave.
 
-Las opciones de configuración admitidas son **MAX_CPU_PERCENT**, **MAX_MEMORY_PERCENT**, y **MAX_PROCESSES**. Para ver la configuración actual, use esta instrucción:`SELECT * FROM sys.resource_governor_external_resource_pools`
+Las opciones de configuración admitidas son **MAX_CPU_PERCENT**, **MAX_MEMORY_PERCENT**, y **MAX_PROCESSES**. Para ver la configuración actual, use esta instrucción: `SELECT * FROM sys.resource_governor_external_resource_pools`
 
 -  Si el servidor se utiliza principalmente para R Services, puede resultar útil aumentar MAX_CPU_PERCENT hasta un 40% o 60%.
 
@@ -134,11 +132,11 @@ Las opciones de configuración admitidas son **MAX_CPU_PERCENT**, **MAX_MEMORY_P
 
 Para cambiar los valores de los recursos asignados, use las instrucciones de T-SQL.
 
-+ Esta instrucción establece el uso de memoria al 40%:`ALTER EXTERNAL RESOURCE POOL [default] WITH (MAX_MEMORY_PERCENT = 40)`
++ Esta instrucción establece el uso de memoria al 40%: `ALTER EXTERNAL RESOURCE POOL [default] WITH (MAX_MEMORY_PERCENT = 40)`
 
-+ Esta instrucción establece los tres valores configurables:`ALTER EXTERNAL RESOURCE POOL [default] WITH (MAX_CPU_PERCENT = 40, MAX_MEMORY_PERCENT = 50, MAX_PROCESSES = 20)`
++ Esta instrucción establece los tres valores configurables: `ALTER EXTERNAL RESOURCE POOL [default] WITH (MAX_CPU_PERCENT = 40, MAX_MEMORY_PERCENT = 50, MAX_PROCESSES = 20)`
 
-+ Si cambia una memoria, la CPU o la configuración del proceso máximo y, a continuación, deberá aplicar la configuración inmediatamente, ejecute esta instrucción:`ALTER RESOURCE GOVERNOR RECONFIGURE`
++ Si cambia una memoria, la CPU o la configuración del proceso máximo y, a continuación, deberá aplicar la configuración inmediatamente, ejecute esta instrucción: `ALTER RESOURCE GOVERNOR RECONFIGURE`
 
 ## <a name="soft-numa-hardware-numa-and-cpu-affinity"></a>Afinidad de CPU, de NUMA de hardware y NUMA de software
 

@@ -26,16 +26,16 @@ keywords:
 - sql server ssms
 - ssms express
 ms.assetid: adafeeef-4255-4924-8042-02f503d599ca
-caps.latest.revision: ''
+caps.latest.revision: 145
 author: stevestein
 ms.author: sstein
 manager: craigg
 ms.workload: Active
-ms.openlocfilehash: 7b64f3d78ceafd5e1eac62e1e3dd1155827e8c61
-ms.sourcegitcommit: 8e897b44a98943dce0f7129b1c7c0e695949cc3b
+ms.openlocfilehash: 014067623255c257ee611b8be8a0b8f49f5e57bc
+ms.sourcegitcommit: d6881107b51e1afe09c2d8b88b98d075589377de
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/21/2018
+ms.lasthandoff: 03/28/2018
 ---
 # <a name="download-sql-server-management-studio-ssms"></a>Descarga de SQL Server Management Studio (SSMS)
 [!INCLUDE[appliesto-ss-asdb-asdw-xxx-md](../includes/appliesto-ss-asdb-asdw-xxx-md.md)]
@@ -141,7 +141,7 @@ Esta versión de SSMS admite las siguientes plataformas de 64 bits cuando se usa
 ### <a name="minimize-installation-reboots"></a>Minimizar los reinicios de instalación
 
 * Realice las acciones siguientes para reducir las posibilidades de que el programa de instalación de SSMS necesite un reinicio al final de la instalación:
-  * Asegúrese de que está ejecutando una versión actualizada de Visual C++ 2013 Redistributable Package. Se necesita la versión 12.00.40649.5 (o superior). Solo se necesita la versión x64.
+  * Asegúrese de que está ejecutando una versión actualizada de Visual C++ 2013 Redistributable Package. Se necesita la versión 12.0.40649.5 (o posterior). Solo se necesita la versión x64.
   * Compruebe que la versión de .NET Framework en el equipo es 4.6.1 (o superior).
   * Cierre otras instancias de Visual Studio que estén abiertas en el equipo.
   * Asegúrese de que todas las actualizaciones más recientes del sistema operativo estén instaladas en el equipo.

@@ -1,20 +1,22 @@
 ---
-title: "Migrar el servidor local de SQL (Asistente de migración de datos) | Documentos de Microsoft"
-ms.custom: 
+title: Migrar el servidor local de SQL (Asistente de migración de datos) | Documentos de Microsoft
+ms.custom: ''
 ms.date: 09/01/2017
 ms.prod: sql-non-specified
 ms.prod_service: dma
-ms.service: 
-ms.component: 
-ms.reviewer: 
+ms.service: ''
+ms.component: ''
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: sql-dma
-ms.tgt_pltfrm: 
+ms.technology:
+- sql-dma
+ms.tgt_pltfrm: ''
 ms.topic: article
-keywords: 
-helpviewer_keywords: Data Migration Assistant, on-premises SQL Server
-ms.assetid: 
-caps.latest.revision: 
+keywords: ''
+helpviewer_keywords:
+- Data Migration Assistant, on-premises SQL Server
+ms.assetid: ''
+caps.latest.revision: ''
 author: HJToland3
 ms.author: jtoland
 manager: craigg

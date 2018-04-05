@@ -1,17 +1,18 @@
 ---
 title: Agregar o quitar tablas o vistas de un tipo de datos del origen de vista (Analysis Services) | Documentos de Microsoft
-ms.custom: 
+ms.custom: ''
 ms.date: 03/01/2017
 ms.prod: analysis-services
 ms.prod_service: analysis-services
-ms.service: 
+ms.service: ''
 ms.component: data-mining
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: pro-bi
-ms.technology: 
-ms.tgt_pltfrm: 
+ms.technology: ''
+ms.tgt_pltfrm: ''
 ms.topic: article
-f1_keywords: sql13.asvs.dsvdesigner.tablespane.f1
+f1_keywords:
+- sql13.asvs.dsvdesigner.tablespane.f1
 helpviewer_keywords:
 - deleting tables
 - tables [Analysis Services]
@@ -20,7 +21,7 @@ helpviewer_keywords:
 - data source views [Analysis Services], tables
 - tables [Analysis Services], data source views
 ms.assetid: 98307d04-6548-4d7d-9244-2371dd165249
-caps.latest.revision: "34"
+caps.latest.revision: 34
 author: Minewiskan
 ms.author: owend
 manager: kfile

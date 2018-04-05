@@ -1,19 +1,20 @@
 ---
-title: "Procedimientos almacenados de minería de datos (Analysis Services: minería de datos) | Documentos de Microsoft"
-ms.custom: 
+title: 'Procedimientos almacenados de minería de datos (Analysis Services: minería de datos) | Documentos de Microsoft'
+ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: analysis-services
 ms.prod_service: analysis-services
-ms.service: 
-ms.component: 
-ms.reviewer: 
+ms.service: ''
+ms.component: ''
+ms.reviewer: ''
 ms.suite: pro-bi
-ms.technology: 
-ms.tgt_pltfrm: 
+ms.technology: ''
+ms.tgt_pltfrm: ''
 ms.topic: reference
-helpviewer_keywords: stored procedures [Analysis Services], data mining
+helpviewer_keywords:
+- stored procedures [Analysis Services], data mining
 ms.assetid: a751856d-33bd-4788-9593-317b2826132d
-caps.latest.revision: "26"
+caps.latest.revision: 26
 author: Minewiskan
 ms.author: owend
 manager: kfile

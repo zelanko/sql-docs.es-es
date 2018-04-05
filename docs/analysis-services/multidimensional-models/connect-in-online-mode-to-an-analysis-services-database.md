@@ -1,19 +1,20 @@
 ---
-title: "Conectarse en modo con conexión a una base de datos de Analysis Services | Documentos de Microsoft"
-ms.custom: 
+title: Conectarse en modo con conexión a una base de datos de Analysis Services | Documentos de Microsoft
+ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: analysis-services
 ms.prod_service: analysis-services
-ms.service: 
+ms.service: ''
 ms.component: data-mining
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: pro-bi
-ms.technology: 
-ms.tgt_pltfrm: 
+ms.technology: ''
+ms.tgt_pltfrm: ''
 ms.topic: article
-helpviewer_keywords: Analysis Services, connecting
+helpviewer_keywords:
+- Analysis Services, connecting
 ms.assetid: 33041234-7106-404f-a289-8e904f32aff2
-caps.latest.revision: "13"
+caps.latest.revision: 13
 author: Minewiskan
 ms.author: owend
 manager: kfile

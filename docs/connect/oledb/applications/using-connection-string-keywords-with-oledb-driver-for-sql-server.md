@@ -24,11 +24,11 @@ author: pmasl
 ms.author: Pedro.Lopes
 manager: jhubbard
 ms.workload: Active
-ms.openlocfilehash: 776562d89a12b544d6edbe475358067b39b58988
-ms.sourcegitcommit: 9f4330a4b067deea396b8567747a6771f35e6eee
+ms.openlocfilehash: 7917f0c1344ff8e79250791d1b262cece9ca3c4c
+ms.sourcegitcommit: 8b332c12850c283ae413e0b04b2b290ac2edb672
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/30/2018
+ms.lasthandoff: 04/05/2018
 ---
 # <a name="using-connection-string-keywords-with-ole-db-driver-for-sql-server"></a>Usar palabras clave de cadena de conexión con el controlador OLE DB para SQL Server
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -94,6 +94,7 @@ ms.lasthandoff: 03/30/2018
 |**FailoverPartnerSPN**|SSPROP_INIT_FAILOVERPARTNERSPN|SPN del asociado de conmutación por error. El valor predeterminado es una cadena vacía. Una cadena vacía hace el controlador OLE DB para SQL Server para utilizar el valor predeterminado, SPN generado por proveedor.|  
 |**Lenguaje**|SSPROPT_INIT_CURRENTLANGUAGE|Lenguaje [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)].|  
 |**MarsConn**|SSPROP_INIT_MARSCONNECTION|Habilita o deshabilita conjuntos de resultados activos múltiples (MARS) en la conexión si el servidor es [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)] o posterior. Los valores posibles son "yes" y "no". El valor predeterminado es "no".|  
+|**MultiSubnetFailover**|SSPROP_INIT_MULTISUBNETFAILOVER|Especifique siempre **MultiSubnetFailover = Yes** al conectarse a la escucha del grupo de disponibilidad de un [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] grupo de disponibilidad o una [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] instancia de clúster de conmutación por error. **MultiSubnetFailover = Yes** configura el controlador OLE DB para SQL Server proporcionar una detección más rápida y conexión con el servidor (actualmente) activo. Los valores posibles son **Yes** y **No**. El valor predeterminado es **No**. Por ejemplo:<br /><br /> `MultiSubnetFailover=Yes`<br /><br /> Para obtener más información sobre el controlador OLE DB para la compatibilidad de SQL Server de [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)], consulte [controlador OLE DB para SQL Server admite alta disponibilidad, recuperación ante desastres](../../oledb/features/oledb-driver-for-sql-server-support-for-high-availability-disaster-recovery.md).|  
 |**Net**|SSPROP_INIT_NETWORKLIBRARY|Sinónimo de "Network".|  
 |**Network**|SSPROP_INIT_NETWORKLIBRARY|Biblioteca de red que se utiliza para establecer una conexión a una instancia de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] en la organización.|  
 |**Network Library**|SSPROP_INIT_NETWORKLIBRARY|Sinónimo de "Network".|  
@@ -149,6 +150,7 @@ ms.lasthandoff: 03/30/2018
 |**Nombre de archivo inicial**|SSPROP_INIT_FILENAME|Nombre del archivo principal (incluido el nombre de la ruta de acceso completa) de una base de datos adjuntable. Usar **AttachDBFileName**, también debe especificar el nombre de la base de datos con la palabra clave base de datos de cadena de proveedor. Si la base de datos se ha adjuntado previamente, [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] no vuelve a adjuntarla (utiliza la base de datos adjuntada como valor predeterminado para la conexión).|  
 |**Seguridad integrada**|DBPROP_AUTH_INTEGRATED|Acepta el valor "SSPI" para la autenticación de Windows.|  
 |**Conexión MARS**|SSPROP_INIT_MARSCONNECTION|Habilita o deshabilita conjuntos de resultados activos múltiples (MARS) en la conexión. Los valores reconocidos son "true" y "false". El valor predeterminado es "false".|  
+|**MultiSubnetFailover**|SSPROP_INIT_MULTISUBNETFAILOVER|Especifique siempre **MultiSubnetFailover = True** al conectarse a la escucha del grupo de disponibilidad de un [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] grupo de disponibilidad o una [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] instancia de clúster de conmutación por error. **MultiSubnetFailover = True** configura el controlador OLE DB para SQL Server proporcionar una detección más rápida y conexión con el servidor (actualmente) activo. Los valores posibles son **True** o **False**. El valor predeterminado es **False**. Por ejemplo:<br /><br /> `MultiSubnetFailover=True`<br /><br /> Para obtener más información sobre el controlador OLE DB para la compatibilidad de SQL Server de [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)], consulte [controlador OLE DB para SQL Server admite alta disponibilidad, recuperación ante desastres](../../oledb/features/oledb-driver-for-sql-server-support-for-high-availability-disaster-recovery.md).|  
 |**Dirección de red**|SSPROP_INIT_NETWORKADDRESS|Dirección de red de una instancia de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] en la organización.<br /><br /> Para obtener más información acerca de la sintaxis válida para las direcciones, vea la descripción de la **dirección** palabra clave, en este tema.|  
 |**Network Library**|SSPROP_INIT_NETWORKLIBRARY|Biblioteca de red que se utiliza para establecer una conexión a una instancia de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] en la organización.|  
 |**Packet Size**|SSPROP_INIT_PACKETSIZE|Tamaño del paquete de red El valor predeterminado es 4096.|  
@@ -200,6 +202,7 @@ ms.lasthandoff: 03/30/2018
 |**Nombre de archivo inicial**|SSPROP_INIT_FILENAME|Nombre del archivo principal (incluido el nombre de la ruta de acceso completa) de una base de datos adjuntable. Usar **AttachDBFileName**, también debe especificar el nombre de la base de datos con la palabra clave base de datos de cadena de proveedor. Si la base de datos se ha adjuntado previamente, [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] no vuelve a adjuntarla (utiliza la base de datos adjuntada como valor predeterminado para la conexión).|  
 |**Seguridad integrada**|DBPROP_AUTH_INTEGRATED|Acepta el valor "SSPI" para la autenticación de Windows.|  
 |**Conexión MARS**|SSPROP_INIT_MARSCONNECTION|Habilita o deshabilita conjuntos de resultados activos múltiples (MARS) en la conexión si el servidor es [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)] o posterior. Los valores reconocidos son "true" y "false". El valor predeterminado es "false".|  
+|**MultiSubnetFailover**|SSPROP_INIT_MULTISUBNETFAILOVER|Especifique siempre **MultiSubnetFailover = True** al conectarse a la escucha del grupo de disponibilidad de un [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] grupo de disponibilidad o una [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] instancia de clúster de conmutación por error. **MultiSubnetFailover = True** configura el controlador OLE DB para SQL Server proporcionar una detección más rápida y conexión con el servidor (actualmente) activo. Los valores posibles son **True** o **False**. El valor predeterminado es **False**. Por ejemplo:<br /><br /> `MultiSubnetFailover=True`<br /><br /> Para obtener más información sobre el controlador OLE DB para la compatibilidad de SQL Server de [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)], consulte [controlador OLE DB para SQL Server admite alta disponibilidad, recuperación ante desastres](../../oledb/features/oledb-driver-for-sql-server-support-for-high-availability-disaster-recovery.md).|  
 |**Dirección de red**|SSPROP_INIT_NETWORKADDRESS|Dirección de red de una instancia de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] en la organización.<br /><br /> Para obtener más información acerca de la sintaxis válida para las direcciones, vea la descripción de la **dirección** palabra clave, en este tema.|  
 |**Network Library**|SSPROP_INIT_NETWORKLIBRARY|Biblioteca de red que se utiliza para establecer una conexión a una instancia de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] en la organización.|  
 |**Packet Size**|SSPROP_INIT_PACKETSIZE|Tamaño del paquete de red El valor predeterminado es 4096.|  
@@ -215,6 +218,6 @@ ms.lasthandoff: 03/30/2018
  **Tenga en cuenta** en la cadena de conexión, la propiedad "Contraseña anterior" establece SSPROP_AUTH_OLD_PASSWORD, que es la contraseña actual (posiblemente expirada) que no está disponible a través de una propiedad de cadena de proveedor.  
   
 ## <a name="see-also"></a>Vea también  
- [Generar aplicaciones con el controlador OLE DB para SQL Server](../../oledb/applications/building-applications-with-oledb-driver-for-sql-server.md)  
+ [Compilación de aplicaciones con el controlador OLE DB para SQL Server](../../oledb/applications/building-applications-with-oledb-driver-for-sql-server.md)  
   
   

@@ -1,16 +1,16 @@
 ---
 title: sys.dm_os_memory_objects (Transact-SQL) | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 03/13/2017
 ms.prod: sql-non-specified
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
-ms.service: 
+ms.service: ''
 ms.component: dmv's
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - dm_os_memory_objects
@@ -22,16 +22,16 @@ dev_langs:
 helpviewer_keywords:
 - sys.dm_os_memory_objects dynamic management view
 ms.assetid: 5688bcf8-5da9-4ff9-960b-742b671d7096
-caps.latest.revision: 
+caps.latest.revision: 40
 author: stevestein
 ms.author: sstein
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: b0a468001a048f627996e65a5743d3f136e96909
-ms.sourcegitcommit: c556eaf60a49af7025db35b7aa14beb76a8158c5
+ms.openlocfilehash: d348f0c9cf748228e9eb3a55ebf6bc04c329a19a
+ms.sourcegitcommit: 8b332c12850c283ae413e0b04b2b290ac2edb672
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/03/2018
+ms.lasthandoff: 04/05/2018
 ---
 # <a name="sysdmosmemoryobjects-transact-sql"></a>sys.dm_os_memory_objects (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -53,7 +53,7 @@ ms.lasthandoff: 02/03/2018
 |**max_pages_allocated_count**|**int**|**Se aplica a**: desde [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] hasta [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)].<br /><br /> Número máximo de páginas asignadas por este objeto de memoria. No admite valores NULL.|  
 |**page_size_in_bytes**|**int**|**Se aplica a**: desde [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] hasta [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].<br /><br /> Tamaño de las páginas asignadas por este objeto, en bytes. No admite valores NULL.|  
 |**max_pages_in_bytes**|**bigint**|Cantidad máxima de memoria que este objeto de memoria nunca usó. No admite valores NULL.|  
-|**page_allocator_address**|**varbinary(8)**|Dirección de memoria del asignador de la página. No admite valores NULL. Para obtener más información, consulte [sys.dm_os_memory_clerks &#40; Transact-SQL &#41; ](../../relational-databases/system-dynamic-management-views/sys-dm-os-memory-clerks-transact-sql.md).|  
+|**page_allocator_address**|**varbinary(8)**|Dirección de memoria del asignador de la página. No admite valores NULL. Para obtener más información, consulte [sys.dm_os_memory_clerks &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-os-memory-clerks-transact-sql.md).|  
 |**creation_stack_address**|**varbinary(8)**|Exclusivamente para uso interno. Acepta valores NULL.|  
 |**sequence_num**|**int**|Exclusivamente para uso interno. Acepta valores NULL.|  
 |**partition_type**|**int**|El tipo de partición:<br /><br /> 0 - no cargas objeto de memoria<br /><br /> 1 - objeto de memoria cargas, actualmente no tienen particionada<br /><br /> 2 - objeto de memoria cargas, particionado por nodo NUMA. En un entorno con un solo nodo NUMA Esto equivale a 1.<br /><br /> 3 - objeto de memoria cargas, dividida por CPU.|  
@@ -64,10 +64,11 @@ ms.lasthandoff: 02/03/2018
   
  **partition_type**, **contention_factor**, **waiting_tasks_count**, y **exclusive_access_count** aún no están implementadas en [!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)].  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>Permissions
+
 En [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)], requiere `VIEW SERVER STATE` permiso.   
-En [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)] niveles de Premium, requieren la `VIEW DATABASE STATE` permiso en la base de datos. En [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)] niveles estándar y básico, requiere la **administrador del servidor** o un **Administrador de Azure Active Directory** cuenta.  
-  
+En [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)], requiere el `VIEW DATABASE STATE` permiso en la base de datos.   
+
 ## <a name="remarks"></a>Comentarios  
  Los objetos de memoria son montones. Proporcionan asignaciones con una granularidad más fina que las que proporcionan los distribuidores de memoria. Los componentes de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] utilizan objetos de memoria en lugar de distribuidores de memoria. Los objetos de memoria utilizan la interfaz del asignador de la página del distribuidor de memoria para asignar páginas. Los objetos de memoria no utilizan interfaces de memoria virtual o compartida. Según los patrones de asignación, los componentes pueden crear diferentes tipos de objetos de memoria para asignar regiones de tamaño arbitrario.  
   
@@ -88,7 +89,7 @@ GO
 ```  
   
 ## <a name="see-also"></a>Vea también  
-  [Sistema operativo SQL Server relacionadas con vistas de administración dinámica &#40; Transact-SQL &#41;](../../relational-databases/system-dynamic-management-views/sql-server-operating-system-related-dynamic-management-views-transact-sql.md)   
+  [Vistas de administración dinámica relacionadas con el sistema operativo SQL Server &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sql-server-operating-system-related-dynamic-management-views-transact-sql.md)   
  [sys.dm_os_memory_clerks &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-os-memory-clerks-transact-sql.md)  
   
   

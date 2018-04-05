@@ -1,19 +1,20 @@
 ---
-title: "Inicio de sesión de Reporting Services (cuadro de diálogo del Generador de informes) | Microsoft Docs"
-ms.custom: 
+title: Inicio de sesión de Reporting Services (cuadro de diálogo del Generador de informes) | Microsoft Docs
+ms.custom: ''
 ms.date: 03/01/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-sharepoint, reporting-services-native
-ms.service: 
+ms.service: ''
 ms.component: report-builder
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: pro-bi
-ms.technology: 
-ms.tgt_pltfrm: 
+ms.technology: ''
+ms.tgt_pltfrm: ''
 ms.topic: reference
-f1_keywords: "10059"
+f1_keywords:
+- "10059"
 ms.assetid: daf5eec6-f9d2-475c-8c65-9cf74e5523a2
-caps.latest.revision: "11"
+caps.latest.revision: 11
 author: markingmyname
 ms.author: maghan
 manager: kfile

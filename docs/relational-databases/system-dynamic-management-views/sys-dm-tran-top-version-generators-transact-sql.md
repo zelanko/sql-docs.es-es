@@ -1,16 +1,16 @@
 ---
 title: sys.dm_tran_top_version_generators (Transact-SQL) | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 03/15/2017
 ms.prod: sql-non-specified
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
-ms.service: 
+ms.service: ''
 ms.component: dmv's
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - dm_tran_top_version_generators
@@ -22,16 +22,16 @@ dev_langs:
 helpviewer_keywords:
 - sys.dm_tran_top_version_generators dynamic management view
 ms.assetid: cec7809b-ba8a-4df9-b5bb-d4f651ff1a86
-caps.latest.revision: 
+caps.latest.revision: 34
 author: stevestein
 ms.author: sstein
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: f71613c0c7d65dc690724e2abffed529ab63e4b5
-ms.sourcegitcommit: c556eaf60a49af7025db35b7aa14beb76a8158c5
+ms.openlocfilehash: 74c9005515c0f4d7c86b669963d638c215000847
+ms.sourcegitcommit: 8b332c12850c283ae413e0b04b2b290ac2edb672
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/03/2018
+ms.lasthandoff: 04/05/2018
 ---
 # <a name="sysdmtrantopversiongenerators-transact-sql"></a>sys.dm_tran_top_version_generators (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -57,11 +57,11 @@ sys.dm_tran_top_version_generators
 |**aggregated_record_length_in_bytes**|**int**|Suma de las longitudes de registro para cada **database_id** y **rowset_id par** en el almacén de versiones.|  
 |**pdw_node_id**|**int**|**Se aplica a**: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)], [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]<br /><br /> El identificador para el nodo que se encuentra en esta distribución.|  
   
-## <a name="permissions"></a>Permissions  
- En [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] requiere el permiso VIEW SERVER STATE en el servidor.  
-  
- En [!INCLUDE[ssSDS](../../includes/sssds-md.md)] niveles Premium requieren el permiso VIEW DATABASE STATE en la base de datos. En [!INCLUDE[ssSDS](../../includes/sssds-md.md)] niveles estándar y básico requiere la [!INCLUDE[ssSDS](../../includes/sssds-md.md)] cuenta de administrador.  
-  
+## <a name="permissions"></a>Permissions
+
+En [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)], requiere `VIEW SERVER STATE` permiso.   
+En [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)], requiere el `VIEW DATABASE STATE` permiso en la base de datos.   
+
 ## <a name="remarks"></a>Comentarios  
  Dado que **sys.dm_tran_top_version_generators** podría tener que leer muchas páginas conforme examina el almacén de versiones completo, ejecutar **sys.dm_tran_top_version_generators** pueden interferir con el sistema rendimiento.  
   

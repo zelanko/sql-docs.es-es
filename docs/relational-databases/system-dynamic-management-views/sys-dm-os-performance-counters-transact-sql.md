@@ -1,16 +1,16 @@
 ---
 title: sys.dm_os_performance_counters (Transact-SQL) | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 03/13/2017
 ms.prod: sql-non-specified
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
-ms.service: 
+ms.service: ''
 ms.component: dmv's
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - dm_os_performance_counters
@@ -22,16 +22,16 @@ dev_langs:
 helpviewer_keywords:
 - sys.dm_os_performance_counters dynamic management view
 ms.assetid: a1c3e892-cd48-40d4-b6be-2a9246e8fbff
-caps.latest.revision: 
+caps.latest.revision: 34
 author: stevestein
 ms.author: sstein
 manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 32640c1c4bbc1a40927bece5663401cfcad3ac05
-ms.sourcegitcommit: c556eaf60a49af7025db35b7aa14beb76a8158c5
+ms.openlocfilehash: 8ae698ff1dbf5be9cd99dda33c6a3f0e7d6f89ea
+ms.sourcegitcommit: 8b332c12850c283ae413e0b04b2b290ac2edb672
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/03/2018
+ms.lasthandoff: 04/05/2018
 ---
 # <a name="sysdmosperformancecounters-transact-sql"></a>sys.dm_os_performance_counters (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-asdw-pdw-md](../../includes/tsql-appliesto-ss2008-asdb-asdw-pdw-md.md)]
@@ -59,10 +59,11 @@ SELECT COUNT(*) FROM sys.dm_os_performance_counters;
   
  Si el valor devuelto es 0 filas, significa que se han deshabilitado los contadores de rendimiento. Debe examinar a continuación el registro de instalación y buscar el error 3409, "Vuelva a instalar sqlctr.ini para esta instancia y asegúrese de que la cuenta de inicio de sesión de la instancia tiene los permisos correctos para el Registro".  Esto denota que los contadores de rendimiento no estaban habilitados. Los errores inmediatamente anteriores al error 3409 deben indicar la causa principal del error en la habilitación del contador de rendimiento. Para obtener más información sobre los archivos de registro de instalación, consulte [ver y leer los archivos de registro de instalación de SQL Server](../../database-engine/install-windows/view-and-read-sql-server-setup-log-files.md).  
   
-## <a name="permission"></a>Permiso  
+## <a name="permission"></a>Permiso
+
 En [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)], requiere `VIEW SERVER STATE` permiso.   
-En [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)] niveles de Premium, requieren la `VIEW DATABASE STATE` permiso en la base de datos. En [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)] niveles estándar y básico, requiere la **administrador del servidor** o un **Administrador de Azure Active Directory** cuenta.    
-  
+En [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)], requiere el `VIEW DATABASE STATE` permiso en la base de datos.   
+ 
 ## <a name="examples"></a>Ejemplos  
  El ejemplo siguiente devuelve valores de contador de rendimiento.  
   
@@ -73,7 +74,7 @@ FROM sys.dm_os_performance_counters;
 ```  
   
 ## <a name="see-also"></a>Vea también  
-  [Sistema operativo SQL Server relacionadas con vistas de administración dinámica &#40; Transact-SQL &#41;](../../relational-databases/system-dynamic-management-views/sql-server-operating-system-related-dynamic-management-views-transact-sql.md)   
+  [Vistas de administración dinámica relacionadas con el sistema operativo SQL Server &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sql-server-operating-system-related-dynamic-management-views-transact-sql.md)   
  [sys.sysperfinfo &#40;Transact-SQL&#41;](../../relational-databases/system-compatibility-views/sys-sysperfinfo-transact-sql.md)  
   
   

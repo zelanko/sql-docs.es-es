@@ -1,27 +1,28 @@
 ---
-title: "Cuadro de diálogo de inicio de sesión SQL Server (ODBC) | Documentos de Microsoft"
-ms.custom: 
-ms.date: 09/27/2017
+title: Cuadro de diálogo de inicio de sesión SQL Server (ODBC) | Documentos de Microsoft
+ms.custom: ''
+ms.date: 03/21/2018
 ms.prod: sql-non-specified
 ms.prod_service: drivers
-ms.service: 
+ms.service: ''
 ms.component: odbc
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: drivers
-ms.tgt_pltfrm: 
+ms.technology:
+- drivers
+ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: 76326eeb-1144-4b9f-85db-50524c655d30
-caps.latest.revision: "22"
+caps.latest.revision: 22
 author: MightyPen
-ms.author: genemi
+ms.author: v-jizho2
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 5671f5213633d7efbb7693425a711db1e980d078
-ms.sourcegitcommit: 2713f8e7b504101f9298a0706bacd84bf2eaa174
+ms.openlocfilehash: 367559719da374be358f93821572df4365a278d7
+ms.sourcegitcommit: 8b332c12850c283ae413e0b04b2b290ac2edb672
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/18/2017
+ms.lasthandoff: 04/05/2018
 ---
 # <a name="sql-server-login-dialog-box-odbc"></a>Cuadro de diálogo Inicio de sesión de SQL Server (ODBC)
 
@@ -44,6 +45,7 @@ Selecciona el modo de autenticación de uno de los siguientes:
 - **Integrada de Windows** autenticación mediante la cuenta de usuario que ha iniciado la sesión actual
 - **Contraseña de Active Directory** con Id. de inicio de sesión y contraseña
 - **Active Directory integrado** autenticación mediante la cuenta de usuario que ha iniciado la sesión actual
+- **Active Directory interactivo** autenticación con el Id. de inicio de sesión
 
 Vea [Asistente pantalla 2 de origen de datos](../../../connect/odbc/windows/dsn-wizard-2.md) para obtener más información sobre los modos de autenticación.
 
@@ -53,7 +55,7 @@ Si utiliza una conexión de confianza, puede especificar un nombre principal de 
 
 ### <a name="login-id"></a>Id. de inicio de sesión
 
-Especifica el identificador de inicio de sesión de SQL Server o Azure Active Directory que se usará para la conexión si **modo de autenticación** está establecido en **SQL Server** o **contraseña de Active Directory**. En caso contrario, el **Id. de inicio de sesión** casilla está deshabilitada.
+Especifica el identificador de inicio de sesión de SQL Server o Azure Active Directory que se usará para la conexión si **modo de autenticación** está establecido en **SQL Server** o **contraseña de Active Directory** o **Interactivo de active Directory**. En caso contrario, el **Id. de inicio de sesión** casilla está deshabilitada.
 
 ### <a name="password"></a>Contraseña
 

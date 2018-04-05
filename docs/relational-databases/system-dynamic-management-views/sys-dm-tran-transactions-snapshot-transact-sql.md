@@ -1,16 +1,16 @@
 ---
 title: sys.dm_tran_transactions_snapshot (Transact-SQL) | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: sql-non-specified
 ms.prod_service: database-engine, sql-database
-ms.service: 
+ms.service: ''
 ms.component: dmv's
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - sys.dm_tran_transactions_snapshot
@@ -22,16 +22,16 @@ dev_langs:
 helpviewer_keywords:
 - sys.dm_tran_transactions_snapshot dynamic management view
 ms.assetid: 03f64883-07ad-4092-8be0-31973348c647
-caps.latest.revision: 
+caps.latest.revision: 37
 author: stevestein
 ms.author: sstein
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: f73b2955b25e17cd9c4aea963acb277f11bc3351
-ms.sourcegitcommit: c556eaf60a49af7025db35b7aa14beb76a8158c5
+ms.openlocfilehash: 41eb79c5469a41e93f3fc5ae9564f031e1b24e51
+ms.sourcegitcommit: 8b332c12850c283ae413e0b04b2b290ac2edb672
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/03/2018
+ms.lasthandoff: 04/05/2018
 ---
 # <a name="sysdmtrantransactionssnapshot-transact-sql"></a>sys.dm_tran_transactions_snapshot (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -79,10 +79,10 @@ dm_tran_transactions_snapshot
 |**snapshot_id**|**int**|Id. de instantánea de cada instrucción de [!INCLUDE[tsql](../../includes/tsql-md.md)] iniciada con lectura confirmada y que utiliza las versiones de fila. Este valor se utiliza para generar una vista de la base de datos transaccionalmente coherente que admita cada consulta que se ejecute en una lectura confirmada utilizando las versiones de fila.|  
 |**snapshot_sequence_num**|**bigint**|Número de secuencia de una transacción que estaba activa cuando se inició la transacción de instantánea.|  
   
-## <a name="permissions"></a>Permissions  
- En [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] requiere el permiso VIEW SERVER STATE en el servidor.  
-  
- En [!INCLUDE[ssSDS](../../includes/sssds-md.md)] niveles Premium requieren el permiso VIEW DATABASE STATE en la base de datos. En [!INCLUDE[ssSDS](../../includes/sssds-md.md)] niveles estándar y básico requiere la [!INCLUDE[ssSDS](../../includes/sssds-md.md)] cuenta de administrador.  
+## <a name="permissions"></a>Permissions
+
+En [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)], requiere `VIEW SERVER STATE` permiso.   
+En [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)], requiere el `VIEW DATABASE STATE` permiso en la base de datos.   
   
 ## <a name="remarks"></a>Comentarios  
  Cuando se inicia una transacción de instantáneas, el [!INCLUDE[ssDE](../../includes/ssde-md.md)] registra todas las transacciones activas en ese momento determinado. **Sys.dm_tran_transactions_snapshot** proporciona esta información de todas las transacciones de instantáneas actualmente activas.  

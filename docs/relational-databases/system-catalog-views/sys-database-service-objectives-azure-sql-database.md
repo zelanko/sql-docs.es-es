@@ -1,33 +1,33 @@
 ---
 title: Sys.database_service_objectives (base de datos de SQL Azure) | Documentos de Microsoft
-ms.custom: 
+ms.custom: ''
 ms.date: 08/30/2016
-ms.prod: 
+ms.prod: ''
 ms.prod_service: sql-database, sql-data-warehouse
-ms.reviewer: 
+ms.reviewer: ''
 ms.service: sql-database
 ms.component: system-catalog-views
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 keywords:
-- "Grupo elástico"
-- "grupo elástico, administración"
+- Grupo elástico
+- grupo elástico, administración
 f1_keywords:
 - DATABASE_SERVICE_OBJECTIVES_TSQL
 ms.assetid: cecd8c31-06c0-4aa7-85d3-ac590e6874fa
-caps.latest.revision: 
+caps.latest.revision: 16
 author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 08c801fe0f7d917de2c520e788320ec3677d8a6e
-ms.sourcegitcommit: c556eaf60a49af7025db35b7aa14beb76a8158c5
+ms.openlocfilehash: 40f4d0d98cd33a57d6ab1e6f9c46ebd2174c9a15
+ms.sourcegitcommit: 8b332c12850c283ae413e0b04b2b290ac2edb672
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/03/2018
+ms.lasthandoff: 04/05/2018
 ---
 # <a name="sysdatabaseserviceobjectives-azure-sql-database"></a>Sys.database_service_objectives (base de datos de SQL Azure)
 [!INCLUDE[tsql-appliesto-xxxxxx-asdb-asdw-xxx-md](../../includes/tsql-appliesto-xxxxxx-asdb-asdw-xxx-md.md)]
@@ -43,9 +43,9 @@ Devuelve la edición (nivel de servicio), el objetivo de servicio (nivel de prec
   
 |Nombre de la columna|Tipo de datos|Description|  
 |-----------------|---------------|-----------------|  
-|database_id|int|El identificador de la base de datos, único en una instancia del servidor de base de datos de SQL Azure. Puede unir con [sys.databases &#40; Transact-SQL &#41; ](../../relational-databases/system-catalog-views/sys-databases-transact-sql.md).|  
-|edición|sysname|El nivel de servicio para el almacenamiento de datos o base de datos: **básica**, **estándar**, **Premium** o **almacenamiento de datos**.|  
-|service_objective|sysname|El nivel de precios de la base de datos. Devuelve si la base de datos está en un grupo elástico, **ElasticPool**.<br /><br /> En el **básica** capa, devuelve **básica**.<br /><br /> **Base de datos único en un nivel de servicio estándar** devuelve uno de los siguientes: S0, S1, S2 o S3.<br /><br /> **Base de datos único en un nivel premium** devuelve de las siguientes acciones: P1, P2, P4, P3/P6 o P11.<br /><br /> **Almacenamiento de datos SQL** devuelve DW100 a través de DW2000.|  
+|database_id|int|El identificador de la base de datos, único en una instancia del servidor de base de datos de SQL Azure. Puede unir con [sys.databases &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-databases-transact-sql.md).|  
+|edición|sysname|El nivel de servicio para el almacenamiento de datos o base de datos: **básica**, **estándar**, **Premium**, **de propósito General**,  **Cruciales para la empresa**, o **almacenamiento de datos**.|  
+|service_objective|sysname|El nivel de precios de la base de datos. Devuelve si la base de datos está en un grupo elástico, **ElasticPool**.<br /><br /> En el **básica** capa, devuelve **básica**.<br /><br /> Base de datos único en un nivel de servicio estándar devuelve los valores válidos para este nivel.<br /><br /> Base de datos único en un nivel premium devuelve los valores válidos para este nivel de servicio.<br /><br />Base de datos único en el nivel de servicio de uso General devuelve los valores válidos para este nivel de servicio.<br /><br />Base de datos único en el nivel de servicio empresarial crítica devuelve los valores válidos para este nivel de servicio.<br /><br /> Almacenamiento de datos SQL devuelve los valores válidos para el almacenamiento de datos SQL.|  
 |elastic_pool_name|sysname|El nombre de la [grupo elástico](https://azure.microsoft.com/documentation/articles/sql-database-elastic-pool/) que pertenece la base de datos. Devuelve **NULL** si la base de datos es una base de datos o un warehoue de datos.|  
   
 ## <a name="permissions"></a>Permissions  

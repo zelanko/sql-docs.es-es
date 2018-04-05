@@ -1,27 +1,28 @@
 ---
 title: Pantalla del Asistente para 2 (controlador ODBC para SQL Server) del origen de datos | Documentos de Microsoft
-ms.custom: 
-ms.date: 09/27/2017
+ms.custom: ''
+ms.date: 03/21/2018
 ms.prod: sql-non-specified
 ms.prod_service: drivers
-ms.service: 
+ms.service: ''
 ms.component: odbc
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: drivers
-ms.tgt_pltfrm: 
+ms.technology:
+- drivers
+ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: 76326eeb-1144-4b9f-85db-50524c655d30
-caps.latest.revision: "22"
+caps.latest.revision: 22
 author: MightyPen
-ms.author: genemi
+ms.author: v-jizho2
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: c2291b951c0df4f365b76f80ebab3572a39375d1
-ms.sourcegitcommit: 2713f8e7b504101f9298a0706bacd84bf2eaa174
+ms.openlocfilehash: 624888902e260baa03ad30aee8608f921deb73a4
+ms.sourcegitcommit: 8b332c12850c283ae413e0b04b2b290ac2edb672
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/18/2017
+ms.lasthandoff: 04/05/2018
 ---
 # <a name="data-source-wizard-screen-2"></a>Pantalla del Asistente para orígenes de datos 2
 
@@ -47,9 +48,13 @@ Especifica que el controlador se autentiquen en SQL Server mediante un identific
 
 Especifica que el controlador se autentiquen en SQL Server mediante un identificador de inicio de sesión de Azure Active Directory y una contraseña.
 
+### <a name="with-active-directory-interactive-authentication"></a>Con la autenticación de Active Directory interactivo
+
+Especifica que el controlador se autentiquen en SQL Server con Azure Active Directory el modo interactivo proporcionando el identificador de inicio de sesión. Esto desencadenará el cuadro de diálogo de autenticación de Windows Azure.
+
 ### <a name="login-id"></a>Id. de inicio de sesión
 
-Especifica el identificador de inicio de sesión al conectarse a SQL Server si se utiliza el controlador **con autenticación de SQL Server mediante un identificador de inicio de sesión y una contraseña escritos por el usuario** o **autenticación con Active Directory contraseña mediante un Id. de inicio de sesión y una contraseña escritos por el usuario** está seleccionada. Esto solo se aplica a la conexión que se realiza para determinar la configuración de servidor predeterminada; no se aplica a las conexiones subsiguientes realizadas utilizando el origen de datos una vez creado.
+Especifica el identificador de inicio de sesión al conectarse a SQL Server si se utiliza el controlador **con autenticación de SQL Server mediante un identificador de inicio de sesión y una contraseña escritos por el usuario** o **autenticación con Active Directory contraseña mediante un Id. de inicio de sesión y una contraseña escritos por el usuario** o **autenticación con Active Directory interactivo mediante un identificador de inicio de sesión especificado por el usuario** está seleccionada. Esto solo se aplica a la conexión que se realiza para determinar la configuración de servidor predeterminada; no se aplica a las conexiones subsiguientes realizadas utilizando el origen de datos una vez creado.
 
 ### <a name="password"></a>Contraseña
 

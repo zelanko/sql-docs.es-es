@@ -1,16 +1,16 @@
 ---
 title: Grupos de acciones y acciones de SQL Server Audit | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 10/19/2016
 ms.prod: sql-non-specified
 ms.prod_service: database-engine
-ms.service: 
+ms.service: ''
 ms.component: security
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 f1_keywords:
 - audit
@@ -24,7 +24,7 @@ helpviewer_keywords:
 - audit action groups [SQL Server]
 - audits [SQL Server], actions
 ms.assetid: b7422911-7524-4bcd-9ab9-e460d5897b3d
-caps.latest.revision: 
+caps.latest.revision: 46
 author: edmacauley
 ms.author: edmaca
 manager: craigg
@@ -114,7 +114,7 @@ ms.lasthandoff: 11/21/2017
 |SERVER_PERMISSION_CHANGE_GROUP|Este evento se desencadena al emitir una instrucción GRANT, REVOKE o DENY para los permisos en el ámbito del servidor, como la creación de un inicio de sesión. Equivalente a [Audit Server Scope GDR Event Class](../../../relational-databases/event-classes/audit-server-scope-gdr-event-class.md).|  
 |SERVER_PRINCIPAL_CHANGE_GROUP|Este evento se desencadena al crear, modificar o quitar entidades de seguridad de servidor. Equivalente a [Audit Server Principal Management Event Class](../../../relational-databases/event-classes/audit-server-principal-management-event-class.md).<br /><br /> Este evento se desencadena cuando una entidad de seguridad emite los procedimientos almacenados sp_defaultdb o sp_defaultlanguage o las instrucciones ALTER LOGIN. Equivalente a [Audit Addlogin Event Class](../../../relational-databases/event-classes/audit-addlogin-event-class.md).<br /><br /> Este evento se desencadena en los procedimientos almacenados sp_addlogin y sp_droplogin. También es equivalente a [Audit Login Change Property Event Class](../../../relational-databases/event-classes/audit-login-change-property-event-class.md).<br /><br /> Este evento se desencadena para los procedimientos almacenados sp_grantlogin y sp_revokelogin. Equivalente a [Audit Login GDR Event Class](../../../relational-databases/event-classes/audit-login-gdr-event-class.md).|  
 |SERVER_PRINCIPAL_IMPERSONATION_GROUP|Este evento se desencadena cuando hay una suplantación en el ámbito del servidor, como EXECUTE AS \<inicioDeSesión>. Equivalente a [Audit Server Principal Impersonation Event Class](../../../relational-databases/event-classes/audit-server-principal-impersonation-event-class.md).|  
-|SERVER_ROLE_MEMBER_CHANGE_GROUP|Este evento se desencadena cuando se agrega o quita un inicio de sesión en un rol fijo de servidor. Este evento se desencadena para los procedimientos almacenados sp_addsrvrolemember y sp_dropsrvrolemember. Equivalente a [Audit Add Login to Server Role Event Class](../../../relational-databases/event-classes/audit-add-login-to-server-role-event-class.md).|  
+|SERVER_ROLE_MEMBER_CHANGE_GROUP|Este evento se desencadena cuando se agrega o quita un inicio de sesión en un rol fijo de servidor. Este evento se desencadena para los procedimientos almacenados sp_addsrvrolemember y sp_dropsrvrolemember. Equivalente a [Audit Add Login to Server Role, clase de eventos](../../../relational-databases/event-classes/audit-add-login-to-server-role-event-class.md).|  
 |SERVER_STATE_CHANGE_GROUP|Este evento se desencadena al modificar el estado del servicio de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] . Equivalente a [Audit Server Starts and Stops Event Class](../../../relational-databases/event-classes/audit-server-starts-and-stops-event-class.md).|  
 |SUCCESSFUL_DATABASE_AUTHENTICATION_GROUP|Indica que una entidad de seguridad inició una sesión correctamente en una base de datos independiente. Equivalente a la clase de eventos de auditoría correcta de autenticación de base de datos.|  
 |SUCCESSFUL_LOGIN_GROUP|Indica que una entidad de seguridad ha iniciado correctamente una sesión de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]. Los eventos de esta clase los producen nuevas conexiones o conexiones reutilizadas de un grupo de conexiones. Equivalente a [Audit Login Event Class](../../../relational-databases/event-classes/audit-login-event-class.md).|  

@@ -1,16 +1,16 @@
 ---
 title: sp_addmergepublication (Transact-SQL) | Documentos de Microsoft
-ms.custom: 
+ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql-non-specified
 ms.prod_service: database-engine
-ms.service: 
+ms.service: ''
 ms.component: system-stored-procedures
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - replication
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 applies_to:
 - SQL Server
@@ -20,7 +20,7 @@ f1_keywords:
 helpviewer_keywords:
 - sp_addmergepublication
 ms.assetid: 28a629a1-7374-4614-9b04-279d290a942a
-caps.latest.revision: 
+caps.latest.revision: 72
 author: edmacauley
 ms.author: edmaca
 manager: craigg
@@ -123,7 +123,7 @@ sp_addmergepublication [ @publication = ] 'publication'
  Permite que la publicación de mezcla use filtros de filas con parámetros. *dynamic_filters* es **nvarchar (5)**, con un valor predeterminado es FALSE.  
   
 > [!NOTE]  
->  No se recomienda especificar este parámetro; es mejor que [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] determine de forma automática si se están utilizando filtros de fila con parámetros. Si especifica un valor de **true** para *dynamic_filters*, debe definir un filtro de fila con parámetros para el artículo. Para más información, consulte [Define and Modify a Parameterized Row Filter for a Merge Article](../../relational-databases/replication/publish/define-and-modify-a-parameterized-row-filter-for-a-merge-article.md).  
+>  No se recomienda especificar este parámetro; es mejor que [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] determine de forma automática si se están utilizando filtros de fila con parámetros. Si especifica un valor de **true** para *dynamic_filters*, debe definir un filtro de fila con parámetros para el artículo. Para más información, consulte [Definir y modificar un filtro de fila con parámetros para un artículo de mezcla](../../relational-databases/replication/publish/define-and-modify-a-parameterized-row-filter-for-a-merge-article.md).  
   
  [  **@snapshot_in_defaultfolder =** ] **'***snapshot_in_default_folder***'**  
  Especifica si los archivos de instantáneas se almacenan en la carpeta predeterminada. *snapshot_in_default_folder* es **nvarchar (5)**, con un valor predeterminado es TRUE. Si **true**, archivos de instantáneas se pueden encontrar en la carpeta predeterminada. Si **false**, archivos de instantáneas se almacenarán en la ubicación alternativa especificada por *alternate_snapshot_folder*. Las ubicaciones alternativas pueden encontrarse en otro servidor, en una unidad de red o en medios extraíbles (como CD-ROM o discos extraíbles). También puede guardar los archivos de instantáneas en un sitio FTP (Protocolo de transferencia de archivos), para que el suscriptor los recupere más tarde. Tenga en cuenta que este parámetro puede ser true y seguir teniendo una ubicación especificada por *alt_snapshot_folder*. Esta combinación especifica que los archivos de instantáneas se almacenarán tanto en la ubicación predeterminada como en la alternativa.  
@@ -138,7 +138,7 @@ sp_addmergepublication [ @publication = ] 'publication'
  Especifica un puntero a un **.sql** ubicación del archivo. *post_snapshot_script* es **nvarchar (255)**, su valor predeterminado es null. El Agente de mezcla ejecutará el script posterior a la instantánea después de que se apliquen los demás scripts y datos de objetos replicados durante una sincronización inicial. El script se ejecuta en el contexto de seguridad utilizado por el Agente de mezcla durante la conexión con la base de datos de suscripciones. Las secuencias de comandos posterior a la instantánea no se ejecutan en [!INCLUDE[ssEW](../../includes/ssew-md.md)] los suscriptores.  
   
  [  **@compress_snapshot =** ] **'***compress_snapshot***'**  
- Especifica que la instantánea escrita en la  **@alt_snapshot_folder**  ubicación está comprimida en el [!INCLUDE[msCoName](../../includes/msconame-md.md)] formato CAB. *compress_snapshot* es **nvarchar (5)**, con un valor predeterminado es FALSE. **false** especifica que no se comprimirá la instantánea; **true** especifica que se comprimirá la instantánea. No se pueden comprimir archivos de instantáneas superiores a 2 GB. Los archivos de instantáneas comprimidos se descomprimen en la ubicación en la que se ejecuta el Agente de mezcla; normalmente, se utilizan suscripciones de extracción con las instantáneas comprimidas para descomprimir los archivos en el suscriptor. La instantánea de la carpeta predeterminada no se puede comprimir. Para admitir [!INCLUDE[ssEW](../../includes/ssew-md.md)] suscriptores, debe especificar **false**.  
+ Especifica que la instantánea escrita en la **@alt_snapshot_folder** ubicación está comprimida en el [!INCLUDE[msCoName](../../includes/msconame-md.md)] formato CAB. *compress_snapshot* es **nvarchar (5)**, con un valor predeterminado es FALSE. **false** especifica que no se comprimirá la instantánea; **true** especifica que se comprimirá la instantánea. No se pueden comprimir archivos de instantáneas superiores a 2 GB. Los archivos de instantáneas comprimidos se descomprimen en la ubicación en la que se ejecuta el Agente de mezcla; normalmente, se utilizan suscripciones de extracción con las instantáneas comprimidas para descomprimir los archivos en el suscriptor. La instantánea de la carpeta predeterminada no se puede comprimir. Para admitir [!INCLUDE[ssEW](../../includes/ssew-md.md)] suscriptores, debe especificar **false**.  
   
  [  **@ftp_address =** ] **'***ftp_address***'**  
  Es la dirección de red del servicio FTP para el distribuidor. *ftp_address* es **sysname**, su valor predeterminado es null. Especifica dónde se encuentran el agente de mezcla de un suscriptor para recoger los archivos de instantáneas de publicación. Puesto que esta propiedad se almacena para todas las publicaciones, cada publicación puede tener diferentes *ftp_address*. La publicación debe ser compatible con la propagación de instantáneas mediante FTP.  
@@ -219,11 +219,11 @@ sp_addmergepublication [ @publication = ] 'publication'
  [  **@replicate_ddl =** ] *replicate_ddl*  
  Indica si la publicación admite replicación de esquema. *replicate_ddl* es **int**, su valor predeterminado es 1. **1** indica que se replican instrucciones de DDL (lenguaje) de definición de datos ejecutadas en el publicador, y **0** indica que no se replican las instrucciones de DDL. Para más información, vea [Realizar cambios de esquema en bases de datos de publicaciones](../../relational-databases/replication/publish/make-schema-changes-on-publication-databases.md).  
   
- El  *@replicate_ddl*  parámetro se observa cuando una instrucción DDL agrega una columna. El  *@replicate_ddl*  parámetro se ignora cuando una instrucción DDL modifica o quita una columna por las razones siguientes.  
+ El *@replicate_ddl* parámetro se observa cuando una instrucción DDL agrega una columna. El *@replicate_ddl* parámetro se ignora cuando una instrucción DDL modifica o quita una columna por las razones siguientes.  
   
--   Cuando se quita una columna, sysarticlecolumns debe actualizarse para evitar que las nuevas instrucciones DML incluyan la columna quitada lo que haría que el agente de distribución genere un error. El  *@replicate_ddl*  parámetro se ignora porque la replicación siempre debe replicar el cambio de esquema.  
+-   Cuando se quita una columna, sysarticlecolumns debe actualizarse para evitar que las nuevas instrucciones DML incluyan la columna quitada lo que haría que el agente de distribución genere un error. El *@replicate_ddl* parámetro se ignora porque la replicación siempre debe replicar el cambio de esquema.  
   
--   Cuando se modifica una columna, es posible que el tipo de datos de origen o la nulabilidad hayan cambiado, lo que hace que las instrucciones DML contengan un valor que quizás no sea compatible con la tabla en el suscriptor. Estas instrucciones DML pueden hacer que el agente de distribución genere un error. El  *@replicate_ddl*  parámetro se ignora porque la replicación siempre debe replicar el cambio de esquema.  
+-   Cuando se modifica una columna, es posible que el tipo de datos de origen o la nulabilidad hayan cambiado, lo que hace que las instrucciones DML contengan un valor que quizás no sea compatible con la tabla en el suscriptor. Estas instrucciones DML pueden hacer que el agente de distribución genere un error. El *@replicate_ddl* parámetro se ignora porque la replicación siempre debe replicar el cambio de esquema.  
   
 -   Cuando una instrucción DDL agrega una nueva columna, sysarticlecolumns no incluye la nueva columna. Las instrucciones DML no intentarán replicar datos para la nueva columna. Se respeta el parámetro porque la DDL es aceptable se realice o no la replicación.  
   
@@ -256,7 +256,7 @@ sp_addmergepublication [ @publication = ] 'publication'
  Especifica el número de cambios que se encuentran en una generación. Una generación es un conjunto de cambios que se entregan a un publicador o suscriptor. *generation_leveling_threshold* es **int**, con un valor predeterminado de 1000.  
   
  [  **@automatic_reinitialization_policy =** ] *automatic_reinitialization_policy*  
- Especifica si se cargan cambios desde el suscriptor antes que una reinicialización automática requerido un cambio en la publicación, donde un valor de **1** no se especificó para  **@force_reinit_subscription** . *automatic_reinitialization_policy* es de tipo bit, con un valor predeterminado de 0. **1** significa que los cambios se cargan desde el suscriptor antes de que se produzca una reinicialización automática.  
+ Especifica si se cargan cambios desde el suscriptor antes que una reinicialización automática requerido un cambio en la publicación, donde un valor de **1** no se especificó para **@force_reinit_subscription**. *automatic_reinitialization_policy* es de tipo bit, con un valor predeterminado de 0. **1** significa que los cambios se cargan desde el suscriptor antes de que se produzca una reinicialización automática.  
   
 > [!IMPORTANT]  
 >  Si se agrega, quita o modifica un filtro con parámetros, los cambios pendientes en el suscriptor no se pueden cargar en el publicador durante la reinicialización. Si desea cargar los cambios pendientes, sincronice todas las suscripciones antes de cambiar el filtro.  
@@ -277,7 +277,7 @@ sp_addmergepublication [ @publication = ] 'publication'
 ## <a name="remarks"></a>Comentarios  
  **sp_addmergepublication** se utiliza en la replicación de mezcla.  
   
- Para enumerar los objetos de publicación a Active Directory mediante la  **@add_to_active_directory**  parámetro, el [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] objeto debe estar ya creado en Active Directory.  
+ Para enumerar los objetos de publicación a Active Directory mediante la **@add_to_active_directory** parámetro, el [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] objeto debe estar ya creado en Active Directory.  
   
  Si existen varias publicaciones que publicar el mismo objeto de base de datos, solamente las publicaciones con un *replicate_ddl* valo **1** replicará ALTER TABLE, ALTER VIEW, ALTER PROCEDURE, ALTER FUNCTION y Instrucciones ALTER TRIGGER de DDL. Sin embargo, todas las publicaciones que publiquen la columna quitada replicarán una instrucción ALTER TABLE DROP COLUMN de DDL.  
   

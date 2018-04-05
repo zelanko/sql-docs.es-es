@@ -1,16 +1,16 @@
 ---
 title: Reducir una base de datos | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql-non-specified
 ms.prod_service: database-engine, sql-database
-ms.service: 
+ms.service: ''
 ms.component: databases
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 f1_keywords:
 - sql13.swb.shrinkdatabase.f1
@@ -21,7 +21,7 @@ helpviewer_keywords:
 - database shrinking [SQL Server]
 - reducing database size
 ms.assetid: 83afbf74-fd50-4c39-831c-b1f473a50620
-caps.latest.revision: 
+caps.latest.revision: 42
 author: stevestein
 ms.author: sstein
 manager: craigg
@@ -67,7 +67,7 @@ ms.lasthandoff: 01/18/2018
   
 ###  <a name="Recommendations"></a> Recomendaciones  
   
--   Para ver la cantidad actual de espacio disponible (sin asignar) en la base de datos. Para obtener más información, consulte [Display Data and Log Space Information for a Database](../../relational-databases/databases/display-data-and-log-space-information-for-a-database.md).  
+-   Para ver la cantidad actual de espacio disponible (sin asignar) en la base de datos. Para obtener más información, consulte [Mostrar la información del espacio ocupado por los datos y el registro de una base de datos](../../relational-databases/databases/display-data-and-log-space-information-for-a-database.md)  
   
 -   Tenga en cuenta la siguiente información cuando vaya a reducir una base de datos:  
   

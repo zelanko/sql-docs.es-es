@@ -1,16 +1,16 @@
 ---
 title: sys.dm_os_sys_info (Transact-SQL) | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 04/24/2017
 ms.prod: sql-non-specified
 ms.prod_service: database-engine, sql-data-warehouse, pdw
-ms.service: 
+ms.service: ''
 ms.component: dmv's
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - sys.dm_os_sys_info_TSQL
@@ -24,16 +24,16 @@ helpviewer_keywords:
 - time [SQL Server], instance started
 - starting time
 ms.assetid: 20f6bc9c-839a-4fa4-b3f3-a6c47d1b69af
-caps.latest.revision: 
+caps.latest.revision: 57
 author: stevestein
 ms.author: sstein
 manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 21fe61d34a9b8823af499b64aef0eaef95c1a92e
-ms.sourcegitcommit: c556eaf60a49af7025db35b7aa14beb76a8158c5
+ms.openlocfilehash: d5284112257c5d1c2d23f354ec7690fab6abb90b
+ms.sourcegitcommit: 8b332c12850c283ae413e0b04b2b290ac2edb672
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/03/2018
+ms.lasthandoff: 04/05/2018
 ---
 # <a name="sysdmossysinfo-transact-sql"></a>sys.dm_os_sys_info (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-asdw-pdw-md](../../includes/tsql-appliesto-ss2008-xxxx-asdw-pdw-md.md)]
@@ -68,7 +68,7 @@ ms.lasthandoff: 02/03/2018
 |**deadlock_monitor_serial_number**|**int**|Especifica el identificador de la secuencia del monitor de interbloqueos actual. No acepta valores NULL.|  
 |**sqlserver_start_time_ms_ticks**|**bigint**|Representa la **ms_tick** número cuando [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] inició por última vez. Comparar a la columna actual ms_ticks. No acepta valores NULL.|  
 |**sqlserver_start_time**|**datetime**|Especifica la fecha y la hora en que [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] se inició por última vez. No acepta valores NULL.|  
-|**affinity_type**|**int**|**Se aplica a: [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)]**  a través de [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].<br /><br /> Especifica el tipo de la afinidad de proceso de la CPU de servidor actualmente en uso. No acepta valores NULL. Para obtener más información, vea [ALTER SERVER CONFIGURATION &#40; Transact-SQL &#41; ](../../t-sql/statements/alter-server-configuration-transact-sql.md).<br /><br /> 1 = MANUAL<br /><br /> 2 = AUTO|  
+|**affinity_type**|**int**|**Se aplica a: [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)]**  a través de [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].<br /><br /> Especifica el tipo de la afinidad de proceso de la CPU de servidor actualmente en uso. No acepta valores NULL. Para obtener más información, consulte [ALTER SERVER CONFIGURATION &#40;Transact-SQL&#41;](../../t-sql/statements/alter-server-configuration-transact-sql.md).<br /><br /> 1 = MANUAL<br /><br /> 2 = AUTO|  
 |**affinity_type_desc**|**varchar(60)**|**Se aplica a: [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)] a través de [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]** .<br /><br /> Describe la **affinity_type** columna. No acepta valores NULL.<br /><br /> MANUAL = la afinidad se ha establecido para al menos una CPU.<br /><br /> AUTO = [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] puede mover libremente los subprocesos entre las CPU.|  
 |**process_kernel_time_ms**|**bigint**|**Se aplica a: [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)] a través de [! INCLUDE [ssCurrent]**(.. /Token/ssCurrent_md.MD)].<br /><br /> Tiempo total en milisegundos que han tardado todos los subprocesos de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] en modo kernel. Este valor puede ser mayor que el de un único reloj de procesador porque incluye el tiempo para todos los procesadores del servidor. No acepta valores NULL.|  
 |**process_user_time_ms**|**bigint**|**Se aplica a: [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)] a través de [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]** .<br /><br /> Tiempo total en milisegundos que han tardado todos los subprocesos de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] en modo usuario. Este valor puede ser mayor que el de un único reloj de procesador porque incluye el tiempo para todos los procesadores del servidor. No acepta valores NULL.|  
@@ -81,19 +81,19 @@ ms.lasthandoff: 02/03/2018
 |**process_physical_affinity**|**nvarchar(3072)** |**Se aplica a: a partir de [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)]** .<br /><br />Información aún se proporcionará. |
 |**sql_memory_model**|**int**|**Se aplica a: [!INCLUDE[sssql11](../../includes/sssql11-md.md)] SP4 a partir [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] SP1**.<br /><br />Especifica el modelo de memoria utilizado por SQL Server para asignar memoria. No acepta valores NULL.<br /><br />1 = modelo de memoria convencional<br />2 = bloquear páginas en memoria<br /> 3 = páginas grandes en la memoria|
 |**sql_memory_model_desc**|**nvarchar(120)**|**Se aplica a: [!INCLUDE[sssql11](../../includes/sssql11-md.md)] SP4 a partir [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] SP1**.<br /><br />Especifica el modelo de memoria utilizado por SQL Server para asignar memoria. No acepta valores NULL.<br /><br />**CONVENCIONAL** = SQL Server está usando el modelo de memoria convencional para asignar memoria. Este es el modelo de memoria de sql de predeterminado cuando la cuenta de servicio de SQL Server no tiene bloquear páginas en los privilegios de memoria durante el inicio.<br />**LOCK_PAGES** = SQL server está usando bloquear páginas en memoria para asignar memoria. Este es el Administrador de memoria de sql de forma predeterminada cuando la cuenta de servicio de SQL Server poseer bloquear páginas en el privilegio de memoria durante el inicio de SQL Server.<br /> **LARGE_PAGES** = SQL Server está utilizando páginas grandes en la memoria para asignar memoria. SQL Server utiliza el asignador de páginas grandes para asignar memoria sólo con Enterprise edition cuando la cuenta de servicio de SQL Server poseer bloquear páginas en privilegios de memoria durante el inicio del servidor y cuando está activado 834 de marca de seguimiento.|
-|**pdw_node_id**|**int**|**Se aplica a: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)],[!INCLUDE[ssPDW](../../includes/sspdw-md.md)]**<br /><br /> El identificador para el nodo que se encuentra en esta distribución.|  
+|**pdw_node_id**|**int**|**Se aplica a: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)], [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]**<br /><br /> El identificador para el nodo que se encuentra en esta distribución.|  
 |**socket_count** |**int** | **Se aplica a: a partir de [!INCLUDE[sssqlv14-md](../../includes/sssqlv14-md.md)]** .<br /><br />Especifica el número de sockets de procesador disponibles en el sistema. |  
 |**cores_per_socket** |**int** | **Se aplica a: a partir de [!INCLUDE[sssqlv14-md](../../includes/sssqlv14-md.md)].**.<br /><br />Especifica el número de procesadores por socket disponible en el sistema. |  
 |**numa_node_count** |**int** | **Se aplica a: a partir de [!INCLUDE[sssqlv14-md](../../includes/sssqlv14-md.md)].**.<br /><br />Especifica el número de nodos numa disponibles en el sistema. Esta columna incluye nodos numa físicos, así como nodos numa de software. |  
   
-## <a name="permissions"></a>Permissions  
- En [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] requiere `VIEW SERVER STATE` permiso en el servidor.  
-  
- En [!INCLUDE[ssSDS](../../includes/sssds-md.md)] niveles Premium requieren el `VIEW DATABASE STATE` permiso en la base de datos. En [!INCLUDE[ssSDS](../../includes/sssds-md.md)] niveles estándar y básico requiere la [!INCLUDE[ssSDS](../../includes/sssds-md.md)] cuenta de administrador.  
-  
+## <a name="permissions"></a>Permissions
+
+En [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)], requiere `VIEW SERVER STATE` permiso.   
+En [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)], requiere el `VIEW DATABASE STATE` permiso en la base de datos.   
+
 ## <a name="see-also"></a>Vea también  
  [Funciones y vistas de administración dinámica &#40;Transact-SQL&#41;](~/relational-databases/system-dynamic-management-views/system-dynamic-management-views.md)   
- [Sistema operativo SQL Server relacionadas con vistas de administración dinámica &#40; Transact-SQL &#41;](../../relational-databases/system-dynamic-management-views/sql-server-operating-system-related-dynamic-management-views-transact-sql.md)  
+ [Vistas de administración dinámica relacionadas con el sistema operativo SQL Server &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sql-server-operating-system-related-dynamic-management-views-transact-sql.md)  
   
   
 

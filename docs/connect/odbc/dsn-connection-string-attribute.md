@@ -1,29 +1,29 @@
 ---
-title: "DSN y cadenas de conexión palabras clave y los atributos usados en el controlador ODBC para SQL Server | Documentos de Microsoft"
-ms.custom: 
-ms.date: 01/24/2018
+title: DSN y cadenas de conexión palabras clave y los atributos usados en el controlador ODBC para SQL Server | Documentos de Microsoft
+ms.custom: ''
+ms.date: 03/21/2018
 ms.prod: sql-non-specified
 ms.prod_service: drivers
-ms.service: 
+ms.service: ''
 ms.component: odbc
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - drivers
 - DSN
 - Connection String Keywords
 - Connection Attributes
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 author: MightyPen
 ms.author: v-jizho2
 manager: jhubbard
 ms.workload: On Demand
-ms.openlocfilehash: 09af03a1f7f9389bbbc86bc5f9f1a5a358aaf885
-ms.sourcegitcommit: 99102cdc867a7bdc0ff45e8b9ee72d0daade1fd3
+ms.openlocfilehash: 641d0cf4134dc488436f981df1d4bee2c089acd2
+ms.sourcegitcommit: 8b332c12850c283ae413e0b04b2b290ac2edb672
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/11/2018
+ms.lasthandoff: 04/05/2018
 ---
 # <a name="dsn-and-connection-string-keywords-and-attributes"></a>DSN y palabras clave de cadena de conexión y atributos
 
@@ -166,6 +166,7 @@ Establece el modo de autenticación que se utilizará al conectarse a SQL Server
 |SqlPassword|SQL_AU_PASSWORD|Autenticación de SQL Server con nombre de usuario y una contraseña.|
 |ActiveDirectoryIntegrated|SQL_AU_AD_INTEGRATED|Autenticación integrada en Active Directory de Azure.|
 |ActiveDirectoryPassword|SQL_AU_AD_PASSWORD|Autenticación de contraseña de Active Directory de Azure.|
+|ActiveDirectoryInteractive|SQL_AU_AD_INTERACTIVE|Autenticación de Azure Active Directory interactivo.|
 | |SQL_AU_RESET|Sin establecer. Invalida cualquier DSN o la configuración de la cadena de conexión.|
 
 ### <a name="columnencryption---sqlcoptsscolumnencryption"></a>ColumnEncryption - SQL_COPT_SS_COLUMN_ENCRYPTION
@@ -219,6 +220,6 @@ Carga una biblioteca de proveedor de almacén de claves para Always Encrypted o 
 
 | Valor de atributo | Description |
 |-|-|
-| Char * | Ruta de acceso a una biblioteca de proveedor de almacén de claves |
+| char * | Ruta de acceso a una biblioteca de proveedor de almacén de claves |
 
 

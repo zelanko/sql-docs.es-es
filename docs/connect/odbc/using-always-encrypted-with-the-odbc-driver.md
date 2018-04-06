@@ -1,27 +1,28 @@
 ---
 title: Uso de Always Encrypted con el controlador ODBC para SQL Server | Documentos de Microsoft
-ms.custom: 
+ms.custom: ''
 ms.date: 10/01/2018
 ms.prod: sql-non-specified
 ms.prod_service: drivers
-ms.service: 
+ms.service: ''
 ms.component: odbc
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: drivers
-ms.tgt_pltfrm: 
+ms.technology:
+- drivers
+ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: 02e306b8-9dde-4846-8d64-c528e2ffe479
-caps.latest.revision: "3"
+caps.latest.revision: 3
 ms.author: v-chojas
 manager: jhubbard
 author: MightyPen
 ms.workload: On Demand
-ms.openlocfilehash: a7e2679b04f55f528de1d90070593f6197160d79
-ms.sourcegitcommit: 82c9868b5bf95e5b0c68137ba434ddd37fc61072
+ms.openlocfilehash: 1456db9e5474f2970508b4bc035915744172b3df
+ms.sourcegitcommit: 8b332c12850c283ae413e0b04b2b290ac2edb672
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/22/2018
+ms.lasthandoff: 04/05/2018
 ---
 # <a name="using-always-encrypted-with-the-odbc-driver-for-sql-server"></a>Uso de Always Encrypted con el controlador ODBC para SQL Server
 [!INCLUDE[Driver_ODBC_Download](../../includes/driver_odbc_download.md)]
@@ -333,10 +334,16 @@ Si SQL Server indica al controlador que no es necesario cifrar el parámetro, se
 
 ### <a name="column-encryption-key-caching"></a>Almacenamiento en caché de clave de cifrado de columna
 
-Para reducir el número de llamadas a un almacén de claves maestras de columna para descifrar las claves de cifrado de columna, el controlador almacena en caché el CEK de texto simple en la memoria. Después de recibir el ECEK de metadatos de la base de datos, primero el controlador intenta encontrar la CEK de texto simple correspondiente al valor de clave de cifrado en la memoria caché. El controlador llama al almacén de claves que contiene la CMK solo si no encuentra el CEK de texto sin formato correspondiente en la memoria caché.
+Para reducir el número de llamadas a un almacén de claves maestras de columna para descifrar las claves de cifrado de columna, el controlador almacena en caché el CEK de texto simple en la memoria. La caché de la CEK es global para el controlador y no están asociados con una conexión de prueba. Después de recibir el ECEK de metadatos de la base de datos, primero el controlador intenta encontrar la CEK de texto simple correspondiente al valor de clave de cifrado en la memoria caché. El controlador llama al almacén de claves que contiene la CMK solo si no encuentra el CEK de texto sin formato correspondiente en la memoria caché.
 
 > [!NOTE]
 > En el controlador ODBC para SQL Server, las entradas de la memoria caché se desalojan después de un tiempo de espera de dos horas. Esto significa que para una ECEK determinada, el controlador se pone en contacto el almacén de claves sólo una vez durante la duración de la aplicación o cada dos horas, lo que sea menor.
+
+A partir de la 17.1 del controlador ODBC para SQL Server, el tiempo de espera de caché CEK se puede ajustar utilizando el `SQL_COPT_SS_CEKCACHETTL` atributo de conexión, que especifica el número de segundos que una CEK permanecerá en la memoria caché. Debido a la naturaleza global de la memoria caché, este atributo se puede ajustar desde cualquier identificador de conexión válida para el controlador. Cuando también se eliminan la memoria caché se reduce el TTL, las CEK existentes que superaría el TTL nuevo. Si es 0, no las CEK se almacenan en caché.
+
+### <a name="trusted-key-paths"></a>Rutas de acceso de claves de confianza
+
+A partir de la 17.1 del controlador ODBC para SQL Server, el `SQL_COPT_SS_TRUSTEDCMKPATHS` atributo de conexión permite a una aplicación requerir que las operaciones de Always Encrypted solo usen una lista especificada de CMK, identificados por sus rutas de acceso de claves. De forma predeterminada, este atributo es NULL, lo que significa que el controlador acepta cualquier ruta de acceso de clave. Para usar esta característica, establezca `SQL_COPT_SS_TRUSTEDCMKPATHS` para que apunte a una cadena de caracteres anchos delimitada por nulos, terminada en null que se enumeran las rutas de acceso de clave permitidos. La memoria que apunta este atributo debe seguir siendo válida durante las operaciones de cifrado o descifrado con el identificador de conexión en el que se establece---en los que el controlador comprobará si la ruta de acceso CMK según se especifica en los metadatos del servidor está distinga mayúsculas y minúsculas en esta lista. Si la ruta de acceso CMK no está en la lista, se produce un error en la operación. La aplicación puede cambiar el contenido de la memoria a que este atributo apunta, para cambiar su lista de confianza CMK, sin tener que configurar el atributo nuevo.
 
 ## <a name="working-with-column-master-key-stores"></a>Trabajar con almacenes de claves maestras de columna
 
@@ -430,7 +437,7 @@ El controlador intenta cargar la biblioteca identificada por el parámetro Value
 |`CE203`|No se encontró el símbolo "CEKeyStoreProvider" Exportar en la biblioteca.|
 |`CE203`|Uno o varios proveedores en la biblioteca ya están cargados.|
 
-`SQLSetConnectAttr`Devuelve el error habitual o valores correctos e información adicional está disponible para los errores que se ha producido a través del mecanismo de diagnóstico estándar de ODBC.
+`SQLSetConnectAttr` Devuelve el error habitual o valores correctos e información adicional está disponible para los errores que se ha producido a través del mecanismo de diagnóstico estándar de ODBC.
 
 > [!NOTE]
 > El programador de la aplicación debe asegurarse de que los proveedores personalizados se cargan antes de enviar cualquier consulta que se les solicita a través de las conexiones. Si no se hace así, se producirá el error:
@@ -567,8 +574,8 @@ Vea [migrar información confidencial protegida mediante Always Encrypted](../..
 
 |Nombre|Description|  
 |----------|-----------------|  
-|`ColumnEncryption`|Valores aceptados son `Enabled` / `Disabled`.<br>`Enabled`--habilita la funcionalidad de Always Encrypted para la conexión.<br>`Disabled`--deshabilitar la funcionalidad de Always Encrypted para la conexión. <br><br>El valor predeterminado es `Disabled`.|  
-|`KeyStoreAuthentication` | Valores válidos: `KeyVaultPassword`,`KeyVaultClientSecret` |
+|`ColumnEncryption`|Valores aceptados son `Enabled` / `Disabled`.<br>`Enabled` --habilita la funcionalidad de Always Encrypted para la conexión.<br>`Disabled` --deshabilitar la funcionalidad de Always Encrypted para la conexión. <br><br>El valor predeterminado es `Disabled`.|  
+|`KeyStoreAuthentication` | Valores válidos: `KeyVaultPassword`, `KeyVaultClientSecret` |
 |`KeyStorePrincipalId` | Cuando `KeyStoreAuthentication`  =  `KeyVaultPassword`, establezca este valor en un nombre Principal de usuario de Active Directory de Azure válido. <br>Cuando `KeyStoreAuthetication`  =  `KeyVaultClientSecret` establezca este valor en un Azure Active Directory aplicación cliente identificador válido |
 |`KeyStoreSecret` | Cuando `KeyStoreAuthentication`  =  `KeyVaultPassword` establezca este valor en la contraseña para el nombre de usuario correspondiente. <br>Cuando `KeyStoreAuthentication`  =  `KeyVaultClientSecret` establezca este valor en el secreto de aplicación asociados con un Azure Active Directory aplicación cliente identificador válido|
 
@@ -576,15 +583,17 @@ Vea [migrar información confidencial protegida mediante Always Encrypted](../..
 
 |Nombre|Tipo|Description|  
 |----------|-------|----------|  
-|`SQL_COPT_SS_COLUMN_ENCRYPTION`|Antes de conectar|`SQL_COLUMN_ENCRYPTION_DISABLE`(0): deshabilitar Always Encrypted <br>`SQL_COLUMN_ENCRYPTION_ENABLE`(1): habilitar Always Encrypted|
+|`SQL_COPT_SS_COLUMN_ENCRYPTION`|Antes de conectar|`SQL_COLUMN_ENCRYPTION_DISABLE` (0): deshabilitar Always Encrypted <br>`SQL_COLUMN_ENCRYPTION_ENABLE` (1): habilitar Always Encrypted|
 |`SQL_COPT_SS_CEKEYSTOREPROVIDER`|Después de conectar|[Establecido] Intente cargar CEKeystoreProvider<br>[Obtener] Devuelve un nombre de CEKeystoreProvider|
 |`SQL_COPT_SS_CEKEYSTOREDATA`|Después de conectar|[Establecido] Escribir datos en CEKeystoreProvider<br>[Obtener] Leer datos de CEKeystoreProvider|
+|`SQL_COPT_SS_CEKCACHETTL`|Después de conectar|[Establecido] Establecer el período de vida de la memoria caché CEK<br>[Obtener] Obtener la caché CEK actual TTL|
+|`SQL_COPT_SS_TRUSTEDCMKPATHS`|Después de conectar|[Establecido] Establecer el puntero rutas de acceso CMK confianza<br>[Obtener] Obtener el puntero de rutas de acceso de confianza CMK actual|
 
 ### <a name="statement-attributes"></a>Atributos de instrucción
 
 |Nombre|Description|  
 |----------|-----------------|  
-|`SQL_SOPT_SS_COLUMN_ENCRYPTION`|`SQL_CE_DISABLED`(0): always Encrypted está deshabilitado para la instrucción <br>`SQL_CE_RESULTSETONLY`(1): solo el descifrado. Conjuntos de resultados y valores devueltos se descifran y parámetros no están cifrados <br>`SQL_CE_ENABLED`(3): always Encrypted está habilitado y usada para parámetros y resultados|
+|`SQL_SOPT_SS_COLUMN_ENCRYPTION`|`SQL_CE_DISABLED` (0): always Encrypted está deshabilitado para la instrucción <br>`SQL_CE_RESULTSETONLY` (1): solo el descifrado. Conjuntos de resultados y valores devueltos se descifran y parámetros no están cifrados <br>`SQL_CE_ENABLED` (3): always Encrypted está habilitado y usada para parámetros y resultados|
 
 ### <a name="descriptor-fields"></a>Campos de descriptor
 

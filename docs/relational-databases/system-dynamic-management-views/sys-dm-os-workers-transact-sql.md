@@ -1,16 +1,16 @@
 ---
 title: sys.dm_os_workers (Transact-SQL) | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 03/13/2017
 ms.prod: sql-non-specified
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
-ms.service: 
+ms.service: ''
 ms.component: dmv's
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - dm_os_workers_TSQL
@@ -22,16 +22,16 @@ dev_langs:
 helpviewer_keywords:
 - sys.dm_os_workers dynamic management view
 ms.assetid: 4d5d1e52-a574-4bdd-87ae-b932527235e8
-caps.latest.revision: 
+caps.latest.revision: 47
 author: stevestein
 ms.author: sstein
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: fb27268dbfb21cf2fed3b1b7b728cd9eeb4ee495
-ms.sourcegitcommit: c556eaf60a49af7025db35b7aa14beb76a8158c5
+ms.openlocfilehash: ce7582dc2c432ee0cfaf0dc04d47d59db9d2aff3
+ms.sourcegitcommit: 8b332c12850c283ae413e0b04b2b290ac2edb672
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/03/2018
+ms.lasthandoff: 04/05/2018
 ---
 # <a name="sysdmosworkers-transact-sql"></a>sys.dm_os_workers (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -51,7 +51,7 @@ ms.lasthandoff: 02/03/2018
 |is_in_cc_exception|**bit**|1 = El trabajador está controlando actualmente una excepción que no es de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].|  
 |is_fatal_exception|**bit**|Especifica si este trabajador recibió una excepción grave.|  
 |is_inside_catch|**bit**|1 = El trabajador está controlando actualmente una excepción.|  
-|is_in_polling_io_completion_routine|**bit**|1 = El trabajador está ejecutando actualmente una rutina de finalización de E/S de una E/S pendiente. Para obtener más información, consulte [sys.dm_io_pending_io_requests &#40; Transact-SQL &#41; ](../../relational-databases/system-dynamic-management-views/sys-dm-io-pending-io-requests-transact-sql.md).|  
+|is_in_polling_io_completion_routine|**bit**|1 = El trabajador está ejecutando actualmente una rutina de finalización de E/S de una E/S pendiente. Para obtener más información, consulte [sys.dm_io_pending_io_requests &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-io-pending-io-requests-transact-sql.md).|  
 |context_switch_count|**int**|Número de cambios de contexto del programador realizados por este trabajador.|  
 |pending_io_count|**int**|Número de E/S físicas realizadas por este trabajador.|  
 |pending_io_byte_count|**bigint**|Número total de bytes de todas las E/S físicas pendientes de este trabajador.|  
@@ -63,22 +63,22 @@ ms.lasthandoff: 02/03/2018
 |exception_num|**int**|Número de error de la última excepción que encontró este trabajador.|  
 |exception_severity|**int**|Gravedad de la última excepción que encontró este trabajador.|  
 |exception_address|**varbinary(8)**|Dirección del código que produjo la excepción|  
-|affinity|**bigint**|La afinidad de subprocesos del trabajador. Coincide con la afinidad del subproceso de [sys.dm_os_threads &#40; Transact-SQL &#41; ](../../relational-databases/system-dynamic-management-views/sys-dm-os-threads-transact-sql.md).|  
+|affinity|**bigint**|La afinidad de subprocesos del trabajador. Coincide con la afinidad del subproceso de [sys.dm_os_threads &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-os-threads-transact-sql.md).|  
 |state|**nvarchar(60)**|Estado del trabajador. Puede ser uno de los siguientes valores:<br /><br /> INIT = El trabajador se está inicializando actualmente.<br /><br /> RUNNING = El trabajador está trabajando de forma preferente o no preferente.<br /><br /> RUNNABLE = El trabajador está preparado para ejecutarse en el programador.<br /><br /> SUSPENDED = El trabajador está suspendido actualmente, esperando por un evento para enviarle una señal.|  
 |start_quantum|**bigint**|Tiempo en milisegundos al inicio de la ejecución actual de este trabajador.|  
 |end_quantum|**bigint**|Tiempo en milisegundos al final de la ejecución actual de este trabajador.|  
-|last_wait_type|**nvarchar(60)**|Tipo de la última espera. Para obtener una lista de tipos de espera, vea [sys.dm_os_wait_stats &#40; Transact-SQL &#41; ](../../relational-databases/system-dynamic-management-views/sys-dm-os-wait-stats-transact-sql.md).|  
+|last_wait_type|**nvarchar(60)**|Tipo de la última espera. Para obtener una lista de tipos de espera, vea [sys.dm_os_wait_stats &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-os-wait-stats-transact-sql.md).|  
 |return_code|**int**|Valor devuelto de la última espera. Puede ser uno de los siguientes valores:<br /><br /> 0 =SUCCESS<br /><br /> 3 = DEADLOCK<br /><br /> 4 = PREMATURE_WAKEUP<br /><br /> 258 = TIMEOUT|  
 |quantum_used|**bigint**|Exclusivamente para uso interno.|  
 |max_quantum|**bigint**|Exclusivamente para uso interno.|  
 |boost_count|**int**|Exclusivamente para uso interno.|  
 |tasks_processed_count|**int**|Número de tareas procesadas por este trabajador.|  
 |fiber_address|**varbinary(8)**|Dirección de memoria de la fibra con la que está asociado este trabajador.<br /><br /> NULL = [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] no está configurado para agrupación ligera.|  
-|task_address|**varbinary(8)**|Dirección de memoria de la tarea actual. Para obtener más información, consulte [sys.dm_os_tasks &#40; Transact-SQL &#41; ](../../relational-databases/system-dynamic-management-views/sys-dm-os-tasks-transact-sql.md).|  
-|memory_object_address|**varbinary(8)**|Dirección de memoria del objeto de memoria del trabajador. Para obtener más información, consulte [sys.dm_os_memory_objects &#40; Transact-SQL &#41; ](../../relational-databases/system-dynamic-management-views/sys-dm-os-memory-objects-transact-sql.md).|  
-|thread_address|**varbinary(8)**|Dirección de memoria del subproceso asociado con este trabajador. Para obtener más información, consulte [sys.dm_os_threads &#40; Transact-SQL &#41; ](../../relational-databases/system-dynamic-management-views/sys-dm-os-threads-transact-sql.md).|  
+|task_address|**varbinary(8)**|Dirección de memoria de la tarea actual. Para obtener más información, consulte [sys.dm_os_tasks &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-os-tasks-transact-sql.md).|  
+|memory_object_address|**varbinary(8)**|Dirección de memoria del objeto de memoria del trabajador. Para obtener más información, consulte [sys.dm_os_memory_objects &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-os-memory-objects-transact-sql.md).|  
+|thread_address|**varbinary(8)**|Dirección de memoria del subproceso asociado con este trabajador. Para obtener más información, consulte [sys.dm_os_threads &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-os-threads-transact-sql.md).|  
 |signal_worker_address|**varbinary(8)**|Dirección de memoria del último trabajador que indicó este objeto. Para obtener más información, consulte [sys.dm_os_workers](../../relational-databases/system-dynamic-management-views/sys-dm-os-workers-transact-sql.md).|  
-|scheduler_address|**varbinary(8)**|Dirección de memoria del programador. Para obtener más información, consulte [sys.dm_os_schedulers &#40; Transact-SQL &#41; ](../../relational-databases/system-dynamic-management-views/sys-dm-os-schedulers-transact-sql.md).|  
+|scheduler_address|**varbinary(8)**|Dirección de memoria del programador. Para obtener más información, consulte [sys.dm_os_schedulers &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-os-schedulers-transact-sql.md).|  
 |processor_group|**smallint**|Almacena el identificador de grupo de procesadores que está asignado a este subproceso.|  
 |pdw_node_id|**int**|**Se aplica a**: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)], [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]<br /><br /> El identificador para el nodo que se encuentra en esta distribución.|  
   
@@ -87,10 +87,11 @@ ms.lasthandoff: 02/03/2018
   
  Cuando se señala a un trabajador que espera en un evento, el trabajador se coloca al principio de la cola de ejecutables. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] permite que suceda esto 1.000 veces en una fila; después, el trabajador se coloca al final de la cola. Mover un trabajador al final de la cola tiene algunas implicaciones sobre el rendimiento.  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>Permissions
+
 En [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)], requiere `VIEW SERVER STATE` permiso.   
-En [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)] niveles de Premium, requieren la `VIEW DATABASE STATE` permiso en la base de datos. En [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)] niveles estándar y básico, requiere la **administrador del servidor** o un **Administrador de Azure Active Directory** cuenta.  
-  
+En [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)], requiere el `VIEW DATABASE STATE` permiso en la base de datos.   
+
 ## <a name="examples"></a>Ejemplos  
  Puede utilizar la siguiente consulta para saber cuánto tiempo se ha estado ejecutando un trabajador en un estado SUSPENDED o RUNNABLE.  
   
@@ -142,7 +143,7 @@ SELECT
  En la salida, si `w_runnable` y `w_suspended` son iguales, indica el tiempo que el trabajador está en el estado SUSPENDED. De lo contrario, `w_runnable` representa el tiempo que ha pasado el trabajador en el estado RUNNABLE. En la salida, la sesión `52` está en estado `SUSPENDED` durante `35,094` milisegundos.  
   
 ## <a name="see-also"></a>Vea también  
- [Sistema operativo SQL Server relacionadas con vistas de administración dinámica &#40; Transact-SQL &#41;](../../relational-databases/system-dynamic-management-views/sql-server-operating-system-related-dynamic-management-views-transact-sql.md)  
+ [Vistas de administración dinámica relacionadas con el sistema operativo SQL Server &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sql-server-operating-system-related-dynamic-management-views-transact-sql.md)  
   
   
 

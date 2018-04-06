@@ -1,16 +1,16 @@
 ---
 title: sys.dm_exec_query_stats (Transact-SQL) | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 01/04/2018
 ms.prod: sql-non-specified
 ms.prod_service: database-engine, sql-database
-ms.service: 
+ms.service: ''
 ms.component: dmv's
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - dm_exec_query_stats_TSQL
@@ -22,16 +22,16 @@ dev_langs:
 helpviewer_keywords:
 - sys.dm_exec_query_stats dynamic management view
 ms.assetid: eb7b58b8-3508-4114-97c2-d877bcb12964
-caps.latest.revision: 
+caps.latest.revision: 64
 author: stevestein
 ms.author: sstein
 manager: craigg
 ms.workload: Active
-ms.openlocfilehash: 8874b5ba3eca2f3e9d72874af7440934fc2ec20f
-ms.sourcegitcommit: c556eaf60a49af7025db35b7aa14beb76a8158c5
+ms.openlocfilehash: a5ad810ae111ce25311510a545f61915891f4e27
+ms.sourcegitcommit: 8b332c12850c283ae413e0b04b2b290ac2edb672
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/03/2018
+ms.lasthandoff: 04/05/2018
 ---
 # <a name="sysdmexecquerystats-transact-sql"></a>sys.dm_exec_query_stats (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -46,7 +46,7 @@ ms.lasthandoff: 02/03/2018
   
 |Nombre de columna|Tipo de datos|Description|  
 |-----------------|---------------|-----------------|  
-|**sql_handle**|**varbinary(64)**  |Es un token que hace referencia al lote o al procedimiento almacenado del que forma parte la consulta.<br /><br /> **sql_handle**, junto con **statement_start_offset** y **statement_end_offset**, puede utilizarse para recuperar el texto SQL de la consulta mediante una llamada a la **sys.dm_exec_sql _TEXT** función de administración dinámica.|  
+|**sql_handle**|**varbinary(64)**  |Es un token que hace referencia al lote o al procedimiento almacenado del que forma parte la consulta.<br /><br /> **sql_handle**, junto con **statement_start_offset** y **statement_end_offset**, puede utilizarse para recuperar el texto SQL de la consulta mediante una llamada a la **sys.dm_exec_sql_ texto** función de administración dinámica.|  
 |**statement_start_offset**|**int**|Indica (en bytes y empezando por 0) la posición inicial de la consulta que la fila describe en el texto del lote o del objeto persistente.|  
 |**statement_end_offset**|**int**|Indica (en bytes y empezando por 0) la posición final de la consulta que la fila describe en el texto del lote o del objeto persistente. Para las versiones anteriores [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)], un valor de -1 indica el final del lote. Los comentarios finales ya no se incluyen.|  
 |**plan_generation_num**|**bigint**|Número de secuencia que se puede usar para distinguir entre instancias de los planes después de una nueva compilación.|  
@@ -128,9 +128,10 @@ ms.lasthandoff: 02/03/2018
 > <sup>1</sup> para los procedimientos almacenados compilados de forma nativa cuando se habilita la recopilación de estadísticas, el tiempo de trabajo se recopila en milisegundos. Si la consulta se ejecuta en menos de un milisegundo, el valor será 0.  
   
 ## <a name="permissions"></a>Permissions  
+
 En [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)], requiere `VIEW SERVER STATE` permiso.   
-En [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)] niveles de Premium, requieren la `VIEW DATABASE STATE` permiso en la base de datos. En [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)] niveles estándar y básico, requiere la **administrador del servidor** o un **Administrador de Azure Active Directory** cuenta.
-  
+En [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)], requiere el `VIEW DATABASE STATE` permiso en la base de datos.   
+   
 ## <a name="remarks"></a>Comentarios  
  Cuando se completa una consulta, se actualizan las estadísticas en la vista.  
   
@@ -177,7 +178,7 @@ ORDER BY qs.execution_count DESC;
 ```  
   
 ## <a name="see-also"></a>Vea también  
-[Funciones y vistas de administración dinámica &#40; relacionada con la ejecución Transact-SQL &#41;](../../relational-databases/system-dynamic-management-views/execution-related-dynamic-management-views-and-functions-transact-sql.md)    
+[Vistas de administración dinámica y funciones relacionadas con ejecuciones &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/execution-related-dynamic-management-views-and-functions-transact-sql.md)    
 [sys.dm_exec_sql_text &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-exec-sql-text-transact-sql.md)    
 [sys.dm_exec_query_plan &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-exec-query-plan-transact-sql.md)    
 [sys.dm_exec_procedure_stats &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-exec-procedure-stats-transact-sql.md)     

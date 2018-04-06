@@ -1,16 +1,16 @@
 ---
 title: sys.dm_db_resource_stats (Azure SQL Database) | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 03/16/2016
-ms.prod: 
+ms.prod: ''
 ms.prod_service: sql-database
-ms.reviewer: 
+ms.reviewer: ''
 ms.service: sql-database
 ms.component: dmv's
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - sys.dm_db_resource_stats
@@ -23,16 +23,16 @@ helpviewer_keywords:
 - sys.dm_db_resource_stats
 - dm_db_resource_stats
 ms.assetid: 6e76b39f-236e-4bbf-b0b5-38be190d81e8
-caps.latest.revision: 
+caps.latest.revision: 11
 author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 606b871aeac34ac99d239ec4a84757187e00855f
-ms.sourcegitcommit: c556eaf60a49af7025db35b7aa14beb76a8158c5
+ms.openlocfilehash: 116c5875ad7933e1b3d68f0c65ca7d0cb4d2b661
+ms.sourcegitcommit: 8b332c12850c283ae413e0b04b2b290ac2edb672
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/03/2018
+ms.lasthandoff: 04/05/2018
 ---
 # <a name="sysdmdbresourcestats-azure-sql-database"></a>sys.dm_db_resource_stats (base de datos SQL de Azure)
 [!INCLUDE[tsql-appliesto-xxxxxx-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-xxxxxx-asdb-xxxx-xxx-md.md)]
@@ -58,20 +58,17 @@ ms.lasthandoff: 02/03/2018
  Esta vista necesita el permiso VIEW DATABASE STATE.  
   
 ## <a name="remarks"></a>Comentarios  
- Los datos devueltos por **sys.dm_db_resource_stats** se expresa como un porcentaje del máximo permitido de los límites de DTU del nivel de servicio/rendimiento de la capa que se está ejecutando para bases de datos Basic, Standard y Premium. Para los niveles Web y Business, estos números indican los porcentajes en términos del nivel de rendimiento de Standard S2. Por ejemplo, al ejecutarlo en una base de datos Web o Business, si avg_cpu_percent devuelve un 70 %, indica el 70 % del límite del nivel S2. Asimismo, para los niveles Web y Business, los porcentajes pueden reflejar un número superior al 100%, que también se basa en el límite del nivel S2.  
-  
+ Los datos devueltos por **sys.dm_db_resource_stats** se expresa como un porcentaje del máximo permitido de los límites de DTU del nivel de servicio/rendimiento de la capa que se está ejecutando para bases de datos Basic, Standard y Premium.
+ 
  Si la base de datos se conmutó por error a otro servidor en los últimos 60 minutos, la vista solo devolverá datos correspondientes al tiempo que ha sido la base de datos principal desde la conmutación por error.  
   
- Para obtener una vista menos detallada de estos datos, use **sys.resource_stats** vista de catálogo el **maestro** base de datos. Esta vista captura datos cada 5 minutos y mantiene datos históricos durante 14 días.  Para obtener más información, consulte [sys.resource_stats &#40; Base de datos SQL Azure &#41; ](../../relational-databases/system-catalog-views/sys-resource-stats-azure-sql-database.md).  
+ Para obtener una vista menos detallada de estos datos, use **sys.resource_stats** vista de catálogo el **maestro** base de datos. Esta vista captura datos cada 5 minutos y mantiene datos históricos durante 14 días.  Para obtener más información, consulte [sys.resource_stats &#40;base de datos de SQL Azure&#41;](../../relational-databases/system-catalog-views/sys-resource-stats-azure-sql-database.md).  
   
  Cuando una base de datos es un miembro de un grupo elástico, las estadísticas de recursos que se presentan como valores de porcentaje se expresan como el porcentaje de la DTU el límite máximo para las bases de datos como se establece en la configuración del grupo elástico.  
   
 ## <a name="example"></a>Ejemplo  
   
-> [!NOTE]  
->  Para los niveles Web y Business, estos números indican los porcentajes en términos del nivel de rendimiento de Standard S2. Por ejemplo, al ejecutarlo en una base de datos Web o Business, si avg_cpu_percent devuelve un 70 %, indica el 70 % del límite del nivel S2. Asimismo, para los niveles Web y Business, los porcentajes pueden reflejar un número superior al 100%, que también se basa en el límite del nivel S2.  
-  
- El ejemplo siguiente devuelve los datos del uso de recursos ordenados por la hora más reciente de la base de datos conectada actualmente.  
+El ejemplo siguiente devuelve los datos del uso de recursos ordenados por la hora más reciente de la base de datos conectada actualmente.  
   
 ```  
 SELECT * FROM sys.dm_db_resource_stats ORDER BY end_time DESC;  

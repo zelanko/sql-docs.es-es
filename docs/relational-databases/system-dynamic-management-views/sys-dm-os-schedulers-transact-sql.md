@@ -1,16 +1,16 @@
 ---
 title: sys.dm_os_schedulers (Transact-SQL) | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 03/13/2017
 ms.prod: sql-non-specified
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
-ms.service: 
+ms.service: ''
 ms.component: dmv's
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - dm_os_schedulers
@@ -22,16 +22,16 @@ dev_langs:
 helpviewer_keywords:
 - sys.dm_os_schedulers dynamic management view
 ms.assetid: 3a09d81b-55d5-416f-9cda-1a3a5492abe0
-caps.latest.revision: 
+caps.latest.revision: 55
 author: stevestein
 ms.author: sstein
 manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: aa32726893d196cc4c2830e79703f5583d661793
-ms.sourcegitcommit: c556eaf60a49af7025db35b7aa14beb76a8158c5
+ms.openlocfilehash: 9e42126c9abfe729e5f5890297dbf30e3dbf0970
+ms.sourcegitcommit: 8b332c12850c283ae413e0b04b2b290ac2edb672
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/03/2018
+ms.lasthandoff: 04/05/2018
 ---
 # <a name="sysdmosschedulers-transact-sql"></a>sys.dm_os_schedulers (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -46,7 +46,7 @@ ms.lasthandoff: 02/03/2018
 |scheduler_address|**varbinary(8)**|Dirección de memoria del programador. No admite valores NULL.|  
 |parent_node_id|**int**|Identificador del nodo al que pertenece el programador, también denominado nodo primario. Representa un nodo de acceso de memoria no uniforme (NUMA). No admite valores NULL.|  
 |scheduler_id|**int**|Identificador del programador. Todos los programadores que se utilizan para ejecutar las consultas normales tienen números de identificación inferiores a 1048576. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] utiliza internamente todos los programadores con identificadores mayores o iguales que 1048576, como el programador de conexión de administrador dedicada. No admite valores NULL.|  
-|cpu_id|**smallint**|Identificador de CPU asignado al programador.<br /><br /> No admite valores NULL.<br /><br /> **Nota:** 255 no indica ninguna afinidad tal y como se hacía en [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)]. Vea [sys.dm_os_threads &#40; Transact-SQL &#41; ](../../relational-databases/system-dynamic-management-views/sys-dm-os-threads-transact-sql.md) para información adicional sobre afinidad.|  
+|cpu_id|**smallint**|Identificador de CPU asignado al programador.<br /><br /> No admite valores NULL.<br /><br /> **Nota:** 255 no indica ninguna afinidad tal y como se hacía en [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)]. Vea [sys.dm_os_threads &#40;Transact-SQL&#41; ](../../relational-databases/system-dynamic-management-views/sys-dm-os-threads-transact-sql.md) para información adicional sobre afinidad.|  
 |status|**nvarchar(60)**|Indica el estado del programador. Puede ser uno de los siguientes valores:<br /><br /> -OCULTO EN LÍNEA<br />-OCULTO SIN CONEXIÓN<br />-VISIBLE EN LÍNEA<br />-VISIBLE SIN CONEXIÓN<br />-VISIBLE EN LÍNEA (DAC)<br />-   HOT_ADDED<br /><br /> No admite valores NULL.<br /><br /> Los programadores HIDDEN se utilizan para procesar solicitudes internas de [!INCLUDE[ssDE](../../includes/ssde-md.md)]. Los programadores VISIBLE se utilizan para procesar solicitudes de usuario.<br /><br /> Los programadores OFFLINE se asignan a procesadores sin conexión en la máscara de afinidad y, por tanto, no se utilizan para procesar solicitudes. Los programadores ONLINE se asignan a procesadores con conexión en la máscara de afinidad y están disponibles para procesar subprocesos.<br /><br /> DAC indica que el programador se está ejecutando con una conexión de administrador dedicada.<br /><br /> HOT ADDED indica los programadores que se agregaron en respuesta a un evento de CPU instalada en cliente.|  
 |is_online|**bit**|Si [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] está configurado para utilizar solo algunos de los procesadores disponibles en el servidor, esta configuración puede significar que algunos programadores están asignados a procesadores que no están en la máscara de afinidad. Si así fuera, esta columna devuelve 0. Este valor indica que el programador no se utiliza para procesar consultas o lotes.<br /><br /> No admite valores NULL.|  
 |is_idle|**bit**|1 = El programador está inactivo. No se está ejecutando ningún trabajador. No admite valores NULL.|  
@@ -63,16 +63,17 @@ ms.lasthandoff: 02/03/2018
 |yield_count|**int**|Valor interno que se utiliza para indicar el progreso en este programador. El monitor de programadores utiliza este valor para determinar si un trabajador del programador no está generando otros trabajadores a tiempo. Este valor no indica que el trabajador o la tarea se transfirieron a un nuevo trabajador. No admite valores NULL.|  
 |last_timer_activity|**bigint**|En tics de CPU, la última vez que el programador comprobó la cola del temporizador del programador. No admite valores NULL.|  
 |failed_to_create_worker|**bit**|Se establece en 1 si no se pudo crear un trabajador en este programador. Generalmente se produce debido a restricciones de memoria. Acepta valores NULL.|  
-|active_worker_address|**varbinary(8)**|Dirección de memoria del trabajador que está activo actualmente. Acepta valores NULL. Para obtener más información, consulte [sys.dm_os_workers &#40; Transact-SQL &#41; ](../../relational-databases/system-dynamic-management-views/sys-dm-os-workers-transact-sql.md).|  
+|active_worker_address|**varbinary(8)**|Dirección de memoria del trabajador que está activo actualmente. Acepta valores NULL. Para obtener más información, consulte [sys.dm_os_workers &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-os-workers-transact-sql.md).|  
 |memory_object_address|**varbinary(8)**|Dirección de memoria del objeto de memoria del programador. No acepta valores NULL.|  
-|task_memory_object_address|**varbinary(8)**|Dirección de memoria del objeto de memoria de la tarea. No admite valores NULL. Para obtener más información, consulte [sys.dm_os_memory_objects &#40; Transact-SQL &#41; ](../../relational-databases/system-dynamic-management-views/sys-dm-os-memory-objects-transact-sql.md).|  
+|task_memory_object_address|**varbinary(8)**|Dirección de memoria del objeto de memoria de la tarea. No admite valores NULL. Para obtener más información, consulte [sys.dm_os_memory_objects &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-os-memory-objects-transact-sql.md).|  
 |quantum_length_us|**bigint**|[!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)] Expone el cuanto del programador que utiliza SQLOS.|  
 |pdw_node_id|**int**|**Se aplica a**: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)], [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]<br /><br /> El identificador para el nodo que se encuentra en esta distribución.|  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>Permissions
+
 En [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)], requiere `VIEW SERVER STATE` permiso.   
-En [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)] niveles de Premium, requieren la `VIEW DATABASE STATE` permiso en la base de datos. En [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)] niveles estándar y básico, requiere la **administrador del servidor** o un **Administrador de Azure Active Directory** cuenta.   
-  
+En [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)], requiere el `VIEW DATABASE STATE` permiso en la base de datos.   
+
 ## <a name="examples"></a>Ejemplos  
   
 ### <a name="a-monitoring-hidden-and-nonhidden-schedulers"></a>A. Supervisar programadores ocultos y no ocultos  
@@ -139,7 +140,7 @@ active_workers_count work_queue_count
   
 -   El programador `255` que representa la conexión DAC incluye `3` trabajadores asociados. Estos trabajadores se asignan en el inicio de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] y no cambian. Se utilizan únicamente para procesar consultas DAC. Las dos tareas de este programador representan un administrador de conexiones y un trabajador inactivo.  
   
--   `active_workers_count`representa todos los trabajadores que tienen asociados a tareas y que se ejecuten en modo no preferente. Algunas tareas, como las escuchas de red, se ejecutan con programas preferentes.  
+-   `active_workers_count` representa todos los trabajadores que tienen asociados a tareas y que se ejecuten en modo no preferente. Algunas tareas, como las escuchas de red, se ejecutan con programas preferentes.  
   
 -   Los programadores ocultos no procesan solicitudes habituales de usuario. El programador DAC es la excepción. Este programador dispone de un subproceso para ejecutar solicitudes.  
   
@@ -147,7 +148,7 @@ active_workers_count work_queue_count
  En la consulta siguiente se muestra el estado de programadores no ocultos con mucha carga en los que existen más solicitudes de las que pueden controlar los trabajadores disponibles. En este ejemplo tienen asignadas tareas 256 trabajadores. Algunas tareas están esperando su asignación a un trabajador. El recuento bajo de ejecutables implica que varias tareas están esperando un recurso.  
   
 > [!NOTE]  
->  Puede conocer el estado de los trabajadores si consulta sys.dm_os_workers. Para obtener más información, consulte [sys.dm_os_workers &#40; Transact-SQL &#41; ](../../relational-databases/system-dynamic-management-views/sys-dm-os-workers-transact-sql.md).  
+>  Puede conocer el estado de los trabajadores si consulta sys.dm_os_workers. Para obtener más información, consulte [sys.dm_os_workers &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-os-workers-transact-sql.md).  
   
  Esta es la consulta:  
   
@@ -193,7 +194,7 @@ current_workers_count active_workers_count work_queue_count
 ```  
   
 ## <a name="see-also"></a>Vea también  
- [Sistema operativo SQL Server relacionadas con vistas de administración dinámica &#40; Transact-SQL &#41;](../../relational-databases/system-dynamic-management-views/sql-server-operating-system-related-dynamic-management-views-transact-sql.md)  
+ [Vistas de administración dinámica relacionadas con el sistema operativo SQL Server &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sql-server-operating-system-related-dynamic-management-views-transact-sql.md)  
   
   
 

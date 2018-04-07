@@ -1,38 +1,39 @@
 ---
-title: "Introducción a SSMA para DB2 (DB2ToSQL) | Documentos de Microsoft"
+title: Introducción a SSMA para DB2 (DB2ToSQL) | Documentos de Microsoft
 ms.prod: sql-non-specified
 ms.prod_service: sql-tools
-ms.service: 
+ms.service: ''
 ms.component: ssma-db2
-ms.custom: 
+ms.custom: ''
 ms.date: 01/19/2017
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: sql-ssma
-ms.tgt_pltfrm: 
+ms.technology:
+- sql-ssma
+ms.tgt_pltfrm: ''
 ms.topic: article
 applies_to:
 - Azure SQL Database
 - SQL Server
 ms.assetid: 48ca32fc-1830-4d1f-add7-480ba5ad02e8
-caps.latest.revision: "6"
+caps.latest.revision: 6
 author: Shamikg
 ms.author: Shamikg
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: a899e93edeeed661e7f19b77468377fc990c85c9
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: fc731bb0b202fbec4b7eeccc4de60cf9a4943404
+ms.sourcegitcommit: 9351e8b7b68f599a95fb8e76930ab886db737e5f
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 04/06/2018
 ---
 # <a name="getting-started-with-ssma-for-db2-db2tosql"></a>Introducción a SSMA para DB2 (DB2ToSQL)
-[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]Migration Assistant (SSMA) para DB2 permite rápidamente convertir esquemas de base de datos de DB2 a [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] esquemas, cargar los esquemas resultantes a [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] y migrar datos de DB2 a [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)].  
+[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] Migration Assistant (SSMA) para DB2 permite rápidamente convertir esquemas de base de datos de DB2 a [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] esquemas, cargar los esquemas resultantes a [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] y migrar datos de DB2 a [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)].  
   
 En este tema se presenta el proceso de instalación y, a continuación, le ayuda a familiarizarse con la interfaz de usuario SSMA.  
   
 ## <a name="installing-ssma"></a>Instalación de SSMA  
-Para usar SSMA, primero debe instalar el programa de cliente SSMA en un equipo que puede tener acceso a la base de datos de origen DB2 y la instancia de destino de [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]. Proveedores de OLE DB DB2 en el equipo que está ejecutando [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]. Estos componentes admiten la migración de datos y la emulación de funciones del sistema DB2. Para obtener instrucciones de instalación, consulte [instalar SSMA para DB2 &#40; DB2ToSQL &#41;](../../ssma/db2/installing-ssma-for-db2-db2tosql.md).  
+Para usar SSMA, primero debe instalar el programa de cliente SSMA en un equipo que puede tener acceso a la base de datos de origen DB2 y la instancia de destino de [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]. Proveedores de OLE DB DB2 en el equipo que está ejecutando [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]. Estos componentes admiten la migración de datos y la emulación de funciones del sistema DB2. Para obtener instrucciones de instalación, consulte [instalar SSMA para DB2 &#40;DB2ToSQL&#41;](../../ssma/db2/installing-ssma-for-db2-db2tosql.md).  
   
 Para iniciar SSMA, haga clic en **iniciar**, seleccione **todos los programas**, seleccione  **[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] Migration Assistant para DB2**y, a continuación, haga clic en  **[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] Migration Assistant para DB2**.  
   
@@ -47,24 +48,24 @@ También debe conectarse a una instancia de [!INCLUDE[ssNoVersion](../../include
   
 Después de sincronizar esquemas convertidos con [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)], puede volver al explorador de metadatos de DB2 y migrar datos de esquemas de DB2 en [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] bases de datos.  
   
-Para obtener más información sobre estas tareas y cómo realizarlas, vea [migrar bases de datos DB2 a SQL Server &#40; DB2ToSQL &#41;](../../ssma/db2/migrating-db2-databases-to-sql-server-db2tosql.md).  
+Para obtener más información sobre estas tareas y cómo realizarlas, vea [migrar bases de datos DB2 a SQL Server &#40;DB2ToSQL&#41;](../../ssma/db2/migrating-db2-databases-to-sql-server-db2tosql.md).  
   
 Las secciones siguientes describen las características de la interfaz de usuario SSMA.  
   
-### <a name="metadata-explorers"></a>Exploradores de metadatos  
+### <a name="metadata-explorers"></a>Metadata Explorers  
 SSMA contiene dos exploradores de metadatos para examinar y realizar acciones en DB2 y [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] las bases de datos.  
   
-#### <a name="db2-metadata-explorer"></a>DB2 Explorador de metadatos  
+#### <a name="db2-metadata-explorer"></a>DB2 Metadata Explorer  
 Explorador de metadatos de DB2 muestra información acerca de los esquemas de DB2. Mediante el Explorador de metadatos de DB2, puede realizar las siguientes tareas:  
   
 -   Examinar los objetos de cada esquema.  
   
--   Seleccionar objetos para la conversión y, a continuación, convertir los objetos a [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] sintaxis. Para obtener más información, consulte [convertir esquemas de DB2 &#40; DB2ToSQL &#41;](../../ssma/db2/converting-db2-schemas-db2tosql.md).  
+-   Seleccionar objetos para la conversión y, a continuación, convertir los objetos a [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] sintaxis. Para obtener más información, consulte [convertir esquemas de DB2 &#40;DB2ToSQL&#41;](../../ssma/db2/converting-db2-schemas-db2tosql.md).  
   
--   Seleccionar tablas para la migración de datos y, a continuación, migrar los datos de esas tablas en [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]. Para obtener más información, consulte [migrar bases de datos DB2 a SQL Server &#40; DB2ToSQL &#41;](../../ssma/db2/migrating-db2-databases-to-sql-server-db2tosql.md).  
+-   Seleccionar tablas para la migración de datos y, a continuación, migrar los datos de esas tablas en [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]. Para obtener más información, consulte [migrar bases de datos DB2 a SQL Server &#40;DB2ToSQL&#41;](../../ssma/db2/migrating-db2-databases-to-sql-server-db2tosql.md).  
   
-#### <a name="sql-server-metadata-explorer"></a>Explorador de metadatos SQL Server  
-[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]Explorador de metadatos muestra información sobre una instancia de [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]. Cuando se conecta a una instancia de [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)], SSMA recupera metadatos acerca de esa instancia y lo almacena en el archivo de proyecto.  
+#### <a name="sql-server-metadata-explorer"></a>SQL Server Metadata Explorer  
+[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] Explorador de metadatos muestra información sobre una instancia de [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]. Cuando se conecta a una instancia de [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)], SSMA recupera metadatos acerca de esa instancia y lo almacena en el archivo de proyecto.  
   
 Puede usar [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] Explorador de metadatos para seleccionar objetos de base de datos de DB2 convertidos y, a continuación, sincroniza esos objetos con la instancia de [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)].  
   
@@ -114,6 +115,6 @@ El **vista** menú proporciona comandos para alternar la visibilidad de los pane
 -   El panel de lista de errores muestra mensajes informativos, de advertencia y de error en una lista que se puede ordenar.  
   
 ## <a name="see-also"></a>Vea también  
-[Migrar datos de DB2 en SQL Server &#40; DB2ToSQL &#41;](../../ssma/db2/migrating-db2-data-into-sql-server-db2tosql.md)  
-[Referencia de la interfaz de usuario &#40; DB2ToSQL &#41;](../../ssma/db2/user-interface-reference-db2tosql.md)  
+[Migrar datos de DB2 en SQL Server &#40;DB2ToSQL&#41;](../../ssma/db2/migrating-db2-data-into-sql-server-db2tosql.md)  
+[Referencia de la interfaz de usuario &#40;DB2ToSQL&#41;](../../ssma/db2/user-interface-reference-db2tosql.md)  
   

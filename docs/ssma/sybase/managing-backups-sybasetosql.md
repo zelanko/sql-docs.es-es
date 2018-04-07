@@ -21,13 +21,13 @@ ms.assetid: 266d987c-ecc5-4fa4-bfdf-8c584f1a1332
 caps.latest.revision: 5
 author: Shamikg
 ms.author: Shamikg
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 89df7322e4025ffb79f3ae2aecb2ef67fa52c8d7
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: 122cc3c70f69a6c6037484b499a85480b16792ef
+ms.sourcegitcommit: 9351e8b7b68f599a95fb8e76930ab886db737e5f
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 04/06/2018
 ---
 # <a name="managing-backups-sybasetosql"></a>Administrar copias de seguridad (SybaseToSQL)
 Administración de copia de seguridad de Sybase permite copias de seguridad y restauración de datos de la tabla antes o después de ejecutar una prueba. También puede administrar el contenido de copia de seguridad con el cuadro de diálogo Administrar contenido de copia de seguridad.  
@@ -45,7 +45,7 @@ Los siguientes botones están disponibles en el cuadro de diálogo:
   
 -   Haga clic en el **cancelar** botón para cerrar el cuadro de diálogo.  
   
-### <a name="restore"></a>Restaurar  
+### <a name="restore"></a>Restore  
 Para abrir el cuadro de diálogo de restauración, en el menú de la herramienta de comprobación, seleccione Administración de copia de seguridad de Sybase, a continuación, haga clic en restaurar... Allí encontrará un árbol que contiene las tablas disponibles en la copia de seguridad. Seleccione una o más tablas para restaurar sus datos.  
   
 Los siguientes botones están disponibles en el cuadro de diálogo:  
@@ -81,7 +81,7 @@ Los siguientes botones están disponibles en el cuadro de diálogo:
   
 -   Haga clic en el **cancelar** botón para cerrar el cuadro de diálogo.  
   
-### <a name="restore"></a>Restaurar  
+### <a name="restore"></a>Restore  
 Para abrir el cuadro de diálogo de restauración, en el menú de evaluador seleccione Administración de copia de seguridad de SQL Server, haga clic en restauración... Allí encontrará un árbol que contiene las tablas disponibles en la copia de seguridad. Seleccione uno o más tabla para restaurar sus datos.  
   
 Los siguientes botones están disponibles en el cuadro de diálogo:  
@@ -104,5 +104,5 @@ Los siguientes botones están disponibles en el cuadro de diálogo:
 -   Haga clic en el **cerrar** botón para cerrar el cuadro de diálogo.  
   
 ## <a name="see-also"></a>Vea también  
-[Pruebas migran objetos de base de datos &#40; SybaseToSQL &#41;](../../ssma/sybase/testing-migrated-database-objects-sybasetosql.md)  
+[Pruebas de objetos de base de datos migran &#40;SybaseToSQL&#41;](../../ssma/sybase/testing-migrated-database-objects-sybasetosql.md)  
   

@@ -2,24 +2,24 @@
 title: Cargar datos con Integration Services
 author: barbkess
 ms.author: barbkess
-manager: jhubbard
+manager: craigg
 ms.prod: analytics-platform-system
 ms.prod_service: mpp-data-warehouse
-ms.service: 
-ms.component: 
+ms.service: ''
+ms.component: ''
 ms.suite: sql
-ms.custom: 
+ms.custom: ''
 ms.technology: mpp-data-warehouse
-description: "Proporciona información de referencia e implementación para cargar datos en almacenamiento de datos paralelos de SQL Server mediante el uso de paquetes de SQL Server Integration Services (SSIS)."
+description: Proporciona información de referencia e implementación para cargar datos en almacenamiento de datos paralelos de SQL Server mediante el uso de paquetes de SQL Server Integration Services (SSIS).
 ms.date: 10/20/2016
 ms.topic: article
 ms.assetid: 9bdb559a-a91c-4342-8a6e-438cb93f975c
-caps.latest.revision: "69"
-ms.openlocfilehash: f00f72886a10c8be05db6a28adf3df89f8116081
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+caps.latest.revision: 69
+ms.openlocfilehash: d32e6b97d036437f6a28b81622873d14854d304f
+ms.sourcegitcommit: 9351e8b7b68f599a95fb8e76930ab886db737e5f
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 04/06/2018
 ---
 # <a name="load-data-with-integration-services"></a>Carga los datos con Integration Services
 Proporciona información de referencia e implementación para cargar datos en almacenamiento de datos paralelos de SQL Server mediante el uso de paquetes de SQL Server Integration Services (SSIS).  
@@ -59,14 +59,14 @@ De forma predeterminada, BIDS ejecuta paquetes con archivos binarios de 64 bits.
 Para ejecutar el paquete desde dentro de SQL Server Data Tools, haga doble clic en el paquete y elija **Ejecutar paquete**.  
   
 ### <a name="run-from-powershell"></a>Ejecución de PowerShell  
-Para ejecutar el paquete de Windows PowerShell, utilizando la **dtexec** utilidad:`dtexec /FILE <packagePath>`  
+Para ejecutar el paquete de Windows PowerShell, utilizando la **dtexec** utilidad: `dtexec /FILE <packagePath>`  
   
 Por ejemplo, `dtexec /FILE "C:\Users\User1\Desktop\Package.dtsx"`  
   
 ### <a name="run-from-a-windows-command-prompt"></a>Ejecución de Windows un símbolo del sistema 
-Para ejecutar el paquete desde un símbolo del sistema de Windows, con el **dtexec** utilidad:`dtexec /FILE <packagePath>`  
+Para ejecutar el paquete desde un símbolo del sistema de Windows, con el **dtexec** utilidad: `dtexec /FILE <packagePath>`  
   
-Por ejemplo, `dtexec /FILE "C:\Users\User1\Desktop\Package.dtsx"`  
+Por ejemplo: `dtexec /FILE "C:\Users\User1\Desktop\Package.dtsx"`  
   
 ## <a name="DataTypes"></a>Tipos de datos  
 Al utilizar Integration Services para cargar datos desde un origen de datos a una base de datos de SQL Server PDW, se asignan primero los datos del origen de datos a tipos de datos de Integration Services. Esto permite que los datos de varios orígenes de datos se asignen a un conjunto común de tipos de datos.  
@@ -89,7 +89,7 @@ A continuación, se asignan los datos de Integration Services a tipos de datos d
 |NCHAR|DT_WSTR|  
 |NUMERIC|DT_DECIMAL, DT_I1, DT_I2, DT_I4, DT_I8, DT_NUMERIC, DT_UI1, DT_UI2, DT_UI4, DT_UI8|  
 |NVARCHAR|DT_WSTR, DT_STR|  
-|real|DT_R4|  
+|REAL|DT_R4|  
 |SMALLDATETIME|DT_DBTIMESTAMP2|  
 |SMALLINT|DT_I1, DT_I2, DT_UI1|  
 |SMALLMONEY|DT_R4|  

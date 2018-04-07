@@ -1,15 +1,16 @@
 ---
-title: "Eliminación de SSMA para los componentes de MySQL (MySQLToSql) | Documentos de Microsoft"
+title: Eliminación de SSMA para los componentes de MySQL (MySQLToSql) | Documentos de Microsoft
 ms.prod: sql-non-specified
 ms.prod_service: sql-tools
-ms.service: 
+ms.service: ''
 ms.component: ssma-mysql
-ms.custom: 
+ms.custom: ''
 ms.date: 01/19/2017
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: sql-ssma
-ms.tgt_pltfrm: 
+ms.technology:
+- sql-ssma
+ms.tgt_pltfrm: ''
 ms.topic: article
 applies_to:
 - Azure SQL Database
@@ -18,16 +19,16 @@ helpviewer_keywords:
 - Uninstalling, Extension pack
 - Uninstalling, SSMA for MySQL client
 ms.assetid: 87cdbd49-a0c9-4b00-8a93-34188b18d11a
-caps.latest.revision: "10"
+caps.latest.revision: 10
 author: Shamikg
 ms.author: Shamikg
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 504a35ff20ee162bef8e2524cc382dde190fb3e5
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: adf008b1a6bbcd584c0d3c0ee90dcb4345cf1819
+ms.sourcegitcommit: 9351e8b7b68f599a95fb8e76930ab886db737e5f
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 04/06/2018
 ---
 # <a name="removing-the-ssma-for-mysql-components-mysqltosql"></a>Eliminación de SSMA para los componentes de MySQL (MySQLToSql)
 Cuando termine de migrar bases de datos de MySQL a [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)], debe desinstalar los componentes SSMA. Puede desinstalar los componentes de cliente en cualquier momento. Sin embargo, si se desinstala el paquete de extensión de [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] , a continuación, SSMA dejará de admitir la migración de datos de MySQL a la base de datos de destino (SQL Server o SQL Azure) utilizando el motor de migración de datos de servidor.  
@@ -67,6 +68,6 @@ Puede quitar el módulo de extensión mediante **agregar o quitar programas**.
 Una vez completado el proceso de desinstalación, puede confirmar que los objetos en el **sysdb.ssma_MySQL** esquema y, posiblemente, todo el **sysdb** base de datos, se ha quitado mediante el uso de [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull_md.md)]. Sin embargo, si utiliza otros productos SSMA, también usan el **sysdb** base de datos. Si la base de datos existe y está seguro de que ninguna otra base de datos hacen referencia a los objetos en esta base de datos, puede separar la base de datos.  
   
 ## <a name="see-also"></a>Vea también  
-[Instalación de SSMA para cliente de MySQL &#40; MySQLToSQL &#41;](../../ssma/mysql/installing-ssma-for-mysql-client-mysqltosql.md)  
+[Instalación de SSMA para cliente de MySQL &#40;MySQLToSQL&#41;](../../ssma/mysql/installing-ssma-for-mysql-client-mysqltosql.md)  
 [Instalación de componentes de SSMA en SQL Server](http://msdn.microsoft.com/en-us/6772d0c5-258f-4d7b-afb0-b5f810e71af1)  
   

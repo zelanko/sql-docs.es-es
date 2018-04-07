@@ -10,23 +10,23 @@ ms.component: oledb|features
 ms.reviewer: ''
 ms.suite: sql
 ms.technology:
-- docset-sql-devref
+- drivers
 ms.tgt_pltfrm: ''
 ms.topic: reference
 author: pmasl
 ms.author: Pedro.Lopes
 manager: jhubbard
 ms.workload: On Demand
-ms.openlocfilehash: 05275a1f770ce4a01f583dda768872a26b5e3725
-ms.sourcegitcommit: 8f1d1363e18e0c32ff250617ab6cb2da2147bf8e
-ms.translationtype: MT
+ms.openlocfilehash: c915af2ec748c4b2c15882c9a643c8e200442e98
+ms.sourcegitcommit: 9351e8b7b68f599a95fb8e76930ab886db737e5f
+ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/03/2018
+ms.lasthandoff: 04/06/2018
 ---
 # <a name="ole-db-driver-for-sql-server-support-for-high-availability-disaster-recovery"></a>Controlador OLE DB para SQL Server Support for High Availability, Disaster Recovery
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
 
-  Este tema describe el controlador OLE DB para SQL Server admiten (agregado en [!INCLUDE[ssSQL11](../../../includes/sssql11-md.md)]) para [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)]. Para más información sobre [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)], vea [Agentes de escucha de grupo de disponibilidad, conectividad de cliente y conmutación por error de una aplicación &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/listeners-client-connectivity-application-failover.md), [Creación y configuración de grupos de disponibilidad &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/creation-and-configuration-of-availability-groups-sql-server.md), [Clúster de conmutación por error y grupos de disponibilidad AlwaysOn &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/failover-clustering-and-always-on-availability-groups-sql-server.md) y [Secundarias activas: réplicas secundarias legibles &#40;grupos de disponibilidad AlwaysOn&#41;](../../../database-engine/availability-groups/windows/active-secondaries-readable-secondary-replicas-always-on-availability-groups.md).  
+  Este artículo describe el controlador OLE DB para SQL Server admiten (agregado en [!INCLUDE[ssSQL11](../../../includes/sssql11-md.md)]) para [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)]. Para más información sobre [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)], vea [Agentes de escucha de grupo de disponibilidad, conectividad de cliente y conmutación por error de una aplicación &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/listeners-client-connectivity-application-failover.md), [Creación y configuración de grupos de disponibilidad &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/creation-and-configuration-of-availability-groups-sql-server.md), [Clúster de conmutación por error y grupos de disponibilidad AlwaysOn &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/failover-clustering-and-always-on-availability-groups-sql-server.md) y [Secundarias activas: réplicas secundarias legibles &#40;grupos de disponibilidad AlwaysOn&#41;](../../../database-engine/availability-groups/windows/active-secondaries-readable-secondary-replicas-always-on-availability-groups.md).  
   
  Puede especificar el agente de escucha del grupo de disponibilidad de un determinado grupo de disponibilidad en la cadena de conexión. Si un controlador de OLE DB para la aplicación de SQL Server está conectado a una base de datos en un grupo de disponibilidad que conmuta por error, se pierde la conexión original y la aplicación debe abrir una conexión nueva para seguir trabajando después de la conmutación por error.  
   
@@ -83,7 +83,7 @@ Una base de datos puede permitir o denegar cargas de trabajo de lectura en la ba
 La palabra clave **ApplicationIntent** se usa para habilitar el enrutamiento de solo lectura.  
   
 ## <a name="read-only-routing"></a>Enrutamiento de solo lectura  
-El enrutamiento de solo lectura es una característica que puede garantizar la disponibilidad de una réplica de solo lectura de una base de datos. Para habilitar el enrutamiento de solo lectura:  
+El enrutamiento de solo lectura es una característica que puede asegurar la disponibilidad de una réplica de solo lectura de una base de datos. Para habilitar el enrutamiento de solo lectura:  
   
 1.  Debe conectarse siempre a un agente de escucha de grupo de disponibilidad Always On.  
   
@@ -93,7 +93,7 @@ El enrutamiento de solo lectura es una característica que puede garantizar la d
   
 Es posible que varias conexiones con enrutamiento de solo lectura no se conecten todas a la misma réplica de solo lectura. Los cambios en la sincronización de la base de datos o los cambios en la configuración de enrutamiento del servidor pueden producir conexiones de cliente para réplicas de solo lectura diferentes. Para asegurarse de que todas las solicitudes de solo lectura se conectan a la misma réplica de solo lectura, no pase un agente de escucha de grupo de disponibilidad AlwaysOn para la **Server** palabra clave de cadena de conexión. En su lugar, especifique el nombre de la instancia de solo lectura.  
   
-El enrutamiento de solo lectura puede tardar más en conectarse al servidor principal porque el enrutamiento de solo lectura se conecta primero al servidor principal y luego busca el mejor secundario legible disponible. Por ello, debe aumentar el tiempo de espera de inicio de sesión.  
+El enrutamiento de solo lectura puede tardar más tiempo que la conexión a la réplica principal, ya que primero se conecta a la réplica principal y después busca la mejor réplica secundaria legible disponible. Por ello, debe aumentar el tiempo de espera de inicio de sesión.  
   
 ## <a name="ole-db"></a>OLE DB  
 El controlador OLE DB para SQL Server admite tanto la **ApplicationIntent** y **MultiSubnetFailover** palabras clave.   
@@ -113,18 +113,15 @@ Las propiedades de conexión equivalentes son:
   
 -   **DBPROP_INIT_PROVIDERSTRING**  
   
-Un controlador de OLE DB para la aplicación de OLE DB de SQL Server puede utilizar uno de los métodos para especificar la intención de aplicación:  
+Un controlador de OLE DB para la aplicación de SQL Server puede utilizar uno de los métodos para especificar la intención de aplicación:  
   
- **IDBInitialize:: Initialize**  
+ -   **IDBInitialize:: Initialize**  
  **IDBInitialize::Initialize** usa el conjunto de propiedades previamente configurado para inicializar el origen de datos y crear el objeto de origen de datos. Especifique la intención de aplicaciones como una propiedad del proveedor o como parte de la cadena de propiedades extendidas.  
   
- **IDataInitialize:: GetDatasource**  
+ -   **IDataInitialize:: GetDatasource**  
  **IDataInitialize::GetDataSource** toma una cadena de conexión de entrada que puede contener la palabra clave **Application Intent**.  
   
- **IDBProperties::GetProperties**  
- **IDBProperties::GetProperties** recupera el valor de la propiedad que está establecida actualmente en el origen de datos.  Puede recuperar el valor de **Application Intent** a través de la propiedad DBPROP_INIT_PROVIDERSTRING y la propiedad SSPROP_INIT_APPLICATIONINTENT.  
-  
- **IDBProperties::SetProperties**  
+ -   **IDBProperties::SetProperties**  
  Para establecer el valor de la propiedad **ApplicationIntent**, llame a **IDBProperties::SetProperties** pasando la propiedad **SSPROP_INIT_APPLICATIONINTENT** con valor "**ReadWrite**" o "**ReadOnly**" o la propiedad **DBPROP_INIT_PROVIDERSTRING** con el valor que contiene "**ApplicationIntent=ReadOnly**" o "**ApplicationIntent=ReadWrite**".  
   
 Puede especificar la intención de aplicaciones en el campo Propiedades de intención de aplicaciones de la pestaña Todo del cuadro de diálogo **Propiedades de vínculo de datos**.  
@@ -133,13 +130,22 @@ Cuando se establezcan conexiones implícitas, estas usarán la configuración de
   
 ### <a name="multisubnetfailover"></a>MultiSubnetFailover
 
-La propiedad de conexión equivalente es:  
+Las propiedades de conexión equivalentes son:  
   
 -   **SSPROP_INIT_MULTISUBNETFAILOVER**  
+  
+-   **DBPROP_INIT_PROVIDERSTRING**  
 
-La propiedad SSPROP_INIT_MULTISUBNETFAILOVER es de tipo booleano. La propiedad acepta valores de VARIANT_TRUE o VARIANT_FALSE.
+Un controlador de OLE DB para la aplicación de SQL Server puede utilizar uno de los métodos siguientes para establecer la opción MultiSubnetFailover:  
 
-Para establecer el valor de propiedad MultiSubnetFailover, llame a **IDBProperties:: SetProperties** pasando la propiedad SSPROP_INIT_MULTISUBNETFAILOVER con valor **VARIANT_TRUE** o **VARIANT_ FALSE**. 
+ -   **IDBInitialize:: Initialize**  
+ **IDBInitialize::Initialize** usa el conjunto de propiedades previamente configurado para inicializar el origen de datos y crear el objeto de origen de datos. Especifique la intención de aplicaciones como una propiedad del proveedor o como parte de la cadena de propiedades extendidas.  
+  
+ -   **IDataInitialize:: GetDatasource**  
+ **IDataInitialize:: GetDatasource** toma una cadena de conexión de entrada que puede contener el **MultiSubnetFailover** palabra clave.  
+
+-   **IDBProperties::SetProperties**  
+Para establecer el **MultiSubnetFailover** valor de propiedad, llamada **IDBProperties:: SetProperties** pasando el **SSPROP_INIT_MULTISUBNETFAILOVER** propiedad con el valor  **VARIANT_TRUE** o **VARIANT_FALSE** o **DBPROP_INIT_PROVIDERSTRING** propiedad con el valor "**MultiSubnetFailover = Yes** "o"**MultiSubnetFailover = No**".
 
 #### <a name="example"></a>Ejemplo
 

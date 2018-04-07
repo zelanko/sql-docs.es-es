@@ -2,29 +2,30 @@
 title: Crear archivos de Script (DB2ToSQL) | Documentos de Microsoft
 ms.prod: sql-non-specified
 ms.prod_service: sql-tools
-ms.service: 
+ms.service: ''
 ms.component: ssma-db2
-ms.custom: 
+ms.custom: ''
 ms.date: 01/19/2017
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: sql-ssma
-ms.tgt_pltfrm: 
+ms.technology:
+- sql-ssma
+ms.tgt_pltfrm: ''
 ms.topic: article
 applies_to:
 - Azure SQL Database
 - SQL Server
 ms.assetid: ec23d188-b890-49b8-9a88-446df96269e4
-caps.latest.revision: "5"
+caps.latest.revision: 5
 author: Shamikg
 ms.author: Shamikg
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 088cd42b2635193ff34e45490811c44d6450ffc5
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: 6c07c232e22ba41899846f6e9cb5e6ecfa5783be
+ms.sourcegitcommit: 9351e8b7b68f599a95fb8e76930ab886db737e5f
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 04/06/2018
 ---
 # <a name="creating-script-files-db2tosql"></a>Crear archivos de Script (DB2ToSQL)
 El primer paso antes de iniciar la aplicación de consola SSMA consiste en crear el archivo de script y si es necesario crear el archivo de valor de la variable y el archivo de conexión de servidor.  
@@ -71,7 +72,7 @@ Las opciones configurables por el usuario incluyen:
   
     </output-providers>  
     ```  
-    *o*  
+    *or*  
   
     ```xml  
     <…All commands…>  
@@ -108,7 +109,7 @@ Las opciones configurables por el usuario incluyen:
   
     </output-providers>  
     ```  
-    *o*  
+    *or*  
   
     ```xml  
     <migrate-data>  
@@ -141,7 +142,7 @@ Las opciones configurables por el usuario incluyen:
   
     </output-providers>  
     ```  
-    *o*  
+    *or*  
   
     ```xml  
     <!-- Connect to target database -->  
@@ -174,7 +175,7 @@ Las opciones configurables por el usuario incluyen:
   
     </output-providers>  
     ```  
-    *o*  
+    *or*  
   
     ```xml  
     <!--synchronization-->  
@@ -185,7 +186,7 @@ Las opciones configurables por el usuario incluyen:
   
     </synchronize-target>  
     ```  
-    *o*  
+    *or*  
   
     ```xml  
     <!--data migration-->  
@@ -220,7 +221,7 @@ Las opciones configurables por el usuario incluyen:
   
     </output-providers>  
     ```  
-    *o*  
+    *or*  
   
     ```xml  
     <convert-schema object-name="<object-name>">  
@@ -273,7 +274,7 @@ Las opciones configurables por el usuario incluyen:
   
     </output-providers>  
     ```  
-    *o*  
+    *or*  
   
     ```xml  
     <…All commands…>  
@@ -315,7 +316,7 @@ Las opciones configurables por el usuario incluyen:
   
     </output-providers>  
     ```  
-    *o*  
+    *or*  
   
     ```xml  
     <…All commands…>  
@@ -348,14 +349,14 @@ La opción no configurable es:
 -   **Número máximo de intentos de reconexión:** cuando una conexión establecida se agota el tiempo o se interrumpe deba a errores de red, el servidor es necesario volver a conectarse. Se permiten los intentos de reconexión hasta un máximo de **5** reintentos transcurrido ese período, la consola realiza automáticamente la reconexión. La funcionalidad de reconexión automática reduce el esfuerzo de volver a ejecutar la secuencia de comandos.  
   
 ## <a name="server-connection-parameters"></a>Parámetros de conexión de servidor  
-Parámetros de conexión de servidor pueden definirse en el archivo de script o en el archivo de conexión de servidor. Consulte la [crear los archivos de conexión de servidor &#40; OracleToSQL &#41;](../../ssma/oracle/creating-the-server-connection-files-oracletosql.md) sección para obtener más detalles.  
+Parámetros de conexión de servidor pueden definirse en el archivo de script o en el archivo de conexión de servidor. Consulte la [crear los archivos de conexión de servidor &#40;OracleToSQL&#41; ](../../ssma/oracle/creating-the-server-connection-files-oracletosql.md) sección para obtener más detalles.  
   
 ## <a name="script-commands"></a>Comandos de script  
 El archivo de script contiene una secuencia de comandos de flujo de trabajo de migración en el formato XML. La aplicación de consola SSMA procesa la migración en el orden de los comandos que aparecen en el archivo de script.  
   
 Por ejemplo, una migración típica de datos de una tabla específica en una base de datos de DB2 sigue la jerarquía de: esquema -&gt; tabla.  
   
-Cuando todos los comandos en el archivo de script se ejecuta correctamente, la aplicación de consola SSMA sale y devuelve el control al usuario. El contenido de un archivo de script es más o menos estático con información sobre las variable contenidas en una [crear archivos de valores de Variable &#40; OracleToSQL &#41;](../../ssma/oracle/creating-variable-value-files-oracletosql.md) o, en una sección independiente dentro del archivo de script para los valores de las variables.  
+Cuando todos los comandos en el archivo de script se ejecuta correctamente, la aplicación de consola SSMA sale y devuelve el control al usuario. El contenido de un archivo de script es más o menos estático con información sobre las variable contenidas en una [crear archivos de valores de Variable &#40;OracleToSQL&#41; ](../../ssma/oracle/creating-variable-value-files-oracletosql.md) o, en una sección independiente dentro del archivo de script para los valores de las variables.  
   
 **Ejemplo:**  
   
@@ -396,14 +397,14 @@ Se proporcionan plantillas que consta de 3 archivos de script (para la ejecució
   
 Puede ejecutar las plantillas (archivos) después de cambiar los parámetros que aparecen en él para relevancia.  
   
-Lista completa de los comandos de script puede encontrarse en [ejecutando la consola SSMA &#40; DB2ToSQL &#41;](../../ssma/db2/executing-the-ssma-console-db2tosql.md)  
+Lista completa de los comandos de script puede encontrarse en [ejecutando la consola SSMA &#40;DB2ToSQL&#41;](../../ssma/db2/executing-the-ssma-console-db2tosql.md)  
   
 ## <a name="script-file-validation"></a>Validación del archivo de script  
 El usuario puede validar fácilmente su archivo de script en el archivo de definición de esquema **'O2SSConsoleScriptSchema.xsd'** disponible en la carpeta 'Esquemas'.  
   
 ## <a name="next-step"></a>Paso siguiente  
-El siguiente paso en la utilización de la consola es [crear archivos de valores Variable &#40; DB2ToSQL &#41;](../../ssma/db2/creating-variable-value-files-db2tosql.md).  
+El siguiente paso en la utilización de la consola es [crear archivos de valores Variable &#40;DB2ToSQL&#41;](../../ssma/db2/creating-variable-value-files-db2tosql.md).  
   
 ## <a name="see-also"></a>Vea también  
-[Crear archivos de valor de la Variable &#40; DB2ToSQL &#41;](../../ssma/db2/creating-variable-value-files-db2tosql.md)  
+[Crear archivos de valor de la Variable &#40;DB2ToSQL&#41;](../../ssma/db2/creating-variable-value-files-db2tosql.md)  
   

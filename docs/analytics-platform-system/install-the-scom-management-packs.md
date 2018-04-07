@@ -1,26 +1,26 @@
 ---
-title: "Instalar los módulos de administración de SCOM (Analytics Platform System)"
+title: Instalar los módulos de administración de SCOM (Analytics Platform System)
 author: barbkess
 ms.author: barbkess
-manager: jhubbard
+manager: craigg
 ms.prod: analytics-platform-system
 ms.prod_service: mpp-data-warehouse
-ms.service: 
-ms.component: 
+ms.service: ''
+ms.component: ''
 ms.technology: mpp-data-warehouse
-ms.custom: 
+ms.custom: ''
 ms.date: 01/05/2017
 ms.reviewer: na
 ms.suite: sql
 ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: ab3985d8-0a71-4b28-9d28-9886ae2a110f
-caps.latest.revision: "16"
-ms.openlocfilehash: 0fce285f730508ec9bf7f384eed4f6b3c9ed3dda
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+caps.latest.revision: 16
+ms.openlocfilehash: 2f05a947f09940fc1dd676ec6ca316863f567a7f
+ms.sourcegitcommit: 9351e8b7b68f599a95fb8e76930ab886db737e5f
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 04/06/2018
 ---
 # <a name="install-the-scom-management-packs"></a>Instalar los módulos de administración de SCOM
 Siga estos pasos para descargar e instalar los módulos de administración de System Center Operations Manager (SCOM) para SQL Server PDW. Los módulos de administración necesarias para supervisar SQL Server PDW de SCOM.  
@@ -59,7 +59,7 @@ Para la carga de trabajo de HDInsight, descargue el [System Center Management Pa
   
 5.  Haga clic en **Cerrar**.  
   
-    ![Haga clic en Cerrar](./media/install-the-scom-management-packs/SCOM_licnse_agrmt4.png "SCOM_licnse_agrmt4")  
+    ![Click Close](./media/install-the-scom-management-packs/SCOM_licnse_agrmt4.png "SCOM_licnse_agrmt4")  
   
 ### <a name="install-the-monitoring-pack-for-sql-server-pdw-appliance"></a>Instalar el módulo de supervisión para SQL Server PDW Appliance  
   
@@ -75,14 +75,14 @@ Para la carga de trabajo de HDInsight, descargue el [System Center Management Pa
   
 4.  Haga clic en **Instalar**.  
   
-    ![Confirmar la instalación de](./media/install-the-scom-management-packs/SCOM_licnse_agmtB2.png "SCOM_licnse_agmtB2")  
+    ![Confirm installation](./media/install-the-scom-management-packs/SCOM_licnse_agmtB2.png "SCOM_licnse_agmtB2")  
   
 5.  Haga clic en **Cerrar**.  
   
-    ![Se completó la instalación](./media/install-the-scom-management-packs/SCOM_licnse_agmtB3.png "SCOM_licnse_agmtB3")  
+    ![Installation complete](./media/install-the-scom-management-packs/SCOM_licnse_agmtB3.png "SCOM_licnse_agmtB3")  
   
 ## <a name="next-step"></a>Paso siguiente  
-Ahora que tiene los módulos de administración instalados, vaya al paso siguiente: [importar el módulo de administración de SCOM para PDW &#40; Sistema de la plataforma de análisis &#41; ](import-the-scom-management-pack-for-pdw.md).  
+Ahora que tiene los módulos de administración instalados, vaya al paso siguiente: [importar el módulo de administración de SCOM para PDW &#40;Analytics Platform System&#41;](import-the-scom-management-pack-for-pdw.md).  
   
 <!-- MISSING LINKS ## See Also  
 [Common Metadata Query Examples &#40;SQL Server PDW&#41;](../sqlpdw/common-metadata-query-examples-sql-server-pdw.md)  -->  

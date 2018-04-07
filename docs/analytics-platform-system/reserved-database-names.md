@@ -2,25 +2,25 @@
 title: Nombres reservados de la base de datos (SQL Server PDW)
 author: barbkess
 ms.author: barbkess
-manager: jhubbard
+manager: craigg
 ms.prod: analytics-platform-system
 ms.prod_service: mpp-data-warehouse
-ms.service: 
-ms.component: 
+ms.service: ''
+ms.component: ''
 ms.technology: mpp-data-warehouse
-ms.custom: 
+ms.custom: ''
 ms.date: 01/13/2017
 ms.reviewer: na
 ms.suite: sql
 ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: 92b0ffb2-0dcb-413f-bc0e-85e9e3e50f92
-caps.latest.revision: "5"
-ms.openlocfilehash: 809bbe11366deb54f5a08d9cf8b404f58ce9383f
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+caps.latest.revision: 5
+ms.openlocfilehash: e4e65009063f14575dda5d9822f35f58bfd29f73
+ms.sourcegitcommit: 9351e8b7b68f599a95fb8e76930ab886db737e5f
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 04/06/2018
 ---
 # <a name="reserved-database-names"></a>Nombres reservados de la base de datos
 Un nombre de base de datos reservado es un nombre que no se pueden asignar a una base de datos de usuario en SQL Server PDW.  
@@ -41,7 +41,7 @@ Lista de nombres de base de datos reservado:
   
 -   pdwtempdb2  
   
--   : DWConfiguration  
+-   DWConfiguration  
   
 -   DWDiagnostics  
   

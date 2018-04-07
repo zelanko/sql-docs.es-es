@@ -2,23 +2,23 @@
 title: Conceder permisos
 author: barbkess
 ms.author: barbkess
-manager: jhubbard
+manager: craigg
 ms.prod: analytics-platform-system
 ms.prod_service: mpp-data-warehouse
-ms.service: 
-ms.component: 
+ms.service: ''
+ms.component: ''
 ms.technology: mpp-data-warehouse
-ms.custom: 
+ms.custom: ''
 ms.date: 01/05/2017
 ms.reviewer: na
 ms.suite: sql
 ms.tgt_pltfrm: na
 ms.topic: article
-ms.openlocfilehash: d7d685d15eb0e5704698ebd2b79c20589f49ee16
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: 35542a9ea2544f0bdd357d3609937e1596e00a3f
+ms.sourcegitcommit: 9351e8b7b68f599a95fb8e76930ab886db737e5f
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 04/06/2018
 ---
 # <a name="grant-permissions"></a>Conceder permisos
 
@@ -221,7 +221,7 @@ For a list of all permissions, see [Permissions: GRANT, DENY, REVOKE &#40;SQL Se
 -->
 
 ## <a name="grant-permissions-to-monitor-the-appliance"></a>Conceder permisos para supervisar el dispositivo
-El dispositivo PDW de SQL Server se puede supervisar mediante las vistas de sistema de la consola de administración o PDW de SQL Server. Los inicios de sesión requieren el nivel de servidor **VIEW SERVER STATE** permiso para supervisar el dispositivo. Los inicios de sesión requieren el **ALTER ANY CONNECTION** permiso para terminar las conexiones mediante el uso de la consola de administración o el **KILL** comando. Para obtener información sobre los permisos necesarios para usar la consola de administración, consulte [conceder permisos para usar la consola de administración &#40; SQL Server PDW &#41; ](#grant-permissions-to-use-the-admin-console).  
+El dispositivo PDW de SQL Server se puede supervisar mediante las vistas de sistema de la consola de administración o PDW de SQL Server. Los inicios de sesión requieren el nivel de servidor **VIEW SERVER STATE** permiso para supervisar el dispositivo. Los inicios de sesión requieren el **ALTER ANY CONNECTION** permiso para terminar las conexiones mediante el uso de la consola de administración o el **KILL** comando. Para obtener información sobre los permisos necesarios para usar la consola de administración, consulte [conceder permisos para usar la consola de administración &#40;PDW de SQL Server&#41;](#grant-permissions-to-use-the-admin-console).  
   
 ### <a name="PermsAdminConsole"></a>Conceder permiso para supervisar el dispositivo mediante el uso de vistas del sistema  
 Las siguientes instrucciones SQL crean un inicio de sesión denominado `monitor_login` y le concede el **VIEW SERVER STATE** permiso para el `monitor_login` inicio de sesión.  
@@ -252,4 +252,4 @@ Para crear los inicios de sesión de administrador, consulte [funciones fijas de
 [CREAR EL INICIO DE SESIÓN](../t-sql/statements/create-login-transact-sql.md)  
 [CREAR USUARIO](../t-sql/statements/create-user-transact-sql.md)  
 [CREAR ROL](../t-sql/statements/create-role-transact-sql.md)  
-[Carga](load-overview.md)  
+[Load](load-overview.md)  

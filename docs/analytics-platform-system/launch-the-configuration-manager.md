@@ -1,37 +1,37 @@
 ---
-title: "Inicie el Administrador de configuración (Analytics Platform System)"
+title: Inicie el Administrador de configuración (Analytics Platform System)
 author: barbkess
 ms.author: barbkess
-manager: jhubbard
+manager: craigg
 ms.prod: analytics-platform-system
 ms.prod_service: mpp-data-warehouse
-ms.service: 
-ms.component: 
+ms.service: ''
+ms.component: ''
 ms.technology: mpp-data-warehouse
-ms.custom: 
+ms.custom: ''
 ms.date: 01/05/2017
 ms.reviewer: na
 ms.suite: sql
 ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: b914ba9a-e4ec-4750-934a-c447fc8909e3
-caps.latest.revision: "22"
-ms.openlocfilehash: 2ead82cd226a585d261eac2779cacb72cd5edbb6
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+caps.latest.revision: 22
+ms.openlocfilehash: 0ea02f539633233b462cc6c4cc3cc7ba5d452da9
+ms.sourcegitcommit: 9351e8b7b68f599a95fb8e76930ab886db737e5f
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 04/06/2018
 ---
 # <a name="launch-the-configuration-manager"></a>Inicie el Administrador de configuración
 Este tema proporciona instrucciones para iniciar el **Configuration Manager** para el dispositivo de sistema de la plataforma de análisis.  
   
 ## <a name="before-you-begin"></a>Antes de comenzar  
   
-### <a name="prerequisites"></a>Prerequisites  
-El sistema de la plataforma de análisis**Configuration Manager** sólo se puede ejecutar el Administrador de dominio de aplicación. Para ejecutar esta herramienta, es necesaria la contraseña para el Administrador de dominio de aplicación. Para crear otros administradores APS, vea [crear un administrador de dominio AP &#40; Ap &#41; ](create-an-aps-domain-administrator-aps.md).  
+### <a name="prerequisites"></a>Requisitos previos  
+El sistema de la plataforma de análisis**Configuration Manager** sólo se puede ejecutar el Administrador de dominio de aplicación. Para ejecutar esta herramienta, es necesaria la contraseña para el Administrador de dominio de aplicación. Para crear otros administradores APS, vea [crear un administrador de dominio de APS &#40;AP&#41;](create-an-aps-domain-administrator-aps.md).  
   
 ## <a name="Accessing"></a>Inicie la herramienta Administrador de configuración  
-Para ejecutar el Administrador de configuración, utilice Escritorio remoto para conectarse al nodo de Control de PDW (***PDW_region*-CTL01**) nodo y conéctese como *appliance_domain* **\Administrator**. Al iniciar la **Configuration Manager** de programa, use la **ejecutar como administrador** opción para asegurarse de que se utilizan las credenciales de administrador.  
+Para ejecutar el Administrador de configuración, utilice Escritorio remoto para conectarse al nodo de Control de PDW (***PDW_region *-CTL01**) nodo y conéctese como * appliance_domain ***\Administrator**. Al iniciar la **Configuration Manager** de programa, use la **ejecutar como administrador** opción para asegurarse de que se utilizan las credenciales de administrador.  
   
 #### <a name="to-launch-from-a-browser-window"></a>Para iniciar desde una ventana del explorador  
   
@@ -54,5 +54,5 @@ Para cerrar y salir **Configuration Manager**, haga clic en **salir** en la esqu
 ![SQL_Server_PDW_DWConfig_ApplTop](./media/launch-the-configuration-manager/SQL_Server_PDW_DWConfig_ApplTop.png "SQL_Server_PDW_DWConfig_ApplTop")  
   
 ## <a name="see-also"></a>Vea también  
-[Supervisar el dispositivo mediante la consola de administración &#40; Sistema de la plataforma de análisis &#41;](monitor-the-appliance-by-using-the-admin-console.md)  
+[Supervisar el dispositivo mediante la consola de administración &#40;sistema de la plataforma de análisis&#41;](monitor-the-appliance-by-using-the-admin-console.md)  
   

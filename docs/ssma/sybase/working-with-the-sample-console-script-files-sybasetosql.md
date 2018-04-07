@@ -21,13 +21,13 @@ ms.assetid: ef221118-b442-4ca6-9409-6ee1d9f8d948
 caps.latest.revision: 9
 author: Shamikg
 ms.author: Shamikg
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: fd9859a3292d7cb9ec00f22f695be9aaa25b59f0
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: 617c897ce05b3b57b32e8ffd67606d4314fb5c80
+ms.sourcegitcommit: 9351e8b7b68f599a95fb8e76930ab886db737e5f
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 04/06/2018
 ---
 # <a name="working-with-the-sample-console-script-files-sybasetosql"></a>Trabajar con los archivos de comandos de consola de ejemplo (SybaseToSQL)
 Algunos de los archivos de ejemplo se han proporcionado junto con el producto para la referencia de usuario y el uso. Esta sección describe la forma de personalizar fácilmente estos scripts para ajustarse a las necesidades del usuario final.  
@@ -51,12 +51,12 @@ Se han proporcionado los archivos de comandos de consola de ejemplo siguientes q
   
     -   El usuario puede conectarse a la base de datos requiere cambiando simplemente los valores para el origen necesarios y las definiciones de servidores de destino. En el ejemplo proporcionado todos los valores se han proporcionado valores como variables que están disponibles en la **VariableValueFileSample.xml**.  Todos los demás parámetros de conexión se pueden quitar del archivo de conexión de servidor de trabajo del usuario.  
   
-    -   Para obtener más información sobre cómo conectarse al servidor de origen y de destino, vea [crear los archivos de conexión de servidor &#40; SybaseToSQL &#41; ](../../ssma/sybase/creating-the-server-connection-files-sybasetosql.md).  
+    -   Para obtener más información sobre cómo conectarse al servidor de origen y de destino, vea [crear los archivos de conexión de servidor &#40;SybaseToSQL&#41;](../../ssma/sybase/creating-the-server-connection-files-sybasetosql.md).  
   
 -   **VariableValueFileSample.xml:**  
     Archivos de script de todas las variables que se han usado en la consola de ejemplo y `ServersConnectionFileSample.xml` han se intercalan en este archivo. Para ejecutar las secuencias de comandos de consola de ejemplo que tiene el usuario simplemente reemplazar la variable de ejemplo valores con el usuario los define y pasan este archivo como un argumento de línea de comandos adicionales junto con el archivo de script.  
   
-    Para obtener más información sobre el archivo de valores de variables, consulte [crear archivos de valores Variable &#40; SybaseToSQL &#41; ](../../ssma/sybase/creating-variable-value-files-sybasetosql.md).  
+    Para obtener más información sobre el archivo de valores de variables, consulte [crear archivos de valores Variable &#40;SybaseToSQL&#41;](../../ssma/sybase/creating-variable-value-files-sybasetosql.md).  
   
 -   **AssessmentReportGenerationSample.xml:**  
     Este ejemplo permite al usuario generar un informe de evaluación de xml que se puede usar por el usuario para el análisis antes de que empiece a convertir y migrar los datos.  
@@ -65,7 +65,7 @@ Se han proporcionado los archivos de comandos de consola de ejemplo siguientes q
   
     Si el usuario tiene que evaluar varios objetos / bases de datos puede especificar varios `metabase-object` nodos como se muestra en el `generate-assessment-report` de ejemplo 4 del comando del archivo de comandos de consola de ejemplo.  
   
-    Para obtener más información sobre la generación de informes, consulte [generación de informes &#40; SybaseToSQL &#41; ](../../ssma/sybase/generating-reports-sybasetosql.md).  
+    Para obtener más información sobre la generación de informes, consulte [generar informes &#40;SybaseToSQL&#41;](../../ssma/sybase/generating-reports-sybasetosql.md).  
   
     > [!NOTE]  
     > -   Asegúrese de que el argumento de línea de comandos del archivo de valor de la variable se pasa a la aplicación de consola y VariableValueFileSample.xml se actualiza con el usuario especificado valores.  
@@ -92,7 +92,7 @@ Se han proporcionado los archivos de comandos de consola de ejemplo siguientes q
   
     **Atributo**  
   
-    -   `source-schema:`Especifica la base de datos de origen que requiere que para se va a convertir.  
+    -   `source-schema:` Especifica la base de datos de origen que requiere que para se va a convertir.  
   
     -   `sql-server-schema`: Especifica la base de datos de destino que se pueden migrar a  
   
@@ -106,7 +106,7 @@ Se han proporcionado los archivos de comandos de consola de ejemplo siguientes q
   
     **Atributo**  
   
-    `object-name`: Especifique la base de datos de origen / objeto nombre que requiere que para se va a convertir. Asegúrese de que la correspondiente `object-type` se cambia en función del tipo de objeto que se especifica en el`object-name`  
+    `object-name`: Especifique la base de datos de origen / objeto nombre que requiere que para se va a convertir. Asegúrese de que la correspondiente `object-type` se cambia en función del tipo de objeto que se especifica en el `object-name`  
   
     **Nombre de comando**  
   
@@ -118,7 +118,7 @@ Se han proporcionado los archivos de comandos de consola de ejemplo siguientes q
   
     **Atributo**  
   
-    `object-name:`Especifique la base de datos de sql server / objeto nombre que requiere para crearse. Asegúrese de que la correspondiente `object-type` se cambia en función del tipo de objeto que se especifica en el`object-name`  
+    `object-name:` Especifique la base de datos de sql server / objeto nombre que requiere para crearse. Asegúrese de que la correspondiente `object-type` se cambia en función del tipo de objeto que se especifica en el `object-name`  
   
     **Nombre de comando**  
   
@@ -130,10 +130,10 @@ Se han proporcionado los archivos de comandos de consola de ejemplo siguientes q
   
     **Atributo**  
   
-    `object-name:`Especifica la base de datos de origen / tablas nombre que requiere para la migración. Asegúrese de que la correspondiente `object-type` se cambia en función del tipo de objeto que se especifica en el`object-name`  
+    `object-name:` Especifica la base de datos de origen / tablas nombre que requiere para la migración. Asegúrese de que la correspondiente `object-type` se cambia en función del tipo de objeto que se especifica en el `object-name`  
   
 ## <a name="see-also"></a>Vea también  
-[Crear archivos de valor de la Variable &#40; SybaseToSQL &#41;](../../ssma/sybase/creating-variable-value-files-sybasetosql.md)  
-[Crear los archivos de conexión de servidor &#40; SybaseToSQL &#41;](../../ssma/sybase/creating-the-server-connection-files-sybasetosql.md)  
-[Generación de informes &#40; SybaseToSQL &#41;](../../ssma/sybase/generating-reports-sybasetosql.md)  
+[Crear archivos de valor de la Variable &#40;SybaseToSQL&#41;](../../ssma/sybase/creating-variable-value-files-sybasetosql.md)  
+[Crear los archivos de conexión de servidor &#40;SybaseToSQL&#41;](../../ssma/sybase/creating-the-server-connection-files-sybasetosql.md)  
+[Generar informes &#40;SybaseToSQL&#41;](../../ssma/sybase/generating-reports-sybasetosql.md)  
   

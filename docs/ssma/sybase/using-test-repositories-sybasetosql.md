@@ -21,13 +21,13 @@ ms.assetid: c359c25c-db2a-4a20-afa9-62d87a62df72
 caps.latest.revision: 7
 author: Shamikg
 ms.author: Shamikg
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: ef959c05f397a898d9c1e72adddd6b895eabf87d
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: 938f0dd71ea980af429591cf53bc8f6bd39e9b13
+ms.sourcegitcommit: 9351e8b7b68f599a95fb8e76930ab886db737e5f
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 04/06/2018
 ---
 # <a name="using-test-repositories-sybasetosql"></a>Uso de repositorios de prueba (SybaseToSQL)
 Los almacenes de repositorio de pruebas de SSMA SSMA evaluador casos de prueba y los resultados de pruebas para su uso posterior. Los datos del repositorio se guardan en las tablas de SQL Server **TestCaseRepository** y **RunTestCaseResultRepository** en el esquema **ssma_sybase_utilities** de **ssmatesterdb_syb** base de datos.  
@@ -59,7 +59,7 @@ Los siguientes botones están disponibles en la página de casos de prueba:
   
 -   Haga clic en el **editar** botón para ejecutar el Asistente de caso de prueba y cambiar la prueba seleccionada.  
   
--   Haga clic en el **ejecutar** para abrir el [ejecutar casos de prueba &#40; SybaseToSQL &#41; ](../../ssma/sybase/running-test-cases-sybasetosql.md) cuadro de diálogo y ejecutar la prueba seleccionada.  
+-   Haga clic en el **ejecutar** para abrir el [ejecutar casos de prueba &#40;SybaseToSQL&#41; ](../../ssma/sybase/running-test-cases-sybasetosql.md) cuadro de diálogo y ejecutar la prueba seleccionada.  
   
 ## <a name="test-results-repository"></a>Repositorio de resultados de pruebas  
 También puede ver el repositorio de resultados de pruebas en el **los resultados de pruebas** página de la **repositorio de casos de prueba** ventana. Haga clic en **los resultados de pruebas...** desde el **Tester** menú.  
@@ -80,11 +80,11 @@ La siguiente información sobre los resultados de pruebas se muestra en la cuadr
   
 Los siguientes botones están disponibles en la página de resultados de pruebas:  
   
--   Haga clic en el **vista** para abrir [ver informes de casos de prueba &#40; SybaseToSQL &#41; ](../../ssma/sybase/viewing-test-case-reports-sybasetosql.md) de resultado de caso de prueba actual.  
+-   Haga clic en el **vista** para abrir [ver informes de casos de prueba &#40;SybaseToSQL&#41; ](../../ssma/sybase/viewing-test-case-reports-sybasetosql.md) de resultado de caso de prueba actual.  
   
 -   Haga clic en el **eliminar** botón para eliminar el resultado de la prueba seleccionada  
   
 ## <a name="see-also"></a>Vea también  
-[Ejecutar casos de prueba &#40; SybaseToSQL &#41;](../../ssma/sybase/running-test-cases-sybasetosql.md)  
-[Pruebas migran objetos de base de datos &#40; SybaseToSQL &#41;](../../ssma/sybase/testing-migrated-database-objects-sybasetosql.md)  
+[Ejecutar casos de prueba &#40;SybaseToSQL&#41;](../../ssma/sybase/running-test-cases-sybasetosql.md)  
+[Pruebas de objetos de base de datos migran &#40;SybaseToSQL&#41;](../../ssma/sybase/testing-migrated-database-objects-sybasetosql.md)  
   

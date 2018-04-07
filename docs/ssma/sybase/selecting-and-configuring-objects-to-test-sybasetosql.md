@@ -1,15 +1,16 @@
 ---
 title: Seleccionar y configurar los objetos a prueba (SybaseToSQL) | Documentos de Microsoft
-ms.custom: 
+ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql-non-specified
 ms.prod_service: sql-tools
-ms.service: 
+ms.service: ''
 ms.component: ssma-sybase
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: sql-ssma
-ms.tgt_pltfrm: 
+ms.technology:
+- sql-ssma
+ms.tgt_pltfrm: ''
 ms.topic: article
 applies_to:
 - Azure SQL Database
@@ -18,22 +19,22 @@ helpviewer_keywords:
 - Tester Component,Parameter Comparision Setting
 - Tester Component,Selecting Objects
 ms.assetid: 89c23aad-bfee-4917-bc16-175288390ac0
-caps.latest.revision: "7"
+caps.latest.revision: 7
 author: Shamikg
 ms.author: Shamikg
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 23c5a636c3031fce08294de4640799fde34362d7
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: 3ee6efee5172d5261c5f8fa5e23507b9bb2b931b
+ms.sourcegitcommit: 9351e8b7b68f599a95fb8e76930ab886db737e5f
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 04/06/2018
 ---
 # <a name="selecting-and-configuring-objects-to-test-sybasetosql"></a>Seleccionar y configurar los objetos a prueba (SybaseToSQL)
 En este paso se seleccionan objetos para probar y configurar las opciones de comparación de funciones y procedimientos parámetros de salida, así como los valores devueltos de funciones.  
   
 ## <a name="selection-of-objects-to-test"></a>Selección de objetos a prueba  
-En el árbol de objetos de Sybase situado en el lado izquierdo de la ventana, compruebe los objetos que desea invocar durante el proceso de prueba. Ver la lista completa de objetos pueden someterse a prueba en el [probar los objetos migrados de la base de datos &#40; SybaseToSQL &#41; ](../../ssma/sybase/testing-migrated-database-objects-sybasetosql.md) tema.  
+En el árbol de objetos de Sybase situado en el lado izquierdo de la ventana, compruebe los objetos que desea invocar durante el proceso de prueba. Ver la lista completa de objetos pueden someterse a prueba en el [probar los objetos migrados de la base de datos &#40;SybaseToSQL&#41; ](../../ssma/sybase/testing-migrated-database-objects-sybasetosql.md) tema.  
   
 Si el evaluador de SSMA no admite cualquiera de los objetos seleccionados para las pruebas, verá el vínculo con la etiqueta **algunos objetos seleccionados contienen errores** bajo el árbol de objetos. Haga clic en este vínculo para ver los motivos por qué no se pueden probar estos objetos y anule la selección de objetos incorrectos.  
   
@@ -45,7 +46,7 @@ Establecer las reglas de comparación para los parámetros output y devolver val
 ### <a name="use-during-comparisons"></a>Uso durante las comparaciones  
 Habilitar el uso del parámetro seleccionado en la comparación de resultados de pruebas.  
   
--   Si elige **True**, SSMA comparará el valor de salida de este parámetro después de ejecutar el procedimiento de Sybase con el valor correspondiente en[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]  
+-   Si elige **True**, SSMA comparará el valor de salida de este parámetro después de ejecutar el procedimiento de Sybase con el valor correspondiente en [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]  
   
 -   Si elige**False**, el parámetro se excluirá de la comprobación de resultados.  
   
@@ -90,8 +91,8 @@ Controla cómo espacios se tratan durante la comparación.
 Puede especificar valores de parámetro de entrada en el **llamar a valores** página. El **agregar llamada** botón agrega una nueva llamada con valores de parámetros vacía. El **quitar llamar** botón quita la llamada actual.  
   
 ## <a name="next-step"></a>Paso siguiente  
-[Seleccionar y configurar los objetos afectados &#40; SybaseToSQL &#41;](../../ssma/sybase/selecting-and-configuring-affected-objects-sybasetosql.md)  
+[Seleccionar y configurar los objetos afectados &#40;SybaseToSQL&#41;](../../ssma/sybase/selecting-and-configuring-affected-objects-sybasetosql.md)  
   
 ## <a name="see-also"></a>Vea también  
-[Pruebas migran objetos de base de datos &#40; SybaseToSQL &#41;](../../ssma/sybase/testing-migrated-database-objects-sybasetosql.md)  
+[Pruebas de objetos de base de datos migran &#40;SybaseToSQL&#41;](../../ssma/sybase/testing-migrated-database-objects-sybasetosql.md)  
   

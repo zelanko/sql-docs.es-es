@@ -1,26 +1,26 @@
 ---
-title: "Configurar SCOM para supervisar el sistema de la plataforma de análisis"
+title: Configurar SCOM para supervisar el sistema de la plataforma de análisis
 author: barbkess
 ms.author: barbkess
-manager: jhubbard
+manager: craigg
 ms.prod: analytics-platform-system
 ms.prod_service: mpp-data-warehouse
-ms.service: 
-ms.component: 
+ms.service: ''
+ms.component: ''
 ms.technology: mpp-data-warehouse
-ms.custom: 
+ms.custom: ''
 ms.date: 01/05/2017
 ms.reviewer: na
 ms.suite: sql
 ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: 4dba9b50-1447-45fc-b219-b9fc99d47d8d
-caps.latest.revision: "10"
-ms.openlocfilehash: 435bbae75548d1959d509b9833bd9a6f7ec658e2
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+caps.latest.revision: 10
+ms.openlocfilehash: 53fc0bce73f2fd30553e2a834122e86cdb0a65fc
+ms.sourcegitcommit: 9351e8b7b68f599a95fb8e76930ab886db737e5f
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 04/06/2018
 ---
 # <a name="configure-scom-to-monitor-analytics-platform-system"></a>Configurar SCOM para supervisar el sistema de la plataforma de análisis
 Siga estos pasos para configurar los módulos de administración de System Center Operations Manager (SCOM) para el sistema de la plataforma de análisis. Los módulos de administración necesarias para supervisar el sistema de la plataforma de análisis de SCOM.  
@@ -30,7 +30,7 @@ Siga estos pasos para configurar los módulos de administración de System Cente
   
 System Center Operations Manager 2007 R2 debe estar instalado y ejecutándose.  
   
-Los módulos de administración deben estar instalados y configurados. Vea [instalar los módulos de administración de SCOM &#40; Sistema de la plataforma de análisis &#41; ](install-the-scom-management-packs.md) y [importar el módulo de administración de SCOM para PDW &#40; Sistema de la plataforma de análisis &#41; ](import-the-scom-management-pack-for-pdw.md).  
+Los módulos de administración deben estar instalados y configurados. Vea [instalar los módulos de administración de SCOM &#40;Analytics Platform System&#41; ](install-the-scom-management-packs.md) y [importar el módulo de administración de SCOM para PDW &#40;Analytics Platform System&#41;](import-the-scom-management-pack-for-pdw.md).  
   
 ## <a name="ConfigureRunAsProfile"></a>Configurar perfil de ejecución en System Center  
 Para configurar System Center tendrá que realice los siguientes pasos:  
@@ -121,7 +121,7 @@ Estas son instrucciones detalladas sobre cómo hacerlo:
         ![RunAsProfileWizardAdd2](./media/configure-scom-to-monitor-analytics-platform-system/RunAsProfileWizardAdd2.png "RunAsProfileWizardAdd2")  
   
 ## <a name="next-step"></a>Paso siguiente  
-Ahora que ha configurado los módulos de administración, está listo para empezar a supervisar el dispositivo. Para obtener más información, vea [supervisar el dispositivo mediante el uso de System Center Operations Manager &#40; Sistema de la plataforma de análisis &#41; ](monitor-the-appliance-by-using-system-center-operations-manager.md).  
+Ahora que ha configurado los módulos de administración, está listo para empezar a supervisar el dispositivo. Para obtener más información, consulte [supervisar el dispositivo mediante el uso de System Center Operations Manager &#40;Analytics Platform System&#41;](monitor-the-appliance-by-using-system-center-operations-manager.md).  
   
 <!-- MISSING LINKS ## See Also  
 [Common Metadata Query Examples &#40;SQL Server PDW&#41;](../sqlpdw/common-metadata-query-examples-sql-server-pdw.md)  -->  

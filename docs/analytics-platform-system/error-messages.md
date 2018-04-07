@@ -2,25 +2,25 @@
 title: Mensajes de error (SQL Server PDW)
 author: barbkess
 ms.author: barbkess
-manager: jhubbard
+manager: craigg
 ms.prod: analytics-platform-system
 ms.prod_service: mpp-data-warehouse
-ms.service: 
-ms.component: 
+ms.service: ''
+ms.component: ''
 ms.technology: mpp-data-warehouse
-ms.custom: 
+ms.custom: ''
 ms.date: 01/13/2017
 ms.reviewer: na
 ms.suite: sql
 ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: e6223cba-2dec-4b8a-bc10-e2ef6a821fe0
-caps.latest.revision: "9"
-ms.openlocfilehash: c9c0ebf9b452fdf2ec54ae84bec34288e73e88aa
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+caps.latest.revision: 9
+ms.openlocfilehash: 38512cbdb3f43144ecfdf4c3ca3dc28c4a019e16
+ms.sourcegitcommit: 9351e8b7b68f599a95fb8e76930ab886db737e5f
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 04/06/2018
 ---
 # <a name="error-messages"></a>mensajes de error
 Mensajes de error de SQL Server PDW notifican los errores y problemas detectados por los componentes de SQL Server PDW y también pueden incluir errores de SQL Server que apareció a través de SQL Server PDW. Estos mensajes de error utilizan una sintaxis coherente para presentar información. Descripción de esta sintaxis le permitirá identificar y corregir problemas en SQL Server PDW.  
@@ -34,7 +34,7 @@ Estos son los valores posibles para cada campo:
   
 |Campo|Description|Ejemplo|  
 |---------|---------------|-----------|  
-|*Error_Indicator*|La palabra "ERROR" u otro texto que avisa al usuario un problema.|error|  
+|*Error_Indicator*|La palabra "ERROR" u otro texto que avisa al usuario un problema.|ERROR|  
 |*SQL_State_Code*|El código de estado SQL, según la especificación de ODBC. El controlador genera el código de estado SQL adecuado siempre que devuelve un mensaje a una aplicación. El texto "Microsoft" indica el origen del error.|42000|  
 |*Driver_Details*|Detalles de dependiente del controlador, como el tipo de controlador que se utiliza.|Controlador de ODBC SQL Server 2008 R2 Parallel Data Warehouse|  
 |*QueryID*|El identificador único para la consulta. Use este valor para buscar información adicional relacionada con el procesamiento de la consulta. Por ejemplo, los detalles de ejecución de consulta pueden encontrarse en la consola de administración con el identificador de la consulta. Para obtener más información, consulte [supervisar el dispositivo mediante la consola de administración](monitor-the-appliance-by-using-the-admin-console.md).<br /><br />Si un QueryID no es aplicable, el texto "Interno" se devuelve al usuario.|QID2377|  

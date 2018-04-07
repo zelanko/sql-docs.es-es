@@ -21,20 +21,20 @@ ms.assetid: 62e20e03-50cc-4ac8-8072-524d194d2ec3
 caps.latest.revision: 13
 author: Shamikg
 ms.author: Shamikg
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: f105882bee69488970c986e77cd61db4f0844b0d
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: 915cc8c97e05489fb72a7193ce764faf55ed0b62
+ms.sourcegitcommit: 9351e8b7b68f599a95fb8e76930ab886db737e5f
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 04/06/2018
 ---
 # <a name="find-databases-wizard-verify-selection-accesstosql"></a>Buscar bases de datos (Compruebe la selección) (AccessToSQL)
 La página de selección de comprobar del Asistente para buscar las bases de datos incluyen los archivos que se va a agregar a SSMA. Si la lista de archivos es incorrecta, haga clic en **volver** para modificar la lista. En caso contrario, haga clic en **finalizar** para agregar los archivos.  
   
 Para abrir el Asistente para buscar las bases de datos, en la **archivo** menú, haga clic en **buscar bases de datos**.  
   
-## <a name="options"></a>.  
+## <a name="options"></a>Opciones  
 **Nombre de archivo**  
 Muestra el nombre del archivo de base de datos de Access para agregar a SSMA.  
   

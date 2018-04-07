@@ -21,13 +21,13 @@ ms.assetid: cb75d281-43ef-4f4a-b754-2c4ee3b62ae7
 caps.latest.revision: 5
 author: Shamikg
 ms.author: Shamikg
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: e7f9b549716ed85abe6e2fdfbc7e3b5739286afe
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: fe87892c50992968da7ada9b5a3b33a34442fbe6
+ms.sourcegitcommit: 9351e8b7b68f599a95fb8e76930ab886db737e5f
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 04/06/2018
 ---
 # <a name="viewing-test-case-reports-sybasetosql"></a>Ver informes de casos de prueba (SybaseToSQL)
 El informe de casos de prueba muestra los resultados de pruebas de comprobación y la información de prueba general. En caso de error de prueba, también se muestra información sobre los datos que no coincidan en objetos comprobados.  
@@ -52,10 +52,10 @@ Muestra el estado de ejecución como **correcto** o **error**.
 **Resultado de prueba de objetos**  
 Una comparación de los resultados (éxito o error) y las diferencias que SSMA evaluador detectó en caso de error.  
   
-**Finalización**  
+**Finalization**  
 Muestra el estado de ejecución como **correcto** o **error**.  
   
 ## <a name="see-also"></a>Vea también  
-[Ejecutar casos de prueba &#40; SybaseToSQL &#41;](../../ssma/sybase/running-test-cases-sybasetosql.md)  
-[Pruebas migran objetos de base de datos &#40; SybaseToSQL &#41;](../../ssma/sybase/testing-migrated-database-objects-sybasetosql.md)  
+[Ejecutar casos de prueba &#40;SybaseToSQL&#41;](../../ssma/sybase/running-test-cases-sybasetosql.md)  
+[Pruebas de objetos de base de datos migran &#40;SybaseToSQL&#41;](../../ssma/sybase/testing-migrated-database-objects-sybasetosql.md)  
   

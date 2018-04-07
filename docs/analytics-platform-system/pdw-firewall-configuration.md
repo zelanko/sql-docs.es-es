@@ -1,33 +1,33 @@
 ---
-title: "Configuración del Firewall PDW (Analytics Platform System)"
+title: Configuración del Firewall PDW (Analytics Platform System)
 author: barbkess
 ms.author: barbkess
-manager: jhubbard
+manager: craigg
 ms.prod: analytics-platform-system
 ms.prod_service: mpp-data-warehouse
-ms.service: 
-ms.component: 
+ms.service: ''
+ms.component: ''
 ms.technology: mpp-data-warehouse
-ms.custom: 
+ms.custom: ''
 ms.date: 01/05/2017
 ms.reviewer: na
 ms.suite: sql
 ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: 191f292d-16bc-4166-b855-158854ad062d
-caps.latest.revision: "28"
-ms.openlocfilehash: e74ffd88f0b2c10a6120c4411e4647c2fb84f249
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+caps.latest.revision: 28
+ms.openlocfilehash: 8795f2254160a4ba605643b89dc4b9df0cce4c7f
+ms.sourcegitcommit: 9351e8b7b68f599a95fb8e76930ab886db737e5f
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 04/06/2018
 ---
 # <a name="pdw-firewall-configuration"></a>Configuración de Firewall PDW
 El **Firewall** página de SQL Server PDW Configuration Manager le permite habilitar o deshabilitar las reglas de firewall que permiten o impedir el acceso a puertos específicos en el dispositivo de sistema de la plataforma de análisis.  
   
 ## <a name="to-manage-ports-and-firewall-rules-for-appliance-nodes"></a>Para administrar los puertos y las reglas para los nodos de dispositivo de firewall  
   
-1.  Inicie el Administrador de configuración. Para obtener más información, vea [iniciar el Administrador de configuración &#40; Sistema de la plataforma de análisis &#41; ](launch-the-configuration-manager.md).  
+1.  Inicie el Administrador de configuración. Para obtener más información, consulte [iniciar el Administrador de configuración &#40;Analytics Platform System&#41;](launch-the-configuration-manager.md).  
   
 2.  En el panel izquierdo del Administrador de configuración, expanda **topología de almacenamiento de datos paralelos**y, a continuación, haga clic en **Firewall**.  
   
@@ -45,7 +45,7 @@ Se abren los puertos siguientes para las conexiones de cliente procedentes de fu
 |Acceso de cliente de SQL para PDW (TDS)|17001|CTL|  
 |Acceso de cliente de cargador (dwloader & SSIS)|8001|CTL|  
 |Acceso al escritorio remoto|3389|CTL, CMP|  
-|BinaryLoaderDataChannel SSIS|16551|CTL|  
+|SSIS BinaryLoaderDataChannel|16551|CTL|  
 |dwloader BinaryLoaderDataChannel|16551|CMP|  
 |SSL cifra las conexiones (para las comunicaciones internas, para tener acceso a la consola de administración y tener acceso a servicios de clúster de HDInsight)|443|Todos los nodos|  
 |Flujo de Control de carga SQL Server PDW - las credenciales de Windows|8002|CTL|  

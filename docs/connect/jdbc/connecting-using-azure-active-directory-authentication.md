@@ -13,18 +13,21 @@ ms.technology:
 - drivers
 ms.topic: article
 ms.assetid: 9c9d97be-de1d-412f-901d-5d9860c3df8c
-caps.latest.revision: ''
+caps.latest.revision: 11
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: On Demand
-ms.openlocfilehash: a0cbb8a2b6eff8e3a612039616f9b497a2ea2737
-ms.sourcegitcommit: 7246ef88fdec262fa0d34bf0e232f089e03a6911
+ms.openlocfilehash: ed4b2623b7a80358622b8153d316428b742ef31e
+ms.sourcegitcommit: 9351e8b7b68f599a95fb8e76930ab886db737e5f
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/29/2018
+ms.lasthandoff: 04/06/2018
 ---
 # <a name="connecting-using-azure-active-directory-authentication"></a>Conectarse usando la autenticación de Azure Active Directory
+
+[!INCLUDE[Driver_JDBC_Download](../../includes/driver_jdbc_download.md)]
+
 En este artículo se proporciona información sobre cómo desarrollar aplicaciones de Java para usar la característica de autenticación de Azure Active Directory con Microsoft JDBC Driver 6.0 (o superior) para SQL Server.
 
 Puede utilizar la autenticación de Azure Active Directory (AAD), que es un mecanismo de conectarse a la base de datos de SQL Azure v12 mediante identidades de Azure Active Directory. Utilizar autenticación de Azure Active Directory para administrar de forma centralizada las identidades de usuarios de base de datos y como una alternativa a la autenticación de SQL Server. El controlador JDBC permite especificar sus credenciales de Azure Active Directory en la cadena de conexión de JDBC para conectarse a la base de datos de SQL Azure. Para obtener información sobre cómo configurar la autenticación de Active Directory de Azure, visite [conectarse a SQL base de datos mediante Azure Active Directory autenticación](https://azure.microsoft.com/documentation/articles/sql-database-aad-authentication/). 

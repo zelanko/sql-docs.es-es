@@ -1,6 +1,6 @@
 ---
-title: "Utilizar autenticación de Active Directory (Kerberos) cuando se conecta con las operaciones de SQL Studio (versión preliminar) | Documentos de Microsoft"
-description: "Obtenga información acerca de cómo habilitar Kerberos para usar autenticación de Active Directory para las operaciones de SQL Studio (versión preliminar)"
+title: Utilizar autenticación de Active Directory (Kerberos) cuando se conecta con las operaciones de SQL Studio (versión preliminar) | Documentos de Microsoft
+description: Obtenga información acerca de cómo habilitar Kerberos para usar autenticación de Active Directory para las operaciones de SQL Studio (versión preliminar)
 ms.custom: tools|sos
 ms.date: 11/17/2017
 ms.prod: sql-non-specified
@@ -8,25 +8,25 @@ ms.reviewer: alayu; erickang; sstein
 ms.suite: sql
 ms.prod_service: sql-tools
 ms.component: sos
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 author: meet-bhagdev
 ms.author: meetb
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: fcc9e91255317d53a63dd9867f6060af591f36e3
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: dbd229a0106506f744074df760ee10f871474ebb
+ms.sourcegitcommit: 094c46e7fa6de44735ed0040c65a40ec3d951b75
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 04/06/2018
 ---
 # <a name="connect-includename-sosincludesname-sos-shortmd-to-your-sql-server-using-windows-authentication---kerberos"></a>Conectar [!INCLUDE[name-sos](../includes/name-sos-short.md)] a SQL Server mediante la autenticación de Windows - Kerberos 
 
-[!INCLUDE[name-sos](../includes/name-sos-short.md)]admite la conexión a SQL Server mediante Kerberos.
+[!INCLUDE[name-sos](../includes/name-sos-short.md)] admite la conexión a SQL Server mediante Kerberos.
 
 Para poder utilizar la autenticación integrada (autenticación de Windows) en Mac OS o Linux, debe configurar un **vale de Kerberos** vincular el usuario actual a una cuenta de dominio de Windows. 
 
-## <a name="prerequisites"></a>Prerequisites
+## <a name="prerequisites"></a>Requisitos previos
 
 - Acceso a un equipo unido a un dominio de Windows para consultar el controlador de dominio Kerberos.
 - SQL Server debe configurarse para permitir la autenticación Kerberos. En el controlador de cliente que se ejecutan en Unix, la autenticación integrada solamente se admite con Kerberos. Puede encontrar más información sobre cómo configurar Sql Server para autenticar con Kerberos [aquí](https://support.microsoft.com/en-us/help/319723/how-to-use-kerberos-authentication-in-sql-server). Debería haber SPN registrados para cada instancia de Sql Server está intentando conectarse. Se muestran detalles acerca del formato de SPN de SQL Server [aquí](https://technet.microsoft.com/en-us/library/ms191153%28v=sql.105%29.aspx#SPN%20Formats)
@@ -35,7 +35,7 @@ Para poder utilizar la autenticación integrada (autenticación de Windows) en M
 ## <a name="checking-if-sql-server-has-kerberos-setup"></a>Comprobando si Sql Server tiene la configuración de Kerberos
 
 Inicie sesión en el equipo host de Sql Server. Línea de comandos de Windows, use la `setspn -L %COMPUTERNAME%` para enumerar todos los nombres de entidad de servicio para el host. Debería ver las entradas que comienzan por MSSQLSvc/HostName.Domain.com lo que significa que Sql Server se ha registrado un SPN y está listo para aceptar la autenticación Kerberos. 
-- Si no tiene acceso al Host de Sql Server, desde cualquier otro sistema operativo Windows unido a Active Directory mismo, puede utilizar el comando `setspn -L <SQLSERVER_NETBIOS>` donde < SQLSERVER_NETBIOS > es el nombre del equipo de la hsot de Sql Server.
+- Si no tiene acceso al Host de Sql Server, desde cualquier otro sistema operativo Windows unido a Active Directory mismo, puede utilizar el comando `setspn -L <SQLSERVER_NETBIOS>` donde < SQLSERVER_NETBIOS > es el nombre de equipo del host de Sql Server.
 
 
 ## <a name="get-the-kerberos-key-distribution-center"></a>Obtener el centro de distribución de claves de Kerberos
@@ -94,7 +94,7 @@ sudo realm join contoso.com -U 'user@CONTOSO.COM' -v
 * Success
 ```
    
-### <a name="redhat-enterprise-linux"></a>Enterprise RedHat Linux
+### <a name="redhat-enterprise-linux"></a>RedHat Enterprise Linux
 ```bash
 sudo yum install realmd krb5-workstation
 ```
@@ -126,9 +126,9 @@ sudo realm join contoso.com -U 'user@CONTOSO.COM' -v
    
 ```
 
-### <a name="macos"></a>MacOS
+### <a name="macos"></a>macOS
 
-- Combine el macOS con el controlador de dominio de Active Directory [siguiendo estos pasos] (https://support.apple.com/kb/PH26282?viewlocale=en_US & locale = en_US).
+- Combine el macOS con el controlador de dominio de Active Directory [siguiendo estos pasos] (https://support.apple.com/kb/PH26282?viewlocale=en_US&locale=en_US).
 
 
 
@@ -170,7 +170,7 @@ klist
 krbtgt/DOMAIN.COMPANY.COM@ DOMAIN.COMPANY.COM.
 ```
 
-## <a name="connect-using-includename-sosincludesname-sos-shortmd"></a>Conectar usando[!INCLUDE[name-sos](../includes/name-sos-short.md)]
+## <a name="connect-using-includename-sosincludesname-sos-shortmd"></a>Conectar usando [!INCLUDE[name-sos](../includes/name-sos-short.md)]
 
 * Crear un nuevo perfil de conexión
 

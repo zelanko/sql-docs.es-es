@@ -1,6 +1,6 @@
 ---
-title: "Actualizado: ejemplo de documentación de SQL Server | Documentos de Microsoft"
-description: "Mostrar fragmentos de contenido actualizado para obtener documentación modificado recientemente en, de ejemplo para Microsoft SQL Server."
+title: 'Actualizado: ejemplo de documentación de SQL Server | Documentos de Microsoft'
+description: Mostrar fragmentos de contenido actualizado para obtener documentación modificado recientemente en, de ejemplo para Microsoft SQL Server.
 manager: craigg
 author: MightyPen
 ms.author: genemi
@@ -11,10 +11,10 @@ ms.prod_service: sql-non-specified
 ms.component: samples
 ms.date: 02/03/2018
 ms.openlocfilehash: 319eae50100b7ed1e3937de6d053b049ce3e8aa7
-ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
+ms.sourcegitcommit: 094c46e7fa6de44735ed0040c65a40ec3d951b75
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/09/2018
+ms.lasthandoff: 04/07/2018
 ---
 # <a name="new-and-recently-updated-sample-for-sql-server"></a>Nuevos y actualizados recientemente: ejemplo de SQL Server
 
@@ -28,7 +28,7 @@ Actualizaciones recientes se notifican para el siguiente intervalo de fechas y e
 
 
 
-- *Intervalo de fechas de las actualizaciones:* &nbsp; **2017-12-03** &nbsp; - a - &nbsp; **2018-02-03**
+- *Intervalo de fechas de las actualizaciones:* &nbsp; del **03-12-2017** &nbsp; al &nbsp; **03-02-2018**
 - *Área de asunto:* &nbsp; **ejemplo para SQL Server**.
 
 
@@ -85,27 +85,27 @@ En esta lista compacta se proporcionan vínculos a todos los artículos actualiz
 En esta sección se enumeran artículos muy similares a los artículos actualizados recientemente en otras áreas temáticas, dentro de nuestro repositorio público de GitHub.com: [MicrosoftDocs/sql-docs](https://github.com/MicrosoftDocs/sql-docs/).
 
 
-#### <a name="subject-areas-that-do-have-new-or-recently-updated-articles"></a>Áreas de asunto que *hacer* se nuevas o recientemente actualizado artículos
+#### <a name="subject-areas-that-do-have-new-or-recently-updated-articles"></a>Áreas temáticas *con* artículos nuevos o actualizados recientemente
 
 
-- [Nuevos y actualizados (1 + 3):&nbsp; **Advanced Analytics para SQL** documentos](../advanced-analytics/new-updated-advanced-analytics.md)
-- [Nuevos y actualizados (0 + 1):&nbsp; **Analytics Platform System para SQL** documentos](../analytics-platform-system/new-updated-analytics-platform-system.md)
-- [Nuevos y actualizados (0 + 1):&nbsp; **conectar con SQL Server** documentos](../connect/new-updated-connect.md)
-- [Nuevos y actualizados (0 + 1):&nbsp; **motor de base de datos de SQL** documentos](../database-engine/new-updated-database-engine.md)
-- [Nuevos y actualizados (12 + 1): **Integration Services para SQL** documentos](../integration-services/new-updated-integration-services.md)
-- [Nuevos y actualizados (6 + 2):&nbsp; **Linux para SQL** documentos](../linux/new-updated-linux.md)
-- [Nuevos y actualizados (15 + 0): **PowerShell para SQL** documentos](../powershell/new-updated-powershell.md)
-- [Nuevos y actualizados (2 + 9):&nbsp; **bases de datos relacionales de SQL** documentos](../relational-databases/new-updated-relational-databases.md)
-- [Nuevos y actualizados (1 + 0):&nbsp; **Reporting Services para SQL** documentos](../reporting-services/new-updated-reporting-services.md)
-- [Nuevos y actualizados (1 + 1):&nbsp; **Studio de operaciones SQL** documentos](../sql-operations-studio/new-updated-sql-operations-studio.md)
-- [Nuevos y actualizados (1 + 1):&nbsp; **Microsoft SQL Server** documentos](../sql-server/new-updated-sql-server.md)
-- [Nuevos y actualizados (0 + 1):&nbsp; **SQL Server Data Tools (SSDT)** documentos](../ssdt/new-updated-ssdt.md)
-- [Nuevos y actualizados (1 + 2):&nbsp; **SQL Server Management Studio (SSMS)** documentos](../ssms/new-updated-ssms.md)
-- [Nuevos y actualizados (0 + 2):&nbsp; **Transact-SQL** documentos](../t-sql/new-updated-t-sql.md)
+- [Nuevos + actualizados (1+3): &nbsp;documentos de **Análisis avanzado para SQL**](../advanced-analytics/new-updated-advanced-analytics.md)
+- [Nuevos + actualizados (0+1): &nbsp;documentos de **Analytics Platform System para SQL**](../analytics-platform-system/new-updated-analytics-platform-system.md)
+- [Nuevos + actualizados (0+1): &nbsp;documentos de **Conexión a SQL**](../connect/new-updated-connect.md)
+- [Nuevos + actualizados (0+1): &nbsp;documentos del **Motor de base de datos de SQL**](../database-engine/new-updated-database-engine.md)
+- [Nuevos + actualizados (12+1): **documentos de** Integration Services para SQL](../integration-services/new-updated-integration-services.md)
+- [Nuevos + actualizados (6+2): &nbsp;documentos de **Linux para SQL**](../linux/new-updated-linux.md)
+- [Nuevos + actualizados (15+0): **documentos de** PowerShell para SQL](../powershell/new-updated-powershell.md)
+- [Nuevos + actualizados (2+9): &nbsp;documentos de **Bases de datos relacionales para SQL**](../relational-databases/new-updated-relational-databases.md)
+- [Nuevos + actualizados (1+0): &nbsp;documentos de **Reporting Services para SQL**](../reporting-services/new-updated-reporting-services.md)
+- [Nuevos + actualizados (1+1): &nbsp;documentos de **SQL Operations Studio**](../sql-operations-studio/new-updated-sql-operations-studio.md)
+- [Nuevos + actualizados (1+1): &nbsp;documentos de **Microsoft SQL Server**](../sql-server/new-updated-sql-server.md)
+- [Nuevos + actualizados (0+1): &nbsp;documentos de **SQL Server Data Tools (SSDT)**](../ssdt/new-updated-ssdt.md)
+- [Nuevos + actualizados (1+2): &nbsp;documentos de **SQL Server Management Studio (SSMS)**](../ssms/new-updated-ssms.md)
+- [Nuevos + actualizados (0+2): &nbsp;documentos de **Transact-SQL**](../t-sql/new-updated-t-sql.md)
 
 
 
-#### <a name="subject-areas-that-do-not-have-any-new-or-recently-updated-articles"></a>Asunto áreas que realizan *no* cualquier nuevo o recientemente actualizaron artículos
+#### <a name="subject-areas-that-do-not-have-any-new-or-recently-updated-articles"></a>Áreas temáticas que *no* tienen artículos nuevos o actualizados recientemente
 
 
 - [Nuevos + Actualizados (0+0): documentos de **Data Migration Assistant (DMA) para SQL**](../dma/new-updated-dma.md)

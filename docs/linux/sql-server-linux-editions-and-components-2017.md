@@ -1,17 +1,15 @@
 ---
-title: "Ediciones y las características admitidas de SQL Server 2017 ~ Linux | Documentos de Microsoft"
+title: Ediciones y las características admitidas de SQL Server 2017 ~ Linux | Documentos de Microsoft
 ms.custom: sql-linux
 ms.date: 09/14/2017
 ms.prod: sql-non-specified
 ms.prod_service: database-engine
-ms.service: 
-ms.component: 
-ms.reviewer: 
+ms.service: ''
+ms.component: ''
+ms.reviewer: ''
 ms.suite: sql
-ms.technology:
-- sql-linux
-- server-general
-ms.tgt_pltfrm: 
+ms.technology: sql-linux
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - Enterprise Edition [SQL Server]
@@ -30,16 +28,16 @@ helpviewer_keywords:
 - installing SQL Server, editions
 - editions [SQL Server], about edition options
 - Setup [SQL Server]
-ms.assetid: 
-caps.latest.revision: 
+ms.assetid: ''
+caps.latest.revision: 121
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: cd937ab176ef7c33f6ffa99090ac36b69182968c
-ms.sourcegitcommit: f02598eb8665a9c2dc01991c36f27943701fdd2d
+ms.openlocfilehash: da867b1125d4ee444a0e04e34d729484bee43514
+ms.sourcegitcommit: 094c46e7fa6de44735ed0040c65a40ec3d951b75
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/13/2018
+ms.lasthandoff: 04/06/2018
 ---
 # <a name="editions-and-supported-features-of-sql-server-2017-on-linux"></a>Ediciones y las características admitidas de SQL Server 2017 en Linux
 
@@ -62,11 +60,11 @@ Para obtener una lista de características de SQL Server no está disponibles en
 ## <a name="includessnoversionincludesssnoversion-mdmd-editions"></a>Ediciones de [!INCLUDE[ssNoVersion](../includes/ssNoVersion-md.md)]  
  En la siguiente tabla se describen las ediciones de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]. 
   
-|[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] edición|Definición|  
+|Edición de[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] |Definición|  
 |---------------------------------------|----------------|  
 |Enterprise|La mejor oferta, [!INCLUDE[ssNoVersion](../includes/ssNoVersion-md.md)] Enterprise edition proporciona capacidades de centro de datos de tecnología avanzada completas con un rendimiento ultrarápido habilitar altos niveles de servicio para las cargas de trabajo críticas.|  
 |Standard|[!INCLUDE[ssNoVersion](../includes/ssNoVersion-md.md)] Standard edition ofrece administración de datos básicos para departamentos y pequeñas organizaciones ejecuten sus aplicaciones y es compatible con herramientas de desarrollo comunes para local y la nube: permitir una administración eficaz de la base de datos con recursos de TI mínimos.|  
-|Web|[!INCLUDE[ssNoVersion](../includes/ssNoVersion-md.md)] Web Edition es una opción con un costo total de propiedad bajo para los hosts de web y los VAP de web que proporciona capacidades asequibles de administración y escalabilidad para propiedades web, tanto a pequeña como a gran escala.|  
+|Web|[!INCLUDE[ssNoVersion](../includes/ssNoVersion-md.md)] Web Edition es una opción con un costo total de propiedad bajo para los hosts de Web y los VAP de Web que proporciona capacidades asequibles de administración y escalabilidad para propiedades web, tanto de pequeña como de gran escala.|  
 |Desarrollador|[!INCLUDE[ssNoVersion](../includes/ssNoVersion-md.md)] Developer Edition permite a los desarrolladores compilar cualquier tipo de aplicación en [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]. Incluye toda la funcionalidad de la edición Enterprise, pero tiene licencias para usarse como sistema de prueba y desarrollo, no como un servidor de producción. [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Developer es una opción ideal para las personas que compilan y prueban aplicaciones.|  
 |Express edition|Express Edition es una base de datos gratuita para principiantes y es ideal para aprender a compilar pequeñas aplicaciones de servidor y de escritorio orientadas a datos. Es la mejor opción para los fabricantes de software independientes, los desarrolladores y los aficionados que compilan aplicaciones cliente. Si necesita características de base de datos más avanzadas, [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Express se puede actualizar sin problemas a otras versiones superiores de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)].|  
   
@@ -93,9 +91,9 @@ La edición Developer sigue siendo compatible con solo un cliente de [SQL Server
 |-------------|----------------|--------------|---------|------------------------|
 |Capacidad máxima de cálculo que usa una sola instancia: [!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)]<sup>1</sup>|Sistema operativo máximo|Limitada a menos de 4 sockets o 24 núcleos|Limitada a menos de 4 sockets o 16 núcleos|Limitada a menos de 1 socket o 4 núcleos| 
 |Capacidad máxima de cálculo que usa una sola instancia: [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] o [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)]|Sistema operativo máximo|Limitada a menos de 4 sockets o 24 núcleos|Limitada a menos de 4 sockets o 16 núcleos|Limitada a menos de 1 socket o 4 núcleos|
-|Cantidad máxima de memoria para el grupo de búferes por cada instancia de [!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)]|Sistema operativo máximo|128 GB|64 GB|1410 MB|
-|Cantidad máxima de memoria de caché de segmento de almacén de columnas por cada instancia de [!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)]|Memoria ilimitada| 32 GB| 16 GB| 352 MB|  
-|Tamaño máximo de los datos con optimización para memoria por base de datos en [!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)]|Memoria ilimitada| 32 GB| 16 GB| 352 MB|
+|Memoria máxima para el grupo de búferes por cada instancia de [!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)]|Sistema operativo máximo|128 GB|64 GB|1410 MB|
+|Cantidad máxima de memoria para la caché de segmento del almacén de columnas por cada instancia de [!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)]|Memoria ilimitada| 32 GB| 16 GB| 352 MB|  
+|Tamaño máximo de datos optimizados para memoria por base de datos en [!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)]|Memoria ilimitada| 32 GB| 16 GB| 352 MB|
 |Tamaño máximo de la base de datos relacional|524 PB|524 PB|524 PB|10 GB|  
   
 <sup>1</sup> Enterprise edition con el servidor y cliente acceso licencia (CAL) en función de licencias (no disponible para nuevos contratos) está limitada a un máximo de 20 núcleos por instancia de SQL Server. No hay ningún límite en el modelo de licencias de servidor basado en núcleos. Para obtener más información, consulte [límites de capacidad de cálculo de cada edición de SQL Server](../sql-server/compute-capacity-limits-by-edition-of-sql-server.md).  

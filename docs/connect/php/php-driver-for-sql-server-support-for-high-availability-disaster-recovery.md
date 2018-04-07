@@ -1,7 +1,7 @@
 ---
 title: Compatibilidad con alta disponibilidad, recuperación ante desastres para los controladores de Microsoft para PHP para SQL Server | Documentos de Microsoft
 ms.custom: ''
-ms.date: 03/26/2018
+ms.date: 04/04/2018
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: ''
@@ -13,16 +13,16 @@ ms.technology:
 ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: 73a80821-d345-4fea-b076-f4aabeb4af3e
-caps.latest.revision: ''
+caps.latest.revision: 15
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: ee0be974c5998d531e20ed64c871ca85892aa46f
-ms.sourcegitcommit: 2e130e9f3ce8a7ffe373d7fba8b09e937c216386
+ms.openlocfilehash: 6cb7f145f14861720d11401a3d60db0ce0efcfd9
+ms.sourcegitcommit: 094c46e7fa6de44735ed0040c65a40ec3d951b75
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/28/2018
+ms.lasthandoff: 04/06/2018
 ---
 # <a name="support-for-high-availability-disaster-recovery"></a>Compatibilidad con recuperación ante desastres de alta disponibilidad
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]
@@ -73,29 +73,11 @@ Se producirá un error de conexión si las palabras clave de conexión **MultiSu
 Si actualiza un [!INCLUDE[ssDriverPHP](../../includes/ssdriverphp_md.md)] aplicación que emplea actualmente creación de reflejo de base de datos a un escenario de múltiples subredes, debe quitar la **Failover_Partner** propiedad de conexión y reemplazarla con **MultiSubnetFailover**  establecido en **Sí** y reemplace el nombre del servidor en la cadena de conexión con un agente de escucha del grupo de disponibilidad. Si usa una cadena de conexión **Failover_Partner** y **MultiSubnetFailover = true**, el controlador generará un error. Sin embargo, si usa una cadena de conexión **Failover_Partner** y **MultiSubnetFailover = false** (o **ApplicationIntent = ReadWrite**), la aplicación utilizará la base de datos creación de reflejo.  
   
 El controlador devolverá un error si la creación de reflejo de base de datos se utiliza en la base de datos principal en el AG y si **MultiSubnetFailover = true** se utiliza en la cadena de conexión que se conecta a una base de datos principal en lugar de un grupo de disponibilidad agente de escucha.  
-  
-## <a name="specifying-application-intent"></a>Especificar el intento de la aplicación  
-Cuando **ApplicationIntent=ReadOnly**, el cliente solicita una carga de trabajo de lectura al conectarse a una base de datos habilitada para AlwaysOn. El servidor aplicará el intento en el momento de la conexión y durante una instrucción de base de datos USE pero solo en una base de datos con habilitada para AlwaysOn.  
-  
-La palabra clave **ApplicationIntent** no funciona con bases de datos de solo lectura heredadas.  
-  
-Una base de datos puede permitir o denegar la lectura de las cargas de trabajo en la base de datos de destino AlwaysOn. (Use la cláusula **ALLOW_CONNECTIONS** de las instrucciones **PRIMARY_ROLE** y **SECONDARY_ROLE**[!INCLUDE[tsql](../../includes/tsql_md.md)]).  
-  
-La palabra clave **ApplicationIntent** se usa para habilitar el enrutamiento de solo lectura.  
-  
-## <a name="read-only-routing"></a>Enrutamiento de solo lectura  
-El enrutamiento de solo lectura es una característica que puede asegurar la disponibilidad de una réplica de solo lectura de una base de datos. Para habilitar el enrutamiento de solo lectura:  
-  
-1.  Debe conectarse siempre a un agente de escucha de grupo de disponibilidad Always On.  
-  
-2.  La palabra clave de cadena de conexión de **ApplicationIntent** debe establecerse en **ReadOnly**.  
-  
-3.  El administrador de bases de datos debe configurar el grupo de disponibilidad para habilitar el enrutamiento de solo lectura.  
-  
-Es posible que varias conexiones con enrutamiento de solo lectura no se conecten todas a la misma réplica de solo lectura. Los cambios en la sincronización de la base de datos o los cambios en la configuración de enrutamiento del servidor pueden producir conexiones de cliente para réplicas de solo lectura diferentes. Para asegurarse de que todas las solicitudes de solo lectura se conectan a la misma réplica de solo lectura, no pase un agente de escucha de grupo de disponibilidad a la palabra clave de cadena de conexión **Server**. En su lugar, especifique el nombre de la instancia de solo lectura.  
-  
-El enrutamiento de solo lectura puede tardar más tiempo que la conexión a la réplica principal, ya que primero se conecta a la réplica principal y después busca la mejor réplica secundaria legible disponible. En este caso, se debe aumentar el tiempo de espera de inicio de sesión.  
-  
+
+
+[!INCLUDE[specify-application-intent_read-only-routing](~/includes/paragraph-content/specify-application-intent-read-only-routing.md)]
+
+
 ## <a name="see-also"></a>Vea también  
 [Conexión al servidor](../../connect/php/connecting-to-the-server.md)  
   

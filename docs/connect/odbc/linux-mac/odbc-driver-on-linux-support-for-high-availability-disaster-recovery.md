@@ -1,27 +1,28 @@
 ---
-title: "Controlador ODBC en Linux y macOS - alta disponibilidad y recuperación ante desastres | Documentos de Microsoft"
-ms.custom: 
-ms.date: 01/19/2017
+title: Controlador ODBC en Linux y macOS - alta disponibilidad y recuperación ante desastres | Documentos de Microsoft
+ms.custom: ''
+ms.date: 04/04/2018
 ms.prod: sql-non-specified
 ms.prod_service: drivers
-ms.service: 
+ms.service: ''
 ms.component: odbc
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: drivers
-ms.tgt_pltfrm: 
+ms.technology:
+- drivers
+ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: fa656c5b-a935-40bf-bc20-e517ca5cd0ba
-caps.latest.revision: "16"
+caps.latest.revision: 16
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 53553cc88d771aeb7ef7d537309583fb49e1aaa6
-ms.sourcegitcommit: 2713f8e7b504101f9298a0706bacd84bf2eaa174
+ms.openlocfilehash: e69df64ad4e5c5e5319719fe14f380c745b0aeba
+ms.sourcegitcommit: 094c46e7fa6de44735ed0040c65a40ec3d951b75
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/18/2017
+ms.lasthandoff: 04/06/2018
 ---
 # <a name="odbc-driver-on-linux-and-macos-support-for-high-availability-and-disaster-recovery"></a>Controlador ODBC en Linux y macOS compatibilidad con alta disponibilidad y recuperación ante desastres
 [!INCLUDE[Driver_ODBC_Download](../../../includes/driver_odbc_download.md)]
@@ -74,34 +75,16 @@ Si no está activado el enrutamiento de solo lectura, no se podrá conectar a un
 2.  Si una aplicación utiliza **ApplicationIntent=ReadWrite** y la ubicación de réplica secundaria está configurada para acceso de solo lectura.  
   
 Una conexión producirá un error si una réplica principal está configurada para rechazar cargas de trabajo de solo lectura y la cadena de conexión contiene **ApplicationIntent=ReadOnly**.  
-  
-## <a name="specifying-application-intent"></a>Especificar el intento de la aplicación  
-Cuando **ApplicationIntent=ReadOnly**, el cliente solicita una carga de trabajo de lectura al conectarse a una base de datos habilitada para AlwaysOn. El servidor aplicará la intención en tiempo de conexión y durante una instrucción de base de datos USE pero solo en una base de datos de AlwaysOn habilitado.
 
-La palabra clave **ApplicationIntent** no funciona con bases de datos de solo lectura heredadas.  
 
-Una base de datos puede permitir o denegar la lectura de las cargas de trabajo en la base de datos de destino AlwaysOn. (Use el **ALLOW_CONNECTIONS** cláusula de la **PRIMARY_ROLE** y **SECONDARY_ROLE** [!INCLUDE[tsql](../../../includes/tsql_md.md)] instrucciones.)  
-  
-La palabra clave **ApplicationIntent** se utiliza para habilitar el enrutamiento de solo lectura.  
-  
-## <a name="read-only-routing"></a>Enrutamiento de solo lectura  
-El enrutamiento de solo lectura es una característica que puede asegurar la disponibilidad de una réplica de solo lectura de una base de datos. Para habilitar el enrutamiento de solo lectura:  
-  
-1.  Debe conectarse siempre a una escucha de grupo de disponibilidad Always On.  
-  
-2.  La palabra clave de cadena de conexión de **ApplicationIntent** debe establecerse en **ReadOnly**.  
-  
-3.  El administrador de bases de datos debe configurar el grupo de disponibilidad para habilitar el enrutamiento de solo lectura.  
-  
-Es posible que varias conexiones que usan el enrutamiento de solo lectura se conecten a distintas réplicas de solo lectura. Los cambios en la sincronización de la base de datos o los cambios en la configuración de enrutamiento del servidor pueden producir conexiones de cliente para réplicas de solo lectura diferentes. Para asegurarse de que todas las solicitudes de solo lectura se conectan a la misma réplica de solo lectura, no pase una escucha de grupo de disponibilidad a la palabra clave de cadena de conexión **Server** . En su lugar, especifique el nombre de la instancia de solo lectura.  
-  
-Los tiempos de conexión con el enrutamiento de solo lectura son superiores a cuando se conecta con la instancia principal. Por lo tanto, aumente el tiempo de espera de inicio de sesión. El enrutamiento de solo lectura se conecta primero a la principal y, luego, busca la mejor instancia secundaria legible que esté disponible.  
-  
+[!INCLUDE[specify-application-intent_read-only-routing](~/includes/paragraph-content/specify-application-intent-read-only-routing.md)]
+
+
 ## <a name="odbc-syntax"></a>Sintaxis de ODBC
 
 Dos palabras clave de cadena de conexión ODBC admiten [!INCLUDE[ssHADR](../../../includes/sshadr_md.md)]:  
   
--   **Intención de aplicaciones**  
+-   **ApplicationIntent**  
   
 -   **MultiSubnetFailover**  
   

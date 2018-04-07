@@ -10,7 +10,7 @@ ms.component: oledb|applications
 ms.reviewer: ''
 ms.suite: sql
 ms.technology:
-- docset-sql-devref
+- drivers
 ms.tgt_pltfrm: ''
 ms.topic: reference
 helpviewer_keywords:
@@ -19,11 +19,11 @@ author: pmasl
 ms.author: Pedro.Lopes
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 6ddeedf937de12337e8882bfa132461dd2c5f7a8
-ms.sourcegitcommit: 9f4330a4b067deea396b8567747a6771f35e6eee
+ms.openlocfilehash: e583abd0a5d84d4842a441fcb8093bbfcf6b9b26
+ms.sourcegitcommit: 9351e8b7b68f599a95fb8e76930ab886db737e5f
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/30/2018
+ms.lasthandoff: 04/06/2018
 ---
 # <a name="updating-an-application-from-sql-server-2005-native-client"></a>Actualizar una aplicación desde SQL Server 2005 Native Client
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -52,4 +52,4 @@ ms.lasthandoff: 03/30/2018
 |[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] puede devolver resultados diferentes cuando se ejecuta un desencadenador.|Cambios realizados en [!INCLUDE[ssKatmai](../../../includes/sskatmai-md.md)] pueden hacer que una aplicación para que devuelva resultados diferentes de una instrucción que ha causado un desencadenador que se ejecuta cuando **NOCOUNT OFF** estaba activo. En esta situación, es posible que la aplicación genere un error. Para resolver este error, establezca **NOCOUNT ON** en la llamada SQLMoreResults para avanzar al siguiente de resultados o el desencadenador.|  
 
 ## <a name="see-also"></a>Vea también   
- [Controlador OLE DB para la programación de SQL Server](../../oledb/oledb-driver-for-sql-server-programming.md)
+ [Programación del controlador OLE DB para SQL Server](../../oledb/oledb-driver-for-sql-server-programming.md)

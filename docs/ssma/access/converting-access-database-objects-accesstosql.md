@@ -2,14 +2,15 @@
 title: Convertir objetos de base de datos de Access (AccessToSQL) | Documentos de Microsoft
 ms.prod: sql-non-specified
 ms.prod_service: sql-tools
-ms.service: 
+ms.service: ''
 ms.component: ssma-access
-ms.custom: 
+ms.custom: ''
 ms.date: 01/19/2017
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: sql-ssma
-ms.tgt_pltfrm: 
+ms.technology:
+- sql-ssma
+ms.tgt_pltfrm: ''
 ms.topic: article
 applies_to:
 - Azure SQL Database
@@ -35,16 +36,16 @@ helpviewer_keywords:
 - translating Access to SQL Azure
 - translating Access to SQL Server
 ms.assetid: e0ef67bf-80a6-4e6c-a82d-5d46e0623c6c
-caps.latest.revision: "22"
+caps.latest.revision: 22
 author: Shamikg
 ms.author: Shamikg
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: a710d76b5df020e258676e0b1ff160c0e2e7a353
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: c05d0dd92d0802260f59f86fef13e617f6eea899
+ms.sourcegitcommit: 9351e8b7b68f599a95fb8e76930ab886db737e5f
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 04/06/2018
 ---
 # <a name="converting-access-database-objects-accesstosql"></a>Convertir objetos de base de datos de Access (AccessToSQL)
 Después de haber agregado las bases de datos de Access y conectado a [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] o SQL Azure, SSMA muestra los metadatos para el acceso y [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] u objetos de base de datos de SQL Azure. Puede seleccionar ahora los objetos de base de datos de Access y, a continuación, convertir los esquemas a [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] o esquemas de SQL Azure.  
@@ -72,7 +73,7 @@ La siguiente tabla muestra qué objetos de acceso se convierten y resultante [!I
 |Query|ver<br /><br />Consultas más SELECT se convierten en vistas. Otras consultas, como las consultas de actualización, no se migran.<br /><br />Consultas SELECT que toman parámetros no se convierten, ni tampoco las consultas de tablas de referencias cruzadas.|  
 |informe|no se pudo convertir|  
 |formulario|no se pudo convertir|  
-|(Macro)|no se pudo convertir|  
+|macro|no se pudo convertir|  
 |Módulo|no se pudo convertir|  
 |Valor predeterminado|Valor predeterminado|  
 |Permitir cero propiedad de columna de longitud|restricción CHECK|  

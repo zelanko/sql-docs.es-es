@@ -1,26 +1,26 @@
 ---
-title: "Importar el módulo de administración de SCOM para PDW (Analytics Platform System)"
+title: Importar el módulo de administración de SCOM para PDW (Analytics Platform System)
 author: barbkess
 ms.author: barbkess
-manager: jhubbard
+manager: craigg
 ms.prod: analytics-platform-system
 ms.prod_service: mpp-data-warehouse
-ms.service: 
-ms.component: 
+ms.service: ''
+ms.component: ''
 ms.technology: mpp-data-warehouse
-ms.custom: 
+ms.custom: ''
 ms.date: 01/05/2017
 ms.reviewer: na
 ms.suite: sql
 ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: fa735041-8e58-4886-ae3b-36f3c6298b12
-caps.latest.revision: "6"
-ms.openlocfilehash: 179395b7befdf934fcc44532944f4b535b9d3c5a
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+caps.latest.revision: 6
+ms.openlocfilehash: d8accd7106cce2274e60793e123779e87b8dfd49
+ms.sourcegitcommit: 9351e8b7b68f599a95fb8e76930ab886db737e5f
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 04/06/2018
 ---
 # <a name="import-the-scom-management-pack-for-pdw"></a>Importar el módulo de administración de SCOM para PDW
 Siga estos pasos para importar los módulos de administración de System Center Operations Manager (SCOM) para SQL Server PDW. Los módulos de administración necesarias para supervisar SQL Server PDW de SCOM.  
@@ -30,7 +30,7 @@ Siga estos pasos para importar los módulos de administración de System Center 
   
 System Center Operations Manager 2007 R2 debe estar instalado y ejecutándose.  
   
-Los módulos de administración deben estar instalados. Vea [instalar los módulos de administración de SCOM &#40; Sistema de la plataforma de análisis &#41; ](install-the-scom-management-packs.md).  
+Los módulos de administración deben estar instalados. Vea [instalar los módulos de administración de SCOM &#40;Analytics Platform System&#41;](install-the-scom-management-packs.md).  
   
 ## <a name="Step1"></a>Paso 1: Importar el módulo de administración de la Base de aplicación de SQL Server  
   
@@ -83,7 +83,7 @@ Los módulos de administración deben estar instalados. Vea [instalar los módul
     ![Haga clic en Cerrar](./media/import-the-scom-management-pack-for-pdw/SCOM_PDW4.png "SCOM_PDW4")  
   
 ## <a name="next-step"></a>Paso siguiente  
-Ahora que ha importado los módulos de administración, vaya al paso siguiente: [configurar SCOM para supervisar Analytics Platform System &#40; Sistema de la plataforma de análisis &#41; ](configure-scom-to-monitor-analytics-platform-system.md).  
+Ahora que ha importado los módulos de administración, vaya al paso siguiente: [configurar SCOM para supervisar Analytics Platform System &#40;Analytics Platform System&#41;](configure-scom-to-monitor-analytics-platform-system.md).  
   
 <!-- MISSING LINKS ## See Also  
 [Common Metadata Query Examples &#40;SQL Server PDW&#41;](../sqlpdw/common-metadata-query-examples-sql-server-pdw.md)  -->  

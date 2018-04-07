@@ -2,30 +2,30 @@
 title: Certificado PDW aprovisionamiento (Analytics Platform System)
 author: barbkess
 ms.author: barbkess
-manager: jhubbard
+manager: craigg
 ms.prod: analytics-platform-system
 ms.prod_service: mpp-data-warehouse
-ms.service: 
-ms.component: 
+ms.service: ''
+ms.component: ''
 ms.technology: mpp-data-warehouse
-ms.custom: 
+ms.custom: ''
 ms.date: 01/05/2017
 ms.reviewer: na
 ms.suite: sql
 ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: 0a423b7d-c6ea-45c1-80b0-26758170594c
-caps.latest.revision: "22"
-ms.openlocfilehash: 9abee9638492368fe407f98a81beea2a48148971
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+caps.latest.revision: 22
+ms.openlocfilehash: a08a739c490f0cbd49f615441f557d5200107443
+ms.sourcegitcommit: 9351e8b7b68f599a95fb8e76930ab886db737e5f
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 04/06/2018
 ---
 # <a name="pdw-certificate-provisioning"></a>Suministro de certificados PDW
 El **suministro de certificados de PDW** página de Analytics Platform System**Configuration Manager** importa o quita el certificado utilizado por la región PDW. El uso, un certificado para cifrar las conexiones contribuye a una comunicación segura al nodo de Control a través de los clientes de SQL Server, herramientas que usan los controladores de SQL Server PDW, el [consola de administración de](monitor-the-appliance-by-using-the-admin-console.md), y los servicios de integración de carga.  
   
-## <a name="prerequisites"></a>Prerequisites  
+## <a name="prerequisites"></a>Requisitos previos  
 Antes de instalar el certificado, realice lo siguiente:  
   
 1.  Obtener un certificado seguro. Si necesita obtener más información acerca de cómo obtener un certificado seguro, póngase en contacto con Microsoft Support.  
@@ -51,7 +51,7 @@ Las instrucciones siguientes muestran cómo importar o quitar el certificado del
   
 ### <a name="to-import-the-certificate"></a>Para importar el certificado  
   
-1.  Iniciar el **de Configuration Manager**. Para obtener más información, vea [iniciar el Administrador de configuración &#40; Sistema de la plataforma de análisis &#41; ](launch-the-configuration-manager.md).  
+1.  Iniciar el **de Configuration Manager**. Para obtener más información, consulte [iniciar el Administrador de configuración &#40;Analytics Platform System&#41;](launch-the-configuration-manager.md).  
   
 2.  En el panel izquierdo de la **Configuration Manager**, expanda **topología de almacenamiento de datos paralelos**y, a continuación, haga clic en **certificados**.  
   
@@ -65,7 +65,7 @@ PDW de SQL Server no cifrará la conexión actual utilizando el certificado impo
   
 ### <a name="to-remove-the-previously-imported-certificate"></a>Para quitar el certificado importado previamente  
   
-1.  Iniciar el **de Configuration Manager**. Para obtener más información, vea [iniciar el Administrador de configuración &#40; Sistema de la plataforma de análisis &#41; ](launch-the-configuration-manager.md).  
+1.  Iniciar el **de Configuration Manager**. Para obtener más información, consulte [iniciar el Administrador de configuración &#40;Analytics Platform System&#41;](launch-the-configuration-manager.md).  
   
 2.  En el panel izquierdo de la **Configuration Manager**, expanda **topología de almacenamiento de datos paralelos**y, a continuación, haga clic en **certificados**.  
   
@@ -78,6 +78,6 @@ SQL Server PDW continuará cifrar las conexiones actuales, pero no usará el cer
 ![Certificado PDW del dispositivo DWConfig](./media/pdw-certificate-provisioning/SQL_Server_PDW_DWConfig_ApplPDWCert.png "SQL_Server_PDW_DWConfig_ApplPDWCert")  
   
 ## <a name="see-also"></a>Vea también  
-[Inicie el Administrador de configuración &#40; Sistema de la plataforma de análisis &#41;](launch-the-configuration-manager.md)  
+[Inicie el Administrador de configuración &#40;sistema de la plataforma de análisis&#41;](launch-the-configuration-manager.md)  
 <!-- MISSING LINKS [HDInsight Certificate Provisioning &#40;Analytics Platform System&#41;](hdinsight-certificate-provisioning.md)  -->  
   

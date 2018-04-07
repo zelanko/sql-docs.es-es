@@ -2,24 +2,24 @@
 title: Adquirir y configurar un servidor de copia de seguridad para PDW de APS
 author: barbkess
 ms.author: barbkess
-manager: jhubbard
+manager: craigg
 ms.prod: analytics-platform-system
 ms.prod_service: mpp-data-warehouse
-ms.service: 
-ms.component: 
+ms.service: ''
+ms.component: ''
 ms.suite: sql
-ms.custom: 
+ms.custom: ''
 ms.technology: mpp-data-warehouse
-description: "Configurar un sistema de Windows no sea de dispositivo como un servidor de reserva para su uso con la copia de seguridad y restaurar las características en Analytics Platform System (APS) y almacenamiento de datos paralelos (PDW) de SQL Server."
+description: Configurar un sistema de Windows no sea de dispositivo como un servidor de reserva para su uso con la copia de seguridad y restaurar las características en Analytics Platform System (APS) y almacenamiento de datos paralelos (PDW) de SQL Server.
 ms.date: 10/20/2016
 ms.topic: article
-caps.latest.revision: "20"
+caps.latest.revision: 20
 ms.assetid: f8b769fe-c864-4d65-abcb-a9a287061702
-ms.openlocfilehash: 760537abd7e3227cc2245c429d0a0c13f7609f8b
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: 564a70d5fa483f2c34ef2598213a2c22074daf80
+ms.sourcegitcommit: 9351e8b7b68f599a95fb8e76930ab886db737e5f
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 04/06/2018
 ---
 # <a name="acquire-and-configure-a-backup-server"></a>Adquirir y configurar un servidor de copia de seguridad
 En este tema se describe cómo configurar un sistema de Windows no sea de dispositivo como un servidor de copia de seguridad para su uso con las características de copia de seguridad y restauración de Analytics Platform System (APS) y almacenamiento de datos paralelos (PDW) de SQL Server.  
@@ -136,12 +136,12 @@ Puesto que las copias de seguridad PDW no están almacenados en el dispositivo, 
   
 ### <a name="manage-network-credentials"></a>Administrar credenciales de red  
   
-Acceso de red al directorio de copia de seguridad se basa en el uso compartido seguridad de archivos de Windows estándar. Antes de realizar una copia de seguridad, debe crear o designar una cuenta de Windows que se utilizará para la autenticación PDW en el directorio de copia de seguridad. Esta cuenta de windows debe tener permiso para tener acceso, crear y escribir en el directorio de copia de seguridad.  
+El acceso de red al directorio de copia de seguridad se basa en la seguridad del uso compartido de archivos de Windows estándar. Antes de realizar una copia de seguridad, debe crear o designar una cuenta de Windows que se utilizará para la autenticación PDW en el directorio de copia de seguridad. Esta cuenta de Windows debe tener permiso para obtener acceso, crear y escribir en el directorio de copia de seguridad.  
   
 > [!IMPORTANT]  
-> Para reducir los riesgos de seguridad con los datos, se recomienda que designa una cuenta de Windows solamente con el fin de realizar la copia de seguridad y las operaciones de restauración. Permitir que esta cuenta tenga permisos para la ubicación de copia de seguridad y ningún otro lugar.  
+> Para reducir los riesgos de seguridad con los datos, se recomienda designar una cuenta de Windows exclusivamente para realizar las operaciones de copia de seguridad y restauración. Permita que esta cuenta tenga permisos para la ubicación de la copia de seguridad y ningún otro lugar más.  
   
-Para almacenar el nombre de usuario y la contraseña en PDW, use la [sp_pdw_add_network_credentials](../relational-databases/system-stored-procedures/sp-pdw-add-network-credentials-sql-data-warehouse.md) procedimiento almacenado. PDW utiliza el Administrador de credenciales de Windows para almacenar y cifrar los nombres de usuario y contraseñas en el nodo de Control y nodos de proceso. Las credenciales no se copiarán con el comando de base de datos de copia de seguridad.  
+Para almacenar el nombre de usuario y la contraseña en PDW, use la [sp_pdw_add_network_credentials](../relational-databases/system-stored-procedures/sp-pdw-add-network-credentials-sql-data-warehouse.md) procedimiento almacenado. PDW utiliza el Administrador de credenciales de Windows para almacenar y cifrar los nombres de usuario y contraseñas en el nodo de Control y nodos de proceso. No se realiza una copia de seguridad de las credenciales con el comando BACKUP DATABASE.  
   
 Para quitar las credenciales de red de PDW, use la [sp_pdw_remove_network_credentials](../relational-databases/system-stored-procedures/sp-pdw-remove-network-credentials-sql-data-warehouse.md) procedimiento almacenado.  
   

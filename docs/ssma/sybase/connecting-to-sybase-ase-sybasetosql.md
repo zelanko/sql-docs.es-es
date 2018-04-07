@@ -21,13 +21,13 @@ ms.assetid: a45a2330-9175-4c9e-af38-ef920e350614
 caps.latest.revision: 8
 author: Shamikg
 ms.author: Shamikg
-manager: jhubbard
+manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: fc01dc51a4c3b50e77a719d9b3bab08def84f879
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: 7ab617555d71bb2067b1c2d2c8e073e74af6e908
+ms.sourcegitcommit: 9351e8b7b68f599a95fb8e76930ab886db737e5f
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 04/06/2018
 ---
 # <a name="connecting-to-sybase-ase-sybasetosql"></a>Conectarse a Sybase ASE (SybaseToSQL)
 Migrar bases de datos de Sybase Adaptive Server Enterprise (ASE) a [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] o SQL Azure, debe conectarse al servidor adaptable que contiene las bases de datos que se van a migrar. Cuando se conecta, SSMA obtiene metadatos acerca de todas las bases de datos en el servidor adaptable y muestra los metadatos de la base de datos en el panel Explorador de metadatos de Sybase. SSMA almacena información sobre el servidor de base de datos, pero no almacena las contraseñas.  
@@ -39,21 +39,21 @@ Metadatos acerca del servidor adaptable no se actualizan automáticamente. En su
 ## <a name="required-ase-permissions"></a>Permisos necesarios ASE  
 La cuenta que se usa para conectarse a ASE debe tener al menos **público** acceso a la base de datos maestra y a las bases de datos de origen para migrarlos a [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] o SQL Azure. Además, para seleccionar los permisos en las tablas que se van a migrar, el usuario debe tener permisos SELECT en las tablas del sistema siguientes:  
   
--   .dbo.sysobjects [source_db]  
+-   [source_db].dbo.sysobjects  
   
--   .dbo.syscolumns [source_db]  
+-   [source_db].dbo.syscolumns  
   
--   .dbo.sysusers [source_db]  
+-   [source_db].dbo.sysusers  
   
--   .dbo.systypes [source_db]  
+-   [source_db].dbo.systypes  
   
--   .dbo.sysconstraints [source_db]  
+-   [source_db].dbo.sysconstraints  
   
--   .dbo.syscomments [source_db]  
+-   [source_db].dbo.syscomments  
   
--   .dbo.sysindexes [source_db]  
+-   [source_db].dbo.sysindexes  
   
--   .dbo.sysreferences [source_db]  
+-   [source_db].dbo.sysreferences  
   
 -   master.dbo.sysdatabases  
   
@@ -107,7 +107,7 @@ Cuando se conecta a un servidor adaptable, SSMA lee los metadatos de la base de 
   
         `Server=sybserver;Port=5000;uid=MyUserID;pwd=MyP@$$word;`  
   
-    Para obtener más información, vea [conectar para Sybase &#40; SybaseToSQL &#41; ](../../ssma/sybase/connect-to-sybase-sybasetosql.md).  
+    Para obtener más información, consulte [conectar para Sybase &#40;SybaseToSQL&#41;](../../ssma/sybase/connect-to-sybase-sybasetosql.md).  
   
 ## <a name="reconnecting-to-sybase-ase"></a>Volver a conectarse para Sybase ASE  
 La conexión con el servidor de base de datos permanece activa hasta que se cierra el proyecto. Cuando vuelva a abrir el proyecto, debe volver a conectarse si desea que una conexión activa con el servidor adaptable. Puede trabajar sin conexión hasta que desee actualizar los metadatos, cargar los objetos de base de datos en [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] o SQL Azure, y migrar los datos.  
@@ -130,5 +130,5 @@ No se actualizan automáticamente los metadatos acerca de las bases de datos de 
 -   El siguiente paso del proceso de migración consiste en [conecta a una instancia de SQL Server](http://msdn.microsoft.com/en-us/dd368a1a-45b0-40e9-b4d3-5cdb48c26606) / [conectarse a una instancia de SQL Azure](http://msdn.microsoft.com/en-us/9e77e4b0-40c0-455c-8431-ca5d43849aa7)  
   
 ## <a name="see-also"></a>Vea también  
-[Migrar bases de datos de ASE de Sybase a SQL Server: base de datos de SQL Azure &#40; SybaseToSQL &#41;](../../ssma/sybase/migrating-sybase-ase-databases-to-sql-server-azure-sql-db-sybasetosql.md)  
+[Migrar bases de datos de Sybase ASE a SQL Server: base de datos de SQL Azure &#40;SybaseToSQL&#41;](../../ssma/sybase/migrating-sybase-ase-databases-to-sql-server-azure-sql-db-sybasetosql.md)  
   

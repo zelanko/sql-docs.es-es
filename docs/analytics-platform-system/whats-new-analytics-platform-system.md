@@ -1,23 +1,23 @@
 ---
-title: "Novedades de Analytics Platform System: un almacén de datos de escalabilidad horizontal"
+title: 'Novedades de Analytics Platform System: un almacén de datos de escalabilidad horizontal'
 author: happynicolle
 ms.author: nicw;barbkess
-manager: jhubbard
+manager: craigg
 ms.prod: analytics-platform-system
 ms.prod_service: mpp-data-warehouse
-ms.service: 
-ms.component: 
+ms.service: ''
+ms.component: ''
 ms.suite: sql
-ms.custom: 
+ms.custom: ''
 ms.technology: mpp-data-warehouse
-description: "Vea cuáles son las novedades en Microsoft® Analytics Platform System, un dispositivo de escalado horizontal local que hospeda el almacenamiento de datos paralelos de MPP de SQL Server."
+description: Vea cuáles son las novedades en Microsoft® Analytics Platform System, un dispositivo de escalado horizontal local que hospeda el almacenamiento de datos paralelos de MPP de SQL Server.
 ms.date: 11/28/2016
 ms.topic: article
-ms.openlocfilehash: eeeb41045527e72856edfb8bdb40becc462bde07
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: c6af71d6b7c2bc67aeea0fdc5c1af2e668f537c5
+ms.sourcegitcommit: 9351e8b7b68f599a95fb8e76930ab886db737e5f
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 04/06/2018
 ---
 # <a name="whats-new-in-analytics-platform-system-2016-a-scale-out-mpp-data-warehouse"></a>Novedades de análisis de plataforma System 2016, un almacén de datos MPP de escalabilidad horizontal
 Vea cuáles son las novedades en Microsoft® Analytics Platform System (APS) 2016, la última actualización de dispositivo para un dispositivo de escalado horizontal local que hospeda el almacenamiento de datos paralelos de MPP de SQL Server. 
@@ -59,7 +59,7 @@ APS 2016 admite estas mejoras de compatibilidad de T-SQL.  Estos elementos adici
 ### <a name="additional-functions"></a>Funciones adicionales
 
 - [NEWID()][]
-- [RAND][]
+- [RAND()][]
 
 ## <a name="polybasehadoop-enhancements"></a>Mejoras de PolyBase/Hadoop
 
@@ -115,7 +115,7 @@ Instalar o actualizar a APS 2016 es más rápido y requiere menos tiempo de inac
 [BINARY_CHECKSUM()]:https://msdn.microsoft.com/library/ms173784.aspx
 [HAS_PERMS_BY_NAME()]:https://msdn.microsoft.com/library/ms189802.aspx
 [NEWID()]:https://msdn.microsoft.com/library/ms190348.aspx
-[RAND]:https://msdn.microsoft.com/library/ms177610.aspx
+[RAND()]:https://msdn.microsoft.com/library/ms177610.aspx
 
 
   

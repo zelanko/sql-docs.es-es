@@ -2,14 +2,15 @@
 title: Convertir, cargar y migrar (AccessToSQL) | Documentos de Microsoft
 ms.prod: sql-non-specified
 ms.prod_service: sql-tools
-ms.service: 
+ms.service: ''
 ms.component: ssma-access
-ms.custom: 
+ms.custom: ''
 ms.date: 01/19/2017
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: sql-ssma
-ms.tgt_pltfrm: 
+ms.technology:
+- sql-ssma
+ms.tgt_pltfrm: ''
 ms.topic: article
 applies_to:
 - Azure SQL Database
@@ -19,16 +20,16 @@ helpviewer_keywords:
 - migrating databases, one-click
 - one-click migration
 ms.assetid: 4ec83e96-88a5-4b7b-8d5a-f3429d9a936b
-caps.latest.revision: "12"
+caps.latest.revision: 12
 author: Shamikg
 ms.author: Shamikg
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 44683ae2b0650a86c04c5a184417f17e5b3acbef
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: 33b560de98751eec68916e5efe648d17262135f9
+ms.sourcegitcommit: 9351e8b7b68f599a95fb8e76930ab886db737e5f
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 04/06/2018
 ---
 # <a name="convert-load-and-migrate-accesstosql"></a>Convertir, cargar y migrar (AccessToSQL)
 El **convertir, cargar y migrar** cuadro de diálogo notifica el estado de la migración cuando se usa el botón de Convert, carga y migrar o el Asistente para migración.  
@@ -37,7 +38,7 @@ Una vez completada la migración, puede ver informativo, advertencia y mensajes 
   
 El **migrar datos para los objetos seleccionados** sección de la página también contiene un **informe** botón. Puede hacer clic en este botón para ver un informe de migración de datos.  
   
-## <a name="options"></a>.  
+## <a name="options"></a>Opciones  
 **Informe**  
 Muestra el informe de conversión o migración asociado.  
   

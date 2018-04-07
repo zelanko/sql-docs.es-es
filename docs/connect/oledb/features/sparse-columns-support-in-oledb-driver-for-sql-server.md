@@ -10,7 +10,7 @@ ms.component: oledb|features
 ms.reviewer: ''
 ms.suite: sql
 ms.technology:
-- docset-sql-devref
+- drivers
 ms.tgt_pltfrm: ''
 ms.topic: reference
 helpviewer_keywords:
@@ -20,11 +20,11 @@ author: pmasl
 ms.author: Pedro.Lopes
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: a501daca74470e7df9e08fc329e956301417b4ca
-ms.sourcegitcommit: 9f4330a4b067deea396b8567747a6771f35e6eee
+ms.openlocfilehash: ffb8b7f18cf9c1653e5c77217f1d1dd339333fcf
+ms.sourcegitcommit: 9351e8b7b68f599a95fb8e76930ab886db737e5f
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/30/2018
+ms.lasthandoff: 04/06/2018
 ---
 # <a name="sparse-columns-support-in-ole-db-driver-for-sql-server"></a>Compatibilidad con columnas dispersas en el controlador OLE DB para SQL Server
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -67,6 +67,6 @@ ms.lasthandoff: 03/30/2018
  Sin embargo, si **queryout** se utiliza para la exportación y hace referencia a las columnas dispersas que son miembros de la columna dispersa establecida por su nombre, no se puede realizar una importación directa en una tabla con estructura similar. Esto es porque BCP utiliza los metadatos de forma coherente con una **seleccione \***  operación para la importación y no se puede hacer coincidir **column_set** columnas de miembros con estos metadatos. Para importar **column_set** las columnas miembro individualmente, debe definir una vista en la tabla que hace referencia a lo que se desea **column_set** columnas y se debe realizar la operación de importación mediante la vista.  
   
 ## <a name="see-also"></a>Vea también  
- [Controlador OLE DB para la programación de SQL Server](../../oledb/oledb-driver-for-sql-server-programming.md)  
+ [Programación del controlador OLE DB para SQL Server](../../oledb/oledb-driver-for-sql-server-programming.md)  
   
   

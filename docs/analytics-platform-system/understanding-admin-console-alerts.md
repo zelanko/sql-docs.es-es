@@ -1,33 +1,33 @@
 ---
-title: "Descripción de las alertas de consola de administración (Analytics Platform System)"
+title: Descripción de las alertas de consola de administración (Analytics Platform System)
 author: barbkess
 ms.author: barbkess
-manager: jhubbard
+manager: craigg
 ms.prod: analytics-platform-system
 ms.prod_service: mpp-data-warehouse
-ms.service: 
-ms.component: 
+ms.service: ''
+ms.component: ''
 ms.technology: mpp-data-warehouse
-ms.custom: 
+ms.custom: ''
 ms.date: 01/05/2017
 ms.reviewer: na
 ms.suite: sql
 ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: 0c4aa221-55c2-44cf-9eaa-3bf7bd55e51a
-caps.latest.revision: "10"
-ms.openlocfilehash: 84d7632df2e16c6939b91d299850ab26d5d93d4f
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+caps.latest.revision: 10
+ms.openlocfilehash: 51e7260a3c1c920d102320bc288167001da43921
+ms.sourcegitcommit: 9351e8b7b68f599a95fb8e76930ab886db737e5f
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 04/06/2018
 ---
 # <a name="understanding-admin-console-alerts"></a>Descripción de las alertas de la consola de administración
 Las alertas aparecen en el dispositivo **consola de administración de** y en **System Center Operations Manager** (SCOM). Use esta lista de alertas para ayudar a identificar las alertas que requieren una investigación adicional.  
   
-Para obtener información sobre cómo conectarse a la **consola de administración de** mediante Internet Explorer, consulte [supervisar el dispositivo mediante la consola de administración &#40; Sistema de la plataforma de análisis &#41; ](monitor-the-appliance-by-using-the-admin-console.md). Para obtener información acerca de **SCOM**, consulte [supervisar el dispositivo mediante el uso de System Center Operations Manager &#40; Sistema de la plataforma de análisis &#41;](monitor-the-appliance-by-using-system-center-operations-manager.md)  
+Para obtener información sobre cómo conectarse a la **consola de administración de** mediante Internet Explorer, consulte [supervisar el dispositivo mediante la consola de administración &#40;Analytics Platform System&#41;](monitor-the-appliance-by-using-the-admin-console.md). Para obtener información acerca de **SCOM**, consulte [supervisar el dispositivo mediante el uso de System Center Operations Manager &#40;Analytics Platform System&#41;](monitor-the-appliance-by-using-system-center-operations-manager.md)  
   
-Para obtener información acerca de cómo obtener información sobre la alerta mediante el uso de Transact\-SQL, vea [supervisar el dispositivo mediante el uso de vistas del sistema &#40; Sistema de la plataforma de análisis &#41; ](monitor-the-appliance-by-using-system-views.md).  
+Para obtener información acerca de cómo obtener información sobre la alerta mediante el uso de Transact\-SQL, consulte [supervisar el dispositivo mediante el uso de vistas del sistema &#40;Analytics Platform System&#41;](monitor-the-appliance-by-using-system-views.md).  
   
 ## <a name="types-of-alerts"></a>Tipos de alertas  
 Nombres de las alertas que indican un estado NORMAL no suelen requerir investigación. Nombres de las alertas que contienen las palabras no críticas en ocasiones requieren ninguna acción. Investigación es necesaria para todos los demás tipos de alertas.  
@@ -35,7 +35,7 @@ Nombres de las alertas que indican un estado NORMAL no suelen requerir investiga
 ## <a name="alert-list"></a>Lista de alertas  
 Las alertas se enumeran alfabéticamente por el **nombre de la alerta**. Todas las alertas posibles no están en la lista. El texto de algunas alertas varía ligeramente para diferentes proveedores.  
   
-|**Nombre de la alerta**|**¿Acción requerida?**|**State**|**Severity**|**Descripción**|**Más información**|  
+|**Nombre de la alerta**|**¿Acción requerida?**|**State**|**Severity**|**Description**|**Más información**|  
 |------------------|------------------------|-------------|----------------|-------------------|------------------------|  
 |Ambari agente tiene el estado crítico.|Sí|Error|Error|Error en este recurso del agente de Ambari (estado: 4) o está sin conexión (estado: 3). Otros Estados sin conexión que se incluyen son una vez sin conexión pendiente (estado: 130). Estado se indica en la propiedad del componente "hadoop_service_status".|Revise el recurso de clúster en los nodos principal y de datos.|  
 |Ambari agente tiene el estado no crítico.|Sí|Degradado|Advertencia|Este recurso de agente de Ambari se encuentra en un estado que no sea crítico debido a uno de los siguientes motivos:-el recurso está en estado heredado (estado: 0)-el recurso está en estado pendiente (estado: 128)-recurso se está en línea pendiente de estado (estado: 129)-recurso realiza inicial ization (estado: 1) se notifica el estado de la propiedad del componente "hadoop_service_status".|Revise el recurso de clúster en los nodos principal y de datos.|  
@@ -157,8 +157,8 @@ Las alertas se enumeran alfabéticamente por el **nombre de la alerta**. Todas l
 |Disco virtual tiene el estado no crítico.|Sí|Degradado|Advertencia|Indica el estado del disco virtual de espacios de almacenamiento hay una advertencia no críticos pero sigue funcionando. sistema (estado: 1-advertencia). El estado se notifica en la propiedad del componente "virtual_disk_status".  El estado operativo, se muestra en la propiedad "virtual_disk_oper_status" podría proporcionar más información sobre el problema.  Si el disco Virtual se movió a otro nodo, a continuación, revise el estado del clúster volumen componentes compartidos y mover los discos de nuevo al propietario de la esperada, indicado por el número después de los N en el nombre, p. ej. N01D01 pertenece en HSA01.|Revise los eventos del nodo de registro 'Aplicación y servicio logs\Microsoft\Windows\StorageSpaces-Driver\Operational' para obtener más detalles.  El estado de la entidad reflejada podría verse afectado por la pérdida de un solo disco, por lo que pudieran haberse producido otra alerta para el propio disco.|  
 |Disco virtual tiene el estado NORMAL.|no|Operativos|Informativa|El estado del disco virtual de espacios de almacenamiento es normal (estado: 0 correcto). El estado se notifica en la propiedad del componente "virtual_disk_status".||  
 |Disco virtual tiene desconocido estado.|Sí|Operativos|Advertencia|No se pudo determinar el estado del disco virtual de espacios de almacenamiento (estado: 5-desconocido). El estado se notifica en la propiedad del componente "virtual_disk_status".  El estado operativo, se muestra en la propiedad "virtual_disk_oper_status" podría proporcionar más información sobre el problema.  Si el disco Virtual se movió a otro nodo, a continuación, revise el estado del clúster volumen componentes compartidos y mover los discos de nuevo al propietario de la esperada, indicado por el número después de los N en el nombre, p. ej. N01D01 pertenece en HSA01.|Revise los eventos del nodo de registro 'Aplicación y servicio logs\Microsoft\Windows\StorageSpaces-Driver\Operational' para obtener más detalles.|  
-|Estado de espacio libre del volumen es crítico.|Sí|Degradado|Error|Espacio libre del volumen es críticamente baja. El espacio de disco de volumen utilizado actual está más allá del 90% de la capacidad total. Limpiar los archivos innecesarios/datos para garantizar un funcionamiento normal del dispositivo.|Los informes de la consola de administración espacio asignan y no necesariamente de espacio usan. Puede usar DBCC PDW_SHOWSPACEUSED para investigar usado frente a espacio asignado. También puede usar DBCC SHRINKLOG <!--Falta vínculos [DBCC SHRINKLOG &#40; SQL Server PDW &#41; ](../t-sql/statements/alter-database-parallel-data-warehouse.md) para reducir las bases de datos.|  
-|Estado de espacio libre del volumen es no crítico.|Opcional|Operativos|Advertencia|El espacio de disco de volumen utilizado actual está entre 70% y el 90%. Revise el espacio en disco utilizado en este volumen y limpiar los archivos innecesarios/datos para garantizar un funcionamiento normal del dispositivo.|Los informes de la consola de administración espacio asignan y no necesariamente de espacio usan. Puede usar [DBCC PDW_SHOWSPACEUSED](../t-sql/statements/alter-database-parallel-data-warehouse.md) investigar usado frente a espacio asignado. También puede usar DBCC SHRINKLOG <!--Falta vínculos [DBCC SHRINKLOG &#40; SQL Server PDW &#41; ](../t-sql/statements/alter-database-parallel-data-warehouse.md) para reducir las bases de datos.|  
+|Estado de espacio libre del volumen es crítico.|Sí|Degradado|Error|Espacio libre del volumen es críticamente baja. El espacio de disco de volumen utilizado actual está más allá del 90% de la capacidad total. Limpiar los archivos innecesarios/datos para garantizar un funcionamiento normal del dispositivo.|Los informes de la consola de administración espacio asignan y no necesariamente de espacio usan. Puede usar DBCC PDW_SHOWSPACEUSED para investigar usado frente a espacio asignado. También puede usar DBCC SHRINKLOG <!--Falta vínculos [DBCC SHRINKLOG &#40;PDW de SQL Server&#41; ](../t-sql/statements/alter-database-parallel-data-warehouse.md) para reducir las bases de datos.|  
+|Estado de espacio libre del volumen es no crítico.|Opcional|Operativos|Advertencia|El espacio de disco de volumen utilizado actual está entre 70% y el 90%. Revise el espacio en disco utilizado en este volumen y limpiar los archivos innecesarios/datos para garantizar un funcionamiento normal del dispositivo.|Los informes de la consola de administración espacio asignan y no necesariamente de espacio usan. Puede usar [DBCC PDW_SHOWSPACEUSED](../t-sql/statements/alter-database-parallel-data-warehouse.md) investigar usado frente a espacio asignado. También puede usar DBCC SHRINKLOG <!--Falta vínculos [DBCC SHRINKLOG &#40;PDW de SQL Server&#41; ](../t-sql/statements/alter-database-parallel-data-warehouse.md) para reducir las bases de datos.|  
 |Estado de espacio libre del volumen es NORMAL.|no|Operativos|Informativa|No hay suficiente espacio libre en disco en este volumen. El espacio de disco de volumen utilizado actual está por debajo del 70%.|Indica que el componente previamente notificó un estado diferente, pero desde entonces ha devuelto a su estado normal.|  
   
 <!-- MISSING LINKS ## See Also  

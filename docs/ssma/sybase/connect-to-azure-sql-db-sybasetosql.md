@@ -1,37 +1,38 @@
 ---
 title: Conectarse a la base de datos de SQL Azure (SybaseToSQL) | Documentos de Microsoft
-ms.custom: 
+ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql-non-specified
 ms.prod_service: sql-tools
-ms.service: 
+ms.service: ''
 ms.component: ssma-sybase
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: sql-ssma
-ms.tgt_pltfrm: 
+ms.technology:
+- sql-ssma
+ms.tgt_pltfrm: ''
 ms.topic: article
 applies_to:
 - Azure SQL Database
 - SQL Server
 ms.assetid: 96538007-1099-40c8-9902-edd07c5620ee
-caps.latest.revision: "5"
+caps.latest.revision: 5
 author: Shamikg
 ms.author: Shamikg
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 1267aecb68c344b6de0fad2c7c129a0b6ab2205c
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: c1656e76e6452c4394aad5eadb5d5b4073de9aac
+ms.sourcegitcommit: 9351e8b7b68f599a95fb8e76930ab886db737e5f
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 04/06/2018
 ---
 # <a name="connect-to-azure-sql-db--sybasetosql"></a>Conectarse a la base de datos de SQL Azure (SybaseToSQL)
 Use el cuadro de diálogo de la base de datos de SQL Azure para conectarse a la base de datos de la base de datos de SQL Azure que se va a migrar.  
   
 Para tener acceso a este cuadro de diálogo, en la **archivo** menú, seleccione **conectar con base de datos de SQL Azure**. Si se ha conectado anteriormente, el comando es **conectarse de nuevo a la base de datos de SQL Azure.**  
   
-## <a name="options"></a>.  
+## <a name="options"></a>Opciones  
 **Nombre de servidor**  
   
 Seleccione o escriba el nombre del servidor para conectarse a la base de datos de SQL Azure.  
@@ -43,7 +44,7 @@ Seleccione, escriba o **examinar** el nombre de la base de datos.
 > [!IMPORTANT]  
 > SSMA para Sybase no admite conexiones a la base de datos maestra en la base de datos de SQL Azure.  
   
-**User name**  
+**Nombre de usuario.**  
   
 Escriba el nombre de usuario que va a usar para conectarse a la base de datos de la base de datos de SQL Azure SSMA  
   
@@ -51,7 +52,7 @@ Escriba el nombre de usuario que va a usar para conectarse a la base de datos de
   
 Escriba la contraseña del nombre de usuario.  
   
-**Cifrar**  
+**Encrypt**  
   
 SSMA recomienda conexión cifrada a la base de datos de SQL Azure.  
   

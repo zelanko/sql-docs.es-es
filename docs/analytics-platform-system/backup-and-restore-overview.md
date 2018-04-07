@@ -1,25 +1,25 @@
 ---
-title: "Copias de seguridad y restauración"
+title: Copias de seguridad y restauración
 author: barbkess
 ms.author: barbkess
-manager: jhubbard
+manager: craigg
 ms.prod: analytics-platform-system
 ms.prod_service: mpp-data-warehouse
-ms.service: 
-ms.component: 
+ms.service: ''
+ms.component: ''
 ms.suite: sql
-ms.custom: 
+ms.custom: ''
 ms.technology: mpp-data-warehouse
-description: "Describe cómo los datos de copia de seguridad y restauración funciona para almacenamiento de datos paralelos de SQL Server (PDW)."
+description: Describe cómo los datos de copia de seguridad y restauración funciona para almacenamiento de datos paralelos de SQL Server (PDW).
 ms.date: 10/20/2016
 ms.topic: article
 ms.assetid: d4669957-270a-4e50-baf3-14324ca63049
-caps.latest.revision: 
-ms.openlocfilehash: 06863b600ed62d795db82aa5aa3ae5c88578833a
-ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
+caps.latest.revision: 50
+ms.openlocfilehash: b4ac7a3a0b9f005ac05646ad03dcf3123036462e
+ms.sourcegitcommit: 9351e8b7b68f599a95fb8e76930ab886db737e5f
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/15/2018
+ms.lasthandoff: 04/06/2018
 ---
 # <a name="backup-and-restore"></a>Copias de seguridad y restauración
 Describe cómo los datos de copia de seguridad y restauración funciona para almacenamiento de datos paralelos de SQL Server (PDW). Operaciones de copia de seguridad y restauración se utilizan para la recuperación ante desastres. También se pueden utilizar copia de seguridad y restauración para copiar una base de datos de un dispositivo a otro dispositivo.  
@@ -35,7 +35,7 @@ The [master database](master-database.md) is a SMP SQL Server database. It is ba
 
 -->
   
-PDW usa tecnología de copia de seguridad de SQL Server para copia de seguridad y restaurar bases de datos del dispositivo. Opciones de copia de seguridad de SQL Server están preconfigurados para utilizar la compresión de copia de seguridad. No se puede establecer opciones de copia de seguridad como la compresión, suma de comprobación, tamaño de bloque y recuento de búfer.  
+PDW usa tecnología de copia de seguridad de SQL Server para copia de seguridad y restaurar bases de datos del dispositivo. Opciones de copia de seguridad de SQL Server están preconfigurados para utilizar la compresión de copia de seguridad. No se pueden establecer opciones de copia de seguridad como la compresión, suma de comprobación, tamaño de bloque y recuento de búferes.  
   
 Las copias de seguridad de base de datos se almacenan en uno o más servidores copia de seguridad, que existen en su propia red de cliente.  PDW escribe una copia de seguridad de base de datos de usuario en paralelo directamente desde los nodos de proceso en un servidor de copia de seguridad y restaura una copia de seguridad de base de datos de usuario en paralelo directamente desde el servidor de copia de seguridad en los nodos de proceso.  
   
@@ -123,11 +123,11 @@ Al restaurar los datos, el dispositivo detecta el número de nodos de proceso en
   
 ## <a name="restoring-to-an-appliance-with-a-larger-number-of-compute-nodes"></a>Restaurar a un dispositivo con un gran número de nodos de proceso  
   
-Restaurar una copia de seguridad en un dispositivo con un gran número de nodos de proceso, aumenta el tamaño de base de datos asignado en proporción al número de nodos de cálculo.  
+Restaurar una copia de seguridad en un dispositivo con un gran número de nodos de ejecución aumenta el tamaño de base de datos asignado en proporción al número de nodos de ejecución.  
   
 Por ejemplo, cuando se restaura una base de datos de 60 GB desde un dispositivo de 2 nodos (30 GB por nodo) en un dispositivo de 6 nodos, PDW de SQL Server crea una base de datos de 180 GB (6 nodos con 30 GB por nodo) en el dispositivo de 6 nodos. SQL Server PDW inicialmente restaura la base de datos en 2 nodos para que coincida con la configuración de origen y, a continuación, redistribuye los datos a todos los nodos de 6.  
   
-Después de la redistribución cada nodo de proceso contiene menos datos reales y más espacio libre que cada nodo de ejecución en el dispositivo de origen más pequeño. Utilice el espacio adicional para agregar más datos a la base de datos. Si el tamaño de la base de datos restaurada es superior al necesario, puede usar [ALTER DATABASE](../t-sql/statements/alter-database-parallel-data-warehouse.md) para reducir los tamaños de archivo de base de datos.  
+Después de la redistribución, cada nodo de ejecución contendrá menos datos reales y más espacio libre que cada nodo de ejecución en el dispositivo de origen (más pequeño). Use el espacio extra para agregar más datos a la base de datos. Si el tamaño de la base de datos restaurada es superior al necesario, puede usar [ALTER DATABASE](../t-sql/statements/alter-database-parallel-data-warehouse.md) para reducir los tamaños de archivo de base de datos.  
   
 ## <a name="related-tasks"></a>Tareas relacionadas  
   

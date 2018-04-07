@@ -21,13 +21,13 @@ ms.assetid: 195ffdef-cfde-4bf4-a3ae-e7402bb07972
 caps.latest.revision: 6
 author: Shamikg
 ms.author: Shamikg
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 0b78d26a492a73964c39b15c678103537cd9abe1
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: 687fa8b221a31e0c1c447b5c5cbee85cc31d1702
+ms.sourcegitcommit: 9351e8b7b68f599a95fb8e76930ab886db737e5f
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 04/06/2018
 ---
 # <a name="running-test-cases-sybasetosql"></a>Ejecutar casos de prueba (SybaseToSQL)
 Cuando el evaluador de SSMA se ejecuta un caso de prueba, ejecuta los objetos seleccionados para las pruebas y crea un informe sobre los resultados de la comprobación. Si los resultados son idénticos en ambas plataformas, la prueba fue correcta. La correspondencia de objetos entre Sybase y [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] se determina según la configuración de la asignación de esquema para el proyecto SSMA actual.  
@@ -41,11 +41,11 @@ Para ejecutar el caso de prueba preparada:
   
 2.  En el **conectar para Sybase** cuadro de diálogo, escriba la información de conexión y, a continuación, haga clic en **conectar**.  
   
-Una vez finalizada la prueba, se crea el informe de casos de prueba. Haga clic en el **informe** para ver el [ver informes de casos de prueba &#40; SybaseToSQL &#41; ](../../ssma/sybase/viewing-test-case-reports-sybasetosql.md). El resultado de la prueba (informe de casos de prueba) se almacena automáticamente en el [repositorios de pruebas usando &#40; SybaseToSQL &#41; ](../../ssma/sybase/using-test-repositories-sybasetosql.md) para su uso posterior.  
+Una vez finalizada la prueba, se crea el informe de casos de prueba. Haga clic en el **informe** para ver el [ver informes de casos de prueba &#40;SybaseToSQL&#41;](../../ssma/sybase/viewing-test-case-reports-sybasetosql.md). El resultado de la prueba (informe de casos de prueba) se almacena automáticamente en el [repositorios de prueba usando &#40;SybaseToSQL&#41; ](../../ssma/sybase/using-test-repositories-sybasetosql.md) para su uso posterior.  
   
 ## <a name="test-case-execution-steps"></a>Pasos de ejecución de caso de prueba  
   
-### <a name="prerequisites"></a>Prerequisites  
+### <a name="prerequisites"></a>Requisitos previos  
 Evaluador de SSMA comprueba si se cumplen todos los requisitos previos para la ejecución de pruebas antes del inicio de la prueba. Si no se cumplen determinadas condiciones, aparece un mensaje de error.  
   
 ### <a name="initialization"></a>Inicialización  
@@ -57,19 +57,19 @@ Los siguientes objetos se crean en Sybase en la base de datos SSMATESTER2005db o
   
 |Nombre|Tipo|Description|  
 |--------|--------|---------------|  
-|USER_TABLE$ Trg|Desencadenador|Auditoría de los cambios en la tabla comprobado el desencadenador.|  
+|USER_TABLE$Trg|Desencadenador|Auditoría de los cambios en la tabla comprobado el desencadenador.|  
 |USER_TABLE$ Aud|Table|Tabla donde se guardan las filas se eliminan y se sobrescriben.|  
 |USER_TABLE$ AudID|Table|Tabla donde se guardan las filas nuevas y modificadas.|  
 |USER_TABLE|Ver|Representación simplificada de las modificaciones de tablas.|  
 |USER_TABLE$ nueva|Ver|Representación simplificada de filas insertadas y sobrescribir.|  
-|USER_TABLE$ new_id|Ver|Identificación de filas insertadas y los cambios.|  
+|USER_TABLE$new_id|Ver|Identificación de filas insertadas y los cambios.|  
 |USER_TABLE$ anterior|Ver|Representación simplificada de las filas se eliminan y se sobrescriben.|  
   
 El siguiente objeto se crea en la base de datos de tabla comprobado en Sybase y [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)].  
   
 |Nombre|Tipo|Description|  
 |--------|--------|---------------|  
-|USER_TABLE$ Trg|Desencadenador|Auditoría de los cambios en la tabla comprobado el desencadenador.|  
+|USER_TABLE$Trg|Desencadenador|Auditoría de los cambios en la tabla comprobado el desencadenador.|  
   
 ### <a name="test-object-calls"></a>Llamadas de objeto de prueba  
 En este paso, el evaluador de SSMA invoca cada objeto seleccionado para la prueba, compara los resultados y se muestra el informe.  
@@ -78,10 +78,10 @@ En este paso, el evaluador de SSMA invoca cada objeto seleccionado para la prueb
 Durante la finalización de la herramienta de comprobación de SSMA limpia los objetos auxiliares creados en el **inicialización** paso.  
   
 ## <a name="next-step"></a>Paso siguiente  
-[Ver informes de casos de prueba &#40; SybaseToSQL &#41;](../../ssma/sybase/viewing-test-case-reports-sybasetosql.md)  
+[Ver informes de casos de prueba &#40;SybaseToSQL&#41;](../../ssma/sybase/viewing-test-case-reports-sybasetosql.md)  
   
 ## <a name="see-also"></a>Vea también  
-[Seleccionar y configurar los objetos a prueba &#40; SybaseToSQL &#41;](../../ssma/sybase/selecting-and-configuring-objects-to-test-sybasetosql.md)  
-[Seleccionar y configurar los objetos afectados &#40; SybaseToSQL &#41;](../../ssma/sybase/selecting-and-configuring-affected-objects-sybasetosql.md)  
-[Pruebas migran objetos de base de datos &#40; SybaseToSQL &#41;](../../ssma/sybase/testing-migrated-database-objects-sybasetosql.md)  
+[Seleccionar y configurar los objetos a prueba &#40;SybaseToSQL&#41;](../../ssma/sybase/selecting-and-configuring-objects-to-test-sybasetosql.md)  
+[Seleccionar y configurar los objetos afectados &#40;SybaseToSQL&#41;](../../ssma/sybase/selecting-and-configuring-affected-objects-sybasetosql.md)  
+[Pruebas de objetos de base de datos migran &#40;SybaseToSQL&#41;](../../ssma/sybase/testing-migrated-database-objects-sybasetosql.md)  
   

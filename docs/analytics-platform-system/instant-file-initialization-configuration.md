@@ -1,26 +1,26 @@
 ---
-title: "Configuración de la inicialización instantánea de archivos (sistema de plataforma de análisis)"
+title: Configuración de la inicialización instantánea de archivos (sistema de plataforma de análisis)
 author: barbkess
 ms.author: barbkess
-manager: jhubbard
+manager: craigg
 ms.prod: analytics-platform-system
 ms.prod_service: mpp-data-warehouse
-ms.service: 
-ms.component: 
+ms.service: ''
+ms.component: ''
 ms.technology: mpp-data-warehouse
-ms.custom: 
+ms.custom: ''
 ms.date: 01/05/2017
 ms.reviewer: na
 ms.suite: sql
 ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: 58be8982-4d2e-4aa3-bcdd-874a062d2f9d
-caps.latest.revision: "20"
-ms.openlocfilehash: b7dda4bb925e08f49409ea1950cfe3649b4db3e0
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+caps.latest.revision: 20
+ms.openlocfilehash: 1e28ff30c727dfe1132b5568bb12a333c51927d5
+ms.sourcegitcommit: 9351e8b7b68f599a95fb8e76930ab886db737e5f
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 04/06/2018
 ---
 # <a name="instant-file-initialization-configuration"></a>Configuración de la inicialización instantánea de archivos
 Inicialización instantánea de archivos es una característica de SQL Server que permite que las operaciones de archivo de datos se ejecute más rápidamente. Seleccione la casilla para activar la inicialización instantánea de archivos mejorará el rendimiento de SQL Server PDW. Sin embargo, si esto supone un riesgo de seguridad para su negocio, a continuación, deje la casilla desactivada.  
@@ -45,7 +45,7 @@ El proceso de copia de seguridad requiere una credencial de red (cuenta de usuar
   
 ## <a name="to-turn-instant-file-initialization-on-or-off"></a>Para activar o desactivar la inicialización instantánea de archivos  
   
-1.  Inicie el Administrador de configuración. Para obtener más información, vea [iniciar el Administrador de configuración &#40; Sistema de la plataforma de análisis &#41; ](launch-the-configuration-manager.md).  
+1.  Inicie el Administrador de configuración. Para obtener más información, consulte [iniciar el Administrador de configuración &#40;Analytics Platform System&#41;](launch-the-configuration-manager.md).  
   
 2.  En el panel izquierdo del Administrador de configuración, haga clic en **Instant File Initialization**.  
   
@@ -54,7 +54,7 @@ El proceso de copia de seguridad requiere una credencial de red (cuenta de usuar
     > [!WARNING]  
     > Al desactivar la inicialización instantánea de archivos, la consideración de seguridad descrita anteriormente para la característica aún puede aplicarse a los archivos eliminados mientras se habilitaba la inicialización instantánea de archivos.  
   
-4.  Haga clic en **Aplicar**. El cambio se propagará a través de las instancias de SQL Server en PDW de SQL Server la próxima vez que se reinicien los servicios del dispositivo. Para reiniciar los servicios del dispositivo, consulte [estado de los servicios PDW &#40; Sistema de la plataforma de análisis &#41; ](pdw-services-status.md).  
+4.  Haga clic en **Aplicar**. El cambio se propagará a través de las instancias de SQL Server en PDW de SQL Server la próxima vez que se reinicien los servicios del dispositivo. Para reiniciar los servicios del dispositivo, consulte [estado de los servicios PDW &#40;Analytics Platform System&#41;](pdw-services-status.md).  
   
 5.  Puede repetir los pasos descritos anteriormente como **agregar permisos para la cuenta de copia de seguridad** para quitar el **realizar tareas de mantenimiento del volumen** permiso.  
   

@@ -1,31 +1,31 @@
 ---
-title: "Supervisión de consultas activas (SQL Server PDW)"
+title: Supervisión de consultas activas (SQL Server PDW)
 author: barbkess
 ms.author: barbkess
-manager: jhubbard
+manager: craigg
 ms.prod: analytics-platform-system
 ms.prod_service: mpp-data-warehouse
-ms.service: 
-ms.component: 
+ms.service: ''
+ms.component: ''
 ms.technology: mpp-data-warehouse
-ms.custom: 
+ms.custom: ''
 ms.date: 01/13/2017
 ms.reviewer: na
 ms.suite: sql
 ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: bb73f790-0537-414b-8dc2-f1eb69b92362
-caps.latest.revision: "7"
-ms.openlocfilehash: 44f128124c8027bf4c37e34309d6c711006ac113
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+caps.latest.revision: 7
+ms.openlocfilehash: 8a792e8dc4f29a257568f37350ba1b2c792c88fe
+ms.sourcegitcommit: 9351e8b7b68f599a95fb8e76930ab886db737e5f
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 04/06/2018
 ---
 # <a name="monitoring-active-queries"></a>Supervisión de consultas activas
 Este tema muestra cómo utilizar la consola de administración y las vistas del sistema PDW de SQL Server para supervisar consultas activas. Vea [supervisar el dispositivo mediante la consola de administración](monitor-the-appliance-by-using-the-admin-console.md) y [vistas del sistema](tsql-system-views.md) para obtener información sobre estas herramientas.  
   
-## <a name="prerequisites"></a>Prerequisites  
+## <a name="prerequisites"></a>Requisitos previos  
 Independientemente del método utilizado para supervisar consultas activas, el inicio de sesión debe tener los permisos descritos en "Usar todos los de la consola de administración" en [conceder permisos para usar la consola de administración](grant-permissions.md#grant-permissions-to-use-the-admin-console).  
   
 ## <a name="PermsAdminConsole"></a>Consultas activas del Monitor  

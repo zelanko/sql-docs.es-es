@@ -1,25 +1,25 @@
 ---
-title: "Alta disponibilidad de sistema de la plataforma de análisis"
+title: Alta disponibilidad de sistema de la plataforma de análisis
 author: barbkess
 ms.author: barbkess
-manager: jhubbard
+manager: craigg
 ms.prod: analytics-platform-system
 ms.prod_service: mpp-data-warehouse
-ms.service: 
-ms.component: 
+ms.service: ''
+ms.component: ''
 ms.suite: sql
-ms.custom: 
+ms.custom: ''
 ms.technology: mpp-data-warehouse
-description: "Describe cómo Analytics Platform System (APS) se ha diseñado para lograr alta disponibilidad."
+description: Describe cómo Analytics Platform System (APS) se ha diseñado para lograr alta disponibilidad.
 ms.date: 10/20/2016
 ms.topic: article
 ms.assetid: 5ab245e9-0316-4d25-a626-4745ce856925
-caps.latest.revision: "9"
-ms.openlocfilehash: 11733b45ba25f625ea2d3d601939973e9137b15d
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+caps.latest.revision: 9
+ms.openlocfilehash: 9fd057a4cd673f06034e0093ca93be7ceaf345ea
+ms.sourcegitcommit: 9351e8b7b68f599a95fb8e76930ab886db737e5f
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 04/06/2018
 ---
 # <a name="analytics-platform-system-high-availability"></a>Alta disponibilidad de sistema de la plataforma de análisis
 Describe cómo Analytics Platform System (APS) se ha diseñado para lograr alta disponibilidad.  
@@ -27,12 +27,12 @@ Describe cómo Analytics Platform System (APS) se ha diseñado para lograr alta 
 ## <a name="high-availability-architecture"></a>Arquitectura de alta disponibilidad  
 ![La arquitectura del dispositivo](media/appliance-architecture.png "la arquitectura del dispositivo")  
   
-## <a name="network"></a>red  
+## <a name="network"></a>Red  
 Disponibilidad de la red, el dispositivo de APS tiene dos redes InfiniBand. Si una de las redes InfiniBand deja de funcionar, el otro se sigue estando disponible. Además, Active Directory ha replicado los controladores de dominio para resolver las solicitudes entrantes a la red InfiniBand correcta.  
   
 Para obtener más información, consulte [adaptadores de red InfiniBand configurar](configure-infiniband-network-adapters.md).  
   
-## <a name="storage"></a>Storage  
+## <a name="storage"></a>Almacenamiento  
 Para conservar los datos seguros, APS utiliza RAID 1 para mantener dos copias de todos los datos de usuario de creación de reflejo. Cuando se produce un error en un disco, el sistema de hardware vuelve a generar los datos en un disco de repuesto y establece una alerta que hay un error de disco.  
   
 Para mantener los datos disponibles en línea, APS usa espacios de almacenamiento de Windows y volúmenes compartidos de clúster para administrar los discos de datos de usuario en el almacenamiento de conexión directa. Hay un grupo de almacenamiento por unidad de escala de datos que se organizan en volúmenes compartidos de clúster que están disponibles para los hosts de nodo de proceso a través de puntos de montaje.  

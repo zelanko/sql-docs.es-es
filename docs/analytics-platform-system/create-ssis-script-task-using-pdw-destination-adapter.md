@@ -1,25 +1,25 @@
 ---
-title: "Cómo crear una tarea de secuencia de comandos que usa el adaptador de destino de SSIS PDW"
+title: Cómo crear una tarea de secuencia de comandos que usa el adaptador de destino de SSIS PDW
 author: barbkess
 ms.author: barbkess
-manager: jhubbard
+manager: craigg
 ms.prod: analytics-platform-system
 ms.prod_service: mpp-data-warehouse
-ms.service: 
-ms.component: 
+ms.service: ''
+ms.component: ''
 ms.suite: sql
-ms.custom: 
+ms.custom: ''
 ms.technology: mpp-data-warehouse
-description: "La tarea de secuencia de comandos de Integration Services permite realizar prácticamente cualquier operación que se pueden realizar en una aplicación de .net en el contexto de un flujo de control SSIS."
+description: La tarea de secuencia de comandos de Integration Services permite realizar prácticamente cualquier operación que se pueden realizar en una aplicación de .net en el contexto de un flujo de control SSIS.
 ms.date: 01/05/2017
 ms.topic: article
 ms.assetid: e2a9b254-5a66-44b1-863a-fa831555e7e0
-caps.latest.revision: "8"
-ms.openlocfilehash: 8056c97e66147cb68d7918301515c1dc52524387
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+caps.latest.revision: 8
+ms.openlocfilehash: d10bdf6dc8bd403ea29a928d1a89319cbb19f9f6
+ms.sourcegitcommit: 9351e8b7b68f599a95fb8e76930ab886db737e5f
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 04/06/2018
 ---
 # <a name="how-to-create-a-script-task-that-uses-the-ssis-pdw-destination-adapter"></a>Cómo crear una tarea de secuencia de comandos que usa el adaptador de destino de SSIS PDW
 La tarea de secuencia de comandos de Integration Services permite realizar prácticamente cualquier operación que se pueden realizar en una aplicación de .net en el contexto de un flujo de control SSIS. Este código de script de paquete SSIS es un ejemplo de código para usar el adaptador de destino de SSIS PDW.  

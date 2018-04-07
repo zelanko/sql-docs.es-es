@@ -2,26 +2,26 @@
 title: (SQL Server PDW) de la base de datos tempdb
 author: barbkess
 ms.author: barbkess
-manager: jhubbard
+manager: craigg
 ms.prod: analytics-platform-system
 ms.prod_service: mpp-data-warehouse
-ms.service: 
-ms.component: 
+ms.service: ''
+ms.component: ''
 ms.technology: mpp-data-warehouse
-ms.custom: 
+ms.custom: ''
 ms.date: 01/13/2017
 ms.reviewer: na
 ms.suite: sql
 ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: 5840033d-2dc6-4576-8a5f-067e2a58b170
-caps.latest.revision: "22"
+caps.latest.revision: 22
 ms.workload: not set
-ms.openlocfilehash: 459265906774604f4d98f7cfb2bd2ad09485cc7e
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: 6a52f21b266d277f3bda205803d38431598545f7
+ms.sourcegitcommit: 9351e8b7b68f599a95fb8e76930ab886db737e5f
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 04/06/2018
 ---
 # <a name="tempdb-database"></a>Base de datos tempdb
 **tempdb** es una base de datos del sistema de PDW de SQL Server que almacena las tablas temporales locales para las bases de datos de usuario. Tablas temporales se usan a menudo para mejorar el rendimiento de las consultas. Por ejemplo, puede usar una tabla temporal para modularizar una secuencia de comandos y reutilizar los datos calculados.  
@@ -81,7 +81,7 @@ Limitaciones y restricciones en las tablas temporales locales. Se *no se puede:*
   
 -   Ejecutar comandos de la consola de base de datos en las tablas temporales.  
   
--   Utilice el mismo nombre para dos o más tablas temporales dentro del mismo lote. Si se usa más de una tabla temporal local dentro de un lote, cada uno debe tener un nombre único. Si varias sesiones están ejecutando el mismo lote y crear la misma tabla temporal local, SQL Server PDW internamente anexa un sufijo numérico al nombre de tabla temporal local para mantener un nombre único para cada tabla temporal local.  
+-   Utilice el mismo nombre para dos o más tablas temporales dentro del mismo lote. Si se usa más de una tabla temporal local dentro de un lote, cada una debe tener un nombre único. Si varias sesiones están ejecutando el mismo lote y crear la misma tabla temporal local, SQL Server PDW internamente anexa un sufijo numérico al nombre de tabla temporal local para mantener un nombre único para cada tabla temporal local.  
   
 > [!NOTE]  
 > Se *puede* crear y actualizar las estadísticas en una tabla temporal. **ALTER INDEX** puede utilizarse para volver a generar un índice agrupado.  

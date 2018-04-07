@@ -1,30 +1,31 @@
 ---
-title: "Conversión de bases de datos de MySQL (MySQLToSQL) | Documentos de Microsoft"
+title: Conversión de bases de datos de MySQL (MySQLToSQL) | Documentos de Microsoft
 ms.prod: sql-non-specified
 ms.prod_service: sql-tools
-ms.service: 
+ms.service: ''
 ms.component: ssma-mysql
-ms.custom: 
+ms.custom: ''
 ms.date: 01/19/2017
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: sql-ssma
-ms.tgt_pltfrm: 
+ms.technology:
+- sql-ssma
+ms.tgt_pltfrm: ''
 ms.topic: article
 applies_to:
 - Azure SQL Database
 - SQL Server
 ms.assetid: ac21850b-fb32-4704-9985-5759b7c688c7
-caps.latest.revision: "17"
+caps.latest.revision: 17
 author: Shamikg
 ms.author: Shamikg
-manager: jhubbard
+manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 93bdfb54667b281ffc673c3086eb1aaf951e1498
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: 1b1bbf54f4b8ddfa33b10d0aa1f5cb7cdbc139a6
+ms.sourcegitcommit: 9351e8b7b68f599a95fb8e76930ab886db737e5f
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 04/06/2018
 ---
 # <a name="converting-mysql-databases-mysqltosql"></a>Conversión de bases de datos de MySQL (MySQLToSQL)
 Después de haber conectado con MySQL, conectado a [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] o SQL Azure y el proyecto de conjunto y opciones de asignación de datos, puede convertir objetos de base de datos de MySQL a [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] u objetos de base de datos de SQL Azure.  
@@ -35,7 +36,7 @@ Convertir objetos de base de datos toma las definiciones de objeto de MySQL, se 
 Durante la conversión, SSMA imprime mensajes de salida en el panel de resultados y mensajes de error en el panel de lista de errores. Use la información de salida y el error para determinar si tiene que modificar las bases de datos de MySQL o el proceso de conversión para obtener los resultados de la conversión deseada.  
   
 ## <a name="setting-conversion-options"></a>Establecer las opciones de conversión  
-Antes de convertir objetos, revise las opciones de conversión de proyecto en el **configuración del proyecto** cuadro de diálogo. Mediante este cuadro de diálogo, puede establecer cómo SSMA convierte las tablas e índices. Para obtener más información, vea [configuración del proyecto &#40; Conversión &#41; &#40; MySQLToSQL &#41;](../../ssma/mysql/project-settings-conversion-mysqltosql.md)  
+Antes de convertir objetos, revise las opciones de conversión de proyecto en el **configuración del proyecto** cuadro de diálogo. Mediante este cuadro de diálogo, puede establecer cómo SSMA convierte las tablas e índices. Para obtener más información, vea [configuración del proyecto &#40;conversión&#41; &#40;MySQLToSQL&#41;](../../ssma/mysql/project-settings-conversion-mysqltosql.md)  
   
 ## <a name="conversion-results"></a>Resultados de la conversión  
 La siguiente tabla muestra qué objetos de MySQL se convierten y resultante [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] objetos:  
@@ -46,7 +47,7 @@ La siguiente tabla muestra qué objetos de MySQL se convierten y resultante [!IN
 |Tablas con los objetos dependientes, como los índices|SSMA crea tablas con los objetos dependientes. Tabla se convierte con todos los índices y restricciones. Los índices se convierten en diferentes [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] objetos.<br /><br />**Asignación de tipos de datos espaciales** pueden realizarse solo en el nivel del nodo de tabla.<br /><br />Para obtener más información sobre la configuración de conversión de la tabla, vea [la configuración de conversión](http://msdn.microsoft.com/en-us/f551cf6e-1575-4206-9cca-975b5b43a6b8)|  
 |Funciones|Si la función se puede convertir directamente a Transact-SQL, SSMA crea una función. En algunos casos, la función debe convertirse en un procedimiento almacenado. Esto puede hacerse mediante el uso de **función conversión** en configuración del proyecto. En este caso, SSMA crea un procedimiento almacenado y una función que llama al procedimiento almacenado.<br /><br />**Opciones que se ofrecen:**<br /><br />Convertir según la configuración de proyecto<br /><br />Convertir a función<br /><br />Convertir en procedimiento almacenado<br /><br />Para obtener más información sobre la configuración de conversión de función, vea [la configuración de conversión](http://msdn.microsoft.com/en-us/f551cf6e-1575-4206-9cca-975b5b43a6b8)|  
 |Procedimientos|Si el procedimiento se puede convertir directamente a Transact-SQL, SSMA crea un procedimiento almacenado. En algunos casos, un procedimiento almacenado debe llamarse en una transacción autónoma. En este caso, SSMA crea dos procedimientos almacenados: uno que implementa el procedimiento y otro que se usa para llamar a la implementación de procedimiento almacenado.|  
-|Conversión de la base de datos|Las bases de datos como objetos de MySQL no se convierten directamente por SSMA para MySQL. Bases de datos MySQL, se tratan más como nombres de esquema y se pierden todos los parámetros físicos durante la conversión. SSMA para MySQL usa [asignación de bases de datos de MySQL a esquemas de SQL Server &#40; MySQLToSQL &#41; ](../../ssma/mysql/mapping-mysql-databases-to-sql-server-schemas-mysqltosql.md) para asignar objetos de base de datos MySQL a par de esquema y base de datos de SQL Server apropiado.|  
+|Conversión de la base de datos|Las bases de datos como objetos de MySQL no se convierten directamente por SSMA para MySQL. Bases de datos MySQL, se tratan más como nombres de esquema y se pierden todos los parámetros físicos durante la conversión. SSMA para MySQL usa [asignación de bases de datos de MySQL a SQL Server esquemas &#40;MySQLToSQL&#41; ](../../ssma/mysql/mapping-mysql-databases-to-sql-server-schemas-mysqltosql.md) para asignar objetos de base de datos MySQL a par de esquema y base de datos de SQL Server apropiado.|  
 |Conversión de desencadenador|**SSMA crea desencadenadores según las reglas siguientes:**<br /><br />ANTES de que los desencadenadores se convierten en los desencadenadores INSTEAD OF T-SQL<br /><br />Desencadenadores AFTER se convierten en los desencadenadores después de T-SQL con o sin iteraciones por filas.|  
 |Conversión de vista|SSMA crea vistas con los objetos dependientes|  
 |Conversión de instrucción|-Cada objeto de instrucción SQL puede contener una sola instrucción de MySQL (como DDL, DML y otros tipos de instrucciones) o BEGIN... Bloque final.<br />-   **Conversión de múltiples instrucciones: BEGIN... Conversión de bloque final**instrucción SQL también puede contener un BEGIN... Bloque final como de definición de procedimiento, función o desencadenador. Los bloques se deben convertir la misma manera que se convertirán para los objetos de instrucción únicos de MySQL.|  
@@ -111,13 +112,13 @@ Para los objetos que no se pudo conversión, puede ver la sintaxis que produjo e
   
 Para cada elemento que no se pudo convertir, deberá determinar qué desea hacer con ese objeto:  
   
--   Puede modificar el objeto en la base de datos de MySQL para quitar o revisar cargue código problemático. Para cargar el código actualizado en SSMA, tendrá que actualizar los metadatos. Para obtener más información, vea [conectarse a MySQL &#40; MySQLToSQL &#41;](../../ssma/mysql/connecting-to-mysql-mysqltosql.md)  
+-   Puede modificar el objeto en la base de datos de MySQL para quitar o revisar cargue código problemático. Para cargar el código actualizado en SSMA, tendrá que actualizar los metadatos. Para obtener más información, consulte [conectar con MySQL &#40;MySQLToSQL&#41;](../../ssma/mysql/connecting-to-mysql-mysqltosql.md)  
   
 -   Puede excluir el objeto de la migración. En [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] o el Explorador de metadatos de SQL Azure y el Explorador de metadatos de MySQL, desactive la casilla de verificación situada junto al elemento antes de cargar los objetos en [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] o SQL Azure y migración de datos de MySQL.  
   
 ## <a name="next-step"></a>Paso siguiente  
-El siguiente paso del proceso de migración es [cargar objetos de base de datos para convertir a SQL Server &#40; MySQLToSQL &#41;](../../ssma/mysql/loading-converted-database-objects-into-sql-server-mysqltosql.md)  
+El siguiente paso del proceso de migración es [cargar objetos de base de datos para convertir a SQL Server &#40;MySQLToSQL&#41;](../../ssma/mysql/loading-converted-database-objects-into-sql-server-mysqltosql.md)  
   
 ## <a name="see-also"></a>Vea también  
-[Migrar bases de datos de MySQL a SQL Server: base de datos de SQL Azure &#40; MySQLToSql &#41;](../../ssma/mysql/migrating-mysql-databases-to-sql-server-azure-sql-db-mysqltosql.md)  
+[Bases de datos de migración desde MySQL a SQL Server: base de datos de SQL Azure &#40;MySQLToSql&#41;](../../ssma/mysql/migrating-mysql-databases-to-sql-server-azure-sql-db-mysqltosql.md)  
   

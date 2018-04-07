@@ -1,37 +1,38 @@
 ---
-title: "Conéctese a DB2 (DB2ToSQL) | Documentos de Microsoft"
+title: Conéctese a DB2 (DB2ToSQL) | Documentos de Microsoft
 ms.prod: sql-non-specified
 ms.prod_service: sql-tools
-ms.service: 
+ms.service: ''
 ms.component: ssma-db2
-ms.custom: 
+ms.custom: ''
 ms.date: 01/19/2017
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: sql-ssma
-ms.tgt_pltfrm: 
+ms.technology:
+- sql-ssma
+ms.tgt_pltfrm: ''
 ms.topic: article
 applies_to:
 - Azure SQL Database
 - SQL Server
 ms.assetid: 9d485fd0-ab5d-402a-a59a-e9982a61b7de
-caps.latest.revision: "4"
+caps.latest.revision: 4
 author: Shamikg
 ms.author: Shamikg
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: e08da1c1922fce1154ec4ca16cd99a757ff973bd
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: 27b590cbfefdbc01e67e4049ffa3d920afd08b1f
+ms.sourcegitcommit: 9351e8b7b68f599a95fb8e76930ab886db737e5f
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 04/06/2018
 ---
 # <a name="connect-to-db2-db2tosql"></a>Conéctese a DB2 (DB2ToSQL)
 Use la **conectar a DB2** cuadro de diálogo para conectarse a la base de datos de DB2 que se va a migrar.  
   
 Para tener acceso a este cuadro de diálogo, en la **archivo** menú, seleccione **conectar a DB2**. Si se ha conectado anteriormente, el comando es **volver a conectar a DB2**.  
   
-## <a name="options"></a>.  
+## <a name="options"></a>Opciones  
 **Proveedor**  
 Seleccione el proveedor de acceso de datos para la conexión a la base de datos DB2. Proveedores disponibles son los proveedores de cliente DB2 y el proveedor OLE DB. El valor predeterminado es el proveedor de cliente de DB2.  
   
@@ -65,7 +66,7 @@ Escriba al SID de la base de datos. El SID es un identificador que distingue la 
   
 Se trata de una opción de modo estándar.  
   
-**User name**  
+**Nombre de usuario.**  
 Escriba el nombre de usuario que va a usar para conectarse a la base de datos de DB2 SSMA.  
   
 **Contraseña**  

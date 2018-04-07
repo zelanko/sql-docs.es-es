@@ -2,25 +2,25 @@
 title: Software antivirus (Analytics Platform System)
 author: barbkess
 ms.author: barbkess
-manager: jhubbard
+manager: craigg
 ms.prod: analytics-platform-system
 ms.prod_service: mpp-data-warehouse
-ms.service: 
-ms.component: 
+ms.service: ''
+ms.component: ''
 ms.technology: mpp-data-warehouse
-ms.custom: 
+ms.custom: ''
 ms.date: 01/05/2017
 ms.reviewer: na
 ms.suite: sql
 ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: 60ab9a88-d339-4917-a38b-f9481aef38fd
-caps.latest.revision: "29"
-ms.openlocfilehash: 1733ec6be50d839284fa147eb1cf5c1660b77190
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+caps.latest.revision: 29
+ms.openlocfilehash: 27e3bc7eae50c0418c0dcb4df99565b3f0edeadf
+ms.sourcegitcommit: 9351e8b7b68f599a95fb8e76930ab886db737e5f
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 04/06/2018
 ---
 # <a name="antivirus-software"></a>Software antivirus
 Si su centro de datos requiere el software antivirus, siga estas instrucciones para instalar el software antivirus en el sistema de la plataforma de análisis. Se recomienda no instalar el software antivirus a menos que sea un requisito estricto de su centro de datos.  
@@ -58,7 +58,7 @@ Para instalar el software antivirus en las máquinas virtuales, excluya la sigui
   
 -   G:\  
   
-***appliance_domain*-AD01** y  ***appliance_domain*-AD02**  
+***appliance_domain *-AD01** y ***appliance_domain *-AD02**  
   
 -   Sin restricciones  
   
@@ -68,11 +68,11 @@ Para instalar el software antivirus en las máquinas virtuales, excluya la sigui
   
 -   G:\  
   
-***appliance_domain*- VMM**  
+***appliance_domain*-VMM**  
   
 -   Sin restricciones  
   
-***appliance_domain*- WDS**  
+***appliance_domain*-WDS**  
   
 -   Sin restricciones  
   
@@ -81,5 +81,5 @@ Para instalar el software antivirus en las máquinas virtuales, excluya la sigui
 -   C:\iscsitarget  
   
 ## <a name="see-also"></a>Vea también  
-[Tareas de administración de dispositivo &#40; Sistema de la plataforma de análisis &#41;](appliance-management-tasks.md)  
+[Tareas de administración de dispositivo &#40;sistema de la plataforma de análisis&#41;](appliance-management-tasks.md)  
   

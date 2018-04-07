@@ -1,30 +1,31 @@
 ---
-title: "Configuración (GUI) (SybaseToSQL) del proyecto | Documentos de Microsoft"
-ms.custom: 
+title: Configuración (GUI) (SybaseToSQL) del proyecto | Documentos de Microsoft
+ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql-non-specified
 ms.prod_service: sql-tools
-ms.service: 
+ms.service: ''
 ms.component: ssma-sybase
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: sql-ssma
-ms.tgt_pltfrm: 
+ms.technology:
+- sql-ssma
+ms.tgt_pltfrm: ''
 ms.topic: article
 applies_to:
 - Azure SQL Database
 - SQL Server
 ms.assetid: cbd6ddc9-8abd-4fa9-bffd-631e54894ce8
-caps.latest.revision: "3"
+caps.latest.revision: 3
 author: Shamikg
 ms.author: Shamikg
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 476fd7243dbba4e17fcc77ece24b21a59c10f5d3
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: 2a0f7419f4484cb55698d0b1817cfec5a009ed86
+ms.sourcegitcommit: 9351e8b7b68f599a95fb8e76930ab886db737e5f
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 04/06/2018
 ---
 # <a name="project-settings-gui-sybasetosql"></a>Configuración del proyecto (GUI) (SybaseToSQL)
 La configuración del proyecto de interfaz gráfica de usuario le permite configurar la aparecen de los datos en el **datos** ficha y si se debe mostrar el informe de evaluación después de la conversión o no.  
@@ -35,7 +36,7 @@ El panel de la interfaz gráfica de usuario está disponible en la **configuraci
   
 -   Use la **configuración de proyecto predeterminada** cuadro de diálogo para establecer opciones de interfaz de usuario para todos los proyectos. Para acceder a la configuración de la interfaz gráfica de usuario, en la **herramientas** menú, seleccione **la configuración predeterminada del proyecto**, seleccione el tipo de proyecto de migración para el que se requiere para puede ver o cambiar de configuración **versión de destino de migración** de lista desplegable y, a continuación, haga clic en **GUI** en la parte inferior del panel izquierdo.  
   
-## <a name="options"></a>.  
+## <a name="options"></a>Opciones  
 **Número máximo de filas de origen**  
 Configura el número de filas de datos que se muestran en la **datos** pestaña de la tabla de origen seleccionado.  
   

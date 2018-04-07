@@ -2,25 +2,25 @@
 title: Estado de mantenimiento del dispositivo de monitor (Analytics Platform System)
 author: barbkess
 ms.author: barbkess
-manager: jhubbard
+manager: craigg
 ms.prod: analytics-platform-system
 ms.prod_service: mpp-data-warehouse
-ms.service: 
-ms.component: 
+ms.service: ''
+ms.component: ''
 ms.technology: mpp-data-warehouse
-ms.custom: 
+ms.custom: ''
 ms.date: 01/05/2017
 ms.reviewer: na
 ms.suite: sql
 ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: 91132e3c-3137-4670-adaa-8a7b234fb8d2
-caps.latest.revision: "12"
-ms.openlocfilehash: d83c3d35c4cf65ebf714b44bc9db7db36b11f818
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+caps.latest.revision: 12
+ms.openlocfilehash: 346e7f00973a59ce23ebe4fb4e018157c7a03c84
+ms.sourcegitcommit: 9351e8b7b68f599a95fb8e76930ab886db737e5f
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 04/06/2018
 ---
 # <a name="monitor-appliance-health-state"></a>Monitor de estado de dispositivo
 En este tema se explica cómo supervisar el estado de un dispositivo PDW de SQL Server mediante la consola de administración, o consultando directamente las vistas de administración dinámica de SQL Server PDW.  
@@ -37,7 +37,7 @@ Para recuperar el estado del componente mediante el uso de la consola de adminis
   
 2.  En la página de estado de dispositivo, haga clic en un nodo específico para ver los detalles del nodo.  
   
-    ![Estado de consola de administración de PDW](./media/monitor-appliance-health-state/SQL_Server_PDW_AdminConsol_State.png "SQL_Server_PDW_AdminConsol_State")  
+    ![PDW Admin Console State](./media/monitor-appliance-health-state/SQL_Server_PDW_AdminConsol_State.png "SQL_Server_PDW_AdminConsol_State")  
   
 ### <a name="monitor-component-status-by-using-system-views"></a>Supervisar el estado de componente mediante el uso de vistas del sistema  
 Para recuperar el estado del componente mediante el uso de vistas del sistema, use [sys.dm_pdw_component_health_status](../relational-databases/system-dynamic-management-views/sys-dm-pdw-component-health-status-transact-sql.md). Por ejemplo, la consulta siguiente recupera el estado de todos los componentes.  
@@ -75,7 +75,7 @@ ORDER BY
   
 Posibles valores devueltos para la propiedad de estado son:  
   
--   Vale  
+-   Ok  
   
 -   No críticos  
   
@@ -98,5 +98,5 @@ El **[update_time]** columna muestra la última vez que el componente se sondeó
   
 ## <a name="see-also"></a>Vea también  
 <!-- MISSING LINKS [Common Metadata Query Examples &#40;SQL Server PDW&#41;](../sqlpdw/common-metadata-query-examples-sql-server-pdw.md)  -->  
-[Supervisión de dispositivo &#40; Sistema de la plataforma de análisis &#41;](appliance-monitoring.md)  
+[Supervisión de dispositivo &#40;sistema de la plataforma de análisis&#41;](appliance-monitoring.md)  
   

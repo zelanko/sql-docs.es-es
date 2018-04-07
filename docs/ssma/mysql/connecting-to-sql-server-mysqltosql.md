@@ -2,14 +2,15 @@
 title: Conectarse a SQL Server (MySQLToSQL) | Documentos de Microsoft
 ms.prod: sql-non-specified
 ms.prod_service: sql-tools
-ms.service: 
+ms.service: ''
 ms.component: ssma-mysql
-ms.custom: 
+ms.custom: ''
 ms.date: 01/19/2017
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: sql-ssma
-ms.tgt_pltfrm: 
+ms.technology:
+- sql-ssma
+ms.tgt_pltfrm: ''
 ms.topic: article
 applies_to:
 - Azure SQL Database
@@ -18,16 +19,16 @@ helpviewer_keywords:
 - connecting to SQL Server 2008, SQL Server permission
 - connecting to SQL Server 2008, synchronization
 ms.assetid: 08233267-693e-46e6-9ca3-3a3dfd3d2be7
-caps.latest.revision: "18"
+caps.latest.revision: 18
 author: Shamikg
 ms.author: Shamikg
-manager: jhubbard
+manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: ed92b4a6b8b54e797f6dd623153ea677743a6c7b
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: d35db5eb35e4e27a2ea9724cdc2d5d017a8e02e8
+ms.sourcegitcommit: 9351e8b7b68f599a95fb8e76930ab886db737e5f
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 04/06/2018
 ---
 # <a name="connecting-to-sql-server-mysqltosql"></a>Conectarse a SQL Server (MySQLToSQL)
 Para migrar las bases de datos de MySQL a SQL Server, debe conectarse a la instancia de destino de SQL Server. Cuando se conecta, SSMA obtiene metadatos acerca de todas las bases de datos en la instancia de SQL Server y muestra los metadatos de la base de datos en el Explorador de metadatos de SQL Server. SSMA almacena la información de la instancia de SQL Server están conectados a, pero no almacena las contraseñas.  
@@ -46,7 +47,7 @@ La cuenta que se usa para conectarse a SQL Server requiere permisos diferentes d
 ## <a name="establishing-a-sql-server-connection"></a>Establecer una conexión con SQL Server  
 Para convertir objetos de base de datos de MySQL a sintaxis de SQL Server, debe establecer una conexión a la instancia de SQL Server donde van a migrar la base de datos de MySQL o bases de datos.  
   
-Al definir las propiedades de conexión, también se especifique la base de datos que se migrarán los objetos y datos. Puede personalizar esta asignación en el nivel de esquema de MySQL después de conectarse a SQL Server. Para obtener más información, vea [asignación de bases de datos de MySQL a esquemas de SQL Server &#40; MySQLToSQL &#41;](../../ssma/mysql/mapping-mysql-databases-to-sql-server-schemas-mysqltosql.md)  
+Al definir las propiedades de conexión, también se especifique la base de datos que se migrarán los objetos y datos. Puede personalizar esta asignación en el nivel de esquema de MySQL después de conectarse a SQL Server. Para obtener más información, consulte [asignación de bases de datos de MySQL a SQL Server esquemas &#40;MySQLToSQL&#41;](../../ssma/mysql/mapping-mysql-databases-to-sql-server-schemas-mysqltosql.md)  
   
 > [!IMPORTANT]  
 > Antes de intentar conectarse a SQL Server, asegúrese de la instancia de SQL Server se está ejecutando y puede aceptar conexiones.  
@@ -116,14 +117,14 @@ Metadatos acerca de las bases de datos de SQL Server no se actualizan automátic
 ## <a name="next-step"></a>Paso siguiente  
 El siguiente paso de la migración depende de las necesidades del proyecto:  
   
--   Para personalizar la asignación entre los esquemas y las bases de datos de SQL Server y MySQL esquemas, vea [bases de datos de asignación de MySQL a esquemas de SQL Server &#40; MySQLToSQL &#41;](../../ssma/mysql/mapping-mysql-databases-to-sql-server-schemas-mysqltosql.md)  
+-   Para personalizar la asignación entre los esquemas y las bases de datos de SQL Server y MySQL esquemas, vea [bases de datos de asignación de MySQL a SQL Server esquemas &#40;MySQLToSQL&#41;](../../ssma/mysql/mapping-mysql-databases-to-sql-server-schemas-mysqltosql.md)  
   
--   Para personalizar las opciones de configuración para los proyectos, vea [establecer las opciones del proyecto &#40; MySQLToSQL &#41;](../../ssma/mysql/setting-project-options-mysqltosql.md)  
+-   Para personalizar las opciones de configuración para los proyectos, vea [establecer las opciones del proyecto &#40;MySQLToSQL&#41;](../../ssma/mysql/setting-project-options-mysqltosql.md)  
   
--   Para personalizar la asignación de tipos de datos de origen y de destino, vea [MySQL de asignación y tipos de datos de SQL Server &#40; MySQLToSQL &#41;](../../ssma/mysql/mapping-mysql-and-sql-server-data-types-mysqltosql.md)  
+-   Para personalizar la asignación de tipos de datos de origen y de destino, vea [MySQL de asignación y tipos de datos de SQL Server &#40;MySQLToSQL&#41;](../../ssma/mysql/mapping-mysql-and-sql-server-data-types-mysqltosql.md)  
   
--   Si no tiene que realizar cualquiera de estas tareas, puede convertir las definiciones de objeto de base de datos MySQL en definiciones de objetos de SQL Server. Para obtener más información, vea [convertir bases de datos de MySQL &#40; MySQLToSQL &#41;](../../ssma/mysql/converting-mysql-databases-mysqltosql.md)  
+-   Si no tiene que realizar cualquiera de estas tareas, puede convertir las definiciones de objeto de base de datos MySQL en definiciones de objetos de SQL Server. Para obtener más información, consulte [convertir bases de datos de MySQL &#40;MySQLToSQL&#41;](../../ssma/mysql/converting-mysql-databases-mysqltosql.md)  
   
 ## <a name="see-also"></a>Vea también  
-[Migrar bases de datos de MySQL a SQL Server: base de datos de SQL Azure &#40; MySQLToSql &#41;](../../ssma/mysql/migrating-mysql-databases-to-sql-server-azure-sql-db-mysqltosql.md)  
+[Bases de datos de migración desde MySQL a SQL Server: base de datos de SQL Azure &#40;MySQLToSql&#41;](../../ssma/mysql/migrating-mysql-databases-to-sql-server-azure-sql-db-mysqltosql.md)  
   

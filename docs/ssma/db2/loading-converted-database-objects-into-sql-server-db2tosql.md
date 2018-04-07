@@ -2,29 +2,30 @@
 title: Cargar convertido la base de datos objetos en SQL Server (DB2ToSQL) | Documentos de Microsoft
 ms.prod: sql-non-specified
 ms.prod_service: sql-tools
-ms.service: 
+ms.service: ''
 ms.component: ssma-db2
-ms.custom: 
+ms.custom: ''
 ms.date: 01/19/2017
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: sql-ssma
-ms.tgt_pltfrm: 
+ms.technology:
+- sql-ssma
+ms.tgt_pltfrm: ''
 ms.topic: article
 applies_to:
 - Azure SQL Database
 - SQL Server
 ms.assetid: f4ea1ced-9f9f-4a9d-88ab-81dbab64adc3
-caps.latest.revision: "6"
+caps.latest.revision: 6
 author: Shamikg
 ms.author: Shamikg
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: d662bcab0fe8c804b75f7908ca6fc04f2e96a650
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: 3997b2e1284513d92c76aefbb582f6cbebb81c7b
+ms.sourcegitcommit: 9351e8b7b68f599a95fb8e76930ab886db737e5f
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 04/06/2018
 ---
 # <a name="loading-converted-database-objects-into-sql-server-db2tosql"></a>Cargar convertido la base de datos objetos en SQL Server (DB2ToSQL)
 Después de haber convertido esquemas de DB2 a [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)], puede cargar los objetos de base de datos resultante en [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]. Se puede tener SSMA crear los objetos, o puede incluir los objetos y ejecutar las secuencias de comandos por sí mismo. Además, SSMA permite actualizar los metadatos de destino con el contenido real de [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] base de datos.  
@@ -99,7 +100,7 @@ Puede ejecutar una secuencia de comandos o instrucciones individuales, en [!INCL
   
 1.  En el [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull_md.md)] **archivo** menú, elija **abiertos**y, a continuación, haga clic en **archivo**.  
   
-2.  En el **abiertos** cuadro de diálogo, seleccione el archivo de script y, a continuación,[!INCLUDE[clickOK](../../includes/clickok_md.md)]  
+2.  En el **abiertos** cuadro de diálogo, seleccione el archivo de script y, a continuación, [!INCLUDE[clickOK](../../includes/clickok_md.md)]  
   
 3.  Para ejecutar el script completo, presione el **F5** clave.  
   
@@ -116,5 +117,5 @@ Después de haber cargado los objetos de base de datos convertida en [!INCLUDE[s
 El siguiente paso del proceso de migración consiste en [migrar datos de DB2 en SQL Server](http://msdn.microsoft.com/en-us/86cbd39f-6dac-409a-9ce1-7dd54403f84b).  
   
 ## <a name="see-also"></a>Vea también  
-[Migrar datos de DB2 en SQL Server &#40; DB2ToSQL &#41;](../../ssma/db2/migrating-db2-data-into-sql-server-db2tosql.md)  
+[Migrar datos de DB2 en SQL Server &#40;DB2ToSQL&#41;](../../ssma/db2/migrating-db2-data-into-sql-server-db2tosql.md)  
   

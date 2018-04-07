@@ -1,30 +1,31 @@
 ---
-title: "Instalación de componentes SSMA en SQL Server (SybaseToSQL) | Documentos de Microsoft"
-ms.custom: 
+title: Instalación de componentes SSMA en SQL Server (SybaseToSQL) | Documentos de Microsoft
+ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql-non-specified
 ms.prod_service: sql-tools
-ms.service: 
+ms.service: ''
 ms.component: ssma-sybase
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: sql-ssma
-ms.tgt_pltfrm: 
+ms.technology:
+- sql-ssma
+ms.tgt_pltfrm: ''
 ms.topic: article
 applies_to:
 - Azure SQL Database
 - SQL Server
 ms.assetid: 5ad9e12c-2cdb-4dd2-8703-05a23242d19d
-caps.latest.revision: "10"
+caps.latest.revision: 10
 author: Shamikg
 ms.author: Shamikg
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: d27ca7f0bc45c1d81118f0441d2ee4ff751d4c95
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: 97c0e5dc529a6563212dc3ddedce5014ccfd463a
+ms.sourcegitcommit: 9351e8b7b68f599a95fb8e76930ab886db737e5f
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 04/06/2018
 ---
 # <a name="installing-ssma-components-on-sql-server-sybasetosql"></a>Instalación de componentes SSMA en SQL Server (SybaseToSQL)
 Además de instalar SSMA, para usar la migración de datos del lado servidor, debe instalar también componentes en el equipo que está ejecutando [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]. Estos componentes incluyen el módulo de extensión SSMA, que admite la migración de datos y proveedores de Sybase para habilitar la conectividad de servidor a servidor.  
@@ -42,7 +43,7 @@ Puede instalar el paquete de extensión cualquier momento antes de migrar datos 
   
 **Para instalar el módulo de extensión**  
   
-1.  Copie SSMA para Sybase extensión Pack. *n*. Install.exe, donde  *n*  es el número de compilación, en el equipo que está ejecutando [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)].  
+1.  Copie SSMA para Sybase extensión Pack. *n*. Install.exe, donde *n* es el número de compilación, en el equipo que está ejecutando [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)].  
   
 2.  Haga doble clic en SSMA para Sybase extensión Pack. *n*. Install.exe.  
   
@@ -66,7 +67,7 @@ Puede instalar el paquete de extensión cualquier momento antes de migrar datos 
   
     Autenticación de Windows usará las credenciales de Windows para intentar iniciar sesión en la instancia de [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]. Si selecciona [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] autenticación, debe escribir una [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] nombre de inicio de sesión y una contraseña.  
   
-10. En la página Administrar el servidor, seleccione **instalar bases de datos de utilidades**  *n* , donde  *n*  es el número de versión y, a continuación, haga clic en **siguiente**.  
+10. En la página Administrar el servidor, seleccione **instalar bases de datos de utilidades** *n*, donde *n* es el número de versión y, a continuación, haga clic en **siguiente**.  
   
     El **sysdb** se crea la base de datos y los procedimientos almacenados se crean en esa base de datos.  
   
@@ -117,6 +118,6 @@ Las siguientes instrucciones proporcionan los pasos de instalación básico para
 4.  Comprobar las características seleccionadas y, a continuación, haga clic en **finalizar** para instalar el proveedor de datos.  
   
 ## <a name="see-also"></a>Vea también  
-[Instalación de SSMA para Sybase cliente &#40; SybaseToSQL &#41;](../../ssma/sybase/installing-ssma-for-sybase-client-sybasetosql.md)  
-[Migrar bases de datos de ASE de Sybase a SQL Server: base de datos de SQL Azure &#40; SybaseToSQL &#41;](../../ssma/sybase/migrating-sybase-ase-databases-to-sql-server-azure-sql-db-sybasetosql.md)  
+[Instalación de SSMA para Sybase cliente &#40;SybaseToSQL&#41;](../../ssma/sybase/installing-ssma-for-sybase-client-sybasetosql.md)  
+[Migrar bases de datos de Sybase ASE a SQL Server: base de datos de SQL Azure &#40;SybaseToSQL&#41;](../../ssma/sybase/migrating-sybase-ase-databases-to-sql-server-azure-sql-db-sybasetosql.md)  
   

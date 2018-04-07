@@ -1,30 +1,31 @@
 ---
-title: "Introducción a SSMA para la consola de DB2 (DB2ToSQL) | Documentos de Microsoft"
+title: Introducción a SSMA para la consola de DB2 (DB2ToSQL) | Documentos de Microsoft
 ms.prod: sql-non-specified
 ms.prod_service: sql-tools
-ms.service: 
+ms.service: ''
 ms.component: ssma-db2
-ms.custom: 
+ms.custom: ''
 ms.date: 01/19/2017
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: sql-ssma
-ms.tgt_pltfrm: 
+ms.technology:
+- sql-ssma
+ms.tgt_pltfrm: ''
 ms.topic: article
 applies_to:
 - Azure SQL Database
 - SQL Server
 ms.assetid: f245c017-023e-4880-8721-8908d339525e
-caps.latest.revision: "5"
+caps.latest.revision: 5
 author: Shamikg
 ms.author: Shamikg
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: cfffdb6df256ed0ee591965b1d1ac98cf3c1d721
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: ec1529fcf61472119612062819a16190b7fe3dfd
+ms.sourcegitcommit: 9351e8b7b68f599a95fb8e76930ab886db737e5f
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 04/06/2018
 ---
 # <a name="getting-started-with-ssma--for-db2-console-db2tosql"></a>Introducción a SSMA para la consola de DB2 (DB2ToSQL)
 Esta sección describe el procedimiento para iniciar y empezar a trabajar con la aplicación de consola de DB2. También se muestran en este documento, se utilizan las convenciones en una ventana de salida de consola SSMA típica.  
@@ -41,13 +42,13 @@ Utilice los pasos siguientes para iniciar la aplicación de consola SSMA:
 ## <a name="procedure-for-using-the-ssma-console"></a>Procedimiento para usar la consola SSMA  
 Después de la consola se inicia correctamente en el sistema de Windows, podría utilizar los pasos siguientes para trabajar con ella:  
   
-1.  Configurar la consola SSMA a través de los archivos de script. Para obtener más información acerca de esta sección, vea [crear archivos de Script &#40; DB2ToSQL &#41;](../../ssma/db2/creating-script-files-db2tosql.md) .  
+1.  Configurar la consola SSMA a través de los archivos de script. Para obtener más información acerca de esta sección, vea [crear archivos de Script &#40;DB2ToSQL&#41; ](../../ssma/db2/creating-script-files-db2tosql.md) .  
   
-2.  [Crear archivos de valor de la Variable &#40; DB2ToSQL &#41;](../../ssma/db2/creating-variable-value-files-db2tosql.md)  
+2.  [Crear archivos de valor de la Variable &#40;DB2ToSQL&#41;](../../ssma/db2/creating-variable-value-files-db2tosql.md)  
   
-3.  [Crear los archivos de conexión de servidor &#40; DB2ToSQL &#41;](../../ssma/db2/creating-the-server-connection-files-db2tosql.md)  
+3.  [Crear los archivos de conexión de servidor &#40;DB2ToSQL&#41;](../../ssma/db2/creating-the-server-connection-files-db2tosql.md)  
   
-4.  [Ejecutar la consola SSMA &#40; DB2ToSQL &#41; ](../../ssma/db2/executing-the-ssma-console-db2tosql.md) según sus necesidades de proyecto  
+4.  [Ejecutar la consola SSMA &#40;DB2ToSQL&#41; ](../../ssma/db2/executing-the-ssma-console-db2tosql.md) según sus necesidades de proyecto  
   
 Características adicionales:  
   
@@ -58,7 +59,7 @@ Características adicionales:
 ## <a name="ssma-console-output-conventions"></a>Convenciones de salida de consola SSMA  
 Al ejecutar los comandos de script SSMA y opciones, el programa de consola muestra los resultados y mensajes (información, error, etc.) para el usuario en la consola o si es necesario, se redirige a un archivo de salida xml. Cada tipo de mensaje en la salida se especifica mediante un color único. Por ejemplo, el mensaje de texto en color blanco denota secuencias de comandos de archivo; uno de color verde representa un símbolo del sistema de entrada del usuario y así sucesivamente.  
   
-![La consola ssma_oracle](../../ssma/db2/media/ssmaconsoleoutput_oracle.jpg "consola ssma_oracle")  
+![SSMA Console Output_Oracle](../../ssma/db2/media/ssmaconsoleoutput_oracle.jpg "SSMA Console Output_Oracle")  
   
 Interpretación de color de la salida de la consola en la tabla siguiente:  
   

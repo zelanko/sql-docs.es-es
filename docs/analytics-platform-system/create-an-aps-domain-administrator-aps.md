@@ -2,25 +2,25 @@
 title: Crear un administrador de dominio de puntos de acceso (AP)
 author: barbkess
 ms.author: barbkess
-manager: jhubbard
+manager: craigg
 ms.prod: analytics-platform-system
 ms.prod_service: mpp-data-warehouse
-ms.service: 
-ms.component: 
+ms.service: ''
+ms.component: ''
 ms.technology: mpp-data-warehouse
-ms.custom: 
+ms.custom: ''
 ms.date: 01/05/2017
 ms.reviewer: na
 ms.suite: sql
 ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: ed52bf78-2b0a-4252-98a7-8c2805e22d3d
-caps.latest.revision: 
-ms.openlocfilehash: 0ebc616d28fe734b9dac52303641390ce9bc0957
-ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
+caps.latest.revision: 7
+ms.openlocfilehash: 6842992931ba35f450d49d6db9beb803dce6b73a
+ms.sourcegitcommit: 9351e8b7b68f599a95fb8e76930ab886db737e5f
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/15/2018
+ms.lasthandoff: 04/06/2018
 ---
 # <a name="create-an-aps-domain-administrator"></a>Crear un administrador de dominio APS
 Algunas operaciones requieren privilegios de administrador de dominio de sistema de la plataforma de análisis. Explica cómo crear administradores de dominio de aplicación adicionales.  
@@ -54,5 +54,5 @@ Tener permisos suficientes para configurar todos los nodos APS, el usuario que e
     Esto agrega el nuevo usuario a la **Admins. del dominio** grupo y la **PdwControlNodeAccess** grupo. Haga clic en **Aceptar**.  
   
 ## <a name="see-also"></a>Vea también  
-[Inicie el Administrador de configuración &#40; Sistema de la plataforma de análisis &#41;](launch-the-configuration-manager.md)  
+[Inicie el Administrador de configuración &#40;sistema de la plataforma de análisis&#41;](launch-the-configuration-manager.md)  
   

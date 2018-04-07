@@ -1,30 +1,31 @@
 ---
-title: "Configuración (conversión) (SybaseToSQL) del proyecto | Documentos de Microsoft"
-ms.custom: 
+title: Configuración (conversión) (SybaseToSQL) del proyecto | Documentos de Microsoft
+ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql-non-specified
 ms.prod_service: sql-tools
-ms.service: 
+ms.service: ''
 ms.component: ssma-sybase
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: sql-ssma
-ms.tgt_pltfrm: 
+ms.technology:
+- sql-ssma
+ms.tgt_pltfrm: ''
 ms.topic: article
 applies_to:
 - Azure SQL Database
 - SQL Server
 ms.assetid: eeb80fa5-f530-4f21-beee-25f5a4b8ace6
-caps.latest.revision: "8"
+caps.latest.revision: 8
 author: Shamikg
 ms.author: Shamikg
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 64845d9450c412ca975d541f1171a725271ec502
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: c6822c6f320bf7057eb05f75719bf19edfb4d24e
+ms.sourcegitcommit: 9351e8b7b68f599a95fb8e76930ab886db737e5f
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 04/06/2018
 ---
 # <a name="project-settings-conversion-sybasetosql"></a>Configuración del proyecto (conversión) (SybaseToSQL)
 La página de conversión de la **configuración del proyecto** cuadro de diálogo contiene la configuración que permiten personalizar cómo SSMA convierte la sintaxis de Sybase Adaptive Server Enterprise (ASE) a [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] o la sintaxis de SQL Azure.  
@@ -271,7 +272,7 @@ Al seleccionar un modo de conversión en el **modo** cuadro, SSMA aplica la sigu
 **El modo predeterminado/Optimistic/completo:** marca con error  
   
 **Número de mensajes de base de RAISERROR**  
-Mensajes de usuario de ASE se almacenan en cada base de datos. [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]mensajes de usuario centralmente se almacenan y están disponibles a través de la **sys.messages** vista de catálogo. Además se inician los mensajes de usuario ASE al 20000, pero [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] mensajes de error de inician en 50001.  
+Mensajes de usuario de ASE se almacenan en cada base de datos. [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] mensajes de usuario centralmente se almacenan y están disponibles a través de la **sys.messages** vista de catálogo. Además se inician los mensajes de usuario ASE al 20000, pero [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] mensajes de error de inician en 50001.  
   
 Esta configuración especifica el número para agregar el número de mensajes de usuario ASE para convertirlo en un [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] mensaje de usuario. Si su [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] tiene mensajes de usuario en el **sys.messages** vista de catálogo, es posible que deba cambiar este número a un valor superior. Esto es por lo que los números de mensaje convertido no entren en conflicto con los números de mensajes existente.  
   
@@ -334,7 +335,7 @@ Al seleccionar un modo de conversión en el **modo** cuadro, SSMA aplica la sigu
 **Modo completo:** Replace, función  
   
 **Función DATALENGTH**  
-[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]O SQL Azure y ASE difieren en el valor devuelto por la función DATALENGTH cuando el valor es un único espacio. En este caso, [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]/ SQL Azure devuelve 0 y ASE devuelve 1.  
+[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] O SQL Azure y ASE difieren en el valor devuelto por la función DATALENGTH cuando el valor es un único espacio. En este caso, [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]/ SQL Azure devuelve 0 y ASE devuelve 1.  
   
 -   Para utilizar el comportamiento de ASE, seleccione **Replace, función**. Todas las llamadas a función DATALENGTH se sustituirán por la expresión CASE para emular el comportamiento de Sybase ASE.  
   
@@ -455,5 +456,5 @@ Crea una nueva clave principal en la [!INCLUDE[ssNoVersion](../../includes/ssnov
 > Cuando se conecta a SQL Azure, es True de forma predeterminada.  
   
 ## <a name="see-also"></a>Vea también  
-[Referencia de la interfaz de usuario &#40; SybaseToSQL &#41;](../../ssma/sybase/user-interface-reference-sybasetosql.md)  
+[Referencia de la interfaz de usuario &#40;SybaseToSQL&#41;](../../ssma/sybase/user-interface-reference-sybasetosql.md)  
   

@@ -1,30 +1,31 @@
 ---
-title: "Evaluar la base de datos SAP ASE de objetos para la conversión (SybaseToSQL) | Documentos de Microsoft"
-ms.custom: 
+title: Evaluar la base de datos SAP ASE de objetos para la conversión (SybaseToSQL) | Documentos de Microsoft
+ms.custom: ''
 ms.date: 12/01/2017
 ms.prod: sql-non-specified
 ms.prod_service: sql-tools
-ms.service: 
+ms.service: ''
 ms.component: ssma-sybase
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: sql-ssma
-ms.tgt_pltfrm: 
+ms.technology:
+- sql-ssma
+ms.tgt_pltfrm: ''
 ms.topic: article
 applies_to:
 - Azure SQL Database
 - SQL Server
 ms.assetid: eb996b7c-1eef-4f73-b5e6-2fa6faf7336c
-caps.latest.revision: "7"
+caps.latest.revision: 7
 author: Shamikg
 ms.author: Shamikg
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: e22710f19c00a846c33e1dd378e7b0de5b8526e9
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: 99342797792c8b57eff144e8c5a611bbace2776d
+ms.sourcegitcommit: 9351e8b7b68f599a95fb8e76930ab886db737e5f
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 04/06/2018
 ---
 # <a name="assessing-sap-ase-database-objects-for-conversion-sybasetosql"></a>Evaluar los objetos de base de datos de SAP ASE de conversión (SybaseToSQL)
 Antes de cargar los objetos y migrar datos a [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] o SQL Azure, debe determinar la complejidad de la migración y cuánto tiempo debe durar la. SSMA puede crear un informe de evaluación que muestra el porcentaje de objetos y los procedimientos que se convierten correctamente en [!INCLUDE[tsql](../../includes/tsql_md.md)]. SSMA también le permite ver los problemas específicos que se pueden producir errores de conversión.  
@@ -79,13 +80,13 @@ El **paneles de estadísticas de conversión** muestra las estadísticas de conv
   
     -   Actualizar la sintaxis de ASE de SSMA. Puede actualizar la sintaxis solo para los procedimientos almacenados y desencadenadores. Para actualizar la sintaxis, seleccione el objeto en el panel del explorador de metadatos de Sybase, haga clic en el **SQL** ficha y, a continuación, edite el código SQL. Si mientras navega sale del elemento, deberá guardar la sintaxis actualizada. Ver los errores para el objeto en el **informe** ficha.  
   
-    -   En ASE, puede modificar el objeto de ASE para quitar o revisar el código problemático. Para cargar el código actualizado en SSMA, tendrá que actualizar los metadatos. Para obtener más información, vea [conectarse para Sybase ASE &#40; SybaseToSQL &#41; ](../../ssma/sybase/connecting-to-sybase-ase-sybasetosql.md).  
+    -   En ASE, puede modificar el objeto de ASE para quitar o revisar el código problemático. Para cargar el código actualizado en SSMA, tendrá que actualizar los metadatos. Para obtener más información, consulte [conectarse para Sybase ASE &#40;SybaseToSQL&#41;](../../ssma/sybase/connecting-to-sybase-ase-sybasetosql.md).  
   
     -   Puede excluir el objeto de la migración. En [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] o el Explorador de metadatos de SQL Azure y el Explorador de metadatos de Sybase, desactive la casilla de verificación situada junto al elemento antes de cargar los objetos en [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] o SQL Azure y migrar datos de ASE.
   
 ## <a name="next-steps"></a>Pasos siguientes  
-[Convertir objetos de base de datos de ASE de SAP &#40; SybaseToSQL &#41;](../../ssma/sybase/converting-sybase-ase-database-objects-sybasetosql.md)  
+[Convertir objetos de base de datos de ASE de SAP &#40;SybaseToSQL&#41;](../../ssma/sybase/converting-sybase-ase-database-objects-sybasetosql.md)  
   
 ## <a name="see-also"></a>Vea también  
-[Migrar bases de datos de ASE de SAP para SQL Server: base de datos de SQL Azure &#40; SybaseToSQL &#41;](../../ssma/sybase/migrating-sybase-ase-databases-to-sql-server-azure-sql-db-sybasetosql.md)  
+[Migrar bases de datos de ASE de SAP para SQL Server: base de datos de SQL Azure &#40;SybaseToSQL&#41;](../../ssma/sybase/migrating-sybase-ase-databases-to-sql-server-azure-sql-db-sybasetosql.md)  
   

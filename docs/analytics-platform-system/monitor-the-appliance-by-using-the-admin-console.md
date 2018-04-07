@@ -1,34 +1,34 @@
 ---
-title: "Supervisar el dispositivo mediante la consola de administración (Analytics Platform System)"
+title: Supervisar el dispositivo mediante la consola de administración (Analytics Platform System)
 author: barbkess
 ms.author: barbkess
-manager: jhubbard
+manager: craigg
 ms.prod: analytics-platform-system
 ms.prod_service: mpp-data-warehouse
-ms.service: 
-ms.component: 
+ms.service: ''
+ms.component: ''
 ms.technology: mpp-data-warehouse
-ms.custom: 
+ms.custom: ''
 ms.date: 01/05/2017
 ms.reviewer: na
 ms.suite: sql
 ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: 294ba6ac-b1ff-46ea-ba32-d8b32cb4cdc2
-caps.latest.revision: "26"
-ms.openlocfilehash: db27003d4e1efd54a179551f585fb23ce9c0ed82
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+caps.latest.revision: 26
+ms.openlocfilehash: 8da883797f8e9d09de0a5d160fc3383caf181590
+ms.sourcegitcommit: 9351e8b7b68f599a95fb8e76930ab886db737e5f
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 04/06/2018
 ---
 # <a name="monitor-the-appliance-by-using-the-admin-console"></a>Supervisar el dispositivo mediante la consola de administración
 La consola de administración es una aplicación web de SQL Server PDW que presenta la información de estado, el estado y el rendimiento del equipo. Los usuarios conectarse a la consola de administración a través de Internet Explorer.  
   
 ## <a name="About"></a>Acerca de la consola de administración  
-![Inicio de la consola de dispositivo](./media/monitor-the-appliance-by-using-the-admin-console/SQL_Server_PDW_AdminConsol_ApplHome.png "SQL_Server_PDW_AdminConsol_ApplHome")  
+![Appliance Console Home](./media/monitor-the-appliance-by-using-the-admin-console/SQL_Server_PDW_AdminConsol_ApplHome.png "SQL_Server_PDW_AdminConsol_ApplHome")  
   
-**Dispositivo**  
+**Appliance**  
 Inicio  
 Proporciona un rápido resumen del estado del dispositivo.  
   
@@ -53,7 +53,7 @@ Muestra una lista de las consultas en ejecución y las consultas de completado r
 Cargas  
 Muestra carga planes, el estado actual de cargas PDW y errores relacionados, si lo hay.  
   
-Las copias de seguridad/restauraciones  
+Backups/Restores  
 Muestra un registro de PDW de copia de seguridad y las operaciones de restauración.  
   
 Mantenimiento  
@@ -64,7 +64,7 @@ Muestra las alertas de hardware y software.
 Recursos  
 Muestra una lista de bloqueos de recursos PDW y su estado actual.  
   
-Storage  
+Almacenamiento  
 Resume la utilización de almacenamiento PDW.  
   
 Monitor de rendimiento  
@@ -85,7 +85,7 @@ Muestra la topología de HDInsight con indicadores que muestran el estado de cad
   
 Muestra las alertas de hardware y software.  
   
-Storage  
+Almacenamiento  
 Resume la utilización de almacenamiento de HDInsight.  
   
 Monitor de rendimiento  
@@ -112,12 +112,12 @@ La consola de administración proporciona la capacidad para supervisar los sigui
 |-|-|  
 |**Tipo de información**|**Cómo obtener acceso a en la consola de administración**|  
 |Estado general del dispositivo|Haga clic en **estado de dispositivo** en el menú superior, o **inicio**.|  
-|Trabajos|Haga clic en **alertas**. Para obtener más información, vea [conceptos básicos sobre alertas de consola de administración &#40; Sistema de la plataforma de análisis &#41; ](understanding-admin-console-alerts.md).|  
+|Alertas|Haga clic en **alertas**. Para obtener más información, consulte [conceptos básicos sobre alertas de consola de administración &#40;Analytics Platform System&#41;](understanding-admin-console-alerts.md).|  
 |Componentes de dispositivo y su estado|Haga clic en **estado de dispositivo** en el menú superior, o **inicio**.|  
 |Solicitudes de monitor (incluidas las consultas, carga, las copias de seguridad y restauraciones)|Haga clic en **sesiones** para ver sesiones actualmente activas o recientes.<br /><br />Haga clic en **consultas** para ver consultas actualmente activas o recientes. La información mostrada para consultas incluye cargas, las copias de seguridad y restauraciones.<br /><br />Haga clic en **bloqueos** para ver los bloqueos activos.|  
 |Supervisar la información adicional de carga, las copias de seguridad y restauraciones.|Haga clic en **cargas** o **copias de seguridad/restauraciones**.|  
 |Información de rendimiento|Haga clic en **Monitor de rendimiento**.|  
   
 ## <a name="see-also"></a>Vea también  
-[Supervisión de dispositivo &#40; Sistema de la plataforma de análisis &#41;](appliance-monitoring.md)  
+[Supervisión de dispositivo &#40;sistema de la plataforma de análisis&#41;](appliance-monitoring.md)  
   

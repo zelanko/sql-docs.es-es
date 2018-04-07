@@ -1,30 +1,31 @@
 ---
-title: "Administración de contraseñas (AccessToSQL) | Documentos de Microsoft"
+title: Administración de contraseñas (AccessToSQL) | Documentos de Microsoft
 ms.prod: sql-non-specified
 ms.prod_service: sql-tools
-ms.service: 
+ms.service: ''
 ms.component: ssma-access
-ms.custom: 
+ms.custom: ''
 ms.date: 01/19/2017
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: sql-ssma
-ms.tgt_pltfrm: 
+ms.technology:
+- sql-ssma
+ms.tgt_pltfrm: ''
 ms.topic: article
 applies_to:
 - Azure SQL Database
 - SQL Server
 ms.assetid: b099d0f9-dd37-4c87-8b6f-ed0177881ea4
-caps.latest.revision: "13"
+caps.latest.revision: 13
 author: Shamikg
 ms.author: Shamikg
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 3f939dc06c04f0c2fb00022a688b8a2cc86e8a0b
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: 52b9f120a7025905630ffcf9762f4ce46b6abf52
+ms.sourcegitcommit: 9351e8b7b68f599a95fb8e76930ab886db737e5f
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 04/06/2018
 ---
 # <a name="managing-passwords-accesstosql"></a>Administración de contraseñas (AccessToSQL)
 Esta sección es acerca de cómo proteger las contraseñas de la base de datos y el procedimiento para importar o exportar entre servidores:  
@@ -42,7 +43,7 @@ Especifique una contraseña válida con uno de los tres métodos siguientes:
   
 1.  **Texto no cifrado:** escriba la contraseña de la base de datos en el atributo value del nodo 'contraseña'. Se encuentra bajo el nodo de definición de servidor en la sección de servidor del archivo de script o el archivo de conexión de servidor.  
   
-    Las contraseñas como texto no cifrado no son seguras. Por lo tanto, se producirá el siguiente mensaje de advertencia en la salida de la consola: *"servidor &lt;Id. de servidor&gt; contraseña está siempre en forma no segura como texto no cifrado, aplicación de consola SSMA proporciona una opción para proteger la contraseña a través de cifrado, vea securepassword: opción de archivo de ayuda SSMA para obtener más información."*  
+    Las contraseñas como texto no cifrado no son seguras. Por lo tanto, se producirá el siguiente mensaje de advertencia en la salida de la consola: *"servidor &lt;Id. de servidor&gt; contraseña está siempre en forma no segura como texto no cifrado, aplicación de consola SSMA proporciona una opción para proteger el contraseña mediante un cifrado, consulte securepassword: opción de SSMA archivo de ayuda para obtener más información".*  
   
     **Las contraseñas cifradas:** la contraseña especificada, en este caso, se almacena en un formato cifrado en el equipo local en ProtectedStorage.ssma.  
   

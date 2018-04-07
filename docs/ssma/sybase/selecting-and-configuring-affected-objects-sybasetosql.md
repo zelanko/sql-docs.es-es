@@ -21,13 +21,13 @@ ms.assetid: a219df74-543a-4aec-aeeb-79f90ac3e2ee
 caps.latest.revision: 8
 author: Shamikg
 ms.author: Shamikg
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 102de8f523d91c34369ca84a4577e5978934349d
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: a9871370dc3e6e8ca9d148a4df2435ce94286903
+ms.sourcegitcommit: 9351e8b7b68f599a95fb8e76930ab886db737e5f
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 04/06/2018
 ---
 # <a name="selecting-and-configuring-affected-objects-sybasetosql"></a>Seleccionar y configurar afectados objetos (SybaseToSQL)
 En esta página puede seleccionar tablas y claves externas, cambios en el que se deben comparar SSMA comprueba los resultados de ejecución para los objetos que haya elegido en el paso anterior. Además, puede personalizar los parámetros de comprobación.  
@@ -50,13 +50,13 @@ La pestaña de la tabla contiene la vista de cuadrícula de la tabla seleccionad
   
 -   Regla  
   
--   Valor predeterminado  
+-   Predeterminado  
   
 -   Identidad  
   
 -   Admisión de valores NULL  
   
-## <a name="sql"></a>SQL  
+## <a name="sql"></a>Sql  
 Pestaña SQL contiene la "crear una tabla" SQL de la tabla seleccionada.  
   
 ## <a name="data"></a>data  
@@ -126,9 +126,9 @@ Puede ver las instrucciones SELECT generadas por el evaluador de SSMA en el **co
 Puede editar las instrucciones SELECT para proporcionar comprobación personalizada. Para guardar los cambios de Sybase y en [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] instrucciones, use la **aplicar** botones en el origen y destino SQL, según corresponda.  
   
 ## <a name="next-step"></a>Paso siguiente  
-[Personalizar el orden de las llamadas &#40; SybaseToSQL &#41;](../../ssma/sybase/customizing-calls-order-sybasetosql.md)  
+[Personalizar el orden de las llamadas &#40;SybaseToSQL&#41;](../../ssma/sybase/customizing-calls-order-sybasetosql.md)  
   
 ## <a name="see-also"></a>Vea también  
-[Ejecutar casos de prueba &#40; SybaseToSQL &#41;](../../ssma/sybase/running-test-cases-sybasetosql.md)  
-[Pruebas migran objetos de base de datos &#40; SybaseToSQL &#41;](../../ssma/sybase/testing-migrated-database-objects-sybasetosql.md)  
+[Ejecutar casos de prueba &#40;SybaseToSQL&#41;](../../ssma/sybase/running-test-cases-sybasetosql.md)  
+[Pruebas de objetos de base de datos migran &#40;SybaseToSQL&#41;](../../ssma/sybase/testing-migrated-database-objects-sybasetosql.md)  
   

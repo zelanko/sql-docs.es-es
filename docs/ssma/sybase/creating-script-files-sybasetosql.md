@@ -1,15 +1,16 @@
 ---
 title: Crear archivos de Script (SybaseToSQL) | Documentos de Microsoft
-ms.custom: 
+ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql-non-specified
 ms.prod_service: sql-tools
-ms.service: 
+ms.service: ''
 ms.component: ssma-sybase
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: sql-ssma
-ms.tgt_pltfrm: 
+ms.technology:
+- sql-ssma
+ms.tgt_pltfrm: ''
 ms.topic: article
 applies_to:
 - Azure SQL Database
@@ -20,16 +21,16 @@ helpviewer_keywords:
 - Sybase Console,Script File Validation
 - Sybase Console,Server Connection Parameters
 ms.assetid: e6baf106-abbd-4200-b3de-33b4b4f1b294
-caps.latest.revision: "24"
+caps.latest.revision: 24
 author: Shamikg
 ms.author: Shamikg
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 27c1d881b13dccecbe7d8fb66f8ea47376895f04
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: 9639d7527d910e61cd799ab616f10eb20b5262e4
+ms.sourcegitcommit: 9351e8b7b68f599a95fb8e76930ab886db737e5f
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 04/06/2018
 ---
 # <a name="creating-script-files-sybasetosql"></a>Crear archivos de Script (SybaseToSQL)
 El primer paso antes de iniciar la aplicación de consola SSMA consiste en crear el archivo de script y si es necesario crear el archivo de valor de la variable y el archivo de conexión de servidor.  
@@ -76,7 +77,7 @@ Las opciones configurables por el usuario incluyen:
   
     </output-providers>  
     ```  
-    *o*  
+    *or*  
   
     ```xml  
     <…All commands…>  
@@ -113,7 +114,7 @@ Las opciones configurables por el usuario incluyen:
   
     </output-providers>  
     ```  
-    *o*  
+    *or*  
   
     ```xml  
     <migrate-data>  
@@ -146,7 +147,7 @@ Las opciones configurables por el usuario incluyen:
   
     </output-providers>  
     ```  
-    *o*  
+    *or*  
   
     ```xml  
     <!-- Connect to target database -->  
@@ -179,7 +180,7 @@ Las opciones configurables por el usuario incluyen:
   
     </output-providers>  
     ```  
-    *o*  
+    *or*  
   
     ```xml  
     <!--synchronization-->  
@@ -190,7 +191,7 @@ Las opciones configurables por el usuario incluyen:
   
     </synchronize-target>  
     ```  
-    *o*  
+    *or*  
   
     ```xml  
     <!--data migration-->  
@@ -225,7 +226,7 @@ Las opciones configurables por el usuario incluyen:
   
     </output-providers>  
     ```  
-    *o*  
+    *or*  
   
     ```xml  
     <convert-schema object-name="<object-name>">  
@@ -278,7 +279,7 @@ Las opciones configurables por el usuario incluyen:
   
     </output-providers>  
     ```  
-    *o*  
+    *or*  
   
     ```xml  
     <…All commands…>  
@@ -320,7 +321,7 @@ Las opciones configurables por el usuario incluyen:
   
     </output-providers>  
     ```  
-    *o*  
+    *or*  
   
     ```xml  
     <…All commands…>  
@@ -353,7 +354,7 @@ La opción no configurable es:
 -   **Número máximo de intentos de reconexión:** cuando una conexión establecida se agota el tiempo o se interrumpe deba a errores de red, el servidor es necesario volver a conectarse. Se permiten los intentos de reconexión hasta un máximo de **5** reintentos transcurrido ese período, la consola realiza automáticamente la reconexión. La funcionalidad de reconexión automática reduce el esfuerzo de volver a ejecutar la secuencia de comandos.  
   
 ## <a name="server-connection-parameters"></a>Parámetros de conexión de servidor  
-Parámetros de conexión de servidor pueden definirse en el archivo de script o en el archivo de conexión de servidor. Consulte la [crear los archivos de conexión de servidor &#40; SybaseToSQL &#41; ](../../ssma/sybase/creating-the-server-connection-files-sybasetosql.md) sección para obtener más detalles  
+Parámetros de conexión de servidor pueden definirse en el archivo de script o en el archivo de conexión de servidor. Consulte la [crear los archivos de conexión de servidor &#40;SybaseToSQL&#41; ](../../ssma/sybase/creating-the-server-connection-files-sybasetosql.md) sección para obtener más detalles  
   
 ## <a name="script-commands"></a>Comandos de script  
 El archivo de script contiene una secuencia de comandos de flujo de trabajo de migración en el formato XML. La aplicación de consola SSMA procesa la migración en el orden de los comandos que aparecen en el archivo de script.  
@@ -401,14 +402,14 @@ Se proporcionan plantillas que consta de 3 archivos de script (para la ejecució
   
 Puede ejecutar las plantillas (archivos) después de cambiar los parámetros que aparecen en él para relevancia.  
   
-Lista completa de los comandos de script puede encontrarse en [ejecutando la consola SSMA &#40; SybaseToSQL &#41;](../../ssma/sybase/executing-the-ssma-console-sybasetosql.md)  
+Lista completa de los comandos de script puede encontrarse en [ejecutando la consola SSMA &#40;SybaseToSQL&#41;](../../ssma/sybase/executing-the-ssma-console-sybasetosql.md)  
   
 ## <a name="script-file-validation"></a>Validación del archivo de script  
 El usuario puede validar fácilmente su archivo de script en el archivo de definición de esquema **'S2SSConsoleScriptSchema.xsd'** disponible en la carpeta 'Esquemas'  
   
 ## <a name="next-step"></a>Paso siguiente  
-El siguiente paso en la utilización de la consola es [crear archivos de valores Variable &#40; SybaseToSQL &#41; ](../../ssma/sybase/creating-variable-value-files-sybasetosql.md).  
+El siguiente paso en la utilización de la consola es [crear archivos de valores Variable &#40;SybaseToSQL&#41;](../../ssma/sybase/creating-variable-value-files-sybasetosql.md).  
   
 ## <a name="see-also"></a>Vea también  
-[Crear archivos de valor de la Variable &#40; SybaseToSQL &#41;](../../ssma/sybase/creating-variable-value-files-sybasetosql.md)  
+[Crear archivos de valor de la Variable &#40;SybaseToSQL&#41;](../../ssma/sybase/creating-variable-value-files-sybasetosql.md)  
   

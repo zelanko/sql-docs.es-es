@@ -1,31 +1,31 @@
 ---
 title: Controlador JDBC de Microsoft para SQL Server | Documentos de Microsoft
-ms.custom: 
+ms.custom: ''
 ms.date: 08/09/2017
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.component: jdbc
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - drivers
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: baf420ab-c058-4cec-a673-d7cb6397210e
-caps.latest.revision: 
+caps.latest.revision: 18
 author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.workload: Active
-ms.openlocfilehash: 0f9ec204daf3c0e0130be3fc1e4a44bf2982cb68
-ms.sourcegitcommit: 8e897b44a98943dce0f7129b1c7c0e695949cc3b
+ms.openlocfilehash: a7ccbec6a54b6709f04d39659517aeae5415127d
+ms.sourcegitcommit: 9351e8b7b68f599a95fb8e76930ab886db737e5f
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/21/2018
+ms.lasthandoff: 04/06/2018
 ---
 # <a name="microsoft-jdbc-driver-for-sql-server"></a>Controlador JDBC de Microsoft para SQL Server
 
-![Descarga-CTRL+MAYÚS+TAB-dentro de un círculo](../../ssdt/media/download.png)[para descargar el controlador JDBC](../sql-connection-libraries.md#anchor-20-drivers-relational-access)
+[!INCLUDE[Driver_JDBC_Download](../../includes/driver_jdbc_download.md)]
 
 En nuestro compromiso continuo con la interoperabilidad, Microsoft proporciona un controlador Java Database Connectivity (JDBC) para su uso con SQL Server y base de datos de SQL Azure. El controlador está disponible sin ningún coste adicional y proporciona conectividad a bases de datos de Java desde cualquier aplicación de Java, servidor de aplicaciones o applet habilitado para Java. Se trata de un controlador JDBC de tipo 4 que proporciona conectividad a bases de datos mediante las interfaces de programación de aplicaciones (API) estándar JDBC.
 

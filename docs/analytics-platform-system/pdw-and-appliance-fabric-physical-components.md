@@ -1,26 +1,26 @@
 ---
-title: "Componentes físicos de PDW y el tejido de dispositivo (Analytics Platform System)"
+title: Componentes físicos de PDW y el tejido de dispositivo (Analytics Platform System)
 author: barbkess
 ms.author: barbkess
-manager: jhubbard
+manager: craigg
 ms.prod: analytics-platform-system
 ms.prod_service: mpp-data-warehouse
-ms.service: 
-ms.component: 
+ms.service: ''
+ms.component: ''
 ms.technology: mpp-data-warehouse
-ms.custom: 
+ms.custom: ''
 ms.date: 01/05/2017
 ms.reviewer: na
 ms.suite: sql
 ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: 7748d3da-0b7c-4ec6-9c22-4897758ba573
-caps.latest.revision: "17"
-ms.openlocfilehash: 95e80aaa641b04391d96b55f7491e21f1a30b6d1
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+caps.latest.revision: 17
+ms.openlocfilehash: 64a594c84d7be91939362ff0886a994147b76d93
+ms.sourcegitcommit: 9351e8b7b68f599a95fb8e76930ab886db737e5f
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 04/06/2018
 ---
 # <a name="pdw-and-appliance-fabric-physical-components"></a>Componentes físicos PDW y el tejido de dispositivo
 Nombres y descripciones para los componentes físicos del tejido PDW y dispositivo. La región de PDW contiene todos estos componentes.  
@@ -56,12 +56,12 @@ Una máquina virtual que ejecuta el nodo de proceso. En este diagrama de nodos d
 Estos componentes forman parte del tejido de dispositivo.  
   
 ### <a name="virtual-machines"></a>Máquinas virtuales  
-*appliance_domain*- WDS  
+*appliance_domain*-WDS  
 Este hosts de máquina virtual de servicios de implementación de Windows (WDS), que utiliza el sistema de la plataforma de análisis de implementación sistemas operativos Windows a través de la red del dispositivo. También hospeda el servicio DHCP, que permite a los hosts de dispositivo para unirse a la red de dispositivo sin necesidad de una dirección IP configurada previamente.  
   
 El *appliance_domain*máquina virtual de - WDS se ejecuta en HST01 y puede conmutar por error a HST02. La máquina virtual WDS y la máquina virtual VMM, debe implementar Windows en los hosts físicos durante la instalación del dispositivo. Durante el ciclo de vida del dispositivo, WDS y VMM realizar operaciones como el reemplazo de un host.  
   
-*appliance_domain*- VMM  
+*appliance_domain*-VMM  
 Virtual Machine Manager (VMM) se ejecuta en una máquina virtual y puede conmutar por error a HST02. VMM hospeda System Center para implementar el sistema operativo en los hosts físicos. VMM también proporciona servicios de Windows Server Update Services (WSUS) para aplicar o quitar las actualizaciones de Windows en todos los hosts y máquinas virtuales.  
   
 *appliance_domain*-AD01, *appliance_domain*-AD02  
@@ -87,6 +87,6 @@ Esto es el almacenamiento de conexión directa que está conectado a los nodos d
   
 ## <a name="see-also"></a>Vea también  
 <!-- MISSING LINKS [Hardware Configurations &#40;Analytics Platform System&#41;](../architecture/hardware-configurations.md)  -->  
-[Configuración de dispositivo &#40; Sistema de la plataforma de análisis &#41;](appliance-configuration.md)  
-[Tareas de administración de dispositivo &#40; Sistema de la plataforma de análisis &#41;](appliance-management-tasks.md)  
+[Configuración de dispositivo &#40;sistema de la plataforma de análisis&#41;](appliance-configuration.md)  
+[Tareas de administración de dispositivo &#40;sistema de la plataforma de análisis&#41;](appliance-management-tasks.md)  
   

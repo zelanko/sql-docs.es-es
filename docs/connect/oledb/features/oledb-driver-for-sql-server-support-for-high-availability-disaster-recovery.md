@@ -2,7 +2,7 @@
 title: Controlador OLE DB para SQL Server Support for High Availability, Disaster Recovery | Documentos de Microsoft
 description: Controlador de OLE DB para SQL Server admite alta disponibilidad y recuperación ante desastres
 ms.custom: ''
-ms.date: 03/26/2018
+ms.date: 04/04/2018
 ms.prod: sql-non-specified
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
 ms.service: ''
@@ -17,9 +17,9 @@ author: pmasl
 ms.author: Pedro.Lopes
 manager: jhubbard
 ms.workload: On Demand
-ms.openlocfilehash: c915af2ec748c4b2c15882c9a643c8e200442e98
-ms.sourcegitcommit: 9351e8b7b68f599a95fb8e76930ab886db737e5f
-ms.translationtype: HT
+ms.openlocfilehash: 1c23f1147b525ae35050ee47fe0c6278d03b3181
+ms.sourcegitcommit: 094c46e7fa6de44735ed0040c65a40ec3d951b75
+ms.translationtype: MT
 ms.contentlocale: es-ES
 ms.lasthandoff: 04/06/2018
 ---
@@ -72,29 +72,11 @@ Se producirá un error de conexión si las palabras clave de conexión **MultiSu
 Si actualiza un controlador OLE DB para la aplicación de SQL Server que usa actualmente creación de reflejo de base de datos a un escenario de múltiples subredes, debe quitar la **Failover_Partner** propiedad de conexión y reemplazarla con  **MultiSubnetFailover** establecido en **Sí** y reemplace el nombre del servidor en la cadena de conexión con un agente de escucha del grupo de disponibilidad. Si usa una cadena de conexión **Failover_Partner** y **MultiSubnetFailover=Yes**, el controlador generará un error. En cambio, si usa una cadena de conexión **Failover_Partner** y **MultiSubnetFailover=No** (o **ApplicationIntent=ReadWrite**), la aplicación usará la creación de reflejo de la base de datos.  
   
 El controlador devuelve un error si la creación de reflejo de la base de datos se usa en la base de datos principal del grupo de disponibilidad y si **MultiSubnetFailover=Yes** se usa en la cadena de conexión que se conecta a una base de datos principal en lugar de a un agente de escucha de grupo de disponibilidad.  
-  
-## <a name="specifying-application-intent"></a>Especificar el intento de la aplicación  
-Cuando **ApplicationIntent = ReadOnly**, el cliente solicita una carga de trabajo de lectura al conectarse a una base de datos siempre en habilitado. El servidor aplicará la intención en el momento de la conexión y durante un `USE` instrucción pero solo a una base de datos siempre habilitado en la base de datos.  
-  
-La palabra clave **ApplicationIntent** no funciona con bases de datos de solo lectura heredadas.  
-  
-Una base de datos puede permitir o denegar cargas de trabajo de lectura en la base de datos de inicio de siempre en destino. (Use la cláusula **ALLOW_CONNECTIONS** de las instrucciones **PRIMARY_ROLE** y **SECONDARY_ROLE**[!INCLUDE[tsql](../../../includes/tsql-md.md)]).  
-  
-La palabra clave **ApplicationIntent** se usa para habilitar el enrutamiento de solo lectura.  
-  
-## <a name="read-only-routing"></a>Enrutamiento de solo lectura  
-El enrutamiento de solo lectura es una característica que puede asegurar la disponibilidad de una réplica de solo lectura de una base de datos. Para habilitar el enrutamiento de solo lectura:  
-  
-1.  Debe conectarse siempre a un agente de escucha de grupo de disponibilidad Always On.  
-  
-2.  La palabra clave de cadena de conexión de **ApplicationIntent** debe establecerse en **ReadOnly**.  
-  
-3.  El grupo de disponibilidad AlwaysOn debe configurarse por el Administrador de base de datos para habilitar el enrutamiento de solo lectura.  
-  
-Es posible que varias conexiones con enrutamiento de solo lectura no se conecten todas a la misma réplica de solo lectura. Los cambios en la sincronización de la base de datos o los cambios en la configuración de enrutamiento del servidor pueden producir conexiones de cliente para réplicas de solo lectura diferentes. Para asegurarse de que todas las solicitudes de solo lectura se conectan a la misma réplica de solo lectura, no pase un agente de escucha de grupo de disponibilidad AlwaysOn para la **Server** palabra clave de cadena de conexión. En su lugar, especifique el nombre de la instancia de solo lectura.  
-  
-El enrutamiento de solo lectura puede tardar más tiempo que la conexión a la réplica principal, ya que primero se conecta a la réplica principal y después busca la mejor réplica secundaria legible disponible. Por ello, debe aumentar el tiempo de espera de inicio de sesión.  
-  
+
+
+[!INCLUDE[specify-application-intent_read-only-routing](~/includes/paragraph-content/specify-application-intent-read-only-routing.md)]
+
+
 ## <a name="ole-db"></a>OLE DB  
 El controlador OLE DB para SQL Server admite tanto la **ApplicationIntent** y **MultiSubnetFailover** palabras clave.   
   

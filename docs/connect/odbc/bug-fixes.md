@@ -20,11 +20,11 @@ author: v-makouz
 ms.author: genemi
 manager: kenvh
 ms.workload: Active
-ms.openlocfilehash: dc71f74ca8e81f370037b82e42fd78957e096775
-ms.sourcegitcommit: 8b332c12850c283ae413e0b04b2b290ac2edb672
+ms.openlocfilehash: 5187e07d18c6a967ce0a8fadbac370273684c9dc
+ms.sourcegitcommit: d6b1695c8cbc70279b7d85ec4dfb66a4271cdb10
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/05/2018
+ms.lasthandoff: 04/08/2018
 ---
 # <a name="list-of-bugs-fixed"></a>Lista de errores corregidos
 
@@ -38,10 +38,10 @@ Esta página contiene una lista de errores corregidos en cada versión, a partir
 - Se corrige un error poco frecuente en Windows de 32 bits al convertir de flotante el número de punto en un entero
 - Se corrigió un problema donde insertar doble en un campo decimal con Always Encrypted en haría ningún error de truncamiento de datos de retorno
 - Rol fijo de una advertencia en el instalador de Mac OS
+- Envío incorrecto estado fijo para SQL Server durante el intento de recuperación de la sesión cuando se habilitan resistencia de conexión tanto la agrupación de conexiones, haciendo que la sesión de ser eliminados por el servidor
 
 ### <a name="bug-fixes-in-the-includemsconameincludesmsconamemdmd-odbc-driver-17-for-includessnoversionincludesssnoversionmdmd"></a>Correcciones de errores en el [!INCLUDE[msCoName](../../includes/msconame_md.md)] 17 del controlador de ODBC para [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]
 
-- Envío incorrecto estado fijo para SQL Server durante el intento de recuperación de la sesión cuando se habilitan resistencia de conexión tanto la agrupación de conexiones, haciendo que la sesión de ser eliminados por el servidor
 - Se ha corregido un error que cuando se utiliza la autenticación Kerberos, podría producirse un error de inserción masiva con error de "acceso denegado"
 - Quitar solución a un error de unixODBC presente en la versión inferior a 2.3.1 (controlador duplica los tamaños de ciertos búferes pasados a unixODBC)
 - Fija la resistencia de conexión (reconexión) hanging al usar ColumnEncryption = habilitado

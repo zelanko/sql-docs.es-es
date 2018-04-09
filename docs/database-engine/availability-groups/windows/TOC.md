@@ -102,8 +102,7 @@
 ### [Actualizar instancias de réplica](upgrading-always-on-availability-group-replica-instances.md)  
 ### [Ver el mantenimiento con directivas](use-always-on-policies-to-view-the-health-of-an-availability-group-sql-server.md)  
 
-
-# Referencias
+# References
 ## [Cmdlets de PowerShell](overview-of-powershell-cmdlets-for-always-on-availability-groups-sql-server.md)  
 ## [Transact-SQL](transact-sql-statements-for-always-on-availability-groups.md)  
 
@@ -143,3 +142,17 @@
 ### [Algunas réplicas de disponibilidad no tienen un rol correcto](some-availability-replicas-do-not-have-a-healthy-role.md)  
 ### [Algunas réplicas sincrónicas no están sincronizadas](some-synchronous-replicas-are-not-synchronized.md)  
 ### [El Servicio de Cluster Server WSFC está sin conexión](wsfc-cluster-service-is-offline.md)  
+## [Guía de solución de problemas y supervisión](always-on-availability-groups-troubleshooting-and-monitoring-guide.md)
+### [Supervisión del rendimiento para grupos de disponibilidad](monitor-performance-for-always-on-availability-groups.md)
+### [Solución de problemas: el grupo de disponibilidad superó el RPO](troubleshoot-availability-group-exceeded-rpo.md)
+### [Solución de problemas: el grupo de disponibilidad superó el RTO](troubleshoot-availability-group-exceeded-rto.md)
+### [Solución de problemas: cambios en la réplica principal que no se reflejan en la réplica secundaria](troubleshoot-primary-changes-not-reflected-on-secondary.md)
+### [Herramientas útiles para solucionar problemas](useful-tools-for-troubleshooting.md)
+#### [Eventos extendidos](always-on-extended-events.md)
+#### [Registro de diagnóstico de mantenimiento](always-on-health-diagnostics-log.md)
+#### [Directivas](always-on-policies.md)
+#### [Búferes en anillo](always-on-ring-buffers.md)
+#### [Tipos de espera](always-on-wait-types.md)
+#### [CLUSTER.LOG](cluster-log-always-on-availability-groups.md)
+#### [Administración dinámica y vistas de catálogo del sistema](dynamic-management-views-and-system-catalog-views-always-on-availability-groups.md)
+#### [Registro de errores de SQL Server](sql-server-error-log-always-on-availability-groups.md)

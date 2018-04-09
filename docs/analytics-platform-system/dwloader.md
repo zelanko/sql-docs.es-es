@@ -1,25 +1,25 @@
 ---
-title: "Cargador de la línea de comandos para el almacenamiento de datos paralelo de dwloader"
+title: Cargador de la línea de comandos para el almacenamiento de datos paralelo de dwloader
 author: barbkess
 ms.author: barbkess
-manager: jhubbard
+manager: craigg
 ms.prod: analytics-platform-system
 ms.prod_service: mpp-data-warehouse
-ms.service: 
-ms.component: 
+ms.service: ''
+ms.component: ''
 ms.suite: sql
-ms.custom: 
+ms.custom: ''
 ms.technology: mpp-data-warehouse
-description: "**dwloader** es una herramienta de línea de comandos de almacenamiento de datos paralelo (PDW) que carga filas de la tabla de forma masiva en una tabla existente."
+description: '**dwloader** es una herramienta de línea de comandos de almacenamiento de datos paralelo (PDW) que carga filas de la tabla de forma masiva en una tabla existente.'
 ms.date: 11/04/2016
 ms.topic: article
 ms.assetid: f79b8354-fca5-41f7-81da-031fc2570a7c
-caps.latest.revision: 
-ms.openlocfilehash: 4050df3fa69a823ebb36076367c2e8d7344ac1a2
-ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
+caps.latest.revision: 90
+ms.openlocfilehash: 83d04928aa0c8f7fe0156f557466edccc36470dd
+ms.sourcegitcommit: 9351e8b7b68f599a95fb8e76930ab886db737e5f
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/15/2018
+ms.lasthandoff: 04/06/2018
 ---
 # <a name="dwloader-command-line-loader"></a>Cargador de la línea de comandos de dwloader
 **dwloader** es una herramienta de línea de comandos de almacenamiento de datos paralelo (PDW) que carga filas de la tabla de forma masiva en una tabla existente. Cuando se cargan filas, puede agregar todas las filas al final de la tabla (*modo append* o *fastappend modo*), anexar filas nuevas y actualizar filas existentes (*upsert modo*), o todos los elimine existente filas antes de la carga y, a continuación, insertar todas las filas en una tabla vacía (*recargar modo*).  
@@ -140,7 +140,7 @@ For information about configuring Windows Authentication, see [Security - Config
 **-f** *parameter_file_name*  
 Usar un archivo de parámetros, *parameter_file_name*, en lugar de parámetros de línea de comandos. *parameter_file_name* puede contener cualquier parámetro de línea de comandos excepto *nombre_usuario* y *contraseña*. Si se especifica un parámetro en la línea de comandos y en el archivo de parámetros, la línea de comandos reemplaza el parámetro del archivo.  
   
-El archivo de parámetros contiene un parámetro, sin la  **-**  prefijo por línea.  
+El archivo de parámetros contiene un parámetro, sin la **-** prefijo por línea.  
   
 Ejemplos:  
   
@@ -402,7 +402,7 @@ El cargador inserta filas al final de las filas existentes en la tabla de destin
 fastappend  
 El cargador inserta filas directamente, sin usar una tabla temporal, al final de las filas existentes en la tabla de destino. fastappend requiere la transacción múltiple (– m) opción. No se puede especificar una base de datos de almacenamiento provisional al usar fastappend. No hay ninguna reversión con fastappend, lo que significa que la recuperación a partir de una carga anulada o con error deberá controlarse mediante su propio proceso de carga.  
   
-Upsert **-K***merge_column* [,...*n* ]  
+Upsert **-K***merge_column* [,...*n* ]    
 El cargador usa la instrucción Merge de SQL Server para actualizar filas existentes e insertar nuevas filas.  
   
 La opción -K especifica la columna o columnas que se basa la combinación. Estas columnas forman una clave de combinación, que debe representar una única fila. Si la clave de combinación existe en la tabla de destino, se actualiza la fila. Si no existe la clave de combinación en la tabla de destino, se anexa la fila.  

@@ -1,6 +1,6 @@
 ---
-title: 'Actualizado: los documentos de las operaciones de SQL Studio | Documentos de Microsoft'
-description: Mostrar fragmentos de contenido actualizado para recientemente modificadas en documentación, las operaciones de SQL Studio.
+title: -Ejemplos actualizados para documentos de SQL Server | Documentos de Microsoft
+description: Mostrar fragmentos de contenido actualizado para recientemente modificadas en documentación, ejemplos de Microsoft SQL Server.
 manager: craigg
 author: MightyPen
 ms.author: genemi
@@ -8,15 +8,15 @@ ms.topic: article
 ms.custom: UpdArt.exe
 ms.suite: sql
 ms.prod_service: sql-non-specified
-ms.component: ssops
+ms.component: samples
 ms.date: 02/03/2018
-ms.openlocfilehash: 339cf28ac985e1614b4aaece3fb099d0144a309a
+ms.openlocfilehash: 758ce1d48b6a8dc961635ee7dcb4023867d727d1
 ms.sourcegitcommit: d6b1695c8cbc70279b7d85ec4dfb66a4271cdb10
 ms.translationtype: MT
 ms.contentlocale: es-ES
 ms.lasthandoff: 04/08/2018
 ---
-# <a name="new-and-recently-updated-sql-operations-studio-docs"></a>Las nuevas y recientemente actualizado: los documentos de las operaciones de SQL Studio
+# <a name="new-and-recently-updated-samples-for-sql-server"></a>Nuevos y actualizados recientemente: ejemplos de SQL Server
 
 
 
@@ -29,7 +29,7 @@ Actualizaciones recientes se notifican para el siguiente intervalo de fechas y e
 
 
 - *Intervalo de fechas de las actualizaciones:* &nbsp; del **03-12-2017** &nbsp; al &nbsp; **03-02-2018**
-- *Área de asunto:* &nbsp; **Studio de operaciones SQL**.
+- *Área de asunto:* &nbsp; **ejemplos de SQL Server**.
 
 
 
@@ -41,7 +41,7 @@ Actualizaciones recientes se notifican para el siguiente intervalo de fechas y e
 Los siguientes vínculos llevan a nuevos artículos que se han agregado recientemente.
 
 
-1. [Notas de la versión de las operaciones de SQL Studio (versión preliminar)](release-notes.md)
+***En este momento no hay ningún artículo nuevo en la lista.***
 
 
 
@@ -67,53 +67,13 @@ Por estas y otras razones, no se copie el código de estos fragmentos y no toma 
 
 En esta lista compacta se proporcionan vínculos a todos los artículos actualizados que aparecen en la sección de extractos.
 
-1. [Descargue e instale las operaciones de SQL Studio (versión preliminar)](#TitleNum_1)
 
 
 
 
 &nbsp;
 
-&nbsp;
-
-<a name="TitleNum_1"/>
-
-### <a name="1-nbsp-download-and-install-sql-operations-studio-previewdownloadmd"></a>1. &nbsp; [Descargue e instale las operaciones de SQL Studio (versión preliminar)](download.md)
-
-*Actualizado: 18-01-2018* &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; 
-
-<!-- Source markdown line 24.  ms.author= "sstein".  -->
-
-&nbsp;
-
-
-<!-- git diff --ignore-all-space --unified=0 092e48dd5607eecc0e322b5051b4adf0c5aeeb30 6b4f80ad54c599e4354303a736f62e9715f99a32  (PR=4662  ,  Filename=download.md  ,  Dirpath=docs\sql-operations-studio\  ,  MergeCommitSha40=6c54e67818ec7b0a2e3c1f6e8aca0fdf65e6625f) -->
-
-
-
-|Plataforma|Descargar|Fecha de lanzamiento|
-|:---|:---|:---|
-|Windows|[Instalador](https://go.microsoft.com/fwlink/?linkid=866480)<br>[.zip](https://go.microsoft.com/fwlink/?linkid=866479)|17 de enero de 2018 |
-|macOS|[.zip](https://go.microsoft.com/fwlink/?linkid=866481)|17 de enero de 2018 |
-|Linux|[.deb](https://go.microsoft.com/fwlink/?linkid=866484)<br>[.rpm](https://go.microsoft.com/fwlink/?linkid=866483)<br>[.tar.gz](https://go.microsoft.com/fwlink/?linkid=866482)|17 de enero de 2018|
-
-Para obtener más información acerca de la versión más reciente, consulte el [notas de la versión](release-notes.md).
-
-**Obtener operaciones de SQL Studio (versión preliminar) para Windows**
-
-
-Esta versión de las operaciones de SQL Studio (vista previa) incluye una experiencia de instalador de Windows estándar y .zip:
-
-**Instalador**
-
-1. Descargue y ejecute la [instalador Studio de operaciones de SQL (vista previa) para Windows](https://go.microsoft.com/fwlink/?linkid=866480).
-1. Iniciar la aplicación de las operaciones de SQL Studio (versión preliminar).
-
-
-**archivo .zip**
-
-1. Descargar [.zip Studio de operaciones de SQL (vista previa) para Windows](https://go.microsoft.com/fwlink/?linkid=866479).
-
+***Artículos de esta área no se han actualizado recientemente, en este momento.***
 
 
 

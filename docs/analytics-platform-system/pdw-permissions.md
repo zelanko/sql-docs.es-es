@@ -2,25 +2,25 @@
 title: Permisos de PDW (SQL Server PDW)
 author: barbkess
 ms.author: barbkess
-manager: jhubbard
+manager: craigg
 ms.prod: analytics-platform-system
 ms.prod_service: mpp-data-warehouse
-ms.service: 
-ms.component: 
+ms.service: ''
+ms.component: ''
 ms.technology: mpp-data-warehouse
-ms.custom: 
+ms.custom: ''
 ms.date: 01/05/2017
 ms.reviewer: na
 ms.suite: sql
 ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: 7e271980-bec8-424b-9f68-cea11b4e64e8
-caps.latest.revision: "23"
-ms.openlocfilehash: 49bcb7cf5e8d4bb03acd9db5de87716ec2462191
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+caps.latest.revision: 23
+ms.openlocfilehash: 95843be163714be27e6eeb7f28825e98a5371e19
+ms.sourcegitcommit: 9351e8b7b68f599a95fb8e76930ab886db737e5f
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 04/06/2018
 ---
 # <a name="pdw-permissions"></a>Permisos de PDW
 Este tema describe los requisitos y opciones para administrar permisos de base de datos para SQL Server PDW.  
@@ -64,11 +64,11 @@ Inicios de sesión son objetos de nivel de servidor y puede aparecer observando 
 Los usuarios y roles de base de datos son objetos de nivel de base de datos y puede aparecer observando [sys.database_principals](../relational-databases/system-catalog-views/sys-database-principals-transact-sql.md). Solo se pueden conceder permisos de nivel de base de datos a entidades de seguridad de base de datos.  
   
 ## <a name="BackupTypes"></a>Permisos predeterminados  
-En la lista siguiente se describe los permisos predeterminados:  
+En la lista siguiente se describen los permisos predeterminados:  
   
 -   Cuando se crea un inicio de sesión mediante instrucciones using **CREATE LOGIN** (instrucción), el inicio de sesión recibe el **CONNECT SQL** permiso Permitir el inicio de sesión para conectarse a SQL Server PDW.  
   
--   Cuando se crea un usuario de base de datos mediante el uso de la **CREATE USER** (instrucción), el usuario recibe la **CONNECT ON DATABASE::***< database_name >* permiso, lo que permite la inicio de sesión para conectarse a esa base de datos como un usuario.  
+-   Cuando se crea un usuario de base de datos mediante el uso de la **CREATE USER** (instrucción), el usuario recibe el **CONNECT ON DATABASE:: *** < database_name >* permiso, lo que permite el inicio de sesión para conectarse a esa base de datos como un usuario.  
   
 -   Todas las entidades, incluida la función pública, no tengan ningún permiso explícito o implícito de forma predeterminada porque se heredan los permisos implícitos de permisos explícitos. Por lo tanto, cuando no hay ningún permiso explícito, también no puede haber ningún permiso implícito.  
   
@@ -80,7 +80,7 @@ En la lista siguiente se describe los permisos predeterminados:
   
 -   Las transacciones no requieren permisos. Pueden ejecutar todas las entidades del **BEGIN TRANSACTION**, **confirmar**, y **reversión** comandos de transacción. Sin embargo, una entidad de seguridad debe tener los permisos adecuados para ejecutar cada instrucción dentro de la transacción.  
   
--   El **USE** instrucción no requiere permisos. Pueden ejecutar todas las entidades del **USE** instrucción en cualquier base de datos, sin embargo, para tener acceso a una base de datos deben tener una entidad de seguridad de usuario en la base de datos o el usuario invitado debe estar habilitado.  
+-   La instrucción **USE** no requiere permisos. Pueden ejecutar todas las entidades del **USE** instrucción en cualquier base de datos, sin embargo, para tener acceso a una base de datos deben tener una entidad de seguridad de usuario en la base de datos o el usuario invitado debe estar habilitado.  
   
 ### <a name="the-public-role"></a>La función PUBLIC  
 Todos los nuevos inicios de sesión de dispositivo automáticamente pertenecen a la función PUBLIC. El rol de servidor PUBLIC tiene las siguientes características:  
@@ -95,7 +95,7 @@ Todos los nuevos inicios de sesión de dispositivo automáticamente pertenecen a
 Si un inicio de sesión tiene permiso para realizar una acción concreta depende de los permisos concedidos o denegados para inicio de sesión, usuarios y roles de de que usuario es miembro. Permisos de nivel de servidor (como **CREATE LOGIN** y **VIEW SERVER STATE**) están disponibles para las entidades de seguridad de nivel de servidor (inicios de sesión). Permisos de nivel de base de datos (como **seleccione** de una tabla o **EXECUTE** en un procedimiento) están disponibles para las entidades de seguridad de nivel de base de datos (usuarios y roles de base de datos).  
   
 ### <a name="implicit-and-explicit-permissions"></a>Permisos implícitos y explícitos  
-Un *permiso explícito* es un **GRANT** o **DENY** permiso otorgado a una entidad de seguridad mediante un **GRANT** o **DENY**instrucción. Permisos de nivel de base de datos se muestran en la [sys.database_permissions](../relational-databases/system-catalog-views/sys-database-permissions-transact-sql.md) vista. Permisos de nivel de servidor se muestran en la [sys.server_permissions](../relational-databases/system-catalog-views/sys-server-permissions-transact-sql.md) vista.  
+Un *permiso explícito* es un permiso **GRANT** o **DENY** concedido a una entidad de seguridad mediante una instrucción **GRANT** o **DENY**. Permisos de nivel de base de datos se muestran en la [sys.database_permissions](../relational-databases/system-catalog-views/sys-database-permissions-transact-sql.md) vista. Permisos de nivel de servidor se muestran en la [sys.server_permissions](../relational-databases/system-catalog-views/sys-server-permissions-transact-sql.md) vista.  
   
 Un *permiso implícito* es un **GRANT** o **DENY** permiso que se ha heredado una entidad de seguridad (rol de servidor o inicio de sesión). Un permiso se puede heredar de las maneras siguientes.  
   
@@ -103,7 +103,7 @@ Un *permiso implícito* es un **GRANT** o **DENY** permiso que se ha heredado un
   
 -   Una entidad de seguridad puede heredar un permiso en un objeto subordinado (por ejemplo, una tabla) si la entidad de seguridad tiene un permiso en uno de los ámbitos de elemento primario de objetos (por ejemplo, el esquema de la tabla o el permiso en la base de datos completa).  
   
--   Una entidad de seguridad puede heredar un permiso al tener un permiso que incluya un permiso subordinado. Por ejemplo la **ALTER ANY USER** permiso incluye tanto el **CREATE USER** y **ALTER ON USER::**  *<name>*  permisos.  
+-   Una entidad de seguridad puede heredar un permiso al tener un permiso que incluya un permiso subordinado. Por ejemplo la **ALTER ANY USER** permiso incluye tanto el **CREATE USER** y **ALTER ON USER:: ***<name>*  permisos.  
   
 ### <a name="determining-permissions-when-performing-actions"></a>Determinar los permisos al realizar acciones  
 El proceso de determinar qué permiso para asignar a una entidad de seguridad es complejo. Se produce la complejidad al determinar permisos implícitos porque las entidades de seguridad pueden ser miembros de varios roles y permisos se pueden pasar a través de varios niveles en la jerarquía de roles.  
@@ -224,8 +224,8 @@ El sistema de roles fijos de servidor y roles fijos de base de datos es un siste
 ## <a name="fixed-server-roles"></a>Roles fijos de servidor
 SQL Server crea automáticamente los roles fijos de servidor. PDW de SQL Server tiene una implementación limitada de roles fijos de servidor de SQL Server. Solo el **sysadmin** y **público** tienen inicios de sesión de usuario como miembros. El **setupadmin** y **dbcreator** roles son utilizados internamente por SQL Server PDW. No se pueden agregar miembros adicionales o quitarse de ninguna función.  
   
-### <a name="sysadmin-fixed-server-role"></a>sysadmin rol fijo de servidor  
-Los miembros del rol fijo de servidor **sysadmin** pueden realizar cualquier actividad en el servidor. El **sa** inicio de sesión es el único miembro de la **sysadmin** rol fijo de servidor. No se puede agregar inicios de sesión adicionales a la **sysadmin** rol fijo de servidor. Conceder el **CONTROL SERVER** permiso se aproxima a la pertenencia a la **sysadmin** rol fijo de servidor. El siguiente ejemplo se concede el **CONTROL SERVER** permiso para un inicio de sesión denominado Fay.  
+### <a name="sysadmin-fixed-server-role"></a>sysadmin Fixed Server Role  
+Los miembros del rol fijo de servidor **sysadmin** pueden realizar cualquier actividad en el servidor. El **sa** inicio de sesión es el único miembro de la **sysadmin** rol fijo de servidor. No se puede agregar inicios de sesión adicionales a la **sysadmin** rol fijo de servidor. La concesión del permiso **CONTROL SERVER** es similar a la pertenencia al rol fijo de servidor **sysadmin**. El siguiente ejemplo se concede el **CONTROL SERVER** permiso para un inicio de sesión denominado Fay.  
   
 ```sql  
 USE master;  

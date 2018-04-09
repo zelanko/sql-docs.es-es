@@ -1,7 +1,7 @@
 ---
 title: sys.dm_db_resource_stats (Azure SQL Database) | Microsoft Docs
 ms.custom: ''
-ms.date: 03/16/2016
+ms.date: 04/06/2018
 ms.prod: ''
 ms.prod_service: sql-database
 ms.reviewer: ''
@@ -28,11 +28,11 @@ author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 116c5875ad7933e1b3d68f0c65ca7d0cb4d2b661
-ms.sourcegitcommit: 8b332c12850c283ae413e0b04b2b290ac2edb672
+ms.openlocfilehash: f09cea24068fe63dd1609e26c7835662369d8f0d
+ms.sourcegitcommit: d6b1695c8cbc70279b7d85ec4dfb66a4271cdb10
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/05/2018
+ms.lasthandoff: 04/08/2018
 ---
 # <a name="sysdmdbresourcestats-azure-sql-database"></a>sys.dm_db_resource_stats (base de datos SQL de Azure)
 [!INCLUDE[tsql-appliesto-xxxxxx-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-xxxxxx-asdb-xxxx-xxx-md.md)]
@@ -49,7 +49,8 @@ ms.lasthandoff: 04/05/2018
 |xtp_storage_percent|**decimal (5,2)**|Uso de almacenamiento para OLTP en memoria como un porcentaje del límite del nivel de servicio (al final del intervalo de informes). Esto incluye la memoria utilizada para el almacenamiento de los siguientes objetos de OLTP en memoria: tablas optimizadas en memoria, índices y las variables de tabla. También incluye la memoria utilizada para procesar las operaciones de ALTER TABLE.<br /><br /> Devuelve 0 si no se utiliza OLTP en memoria en la base de datos.|  
 |max_worker_percent|**decimal (5,2)**|Máximos simultáneos trabajadores (solicitudes) como un porcentaje del límite de nivel de servicio de la base de datos.|  
 |max_session_percent|**decimal (5,2)**|Número máximo de sesiones simultáneo en porcentaje del límite de nivel de servicio de la base de datos.|  
-|dtu_limit|**int**|Base de datos max DTU configuración actual de esta base de datos durante este intervalo.|  
+|dtu_limit|**int**|Base de datos max DTU configuración actual de esta base de datos durante este intervalo. |
+|||
   
 > [!TIP]  
 >  Para obtener más contexto sobre estos límites y los niveles de servicio, vea los temas [niveles de servicio](https://azure.microsoft.com/documentation/articles/sql-database-service-tiers/) y [límites y capacidades de nivel de servicio](https://azure.microsoft.com/documentation/articles/sql-database-performance-guidance/).  
@@ -58,13 +59,13 @@ ms.lasthandoff: 04/05/2018
  Esta vista necesita el permiso VIEW DATABASE STATE.  
   
 ## <a name="remarks"></a>Comentarios  
- Los datos devueltos por **sys.dm_db_resource_stats** se expresa como un porcentaje del máximo permitido de los límites de DTU del nivel de servicio/rendimiento de la capa que se está ejecutando para bases de datos Basic, Standard y Premium.
+ Los datos devueltos por **sys.dm_db_resource_stats** se expresa como un porcentaje del máximo permitido de límites para el nivel / rendimiento de nivel de servicio que se está ejecutando.
  
  Si la base de datos se conmutó por error a otro servidor en los últimos 60 minutos, la vista solo devolverá datos correspondientes al tiempo que ha sido la base de datos principal desde la conmutación por error.  
   
  Para obtener una vista menos detallada de estos datos, use **sys.resource_stats** vista de catálogo el **maestro** base de datos. Esta vista captura datos cada 5 minutos y mantiene datos históricos durante 14 días.  Para obtener más información, consulte [sys.resource_stats &#40;base de datos de SQL Azure&#41;](../../relational-databases/system-catalog-views/sys-resource-stats-azure-sql-database.md).  
   
- Cuando una base de datos es un miembro de un grupo elástico, las estadísticas de recursos que se presentan como valores de porcentaje se expresan como el porcentaje de la DTU el límite máximo para las bases de datos como se establece en la configuración del grupo elástico.  
+ Cuando una base de datos es un miembro de un grupo elástico, las estadísticas de recursos que se presentan como valores de porcentaje se expresan como el porcentaje del límite máximo de las bases de datos como se establece en la configuración del grupo elástico.  
   
 ## <a name="example"></a>Ejemplo  
   

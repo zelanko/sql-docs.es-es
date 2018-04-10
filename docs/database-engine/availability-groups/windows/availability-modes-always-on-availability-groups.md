@@ -1,15 +1,16 @@
 ---
 title: Modos de disponibilidad (grupos de disponibilidad AlwaysOn) | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 10/16/2017
 ms.prod: sql-non-specified
 ms.prod_service: database-engine
-ms.service: 
+ms.service: ''
 ms.component: availability-groups
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: dbe-high-availability
-ms.tgt_pltfrm: 
+ms.technology:
+- dbe-high-availability
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - Availability Groups [SQL Server], availability replicas
@@ -19,16 +20,16 @@ helpviewer_keywords:
 - asynchronous-commit availability mode
 - Availability Groups [SQL Server], availability modes
 ms.assetid: 10e7bac7-4121-48c2-be01-10083a8c65af
-caps.latest.revision: "41"
+caps.latest.revision: 41
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: f7f1e90e1892eae4763b8afd1af575cc6b3ef16a
-ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
+ms.openlocfilehash: fd0254134d929dd14b1bddab09cae409b999b21d
+ms.sourcegitcommit: 8f1d1363e18e0c32ff250617ab6cb2da2147bf8e
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/18/2018
+ms.lasthandoff: 04/03/2018
 ---
 # <a name="availability-modes-always-on-availability-groups"></a>Modos de disponibilidad (grupos de disponibilidad AlwaysOn)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -52,7 +53,7 @@ ms.lasthandoff: 01/18/2018
 -   [Contenido relacionado](#RelatedContent)  
   
 ##  <a name="SupportedAvModes"></a> Modos de disponibilidad admitidos  
- [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] admite dos modos de disponibilidad (modo de confirmación asincrónica y modo de confirmación sincrónica), como se indica a continuación:  
+ [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] admite tres modos de disponibilidad: el modo de confirmación asincrónica, el modo de confirmación sincrónica y el modo de solo configuración, como se indica a continuación:  
   
 -   *Modo de confirmación asincrónica* es una solución de recuperación ante desastres que funciona bien cuando las réplicas de disponibilidad se distribuyen a distancias considerables. Si cada réplica secundaria se está ejecutando en modo de confirmación asincrónica, la réplica principal no espera ninguna réplica secundaria para proteger el registro. En su lugar, inmediatamente después de escribir el registro en el archivo de registro local, la réplica principal envía la confirmación de la transacción al cliente. La réplica principal se ejecuta con la mínima latencia de transacciones respecto a una réplica secundaria que se configura para el modo de confirmación asincrónica.  Si la principal actual se configura para el modo de disponibilidad de confirmación asincrónica, confirmará las transacciones de forma asincrónica para todas las réplicas secundarias independientemente de su configuración del modo de disponibilidad individual.  
   

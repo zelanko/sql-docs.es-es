@@ -1,31 +1,32 @@
 ---
-title: "Características en desuso del motor de base de datos de SQL Server 2017 | Microsoft Docs"
-ms.custom: 
+title: Características en desuso del motor de base de datos de SQL Server 2017 | Microsoft Docs
+ms.custom: ''
 ms.date: 06/09/2017
 ms.prod: sql-non-specified
 ms.prod_service: database-engine
-ms.service: 
+ms.service: ''
 ms.component: database-engine
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: database-engine
-ms.tgt_pltfrm: 
+ms.technology:
+- database-engine
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - deprecated features [SQL Server]
 - Database Engine [SQL Server], backward compatibility
 - deprecation [SQL Server], feature list
-ms.assetid: 
-caps.latest.revision: 
+ms.assetid: ''
+caps.latest.revision: ''
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: ee8ea46df926675535f1ed685c7df464af7d893f
-ms.sourcegitcommit: b6116b434d737d661c09b78d0f798c652cf149f3
+ms.openlocfilehash: 07f71e7efd6d2c43160cb7d6a0066ad8e57e5c69
+ms.sourcegitcommit: 2e130e9f3ce8a7ffe373d7fba8b09e937c216386
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/17/2018
+ms.lasthandoff: 03/28/2018
 ---
 # <a name="deprecated-database-engine-features-in-sql-server-2017"></a>Características en desuso del motor de base de datos de SQL Server 2017
 [!INCLUDE[tsql-appliesto-ss2017-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2017-xxxx-xxxx-xxx-md.md)]
@@ -54,7 +55,7 @@ WHERE object_name = 'SQLServer:Deprecated Features';
 |Objetos de base de datos|Capacidad de devolver conjuntos de resultados de los desencadenadores|None|Devolver resultados del desencadenador|12|  
 |Cifrado|El cifrado mediante RC4 o RC4_128 está en desuso y se quitará en la próxima versión. El descifrado con RC4 y RC4_128 no está en desuso.|Utilice otro algoritmo de cifrado como AES.|Algoritmo de cifrado desusado|253|  
 |Servidores remotos|sp_addremotelogin<br /><br /> sp_addserver<br /><br /> sp_dropremotelogin<br /><br /> sp_helpremotelogin<br /><br /> sp_remoteoption|Reemplace los servidores remotos con servidores vinculados. sp_addserver solo se puede usar con la opción local.|sp_addremotelogin<br /><br /> sp_addserver<br /><br /> sp_dropremotelogin<br /><br /> sp_helpremotelogin<br /><br /> sp_remoteoption|70<br /><br /> 69<br /><br /> 71<br /><br /> 72<br /><br /> 73|  
-|Servidores remotos|@@remserver|Reemplace los servidores remotos con servidores vinculados.|None|None|  
+|Servidores remotos|\@\@remserver|Reemplace los servidores remotos con servidores vinculados.|None|None|  
 |Servidores remotos|SET REMOTE_PROC_TRANSACTIONS|Reemplace los servidores remotos con servidores vinculados.|SET REMOTE_PROC_TRANSACTIONS|110|  
 |Opciones de Set|**SET ROWCOUNT** para las instrucciones de **INSERT**, **UPDATE**y **DELETE**|Palabra clave TOP|SET ROWCOUNT|109|  
 |Sugerencias de tabla|Sugerencia de tabla HOLDLOCK sin paréntesis.|Usar HOLDLOCK con paréntesis.|Sugerencia de tabla HOLDLOCK sin paréntesis|167|  
@@ -158,7 +159,7 @@ WHERE object_name = 'SQLServer:Deprecated Features';
 |[!INCLUDE[tsql](../includes/tsql-md.md)]|ROWGUIDCOL como nombre de columna en las instrucciones DML.|Use $rowguid.|ROWGUIDCOL|182|  
 |[!INCLUDE[tsql](../includes/tsql-md.md)]|IDENTITYCOL como nombre de columna en las instrucciones DML.|Use $identity.|IDENTITYCOL|183|  
 |[!INCLUDE[tsql](../includes/tsql-md.md)]|Uso de #, ## como nombres de procedimientos almacenados temporales y tablas temporales.|Utilice al menos un carácter adicional.|'#' y '##' como el nombre de tablas temporales y procedimientos almacenados|185|  
-|[!INCLUDE[tsql](../includes/tsql-md.md)]|Uso de @, @@ o @@ como identificadores de [!INCLUDE[tsql](../includes/tsql-md.md)] .|No utilice @ o @@, o nombres que comiencen por @@ como identificadores.|'@' y nombres que comiencen por '@@' como identificadores [!INCLUDE[tsql](../includes/tsql-md.md)]|186.|  
+|[!INCLUDE[tsql](../includes/tsql-md.md)]|Uso de \@, \@\@ o \@\@ como identificadores de [!INCLUDE[tsql](../includes/tsql-md.md)].|No use como identificador \@, \@\@ ni ningún nombre que empiece por \@\@.|"\@" y nombres que empiezan por "\@\@" como identificadores de [!INCLUDE[tsql](../includes/tsql-md.md)]|186.|  
 |[!INCLUDE[tsql](../includes/tsql-md.md)]|Use la palabra clave DEFAULT como valor predeterminado.|No utilice la palabra DEFAULT como un valor predeterminado.|Palabra clave DEFAULT como valor predeterminado|187|  
 |[!INCLUDE[tsql](../includes/tsql-md.md)]|Uso de un espacio como un separador entre las sugerencias de la tabla.|Use una coma para separar las sugerencias de tabla.|Varias sugerencias de tabla sin coma|168|  
 |[!INCLUDE[tsql](../includes/tsql-md.md)]|La lista de selección de una vista indizada de agregado debe contener COUNT_BIG (*) en el modo de compatibilidad 90|Use COUNT_BIG (*).|Lista de selección de índice de la vista sin COUNT_BIG(*)|2|  

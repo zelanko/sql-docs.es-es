@@ -1,16 +1,16 @@
 ---
 title: Actualizar Integration Services | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql-non-specified
 ms.prod_service: integration-services
-ms.service: 
+ms.service: ''
 ms.component: install-windows
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - integration-services
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - Integration Services, upgrading
@@ -18,16 +18,16 @@ helpviewer_keywords:
 - SQL Server Integration Services, upgrading
 - upgrading Integration Services
 ms.assetid: 04f9863c-ba0b-47c5-af91-f2d41b078a23
-caps.latest.revision: 
+caps.latest.revision: 53
 author: MikeRayMSFT
 ms.author: mikeray
 manager: erikre
 ms.workload: On Demand
-ms.openlocfilehash: e7617074c17989315b75272611688f1bd77d97d2
-ms.sourcegitcommit: 6bd21109abedf64445bdb3478eea5aaa7553fa46
-ms.translationtype: MT
+ms.openlocfilehash: 56b70314f149d8eb2f8a9a0143ac43aae3d31afc
+ms.sourcegitcommit: 2e130e9f3ce8a7ffe373d7fba8b09e937c216386
+ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/20/2018
+ms.lasthandoff: 03/28/2018
 ---
 # <a name="upgrade-integration-services"></a>Actualizar Integration Services
   Si [!INCLUDE[ssISversion10](../../includes/ssisversion10-md.md)] o una versión posterior está instalado actualmente en el equipo, puede realizar la actualización a [!INCLUDE[ssISCurrent](../../includes/ssiscurrent-md.md)].  
@@ -43,11 +43,11 @@ ms.lasthandoff: 03/20/2018
  Recomendamos que ejecute el Asesor de actualizaciones antes de actualizar a [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]. El Asesor de actualizaciones notifica los problemas que podría encontrar si migra los paquetes de [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] existentes al nuevo formato de paquete que [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] utiliza.  
   
 > [!NOTE]  
->  La compatibilidad para migrar o ejecutar paquetes de Servicios de transformación de datos (DTS) ya no se incluye en la versión actual de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)][!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]. La funcionalidad de DTS siguiente ya no se incluye.  
+>  La compatibilidad para migrar o ejecutar paquetes de Servicios de transformación de datos (DTS) ya no se incluye en SQL Server 2012. La funcionalidad de DTS siguiente ya no se incluye.  
 >   
 >  -   Tiempo de ejecución DTS  
 > -   DTS API  
-> -   El Asistente para migrar paquetes, que permite migrar paquetes DTS a la versión siguiente de [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)].  
+> -   El Asistente para migrar paquetes, que permite migrar paquetes DTS a la versión siguiente de [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]  
 > -   Compatibilidad con el mantenimiento de paquetes DTS en [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]  
 > -   Tarea Ejecutar paquete DTS 2000  
 > -   Examen del Asesor de actualizaciones de paquetes DTS.  

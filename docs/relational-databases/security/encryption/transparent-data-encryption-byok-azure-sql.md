@@ -17,13 +17,13 @@ ms.workload: On Demand
 ms.tgt_pltfrm: ''
 ms.devlang: na
 ms.topic: article
-ms.date: 03/16/2018
+ms.date: 04/03/2018
 ms.author: aliceku
-ms.openlocfilehash: ae89e8496ce8f2aec87d80e36ce7b48acfd6a8cf
-ms.sourcegitcommit: 8e897b44a98943dce0f7129b1c7c0e695949cc3b
+ms.openlocfilehash: e39e6f8957c1fc2c4f50603af213055cde84d0b6
+ms.sourcegitcommit: 059fc64ba858ea2adaad2db39f306a8bff9649c2
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/21/2018
+ms.lasthandoff: 04/04/2018
 ---
 # <a name="transparent-data-encryption-with-bring-your-own-key-preview-support-for-azure-sql-database-and-data-warehouse"></a>Cifrado de datos transparente compatible con Bring Your Own Key (versión preliminar) para Azure SQL Database y SQL Data Warehouse
 [!INCLUDE[appliesto-xx-asdb-asdw-xxx-md](../../../includes/appliesto-xx-asdb-asdw-xxx-md.md)]
@@ -109,33 +109,64 @@ La forma de configurar la alta disponibilidad para Azure Key Vault depende de la
 
 ![Alta disponibilidad de servidor único y ausencia de Geo-DR](./media/transparent-data-encryption-byok-azure-sql/SingleServer_HA_Config.PNG)
 
-En el segundo caso, es necesario configurar almacenes de Azure Key Vault redundantes a partir de los grupos de conmutación por error de SQL Database o de las copias de bases de datos con replicación geográfica activa para conservar la alta disponibilidad de los protectores del TDE en Azure Key Vault.  Cada uno de los servidores con replicación geográfica requiere un almacén de claves distinto, colocado preferiblemente en la misma región de Azure que su servidor. En el caso de que una base de datos principal deje de ser accesible debido a una interrupción en una región y que se desencadene una conmutación por error, la base de datos secundaria podrá encargarse usando el almacén de claves secundario.  
+## <a name="how-to-configure-geo-dr-with-azure-key-vault"></a>Cómo configurar Geo-DR con Azure Key Vault
+
+Para conservar la alta disponibilidad de los protectores del TDE en las bases de datos cifradas, es necesario configurar almacenes de Azure Key Vault redundantes a partir de los grupos de conmutación por error de SQL Database o de las instancias de replicación geográfica activas existentes o deseados.  Cada servidor con replicación geográfica requiere un almacén de claves distinto, que debe estar colocado con el servidor en la misma región de Azure. En el caso de que una base de datos principal deje de ser accesible debido a una interrupción en una región y que se desencadene una conmutación por error, la base de datos secundaria podrá encargarse usando el almacén de claves secundario. 
+ 
+En el caso de las bases de datos SQL de Azure con replicación geográfica, se necesita la siguiente configuración de Azure Key Vault:
+- Una base de datos principal con un almacén de claves ubicado en la región y una base de datos secundaria con un almacén de claves ubicado en la región. 
+- Se necesita como mínimo una base de datos secundaria (se admiten hasta cuatro bases de datos secundarias). 
+- No se admiten las bases de datos secundarias de bases de datos secundarias (encadenamiento).
+
+En la siguiente sección se tratan con más detalle los pasos de instalación y configuración. 
+
+### <a name="azure-key-vault-configuration-steps"></a>Pasos de configuración de Azure Key Vault
+
+- Instale [PowerShell](https://docs.microsoft.com/en-us/powershell/azure/install-azurerm-ps?view=azurermps-5.6.0). 
+- Cree dos almacenes de Azure Key Vault en dos regiones diferentes mediante [ PowerShell para habilitar la propiedad "soft-delete"](https://docs.microsoft.com/en-us/azure/key-vault/key-vault-soft-delete-powershell) en los almacenes de claves (esta opción aún no está disponible desde el portal de Azure Key Vault, pero la requiere SQL). 
+- Cree una clave en el primer almacén de claves:  
+  - Clave RSA/RSA-HSA 2048 
+  - Sin fechas de expiración 
+  - La clave debe estar habilitada y debe tener permisos para llevar a cabo las operaciones get, wrap key y unwrap key 
+- Haga una copia de seguridad de la clave principal y restaure la clave en el segundo almacén de claves.  Vea [BackupAzureKeyVaultKey](https://docs.microsoft.com/en-us/powershell/module/azurerm.keyvault/backup-azurekeyvaultkey?view=azurermps-5.1.1) y [Restore-AzureKeyVaultKey](https://docs.microsoft.com/en-us/powershell/module/azurerm.keyvault/restore-azurekeyvaultkey?view=azurermps-5.5.0). 
+
+### <a name="azure-sql-database-configuration-steps"></a>Pasos de configuración de Azure SQL Database
+
+Los siguientes pasos de configuración son diferentes en función de si se empieza con una nueva implementación de SQL o si se trabaja con una implementación de Geo-DR de SQL existente.  En primer lugar se describen los pasos de configuración de una implementación nueva y, después, se explica cómo asignar protectores del TDE almacenados en Azure Key Vault a una implementación existente que ya tiene establecido un vínculo de Geo-DR. 
+
+Pasos para crear una implementación:
+- Cree los dos servidores lógicos de SQL en las dos mismas regiones en las que se han creado antes los almacenes de claves. 
+- Seleccione el panel de TDE del servidor lógico y siga estos pasos para cada servidor lógico de SQL:  
+   - Seleccione el almacén de Azure Key Vault de la misma región. 
+   - Seleccione la clave que se va a usar como protector del TDE: cada servidor usará la copia local del protector del TDE. 
+   - Si se hace en el portal, se creará un [identificador de aplicación](https://docs.microsoft.com/en-us/azure/active-directory/managed-service-identity/overview) para el servidor lógico de SQL, que se usa para asignar los permisos lógicos de SQL Server para acceder al almacén de claves (no debe eliminar esta identidad).  El acceso se puede revocar eliminando los permisos de Azure Key Vault. para el servidor lógico de SQL, que se usa para asignar los permisos lógicos de SQL Server para acceder al almacén de claves (no debe eliminar esta identidad).  El acceso se puede revocar eliminando los permisos de Azure Key Vault. 
+- Cree la base de datos principal. 
+- Siga la [guía de replicación geográfica activa](https://docs.microsoft.com/en-us/azure/sql-database/sql-database-geo-replication-overview) para llevar a cabo el escenario. Este paso creará la base de datos secundaria.
 
 ![Grupos de conmutación por error y Geo-DR](./media/transparent-data-encryption-byok-azure-sql/Geo_DR_Config.PNG)
 
-Para asegurarse de que el acceso continuo al protector del TDE en Azure Key Vault esté garantizado durante una conmutación por error, debe configurarse antes de replicar una base de datos o aplicarle la conmutación por error en un servidor secundario. Tanto los servidores principales como los secundarios deben almacenar copias de los protectores del TDE en todos los almacenes Azure Key Vault, lo que significa que en este ejemplo se almacenan las mismas claves en ambos almacenes de claves.
-
-Se necesita una base de datos secundaria con un almacén de claves secundario para efectuar la redundancia en el escenario Geo-DR (se admite un máximo de cuatro elementos secundarios).  El encadenamiento, que implica la creación de una base de datos secundaria para un elemento secundario, no se admite.  Durante el período de configuración inicial, el servicio confirma que los permisos están configurados correctamente para los almacenes de claves principal y secundario.  Es importante mantener estos permisos y comprobar periódicamente que siguen vigentes.
-
 >[!NOTE]
->Al asignar la identidad del servidor a un servidor principal y a uno secundario, la identidad debe asignarse primero al servidor secundario.
+>Es importante asegurarse de que estén presentes los mismos protectores del TDE en ambos almacenes de claves antes de establecer el vínculo de replicación geográfica entre las bases de datos.
 >
 
-Para agregar una clave de un almacén de claves a otro use el cmdlet [Add-AzureRmSqlServerKeyVaultKey](https://docs.microsoft.com/en-us/powershell/module/azurerm.sql/add-azurermsqlserverkeyvaultkey).
+Pasos para una base de datos de SQL existente con la implementación de Geo-DR:
 
- ```powershell
-   <# Include the version guid in the KeyId #>
-   Add-AzureRmSqlServerKeyVaultKey `
-   -KeyId <KeyVaultKeyId> `
-   -ServerName <LogicalServerName> `
-   -ResourceGroup <SQLDatabaseResourceGroupName>
-   ```
+Puesto que los servidores lógicos de SQL ya existen y las bases de datos principal y secundaria ya están asignadas, los pasos para configurar Azure Key Vault se deben llevar a cabo en el siguiente orden: 
+- Comience con el servidor lógico de SQL que hospeda la base de datos secundaria: 
+   - Asigne el almacén de claves que se encuentra en la misma región. 
+   - Asigne el protector del TDE. 
+- Luego, vaya al servidor lógico de SQL que hospeda la base de datos principal: 
+   - Seleccione el mismo protector del TDE que se ha usado para la base de datos secundaria.
+   
+![Grupos de conmutación por error y Geo-DR](./media/transparent-data-encryption-byok-azure-sql/geo_DR_ex_config.PNG)
 
 >[!NOTE]
->La combinación de la longitud de caracteres del nombre del almacén de claves y del nombre de la clave no puede superar los 94 caracteres.
+>Al asignar el almacén de claves al servidor, es importante empezar por el servidor secundario.  En el segundo paso, asigne el almacén de claves al servidor principal y actualice el protector del TDE. El vínculo de Geo-DR seguirá funcionando porque en este momento el protector del TDE usado por la base de datos replicada está disponible para ambos servidores.
 >
+
+Antes de habilitar el TDE con claves administradas por el cliente en Azure Key Vault para un escenario de Geo-DR de SQL Database, es importante crear y mantener dos almacenes de Azure Key Vault que tengan un contenido idéntico y las mismas regiones que se usarán para la replicación geográfica de SQL Database.  "Contenido idéntico" significa que ambos almacenes de claves deben contener copias de los mismos protectores del TDE para que ambos servidores tengan acceso al uso de los protectores del TDE por parte de todas las bases de datos.  De ahora en adelante es necesario que ambos almacenes de claves estén sincronizados, lo que significa que deben contener las mismas copias de los protectores del TDE después de la rotación de claves, deben mantener las versiones anteriores de las claves usadas para los archivos de registro o las copias de seguridad, los protectores del TDE deben mantener las mismas propiedades de clave y los almacenes de claves deben mantener los mismos permisos de acceso de SQL.  
  
-Siga los pasos de [Introducción: grupos de conmutación por error y replicación geográfica activa](https://docs.microsoft.com/azure/sql-database/sql-database-geo-replication-overview) para configurar la replicación geográfica activa con estos servidores y desencadenar una conmutación por error. 
+Siga los pasos descritos en [Introducción a la replicación geográfica activa](https://docs.microsoft.com/azure/sql-database/sql-database-geo-replication-overview) para probar y desencadenar una conmutación por error, que debe efectuarse de forma periódica para confirmar que se han conservado los permisos de acceso de SQL a ambos almacenes de claves. 
 
 
 ### <a name="backup-and-restore"></a>Copias de seguridad y restauración

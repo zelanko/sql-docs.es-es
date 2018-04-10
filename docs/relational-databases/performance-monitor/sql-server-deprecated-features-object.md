@@ -1,16 +1,16 @@
 ---
-title: "Objeto SQL Server, Características en desuso | Microsoft Docs"
-ms.custom: 
+title: Objeto SQL Server, Características en desuso | Microsoft Docs
+ms.custom: ''
 ms.date: 05/03/2016
 ms.prod: sql-non-specified
 ms.prod_service: database-engine
-ms.service: 
+ms.service: ''
 ms.component: performance-monitor
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - SQLServer:Deprecated Features
@@ -18,16 +18,16 @@ helpviewer_keywords:
 - deprecation [SQL Server], performance counters
 - Deprecated Features object
 ms.assetid: e95de9d6-c950-41cd-8aaa-be529c6de198
-caps.latest.revision: 
+caps.latest.revision: 61
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 336fea7b5f3ea9fec4dc559933477086f4cca5ed
-ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
+ms.openlocfilehash: a9a674bac91e77945fd7493cee22a11f44639a75
+ms.sourcegitcommit: 2e130e9f3ce8a7ffe373d7fba8b09e937c216386
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/18/2018
+ms.lasthandoff: 03/28/2018
 ---
 # <a name="sql-server-deprecated-features-object"></a>Objeto SQL Server, Características en desuso
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -53,7 +53,7 @@ En la tabla siguiente se describe el objeto de rendimiento **Características de
 |------------------------------------------------------|-----------------|  
 |'#' y '##' como el nombre de tablas temporales y procedimientos almacenados|Se encontró un identificador que no contenía ningún carácter a parte de #. Utilice al menos un carácter adicional. Se produce una vez por cada compilación.|  
 |'::' function calling syntax|Se encontró la sintaxis de llamada a función :: para una función con valores de tabla. Reemplace por `SELECT column_list FROM` *< nombre_función>*`()`. Por ejemplo, reemplace `SELECT * FROM ::fn_virtualfilestats(2,1)` con `SELECT * FROM sys.fn_virtualfilestats(2,1)`. Se produce una vez por cada compilación.|  
-|'@' y nombres que comiencen por '@@' como identificadores [!INCLUDE[tsql](../../includes/tsql-md.md)]|Se encontró un identificador que comenzaba por @ o @@. No utilice @ o @@, o nombres que comiencen por @@ como identificadores. Se produce una vez por cada compilación.|  
+|"\@" y nombres que empiezan por "\@\@" como identificadores de [!INCLUDE[tsql](../../includes/tsql-md.md)]|Se encontró un identificador que comenzaba por \@ o \@\@. No use \@, \@v@ ni ningún nombre que comience por \@\@ como identificadores. Se produce una vez por cada compilación.|  
 |ADDING TAPE DEVICE|Se encontró la característica en desuso sp_addumpdevice'**tape**'. Use sp_addumpdevice'**disk**' en su lugar. Se produce una vez en cada uso.|  
 |ALL Permission|Número total de veces que se encontró la sintaxis GRANT ALL, DENY ALL o REVOKE ALL. Modifique la sintaxis para denegar permisos concretos. Se produce una vez por cada consulta.|  
 |ALTER DATABASE WITH TORN_PAGE_DETECTION|Número total de veces que la opción TORN_PAGE_DETECTION de ALTER DATABASE, una característica obsoleta, se ha usado desde que se inició la instancia del servidor. Utilice la sintaxis PAGE_VERIFY en su lugar. Se produce una vez por cada uso en una instrucción DDL.|  
@@ -99,7 +99,7 @@ En la tabla siguiente se describe el objeto de rendimiento **Características de
 |EXT_soap_endpoints|Se encontró sys.soap_endpoints. Servicios web XML nativos están desusados. Utilice Windows Communications Foundation (WCF) o ASP.NET en su lugar.|  
 |EXTPROP_LEVEL0TYPE|TYPE se encontró en un level0type. Use SCHEMA como level0type y TYPE como level1type. Se produce una vez por cada consulta.|  
 |EXTPROP_LEVEL0USER|Un level0typeUSER cuando también se especificó level1type. Utilice únicamente USER como level0type para las propiedades extendidas en un usuario. Se produce una vez por cada consulta.|  
-|FASTFIRSTROW|Se encontró la sintaxis FASTFIRSTROW. Reescriba las instrucciones para usar la sintaxis OPTION (FAST *n*). Se produce una vez por cada compilación.|  
+|FASTFIRSTROW|Se encontró la sintaxis FASTFIRSTROW. Reescriba las instrucciones para usar la sintaxis (FAST *n*). Se produce una vez por cada compilación.|  
 |FILE_ID|Se encontró la sintaxis de FILE_ID. Reescriba las instrucciones para utilizar FILE_IDEX. Se produce una vez por cada compilación.|  
 |fn_get_sql|Se compiló la función fn_get_sql. Use sys.dm_exec_sql_text en su lugar. Se produce una vez por cada compilación.|  
 |fn_servershareddrives|Se compiló la función fn_servershareddrives. Utilice en su lugar sys.dm_io_cluster_shared_drives. Se produce una vez por cada compilación.|  
@@ -193,7 +193,7 @@ En la tabla siguiente se describe el objeto de rendimiento **Características de
 |sp_defaultlanguage|Se encontró el procedimiento sp_defaultlanguage. En su lugar, use ALTER LOGIN. Se produce una vez por cada compilación.|  
 |sp_denylogin|Se encontró el procedimiento sp_denylogin. Use ALTER LOGIN DISABLE en su lugar. Se produce una vez por cada consulta.|  
 |sp_depends|Se encontró el procedimiento sp_depends. Use sys.dm_sql_referencing_entities y sys.dm_sql_referenced_entities en su lugar. Se produce una vez por cada consulta.|  
-|sp_detach_db @keepfulltextindexfile|Se encontró el argumento @keepfulltextindexfile en una instrucción sp_detach_db. No utilice este argumento.|  
+|sp_detach_db \@keepfulltextindexfile|Se encontró el argumento \@keepfulltextindexfile en una instrucción sp_detach_db. No utilice este argumento.|  
 |sp_dropalias|Se encontró el procedimiento sp_dropalias. Reemplace los alias por una combinación de cuentas de usuario y roles de la base de datos. Use sp_dropalias para quitar los alias de las bases de datos actualizadas. Se produce una vez por cada compilación.|  
 |sp_dropapprole|Se encontró el procedimiento sp_dropapprole. Utilice DROP APPLICATION ROLE en su lugar. Se produce una vez por cada consulta.|  
 |sp_dropextendedproc|Se encontró el procedimiento sp_dropextendedproc. Utilice CLR en su lugar. Se produce una vez por cada compilación.|  
@@ -206,10 +206,10 @@ En la tabla siguiente se describe el objeto de rendimiento **Características de
 |sp_fulltext_catalog|Se encontró el procedimiento sp_fulltext_catalog. Use CREATE/ALTER/DROP FULLTEXT CATALOG en su lugar. Se produce una vez por cada compilación.|  
 |sp_fulltext_column|Se encontró el procedimiento sp_fulltext_column. Utilice ALTER FULLTEXT INDEX en su lugar. Se produce una vez por cada compilación.|  
 |sp_fulltext_database|Se encontró el procedimiento sp_fulltext_database. Use ALTER DATABASE en su lugar. Se produce una vez por cada compilación.|  
-|sp_fulltext_service @action=clean_up|Se encontró la opción clean_up del procedimiento sp_fulltext_service. Se produce una vez por cada consulta.|  
-|sp_fulltext_service @action=connect_timeout|Se encontró la opción connect_timeout del procedimiento sp_fulltext_service. Se produce una vez por cada consulta.|  
-|sp_fulltext_service @action=data_timeout|Se encontró la opción data_timeout del procedimiento sp_fulltext_service. Se produce una vez por cada consulta.|  
-|sp_fulltext_service @action=resource_usage|Se encontró la opción resource_usage del procedimiento sp_fulltext_service. Esta opción no tiene ninguna función. Se produce una vez por cada consulta.|  
+|sp_fulltext_service \@action=clean_up|Se encontró la opción clean_up del procedimiento sp_fulltext_service. Se produce una vez por cada consulta.|  
+|sp_fulltext_service \@action=connect_timeout|Se encontró la opción connect_timeout del procedimiento sp_fulltext_service. Se produce una vez por cada consulta.|  
+|sp_fulltext_service \@action=data_timeout|Se encontró la opción data_timeout del procedimiento sp_fulltext_service. Se produce una vez por cada consulta.|  
+|sp_fulltext_service \@action=resource_usage|Se encontró la opción resource_usage del procedimiento sp_fulltext_service. Esta opción no tiene ninguna función. Se produce una vez por cada consulta.|  
 |sp_fulltext_table|Se encontró el procedimiento sp_fulltext_table. Use CREATE/ALTER/DROP FULLTEXT INDEX en su lugar. Se produce una vez por cada compilación.|  
 |sp_getbindtoken|Se encontró el procedimiento sp_getbindtoken. En su lugar, utilice conjuntos de resultados activos múltiples (MARS) o transacciones distribuidas. Se produce una vez por cada compilación.|  
 |sp_grantdbaccess|Se encontró el procedimiento sp_grantdbaccess. En su lugar, use CREATE USER. Se produce una vez por cada consulta.|  

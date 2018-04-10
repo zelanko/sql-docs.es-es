@@ -1,16 +1,16 @@
 ---
 title: CREATE TRIGGER (Transact-SQL) | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 08/10/2017
 ms.prod: sql-non-specified
 ms.prod_service: database-engine, sql-database
-ms.service: 
+ms.service: ''
 ms.component: t-sql|statements
-ms.reviewer: 
+ms.reviewer: mathoma
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - CREATE TRIGGER
@@ -31,21 +31,21 @@ helpviewer_keywords:
 - triggers [SQL Server], creating
 - database-scoped triggers [SQL Server]
 ms.assetid: edeced03-decd-44c3-8c74-2c02f801d3e7
-caps.latest.revision: 
+caps.latest.revision: 140
 author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: Active
-ms.openlocfilehash: 21d9fd7428af28eec0d739da212887973592401c
-ms.sourcegitcommit: 45e4efb7aa828578fe9eb7743a1a3526da719555
+ms.openlocfilehash: 23cb33dffcc9753200d24116b4a6d279c8fe8db5
+ms.sourcegitcommit: 059fc64ba858ea2adaad2db39f306a8bff9649c2
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 04/04/2018
 ---
 # <a name="create-trigger-transact-sql"></a>CREATE TRIGGER (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
-  Crea un desencadenador DML, DDL o logon. Un desencadenador es una clase especial de procedimiento almacenado que se ejecuta automáticamente cuando se produce un evento en el servidor de bases de datos. Los desencadenadores DML se ejecutan cuando un usuario intenta modificar datos mediante un evento de lenguaje de manipulación de datos (DML). Los eventos DML son instrucciones INSERT, UPDATE o DELETE de una tabla o vista. Estos desencadenadores se activan cuando se desencadena cualquier evento válido, con independencia de que las filas de la tabla se vean o no afectadas. Para más información, consulte [DML Triggers](../../relational-databases/triggers/dml-triggers.md).  
+  Crea un desencadenador DML, DDL o logon. Un desencadenador es un tipo especial de procedimiento almacenado que se ejecuta automáticamente cuando se produce un evento en el servidor de bases de datos. Los desencadenadores DML se ejecutan cuando un usuario intenta modificar datos mediante un evento de lenguaje de manipulación de datos (DML). Los eventos DML son instrucciones INSERT, UPDATE o DELETE de una tabla o vista. Estos desencadenadores se activan cuando se desencadena cualquier evento válido, con independencia de que las filas de la tabla se vean o no afectadas. Para más información, consulte [DML Triggers](../../relational-databases/triggers/dml-triggers.md).  
   
  Los desencadenadores DDL se ejecutan como respuesta a diversos eventos del lenguaje de definición de datos (DDL). Estos eventos corresponden principalmente a instrucciones CREATE, ALTER y DROP de [!INCLUDE[tsql](../../includes/tsql-md.md)], y a determinados procedimientos almacenados del sistema que ejecutan operaciones de tipo DDL. Los desencadenadores logon se activan en respuesta al evento LOGON que se genera cuando se establece la sesión de un usuario. Los desencadenadores pueden crearse directamente a partir de instrucciones de [!INCLUDE[tsql](../../includes/tsql-md.md)] o de métodos de ensamblados creados en Common Language Runtime (CLR) de [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] y cargados en una instancia de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] permite crear varios desencadenadores para cualquier instrucción específica.  
   
@@ -53,13 +53,13 @@ ms.lasthandoff: 11/21/2017
 >  El código malintencionado de los desencadenadores se puede ejecutar con privilegios concentrados. Para obtener más información sobre cómo mitigar este riesgo, vea [Administrar la seguridad de los desencadenadores](../../relational-databases/triggers/manage-trigger-security.md).  
   
 > [!NOTE]  
->  La integración de CLR de .NET Framework en SQL Server se describe en este tema. La integración de CLR no se aplica a Azure SQL Database.  
+>  La integración de CLR de .NET Framework en SQL Server se describe en este tema. La integración de CLR no es válida con Azure SQL Database.  
   
  ![Icono de vínculo de tema](../../database-engine/configure-windows/media/topic-link.gif "Icono de vínculo de tema") [Convenciones de sintaxis de Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>Sintaxis  
   
-```  
+```sql  
 -- SQL Server Syntax  
 -- Trigger on an INSERT, UPDATE, or DELETE statement to a table or view (DML Trigger)  
   
@@ -81,7 +81,7 @@ AS { sql_statement  [ ; ] [ ,...n ] | EXTERNAL NAME <method specifier [ ; ] > }
   
 ```  
   
-```  
+```sql  
 -- SQL Server Syntax  
 -- Trigger on an INSERT, UPDATE, or DELETE statement to a 
 -- table (DML Trigger on memory-optimized tables)  
@@ -100,7 +100,7 @@ AS { sql_statement  [ ; ] [ ,...n ] }
   
 ```  
   
-```  
+```sql  
 -- Trigger on a CREATE, ALTER, DROP, GRANT, DENY, 
 -- REVOKE or UPDATE statement (DDL Trigger)  
   
@@ -116,7 +116,7 @@ AS { sql_statement  [ ; ] [ ,...n ] | EXTERNAL NAME < method specifier >  [ ; ] 
   
 ```  
   
-```  
+```sql  
 -- Trigger on a LOGON event (Logon Trigger)  
   
 CREATE [ OR ALTER ] TRIGGER trigger_name   
@@ -133,7 +133,7 @@ AS { sql_statement  [ ; ] [ ,...n ] | EXTERNAL NAME < method specifier >  [ ; ] 
   
 ## <a name="syntax"></a>Sintaxis  
   
-```  
+```sql  
 -- Windows Azure SQL Database Syntax   
 -- Trigger on an INSERT, UPDATE, or DELETE statement to a table or view (DML Trigger)  
   
@@ -149,7 +149,7 @@ ON { table | view }
   
 ```  
   
-```  
+```sql  
 -- Windows Azure SQL Database Syntax  
 -- Trigger on a CREATE, ALTER, DROP, GRANT, DENY, 
 -- REVOKE, or UPDATE STATISTICS statement (DDL Trigger)   
@@ -251,11 +251,11 @@ OR ALTER
   
  Las acciones del desencadenador especificadas en las instrucciones [!INCLUDE[tsql](../../includes/tsql-md.md)] surten efecto cuando se intenta la operación.  
   
- Los desencadenadores pueden incluir cualquier número y clase de instrucciones [!INCLUDE[tsql](../../includes/tsql-md.md)], con excepciones. Para obtener más información, vea la sección Comentarios. Un desencadenador está diseñado para comprobar o cambiar los datos en base a una instrucción de modificación o definición de datos; no debe devolver datos al usuario. Las instrucciones [!INCLUDE[tsql](../../includes/tsql-md.md)] de un desencadenador incluyen a menudo [lenguaje de control de flujo](~/t-sql/language-elements/control-of-flow.md).  
+ Los desencadenadores pueden incluir cualquier número y tipo de instrucciones [!INCLUDE[tsql](../../includes/tsql-md.md)], con excepciones. Para obtener más información, vea la sección Comentarios. Un desencadenador está diseñado para comprobar o cambiar los datos en base a una instrucción de modificación o definición de datos; no debe devolver datos al usuario. Las instrucciones [!INCLUDE[tsql](../../includes/tsql-md.md)] de un desencadenador incluyen a menudo [lenguaje de control de flujo](~/t-sql/language-elements/control-of-flow.md).  
   
  Los desencadenadores DML usan las tablas lógicas (conceptuales) insertadas y eliminadas. Son de estructura similar a la tabla en que se define el desencadenador, es decir, la tabla en que se intenta la acción del usuario. Las tablas insertadas y eliminadas contienen los valores antiguos o nuevos de las filas que pueden modificarse mediante la acción del usuario. Por ejemplo, para recuperar todos los valores de la tabla `deleted`, utilice:  
   
-```  
+```sql  
 SELECT * FROM deleted;  
 ```  
   
@@ -277,7 +277,7 @@ SELECT * FROM deleted;
 > [!NOTE]  
 >  De manera predeterminada, la capacidad de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] de ejecutar código CLR está desactivada. Se puede crear, modificar y quitar objetos de bases de datos que hagan referencia a módulos de código administrados, pero estas referencias no se ejecutarán en una instancia de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] a menos que la [opción clr enabled](../../database-engine/configure-windows/clr-enabled-server-configuration-option.md) esté habilitada mediante el uso de [sp_configure](../../relational-databases/system-stored-procedures/sp-configure-transact-sql.md).  
   
-## <a name="remarks-dml-triggers"></a>Instrucciones que activa DML  
+## <a name="remarks-for-dml-triggers"></a>Comentarios para los desencadenadores DML  
  Los desencadenadores DML se usan con frecuencia para aplicar las reglas de negocios y la integridad de datos. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] proporciona integridad referencial declarativa (DRI) mediante las instrucciones ALTER TABLE y CREATE TABLE. Sin embargo, DRI no proporciona integridad referencial entre bases de datos. La integridad referencial se refiere a las reglas acerca de la relación entre la clave principal y la clave externa de las tablas. Para exigir la integridad referencial, utilice las restricciones de tipo PRIMARY KEY y FOREIGN KEY en ALTER TABLE y CREATE TABLE. Si existen restricciones en la tabla de desencadenadores, se comprueban después de la ejecución del desencadenador INSTEAD OF y antes de la de AFTER. Si se infringen las restricciones, se revierten las acciones del desencadenador INSTEAD OF y el desencadenador AFTER no se ejecuta.  
   
  El primer y último desencadenador AFTER que se ejecuta en una tabla se puede especificar mediante sp_settriggerorder. Solo se puede especificar el primer y último desencadenador AFTER para cada una de las operaciones INSERT, UPDATE y DELETE de una tabla. Si hay otros desencadenadores AFTER en la misma tabla, se ejecutan aleatoriamente.  
@@ -330,9 +330,22 @@ SELECT * FROM deleted;
 |ALTER TABLE cuando se utiliza para hacer lo siguiente:<br /><br /> Agregar, modificar o quitar columnas.<br /><br /> Cambiar particiones.<br /><br /> Agregar o quitar restricciones de tipo PRIMARY KEY o UNIQUE.|||  
   
 > [!NOTE]  
->  Ya que [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] no admite desencadenadores definidos por el usuario en tablas del sistema, se recomienda no crearlos.  
+>  Ya que [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] no admite desencadenadores definidos por el usuario en tablas del sistema, se recomienda no crearlos. 
+
+### <a name="optimizing-dml-triggers"></a>Optimización de los desencadenadores DML
+ Los desencadenadores funcionan en transacciones (implícitas o no) y, mientras están abiertos, bloquean recursos. El bloqueo seguirá vigente hasta que la transacción se confirme (con COMMIT) o se rechace (con ROLLBACK). Cuanto más tiempo se ejecute un desencadenador, mayor será la probabilidad de que se bloquee otro proceso. Por lo tanto, los desencadenadores se deben escribir de forma que se reduzca su duración siempre que sea posible. Una manera de conseguirlo consiste en liberar un desencadenador cuando una instrucción DML cambie 0 filas. 
+
+Para liberar el desencadenador de un comando que no cambia ninguna fila, use la variable del sistema [ROWCOUNT_BIG](https://docs.microsoft.com/it-it/sql/t-sql/functions/rowcount-big-transact-sql). 
+
+El siguiente fragmento de código de T-SQL lo consigue, y debería aparecer al principio de cada desencadenador DML:
+
+```sql
+IF (@@ROWCOUNT_BIG = 0)
+RETURN;
+```
   
-## <a name="remarks-ddl-triggers"></a>Instrucciones que activa DML  
+  
+## <a name="remarks-for-ddl-triggers"></a>Comentarios para los desencadenadores DDL  
  Los desencadenadores DDL, al igual que los estándar, ejecutan procedimientos almacenados como respuesta a un evento. Pero a diferencia de los desencadenadores estándar, no se ejecutan como respuesta a instrucciones UPDATE, INSERT o DELETE en una tabla o vista. En cambio, se ejecutan principalmente como respuesta a instrucciones de lenguaje de definición de datos (o DDL). Entre ellas se incluyen instrucciones CREATE, ALTER, DROP, GRANT, DENY, REVOKE y UPDATE STATISTICS. Algunos procedimientos almacenados del sistema que ejecutan operaciones de tipo DDL también pueden activar desencadenadores DDL.  
   
 > [!IMPORTANT]  
@@ -342,7 +355,7 @@ SELECT * FROM deleted;
   
  Los desencadenadores DDL no se activan como respuesta a eventos que afectan a procedimientos almacenados y tablas temporales, ya sean locales o globales.  
   
- A diferencia de los desencadenadores DML, los desencadenadores DDL no tienen como ámbito los esquemas. Por tanto, las funciones como OBJECT_ID, OBJECT_NAME, OBJECTPROPERTY y OBJECTPROPERTYEX no se pueden usar para efectuar consultas en metadatos sobre desencadenadores DDL. Utilice en su lugar las vistas de catálogo. Para obtener más información, consulte [Obtener información acerca de los desencadenadores DDL](../../relational-databases/triggers/get-information-about-ddl-triggers.md).  
+ A diferencia de los desencadenadores DML, los desencadenadores DDL no tienen como ámbito los esquemas. Por tanto, las funciones como OBJECT_ID, OBJECT_NAME, OBJECTPROPERTY y OBJECTPROPERTYEX no se pueden usar para efectuar consultas en metadatos sobre desencadenadores DDL. Utilice en su lugar las vistas de catálogo. Para más información, vea [Obtener información sobre los desencadenadores DDL](../../relational-databases/triggers/get-information-about-ddl-triggers.md).  
   
 > [!NOTE]  
 >  Los desencadenadores DDL con ámbito en el servidor aparecen en el Explorador de objetos de [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)], en la carpeta **Desencadenadores**. Dicha carpeta se encuentra en la carpeta **Server Objects** . Los desencadenadores DDL de ámbito de base de datos aparecen en la carpeta **Desencadenadores de bases de datos**. Esta carpeta se encuentra en la carpeta **Programación** de la base de datos correspondiente.  
@@ -409,7 +422,7 @@ SELECT * FROM deleted;
 ### <a name="a-using-a-dml-trigger-with-a-reminder-message"></a>A. Usar desencadenador DML con un mensaje de aviso  
  El siguiente desencadenador DML imprime un mensaje en el cliente cuando alguien intenta agregar o cambiar datos en la tabla `Customer` de la base de datos [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)].  
   
-```  
+```sql  
 CREATE TRIGGER reminder1  
 ON Sales.Customer  
 AFTER INSERT, UPDATE   
@@ -420,7 +433,7 @@ GO
 ### <a name="b-using-a-dml-trigger-with-a-reminder-e-mail-message"></a>B. Usar un desencadenador DML con un mensaje de correo electrónico de aviso  
  Este ejemplo envía un mensaje de correo electrónico a una persona especificada (`MaryM`) cuando cambia la tabla `Customer`.  
   
-```  
+```sql  
 CREATE TRIGGER reminder2  
 ON Sales.Customer  
 AFTER INSERT, UPDATE, DELETE   
@@ -438,13 +451,15 @@ GO
   
  En el ejemplo siguiente se crea un desencadenador DML en la base de datos AdventureWorks2012. El desencadenador comprueba que la solvencia del proveedor es satisfactoria (no es 5) cuando se intenta insertar un nuevo pedido de compra en la tabla `PurchaseOrderHeader`. Para obtener la solvencia del proveedor, debe hacerse referencia a la tabla `Vendor`. Si la solvencia no es satisfactoria, se obtiene un mensaje y no se ejecuta la inserción.  
   
-```  
+```sql  
 -- This trigger prevents a row from being inserted in the Purchasing.PurchaseOrderHeader 
 -- table when the credit rating of the specified vendor is set to 5 (below average).  
   
 CREATE TRIGGER Purchasing.LowCredit ON Purchasing.PurchaseOrderHeader  
 AFTER INSERT  
 AS  
+IF (@@ROWCOUNT_BIG  = 0)
+RETURN;
 IF EXISTS (SELECT *  
            FROM Purchasing.PurchaseOrderHeader AS p   
            JOIN inserted AS i   
@@ -485,11 +500,13 @@ GO
 ### <a name="d-using-a-database-scoped-ddl-trigger"></a>D. Usar un desencadenador DDL con ámbito de base de datos  
  En el ejemplo siguiente se usa un desencadenador DDL para impedir que se quiten sinónimos de una base de datos.  
   
-```  
+```sql  
 CREATE TRIGGER safety   
 ON DATABASE   
 FOR DROP_SYNONYM  
 AS   
+IF (@@ROWCOUNT = 0)
+RETURN;
    RAISERROR ('You must disable Trigger "safety" to drop synonyms!',10, 1)  
    ROLLBACK  
 GO  
@@ -503,7 +520,7 @@ GO
   
 **Se aplica a**: desde [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] hasta [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].  
   
-```  
+```sql  
 CREATE TRIGGER ddl_trig_database   
 ON ALL SERVER   
 FOR CREATE_DATABASE   
@@ -521,7 +538,7 @@ GO
   
 **Se aplica a**: desde [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] hasta [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].  
   
-```  
+```sql  
 USE master;  
 GO  
 CREATE LOGIN login_test WITH PASSWORD = '3KHJ6dhx(0xVYsdf' MUST_CHANGE,  
@@ -546,14 +563,16 @@ END;
 ### <a name="g-viewing-the-events-that-cause-a-trigger-to-fire"></a>G. Ver los eventos que hacen que se active un desencadenador  
  En el ejemplo siguiente se efectúa una consulta en las vistas de catálogo `sys.triggers` y `sys.trigger_events` para determinar qué eventos de lenguaje [!INCLUDE[tsql](../../includes/tsql-md.md)] hacen que se active el desencadenador `safety`. `safety` se ha creado en el ejemplo anterior.  
   
-```  
+```sql  
 SELECT TE.*  
 FROM sys.trigger_events AS TE  
 JOIN sys.triggers AS T ON T.object_id = TE.object_id  
 WHERE T.parent_class = 0 AND T.name = 'safety';  
 GO  
 ```  
-  
+
+    
+
 ## <a name="see-also"></a>Ver también  
  [ALTER TABLE &#40;Transact-SQL&#41;](../../t-sql/statements/alter-table-transact-sql.md)   
  [ALTER TRIGGER &#40;Transact-SQL&#41;](../../t-sql/statements/alter-trigger-transact-sql.md)   

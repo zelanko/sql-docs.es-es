@@ -1,15 +1,15 @@
 ---
 title: Trabajar con archivos de Excel con la tarea Script | Microsoft Docs
-ms.custom: 
-ms.date: 03/17/2017
+ms.custom: ''
+ms.date: 04/02/2018
 ms.prod: sql-non-specified
 ms.prod_service: integration-services
-ms.service: 
+ms.service: ''
 ms.component: extending-packages-scripting-task-examples
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: 
-ms.tgt_pltfrm: 
+ms.technology: ''
+ms.tgt_pltfrm: ''
 ms.topic: reference
 applies_to:
 - SQL Server 2016 Preview
@@ -20,39 +20,30 @@ helpviewer_keywords:
 - Script task [Integration Services], examples
 - Excel [Integration Services]
 ms.assetid: b8fa110a-2c9c-4f5a-8fe1-305555640e44
-caps.latest.revision: 
+caps.latest.revision: 35
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: bfbe8efdeab1af1ba6c802d69abdce4b1b4696fa
-ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
+ms.openlocfilehash: a533795d6d6017c885b887e35b8e996ab82493df
+ms.sourcegitcommit: 059fc64ba858ea2adaad2db39f306a8bff9649c2
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/25/2018
+ms.lasthandoff: 04/04/2018
 ---
 # <a name="working-with-excel-files-with-the-script-task"></a>Trabajar con archivos de Excel con la tarea Script
-  [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] proporciona el administrador de conexiones de Excel, el origen de Excel y el destino de Excel para trabajar con datos almacenados en hojas de cálculo en el formato de archivo de [!INCLUDE[msCoName](../../includes/msconame-md.md)] Excel. Las técnicas descritas en este tema usan la tarea Script para obtener información acerca de las bases de datos de Excel disponibles (archivos de libro) y tablas (hojas de cálculo y rangos con nombre). Estos ejemplos se pueden modificar con facilidad para trabajar con cualquiera de los demás orígenes de datos basados en archivos que admite el proveedor OLE DB para [!INCLUDE[msCoName](../../includes/msconame-md.md)] Jet.  
+  [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] proporciona el administrador de conexiones de Excel, el origen de Excel y el destino de Excel para trabajar con datos almacenados en hojas de cálculo en el formato de archivo de [!INCLUDE[msCoName](../../includes/msconame-md.md)] Excel. Las técnicas descritas en este tema usan la tarea Script para obtener información acerca de las bases de datos de Excel disponibles (archivos de libro) y tablas (hojas de cálculo y rangos con nombre).
   
- [Configurar un paquete para probar los ejemplos](#configuring)  
-  
- [Ejemplo 1: comprobar si existe un archivo de Excel](#example1)  
-  
- [Ejemplo 2: comprobar si existe una tabla de Excel](#example2)  
-  
- [Ejemplo 3: obtener una lista de archivos de Excel en una carpeta](#example3)  
-  
- [Ejemplo 4: obtener una lista de tablas en un archivo de Excel](#example4)  
-  
- [Mostrar los resultados de los ejemplos](#testing)  
-  
-> [!NOTE]  
->  Si desea crear una tarea que pueda reutilizar más fácilmente en varios paquetes, considere la posibilidad de utilizar el código de este ejemplo de tarea Script como punto inicial de una tarea personalizada. Para más información, vea [Desarrollar una tarea personalizada](../../integration-services/extending-packages-custom-objects/task/developing-a-custom-task.md).  
-  
+> [!TIP]  
+>  Si desea crear una tarea que pueda reutilizar en varios paquetes, sopese la posibilidad de usar el código de este ejemplo de tarea Script como punto inicial de una tarea personalizada. Para más información, vea [Desarrollar una tarea personalizada](../../integration-services/extending-packages-custom-objects/task/developing-a-custom-task.md).  
+
+> [!IMPORTANT]
+> Para obtener información detallada sobre cómo conectarse a archivos de Excel y sobre las limitaciones y problemas conocidos a la hora de cargar datos de o a archivos de Excel, vea [Cargar datos de o a Excel con SQL Server Integration Services (SSIS)](../load-data-to-from-excel-with-ssis.md).
+ 
 ##  <a name="configuring"></a>Configurar un paquete para probar los ejemplos  
  Puede configurar un paquete único para probar todos los ejemplos de este tema. En los ejemplos se usan muchas de las mismas variables de paquete y las mismas clases de [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)].  
   
-#### <a name="to-configure-a-package-for-use-with-the-examples-in-this-topic"></a>Para configurar un paquete y utilizarlo con los ejemplos en este tema  
+### <a name="to-configure-a-package-for-use-with-the-examples-in-this-topic"></a>Para configurar un paquete y utilizarlo con los ejemplos en este tema  
   
 1.  Cree un nuevo proyecto de [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] en [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] y abra el paquete predeterminado para editar.  
   
@@ -85,7 +76,7 @@ ms.lasthandoff: 01/25/2018
 ##  <a name="example1"></a> Descripción de ejemplo 1: comprobar si existe un archivo de Excel  
  En este ejemplo se determina si existe el archivo de libro de Excel especificado en la variable `ExcelFile` y, a continuación, se establece el valor booleano de la variable `ExcelFileExists` en el resultado. Puede usar este valor booleano para la bifurcación en el flujo de trabajo del paquete.  
   
-#### <a name="to-configure-this-script-task-example"></a>Para configurar este ejemplo de tarea Script  
+### <a name="to-configure-this-script-task-example"></a>Para configurar este ejemplo de tarea Script  
   
 1.  Agregue una nueva tarea Script al paquete y cambie su nombre a **ExcelFileExists**.  
   
@@ -155,7 +146,7 @@ public class ScriptMain
 ##  <a name="example2"></a> Descripción de ejemplo 2: comprobar si existe una tabla de Excel  
  En este ejemplo se determina si existe la hoja de cálculo de Excel o el rango con nombre especificado en la variable `ExcelTable` en el archivo de libro de Excel especificado en la variable `ExcelFile` y, a continuación, se establece el valor booleano de la variable `ExcelTableExists` en el resultado. Puede usar este valor booleano para la bifurcación en el flujo de trabajo del paquete.  
   
-#### <a name="to-configure-this-script-task-example"></a>Para configurar este ejemplo de tarea Script  
+### <a name="to-configure-this-script-task-example"></a>Para configurar este ejemplo de tarea Script  
   
 1.  Agregue una nueva tarea Script al paquete y cambie su nombre a **ExcelTableExists**.  
   
@@ -262,7 +253,7 @@ public class ScriptMain
 ##  <a name="example3"></a> Descripción de ejemplo 3: obtener una lista de archivos de Excel en una carpeta  
  En este ejemplo se llena una matriz con la lista de archivos de Excel ubicados en la carpeta especificada del valor de la variable `ExcelFolder` y, a continuación, se copia la matriz en la variable `ExcelFiles`. Puede usar el enumerador de variable para Foreach para iterar sobre los archivos en la matriz.  
   
-#### <a name="to-configure-this-script-task-example"></a>Para configurar este ejemplo de tarea Script  
+### <a name="to-configure-this-script-task-example"></a>Para configurar este ejemplo de tarea Script  
   
 1.  Agregue una nueva tarea Script al paquete y cambie su nombre a **GetExcelFiles**.  
   
@@ -337,7 +328,7 @@ public class ScriptMain
 > [!NOTE]  
 >  La lista de tablas de un libro de Excel incluye tanto hojas (que tienen el sufijo $) como rangos con nombre. Si tiene que filtrar la lista para obtener solo las hojas o solo los rangos con nombre, agregue código adicional para este fin.  
   
-#### <a name="to-configure-this-script-task-example"></a>Para configurar este ejemplo de tarea Script  
+### <a name="to-configure-this-script-task-example"></a>Para configurar este ejemplo de tarea Script  
   
 1.  Agregue una nueva tarea Script al paquete y cambie su nombre a **GetExcelTables**.  
   
@@ -446,7 +437,7 @@ public class ScriptMain
 ##  <a name="testing"></a> Mostrar los resultados de los ejemplos  
  Si ha configurado cada uno de los ejemplos de este tema en el mismo paquete, puede conectar todas las tareas Script a una tarea Script adicional que muestra la salida de todos los ejemplos.  
   
-#### <a name="to-configure-a-script-task-to-display-the-output-of-the-examples-in-this-topic"></a>Para configurar una tarea Script para mostrar la salida de los ejemplos de este tema  
+### <a name="to-configure-a-script-task-to-display-the-output-of-the-examples-in-this-topic"></a>Para configurar una tarea Script para mostrar la salida de los ejemplos de este tema  
   
 1.  Agregue una nueva tarea Script al paquete y cambie su nombre a **DisplayResults**.  
   
@@ -550,7 +541,7 @@ public class ScriptMain
 ```  
   
 ## <a name="see-also"></a>Ver también  
- [Administrador de conexiones de Excel](../../integration-services/connection-manager/excel-connection-manager.md)   
+ [Cargar datos de o a Excel con SQL Server Integration Services (SSIS)](../load-data-to-from-excel-with-ssis.md)  
  [Crear bucles entre archivos y tablas de Excel mediante un contenedor de bucles ForEach](../../integration-services/control-flow/loop-through-excel-files-and-tables-by-using-a-foreach-loop-container.md)  
   
   

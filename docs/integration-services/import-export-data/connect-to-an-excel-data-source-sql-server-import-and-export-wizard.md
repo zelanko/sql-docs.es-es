@@ -1,28 +1,28 @@
 ---
-title: "Conectarse a un origen de datos de Excel (Asistente para importación y exportación de SQL Server) | Microsoft Docs"
-ms.custom: 
-ms.date: 06/20/2017
+title: Conectarse a un origen de datos de Excel (Asistente para importación y exportación de SQL Server) | Microsoft Docs
+ms.custom: ''
+ms.date: 04/02/2018
 ms.prod: sql-non-specified
 ms.prod_service: integration-services
-ms.service: 
+ms.service: ''
 ms.component: import-export-data
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - integration-services
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: 43fbaca0-36d8-4583-9056-af7010209b87
-caps.latest.revision: 
+caps.latest.revision: 12
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 16ace15a73d9ef727612c59f8c9329a4d4437312
-ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
+ms.openlocfilehash: 42af9f992c293f9872080a69cf6a7a4890ff205f
+ms.sourcegitcommit: 059fc64ba858ea2adaad2db39f306a8bff9649c2
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/25/2018
+ms.lasthandoff: 04/04/2018
 ---
 # <a name="connect-to-an-excel-data-source-sql-server-import-and-export-wizard"></a>Conectarse a un origen de datos de Excel (Asistente para importación y exportación de SQL Server)
 En este tema se muestra cómo conectarse a un origen de datos de **Microsoft Excel** desde la página **Elegir un origen de datos** o **Elegir un destino** del Asistente para importación y exportación de SQL Server.
@@ -30,6 +30,11 @@ En este tema se muestra cómo conectarse a un origen de datos de **Microsoft Exc
 En la siguiente captura de pantalla se muestra una conexión de ejemplo a un libro de Microsoft Excel.
 
 ![Conexión de Excel](../../integration-services/import-export-data/media/excel-connection.png) 
+
+Es posible que tenga que descargar e instalar archivos adicionales para conectarse a archivos de Excel. Para obtener más información, vea [Obtener los archivos que necesita para conectarse a Excel](../load-data-to-from-excel-with-ssis.md#get-the-files-you-need-to-connect-to-excel).
+
+> [!IMPORTANT]
+> Para obtener información detallada sobre cómo conectarse a archivos de Excel y sobre las limitaciones y problemas conocidos a la hora de cargar datos de o a archivos de Excel, vea [Cargar datos de o a Excel con SQL Server Integration Services (SSIS)](../load-data-to-from-excel-with-ssis.md).
 
 ## <a name="options-to-specify"></a>Opciones que hay que especificar
 
@@ -50,10 +55,7 @@ O bien, haga clic en **Examinar**.
 > El asistente no puede abrir un archivo de Excel protegido mediante contraseña.
 
  **Versión de Excel**  
-Seleccione la versión de Excel que usa el libro de origen.
-
-> [!IMPORTANT]
-> Es posible que tenga que descargar e instalar archivos adicionales para conectarse a archivos de Excel. Para obtener más información, vea [Obtener los archivos que necesita para conectarse a Excel](#officeDownloads) en esta página.
+Seleccione la versión de Excel que usa el libro de origen o de destino.
 
 **La primera fila tiene nombres de columna**  
 Indique si la primera fila de los datos contiene nombres de columna.
@@ -68,18 +70,8 @@ Si no ve Excel en la lista de orígenes de datos, ¿comprobó que está ejecutan
 > [!NOTE]
 > Para usar la versión de 64 bits del Asistente para importación y exportación de SQL Server, tendrá que instalar SQL Server. SQL Server Data Tools (SSDT) y SQL Server Management Studio (SSMS) son aplicaciones de 32 bits y solo instalan archivos de 32 bits, incluida la versión de 32 bits del asistente.
 
-## <a name="officeDownloads"></a>Obtener los archivos que necesita para conectarse a Excel  
-Es posible que tenga que descargar los componentes de conectividad para orígenes de datos de Microsoft Office, incluidos Excel y Access, si aún no están instalados. Descargue la versión más reciente de los componentes de conectividad para los archivos de Access y Excel aquí: [Microsoft Access Database Engine 2016 Redistributable](https://www.microsoft.com/download/details.aspx?id=54920).
-  
-La versión más reciente de los componentes puede abrir los archivos creados con versiones anteriores de los programas de Excel.
-
-Si el equipo tiene una versión de Office de 32 bits, tendrá que instalar la versión de 32 bits de los componentes, y también debe asegurarse de que ejecuta el paquete en el modo de 32 bits.
-
-Si tiene una suscripción de Office 365, asegúrese de descargar Access Database Engine 2016 Redistributable y no Microsoft Access 2016 Runtime. Al ejecutar el instalador, es posible que vea un mensaje de error que indica que no se puede instalar la descarga en paralelo con componentes para hacer clic y ejecutar de Office. Para omitir este mensaje de error, ejecute la instalación en modo silencioso abriendo una ventana del símbolo del sistema y ejecutando el archivo .EXE que descargó con el modificador `/quiet`. Por ejemplo:
-
-`C:\Users\<user name>\Downloads\AccessDatabaseEngine.exe /quiet`
-
 ## <a name="see-also"></a>Vea también
+[Cargar datos de o a Excel con SQL Server Integration Services (SSIS)](../load-data-to-from-excel-with-ssis.md)  
 [Choose a Data Source](../../integration-services/import-export-data/choose-a-data-source-sql-server-import-and-export-wizard.md) (Selección de un origen de datos)  
 [Choose a Destination](../../integration-services/import-export-data/choose-a-destination-sql-server-import-and-export-wizard.md) (Selección de un destino)
 

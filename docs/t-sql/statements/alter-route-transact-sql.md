@@ -1,16 +1,16 @@
 ---
 title: ALTER ROUTE (Transact-SQL) | Microsoft Docs
-ms.custom: 
-ms.date: 03/14/2017
+ms.custom: ''
+ms.date: 03/30/2018
 ms.prod: sql-non-specified
 ms.prod_service: sql-database
-ms.service: 
+ms.service: ''
 ms.component: t-sql|statements
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - ALTER_ROUTE_TSQL
@@ -24,21 +24,24 @@ helpviewer_keywords:
 - removing routes
 - routes [Service Broker], modifying
 ms.assetid: 8dfb7b16-3dac-4e1e-8c97-adf2aad07830
-caps.latest.revision: 
+caps.latest.revision: 33
 author: barbkess
 ms.author: barbkess
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: e9ae2ef58b234919dab8057b00afd64efa0cc89b
-ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
+ms.openlocfilehash: 3a1b6e3b8ea236aec4104653a7a96cdc0a6a53f2
+ms.sourcegitcommit: 059fc64ba858ea2adaad2db39f306a8bff9649c2
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/25/2018
+ms.lasthandoff: 04/04/2018
 ---
 # <a name="alter-route-transact-sql"></a>ALTER ROUTE (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-asdbmi-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdbmi-xxxx-xxx-md.md)]
 
-  Modifica la información de ruta de una ruta existente en [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
+  Modifica la información de ruta de una ruta existente en [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. 
+
+
+[!INCLUDE[ssMIlimitation](../../includes/sql-db-mi-limitation.md)] 
   
  ![Icono de vínculo de tema](../../database-engine/configure-windows/media/topic-link.gif "Icono de vínculo de tema") [Convenciones de sintaxis de Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -65,7 +68,7 @@ WITH
  Presenta las cláusulas que definen la ruta que se va a modificar.  
   
  SERVICE_NAME **='***service_name***'**  
- Especifica el nombre del servicio remoto señalado por esta ruta. El *service_name* debe coincidir exactamente con el nombre que usa el servicio remoto. [!INCLUDE[ssSB](../../includes/sssb-md.md)] usa una comparación byte a byte para buscar una coincidencia con *service_name*. En otras palabras, en la comparación se distinguen mayúsculas y minúsculas, y no se considera la intercalación actual. Una ruta con el nombre de servicio **"SQL/ServiceBroker/BrokerConfiguration"** es una ruta a un servicio de notificación de configuración del broker. Es posible que una ruta a este servicio no especifique una instancia de agente.  
+ Especifica el nombre del servicio remoto señalado por esta ruta. El *service_name* debe coincidir exactamente con el nombre que usa el servicio remoto. [!INCLUDE[ssSB](../../includes/sssb-md.md)] usa una comparación byte a byte para buscar una coincidencia con *service_name*. En otras palabras, en la comparación se distinguen mayúsculas y minúsculas, y no se considera la intercalación actual. Una ruta con el nombre de servicio **'SQL/ServiceBroker/BrokerConfiguration'** es una ruta a un servicio de notificación de configuración del agente. Es posible que una ruta a este servicio no especifique una instancia de agente.  
   
  Si se omite la cláusula SERVICE_NAME, el nombre de servicio de la ruta no varía.  
   
@@ -83,15 +86,18 @@ WHERE database_id = DB_ID();
 > [!NOTE]  
 >  Esta opción no está disponible en las bases de datos independientes.  
   
- LIFETIME **=***duración_de_la_ruta*  
+ LIFETIME **=***route_lifetime*  
  Especifica el tiempo, en segundos, durante el que [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] retiene la ruta en la tabla de enrutamiento. Transcurrido este tiempo, la ruta expira y [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ya no la tiene en cuenta al elegir una ruta para una conversación nueva. Si se omite esta cláusula, la vigencia de la ruta no varía.  
   
  ADDRESS **="***dirección_de_próximo_salto"*  
+
+ Para Instancia administrada de SQL Database, `ADDRESS` debe ser local.
+
  Especifica la dirección de red para esta ruta. En *dirección_de_próximo_salto* se especifica una dirección TCP/IP en el formato siguiente:  
   
  **TCP://** { *dns_name* | *netbios_name* |*ip_address* } **:** *port_number*  
   
- El *número_de_puerto* especificado debe coincidir con el número de puerto del punto de conexión [!INCLUDE[ssSB](../../includes/sssb-md.md)] de una instancia de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] en el equipo especificado. Se puede obtener ejecutando la consulta siguiente en la base de datos seleccionada:  
+ El *port_number* especificado debe coincidir con el número de puerto del extremo de [!INCLUDE[ssSB](../../includes/sssb-md.md)] de una instancia de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] en el equipo especificado. Se puede obtener ejecutando la consulta siguiente en la base de datos seleccionada:  
   
 ```  
 SELECT tcpe.port  
@@ -115,7 +121,7 @@ WHERE ssbe.name = N'MyServiceBrokerEndpoint';
   
  **TCP://**{ *dns_name* | *netbios_name* | *ip_address* } **:** *port_number*  
   
- El *número_de_puerto* especificado debe coincidir con el número de puerto del punto de conexión [!INCLUDE[ssSB](../../includes/sssb-md.md)] de una instancia de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] en el equipo especificado. Se puede obtener ejecutando la consulta siguiente en la base de datos seleccionada:  
+ El *port_number* especificado debe coincidir con el número de puerto del extremo de [!INCLUDE[ssSB](../../includes/sssb-md.md)] de una instancia de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] en el equipo especificado. Se puede obtener ejecutando la consulta siguiente en la base de datos seleccionada:  
   
 ```  
 SELECT tcpe.port  

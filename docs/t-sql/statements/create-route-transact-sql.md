@@ -1,16 +1,16 @@
 ---
 title: CREATE ROUTE (Transact-SQL) | Microsoft Docs
-ms.custom: 
-ms.date: 03/14/2017
+ms.custom: ''
+ms.date: 03/30/2018
 ms.prod: sql-non-specified
 ms.prod_service: sql-database
-ms.service: 
+ms.service: ''
 ms.component: t-sql|statements
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - CREATE_ROUTE_TSQL
@@ -29,19 +29,19 @@ helpviewer_keywords:
 - activating routes
 - CREATE ROUTE statement
 ms.assetid: 7e695364-1a98-4cfd-8ebd-137ac5a425b3
-caps.latest.revision: 
+caps.latest.revision: 42
 author: barbkess
 ms.author: barbkess
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 767be5069d65c11dad849a8fc32f5b15296a4eda
-ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
+ms.openlocfilehash: 8ef29633b2585a139fdd9e009458f36f38f00c56
+ms.sourcegitcommit: 059fc64ba858ea2adaad2db39f306a8bff9649c2
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/25/2018
+ms.lasthandoff: 04/04/2018
 ---
 # <a name="create-route-transact-sql"></a>CREATE ROUTE (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-asdbmi-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdbmi-xxxx-xxx-md.md )]
 
   Agrega una ruta nueva a la tabla de enrutamiento para la base de datos actual. Para los mensajes salientes, [!INCLUDE[ssSB](../../includes/sssb-md.md)] determina el enrutamiento mediante la comprobación de la tabla de enrutamiento en la base de datos local. En el caso de los mensajes de las conversaciones que se originan en otra instancia, incluidos los que se van a reenviar, [!INCLUDE[ssSB](../../includes/sssb-md.md)] comprueba las rutas en **msdb**.  
   
@@ -90,7 +90,9 @@ WHERE database_id = DB_ID()
  Especifica el tiempo, en segundos, durante el que [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] retiene la ruta en la tabla de enrutamiento. Transcurrido este tiempo, la ruta expira y [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ya no la tiene en cuenta al elegir una ruta para una conversación nueva. Si esta cláusula se omite, *route_lifetime* es NULL y la ruta no expira nunca.  
   
  ADDRESS **='***next_hop_address***'**  
- Especifica la dirección de red para esta ruta. *next_hop_address* especifica una dirección TCP/IP en el siguiente formato:  
+Para Instancia administrada de SQL Database, `ADDRESS` debe ser local. 
+
+Especifica la dirección de red para esta ruta. En *dirección_de_próximo_salto* se especifica una dirección TCP/IP en el formato siguiente:  
   
  **TCP://**{ *dns_name* | *netbios_name* | *ip_address* } **:***port_number*  
   
@@ -106,7 +108,7 @@ WHERE ssbe.name = N'MyServiceBrokerEndpoint';
   
  Si el servicio se hospeda en una base de datos reflejada, debe especificar también MIRROR_ADDRESS para la otra instancia que hospeda una base de datos reflejada. En caso contrario, esta ruta no realiza la conmutación por error al reflejo.  
   
- Si una ruta especifica **'LOCAL'** para *next_hop_address*, el mensaje se entrega a un servicio en la instancia actual de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
+ Cuando una ruta especifica **"LOCAL"** para *dirección_de_próximo_salto*, el mensaje se entrega a un servicio en la instancia actual de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
  Si una ruta especifica **'TRANSPORT'** para *next_hop_address*, la dirección de red se determina en función de la dirección de red del nombre del servicio. Una ruta que especifica **'TRANSPORT'** podría no especificar un nombre de servicio o instancia de agente.  
   
@@ -125,14 +127,14 @@ INNER JOIN sys.service_broker_endpoints AS ssbe
 WHERE ssbe.name = N'MyServiceBrokerEndpoint';  
 ```  
   
- Si se especifica MIRROR_ADDRESS, la ruta debe especificar la cláusula SERVICE_NAME y la cláusula BROKER_INSTANCE. Una ruta que especifica **'LOCAL'** o **'TRANSPORT'** para *next_hop_address* podría no especificar una dirección de reflejo.  
+ Si se especifica MIRROR_ADDRESS, la ruta debe especificar la cláusula SERVICE_NAME y la cláusula BROKER_INSTANCE. Es posible que una ruta que especifica **"LOCAL"** o **"TRANSPORT"** para *dirección_de_próximo_salto* no especifique una dirección de reflejo.  
   
 ## <a name="remarks"></a>Notas  
  La tabla de enrutamiento que almacena las rutas es una tabla de metadatos que se puede leer con la vista de catálogo **sys.routes**. Esta vista de catálogo solo se puede actualizar mediante las instrucciones CREATE ROUTE, ALTER ROUTE y DROP ROUTE.  
   
  De forma predeterminada, la tabla de enrutamiento de cada base de datos de usuario contiene una ruta. Esta ruta se llama **AutoCreatedLocal**. La ruta especifica **'LOCAL'** para *next_hop_address* y coincide con todos los nombres de servicio e identificadores de instancia de agente.  
   
- Si una ruta especifica **'TRANSPORT'** para *next_hop_address*, la dirección de red se determina en función del nombre del servicio. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] puede procesar de forma correcta nombres de servicio que comienzan con una dirección de red en un formato válido para *next_hop_address*.  
+ Si una ruta especifica **'TRANSPORT'** para *next_hop_address*, la dirección de red se determina en función del nombre del servicio. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] puede procesar de forma correcta nombres de servicio que comienzan con una dirección de red en un formato válido para *dirección_de_próximo_salto*.  
   
  La tabla de enrutamiento puede contener un número indeterminado de rutas que especifican el mismo servicio, dirección de red e identificador de instancia de agente. En este caso, [!INCLUDE[ssSB](../../includes/sssb-md.md)] elige una ruta mediante un procedimiento diseñado para buscar la coincidencia más exacta entre la información especificada en la conversación y la información de la tabla de enrutamiento.  
   

@@ -1,30 +1,30 @@
 ---
-title: "FINDSTRING (expresión de SSIS) | Microsoft Docs"
-ms.custom: 
+title: FINDSTRING (expresión de SSIS) | Microsoft Docs
+ms.custom: ''
 ms.date: 03/01/2017
 ms.prod: sql-non-specified
 ms.prod_service: integration-services
-ms.service: 
+ms.service: ''
 ms.component: expressions
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - integration-services
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - FINDSTRING function
 ms.assetid: c83cb1b1-3c52-4496-b518-4c9253b9336d
-caps.latest.revision: 
+caps.latest.revision: 41
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: c2787fdb4663ea8c1495a811b44f878b896498eb
-ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
+ms.openlocfilehash: 56520a56a70622e23e7c407ed788f8f8f0ba3dc6
+ms.sourcegitcommit: 8f1d1363e18e0c32ff250617ab6cb2da2147bf8e
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/25/2018
+ms.lasthandoff: 04/03/2018
 ---
 # <a name="findstring-ssis-expression"></a>FINDSTRING (expresión de SSIS)
   Devuelve la ubicación de la repetición especificada de una cadena en una expresión de caracteres. El resultado devuelto es el índice de base uno de la repetición. El parámetro string debe devolver una expresión de caracteres y el parámetro occurrence debe devolver un entero. Si no se encuentra la cadena, el valor devuelto es 0. Si la cadena aparece menos veces de las que especifica el argumento de repetición, el valor devuelto es 0.  
@@ -71,10 +71,10 @@ FINDSTRING("New York, NY, NY", "NY", 1)
 FINDSTRING("New York, NY, NY", "NY", 3)   
 ```  
   
- Este ejemplo usa la columna **Name** . Devuelve la ubicación del valor n en la columna **Name** . El resultado devuelto varía en función del valor de **Name**. Si **Name** contiene Anderson, la función devuelve 8.  
+ Este ejemplo usa la columna **Name** . Devuelve la ubicación de la segunda "n" en la columna **Name**. El resultado devuelto varía en función del valor de **Name**. Si **Name** contiene Anderson, la función devuelve 8.  
   
 ```  
-FINDSTRING(Name,"n", 2)   
+FINDSTRING(Name, "n", 2)   
 ```  
   
  En este ejemplo se utilizan las columnas **Name** y **Size** . Devuelve la ubicación del primer carácter por la izquierda del valor **Size** de la columna **Name** . El resultado devuelto varía en función de los valores de columna. Si **Name** contiene Mountain,500Red,42 y **Size** contiene 42, el resultado devuelto es 17.  

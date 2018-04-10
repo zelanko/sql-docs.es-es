@@ -61,16 +61,16 @@ helpviewer_keywords:
 - dropping columns
 - table changes [SQL Server]
 ms.assetid: f1745145-182d-4301-a334-18f799d361d1
-caps.latest.revision: ''
+caps.latest.revision: 281
 author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: Active
-ms.openlocfilehash: b4a725960612c90a4619cf16587df0f67a68a3ba
-ms.sourcegitcommit: 6e16d1616985d65484c72f5e0f34fb2973f828f4
+ms.openlocfilehash: 20df0676d819883937884d2b6d989d9f583c7fb4
+ms.sourcegitcommit: 2e130e9f3ce8a7ffe373d7fba8b09e937c216386
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/16/2018
+ms.lasthandoff: 03/28/2018
 ---
 # <a name="alter-table-transact-sql"></a>ALTER TABLE (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -413,7 +413,7 @@ ALTER TABLE MyTable ALTER COLUMN NullCOl NVARCHAR(20) NOT NULL;
   
  Especifica que la propiedad ROWGUIDCOL se agrega a la columna indicada o se quita de ella. ROWGUIDCOL indica que la columna es una columna GUID de fila. Solo se puede designar una columna **uniqueidentifier** por tabla como columna ROWGUIDCOL y la propiedad ROWGUIDCOL solo se puede asignar a una columna **uniqueidentifier**. ROWGUIDCOL no puede asignarse a una columna de un tipo de datos definido por el usuario.  
   
- ROWGUIDCOL no exige la exclusividad de los valores almacenados en la columna y no genera automáticamente valores para las nuevas filas que se insertan en la tabla. Para generar valores únicos para cada columna, utilice la función NEWID en instrucciones INSERT o especifique la función NEWID como la predeterminada para la columna.  
+ ROWGUIDCOL no exige la exclusividad de los valores almacenados en la columna y no genera automáticamente valores para las nuevas filas que se insertan en la tabla. Para generar valores únicos para cada columna, use la función NEWID o NEWSEQUENTIALID en las instrucciones INSERT o especifique la función NEWID o NEWSEQUENTIALID como valor predeterminado de la columna.  
   
  [ {ADD | DROP} PERSISTED ]  
  Especifica que la propiedad PERSISTED se agrega a la columna indicada o se quita de ella. La columna debe ser una columna calculada definida mediante una expresión determinista. Para las columnas especificadas como PERSISTED, [!INCLUDE[ssDE](../../includes/ssde-md.md)] almacena físicamente los valores calculados en la tabla y actualiza los valores cuando se actualiza cualquiera de las otras columnas de las que depende la columna calculada. Al marcar una columna calculada como PERSISTED, puede crear índices sobre columnas calculadas definidas sobre expresiones que son deterministas, pero no precisas. Para obtener más información, vea [Indexes on Computed Columns](../../relational-databases/indexes/indexes-on-computed-columns.md).  

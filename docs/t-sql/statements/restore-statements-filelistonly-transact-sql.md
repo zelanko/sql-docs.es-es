@@ -1,16 +1,16 @@
 ---
 title: RESTORE FILELISTONLY (Transact-SQL) | Microsoft Docs
-ms.custom: 
-ms.date: 03/15/2017
+ms.custom: ''
+ms.date: 03/30/2018
 ms.prod: sql-non-specified
 ms.prod_service: sql-database
-ms.service: 
+ms.service: ''
 ms.component: t-sql|statements
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - RESTORE FILELISTONLY
@@ -24,22 +24,25 @@ helpviewer_keywords:
 - RESTORE FILELISTONLY statement
 - listing backed up files
 ms.assetid: 0b4b4d11-eb9d-4f3e-9629-6c79cec7a81a
-caps.latest.revision: 
+caps.latest.revision: 83
 author: barbkess
 ms.author: barbkess
 manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: e6776115033e6e7222abc610673dd8b0aaff81dc
-ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
+ms.openlocfilehash: 29cc42e61ff88ee1d7b1d61a2a4ed214d72b3e1d
+ms.sourcegitcommit: 059fc64ba858ea2adaad2db39f306a8bff9649c2
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/25/2018
+ms.lasthandoff: 04/04/2018
 ---
 # <a name="restore-statements---filelistonly-transact-sql"></a>Instrucciones RESTORE: FILELISTONLY (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-asdbmi-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdbmi-xxxx-xxx-md.md )]
+
 
   Devuelve un conjunto de resultados que contiene una lista con los archivos de base de datos y de registro del conjunto de copia de seguridad de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
-  
+
+[!INCLUDE[ssMIlimitation](../../includes/sql-db-mi-limitation.md)]
+
 > [!NOTE]  
 >  Para obtener las descripciones de los argumentos, vea [Argumentos de RESTORE &#40;Transact-SQL&#41;](../../t-sql/statements/restore-statements-arguments-transact-sql.md).  
   
@@ -93,7 +96,7 @@ FROM <backup_device>
 |LogicalName|**nvarchar(128)**|Nombre lógico del archivo.|  
 |PhysicalName|**nvarchar(260)**|Nombre físico o del sistema operativo del archivo.|  
 |Tipo|**char(1)**|Uno de los tipos de archivo:<br /><br /> **L** = archivo de registro de Microsoft [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]<br /><br /> **D** = archivo de datos de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]<br /><br /> **F** = catálogo de texto completo<br /><br /> **S** = FileStream, FileTable o contenedor [!INCLUDE[hek_2](../../includes/hek-2-md.md)]|  
-|FileGroupName|**nvarchar(128)**|Nombre del grupo de archivos que contiene el archivo.|  
+|FileGroupName|**nvarchar(128)** NULL|Nombre del grupo de archivos que contiene el archivo.|  
 |Tamaño|**numeric(20,0)**|Tamaño actual, en bytes.|  
 |MaxSize|**numeric(20,0)**|Tamaño máximo permitido, en bytes.|  
 |FileID|**bigint**|Identificador de archivo, único en la base de datos.|  
@@ -105,13 +108,13 @@ FROM <backup_device>
 |BackupSizeInBytes|**bigint**|Tamaño en bytes de la copia de seguridad de este archivo.|  
 |SourceBlockSize|**int**|Tamaño de bloque (en bytes) del dispositivo físico que contiene el archivo (no el dispositivo de copia de seguridad).|  
 |FileGroupID|**int**|Id. del grupo de archivos.|  
-|LogGroupGUID|**uniqueidentifier NULL**|NULL.|  
+|LogGroupGUID|**uniqueidentifier** NULL|NULL.|  
 |DifferentialBaseLSN|**numeric(25,0)** NULL|En el caso de las copias de seguridad diferenciales, los cambios cuyo número de secuencia de registro sea mayor o igual que **DifferentialBaseLSN** se incluyen en la copia diferencial.<br /><br /> Para otros tipos de copia de seguridad, el valor es NULL.|  
-|DifferentialBaseGUID|**uniqueidentifier**|Identificador único de la base diferencial, en el caso de las copias de seguridad diferenciales.<br /><br /> Para otros tipos de copia de seguridad, el valor es NULL.|  
+|DifferentialBaseGUID|**uniqueidentifier** NULL|Identificador único de la base diferencial, en el caso de las copias de seguridad diferenciales.<br /><br /> Para otros tipos de copia de seguridad, el valor es NULL.|  
 |IsReadOnly|**bit**|**1** = El archivo es de solo lectura.|  
 |IsPresent|**bit**|**1** = El archivo se encuentra en la copia de seguridad.|  
-|TDEThumbprint|**varbinary(32)**|Muestra la huella digital de la clave de cifrado de base de datos. La huella digital de la clave de cifrado es el valor hash SHA-1 del certificado con el que se cifra la clave. Para más información sobre el cifrado de bases de datos, vea [Cifrado de datos transparente &#40;TDE&#41;](../../relational-databases/security/encryption/transparent-data-encryption.md).|  
-|SnapshotURL|**nvarchar(360)**|Dirección URL de la instantánea de Azure del archivo de base de datos incluido en la copia de seguridad de FILE_SNAPSHOT. Devuelve NULL si no hay ninguna copia de seguridad de FILE_SNAPSHOT.|  
+|TDEThumbprint|**varbinary(32)** NULL|Muestra la huella digital de la clave de cifrado de base de datos. La huella digital de la clave de cifrado es el valor hash SHA-1 del certificado con el que se cifra la clave. Para más información sobre el cifrado de bases de datos, vea [Cifrado de datos transparente &#40;TDE&#41;](../../relational-databases/security/encryption/transparent-data-encryption.md).|  
+|SnapshotURL|**nvarchar(360)** NULL|Dirección URL de la instantánea de Azure del archivo de base de datos incluido en la copia de seguridad de FILE_SNAPSHOT. Devuelve NULL si no hay ninguna copia de seguridad de FILE_SNAPSHOT.|  
   
 ## <a name="security"></a>Seguridad  
  La operación de copia de seguridad puede especificar opcionalmente contraseñas de un conjunto de medios, de un conjunto de copia de seguridad o de ambos. Si se ha definido una contraseña en un conjunto de medios o un conjunto de copia de seguridad, debe especificar la contraseña o contraseñas correctas en la instrucción RESTORE. Estas contraseñas impiden operaciones de restauración y anexiones no autorizadas de los conjuntos de copia de seguridad en medios que usan herramientas de [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. No obstante, la contraseña no impide que se sobrescriba el medio con la opción FORMAT de la instrucción BACKUP.  

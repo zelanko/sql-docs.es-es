@@ -1,16 +1,16 @@
 ---
 title: Origen de Excel | Microsoft Docs
-ms.custom: 
-ms.date: 03/14/2017
+ms.custom: ''
+ms.date: 04/02/2018
 ms.prod: sql-non-specified
 ms.prod_service: integration-services
-ms.service: 
+ms.service: ''
 ms.component: data-flow
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - integration-services
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 f1_keywords:
 - sql13.dts.designer.excelsource.f1
@@ -21,20 +21,24 @@ helpviewer_keywords:
 - Excel [Integration Services]
 - sources [Integration Services], Excel
 ms.assetid: e66349f3-b1b8-4763-89b7-7803541a4d62
-caps.latest.revision: 
+caps.latest.revision: 60
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 872ac8117bb87cb9f1709afedbacc32b2d1f1413
-ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
+ms.openlocfilehash: 6a9795de30c7d4fbe2ede9a17043a916e5953cd5
+ms.sourcegitcommit: 059fc64ba858ea2adaad2db39f306a8bff9649c2
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/25/2018
+ms.lasthandoff: 04/04/2018
 ---
 # <a name="excel-source"></a>Origen de Excel
   El origen de Excel extrae datos de hojas de cálculo o de rangos de libros de [!INCLUDE[msCoName](../../includes/msconame-md.md)] Excel.  
-  
+
+> [!IMPORTANT]
+> Para obtener información detallada sobre cómo conectarse a archivos de Excel y sobre las limitaciones y problemas conocidos a la hora de cargar datos de o a archivos de Excel, vea [Cargar datos de o a Excel con SQL Server Integration Services (SSIS)](../load-data-to-from-excel-with-ssis.md).
+
+## <a name="access-mode"></a>Modo de acceso
  El origen de Excel ofrece cuatro modos de acceso a datos distintos para extraer datos:  
   
 -   Una tabla o vista.  
@@ -44,9 +48,6 @@ ms.lasthandoff: 01/25/2018
 -   Los resultados de una instrucción SQL. La consulta puede tener parámetros.  
   
 -   Los resultados de una instrucción SQL, almacenados en una variable.  
-  
-> [!IMPORTANT]  
->  En Excel, una hoja o un rango equivalen a una tabla o vista. La lista de tablas disponibles en los editores de Origen y Destino de Excel muestra las hojas de cálculo existentes (identificadas con el signo $ anexado al nombre de la hoja de cálculo, como, por ejemplo, Hoja1$) y rangos con nombre (identificados por la falta del signo $, como por ejemplo, MiRango). Para obtener más información, vea la sección Consideraciones de uso.  
   
  El origen de Excel usa un Administrador de conexiones con Excel para conectar con un origen de datos y el Administrador de conexiones especifica el archivo de libro que se debe usar. Para más información, consulte [Excel Connection Manager](../../integration-services/connection-manager/excel-connection-manager.md).  
   
@@ -205,13 +206,6 @@ ms.lasthandoff: 01/25/2018
  Aplica la opción de control de errores a las celdas seleccionadas.  
   
 ## <a name="related-content"></a>Contenido relacionado  
-  
--   Entrada de blog sobre cómo [importar datos de Excel de 64 bits en SSIS](http://go.microsoft.com/fwlink/?LinkId=217673)en hrvoje.piasevoli.com  
-  
--   Entrada de blog, [Excel en Integration Services, parte 1 de 3: conexiones y componentes](http://go.microsoft.com/fwlink/?LinkId=217674), en dougbert.com  
-  
--   Entrada de blog, [Excel en Integration Services, parte 2 de 3: tablas y tipos de datos](http://go.microsoft.com/fwlink/?LinkId=217675), en dougbert.com.  
-  
--   Entrada de blog, [Excel en Integration Services, parte 3 de 3: problemas y alternativas](http://go.microsoft.com/fwlink/?LinkId=217676), en dougbert.com.  
-  
-  
+[Cargar datos de o a Excel con SQL Server Integration Services (SSIS)](../load-data-to-from-excel-with-ssis.md)
+[Destino de Excel](excel-destination.md)  
+[Administrador de conexiones de Excel](../connection-manager/excel-connection-manager.md)

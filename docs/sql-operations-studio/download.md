@@ -116,7 +116,7 @@ Esta versión de [!INCLUDE[name-sos](../includes/name-sos-short.md)] incluye una
    ```
 
 
-## <a name="uninstall-sql-operations-studio-preview"></a>Desinstalar SQL Operations StudioL (vista previa)
+## <a name="uninstall-sql-operations-studio-preview"></a>Desinstalar SQL Operations Studio (versión preliminar)
 
 Si instaló [!INCLUDE[name-sos-short](../includes/name-sos-short.md)] mediante el instalador de Windows, a continuación, desinstale la misma manera que quite cualquier aplicación de Windows.
 

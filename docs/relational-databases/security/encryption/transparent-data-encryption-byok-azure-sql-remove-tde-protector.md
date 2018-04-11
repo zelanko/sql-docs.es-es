@@ -1,29 +1,28 @@
 ---
-title: "PowerShell - Eliminación de un protector de TDE - Azure SQL | Microsoft Docs"
-description: "Guía de procedimientos para responder ante un protector de TDE que podría estar en peligro para Azure SQL Database o Data Warehouse con compatibilidad de TDE y Bring Your Own Key (BYOK)."
-keywords: 
+title: PowerShell - Eliminación de un protector de TDE - Azure SQL | Microsoft Docs
+description: Guía de procedimientos para responder ante un protector de TDE que podría estar en peligro para Azure SQL Database o Data Warehouse con compatibilidad de TDE y Bring Your Own Key (BYOK).
+keywords: ''
 services: sql-database
-documentationcenter: 
+documentationcenter: ''
 author: becczhang
 manager: craigg
-ms.prod: 
-ms.reviewer: 
+ms.prod: ''
+ms.reviewer: ''
 ms.suite: sql
 ms.prod_service: sql-database, sql-data-warehouse
 ms.service: sql-database
-ms.custom: 
+ms.custom: ''
 ms.component: security
 ms.workload: Inactive
-ms.tgt_pltfrm: 
-ms.devlang: na
+ms.tgt_pltfrm: ''
 ms.topic: article
 ms.date: 08/07/2017
 ms.author: rebeccaz
-ms.openlocfilehash: 30b08c760eff3bdeb6d264d1c9d79c375f0a09ec
-ms.sourcegitcommit: b603dcac7326bba387befe68544619e026e6a15e
+ms.openlocfilehash: 9982a1afafee84e6c435c59f7e0ec431fb87f832
+ms.sourcegitcommit: d6b1695c8cbc70279b7d85ec4dfb66a4271cdb10
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 04/08/2018
 ---
 # <a name="remove-a-transparent-data-encryption-tde-protector-using-powershell"></a>Eliminación de un protector de cifrado de datos transparente (TDE) mediante PowerShell
 [!INCLUDE[appliesto-xx-asdb-asdw-xxx-md](../../../includes/appliesto-xx-asdb-asdw-xxx-md.md)]

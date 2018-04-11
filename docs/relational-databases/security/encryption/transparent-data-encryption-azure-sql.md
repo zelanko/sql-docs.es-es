@@ -1,28 +1,27 @@
 ---
 title: Cifrado de datos transparente para Azure SQL Database y Data Warehouse | Microsoft Docs
-description: "Información general sobre el cifrado de datos transparente para SQL Database y Data Warehouse. En este documento se explican sus ventajas y las opciones de configuración, que incluyen el cifrado de datos transparente administrado por un servicio y el tipo Bring Your Own Key."
-keywords: 
+description: Información general sobre el cifrado de datos transparente para SQL Database y Data Warehouse. En este documento se explican sus ventajas y las opciones de configuración, que incluyen el cifrado de datos transparente administrado por un servicio y el tipo Bring Your Own Key.
+keywords: ''
 author: becczhang
 manager: craigg
-editor: 
-ms.prod: 
-ms.reviewer: 
+editor: ''
+ms.prod: ''
+ms.reviewer: ''
 ms.suite: sql
 ms.prod_service: sql-database, sql-data-warehouse
 ms.service: sql-database
 ms.component: security
-ms.custom: 
+ms.custom: ''
 ms.workload: On Demand
-ms.tgt_pltfrm: 
-ms.devlang: na
+ms.tgt_pltfrm: ''
 ms.topic: article
 ms.date: 08/07/2017
 ms.author: rebeccaz
-ms.openlocfilehash: 5c9ff69d5219e3cd508031669d67002931fa4060
-ms.sourcegitcommit: d7dcbcebbf416298f838a39dd5de6a46ca9f77aa
+ms.openlocfilehash: 45e4c702e2f08ce6e7c39463ac49c98701646f37
+ms.sourcegitcommit: d6b1695c8cbc70279b7d85ec4dfb66a4271cdb10
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/23/2018
+ms.lasthandoff: 04/08/2018
 ---
 # <a name="transparent-data-encryption-for-sql-database-and-data-warehouse"></a>Cifrado de datos transparente para SQL Database y Data Warehouse
 [!INCLUDE[appliesto-xx-asdb-asdw-xxx-md](../../../includes/appliesto-xx-asdb-asdw-xxx-md.md)]

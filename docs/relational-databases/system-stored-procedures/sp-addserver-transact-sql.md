@@ -1,16 +1,16 @@
 ---
-title: sp_addserver (Transact-SQL) | Documentos de Microsoft
-ms.custom: 
+title: sp_addserver (Transact-SQL) | Microsoft Docs
+ms.custom: ''
 ms.date: 06/10/2016
 ms.prod: sql-non-specified
 ms.prod_service: database-engine
-ms.service: 
+ms.service: ''
 ms.component: system-stored-procedures
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - sp_addserver
@@ -23,16 +23,16 @@ helpviewer_keywords:
 - machine names [SQL Server]
 - computer names
 ms.assetid: 160a6b29-5e80-44ab-80ec-77d4280f627c
-caps.latest.revision: 
+caps.latest.revision: 40
 author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: On Demand
 ms.openlocfilehash: 08224c1f35e0115ba3bb97f88b0a2a51f5e05a6a
-ms.sourcegitcommit: 9fbe5403e902eb996bab0b1285cdade281c1cb16
+ms.sourcegitcommit: d6b1695c8cbc70279b7d85ec4dfb66a4271cdb10
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/27/2017
+ms.lasthandoff: 04/10/2018
 ---
 # <a name="spaddserver-transact-sql"></a>sp_addserver (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -51,20 +51,20 @@ sp_addserver [ @server = ] 'server' ,
 ```  
   
 ## <a name="arguments"></a>Argumentos  
- [  **@server =** ] **'***server***'**  
+ [ **@server =** ] **'***server***'**  
  Es el nombre del servidor. Los nombres de los servidores tienen que ser únicos y cumplir las reglas para los nombres de equipo de [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows, aunque no se permiten espacios. *server* es de tipo **sysname**y no tiene ningún valor predeterminado.  
   
  Cuando varias instancias de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] se instalan en un equipo, una instancia opera como si estuviera en un servidor independiente. Especifique una instancia con nombre mediante una referencia a *server* como *nombreDeServidor ombreDeInstancia*.  
   
- [  **@local =** ] **'LOCAL'**  
- Especifica el servidor que se va a agregar como servidor local. **@local**es **varchar (10)**, su valor predeterminado es null. Especificar  **@local**  como **LOCAL** define  **@server**  como el nombre del servidor local y el @@SERVERNAME función para devolver el valor de *server*.  
+ [ **@local =** ] **'LOCAL'**  
+ Especifica el servidor que se va a agregar como servidor local. **@local** es **varchar (10)**, su valor predeterminado es null. Especificar **@local** como **LOCAL** define **@server** como el nombre del servidor local y el @@SERVERNAME función para devolver el valor de *server*.  
   
  El programa de instalación de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] establece esta variable en el nombre del equipo durante la instalación. De forma predeterminada, el nombre del equipo es la forma, los usuarios se conectan a una instancia de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] sin requerir ninguna configuración adicional.  
   
  La definición local solo surte efecto después de reiniciarse el [!INCLUDE[ssDE](../../includes/ssde-md.md)]. Solo puede definirse un servidor local en cada instancia del [!INCLUDE[ssDE](../../includes/ssde-md.md)].  
   
- [  **@duplicate_ok =** ] **'duplicate_OK'**  
- Especifica si se permiten nombres de servidor duplicados. **@duplicate_OK**es **varchar (13)**, su valor predeterminado es null. **@duplicate_OK**sólo puede tener el valor **duplicate_OK** o NULL. Si **duplicate_OK** se especifica y el nombre del servidor que se va a agregar ya existe, se produce ningún error. Si no se utilizan parámetros con nombre,  **@local**  debe especificarse.  
+ [ **@duplicate_ok =** ] **'duplicate_OK'**  
+ Especifica si se permiten nombres de servidor duplicados. **@duplicate_OK** es **varchar (13)**, su valor predeterminado es null. **@duplicate_OK** sólo puede tener el valor **duplicate_OK** o NULL. Si **duplicate_OK** se especifica y el nombre del servidor que se va a agregar ya existe, se produce ningún error. Si no se utilizan parámetros con nombre, **@local** debe especificarse.  
   
 ## <a name="return-code-values"></a>Valores de código de retorno  
  0 (correcto) o 1 (error)  
@@ -89,8 +89,8 @@ sp_addserver 'ACCOUNTS', 'local';
 ## <a name="see-also"></a>Vea también  
  [Cambiar el nombre de un equipo que hospeda una instancia independiente de SQL Server](../../database-engine/install-windows/rename-a-computer-that-hosts-a-stand-alone-instance-of-sql-server.md)   
  [sp_addlinkedserver &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-addlinkedserver-transact-sql.md)   
- [sp_dropserver &#40; Transact-SQL &#41;](../../relational-databases/system-stored-procedures/sp-dropserver-transact-sql.md)   
- [sp_helpserver &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-helpserver-transact-sql.md)   
+ [sp_dropserver &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-dropserver-transact-sql.md)   
+ [sp_helpserver & #40; Transact-SQL & #41;](../../relational-databases/system-stored-procedures/sp-helpserver-transact-sql.md)   
  [Procedimientos almacenados del sistema &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)   
  [Procedimientos almacenados de seguridad &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/security-stored-procedures-transact-sql.md)  
   

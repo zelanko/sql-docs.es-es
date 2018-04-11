@@ -1,16 +1,16 @@
 ---
 title: CONTAINSTABLE (Transact-SQL) | Documentos de Microsoft
-ms.custom: 
+ms.custom: ''
 ms.date: 07/24/2015
 ms.prod: sql-non-specified
 ms.prod_service: database-engine, sql-database
-ms.service: 
+ms.service: ''
 ms.component: system-functions
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - CONTAINSTABLE
@@ -35,16 +35,16 @@ helpviewer_keywords:
 - rankings [full-text search]
 - less precise (fuzzy) searches [full-text search]
 ms.assetid: e580c210-cf57-419d-9544-7f650f2ab814
-caps.latest.revision: 
+caps.latest.revision: 69
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ms.workload: On Demand
 ms.openlocfilehash: a9f4ab666351984b62e47d664d17d9e2769337cd
-ms.sourcegitcommit: c556eaf60a49af7025db35b7aa14beb76a8158c5
+ms.sourcegitcommit: d6b1695c8cbc70279b7d85ec4dfb66a4271cdb10
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/03/2018
+ms.lasthandoff: 04/10/2018
 ---
 # <a name="containstable-transact-sql"></a>CONTAINSTABLE (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -53,7 +53,7 @@ ms.lasthandoff: 02/03/2018
   
  CONTAINSTABLE es útil para los mismos tipos de coincidencias que la [predicado CONTAINS](../../t-sql/queries/contains-transact-sql.md) y utiliza las mismas condiciones de búsqueda como CONTAINS.  
   
- A diferencia de CONTAINS, las consultas que usan CONTAINSTABLE devuelven un valor de clasificación por relevancia (RANK) y un valor de clave de texto completo (KEY) por cada fila.  Para obtener información acerca de las formas de búsquedas de texto completo que son compatibles con [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], consulte [consultar con búsqueda de texto completo](../../relational-databases/search/query-with-full-text-search.md).  
+ A diferencia de CONTAINS, las consultas que usan CONTAINSTABLE devuelven un valor de clasificación por relevancia (RANK) y un valor de clave de texto completo (KEY) por cada fila.  Para obtener información sobre las formas de búsqueda de texto completo que se admiten en [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], vea [Consulta con búsqueda de texto completo](../../relational-databases/search/query-with-full-text-search.md).  
   
  ![Icono de vínculo de tema](../../database-engine/configure-windows/media/topic-link.gif "Icono de vínculo de tema") [Convenciones de sintaxis de Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -125,35 +125,35 @@ CONTAINSTABLE
  *tabla* no se puede especificar un nombre de servidor y no se puede usar en las consultas en los servidores vinculados.  
   
  *column_name*  
- Es el nombre de una o más columnas indizadas para la búsqueda de texto completo. Las columnas pueden ser de tipo **char**, **varchar**, **nchar**, **nvarchar**, **texto**, **ntext**, **imagen**, **xml**, **varbinary**, o **varbinary (max)**.  
+ Es el nombre de una o más columnas indizadas para la búsqueda de texto completo. Las columnas pueden ser de tipo **char**, **varchar**, **nchar**, **nvarchar**, **text**, **ntext**, **image**, **xml**, **varbinary** o **varbinary(max)**.  
   
  *column_list*  
- Indica que se pueden especificar varias columnas, separadas por una coma. *column_list* debe ir entre paréntesis. A menos que *language_term* se especifica, el idioma de todas las columnas de *column_list* debe ser el mismo.  
+ Indica que se pueden especificar varias columnas, separadas por una coma. *column_list* debe ir entre paréntesis. A menos que se especifique *language_term*, el idioma de todas las columnas de *column_list* debe ser el mismo.  
   
  \*  
- Especifica que un índice de texto completo todas las columnas de *tabla* debe usarse para buscar la condición de búsqueda determinada. A menos que *language_term* se especifica, el idioma de todas las columnas de la tabla debe ser el mismo.  
+ Especifica que un índice de texto completo todas las columnas de *tabla* debe usarse para buscar la condición de búsqueda determinada. A menos que se especifique *language_term*, el idioma de todas las columnas de la tabla debe ser el mismo.  
   
  IDIOMA *language_term*  
  Es el idioma cuyos recursos se utilizarán para la separación de palabras, lematización y diccionario de sinónimos y palabras irrelevantes (o [palabra irrelevante](../../relational-databases/search/configure-and-manage-stopwords-and-stoplists-for-full-text-search.md)) eliminación como parte de la consulta. Este parámetro es opcional y puede especificarse como un valor hexadecimal, un entero o una cadena correspondiente al identificador de configuración regional (LCID) de un idioma. Si *language_term* se especifica, se aplicará el idioma que representa a todos los elementos de la condición de búsqueda. Si no se especifica ningún valor, se utiliza el idioma de texto completo de la columna.  
   
- Si se almacenan juntos documentos de idiomas diferentes como objetos binarios grandes (BLOB) en una sola columna, el identificador de configuración regional (LCID) de un documento determinado determina qué idioma se usa para indizar su contenido. Al consultar este tipo de columna, especificar *LENGUAJE ** language_term* puede aumentar la probabilidad de encontrar una coincidencia acertada.  
+ Si se almacenan juntos documentos de idiomas diferentes como objetos binarios grandes (BLOB) en una sola columna, el identificador de configuración regional (LCID) de un documento determinado determina qué idioma se usa para indizar su contenido. Al consultar este tipo de columna, especificar *LANGUAGE**language_term* puede aumentar la probabilidad de encontrar una coincidencia acertada.  
   
- Cuando se especifica como una cadena, *language_term* corresponde a la **alias** valor de columna en la [sys.syslanguages](../../relational-databases/system-compatibility-views/sys-syslanguages-transact-sql.md) vista de compatibilidad.  La cadena debe incluirse entre comillas simples, como en '*language_term*'. Cuando se especifica como un entero, *language_term* es el LCID real que identifica el idioma. Cuando se especifica como un valor hexadecimal, *language_term* 0 x seguido del valor hexadecimal del LCID. El valor hexadecimal no puede superar los ocho dígitos, incluidos los ceros a la izquierda.  
+ Cuando se especifica como una cadena, *language_term* corresponde a la **alias** valor de columna en la [sys.syslanguages](../../relational-databases/system-compatibility-views/sys-syslanguages-transact-sql.md) vista de compatibilidad.  La cadena debe incluirse entre comillas simples, como en '*language_term*'. Cuando se especifica como un entero, *language_term* es el LCID real que identifica el idioma. Cuando se especifica como un valor hexadecimal, *language_term* es 0x seguido del valor hexadecimal del LCID. El valor hexadecimal no puede superar los ocho dígitos, incluidos los ceros a la izquierda.  
   
- Si el valor está en formato de caracteres de doble byte (DBCS), set, [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] lo convertirá a Unicode.  
+ Si el valor está en formato DBCS (juego de caracteres de doble byte), [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] lo convertirá a Unicode.  
   
- Si el idioma especificado no es válido o no hay recursos instalados que se correspondan con dicho idioma, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] devuelve un error. Para usar los recursos de idioma neutro, especifique 0 x 0 como *language_term*.  
+ Si el idioma especificado no es válido o no hay recursos instalados que se correspondan con dicho idioma, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] devuelve un error. Para usar recursos de idioma neutro, especifique 0x0 como *language_term*.  
   
  *top_n_by_rank*  
- Especifica que solamente el  *n*  coincidencias con una clasificación más altas, en orden descendente, se devuelven. Sólo se aplica cuando un valor entero,  *n* , se especifica. Si se combina *top_n_by_rank* con otros parámetros, es posible que la consulta devuelva menos filas de las que en realidad coinciden con todos los predicados. *top_n_by_rank* le permite aumentar el rendimiento de las consultas por recuperar solo las coincidencias más relevantes.  
+ Especifica que solamente el *n* coincidencias con una clasificación más altas, en orden descendente, se devuelven. Sólo se aplica cuando un valor entero, *n*, se especifica. Si se combina *top_n_by_rank* con otros parámetros, es posible que la consulta devuelva menos filas de las que en realidad coinciden con todos los predicados. *top_n_by_rank* le permite aumentar el rendimiento de las consultas por recuperar solo las coincidencias más relevantes.  
   
  <contains_search_condition>  
- Especifica el texto que se va a buscar en *column_name* y las condiciones para una coincidencia. Para obtener información acerca de las condiciones de búsqueda, vea [CONTAINS &#40; Transact-SQL &#41; ](../../t-sql/queries/contains-transact-sql.md).  
+ Especifica el texto que se va a buscar en *column_name* y las condiciones para obtener coincidencias. Para obtener información acerca de las condiciones de búsqueda, vea [CONTAINS &#40;Transact-SQL&#41;](../../t-sql/queries/contains-transact-sql.md).  
   
 ## <a name="remarks"></a>Comentarios  
  Los predicados y las funciones de texto completo operan en una única tabla, que se obtiene del predicado FROM. Para buscar en varias tablas, utilice una tabla combinada en la cláusula FROM a fin de buscar en un conjunto de resultados que sea el producto de dos o más tablas.  
   
- La tabla devuelta tiene una columna denominada **clave** que contiene los valores de clave de texto completo. Cada tabla indizada de texto completo tiene una columna cuyos valores se garantizan que es único y los valores devueltos en la **clave** columna son los valores de clave de texto completo de las filas que cumplen los criterios de selección especificados en la búsqueda de contiene condición. El **TableFulltextKeyColumn** propiedad, obtenida mediante la función OBJECTPROPERTY, proporciona la identidad de esta columna de clave única. Para obtener el identificador de la columna asociada a la clave de texto completo del índice de texto completo, utilice **sys.fulltext_indexes**. Para obtener más información, consulte [sys.fulltext_indexes &#40; Transact-SQL &#41; ](../../relational-databases/system-catalog-views/sys-fulltext-indexes-transact-sql.md).  
+ La tabla devuelta tiene una columna denominada **clave** que contiene los valores de clave de texto completo. Cada tabla indizada de texto completo tiene una columna cuyos valores se garantizan que es único y los valores devueltos en la **clave** columna son los valores de clave de texto completo de las filas que cumplen los criterios de selección especificados en la búsqueda de contiene condición. El **TableFulltextKeyColumn** propiedad, obtenida mediante la función OBJECTPROPERTY, proporciona la identidad de esta columna de clave única. Para obtener el identificador de la columna asociada a la clave de texto completo del índice de texto completo, utilice **sys.fulltext_indexes**. Para obtener más información, consulte [sys.fulltext_indexes &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-fulltext-indexes-transact-sql.md).  
   
  Para obtener las filas que desee de la tabla original, especifique una combinación con las filas de CONTAINSTABLE. La forma típica de la cláusula FROM de una instrucción SELECT que utiliza CONTAINSTABLE es la siguiente:  
   

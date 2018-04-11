@@ -1,16 +1,16 @@
 ---
 title: sp_add_jobschedule (Transact-SQL) | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 07/28/2016
 ms.prod: sql-non-specified
 ms.prod_service: database-engine
-ms.service: 
+ms.service: ''
 ms.component: system-stored-procedures
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - sp_add_jobschedule
@@ -20,16 +20,16 @@ dev_langs:
 helpviewer_keywords:
 - sp_add_jobschedule
 ms.assetid: ffce19d9-d1d6-45b4-89fd-ad0f60822ba0
-caps.latest.revision: 
+caps.latest.revision: 20
 author: stevestein
 ms.author: sstein
 manager: craigg
 ms.workload: On Demand
 ms.openlocfilehash: b2da9a4bf2bc1fb7e2768922b6b5dd4d93452571
-ms.sourcegitcommit: c556eaf60a49af7025db35b7aa14beb76a8158c5
+ms.sourcegitcommit: d6b1695c8cbc70279b7d85ec4dfb66a4271cdb10
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/03/2018
+ms.lasthandoff: 04/10/2018
 ---
 # <a name="spaddjobschedule-transact-sql"></a>sp_add_jobschedule (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -67,10 +67,10 @@ sp_add_jobschedule [ @job_id = ] job_id, | [ @job_name = ] 'job_name', [ @name =
 > [!NOTE]  
 >  Cualquier *job_id* o *job_name* debe especificarse, pero no pueden especificarse ambos.  
   
- [  **@name=** ] **'***nombre***'**  
+ [ **@name=** ] **'***name***'**  
  Nombre de la programación. *nombre* es **nvarchar (128)**, no tiene ningún valor predeterminado.  
   
- [  **@enabled=** ] *enabled_flag*  
+ [ **@enabled=** ] *enabled_flag*  
  Indica el estado actual de la programación. *enabled_flag* es **tinyint**, su valor predeterminado es **1** (habilitado). Si **0**, la programación no está habilitada. Si la programación está deshabilitada, el trabajo no se ejecutará.  
   
  [ **@freq_type=** ] *frequency_type*  
@@ -86,7 +86,7 @@ sp_add_jobschedule [ @job_id = ] job_id, | [ @job_name = ] 'job_name', [ @name =
 |**64**|Se ejecuta cuando se inicia el servicio del Agente [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].|  
 |**128**|Se ejecuta cuando el equipo está inactivo.|  
   
- [  **@freq_interval=** ] *frequency_interval*  
+ [ **@freq_interval=** ] *frequency_interval*  
  Día en que se ejecuta el trabajo. *frequency_interval* es **int**, con un valor predeterminado es 0 y depende del valor de *frequency_type* como se indica en la tabla siguiente:  
   
 |Value|Efecto|  
@@ -143,7 +143,7 @@ sp_add_jobschedule [ @job_id = ] job_id, | [ @job_name = ] 'job_name', [ @name =
  [ **@active_end_time=***active_end_time*  
  Hora de un día entre *active_start_date* y *active_end_date* para finalizar la ejecución de trabajo. *active_end_time* es **int**, no tiene ningún valor predeterminado. La hora tiene el formato HHMMSS en un reloj de 24 horas.  
   
- [  **@schedule_id=***schedule_id***salida**  
+ [ **@schedule_id=***schedule_id***OUTPUT**  
  Número de identificación asignado a la programación si se ha creado correctamente. *schedule_id* es una variable de salida de tipo **int**, no tiene ningún valor predeterminado.  
   
  [ **@schedule_uid**= ] *schedule_uid***OUTPUT**  
@@ -185,7 +185,7 @@ EXEC msdb.dbo.sp_add_jobschedule
  [Crear y adjuntar programaciones a trabajos](http://msdn.microsoft.com/library/079c2984-0052-4a37-a2b8-4ece56e6b6b5)   
  [Programar un trabajo](http://msdn.microsoft.com/library/f626390a-a3df-4970-b7a7-a0529e4a109c)   
  [Crear una programación](http://msdn.microsoft.com/library/8c7ef3b3-c06d-4a27-802d-ed329dc86ef3)   
- [Agente SQL Server almacena procedimientos &#40; Transact-SQL &#41;](../../relational-databases/system-stored-procedures/sql-server-agent-stored-procedures-transact-sql.md)   
+ [Procedimientos almacenados del Agente SQL Server &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sql-server-agent-stored-procedures-transact-sql.md)   
  [sp_add_schedule &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-add-schedule-transact-sql.md)   
  [sp_update_schedule &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-update-schedule-transact-sql.md)   
  [sp_delete_schedule &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-delete-schedule-transact-sql.md)   

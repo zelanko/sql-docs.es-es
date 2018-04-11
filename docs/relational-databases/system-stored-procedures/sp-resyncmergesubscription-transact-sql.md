@@ -1,16 +1,16 @@
 ---
 title: sp_resyncmergesubscription (Transact-SQL) | Documentos de Microsoft
-ms.custom: 
+ms.custom: ''
 ms.date: 03/04/2017
 ms.prod: sql-non-specified
 ms.prod_service: database-engine
-ms.service: 
+ms.service: ''
 ms.component: system-stored-procedures
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - replication
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 applies_to:
 - SQL Server
@@ -20,16 +20,16 @@ f1_keywords:
 helpviewer_keywords:
 - sp_resyncmergesubscription
 ms.assetid: e04d464a-60ab-4b39-a710-c066025708e6
-caps.latest.revision: 
+caps.latest.revision: 19
 author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: Inactive
 ms.openlocfilehash: 676257b0429fa236780c435c934852fb7258a4b7
-ms.sourcegitcommit: 45e4efb7aa828578fe9eb7743a1a3526da719555
+ms.sourcegitcommit: d6b1695c8cbc70279b7d85ec4dfb66a4271cdb10
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 04/10/2018
 ---
 # <a name="spresyncmergesubscription-transact-sql"></a>sp_resyncmergesubscription (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -52,31 +52,31 @@ sp_resyncmergesubscription [ [ @publisher = ] 'publisher' ]
 ```  
   
 ## <a name="arguments"></a>Argumentos  
- [  **@publisher**  =] **'***publisher***'**  
+ [ **@publisher** = ] **'***publisher***'**  
  Es el nombre del publicador. *Publisher* es **sysname**, su valor predeterminado es null. El valor NULL es válido si se ejecuta el procedimiento almacenado en el publicador. Si el procedimiento almacenado se ejecuta en el suscriptor, se debe especificar un publicador.  
   
- [  **@publisher_db**  =] **'***publisher_db***'**  
+ [ **@publisher_db** = ] **'***publisher_db***'**  
  Es el nombre de la base de datos de publicación. *publisher_db* es **sysname**, su valor predeterminado es null. El valor NULL es válido si se ejecuta el procedimiento almacenado en el publicador de la base de datos de publicación. Si el procedimiento almacenado se ejecuta en el suscriptor, se debe especificar un publicador.  
   
- [  **@publication**  =] **'***publicación***'**  
+ [ **@publication** = ] **'***publication***'**  
  Es el nombre de la publicación. *publicación*es **sysname**, no tiene ningún valor predeterminado.  
   
- [  **@subscriber**  =] **'***suscriptor***'**  
+ [ **@subscriber** = ] **'***subscriber***'**  
  Es el nombre del suscriptor. *suscriptor* es **sysname**, su valor predeterminado es null. El valor NULL es válido si el procedimiento almacenado se ejecuta en el suscriptor. Si el procedimiento almacenado se ejecuta en el publicador, se debe especificar un suscriptor.  
   
- [  **@subscriber_db**  =] **'***subscriber_db***'**  
+ [ **@subscriber_db** = ] **'***subscriber_db***'**  
  Es el nombre de la base de datos de suscripción. *subscription_db* es **sysname**, su valor predeterminado es null. El valor NULL es válido si el procedimiento almacenado se ejecuta en el suscriptor de la base de datos de suscripciones. Si el procedimiento almacenado se ejecuta en el publicador, se debe especificar un suscriptor.  
   
- [  **@resync_type**  =] *resync_type*  
+ [ **@resync_type** = ] *resync_type*  
  Define cuándo debe comenzar la resincronización. *resync_type* es **int**, y puede tener uno de los siguientes valores.  
   
-|Valor|Descripción|  
+|Value|Descripción|  
 |-----------|-----------------|  
 |**0**|La sincronización comienza después de la instantánea inicial. Esta es la opción que consume más recursos, puesto que se vuelven a aplicar al suscriptor todos los cambios a partir de la instantánea inicial.|  
 |**1**|La sincronización comienza después de la última validación correcta. Todas las generaciones nuevas o incompletas originadas a partir de la última validación correcta se aplicarán de nuevo al suscriptor.|  
 |**2**|Se inicia la sincronización de la fecha dada en *resync_date_str*. Todas las generaciones nuevas o incompletas originadas después de la fecha se vuelven a aplicar al suscriptor.|  
   
- [  **@resync_date_str=**] *resync_date_string*  
+ [ **@resync_date_str=**] *resync_date_string*  
  Define la fecha en la que debería comenzar la resincronización. *resync_date_string* es **nvarchar (30)**, su valor predeterminado es null. Este parámetro se utiliza cuando la *resync_type* es un valor de **2**. La fecha proporcionada se convierte en su equivalente **datetime** valor.  
   
 ## <a name="return-code-values"></a>Valores de código de retorno  

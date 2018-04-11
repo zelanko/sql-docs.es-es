@@ -1,16 +1,16 @@
 ---
-title: "Creación de índices con columnas incluidas | Microsoft Docs"
-ms.custom: 
+title: Creación de índices con columnas incluidas | Microsoft Docs
+ms.custom: ''
 ms.date: 03/09/2017
 ms.prod: sql-non-specified
 ms.prod_service: database-engine, sql-database
-ms.service: 
+ms.service: ''
 ms.component: indexes
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - dbe-indexes
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - index size [SQL Server]
@@ -23,16 +23,16 @@ helpviewer_keywords:
 - designing indexes [SQL Server], included columns
 - nonkey columns
 ms.assetid: d198648d-fea5-416d-9f30-f9d4aebbf4ec
-caps.latest.revision: 
+caps.latest.revision: 29
 author: barbkess
 ms.author: barbkess
 manager: craigg
 ms.workload: Active
 ms.openlocfilehash: 2cea0215d55b75807b735a7028a79aa52bbbe7e4
-ms.sourcegitcommit: d8ab09ad99e9ec30875076acee2ed303d61049b7
-ms.translationtype: HT
+ms.sourcegitcommit: d6b1695c8cbc70279b7d85ec4dfb66a4271cdb10
+ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/23/2018
+ms.lasthandoff: 04/10/2018
 ---
 # <a name="create-indexes-with-included-columns"></a>Crear índices con columnas incluidas
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -48,13 +48,13 @@ ms.lasthandoff: 02/23/2018
 > [!NOTE]  
 > Cuando un índice contiene todas las columnas a las que hace referencia una consulta, normalmente se dice que *abarca la consulta*.  
    
-##  <a name="BeforeYouBegin"></a> Antes de empezar  
+##  <a name="BeforeYouBegin"></a> Antes de comenzar  
   
 ###  <a name="DesignRecs"></a> Recomendaciones de diseño  
   
 -   Rediseñe índices no clúster con un tamaño de las claves de índice grande para que solo las columnas utilizadas para búsquedas sean columnas de clave. Convierta todas las demás columnas que abarcan la consulta en columnas sin clave. De esta forma, tendrá todas las columnas necesarias para abarcar la consulta pero la clave de índice en sí será pequeña y eficaz.  
   
--   Incluya columnas sin clave en un índice no agrupado para evitar que se superen las limitaciones actuales de tamaño del índice de un máximo de 32 columnas de clave y un tamaño máximo de clave de índice de 1700 bytes (16 columnas clave y 900 bytes antes de [!INCLUDE[ssSQL15_md](../../includes/sssql15-md.md)]). El [!INCLUDE[ssDE](../../includes/ssde-md.md)] no tiene en cuenta las columnas sin clave al calcular el número de columnas de clave de índice o el tamaño de las claves de índice.  
+-   Incluya columnas sin clave en un índice no agrupado para evitar que se superen las limitaciones actuales de tamaño del índice de un máximo de 32 columnas de clave y un tamaño máximo de clave de índice de 1700 bytes (16 columnas clave y 900 bytes antes de [!INCLUDE[ssSQL15_md](../../includes/sssql15-md.md)]). El [!INCLUDE[ssDE](../../includes/ssde-md.md)] no tiene en cuenta las columnas sin clave al calcular el número de columnas de clave de índice o el tamaño de clave de índice.  
   
 ###  <a name="Restrictions"></a> Limitaciones y restricciones  
   
@@ -76,7 +76,7 @@ ms.lasthandoff: 02/23/2018
   
 ###  <a name="Security"></a> Seguridad  
   
-####  <a name="Permissions"></a> Permissions  
+####  <a name="Permissions"></a> Permisos  
  Requiere el permiso ALTER en la tabla o la vista. El usuario debe ser miembro del rol fijo de servidor **sysadmin** o de los roles fijos de base de datos **db_ddladmin** y **db_owner** .  
   
 ##  <a name="SSMSProcedure"></a> Usar SQL Server Management Studio  

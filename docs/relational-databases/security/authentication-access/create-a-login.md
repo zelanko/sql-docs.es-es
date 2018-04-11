@@ -1,16 +1,16 @@
 ---
-title: "Creación de un inicio de sesión | Microsoft Docs"
-ms.custom: 
+title: Creación de un inicio de sesión | Microsoft Docs
+ms.custom: ''
 ms.date: 08/01/2016
 ms.prod: sql-non-specified
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
-ms.service: 
+ms.service: ''
 ms.component: security
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 f1_keywords:
 - sql13.swb.login.status.f1
@@ -25,16 +25,16 @@ helpviewer_keywords:
 - Create login [SQL Server]
 - SQL Server logins
 ms.assetid: fb163e47-1546-4682-abaa-8c9494e9ddc7
-caps.latest.revision: 
+caps.latest.revision: 29
 author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: Active
 ms.openlocfilehash: 1cfca2d37697e8c9942ac042857784e68dca7088
-ms.sourcegitcommit: 50e54dda407f362262b86941f68b7d80516db7fb
-ms.translationtype: HT
+ms.sourcegitcommit: d6b1695c8cbc70279b7d85ec4dfb66a4271cdb10
+ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/06/2017
+ms.lasthandoff: 04/10/2018
 ---
 # <a name="create-a-login"></a>Crear un inicio de sesión
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -160,7 +160,7 @@ ms.lasthandoff: 12/06/2017
  **Miembros del rol de base de datos para:**  *nombre_baseDeDatos*  
  Selecciona los roles para el usuario en la base de datos especificada. Todos los usuarios son miembros del rol **public** de todas las bases de datos, y no pueden eliminarse. Para obtener más información sobre los roles de base de datos, vea [Roles de nivel de base de datos](../../../relational-databases/security/authentication-access/database-level-roles.md).  
   
-### <a name="securables"></a>Elementos protegibles  
+### <a name="securables"></a>Securables  
  La página **Elementos protegibles** muestra todos los elementos protegibles posibles y los permisos en esos elementos protegibles que se pueden conceder al inicio de sesión. En esta página están disponibles las opciones siguientes:  
   
  **Cuadrícula superior**  
@@ -170,9 +170,9 @@ ms.lasthandoff: 12/06/2017
   
 1.  Haga clic en **Buscar**.  
   
-2.  En el cuadro de diálogo **Agregar objetos** , seleccione una de las opciones siguientes: **Objetos específicos…**, **Todos los objetos de los tipos…**o **El servidor***nombre_servidor*. [!INCLUDE[clickOK](../../../includes/clickok-md.md)]  
+2.  En el **agregar objetos** cuadro de diálogo, seleccione una de las siguientes opciones: **objetos específicos...** , **Todos los objetos de los tipos...** , o **el servidor *** nombre_servidor*. [!INCLUDE[clickOK](../../../includes/clickok-md.md)]  
   
-    > **NOTA:** Cuando se selecciona **El servidor***nombre_servidor* , se rellena automáticamente la cuadrícula superior con todos los objetos que se pueden proteger de ese servidor.  
+    > **Nota:** si selecciona **el servidor *** nombre_servidor* rellena automáticamente la cuadrícula superior con todos los objetos protegibles de ese servidor.  
   
 3.  Si selecciona **Objetos específicos**:  
   

@@ -1,16 +1,16 @@
 ---
 title: sys.dm_exec_describe_first_result_set_for_object (Transact-SQL) | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 06/10/2016
 ms.prod: sql-non-specified
 ms.prod_service: database-engine, sql-database
-ms.service: 
+ms.service: ''
 ms.component: dmv's
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - sys.dm_exec_describe_first_result_set_for_object_TSQL
@@ -20,23 +20,23 @@ dev_langs:
 helpviewer_keywords:
 - sys.dm_exec_describe_first_result_set_for_object catalog view
 ms.assetid: 63b0fde7-95d7-4ad7-a219-a9feacf1bd89
-caps.latest.revision: 
+caps.latest.revision: 22
 author: stevestein
 ms.author: sstein
 manager: craigg
 ms.workload: Inactive
 ms.openlocfilehash: bcdb3bd85543ae5feeb4b224350a5b72a2d95f7b
-ms.sourcegitcommit: c556eaf60a49af7025db35b7aa14beb76a8158c5
+ms.sourcegitcommit: d6b1695c8cbc70279b7d85ec4dfb66a4271cdb10
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/03/2018
+ms.lasthandoff: 04/10/2018
 ---
 # <a name="sysdmexecdescribefirstresultsetforobject-transact-sql"></a>sys.dm_exec_describe_first_result_set_for_object (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2012-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-asdb-xxxx-xxx-md.md)]
 
   Esta función de administración dinámica toma un @object_id como un parámetro y describe los metadatos del primer resultado para el módulo con ese identificador. El @object_id especificado puede ser el identificador de un [!INCLUDE[tsql](../../includes/tsql-md.md)] procedimiento almacenado o un [!INCLUDE[tsql](../../includes/tsql-md.md)] desencadenador. Si es el identificador de cualquier otro objeto (como una vista, tabla, función o procedimiento CLR), se especificará un error en las columnas de error del resultado.  
   
- **Sys.dm_exec_describe_first_result_set_for_object** tiene el mismo resultado definición como del conjunto [sys.dm_exec_describe_first_result_set &#40; Transact-SQL &#41; ](../../relational-databases/system-dynamic-management-views/sys-dm-exec-describe-first-result-set-transact-sql.md) y es similar a [sp_describe_first_result_set &#40; Transact-SQL &#41; ](../../relational-databases/system-stored-procedures/sp-describe-first-result-set-transact-sql.md).  
+ **Sys.dm_exec_describe_first_result_set_for_object** tiene el mismo resultado definición como del conjunto [sys.dm_exec_describe_first_result_set &#40;Transact-SQL&#41; ](../../relational-databases/system-dynamic-management-views/sys-dm-exec-describe-first-result-set-transact-sql.md) y es similar a [sp_ describe_first_result_set &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-describe-first-result-set-transact-sql.md).  
   
  ![Icono de vínculo de tema](../../database-engine/configure-windows/media/topic-link.gif "Icono de vínculo de tema") [Convenciones de sintaxis de Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -50,10 +50,10 @@ sys.dm_exec_describe_first_result_set_for_object
   
 ## <a name="arguments"></a>Argumentos  
  *@object_id*  
- El @object_id de un [!INCLUDE[tsql](../../includes/tsql-md.md)] procedimiento almacenado o un [!INCLUDE[tsql](../../includes/tsql-md.md)] desencadenador. @object_ides de tipo **int**.  
+ El @object_id de un [!INCLUDE[tsql](../../includes/tsql-md.md)] procedimiento almacenado o un [!INCLUDE[tsql](../../includes/tsql-md.md)] desencadenador. @object_id es de tipo **int**.  
   
  *@include_browse_information*  
- @include_browse_informationes de tipo **bits**. Si está establecido en 1, cada consulta se analiza como si tuviera una opción FOR BROWSE en la consulta. Devuelve las columnas de clave adicionales e información de la tabla de origen.  
+ @include_browse_information es de tipo **bits**. Si está establecido en 1, cada consulta se analiza como si tuviera una opción FOR BROWSE en la consulta. Devuelve las columnas de clave adicionales e información de la tabla de origen.  
   
 ## <a name="table-returned"></a>Tabla devuelta  
  Estos metadatos comunes se devuelven como un conjunto de resultados con una única fila por cada columna de los metadatos de los resultados. Cada fila describe el tipo y la nulabilidad de la columna en el formato descrito en la siguiente sección. Si la primera instrucción no existe en cada una de las rutas de acceso de control, se devuelve un conjunto de resultados con cero filas.  
@@ -103,7 +103,7 @@ sys.dm_exec_describe_first_result_set_for_object
 |**error_type_desc**|**nvarchar(60)**|Contiene una cadena corta en mayúsculas que representa el error que se va a devolver. Se asigna a error_type. Vea la lista bajo las notas.|  
   
 ## <a name="remarks"></a>Comentarios  
- Esta función utiliza el mismo algoritmo que **sp_describe_first_result_set**. Para obtener más información, consulte [sp_describe_first_result_set &#40; Transact-SQL &#41; ](../../relational-databases/system-stored-procedures/sp-describe-first-result-set-transact-sql.md).  
+ Esta función utiliza el mismo algoritmo que **sp_describe_first_result_set**. Para obtener más información, consulte [sp_describe_first_result_set &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-describe-first-result-set-transact-sql.md).  
   
  En la tabla siguiente se muestran los tipos de error y su descripción.  
   

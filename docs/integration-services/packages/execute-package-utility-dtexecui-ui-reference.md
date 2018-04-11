@@ -1,16 +1,16 @@
 ---
-title: "Utilidad de ejecución de paquetes (dtexecui) | Microsoft Docs"
-ms.custom: 
+title: Utilidad de ejecución de paquetes (dtexecui) | Microsoft Docs
+ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql-non-specified
 ms.prod_service: integration-services
-ms.service: 
+ms.service: ''
 ms.component: packages
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - integration-services
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 f1_keywords:
 - sql13.dts.dtexecui.setvalues.f1
@@ -26,19 +26,19 @@ f1_keywords:
 helpviewer_keywords:
 - DTExecUI utility
 ms.assetid: 3d71df39-126b-4c8e-bd77-128bbd5b0887
-caps.latest.revision: 
+caps.latest.revision: 39
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ms.workload: On Demand
 ms.openlocfilehash: de1484e04318c45057213226016379326e670304
-ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
-ms.translationtype: HT
+ms.sourcegitcommit: d6b1695c8cbc70279b7d85ec4dfb66a4271cdb10
+ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/25/2018
+ms.lasthandoff: 04/10/2018
 ---
 # <a name="execute-package-utility-dtexecui"></a>Utilidad de ejecución de paquetes (dtexecui)
-  Use la **Utilidad de ejecución de paquetes** para ejecutar paquetes de [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] . La utilidad ejecuta los paquetes almacenados en una de estas tres ubicaciones: la base de datos de [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , el almacén de paquetes de [!INCLUDE[ssIS](../../includes/ssis-md.md)] y el sistema de archivos. Esta interfaz de usuario, que se puede iniciar desde [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] o escribiendo **dtexecui** en el símbolo del sistema, es una alternativa a ejecutar paquetes con la herramienta del símbolo del sistema **DTExec** .  
+  Use la **Utilidad de ejecución de paquetes** para ejecutar paquetes de [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]. La utilidad ejecuta los paquetes almacenados en una de estas tres ubicaciones: la base de datos de [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , el almacén de paquetes de [!INCLUDE[ssIS](../../includes/ssis-md.md)] y el sistema de archivos. Esta interfaz de usuario, que se puede iniciar desde [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] o escribiendo **dtexecui** en el símbolo del sistema, es una alternativa a ejecutar paquetes con la herramienta del símbolo del sistema **DTExec** .  
   
  Los paquetes se ejecutan en el mismo proceso que la utilidad **dtexecui.exe** . Como esta utilidad es una herramienta de 32 bits, los paquetes que se ejecutan con **dtexecui.exe** en un entorno de 64 bits se ejecutan en Windows en Win32 (WOW). Al desarrollar y probar comandos mediante la utilidad dtexecui.exe en un equipo de 64 bits, debe probar los comandos en modo de 64 bits mediante la versión de 64 bits de **dtexecui.exe** antes de implementar o programar los comandos en un servidor de producción.  
   
@@ -73,14 +73,14 @@ ms.lasthandoff: 01/25/2018
   
 |||  
 |-|-|  
-|Valor|Description|  
+|Value|Description|  
 |**SQL Server**|Seleccione esta opción si el paquete reside en [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Especifique una instancia de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] y proporcione un nombre de usuario y una contraseña para llevar a cabo la autenticación de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Cada nombre de usuario y contraseña agrega las opciones **/USER** *username* y **/PASSWORD** *password* options to the commy prompt.|  
 |**Sistema de archivos**|Seleccione esta opción si el paquete reside en el sistema de archivos.|  
 |**Almacén de paquetes SSIS**|Seleccione esta opción si el paquete reside en el Almacén de paquetes [!INCLUDE[ssIS](../../includes/ssis-md.md)] .|  
   
  Cada una de estas selecciones tiene el siguiente conjunto de opciones.  
   
- **Ejecutar**  
+ **Execute**  
  Haga clic para ejecutar el paquete.  
   
  **Cerrar**  
@@ -130,7 +130,7 @@ ms.lasthandoff: 01/25/2018
 ## <a name="configurations-page"></a>Página Configuraciones  
  Use la página **Configuraciones** del cuadro de diálogo **Utilidad de ejecución de paquetes** para seleccionar los archivos de configuración que se van a cargar en tiempo de ejecución y especificar el orden de carga.  
   
-### <a name="options"></a>.  
+### <a name="options"></a>Opciones  
  **Archivos de configuración**  
  Muestra una lista de las configuraciones que utiliza el paquete. Cada uno de los archivos de configuración agrega una opción **/CONFIGFILE nombreDeArchivo** al símbolo del sistema.  
   
@@ -146,7 +146,7 @@ ms.lasthandoff: 01/25/2018
  **Quitar**  
  Seleccione un archivo de configuración de la lista y, después, haga clic en **Quitar**.  
   
- **Ejecutar**  
+ **Execute**  
  Haga clic para ejecutar el paquete.  
   
  **Cerrar**  
@@ -155,7 +155,7 @@ ms.lasthandoff: 01/25/2018
 ## <a name="command-files-page"></a>Página Archivos de comandos  
  Use la página **Archivos de comandos** del cuadro de diálogo **Utilidad de ejecución de paquetes** para seleccionar los archivos de comandos que quiere cargar en tiempo de ejecución.  
   
-### <a name="options"></a>.  
+### <a name="options"></a>Opciones  
  **Command files**  
  Muestra los archivos de comandos que utiliza el paquete. Un paquete puede utilizar varios archivos para establecer las opciones de línea de comandos.  
   
@@ -168,7 +168,7 @@ ms.lasthandoff: 01/25/2018
  **Quitar**  
  Para quitar un archivo de comandos, selecciónelo en el cuadro de texto y haga clic en el botón **Quitar** .  
   
- **Ejecutar**  
+ **Execute**  
  Haga clic para ejecutar el paquete.  
   
  **Cerrar**  
@@ -177,17 +177,17 @@ ms.lasthandoff: 01/25/2018
 ## <a name="connection-managers-page"></a>Página Administradores de conexión  
  Use la página **Administradores de conexiones** del cuadro de diálogo **Utilidad de ejecución de paquetes** para editar las cadenas de conexión de los administradores de conexión que el paquete usa.  
   
-### <a name="options"></a>.  
+### <a name="options"></a>Opciones  
  **Connection Manager**  
  Active esta casilla para que la columna **Cadena de conexión** se pueda editar.  
   
- **Descripción**  
+ **Description**  
  Vea una descripción de cada administrador de conexiones. Las descripciones no se pueden editar.  
   
  **Cadena de conexión**  
  Edite la cadena de conexión para un administrador de conexiones. Este campo solamente se puede editar si la casilla **Administrador de conexiones** está activada.  
   
- **Ejecutar**  
+ **Execute**  
  Haga clic para ejecutar el paquete.  
   
  **Cerrar**  
@@ -196,7 +196,7 @@ ms.lasthandoff: 01/25/2018
 ## <a name="execution-options-page"></a>Página Opciones de ejecución  
  Use la página **Opciones de ejecución** del cuadro de diálogo **Utilidad de ejecución de paquetes** para especificar opciones de tiempo de ejecución para el paquete.  
   
-### <a name="options"></a>.  
+### <a name="options"></a>Opciones  
  **Rechazar el paquete cuando haya advertencias de validación**  
  Indique si debe rechazarse el paquete cuando se produce una advertencia de validación.  
   
@@ -230,11 +230,11 @@ ms.lasthandoff: 01/25/2018
 ## <a name="reporting-page"></a>Página de informe  
  Use la página **Informes** del cuadro de diálogo **Utilidad de ejecución de paquetes** para especificar los eventos y la información sobre el paquete que se registrará en la consola cuando se ejecute el paquete.  
   
-### <a name="options"></a>.  
+### <a name="options"></a>Opciones  
  **Eventos de consola**  
  Indica los eventos y los tipos de mensajes que se notificarán.  
   
- **Ninguno**  
+ **None**  
  Seleccione esta opción para no obtener elaborar ningún informe.  
   
  **Errores**  
@@ -282,7 +282,7 @@ ms.lasthandoff: 01/25/2018
  **Hora de inicio y finalización**  
  Seleccione esta opción para notificar cuándo el paquete comienza y termina.  
   
- **Ejecutar**  
+ **Execute**  
  Haga clic para ejecutar el paquete.  
   
  **Cerrar**  
@@ -291,7 +291,7 @@ ms.lasthandoff: 01/25/2018
 ## <a name="logging-page"></a>Página Registro  
  Use la página **Registro** del cuadro de diálogo **Utilidad de ejecución de paquetes** para que los proveedores de registro estén disponibles para el paquete en tiempo de ejecución. Seleccione el tipo de proveedor de registro del paquete y la cadena de conexión para la conexión al registro. Cada entrada de los proveedores de registro agrega una opción **/LOGGER***classid* al símbolo del sistema.  
   
-### <a name="options"></a>.  
+### <a name="options"></a>Opciones  
  **Proveedor de registro**  
  Seleccione un proveedor de registro de la lista.  
   
@@ -301,7 +301,7 @@ ms.lasthandoff: 01/25/2018
  **Quitar**  
  Seleccione un proveedor de registro y haga clic para quitarlo.  
   
- **Ejecutar**  
+ **Execute**  
  Haga clic para ejecutar el paquete.  
   
  **Cerrar**  
@@ -310,7 +310,7 @@ ms.lasthandoff: 01/25/2018
 ## <a name="set-values-page"></a>Página Valores establecidos  
  Use la página **Valores establecidos** del cuadro de diálogo **Utilidad de ejecución de paquetes** para establecer los valores de las propiedades de paquetes, ejecutables, conexiones, variables y proveedores de registro escribiendo las rutas de acceso de las propiedades y los valores de las propiedades. Cada entrada de ruta agrega una opción **/SET***propertypath;value* al símbolo del sistema.  
   
-### <a name="options"></a>.  
+### <a name="options"></a>Opciones  
  **Ruta de acceso de la propiedad**  
  Escriba la ruta de acceso de la propiedad. En la sintaxis de la ruta se usa una barra diagonal inversa (\\) para indicar que el elemento siguiente es un contenedor, un punto (.) para indicar que el elemento siguiente es una propiedad y corchetes para indicar que es un miembro de una colección. Es posible identificar al miembro por su índice o nombre. Por ejemplo, la ruta de acceso de la propiedad de una variable de un paquete es \Package.Variables[MyVariable].Value.  
   
@@ -320,7 +320,7 @@ ms.lasthandoff: 01/25/2018
  **Quitar**  
  Seleccione una ruta de acceso a una propiedad y haga clic para quitarla.  
   
- **Ejecutar**  
+ **Execute**  
  Haga clic para ejecutar el paquete.  
   
  **Cerrar**  
@@ -329,7 +329,7 @@ ms.lasthandoff: 01/25/2018
 ## <a name="verification-page"></a>Página Comprobación  
  Use la página **Comprobación** del cuadro de diálogo **Ejecutar paquete** para establecer los criterios para comprobar el paquete.  
   
-### <a name="options"></a>.  
+### <a name="options"></a>Opciones  
  **Ejecutar solo los paquetes firmados**  
  Seleccione esta opción para ejecutar solamente los paquetes que se han firmado.  
   
@@ -351,7 +351,7 @@ ms.lasthandoff: 01/25/2018
  Id. de versión  
  Especifique el número de identificación de la versión.  
   
- **Ejecutar**  
+ **Execute**  
  Haga clic para ejecutar el paquete.  
   
  **Cerrar**  
@@ -360,7 +360,7 @@ ms.lasthandoff: 01/25/2018
 ## <a name="command-line-page"></a>Página Línea de comandos  
  Use el nodo **Línea de comandos** del cuadro de diálogo **Utilidad de ejecución de paquetes** para editar la línea de comandos generada con las opciones creadas en los diversos cuadros de diálogo.  
   
-### <a name="options"></a>.  
+### <a name="options"></a>Opciones  
  **Restaurar las opciones originales**  
  Haga clic para restaurar el estado original de la línea de comandos. Use esta opción si ha realizado modificaciones con la opción **Editar la línea de comandos manualmente** y quiere restaurar las opciones originales de la línea de comandos.  
   
@@ -370,13 +370,13 @@ ms.lasthandoff: 01/25/2018
  **Command line**  
  Muestra la línea de comandos actual. Podrá editarla si ha seleccionado la opción para editar la línea de comandos manualmente.  
   
- **Ejecutar**  
+ **Execute**  
  Haga clic para ejecutar el paquete.  
   
  **Cerrar**  
  Haga clic en esta opción para cerrar el cuadro de diálogo **Utilidad de ejecución de paquetes** .  
   
-## <a name="see-also"></a>Ver también  
- [dtexec (utilidad)](../../integration-services/packages/dtexec-utility.md)  
+## <a name="see-also"></a>Vea también  
+ [DTExec (utilidad)](../../integration-services/packages/dtexec-utility.md)  
   
   

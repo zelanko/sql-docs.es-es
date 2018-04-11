@@ -1,16 +1,16 @@
 ---
-title: "Compresión de copia de seguridad (SQL Server) | Microsoft Docs"
-ms.custom: 
+title: Compresión de copia de seguridad (SQL Server) | Microsoft Docs
+ms.custom: ''
 ms.date: 08/08/2016
 ms.prod: sql-non-specified
 ms.prod_service: database-engine
-ms.service: 
+ms.service: ''
 ms.component: backup-restore
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - dbe-backup-restore
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - log shipping [SQL Server], backup compression
@@ -20,19 +20,20 @@ helpviewer_keywords:
 - backing up [SQL Server], backup compression
 - backup compression [SQL Server]
 ms.assetid: 05bc9c4f-3947-4dd4-b823-db77519bd4d2
-caps.latest.revision: 
+caps.latest.revision: 51
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 36e6a2f449d649da1137947b5255d025646f43b9
-ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
+ms.openlocfilehash: d6b872e7f53e28ae0261a2672ae977218d174492
+ms.sourcegitcommit: 8b332c12850c283ae413e0b04b2b290ac2edb672
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/18/2018
+ms.lasthandoff: 04/05/2018
 ---
 # <a name="backup-compression-sql-server"></a>Compresión de copia de seguridad (SQL Server)
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] En este tema se describe la compresión de copias de seguridad de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], incluidas las restricciones, las ventajas y desventajas de la compresión de las copias de seguridad respecto al rendimiento, la configuración de la compresión de copias de seguridad y la razón de compresión.  La compresión de copia de seguridad es compatible las ediciones Enterprise, Standard y Developer de [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] .  Cada edición de [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] y posteriores pueden restaurar una copia de seguridad cifrada. 
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+  En este tema se describe la compresión de copias de seguridad de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , incluidas las restricciones, las ventajas y desventajas de la compresión de las copias de seguridad respecto al rendimiento, la configuración de la compresión de copias de seguridad y la razón de compresión.  La compresión de copia de seguridad es compatible las ediciones Enterprise, Standard y Developer de [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] .  Cada edición de [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] y posteriores pueden restaurar una copia de seguridad cifrada. 
  
   
 ##  <a name="Benefits"></a> Ventajas  
@@ -73,7 +74,7 @@ ms.lasthandoff: 01/18/2018
   
  Por ejemplo, una razón de compresión de 3:1 indica que está ahorrando aproximadamente un 66% del espacio en disco. Para consultar estas columnas, puede utilizar la siguiente instrucción de Transact-SQL:  
   
-```  
+```sql  
 SELECT backup_size/compressed_backup_size FROM msdb..backupset;  
 ```  
   

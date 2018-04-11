@@ -22,11 +22,11 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 07f71e7efd6d2c43160cb7d6a0066ad8e57e5c69
-ms.sourcegitcommit: 2e130e9f3ce8a7ffe373d7fba8b09e937c216386
+ms.openlocfilehash: 30fee63cd25509d56bd2c55cd682ae31fc801691
+ms.sourcegitcommit: 8b332c12850c283ae413e0b04b2b290ac2edb672
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/28/2018
+ms.lasthandoff: 04/05/2018
 ---
 # <a name="deprecated-database-engine-features-in-sql-server-2017"></a>Características en desuso del motor de base de datos de SQL Server 2017
 [!INCLUDE[tsql-appliesto-ss2017-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2017-xxxx-xxxx-xxx-md.md)]
@@ -59,7 +59,6 @@ WHERE object_name = 'SQLServer:Deprecated Features';
 |Servidores remotos|SET REMOTE_PROC_TRANSACTIONS|Reemplace los servidores remotos con servidores vinculados.|SET REMOTE_PROC_TRANSACTIONS|110|  
 |Opciones de Set|**SET ROWCOUNT** para las instrucciones de **INSERT**, **UPDATE**y **DELETE**|Palabra clave TOP|SET ROWCOUNT|109|  
 |Sugerencias de tabla|Sugerencia de tabla HOLDLOCK sin paréntesis.|Usar HOLDLOCK con paréntesis.|Sugerencia de tabla HOLDLOCK sin paréntesis|167|  
-|Herramientas|sqlmaint, utilidad|Use la característica de plan de mantenimiento de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] .|None|None|  
   
 ## <a name="features-not-supported-in-a-future-version-of-sql-server"></a>Características no admitidas en una versión futura de SQL Server  
  Las características del [!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)] siguientes se admiten en la próxima versión de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)], pero se quitarán en una versión posterior. No se ha determinado la versión específica de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] .  

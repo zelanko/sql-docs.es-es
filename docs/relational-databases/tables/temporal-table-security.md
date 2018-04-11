@@ -1,28 +1,28 @@
 ---
 title: Seguridad de la tabla temporal | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 02/21/2016
 ms.prod: sql-non-specified
 ms.prod_service: database-engine, sql-database
-ms.service: 
+ms.service: ''
 ms.component: tables
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - dbe-tables
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: 60e5d6f6-a26d-4bba-aada-42e382bbcd38
-caps.latest.revision: 
+caps.latest.revision: 9
 author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 5c86f951c3e6f8d553ea61ed959cac6ade235b54
-ms.sourcegitcommit: 6b4aae3706247ce9b311682774b13ac067f60a79
+ms.openlocfilehash: 089e718385b028ff81c021ba1b3759fc9e424a58
+ms.sourcegitcommit: 9351e8b7b68f599a95fb8e76930ab886db737e5f
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/18/2018
+ms.lasthandoff: 04/06/2018
 ---
 # <a name="temporal-table-security"></a>Seguridad de la tabla temporal
 [!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]
@@ -75,9 +75,6 @@ ms.lasthandoff: 01/18/2018
   
 ## <a name="security-of-select-statement"></a>Seguridad de la instrucción SELECT  
  El permiso**SELECT** no cambia para las instrucciones **SELECT** que no afectan a la tabla de historial. En lo que respecta a las instrucciones **SELECT** que afectan a la tabla de historial, se requiere el permiso **SELECT** en la tabla actual y de historial.  
-  
-## <a name="did-this-article-help-you-were-listening"></a>¿Le ayudó este artículo? Le escuchamos  
- ¿Qué información está buscando? ¿La encontró? Escuchamos sus comentarios para mejorar el contenido. Envíe sus comentarios a [sqlfeedback@microsoft.com](mailto:sqlfeedback@microsoft.com?subject=Your%20feedback%20about%20the%20Temporal%20Table%20Security%20page)  
   
 ## <a name="see-also"></a>Ver también  
  [Tablas temporales](../../relational-databases/tables/temporal-tables.md)   

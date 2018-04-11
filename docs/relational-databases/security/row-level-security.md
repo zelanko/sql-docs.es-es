@@ -1,16 +1,14 @@
 ---
 title: Seguridad de nivel de fila | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 03/29/2017
 ms.prod: sql-non-specified
 ms.prod_service: database-engine, sql-database
-ms.service: 
-ms.component: security
-ms.reviewer: 
+ms.service: ''
+ms.reviewer: ''
 ms.suite: sql
-ms.technology:
-- database-engine
-ms.tgt_pltfrm: 
+ms.technology: security
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - access control predicates
@@ -19,16 +17,16 @@ helpviewer_keywords:
 - row level security described
 - predicate based security
 ms.assetid: 7221fa4e-ca4a-4d5c-9f93-1b8a4af7b9e8
-caps.latest.revision: 
+caps.latest.revision: 47
 author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: d039c1e5bb76fb9b994e9d5fc2a89df64e320c3b
-ms.sourcegitcommit: 45e4efb7aa828578fe9eb7743a1a3526da719555
+ms.openlocfilehash: b150fa58725e157834c202224c679ee5119cdb8a
+ms.sourcegitcommit: 094c46e7fa6de44735ed0040c65a40ec3d951b75
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 04/06/2018
 ---
 # <a name="row-level-security"></a>Seguridad de nivel de fila
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -106,7 +104,7 @@ ms.lasthandoff: 11/21/2017
  En términos más formales, RLS presenta control de acceso basado en predicado. Ofrece una evaluación flexible, centralizada y basada en predicados que puede tener en cuenta metadatos o cualquier otro criterio que el administrador determine como apropiado. El predicado se usa como un criterio para determinar si el usuario tiene o no el acceso adecuado a los datos según los atributos del usuario. El control de acceso basado en etiquetas se puede implementar con el control de acceso basado en predicados.  
   
   
-##  <a name="Permissions"></a> Permisos  
+##  <a name="Permissions"></a> Permissions  
  Crear, modificar o quitar directivas de seguridad necesita el permiso **ALTER ANY SECURITY POLICY** . Crear o quitar una directiva de seguridad necesita el permiso **ALTER** en el esquema.  
   
  Además, son necesarios los siguientes permisos para cada predicado que se agrega:  
@@ -363,7 +361,7 @@ REVERT;
 GO  
 ```  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Ver también  
  [CREATE SECURITY POLICY &#40;Transact-SQL&#41;](../../t-sql/statements/create-security-policy-transact-sql.md)   
  [ALTER SECURITY POLICY &#40;Transact-SQL&#41;](../../t-sql/statements/alter-security-policy-transact-sql.md)   
  [DROP SECURITY POLICY &#40;Transact-SQL&#41;](../../t-sql/statements/drop-security-policy-transact-sql.md)   

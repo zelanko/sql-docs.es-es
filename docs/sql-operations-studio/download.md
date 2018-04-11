@@ -20,7 +20,7 @@ ms.translationtype: MT
 ms.contentlocale: es-ES
 ms.lasthandoff: 04/08/2018
 ---
-# <a name="download-and-install-sql-operations-studio-preview"></a>Descargue e instale las operaciones de SQL Studio (versión preliminar)
+# <a name="download-and-install-sql-operations-studio-preview"></a>Descargue e instale SQL Operations Studio (versión preliminar)
 
 [!INCLUDE[name-sos](../includes/name-sos.md)] se ejecuta en Windows, Mac OS y Linux.
 
@@ -34,7 +34,7 @@ Descargue e instale la versión más reciente, la *marzo Public Preview*:
 
 Para obtener más información acerca de la versión más reciente, consulte el [notas de la versión](release-notes.md).
 
-## <a name="get-sql-operations-studio-preview-for-windows"></a>Obtener operaciones de SQL Studio (versión preliminar) para Windows
+## <a name="get-sql-operations-studio-preview-for-windows"></a>Obtener SQL Operations Studio (versión preliminar) para Windows
 
 Esta versión de [!INCLUDE[name-sos](../includes/name-sos-short.md)] incluye una experiencia de instalador de Windows estándar y .zip: 
 
@@ -51,14 +51,14 @@ Esta versión de [!INCLUDE[name-sos](../includes/name-sos-short.md)] incluye una
 3. Ejecutar `\sqlops-windows\sqlops.exe`
 
 
-## <a name="get-sql-operations-studio-preview-for-macos"></a>Obtener operaciones de SQL Studio (versión preliminar) para macOS
+## <a name="get-sql-operations-studio-preview-for-macos"></a>Obtener SQL Operations Studio (versión preliminar) para macOS
 
 1. Descargar [ [!INCLUDE[name-sos](../includes/name-sos-short.md)] para macOS](https://go.microsoft.com/fwlink/?linkid=870839).
 2. Para expandir el contenido del archivo zip, haga doble clic en él.
 3. Para realizar [!INCLUDE[name-sos](../includes/name-sos-short.md)] disponibles en la *Launchpad*, arrastre *sqlops.app* a la *aplicaciones* carpeta.
 
 
-## <a name="get-sql-operations-studio-preview-for-linux"></a>Obtener operaciones de SQL Studio (versión preliminar) para Linux
+## <a name="get-sql-operations-studio-preview-for-linux"></a>Obtener SQL Operations Studio (versión preliminar) para Linux
 
 1. Descargar [! INCLUIR[nombre sos](../includes/name-sos-short.md) para Linux mediante uno de los instaladores o el archivo tar.gz:
     - [.deb](https://go.microsoft.com/fwlink/?linkid=870842)
@@ -116,7 +116,7 @@ Esta versión de [!INCLUDE[name-sos](../includes/name-sos-short.md)] incluye una
    ```
 
 
-## <a name="uninstall-sql-operations-studio-preview"></a>Desinstalar Studio de operaciones de SQL (vista previa)
+## <a name="uninstall-sql-operations-studio-preview"></a>Desinstalar SQL Operations Studio (versión preliminar)
 
 Si instaló [!INCLUDE[name-sos-short](../includes/name-sos-short.md)] mediante el instalador de Windows, a continuación, desinstale la misma manera que quite cualquier aplicación de Windows.
 

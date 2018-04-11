@@ -1,16 +1,16 @@
 ---
-title: "Propiedades del índice (Ayuda F1) | Microsoft Docs"
-ms.custom: 
+title: Propiedades del índice (Ayuda F1) | Microsoft Docs
+ms.custom: ''
 ms.date: 02/17/2017
 ms.prod: sql-non-specified
 ms.prod_service: database-engine, sql-database
-ms.service: 
+ms.service: ''
 ms.component: indexes
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - dbe-indexes
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: reference
 f1_keywords:
 - sql13.swb.indexproperties.filter.f1
@@ -21,16 +21,16 @@ f1_keywords:
 - sql13.swb.indexproperties.options.f1
 - sql13.swb.indexproperties.spatial.f1
 ms.assetid: 45efd81a-3796-4b04-b0cc-f3deec94c733
-caps.latest.revision: 
+caps.latest.revision: 38
 author: barbkess
 ms.author: barbkess
 manager: craigg
 ms.workload: Inactive
 ms.openlocfilehash: c04983b7d37f71d7b74072b5c673fc4696ebc895
-ms.sourcegitcommit: d8ab09ad99e9ec30875076acee2ed303d61049b7
-ms.translationtype: HT
+ms.sourcegitcommit: d6b1695c8cbc70279b7d85ec4dfb66a4271cdb10
+ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/23/2018
+ms.lasthandoff: 04/10/2018
 ---
 # <a name="index-properties-f1-help"></a>Propiedades del índice (Ayuda F1)
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -150,7 +150,7 @@ ms.lasthandoff: 02/23/2018
  Especifica el grupo de archivos para los datos FILESTREAM. En esta lista solo se muestran los grupos de archivos FILESTREAM. La selección de lista predeterminada es el grupo de archivos PRIMARY FILESTREAM. Para obtener más información, vea [FILESTREAM &#40;SQL Server&#41;](../../relational-databases/blob/filestream-sql-server.md).  
   
  **Esquema de partición**  
- Almacena el índice en un esquema de partición. Al hacer clic en **Esquema de partición** , se habilita la cuadrícula que se muestra a continuación. La selección de lista predeterminada es el esquema de partición utilizado para almacenar los datos de la tabla. Si se selecciona un esquema de partición distinto de la lista, se actualizará la información en la cuadrícula. Para obtener más información, vea [Partitioned Tables and Indexes](../../relational-databases/partitions/partitioned-tables-and-indexes.md).  
+ Almacena el índice en un esquema de partición. Al hacer clic en **Esquema de partición** , se habilita la cuadrícula que se muestra a continuación. La selección de lista predeterminada es el esquema de partición utilizado para almacenar los datos de la tabla. Si se selecciona un esquema de partición distinto de la lista, se actualizará la información en la cuadrícula. Para obtener más información, consulte [Partitioned Tables and Indexes](../../relational-databases/partitions/partitioned-tables-and-indexes.md).  
   
  La opción de esquema de partición no estará disponible si no hay ningún esquema de partición en la base de datos.  
   
@@ -178,7 +178,7 @@ ms.lasthandoff: 02/23/2018
 >  Esta opción no estará disponible para los índices XML ni cuando el índice sea un índice clúster deshabilitado.  
   
  **Establecer grado máximo de paralelismo**  
- Limita el número de procesadores que se van a utilizar durante la ejecución de planes paralelos. El valor predeterminado es 0, que utiliza el número real de CPU disponibles. Si el valor se establece en 1, se suprime la generación de planes paralelos; si el valor se establece en un número mayor que 1, se restringe el número máximo de procesadores que se utilizan en la ejecución de una única consulta. Esta opción solo está disponible si el cuadro de diálogo está en los estados **Volver a generar** o **Volver a crear** . Para más información, consulte [Set the Max Degree of Parallelism Option for Optimal Performance](../../relational-databases/policy-based-management/set-the-max-degree-of-parallelism-option-for-optimal-performance.md).  
+ Limita el número de procesadores que se van a utilizar durante la ejecución de planes paralelos. El valor predeterminado es 0, que utiliza el número real de CPU disponibles. Si el valor se establece en 1, se suprime la generación de planes paralelos; si el valor se establece en un número mayor que 1, se restringe el número máximo de procesadores que se utilizan en la ejecución de una única consulta. Esta opción solo está disponible si el cuadro de diálogo está en los estados **Volver a generar** o **Volver a crear** . Para más información, consulte [PerformanceEstablecer la opción Grado máximo de paralelismo para lograr un rendimiento óptimo](../../relational-databases/policy-based-management/set-the-max-degree-of-parallelism-option-for-optimal-performance.md).  
   
 > [!NOTE]  
 >  Si especifica un valor superior al número de CPU disponibles, se utilizará el número real de CPU disponibles.  
@@ -247,7 +247,7 @@ ms.lasthandoff: 02/23/2018
  **Expresión de filtro**  
  Define qué filas de datos para incluir en el índice filtrado. Por ejemplo, `StartDate > '20000101' AND EndDate IS NOT NULL'.`  
   
-## <a name="see-also"></a>Ver también  
+## <a name="see-also"></a>Vea también  
  [Establecer opciones de índice](../../relational-databases/indexes/set-index-options.md)   
  [INDEXPROPERTY &#40;Transact-SQL&#41;](../../t-sql/functions/indexproperty-transact-sql.md)   
  [sys.indexes &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-indexes-transact-sql.md)  

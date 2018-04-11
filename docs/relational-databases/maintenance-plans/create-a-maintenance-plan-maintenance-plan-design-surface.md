@@ -1,34 +1,34 @@
 ---
-title: "Creación de un plan de mantenimiento (superficie de diseño del plan de mantenimiento) | Microsoft Docs"
-ms.custom: 
+title: Creación de un plan de mantenimiento (superficie de diseño del plan de mantenimiento) | Microsoft Docs
+ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql-non-specified
 ms.prod_service: database-engine
-ms.service: 
+ms.service: ''
 ms.component: maintenance-plans
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - Maintenance Plan Design Surface
 ms.assetid: 2ef803ee-a9f8-454a-ad63-fedcbe6838d1
-caps.latest.revision: 
+caps.latest.revision: 10
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.workload: On Demand
 ms.openlocfilehash: 30a9e1d1a02e44de418a7d6d8de4acfe694e83f2
-ms.sourcegitcommit: d8ab09ad99e9ec30875076acee2ed303d61049b7
-ms.translationtype: HT
+ms.sourcegitcommit: d6b1695c8cbc70279b7d85ec4dfb66a4271cdb10
+ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/23/2018
+ms.lasthandoff: 04/10/2018
 ---
 # <a name="create-a-maintenance-plan-maintenance-plan-design-surface"></a>Crear un plan de mantenimiento (superficie de diseño del plan de mantenimiento)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
-En este tema se describe cómo crear un plan de mantenimiento de varios servidores o de uno mediante la superficie de diseño del plan de mantenimiento de [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]. Aunque el **Asistente para plan de mantenimiento** es mejor para crear planes de mantenimiento básicos, crear un plan con la superficie de diseño le permite usar un flujo de trabajo mejorado.  
+  En este tema se describe cómo crear un plan de mantenimiento de varios servidores o de uno mediante la superficie de diseño del plan de mantenimiento de [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]. Aunque el **Asistente para plan de mantenimiento** es mejor para crear planes de mantenimiento básicos, crear un plan con la superficie de diseño le permite usar un flujo de trabajo mejorado.  
   
  **En este tema**  
   
@@ -40,7 +40,7 @@ En este tema se describe cómo crear un plan de mantenimiento de varios servidor
   
 -   [Crear un plan de mantenimiento mediante la superficie de diseño del plan de mantenimiento](#SSMSProcedure)  
   
-##  <a name="BeforeYouBegin"></a> Antes de empezar  
+##  <a name="BeforeYouBegin"></a> Antes de comenzar  
   
 ###  <a name="Restrictions"></a> Limitaciones y restricciones  
   
@@ -50,7 +50,7 @@ En este tema se describe cómo crear un plan de mantenimiento de varios servidor
   
 ###  <a name="Security"></a> Seguridad  
   
-####  <a name="Permissions"></a> Permissions  
+####  <a name="Permissions"></a> Permisos  
  Para crear o administrar planes de mantenimiento, debe ser miembro del rol fijo de servidor **sysadmin** . El Explorador de objetos solo muestra el nodo **Planes de mantenimiento** para los usuarios que son miembros del rol fijo de servidor **sysadmin** .  
   
 ##  <a name="SSMSProcedure"></a> Usar la Superficie de diseño del plan de mantenimiento  
@@ -109,7 +109,7 @@ En este tema se describe cómo crear un plan de mantenimiento de varios servidor
      **Nombre**  
      Nombre del subplán.  
   
-     **Descripción**  
+     **Description**  
      Breve descripción del subplán.  
   
      **Programación**  

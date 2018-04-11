@@ -1,16 +1,16 @@
 ---
-title: "Guardar un plan de ejecución en formato XML | Microsoft Docs"
-ms.custom: 
+title: Guardar un plan de ejecución en formato XML | Microsoft Docs
+ms.custom: ''
 ms.date: 08/21/2017
 ms.prod: sql-non-specified
 ms.prod_service: database-engine, sql-database
-ms.service: 
+ms.service: ''
 ms.component: performance
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - XML query plans [SQL Server]
@@ -19,19 +19,20 @@ helpviewer_keywords:
 - execution plans [SQL Server], saving
 - saving execution plans
 ms.assetid: c439e53b-56f3-4442-97c6-dabd48a203d8
-caps.latest.revision: 
+caps.latest.revision: 25
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.workload: Inactive
 ms.openlocfilehash: caa43dba8d4ce0abdd5dc14f113a5fbfcf58d3ec
-ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
-ms.translationtype: HT
+ms.sourcegitcommit: d6b1695c8cbc70279b7d85ec4dfb66a4271cdb10
+ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/18/2018
+ms.lasthandoff: 04/10/2018
 ---
 # <a name="save-an-execution-plan-in-xml-format"></a>Guardar un plan de ejecución en formato XML
-[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)] Utilice [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] para guardar planes de ejecución como archivos XML y abrirlos para visualizarlos.  
+[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
+  Utilice [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] para guardar planes de ejecución como archivos XML y para visualizarlos.  
   
  Para utilizar la característica de plan de ejecución en [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)]o para usar las opciones SET del plan de presentación XML, los usuarios deben disponer de los permisos adecuados para ejecutar la consulta [!INCLUDE[tsql](../../includes/tsql-md.md)] para la que se está generando un plan de ejecución y deben tener el permiso SHOWPLAN para todas las bases de datos a las que haga referencia la consulta.  
   
@@ -99,7 +100,7 @@ ms.lasthandoff: 01/18/2018
   
      Como alternativa, en el Explorador de Windows, haga doble clic en un archivo con la extensión **.sqlplan**. El plan se abre en [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)].  
   
-## <a name="see-also"></a>Ver también  
+## <a name="see-also"></a>Vea también  
  [SET SHOWPLAN_XML &#40;Transact-SQL&#41;](../../t-sql/statements/set-showplan-xml-transact-sql.md)   
  [SET STATISTICS XML &#40;Transact-SQL&#41;](../../t-sql/statements/set-statistics-xml-transact-sql.md)  
   

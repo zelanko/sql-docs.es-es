@@ -1,16 +1,16 @@
 ---
 title: sp_adjustpublisheridentityrange (Transact-SQL) | Documentos de Microsoft
-ms.custom: 
+ms.custom: ''
 ms.date: 03/04/2017
 ms.prod: sql-non-specified
 ms.prod_service: database-engine
-ms.service: 
+ms.service: ''
 ms.component: system-stored-procedures
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - replication
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 applies_to:
 - SQL Server
@@ -20,16 +20,16 @@ f1_keywords:
 helpviewer_keywords:
 - sp_adjustpublisheridentityrange
 ms.assetid: 64f111fd-fb7d-4459-93f7-65f0f8dd7efe
-caps.latest.revision: 
+caps.latest.revision: 28
 author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: Inactive
 ms.openlocfilehash: c2f0214309eb060bbc02c7c05bf5243444ed5796
-ms.sourcegitcommit: 45e4efb7aa828578fe9eb7743a1a3526da719555
+ms.sourcegitcommit: d6b1695c8cbc70279b7d85ec4dfb66a4271cdb10
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 04/10/2018
 ---
 # <a name="spadjustpublisheridentityrange-transact-sql"></a>sp_adjustpublisheridentityrange (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -54,7 +54,7 @@ sp_adjustpublisheridentityrange [ [ @publication = ] 'publication' ]
  [  **@table_name=**] **'***table_name***'**  
  Es el nombre de la tabla en la que reasignan nuevos rangos de identidad. *table_name* es **sysname**, su valor predeterminado es null.  
   
- [  **@table_owner=**] **'***table_owner***'**  
+ [ **@table_owner=**] **'***table_owner***'**  
  Es el propietario de la tabla en el publicador. *TABLE_OWNER* es **sysname**, su valor predeterminado es null. Si *table_owner* no se especifica, se usa el nombre del usuario actual.  
   
 ## <a name="return-code-values"></a>Valores de código de retorno  

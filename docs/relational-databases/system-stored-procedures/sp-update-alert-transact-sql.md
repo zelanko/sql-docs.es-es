@@ -1,16 +1,16 @@
 ---
 title: sp_update_alert (Transact-SQL) | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql-non-specified
 ms.prod_service: database-engine
-ms.service: 
+ms.service: ''
 ms.component: system-stored-procedures
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - sp_update_alert_TSQL
@@ -20,16 +20,16 @@ dev_langs:
 helpviewer_keywords:
 - sp_update_alert
 ms.assetid: 4bbaeaab-8aca-4c9e-abc1-82ce73090bd3
-caps.latest.revision: 
+caps.latest.revision: 34
 author: stevestein
 ms.author: sstein
 manager: craigg
 ms.workload: Inactive
 ms.openlocfilehash: 7d39736eed19992c5fa20bb1231aed3bcb20e3b0
-ms.sourcegitcommit: c556eaf60a49af7025db35b7aa14beb76a8158c5
+ms.sourcegitcommit: d6b1695c8cbc70279b7d85ec4dfb66a4271cdb10
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/03/2018
+ms.lasthandoff: 04/10/2018
 ---
 # <a name="spupdatealert-transact-sql"></a>sp_update_alert (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -69,19 +69,19 @@ sp_update_alert
 ```  
   
 ## <a name="arguments"></a>Argumentos  
- [  **@name =**] **'***nombre***'**  
+ [ **@name =**] **'***name***'**  
  Nombre de la alerta que se va a actualizar. *nombre* es **sysname**, no tiene ningún valor predeterminado.  
   
  [ **@new_name =**] **'***new_name***'**  
  Nuevo nombre para la alerta. El nombre debe ser único. *new_name* es **sysname**, su valor predeterminado es null.  
   
- [  **@enabled =**] *habilitado*  
+ [ **@enabled =**] *enabled*  
  Especifica si la alerta está habilitada (**1**) o no habilitada (**0**). *habilitado* es **tinyint**, su valor predeterminado es null. Para poder activar una alerta, ésta debe estar habilitada.  
   
- [  **@message_id =**] *message_id*  
+ [ **@message_id =**] *message_id*  
  Nuevo mensaje o número de error para la definición de la alerta. Por lo general, *message_id* corresponde a un número de error en la **sysmessages** tabla. *message_id* es **int**, su valor predeterminado es null. Un mensaje de identificador puede usarse únicamente si la configuración del nivel de gravedad de la alerta es **0**.  
   
- [  **@severity =**] *gravedad*  
+ [ **@severity =**] *severity*  
  Un nuevo nivel de gravedad (de **1** a través de **25**) para la definición de alerta. Cualquier [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] mensaje enviado en el registro de aplicación de Windows con la gravedad especificada activará la alerta. *gravedad* es **int**, su valor predeterminado es null. Un nivel de gravedad se puede utilizar únicamente si el valor de Id. de mensaje de la alerta es **0**.  
   
  [ **@delay_between_responses =**] *delay_between_responses*  
@@ -101,7 +101,7 @@ sp_update_alert
 |**4**|**net send**|  
 |**7**|Todos|  
   
- [  **@database_name =**] **'***base de datos***'**  
+ [ **@database_name =**] **'***database***'**  
  Nombre de la base de datos en la que debe ocurrir el error para que se active la alerta. *base de datos* es **sysname.** No se permiten nombres incluidos entre corchetes ([ ]). El valor predeterminado es NULL.  
   
  [ **@event_description_keyword =**] **'***event_description_keyword***'**  
@@ -110,10 +110,10 @@ sp_update_alert
  [ **@job_id =**] *job_id*  
  El número de identificación del trabajo. *job_id* es **uniqueidentifier**, su valor predeterminado es null. Si *job_id* se especifica, *job_name* se debe omitir.  
   
- [  **@job_name =**] **'***job_name***'**  
+ [ **@job_name =**] **'***job_name***'**  
  Nombre del trabajo que se ejecuta como respuesta a esta alerta. *job_name* es **sysname**, su valor predeterminado es null. Si *job_name* se especifica, *job_id* se debe omitir.  
   
- [  **@occurrence_count =** ] *occurrence_count*  
+ [ **@occurrence_count =** ] *occurrence_count*  
  Restablece el número de veces que se ha producido la alerta. *occurrence_count* es **int**, su valor predeterminado es null y se puede establecer solo en **0**.  
   
  [ **@count_reset_date =**] *count_reset_date*  
@@ -143,10 +143,10 @@ sp_update_alert
 |Elemento de formato|Description|  
 |--------------------|-----------------|  
 |*Elemento*|Objeto de rendimiento, contador de rendimiento o instancia con nombre del contador|  
-|*Comparator*|Uno de estos operadores:  **>** ,  **<** ,**=**|  
+|*Comparador*|Uno de estos operadores: **>**, **<**, **=**|  
 |*Valor*|Valor numérico del contador|  
   
- [  **@category_name =**] **'***categoría***'**  
+ [ **@category_name =**] **'***category***'**  
  El nombre de la categoría de alerta. *categoría* es **sysname** con un valor predeterminado es NULL.  
   
  [ **@wmi_namespace**= ] **'***wmi_namespace***'**  

@@ -1,16 +1,16 @@
 ---
-title: sp_bindefault (Transact-SQL) | Documentos de Microsoft
-ms.custom: 
+title: sp_bindefault (Transact-SQL) | Microsoft Docs
+ms.custom: ''
 ms.date: 11/25/2015
 ms.prod: sql-non-specified
 ms.prod_service: database-engine, sql-database
-ms.service: 
+ms.service: ''
 ms.component: system-stored-procedures
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - sp_bindefault
@@ -20,16 +20,16 @@ dev_langs:
 helpviewer_keywords:
 - sp_bindefault
 ms.assetid: 3da70c10-68d0-4c16-94a5-9e84c4a520f6
-caps.latest.revision: 
+caps.latest.revision: 42
 author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: Inactive
 ms.openlocfilehash: b3e23435d6c0a2db3809722856b9daa6b2d66505
-ms.sourcegitcommit: 45e4efb7aa828578fe9eb7743a1a3526da719555
+ms.sourcegitcommit: d6b1695c8cbc70279b7d85ec4dfb66a4271cdb10
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 04/10/2018
 ---
 # <a name="spbindefault-transact-sql"></a>sp_bindefault (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -37,7 +37,7 @@ ms.lasthandoff: 11/21/2017
   Enlaza un valor predeterminado con una columna o un tipo de datos de alias.  
   
 > [!IMPORTANT]  
->  [!INCLUDE[ssNoteDepFutureDontUse](../../includes/ssnotedepfuturedontuse-md.md)]Le recomendamos que cree definiciones predeterminadas utilizando la palabra clave DEFAULT de la [ALTER TABLE](../../t-sql/statements/alter-table-transact-sql.md) o [CREATE TABLE](../../t-sql/statements/create-table-transact-sql.md) instrucciones en su lugar.  
+>  [!INCLUDE[ssNoteDepFutureDontUse](../../includes/ssnotedepfuturedontuse-md.md)] Le recomendamos que cree definiciones predeterminadas utilizando la palabra clave DEFAULT de la [ALTER TABLE](../../t-sql/statements/alter-table-transact-sql.md) o [CREATE TABLE](../../t-sql/statements/create-table-transact-sql.md) instrucciones en su lugar.  
   
  ![Icono de vínculo de tema](../../database-engine/configure-windows/media/topic-link.gif "Icono de vínculo de tema") [Convenciones de sintaxis de Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -51,10 +51,10 @@ sp_bindefault [ @defname = ] 'default' ,
 ```  
   
 ## <a name="arguments"></a>Argumentos  
- [  **@defname=** ] **'***predeterminado***'**  
+ [ **@defname=** ] **'***default***'**  
  Es el nombre del valor predeterminado creado por CREATE DEFAULT. *valor predeterminado* es **nvarchar(776)**, no tiene ningún valor predeterminado.  
   
- [  **@objname=** ] **'***object_name***'**  
+ [ **@objname=** ] **'***object_name***'**  
  Es el nombre de la tabla y columna, o el tipo de datos de alias al que se va a enlazar el valor predeterminado. *object_name* es **nvarchar(776)** no tiene ningún valor predeterminado. *object_name* no se pueden definir con la **varchar (max)**, **nvarchar (max)**, **varbinary (max)**, **xml**, o CLR tipos definidos por el usuario.  
   
  Si *object_name* es un nombre de una parte, se resuelve como un tipo de datos de alias. Si es un nombre de dos o tres partes, se resuelve primero como una tabla y columna; y si se produce un error en esta solución, se resuelve como un tipo de datos de alias. De forma predeterminada, las columnas existentes del tipo de datos de alias heredan *predeterminado*, a menos que el valor predeterminado se ha enlazado directamente a la columna. No se puede enlazar un valor predeterminado para un **texto**, **ntext**, **imagen**, **varchar (max)**, **nvarchar (max)**, **varbinary (max)**, **xml**, **marca de tiempo**, o CLR columna de tipo definido por el usuario, una columna con la propiedad IDENTITY, una columna calculada o una columna que ya tiene una restricción DEFAULT.  
@@ -62,7 +62,7 @@ sp_bindefault [ @defname = ] 'default' ,
 > [!NOTE]  
 >  *object_name* puede contener corchetes **[]** como identificadores delimitados. Para obtener más información, vea [Database Identifiers](../../relational-databases/databases/database-identifiers.md).  
   
- [  **@futureonly=** ] **'***futureonly_flag***'**  
+ [ **@futureonly=** ] **'***futureonly_flag***'**  
  Solo se usa cuando se enlaza un valor predeterminado a un tipo de datos de alias. *futureonly_flag* es **varchar (15)** con un valor predeterminado es NULL. Cuando este parámetro se establece en **futureonly**, las columnas existentes de ese tipo de datos no pueden heredar el nuevo valor predeterminado. Este parámetro nunca se utiliza al enlazar un valor predeterminado con una columna. Si *futureonly_flag* es NULL, el nuevo valor predeterminado se enlaza con las columnas del tipo de datos de alias que actualmente no tiene ningún valor predeterminado o que utilizan el valor predeterminado existente del tipo de datos del alias.  
   
 ## <a name="return-code-values"></a>Valores de código de retorno  
@@ -122,10 +122,10 @@ EXEC sp_bindefault 'default1', '[t.1].c1' ;
 ```  
   
 ## <a name="see-also"></a>Vea también  
- [Motor de base de datos almacenados procedimientos &#40; Transact-SQL &#41;](../../relational-databases/system-stored-procedures/database-engine-stored-procedures-transact-sql.md)   
+ [Procedimientos almacenados del motor de base de datos &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/database-engine-stored-procedures-transact-sql.md)   
  [CREATE DEFAULT &#40;Transact-SQL&#41;](../../t-sql/statements/create-default-transact-sql.md)   
- [ELIMINAR predeterminado &#40; Transact-SQL &#41;](../../t-sql/statements/drop-default-transact-sql.md)   
- [sp_unbindefault &#40; Transact-SQL &#41;](../../relational-databases/system-stored-procedures/sp-unbindefault-transact-sql.md)   
+ [DROP DEFAULT &#40;Transact-SQL&#41;](../../t-sql/statements/drop-default-transact-sql.md)   
+ [sp_unbindefault &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-unbindefault-transact-sql.md)   
  [Procedimientos almacenados del sistema &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
   
   

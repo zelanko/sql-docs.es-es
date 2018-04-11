@@ -1,16 +1,16 @@
 ---
-title: sp_cursor (Transact-SQL) | Documentos de Microsoft
-ms.custom: 
+title: sp_cursor (Transact-SQL) | Microsoft Docs
+ms.custom: ''
 ms.date: 03/03/2017
 ms.prod: sql-non-specified
 ms.prod_service: database-engine
-ms.service: 
+ms.service: ''
 ms.component: system-stored-procedures
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - sp_cursor_TSQL
@@ -20,16 +20,16 @@ dev_langs:
 helpviewer_keywords:
 - sp_cursor
 ms.assetid: 41ade0ca-5f11-469d-bd4d-c8302ccd93b3
-caps.latest.revision: 
+caps.latest.revision: 10
 author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: Inactive
 ms.openlocfilehash: e85732afe35198cea86a605dfde8396b013842dc
-ms.sourcegitcommit: 45e4efb7aa828578fe9eb7743a1a3526da719555
+ms.sourcegitcommit: d6b1695c8cbc70279b7d85ec4dfb66a4271cdb10
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 04/10/2018
 ---
 # <a name="spcursor-transact-sql"></a>sp_cursor (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -57,7 +57,7 @@ sp_cursor  cursor, optype, rownum, table
  *optype*  
  Es un parámetro necesario que designa qué operación realizará el cursor. *optype* requiere uno de los siguientes **int** valores de entrada.  
   
-|Valor|Nombre|Description|  
+|Value|Nombre|Description|  
 |-----------|----------|-----------------|  
 |0X0001|UPDATE|Se usa para actualizar una o varias filas en el búfer de captura.  Las filas especificadas en *rownum* se vuelve a acceder y se actualizan.|  
 |0x0002|DELETE|Se usa para eliminar una o varias filas en el búfer de captura. Las filas especificadas en *rownum* volver a tiene acceso y eliminar.|  
@@ -67,7 +67,7 @@ sp_cursor  cursor, optype, rownum, table
 |0X20|SETPOSITION|Se utiliza únicamente cuando el programa se va a emitir un servidor SQL siguientes coloca la instrucción DELETE o UPDATE.|  
 |0X40|ABSOLUTE|Solo se puede usar junto con UPDATE o DELETE.  ABSOLUTE solo se emplea con cursores KEYSET (se omite para los cursores DYNAMIC y los cursores STATIC no se pueden actualizar).<br /><br /> Nota: Si se especifica ABSOLUTE en una fila en el conjunto de claves que no se ha capturado, la operación puede producir un error en la comprobación de simultaneidad y el resultado devuelto no se puede garantizar.|  
   
- *ROWNUM*  
+ *rownum*  
  Especifica con cuál de las filas del búfer de captura operará el cursor, cuál actualizará o cuál eliminará.  
   
 > [!NOTE]  
@@ -181,8 +181,8 @@ sp_cursor  cursor, optype, rownum, table
 >  Es posible enviar un parámetro como un parámetro con nombre, es decir "`@VALUES`". En este caso no se pueden usar otros parámetros con nombre.  
   
 ## <a name="see-also"></a>Vea también  
- [sp_cursoropen &#40; Transact-SQL &#41;](../../relational-databases/system-stored-procedures/sp-cursoropen-transact-sql.md)   
- [sp_cursorfetch &#40; Transact-SQL &#41;](../../relational-databases/system-stored-procedures/sp-cursorfetch-transact-sql.md)   
+ [sp_cursoropen &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-cursoropen-transact-sql.md)   
+ [sp_cursorfetch &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-cursorfetch-transact-sql.md)   
  [Procedimientos almacenados del sistema &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
   
   

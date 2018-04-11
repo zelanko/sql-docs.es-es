@@ -1,16 +1,16 @@
 ---
 title: Dispositivos de copia de seguridad (SQL Server) | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 08/12/2016
 ms.prod: sql-non-specified
 ms.prod_service: database-engine
-ms.service: 
+ms.service: ''
 ms.component: backup-restore
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - dbe-backup-restore
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - tape backup devices, about tape backup devices
@@ -28,20 +28,20 @@ helpviewer_keywords:
 - backing up databases [SQL Server], backup devices
 - devices [SQL Server]
 ms.assetid: 35a8e100-3ff2-4844-a5da-dd088c43cba4
-caps.latest.revision: 
+caps.latest.revision: 93
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 1dbf5d00855a498782a65a3ff04e2477a2cb871d
-ms.sourcegitcommit: d8ab09ad99e9ec30875076acee2ed303d61049b7
-ms.translationtype: HT
+ms.openlocfilehash: fda4874de4ba9df6c8bab86ca8201dff76b28f33
+ms.sourcegitcommit: d6b1695c8cbc70279b7d85ec4dfb66a4271cdb10
+ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/23/2018
+ms.lasthandoff: 04/10/2018
 ---
 # <a name="backup-devices-sql-server"></a>Dispositivos de copia de seguridad (SQL Server)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
-En una operación de copia de seguridad en una base de datos de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , los datos copiados (la *copia de seguridad*) se escriben en un dispositivo físico de copia de seguridad. Este dispositivo físico de copia de seguridad se inicializa cuando se escribe en él la primera copia de seguridad de un conjunto de medios. Las copias de seguridad de uno o varios dispositivos de copia de seguridad constituyen un solo conjunto de medios.  
+  En una operación de copia de seguridad en una base de datos de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , los datos copiados (la *copia de seguridad*) se escriben en un dispositivo físico de copia de seguridad. Este dispositivo físico de copia de seguridad se inicializa cuando se escribe en él la primera copia de seguridad de un conjunto de medios. Las copias de seguridad de uno o varios dispositivos de copia de seguridad constituyen un solo conjunto de medios.  
    
 ##  <a name="TermsAndDefinitions"></a> Términos y definiciones  
  disco de copia de seguridad  
@@ -77,7 +77,7 @@ En una operación de copia de seguridad en una base de datos de [!INCLUDE[ssNoVe
   
  Por ejemplo:  
   
-```  
+```sql  
 BACKUP DATABASE AdventureWorks2012   
    TO DISK = 'Z:\SQLServerBackups\AdventureWorks2012.bak';  
 GO  
@@ -91,7 +91,7 @@ GO
   
  Por ejemplo,  
   
-```  
+```sql  
 RESTORE DATABASE AdventureWorks2012   
    FROM DISK = 'Z:\SQLServerBackups\AdventureWorks2012.bak';   
 ```  
@@ -102,7 +102,7 @@ RESTORE DATABASE AdventureWorks2012
   
  Para evitar ambigüedades, particularmente en los scripts, recomendamos especificar de forma explícita la ruta de acceso del directorio de copias de seguridad en cada cláusula DISK. Sin embargo, esto es menos importante cuando se utiliza el Editor de consultas. En ese caso, si está seguro de que el archivo de copia de seguridad reside en el directorio predeterminado de copias de seguridad, puede omitir la ruta de acceso de una cláusula DISK. Por ejemplo, la siguiente instrucción `BACKUP` realiza una copia de seguridad de la base de datos [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] en el directorio predeterminado de copias de seguridad.  
   
-```  
+```sql  
 BACKUP DATABASE AdventureWorks2012   
    TO DISK = ’AdventureWorks2012.bak’;  
 GO  
@@ -127,7 +127,7 @@ GO
   
  Por ejemplo:  
   
-```  
+```sql  
 BACKUP DATABASE AdventureWorks2012   
    TO DISK = '\\BackupSystem\BackupDisk1\AW_backups\AdventureWorksData.Bak';  
 GO  
@@ -157,7 +157,7 @@ GO
   
  Por ejemplo:  
   
-```  
+```sql  
 BACKUP LOG AdventureWorks2012   
    TO TAPE = '\\.\tape0';  
 GO  
@@ -200,7 +200,7 @@ GO
   
  Una vez definido el dispositivo lógico de copia de seguridad, en un comando BACKUP o RESTORE, puede especificar el dispositivo lógico de copia de seguridad en lugar del nombre físico del dispositivo. Por ejemplo, la siguiente instrucción realiza una copia de seguridad de la base de datos `AdventureWorks2012` en el dispositivo lógico de copia de seguridad `AdventureWorksBackups` .  
   
-```  
+```sql  
 BACKUP DATABASE AdventureWorks2012   
    TO AdventureWorksBackups;  
 GO  

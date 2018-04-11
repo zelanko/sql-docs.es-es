@@ -1,16 +1,16 @@
 ---
-title: "Configuración de Correo electrónico de base de datos | Microsoft Docs"
-ms.custom: 
+title: Configuración de Correo electrónico de base de datos | Microsoft Docs
+ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql-non-specified
 ms.prod_service: database-engine
-ms.service: 
+ms.service: ''
 ms.component: database-mail
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 f1_keywords:
 - sql13.swb.sqlimail.profileandaccountmanagement.f1
@@ -42,26 +42,26 @@ f1_keywords:
 - sql13.swb.dbmail.manageexistingprofile.f1
 - sql13.swb.dbmail.manageprofilesecurity.principalview.f1
 ms.assetid: 7edc21d4-ccf3-42a9-84c0-3f70333efce6
-caps.latest.revision: 
+caps.latest.revision: 13
 author: stevestein
 ms.author: sstein
 manager: craigg
 ms.workload: Active
 ms.openlocfilehash: 3d88087b9d1142919f844155c805e2284e954e54
-ms.sourcegitcommit: 37f0b59e648251be673389fa486b0a984ce22c81
-ms.translationtype: HT
+ms.sourcegitcommit: d6b1695c8cbc70279b7d85ec4dfb66a4271cdb10
+ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/12/2018
+ms.lasthandoff: 04/10/2018
 ---
 # <a name="configure-database-mail"></a>Configuración de Correo electrónico de base de datos
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
-En este tema se describe cómo habilitar y configurar el Correo electrónico de base de datos con el Asistente para configuración de Correo electrónico de base de datos y crear un script de configuración de Correo electrónico de base de datos mediante plantillas.  
+  En este tema se describe cómo habilitar y configurar el Correo electrónico de base de datos con el Asistente para configuración de Correo electrónico de base de datos y crear un script de configuración de Correo electrónico de base de datos mediante plantillas.  
   
 -   **Antes de empezar:**  [Limitaciones y restricciones](#Restrictions), [Seguridad](#Security)  
   
 -   **Para configurar Correo electrónico de base de datos, mediante:**  [Asistente para configuración de Correo electrónico de base de datos](#DBWizard), [Usar plantillas](#Template)  
   
-##  <a name="BeforeYouBegin"></a> Antes de empezar  
+##  <a name="BeforeYouBegin"></a> Antes de comenzar  
  Use la opción **DatabaseMail XPs** para habilitar Correo electrónico de base de datos en este servidor. Para obtener más información, vea el tema de referencia [Database Mail XPs (opción de configuración del servidor)](../../database-engine/configure-windows/database-mail-xps-server-configuration-option.md) .  
   
 ###  <a name="Restrictions"></a> Limitaciones y restricciones  
@@ -148,7 +148,7 @@ En este tema se describe cómo habilitar y configurar el Correo electrónico de 
  **Nombre de cuenta**  
  Escriba el nombre de la nueva cuenta.  
   
- **Descripción**  
+ **Description**  
  Escriba una descripción de la cuenta. La descripción es opcional.  
   
  **Dirección de correo electrónico**  
@@ -198,7 +198,7 @@ En este tema se describe cómo habilitar y configurar el Correo electrónico de 
  **Eliminar**  
  Elimina la cuenta seleccionada. Debe quitar esta cuenta de los perfiles asociados, o eliminar dichos perfiles, antes de eliminar la cuenta seleccionada.  
   
- **Descripción**  
+ **Description**  
  Muestra o actualiza la descripción de la cuenta. La descripción es opcional.  
   
  **Dirección de correo electrónico**  
@@ -225,7 +225,7 @@ En este tema se describe cómo habilitar y configurar el Correo electrónico de 
  **Autenticación básica**  
  Se especifica el nombre de usuario y la contraseña que requiere el servidor SMTP.  
   
- **User name**  
+ **Nombre de usuario.**  
  Muestra o actualiza el nombre de usuario que utiliza el Correo electrónico de base de datos para iniciar la sesión en el servidor SMTP. Si el servidor SMTP requiere autenticación básica, el nombre de usuario es necesario.  
   
  **Contraseña**  
@@ -247,7 +247,7 @@ En este tema se describe cómo habilitar y configurar el Correo electrónico de 
  **Nombre del perfil**  
  Escriba el nombre del nuevo perfil. El perfil se crea con este nombre. No utilice el nombre de un perfil existente.  
   
- **Descripción**  
+ **Description**  
  Escriba una descripción para el perfil. La descripción es opcional.  
   
  **Cuentas SMTP**  
@@ -278,7 +278,7 @@ En este tema se describe cómo habilitar y configurar el Correo electrónico de 
  **Eliminar**  
  Permite eliminar el perfil seleccionado. Se le pedirá que seleccione **Sí** para eliminar el perfil seleccionado y para no enviar los mensajes no enviados; o bien seleccione **No** para eliminar el perfil seleccionado solo si no existen mensajes sin enviar.  
   
- **Descripción**  
+ **Description**  
  Permite ver o cambiar la descripción del perfil seleccionado. La descripción es opcional.  
   
  **Cuentas SMTP**  
@@ -369,7 +369,7 @@ En este tema se describe cómo habilitar y configurar el Correo electrónico de 
   
  Los perfiles pueden ser predeterminados. En este caso, los usuarios o los roles pueden utilizar el perfil para enviar correo electrónico sin especificarlo explícitamente. Si el usuario o el rol que envía el mensaje de correo electrónico tiene un perfil privado predeterminado, el Correo electrónico de base de datos utilizará dicho perfil. Si el usuario o el rol no tiene un perfil privado predeterminado, **sp_send_dbmail** usa el perfil público predeterminado de la base de datos **msdb** . Si no hay ningún perfil privado predeterminado para el usuario o el rol ni tampoco ningún perfil público predeterminado para la base de datos, **sp_send_dbmail** devuelve un error.  
   
- **User name**  
+ **Nombre de usuario.**  
  Seleccione el nombre de un usuario o un rol de la base de datos **msdb** .  
   
  **Acceso**  

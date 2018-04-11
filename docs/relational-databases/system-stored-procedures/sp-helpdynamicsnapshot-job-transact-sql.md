@@ -1,16 +1,16 @@
 ---
-title: sp_helpdynamicsnapshot_job (Transact-SQL) | Documentos de Microsoft
-ms.custom: 
+title: sp_helpdynamicsnapshot_job (Transact-SQL) | Microsoft Docs
+ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql-non-specified
 ms.prod_service: database-engine
-ms.service: 
+ms.service: ''
 ms.component: system-stored-procedures
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - replication
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 applies_to:
 - SQL Server
@@ -26,16 +26,16 @@ f1_keywords:
 helpviewer_keywords:
 - sp_helpdynamicsnapshot_job
 ms.assetid: d6dfdf26-f874-495f-a8a6-8780699646d7
-caps.latest.revision: 
+caps.latest.revision: 29
 author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: Inactive
 ms.openlocfilehash: 8f9accc8ae7ffb64d82fa10c3b60a2f8fec44b8a
-ms.sourcegitcommit: 45e4efb7aa828578fe9eb7743a1a3526da719555
+ms.sourcegitcommit: d6b1695c8cbc70279b7d85ec4dfb66a4271cdb10
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 04/10/2018
 ---
 # <a name="sphelpdynamicsnapshotjob-transact-sql"></a>sp_helpdynamicsnapshot_job (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -54,29 +54,29 @@ sp_helpdynamicsnapshot_job [ [ @publication = ] 'publication' ]
 ```  
   
 ## <a name="arguments"></a>Argumentos  
- [  **@publication =** ] **'***publicación***'**  
- Es el nombre de la publicación. *publicación* es **sysname**, su valor predeterminado es  **%** , que devuelve información acerca de todos los trabajos de instantáneas de datos filtrados que coinciden con la cadena *dynamic_ snapshot_jobid*y *dynamic_snapshot_jobname*para todas las publicaciones.  
+ [ **@publication =** ] **'***publication***'**  
+ Es el nombre de la publicación. *publicación* es **sysname**, su valor predeterminado es **%**, que devuelve información acerca de todos los trabajos de instantáneas de datos filtrados que coinciden con la cadena *dynamic_ snapshot_jobid*y *dynamic_snapshot_jobname*para todas las publicaciones.  
   
- [  **@dynamic_snapshot_jobname =** ] **'***dynamic_snapshot_jobname***'**  
- Es el nombre de un trabajo de instantáneas de datos filtrados. *dynamic_snapshot_jobname*es **sysname**, no tiene valor predeterminado de  **%** ', que devuelve todos los trabajos dinámicos para una publicación con los valores especificados *dynamic_ snapshot_jobid*. Si no se especificó un nombre de trabajo explícitamente cuando se creó el trabajo, el formato del nombre del trabajo es el siguiente:  
+ [ **@dynamic_snapshot_jobname =** ] **'***dynamic_snapshot_jobname***'**  
+ Es el nombre de un trabajo de instantáneas de datos filtrados. *dynamic_snapshot_jobname*es **sysname**, no tiene valor predeterminado de **%**', que devuelve todos los trabajos dinámicos para una publicación con los valores especificados *dynamic_ snapshot_jobid*. Si no se especificó un nombre de trabajo explícitamente cuando se creó el trabajo, el formato del nombre del trabajo es el siguiente:  
   
 ```  
 'dyn_' + <name of the standard snapshot job> + <GUID>  
 ```  
   
- [  **@dynamic_snapshot_jobid =** ] **'***dynamic_snapshot_jobid***'**  
+ [ **@dynamic_snapshot_jobid =** ] **'***dynamic_snapshot_jobid***'**  
  Es un identificador para un trabajo de instantáneas de datos filtrados. *dynamic_snapshot_jobid*es **uniqueidentifier**, su valor predeterminado es NULL, que devuelve todos los trabajos de instantáneas que coinciden con la cadena *dynamic_snapshot_jobname*.  
   
 ## <a name="result-sets"></a>Conjuntos de resultados  
   
-|Nombre de columna|Tipo de datos|Descripción|  
+|Nombre de columna|Tipo de datos|Description|  
 |-----------------|---------------|-----------------|  
 |**id**|**int**|Identifica el trabajo de instantáneas de datos filtrados.|  
 |**job_name**|**sysname**|Nombre del trabajo de instantáneas de datos filtrados.|  
 |**job_id**|**uniqueidentifier**|Identifica la [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] trabajo del agente en el distribuidor.|  
 |**dynamic_filter_login**|**sysname**|Valor utilizado para evaluar la [SUSER_SNAME](../../t-sql/functions/suser-sname-transact-sql.md) función en un filtro de fila con parámetros definido para la publicación.|  
 |**dynamic_filter_hostname**|**sysname**|Valor utilizado para evaluar la [HOST_NAME](../../t-sql/functions/host-name-transact-sql.md) función en un filtro de fila con parámetros definido para la publicación.|  
-|**ubicacióndeinstantáneadinámica**|**nvarchar(255)**|Ruta a la carpeta de la que se leen los archivos de instantáneas si se utiliza un filtro de fila con parámetros.|  
+|**dynamic_snapshot_location**|**nvarchar(255)**|Ruta a la carpeta de la que se leen los archivos de instantáneas si se utiliza un filtro de fila con parámetros.|  
 |**frequency_type**|**int**|Se trata de la frecuencia de ejecución programada del agente, que puede ser uno de estos valores.<br /><br /> **1** = una vez<br /><br /> **2** = a petición<br /><br /> **4** = diariamente<br /><br /> **8** = semanalmente<br /><br /> **16** = mensualmente<br /><br /> **32** = mensualmente relativa<br /><br /> **64** = inicio automático<br /><br /> **128** = periódica|  
 |**frequency_interval**|**int**|Los días en los que se ejecuta el agente; puede tener los valores siguientes.<br /><br /> **1** = el domingo<br /><br /> **2** = el lunes<br /><br /> **3** = el martes<br /><br /> **4** = el miércoles<br /><br /> **5** = el jueves<br /><br /> **6** = el viernes<br /><br /> **7** = el sábado<br /><br /> **8** = día<br /><br /> **9** = días laborables<br /><br /> **10** = días del fin de semana|  
 |**frequency_subday_type**|**int**|Es el tipo que define la frecuencia con que el agente ejecuta cuando *frequency_type* es **4** (diariamente), y puede tener uno de estos valores.<br /><br /> **1** = a la hora especificada<br /><br /> **2** = segundos<br /><br /> **4** = minutos<br /><br /> **8** = horas|  

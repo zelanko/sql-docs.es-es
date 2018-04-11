@@ -1,16 +1,16 @@
 ---
 title: sp_update_schedule (Transact-SQL) | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql-non-specified
 ms.prod_service: database-engine
-ms.service: 
+ms.service: ''
 ms.component: system-stored-procedures
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - sp_update_schedule
@@ -20,16 +20,16 @@ dev_langs:
 helpviewer_keywords:
 - sp_update_schedule
 ms.assetid: 97b3119b-e43e-447a-bbfb-0b5499e2fefe
-caps.latest.revision: 
+caps.latest.revision: 42
 author: stevestein
 ms.author: sstein
 manager: craigg
 ms.workload: On Demand
 ms.openlocfilehash: 23d1d4b4cfdc7fb19cffff63de8cae84b2606d6e
-ms.sourcegitcommit: c556eaf60a49af7025db35b7aa14beb76a8158c5
+ms.sourcegitcommit: d6b1695c8cbc70279b7d85ec4dfb66a4271cdb10
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/03/2018
+ms.lasthandoff: 04/10/2018
 ---
 # <a name="spupdateschedule-transact-sql"></a>sp_update_schedule (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -62,7 +62,7 @@ sp_update_schedule
 ```  
   
 ## <a name="arguments"></a>Argumentos  
- [  **@schedule_id =** ] *schedule_id*  
+ [ **@schedule_id =** ] *schedule_id*  
  Identificador de la programación que se va a modificar. *schedule_id* es **int**, no tiene ningún valor predeterminado. Cualquier *schedule_id* o *schedule_name* debe especificarse.  
   
  [  **@name =** ] **'***schedule_name***'**  
@@ -71,10 +71,10 @@ sp_update_schedule
  [ **@new_name**= ] *new_name*  
  El nuevo nombre para la programación. *new_name* es **sysname**, su valor predeterminado es null. Cuando *new_name* es NULL, el nombre de la programación no se modifica.  
   
- [  **@enabled =** ] *habilitado*  
+ [ **@enabled =** ] *enabled*  
  Indica el estado actual de la programación. *habilitado*es **tinyint**, su valor predeterminado es **1** (habilitado). Si **0**, la programación no está habilitada. Si la programación no está habilitada, no se ejecuta ningún trabajo en esta programación.  
   
- [  **@freq_type =** ] *freq_type*  
+ [ **@freq_type =** ] *freq_type*  
  Valor que indica cuándo se va a ejecutar un trabajo. *freq_type*es **int**, su valor predeterminado es **0**, y puede tener uno de estos valores.  
   
 |Value|Descripción|  
@@ -87,7 +87,7 @@ sp_update_schedule
 |**64**|Se ejecuta cuando se inicia el servicio SQLServerAgent|  
 |**128**|Cuando el equipo esté inactivo|  
   
- [  **@freq_interval =** ] *freq_interval*  
+ [ **@freq_interval =** ] *freq_interval*  
  Días en que se ejecuta un trabajo. *freq_interval* es **int**, su valor predeterminado es **0**y depende del valor de *freq_type*.  
   
 |Valor de *freq_type*|Efecto en *freq_interval*|  
@@ -184,7 +184,7 @@ GO
  [Crear y adjuntar programaciones a trabajos](http://msdn.microsoft.com/library/079c2984-0052-4a37-a2b8-4ece56e6b6b5)   
  [Programar un trabajo](http://msdn.microsoft.com/library/f626390a-a3df-4970-b7a7-a0529e4a109c)   
  [Crear una programación](http://msdn.microsoft.com/library/8c7ef3b3-c06d-4a27-802d-ed329dc86ef3)   
- [Agente SQL Server almacena procedimientos &#40; Transact-SQL &#41;](../../relational-databases/system-stored-procedures/sql-server-agent-stored-procedures-transact-sql.md)   
+ [Procedimientos almacenados del Agente SQL Server &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sql-server-agent-stored-procedures-transact-sql.md)   
  [sp_add_schedule &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-add-schedule-transact-sql.md)   
  [sp_add_jobschedule &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-add-jobschedule-transact-sql.md)   
  [sp_delete_schedule &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-delete-schedule-transact-sql.md)   

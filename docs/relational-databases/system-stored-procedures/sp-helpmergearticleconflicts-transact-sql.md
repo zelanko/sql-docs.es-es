@@ -1,16 +1,16 @@
 ---
-title: sp_helpmergearticleconflicts (Transact-SQL) | Documentos de Microsoft
-ms.custom: 
+title: sp_helpmergearticleconflicts (Transact-SQL) | Microsoft Docs
+ms.custom: ''
 ms.date: 03/04/2017
 ms.prod: sql-non-specified
 ms.prod_service: database-engine
-ms.service: 
+ms.service: ''
 ms.component: system-stored-procedures
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - replication
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 applies_to:
 - SQL Server
@@ -20,16 +20,16 @@ f1_keywords:
 helpviewer_keywords:
 - sp_helpmergearticleconflicts
 ms.assetid: 4678a2b9-9a5f-4193-a20d-2e11fc896c3a
-caps.latest.revision: 
+caps.latest.revision: 28
 author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: Inactive
 ms.openlocfilehash: b7a1d10d6d2ba731ceaaaba51b8f786b262a2e28
-ms.sourcegitcommit: 45e4efb7aa828578fe9eb7743a1a3526da719555
+ms.sourcegitcommit: d6b1695c8cbc70279b7d85ec4dfb66a4271cdb10
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 04/10/2018
 ---
 # <a name="sphelpmergearticleconflicts-transact-sql"></a>sp_helpmergearticleconflicts (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -49,22 +49,22 @@ sp_helpmergearticleconflicts [ [ @publication = ] 'publication' ]
   
 ## <a name="arguments"></a>Argumentos  
  [  **@publication=**] **'***publicación***'**  
- Es el nombre de la publicación de combinación. *publicación* es **sysname**, su valor predeterminado es  **%** , que devuelve todos los artículos de la base de datos que tienen conflictos.  
+ Es el nombre de la publicación de combinación. *publicación* es **sysname**, su valor predeterminado es **%**, que devuelve todos los artículos de la base de datos que tienen conflictos.  
   
- [  **@publisher=**] **'***publisher***'**  
+ [ **@publisher=**] **'***publisher***'**  
  Es el nombre del publicador. *publisher* es **sysname**, su valor predeterminado es null.  
   
- [  **@publisher_db=**] **'***publisher_db***'**  
+ [ **@publisher_db=**] **'***publisher_db***'**  
  Es el nombre de la base de datos del publicador. *publisher_db* es **sysname**, su valor predeterminado es null.  
   
 ## <a name="result-sets"></a>Conjuntos de resultados  
   
 |Nombre de columna|Tipo de datos|Description|  
 |-----------------|---------------|-----------------|  
-|**artículo**|**sysname**|Nombre del artículo.|  
+|**article**|**sysname**|Nombre del artículo.|  
 |**source_owner**|**sysname**|Propietario del objeto de origen.|  
-|**source_object**|**nvarchar (386)**|Nombre del objeto de origen.|  
-|**conflict_table**|**nvarchar (258)**|Nombre de la tabla que almacena los conflictos de inserción o actualización.|  
+|**source_object**|**nvarchar(386)**|Nombre del objeto de origen.|  
+|**conflict_table**|**nvarchar(258)**|Nombre de la tabla que almacena los conflictos de inserción o actualización.|  
 |**guidcolname**|**sysname**|Nombre de la propiedad RowGuidCol para el objeto de origen.|  
 |**centralized_conflicts**|**int**|Indica si los registros de conflictos se almacenan en el publicador dado.|  
   

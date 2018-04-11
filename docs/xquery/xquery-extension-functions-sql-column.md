@@ -1,16 +1,16 @@
 ---
-title: "SQL:Column() (función de XQuery) | Documentos de Microsoft"
-ms.custom: 
+title: SQL:Column() (función de XQuery) | Documentos de Microsoft
+ms.custom: ''
 ms.date: 03/16/2017
 ms.prod: sql-non-specified
 ms.prod_service: sql-non-specified
-ms.service: 
+ms.service: ''
 ms.component: xquery
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 applies_to:
 - SQL Server
@@ -20,16 +20,16 @@ helpviewer_keywords:
 - sql:column function
 - sql:column() function
 ms.assetid: e8f67bdf-b489-49a9-9d0f-2069c1750467
-caps.latest.revision: 
+caps.latest.revision: 38
 author: rothja
 ms.author: jroth
 manager: craigg
 ms.workload: On Demand
 ms.openlocfilehash: 8571d05ccf90fc9e51a16c10ff279f26ad987dda
-ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
+ms.sourcegitcommit: d6b1695c8cbc70279b7d85ec4dfb66a4271cdb10
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/09/2018
+ms.lasthandoff: 04/10/2018
 ---
 # <a name="xquery-extension-functions---sqlcolumn"></a>Funciones de XQuery extensión - SQL:Column()
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
@@ -144,6 +144,6 @@ select @x
  [Datos XML &#40;SQL Server&#41;](../relational-databases/xml/xml-data-sql-server.md)   
  [Crear instancias de datos XML](../relational-databases/xml/create-instances-of-xml-data.md)   
  [Métodos de tipo de datos xml](../t-sql/xml/xml-data-type-methods.md)   
- [Lenguaje de manipulación de datos XML &#40; XML DML &#41;](../t-sql/xml/xml-data-modification-language-xml-dml.md)  
+ [Lenguaje de manipulación de datos XML &#40;XML DML&#41;](../t-sql/xml/xml-data-modification-language-xml-dml.md)  
   
   

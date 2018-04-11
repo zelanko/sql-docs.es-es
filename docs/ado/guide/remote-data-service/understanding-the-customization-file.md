@@ -1,30 +1,30 @@
 ---
-title: "Comprender el archivo de personalización | Documentos de Microsoft"
+title: Comprender el archivo de personalización | Documentos de Microsoft
 ms.prod: sql-non-specified
 ms.prod_service: drivers
-ms.service: 
+ms.service: ''
 ms.component: ado
 ms.technology:
 - drivers
-ms.custom: 
+ms.custom: ''
 ms.date: 01/19/2017
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - customization file in RDS [ADO]
 ms.assetid: 136f74bf-8d86-4a41-be66-c86cbcf81548
-caps.latest.revision: 
+caps.latest.revision: 15
 author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.workload: Inactive
 ms.openlocfilehash: 0597c403a9d716c155fe129ab8cb514268b27341
-ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
+ms.sourcegitcommit: d6b1695c8cbc70279b7d85ec4dfb66a4271cdb10
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/09/2018
+ms.lasthandoff: 04/10/2018
 ---
 # <a name="understanding-the-customization-file"></a>Descripción de los archivos de personalización
 Cada encabezado de sección en el archivo de personalización consta de corchetes (**[]**) que contiene un tipo y un parámetro. Los cuatro tipos de sección se indican mediante las cadenas literales **conectar**, **sql**, **userlist**, o **registros**. El parámetro es la cadena literal, el valor predeterminado, un identificador especificado por el usuario o nada.  

@@ -1,32 +1,32 @@
 ---
 title: Archivos de formato XML (SQL Server) | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql-non-specified
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
-ms.service: 
+ms.service: ''
 ms.component: import-export
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - dbe-bulk-import-export
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - format files [SQL Server], XML format files
 - bulk importing [SQL Server], format files
 - XML format files [SQL Server]
 ms.assetid: 69024aad-eeea-4187-8fea-b49bc2359849
-caps.latest.revision: 
+caps.latest.revision: 45
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ms.workload: On Demand
 ms.openlocfilehash: d6b89e518ace2edd0e527f1908087922dabce2de
-ms.sourcegitcommit: d8ab09ad99e9ec30875076acee2ed303d61049b7
-ms.translationtype: HT
+ms.sourcegitcommit: d6b1695c8cbc70279b7d85ec4dfb66a4271cdb10
+ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/23/2018
+ms.lasthandoff: 04/10/2018
 ---
 # <a name="xml-format-files-sql-server"></a>XML, archivos de formato (SQL Server)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -209,7 +209,7 @@ ms.lasthandoff: 02/23/2018
 |---------------------|-----------------|------------------------------|  
 |ID **="***fieldID***"**|Especifica el nombre lógico del campo incluido en el archivo de datos. El valor de ID de un campo es la clave utilizada para referirse al campo.<br /><br /> \<FIELD ID**="***fieldID***"**/> se asigna a \<COLUMN SOURCE**="***fieldID***"**/>|Obligatorio|  
 |xsi:type **="***fieldType***"**|Es una construcción XML (utilizada como atributo) que identifica el tipo de la instancia del elemento. El valor de *fieldType* determina qué atributos opcionales (a continuación) necesita el usuario en una instancia determinada.|Obligatorio (en función del tipo de datos)|  
-|LENGTH **="***n***"**|Este atributo define la longitud de una instancia de un tipo de datos de longitud fija.<br /><br /> El valor de *n* debe ser un entero positivo.|Opcional a no ser que el valor de xsi:type lo requiera|  
+|LONGITUD **= "***n***"**|Este atributo define la longitud de una instancia de un tipo de datos de longitud fija.<br /><br /> El valor de *n* debe ser un entero positivo.|Opcional a no ser que el valor de xsi:type lo requiera|  
 |PREFIX_LENGTH **="***p***"**|Este atributo define la longitud del prefijo para una representación de datos binarios. El valor de PREFIX_LENGTH, *p*, debe ser uno de los siguientes: 1, 2, 4 o 8.|Opcional a no ser que el valor de xsi:type lo requiera|  
 |MAX_LENGTH **="***m***"**|Este atributo es el número máximo de bytes que se pueden almacenar en un campo determinado. Sin una tabla de destino, la longitud máxima de la columna se desconoce. El atributo MAX_LENGTH restringe la longitud máxima de una columna de caracteres de salida y limita el almacenamiento asignado al valor de la columna. Esto resulta especialmente útil al usar la opción BULK de la función OPENROWSET en una cláusula SELECT FROM.<br /><br /> El valor de *m* debe ser un entero positivo. De forma predeterminada, la longitud máxima es de 8.000 caracteres para una columna **char** y de 4.000 caracteres para una columna **nchar** .|Opcional|  
 |COLLATION **="***collationName***"**|COLLATION solo se permite para campos de caracteres. Para ver una lista de los nombres de intercalación de SQL, vea [Nombre de intercalación de SQL Server &#40;Transact-SQL&#41;](../../t-sql/statements/sql-server-collation-name-transact-sql.md).|Opcional|  
@@ -263,8 +263,8 @@ ms.lasthandoff: 02/23/2018
 |SOURCE **="***fieldID***"**|Especifica el Id. del campo que se asigna a la columna.<br /><br /> \<COLUMN SOURCE**="***fieldID***"**/> se asigna a \<FIELD ID**="***fieldID***"**/>|Obligatorio|  
 |NAME = "*columnName*"|Especifica el nombre de la columna en el conjunto de filas representado por el archivo de formato. Este nombre de columna se utiliza para identificar la columna en el conjunto de resultados y no es necesario que corresponda al nombre de columna usado en la tabla de destino.|Obligatorio|  
 |xsi**:**type **="***ColumnType***"**|Es una construcción XML (utilizada como atributo) que identifica el tipo de datos de la instancia del elemento. El valor de *ColumnType* determina qué atributos opcionales (a continuación) necesita el usuario en una instancia determinada.<br /><br /> Nota: Los valores posibles de *ColumnType* y sus atributos asociados se enumeran en la tabla de elementos \<COLUMN> de la sección [Valores xsi:type del elemento &lt;COLUMN&gt;](#XsiTypeValuesOfCOLUMN).|Opcional|  
-|LENGTH **="***n***"**|Define la longitud de una instancia de un tipo de datos de longitud fija. LENGTH se utiliza solo cuando xsi:type es un tipo de datos de cadena.<br /><br /> El valor de *n* debe ser un entero positivo.|Opcional (solo disponible si xsi:type es un tipo de datos de cadena)|  
-|PRECISION **="***n***"**|Indica el número de dígitos de un número. Por ejemplo, el número 123,45 tiene una precisión de 5.<br /><br /> El valor debe ser un entero positivo.|Opcional (solo disponible si xsi:type es un tipo de datos de número variable)|  
+|LONGITUD **= "***n***"**|Define la longitud de una instancia de un tipo de datos de longitud fija. LENGTH se utiliza solo cuando xsi:type es un tipo de datos de cadena.<br /><br /> El valor de *n* debe ser un entero positivo.|Opcional (solo disponible si xsi:type es un tipo de datos de cadena)|  
+|PRECISIÓN **= "***n***"**|Indica el número de dígitos de un número. Por ejemplo, el número 123,45 tiene una precisión de 5.<br /><br /> El valor debe ser un entero positivo.|Opcional (solo disponible si xsi:type es un tipo de datos de número variable)|  
 |SCALE **="***int***"**|Indica el número de dígitos situados a la derecha de la coma decimal de un número. Por ejemplo, el número 123,45 tiene una escala de 2.<br /><br /> El valor debe ser un entero.|Opcional (solo disponible si xsi:type es un tipo de datos de número variable)|  
 |NULLABLE **=** { **"**YES**"**<br /><br /> **"**NO**"** }|Indica si una columna puede aceptar valores NULL. Este atributo es completamente independiente de FIELDS. No obstante, si una columna tiene el valor de NULLABLE establecido en NO y el campo especifica NULL (es decir, no especifica ningún valor), se produce un error de tiempo de ejecución.<br /><br /> El atributo NULLABLE solo se usa si escribe una instrucción SELECT FROM OPENROWSET(BULK...) simple.|Opcional (disponible para cualquier tipo de datos)|  
   
@@ -571,7 +571,7 @@ xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
 ##  <a name="RelatedContent"></a> Contenido relacionado  
  Ninguno.  
   
-## <a name="see-also"></a>Ver también  
+## <a name="see-also"></a>Vea también  
  [Importar y exportar datos en bloque &#40;SQL Server&#41;](../../relational-databases/import-export/bulk-import-and-export-of-data-sql-server.md)   
  [Tipos de datos &#40;Transact-SQL&#41;](../../t-sql/data-types/data-types-transact-sql.md)   
  [Archivos de formato no XML &#40;SQL Server&#41;](../../relational-databases/import-export/non-xml-format-files-sql-server.md)   

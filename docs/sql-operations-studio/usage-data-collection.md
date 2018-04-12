@@ -1,6 +1,6 @@
 ---
-title: "Habilitar o deshabilitar la recopilación de datos de uso y bloqueará la creación de informes de operaciones de SQL Studio (versión preliminar) | Documentos de Microsoft"
-description: "Este artículo explica cómo controlar si los datos de informes de errores y uso se recopilan y se envían a Microsoft."
+title: Habilitar o deshabilitar la recopilación de datos de uso y bloqueará la creación de informes de SQL Operations Studio (preview) | Documentos de Microsoft
+description: Este artículo explica cómo controlar si los datos de informes de errores y uso se recopilan y se envían a Microsoft.
 ms.custom: tools|sos
 ms.date: 11/15/2017
 ms.prod: sql-non-specified
@@ -8,7 +8,7 @@ ms.reviewer: alayu; erickang; sstein
 ms.suite: sql
 ms.prod_service: sql-tools
 ms.component: sos
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 author: stevestein
 ms.author: sstein

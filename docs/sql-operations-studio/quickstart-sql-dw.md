@@ -1,6 +1,6 @@
 ---
-title: "Inicio rápido: Conectarse y consultar un almacén de datos de SQL Azure con SQL operaciones Studio (versión preliminar) | Documentos de Microsoft"
-description: "Este tutorial rápido muestra cómo utilizar las operaciones de SQL Studio (versión preliminar) para conectarse a una base de datos SQL y ejecutar una consulta"
+title: 'Inicio rápido: Conectarse y consultar un almacén de datos de SQL Azure con SQL Operations Studio (preview) | Documentos de Microsoft'
+description: Este tutorial rápido muestra cómo utilizar las SQL Operations Studio (preview) para conectarse a una base de datos SQL y ejecutar una consulta
 ms.custom: tools|sos
 ms.date: 03/08/2018
 ms.prod: sql-non-specified
@@ -8,7 +8,7 @@ ms.reviewer: alayu; erickang; sstein
 ms.suite: sql
 ms.prod_service: sql-tools
 ms.component: sos
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: quickstart
 author: yualan
 ms.author: alayu
@@ -56,7 +56,7 @@ Use [!INCLUDE[name-sos](../includes/name-sos-short.md)] para establecer una cone
 
    ![Nuevo icono de conexión](media/quickstart-sql-dw/new-connection-screen.png) 
 
-3. Si el servidor no tiene una regla de firewall que permita las operaciones de SQL Studio para conectarse, el **crear nueva regla de firewall** se abrirá el formulario. Complete el formulario para crear una nueva regla de firewall. Para obtener más información, consulte [las reglas de Firewall](https://docs.microsoft.com/azure/sql-database/sql-database-firewall-configure).
+3. Si el servidor no tiene una regla de firewall que permita las SQL Operations Studio para conectarse, el **crear nueva regla de firewall** se abrirá el formulario. Complete el formulario para crear una nueva regla de firewall. Para obtener más información, consulte [las reglas de Firewall](https://docs.microsoft.com/azure/sql-database/sql-database-firewall-configure).
 
    ![Nueva regla de firewall](media/quickstart-sql-dw/firewall.png)  
 

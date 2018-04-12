@@ -1,6 +1,6 @@
 ---
-title: "Tutorial: Usar el editor de Transact-SQL de las operaciones de SQL Studio (versión preliminar) para crear objetos de base de datos | Documentos de Microsoft"
-description: "Este tutorial muestra las características claves de Studio de operaciones de SQL (vista previa) que simplifican el uso de T-SQL."
+title: 'Tutorial: Usar el editor de Transact-SQL de las SQL Operations Studio (preview) para crear objetos de base de datos | Documentos de Microsoft'
+description: Este tutorial muestra las características claves de SQL Operations Studio (preview) que simplifican el uso de T-SQL.
 ms.custom: tools|sos
 ms.date: 03/13/2018
 ms.prod: sql-non-specified
@@ -8,7 +8,7 @@ ms.reviewer: alayu; erickang; sstein
 ms.suite: sql
 ms.prod_service: sql-tools
 ms.component: sos
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: tutorial
 author: erickangMSFT
 ms.author: erickang
@@ -57,13 +57,13 @@ Este tutorial requiere SQL Server o base de datos de SQL Azure *TutorialDB*. Par
 
    ![widget de búsqueda rápida](./media/tutorial-sql-editor/quick-search-widget.png)
 
-1. Editar la **correo electrónico** columna en la primera fila, tipo  *orlando0@adventure-works.com* y presione **ENTRAR** para guardar el cambio.
+1. Editar la **correo electrónico** columna en la primera fila, tipo *orlando0@adventure-works.com*y presione **ENTRAR** para guardar el cambio.
 
    ![Editar datos](./media/tutorial-sql-editor/edit-data.png)
 
 ## <a name="use-t-sql-snippets-to-create-stored-procedures"></a>Usar fragmentos de código de T-SQL para crear procedimientos almacenados
 
-Las operaciones de SQL Studio proporciona muchos fragmentos de código de T-SQL integrados para crear rápidamente las instrucciones.
+Las SQL Operations Studio proporciona muchos fragmentos de código de T-SQL integrados para crear rápidamente las instrucciones.
 
 
 1. Abra un nuevo editor de consultas presionando **CTRL+n**.
@@ -117,7 +117,7 @@ Ahora se crea el procedimiento almacenado y el **resultados** panel muestra el c
 
 ## <a name="use-peek-definition"></a>Usar definición de Peek 
 
-Las operaciones de SQL Studio proporciona la capacidad para ver una definición de objetos con la característica de definición de peek. Esta sección crea un segundo procedimiento almacenado y utiliza la definición de peek para ver cuáles son las columnas de una tabla para crear rápidamente el cuerpo del procedimiento almacenado.
+Las SQL Operations Studio proporciona la capacidad para ver una definición de objetos con la característica de definición de peek. Esta sección crea un segundo procedimiento almacenado y utiliza la definición de peek para ver cuáles son las columnas de una tabla para crear rápidamente el cuerpo del procedimiento almacenado.
 
 1. Abra un nuevo editor presionando **CTRL+n**. 
 
@@ -185,7 +185,7 @@ Las operaciones de SQL Studio proporciona la capacidad para ver una definición 
 
 ## <a name="use-save-query-results-as-json-to-test-the-setcustomer-stored-procedure"></a>Use Guardar resultados de la consulta como JSON para probar el procedimiento almacenado de setCustomer
 
-El *setCustomer* procedimiento almacenado creado en la sección anterior requiere JSON datos pasarse a la  *@json_val*  parámetro. En esta sección se muestra cómo obtener un poco con el formato correcto de JSON para pasar el parámetro para que pueda probar el procedimiento almacenado.
+El *setCustomer* procedimiento almacenado creado en la sección anterior requiere JSON datos pasarse a la *@json_val* parámetro. En esta sección se muestra cómo obtener un poco con el formato correcto de JSON para pasar el parámetro para que pueda probar el procedimiento almacenado.
 
 1. En el **servidores** sidebar, haga clic en el *dbo. Los clientes* de tabla y haga clic en **seleccionar 1000 filas superiores**.
 

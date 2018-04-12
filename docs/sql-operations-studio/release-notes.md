@@ -1,6 +1,6 @@
 ---
-title: Notas de la versión de Microsoft SQL Operations Studio (preview) | Documentos de Microsoft
-description: Notas de la versión de Microsoft SQL Operations Studio (preview)
+title: Notas de la versión de SQL Operations Studio (versión preliminar) | Documentos de Microsoft
+description: Notas de la versión de SQL Operations Studio (versión preliminar)
 ms.custom: tools|sos
 ms.date: 03/28/2018
 ms.prod: sql-non-specified
@@ -20,7 +20,7 @@ ms.translationtype: MT
 ms.contentlocale: es-ES
 ms.lasthandoff: 03/28/2018
 ---
-# <a name="sql-operations-studio-preview-release-notes"></a>Notas de la versión de las SQL Operations Studio (preview)
+# <a name="sql-operations-studio-preview-release-notes"></a>Notas de la versión de SQL Operations Studio (versión preliminar)
 
 **[Descargue la versión preliminar pública de marzo](download.md)**
 

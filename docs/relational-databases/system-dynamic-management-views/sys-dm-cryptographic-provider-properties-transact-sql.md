@@ -42,8 +42,7 @@ ms.lasthandoff: 04/10/2018
 |Nombre de columna|Tipo de datos|Description|  
 |-----------------|---------------|-----------------|  
 |provider_id|**int**|Número de identificación del proveedor de servicios criptográficos.|  
-|
-          guid|**uniqueidentifier**|Proveedor único GUID.|  
+|guid|**uniqueidentifier**|Proveedor único GUID.|  
 |provider_version|**nvarchar(256)**|Versión del proveedor en el formato '*aa.bb.cccc.dd*'.|  
 |sqlcrypt_version|**nvarchar(256)**|Versión principal de la [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] API criptográfica con el formato '*aa.bb.cccc.dd*'.|  
 |friendly_name|**nvarchar(2048)**|El proveedor proporcionó el nombre.|  

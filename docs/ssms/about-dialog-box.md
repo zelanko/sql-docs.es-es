@@ -30,7 +30,7 @@ ms.lasthandoff: 01/17/2018
 # <a name="about-dialog-box"></a>cuadro de diálogo Acerca de
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../includes/appliesto-ss-asdb-asdw-pdw-md.md)] En el cuadro de diálogo **Acerca de** se proporciona información sobre el producto y permite obtener acceso a información sobre el equipo en el que se ejecuta ese producto. En las copias de evaluación, la entrada [!INCLUDE[msCoName](../includes/msconame_md.md)] [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull_md.md)] indica el número de días que restan hasta la expiración de la instalación. Este cuadro de diálogo está disponible en el menú **Ayuda** .   
   
-## <a name="options"></a>.  
+## <a name="options"></a>Opciones  
 **Nombre de componente**  
 Muestra el nombre de cada elemento de [!INCLUDE[ssNoVersion](../includes/ssnoversion_md.md)] instalado.  
   

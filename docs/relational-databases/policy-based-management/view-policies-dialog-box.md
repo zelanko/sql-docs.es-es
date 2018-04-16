@@ -1,21 +1,21 @@
 ---
-title: "Cuadro de diálogo Ver directivas | Microsoft Docs"
-ms.custom: 
+title: Cuadro de diálogo Ver directivas | Microsoft Docs
+ms.custom: ''
 ms.date: 03/01/2017
 ms.prod: sql-non-specified
 ms.prod_service: database-engine
-ms.service: 
+ms.service: ''
 ms.component: performance-monitor
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 f1_keywords:
 - sql13.swb.dmf.managepolicies.general.f1
 ms.assetid: 06b9b092-fceb-4be5-b712-5aff89b5ba92
-caps.latest.revision: 
+caps.latest.revision: 26
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
@@ -29,7 +29,7 @@ ms.lasthandoff: 01/18/2018
 # <a name="view-policies-dialog-box"></a>Cuadro de diálogo Ver directivas
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] Utilice este cuadro de diálogo para ver las directivas que están vigentes para este destino. Este cuadro de diálogo muestra directivas relevantes, sus categorías de directiva e información sobre las directivas.  
   
-## <a name="options"></a>.  
+## <a name="options"></a>Opciones  
  **Estado de la directiva de mantenimiento**  
  Indica el estado de la directiva con respecto a este destino. Permanece en blanco cuando se desconoce el estado.  
   

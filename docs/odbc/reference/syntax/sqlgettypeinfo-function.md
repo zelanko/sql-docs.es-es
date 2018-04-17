@@ -2,7 +2,7 @@
 title: Función SQLGetTypeInfo | Documentos de Microsoft
 ms.custom: ''
 ms.date: 01/19/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: drivers
 ms.service: ''
 ms.component: odbc
@@ -25,13 +25,13 @@ ms.assetid: bdedb044-8924-4ca4-85f3-8b37578e0257
 caps.latest.revision: 21
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 508b89f5ff60b5cf64a03d167bf1ad4476edb734
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: 4afbb9ce8ffce9ca1eb4cea099d11f6cf92ebb80
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="sqlgettypeinfo-function"></a>Función SQLGetTypeInfo
 **Conformidad**  
@@ -56,7 +56,7 @@ SQLRETURN SQLGetTypeInfo(
  *StatementHandle*  
  [Entrada] Identificador de instrucción para el conjunto de resultados.  
   
- *Tipo de datos*  
+ *DataType*  
  [Entrada] El tipo de datos SQL. Debe ser uno de los valores en el [tipos de datos SQL](../../../odbc/reference/appendixes/sql-data-types.md) sección del apéndice D: tipos de datos o un tipo de datos SQL específico del controlador. SQL_ALL_TYPES especifica que se debe devolver información acerca de todos los tipos de datos.  
   
 ## <a name="returns"></a>Devuelve  
@@ -68,7 +68,7 @@ SQLRETURN SQLGetTypeInfo(
 |SQLSTATE|Error|Description|  
 |--------------|-----------|-----------------|  
 |01000|Advertencia general|Mensaje informativo de específicas del controlador. (La función devuelve SQL_SUCCESS_WITH_INFO).|  
-|01S02 DE SQLSTATE|Ha cambiado el valor de opción|Un atributo de instrucción especificada no era válido debido a las condiciones de trabajo de implementación, por lo que un valor similar se sustituye temporalmente. (Llame a **SQLGetStmtAttr** para determinar el valor sustituido temporalmente.) El valor de reemplazo es válido para la *StatementHandle* hasta que se cierra el cursor. Los atributos de instrucción que se pueden cambiar son: SQL_ATTR_CONCURRENCY, SQL_ATTR_CURSOR_TYPE, SQL_ATTR_KEYSET_SIZE, SQL_ATTR_MAX_LENGTH, SQL_ATTR_MAX_ROWS, SQL_ATTR_QUERY_TIMEOUT y SQL_ATTR_SIMULATE_CURSOR. (La función devuelve SQL_SUCCESS_WITH_INFO).|  
+|01S02|Ha cambiado el valor de opción|Un atributo de instrucción especificada no era válido debido a las condiciones de trabajo de implementación, por lo que un valor similar se sustituye temporalmente. (Llame a **SQLGetStmtAttr** para determinar el valor sustituido temporalmente.) El valor de reemplazo es válido para la *StatementHandle* hasta que se cierra el cursor. Los atributos de instrucción que se pueden cambiar son: SQL_ATTR_CONCURRENCY, SQL_ATTR_CURSOR_TYPE, SQL_ATTR_KEYSET_SIZE, SQL_ATTR_MAX_LENGTH, SQL_ATTR_MAX_ROWS, SQL_ATTR_QUERY_TIMEOUT y SQL_ATTR_SIMULATE_CURSOR. (La función devuelve SQL_SUCCESS_WITH_INFO).|  
 |08S01|Error de vínculo de comunicación|El vínculo de comunicación entre el controlador y el origen de datos al que se conectó el controlador no pudo antes del procesamiento de la función se ha completado.|  
 |24000|Estado de cursor no válido|Un cursor estaba abierto en el *StatementHandle,* y **SQLFetch** o **SQLFetchScroll** si se hubiese llamado. Este error se devuelve mediante el Administrador de controladores si **SQLFetch** o **SQLFetchScroll** no se devuelve SQL_NO_DATA y se devuelve el controlador si **SQLFetch** o **SQLFetchScroll** devuelva SQL_NO_DATA.<br /><br /> Un conjunto de resultados está abierto en el *StatementHandle*, pero **SQLFetch** o **SQLFetchScroll** si no se hubiese llamado.|  
 |40001|Error de serialización.|La transacción se revirtió debido a un interbloqueo de recurso con otra transacción.|  
@@ -118,7 +118,7 @@ SQLRETURN SQLGetTypeInfo(
 > [!NOTE]  
 >  **SQLGetTypeInfo** no puede devolver todos los tipos de datos. Por ejemplo, un controlador no podría devolver tipos de datos definidos por el usuario. Las aplicaciones pueden usar cualquier tipo de datos válido, independientemente de si se devuelve de forma **SQLGetTypeInfo**. Los tipos de datos devueltos por **SQLGetTypeInfo** son las que admite el origen de datos. Están diseñados para su uso en las instrucciones de lenguaje de definición de datos (DDL). Controladores pueden devolver datos de conjunto de resultados con tipos de datos distintos de los tipos devueltos por **SQLGetTypeInfo**. Al crear el conjunto de resultados de una función de catálogo, el controlador podría utilizar un tipo de datos que no es compatible con el origen de datos.  
   
-|Nombre de columna|columna<br /><br /> number|Tipo de datos|Comentarios|  
+|Nombre de columna|Columna<br /><br /> number|Tipo de datos|Comentarios|  
 |-----------------|-----------------------|---------------|--------------|  
 |TYPE_NAME (ODBC 2.0)|1|Varchar no NULL|Nombre de tipo de datos depende del origen de datos; Por ejemplo, "CHAR()", "VARCHAR()", "MONEY", "LONG VARBINARY" o "CHAR () para datos de bits". Las aplicaciones deben usar este nombre en **CREATE TABLE** y **ALTER TABLE** instrucciones.|  
 |DATA_TYPE (ODBC 2.0)|2|Smallint no NULL|Tipo de datos SQL. Puede tratarse de un tipo de datos SQL de ODBC o un tipo de datos SQL específico del controlador. Para los tipos de datos datetime o intervalo, esta columna devuelve el tipo de datos conciso (por ejemplo, SQL_TYPE_TIME o SQL_INTERVAL_YEAR_TO_MONTH). Para obtener una lista de tipos de datos de ODBC SQL válidos, consulte [tipos de datos SQL](../../../odbc/reference/appendixes/sql-data-types.md) en tipos de datos de apéndice D:. Para obtener información acerca de los tipos de datos SQL específico del controlador, consulte la documentación del controlador.|  

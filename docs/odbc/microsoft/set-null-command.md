@@ -2,7 +2,7 @@
 title: Comando NULL | Documentos de Microsoft
 ms.custom: ''
 ms.date: 01/19/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: drivers
 ms.service: ''
 ms.component: odbc
@@ -18,13 +18,13 @@ ms.assetid: 410c5a6e-e957-4ecc-9e2d-e591cbc0bc4f
 caps.latest.revision: 5
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 1050db2b6a50fc794626b6017bd26af05f458a8a
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: 1e4b0c9aa4b20245ef2de03a5f9fb7eba9a44a73
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="set-null-command"></a>Comando NULL del conjunto
 Determina cómo se admiten valores null por el SQL de ALTER TABLE - SQL, CREATE TABLE - e INSERT - comandos SQL.  

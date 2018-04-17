@@ -2,7 +2,7 @@
 title: Función SQLEndTran | Documentos de Microsoft
 ms.custom: ''
 ms.date: 01/19/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: drivers
 ms.service: ''
 ms.component: odbc
@@ -25,13 +25,13 @@ ms.assetid: ff375ce1-eb50-4693-b1e6-70181a6dbf9f
 caps.latest.revision: 29
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 15ba9ff7d28101201842071929b34dfa7ec1d455
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: ea99ca26105d3c31330108979a5b182329aa6ba5
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="sqlendtran-function"></a>Función SQLEndTran
 **Conformidad**  
@@ -115,7 +115,7 @@ SQLRETURN SQLEndTran(
   
  Si el valor SQL_CURSOR_ROLLBACK_BEHAVIOR o SQL_CURSOR_COMMIT_BEHAVIOR es igual a SQL_CB_DELETE, **SQLEndTran** cierra y elimina todos los cursores abiertos en todas las instrucciones asociadas con la conexión y descarta todos los resultados pendientes. **SQLEndTran** deja cualquier instrucción que se encuentra en un estado de asignación (sin haberse preparado); la aplicación puede volver a usarlos para las solicitudes posteriores de SQL o puede llamar a **SQLFreeStmt** o **SQLFreeHandle** con un *HandleType* de SQL_HANDLE_STMT para cancelar la asignación de ellos.  
   
- Si el valor SQL_CURSOR_ROLLBACK_BEHAVIOR o SQL_CURSOR_COMMIT_BEHAVIOR es igual a SQL_CB_CLOSE, **SQLEndTran** cierra todos los cursores abiertos en todas las instrucciones asociadas con la conexión. **SQLEndTran** deja cualquier instrucción que se encuentra en un estado preparado; la aplicación puede llamar a **SQLExecute** para una instrucción asociada a la conexión sin antes de llamar a **SQLPrepare** .  
+ Si el valor SQL_CURSOR_ROLLBACK_BEHAVIOR o SQL_CURSOR_COMMIT_BEHAVIOR es igual a SQL_CB_CLOSE, **SQLEndTran** cierra todos los cursores abiertos en todas las instrucciones asociadas con la conexión. **SQLEndTran** deja cualquier instrucción que se encuentra en un estado preparado; la aplicación puede llamar a **SQLExecute** para una instrucción asociada a la conexión sin antes de llamar a **SQLPrepare**.  
   
  Si el valor SQL_CURSOR_ROLLBACK_BEHAVIOR o SQL_CURSOR_COMMIT_BEHAVIOR es igual a SQL_CB_PRESERVE, **SQLEndTran** no afecta a los cursores abiertos asociados con la conexión. Los cursores permanecen en la fila que apunta a antes de la llamada a **SQLEndTran**.  
   

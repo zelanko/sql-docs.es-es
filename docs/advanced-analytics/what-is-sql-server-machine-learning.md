@@ -1,24 +1,17 @@
 ---
 title: ¿Qué es SQL Server Machine Learning Services? | Microsoft Docs
-ms.date: 03/07/2018
-ms.prod: machine-learning-services
-ms.prod_service: machine-learning-services
-ms.service: ''
-ms.component: ''
-ms.reviewer: ''
-ms.suite: sql
-ms.technology: ''
-ms.tgt_pltfrm: ''
-ms.topic: article
+ms.prod: sql
+ms.technology: machine-learning
+ms.date: 04/15/2018
+ms.topic: overview
 author: HeidiSteen
 ms.author: heidist
 manager: cgronlun
-ms.workload: ''
-ms.openlocfilehash: 77642fa794493a98c56be70f4615f6401e48b3c5
-ms.sourcegitcommit: 059fc64ba858ea2adaad2db39f306a8bff9649c2
+ms.openlocfilehash: d4beafc3c5dcb19c1b46b53d727f36733884daad
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/04/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="what-is-sql-server-machine-learning-services"></a>¿Qué es SQL Server Machine Learning Services?
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
@@ -42,8 +35,8 @@ Como los paquetes propietarios se basan en distribuciones de código abierto R y
 |-----------|----------------|-------------|
 | [RevoScaleR](r/revoscaler-overview.md) | [revoscalepy](python/what-is-revoscalepy.md)   | Las funciones de estas bibliotecas se encuentran entre las más usadas. Transformaciones de datos y manipulación, resumen estadístico, visualización y muchos tipos de modelado y análisis se encuentran en estas bibliotecas. Además, las funciones de estas bibliotecas distribuyen automáticamente las cargas de trabajo a través de núcleos disponibles para el procesamiento en paralelo, con la posibilidad de trabajar con los fragmentos de datos que se coordina y administra el motor de cálculo. |
 | [MicrosoftML](using-the-microsoftml-package.md) | [microsoftml](https://docs.microsoft.com/machine-learning-server/python-reference/microsoftml/microsoftml-package) | Algoritmos de características de la imagen, problemas de clasificación y mucho más de aprendizaje automático de líderes en la industria. |
-| [olapR](r/how-to-create-mdx-queries-using-olapr.md) | none | Compilar o ejecutar una consulta MDX en un script de R.
-| [sqlRUtils](r/generating-an-r-stored-procedure-for-r-code-using-the-sqlrutils-package.md) | none | Funciones para colocar scripts de R en un instrucción T-SQL procedimiento almacenan, registrar un procedimiento almacenado con una base de datos y ejecutar el procedimiento almacenado desde un entorno de desarrollo de R.
+| [OlapR](r/how-to-create-mdx-queries-using-olapr.md) | none | Compilar o ejecutar una consulta MDX en un script de R.
+| [SqlRUtils](r/generating-an-r-stored-procedure-for-r-code-using-the-sqlrutils-package.md) | none | Funciones para colocar scripts de R en un instrucción T-SQL procedimiento almacenan, registrar un procedimiento almacenado con una base de datos y ejecutar el procedimiento almacenado desde un entorno de desarrollo de R.
 | [mrsdeploy](operationalization-with-mrsdeploy.md) | none | Utiliza principalmente en una instalación de no son de SQL del servidor de aprendizaje de máquina, como el [(independiente) versión](r/r-server-standalone.md). Usar este paquete para implementar y alojar servicios web, topologías de escalabilidad horizontal con web dedicado de compilación y nodos de proceso, alternar entre sesiones locales como remotas, ejecutar diagnósticos y mucho más. Para una instalación (In-Database), use este paquete con una capacidad de cliente: por ejemplo tener acceso a un servicio web en un servidor remoto dedicado a ejecutar solo cargas de trabajo de servicios de aprendizaje de máquina. |
 
 Portabilidad del código R y Python personalizado se dirige a través de la distribución de paquetes e intérpretes que están integrados en varios productos. Los mismos paquetes que se incluyen en SQL Server también están disponibles en varios otros productos y servicios, incluidas las versiones no son de SQL denominada [aprendizaje de máquina de Microsoft Server](https://docs.microsoft.com/machine-learning-server/). Los clientes libres que incluyen nuestros intérpretes de R y Pyton son [Microsoft R Client](https://docs.microsoft.com/machine-learning-server/r-client/what-is-microsoft-r-client) y [bibliotecas de Python](https://docs.microsoft.com/machine-learning-server/install/python-libraries-interpreter).

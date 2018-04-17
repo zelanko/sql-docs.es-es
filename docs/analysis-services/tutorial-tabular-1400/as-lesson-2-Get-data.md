@@ -1,15 +1,15 @@
 ---
-title: "Lección de Analysis Services tutorial 2: obtener datos | Documentos de Microsoft"
-description: "Describe cómo obtener e importar datos en el proyecto de tutorial de Analysis Services."
+title: 'Lección de Analysis Services tutorial 2: obtener datos | Documentos de Microsoft'
+description: Describe cómo obtener e importar datos en el proyecto de tutorial de Analysis Services.
 ms.prod_service: analysis-services, azure-analysis-services
 services: analysis-services
 ms.suite: pro-bi
-documentationcenter: 
+documentationcenter: ''
 author: Minewiskan
 manager: kfile
-editor: 
-tags: 
-ms.assetid: 
+editor: ''
+tags: ''
+ms.assetid: ''
 ms.service: analysis-services
 ms.devlang: NA
 ms.topic: get-started-article
@@ -17,11 +17,12 @@ ms.tgt_pltfrm: NA
 ms.workload: na
 ms.date: 02/20/2018
 ms.author: owend
-ms.openlocfilehash: 1fd06f563581d42764b5b6f29b3c22d8129f9160
-ms.sourcegitcommit: 7ed8c61fb54e3963e451bfb7f80c6a3899d93322
+monikerRange: '>= sql-analysis-services-2017 || = sqlallproducts-allversions'
+ms.openlocfilehash: 3dd8c6e562fa1c792ff5bf9c117b687f8d77475b
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/20/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="get-data"></a>Obtener datos
 
@@ -48,7 +49,7 @@ Este artículo forma parte de un tutorial de modelado tabular, que se debe compl
   
     Esto inicia **obtener datos**, que le guiará a través de conectarse a un origen de datos. Si no ve el Explorador de modelos tabulares, en **el Explorador de soluciones**, haga doble clic en **Model.bim** para abrir el modelo en el diseñador. 
     
-    ![as-lesson2-getdata](../tutorial-tabular-1400/media/as-lesson2-getdata.png)
+    ![getdata como lesson2](../tutorial-tabular-1400/media/as-lesson2-getdata.png)
   
 2.  En obtener datos, haga clic en **base de datos** > **base de datos de SQL Server** > **conectar**.  
   
@@ -56,7 +57,7 @@ Este artículo forma parte de un tutorial de modelado tabular, que se debe compl
 
 4.  Cuando se le pida que escriba las credenciales, debe especificar las credenciales de que Analysis Services se utiliza para conectarse al origen de datos al importar y procesar datos. En **modo de suplantación**, seleccione **suplantar a la cuenta**, a continuación, escriba las credenciales y, a continuación, haga clic en **conectar**. Se recomienda que usar una cuenta que la contraseña no caduca.
 
-    ![as-lesson2-account](../tutorial-tabular-1400/media/as-lesson2-account.png)
+    ![lesson2-cuenta](../tutorial-tabular-1400/media/as-lesson2-account.png)
   
     > [!NOTE]  
     > El uso de una cuenta de usuario y una contraseña de Windows es el método más seguro de conexión a un origen de datos.
@@ -80,14 +81,14 @@ Tablas de la base de datos de ejemplo AdventureWorksDW tienen datos que no es ne
   
 2.  Realice una selección múltiple (Ctrl + clic) **SpanishEducation**, **FrenchEducation**, **SpanishOccupation**, **FrenchOccupation**, a continuación, menú contextual y, a continuación, haga clic en **quitar columnas**. 
 
-    ![as-lesson2-remove-columns](../tutorial-tabular-1400/media/as-lesson2-remove-columns.png)
+    ![como-lesson2-remove-columnas](../tutorial-tabular-1400/media/as-lesson2-remove-columns.png)
   
     Puesto que los valores de estas columnas no son pertinentes para el análisis de ventas por Internet, no hay necesidad de importarlas. Eliminación de columnas innecesarias hace que el modelo más pequeño y eficaz.  
 
     > [!TIP]
     > Si comete un error, puede hacer una copia mediante la eliminación de un paso en **pasos aplicados**.   
     
-    ![as-lesson2-remove-columns](../tutorial-tabular-1400/media/as-lesson2-remove-step.png)
+    ![como-lesson2-remove-columnas](../tutorial-tabular-1400/media/as-lesson2-remove-step.png)
 
   
 4.  Filtre las tablas restantes mediante la eliminación de las siguientes columnas en cada tabla:  

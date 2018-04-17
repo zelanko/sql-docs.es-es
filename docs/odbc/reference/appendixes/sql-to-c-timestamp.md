@@ -1,31 +1,32 @@
 ---
 title: 'SQL a la marca de tiempo C: | Documentos de Microsoft'
-ms.custom: 
+ms.custom: ''
 ms.date: 01/19/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: drivers
-ms.service: 
+ms.service: ''
 ms.component: odbc
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: drivers
-ms.tgt_pltfrm: 
+ms.technology:
+- drivers
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - timestamp data type [ODBC]
 - converting data from SQL to C types [ODBC], timestamp
 - data conversions from SQL to C types [ODBC], timestamp
 ms.assetid: 6a0617cf-d8c0-4316-8bb4-e6ddb45d7bf1
-caps.latest.revision: "8"
+caps.latest.revision: 8
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: d877c369a071dfc9c28f2500dc6584fe99808cfa
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: 66e6d84f713911b91bc55a8757bb6b149d6ec582
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="sql-to-c-timestamp"></a>SQL a la marca de tiempo C:
 El identificador de la marca de tiempo de tipo de datos SQL de ODBC es:  
@@ -55,4 +56,4 @@ _C_TYPE_TIMESTAMP|No se trunca la parte de las fracciones de segundo de marca de
   
  [f] es el tamaño del tipo de datos C correspondiente.  
   
- Cuando los datos de SQL de marca de tiempo se convierte en datos de caracteres C, la cadena resultante es en el "*aaaa*-*mm*-*dd* *hh* :*mm*:*ss*[. *f...* ] "formato, donde puede usarse hasta nueve dígitos de fracciones de segundo. Este formato no se ve afectado por el valor de país Windows®. (Salvo el separador decimal y fracciones de segundo, todo el formato debe utilizarse, independientemente de la precisión del tipo de datos SQL de marca de tiempo.)
+ Cuando los datos de SQL de marca de tiempo se convierte en datos de caracteres C, la cadena resultante es en el "*aaaa*-*mm*-*dd* *hh* :*mm*:*ss*[.*f...*] "formato, donde puede usarse hasta nueve dígitos de fracciones de segundo. Este formato no se ve afectado por el valor de país Windows®. (Salvo el separador decimal y fracciones de segundo, todo el formato debe utilizarse, independientemente de la precisión del tipo de datos SQL de marca de tiempo.)

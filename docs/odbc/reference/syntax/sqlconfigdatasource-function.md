@@ -2,7 +2,7 @@
 title: Función SQLConfigDataSource | Documentos de Microsoft
 ms.custom: ''
 ms.date: 01/19/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: drivers
 ms.service: ''
 ms.component: odbc
@@ -25,13 +25,13 @@ ms.assetid: f8d6e342-c010-434e-b1cd-f5371fb50a14
 caps.latest.revision: 15
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 6678a9b2fd25a1c639d03753f7e89a47d287adf2
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: 1f2c33bc5c946331057486719750086a1f962924
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="sqlconfigdatasource-function"></a>SQLConfigDataSource Function
 **Conformidad**  
@@ -102,7 +102,7 @@ BOOL SQLConfigDataSource(
   
  **SQLConfigDataSource** devuelve FALSE si no puede encontrar o cargar el archivo DLL de configuración o si el usuario cancela el cuadro de diálogo. De lo contrario, devuelve el estado que recibió del **ConfigDSN**.  
   
- **SQLConfigDataSource** asigna el DSN de sistema *referien*s para el DSN de usuario *fRequest*s (ODBC_ADD_SYS_DSN a ODBC_ADD_DSN, ODBC_CONFIG_SYS_DSN ODBC_CONFIG_DSN y ODBC_REMOVE_SYS _DSN a ODBC_REMOVE_DSN). Para distinguir los DSN de sistema y de usuario **SQLConfigDataSource** establece el instalador en el modo de configuración según la tabla siguiente. Antes de devolver, **SQLConfigDataSource** restablece el modo de configuración a BOTHDSN. **ConfigDSN** (implementada por controladores) debe llamar a **SQLWriteDSNToIni** y **SQLWritePrivateProfileString** para admitir un DSN de sistema. Para obtener más información, consulte [ConfigDSN función](../../../odbc/reference/syntax/configdsn-function.md).  
+ **SQLConfigDataSource** asigna el DSN de sistema *referien*s para el DSN de usuario *fRequest*s (ODBC_ADD_SYS_DSN a ODBC_ADD_DSN, ODBC_CONFIG_SYS_DSN ODBC_CONFIG_DSN y ODBC_REMOVE_SYS_ DSN a ODBC_REMOVE_DSN). Para distinguir los DSN de sistema y de usuario **SQLConfigDataSource** establece el instalador en el modo de configuración según la tabla siguiente. Antes de devolver, **SQLConfigDataSource** restablece el modo de configuración a BOTHDSN. **ConfigDSN** (implementada por controladores) debe llamar a **SQLWriteDSNToIni** y **SQLWritePrivateProfileString** para admitir un DSN de sistema. Para obtener más información, consulte [ConfigDSN función](../../../odbc/reference/syntax/configdsn-function.md).  
   
 |*fRequest*|Modo de configuración|  
 |----------------|------------------------|  

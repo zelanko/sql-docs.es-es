@@ -1,32 +1,22 @@
 ---
-title: Bibliotecas de Python | Documentos de Microsoft
-ms.custom: ''
-ms.date: 03/30/2017
-ms.reviewer: ''
-ms.suite: sql
-ms.prod: machine-learning-services
-ms.prod_service: machine-learning-services
-ms.component: python
-ms.technology: ''
-ms.tgt_pltfrm: ''
-ms.topic: article
-ms.author: heidist
+title: Tipos de datos y las bibliotecas de Python en aprendizaje automático de SQL Server | Documentos de Microsoft
+ms.prod: sql
+ms.technology: machine-learning
+ms.date: 04/15/2018
+ms.topic: conceptual
 author: HeidiSteen
+ms.author: heidist
 manager: cgronlun
-ms.workload: Inactive
-ms.openlocfilehash: 70156a6b4d443c54f9b6244e5491da63ce345198
-ms.sourcegitcommit: 059fc64ba858ea2adaad2db39f306a8bff9649c2
+ms.openlocfilehash: f8dfa7f343a3a179b05b624a083238e08011c4a5
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/04/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="python-libraries-and-data-types"></a>Tipos de datos y las bibliotecas de Python
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
 
-En este artículo se describe las bibliotecas de Python que se incluyen con los siguientes productos:
-
-+ Equipo con SQL Server (en bases de datos) de servicios de aprendizaje
-+ Microsoft Machine Learning Server (independiente)
+Este artículo describen las bibliotecas de Python que se incluye con servicios de aprendizaje de máquina (en bases de datos) de SQL Server y las instalaciones (independiente).
 
 Este artículo también enumeran los tipos de datos no admitidos y tipo de datos de listas de las conversiones que pueden realizarse de forma implícita cuando los datos se pasan entre Python y SQL Server.
 

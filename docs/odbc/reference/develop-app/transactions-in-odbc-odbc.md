@@ -2,7 +2,7 @@
 title: Las transacciones en ODBC para | Documentos de Microsoft
 ms.custom: ''
 ms.date: 01/19/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: drivers
 ms.service: ''
 ms.component: odbc
@@ -18,13 +18,13 @@ ms.assetid: 2c8cde03-4bb8-4b35-881b-1ba23da15fbc
 caps.latest.revision: 5
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: d775a3349a082f4c525e8417f5df30ebd38ab245
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: f9b4680b203ee09b509d21c8dcbdc59b2f351859
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="transactions-in-odbc-odbc"></a>Transacciones en ODBC de ODBC
 Se completan las transacciones en ODBC en el nivel de conexión; es decir, cuando una aplicación completa una transacción, confirma o revierte todo el trabajo realizado a través de todos los identificadores de instrucción en esa conexión.  

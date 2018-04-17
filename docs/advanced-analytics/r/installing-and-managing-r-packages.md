@@ -1,26 +1,17 @@
 ---
 title: Bibliotecas de paquete para el aprendizaje automático en SQL Server predeterminadas | Documentos de Microsoft
-ms.custom: ''
-ms.date: 02/19/2018
-ms.reviewer: ''
-ms.suite: sql
-ms.prod: machine-learning-services
-ms.prod_service: machine-learning-services
-ms.component: r
-ms.technology: ''
-ms.tgt_pltfrm: ''
-ms.topic: article
-dev_langs:
-- R
-ms.author: heidist
+ms.prod: sql
+ms.technology: machine-learning
+ms.date: 04/15/2018
+ms.topic: conceptual
 author: HeidiSteen
+ms.author: heidist
 manager: cgronlun
-ms.workload: On Demand
-ms.openlocfilehash: 97dc375dcee9dab2eb38c568b410e8ea2084842f
-ms.sourcegitcommit: 059fc64ba858ea2adaad2db39f306a8bff9649c2
+ms.openlocfilehash: 64b085c2314e4c97694e91924cb15d43315143e0
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/04/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="default-package-libraries-for-machine-learning-on-sql-server"></a>Bibliotecas de paquete para el aprendizaje automático en SQL Server predeterminadas
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
@@ -89,7 +80,7 @@ Si selecciona los características y la opción de lenguaje de Python de aprendi
 |------|------|------|
 | RTM de SQL Server de 2017| 3.5.2| Nuevo: revoscalepy|
 | actualizar a través del servidor de aprendizaje de máquina 9.2.1 septiembre de 2017| Anaconda 4.2| actualizaciones de revoscalepy |
-| SQL Server 2017 CU3| Anaconda 4.2| actualizaciones de revoscalepy |
+| SQL Server de 2017 CU3| Anaconda 4.2| actualizaciones de revoscalepy |
 
 Además de las bibliotecas de código de Python, la instalación estándar incluye datos de ejemplo, pruebas unitarias y scripts de ejemplo.
 

@@ -1,8 +1,8 @@
 ---
-title: ODBC programador &#39; s referencia | Documentos de Microsoft
+title: Programador de ODBC&#39;referencia s | Documentos de Microsoft
 ms.custom: ''
 ms.date: 01/19/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: drivers
 ms.service: ''
 ms.component: odbc
@@ -18,15 +18,15 @@ ms.assetid: b33c3c43-ae66-44a3-be17-9cd82624dd96
 caps.latest.revision: 12
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: b934652505039a021d2b08c0fa5314614ce9c609
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: 24f7c0aa7abcf2b35cbef34cabbe86944ddcc7d1
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 04/16/2018
 ---
-# <a name="odbc-programmer39s-reference"></a>Programador de ODBC &#39; s referencia
+# <a name="odbc-programmer39s-reference"></a>Programador de ODBC&#39;referencia s
 El *referencia del programador de ODBC* contiene las siguientes secciones.  
   
 -   [What's New en ODBC 3.8](../../odbc/reference/what-s-new-in-odbc-3-8.md) enumera las características nuevas de ODBC que se agregaron en el SDK de Windows 8.  
@@ -58,10 +58,10 @@ El *referencia del programador de ODBC* contiene las siguientes secciones.
 |------------|--------------|  
 |SELECCIONE * DE|Las letras mayúsculas indican las instrucciones SQL, nombres de macro y términos usados en el nivel de comando del sistema operativo.|  
 |`RETCODE SQLFetch(hdbc)`|Se utiliza la fuente monoespaciada para líneas de comandos de ejemplo y el código de programa.|  
-|*argumento*|Las palabras en cursiva indican argumentos mediante programación, información que el usuario o la aplicación debe proporcionar o énfasis de word.|  
+|*argument*|Las palabras en cursiva indican argumentos mediante programación, información que el usuario o la aplicación debe proporcionar o énfasis de word.|  
 |**SQLEndTran**|Tipos en negrita indican que sintaxis debe escribirse exactamente como se muestra, incluidos los nombres de función.|  
 |&#124;|Una barra vertical separa dos opciones mutuamente excluyentes en una línea de sintaxis.|  
-|…|Los puntos suspensivos indican que los argumentos se pueden repetir varias veces.|  
+|...|Los puntos suspensivos indican que los argumentos se pueden repetir varias veces.|  
 |. . .|Una columna de tres puntos que indica que la continuación de líneas de código anteriores.|  
   
 ## <a name="about-the-code-examples"></a>Acerca de los ejemplos de código  

@@ -1,30 +1,31 @@
 ---
-title: "Datos devueltos por las funciones de catálogo | Documentos de Microsoft"
-ms.custom: 
+title: Datos devueltos por las funciones de catálogo | Documentos de Microsoft
+ms.custom: ''
 ms.date: 01/19/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: drivers
-ms.service: 
+ms.service: ''
 ms.component: odbc
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: drivers
-ms.tgt_pltfrm: 
+ms.technology:
+- drivers
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - catalog functions [ODBC], result sets
 - functions [ODBC], catalog functions
 ms.assetid: 399e1a64-8766-4c44-81ff-445399b7a1de
-caps.latest.revision: "7"
+caps.latest.revision: 7
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: b05067010701d1751056cb99089708b5cbeb67f9
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: 0445730e40f1747b4f8e08ebc9ab52ae97308eb7
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="data-returned-by-catalog-functions"></a>Datos devueltos por las funciones de catálogo
 Cada función de catálogo devuelve datos como un conjunto de resultados. Este conjunto de resultados no es diferente de cualquier otro conjunto de resultados. Se genera normalmente por predefinido, con parámetros **seleccione** que esté almacenado en un procedimiento en el origen de datos o codificado de forma rígida en el controlador. Para obtener información acerca de cómo recuperar datos de un conjunto de resultados, vea [era un resultado se establece crean?](../../../odbc/reference/develop-app/was-a-result-set-created.md).  

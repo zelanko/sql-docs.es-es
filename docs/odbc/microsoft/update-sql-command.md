@@ -2,7 +2,7 @@
 title: Comando de SQL de actualización - | Documentos de Microsoft
 ms.custom: ''
 ms.date: 01/19/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: drivers
 ms.service: ''
 ms.component: odbc
@@ -18,13 +18,13 @@ ms.assetid: ff1e0331-c060-4304-b280-039725b45f63
 caps.latest.revision: 5
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 6fb2e4d3e3010eaba53b36de383c3365d82db289
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: c8c1189955ee62fd14484816358feffc38e002c5
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="update---sql-command"></a>Comando de SQL de actualización:
 Actualiza los registros en una tabla con nuevos valores.  
@@ -50,7 +50,7 @@ SET Column_Name1 = eExpression1
  ESTABLECER *Column_Name1*= *eExpression1*[, *Column_Name2*= *eExpression2*  
  Especifica las columnas que se actualizan y sus nuevos valores. Si se omite la cláusula WHERE, se actualiza cada fila de la columna con el mismo valor.  
   
- DONDE *FilterCondition1*[AND &#124; O *FilterCondition2*...]  
+ DONDE *FilterCondition1*[AND &#124; o *FilterCondition2*...]  
  Especifica los registros que se actualizan con nuevos valores.  
   
  *FilterCondition* especifica los criterios que deben cumplir los registros para actualizarse con los nuevos valores. Se pueden incluir muchas condiciones de filtro como desee, conectan con la operación AND o OR (operador). También puede usar el operador NOT para invertir el valor de una expresión lógica, o puede usar **vacía**() para comprobar si un campo vacío.  

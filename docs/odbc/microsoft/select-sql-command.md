@@ -2,7 +2,7 @@
 title: Seleccione - comando SQL | Documentos de Microsoft
 ms.custom: ''
 ms.date: 01/19/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: drivers
 ms.service: ''
 ms.component: odbc
@@ -18,13 +18,13 @@ ms.assetid: 2149c3ca-3a71-446d-8d53-3d056e2f301a
 caps.latest.revision: 7
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 3e7295a800b3cc84f6eb64f5dfa762573fe80b6b
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: 9f300cfb998c0d35aa6c853774fc029445da1015
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="select---sql-command"></a>Seleccione - comando SQL
 Recupera datos de una o varias tablas.  
@@ -54,7 +54,7 @@ FROM [DatabaseName!]Table [Local_Alias]
 > [!NOTE]  
 >  A *subconsulta*, mencionadas en los siguientes argumentos, es una instrucción SELECT en una instrucción SELECT y debe ir entre paréntesis. Puede tener hasta dos subconsultas en el mismo nivel (no están anidados) en la cláusula WHERE. (Vea esa sección de los argumentos). Subconsultas pueden contener varias condiciones de combinación.  
   
- [Todas las &#124; DISTINCT] [*Alias*.] *Select_Item* [AS *Column_Name*] [, [*Alias*.] *Select_Item* [AS *Column_Name*]...]  
+ [Todos los &#124; DISTINCT]   [*Alias*.] *Select_Item* [AS *Column_Name*] [, [*Alias*.] *Select_Item* [AS *Column_Name*]...]  
  La cláusula SELECT especifica los campos, constantes y expresiones que se muestran en los resultados de la consulta.  
   
  De forma predeterminada, todos muestra todas las filas en los resultados de la consulta.  
@@ -110,7 +110,7 @@ FROM [DatabaseName!]Table [Local_Alias]
   
  *Local_Alias* especifica un nombre temporal para la tabla mencionada en *tabla*. Si se especifica un alias local, debe utilizar el alias local en lugar del nombre de tabla a lo largo de la instrucción SELECT. El alias local no influye en el entorno de Visual FoxPro.  
   
- DONDE *JoinCondition* [AND *JoinCondition* ...]    [Y &#124; O *FilterCondition* [AND &#124; O *FilterCondition* ...]]  
+ DONDE *JoinCondition* [AND *JoinCondition* ...]    [AND &#124; o *FilterCondition* [AND &#124; o *FilterCondition* ...]]  
  Indica a Visual FoxPro para incluir solamente algunos registros en los resultados de la consulta. Si es necesario para recuperar datos de varias tablas.  
   
  *JoinCondition* especifica los campos que se vinculan las tablas en la cláusula FROM. Si incluye más de una tabla en una consulta, debe especificar una condición de combinación para cada tabla después del primero.  
@@ -159,7 +159,7 @@ FROM [DatabaseName!]Table [Local_Alias]
   
  Cuando la condición de filtro incluye todas, el campo debe cumplir la condición de comparación para todos los valores generados por la subconsulta antes de su registro se incluye en los resultados de la consulta.  
   
- **Ejemplo 4** *FieldName comparación* cualquiera &#124; Algunos (*subconsulta*)  
+ **Ejemplo 4** *FieldName comparación* ANY &#124; SOME (*subconsulta*)  
   
  `company < ANY ;`  
   

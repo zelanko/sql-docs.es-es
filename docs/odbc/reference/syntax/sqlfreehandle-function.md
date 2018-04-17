@@ -2,7 +2,7 @@
 title: Función SQLFreeHandle | Documentos de Microsoft
 ms.custom: ''
 ms.date: 01/19/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: drivers
 ms.service: ''
 ms.component: odbc
@@ -25,13 +25,13 @@ ms.assetid: 17a6fcdc-b05a-4de7-be93-a316f39696a1
 caps.latest.revision: 35
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 96f6d2c94a6b2fb78245c83cbf989e6a707caccc
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: 601d1257b99e3c3a9713730ef1ea110905d0143f
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="sqlfreehandle-function"></a>Función SQLFreeHandle
 **Conformidad**  
@@ -85,7 +85,7 @@ SQLRETURN SQLFreeHandle(
 |--------------|-----------|-----------------|  
 |HY000|Error general|Se produjo un error para que no hubo ninguna SQLSTATE específico y para el que se ha definido ningún SQLSTATE específico de la implementación. El mensaje de error devuelto por **SQLGetDiagRec** en el  *\*MessageText* búfer describe el error y su causa.|  
 |HY001|Error de asignación de memoria|El controlador no pudo asignar memoria que es necesario para admitir la ejecución o la finalización de la función.|  
-|HY010|Error de secuencia de función|(DM) la *HandleType* argumento era SQL_HANDLE_ENV y al menos una conexión se encontraba en un estado conectado o asignado. **SQLDisconnect** y **SQLFreeHandle** con un *HandleType* de SQL_HANDLE_DBC debe llamarse para cada conexión antes de llamar a **SQLFreeHandle** con un *HandleType* de SQL_HANDLE_ENV.<br /><br /> (DM) la *HandleType* argumento era SQL_HANDLE_DBC y se llama a la función antes de llamar a **SQLDisconnect** para la conexión.<br /><br /> (DM) la *HandleType* argumento era SQL_HANDLE_DBC. Se llamó a una función ejecuta de forma asincrónica con *controlar* y la función aún se estaba ejecutando cuando se llamó a esta función.<br /><br /> (DM) la *HandleType* argumento era SQL_HANDLE_STMT. **SQLExecute**, **SQLExecDirect**, **SQLBulkOperations**, o **SQLSetPos** se invocan con el identificador de instrucción y devuelve SQL_NEED_DATA. Esta función se invoca antes de que se enviaron los datos para todas las columnas o parámetros de datos en ejecución.<br /><br /> (DM) la *HandleType* argumento era SQL_HANDLE_STMT. Se llamó a una función ejecuta de forma asincrónica en el identificador de instrucción o en el identificador de conexión asociado y la función aún se estaba ejecutando cuando se llamó a esta función.<br /><br /> (DM) la *HandleType* argumento era SQL_HANDLE_DESC. Se llamó a una función ejecuta de forma asincrónica en el identificador de conexión asociada; y la función aún se estaba ejecutando cuando se llamó a esta función.<br /><br /> (DM) identificadores de todos los distribuidores y otros recursos no se liberan antes **SQLFreeHandle** se llamó.<br /><br /> (DM) **SQLExecute**, **SQLExecDirect**, o **SQLMoreResults** se llama para uno de los identificadores de instrucción asociados a la *controlar* y *HandleType* se ha establecido en SQL_HANDLE_STMT o SQL_HANDLE_DESC devuelve SQL_PARAM_DATA_AVAILABLE. Esta función se invoca antes de que se recuperan los datos para todos los parámetros transmitidos.|  
+|HY010|Error de secuencia de función|(DM) la *HandleType* argumento era SQL_HANDLE_ENV y al menos una conexión se encontraba en un estado conectado o asignado. **SQLDisconnect** y **SQLFreeHandle** con un *HandleType* de SQL_HANDLE_DBC debe llamarse para cada conexión antes de llamar a **SQLFreeHandle** con una *HandleType* de SQL_HANDLE_ENV.<br /><br /> (DM) la *HandleType* argumento era SQL_HANDLE_DBC y se llama a la función antes de llamar a **SQLDisconnect** para la conexión.<br /><br /> (DM) la *HandleType* argumento era SQL_HANDLE_DBC. Se llamó a una función ejecuta de forma asincrónica con *controlar* y la función aún se estaba ejecutando cuando se llamó a esta función.<br /><br /> (DM) la *HandleType* argumento era SQL_HANDLE_STMT. **SQLExecute**, **SQLExecDirect**, **SQLBulkOperations**, o **SQLSetPos** se invocan con el identificador de instrucción y devuelve SQL_NEED_DATA. Esta función se invoca antes de que se enviaron los datos para todas las columnas o parámetros de datos en ejecución.<br /><br /> (DM) la *HandleType* argumento era SQL_HANDLE_STMT. Se llamó a una función ejecuta de forma asincrónica en el identificador de instrucción o en el identificador de conexión asociado y la función aún se estaba ejecutando cuando se llamó a esta función.<br /><br /> (DM) la *HandleType* argumento era SQL_HANDLE_DESC. Se llamó a una función ejecuta de forma asincrónica en el identificador de conexión asociada; y la función aún se estaba ejecutando cuando se llamó a esta función.<br /><br /> (DM) identificadores de todos los distribuidores y otros recursos no se liberan antes **SQLFreeHandle** se llamó.<br /><br /> (DM) **SQLExecute**, **SQLExecDirect**, o **SQLMoreResults** se llama para uno de los identificadores de instrucción asociados a la *controlar* y *HandleType* se ha establecido en SQL_HANDLE_STMT o SQL_HANDLE_DESC devuelve SQL_PARAM_DATA_AVAILABLE. Esta función se invoca antes de que se recuperan los datos para todos los parámetros transmitidos.|  
 |HY013|Error de administración de memoria|El *HandleType* argumento era SQL_HANDLE_STMT o SQL_HANDLE_DESC y no se pudo procesar la llamada de función porque los objetos subyacentes de la memoria no se pudieron tener acceso, posiblemente debido a condiciones de memoria insuficiente.|  
 |HY017|Uso no válido de un identificador de descriptor asignado automáticamente.|(DM) la *controlar* argumento se estableció en el identificador de un descriptor asignado automáticamente.|  
 |HY117|Se suspende la conexión debido al estado de transacción desconocido. Solo se desconecte y se permiten las funciones de solo lectura.|(DM) para obtener más información sobre el estado suspendido, consulte [función SQLEndTran](../../../odbc/reference/syntax/sqlendtran-function.md).|  

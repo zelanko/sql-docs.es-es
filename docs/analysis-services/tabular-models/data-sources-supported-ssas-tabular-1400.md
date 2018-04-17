@@ -8,11 +8,12 @@ ms.assetid: ''
 author: Minewiskan
 ms.author: owend
 manager: kfile
-ms.openlocfilehash: d153a2ca638c2ab70e147d22d5755e70ab5aba06
-ms.sourcegitcommit: 7246ef88fdec262fa0d34bf0e232f089e03a6911
+monikerRange: '>= sql-analysis-services-2017 || = sqlallproducts-allversions'
+ms.openlocfilehash: c32b715ac73fd69e63bad8487950ff1e4df003c9
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/29/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="data-sources-supported-in-sql-server-analysis-services-tabular-1400-models"></a>Orígenes de datos admiten en SQL Server Analysis Services 1400 los modelos tabulares
 
@@ -39,7 +40,7 @@ Para los servicios de análisis de Azure, consulte [orígenes de datos admitidos
 |Azure HDInsight Spark (Beta)     |   Sí       |   no       |
 ||||
 
-**Provider**   
+**Proveedor**   
 En memoria y los modelos DirectQuery conectarse a orígenes de datos de Azure utilizan el proveedor de datos de .NET Framework para SQL Server.
 
 ## <a name="on-premises-data-sources"></a>Orígenes de datos locales
@@ -88,7 +89,7 @@ En memoria y los modelos DirectQuery conectarse a orígenes de datos de Azure ut
 |Exchange Online     |
 |Objetos de Saleforce    | 
 |Informes de Salesforce     |
-|SharePoint Online List     |
+|Lista de SharePoint Online     |
 |||
 
 |Otro  |  

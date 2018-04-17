@@ -1,33 +1,33 @@
 ---
 title: Implementar ensamblados | Documentos de Microsoft
-ms.custom: 
+ms.custom: ''
 ms.date: 03/16/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine
-ms.service: 
+ms.service: ''
 ms.component: clr
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: 
-ms.tgt_pltfrm: 
+ms.technology: ''
+ms.tgt_pltfrm: ''
 ms.topic: reference
 helpviewer_keywords:
 - assemblies [CLR integration], implementing
 ms.assetid: c228d7bf-a906-4f37-a057-5d464d962ff8
-caps.latest.revision: 
+caps.latest.revision: 33
 author: rothja
 ms.author: jroth
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 3739ec98683810b683bf644912268d22efe6e261
-ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
+ms.openlocfilehash: 0e295b80f737bbfcb3c9184974eb82e043da9b0b
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/09/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="assemblies---implementing"></a>Ensamblados - implementación
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
-En este tema se proporciona información acerca de las áreas siguientes para ayudarle a implementar ensamblados y trabajar con ellos en la base de datos:  
+  En este tema se proporciona información acerca de las áreas siguientes para ayudarle a implementar ensamblados y trabajar con ellos en la base de datos:  
   
 -   Crear ensamblados  
   
@@ -46,14 +46,14 @@ En este tema se proporciona información acerca de las áreas siguientes para ay
   
  **Para crear un ensamblado mediante SQL Server Management Studio**  
   
--   [Propiedades del ensamblado &#40; Página general &#41;](../../relational-databases/clr-integration/assemblies-properties.md)  
+-   [Propiedades del ensamblado &#40;página General&#41;](../../relational-databases/clr-integration/assemblies-properties.md)  
   
 ## <a name="modifying-assemblies"></a>Modificar ensamblados  
  Los ensamblados se modifican en [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] mediante la instrucción ALTER ASSEMBLY de [!INCLUDE[tsql](../../includes/tsql-md.md)], o bien en [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] mediante el editor asistido de ensamblados. Se puede modificar un ensamblado cuando se desea hacer lo siguiente:    
   
 -   Cambiar la implementación del ensamblado cargando una versión más reciente de los binarios del ensamblado. Para obtener más información, consulte [administrar versiones de ensamblados](#_managing) más adelante en este tema.  
   
--   Cambiar el conjunto de permisos del ensamblado. Para obtener más información, consulte [diseñar ensamblados](../../relational-databases/clr-integration/assemblies-designing.md).  
+-   Cambiar el conjunto de permisos del ensamblado. Para obtener más información, vea [Diseño de ensamblados](../../relational-databases/clr-integration/assemblies-designing.md).  
   
 -   Cambiar la visibilidad del ensamblado. Los ensamblados visibles están disponibles para hacer referencia a los mismos en [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Los invisibles no están disponibles, aunque se hayan cargado en la base de datos. De forma predeterminada, los ensamblados cargados en una instancia de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] son visibles.  
   
@@ -65,7 +65,7 @@ En este tema se proporciona información acerca de las áreas siguientes para ay
   
  **Para modificar un ensamblado mediante SQL Server Management Studio**  
   
--   [Propiedades del ensamblado &#40; Página general &#41;](../../relational-databases/clr-integration/assemblies-properties.md)  
+-   [Propiedades del ensamblado &#40;página General&#41;](../../relational-databases/clr-integration/assemblies-properties.md)  
   
 ## <a name="dropping-disabling-and-enabling-assemblies"></a>Quitar, deshabilitar y habilitar ensamblados  
  Los ensamblados se quitan mediante la instrucción DROP ASSEMBLY de [!INCLUDE[tsql](../../includes/tsql-md.md)] o mediante [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)].  
@@ -84,7 +84,7 @@ En este tema se proporciona información acerca de las áreas siguientes para ay
   
 -   [sp_configure &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-configure-transact-sql.md)  
   
-##  <a name="_managing"></a>Administración de versiones de ensamblado  
+##  <a name="_managing"></a> Administración de versiones de ensamblado  
  Cuando un ensamblado se carga en una instancia de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], se almacena y administra en los catálogos de sistema de la base de datos. Los cambios realizados en la definición del ensamblado en el [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] debería propagar al ensamblado que se almacena en el catálogo de base de datos.  
   
  Si desea modificar un ensamblado, debe emitir una instrucción ALTER ASSEMBLY para actualizar el ensamblado en la base de datos. De este modo se actualizará el ensamblado a la copia más reciente de los módulos [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] que almacenan su implementación.  
@@ -93,14 +93,14 @@ En este tema se proporciona información acerca de las áreas siguientes para ay
   
 -   Columnas calculadas persistentes que hacen referencia a métodos del ensamblado, ya sea directa o indirectamente, mediante funciones o métodos de [!INCLUDE[tsql](../../includes/tsql-md.md)].  
   
--   Columnas de un tipo definido por el usuario CLR que dependan del ensamblado y el tipo implementa una **UserDefined** (no -**nativo**) formato de serialización.  
+-   Columnas con el tipo CLR definido por el usuario que dependen del ensamblado, y el tipo implementa un formato de serialización **UserDefined** (distinto de **Native**).  
   
 > [!CAUTION]  
 >  Si no se especifica WITH UNCHECKED DATA, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] intentará evitar que ALTER ASSEMBLY se ejecute si la nueva versión de ensamblado afecta a los datos existentes de tablas, índices u otros sitios permanentes. Sin embargo, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] no garantiza que las columnas calculadas, los índices, las vistas indizadas o las expresiones sean coherentes con rutinas y tipos subyacentes cuando el ensamblado CLR se actualice. Al ejecutar ALTER ASSEMBLY, tenga cuidado de que no se produzcan discrepancias entre el resultado de una expresión y los valores basados en esa expresión almacenada en el ensamblado.  
   
  Solo los miembros de la **db_owner** y **db_ddlowner** rol fijo de base de datos puede ejecutar ALTER ASSEMBLY de ejecución mediante la cláusula WITH UNCHECKED DATA.  
   
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] envía un mensaje al registro de eventos de aplicación de Windows que se ha modificado el ensamblado con datos no comprobados en las tablas. A continuación, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] indica que las tablas que contienen datos que dependen del ensamblado tienen datos no comprobados. El **has_unchecked_assembly_data** columna de la **sys.tables** vista de catálogo contiene el valor 1 para las tablas que contienen datos no comprobados y 0 para las tablas sin datos no comprobados.  
+ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] expone un mensaje al registro de eventos de aplicación Windows en el que indica que se ha modificado el ensamblado con datos no comprobados en las tablas. A continuación, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] indica que las tablas que contienen datos que dependen del ensamblado tienen datos no comprobados. El **has_unchecked_assembly_data** columna de la **sys.tables** vista de catálogo contiene el valor 1 para las tablas que contienen datos no comprobados y 0 para las tablas sin datos no comprobados.  
   
  Para resolver la integridad de datos no comprobados, ejecute DBCC CHECKDB WITH EXTENDED_LOGICAL_CHECKS en cada tabla que tiene datos no comprobados. Si se produce un error de DBCC CHECKDB WITH EXTENDED_LOGICAL_CHECKS, debe eliminar las filas de tabla que no son válidas o modificar el código de ensamblado para solucionar los problemas y, a continuación, emita las instrucciones ALTER ASSEMBLY adicionales.  
   
@@ -120,7 +120,7 @@ En este tema se proporciona información acerca de las áreas siguientes para ay
 -   [ALTER ASSEMBLY &#40;Transact-SQL&#41;](../../t-sql/statements/alter-assembly-transact-sql.md)  
   
 ## <a name="see-also"></a>Vea también  
- [Ensamblados &#40; motor de base de datos &#41;](../../relational-databases/clr-integration/assemblies-database-engine.md)   
- [Obtener información acerca de los ensamblados](../../relational-databases/clr-integration/assemblies-getting-information.md)  
+ [Ensamblados & #40; motor de base de datos & #41;](../../relational-databases/clr-integration/assemblies-database-engine.md)   
+ [Obtener información sobre los ensamblados](../../relational-databases/clr-integration/assemblies-getting-information.md)  
   
   

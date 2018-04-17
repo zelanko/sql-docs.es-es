@@ -2,7 +2,7 @@
 title: Función SQLPrepare | Documentos de Microsoft
 ms.custom: ''
 ms.date: 01/19/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: drivers
 ms.service: ''
 ms.component: odbc
@@ -25,13 +25,13 @@ ms.assetid: 332e1b4b-b0ed-4e7a-aa4d-4f35f4f4476b
 caps.latest.revision: 23
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 0f4f752416fd704d3976728eabbe6a8b9d00bd37
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: 4a1ad2c08c1b2df085e98581576fabfb93ba6236
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="sqlprepare-function"></a>Función SQLPrepare
 **Conformidad**  
@@ -69,7 +69,7 @@ SQLRETURN SQLPrepare(
 |SQLSTATE|Error|Description|  
 |--------------|-----------|-----------------|  
 |01000|Advertencia general|Mensaje informativo de específicas del controlador. (La función devuelve SQL_SUCCESS_WITH_INFO).|  
-|01S02 DE SQLSTATE|Ha cambiado el valor de opción|Un atributo de instrucción especificada no era válido debido a las condiciones de trabajo de implementación, por lo que un valor similar se sustituye temporalmente. (**SQLGetStmtAttr** puede llamar para determinar cuál es el valor sustituido temporalmente.) El valor de reemplazo es válido para la *StatementHandle* hasta que se cierra el cursor. Los atributos de instrucción que se pueden cambiar son: SQL_ATTR_CONCURRENCY SQL_ATTR_CURSOR_TYPE SQL_ATTR_KEYSET_SIZE SQL_ATTR_MAX_LENGTH SQL_ATTR_MAX_ROWS SQL_ATTR_QUERY_TIMEOUT SQL_ATTR_SIMULATE_CURSOR<br /><br /> (La función devuelve SQL_SUCCESS_WITH_INFO).|  
+|01S02|Ha cambiado el valor de opción|Un atributo de instrucción especificada no era válido debido a las condiciones de trabajo de implementación, por lo que un valor similar se sustituye temporalmente. (**SQLGetStmtAttr** puede llamar para determinar cuál es el valor sustituido temporalmente.) El valor de reemplazo es válido para la *StatementHandle* hasta que se cierra el cursor. Los atributos de instrucción que se pueden cambiar son: SQL_ATTR_CONCURRENCY SQL_ATTR_CURSOR_TYPE SQL_ATTR_KEYSET_SIZE SQL_ATTR_MAX_LENGTH SQL_ATTR_MAX_ROWS SQL_ATTR_QUERY_TIMEOUT SQL_ATTR_SIMULATE_CURSOR<br /><br /> (La función devuelve SQL_SUCCESS_WITH_INFO).|  
 |08S01|Error de vínculo de comunicación|El vínculo de comunicación entre el controlador y el origen de datos al que se conectó el controlador no pudo antes del procesamiento de la función se ha completado.|  
 |21S01|Lista de valores insertados no coincide con la lista de columnas|\**StatementText* contiene un **insertar** instrucción y el número de valores que se va a insertar no coincidía con el grado de la tabla derivada.|  
 |21S02|Grado de la tabla derivada no coincide con la lista de columnas|\**StatementText* contiene un **CREATE VIEW** instrucción y el número de nombres especificado no es el mismo grado que la tabla derivada definido por la especificación de consulta.|  
@@ -86,7 +86,7 @@ SQLRETURN SQLPrepare(
 |42S11|Ya existe un índice|\**StatementText* contiene un **CREATE INDEX** instrucción y el nombre del índice especificado ya existían.|  
 |42S12|No se encontró el índice|\**StatementText* contiene un **DROP INDEX** instrucción y el nombre del índice especificado no existe.|  
 |42S21|Ya existe una columna|\**StatementText* contiene un **ALTER TABLE** instrucción y la columna especificada en el **agregar** cláusula no es única o identifica una columna existente en la tabla base.|  
-|42S22|No se encontró la columna|\**StatementText* contiene un **CREATE INDEX** (instrucción) y uno o más de la columna de nombres especificados en la lista de columnas no existía.<br /><br /> \**StatementText* contiene un **GRANT** o **REVOCAR** instrucción y un nombre de columna especificado no existe.<br /><br /> \**StatementText* contiene un **seleccione**, **eliminar**, **insertar**, o **actualización** instrucción y una columna especificada nombre no existe.<br /><br /> \**StatementText* contiene un **CREATE TABLE** instrucción y una columna especificada en una restricción (que hacen referencia a una tabla distinta de lo que se va a crear) no existe.|  
+|42S22|No se encontró la columna|\**StatementText* contiene un **CREATE INDEX** (instrucción) y uno o más de la columna de nombres especificados en la lista de columnas no existía.<br /><br /> \**StatementText* contiene un **GRANT** o **REVOCAR** instrucción y un nombre de columna especificado no existe.<br /><br /> \**StatementText* contiene un **seleccione**, **eliminar**, **insertar**, o **actualización** instrucción y un nombre de columna especificado no existe.<br /><br /> \**StatementText* contiene un **CREATE TABLE** instrucción y una columna especificada en una restricción (que hacen referencia a una tabla distinta de lo que se va a crear) no existe.|  
 |HY000|Error general|Se produjo un error para que no hubo ninguna SQLSTATE específico y para el que se ha definido ningún SQLSTATE específico de la implementación. El mensaje de error devuelto por **SQLGetDiagRec** en el  *\*MessageText* búfer describe el error y su causa.|  
 |HY001|Error de asignación de memoria|El controlador no pudo asignar la memoria necesaria para admitir la ejecución o la finalización de la función.|  
 |HY008|Operación cancelada|Procesamiento asincrónico se habilitó para la *StatementHandle*. Se llamó a la función y antes que completó la ejecución, **SQLCancel** o **SQLCancelHandle** se llamó en la *StatementHandle*, y, a continuación, se llama a la función de nuevo en el *StatementHandle*.<br /><br /> Se llamó a la función y antes que completó la ejecución, **SQLCancel** o **SQLCancelHandle** se llamó en la *StatementHandle* desde un subproceso distinto en un aplicaciones multiproceso.|  

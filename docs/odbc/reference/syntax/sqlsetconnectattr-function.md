@@ -2,7 +2,7 @@
 title: Función SQLSetConnectAttr | Documentos de Microsoft
 ms.custom: ''
 ms.date: 01/19/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: drivers
 ms.service: ''
 ms.component: odbc
@@ -25,13 +25,13 @@ ms.assetid: 97fc7445-5a66-4eb9-8e77-10990b5fd685
 caps.latest.revision: 83
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 806acdd35452ff22e922158ed071d41d8e45f031
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: 8b5cebd01a7dc517bf4418e3179b1457974fa275
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="sqlsetconnectattr-function"></a>Función SQLSetConnectAttr
 **Conformidad**  
@@ -64,7 +64,7 @@ SQLRETURN SQLSetConnectAttr(
  *ValuePtr*  
  [Entrada] Puntero a la capacidad de asociarse *atributo*. Dependiendo del valor de *atributo*, *ValuePtr* será un valor entero sin signo o hará referencia a una cadena de caracteres terminada en null. Tenga en cuenta que el tipo de la integral de la *atributo* argumento puede no ser de longitud fija, vea la sección Comentarios para obtener información detallada.  
   
- *StringLength*  
+ *stringLength*  
  [Entrada] Si *atributo* es un atributo definido en ODBC y *ValuePtr* apunta a una cadena de caracteres o un búfer binario, este argumento debe ser la longitud de **ValuePtr*. Para los datos de cadena de caracteres, este argumento debe contener el número de bytes en la cadena.  
   
  Si *atributo* es un atributo definido en ODBC y *ValuePtr* es un entero, *StringLength* se omite.  
@@ -90,7 +90,7 @@ SQLRETURN SQLSetConnectAttr(
 |SQLSTATE|Error|Description|  
 |--------------|-----------|-----------------|  
 |01000|Advertencia general|Mensaje informativo de específicas del controlador. (La función devuelve SQL_SUCCESS_WITH_INFO).|  
-|01S02 DE SQLSTATE|Ha cambiado el valor de opción|El controlador no admitía el valor especificado en *ValuePtr* y sustituir un valor similar. (La función devuelve SQL_SUCCESS_WITH_INFO).|  
+|01S02|Ha cambiado el valor de opción|El controlador no admitía el valor especificado en *ValuePtr* y sustituir un valor similar. (La función devuelve SQL_SUCCESS_WITH_INFO).|  
 |08002|Nombre de la conexión en uso|El *atributo* argumento era SQL_ATTR_ODBC_CURSORS y el controlador ya estaba conectado al origen de datos.|  
 |08003|Conexión no abierta|(DM) un *atributo* se especificó un valor que requiere una conexión abierta, pero la *IdentificadorConexión* no estaba en estado conectado.|  
 |08S01|Error de vínculo de comunicación|El vínculo de comunicación entre el controlador y el origen de datos al que se conectó el controlador no pudo antes del procesamiento de la función se ha completado.|  
@@ -134,7 +134,7 @@ SQLRETURN SQLSetConnectAttr(
   
  Algunos atributos de conexión se pueden establecer sólo antes de que se ha realizado una conexión; otras se pueden establecer solo después de que se ha realizado una conexión. En la tabla siguiente indica los atributos de conexión que se deben establecer antes o después de que se ha realizado una conexión. *Cualquier* indica que se puede establecer el atributo antes o después de la conexión.  
   
-|Attribute|¿Establecer antes o después de la conexión?|  
+|Atributo|¿Establecer antes o después de la conexión?|  
 |---------------|-------------------------------------|  
 |SQL_ATTR_ACCESS_MODE|[1]|  
 |SQL_ATTR_ASYNC_DBC_EVENT|Antes o después|  

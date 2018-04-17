@@ -1,30 +1,31 @@
 ---
 title: Probar aplicaciones interoperables | Documentos de Microsoft
-ms.custom: 
+ms.custom: ''
 ms.date: 01/19/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: drivers
-ms.service: 
+ms.service: ''
 ms.component: odbc
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: drivers
-ms.tgt_pltfrm: 
+ms.technology:
+- drivers
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - interoperability [ODBC], testing interoperable applications
 - testing interoperable applications [ODBC]
 ms.assetid: 489083cb-8430-40be-9ef2-d75b9a2eea88
-caps.latest.revision: "5"
+caps.latest.revision: 5
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 1acbc994449e61b879ca2223f3ed4eb394943b44
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: 4cd98e6311d7d08b6faed0cb4759523642e70a5d
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="testing-interoperable-applications"></a>Probar aplicaciones interoperables
 Probar aplicaciones interoperables en el mejor es una que consumen muchos recursos empresariales y en el peor imposible dado que los nuevos controladores continuamente aparecen en el mercado. Sin embargo, un nivel razonable de pruebas es posible. Solo se necesitan probar las aplicaciones con interoperabilidad baja o limitada en aquellos controladores que se garantiza la compatibilidad. Sin embargo, debe ser totalmente probados con estos controladores.  

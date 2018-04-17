@@ -1,31 +1,32 @@
 ---
 title: Elementos que se usan en instrucciones SQL | Documentos de Microsoft
-ms.custom: 
+ms.custom: ''
 ms.date: 01/19/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: drivers
-ms.service: 
+ms.service: ''
 ms.component: odbc
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: drivers
-ms.tgt_pltfrm: 
+ms.technology:
+- drivers
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - SQL statements [ODBC], elements supported
 - minimum SQL syntax supported [ODBC]
 - ODBC drivers [ODBC], minimum SQL syntax supported
 ms.assetid: 85777525-1555-4731-8309-63a464c6b43a
-caps.latest.revision: "6"
+caps.latest.revision: 6
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: f619ebbbc3bb7c0ebbc90025a65c7f0530e3e4e3
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: 60e0bf5d464b85aeca56d89fa130553f8114b813
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="elements-used-in-sql-statements"></a>Elementos que se usan en instrucciones SQL
 Los elementos siguientes se usan en las instrucciones SQL indicadas anteriormente.  
@@ -57,35 +58,35 @@ Los elementos siguientes se usan en las instrucciones SQL indicadas anteriorment
   
  *¿parámetro dinámico* :: =?  
   
- *expresión* :: = término &#124; expresión {+ &#124; –} término  
+ *expresión* :: = término &#124; expresión {+&#124;–} término  
   
- *factor* :: = [*+*&#124; *–*]*principal*  
+ *factor* :: = [*+*&#124;*:*]*principal*  
   
  *valor de inserción* :: =  
   
  *parámetro dinámico*  
   
- &#124; *literal*  
+ &#124;*literal*  
   
- &#124; ES NULL  
+ &AMP;#124;ES NULL  
   
- &#124; USUARIO  
+ &AMP;#124;USUARIO  
   
  *letra* :: = *letras en minúscula caso &#124; superior mayúscula*  
   
  *literal* :: = *literal de cadena de caracteres*  
   
- *letras en minúscula caso* :: = un &#124; b &#124; c &#124; d &#124; e &#124; f &#124; g &#124; h &#124; i &#124; j &#124; k &#124; l &#124; m &#124; n &#124; o &#124; p &#124; q &#124; r &#124; s &#124; t &#124; u &#124; v &#124; cuan &#124; x &#124; y &#124; z  
+ *letras en minúscula caso* :: = un &#124; b &#124; c &#124; d. &#124; e &#124; f &#124; g &#124; h &#124; &#124; j &#124; k &#124; l &#124; m &#124; n &#124; o &#124; p &#124; preguntas &#124; r &#124; s &#124; t &#124; u &#124; v &#124; w &#124; x &#124; y &#124; z  
   
  *cláusula ORDER by* :: = ORDER BY *especificación de ordenación* [, *especificación de ordenación*]...  
   
  *principal* :: = *nombre de columna*  
   
- &#124; *parámetro dinámico*  
+ &#124;*parámetro dinámico*  
   
- &#124; *literal*  
+ &#124;*literal*  
   
- &#124; ( *expresión* )  
+ &#124;( *expresión* )  
   
  *condición de búsqueda* :: = *término booleano* [o *condición de búsqueda*]  
   
@@ -103,10 +104,10 @@ Los elementos siguientes se usan en las instrucciones SQL indicadas anteriorment
   
  *lista de referencias de tabla* :: = *referencia de tabla* [,*referencia de tabla*]...  
   
- *término* :: = *factor* &#124; *término* {\*&#124; */* } *factor*  
+ *término* :: = *factor* &#124; *término* {\*&#124;*/*} *factor*  
   
  *entero sin signo* :: = {*dígitos*}  
   
- *superior mayúscula* :: = *A &#124; B &#124; C &#124; N &#124; E &#124; F &#124; G &#124; H &#124; &#124; J &#124; K &#124; L &#124; M &#124; N &#124; Co &#124; P &#124; Q &#124; R &#124; S &#124; T &#124; U &#124; V &#124; Cuan &#124; X &#124; Y &#124; Z*  
+ *superior mayúscula* :: = *A &#124; B &#124; C &#124; d. &#124; E &#124; F &#124; G &#124; H &#124; I &#124; J &#124; K &#124; L &#124; M &#124; N &#124; O &#124; P &#124;Preguntas &#124; R &#124; S &#124; T &#124; U &#124; V &#124; W &#124; X &#124; Y &#124; Z*  
   
  *nombre definido por el usuario* :: = *letra*[*dígitos* &#124; *letra* &#124; *_*]...

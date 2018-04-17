@@ -1,25 +1,17 @@
 ---
-title: Incorporación de operatividad a código de R (servicios de aprendizaje de máquina) | Documentos de Microsoft
-ms.custom:
-- SQL2016_New_Updated
-ms.date: 07/26/2016
-ms.reviewer: ''
-ms.suite: sql
-ms.prod: machine-learning-services
-ms.prod_service: machine-learning-services
-ms.component: r
-ms.technology: ''
-ms.tgt_pltfrm: ''
-ms.topic: article
-ms.author: heidist
+title: Incorporación de operatividad a código R en SQL Server Machine Learning Services | Documentos de Microsoft
+ms.prod: sql
+ms.technology: machine-learning
+ms.date: 04/15/2018
+ms.topic: conceptual
 author: HeidiSteen
+ms.author: heidist
 manager: cgronlun
-ms.workload: Inactive
-ms.openlocfilehash: 460605c8cd9040cbf9586ab91227c5e09ec526cf
-ms.sourcegitcommit: 059fc64ba858ea2adaad2db39f306a8bff9649c2
+ms.openlocfilehash: f5fa7806ad70c37c7d51c5ae2cc9606191560e58
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/04/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="operationalize-r-code-machine-learning-services"></a>Incorporación de operatividad a código de R (servicios de aprendizaje de máquina)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
@@ -30,7 +22,7 @@ En este artículo se resume los puntos clave para el desarrollador de la base de
 
 ## <a name="get-started-with-r-code-in-sql-server"></a>Empezar a trabajar con código de R en SQL Server
 
-Tradicionalmente, integración de soluciones de aprendizaje de máquina objetivo es volver a codificar una amplia para admitir rendimiento y la integración. Sin embargo, procedimientos almacenados mover código R y Python para un entorno de producción es mucho más fácil en servicios de aprendizaje de máquinas de Microsoft, dado que el código se puede ejecutar en SQL Server y llama mediante. Puede seguir usando herramientas conocidas y no es necesario instalar un entorno de desarrollo de R. 
+Tradicionalmente, integración de soluciones de aprendizaje de máquina objetivo es volver a codificar una amplia para admitir rendimiento y la integración. Sin embargo, procedimientos almacenados mover código R y Python para un entorno de producción es mucho más fácil en servicios de aprendizaje de máquina de SQL Server, dado que el código se puede ejecutar en SQL Server y llama mediante. Puede seguir usando herramientas conocidas y no es necesario instalar un entorno de desarrollo de R. 
 
 Para obtener más información acerca de la sintaxis básica, vea:
 
@@ -92,7 +84,7 @@ Para obtener más información acerca de las plataformas compatibles con Microso
 
 + [Introducción a Microsoft R](https://docs.microsoft.com/r-server/)
 
-+ [Explore RevoScaleR](https://docs.microsoft.com/r-server/r/tutorial-r-to-revoscaler)
++ [Explorar RevoScaleR](https://docs.microsoft.com/r-server/r/tutorial-r-to-revoscaler)
 
 Para obtener más información acerca de cómo optimizar sus soluciones de Microsoft R para ejecutarse en datos de gran tamaño o varias plataformas, vea:
 

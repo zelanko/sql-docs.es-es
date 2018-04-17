@@ -2,7 +2,7 @@
 title: ELIMINAR, comando SQL | Documentos de Microsoft
 ms.custom: ''
 ms.date: 01/19/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: drivers
 ms.service: ''
 ms.component: odbc
@@ -18,13 +18,13 @@ ms.assetid: 0d5bd477-626f-4f22-a05a-f531d9f8c5e7
 caps.latest.revision: 7
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 3a2c62dc7ec2da7c8df5683feab469ecd99a22c3
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: 8c7f9e8124146bc2e1c9e966ab0794cba0aea2a0
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="delete---sql-command"></a>ELIMINAR, comando SQL
 Marca registros para su eliminación.  
@@ -45,7 +45,7 @@ DELETE FROM [DatabaseName!]TableName
   
  *¡DatabaseName!* Especifica el nombre de una base de datos que contiene la tabla si la base de datos que lo contiene no es la base de datos especificada con el origen de datos. Debe incluir el nombre de una base de datos que contiene la tabla si la base de datos no es la base de datos especificada con el origen de datos. Incluir el delimitador de signo de exclamación (!) después del nombre de la base de datos y antes del nombre de tabla.  
   
- DONDE *FilterCondition1*[AND &#124; O *FilterCondition2*...]  
+ DONDE *FilterCondition1*[AND &#124; o *FilterCondition2*...]  
  Especifica que Visual FoxPro marcar sólo algunos registros para su eliminación.  
   
  *FilterCondition* especifica los criterios que deben cumplir los registros para estar marcado para su eliminación. Se pueden incluir muchas condiciones de filtro como desee, conectan con la operación AND o OR (operador). También puede usar el operador NOT para invertir el valor de una expresión lógica, o puede usar **vacía**() para comprobar si un campo vacío.  

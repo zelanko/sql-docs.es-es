@@ -2,7 +2,7 @@
 title: Función SQLSetConnectOption | Documentos de Microsoft
 ms.custom: ''
 ms.date: 01/19/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: drivers
 ms.service: ''
 ms.component: odbc
@@ -25,20 +25,20 @@ ms.assetid: 8cd2c2a2-25c8-4aff-951c-b593bbfc90ad
 caps.latest.revision: 12
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 1a3ebe388429949f64e58ba8612328caf3a14ee2
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: 518fa715656e16672c118e0e56588c7c15d16a15
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="sqlsetconnectoption-function"></a>SQLSetConnectOption (función)
 **Conformidad**  
  Versión introdujo: Cumplimiento de estándares 1.0 de ODBC: en desuso  
   
  **Resumen**  
- En ODBC 3*.x*, la función de ODBC 2.0 **SQLSetConnectOption** se ha reemplazado por **SQLSetConnectAttr**. Para obtener más información, consulte [SQLSetConnectAttr](../../../odbc/reference/syntax/sqlsetconnectattr-function.md).  
+ En ODBC 3*.x*, la función de ODBC 2.0 **SQLSetConnectOption** se ha reemplazado por **SQLSetConnectAttr**. Para más información, vea [SQLSetConnectAttr](../../../odbc/reference/syntax/sqlsetconnectattr-function.md).  
   
 > [!NOTE]  
 >  Para obtener más información sobre lo que el Administrador de controladores se asigna esta función cuando una API ODBC 2*.x* aplicación está trabajando con una aplicación ODBC 3*.x* controladores, consulte [asignación de funciones en desuso](../../../odbc/reference/appendixes/mapping-deprecated-functions.md)".  

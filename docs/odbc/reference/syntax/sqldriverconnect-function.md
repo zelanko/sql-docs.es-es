@@ -2,7 +2,7 @@
 title: Función SQLDriverConnect | Documentos de Microsoft
 ms.custom: ''
 ms.date: 01/19/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: drivers
 ms.service: ''
 ms.component: odbc
@@ -25,13 +25,13 @@ ms.assetid: e299be1d-5c74-4ede-b6a3-430eb189134f
 caps.latest.revision: 50
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 4600a76e303930e941c737313f1db4850f8d5e43
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: ab13d8ad4f2bf16cd7b7c0dc8d352363bb89a5b7
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="sqldriverconnect-function"></a>Función SQLDriverConnect
 **Conformidad**  
@@ -109,7 +109,7 @@ SQLRETURN SQLDriverConnect(
 |01000|Advertencia general|Mensaje informativo de específicas del controlador. (La función devuelve SQL_SUCCESS_WITH_INFO).|  
 |01004|Datos de cadena, delimitado truncados|El búfer \* *OutConnectionString* no era lo suficientemente grande como para devolver la cadena de conexión completa, por lo que se trunca la cadena de conexión. Se devuelve la longitud de la cadena de conexión untruncated en **StringLength2Ptr*. (La función devuelve SQL_SUCCESS_WITH_INFO).|  
 |01S00|Atributo de cadena de conexión no válido|Se especificó una palabra clave de atributo no válido en la cadena de conexión (*InConnectionString*), pero el controlador fue capaz de conectarse al origen de datos de todos modos. (La función devuelve SQL_SUCCESS_WITH_INFO).|  
-|01S02 DE SQLSTATE|Ha cambiado el valor de opción|El controlador no admitía el valor especificado que apunta el *ValuePtr* argumento en **SQLSetConnectAttr** y sustituir un valor similar. (La función devuelve SQL_SUCCESS_WITH_INFO).|  
+|01S02|Ha cambiado el valor de opción|El controlador no admitía el valor especificado que apunta el *ValuePtr* argumento en **SQLSetConnectAttr** y sustituir un valor similar. (La función devuelve SQL_SUCCESS_WITH_INFO).|  
 |01S08|Error al guardar DSN de archivo|La cadena en  *\*InConnectionString* contiene un **FILEDSN** palabra clave, pero el archivo .dsn no se había guardado. (La función devuelve SQL_SUCCESS_WITH_INFO).|  
 |01S09|Palabra clave no válida|(DM) la cadena en  *\*InConnectionString* contiene un **SAVEFILE** palabra clave pero no un **controlador** o un **FILEDSN** palabra clave. (La función devuelve SQL_SUCCESS_WITH_INFO).|  
 |08001|No se puede establecer la conexión de cliente|El controlador no pudo establecer una conexión con el origen de datos.|  
@@ -153,13 +153,13 @@ SQLRETURN SQLDriverConnect(
   
  *cadena de conexión* :: = *cadena vacía*[;] &#124; *atributo*[;] &#124; *atributo*; *cadena de conexión*  
   
- *cadena vacía* :: =*atributo* :: = *palabra clave de atributo*=*atributo-valor* &#124; CONTROLADOR = [{}]*atributo-valor*[}]  
+ *cadena vacía* :: =*atributo* :: = *palabra clave de atributo*=*atributo-valor* &#124; controlador = [{}] *valor del atributo*[}]  
   
  *palabra clave de atributo* :: = DSN &#124; UID &#124; PWD &#124; *-definido-atributo-palabra clave driver*  
   
  *valor del atributo* :: = *cadena de caracteres*  
   
- *definido-atributo-palabra clave Driver* :: = *identificador*  
+ *driver-defined-attribute-keyword* ::= *identifier*  
   
  donde *cadena de caracteres* tiene cero o más caracteres; *identificador* tiene uno o más caracteres; *palabra clave de atributo* no distingue mayúsculas de minúsculas; *atributo-valor* puede distinguir mayúsculas de minúsculas; y el valor de la **DSN** palabra clave no contener solamente espacios en blanco.  
   

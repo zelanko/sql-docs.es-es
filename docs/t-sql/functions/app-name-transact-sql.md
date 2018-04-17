@@ -1,16 +1,16 @@
 ---
 title: APP_NAME (Transact-SQL) | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 07/24/2017
 ms.prod: sql-non-specified
 ms.prod_service: database-engine, sql-database
-ms.service: 
+ms.service: ''
 ms.component: t-sql|functions
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - APP_NAME_TSQL
@@ -24,24 +24,24 @@ helpviewer_keywords:
 - current session application names
 - APP_NAME function
 ms.assetid: e491e192-9b30-4243-bc19-33c133fe08a8
-caps.latest.revision: 
+caps.latest.revision: 35
 author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: b2b65f2380cc52c7a1d084dedad5fdb744d377bf
-ms.sourcegitcommit: 45e4efb7aa828578fe9eb7743a1a3526da719555
+ms.openlocfilehash: aaea21b68fe0e7a9b0e57bf18d9e9907371dc9b6
+ms.sourcegitcommit: 9351e8b7b68f599a95fb8e76930ab886db737e5f
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 04/06/2018
 ---
 # <a name="appname-transact-sql"></a>APP_NAME (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
-Devuelve el nombre de aplicación de la sesión actual si la aplicación lo ha establecido.
+Una función que devuelve el nombre de aplicación de la sesión actual si la aplicación establece ese valor de nombre.
   
 > [!IMPORTANT]  
->  El nombre de la aplicación lo proporciona el cliente y no está verificado de ninguna manera. No use **APP_NAME** como parte de una comprobación de seguridad.  
+>  El cliente proporciona el nombre de la aplicación y el valor del nombre de la aplicación no se verifica de ninguna manera. No use **APP_NAME** como parte de una comprobación de seguridad.  
   
 ![Icono de vínculo de tema](../../database-engine/configure-windows/media/topic-link.gif "Icono de vínculo de tema") [Convenciones de sintaxis de Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)
   
@@ -56,12 +56,12 @@ APP_NAME  ( )
 **nvarchar(128)**
   
 ## <a name="remarks"></a>Notas  
-Use **APP_NAME** cuando quiera realizar acciones diferentes para aplicaciones diferentes. Por ejemplo, formatear una fecha de diferentes maneras para diferentes aplicaciones o devolver un mensaje informativo a ciertas aplicaciones.
+Use **APP_NAME** para distinguir entre diferentes aplicaciones, como una manera de realizar acciones diferentes para esas aplicaciones. Por ejemplo, **APP_NAME** puede distinguir entre diferentes aplicaciones para permitir un formato de fecha diferente para cada aplicación. También puede permitir el envío de un mensaje informativo a ciertas aplicaciones.
   
 Para establecer el nombre de una aplicación en [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)], haga clic en **Opciones** en el cuadro de diálogo **Conectar al motor de base de datos**. En la pestaña **Parámetros de conexión adicionales**, indique un atributo **app** con el formato `;app='application_name'`.
   
-## <a name="examples"></a>Ejemplos  
-En el ejemplo siguiente se comprueba si la aplicación del cliente que ha iniciado este proceso es una sesión `SQL Server Management Studio` y proporciona una fecha en formato estadounidense o ANSI.
+## <a name="example"></a>Ejemplo  
+En este ejemplo se comprueba si la aplicación del cliente que ha iniciado este proceso es una sesión `SQL Server Management Studio` y proporciona una fecha en formato estadounidense o ANSI.
   
 ```sql
 USE AdventureWorks2012;  

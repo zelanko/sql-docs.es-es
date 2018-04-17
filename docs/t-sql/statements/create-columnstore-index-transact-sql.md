@@ -1,16 +1,16 @@
 ---
 title: CREATE COLUMNSTORE INDEX (Transact-SQL) | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 08/10/2017
 ms.prod: sql-non-specified
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
-ms.service: 
+ms.service: ''
 ms.component: t-sql|statements
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - CREATE_COLUMNSTORE_INDEX_TSQL
@@ -31,16 +31,16 @@ helpviewer_keywords:
 - CREATE COLUMNSTORE INDEX statement
 - CREATE INDEX statement
 ms.assetid: 7e1793b3-5383-4e3d-8cef-027c0c8cb5b1
-caps.latest.revision: 
+caps.latest.revision: 76
 author: barbkess
 ms.author: barbkess
 manager: craigg
 ms.workload: Active
-ms.openlocfilehash: ccf03c6b2d3d7798f3bad65b340657bf2b21b751
-ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
+ms.openlocfilehash: 461809bcf59b143f39d62b4cca7919a09168638f
+ms.sourcegitcommit: 8b332c12850c283ae413e0b04b2b290ac2edb672
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/25/2018
+ms.lasthandoff: 04/05/2018
 ---
 # <a name="create-columnstore-index-transact-sql"></a>CREATE COLUMNSTORE INDEX (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2012-all-md](../../includes/tsql-appliesto-ss2012-all-md.md)]
@@ -160,7 +160,7 @@ COLUMNSTORE
 COLUMNSTORE_ARCHIVE  
    COLUMNSTORE_ARCHIVE comprime la tabla o la partición a un tamaño menor. Use esta opción para situaciones como un archivo que requiera un tamaño menor de almacenamiento y pueda permitirse usar más tiempo para el almacenamiento y la recuperación.  
   
-   Para obtener más información sobre la compresión, vea [Compresión de datos](../../relational-databases/data-compression/data-compression.md).  
+   Para más información sobre la compresión, vea [Compresión de datos](../../relational-databases/data-compression/data-compression.md).  
 
 ON  
    Con las opciones ON puede especificar opciones para el almacenamiento de datos, como un esquema de partición, un grupo de archivos específico o el grupo de archivos predeterminado. Si no se especifica la opción ON, el índice usa la configuración de partición o de grupo de archivos de la tabla existente.  
@@ -182,7 +182,7 @@ CREATE [NONCLUSTERED] COLUMNSTORE INDEX
 Crea un índice no clúster de almacén de columnas en memoria en una tabla de almacén de filas almacenada como un montón o un índice clúster. El índice puede tener una condición de filtrado y no necesita incluir todas las columnas de la tabla subyacente. El índice de almacén de columnas requiere suficiente espacio para almacenar una copia de los datos. Se puede actualizar y se actualiza a medida que se modifica la tabla subyacente. El índice no clúster de almacén de columnas de un índice clúster permite el análisis en tiempo real.  
   
 *index_name*  
-   Especifica el nombre del índice. *index_name* debe ser único en la tabla, pero no es necesario que sea único en la base de datos. Los nombres de índice deben cumplir las reglas de los [identificadores](../../relational-databases/databases/database-identifiers.md).  
+   Especifica el nombre del índice. *index_name* debe ser único en la tabla, pero no es necesario que sea único en la base de datos. Los nombres de índice deben seguir las reglas de los [identificadores](../../relational-databases/databases/database-identifiers.md).  
   
  **(** *column*  [ **,**...*n* ] **)**  
     Especifica las columnas que se van a almacenar. Un índice no clúster de almacén de columnas está limitado a 1024 columnas.  
@@ -197,7 +197,7 @@ WITH DROP_EXISTING = [OFF] | ON
    DROP_EXISTING = OFF Se muestra un error si ya existe el nombre de índice especificado. El tipo de índice no puede cambiarse utilizando DROP_EXISTING. En la sintaxis compatible con versiones anteriores, WITH DROP_EXISTING es equivalente a WITH DROP_EXISTING = ON.  
 
 MAXDOP = *max_degree_of_parallelism*  
-   Reemplaza la opción de configuración [max degree of parallelism](../../database-engine/configure-windows/configure-the-max-degree-of-parallelism-server-configuration-option.md) durante la operación de índice. Utilice MAXDOP para establecer un límite para el número de procesadores utilizados en la ejecución de un plan paralelo. El máximo es 64 procesadores.  
+   Reemplaza la opción [Establecer la opción de configuración del servidor Grado máximo de paralelismo](../../database-engine/configure-windows/configure-the-max-degree-of-parallelism-server-configuration-option.md) durante la operación de índice. Utilice MAXDOP para establecer un límite para el número de procesadores utilizados en la ejecución de un plan paralelo. El máximo es 64 procesadores.  
   
    Los valores de *max_degree_of_parallelism* pueden ser:  
    - 1: suprime la generación de planes paralelos.  
@@ -229,7 +229,7 @@ COLUMNSTORE_ARCHIVE
    Se aplica a: [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] a [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].
 Solo se aplica a los índices de almacén de columnas, incluidos los clúster y no clúster. COLUMNSTORE_ARCHIVE comprime la tabla o la partición a un tamaño menor. Esto se puede usar para el archivado o para otras situaciones que requieran un tamaño de almacenamiento mínimo y pueda permitirse más tiempo para el almacenamiento y recuperación.  
   
- Para obtener más información sobre la compresión, vea [Compresión de datos](../../relational-databases/data-compression/data-compression.md).  
+ Para más información sobre la compresión, vea [Compresión de datos](../../relational-databases/data-compression/data-compression.md).  
   
 WHERE \<filter_expression> [ AND \<filter_expression> ] Se aplica a: [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] a [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].
   
@@ -250,7 +250,7 @@ ON
 *partition_scheme_name* **(** *column_name* **)**  
    Especifica el esquema de partición que define los grupos de archivos a los que se asignan las particiones de un índice con particiones. El esquema de partición debe existir dentro de la base de datos mediante la ejecución de [CREATE PARTITION SCHEME](../../t-sql/statements/create-partition-scheme-transact-sql.md). 
    *column_name* especifica la columna en la que se van a crear las particiones de un índice con particiones. Esta columna debe coincidir con el tipo de datos, la longitud y la precisión del argumento de la función de partición que *partition_scheme_name* emplea. *column_name* no está limitado a las columnas de la definición de índice. Al crear particiones en un índice de almacén de columnas, el [!INCLUDE[ssDE](../../includes/ssde-md.md)] agrega la columna de partición como una columna del índice, si no se especificó todavía.  
-   Si no se ha especificado *partition_scheme_name* o *filegroup* y se han creado particiones en la tabla, el índice se coloca en el mismo esquema de partición y se usa la misma columna de partición que en la tabla subyacente.  
+   Si no se especificó *partition_scheme_name* o *filegroup* y se crearon particiones en la tabla, el índice se coloca en el mismo esquema de partición y usa la misma columna de partición que en la tabla subyacente.  
    Un índice de almacén de columnas de una tabla con particiones debe estar alineado.  
    Para obtener más información sobre los índices con particiones, vea [Partitioned Tables and Indexes](../../relational-databases/partitions/partitioned-tables-and-indexes.md) (Tablas e índices con particiones).  
 
@@ -260,7 +260,7 @@ ON
 **"**default**"**  
 Crea el índice especificado en el grupo de archivos predeterminado.  
   
-El término predeterminado (default), en este contexto, no es una palabra clave. Es un identificador del grupo de archivos predeterminado y debe delimitarse, como en ON **"**default**"** u ON **[**default**]**. Si se especifica "default", la opción QUOTED_IDENTIFIER debe tener el valor ON para la sesión actual. Esta es la configuración predeterminada. Para obtener más información, vea [SET QUOTED_IDENTIFIER &#40;Transact-SQL&#41;](../../t-sql/statements/set-quoted-identifier-transact-sql.md).  
+El término predeterminado (default), en este contexto, no es una palabra clave. Es un identificador para el grupo de archivos predeterminado y debe delimitarse, como en ON **"**default**"** u ON **[**default**]**. Si se especifica "default", la opción QUOTED_IDENTIFIER debe tener el valor ON para la sesión actual. Esta es la configuración predeterminada. Para obtener más información, vea [SET QUOTED_IDENTIFIER &#40;Transact-SQL&#41;](../../t-sql/statements/set-quoted-identifier-transact-sql.md).  
   
 ##  <a name="Permissions"></a> Permissions  
  Requiere el permiso ALTER en la tabla.  
@@ -320,13 +320,13 @@ Las opciones SET de la columna de valor requerido son necesarias siempre que se 
 -   TINYINT  
 -   bit  
 -   nvarchar [ ( *n* ) ] 
--   nvarchar(max) (Se aplica a [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)] y Azure SQL Database en el plan de tarifa Premium, solo en índices clúster de almacén de columnas)   
+-   nvarchar (max) [se aplica a [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)] y al nivel Premium, al nivel estándar (S3 y versiones posteriores) y a todos los niveles de ofertas de núcleo virtual, solo en los índices de almacén de columnas agrupado]   
 -   nchar [ ( *n* ) ]  
 -   varchar [ ( *n* ) ]  
--   varchar(max) (Se aplica a [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)] y Azure SQL Database en el plan de tarifa Premium, solo en índices clúster de almacén de columnas)
+-   varchar (max) [se aplica a [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)] y al nivel Premium, al nivel estándar (S3 y versiones posteriores) y a todos los niveles de ofertas de núcleo virtual, solo en los índices de almacén de columnas agrupado]
 -   char [ ( *n* ) ]  
 -   varbinary [ ( *n* ) ] 
--   varbinary (max) (Se aplica a [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)] y Azure SQL Database en el plan de tarifa Premium, solo en índices clúster de almacén de columnas)
+-   varbinary (max) [se aplica a [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)] y a Azure SQL Database en el nivel Premium, en el nivel estándar (S3 y versiones posteriores) y en todos los niveles de ofertas de núcleo virtual, solo en los índices de almacén de columnas agrupado]
 -   binary [ ( *n* ) ]  
 -   uniqueidentifier (Se aplica a [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] y versiones posteriores)
   
@@ -349,7 +349,7 @@ Si la tabla subyacente tiene una columna con un tipo de datos no admitido para l
 -   No se pueden modificar mediante la instrucción **ALTER INDEX**. Para cambiar el índice no clúster, debe quitar y volver a crear el índice de almacén de columnas en su lugar. Puede usar **ALTER INDEX** para deshabilitar y volver a compilar un índice de almacén de columnas.  
 -   No se pueden crear mediante la palabra clave **INCLUDE**.  
 -   No pueden incluir las palabras clave **ASC** ni **DESC** para ordenar el índice. Los índices de almacén de columnas se ordenan de acuerdo con los algoritmos de compresión. La ordenación eliminaría muchas mejoras de rendimiento.  
--   No se pueden incluir columnas de objetos grandes (LOB) de tipo nvarchar(max), varchar(max) y varbinary(max) en índices no clúster de almacén de columnas. Solo los índices clúster de almacén de columnas admiten tipos LOB, a partir de la versión [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)] y Azure SQL Database configurados en el plan de tarifa Premium. Tenga en cuenta que las versiones anteriores no admiten tipos LOB en los índices clúster y no clúster de almacén de columnas.
+-   No se pueden incluir columnas de objetos grandes (LOB) de tipo nvarchar(max), varchar(max) y varbinary(max) en índices no clúster de almacén de columnas. Solo los índices clúster de almacén de columnas admiten tipos LOB, a partir de la versión [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)] y Azure SQL Database configurados en el nivel Premium, nivel estándar (S3 y posteriores) y en todos los niveles de ofertas de núcleo virtual. Tenga en cuenta que las versiones anteriores no admiten tipos LOB en los índices clúster y no clúster de almacén de columnas.
 
 
  **Los índices de almacén de columnas no se pueden combinar con las siguientes características:**  

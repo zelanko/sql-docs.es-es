@@ -1,16 +1,16 @@
 ---
 title: ASYMKEYPROPERTY (Transact-SQL) | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 07/24/2017
 ms.prod: sql-non-specified
 ms.prod_service: database-engine, sql-database
-ms.service: 
+ms.service: ''
 ms.component: t-sql|functions
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - ASYMKEYPROPERTY_TSQL
@@ -20,21 +20,21 @@ dev_langs:
 helpviewer_keywords:
 - ASYMKEYPROPERTY
 ms.assetid: a30581f2-e1b1-4996-93e6-527ff96b7c42
-caps.latest.revision: 
+caps.latest.revision: 13
 author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 808f7c8d840f18d9e09fe9906e366fb7feb76cff
-ms.sourcegitcommit: 45e4efb7aa828578fe9eb7743a1a3526da719555
+ms.openlocfilehash: f4738a706c6f6d717a4346e8dc67169d1f795e74
+ms.sourcegitcommit: 094c46e7fa6de44735ed0040c65a40ec3d951b75
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 04/06/2018
 ---
 # <a name="asymkeyproperty-transact-sql"></a>ASYMKEYPROPERTY (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
-Devuelve las propiedades de una clave asimétrica.
+Esta función devuelve las propiedades de una clave asimétrica.
   
 ![Icono de vínculo de tema](../../database-engine/configure-windows/media/topic-link.gif "Icono de vínculo de tema") [Convenciones de sintaxis de Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)
   
@@ -46,7 +46,7 @@ ASYMKEYPROPERTY (Key_ID , 'algorithm_desc' | 'string_sid' | 'sid')
   
 ## <a name="arguments"></a>Argumentos  
 *Key_ID*  
-Valor Key_ID de una clave asimétrica en la base de datos. Para buscar el valor Key_ID cuando solo se conoce el nombre de la clave, utilice ASYMKEY_ID. El tipo de datos de *Key_ID* es **int**.
+Valor Key_ID de una clave asimétrica en la base de datos. Para buscar el valor Key_ID cuando solo se conoce el nombre de la clave, utilice ASYMKEY_ID. *Key_ID* tiene un tipo de datos **int**.
   
 **'**algorithm_desc**'**  
 Especifica que la salida devuelve la descripción del algoritmo de la clave asimétrica. Solo está disponible para las claves asimétricas creadas a partir de un módulo EKM.
@@ -57,11 +57,11 @@ Especifica que la salida devuelve el SID de la clave asimétrica en formato **nv
 **'**sid**'**  
 Especifica que la salida devuelve el SID de la clave asimétrica en formato binario.
   
-## <a name="return-types"></a>Tipos de valor devueltos  
+## <a name="return-types"></a>Tipos de valores devueltos  
 **sql_variant**
   
 ## <a name="permissions"></a>Permisos  
-Es necesario tener algún permiso sobre la clave asimétrica y que el autor de la llamada no tenga denegado el permiso VIEW sobre la clave asimétrica.
+Es necesario tener los permisos apropiados sobre la clave asimétrica y que el autor de la llamada no tenga denegado el permiso VIEW sobre la clave asimétrica. Para obtener más información sobre los permisos de la clave asimétrica, vea [CREATE ASYMMETRIC KEY &#40;Transact-SQL&#41;](../../t-sql/statements/create-asymmetric-key-transact-sql.md).
   
 ## <a name="examples"></a>Ejemplos  
 En el ejemplo siguiente se devuelven las propiedades de la clave asimétrica con un valor 256 para Key_ID.

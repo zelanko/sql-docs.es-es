@@ -1,16 +1,16 @@
 ---
 title: DBCC INPUTBUFFER (Transact-SQL) | Microsoft Docs
-ms.custom: 
-ms.date: 11/14/2017
+ms.custom: ''
+ms.date: 04/04/2018
 ms.prod: sql-non-specified
 ms.prod_service: sql-database
-ms.service: 
+ms.service: ''
 ms.component: t-sql|database-console-commands
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - DBCC INPUTBUFFER
@@ -26,16 +26,16 @@ helpviewer_keywords:
 - statements [SQL Server], last statement
 - DBCC INPUTBUFFER statement
 ms.assetid: a44d702b-b3fb-4950-8c8f-1adcf3f514ba
-caps.latest.revision: 
+caps.latest.revision: 51
 author: barbkess
 ms.author: barbkess
 manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 0d36f0e25c0f5959053e028cdfc95babf69c4e48
-ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
+ms.openlocfilehash: f3292b45e9a0e73754bc4f3247c18c431f11271a
+ms.sourcegitcommit: 8b332c12850c283ae413e0b04b2b290ac2edb672
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/25/2018
+ms.lasthandoff: 04/05/2018
 ---
 # <a name="dbcc-inputbuffer-transact-sql"></a>DBCC INPUTBUFFER (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -55,10 +55,10 @@ DBCC INPUTBUFFER ( session_id [ , request_id ])
 *session_id*  
 Es el Id. de sesión asociado a cada conexión principal activa.  
   
-*request_id*  
+*id_de_solicitud*  
 Solicitud exacta (en lote) que se buscará en la sesión actual.  
 
-La siguiente consulta devuelve *request_id*:  
+La consulta siguiente devuelve *id_de_solicitud*:  
 ```sql
 SELECT request_id   
 FROM sys.dm_exec_requests   
@@ -104,7 +104,7 @@ En [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] es necesario cumpli
 SELECT @@spid;  
 ```
   
-En [!INCLUDE[ssSDS](../../includes/sssds-md.md)], los niveles Premium requieren el permiso VIEW DATABASE STATE en la base de datos. En [!INCLUDE[ssSDS](../../includes/sssds-md.md)], los niveles estándar y básico requieren la cuenta de administrador de [!INCLUDE[ssSDS](../../includes/sssds-md.md)].
+En los niveles Premium y críticos para la empresa de [!INCLUDE[ssSDS](../../includes/sssds-md.md)] se necesita el permiso VIEW DATABASE STATE en la base de datos. En los niveles estándar, básico y de uso general de [!INCLUDE[ssSDS](../../includes/sssds-md.md)], se requiere la cuenta de administrador de [!INCLUDE[ssSDS](../../includes/sssds-md.md)].
   
 ## <a name="examples"></a>Ejemplos  
 En el ejemplo siguiente se ejecuta `DBCC INPUTBUFFER` en una segunda conexión mientras una transacción larga se ejecuta en una conexión anterior.

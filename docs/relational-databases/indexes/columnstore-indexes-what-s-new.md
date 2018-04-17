@@ -16,11 +16,11 @@ author: barbkess
 ms.author: barbkess
 manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: f1a9ab49828410519b1aa5a36eb0804d4d7b50a5
-ms.sourcegitcommit: ccb05cb5a4cccaf7ffa9e85a4684fa583bab914e
+ms.openlocfilehash: f1a04505be156fcb10394e6cccb431f3c2206871
+ms.sourcegitcommit: d6b1695c8cbc70279b7d85ec4dfb66a4271cdb10
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/22/2018
+ms.lasthandoff: 04/08/2018
 ---
 # <a name="columnstore-indexes---what39s-new"></a>Novedades de los índices de almacén de columnas
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -28,7 +28,7 @@ ms.lasthandoff: 03/22/2018
   Resumen de las características de almacén de columnas disponibles en cada versión de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] y en las últimas versiones de [!INCLUDE[ssSDS](../../includes/sssds-md.md)], [!INCLUDE[ssSDW](../../includes/sssdw-md.md)] y [!INCLUDE[ssPDW](../../includes/sspdw-md.md)].  
 
  > [!NOTE]
- > Para [!INCLUDE[ssSDS](../../includes/sssds-md.md)], los índices de almacén de columnas están disponibles en los niveles SQL Database Premium y Standard (S3 y versiones posteriores). Para SQL Server (2016 SP1 y versiones posteriores), los índices de almacén de columnas están disponibles en todas las ediciones. Para SQL Server (2016 y versiones anteriores), los índices de almacén de columnas solo están disponibles en Enterprise Edition.
+ > Para [!INCLUDE[ssSDS](../../includes/sssds-md.md)], los índices de almacén de columnas están disponibles en los niveles SQL Database Premium y Standard (S3 y versiones posteriores) y en todos los niveles de núcleo virtual. Para SQL Server (2016 SP1 y versiones posteriores), los índices de almacén de columnas están disponibles en todas las ediciones. Para SQL Server (2016 y versiones anteriores), los índices de almacén de columnas solo están disponibles en Enterprise Edition.
  
 ## <a name="feature-summary-for-product-releases"></a>Resumen de las características para cada versión del producto  
  En esta tabla se resumen las características fundamentales de los índices de almacén de columnas y los productos en los que están disponibles.  
@@ -119,7 +119,8 @@ Estas DMV basadas en OLTP en memoria contienen actualizaciones para el almacén 
   
 ### <a name="limitations"></a>Limitaciones  
   
--   La función MERGE se deshabilita cuando se define un índice de árbol B en un índice de almacén de columnas agrupado.  
+
+  
 -   En el caso de las tablas en memoria, los índices de almacén de columnas deben incluir todas las columnas; estos no pueden tener una condición de filtrado.  
 -   Para las tablas en memoria, las consultas de índices de almacén de columnas se ejecutan únicamente en el modo de interoperabilidad y no en el modo nativo en memoria. Se admite la ejecución en paralelo.  
   

@@ -15,15 +15,14 @@ ms.custom: ''
 ms.component: security
 ms.workload: On Demand
 ms.tgt_pltfrm: ''
-ms.devlang: na
 ms.topic: article
 ms.date: 04/03/2018
 ms.author: aliceku
-ms.openlocfilehash: e39e6f8957c1fc2c4f50603af213055cde84d0b6
-ms.sourcegitcommit: 059fc64ba858ea2adaad2db39f306a8bff9649c2
+ms.openlocfilehash: e8e5456b1c6e8ca160e677907a97976c8f2b0374
+ms.sourcegitcommit: d6b1695c8cbc70279b7d85ec4dfb66a4271cdb10
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/04/2018
+ms.lasthandoff: 04/08/2018
 ---
 # <a name="transparent-data-encryption-with-bring-your-own-key-preview-support-for-azure-sql-database-and-data-warehouse"></a>Cifrado de datos transparente compatible con Bring Your Own Key (versión preliminar) para Azure SQL Database y SQL Data Warehouse
 [!INCLUDE[appliesto-xx-asdb-asdw-xxx-md](../../../includes/appliesto-xx-asdb-asdw-xxx-md.md)]
@@ -60,7 +59,7 @@ Cuando TDE se configura por primera vez para usar un protector del TDE de Key Va
 ### <a name="general-guidelines"></a>Directrices generales
 - Asegúrese de que Azure Key Vault y Azure SQL Database vayan a estar en el mismo inquilino.  **No se admiten** interacciones entre el servidor y el almacén de claves de varios inquilinos.
 - Decida qué suscripciones se van a usar para los recursos necesarios, ya que para mover el servidor por las suscripciones más adelante se necesitará una nueva configuración de TDE con BYOK.
-- Al configurar TDE con BYOK, es importante tener en cuenta la carga depositada en el almacén de claves por las operaciones repetidas de encapsular/desencapsular. Por ejemplo, dado que todas las bases de datos asociadas a un servidor lógico usan el mismo protector de TDE, una conmutación por error de ese servidor desencadenará tantas operaciones de clave en el almacén como bases de datos haya en el servidor. Según nuestra experiencia y los [límites de servicio del almacén de claves](https://docs.microsoft.com/en-us/azure/key-vault/key-vault-service-limits) que hemos documentado, se recomienda asociar como máximo 500 bases de datos estándar o 200 bases de datos Premium con un Azure Key Vault en una sola suscripción para garantizar una disponibilidad alta uniforme al acceder al protector de TDE en el almacén. 
+- Al configurar TDE con BYOK, es importante tener en cuenta la carga depositada en el almacén de claves por las operaciones repetidas de encapsular/desencapsular. Por ejemplo, dado que todas las bases de datos asociadas a un servidor lógico usan el mismo protector de TDE, una conmutación por error de ese servidor desencadenará tantas operaciones de clave en el almacén como bases de datos haya en el servidor. Según nuestra experiencia y los [límites de servicio del almacén de claves](https://docs.microsoft.com/en-us/azure/key-vault/key-vault-service-limits) que hemos documentado, se recomienda asociar como máximo 500 bases de datos estándar o de uso general, o 200 bases de datos premium o críticas para la empresa a un Azure Key Vault en una sola suscripción para garantizar una disponibilidad alta uniforme al acceder al protector de TDE en el almacén. 
 - Opción recomendada: Guarde una copia local del protector del TDE.  Para ello es necesario que un dispositivo HSM cree un protector del TDE localmente y que un sistema de custodia de claves almacene una copia local del protector del TDE.
 
 

@@ -1,16 +1,16 @@
 ---
 title: DATABASEPROPERTYEX (Transact-SQL) | Microsoft Docs
-ms.custom: 
-ms.date: 07/29/2017
+ms.custom: ''
+ms.date: 04/04/2018
 ms.prod: sql-non-specified
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
-ms.service: 
+ms.service: ''
 ms.component: t-sql|functions
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - DATABASEPROPERTYEX
@@ -22,16 +22,16 @@ helpviewer_keywords:
 - displaying database properties
 - database properties [SQL Server]
 ms.assetid: 8a9e0ffb-28b5-4640-95b2-a54e3e5ad941
-caps.latest.revision: 
+caps.latest.revision: 84
 author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: a67b74ad595fdf7b6f3a63dbd2ea2c9e5793f54f
-ms.sourcegitcommit: 45e4efb7aa828578fe9eb7743a1a3526da719555
+ms.openlocfilehash: a04544f76b509e1461d26574cd2179ec63ee5ad8
+ms.sourcegitcommit: 8b332c12850c283ae413e0b04b2b290ac2edb672
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 04/05/2018
 ---
 # <a name="databasepropertyex-transact-sql"></a>DATABASEPROPERTYEX (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -52,7 +52,7 @@ Es una expresión que representa el nombre de la base de datos para la que se de
 Para [!INCLUDE[ssSDS](../../includes/sssds-md.md)], debe ser el nombre de la base de datos actual. Devuelve NULL para todas las propiedades si se proporciona un nombre de base de datos diferente.
   
 *property*  
-Es una expresión que representa el nombre de la propiedad de base de datos que se va a devolver. *property* es **varchar(128)** y puede tener uno de estos valores. El tipo de valor devuelto es **sql_variant**. En la siguiente tabla se muestra el tipo de datos base de cada valor de propiedad.
+Es una expresión que representa el nombre de la propiedad de base de datos que se va a devolver. *property* es **varchar (128)** y puede ser uno de estos valores. El tipo de valor devuelto es **sql_variant**. En la siguiente tabla se muestra el tipo de datos base de cada valor de propiedad.
   
 > [!NOTE]  
 >  Si no se inicia la base de datos, las propiedades que [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] recupera mediante acceso directo a la base de datos, en lugar de obtener el valor de los metadatos devolverán NULL. Es decir, si la base de datos tiene AUTO_CLOSE establecido en ON o si la base de datos está sin conexión.  
@@ -61,7 +61,7 @@ Es una expresión que representa el nombre de la propiedad de base de datos que 
 |---|---|---|
 |Intercalación|Nombre de intercalación predeterminado para la base de datos.|Nombre de intercalación<br /><br /> NULL = La base de datos no se ha iniciado.<br /><br /> Tipo de datos base: **nvarchar(128)**|  
 |ComparisonStyle|El estilo de comparación de Windows de la intercalación. ComparisonStyle es un mapa de bits que se calcula usando los siguientes valores para los posibles estilos.<br /><br /> Omitir mayúsculas y minúsculas: 1<br /><br /> Omitir acento: 2<br /><br /> Omitir Kana: 65536<br /><br /> Omitir ancho: 131072<br /><br /> <br /><br /> Por ejemplo, el valor predeterminado 196609 es el resultado de combinar las opciones de omitir mayúsculas y minúsculas, omitir Kana y omitir ancho.|Devuelve el estilo de comparación.<br /><br /> Devuelve 0 para todas las intercalaciones binarias.<br /><br /> Tipo de datos base: **int**|  
-|Edición|El nivel de servicio o edición de la base de datos.|**Se aplica a**: [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)], [!INCLUDE[ssSDW](../../includes/sssdw-md.md)].<br /><br /> <br /><br /> Web = Base de datos Web Edition<br /><br /> Business = Base de datos Business Edition<br /><br /> Básico<br /><br /> Standard<br /><br /> Premium<br /><br /> System (de la base de datos maestra)<br /><br /> NULL = La base de datos no se ha iniciado.<br /><br /> Tipo de datos base: **nvarchar**(64)|  
+|Edición|El nivel de servicio o edición de la base de datos.|**Se aplica a**: [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)], [!INCLUDE[ssSDW](../../includes/sssdw-md.md)].<br /><br /> <br /><br /> Uso general<br /><br /> Crucial para la empresa<br /><br /> Básico<br /><br /> Standard<br /><br /> Premium<br /><br /> System (de la base de datos maestra)<br /><br /> NULL = La base de datos no se ha iniciado.<br /><br /> Tipo de datos base: **nvarchar**(64)|  
 |IsAnsiNullDefault|La base de datos sigue las reglas ISO para permitir los valores NULL.|1 = TRUE<br /><br /> 0 = False<br /><br /> NULL = Entrada no válida<br /><br /> Tipo de datos base: **int**|  
 |IsAnsiNullsEnabled|Todas las comparaciones con un valor NULL tienen un resultado desconocido.|1 = TRUE<br /><br /> 0 = False<br /><br /> NULL = Entrada no válida<br /><br /> Tipo de datos base: **int**|  
 |IsAnsiPaddingEnabled|Las cadenas se rellenan a la misma longitud antes de comparar o insertar.|1 = TRUE<br /><br /> 0 = False<br /><br /> NULL = Entrada no válida<br /><br /> Tipo de datos base: **int**|  

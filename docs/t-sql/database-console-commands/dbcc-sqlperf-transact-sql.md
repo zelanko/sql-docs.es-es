@@ -1,16 +1,16 @@
 ---
 title: DBCC SQLPERF (Transact-SQL) | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 01/07/2018
 ms.prod: sql-non-specified
 ms.prod_service: sql-database
-ms.service: 
+ms.service: ''
 ms.component: t-sql|database-console-commands
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - SQLPERF
@@ -25,16 +25,16 @@ helpviewer_keywords:
 - space [SQL Server], transaction logs
 - DBCC SQLPERF statement
 ms.assetid: ec9225ce-e20f-4b03-8b3a-7bcad8a649df
-caps.latest.revision: 
+caps.latest.revision: 43
 author: barbkess
 ms.author: barbkess
 manager: craigg
 ms.workload: Active
-ms.openlocfilehash: cd615cd56860138d2e9afa7e2d7090ed27ba8e3a
-ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
+ms.openlocfilehash: ec1c32eb32b29fce5ea716c2a4e5255c7a46d445
+ms.sourcegitcommit: 8b332c12850c283ae413e0b04b2b290ac2edb672
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/25/2018
+ms.lasthandoff: 04/05/2018
 ---
 # <a name="dbcc-sqlperf-transact-sql"></a>DBCC SQLPERF (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -91,7 +91,7 @@ Las entradas del registro de transacciones que realizó cada transacción en una
 ## <a name="permissions"></a>Permisos  
 Para ejecutar consultas `DBCC SQLPERF(LOGSPACE)`, en [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] se necesita el permiso `VIEW SERVER STATE` en el servidor. Para restablecer las estadísticas de esperas y bloqueos temporales, se requiere el permiso `ALTER SERVER STATE` en el servidor.
   
-En los niveles Premium de [!INCLUDE[ssSDS](../../includes/sssds-md.md)] se necesita el permiso `VIEW DATABASE STATE` en la base de datos. En los niveles Estándar y Básico de [!INCLUDE[ssSDS](../../includes/sssds-md.md)] se requiere la cuenta de administrador de [!INCLUDE[ssSDS](../../includes/sssds-md.md)]. No se admiten el reinicio de las estadísticas de espera y bloqueos temporales.
+En los niveles Premium y críticos para la empresa de [!INCLUDE[ssSDS](../../includes/sssds-md.md)] se necesita el permiso `VIEW DATABASE STATE` en la base de datos. En los niveles estándar, básico y de uso general de [!INCLUDE[ssSDS](../../includes/sssds-md.md)], se requiere la cuenta de administrador de [!INCLUDE[ssSDS](../../includes/sssds-md.md)]. No se admiten el reinicio de las estadísticas de espera y bloqueos temporales.
   
 ## <a name="examples"></a>Ejemplos  
   

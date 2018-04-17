@@ -1,7 +1,7 @@
-# [Controlador OLE DB para SQL Server (OLE DB)](oledb-driver-for-sql-server-ole-db.md)
+# [Programación del controlador OLE DB para SQL Server](oledb-driver-for-sql-server-programming.md)
 
 # Áreas específicas
-## [Controlador OLE DB para SQL Server +](../../oledb/ole-db-driver/creating-a-oledb-driver-for-sql-server-application.md)
+## [Creación de un controlador OLE DB para aplicaciones de SQL Server +](../../oledb/ole-db-driver/creating-a-oledb-driver-for-sql-server-application.md)
 ## [Objetos de origen de datos OLE DB +](../../oledb/ole-db-data-source-objects/data-source-objects-ole-db.md)
 ## [Comandos +](../../oledb/ole-db-commands/commands.md)
 ## [Conjuntos de filas +](../../oledb/ole-db-rowsets/rowsets.md)
@@ -15,13 +15,12 @@
 ## [Interfaces +](../../oledb/ole-db-interfaces/oledb-driver-for-sql-server-ole-db-interfaces.md)
 ## [Procedimiento +](../../oledb/ole-db-how-to/ole-db-how-to-topics.md)
 
-# [Compatibilidad con FILESTREAM (OLE DB)](filestream-support-ole-db.md)
-# [Tipos definidos por el usuario de CLR grandes (OLE DB)](large-clr-user-defined-types-ole-db.md)
-# [Compatibilidad con conjuntos de filas de esquema (OLE DB)](schema-rowset-support-ole-db.md)
+# [Tipos definidos por el usuario de CLR grandes](large-clr-user-defined-types-ole-db.md)
+# [Compatibilidad con conjuntos de filas de esquema](schema-rowset-support-ole-db.md)
 # [Conjuntos de filas de esquema: compatibilidad con consultas distribuidas](schema-rowsets-distributed-query-support.md)
 # [Conjuntos de filas de esquema: conjunto de filas LINKEDSERVERS](schema-rowsets-linkedservers-rowset.md)
-# [Nombres de entidad de seguridad de servicio (SPN) en conexiones cliente (OLE DB)](service-principal-names-spns-in-client-connections-ole-db.md)
-# [Compatibilidad con columnas dispersas (OLE DB)](sparse-columns-support-ole-db.md)
+# [Nombres de entidad de seguridad del servicio (SPN) en conexiones de cliente](service-principal-names-spns-in-client-connections-ole-db.md)
+# [Compatibilidad con columnas dispersas](sparse-columns-support-ole-db.md)
 # [Procedimientos almacenados: llamada](stored-procedures-calling.md)
 # [Procedimientos almacenados: ejecución](stored-procedures-running.md)
 # [Procedimientos almacenados](stored-procedures.md)

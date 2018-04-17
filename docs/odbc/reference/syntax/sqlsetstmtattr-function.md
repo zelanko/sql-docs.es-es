@@ -2,7 +2,7 @@
 title: Función SQLSetStmtAttr | Documentos de Microsoft
 ms.custom: ''
 ms.date: 01/19/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: drivers
 ms.service: ''
 ms.component: odbc
@@ -25,13 +25,13 @@ ms.assetid: 7abc5260-733a-48d4-9974-2d1a6a9ea5f6
 caps.latest.revision: 32
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: be7fb7064f3e6508b481011ed2aa05068542cef9
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: fab28d7076d4a529b1b77a340deb2f2e411da334
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="sqlsetstmtattr-function"></a>Función SQLSetStmtAttr
 **Conformidad**  
@@ -82,7 +82,7 @@ SQLRETURN SQLSetStmtAttr(
   
  Si el *atributo* argumento es un valor específico del controlador, *ValuePtr* puede ser un entero con signo.  
   
- *StringLength*  
+ *stringLength*  
  [Entrada] Si *atributo* es un atributo definido en ODBC y *ValuePtr* apunta a una cadena de caracteres o un búfer binario, este argumento debe ser la longitud de \* *ValuePtr*. Si *atributo* es un atributo definido en ODBC y *ValuePtr* es un entero, *StringLength* se omite.  
   
  Si *atributo* es un atributo definido por el controlador, la aplicación indica la naturaleza del atributo para el Administrador de controladores al establecer el *StringLength* argumento. *StringLength* puede tener los valores siguientes:  
@@ -104,7 +104,7 @@ SQLRETURN SQLSetStmtAttr(
 |SQLSTATE|Error|Description|  
 |--------------|-----------|-----------------|  
 |01000|Advertencia general|Mensaje informativo de específicas del controlador. (La función devuelve SQL_SUCCESS_WITH_INFO).|  
-|01S02 DE SQLSTATE|Ha cambiado el valor de opción|El controlador no admitía el valor especificado en *ValuePtr*, o el valor especificado en *ValuePtr* no era válido debido a las condiciones de trabajo de implementación, por lo que el controlador sustituye un valor similar. (**SQLGetStmtAttr** se puede llamar para determinar el valor sustituido temporalmente.) El valor de reemplazo es válido para la *StatementHandle* hasta que se cierra el cursor, momento en que el atributo de instrucción revierte a su valor anterior. Los atributos de instrucción que se pueden cambiar son:<br /><br /> ATTR_CONCURRENCY SQL_ SQL_ SQL_ ATTR_CURSOR_TYPE ATTR_KEYSET_SIZE ATTR_MAX_LENGTH SQL_ SQL_ SQL_ ATTR_MAX_ROWS ATTR_QUERY_TIMEOUT SQL_ SQL_ATTR_ROW_ARRAY_SIZE ATTR_SIMULATE_CURSOR<br /><br /> (La función devuelve SQL_SUCCESS_WITH_INFO).|  
+|01S02|Ha cambiado el valor de opción|El controlador no admitía el valor especificado en *ValuePtr*, o el valor especificado en *ValuePtr* no era válido debido a las condiciones de trabajo de implementación, por lo que el controlador sustituye un valor similar. (**SQLGetStmtAttr** se puede llamar para determinar el valor sustituido temporalmente.) El valor de reemplazo es válido para la *StatementHandle* hasta que se cierra el cursor, momento en que el atributo de instrucción revierte a su valor anterior. Los atributos de instrucción que se pueden cambiar son:<br /><br /> ATTR_CONCURRENCY SQL_ SQL_ SQL_ ATTR_CURSOR_TYPE ATTR_KEYSET_SIZE ATTR_MAX_LENGTH SQL_ SQL_ SQL_ ATTR_MAX_ROWS ATTR_QUERY_TIMEOUT SQL_ SQL_ATTR_ROW_ARRAY_SIZE ATTR_SIMULATE_CURSOR<br /><br /> (La función devuelve SQL_SUCCESS_WITH_INFO).|  
 |08S01|Error de vínculo de comunicación|El vínculo de comunicación entre el controlador y el origen de datos al que se conectó el controlador no pudo antes del procesamiento de la función se ha completado.|  
 |24000|Estado de cursor no válido|El *atributo* era SQL_ATTR_CURSOR_TYPE, SQL_ATTR_CONCURRENCY, SQL_ATTR_SIMULATE_CURSOR o SQL_ATTR_USE_BOOKMARKS y abrió el cursor.|  
 |HY000|Error general|Se produjo un error para que no hubo ninguna SQLSTATE específico y para el que se ha definido ningún SQLSTATE específico de la implementación. El mensaje de error devuelto por **SQLGetDiagRec** en el  *\*MessageText* búfer describe el error y su causa.|  
@@ -166,7 +166,7 @@ SQLRETURN SQLSetStmtAttr(
 ## <a name="statement-attributes"></a>Atributos de instrucción  
  Se muestran los atributos definidos actualmente y la versión de ODBC en el que se introdujeron en la siguiente tabla. se espera que se definirán atributos más controladores para aprovechar las ventajas de diferentes orígenes de datos. Un intervalo de atributos está reservado por ODBC; los desarrolladores de controladores deben reservar los valores para su propio uso específicos del controlador de Open Group. Para obtener más información, consulte [tipos de datos específicos del controlador, Descriptor de tipos, información de tipos, tipos de diagnóstico y atributos](../../../odbc/reference/develop-app/driver-specific-data-types-descriptor-information-diagnostic.md).  
   
-|Attribute|*ValuePtr* contenido|  
+|Atributo|*ValuePtr* contenido|  
 |---------------|-------------------------|  
 |SQL_ATTR_APP_PARAM_DESC (ODBC 3.0)|El identificador para el APD para llamadas posteriores a **SQLExecute** y **SQLExecDirect** en el identificador de instrucción. El valor inicial de este atributo es el descriptor asignado implícitamente cuando la instrucción se asignó inicialmente. Si el valor de este atributo se establece en SQL_NULL_DESC o bien el controlador que se asignó originalmente para el descriptor, un identificador asignado explícitamente al APD que estaba asociado previamente con el identificador de instrucción se desasoció de él y el identificador de instrucción vuelve a la asigna implícitamente identificador APD.<br /><br /> Este atributo no puede establecerse en un identificador de descriptor que se asignó implícitamente a otra instrucción o a otro identificador de descriptor que se establece implícitamente en la misma instrucción; identificadores de descriptor asignado implícitamente no pueden asociarse con más de una instrucción o identificador de descriptor.|  
 |SQL_ATTR_APP_ROW_DESC (ODBC 3.0)|El identificador para el Descartar para las capturas siguientes en el identificador de instrucción. El valor inicial de este atributo es el descriptor asignado implícitamente cuando la instrucción se asignó inicialmente. Si el valor de este atributo se establece en SQL_NULL_DESC o bien el controlador que se asignó originalmente para el descriptor, un identificador asignado explícitamente al descartar que estaba asociado previamente con el identificador de instrucción se desasoció de él y el identificador de instrucción vuelve a la asigna implícitamente identificador descartar.<br /><br /> Este atributo no puede establecerse en un identificador de descriptor que se asignó implícitamente a otra instrucción o a otro identificador de descriptor que se establece implícitamente en la misma instrucción; identificadores de descriptor asignado implícitamente no pueden asociarse con más de una instrucción o identificador de descriptor.|  

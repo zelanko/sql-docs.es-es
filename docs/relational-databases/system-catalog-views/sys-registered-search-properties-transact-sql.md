@@ -1,16 +1,16 @@
 ---
-title: sys.registered_search_properties (Transact-SQL) | Microsoft Docs
-ms.custom: 
+title: Sys.registered_search_properties (Transact-SQL) | Documentos de Microsoft
+ms.custom: ''
 ms.date: 06/10/2016
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine, sql-database
-ms.service: 
+ms.service: ''
 ms.component: system-catalog-views
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - sys.registered_search_properties
@@ -26,16 +26,17 @@ helpviewer_keywords:
 - search property lists [SQL Server], viewing registered properties
 - sys.registered_search_properties catalog view
 ms.assetid: 1b9a7a5c-8c05-4819-83c3-7487dd08fcf7
-caps.latest.revision: 
+caps.latest.revision: 20
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 3aee06ae6a5be4cf7c0aa6e37288dc71aee8a108
-ms.sourcegitcommit: c556eaf60a49af7025db35b7aa14beb76a8158c5
+monikerRange: = azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions
+ms.openlocfilehash: e9ae52577d2e48adefc033b99ec4ca8be4f98650
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/03/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="sysregisteredsearchproperties-transact-sql"></a>sys.registered_search_properties (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -49,7 +50,7 @@ ms.lasthandoff: 02/03/2018
 |**property_int_id**|**int**|Entero que identifica esta propiedad de búsqueda en el conjunto de propiedades. **property_int_id** es único en el conjunto de propiedades.|  
 |**property_name**|**nvarchar(64)**|Nombre que identifica de forma exclusiva esta propiedad de búsqueda en la lista de propiedades de búsqueda.<br /><br /> Nota: Para buscar una propiedad, especifique el nombre de esta propiedad en el [CONTAINS](../../t-sql/queries/contains-transact-sql.md) predicado.|  
 |**property_description**|**nvarchar(512)**|Descripción de la propiedad.|  
-|**property_id**|**int**|Identificador de propiedad interno de la propiedad de búsqueda dentro de la lista de propiedades de búsqueda identificada por la **property_list_id** valor.<br /><br /> Cuando una propiedad determinada se agrega a una lista de propiedades de búsqueda dada, el servicio Motor de búsqueda de texto completo registra la propiedad y le asigna un identificador de propiedad interno que es específico de esa lista de propiedades. El identificador de propiedad interno, que es un entero, es único para una lista de propiedades de búsqueda determinada. Si una propiedad determinada se registra para varias listas de propiedades de búsqueda, se puede asignar un identificador de propiedad interno diferente para cada lista de propiedades de búsqueda.<br /><br /> Nota: El identificador de propiedad interno es distinto al identificador entero que se especifica al agregar la propiedad a la lista de propiedades de búsqueda. Para obtener más información, vea [Buscar propiedades de documento con listas de propiedades de búsqueda](../../relational-databases/search/search-document-properties-with-search-property-lists.md).<br /><br /> Para ver todos los relacionados con la propiedad de contenido en el índice de texto completo: <br />                  [sys.dm_fts_index_keywords_by_property &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-fts-index-keywords-by-property-transact-sql.md)|  
+|**identificador property_id**|**int**|Identificador de propiedad interno de la propiedad de búsqueda dentro de la lista de propiedades de búsqueda identificada por la **property_list_id** valor.<br /><br /> Cuando una propiedad determinada se agrega a una lista de propiedades de búsqueda dada, el servicio Motor de búsqueda de texto completo registra la propiedad y le asigna un identificador de propiedad interno que es específico de esa lista de propiedades. El identificador de propiedad interno, que es un entero, es único para una lista de propiedades de búsqueda determinada. Si una propiedad determinada se registra para varias listas de propiedades de búsqueda, se puede asignar un identificador de propiedad interno diferente para cada lista de propiedades de búsqueda.<br /><br /> Nota: El identificador de propiedad interno es distinto al identificador entero que se especifica al agregar la propiedad a la lista de propiedades de búsqueda. Para obtener más información, vea [Buscar propiedades de documento con listas de propiedades de búsqueda](../../relational-databases/search/search-document-properties-with-search-property-lists.md).<br /><br /> Para ver todos los relacionados con la propiedad de contenido en el índice de texto completo: <br />                  [sys.dm_fts_index_keywords_by_property &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-fts-index-keywords-by-property-transact-sql.md)|  
   
 ## <a name="remarks"></a>Comentarios  
  Para obtener más información acerca de las listas de propiedades de búsqueda, vea [buscar propiedades de documento con listas de propiedades de búsqueda](../../relational-databases/search/search-document-properties-with-search-property-lists.md).  
@@ -72,7 +73,7 @@ GO
   
 ## <a name="see-also"></a>Vea también  
  [ALTER FULLTEXT INDEX &#40;Transact-SQL&#41;](../../t-sql/statements/alter-fulltext-index-transact-sql.md)   
- [Sys.fulltext_indexes &#40; Transact-SQL &#41;](../../relational-databases/system-catalog-views/sys-fulltext-indexes-transact-sql.md)   
+ [Sys.fulltext_indexes & #40; Transact-SQL & #41;](../../relational-databases/system-catalog-views/sys-fulltext-indexes-transact-sql.md)   
  [Buscar propiedades de documento con listas de propiedades de búsqueda](../../relational-databases/search/search-document-properties-with-search-property-lists.md)  
   
   

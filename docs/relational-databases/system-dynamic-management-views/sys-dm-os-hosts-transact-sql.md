@@ -1,8 +1,8 @@
 ---
-title: sys.dm_os_hosts (Transact-SQL) | Microsoft Docs
+title: Sys.dm_os_hosts (Transact-SQL) | Documentos de Microsoft
 ms.custom: ''
 ms.date: 08/18/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine
 ms.service: ''
 ms.component: dmv's
@@ -27,11 +27,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 3d577d22906f6cfa73275a4624a95510a0d506ab
-ms.sourcegitcommit: 8b332c12850c283ae413e0b04b2b290ac2edb672
+ms.openlocfilehash: ce4f4f05071fe56f4543c1bdaafdbed367b17ea6
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/05/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="sysdmoshosts-transact-sql"></a>sys.dm_os_hosts (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -43,7 +43,7 @@ ms.lasthandoff: 04/05/2018
   
 |Nombre de columna|Tipo de datos|Description|  
 |-----------------|---------------|-----------------|  
-|**host_address**|**varbinary(8)**|Dirección de memoria interna del objeto host.|  
+|**host_address**|**varbinary (8)**|Dirección de memoria interna del objeto host.|  
 |**Tipo**|**nvarchar(60)**|Tipo de componente hospedado. Por ejemplo,<br /><br /> SOSHOST_CLIENTID_SERVERSNI= Interfaz de SQL Server Native<br /><br /> SOSHOST_CLIENTID_SQLOLEDB = Proveedor OLE DB de SQL Server Native Client<br /><br /> SOSHOST_CLIENTID_MSDART = Tiempo de ejecución de Microsoft Data Access|  
 |**Nombre**|**nvarchar(32)**|Nombre del host.|  
 |**enqueued_tasks_count**|**int**|Número total de tareas que este host ha colocado en colas en [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].|  
@@ -51,7 +51,7 @@ ms.lasthandoff: 04/05/2018
 |**completed_ios_count**|**int**|Número total de E/S emitidas y completadas mediante este host.|  
 |**completed_ios_in_bytes**|**bigint**|Recuento total de bytes de E/S completadas mediante este host.|  
 |**active_ios_count**|**int**|Número total de solicitudes de E/S relacionadas con este host que esperan actualmente a completarse.|  
-|**default_memory_clerk_address**|**varbinary(8)**|Dirección de memoria del objeto del distribuidor de memoria asociado a este host. Para obtener más información, consulte [sys.dm_os_memory_clerks &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-os-memory-clerks-transact-sql.md).|  
+|**default_memory_clerk_address**|**varbinary (8)**|Dirección de memoria del objeto del distribuidor de memoria asociado a este host. Para obtener más información, consulte [sys.dm_os_memory_clerks &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-os-memory-clerks-transact-sql.md).|  
 |**pdw_node_id**|**int**|**Se aplica a**: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)], [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]<br /><br /> El identificador para el nodo que se encuentra en esta distribución.|  
   
 ## <a name="permissions"></a>Permissions

@@ -1,16 +1,16 @@
 ---
-title: syscollector_execution_log_full (Transact-SQL) | Microsoft Docs
-ms.custom: 
+title: syscollector_execution_log_full (Transact-SQL) | Documentos de Microsoft
+ms.custom: ''
 ms.date: 06/10/2016
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine
-ms.service: 
+ms.service: ''
 ms.component: system-catalog-views
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - syscollector_execution_log_full
@@ -21,16 +21,16 @@ helpviewer_keywords:
 - data collector view
 - syscollector_execution_log_full view
 ms.assetid: 6c8db22d-2e4c-4b7c-ac5a-8762ef1b175b
-caps.latest.revision: 
+caps.latest.revision: 18
 author: stevestein
 ms.author: sstein
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 93ff62b9c91fee116679d0fb9ffe7d6b28f61024
-ms.sourcegitcommit: c556eaf60a49af7025db35b7aa14beb76a8158c5
+ms.openlocfilehash: c1c5eb4ef3a15b8c7183038cd526c7bbbc66c13a
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/03/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="syscollectorexecutionlogfull-transact-sql"></a>syscollector_execution_log_full (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -48,7 +48,7 @@ ms.lasthandoff: 02/03/2018
 |last_iteration_time|**datetime**|Para los paquetes que se ejecutan de manera continua, la última vez que el paquete capturó una instantánea. Acepta valores NULL.|  
 |finish_time|**datetime**|La hora de finalización de la ejecución de los conjuntos de recopilación y paquetes completados. Acepta valores NULL.|  
 |duration|**int**|El tiempo, en segundos, de ejecución del paquete o conjunto de recopilación. Acepta valores NULL.|  
-|failure_message|**nvarchar(2048)**|En caso de error del paquete o conjunto de recopilación, el mensaje de error más reciente para ese componente. Acepta valores NULL. Para obtener información más detallada del error, utilice el [fn_syscollector_get_execution_details &#40; Transact-SQL &#41; ](../../relational-databases/system-functions/fn-syscollector-get-execution-details-transact-sql.md) (función).|  
+|failure_message|**nvarchar(2048)**|En caso de error del paquete o conjunto de recopilación, el mensaje de error más reciente para ese componente. Acepta valores NULL. Para obtener información más detallada del error, utilice la [fn_syscollector_get_execution_details &#40;Transact-SQL&#41; ](../../relational-databases/system-functions/fn-syscollector-get-execution-details-transact-sql.md) (función).|  
 |operador|**nvarchar(128)**|Identifica quién inició el paquete o conjunto de recopilación. Acepta valores NULL.|  
 |package_execution_id|**uniqueidentifier**|Proporciona un vínculo a la tabla de registros [!INCLUDE[ssIS](../../includes/ssis-md.md)]. Acepta valores NULL.|  
 |collection_set_id|**int**|Proporciona un vínculo a la tabla de configuración de recopilaciones de datos en msdb. Acepta valores NULL.|  

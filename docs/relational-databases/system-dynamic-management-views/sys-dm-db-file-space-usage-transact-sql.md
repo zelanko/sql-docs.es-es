@@ -1,8 +1,8 @@
 ---
-title: sys.dm_db_file_space_usage (Transact-SQL) | Microsoft Docs
+title: Sys.dm_db_file_space_usage (Transact-SQL) | Documentos de Microsoft
 ms.custom: ''
 ms.date: 03/16/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
 ms.service: ''
 ms.component: dmv's
@@ -27,11 +27,12 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 65be93c18aed0f9c03ea781ee7de3069c4e99698
-ms.sourcegitcommit: 8b332c12850c283ae413e0b04b2b290ac2edb672
+monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
+ms.openlocfilehash: 75bc2c0256697c030fa369487407483de63c0c62
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/05/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="sysdmdbfilespaceusage-transact-sql"></a>sys.dm_db_file_space_usage (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -49,7 +50,7 @@ ms.lasthandoff: 04/05/2018
 |total_page_count|**bigint**|**Se aplica a**: desde [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] hasta [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].<br /><br /> Número total de páginas del archivo.|  
 |allocated_extent_page_count|**bigint**|**Se aplica a**: desde [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] hasta [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].<br /><br /> Número total de páginas de las extensiones asignadas en el archivo.|  
 |unallocated_extent_page_count|**bigint**|Número total de páginas en las extensiones no asignadas en el archivo.<br /><br /> No se incluyen las páginas no utilizadas en extensiones asignadas.|  
-|version_store_reserved_page_count|**bigint**|Número total de páginas en las extensiones uniformes asignadas para el almacén de versiones. Las páginas de almacén de la versión nunca se asignan desde extensiones mixtas.<br /><br /> No se incluyen las páginas IAM porque siempre se asignan desde extensiones mixtas. Se incluyen las páginas PFS si están asignadas desde una extensión uniforme.<br /><br /> Para obtener más información, consulte [sys.dm_tran_version_store &#40; Transact-SQL &#41; ](../../relational-databases/system-dynamic-management-views/sys-dm-tran-version-store-transact-sql.md).|  
+|version_store_reserved_page_count|**bigint**|Número total de páginas en las extensiones uniformes asignadas para el almacén de versiones. Las páginas de almacén de la versión nunca se asignan desde extensiones mixtas.<br /><br /> No se incluyen las páginas IAM porque siempre se asignan desde extensiones mixtas. Se incluyen las páginas PFS si están asignadas desde una extensión uniforme.<br /><br /> Para obtener más información, consulte [sys.dm_tran_version_store & #40; Transact-SQL & #41; ](../../relational-databases/system-dynamic-management-views/sys-dm-tran-version-store-transact-sql.md).|  
 |user_object_reserved_page_count|**bigint**|Número total de páginas asignadas desde extensiones uniformes para objetos de usuario en la base de datos. En el recuento se incluyen las páginas no utilizadas de una extensión asignada.<br /><br /> No se incluyen las páginas IAM porque siempre se asignan desde extensiones mixtas. Se incluyen las páginas PFS si están asignadas desde una extensión uniforme.<br /><br /> Puede usar la columna total_pages de la [sys.allocation_units](../../relational-databases/system-catalog-views/sys-allocation-units-transact-sql.md) vista para devolver el recuento de páginas reservadas de cada unidad de asignación en el objeto de usuario de catálogo. No obstante, tenga en cuenta que la columna total_pages incluye las páginas IAM.|  
 |internal_object_reserved_page_count|**bigint**|Número total de páginas en extensiones uniformes asignadas para objetos internos en el archivo. En el recuento se incluyen las páginas no utilizadas de una extensión asignada.<br /><br /> No se incluyen las páginas IAM porque siempre se asignan desde extensiones mixtas. Se incluyen las páginas PFS si están asignadas desde una extensión uniforme.<br /><br /> No existe ninguna vista de catálogo ni objeto de administración dinámica que devuelva el recuento de páginas de cada objeto interno.|  
 |mixed_extent_page_count|**bigint**|Número total de páginas asignadas y no asignadas en extensiones mixtas asignadas en el archivo. Las extensiones mixtas contienen páginas asignadas a diferentes objetos. Este recuento no incluye todas las páginas IAM del archivo.|

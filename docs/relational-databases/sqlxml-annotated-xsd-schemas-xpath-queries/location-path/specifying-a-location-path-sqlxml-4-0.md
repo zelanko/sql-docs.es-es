@@ -1,16 +1,16 @@
 ---
-title: "Especificar una ruta de acceso de ubicación (SQLXML 4.0) | Documentos de Microsoft"
-ms.custom: 
+title: Especificar una ruta de acceso de ubicación (SQLXML 4.0) | Documentos de Microsoft
+ms.custom: ''
 ms.date: 03/17/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine, sql-database
-ms.service: 
+ms.service: ''
 ms.component: sqlxml
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - dbe-xml
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: reference
 helpviewer_keywords:
 - absolute location path
@@ -19,20 +19,21 @@ helpviewer_keywords:
 - relative location path [SQLXML]
 - location path for XPath query
 ms.assetid: a23a2b75-bc69-49f0-99db-05e14dc15bc0
-caps.latest.revision: 
+caps.latest.revision: 24
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: f704e45b165ecb4e29d909bcce09f7af92fb0989
-ms.sourcegitcommit: 37f0b59e648251be673389fa486b0a984ce22c81
+monikerRange: = azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions
+ms.openlocfilehash: 7261e153c988a0764327e3d247a3da31d7463af3
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/12/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="specifying-a-location-path-sqlxml-40"></a>Especificar una ruta de acceso de ubicación (SQLXML 4.0)
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
-Las consultas XPath se especifican en forma de expresión. Existen varios tipos de expresiones. Una ruta de acceso de ubicación es una expresión que selecciona un conjunto de nodos relativos al nodo de contexto. El resultado de evaluar una ruta de acceso de ubicación es un conjunto de nodos.  
+  Las consultas XPath se especifican en forma de expresión. Existen varios tipos de expresiones. Una ruta de acceso de ubicación es una expresión que selecciona un conjunto de nodos relativos al nodo de contexto. El resultado de evaluar una ruta de acceso de ubicación es un conjunto de nodos.  
   
 ## <a name="types-of-location-paths"></a>Tipos de rutas de acceso de ubicación  
  Una ruta de acceso de ubicación puede usar cualquiera de estos formatos:  
@@ -46,7 +47,7 @@ Las consultas XPath se especifican en forma de expresión. Existen varios tipos 
      Una ruta de acceso de ubicación relativa comienza en el nodo de contexto del documento. Una ruta de acceso de ubicación consta de un flujo de uno o más pasos de ubicación separados por una barra diagonal (/). Cada paso selecciona un conjunto de nodos relativos al nodo de contexto. La secuencia inicial de pasos selecciona un conjunto de nodos relativo a un nodo de contexto. Cada uno de los nodos de este conjunto se utiliza como un nodo de contexto en el paso siguiente. Los conjuntos de nodos identificados por este paso se unen. Por ejemplo, **child:: Order/child:: OrderDetail** selecciona el  **\<OrderDetail >** elementos secundarios de la  **\<orden >** elemento elementos secundarios del nodo de contexto.  
   
     > [!NOTE]  
-    >  En la implementación SQLXML 4.0 de XPath, cada consulta XPath comienza en el contexto raíz, aunque la consulta XPath no sea explícitamente absoluta. Por ejemplo, una consulta XPath que comienza por "Customer" se trata como "/Customer". En la consulta XPath **Customer [Order]**, Customer comienza en el contexto raíz, pero Order comienza en el contexto de cliente. Para obtener más información, vea [Introducción a utilizar consultas XPath &#40; SQLXML 4.0 &#41; ](../../../relational-databases/sqlxml-annotated-xsd-schemas-xpath-queries/introduction-to-using-xpath-queries-sqlxml-4-0.md).  
+    >  En la implementación SQLXML 4.0 de XPath, cada consulta XPath comienza en el contexto raíz, aunque la consulta XPath no sea explícitamente absoluta. Por ejemplo, una consulta XPath que comienza por "Customer" se trata como "/Customer". En la consulta XPath **Customer [Order]**, Customer comienza en el contexto raíz, pero Order comienza en el contexto de cliente. Para obtener más información, consulte [Introducción a las consultas de XPath utilizando &#40;SQLXML 4.0&#41;](../../../relational-databases/sqlxml-annotated-xsd-schemas-xpath-queries/introduction-to-using-xpath-queries-sqlxml-4-0.md).  
   
 ## <a name="location-steps"></a>Pasos de ubicación  
  Una ruta de acceso de ubicación (absoluta o relativa) está compuesta por pasos de ubicación que contienen tres partes:  
@@ -68,13 +69,13 @@ Las consultas XPath se especifican en forma de expresión. Existen varios tipos 
      La sintaxis de un paso de ubicación es el nombre de eje y la prueba de nodo separados por dos signos de dos puntos (::), seguidos de cero o más expresiones, cada una de ellas entre corchetes. Por ejemplo, la expresión de XPath (ruta de acceso de ubicación) **child:: Customer [@CustomerID= 'ALFKI']** selecciona todos los  **\<cliente >** elementos secundarios del nodo de contexto. La prueba del predicado se aplica al conjunto de nodos, que sólo devuelve el  **\<cliente >** nodos de elemento con el atributo de valor 'ALFKI' para su **CustomerID** atributo.  
   
 ## <a name="in-this-section"></a>En esta sección  
- [Especificar un eje &#40; SQLXML 4.0 &#41;](../../../relational-databases/sqlxml-annotated-xsd-schemas-xpath-queries/location-path/specifying-an-axis-sqlxml-4-0.md)  
+ [Especificar un eje &#40;SQLXML 4.0&#41;](../../../relational-databases/sqlxml-annotated-xsd-schemas-xpath-queries/location-path/specifying-an-axis-sqlxml-4-0.md)  
  Proporciona ejemplos sobre la forma de especificar un eje.  
   
- [Especificar una prueba de nodo en la ruta de acceso de ubicación &#40; SQLXML 4.0 &#41;](../../../relational-databases/sqlxml-annotated-xsd-schemas-xpath-queries/location-path/specifying-a-node-test-in-the-location-path-sqlxml-4-0.md)  
+ [Especificar una prueba de nodo en la ruta de acceso de ubicación &#40;SQLXML 4.0&#41;](../../../relational-databases/sqlxml-annotated-xsd-schemas-xpath-queries/location-path/specifying-a-node-test-in-the-location-path-sqlxml-4-0.md)  
  Proporciona ejemplos sobre la forma de especificar una prueba de nodo.  
   
- [Especificar predicados de selección en la ruta de acceso de ubicación &#40; SQLXML 4.0 &#41;](../../../relational-databases/sqlxml-annotated-xsd-schemas-xpath-queries/location-path/specifying-selection-predicates-in-the-location-path-sqlxml-4-0.md)  
+ [Especificar predicados de selección en la ruta de acceso de ubicación &#40;SQLXML 4.0&#41;](../../../relational-databases/sqlxml-annotated-xsd-schemas-xpath-queries/location-path/specifying-selection-predicates-in-the-location-path-sqlxml-4-0.md)  
  Proporciona ejemplos sobre la forma de especificar predicados de selección.  
   
   

@@ -1,16 +1,16 @@
 ---
 title: Sys.bandwidth_usage (base de datos de SQL Azure) | Documentos de Microsoft
-ms.custom: 
+ms.custom: ''
 ms.date: 03/04/2017
-ms.prod: 
+ms.prod: ''
 ms.prod_service: sql-database
-ms.reviewer: 
+ms.reviewer: ''
 ms.service: sql-database
 ms.component: system-catalog-views
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - bandwidth_usage
@@ -23,16 +23,17 @@ helpviewer_keywords:
 - sys.bandwidth_usage
 - bandwidth_usage
 ms.assetid: 43ed8435-f059-4907-b5c0-193a258b394a
-caps.latest.revision: 
+caps.latest.revision: 21
 author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: d30cab1768b293c7cbc2e53729f8e8e8564a53d3
-ms.sourcegitcommit: 45e4efb7aa828578fe9eb7743a1a3526da719555
+monikerRange: = azure-sqldw-latest || = sqlallproducts-allversions
+ms.openlocfilehash: b61df6847269b609ba6a474b0ad87a355d5abe9b
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="sysbandwidthusage-azure-sql-database"></a>sys.bandwidth_usage (Azure SQL Database)
 [!INCLUDE[tsql-appliesto-xxxxxx-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-xxxxxx-asdb-xxxx-xxx-md.md)]
@@ -49,10 +50,10 @@ ms.lasthandoff: 11/21/2017
 |-----------------|-----------------|  
 |**time**|La hora a la que se utilizó el ancho de banda. Las filas de esta vista ofrecen información por horas. Por ejemplo, 2009-09-19 02:00:00.000 significa que el ancho de banda se consumió el 19 de septiembre de 2009 entre las 2:00 a. m. y las 3:00 a. m.|  
 |**database_name**|El nombre de la base de datos que utilizó ancho de banda.|  
-|**dirección**|El tipo de ancho banda utilizado, que puede ser:<br /><br /> Entrada: Datos que se mueven hacia la [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)].<br /><br /> Salida: Datos que se mueven fuera de la [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)].|  
-|**clase**|La clase de ancho banda utilizada, que puede ser:<br />Interno: Los datos que se mueven dentro de la plataforma Windows Azure.<br />Externos: Datos que se mueven fuera de la plataforma Windows Azure.<br /><br /> Esta clase solo se devuelve si la base de datos está implicada en una relación de copia continua entre regiones ([!INCLUDE[ssGeoDR](../../includes/ssgeodr-md.md)]). Si una determinada base de datos no participa en una relación continua de copias, no se devuelven filas “Interlink”. Para más información, vea la sección “Comentarios” más adelante en este tema.|  
+|**Dirección**|El tipo de ancho banda utilizado, que puede ser:<br /><br /> Entrada: Datos que se mueven hacia la [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)].<br /><br /> Salida: Datos que se mueven fuera de la [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)].|  
+|**class**|La clase de ancho banda utilizada, que puede ser:<br />Interno: Los datos que se mueven dentro de la plataforma Windows Azure.<br />Externos: Datos que se mueven fuera de la plataforma Windows Azure.<br /><br /> Esta clase solo se devuelve si la base de datos está implicada en una relación de copia continua entre regiones ([!INCLUDE[ssGeoDR](../../includes/ssgeodr-md.md)]). Si una determinada base de datos no participa en una relación continua de copias, no se devuelven filas “Interlink”. Para más información, vea la sección “Comentarios” más adelante en este tema.|  
 |**time_period**|El período de tiempo cuando se produjo el uso es punta o fuera de horas pico. El valor Peak va en función de la región en la que se creó el servidor. Por ejemplo, si se creó un servidor en la región "US_Northwest”, las horas pico se definen como una hora comprendida entre las 10:00 a. m. y a las 06:00:00 p. m. PST.|  
-|**cantidad**|La cantidad de ancho banda consumido, en kilobytes (KB).|  
+|**Cantidad**|La cantidad de ancho banda consumido, en kilobytes (KB).|  
   
 ## <a name="permissions"></a>Permissions  
  Esta vista solo está disponible en la **maestro** base de datos para el inicio de sesión de entidad de seguridad de nivel de servidor.  

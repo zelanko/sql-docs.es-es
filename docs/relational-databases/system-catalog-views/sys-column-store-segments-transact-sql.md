@@ -1,16 +1,16 @@
 ---
-title: sys.column_store_segments (Transact-SQL) | Microsoft Docs
-ms.custom: 
+title: Sys.column_store_segments (Transact-SQL) | Documentos de Microsoft
+ms.custom: ''
 ms.date: 01/15/2018
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine
-ms.service: 
+ms.service: ''
 ms.component: system-catalog-views
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - column_store_segments
@@ -22,16 +22,16 @@ dev_langs:
 helpviewer_keywords:
 - sys.column_store_segments catalog view
 ms.assetid: 1253448c-2ec9-4900-ae9f-461d6b51b2ea
-caps.latest.revision: 
+caps.latest.revision: 20
 author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: f73379d3ae23570f95209631444d1335279a5ef5
-ms.sourcegitcommit: 6b4aae3706247ce9b311682774b13ac067f60a79
+ms.openlocfilehash: 648535c4c8a28078dba7070026f3eafec1ac32a7
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/18/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="syscolumnstoresegments-transact-sql"></a>sys.column_store_segments (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2014-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2014-xxxx-xxxx-xxx-md.md)]
@@ -49,7 +49,7 @@ Devuelve una fila para cada segmento de columna en un índice de almacén de col
 |**row_count**|**int**|Número de filas del grupo de filas.|  
 |**has_nulls**|**int**|1 si el segmento de la columna tiene valores NULL.|  
 |**base_id**|**bigint**|Identificador del valor base si se utiliza la codificación de tipo 1.  Si no se utiliza la codificación de tipo 1, base_id se establece en -1.|  
-|**magnitude**|**float**|Magnitud si se utiliza el tipo de codificación 1.  Si el tipo de codificación 1 no se está usando, magnitud se establece en -1.|  
+|**magnitud**|**float**|Magnitud si se utiliza el tipo de codificación 1.  Si el tipo de codificación 1 no se está usando, magnitud se establece en -1.|  
 |**primary_dictionary_id**|**int**|Un valor de 0 representa el diccionario global. Un valor de -1 indica que no hay ningún diccionario global creado para esta columna.|  
 |**secondary_dictionary_id**|**int**|Un valor distinto de cero apunta al diccionario local para esta columna en el segmento actual (es decir, el grupo de filas). Un valor de -1 indica que no hay ningún diccionario local para este segmento.|  
 |**min_data_id**|**bigint**|Identificador de datos mínimo en el segmento de columna.|  
@@ -79,11 +79,11 @@ GO
  [!INCLUDE[ssCatViewPerm](../../includes/sscatviewperm-md.md)] Para obtener más información, consulte [Metadata Visibility Configuration](../../relational-databases/security/metadata-visibility-configuration.md).  
   
 ## <a name="see-also"></a>Vea también  
- [Vistas de catálogo de objetos &#40; Transact-SQL &#41;](../../relational-databases/system-catalog-views/object-catalog-views-transact-sql.md)   
+ [Object Catalog Views &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/object-catalog-views-transact-sql.md)  (Vistas de catálogo de objetos [Transact-SQL])  
  [Vistas de catálogo &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/catalog-views-transact-sql.md)   
  [Consultar el catálogo de sistema SQL Server preguntas más frecuentes](../../relational-databases/system-catalog-views/querying-the-sql-server-system-catalog-faq.md)   
  [sys.columns &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-columns-transact-sql.md)   
- [sys.all_columns &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-all-columns-transact-sql.md)   
+ [Sys.ALL_COLUMNS &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-all-columns-transact-sql.md)   
  [sys.computed_columns &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-computed-columns-transact-sql.md)   
  [Guía de índices de almacén de columnas](~/relational-databases/indexes/columnstore-indexes-overview.md)    
  [sys.column_store_dictionaries &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-column-store-dictionaries-transact-sql.md)  

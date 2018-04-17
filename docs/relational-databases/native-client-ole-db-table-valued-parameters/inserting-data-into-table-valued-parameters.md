@@ -1,29 +1,30 @@
 ---
-title: "Insertar datos en parámetros con valores de tabla | Documentos de Microsoft"
-ms.custom: 
+title: Insertar datos en parámetros con valores de tabla | Documentos de Microsoft
+ms.custom: ''
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
-ms.service: 
+ms.service: ''
 ms.component: native-client-ole-db-table-valued-parameters
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: 
-ms.tgt_pltfrm: 
+ms.technology: ''
+ms.tgt_pltfrm: ''
 ms.topic: reference
 helpviewer_keywords:
 - table-valued parameters, inserting data into
 ms.assetid: 9c1a3234-4675-40d3-b473-8df06208f880
-caps.latest.revision: 
+caps.latest.revision: 31
 author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 9f40d26c1e3d44e90375907845ea5ee60ef414fb
-ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
+monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
+ms.openlocfilehash: 0534cbffdd678f35669d24fb66fb6da6b56e433f
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/25/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="inserting-data-into-table-valued-parameters"></a>Insertar datos en parámetros con valores de tabla
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -58,15 +59,15 @@ ms.lasthandoff: 01/25/2018
   
  Para usar el modelo de extracción, los consumidores deben proporcionar su propia implementación de un objeto de conjunto de filas. Cuando se usa el modelo de extracción con conjuntos de filas de parámetro con valores de tabla (CLSID_ROWSET_TVP), el consumidor se debe agregar el objeto de conjunto de filas de parámetro con valores de tabla que el proveedor expone a través de la ITableDefinitionWithConstraints:: Método CreateTableWithConstraints o el método IOpenRowset:: OpenRowset. Solo se espera que el objeto de consumidor invalide la implementación de la interfaz IRowset. Debe invalidar las funciones siguientes:  
   
--   IRowset::GetNextRows  
+-   IRowset:: GetNextRows  
   
 -   IRowset::AddRefRows  
   
--   IRowset::GetData  
+-   IRowset:: GetData  
   
 -   IRowset::ReleaseRows  
   
--   IRowset::RestartPosition  
+-   IRowset:: RestartPosition  
   
  El proveedor OLE DB de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client leerá una o varias filas del objeto de conjunto de filas del consumidor a la vez para admitir el comportamiento de transmisión por secuencias en parámetros con valores de tabla. Por ejemplo, el usuario puede tener los datos de conjunto de filas de parámetros con valores de tabla en el disco (no en la memoria) e implementar la funcionalidad necesaria para leer datos del disco cuando así lo requiera el proveedor OLE DB de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client.  
   
@@ -79,7 +80,7 @@ ms.lasthandoff: 01/25/2018
  En tiempo de ejecución, el proveedor OLE DB de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client volverá a llamar al objeto de conjunto de filas para capturar las filas y leer los datos de columna.  
   
 ## <a name="see-also"></a>Vea también  
- [Con valores de tabla parámetros &#40; OLE DB &#41;](../../relational-databases/native-client-ole-db-table-valued-parameters/table-valued-parameters-ole-db.md)   
- [Usar con valores de tabla parámetros &#40; OLE DB &#41;](../../relational-databases/native-client-ole-db-how-to/use-table-valued-parameters-ole-db.md)  
+ [Parámetros con valores de tabla &#40;OLE DB&#41;](../../relational-databases/native-client-ole-db-table-valued-parameters/table-valued-parameters-ole-db.md)   
+ [Usar con valores de tabla parámetros & #40; OLE DB & #41;](../../relational-databases/native-client-ole-db-how-to/use-table-valued-parameters-ole-db.md)  
   
   

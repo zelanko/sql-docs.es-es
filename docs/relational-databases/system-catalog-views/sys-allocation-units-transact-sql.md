@@ -1,16 +1,16 @@
 ---
 title: Sys.allocation_units (Transact-SQL) | Documentos de Microsoft
-ms.custom: 
+ms.custom: ''
 ms.date: 06/10/2016
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine, sql-database
-ms.service: 
+ms.service: ''
 ms.component: system-catalog-views
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - sys.allocation_units_TSQL
@@ -22,16 +22,17 @@ dev_langs:
 helpviewer_keywords:
 - sys.allocation_units catalog view
 ms.assetid: ec9de780-68fd-4551-b70b-2d3ab3709b3e
-caps.latest.revision: 
+caps.latest.revision: 44
 author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: ae268f41550268aab1afb03b587d2fd5e735e911
-ms.sourcegitcommit: 9fbe5403e902eb996bab0b1285cdade281c1cb16
+monikerRange: = azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions
+ms.openlocfilehash: 32a9850ab45de9ddd9b32fb7b308584ffadd5c00
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/27/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="sysallocationunits-transact-sql"></a>sys.allocation_units (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -42,7 +43,7 @@ ms.lasthandoff: 11/27/2017
 |-----------------|---------------|-----------------|  
 |allocation_unit_id|**bigint**|Id. de la unidad de asignación. Es único en una base de datos.|  
 |Tipo|**tinyint**|Tipo de unidad de asignación:<br /><br /> 0 = Quitado<br /><br /> 1 = Datos de fila (todos los tipos de datos, excepto datos LOB)<br /><br /> 2 = datos de objetos grandes (LOB) (**texto**, **ntext**, **imagen**, **xml**, tipos de valor grande y tipos CLR definidos por el usuario)<br /><br /> 3 = Datos de desbordamiento de fila|  
-|type_desc|**nvarchar (60)**|Descripción del tipo de unidad de asignación:<br /><br /> **QUITAR**<br /><br /> **IN_ROW_DATA**<br /><br /> **LOB_DATA**<br /><br /> **ROW_OVERFLOW_DATA**|  
+|type_desc|**nvarchar(60)**|Descripción del tipo de unidad de asignación:<br /><br /> **QUITAR**<br /><br /> **IN_ROW_DATA**<br /><br /> **LOB_DATA**<br /><br /> **ROW_OVERFLOW_DATA**|  
 |container_id|**bigint**|Id. del contenedor de almacenamiento asociado con la unidad de asignación.<br /><br /> Si type = 1 ó 3, container_id = sys.partitions.hobt_id.<br /><br /> Si type = 2, entonces container_id = sys.partitions.partition_id.<br /><br /> 0 = Unidad de asignación marcada para eliminación diferida|  
 |data_space_id|**int**|Id. del grupo de archivos donde reside la unidad de asignación.|  
 |total_pages|**bigint**|Número total de páginas asignadas o reservadas por esta unidad de asignación.|  
@@ -56,8 +57,8 @@ ms.lasthandoff: 11/27/2017
  Debe pertenecer al rol **public** . Para obtener más información, consulte [Metadata Visibility Configuration](../../relational-databases/security/metadata-visibility-configuration.md).  
   
 ## <a name="see-also"></a>Vea también  
- [Sys.Partitions &#40; Transact-SQL &#41;](../../relational-databases/system-catalog-views/sys-partitions-transact-sql.md)   
- [Vistas de catálogo de objetos &#40; Transact-SQL &#41;](../../relational-databases/system-catalog-views/object-catalog-views-transact-sql.md)   
+ [sys.partitions &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-partitions-transact-sql.md)   
+ [Object Catalog Views &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/object-catalog-views-transact-sql.md)  (Vistas de catálogo de objetos [Transact-SQL])  
  [Vistas de catálogo &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/catalog-views-transact-sql.md)  
   
   

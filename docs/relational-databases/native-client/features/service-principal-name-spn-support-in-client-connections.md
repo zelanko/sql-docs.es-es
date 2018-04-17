@@ -1,15 +1,15 @@
 ---
 title: Compatibilidad de nombre Principal de servicio (SPN) en conexiones de cliente | Documentos de Microsoft
-ms.custom: 
+ms.custom: ''
 ms.date: 08/08/2016
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
-ms.service: 
+ms.service: ''
 ms.component: native-client|features
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: 
-ms.tgt_pltfrm: 
+ms.technology: ''
+ms.tgt_pltfrm: ''
 ms.topic: reference
 helpviewer_keywords:
 - SQL Server Native Client, SPNs
@@ -17,16 +17,17 @@ helpviewer_keywords:
 - OLE DB, SPNs
 - SPNs [SQL Server]
 ms.assetid: 96598c69-ce9a-4090-aacb-d546591e8af7
-caps.latest.revision: 
+caps.latest.revision: 31
 author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: fe0670bbb967a10d2d14750f2a32a321cc912fce
-ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
+monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
+ms.openlocfilehash: 9281aae9e4e6aef2a48c0f99362689512613b405
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/25/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="service-principal-name-spn-support-in-client-connections"></a>Compatibilidad con Nombre de la entidad de seguridad del servicio (SPN) en conexiones cliente
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -34,9 +35,9 @@ ms.lasthandoff: 01/25/2018
 
   A partir de [!INCLUDE[ssKatmai](../../../includes/sskatmai-md.md)], se ha ampliado la compatibilidad con nombres principales de servicio (SPN) para habilitar la autenticación mutua en todos los protocolos. En versiones anteriores de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)], SPN solo se admitían en Kerberos sobre TCP cuando el valor predeterminado SPN para el [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] instancia se registraba en Active Directory.  
   
- Los SPN se utilizan para el protocolo de autenticación para determinar la cuenta en la que un [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] se ejecuta la instancia. Si se conoce la cuenta de la instancia, la autenticación Kerberos puede usarse para proporcionar una autenticación mutua del cliente y el servidor. Si no se conoce la cuenta de la instancia, se usa la autenticación NTLM, que solo proporciona autenticación del cliente por parte del servidor. Actualmente, [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client realiza la búsqueda de autenticación derivando el SPN de las propiedades de conexión de red y nombre de instancia. [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]intentarán registrar los SPN al inicio, o pueden registrarse manualmente. No obstante, se producirá un error en el registro si no hay suficientes derechos de acceso para la cuenta que intenta registrar los SPN.  
+ Los SPN se utilizan para el protocolo de autenticación para determinar la cuenta en la que un [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] se ejecuta la instancia. Si se conoce la cuenta de la instancia, la autenticación Kerberos puede usarse para proporcionar una autenticación mutua del cliente y el servidor. Si no se conoce la cuenta de la instancia, se usa la autenticación NTLM, que solo proporciona autenticación del cliente por parte del servidor. Actualmente, [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client realiza la búsqueda de autenticación derivando el SPN de las propiedades de conexión de red y nombre de instancia. [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] intentarán registrar los SPN al inicio, o pueden registrarse manualmente. No obstante, se producirá un error en el registro si no hay suficientes derechos de acceso para la cuenta que intenta registrar los SPN.  
   
- Las cuentas de dominio y equipo se registran automáticamente en Active Directory. Estas cuentas pueden usarse como SPN, o bien los administradores pueden definir sus propios SPN. [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]hace segura de autenticación más fáciles de administrar y más confiable, permitiendo a los clientes especificar directamente el SPN que se va a usar.  
+ Las cuentas de dominio y equipo se registran automáticamente en Active Directory. Estas cuentas pueden usarse como SPN, o bien los administradores pueden definir sus propios SPN. [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] hace segura de autenticación más fáciles de administrar y más confiable, permitiendo a los clientes especificar directamente el SPN que se va a usar.  
   
 > [!NOTE]  
 >  Un SPN especificado por una aplicación cliente solamente se utiliza cuando se establece una conexión con la seguridad integrada de Windows.  
@@ -78,7 +79,7 @@ ms.lasthandoff: 01/25/2018
  El nuevo comportamiento de conexión lo implementa el cliente; por lo tanto, no es específico de una versión de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)].  
   
 ## <a name="linked-servers-and-delegation"></a>Servidores vinculados y delegación  
- Cuando se crean servidores vinculados, el  **@provstr**  parámetro de [sp_addlinkedserver](../../../relational-databases/system-stored-procedures/sp-addlinkedserver-transact-sql.md) puede utilizarse para especificar el servidor y el asociado de conmutación por error SPN. Las ventajas de hacerlo son las mismas que cuando los SPN se especifican en las cadenas de conexión del cliente: resulta más sencillo y confiable establecer conexiones que usan la autenticación Kerberos.  
+ Cuando se crean servidores vinculados, el **@provstr** parámetro de [sp_addlinkedserver](../../../relational-databases/system-stored-procedures/sp-addlinkedserver-transact-sql.md) puede utilizarse para especificar el servidor y el asociado de conmutación por error SPN. Las ventajas de hacerlo son las mismas que cuando los SPN se especifican en las cadenas de conexión del cliente: resulta más sencillo y confiable establecer conexiones que usan la autenticación Kerberos.  
   
  La delegación con servidores vinculados requiere la autenticación Kerberos.  
   
@@ -111,9 +112,9 @@ ms.lasthandoff: 01/25/2018
 ## <a name="odbc-and-ole-db-syntax-supporting-spns"></a>Sintaxis de ODBC y OLE DB compatible con los SPN  
  Para obtener información específica de la sintaxis, vea los siguientes temas:  
   
--   [Nombres principales de servicio &#40; SPN &#41; en las conexiones de cliente &#40; ODBC &#41;](../../../relational-databases/native-client/odbc/service-principal-names-spns-in-client-connections-odbc.md)  
+-   [Nombres principales de servicio &#40;SPN&#41; en las conexiones de cliente &#40;ODBC&#41;](../../../relational-databases/native-client/odbc/service-principal-names-spns-in-client-connections-odbc.md)  
   
--   [Nombres principales de servicio &#40; SPN &#41; en las conexiones de cliente &#40; OLE DB &#41;](../../../relational-databases/native-client/ole-db/service-principal-names-spns-in-client-connections-ole-db.md)  
+-   [Nombres principales de servicio &#40;SPN&#41; en las conexiones de cliente &#40;OLE DB&#41;](../../../relational-databases/native-client/ole-db/service-principal-names-spns-in-client-connections-ole-db.md)  
   
  Para obtener información sobre las aplicaciones de ejemplo que muestran esta característica, vea [Ejemplos de programación de datos de SQL Server](http://msftdpprodsamples.codeplex.com/).  
   

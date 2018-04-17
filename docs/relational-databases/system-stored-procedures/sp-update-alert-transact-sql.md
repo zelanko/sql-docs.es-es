@@ -1,8 +1,8 @@
 ---
-title: sp_update_alert (Transact-SQL) | Microsoft Docs
+title: sp_update_alert (Transact-SQL) | Documentos de Microsoft
 ms.custom: ''
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine
 ms.service: ''
 ms.component: system-stored-procedures
@@ -25,11 +25,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 7d39736eed19992c5fa20bb1231aed3bcb20e3b0
-ms.sourcegitcommit: d6b1695c8cbc70279b7d85ec4dfb66a4271cdb10
+ms.openlocfilehash: 64a669e37edf07ff897c94122e7e49d5899c1b6c
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/10/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="spupdatealert-transact-sql"></a>sp_update_alert (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -72,7 +72,7 @@ sp_update_alert
  [ **@name =**] **'***name***'**  
  Nombre de la alerta que se va a actualizar. *nombre* es **sysname**, no tiene ningún valor predeterminado.  
   
- [ **@new_name =**] **'***new_name***'**  
+ [  **@new_name =**] **'***new_name***'**  
  Nuevo nombre para la alerta. El nombre debe ser único. *new_name* es **sysname**, su valor predeterminado es null.  
   
  [ **@enabled =**] *enabled*  
@@ -81,10 +81,10 @@ sp_update_alert
  [ **@message_id =**] *message_id*  
  Nuevo mensaje o número de error para la definición de la alerta. Por lo general, *message_id* corresponde a un número de error en la **sysmessages** tabla. *message_id* es **int**, su valor predeterminado es null. Un mensaje de identificador puede usarse únicamente si la configuración del nivel de gravedad de la alerta es **0**.  
   
- [ **@severity =**] *severity*  
+ [  **@severity =**] *gravedad*  
  Un nuevo nivel de gravedad (de **1** a través de **25**) para la definición de alerta. Cualquier [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] mensaje enviado en el registro de aplicación de Windows con la gravedad especificada activará la alerta. *gravedad* es **int**, su valor predeterminado es null. Un nivel de gravedad se puede utilizar únicamente si el valor de Id. de mensaje de la alerta es **0**.  
   
- [ **@delay_between_responses =**] *delay_between_responses*  
+ [  **@delay_between_responses =**] *delay_between_responses*  
  El nuevo intervalo de espera, en segundos, entre respuestas a la alerta. *delay_between_responses* es **int**, su valor predeterminado es null.  
   
  [ **@notification_message =**] **'***notification_message***'**  
@@ -110,7 +110,7 @@ sp_update_alert
  [ **@job_id =**] *job_id*  
  El número de identificación del trabajo. *job_id* es **uniqueidentifier**, su valor predeterminado es null. Si *job_id* se especifica, *job_name* se debe omitir.  
   
- [ **@job_name =**] **'***job_name***'**  
+ [  **@job_name =**] **'***job_name***'**  
  Nombre del trabajo que se ejecuta como respuesta a esta alerta. *job_name* es **sysname**, su valor predeterminado es null. Si *job_name* se especifica, *job_id* se debe omitir.  
   
  [ **@occurrence_count =** ] *occurrence_count*  
@@ -125,7 +125,7 @@ sp_update_alert
  [ **@last_occurrence_date =**] *last_occurrence_date*  
  Restablece la fecha en que la alerta se produjo por última vez. *last_occurrence_date* es **int**, su valor predeterminado es null y se puede establecer solo en **0**.  
   
- [ **@last_occurrence_time =**] *last_occurrence_time*  
+ [  **@last_occurrence_time =**] *last_occurrence_time*  
  Restablece la hora en que la alerta se produjo por última vez. *last_occurrence_time* es **int**, su valor predeterminado es null y se puede establecer solo en **0**.  
   
  [ **@last_response_date =**] *last_response_date*  
@@ -149,7 +149,7 @@ sp_update_alert
  [ **@category_name =**] **'***category***'**  
  El nombre de la categoría de alerta. *categoría* es **sysname** con un valor predeterminado es NULL.  
   
- [ **@wmi_namespace**= ] **'***wmi_namespace***'**  
+ [ **@wmi_namespace**=] **'***wmi_namespace***'**  
  Es el espacio de nombres WMI para consultar eventos. *wmi_namespace* es **sysname**, su valor predeterminado es null.  
   
  [ **@wmi_query**= ] **'***wmi_query***'**  

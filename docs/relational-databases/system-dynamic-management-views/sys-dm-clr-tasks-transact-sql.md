@@ -1,8 +1,8 @@
 ---
-title: sys.dm_clr_tasks (Transact-SQL) | Microsoft Docs
+title: Sys.dm_clr_tasks (Transact-SQL) | Documentos de Microsoft
 ms.custom: ''
 ms.date: 06/10/2016
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine, sql-database
 ms.service: ''
 ms.component: dmv's
@@ -27,11 +27,12 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: e5a4fdcda83a79ef16916b8cfa130bdfa8b30b86
-ms.sourcegitcommit: 8b332c12850c283ae413e0b04b2b290ac2edb672
+monikerRange: = azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions
+ms.openlocfilehash: fa0d98e2d3c5a0d3b0754646ef6c3f2a19036306
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/05/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="sysdmclrtasks-transact-sql"></a>sys.dm_clr_tasks (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -40,9 +41,9 @@ ms.lasthandoff: 04/05/2018
   
 |Nombre de columna|Tipo de datos|Description|  
 |-----------------|---------------|-----------------|  
-|**task_address**|**varbinary(8)**|Dirección de la tarea CLR.|  
-|**sos_task_address**|**varbinary(8)**|Dirección de la tarea del lote [!INCLUDE[tsql](../../includes/tsql-md.md)] subyacente.|  
-|**appdomain_address**|**varbinary(8)**|Dirección del dominio de la aplicación en la que se ejecuta esta tarea.|  
+|**task_address**|**varbinary (8)**|Dirección de la tarea CLR.|  
+|**sos_task_address**|**varbinary (8)**|Dirección de la tarea del lote [!INCLUDE[tsql](../../includes/tsql-md.md)] subyacente.|  
+|**appdomain_address**|**varbinary (8)**|Dirección del dominio de la aplicación en la que se ejecuta esta tarea.|  
 |**state**|**nvarchar(128)**|Estado actual de la tarea.|  
 |**abort_state**|**nvarchar(128)**|Estado en el que está actualmente la cancelación (si la tarea se ha cancelado). Hay varios estados implicados en la anulación de tareas.|  
 |**Tipo**|**nvarchar(128)**|Tipo de tarea.|  

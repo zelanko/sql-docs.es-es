@@ -1,17 +1,17 @@
 ---
-title: sys.dm_exec_query_optimizer_memory_gateways (Transact-SQL) | Microsoft Docs
-description: "Devuelve el estado actual de semáforos de recursos que se utiliza para acelerar la optimización de consultas simultáneas"
-ms.custom: 
+title: Sys.dm_exec_query_optimizer_memory_gateways (Transact-SQL) | Documentos de Microsoft
+description: Devuelve el estado actual de semáforos de recursos que se utiliza para acelerar la optimización de consultas simultáneas
+ms.custom: ''
 ms.date: 04/06/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine, sql-database
-ms.service: 
+ms.service: ''
 ms.component: dmv's
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - dm_exec_query_optimizer_memory_gateways_TSQL
@@ -26,13 +26,14 @@ author: josack
 ms.author: josack
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: b65e22d1cd2f403e2ed3aa1bd1dc14faa90079b9
-ms.sourcegitcommit: c556eaf60a49af7025db35b7aa14beb76a8158c5
+monikerRange: = azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions
+ms.openlocfilehash: 98e83cab69ca5346f1af7d8de41f3e2e666a5e16
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/03/2018
+ms.lasthandoff: 04/16/2018
 ---
-# <a name="sysdmexecqueryoptimizermemorygateways-transact-sql"></a>sys.dm_exec_query_optimizer_memory_gateways (Transact-SQL)
+# <a name="sysdmexecqueryoptimizermemorygateways-transact-sql"></a>Sys.dm_exec_query_optimizer_memory_gateways (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]
 
 Devuelve el estado actual de semáforos de recursos que se utiliza para acelerar la optimización de consultas simultáneas.
@@ -41,11 +42,11 @@ Devuelve el estado actual de semáforos de recursos que se utiliza para acelerar
 |----------|---------------|-----------------|  
 |**pool_id**|**int**|Id. de grupo de recursos en el regulador de recursos|  
 |**Nombre**|**sysname**|Compile el nombre de la puerta (pequeña puerta de enlace, mediano, grande puerta de enlace)|
-|**max_count**|**int**|El recuento máximo configurado de compilaciones simultáneas|
+|**número máximo**|**int**|El recuento máximo configurado de compilaciones simultáneas|
 |**active_count**|**int**|El número activo actualmente de compilaciones en esta puerta|
 |**waiter_count**|**int**|El número de esperas en esta puerta|
 |**threshold_factor**|**bigint**|Factor de umbral que define la parte de memoria máxima utilizada por la optimización de consultas.  La puerta de enlace pequeño, threshold_factor indica el uso de memoria del optimizador máximo en bytes para una consulta antes de que sea necesario para obtener un acceso en la puerta de enlace pequeño.  La puerta de enlace de mediano y grande, threshold_factor muestra la parte de la memoria total del servidor disponible para esta puerta. Se utiliza como un divisor al calcular el umbral de uso de memoria para la puerta.|
-|**threshold**|**bigint**|Memoria de umbral siguiente en bytes.  La consulta debe tener un acceso a esta puerta de enlace si su consumo de memoria alcanza este límite.  "-1" si la consulta no es necesaria para obtener un acceso a esta puerta de enlace.|
+|**Umbral**|**bigint**|Memoria de umbral siguiente en bytes.  La consulta debe tener un acceso a esta puerta de enlace si su consumo de memoria alcanza este límite.  "-1" si la consulta no es necesaria para obtener un acceso a esta puerta de enlace.|
 |**is_active**|**bit**|Si la consulta tiene que pasar la puerta actual o no.|
 
 
@@ -75,6 +76,6 @@ FROM sys.dm_exec_query_optimizer_memory_gateways;
 
 ## <a name="see-also"></a>Vea también  
  [Funciones y vistas de administración dinámica &#40;Transact-SQL&#41;](./system-dynamic-management-views.md)   
- [Funciones y vistas de administración dinámica &#40; relacionada con la ejecución Transact-SQL &#41;](./execution-related-dynamic-management-views-and-functions-transact-sql.md)  
+ [Vistas de administración dinámica y funciones relacionadas con ejecuciones &#40;Transact-SQL&#41;](./execution-related-dynamic-management-views-and-functions-transact-sql.md)  
 [Cómo usar el comando DBCC MEMORYSTATUS para supervisar el uso de memoria en SQL Server 2005](https://support.microsoft.com/help/907877/how-to-use-the-dbcc-memorystatus-command-to-monitor-memory-usage-on-sql-server-2005)
 [compilación de consulta de gran tamaño, se espera en RESOURCE_SEMAPHORE_QUERY_COMPILE en SQL Server 2014](https://support.microsoft.com/help/3024815/large-query-compilation-waits-on-resource-semaphore-query-compile-in-sql-server-2014)

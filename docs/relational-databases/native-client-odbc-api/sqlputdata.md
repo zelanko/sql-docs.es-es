@@ -1,30 +1,31 @@
 ---
-title: SQLPutData | Microsoft Docs
-ms.custom: 
+title: SQLPutData | Documentos de Microsoft
+ms.custom: ''
 ms.date: 03/17/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
-ms.service: 
+ms.service: ''
 ms.component: native-client-odbc-api
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: 
-ms.tgt_pltfrm: 
+ms.technology: ''
+ms.tgt_pltfrm: ''
 ms.topic: reference
 apitype: DLLExport
 helpviewer_keywords:
 - SQLPutData function
 ms.assetid: d39aaa5b-7fbc-4315-a7f2-5a7787e04f25
-caps.latest.revision: 
+caps.latest.revision: 49
 author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: bf27150c9e6c0da3f32cd3295c358c80da44b767
-ms.sourcegitcommit: a0aa5e611a0e6ebb74ac1e2f613e8916dc7a7617
+monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
+ms.openlocfilehash: 8d9dffe53e18bf63951f6204435bd684844adc61
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/24/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="sqlputdata"></a>SQLPutData
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -46,7 +47,7 @@ ms.lasthandoff: 01/24/2018
   
 |SQLSTATE|Error|Description|  
 |--------------|-----------|-----------------|  
-|22026|Datos de cadena, desigualdad de longitud|Si la longitud de datos en bytes que se enviarán se ha especificado por una aplicación, por ejemplo, con SQL_LEN_DATA_AT_EXEC (*n*) donde  *n*  es mayor que 0, el número total de bytes proporcionado por la aplicación a través de SQLPutData deben coincidir con la longitud especificada.|  
+|22026|Datos de cadena, desigualdad de longitud|Si la longitud de datos en bytes que se enviarán se ha especificado por una aplicación, por ejemplo, con SQL_LEN_DATA_AT_EXEC (*n*) donde *n* es mayor que 0, el número total de bytes proporcionado por la aplicación a través de SQLPutData debe coincidir con la longitud especificada.|  
   
 ## <a name="sqlputdata-and-table-valued-parameters"></a>SQLPutData y parámetros con valores de tabla  
  SQLPutData es utilizado por una aplicación cuando se usa el enlace de filas variable con parámetros con valores de tabla. El *StrLen_Or_Ind* parámetro indica que está listo para el controlador recopilar datos de la siguiente fila o filas de datos del parámetro con valores de tabla, o que no hay más filas disponibles:  
@@ -61,15 +62,15 @@ ms.lasthandoff: 01/24/2018
   
  Si *StrLen_Or_Ind* tiene cualquier valor distinto de SQL_DEFAULT_PARAM o un número entre 0 y el parámetro SQL_PARAMSET_SIZE (es decir, el *ColumnSize* parámetro de SQLBindParameter), es un error. Este error hace que SQLPutData devuelva SQL_ERROR: SQLSTATE=HY090, "Longitud de búfer o cadena no válida".  
   
- Para obtener más información acerca de los parámetros con valores de tabla, vea [parámetros con valores de tabla &#40; ODBC &#41;](../../relational-databases/native-client-odbc-table-valued-parameters/table-valued-parameters-odbc.md).  
+ Para obtener más información acerca de los parámetros con valores de tabla, vea [parámetros con valores de tabla & #40; ODBC & #41;](../../relational-databases/native-client-odbc-table-valued-parameters/table-valued-parameters-odbc.md).  
   
 ## <a name="sqlputdata-support-for-enhanced-date-and-time-features"></a>Compatibilidad de SQLPutData con las características mejoradas de fecha y hora  
  Valores de parámetro de tipos de fecha y hora se convierten como se describe en [conversiones de C a SQL](../../relational-databases/native-client-odbc-date-time/datetime-data-type-conversions-from-c-to-sql.md).  
   
- Para obtener más información, consulte [fecha y hora mejoras &#40; ODBC &#41;](../../relational-databases/native-client-odbc-date-time/date-and-time-improvements-odbc.md).  
+ Para obtener más información, consulte [fecha y hora mejoras & #40; ODBC & #41;](../../relational-databases/native-client-odbc-date-time/date-and-time-improvements-odbc.md).  
   
 ## <a name="sqlputdata-support-for-large-clr-udts"></a>Compatibilidad de SQLPutData con los UDT CLR grandes  
- **SQLPutData** admite tipos de definidos por el usuario CLR (UDT) grandes. Para obtener más información, consulte [Large CLR User-Defined tipos &#40; ODBC &#41;](../../relational-databases/native-client/odbc/large-clr-user-defined-types-odbc.md).  
+ **SQLPutData** admite tipos de definidos por el usuario CLR (UDT) grandes. Para obtener más información, consulte [Large CLR User-Defined tipos & #40; ODBC & #41;](../../relational-databases/native-client/odbc/large-clr-user-defined-types-odbc.md).  
   
 ## <a name="see-also"></a>Vea también  
  [SQLPutData, función](http://go.microsoft.com/fwlink/?LinkId=59365)   

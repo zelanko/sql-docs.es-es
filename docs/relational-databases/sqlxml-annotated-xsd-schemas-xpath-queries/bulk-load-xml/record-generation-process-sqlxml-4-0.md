@@ -1,16 +1,16 @@
 ---
-title: "Registrar el proceso de generación (SQLXML 4.0) | Documentos de Microsoft"
-ms.custom: 
+title: Registrar el proceso de generación (SQLXML 4.0) | Documentos de Microsoft
+ms.custom: ''
 ms.date: 03/17/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine, sql-database
-ms.service: 
+ms.service: ''
 ms.component: sqlxml
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - dbe-xml
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: reference
 helpviewer_keywords:
 - XML Bulk Load [SQLXML], record generation process
@@ -24,20 +24,21 @@ helpviewer_keywords:
 - leaving node scope [SQLXML]
 - schema mapping [SQLXML]
 ms.assetid: d8885bbe-6f15-4fb9-9684-ca7883cfe9ac
-caps.latest.revision: 
+caps.latest.revision: 24
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: b7e494f0d849834bfe4434f42da1de8fddb9d10d
-ms.sourcegitcommit: 37f0b59e648251be673389fa486b0a984ce22c81
+monikerRange: = azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions
+ms.openlocfilehash: e72388a753b1003c259f20371b34ffb3c269a2e1
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/12/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="record-generation-process-sqlxml-40"></a>Proceso de generación de registros (SQLXML 4.0)
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
-La carga masiva XML procesa los datos de entrada XML y prepara los registros para las tablas adecuadas de Microsoft [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]. La lógica de la carga masiva XML determina cuándo generar un nuevo registro, qué elemento secundario o valores de atributo copiar en los campos del registro y cuándo está completo y preparado el registro para enviarse a [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] para su inserción.  
+  La carga masiva XML procesa los datos de entrada XML y prepara los registros para las tablas adecuadas de Microsoft [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]. La lógica de la carga masiva XML determina cuándo generar un nuevo registro, qué elemento secundario o valores de atributo copiar en los campos del registro y cuándo está completo y preparado el registro para enviarse a [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] para su inserción.  
   
  La carga masiva XML no carga los datos de entrada XML completos en la memoria y no genera conjuntos de registros completos antes de enviar los datos a [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]. Esto ocurre porque los datos de entrada XML pueden ser un documento de gran tamaño y cargar todo el documento en la memoria puede resultar costoso. En lugar de ello, la carga masiva XML hace lo siguiente:  
   
@@ -50,7 +51,7 @@ La carga masiva XML procesa los datos de entrada XML y prepara los registros par
  La carga masiva XML administra anotaciones comunes del esquema de asignación, incluidas las asignaciones de columna y tabla (que se especifican de forma explícita mediante anotaciones o de forma implícita a través de la asignación predeterminada), así como relaciones de unión.  
   
 > [!NOTE]  
->  Se supone que está familiarizado con los esquemas de asignación XSD o XDR anotados. Para obtener más información acerca de los esquemas, vea [Introducción a los esquemas XSD anotados &#40; SQLXML 4.0 &#41; ](../../../relational-databases/sqlxml/annotated-xsd-schemas/introduction-to-annotated-xsd-schemas-sqlxml-4-0.md) o [anotado esquemas XDR &#40; desusado en SQLXML 4.0 &#41;](../../../relational-databases/sqlxml/annotated-xsd-schemas/annotated-xdr-schemas-deprecated-in-sqlxml-4-0.md).  
+>  Se supone que está familiarizado con los esquemas de asignación XSD o XDR anotados. Para obtener más información acerca de los esquemas, vea [Introducción a los esquemas XSD anotados &#40;SQLXML 4.0&#41; ](../../../relational-databases/sqlxml/annotated-xsd-schemas/introduction-to-annotated-xsd-schemas-sqlxml-4-0.md) o [esquemas XDR anotados &#40;desusado en SQLXML 4.0&#41;](../../../relational-databases/sqlxml/annotated-xsd-schemas/annotated-xdr-schemas-deprecated-in-sqlxml-4-0.md).  
   
  Para entender el proceso de generación de registros es necesario comprender los conceptos siguientes:  
   
@@ -156,7 +157,7 @@ La carga masiva XML procesa los datos de entrada XML y prepara los registros par
   
 -   Cuando un  **\<cliente >** nodo de elemento en el archivo de datos XML entra en el ámbito, la carga masiva XML genera un registro de la tabla Cust. Carga masiva XML, a continuación, copia los valores de columna necesarios (CustomerID, CompanyName y City) de la  **\<CustomerID >**,  **\<CompanyName >**y el  **\<Ciudad >** los elementos secundarios como estos elementos entran en el ámbito.  
   
--   Cuando un  **\<orden >** nodo de elemento entra en el ámbito, la carga masiva XML genera un registro para la tabla CustOrder. Carga masiva XML copia el valor de la **OrderID** atributo para este registro. El valor necesario para la columna CustomerID se obtiene de la  **\<CustomerID >** elemento secundario de la  **\<cliente >** elemento. Carga masiva XML utiliza la información que se especifica en  **\<SQL: Relationship >** para obtener el valor de clave externa CustomerID para este registro, a menos que la **CustomerID** atributo era se especifica en el  **\<orden >** elemento. La regla general es que si el elemento secundario especifica explícitamente un valor para el atributo de clave externo, la carga masiva XML usa ese valor y no obtiene el valor del elemento primario utilizando los  **\<SQL: Relationship >** . Como esto  **\<orden >** nodo de elemento sale del ámbito, la carga masiva XML envía el registro a [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] y, a continuación, procesa todas las posteriores  **\<orden >** nodos de elemento de la misma manera.  
+-   Cuando un  **\<orden >** nodo de elemento entra en el ámbito, la carga masiva XML genera un registro para la tabla CustOrder. Carga masiva XML copia el valor de la **OrderID** atributo para este registro. El valor necesario para la columna CustomerID se obtiene de la  **\<CustomerID >** elemento secundario de la  **\<cliente >** elemento. Carga masiva XML utiliza la información que se especifica en  **\<SQL: Relationship >** para obtener el valor de clave externa CustomerID para este registro, a menos que la **CustomerID** atributo era se especifica en el  **\<orden >** elemento. La regla general es que si el elemento secundario especifica explícitamente un valor para el atributo de clave externo, la carga masiva XML usa ese valor y no obtiene el valor del elemento primario utilizando los **\<SQL: Relationship >**. Como esto  **\<orden >** nodo de elemento sale del ámbito, la carga masiva XML envía el registro a [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] y, a continuación, procesa todas las posteriores  **\<orden >** nodos de elemento de la misma manera.  
   
 -   Por último, el  **\<cliente >** nodo de elemento sale del ámbito. En ese momento, la carga masiva XML envía el registro del cliente a [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]. La carga masiva XML sigue este proceso para todos los clientes subsiguientes del flujo de datos XML.  
   

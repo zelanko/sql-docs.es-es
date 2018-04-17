@@ -1,15 +1,15 @@
 ---
-title: "Mediante la creación de reflejo de base de datos | Documentos de Microsoft"
-ms.custom: 
+title: Mediante la creación de reflejo de base de datos | Documentos de Microsoft
+ms.custom: ''
 ms.date: 03/16/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
-ms.service: 
+ms.service: ''
 ms.component: native-client|features
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: 
-ms.tgt_pltfrm: 
+ms.technology: ''
+ms.tgt_pltfrm: ''
 ms.topic: reference
 helpviewer_keywords:
 - database mirroring [SQL Server], interoperability
@@ -20,16 +20,17 @@ helpviewer_keywords:
 - SQL Server Native Client ODBC driver, database mirroring
 - SQL Server Native Client OLE DB provider, database mirroring
 ms.assetid: 71b15712-7972-4465-9274-e0ddc271eedc
-caps.latest.revision: 
+caps.latest.revision: 55
 author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 63e362b186725b5e9adf15721fcfd4154be3148d
-ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
+monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
+ms.openlocfilehash: 5b7bdad805cf9ebcfead0df42cd847db741f41ce
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/25/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="using-database-mirroring"></a>Usar la creación de reflejo de bases de datos
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -39,7 +40,7 @@ ms.lasthandoff: 01/25/2018
 > [!NOTE]  
 >  [!INCLUDE[ssNoteDepFutureAvoid](../../../includes/ssnotedepfutureavoid-md.md)]Use [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] en su lugar.  
   
- La creación de reflejo de la base de datos, introducida en [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)], es una solución de software para aumentar la disponibilidad de la base de datos y la redundancia de datos. [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]Native Client proporciona compatibilidad implícita con creación de reflejo de base de datos, por lo que el desarrollador no necesita escribir ningún código ni realizar ninguna otra acción una vez que se ha configurado para la base de datos.  
+ La creación de reflejo de la base de datos, introducida en [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)], es una solución de software para aumentar la disponibilidad de la base de datos y la redundancia de datos. [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client proporciona compatibilidad implícita con creación de reflejo de base de datos, por lo que el desarrollador no necesita escribir ningún código ni realizar ninguna otra acción una vez que se ha configurado para la base de datos.  
   
  La creación de reflejo, que se implementa en una base de cada base de datos, conserva una copia de un [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] base de datos de producción en un servidor en espera. Este servidor puede ser un servidor en estado de espera activa o semiactiva, dependiendo de la configuración y del estado de la sesión de creación de reflejo de la base de datos. Un servidor en estado de espera activa admite la conmutación por error rápida sin pérdida de las transacciones confirmadas, mientras que un servidor en estado de espera semiactiva admite la acción de forzar el servicio (con posible pérdida de datos).  
   
@@ -52,7 +53,7 @@ ms.lasthandoff: 01/25/2018
  Se puede utilizar un alias al especificar el nombre de la base de datos reflejada.  
   
 > [!NOTE]  
->  Para obtener información acerca de los intentos de conexión inicial y los intentos de reconexión a una base de datos reflejada, vea [conectar clientes a una sesión de creación de reflejo de base de datos &#40; SQL Server &#41; ](../../../database-engine/database-mirroring/connect-clients-to-a-database-mirroring-session-sql-server.md).  
+>  Para obtener información acerca de los intentos de conexión inicial y los intentos de reconexión a una base de datos reflejada, vea [conectar clientes a una sesión de creación de reflejo de base de datos &#40;SQL Server&#41;](../../../database-engine/database-mirroring/connect-clients-to-a-database-mirroring-session-sql-server.md).  
   
 ## <a name="programming-considerations"></a>Consideraciones de programación  
  Cuando el servidor principal genera un error, la aplicación cliente recibe mensajes de error como respuesta a las llamadas a la API que indican que se ha perdido la conexión a la base de datos. Cuando esto sucede, se pierde cualquier cambio no confirmado en la base de datos y se revierte la transacción actual. Si esto se produce, la aplicación debe cerrar la conexión (o liberar el objeto de origen de datos) y volverla a abrir. La conexión se redirige de forma transparente a la base de datos reflejada, que ahora actúa como servidor principal.  

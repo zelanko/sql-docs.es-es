@@ -1,16 +1,16 @@
 ---
-title: "Pasar parámetros a diagramas de actualización (SQLXML 4.0) | Documentos de Microsoft"
-ms.custom: 
+title: Pasar parámetros a diagramas de actualización (SQLXML 4.0) | Documentos de Microsoft
+ms.custom: ''
 ms.date: 03/17/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine, sql-database
-ms.service: 
+ms.service: ''
 ms.component: sqlxml
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - dbe-xml
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: reference
 helpviewer_keywords:
 - nullvalue attribute
@@ -19,20 +19,21 @@ helpviewer_keywords:
 - updategrams [SQLXML], passing parameters
 - null values [SQLXML]
 ms.assetid: 2354e6e7-1860-471f-8711-4e374c5a4ed2
-caps.latest.revision: 
+caps.latest.revision: 30
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: aba948424591ed7edbb4bba89a6452a2f8d1d21a
-ms.sourcegitcommit: 37f0b59e648251be673389fa486b0a984ce22c81
+monikerRange: = azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions
+ms.openlocfilehash: 1852a8ee9c0c96a58c5ad71e25eafa1730d0ec49
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/12/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="passing-parameters-to-updategrams-sqlxml-40"></a>Pasar parámetros a diagramas de actualización (SQLXML 4.0)
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
-Los diagramas de actualización son plantillas; por consiguiente, se les pueden pasar parámetros. Para obtener más información acerca de cómo pasar parámetros a plantillas, consulte [consideraciones de seguridad de diagrama de actualización &#40; SQLXML 4.0 &#41; ](../../../relational-databases/sqlxml-annotated-xsd-schemas-xpath-queries/security/updategram-security-considerations-sqlxml-4-0.md).  
+  Los diagramas de actualización son plantillas; por consiguiente, se les pueden pasar parámetros. Para obtener más información acerca de cómo pasar parámetros a plantillas, consulte [consideraciones de seguridad de Updategram &#40;SQLXML 4.0&#41;](../../../relational-databases/sqlxml-annotated-xsd-schemas-xpath-queries/security/updategram-security-considerations-sqlxml-4-0.md).  
   
  Los diagramas de actualización le permiten pasar NULL como un valor del parámetro. Para pasar el valor del parámetro es NULL, especifique el **nullvalue** atributo. El valor que se asigna a la **nullvalue** atributo, a continuación, se proporciona como el valor del parámetro. Los diagramas de actualización tratan este valor como NULL.  
   
@@ -44,7 +45,7 @@ Los diagramas de actualización son plantillas; por consiguiente, se les pueden 
   
  Antes de usar los ejemplos del diagrama de actualización, tenga en cuenta lo siguiente:  
   
--   En los ejemplos se usa una asignación predeterminada (es decir, ningún esquema de asignación se especifica en el diagrama de actualización). Para obtener más ejemplos de los diagramas de actualización que utilizan los esquemas de asignación, consulte [especificar un esquema de asignación anotados en un diagrama de actualización &#40; SQLXML 4.0 &#41; ](../../../relational-databases/sqlxml-annotated-xsd-schemas-xpath-queries/updategrams/specifying-an-annotated-mapping-schema-in-an-updategram-sqlxml-4-0.md).  
+-   En los ejemplos se usa una asignación predeterminada (es decir, ningún esquema de asignación se especifica en el diagrama de actualización). Para obtener más ejemplos de los diagramas de actualización que utilizan los esquemas de asignación, consulte [especificar un esquema de asignación anotados en un diagrama de actualización &#40;SQLXML 4.0&#41;](../../../relational-databases/sqlxml-annotated-xsd-schemas-xpath-queries/updategrams/specifying-an-annotated-mapping-schema-in-an-updategram-sqlxml-4-0.md).  
   
 ### <a name="a-passing-parameters-to-an-updategram"></a>A. Pasar parámetros a un diagrama de actualización  
  En este ejemplo, el diagrama de actualización cambia el apellido de un empleado en la tabla HumanResources.Shift. Se pasan dos parámetros al diagrama de actualización: ShiftID, que se usa para identificar de manera única un cambio, y Nombre.  
@@ -115,6 +116,6 @@ Los diagramas de actualización son plantillas; por consiguiente, se les pueden 
     ```  
   
 ## <a name="see-also"></a>Vea también  
- [Consideraciones de seguridad de diagrama de actualización &#40; SQLXML 4.0 &#41;](../../../relational-databases/sqlxml-annotated-xsd-schemas-xpath-queries/security/updategram-security-considerations-sqlxml-4-0.md)  
+ [Consideraciones de seguridad de updategram &#40;SQLXML 4.0&#41;](../../../relational-databases/sqlxml-annotated-xsd-schemas-xpath-queries/security/updategram-security-considerations-sqlxml-4-0.md)  
   
   

@@ -1,15 +1,15 @@
 ---
 title: Propiedades del conjunto de filas y los comportamientos | Documentos de Microsoft
-ms.custom: 
+ms.custom: ''
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
-ms.service: 
+ms.service: ''
 ms.component: native-client-ole-db-rowsets
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: 
-ms.tgt_pltfrm: 
+ms.technology: ''
+ms.tgt_pltfrm: ''
 ms.topic: reference
 helpviewer_keywords:
 - rowsets [OLE DB], properties
@@ -17,16 +17,17 @@ helpviewer_keywords:
 - properties [OLE DB]
 - OLE DB rowsets, properties
 ms.assetid: 9baabcb6-0114-42f2-89f8-d8d66b3c8c14
-caps.latest.revision: 
+caps.latest.revision: 47
 author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: fad9cc93c8faa050d537e687604a8934d3ee3386
-ms.sourcegitcommit: a0aa5e611a0e6ebb74ac1e2f613e8916dc7a7617
+monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
+ms.openlocfilehash: ba87afc52aa46599a4453a457536fc62ff91b3a5
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/24/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="rowset-properties-and-behaviors"></a>Propiedades y comportamientos de conjuntos de filas
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -45,7 +46,7 @@ ms.lasthandoff: 01/24/2018
 |DBPROP_BOOKMARKTYPE|L/E: sólo lectura<br /><br /> Valor predeterminado: DBPROPVAL_BMK_NUMERIC<br /><br /> Descripción: El [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] proveedor OLE DB de Native Client solamente implementa marcadores numéricos. Un [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] marcador del proveedor OLE DB de Native Client es el entero de 32 bits sin signo, tipo DBTYPE_UI4.|  
 |DBPROP_CACHEDEFERRED|Esta propiedad de conjunto de filas no está implementada por el [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] proveedor Native Client OLE DB. Al intentar leer o escribir el valor de propiedad, se genera un error.|  
 |DBPROP_CANFETCHBACKWARDS DBPROP_CANSCROLLBACKWARDS|L/E lectura/escritura<br /><br /> Valor predeterminado: VARIANT_FALSE<br /><br /> Descripción: El [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] proveedor OLE DB de Native Client es compatible con versiones anteriores de recopilar y desplazar en conjuntos de filas no secuenciales. El [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] proveedor OLE DB de Native Client crea un conjunto de filas compatible con cursores cuando DBPROP_CANFETCHBACKWARDS o DBPROP_CANSCROLLBACKWARDS es VARIANT_TRUE. Para obtener más información, consulte [conjuntos de filas y cursores de servidor SQL](../../relational-databases/native-client-ole-db-rowsets/rowsets-and-sql-server-cursors.md).|  
-|DBPROP_CANHOLDROWS|L/E lectura/escritura<br /><br /> Valor predeterminado: VARIANT_FALSE<br /><br /> Descripción: de forma predeterminada, la [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] proveedor OLE DB de Native Client devuelve DB_E_ROWSNOTRELEASED si el consumidor intenta obtener más filas de un conjunto de filas mientras los cambios pendientes existe en los que actualmente en el conjunto de filas. Este comportamiento puede modificarse.<br /><br /> El establecimiento de DBPROP_CANHOLDROWS y DBPROP_IRowsetChange en VARIANT_TRUE, implica un conjunto de filas marcado. Si ambas propiedades son VARIANT_TRUE, el **IRowsetLocate** interfaz está disponible en el conjunto de filas y DBPROP_BOOKMARKS y DBPROP_LITERALBOOKMARKS serán ambas VARIANT_TRUE.<br /><br /> [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]Admiten nativo conjuntos de filas de proveedor de OLE DB de cliente que contienen marcadores [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] cursores.|  
+|DBPROP_CANHOLDROWS|L/E lectura/escritura<br /><br /> Valor predeterminado: VARIANT_FALSE<br /><br /> Descripción: de forma predeterminada, la [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] proveedor OLE DB de Native Client devuelve DB_E_ROWSNOTRELEASED si el consumidor intenta obtener más filas de un conjunto de filas mientras los cambios pendientes existe en los que actualmente en el conjunto de filas. Este comportamiento puede modificarse.<br /><br /> El establecimiento de DBPROP_CANHOLDROWS y DBPROP_IRowsetChange en VARIANT_TRUE, implica un conjunto de filas marcado. Si ambas propiedades son VARIANT_TRUE, el **IRowsetLocate** interfaz está disponible en el conjunto de filas y DBPROP_BOOKMARKS y DBPROP_LITERALBOOKMARKS serán ambas VARIANT_TRUE.<br /><br /> [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Admiten nativo conjuntos de filas de proveedor de OLE DB de cliente que contienen marcadores [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] cursores.|  
 |DBPROP_CHANGEINSERTEDROWS|L/E lectura/escritura<br /><br /> Valor predeterminado: VARIANT_FALSE<br /><br /> Descripción: esta propiedad solo puede establecerse en VARIANT_TRUE si el conjunto de filas usa un cursor controlado por conjunto de claves.|  
 |DBPROP_COLUMNRESTRICT|L/E: sólo lectura<br /><br /> Valor predeterminado: VARIANT_FALSE<br /><br /> Descripción: El [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] proveedor OLE DB de Native Client establece la propiedad en VARIANT_TRUE cuando no se puede cambiar una columna de un conjunto de filas del consumidor. Es posible que otras columnas del conjunto de filas puedan actualizarse y también es posible que puedan eliminarse las propias filas.<br /><br /> Cuando la propiedad es VARIANT_TRUE, el consumidor examina el *dwFlags* miembro de la estructura DBCOLUMNINFO para determinar si se puede escribir el valor de una columna individual o no. Para las columnas, *dwFlags* exhibe DBCOLUMNFLAGS_WRITE.|  
 |DBPROP_COMMANDTIMEOUT|L/E lectura/escritura<br /><br /> Valor predeterminado: 0<br /><br /> Descripción: de forma predeterminada, el [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] proveedor Native Client OLE DB no tiene tiempo de espera en el **ICommand:: Execute** método.|  
@@ -75,8 +76,8 @@ ms.lasthandoff: 01/24/2018
 |DBPROP_MAYWRITECOLUMN|Esta propiedad de conjunto de filas no está implementada por el [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] proveedor Native Client OLE DB. Al intentar leer o escribir el valor de propiedad, se genera un error.|  
 |DBPROP_MEMORYUSAGE|Esta propiedad de conjunto de filas no está implementada por el [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] proveedor Native Client OLE DB. Al intentar leer o escribir el valor de propiedad, se genera un error.|  
 |DBPROP_NOTIFICATIONGRANULARITY|Esta propiedad de conjunto de filas no está implementada por el [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] proveedor Native Client OLE DB. Al intentar leer o escribir el valor de propiedad, se genera un error.|  
-|DBPROP_NOTIFICATIONPHASES|L/E: sólo lectura<br /><br /> Valor predeterminado: DBPROPVAL_NP_OKTODO &#124; DBPROPVAL_NP_ABOUTTODO &#124;  DBPROPVAL_NP_SYNCHAFTER &#124; DBPROPVAL_NP_FAILEDTODO &#124;  DBPROPVAL_NP_DIDEVENT<br /><br /> Descripción: El [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] proveedor OLE DB de Native Client admite todas las fases de notificación.|  
-|DBPROP_NOTIFYCOLUMNSET DBPROP_NOTIFYROWDELETE DBPROP_NOTIFYROWFIRSTCHANGE DBPROP_NOTIFYROWINSERT DBPROP_NOTIFYROWRESYNCH DBPROP_NOTIFYROWSETRELEASE DBPROP_NOTIFYROWSETFETCH-POSITIONCHANGE DBPROP_NOTIFYROWUNDOCHANGE DBPROP_NOTIFYROWUNDODELETE DBPROP_NOTIFYROWUNDOINSERT DBPROP_NOTIFYROWUPDATE|L/E: sólo lectura<br /><br /> Default: DBPROPVAL_NP_OKTODO &#124;  DBPROPVAL_NP_ABOUTTODO<br /><br /> Descripción: El [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] fases de notificación del proveedor OLE DB de Native Client son cancelables antes de intentar realizar la modificación del conjunto de filas indicado. El [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] proveedor Native Client OLE DB no admite cancelación de fases una vez completado el intento.|  
+|DBPROP_NOTIFICATIONPHASES|L/E: sólo lectura<br /><br /> Valor predeterminado: DBPROPVAL_NP_OKTODO &#124; DBPROPVAL_NP_ABOUTTODO &#124; DBPROPVAL_NP_SYNCHAFTER &#124; DBPROPVAL_NP_FAILEDTODO &#124; DBPROPVAL_NP_DIDEVENT<br /><br /> Descripción: El [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] proveedor OLE DB de Native Client admite todas las fases de notificación.|  
+|DBPROP_NOTIFYCOLUMNSET DBPROP_NOTIFYROWDELETE DBPROP_NOTIFYROWFIRSTCHANGE DBPROP_NOTIFYROWINSERT DBPROP_NOTIFYROWRESYNCH DBPROP_NOTIFYROWSETRELEASE DBPROP_NOTIFYROWSETFETCH-POSITIONCHANGE DBPROP_NOTIFYROWUNDOCHANGE DBPROP_NOTIFYROWUNDODELETE DBPROP_NOTIFYROWUNDOINSERT DBPROP_NOTIFYROWUPDATE|L/E: sólo lectura<br /><br /> Valor predeterminado: DBPROPVAL_NP_OKTODO &#124; DBPROPVAL_NP_ABOUTTODO<br /><br /> Descripción: El [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] fases de notificación del proveedor OLE DB de Native Client son cancelables antes de intentar realizar la modificación del conjunto de filas indicado. El [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] proveedor Native Client OLE DB no admite cancelación de fases una vez completado el intento.|  
 |DBPROP_ORDEREDBOOKMARKS|Esta propiedad de conjunto de filas no está implementada por el [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] proveedor Native Client OLE DB. Al intentar leer o escribir el valor de propiedad, se genera un error.|  
 |DBPROP_OTHERINSERT DBPROP_OTHERUPDATEDELETE DBPROP_OWNINSERT DBPROP_OWNUPDATEDELETE|L/E lectura/escritura<br /><br /> Valor predeterminado: VARIANT_FALSE<br /><br /> Descripción: Configuración de cambiar las causas de propiedades de visibilidad del [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] proveedor OLE DB de Native Client para utilizar [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] cursores para admitir el conjunto de filas. Para obtener más información, consulte [conjuntos de filas y cursores de servidor SQL](../../relational-databases/native-client-ole-db-rowsets/rowsets-and-sql-server-cursors.md).|  
 |DBPROP_QUICKRESTART|L/E lectura/escritura<br /><br /> Valor predeterminado: VARIANT_FALSE<br /><br /> Descripción: Cuando se establece en VARIANT_TRUE, el [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] proveedor OLE DB de Native Client intenta usar un cursor de servidor para el conjunto de filas.|  

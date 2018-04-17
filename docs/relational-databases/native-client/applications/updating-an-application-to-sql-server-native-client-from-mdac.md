@@ -1,15 +1,15 @@
 ---
-title: "Actualizar una aplicación a SQL Server Native Client de MDAC | Documentos de Microsoft"
-ms.custom: 
+title: Actualizar una aplicación a SQL Server Native Client de MDAC | Documentos de Microsoft
+ms.custom: ''
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
-ms.service: 
+ms.service: ''
 ms.component: native-client|applications
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: 
-ms.tgt_pltfrm: 
+ms.technology: ''
+ms.tgt_pltfrm: ''
 ms.topic: reference
 helpviewer_keywords:
 - MDAC [SQL Server]
@@ -18,16 +18,17 @@ helpviewer_keywords:
 - data access [SQL Server Native Client], vs. MDAC
 - SQL Server Native Client, updating applications
 ms.assetid: 2860efdd-c59a-4deb-8a0e-5124a8f4e6dd
-caps.latest.revision: 
+caps.latest.revision: 81
 author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 72bd7a56555da46acacf9431fc82fe006f55cbb6
-ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
+monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
+ms.openlocfilehash: b5163ef5cea7268824b8b9f5e0fe35911ab4a2f8
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/25/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="updating-an-application-to-sql-server-native-client-from-mdac"></a>Actualizar una aplicación de MDCA a SQL Server Native Client
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -57,7 +58,7 @@ ms.lasthandoff: 01/25/2018
   
 -   [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client admite el acceso a las bases de datos de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] anteriores.  
   
--   [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client no contiene integración con XML. [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]Native Client admite SELECT... PARA las consultas XML, pero no admite ninguna otra funcionalidad XML. Sin embargo, [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client es compatible con la **xml** tipo de datos que se introdujo en [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)].  
+-   [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client no contiene integración con XML. [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client admite SELECT... PARA las consultas XML, pero no admite ninguna otra funcionalidad XML. Sin embargo, [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client es compatible con la **xml** tipo de datos que se introdujo en [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)].  
   
 -   [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client admite la configuración de bibliotecas de red del lado cliente solamente mediante el uso de atributos de cadena de conexión. Si necesita una configuración de biblioteca de red más completa, debe usar el Administrador de configuración de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)].  
   
@@ -79,7 +80,7 @@ ms.lasthandoff: 01/25/2018
   
 -   Cuando [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client se conecta a [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)] y versiones posteriores, el error de servidor 16947 se devuelve como SQL_ERROR. Este error se produce cuando una actualización o eliminación posicionada genera errores al actualizar o eliminar una fila. Con MDAC al conectarse a cualquier versión de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)], se devuelve el error de servidor 16947 como una advertencia (SQL_SUCCESS_WITH_INFO).  
   
--   [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]Native Client implementa el **IDBDataSourceAdmin** de la interfaz, que es una interfaz OLE DB opcional que no se implementaba previamente, pero solo el **CreateDataSource** método de este opcional se implementa la interfaz. [!INCLUDE[ssNoteDepFutureAvoid](../../../includes/ssnotedepfutureavoid-md.md)]  
+-   [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client implementa el **IDBDataSourceAdmin** de la interfaz, que es una interfaz OLE DB opcional que no se implementaba previamente, pero solo el **CreateDataSource** método de este opcional se implementa la interfaz. [!INCLUDE[ssNoteDepFutureAvoid](../../../includes/ssnotedepfutureavoid-md.md)]  
   
 -   El proveedor OLE DB de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client devuelve sinónimos en el conjunto de filas de esquema de TABLES y TABLE_INFO, con TABLE_TYPE establecido en SYNONYM.  
   
@@ -115,7 +116,7 @@ ms.lasthandoff: 01/25/2018
   
 -   Si usa una llamada ODBC u OLE DB para iniciar las transacciones, existe una diferencia de comportamiento entre [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client y MDAC; las transacciones se iniciarán inmediatamente con [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client mientras que, con MDAC, las transacciones se iniciarán después del primer acceso a la base de datos. Esto puede afectar al comportamiento de los procedimientos almacenados y lotes porque [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] requiere@TRANCOUNT sean las mismas cuando un lote o procedimiento almacenado finaliza la ejecución tal como estaba al inicia el procedimiento almacenado o lote.  
   
--   Con [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client, ITransactionLocal::BeginTransaction hará que una transacción se inicie inmediatamente. Con MDAC, el inicio de transacciones se retrasa hasta que la aplicación ejecuta una instrucción que requiere una transacción en modo de transacción implícita. Para obtener más información, vea [SET IMPLICIT_TRANSACTIONS &#40; Transact-SQL &#41; ](../../../t-sql/statements/set-implicit-transactions-transact-sql.md).  
+-   Con [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client, ITransactionLocal::BeginTransaction hará que una transacción se inicie inmediatamente. Con MDAC, el inicio de transacciones se retrasa hasta que la aplicación ejecuta una instrucción que requiere una transacción en modo de transacción implícita. Para obtener más información, vea [SET IMPLICIT_TRANSACTIONS &#40;Transact-SQL&#41;](../../../t-sql/statements/set-implicit-transactions-transact-sql.md).  
   
 -   Pueden producirse errores al usar [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] controlador Native Client con System.Data.Odbc para tener acceso a un [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] equipo del servidor que expone nuevos [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]-tipos de datos específicos o características. System.Data.Odbc proporciona una implementación genérica de ODBC y posteriormente no expone la funcionalidad específica del proveedor o extensiones. (El controlador de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client se ha actualizado para admitir de forma nativa las características más recientes de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)].) Para solucionar este problema, puede volver a MDAC o migrar a System.Data.SqlClient.  
   

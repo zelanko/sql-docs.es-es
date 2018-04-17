@@ -1,15 +1,15 @@
 ---
-title: "Nulabilidad y comparaciones lógicas de tres valores | Documentos de Microsoft"
-ms.custom: 
+title: Nulabilidad y comparaciones lógicas de tres valores | Documentos de Microsoft
+ms.custom: ''
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine
-ms.service: 
+ms.service: ''
 ms.component: clr
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: 
-ms.tgt_pltfrm: 
+ms.technology: ''
+ms.tgt_pltfrm: ''
 ms.topic: reference
 helpviewer_keywords:
 - precision [CLR integration]
@@ -19,20 +19,20 @@ helpviewer_keywords:
 - data types [CLR integration]
 - SqlBoolean data type
 ms.assetid: 13da4c7f-1010-4b2d-a63c-c69b6bfd96f1
-caps.latest.revision: 
+caps.latest.revision: 38
 author: rothja
 ms.author: jroth
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: abef06c62b28aa2e25f61127d8dd23551652b12c
-ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
+ms.openlocfilehash: f2765043127179ee7578cd4258e909351198e727
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/09/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="nullability-and-three-value-logic-comparisons"></a>Nulabilidad y comparaciones lógicas de tres valores
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
-Si está familiarizado con la [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] tipos de datos, encontrará similar semántica y precisión en la **System.Data.SqlTypes** espacio de nombres en el [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)]. No obstante, existen algunas diferencias, y en este tema se describen las más importantes.  
+  Si está familiarizado con la [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] tipos de datos, encontrará similar semántica y precisión en la **System.Data.SqlTypes** espacio de nombres en el [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)]. No obstante, existen algunas diferencias, y en este tema se describen las más importantes.  
   
 ## <a name="null-values"></a>Valores NULL  
  Una de las diferencias principales que existen entre los tipos de datos nativos de Common Language Runtime (CLR) y los tipos de datos de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] es que los primeros no permiten valores NULL, mientras que los últimos proporcionan una semántica completa de valores NULL.  

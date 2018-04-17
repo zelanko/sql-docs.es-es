@@ -1,16 +1,16 @@
 ---
-title: sys.resource_governor_workload_groups (Transact-SQL) | Microsoft Docs
-ms.custom: 
+title: Sys.resource_governor_workload_groups (Transact-SQL) | Documentos de Microsoft
+ms.custom: ''
 ms.date: 03/16/2016
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine
-ms.service: 
+ms.service: ''
 ms.component: system-catalog-views
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - sys.resource_governor_workload_groups
@@ -22,16 +22,16 @@ dev_langs:
 helpviewer_keywords:
 - sys.resource_governor_workload_groups catalog view
 ms.assetid: 619ba4b7-868f-4784-b527-ec1dfd703c4f
-caps.latest.revision: 
+caps.latest.revision: 20
 author: stevestein
 ms.author: sstein
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: d2bc9e45c38c8dbe50d9bd7c5d6a8c79203c4fed
-ms.sourcegitcommit: c556eaf60a49af7025db35b7aa14beb76a8158c5
+ms.openlocfilehash: 199ef10970da1f2bb9b10e716ecc5e9f894aa448
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/03/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="sysresourcegovernorworkloadgroups-transact-sql"></a>sys.resource_governor_workload_groups (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -52,7 +52,7 @@ ms.lasthandoff: 02/03/2018
 |external_pool_id|**int**|**Se aplica a**: desde [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] hasta [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].<br /><br /> Id. del grupo de recursos externos que usa este grupo de cargas de trabajo.|  
   
 ## <a name="remarks"></a>Comentarios  
- La vista de catálogo muestra los metadatos almacenados. Para ver la configuración en memoria, utilice la vista de administración dinámica correspondiente, [sys.dm_resource_governor_workload_groups &#40; Transact-SQL &#41; ](../../relational-databases/system-dynamic-management-views/sys-dm-resource-governor-workload-groups-transact-sql.md).  
+ La vista de catálogo muestra los metadatos almacenados. Para ver la configuración en memoria, utilice la vista de administración dinámica correspondiente, [sys.dm_resource_governor_workload_groups &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-resource-governor-workload-groups-transact-sql.md).  
   
  La configuración almacenada puede ser diferente a la configuración en memoria si se ha cambiado la configuración del regulador de recursos pero sin aplicar la instrucción ALTER RESOURCE GOVERNOR RECONFIGURE.  
   
@@ -62,6 +62,6 @@ ms.lasthandoff: 02/03/2018
 ## <a name="see-also"></a>Vea también  
  [sys.dm_resource_governor_workload_groups &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-resource-governor-workload-groups-transact-sql.md)   
  [Vistas de catálogo &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/catalog-views-transact-sql.md)   
- [Vistas de catálogo del regulador de recursos &#40; Transact-SQL &#41;](../../relational-databases/system-catalog-views/resource-governor-catalog-views-transact-sql.md)  
+ [Vistas de catálogo del regulador de recursos &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/resource-governor-catalog-views-transact-sql.md)  
   
   

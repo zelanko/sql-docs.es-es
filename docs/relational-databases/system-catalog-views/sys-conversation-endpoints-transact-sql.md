@@ -1,16 +1,16 @@
 ---
 title: Sys.conversation_endpoints (Transact-SQL) | Documentos de Microsoft
-ms.custom: 
+ms.custom: ''
 ms.date: 06/10/2016
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine
-ms.service: 
+ms.service: ''
 ms.component: system-catalog-views
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - conversation_endpoints_TSQL
@@ -22,16 +22,16 @@ dev_langs:
 helpviewer_keywords:
 - sys.conversation_endpoints catalog view
 ms.assetid: 2ed758bc-2a9d-4831-8da2-4b80e218f3ea
-caps.latest.revision: 
+caps.latest.revision: 47
 author: stevestein
 ms.author: sstein
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 5cbfc13a807b2ec7c61ab2f12ec6f6cfe9f4ae82
-ms.sourcegitcommit: c556eaf60a49af7025db35b7aa14beb76a8158c5
+ms.openlocfilehash: 19d599519d01b9f9ea7619c6d69fdc0212172889
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/03/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="sysconversationendpoints-transact-sql"></a>sys.conversation_endpoints (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -48,7 +48,7 @@ ms.lasthandoff: 02/03/2018
 |service_id|**int**|Identificador del servicio para este lado de la conversación. No acepta valores NULL.|  
 |lifetime|**datetime**|Fecha y hora de expiración de esta conversación. No acepta valores NULL.|  
 |state|**char(2)**|El estado actual de la conversación. No acepta valores NULL. Una de las siguientes opciones:<br /><br /> Por lo tanto salida iniciada. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] procesó una instrucción BEGIN CONVERSATION para esta conversación, pero no se ha enviado todavía ningún mensaje.<br /><br /> SI entrada iniciada. Otra instancia inició una nueva conversación con [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] pero [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] no ha recibido completamente el primer mensaje. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] puede crear la conversación en este estado si se fragmenta el primer mensaje o si [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] recibe los mensajes sin orden. No obstante, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] podría crear la conversación en el estado CO (conversando) si la primera transmisión recibida de la conversación contiene el primer mensaje completo.<br /><br /> CO conversando. La conversación está establecida y los dos lados de la conversación pueden enviar mensajes. La mayor parte de la comunicación de un servicio típico tiene lugar cuando la conversación está en este estado.<br /><br /> DI Disconnected entrante. El lado remoto de la conversación ha emitido un END CONVERSATION. La conversación permanece en este estado hasta que el lado local de la conversación emite un END CONVERSATION. Una aplicación podría seguir recibiendo mensajes de la conversación. Puesto que el lado remoto de la conversación ha finalizado la conversación, una aplicación no puede enviar mensajes en esta conversación. Cuando una aplicación emite una instrucción END CONVERSATION, la conversación pasa al estado CD (Cerrada).<br /><br /> DO salida desconectada. El lado local de la conversación ha emitido un END CONVERSATION. La conversación permanece en este estado hasta que el lado remoto de la conversación confirma un END CONVERSATION. Una aplicación no puede seguir enviando ni recibiendo mensajes de la conversación. Cuando el lado remoto de la conversación confirma la instrucción END CONVERSATION, la conversación pasa al estado CD (Cerrada).<br /><br /> Error de recuperación de emergencia. Se ha producido un error en este extremo. El mensaje de error se coloca en la cola de la aplicación. Si la cola de la aplicación está vacía, esto indica que la aplicación ya utilizó el mensaje de error.<br /><br /> CD cerrado. El extremo de la conversación ya no se utiliza.|  
-|state_desc|**nvarchar(60)**|Descripción del estado de la conversación de punto de conexión. Esta columna es acepta valores NULL. Una de las siguientes opciones:<br /><br /> **STARTED_OUTBOUND**<br /><br /> **STARTED_INBOUND**<br /><br /> **CONVERSING**<br /><br /> **DISCONNECTED_INBOUND**<br /><br /> **DISCONNECTED_OUTBOUND**<br /><br /> **CERRADO**<br /><br /> **ERROR**|  
+|state_desc|**nvarchar(60)**|Descripción del estado de la conversación de punto de conexión. Esta columna es acepta valores NULL. Una de las siguientes opciones:<br /><br /> **STARTED_OUTBOUND**<br /><br /> **STARTED_INBOUND**<br /><br /> **CONVERSANDO**<br /><br /> **DISCONNECTED_INBOUND**<br /><br /> **DISCONNECTED_OUTBOUND**<br /><br /> **CERRADO**<br /><br /> **ERROR**|  
 |far_service|**nvarchar(256)**|Nombre del servicio en el lado remoto de la conversación. No acepta valores NULL.|  
 |far_broker_instance|**nvarchar(128)**|Instancia del agente del lado remoto de la conversación. ACEPTA VALORES NULL.|  
 |principal_id|**int**|Identificador de la entidad de seguridad cuyo certificado se utiliza en el lado local del diálogo. No acepta valores NULL.|  

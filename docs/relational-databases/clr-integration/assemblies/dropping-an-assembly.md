@@ -1,15 +1,15 @@
 ---
 title: Al quitar un ensamblado | Documentos de Microsoft
-ms.custom: 
+ms.custom: ''
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine
-ms.service: 
+ms.service: ''
 ms.component: clr
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: 
-ms.tgt_pltfrm: 
+ms.technology: ''
+ms.tgt_pltfrm: ''
 ms.topic: reference
 helpviewer_keywords:
 - removing assemblies
@@ -17,20 +17,20 @@ helpviewer_keywords:
 - assemblies [CLR integration], removing
 - dropping assemblies
 ms.assetid: 03481034-dc91-4488-ab24-ba44243e2690
-caps.latest.revision: 
+caps.latest.revision: 16
 author: rothja
 ms.author: jroth
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 1db4c5af104f3f00db4cdf26c3ab2f7c94800513
-ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
+ms.openlocfilehash: 43dbe5a4d72563217b4c2ad7a74e78aea7e7ac09
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/09/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="dropping-an-assembly"></a>Quitar un ensamblado
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
-Es posible eliminar o quitar ensamblados registrados en [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] mediante la instrucción CREATE ASSEMBLY cuando la funcionalidad que proporcionan ya no se necesita. Cuando se quita un ensamblado se quita el propio ensamblado y todos sus archivos asociados, como los archivos de depuración, de la base de datos. Para quitar un ensamblado, use la instrucción DROP ASSEMBLY con la sintaxis siguiente:  
+  Es posible eliminar o quitar ensamblados registrados en [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] mediante la instrucción CREATE ASSEMBLY cuando la funcionalidad que proporcionan ya no se necesita. Cuando se quita un ensamblado se quita el propio ensamblado y todos sus archivos asociados, como los archivos de depuración, de la base de datos. Para quitar un ensamblado, use la instrucción DROP ASSEMBLY con la sintaxis siguiente:  
   
 ```  
 DROP ASSEMBLY MyDotNETAssembly  
@@ -75,9 +75,9 @@ SELECT o.name AS major_name, o.type_desc AS major_type_desc
  [Modificar un ensamblado](../../../relational-databases/clr-integration/assemblies/altering-an-assembly.md)   
  [Creación de un ensamblado](../../../relational-databases/clr-integration/assemblies/creating-an-assembly.md)   
  [DROP AGGREGATE &#40;Transact-SQL&#41;](../../../t-sql/statements/drop-aggregate-transact-sql.md)   
- [DROP FUNCTION &#40; Transact-SQL &#41;](../../../t-sql/statements/drop-function-transact-sql.md)   
- [DROP PROCEDURE &#40; Transact-SQL &#41;](../../../t-sql/statements/drop-procedure-transact-sql.md)   
+ [DROP FUNCTION &#40;Transact-SQL&#41;](../../../t-sql/statements/drop-function-transact-sql.md)   
+ [DROP PROCEDURE & #40; Transact-SQL & #41;](../../../t-sql/statements/drop-procedure-transact-sql.md)   
  [DROP TRIGGER &#40;Transact-SQL&#41;](../../../t-sql/statements/drop-trigger-transact-sql.md)   
- [DROP TYPE &#40;Transact-SQL&#41;](../../../t-sql/statements/drop-type-transact-sql.md)  
+ [TIPO de COLOCACIÓN &#40;Transact-SQL&#41;](../../../t-sql/statements/drop-type-transact-sql.md)  
   
   

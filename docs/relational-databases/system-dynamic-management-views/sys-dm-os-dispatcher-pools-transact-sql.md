@@ -1,8 +1,8 @@
 ---
-title: sys.dm_os_dispatcher_pools (Transact-SQL) | Microsoft Docs
+title: Sys.dm_os_dispatcher_pools (Transact-SQL) | Documentos de Microsoft
 ms.custom: ''
 ms.date: 08/18/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine
 ms.service: ''
 ms.component: dmv's
@@ -28,11 +28,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 44b6e630c1afe8360796656eca1d1814a92067e0
-ms.sourcegitcommit: 8b332c12850c283ae413e0b04b2b290ac2edb672
+ms.openlocfilehash: a7c3d26cca9c5a758c0cc95ebb2b76e7bdb17767
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/05/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="sysdmosdispatcherpools-transact-sql"></a>sys.dm_os_dispatcher_pools (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -44,8 +44,8 @@ ms.lasthandoff: 04/05/2018
   
 |Nombre de columna|Tipo de datos|Description|  
 |-----------------|---------------|-----------------|  
-|dispatcher_pool_address|**varbinary(8)**|Dirección del grupo de distribuidores. dispatcher_pool_address is unique. No admite valores NULL.|  
-|tipo|**nvarchar(256)**|El tipo del grupo de distribuidores. No admite valores NULL. Hay dos tipos de grupos de distribuidores:<br /><br /> DISP_POOL_XE_ENGINE<br /><br /> DISP_POOL_XE_SESSION<br /><br /> Consultar la DMV para obtener la lista completa|  
+|dispatcher_pool_address|**varbinary (8)**|Dirección del grupo de distribuidores. dispatcher_pool_address es único. No admite valores NULL.|  
+|Tipo|**nvarchar(256)**|El tipo del grupo de distribuidores. No admite valores NULL. Hay dos tipos de grupos de distribuidores:<br /><br /> DISP_POOL_XE_ENGINE<br /><br /> DISP_POOL_XE_SESSION<br /><br /> Consultar la DMV para obtener la lista completa|  
 |name|**nvarchar(256)**|El nombre del grupo de distribuidores. No admite valores NULL.|  
 |dispatcher_count|**int**|El número de subprocesos de distribución activos. No admite valores NULL.|  
 |dispatcher_ideal_count|**int**|El número de subprocesos de distribución que el grupo de distribuidores puede incrementar. No admite valores NULL.|  

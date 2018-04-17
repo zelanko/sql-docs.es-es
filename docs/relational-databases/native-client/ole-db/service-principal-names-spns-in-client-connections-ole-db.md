@@ -1,33 +1,34 @@
 ---
 title: Nombres de entidad de servicio (SPN) en conexiones de cliente (OLE DB) | Documentos de Microsoft
-ms.custom: 
+ms.custom: ''
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
-ms.service: 
+ms.service: ''
 ms.component: native-client-ole-db
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: 
-ms.tgt_pltfrm: 
+ms.technology: ''
+ms.tgt_pltfrm: ''
 ms.topic: reference
 ms.assetid: e212010e-a5b6-4ad1-a3c0-575327d3ffd3
-caps.latest.revision: 
+caps.latest.revision: 17
 author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 9920958902d2803c9135f1745be7c47f573c36fa
-ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
+monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
+ms.openlocfilehash: bdd9a9414d233be8e50db2881256d774d59f1d50
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/25/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="service-principal-names-spns-in-client-connections-ole-db"></a>Nombres de entidad de seguridad del servicio (SPN) en conexiones cliente (OLE DB)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
 [!INCLUDE[SNAC_Deprecated](../../../includes/snac-deprecated.md)]
 
-  En este tema se describen propiedades y funciones miembro de OLE DB compatibles con los nombres principales de servicio (SPN) en aplicaciones cliente. Para obtener más información acerca de los SPN en aplicaciones cliente, consulte [Service Principal Name &#40; SPN &#41; Compatibilidad con conexiones de cliente](../../../relational-databases/native-client/features/service-principal-name-spn-support-in-client-connections.md). Para obtener un ejemplo, vea [la autenticación Kerberos integrada &#40; OLE DB &#41;](../../../relational-databases/native-client-ole-db-how-to/integrated-kerberos-authentication-ole-db.md).  
+  En este tema se describen propiedades y funciones miembro de OLE DB compatibles con los nombres principales de servicio (SPN) en aplicaciones cliente. Para obtener más información acerca de los SPN en aplicaciones cliente, consulte [nombre Principal de servicio &#40;SPN&#41; compatibilidad con conexiones de cliente](../../../relational-databases/native-client/features/service-principal-name-spn-support-in-client-connections.md). Para obtener un ejemplo, vea [la autenticación Kerberos integrada &#40;OLE DB&#41;](../../../relational-databases/native-client-ole-db-how-to/integrated-kerberos-authentication-ole-db.md).  
   
 ## <a name="provider-initialization-string-keywords"></a>Palabras clave de cadena de inicialización de proveedor  
  Las siguientes palabras clave de cadena de inicialización de proveedor admiten SPN en aplicaciones OLE DB. En la tabla siguiente, se utilizan los valores de la columna de la palabra clave de la cadena de proveedor de IDBInitialize:: Initialize. Los valores de la columna de descripción se utilizan en las cadenas de inicialización al conectar con ADO o IDataInitialize:: GetDatasource.  
@@ -62,7 +63,7 @@ ms.lasthandoff: 01/25/2018
 |IDataInitialize::GetInitializationString|Si SSPROP_INIT_SERVERSPN y SSPROP_INIT_FAILOVERPARTNERSPN tienen valores no predeterminados, se incluirán en la cadena de inicialización a través de *ppwszInitString* como valores de palabra clave para **ServerSPN**y **FailoverPartnerSPN**. De lo contrario, estas palabras clave no estarán incluidas en la cadena de inicialización.|  
 |IDBInitialize::Initialize|Si están habilitados los mensajes configurando DBPROP_INIT_PROMPT en las propiedades de inicialización de origen de datos, se mostrará el cuadro de diálogo Inicio de sesión de OLE DB. Esto permite escribir SPN tanto para el servidor principal como para su asociado de conmutación por error.<br /><br /> La cadena de proveedor de DPPROP_INIT_PROVIDERSTRING, si establece, reconoce las nuevas palabras clave **ServerSPN** y **FailoverPartnerSPN** y utilizar sus valores, si está presente, para inicializar SSPROP_INIT_SERVER_ SPN y SSPROP_INIT_FAILOVER_PARTNER_SPN.<br /><br /> IDBProperties:: SetProperties se puede llamar para establecer las propiedades SSPROP_INIT_SERVER_SPN y SSPROP_INIT_FAILOVER_PARTNER_SPN antes de llamar a IDBInitialize:: Initialize. Ésta es una alternativa a utilizar una cadena de proveedor.<br /><br /> Si una propiedad se establece en más de un lugar, un valor establecido mediante programación tiene precedencia sobre un conjunto de valores en la cadena de proveedor. Un conjunto de valores en una cadena de inicialización tiene precedencia sobre un conjunto de valores en un cuadro de diálogo de inicio de sesión.<br /><br /> Si la misma palabra clave aparece más de una vez en la cadena del proveedor, el valor de primera aparición tiene prioridad.|  
 |IDBProperties::GetProperties|IDBProperties::GetProperties se puede llamar para obtener los valores de la nueva fuente propiedades de inicialización datos SSPROP_INIT_SERVERSPN y SSPROP_INIT_FAILOVERPARTNERSPN y de las nuevas propiedades de origen de datos SSPROP_AUTHENTICATIONMETHOD y SSPROP_ MUTUALLYAUTHENTICATED.|  
-|IDBProperties::GetPropertyInfo|IDBProperties:: GetPropertyInfo incluirá el origen datos nuevas propiedades de inicialización SSPROP_INIT_SERVERSPN y SSPROP_INIT_FAILOVERPARTNERSPN, o las propiedades de origen de datos SSPROP_AUTHENTICATION_METHOD y SSPROP_MUTUALLYAUTHENTICATED.|  
+|IDBProperties:: GetPropertyInfo|IDBProperties:: GetPropertyInfo incluirá el origen datos nuevas propiedades de inicialización SSPROP_INIT_SERVERSPN y SSPROP_INIT_FAILOVERPARTNERSPN, o las propiedades de origen de datos SSPROP_AUTHENTICATION_METHOD y SSPROP_MUTUALLYAUTHENTICATED.|  
 |IDBProperties::SetProperties|IDBProperties:: SetProperties se puede llamar para establecer los valores del nuevo origen de datos SSPROP_INITSERVERSPN y SSPROP_INIT_FAILOVERPARTNERSPN las propiedades de inicialización.<br /><br /> Estas propiedades se pueden devolver en cualquier momento, pero si el origen de datos ya está abierto, se devolverá el error siguiente: DB_E_ERRORSOCCURRED, "La operación de múltiples pasos de OLE DB generó errores. Compruebe los valores de estado de OLE DB si es posible. No se realizó ningún trabajo."|  
   
 ## <a name="see-also"></a>Vea también  

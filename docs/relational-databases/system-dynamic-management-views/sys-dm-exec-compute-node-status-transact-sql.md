@@ -1,16 +1,16 @@
 ---
-title: sys.dm_exec_compute_node_status (Transact-SQL) | Microsoft Docs
-ms.custom: 
+title: Sys.dm_exec_compute_node_status (Transact-SQL) | Documentos de Microsoft
+ms.custom: ''
 ms.date: 03/15/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine, sql-data-warehouse, pdw
-ms.service: 
+ms.service: ''
 ms.component: dmv's
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - DM_EXEC_COMPUTE_NODE_STATUS_TSQL
@@ -23,16 +23,17 @@ helpviewer_keywords:
 - dm_exec_compute_node_status
 - sys.dm_exec_compute_node_status management view
 ms.assetid: b606f91f-3a08-4a4f-bb57-32ae155b3738
-caps.latest.revision: 
+caps.latest.revision: 7
 author: stevestein
 ms.author: sstein
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: f898f754f0b39b0f5746d8ed076c75d26354bccd
-ms.sourcegitcommit: c556eaf60a49af7025db35b7aa14beb76a8158c5
+monikerRange: '>= aps-pdw-2016 || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
+ms.openlocfilehash: 8ed4f5716742670074e0307ba8d3dd364645c709
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/03/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="sysdmexeccomputenodestatus-transact-sql"></a>sys.dm_exec_compute_node_status (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2016-xxxx-asdw-pdw-md](../../includes/tsql-appliesto-ss2016-xxxx-asdw-pdw-md.md)]
@@ -43,12 +44,12 @@ ms.lasthandoff: 02/03/2018
 |-----------------|---------------|-----------------|-----------|  
 |compute_node_id|**int**|Identificador numérico único asociado al nodo.|Es único en el clúster de escalabilidad horizontal independientemente del tipo.|  
 |process_id|**int**|||  
-|process_name|**nvarchar(255)**|Nombre lógico del nodo.|Cualquier cadena de longitud apropiada.|  
+|nombreproceso|**nvarchar(255)**|Nombre lógico del nodo.|Cualquier cadena de longitud apropiada.|  
 |allocated_memory|**bigint**|Total asignado a memoria en este nodo.||  
 |available_memory|**bigint**|Memoria total disponible en este nodo.||  
 |process_cpu_usage|**bigint**|Uso de CPU de proceso total, en tics.||  
 |total_cpu_usage|**bigint**|Uso total de CPU, en tics.||  
-|thread_count|**bigint**|Número total de subprocesos en uso en este nodo.||  
+|Thread_Count|**bigint**|Número total de subprocesos en uso en este nodo.||  
 |handle_count|**bigint**|Número total de identificadores en uso en este nodo.||  
 |total_elapsed_time|**bigint**|Tiempo total transcurrido desde que el sistema, iniciar o reiniciar.|Tiempo total transcurrido desde que el sistema, iniciar o reiniciar. Si total_elapsed_time supera el valor máximo de un entero (24,8 días en milisegundos), provocará el error de materialización debido a desbordamiento. El valor máximo en milisegundos equivale a días 24,8.|  
 |is_available|**bit**|Marca que indica si este nodo está disponible.||  
@@ -59,6 +60,6 @@ ms.lasthandoff: 02/03/2018
 ## <a name="see-also"></a>Vea también  
  [PolyBase, solución de problemas con las vistas de administración dinámica](http://msdn.microsoft.com/library/ce9078b7-a750-4f47-b23e-90b83b783d80)   
  [Funciones y vistas de administración dinámica &#40;Transact-SQL&#41;](~/relational-databases/system-dynamic-management-views/system-dynamic-management-views.md)   
- [Base de datos relacionadas con vistas de administración dinámica &#40; Transact-SQL &#41;](../../relational-databases/system-dynamic-management-views/database-related-dynamic-management-views-transact-sql.md)  
+ [Vistas de administración dinámica relacionadas con la base de datos &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/database-related-dynamic-management-views-transact-sql.md)  
   
   

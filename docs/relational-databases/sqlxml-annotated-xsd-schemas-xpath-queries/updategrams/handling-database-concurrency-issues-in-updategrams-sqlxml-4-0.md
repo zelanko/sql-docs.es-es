@@ -1,16 +1,16 @@
 ---
-title: "Control de problemas de simultaneidad de base de datos en los diagramas de actualización (SQLXML 4.0) | Documentos de Microsoft"
-ms.custom: 
+title: Control de problemas de simultaneidad de base de datos en los diagramas de actualización (SQLXML 4.0) | Documentos de Microsoft
+ms.custom: ''
 ms.date: 03/16/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine, sql-database
-ms.service: 
+ms.service: ''
 ms.component: sqlxml
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - dbe-xml
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: reference
 helpviewer_keywords:
 - <before> block
@@ -23,20 +23,21 @@ helpviewer_keywords:
 - concurrency [SQLXML]
 - intermediate concurrency protection [SQLXML]
 ms.assetid: d4b908d1-b25b-4ad9-8478-9cd882e8c44e
-caps.latest.revision: 
+caps.latest.revision: 26
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 1e19d8397d59b4c85d60593c63faa5bc6f0f2ea4
-ms.sourcegitcommit: 37f0b59e648251be673389fa486b0a984ce22c81
+monikerRange: = azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions
+ms.openlocfilehash: 328bb2b98ffe4a6a266463aa8fe0d8348ebbd975
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/12/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="handling-database-concurrency-issues-in-updategrams-sqlxml-40"></a>Controlar problemas de simultaneidad de base de datos en diagramas de actualización (SQLXML 4.0)
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
-Al igual que otros mecanismos de actualización de base de datos, los diagramas de actualización deben lidiar con actualizaciones simultáneas de datos en un entorno multiusuario. Los diagramas de actualización usan el control de simultaneidad optimista, que usa la comparación de datos de campos de selección como instantáneas para asegurarse de que otra aplicación de usuario no haya modificado los datos que van a actualizarse desde que se leyeron de la base de datos. Los diagramas de actualización incluyen estos valores de las instantáneas en el  **\<antes >** bloque de los diagramas de actualización. Antes de actualizar la base de datos, el diagrama de actualización comprueba los valores que se especifican en el  **\<antes >** bloque con los valores actuales de la base de datos para asegurarse de que la actualización es válida.  
+  Al igual que otros mecanismos de actualización de base de datos, los diagramas de actualización deben lidiar con actualizaciones simultáneas de datos en un entorno multiusuario. Los diagramas de actualización usan el control de simultaneidad optimista, que usa la comparación de datos de campos de selección como instantáneas para asegurarse de que otra aplicación de usuario no haya modificado los datos que van a actualizarse desde que se leyeron de la base de datos. Los diagramas de actualización incluyen estos valores de las instantáneas en el  **\<antes >** bloque de los diagramas de actualización. Antes de actualizar la base de datos, el diagrama de actualización comprueba los valores que se especifican en el  **\<antes >** bloque con los valores actuales de la base de datos para asegurarse de que la actualización es válida.  
   
  El control de simultaneidad optimista ofrece tres niveles de protección en un diagrama de actualización: bajo (ninguno), intermedio y alto. Puede decidir qué nivel de protección necesita especificando el diagrama de actualización en consecuencia.  
   
@@ -195,6 +196,6 @@ Al igual que otros mecanismos de actualización de base de datos, los diagramas 
 ```  
   
 ## <a name="see-also"></a>Vea también  
- [Consideraciones de seguridad de diagrama de actualización &#40; SQLXML 4.0 &#41;](../../../relational-databases/sqlxml-annotated-xsd-schemas-xpath-queries/security/updategram-security-considerations-sqlxml-4-0.md)  
+ [Consideraciones de seguridad de updategram &#40;SQLXML 4.0&#41;](../../../relational-databases/sqlxml-annotated-xsd-schemas-xpath-queries/security/updategram-security-considerations-sqlxml-4-0.md)  
   
   

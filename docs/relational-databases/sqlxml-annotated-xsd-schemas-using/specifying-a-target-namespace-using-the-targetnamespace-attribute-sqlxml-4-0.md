@@ -1,16 +1,16 @@
 ---
 title: Especificar un Namespace de destino mediante el atributo (SQLXML 4.0) targetNamespace | Documentos de Microsoft
-ms.custom: 
+ms.custom: ''
 ms.date: 03/16/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine, sql-database
-ms.service: 
+ms.service: ''
 ms.component: sqlxml
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - dbe-xml
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: reference
 helpviewer_keywords:
 - namespaces [SQLXML], annotated XSD schemas
@@ -22,20 +22,21 @@ helpviewer_keywords:
 - elementFormDefault attribute
 - target namespaces [SQLXML]
 ms.assetid: f3df9877-6672-4444-8245-2670063c9310
-caps.latest.revision: 
+caps.latest.revision: 27
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 9b0b325cea845e82519752b04591c2c7724b1acf
-ms.sourcegitcommit: 37f0b59e648251be673389fa486b0a984ce22c81
+monikerRange: = azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions
+ms.openlocfilehash: 9b420ec48a7bc78a55e50dc549c6e06be7e34cb0
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/12/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="specifying-a-target-namespace-using-the-targetnamespace-attribute-sqlxml-40"></a>Especificar un espacio de nombres de destino mediante el atributo targetNamespace (SQLXML 4.0)
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
-Crear esquemas XSD, puede utilizar el esquema XSD **targetNamespace** atributo para especificar un espacio de nombres de destino. Este tema se describe cómo el XSD **targetNamespace**, **elementFormDefault**, y **attributeFormDefault** funcionan los atributos, cómo afectan a la instancia XML que es genera, y cómo se especifican consultas XPath con espacios de nombres.  
+  Crear esquemas XSD, puede utilizar el esquema XSD **targetNamespace** atributo para especificar un espacio de nombres de destino. Este tema se describe cómo el XSD **targetNamespace**, **elementFormDefault**, y **attributeFormDefault** funcionan los atributos, cómo afectan a la instancia XML que es genera, y cómo se especifican consultas XPath con espacios de nombres.  
   
  Puede usar el **xsd: targetNamespace** atributo para colocar elementos y atributos del espacio de nombres predeterminado en otro espacio de nombres. También puede especificar si los elementos y los atributos del esquema declarados localmente deben estar certificados por un espacio de nombres, ya sea explícitamente mediante un prefijo o implícitamente de forma predeterminada. Puede usar el **elementFormDefault** y **attributeFormDefault** atributos en el  **\<xsd: schema >** elemento para especificar globalmente la calificación de locales elementos y atributos o puede usar el **formulario** atributo para especificar los atributos y elementos individuales por separado.  
   

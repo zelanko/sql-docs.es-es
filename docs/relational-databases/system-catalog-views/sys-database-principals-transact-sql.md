@@ -1,16 +1,16 @@
 ---
 title: Sys.database_principals (Transact-SQL) | Documentos de Microsoft
-ms.custom: 
+ms.custom: ''
 ms.date: 10/27/2016
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
-ms.service: 
+ms.service: ''
 ms.component: system-catalog-views
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - database_principals
@@ -22,16 +22,17 @@ dev_langs:
 helpviewer_keywords:
 - sys.database_principals catalog view
 ms.assetid: 8cb239e9-eb8c-4109-9cec-0d35de95fa0e
-caps.latest.revision: 
+caps.latest.revision: 46
 author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 6f742ceebbb7c996f5e1a1d09e78352d26d10a37
-ms.sourcegitcommit: 45e4efb7aa828578fe9eb7743a1a3526da719555
+monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
+ms.openlocfilehash: d6d3cd64336d3374e74e5df05310e2e337ded062
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="sysdatabaseprincipals-transact-sql"></a>sys.database_principals (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -42,19 +43,19 @@ ms.lasthandoff: 11/21/2017
 |-----------------|---------------|-----------------|  
 |**Nombre**|**sysname**|Nombre de la entidad de seguridad, único en la base de datos.|  
 |**principal_id**|**int**|Id. de la entidad de seguridad, único en la base de datos.|  
-|**tipo**|**Char (1)**|Tipo de entidad de seguridad:<br /><br /> A = Rol de aplicación<br /><br /> C = Usuario asignado a un certificado<br /><br /> E = usuario externo de Azure Active Directory<br /><br /> G = Grupo de Windows<br /><br /> K = Usuario asignado a una clave asimétrica<br /><br /> R = Rol de base de datos<br /><br /> S = Usuario de SQL<br /><br /> U = Usuario de Windows<br /><br /> X = grupo externo de grupo de Active Directory de Azure o las aplicaciones|  
-|**type_desc**|**nvarchar (60)**|Descripción del tipo de entidad de seguridad.<br /><br /> APPLICATION_ROLE<br /><br /> CERTIFICATE_MAPPED_USER<br /><br /> EXTERNAL_USER<br /><br /> WINDOWS_GROUP<br /><br /> ASYMMETRIC_KEY_MAPPED_USER<br /><br /> DATABASE_ROLE<br /><br /> SQL_USER<br /><br /> WINDOWS_USER<br /><br /> EXTERNAL_GROUPS|  
+|**Tipo**|**char(1)**|Tipo de entidad de seguridad:<br /><br /> A = Rol de aplicación<br /><br /> C = Usuario asignado a un certificado<br /><br /> E = usuario externo de Azure Active Directory<br /><br /> G = Grupo de Windows<br /><br /> K = Usuario asignado a una clave asimétrica<br /><br /> R = Rol de base de datos<br /><br /> S = Usuario de SQL<br /><br /> U = Usuario de Windows<br /><br /> X = grupo externo de grupo de Active Directory de Azure o las aplicaciones|  
+|**type_desc**|**nvarchar(60)**|Descripción del tipo de entidad de seguridad.<br /><br /> APPLICATION_ROLE<br /><br /> CERTIFICATE_MAPPED_USER<br /><br /> EXTERNAL_USER<br /><br /> WINDOWS_GROUP<br /><br /> ASYMMETRIC_KEY_MAPPED_USER<br /><br /> DATABASE_ROLE<br /><br /> SQL_USER<br /><br /> WINDOWS_USER<br /><br /> EXTERNAL_GROUPS|  
 |**default_schema_name**|**sysname**|Nombre que se utilizará al nombre de SQL no especifica un esquema. Null para entidades de seguridad que no son del tipo S, U o A.|  
 |**create_date**|**datetime**|Hora en que se creó la entidad de seguridad.|  
 |**modify_date**|**datetime**|Hora en que se modificó por última vez la entidad de seguridad.|  
 |**owning_principal_id**|**int**|Id. de la entidad de seguridad propietaria de esta entidad de seguridad. Todas las entidades de seguridad excepto Roles de base de datos deben pertenecer a **dbo**.|  
-|**SID**|**varbinary (85)**|SID (identificador de seguridad) de la entidad de seguridad.  NULL para SYS e INFORMATION SCHEMAS.|  
+|**SID**|**varbinary(85)**|SID (identificador de seguridad) de la entidad de seguridad.  NULL para SYS e INFORMATION SCHEMAS.|  
 |**is_fixed_role**|**bit**|Si es 1, esta fila representa una entrada para uno de los roles fijos de base de datos: db_owner, db_accessadmin, db_datareader, db_datawriter, db_ddladmin, db_securityadmin, db_backupoperator, db_denydatareader, db_denydatawriter.|  
 |**authentication_type**|**int**|**Se aplica a**: desde [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] hasta [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].<br /><br /> Tipo de autenticación. Éstos son los valores posibles y sus descripciones.<br /><br /> 0: sin autenticación<br />1: autenticación de instancias<br />2: autenticación de base de datos<br />3: autenticación de Windows|  
-|**authentication_type_desc**|**nvarchar (60)**|**Se aplica a**: desde [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] hasta [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].<br /><br /> Descripción del tipo de autenticación. Éstos son los valores posibles y sus descripciones.<br /><br /> NONE: Sin autenticación<br />INSTANCIA: Autenticación de la instancia<br />Base de datos: Autenticación de base de datos de<br />WINDOWS: Autenticación de Windows|  
+|**authentication_type_desc**|**nvarchar(60)**|**Se aplica a**: desde [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] hasta [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].<br /><br /> Descripción del tipo de autenticación. Éstos son los valores posibles y sus descripciones.<br /><br /> NONE: Sin autenticación<br />INSTANCIA: Autenticación de la instancia<br />Base de datos: Autenticación de base de datos de<br />WINDOWS: Autenticación de Windows|  
 |**default_language_name**|**sysname**|**Se aplica a**: desde [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] hasta [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].<br /><br /> Idioma predeterminado para esta entidad de seguridad.|  
 |**default_language_lcid**|**int**|**Se aplica a**: desde [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] hasta [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].<br /><br /> LCID predeterminado para esta entidad de seguridad.|  
-|**allow_encrypted_value_modifications**|**bit**|**Se aplica a**: [!INCLUDE[ssSQL15_md](../../includes/sssql15-md.md)] a través de [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)], [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)].<br /><br /> Suprime las comprobaciones de metadatos criptográficos en el servidor en operaciones de copia masiva. Esto permite al usuario para la copia masiva de datos cifrado mediante Always Encrypted, entre las tablas o bases de datos sin descifrar los datos. El valor predeterminado es OFF. |      
+|**allow_encrypted_value_modifications**|**bit**|**Se aplica a**: de [!INCLUDE[ssSQL15_md](../../includes/sssql15-md.md)] a [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)], [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)].<br /><br /> Suprime las comprobaciones de metadatos criptográficos en el servidor en operaciones de copia masiva. Esto permite al usuario para la copia masiva de datos cifrado mediante Always Encrypted, entre las tablas o bases de datos sin descifrar los datos. El valor predeterminado es OFF. |      
   
 ## <a name="remarks"></a>Comentarios  
  El *PasswordLastSetTime* propiedades están disponibles en todas las configuraciones admitidas de SQL Server, pero las demás propiedades solo están disponibles cuando se ejecuta SQL Server en Windows Server 2003 o posterior y tanto CHECK_POLICY como CHECK_ EXPIRACIÓN están habilitados. Vea [directiva de contraseñas](../../relational-databases/security/password-policy.md) para obtener más información.  
@@ -94,7 +95,7 @@ JOIN sys.schemas AS s
     ON o.schema_id = s.schema_id;  
 ```  
   
-## <a name="examples-includesssdwfullincludessssdwfull-mdmd-and-includesspdwincludessspdw-mdmd"></a>Ejemplos: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] y[!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
+## <a name="examples-includesssdwfullincludessssdwfull-mdmd-and-includesspdwincludessspdw-mdmd"></a>Ejemplos: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] y [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
   
 ### <a name="c-listing-all-the-permissions-of-database-principals"></a>C: enumerar todos los permisos de las entidades de seguridad de base de datos  
  La consulta siguiente enumera los permisos que se otorgan o deniegan específicamente a las entidades de seguridad de base de datos.  

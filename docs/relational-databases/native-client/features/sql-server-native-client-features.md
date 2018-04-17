@@ -1,15 +1,15 @@
 ---
-title: "Características SQL Server Native Client | Documentos de Microsoft"
-ms.custom: 
+title: Características SQL Server Native Client | Documentos de Microsoft
+ms.custom: ''
 ms.date: 03/17/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
-ms.service: 
+ms.service: ''
 ms.component: native-client|features
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: 
-ms.tgt_pltfrm: 
+ms.technology: ''
+ms.tgt_pltfrm: ''
 ms.topic: reference
 helpviewer_keywords:
 - MDAC [SQL Server]
@@ -17,16 +17,17 @@ helpviewer_keywords:
 - SQLNCLI, about SQL Server Native Client
 - data access [SQL Server Native Client], features
 ms.assetid: 7bb32865-5afb-41ab-98b4-3fa545ee8953
-caps.latest.revision: 
+caps.latest.revision: 59
 author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 42eb24a2536f388e13e04892246e917f277ef408
-ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
+monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
+ms.openlocfilehash: f86438187351bfe36409c34c3a4193ac0120a777
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/25/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="sql-server-native-client-features"></a>Características de SQL Server Native Client
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -71,7 +72,7 @@ ms.lasthandoff: 01/25/2018
  [Utilizar el cifrado sin validación](../../../relational-databases/native-client/features/using-encryption-without-validation.md)  
  Explica cómo utilizar [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client para cifrar los datos enviados al servidor sin validar el certificado.  
   
- [Parámetros con valores de tabla & #40; Cliente nativo de SQL Server & #41;](../../../relational-databases/native-client/features/table-valued-parameters-sql-server-native-client.md)  
+ [Parámetros con valores de tabla &#40;SQL Server Native Client&#41;](../../../relational-databases/native-client/features/table-valued-parameters-sql-server-native-client.md)  
  Explica la compatibilidad de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client con los parámetros con valores de tabla agregados.  
   
  [Tipos definidos por el usuario de CLR grandes](../../../relational-databases/native-client/features/large-clr-user-defined-types.md)  
@@ -80,7 +81,7 @@ ms.lasthandoff: 01/25/2018
  [Compatibilidad con FILESTREAM](../../../relational-databases/native-client/features/filestream-support.md)  
  Describe [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] compatibilidad Native Client para la característica mejorada FILESTREAM.  
   
- [Nombre Principal de servicio & #40; SPN & #41; Compatibilidad con conexiones de cliente](../../../relational-databases/native-client/features/service-principal-name-spn-support-in-client-connections.md)  
+ [Nombre Principal de servicio &#40;SPN&#41; compatibilidad con conexiones de cliente](../../../relational-databases/native-client/features/service-principal-name-spn-support-in-client-connections.md)  
  Explica cómo se ha ampliado la compatibilidad con los nombres principales de servicio (SPN) para habilitar la autenticación mutua en todos los protocolos.  
   
  [Compatibilidad con columnas dispersas en SQL Server Native Client](../../../relational-databases/native-client/features/sparse-columns-support-in-sql-server-native-client.md)  

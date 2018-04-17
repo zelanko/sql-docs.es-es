@@ -1,16 +1,16 @@
 ---
-title: sys.dm_fts_parser (Transact-SQL) | Microsoft Docs
-ms.custom: 
+title: Sys.dm_fts_parser (Transact-SQL) | Documentos de Microsoft
+ms.custom: ''
 ms.date: 06/10/2016
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine
-ms.service: 
+ms.service: ''
 ms.component: dmv's
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - sys.dm_fts_parser_TSQL
@@ -23,16 +23,16 @@ helpviewer_keywords:
 - sys.dm_fts_parser dynamic management function
 - troubleshooting [SQL Server], full-text search
 ms.assetid: 2736d376-fb9d-4b28-93ef-472b7a27623a
-caps.latest.revision: 
+caps.latest.revision: 37
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 97e1eb8f7c4b37e8f1d3bb84ff7b1607712f729c
-ms.sourcegitcommit: c556eaf60a49af7025db35b7aa14beb76a8158c5
+ms.openlocfilehash: 0494f1586f71d3dc475284e90721f2cc5fc8e502
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/03/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="sysdmftsparser-transact-sql"></a>sys.dm_fts_parser (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -49,7 +49,7 @@ sys.dm_fts_parser('query_string', lcid, stoplist_id, accent_sensitivity)
 ```  
   
 ## <a name="arguments"></a>Argumentos  
- *query_string*  
+ *QUERY_STRING*  
  Consulta que se desea analizar. *QUERY_STRING* puede ser una sucesión de cadenas que [CONTAINS](../../t-sql/queries/contains-transact-sql.md) compatibilidad con la sintaxis. Por ejemplo, se pueden incluir formas con inflexión, un diccionario de sinónimos y operadores lógicos.  
   
  *lcid*  
@@ -77,15 +77,15 @@ sys.dm_fts_parser('query_string', lcid, stoplist_id, accent_sensitivity)
 |-----------------|---------------|-----------------|  
 |palabra clave|**varbinary(128)**|Representación hexadecimal de una palabra clave determinada devuelta por un separador de palabras. Esta representación se utiliza para almacenar la palabra clave en el índice de texto completo. Este valor no es legible, pero resulta útil para relacionar una palabra clave determinada para la salida devueltos por otras vistas de administración dinámica que devuelven el contenido de un índice de texto completo, como [sys.dm_fts_index_keywords](../../relational-databases/system-dynamic-management-views/sys-dm-fts-index-keywords-transact-sql.md) y [ Sys.dm_fts_index_keywords_by_document](../../relational-databases/system-dynamic-management-views/sys-dm-fts-index-keywords-by-document-transact-sql.md).<br /><br /> **Nota:** OxFF representa el carácter especial que indica el final de un archivo o conjunto de datos.|  
 |group_id|**int**|Contiene un valor entero que es útil para diferenciar el grupo lógico a partir del cual se generó un término determinado. Por ejemplo, '`Server AND DB OR FORMSOF(THESAURUS, DB)"`' genera los valores de group_id siguientes en inglés:<br /><br /> 1: servidor<br />2: BASE DE DATOS<br />3: BASE DE DATOS|  
-|phrase_id|**int**|Contiene un valor entero que resulta útil para diferenciar los casos en los que el separador de palabras emite formatos alternativos de palabras compuestas, tales como texto completo. A veces, con la presencia de palabras compuestas ('multi-million') el separador de palabras emite formatos alternativos. En ocasiones, es necesario diferenciar estos formatos alternativos (frases).<br /><br /> Por ejemplo, '`multi-million`' genera los valores de phrase_id siguientes en inglés:<br /><br /> 1 para`multi`<br />1 para`million`<br />2 para`multimillion`|  
-|occurrence|**int**|Indica el orden de cada término en el resultado del análisis. Por ejemplo, para la repetición de la frase "`SQL Server query processor`", contendría los valores de repetición siguientes para los términos de la frase, en inglés:<br /><br /> 1 para`SQL`<br />2 para`Server`<br />3 para`query`<br />4 para`processor`|  
+|phrase_id|**int**|Contiene un valor entero que resulta útil para diferenciar los casos en los que el separador de palabras emite formatos alternativos de palabras compuestas, tales como texto completo. A veces, con la presencia de palabras compuestas ('multi-million') el separador de palabras emite formatos alternativos. En ocasiones, es necesario diferenciar estos formatos alternativos (frases).<br /><br /> Por ejemplo, '`multi-million`' genera los valores de phrase_id siguientes en inglés:<br /><br /> 1 para `multi`<br />1 para `million`<br />2 para `multimillion`|  
+|occurrence|**int**|Indica el orden de cada término en el resultado del análisis. Por ejemplo, para la repetición de la frase "`SQL Server query processor`", contendría los valores de repetición siguientes para los términos de la frase, en inglés:<br /><br /> 1 para `SQL`<br />2 para `Server`<br />3 para `query`<br />4 para `processor`|  
 |special_term|**nvarchar(4000)**|Contiene información sobre las características del término que el separador de palabras emite; por ejemplo:<br /><br /> Coincidencia exacta<br /><br /> Palabra irrelevante<br /><br /> Fin de frase<br /><br /> Fin de párrafo<br /><br /> Fin de capítulo|  
 |display_term|**nvarchar(4000)**|Contiene el formato legible de la palabra clave. Al igual que con las funciones diseñadas para tener acceso al contenido del índice de texto completo, este término mostrado podría no ser idéntico al original, debido a la limitación de la desnormalización. Sin embargo, debería ser suficientemente preciso para ayudar a identificarlo con respecto a la entrada original.|  
 |expansion_type|**int**|Contiene información sobre la naturaleza de la expansión de un término determinado; a saber:<br /><br /> 0 =caso de una sola palabra<br /><br /> 2=expansión con inflexión<br /><br /> 4=expansión o sustitución de diccionario de sinónimos<br /><br /> Por ejemplo, considere un caso en que el diccionario de sinónimos define run como una expansión de `jog`:<br /><br /> `<expansion>`<br /><br /> `<sub>run</sub>`<br /><br /> `<sub>jog</sub>`<br /><br /> `</expansion>`<br /><br /> El término `FORMSOF (FREETEXT, run)` genera la salida siguiente:<br /><br /> `run` con expansion_type=0<br /><br /> `runs` con expansion_type=2<br /><br /> `running` con expansion_type=2<br /><br /> `ran` con expansion_type=2<br /><br /> `jog` con expansion_type=4|  
-|source_term|**nvarchar(4000)**|Término o frase a partir de la cual se generó o analizó un término determinado. Por ejemplo, una consulta de '"`word breakers" AND stemmers'` genera los valores de source_term siguientes en inglés:<br /><br /> `word breakers`para el display_term`word`<br />`word breakers`para el display_term`breakers`<br />`stemmers`para el display_term`stemmers`|  
+|source_term|**nvarchar(4000)**|Término o frase a partir de la cual se generó o analizó un término determinado. Por ejemplo, una consulta de '"`word breakers" AND stemmers'` genera los valores de source_term siguientes en inglés:<br /><br /> `word breakers` para el display_term`word`<br />`word breakers` para el display_term`breakers`<br />`stemmers` para el display_term`stemmers`|  
   
 ## <a name="remarks"></a>Comentarios  
- **Sys.dm_fts_parser** es compatible con la sintaxis y las características de predicados de texto completo, como [CONTAINS](../../t-sql/queries/contains-transact-sql.md) y [FREETEXT](../../t-sql/queries/freetext-transact-sql.md)y las funciones, como [CONTAINSTABLE](../../relational-databases/system-functions/containstable-transact-sql.md) y [FREETEXTTABLE](../../relational-databases/system-functions/freetexttable-transact-sql.md).  
+ **Sys.dm_fts_parser** es compatible con la sintaxis y las características de predicados de texto completo, como [CONTAINS](../../t-sql/queries/contains-transact-sql.md) y [FREETEXT](../../t-sql/queries/freetext-transact-sql.md)y las funciones, como [CONTAINSTABLE](../../relational-databases/system-functions/containstable-transact-sql.md)y [FREETEXTTABLE](../../relational-databases/system-functions/freetexttable-transact-sql.md).  
   
 ## <a name="using-unicode-for-parsing-special-characters"></a>Usar Unicode para analizar caracteres especiales  
  Cuando se analiza una cadena de consulta, **sys.dm_fts_parser** usa la intercalación de la base de datos a la que está conectado, a menos que especifique la cadena de consulta como Unicode. Por lo tanto, una cadena no Unicode que contiene caracteres especiales, como ü o ç, el resultado puede ser inesperado, dependiendo de la intercalación de la base de datos. Para procesar una cadena de consulta independientemente de la intercalación de base de datos, anteponga a la cadena `N`, es decir, `N'` *query_string*`'`.  
@@ -170,7 +170,7 @@ SELECT * FROM sys.dm_fts_parser(N'français', 1036, 5, 1);
 ```  
   
 ## <a name="see-also"></a>Vea también  
- [Funciones y vistas de administración dinámica de la búsqueda semántica y búsqueda de texto completo &#40; Transact-SQL &#41;](../../relational-databases/system-dynamic-management-views/full-text-and-semantic-search-dynamic-management-views-functions.md)   
+ [Funciones y vistas de administración dinámica de la búsqueda semántica y búsqueda de texto completo &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/full-text-and-semantic-search-dynamic-management-views-functions.md)   
  [Búsqueda de texto completo](../../relational-databases/search/full-text-search.md)   
  [Configurar y administrar separadores de palabras y lematizadores para la búsqueda](../../relational-databases/search/configure-and-manage-word-breakers-and-stemmers-for-search.md)   
  [Configurar y administrar archivos de diccionario de sinónimos para búsquedas de texto completo](../../relational-databases/search/configure-and-manage-thesaurus-files-for-full-text-search.md)   

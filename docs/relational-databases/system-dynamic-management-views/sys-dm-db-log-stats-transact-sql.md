@@ -1,16 +1,16 @@
 ---
-title: sys.dm_db_log_stats (Transact-SQL) | Microsoft Docs
-ms.custom: 
+title: Sys.dm_db_log_stats (Transact-SQL) | Documentos de Microsoft
+ms.custom: ''
 ms.date: 05/17/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine
-ms.service: 
+ms.service: ''
 ms.component: dmv's
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - dm_db_log_stats_TSQL
@@ -21,19 +21,20 @@ dev_langs:
 - TSQL
 helpviewer_keywords:
 - sys.dm_db_log_stats dynamic management function
-ms.assetid: 
-caps.latest.revision: 
+ms.assetid: ''
+caps.latest.revision: ''
 author: stevestein
 ms.author: sstein
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 281e3c2c74361698ddf67a4e9a607c559bd74ccb
-ms.sourcegitcommit: c556eaf60a49af7025db35b7aa14beb76a8158c5
+monikerRange: '>= sql-server-2017 || = sqlallproducts-allversions'
+ms.openlocfilehash: 86fef416f6fc07dad933d05cea6b477e813d1348
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/03/2018
+ms.lasthandoff: 04/16/2018
 ---
-# <a name="sysdmdblogstats-transact-sql"></a>sys.dm_db_log_stats (Transact-SQL)   
+# <a name="sysdmdblogstats-transact-sql"></a>Sys.dm_db_log_stats (Transact-SQL)   
 [!INCLUDE[tsql-appliesto-ss2017-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2017-xxxx-xxxx-xxx-md.md)]
 
 Devuelve los atributos de nivel de resumen e información en archivos de registro de transacciones de bases de datos. Utilice esta información para la supervisión y diagnóstico de estado de registro de transacciones.   
@@ -48,9 +49,9 @@ Devuelve los atributos de nivel de resumen e información en archivos de registr
   
 ## <a name="arguments"></a>Argumentos  
 
-*database_id* | NULL | **DEFAULT**
+*database_id* | NULL | **Predeterminado**
 
-Es el identificador de la base de datos. `database_id` es `int`. Las entradas válidas son el número de identificación de una base de datos, `NULL`, o `DEFAULT`. El valor predeterminado es `NULL`. `NULL`y `DEFAULT` son valores equivalentes en el contexto de base de datos actual.  
+Es el identificador de la base de datos. `database_id` es `int`. Las entradas válidas son el número de identificación de una base de datos, `NULL`, o `DEFAULT`. El valor predeterminado es `NULL`. `NULL` y `DEFAULT` son valores equivalentes en el contexto de base de datos actual.  
 La función integrada [DB_ID](../../t-sql/functions/db-id-transact-sql.md) puede especificarse. Cuando se usa `DB_ID` sin especificar un nombre de base de datos, el nivel de compatibilidad de la base de datos actual debe ser 90 o superior.
 
   
@@ -105,7 +106,7 @@ CROSS APPLY sys.dm_db_log_stats(s.database_id);
 
 ## <a name="see-also"></a>Vea también  
 [Funciones y vistas de administración dinámica &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/system-dynamic-management-views.md)   
-[Base de datos relacionadas con vistas de administración dinámica &#40; Transact-SQL &#41;](../../relational-databases/system-dynamic-management-views/database-related-dynamic-management-views-transact-sql.md)   
+[Vistas de administración dinámica relacionadas con la base de datos &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/database-related-dynamic-management-views-transact-sql.md)   
 [sys.dm_db_log_space_usage &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-db-log-space-usage-transact-sql.md)   
 [sys.dm_db_log_info &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-db-log-info-transact-sql.md)    
   

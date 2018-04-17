@@ -1,29 +1,30 @@
 ---
-title: El controlador ODBC para Oracle programador &#39; s referencia | Documentos de Microsoft
-ms.custom: 
+title: El controlador ODBC para Oracle programador&#39;referencia s | Documentos de Microsoft
+ms.custom: ''
 ms.date: 01/19/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: drivers
-ms.service: 
+ms.service: ''
 ms.component: odbc
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: drivers
-ms.tgt_pltfrm: 
+ms.technology:
+- drivers
+ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: d70e79a1-6403-49ad-8713-eda6e8aa287e
-caps.latest.revision: "9"
+caps.latest.revision: 9
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: bbf7dee4e5b9b00d2e07c4dafeb5b0fdd0a778f0
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: d2dac56dd36c0664171f4df387f5b2f43ee2f220
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 04/16/2018
 ---
-# <a name="odbc-driver-for-oracle-programmer39s-reference"></a>El controlador ODBC para Oracle programador &#39; s referencia
+# <a name="odbc-driver-for-oracle-programmer39s-reference"></a>El controlador ODBC para Oracle programador&#39;referencia s
 > [!IMPORTANT]  
 >  Esta característica se quitará en una versión futura de Windows. Evite utilizar esta característica en nuevos trabajos de desarrollo y tenga previsto modificar las aplicaciones que actualmente la utilizan. En su lugar, utilice el controlador ODBC proporcionado por Oracle.  
   

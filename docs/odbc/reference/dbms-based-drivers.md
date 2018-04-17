@@ -1,31 +1,32 @@
 ---
 title: Controladores basados en DBMS | Documentos de Microsoft
-ms.custom: 
+ms.custom: ''
 ms.date: 01/19/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: drivers
-ms.service: 
+ms.service: ''
 ms.component: odbc
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: drivers
-ms.tgt_pltfrm: 
+ms.technology:
+- drivers
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - drivers [ODBC], DBMS-based drivers
 - DBMS-based drivers [ODBC]
 - ODBC architecture [ODBC], drivers
 ms.assetid: e2208ee0-4cd6-4f0d-bb71-a0b54f7d9330
-caps.latest.revision: "7"
+caps.latest.revision: 7
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 7c841b4404132e4fe385c9c3aa6fd12bdd2eb8a0
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: 9094b46014bad912dfa9f83de90cef0c25df1b9f
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="dbms-based-drivers"></a>Controladores basados en DBMS
 Se utilizan controladores basados en DBMS con orígenes de datos como Oracle o SQL Server que proporcionan un motor de base de datos independiente para el controlador que se utilizará. Estos controladores de tener acceso a los datos físicos a través del motor independiente; es decir, que enviar instrucciones SQL y recuperar los resultados del motor de.  
@@ -36,4 +37,4 @@ Se utilizan controladores basados en DBMS con orígenes de datos como Oracle o S
   
  La ilustración siguiente muestra tres distintas configuraciones de controladores basados en DBMS. En la primera configuración, el controlador y el origen de datos residen en el mismo equipo. En el segundo, el controlador y el origen de datos residen en equipos diferentes. En la tercera, el controlador y el origen de datos residen en equipos diferentes y una puerta de enlace se ubica entre ellos, que reside en otro equipo.  
   
- ![Tres configuraciones para DBMS &#45; controladores basados en](../../odbc/reference/media/pr07.gif "pr07")
+ ![Tres configuraciones para DBMS&#45;según controladores](../../odbc/reference/media/pr07.gif "pr07")

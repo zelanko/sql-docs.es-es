@@ -1,38 +1,39 @@
 ---
 title: El enlace | Documentos de Microsoft
-ms.custom: 
+ms.custom: ''
 ms.date: 01/19/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: drivers
-ms.service: 
+ms.service: ''
 ms.component: odbc
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: drivers
-ms.tgt_pltfrm: 
+ms.technology:
+- drivers
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - column-wise binding [ODBC]
 - result sets [ODBC], binding columns
 - binding columns [ODBC]
 ms.assetid: 86d37637-3a25-455d-9c82-a0d7bff8d70d
-caps.latest.revision: "8"
+caps.latest.revision: 8
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 7fe322c1184c4b46eb2354a58177f5cb00aa6f10
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: 5bd05626aeb421bbe0b671a20b76f544f9a0f425
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="column-wise-binding"></a>El enlace
 Cuando se usa el enlace, una aplicación enlaza las tres, matrices de uno o dos o en algunos casos para cada columna para la que se devolverán datos. La primera matriz que contiene los valores de datos y la segunda matriz contiene búferes de longitud/indicador. Indicadores y los valores de longitud pueden almacenarse en búferes independientes al establecer los campos de descriptor SQL_DESC_INDICATOR_PTR y SQL_DESC_OCTET_LENGTH_PTR en valores diferentes; Si es así, se enlaza una tercera matriz. Cada matriz contiene tantos elementos como filas en el conjunto de filas.  
   
  La aplicación declara que está usando el enlace con el atributo de instrucción SQL_ATTR_ROW_BIND_TYPE, que determina el tipo de enlace para los búferes de conjunto de filas en lugar de parámetro establece los búferes. El controlador devuelve los datos para cada fila de los elementos sucesivos de cada matriz. La ilustración siguiente muestra cómo funciona el enlace.  
   
- ![Columna &#45; enlace conveniente de tres columnas](../../../odbc/reference/develop-app/media/pr21.gif "pr21")  
+ ![Columna&#45;enlace conveniente de tres columnas](../../../odbc/reference/develop-app/media/pr21.gif "pr21")  
   
  Por ejemplo, el código siguiente enlaza a matrices de 10 elementos a las columnas OrderID y vendedor, estado:  
   

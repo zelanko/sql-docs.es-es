@@ -2,7 +2,7 @@
 title: SQLDescribeCol (función) | Documentos de Microsoft
 ms.custom: ''
 ms.date: 01/19/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: drivers
 ms.service: ''
 ms.component: odbc
@@ -25,13 +25,13 @@ ms.assetid: eddef353-83f3-4a3c-8f24-f9ed888890a4
 caps.latest.revision: 35
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 4967b2de98246e3ae8eedb91ecfcbf507b2afc8c
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: f19de730a9755627863ad2b8e12df6a5e0b1dbc1
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="sqldescribecol-function"></a>SQLDescribeCol (función)
 **Conformidad**  
@@ -123,7 +123,7 @@ SQLRETURN SQLDescribeCol(
 |IM017|Sondeo está deshabilitado en el modo de notificación asincrónica|Cada vez que se utiliza el modelo de notificación, se deshabilita el sondeo.|  
 |IM018|**SQLCompleteAsync** no se ha llamado para completar la operación asincrónica anterior en este identificador.|Si la llamada de función anterior en el controlador devuelve SQL_STILL_EXECUTING y si está habilitado el modo de notificación, **SQLCompleteAsync** se debe llamar en el identificador para realizar el procesamiento posterior a la y completar la operación.|  
   
- **SQLDescribeCol** puede devolver cualquier SQLSTATE, que puede ser devueltos por **SQLPrepare** o **SQLExecute** cuando se llama después **SQLPrepare** y antes de  **SQLExecute**, dependiendo de si el origen de datos se evalúa como la instrucción SQL asociada con el identificador de instrucción.  
+ **SQLDescribeCol** puede devolver cualquier SQLSTATE, que puede ser devueltos por **SQLPrepare** o **SQLExecute** cuando se llama después **SQLPrepare** y antes de **SQLExecute**, dependiendo de si el origen de datos se evalúa como la instrucción SQL asociada con el identificador de instrucción.  
   
  Por motivos de rendimiento, una aplicación no debe llamar a **SQLDescribeCol** antes de ejecutar una instrucción.  
   

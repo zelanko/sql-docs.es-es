@@ -1,28 +1,19 @@
 ---
-title: Generar un procedimiento almacenado de R para el código de R con el paquete sqlrutils | Microsoft Docs
-ms.custom: ''
-ms.date: 02/28/2017
-ms.reviewer: ''
-ms.suite: sql
-ms.prod: machine-learning-services
-ms.prod_service: machine-learning-services
-ms.component: r
-ms.technology: ''
-ms.tgt_pltfrm: ''
-ms.topic: article
-dev_langs:
-- R
-ms.author: heidist
+title: Generar un procedimiento almacenados en R para código de R mediante el paquete de sqlrutils | Documentos de Microsoft
+ms.prod: sql
+ms.technology: machine-learning
+ms.date: 04/15/2018
+ms.topic: conceptual
 author: HeidiSteen
+ms.author: heidist
 manager: cgronlun
-ms.workload: Inactive
-ms.openlocfilehash: ac234229a5d44d2016252318093853b4dc9cd957
-ms.sourcegitcommit: 059fc64ba858ea2adaad2db39f306a8bff9649c2
+ms.openlocfilehash: 2b327391b7a21e340b30f2bc5fbf27481168266e
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/04/2018
+ms.lasthandoff: 04/16/2018
 ---
-# <a name="generating-an-r-stored-procedure-for-r-code-using-the-sqlrutils-package"></a>Generar un procedimiento almacenado de R para el código de R con el paquete sqlrutils
+# <a name="generate-an-r-stored-procedure-for-r-code-using-the-sqlrutils-package"></a>Generar un procedimiento almacenados en R para código de R mediante el paquete sqlrutils
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
 
 El paquete **sqlrutils** proporciona un mecanismo para que los usuarios de R inserten sus scripts de R en un procedimiento almacenado de T-SQL, registren dicho procedimiento almacenado en una base de datos y lo ejecuten desde un entorno de desarrollo de R. 

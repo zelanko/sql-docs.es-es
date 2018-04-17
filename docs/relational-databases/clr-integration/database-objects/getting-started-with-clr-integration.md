@@ -1,15 +1,15 @@
 ---
-title: "Introducción a la integración CLR | Documentos de Microsoft"
-ms.custom: 
+title: Introducción a la integración CLR | Documentos de Microsoft
+ms.custom: ''
 ms.date: 08/02/2016
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine
-ms.service: 
+ms.service: ''
 ms.component: clr
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: 
-ms.tgt_pltfrm: 
+ms.technology: ''
+ms.tgt_pltfrm: ''
 ms.topic: get-started-article
 dev_langs:
 - TSQL
@@ -27,20 +27,20 @@ helpviewer_keywords:
 - Hello World example [CLR integration]
 - library [CLR integration]
 ms.assetid: c73e628a-f54a-411a-bfe3-6dae519316cc
-caps.latest.revision: 
+caps.latest.revision: 62
 author: rothja
 ms.author: jroth
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 387ca6168d809aaf1a4a4938ee40f41a8d4f6bfb
-ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
+ms.openlocfilehash: 2c66ea7d5067752cf6929f0b2a8e238dd6a0dc65
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/09/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="getting-started-with-clr-integration"></a>Introducción a la integración CLR
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
-Este tema proporciona información general sobre los espacios de nombres y bibliotecas necesarios para compilar objetos de base de datos mediante la [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] integración con common language runtime (CLR) de .NET Framework. En este tema también se muestra cómo escribir, compilar y ejecutar un procedimiento almacenado CLR simple escrito en [!INCLUDE[msCoName](../../../includes/msconame-md.md)] Visual C#.  
+  Este tema proporciona información general sobre los espacios de nombres y bibliotecas necesarios para compilar objetos de base de datos mediante la [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] integración con common language runtime (CLR) de .NET Framework. En este tema también se muestra cómo escribir, compilar y ejecutar un procedimiento almacenado CLR simple escrito en [!INCLUDE[msCoName](../../../includes/msconame-md.md)] Visual C#.  
   
 ## <a name="required-namespaces"></a>Espacios de nombres necesarios  
  Los componentes necesarios para desarrollar objetos de base de datos CLR básicos se instalan con [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]. La funcionalidad de la integración CLR se expone en un ensamblado denominado system.data.dll, que forma parte de .NET Framework. Este ensamblado puede encontrarse en la caché de ensamblados global (GAC) o en el directorio de .NET Framework. Normalmente, se agrega una referencia a este ensamblado mediante las herramientas de la línea de comandos y [!INCLUDE[msCoName](../../../includes/msconame-md.md)] Visual Studio, por lo que no es necesario agregarla manualmente.  
@@ -92,12 +92,12 @@ End Class
   
 ```  
   
- Este programa simple contiene un solo método estático en una clase pública. Este método usa dos clases nuevas,  **[SqlContext](https://msdn.microsoft.com/library/microsoft.sqlserver.server.sqlcontext.aspx)**  y  **[SqlPipe](https://msdn.microsoft.com/library/microsoft.sqlserver.server.sqlpipe.aspx)**, para crear administra objetos para generar un texto simple de la base de datos Mensaje. El método también asigna la cadena "Hola a todos!" como el valor de un parámetro de salida. Este método puede declararse como un procedimiento almacenado en [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] y, a continuación, ejecutarse del mismo modo que un procedimiento almacenado de [!INCLUDE[tsql](../../../includes/tsql-md.md)].  
+ Este programa simple contiene un solo método estático en una clase pública. Este método usa dos clases nuevas, **[SqlContext](https://msdn.microsoft.com/library/microsoft.sqlserver.server.sqlcontext.aspx)** y  **[SqlPipe](https://msdn.microsoft.com/library/microsoft.sqlserver.server.sqlpipe.aspx)**, para crear administra objetos para generar un texto simple de la base de datos Mensaje. El método también asigna la cadena "Hola a todos!" como el valor de un parámetro de salida. Este método puede declararse como un procedimiento almacenado en [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] y, a continuación, ejecutarse del mismo modo que un procedimiento almacenado de [!INCLUDE[tsql](../../../includes/tsql-md.md)].  
   
  Compile este programa como una biblioteca, lo cargaremos en [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)], y lo ejecutaremos como un procedimiento almacenado.  
   
 ## <a name="compile-the-hello-world-stored-procedure"></a>Compilar el procedimiento de "Hello World" almacenados  
- [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] instala el [!INCLUDE[msCoName](../../../includes/msconame-md.md)] archivos de redistribución de .NET Framework de forma predeterminada. Estos archivos incluyen csc.exe y vbc.exe, los compiladores de línea de comandos de Visual C# y Visual Basic. Para compilar el ejemplo, debe modificar la variable de ruta de acceso para que apunte al directorio que contiene los archivos csc.exe o vbc.exe. Ésta es la ruta de instalación predeterminada de .NET Framework.  
+ [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] instala los archivos de redistribución de [!INCLUDE[msCoName](../../../includes/msconame-md.md)] .NET Framework de forma predeterminada. Estos archivos incluyen csc.exe y vbc.exe, los compiladores de línea de comandos de Visual C# y Visual Basic. Para compilar el ejemplo, debe modificar la variable de ruta de acceso para que apunte al directorio que contiene los archivos csc.exe o vbc.exe. Ésta es la ruta de instalación predeterminada de .NET Framework.  
   
 ```  
 C:\Windows\Microsoft.NET\Framework\(version)  

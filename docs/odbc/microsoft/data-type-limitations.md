@@ -1,31 +1,32 @@
 ---
 title: Limitaciones del tipo de datos | Documentos de Microsoft
-ms.custom: 
+ms.custom: ''
 ms.date: 01/19/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: drivers
-ms.service: 
+ms.service: ''
 ms.component: odbc
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: drivers
-ms.tgt_pltfrm: 
+ms.technology:
+- drivers
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - ODBC desktop database drivers [ODBC], data types
 - data types [ODBC], desktop database drivers
 - desktop database drivers [ODBC], data types
 ms.assetid: 81c4eab7-1f6b-47a0-b940-89d6c6a14dae
-caps.latest.revision: "5"
+caps.latest.revision: 5
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: b75544506500b5a1743c135d0bf6f4e5dedbde44
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: 6f7be82a89d81f887baf0ae6ef0fe7cd00e72c27
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="data-type-limitations"></a>Limitaciones del tipo de datos
 Los controladores de base de datos de Microsoft ODBC Desktop impone las siguientes limitaciones en los tipos de datos:  
@@ -38,6 +39,6 @@ Los controladores de base de datos de Microsoft ODBC Desktop impone las siguient
 |DECIMAL (valor numérico exacto)|No compatible.|  
 |Tipos de datos de punto flotante|El número de posiciones decimales en un número de punto flotante puede estar limitado por el formato de número que se establece en la sección internacional del Panel de Control de Windows.|  
 |NUMERIC|Admite la precisión máxima y una escala de 28.|  
-|timestamp|No se puede convertir el tipo de datos de marca de tiempo a sí misma mediante la función CONVERT.|  
+|TIMESTAMP|No se puede convertir el tipo de datos de marca de tiempo a sí misma mediante la función CONVERT.|  
 |TINYINT|TINYINT valores siempre son sin signo.|  
 |Cadenas de longitud cero|Cuando se utiliza un archivo dBASE, Microsoft Excel, Paradox u Textdriver, insertar una cadena de longitud cero en una columna realmente inserta un valor NULL en su lugar.|

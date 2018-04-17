@@ -1,28 +1,17 @@
 ---
-title: 'Paso 5: Entrenar y guardar un modelo de Python mediante T-SQL | Documentos de Microsoft'
-ms.custom: ''
-ms.date: 10/17/2017
-ms.reviewer: ''
-ms.suite: sql
-ms.prod: machine-learning-services
-ms.prod_service: machine-learning-services
-ms.component: ''
-ms.technology: ''
-ms.tgt_pltfrm: ''
+title: Paso 5 entrenar y guardar un modelo de Python mediante T-SQL | Documentos de Microsoft
+ms.prod: sql
+ms.technology: machine-learning
+ms.date: 04/15/2018
 ms.topic: tutorial
-applies_to:
-- SQL Server 2017
-dev_langs:
-- Python
-- TSQL
-ms.author: heidist
 author: HeidiSteen
+ms.author: heidist
 manager: cgronlun
-ms.openlocfilehash: 1511be6615805e7842ace3e0065591c41f3b40eb
-ms.sourcegitcommit: 059fc64ba858ea2adaad2db39f306a8bff9649c2
+ms.openlocfilehash: 173df47b5862a892efcd0c5e7064349daedf7efb
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/04/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="step-5-train-and-save-a-python-model-using-t-sql"></a>Paso 5: Entrenar y guardar un modelo de Python mediante T-SQL
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
@@ -131,7 +120,7 @@ Para que sea más fácil volver a entrenar el modelo con nuevos datos, incluya l
 
 3. Abra la tabla *nyc\_taxi_models*. Puede ver que se ha agregado una fila nueva, que contiene el modelo serializado en la columna _modelo_.
 
-    *linear_model* *0x800363736B6C6561726E2E6C696E6561....*
+    *linear_model* *0x800363736B6C6561726E2E6C696E6561...*
 
 ### <a name="traintippredictionmodelrxpy"></a>TrainTipPredictionModelRxPy
 

@@ -1,31 +1,32 @@
 ---
 title: Secuencias de escape en ODBC | Documentos de Microsoft
-ms.custom: 
+ms.custom: ''
 ms.date: 01/19/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: drivers
-ms.service: 
+ms.service: ''
 ms.component: odbc
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: drivers
-ms.tgt_pltfrm: 
+ms.technology:
+- drivers
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - escape sequences [ODBC]
 - SQL statements [ODBC], escape sequences
 - escape sequences [ODBC], about escape sequences
 ms.assetid: cf229f21-6c38-4b5b-aca8-f1be0dfeb3d0
-caps.latest.revision: "7"
+caps.latest.revision: 7
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 72884da8498b5e0ccb3533c353e676dee2517795
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: 08ee3939b280ba284f0387d3ccfd4c2db0bf0a1d
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="escape-sequences-in-odbc"></a>Secuencias de escape de ODBC
 Un número de características del lenguaje, como las combinaciones externas y llamadas a funciones escalares, normalmente se implementa los DBMS. Sin embargo, la sintaxis de estas características suelen ser específicos de DBMS, incluso cuando la sintaxis estándares se definen mediante los diferentes organismos de estándares. Por este motivo, ODBC define secuencias de escape que contienen sintaxis estándares para las siguientes características de lenguaje:  
@@ -52,7 +53,7 @@ Un número de características del lenguaje, como las combinaciones externas y l
  La secuencia de escape se reconocen y analizan los controladores, que sustituyen a las secuencias de escape con gramática específica del DBMS. Para obtener más información sobre la sintaxis de la secuencia de escape, vea [secuencias de Escape de ODBC](../../../odbc/reference/appendixes/odbc-escape-sequences.md) en Apéndice C: SQL gramática.  
   
 > [!NOTE]  
->  En ODBC 2. *x*, era la sintaxis estándar de la secuencia de escape: **--(\*proveedor (***nombre de proveedor***), producto (** *nombre de producto***)***extensión*  **\*):**  
+>  En ODBC 2. *x*, era la sintaxis estándar de la secuencia de escape: **--(\*proveedor (***nombre de proveedor***), producto (***nombre de producto***) *** extensión*  **\*)--**  
 >   
 >  Además de esta sintaxis, sintaxis abreviada se definió el formato: **{***extensión***}**  
 >   

@@ -1,15 +1,16 @@
 ---
-title: "Asignación de funciones de reemplazo para la compatibilidad de aplicaciones - ODBC | Documentos de Microsoft"
-ms.custom: 
+title: Asignación de funciones de reemplazo para la compatibilidad de aplicaciones - ODBC | Documentos de Microsoft
+ms.custom: ''
 ms.date: 01/19/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: drivers
-ms.service: 
+ms.service: ''
 ms.component: odbc
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: drivers
-ms.tgt_pltfrm: 
+ms.technology:
+- drivers
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - mapping replacement functions [ODBC]
@@ -20,16 +21,16 @@ helpviewer_keywords:
 - application upgrades [ODBC], mapping replacement functions
 - backward compatibility [ODBC], mapping replacement functions
 ms.assetid: f5e6d9da-76ef-42cb-b3f5-f640857df732
-caps.latest.revision: "7"
+caps.latest.revision: 7
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: c93ea22e03f401580a968dacb1ca15910c7eb44b
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: 400f1fd18788f361b3eada813a414077e62de1e1
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="mapping-replacement-functions-for-backward-compatibility-of-applications"></a>Asignación de funciones de reemplazo para mantener la compatibilidad de aplicaciones
 Una aplicación ODBC 3*.x* aplicación funcione a través de ODBC 3*.x* el Administrador de controladores funcionará con una API ODBC 2. *x* controlador siempre y cuando no se utilizan características nuevas. Ambos duplican la funcionalidad y cambios de comportamiento, sin embargo, ser afectan al modo en que ODBC 3. *x* aplicación funciona en una API ODBC 2. *x* controlador. Cuando se trabaja con una API ODBC 2. *x* controlador, el Administrador de controladores asigna el siguiente ODBC 3. *x* funciones, que se reemplazaron uno o más ODBC 2. *x* funciones, en la correspondiente API ODBC 2. *x* funciones.  
@@ -422,7 +423,7 @@ SQLParamOptions (StatementHandle, Size, &RowCount);
 ### <a name="sqlcolattribute"></a>SQLColAttribute  
  Cuando un ODBC 3. *x* aplicación trabajar con una API ODBC 2. *x* controlador llama **SQLColAttribute** con el *ColumnNumber* argumento se establece en 0, el Administrador de controladores devuelve el *FieldIdentifier* valores se muestran en la tabla siguiente.  
   
-|*FieldIdentifier*|Valor|  
+|*FieldIdentifier*|Value|  
 |-----------------------|-----------|  
 |SQL_DESC_AUTO_UNIQUE_VALUE|SQL_FALSE|  
 |SQL_DESC_CASE_SENSITIVE|SQL_FALSE|  
@@ -454,7 +455,7 @@ SQLParamOptions (StatementHandle, Size, &RowCount);
 ### <a name="sqldescribecol"></a>SQLDescribeCol  
  Cuando un ODBC 3. *x* aplicación trabajar con una API ODBC 2. *x* controlador llama **SQLDescribeCol** con el *ColumnNumber* argumento establecido en 0, el Administrador de controladores devuelve los valores enumerados en la tabla siguiente.  
   
-|Búfer|Valor|  
+|Búfer|Value|  
 |------------|-----------|  
 |ColumnName|"" (cadena vacía)|  
 |* NameLengthPtr|0|  

@@ -1,28 +1,22 @@
 ---
 title: Instalar modelos de aprendizaje automático previamente entrenado en SQL Server | Documentos de Microsoft
-ms.date: 03/14/2018
-ms.reviewer: ''
-ms.suite: sql
-ms.prod: machine-learning-services
-ms.prod_service: machine-learning-services
-ms.component: r
-ms.technology: ''
-ms.tgt_pltfrm: ''
-ms.topic: article
-ms.author: heidist
+ms.prod: sql
+ms.technology: machine-learning
+ms.date: 04/15/2018
+ms.topic: conceptual
 author: HeidiSteen
+ms.author: heidist
 manager: cgronlun
-ms.workload: Inactive
-ms.openlocfilehash: c9895584e53f488c0db15ad533ba4a2230ae60c4
-ms.sourcegitcommit: 059fc64ba858ea2adaad2db39f306a8bff9649c2
+ms.openlocfilehash: b21245bd74f59f4ad7fe2370ad3587053e756a03
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/04/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="install-pre-trained-machine-learning-models-on-sql-server"></a>Instalar previamente entrenado máquina aprendizaje de los modelos en SQL Server
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
 
-Este artículo describe cómo agregar modelos previamente entrenados a una instancia de SQL Server que ya tiene R Services o servicios de aprendizaje de máquina de SQL Server instalado. 
+Este artículo describe cómo agregar modelos previamente entrenados a una instancia de (en bases de datos) de SQL Server que ya tiene R Services o servicios de aprendizaje de máquina de SQL Server instalado. 
 
 Existen modelos de previamente entrenados para ayudar a los clientes que necesitan realizar tareas como las características de análisis o imagen de opinión, pero no disponen de los recursos para obtener los conjuntos de datos grandes o entrenar un modelo complejo. El equipo de servidor de aprendizaje de máquina crea y entrena estos modelos para ayudarle a empezar a trabajar en text e image procesar eficazmente. Para obtener más información, consulte el [recursos](#bkmk_resources) sección de este artículo.
 
@@ -107,7 +101,7 @@ Con SQL Server 2016, debe realizar algunos pasos adicionales para registrar los 
 
     + AlexNet\_Updated.model
     + ImageNet1K\_mean.xml
-    + pretrained.model
+    + pretrained.Model
     + ResNet\_101\_Updated.model
     + ResNet\_18\_Updated.model
     + ResNet\_50\_Updated.model

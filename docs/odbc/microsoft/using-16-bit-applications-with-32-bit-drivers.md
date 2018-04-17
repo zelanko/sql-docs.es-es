@@ -1,30 +1,31 @@
 ---
 title: Uso de las aplicaciones de 16 bits con controladores de 32 bits | Documentos de Microsoft
-ms.custom: 
+ms.custom: ''
 ms.date: 01/19/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: drivers
-ms.service: 
+ms.service: ''
 ms.component: odbc
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: drivers
-ms.tgt_pltfrm: 
+ms.technology:
+- drivers
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - ODBC drivers [ODBC], 16-bit applications
 - 16-bit applications with 32-bit drivers [ODBC]
 ms.assetid: 68feb3b7-c01a-4f42-8df9-f9c182d89325
-caps.latest.revision: "12"
+caps.latest.revision: 12
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 95ff3ce88daf4a508145c28ea194a97b9cbbbabe
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: d389ada78e2a04b23b046f9a4c1eab8cff736227
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="using-16-bit-applications-with-32-bit-drivers"></a>Uso de las aplicaciones de 16 bits con controladores de 32 bits
 > [!IMPORTANT]  
@@ -35,7 +36,7 @@ ms.lasthandoff: 12/21/2017
 ## <a name="architecture"></a>Architecture  
  En la siguiente ilustración muestra las aplicaciones de 16 bits cómo comunicarse con los controladores de 32 bits. Entre el Administrador de controladores de 16 bits y los controladores de 32 bits que son genéricas thunk DLL que convertir las llamadas ODBC de 16 bits a las llamadas ODBC de 32 bits.  
   
- ![Cómo 16 &#45; las aplicaciones de bits se comunican con 32 &#45; bit controladores](../../odbc/microsoft/media/sdka2.gif "sdka2")  
+ ![Cómo 16&#45;aplicaciones bits se comunican con 32&#45;bit controladores](../../odbc/microsoft/media/sdka2.gif "sdka2")  
   
 > [!NOTE]  
 >  Cada vez que una aplicación de 16 bits interactúa con un controlador de 32 bits, el Administrador de controladores de 32 bits siempre devuelve "2.0" como la versión de ODBC compatibles con el controlador.  
@@ -45,7 +46,7 @@ ms.lasthandoff: 12/21/2017
   
  La ilustración siguiente muestra cómo una aplicación de 16 bits llama a un archivo DLL de configuración de controladores de 32 bits. Entre el archivo DLL de instalador de 16 bits y el controlador de 32 bits archivo DLL de configuración es una DLL thunk genérica que convierte las llamadas a DLL instalador de 16 bits en llamadas DLL de instalador de 32 bits.  
   
- ![Cómo un 16 &#45; bit aplicación llama a un 32 &#45; bit DLL de instalación de controlador](../../odbc/microsoft/media/sdka3.gif "sdka3")  
+ ![Cómo un 16&#45;bits aplicación llama a un 32&#45;DLL de instalación de controlador de bits](../../odbc/microsoft/media/sdka3.gif "sdka3")  
   
  En Windows on Windows (thunk de 16 bits a 32 bits), una DLL thunk adicional denominada convierte Ds32gt.dll valores de argumento de 16 bits se pasan a través de un programa de instalación de 32 bits DLL de nuevo al 16 bits.  
   

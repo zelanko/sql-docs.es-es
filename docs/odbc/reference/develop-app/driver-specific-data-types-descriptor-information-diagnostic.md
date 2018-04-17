@@ -1,38 +1,39 @@
 ---
-title: "Diagnóstico de Descriptor de acceso, información, de tipos específicos del controlador: datos, | Documentos de Microsoft"
-ms.custom: 
+title: 'Diagnóstico de Descriptor de acceso, información, de tipos específicos del controlador: datos, | Documentos de Microsoft'
+ms.custom: ''
 ms.date: 01/19/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: drivers
-ms.service: 
+ms.service: ''
 ms.component: odbc
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: drivers
-ms.tgt_pltfrm: 
+ms.technology:
+- drivers
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - driver-specific diagnostic values [ODBC]
 - diagnostic information [ODBC], driver-specific values
 - ODBC drivers [ODBC], driver-specific diagnostic values
 ms.assetid: ad4c76d3-5191-4262-b47c-5dd1d19d1154
-caps.latest.revision: "19"
+caps.latest.revision: 19
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 184ad1369e8f37def7baa2f1ed8ff4677b2a85f5
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: 025ba90e13555eeac1db0d598cb1bf98b40c539d
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="driver-specific-data-types-descriptor-types-information-types-diagnostic-types-and-attributes"></a>Tipos de datos específicos del controlador, Descriptor tipos, tipos de información, tipos de diagnóstico y atributos
 Controladores pueden asignar valores específicos del controlador para lo siguiente:  
   
 -   **Indicadores de tipo de datos de SQL** se utilizan en *ParameterType* en **SQLBindParameter** y en *DataType* en **SQLGetTypeInfo** y devolviendo **SQLColAttribute**, **SQLColumns**, **SQLDescribeCol**, **SQLGetTypeInfo**,  **SQLDescribeParam**, **SQLProcedureColumns**, y **SQLSpecialColumns**.  
   
--   **Campos de descriptor** se utilizan en *FieldIdentifier* en **SQLColAttribute**, **SQLGetDescField**, y **SQLSetDescField** .  
+-   **Campos de descriptor** se utilizan en *FieldIdentifier* en **SQLColAttribute**, **SQLGetDescField**, y **SQLSetDescField**.  
   
 -   **Campos de diagnóstico** se utilizan en *DiagIdentifier* en **SQLGetDiagField** y **SQLGetDiagRec**.  
   

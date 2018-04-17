@@ -1,16 +1,16 @@
 ---
 title: Compatibilidad con procedimientos almacenados, desencadenadores, valores predeterminados y reglas | Documentos de Microsoft
-ms.custom: 
+ms.custom: ''
 ms.date: 01/19/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: drivers
-ms.service: 
+ms.service: ''
 ms.component: odbc
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - drivers
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - Visual FoxPro ODBC driver [ODBC], stored procedures
@@ -31,16 +31,16 @@ helpviewer_keywords:
 - FoxPro ODBC driver [ODBC], stored procedures
 - Visual FoxPro commands and functions [ODBC]
 ms.assetid: e449de20-d6ca-4902-9f8e-814eb6e86650
-caps.latest.revision: 
+caps.latest.revision: 5
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: c2fcdf0a9a7af2f34a2a0d87495d00ddf3373d3a
-ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
+ms.openlocfilehash: c7e7c1794d2caa3a6b76a4b8075bd7d0a07323a0
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/15/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="support-for-rules-triggers-default-values-and-stored-procedures-visual-foxpro-odbc-driver"></a>Compatibilidad con las reglas, desencadenadores, valores predeterminados y los procedimientos almacenados (controlador ODBC de Visual FoxPro)
 No se puede crear reglas de Visual FoxPro, desencadenadores, valores predeterminados o procedimientos almacenados con el controlador ODBC de Visual FoxPro. Sin embargo, la aplicación puede interactuar con los procedimientos almacenados, desencadenadores, valores predeterminados o reglas existentes tal y como inserta, actualiza o eliminan datos de Visual FoxPro almacenados en una base de datos.  
@@ -138,7 +138,7 @@ No se puede crear reglas de Visual FoxPro, desencadenadores, valores predetermin
   
 ||||  
 |-|-|-|  
-|RECOPILAR el comando|Función GETNEXTMODIFIED)|GO/GOTO Command|  
+|RECOPILAR el comando|Función GETNEXTMODIFIED)|Comando GO/GOTO|  
 |Función GETFLDSTATE)|Función GOMONTH)||  
 |Función GETCP)|GETENV () (función)||  
   
@@ -208,7 +208,7 @@ No se puede crear reglas de Visual FoxPro, desencadenadores, valores predetermin
 |Comando de parámetros|Función principal)|Comando privada|  
 |Función de PI)|Función de programa)|Función correcta)|  
 |PROCEDURE (comando)|PV () (función)||  
-|Comando pública|() PADL &#124; () PADR &#124; Funciones PADC)||  
+|Comando pública|() PADL &#124; () PADR &#124; funciones PADC)||  
   
 ## <a name="r"></a>L  
   

@@ -2,7 +2,7 @@
 title: Función SQLGetData | Documentos de Microsoft
 ms.custom: ''
 ms.date: 01/19/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: drivers
 ms.service: ''
 ms.component: odbc
@@ -25,13 +25,13 @@ ms.assetid: e3c1356a-5db7-4186-85fd-8b74633317e8
 caps.latest.revision: 46
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 0a23ddb9ee932b67bddd35edfcc9d64228b36f18
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: bd10d34093e7aa1bcbe901555c6b23ffc6368fbb
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="sqlgetdata-function"></a>Función SQLGetData
 **Conformidad**  
@@ -134,7 +134,7 @@ SQLRETURN SQLGetData(
 |IM018|**SQLCompleteAsync** no se ha llamado para completar la operación asincrónica anterior en este identificador.|Si la llamada de función anterior en el controlador devuelve SQL_STILL_EXECUTING y si está habilitado el modo de notificación, **SQLCompleteAsync** se debe llamar en el identificador para realizar el procesamiento posterior a la y completar la operación.|  
   
 ## <a name="comments"></a>Comentarios  
- **SQLGetData** devuelve los datos en una columna especificada. **SQLGetData** puede llamar solo después de que una o más filas se han capturado el conjunto de resultados **SQLFetch**, **SQLFetchScroll**, o **SQLExtendedFetch** . Si los datos de longitud variable están demasiado largo para devolverse en una sola llamada a **SQLGetData** (debido a una limitación en la aplicación), **SQLGetData** pueda recuperarlos en partes. Es posible enlazar algunas columnas de una fila y una llamada **SQLGetData** en otros casos, aunque esto está sujeto a algunas restricciones. Para obtener más información, consulte [obtener datos Long](../../../odbc/reference/develop-app/getting-long-data.md).  
+ **SQLGetData** devuelve los datos en una columna especificada. **SQLGetData** puede llamar solo después de que una o más filas se han capturado el conjunto de resultados **SQLFetch**, **SQLFetchScroll**, o **SQLExtendedFetch**. Si los datos de longitud variable están demasiado largo para devolverse en una sola llamada a **SQLGetData** (debido a una limitación en la aplicación), **SQLGetData** pueda recuperarlos en partes. Es posible enlazar algunas columnas de una fila y una llamada **SQLGetData** en otros casos, aunque esto está sujeto a algunas restricciones. Para obtener más información, consulte [obtener datos Long](../../../odbc/reference/develop-app/getting-long-data.md).  
   
  Para obtener información sobre el uso de **SQLGetData** con parámetros de salida transmitidos, consulte [recuperar parámetros de salida mediante SQLGetData](../../../odbc/reference/develop-app/retrieving-output-parameters-using-sqlgetdata.md).  
   

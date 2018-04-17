@@ -1,27 +1,28 @@
 ---
-title: "Ejecución asincrónica (método de notificación) | Documentos de Microsoft"
-ms.custom: 
+title: Ejecución asincrónica (método de notificación) | Documentos de Microsoft
+ms.custom: ''
 ms.date: 01/19/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: drivers
-ms.service: 
+ms.service: ''
 ms.component: odbc
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: drivers
-ms.tgt_pltfrm: 
+ms.technology:
+- drivers
+ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: e509dad9-5263-4a10-9a4e-03b84b66b6b3
-caps.latest.revision: "8"
+caps.latest.revision: 8
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: ea68f33ff231a9fb6f257e1cd681e25b3569721a
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: 070ef059855d4c95b4225676ab67eddcd9c16ad1
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="asynchronous-execution-notification-method"></a>Ejecución asincrónica (método de notificación)
 ODBC permite la ejecución asincrónica de conexión y las operaciones de instrucción. Un subproceso de la aplicación puede llamar a una función ODBC en modo asíncrono y la función puede devolver antes de que la operación se completa, lo que permite al subproceso de la aplicación realizar otras tareas. En el SDK de Windows 7, para la instrucción asincrónica o las operaciones de conexión, una aplicación determinó que la operación asincrónica se completa mediante el método de sondeo. Para obtener más información, consulte [ejecución asincrónica (método de sondeo)](../../../odbc/reference/develop-app/asynchronous-execution-polling-method.md). A partir del SDK de Windows 8, puede determinar que una operación asincrónica está completa mediante el método de notificación.  
@@ -332,7 +333,7 @@ if (SQL_ASYNC_NOTIFICATION_CAPABLE == InfoValue)
   
  Los atributos de conexión SQL_ATTR_ASYNC_DBC_FUNCTION_ENABLE y SQL_ATTR_ASYNC_DBC_EVENT determinan si ODBC se ejecuta en modo asincrónico y si ODBC habilita el modo de notificación para un identificador de conexión. Los atributos de instrucción SQL_ATTR_ASYNC_ENABLE y SQL_ATTR_ASYNC_STMT_EVENT determinan si ODBC se ejecuta en modo asincrónico y si ODBC habilita el modo de notificación para un identificador de instrucción.  
   
-|SQL_ATTR_ASYNC_ENABLE o SQL_ATTR_ASYNC_DBC_FUNCTION_ENABLE|SQL_ATTR_ASYNC_STMT_EVENT o SQL_ATTR_ASYNC_DBC_EVENT|Mode|  
+|SQL_ATTR_ASYNC_ENABLE o SQL_ATTR_ASYNC_DBC_FUNCTION_ENABLE|SQL_ATTR_ASYNC_STMT_EVENT o SQL_ATTR_ASYNC_DBC_EVENT|Modo|  
 |-------------------------------------------------------------------------|-------------------------------------------------------------------|----------|  
 |Habilitar|no null|Notificación asincrónica|  
 |Habilitar|null|Asincrónico de sondeo|  

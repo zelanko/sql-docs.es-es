@@ -1,30 +1,31 @@
 ---
 title: Funciones del sistema | Documentos de Microsoft
-ms.custom: 
+ms.custom: ''
 ms.date: 01/19/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: drivers
-ms.service: 
+ms.service: ''
 ms.component: odbc
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: drivers
-ms.tgt_pltfrm: 
+ms.technology:
+- drivers
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - system functions [ODBC]
 - functions [ODBC], system functions
 ms.assetid: 36614b4c-e037-43ef-8692-67f4861b144d
-caps.latest.revision: "5"
+caps.latest.revision: 5
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 79cbe8677ba4401fb779dc9765d639b1d86a0f5f
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: b9005b533f6fdad687b98530aecfbbcdff3807fb
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="system-functions"></a>Funciones del sistema
 En la tabla siguiente enumera las funciones de sistema que se incluyen en el conjunto de funciones escalares de ODBC. Mediante una llamada a **SQLGetInfo** con una *tipo de información* de SQL_SYSTEM_FUNCTIONS, una aplicación puede determinar qué funciones del sistema son compatibles con un controlador.  
@@ -38,5 +39,5 @@ En la tabla siguiente enumera las funciones de sistema que se incluyen en el con
 |Función|Description|  
 |--------------|-----------------|  
 |**() DE LA BASE DE DATOS** (ODBC 1.0)|Devuelve el nombre de la base de datos correspondiente al identificador de conexión. (El nombre de la base de datos también está disponible mediante una llamada a **SQLGetConnectOption** con la opción de conexión SQL_CURRENT_QUALIFIER.)|  
-|**IFNULL (** *exp*,*valor***)** (ODBC 1.0)|Si *exp* es null, *valor* se devuelve. Si *exp* no es null, *exp* se devuelve. El tipo de datos o tipos de *valor* debe ser compatible con el tipo de datos de *exp*.|  
+|**IFNULL (** *exp*,*valor ***)** (ODBC 1.0)|Si *exp* es null, *valor* se devuelve. Si *exp* no es null, *exp* se devuelve. El tipo de datos o tipos de *valor* debe ser compatible con el tipo de datos de *exp*.|  
 |**USUARIO ()** (ODBC 1.0)|Devuelve el nombre de usuario en el DBMS. (El nombre de usuario también está disponible por medio de **SQLGetInfo** especificando el tipo de información: SQL_USER_NAME.) Esto puede ser distinto del nombre de inicio de sesión.|

@@ -1,15 +1,16 @@
 ---
-title: "Información de conexión específicos del controlador | Documentos de Microsoft"
-ms.custom: 
+title: Información de conexión específicos del controlador | Documentos de Microsoft
+ms.custom: ''
 ms.date: 01/19/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: drivers
-ms.service: 
+ms.service: ''
 ms.component: odbc
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: drivers
-ms.tgt_pltfrm: 
+ms.technology:
+- drivers
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - SQLConnect function [ODBC], driver-specific connection information
@@ -20,16 +21,16 @@ helpviewer_keywords:
 - connecting to data source [ODBC], SQLConnect
 - connecting to driver [ODBC], driver-specific information
 ms.assetid: 3748758a-f16a-4f3b-9c40-06f2e300704e
-caps.latest.revision: "8"
+caps.latest.revision: 8
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 3352a0a31e6bb48be84d72a7da84eb3d7c6100c9
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: 8d7ba512382963e45a10ba360df29626dd81f2aa
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="driver-specific-connection-information"></a>Información de conexión específicos del controlador
 **SQLConnect** se da por supuesto que un nombre de origen de datos, el Id. de usuario y la contraseña son suficientes para conectarse a un origen de datos y que todos los demás información de conexión se puede almacenar en el sistema. Esto sucede con frecuencia no. Por ejemplo, un controlador que tenga un identificador de usuario y contraseña para iniciar sesión en un servidor y un identificador de usuario diferente y una contraseña para iniciar sesión en un DBMS. Dado que **SQLConnect** acepta un Id. de usuario único y una contraseña, esto significa que el otro Id. de usuario y la contraseña deben almacenarse con la información de origen de datos en el sistema si **SQLConnect** va a usar. Esto es una posible infracción de seguridad y debe evitarse, a menos que la contraseña se cifra.  

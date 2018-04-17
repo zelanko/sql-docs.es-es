@@ -1,15 +1,16 @@
 ---
 title: Compilar un programa SQL incrustado | Documentos de Microsoft
-ms.custom: 
+ms.custom: ''
 ms.date: 01/19/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: drivers
-ms.service: 
+ms.service: ''
 ms.component: odbc
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: drivers
-ms.tgt_pltfrm: 
+ms.technology:
+- drivers
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - SQL [ODBC], embedded SQL
@@ -17,16 +18,16 @@ helpviewer_keywords:
 - compiling embedded SQL programs [ODBC]
 - embedded SQL [ODBC]
 ms.assetid: 9e94146a-5b80-4a01-b586-1e03ff05b9ac
-caps.latest.revision: "8"
+caps.latest.revision: 8
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: aeb3dbb46b8ac3e5e715a479923694cdea28a97f
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: e1c71b9e9dd0aba9631cfb276baa1f88072a8960
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="compiling-an-embedded-sql-program"></a>Compilar un programa SQL incrustado
 Dado que un programa SQL incrustado contiene una combinación de instrucciones de lenguaje SQL y host, no se pueden enviar directamente a un compilador para el lenguaje del host. En su lugar, se compila mediante un proceso de varios pasos. Aunque este proceso es diferente de un producto a otro, los pasos son aproximadamente el mismo para todos los productos.  

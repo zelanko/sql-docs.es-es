@@ -1,15 +1,16 @@
 ---
 title: Confirmar y revertir las transacciones | Documentos de Microsoft
-ms.custom: 
+ms.custom: ''
 ms.date: 01/19/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: drivers
-ms.service: 
+ms.service: ''
 ms.component: odbc
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: drivers
-ms.tgt_pltfrm: 
+ms.technology:
+- drivers
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - rolling back transactions [ODBC]
@@ -17,16 +18,16 @@ helpviewer_keywords:
 - transactions [ODBC], rolling back
 - transactions [ODBC], committing
 ms.assetid: 800f2c1a-6f79-4ed1-830b-aa1a62ff5165
-caps.latest.revision: "5"
+caps.latest.revision: 5
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 534c6181a1634eb4963bc4f448939f335d821e5f
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: 3b828c7080737989c4bcefa99f18d715fe04eddc
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="committing-and-rolling-back-transactions"></a>Confirmar y revertir las transacciones
 Para confirmar o revertir una transacción en modo de confirmación manual, una aplicación llama **SQLEndTran**. Controladores para DBMS que admiten transacciones normalmente implementan esta función mediante la ejecución de un **confirmar** o **reversión** instrucción. El Administrador de controladores no llama a **SQLEndTran** cuando la conexión está en modo de confirmación automática; simplemente devuelve SQL_SUCCESS, incluso si la aplicación intenta revertir la transacción. Puesto que los controladores para DBMS que no admiten transacciones siempre están en modo de confirmación automática, pueden cualquier implemente **SQLEndTran** para devolver SQL_SUCCESS sin hacer nada o no implementarla.  

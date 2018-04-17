@@ -1,15 +1,16 @@
 ---
 title: Escribir controladores ODBC 3.x | Documentos de Microsoft
-ms.custom: 
+ms.custom: ''
 ms.date: 01/19/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: drivers
-ms.service: 
+ms.service: ''
 ms.component: odbc
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: drivers
-ms.tgt_pltfrm: 
+ms.technology:
+- drivers
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - upgrading drivers [ODBC]
@@ -17,21 +18,21 @@ helpviewer_keywords:
 - backward compatibility [ODBC], drivers
 - compatibility [ODBC], drivers
 ms.assetid: 9b75f59b-623f-4711-9ca2-e751b3622e00
-caps.latest.revision: "7"
+caps.latest.revision: 7
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: b73a32d607bb2fc2c1cd2392ab4d1b436e7ed94d
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: 27bdcf1a1254b24c87280fbfc86e4374e277a976
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="writing-odbc-3x-drivers"></a>Controladores ODBC 3.x de escritura
 En la siguiente tabla muestra la compatibilidad de la función en una aplicación ODBC 3. *x* controlador y una aplicación ODBC y la asignación que se realiza mediante el Administrador de controladores cuando se llaman a las funciones en una aplicación ODBC 3. *x* controlador.  
   
-|Función|Admitida<br /><br /> por un<br /><br /> ODBC 3. *x*<br /><br /> ¿controlador?|Admitida<br /><br /> por un<br /><br /> ODBC 3. *x*<br /><br /> ¿aplicación?|Asignado/compatible<br /><br /> por ODBC 3. *x*<br /><br /> Administrador de controladores para<br /><br /> una aplicación ODBC 3. ¿ *x* controlador?|  
+|Función|Compatible<br /><br /> por un<br /><br /> ODBC 3. *x*<br /><br /> ¿controlador?|Compatible<br /><br /> por un<br /><br /> ODBC 3. *x*<br /><br /> ¿aplicación?|Asignado/compatible<br /><br /> por ODBC 3. *x*<br /><br /> Administrador de controladores para<br /><br /> una aplicación ODBC 3. ¿ *x* controlador?|  
 |--------------|----------------------------------------------------|---------------------------------------------------------|---------------------------------------------------------------------------------------------|  
 |**SQLAllocConnect**|no|No [1]|Sí|  
 |**SQLAllocEnv**|no|No [1]|Sí|  
@@ -60,7 +61,7 @@ En la siguiente tabla muestra la compatibilidad de la función en una aplicació
 |**SQLError**|no|No [1]|Sí|  
 |**SQLExecDirect**|Sí|Sí|no|  
 |**SQLExecute**|Sí|Sí|no|  
-|**SQLExtendedFetch**|Sí|no|no|  
+|**SQLExtendedFetch**|Sí|No|no|  
 |**SQLFetch**|Sí|Sí|no|  
 |**SQLFetchScroll**|Sí|Sí|no|  
 |**SQLForeignKeys**|Sí|Sí|no|  
@@ -87,7 +88,7 @@ En la siguiente tabla muestra la compatibilidad de la función en una aplicació
 |**SQLNumParams**|Sí|Sí|no|  
 |**SQLNumResultCols**|Sí|Sí|no|  
 |**SQLParamData**|Sí|Sí|no|  
-|**SQLParamOptions**|no|no|Sí|  
+|**SQLParamOptions**|no|No|Sí|  
 |**SQLPrepare**|Sí|Sí|no|  
 |**SQLPrimaryKeys**|Sí|Sí|no|  
 |**SQLProcedureColumns**|Sí|Sí|no|  
@@ -101,7 +102,7 @@ En la siguiente tabla muestra la compatibilidad de la función en una aplicació
 |**SQLSetDescRec**|Sí|Sí|no|  
 |**SQLSetEnvAttr**|Sí|Sí|no|  
 |**SQLSetPos**|Sí|Sí|no|  
-|**SQLSetParam**|no|no|Sí|  
+|**SQLSetParam**|no|No|Sí|  
 |**SQLSetScrollOption**|Sí|Sí|no|  
 |**SQLSetStmtAttr**|Sí|Sí|no|  
 |**SQLSetStmtOption**|No [5]|No [1]|Sí|  

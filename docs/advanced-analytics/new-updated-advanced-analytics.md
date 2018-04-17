@@ -1,20 +1,18 @@
 ---
 title: 'Actualizado: Advanced Analytics para documentos de SQL Server | Documentos de Microsoft'
 description: Mostrar fragmentos de contenido actualizado para recientemente modificadas en documentación, Advanced Analytics para Microsoft SQL Server.
+ms.prod: sql
+ms.technology: machine-learning
+ms.date: 04/15/2018
+ms.topic: conceptual
 author: HeidiSteen
 ms.author: heidist
 manager: cgronlun
-ms.topic: article
-ms.custom: UpdArt.exe
-ms.suite: sql
-ms.prod_service: sql-non-specified
-ms.component: advanced-analytics
-ms.date: 02/03/2018
-ms.openlocfilehash: fa0c25c193ea2815773ed9d08a50194d825f0a8a
-ms.sourcegitcommit: d6b1695c8cbc70279b7d85ec4dfb66a4271cdb10
+ms.openlocfilehash: 058278df1ee54a6440f8225ea15f727857df76f2
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/08/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="new-and-recently-updated-advanced-analytics-for-sql-server"></a>Nuevos y actualizados recientemente: análisis avanzados para SQL Server
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
@@ -100,7 +98,7 @@ Para otros problemas conocidos que podrían afectar a las soluciones de R, consu
 
 Si la instancia de SQL Server se ha instalado en una ubicación no predeterminados, como fuera de la `Program Files` carpeta, la advertencia ACCESS_DENIED se produce al intentar ejecutar scripts que instalan un paquete. Por ejemplo:
 
-> *In normalizePath(path.expand(path), winslash, mustWork) : path[2]="~ExternalLibraries/R/8/1": Access is denied*
+> *En normalizePath(path.expand(path), winslash, mustWork): ruta de acceso [2] = "~ExternalLibraries/R/8/1": se denegó el acceso*
 
 La razón es que una función de R intenta leer la ruta de acceso y se produce un error si el grupo de usuarios integrado **SQLRUserGroup**, no tiene acceso de lectura. La advertencia que se inicia no bloquea la ejecución del script de R actual, pero la advertencia puede repetirse varias veces siempre que el usuario ejecuta cualquier otro script de R.
 

@@ -1,15 +1,16 @@
 ---
 title: Principales funciones de API de nivel (controlador ODBC para Oracle) | Documentos de Microsoft
-ms.custom: 
+ms.custom: ''
 ms.date: 01/19/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: drivers
-ms.service: 
+ms.service: ''
 ms.component: odbc
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: drivers
-ms.tgt_pltfrm: 
+ms.technology:
+- drivers
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - functions [ODBC], ODBC driver for Oracle
@@ -17,16 +18,16 @@ helpviewer_keywords:
 - core level API functions [ODBC]
 - ODBC core level API functions [ODBC]
 ms.assetid: 8596eed7-bda6-4cac-ae1f-efde1aab785f
-caps.latest.revision: "9"
+caps.latest.revision: 9
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 118ea5f86f89e73eadd5c0bef79770b438d53f9b
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: 3b04102f149c96792f769a84535783c235832e2b
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="core-level-api-functions-odbc-driver-for-oracle"></a>Funciones de API de nivel de núcleo (controlador ODBC para Oracle)
 > [!IMPORTANT]  
@@ -43,7 +44,7 @@ ms.lasthandoff: 12/21/2017
 |**SQLCancel**|Cancela el procesamiento en un identificador de instrucción, hstmt. En algunos casos, Oracle no admite la cancelación de una instrucción de ejecución. Esto significa que una instrucción de ejecución continuará hasta que Oracle completa el proceso, momento en el que se cancelan los resultados de las instrucciones por el controlador ODBC para Oracle.|  
 |**SQLColAttributes**|Devuelve información del descriptor para una columna de un conjunto de resultados. Información del descriptor se devuelve como una cadena de caracteres, un valor de dependiente de descriptor de 32 bits o un valor entero.|  
 |**SQLConnect**|Se conecta a un origen de datos. Para usar la autenticación de sistema operativo de Oracle, especifique "/" como el *szUID* parámetro y "" como el *szAuthStr* parámetro.|  
-|**SQLDescribeCol**|Devuelve el nombre, el tipo, la precisión, la escala y la nulabilidad de la columna de resultados determinado. **Nota:****SQLDescribeCol** informa de las columnas calculadas como SQL_VARCHAR.|  
+|**SQLDescribeCol**|Devuelve el nombre, el tipo, la precisión, la escala y la nulabilidad de la columna de resultados determinado. **Nota:****SQLDescribeCol** informa de las columnas calculadas como SQL_VARCHAR.  |  
 |**SQLDisconnect**|Cierra una conexión. Si la agrupación de conexiones está habilitada para un entorno compartido y llama a una aplicación **SQLDisconnect** en una conexión en el entorno, la conexión se devuelve al grupo de conexiones y sigue estando disponible para otros componentes por medio el mismo entorno compartido.|  
 |**SQLError**|Devuelve información de estado o de error sobre el último error. El controlador mantiene una pila o una lista de errores que se pueden devolver para la *hstmt*, *hdbc*, y *henv* argumentos, dependiendo de cómo la llamada a **SQLError**  se realiza. La cola de errores se vacía después de cada instrucción. Normalmente recupera un mensaje de error de Oracle y en caso contrario, está vacío.|  
 |**SQLExecDirect**|Ejecuta una instrucción SQL nueva, no preparada. El controlador utiliza los valores actuales de las variables de marcador de parámetro, si existe algún parámetro en la instrucción. Si la tabla, vista o nombres de campo contienen espacios, encierre los nombres en la parte posterior oferta marcas. Por ejemplo, si la base de datos contiene una tabla denominada *mi tabla* y el campo *mi campo*, incluya cada elemento del identificador de este modo:<br /><br /> Seleccione \`mi tabla\`. \`Mi Field1\`, \`Mi tabla\`.\` Mi Field2\` FROM \`la tabla '|  

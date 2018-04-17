@@ -1,31 +1,32 @@
 ---
 title: 'C a SQL: marca de tiempo | Documentos de Microsoft'
-ms.custom: 
+ms.custom: ''
 ms.date: 01/19/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: drivers
-ms.service: 
+ms.service: ''
 ms.component: odbc
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: drivers
-ms.tgt_pltfrm: 
+ms.technology:
+- drivers
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - data conversions from C to SQL types [ODBC], timestamp
 - timestamp data type [ODBC]
 - converting data from c to SQL types [ODBC], timestamp
 ms.assetid: 0e08bfff-68f9-4648-9558-09b57fea08ad
-caps.latest.revision: "8"
+caps.latest.revision: 8
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 9577b649d2812ad087728b7849637f872d4a84b9
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: be38d6accb796666a62324e7a6fd5aefcfa0f372
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="c-to-sql-timestamp"></a>C a SQL: marca de tiempo
 El identificador para el tipo de datos ODBC C de marca de tiempo es:  
@@ -46,6 +47,6 @@ El identificador para el tipo de datos ODBC C de marca de tiempo es:
   
  Para obtener información acerca de qué valores son válidos en una estructura SQL_C_TIMESTAMP, consulte [tipos de datos C](../../../odbc/reference/appendixes/c-data-types.md), anteriormente en este apéndice.  
   
- Cuando los datos de marca de tiempo C se convierte en datos de SQL de caracteres, los datos de caracteres resultante están en la "*aaaa*-*mm*-*dd* *hh*:*mm*:*ss*[. *f...* ] "formato.  
+ Cuando los datos de marca de tiempo C se convierte en datos de SQL de caracteres, los datos de caracteres resultante están en la "*aaaa*-*mm*-*dd* *hh*:*mm*:*ss*[.*f...*] "formato.  
   
  El controlador omite el valor de longitud/indicador al convertir datos del tipo de datos C de la marca de tiempo y se da por supuesto que el tamaño del búfer de datos es el tamaño del tipo de datos C de la marca de tiempo. El valor de longitud/indicador se pasa en el *StrLen_or_Ind* argumento en **SQLPutData** y en el búfer especificado con el *StrLen_or_IndPtr* argumento en **SQLBindParameter**. El búfer de datos se especifica con el *DataPtr* argumento en **SQLPutData** y *ParameterValuePtr* argumento en **SQLBindParameter**.

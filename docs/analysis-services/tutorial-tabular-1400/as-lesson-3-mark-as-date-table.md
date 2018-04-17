@@ -1,15 +1,15 @@
 ---
-title: "Lección de Analysis Services tutorial 3: marcar como tabla de fechas | Documentos de Microsoft"
-description: "Describe cómo marcar una tabla de fechas en el proyecto de tutorial de Analysis Services."
+title: 'Lección de Analysis Services tutorial 3: marcar como tabla de fechas | Documentos de Microsoft'
+description: Describe cómo marcar una tabla de fechas en el proyecto de tutorial de Analysis Services.
 ms.prod_service: analysis-services, azure-analysis-services
 services: analysis-services
 ms.suite: pro-bi
-documentationcenter: 
+documentationcenter: ''
 author: Minewiskan
 manager: kfile
-editor: 
-tags: 
-ms.assetid: 
+editor: ''
+tags: ''
+ms.assetid: ''
 ms.service: analysis-services
 ms.devlang: NA
 ms.topic: get-started-article
@@ -17,11 +17,12 @@ ms.tgt_pltfrm: NA
 ms.workload: na
 ms.date: 02/20/2018
 ms.author: owend
-ms.openlocfilehash: b747791b4e33683c2eaad73b3d19d80e7c10f601
-ms.sourcegitcommit: 7ed8c61fb54e3963e451bfb7f80c6a3899d93322
+monikerRange: '>= sql-analysis-services-2017 || = sqlallproducts-allversions'
+ms.openlocfilehash: 679e3d629bb69ce4aab067b1becc7df8af24e140
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/20/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="mark-as-date-table"></a>Marcar como tabla de fechas
 
@@ -56,7 +57,7 @@ Este artículo forma parte de un tutorial de modelado tabular, que se debe compl
   
 3.  En el cuadro de diálogo **Marcar como tabla de fechas** en el cuadro de lista **Date** , seleccione la columna **Date** como identificador único. Normalmente se selecciona de forma predeterminada. Haga clic en **Aceptar**. 
 
-    ![as-lesson3-date-table](../tutorial-tabular-1400/media/as-lesson3-date-table.png)
+    ![como-lesson3-date-table](../tutorial-tabular-1400/media/as-lesson3-date-table.png)
   
 
 ## <a name="whats-next"></a>¿Qué sigue?

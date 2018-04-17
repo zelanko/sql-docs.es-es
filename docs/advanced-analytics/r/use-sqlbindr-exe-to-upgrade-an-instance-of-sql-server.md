@@ -1,36 +1,28 @@
 ---
 title: Enlazar componentes de aprendizaje de máquina en SQL Server al servidor de aprendizaje de máquina de Microsoft | Documentos de Microsoft
-ms.custom: ''
-ms.date: 03/15/2018
-ms.reviewer: ''
-ms.suite: sql
-ms.prod: machine-learning-services
-ms.prod_service: machine-learning-services
-ms.component: r
-ms.technology: ''
-ms.tgt_pltfrm: ''
-ms.topic: article
-applies_to:
-- SQL Server (starting with 2016 CTP3)
-ms.author: heidist
+ms.prod: sql
+ms.technology: machine-learning
+ms.date: 04/15/2018
+ms.topic: conceptual
 author: HeidiSteen
+ms.author: heidist
 manager: cgronlun
-ms.workload: On Demand
-ms.openlocfilehash: c82a1788f7c2c5cf4bca43c4fb03ff5c9eba0e28
-ms.sourcegitcommit: 059fc64ba858ea2adaad2db39f306a8bff9649c2
+ms.openlocfilehash: 3f0818d67bb866326786598f67bb2caac368dda6
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/04/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="bind-machine-learning-components-on-sql-server-to-microsoft-machine-learning-server"></a>Enlazar componentes de aprendizaje de máquina en SQL Server al servidor de aprendizaje de máquina de Microsoft
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
 
-Este artículo explica el proceso de _enlace_, que puede usar para actualizar los componentes que se usan en SQL Server de aprendizaje automático. El proceso de enlace bloquea el servidor a un ritmo de actualización basado en versiones de servidor de aprendizaje de máquina, en lugar de usar el servidor SQL Server de la versión y actualizar la programación.
+Este artículo explica el proceso de *enlace* una instancia de (en bases de datos) de servicios de aprendizaje de máquina de SQL Server o SQL Server R Services al servidor de aprendizaje de máquina de Microsoft con el fin de actualizar los paquetes de R y Python en un ritmo más rápido de versión. 
 
-> [!IMPORTANT]
-> No es necesario utilizar el proceso de actualización si desea obtener las actualizaciones como parte de las actualizaciones de SQL Server. Siempre que se instala un nuevo service pack o una versión de servicio, componentes de aprendizaje de máquina se actualizan automáticamente siempre a la versión más reciente. Utilice únicamente la _enlace_ procesar si desea actualizar los componentes a un ritmo más rápido que concedidos por las versiones de servicio de SQL Server.
+El proceso de enlace cambia el mecanismo de actualización de servicio. Sin enlace, se actualizan a la versión de los paquetes de R y Python sólo cuando se instala un service pack o actualización acumulativa (CU). Con el enlace, las versiones más recientes de paquete pueden aplicarse a la instancia, independientemente de la programación de la versión CU.
 
-Si en cualquier momento en que desea detener la actualización en la programación del servidor de aprendizaje de máquina, debe _desenlace_ la instancia como se describe en [en esta sección](#bkmk_Unbind)y desinstalar el servidor de aprendizaje de máquina.
+Enlace afecta a solo los componentes de R o de aprendizaje automático de la instancia del motor de base de datos, no la instancia de motor de base de datos propia. Solo se aplica a una instancia de (en bases de datos). Una instalación (independiente) no está en ámbito.
+
+Si en cualquier momento que desea revertir al mantenimiento de SQL Server para los componentes de aprendizaje automático, puede _desenlace_ la instancia como se describe en [en esta sección](#bkmk_Unbind)y desinstalar el servidor de aprendizaje de máquina.
 
 **Se aplica a:** servicios de aprendizaje de automático de SQL Server 2016 R Services, SQL Server de 2017
 

@@ -1,31 +1,32 @@
 ---
 title: El enlace | Documentos de Microsoft
-ms.custom: 
+ms.custom: ''
 ms.date: 01/19/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: drivers
-ms.service: 
+ms.service: ''
 ms.component: odbc
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: drivers
-ms.tgt_pltfrm: 
+ms.technology:
+- drivers
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - row-wise binding [ODBC]
 - result sets [ODBC], binding columns
 - binding columns [ODBC]
 ms.assetid: 4f622cf4-0603-47a1-a48b-944c4ef46364
-caps.latest.revision: "9"
+caps.latest.revision: 9
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 4dd3d59875f649c7b797d39fa31ac744457d68ef
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: bf2df3b6aa74ad9e959bdebc2ffcefe32c2a3047
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="row-wise-binding"></a>El enlace
 Cuando se usa el enlace, una aplicación define una estructura que contiene uno o dos o, en algunos casos, tres, los elementos de cada columna para la que se devolverán datos. El primer elemento contiene el valor de datos y el segundo elemento contiene el búfer de longitud/indicador. Indicadores y los valores de longitud pueden almacenarse en búferes independientes al establecer los campos de descriptor SQL_DESC_INDICATOR_PTR y SQL_DESC_OCTET_LENGTH_PTR en valores diferentes; Si es así, la estructura contiene un tercer elemento. La aplicación, a continuación, asigne una matriz de estas estructuras, que contiene tantos elementos como filas en el conjunto de filas.  
@@ -38,7 +39,7 @@ Address = Bound Address + ((Row Number - 1) * Structure Size)
   
  donde las filas se numeran del 1 al tamaño del conjunto de filas. (Uno se resta el número de fila porque está basado en cero en C la indización de matrices.) La ilustración siguiente muestra cómo funciona el enlace. Por lo general, solo las columnas que se enlazarán se incluyen en la estructura. La estructura puede contener campos que no estén relacionados como resultado columnas del conjunto. Las columnas se pueden colocar en la estructura en cualquier orden, pero se muestran en orden secuencial para mayor claridad.  
   
- ![Fila muestra &#45; enlace conveniente](../../../odbc/reference/develop-app/media/pr22.gif "pr22")  
+ ![Fila muestra&#45;enlace conveniente](../../../odbc/reference/develop-app/media/pr22.gif "pr22")  
   
  Por ejemplo, el código siguiente crea una estructura con elementos en la que se va a devolver datos de las columnas OrderID y vendedor, estado y longitud/indicadores para las columnas vendedor y estado. Asigna 10 de estas estructuras y enlazarlas a las columnas OrderID, vendedor y estado.  
   

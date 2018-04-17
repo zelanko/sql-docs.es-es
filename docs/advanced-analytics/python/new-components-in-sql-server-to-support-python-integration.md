@@ -1,24 +1,17 @@
 ---
-title: Componentes de integración de Python con SQL Server | Documentos de Microsoft
-ms.custom: ''
-ms.date: 11/03/2017
-ms.reviewer: ''
-ms.suite: sql
-ms.prod: machine-learning-services
-ms.prod_service: machine-learning-services
-ms.component: python
-ms.technology: ''
-ms.tgt_pltfrm: ''
-ms.topic: article
-ms.author: heidist
+title: Componentes para la integración de Python con aprendizaje automático de SQL Server | Documentos de Microsoft
+ms.prod: sql
+ms.technology: machine-learning
+ms.date: 04/15/2018
+ms.topic: conceptual
 author: HeidiSteen
+ms.author: heidist
 manager: cgronlun
-ms.workload: Inactive
-ms.openlocfilehash: a35b592ef3d6d89bb3014962b9fca80816240315
-ms.sourcegitcommit: 059fc64ba858ea2adaad2db39f306a8bff9649c2
+ms.openlocfilehash: f00735c78b59a9eec41f8ef4ae77fb6accf013d1
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/04/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="components-in-sql-server-to-support-python-integration"></a>Componentes de SQL Server para admitir la integración de Python
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
@@ -117,7 +110,7 @@ Al ejecutar Python "en" [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.
 
 Después de la secuencia de comandos se han incrustado en el procedimiento almacenado, cualquier aplicación que puede realizar un procedimiento almacenado llamada puede iniciar la ejecución del código Python.  A partir de ahí [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)] administra la ejecución de código como se resume en el diagrama siguiente.
 
-![script-in-db-python](../../advanced-analytics/python/media/script-in-db-python2.png)
+![script de python de base de datos](../../advanced-analytics/python/media/script-in-db-python2.png)
 
 1. Una solicitud para el tiempo de ejecución de Python se indica mediante el parámetro `@language='Python'` pasa al procedimiento almacenado. SQL Server envía esta solicitud para el servicio Launchpad.
 2. El servicio Launchpad inicia el selector adecuado; en este caso, PythonLauncher.

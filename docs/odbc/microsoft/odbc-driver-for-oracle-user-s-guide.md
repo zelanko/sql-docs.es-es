@@ -1,8 +1,8 @@
 ---
-title: El controlador ODBC para Oracle usuario &#39; guía | Documentos de Microsoft
+title: El controlador ODBC para Oracle usuario&#39;guía | Documentos de Microsoft
 ms.custom: ''
 ms.date: 01/19/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: drivers
 ms.service: ''
 ms.component: odbc
@@ -18,15 +18,15 @@ ms.assetid: c506aaa1-0b4f-440b-b069-98e0a463a5f6
 caps.latest.revision: 8
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 7bf95ae6474a0f9a02763020282b4cce38991baa
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: 88fcc5a433522a8ae51a7d8045da336465af9323
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 04/16/2018
 ---
-# <a name="odbc-driver-for-oracle-user39s-guide"></a>El controlador ODBC para Oracle usuario &#39; guía
+# <a name="odbc-driver-for-oracle-user39s-guide"></a>El controlador ODBC para Oracle usuario&#39;guía
 > [!IMPORTANT]  
 >  Esta característica se quitará en una versión futura de Windows. Evite utilizar esta característica en nuevos trabajos de desarrollo y tenga previsto modificar las aplicaciones que actualmente la utilizan. En su lugar, utilice el controlador ODBC proporcionado por Oracle.  
   

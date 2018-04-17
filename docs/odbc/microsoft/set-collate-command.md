@@ -2,7 +2,7 @@
 title: Comando COLLATE | Documentos de Microsoft
 ms.custom: ''
 ms.date: 01/19/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: drivers
 ms.service: ''
 ms.component: odbc
@@ -18,13 +18,13 @@ ms.assetid: 00efbcd4-fea8-4061-86a5-82de413cb753
 caps.latest.revision: 5
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 735e28da49e0c8a9dc3a12d9a29d107209ec99dd
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: b8820aed48e6b809d9d6b9c6795c2dcc13c5e270
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="set-collate-command"></a>Comando COLLATE Set.
 Especifica una secuencia de intercalación para los campos de carácter en posteriores indización y operaciones de ordenación.  
@@ -40,7 +40,7 @@ SET COLLATE TO cSequenceName
  *cSequenceName*  
  Especifica una secuencia de intercalación. Las opciones de secuencia de intercalación disponibles se describen en la tabla siguiente.  
   
-|.|Idioma|  
+|Opciones|Lenguaje|  
 |-------------|--------------|  
 |HOLANDÉS|Neerlandés|  
 |GENERAL|Inglés, francés, alemán, español moderno, portugués y otros idiomas de Europa occidental|  

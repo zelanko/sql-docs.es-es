@@ -1,51 +1,35 @@
 ---
-title: "Propiedades de cadena de conexión (Analysis Services) | Documentos de Microsoft"
-ms.custom: 
+title: Propiedades de cadena de conexión (Analysis Services) | Documentos de Microsoft
+ms.custom: ''
 ms.date: 03/07/2017
 ms.prod: analysis-services
 ms.prod_service: analysis-services
-ms.service: 
+ms.service: ''
 ms.component: data-mining
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: pro-bi
-ms.technology: 
-ms.tgt_pltfrm: 
+ms.technology: ''
+ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: 29a00a41-5b0d-44b2-8a86-1b16fe507768
-caps.latest.revision: 
+caps.latest.revision: 18
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: On Demand
-ms.openlocfilehash: 3fa9fd8e7b7c4722e9acf41f0f7229ee0a1f3ef7
-ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
+ms.openlocfilehash: 9c2daf9234b44f7108339d9a743118373b9b42c1
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/15/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="connection-string-properties-analysis-services"></a>Propiedades de cadena de conexión (Analysis Services)
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
-En este tema se documentan las propiedades de cadena de conexión que puede establecer en una de las herramientas de diseñador o de administración, o ver en las cadenas de conexión generadas por las aplicaciones cliente que se conectan a Analysis Services y consultan datos. Por tanto, solo se tratan un subconjunto de las propiedades disponibles. La lista completa incluye numerosas propiedades de servidor y base de datos, lo que permite personalizar una conexión para una aplicación específica, independientemente de cómo esté configurada la instancia o la base de datos en el servidor.  
+  En este tema se documentan las propiedades de cadena de conexión que puede establecer en una de las herramientas de diseñador o de administración, o ver en las cadenas de conexión generadas por las aplicaciones cliente que se conectan a Analysis Services y consultan datos. Por tanto, solo se tratan un subconjunto de las propiedades disponibles. La lista completa incluye numerosas propiedades de servidor y base de datos, lo que permite personalizar una conexión para una aplicación específica, independientemente de cómo esté configurada la instancia o la base de datos en el servidor.  
   
  Los desarrolladores que crean cadenas de conexión personalizadas en código de aplicación deben revisar la documentación de la API para el cliente de ADOMD.NET con el fin de ver una lista más detallada: <xref:Microsoft.AnalysisServices.AdomdClient.AdomdConnection.ConnectionString%2A>  
   
- Las bibliotecas de cliente de Analysis Services, ADOMD.NET, AMO y el proveedor OLE DB para Analysis Services usan las propiedades descritas en este tema. La mayoría de las propiedades de cadena de conexión se puede usar con las tres bibliotecas de cliente. Las excepciones se indican en la descripción.  
-  
- En este tema se incluyen las secciones siguientes:  
-  
- [Parámetros de conexión de uso común](#bkmk_common)  
-  
- [Autenticación y seguridad](#bkmk_auth)  
-  
- [Parámetros de uso especial](#bkmk_special)  
-  
- [Reservado para uso futuro](#bkmk_reserved)  
-  
- [Ejemplos de cadena de conexión](#bkmk_examples)  
-  
- [Formatos de cadena de conexión usados en Analysis Services](#bkmk_supportedstrings)  
-  
- [Cifrar cadenas de conexión](#bkmk_encrypt)  
+ Las bibliotecas de cliente de Analysis Services, ADOMD.NET, AMO y el proveedor OLE DB para Analysis Services usan las propiedades descritas en este tema. La mayoría de las propiedades de cadena de conexión se puede usar con las tres bibliotecas de cliente. Las excepciones se indican en la descripción.
   
 > [!NOTE]  
 >  Si al establecer propiedades se establece involuntariamente la misma propiedad dos veces, se usa la última de la cadena de conexión.  
@@ -191,7 +175,7 @@ En este tema se documentan las propiedades de cadena de conexión que puede esta
 ##  <a name="bkmk_encrypt"></a> Cifrar cadenas de conexión  
  Analysis Services utiliza sus propias claves de cifrado para cifrar cadenas de conexión. No se genera un certificado autofirmado.  
   
- [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] cifra y almacena las cadenas de conexión que utiliza para conectarse a cada uno de sus orígenes de datos. Si la conexión a un origen de datos requiere un nombre de usuario y contraseña, puede hacer que [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] almacene el nombre y la contraseña con la cadena de conexión o puede hacer que se le solicite el nombre y la contraseña cada vez que se requiera una conexión al origen de datos. Si [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] solicita la información de usuario, significa que esta información no tiene por qué almacenarse y cifrarse. No obstante, si almacena esta información en la cadena de conexión, será necesario cifrar y proteger esta información.  
+ [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] cifra y almacena las cadenas de conexión que emplea para conectarse a cada uno de sus orígenes de datos. Si la conexión a un origen de datos requiere un nombre de usuario y contraseña, puede hacer que [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] almacene el nombre y la contraseña con la cadena de conexión o puede hacer que se le solicite el nombre y la contraseña cada vez que se requiera una conexión al origen de datos. Si [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] solicita la información de usuario, significa que esta información no tiene por qué almacenarse y cifrarse. No obstante, si almacena esta información en la cadena de conexión, será necesario cifrar y proteger esta información.  
   
  Para cifrar y proteger la información de la cadena de conexión, [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] utiliza la API de protección de datos.  
   

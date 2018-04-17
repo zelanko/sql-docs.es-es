@@ -1,15 +1,15 @@
 ---
-title: "Lección de Analysis Services tutorial 4: crear relaciones | Documentos de Microsoft"
-description: "Describe cómo crear relaciones en el proyecto de tutorial de Analysis Services."
+title: 'Lección de Analysis Services tutorial 4: crear relaciones | Documentos de Microsoft'
+description: Describe cómo crear relaciones en el proyecto de tutorial de Analysis Services.
 ms.prod_service: analysis-services, azure-analysis-services
 services: analysis-services
 ms.suite: pro-bi
-documentationcenter: 
+documentationcenter: ''
 author: Minewiskan
 manager: kfile
-editor: 
-tags: 
-ms.assetid: 
+editor: ''
+tags: ''
+ms.assetid: ''
 ms.service: analysis-services
 ms.devlang: NA
 ms.topic: get-started-article
@@ -17,11 +17,12 @@ ms.tgt_pltfrm: NA
 ms.workload: na
 ms.date: 02/20/2018
 ms.author: owend
-ms.openlocfilehash: 2776649b049254e27851a9d4ce95e8d6dea81067
-ms.sourcegitcommit: 7ed8c61fb54e3963e451bfb7f80c6a3899d93322
+monikerRange: '>= sql-analysis-services-2017 || = sqlallproducts-allversions'
+ms.openlocfilehash: eedbdf50d33e7aed380cfb98b3cdf85d7ea9a3f8
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/20/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="create-relationships"></a>Crear relaciones
 
@@ -82,7 +83,7 @@ En la vista de diagrama, tenga en cuenta una flecha, un asterisco y un número e
 
 La flecha muestra la dirección del filtro. El asterisco muestra esta tabla es la *muchos* lado en la cardinalidad de la relación y la muestra esta tabla es la *una* lado de la relación. Si tiene que modificar una relación; Por ejemplo, cambiar la dirección del filtro de la relación y cardinalidad, haga doble clic en la línea de relación para abrir el cuadro de diálogo Editar relación.
 
-![as-lesson4-edit](../tutorial-tabular-1400/media/as-lesson4-edit.png)
+![Editar como lesson4](../tutorial-tabular-1400/media/as-lesson4-edit.png)
 
 Estas características están diseñadas para modelado de datos avanzados y están fuera del ámbito de este tutorial. Para obtener más información, consulte [bidireccional entre los filtros para modelos tabulares de Analysis Services](../tabular-models/bi-directional-cross-filters-tabular-models-analysis-services.md).
 
@@ -105,7 +106,7 @@ En algunos casos, tal vez necesite crear relaciones adicionales entre las tablas
   
 3.  Finalmente, cree una relación más. En el **FactInternetSales** de tabla, haga clic y mantenga el **ShipDate** columna, a continuación, arrastre el cursor hasta el **fecha** columna en el **DimDate** de tabla y, a continuación, suelte.  
     
-     ![as-lesson4-newinactive](../tutorial-tabular-1400/media/as-lesson4-newinactive.png)
+     ![newinactive como lesson4](../tutorial-tabular-1400/media/as-lesson4-newinactive.png)
   
 ## <a name="whats-next"></a>¿Qué sigue?
 

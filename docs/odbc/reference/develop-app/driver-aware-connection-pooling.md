@@ -1,27 +1,28 @@
 ---
-title: "Agrupación de conexiones dependientes del controlador | Documentos de Microsoft"
-ms.custom: 
+title: Agrupación de conexiones dependientes del controlador | Documentos de Microsoft
+ms.custom: ''
 ms.date: 01/19/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: drivers
-ms.service: 
+ms.service: ''
 ms.component: odbc
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: drivers
-ms.tgt_pltfrm: 
+ms.technology:
+- drivers
+ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: 53e7e3f7-edab-4d0b-8943-45442ba3ebc9
-caps.latest.revision: "20"
+caps.latest.revision: 20
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 337ce5bca53a3b9099cbe9cd91774b748930d7ea
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: 87d323d75fbbdb0166ced03156a9e7510652f344
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="driver-aware-connection-pooling"></a>Agrupación de conexiones dependientes del controlador
 Agrupación de conexiones dependientes del controlador es una nueva característica del Administrador de controladores en Windows 8. Agrupación de conexiones dependientes del controlador permite que los escritores de controladores personalizar el comportamiento de su controlador ODBC de agrupación de conexiones.  

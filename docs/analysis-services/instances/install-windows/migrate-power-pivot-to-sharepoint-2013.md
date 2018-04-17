@@ -1,27 +1,27 @@
 ---
 title: Migrar Power Pivot a SharePoint 2013 | Documentos de Microsoft
-ms.custom: 
+ms.custom: ''
 ms.date: 03/20/2017
 ms.prod: analysis-services
 ms.prod_service: analysis-services
-ms.service: 
-ms.component: 
-ms.reviewer: 
+ms.service: ''
+ms.component: ''
+ms.reviewer: ''
 ms.suite: pro-bi
-ms.technology: 
-ms.tgt_pltfrm: 
+ms.technology: ''
+ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: f698ceb1-d53e-4717-a3a0-225b346760d0
-caps.latest.revision: 
+caps.latest.revision: 18
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: 518715f0084ac44b72f40eaabe95e21c8022e77d
-ms.sourcegitcommit: c77a8ac1ab372927c09bf241d486e96881b61ac9
+ms.openlocfilehash: 6d14c449823f55d5c400c9f17ba73724d3ea43a3
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/29/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="migrate-power-pivot-to-sharepoint-2013"></a>Migrar Power Pivot a SharePoint 2013
 [!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]
@@ -38,32 +38,20 @@ ms.lasthandoff: 01/29/2018
 |Preparar la granja de SharePoint 2013|Hacer copia de seguridad, copiar y restaurar bases de datos.|Montar bases de datos de contenido|Migrar programaciones de [!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)]|  
 ||[!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)]|- Administración central de SharePoint<br /><br /> - Windows PowerShell|- Páginas de aplicación de SharePoint<br /><br /> - Windows PowerShell|  
   
- **En este tema:**  
+##  <a name="bkmk_prepare_sharepoint2013"></a>Preparar la granja de servidores de SharePoint 2013  
   
--   [1) Preparar la granja de SharePoint 2013](#bkmk_prepare_sharepoint2013)  
-  
--   [2) Hacer copia de seguridad, copiar y restaurar las bases de datos](#bkmk_backup_restore)  
-  
--   [3) Preparar las aplicaciones web y montar bases de datos de contenido](#bkmk_prepare_mount_databases)  
-  
--   [4) Actualizar programaciones de Power Pivot](#bkmk_upgrade_powerpivot_schedules)  
-  
--   [Recursos adicionales](#bkmk_additional_resources)  
-  
-##  <a name="bkmk_prepare_sharepoint2013"></a> 1) Preparar la granja de SharePoint 2013  
-  
-1.  > [!TIP]  
+  > [!TIP]  
     >  Revise el método de autenticación para el que están configuradas las aplicaciones web existentes. Las aplicaciones web de SharePoint 2013 usan de forma predeterminada la autenticación basada en notificaciones. Las aplicaciones web de SharePoint 2010 configuradas para la autenticación en modo clásico necesitan unos pasos adicionales para migrar bases de datos de SharePoint 2010 a SharePoint 2013. Si sus aplicaciones web están configuradas para la autenticación en modo clásico, consulte la documentación de SharePoint 2013.  
   
-2.  Instale una nueva granja de servidores de SharePoint Server 2013.  
+1.  Instale una nueva granja de servidores de SharePoint Server 2013.  
   
-3.  Instale una instancia de un servidor de [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] en modo de SharePoint. Para obtener más información, consulte [Install Analysis Services in Power Pivot Mode](../../../analysis-services/instances/install-windows/install-analysis-services-in-power-pivot-mode.md).  
+2.  Instale una instancia de un servidor de [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] en modo de SharePoint. Para obtener más información, consulte [Install Analysis Services in Power Pivot Mode](../../../analysis-services/instances/install-windows/install-analysis-services-in-power-pivot-mode.md).  
   
-4.  Ejecute el paquete de instalación de [!INCLUDE[ssGeminiShort](../../../includes/ssgeminishort-md.md)] 2013, **spPowerPivot.msi** , en todos los servidores de la granja de SharePoint. Para obtener más información, vea [Instalar o desinstalar el complemento PowerPivot para SharePoint &#40;SharePoint 2013&#41;](../../../analysis-services/instances/install-windows/install-or-uninstall-the-power-pivot-for-sharepoint-add-in-sharepoint-2013.md).  
+3.  Ejecute el paquete de instalación de [!INCLUDE[ssGeminiShort](../../../includes/ssgeminishort-md.md)] 2013, **spPowerPivot.msi** , en todos los servidores de la granja de SharePoint. Para obtener más información, vea [Instalar o desinstalar el complemento PowerPivot para SharePoint &#40;SharePoint 2013&#41;](../../../analysis-services/instances/install-windows/install-or-uninstall-the-power-pivot-for-sharepoint-add-in-sharepoint-2013.md).  
   
-5.  En Administración central de SharePoint 2013, configure la aplicación de servicio Excel Services para que use el servidor en modo SharePoint de [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] creado en el paso anterior. Para obtener más información, vea la sección "Configurar la integración de SharePoint básica de Analysis Services" de [Install Analysis Services in Power Pivot Mode](../../../analysis-services/instances/install-windows/install-analysis-services-in-power-pivot-mode.md).  
+4.  En Administración central de SharePoint 2013, configure la aplicación de servicio Excel Services para que use el servidor en modo SharePoint de [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] creado en el paso anterior. Para obtener más información, vea la sección "Configurar la integración de SharePoint básica de Analysis Services" de [Install Analysis Services in Power Pivot Mode](../../../analysis-services/instances/install-windows/install-analysis-services-in-power-pivot-mode.md).  
   
-##  <a name="bkmk_backup_restore"></a> 2) Hacer copia de seguridad, copiar y restaurar las bases de datos  
+##  <a name="bkmk_backup_restore"></a>Restauración de copia de seguridad, copia, las bases de datos  
  El proceso de "actualizar y adjuntar la base de datos de SharePoint" es una secuencia de pasos para realizar copias de seguridad, copiar y restaurar bases de datos de contenido y de aplicación de servicio relacionadas con [!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)] en la granja de SharePoint 2013.  
   
 1.  **Configurar la base de datos para que sea de solo lectura:** en [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)], haga clic con el botón derecho en el nombre de la base de datos y, después, haga clic en **Propiedades**. En la página **Opciones** , establezca la propiedad **Base de datos de solo lectura** en **True**.  
@@ -76,8 +64,8 @@ ms.lasthandoff: 01/29/2018
   
 5.  **Configurar la base de datos para que sea de lectura y escritura:** establezca **Base de datos de solo lectura** en **False**.  
   
-##  <a name="bkmk_prepare_mount_databases"></a> 3) Preparar las aplicaciones web y montar bases de datos de contenido  
- Para obtener una explicación más detallada de los procedimientos siguientes, vea [Actualizar bases de datos de SharePoint 2010 a SharePoint 2013](http://go.microsoft.com/fwlink/p/?LinkId=256690) (http://go.microsoft.com/fwlink/p/?LinkId=256690).  
+##  <a name="bkmk_prepare_mount_databases"></a>Preparar las aplicaciones Web y bases de datos de contenido de montaje  
+ Para obtener una explicación más detallada de los procedimientos siguientes, vea [actualizar bases de datos de SharePoint 2010 a SharePoint 2013](http://go.microsoft.com/fwlink/p/?LinkId=256690) (http://go.microsoft.com/fwlink/p/?LinkId=256690).  
   
 1.  **Poner bases de datos sin conexión:**  
   
@@ -101,7 +89,7 @@ ms.lasthandoff: 01/29/2018
     Mount-SPContentDatabase "SharePoint_Content_O14-KJSP1" -DatabaseServer "[server name]\powerpivot" -WebApplication [web application URL]  
     ```  
   
-     Para obtener más información, vea [Asociar o desasociar bases de datos de contenido (SharePoint Server 2010)](http://technet.microsoft.com/library/ff628582.aspx) (http://technet.microsoft.com/library/ff628582.aspx).  
+     Para obtener más información, consulte [adjuntar o separar bases de datos de contenido (SharePoint Server 2010)](http://technet.microsoft.com/library/ff628582.aspx) (http://technet.microsoft.com/library/ff628582.aspx).  
   
      **Estado cuando se completa el paso**  : cuando se completa la operación de montaje, los usuarios pueden ver los archivos que estaban en la antigua base de datos de contenido. Por tanto, los usuarios pueden ver y abrir los libros en la biblioteca de documentos.  
   
@@ -115,7 +103,7 @@ ms.lasthandoff: 01/29/2018
   
 2.  **Archivos de PowerPivot que faltan:** si ve errores relacionados con archivos .dll de [!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)] que faltan, no se instaló **spPowerPivot.msi** o la herramienta de configuración de [!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)] no se usó para configurar [!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)].  
   
-##  <a name="bkmk_upgrade_powerpivot_schedules"></a> 4) Actualizar programaciones de Power Pivot  
+##  <a name="bkmk_upgrade_powerpivot_schedules"></a>Actualizar programaciones de Power Pivot  
  En esta sección se describen los detalles y las opciones para migrar programaciones de [!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)] . La migración de programaciones es un proceso que consta de dos pasos. En primer lugar, configure la aplicación de servicio de [!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)] para que use la base de datos de aplicación de servicio migrada. Después debe elegir una de las dos opciones para la migración de programaciones.  
   
  **Configure la aplicación de servicio para que use la base de datos de aplicación de servicio migrada.**  
@@ -180,6 +168,6 @@ ms.lasthandoff: 01/29/2018
   
 -   [Limpiar un entorno antes de realizar una actualización a SharePoint 2013](http://go.microsoft.com/fwlink/p/?LinkId=256689) (http://go.microsoft.com/fwlink/p/?LinkId=256689).  
   
--   [Actualizar bases de datos de SharePoint 2010 a SharePoint 2013](http://go.microsoft.com/fwlink/p/?LinkId=256690) (http://go.microsoft.com/fwlink/p/?LinkId=256690).  
+-   [Actualizar las bases de datos de SharePoint 2010 a SharePoint 2013](http://go.microsoft.com/fwlink/p/?LinkId=256690) (http://go.microsoft.com/fwlink/p/?LinkId=256690).  
   
   

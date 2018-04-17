@@ -1,6 +1,6 @@
----
-title: ¿Qué es SQL Operations Studio (preview)? | Microsoft Docs
-description: Las SQL Operations Studio (preview) es una herramienta gratuita y ligera, que se ejecuta en Windows, Mac OS y Linux, para la administración de SQL Server, base de datos de SQL Azure y almacenamiento de datos de SQL Azure; donde se está ejecutando.
+﻿---
+title: "¿Qué es SQL Operations Studio (versión preliminar)? | Microsoft Docs"
+description: "SQL Operations Studio (versión preliminar) es una herramienta gratuita y ligera, que se ejecuta en Windows, Mac OS y Linux, para la administración de SQL Server, base de datos de SQL Azure y almacenamiento de datos de SQL Azure; donde se está ejecutando."
 ms.custom: tools|sos
 ms.date: 11/17/2017
 ms.prod: sql-non-specified

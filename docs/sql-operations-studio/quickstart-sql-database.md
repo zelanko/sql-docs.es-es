@@ -1,6 +1,6 @@
----
-title: 'Inicio rápido: Conectarse y consultar una base de datos de SQL Azure con SQL Operations Studio (versión preliminar) | Documentos de Microsoft'
-description: Este tutorial rápido muestra cómo utilizar SQL Operations Studio (versión preliminar) para conectarse a una base de datos SQL y ejecutar una consulta
+﻿---
+title: "Inicio rápido: Conectarse y consultar una base de datos de SQL Azure con SQL Operations Studio (versión preliminar) | Documentos de Microsoft"
+description: "Este tutorial rápido muestra cómo utilizar SQL Operations Studio (versión preliminar) para conectarse a una base de datos SQL y ejecutar una consulta"
 ms.custom: tools|sos
 ms.date: 03/08/2018
 ms.prod: sql-non-specified

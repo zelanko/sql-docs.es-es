@@ -1,6 +1,6 @@
----
-title: Descargue e instale Microsoft SQL Operations Studio (preview) | Documentos de Microsoft
-description: Descargue e instale Microsoft SQL Operations Studio (preview) para Windows, Mac OS o Linux
+﻿---
+title: Descargue e instale Microsoft SQL operaciones Studio (versión preliminar) | Documentos de Microsoft
+description: Descargue e instale Microsoft SQL operaciones Studio (versión preliminar) para Windows, Mac OS o Linux
 ms.custom: tools|sos
 ms.date: 03/28/2018
 ms.prod: sql-non-specified

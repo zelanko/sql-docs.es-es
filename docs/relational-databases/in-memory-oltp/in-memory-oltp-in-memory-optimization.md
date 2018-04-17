@@ -1,31 +1,31 @@
 ---
-title: "OLTP en memoria (optimización en memoria) | Microsoft Docs"
-ms.custom: 
+title: OLTP en memoria (optimización en memoria) | Microsoft Docs
+ms.custom: ''
 ms.date: 11/22/2016
 ms.prod: sql-non-specified
 ms.prod_service: database-engine, sql-database
-ms.service: 
+ms.service: ''
 ms.component: in-memory-oltp
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine-imoltp
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - In-Memory OLTP
 - memory-optimized tables
 ms.assetid: e1d03d74-2572-4a55-afd6-7edf0bc28bdb
-caps.latest.revision: 
+caps.latest.revision: 106
 author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.workload: Active
-ms.openlocfilehash: 3403b3680edb3aa984def52b514d599c50852127
-ms.sourcegitcommit: 37f0b59e648251be673389fa486b0a984ce22c81
+ms.openlocfilehash: 1cd94040db8eb4f126333863c31c92aa0a2b75f8
+ms.sourcegitcommit: 8b332c12850c283ae413e0b04b2b290ac2edb672
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/12/2018
+ms.lasthandoff: 04/05/2018
 ---
 # <a name="in-memory-oltp-in-memory-optimization"></a>OLTP en memoria (optimización en memoria)
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -52,7 +52,7 @@ Para información más detallada de OLTP en memoria y una revisión de los escen
 > [!NOTE]  
 >  **Pruébelo**  
 >   
->  OLTP en memoria está disponible en bases de datos SQL Premium de Azure. Para una introducción a OLTP en memoria y al Almacén de columnas en Azure SQL Database, consulte [Optimizar el rendimiento con las tecnologías In-Memory en SQL Database](https://azure.microsoft.com/documentation/articles/sql-database-in-memory/).  
+>  OLTP en memoria está disponible en las bases de datos Azure SQL en el nivel Premium y crítico para la empresa y en grupos elásticos. Para una introducción a OLTP en memoria y al Almacén de columnas en Azure SQL Database, consulte [Optimizar el rendimiento con las tecnologías In-Memory en SQL Database](https://azure.microsoft.com/documentation/articles/sql-database-in-memory/).  
   
 
 ## <a name="in-this-section"></a>En esta sección  

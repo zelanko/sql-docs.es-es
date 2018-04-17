@@ -1,16 +1,16 @@
 ---
 title: RAISERROR (Transact-SQL) | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 02/21/2017
 ms.prod: sql-non-specified
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
-ms.service: 
+ms.service: ''
 ms.component: t-sql|language-elements
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - RAISERROR
@@ -31,16 +31,16 @@ helpviewer_keywords:
 - CATCH block
 - messages [SQL Server], RAISERROR statement
 ms.assetid: 483588bd-021b-4eae-b4ee-216268003e79
-caps.latest.revision: 
+caps.latest.revision: 73
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ms.workload: Active
-ms.openlocfilehash: af9f82f9b550ecd366c10562199c606bf8ff0c9c
-ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
+ms.openlocfilehash: 6102463ccd42e8057349b4480aa71d818aaafedf
+ms.sourcegitcommit: 9351e8b7b68f599a95fb8e76930ab886db737e5f
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/25/2018
+ms.lasthandoff: 04/06/2018
 ---
 # <a name="raiserror-transact-sql"></a>RAISERROR (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all_md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -128,8 +128,8 @@ RAISERROR ( { msg_str | @local_variable }
 > [!NOTE]  
 >  Para convertir un valor al tipo de datos [!INCLUDE[tsql](../../includes/tsql-md.md)]**bigint**, especifique **%I64d**.  
   
- **@** *local_variable*  
- Es una variable de un tipo de datos de caracteres válido que contiene una cadena formateada de la misma forma que *msg_str*. **@***local_variable* debe ser **char** o **varchar**, o bien se debe poder convertir implícitamente a estos tipos de datos.  
+ *@local_variable*  
+ Es una variable de un tipo de datos de caracteres válido que contiene una cadena formateada de la misma forma que *msg_str*. *@local_variable* debe ser **char** o **varchar**, o bien se debe poder convertir implícitamente a estos tipos de datos.  
   
  *severity*  
  Es el nivel de gravedad definido por el usuario asociado a este mensaje. Cuando se usa *msg_id* para generar un mensaje definido por el usuario creado con sp_addmessage, la gravedad especificada en RAISERROR reemplaza la gravedad especificada en sp_addmessage.  

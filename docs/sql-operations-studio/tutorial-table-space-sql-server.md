@@ -1,6 +1,6 @@
 ---
-title: "Tutorial: Habilitar el widget de una visión general de ejemplo de tabla espacio en uso en operaciones de SQL Studio (versión preliminar) | Documentos de Microsoft"
-description: "Este tutorial muestra cómo habilitar el widget de una visión general de ejemplo de tabla espacio en uso en el panel de la base de datos de las operaciones de SQL Studio (versión preliminar)."
+title: 'Tutorial: Habilitar el widget de una visión general de ejemplo de tabla espacio en uso en SQL Operations Studio (preview) | Documentos de Microsoft'
+description: Este tutorial muestra cómo habilitar el widget de una visión general de ejemplo de tabla espacio en uso en el panel de la base de datos de las SQL Operations Studio (preview).
 ms.custom: tools|sos
 ms.date: 03/19/2018
 ms.prod: sql-non-specified
@@ -8,7 +8,7 @@ ms.reviewer: alayu; erickang; sstein
 ms.suite: sql
 ms.prod_service: sql-tools
 ms.component: sos
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: tutorial
 author: erickangMSFT
 ms.author: erickang

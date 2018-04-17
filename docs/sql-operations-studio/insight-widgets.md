@@ -1,6 +1,6 @@
 ---
-title: "Utilizar widgets de una visión general para supervisar los servidores y bases de datos de las operaciones de SQL Studio (versión preliminar) | Documentos de Microsoft"
-description: "Obtenga información acerca de los widgets de una visión general de las operaciones de SQL Studio (versión preliminar)."
+title: Utilizar widgets de una visión general para supervisar los servidores y bases de datos de las SQL Operations Studio (preview) | Documentos de Microsoft
+description: Obtenga información acerca de los widgets de una visión general de las SQL Operations Studio (preview).
 ms.custom: tools|sos
 ms.date: 11/15/2017
 ms.prod: sql-non-specified
@@ -8,7 +8,7 @@ ms.reviewer: alayu; erickang; sstein
 ms.suite: sql
 ms.prod_service: sql-tools
 ms.component: sos
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article"
 author: stevestein
 ms.author: sstein

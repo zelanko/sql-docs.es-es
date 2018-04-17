@@ -9,4 +9,5 @@
 # [Cambiar la cuenta para el registro del escalado horizontal](change-logdb-account.md)
 # [Administración de certificados para la escalabilidad horizontal](deal-with-certificates-in-ssis-scale-out.md)
 # [Alta disponibilidad para la escalabilidad horizontal](scale-out-support-for-high-availability.md)
+# [Alta disponibilidad mediante instancias de clúster de conmutación por error de SQL Server](scale-out-failover-cluster-instance.md)
 # [Solución de problemas de escalabilidad horizontal](troubleshooting-scale-out.md)

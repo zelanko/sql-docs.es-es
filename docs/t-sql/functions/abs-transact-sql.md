@@ -1,16 +1,16 @@
 ---
 title: ABS (Transact-SQL) | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 07/24/2017
 ms.prod: sql-non-specified
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
-ms.service: 
+ms.service: ''
 ms.component: t-sql|functions
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - ABS_TSQL
@@ -23,16 +23,16 @@ helpviewer_keywords:
 - ABS function
 - absolute positive value
 ms.assetid: e2ea7a6d-3e2f-472c-afbc-437d3b835c03
-caps.latest.revision: 
+caps.latest.revision: 44
 author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: Active
-ms.openlocfilehash: 9f96d651f179120fab6fabfb78d08cca84404bd1
-ms.sourcegitcommit: 45e4efb7aa828578fe9eb7743a1a3526da719555
+ms.openlocfilehash: ab75a2147946366fba194f654a3710b32f68d626
+ms.sourcegitcommit: 9351e8b7b68f599a95fb8e76930ab886db737e5f
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 04/06/2018
 ---
 # <a name="abs-transact-sql"></a>ABS (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -49,13 +49,13 @@ ABS ( numeric_expression )
   
 ## <a name="arguments"></a>Argumentos  
 *numeric_expression*  
-Es una expresión de la categoría de tipo de datos numérico exacto o numérico aproximado.
+Una expresión de la categoría de tipo de datos numérico exacto o numérico aproximado.
   
 ## <a name="return-types"></a>Tipos devueltos  
 Devuelve el mismo tipo que *numeric_expression*.
   
 ## <a name="examples"></a>Ejemplos  
-En el ejemplo siguiente se muestra el resultado de usar la función `ABS` en tres números distintos.
+En este ejemplo se muestra el resultado de usar la función `ABS` en tres números distintos.
   
 ```sql
 SELECT ABS(-1.0), ABS(0.0), ABS(1.0);  
@@ -68,7 +68,7 @@ SELECT ABS(-1.0), ABS(0.0), ABS(1.0);
 1.0  .0   1.0  
 ```  
   
-La función `ABS` puede causar un error de desbordamiento cuando el valor absoluto de un número es mayor que el número más grande que puede representar el tipo de datos especificado. Por ejemplo, el tipo de datos `int` solo puede contener valores de `-2,147,483,648` a `2,147,483,647`. El cálculo del valor absoluto del entero con signo `-2,147,483,648` causa un error de desbordamiento porque su valor absoluto es mayor que el intervalo positivo para el tipo de datos `int`.
+La función `ABS` puede causar un error de desbordamiento cuando el valor absoluto de un número supera el número más grande que puede representar el tipo de datos especificado. Por ejemplo, el tipo de datos `int` tiene un rango de valores comprendido entre `-2,147,483,648` y `2,147,483,647`. El cálculo del valor absoluto del entero con signo `-2,147,483,648` causará un error de desbordamiento porque su valor absoluto supera el límite del intervalo positivo para el tipo de datos `int`.
   
 ```sql
 DECLARE @i int;  
@@ -77,7 +77,7 @@ SELECT ABS(@i);
 GO  
 ```  
   
-Éste es el mensaje de error:
+Devuelve este mensaje de error:
   
 "Mensaje 8115, nivel 16, estado 2, línea 3"
   

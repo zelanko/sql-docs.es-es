@@ -1,6 +1,6 @@
 ---
 title: Administrar SQL Server en Linux | Documentos de Microsoft
-description: "Este artículo contiene vínculos a tareas comunes de administración y herramientas de SQL Server ejecutando en Linux."
+description: Este artículo contiene vínculos a tareas comunes de administración y herramientas de SQL Server ejecutando en Linux.
 author: rothja
 ms.author: jroth
 manager: craigg
@@ -8,8 +8,8 @@ ms.date: 03/17/2017
 ms.topic: article
 ms.prod: sql-non-specified
 ms.prod_service: database-engine
-ms.service: 
-ms.component: 
+ms.service: ''
+ms.component: ''
 ms.suite: sql
 ms.technology: database-engine
 ms.assetid: 6bd8eb0b-593d-467e-87ea-ab1c4dbcd1ea
@@ -36,7 +36,7 @@ Casi todo lo que puede hacer en una herramienta cliente también se puede lograr
 
 ## <a name="sql-server-operations-studio-preview"></a>SQL Server Operations Studio (versión preliminar)
 
-La nueva Microsoft SQL operaciones Studio (vista previa) es una herramienta multiplataforma para la administración de SQL Server. Para obtener más información, consulte [Studio de operaciones SQL de Microsoft (versión preliminar)](../sql-operations-studio/what-is.md).
+La nueva Microsoft SQL Operations Studio (preview) es una herramienta multiplataforma para la administración de SQL Server. Para obtener más información, consulte [Microsoft SQL Operations Studio (preview)](../sql-operations-studio/what-is.md).
 
 ## <a name="sql-server-management-studio-on-windows"></a>SQL Server Management Studio en Windows
 

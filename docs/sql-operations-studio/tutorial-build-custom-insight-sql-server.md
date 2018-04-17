@@ -1,6 +1,6 @@
 ---
-title: "Tutorial: Crear un widget de información personalizada en las operaciones de SQL Studio (versión preliminar) | Documentos de Microsoft"
-description: "Este tutorial muestra cómo compilar widgets de insight personalizados y agregarlos a los paneles de base de datos y el servidor en las operaciones de SQL Studio (versión preliminar)."
+title: 'Tutorial: Crear un widget de información personalizada en las SQL Operations Studio (preview) | Documentos de Microsoft'
+description: Este tutorial muestra cómo compilar widgets de insight personalizados y agregarlos a los paneles de base de datos y el servidor en las SQL Operations Studio (preview).
 ms.custom: tools|sos
 ms.date: 11/15/2017
 ms.prod: sql-non-specified
@@ -8,7 +8,7 @@ ms.reviewer: alayu; erickang; sstein
 ms.suite: sql
 ms.prod_service: sql-tools
 ms.component: sos
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: tutorial
 author: erickangMSFT
 ms.author: erickang

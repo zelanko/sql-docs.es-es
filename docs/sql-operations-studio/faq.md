@@ -1,6 +1,6 @@
 ---
-title: "Operaciones de SQL Studio preguntas más frecuentes (versión preliminar) | Documentos de Microsoft"
-description: "Preguntas más frecuentes (P+F) para las operaciones de SQL Studio (versión preliminar)."
+title: SQL Operations Studio (preview) preguntas más frecuentes | Documentos de Microsoft
+description: Preguntas más frecuentes (P+F) para las SQL Operations Studio (preview).
 ms.custom: tools|sos
 ms.date: 11/15/2017
 ms.prod: sql-non-specified
@@ -8,7 +8,7 @@ ms.reviewer: alayu; erickang; sstein
 ms.suite: sql
 ms.prod_service: sql-tools
 ms.component: sos
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 author: stevestein
 ms.author: sstein

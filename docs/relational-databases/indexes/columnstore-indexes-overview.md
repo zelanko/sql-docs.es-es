@@ -1,16 +1,16 @@
 ---
-title: "Introducción a los índices de almacén de columnas | Microsoft Docs"
-ms.custom: 
-ms.date: 03/07/2016
+title: Introducción a los índices de almacén de columnas | Microsoft Docs
+ms.custom: ''
+ms.date: 04/03/2018
 ms.prod: sql-non-specified
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
-ms.service: 
+ms.service: ''
 ms.component: indexes
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - indexes creation, columnstore
@@ -19,16 +19,16 @@ helpviewer_keywords:
 - columnstore index, described
 - xVelocity, columnstore indexes
 ms.assetid: f98af4a5-4523-43b1-be8d-1b03c3217839
-caps.latest.revision: 
+caps.latest.revision: 80
 author: barbkess
 ms.author: barbkess
 manager: craigg
 ms.workload: Active
-ms.openlocfilehash: a7a01a3b1aab2ffa1850434928f4de3bce39bcd4
-ms.sourcegitcommit: 37f0b59e648251be673389fa486b0a984ce22c81
+ms.openlocfilehash: df76c7156e506fa9e01763e8f12ba1873c943f0e
+ms.sourcegitcommit: 8b332c12850c283ae413e0b04b2b290ac2edb672
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/12/2018
+ms.lasthandoff: 04/05/2018
 ---
 # <a name="columnstore-indexes---overview"></a>Introducción a los índices de almacén de columnas
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -74,12 +74,16 @@ Los *índices de almacén de columnas* son el estándar para almacenar y consult
   
  Para reducir la fragmentación de los segmentos de columna y mejorar el rendimiento, el índice de almacén de columnas puede almacenar temporalmente algunos datos en un índice agrupado (denominado almacén delta), así como una lista en forma de árbol b de los identificadores de las filas eliminadas. Las operaciones del almacén delta se administran en segundo plano. Para devolver los resultados correctos de la consulta, el índice clúster de almacén de columnas combina los resultados de la consulta tanto del almacén de columnas como del almacén delta.  
   
- almacén delta  
- Un *almacén delta* , que solamente se usa con índices de almacén de columnas agrupados, es un índice agrupado que mejora el rendimiento y la compresión del almacén de columnas almacenando las filas hasta que el número de filas alcanza un umbral determinado, momento en el que pasan al almacén de columnas.  
+ grupo de filas delta  
+ Un *grupo de filas delta*, que solamente se usa con índices de almacén de columnas, es un índice agrupado que mejora el rendimiento y la compresión del almacén de columnas almacenando las filas hasta que el número de filas alcanza un umbral determinado, momento en el que pasan al almacén de columnas.  
+
+ Cuando un grupo de filas delta alcanza el número máximo de filas, se cierra. Un proceso de motor de tupla comprueba si hay grupos de filas cerrados. Cuando encuentra el grupo de filas cerrado, lo comprime y lo almacena en el almacén de columnas.  
   
- Durante una gran carga masiva, la mayoría de las filas van directamente al almacén de columnas sin pasar por el almacén delta. Al final de la carga masiva, podría quedar un número de filas menor que el tamaño mínimo de un grupo de filas, que es 102.400 filas. Cuando esto sucede, las últimas filas van al almacén delta en lugar de al almacén de columnas. En el caso de cargas masivas pequeñas con menos de 102.400 filas, todas las filas van directamente al almacén delta.  
+El índice de almacén de columnas A de almacén delta puede tener más de un grupo de filas delta.  Todos los grupos de filas delta se denominan colectivamente *almacén delta*.   
+
+Durante una gran carga masiva, la mayoría de las filas van directamente al almacén de columnas sin pasar por el almacén delta. Al final de la carga masiva, podría quedar un número de filas menor que el tamaño mínimo de un grupo de filas, que es 102.400 filas. Cuando esto sucede, las últimas filas van al almacén delta en lugar de al almacén de columnas. En el caso de cargas masivas pequeñas con menos de 102.400 filas, todas las filas van directamente al almacén delta.  
   
- Cuando el almacén delta alcanza el número máximo de filas, se cierra. Un proceso de motor de tupla comprueba si hay grupos de filas cerrados. Cuando encuentra el grupo de filas cerrado, lo comprime y lo almacena en el almacén de columnas.  
+
   
  índice no clúster de almacén de columnas  
  Un *índice de almacén de columnas no agrupado* y un índice de almacén de columnas agrupado funcionan del mismo modo. La diferencia es que un índice no agrupado es un índice secundario creado en una tabla de almacén de filas, mientras que un índice de almacén de columnas agrupado es el almacenamiento principal de toda la tabla.  

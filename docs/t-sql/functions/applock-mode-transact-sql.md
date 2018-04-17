@@ -1,16 +1,16 @@
 ---
 title: APPLOCK_MODE (Transact-SQL) | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 07/24/2017
 ms.prod: sql-non-specified
 ms.prod_service: database-engine, sql-database
-ms.service: 
+ms.service: ''
 ms.component: t-sql|functions
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - APPLOCK_MODE_TSQL
@@ -23,21 +23,21 @@ helpviewer_keywords:
 - sessions [SQL Server], application locks
 - APPLOCK_MODE function
 ms.assetid: e43d4917-77f1-45cc-b231-68ba7fee3385
-caps.latest.revision: 
+caps.latest.revision: 32
 author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: b6b5c0a0879580e5c1e084259b61ff206d49c896
-ms.sourcegitcommit: 45e4efb7aa828578fe9eb7743a1a3526da719555
+ms.openlocfilehash: 7a43cdaab7b944aeb4af4ced1345447d03e3a29a
+ms.sourcegitcommit: 8b332c12850c283ae413e0b04b2b290ac2edb672
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 04/05/2018
 ---
 # <a name="applockmode-transact-sql"></a>APPLOCK_MODE (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
-Devuelve el modo de bloqueo mantenido por el propietario del bloqueo en un recurso de aplicación específico. APPLOCK_MODE es una función de bloqueo de aplicación y funciona en la base de datos actual. El ámbito de los bloqueos de aplicación es la base de datos.
+Esta función devuelve el modo de bloqueo mantenido por el propietario del bloqueo en un recurso de aplicación específico. Como función de bloqueo de la aplicación, APPLOCK_MODE funciona en la base de datos actual. La base de datos es el ámbito de los bloqueos de la aplicación.
   
 ![Icono de vínculo de tema](../../database-engine/configure-windows/media/topic-link.gif "Icono de vínculo de tema") [Convenciones de sintaxis de Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)
   
@@ -49,13 +49,13 @@ APPLOCK_MODE( 'database_principal' , 'resource_name' , 'lock_owner' )
   
 ## <a name="arguments"></a>Argumentos  
 '*database_principal*'  
-Es el usuario, el rol o el rol de aplicación al que se pueden conceder permisos para los objetos de la base de datos. El autor de la llamada de la función debe ser miembro de *database_principal*, de dbo o del rol fijo de base de datos db_owner para poder llamar a la función correctamente.
+Es el usuario, el rol o el rol de aplicación al que se pueden conceder permisos para los objetos de la base de datos. Para llamar a la función correctamente, el autor de la llamada a la función debe ser miembro de *database_principal*, de dbo o del rol fijo de base de datos db_owner.
   
 '*resource_name*'  
 Es un nombre de recurso de bloqueo especificado por la aplicación cliente. La aplicación debe asegurar que el nombre del recurso sea exclusivo. El nombre especificado se convierte internamente mediante un algoritmo hash en un valor que puede almacenarse en el administrador de bloqueos de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. *resource_name* es **nvarchar(255)** y no tiene ningún valor predeterminado. *resource_name* se compara con un binario y distingue mayúsculas de minúsculas, independientemente de la configuración de intercalación de la base de datos actual.
   
 '*lock_owner*'  
-Es el propietario del bloqueo, que es el valor de *lock_owner* cuando se solicitó el bloqueo. *lock_owner* es **nvarchar(32)** y el valor puede ser **Transaction** (predeterminado) o **Session**.
+El propietario del bloqueo, que es el valor de *lock_owner* cuando se solicitó el bloqueo. *lock_owner* es **nvarchar(32)** y el valor puede ser **Transaction** (predeterminado) o **Session**.
   
 ## <a name="return-types"></a>Tipos de valores devueltos
 **nvarchar(32)**
@@ -69,7 +69,7 @@ Devuelve el modo de bloqueo mantenido por el propietario del bloqueo en un recur
 |**IntentShared**|**IntentExclusive**|**\*UpdateIntentExclusive**|  
 |**Shared**|**Exclusivo**||  
   
-*Este modo de bloqueo es una combinación de otros modos de bloqueo y no se puede adquirir explícitamente mediante el uso de sp_getapplock.
+* Este modo de bloqueo es una combinación de otros modos de bloqueo y sp_getapplock no se puede adquirir explícitamente.
   
 ## <a name="function-properties"></a>Propiedades de las funciones
 **Nondeterministic**

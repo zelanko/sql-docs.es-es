@@ -1,31 +1,31 @@
 ---
-title: "Índices agrupados y no agrupados descritos | Microsoft Docs"
-ms.custom: 
+title: Índices agrupados y no agrupados descritos | Microsoft Docs
+ms.custom: ''
 ms.date: 11/28/2017
 ms.prod: sql-non-specified
 ms.prod_service: database-engine, sql-database
-ms.service: 
+ms.service: ''
 ms.component: indexes
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - dbe-indexes
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - query optimizer [SQL Server], index usage
 - index concepts [SQL Server]
 ms.assetid: b7d6b323-728d-4763-a987-92e6292f6f7a
-caps.latest.revision: 
+caps.latest.revision: 36
 author: barbkess
 ms.author: barbkess
 manager: craigg
 ms.workload: Active
-ms.openlocfilehash: fdf3562dbfbc4482d888f2e5e955b7941e2a6c76
-ms.sourcegitcommit: 37f0b59e648251be673389fa486b0a984ce22c81
+ms.openlocfilehash: 6d86d6830d5358efed863ba43efe2c76aa522625
+ms.sourcegitcommit: 8b332c12850c283ae413e0b04b2b290ac2edb672
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/12/2018
+ms.lasthandoff: 04/05/2018
 ---
 # <a name="clustered-and-nonclustered-indexes-described"></a>Índices agrupados y no agrupados descritos
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -38,7 +38,7 @@ ms.lasthandoff: 02/12/2018
   
 -   Clúster  
   
-    -   Los índices clúster ordenan y almacenan las filas de los datos de la tabla o vista de acuerdo con los valores de la clave del índice. Son columnas incluidas en la definición del índice. Solo puede haber un índice clúster por cada tabla, porque las filas de datos solo pueden estar ordenadas de una forma.  
+    -   Los índices clúster ordenan y almacenan las filas de los datos de la tabla o vista de acuerdo con los valores de la clave del índice. Son columnas incluidas en la definición del índice. Solo puede haber un índice clúster por cada tabla, porque las filas de datos solo pueden estar almacenadas de una forma.  
   
     -   La única ocasión en la que las filas de datos de una tabla están ordenadas es cuando la tabla contiene un índice clúster. Cuando una tabla tiene un índice clúster, la tabla se denomina tabla agrupada. Si una tabla no tiene un índice clúster, sus filas de datos están almacenadas en una estructura sin ordenar denominada montón.  
   

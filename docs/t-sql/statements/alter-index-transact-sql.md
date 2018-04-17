@@ -1,16 +1,16 @@
 ---
 title: ALTER INDEX (Transact-SQL) | Microsoft Docs
-ms.custom: 
-ms.date: 11/24/2017
+ms.custom: ''
+ms.date: 04/03/2018
 ms.prod: sql-non-specified
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
-ms.service: 
+ms.service: ''
 ms.component: tsql|statements
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - ALTER INDEX
@@ -48,16 +48,16 @@ helpviewer_keywords:
 - index rebuild [SQL Server]
 - index reorganize [SQL Server]
 ms.assetid: b796c829-ef3a-405c-a784-48286d4fb2b9
-caps.latest.revision: 
+caps.latest.revision: 222
 author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: Active
-ms.openlocfilehash: a5bf734d607c6954c1652df9b9814a31b2224740
-ms.sourcegitcommit: 0a9c29c7576765f3b5774b2e087852af42ef4c2d
+ms.openlocfilehash: ed76514d94521f8efefdbcc0dda4f51aaeb871fd
+ms.sourcegitcommit: 8b332c12850c283ae413e0b04b2b290ac2edb672
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/29/2018
+ms.lasthandoff: 04/05/2018
 ---
 # <a name="alter-index-transact-sql"></a>ALTER INDEX (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -481,7 +481,7 @@ ALLOW_PAGE_LOCKS **=** { **ON** | OFF }
  
 **Se aplica a**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (a partir de [!INCLUDE[ssKatmai](../../includes/ssKatmai-md.md)]) y [!INCLUDE[ssSDS](../../includes/sssds-md.md)].  
   
- Invalida la opción de configuración **max degree of parallelism** mientras dure la operación de índice. Para obtener más información, vea [Configure the max degree of parallelism Server Configuration Option](../../database-engine/configure-windows/configure-the-max-degree-of-parallelism-server-configuration-option.md). Utilice MAXDOP para establecer un límite para el número de procesadores utilizados en la ejecución de un plan paralelo. El máximo es 64 procesadores.  
+ Reemplaza la opción de configuración de **max_degree_of_parallelism** mientras dure la operación de índice. Para obtener más información, vea [Configure the max degree of parallelism Server Configuration Option](../../database-engine/configure-windows/configure-the-max-degree-of-parallelism-server-configuration-option.md). Utilice MAXDOP para establecer un límite para el número de procesadores utilizados en la ejecución de un plan paralelo. El máximo es 64 procesadores.  
   
 > [!IMPORTANT]
 >  Aunque la opción MAXDOP se admite sintácticamente para todos los índices XML, ALTER INDEX utiliza en la actualidad un solo procesador para un índice espacial o un índice XML principal.  
@@ -887,7 +887,7 @@ ALTER INDEX cci_FactInternetSales2 ON FactInternetSales2 REORGANIZE PARTITION = 
 ### <a name="c-compress-all-open-and-closed-delta-rowgroups-into-the-columnstore"></a>C. Comprimir todos los grupos de filas delta con estado OPEN y CLOSED en el almacén de columnas  
  **Se aplica a**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (a partir de [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)]) y [!INCLUDE[ssSDS](../../includes/sssds-md.md)] 
   
- El comando REORGANIZE WITH ( COMPRESS_ALL_ROW_GROUPS = ON ) comprime cada grupo de filas delta con los estados OPEN y CLOSED en el almacén de columnas como un grupo de filas comprimido. Esto vacía los almacenes delta y obliga a todas las filas a comprimirse en el almacén de columnas. Esto es útil sobre todo después de realizar muchas operaciones de inserción, ya que estas operaciones almacenan las filas en uno o varios almacenes delta.  
+ El comando REORGANIZE WITH ( COMPRESS_ALL_ROW_GROUPS = ON ) comprime cada grupo de filas delta con los estados OPEN y CLOSED en el almacén de columnas como un grupo de filas comprimido. Esto vacía el almacén delta y obliga a todas las filas a comprimirse en el almacén de columnas. Esto es útil sobre todo después de realizar muchas operaciones de inserción, ya que estas operaciones almacenan las filas en uno o varios grupos de filas delta.  
   
  REORGANIZE combina grupos de filas para rellenar los grupos de filas hasta un número máximo de filas \<= 1 024 576. Por tanto, al comprimir todos los grupos de filas OPEN y CLOSED, no terminará con una gran cantidad de grupos de filas comprimidos que solo tengan algunas filas en ellos. Es preferible que los grupos de filas estén lo más llenos posible para reducir el tamaño comprimido y mejorar el rendimiento de las consultas.  
   

@@ -1,6 +1,6 @@
 ---
-title: "Las operaciones de SQL Studio (versión preliminar) usuario y la configuración de área de trabajo | Documentos de Microsoft"
-description: "Cómo modificar la configuración de área de trabajo y las operaciones de SQL Studio usuario (vista previa)."
+title: Las SQL Operations Studio (preview) usuario y la configuración de área de trabajo | Documentos de Microsoft
+description: Cómo modificar la configuración de área de trabajo y las SQL Operations Studio (preview) usuario.
 ms.custom: tools|sos
 ms.date: 11/15/2017
 ms.prod: sql-non-specified
@@ -8,7 +8,7 @@ ms.reviewer: alayu; erickang; sstein
 ms.suite: sql
 ms.prod_service: sql-tools
 ms.component: sos
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 author: yualan
 ms.author: alayu
@@ -55,7 +55,7 @@ El archivo de configuración de área de trabajo se encuentra en la `.[!INCLUDE[
 
 ## <a name="hot-exit"></a>Salida activa
 
-Operaciones de SQL Studio recordará los cambios no guardados a los archivos cuando se cierra de forma predeterminada. Esto es igual que la característica de salida activas en el código de Visual Studio.
+SQL Operations Studio recordará los cambios no guardados a los archivos cuando se cierra de forma predeterminada. Esto es igual que la característica de salida activas en el código de Visual Studio.
 
 De forma predeterminada, la salida activa está desactivada. Habilitar activa salida mediante la edición de la `files.hotExit` configuración. Para obtener más información, consulte [salida activa (en la documentación de Visual Studio Code)](https://code.visualstudio.com/docs/editor/codebasics#_hot-exit).
 

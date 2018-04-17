@@ -1,16 +1,16 @@
 ---
 title: Ejemplos de carga masiva XML (SQLXML 4.0) | Documentos de Microsoft
-ms.custom: 
+ms.custom: ''
 ms.date: 03/17/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine, sql-database
-ms.service: 
+ms.service: ''
 ms.component: sqlxml
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - dbe-xml
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: reference
 helpviewer_keywords:
 - overflow-field annotation
@@ -34,20 +34,21 @@ helpviewer_keywords:
 - xml data type [SQL Server], SQLXML
 - bulk load [SQLXML], examples
 ms.assetid: 970e4553-b41d-4a12-ad50-0ee65d1f305d
-caps.latest.revision: 
+caps.latest.revision: 41
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: cabf000a6a14a041a0d5e5dbedbafb07365dc63f
-ms.sourcegitcommit: 37f0b59e648251be673389fa486b0a984ce22c81
+monikerRange: = azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions
+ms.openlocfilehash: 91eaa0eecdab4b6994aaa32dec8f2dc761005555
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/12/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="xml-bulk-load-examples-sqlxml-40"></a>Ejemplos de carga masiva XML (SQLXML 4.0)
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
-En los ejemplos siguientes se muestra la funcionalidad de la carga masiva XML en Microsoft [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]. En cada ejemplo se proporcionan un esquema XSD y su esquema XDR equivalente.  
+  En los ejemplos siguientes se muestra la funcionalidad de la carga masiva XML en Microsoft [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]. En cada ejemplo se proporcionan un esquema XSD y su esquema XDR equivalente.  
   
 ## <a name="bulk-loader-script-validateandbulkloadvbs"></a>Script de carga masiva (ValidateAndBulkload.vbs)  
  El script siguiente, escrito en el [!INCLUDE[msCoName](../../../includes/msconame-md.md)] Visual Basic Scripting Edition (VBScript), carga un documento XML en el DOM de XML; se validan con respecto a un esquema; y, si el documento es válido, se ejecuta un masiva XML carga para cargar el XML en un [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] tabla. Este script puede usarse en cada uno de los ejemplos individuales que hacen referencia a él más adelante en este tema.  
@@ -234,9 +235,9 @@ End Function
   
  Este masivas carga los datos XML en dos tablas, **Cust** y **CustOrder**:  
   
--   Cust(CustomerID, CompanyName, City)  
+-   Cust (CustomerID, CompanyName, City)  
   
--   CustOrder(OrderID, CustomerID)  
+-   CustOrder (OrderID, CustomerID)  
   
  El esquema XSD siguiente define la vista XML de estas tablas. El esquema especifica la relación de elementos primarios y secundarios entre el  **\<cliente >** y  **\<orden >** elementos.  
   

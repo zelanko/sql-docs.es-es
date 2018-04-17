@@ -2,7 +2,7 @@
 title: Sys.Routes (Transact-SQL) | Documentos de Microsoft
 ms.custom: ''
 ms.date: 03/30/2018
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine
 ms.service: ''
 ms.component: system-catalog-views
@@ -27,11 +27,12 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 21420e923b4120f547026c6a6a0d96d86deac782
-ms.sourcegitcommit: 059fc64ba858ea2adaad2db39f306a8bff9649c2
+monikerRange: = azuresqldb-mi-current || >= sql-server-2016 || = sqlallproducts-allversions
+ms.openlocfilehash: a670fffebdfe6829e94729395e4b80e630cdc106
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/04/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="sysroutes-transact-sql"></a>sys.routes (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdbmi-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdbmi-xxxx-xxx-md.md)]
@@ -43,12 +44,12 @@ ms.lasthandoff: 04/04/2018
 |Nombre de columna|Tipo de datos|Description|  
 |-----------------|---------------|-----------------|  
 |**Nombre**|**sysname**|Nombre de la ruta, único en la base de datos. No acepta valores NULL.|  
-|**route_id**|**int**|Identificador de la ruta. No acepta valores NULL.|  
+|**Route_ID**|**int**|Identificador de la ruta. No acepta valores NULL.|  
 |**principal_id**|**int**|Identificador de la base de datos de la entidad de seguridad propietaria de la ruta. ACEPTA VALORES NULL.|  
 |**remote_service_name**|**nvarchar(256)**|Nombre del servicio remoto. ACEPTA VALORES NULL.|  
-|**broker_instance**|**nvarchar(128)**|Identificador del agente que hospeda el servicio remoto. ACEPTA VALORES NULL.|  
-|**lifetime**|**datetime**|Fecha y hora de expiración de la ruta. Tenga en cuenta que este valor no usa la zona horaria local. En lugar de ello, el valor muestra la fecha de expiración de UTC. ACEPTA VALORES NULL.|  
-|**address**|**nvarchar(256)**|Dirección de red a la que Service Broker envía mensajes para el servicio remoto. ACEPTA VALORES NULL. Para la instancia de administrado de base de datos de SQL Server, la dirección debe ser local.|  
+|**BROKER_INSTANCE**|**nvarchar(128)**|Identificador del agente que hospeda el servicio remoto. ACEPTA VALORES NULL.|  
+|**Duración**|**datetime**|Fecha y hora de expiración de la ruta. Tenga en cuenta que este valor no usa la zona horaria local. En lugar de ello, el valor muestra la fecha de expiración de UTC. ACEPTA VALORES NULL.|  
+|**Dirección**|**nvarchar(256)**|Dirección de red a la que Service Broker envía mensajes para el servicio remoto. ACEPTA VALORES NULL. Para la instancia de administrado de base de datos de SQL Server, la dirección debe ser local.|  
 |**mirror_address**|**nvarchar(256)**|Dirección de red del asociado de reflejo para el servidor especificado en la dirección. ACEPTA VALORES NULL.|  
   
 ## <a name="permissions"></a>Permissions  

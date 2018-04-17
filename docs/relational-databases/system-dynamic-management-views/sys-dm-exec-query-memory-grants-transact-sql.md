@@ -1,8 +1,8 @@
 ---
-title: sys.dm_exec_query_memory_grants (Transact-SQL) | Microsoft Docs
+title: Sys.dm_exec_query_memory_grants (Transact-SQL) | Documentos de Microsoft
 ms.custom: ''
 ms.date: 03/16/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine, sql-database
 ms.service: ''
 ms.component: dmv's
@@ -27,11 +27,12 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 5a203f7cc7752a92eddbeee8b35bfdefd3f21fe6
-ms.sourcegitcommit: 8b332c12850c283ae413e0b04b2b290ac2edb672
+monikerRange: = azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions
+ms.openlocfilehash: f564f6b610996d00d366a4ade1af8204d688a44f
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/05/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="sysdmexecquerymemorygrants-transact-sql"></a>sys.dm_exec_query_memory_grants (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -48,7 +49,7 @@ ms.lasthandoff: 04/05/2018
 |**session_id**|**smallint**|Id. (SPID) de la sesión en la que se está ejecutando esta consulta.|  
 |**request_id**|**int**|Identificador de la solicitud. Es único en el contexto de la sesión.|  
 |**scheduler_id**|**int**|Id. del programador que programa esta consulta.|  
-|**dop**|**smallint**|Grado de paralelismo de esta consulta.|  
+|**DOP**|**smallint**|Grado de paralelismo de esta consulta.|  
 |**request_time**|**datetime**|Fecha y hora a la que esta consulta solicitó la concesión de memoria.|  
 |**grant_time**|**datetime**|Fecha y hora a la que se concedió la memoria para esta consulta. Es NULL si aún no se ha concedido la memoria.|  
 |**requested_memory_kb**|**bigint**|Memoria solicitada total en kilobytes.|  

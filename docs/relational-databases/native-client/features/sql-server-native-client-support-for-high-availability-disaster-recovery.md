@@ -2,7 +2,7 @@
 title: SQL Server Native Client Support for High Availability, Disaster Recovery | Documentos de Microsoft
 ms.custom: ''
 ms.date: 04/04/2018
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
 ms.service: ''
 ms.component: native-client|features
@@ -17,11 +17,12 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 82c0cd64a3638ad747ca1f4fa88fdc8a2fc5a0e2
-ms.sourcegitcommit: 094c46e7fa6de44735ed0040c65a40ec3d951b75
+monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
+ms.openlocfilehash: c5c58b1dccafef3b7bf8dffcb889ed79d8775646
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/06/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="sql-server-native-client-support-for-high-availability-disaster-recovery"></a>Compatibilidad de SQL Server Native Client para la alta disponibilidad con recuperación de desastres
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -81,7 +82,7 @@ ms.lasthandoff: 04/06/2018
 ## <a name="odbc"></a>ODBC  
  Se han agregado dos palabras clave de cadena de conexión ODBC para ser compatible con [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] en [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client:  
   
--   **ApplicationIntent**  
+-   **Intención de aplicaciones**  
   
 -   **MultiSubnetFailover**  
   
@@ -133,7 +134,7 @@ ms.lasthandoff: 04/06/2018
  **IDBProperties::GetProperties**  
  **IDBProperties::GetProperties** recupera el valor de la propiedad que está establecida actualmente en el origen de datos.  Puede recuperar el valor de **Application Intent** a través de la propiedad DBPROP_INIT_PROVIDERSTRING y la propiedad SSPROP_INIT_APPLICATIONINTENT.  
   
- **IDBProperties::SetProperties**  
+ **IDBProperties:: SetProperties**  
  Para establecer el valor de la propiedad **ApplicationIntent**, llame a **IDBProperties::SetProperties** pasando la propiedad **SSPROP_INIT_APPLICATIONINTENT** con valor "**ReadWrite**" o "**ReadOnly**" o la propiedad **DBPROP_INIT_PROVIDERSTRING** con el valor que contiene "**ApplicationIntent=ReadOnly**" o "**ApplicationIntent=ReadWrite**".  
   
  Puede especificar la intención de aplicaciones en el campo Propiedades de intención de aplicaciones de la pestaña Todo del cuadro de diálogo **Propiedades de vínculo de datos**.  

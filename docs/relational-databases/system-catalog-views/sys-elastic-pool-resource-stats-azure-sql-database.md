@@ -27,13 +27,14 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: c1e77bcfcfd4e27981f63fd2802fd6b76c18fe1f
-ms.sourcegitcommit: d6b1695c8cbc70279b7d85ec4dfb66a4271cdb10
+monikerRange: = azure-sqldw-latest || = sqlallproducts-allversions
+ms.openlocfilehash: c7c1d272d3bcbfd85002624b15a69bd2bc31e0e7
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/08/2018
+ms.lasthandoff: 04/16/2018
 ---
-# <a name="syselasticpoolresourcestats-azure-sql-database"></a>sys.elastic_pool_resource_stats (Azure SQL Database)
+# <a name="syselasticpoolresourcestats-azure-sql-database"></a>Sys.elastic_pool_resource_stats (base de datos de SQL Azure)
 [!INCLUDE[tsql-appliesto-xxxxxx-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-xxxxxx-asdb-xxxx-xxx-md.md)]
 
   Devuelve estadísticas de uso de recursos para todos los grupos de servidor de base de datos elástica en un servidor lógico. Para cada grupo elástico de base de datos, hay una fila para cada 15 segundos reporting ventana (cuatro filas por minuto). Esto incluye el uso de CPU, E/S, registro, consumo de almacenamiento y solicitud/sesiones simultáneas todas las bases de datos en el grupo. Estos datos se conservan durante 14 días. 
@@ -84,7 +85,7 @@ ORDER BY end_time DESC;
 ## <a name="see-also"></a>Vea también  
  [Dominar drástico crecimiento con bases de datos elásticas](https://azure.microsoft.com/documentation/articles/sql-database-elastic-pool/)   
  [Crear y administrar un grupo de base de datos elástica de base de datos SQL (vista previa)](https://azure.microsoft.com/documentation/articles/sql-database-elastic-pool-portal/)   
- [sys.resource_stats &#40;Azure SQL Database&#41;](../../relational-databases/system-catalog-views/sys-resource-stats-azure-sql-database.md)   
- [sys.dm_db_resource_stats &#40;Azure SQL Database&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-db-resource-stats-azure-sql-database.md)  
+ [Sys.resource_stats &#40;base de datos de SQL Azure&#41;](../../relational-databases/system-catalog-views/sys-resource-stats-azure-sql-database.md)   
+ [Sys.dm_db_resource_stats &#40;base de datos de SQL Azure&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-db-resource-stats-azure-sql-database.md)  
   
   

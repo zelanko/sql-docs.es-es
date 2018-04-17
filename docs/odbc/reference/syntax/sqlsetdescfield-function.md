@@ -2,7 +2,7 @@
 title: Sqlsetdescfield, función | Documentos de Microsoft
 ms.custom: ''
 ms.date: 01/19/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: drivers
 ms.service: ''
 ms.component: odbc
@@ -25,13 +25,13 @@ ms.assetid: 8c544388-fe9d-4f94-a0ac-fa0b9c9c88a5
 caps.latest.revision: 28
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 3e6a0ee843ce2b78ebc611fee30a5ee8e16fc7e1
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: ad3a900242068f8bcfb6f532b5e272cb2afb0ac5
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="sqlsetdescfield-function"></a>Sqlsetdescfield, función
 **Conformidad**  
@@ -89,7 +89,7 @@ SQLRETURN SQLSetDescField(
 |SQLSTATE|Error|Description|  
 |--------------|-----------|-----------------|  
 |01000|Advertencia general|Mensaje informativo de específicas del controlador. (La función devuelve SQL_SUCCESS_WITH_INFO).|  
-|01S02 DE SQLSTATE|Ha cambiado el valor de opción|El controlador no admitía el valor especificado en  *\*ValuePtr* (si *ValuePtr* era un puntero) o el valor en *ValuePtr* (si *ValuePtr*  era un valor entero), o  *\*ValuePtr* no era válido debido a las condiciones de trabajo de implementación, por lo que el controlador sustituye un valor similar. (La función devuelve SQL_SUCCESS_WITH_INFO).|  
+|01S02|Ha cambiado el valor de opción|El controlador no admitía el valor especificado en  *\*ValuePtr* (si *ValuePtr* era un puntero) o el valor en *ValuePtr* (si *ValuePtr*  era un valor entero), o  *\*ValuePtr* no era válido debido a las condiciones de trabajo de implementación, por lo que el controlador sustituye un valor similar. (La función devuelve SQL_SUCCESS_WITH_INFO).|  
 |07009|Índice de descriptor no válido|El *FieldIdentifier* argumento era un campo de registro, el *RecNumber* argumento era 0 y el *DescriptorHandle* argumento hace referencia a un identificador de IPD.<br /><br /> El *RecNumber* argumento era menor que 0 y el *DescriptorHandle* argumento hace referencia a un descartar o un APD.<br /><br /> El *RecNumber* argumento era mayor que el número máximo de columnas o parámetros que el origen de datos puede admitir, y el *DescriptorHandle* argumento hace referencia a un APD o descartar.<br /><br /> (DM) la *FieldIdentifier* argumento era SQL_DESC_COUNT, y  *\*ValuePtr* argumento era menor que 0.<br /><br /> El *RecNumber* argumento era igual a 0 y el *DescriptorHandle* argumento hace referencia a un APD implícitamente asignado. (Este error no se produce con un descriptor de aplicación asignado explícitamente, porque no se sabe si un descriptor de aplicación asignado explícitamente es un APD o descartar hasta que ejecute tiempo.)|  
 |08S01|Error de vínculo de comunicación|El vínculo de comunicación entre el controlador y el origen de datos al que se conectó el controlador no pudo antes del procesamiento de la función se ha completado.|  
 |22001|Datos de cadena, delimitado truncados|El *FieldIdentifier* argumento era SQL_DESC_NAME y el *BufferLength* argumento era un valor mayor que SQL_MAX_IDENTIFIER_LEN.|  
@@ -146,7 +146,7 @@ SQLRETURN SQLSetDescField(
   
  La inicialización de campos de encabezado se describe en la tabla siguiente.  
   
-|Nombre del campo de encabezado|Tipo|L/E|Valor predeterminado|  
+|Nombre del campo de encabezado|Tipo|L/E|Predeterminado|  
 |-----------------------|----------|----------|-------------|  
 |SQL_DESC_ALLOC_TYPE|SQLSMALLINT|DESCARTAR: R APD: R IRD: R IPD: R|Descartar: SQL_DESC_ALLOC_AUTO para implícita o SQL_DESC_ALLOC_USER para explícita<br /><br /> APD: SQL_DESC_ALLOC_AUTO para implícita o SQL_DESC_ALLOC_USER para explícita<br /><br /> IRD: SQL_DESC_ALLOC_AUTO<br /><br /> IPD: SQL_DESC_ALLOC_AUTO|  
 |SQL_DESC_ARRAY_SIZE|SQLULEN|Descartar: Lectura/escritura APD: lectura/escritura IRD: sin usar IPD: sin usar|Descartar: APD [1]: [1] IRD: sin usar IPD: sin usar|  
@@ -160,7 +160,7 @@ SQL_DESC_COUNT|SQLSMALLINT|DESCARTAR: LECTURA/ESCRITURA APD: LECTURA/ESCRITURA I
   
  La inicialización de campos de registro es como se muestra en la tabla siguiente.  
   
-|Nombre del campo de registro|Tipo|L/E|Valor predeterminado|  
+|Nombre del campo de registro|Tipo|L/E|Predeterminado|  
 |-----------------------|----------|----------|-------------|  
 |SQL_DESC_AUTO_UNIQUE_VALUE|SQLINTEGER|Descartar: Sin usar APD: sin usar IRD: R IPD: sin usar|Descartar: Sin usar APD: sin usar IRD: D IPD: sin usar|  
 |SQL_DESC_BASE_COLUMN_NAME|SQLCHAR *|Descartar: Sin usar APD: sin usar IRD: R IPD: sin usar|Descartar: Sin usar APD: sin usar IRD: D IPD: sin usar|  

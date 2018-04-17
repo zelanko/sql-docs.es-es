@@ -1,30 +1,31 @@
 ---
 title: Compatibilidad con tipos de datos de fecha OLE DB y mejoras de tiempo | Documentos de Microsoft
-ms.custom: 
+ms.custom: ''
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
-ms.service: 
+ms.service: ''
 ms.component: native-client-ole-db-date-time
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: 
-ms.tgt_pltfrm: 
+ms.technology: ''
+ms.tgt_pltfrm: ''
 ms.topic: reference
 helpviewer_keywords:
 - date/time [OLE DB], data type support
 - OLE DB, date/time improvements
 ms.assetid: d40e3fd6-9057-4371-8236-95cef300603e
-caps.latest.revision: 
+caps.latest.revision: 24
 author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 0a3782a4cf615cc09d7358806647af40697c2a24
-ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
+monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
+ms.openlocfilehash: 986812252fef340aa4b8937471031a1a3ae772e7
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/25/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="data-type-support-for-ole-db-date-and-time-improvements"></a>Compatibilidad con tipos de datos de fecha OLE DB y mejoras de tiempo
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -35,7 +36,7 @@ ms.lasthandoff: 01/25/2018
 ## <a name="data-type-mapping-in-rowsets-and-parameters"></a>Asignar tipos de datos en conjuntos de filas y parámetros  
  OLE DB proporciona dos nuevos tipos de datos para admitir los nuevos tipos de servidor: DBTYPE_DBTIME2 y DBTYPE_DBTIMESTAMPOFFSET. La tabla siguiente muestra la asignación completa de tipo de servidor:  
   
-|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]tipo de datos|Tipo de datos de OLE DB|Value|  
+|Tipo de datos de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]|Tipo de datos de OLE DB|Value|  
 |-----------------------------------------|----------------------|-----------|  
 |datetime|DBTYPE_DBTIMESTAMP|135 (oledb.h)|  
 |smalldatetime|DBTYPE_DBTIMESTAMP|135 (oledb.h)|  
@@ -46,7 +47,7 @@ ms.lasthandoff: 01/25/2018
   
 ## <a name="data-formats-strings-and-literals"></a>Formatos de datos: Cadenas y literales  
   
-|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]tipo de datos|Tipo de datos de OLE DB|Formato de cadena para conversiones de cliente|  
+|Tipo de datos de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]|Tipo de datos de OLE DB|Formato de cadena para conversiones de cliente|  
 |-----------------------------------------|----------------------|------------------------------------------|  
 |datetime|DBTYPE_DBTIMESTAMP|'aaaa-mm-dd hh:mm:ss[.999]'<br /><br /> [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] admite hasta tres dígitos de la fracción de segundo para Datetime.|  
 |smalldatetime|DBTYPE_DBTIMESTAMP|'aaaa-mm-dd hh:mm:ss'<br /><br /> Este tipo de datos tiene una precisión de un minuto. El componente de segundos será cero en salida y será redondeado por el servidor al producir los resultados.|  
@@ -179,7 +180,7 @@ enum SQLVARENUM {
 ## <a name="data-type-mapping-in-itabledefinitioncreatetable"></a>Asignar tipo de datos en ITableDefinition::CreateTable  
  La siguiente asignación de tipo se utiliza con estructuras DBCOLUMNDESC utilizadas por ITableDefinition:: CreateTable:  
   
-|Tipo de datos OLE DB (*wType*)|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]tipo de datos|Notas|  
+|Tipo de datos OLE DB (*wType*)|Tipo de datos de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]|Notas|  
 |----------------------------------|-----------------------------------------|-----------|  
 |DBTYPE_DBDATE|date||  
 |DBTYPE_DBTIMESTAMP|**datetime2**(p)|El [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] proveedor OLE DB de Native Client inspecciona los miembros *bScale* miembro para determinar la precisión de fracciones de segundo.|  
@@ -189,6 +190,6 @@ enum SQLVARENUM {
  Cuando una aplicación especifica DBTYPE_DBTIMESTAMP en *wType*, puede invalidar la asignación a **datetime2** proporcionando un nombre de tipo en *pwszTypeName*. Si **datetime** se especifica, *bScale* debe ser 3. Si **smalldatetime** se especifica, *bScale* debe ser 0. Si *bScale* no es coherente con *wType* y *pwszTypeName*, se devuelve DB_E_BADSCALE.  
   
 ## <a name="see-also"></a>Vea también  
- [Fecha y hora mejoras &#40; OLE DB &#41;](../../relational-databases/native-client-ole-db-date-time/date-and-time-improvements-ole-db.md)  
+ [Fecha y hora mejoras & #40; OLE DB & #41;](../../relational-databases/native-client-ole-db-date-time/date-and-time-improvements-ole-db.md)  
   
   

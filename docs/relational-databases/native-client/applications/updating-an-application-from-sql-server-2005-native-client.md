@@ -1,29 +1,30 @@
 ---
-title: "Actualizar una aplicación de SQL Server 2005 Native Client | Documentos de Microsoft"
-ms.custom: 
+title: Actualizar una aplicación de SQL Server 2005 Native Client | Documentos de Microsoft
+ms.custom: ''
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
-ms.service: 
+ms.service: ''
 ms.component: native-client|applications
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: 
-ms.tgt_pltfrm: 
+ms.technology: ''
+ms.tgt_pltfrm: ''
 ms.topic: reference
 helpviewer_keywords:
 - SQL Server Native Client, updating applications
 ms.assetid: 1e1e570c-7f14-4e16-beab-c328e3fbdaa8
-caps.latest.revision: 
+caps.latest.revision: 42
 author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 7a0765a262b2775f81b35969a638ff6f3583357e
-ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
+monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
+ms.openlocfilehash: a2181b027627e89b14c774185fa15a8cec2c3444
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/25/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="updating-an-application-from-sql-server-2005-native-client"></a>Actualizar una aplicación desde SQL Server 2005 Native Client
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -33,12 +34,12 @@ ms.lasthandoff: 01/25/2018
   
  Al realizar una actualización de Microsoft Data Access Components (MDAC) a [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client, también es posible que observe algunas diferencias de comportamiento. Para obtener más información, consulte [actualizar una aplicación a SQL Server Native Client de MDAC](../../../relational-databases/native-client/applications/updating-an-application-to-sql-server-native-client-from-mdac.md).  
   
- [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]Native Client 9.0 incluidos con [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)]. [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]Native Client 10.0 incluidos con [!INCLUDE[ssKatmai](../../../includes/sskatmai-md.md)].  [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client 10.5 se incluyó en [!INCLUDE[ssKilimanjaro](../../../includes/sskilimanjaro-md.md)]. [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client 11.0 se incluyó en [!INCLUDE[ssSQL11](../../../includes/sssql11-md.md)] y [!INCLUDE[ssSQL14](../../../includes/sssql14-md.md)].  
+ [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client 9.0 incluidos con [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)]. [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client 10.0 incluidos con [!INCLUDE[ssKatmai](../../../includes/sskatmai-md.md)].  [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client 10.5 se incluyó en [!INCLUDE[ssKilimanjaro](../../../includes/sskilimanjaro-md.md)]. [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client 11.0 se incluyó en [!INCLUDE[ssSQL11](../../../includes/sssql11-md.md)] y [!INCLUDE[ssSQL14](../../../includes/sssql14-md.md)].  
   
 |Cambios de comportamiento en SQL Server Native Client desde [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)]|Description|  
 |------------------------------------------------------------------------------------|-----------------|  
 |OLE DB solamente rellena los datos hasta la escala definida.|Para que los datos convertidos se envían al servidor, las conversiones [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client (a partir de [!INCLUDE[ssKatmai](../../../includes/sskatmai-md.md)]) rellena ceros finales en los datos sólo hasta la longitud máxima de **datetime** valores. En SQL Server Native Client 9.0 los datos se rellenaban hasta 9 dígitos.|  
-|Validación de DBTYPE_DBTIMESTAMP para ICommandWithParameter::SetParameterInfo.|[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]Native Client (a partir de [!INCLUDE[ssKatmai](../../../includes/sskatmai-md.md)]) implementa el requisito de OLE DB para *bScale* en ICommandWithParameter::SetParameterInfo que se establecerá con precisión de fracciones de segundo para DBTYPE_DBTIMESTAMP.|  
+|Validación de DBTYPE_DBTIMESTAMP para ICommandWithParameter::SetParameterInfo.|[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client (a partir de [!INCLUDE[ssKatmai](../../../includes/sskatmai-md.md)]) implementa el requisito de OLE DB para *bScale* en ICommandWithParameter::SetParameterInfo que se establecerá con precisión de fracciones de segundo para DBTYPE_DBTIMESTAMP.|  
 |El **sp_columns** procedimiento almacenado ahora devuelve **"N"** en lugar de **"N"** para la columna IS_NULLABLE.|A partir de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client 10.0 ([!INCLUDE[ssKatmai](../../../includes/sskatmai-md.md)]), **sp_columns** procedimiento almacenado ahora devuelve **"N"** en lugar de **"N"** para una columna IS_NULLABLE .|  
 |SQLSetDescRec y SQLBindParameter, SQLBindCol ahora realizan una comprobación de coherencia.|Anteriores a [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client 10.0, establecimiento de SQL_DESC_DATA_PTR no producía la comprobación de coherencia para cualquier tipo de descriptor en SQLSetDescRec, SQLBindParameter o SQLBindCol.|  
 |SQLCopyDesc ahora se realiza la comprobación de coherencia de descriptor.|Anteriores a [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client 10.0, SQLCopyDesc no hizo una comprobación de coherencia cuando el campo SQL_DESC_DATA_PTR se estableció en un registro concreto.|  

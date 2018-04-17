@@ -1,16 +1,16 @@
 ---
-title: sys.dm_clr_appdomains (Transact-SQL) | Microsoft Docs
-ms.custom: 
+title: Sys.dm_clr_appdomains (Transact-SQL) | Documentos de Microsoft
+ms.custom: ''
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine
-ms.service: 
+ms.service: ''
 ms.component: dmv's
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - dm_clr_appdomains
@@ -22,16 +22,16 @@ dev_langs:
 helpviewer_keywords:
 - sys.dm_clr_appdomains dynamic management dynamic management view
 ms.assetid: 9fe0d4fd-950a-4274-a493-85e776278045
-caps.latest.revision: 
+caps.latest.revision: 24
 author: stevestein
 ms.author: sstein
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 16f729bc78a42984716d2f30fc2bf30badc1ade5
-ms.sourcegitcommit: c556eaf60a49af7025db35b7aa14beb76a8158c5
+ms.openlocfilehash: 6f4eca61d0790e394e09ec73f73cb8f3b0062e3b
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/03/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="sysdmclrappdomains-transact-sql"></a>sys.dm_clr_appdomains (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -44,16 +44,16 @@ ms.lasthandoff: 02/03/2018
   
 |Nombre de columna|Tipo de datos|Description|  
 |-----------------|---------------|-----------------|  
-|**appdomain_address**|**varbinary(8)**|Dirección de la **AppDomain**. Base de datos administrado todos los objetos que pertenecen a un usuario siempre se cargan en el mismo **AppDomain**. Puede utilizar esta columna para buscar todos los ensamblados cargados actualmente en este **AppDomain** en **sys.dm_clr_loaded_assemblies**.|  
+|**appdomain_address**|**varbinary (8)**|Dirección de la **AppDomain**. Base de datos administrado todos los objetos que pertenecen a un usuario siempre se cargan en el mismo **AppDomain**. Puede utilizar esta columna para buscar todos los ensamblados cargados actualmente en este **AppDomain** en **sys.dm_clr_loaded_assemblies**.|  
 |**appdomain_id**|**int**|Id. de la **AppDomain**. Cada **AppDomain** tiene un identificador único.|  
 |**appdomain_name**|**varchar(386)**|Nombre de la **AppDomain** tal como lo asignó [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].|  
 |**creation_time**|**datetime**|Hora del **AppDomain** se creó. Dado que **AppDomains** se almacena en caché y volver a usar para mejorar el rendimiento, **creation_time** no es necesariamente el tiempo cuando se ejecuta el código.|  
 |**db_id**|**int**|Id. de la base de datos en la que **AppDomain** se creó. Código almacenado en dos bases de datos no puede compartir un **AppDomain**.|  
-|**user_id**|**int**|Id. del usuario cuyos objetos pueden ejecutarse en este **AppDomain**.|  
+|**USER_ID**|**int**|Id. del usuario cuyos objetos pueden ejecutarse en este **AppDomain**.|  
 |**state**|**nvarchar(128)**|Un descriptor para el estado actual de la **AppDomain**. Un AppDomain puede encontrarse en estados diferentes desde la creación a la eliminación. Vea la sección Comentarios de este tema para obtener más información.|  
 |**strong_refcount**|**int**|Número de referencias seguras a este **AppDomain**. Esto refleja el número de lotes en ejecución que utilicen esta **AppDomain**. Tenga en cuenta que la ejecución de esta vista creará un **recuento de referencias seguro**; incluso si hay código que se está ejecutando actualmente, **strong_refcount** tendrá un valor de 1.|  
 |**weak_refcount**|**int**|Número de referencias débiles a este **AppDomain**. Esto indica cuántos objetos dentro de la **AppDomain** se almacenan en caché. Cuando se ejecuta un objeto de base de datos administrados, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] lo almacena en caché dentro de la **AppDomain** para reutilizarlo en un futuro. Esto mejora el rendimiento.|  
-|**cost**|**int**|Costo de la **AppDomain**. Cuanto mayor sea el costo, más probable que esto **AppDomain** se descargue bajo presión de memoria. Costo suele depende de la cantidad de memoria es necesario para volver a crear esta **AppDomain**.|  
+|**Costo**|**int**|Costo de la **AppDomain**. Cuanto mayor sea el costo, más probable que esto **AppDomain** se descargue bajo presión de memoria. Costo suele depende de la cantidad de memoria es necesario para volver a crear esta **AppDomain**.|  
 |**value**|**int**|Valor de la **AppDomain**. Cuanto menor sea el valor, más probable que esto **AppDomain** se descargue bajo presión de memoria. Valor suele depende de cuántas conexiones o lotes que estén usando este **AppDomain**.|  
 |**total_processor_time_ms**|**bigint**|Tiempo total del procesador, en milisegundos, consumido por todos los subprocesos durante la ejecución en el dominio de aplicación actual desde que se inició el proceso. Esto equivale a **System.AppDomain.MonitoringTotalProcessorTime**.|  
 |**total_allocated_memory_kb**|**bigint**|Tamaño total, en kilobytes, de todas las asignaciones de memoria realizadas por el dominio de aplicación desde que se creó, sin restar memoria recopilada. Esto equivale a **System.AppDomain.MonitoringTotalAllocatedMemorySize**.|  
@@ -118,6 +118,6 @@ where appdomain_id = 15);
   
 ## <a name="see-also"></a>Vea también  
  [sys.dm_clr_loaded_assemblies &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-clr-loaded-assemblies-transact-sql.md)   
- [Common Language Runtime relacionadas con vistas de administración dinámica &#40; Transact-SQL &#41;](../../relational-databases/system-dynamic-management-views/common-language-runtime-related-dynamic-management-views-transact-sql.md)  
+ [Vistas de administración dinámica relacionadas con el Common Language Runtime &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/common-language-runtime-related-dynamic-management-views-transact-sql.md)  
   
   

@@ -1,16 +1,16 @@
 ---
 title: Sys.event_log (base de datos de SQL Azure) | Documentos de Microsoft
-ms.custom: 
+ms.custom: ''
 ms.date: 06/10/2016
-ms.prod: 
+ms.prod: ''
 ms.prod_service: sql-database
-ms.reviewer: 
+ms.reviewer: ''
 ms.service: sql-database
 ms.component: system-catalog-views
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - event_log
@@ -23,16 +23,17 @@ helpviewer_keywords:
 - event_log
 - sys.event_log
 ms.assetid: ad5496b5-e5c7-4a18-b5a0-3f985d7c4758
-caps.latest.revision: 
+caps.latest.revision: 26
 author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 77682d906a1fe24f371e6ec31c11e586398cdba6
-ms.sourcegitcommit: 2208a909ab09af3b79c62e04d3360d4d9ed970a7
+monikerRange: = azure-sqldw-latest || = sqlallproducts-allversions
+ms.openlocfilehash: b8794f8e4268df504452ca8fe73f13eea371dda2
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/02/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="syseventlog-azure-sql-database"></a>sys.event_log (Azure SQL Database)
 [!INCLUDE[tsql-appliesto-xxxxxx-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-xxxxxx-asdb-xxxx-xxx-md.md)]
@@ -58,7 +59,7 @@ ms.lasthandoff: 01/02/2018
 |**Descripción**|**nvarchar(max)**|Descripción detallada del evento.<br /><br /> Vea [tipos de evento](../../relational-databases/system-catalog-views/sys-event-log-azure-sql-database.md#EventTypes) para obtener una lista de valores posibles.|  
 |**additional_data**|**XML**|*Nota: Este valor siempre es NULL para V12 de base de datos de SQL Azure. Vea [ejemplos](#Deadlock) sección para saber cómo recuperar eventos de interbloqueo para V12.*<br /><br /> Para **interbloqueo** eventos, esta columna contiene el gráfico de interbloqueo. Esta columna es NULL para otros tipos de eventos. |  
   
-##  <a name="EventTypes"></a>Tipos de evento  
+##  <a name="EventTypes"></a> Tipos de evento  
  Los eventos registrados en cada fila de esta vista se identifican por una categoría (**event_category**), tipo de evento (**event_type**) y un subtipo (**event_subtype**). En la tabla siguiente se muestra una lista de los tipos de eventos que se recopilan en esta vista:  
   
  Para los eventos de la **conectividad** categoría, la información de resumen está disponible en la vista sys.database_connection_stats.  
@@ -68,26 +69,26 @@ ms.lasthandoff: 01/02/2018
   
 |**event_category**|**event_type**|**event_subtype**|**event_subtype_desc**|**severity**|**Descripción**|  
 |-------------------------|---------------------|------------------------|------------------------------|------------------|---------------------|  
-|**conectividad**|**connection_successful**|0|**connection_successful**|0|Conectado correctamente a la base de datos.|  
-|**conectividad**|**connection_failed**|0|**invalid_login_name**|2|El nombre de inicio de sesión no es válido en esta versión de SQL Server.|  
-|**conectividad**|**connection_failed**|1|**windows_auth_not_supported**|2|Los inicios de sesión de Windows no se admiten en esta versión de SQL Server.|  
-|**conectividad**|**connection_failed**|2|**attach_db_not_supported**|2|El usuario solicitó adjuntar un archivo de base de datos que no se admite.|  
-|**conectividad**|**connection_failed**|3|**change_password_not_supported**|2|El usuario solicitó cambiar la contraseña del usuario que inicia sesión, lo que no se admite.|  
-|**conectividad**|**connection_failed**|4|**login_failed_for_user**|2|Error de inicio de sesión del usuario.|  
-|**conectividad**|**connection_failed**|5|**login_disabled**|2|El inicio de sesión se deshabilitó.|  
-|**conectividad**|**connection_failed**|6|**failed_to_open_db**|2|*Nota: Solo se aplica a V11 de la base de datos SQL Azure.*<br /><br /> No se pudo abrir la base de datos. Puede ser debido a que la base de datos no existe o a una falta de autenticación para abrirla.|  
-|**conectividad**|**connection_failed**|7|**blocked_by_firewall**|2|No se permite que la dirección IP del cliente tenga acceso al servidor.|  
-|**conectividad**|**connection_failed**|8|**client_close**|2|*Nota: Solo se aplica a V11 de la base de datos SQL Azure.*<br /><br /> Es posible que el cliente haya agotado el tiempo de espera al establecer la conexión. Intente aumentar el tiempo de espera de la conexión.|  
-|**conectividad**|**connection_failed**|9|**volver a configurar**|2|*Nota: Solo se aplica a V11 de la base de datos SQL Azure.*<br /><br /> Error de conexión debido a que la base de datos se estaba reconfigurando en ese momento.|  
-|**conectividad**|**connection_terminated**|0|**idle_connection_timeout**|2|*Nota: Solo se aplica a V11 de la base de datos SQL Azure.*<br /><br /> La conexión ha estado inactiva durante más tiempo que el umbral definido por el sistema.|  
-|**conectividad**|**connection_terminated**|1|**volver a configurar**|2|*Nota: Solo se aplica a V11 de la base de datos SQL Azure.*<br /><br /> La sesión se ha terminado debido a una reconfiguración de la base de datos.|  
-|**conectividad**|**limitación**|*\<código del motivo >*|**reason_code**|2|*Nota: Solo se aplica a V11 de la base de datos SQL Azure.*<br /><br /> Solicitud limitada.  Código de motivo de la limitación:  *\<código del motivo >*. Para obtener más información, consulte [limitación del motor](http://msdn.microsoft.com/library/windowsazure/dn338079.aspx).|  
-|**conectividad**|**throttling_long_transaction**|40549|**long_transaction**|2|*Nota: Solo se aplica a V11 de la base de datos SQL Azure.*<br /><br /> La sesión terminó porque tiene una transacción de larga duración. Intente reducir la transacción. Para obtener más información, consulte [límites de recursos](http://msdn.microsoft.com/library/windowsazure/dn338081.aspx).|  
-|**conectividad**|**throttling_long_transaction**|40550|**excessive_lock_usage**|2|*Nota: Solo se aplica a V11 de la base de datos SQL Azure.*<br /><br /> La sesión ha terminado porque ha adquirido demasiados bloqueos. Intente leer o modificar menos filas en una sola transacción. Para obtener más información, consulte [límites de recursos](http://msdn.microsoft.com/library/windowsazure/dn338081.aspx).|  
-|**conectividad**|**throttling_long_transaction**|40551|**excessive_tempdb_usage**|2|*Nota: Solo se aplica a V11 de la base de datos SQL Azure.*<br /><br /> La sesión ha terminado debido al uso excesivo de TEMPDB. Intente modificar la consulta para reducir el uso de espacio de la tabla temporal. Para obtener más información, consulte [límites de recursos](http://msdn.microsoft.com/library/windowsazure/dn338081.aspx).|  
-|**conectividad**|**throttling_long_transaction**|40552|**excessive_log_space_usage**|2|*Nota: Solo se aplica a V11 de la base de datos SQL Azure.*<br /><br /> La sesión ha terminado debido al excesivo uso de espacio del registro de transacciones. Intente modificar menos filas en una sola transacción. Para obtener más información, consulte [límites de recursos](http://msdn.microsoft.com/library/windowsazure/dn338081.aspx).|  
-|**conectividad**|**throttling_long_transaction**|40553|**excessive_memory_usage**|2|*Nota: Solo se aplica a V11 de la base de datos SQL Azure.*<br /><br /> La sesión ha terminado debido al uso excesivo de la memoria. Intente modificar la consulta para procesar menos filas. Para obtener más información, consulte [límites de recursos](http://msdn.microsoft.com/library/windowsazure/dn338081.aspx).|  
-|**motor de**|**interbloqueo**|0|**interbloqueo**|2|Se ha producido un interbloqueo.|  
+|**Conectividad**|**connection_successful**|0|**connection_successful**|0|Conectado correctamente a la base de datos.|  
+|**Conectividad**|**connection_failed**|0|**invalid_login_name**|2|El nombre de inicio de sesión no es válido en esta versión de SQL Server.|  
+|**Conectividad**|**connection_failed**|1|**windows_auth_not_supported**|2|Los inicios de sesión de Windows no se admiten en esta versión de SQL Server.|  
+|**Conectividad**|**connection_failed**|2|**attach_db_not_supported**|2|El usuario solicitó adjuntar un archivo de base de datos que no se admite.|  
+|**Conectividad**|**connection_failed**|3|**change_password_not_supported**|2|El usuario solicitó cambiar la contraseña del usuario que inicia sesión, lo que no se admite.|  
+|**Conectividad**|**connection_failed**|4|**login_failed_for_user**|2|Error de inicio de sesión del usuario.|  
+|**Conectividad**|**connection_failed**|5|**login_disabled**|2|El inicio de sesión se deshabilitó.|  
+|**Conectividad**|**connection_failed**|6|**failed_to_open_db**|2|*Nota: Solo se aplica a V11 de la base de datos SQL Azure.*<br /><br /> No se pudo abrir la base de datos. Puede ser debido a que la base de datos no existe o a una falta de autenticación para abrirla.|  
+|**Conectividad**|**connection_failed**|7|**blocked_by_firewall**|2|No se permite que la dirección IP del cliente tenga acceso al servidor.|  
+|**Conectividad**|**connection_failed**|8|**client_close**|2|*Nota: Solo se aplica a V11 de la base de datos SQL Azure.*<br /><br /> Es posible que el cliente haya agotado el tiempo de espera al establecer la conexión. Intente aumentar el tiempo de espera de la conexión.|  
+|**Conectividad**|**connection_failed**|9|**Volver a configurar**|2|*Nota: Solo se aplica a V11 de la base de datos SQL Azure.*<br /><br /> Error de conexión debido a que la base de datos se estaba reconfigurando en ese momento.|  
+|**Conectividad**|**connection_terminated**|0|**idle_connection_timeout**|2|*Nota: Solo se aplica a V11 de la base de datos SQL Azure.*<br /><br /> La conexión ha estado inactiva durante más tiempo que el umbral definido por el sistema.|  
+|**Conectividad**|**connection_terminated**|1|**Volver a configurar**|2|*Nota: Solo se aplica a V11 de la base de datos SQL Azure.*<br /><br /> La sesión se ha terminado debido a una reconfiguración de la base de datos.|  
+|**Conectividad**|**Limitación**|*\<código del motivo >*|**reason_code**|2|*Nota: Solo se aplica a V11 de la base de datos SQL Azure.*<br /><br /> Solicitud limitada.  Código de motivo de la limitación:  *\<código del motivo >*. Para obtener más información, consulte [limitación del motor](http://msdn.microsoft.com/library/windowsazure/dn338079.aspx).|  
+|**Conectividad**|**throttling_long_transaction**|40549|**long_transaction**|2|*Nota: Solo se aplica a V11 de la base de datos SQL Azure.*<br /><br /> La sesión terminó porque tiene una transacción de larga duración. Intente reducir la transacción. Para obtener más información, consulte [límites de recursos](http://msdn.microsoft.com/library/windowsazure/dn338081.aspx).|  
+|**Conectividad**|**throttling_long_transaction**|40550|**excessive_lock_usage**|2|*Nota: Solo se aplica a V11 de la base de datos SQL Azure.*<br /><br /> La sesión ha terminado porque ha adquirido demasiados bloqueos. Intente leer o modificar menos filas en una sola transacción. Para obtener más información, consulte [límites de recursos](http://msdn.microsoft.com/library/windowsazure/dn338081.aspx).|  
+|**Conectividad**|**throttling_long_transaction**|40551|**excessive_tempdb_usage**|2|*Nota: Solo se aplica a V11 de la base de datos SQL Azure.*<br /><br /> La sesión ha terminado debido al uso excesivo de TEMPDB. Intente modificar la consulta para reducir el uso de espacio de la tabla temporal. Para obtener más información, consulte [límites de recursos](http://msdn.microsoft.com/library/windowsazure/dn338081.aspx).|  
+|**Conectividad**|**throttling_long_transaction**|40552|**excessive_log_space_usage**|2|*Nota: Solo se aplica a V11 de la base de datos SQL Azure.*<br /><br /> La sesión ha terminado debido al excesivo uso de espacio del registro de transacciones. Intente modificar menos filas en una sola transacción. Para obtener más información, consulte [límites de recursos](http://msdn.microsoft.com/library/windowsazure/dn338081.aspx).|  
+|**Conectividad**|**throttling_long_transaction**|40553|**excessive_memory_usage**|2|*Nota: Solo se aplica a V11 de la base de datos SQL Azure.*<br /><br /> La sesión ha terminado debido al uso excesivo de la memoria. Intente modificar la consulta para procesar menos filas. Para obtener más información, consulte [límites de recursos](http://msdn.microsoft.com/library/windowsazure/dn338081.aspx).|  
+|**Motor de**|**interbloqueo**|0|**interbloqueo**|2|Se ha producido un interbloqueo.|  
   
 ## <a name="permissions"></a>Permissions  
  Los usuarios con permiso para tener acceso a la **maestro** base de datos tienen acceso de sólo lectura a esta vista.  
@@ -107,7 +108,7 @@ ms.lasthandoff: 01/02/2018
 |`Database1`|`2012-02-05 11:00:00`|`2012-02-05 11:05:00`|`connectivity`|`connection_failed`|`4`|`login_failed_for_user`|`2`|`7`|`Login failed for user.`|`NULL`|  
   
 ### <a name="interval-starttime-and-endtime"></a>Start_time y end_time de intervalo  
- Un evento se incluye en un intervalo de agregación cuando se produce el evento *en* o *después***start_time** y *antes de*  **end_time** para ese intervalo. Por ejemplo, un evento que ocurra exactamente el `2012-10-30 19:25:00.0000000` solo se incluiría en el segundo intervalo que se muestra a continuación:  
+ Un evento se incluye en un intervalo de agregación cuando se produce el evento *en* o *después *** start_time** y *antes *** end_time** para ese intervalo. Por ejemplo, un evento que ocurra exactamente el `2012-10-30 19:25:00.0000000` solo se incluiría en el segundo intervalo que se muestra a continuación:  
   
 ```  
 start_time                    end_time  
@@ -148,7 +149,7 @@ SELECT * FROM sys.event_log
 WHERE event_type = 'deadlock'   
     AND database_name = 'Database1';  
 ```  
-<a name="Deadlock"></a>La siguiente consulta devuelve todos los eventos de interbloqueo de la base de datos Database1 (solo se aplica a V12 de base de datos de SQL Azure).  
+<a name="Deadlock"></a> La siguiente consulta devuelve todos los eventos de interbloqueo de la base de datos Database1 (solo se aplica a V12 de base de datos de SQL Azure).  
   
 ```  
 WITH CTE AS (  

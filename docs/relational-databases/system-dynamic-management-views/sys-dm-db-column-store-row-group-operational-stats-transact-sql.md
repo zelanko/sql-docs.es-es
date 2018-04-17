@@ -1,30 +1,31 @@
 ---
 title: sys.dm_db_column_store_row_group_operational_stats (Transact-SQL) | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 06/10/2016
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine, sql-database
-ms.service: 
+ms.service: ''
 ms.component: dmv's
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 dev_langs:
 - TSQL
 ms.assetid: 31b71c68-50a0-4fd8-a7fe-2d2292be1163
-caps.latest.revision: 
+caps.latest.revision: 6
 author: barbkess
 ms.author: barbkess
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: f062c426525c8c6692fd56d5599bc5fac0f589ec
-ms.sourcegitcommit: c556eaf60a49af7025db35b7aa14beb76a8158c5
+monikerRange: = azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions
+ms.openlocfilehash: ba6a0f40c709667195c1507b9a36b79c99f1f18e
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/03/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="sysdmdbcolumnstorerowgroupoperationalstats-transact-sql"></a>sys.dm_db_column_store_row_group_operational_stats (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]
@@ -39,7 +40,7 @@ ms.lasthandoff: 02/03/2018
 |**object_id**|**int**|Identificador de la tabla con el índice de almacén de columnas.|  
 |**index_id**|**int**|Identificador del índice de almacén de columnas.|  
 |**partition_number**|**int**|Número de partición en base 1 en el índice o montón.|  
-|**row_group_id**|**int**|Id. del grupo de filas en el índice de almacén de columnas. Es único dentro de una partición.|  
+|**Row_group_id**|**int**|Id. del grupo de filas en el índice de almacén de columnas. Es único dentro de una partición.|  
 |**scan_count**|**int**|Número de exámenes mediante el grupo de filas desde el último reinicio SQL.|  
 |**delete_buffer_scan_count**|**int**|Número de veces que el búfer de eliminación se utiliza para determinar las filas eliminadas de este grupo de filas. Esto incluye el acceso a la tabla hash en memoria y el árbol b subyacente.|  
 |**index_scan_count**|**int**|Número de veces que se ha analizado la partición de índice de almacén de columnas. Este es el mismo para todos los grupos de filas en la partición.|  
@@ -58,7 +59,7 @@ ms.lasthandoff: 02/03/2018
   
  Si se deniega el permiso VIEW DATABASE STATE, no se puede devolver ningún objeto de la base de datos, independientemente de que se hayan concedido permisos CONTROL a objetos específicos. Además, cuando el carácter comodín de base de datos @*database_id*= se especifica NULL, se omite la base de datos.  
   
- Para obtener más información, vea [funciones y vistas de administración dinámica &#40; Transact-SQL &#41; ](~/relational-databases/system-dynamic-management-views/system-dynamic-management-views.md).  
+ Para obtener más información, consulte [funciones y vistas de administración dinámica &#40;Transact-SQL&#41;](~/relational-databases/system-dynamic-management-views/system-dynamic-management-views.md).  
   
 ## <a name="see-also"></a>Vea también  
  [Funciones y vistas de administración dinámica &#40;Transact-SQL&#41;](~/relational-databases/system-dynamic-management-views/system-dynamic-management-views.md)   
@@ -68,7 +69,7 @@ ms.lasthandoff: 02/03/2018
  [sys.dm_db_index_usage_stats &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-db-index-usage-stats-transact-sql.md)   
  [sys.dm_os_latch_stats &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-os-latch-stats-transact-sql.md)   
  [sys.dm_db_partition_stats &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-db-partition-stats-transact-sql.md)   
- [sys.allocation_units &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-allocation-units-transact-sql.md)   
+ [Sys.allocation_units &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-allocation-units-transact-sql.md)   
  [sys.indexes &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-indexes-transact-sql.md)  
   
   

@@ -1,16 +1,16 @@
 ---
 title: sp_addmergesubscription (Transact-SQL) | Documentos de Microsoft
-ms.custom: 
+ms.custom: ''
 ms.date: 03/16/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine
-ms.service: 
+ms.service: ''
 ms.component: system-stored-procedures
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - replication
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 applies_to:
 - SQL Server
@@ -20,16 +20,16 @@ f1_keywords:
 helpviewer_keywords:
 - sp_addmergesubscription
 ms.assetid: a191d817-0132-49ff-93ca-76f13e609b38
-caps.latest.revision: 
+caps.latest.revision: 42
 author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: f5db2e319393afd6d3751b5eeb6ee58fd4d84fd6
-ms.sourcegitcommit: 45e4efb7aa828578fe9eb7743a1a3526da719555
+ms.openlocfilehash: cc7b47a0253b47e9c8e1a75131ae3003fce2ac33
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="spaddmergesubscription-transact-sql"></a>sp_addmergesubscription (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -88,10 +88,10 @@ sp_addmergesubscription [ @publication= ] 'publication'
  [  **@subscriber_type=**] **'***subscriber_type***'**  
  Es el tipo de suscriptor. *propiedad subscriber_type*es **nvarchar (15)**, y puede tener uno de los siguientes valores.  
   
-|Valor|Description|  
+|Value|Description|  
 |-----------|-----------------|  
 |**local** (valor predeterminado)|Suscriptor solo conocido para el publicador.|  
-|**global**|Suscriptor conocido para todos los servidores.|  
+|**Global**|Suscriptor conocido para todos los servidores.|  
   
  En [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] y versiones posteriores, se hace referencia a las suscripciones locales como suscripciones de cliente y a las suscripciones globales como suscripciones de servidor.  
   
@@ -107,7 +107,7 @@ sp_addmergesubscription [ @publication= ] 'publication'
  [  **@frequency_type=**] *frequency_type*  
  Es un valor que indica cuándo se ejecutará el agente de mezcla. *frequency_type* es **int**, y puede tener uno de los siguientes valores.  
   
-|Valor|Descripción|  
+|Value|Descripción|  
 |-----------|-----------------|  
 |**1**|Una vez|  
 |**4**|Cada día|  
@@ -120,7 +120,7 @@ sp_addmergesubscription [ @publication= ] 'publication'
  [  **@frequency_interval=**] *frequency_interval*  
  El día o los días que se ejecuta el agente de mezcla. *frequency_interval* es **int**, y puede tener uno de los siguientes valores.  
   
-|Valor|Descripción|  
+|Value|Descripción|  
 |-----------|-----------------|  
 |**1**|Domingo|  
 |**2**|Lunes|  
@@ -137,7 +137,7 @@ sp_addmergesubscription [ @publication= ] 'publication'
  [  **@frequency_relative_interval=**] *frequency_relative_interval*  
  Es la repetición de mezcla programada del intervalo de frecuencia de cada mes. *frequency_relative_interval* es **int**, y puede tener uno de estos valores.  
   
-|Valor|Descripción|  
+|Value|Descripción|  
 |-----------|-----------------|  
 |**1**|Primero|  
 |**2**|Second|  
@@ -152,7 +152,7 @@ sp_addmergesubscription [ @publication= ] 'publication'
  [  **@frequency_subday=**] *frequency_subday*  
  Es la unidad de *frequency_subday_interval*. *frequency_subday* es **int**, y puede tener uno de los siguientes valores.  
   
-|Valor|Descripción|  
+|Value|Descripción|  
 |-----------|-----------------|  
 |**1**|Una vez|  
 |**2**|Second|  
@@ -197,9 +197,9 @@ sp_addmergesubscription [ @publication= ] 'publication'
  Permite que los conflictos se resuelvan de forma interactiva para todos los artículos que lo permitan. *use_interactive_resolver* es **nvarchar (5)**, con un valor predeterminado es FALSE.  
   
  [  **@merge_job_name=** ] **'***merge_job_name***'**  
- El  *@merge_job_name*  parámetro está en desuso y no se puede establecer. *merge_job_name* es **sysname**, su valor predeterminado es null.  
+ El *@merge_job_name* parámetro está en desuso y no se puede establecer. *merge_job_name* es **sysname**, su valor predeterminado es null.  
   
- [  **@hostname** =] **'***hostname***'**  
+ [ **@hostname**=] **'***hostname***'**  
  Invalida el valor devuelto por [HOST_NAME](../../t-sql/functions/host-name-transact-sql.md) cuando esta función se utiliza en la cláusula WHERE de un filtro con parámetros. *Nombre de host* es **sysname**, su valor predeterminado es null.  
   
 > [!IMPORTANT]  
@@ -211,7 +211,7 @@ sp_addmergesubscription [ @publication= ] 'publication'
 ## <a name="remarks"></a>Comentarios  
  **sp_addmergesubscription** se utiliza en la replicación de mezcla.  
   
- Cuando **sp_addmergesubscription** se ejecuta un miembro de la **sysadmin** rol fijo de servidor para crear una suscripción de inserción, el trabajo de agente de mezcla se crea implícitamente y se ejecuta bajo la [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] agente cuenta de servicio. Se recomienda ejecutar [sp_addmergepushsubscription_agent](../../relational-databases/system-stored-procedures/sp-addmergepushsubscription-agent-transact-sql.md) y especifique las credenciales de una cuenta de Windows diferente, específica del agente para  **@job_login**  y  **@job_password** . Para más información, consulte [Replication Agent Security Model](../../relational-databases/replication/security/replication-agent-security-model.md).  
+ Cuando **sp_addmergesubscription** se ejecuta un miembro de la **sysadmin** rol fijo de servidor para crear una suscripción de inserción, el trabajo de agente de mezcla se crea implícitamente y se ejecuta bajo la [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] agente cuenta de servicio. Se recomienda ejecutar [sp_addmergepushsubscription_agent](../../relational-databases/system-stored-procedures/sp-addmergepushsubscription-agent-transact-sql.md) y especifique las credenciales de una cuenta de Windows diferente, específica del agente para **@job_login** y **@job_password**. Para más información, consulte [Replication Agent Security Model](../../relational-databases/replication/security/replication-agent-security-model.md).  
   
 ## <a name="example"></a>Ejemplo  
  [!code-sql[HowTo#sp_addmergepushsubscriptionagent](../../relational-databases/replication/codesnippet/tsql/sp-addmergesubscription-_1.sql)]  
@@ -221,11 +221,11 @@ sp_addmergesubscription [ @publication= ] 'publication'
   
 ## <a name="see-also"></a>Vea también  
  [Create a Push Subscription](../../relational-databases/replication/create-a-push-subscription.md)   
- [Create a Pull Subscription](../../relational-databases/replication/create-a-pull-subscription.md)   
+ [Crear una suscripción de extracción](../../relational-databases/replication/create-a-pull-subscription.md)   
  [Resolución interactiva de conflictos](../../relational-databases/replication/merge/advanced-merge-replication-conflict-interactive-resolution.md)   
  [Suscribirse a publicaciones](../../relational-databases/replication/subscribe-to-publications.md)   
- [sp_changemergesubscription &#40; Transact-SQL &#41;](../../relational-databases/system-stored-procedures/sp-changemergesubscription-transact-sql.md)   
- [sp_dropmergesubscription &#40; Transact-SQL &#41;](../../relational-databases/system-stored-procedures/sp-dropmergesubscription-transact-sql.md)   
- [sp_helpmergesubscription &#40; Transact-SQL &#41;](../../relational-databases/system-stored-procedures/sp-helpmergesubscription-transact-sql.md)  
+ [sp_changemergesubscription &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-changemergesubscription-transact-sql.md)   
+ [sp_dropmergesubscription &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-dropmergesubscription-transact-sql.md)   
+ [sp_helpmergesubscription &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-helpmergesubscription-transact-sql.md)  
   
   

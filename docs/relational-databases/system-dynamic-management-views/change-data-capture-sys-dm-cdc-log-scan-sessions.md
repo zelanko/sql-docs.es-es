@@ -1,16 +1,16 @@
 ---
-title: sys.dm_cdc_log_scan_sessions (Transact-SQL) | Microsoft Docs
-ms.custom: 
+title: Sys.dm_cdc_log_scan_sessions (Transact-SQL) | Documentos de Microsoft
+ms.custom: ''
 ms.date: 06/10/2016
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine
-ms.service: 
+ms.service: ''
 ms.component: dmv's
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - dm_cdc_log_scan_sessions
@@ -23,18 +23,18 @@ helpviewer_keywords:
 - change data capture [SQL Server], log scan reporting
 - sys.dm_cdc_log_scan_sessions dynamic management view
 ms.assetid: d337e9d0-78b1-4a07-8820-2027d0b9f87c
-caps.latest.revision: 
+caps.latest.revision: 17
 author: stevestein
 ms.author: sstein
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: f7d81782bac9590aac7fb1905304aec53f531db1
-ms.sourcegitcommit: c556eaf60a49af7025db35b7aa14beb76a8158c5
+ms.openlocfilehash: 4417ef0b9d7aef7de1133d05772ae8e80160b30b
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/03/2018
+ms.lasthandoff: 04/16/2018
 ---
-# <a name="change-data-capture---sysdmcdclogscansessions"></a>Change Data Capture - sys.dm_cdc_log_scan_sessions
+# <a name="change-data-capture---sysdmcdclogscansessions"></a>Captura de datos modificados - sys.dm_cdc_log_scan_sessions
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
   Devuelve una fila para cada sesión de recorrido de registro de la base de datos actual. La última fila devuelta representa la sesión actual. Puede usar esta vista para devolver información de estado sobre la sesión del recorrido del registro actual, o bien información agregada sobre todas las sesiones desde que la instancia de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] se inició por última vez.  
@@ -59,7 +59,7 @@ ms.lasthandoff: 02/03/2018
 |**first_begin_cdc_lsn**|**nvarchar(23)**|Primer LSN que contenía las transacciones de captura de los datos de cambio.<br /><br /> Cuando **session_id** = 0, primer LSN que contenía las transacciones de captura de datos de cambio.|  
 |**last_commit_cdc_lsn**|**nvarchar(23)**|LSN de la última entrada de registro de confirmación que contenía las transacciones de captura de los datos de cambio.<br /><br /> Cuando **session_id** = 0, la última entrada de registro LSN de confirmación para cualquier sesión que contenía las transacciones de captura de datos de cambio|  
 |**last_commit_cdc_time**|**datetime**|Hora de procesamiento de la última entrada de registro de confirmación que contenía las transacciones de captura de los datos de cambio.<br /><br /> Cuando **session_id** = 0, la hora del último registro de confirmación que se registre para cualquier sesión que contenía las transacciones de captura de datos de cambio.|  
-|**latencia**|**int**|La diferencia, en segundos, entre **end_time** y **last_commit_cdc_time** en la sesión. Este contador se rellena al final de la fase 7.<br /><br /> Cuando **session_id** = 0, el último valor de latencia es distinto de cero registrado por una sesión.|  
+|**Latencia**|**int**|La diferencia, en segundos, entre **end_time** y **last_commit_cdc_time** en la sesión. Este contador se rellena al final de la fase 7.<br /><br /> Cuando **session_id** = 0, el último valor de latencia es distinto de cero registrado por una sesión.|  
 |**empty_scan_count**|**int**|Número de sesiones consecutivas que no contenían ninguna transacciones de captura de los datos de cambio.|  
 |**failed_sessions_count**|**int**|Número de sesiones erróneas.|  
   
@@ -67,7 +67,7 @@ ms.lasthandoff: 02/03/2018
  Se restablecen los valores en esta vista de administración dinámica siempre que se inicia la instancia de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
 ## <a name="permissions"></a>Permissions  
- Requiere el permiso VIEW DATABASE STATE para consultar el **sys.dm_cdc_log_scan_sessions** vista de administración dinámica. Para obtener más información acerca de los permisos en las vistas de administración dinámica, consulte [funciones y vistas de administración dinámica &#40; Transact-SQL &#41; ](~/relational-databases/system-dynamic-management-views/system-dynamic-management-views.md).  
+ Requiere el permiso VIEW DATABASE STATE para consultar el **sys.dm_cdc_log_scan_sessions** vista de administración dinámica. Para obtener más información acerca de los permisos en las vistas de administración dinámica, consulte [funciones y vistas de administración dinámica &#40;Transact-SQL&#41;](~/relational-databases/system-dynamic-management-views/system-dynamic-management-views.md).  
   
 ## <a name="examples"></a>Ejemplos  
  El siguiente ejemplo devuelve información para la sesión más actual.  

@@ -1,16 +1,16 @@
 ---
 title: Sys.query_store_runtime_stats (Transact-SQL) | Documentos de Microsoft
-ms.custom: 
+ms.custom: ''
 ms.date: 03/29/2016
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine, sql-database
-ms.service: 
+ms.service: ''
 ms.component: system-catalog-views
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - SYS.QUERY_STORE_RUNTIME_STATS_TSQL
@@ -23,16 +23,17 @@ helpviewer_keywords:
 - query_store_runtime_stats catalog view
 - sys.query_store_runtime_stats catalog view
 ms.assetid: ccf7a57c-314b-450c-bd34-70749a02784a
-caps.latest.revision: 
+caps.latest.revision: 18
 author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 8cf026cb9beff10c6570a94bdd805aa2b78c0a4d
-ms.sourcegitcommit: 45e4efb7aa828578fe9eb7743a1a3526da719555
+monikerRange: = azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions
+ms.openlocfilehash: 59e280a58f0b220ea7bff6f530833f16ba69dfe3
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="sysquerystoreruntimestats-transact-sql"></a>Sys.query_store_runtime_stats (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]
@@ -42,10 +43,10 @@ ms.lasthandoff: 11/21/2017
 |Nombre de columna|Tipo de datos|Description|  
 |-----------------|---------------|-----------------|  
 |**runtime_stats_id**|**bigint**|Identificador de la fila que representa las estadísticas de ejecución en tiempo de ejecución para la **plan_id**, **execution_type** y **runtime_stats_interval_id**. Es único solo para los intervalos de estadísticas en tiempo de ejecución anteriores. Para intervalo actualmente activo puede haber varias filas que representa las estadísticas de tiempo de ejecución para el plan al que hace referencia **plan_id**, con el tipo de ejecución representado por **execution_type**. Normalmente, una fila representa las estadísticas de tiempo de ejecución que se vacían en el disco, mientras que otras (s) representan el estado en memoria. Por tanto, para obtener el estado real para cada intervalo deberá métricas agregadas, agrupando **plan_id**, **execution_type** y **runtime_stats_interval_id**. |  
-|**plan_id**|**bigint**|Clave externa. Se combina con [sys.query_store_plan &#40; Transact-SQL &#41; ](../../relational-databases/system-catalog-views/sys-query-store-plan-transact-sql.md).|  
-|**runtime_stats_interval_id**|**bigint**|Clave externa. Se combina con [sys.query_store_runtime_stats_interval &#40; Transact-SQL &#41; ](../../relational-databases/system-catalog-views/sys-query-store-runtime-stats-interval-transact-sql.md).|  
+|**plan_id**|**bigint**|Clave externa. Se combina con [sys.query_store_plan &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-query-store-plan-transact-sql.md).|  
+|**runtime_stats_interval_id**|**bigint**|Clave externa. Se combina con [sys.query_store_runtime_stats_interval &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-query-store-runtime-stats-interval-transact-sql.md).|  
 |**execution_type**|**tinyint**|Determina el tipo de ejecución de consulta:<br /><br /> 0 – normal de ejecución (terminado correctamente)<br /><br /> 3-cliente iniciado anuló la ejecución<br /><br /> 4 - excepción anuló la ejecución|  
-|**execution_type_desc**|**nvarchar (128)**|Descripción textual del campo de tipo de ejecución:<br /><br /> 0 – normal<br /><br /> 3 – anuladas<br /><br /> 4 - excepción|  
+|**execution_type_desc**|**nvarchar(128)**|Descripción textual del campo de tipo de ejecución:<br /><br /> 0 – normal<br /><br /> 3 – anuladas<br /><br /> 4 - excepción|  
 |**first_execution_time**|**datetimeoffset**|Primer tiempo de ejecución para el plan de consulta dentro del intervalo de agregación.|  
 |**last_execution_time**|**datetimeoffset**|Planear la última hora de ejecución de la consulta dentro del intervalo de agregación.|  
 |**count_executions**|**bigint**|Recuento total de ejecuciones del plan de consulta dentro del intervalo de agregación.|  
@@ -82,7 +83,7 @@ ms.lasthandoff: 11/21/2017
 |**avg_dop**|**float**|Promedio DOP (grado de paralelismo) para el plan de consulta dentro del intervalo de agregación.|  
 |**last_dop**|**bigint**|Últimos DOP (grado de paralelismo) para el plan de consulta dentro del intervalo de agregación.|  
 |**min_dop**|**bigint**|Mínimo DOP (grado de paralelismo) para el plan de consulta dentro del intervalo de agregación.|  
-|**MAX_DOP**|**bigint**|Máximo DOP (grado de paralelismo) para el plan de consulta dentro del intervalo de agregación.|  
+|**max_dop**|**bigint**|Máximo DOP (grado de paralelismo) para el plan de consulta dentro del intervalo de agregación.|  
 |**stdev_dop**|**float**|Desviación estándar DOP (grado de paralelismo) para el plan de consulta dentro del intervalo de agregación.|  
 |**avg_query_max_used_memory**|**float**|Concesión de memoria promedio (indicado que el número de páginas de 8 KB) para el plan de consulta dentro del intervalo de agregación. Siempre es 0 para las consultas que utilizan de forma nativa los con optimización para memoria procedimientos compilados.|  
 |**last_query_max_used_memory**|**bigint**|Última concesión de memoria (indicado que el número de páginas de 8 KB) para el plan de consulta dentro del intervalo de agregación. Siempre es 0 para las consultas que utilizan de forma nativa los con optimización para memoria procedimientos compilados.|  
@@ -104,15 +105,15 @@ ms.lasthandoff: 11/21/2017
  Requiere la **VIEW DATABASE STATE** permiso.  
   
 ## <a name="see-also"></a>Vea también  
- [Sys.database_query_store_options &#40; Transact-SQL &#41;](../../relational-databases/system-catalog-views/sys-database-query-store-options-transact-sql.md)   
- [Sys.query_context_settings &#40; Transact-SQL &#41;](../../relational-databases/system-catalog-views/sys-query-context-settings-transact-sql.md)   
- [Sys.query_store_plan &#40; Transact-SQL &#41;](../../relational-databases/system-catalog-views/sys-query-store-plan-transact-sql.md)   
- [Sys.query_store_query &#40; Transact-SQL &#41;](../../relational-databases/system-catalog-views/sys-query-store-query-transact-sql.md)   
- [Sys.query_store_query_text &#40; Transact-SQL &#41;](../../relational-databases/system-catalog-views/sys-query-store-query-text-transact-sql.md)   
+ [sys.database_query_store_options &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-database-query-store-options-transact-sql.md)   
+ [sys.query_context_settings &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-query-context-settings-transact-sql.md)   
+ [sys.query_store_plan &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-query-store-plan-transact-sql.md)   
+ [Sys.query_store_query &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-query-store-query-transact-sql.md)   
+ [sys.query_store_query_text &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-query-store-query-text-transact-sql.md)   
  [sys.query_store_wait_stats &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-query-store-wait-stats-transact-sql.md)  
- [Sys.query_store_runtime_stats_interval &#40; Transact-SQL &#41;](../../relational-databases/system-catalog-views/sys-query-store-runtime-stats-interval-transact-sql.md)   
- [Supervisar el rendimiento mediante el almacén de consultas](../../relational-databases/performance/monitoring-performance-by-using-the-query-store.md)   
+ [sys.query_store_runtime_stats_interval &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-query-store-runtime-stats-interval-transact-sql.md)   
+ [Monitoring Performance By Using the Query Store](../../relational-databases/performance/monitoring-performance-by-using-the-query-store.md)   
  [Vistas de catálogo &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/catalog-views-transact-sql.md)   
- [Almacén de consultas almacenados procedimientos &#40; Transact-SQL &#41;](../../relational-databases/system-stored-procedures/query-store-stored-procedures-transact-sql.md)  
+ [Procedimientos almacenados del almacén de consultas &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/query-store-stored-procedures-transact-sql.md)  
   
   

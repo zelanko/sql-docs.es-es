@@ -1,16 +1,16 @@
 ---
-title: sys.dm_exec_dms_workers (Transact-SQL) | Microsoft Docs
-ms.custom: 
+title: Sys.dm_exec_dms_workers (Transact-SQL) | Documentos de Microsoft
+ms.custom: ''
 ms.date: 03/15/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine, sql-data-warehouse, pdw
-ms.service: 
+ms.service: ''
 ms.component: dmv's
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - SYS.DM_EXEC_DMS_WORKERS_TSQL
@@ -24,16 +24,17 @@ helpviewer_keywords:
 - dm_exec_dms_workers management view
 - sys.dm_exec_dms_workers management view
 ms.assetid: f468da29-78c3-4f10-8a3c-17905bbf46f2
-caps.latest.revision: 
+caps.latest.revision: 8
 author: stevestein
 ms.author: sstein
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: ec7edcfc352e2addf3ba69d5915a11b25f483eba
-ms.sourcegitcommit: c556eaf60a49af7025db35b7aa14beb76a8158c5
+monikerRange: '>= aps-pdw-2016 || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
+ms.openlocfilehash: 25afccd1630039b74e3bf4e349c3a40ebc5410dc
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/03/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="sysdmexecdmsworkers-transact-sql"></a>sys.dm_exec_dms_workers (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2016-xxxx-asdw-pdw-md](../../includes/tsql-appliesto-ss2016-xxxx-asdw-pdw-md.md)]
@@ -45,12 +46,12 @@ ms.lasthandoff: 02/03/2018
 |Nombre de la columna|Tipo de datos|Description|Intervalo|  
 |-----------------|---------------|-----------------|-----------|  
 |execution_id|**nvarchar(32)**|Consulta que este trabajador DMS es parte of.request_id, step_index, y dms_step_index forman la clave para esta vista.||  
-|step_index|**int**|Consultar el paso de de que este trabajo DMS forma parte.|See step index in [sys.dm_exec_distributed_request_steps &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-exec-distributed-request-steps-transact-sql.md).|  
-|dms_step_index|**int**|Paso a paso en el plan DMS que se está ejecutando este trabajo.|See [sys.dm_exec_dms_workers (Transact-SQL)](../../relational-databases/system-dynamic-management-views/sys-dm-exec-dms-workers-transact-sql.md)|  
-|compute_node_id|**int**|Nodo que se está ejecutando el trabajo.|See [sys.dm_exec_compute_nodes &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-exec-compute-nodes-transact-sql.md).|  
+|step_index|**int**|Consultar el paso de de que este trabajo DMS forma parte.|Consulte el índice de paso en [sys.dm_exec_distributed_request_steps &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-exec-distributed-request-steps-transact-sql.md).|  
+|dms_step_index|**int**|Paso a paso en el plan DMS que se está ejecutando este trabajo.|Consulte [sys.dm_exec_dms_workers (Transact-SQL)](../../relational-databases/system-dynamic-management-views/sys-dm-exec-dms-workers-transact-sql.md)|  
+|compute_node_id|**int**|Nodo que se está ejecutando el trabajo.|Vea [sys.dm_exec_compute_nodes &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-exec-compute-nodes-transact-sql.md).|  
 |distribution_id|**int**|||  
-|tipo|**nvarcha(32)**|||  
-|status|**nvarchar(32)**|Estado de este paso|‘Pending', ‘Running', ‘Complete', ‘Failed', ‘UndoFailed', ‘PendingCancel', ‘Cancelled', ‘Undone', ‘Aborted'|  
+|Tipo|**nvarcha(32)**|||  
+|status|**nvarchar(32)**|Estado de este paso|'Pendiente', 'Running', 'Complete', 'Error', 'UndoFailed', 'PendingCancel', 'cancela', 'Deshacer', 'Anulan'|  
 |bytes_per_sec|**bigint**|||  
 |bytes_processed|**bigint**|||  
 |rows_processed|**bigint**|||  
@@ -70,6 +71,6 @@ ms.lasthandoff: 02/03/2018
 ## <a name="see-also"></a>Vea también  
  [PolyBase, solución de problemas con las vistas de administración dinámica](http://msdn.microsoft.com/library/ce9078b7-a750-4f47-b23e-90b83b783d80)   
  [Funciones y vistas de administración dinámica &#40;Transact-SQL&#41;](~/relational-databases/system-dynamic-management-views/system-dynamic-management-views.md)   
- [Base de datos relacionadas con vistas de administración dinámica &#40; Transact-SQL &#41;](../../relational-databases/system-dynamic-management-views/database-related-dynamic-management-views-transact-sql.md)  
+ [Vistas de administración dinámica relacionadas con la base de datos &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/database-related-dynamic-management-views-transact-sql.md)  
   
   

@@ -1,16 +1,16 @@
 ---
-title: "Introducción a la carga masiva XML (SQLXML 4.0) | Documentos de Microsoft"
-ms.custom: 
+title: Introducción a la carga masiva XML (SQLXML 4.0) | Documentos de Microsoft
+ms.custom: ''
 ms.date: 03/17/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine, sql-database
-ms.service: 
+ms.service: ''
 ms.component: sqlxml
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - dbe-xml
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: reference
 helpviewer_keywords:
 - nontransacted XML Bulk Load operations
@@ -19,20 +19,21 @@ helpviewer_keywords:
 - transacted XML Bulk Load operations
 - streaming XML data
 ms.assetid: 38bd3cbd-65ef-4c23-9ef3-e70ecf6bb88a
-caps.latest.revision: 
+caps.latest.revision: 13
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 18950714bd976c224ef33627fb12528ad08b0584
-ms.sourcegitcommit: 37f0b59e648251be673389fa486b0a984ce22c81
+monikerRange: = azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions
+ms.openlocfilehash: ebdbed96867a664fe64f6b8508c6a38e97d27166
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/12/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="introduction-to-xml-bulk-load-sqlxml-40"></a>Introducción a la carga masiva XML (SQLXML 4.0)
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
-Carga masiva XML es un objeto COM independiente que permite cargar datos XML semiestructurados en Microsoft [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] tablas.  
+  Carga masiva XML es un objeto COM independiente que permite cargar datos XML semiestructurados en Microsoft [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] tablas.  
   
  Puede insertar datos XML en una base de datos de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] mediante una instrucción INSERT y la función OPENXML; sin embargo, la utilidad Carga masiva proporciona mejor rendimiento cuando es necesario insertar grandes cantidades de datos XML.  
   
@@ -46,9 +47,9 @@ Carga masiva XML es un objeto COM independiente que permite cargar datos XML sem
   
  Se supone que está familiarizado con las siguientes características de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]:  
   
--   Esquemas XSD y XDR anotados. Para obtener más información sobre esquemas XSD anotados, vea [Introducción a los esquemas XSD anotados &#40; SQLXML 4.0 &#41; ](../../../relational-databases/sqlxml/annotated-xsd-schemas/introduction-to-annotated-xsd-schemas-sqlxml-4-0.md). Para obtener información acerca de los esquemas XDR anotados, vea [esquemas XDR anotados &#40; funcionalidades desusadas en SQLXML 4.0 &#41;](../../../relational-databases/sqlxml/annotated-xsd-schemas/annotated-xdr-schemas-deprecated-in-sqlxml-4-0.md).  
+-   Esquemas XSD y XDR anotados. Para obtener más información sobre esquemas XSD anotados, vea [Introducción a los esquemas XSD anotados &#40;SQLXML 4.0&#41;](../../../relational-databases/sqlxml/annotated-xsd-schemas/introduction-to-annotated-xsd-schemas-sqlxml-4-0.md). Para obtener información acerca de los esquemas XDR anotados, vea [esquemas XDR anotados &#40;desusado en SQLXML 4.0&#41;](../../../relational-databases/sqlxml/annotated-xsd-schemas/annotated-xdr-schemas-deprecated-in-sqlxml-4-0.md).  
   
--   [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] inserción masiva mecanismos, como la [!INCLUDE[tsql](../../../includes/tsql-md.md)] la instrucción BULK INSERT y la utilidad bcp. Para obtener más información, vea [BULK INSERT &#40; Transact-SQL &#41; ](../../../t-sql/statements/bulk-insert-transact-sql.md) y [bcp (utilidad)](../../../tools/bcp-utility.md).  
+-   Los mecanismos de inserción masiva de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)], como la instrucción BULK INSERT de [!INCLUDE[tsql](../../../includes/tsql-md.md)] y la utilidad bcp. Para obtener más información, consulte [BULK INSERT &#40;Transact-SQL&#41; ](../../../t-sql/statements/bulk-insert-transact-sql.md) y [bcp (utilidad)](../../../tools/bcp-utility.md).  
   
 ## <a name="streaming-of-xml-data"></a>Transmitir datos XML por secuencias  
  Dado que el documento XML de origen puede ser grande, en el procesamiento de carga masiva no se carga en memoria todo el documento. En su lugar, Carga masiva XML interpreta los datos XML como un flujo y lo lee. A medida que la utilidad lee los datos, identifica las tablas de base de datos, genera los registros adecuados a partir del origen de datos XML y, a continuación, envía los registros a [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] para la inserción.  

@@ -1,16 +1,16 @@
 ---
 title: 'Filtrar valores mediante SQL: limit-campo y SQL: limit-value (SQLXML 4.0) | Documentos de Microsoft'
-ms.custom: 
+ms.custom: ''
 ms.date: 03/16/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine, sql-database
-ms.service: 
+ms.service: ''
 ms.component: sqlxml
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - dbe-xml
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: reference
 helpviewer_keywords:
 - annotated XSD schemas, filtering values
@@ -21,20 +21,21 @@ helpviewer_keywords:
 - sql:limit-value
 - filtering [SQLXML]
 ms.assetid: c0f7ae92-eeec-430e-a66a-f22c3ae64a5e
-caps.latest.revision: 
+caps.latest.revision: 30
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 77113446bfea793621c13567bdb30ff7381290ef
-ms.sourcegitcommit: 37f0b59e648251be673389fa486b0a984ce22c81
+monikerRange: = azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions
+ms.openlocfilehash: 16f6ae44bce9828525e10c49604ab224bc402446
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/12/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="filtering-values-using-sqllimit-field-and-sqllimit-value-sqlxml-40"></a>Filtras valores mediante sql:limit-field y sql:limit-value (SQLXML 4.0)
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
-Puede limitar filas devueltas de una consulta de base de datos en base a algún valor de limitación. El **SQL: limit-campo** y **SQL: limit-valor** anotaciones se usan para identificar la columna de base de datos que contiene los valores de limitación y para especificar un valor de limitación concreto que se usará para filtrar los datos Devuelve.  
+  Puede limitar filas devueltas de una consulta de base de datos en base a algún valor de limitación. El **SQL: limit-campo** y **SQL: limit-valor** anotaciones se usan para identificar la columna de base de datos que contiene los valores de limitación y para especificar un valor de limitación concreto que se usará para filtrar los datos Devuelve.  
   
  El **SQL: limit-campo** anotación se utiliza para identificar una columna que contiene un valor de limitación; se permite en cada atributo o elemento asignado.  
   
@@ -313,9 +314,9 @@ Puede limitar filas devueltas de una consulta de base de datos en base a algún 
     ```  
   
 ## <a name="see-also"></a>Vea también  
- [float y real &#40; Transact-SQL &#41;](../../t-sql/data-types/float-and-real-transact-sql.md)   
- [nchar y nvarchar &#40; Transact-SQL &#41;](../../t-sql/data-types/nchar-and-nvarchar-transact-sql.md)   
+ [float y real &#40;Transact-SQL&#41;](../../t-sql/data-types/float-and-real-transact-sql.md)   
+ [nchar y nvarchar &#40;Transact-SQL&#41;](../../t-sql/data-types/nchar-and-nvarchar-transact-sql.md)   
  [Instalar SQL Server Native Client](../../relational-databases/native-client/applications/installing-sql-server-native-client.md)   
- [Mediante los esquemas XSD en consultas &#40; anotados SQLXML 4.0 &#41;](../../relational-databases/sqlxml/annotated-xsd-schemas/using-annotated-xsd-schemas-in-queries-sqlxml-4-0.md)  
+ [Mediante los esquemas XSD en consultas anotados &#40;SQLXML 4.0&#41;](../../relational-databases/sqlxml/annotated-xsd-schemas/using-annotated-xsd-schemas-in-queries-sqlxml-4-0.md)  
   
   

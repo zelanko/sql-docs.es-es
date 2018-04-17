@@ -1,16 +1,16 @@
 ---
 title: Sys.firewall_rules (base de datos de SQL Azure) | Documentos de Microsoft
-ms.custom: 
+ms.custom: ''
 ms.date: 03/14/2017
-ms.prod: 
+ms.prod: ''
 ms.prod_service: sql-database
-ms.reviewer: 
+ms.reviewer: ''
 ms.service: sql-database
 ms.component: system-catalog-views
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - sys.firewall_rules
@@ -23,16 +23,17 @@ helpviewer_keywords:
 - firewall_rules
 - sys.firewall_rules
 ms.assetid: 140d2cd8-9aa1-4cc5-870d-e1dbc873b3fe
-caps.latest.revision: 
+caps.latest.revision: 14
 author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 7f06eef87553a1a97851a3252faaf0f8057158c2
-ms.sourcegitcommit: 45e4efb7aa828578fe9eb7743a1a3526da719555
+monikerRange: = azure-sqldw-latest || = sqlallproducts-allversions
+ms.openlocfilehash: 3f3f25541c1c60e4a9dad3dcfdaff037c7a7bcde
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="sysfirewallrules-azure-sql-database"></a>sys.firewall_rules (Azure SQL Database)
 [!INCLUDE[tsql-appliesto-xxxxxx-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-xxxxxx-asdb-xxxx-xxx-md.md)]
@@ -41,7 +42,7 @@ ms.lasthandoff: 11/21/2017
   
  La vista `sys.firewall_rules` contiene las columnas siguientes:  
   
-|Nombre de columna|Tipo de datos|Descripción|  
+|Nombre de columna|Tipo de datos|Description|  
 |-----------------|---------------|-----------------|  
 |id|**INT**|El identificador de la configuración del firewall de nivel de servidor.|  
 |name|**NVARCHAR (128)**|El nombre que eligió para describir y distinguir la configuración del firewall de nivel de servidor.|  
@@ -51,17 +52,17 @@ ms.lasthandoff: 11/21/2017
 |modify_date|**FECHA Y HORA**|Fecha y hora UTC en la que se modificó por última vez la configuración del firewall de nivel de servidor.|  
   
 ## <a name="remarks"></a>Comentarios  
- Para quitar una regla de firewall de base de datos, use [sp_delete_firewall_rule &#40; Base de datos SQL Azure &#41; ](../../relational-databases/system-stored-procedures/sp-delete-firewall-rule-azure-sql-database.md). Para configurar una regla de firewall para una sola base de datos, vea [sys.database_firewall_rules &#40; Base de datos SQL Azure &#41; ](../../relational-databases/system-catalog-views/sys-database-firewall-rules-azure-sql-database.md). Para obtener información acerca de las reglas de firewall existente, consultas sys.firewall_rules (base de datos de SQL Azure).  
+ Para quitar una regla de firewall de base de datos, use [sp_delete_firewall_rule &#40;base de datos de SQL Azure&#41;](../../relational-databases/system-stored-procedures/sp-delete-firewall-rule-azure-sql-database.md). Para configurar una regla de firewall para una sola base de datos, vea [sys.database_firewall_rules &#40;base de datos de SQL Azure&#41;](../../relational-databases/system-catalog-views/sys-database-firewall-rules-azure-sql-database.md). Para obtener información acerca de las reglas de firewall existente, consultas sys.firewall_rules (base de datos de SQL Azure).  
   
 ## <a name="permissions"></a>Permissions  
  Acceso de solo lectura a esta vista está disponible para todos los usuarios con permiso para conectarse a la **maestro** base de datos.  
   
 ## <a name="see-also"></a>Vea también  
- [Sys.database_firewall_rules &#40; Base de datos SQL Azure &#41;](../../relational-databases/system-catalog-views/sys-database-firewall-rules-azure-sql-database.md)   
- [sp_set_firewall_rule &#40; Base de datos SQL Azure &#41;](../../relational-databases/system-stored-procedures/sp-set-firewall-rule-azure-sql-database.md)   
+ [Sys.database_firewall_rules &#40;base de datos de SQL Azure&#41;](../../relational-databases/system-catalog-views/sys-database-firewall-rules-azure-sql-database.md)   
+ [sp_set_firewall_rule &#40;base de datos de SQL Azure&#41;](../../relational-databases/system-stored-procedures/sp-set-firewall-rule-azure-sql-database.md)   
  [Configurar Firewall de Windows para obtener acceso al motor de base de datos](../../database-engine/configure-windows/configure-a-windows-firewall-for-database-engine-access.md)   
  [Configurar un Firewall para el acceso FILESTREAM](../../relational-databases/blob/configure-a-firewall-for-filestream-access.md)   
- [Configurar un Firewall para el acceso del servidor de informes](../../reporting-services/report-server/configure-a-firewall-for-report-server-access.md)   
+ [Configurar un firewall para el acceso al servidor de informes](../../reporting-services/report-server/configure-a-firewall-for-report-server-access.md)   
  [Configurar los valores de firewall (Base de datos SQL de Azure)](https://azure.microsoft.com/documentation/articles/sql-database-configure-firewall-settings/)  
   
   

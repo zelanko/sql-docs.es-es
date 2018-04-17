@@ -1,16 +1,16 @@
 ---
-title: sp_detach_db (Transact-SQL) | Microsoft Docs
-ms.custom: 
+title: sp_detach_db (Transact-SQL) | Documentos de Microsoft
+ms.custom: ''
 ms.date: 09/30/2015
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine
-ms.service: 
+ms.service: ''
 ms.component: system-stored-procedures
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - sp_detach_db
@@ -21,16 +21,16 @@ helpviewer_keywords:
 - sp_detach_db
 - detaching databases [SQL Server]
 ms.assetid: abcb1407-ff78-4c76-b02e-509c86574462
-caps.latest.revision: 
+caps.latest.revision: 86
 author: stevestein
 ms.author: sstein
 manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 09fd806b6ca491507fd748c3e2f9751b27c1eda5
-ms.sourcegitcommit: c556eaf60a49af7025db35b7aa14beb76a8158c5
+ms.openlocfilehash: d4e4e80e84c0231b083120dd5bf462a926869787
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/03/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="spdetachdb-transact-sql"></a>sp_detach_db (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -52,7 +52,7 @@ sp_detach_db [ @dbname= ] 'database_name'
 ```  
   
 ## <a name="arguments"></a>Argumentos  
- [ **@dbname =** ] **'***database_name***'**  
+ [  **@dbname =** ] **'***database_name***'**  
  Es el nombre de la base de datos que se va a separar. *database_name* es un **sysname** valor, su valor predeterminado es null.  
   
  [  **@skipchecks =** ] **'***skipchecks***'**  
@@ -64,7 +64,7 @@ sp_detach_db [ @dbname= ] 'database_name'
  Especifica que el archivo de índice de texto completo asociado a la base de datos que se va a separar no se quitará durante la operación de separación de la base de datos. *KeepFulltextIndexFile* es un **nvarchar (10)** y su valor predeterminado de **true**. Si *KeepFulltextIndexFile* es **false**, todos los archivos de índice de texto completo asociado a la base de datos y se quitan los metadatos del índice de texto completo, a menos que la base de datos es de solo lectura. Si es NULL o **true**, relacionada con el texto completo se mantienen metadatos.  
   
 > [!IMPORTANT]  
->  El **@keepfulltextindexfile**  parámetro se quitará en una versión futura de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. No use este parámetro en nuevos trabajos de desarrollo, y modifique lo antes posible las aplicaciones que lo usen actualmente.  
+>  El**@keepfulltextindexfile** parámetro se quitará en una versión futura de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. No use este parámetro en nuevos trabajos de desarrollo, y modifique lo antes posible las aplicaciones que lo usen actualmente.  
   
 ## <a name="return-code-values"></a>Valores de código de retorno  
  0 (correcto) o 1 (error)  
@@ -76,7 +76,7 @@ sp_detach_db [ @dbname= ] 'database_name'
  Cuando se desasocia una base de datos, todos sus metadatos se eliminan. Si la base de datos es la base de datos predeterminada de las cuentas de inicio de sesión, **maestro** se convierte en su base de datos predeterminada.  
   
 > [!NOTE]  
->  Para obtener información sobre cómo ver la base de datos predeterminada de todas las cuentas de inicio de sesión, vea [sp_helplogins &#40; Transact-SQL &#41; ](../../relational-databases/system-stored-procedures/sp-helplogins-transact-sql.md). Si tiene los permisos necesarios, puede usar [ALTER LOGIN](../../t-sql/statements/alter-login-transact-sql.md) para asignar una nueva base de datos predeterminada para un inicio de sesión.  
+>  Para obtener información sobre cómo ver la base de datos predeterminada de todas las cuentas de inicio de sesión, vea [sp_helplogins &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-helplogins-transact-sql.md). Si tiene los permisos necesarios, puede usar [ALTER LOGIN](../../t-sql/statements/alter-login-transact-sql.md) para asignar una nueva base de datos predeterminada para un inicio de sesión.  
   
 ## <a name="restrictions"></a>Restricciones  
  No se puede separar una base de datos si se da alguna de estas circunstancias:  

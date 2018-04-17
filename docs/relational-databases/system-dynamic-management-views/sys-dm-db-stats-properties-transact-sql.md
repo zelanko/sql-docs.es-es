@@ -1,16 +1,16 @@
 ---
-title: sys.dm_db_stats_properties (Transact-SQL) | Microsoft Docs
-ms.custom: 
+title: Sys.dm_db_stats_properties (Transact-SQL) | Documentos de Microsoft
+ms.custom: ''
 ms.date: 12/18/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine, sql-database
-ms.service: 
+ms.service: ''
 ms.component: dmv's
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - sys.dm_db_stats_properties_TSQL
@@ -22,16 +22,17 @@ dev_langs:
 helpviewer_keywords:
 - sys.dm_db_stats_properties
 ms.assetid: 8a54889d-e263-4881-9fcb-b1db410a9453
-caps.latest.revision: 
+caps.latest.revision: 13
 author: stevestein
 ms.author: sstein
 manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 3406cfffce07260fc425c2850e548d006f9d796a
-ms.sourcegitcommit: c556eaf60a49af7025db35b7aa14beb76a8158c5
+monikerRange: = azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions
+ms.openlocfilehash: 31a4637f2bdfdddc220ccb930dd4873956ddbf3a
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/03/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="sysdmdbstatsproperties-transact-sql"></a>sys.dm_db_stats_properties (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -57,13 +58,13 @@ sys.dm_db_stats_properties (object_id, stats_id)
 |-----------------|---------------|-----------------|  
 |object_id|**int**|Identificador del objeto (tabla o vista indizada) para el que se devuelven las propiedades del objeto de estadísticas.|  
 |stats_id|**int**|Identificador del objeto de estadísticas. Es único dentro de la vista indizada o la tabla. Para obtener más información, vea [sys.stats &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-stats-transact-sql.md).|  
-|last_updated|**datetime2**|Fecha y hora de la última actualización del objeto de estadísticas. Para obtener más información, consulte el [comentarios](#Remarks) sección en esta página.|  
+|last_updated|**datetime2**|Fecha y hora de la última actualización del objeto de estadísticas. Para más información, vea la sección [Comentarios](#Remarks) en esta página.|  
 |rows|**bigint**|Número total de filas que tenía la tabla o la vista indizada la última vez que se actualizaron las estadísticas. Si las estadísticas se filtran o corresponden a un índice filtrado, el número de filas puede ser inferior al número de filas de la tabla.|  
 |rows_sampled|**bigint**|Número total de filas muestreadas para cálculos de estadísticas.|  
 |pasos|**int**|Número de pasos del histograma. Para obtener más información, vea [DBCC SHOW_STATISTICS &#40;Transact-SQL&#41;](../../t-sql/database-console-commands/dbcc-show-statistics-transact-sql.md)no incluye la vista.|  
 |unfiltered_rows|**bigint**|Número total de filas de la tabla antes de aplicar la expresión de filtro (para estadísticas filtradas). Si las estadísticas no están filtradas, unfiltered_rows es igual al valor devuelto en la columna rows.|  
 |modification_counter|**bigint**|Número total de modificaciones para la columna de estadísticas iniciales (la columna en la que se ha generado el histograma) desde la última vez que se actualizaron las estadísticas.<br /><br /> Tablas optimizadas en memoria: iniciando [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] y en [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] esta columna contiene: número total de modificaciones de la tabla desde que se actualizaron las estadísticas de tiempo de último o se ha reiniciado la base de datos.|  
-|persisted_sample_percent|**float**|Conserva el porcentaje de ejemplo que se usan para las actualizaciones de estadísticas que no especifican explícitamente un porcentaje de muestreo. Si el valor es cero, no hay ningún porcentaje de ejemplo persistente se establece para esta estadística.<br /><br /> **Se aplica a:** [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] SP1 CU4|  
+|persisted_sample_percent|**float**|Porcentaje de ejemplo persistente empleado en las actualizaciones de estadísticas en las que no se especifica explícitamente un porcentaje de muestreo. Si el valor es cero, significa que no hay establecido ningún porcentaje de ejemplo persistente para esta estadística.<br /><br /> **Se aplica a:** [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] SP1 CU4|  
   
 ## <a name="Remarks"></a> Comentarios  
  **Sys.dm_db_stats_properties** devuelve un conjunto de filas vacío en cualquiera de las condiciones siguientes:  
@@ -75,7 +76,7 @@ sys.dm_db_stats_properties (object_id, stats_id)
   
  Este comportamiento permite el uso seguro de **sys.dm_db_stats_properties** cuando entre aplicado a las filas en las vistas como **sys.objects** y **sys.stats**.  
  
-Fecha de actualización de estadísticas se almacena en la [statistics, objeto blob](../../relational-databases/statistics/statistics.md#DefinitionQOStatistics) junto con el [histograma](../../relational-databases/statistics/statistics.md#histogram) y [vector de densidad](../../relational-databases/statistics/statistics.md#density), pero no en los metadatos. Cuando se lee ningún dato para generar datos de estadísticas, no se creó el blob de estadísticas, no está disponible, la fecha y la *last_updated* columna es NULL. Este es el caso de las estadísticas filtradas para que el predicado no devuelve ninguna fila, o para nuevas tablas vacías.
+La fecha de actualización de estadísticas se almacena en el [objeto BLOB de estadísticas](../../relational-databases/statistics/statistics.md#DefinitionQOStatistics) junto con el [histograma](../../relational-databases/statistics/statistics.md#histogram) y el [vector de densidad](../../relational-databases/statistics/statistics.md#density), pero no en los metadatos. Cuando se lee ningún dato para generar datos de estadísticas, no se creó el blob de estadísticas, no está disponible, la fecha y la *last_updated* columna es NULL. Esto sucede en las estadísticas filtradas, en las que el predicado no devuelve ninguna fila, o en las tablas nuevas vacías.
   
 ## <a name="permissions"></a>Permissions  
  Necesita que el usuario tenga permisos de selección en columnas de estadísticas o posea la tabla, o que el usuario sea miembro del rol fijo de servidor `sysadmin`, del rol fijo de base de datos `db_owner` o del rol fijo de base de datos `db_ddladmin`.  

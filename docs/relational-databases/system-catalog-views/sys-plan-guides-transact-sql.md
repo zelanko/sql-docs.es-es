@@ -1,16 +1,16 @@
 ---
 title: Sys.plan_guides (Transact-SQL) | Documentos de Microsoft
-ms.custom: 
+ms.custom: ''
 ms.date: 06/10/2016
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine, sql-database
-ms.service: 
+ms.service: ''
 ms.component: system-catalog-views
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - sys.planguides_TSQL
@@ -22,16 +22,17 @@ dev_langs:
 helpviewer_keywords:
 - sys.plan_guides catalog view
 ms.assetid: 3dde0397-ef6f-4b3f-8250-3f25584eb62b
-caps.latest.revision: 
+caps.latest.revision: 24
 author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 591bc781d6c156320dffcb06e6e541aeb5b669a3
-ms.sourcegitcommit: 45e4efb7aa828578fe9eb7743a1a3526da719555
+monikerRange: = azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions
+ms.openlocfilehash: b1ae6cfc3e52e970ff4c2aecc825394fc3f975b6
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="sysplanguides-transact-sql"></a>sys.plan_guides (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -47,10 +48,10 @@ ms.lasthandoff: 11/21/2017
 |**is_disabled**|**bit**|1 = La guía de plan está deshabilitada.<br /><br /> 0 = La guía de plan está habilitada.|  
 |**consulta**|**nvarchar(max)**|Es el texto de la consulta en que se crea la guía de plan.|  
 |**scope_type**|**tinyint**|Identifica el ámbito de la guía de plan.<br /><br /> 1 = OBJECT<br /><br /> 2 = SQL<br /><br /> 3 = TEMPLATE|  
-|**scope_type_desc**|**nvarchar (60)**|Descripción del ámbito de la guía de plan.<br /><br /> OBJECT<br /><br /> SQL<br /><br /> TEMPLATE|  
+|**scope_type_desc**|**nvarchar(60)**|Descripción del ámbito de la guía de plan.<br /><br /> OBJECT<br /><br /> SQL<br /><br /> TEMPLATE|  
 |**scope_object_id**|**Int**|Id. del objeto que define el ámbito de la guía de plan si el ámbito es OBJECT.<br /><br /> Es NULL si el ámbito de la guía de plan no es OBJECT.|  
 |**scope_batch**|**nvarchar(max)**|Texto del lote si **scope_type** es SQL.<br /><br /> Es NULL si el tipo de lote no es SQL.<br /><br /> Si es NULL y **scope_type** es SQL, el valor de **query_text** se aplica.|  
-|**parámetros**|**nvarchar(max)**|Es la cadena que define la lista de parámetros asociados a la guía de plan.<br /><br /> NULL = No se asocia ninguna lista de parámetros a la guía de plan.|  
+|**parameters**|**nvarchar(max)**|Es la cadena que define la lista de parámetros asociados a la guía de plan.<br /><br /> NULL = No se asocia ninguna lista de parámetros a la guía de plan.|  
 |**sugerencias**|**nvarchar(max)**|Son las sugerencias de la cláusula OPTION asociadas a la guía de plan.|  
   
 ## <a name="permissions"></a>Permissions  

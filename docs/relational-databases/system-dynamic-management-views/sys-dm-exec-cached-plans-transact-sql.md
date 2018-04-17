@@ -1,8 +1,8 @@
 ---
-title: sys.dm_exec_cached_plans (Transact-SQL) | Microsoft Docs
+title: Sys.dm_exec_cached_plans (Transact-SQL) | Documentos de Microsoft
 ms.custom: ''
 ms.date: 09/18/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine, sql-database
 ms.service: ''
 ms.component: dmv's
@@ -27,11 +27,12 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: bc2cbcac0dee3b509cc499d340aa2adef20ba2bf
-ms.sourcegitcommit: 8b332c12850c283ae413e0b04b2b290ac2edb672
+monikerRange: = azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions
+ms.openlocfilehash: e6ffcabac501e0821024b5d57cf9df9d53afd0a7
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/05/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="sysdmexeccachedplans-transact-sql"></a>sys.dm_exec_cached_plans (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -49,7 +50,7 @@ ms.lasthandoff: 04/05/2018
 |refcounts|**int**|Número de objetos de caché que hacen referencia a este objeto de caché. **RefCounts** debe ser al menos 1 para una entrada en la memoria caché.|  
 |usecounts|**int**|Número de veces que se ha buscado el objeto de caché. Este número no se incrementa cuando las consultas con parámetros encuentran un plan en la memoria caché. Se puede incrementar varias veces cuando se utiliza un plan de representación.|  
 |size_in_bytes|**int**|Número de bytes consumidos por el objeto de caché.|  
-|memory_object_address|**varbinary(8)**|Dirección de memoria de la entrada de caché. Este valor se puede usar con [sys.dm_os_memory_objects](../../relational-databases/system-dynamic-management-views/sys-dm-os-memory-objects-transact-sql.md) para obtener el análisis de memoria del plan almacenado en caché y con [sys.dm_os_memory_cache_entries](../../relational-databases/system-dynamic-management-views/sys-dm-os-memory-cache-entries-transact-sql.md)para obtener el costo de almacenamiento en caché la entrada.|  
+|memory_object_address|**varbinary (8)**|Dirección de memoria de la entrada de caché. Este valor se puede usar con [sys.dm_os_memory_objects](../../relational-databases/system-dynamic-management-views/sys-dm-os-memory-objects-transact-sql.md) para obtener el análisis de memoria del plan almacenado en caché y con [sys.dm_os_memory_cache_entries](../../relational-databases/system-dynamic-management-views/sys-dm-os-memory-cache-entries-transact-sql.md)para obtener el costo de almacenamiento en caché la entrada.|  
 |cacheobjtype|**nvarchar(34)**|Tipo del objeto en la memoria caché. El valor puede ser uno de los siguientes:<br /><br /> Plan compilado<br /><br /> Código auxiliar del plan compilado<br /><br /> Árbol de análisis<br /><br /> Procedimiento extendido<br /><br /> Función compilada CLR<br /><br /> Procedimiento compilado CLR|  
 |objtype|**nvarchar(16)**|Tipo de objeto. A continuación se muestran los valores posibles y sus correspondientes descripciones.<br /><br /> Proceso: Procedimiento almacenado<br />Preparado: Instrucción preparada<br />"Ad hoc": consulta Ad hoc. Hace referencia a [!INCLUDE[tsql](../../includes/tsql-md.md)] enviado como eventos de lenguaje mediante **osql** o **sqlcmd** en lugar de como llamadas a procedimiento remoto.<br />ReplProc: Procedimiento de filtro de replicación<br />Desencadenador: desencadenador<br />Vista: vista<br />Valor predeterminado: predeterminado<br />UsrTab: Tabla de usuario<br />SysTab: Tabla del sistema<br />Comprobación: Restricción CHECK<br />Regla: regla|  
 |plan_handle|**varbinary(64)**|Identificador del plan en memoria. Este identificador es transitorio y permanece constante solo mientras el plan permanece en la memoria caché. Este valor se puede usar con las siguientes funciones de administración dinámica:<br /><br /> [sys.dm_exec_sql_text](../../relational-databases/system-dynamic-management-views/sys-dm-exec-sql-text-transact-sql.md)<br /><br /> [sys.dm_exec_query_plan](../../relational-databases/system-dynamic-management-views/sys-dm-exec-query-plan-transact-sql.md)<br /><br /> [sys.dm_exec_plan_attributes](../../relational-databases/system-dynamic-management-views/sys-dm-exec-plan-attributes-transact-sql.md)|  

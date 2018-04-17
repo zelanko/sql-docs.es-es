@@ -1,29 +1,30 @@
 ---
 title: Tipos definidos por el usuario CLR grandes (OLE DB) | Documentos de Microsoft
-ms.custom: 
+ms.custom: ''
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
-ms.service: 
+ms.service: ''
 ms.component: native-client-ole-db
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: 
-ms.tgt_pltfrm: 
+ms.technology: ''
+ms.tgt_pltfrm: ''
 ms.topic: reference
 helpviewer_keywords:
 - large CLR user-defined types [OLE DB]
 ms.assetid: 4bf12058-0534-42ca-a5ba-b1c23b24d90f
-caps.latest.revision: 
+caps.latest.revision: 24
 author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: a6bdb5767937e4fbfdf7dd92cc683fe7830e066a
-ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
+monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
+ms.openlocfilehash: 25a6a8fe27093f70ac84da9a6b32f4cb72b31761
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/25/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="large-clr-user-defined-types-ole-db"></a>Tipos definidos por el usuario de CLR grandes (OLE DB)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -31,7 +32,7 @@ ms.lasthandoff: 01/25/2018
 
   En este tema se describen los cambios realizados en OLE DB en [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client para admitir tipos definidos por el usuario (UDT) de Common Language Runtime (CLR) grandes.  
   
- Para obtener más información sobre la compatibilidad con UDT CLR grandes en [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client, vea [Large CLR User-Defined tipos](../../../relational-databases/native-client/features/large-clr-user-defined-types.md). Para obtener un ejemplo, vea [UDT de CLR grandes de uso & #40; OLE DB & #41;](../../../relational-databases/native-client-ole-db-how-to/use-large-clr-udts-ole-db.md).  
+ Para obtener más información sobre la compatibilidad con UDT CLR grandes en [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client, vea [Large CLR User-Defined tipos](../../../relational-databases/native-client/features/large-clr-user-defined-types.md). Para obtener un ejemplo, vea [UDT de CLR grandes de uso &#40;OLE DB&#41;](../../../relational-databases/native-client-ole-db-how-to/use-large-clr-udts-ole-db.md).  
   
 ## <a name="data-format"></a>Formato de datos  
  [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client utiliza ~0 para representar la longitud de valores de tamaño ilimitado en tipos de objeto grandes (LOB). ~0 también representa el tamaño de UDT CLR superiores a 8.000 bytes.  
@@ -173,7 +174,7 @@ ms.lasthandoff: 01/25/2018
   
 |Versión del cliente|DBTYPE_UDT<br /><br /> (longitud menor o igual a 8.000 bytes)|DBTYPE_UDT<br /><br /> (longitud mayor que 8.000 bytes)|  
 |--------------------|------------------------------------------------------------------|---------------------------------------------------------|  
-|Resultado de|UDT|varbinary(max)|  
+|SQL Server 2005|UDT|varbinary(max)|  
 |SQL Server 2008 y posterior|UDT|UDT|  
   
  Cuando **DataTypeCompatibility** (SSPROP_INIT_DATATYPECOMPATIBILITY) se establece en "80", los tipos UDT grandes se muestran a los clientes de la misma manera que aparecen para los clientes de nivel inferior.  

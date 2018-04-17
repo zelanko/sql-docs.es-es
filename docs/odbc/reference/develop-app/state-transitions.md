@@ -1,15 +1,16 @@
 ---
 title: Transiciones de estado | Documentos de Microsoft
-ms.custom: 
+ms.custom: ''
 ms.date: 01/19/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: drivers
-ms.service: 
+ms.service: ''
 ms.component: odbc
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: drivers
-ms.tgt_pltfrm: 
+ms.technology:
+- drivers
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - state transitions [ODBC]
@@ -18,16 +19,16 @@ helpviewer_keywords:
 - allocated state [ODBC]
 - connection state [ODBC]
 ms.assetid: fc741611-6535-43cc-8156-6d897d04664e
-caps.latest.revision: "5"
+caps.latest.revision: 5
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 6795a0e730f1b927b7921863714a2a9db55551e4
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: c94806fae462803c3323c3e3c5768751e53a5467
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="state-transitions"></a>Transiciones de estado
 ODBC define discretos *estados* para cada entorno, cada conexión y cada instrucción. Por ejemplo, el entorno tiene tres posibles estados: sin asignar (en la que no se asigna ningún entorno), asignado (en el que se asigna un entorno pero no se asigna a ninguna conexión) y conexión (en el que un entorno y una o varias conexiones son asignado). Las conexiones tienen siete estados posibles; las instrucciones tienen 13 estados posibles.  

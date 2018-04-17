@@ -1,15 +1,15 @@
 ---
-title: "Administración de servicios y la configuración de red mediante el proveedor WMI | Documentos de Microsoft"
-ms.custom: 
+title: Administración de servicios y la configuración de red mediante el proveedor WMI | Documentos de Microsoft
+ms.custom: ''
 ms.date: 08/06/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine
-ms.service: 
+ms.service: ''
 ms.component: smo
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: 
-ms.tgt_pltfrm: 
+ms.technology: ''
+ms.tgt_pltfrm: ''
 ms.topic: reference
 helpviewer_keywords:
 - WMI provider [SMO]
@@ -17,16 +17,17 @@ helpviewer_keywords:
 - network settings [SMO]
 - monitoring [SMO]
 ms.assetid: ef8c3986-1098-4f21-b03a-f1f6bdb51c26
-caps.latest.revision: 
+caps.latest.revision: 40
 author: stevestein
 ms.author: sstein
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 326c98022af0adbb6e508cc9ba8c6e63f7fd6d23
-ms.sourcegitcommit: cb2f9d4db45bef37c04064a9493ac2c1d60f2c22
+monikerRange: = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions
+ms.openlocfilehash: 9c51b98340f2f8a835607bf5d71e5bf759128812
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/12/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="managing-services-and-network-settings-by-using-wmi-provider"></a>Administrar servicios y configuración de red utilizando el proveedor WMI
 [!INCLUDE[appliesto-ss-asdb-asdw-xxx-md](../../../includes/appliesto-ss-asdb-asdw-xxx-md.md)]
@@ -36,7 +37,7 @@ ms.lasthandoff: 01/12/2018
  El <xref:Microsoft.SqlServer.Management.Smo.Wmi.ManagedComputer> objeto funciona independientemente de la conexión establecida con el <xref:Microsoft.SqlServer.Management.Smo.Server> objeto a una instancia de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]y utiliza las credenciales de Windows para conectarse al servicio WMI.  
   
 ## <a name="example"></a>Ejemplo  
-Para utilizar cualquier ejemplo de código que se proporcione, deberá elegir el entorno de programación, la plantilla de programación y el lenguaje de programación en los que crear su aplicación. Para obtener más información, vea [crear a Visual C &#35; Proyecto SMO en Visual Studio .NET](../../../relational-databases/server-management-objects-smo/how-to-create-a-visual-csharp-smo-project-in-visual-studio-net.md).  
+Para utilizar cualquier ejemplo de código que se proporcione, deberá elegir el entorno de programación, la plantilla de programación y el lenguaje de programación en los que crear su aplicación. Para obtener más información, consulte [crear a Visual C&#35; proyecto SMO en Visual Studio .NET](../../../relational-databases/server-management-objects-smo/how-to-create-a-visual-csharp-smo-project-in-visual-studio-net.md).  
 
   
  Para los programas que utilizan el [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] proveedor de WMI, debe incluir el **importaciones** instrucción para calificar el espacio de nombres WMI. Inserte la instrucción después de las demás instrucciones **Imports** , antes de cualquier declaración de la aplicación, como:  

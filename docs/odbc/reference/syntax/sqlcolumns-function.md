@@ -2,7 +2,7 @@
 title: Función SQLColumns | Documentos de Microsoft
 ms.custom: ''
 ms.date: 01/19/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: drivers
 ms.service: ''
 ms.component: odbc
@@ -25,13 +25,13 @@ ms.assetid: 4a3618b7-d2b8-43c6-a1fd-7a4e6fa8c7d0
 caps.latest.revision: 28
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 7cb9d78a2ee194779f9e01dfd313ae4846d5a804
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: 86cf72d9a0f061b4cdec3416df315c1e8f9fe91b
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="sqlcolumns-function"></a>Función SQLColumns
 **Conformidad**  
@@ -69,7 +69,7 @@ SQLRETURN SQLColumns(
  *NameLength1*  
  [Entrada] Longitud en caracteres de **CatalogName*.  
   
- *SchemaName*  
+ *schemaName*  
  [Entrada] Patrón de búsqueda de cadena para los nombres de esquema. Si un controlador es compatible con esquemas para algunas tablas pero no para otros usuarios, por ejemplo, cuando el controlador JDBC recupera datos de los DBMS tiene diferentes, una cadena vacía ("") indica las tablas que no tengan esquemas.  
   
 > [!NOTE]  
@@ -78,7 +78,7 @@ SQLRETURN SQLColumns(
  *NameLength2*  
  [Entrada] Longitud en caracteres de **SchemaName*.  
   
- *Nombre de tabla*  
+ *TableName*  
  [Entrada] Patrón de búsqueda de cadena para los nombres de tabla.  
   
 > [!NOTE]  
@@ -164,7 +164,7 @@ SQLRETURN SQLColumns(
   
  En la tabla siguiente se enumera las columnas del conjunto de resultados. Columnas adicionales más allá de la columna 18 (IS_NULLABLE) pueden definirse mediante el controlador. Una aplicación debe tener acceso a columnas específicas del controlador contando hacia abajo desde el final del conjunto en lugar de especificar una posición ordinal explícitos de resultados. Para obtener más información, consulte [datos devueltos por las funciones de catálogo](../../../odbc/reference/develop-app/data-returned-by-catalog-functions.md).  
   
-|Nombre de columna|columna<br /><br /> number|Tipo de datos|Comentarios|  
+|Nombre de columna|Columna<br /><br /> number|Tipo de datos|Comentarios|  
 |-----------------|-----------------------|---------------|--------------|  
 |TABLE_CAT (ODBC 1.0)|1|Varchar|Nombre del catálogo; Es NULL si no es aplicable al origen de datos. Si un controlador admite catálogos para algunas tablas pero no para otros, como cuando el controlador recupera datos de diferentes DBMS, devuelve una cadena vacía ("") para las tablas que no tiene catálogos.|  
 |SEGÚN TABLE_SCHEM (ODBC 1.0)|2|Varchar|Nombre del esquema; Es NULL si no es aplicable al origen de datos. Si un controlador es compatible con esquemas para algunas tablas pero no para otros, como cuando el controlador recupera datos de diferentes DBMS, devuelve una cadena vacía ("") para las tablas que no tengan esquemas.|  

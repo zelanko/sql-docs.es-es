@@ -1,16 +1,16 @@
 ---
-title: sys.dm_db_xtp_object_stats (Transact-SQL) | Microsoft Docs
-ms.custom: 
+title: Sys.dm_db_xtp_object_stats (Transact-SQL) | Documentos de Microsoft
+ms.custom: ''
 ms.date: 08/29/2016
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine, sql-database
-ms.service: 
+ms.service: ''
 ms.component: dmv's
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - dm_db_xtp_object_stats_TSQL
@@ -22,16 +22,17 @@ dev_langs:
 helpviewer_keywords:
 - sys.dm_db_xtp_object_stats dynamic management view
 ms.assetid: 07300b59-3cab-4d3e-8138-5ea8f584f88f
-caps.latest.revision: 
+caps.latest.revision: 18
 author: stevestein
 ms.author: sstein
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 7610e24b87a2a6dff0ffefbd5a786acf8191dca5
-ms.sourcegitcommit: c556eaf60a49af7025db35b7aa14beb76a8158c5
+monikerRange: = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions
+ms.openlocfilehash: 541b44c7783064c997536c987b75412b9ee58613
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/03/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="sysdmdbxtpobjectstats-transact-sql"></a>sys.dm_db_xtp_object_stats (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2014-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2014-asdb-xxxx-xxx-md.md)]
@@ -54,12 +55,12 @@ ms.lasthandoff: 02/03/2018
 |row_delete_attempts|**bigint**|Número de filas eliminadas de la tabla desde el último reinicio de la base de datos por las transacciones confirmadas y anuladas.|  
 |write_conflicts|**bigint**|Número de conflictos de escritura que se produjeron desde el último reinicio de la base de datos.|  
 |unique_constraint_violations|**bigint**|Número de infracciones de la restricción UNIQUE que se han producido desde el último reinicio de la base de datos.|  
-|object_address|**varbinary(8)**|Exclusivamente para uso interno.|  
+|object_address|**varbinary (8)**|Exclusivamente para uso interno.|  
   
 ## <a name="permissions"></a>Permissions  
  Requiere el permiso VIEW DATABASE STATE en la base de datos actual.  
   
 ## <a name="see-also"></a>Vea también  
- [Vistas de administración dinámica de la tabla optimizada en memoria &#40; Transact-SQL &#41;](../../relational-databases/system-dynamic-management-views/memory-optimized-table-dynamic-management-views-transact-sql.md)  
+ [Vistas de administración dinámica de tablas optimizadas en memoria &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/memory-optimized-table-dynamic-management-views-transact-sql.md)  
   
   

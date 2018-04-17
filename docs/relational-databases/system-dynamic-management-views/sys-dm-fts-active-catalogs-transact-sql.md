@@ -1,8 +1,8 @@
 ---
-title: sys.dm_fts_active_catalogs (Transact-SQL) | Microsoft Docs
+title: Sys.dm_fts_active_catalogs (Transact-SQL) | Documentos de Microsoft
 ms.custom: ''
 ms.date: 03/29/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine, sql-database
 ms.service: ''
 ms.component: dmv's
@@ -27,11 +27,12 @@ author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: a4cf1900b52953f296a931f40f850b94a1243158
-ms.sourcegitcommit: 8b332c12850c283ae413e0b04b2b290ac2edb672
+monikerRange: = azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions
+ms.openlocfilehash: 8104491ddcdf6c63e872da7a70374f8475cb1a62
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/05/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="sysdmftsactivecatalogs-transact-sql"></a>sys.dm_fts_active_catalogs (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -46,7 +47,7 @@ ms.lasthandoff: 04/05/2018
 |-----------------|---------------|-----------------|  
 |**database_id**|**int**|Id. de la base de datos que contiene el catálogo de texto completo activo.|  
 |**catalog_id**|**int**|Id. del catálogo de texto completo activo.|  
-|**memory_address**|**varbinary(8)**|Dirección de búferes de memoria asignados para la actividad de llenado relacionada con este catálogo de texto completo.|  
+|**memory_address**|**varbinary (8)**|Dirección de búferes de memoria asignados para la actividad de llenado relacionada con este catálogo de texto completo.|  
 |**Nombre**|**nvarchar(128)**|Nombre del catálogo de texto completo activo.|  
 |**is_paused**|**bit**|Indica si el llenado del catálogo de texto completo activo se ha pausado.|  
 |**status**|**int**|Estado actual del catálogo de texto completo. Uno de los siguientes:<br /><br /> 0 = Inicializando<br /><br /> 1 = Preparado<br /><br /> 2 = En pausa<br /><br /> 3 = Error temporal<br /><br /> 4 = Necesario volver a montar<br /><br /> 5 = Apagado<br /><br /> 6 = En modo inactivo para copia de seguridad<br /><br /> 7 = La copia de seguridad se realiza a través del catálogo<br /><br /> 8 = El catálogo está dañado|  

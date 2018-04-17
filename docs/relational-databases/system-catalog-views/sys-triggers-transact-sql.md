@@ -1,16 +1,16 @@
 ---
 title: Sys.Triggers (Transact-SQL) | Documentos de Microsoft
-ms.custom: 
+ms.custom: ''
 ms.date: 06/10/2016
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine, sql-database
-ms.service: 
+ms.service: ''
 ms.component: system-catalog-views
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - triggers
@@ -22,16 +22,17 @@ dev_langs:
 helpviewer_keywords:
 - sys.triggers catalog view
 ms.assetid: cefa4fc4-b8b9-4cd7-b124-eed5283acbfc
-caps.latest.revision: 
+caps.latest.revision: 22
 author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: ab5788614af71fe9fa4cab1a4f22e81d5a19a6d8
-ms.sourcegitcommit: 45e4efb7aa828578fe9eb7743a1a3526da719555
+monikerRange: = azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions
+ms.openlocfilehash: 9649e579c74ee745b7649e7a812c39a6ce8557f8
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="systriggers-transact-sql"></a>sys.triggers (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -45,10 +46,10 @@ ms.lasthandoff: 11/21/2017
 |**Nombre**|**sysname**|Nombre del desencadenador. Los nombres de desencadenador DML se encuentran en el ámbito de esquema. Los nombres de desencadenador DDL se encuentran en el ámbito con respecto a la entidad primaria.|  
 |**object_id**|**int**|Número de identificación del objeto. Es único en una base de datos.|  
 |**parent_class**|**tinyint**|Clase del elemento primario del desencadenador.<br /><br /> 0 = Base de datos para los desencadenadores DDL.<br /><br /> 1 = Objeto o columna para los desencadenadores DML.|  
-|**parent_class_desc**|**nvarchar (60)**|Descripción de la clase primaria del desencadenador.<br /><br /> DATABASE<br /><br /> OBJECT_OR_COLUMN|  
+|**parent_class_desc**|**nvarchar(60)**|Descripción de la clase primaria del desencadenador.<br /><br /> DATABASE<br /><br /> OBJECT_OR_COLUMN|  
 |**parent_id**|**int**|Id. del elemento primario del desencadenador, como se indica a continuación:<br /><br /> 0 = Desencadenadores que son desencadenadores primarios de la base de datos.<br /><br /> Desencadenadores DML, se trata de la **object_id** de la tabla o vista en el que está definido el desencadenador DML.|  
-|**tipo**|**Char(2)**|Tipo de objeto:<br /><br /> TA = Desencadenador de ensamblado (CLR)<br /><br /> TR = Desencadenador SQL|  
-|**type_desc**|**nvarchar (60)**|Descripción del tipo de objeto.<br /><br /> CLR_TRIGGER<br /><br /> SQL_TRIGGER|  
+|**Tipo**|**char(2)**|Tipo de objeto:<br /><br /> TA = Desencadenador de ensamblado (CLR)<br /><br /> TR = Desencadenador SQL|  
+|**type_desc**|**nvarchar(60)**|Descripción del tipo de objeto.<br /><br /> CLR_TRIGGER<br /><br /> SQL_TRIGGER|  
 |**create_date**|**datetime**|Fecha de creación del desencadenador.|  
 |**modify_date**|**datetime**|Fecha en que se modificó el objeto por última vez con una instrucción ALTER.|  
 |**is_ms_shipped**|**bit**|Desencadenador creado en nombre del usuario por un componente interno de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].|  

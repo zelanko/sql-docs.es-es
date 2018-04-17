@@ -1,32 +1,33 @@
 ---
-title: sys.pdw_loader_backup_runs (Transact-SQL) | Microsoft Docs
-ms.custom: 
+title: Sys.pdw_loader_backup_runs (Transact-SQL) | Documentos de Microsoft
+ms.custom: ''
 ms.date: 03/06/2017
-ms.prod: 
+ms.prod: ''
 ms.prod_service: sql-data-warehouse, pdw
 ms.service: sql-data-warehouse
 ms.component: system-catalog-views
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 dev_langs:
 - TSQL
 ms.assetid: 2b72034c-6a11-46b9-a76c-7a88b2bea360
-caps.latest.revision: 
+caps.latest.revision: 10
 author: barbkess
 ms.author: barbkess
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 2bc42a27de363d0c1f3e62a4b3f69b8b9fbb95de
-ms.sourcegitcommit: c556eaf60a49af7025db35b7aa14beb76a8158c5
+monikerRange: '>= aps-pdw-2016 || = azure-sqldw-latest || = sqlallproducts-allversions'
+ms.openlocfilehash: 97f8e1daef758d82f2e4dbbbc4cc4b9f15a6740d
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/03/2018
+ms.lasthandoff: 04/16/2018
 ---
-# <a name="syspdwloaderbackupruns-transact-sql"></a>sys.pdw_loader_backup_runs (Transact-SQL)
+# <a name="syspdwloaderbackupruns-transact-sql"></a>Sys.pdw_loader_backup_runs (Transact-SQL)
 [!INCLUDE[tsql-appliesto-xxxxxx-xxxx-asdw-pdw-md](../../includes/tsql-appliesto-xxxxxx-xxxx-asdw-pdw-md.md)]
 
   Contiene información acerca de la copia de seguridad en curso y completada y las operaciones de restauración en [!INCLUDE[ssSDW](../../includes/sssdw-md.md)]y copia de seguridad en curso y completada, restauración así como operaciones de carga en [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]. La información se conserva entre reinicios del sistema.  
@@ -44,8 +45,8 @@ ms.lasthandoff: 02/03/2018
 |database_name|**nvarchar(255)**|Nombre de la base de datos que es el contexto de esta operación||  
 |table_name|**nvarchar(255)**|[!INCLUDE[ssInfoNA](../../includes/ssinfona-md.md)]||  
 |Principal_id|**int**|Id. del usuario que solicita la operación.||  
-|session_id|**nvarchar(32)**|Identificador de la sesión que se realiza la operación.|Vea "session_ID" en [sys.dm_pdw_exec_sessions &#40; Transact-SQL &#41; ](../../relational-databases/system-dynamic-management-views/sys-dm-pdw-exec-sessions-transact-sql.md).|  
-|request_id|**nvarchar(32)**|Identificador de la solicitud que se realiza la operación. Para las cargas, ésta es la solicitud última o actual asociada con esta carga...|See request_id in [sys.dm_pdw_exec_requests &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-pdw-exec-requests-transact-sql.md).|  
+|session_id|**nvarchar(32)**|Identificador de la sesión que se realiza la operación.|Vea "session_ID" en [sys.dm_pdw_exec_sessions &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-pdw-exec-sessions-transact-sql.md).|  
+|request_id|**nvarchar(32)**|Identificador de la solicitud que se realiza la operación. Para las cargas, ésta es la solicitud última o actual asociada con esta carga...|Vea request_id en [sys.dm_pdw_exec_requests &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-pdw-exec-requests-transact-sql.md).|  
 |status|**nvarchar(16)**|Estado de la ejecución.|'CANCELAR', 'COMPLETADA', 'ERROR', 'QUEUED', 'EJECUTANDO'|  
 |progreso|**int**|Porcentaje completado.|de 0 a 100|  
 |comando|**nvarchar(4000)**|Texto completo del comando enviado por el usuario.|Se truncará si es superior a 4000 caracteres (contando espacios).|  

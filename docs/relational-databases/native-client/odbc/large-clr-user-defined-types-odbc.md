@@ -1,30 +1,31 @@
 ---
 title: Tipos definidos por el usuario CLR grandes (ODBC) | Documentos de Microsoft
-ms.custom: 
+ms.custom: ''
 ms.date: 03/17/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
-ms.service: 
+ms.service: ''
 ms.component: native-client|ODBC
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: 
-ms.tgt_pltfrm: 
+ms.technology: ''
+ms.tgt_pltfrm: ''
 ms.topic: reference
 helpviewer_keywords:
 - ODBC, large user-defined types
 - large user-defined types [ODBC]
 ms.assetid: ddce337e-bb6e-4a30-b7cc-4969bb1520a9
-caps.latest.revision: 
+caps.latest.revision: 15
 author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 4da32a24c00ca9539cca04c3886d19f73f9ab578
-ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
+monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
+ms.openlocfilehash: ed85a2386d3d02df2af2e22805cea464cf2d130d
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/25/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="large-clr-user-defined-types-odbc"></a>Tipos CLR grandes definidos por el usuario (ODBC)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -142,7 +143,7 @@ ms.lasthandoff: 01/25/2018
 |SQL_C_BINARY|Compatible|  
 |SQL_C_CHAR|Admite *|  
   
- \*Datos binarios se convierten en una cadena hexadecimal.  
+ \* Datos binarios se convierten en una cadena hexadecimal.  
   
  Las conversiones compatibles de tipos de datos C a SQL son las siguientes:  
   
@@ -152,7 +153,7 @@ ms.lasthandoff: 01/25/2018
 |SQL_C_BINARY|Compatible|  
 |SQL_C_CHAR|Admite *|  
   
- \*Se produce una cadena hexadecimal a la conversión de datos binarios.  
+ \* Se produce una cadena hexadecimal a la conversión de datos binarios.  
   
 ## <a name="sqlvariant-support-for-udts"></a>Compatibilidad de SQL_VARIANT con los UDT  
  Los UDT no se admiten en columnas SQL_VARIANT.  
@@ -165,7 +166,7 @@ ms.lasthandoff: 01/25/2018
   
 |Versión del servidor|SQL_SS_UDT<br /><br /> (longitud menor o igual a 8.000 bytes)|SQL_SS_UDT<br /><br /> (longitud mayor que 8.000 bytes)|  
 |--------------------|-------------------------------------------------------------------|----------------------------------------------------------|  
-|Resultado de|**UDT**|**varbinary(max)**|  
+|SQL Server 2005|**UDT**|**varbinary(max)**|  
 |SQL Server 2008 y posterior|**UDT**|**UDT**|  
   
 ## <a name="odbc-functions-supporting-large-clr-udts"></a>Funciones ODBC compatibles con UDT de CLR grandes  

@@ -1,7 +1,7 @@
 ---
-title: sp_addsubscription (Transact-SQL) | Microsoft Docs
+title: sp_addsubscription (Transact-SQL) | Documentos de Microsoft
 ms.date: 10/28/2015
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine
 ms.service: ''
 ms.component: system-stored-procedures
@@ -23,11 +23,11 @@ author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 860f2f99457344167af9035d0a9ccc21eebc2577
-ms.sourcegitcommit: d6b1695c8cbc70279b7d85ec4dfb66a4271cdb10
+ms.openlocfilehash: 08b375e45d672ca7f1286a8012ca0c5a6304c481
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/10/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="spaddsubscription-transact-sql"></a>sp_addsubscription (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -85,7 +85,7 @@ sp_addsubscription [ @publication = ] 'publication'
  [ @publication=] '*publicación*'  
  Es el nombre de la publicación. *publicación* es **sysname**, no tiene ningún valor predeterminado.  
   
- [ @article=] '*article*'  
+ [ @article=] '*artículo*'  
  Es el artículo al que está suscrita la publicación. *artículo* es **sysname**, con un valor predeterminado es all. Si el valor es all, se agrega una suscripción a todos los artículos de esa publicación. Los publicadores de Oracle solo admiten los valores all o NULL.  
   
  [ @subscriber=] '*suscriptor*'  
@@ -108,7 +108,7 @@ sp_addsubscription [ @publication = ] 'publication'
 > [!NOTE]  
 >  Las tablas y los datos del sistema se transfieren siempre.  
   
- [ @status=] '*status*'  
+ [ @status=] '*estado*'  
  Es el estado de la suscripción. *estado* es **sysname**, su valor predeterminado es null. Si este parámetro no se establece de forma explícita, la replicación lo establece automáticamente en uno de estos valores.  
   
 |Value|Description|  
@@ -135,7 +135,7 @@ sp_addsubscription [ @publication = ] 'publication'
   
  Tenga en cuenta que los valores synctran y queued tran no se permiten si la publicación que se está suscribiendo permite DTS.  
   
- [ @loopback_detection=] '*loopback_detection*'  
+ [ @loopback_detection=] '*el argumento loopback_detection*'  
  Especifica si el agente de distribución envía transacciones originadas en el suscriptor al mismo suscriptor. *el argumento loopback_detection* es **nvarchar (5)**, y puede tener uno de estos valores.  
   
 |Value|Description|  
@@ -211,19 +211,19 @@ sp_addsubscription [ @publication = ] 'publication'
  [ @enabled_for_syncmgr=] '*enabled_for_syncmgr*'  
  Indica si se puede sincronizar la suscripción a través de [!INCLUDE[msCoName](../../includes/msconame-md.md)] Administrador de sincronización de Windows. *enabled_for_syncmgr* es **nvarchar (5)**, con un valor predeterminado es FALSE. Si el valor es false, la suscripción no se registra con el Administrador de sincronización de Windows. Si el valor es true, la suscripción se registra con el Administrador de sincronización de Windows y se puede sincronizar sin iniciar [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]. No es compatible con publicadores de Oracle.  
   
- [ @offloadagent= ] '*remote_agent_activation*'  
+ [ @offloadagent=] '*remote_agent_activation*'  
  Especifica que el agente puede activarse de manera remota. *remote_agent_activation* es **bits** con un valor predeterminado es 0.  
   
 > [!NOTE]  
 >  Este parámetro ha quedado desusado y solamente se mantiene por compatibilidad con versiones anteriores de scripts.  
   
- [ @offloadserver= ] '*remote_agent_server_name*'  
+ [ @offloadserver=] '*remote_agent_server_name*'  
  Especifica el nombre de red del servidor que se utilizará en la activación remota. *remote_agent_server_name*es **sysname**, su valor predeterminado es null.  
   
- [ @dts_package_name= ] '*dts_package_name*'  
+ [ @dts_package_name=] '*dts_package_name*'  
  Especifica el nombre del paquete de Servicios de transformación de datos (DTS). *dts_package_name* es un **sysname** con un valor predeterminado es NULL. Por ejemplo, para especificar un paquete DTSPub_Package, el parámetro sería `@dts_package_name = N'DTSPub_Package'`. Este parámetro está disponible para suscripciones de inserción. Paga agregar información de un paquete DTS a una suscripción de extracción, utilice sp_addpullsubscription_agent.  
   
- [ @dts_package_password= ] '*dts_package_password*'  
+ [ @dts_package_password=] '*dts_package_password*'  
  Especifica la contraseña del paquete, si procede. *dts_package_password* es **sysname** con un valor predeterminado es NULL.  
   
 > [!NOTE]  
@@ -235,7 +235,7 @@ sp_addsubscription [ @publication = ] 'publication'
  [ @distribution_job_name=] '*distribution_job_name*'  
  [!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]  
   
- [ @publisher= ] '*publisher*'  
+ [ @publisher=] '*publisher*'  
  Especifica un no[!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Publisher. *Publisher* es **sysname**, su valor predeterminado es null.  
   
 > [!NOTE]  
@@ -261,7 +261,7 @@ sp_addsubscription [ @publication = ] 'publication'
 > [!NOTE]  
 >  [!INCLUDE[ssNoteDepFutureAvoid](../../includes/ssnotedepfutureavoid-md.md)]  
   
- [ @password= ] '*password*'  
+ [ @password=] '*contraseña*'  
  Especifica una contraseña para la copia de seguridad si esta se estableció al crear la copia de seguridad. *contraseña*es **sysname**, su valor predeterminado es null.  
   
  [ @fileidhint= ] *fileidhint*  

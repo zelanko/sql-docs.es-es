@@ -1,6 +1,6 @@
 ---
-title: Descargue e instale Microsoft SQL Operations Studio (preview) | Documentos de Microsoft
-description: Descargue e instale Microsoft SQL Operations Studio (preview) para Windows, Mac OS o Linux
+title: Descargue e instale Microsoft SQL operaciones Studio (versión preliminar) | Documentos de Microsoft
+description: Descargue e instale Microsoft SQL operaciones Studio (versión preliminar) para Windows, Mac OS o Linux
 ms.custom: tools|sos
 ms.date: 03/28/2018
 ms.prod: sql-non-specified
@@ -14,11 +14,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 5bf4e79bc1f7092ebe95ff29079f3412306cf7b1
-ms.sourcegitcommit: d6b1695c8cbc70279b7d85ec4dfb66a4271cdb10
+ms.openlocfilehash: 836d34cdb019b7defd16736b21485a32474a8757
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/08/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="download-and-install-sql-operations-studio-preview"></a>Descargue e instale SQL Operations Studio (versión preliminar)
 
@@ -29,8 +29,8 @@ Descargue e instale la versión más reciente, la *marzo Public Preview*:
 |Plataforma|Descargar|Fecha de lanzamiento| Versión |
 |:---|:---|:---|:---|
 |Windows|[Instalador](https://go.microsoft.com/fwlink/?linkid=870837)<br>[.zip](https://go.microsoft.com/fwlink/?linkid=870838)|28 de marzo de 2018 |0.27.3|
-|macOS|[.zip](https://go.microsoft.com/fwlink/?linkid=870839)|28 de marzo de 2018 |0.27.3|
-|Linux|[.deb](https://go.microsoft.com/fwlink/?linkid=870842)<br>[.rpm](https://go.microsoft.com/fwlink/?linkid=870841)<br>[.tar.gz](https://go.microsoft.com/fwlink/?linkid=870840)|28 de marzo de 2018 |0.27.3|
+|MacOS|[.zip](https://go.microsoft.com/fwlink/?linkid=870839)|28 de marzo de 2018 |0.27.3|
+|Linux|[.DEB](https://go.microsoft.com/fwlink/?linkid=870842)<br>[.rpm](https://go.microsoft.com/fwlink/?linkid=870841)<br>[. tar.gz](https://go.microsoft.com/fwlink/?linkid=870840)|28 de marzo de 2018 |0.27.3|
 
 Para obtener más información acerca de la versión más reciente, consulte el [notas de la versión](release-notes.md).
 
@@ -60,10 +60,10 @@ Esta versión de [!INCLUDE[name-sos](../includes/name-sos-short.md)] incluye una
 
 ## <a name="get-sql-operations-studio-preview-for-linux"></a>Obtener SQL Operations Studio (versión preliminar) para Linux
 
-1. Descargar [! INCLUIR[nombre sos](../includes/name-sos-short.md) para Linux mediante uno de los instaladores o el archivo tar.gz:
-    - [.deb](https://go.microsoft.com/fwlink/?linkid=870842)
+1. Descargar [!INCLUDE[name-sos](../includes/name-sos-short.md)] para Linux mediante uno de los instaladores o el archivo tar.gz:
+    - [.DEB](https://go.microsoft.com/fwlink/?linkid=870842)
     - [.rpm](https://go.microsoft.com/fwlink/?linkid=870841)
-    - [.tar.gz](https://go.microsoft.com/fwlink/?linkid=870840)
+    - [. tar.gz](https://go.microsoft.com/fwlink/?linkid=870840)
 1. Para extraer el archivo e inicie [!INCLUDE[name-sos](../includes/name-sos-short.md)], abra una nueva ventana de Terminal y escriba los siguientes comandos:
 
    **Instalación de Debian:**
@@ -136,8 +136,8 @@ Si instaló [!INCLUDE[name-sos-short](../includes/name-sos-short.md)] con .zip o
 - Windows Server 2012 (64 bits)
 - Windows Server 2008 R2 (64 bits)
 
-### <a name="macos"></a>macOS
-- macOS 10.13 High Sierra
+### <a name="macos"></a>MacOS
+- macOS 10.13 Sierra alta
 - macOS 10.12 Sierra
 
 ### <a name="linux"></a>Linux

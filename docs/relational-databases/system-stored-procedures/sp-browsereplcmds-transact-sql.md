@@ -1,16 +1,16 @@
 ---
 title: sp_browsereplcmds (Transact-SQL) | Documentos de Microsoft
-ms.custom: 
+ms.custom: ''
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine
-ms.service: 
+ms.service: ''
 ms.component: system-stored-procedures
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - replication
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 applies_to:
 - SQL Server
@@ -20,16 +20,16 @@ f1_keywords:
 helpviewer_keywords:
 - sp_browsereplcmds
 ms.assetid: 30abcb41-1d18-4f43-a692-4c80914c0450
-caps.latest.revision: 
+caps.latest.revision: 34
 author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 9e7a2a18736c95d11447d2330ffbe48c99da3a2f
-ms.sourcegitcommit: 45e4efb7aa828578fe9eb7743a1a3526da719555
+ms.openlocfilehash: 2e7bc94efc680663436b0cc77692c35aaa36bac7
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="spbrowsereplcmds-transact-sql"></a>sp_browsereplcmds (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -69,7 +69,7 @@ sp_browsereplcmds [ [ @xact_seqno_start = ] 'xact_seqno_start' ]
  Especifica si los comandos con los valores especificados *article_id* se devuelven. *article_id* es **int**, su valor predeterminado es null.  
   
  [  **@command_id =**] *command_id*  
- Es la ubicación del comando en [MSrepl_commands &#40; Transact-SQL &#41; ](../../relational-databases/system-tables/msrepl-commands-transact-sql.md) que se desea descodificar. *command_id* es **int**, su valor predeterminado es null. Si se especifica, todos los demás parámetros deben especificarse también, y *xact_seqno_start*deben ser idénticos a *xact_seqno_end*.  
+ Es la ubicación del comando en [MSrepl_commands &#40;Transact-SQL&#41; ](../../relational-databases/system-tables/msrepl-commands-transact-sql.md) que se desea descodificar. *command_id* es **int**, su valor predeterminado es null. Si se especifica, todos los demás parámetros deben especificarse también, y *xact_seqno_start*deben ser idénticos a *xact_seqno_end*.  
   
  [  **@agent_id =**] *agent_id*  
  Especifica que solo se devuelvan comandos para un agente de replicación específico. *agent_id* es **int**, su valor predeterminado es null.  
@@ -88,13 +88,13 @@ sp_browsereplcmds [ [ @xact_seqno_start = ] 'xact_seqno_start' ]
 |**originator_srvname**|**sysname**|Servidor en el que se originó la transacción.|  
 |**originator_db**|**sysname**|Base de datos en la que se originó la transacción.|  
 |**article_id**|**int**|Id. del artículo.|  
-|**tipo**|**int**|Tipo de comando.|  
+|**Tipo**|**int**|Tipo de comando.|  
 |**partial_command**|**bit**|Indica si se trata de un comando parcial.|  
 |**hashkey**|**int**|Exclusivamente para uso interno.|  
 |**originator_publication_id**|**int**|Id. de la publicación en la que se originó la transacción.|  
 |**originator_db_version**|**int**|Versión de la base de datos en la que se originó la transacción.|  
 |**originator_lsn**|**varbinary (16)**|Identifica el número de flujo de registro (LSN) para el comando de la publicación en la que se origina. Se utiliza en la replicación transaccional punto a punto.|  
-|**command**|**nvarchar (1024)**|Comando [!INCLUDE[tsql](../../includes/tsql-md.md)].|  
+|**command**|**nvarchar(1024)**|Comando [!INCLUDE[tsql](../../includes/tsql-md.md)].|  
 |**command_id**|**int**|Id. del comando [MSrepl_commands](../../relational-databases/system-tables/msrepl-commands-transact-sql.md).|  
   
  Los comandos largos se pueden dividir en varias filas en el conjunto de resultados.  
@@ -107,7 +107,7 @@ sp_browsereplcmds [ [ @xact_seqno_start = ] 'xact_seqno_start' ]
   
 ## <a name="see-also"></a>Vea también  
  [sp_replcmds &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-replcmds-transact-sql.md)   
- [sp_replshowcmds &#40; Transact-SQL &#41;](../../relational-databases/system-stored-procedures/sp-replshowcmds-transact-sql.md)   
+ [sp_replshowcmds &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-replshowcmds-transact-sql.md)   
  [Procedimientos almacenados del sistema &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
   
   

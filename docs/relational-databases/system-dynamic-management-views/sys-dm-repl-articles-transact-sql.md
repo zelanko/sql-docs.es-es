@@ -1,16 +1,16 @@
 ---
-title: sys.dm_repl_articles (Transact-SQL) | Microsoft Docs
-ms.custom: 
+title: Sys.dm_repl_articles (Transact-SQL) | Documentos de Microsoft
+ms.custom: ''
 ms.date: 06/10/2016
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine
-ms.service: 
+ms.service: ''
 ms.component: dmv's
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - sys.dm_repl_articles_TSQL
@@ -22,16 +22,16 @@ dev_langs:
 helpviewer_keywords:
 - sys.dm_repl_articles dynamic management function
 ms.assetid: 794d514e-bacd-432e-a8ec-3a063a97a37b
-caps.latest.revision: 
+caps.latest.revision: 16
 author: stevestein
 ms.author: sstein
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 99ec6ab0d4feb697092002fb0c7354625dd9da83
-ms.sourcegitcommit: c556eaf60a49af7025db35b7aa14beb76a8158c5
+ms.openlocfilehash: 2514ef1aea1e096a1bb543e7a1a815f923afaadb
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/03/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="sysdmreplarticles-transact-sql"></a>sys.dm_repl_articles (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -40,10 +40,10 @@ ms.lasthandoff: 02/03/2018
   
 |Nombre de columna|Tipo de datos|Description|  
 |-----------------|---------------|-----------------|  
-|**artcache_db_address**|**varbinary(8)**|Dirección de memoria de la estructura de la base de datos en caché de la base de datos de publicaciones.|  
-|**artcache_table_address**|**varbinary(8)**|Dirección de memoria de la estructura de la tabla en caché de un artículo de la tabla publicada.|  
-|**artcache_schema_address**|**varbinary(8)**|Dirección de memoria de la estructura del esquema del artículo en caché de un artículo de la tabla publicada.|  
-|**artcache_article_address**|**varbinary(8)**|Dirección de memoria de la estructura del artículo en caché de un artículo de la tabla publicada.|  
+|**artcache_db_address**|**varbinary (8)**|Dirección de memoria de la estructura de la base de datos en caché de la base de datos de publicaciones.|  
+|**artcache_table_address**|**varbinary (8)**|Dirección de memoria de la estructura de la tabla en caché de un artículo de la tabla publicada.|  
+|**artcache_schema_address**|**varbinary (8)**|Dirección de memoria de la estructura del esquema del artículo en caché de un artículo de la tabla publicada.|  
+|**artcache_article_address**|**varbinary (8)**|Dirección de memoria de la estructura del artículo en caché de un artículo de la tabla publicada.|  
 |**artid**|**bigint**|Identifica de forma única cada entrada en esta tabla.|  
 |**artfilter**|**bigint**|Id. del procedimiento almacenado usado para filtrar horizontalmente el artículo.|  
 |**artobjid**|**bigint**|Id. del objeto publicado.|  
@@ -53,11 +53,11 @@ ms.lasthandoff: 02/03/2018
 |**wszArtdesttable**|**nvarchar(514)**|Nombre del objeto publicado en el destino.|  
 |**wszArtdesttableowner**|**nvarchar(514)**|Propietario del objeto publicado en el destino.|  
 |**wszArtinscmd**|**nvarchar(510)**|Comando o procedimiento almacenado usado para inserciones.|  
-|**cmdTypeIns**|**int**|Sintaxis de la llamada para el procedimiento almacenado para inserciones. Puede ser uno de estos valores.<br /><br /> **1** = CALL<br /><br /> **2** = SQL<br /><br /> **3** = NINGUNO<br /><br /> **7** = UNKNOWN|  
+|**cmdTypeIns**|**int**|Sintaxis de la llamada para el procedimiento almacenado para inserciones. Puede ser uno de estos valores.<br /><br /> **1** = LLAMADA<br /><br /> **2** = SQL<br /><br /> **3** = NINGUNO<br /><br /> **7** = DESCONOCIDO|  
 |**wszArtdelcmd**|**nvarchar(510)**|Comando o procedimiento almacenado usado para eliminaciones.|  
-|**cmdTypeDel**|**int**|Sintaxis de la llamada para el procedimiento almacenado para eliminaciones. Puede ser uno de estos valores.<br /><br /> **0** = XCALL<br /><br /> **1** = CALL<br /><br /> **2** = SQL<br /><br /> **3** = NINGUNO<br /><br /> **7** = UNKNOWN|  
+|**cmdTypeDel**|**int**|Sintaxis de la llamada para el procedimiento almacenado para eliminaciones. Puede ser uno de estos valores.<br /><br /> **0** = XCALL<br /><br /> **1** = LLAMADA<br /><br /> **2** = SQL<br /><br /> **3** = NINGUNO<br /><br /> **7** = DESCONOCIDO|  
 |**wszArtupdcmd**|**nvarchar(510)**|Comando o procedimiento almacenado usado para actualizaciones.|  
-|**cmdTypeUpd**|**int**|Sintaxis de la llamada para el procedimiento almacenado para actualizaciones. Puede ser uno de estos valores.<br /><br /> **0** = XCALL<br /><br /> **1** = CALL<br /><br /> **2** = SQL<br /><br /> **3** = NINGUNO<br /><br /> **4** = MCALL<br /><br /> **5** = VCALL<br /><br /> **6** = SCALL<br /><br /> **7** = UNKNOWN|  
+|**cmdTypeUpd**|**int**|Sintaxis de la llamada para el procedimiento almacenado para actualizaciones. Puede ser uno de estos valores.<br /><br /> **0** = XCALL<br /><br /> **1** = LLAMADA<br /><br /> **2** = SQL<br /><br /> **3** = NINGUNO<br /><br /> **4** = MCALL<br /><br /> **5** = VCALL<br /><br /> **6** = SCALL<br /><br /> **7** = DESCONOCIDO|  
 |**wszArtpartialupdcmd**|**nvarchar(510)**|Comando o procedimiento almacenado usado para actualizaciones parciales.|  
 |**cmdTypePartialUpd**|**int**|Sintaxis de la llamada para el procedimiento almacenado para actualizaciones parciales. Puede ser uno de estos valores.<br /><br /> **2** = SQL|  
 |**numcol**|**int**|Número de columnas en la partición para un artículo filtrado verticalmente.|  
@@ -81,7 +81,7 @@ ms.lasthandoff: 02/03/2018
   
 ## <a name="see-also"></a>Vea también  
  [Funciones y vistas de administración dinámica &#40;Transact-SQL&#41;](~/relational-databases/system-dynamic-management-views/system-dynamic-management-views.md)   
- [Replicación relacionadas con vistas de administración dinámica &#40; Transact-SQL &#41;](../../relational-databases/system-dynamic-management-views/replication-related-dynamic-management-views-transact-sql.md)  
+ [Vistas de administración dinámica relacionadas con la replicación &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/replication-related-dynamic-management-views-transact-sql.md)  
   
   
 

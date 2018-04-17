@@ -1,16 +1,16 @@
 ---
 title: sp_replicationdboption (Transact-SQL) | Documentos de Microsoft
-ms.custom: 
+ms.custom: ''
 ms.date: 03/07/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine
-ms.service: 
+ms.service: ''
 ms.component: system-stored-procedures
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - replication
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 applies_to:
 - SQL Server
@@ -20,16 +20,16 @@ f1_keywords:
 helpviewer_keywords:
 - sp_replicationdboption
 ms.assetid: d021864e-3f21-4d1a-89df-6c1086f753bf
-caps.latest.revision: 
+caps.latest.revision: 32
 author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 584c9ed9f4a9d0e00bcbd0de05788a1841189899
-ms.sourcegitcommit: 45e4efb7aa828578fe9eb7743a1a3526da719555
+ms.openlocfilehash: ab96eb1cc914000666bb09e34b38974d1e9b9524
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="spreplicationdboption-transact-sql"></a>sp_replicationdboption (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -56,12 +56,12 @@ sp_replicationdboption [ @dbname= ] 'db_name'
  [**@optname=**] **'***optname***'**  
  Es la opción de base de datos de replicación que se puede habilitar o deshabilitar. *optname* es **sysname**, y puede tener uno de estos valores.  
   
-|Valor|Description|  
+|Value|Description|  
 |-----------|-----------------|  
 |**publicación de mezcla**|Se puede utilizar la base de datos para publicaciones de combinación.|  
-|**publicar**|Se puede utilizar la base de datos para otros tipos de publicaciones.|  
-|**suscribirse**|La base de datos es una base de datos de suscripciones.|  
-|**sincronizar con copia de seguridad**|La base de datos está habilitada para una copia de seguridad coordinada. Para obtener más información, vea [habilitar copias de seguridad coordinadas para la replicación transaccional &#40; Programación de replicación Transact-SQL &#41; ](../../relational-databases/replication/administration/enable-coordinated-backups-for-transactional-replication.md).|  
+|**Publicar**|Se puede utilizar la base de datos para otros tipos de publicaciones.|  
+|**Suscribirse**|La base de datos es una base de datos de suscripciones.|  
+|**sincronizar con copia de seguridad**|La base de datos está habilitada para una copia de seguridad coordinada. Para obtener más información, consulte [habilitar copias de seguridad coordinadas para la replicación transaccional &#40;Replication Transact-SQL Programming&#41;](../../relational-databases/replication/administration/enable-coordinated-backups-for-transactional-replication.md).|  
   
  [  **@value=**] **'***valor***'**  
  Indica si se va a habilitar o deshabilitar la opción de base de datos de replicación dada. *valor* es **sysname**y puede ser **true** o **false**. Cuando este valor es **false** y *optname* es **publicar mezcla**, también se quitan las suscripciones a la base de datos publicada de mezcla.  
@@ -90,7 +90,7 @@ sp_replicationdboption [ @dbname= ] 'db_name'
  [Crear una publicación](../../relational-databases/replication/publish/create-a-publication.md)   
  [Eliminar una publicación](../../relational-databases/replication/publish/delete-a-publication.md)   
  [Disable Publishing and Distribution](../../relational-databases/replication/disable-publishing-and-distribution.md)  (Deshabilitar la publicación y la distribución)  
- [Sys.sysdatabases &#40; Transact-SQL &#41;](../../relational-databases/system-compatibility-views/sys-sysdatabases-transact-sql.md)   
+ [Sys.sysdatabases &#40;Transact-SQL&#41;](../../relational-databases/system-compatibility-views/sys-sysdatabases-transact-sql.md)   
  [Procedimientos almacenados de replicación &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/replication-stored-procedures-transact-sql.md)  
   
   

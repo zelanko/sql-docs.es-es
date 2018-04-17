@@ -1,16 +1,16 @@
 ---
-title: core.sp_purge_data (Transact-SQL) | Microsoft Docs
-ms.custom: 
+title: Core.sp_purge_data (Transact-SQL) | Documentos de Microsoft
+ms.custom: ''
 ms.date: 08/09/2016
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine
-ms.service: 
+ms.service: ''
 ms.component: system-stored-procedures
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - sp_purge_data_TSQL
@@ -23,16 +23,16 @@ helpviewer_keywords:
 - core.sp_purge_data stored procedure
 - data collector [SQL Server], stored procedures
 ms.assetid: 056076c3-8adf-4f51-8a1b-ca39696ac390
-caps.latest.revision: 
+caps.latest.revision: 21
 author: stevestein
 ms.author: sstein
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: fb74c4993f7a7d013e56061e3a572052c2939a99
-ms.sourcegitcommit: c556eaf60a49af7025db35b7aa14beb76a8158c5
+ms.openlocfilehash: b929306a5f865defa4c264c289c4525694784c1b
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/03/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="coresppurgedata-transact-sql"></a>core.sp_purge_data (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -56,12 +56,12 @@ core.sp_purge_data
  [@retention_days =] *retention_days*  
  Número de días que se van a retener los datos en las tablas de almacén de administración de datos. Datos con una marca de tiempo anterior a *retention_days* se quita. *retention_days* es **smallint**, su valor predeterminado es null. Si se especifica, el valor debe ser positivo. Cuando es NULL, el valor de la columna valid_through de la vista core.snapshots determina las filas que pueden eliminarse.  
   
- [@instance_name = ] '*instance_name*'  
+ [@instance_name =] '*instance_name*'  
  Nombre de la instancia del conjunto de recopilación. *instance_name* es **sysname**, su valor predeterminado es null.  
   
  *instance_name* debe ser el nombre de instancia completo, que consta del nombre del equipo y el nombre de instancia en el formulario *computername*\\*nombreDeInstancia*. Cuando es NULL, se utiliza la instancia predeterminada en el servidor local.  
   
- [@collection_set_uid = ] '*collection_set_uid*'  
+ [@collection_set_uid =] '*collection_set_uid*'  
  GUID del conjunto de recopilación. *collection_set_uid* es **uniqueidentifier**, su valor predeterminado es null. Cuando es NULL, se quitan las filas certificadas de todos los conjuntos de recopilación. Para obtener este valor, consulte la vista de catálogo syscollector_collection_sets.  
   
  [@duration =] *duración*  

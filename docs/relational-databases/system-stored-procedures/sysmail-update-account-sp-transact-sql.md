@@ -1,16 +1,16 @@
 ---
-title: sysmail_update_account_sp (Transact-SQL) | Microsoft Docs
-ms.custom: 
+title: sysmail_update_account_sp (Transact-SQL) | Documentos de Microsoft
+ms.custom: ''
 ms.date: 11/17/2016
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine
-ms.service: 
+ms.service: ''
 ms.component: system-stored-procedures
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - sysmail_update_account_sp
@@ -20,16 +20,16 @@ dev_langs:
 helpviewer_keywords:
 - sysmail_update_account_sp
 ms.assetid: ba2fdccc-5ed4-40ef-a479-79497b4d61aa
-caps.latest.revision: 
+caps.latest.revision: 51
 author: stevestein
 ms.author: sstein
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 4be8c0c87771f89d92cc0344c207149467c4554c
-ms.sourcegitcommit: c556eaf60a49af7025db35b7aa14beb76a8158c5
+ms.openlocfilehash: 997e21d11225709d1ec716b7bda03b93cea6ea48
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/03/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="sysmailupdateaccountsp-transact-sql"></a>sysmail_update_account_sp (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -59,46 +59,46 @@ sysmail_update_account_sp [ [ @account_id = ] account_id ] [ , ] [ [ @account_na
 ```  
   
 ## <a name="arguments"></a>Argumentos  
- [ **@account_id** = ] *account_id*  
+ [ **@account_id** =] *account_id*  
  Identificador de la cuenta que se va a actualizar. *account_id* es **int**, su valor predeterminado es null. Al menos uno de *account_id* o *account_name* debe especificarse. Si se especifican los dos, el procedimiento cambia el nombre de la cuenta.  
   
- [ **@account_name** = ] **'***account_name***'**  
+ [ **@account_name** =] **'***account_name***'**  
  Nombre de la cuenta que se va a actualizar. *account_name* es **sysname**, su valor predeterminado es null. Al menos uno de *account_id* o *account_name* debe especificarse. Si se especifican los dos, el procedimiento cambia el nombre de la cuenta.  
   
- [ **@email_address** = ] **'***email_address***'**  
+ [ **@email_address** =] **'***email_address***'**  
  Es la nueva dirección de correo electrónico desde la que se envía el mensaje. Esta dirección debe ser una dirección de correo electrónico de Internet. El nombre de servidor de la dirección es el servidor que Database Mail utiliza para enviar correo de esta cuenta. *Email_Address* es **nvarchar (128)**, su valor predeterminado es null.  
   
- [ **@display_name** = ] **'***display_name***'**  
+ [ **@display_name** =] **'***display_name***'**  
  Nuevo nombre para mostrar que se utilizará en los mensajes de correo electrónico de esta cuenta. *display_name* es **nvarchar (128)**, no tiene ningún valor predeterminado.  
   
- [ **@replyto_address** = ] **'***replyto_address***'**  
+ [ **@replyto_address** =] **'***replyto_address***'**  
  Nueva dirección que se utilizará en el encabezado Responder a de los mensajes de correo electrónico de esta cuenta. *replyto_address* es **nvarchar (128)**, no tiene ningún valor predeterminado.  
   
- [  **@description**  =] **'***descripción***'**  
+ [ **@description** =] **'***descripción***'**  
  Nueva descripción de la cuenta. *descripción* es **nvarchar (256)**, su valor predeterminado es null.  
   
- [  **@mailserver_name**  =] **'***nombre_servidor***'**  
+ [ **@mailserver_name** =] **'***nombre_servidor***'**  
  Es el nuevo nombre del servidor de correo SMTP que se debe utilizar para esta cuenta. El equipo que ejecuta [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] debe ser capaz de resolver el *nombre_servidor* en una dirección IP. *nombre_servidor* es **sysname**, no tiene ningún valor predeterminado.  
   
- [ **@mailserver_type** = ] **'***server_type***'**  
+ [ **@mailserver_type** =] **'***server_type***'**  
  Nuevo tipo del servidor de correo. *server_type* es **sysname**, no tiene ningún valor predeterminado. Solo un valor de **'SMTP'** se admite.  
   
- [ **@port** = ] *port_number*  
+ [ **@port** =] *número_puerto*  
  Nuevo número de puerto del servidor de correo. *número_puerto* es **int**, no tiene ningún valor predeterminado.  
   
- [  **@timeout**  =] **'***tiempo de espera***'**  
+ [ **@timeout** =] **'***tiempo de espera***'**  
  Parámetro Timeout para SmtpClient.Send de un único mensaje de correo electrónico. *Tiempo de espera* es **int** en segundos, no tiene ningún valor predeterminado.  
   
- [  **@username**  =] **'***nombre de usuario***'**  
+ [ **@username** =] **'***nombre de usuario***'**  
  Nuevo nombre de usuario que se utilizará para iniciar sesión en el servidor de correo. *Nombre de usuario* es **sysname**, no tiene ningún valor predeterminado.  
   
- [ **@password** = ] **'***password***'**  
+ [ **@password** =] **'***contraseña***'**  
  Nueva contraseña que se utilizará para iniciar sesión en el servidor de correo. *contraseña* es **sysname**, no tiene ningún valor predeterminado.  
   
- [ **@use_default_credentials** = ] use_default_credentials  
- Especifica si se debe enviar el correo al servidor SMTP con las credenciales del servicio de [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]. **use_default_credentials** es de tipo bit no tiene ningún valor predeterminado. Si el valor de este parámetro es 1, el Correo electrónico de base de datos usa las credenciales de [!INCLUDE[ssDE](../../includes/ssde-md.md)]. Si este parámetro es 0, el correo electrónico de base de datos utiliza el  **@username**  y  **@password**  para la autenticación en el servidor SMTP. Si  **@username**  y  **@password**  son NULL, a continuación, utiliza la autenticación anónima. Consulte con el administrador de SMTP antes de especificar este parámetro.  
+ [ **@use_default_credentials** =] use_default_credentials  
+ Especifica si se debe enviar el correo al servidor SMTP con las credenciales del servicio de [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]. **use_default_credentials** es de tipo bit no tiene ningún valor predeterminado. Si el valor de este parámetro es 1, el Correo electrónico de base de datos usa las credenciales de [!INCLUDE[ssDE](../../includes/ssde-md.md)]. Si este parámetro es 0, el correo electrónico de base de datos utiliza el **@username** y **@password** para la autenticación en el servidor SMTP. Si **@username** y **@password** son NULL, a continuación, utiliza la autenticación anónima. Consulte con el administrador de SMTP antes de especificar este parámetro.  
   
- [  **@enable_ssl**  =] enable_ssl  
+ [ **@enable_ssl** =] enable_ssl  
  Especifica si el Correo electrónico de base de datos cifra la comunicación mediante Capa de sockets seguros (SSL). Utilice esta opción si se requiere SSL en el servidor SMTP. **enable_ssl** es de tipo bit no tiene ningún valor predeterminado.  
   
 ## <a name="return-code-values"></a>Valores de código de retorno  
@@ -158,6 +158,6 @@ EXECUTE msdb.dbo.sysmail_update_account_sp
 ## <a name="see-also"></a>Vea también  
  [Correo electrónico de base de datos](../../relational-databases/database-mail/database-mail.md)   
  [Crear una cuenta de correo electrónico de base de datos](../../relational-databases/database-mail/create-a-database-mail-account.md)   
- [Correo electrónico de base de datos almacenados procedimientos &#40; Transact-SQL &#41;](../../relational-databases/system-stored-procedures/database-mail-stored-procedures-transact-sql.md)  
+ [Procedimientos almacenados de correo electrónico de base de datos &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/database-mail-stored-procedures-transact-sql.md)  
   
   

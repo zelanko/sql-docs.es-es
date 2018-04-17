@@ -1,8 +1,8 @@
 ---
-title: sys.dm_fts_outstanding_batches (Transact-SQL) | Microsoft Docs
+title: Sys.dm_fts_outstanding_batches (Transact-SQL) | Documentos de Microsoft
 ms.custom: ''
 ms.date: 03/29/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine, sql-database
 ms.service: ''
 ms.component: dmv's
@@ -28,11 +28,12 @@ author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 3616d25e4e3523dccc9b007e95c2848efa12e32f
-ms.sourcegitcommit: 8b332c12850c283ae413e0b04b2b290ac2edb672
+monikerRange: = azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions
+ms.openlocfilehash: f8f68b3aba67ae2301588e0f064ed8b133489a0b
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/05/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="sysdmftsoutstandingbatches-transact-sql"></a>sys.dm_fts_outstanding_batches (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -45,9 +46,9 @@ ms.lasthandoff: 04/05/2018
 |catalog_id|**int**|Id. del catálogo de texto completo|  
 |table_id|**int**|Id. del identificador de tabla que contiene el índice de texto completo.|  
 |batch_id|**int**|Identificador de lote|  
-|memory_address|**varbinary(8)**|Dirección de memoria del objeto de lote.|  
-|crawl_memory_address|**varbinary(8)**|Dirección de memoria del objeto de rastreo (objeto primario)|  
-|memregion_memory_address|**varbinary(8)**|Dirección del área de memoria de la memoria compartida saliente del host de demonio del filtro (fdhost.exe)|  
+|memory_address|**varbinary (8)**|Dirección de memoria del objeto de lote.|  
+|crawl_memory_address|**varbinary (8)**|Dirección de memoria del objeto de rastreo (objeto primario)|  
+|memregion_memory_address|**varbinary (8)**|Dirección del área de memoria de la memoria compartida saliente del host de demonio del filtro (fdhost.exe)|  
 |hr_batch|**int**|Código de error más reciente del lote|  
 |is_retry_batch|**bit**|Indica si el lote es un lote de reintento:<br /><br /> 0 = No<br /><br /> 1 = Sí|  
 |retry_hints|**int**|Tipo de reintento requerido para el lote:<br /><br /> 0 = Sin reintento<br /><br /> 1 = Reintento de varios subprocesos<br /><br /> 2 = Reintento de subproceso único<br /><br /> 3 = Reintento de subproceso único y de varios subprocesos<br /><br /> 5 = Reintento final de varios subprocesos<br /><br /> 6 = Reintento final de subproceso único<br /><br /> 7 = Reintento final de subproceso único y de varios subprocesos|  

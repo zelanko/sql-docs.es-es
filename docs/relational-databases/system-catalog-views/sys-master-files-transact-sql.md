@@ -1,16 +1,16 @@
 ---
 title: Sys.master_files (Transact-SQL) | Documentos de Microsoft
-ms.custom: 
+ms.custom: ''
 ms.date: 03/10/2016
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine, pdw
-ms.service: 
+ms.service: ''
 ms.component: system-catalog-views
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - sys.master_files
@@ -22,16 +22,17 @@ dev_langs:
 helpviewer_keywords:
 - sys.master_files catalog view
 ms.assetid: 803b22f2-0016-436b-a561-ce6f023d6b6a
-caps.latest.revision: 
+caps.latest.revision: 56
 author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 1c0ee418f8b04c8a549fb107698bd1f2df5648b2
-ms.sourcegitcommit: 45e4efb7aa828578fe9eb7743a1a3526da719555
+monikerRange: '>= aps-pdw-2016 || >= sql-server-2016 || = sqlallproducts-allversions'
+ms.openlocfilehash: d56dde664eba328a74db87d7c3ce22aef014ff6e
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="sysmasterfiles-transact-sql"></a>sys.master_files (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-pdw-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-pdw-md.md)]
@@ -44,12 +45,12 @@ ms.lasthandoff: 11/21/2017
 |file_id|**int**|Identificador del archivo dentro de la base de datos. El valor de file_id principal siempre es 1.|  
 |file_guid|**uniqueidentifier**|Identificador único del archivo.<br /><br /> NULL = La base de datos se actualizó desde una versión anterior de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].|  
 |Tipo|**tinyint**|Tipo de archivo:<br /><br /> 0 = Filas.<br /><br /> 1 = Registro<br /><br /> 2 = FILESTREAM<br /><br /> 3 = [!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]<br /><br /> 4 = Texto completo (catálogos de texto completo anteriores a [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)]; los catálogos de texto completo actualizados o creados en [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] o versiones posteriores notificarán un tipo de archivo 0).|  
-|type_desc|**nvarchar (60)**|Descripción del tipo de archivo:<br /><br /> ROWS<br /><br /> LOG<br /><br /> FILESTREAM<br /><br /> FULLTEXT (catálogos de texto completo anteriores a [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)]).|  
+|type_desc|**nvarchar(60)**|Descripción del tipo de archivo:<br /><br /> ROWS<br /><br /> LOG<br /><br /> FILESTREAM<br /><br /> FULLTEXT (catálogos de texto completo anteriores a [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)]).|  
 |data_space_id|**int**|Id. del espacio de datos al que pertenece este archivo. El espacio de datos es un grupo de archivos.<br /><br /> 0 = Archivos de registro|  
 |name|**sysname**|Nombre lógico del archivo de la base de datos.|  
-|physical_name|**nvarchar (260)**|Nombre del archivo del sistema operativo.|  
+|physical_name|**nvarchar(260)**|Nombre del archivo del sistema operativo.|  
 |state|**tinyint**|Estado del archivo:<br /><br /> 0 = Con conexión <br /><br /> 1 = En restauración <br /><br /> 2 = En recuperación <br /><br /> 3 = RECOVERY_PENDING<br /><br /> 4 = Sospechoso <br /><br /> 5 = [!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]<br /><br /> 6 = Sin conexión <br /><br /> 7 = Inactivo|  
-|state_desc|**nvarchar (60)**|Descripción del estado del archivo:<br /><br /> ONLINE<br /><br /> RESTORING<br /><br /> RECOVERING<br /><br /> RECOVERY_PENDING <br /><br /> SUSPECT<br /><br /> OFFLINE<br /><br /> DEFUNCT<br /><br /> Para obtener más información, consulte [Estados de los archivos](../../relational-databases/databases/file-states.md).|  
+|state_desc|**nvarchar(60)**|Descripción del estado del archivo:<br /><br /> ONLINE<br /><br /> RESTORING<br /><br /> RECOVERING<br /><br /> RECOVERY_PENDING <br /><br /> SUSPECT<br /><br /> OFFLINE<br /><br /> DEFUNCT<br /><br /> Para más información, vea [Estados de los archivos](../../relational-databases/databases/file-states.md).|  
 |size|**int**|Tamaño actual del archivo, en páginas de 8 KB. En una instantánea de base de datos, size refleja el espacio máximo que la instantánea puede utilizar para el archivo.<br /><br /> Nota: Este campo se rellena como cero para contenedores FILESTREAM. Consulta el *sys.database_files* vista para el tamaño real de los contenedores de FILESTREAM de catálogo.|  
 |max_size|**int**|Tamaño máximo del archivo, en páginas de 8 KB:<br /><br /> 0 = No se permite el crecimiento.<br /><br /> -1 = El archivo crece hasta que el disco esté lleno.<br /><br /> 268435456 = El archivo de registro aumentará de tamaño hasta un tamaño máximo de 2 TB.<br /><br /> Nota: Las bases de datos que se actualizan con un tamaño de archivo ilimitado del registro indican -1 para el tamaño máximo del archivo de registro.|  
 |growth|**int**|0 = El archivo tiene un tamaño fijo y no puede crecer.<br /><br /> >0 = El archivo crece automáticamente.<br /><br /> Si is_percent_growth = 0, el incremento de tamaño se realiza en unidades de páginas de 8-KB, redondeado a los 64 KB más próximos.<br /><br /> Si is_percent_growth = 1, el aumento de crecimiento se expresa como un porcentaje numérico entero.|  

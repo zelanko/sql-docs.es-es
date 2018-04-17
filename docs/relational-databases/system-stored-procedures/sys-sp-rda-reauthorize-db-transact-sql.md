@@ -1,16 +1,16 @@
 ---
-title: sys.sp_rda_reauthorize_db (Transact-SQL) | Microsoft Docs
-ms.custom: 
+title: Sys.sp_rda_reauthorize_db (Transact-SQL) | Documentos de Microsoft
+ms.custom: ''
 ms.date: 06/10/2016
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine
-ms.service: 
+ms.service: ''
 ms.component: system-stored-procedures
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - dbe-stretch
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - sp_rda_reauthorize_db
@@ -20,18 +20,18 @@ dev_langs:
 helpviewer_keywords:
 - sys.sp_rda_reauthorize_db stored procedure
 ms.assetid: f6f3e4b2-8c72-4d23-a5de-fe671ca5c5cd
-caps.latest.revision: 
+caps.latest.revision: 20
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 3450d9d9dc491e0c3c57b560281148929d0ce907
-ms.sourcegitcommit: c556eaf60a49af7025db35b7aa14beb76a8158c5
+ms.openlocfilehash: a62cae8b4c47975d7d0941458fefbafea7c6288a
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/03/2018
+ms.lasthandoff: 04/16/2018
 ---
-# <a name="syssprdareauthorizedb-transact-sql"></a>sys.sp_rda_reauthorize_db (Transact-SQL)
+# <a name="syssprdareauthorizedb-transact-sql"></a>Sys.sp_rda_reauthorize_db (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md.md)]
 
   Restaura la conexión autenticada entre una base de datos local habilitada para Stretch y la base de datos remota.  
@@ -50,13 +50,13 @@ sp_rda_reauthorize_db @credential = @credential, @with_copy = @with_copy [ , @az
  Es la credencial de ámbito de la base de datos asociada con la base de datos habilitada para Stretch local.  
   
  @with_copy = *@with_copy*  
- Especifica si se debe realizar una copia de los datos remotos y conectarse a la copia (recomendada). *@with_copy*es de tipo bit.  
+ Especifica si se debe realizar una copia de los datos remotos y conectarse a la copia (recomendada). *@with_copy* es de tipo bit.  
   
  @azure_servername = *@azure_servername*  
- Especifica el nombre del servidor de Azure que contiene los datos remotos. *@azure_servername*es de tipo sysname.  
+ Especifica el nombre del servidor de Azure que contiene los datos remotos. *@azure_servername* es de tipo sysname.  
   
  @azure_databasename = *@azure_databasename*  
- Especifica el nombre de la base de datos de Azure que contiene los datos remotos. *@azure_databasename*es de tipo sysname.  
+ Especifica el nombre de la base de datos de Azure que contiene los datos remotos. *@azure_databasename* es de tipo sysname.  
   
 ## <a name="return-code-values"></a>Valores de código de retorno  
  0 (correcto) o >0 (error)  

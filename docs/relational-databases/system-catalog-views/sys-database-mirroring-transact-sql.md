@@ -1,16 +1,16 @@
 ---
-title: sys.database_mirroring (Transact-SQL) | Microsoft Docs
-ms.custom: 
+title: Sys.database_mirroring (Transact-SQL) | Documentos de Microsoft
+ms.custom: ''
 ms.date: 06/10/2016
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine
-ms.service: 
+ms.service: ''
 ms.component: system-catalog-views
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - sys.database_mirroring
@@ -22,16 +22,16 @@ dev_langs:
 helpviewer_keywords:
 - sys.database_mirroring catalog view
 ms.assetid: 480de2b0-2c16-497d-a6a3-bf7f52a7c9a0
-caps.latest.revision: 
+caps.latest.revision: 53
 author: stevestein
 ms.author: sstein
 manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: c17cf0f7b1ad2a5fd45dcd356546f5e91c4b610b
-ms.sourcegitcommit: c556eaf60a49af7025db35b7aa14beb76a8158c5
+ms.openlocfilehash: 6c32394871a2231eef8f4b380d3042fff1f966f9
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/03/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="sysdatabasemirroring-transact-sql"></a>sys.database_mirroring (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -63,7 +63,7 @@ ms.lasthandoff: 02/03/2018
 |**mirroring_failover_lsn**|**numeric(25,0)**|Número de secuencia de registro (LSN) de la última entrada del registro de transacciones para la que se garantiza que será reforzada en el disco de ambos asociados. Después de una conmutación por error, el **mirroring_failover_lsn** los socios comerciales sirve como punto de reconciliación en el que el nuevo servidor reflejado comienza a sincronizar la base de datos reflejada con la nueva base de datos principal.|  
 |**mirroring_connection_timeout**|**int**|Tiempo de espera de la conexión de creación de reflejo, en segundos. Es el número de segundos durante los cuales se espera una respuesta de un asociado o testigo antes de considerarlos no disponibles. El valor predeterminado del tiempo de espera es de 10 segundos.<br /><br /> NULL= No se puede tener acceso a la base de datos o no está reflejada.|  
 |**mirroring_redo_queue**|**int**|Cantidad máxima de registro que debe rehacerse en el reflejo. Si mirroring_redo_queue_type se establece en UNLIMITED, que es la configuración predeterminada, esta columna es NULL. Si la base de datos no está en línea, esta columna también es NULL.<br /><br /> En caso contrario, esta columna contiene la cantidad máxima de registro, en megabytes. Cuando se alcanza el valor máximo, el registro se detiene temporalmente en el servidor principal mientras el servidor reflejado se pone al mismo nivel. Esta característica limita el tiempo de conmutación por error.<br /><br /> Para obtener más información, vea [Calcular la interrupción del servicio durante la conmutación de roles &#40;creación de reflejo de la base de datos&#41;](../../database-engine/database-mirroring/estimate-the-interruption-of-service-during-role-switching-database-mirroring.md).|  
-|**mirroring_redo_queue_type**|**nvarchar(60)**|UNLIMITED indica que la creación de reflejo no reducirá la cola de rehacer. Esta es la configuración predeterminada.<br /><br /> MB indica el tamaño máximo de la cola de rehacer, en megabytes. Tenga en cuenta que, si el tamaño de la cola se especificó en kilobytes o gigabytes, el [!INCLUDE[ssDE](../../includes/ssde-md.md)] convertirá el valor a megabytes.<br /><br /> Si la base de datos no está en línea, esta columna es NULL.|  
+|**mirroring_redo_queue_type**|**nvarchar(60)**|UNLIMITED indica que la creación de reflejo no impedirá la cola de rehacer. Esta es la configuración predeterminada.<br /><br /> MB indica el tamaño máximo de la cola de rehacer, en megabytes. Tenga en cuenta que, si el tamaño de la cola se especificó en kilobytes o gigabytes, el [!INCLUDE[ssDE](../../includes/ssde-md.md)] convertirá el valor a megabytes.<br /><br /> Si la base de datos no está en línea, esta columna es NULL.|  
 |**mirroring_end_of_log_lsn**|**numeric(25,0)**|El final de registro local se ha volcado en el disco. Esto es comparable al LSN protegido del servidor reflejado (vea la **mirroring_failover_lsn** columna).|  
 |**mirroring_replication_lsn**|**numeric(25,0)**|El LSN máximo que la replicación puede enviar.|  
   

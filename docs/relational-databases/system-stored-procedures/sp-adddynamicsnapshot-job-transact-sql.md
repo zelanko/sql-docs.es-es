@@ -1,16 +1,16 @@
 ---
 title: sp_adddynamicsnapshot_job (Transact-SQL) | Documentos de Microsoft
-ms.custom: 
+ms.custom: ''
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine
-ms.service: 
+ms.service: ''
 ms.component: system-stored-procedures
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - replication
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 applies_to:
 - SQL Server
@@ -20,16 +20,16 @@ f1_keywords:
 helpviewer_keywords:
 - sp_adddynamicsnapshot_job
 ms.assetid: ef50ccf6-e360-4e4b-91b9-6706b8fabefa
-caps.latest.revision: 
+caps.latest.revision: 32
 author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: a3b2201611c5b58b795063dd06ecc7c0918c57f4
-ms.sourcegitcommit: 45e4efb7aa828578fe9eb7743a1a3526da719555
+ms.openlocfilehash: 6590dad37937cb5b937ac49e541e2264a266de8d
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="spadddynamicsnapshotjob-transact-sql"></a>sp_adddynamicsnapshot_job (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -68,13 +68,13 @@ sp_adddynamicsnapshot_job [ @publication = ] 'publication'
  [  **@publication=**] **'***publicación***'**  
  Es el nombre de la publicación a la que se agrega el trabajo de instantáneas de datos filtrados. *publicación* es **sysname**, no tiene ningún valor predeterminado.  
   
- [  **@suser_sname** =] **'***suser_sname***'**  
+ [ **@suser_sname**=] **'***suser_sname***'**  
  Es el valor utilizado al crear una instantánea de datos filtrados para una suscripción que está filtrada por el valor de la [SUSER_SNAME](../../t-sql/functions/suser-sname-transact-sql.md) función en el suscriptor. *SUSER_SNAME* es **sysname**, no tiene ningún valor predeterminado. *SUSER_SNAME* debe ser NULL si esta función no se utiliza para filtrar dinámicamente la publicación.  
   
- [  **@host_name** =] **'***host_name***'**  
+ [ **@host_name**=] **'***host_name***'**  
  Es el valor utilizado al crear una instantánea de datos filtrados para una suscripción que está filtrada por el valor de la [HOST_NAME](../../t-sql/functions/host-name-transact-sql.md) función en el suscriptor. *HOST_NAME* es **sysname**, no tiene ningún valor predeterminado. *HOST_NAME* debe ser NULL si esta función no se utiliza para filtrar dinámicamente la publicación.  
   
- [  **@dynamic_snapshot_jobname** =] **'***dynamic_snapshot_jobname***'**  
+ [ **@dynamic_snapshot_jobname**=] **'***dynamic_snapshot_jobname***'**  
  Es el nombre del trabajo de instantáneas de datos filtrados creado. *dynamic_snapshot_jobname* es **sysname**, no tiene valor predeterminado es null, y es un parámetro OUTPUT opcional. Si se especifica, *dynamic_snapshot_jobname* debe resolverse en un único trabajo en el distribuidor. Si no se especifica, se generará un nombre de trabajo automáticamente, el cual se devolverá al conjunto de resultados. Allí, el nombre se crea del siguiente modo:  
   
 ```  
@@ -84,13 +84,13 @@ sp_adddynamicsnapshot_job [ @publication = ] 'publication'
 > [!NOTE]  
 >  Al generar el nombre del trabajo de instantáneas dinámicas, es posible truncar el nombre del trabajo de instantáneas estándar.  
   
- [  **@dynamic_snapshot_jobid** =] **'***dynamic_snapshot_jobid***'**  
+ [ **@dynamic_snapshot_jobid**=] **'***dynamic_snapshot_jobid***'**  
  Es un identificador para el trabajo de instantáneas de datos filtrados creado. *dynamic_snapshot_jobid* es **uniqueidentifier**, no tiene valor predeterminado es null, y es un parámetro OUTPUT opcional.  
   
  [  **@frequency_type=**] *frequency_type*  
  Es la frecuencia con que se programa el trabajo de instantáneas de datos filtrados. *frequency_type* es **int**, y puede tener uno de estos valores.  
   
-|Valor|Descripción|  
+|Value|Descripción|  
 |-----------|-----------------|  
 |**1**|Una vez|  
 |**2**|A petición|  
@@ -108,16 +108,16 @@ sp_adddynamicsnapshot_job [ @publication = ] 'publication'
 |--------------------------------|-------------------------------------|  
 |**1**|*frequency_interval* no se utiliza.|  
 |**4** (valor predeterminado)|Cada *frequency_interval* días, con un valor predeterminado de diariamente.|  
-|**8**|*frequency_interval* es uno o varios de los siguientes (combinado con un [&#124; &#40; OR bit a bit &#41; &#40; Transact-SQL &#41; ](../../t-sql/language-elements/bitwise-or-transact-sql.md) operador lógico):<br /><br /> **1** = el domingo &#124; **2** = el lunes &#124; **4** = el martes &#124; **8** = el miércoles &#124; **16** = el jueves &#124; **32** = el viernes &#124; **64** = el sábado|  
+|**8**|*frequency_interval* es uno o varios de los siguientes (combinado con un [ &#124; &#40;OR bit a bit&#41; &#40;Transact-SQL&#41; ](../../t-sql/language-elements/bitwise-or-transact-sql.md) operador lógico):<br /><br /> **1** = el domingo &#124; **2** = el lunes &#124; **4** = el martes &#124; **8** = el miércoles &#124; **16** = El jueves &#124; **32** = el viernes &#124; **64** = el sábado|  
 |**16**|En el *frequency_interval* día del mes.|  
-|**32**|*frequency_interval* es uno de los siguientes:<br /><br /> **1** = el domingo &#124; **2** = el lunes &#124; **3** = el martes &#124; **4** = el miércoles &#124; **5** = el jueves &#124; **6** = el viernes &#124; **7** = el sábado &#124; **8** = día &#124; **9** = día de la semana &#124; **10** = día del fin de semana|  
+|**32**|*frequency_interval* es uno de los siguientes:<br /><br /> **1** = el domingo &#124; **2** = el lunes &#124; **3** = el martes &#124; **4** = el miércoles &#124; **5** = El jueves &#124; **6** = el viernes &#124; **7** = el sábado &#124; **8** = día &#124; **9** = día de la semana &#124; **10** = día del fin de semana|  
 |**64**|*frequency_interval* no se utiliza.|  
 |**128**|*frequency_interval* no se utiliza.|  
   
  [  **@frequency_subday=**] *frequency_subday*  
  Especifica las unidades de *frequency_subday_interval*. *frequency_subday* es **int**, y puede tener uno de estos valores.  
   
-|Valor|Descripción|  
+|Value|Descripción|  
 |-----------|-----------------|  
 |**1**|Una vez|  
 |**2**|Second|  
@@ -130,7 +130,7 @@ sp_adddynamicsnapshot_job [ @publication = ] 'publication'
  [  **@frequency_relative_interval=**] *frequency_relative_interval*  
  Es la repetición del trabajo de instantáneas de datos filtrados en cada mes. Este parámetro se utiliza cuando *frequency_type* está establecido en **32** (relativo mensual). *frequency_relative_interval* es **int**, y puede tener uno de estos valores.  
   
-|Valor|Description|  
+|Value|Description|  
 |-----------|-----------------|  
 |**1** (predeterminado)|Primero|  
 |**2**|Second|  
@@ -155,7 +155,7 @@ sp_adddynamicsnapshot_job [ @publication = ] 'publication'
   
 ## <a name="result-set"></a>Conjunto de resultados  
   
-|Nombre de columna|Tipo de datos|Descripción|  
+|Nombre de columna|Tipo de datos|Description|  
 |-----------------|---------------|-----------------|  
 |**id**|**int**|Identifica el trabajo de instantáneas de datos filtrados en el [MSdynamicsnapshotjobs](../../relational-databases/system-tables/msdynamicsnapshotjobs-transact-sql.md) tabla del sistema.|  
 |**dynamic_snapshot_jobname**|**sysname**|Nombre del trabajo de instantáneas de datos filtrados.|  
@@ -175,8 +175,8 @@ sp_adddynamicsnapshot_job [ @publication = ] 'publication'
   
 ## <a name="see-also"></a>Vea también  
  [Crear una instantánea para una publicación de mezcla con filtros con parámetros](../../relational-databases/replication/create-a-snapshot-for-a-merge-publication-with-parameterized-filters.md)   
- [Parameterized Row Filters](../../relational-databases/replication/merge/parameterized-filters-parameterized-row-filters.md)   
- [sp_dropdynamicsnapshot_job &#40; Transact-SQL &#41;](../../relational-databases/system-stored-procedures/sp-dropdynamicsnapshot-job-transact-sql.md)   
- [sp_helpdynamicsnapshot_job &#40; Transact-SQL &#41;](../../relational-databases/system-stored-procedures/sp-helpdynamicsnapshot-job-transact-sql.md)  
+ [Filtros de fila con parámetros](../../relational-databases/replication/merge/parameterized-filters-parameterized-row-filters.md)   
+ [sp_dropdynamicsnapshot_job &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-dropdynamicsnapshot-job-transact-sql.md)   
+ [sp_helpdynamicsnapshot_job &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-helpdynamicsnapshot-job-transact-sql.md)  
   
   

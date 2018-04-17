@@ -1,16 +1,16 @@
 ---
-title: sp_add_operator (Transact-SQL) | Microsoft Docs
-ms.custom: 
+title: sp_add_operator (Transact-SQL) | Documentos de Microsoft
+ms.custom: ''
 ms.date: 08/09/2016
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine
-ms.service: 
+ms.service: ''
 ms.component: system-stored-procedures
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - sp_add_operator
@@ -20,16 +20,16 @@ dev_langs:
 helpviewer_keywords:
 - sp_add_operator
 ms.assetid: 817cd98a-4dff-4ed8-a546-f336c144d1e0
-caps.latest.revision: 
+caps.latest.revision: 26
 author: stevestein
 ms.author: sstein
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 534a5b973d0d35d660a07fc85bb8c7934f13a5c5
-ms.sourcegitcommit: c556eaf60a49af7025db35b7aa14beb76a8158c5
+ms.openlocfilehash: c91f79397a84f6277f4bb891144a5fceb40d02ce
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/03/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="spaddoperator-transact-sql"></a>sp_add_operator (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -65,7 +65,7 @@ sp_add_operator [ @name = ] 'name'
  [  **@enabled=** ] *habilitado*  
  Indica el estado actual del operador. *habilitado* es **tinyint**, su valor predeterminado es **1** (habilitado). Si **0**, el operador no está habilitado y no recibe notificaciones.  
   
- [ **@email_address=** ] **'***email_address***'**  
+ [  **@email_address=** ] **'***email_address***'**  
  La dirección de correo electrónico del operador. Esta cadena se pasa directamente al sistema de correo electrónico. *Email_Address* es **nvarchar (100)**, su valor predeterminado es null.  
   
  Puede especificar una dirección de correo electrónico física o un alias para *email_address*. Por ejemplo:  
@@ -75,25 +75,25 @@ sp_add_operator [ @name = ] 'name'
 > [!NOTE]  
 >  Debe utilizar la dirección de correo electrónico para Correo electrónico de base de datos.  
   
- [ **@pager_address=** ] **'***pager_address***'**  
+ [  **@pager_address=** ] **'***pager_address***'**  
  La dirección del buscapersonas del operador. Esta cadena se pasa directamente al sistema de correo electrónico. *pager_address* es **narchar(100)**, su valor predeterminado es null.  
   
  [ **@weekday_pager_start_time=** ] *weekday_pager_start_time*  
  Hora a partir de la cual el Agente [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] envía una notificación mediante buscapersonas al operador especificado los días laborables, de lunes a viernes. *weekday_pager_start_time*es **int**, su valor predeterminado es **090000**, lo que indica 9:00 A.M. en un reloj de 24 horas. Se debe especificar con el formato HHMMSS.  
   
- [ **@weekday_pager_end_time=** ] *weekday_pager_end_time*  
+ [  **@weekday_pager_end_time=** ] *weekday_pager_end_time*  
  El tiempo después del cual **SQLServerAgent** servicio deja de enviar una notificación por buscapersonas al operador especificado los días laborables, del lunes al viernes. *weekday_pager_end_time*es **int**, su valor predeterminado es 180000, lo que indica las 6:00 p. M. en un reloj de 24 horas. Se debe especificar con el formato HHMMSS.  
   
  [ **@saturday_pager_start_time =**] *saturday_pager_start_time*  
  El tiempo después del cual **SQLServerAgent** servicio envía una notificación por buscapersonas al operador especificado los sábados. *saturday_pager_start_time* es **int**, su valor predeterminado es 090000, lo que indica 9:00 A.M. en un reloj de 24 horas. Se debe especificar con el formato HHMMSS.  
   
- [ **@saturday_pager_end_time=** ] *saturday_pager_end_time*  
+ [  **@saturday_pager_end_time=** ] *saturday_pager_end_time*  
  El tiempo después del cual **SQLServerAgent** servicio ya no envía una notificación por buscapersonas al operador especificado los sábados. *saturday_pager_end_time*es **int**, su valor predeterminado es **180000**, que indica las 6:00 P.M. en un reloj de 24 horas. Se debe especificar con el formato HHMMSS.  
   
  [ **@sunday_pager_start_time=** ] *sunday_pager_start_time*  
  El tiempo después del cual **SQLServerAgent** servicio envía una notificación por buscapersonas al operador especificado los domingos. *sunday_pager_start_time*es **int**, su valor predeterminado es **090000**, lo que indica 9:00 A.M. en un reloj de 24 horas. Se debe especificar con el formato HHMMSS.  
   
- [ **@sunday_pager_end_time =**] *sunday_pager_end_time*  
+ [  **@sunday_pager_end_time =**] *sunday_pager_end_time*  
  El tiempo después del cual **SQLServerAgent** servicio ya no envía una notificación por buscapersonas al operador especificado los domingos. *sunday_pager_end_time*es **int**, su valor predeterminado es **180000**, que indica las 6:00 P.M. en un reloj de 24 horas. Se debe especificar con el formato HHMMSS.  
   
  [  **@pager_days=** ] *pager_days*  

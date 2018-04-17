@@ -1,16 +1,16 @@
 ---
 title: dbo.sysalerts (Transact-SQL) | Documentos de Microsoft
-ms.custom: 
+ms.custom: ''
 ms.date: 10/24/2016
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine
-ms.service: 
+ms.service: ''
 ms.component: system-tables
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - dbo.sysalerts
@@ -22,16 +22,16 @@ dev_langs:
 helpviewer_keywords:
 - sysalerts system table
 ms.assetid: a2c2f50d-61f3-4951-996a-add5ad092cc2
-caps.latest.revision: 
+caps.latest.revision: 25
 author: stevestein
 ms.author: sstein
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 7565ee20e5fdec3a94c413b8204629ce6ee2f48d
-ms.sourcegitcommit: c556eaf60a49af7025db35b7aa14beb76a8158c5
+ms.openlocfilehash: 271452f516e231e22140664c049dacdaea5257a9
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/03/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="dbosysalerts-transact-sql"></a>dbo.sysalerts (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -42,7 +42,7 @@ ms.lasthandoff: 02/03/2018
 |-----------------|---------------|-----------------|  
 |**id**|**int**|Id. de la alerta.|  
 |**Nombre**|**sysname**|Nombre de la alerta.|  
-|**event_source**|**nvarchar(100)**|Origen del evento: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].|  
+|**event_source**|**nvarchar (100)**|Origen del evento: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].|  
 |**event_category_id**|**int**|Reservado para uso futuro.|  
 |**event_id**|**int**|Reservado para uso futuro.|  
 |**message_id**|**int**|Definido por el usuario Id. de mensaje o una referencia a **sysmessages** mensaje que desencadena esta alerta.|  
@@ -56,7 +56,7 @@ ms.lasthandoff: 02/03/2018
 |**notification_message**|**nvarchar(512)**|Información adicional enviada con la alerta.|  
 |**include_event_description**|**tinyint**|Máscara de bits que representa si la descripción del evento se envía por correo electrónico, buscapersonas o Net send. Consulte el gráfico siguiente para los valores.|  
 |**database_name**|**nvarchar(512)**|Base de datos en la que se debe producir el evento para que se desencadene esta alerta.|  
-|**event_description_keyword**|**nvarchar(100)**|Patrón al que se debe ajustar el error para que se desencadene la alerta.|  
+|**event_description_keyword**|**nvarchar (100)**|Patrón al que se debe ajustar el error para que se desencadene la alerta.|  
 |**occurrence_count**|**int**|Número de repeticiones de esta alerta.|  
 |**count_reset_date**|**int**|Número de días (fecha) se restablecerá a **0**.|  
 |**count_reset_time**|**int**|Número de horas se restablecerá a **0**.|  

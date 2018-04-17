@@ -1,16 +1,16 @@
 ---
-title: sp_help_alert (Transact-SQL) | Microsoft Docs
-ms.custom: 
+title: sp_help_alert (Transact-SQL) | Documentos de Microsoft
+ms.custom: ''
 ms.date: 08/09/2016
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine
-ms.service: 
+ms.service: ''
 ms.component: system-stored-procedures
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - sp_help_alert
@@ -20,16 +20,16 @@ dev_langs:
 helpviewer_keywords:
 - sp_help_alert
 ms.assetid: 850cef4e-6348-4439-8e79-fd1bca712091
-caps.latest.revision: 
+caps.latest.revision: 25
 author: stevestein
 ms.author: sstein
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 7f1dc2217a34afadc5a105709ac294325ac9e80a
-ms.sourcegitcommit: c556eaf60a49af7025db35b7aa14beb76a8158c5
+ms.openlocfilehash: 070e37092c8683b1709ae878686a337df74f3232
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/03/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="sphelpalert-transact-sql"></a>sp_help_alert (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -50,32 +50,32 @@ sp_help_alert [ [ @alert_name = ] 'alert_name' ]
 ```  
   
 ## <a name="arguments"></a>Argumentos  
- [ **@alert_name =**] **'***alert_name***'**  
- El nombre de la alerta. *alert_name* is **nvarchar(128)**. Si *alert_name* no es se especifica, se devuelve información sobre todas las alertas.  
+ [  **@alert_name =**] **'***alert_name***'**  
+ El nombre de la alerta. *alert_name* es **nvarchar (128)**. Si *alert_name* no es se especifica, se devuelve información sobre todas las alertas.  
   
- [ **@order_by =**] **'***order_by***'**  
+ [  **@order_by =**] **'***order_by***'**  
  Criterio de ordenación de los resultados. *order_by*es **sysname**, su valor predeterminado es N '*nombre*'.  
   
- [ **@alert_id =**] *alert_id*  
+ [  **@alert_id =**] *alert_id*  
  Número de identificación de la alerta acerca de la que se va a presentar información. *alert_id*es **int**, su valor predeterminado es null.  
   
  [  **@category_name =**] **'***categoría***'**  
  Categoría de la alerta. *categoría* es **sysname**, su valor predeterminado es null.  
   
- [  **@legacy_format** =] *legacy_format*  
+ [ **@legacy_format**=] *legacy_format*  
  Indica si se va a generar un conjunto de resultados heredado. *legacy_format* es **bits**, su valor predeterminado es **0**. Cuando *legacy_format* es **1**, **sp_help_alert** devuelve el conjunto de resultados devuelto por **sp_help_alert** en Microsoft SQL Server 2000.  
   
 ## <a name="return-code-values"></a>Valores de código de retorno  
  **0** (correcto) o **1** (error)  
   
 ## <a name="result-sets"></a>Conjuntos de resultados  
- Cuando  **@legacy_format**  es **0**, **sp_help_alert** produce el siguiente conjunto de resultados.  
+ Cuando **@legacy_format** es **0**, **sp_help_alert** produce el siguiente conjunto de resultados.  
   
 |Nombre de columna|Tipo de datos|Description|  
 |-----------------|---------------|-----------------|  
 |**id**|**int**|Identificador entero único asignado por el sistema.|  
 |**Nombre**|**sysname**|Nombre de la alerta (por ejemplo, Demo: completa **msdb** registro).|  
-|**event_source**|**nvarchar(100)**|Origen del evento. Siempre será **MSSQLServer** para [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] versión 7.0|  
+|**event_source**|**nvarchar (100)**|Origen del evento. Siempre será **MSSQLServer** para [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] versión 7.0|  
 |**event_category_id**|**int**|[!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]|  
 |**event_id**|**int**|[!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]|  
 |**message_id**|**int**|Número del mensaje de error que define la alerta. (Normalmente se corresponde con un número de error en la **sysmessages** tabla). Si se utiliza para definir la alerta, la gravedad **message_id** es **0** o NULL.|  
@@ -89,7 +89,7 @@ sp_help_alert [ [ @alert_name = ] 'alert_name' ]
 |**notification_message**|**nvarchar(512)**|Mensaje adicional opcional enviado al operador como parte de la notificación por correo electrónico o buscapersonas.|  
 |**include_event_description**|**tinyint**|Indica si la descripción del error de SQL Server del registro de aplicación de Microsoft Windows se tiene que incluir en el mensaje de notificación.|  
 |**database_name**|**sysname**|Base de datos en la que debe ocurrir el error para que se desencadene la alerta. Si el nombre de la base de datos es NULL, la alerta se desencadena independientemente de dónde haya ocurrido el error.|  
-|**event_description_keyword**|**nvarchar(100)**|Descripción del error de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] en el registro de aplicación Windows que debe ser similar al flujo de caracteres suministrada.|  
+|**event_description_keyword**|**nvarchar (100)**|Descripción del error de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] en el registro de aplicación Windows que debe ser similar al flujo de caracteres suministrada.|  
 |**occurrence_count**|**int**|Número de veces que ha ocurrido la alerta.|  
 |**count_reset_date**|**int**|Fecha de la **occurrence_count** se restableció por última vez.|  
 |**count_reset_time**|**int**|Tiempo de la **occurrence_count** se restableció por última vez.|  
@@ -98,18 +98,18 @@ sp_help_alert [ [ @alert_name = ] 'alert_name' ]
 |**has_notification**|**int**|Distinto de cero si la alerta se notifica a uno o varios operadores. El valor es uno de los siguientes (con OR):<br /><br /> **1**= tiene notificación por correo electrónico<br /><br /> **2**= con notificación por buscapersonas<br /><br /> **4**= tiene **mediante net send** notificación.|  
 |**flags**|**int**|[!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]|  
 |**performance_condition**|**nvarchar(512)**|Si **tipo** es **2**, esta columna muestra la definición de la condición de rendimiento; en caso contrario, la columna es NULL.|  
-|**category_name**|**sysname**|[!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)] Siempre será '[sin clasificar]' para [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 7.0.|  
+|**category_name**|**sysname**|[!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)] Siempre será '[Sin clasificar]' en [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 7.0.|  
 |**wmi_namespace**|**sysname**|Si **tipo** es **3**, esta columna muestra el espacio de nombres para el evento WMI.|  
 |**wmi_query**|**nvarchar(512)**|Si **tipo** es **3**, esta columna muestra la consulta para el evento WMI.|  
 |**Tipo**|**int**|Tipo de evento:<br /><br /> **1**  =  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] alerta de evento<br /><br /> **2**  =  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] alerta de rendimiento<br /><br /> **3** = alerta de evento WMI|  
   
- Cuando  **@legacy_format**  es **1**, **sp_help_alert** produce el siguiente conjunto de resultados.  
+ Cuando **@legacy_format** es **1**, **sp_help_alert** produce el siguiente conjunto de resultados.  
   
 |Nombre de columna|Tipo de datos|Description|  
 |-----------------|---------------|-----------------|  
 |**id**|**int**|Identificador entero único asignado por el sistema.|  
 |**Nombre**|**sysname**|Nombre de la alerta (por ejemplo, Demo: completa **msdb** registro).|  
-|**event_source**|**nvarchar(100)**|Origen del evento. Siempre será **MSSQLServer** para [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] versión 7.0|  
+|**event_source**|**nvarchar (100)**|Origen del evento. Siempre será **MSSQLServer** para [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] versión 7.0|  
 |**event_category_id**|**int**|[!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]|  
 |**event_id**|**int**|[!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]|  
 |**message_id**|**int**|Número del mensaje de error que define la alerta. (Normalmente se corresponde con un número de error en la **sysmessages** tabla). Si se utiliza para definir la alerta, la gravedad **message_id** es **0** o NULL.|  
@@ -123,7 +123,7 @@ sp_help_alert [ [ @alert_name = ] 'alert_name' ]
 |**notification_message**|**nvarchar(512)**|Mensaje adicional opcional enviado al operador como parte de la notificación por correo electrónico o buscapersonas.|  
 |**include_event_description**|**tinyint**|Indica si la descripción del error de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] del registro de aplicación Windows se tiene que incluir en el mensaje de notificación.|  
 |**database_name**|**sysname**|Base de datos en la que debe ocurrir el error para que se desencadene la alerta. Si el nombre de la base de datos es NULL, la alerta se desencadena independientemente de dónde haya ocurrido el error.|  
-|**event_description_keyword**|**nvarchar(100)**|Descripción del error de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] en el registro de aplicación Windows que debe ser similar al flujo de caracteres suministrada.|  
+|**event_description_keyword**|**nvarchar (100)**|Descripción del error de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] en el registro de aplicación Windows que debe ser similar al flujo de caracteres suministrada.|  
 |**occurrence_count**|**int**|Número de veces que ha ocurrido la alerta.|  
 |**count_reset_date**|**int**|Fecha de la **occurrence_count** se restableció por última vez.|  
 |**count_reset_time**|**int**|Tiempo de la **occurrence_count** se restableció por última vez.|  

@@ -1,16 +1,16 @@
 ---
-title: sp_help_job (Transact-SQL) | Microsoft Docs
-ms.custom: 
+title: sp_help_job (Transact-SQL) | Documentos de Microsoft
+ms.custom: ''
 ms.date: 08/02/2016
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine
-ms.service: 
+ms.service: ''
 ms.component: system-stored-procedures
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - sp_help_job_TSQL
@@ -20,16 +20,16 @@ dev_langs:
 helpviewer_keywords:
 - sp_help_job
 ms.assetid: 8a8b6104-e0e4-4d07-a2c3-f4243ee0d6fa
-caps.latest.revision: 
+caps.latest.revision: 27
 author: stevestein
 ms.author: sstein
 manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 9d91594f032409dbe2597dd859a549c17b795e04
-ms.sourcegitcommit: c556eaf60a49af7025db35b7aa14beb76a8158c5
+ms.openlocfilehash: e195e4fb851b1b301b1ccac9501ae5be107e0689
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/03/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="sphelpjob-transact-sql"></a>sp_help_job (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -66,32 +66,32 @@ sp_help_job { [ @job_id = ] job_id
  Nombre del trabajo. *job_name* es **sysname**, su valor predeterminado es null.  
   
 > [!NOTE]  
->  Cualquier *job_id* o *job_name* debe especificarse, pero no pueden especificarse ambos.  
+>  Para ver un trabajo específico, ya sea *job_id* o *job_name* debe especificarse.  Omitir ambos métodos *job_id* y *job_name* para devolver información acerca de todos los trabajos.
   
- [ **@job_aspect =**] **'***job_aspect***'**  
+ [  **@job_aspect =**] **'***job_aspect***'**  
  Atributo de trabajo que se va a mostrar. *job_aspect* es **varchar (9)**, su valor predeterminado es null y puede tener uno de estos valores.  
   
 |Value|Description|  
 |-----------|-----------------|  
 |**ALL**|Información del aspecto del trabajo|  
-|**JOB**|Información del trabajo|  
+|**TRABAJO**|Información del trabajo|  
 |**PROGRAMACIONES**|Información de la programación|  
-|**STEPS**|Información de los pasos del trabajo|  
-|**TARGETS**|Información de los destinos|  
+|**PASOS**|Información de los pasos del trabajo|  
+|**DESTINOS**|Información de los destinos|  
   
- [ **@job_type =**] **'***job_type***'**  
+ [  **@job_type =**] **'***job_type***'**  
  Tipo de trabajos que se incluirán en el informe. *job_type* es **varchar (12)**, su valor predeterminado es null. *job_type* puede ser **LOCAL** o **MULTISERVIDOR**.  
   
  [  **@owner_login_name =**] **'***login_name***'**  
  Nombre de inicio de sesión del propietario del trabajo. *login_name* es **sysname**, su valor predeterminado es null.  
   
- [  **@subsystem =**] **'***subsistema***'**  
+ [ **@subsystem =**] **'***subsystem***'**  
  Nombre del subsistema. *subsistema* es **nvarchar (40)**, su valor predeterminado es null.  
   
- [  **@category_name =**] **'***categoría***'**  
+ [ **@category_name =**] **'***category***'**  
  El nombre de la categoría. *categoría* es **sysname**, su valor predeterminado es null.  
   
- [  **@enabled =**] *habilitado*  
+ [ **@enabled =**] *enabled*  
  Número que indica si se muestra información de los trabajos habilitados o los trabajos deshabilitados. *habilitado* es **tinyint**, su valor predeterminado es null. **1** indica trabajos habilitados y **0** indica trabajos deshabilitados.  
   
  [  **@execution_status =**] *estado*  
@@ -107,16 +107,16 @@ sp_help_job { [ @job_id = ] job_id
 |**5**|Suspendido.|  
 |**7**|Realizando acciones de finalización.|  
   
- [ **@date_comparator =**] **'***date_comparison***'**  
+ [  **@date_comparator =**] **'***date_comparison***'**  
  El operador de comparación que utiliza en las comparaciones de *date_created* y *date_modified*. *date_comparison* es **char (1)**y puede ser =, \<, o >.  
   
- [ **@date_created =**] *date_created*  
+ [  **@date_created =**] *date_created*  
  Fecha de creación del trabajo. *Date_Created*es **datetime**, su valor predeterminado es null.  
   
- [ **@date_last_modified =**] *date_modified*  
+ [  **@date_last_modified =**] *date_modified*  
  La fecha en que se modificó por última vez el trabajo. *DATE_MODIFIED* es **datetime**, su valor predeterminado es null.  
   
- [ **@description =**] **'***description_pattern***'**  
+ [  **@description =**] **'***description_pattern***'**  
  Descripción del trabajo. *description_pattern* es **nvarchar (512)**, su valor predeterminado es null. *description_pattern* puede incluir los caracteres comodín de SQL Server para la coincidencia.  
   
 ## <a name="return-code-values"></a>Valores de código de retorno  
@@ -131,9 +131,9 @@ sp_help_job { [ @job_id = ] job_id
 |**originating_server**|**nvarchar(30)**|Nombre del servidor del que proviene el trabajo.|  
 |**Nombre**|**sysname**|Nombre del trabajo.|  
 |**enabled**|**tinyint**|Indica si el trabajo está habilitado para su ejecución.|  
-|**description**|**nvarchar(512)**|Descripción del trabajo.|  
+|**Descripción**|**nvarchar(512)**|Descripción del trabajo.|  
 |**start_step_id**|**int**|Id. del paso del trabajo en el que debe comenzar la ejecución.|  
-|**category**|**sysname**|Categoría del trabajo|  
+|**Categoría**|**sysname**|Categoría del trabajo|  
 |**propietario**|**sysname**|Propietario del trabajo.|  
 |**notify_level_eventlog**|**int**|**Máscara de bits** que indica en qué circunstancias se debe registrar un evento de notificación en el registro de aplicación de Microsoft Windows. Puede ser uno de estos valores:<br /><br /> **0** no = nunca<br /><br /> **1** = cuando se realiza correctamente un trabajo<br /><br /> **2** = cuando se produce un error en el trabajo<br /><br /> **3** = cuando el trabajo se completa (independientemente del resultado del trabajo)|  
 |**notify_level_email**|**int**|**Máscara de bits** que indica en qué circunstancias se debe enviar una notificación por correo electrónico cuando se completa un trabajo. Los valores posibles son los mismos que para **notify_level_eventlog**.|  
@@ -167,7 +167,7 @@ sp_help_job { [ @job_id = ] job_id
 |Nombre de columna|Tipo de datos|Description|  
 |-----------------|---------------|-----------------|  
 |**step_id**|**int**|Identificador único del paso (en este trabajo).|  
-|**step_name**|**sysname**|Nombre del paso.|  
+|**Step_name**|**sysname**|Nombre del paso.|  
 |**subsystem**|**nvarchar(40)**|Subsistema en el que se ejecuta el comando del paso.|  
 |**command**|**nvarchar(3200)**|Comando que se ejecuta.|  
 |**flags**|**nvarchar(4000)**|**Máscara de bits** de valores que controlan el comportamiento del paso.|  
@@ -198,10 +198,10 @@ sp_help_job { [ @job_id = ] job_id
 |**schedule_name**|**sysname**|Nombre de la programación (único solo para este trabajo).|  
 |**enabled**|**int**|Si la programación está activa (**1**) o no (**0**).|  
 |**freq_type**|**int**|Valor que indica cuándo se va a ejecutar el trabajo:<br /><br /> **1** = una vez<br /><br /> **4** = diariamente<br /><br /> **8** = semanalmente<br /><br /> **16** = mensualmente<br /><br /> **32** = mensualmente, relativo a la **freq_interval**<br /><br /> **64** = ejecutar cuando **SQLServerAgent** inicia el servicio.|  
-|**freq_interval**|**int**|Días cuando se ejecuta el trabajo. El valor depende del valor de **freq_type**. Para obtener más información, consulte [sp_add_schedule &#40; Transact-SQL &#41;](../../relational-databases/system-stored-procedures/sp-add-schedule-transact-sql.md)|  
-|**freq_subday_type**|**Int**|Unidades de **freq_subday_interval**. Para obtener más información, consulte [sp_add_schedule &#40; Transact-SQL &#41;](../../relational-databases/system-stored-procedures/sp-add-schedule-transact-sql.md)|  
-|**freq_subday_interval**|**int**|Número de **freq_subday_type** períodos que transcurren entre cada ejecución del trabajo. Para obtener más información, consulte [sp_add_schedule &#40; Transact-SQL &#41;](../../relational-databases/system-stored-procedures/sp-add-schedule-transact-sql.md)|  
-|**freq_relative_interval**|**int**|El trabajo programado de la **freq_interval** cada mes. Para obtener más información, consulte [sp_add_schedule &#40; Transact-SQL &#41;](../../relational-databases/system-stored-procedures/sp-add-schedule-transact-sql.md)|  
+|**freq_interval**|**int**|Días cuando se ejecuta el trabajo. El valor depende del valor de **freq_type**. Para obtener más información, consulte [sp_add_schedule &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-add-schedule-transact-sql.md)|  
+|**freq_subday_type**|**Int**|Unidades de **freq_subday_interval**. Para obtener más información, consulte [sp_add_schedule &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-add-schedule-transact-sql.md)|  
+|**freq_subday_interval**|**int**|Número de **freq_subday_type** períodos que transcurren entre cada ejecución del trabajo. Para obtener más información, consulte [sp_add_schedule &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-add-schedule-transact-sql.md)|  
+|**freq_relative_interval**|**int**|El trabajo programado de la **freq_interval** cada mes. Para obtener más información, consulte [sp_add_schedule &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-add-schedule-transact-sql.md)|  
 |**freq_recurrence_factor**|**int**|Número de meses entre las ejecuciones programadas del trabajo.|  
 |**active_start_date**|**int**|Fecha en que empieza la ejecución del trabajo.|  
 |**active_end_date**|**int**|Fecha en que termina la ejecución del trabajo.|  

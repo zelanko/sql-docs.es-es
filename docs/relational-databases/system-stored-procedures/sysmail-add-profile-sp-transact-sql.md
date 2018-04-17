@@ -1,8 +1,8 @@
 ---
-title: sysmail_add_profile_sp (Transact-SQL) | Microsoft Docs
+title: sysmail_add_profile_sp (Transact-SQL) | Documentos de Microsoft
 ms.custom: ''
 ms.date: 03/06/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine
 ms.service: ''
 ms.component: system-stored-procedures
@@ -25,11 +25,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 6295b1f239f136c43e00e047186ce408ab9a4a93
-ms.sourcegitcommit: d6b1695c8cbc70279b7d85ec4dfb66a4271cdb10
+ms.openlocfilehash: 5d7ff64e947df8c3980e28ae726971a9fbcefa0a
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/10/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="sysmailaddprofilesp-transact-sql"></a>sysmail_add_profile_sp (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -48,13 +48,13 @@ sysmail_add_profile_sp [ @profile_name = ] 'profile_name'
 ```  
   
 ## <a name="arguments"></a>Argumentos  
- [ **@profile_name** = ] **'***profile_name***'**  
+ [ **@profile_name** =] **'***profile_name***'**  
  Nombre del nuevo perfil. *profile_name* es **sysname**, no tiene ningún valor predeterminado.  
   
- [ **@description** = ] **'***description***'**  
+ [ **@description** =] **'***descripción***'**  
  Descripción opcional del nuevo perfil. *descripción* es **nvarchar (256)**, no tiene ningún valor predeterminado.  
   
- [ **@profile_id** = ] *new_profile_id***OUTPUT**  
+ [ **@profile_id** =] *new_profile_id *** salida**  
  Devuelve el identificador del nuevo perfil. *new_profile_id* es **int**, su valor predeterminado es null.  
   
 ## <a name="return-code-values"></a>Valores de código de retorno  

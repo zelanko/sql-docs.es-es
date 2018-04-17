@@ -1,16 +1,16 @@
 ---
-title: sp_change_log_shipping_secondary_database (Transact-SQL) | Microsoft Docs
-ms.custom: 
+title: sp_change_log_shipping_secondary_database (Transact-SQL) | Documentos de Microsoft
+ms.custom: ''
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine
-ms.service: 
+ms.service: ''
 ms.component: system-stored-procedures
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - sp_change_log_shipping_secondary_database
@@ -20,16 +20,16 @@ dev_langs:
 helpviewer_keywords:
 - sp_change_log_shipping_secondary_database
 ms.assetid: 3ebcf2f1-980f-4543-a84b-fbaeea54eeac
-caps.latest.revision: 
+caps.latest.revision: 23
 author: stevestein
 ms.author: sstein
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: fc7ed57e7f6f64f3fc2527cdaff3766690032489
-ms.sourcegitcommit: c556eaf60a49af7025db35b7aa14beb76a8158c5
+ms.openlocfilehash: 0edae5ffcd82e45c348cb382788e5ca6718419ce
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/03/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="spchangelogshippingsecondarydatabase-transact-sql"></a>sp_change_log_shipping_secondary_database (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -58,13 +58,13 @@ sp_change_log_shipping_secondary_database
 ```  
   
 ## <a name="arguments"></a>Argumentos  
- [ **@restore_delay =** ] '*restore_delay*'  
+ [  **@restore_delay =** ] '*restore_delay*'  
  Cantidad de tiempo, en minutos, que espera el servidor secundario antes de restaurar un archivo de copia de seguridad dado. *restore_delay* es **int** y no puede ser NULL. El valor predeterminado es 0.  
   
- [ **@restore_all =** ] '*restore_all*'  
+ [  **@restore_all =** ] '*restore_all*'  
  Si se establece en 1, el servidor secundario restaura todas las copias de seguridad disponibles del registro de transacciones cuando se ejecuta el trabajo de restauración. De lo contrario, se detiene tras haber restaurado un archivo. *restore_all* es **bits** y no puede ser NULL.  
   
- [ **@restore_mode =** ] '*restore_mode*'  
+ [  **@restore_mode =** ] '*restore_mode*'  
  Modo de restauración para la base de datos secundaria.  
   
  0 = Restaurar registro con NORECOVERY.  
@@ -82,16 +82,16 @@ sp_change_log_shipping_secondary_database
  [  **@buffer_count =** ] '*buffer_count*'  
  Número total de búferes utilizados por la operación de copia de seguridad o restauración. *buffer_count* es **int** con un valor predeterminado de -1.  
   
- [ **@max_transfer_size =** ] '*max_transfer_size*'  
+ [  **@max_transfer_size =** ] '*max_transfer_size*'  
  Tamaño, en bytes, de la solicitud de entrada o salida máxima emitida por [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] al dispositivo de copia de seguridad. *max_transfersize* es **int** y puede ser NULL.  
   
- [ **@restore_threshold =** ] '*restore_threshold*'  
+ [  **@restore_threshold =** ] '*restore_threshold*'  
  Número de minutos permitido entre las operaciones de restauración antes de que se genere una alerta. *restore_threshold* es **int** y no puede ser NULL.  
   
- [ **@threshold_alert =** ] '*threshold_alert*'  
+ [  **@threshold_alert =** ] '*threshold_alert*'  
  Es la alerta que se generará cuando se supere el umbral de restauración. *threshold_alert* es **int**, su valor predeterminado es 14420.  
   
- [ **@threshold_alert_enabled =** ] '*threshold_alert_enabled*'  
+ [  **@threshold_alert_enabled =** ] '*threshold_alert_enabled*'  
  Especifica si una alerta se genera cuando *restore_threshold*se supera. 1 = habilitadas; 0 = deshabilitadas. *threshold_alert_enabled* es **bits** y no puede ser NULL.  
   
  [  **@history_retention_period =** ] '*history_retention_period*'  
@@ -129,7 +129,7 @@ EXEC master.dbo.sp_change_log_shipping_secondary_database
 ```  
   
 ## <a name="see-also"></a>Vea también  
- [Acerca del trasvase de registros &#40; SQL Server &#41;](../../database-engine/log-shipping/about-log-shipping-sql-server.md)   
+ [Acerca del trasvase de registros & #40; SQL Server & #41;](../../database-engine/log-shipping/about-log-shipping-sql-server.md)   
  [Procedimientos almacenados del sistema &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
   
   

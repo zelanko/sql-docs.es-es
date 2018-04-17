@@ -1,16 +1,16 @@
 ---
-title: sys.xml_schema_components (Transact-SQL) | Microsoft Docs
-ms.custom: 
+title: Sys.xml_schema_components (Transact-SQL) | Documentos de Microsoft
+ms.custom: ''
 ms.date: 06/10/2016
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine
-ms.service: 
+ms.service: ''
 ms.component: system-catalog-views
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - xml_schema_components
@@ -22,16 +22,16 @@ dev_langs:
 helpviewer_keywords:
 - sys.xml_schema_components catalog view
 ms.assetid: 70142d3a-f8b5-4ee2-8287-3935f0f67aa2
-caps.latest.revision: 
+caps.latest.revision: 35
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: d4fc4e3ee794cf427959b1c1860fe013340cd883
-ms.sourcegitcommit: c556eaf60a49af7025db35b7aa14beb76a8158c5
+ms.openlocfilehash: 7abdf05c9376d9a603003da9503669774e82341f
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/03/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="sysxmlschemacomponents-transact-sql"></a>sys.xml_schema_components (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -47,9 +47,9 @@ ms.lasthandoff: 02/03/2018
 |**Nombre**|**nvarchar**<br /><br /> **(4000)**|Nombre único del componente del esquema XML. Es NULL si el componente no tiene nombre.|  
 |**symbol_space**|**char(1)**|Espacio en el que este nombre simbólico es único, en función de **tipo**:<br /><br /> N = Ninguno<br /><br /> T = Tipo<br /><br /> E = Elemento<br /><br /> M = Grupo de modelos<br /><br /> A = Atributo<br /><br /> G = Grupo de atributos|  
 |**symbol_space_desc**|**nvarchar**<br /><br /> **(60)**|Descripción del espacio en el que este nombre simbólico es único, en función de **tipo**:<br /><br /> Ninguno<br /><br /> TYPE<br /><br /> ELEMENT<br /><br /> MODEL_GROUP<br /><br /> ATTRIBUTE<br /><br /> ATTRIBUTE_GROUP|  
-|**kind**|**char(1)**|Tipo del componente del esquema XML.<br /><br /> N = Cualquier tipo (componente intrínseco especial)<br /><br /> Z = Cualquier tipo simple (componente intrínseco especial)<br /><br /> P = Tipo primitivo (tipos intrínsecos)<br /><br /> S = Tipo simple<br /><br /> L = Tipo de lista<br /><br /> U = Tipo de unión<br /><br /> C = Tipo simple complejo (derivado de simple)<br /><br /> K = Tipo complejo<br /><br /> E = Elemento<br /><br /> M = Grupo de modelos<br /><br /> W = Comodín de elementos<br /><br /> A = Atributo<br /><br /> G = Grupo de atributos<br /><br /> V = Comodín de atributos|  
+|**tipo**|**char(1)**|Tipo del componente del esquema XML.<br /><br /> N = Cualquier tipo (componente intrínseco especial)<br /><br /> Z = Cualquier tipo simple (componente intrínseco especial)<br /><br /> P = Tipo primitivo (tipos intrínsecos)<br /><br /> S = Tipo simple<br /><br /> L = Tipo de lista<br /><br /> U = Tipo de unión<br /><br /> C = Tipo simple complejo (derivado de simple)<br /><br /> K = Tipo complejo<br /><br /> E = Elemento<br /><br /> M = Grupo de modelos<br /><br /> W = Comodín de elementos<br /><br /> A = Atributo<br /><br /> G = Grupo de atributos<br /><br /> V = Comodín de atributos|  
 |**kind_desc**|**nvarchar**<br /><br /> **(60)**|Descripción del tipo de componente del esquema XML.<br /><br /> ANY_TYPE<br /><br /> ANY_SIMPLE_TYPE<br /><br /> PRIMITIVE_TYPE<br /><br /> SIMPLE_TYPE<br /><br /> LIST_TYPE<br /><br /> UNION_TYPE<br /><br /> COMPLEX_SIMPLE_TYPE<br /><br /> COMPLEX_TYPE<br /><br /> ELEMENT<br /><br /> MODEL_GROUP<br /><br /> ELEMENT_WILDCARD<br /><br /> ATTRIBUTE<br /><br /> ATTRIBUTE_GROUP<br /><br /> ATTRIBUTE_WILDCARD|  
-|**derivation**|**char(1)**|Método de derivación para tipos derivados:<br /><br /> N = Ninguno (no derivado)<br /><br /> X = Extensión<br /><br /> R = Restricción<br /><br /> S = Sustitución|  
+|**derivación**|**char(1)**|Método de derivación para tipos derivados:<br /><br /> N = Ninguno (no derivado)<br /><br /> X = Extensión<br /><br /> R = Restricción<br /><br /> S = Sustitución|  
 |**derivation_desc**|**nvarchar**<br /><br /> **(60)**|Descripción del método de derivación para tipos derivados:<br /><br /> Ninguno<br /><br /> EXTENSION<br /><br /> RESTRICTION<br /><br /> SUBSTITUTION|  
 |**base_xml_component_id**|**int**|Id. del componente del que se deriva este componente. Es NULL si no hay ninguno.|  
 |**scoping_xml_component_id**|**int**|Id. único del componente de alcance. Es NULL si no hay ninguno (espacio global).|  
@@ -59,6 +59,6 @@ ms.lasthandoff: 02/03/2018
   
 ## <a name="see-also"></a>Vea también  
  [Vistas de catálogo &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/catalog-views-transact-sql.md)   
- [Esquemas XML &#40; Sistema de tipo XML &#41; Vistas de catálogo &#40; Transact-SQL &#41;](../../relational-databases/system-catalog-views/xml-schemas-xml-type-system-catalog-views-transact-sql.md)  
+ [Esquemas XML &#40;sistema de tipo XML&#41; vistas de catálogo &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/xml-schemas-xml-type-system-catalog-views-transact-sql.md)  
   
   

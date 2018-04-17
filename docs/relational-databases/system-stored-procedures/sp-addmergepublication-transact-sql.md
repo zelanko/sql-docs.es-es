@@ -2,7 +2,7 @@
 title: sp_addmergepublication (Transact-SQL) | Documentos de Microsoft
 ms.custom: ''
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine
 ms.service: ''
 ms.component: system-stored-procedures
@@ -25,11 +25,11 @@ author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: b3f61d6ab3c2154020be3eb1ecf4407f57541918
-ms.sourcegitcommit: 45e4efb7aa828578fe9eb7743a1a3526da719555
+ms.openlocfilehash: 350bb858beee315e45a63cb5d72ab05f45d70848
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="spaddmergepublication-transact-sql"></a>sp_addmergepublication (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -99,7 +99,7 @@ sp_addmergepublication [ @publication = ] 'publication'
  [  **@sync_mode =** ] **'***sync_mode***'**  
  Es el modo de la sincronización inicial de suscriptores con la publicación. *sync_mode* es **nvarchar (10)**, y puede tener uno de los siguientes valores.  
   
-|Valor|Description|  
+|Value|Description|  
 |-----------|-----------------|  
 |**Native** (valor predeterminado)|Genera la salida de todas las tablas mediante un programa de copia masiva en modo nativo.|  
 |**carácter**|Genera la salida de todas las tablas mediante un programa de copia masiva en modo de caracteres. Debe admitir [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssEW](../../includes/ssew-md.md)] y no-[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] los suscriptores.|  
@@ -169,7 +169,7 @@ sp_addmergepublication [ @publication = ] 'publication'
  Especifica el período de retención, expresado en días, durante el que se conservan los conflictos. *conflict_retention* es **int**, con un valor predeterminado de 14 días antes el conflicto se purga fila de la tabla de conflictos.  
   
  [  **@keep_partition_changes =** ] **'***keep_partition_changes***'**  
- Especifica si se permiten optimizaciones de cambio de particiones cuando no se pueden usar las particiones precalculadas. *keep_partition_changes* es **nvarchar (5)**, con un valor predeterminado es TRUE. **false** significa que las particiones de los cambios no se optimiza y cuando no se utilizan particiones precalculadas, las particiones enviadas a todos los suscriptores se comprobarán cuando cambian los datos de una partición. **True** significa que los cambios de partición se optimiza y solo los suscriptores que tienen filas en las particiones modificadas se ven afectados. Al utilizar particiones precalculadas, establezca *use_partition_groups* a **true** y establecer *keep_partition_changes* a **false**. Para obtener más información, vea [Optimización del rendimiento de los filtros con parámetros con particiones calculadas previamente](../../relational-databases/replication/merge/parameterized-filters-optimize-for-precomputed-partitions.md).  
+ Especifica si se permiten optimizaciones de cambio de particiones cuando no se pueden usar las particiones precalculadas. *keep_partition_changes* es **nvarchar (5)**, con un valor predeterminado es TRUE. **false** significa que las particiones de los cambios no se optimiza y cuando no se utilizan particiones precalculadas, las particiones enviadas a todos los suscriptores se comprobarán cuando cambian los datos de una partición. **True** significa que los cambios de partición se optimiza y solo los suscriptores que tienen filas en las particiones modificadas se ven afectados. Al utilizar particiones precalculadas, establezca *use_partition_groups* a **true** y establecer *keep_partition_changes* a **false**. Para obtener más información, vea [Optimizar el rendimiento de los filtros con parámetros con particiones calculadas previamente](../../relational-databases/replication/merge/parameterized-filters-optimize-for-precomputed-partitions.md).  
   
 > [!NOTE]  
 >  Si especifica un valor de **true** para *keep_partition_changes*, especifique un valor de **1** para el parámetro de agente de instantáneas **- MaxNetworkOptimization** . Para obtener más información acerca de este parámetro, vea [Replication Snapshot Agent](../../relational-databases/replication/agents/replication-snapshot-agent.md). Para obtener información acerca de cómo especificar parámetros de agente, vea [administración del agente de replicación](../../relational-databases/replication/agents/replication-agent-administration.md).  
@@ -200,10 +200,10 @@ sp_addmergepublication [ @publication = ] 'publication'
  [  **@use_partition_groups =** ] **'***use_partition_groups***'**  
  Especifica que se deben usar particiones precalculadas para optimizar el proceso de sincronización. *use_partition_groups* es **nvarchar (5)**, y puede tener uno de estos valores:  
   
-|Valor|Description|  
+|Value|Description|  
 |-----------|-----------------|  
 |**true**|La publicación utiliza particiones previamente calculadas.|  
-|**false**|La publicación no utiliza particiones previamente calculadas.|  
+|**False**|La publicación no utiliza particiones previamente calculadas.|  
 |NULL(Default)|El sistema decide la estrategia de partición.|  
   
  Las particiones precalculadas se utilizan de manera predeterminada. Para evitar usar particiones precalculadas, *use_partition_groups* debe establecerse en **false**. Si es NULL, el sistema decidirá si se pueden utilizar. Si precalculadas particiones no se puede usar, a continuación, este valor se convierte en **false** sin generar errores. En tales casos, *keep_partition_changes* se puede establecer en **true** para proporcionar alguna optimización. Para obtener más información, consulte [Parameterized Row Filters](../../relational-databases/replication/merge/parameterized-filters-parameterized-row-filters.md) y [optimizar el rendimiento de filtro con parámetros con particiones precalculadas](../../relational-databases/replication/merge/parameterized-filters-optimize-for-precomputed-partitions.md).  
@@ -211,13 +211,13 @@ sp_addmergepublication [ @publication = ] 'publication'
  [  **@publication_compatibility_level =** ] *backward_comp_level*  
  Indica la compatibilidad con versiones anteriores de la publicación. *backward_comp_level* es **nvarchar(6)**, y puede tener uno de estos valores:  
   
-|Valor|Versión|  
+|Value|Versión|  
 |-----------|-------------|  
 |**90RTM**|[!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)]|  
 |**100RTM**|[!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)]|  
   
  [  **@replicate_ddl =** ] *replicate_ddl*  
- Indica si la publicación admite replicación de esquema. *replicate_ddl* es **int**, su valor predeterminado es 1. **1** indica que se replican instrucciones de DDL (lenguaje) de definición de datos ejecutadas en el publicador, y **0** indica que no se replican las instrucciones de DDL. Para más información, vea [Realizar cambios de esquema en bases de datos de publicaciones](../../relational-databases/replication/publish/make-schema-changes-on-publication-databases.md).  
+ Indica si la publicación admite replicación de esquema. *replicate_ddl* es **int**, su valor predeterminado es 1. **1** indica que se replican instrucciones de DDL (lenguaje) de definición de datos ejecutadas en el publicador, y **0** indica que no se replican las instrucciones de DDL. Para más información, vea [Make Schema Changes on Publication Databases](../../relational-databases/replication/publish/make-schema-changes-on-publication-databases.md) (Realizar cambios de esquema en bases de datos de publicaciones).  
   
  El *@replicate_ddl* parámetro se observa cuando una instrucción DDL agrega una columna. El *@replicate_ddl* parámetro se ignora cuando una instrucción DDL modifica o quita una columna por las razones siguientes.  
   
@@ -245,12 +245,12 @@ sp_addmergepublication [ @publication = ] 'publication'
  [  **@retention_period_unit =** ] **'***retention_period_unit***'**  
  Especifica las unidades para el período de retención establecido *retención*. *retention_period_unit* es **nvarchar (10)**, y puede tener uno de los siguientes valores.  
   
-|Valor|Versión|  
+|Value|Versión|  
 |-----------|-------------|  
 |**día** (valor predeterminado)|El período de retención se especifica en días.|  
-|**semana**|El período de retención se especifica en semanas.|  
-|**mes**|El período de retención se especifica en meses.|  
-|**año**|El período de retención se especifica en años.|  
+|**week**|El período de retención se especifica en semanas.|  
+|**month**|El período de retención se especifica en meses.|  
+|**year**|El período de retención se especifica en años.|  
   
  [  **@generation_leveling_threshold=** ] *generation_leveling_threshold*  
  Especifica el número de cambios que se encuentran en una generación. Una generación es un conjunto de cambios que se entregan a un publicador o suscriptor. *generation_leveling_threshold* es **int**, con un valor predeterminado de 1000.  
@@ -264,7 +264,7 @@ sp_addmergepublication [ @publication = ] 'publication'
  [  **@conflict_logging =** ] **'***conflict_logging***'**  
  Especifica dónde se almacenan los registros conflictivos. *conflict_logging* es **nvarchar (15)**, y puede tener uno de los siguientes valores:  
   
-|Valor|Description|  
+|Value|Description|  
 |-----------|-----------------|  
 |**publicador**|Los registros de conflictos se almacenan en el publicador.|  
 |**suscriptor**|Los registros de conflictos se almacenan en el suscriptor que causó el conflicto. No se admite para [!INCLUDE[ssEW](../../includes/ssew-md.md)] los suscriptores.|  
@@ -283,7 +283,7 @@ sp_addmergepublication [ @publication = ] 'publication'
   
  Para [!INCLUDE[ssEW](../../includes/ssew-md.md)] los suscriptores, el valor de *alternate_snapshot_folder* solamente se utiliza cuando el valor de *snapshot_in_default_folder* es **false**.  
   
- Con la replicación DDL habilitada (*replicate_ddl***= 1**) para una publicación, con el fin de realizar sin replicación DDL cambios en la publicación, [sp_changemergepublication &#40; Transact-SQL &#41; ](../../relational-databases/system-stored-procedures/sp-changemergepublication-transact-sql.md) primero debe ejecutar para establecer *replicate_ddl* a **0**. Una vez que se han ejecutado las instrucciones de DDL sin replicación, **sp_changemergepublication** puede ejecutarse de nuevo para volver a activar la replicación DDL.  
+ Con la replicación DDL habilitada (* replicate_ddl ***= 1**) para una publicación, con el fin de realizar sin replicación DDL cambios en la publicación, [sp_changemergepublication &#40;Transact-SQL&#41; ](../../relational-databases/system-stored-procedures/sp-changemergepublication-transact-sql.md)primero debe ejecutar para establecer *replicate_ddl* a **0**. Una vez que se han ejecutado las instrucciones de DDL sin replicación, **sp_changemergepublication** puede ejecutarse de nuevo para volver a activar la replicación DDL.  
   
 ## <a name="example"></a>Ejemplo  
  [!code-sql[HowTo#sp_AddMergePub](../../relational-databases/replication/codesnippet/tsql/sp-addmergepublication-t_1.sql)]  
@@ -295,7 +295,7 @@ sp_addmergepublication [ @publication = ] 'publication'
  [Create a Publication](../../relational-databases/replication/publish/create-a-publication.md)   
  [Publicar datos y objetos de base de datos](../../relational-databases/replication/publish/publish-data-and-database-objects.md)   
  [sp_changemergepublication &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-changemergepublication-transact-sql.md)   
- [sp_dropmergepublication &#40; Transact-SQL &#41;](../../relational-databases/system-stored-procedures/sp-dropmergepublication-transact-sql.md)   
+ [sp_dropmergepublication &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-dropmergepublication-transact-sql.md)   
  [sp_helpmergepublication &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-helpmergepublication-transact-sql.md)   
  [Procedimientos almacenados de replicación &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/replication-stored-procedures-transact-sql.md)  
   

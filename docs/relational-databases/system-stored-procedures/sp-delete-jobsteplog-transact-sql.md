@@ -1,16 +1,16 @@
 ---
-title: sp_delete_jobsteplog (Transact-SQL) | Microsoft Docs
-ms.custom: 
+title: sp_delete_jobsteplog (Transact-SQL) | Documentos de Microsoft
+ms.custom: ''
 ms.date: 08/09/2016
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine
-ms.service: 
+ms.service: ''
 ms.component: system-stored-procedures
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - sp_delete_jobsteplog
@@ -20,16 +20,16 @@ dev_langs:
 helpviewer_keywords:
 - sp_delete_jobsteplog
 ms.assetid: e9ef4c99-abde-4038-b6a3-a25dcbaf0958
-caps.latest.revision: 
+caps.latest.revision: 20
 author: stevestein
 ms.author: sstein
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: c5f5bf88c8b02b51dac095dcd0445d3324e23e5e
-ms.sourcegitcommit: c556eaf60a49af7025db35b7aa14beb76a8158c5
+ms.openlocfilehash: 83299ab01c2ec8c82b979bb2193cce1a9ca87803
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/03/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="spdeletejobsteplog-transact-sql"></a>sp_delete_jobsteplog (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -50,7 +50,7 @@ sp_delete_jobsteplog { [ @job_id = ] 'job_id' | [ @job_name = ] 'job_name' }
 ```  
   
 ## <a name="arguments"></a>Argumentos  
- [ **@job_id =**] **'***job_id***'**  
+ [  **@job_id =**] **'***job_id***'**  
  Número de identificación del trabajo que contiene el registro de paso de trabajo que se va a quitar. *job_id* es **int**, su valor predeterminado es null.  
   
  [  **@job_name =**] **'***job_name***'**  
@@ -59,7 +59,7 @@ sp_delete_jobsteplog { [ @job_id = ] 'job_id' | [ @job_name = ] 'job_name' }
 > **Nota:** cualquier *job_id* o *job_name* debe especificarse, pero no pueden especificarse ambos.  
   
  [ **@step_id =**] *step_id*  
- Número de identificación del paso en el trabajo cuyo registro de paso de trabajo se va a eliminar. Si no se incluye, se eliminarán todos los registros de paso de trabajo en el trabajo a menos que  **@older_than**  o  **@larger_than**  se especifican. *step_id* es **int**, su valor predeterminado es null.  
+ Número de identificación del paso en el trabajo cuyo registro de paso de trabajo se va a eliminar. Si no se incluye, se eliminarán todos los registros de paso de trabajo en el trabajo a menos que **@older_than** o **@larger_than** se especifican. *step_id* es **int**, su valor predeterminado es null.  
   
  [  **@step_name =**] **'***step_name***'**  
  Nombre del paso del trabajo cuyo registro de paso de trabajo se va a eliminar. *Step_name* es **sysname**, su valor predeterminado es null.  
@@ -67,10 +67,10 @@ sp_delete_jobsteplog { [ @job_id = ] 'job_id' | [ @job_name = ] 'job_name' }
 > **Nota:** cualquier *step_id* o *step_name* puede especificarse, pero no pueden especificarse ambos.  
   
  [  **@older_than =**] **'***fecha***'**  
- Fecha y hora del registro de paso de trabajo más antiguo que desea conservar. Todos los registros de paso de trabajo con fecha anterior a esta fecha y hora se quitarán. *fecha* es **datetime**, su valor predeterminado es null. Ambos  **@older_than**  y  **@larger_than**  se puede especificar.  
+ Fecha y hora del registro de paso de trabajo más antiguo que desea conservar. Todos los registros de paso de trabajo con fecha anterior a esta fecha y hora se quitarán. *fecha* es **datetime**, su valor predeterminado es null. Ambos **@older_than** y **@larger_than** se puede especificar.  
   
- [ **@larger_than =**] **'***size_in_bytes***'**  
- Tamaño en bytes del registro de paso de trabajo más grande que desea conservar. Todos los registros de paso de trabajo con un tamaño superior a este se quitan. Ambos  **@larger_than**  y  **@older_than**  se puede especificar.  
+ [  **@larger_than =**] **'***size_in_bytes***'**  
+ Tamaño en bytes del registro de paso de trabajo más grande que desea conservar. Todos los registros de paso de trabajo con un tamaño superior a este se quitan. Ambos **@larger_than** y **@older_than** se puede especificar.  
   
 ## <a name="return-code-values"></a>Valores de código de retorno  
  **0** (correcto) o **1** (error)  
@@ -81,7 +81,7 @@ sp_delete_jobsteplog { [ @job_id = ] 'job_id' | [ @job_name = ] 'job_name' }
 ## <a name="remarks"></a>Comentarios  
  **sp_delete_jobsteplog** está en el **msdb** base de datos.  
   
- Si ningún argumento excepto  **@job_id**  o  **@job_name**  se especifica, se eliminan todos los registros de paso de trabajo para el trabajo especificado.  
+ Si ningún argumento excepto **@job_id** o **@job_name** se especifica, se eliminan todos los registros de paso de trabajo para el trabajo especificado.  
   
 ## <a name="permissions"></a>Permissions  
  De forma predeterminada, los miembros del rol fijo de servidor **sysadmin** pueden ejecutar este procedimiento almacenado. Al resto de usuarios se les debe conceder uno de los siguientes roles fijos de base de datos del Agente [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] en la base de datos **msdb** :  
@@ -139,6 +139,6 @@ GO
   
 ## <a name="see-also"></a>Vea también  
  [sp_help_jobsteplog &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-help-jobsteplog-transact-sql.md)   
- [Agente SQL Server almacena procedimientos &#40; Transact-SQL &#41;](../../relational-databases/system-stored-procedures/sql-server-agent-stored-procedures-transact-sql.md)  
+ [Procedimientos almacenados del Agente SQL Server &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sql-server-agent-stored-procedures-transact-sql.md)  
   
   

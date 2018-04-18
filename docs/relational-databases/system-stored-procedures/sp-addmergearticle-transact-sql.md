@@ -1,16 +1,16 @@
 ---
 title: sp_addmergearticle (Transact-SQL) | Documentos de Microsoft
-ms.custom: 
+ms.custom: ''
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine
-ms.service: 
+ms.service: ''
 ms.component: system-stored-procedures
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - replication
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 applies_to:
 - SQL Server
@@ -20,16 +20,16 @@ f1_keywords:
 helpviewer_keywords:
 - sp_addmergearticle
 ms.assetid: 0df654ea-24e2-4c61-a75a-ecaa7a140a6c
-caps.latest.revision: 
+caps.latest.revision: 69
 author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: cd9d9ead2695338116dd3da6a60285756cb433c6
-ms.sourcegitcommit: 45e4efb7aa828578fe9eb7743a1a3526da719555
+ms.openlocfilehash: 9ac83f7ffeb53b501090c7fe1e5f65e08eee07d0
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="spaddmergearticle-transact-sql"></a>sp_addmergearticle (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -94,7 +94,7 @@ sp_addmergearticle [ @publication = ] 'publication'
  [  **@type=** ] **'***tipo***'**  
  Es el tipo de artículo. *tipo de* es **sysname**, su valor predeterminado es **tabla**, y puede tener uno de los siguientes valores.  
   
-|Valor|Description|  
+|Value|Description|  
 |-----------|-----------------|  
 |**tabla** (valor predeterminado)|Tabla con esquema y datos. La replicación supervisa la tabla para determinar los datos que se van a replicar.|  
 |**solo esquema Func**|Función con solo esquema.|  
@@ -118,12 +118,12 @@ sp_addmergearticle [ @publication = ] 'publication'
  [  **@pre_creation_cmd=** ] **'***pre_creation_cmd***'**  
  Especifica qué debe hacer el sistema si la tabla existe en el suscriptor al aplicar la instantánea. *pre_creation_cmd* es **nvarchar (10)**, y puede tener uno de los siguientes valores.  
   
-|Valor|Description|  
+|Value|Description|  
 |-----------|-----------------|  
 |**Ninguno**|Si la tabla ya existe en el suscriptor, no se lleva a cabo ninguna acción.|  
-|**eliminar**|Emite una eliminación basada en la cláusula WHERE del filtro de subconjunto.|  
+|**delete**|Emite una eliminación basada en la cláusula WHERE del filtro de subconjunto.|  
 |**quitar** (valor predeterminado)|Quita la tabla antes de volver a crearla. Debe admitir [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssEW](../../includes/ssew-md.md)] los suscriptores.|  
-|**truncar**|Trunca la tabla de destino.|  
+|**truncate**|Trunca la tabla de destino.|  
   
  [  **@creation_script=** ] **'***creation_script***'**  
  Es la ruta de acceso y el nombre de un script opcional del esquema del artículo que se utiliza para crear el artículo en la base de datos de suscripciones. *creation_script* es **nvarchar (255)**, su valor predeterminado es null.  
@@ -134,7 +134,7 @@ sp_addmergearticle [ @publication = ] 'publication'
  [  **@schema_option=** ] *schema_option*  
  Es un mapa de bits de la opción de generación del esquema para el artículo dado. *schema_option* es **binary (8)**y puede ser el [| (OR bit a bit) ](../../t-sql/language-elements/bitwise-or-transact-sql.md) producto de uno o varios de estos valores.  
   
-|Valor|Description|  
+|Value|Description|  
 |-----------|-----------------|  
 |**0 x 00**|Deshabilita el scripting del agente de instantáneas y utiliza el script anterior a la creación de esquema proporcionado definido en *creation_script*.|  
 |**0 x 01**|Genera la creación del objeto (CREATE TABLE, CREATE PROCEDURE, etc.). Este es el valor predeterminado en los artículos de procedimientos almacenados.|  
@@ -171,7 +171,7 @@ sp_addmergearticle [ @publication = ] 'publication'
 |**0x400000000**|Replica la opción de compresión para los datos y los índices. Para obtener más información, consulte [Data Compression](../../relational-databases/data-compression/data-compression.md).|  
 |**0 x 800000000**|Establezca esta opción para almacenar los datos de FILESTREAM en su propio grupo de archivos en el suscriptor. Si no se establece esta opción, los datos de FILESTREAM se almacenan en el grupo de archivos predeterminado. La replicación no crea grupos de archivos; por tanto, si establece esta opción, debe crear el grupo de archivos antes de aplicar la instantánea en el suscriptor. Para obtener más información sobre cómo crear objetos antes de aplicar la instantánea, vea [ejecutar Scripts antes y después de aplicar la instantánea](../../relational-databases/replication/execute-scripts-before-and-after-the-snapshot-is-applied.md).<br /><br /> Vea la opción relacionada **0 x 100000000**.|  
 |**0x1000000000**|Convierte tipos common language runtime (CLR) definido por el usuario (UDT) en **varbinary (max)** para que las columnas de tipo UDT se pueden replicar en suscriptores que ejecutan [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)].|  
-|**0x2000000000**|Convierte el **hierarchyid** tipo de datos que **varbinary (max)** para que las columnas de tipo **hierarchyid** se pueden replicar en suscriptores que ejecutan [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)]. Para obtener más información sobre cómo usar **hierarchyid** columnas en las tablas replicadas, vea [hierarchyid &#40; Transact-SQL &#41; ](../../t-sql/data-types/hierarchyid-data-type-method-reference.md).|  
+|**0x2000000000**|Convierte el **hierarchyid** tipo de datos que **varbinary (max)** para que las columnas de tipo **hierarchyid** se pueden replicar en suscriptores que ejecutan [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)]. Para obtener más información sobre cómo usar **hierarchyid** columnas en las tablas replicadas, vea [hierarchyid &#40;Transact-SQL&#41;](../../t-sql/data-types/hierarchyid-data-type-method-reference.md).|  
 |**0x4000000000**|Replica los índices filtrados de la tabla. Para obtener más información sobre los índices filtrados, vea [Create Filtered Indexes](../../relational-databases/indexes/create-filtered-indexes.md).|  
 |**0x8000000000**|Convierte el **geography** y **geometry** tipos de datos **varbinary (max)** para que las columnas de estos tipos se pueden replicar en suscriptores que ejecutan [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)].|  
 |**0x10000000000**|Replica índices en columnas de tipo **geography** y **geometría**.|  
@@ -179,7 +179,7 @@ sp_addmergearticle [ @publication = ] 'publication'
  Si este valor es NULL, el sistema genera automáticamente una opción de esquema válida para el artículo. El **opciones de esquema predeterminadas** tabla en la sección Notas muestra el valor que se elige en función del tipo de artículo. Además, no todos los *schema_option* valores son válidos para todos los tipos de replicación y el tipo de artículo. El **opciones de esquema válidas** tabla en la sección Notas muestra las opciones que se pueden especificar para un tipo de artículo dado.  
   
 > [!NOTE]  
->  El *schema_option* parámetro sólo afecta a las opciones de replicación para la instantánea inicial. Una vez que el esquema inicial se ha generado por el agente de instantáneas y aplicados en el suscriptor, la replicación de cambios de esquema de la publicación en el suscriptor se producen según las reglas de replicación de cambios de esquema y la *replicate_ddl* valor del parámetro especificado en [sp_addmergepublication](../../relational-databases/system-stored-procedures/sp-addmergepublication-transact-sql.md). Para más información, vea [Realizar cambios de esquema en bases de datos de publicaciones](../../relational-databases/replication/publish/make-schema-changes-on-publication-databases.md).  
+>  El *schema_option* parámetro sólo afecta a las opciones de replicación para la instantánea inicial. Una vez que el esquema inicial se ha generado por el agente de instantáneas y aplicados en el suscriptor, la replicación de cambios de esquema de la publicación en el suscriptor se producen según las reglas de replicación de cambios de esquema y la *replicate_ddl* valor del parámetro especificado en [sp_addmergepublication](../../relational-databases/system-stored-procedures/sp-addmergepublication-transact-sql.md). Para más información, vea [Make Schema Changes on Publication Databases](../../relational-databases/replication/publish/make-schema-changes-on-publication-databases.md) (Realizar cambios de esquema en bases de datos de publicaciones).  
   
  [  **@subset_filterclause=** ] **'***subset_filterclause***'**  
  Es una cláusula WHERE que especifica el filtrado horizontal de un artículo de tabla sin la palabra WHERE. *subset_filterclause* es de **nvarchar (1000)**, su valor predeterminado es una cadena vacía.  
@@ -232,7 +232,7 @@ sp_addmergearticle [ @publication = ] 'publication'
  **1** especifica que se comprobará la firma para ver si proviene de un origen de confianza.  
   
  [  **@destination_object=** ] **'***destination_object***'**  
- Es el nombre del objeto creado en la base de datos de suscripciones. *destination_object* es **sysname**, su valor predeterminado es el contenido de  **@source_object** . Este parámetro se puede especificar únicamente si el artículo es de solo esquema, como procedimientos almacenados, vistas y UDF. Si el artículo especificado es un artículo de tabla, el valor de  *@source_object*  invalida el valor de *destination_object*.  
+ Es el nombre del objeto creado en la base de datos de suscripciones. *destination_object* es **sysname**, su valor predeterminado es el contenido de **@source_object**. Este parámetro se puede especificar únicamente si el artículo es de solo esquema, como procedimientos almacenados, vistas y UDF. Si el artículo especificado es un artículo de tabla, el valor de *@source_object* invalida el valor de *destination_object*.  
   
  [  **@allow_interactive_resolver=** ] **'***allow_interactive_resolver***'**  
  Habilita o deshabilita el uso del solucionador interactivo en un artículo. *allow_interactive_resolver* es **nvarchar (5)**, con un valor predeterminado es FALSE. **True** habilita el uso de la resolución interactiva en el artículo; **false** lo deshabilita.  
@@ -246,7 +246,7 @@ sp_addmergearticle [ @publication = ] 'publication'
  [  **@check_permissions=** ] *check_permissions*  
  Es un mapa de bits de los permisos de tabla que se comprueba cuando el Agente de mezcla aplica cambios en el publicador. Si la cuenta de inicio de sesión o usuario del publicador que utiliza el proceso de mezcla no dispone de los permisos de tabla correctos, los cambios no válidos se registran como conflictos. *check_permissions* es **int**y puede ser el [| (OR bit a bit) ](../../t-sql/language-elements/bitwise-or-transact-sql.md) producto de uno o varios de los siguientes valores.  
   
-|Valor|Description|  
+|Value|Description|  
 |-----------|-----------------|  
 |**0 x 00** (valor predeterminado)|Los permisos no se comprueban.|  
 |**0 x 10**|Comprueba los permisos en el publicador antes de cargar las operaciones de inserción creadas en un suscriptor.|  
@@ -293,7 +293,7 @@ sp_addmergearticle [ @publication = ] 'publication'
  [  **@partition_options=** ] *partition_options*  
  Define el modo en el que se realiza la partición de los datos en el artículo, lo que permite optimizaciones de rendimiento cuando todas las filas pertenecen solamente a una partición o solamente a una suscripción. *partition_options* es **tinyint**, y puede tener uno de los siguientes valores.  
   
-|Valor|Description|  
+|Value|Description|  
 |-----------|-----------------|  
 |**0** (valor predeterminado)|El filtrado para el artículo es estático o no produce un único subconjunto de datos para cada partición, es decir, una partición "superpuesta".|  
 |**1**|Las particiones se superponen y las actualizaciones del lenguaje de manipulación de datos (DML) realizadas en el suscriptor no pueden cambiar la partición a la que pertenece la fila.|  
@@ -304,18 +304,18 @@ sp_addmergearticle [ @publication = ] 'publication'
 >  Si la tabla de origen para un artículo ya está publicada en otra publicación, el valor de *partition_options* debe ser el mismo para ambos artículos.  
   
  [  **@processing_order=** ] *processing_order*  
- Indica el orden de procesamiento de los artículos en una publicación de mezcla. *processing_order* es **int**, con un valor predeterminado es 0. **0** especifica que el artículo está desordenado y cualquier otro valor representa el valor ordinal de la orden de procesamiento de este artículo. Los artículos se procesan en orden desde el valor menor al mayor. Si dos artículos tienen el mismo valor, lo determina el orden de procesamiento de orden del alias del artículo en el [sysmergearticles](../../relational-databases/system-tables/sysmergearticles-transact-sql.md) tabla del sistema. Para más información, vea [Especificar el orden de procesamiento de los artículos de mezcla](../../relational-databases/replication/merge/specify-the-processing-order-of-merge-articles.md).  
+ Indica el orden de procesamiento de los artículos en una publicación de mezcla. *processing_order* es **int**, con un valor predeterminado es 0. **0** especifica que el artículo está desordenado y cualquier otro valor representa el valor ordinal de la orden de procesamiento de este artículo. Los artículos se procesan en orden desde el valor menor al mayor. Si dos artículos tienen el mismo valor, lo determina el orden de procesamiento de orden del alias del artículo en el [sysmergearticles](../../relational-databases/system-tables/sysmergearticles-transact-sql.md) tabla del sistema. Para obtener más información, vea [Especificar el orden de procesamiento de los artículos de mezcla](../../relational-databases/replication/merge/specify-the-processing-order-of-merge-articles.md).  
   
  [  **@subscriber_upload_options=** ] *subscriber_upload_options*  
- Define las restricciones en actualizaciones realizadas en el suscriptor con una suscripción de cliente. Para más información, vea [Optimizar el rendimiento de la replicación de mezcla con artículos de solo descarga](../../relational-databases/replication/merge/optimize-merge-replication-performance-with-download-only-articles.md). *subscriber_upload_options* es **tinyint**, y puede tener uno de los siguientes valores.  
+ Define las restricciones en actualizaciones realizadas en el suscriptor con una suscripción de cliente. Para obtener más información, vea [Optimize Merge Replication Performance with Download-Only Articles](../../relational-databases/replication/merge/optimize-merge-replication-performance-with-download-only-articles.md) (Optimizar el rendimiento de la replicación de mezcla con artículos de solo descarga). *subscriber_upload_options* es **tinyint**, y puede tener uno de los siguientes valores.  
   
-|Valor|Description|  
+|Value|Description|  
 |-----------|-----------------|  
 |**0** (valor predeterminado)|Sin restricciones. Los cambios realizados en el suscriptor se cargan en el publicador.|  
 |**1**|Se permiten cambios en el suscriptor, pero éstos no se cargan en el publicador.|  
 |**2**|No se permiten cambios en el suscriptor.|  
   
- Cambiar *subscriber_upload_options* requiere la suscripción para reinicializarla mediante una llamada a [sp_reinitmergepullsubscription &#40; Transact-SQL &#41; ](../../relational-databases/system-stored-procedures/sp-reinitmergepullsubscription-transact-sql.md).  
+ Cambiar *subscriber_upload_options* requiere la suscripción para reinicializarla mediante una llamada a [sp_reinitmergepullsubscription &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-reinitmergepullsubscription-transact-sql.md).  
   
 > [!NOTE]  
 >  Si la tabla de origen para un artículo ya está publicada en otra publicación, el valor de *subscriber_upload_options* debe ser el mismo para ambos artículos.  
@@ -323,7 +323,7 @@ sp_addmergearticle [ @publication = ] 'publication'
  [  **@identityrangemanagementoption=** ] *identityrangemanagementoption*  
  Especifica cómo se controla el rango de identidad para el artículo. *valor de identityrangemanagementoption* es **nvarchar (10)**, y puede tener uno de los siguientes valores.  
   
-|Valor|Description|  
+|Value|Description|  
 |-----------|-----------------|  
 |**Ninguno**|Deshabilita la administración de intervalos de identidad.|  
 |**Manual**|Marca la columna de identidad utilizando NOT FOR REPLICATION para habilitar la administración manual de intervalos de identidad.|  
@@ -370,7 +370,7 @@ sp_addmergearticle [ @publication = ] 'publication'
   
  Agregar un artículo con un filtro horizontal estático, usar *subset_filterclause*, a una publicación existente con artículos que tienen filtros con parámetros requiere que se reinicialicen las suscripciones.  
   
- Al especificar *processing_order*, se recomienda dejar espacios entre los valores de orden del artículo, lo que facilita establecer nuevos valores en el futuro. Por ejemplo, si tiene tres artículos: artículo1, artículo2 y artículo3, establezca *processing_order* en 10, 20 y 30, en lugar de 1, 2 y 3. Para más información, vea [Especificar el orden de procesamiento de los artículos de mezcla](../../relational-databases/replication/merge/specify-the-processing-order-of-merge-articles.md).  
+ Al especificar *processing_order*, se recomienda dejar espacios entre los valores de orden del artículo, lo que facilita establecer nuevos valores en el futuro. Por ejemplo, si tiene tres artículos: artículo1, artículo2 y artículo3, establezca *processing_order* en 10, 20 y 30, en lugar de 1, 2 y 3. Para obtener más información, vea [Especificar el orden de procesamiento de los artículos de mezcla](../../relational-databases/replication/merge/specify-the-processing-order-of-merge-articles.md).  
   
 ## <a name="default-schema-option-table"></a>Tabla Opciones de esquema predeterminadas  
  Esta tabla describen el valor predeterminado establecido por el procedimiento almacenado si se especifica un valor NULL para *schema_option*, que depende del tipo de artículo.  
@@ -392,10 +392,10 @@ sp_addmergearticle [ @publication = ] 'publication'
 |Tipo de artículo|Valores de las opciones de esquema|  
 |------------------|--------------------------|  
 |**solo esquema Func**|**0 x 01** y **0 x 2000**|  
-|**solo el esquema de vista indizada**|**0 x 01**, **0 x 040**, **0 x 0100**, **0 x 2000**, **0 x 40000**, **0 x 1000000**, y **0 x 200000**|  
+|**solo el esquema de vista indizada**|**0 x 01**, **0 x 040**, **0 x 0100**, **0 x 2000**, **0 x 40000**, **0 x 1000000**y **0 x 200000**|  
 |**solo el esquema de procedimiento**|**0 x 01** y **0 x 2000**|  
 |**table**|Todas las opciones.|  
-|**solo el esquema de vista**|**0 x 01**, **0 x 040**, **0 x 0100**, **0 x 2000**, **0 x 40000**, **0 x 1000000**, y **0 x 200000**|  
+|**solo el esquema de vista**|**0 x 01**, **0 x 040**, **0 x 0100**, **0 x 2000**, **0 x 40000**, **0 x 1000000**y **0 x 200000**|  
   
 ## <a name="example"></a>Ejemplo  
  [!code-sql[HowTo#sp_AddMergeArticle](../../relational-databases/replication/codesnippet/tsql/sp-addmergearticle-trans_1.sql)]  

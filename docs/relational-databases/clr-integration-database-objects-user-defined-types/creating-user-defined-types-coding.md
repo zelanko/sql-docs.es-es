@@ -1,15 +1,15 @@
 ---
 title: Codificar tipos definidos por el usuario | Documentos de Microsoft
-ms.custom: 
+ms.custom: ''
 ms.date: 03/16/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine
-ms.service: 
+ms.service: ''
 ms.component: clr
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: 
-ms.tgt_pltfrm: 
+ms.technology: ''
+ms.tgt_pltfrm: ''
 ms.topic: reference
 dev_langs:
 - VB
@@ -33,20 +33,20 @@ helpviewer_keywords:
 - validating UDT values
 - exposing UDT properties [CLR integration]
 ms.assetid: 1e5b43b3-4971-45ee-a591-3f535e2ac722
-caps.latest.revision: 
+caps.latest.revision: 37
 author: rothja
 ms.author: jroth
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 5bf3a762eb8e8435972d4813d8b3e852d39c8b2d
-ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
+ms.openlocfilehash: d39df3bcadebc8c6433d11563c6d628ca439f061
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/09/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="creating-user-defined-types---coding"></a>Crear tipos definidos por el usuario - codificación
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
-Al codificar la definición de un tipo definido por el usuario (UDT), debe implementar varias características, en función de si implementa el UDT como una clase o como una estructura, así como de las opciones de formato y serialización que haya elegido.  
+  Al codificar la definición de un tipo definido por el usuario (UDT), debe implementar varias características, en función de si implementa el UDT como una clase o como una estructura, así como de las opciones de formato y serialización que haya elegido.  
   
  En el ejemplo de esta sección muestra cómo implementar un **punto** UDT como una **struct** (o **estructura** en Visual Basic). El **punto** UDT consta de X y coordenadas Y se implementan como procedimientos de propiedad.  
   
@@ -72,7 +72,7 @@ using Microsoft.SqlServer.Server;
 ## <a name="specifying-attributes"></a>Especificar atributos  
  Los atributos determinan el modo de usar la serialización para construir la representación de almacenamiento de los UDT y para transmitirlos por valor al cliente.  
   
- El **Microsoft.SqlServer.Server.SqlUserDefinedTypeAttribute** es necesario. El **Serializable** atributo es opcional. También puede especificar el **Microsoft.SqlServer.Server.SqlFacetAttribute** para proporcionar información sobre el tipo de valor devuelto de un UDT. Para obtener más información, consulte [atributos personalizados para las rutinas CLR](../../relational-databases/clr-integration/database-objects/clr-integration-custom-attributes-for-clr-routines.md).  
+ El **Microsoft.SqlServer.Server.SqlUserDefinedTypeAttribute** es necesario. El **Serializable** atributo es opcional. También puede especificar el **Microsoft.SqlServer.Server.SqlFacetAttribute** para proporcionar información sobre el tipo de valor devuelto de un UDT. Para obtener más información, vea [Atributos personalizados para las rutinas CLR](../../relational-databases/clr-integration/database-objects/clr-integration-custom-attributes-for-clr-routines.md).  
   
 ### <a name="point-udt-attributes"></a>Atributos del UDT Point  
  El **Microsoft.SqlServer.Server.SqlUserDefinedTypeAttribute** establece el formato de almacenamiento para el **punto** UDT **nativo**. **IsByteOrdered** está establecido en **true**, lo que garantiza que los resultados de las comparaciones son los mismos en SQL Server como si la comparación mismo hubiera tenido lugar en código administrado. El UDT implementa la **System.Data.SqlTypes.INullable** interfaz para hacer compatible con el carácter null de UDT.  
@@ -99,7 +99,7 @@ public struct Point : INullable
   
  Debe crear una propiedad denominada **IsNull**, que es necesaria para determinar si un valor es null en el código de CLR. Cuando [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] encuentra una instancia NULL de un UDT, el UDT se conserva mediante los métodos habituales de control de valores NULL. El servidor no pierde tiempo serializando o deserializando el UDT sin necesidad y no desaprovecha espacio para almacenar un UDT NULL. Esta comprobación de valores NULL se realiza cada vez que se usa un UDT de CLR, lo que significa que el uso de la construcción IS NULL de [!INCLUDE[tsql](../../includes/tsql-md.md)] para comprobar los UDT que son NULL debería funcionar siempre. El **IsNull** propiedad también se utiliza el servidor para comprobar si una instancia es null. Una vez que el servidor determina que el UDT es NULL, puede usar su propio control de valores NULL nativos.  
   
- El **get()** método **IsNull** no es usar la grafía especial en absoluto. Si un **punto** variable  **@p**  es **Null**, a continuación,  **@p.IsNull**  , de forma predeterminada, evaluará como "NULL", no como "1". Esto es porque el **SqlMethod(OnNullCall)** atributo de la **get() IsNull** método el valor predeterminado es false. Dado que el objeto es **Null**, cuando se solicita la propiedad no se deserializa el objeto, no se llama al método y se devuelve un valor predeterminado es "NULL".  
+ El **get()** método **IsNull** no es usar la grafía especial en absoluto. Si un **punto** variable **@p** es **Null**, a continuación, **@p.IsNull** , de forma predeterminada, evaluará como "NULL", no como "1". Esto es porque el **SqlMethod(OnNullCall)** atributo de la **get() IsNull** método el valor predeterminado es false. Dado que el objeto es **Null**, cuando se solicita la propiedad no se deserializa el objeto, no se llama al método y se devuelve un valor predeterminado es "NULL".  
   
 ### <a name="example"></a>Ejemplo  
  En el ejemplo siguiente, la variable `is_Null` es privada y contiene el estado NULL para la instancia del UDT. El código debe mantener un valor adecuado para `is_Null`. El UDT también debe tener una propiedad estática denominada **Null** que devuelve una instancia de valor null del UDT. Esto permite al UDT devolver un valor NULL si la instancia también es NULL en la base de datos.  

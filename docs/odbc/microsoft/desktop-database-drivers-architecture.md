@@ -1,31 +1,32 @@
 ---
 title: Arquitectura de controladores de escritorio de la base de datos | Documentos de Microsoft
-ms.custom: 
+ms.custom: ''
 ms.date: 01/19/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: drivers
-ms.service: 
+ms.service: ''
 ms.component: odbc
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: drivers
-ms.tgt_pltfrm: 
+ms.technology:
+- drivers
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - Jet-based ODBC drivers [ODBC], architecture
 - ODBC desktop database drivers [ODBC], architecture
 - desktop database drivers [ODBC], architecture
 ms.assetid: 8b4d13f7-ab37-40b4-a9c6-145e7385352f
-caps.latest.revision: "7"
+caps.latest.revision: 7
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 3f5c7b12e5413441476e70dc63fe9d3da9284635
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: 4b2b68b735a278fd00b4d472eb881594c0bf4245
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="desktop-database-drivers-architecture"></a>Arquitectura de controladores de escritorio de la base de datos
 Estos controladores están diseñados para uso en Microsoft Windows 95 o una versión posterior, o Windows NT 4.0 y Windows 2000. Solo las aplicaciones de 32 bits se admiten en Windows 95 o versiones posteriores; se admiten las aplicaciones de 16 bits y 32 bits en Windows NT 4.0 y Windows 2000.  
@@ -37,13 +38,13 @@ Estos controladores están diseñados para uso en Microsoft Windows 95 o una ver
   
  Es la arquitectura de aplicaciones y controladores en Windows 95 o versiones posteriores:  
   
- ![Aplicación &#47; arquitectura de controladores: Windows 95 y versiones posteriores](../../odbc/microsoft/media/odbcjetarch1.gif "ODBCJetArch1")  
+ ![Aplicación&#47;arquitectura de controladores: Windows 95 y versiones posteriores](../../odbc/microsoft/media/odbcjetarch1.gif "ODBCJetArch1")  
   
  No se admite el uso de estos controladores por las aplicaciones de 16 bits en Windows 95.  
   
  La arquitectura de aplicación/controlador en Windows NT 4.0 y Windows 2000 es:  
   
- ![Aplicación &#47; arquitectura de controladores: NT 4.0 y Windows 2000](../../odbc/microsoft/media/odbcjetarch2.gif "ODBCJetArch2")  
+ ![Aplicación&#47;arquitectura de controladores: NT 4.0 y Windows 2000](../../odbc/microsoft/media/odbcjetarch2.gif "ODBCJetArch2")  
   
  Los controladores de base de datos de escritorio son dos niveles. En una configuración de dos niveles, el controlador no realiza el proceso de análisis, validación, optimizar y ejecutar la consulta. En su lugar, Microsoft Jet realiza estas tareas. Procesa las llamadas de API de ODBC y actúa como un motor SQL. Microsoft Jet se ha convertido en una parte integral, no separable de los controladores: que se incluye con los controladores y reside con los controladores, incluso si lo no usa ninguna otra aplicación en el equipo.  
   

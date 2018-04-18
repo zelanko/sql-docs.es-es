@@ -2,7 +2,7 @@
 title: Fecha, hora y marca de tiempo literales | Documentos de Microsoft
 ms.custom: ''
 ms.date: 01/19/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: drivers
 ms.service: ''
 ms.component: odbc
@@ -18,13 +18,13 @@ ms.assetid: 2b42a52a-6353-494c-a179-3a7533cd729f
 caps.latest.revision: 7
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 132377c8578ae4a403753d71dc82cd12b8be3c80
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: 9b9102d2c54c308304ea326d5a3a710a7703f275
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="date-time-and-timestamp-literals"></a>Fecha, hora y marca de tiempo literales
 La secuencia de escape para literales de fecha, hora y marca de tiempo es  
@@ -35,9 +35,9 @@ La secuencia de escape para literales de fecha, hora y marca de tiempo es
   
 |*tipo de literal*|Significado|Formato de *valor*|  
 |---------------------|-------------|-----------------------|  
-|**d**|date|*aaaa*-*mm*-*dd*|  
-|**t**|Hora *|*hh*:*mm*:*ss*[1]|  
-|**TS**|Timestamp|*aaaa*-*mm*-*dd* *hh*:*mm*:*ss* [. *f...* ] [1]|  
+|**d**|Date|*aaaa*-*mm*-*dd*|  
+|**T**|Hora *|*hh*:*mm*:*ss*[1]|  
+|**TS**|Timestamp|*aaaa*-*mm*-*dd* *hh*:*mm*:*ss*[.*f...*] [1]|  
   
  [1], el número de dígitos a la derecha del separador decimal en un intervalo de tiempo o marca de tiempo literal que contiene un componente de segundos es dependiente de la precisión de segundos, tal y como figura en el campo de descriptor SQL_DESC_PRECISION. (Para obtener más información, consulte [SQLSetDescField](../../../odbc/reference/syntax/sqlsetdescfield-function.md).)  
   

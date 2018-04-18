@@ -1,31 +1,33 @@
 ---
-title: "Guía de versiones de fila y bloqueo de transacciones de SQL Server | Microsoft Docs"
-ms.custom: 
+title: Guía de versiones de fila y bloqueo de transacciones de SQL Server | Microsoft Docs
+ms.custom: ''
 ms.date: 02/17/2018
 ms.prod: sql-non-specified
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
-ms.service: 
+ms.service: ''
 ms.component: relational-databases-misc
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - guide, transaction locking and row versioning
 - transaction locking and row versioning guide
+- lock compatibility matrix, [SQL Server]
+- lock granularity and hierarchies, [SQL Server]
 ms.assetid: 44fadbee-b5fe-40c0-af8a-11a1eecf6cb7
-caps.latest.revision: 
+caps.latest.revision: 5
 author: rothja
 ms.author: jroth
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: b9b265778ca6ae0a80433cb67b6e046acc45c0b8
-ms.sourcegitcommit: 7e9380e53341755df13fce130ab3287918a8e44c
+ms.openlocfilehash: a34b0dcdca05996db0990722cbe0456cdab3d50b
+ms.sourcegitcommit: 094c46e7fa6de44735ed0040c65a40ec3d951b75
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/21/2018
+ms.lasthandoff: 04/06/2018
 ---
 # <a name="transaction-locking-and-row-versioning-guide"></a>Guía de versiones de fila y bloqueo de transacciones
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -114,7 +116,7 @@ ms.lasthandoff: 02/21/2018
  **Fase de confirmación**  
  Si el administrador de transacciones recibe la notificación de que todas las preparaciones son correctas por parte de todos los administradores de recursos, envía comandos de confirmación a cada administrador de recursos. A continuación, los administradores de recursos pueden completar la confirmación. Si todos los administradores de recursos indican que la confirmación ha sido correcta, el administrador de transacciones envía una notificación de éxito a la aplicación. Si algún administrador de recursos informó de un error al realizar la preparación, el administrador de transacciones envía un comando para revertir la transacción a cada administrador de recursos e indica a la aplicación que se ha producido un error de confirmación.  
   
- [!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)] las aplicaciones pueden administrar transacciones distribuidas a través de [!INCLUDE[tsql](../includes/tsql-md.md)] o de la API de base de datos. Para obtener más información, vea [BEGIN DISTRIBUTED TRANSACTION &#40;Transact-SQL&#41;](../t-sql/language-elements/begin-distributed-transaction-transact-sql.md).  
+ Las aplicaciones de [!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)] pueden administrar transacciones distribuidas a través de [!INCLUDE[tsql](../includes/tsql-md.md)] o de la API de base de datos. Para obtener más información, vea [BEGIN DISTRIBUTED TRANSACTION &#40;Transact-SQL&#41;](../t-sql/language-elements/begin-distributed-transaction-transact-sql.md).  
   
 #### <a name="ending-transactions"></a>Finalizar transacciones  
  Puede finalizar las transacciones con una instrucción COMMIT o ROLLBACK, o mediante una función de la API correspondiente.  
@@ -310,7 +312,7 @@ GO
   
  Se pueden establecer los niveles de aislamiento de transacción con [!INCLUDE[tsql](../includes/tsql-md.md)] o mediante una API de bases de datos.  
   
- [!INCLUDE[tsql](../includes/tsql-md.md)] los scripts utilizan la instrucción SET TRANSACTION ISOLATION LEVEL.  
+ Los scripts [!INCLUDE[tsql](../includes/tsql-md.md)] utilizan la instrucción SET TRANSACTION ISOLATION LEVEL.  
   
  **ADO**  
  Las aplicaciones ADO establecen la propiedad `IsolationLevel` del objeto **Connection** como adXactReadUncommitted, adXactReadCommitted, adXactRepeatableRead o adXactReadSerializable.  
@@ -361,7 +363,7 @@ GO
 > [!NOTE]  
 > La opción LOCK_ESCALATION de [ALTER TABLE](../t-sql/statements/alter-table-transact-sql.md) puede afectar a los bloqueos HoBT y TABLE.  
   
-### <a name="lock-modes"></a>Modos de bloqueo  
+### <a name="lock_modes"></a> Modos de bloqueo  
  El [!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)] bloquea los recursos con diferentes modos de bloqueo que determinan el modo en que las transacciones simultáneas pueden tener acceso a los recursos.  
   
  En la siguiente tabla se indican los modos de bloqueo de recursos que emplea [!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)].  
@@ -376,31 +378,30 @@ GO
 |Actualización masiva (BU)|Se utiliza cuando se copian datos de forma masiva en una tabla y se especifica la sugerencia `TABLOCK`.|  
 |Intervalo de claves|Protege el intervalo de filas que lee una consulta cuando se utiliza el nivel de aislamiento de transacciones serializables. Garantiza que otras transacciones no puedan insertar filas que podrían incluirse como respuesta de las consultas de la transacción serializable si las consultas se volvieran a ejecutar.|  
   
-#### <a name="shared-locks"></a>Bloqueos compartidos  
+#### <a name="shared"></a> Bloqueos compartidos  
  Los bloqueos compartidos (S) permiten que varias transacciones simultáneas lean (SELECT) un recurso en situaciones de control de simultaneidad pesimista. Ninguna otra transacción podrá modificar los datos mientras el bloqueo compartido (S) exista en el recurso. Los bloqueos compartidos (S) en un recurso se liberan tan pronto como finaliza la operación de lectura, a menos que se haya establecido el nivel de aislamiento de la transacción como REPEATABLE READ o más alto, o bien se utilice una sugerencia de bloqueo para mantener los bloqueos compartidos (S) durante la transacción.  
   
-#### <a name="update-locks"></a>Bloqueos de actualización  
+#### <a name="update"></a> Bloqueos de actualización  
  Los bloqueos de actualización (U) evitan una forma común de interbloqueo. En una transacción de lectura repetible o serializable, la transacción lee los datos, adquiere un bloqueo compartido (S) en el recurso (página o fila) y, a continuación, modifica los datos, lo que requiere una conversión del bloqueo en un bloqueo exclusivo (X). Si dos transacciones adquieren bloqueos compartidos en un recurso y, a continuación, intentan actualizar los datos simultáneamente, una de ellas intenta convertir el bloqueo en un bloqueo exclusivo (X). La conversión de bloqueo compartido en exclusivo debe esperar, ya que el bloqueo exclusivo de una transacción no es compatible con el bloqueo compartido de la otra. Por tanto, se produce una espera de bloqueos. La segunda transacción intenta adquirir un bloqueo exclusivo (X) para realizar su actualización. Debido a que ambas transacciones intentan convertir los bloqueos en exclusivos (X) y cada una espera a que la otra libere su bloqueo de modo compartido, se produce un interbloqueo.  
   
  Para evitar este posible problema de interbloqueo, se utilizan los bloqueos de actualización (U). Dos transacciones no pueden obtener simultáneamente un bloqueo de actualización (U) para un recurso. Si una transacción modifica un recurso, el bloqueo de actualización (U) se convierte en un bloqueo exclusivo (X).  
   
-#### <a name="exclusive-locks"></a>Bloqueos exclusivos  
+#### <a name="exclusive"></a> Bloqueos exclusivos  
  Los bloqueos exclusivos (X) evitan que transacciones simultáneas tengan acceso a un recurso. Al utilizar un bloqueo exclusivo (X), el resto de las transacciones no pueden modificar los datos; las operaciones de lectura solo se pueden realizar si se utiliza la sugerencia NOLOCK o el nivel de aislamiento de lectura no confirmada.  
   
  Las instrucciones para modificar datos, como INSERT, UPDATE y DELETE combinan las operaciones de modificación con las de lectura. En primer lugar, la instrucción lleva a cabo operaciones de lectura para adquirir los datos antes de proceder a ejecutar las operaciones de modificación necesarias. Por tanto, las instrucciones de modificación de datos suelen solicitar bloqueos compartidos y exclusivos. Por ejemplo, una instrucción UPDATE puede modificar las filas de una tabla a partir de una combinación con otra tabla. En este caso, la instrucción UPDATE solicita bloqueos compartidos para la filas leídas en la tabla de combinación, además de bloqueos exclusivos para las filas actualizadas.  
   
-#### <a name="intent-locks"></a>Bloqueos con intención  
+#### <a name="intent"></a> Bloqueos con intención  
  [!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)] utiliza bloqueos con intención para proteger la aplicación de un bloqueo compartido (S) o exclusivo (X) en un recurso inferior en la jerarquía de bloqueos. Los bloqueos con intención se denominan así porque se adquieren antes que los bloqueos de los niveles inferiores y, por lo tanto, señalan la intención de aplicar bloqueos en un nivel inferior.  
   
  Los bloqueos con intención se utilizan con dos fines:  
   
--   Para evitar que otras transacciones modifiquen el recurso de nivel superior de forma que invaliden el bloqueo del nivel inferior.  
-  
+-   Para evitar que otras transacciones modifiquen el recurso de nivel superior de forma que invaliden el bloqueo del nivel inferior. 
 -   Para mejorar la eficacia de [!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)] para detectar conflictos de bloqueo en el nivel superior de granularidad.  
   
  Por ejemplo, un bloqueo con intención compartida para el nivel de tabla se solicita antes que los bloqueos compartidos (S) para las páginas o filas de la tabla. Establecer un bloqueo con intención en una tabla evita que otra transacción adquiera un bloqueo exclusivo (X) para la tabla que contiene esa página. Los bloqueos con intención mejoran el rendimiento, porque [!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)] examina los bloqueos con intención solo en el nivel de tabla para determinar si una transacción puede adquirir un bloqueo de dicha tabla de forma segura. Esto elimina la necesidad de examinar cada bloqueo de fila o de página de la tabla para determinar si una transacción puede bloquear toda la tabla.  
   
- Los bloqueos con intención incluyen: Intención compartida (IS), Intención exclusiva (IX) e Intención compartida exclusiva (SIX).  
+<a name="lock_intent_table"></a> Los bloqueos con intención incluyen: Intención compartida (IS), Intención exclusiva (IX) e Intención compartida exclusiva (SIX).  
   
 |Modo de bloqueo|Description|  
 |---------------|-----------------|  
@@ -411,30 +412,29 @@ GO
 |Actualizar intención compartida (SIU)|Combinación de bloqueos S e IU que resulta de adquirir estos bloqueos por separado y de mantenerlos simultáneamente. Por ejemplo, sería el caso de una transacción que ejecuta una consulta con la sugerencia PAGLOCK y luego ejecuta una operación de actualización. La consulta con la sugerencia PAGLOCK adquiere el bloqueo S y la operación de actualización, el bloqueo IU.|  
 |Actualizar intención exclusiva (UIX)|Combinación de bloqueos U e IX que resulta de adquirir estos bloqueos por separado y de mantenerlos simultáneamente.|  
   
-#### <a name="schema-locks"></a>Bloqueos de esquema  
+#### <a name="schema"></a> Bloqueos de esquema  
  [!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)] utiliza bloqueos de modificación del esquema (Sch-M) cuando se realiza una operación de lenguaje de definición de datos (DDL) en tablas como, por ejemplo, agregar una columna o quitar una tabla. Mientras se conserva, el bloqueo Sch-M evita el acceso simultáneo a la tabla. Esto significa que el bloqueo Sch-M bloquea todas las operaciones externas hasta que el bloqueo se libera.  
   
  Algunas operaciones del lenguaje de manipulación de datos (DML), como el truncamiento de tablas, utilizan los bloqueos Sch-M para impedir el acceso a las tablas afectadas por operaciones simultáneas.  
   
  [!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)] usa bloqueos de estabilidad del esquema (Sch-S) al compilar y ejecutar consultas. Los bloqueos Sch-S no impiden los bloqueos de transacciones, incluidos los bloqueos exclusivos (X). Por tanto, otras transacciones, incluidas las que tienen bloqueos X de una tabla, pueden seguir ejecutándose mientras se compila una consulta. No obstante, en la tabla no se pueden realizar operaciones DDL simultáneas ni operaciones DML simultáneas que adquieren bloqueos Sch-M.  
   
-#### <a name="bulk-update-locks"></a>Bloqueos de actualización masiva  
+#### <a name="bulk_update"></a> Bloqueos de actualización masiva  
  Los bloqueos de actualización masiva (BU) permiten que varios subprocesos copien datos de forma masiva y simultánea en la misma tabla, pero impiden que otros procesos que no están copiando datos de forma masiva tengan acceso a la tabla. El [!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)] utiliza bloqueos de actualización masiva cuando las dos condiciones siguientes son verdaderas.  
   
 -   Está usando la instrucción [!INCLUDE[tsql](../includes/tsql-md.md)] BULK INSERT o la función OPENROWSET(BULK), o está usando uno de los comandos de API Bulk Insert como .NET SqlBulkCopy, las API de carga rápida de OLEDB o las API de copia masiva de ODBC para copiar de forma masiva datos en una tabla.  
-  
 -   Se especifica la sugerencia **TABLOCK** o se establece la opción de tabla **table lock on bulk load** con **sp_tableoption**.  
   
 > [!TIP]  
 > A diferencia de la instrucción BULK INSERT, que contiene un bloqueo Bulk Update menos restrictivo, INSERT INTO…SELECT con la sugerencia TABLOCK retiene un bloqueo exclusivo (X) en la tabla. Esto significa que no se pueden insertar filas mediante operaciones de inserción en paralelo.  
   
-#### <a name="key-range-locks"></a>Bloqueos de intervalo de claves  
+#### <a name="key_range"></a> Bloqueos de intervalo de claves  
  Los bloqueos de rangos con clave protegen un intervalo de filas incluido implícitamente en un conjunto de registros que se lee con una instrucción [!INCLUDE[tsql](../includes/tsql-md.md)] mientras se utiliza el nivel de aislamiento de transacción serializable. El bloqueo de intervalos con clave impide las lecturas fantasma. Al proteger los intervalos de claves entre filas, también se evitan inserciones o eliminaciones fantasma en los conjuntos de registros a los que obtienen acceso las transacciones.  
   
-### <a name="lock-compatibility"></a>Compatibilidad de bloqueos  
+### <a name="lock_compatibility"></a> Compatibilidad de bloqueos  
  La compatibilidad de bloqueos controla si varias transacciones pueden adquirir bloqueos sobre el mismo recurso a la vez. Si un recurso ya está bloqueado por otra transacción, solo se puede conceder una nueva solicitud de bloqueo si el bloqueo solicitado es compatible con el modo del bloqueo existente. Si el modo del bloqueo solicitado no es compatible con el bloqueo existente, la transacción que solicita el nuevo bloqueo espera a que se libere el bloqueo existente o a que expire el intervalo de tiempo de espera del bloqueo. Por ejemplo, ningún modo de bloqueo es compatible con bloqueos exclusivos. Mientras se mantiene un bloqueo exclusivo (X), ninguna otra transacción puede adquirir un bloqueo de ninguna clase (compartido, de actualización o exclusivo) en dicho recurso hasta que se libere el bloqueo exclusivo. Como alternativa, si se ha aplicado un bloqueo compartido (S) a un recurso, otras transacciones también pueden adquirir un bloqueo compartido o de actualización (U) en el elemento, aunque la primera transacción no haya terminado. Sin embargo, otras transacciones no pueden adquirir un bloqueo exclusivo si no se anula el bloqueo compartido.  
   
- En la tabla siguiente se muestra la compatibilidad de los modos de bloqueo más frecuentes.  
+<a name="lock_compat_table"></a> En la tabla siguiente se muestra la compatibilidad de los modos de bloqueo más frecuentes.  
   
 ||Modo concedido existente||||||  
 |------|---------------------------|------|------|------|------|------|  
@@ -449,7 +449,7 @@ GO
 > [!NOTE]  
 > Un bloqueo con intención exclusivo (IX) es compatible con un modo de bloqueo IX, porque IX indica la intención de actualizar solamente algunas de las filas, no todas. También se permite que otras transacciones intenten leer o actualizar algunas filas, siempre y cuando no se trate de las mismas filas que están actualizando las demás transacciones. Además, si dos transacciones intentan actualizar la misma fila, se permitirá a ambas transacciones un bloqueo IX en el nivel de tabla y de página. Sin embargo, un bloqueo X en el nivel de fila solo se permitirá a una transacción. La otra transacción deberá esperar a que se quite el bloqueo en el nivel de fila.  
   
- Utilice la siguiente tabla para determinar la compatibilidad de todos los modos de bloqueo disponibles en [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)].  
+<a name="lock_matrix"></a> Utilice la siguiente tabla para determinar la compatibilidad de todos los modos de bloqueo disponibles en [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)].  
   
  ![lock_conflicts](../relational-databases/media/LockConflictTable.png)  
   
@@ -460,13 +460,11 @@ GO
   
  El bloqueo de intervalos con clave se incluye en un índice, especificando los valores de clave inicial y final. Este bloqueo impide la inserción, actualización o eliminación de filas con un valor de clave incluido en el intervalo, ya que estas operaciones deben obtener en primer lugar un bloqueo en el índice. Por ejemplo, una transacción serializable podría emitir una instrucción SELECT que lee todas las filas cuyos valores clave se encuentran entre **'**AAA**'** y **'**CZZ**'**. El bloqueo de intervalos con clave en los valores de clave del intervalo **'**AAA**'** a **'**CZZ**'** impide que otras transacciones inserten filas con valores de clave situados en dicho intervalo, como **'**ADG**'**, **'**BBD**'** o **'**CAL**'**.  
   
-#### <a name="key-range-lock-modes"></a>Modos de bloqueo de intervalos con clave  
+#### <a name="key_range_modes"></a> Modos de bloqueo de intervalos con clave  
  Los bloqueos de intervalos con clave incluyen dos componentes, una fila y un intervalo, especificados con el formato intervalo-fila:  
   
 -   El intervalo representa el modo de bloqueo que protege el intervalo entre dos entradas de índice consecutivas.  
-  
 -   La fila representa el modo de bloqueo que protege la entrada de índice.  
-  
 -   El modo representa el modo de bloqueo combinado que se utiliza. Los modos de bloqueo del intervalo de claves constan de dos partes. La primera representa el tipo de bloqueo que se utiliza para bloquear el intervalo del índice (Range*T*) y la segunda representa el tipo de bloqueo que se utiliza para bloquear una clave específica (*K*). Ambas partes se conectan con un guion (-), como Range*T*-*K*.  
   
     |Intervalo|Fila|Mode|Description|  
@@ -492,7 +490,7 @@ GO
 |**RangeI-N**|Sí|Sí|Sí|no|no|Sí|no|  
 |**RangeX-X**|no|no|no|no|no|no|no|  
   
-#### <a name="conversion-locks"></a>Bloqueos de conversión  
+#### <a name="lock_conversion"></a> Bloqueos de conversión  
  Los bloqueos de conversión se crean cuando un bloqueo de intervalos con clave se superpone a otro bloqueo.  
   
 |Bloqueo 1|Bloqueo 2|Bloqueo de conversión|  
@@ -535,7 +533,7 @@ WHERE name BETWEEN 'A' AND 'C';
  Los bloqueos de intervalos con clave se colocan en las entradas de índice que corresponden al intervalo de filas de datos cuyo nombre se encuentra entre los valores Adam y Dale, impidiendo así que se agreguen o eliminen nuevas filas obtenidas en la consulta anterior. Aunque el primer nombre del intervalo es Adam, el bloqueo de intervalos con clave RangeS-S en esta entrada de índice garantiza que no se pueden agregar nombres nuevos que empiecen por la letra A delante de Adam, como Abigail. De forma similar, el bloqueo de intervalos con clave RangeS-S en la entrada de índice de Dale garantiza que no se van a agregar nombres nuevos que empiecen por la letra C detrás de Carlos, como Clive.  
   
 > [!NOTE]  
-> El número de bloqueos RangeS-S que se mantiene es *n*+1, en que *n* es el número de filas que satisfacen la consulta.  
+> El número de bloqueos RangeS-S que se mantiene es *n*+1, siendo *n* el número de filas que satisfacen la consulta.  
   
 ##### <a name="singleton-fetch-of-nonexistent-data"></a>Captura de singleton de datos inexistentes  
  Si una consulta de una transacción intenta seleccionar una fila que no existe, la ejecución de la consulta en un punto posterior de la misma transacción tiene que devolver el mismo resultado. No se puede permitir a otra transacción insertar la fila inexistente. Por ejemplo, con esta consulta:  
@@ -569,7 +567,7 @@ INSERT mytable VALUES ('Dan');
   
  El bloqueo de intervalos con clave de modo RangeI-N se coloca en la entrada de índice correspondiente al nombre David para probar el intervalo. Si se concede el bloqueo, se inserta `Dan` y se coloca un bloqueo exclusivo (X) en el valor `Dan`. El bloqueo de intervalos con clave de modo RangeI-N solo es necesario para probar el intervalo y no se mantiene mientras se ejecuta la transacción que realiza la operación de inserción. Otras transacciones pueden insertar o eliminar valores antes o después del valor insertado `Dan`. Sin embargo, cualquier transacción que intente leer, insertar o eliminar el valor `Dan` se bloqueará hasta que se confirme o se revierta la transacción de inserción.  
   
-### <a name="dynamic-locking"></a>Bloqueo dinámico  
+### <a name="dynamic_locks"></a> Bloqueo dinámico  
  La utilización de bloqueos de bajo nivel, como los de fila, aumenta la simultaneidad reduciendo la probabilidad de que dos transacciones soliciten bloqueos de los mismos datos al mismo tiempo. También aumenta el número de bloqueos y los recursos necesarios para administrarlos. Los bloqueos de alto nivel de tabla o página producen una sobrecarga menor, pero a costa de reducir la simultaneidad.  
   
  ![lockcht](../relational-databases/media/lockcht.png) 
@@ -584,7 +582,7 @@ INSERT mytable VALUES ('Dan');
   
  En [!INCLUDE[ssKatmai](../includes/ssKatmai-md.md)] y versiones posteriores, el comportamiento de la extensión de bloqueo ha cambiado con la inserción de la opción `LOCK_ESCALATION`. Para obtener más información, vea la opción `LOCK_ESCALATION` de [ALTER TABLE](../t-sql/statements/alter-table-transact-sql.md).  
   
-### <a name="deadlocking"></a>Interbloqueos  
+### <a name="deadlocks"></a> Interbloqueos  
  Un interbloqueo se produce cuando dos o más tareas se bloquean entre sí permanentemente teniendo cada tarea un bloqueo en un recurso que las otras tareas intentan bloquear. Por ejemplo:  
   
 -   La transacción A tiene un bloqueo compartido de la fila 1.  
@@ -619,7 +617,7 @@ INSERT mytable VALUES ('Dan');
   
  El [!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)] detecta automáticamente los ciclos de interbloqueo en [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]. El [!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)] elige una de las sesiones como sujeto del interbloqueo y la transacción actual finaliza con un error para romper el interbloqueo.  
   
-##### <a name="resources-that-can-deadlock"></a>Recursos que pueden causar interbloqueos  
+##### <a name="deadlock_resources"></a> Recursos que pueden causar interbloqueos  
  Cada sesión de usuario puede tener una o más tareas en ejecución y cada tarea puede adquirir o esperar para adquirir una serie de recursos. Los siguientes tipos de recursos pueden causar bloqueos que podrían dar como resultado un interbloqueo.  
   
 -   **Bloqueos**. Esperar para adquirir bloqueos en recursos, como objetos, páginas, filas, metadatos y aplicaciones, puede causar un interbloqueo. Por ejemplo, la transacción T1 tiene un bloqueo compartido (S) en la fila f1 y está esperando para obtener un bloqueo exclusivo (X) en f2. La transacción T2 tiene un bloqueo compartido (S) en f2 y está esperando para obtener un bloqueo exclusivo (X) en la fila f1. Esta situación tiene como resultado un ciclo de bloqueo en el que T1 y T2 esperan que la otra transacción libere los recursos bloqueados.  
@@ -649,7 +647,7 @@ INSERT mytable VALUES ('Dan');
   
  ![LogicFlowExamplec](../relational-databases/media/udb9_LogicFlowExamplec.png)  
   
-##### <a name="deadlock-detection"></a>Detección de interbloqueos  
+##### <a name="deadlock_detection"></a> Detección de interbloqueos  
  Todos los recursos enumerados en la sección anterior participan en el esquema de detección de interbloqueos del [!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)]. La detección de interbloqueos la realiza un subproceso de supervisión de bloqueos que periódicamente inicia una búsqueda por todas las tareas de una instancia del [!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)]. En los siguientes puntos se describe el proceso de búsqueda:  
   
 -   El intervalo predeterminado es de 5 segundos.  
@@ -667,10 +665,10 @@ INSERT mytable VALUES ('Dan');
   
  Cuando se trabaja con CLR, el monitor de interbloqueos detecta automáticamente el interbloqueo de los recursos de sincronización (monitores, bloqueo de lectura y escritura, y combinación de subprocesos) a los que se ha tenido acceso dentro de los procedimientos administrados. Si embargo, el interbloqueo se resuelve iniciando una excepción en el procedimiento que se seleccionó como sujeto del interbloqueo. Es importante comprender que la excepción no libera automáticamente los recursos que posee actualmente el sujeto; los recursos se tienen que liberar de forma explícita. De forma coherente con el comportamiento de la excepción, la excepción utilizada para identificar un sujeto del interbloqueo se puede interceptar y descartar.  
   
-##### <a name="deadlock-information-tools"></a>Herramientas de información de interbloqueos  
+##### <a name="deadlock_tools"></a> Herramientas de información de interbloqueos  
  Para ver la información de interbloqueos, [!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)] proporciona herramientas de supervisión en la forma de la sesión system\_health de xEvent, dos marcas de seguimiento y el evento de grafo de interbloqueo en SQL Profiler.  
 
-###### <a name="deadlock-in-systemhealth-session"></a>Interbloqueo en una sesión system_health
+###### <a name="deadlock_xevent"></a> Interbloqueo en una sesión system_health
 A partir de [!INCLUDE[ssSQL11](../includes/sssql11-md.md)], cuando se producen interbloqueos, la sesión system\_health captura todos los xEvents `xml_deadlock_report`. La sesión system\_health está habilitada de forma predeterminada. El grafo de interbloqueo que se capturaba normalmente consta de tres nodos distintos:
 -   **victim-list**. Identificador de proceso del elemento afectado por el interbloqueo.
 -   **process-list**. Información sobre todos los procesos implicados en el interbloqueo.
@@ -768,7 +766,7 @@ END
 
 Para obtener más información, vea [Usar la sesión system_health](../relational-databases/extended-events/use-the-system-health-session.md).
 
-###### <a name="trace-flag-1204-and-trace-flag-1222"></a>Marcas de seguimiento 1204 y 1222  
+###### <a name="deadlock_traceflags"></a> Marcas de seguimiento 1204 y 1222  
  Cuando se produce el interbloqueo, los marcadores de seguimiento 1204 y 1222 devuelven la información que se ha capturado en el registro de errores de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]. El marcador de seguimiento 1204 informa sobre el interbloqueo con un formato que especifica cada nodo implicado en el mismo. El marcador de seguimiento 1222 aplica formato a la información de interbloqueo, primero por procesos y luego por recursos. Es posible habilitar ambas marcas de seguimiento para obtener dos representaciones del mismo evento de interbloqueo.  
   
  Además de definir las propiedades de las marcas de seguimiento 1204 y 1222, en la siguiente tabla se muestran las similitudes y las diferencias.  
@@ -886,11 +884,13 @@ deadlock-list
 ```  
   
 ###### <a name="profiler-deadlock-graph-event"></a>Evento Deadlock Graph del Analizador  
- Este es un evento de SQL Profiler que presenta una descripción gráfica de las tareas y los recursos implicados en un interbloqueo. En el siguiente ejemplo se muestra el resultado de SQL Profiler cuando se ha activado el evento del grafo de interbloqueo.  
+Este es un evento de SQL Profiler que presenta una descripción gráfica de las tareas y los recursos implicados en un interbloqueo. En el siguiente ejemplo se muestra el resultado de SQL Profiler cuando se ha activado el evento del grafo de interbloqueo.  
   
  ![ProfilerDeadlockGraphc](../relational-databases/media/udb9_ProfilerDeadlockGraphc.png)  
   
- Para obtener más información sobre cómo ejecutar el grafo de interbloqueo de SQL Profiler, vea [Guardar grafos de interbloqueo &#40;SQL Server Profiler&#41;](../relational-databases/performance/save-deadlock-graphs-sql-server-profiler.md).  
+Para obtener más información sobre el evento de interbloqueo, consulte [Lock:Deadlock Event Class](../relational-databases/event-classes/lock-deadlock-event-class.md) (Clase de evento Lock:Deadlock).
+
+Para obtener más información sobre cómo ejecutar el grafo de interbloqueo de SQL Profiler, vea [Guardar grafos de interbloqueo &#40;SQL Server Profiler&#41;](../relational-databases/performance/save-deadlock-graphs-sql-server-profiler.md).  
   
 #### <a name="handling-deadlocks"></a>Controlar interbloqueos  
  Cuando una instancia del [!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)] elige una transacción como elemento afectado por un interbloqueo, finaliza el lote actual, revierte la transacción y devuelve el mensaje de error 1205 a la aplicación.  
@@ -903,7 +903,7 @@ deadlock-list
   
  La aplicación debería realizar una pausa breve antes de volver a enviar su consulta. Esto ofrece a la otra transacción implicada en el interbloqueo una oportunidad de completarse y liberar sus bloqueos que formaban parte del ciclo de interbloqueo. Así se minimiza la probabilidad de que el interbloqueo vuelva a ocurrir cuando la consulta que se ha vuelto a enviar solicite sus bloqueos.  
   
-#### <a name="minimizing-deadlocks"></a>Minimizar los interbloqueos  
+#### <a name="deadlock_minimizing"></a> Minimizar los interbloqueos  
  A pesar de que los interbloqueos no se pueden evitar totalmente, si se siguen ciertas convenciones de codificación se puede reducir su generación. La minimización de los interbloqueos puede aumentar el rendimiento de las transacciones y reducir la sobrecarga del sistema, debido a que:  
   
 -   Se revierten menos transacciones, al deshacer todo el trabajo que realiza la transacción.  
@@ -920,12 +920,12 @@ deadlock-list
     -   Utilice el aislamiento de instantánea.  
 -   Utilice conexiones enlazadas.  
   
-##### <a name="access-objects-in-the-same-order"></a>Obtener acceso a los objetos en el mismo orden  
+##### <a name="access-objects-in-the-same-order"></a>Acceder a los objetos en el mismo orden  
  Si todas las transacciones simultáneas tienen acceso a los objetos en el mismo orden, es menos probable que se produzcan interbloqueos. Por ejemplo, si dos transacciones simultáneas obtienen un bloqueo en la tabla **Supplier** y después en la tabla **Part**, una transacción se bloquea en la tabla **Supplier** hasta que finalice la otra transacción. Una vez confirmada o revertida la primera transacción, continúa la segunda, por lo que no se produce un interbloqueo. La utilización de procedimientos almacenados para todas las modificaciones de datos puede normalizar el orden de acceso a los objetos.  
   
  ![deadlock2](../relational-databases/media/dedlck2.png)  
   
-##### <a name="avoid-user-interaction-in-transactions"></a>Evitar la interacción con el usuario en las transacciones  
+##### <a name="avoid-user-interaction-in-transactions"></a>Evitar la interacción con los usuarios en las transacciones  
  Evite escribir transacciones que incluyan la intervención del usuario, ya que la velocidad de ejecución de los lotes que no requieren esta intervención es mucho mayor que la velocidad con la que el usuario debe responder manualmente a las consultas como, por ejemplo, contestar a la solicitud de un parámetro por parte de una aplicación. Por ejemplo, si una transacción espera una entrada del usuario y éste sale a comer o no vuelve hasta pasado el fin de semana, dicho usuario retrasa la finalización de la transacción. De esta forma, se degrada el rendimiento del sistema, ya que los bloqueos que mantiene la transacción solo se liberan cuando se confirma o se revierte la transacción. Aunque no surja una situación de interbloqueo, las demás transacciones que obtienen acceso a los mismos recursos se bloquean mientras esperan a que la transacción finalice.  
   
 ##### <a name="keep-transactions-short-and-in-one-batch"></a>Mantener transacciones cortas y en un proceso por lotes  
@@ -949,7 +949,7 @@ deadlock-list
 ##### <a name="use-bound-connections"></a>Utilizar conexiones enlazadas  
  Al utilizar conexiones enlazadas, dos o más conexiones abiertas por la misma aplicación pueden cooperar entre sí. Los bloqueos adquiridos por las conexiones secundarias se mantienen como si los adquiriera la conexión principal y viceversa. Por lo tanto, no se bloquean entre sí.  
   
-### <a name="lock-partitioning"></a>Partición de bloqueos  
+### <a name="lock_partitioning"></a> Partición de bloqueos  
  Para los grandes sistemas, los bloqueos en los objetos a los que se hace referencia asiduamente pueden convertirse en un cuello de botella para el rendimiento, puesto que la adquisición y liberación de los bloqueos genera contención en los recursos de bloqueo internos. La partición de bloqueos mejora el rendimiento porque divide un solo recurso de bloqueo entre varios recursos de bloqueo más. Esta característica solo está disponible para los sistemas con 16 o más CPU, se habilita automáticamente y no se puede deshabilitar. Solo los bloqueos de objetos pueden tener particiones. Los bloqueos de objetos que tengan un subtipo no pueden tener particiones. Para obtener más información, vea [sys.dm_tran_locks &#40;Transact-SQL&#41;](../relational-databases/system-dynamic-management-views/sys-dm-tran-locks-transact-sql.md).  
   
 #### <a name="understanding-lock-partitioning"></a>Descripción de partición de bloqueos  
@@ -1157,13 +1157,13 @@ BEGIN TRANSACTION
   
  Los niveles de aislamiento basados en las versiones de fila aumentan los recursos necesarios para la modificación de datos. Al habilitar estas opciones se crean versiones de filas de todas las modificaciones de datos para la base de datos. Se guarda una copia de los datos sin modificar en tempdb aunque no haya ninguna transacción activa que utilice el aislamiento basado en las versiones de fila. Los datos modificados incluyen un puntero a los datos con versiones almacenados en tempdb. En el caso de objetos grandes, solo se copia en tempdb la parte del objeto modificada.  
   
-#### <a name="space-used-in-tempdb"></a>Espacio utilizado en tempdb  
- En cada instancia de [!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)], tempdb debe disponer de espacio suficiente para contener las versiones de fila generadas por todas las bases de datos de la instancia. El administrador de la base de datos debe asegurarse de que tempdb cuenta con espacio más que suficiente para dar cabida al almacén de versiones. Existen dos almacenes de versiones en tempdb:  
+#### <a name="space-used-in-tempdb"></a>Espacio utilizado en TempDB  
+ En cada instancia de [!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)], tempdb debe disponer de espacio suficiente para contener las versiones de fila generadas por todas las bases de datos de la instancia. El administrador de la base de datos debe asegurarse de que TempDB cuenta con espacio más que suficiente para dar cabida al almacén de versiones. Existen dos almacenes de versiones en TempDB:  
   
 -   El almacén de versiones de generación de índices en línea se utiliza para generar índices en línea en todas las bases de datos.  
 -   El almacén de versiones común se utiliza en las demás operaciones de modificación de datos de todas las bases de datos.  
   
- Las versiones de filas deben estar almacenadas mientras una transacción activa necesite tener acceso a ella. Cada minuto, un subproceso en segundo plano elimina las versiones de filas que ya no se necesitan y libera el espacio de versiones en tempdb. Una transacción de larga duración impide que se libere el espacio del almacén de versiones si se cumple alguna de las siguientes condiciones:  
+ Las versiones de filas deben estar almacenadas mientras una transacción activa necesite tener acceso a ella. Cada minuto, un subproceso en segundo plano elimina las versiones de filas que ya no se necesitan y libera el espacio de versiones en TempDB. Una transacción de larga duración impide que se libere el espacio del almacén de versiones si se cumple alguna de las siguientes condiciones:  
   
 -   Se utiliza el aislamiento basado en las versiones de fila.  
 -   Se utilizan desencadenadores, MARS u operaciones de generación de índices en línea.  
@@ -1172,7 +1172,7 @@ BEGIN TRANSACTION
 > [!NOTE]  
 > Cuando se invoca un desencadenador dentro de una transacción, las versiones de filas creadas por el desencadenador se mantienen hasta el final de la transacción, incluso cuando las versiones de filas dejan de necesitarse una vez completado el desencadenador. Esto también se aplica a las transacciones de lectura confirmada que usan las versiones de fila. Con este tipo de transacción, solo se necesita una vista de la base de datos transaccionalmente coherente para cada instrucción de la transacción. De este modo, las versiones de filas creadas para una instrucción de la transacción dejan de necesitarse una vez completada la instrucción. No obstante, las versiones de filas creadas por cada instrucción de la transacción se mantienen hasta que se complete la transacción.  
   
- Cuando tempdb se queda sin espacio, [!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)] fuerza la reducción de los almacenes de versiones. Durante el proceso de reducción, las transacciones de mayor duración que todavía no han generado versiones de filas se marcan como sujetos. Se genera el mensaje 3967 en el registro de errores para cada transacción marcada como sujeto. Si una traducción se marca como sujeto, no podrá leer las versiones de filas del almacén de versiones. Cuando intenta leer versiones de filas, se genera el mensaje 3966 y la transacción se revierte. Si el proceso de reducción se realiza correctamente, pasa a quedar espacio disponible en tempdb. Si no, tempdb se queda sin espacio y se produce lo siguiente:  
+ Cuando TempDB se queda sin espacio, [!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)] fuerza la reducción de los almacenes de versiones. Durante el proceso de reducción, las transacciones de mayor duración que todavía no han generado versiones de filas se marcan como sujetos. Se genera el mensaje 3967 en el registro de errores para cada transacción marcada como sujeto. Si una traducción se marca como sujeto, no podrá leer las versiones de filas del almacén de versiones. Cuando intenta leer versiones de filas, se genera el mensaje 3966 y la transacción se revierte. Si el proceso de reducción se realiza correctamente, pasa a quedar espacio disponible en tempdb. Si no, tempdb se queda sin espacio y se produce lo siguiente:  
   
 -   Las operaciones de escritura continúan, pero no generan versiones. Aparece un mensaje informativo (3959) en el registro de errores, pero la transacción que escribe datos no se ve afectada.  
   
@@ -1239,7 +1239,7 @@ BEGIN TRANSACTION
  sys.dm_tran_current_snapshot. Devuelve una tabla virtual que muestra todas las transacciones activas en el momento en que se inicia la transacción actual de aislamiento de instantánea. Si la transacción actual está usando un aislamiento de instantáneas, esta función no devuelve filas. La función sys.dm_tran_current_snapshot es similar a sys.dm_tran_transactions_snapshot, excepto en que solo devuelve las transacciones activas de la instantánea actual. Para obtener más información, consulte [sys.dm_tran_current_snapshot &#40;Transact-SQL&#41;](../relational-databases/system-dynamic-management-views/sys-dm-tran-current-snapshot-transact-sql.md).  
   
 ##### <a name="performance-counters"></a>Performance Counters  
- [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] los contadores de rendimiento proporcionan información sobre el rendimiento del sistema afectado por los procesos de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]. Los siguientes contadores de rendimiento supervisan tempdb y el almacén de versiones, así como las transacciones que utilizan versiones de fila. Los contadores de rendimiento se encuentran en el objeto de rendimiento SQLServer:Transactions.  
+ Los contadores de rendimiento de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] proporcionan información sobre el rendimiento del sistema afectado por los procesos de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]. Los siguientes contadores de rendimiento supervisan tempdb y el almacén de versiones, así como las transacciones que utilizan versiones de fila. Los contadores de rendimiento se encuentran en el objeto de rendimiento SQLServer:Transactions.  
   
  **Espacio disponible en tempdb (KB)**. Supervisa la cantidad, en kilobytes (KB), de espacio libre en la base de datos tempdb. Debe haber suficiente espacio libre en tempdb para controlar el almacén de versiones que admite aislamiento de instantánea.  
   
@@ -1810,7 +1810,7 @@ GO
 ### <a name="coding-efficient-transactions"></a>Codificar transacciones eficaces  
  Es importante que las transacciones sean tan cortas como sea posible. Cuando se inicia una transacción, un sistema de administración de bases de datos (DBMS) debe contener muchos recursos hasta el final de la transacción para proteger las propiedades de atomicidad, coherencia, aislamiento y durabilidad (ACID) de la transacción. Si se modifican datos, se deben proteger las filas modificadas con bloqueos exclusivos que impidan que otra transacción lea las filas, y se deben mantener bloqueos exclusivos hasta que se confirme o se revierta la transacción. Dependiendo de la configuración del nivel de aislamiento de la transacción, las instrucciones `SELECT` pueden adquirir bloqueos que deben mantenerse hasta que la transacción se confirme o se revierta. Especialmente en sistemas con muchos usuarios, las transacciones deben ser tan cortas como sea posible para reducir el conflicto de bloqueos de recursos entre conexiones simultáneas. Es posible que las transacciones de larga duración y poco eficaces no constituyan un problema cuando hay un pequeño número de usuarios, pero son intolerables en sistemas con miles de usuarios. A partir de [!INCLUDE[ssSQL14](../includes/sssql14-md.md)], [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] admite las transacciones durables diferidas. Las transacciones durables diferidas no garantizan la durabilidad. Vea el tema [Durabilidad de las transacciones](../relational-databases/logs/control-transaction-durability.md) para obtener más información.  
   
-#### <a name="coding-guidelines"></a>Instrucciones de codificación  
+#### <a name="guidelines"></a> Instrucciones de codificación  
  A continuación se muestran las instrucciones para codificar transacciones eficaces:  
   
 -   No pida entradas de los usuarios durante una transacción.  
@@ -1857,7 +1857,7 @@ GO
   
     Para obtener más información, consulte [sys.dm_tran_database_transactions &#40;Transact-SQL&#41;](../relational-databases/system-dynamic-management-views/sys-dm-tran-database-transactions-transact-sql.md).  
   
--   DBCC OPENTRAN  
+-   `DBCC OPENTRAN`  
   
     Esta instrucción permite identificar el Id. de usuario del propietario de la transacción, por lo que se puede realizar un seguimiento del origen de la misma para terminarla de forma más ordenada (confirmándola en lugar de revirtiéndola). Para obtener más información, vea [DBCC OPENTRAN &#40;Transact-SQL&#41;](../t-sql/database-console-commands/dbcc-opentran-transact-sql.md).  
   

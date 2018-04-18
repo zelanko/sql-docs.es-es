@@ -1,30 +1,31 @@
 ---
 title: El archivo Schema.ini (controlador de archivo de texto) | Documentos de Microsoft
-ms.custom: 
+ms.custom: ''
 ms.date: 01/19/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: drivers
-ms.service: 
+ms.service: ''
 ms.component: odbc
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: drivers
-ms.tgt_pltfrm: 
+ms.technology:
+- drivers
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - schema.ini file [ODBC]
 - text file driver [ODBC], schema.ini file
 ms.assetid: 0c4625c4-c730-4984-b430-9051b7bc0451
-caps.latest.revision: "7"
+caps.latest.revision: 7
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 0b71b742ff9c0833bd36deb256dda5169f2a51c7
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: 602582886c1eb02e34bad9127e5ab1e55a22a86b
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="schemaini-file-text-file-driver"></a>Archivo Schema.ini (controlador de archivo de texto)
 Cuando se utiliza el controlador de texto, el formato del archivo de texto se determina mediante un archivo de información de esquema. El archivo de información de esquema es siempre denominado Schema.ini y se mantiene siempre en el mismo directorio que el origen de datos de texto. El archivo de información de esquema proporciona el IISAM con información sobre el formato general del archivo, el nombre de columna y la información de tipo de datos y varias otras características de datos. Un archivo Schema.ini siempre es necesario para tener acceso a datos de longitud fija. Debe utilizar un archivo Schema.ini cuando la tabla de texto contiene la fecha y hora, moneda, o datos Decimal o siempre que desee más control sobre el tratamiento de los datos de la tabla.  
@@ -85,14 +86,14 @@ ColNameHeader=True
 MaxScanRows=0  
 ```  
   
- La entrada siguiente designa campos de una tabla con el número de columna (**Col***n*) opción, que es opcional para archivos delimitados por el carácter obligatorio para los archivos de longitud fija. El ejemplo muestra las entradas de Schema.ini para dos campos, un campo de texto de CustomerNumber de 10 caracteres y un campo de texto de 30 caracteres CustomerName:  
+ La entrada siguiente designa campos de una tabla con el número de columna (**Col *** n*) opción, que es opcional para archivos delimitados por el carácter obligatorio para los archivos de longitud fija. El ejemplo muestra las entradas de Schema.ini para dos campos, un campo de texto de CustomerNumber de 10 caracteres y un campo de texto de 30 caracteres CustomerName:  
   
 ```  
 Col1=CustomerNumber Text Width 10  
 Col2=CustomerName Text Width 30  
 ```  
   
- La sintaxis de **Col**  *n*  es:  
+ La sintaxis de **Col *** n* es:  
   
 ```  
   
@@ -100,13 +101,13 @@ n=ColumnNametype [#]
 ```  
   
 ## <a name="remarks"></a>Comentarios  
- En la tabla siguiente describe cada parte de la **Col**  *n*  entrada.  
+ En la tabla siguiente describe cada parte de la **Col *** n* entrada.  
   
 |Parámetro|Description|  
 |---------------|-----------------|  
 |*ColumnName*|El nombre de la columna de texto. Si el nombre de columna contiene espacios en blanco incrustados, debe encerrarlo entre comillas dobles.|  
 |*Tipo*|Tipos de datos son los siguientes:<br /><br /> **Tipos de datos de Microsoft Jet**<br /><br /> bit<br /><br /> Byte<br /><br /> Short<br /><br /> Long<br /><br /> Moneda<br /><br /> Único<br /><br /> Doble<br /><br /> DateTime<br /><br /> Texto<br /><br /> Memorándum<br /><br /> **Tipos de datos ODBC** Char (igual que el texto)<br /><br /> Float (igual que Double)<br /><br /> Integer (igual que Short)<br /><br /> LongChar (igual que Memo)<br /><br /> Fecha *formato de fecha*|  
-|**Width**|El valor de cadena literal `Width`. Indica que el número siguiente designa el ancho de la columna (opcional para archivos delimitados por el carácter; necesario para los archivos de longitud fija).|  
+|**Ancho**|El valor de cadena literal `Width`. Indica que el número siguiente designa el ancho de la columna (opcional para archivos delimitados por el carácter; necesario para los archivos de longitud fija).|  
 |*#*|El valor entero que indica el ancho de la columna (obligatorio si **ancho** se especifica).|  
   
 ## <a name="selecting-a-character-set"></a>Al seleccionar un juego de caracteres  

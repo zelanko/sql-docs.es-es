@@ -1,16 +1,16 @@
 ---
 title: sysmail_allitems (Transact-SQL) | Documentos de Microsoft
-ms.custom: 
+ms.custom: ''
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine
-ms.service: 
+ms.service: ''
 ms.component: system-catalog-views
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - sysmail_allitems_TSQL
@@ -20,23 +20,23 @@ dev_langs:
 helpviewer_keywords:
 - sysmail_allitems database mail view
 ms.assetid: 21fb8432-7677-4435-902f-64a58bba4cbb
-caps.latest.revision: 
+caps.latest.revision: 17
 author: stevestein
 ms.author: sstein
 manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: fb11426c67ddb253a1aa76ae3ea435e115b6fa69
-ms.sourcegitcommit: c556eaf60a49af7025db35b7aa14beb76a8158c5
+ms.openlocfilehash: 5fe6ed0c4d40cf7d4d3986c4eb5db10aeffd46d5
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/03/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="sysmailallitems-transact-sql"></a>sysmail_allitems (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
   Contiene una fila por cada mensaje procesado por el Correo electrónico de base de datos. Utilice esta vista cuando desee ver el estado de todos los mensajes.  
   
- Para ver sólo los mensajes con el estado de error, utilice [sysmail_faileditems &#40; Transact-SQL &#41; ](../../relational-databases/system-catalog-views/sysmail-faileditems-transact-sql.md). Para ver sólo los mensajes no enviados, utilice [sysmail_unsentitems &#40; Transact-SQL &#41; ](../../relational-databases/system-catalog-views/sysmail-unsentitems-transact-sql.md). Para ver sólo los mensajes que se enviaron, use [sysmail_sentitems &#40; Transact-SQL &#41; ](../../relational-databases/system-catalog-views/sysmail-sentitems-transact-sql.md).  
+ Para ver sólo los mensajes con el estado de error, utilice [sysmail_faileditems &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sysmail-faileditems-transact-sql.md). Para ver sólo los mensajes no enviados, utilice [sysmail_unsentitems &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sysmail-unsentitems-transact-sql.md). Para ver sólo los mensajes que se enviaron, use [sysmail_sentitems &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sysmail-sentitems-transact-sql.md).  
   
 |Nombre de columna|Tipo de datos|Description|  
 |-----------------|---------------|-----------------|  
@@ -45,25 +45,25 @@ ms.lasthandoff: 02/03/2018
 |**destinatarios**|**ntext**|Direcciones de correo electrónico de los destinatarios de mensajes.|  
 |**copy_recipients**|**ntext**|Direcciones de correo electrónico de los destinatarios que reciben copias del mensaje.|  
 |**blind_copy_recipients**|**ntext**|Direcciones de correo electrónico de los destinatarios que reciben copias del mensaje pero cuyos nombres no aparecen en el encabezado del mensaje.|  
-|**subject**|**nvarchar(510)**|Línea de asunto del mensaje.|  
-|**cuerpo**|**ntext**|El cuerpo del mensaje.|  
-|**body_format**|**varchar(20)**|El formato del cuerpo del mensaje. Los valores posibles son TEXT y HTML.|  
-|**importance**|**varchar(6)**|El **importancia** parámetro del mensaje.|  
-|**sensitivity**|**varchar(12)**|El **sensibilidad** parámetro del mensaje.|  
+|**Asunto**|**nvarchar(510)**|Línea de asunto del mensaje.|  
+|**Cuerpo**|**ntext**|El cuerpo del mensaje.|  
+|**body_format**|**varchar (20)**|El formato del cuerpo del mensaje. Los valores posibles son TEXT y HTML.|  
+|**Importancia**|**varchar(6)**|El **importancia** parámetro del mensaje.|  
+|**Sensibilidad**|**varchar (12)**|El **sensibilidad** parámetro del mensaje.|  
 |**file_attachments**|**ntext**|Una lista delimitada por punto y coma de nombres de archivo adjuntadas al mensaje de correo electrónico.|  
-|**attachment_encoding**|**varchar(20)**|Tipo de datos adjuntos.|  
-|**consulta**|**ntext**|Consulta ejecutada por el programa de correo.|  
+|**attachment_encoding**|**varchar (20)**|Tipo de datos adjuntos.|  
+|**Consulta**|**ntext**|Consulta ejecutada por el programa de correo.|  
 |**execute_query_database**|**sysname**|Contexto de base de datos en el cual el programa de correo ejecutó la consulta.|  
 |**attach_query_result_as_file**|**bit**|Si el valor es 0, los resultados de la consulta se incluyeron en el cuerpo del mensaje de correo electrónico, después del contenido del cuerpo. Si el valor es 1, los resultados se devolvieron como datos adjuntos.|  
 |**query_result_header**|**bit**|Si el valor es 1, los resultados de la consulta contenían encabezados de columna. Si el valor es 0, los resultados de la consulta no contenían encabezados de columna.|  
 |**query_result_width**|**int**|El **query_result_width** parámetro del mensaje.|  
 |**query_result_separator**|**char(1)**|Carácter utilizado para separar columnas en la salida de la consulta.|  
-|**exclude_query_output**|**bit**|El **exclude_query_output** parámetro del mensaje. Para obtener más información, vea [sp_send_dbmail &#40; Transact-SQL &#41; ](../../relational-databases/system-stored-procedures/sp-send-dbmail-transact-sql.md).|  
+|**exclude_query_output**|**bit**|El **exclude_query_output** parámetro del mensaje. Para obtener más información, consulte [sp_send_dbmail &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-send-dbmail-transact-sql.md).|  
 |**append_query_error**|**bit**|El **append_query_error** parámetro del mensaje. El valor 0 indica que el Correo electrónico de base de datos no debe enviar el mensaje de correo electrónico si hay un error en la consulta.|  
 |**send_request_date**|**datetime**|Fecha y hora en que se colocó el mensaje en la cola de correo electrónico.|  
 |**send_request_user**|**sysname**|Usuario que envió el mensaje. Se trata del contexto de usuario del procedimiento del Correo electrónico de base de datos, no del campo De: del mensaje.|  
 |**sent_account_id**|**int**|Identificador de la cuenta del Correo electrónico de base de datos utilizada para enviar el mensaje.|  
-|**sent_status**|**varchar(8)**|Estado del mensaje. Los valores posibles son:<br /><br /> **enviar** -se envió el correo electrónico.<br /><br /> **sin enviar** -correo electrónico de base de datos todavía está intentando enviar el mensaje.<br /><br /> **volver a intentar** -no se pudo enviar el mensaje de correo electrónico de base de datos pero está intentando enviarlo de nuevo.<br /><br /> **no se pudo** -correo electrónico de base de datos no pudo enviar el mensaje.|  
+|**sent_status**|**varchar (8)**|Estado del mensaje. Los valores posibles son:<br /><br /> **enviar** -se envió el correo electrónico.<br /><br /> **sin enviar** -correo electrónico de base de datos todavía está intentando enviar el mensaje.<br /><br /> **volver a intentar** -no se pudo enviar el mensaje de correo electrónico de base de datos pero está intentando enviarlo de nuevo.<br /><br /> **no se pudo** -correo electrónico de base de datos no pudo enviar el mensaje.|  
 |**sent_date**|**datetime**|Fecha y hora en que se envió el mensaje.|  
 |**last_mod_date**|**datetime**|Fecha y hora de la modificación más reciente de la fila.|  
 |**last_mod_user**|**sysname**|Usuario que realizó la modificación más reciente de la fila.|  

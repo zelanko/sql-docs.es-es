@@ -1,16 +1,16 @@
 ---
 title: sp_repladdcolumn (Transact-SQL) | Documentos de Microsoft
-ms.custom: 
+ms.custom: ''
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine
-ms.service: 
+ms.service: ''
 ms.component: system-stored-procedures
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - replication
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 applies_to:
 - SQL Server
@@ -20,16 +20,16 @@ f1_keywords:
 helpviewer_keywords:
 - sp_repladdcolumn
 ms.assetid: d6220f9f-c738-4f9c-bcf8-419994e86c81
-caps.latest.revision: 
+caps.latest.revision: 37
 author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: d638619d087d43b0820fdf21650a9b8db1f7cf63
-ms.sourcegitcommit: 45e4efb7aa828578fe9eb7743a1a3526da719555
+ms.openlocfilehash: e7457c7829662d5716db9e794836f12e3a785564
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="sprepladdcolumn-transact-sql"></a>sp_repladdcolumn (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -68,7 +68,7 @@ sp_repladdcolumn [ @source_object = ] 'source_object', [ @column = ] 'column' ]
  Es el nombre de la publicación a la que se agrega la nueva columna. *publication_to_add* es **nvarchar (4000)**, su valor predeterminado es **todos los**. Si **todos los**, a continuación, se ven afectadas todas las publicaciones que contienen esta tabla. Si *publication_to_add* se especifica, solo esta publicación no tiene la nueva columna agregada.  
   
  [ @from_agent =] *from_agent*  
- Si un agente de replicación está ejecutando el procedimiento almacenado. *from_agent* es **int**, su valor predeterminado es **0**, donde un valor de **1** se utiliza cuando se ejecuta este procedimiento almacenado por un agente de replicación y, en cualquier otro caso, el valor predeterminado de **0**debe utilizarse.  
+ Si un agente de replicación está ejecutando el procedimiento almacenado. *from_agent* es **int**, su valor predeterminado es **0**, donde un valor de **1** se utiliza cuando se ejecuta este procedimiento almacenado por un agente de replicación y, en cada otro caso, el valor predeterminado de **0**debe utilizarse.  
   
  [ @schema_change_script =] '*el argumento schema_change_script*'  
  Especifica el nombre y la ruta de acceso de un script de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] utilizado para modificar los procedimientos almacenados personalizados generados por el sistema. *el argumento schema_change_script* es **nvarchar (4000)**, su valor predeterminado es null. La replicación permite que los procedimientos almacenados personalizados definidos por el usuario sustituyan a uno o más de los procedimientos predeterminados utilizados en la replicación transaccional. *el argumento schema_change_script* se ejecuta después de un cambio de esquema se realiza en un artículo de tabla replicado mediante sp_repladdcolumn y puede utilizarse para realizar uno de los siguientes:  

@@ -1,16 +1,16 @@
 ---
 title: sp_helpmergepublication (Transact-SQL) | Documentos de Microsoft
-ms.custom: 
+ms.custom: ''
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine
-ms.service: 
+ms.service: ''
 ms.component: system-stored-procedures
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - replication
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 applies_to:
 - SQL Server
@@ -20,16 +20,16 @@ f1_keywords:
 helpviewer_keywords:
 - sp_helpmergepublication
 ms.assetid: dfe1e1e1-9a65-406a-aced-6385a078e135
-caps.latest.revision: 
+caps.latest.revision: 55
 author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 0e346c8555438ba3c8a26772c2f130ae0a4bed48
-ms.sourcegitcommit: 45e4efb7aa828578fe9eb7743a1a3526da719555
+ms.openlocfilehash: d5005db95a4153259dd000cda87823368255a722
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="sphelpmergepublication-transact-sql"></a>sp_helpmergepublication (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -51,27 +51,27 @@ sp_helpmergepublication [ [ @publication = ] 'publication' ]
 ```  
   
 ## <a name="arguments"></a>Argumentos  
- [ @publication  **=**  ] **'***publicación***'**  
- Nombre de la publicación. *publicación*es **sysname**, su valor predeterminado es  **%** , que devuelve información sobre todas las publicaciones de mezcla en la base de datos actual.  
+ [ @publication **=** ] **'***publicación***'**  
+ Nombre de la publicación. *publicación*es **sysname**, su valor predeterminado es **%**, que devuelve información sobre todas las publicaciones de mezcla en la base de datos actual.  
   
- [ @found  **=**  ] **'***encuentra***'** salida  
+ [ @found **=** ] **'***encuentra***'** salida  
  Marca que indica las filas devueltas. *se encontró*es **int** y un parámetro de salida, su valor predeterminado es null. **1** indica que se encuentra la publicación. **0** indica que no se encuentra la publicación.  
   
- [ @publication_id  **=** ] **'***publication_id***'** salida  
+ [ @publication_id **=**] **'***publication_id***'** salida  
  El número de identificación de la publicación. *publication_id* es **uniqueidentifier** y un parámetro de salida, su valor predeterminado es null.  
   
- [ @reserved  **=** ] **'***reservada***'**  
- [!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]*reservada* es **nvarchar (20)**, su valor predeterminado es null.  
+ [ @reserved **=**] **'***reservada***'**  
+ [!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)] *reservada* es **nvarchar (20)**, su valor predeterminado es null.  
   
- [ @publisher  **=**  ] **'***publisher***'**  
+ [ @publisher **=** ] **'***publisher***'**  
  El nombre del publicador. *Publisher* es **sysname**, su valor predeterminado es null.  
   
- [@publisher_db  **=**  ] **'***publisher_db***'**  
+ [@publisher_db **=** ] **'***publisher_db***'**  
  El nombre de la base de datos de publicación. *publisher_db* es **sysname**, su valor predeterminado es null.  
   
 ## <a name="result-sets"></a>Conjuntos de resultados  
   
-|Nombre de columna|Tipo de datos|Descripción|  
+|Nombre de columna|Tipo de datos|Description|  
 |-----------------|---------------|-----------------|  
 |id|**int**|Orden secuencial de la publicación en la lista del conjunto de resultados.|  
 |name|**sysname**|Nombre de la publicación.|  
@@ -104,7 +104,7 @@ sp_helpmergepublication [ [ @publication = ] 'publication' ]
 |keep_partition_changes|**int**|Especifica si se está optimizando la sincronización para esta publicación. **keep_partition_changes** tiene un valor predeterminado de **0**. Un valor de **0** significa que la sincronización no se optimiza y las particiones enviadas a todos los suscriptores se comprueban cuando cambian los datos de una partición.<br /><br /> **1** significa que la sincronización se optimiza y solo los suscriptores que tienen filas en la partición modificada se ven afectados.<br /><br /> Nota: De forma predeterminada, las publicaciones de combinación utilizan particiones precalculadas, que proporciona un mayor grado de optimización que esta opción. Para obtener más información, consulte [Parameterized Row Filters](../../relational-databases/replication/merge/parameterized-filters-parameterized-row-filters.md) y [optimizar el rendimiento de filtro con parámetros con particiones precalculadas](../../relational-databases/replication/merge/parameterized-filters-optimize-for-precomputed-partitions.md).|  
 |allow_subscription_copy|**int**|Especifica si se ha habilitado la capacidad de copiar las bases de datos de suscripciones que se suscriben a esta publicación. Un valor de **0** significa que no se permite la copia.|  
 |allow_synctoalternate|**int**|Especifica si se permite un asociado de sincronización alternativo para sincronizar con este publicador. Un valor de **0** significa que no se permite un asociado de sincronización.|  
-|validate_subscriber_info|**nvarchar (500)**|Enumera las funciones que se están utilizando para recuperar información del suscriptor y validar los criterios de filtrado de filas con parámetros del suscriptor. Ayuda a comprobar que se hayan creado particiones de la información de manera coherente con cada combinación.|  
+|validate_subscriber_info|**nvarchar(500)**|Enumera las funciones que se están utilizando para recuperar información del suscriptor y validar los criterios de filtrado de filas con parámetros del suscriptor. Ayuda a comprobar que se hayan creado particiones de la información de manera coherente con cada combinación.|  
 |backward_comp_level|**int**|Nivel de compatibilidad de la base de datos, que puede ser uno de los que se especifican a continuación:<br /><br /> **90** = [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)]<br /><br /> **90**  =  [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] SP1<br /><br /> **90**  =  [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] SP2<br /><br /> **100** = [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)]|  
 |publish_to_activedirectory|**bit**|Especifica si la información de publicación se publica en Active Directory. Un valor de **0** significa que la información de publicación no está disponible desde Active Directory.<br /><br /> Este parámetro ha quedado desusado y solo se admite para la compatibilidad de scripts con versiones anteriores. Ya no es posible agregar información de publicación a Active Directory.|  
 |max_concurrent_merge|**int**|Número de procesos de combinación simultáneos. Si **0**, no hay ningún límite para el número de procesos de mezcla simultáneos que se ejecutan en un momento dado.|  
@@ -115,8 +115,8 @@ sp_helpmergepublication [ [ @publication = ] 'publication' ]
 |publication_number|**smallint**|Número asignado a esta publicación.|  
 |allow_subscriber_initiated_snapshot|**bit**|Determina si los suscriptores pueden iniciar el proceso de generación de instantáneas de datos filtrados. Un valor de **1** significa que los suscriptores pueden iniciar el proceso de instantáneas.|  
 |allow_web_synchronization|**bit**|Determina si se habilita la publicación para sincronización web. Un valor de **1** significa que está habilitada la sincronización Web.|  
-|web_synchronization_url|**nvarchar (500)**|Dirección URL de Internet que se usa para la sincronización web.|  
-|allow_partition_realignment|**bit**|Determina si las eliminaciones se envían al suscriptor cuando la modificación de la fila en el publicador hace que se cambie su partición. Un valor de **1** significa que las eliminaciones se envían al suscriptor.  Para obtener más información, vea [sp_addmergepublication &#40; Transact-SQL &#41; ](../../relational-databases/system-stored-procedures/sp-addmergepublication-transact-sql.md).|  
+|web_synchronization_url|**nvarchar(500)**|Dirección URL de Internet que se usa para la sincronización web.|  
+|allow_partition_realignment|**bit**|Determina si las eliminaciones se envían al suscriptor cuando la modificación de la fila en el publicador hace que se cambie su partición. Un valor de **1** significa que las eliminaciones se envían al suscriptor.  Para obtener más información, consulte [sp_addmergepublication &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-addmergepublication-transact-sql.md).|  
 |retention_period_unit|**tinyint**|Define la unidad que se utiliza al definir la retención. Esto puede ser uno de los siguientes valores:<br /><br /> **0** = día<br /><br /> **1** = semana<br /><br /> **2** = mes<br /><br /> **3** = año|  
 |has_downloadonly_articles|**bit**|Indica si alguno de los artículos pertenecientes a la publicación son artículos de solo descarga. Un valor de **1** indica que hay artículos de solo descarga.|  
 |decentralized_conflicts|**int**|Indica si los registros de los conflictos se almacenan en el suscriptor que provocó el conflicto. Un valor de **0** indica que no se almacenan los registros de conflictos en el suscriptor. El valor 1 indica que los registros de los conflictos se almacenan en el suscriptor.|  
@@ -137,9 +137,9 @@ sp_helpmergepublication [ [ @publication = ] 'publication' ]
   
 ## <a name="see-also"></a>Vea también  
  [Ver y modificar propiedades de publicación](../../relational-databases/replication/publish/view-and-modify-publication-properties.md)   
- [sp_addmergepublication &#40; Transact-SQL &#41;](../../relational-databases/system-stored-procedures/sp-addmergepublication-transact-sql.md)   
+ [sp_addmergepublication &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-addmergepublication-transact-sql.md)   
  [sp_changemergepublication &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-changemergepublication-transact-sql.md)   
- [sp_dropmergepublication &#40; Transact-SQL &#41;](../../relational-databases/system-stored-procedures/sp-dropmergepublication-transact-sql.md)   
+ [sp_dropmergepublication &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-dropmergepublication-transact-sql.md)   
  [Procedimientos almacenados de replicación &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/replication-stored-procedures-transact-sql.md)  
   
   

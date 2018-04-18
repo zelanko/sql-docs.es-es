@@ -1,30 +1,31 @@
 ---
 title: Uso de las aplicaciones de 32 bits con controladores de 32 bits | Documentos de Microsoft
-ms.custom: 
+ms.custom: ''
 ms.date: 01/19/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: drivers
-ms.service: 
+ms.service: ''
 ms.component: odbc
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: drivers
-ms.tgt_pltfrm: 
+ms.technology:
+- drivers
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - ODBC drivers [ODBC], 32-bit applications
 - 32-bit applications with 32-bit drivers [ODBC]
 ms.assetid: 0cdd5788-5642-4280-8d53-b4ec461aafa1
-caps.latest.revision: "13"
+caps.latest.revision: 13
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 70b27a10dc14583a39870fc434b7b69fb674ab5b
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: 008f948580057fdaa6e59802fd6fa8395140b735
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="using-32-bit-applications-with-32-bit-drivers"></a>Uso de las aplicaciones de 32 bits con controladores de 32 bits
 Puede ejecutar aplicaciones de 32 bits con controladores de 32 bits. Las aplicaciones de 32 bits y los controladores de 32 bits utilizan la API Win32®.  
@@ -32,7 +33,7 @@ Puede ejecutar aplicaciones de 32 bits con controladores de 32 bits. Las aplicac
 ## <a name="architecture"></a>Architecture  
  La siguiente ilustración muestra las aplicaciones de 32 bits cómo comunicarse con los controladores de 32 bits. La aplicación llama al administrador de controladores de 32 bits, que a su vez llama a controladores de 32 bits.  
   
- ![Cómo 32 &#45; las aplicaciones de bits se comunican con 32 &#45; bit controladores](../../odbc/microsoft/media/sdka6.gif "sdka6")  
+ ![Cómo 32&#45;aplicaciones bits se comunican con 32&#45;bit controladores](../../odbc/microsoft/media/sdka6.gif "sdka6")  
   
 > [!IMPORTANT]  
 >  No utilice al instalador thunk DLL de 32 bits en Windows NT o Windows 2000. Aunque tiene el mismo nombre de archivo que el programa de instalación de 32 bits DLL, es una DLL diferente.  

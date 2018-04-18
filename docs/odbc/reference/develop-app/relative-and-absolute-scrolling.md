@@ -1,15 +1,16 @@
 ---
 title: Desplazamiento relativas y absolutas | Documentos de Microsoft
-ms.custom: 
+ms.custom: ''
 ms.date: 01/19/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: drivers
-ms.service: 
+ms.service: ''
 ms.component: odbc
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: drivers
-ms.tgt_pltfrm: 
+ms.technology:
+- drivers
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - absolute scrolling [ODBC]
@@ -17,19 +18,19 @@ helpviewer_keywords:
 - scrollable cursors [ODBC]
 - cursors [ODBC], scrollable
 ms.assetid: 3d0ff48d-fef5-4c01-bb1d-a583e6269b66
-caps.latest.revision: "5"
+caps.latest.revision: 5
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: c7ade62e1c7760b7542b1e4dd82668c11f2947c8
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: 41155a5536493ba77941855e0283011ccda7d1a2
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="relative-and-absolute-scrolling"></a>Desplazamiento relativas y absolutas
-La mayoría de las opciones de desplazamiento en **SQLFetchScroll** coloque el cursor en relación con la posición actual o a una posición absoluta. **SQLFetchScroll** admite la captura de la siguiente, anterior, primero y último conjuntos de filas, como una captura así como relativa (capturar el conjunto de filas  *n*  filas desde el principio del conjunto de filas actual) y una captura absoluta (fetch el conjunto de filas a partir de fila  *n* ). Si  *n*  es negativo en una captura absoluta, las filas se cuentan desde el final del conjunto de resultados. Por lo tanto, una captura absoluta de fila -1 significa que se capturará el conjunto de filas que comienza por la última fila del conjunto de resultados.  
+La mayoría de las opciones de desplazamiento en **SQLFetchScroll** coloque el cursor en relación con la posición actual o a una posición absoluta. **SQLFetchScroll** admite la captura de la siguiente, anterior, primero y último conjuntos de filas, como una captura relativa bien como (capturar el conjunto de filas *n* filas desde el principio del conjunto de filas actual) y una captura absoluta (el conjunto de filas a partir de fetch en la fila *n*). Si *n* es negativo en una captura absoluta, las filas se cuentan desde el final del conjunto de resultados. Por lo tanto, una captura absoluta de fila -1 significa que se capturará el conjunto de filas que comienza por la última fila del conjunto de resultados.  
   
  Los cursores dinámicos detectan filas insertadas en y eliminadas del conjunto de resultados, así que no hay ninguna manera fácil para los cursores dinámicos recuperar la fila en un número determinado que no sea de lectura desde el principio del conjunto de resultados, que es probable que sea lenta. Además, una captura absoluta no es muy útil en los cursores dinámicos porque los números de fila cambiarán como filas se insertan o eliminan; por lo tanto, consecutivamente obtener el mismo número de filas puede generar filas diferentes.  
   

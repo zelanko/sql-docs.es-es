@@ -1,16 +1,16 @@
 ---
-title: sys.trusted_assemblies (Transact-SQL) | Microsoft Docs
-ms.custom: 
+title: Sys.trusted_assemblies (Transact-SQL) | Documentos de Microsoft
+ms.custom: ''
 ms.date: 06/14/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine
-ms.service: 
+ms.service: ''
 ms.component: system-catalog-views
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - trusted_assemblies_TSQL
@@ -21,19 +21,20 @@ dev_langs:
 - TSQL
 helpviewer_keywords:
 - sys.trusted_assemblies
-ms.assetid: 
-caps.latest.revision: 
+ms.assetid: ''
+caps.latest.revision: ''
 author: tmullaney
 ms.author: thmullan
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 71d13ae733551a3c475176343250f9ee671756f3
-ms.sourcegitcommit: 0d904c23663cebafc48609671156c5ccd8521315
+monikerRange: '>= sql-server-2017 || = sqlallproducts-allversions'
+ms.openlocfilehash: 71e66e31adb43937fe4d1bfc5166b46fa5a69ba4
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/19/2018
+ms.lasthandoff: 04/16/2018
 ---
-# <a name="systrustedassemblies-transact-sql"></a>sys.trusted_assemblies (Transact-SQL)  
+# <a name="systrustedassemblies-transact-sql"></a>Sys.trusted_assemblies (Transact-SQL)  
 [!INCLUDE[tsql-appliesto-ss2017-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2017-xxxx-xxxx-xxx-md.md)]
 
 Contiene una fila por cada ensamblado de confianza para el servidor.
@@ -43,7 +44,7 @@ Contiene una fila por cada ensamblado de confianza para el servidor.
 
 |Nombre de columna |Tipo de datos |Description |
 |--- |--- |--- |
-|hash |varbinary(8000) |SHA2_512 el hash del contenido del ensamblado. |
+|hash |varbinary (8000) |SHA2_512 el hash del contenido del ensamblado. |
 |description |nvarchar(4000) |Obtener descripción opcional definida por el usuario del ensamblado. Microsoft recomienda utilizar el nombre canónico que codifica el nombre simple, número de versión, referencia cultural, clave pública y arquitectura de ensamblado de confianza. Este valor unívocamente identifica el ensamblado en el lado de runtime (CLR) de lenguaje común y es el mismo que el valor de clr_name en sys.assemblies. |
 |create_date |datetime2 |Fecha en que el ensamblado se agregó a la lista de ensamblados de confianza. |
 |created_by |nvarchar (128) |Nombre de inicio de sesión de la entidad de seguridad que se agrega el ensamblado a la lista. |

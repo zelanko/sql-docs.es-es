@@ -1,16 +1,16 @@
 ---
-title: sp_msx_defect (Transact-SQL) | Microsoft Docs
-ms.custom: 
+title: sp_msx_defect (Transact-SQL) | Documentos de Microsoft
+ms.custom: ''
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine
-ms.service: 
+ms.service: ''
 ms.component: system-stored-procedures
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - sp_msx_defect
@@ -20,16 +20,16 @@ dev_langs:
 helpviewer_keywords:
 - sp_msx_defect
 ms.assetid: 0dfd963a-3bc5-4b58-94f7-aec976da2883
-caps.latest.revision: 
+caps.latest.revision: 24
 author: stevestein
 ms.author: sstein
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: cf63da8bfb0ac882e3d3949a91b848ba689985a6
-ms.sourcegitcommit: c556eaf60a49af7025db35b7aa14beb76a8158c5
+ms.openlocfilehash: e1ff62980554c0b6c8593b119520ae2e32da89b8
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/03/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="spmsxdefect-transact-sql"></a>sp_msx_defect (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -49,7 +49,7 @@ sp_msx_defect [@forced_defection =] forced_defection
 ```  
   
 ## <a name="arguments"></a>Argumentos  
- [ **@forced_defection =**] *forced_defection*  
+ [  **@forced_defection =**] *forced_defection*  
  Especifica si se debe o no forzar la baja se producen cuando el SQLServerAgent maestro se ha perdido permanentemente debido a daños irreversibles **msdb** base de datos o elija no **msdb** copia de seguridad de base de datos. *forced_defection*es **bits**, su valor predeterminado es **0**, lo que indica que no se debe realizar ningún exigida. Un valor de **1** fuerza la baja.  
   
  Tras forzar una baja mediante la ejecución de **sp_msx_defect**, un miembro de la **sysadmin** rol fijo de servidor en el SQLServerAgent maestro debe ejecutar el comando siguiente para completar la baja:  

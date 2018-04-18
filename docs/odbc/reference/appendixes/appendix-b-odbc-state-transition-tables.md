@@ -1,32 +1,32 @@
 ---
-title: "Apéndice B: tablas de transición de estado de ODBC | Documentos de Microsoft"
-ms.custom: 
+title: 'Apéndice B: tablas de transición de estado de ODBC | Documentos de Microsoft'
+ms.custom: ''
 ms.date: 01/19/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: drivers
-ms.service: 
+ms.service: ''
 ms.component: odbc
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - drivers
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - state transitions [ODBC]
 - transitioning states [ODBC], about state transitions
 - state transitions [ODBC], about state transitions
 ms.assetid: 15088dbe-896f-4296-b397-02bb3d0ac0fb
-caps.latest.revision: 
+caps.latest.revision: 8
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 2dabd364fb0a7415a4cf05035d06f5a1dd5838e5
-ms.sourcegitcommit: 6bd21109abedf64445bdb3478eea5aaa7553fa46
+ms.openlocfilehash: cc14674918571a3536cf0d15389ea4d43367c262
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/20/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="appendix-b-odbc-state-transition-tables"></a>Apéndice B: tablas de transición de estado de ODBC
 Las tablas de este apéndice muestran cómo hacen que las transiciones del entorno, conexión, instrucción y Estados de descriptor funciones ODBC. Normalmente, el estado del entorno, conexión, instrucción o descriptor dicta cuando puede llamar a funciones que usan el tipo de identificador (entorno, conexión, instrucción o descriptor) correspondiente. Los Estados de entorno, conexión, instrucción y descriptor se superponen aproximadamente tal como se muestra en la siguiente ilustración. Por ejemplo, la superposición de conexión exacta Estados C5 y C6 y Estados de instrucción que s1 a través de S12 es, depende del origen de datos, ya que las transacciones empiezan en momentos diferentes en distintos orígenes de datos, y depende del estado de descriptor D1i (implícitamente asignado descriptor) en el estado de la instrucción que está asociado el descriptor, mientras que el estado D1e (asignado explícitamente descriptor) es independiente del estado de cualquier instrucción. Para obtener una descripción de cada estado, vea [transiciones de entorno](../../../odbc/reference/appendixes/environment-transitions.md), [conexión transiciones](../../../odbc/reference/appendixes/connection-transitions.md), [transiciones de instrucción](../../../odbc/reference/appendixes/statement-transitions.md), y [Descriptor transiciones ](../../../odbc/reference/appendixes/descriptor-transitions.md), más adelante en este apéndice.  
@@ -72,9 +72,9 @@ Las tablas de este apéndice muestran cómo hacen que las transiciones del entor
 |d|Necesita los datos. La función devuelve SQL_NEED_DATA.|  
 |e|Error. La función devuelve SQL_ERROR.|  
 |i|Fila no válida. El cursor se coloca en una fila en el resultado se eliminó conjunto y la fila o se ha producido un error en una operación en la fila. Si existiera la matriz de Estados de fila, el valor de la matriz de estado de fila de la fila era SQL_ROW_DELETED o SQL_ROW_ERROR. (La matriz de Estados de fila está indicada por el atributo de instrucción de SQL_ATTR_ROW_STATUS_PTR.)|  
-|nf|No se encuentra. La función devuelve SQL_NO_DATA. Esto no aplica cuando **SQLExecDirect**, **SQLExecute**, o **SQLParamData** devuelve SQL_NO_DATA después de ejecutar una búsqueda instrucción update o delete.|  
+|NF|No se encuentra. La función devuelve SQL_NO_DATA. Esto no aplica cuando **SQLExecDirect**, **SQLExecute**, o **SQLParamData** devuelve SQL_NO_DATA después de ejecutar una búsqueda instrucción update o delete.|  
 |np|No se ha preparado. No se ha preparado la instrucción.|  
-|nr|No hay resultados. La instrucción no puede o no ha creado un conjunto de resultados.|  
+|n|No hay resultados. La instrucción no puede o no ha creado un conjunto de resultados.|  
 |o|Otra función. Otra función estaba ejecutando de forma asincrónica.|  
 |p|Preparado. Se ha preparado la instrucción.|  
 |r|Resultados. La instrucción se o ha creado un conjunto de resultados (posiblemente vacía).|  

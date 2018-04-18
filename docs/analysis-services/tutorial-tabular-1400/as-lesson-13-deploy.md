@@ -1,15 +1,15 @@
 ---
-title: "Lección tutorial de Analysis Services 13: implementar | Documentos de Microsoft"
-description: "Describe cómo implementar el proyecto de tutorial en Analysis Services."
+title: 'Lección tutorial de Analysis Services 13: implementar | Documentos de Microsoft'
+description: Describe cómo implementar el proyecto de tutorial en Analysis Services.
 ms.prod_service: analysis-services, azure-analysis-services
 services: analysis-services
 ms.suite: pro-bi
-documentationcenter: 
+documentationcenter: ''
 author: Minewiskan
 manager: kfile
-editor: 
-tags: 
-ms.assetid: 
+editor: ''
+tags: ''
+ms.assetid: ''
 ms.service: analysis-services
 ms.devlang: NA
 ms.topic: get-started-article
@@ -17,11 +17,12 @@ ms.tgt_pltfrm: NA
 ms.workload: na
 ms.date: 02/20/2018
 ms.author: owend
-ms.openlocfilehash: 444ba18e2cbbecf87dc259fa56efc130eae204a9
-ms.sourcegitcommit: 7ed8c61fb54e3963e451bfb7f80c6a3899d93322
+monikerRange: '>= sql-analysis-services-2017 || = sqlallproducts-allversions'
+ms.openlocfilehash: 874d185c5210da9fd8af7e18d79f1e6eed96f7e9
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/20/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="deploy"></a>Implementar
 
@@ -50,7 +51,7 @@ Este artículo forma parte de un tutorial de modelado tabular, que se debe compl
   
 2.  En el **páginas de propiedades de ventas de Internet de AW** cuadro de diálogo **el servidor de implementación**, en la **Server** propiedad, escriba el nombre completo del servidor. Si se conecta a Analysis Services de Azure, nombre del servidor debe incluir la dirección URL completa.
 
-    ![as-lesson13-deploy-property](../tutorial-tabular-1400/media/as-lesson13-deploy-property.png)
+    ![como-lesson13--propiedades de implementación](../tutorial-tabular-1400/media/as-lesson13-deploy-property.png)
   
 3.  En el **base de datos** propiedad, escriba **Adventure Works Internet Sales**.  
   
@@ -68,7 +69,7 @@ Este artículo forma parte de un tutorial de modelado tabular, que se debe compl
   
     El cuadro de diálogo implementar aparece y muestra el estado de implementación de los metadatos y cada tabla incluida en el modelo.  
     
-    ![as-lesson13-deploy-status](../tutorial-tabular-1400/media/as-lesson13-deploy-status.png)
+    ![como-lesson13-implementar-status](../tutorial-tabular-1400/media/as-lesson13-deploy-status.png)
   
 3. Cuando se complete correctamente la implementación, continúe y haga clic en **Cerrar**.  
   
@@ -78,7 +79,7 @@ En esta lección se describe el método más común y sencillo para implementar 
 ## <a name="conclusion"></a>Conclusión  
 ¡Enhorabuena! Haya terminado de crear e implementar el primer modelo Tabular de Analysis Services. Este tutorial le ha guiado por las tareas más comunes para crear un modelo tabular. Ahora que su modelo Ventas por Internet de Adventure Works está implementado, puede utilizar el SQL Server Management Studio para administrarlo, crear scripts de proceso y realizar un plan de copia de seguridad. Los usuarios ahora también pueden conectarse al modelo mediante una aplicación de cliente de informes como Microsoft Excel o Power BI.  
 
-![as-lesson13-ssms](../tutorial-tabular-1400/media/as-lesson13-ssms.png)
+![ssms como lesson13](../tutorial-tabular-1400/media/as-lesson13-ssms.png)
   
   
   

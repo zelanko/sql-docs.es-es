@@ -1,15 +1,15 @@
 ---
 title: Las funciones con valores de tabla CLR | Documentos de Microsoft
-ms.custom: 
+ms.custom: ''
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine
-ms.service: 
+ms.service: ''
 ms.component: clr
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: 
-ms.tgt_pltfrm: 
+ms.technology: ''
+ms.tgt_pltfrm: ''
 ms.topic: reference
 dev_langs:
 - TSQL
@@ -20,20 +20,20 @@ helpviewer_keywords:
 - table-valued functions [CLR integration]
 - TVFs [CLR integration]
 ms.assetid: 9a6133ea-36e9-45bf-b572-1c0df3d6c194
-caps.latest.revision: 
+caps.latest.revision: 88
 author: rothja
 ms.author: jroth
 manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: b39532e93eba5784bbc9925f3140c26ced977ede
-ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
+ms.openlocfilehash: b190703907114b477fd244fb1c019c185854a592
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/09/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="clr-table-valued-functions"></a>Funciones con valores de tabla en CLR
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
-Una función con valores de tabla es una función definida por el usuario que devuelve una tabla.  
+  Una función con valores de tabla es una función definida por el usuario que devuelve una tabla.  
   
  A partir de [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)], [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] amplía la funcionalidad de las funciones con valores de tabla ya que permite definir una función con valores de tabla en cualquier lenguaje administrado. Se devuelven datos desde una función con valores de tabla a través de un **IEnumerable** o **IEnumerator** objeto.  
   
@@ -43,7 +43,7 @@ Una función con valores de tabla es una función definida por el usuario que de
  Para obtener más información sobre las funciones con valores de tabla de CLR, visite 'MSSQLTips [funciones con valores de tabla de introducción a CLR de SQL Server.](https://www.mssqltips.com/sqlservertip/2582/introduction-to-sql-server-clr-table-valued-functions/)  
   
 ## <a name="differences-between-transact-sql-and-clr-table-valued-functions"></a>Diferencias entre las funciones con valores de tabla de Transact-SQL y de CLR  
- [!INCLUDE[tsql](../../includes/tsql-md.md)] funciones con valores de tabla materializan los resultados de la llamada a la función en una tabla intermedia. Puesto que utilizan una tabla intermedia, pueden admitir restricciones e índices únicos en los resultados. Estas características pueden resultar sumamente útiles cuando se devuelven resultados grandes.  
+ Las funciones con valores de tabla de [!INCLUDE[tsql](../../includes/tsql-md.md)] materializan los resultados de la llamada a la función en una tabla intermedia. Puesto que utilizan una tabla intermedia, pueden admitir restricciones e índices únicos en los resultados. Estas características pueden resultar sumamente útiles cuando se devuelven resultados grandes.  
   
  Las funciones con valores de tabla en CLR, en cambio, representan una alternativa de transmisión por secuencias. No hay ningún requisito que obligue a materializar el conjunto de resultados en una única tabla. El **IEnumerable** directamente se denomina objeto devuelto por la función administrada por el plan de ejecución de la consulta que llama a la función con valores de tabla y los resultados se consumen de manera incremental. Este modelo de transmisión por secuencias se asegura de que los resultados puedan consumirse inmediatamente después de que la primera fila esté disponible, en lugar de tener que esperar a que se rellene toda la tabla. También constituye una mejor alternativa si se devuelve un gran número de filas, ya que no tienen que materializarse en la memoria como un todo. Por ejemplo, puede utilizarse una función con valores de tabla administrada para analizar un archivo de texto y devolver cada línea como una fila.  
   
@@ -51,7 +51,7 @@ Una función con valores de tabla es una función definida por el usuario que de
  Implemente las funciones con valores de tabla como métodos de una clase en un ensamblado de [!INCLUDE[msCoName](../../includes/msconame-md.md)] .NET Framework. El código de la función con valores de tabla debe implementar la **IEnumerable** interfaz. El **IEnumerable** interfaz esté definida en .NET Framework. Tipos que representan matrices y colecciones en .NET Framework ya implementan la **IEnumerable** interfaz. De esta forma resulta más fácil escribir funciones con valores de tabla que conviertan una colección o una matriz en un conjunto de resultados.  
   
 ## <a name="table-valued-parameters"></a>Parámetros con valores de tabla  
- Los parámetros con valores de tabla son tipos de tabla definidos por el usuario que se pasan a un procedimiento o función, y proporcionan un modo eficaz de pasar varias filas de datos al servidor. Los parámetros con valores de tabla presentan una funcionalidad similar a la de las matrices de parámetros, pero proporcionan más flexibilidad y una mayor integración con [!INCLUDE[tsql](../../includes/tsql-md.md)]. También proporcionan la posibilidad de obtener mayor rendimiento. Los parámetros con valores de tabla también ayudan a reducir el número de viajes de ida y vuelta (round trip) al servidor. En lugar de enviar varias solicitudes al servidor, como en el caso de una lista de parámetros escalares, los datos pueden enviarse al servidor como un parámetro con valores de tabla. Un tipo de tabla definido por el usuario no puede pasarse como un parámetro con valores de tabla a un procedimiento almacenado administrado o a una función que se ejecuta en el proceso de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , así como tampoco puede devolverse desde dicho procedimiento o función. Para obtener más información acerca de los parámetros con valores de tabla, vea [usar parámetros &#40; motor de base de datos &#41;](../../relational-databases/tables/use-table-valued-parameters-database-engine.md).  
+ Los parámetros con valores de tabla son tipos de tabla definidos por el usuario que se pasan a un procedimiento o función, y proporcionan un modo eficaz de pasar varias filas de datos al servidor. Los parámetros con valores de tabla presentan una funcionalidad similar a la de las matrices de parámetros, pero proporcionan más flexibilidad y una mayor integración con [!INCLUDE[tsql](../../includes/tsql-md.md)]. También proporcionan la posibilidad de obtener mayor rendimiento. Los parámetros con valores de tabla también ayudan a reducir el número de viajes de ida y vuelta (round trip) al servidor. En lugar de enviar varias solicitudes al servidor, como en el caso de una lista de parámetros escalares, los datos pueden enviarse al servidor como un parámetro con valores de tabla. Un tipo de tabla definido por el usuario no puede pasarse como un parámetro con valores de tabla a un procedimiento almacenado administrado o a una función que se ejecuta en el proceso de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , así como tampoco puede devolverse desde dicho procedimiento o función. Para obtener más información acerca de los parámetros con valores de tabla, vea [usar parámetros & #40; motor de base de datos & #41;](../../relational-databases/tables/use-table-valued-parameters-database-engine.md).  
   
 ## <a name="output-parameters-and-table-valued-functions"></a>Parámetros de salida y funciones con valores de tabla  
  Se puede devolver información de funciones con valores de tabla mediante el uso de parámetros de salida. El parámetro correspondiente en el código de implementación de la función con valores de tabla debe usar un parámetro de paso por referencia como argumento. Tenga en cuenta que Visual Basic no admite parámetros de salida del mismo modo en que lo hace Visual C#. Debe especificar el parámetro por referencia y aplicar la \<Out() > atributo para representar un parámetro de salida, como en el siguiente ejemplo:  
@@ -184,7 +184,7 @@ go
 ```  
   
 ## <a name="sample-returning-the-results-of-a-sql-server-query"></a>Ejemplo: devolver los resultados de una consulta SQL Server  
- En el siguiente ejemplo se muestra una función con valores de tabla que consulta una base de datos [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. En este ejemplo se utiliza la base de datos AdventureWorks Light de [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)]. Vea [http://www.codeplex.com/sqlserversamples](http://go.microsoft.com/fwlink/?LinkId=87843) para obtener más información sobre la descarga de AdventureWorks.  
+ En el siguiente ejemplo se muestra una función con valores de tabla que consulta una base de datos [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. En este ejemplo se utiliza la base de datos AdventureWorks Light de [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)]. Vea [ http://www.codeplex.com/sqlserversamples ](http://go.microsoft.com/fwlink/?LinkId=87843) para obtener más información sobre la descarga de AdventureWorks.  
   
  Asigne a su archivo de código fuente el nombre FindInvalidEmails.cs o FindInvalidEmails.vb.  
   

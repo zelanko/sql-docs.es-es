@@ -1,16 +1,16 @@
 ---
 title: Sys.sql_dependencies (Transact-SQL) | Documentos de Microsoft
-ms.custom: 
+ms.custom: ''
 ms.date: 06/10/2016
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine
-ms.service: 
+ms.service: ''
 ms.component: system-catalog-views
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - sql_dependencies
@@ -22,16 +22,16 @@ dev_langs:
 helpviewer_keywords:
 - sys.sql_dependencies catalog view
 ms.assetid: 1779aa87-a0b8-470a-a286-d7cc0b93ad2e
-caps.latest.revision: 
+caps.latest.revision: 31
 author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: ae071c927ab60f5b93e69a43d7ad443d333aa856
-ms.sourcegitcommit: 45e4efb7aa828578fe9eb7743a1a3526da719555
+ms.openlocfilehash: bd2ad747dc3e9784a27e251193e789eabccae2f7
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="syssqldependencies-transact-sql"></a>sys.sql_dependencies (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -39,13 +39,13 @@ ms.lasthandoff: 11/21/2017
   Contiene una fila por cada dependencia de una entidad a la que se hace referencia conforme a su referencia en la expresión o instrucciones [!INCLUDE[tsql](../../includes/tsql-md.md)] que definen otro objeto que hace la referencia.  
   
 > [!IMPORTANT]  
->  [!INCLUDE[ssNoteDepFutureAvoid](../../includes/ssnotedepfutureavoid-md.md)]Use [sys.sql_expression_dependencies](../../relational-databases/system-catalog-views/sys-sql-expression-dependencies-transact-sql.md) en su lugar.  
+>  [!INCLUDE[ssNoteDepFutureAvoid](../../includes/ssnotedepfutureavoid-md.md)] Use [sys.sql_expression_dependencies](../../relational-databases/system-catalog-views/sys-sql-expression-dependencies-transact-sql.md) en su lugar.  
 
   
 |Nombre de columna|Tipo de datos|Description|  
 |-----------------|---------------|-----------------|  
-|**clase**|**tinyint**|Identifica la clase de la entidad a la que se hace referencia:<br /><br /> 0 = objeto o columna (solo referencias no enlazadas a esquema)<br /><br /> 0 = Objeto o columna (referencias enlazadas a esquemas)<br /><br /> 2 = Tipos (referencias enlazadas a esquemas)<br /><br /> 3 = Colecciones de esquemas XML (referencias enlazadas a esquemas)<br /><br /> 4 = Función de partición (referencias enlazadas a esquemas)|  
-|**class_desc**|**nvarchar (60)**|Descripción de la clase de la entidad a la que se hace referencia:<br /><br /> **OBJECT_OR_COLUMN_REFERENCE_NON_SCHEMA_BOUND**<br /><br /> **OBJECT_OR_COLUMN_REFERENCE_SCHEMA_BOUND**<br /><br /> **TYPE_REFERENCE**<br /><br /> **XML_SCHEMA_COLLECTION_REFERENCE**<br /><br /> **PARTITION_FUNCTION_REFERENCE**|  
+|**class**|**tinyint**|Identifica la clase de la entidad a la que se hace referencia:<br /><br /> 0 = objeto o columna (solo referencias no enlazadas a esquema)<br /><br /> 0 = Objeto o columna (referencias enlazadas a esquemas)<br /><br /> 2 = Tipos (referencias enlazadas a esquemas)<br /><br /> 3 = Colecciones de esquemas XML (referencias enlazadas a esquemas)<br /><br /> 4 = Función de partición (referencias enlazadas a esquemas)|  
+|**class_desc**|**nvarchar(60)**|Descripción de la clase de la entidad a la que se hace referencia:<br /><br /> **OBJECT_OR_COLUMN_REFERENCE_NON_SCHEMA_BOUND**<br /><br /> **OBJECT_OR_COLUMN_REFERENCE_SCHEMA_BOUND**<br /><br /> **TYPE_REFERENCE**<br /><br /> **XML_SCHEMA_COLLECTION_REFERENCE**<br /><br /> **PARTITION_FUNCTION_REFERENCE**|  
 |**object_id**|**int**|Id. del objeto que hace la referencia.|  
 |**column_id**|**int**|Si el Id. que hace la referencia es una columna, se obtiene el Id. de la columna que hace la referencia; en caso contrario, el valor es 0.|  
 |**referenced_major_id**|**int**|Id. de la entidad a la que se hace referencia, interpretado por el valor de clase de acuerdo con:<br /><br /> 0, 1 = Id. de objeto del objeto o la columna.<br /><br /> 2 = Id. del tipo.<br /><br /> 3 = Id. de la colección de esquemas XML.|  
@@ -59,7 +59,7 @@ ms.lasthandoff: 11/21/2017
   
 ## <a name="see-also"></a>Vea también  
  [Vistas de catálogo &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/catalog-views-transact-sql.md)   
- [Vistas de catálogo de objetos &#40; Transact-SQL &#41;](../../relational-databases/system-catalog-views/object-catalog-views-transact-sql.md)   
+ [Object Catalog Views &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/object-catalog-views-transact-sql.md)  (Vistas de catálogo de objetos [Transact-SQL])  
  [Preguntas frecuentes sobre consultas del catálogo de sistema de SQL Server](../../relational-databases/system-catalog-views/querying-the-sql-server-system-catalog-faq.md)  
   
   

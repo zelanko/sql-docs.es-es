@@ -1,16 +1,16 @@
 ---
 title: sp_register_custom_scripting (Transact-SQL) | Documentos de Microsoft
-ms.custom: 
+ms.custom: ''
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine
-ms.service: 
+ms.service: ''
 ms.component: system-stored-procedures
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - replication
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 applies_to:
 - SQL Server
@@ -20,16 +20,16 @@ f1_keywords:
 helpviewer_keywords:
 - sp_register_custom_scripting
 ms.assetid: a8159282-de3b-4b9e-bdc9-3d3fce485c7f
-caps.latest.revision: 
+caps.latest.revision: 29
 author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 16274b71d1ce14b2a143e5d6ce723bcb64cbaebd
-ms.sourcegitcommit: 45e4efb7aa828578fe9eb7743a1a3526da719555
+ms.openlocfilehash: 2b0f249f4c70ec6892ca6cb576dad0d70c60527b
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="spregistercustomscripting-transact-sql"></a>sp_register_custom_scripting (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -49,17 +49,17 @@ sp_register_custom_scripting [ @type  = ] 'type'
 ```  
   
 ## <a name="arguments"></a>Argumentos  
- [  **@type**  =] **'***tipo***'**  
+ [ **@type** =] **'***tipo***'**  
  Es el tipo de procedimiento almacenado personalizado o el script que se registra. *tipo de* es **varchar (16)**, no tiene ningún valor predeterminado y puede ser uno de los siguientes valores.  
   
-|Valor|Description|  
+|Value|Description|  
 |-----------|-----------------|  
-|**Insertar**|El procedimiento almacenado personalizado registrado se ejecuta cuando se replica una instrucción INSERT.|  
-|**actualizar**|El procedimiento almacenado personalizado registrado se ejecuta cuando se replica una instrucción UPDATE.|  
-|**eliminar**|El procedimiento almacenado personalizado registrado se ejecuta cuando se replica una instrucción DELETE.|  
+|**insert**|El procedimiento almacenado personalizado registrado se ejecuta cuando se replica una instrucción INSERT.|  
+|**Actualización**|El procedimiento almacenado personalizado registrado se ejecuta cuando se replica una instrucción UPDATE.|  
+|**delete**|El procedimiento almacenado personalizado registrado se ejecuta cuando se replica una instrucción DELETE.|  
 |**custom_script**|El script se ejecuta al final del desencadenador de lenguaje de definición de datos (DDL).|  
   
- [  **@value** =] **'***valor***'**  
+ [ **@value**=] **'***valor***'**  
  Nombre de un procedimiento almacenado o nombre y ruta de acceso completa al archivo de script de [!INCLUDE[tsql](../../includes/tsql-md.md)] que se está registrando. *valor* es **nvarchar (1024)**, no tiene ningún valor predeterminado.  
   
 > [!NOTE]  
@@ -67,10 +67,10 @@ sp_register_custom_scripting [ @type  = ] 'type'
   
  Cuando el valor de *tipo* es **custom_script**, el nombre y la ruta de acceso completa de un [!INCLUDE[tsql](../../includes/tsql-md.md)] se espera que el archivo de script. En caso contrario, *valor* debe ser el nombre de un procedimiento almacenado registrado.  
   
- [  **@publication** =] **'***publicación***'**  
+ [ **@publication**=] **'***publicación***'**  
  Nombre de la publicación para la que se está registrando el procedimiento almacenado personalizado o el script. *publicación* es **sysname**, su valor predeterminado es **NULL**.  
   
- [  **@article** =] **'***artículo***'**  
+ [ **@article**=] **'***artículo***'**  
  Nombre del artículo para el que se está registrando el procedimiento almacenado personalizado o el script. *artículo* es **sysname**, su valor predeterminado es **NULL**.  
   
 ## <a name="return-code-values"></a>Valores de código de retorno  
@@ -85,6 +85,6 @@ sp_register_custom_scripting [ @type  = ] 'type'
  Solo los miembros de la **sysadmin** rol fijo de servidor el **db_owner** función fija de base de datos, o el **db_ddladmin** rol fijo de base de datos puede ejecutar **sp_ register_custom_scripting**.  
   
 ## <a name="see-also"></a>Vea también  
- [sp_unregister_custom_scripting &#40; Transact-SQL &#41;](../../relational-databases/system-stored-procedures/sp-unregister-custom-scripting-transact-sql.md)  
+ [sp_unregister_custom_scripting &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-unregister-custom-scripting-transact-sql.md)  
   
   

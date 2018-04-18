@@ -1,16 +1,16 @@
 ---
 title: sp_helpmergealternatepublisher (Transact-SQL) | Documentos de Microsoft
-ms.custom: 
+ms.custom: ''
 ms.date: 03/06/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine
-ms.service: 
+ms.service: ''
 ms.component: system-stored-procedures
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - replication
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 applies_to:
 - SQL Server
@@ -20,16 +20,16 @@ f1_keywords:
 helpviewer_keywords:
 - sp_helpmergealternatepublisher
 ms.assetid: a96e365f-5967-4580-9d79-5bacf2d12211
-caps.latest.revision: 
+caps.latest.revision: 26
 author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 2c1b6cdc6bc5d7a19a6b7c27fc282233310da658
-ms.sourcegitcommit: 45e4efb7aa828578fe9eb7743a1a3526da719555
+ms.openlocfilehash: 902acd858e4c2147c50e385b8130173efc7fa3a1
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="sphelpmergealternatepublisher-transact-sql"></a>sp_helpmergealternatepublisher (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -49,7 +49,7 @@ sp_helpmergealternatepublisher [ @publisher = ] 'publisher', [ @publisher_db = ]
  [  **@publisher=**] **'***publisher***'**  
  Es el nombre del publicador alternativo. *publisher* es **sysname**, no tiene ningún valor predeterminado.  
   
- [  **@publisher_db=**] **'***publisher_db***'**  
+ [ **@publisher_db=**] **'***publisher_db***'**  
  Es el nombre de la base de datos de publicación. *publisher_db* es **sysname**, no tiene ningún valor predeterminado.  
   
  [  **@publication=**] **'***publicación***'**  
@@ -64,7 +64,7 @@ sp_helpmergealternatepublisher [ @publisher = ] 'publisher', [ @publisher_db = ]
 |**Alternate**|**sysname**|Nombre de la publicación.|  
 |**alternate_distributor**|**sysname**|Nombre del distribuidor.|  
 |**Nombre_descriptivo**|**nvarchar(255)**|Descripción del publicador alternativo.|  
-|**habilitado**|**bit**|Especifica si el servidor es un publicador alternativo. **1** especifica que el publicador está habilitado como un publicador alternativo. **0** especifica que no está habilitado.|  
+|**enabled**|**bit**|Especifica si el servidor es un publicador alternativo. **1** especifica que el publicador está habilitado como un publicador alternativo. **0** especifica que no está habilitado.|  
   
 ## <a name="return-code-values"></a>Valores de código de retorno  
  **0** (correcto) o **1** (error)  

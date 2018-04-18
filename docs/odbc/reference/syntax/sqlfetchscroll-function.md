@@ -2,7 +2,7 @@
 title: Función SQLFetchScroll | Documentos de Microsoft
 ms.custom: ''
 ms.date: 01/19/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: drivers
 ms.service: ''
 ms.component: odbc
@@ -25,13 +25,13 @@ ms.assetid: c0243667-428c-4dda-ae91-3c307616a1ac
 caps.latest.revision: 30
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: df50946b183bcd7072f12f67b8f0293ac5eef080
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: e8b244a9b4e6923c6455ea84175ed1557ec4100a
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="sqlfetchscroll-function"></a>Función SQLFetchScroll
 **Conformidad**  
@@ -217,9 +217,9 @@ SQLRETURN SQLFetchScroll(
   
 |Condición|Primera fila del conjunto de filas nuevas|  
 |---------------|-----------------------------|  
-|*FetchOffset < AND 0 &#124; FetchOffset &#124; < = LastResultRow*|*LastResultRow + FetchOffset + 1*|  
-|*FetchOffset < AND 0 &#124; FetchOffset &#124; > AND LastResultRow &#124; FetchOffset &#124; > RowsetSize* <sup>[2]</sup>|*Antes de inicio*|  
-|*FetchOffset < AND 0 &#124; FetchOffset &#124; > AND LastResultRow &#124; FetchOffset &#124; < = RowsetSize* <sup>[2]</sup>|*1* <sup>[1]</sup>|  
+|*FetchOffset < 0 AND &#124; FetchOffset &#124; < = LastResultRow*|*LastResultRow + FetchOffset + 1*|  
+|*FetchOffset < 0 AND &#124; FetchOffset &#124; > LastResultRow AND &#124; FetchOffset &#124; > RowsetSize* <sup>[2]</sup>|*Antes de inicio*|  
+|*FetchOffset < 0 AND &#124; FetchOffset &#124; > LastResultRow AND &#124; FetchOffset &#124; < = RowsetSize* <sup>[2]</sup>|*1* <sup>[1]</sup>|  
 |*FetchOffset = 0*|*Antes de inicio*|  
 |*1 < = FetchOffset \<= LastResultRow*|*FetchOffset*|  
 |*FetchOffset > LastResultRow*|*Al finalizar*|  
@@ -338,7 +338,7 @@ SQLFetchScroll(hstmt, SQL_FETCH_RELATIVE, 0);
 ## <a name="sqlfetchscroll-and-odbc-2x-drivers"></a>Controladores de 2.x ODBC y SQLFetchScroll  
  Cuando una aplicación llama **SQLFetchScroll** en un controlador ODBC 2.x, el Administrador de controladores se asigna esta llamada a **SQLExtendedFetch**. Pasa los siguientes valores para los argumentos de **SQLExtendedFetch**.  
   
-|Argumento SQLExtendedFetch|Valor|  
+|Argumento SQLExtendedFetch|Value|  
 |-------------------------------|-----------|  
 |StatementHandle|StatementHandle en **SQLFetchScroll**.|  
 |FetchOrientation|FetchOrientation en **SQLFetchScroll**.|  

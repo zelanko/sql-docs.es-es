@@ -1,0 +1,3 @@
+El gráfico siguiente muestra los permisos y las relaciones entre ellos. Algunos de los permisos de nivel superior (como `CONTROL SERVER`) se muestran varias veces. En este artículo, el póster es demasiado pequeño para leerlo. Haga clic en la imagen para descargar el **póster de los permisos de los motores de bases de datos** en formato pdf.  
+  
+ [![Permisos de los motores de bases de datos](../media/database-engine-permissions/database-engine-permissions.png)](https://aka.ms/sql-permissions-poster)

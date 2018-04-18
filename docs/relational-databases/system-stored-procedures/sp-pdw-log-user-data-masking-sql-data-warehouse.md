@@ -1,30 +1,31 @@
 ---
 title: sp_pdw_log_user_data_masking (almacenamiento de datos de SQL) | Documentos de Microsoft
-ms.custom: 
+ms.custom: ''
 ms.date: 03/14/2017
-ms.prod: 
+ms.prod: ''
 ms.prod_service: sql-data-warehouse, pdw
 ms.service: sql-data-warehouse
 ms.component: system-stored-procedures
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - sql-data-warehouse
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 dev_langs:
 - TSQL
 ms.assetid: 43c63b42-03cb-4fb5-8362-ec3b7e22a590
-caps.latest.revision: 
+caps.latest.revision: 8
 author: barbkess
 ms.author: barbkess
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: e401596add887d6bfc3f7fc7bd6b5255128b251c
-ms.sourcegitcommit: c556eaf60a49af7025db35b7aa14beb76a8158c5
+monikerRange: '>= aps-pdw-2016 || = azure-sqldw-latest || = sqlallproducts-allversions'
+ms.openlocfilehash: dc0552d5baf1c35e4ffa02ae6f05f7a397a5523a
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/03/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="sppdwloguserdatamasking-sql-data-warehouse"></a>sp_pdw_log_user_data_masking (almacenamiento de datos de SQL)
 [!INCLUDE[tsql-appliesto-xxxxxx-xxxx-asdw-pdw-md](../../includes/tsql-appliesto-xxxxxx-xxxx-asdw-pdw-md.md)]
@@ -34,7 +35,7 @@ ms.lasthandoff: 02/03/2018
 > [!IMPORTANT]  
 >  El [!INCLUDE[ssSDW](../../includes/sssdw-md.md)] registros de actividad se ve afectado por **sp_pdw_log_user_data_masking** está seguro de [!INCLUDE[ssSDW](../../includes/sssdw-md.md)] registros de actividad. **sp_pdw_log_user_data_masking** no afecta a los registros de transacciones de base de datos, o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] registros de errores.  
   
- **En segundo plano:** en la configuración predeterminada [!INCLUDE[ssSDW](../../includes/sssdw-md.md)] registros de actividad contienen completa [!INCLUDE[tsql](../../includes/tsql-md.md)] instrucciones y puede que en algunos casos incluyen datos de usuario contenidos en operaciones como **insertar**, **Actualización**, y **seleccione** instrucciones. En el caso de un problema en el dispositivo, esto permite que el análisis de las condiciones que ha causado el problema sin necesidad de reproducir el problema. Para evitar que los datos de usuario que se escriben en [!INCLUDE[ssSDW](../../includes/sssdw-md.md)] registros de actividad, los clientes pueden elegir activar el enmascaramiento de datos de usuario mediante el uso de este procedimiento almacenado. Las instrucciones todavía se escribirán en [!INCLUDE[ssSDW](../../includes/sssdw-md.md)] registros de actividad, pero todos los literales de instrucciones que pueden contener datos de usuario se enmascare; reemplazado con algunos valores de constantes predefinidas.  
+ **En segundo plano:** en la configuración predeterminada [!INCLUDE[ssSDW](../../includes/sssdw-md.md)] registros de actividad contienen completa [!INCLUDE[tsql](../../includes/tsql-md.md)] instrucciones y puede que en algunos casos incluyen datos de usuario contenidos en operaciones como **insertar**,  **ACTUALIZACIÓN**, y **seleccione** instrucciones. En el caso de un problema en el dispositivo, esto permite que el análisis de las condiciones que ha causado el problema sin necesidad de reproducir el problema. Para evitar que los datos de usuario que se escriben en [!INCLUDE[ssSDW](../../includes/sssdw-md.md)] registros de actividad, los clientes pueden elegir activar el enmascaramiento de datos de usuario mediante el uso de este procedimiento almacenado. Las instrucciones todavía se escribirán en [!INCLUDE[ssSDW](../../includes/sssdw-md.md)] registros de actividad, pero todos los literales de instrucciones que pueden contener datos de usuario se enmascare; reemplazado con algunos valores de constantes predefinidas.  
   
  Cuando se habilita el cifrado de datos transparente en el dispositivo, el enmascaramiento de los datos de usuario [!INCLUDE[ssSDW](../../includes/sssdw-md.md)] registros de actividad se activa automáticamente.  
   
@@ -47,7 +48,7 @@ sp_pdw_log_user_data_masking [ [ @masking_mode = ] value ] ;
 ```  
   
 #### <a name="parameters"></a>Parámetros  
- [ **@masking_mode=** ] *masking_mode*  
+ [  **@masking_mode=** ] *masking_mode*  
  Determina si está habilitados el enmascaramiento de datos del usuario de registro de cifrado transparente de los datos. *masking_mode* es **int**, y puede tener uno de los siguientes valores:  
   
 -   0 = deshabilitado, el usuario que los datos aparecen en la [!INCLUDE[ssSDW](../../includes/sssdw-md.md)] registros de actividad.  
@@ -82,7 +83,7 @@ EXEC sp_pdw_log_user_data_masking 1;
 ```  
   
 ## <a name="see-also"></a>Vea también  
- [sp_pdw_database_encryption &#40;SQL Data Warehouse&#41;](../../relational-databases/system-stored-procedures/sp-pdw-database-encryption-sql-data-warehouse.md)   
- [sp_pdw_database_encryption_regenerate_system_keys &#40;SQL Data Warehouse&#41;](../../relational-databases/system-stored-procedures/sp-pdw-database-encryption-regenerate-system-keys-sql-data-warehouse.md)  
+ [sp_pdw_database_encryption &#40;almacenamiento de datos SQL&#41;](../../relational-databases/system-stored-procedures/sp-pdw-database-encryption-sql-data-warehouse.md)   
+ [sp_pdw_database_encryption_regenerate_system_keys &#40;almacenamiento de datos SQL&#41;](../../relational-databases/system-stored-procedures/sp-pdw-database-encryption-regenerate-system-keys-sql-data-warehouse.md)  
   
   

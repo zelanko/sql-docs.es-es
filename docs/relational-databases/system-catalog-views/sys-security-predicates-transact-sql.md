@@ -1,16 +1,16 @@
 ---
 title: Sys.security_predicates (Transact-SQL) | Documentos de Microsoft
-ms.custom: 
+ms.custom: ''
 ms.date: 06/10/2016
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine, sql-database
-ms.service: 
+ms.service: ''
 ms.component: system-catalog-views
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 applies_to:
 - Azure SQL Database
@@ -26,16 +26,17 @@ helpviewer_keywords:
 - sys.security_predicates catalog view
 - security_predicates catalog view
 ms.assetid: c7a2f28c-98da-463d-8b8a-8e5619e2c6a6
-caps.latest.revision: 
+caps.latest.revision: 9
 author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 472c9c6504b010d6abfea0d3161ada98e9e0f5f6
-ms.sourcegitcommit: 45e4efb7aa828578fe9eb7743a1a3526da719555
+monikerRange: = azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions
+ms.openlocfilehash: 51799910d0e240d14b231c0d2c8d97f36cca66d8
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="syssecuritypredicates-transact-sql"></a>Sys.security_predicates (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]
@@ -49,9 +50,9 @@ ms.lasthandoff: 11/21/2017
 |target_object_id|**int**|Identificador del objeto en el que está enlazado el predicado de seguridad.|  
 |predicate_definition|**nvarchar(max)**|Nombre completo de la función que se utilizará como predicado de seguridad, incluidos los argumentos. Tenga en cuenta que el `schema.function` nombre puede estar normalizado (es decir, convertido), así como cualquier otro elemento en el texto para mantener la coherencia. Por ejemplo:<br /><br /> `[dbo].[fn_securitypredicate]([wing], [startTime], [endTime])`|  
 |predicate_type|**int**|El tipo de predicado que se usa la directiva de seguridad:<br /><br /> 0 = EL PREDICADO DE FILTRO<br /><br /> 1 = EL PREDICADO DE BLOQUEO|  
-|predicate_type_desc|**nvarchar (60)**|El tipo de predicado que se usa la directiva de seguridad:<br /><br /> FILTER<br /><br /> BLOQUE|  
+|predicate_type_desc|**nvarchar(60)**|El tipo de predicado que se usa la directiva de seguridad:<br /><br /> FILTER<br /><br /> BLOQUE|  
 |operación|**int**|El tipo de operación especificada para el predicado:<br /><br /> NULL = todas las operaciones aplicables<br /><br /> 1 = DESPUÉS DE INSERCIÓN<br /><br /> 2 = DESPUÉS DE LA ACTUALIZACIÓN<br /><br /> 3 = ANTES DE LA ACTUALIZACIÓN<br /><br /> 4 = ANTES DE ELIMINAR|  
-|operation_desc|**nvarchar (60)**|El tipo de operación especificada para el predicado:<br /><br /> NULL<br /><br /> DESPUÉS DE INSERTAR<br /><br /> AFTER UPDATE<br /><br /> ANTES DE LA ACTUALIZACIÓN<br /><br /> ANTES DE ELIMINAR|  
+|operation_desc|**nvarchar(60)**|El tipo de operación especificada para el predicado:<br /><br /> NULL<br /><br /> DESPUÉS DE INSERTAR<br /><br /> AFTER UPDATE<br /><br /> ANTES DE LA ACTUALIZACIÓN<br /><br /> ANTES DE ELIMINAR|  
   
 ## <a name="permissions"></a>Permissions  
  Entidades de seguridad con la **ALTER ANY SECURITY POLICY** permiso tiene acceso a todos los objetos en esta vista de catálogo, así como cualquier persona con **VIEW DEFINITION** en el objeto.  

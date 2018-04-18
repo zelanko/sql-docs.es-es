@@ -1,16 +1,16 @@
 ---
-title: sp_change_log_shipping_primary_database (Transact-SQL) | Microsoft Docs
-ms.custom: 
+title: sp_change_log_shipping_primary_database (Transact-SQL) | Documentos de Microsoft
+ms.custom: ''
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine
-ms.service: 
+ms.service: ''
 ms.component: system-stored-procedures
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - sp_change_log_shipping_primary_database
@@ -20,16 +20,16 @@ dev_langs:
 helpviewer_keywords:
 - sp_change_log_shipping_primary_database
 ms.assetid: 8c9dce6b-d2a3-4ca7-a832-8f59a5adb214
-caps.latest.revision: 
+caps.latest.revision: 27
 author: stevestein
 ms.author: sstein
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 9ea80f811016ec3502bea583c20edf4894753e83
-ms.sourcegitcommit: c556eaf60a49af7025db35b7aa14beb76a8158c5
+ms.openlocfilehash: 2b6f683c5311ed56bc073cd7e7e2932d0ae1c9e7
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/03/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="spchangelogshippingprimarydatabase-transact-sql"></a>sp_change_log_shipping_primary_database (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -63,13 +63,13 @@ sp_change_log_shipping_primary_database [ @database = ] 'database'
  [  **@backup_directory =** ] '*backup_directory*'  
  Es la ruta de acceso a la carpeta de copia de seguridad del servidor principal. *backup_directory* es **nvarchar (500)**, no tiene ningún valor predeterminado, y no puede ser NULL.  
   
- [ **@backup_share =** ] '*backup_share*'  
+ [  **@backup_share =** ] '*backup_share*'  
  Es la ruta de acceso de red al directorio de copia de seguridad del servidor principal. *backup_share* es **nvarchar (500)**, no tiene ningún valor predeterminado, y no puede ser NULL.  
   
  [  **@backup_retention_period =** ] '*backup_retention_period*'  
  Es el tiempo, en minutos, durante el que se retiene el archivo de copia de seguridad de registros en el directorio de copia de seguridad del servidor principal. *backup_retention_period* es **int**, no tiene ningún valor predeterminado, y no puede ser NULL.  
   
- [ **@monitor_server_security_mode =** ] '*monitor_server_security_mode*'  
+ [  **@monitor_server_security_mode =** ] '*monitor_server_security_mode*'  
  Modo de seguridad utilizado para conectarse al servidor de supervisión.  
   
  1 = Autenticación de Windows.  
@@ -81,16 +81,16 @@ sp_change_log_shipping_primary_database [ @database = ] 'database'
  [  **@monitor_server_login =** ] '*monitor_server_login*'  
  Es el nombre de usuario de la cuenta utilizada para tener acceso al servidor de supervisión.  
   
- [ **@monitor_server_password =** ] '*monitor_server_password*'  
+ [  **@monitor_server_password =** ] '*monitor_server_password*'  
  Es la contraseña de la cuenta utilizada para tener acceso al servidor de supervisión.  
   
  [  **@backup_threshold =** ] '*backup_threshold*'  
  Es el periodo de tiempo, en minutos, después de la última copia de seguridad antes de una *threshold_alert* se genera el error. *backup_threshold* es **int**, su valor predeterminado es 60 minutos.  
   
- [ **@threshold_alert =** ] '*threshold_alert*'  
+ [  **@threshold_alert =** ] '*threshold_alert*'  
  Alerta que se generará cuando se sobrepase el umbral de copia de seguridad. *threshold_alert* es **int** y no puede ser NULL.  
   
- [ **@threshold_alert_enabled =** ] '*threshold_alert_enabled*'  
+ [  **@threshold_alert_enabled =** ] '*threshold_alert_enabled*'  
  Especifica si se generará una alerta cuando *backup_threshold* se supera.  
   
  1 = habilitada  
@@ -102,7 +102,7 @@ sp_change_log_shipping_primary_database [ @database = ] 'database'
  [  **@history_retention_period =** ] '*history_retention_period*'  
  Es la cantidad de tiempo en minutos durante la que se retiene el historial. *history_retention_period* es **int**. Si no se especifica ningún valor, se utiliza 14420.  
   
- [ **@backup_compression**= ] *backup_compression_option*  
+ [ **@backup_compression**=] *backup_compression_option*  
  Especifica si se usa una configuración de trasvase de registros [compresión de copia de seguridad](../../relational-databases/backup-restore/backup-compression-sql-server.md). Este parámetro solo se admite en [!INCLUDE[ssEnterpriseEd10](../../includes/ssenterpriseed10-md.md)] (o una versión posterior).  
   
  0 = Deshabilitada. No se comprimen nunca las copias de seguridad de registros.  
@@ -147,7 +147,7 @@ EXEC master.dbo.sp_change_log_shipping_primary_database
 ```  
   
 ## <a name="see-also"></a>Vea también  
- [Acerca del trasvase de registros &#40; SQL Server &#41;](../../database-engine/log-shipping/about-log-shipping-sql-server.md)   
+ [Acerca del trasvase de registros & #40; SQL Server & #41;](../../database-engine/log-shipping/about-log-shipping-sql-server.md)   
  [Procedimientos almacenados del sistema &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)   
  [log_shipping_primary_databases &#40;Transact-SQL&#41;](../../relational-databases/system-tables/log-shipping-primary-databases-transact-sql.md)  
   

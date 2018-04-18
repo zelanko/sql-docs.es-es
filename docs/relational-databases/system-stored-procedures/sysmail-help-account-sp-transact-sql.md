@@ -1,16 +1,16 @@
 ---
-title: sysmail_help_account_sp (Transact-SQL) | Microsoft Docs
-ms.custom: 
+title: sysmail_help_account_sp (Transact-SQL) | Documentos de Microsoft
+ms.custom: ''
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine
-ms.service: 
+ms.service: ''
 ms.component: system-stored-procedures
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - sysmail_help_account_sp_TSQL
@@ -20,16 +20,16 @@ dev_langs:
 helpviewer_keywords:
 - sysmail_help_account_sp
 ms.assetid: 87c7c39c-8e05-4e68-9272-45f908809c3b
-caps.latest.revision: 
+caps.latest.revision: 48
 author: stevestein
 ms.author: sstein
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: b811fef9f1c2a89590e1e03f4fbe1b214ddc902d
-ms.sourcegitcommit: c556eaf60a49af7025db35b7aa14beb76a8158c5
+ms.openlocfilehash: 031dc769153549a8002525b184f4261ee9fe83bb
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/03/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="sysmailhelpaccountsp-transact-sql"></a>sysmail_help_account_sp (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -46,10 +46,10 @@ sysmail_help_account_sp [ [ @account_id = ] account_id | [ @account_name = ] 'ac
 ```  
   
 ## <a name="arguments"></a>Argumentos  
- [ **@account_id** = ] *account_id*  
+ [ **@account_id** =] *account_id*  
  Id. de la cuenta para la que se va a mostrar información. *account_id* es **int**, su valor predeterminado es null.  
   
- [ **@account_name** = ] **'***account_name***'**  
+ [ **@account_name** =] **'***account_name***'**  
  Nombre de la cuenta para la que se va a mostrar información. *account_name* es **sysname**, su valor predeterminado es null.  
   
 ## <a name="return-code-values"></a>Valores de código de retorno  
@@ -63,15 +63,15 @@ sysmail_help_account_sp [ [ @account_id = ] account_id | [ @account_name = ] 'ac
 |Nombre de columna|Tipo de datos|Description|  
 |**account_id**|**int**|Id. de la cuenta.|  
 |**Nombre**|**sysname**|El nombre de la cuenta.|  
-|**description**|**nvarchar(256)**|Descripción de la cuenta.|  
+|**Descripción**|**nvarchar(256)**|Descripción de la cuenta.|  
 |**email_address**|**nvarchar(128)**|Dirección de correo electrónico desde la que se envían los mensajes.|  
 |**display_name**|**nvarchar(128)**|El nombre para mostrar de la cuenta.|  
 |**replyto_address**|**nvarchar(128)**|La dirección donde se envían las respuestas a los mensajes desde esta cuenta.|  
-|**servertype**|**sysname**|Tipo de servidor de correo electrónico para la cuenta.|  
-|**servername**|**sysname**|Nombre del servidor de correo electrónico para la cuenta.|  
+|**ServerType**|**sysname**|Tipo de servidor de correo electrónico para la cuenta.|  
+|**ServerName**|**sysname**|Nombre del servidor de correo electrónico para la cuenta.|  
 |**port**|**int**|Número de puerto que utiliza el servidor de correo electrónico.|  
-|**username**|**nvarchar(128)**|Nombre de usuario que se utiliza para iniciar sesión en el servidor de correo electrónico si éste utiliza autenticación. Cuando **nombre de usuario** es NULL, correo electrónico de base de datos no usa la autenticación para esta cuenta.|  
-|**use_default_credentials**|**bit**|Especifica si se debe enviar el correo al servidor SMTP con las credenciales de [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]. **use_default_credentials** es de tipo bit no tiene ningún valor predeterminado. Si el valor de este parámetro es 1, el Correo electrónico de base de datos utiliza las credenciales del servicio [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]. Si este parámetro es 0, el correo electrónico de base de datos utiliza el  **@username**  y  **@password**  para la autenticación en el servidor SMTP. Si  **@username**  y  **@password**  son NULL, correo electrónico de base de datos utiliza la autenticación anónima. Consulte al administrador de SMTP antes de especificar este parámetro.|  
+|**Nombre de usuario**|**nvarchar(128)**|Nombre de usuario que se utiliza para iniciar sesión en el servidor de correo electrónico si éste utiliza autenticación. Cuando **nombre de usuario** es NULL, correo electrónico de base de datos no usa la autenticación para esta cuenta.|  
+|**use_default_credentials**|**bit**|Especifica si se debe enviar el correo al servidor SMTP con las credenciales de [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]. **use_default_credentials** es de tipo bit no tiene ningún valor predeterminado. Si el valor de este parámetro es 1, el Correo electrónico de base de datos utiliza las credenciales del servicio [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]. Si este parámetro es 0, el correo electrónico de base de datos utiliza el **@username** y **@password** para la autenticación en el servidor SMTP. Si **@username** y **@password** son NULL, correo electrónico de base de datos utiliza la autenticación anónima. Consulte al administrador de SMTP antes de especificar este parámetro.|  
 |**enable_ssl**|**bit**|Especifica si el Correo electrónico de base de datos cifra la comunicación mediante Capa de sockets seguros (SSL). Utilice esta opción si se requiere SSL en el servidor SMTP. **enable_ssl** es de tipo bit no tiene ningún valor predeterminado. El valor 1 indica que el Correo electrónico de base de datos cifra la comunicación mediante SSL. El valor 0 indica que el Correo electrónico de base de datos envía el correo sin cifrado SSL.|  
   
 ## <a name="remarks"></a>Comentarios  
@@ -120,6 +120,6 @@ account_id  name                         description                            
 ## <a name="see-also"></a>Vea también  
  [Correo electrónico de base de datos](../../relational-databases/database-mail/database-mail.md)   
  [Crear una cuenta de correo electrónico de base de datos](../../relational-databases/database-mail/create-a-database-mail-account.md)   
- [Correo electrónico de base de datos almacenados procedimientos &#40; Transact-SQL &#41;](../../relational-databases/system-stored-procedures/database-mail-stored-procedures-transact-sql.md)  
+ [Procedimientos almacenados de correo electrónico de base de datos &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/database-mail-stored-procedures-transact-sql.md)  
   
   

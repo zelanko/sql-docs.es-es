@@ -1,16 +1,16 @@
 ---
 title: MSqreader_history (Transact-SQL) | Documentos de Microsoft
-ms.custom: 
+ms.custom: ''
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine
-ms.service: 
+ms.service: ''
 ms.component: system-tables
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - replication
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 applies_to:
 - SQL Server
@@ -22,16 +22,16 @@ dev_langs:
 helpviewer_keywords:
 - MSqreader_history system table
 ms.assetid: c5c91d39-513c-4a77-870b-c8ef74a1cd6b
-caps.latest.revision: 
+caps.latest.revision: 15
 author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 7c9615bb702c89d8b2a5be0087671df9d8a6a910
-ms.sourcegitcommit: 45e4efb7aa828578fe9eb7743a1a3526da719555
+ms.openlocfilehash: 8621dddfded5d4a12a642ce13262284cb1b7614b
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="msqreaderhistory-transact-sql"></a>MSqreader_history (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -46,8 +46,8 @@ ms.lasthandoff: 11/21/2017
 |**start_time**|**datetime**|Fecha y hora en que empezó la sesión del agente.|  
 |**time**|**datetime**|Fecha y hora del último mensaje registrado.|  
 |**duration**|**int**|Tiempo transcurrido de la actividad de sesión registrada, en segundos.|  
-|**comentarios**|**nvarchar(255)**|Texto descriptivo.|  
-|**valor de transaction_id**|**nvarchar (40)**|Id. de transacción almacenado en el mensaje, si procede.|  
+|**Comentarios**|**nvarchar(255)**|Texto descriptivo.|  
+|**transaction_id**|**nvarchar(40)**|Id. de transacción almacenado en el mensaje, si procede.|  
 |**transaction_status**|**int**|El estado de la transacción.|  
 |**transactions_processed**|**int**|Número acumulado de transacciones procesadas en la sesión.|  
 |**commands_processed**|**int**|Número acumulado de comandos procesados en la sesión.|  
@@ -59,7 +59,7 @@ ms.lasthandoff: 11/21/2017
 |**timestamp**|**timestamp**|Columna de marca de tiempo y hora de la tabla.|  
   
 ## <a name="see-also"></a>Vea también  
- [Tablas de replicación &#40; Transact-SQL &#41;](../../relational-databases/system-tables/replication-tables-transact-sql.md)   
+ [Tablas de replicación &#40;Transact-SQL&#41;](../../relational-databases/system-tables/replication-tables-transact-sql.md)   
  [Vistas de replicación &#40;Transact-SQL&#41;](../../relational-databases/system-views/replication-views-transact-sql.md)  
   
   

@@ -1,5 +1,5 @@
 ---
-title: sys.pdw_nodes_column_store_segments (Transact-SQL) | Microsoft Docs
+title: Sys.pdw_nodes_column_store_segments (Transact-SQL) | Documentos de Microsoft
 ms.custom: ''
 ms.date: 03/28/2018
 ms.prod: ''
@@ -20,13 +20,14 @@ author: hirokib
 ms.author: elbutter;barbkess
 manager: jrj
 ms.workload: Inactive
-ms.openlocfilehash: 8e3daa47eea78bb90c736a42e7e541bea62e5ac4
-ms.sourcegitcommit: 9f4330a4b067deea396b8567747a6771f35e6eee
+monikerRange: '>= aps-pdw-2016 || = azure-sqldw-latest || = sqlallproducts-allversions'
+ms.openlocfilehash: 6096185bec4378bd5d6b2f478796f8a2e34f5e1d
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/30/2018
+ms.lasthandoff: 04/16/2018
 ---
-# <a name="syspdwnodescolumnstoresegments-transact-sql"></a>sys.pdw_nodes_column_store_segments (Transact-SQL)
+# <a name="syspdwnodescolumnstoresegments-transact-sql"></a>Sys.pdw_nodes_column_store_segments (Transact-SQL)
 [!INCLUDE[tsql-appliesto-xxxxxx-xxxx-asdw-pdw-md](../../includes/tsql-appliesto-xxxxxx-xxxx-asdw-pdw-md.md)]
 
 Contiene una fila para cada columna de un índice de almacén de columnas.  
@@ -42,7 +43,7 @@ Contiene una fila para cada columna de un índice de almacén de columnas.
 | **row_count**               | **int**    | Número de filas del grupo de filas.                             |
 | **has_nulls**               | **int**    | 1 si el segmento de la columna tiene valores NULL.                     |
 | **base_id**                 | **bigint** | Identificador del valor base si se utiliza el tipo de codificación 1.  Si el tipo de codificación 1 no se está usando, base_id se establece en 1. |
-| **magnitude**               | **float**  | Magnitud si se utiliza el tipo de codificación 1.  Si el tipo de codificación 1 no se está usando, magnitud se establece en 1. |
+| **magnitud**               | **float**  | Magnitud si se utiliza el tipo de codificación 1.  Si el tipo de codificación 1 no se está usando, magnitud se establece en 1. |
 | **primary__dictionary_id**  | **int**    | Identificador del diccionario principal. Un valor distinto de cero apunta al diccionario local para esta columna en el segmento actual (es decir, el grupo de filas). Un valor de -1 indica que no hay ningún diccionario local para este segmento. |
 | **secondary_dictionary_id** | **int**    | Identificador del diccionario secundario. Un valor distinto de cero apunta al diccionario local para esta columna en el segmento actual (es decir, el grupo de filas). Un valor de -1 indica que no hay ningún diccionario local para este segmento. |
 | **min_data_id**             | **bigint** | Identificador de la mínima cantidad de datos en el segmento de columna.                       |

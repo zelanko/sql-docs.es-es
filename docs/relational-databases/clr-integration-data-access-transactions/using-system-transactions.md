@@ -1,15 +1,15 @@
 ---
 title: Utilizar System.Transactions | Documentos de Microsoft
-ms.custom: 
+ms.custom: ''
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine
-ms.service: 
+ms.service: ''
 ms.component: clr
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: 
-ms.tgt_pltfrm: 
+ms.technology: ''
+ms.tgt_pltfrm: ''
 ms.topic: reference
 dev_langs:
 - VB
@@ -19,20 +19,20 @@ helpviewer_keywords:
 - Dispose method
 - System.Transactions namespace
 ms.assetid: 79656ce5-ce46-4c5e-9540-cf9869bd774b
-caps.latest.revision: 
+caps.latest.revision: 16
 author: rothja
 ms.author: jroth
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 28edabefb40a43db17bb69a484c97e2c55f64274
-ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
+ms.openlocfilehash: 67ccba900d3aa22b5aad79e6112fbc8695298e85
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/09/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="using-systemtransactions"></a>Utilizar System.Transactions
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
-El espacio de nombres **System.Transactions** proporciona un nuevo marco de transacciones totalmente integrado con ADO.NET y la característica de integración con Common Language Runtime (CLR) en [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . La clase **System.Transactions.TransactionScope** crea un bloque de código transaccional dando de alta implícitamente las conexiones en una transacción distribuida. Se debe llamar al método **Complete** al final del bloque de código marcado por **TransactionScope**. Se llama al método **Dispose** cuando la ejecución de programas deja un bloque de código, lo que hace que se interrumpa la transacción si no se llama al método **Complete** . Si se ha producido una excepción que hace que el código deje el ámbito, se considera que la transacción se ha interrumpido.  
+  El espacio de nombres **System.Transactions** proporciona un nuevo marco de transacciones totalmente integrado con ADO.NET y la característica de integración con Common Language Runtime (CLR) en [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . La clase **System.Transactions.TransactionScope** crea un bloque de código transaccional dando de alta implícitamente las conexiones en una transacción distribuida. Se debe llamar al método **Complete** al final del bloque de código marcado por **TransactionScope**. Se llama al método **Dispose** cuando la ejecución de programas deja un bloque de código, lo que hace que se interrumpa la transacción si no se llama al método **Complete** . Si se ha producido una excepción que hace que el código deje el ámbito, se considera que la transacción se ha interrumpido.  
   
  Se recomienda emplear un bloque **using** para asegurarse de que se llama al método **Dispose** en el objeto **TransactionScope** cuando se sale del bloque **using** . El hecho de no confirmar o revertir las transacciones pendientes puede reducir significativamente el rendimiento, porque el tiempo de espera predeterminado para **TransactionScope** es un minuto. Si no utiliza una instrucción **using** , debe realizar todo el trabajo de un bloque **Try** y llamar explícitamente al método **Dispose** del bloque **Finally** .  
   

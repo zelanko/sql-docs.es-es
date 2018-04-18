@@ -1,16 +1,16 @@
 ---
-title: sys.dm_os_loaded_modules (Transact-SQL) | Microsoft Docs
-ms.custom: 
+title: Sys.dm_os_loaded_modules (Transact-SQL) | Documentos de Microsoft
+ms.custom: ''
 ms.date: 08/18/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine
-ms.service: 
+ms.service: ''
 ms.component: dmv's
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - sys.dm_os_loaded_modules
@@ -22,16 +22,16 @@ dev_langs:
 helpviewer_keywords:
 - sys.dm_os_loaded_modules dynamic management view
 ms.assetid: 56c7743a-b568-4943-bd3b-73c57d9d641c
-caps.latest.revision: 
+caps.latest.revision: 20
 author: stevestein
 ms.author: sstein
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 9e33e71c94cffe6b455be1b5a5fc0e22732e60f0
-ms.sourcegitcommit: c556eaf60a49af7025db35b7aa14beb76a8158c5
+ms.openlocfilehash: 607ed0e3e7244951acbdd52177948cbc133b7997
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/03/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="sysdmosloadedmodules-transact-sql"></a>sys.dm_os_loaded_modules (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -43,17 +43,17 @@ ms.lasthandoff: 02/03/2018
   
 |Nombre de columna|Tipo de datos|Description|  
 |-----------------|---------------|-----------------|  
-|**base_address**|**varbinary(8)**|Dirección del módulo en proceso.|  
+|**base_address**|**varbinary (8)**|Dirección del módulo en proceso.|  
 |**file_version**|**varchar(23)**|Versión del archivo. Aparece en el siguiente formato:<br /><br /> x.x:x.x|  
 |**product_version**|**varchar(23)**|Versión del producto. Aparece en el siguiente formato:<br /><br /> x.x:x.x|  
-|**debug**|**bit**|1 = El módulo es una versión de depuración del módulo cargado.|  
-|**patched**|**bit**|1 = El módulo se ha revisado.|  
-|**prerelease**|**bit**|1 = El módulo es una versión preliminar del módulo cargado.|  
+|**Depurar**|**bit**|1 = El módulo es una versión de depuración del módulo cargado.|  
+|**aplicar una revisión**|**bit**|1 = El módulo se ha revisado.|  
+|**versión preliminar**|**bit**|1 = El módulo es una versión preliminar del módulo cargado.|  
 |**private_build**|**bit**|1 = El módulo es una versión privada del módulo cargado.|  
 |**special_build**|**bit**|1 = El módulo es una versión especial del módulo cargado.|  
-|**idioma**|**int**|Información del idioma de la versión del módulo.|  
-|**company**|**nvarchar(256)**|Nombre de la compañía que ha creado el módulo.|  
-|**description**|**nvarchar(256)**|Descripción del módulo.|  
+|**Idioma**|**int**|Información del idioma de la versión del módulo.|  
+|**Empresa**|**nvarchar(256)**|Nombre de la compañía que ha creado el módulo.|  
+|**Descripción**|**nvarchar(256)**|Descripción del módulo.|  
 |**Nombre**|**nvarchar(255)**|Nombre del módulo. Incluye la ruta de acceso completa del módulo.|  
 |**pdw_node_id**|**int**|**Se aplica a**: [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]<br /><br /> El identificador para el nodo que se encuentra en esta distribución.|  
   
@@ -62,6 +62,6 @@ ms.lasthandoff: 02/03/2018
   
 ## <a name="see-also"></a>Vea también  
  [Funciones y vistas de administración dinámica &#40;Transact-SQL&#41;](~/relational-databases/system-dynamic-management-views/system-dynamic-management-views.md)   
- [Sistema operativo SQL Server relacionadas con vistas de administración dinámica &#40; Transact-SQL &#41;](../../relational-databases/system-dynamic-management-views/sql-server-operating-system-related-dynamic-management-views-transact-sql.md)  
+ [Vistas de administración dinámica relacionadas con el sistema operativo SQL Server &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sql-server-operating-system-related-dynamic-management-views-transact-sql.md)  
   
   

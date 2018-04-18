@@ -1,8 +1,8 @@
 ---
-title: sp_control_dbmasterkey_password (Transact-SQL) | Microsoft Docs
+title: sp_control_dbmasterkey_password (Transact-SQL) | Documentos de Microsoft
 ms.custom: ''
 ms.date: 02/25/2016
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine
 ms.service: ''
 ms.component: system-stored-procedures
@@ -25,11 +25,11 @@ author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 8564e7fc3ab9f9e6419ebe7ff140408cb1940b29
-ms.sourcegitcommit: d6b1695c8cbc70279b7d85ec4dfb66a4271cdb10
+ms.openlocfilehash: 2b162cc7c167c162839bce87164bff7b5ccb753e
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/10/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="spcontroldbmasterkeypassword-transact-sql"></a>sp_control_dbmasterkey_password (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -53,7 +53,7 @@ sp_control_dbmasterkey_password @db_name = 'database_name,
  @password= N'*contraseña*'  
  Especifica la contraseña de la clave maestra. *contraseña* es **nvarchar**.  
   
- @action=N'add'  
+ @action= N'add'  
  Especifica que se agregará al almacén de credenciales una credencial para la base de datos especificada. La credencial contendrá la contraseña de la clave maestra de la base de datos. El valor pasado a @action es **nvarchar**.  
   
  @action= N'drop'  

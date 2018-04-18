@@ -1,16 +1,16 @@
 ---
 title: sp_replshowcmds (Transact-SQL) | Documentos de Microsoft
-ms.custom: 
+ms.custom: ''
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine
-ms.service: 
+ms.service: ''
 ms.component: system-stored-procedures
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - replication
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 applies_to:
 - SQL Server
@@ -20,16 +20,16 @@ f1_keywords:
 helpviewer_keywords:
 - sp_replshowcmds
 ms.assetid: 199f5a74-e08e-4d02-a33c-b8ab0db20f44
-caps.latest.revision: 
+caps.latest.revision: 17
 author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: f7e949d3372266ca3857204e5d6bc5e35111855a
-ms.sourcegitcommit: 45e4efb7aa828578fe9eb7743a1a3526da719555
+ms.openlocfilehash: d684722c0112dcadac5484aa21ca5c84226d479d
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="spreplshowcmds-transact-sql"></a>sp_replshowcmds (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -46,7 +46,7 @@ sp_replshowcmds [ @maxtrans = ] maxtrans
 ```  
   
 ## <a name="arguments"></a>Argumentos  
- [  **@maxtrans**  =] *maxtrans*  
+ [ **@maxtrans** =] *maxtrans*  
  Es el número de transacciones de las que se devolverá información. *maxtrans* es **int**, su valor predeterminado es **1**, que especifica el número máximo de transacciones pendientes de replicación para el que **sp_replshowcmds** Devuelve información.  
   
 ## <a name="result-sets"></a>Conjuntos de resultados  
@@ -58,8 +58,8 @@ sp_replshowcmds [ @maxtrans = ] maxtrans
 |**originator_id**|**int**|Id. del originador del comando, siempre **0**.|  
 |**publisher_database_id**|**int**|Id. de la base de datos de publicador, siempre **0**.|  
 |**article_id**|**int**|Id. del artículo.|  
-|**tipo**|**int**|Tipo de comando.|  
-|**command**|**nvarchar (1024)**|Comando [!INCLUDE[tsql](../../includes/tsql-md.md)].|  
+|**Tipo**|**int**|Tipo de comando.|  
+|**command**|**nvarchar(1024)**|Comando [!INCLUDE[tsql](../../includes/tsql-md.md)].|  
   
 ## <a name="remarks"></a>Comentarios  
  **sp_replshowcmds** se utiliza en la replicación transaccional.  
@@ -79,9 +79,9 @@ sp_replshowcmds [ @maxtrans = ] maxtrans
 ## <a name="see-also"></a>Vea también  
  [Mensajes de error](../../relational-databases/native-client-odbc-error-messages/error-messages.md)   
  [sp_replcmds &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-replcmds-transact-sql.md)   
- [sp_repldone &#40; Transact-SQL &#41;](../../relational-databases/system-stored-procedures/sp-repldone-transact-sql.md)   
- [sp_replflush &#40; Transact-SQL &#41;](../../relational-databases/system-stored-procedures/sp-replflush-transact-sql.md)   
- [sp_repltrans &#40; Transact-SQL &#41;](../../relational-databases/system-stored-procedures/sp-repltrans-transact-sql.md)   
+ [sp_repldone &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-repldone-transact-sql.md)   
+ [sp_replflush &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-replflush-transact-sql.md)   
+ [sp_repltrans &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-repltrans-transact-sql.md)   
  [Procedimientos almacenados del sistema &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
   
   

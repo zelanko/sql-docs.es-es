@@ -1,30 +1,31 @@
 ---
 title: Limitaciones | Documentos de Microsoft
-ms.custom: 
+ms.custom: ''
 ms.date: 01/19/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: drivers
-ms.service: 
+ms.service: ''
 ms.component: odbc
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: drivers
-ms.tgt_pltfrm: 
+ms.technology:
+- drivers
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - desktop database drivers [ODBC], limitations
 - ODBC desktop database drivers [ODBC], limitations
 ms.assetid: b8d71c2a-23c8-4e9b-b5f7-aca51c5a4721
-caps.latest.revision: "6"
+caps.latest.revision: 6
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 784e99e2b0d3885956d31744261345169239dc10
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: 65a3ea429a862c15bb9588ddf50b805062205766
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="limitations"></a>Limitaciones
 En esta sección se describe las limitaciones de los controladores de base de datos de escritorio ODBC con respecto a los temas siguientes:  
@@ -35,12 +36,12 @@ En esta sección se describe las limitaciones de los controladores de base de da
 |[Función escalar](../../odbc/microsoft/scalar-function-limitations.md)|[CALL (instrucción)](../../odbc/microsoft/call-statement-limitations.md)|[Tipo de datos](../../odbc/microsoft/data-type-limitations.md)|  
 |[Funciones de conjunto](../../odbc/microsoft/set-functions-limitations.md)|[Instrucción CREATE INDEX](../../odbc/microsoft/create-index-statement-limitations.md)|[Aritmética de fecha](../../odbc/microsoft/date-arithmetic-limitations.md)|  
 |[Ordenar](../../odbc/microsoft/sorting-limitations.md)|[Instrucción CREATE TABLE](../../odbc/microsoft/create-table-statement-limitations.md)|[Identificadores](../../odbc/microsoft/identifiers-limitations.md)|  
-|[CONVERT, función](../../odbc/microsoft/convert-function-limitations.md)|[La instrucción DELETE](../../odbc/microsoft/delete-statement-limitations.md)|[Nombre de índice](../../odbc/microsoft/index-name-limitations.md)|  
+|[CONVERT, función](../../odbc/microsoft/convert-function-limitations.md)|[Instrucción DELETE](../../odbc/microsoft/delete-statement-limitations.md)|[Nombre de índice](../../odbc/microsoft/index-name-limitations.md)|  
 ||[Instrucción DROP INDEX](../../odbc/microsoft/drop-index-statement-limitations.md)|[Consulta parametrizada](../../odbc/microsoft/parameterized-query-limitations.md)|  
 ||[QUITE la instrucción de tabla](../../odbc/microsoft/drop-table-statement-limitations.md)|[Palabras reservadas](../../odbc/microsoft/reserved-word-limitations.md)|  
-||[INSERT, instrucción](../../odbc/microsoft/insert-statement-limitations.md)|[Y el predicado](../../odbc/microsoft/and-predicate-limitations.md)|  
+||[Instrucción INSERT](../../odbc/microsoft/insert-statement-limitations.md)|[Y el predicado](../../odbc/microsoft/and-predicate-limitations.md)|  
 ||[SELECT (instrucción) distinto](../../odbc/microsoft/select-distinct-limitations.md)|[Palabra clave DISTINCT](../../odbc/microsoft/distinct-keyword-limitations.md)|  
-||[SELECT (instrucción)](../../odbc/microsoft/select-statement-limitations.md)|[FROM (cláusula)](../../odbc/microsoft/from-clause-limitations.md)|  
+||[Instrucción SELECT](../../odbc/microsoft/select-statement-limitations.md)|[FROM (cláusula)](../../odbc/microsoft/from-clause-limitations.md)|  
 ||[Instrucción UPDATE](../../odbc/microsoft/update-statement-limitations.md)|[Cláusula HAVING](../../odbc/microsoft/having-clause-limitations.md)|  
 |||[Predicado LIKE](../../odbc/microsoft/like-predicate-limitations.md)|  
 |||[NO ES NULL](../../odbc/microsoft/not-null-limitations.md)|  

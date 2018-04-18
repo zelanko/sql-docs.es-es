@@ -1,16 +1,16 @@
 ---
 title: Base de datos tempdb | Microsoft Docs
-description: "En este tema se proporcionan detalles relacionados con la configuración y el uso de la base de datos tempdb en SQL Server en Azure SQL Database."
+description: En este tema se proporcionan detalles relacionados con la configuración y el uso de la base de datos tempdb en SQL Server en Azure SQL Database.
 ms.custom: P360
 ms.date: 12/19/2017
 ms.prod: sql-non-specified
 ms.prod_service: database-engine
-ms.service: 
+ms.service: ''
 ms.component: databases
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - temporary tables [SQL Server], tempdb database
@@ -22,14 +22,15 @@ author: stevestein
 ms.author: sstein
 manager: jhubbard
 ms.reviewer: carlrab
-ms.openlocfilehash: 813f361d52b4f4bbd3a9b9f5693278d08ac9432c
-ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
+ms.openlocfilehash: 33bbb4114d0be681030d288851d169704210fcde
+ms.sourcegitcommit: 8b332c12850c283ae413e0b04b2b290ac2edb672
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/18/2018
+ms.lasthandoff: 04/05/2018
 ---
 # <a name="tempdb-database"></a>Base de datos tempdb
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)] La base de datos del sistema **tempdb** es un recurso global disponible para todos los usuarios conectados a la instancia de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] o a SQL Database. Tempdb se usa para contener:  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
+  La base de datos del sistema **tempdb** es un recurso global disponible para todos los usuarios conectados a la instancia de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] o a SQL Database. Tempdb se usa para contener:  
   
 - **Objetos de usuario** temporales creados explícitamente, como: tablas e índices temporales locales o globales, procedimientos almacenados temporales, variables de tabla, tablas devueltas en funciones con valores de tabla o cursores.  
 - **Objetos internos** que se crean mediante el motor de base de datos. Estos incluyen:
@@ -105,6 +106,9 @@ Las operaciones de **tempdb** se registran de forma mínima, por lo que las tran
   
 ## <a name="tempdb-database-in-sql-database"></a>Base de datos tempdb en SQL Database
 
+
+### <a name="tempdb-sizes-for-dtu-based-service-tiers"></a>tamaños de tempdb para los niveles de servicio basado en DTU
+
 |SLO|Tamaño de archivo de datos de tempdb máximo (MB)|Número de archivos de datos de tempdb|Tamaño máximo de datos de tempdb (MB)|
 |---|---:|---:|---:|
 |Básico|14 225|1|14 225|
@@ -128,6 +132,9 @@ Las operaciones de **tempdb** se registran de forma mínima, por lo que las tran
 |Grupos elásticos básicos (todas las configuraciones de DTU)|14 225|12|170 700| 
 ||||
 
+### <a name="tempdb-sizes-for-vcore-based-service-tiers"></a>tamaños de tempdb para los niveles de servicio basado en núcleo virtual
+
+Vea límites de recursos basados en núcleo virtual (https://review.docs.microsoft.com/azure/sql-database/sql-database-vcore-resource-limits))
 
 ## <a name="restrictions"></a>Restrictions  
  En la base de datos **tempdb** no se pueden realizar las siguientes operaciones:  

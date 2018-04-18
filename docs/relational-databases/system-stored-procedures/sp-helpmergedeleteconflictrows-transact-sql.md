@@ -1,16 +1,16 @@
 ---
 title: sp_helpmergedeleteconflictrows (Transact-SQL) | Documentos de Microsoft
-ms.custom: 
+ms.custom: ''
 ms.date: 03/04/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine
-ms.service: 
+ms.service: ''
 ms.component: system-stored-procedures
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - replication
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 applies_to:
 - SQL Server
@@ -20,16 +20,16 @@ f1_keywords:
 helpviewer_keywords:
 - sp_helpmergedeleteconflictrows
 ms.assetid: 222be651-5690-4341-9dfb-f9ec1d80c970
-caps.latest.revision: 
+caps.latest.revision: 17
 author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: af2e83f26bfe8f94dd0befcc71259c4d04ed148a
-ms.sourcegitcommit: 45e4efb7aa828578fe9eb7743a1a3526da719555
+ms.openlocfilehash: 6af4f2128a2ced993129c4e9b813ecd8d9154716
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="sphelpmergedeleteconflictrows-transact-sql"></a>sp_helpmergedeleteconflictrows (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -50,7 +50,7 @@ sp_helpmergedeleteconflictrows [ [ @publication = ] 'publication']
   
 ## <a name="arguments"></a>Argumentos  
  [  **@publication=**] **'***publicación***'**  
- Es el nombre de la publicación. *publicación* es **sysname**, su valor predeterminado es  **%** . Si se especifica la publicación, se devuelven todos los conflictos calificados por la publicación.  
+ Es el nombre de la publicación. *publicación* es **sysname**, su valor predeterminado es **%**. Si se especifica la publicación, se devuelven todos los conflictos calificados por la publicación.  
   
  [  **@source_object=**] **'***source_object***'**  
  Es el nombre del objeto de origen. *source_object* es **nvarchar (386)**, su valor predeterminado es null.  
@@ -58,15 +58,15 @@ sp_helpmergedeleteconflictrows [ [ @publication = ] 'publication']
  [  **@publisher=**] **'***publisher***'**  
  Es el nombre del publicador. *publisher* es **sysname**, su valor predeterminado es null.  
   
- [  **@publisher_db=**] **'***publisher_db***'**  
+ [ **@publisher_db=**] **'***publisher_db***'**  
  Es el nombre de la base de datos del publicador. *publisher_db* es **sysname**, su valor predeterminado es null.  
   
 ## <a name="result-sets"></a>Conjuntos de resultados  
   
 |Nombre de columna|Tipo de datos|Description|  
 |-----------------|---------------|-----------------|  
-|**source_object**|**nvarchar (386)**|Objeto de origen del conflicto de eliminación.|  
-|**ROWGUID**|**uniqueidentifier**|Identificador de la fila del conflicto de eliminación.|  
+|**source_object**|**nvarchar(386)**|Objeto de origen del conflicto de eliminación.|  
+|**rowguid**|**uniqueidentifier**|Identificador de la fila del conflicto de eliminación.|  
 |**conflict_type**|**int**|Código que indica el tipo de conflicto:<br /><br /> **1** = UpdateConflict: conflicto se detecta en el nivel de fila.<br /><br /> **2** = ColumnUpdateConflict: conflicto se detecta en el nivel de columna.<br /><br /> **3** = UpdateDeleteWinsConflict: eliminación gana el conflicto.<br /><br /> **4** = UpdateWinsDeleteConflict: la columna rowguid eliminada que pierde el conflicto se registra en esta tabla.<br /><br /> **5** = UploadInsertFailed: la inserción desde el suscriptor no pudo aplicarse en el publicador.<br /><br /> **6** = DownloadInsertFailed: no se pudo aplicar la inserción desde el publicador en el suscriptor.<br /><br /> **7** = UploadDeleteFailed: no se pudo cargar eliminación en el suscriptor al publicador.<br /><br /> **8** = DownloadDeleteFailed: no se pudo descargar la eliminación en el publicador al suscriptor.<br /><br /> **9** = UploadUpdateFailed: actualización en el suscriptor no pudo aplicarse en el publicador.<br /><br /> **10** = DownloadUpdateFailed: actualización en el publicador no pudo aplicarse al suscriptor.|  
 |**reason_code**|**Int**|Código del error, que puede depender del contexto.|  
 |**reason_text**|**varchar(720)**|Descripción del error, que puede depender del contexto.|  

@@ -1,16 +1,16 @@
 ---
 title: dbo.sysdownloadlist (Transact-SQL) | Documentos de Microsoft
-ms.custom: 
+ms.custom: ''
 ms.date: 03/03/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine
-ms.service: 
+ms.service: ''
 ms.component: system-tables
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - dbo.sysdownloadlist
@@ -22,16 +22,16 @@ dev_langs:
 helpviewer_keywords:
 - sysdownloadlist system table
 ms.assetid: 71087a4c-e829-488e-aa7d-a9476e2b4779
-caps.latest.revision: 
+caps.latest.revision: 25
 author: stevestein
 ms.author: sstein
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: ec8e8dc5a4e145cf0965fa509029225336e621c9
-ms.sourcegitcommit: c556eaf60a49af7025db35b7aa14beb76a8158c5
+ms.openlocfilehash: 77e6f3c548e7ab610b84c68cc1545836cfc02c77
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/03/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="dbosysdownloadlist-transact-sql"></a>dbo.sysdownloadlist (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -40,9 +40,9 @@ ms.lasthandoff: 02/03/2018
   
 |Nombre de columna|Tipo de datos|Description|  
 |-----------------|---------------|-----------------|  
-|**instance_id**|**int**|Columna de identidad que proporciona la secuencia de inserción natural de las filas.|  
+|**valor de instance_id**|**int**|Columna de identidad que proporciona la secuencia de inserción natural de las filas.|  
 |**source_server**|**sysname**|Nombre del servidor de origen.|  
-|**operation_code**|**tinyint**|Código de operación del trabajo:<br /><br /> **1** = INS (INSERT)<br /><br /> **2** = UPD (ACTUALIZACIÓN)<br /><br /> **3** = SUPR (ELIMINAR)<br /><br /> **4** = INICIO<br /><br /> **5** = STOP|  
+|**operation_code**|**tinyint**|Código de operación del trabajo:<br /><br /> **1** = INS (INSERT)<br /><br /> **2** = UPD (ACTUALIZACIÓN)<br /><br /> **3** = SUPR (ELIMINAR)<br /><br /> **4** = INICIO<br /><br /> **5** = DETENER|  
 |**object_type**|**tinyint**|Código de tipo de objeto.|  
 |**object_id** <sup>1</sup>|**uniqueidentifier**|Número de identificación del objeto.|  
 |**target_server**|**sysname**|Nombre del servidor de destino.|  

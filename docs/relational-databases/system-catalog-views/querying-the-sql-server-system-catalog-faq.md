@@ -1,16 +1,16 @@
 ---
-title: "Consultar el catálogo de sistema SQL Server preguntas más frecuentes | Documentos de Microsoft"
-ms.custom: 
+title: Consultar el catálogo de sistema SQL Server preguntas más frecuentes | Documentos de Microsoft
+ms.custom: ''
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine
-ms.service: 
+ms.service: ''
 ms.component: system-catalog-views
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 dev_langs:
 - TSQL
@@ -21,23 +21,23 @@ helpviewer_keywords:
 - system catalogs [SQL Server], example queries
 - catalog views [SQL Server], frequently asked questions
 ms.assetid: ca202580-c37e-4ccd-9275-77ce79481f64
-caps.latest.revision: 
+caps.latest.revision: 51
 author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: f63ac73300f4206acf65bf85b05e6802dada33ea
-ms.sourcegitcommit: 45e4efb7aa828578fe9eb7743a1a3526da719555
+ms.openlocfilehash: 28cf58ccd693f0c958901487a8387dd9d1c1073b
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="querying-the-sql-server-system-catalog-faq"></a>Consultar las preguntas más frecuentes (P+F) del catálogo del sistema de SQL Server
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
 
   Este tema contiene una lista de las preguntas más frecuentes. Las respuestas a estas preguntas son consultas basadas en vistas de catálogos.  
   
-##  <a name="_TOP"></a>Preguntas más frecuentes  
+##  <a name="_TOP"></a> Preguntas más frecuentes  
  En las secciones siguientes se enumeran las preguntas más frecuentes por categoría.  
   
 ### <a name="data-types"></a>Tipos de datos  
@@ -116,7 +116,7 @@ ms.lasthandoff: 11/21/2017
   
 ## <a name="answers"></a>Respuestas  
   
-###  <a name="_FAQ1"></a>¿Cómo busco todas las tablas que no tienen un índice agrupado en una base de datos especificado?  
+###  <a name="_FAQ1"></a> ¿Cómo busco todas las tablas que no tienen un índice agrupado en una base de datos especificado?  
  Antes de ejecutar las consultas siguientes, reemplace `<database_name>` por un nombre de base de datos válido.  
   
 ```  
@@ -148,7 +148,7 @@ GO
   
  [TOP](#_TOP)  
   
-###  <a name="_FAQ2"></a>¿Cómo busco todos los propietarios de las entidades contenidas en un esquema determinado?  
+###  <a name="_FAQ2"></a> ¿Cómo busco todos los propietarios de las entidades contenidas en un esquema determinado?  
  Antes de ejecutar la consulta siguiente, reemplace `<database_name>` y `<schema_name>` por nombres válidos.  
   
 ```  
@@ -176,7 +176,7 @@ GO
   
  [TOP](#_TOP)  
   
-###  <a name="_FAQ3"></a>¿Cómo busco todas las tablas que no tienen una clave principal?  
+###  <a name="_FAQ3"></a> ¿Cómo busco todas las tablas que no tienen una clave principal?  
  Antes de ejecutar las consultas siguientes, reemplace `<database_name>` por un nombre de base de datos válido.  
   
 ```  
@@ -211,7 +211,7 @@ GO
   
  [TOP](#_TOP)  
   
-###  <a name="_FAQ4"></a>¿Cómo busco todas las tablas que no tiene un índice?  
+###  <a name="_FAQ4"></a> ¿Cómo busco todas las tablas que no tiene un índice?  
  Antes de ejecutar la consulta siguiente, reemplace `<database_name>` por un nombre de base de datos válido.  
   
 ```  
@@ -228,7 +228,7 @@ GO
   
  [TOP](#_TOP)  
   
-###  <a name="_FAQ5"></a>¿Cómo busco todas las tablas que tienen una columna de identidad?  
+###  <a name="_FAQ5"></a> ¿Cómo busco todas las tablas que tienen una columna de identidad?  
  Antes de ejecutar la consulta siguiente, reemplace `<database_name>` por un nombre de base de datos válido.  
   
 ```  
@@ -263,7 +263,7 @@ GO
   
  [TOP](#_TOP)  
   
-###  <a name="_FAQ7"></a>¿Cómo busco los tipos de datos de las columnas de una tabla determinada?  
+###  <a name="_FAQ7"></a> ¿Cómo busco los tipos de datos de las columnas de una tabla determinada?  
  Antes de ejecutar la consulta siguiente, reemplace `<database_name>` y `<schema_name.table_name>` por nombres válidos.  
   
 ```  
@@ -288,7 +288,7 @@ GO
   
  [TOP](#_TOP)  
   
-###  <a name="_FAQ8"></a>¿Cómo se puede encontrar las dependencias de una función determinada?  
+###  <a name="_FAQ8"></a> ¿Cómo se puede encontrar las dependencias de una función determinada?  
  Antes de ejecutar la consulta siguiente, reemplace `<database_name>` y `<schema_name.function_name>` por nombres válidos.  
   
 ```  
@@ -306,7 +306,7 @@ GO
   
  [TOP](#_TOP)  
   
-###  <a name="_FAQ9"></a>¿Cómo se puede encontrar todos los procedimientos almacenados en una base de datos?  
+###  <a name="_FAQ9"></a> ¿Cómo se puede encontrar todos los procedimientos almacenados en una base de datos?  
  Antes de ejecutar la consulta siguiente, reemplace `<database_name>` por un nombre válido.  
   
 ```  
@@ -325,7 +325,7 @@ GO
   
  [TOP](#_TOP)  
   
-###  <a name="_FAQ10"></a>¿Cómo busco los parámetros para una función o procedimiento almacenado especificado?  
+###  <a name="_FAQ10"></a> ¿Cómo busco los parámetros para una función o procedimiento almacenado especificado?  
  Antes de ejecutar la consulta siguiente, reemplace `<database_name>` y `<schema_name.object_name>` por nombres válidos.  
   
 ```  
@@ -351,7 +351,7 @@ GO
   
  [TOP](#_TOP)  
   
-###  <a name="_FAQ12"></a>¿Cómo se puede encontrar todas las funciones definidas por el usuario en una base de datos?  
+###  <a name="_FAQ12"></a> ¿Cómo se puede encontrar todas las funciones definidas por el usuario en una base de datos?  
  Antes de ejecutar la consulta siguiente, reemplace `<database_name>` por un nombre de base de datos válido.  
   
 ```  
@@ -370,7 +370,7 @@ GO
   
  [TOP](#_TOP)  
   
-###  <a name="_FAQ13"></a>¿Cómo se puede encontrar todas las vistas en una base de datos?  
+###  <a name="_FAQ13"></a> ¿Cómo se puede encontrar todas las vistas en una base de datos?  
  Antes de ejecutar la consulta siguiente, reemplace `<database_name>` por un nombre de base de datos válido.  
   
 ```  
@@ -388,7 +388,7 @@ FROM sys.views;
   
  [TOP](#_TOP)  
   
-###  <a name="_FAQ6"></a>¿Cómo busco todas las entidades que se han modificado en los últimos N días?  
+###  <a name="_FAQ6"></a> ¿Cómo busco todas las entidades que se han modificado en los últimos N días?  
  Antes de ejecutar la consulta siguiente, reemplace `<database_name>` y `<n_days>` por valores válidos.  
   
 ```  
@@ -408,7 +408,7 @@ GO
   
  [TOP](#_TOP)  
   
-###  <a name="_FAQ14"></a>¿Cómo busco los tipos de datos LOB de una tabla determinada?  
+###  <a name="_FAQ14"></a> ¿Cómo busco los tipos de datos LOB de una tabla determinada?  
  Antes de ejecutar la consulta siguiente, reemplace `<database_name>` y `<schema_name.table_name>` por nombres válidos.  
   
 ```  
@@ -436,7 +436,7 @@ GO
   
  [TOP](#_TOP)  
   
-###  <a name="_FAQ15"></a>¿Cómo se puede ver la definición de un módulo?  
+###  <a name="_FAQ15"></a> ¿Cómo se puede ver la definición de un módulo?  
  Antes de ejecutar la consulta siguiente, reemplace `<database_name>` y `<schema_name.object_name>` por nombres válidos.  
   
 ```  
@@ -461,7 +461,7 @@ GO
   
  [TOP](#_TOP)  
   
-###  <a name="_FAQ19"></a>¿Cómo se puede ver la definición de un desencadenador de nivel de servidor?  
+###  <a name="_FAQ19"></a> ¿Cómo se puede ver la definición de un desencadenador de nivel de servidor?  
   
 ```  
 SELECT definition  
@@ -472,7 +472,7 @@ GO
   
  [TOP](#_TOP)  
   
-###  <a name="_FAQ16"></a>¿Cómo busco las columnas de una clave principal de una tabla determinada?  
+###  <a name="_FAQ16"></a> ¿Cómo busco las columnas de una clave principal de una tabla determinada?  
  Antes de ejecutar la consulta siguiente, reemplace `<database_name>` y `<schema_name.table_name>` por nombres válidos.  
   
 ```  
@@ -515,7 +515,7 @@ GO
   
  [TOP](#_TOP)  
   
-###  <a name="_FAQ17"></a>¿Cómo busco las columnas de una clave externa de una tabla determinada?  
+###  <a name="_FAQ17"></a> ¿Cómo busco las columnas de una clave externa de una tabla determinada?  
  Antes de ejecutar la consulta siguiente, reemplace `<database_name>` y `<schema_name.table_name>` por nombres válidos.  
   
 ```  
@@ -539,7 +539,7 @@ WHERE f.parent_object_id = OBJECT_ID('<schema_name.table_name>');
   
  [TOP](#_TOP)  
   
-###  <a name="_FAQ18"></a>¿Cómo busco los permisos concedidos o denegados en una entidad de seguridad especificado?  
+###  <a name="_FAQ18"></a> ¿Cómo busco los permisos concedidos o denegados en una entidad de seguridad especificado?  
  En el ejemplo siguiente se crea una función para devolver el nombre de la entidad en la que se comprueban los permisos. La función se invoca en las consultas que siguen. La función se debe crear en cada base de datos en la que desee comprobar los permisos.  
   
 ```  
@@ -622,7 +622,7 @@ GO
   
  [TOP](#_TOP)  
   
-###  <a name="_FAQ20"></a>¿Cómo se puede determinar si una columna se utiliza en una expresión de columna calculada?  
+###  <a name="_FAQ20"></a> ¿Cómo se puede determinar si una columna se utiliza en una expresión de columna calculada?  
  Antes de ejecutar la consulta siguiente, reemplace `<database_name>`, `<schema_name.table_name>` y `<column_name`> por nombres válidos.  
   
 ```  
@@ -644,7 +644,7 @@ GO
   
  [TOP](#_TOP)  
   
-###  <a name="_FAQ21"></a>¿Cómo busco todas las columnas que se usan en una expresión de columna calculada?  
+###  <a name="_FAQ21"></a> ¿Cómo busco todas las columnas que se usan en una expresión de columna calculada?  
  Antes de ejecutar la consulta siguiente, reemplace `<database_name>` por un nombre válido.  
   
 ```  
@@ -666,7 +666,7 @@ GO
   
  [TOP](#_TOP)  
   
-###  <a name="_FAQ22"></a>¿Cómo busco las columnas que dependen de un tipo definido por el usuario CLR o el tipo de alias?  
+###  <a name="_FAQ22"></a> ¿Cómo busco las columnas que dependen de un tipo definido por el usuario CLR o el tipo de alias?  
  Antes de ejecutar la consulta siguiente, reemplace `<database_name>` con un nombre válido y `<schema_name.data_type_name>` con un nombre de tipo de alias de certificación de esquema o válido, calificado por el esquema definido por el usuario tipo CLR. La consulta siguiente requiere la pertenencia a la **db_owner** función o los permisos para ver todas las columnas dependientes y columna calculada metadatos en la base de datos.  
   
 ```  
@@ -704,7 +704,7 @@ GO
   
  [TOP](#_TOP)  
   
-###  <a name="_FAQ23"></a>¿Cómo busco las columnas calculadas que dependen de un tipo definido por el usuario CLR o el tipo de alias?  
+###  <a name="_FAQ23"></a> ¿Cómo busco las columnas calculadas que dependen de un tipo definido por el usuario CLR o el tipo de alias?  
  Antes de ejecutar la consulta siguiente, reemplace `<database_name>` por un nombre válido y `<schema_name.data_type_name>` por un nombre del tipo CLR definido por el usuario del esquema o del nombre de tipo alias válido.  
   
 ```  
@@ -721,7 +721,7 @@ WHERE referenced_major_id = TYPE_ID('<schema_name.data_type_name>')
   
  [TOP](#_TOP)  
   
-###  <a name="_FAQ24"></a>¿Cómo busco los parámetros que dependen de un tipo definido por el usuario CLR o el tipo de alias?  
+###  <a name="_FAQ24"></a> ¿Cómo busco los parámetros que dependen de un tipo definido por el usuario CLR o el tipo de alias?  
  Antes de ejecutar la consulta siguiente, reemplace `<database_name>` por un nombre válido y `<schema_name.data_type_name>` por un nombre del tipo CLR definido por el usuario del esquema o del nombre de tipo alias válido. La consulta siguiente requiere la pertenencia a la **db_owner** función o los permisos para ver todas las columnas dependientes y columna calculada metadatos en la base de datos.  
   
 ```  
@@ -763,7 +763,7 @@ GO
   
  [TOP](#_TOP)  
   
-###  <a name="_FAQ25"></a>¿Cómo busco las restricciones CHECK que dependen de un tipo definido por el usuario CLR especificado?  
+###  <a name="_FAQ25"></a> ¿Cómo busco las restricciones CHECK que dependen de un tipo definido por el usuario CLR especificado?  
  Antes de ejecutar la consulta siguiente, reemplace `<database_name>` con un nombre válido y `<schema_name.data_type_name>` con un nombre de tipo definido por el usuario CLR válido y completo del esquema.  
   
 ```  
@@ -783,7 +783,7 @@ GO
   
  [TOP](#_TOP)  
   
-###  <a name="_FAQ26"></a>¿Cómo busco las vistas, funciones de Transact-SQL y procedimientos almacenados de Transact-SQL que dependen de un tipo definido por el usuario CLR o el tipo de alias?  
+###  <a name="_FAQ26"></a> ¿Cómo busco las vistas, funciones de Transact-SQL y procedimientos almacenados de Transact-SQL que dependen de un tipo definido por el usuario CLR o el tipo de alias?  
  Antes de ejecutar la consulta siguiente, reemplace `<database_name>` por un nombre válido y `<schema_name.data_type_name>` por un nombre del tipo CLR definido por el usuario del esquema o del nombre de tipo alias válido.  
   
  Los parámetros definidos en una función o procedimiento están enlazados a esquemas de forma implícita. Por lo tanto, se pueden ver los parámetros que dependen de un tipo definido por el usuario CLR o alias mediante el uso de la [sys.sql_dependencies](../../relational-databases/system-catalog-views/sys-sql-dependencies-transact-sql.md) vista de catálogo. Los procedimientos y los desencadenadores no están enlazados a ningún esquema. Esto significa que las dependencias entre cualquier expresión definida en el cuerpo del procedimiento o del desencadenador y los tipos CLR definidos por el usuario o alias no se mantienen. Vistas y funciones definidas por el usuario que tienen expresiones que dependan de un tipo definido por el usuario CLR enlazadas a esquemas o tipo de alias se mantienen en la **sys.sql_dependencies** vista de catálogo. Las dependencias entre los tipos y las funciones y procedimientos CLR no se mantienen.  
@@ -811,7 +811,7 @@ GO
   
  [TOP](#_TOP)  
   
-###  <a name="_FAQ27"></a>¿Cómo busco todas las restricciones de una tabla determinada?  
+###  <a name="_FAQ27"></a> ¿Cómo busco todas las restricciones de una tabla determinada?  
  Antes de ejecutar la consulta siguiente, reemplace `<database_name>` y `<schema_name.table_name>` por nombres válidos.  
   
 ```  
@@ -835,7 +835,7 @@ GO
   
  [TOP](#_TOP)  
   
-###  <a name="_FAQ28"></a>¿Cómo busco todos los índices de una tabla determinada?  
+###  <a name="_FAQ28"></a> ¿Cómo busco todos los índices de una tabla determinada?  
  Antes de ejecutar la consulta siguiente, reemplace `<database_name>` y `<schema_name.table_name>` por nombres válidos.  
   
 ```  
@@ -864,7 +864,7 @@ GO
   
  [TOP](#_TOP)  
   
-###  <a name="_FAQ30"></a>¿Cómo busco todos los objetos que tienen un nombre de columna especificado?  
+###  <a name="_FAQ30"></a> ¿Cómo busco todos los objetos que tienen un nombre de columna especificado?  
  Antes de ejecutar la consulta siguiente, reemplace `<database_name>` y `<column_name>` por nombres válidos.  
   
 ```  
@@ -894,7 +894,7 @@ GO
   
  [TOP](#_TOP)  
   
-###  <a name="_FAQ31"></a>¿Cómo se puede encontrar todas las tablas definidas por el usuario en una base de datos especificado?  
+###  <a name="_FAQ31"></a> ¿Cómo se puede encontrar todas las tablas definidas por el usuario en una base de datos especificado?  
  Antes de ejecutar la consulta siguiente, reemplace `<database_name>` por un nombre válido.  
   
 ```  
@@ -908,7 +908,7 @@ GO
   
  [TOP](#_TOP)  
   
-###  <a name="_FAQ32"></a>¿Cómo busco todas las tablas e índices que tienen particiones?  
+###  <a name="_FAQ32"></a> ¿Cómo busco todas las tablas e índices que tienen particiones?  
  Antes de ejecutar la consulta siguiente, reemplace `<database_name>` por un nombre válido.  
   
 ```  
@@ -930,7 +930,7 @@ GO
   
  [TOP](#_TOP)  
   
-###  <a name="_FAQ33"></a>¿Cómo se puede encontrar todas las estadísticas de un objeto especificado?  
+###  <a name="_FAQ33"></a> ¿Cómo se puede encontrar todas las estadísticas de un objeto especificado?  
  Antes de ejecutar la consulta siguiente, reemplace `<database_name>` por un nombre válido y `<schema_name.object_name>` por un nombre válido de tabla, vista indizada o función con valores de tabla.  
   
 ```  
@@ -949,7 +949,7 @@ GO
   
  [TOP](#_TOP)  
   
-###  <a name="_FAQ34"></a>¿Cómo busco todas las estadísticas y columnas de estadísticas de un objeto determinado?  
+###  <a name="_FAQ34"></a> ¿Cómo busco todas las estadísticas y columnas de estadísticas de un objeto determinado?  
  Antes de ejecutar la consulta siguiente, reemplace `<database_name>` por un nombre válido y `<schema_name.object_name>` por un nombre válido de tabla, vista indizada o función con valores de tabla.  
   
 ```  
@@ -970,7 +970,7 @@ GO
   
  [TOP](#_TOP)  
   
-###  <a name="_FAQ35"></a>¿Cómo se puede encontrar la definición de una vista?  
+###  <a name="_FAQ35"></a> ¿Cómo se puede encontrar la definición de una vista?  
  Antes de ejecutar la consulta siguiente, reemplace `<database_name>` y `<schema_name.object_name>` por nombres válidos.  
   
 ```  
@@ -996,6 +996,6 @@ GO
  [TOP](#_TOP)  
   
 ## <a name="see-also"></a>Vea también  
- [Asignar tablas del sistema a vistas del sistema &#40; Transact-SQL &#41;](../../relational-databases/system-tables/mapping-system-tables-to-system-views-transact-sql.md)  
+ [Asignar tablas del sistema a vistas del sistema &#40;Transact-SQL&#41;](../../relational-databases/system-tables/mapping-system-tables-to-system-views-transact-sql.md)  
   
   

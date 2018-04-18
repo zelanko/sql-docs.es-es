@@ -1,16 +1,16 @@
 ---
 title: sp_help (Transact-SQL) | Documentos de Microsoft
-ms.custom: 
+ms.custom: ''
 ms.date: 10/24/2016
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine, sql-database
-ms.service: 
+ms.service: ''
 ms.component: system-stored-procedures
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - sp_help
@@ -20,16 +20,17 @@ dev_langs:
 helpviewer_keywords:
 - sp_help
 ms.assetid: 913cd5d4-39a3-4a4b-a926-75ed32878884
-caps.latest.revision: 
+caps.latest.revision: 60
 author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: Active
-ms.openlocfilehash: 4df2325ef2da29b60ca4f1e7109dd73ff9530ea2
-ms.sourcegitcommit: 45e4efb7aa828578fe9eb7743a1a3526da719555
+monikerRange: = azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions
+ms.openlocfilehash: be83dee5f8f4fa4f9e5893bc71964dd3a8df4e3c
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="sphelp-transact-sql"></a>sp_help (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -48,7 +49,7 @@ sp_help [ [ @objname = ] 'name' ]
   
 ## <a name="arguments"></a>Argumentos  
  [  **@objname=**] **'***nombre***'**  
- Es el nombre de cualquier objeto en **sysobjects** o tipo de los datos definidos por el usuario en el **systypes** tabla. *nombre* es **nvarchar (**776**)**, su valor predeterminado es null. No se aceptan nombres de bases de datos.  Nombres de partes de dos o tres deben delimitarse, como 'Person.AddressType' o [Person.AddressType].   
+ Es el nombre de cualquier objeto en **sysobjects** o tipo de los datos definidos por el usuario en el **systypes** tabla. *nombre* es **nvarchar (**776**)**, su valor predeterminado es null. No se aceptan nombres de bases de datos.  Se deben delimitar dos o tres nombres de partes, como "Person.AddressType" o [Person.AddressType].   
    
   
 ## <a name="return-code-values"></a>Valores de código de retorno  
@@ -63,20 +64,20 @@ sp_help [ [ @objname = ] 'name' ]
     |-----------------|---------------|-----------------|  
     |**Nombre**|**nvarchar (**128**)**|Nombre del objeto|  
     |**Propietario**|**nvarchar (**128**)**|Propietario del objeto (esta es la entidad de seguridad de base de datos que posee el objeto. De forma predeterminada, es el propietario del esquema que contiene el objeto).|  
-    |**Object_type**|**nvarchar (**31**)**|Tipo de objeto|  
+    |**object_type**|**nvarchar (**31**)**|Tipo de objeto|  
   
 2.  Si *nombre* es un [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] tipo de datos o tipo de datos definido por el usuario, **sp_help** devuelve este conjunto de resultados.  
   
     |Nombre de columna|Tipo de datos|Description|  
     |-----------------|---------------|-----------------|  
-    |**Type_name**|**nvarchar (**128**)**|Nombre del tipo de datos.|  
+    |**TYPE_NAME**|**nvarchar (**128**)**|Nombre del tipo de datos.|  
     |**Storage_type**|**nvarchar (**128**)**|Nombre del tipo de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].|  
     |**Longitud**|**smallint**|Longitud física del tipo de datos (en bytes).|  
     |**Prec**|**int**|Precisión (número total de dígitos).|  
     |**Escala**|**int**|Número de dígitos a la derecha del separador decimal.|  
     |**Admisión de valores NULL**|**varchar (**35**)**|Indica si se permiten valores NULL: Yes o No.|  
-    |**Default_name**|**nvarchar (**128**)**|Nombre de un valor predeterminado enlazado a este tipo.<br /><br /> NULL = No hay un valor predeterminado enlazado.|  
-    |**Rule_name**|**nvarchar (**128**)**|Nombre de una regla enlazada a este tipo.<br /><br /> NULL = No hay un valor predeterminado enlazado.|  
+    |**default_name**|**nvarchar (**128**)**|Nombre de un valor predeterminado enlazado a este tipo.<br /><br /> NULL = No hay un valor predeterminado enlazado.|  
+    |**rule_name**|**nvarchar (**128**)**|Nombre de una regla enlazada a este tipo.<br /><br /> NULL = No hay un valor predeterminado enlazado.|  
     |**Intercalación**|**sysname**|Intercalación del tipo de datos. NULL para tipos de datos que no sean de caracteres.|  
   
 3.  Si *nombre* es cualquier objeto de base de datos que no sea un tipo de datos, **sp_help** devuelve este resultado conjuntos de resultados de conjunto y también adicional, según el tipo de objeto especificado.  
@@ -96,7 +97,7 @@ sp_help [ [ @objname = ] 'name' ]
   
         |Nombre de columna|Tipo de datos|Description|  
         |-----------------|---------------|-----------------|  
-        |**Column_name**|**nvarchar (**128**)**|Nombre de columna.|  
+        |**column_name**|**nvarchar (**128**)**|Nombre de columna.|  
         |**Tipo**|**nvarchar (**128**)**|Tipo de datos de la columna.|  
         |**Calculado**|**varchar (**35**)**|Indica si los valores de la columna son calculados: Yes o No.|  
         |**Longitud**|**int**|Longitud de la columna en bytes.<br /><br /> Nota: Si el tipo de datos de columna es un tipo de valor grande (**varchar (max)**, **nvarchar (max)**, **varbinary (max)**, o **xml**), el valor será se mostrará como -1.|  
@@ -133,7 +134,7 @@ sp_help [ [ @objname = ] 'name' ]
         |Nombre de columna|Tipo de datos|Description|  
         |-----------------|---------------|-----------------|  
         |**index_name**|**sysname**|Nombre del índice.|  
-        |**Index_description**|**varchar (**210**)**|Descripción del índice.|  
+        |**index_description**|**varchar (**210**)**|Descripción del índice.|  
         |**index_keys**|**nvarchar (**2078**)**|Nombres de las columnas en las que se ha generado el índice. Devuelve NULL para los índices de almacén de columnas optimizados de memoria xVelocity.|  
   
     -   Conjunto de resultados adicional devuelto en las restricciones:  
@@ -158,7 +159,7 @@ sp_help [ [ @objname = ] 'name' ]
   
         |Nombre de columna|Tipo de datos|Description|  
         |-----------------|---------------|-----------------|  
-        |**Parameter_name**|**nvarchar (**128**)**|Nombre del parámetro del procedimiento almacenado.|  
+        |**parameter_name**|**nvarchar (**128**)**|Nombre del parámetro del procedimiento almacenado.|  
         |**Tipo**|**nvarchar (**128**)**|Tipo de datos del parámetro del procedimiento almacenado.|  
         |**Longitud**|**smallint**|Longitud máxima de almacenamiento físico en bytes.|  
         |**Prec**|**int**|Precisión o número total de dígitos.|  
@@ -198,13 +199,13 @@ GO
 ```  
   
 ## <a name="see-also"></a>Vea también  
- [Motor de base de datos almacenados procedimientos &#40; Transact-SQL &#41;](../../relational-databases/system-stored-procedures/database-engine-stored-procedures-transact-sql.md)   
- [sp_helpindex &#40; Transact-SQL &#41;](../../relational-databases/system-stored-procedures/sp-helpindex-transact-sql.md)   
- [sp_helprotect &#40; Transact-SQL &#41;](../../relational-databases/system-stored-procedures/sp-helprotect-transact-sql.md)   
- [sp_helpserver &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-helpserver-transact-sql.md)   
+ [Procedimientos almacenados del motor de base de datos &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/database-engine-stored-procedures-transact-sql.md)   
+ [sp_helpindex &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-helpindex-transact-sql.md)   
+ [sp_helprotect &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-helprotect-transact-sql.md)   
+ [sp_helpserver & #40; Transact-SQL & #41;](../../relational-databases/system-stored-procedures/sp-helpserver-transact-sql.md)   
  [sp_helptrigger &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-helptrigger-transact-sql.md)   
- [sp_helpuser &#40; Transact-SQL &#41;](../../relational-databases/system-stored-procedures/sp-helpuser-transact-sql.md)   
+ [sp_helpuser &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-helpuser-transact-sql.md)   
  [Procedimientos almacenados del sistema &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)   
- [Sys.sysobjects &#40; Transact-SQL &#41;](../../relational-databases/system-compatibility-views/sys-sysobjects-transact-sql.md)  
+ [Sys.sysobjects &#40;Transact-SQL&#41;](../../relational-databases/system-compatibility-views/sys-sysobjects-transact-sql.md)  
   
   

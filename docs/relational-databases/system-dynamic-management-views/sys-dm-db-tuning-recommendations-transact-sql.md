@@ -1,9 +1,9 @@
 ---
-title: sys.dm_db_tuning_recommendations (Transact-SQL) | Microsoft Docs
+title: Sys.dm_db_tuning_recommendations (Transact-SQL) | Documentos de Microsoft
 description: Obtenga información acerca de cómo buscar posibles problemas de rendimiento y recomienda correcciones en SQL Server y base de datos de SQL Azure
 ms.custom: ''
 ms.date: 07/20/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine, sql-database
 ms.service: ''
 ms.component: dmv's
@@ -29,11 +29,12 @@ author: jovanpop-msft
 ms.author: jovanpop
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 1d4f783c82d92aa0837ea9fbb90f9b3d2afc8c8d
-ms.sourcegitcommit: 8b332c12850c283ae413e0b04b2b290ac2edb672
+monikerRange: = azuresqldb-current || >= sql-server-2017 || = sqlallproducts-allversions
+ms.openlocfilehash: fc933666e31c45fc78fb6d303ca1e7d3b5874d55
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/05/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="sysdmdbtuningrecommendations-transact-sql"></a>Sys.DM\_db\_para la optimización\_recomendaciones (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2017-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2017-asdb-xxxx-xxx-md.md)]
@@ -46,22 +47,22 @@ ms.lasthandoff: 04/05/2018
 | --- | --- | --- |
 | **Nombre** | **nvarchar(4000)** | Nombre único de la recomendación. |
 | **Tipo** | **nvarchar(4000)** | El nombre de la opción de optimización automática que genera la recomendación, por ejemplo, `FORCE_LAST_GOOD_PLAN` |
-| **reason** | **nvarchar(4000)** | Motivo por qué se proporcionó esta recomendación. |
-| **valid\_since** | **datetime2** | La primera vez que se generó esta recomendación. |
-| **last\_refresh** | **datetime2** | La última vez que se generó esta recomendación. |
+| **Motivo** | **nvarchar(4000)** | Motivo por qué se proporcionó esta recomendación. |
+| **válido\_desde** | **datetime2** | La primera vez que se generó esta recomendación. |
+| **última\_actualizar** | **datetime2** | La última vez que se generó esta recomendación. |
 | **state** | **nvarchar(4000)** | Documento JSON que describe el estado de la recomendación. Están disponibles los campos siguientes:<br />-   `currentValue` -estado actual de la recomendación.<br />-   `reason` – constante que describe por qué es la recomendación en el estado actual.|
-| **is\_executable\_action** | **bit** | 1 = la recomendación se pueden ejecutar en la base de datos a través de [!INCLUDE[tsql_md](../../includes/tsql_md.md)] secuencia de comandos.<br />0 = la recomendación no se puede ejecutar en la base de datos (por ejemplo: recomendación solo o revertida de información) |
+| **es\_ejecutable\_acción** | **bit** | 1 = la recomendación se pueden ejecutar en la base de datos a través de [!INCLUDE[tsql_md](../../includes/tsql_md.md)] secuencia de comandos.<br />0 = la recomendación no se puede ejecutar en la base de datos (por ejemplo: recomendación solo o revertida de información) |
 | **es\_revertable\_acción** | **bit** | 1 = la recomendación puede supervisarse y revertir el motor de base de datos automáticamente.<br />0 = no se puede supervisar y revierte automáticamente la recomendación. La mayoría &quot;ejecutable&quot; acciones serán &quot;revertable&quot;. |
-| **execute\_action\_start\_time** | **datetime2** | Fecha en que se aplica la recomendación. |
-| **execute\_action\_duration** | **time** | Duración de la acción de ejecución. |
-| **execute\_action\_initiated\_by** | **nvarchar(4000)** | `User` = Usuario manualmente forzar plan en la recomendación. <br /> `System` = Sistema aplica automáticamente la recomendación. |
-| **execute\_action\_initiated\_time** | **datetime2** | Fecha en que se aplicó la recomendación. |
-| **revert\_action\_start\_time** | **datetime2** | Fecha en que se revirtió la recomendación. |
-| **revert\_action\_duration** | **time** | Duración de la acción de reversión. |
+| **ejecutar\_acción\_iniciar\_tiempo** | **datetime2** | Fecha en que se aplica la recomendación. |
+| **ejecutar\_acción\_duración** | **time** | Duración de la acción de ejecución. |
+| **ejecutar\_acción\_inició\_por** | **nvarchar(4000)** | `User` = Usuario manualmente forzar plan en la recomendación. <br /> `System` = Sistema aplica automáticamente la recomendación. |
+| **ejecutar\_acción\_inició\_tiempo** | **datetime2** | Fecha en que se aplicó la recomendación. |
+| **revertir\_acción\_iniciar\_tiempo** | **datetime2** | Fecha en que se revirtió la recomendación. |
+| **revertir\_acción\_duración** | **time** | Duración de la acción de reversión. |
 | **revertir\_acción\_inició\_por** | **nvarchar(4000)** | `User` = Plan recomendada manualmente unforced usuario. <br /> `System` = Sistema revierte automáticamente la recomendación. |
-| **revert\_action\_initiated\_time** | **datetime2** | Fecha en que se revirtió la recomendación. |
-| **score** | **int** | Calcula el valor e impacto de esta recomendación en 0 y 100 escala (cuanto mayor sea la mejor) |
-| **details** | **nvarchar(max)** | Documento JSON que contiene información más detallada acerca de la recomendación. Están disponibles los campos siguientes:<br /><br />`planForceDetails`<br />-    `queryId` -consulta\_identificador de la consulta devuelta.<br />-    `regressedPlanId` -plan_id del plan devuelta.<br />-   `regressedPlanExecutionCount` -Se detectó número de ejecuciones de la consulta devueltas plan antes de la regresión.<br />-    `regressedPlanAbortedCount` -Número de errores detectados durante la ejecución del plan devuelta.<br />-    `regressedPlanCpuTimeAverage` -Tiempo de CPU medio utilizado por la consulta devuelta antes de que se detecte la regresión.<br />-    `regressedPlanCpuTimeStddev` -Se detectó la desviación estándar de de tiempo de CPU utilizado por la consulta devuelta antes de la regresión.<br />-    `recommendedPlanId` -plan_id del plan al que se debería forzar.<br />-   `recommendedPlanExecutionCount`-Número de ejecuciones de la consulta con el plan que se debería forzar antes de que se detecte la regresión.<br />-    `recommendedPlanAbortedCount` -Número de errores detectados durante la ejecución del plan al que se debería forzar.<br />-    `recommendedPlanCpuTimeAverage` -Promedio tiempo de CPU utilizado por la consulta ejecutada con el plan que se debería forzar (calculado antes de que se detecta la regresión).<br />-    `recommendedPlanCpuTimeStddev` Se detectó la desviación estándar de tiempo de CPU utilizado por la consulta devuelta antes de la regresión.<br /><br />`implementationDetails`<br />-  `method` -El método que se debe usar para corregir la regresión. Valor es siempre `TSql`.<br />-    `script` - [!INCLUDE[tsql_md](../../includes/tsql_md.md)] secuencia de comandos que se debe ejecutar para forzar el plan recomendado. |
+| **revertir\_acción\_inició\_tiempo** | **datetime2** | Fecha en que se revirtió la recomendación. |
+| **Puntuación** | **int** | Calcula el valor e impacto de esta recomendación en 0 y 100 escala (cuanto mayor sea la mejor) |
+| **Detalles** | **nvarchar(max)** | Documento JSON que contiene información más detallada acerca de la recomendación. Están disponibles los campos siguientes:<br /><br />`planForceDetails`<br />-    `queryId` -consulta\_identificador de la consulta devuelta.<br />-    `regressedPlanId` -plan_id del plan devuelta.<br />-   `regressedPlanExecutionCount` -Se detectó número de ejecuciones de la consulta devueltas plan antes de la regresión.<br />-    `regressedPlanAbortedCount` -Número de errores detectados durante la ejecución del plan devuelta.<br />-    `regressedPlanCpuTimeAverage` -Tiempo de CPU medio utilizado por la consulta devuelta antes de que se detecte la regresión.<br />-    `regressedPlanCpuTimeStddev` -Se detectó la desviación estándar de de tiempo de CPU utilizado por la consulta devuelta antes de la regresión.<br />-    `recommendedPlanId` -plan_id del plan al que se debería forzar.<br />-   `recommendedPlanExecutionCount`-Número de ejecuciones de la consulta con el plan que se debería forzar antes de que se detecte la regresión.<br />-    `recommendedPlanAbortedCount` -Número de errores detectados durante la ejecución del plan al que se debería forzar.<br />-    `recommendedPlanCpuTimeAverage` -Promedio tiempo de CPU utilizado por la consulta ejecutada con el plan que se debería forzar (calculado antes de que se detecta la regresión).<br />-    `recommendedPlanCpuTimeStddev` Se detectó la desviación estándar de tiempo de CPU utilizado por la consulta devuelta antes de la regresión.<br /><br />`implementationDetails`<br />-  `method` -El método que se debe usar para corregir la regresión. Valor es siempre `TSql`.<br />-    `script` - [!INCLUDE[tsql_md](../../includes/tsql_md.md)] secuencia de comandos que se debe ejecutar para forzar el plan recomendado. |
   
 ## <a name="remarks"></a>Comentarios  
  Información devuelta por `sys.dm_db_tuning_recommendations` se actualiza cuando el motor de base de datos identifica posibles regresión del rendimiento de consultas y no se conserva. Las recomendaciones se mantienen solo hasta [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] se reinicia. Los administradores de base de datos deben realizar periódicamente copias de seguridad de la recomendación de optimización si desean conservarla después de reciclar el servidor. 

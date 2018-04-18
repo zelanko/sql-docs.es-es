@@ -1,15 +1,16 @@
 ---
-title: "Conectar con orígenes de datos de archivo | Documentos de Microsoft"
-ms.custom: 
+title: Conectar con orígenes de datos de archivo | Documentos de Microsoft
+ms.custom: ''
 ms.date: 01/19/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: drivers
-ms.service: 
+ms.service: ''
 ms.component: odbc
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: drivers
-ms.tgt_pltfrm: 
+ms.technology:
+- drivers
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - connecting to driver [ODBC], file data sources
@@ -19,16 +20,16 @@ helpviewer_keywords:
 - connecting to data source [ODBC], file data sources
 - file data sources [ODBC]
 ms.assetid: 3003f8c2-8be6-41cc-8d9c-612e9bd0f3ae
-caps.latest.revision: "7"
+caps.latest.revision: 7
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: d64a08cc8e748efe984c8aa5acd7deac743c2ed3
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: 70b0f5dd8c8ff133d1eb1b1a35c5ce24a7cc7ad5
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="connecting-using-file-data-sources"></a>Conectar con orígenes de datos de archivo
 La información de conexión para un origen de datos de archivo se almacena en un archivo de DSN. Como resultado, la cadena de conexión se puede utilizar repetidamente a un solo usuario o compartir entre varios usuarios si tienen instalado el controlador apropiado. El archivo contiene un nombre de controlador (u otro nombre de origen de datos en el caso de un origen de datos de archivo no se puede compartir) y si lo desea, una cadena de conexión que se puede usar por **SQLDriverConnect**. El Administrador de controladores genera la cadena de conexión de la llamada a **SQLDriverConnect** de las palabras clave en el archivo de DSN.  
@@ -60,4 +61,4 @@ DSN = MyDataSource
  La cadena de conexión que se utiliza para un origen de datos de archivo es la unión de las palabras clave especificadas en el archivo .dsn y las palabras clave especificadas en la cadena de conexión en la llamada a **SQLDriverConnect**. Si cualquiera de las palabras clave en el archivo .dsn entra en conflicto con las palabras clave en la cadena de conexión, el Administrador de controladores decide qué valor de palabra clave se debe usar. Para obtener más información, consulte [SQLDriverConnect](../../../odbc/reference/syntax/sqldriverconnect-function.md).  
   
 ## <a name="see-also"></a>Vea también  
- [http://support.Microsoft.com/kb/165866](http://support.microsoft.com/kb/165866)
+ [http://support.microsoft.com/kb/165866](http://support.microsoft.com/kb/165866)

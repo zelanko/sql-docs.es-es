@@ -1,31 +1,32 @@
 ---
 title: El controlador ODBC para Oracle | Documentos de Microsoft
-ms.custom: 
+ms.custom: ''
 ms.date: 01/19/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: drivers
-ms.service: 
+ms.service: ''
 ms.component: odbc
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: drivers
-ms.tgt_pltfrm: 
+ms.technology:
+- drivers
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - ODBC driver for Oracle [ODBC]
 - ODBC driver for Oracle [ODBC], about ODBC driver for Oracle
 - Oracle data access [ODBC]
 ms.assetid: 937e0662-8b1d-44f7-b077-4015c6605b2c
-caps.latest.revision: "11"
+caps.latest.revision: 11
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 70ae9b447f0f3bcc6e70060b2f46f994ef3ea773
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: 1745942fff2488fe97d2860f17fc7b5239ba3942
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="odbc-driver-for-oracle"></a>Controlador ODBC para Oracle
 > [!IMPORTANT]  
@@ -37,7 +38,7 @@ ms.lasthandoff: 12/21/2017
   
  El controlador ODBC para Oracle permite que una aplicación tener acceso a datos en una base de datos de Oracle a través de la interfaz ODBC. El controlador puede tener acceso a bases de datos de Oracle locales o se puede comunicar con la red a través de SQL * Net. En el diagrama siguiente se detalla esta arquitectura de aplicaciones y controladores.  
   
- ![El controlador ODBC para Oracle aplicación &#47; arquitectura del controlador](../../odbc/microsoft/media/orcdrvsdkarch.gif "OrcDrvSDKArch")  
+ ![El controlador ODBC para Oracle aplicación&#47;arquitectura de controladores](../../odbc/microsoft/media/orcdrvsdkarch.gif "OrcDrvSDKArch")  
   
  El controlador ODBC para Oracle es compatible con la API de conformidad de nivel 1 y principal de nivel de conformidad de SQL. También admite algunas funciones de API de conformidad de nivel 2 y la mayoría de la gramática de los niveles de conformidad principal y extendida de SQL. El controlador es compatible con 2.5 de ODBC y es compatible con sistemas de 32 bits. Oracle 7.3 x se admite totalmente; Oracle8 tiene compatibilidad limitada. El controlador ODBC para Oracle no admite cualquiera de los nuevos tipos de datos de Oracle8: tipos de datos Unicode, BLOB, CLOB, y así sucesivamente, ni tampoco admite el nuevo modelo de objetos relacionales de Oracle. Para obtener más información acerca de los tipos de datos admitidos, consulte [Supported Data Types](../../odbc/microsoft/supported-data-types-odbc-driver-for-oracle.md) en esta guía.  
   

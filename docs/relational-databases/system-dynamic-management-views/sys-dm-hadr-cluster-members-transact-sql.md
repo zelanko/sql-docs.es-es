@@ -1,16 +1,16 @@
 ---
-title: sys.dm_hadr_cluster_members (Transact-SQL) | Microsoft Docs
-ms.custom: 
+title: Sys.dm_hadr_cluster_members (Transact-SQL) | Documentos de Microsoft
+ms.custom: ''
 ms.date: 01/23/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine, sql-database
-ms.service: 
+ms.service: ''
 ms.component: dmv's
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - sys.dm_hadr_cluster_members_TSQL
@@ -24,16 +24,17 @@ helpviewer_keywords:
 - Availability Groups [SQL Server], WSFC clusters
 - sys.dm_hadr_cluster_members catalog view
 ms.assetid: feb20b3a-8835-41d3-9a1c-91d3117bc170
-caps.latest.revision: 
+caps.latest.revision: 23
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 535b83d9d524a500fb2faa9c38541444b0f0fb5a
-ms.sourcegitcommit: c556eaf60a49af7025db35b7aa14beb76a8158c5
+monikerRange: = azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions
+ms.openlocfilehash: c089fa9454d916deb39d7827e9a3aa44e304b008
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/03/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="sysdmhadrclustermembers-transact-sql"></a>sys.dm_hadr_cluster_members (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2012-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-asdb-xxxx-xxx-md.md)]
@@ -53,8 +54,8 @@ ms.lasthandoff: 02/03/2018
   
 |Nombre de columna|Tipo de datos|Description|  
 |-----------------|---------------|-----------------|  
-|**member_name**|**nvarchar(128)**|Nombre de miembro, que puede ser un nombre de equipo, una letra de unidad o una ruta de acceso de recurso compartido de archivos.|  
-|**member_type**|**tinyint**|Tipo del miembro; puede ser:<br /><br /> 0 = Nodo de WSFC<br /><br /> 1 = Testigo de disco<br /><br /> 2 = Testigo de recurso compartido de archivos|  
+|**MEMBER_NAME**|**nvarchar(128)**|Nombre de miembro, que puede ser un nombre de equipo, una letra de unidad o una ruta de acceso de recurso compartido de archivos.|  
+|**MEMBER_TYPE**|**tinyint**|Tipo del miembro; puede ser:<br /><br /> 0 = Nodo de WSFC<br /><br /> 1 = Testigo de disco<br /><br /> 2 = Testigo de recurso compartido de archivos|  
 |**member_type_desc**|**nvarchar(50)**|Descripción de **member_type**, uno de:<br /><br /> CLUSTER_NODE<br /><br /> DISK_WITNESS<br /><br /> FILE_SHARE_WITNESS|  
 |**member_state**|**tinyint**|El estado del miembro; puede ser:<br /><br /> 0 = Sin conexión<br /><br /> 1 = En línea|  
 |**member_state_desc**|**nvarchar(60)**|Descripción de **member_state**, uno de:<br /><br /> UP<br /><br /> HACIA ABAJO|  
@@ -68,7 +69,7 @@ ms.lasthandoff: 02/03/2018
 ## <a name="see-also"></a>Vea también  
  [Funciones y vistas de administración dinámica de grupos de disponibilidad AlwaysOn &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/always-on-availability-groups-dynamic-management-views-functions.md)   
  [Vistas de catálogo de grupos de disponibilidad AlwaysOn &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/always-on-availability-groups-catalog-views-transact-sql.md)   
- [Supervisar grupos de disponibilidad &#40; Transact-SQL &#41;](../../database-engine/availability-groups/windows/monitor-availability-groups-transact-sql.md)   
- [Grupos de disponibilidad AlwaysOn &#40; SQL Server &#41;](../../database-engine/availability-groups/windows/always-on-availability-groups-sql-server.md)  
+ [Supervisar grupos de disponibilidad & #40; Transact-SQL & #41;](../../database-engine/availability-groups/windows/monitor-availability-groups-transact-sql.md)   
+ [Grupos de disponibilidad AlwaysOn & #40; SQL Server & #41;](../../database-engine/availability-groups/windows/always-on-availability-groups-sql-server.md)  
   
   

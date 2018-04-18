@@ -1,16 +1,16 @@
 ---
-title: sys.fn_cdc_map_time_to_lsn (Transact-SQL) | Microsoft Docs
-ms.custom: 
+title: Sys.fn_cdc_map_time_to_lsn (Transact-SQL) | Documentos de Microsoft
+ms.custom: ''
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine
-ms.service: 
+ms.service: ''
 ms.component: system-functions
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 applies_to:
 - SQL Server (starting with 2008)
@@ -25,16 +25,16 @@ helpviewer_keywords:
 - fn_cdc_map_time_to_lsn
 - sys.fn_cdc_map_time_to_lsn
 ms.assetid: 6feb051d-77ae-4c93-818a-849fe518d1d4
-caps.latest.revision: 
+caps.latest.revision: 23
 author: rothja
 ms.author: jroth
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: ff491e9dc1e72f9d181b0020716456683b973689
-ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
+ms.openlocfilehash: 95ee3e6306b47f74d0787bf62e4bfe3ecd5e07c6
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/09/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="sysfncdcmaptimetolsn-transact-sql"></a>sys.fn_cdc_map_time_to_lsn (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -61,7 +61,7 @@ sys.fn_cdc_map_time_to_lsn ( '<relational_operator>', tracking_time )
  **'**< relational_operator >**'** {más grande menor que | más grande menor que o igual | más pequeño mayor que | más pequeño mayor o igual}  
  Se utiliza para identificar un valor de LSN distinto dentro de la **cdc.lsn_time_mapping** tabla con un asociado **tran_end_time** que satisfaga la relación cuando se compara con el *tracking_time*  valor.  
   
- *relational_operator* is **nvarchar(30)**.  
+ *relational_operator* es **nvarchar (30)**.  
   
  *tracking_time*  
  Es el valor de fecha y hora con el que se hará la comparación. *tracking_time* es **datetime**.  

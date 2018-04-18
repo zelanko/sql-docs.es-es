@@ -1,8 +1,8 @@
 ---
-title: sp_configure_peerconflictdetection (Transact-SQL) | Microsoft Docs
+title: sp_configure_peerconflictdetection (Transact-SQL) | Documentos de Microsoft
 ms.custom: ''
 ms.date: 03/04/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine
 ms.service: ''
 ms.component: system-stored-procedures
@@ -25,11 +25,11 @@ author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: f1fed4cb47795554df26deb08f496edba86b5a4d
-ms.sourcegitcommit: d6b1695c8cbc70279b7d85ec4dfb66a4271cdb10
+ms.openlocfilehash: a3a79fda8a5fa7ce29713e9c47ab8d136f24c1ce
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/10/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="spconfigurepeerconflictdetection-transact-sql"></a>sp_configure_peerconflictdetection (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -56,12 +56,12 @@ sp_configure_peerconflictdetection [ @publication = ] 'publication'
  [ @publication=] '*publicación*'  
  Es el nombre de la publicación para la que se desea configurar la detección de conflictos. *publicación* es **sysname**, no tiene ningún valor predeterminado.  
   
- [ @action= ] '*action*'  
+ [ @action=] '*acción*'  
  Especifica si se habilita o deshabilita la detección de conflictos para una publicación. *acción* es **nvarchar (5)**, y puede tener uno de los siguientes valores.  
   
 |Value|Description|  
 |-----------|-----------------|  
-|**enable**|Habilita la detección de conflictos para una publicación.|  
+|**Habilitar**|Habilita la detección de conflictos para una publicación.|  
 |**disable**|Deshabilita la detección de conflictos para una publicación.|  
 |NULL (predeterminado)||  
   
@@ -71,7 +71,7 @@ sp_configure_peerconflictdetection [ @publication = ] 'publication'
  [ @conflict_retention= ] *conflict_retention*  
  [!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]  
   
- [ @continue_onconflict= ] '*continue_onconflict*' ]  
+ [ @continue_onconflict=] '*continue_onconflict*']  
  Determina si el Agente de distribución continúa procesando los cambios después de la detección de un conflicto. *continue_onconflict* es **nvarchar (5)** con un valor predeterminado de FALSE.  
   
 > [!CAUTION]  

@@ -1,15 +1,15 @@
 ---
 title: Trabajar con notificaciones de consulta | Documentos de Microsoft
-ms.custom: 
+ms.custom: ''
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
-ms.service: 
+ms.service: ''
 ms.component: native-client|features
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: 
-ms.tgt_pltfrm: 
+ms.technology: ''
+ms.tgt_pltfrm: ''
 ms.topic: reference
 helpviewer_keywords:
 - data access [SQL Server Native Client], query notifications
@@ -23,16 +23,17 @@ helpviewer_keywords:
 - SQL Server Native Client OLE DB provider, query notifications
 - consumer notification for rowset changes [SQL Server Native Client]
 ms.assetid: 2f906fff-5ed9-4527-9fd3-9c0d27c3dff7
-caps.latest.revision: 
+caps.latest.revision: 40
 author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 6405ed5efa051a7b8c5bb7865b9f2a469c640592
-ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
+monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
+ms.openlocfilehash: faeff47d5daeeb46601020f4e3e31a4c4086386d
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/25/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="working-with-query-notifications"></a>Trabajar con notificaciones de consulta
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -54,7 +55,7 @@ ms.lasthandoff: 01/25/2018
   
  Las notificaciones se envían una sola vez. Para obtener notificaciones continuas de cambios de datos, debe crearse una nueva suscripción ejecutando de nuevo la consulta después de procesar cada notificación.  
   
- [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]Las aplicaciones cliente nativas suelen reciban las notificaciones mediante el uso de la [!INCLUDE[tsql](../../../includes/tsql-md.md)] [recepción](../../../t-sql/statements/receive-transact-sql.md) comando para leer las notificaciones de la cola asociada con el servicio especificado en las opciones de notificación.  
+ [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Las aplicaciones cliente nativas suelen reciban las notificaciones mediante el uso de la [!INCLUDE[tsql](../../../includes/tsql-md.md)] [recepción](../../../t-sql/statements/receive-transact-sql.md) comando para leer las notificaciones de la cola asociada con el servicio especificado en las opciones de notificación.  
   
 > [!NOTE]  
 >  Los nombres de tabla deben calificarse en las consultas para las que se requiere notificación como, por ejemplo, `dbo.myTable`. Las tablas deben calificarse con nombres de dos partes. La suscripción no será válida si se usan nombres de tres o cuatro partes.  

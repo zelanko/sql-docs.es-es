@@ -1,16 +1,16 @@
 ---
 title: sp_help_notification (Transact-SQL) | Documentos de Microsoft
-ms.custom: 
+ms.custom: ''
 ms.date: 08/09/2016
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine
-ms.service: 
+ms.service: ''
 ms.component: system-stored-procedures
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - sp_help_notification
@@ -20,16 +20,16 @@ dev_langs:
 helpviewer_keywords:
 - sp_help_notification
 ms.assetid: 0273457f-9d2a-4a6f-9a16-6a6bf281cba0
-caps.latest.revision: 
+caps.latest.revision: 34
 author: stevestein
 ms.author: sstein
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 542ffbb8b2bf6c51b31da93dc654a3a71b3fa401
-ms.sourcegitcommit: c556eaf60a49af7025db35b7aa14beb76a8158c5
+ms.openlocfilehash: c779b314553c1895071ab04b5131d998c029cc94
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/03/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="sphelpnotification-transact-sql"></a>sp_help_notification (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -51,7 +51,7 @@ sp_help_notification
 ```  
   
 ## <a name="arguments"></a>Argumentos  
- [ **@object_type =**] **'***object_type***'**  
+ [  **@object_type =**] **'***object_type***'**  
  Tipo de información que se va a devolver. *object_type*es **char (9)**, no tiene ningún valor predeterminado. *object_type* puede ser ALERTS, que presenta las alertas asignadas al nombre del operador especificado*,* u OPERATORS, que presenta los operadores responsables del nombre de alerta especificado*.*  
   
  [  **@name =**] **'***nombre***'**  
@@ -76,7 +76,7 @@ sp_help_notification
 |**4**|NetSend: devuelve solamente el **use_netsend** columna.|  
 |**7**|Todas: devuelve todas las columnas.|  
   
- [ **@target_name =**] **'***target_name***'**  
+ [  **@target_name =**] **'***target_name***'**  
  Para buscar un nombre de la alerta (si *object_type* es ALERTS) o un nombre de operador que se busca (si *object_type* es OPERATORS). *target_name* solo es necesario si *enum_type* es el destino. *target_name* es **sysname**, su valor predeterminado es null.  
   
 ## <a name="return-code-valves"></a>Código de retorno  
@@ -89,9 +89,9 @@ sp_help_notification
 |-----------------|---------------|-----------------|  
 |**alert_id**|**int**|Número de identificador de la alerta.|  
 |**alert_name**|**sysname**|Nombre de la alerta.|  
-|**use_email**|**int**|Se utiliza el correo electrónico para notificar al operador:<br /><br /> **1** = yes<br /><br /> **0** = No|  
-|**use_pager**|**int**|Se utiliza un buscapersonas para notificar al operador:<br /><br /> **1** = yes<br /><br /> **0** = No|  
-|**use_netsend**|**int**|Se utiliza un mensaje de red para notificar al operador:<br /><br /> **1** = yes<br /><br /> **0** = No|  
+|**use_email**|**int**|Se utiliza el correo electrónico para notificar al operador:<br /><br /> **1** = Sí<br /><br /> **0** = No|  
+|**use_pager**|**int**|Se utiliza un buscapersonas para notificar al operador:<br /><br /> **1** = Sí<br /><br /> **0** = No|  
+|**use_netsend**|**int**|Se utiliza un mensaje de red para notificar al operador:<br /><br /> **1** = Sí<br /><br /> **0** = No|  
 |**has_email**|**int**|Número de notificaciones por correo electrónico enviadas para esta alerta.|  
 |**has_pager**|**int**|Número de notificaciones por buscapersonas enviadas para esta alerta.|  
 |**has_netsend**|**int**|Número de **mediante net send** notificaciones enviadas para esta alerta.|  
@@ -102,12 +102,12 @@ sp_help_notification
 |-----------------|---------------|-----------------|  
 |**operator_id**|**int**|Número de identificación del operador.|  
 |**operator_name**|**sysname**|Nombre del operador.|  
-|**use_email**|**int**|Para enviar la notificación al operador se utiliza el correo electrónico:<br /><br /> **1** = yes<br /><br /> **0** = No|  
-|**use_pager**|**int**|Para enviar la notificación al operador se utiliza un buscapersonas:<br /><br /> **1** = yes<br /><br /> **0** = No|  
-|**use_netsend**|**int**|Para enviar la notificación al operador se utiliza un mensaje de red:<br /><br /> **1** = yes<br /><br /> **0** = No|  
-|**has_email**|**int**|El operador tiene una dirección de correo electrónico:<br /><br /> **1** = yes<br /><br /> **0** = No|  
-|**has_pager**|**int**|El operador tiene una dirección de buscapersonas:<br /><br /> **1** = yes<br /><br /> **0** = No|  
-|**has_netsend**|**int**|El operador tiene configurada la notificación mediante net send.<br /><br /> **1** = yes<br /><br /> **0** = No|  
+|**use_email**|**int**|Para enviar la notificación al operador se utiliza el correo electrónico:<br /><br /> **1** = Sí<br /><br /> **0** = No|  
+|**use_pager**|**int**|Para enviar la notificación al operador se utiliza un buscapersonas:<br /><br /> **1** = Sí<br /><br /> **0** = No|  
+|**use_netsend**|**int**|Para enviar la notificación al operador se utiliza un mensaje de red:<br /><br /> **1** = Sí<br /><br /> **0** = No|  
+|**has_email**|**int**|El operador tiene una dirección de correo electrónico:<br /><br /> **1** = Sí<br /><br /> **0** = No|  
+|**has_pager**|**int**|El operador tiene una dirección de buscapersonas:<br /><br /> **1** = Sí<br /><br /> **0** = No|  
+|**has_netsend**|**int**|El operador tiene configurada la notificación mediante net send.<br /><br /> **1** = Sí<br /><br /> **0** = No|  
   
 ## <a name="remarks"></a>Comentarios  
  Este procedimiento almacenado se debe ejecutar desde la **msdb** base de datos.  

@@ -1,16 +1,16 @@
 ---
 title: Sys.sp_cdc_enable_table (Transact-SQL) | Documentos de Microsoft
-ms.custom: 
+ms.custom: ''
 ms.date: 03/15/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine
-ms.service: 
+ms.service: ''
 ms.component: system-stored-procedures
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - sys.sp_cdc_enable_table_TSQL
@@ -24,16 +24,16 @@ helpviewer_keywords:
 - sys.sp_cdc_enable_table
 - sp_cdc_enable_table
 ms.assetid: 26150c09-2dca-46ad-bb01-3cb3165bcc5d
-caps.latest.revision: 
+caps.latest.revision: 42
 author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 43e2866c70c60e8b7c7b7f1eaffabebf53a98ebe
-ms.sourcegitcommit: 9fbe5403e902eb996bab0b1285cdade281c1cb16
+ms.openlocfilehash: 9a60ff831a77a5b557d22d00b79d4b936167a628
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/27/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="sysspcdcenabletable-transact-sql"></a>sys.sp_cdc_enable_table (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -79,7 +79,7 @@ sys.sp_cdc_enable_table
   
  Si no se especifica, el nombre se deriva del nombre de esquema de origen más el nombre de la tabla de origen en el formato *schemaname_sourcename*. *capture_instance* no puede superar los 100 caracteres y debe ser único dentro de la base de datos. Si especificado o derivado, *capture_instance* se recortan los espacios en blanco a la derecha de la cadena.  
   
- Una tabla de origen puede tener un máximo de dos instancias de captura. Para obtener más información, vea [sys.sp_cdc_help_change_data_capture &#40; Transact-SQL &#41; ](../../relational-databases/system-stored-procedures/sys-sp-cdc-help-change-data-capture-transact-sql.md).  
+ Una tabla de origen puede tener un máximo de dos instancias de captura. Para obtener más información, vea [sys.sp_cdc_help_change_data_capture &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sys-sp-cdc-help-change-data-capture-transact-sql.md).  
   
  [  **@supports_net_changes =** ] *supports_net_changes*  
  Indica si se permiten las consultas de cambios netos para esta instancia de captura. *supports_net_changes* es **bits** con un valor predeterminado es 1 si la tabla tiene una clave principal o la tabla tiene un índice único que se ha identificado mediante el uso de la @index_name parámetro. De lo contrario, el parámetro tiene como valor predeterminado 0.  
@@ -90,7 +90,7 @@ sys.sp_cdc_enable_table
   
  Si *supports_net_changes* está establecido en 1, *index_name* debe especificarse, o la tabla de origen debe tener definida una clave principal.  
   
- [  **@index_name =** ] **'***index_name*'  
+ [  **@index_name =** ] **' *** index_name*'  
  Nombre de un índice único que se va a usar para identificar de manera inequívoca las filas de la tabla de origen. *index_name* es **sysname** y puede ser NULL. Si se especifica, *index_name* debe ser un índice único válido en la tabla de origen. Si *index_name* se especifica, las columnas de índice identificadas tiene prioridad sobre las columnas de clave principales definidas como el identificador de fila único para la tabla.  
   
  [  **@captured_column_list =** ] **'***captured_column_list***'**  
@@ -100,7 +100,7 @@ sys.sp_cdc_enable_table
   
  *captured_column_list* es una lista separada por comas de nombres de columna. Los nombres de las columnas individuales que figuran en la lista se pueden incluir opcionalmente entre comillas dobles ("") o corchetes ([]). Si un nombre de columna contiene una coma, se debe entrecomillar el nombre de columna.  
   
- *captured_column_list* no puede contener los siguientes nombres de columna reservados: **__ $start_lsn**, **__ $end_lsn**, **__ $seqval**, **__ $operation**, y **__ $update_mask**.  
+ *captured_column_list* no puede contener los siguientes nombres de columna reservados: **__ $start_lsn**, **__ $end_lsn**, **__ $seqval**, **__ $ operación**, y **__ $update_mask**.  
   
  [  **@filegroup_name =** ] **'***filegroup_name***'**  
  Es el grupo de archivos que se va a usar en la tabla de cambios creada para la instancia de captura. *filegroup_name* es **sysname** y puede ser NULL. Si se especifica, *filegroup_name* debe estar definida para la base de datos actual. Si es NULL, se usa el grupo de archivos predeterminado.  
@@ -119,7 +119,7 @@ sys.sp_cdc_enable_table
  **0** (correcto) o **1** (error)  
   
 ## <a name="result-sets"></a>Conjuntos de resultados  
- Ninguno  
+ None  
   
 ## <a name="remarks"></a>Comentarios  
  Para poder habilitar una tabla para la captura de datos modificados, la base de datos debe estar habilitada. Para determinar si la base de datos está habilitada para la captura de datos modificados, consulte el **is_cdc_enabled** columna en el [sys.databases](../../relational-databases/system-catalog-views/sys-databases-transact-sql.md) vista de catálogo. Para habilitar la base de datos, use la [sys.sp_cdc_enable_db](../../relational-databases/system-stored-procedures/sys-sp-cdc-enable-db-transact-sql.md) procedimiento almacenado.  
@@ -172,10 +172,10 @@ GO
 ```  
   
 ## <a name="see-also"></a>Vea también  
- [Sys.sp_cdc_disable_table &#40; Transact-SQL &#41;](../../relational-databases/system-stored-procedures/sys-sp-cdc-disable-table-transact-sql.md)   
- [Sys.sp_cdc_help_change_data_capture &#40; Transact-SQL &#41;](../../relational-databases/system-stored-procedures/sys-sp-cdc-help-change-data-capture-transact-sql.md)   
- [CDC.fn_cdc_get_all_changes_ &#60; capture_instance &#62;  &#40; Transact-SQL &#41;](../../relational-databases/system-functions/cdc-fn-cdc-get-all-changes-capture-instance-transact-sql.md)   
- [CDC.fn_cdc_get_net_changes_ &#60; capture_instance &#62; &#40; Transact-SQL &#41;](../../relational-databases/system-functions/cdc-fn-cdc-get-net-changes-capture-instance-transact-sql.md)   
- [Sys.sp_cdc_help_jobs &#40; Transact-SQL &#41;](../../relational-databases/system-stored-procedures/sys-sp-cdc-help-jobs-transact-sql.md)  
+ [Sys.sp_cdc_disable_table &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sys-sp-cdc-disable-table-transact-sql.md)   
+ [sys.sp_cdc_help_change_data_capture &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sys-sp-cdc-help-change-data-capture-transact-sql.md)   
+ [cdc.fn_cdc_get_all_changes_&#60;capture_instance&#62;  &#40;Transact-SQL&#41;](../../relational-databases/system-functions/cdc-fn-cdc-get-all-changes-capture-instance-transact-sql.md)   
+ [cdc.fn_cdc_get_net_changes_&#60;capture_instance&#62; &#40;Transact-SQL&#41;](../../relational-databases/system-functions/cdc-fn-cdc-get-net-changes-capture-instance-transact-sql.md)   
+ [Sys.sp_cdc_help_jobs &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sys-sp-cdc-help-jobs-transact-sql.md)  
   
   

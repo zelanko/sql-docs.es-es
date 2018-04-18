@@ -1,6 +1,6 @@
 ---
-title: "Crear fragmentos de código en las operaciones de SQL Studio (versión preliminar) | Documentos de Microsoft"
-description: "Obtenga información acerca de cómo crear y utilizar fragmentos de código SQL en las operaciones de SQL Studio (versión preliminar)"
+title: Crear fragmentos de código en las SQL Operations Studio (preview) | Documentos de Microsoft
+description: Obtenga información acerca de cómo crear y utilizar fragmentos de código SQL en las SQL Operations Studio (preview)
 ms.custom: tools|sos
 ms.date: 11/15/2017
 ms.reviewer: alayu; erickang; sstein
@@ -8,7 +8,7 @@ ms.prod: sql-non-specified
 ms.suite: sql
 ms.prod_service: sql-tools
 ms.component: sos
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 author: stevestein
 ms.author: sstein

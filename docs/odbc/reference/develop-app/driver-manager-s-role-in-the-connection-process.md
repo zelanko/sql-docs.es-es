@@ -1,15 +1,16 @@
 ---
-title: "El Administrador de controladores &#39; s rol en el proceso de conexión | Documentos de Microsoft"
-ms.custom: 
+title: El Administrador de controladores&#39;s rol en el proceso de conexión | Documentos de Microsoft
+ms.custom: ''
 ms.date: 01/19/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: drivers
-ms.service: 
+ms.service: ''
 ms.component: odbc
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: drivers
-ms.tgt_pltfrm: 
+ms.technology:
+- drivers
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - driver manager [ODBC], role in connection process
@@ -17,18 +18,18 @@ helpviewer_keywords:
 - connecting to driver [ODBC], driver manager
 - ODBC driver manager [ODBC]
 ms.assetid: 77c05630-5a8b-467d-b80e-c705dc06d601
-caps.latest.revision: "7"
+caps.latest.revision: 7
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 10766d85c5e06323f534d131abfde582906fe340
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: 9f6b57322f96f469060db134eead3c09071e7dde
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 04/16/2018
 ---
-# <a name="driver-manager39s-role-in-the-connection-process"></a>El Administrador de controladores &#39; s rol en el proceso de conexión
+# <a name="driver-manager39s-role-in-the-connection-process"></a>El Administrador de controladores&#39;s rol en el proceso de conexión
 Recuerde que las aplicaciones no llamar a las funciones del controlador directamente. En su lugar, que llamen a funciones de administrador de controladores con el mismo nombre y el Administrador de controladores llama a las funciones de controlador. Normalmente, esto puede ocurrir casi inmediatamente. Por ejemplo, la aplicación llama **SQLExecute** en el Administrador de controladores y después algunas comprobaciones de errores, el Administrador de controladores llama **SQLExecute** en el controlador.  
   
  El proceso de conexión es diferente. Cuando la aplicación llama **SQLAllocHandle** con las opciones de SQL_HANDLE_ENV y SQL_HANDLE_DBC, la función asigna identificadores solo en el Administrador de controladores. El Administrador de controladores no llama a esta función en el controlador porque no sabe qué controlador para llamar a. De forma similar, si la aplicación pasa el identificador de una conexión no conectada a **SQLSetConnectAttr** o **SQLGetConnectAttr**, solo el Administrador de controladores se ejecuta la función. Almacena u Obtiene el valor del atributo de su conexión de controlar y devuelve SQLSTATE 08003 (conexión no abierta) al obtener el valor de un atributo que no se ha establecido y para qué ODBC no define un valor predeterminado.  

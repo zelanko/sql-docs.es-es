@@ -1,30 +1,31 @@
 ---
-title: "Formato de cadena de conexión y los atributos | Documentos de Microsoft"
-ms.custom: 
+title: Formato de cadena de conexión y los atributos | Documentos de Microsoft
+ms.custom: ''
 ms.date: 01/19/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: drivers
-ms.service: 
+ms.service: ''
 ms.component: odbc
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: drivers
-ms.tgt_pltfrm: 
+ms.technology:
+- drivers
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - connection strings [ODBC], ODBC driver for Oracle
 - ODBC driver for Oracle [ODBC], connection strings
 ms.assetid: 0c360112-8720-4e54-a1a6-b9b18d943557
-caps.latest.revision: "9"
+caps.latest.revision: 9
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: c3bc1fc7fcefb034b30c604c358b15ae1db6353e
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: 7a16ee8409a96433929e2b900e3f68c41573a8b1
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="connection-string-format-and-attributes"></a>Atributos y el formato de cadena de conexión
 > [!IMPORTANT]  
@@ -45,7 +46,7 @@ ms.lasthandoff: 12/21/2017
   
  Los atributos de la cadena de conexión son los siguientes:  
   
-|Attribute|Description|Valor predeterminado|  
+|Atributo|Description|Valor predeterminado|  
 |---------------|-----------------|-------------------|  
 |DSN|El nombre de origen de datos aparece en la ficha controladores de la **Administrador de orígenes de datos ODBC** cuadro de diálogo.|""|  
 |PWD|La contraseña para el servidor de Oracle que desea obtener acceso. Este controlador es compatible con las limitaciones que Oracle aplica a las contraseñas.|""|  

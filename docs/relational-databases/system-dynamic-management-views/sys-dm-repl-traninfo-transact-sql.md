@@ -1,16 +1,16 @@
 ---
-title: sys.dm_repl_traninfo (Transact-SQL) | Microsoft Docs
-ms.custom: 
+title: Sys.dm_repl_traninfo (Transact-SQL) | Documentos de Microsoft
+ms.custom: ''
 ms.date: 06/10/2016
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine
-ms.service: 
+ms.service: ''
 ms.component: dmv's
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - sys.dm_repl_traninfo
@@ -22,16 +22,16 @@ dev_langs:
 helpviewer_keywords:
 - sys.dm_repl_traninfo dynamic management view
 ms.assetid: 5abe2605-0506-46ec-82b5-6ec08428ba13
-caps.latest.revision: 
+caps.latest.revision: 20
 author: stevestein
 ms.author: sstein
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 45fd6246b7a98f16c86a6f7e2c7052c70b2af039
-ms.sourcegitcommit: c556eaf60a49af7025db35b7aa14beb76a8158c5
+ms.openlocfilehash: 62a96943b48eaa3c87924055c47d690e2af3354e
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/03/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="sysdmrepltraninfo-transact-sql"></a>sys.dm_repl_traninfo (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -42,20 +42,20 @@ ms.lasthandoff: 02/03/2018
 |-----------------|---------------|-----------------|  
 |**fp2p_pub_exists**|**tinyint**|Si la transacción está en una base de datos publicada mediante la replicación transaccional del mismo nivel. Si es true, el valor es 1; en caso contrario, es 0.|  
 |**db_ver**|**int**|Versión de la base de datos.|  
-|**comp_range_address**|**varbinary(8)**|Define un intervalo de reversiones parciales que deben omitirse.|  
-|**textinfo_address**|**varbinary(8)**|Dirección de memoria de la estructura de información de texto en caché.|  
-|**fsinfo_address**|**varbinary(8)**|Dirección de memoria de la estructura de información de la secuencia de archivo en caché.|  
+|**comp_range_address**|**varbinary (8)**|Define un intervalo de reversiones parciales que deben omitirse.|  
+|**textinfo_address**|**varbinary (8)**|Dirección de memoria de la estructura de información de texto en caché.|  
+|**fsinfo_address**|**varbinary (8)**|Dirección de memoria de la estructura de información de la secuencia de archivo en caché.|  
 |**begin_lsn**|**nvarchar(64)**|Número de flujo de registro (LSN) de la entrada de registro de inicio para la transacción.|  
 |**commit_lsn**|**nvarchar(64)**|LSN de la entrada de registro de confirmación para la transacción.|  
 |**dbid**|**smallint**|Id. de la base de datos.|  
-|**rows**|**int**|Id. del comando replicado en la transacción.|  
+|**Filas**|**int**|Id. del comando replicado en la transacción.|  
 |**xdesid**|**nvarchar(64)**|Id. de la transacción.|  
-|**artcache_table_address**|**varbinary(8)**|Dirección de memoria de la última estructura de la tabla de artículos en caché utilizada para esta transacción.|  
+|**artcache_table_address**|**varbinary (8)**|Dirección de memoria de la última estructura de la tabla de artículos en caché utilizada para esta transacción.|  
 |**servidor**|**nvarchar(514)**|Nombre de servidor.|  
 |**server_len_in_bytes**|**smallint**|Longitud de caracteres, en bytes, del nombre del servidor.|  
 |**database**|**nvarchar(514)**|Nombre de base de datos.|  
 |**db_len_in_bytes**|**smallint**|Longitud de caracteres, en bytes, del nombre de la base de datos.|  
-|**originator**|**nvarchar(514)**|Nombre del servidor donde se originó la transacción.|  
+|**originador**|**nvarchar(514)**|Nombre del servidor donde se originó la transacción.|  
 |**originator_len_in_bytes**|**smallint**|Longitud de caracteres, en bytes, del servidor donde se originó la transacción.|  
 |**orig_db**|**nvarchar(514)**|Nombre de la base de datos donde se originó la transacción.|  
 |**orig_db_len_in_bytes**|**smallint**|Longitud de caracteres, en bytes, de la base de datos donde se originó la transacción.|  
@@ -83,7 +83,7 @@ ms.lasthandoff: 02/03/2018
   
 ## <a name="see-also"></a>Vea también  
  [Funciones y vistas de administración dinámica &#40;Transact-SQL&#41;](~/relational-databases/system-dynamic-management-views/system-dynamic-management-views.md)   
- [Replicación relacionadas con vistas de administración dinámica &#40; Transact-SQL &#41;](../../relational-databases/system-dynamic-management-views/replication-related-dynamic-management-views-transact-sql.md)   
+ [Vistas de administración dinámica relacionadas con la replicación &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/replication-related-dynamic-management-views-transact-sql.md)   
  [Vistas de administración dinámica relacionadas con la captura de datos modificados &#40;Transact-SQL&#41;](http://msdn.microsoft.com/library/2a771d7d-693a-4f56-9227-02cd00e0e200)  
   
   

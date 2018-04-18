@@ -2,7 +2,7 @@
 title: Llamadas a funciones escalares | Documentos de Microsoft
 ms.custom: ''
 ms.date: 01/19/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: drivers
 ms.service: ''
 ms.component: odbc
@@ -18,13 +18,13 @@ ms.assetid: 10cb4dcf-4cd8-4a56-8725-d080bd3ffe47
 caps.latest.revision: 7
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 4e69cc7382c73aaedda31a902cc8ed8daff5cff8
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: 45ba78e4a7533691c6346dad131b9c3e3fefee73
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="scalar-function-calls"></a>Llamadas a funciones escalares
 Funciones escalares devuelven un valor para cada fila. Por ejemplo, la función escalar del valor absoluto toma una columna numérica como argumento y devuelve el valor absoluto de cada valor de la columna. Es la secuencia de escape para llamar a una función escalar  
@@ -49,7 +49,7 @@ SELECT {fn SUBSTRING(Name, 1, CHARINDEX(',', Name) – 1)} FROM Customers
   
  Para obtener una interoperabilidad máxima, las aplicaciones deben utilizar la **convertir** función escalar para asegurarse de que el resultado de una función escalar es el tipo requerido. El **convertir** función convierte datos de un tipo de datos SQL en el tipo de datos SQL especificado. La sintaxis de la **convertir** es (función)  
   
- **CONVERTIR (** *value_exp* **,** *data_type***)**  
+ **CONVERTIR (** *value_exp* **,** *data_type ***)**  
   
  donde *value_exp* es un nombre de columna, el resultado de otra función escalar o un valor literal, y *data_type* es una palabra clave que coincida con el **#define** nombre utilizado por un Identificador de tipo de datos SQL tal como se define en [tipos de datos de apéndice D:](../../../odbc/reference/appendixes/appendix-d-data-types.md). Por ejemplo, la siguiente instrucción SQL utiliza el **convertir** función para asegurarse de que el resultado de la **CURDATE** función es una fecha, en lugar de una marca de tiempo o caracteres de datos:  
   

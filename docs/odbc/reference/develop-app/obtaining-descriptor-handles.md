@@ -2,7 +2,7 @@
 title: Obtener el Descriptor controla | Documentos de Microsoft
 ms.custom: ''
 ms.date: 01/19/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: drivers
 ms.service: ''
 ms.component: odbc
@@ -18,13 +18,13 @@ ms.assetid: 936f983f-c7e9-43f3-97ea-dd4b1bbf4654
 caps.latest.revision: 5
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 921d3e9bc76ff49b35b58d3b519a4adcc227d241
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: f66fb64b8d54e2b620779e6548e9ff4a965d31ef
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="obtaining-descriptor-handles"></a>Obtener el Descriptor controla
 Una aplicación obtiene el identificador de cualquier descriptor asignado explícitamente como un argumento de salida de la llamada a **SQLAllocHandle**. Se obtiene el identificador de un descriptor asignado implícitamente mediante una llamada a **SQLGetStmtAttr**.

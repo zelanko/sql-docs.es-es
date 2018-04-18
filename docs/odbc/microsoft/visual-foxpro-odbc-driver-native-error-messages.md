@@ -1,31 +1,32 @@
 ---
 title: Mensajes de Error nativo de Visual FoxPro ODBC Driver | Documentos de Microsoft
-ms.custom: 
+ms.custom: ''
 ms.date: 01/19/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: drivers
-ms.service: 
+ms.service: ''
 ms.component: odbc
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: drivers
-ms.tgt_pltfrm: 
+ms.technology:
+- drivers
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - error messages [ODBC], Visual FoxPro ODBC driver
 - Visual FoxPro ODBC driver [ODBC], error messages
 - FoxPro ODBC driver [ODBC], error messages
 ms.assetid: 7b2622e8-ccee-4853-9171-4fb10de0461d
-caps.latest.revision: "6"
+caps.latest.revision: 6
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 9bc0b106b88eee6335514723aa083aef44bd5b66
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: 2ea42345439cfba41cc6c22788f76307ecab0876
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="visual-foxpro-odbc-driver-native-error-messages"></a>Mensajes de Error nativo de controlador ODBC de Visual FoxPro
 Las tablas siguientes muestran mensajes de error nativos para el controlador ODBC de Visual FoxPro.  
@@ -108,7 +109,7 @@ Las tablas siguientes muestran mensajes de error nativos para el controlador ODB
 |206|Definición de macro recursiva.|  
 |209|Línea es demasiado larga.|  
 |210|Permite el anidamiento de DO que se excedió el nivel.|  
-|211|IF &#124; ELSE &#124; Instrucción ENDIF es que faltan.|  
+|211|IF &#124; ELSE &#124; instrucción ENDIF es que faltan.|  
 |212|La estructura de anidamiento es demasiado profunda.|  
 |213|Hay una palabra clave que falta en la para... ENDFOR o DO CASE... Estructura del comando ENDCASE.|  
 |219|El comando contiene frase o palabra clave no reconocida.|  

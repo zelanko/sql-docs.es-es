@@ -1,16 +1,16 @@
 ---
 title: xp_logininfo (Transact-SQL) | Documentos de Microsoft
-ms.custom: 
+ms.custom: ''
 ms.date: 06/10/2016
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine
-ms.service: 
+ms.service: ''
 ms.component: system-stored-procedures
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - xp_logininfo_TSQL
@@ -20,16 +20,16 @@ dev_langs:
 helpviewer_keywords:
 - xp_logininfo
 ms.assetid: ee7162b5-e11f-4a0e-a09c-1878814dbbbd
-caps.latest.revision: 
+caps.latest.revision: 32
 author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: b77eb07126cc739908713d8172695db9098d20d9
-ms.sourcegitcommit: 9fbe5403e902eb996bab0b1285cdade281c1cb16
+ms.openlocfilehash: eba6f4d759844c9ac7e48f8ffccc9888fbf81b95
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/27/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="xplogininfo-transact-sql"></a>xp_logininfo (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -52,7 +52,7 @@ xp_logininfo [ [ @acctname = ] 'account_name' ]
  Es el nombre de un usuario o grupo de Windows al que se ha concedido acceso a [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. *account_name* es **sysname**, su valor predeterminado es null. Si *account_name* no se especifica, todos los grupos de Windows y los usuarios de Windows que se han explícitamente permiso de inicio de sesión se notifican. *account_name* deben ser nombres completos. Por ejemplo, 'ADVWKS4\macraes' o 'BUILTIN\Administrators'.  
   
  **'all'** | **"miembros"**  
- Especifica si se presenta información de todas las rutas de acceso a permisos de la cuenta o si se presenta información de los miembros del grupo de Windows. **@option**es **varchar (10)**, su valor predeterminado es null. A menos que **todos los** se especifica, se muestra la primera ruta de permisos.  
+ Especifica si se presenta información de todas las rutas de acceso a permisos de la cuenta o si se presenta información de los miembros del grupo de Windows. **@option** es **varchar (10)**, su valor predeterminado es null. A menos que **todos los** se especifica, se muestra la primera ruta de permisos.  
   
  [  **@privilege =** ] *variable_name*  
  Es un parámetro de salida que devuelve el nivel de privilegio de la cuenta de Windows especificada. *variable_name* es **varchar (10)**, su valor predeterminado es 'Not wanted'. El nivel de privilegio devuelto es **usuario**, **administración**, o **null**.  
@@ -67,9 +67,9 @@ xp_logininfo [ [ @acctname = ] 'account_name' ]
   
 |Nombre de columna|Tipo de datos|Description|  
 |-----------------|---------------|-----------------|  
-|**nombre de cuenta**|**sysname**|Nombre completo de la cuenta de Windows.|  
-|**tipo**|**Char (8)**|Tipo de cuenta de Windows. Los valores válidos son **usuario** o **grupo**.|  
-|**con privilegios**|**Char (9)**|Privilegio de acceso para [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Los valores válidos son **administración**, **usuario**, o **null**.|  
+|**Nombre de cuenta**|**sysname**|Nombre completo de la cuenta de Windows.|  
+|**Tipo**|**Char (8)**|Tipo de cuenta de Windows. Los valores válidos son **usuario** o **grupo**.|  
+|**con privilegios**|**char(9)**|Privilegio de acceso para [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Los valores válidos son **administración**, **usuario**, o **null**.|  
 |**nombre de inicio de sesión asignado**|**sysname**|Para las cuentas de usuario que tienen privilegios de usuario, **asigna el nombre de inicio de sesión** muestra el nombre de inicio de sesión asignado que [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] intenta usar al iniciar sesión con esta cuenta mediante el uso de las reglas de asociación con el nombre de dominio agregado antes del nombre.|  
 |**ruta de acceso del permiso**|**sysname**|Pertenencia al grupo que permite que la cuenta tenga acceso.|  
   
@@ -99,6 +99,6 @@ EXEC xp_logininfo 'BUILTIN\Administrators';
  [sp_grantlogin &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-grantlogin-transact-sql.md)   
  [sp_revokelogin &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-revokelogin-transact-sql.md)   
  [Procedimientos almacenados del sistema &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)   
- [Extendidos generales procedimientos almacenados &#40; Transact-SQL &#41;](../../relational-databases/system-stored-procedures/general-extended-stored-procedures-transact-sql.md)  
+ [Procedimientos almacenados extendidos generales &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/general-extended-stored-procedures-transact-sql.md)  
   
   

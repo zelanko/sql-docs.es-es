@@ -1,16 +1,16 @@
 ---
-title: sys.fn_virtualfilestats (Transact-SQL) | Microsoft Docs
-ms.custom: 
+title: Sys.fn_virtualfilestats (Transact-SQL) | Documentos de Microsoft
+ms.custom: ''
 ms.date: 08/16/2016
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine, sql-database
-ms.service: 
+ms.service: ''
 ms.component: system-functions
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - fn_virtualfilestats_TSQL
@@ -23,16 +23,17 @@ helpviewer_keywords:
 - sys.fn_virtualfilestats function
 - statistical information [SQL Server], I/O
 ms.assetid: 96b28abb-b059-48db-be2b-d60fe127f6aa
-caps.latest.revision: 
+caps.latest.revision: 29
 author: rothja
 ms.author: jroth
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 19ef497fad4032f1e0bdb0b40c2f2a850ad40cdf
-ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
+monikerRange: = azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions
+ms.openlocfilehash: e49517833bb4869ae3eb72f078207e68caa09e98
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/09/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="sysfnvirtualfilestats-transact-sql"></a>sys.fn_virtualfilestats (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -49,10 +50,10 @@ fn_virtualfilestats ( { database_id | NULL } , { file_id | NULL } )
 ```  
   
 ## <a name="arguments"></a>Argumentos  
- *database_id* | NULL  
- Es el identificador de la base de datos. *database_id* es **int**, no tiene ningún valor predeterminado. Especifique NULL para devolver información de todas las bases de datos en la instancia de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
+ *database_id* | ES NULL  
+ Es el identificador de la base de datos. *database_id* es de tipo **int** y no tiene ningún valor predeterminado. Especifique NULL para devolver información de todas las bases de datos en la instancia de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
- *file_id* | NULL  
+ *file_ID* | ES NULL  
  Identificador del archivo. *file_ID* es **int**, no tiene ningún valor predeterminado. Especifique NULL para devolver información de todos los archivos de la base de datos.  
   
 ## <a name="table-returned"></a>Tabla devuelta  
@@ -61,7 +62,7 @@ fn_virtualfilestats ( { database_id | NULL } , { file_id | NULL } )
 |-----------------|---------------|-----------------|  
 |**DbId**|**smallint**|Id. de la base de datos.|  
 |**FileId**|**smallint**|Identificador de archivo.|  
-|**TimeStamp**|**bigint**|Marca de tiempo de la base de datos en la que se obtuvieron los datos. **int** en las versiones anteriores [!INCLUDE[ssSQL15_md](../../includes/sssql15-md.md)]. |  
+|**marca de tiempo**|**bigint**|Marca de tiempo de la base de datos en la que se obtuvieron los datos. **int** en las versiones anteriores [!INCLUDE[ssSQL15_md](../../includes/sssql15-md.md)]. |  
 |**NumberReads**|**bigint**|Número de operaciones de lectura realizadas en el archivo.|  
 |**BytesRead**|**bigint**|Número de bytes leídos emitidos en el archivo.|  
 |**IoStallReadMS**|**bigint**|Tiempo total, en milisegundos, que los usuarios han esperado para que finalicen las E/S de lectura en el archivo.|  

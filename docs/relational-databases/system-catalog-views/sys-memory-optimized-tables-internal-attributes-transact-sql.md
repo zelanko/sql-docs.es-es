@@ -1,16 +1,16 @@
 ---
-title: sys.memory_optimized_tables_internal_attributes (Transact-SQL) | Microsoft Docs
-ms.custom: 
+title: Sys.memory_optimized_tables_internal_attributes (Transact-SQL) | Documentos de Microsoft
+ms.custom: ''
 ms.date: 03/07/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine, sql-database
-ms.service: 
+ms.service: ''
 ms.component: system-catalog-views
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - sys.memory_optimized_tables_internal_attributes
@@ -22,16 +22,17 @@ dev_langs:
 helpviewer_keywords:
 - sys.memory_optimized_tables_internal_attributes catalog view
 ms.assetid: 78ef5807-0504-4de8-9a01-ede6c03c7ff1
-caps.latest.revision: 
+caps.latest.revision: 13
 author: jodebrui
 ms.author: jodebrui
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 97bc9da007e21fd6f686795776b9d96ab53b3c77
-ms.sourcegitcommit: c556eaf60a49af7025db35b7aa14beb76a8158c5
+monikerRange: = azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions
+ms.openlocfilehash: 89184c98512dcd4f4aeadc86ac4cfc8ccaff0ef7
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/03/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="sysmemoryoptimizedtablesinternalattributes-transact-sql"></a>sys.memory_optimized_tables_internal_attributes (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]
@@ -42,7 +43,7 @@ Contiene una fila para cada tabla interna optimizada para memoria que se usa par
 | :------ |:----------| :-----|
 |object_id  |**int**|       Identificador de la tabla de usuario. Las tablas internas optimizadas para memoria que existen para admitir una tabla de usuario (como almacenamiento no consecutivo o filas eliminadas, en el caso de las combinaciones de Hk/almacén de columnas) tienen el mismo valor object_id como principal. |
 |xtp_object_id  |**bigint**|    Identificador de objeto de OLTP en memoria que corresponde a la tabla interna optimizada para memoria que se usa para admitir la tabla de usuario. Es un identificador único dentro de la base de datos y puede cambiar a lo largo de la duración del objeto. 
-|tipo|  **int** |   Tipo de tabla interna.<br/><br/> 0 => DELETED_ROWS_TABLE <br/> 1 => USER_TABLE <br/> 2 => DICTIONARIES_TABLE<br/>3 => SEGMENTS_TABLE<br/>4 => ROW_GROUPS_INFO_TABLE<br/>5 => INTERNAL OFF-ROW DATA TABLE<br/>252 => INTERNAL_TEMPORAL_HISTORY_TABLE | 
+|Tipo|  **int** |   Tipo de tabla interna.<br/><br/> 0 => DELETED_ROWS_TABLE <br/> 1 => USER_TABLE <br/> 2 => DICTIONARIES_TABLE<br/>3 => SEGMENTS_TABLE<br/>4 => ROW_GROUPS_INFO_TABLE<br/>5 => INTERNAL OFF-ROW DATA TABLE<br/>252 => INTERNAL_TEMPORAL_HISTORY_TABLE | 
 |type_desc| **nvarchar(60)**|   Descripción del tipo<br/><br/>DELETED_ROWS_TABLE -> Tabla interna que hace seguimiento de las filas eliminadas en un índice de almacén de columnas.<br/>USER_TABLE -> Tabla que contiene los datos de usuario de manera consecutiva.<br/>DICTIONARIES_TABLE -> Diccionarios correspondiente a un índice de almacén de columnas.<br/>SEGMENTS_TABLE -> Segmentos comprimidos de un índice de almacén de columnas.<br/>ROW_GROUPS_INFO_TABLE -> Metadatos sobre los grupos de filas comprimidas de un índice de almacén de columnas.<br/>INTERNAL OFF-ROW DATA TABLE -> Tabla interna que se usa para almacenar una columna de manera no consecutiva. En este caso, minor_id refleja el valor de column_id.<br/>INTERNAL_TEMPORAL_HISTORY_TABLE -> Final activo de la tabla de historial basada en disco. Las filas insertadas en el historial se insertan primero en esta tabla interna optimizada para memoria. Existe una tarea en segundo plano que mueve de forma asincrónica las filas desde esta tabla interna a la tabla de historial basada en disco. |
 |minor_id|  **int**|    El valor 0 indica un usuario o una tabla interna.<br/><br/>Un valor distinto de 0 indica el identificador de una columna almacenada no de manera consecutiva. Se combina con column_id en sys.columns.<br/><br/>Cada columna que se almacena de manera no consecutiva tiene una fila correspondiente en esta vista del sistema.|
 

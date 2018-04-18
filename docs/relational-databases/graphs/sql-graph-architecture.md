@@ -1,31 +1,32 @@
 ---
-title: "Arquitectura de gráfico SQL | Documentos de Microsoft"
-ms.custom: 
+title: Arquitectura de gráfico SQL | Documentos de Microsoft
+ms.custom: ''
 ms.date: 04/19/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine, sql-database
-ms.service: 
+ms.service: ''
 ms.component: graphs
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 helpviewer_keywords:
 - SQL graph
 - SQL graph, architecture
-ms.assetid: 
-caps.latest.revision: 
+ms.assetid: ''
+caps.latest.revision: 1
 author: shkale-msft
 ms.author: shkale
 manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 887ac78e70d529c404ee2ed3088f088ed53e4a54
-ms.sourcegitcommit: 0d904c23663cebafc48609671156c5ccd8521315
+monikerRange: = azuresqldb-current || >= sql-server-2017 || = sqlallproducts-allversions
+ms.openlocfilehash: 40a1cf05c5c17be3c11d25cd5e8792eb504c2fa4
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/19/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="sql-graph-architecture"></a>Arquitectura de gráfico SQL  
 [!INCLUDE[tsql-appliesto-ss2017-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2017-asdb-xxxx-xxx-md.md)]
@@ -106,16 +107,16 @@ Columnas implícitas en una tabla de nodo
 |Nombre de la columna    |Tipo de datos  |is_hidden  |Comentario  |
 |---  |---|---|---  |
 |graph_id_\<hex_string> |bigint |1  |columna de graph_id interno  |
-|$node_id_\<hex_string> |NVARCHAR   |0  |Columna de Id. de nodo externo  |
+|$node_id_\<cadena_hex > |NVARCHAR   |0  |Columna de Id. de nodo externo  |
 
 Columnas implícitas en una tabla irregular  
 |Nombre de la columna    |Tipo de datos  |is_hidden  |Comentario  |
 |---  |---|---|---  |
 |graph_id_\<hex_string> |bigint |1  |columna de graph_id interno  |
-|$edge_id_\<hex_string> |NVARCHAR   |0  |columna de Id. de borde externo  |
+|$edge_id_\<cadena_hex > |NVARCHAR   |0  |columna de Id. de borde externo  |
 |from_obj_id_\<hex_string>  |INT    |1  |interno de Id. de objeto de nodo  |
-|from_id_\<hex_string>  |bigint |1  |Interno de nodo graph_id  |
-|$from_id_\<hex_string> |NVARCHAR   |0  |desde Id. de nodo  |
+|from_id_\<cadena_hex >  |bigint |1  |Interno de nodo graph_id  |
+|$from_id_\<cadena_hex > |NVARCHAR   |0  |desde Id. de nodo  |
 |to_obj_id_\<hex_string>    |INT    |1  |Id. de objeto de nodo interno  |
 |to_id_\<hex_string>    |bigint |1  |Nodo graph_id interno  |
 |$to_id_\<hex_string>   |NVARCHAR   |0  |fuera del Id. de nodo  |
@@ -159,7 +160,7 @@ Obtenga información acerca de la [!INCLUDE[tsql-md](../../includes/tsql-md.md)]
 |Tarea   |Tema relacionado  |Notas
 |---  |---  |---  |
 |SELECT |[SELECT &#40;Transact-SQL&#41;](../../t-sql/queries/select-transact-sql.md)|Nodos y bordes se almacenan internamente como tablas, por lo tanto, admite la mayoría de las operaciones admitidas en una tabla de SQL Server o base de datos de SQL Azure en las tablas de nodo y de borde  |
-|MATCH  | [MATCH &#40;Transact-SQL&#41;](../../t-sql/queries/match-sql-graph.md)|COINCIDENCIA integrados se introdujeron para admitir la coincidencia de patrones y recorrido a través del gráfico.  |
+|MATCH  | [COINCIDENCIA &#40;Transact-SQL&#41;](../../t-sql/queries/match-sql-graph.md)|COINCIDENCIA integrados se introdujeron para admitir la coincidencia de patrones y recorrido a través del gráfico.  |
 
 
 

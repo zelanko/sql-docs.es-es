@@ -1,15 +1,16 @@
 ---
 title: Ejecutar coloca instrucciones Update y Delete | Documentos de Microsoft
-ms.custom: 
+ms.custom: ''
 ms.date: 01/19/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: drivers
-ms.service: 
+ms.service: ''
 ms.component: odbc
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: drivers
-ms.tgt_pltfrm: 
+ms.technology:
+- drivers
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - positioned deletes [ODBC]
@@ -17,16 +18,16 @@ helpviewer_keywords:
 - positioned updates [ODBC]
 - ODBC cursor library [ODBC], positioned update or delete
 ms.assetid: 1d64f309-2a6e-4ad1-a6b5-e81145549c56
-caps.latest.revision: "10"
+caps.latest.revision: 10
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: c201b69b2f4a756233c65ad1a1f2730b04e3d79f
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: f70799f24c2fdff30bdcbe104a786e2355889bc4
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="executing-positioned-update-and-delete-statements"></a>Ejecutar instrucciones de eliminación y actualización posicionada
 > [!IMPORTANT]  
@@ -40,9 +41,9 @@ ms.lasthandoff: 12/21/2017
   
      **ACTUALIZACIÓN** *nombre de la tabla*  
   
-     **ESTABLECER** *identificador de la columna*  **=**  {*expresión* &#124; **NULL**}  
+     **ESTABLECER** *identificador de la columna* **=** {*expresión* &#124; **NULL**}  
   
-     [**,** *identificador de la columna*  **=**  {*expresión* &#124; **NULL**}]  
+     [**,** *identificador de la columna* **=** {*expresión* &#124; **NULL**}]  
   
      **WHERE CURRENT OF** *nombre del cursor*  
   

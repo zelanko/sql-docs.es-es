@@ -1,16 +1,16 @@
 ---
 title: sp_replmonitorhelpsubscription (Transact-SQL) | Documentos de Microsoft
-ms.custom: 
+ms.custom: ''
 ms.date: 03/04/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine
-ms.service: 
+ms.service: ''
 ms.component: system-stored-procedures
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - replication
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 applies_to:
 - SQL Server
@@ -20,16 +20,16 @@ f1_keywords:
 helpviewer_keywords:
 - sp_replmonitorhelpsubscription
 ms.assetid: a681b2db-c82d-4624-a10c-396afb0ac42f
-caps.latest.revision: 
+caps.latest.revision: 32
 author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 24254591967a08df8a46446e485af1be5760c862
-ms.sourcegitcommit: 45e4efb7aa828578fe9eb7743a1a3526da719555
+ms.openlocfilehash: 44fccedae1010ec6b79268552a990c88ba5975a3
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="spreplmonitorhelpsubscription-transact-sql"></a>sp_replmonitorhelpsubscription (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -53,29 +53,29 @@ sp_replmonitorhelpsubscription [ @publisher = ] 'publisher'
 ```  
   
 ## <a name="arguments"></a>Argumentos  
- [  **@publisher**  =] **'***publisher***'**  
+ [ **@publisher** =] **'***publisher***'**  
  Es el nombre del publicador cuyo estado se está supervisando. *Publisher* es **sysname**, su valor predeterminado es null. Si **null**, se devuelve información sobre todos los publicadores que utilizan el distribuidor.  
   
- [  **@publisher_db**  =] **'***publisher_db***'**  
+ [ **@publisher_db** = ] **'***publisher_db***'**  
  Es el nombre de la base de datos publicada. *publisher_db* es **sysname**, su valor predeterminado es null. Si es NULL, se devuelve información sobre todas las bases de datos publicadas en el publicador.  
   
- [  **@publication**  =] **'***publicación***'**  
+ [ **@publication** =] **'***publicación***'**  
  Es el nombre de la publicación que se está supervisando. *publicación* es **sysname**, su valor predeterminado es null.  
   
- [  **@publication_type**  =] *publication_type*  
+ [ **@publication_type** =] *publication_type*  
  Es el tipo de publicación. *publication_type* es **int**, y puede tener uno de estos valores.  
   
-|Valor|Descripción|  
+|Value|Descripción|  
 |-----------|-----------------|  
 |**0**|Publicación transaccional.|  
 |**1**|Publicación de instantáneas.|  
 |**2**|Publicación de combinación.|  
 |NULL (predeterminado)|La replicación intenta determinar el tipo de publicación.|  
   
- [  **@mode**  =] *modo*  
+ [ **@mode** =] *modo*  
  Es el modo de filtrado que se va a utilizar al devolver información sobre la supervisión de la suscripción. *modo* es **int**, y puede tener uno de estos valores.  
   
-|Valor|Description|  
+|Value|Description|  
 |-----------|-----------------|  
 |**0** (valor predeterminado)|Devuelve todas las suscripciones.|  
 |**1**|Solo devuelve las suscripciones con errores.|  
@@ -86,11 +86,11 @@ sp_replmonitorhelpsubscription [ @publisher = ] 'publisher'
 |**6**|Solo devuelve las suscripciones que se están sincronizando en ese momento.|  
 |**7**|Solo devuelve las suscripciones que no se están sincronizando en ese momento.|  
   
- [  **@topnum**  =] *topnum*  
+ [ **@topnum** =] *topnum*  
  Restringe el conjunto de resultados únicamente al número especificado de suscripciones situadas en la parte superior de los datos devueltos. *topnum* es **int**, no tiene ningún valor predeterminado.  
   
- [  **@exclude_anonymous**  =] *exclude_anonymous*  
- Indica si las suscripciones de extracción anónimas se excluyen del conjunto de resultados. *exclude_anonymous* es **bits**, su valor predeterminado es **0**; el valor de **1** significa que las suscripciones anónimas se excluyen y un valor de  **0** significa que se incluyen.  
+ [ **@exclude_anonymous** =] *exclude_anonymous*  
+ Indica si las suscripciones de extracción anónimas se excluyen del conjunto de resultados. *exclude_anonymous* es **bits**, su valor predeterminado es **0**; el valor de **1** significa que las suscripciones anónimas se excluyen y un valor de **0**  significa que se incluyen.  
   
  [  **@refreshpolicy=** ] *refreshpolicy*  
  Exclusivamente para uso interno.  
@@ -104,10 +104,10 @@ sp_replmonitorhelpsubscription [ @publisher = ] 'publisher'
 |**suscriptor**|**sysname**|Es el nombre del suscriptor.|  
 |**subscriber_db**|**sysname**|Es el nombre de la base de datos utilizada para la suscripción.|  
 |**publisher_db**|**sysname**|Es el nombre de la base de datos de publicación.|  
-|**publicación**|**sysname**|Es el nombre de una publicación.|  
+|**Publicación**|**sysname**|Es el nombre de una publicación.|  
 |**publication_type**|**int**|Es el tipo de publicación, que puede ser uno de estos valores:<br /><br /> **0** = publicación transaccional<br /><br /> **1** = publicación de instantáneas<br /><br /> **2** = publicación de combinación|  
-|**subtipo**|**int**|Es el tipo de suscripción, que puede ser uno de los siguientes valores:<br /><br /> **0** = inserción<br /><br /> **1** = extracción<br /><br /> **2** = anónima|  
-|**latencia**|**int**|La mayor latencia, en segundos, para los cambios de datos propagados por los agentes de distribución o de registro del LOG para una publicación transaccional.|  
+|**Subtipo**|**int**|Es el tipo de suscripción, que puede ser uno de los siguientes valores:<br /><br /> **0** = inserción<br /><br /> **1** = extracción<br /><br /> **2** = anónima|  
+|**Latencia**|**int**|La mayor latencia, en segundos, para los cambios de datos propagados por los agentes de distribución o de registro del LOG para una publicación transaccional.|  
 |**LatencyThreshold**|**int**|La latencia máxima para la publicación transaccional por encima de la cual se genera una advertencia.|  
 |**agentnotrunning**|**int**|Es la cantidad de tiempo, en horas, durante la que el agente no se ha ejecutado.|  
 |**agentnotrunningthreshold**|**int**|Es el tiempo, en horas, que el agente no se ha ejecutado antes de que se genere una advertencia.|  

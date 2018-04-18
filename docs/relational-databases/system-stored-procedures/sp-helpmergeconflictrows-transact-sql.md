@@ -1,16 +1,16 @@
 ---
 title: sp_helpmergeconflictrows (Transact-SQL) | Documentos de Microsoft
-ms.custom: 
+ms.custom: ''
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine
-ms.service: 
+ms.service: ''
 ms.component: system-stored-procedures
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - replication
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 applies_to:
 - SQL Server
@@ -20,16 +20,16 @@ f1_keywords:
 helpviewer_keywords:
 - sp_helpmergeconflictrows
 ms.assetid: 131395a5-cb18-4795-a7ae-fa09d8ff347f
-caps.latest.revision: 
+caps.latest.revision: 21
 author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: f1658eea769d134222e673269084511ae1222057
-ms.sourcegitcommit: 45e4efb7aa828578fe9eb7743a1a3526da719555
+ms.openlocfilehash: 3972f0bee0e172d19ddc205fc9d8aa6a314d89cf
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="sphelpmergeconflictrows-transact-sql"></a>sp_helpmergeconflictrows (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -51,15 +51,15 @@ sp_helpmergeconflictrows [ [ @publication = ] 'publication' ]
   
 ## <a name="arguments"></a>Argumentos  
  [  **@publication=**] **'***publicación***'**  
- Es el nombre de la publicación. *publicación* es **sysname**, su valor predeterminado es  **%** . Si se especifica la publicación, se devuelven todos los conflictos calificados por la publicación. Por ejemplo, si la **MSmerge_conflict_Customers** tabla tiene filas de conflicto para el **WA** y **CA** publicaciones, pasando un nombre de publicación **entidad emisora de certificados**  recupera los conflictos que pertenecen a la **CA** publicación.  
+ Es el nombre de la publicación. *publicación* es **sysname**, su valor predeterminado es **%**. Si se especifica la publicación, se devuelven todos los conflictos calificados por la publicación. Por ejemplo, si la **MSmerge_conflict_Customers** tabla tiene filas de conflicto para el **WA** y **CA** publicaciones, pasando un nombre de publicación **entidad emisora de certificados**  recupera los conflictos que pertenecen a la **CA** publicación.  
   
  [  **@conflict_table=**] **'***conflict_table***'**  
- Es el nombre de la tabla de conflictos. *conflict_table* es **sysname**, no tiene ningún valor predeterminado. En [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] y versiones posteriores, las tablas de conflictos se denominan con los nombres de formato con  **MSmerge_conflict_*publicación*_*artículo***, con una tabla para cada artículo publicado.  
+ Es el nombre de la tabla de conflictos. *conflict_table* es **sysname**, no tiene ningún valor predeterminado. En [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] y versiones posteriores, las tablas de conflictos se denominan con los nombres de formato con **MSmerge_conflict_*publicación*_*artículo ***, con una tabla para cada alerta de publicada artículo.  
   
  [  **@publisher=**] **'***publisher***'**  
  Es el nombre del publicador. *Publisher* es **sysname**, su valor predeterminado es null.  
   
- [  **@publisher_db=**] **'***publisher_db***'**  
+ [ **@publisher_db=**] **'***publisher_db***'**  
  Es el nombre de la base de datos del publicador. *publisher_db* es **sysname**, su valor predeterminado es null.  
   
  [  **@logical_record_conflicts=** ] *logical_record_conflicts*  
@@ -87,7 +87,7 @@ sp_helpmergeconflictrows [ [ @publication = ] 'publication' ]
  Solo los miembros de la **sysadmin** fija de servidor sysadmin el **db_owner** función fija de base de datos y el **replmonitor** en la base de datos de distribución pueden ejecutar **sp_helpmergeconflictrows**.  
   
 ## <a name="see-also"></a>Vea también  
- [Ver información de conflictos para publicaciones de mezcla &#40; Programación de replicación Transact-SQL &#41;](../../relational-databases/replication/view-conflict-information-for-merge-publications.md)   
+ [Ver información de conflictos para publicaciones de mezcla &#40;programación de Transact-SQL de replicación&#41;](../../relational-databases/replication/view-conflict-information-for-merge-publications.md)   
  [Procedimientos almacenados de replicación &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/replication-stored-procedures-transact-sql.md)  
   
   

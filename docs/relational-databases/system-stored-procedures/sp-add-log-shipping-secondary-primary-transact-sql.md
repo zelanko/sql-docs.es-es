@@ -1,16 +1,16 @@
 ---
-title: sp_add_log_shipping_secondary_primary (Transact-SQL) | Microsoft Docs
-ms.custom: 
+title: sp_add_log_shipping_secondary_primary (Transact-SQL) | Documentos de Microsoft
+ms.custom: ''
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine
-ms.service: 
+ms.service: ''
 ms.component: system-stored-procedures
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - sp_add_log_shipping_secondary_primary_TSQL
@@ -20,16 +20,16 @@ dev_langs:
 helpviewer_keywords:
 - sp_add_log_shipping_secondary_primary
 ms.assetid: bfbbbee2-c255-4a59-a963-47d6e980a8e2
-caps.latest.revision: 
+caps.latest.revision: 19
 author: stevestein
 ms.author: sstein
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: c83d0a0062f7f7affc19e91b929bb16831a8946d
-ms.sourcegitcommit: c556eaf60a49af7025db35b7aa14beb76a8158c5
+ms.openlocfilehash: 223065b249eee4d6468e965f7626c7febe656011
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/03/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="spaddlogshippingsecondaryprimary-transact-sql"></a>sp_add_log_shipping_secondary_primary (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -60,31 +60,31 @@ sp_add_log_shipping_secondary_primary
 ```  
   
 ## <a name="arguments"></a>Argumentos  
- [ **@primary_server** = ] '*primary_server*'  
+ [ **@primary_server** =] '*primary_server*'  
  El nombre de la instancia principal de la [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] en la configuración de trasvase de registros. *primary_server* es **sysname** y no puede ser NULL.  
   
- [ **@primary_database** = ] '*primary_database*'  
+ [ **@primary_database** =] '*primary_database*'  
  Es el nombre de la base de datos en el servidor principal. *primary_database* es **sysname**, no tiene ningún valor predeterminado.  
   
- [  **@backup_source_directory**  =] '*backup_source_directory*'  
+ [ **@backup_source_directory** =] '*backup_source_directory*'  
  Directorio donde se almacenan los archivos de copia de seguridad de registros de transacciones del servidor principal. *backup_source_directory* es **nvarchar (500)** y no puede ser NULL.  
   
- [ **@backup_destination_directory** = ] '*backup_destination_directory*'  
+ [ **@backup_destination_directory** =] '*backup_destination_directory*'  
  Directorio del servidor secundario donde se copian los archivos de copia de seguridad. *backup_destination_directory* es **nvarchar (500)** y no puede ser NULL.  
   
- [ **@copy_job_name** = ] '*copy_job_name*'  
+ [ **@copy_job_name** =] '*copy_job_name*'  
  Nombre que se usará para el trabajo del agente [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] que se va a crear para copiar las copias de seguridad del registro de transacciones en el servidor secundario. *copy_job_name* es **sysname** y no puede ser NULL.  
   
- [ **@restore_job_name** = ] '*restore_job_name*'  
+ [ **@restore_job_name** =] '*restore_job_name*'  
  Es el nombre de la [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] trabajo del agente en el servidor secundario que restaura las copias de seguridad en la base de datos secundaria. *restore_job_name* es **sysname** y no puede ser NULL.  
   
- [ **@file_retention_period** = ] '*file_retention_period*'  
+ [ **@file_retention_period** =] '*file_retention_period*'  
  El período de tiempo, en minutos, que un archivo de copia de seguridad se retiene en el servidor secundario en la ruta especificada por el @backup_destination_directory parámetro antes de ser eliminados. *history_retention_period* es **int**, su valor predeterminado es null. Si no se especifica ninguno, se usará un valor de 14420.  
   
- [  **@monitor_server**  =] '*monitor_server*'  
+ [ **@monitor_server** =] '*monitor_server*'  
  Es el nombre del servidor de supervisión. *Monitor_server* es **sysname**, no tiene ningún valor predeterminado, y no puede ser NULL.  
   
- [ **@monitor_server_security_mode** = ] '*monitor_server_security_mode*'  
+ [ **@monitor_server_security_mode** =] '*monitor_server_security_mode*'  
  Modo de seguridad utilizado para conectarse al servidor de supervisión.  
   
  1 = Autenticación de Windows.  
@@ -93,19 +93,19 @@ sp_add_log_shipping_secondary_primary
   
  *monitor_server_security_mode* es **bits** y no puede ser NULL.  
   
- [ **@monitor_server_login** = ] '*monitor_server_login*'  
+ [ **@monitor_server_login** =] '*monitor_server_login*'  
  Es el nombre de usuario de la cuenta utilizada para tener acceso al servidor de supervisión.  
   
- [ **@monitor_server_password** = ] '*monitor_server_password*'  
+ [ **@monitor_server_password** =] '*monitor_server_password*'  
  Es la contraseña de la cuenta utilizada para tener acceso al servidor de supervisión.  
   
- [ **@copy_job_id** = ] '*copy_job_id*' OUTPUT  
+ [ **@copy_job_id** =] '*copy_job_id*' salida  
  Id. asociado al trabajo de copia en el servidor secundario. *copy_job_id* es **uniqueidentifier** y no puede ser NULL.  
   
- [ **@restore_job_id** = ] '*restore_job_id*' OUTPUT  
+ [ **@restore_job_id** =] '*restore_job_id*' salida  
  Id. asociado al trabajo de restauración en el servidor secundario. *restore_job_id* es **uniqueidentifier** y no puede ser NULL.  
   
- [  **@secondary_id**  =] '*secondary_id*' salida  
+ [ **@secondary_id** =] '*secondary_id*' salida  
  Id. del servidor secundario en la configuración del trasvase de registros. *secondary_id* es **uniqueidentifier** y no puede ser NULL.  
   
 ## <a name="return-code-values"></a>Valores de código de retorno  
@@ -155,7 +155,7 @@ GO
 ```  
   
 ## <a name="see-also"></a>Vea también  
- [Acerca del trasvase de registros &#40; SQL Server &#41;](../../database-engine/log-shipping/about-log-shipping-sql-server.md)   
+ [Acerca del trasvase de registros & #40; SQL Server & #41;](../../database-engine/log-shipping/about-log-shipping-sql-server.md)   
  [Procedimientos almacenados del sistema &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
   
   

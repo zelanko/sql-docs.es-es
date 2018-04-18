@@ -1,16 +1,16 @@
 ---
 title: sp_helprotect (Transact-SQL) | Documentos de Microsoft
-ms.custom: 
+ms.custom: ''
 ms.date: 03/15/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine
-ms.service: 
+ms.service: ''
 ms.component: system-stored-procedures
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - sp_helprotect
@@ -20,16 +20,16 @@ dev_langs:
 helpviewer_keywords:
 - sp_helprotect
 ms.assetid: faaa3e40-1c95-43c2-9fdc-c61a1d3cc0c3
-caps.latest.revision: 
+caps.latest.revision: 24
 author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 7c254488d42940c2f88b395082db1cd0079f79f3
-ms.sourcegitcommit: 9fbe5403e902eb996bab0b1285cdade281c1cb16
+ms.openlocfilehash: 3e0942b8d2b66a76db9e50616f63d6d7a3cc959e
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/27/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="sphelprotect-transact-sql"></a>sp_helprotect (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -55,7 +55,7 @@ sp_helprotect [ [ @name = ] 'object_statement' ]
   
 ## <a name="arguments"></a>Argumentos  
  [  **@name =** ] **'***object_statement***'**  
- Es el nombre del objeto de la base de datos actual, o una instrucción, cuyos permisos se van a presentar. *el argumento object_statement* es **nvarchar(776)**, su valor predeterminado es null, que devuelve todos los permisos de objetos e instrucciones. Si el valor es un objeto (tabla, vista, procedimiento almacenado o procedimiento almacenado extendido), tiene que ser un objeto válido de la base de datos actual. El nombre del objeto puede incluir un calificador de propietario en el formulario *propietario***.** *objeto*.  
+ Es el nombre del objeto de la base de datos actual, o una instrucción, cuyos permisos se van a presentar. *el argumento object_statement* es **nvarchar(776)**, su valor predeterminado es null, que devuelve todos los permisos de objetos e instrucciones. Si el valor es un objeto (tabla, vista, procedimiento almacenado o procedimiento almacenado extendido), tiene que ser un objeto válido de la base de datos actual. El nombre del objeto puede incluir un calificador de propietario en el formulario *propietario***.*** objeto*.  
   
  Si *object_statement* es una instrucción puede ser una instrucción CREATE.  
   
@@ -76,11 +76,11 @@ sp_helprotect [ [ @name = ] 'object_statement' ]
 |Nombre de columna|Tipo de datos|Description|  
 |-----------------|---------------|-----------------|  
 |**Propietario**|**sysname**|Nombre del propietario del objeto.|  
-|**Object**|**sysname**|Nombre del objeto.|  
-|**Receptor**|**sysname**|Nombre de la entidad de seguridad en la que se conceden los permisos.|  
+|**Objeto**|**sysname**|Nombre del objeto.|  
+|**receptor**|**sysname**|Nombre de la entidad de seguridad en la que se conceden los permisos.|  
 |**Otorgante de permisos**|**sysname**|Nombre de la entidad de seguridad que ha concedido los permisos al receptor de permisos especificado.|  
 |**ProtectType**|**nvarchar (10)**|Nombre del tipo de protección:<br /><br /> GRANT REVOKE|  
-|**Acción**|**nvarchar (60)**|Nombre del permiso. Las instrucciones válidas de permisos dependen del tipo de objeto.|  
+|**Acción**|**nvarchar(60)**|Nombre del permiso. Las instrucciones válidas de permisos dependen del tipo de objeto.|  
 |**Columna**|**sysname**|Tipo de permiso:<br /><br /> All = Permiso sobre todas las columnas actuales del objeto.<br /><br /> New = Permiso sobre las nuevas columnas del objeto que se pueden cambiar (mediante la instrucción ALTER) posteriormente.<br /><br /> All+New = Combinación de Todas y Nuevas.<br /><br /> Devuelve un punto si el tipo de permiso no se aplica a las columnas.|  
   
 ## <a name="remarks"></a>Comentarios  
@@ -143,7 +143,7 @@ EXEC sp_helprotect @name = 'CREATE TABLE';
 ```  
   
 ## <a name="see-also"></a>Vea también  
- [Seguridad almacena procedimientos &#40; Transact-SQL &#41;](../../relational-databases/system-stored-procedures/security-stored-procedures-transact-sql.md)   
+ [Procedimientos almacenados de seguridad &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/security-stored-procedures-transact-sql.md)   
  [DENY &#40;Transact-SQL&#41;](../../t-sql/statements/deny-transact-sql.md)   
  [GRANT &#40;Transact-SQL&#41;](../../t-sql/statements/grant-transact-sql.md)   
  [REVOKE &#40;Transact-SQL&#41;](../../t-sql/statements/revoke-transact-sql.md)   

@@ -1,16 +1,16 @@
 ---
 title: sp_change_subscription_properties (Transact-SQL) | Documentos de Microsoft
-ms.custom: 
+ms.custom: ''
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine
-ms.service: 
+ms.service: ''
 ms.component: system-stored-procedures
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - replication
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 applies_to:
 - SQL Server
@@ -20,16 +20,16 @@ f1_keywords:
 helpviewer_keywords:
 - sp_change_subscription_properties
 ms.assetid: cf8137f9-f346-4aa1-ae35-91a2d3c16f17
-caps.latest.revision: 
+caps.latest.revision: 29
 author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 3fe61cfc2088b75e2ab1af2c457073ad723dd7f2
-ms.sourcegitcommit: 45e4efb7aa828578fe9eb7743a1a3526da719555
+ms.openlocfilehash: 42f06141f24970c2a787f9e0ddfca711a6657b8e
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="spchangesubscriptionproperties-transact-sql"></a>sp_change_subscription_properties (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -54,7 +54,7 @@ sp_change_subscription_properties [ @publisher = ] 'publisher'
  [  **@publisher=**] **'***publisher***'**  
  Es el nombre del publicador. *Publisher* es **sysname**, no tiene ningún valor predeterminado.  
   
- [  **@publisher_db=**] **'***publisher_db***'**  
+ [ **@publisher_db=**] **'***publisher_db***'**  
  Es el nombre de la base de datos del publicador. *publisher_db* es **sysname**, no tiene ningún valor predeterminado.  
   
  [  **@publication=**] **'***publicación***'**  
@@ -69,7 +69,7 @@ sp_change_subscription_properties [ @publisher = ] 'publisher'
  [  **@publication_type =** ] *publication_type*  
  Especifica el tipo de replicación de la publicación. *publication_type* es **int**, y puede tener uno de estos valores.  
   
-|Valor|Tipo de publicación|  
+|Value|Tipo de publicación|  
 |-----------|----------------------|  
 |**0**|Transaccional|  
 |**1**|Snapshot|  
@@ -78,7 +78,7 @@ sp_change_subscription_properties [ @publisher = ] 'publisher'
   
  En esta tabla se describen las propiedades de los artículos y los valores de esas propiedades.  
   
-|Propiedad|Valor|Description|  
+|Propiedad|Value|Description|  
 |--------------|-----------|-----------------|  
 |**alt_snapshot_folder**||Especifica la ubicación de la carpeta alternativa de la instantánea. Si el valor es NULL, los archivos de instantáneas se toman de la ubicación predeterminada que se especifica en el publicador.|  
 |**distrib_job_login**||Inicio de sesión de la cuenta de [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows en la que se ejecuta el agente.|  
@@ -90,12 +90,12 @@ sp_change_subscription_properties [ @publisher = ] 'publisher'
 |**dts_package_name**||Especifica el nombre del paquete de Servicios de transformación de datos (DTS) de SQL Server 2000. Este valor solo puede especificarse si la publicación es transaccional o de instantáneas.|  
 |**dts_package_password**||Especifica la contraseña del paquete. *dts_package_password* es **sysname** con un valor predeterminado es NULL, que especifica que la propiedad de contraseña se debe dejar sin cambios.<br /><br /> Nota: Un paquete DTS debe tener una contraseña.<br /><br /> Este valor solo puede especificarse si la publicación es transaccional o de instantáneas.|  
 |**dts_package_location**||La ubicación donde se almacena el paquete DTS. Este valor solo puede especificarse si la publicación es transaccional o de instantáneas.|  
-|**ubicacióndeinstantáneadinámica**||Especifica la ruta de acceso a la carpeta donde se guardan los archivos de instantáneas. Este valor solo puede especificarse si la publicación es de mezcla.|  
+|**dynamic_snapshot_location**||Especifica la ruta de acceso a la carpeta donde se guardan los archivos de instantáneas. Este valor solo puede especificarse si la publicación es de mezcla.|  
 |**ftp_address**||Se conserva únicamente por compatibilidad con versiones anteriores.|  
 |**ftp_login**||Se conserva únicamente por compatibilidad con versiones anteriores.|  
 |**ftp_password**||Se conserva únicamente por compatibilidad con versiones anteriores.|  
 |**ftp_port**||Se conserva únicamente por compatibilidad con versiones anteriores.|  
-|**nombre de host**||Nombre del host utilizado al conectarse al publicador.|  
+|**Nombre de host**||Nombre del host utilizado al conectarse al publicador.|  
 |**internet_login**||Inicio de sesión que utiliza el Agente de mezcla al conectarse al servidor web que hospeda la sincronización web utilizando autenticación básica.|  
 |**internet_password**||Contraseña que el Agente de mezcla utiliza cuando se conecta al servidor web que hospeda la sincronización web a través de la autenticación básica.|  
 |**internet_security_mode**|**1**|Se utiliza la autenticación de Windows integrada para la sincronización web. Se recomienda utilizar la autenticación básica con sincronización web. Para obtener más información, vea [Configure Web Synchronization](../../relational-databases/replication/configure-web-synchronization.md) (Configurar la sincronización web).|  
@@ -109,9 +109,9 @@ sp_change_subscription_properties [ @publisher = ] 'publisher'
 |**publisher_security_mode**|**1**|Se utiliza la autenticación de Windows para la conexión con el publicador. Cambiar *publisher_security_mode* solo se admite para que las suscripciones a publicaciones de mezcla.|  
 ||**0**|Se utiliza la autenticación de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] para la conexión con el publicador.|  
 |**use_ftp**|**true**|Utiliza FTP en lugar del protocolo regular para recuperar instantáneas.|  
-||**false**|Se utiliza el protocolo habitual para recuperar instantáneas.|  
+||**False**|Se utiliza el protocolo habitual para recuperar instantáneas.|  
 |**use_web_sync**|**true**|Habilita la sincronización web.|  
-||**false**|Deshabilita la sincronización web.|  
+||**False**|Deshabilita la sincronización web.|  
 |**working_directory**||Nombre del directorio de trabajo utilizado para almacenar temporalmente archivos de datos y de esquema para la publicación cuando se utiliza el protocolo de transferencia de archivos (FTP) para transferir archivos de instantáneas.|  
   
 ## <a name="return-code-values"></a>Valores de código de retorno  
@@ -129,10 +129,10 @@ sp_change_subscription_properties [ @publisher = ] 'publisher'
   
 ## <a name="see-also"></a>Vea también  
  [Ver y modificar las propiedades de una suscripción de extracción](../../relational-databases/replication/view-and-modify-pull-subscription-properties.md)   
- [sp_addmergepullsubscription &#40; Transact-SQL &#41;](../../relational-databases/system-stored-procedures/sp-addmergepullsubscription-transact-sql.md)   
- [sp_addmergepullsubscription_agent &#40; Transact-SQL &#41;](../../relational-databases/system-stored-procedures/sp-addmergepullsubscription-agent-transact-sql.md)   
- [sp_addpullsubscription &#40; Transact-SQL &#41;](../../relational-databases/system-stored-procedures/sp-addpullsubscription-transact-sql.md)   
- [sp_addpullsubscription_agent &#40; Transact-SQL &#41;](../../relational-databases/system-stored-procedures/sp-addpullsubscription-agent-transact-sql.md)   
+ [sp_addmergepullsubscription &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-addmergepullsubscription-transact-sql.md)   
+ [sp_addmergepullsubscription_agent &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-addmergepullsubscription-agent-transact-sql.md)   
+ [sp_addpullsubscription &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-addpullsubscription-transact-sql.md)   
+ [sp_addpullsubscription_agent &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-addpullsubscription-agent-transact-sql.md)   
  [Procedimientos almacenados del sistema &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
   
   

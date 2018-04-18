@@ -1,16 +1,16 @@
 ---
 title: sp_help_jobactivity (Transact-SQL) | Documentos de Microsoft
-ms.custom: 
+ms.custom: ''
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine
-ms.service: 
+ms.service: ''
 ms.component: system-stored-procedures
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - sp_help_jobactivity_TSQL
@@ -20,16 +20,16 @@ dev_langs:
 helpviewer_keywords:
 - sp_help_jobactivity
 ms.assetid: d344864f-b4d3-46b1-8933-b81dec71f511
-caps.latest.revision: 
+caps.latest.revision: 33
 author: stevestein
 ms.author: sstein
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: a4b1b81a94f272ffed56c26f4ede9080f80527c7
-ms.sourcegitcommit: c556eaf60a49af7025db35b7aa14beb76a8158c5
+ms.openlocfilehash: db9d7a3424e94cfdd4bf3292323ec8a494ca02e7
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/03/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="sphelpjobactivity-transact-sql"></a>sp_help_jobactivity (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -56,7 +56,7 @@ sp_help_jobactivity { [ @job_id = ] job_id | [ @job_name = ] 'job_name' }
 > [!NOTE]  
 >  Cualquier *job_id* o *job_name* debe especificarse, pero no pueden especificarse ambos.  
   
- [  **@session_id**  =] *session_id*  
+ [ **@session_id** =] *session_id*  
  Identificador de sesión sobre el que se proporcionará información. *session_id* es **int**, su valor predeterminado es null.  
   
 ## <a name="return-code-values"></a>Valores de código de retorno  
@@ -88,7 +88,7 @@ sp_help_jobactivity { [ @job_id = ] job_id | [ @job_name = ] 'job_name' }
 ## <a name="remarks"></a>Comentarios  
  Este procedimiento proporciona una instantánea del estado actual de los trabajos. Los resultados devueltos representan la información disponible en el momento de procesar la solicitud.  
   
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agente crea un identificador de sesión cada vez que inicia el servicio del agente. El identificador de sesión se almacena en la tabla **msdb.dbo.syssessions**.  
+ El Agente [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] crea un Id. de sesión cada vez que se inicia el servicio del Agente. El identificador de sesión se almacena en la tabla **msdb.dbo.syssessions**.  
   
  Si no *session_id* se proporciona, se muestra información acerca de la sesión más reciente.  
   
@@ -119,6 +119,6 @@ GO
 ```  
   
 ## <a name="see-also"></a>Vea también  
- [Agente SQL Server almacena procedimientos &#40; Transact-SQL &#41;](../../relational-databases/system-stored-procedures/sql-server-agent-stored-procedures-transact-sql.md)  
+ [Procedimientos almacenados del Agente SQL Server &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sql-server-agent-stored-procedures-transact-sql.md)  
   
   

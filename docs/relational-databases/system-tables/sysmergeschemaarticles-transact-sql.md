@@ -1,16 +1,16 @@
 ---
 title: sysmergeschemaarticles (Transact-SQL) | Documentos de Microsoft
-ms.custom: 
+ms.custom: ''
 ms.date: 03/04/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine
-ms.service: 
+ms.service: ''
 ms.component: system-tables
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - replication
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 applies_to:
 - SQL Server
@@ -22,16 +22,16 @@ dev_langs:
 helpviewer_keywords:
 - sysmergeschemaarticles system table
 ms.assetid: b5085979-2f76-48e1-bf3b-765a84003dd9
-caps.latest.revision: 
+caps.latest.revision: 27
 author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 13a3104b8f457cf4c9d223630739e3cf6eb76ee8
-ms.sourcegitcommit: 45e4efb7aa828578fe9eb7743a1a3526da719555
+ms.openlocfilehash: be0e14898e488592e8c0dcdbf40b53b6e678a6a2
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="sysmergeschemaarticles-transact-sql"></a>sysmergeschemaarticles (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -41,7 +41,7 @@ ms.lasthandoff: 11/21/2017
 |Nombre de columna|Tipo de datos|Description|  
 |-----------------|---------------|-----------------|  
 |**Nombre**|**sysname**|Nombre del artículo solo de esquema de la publicación de combinación.|  
-|**tipo**|**tinyint**|Indica el tipo de artículo solo de esquema, que puede ser uno de los siguientes:<br /><br /> **0 x 20** = artículo de solo de esquema de procedimiento almacenado.<br /><br /> **0 x 40** = artículo solo de esquema de vista o un artículo de vista indizada solo de esquema.|  
+|**Tipo**|**tinyint**|Indica el tipo de artículo solo de esquema, que puede ser uno de los siguientes:<br /><br /> **0 x 20** = artículo de solo de esquema de procedimiento almacenado.<br /><br /> **0 x 40** = artículo solo de esquema de vista o un artículo de vista indizada solo de esquema.|  
 |**ObjID**|**int**|Identificador de objeto del objeto base del artículo. Puede ser el identificador de objeto de un procedimiento, una vista, una vista indizada o una función de usuario.|  
 |**artid**|**uniqueidentifier**|El identificador de artículo.|  
 |**Descripción**|**nvarchar(255)**|Descripción del artículo.|  
@@ -54,7 +54,7 @@ ms.lasthandoff: 11/21/2017
 |**destination_owner**|**sysname**|El propietario del objeto en la base de datos de suscripción, si no lo es **dbo**.|  
   
 ## <a name="see-also"></a>Vea también  
- [Tablas de replicación &#40; Transact-SQL &#41;](../../relational-databases/system-tables/replication-tables-transact-sql.md)   
+ [Tablas de replicación &#40;Transact-SQL&#41;](../../relational-databases/system-tables/replication-tables-transact-sql.md)   
  [Vistas de replicación &#40;Transact-SQL&#41;](../../relational-databases/system-views/replication-views-transact-sql.md)  
   
   

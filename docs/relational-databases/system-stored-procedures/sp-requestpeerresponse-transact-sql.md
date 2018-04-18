@@ -1,16 +1,16 @@
 ---
 title: sp_requestpeerresponse (Transact-SQL) | Documentos de Microsoft
-ms.custom: 
+ms.custom: ''
 ms.date: 03/06/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine
-ms.service: 
+ms.service: ''
 ms.component: system-stored-procedures
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - replication
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 applies_to:
 - SQL Server
@@ -20,16 +20,16 @@ f1_keywords:
 helpviewer_keywords:
 - sp_requestpeerresponse
 ms.assetid: cbe13c22-4d7d-4a36-b194-7a13ce68ef27
-caps.latest.revision: 
+caps.latest.revision: 26
 author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 2d0a4009c5a6615a000989e2d41f2902ac37535f
-ms.sourcegitcommit: 45e4efb7aa828578fe9eb7743a1a3526da719555
+ms.openlocfilehash: 339f3ddd78d506e256b995d3458ac0212e32e720
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="sprequestpeerresponse-transact-sql"></a>sp_requestpeerresponse (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -48,14 +48,14 @@ sp_requestpeerresponse [ @publication = ] 'publication'
 ```  
   
 ## <a name="arguments"></a>Argumentos  
- [  **@publication** =] **'***publicación***'**  
+ [ **@publication**=] **'***publicación***'**  
  Es el nombre de la publicación en una topología punto a punto de la que se está comprobando el estado. *publicación* es **sysname**, no tiene ningún valor predeterminado.  
   
- [  **@description** =] **'***descripción***'**  
+ [ **@description**=] **'***descripción***'**  
  Información definida por el usuario que se puede utilizar para identificar solicitudes de estado individuales. *descripción* es **nvarchar (4000)**, su valor predeterminado es null.  
   
- [  **@request_id**  =] *request_id*  
- Devuelve el identificador de la nueva solicitud. *request_id* es **int** y es un parámetro de salida. Este valor puede usarse al ejecutar [sp_helppeerresponses &#40; Transact-SQL &#41; ](../../relational-databases/system-stored-procedures/sp-helppeerresponses-transact-sql.md) para ver todas las respuestas a una solicitud de estado.  
+ [ **@request_id** =] *request_id*  
+ Devuelve el identificador de la nueva solicitud. *request_id* es **int** y es un parámetro de salida. Este valor puede usarse al ejecutar [sp_helppeerresponses &#40;Transact-SQL&#41; ](../../relational-databases/system-stored-procedures/sp-helppeerresponses-transact-sql.md) para ver todas las respuestas a una solicitud de estado.  
   
 ## <a name="return-code-values"></a>Valores de código de retorno  
  **0** (correcto) o **1** (error)  
@@ -71,7 +71,7 @@ sp_requestpeerresponse [ @publication = ] 'publication'
  Solo los miembros de la **sysadmin** rol fijo de servidor o el **db_owner** rol fijo de base de datos puede ejecutar **sp_requestpeerresponse**.  
   
 ## <a name="see-also"></a>Vea también  
- [sp_deletepeerrequesthistory &#40; Transact-SQL &#41;](../../relational-databases/system-stored-procedures/sp-deletepeerrequesthistory-transact-sql.md)   
- [sp_helppeerrequests &#40; Transact-SQL &#41;](../../relational-databases/system-stored-procedures/sp-helppeerrequests-transact-sql.md)  
+ [sp_deletepeerrequesthistory &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-deletepeerrequesthistory-transact-sql.md)   
+ [sp_helppeerrequests &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-helppeerrequests-transact-sql.md)  
   
   

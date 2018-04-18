@@ -1,8 +1,8 @@
 ---
-title: sys.dm_os_memory_objects (Transact-SQL) | Microsoft Docs
+title: Sys.dm_os_memory_objects (Transact-SQL) | Documentos de Microsoft
 ms.custom: ''
 ms.date: 03/13/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
 ms.service: ''
 ms.component: dmv's
@@ -27,11 +27,12 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: d348f0c9cf748228e9eb3a55ebf6bc04c329a19a
-ms.sourcegitcommit: 8b332c12850c283ae413e0b04b2b290ac2edb672
+monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
+ms.openlocfilehash: bc9137ae1930fab5eaf64c8936355d130bbf96e6
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/05/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="sysdmosmemoryobjects-transact-sql"></a>sys.dm_os_memory_objects (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -40,8 +41,8 @@ ms.lasthandoff: 04/05/2018
   
 |Nombre de columna|Tipo de datos|Description|  
 |-----------------|---------------|-----------------|  
-|**memory_object_address**|**varbinary(8)**|Dirección del objeto de memoria. No admite valores NULL.|  
-|**parent_address**|**varbinary(8)**|Dirección del objeto de memoria primario. Acepta valores NULL.|  
+|**memory_object_address**|**varbinary (8)**|Dirección del objeto de memoria. No admite valores NULL.|  
+|**parent_address**|**varbinary (8)**|Dirección del objeto de memoria primario. Acepta valores NULL.|  
 |**pages_allocated_count**|**int**|**Se aplica a**: desde [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] hasta [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)].<br /><br /> Número de páginas asignadas por este objeto. No admite valores NULL.|  
 |**pages_in_bytes**|**bigint**|**Se aplica a**: desde [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] hasta [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].<br /><br /> Cantidad de memoria en bytes que esta instancia del objeto de memoria asigna. No admite valores NULL.|  
 |**creation_options**|**int**|Exclusivamente para uso interno. Acepta valores NULL.|  
@@ -53,8 +54,8 @@ ms.lasthandoff: 04/05/2018
 |**max_pages_allocated_count**|**int**|**Se aplica a**: desde [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] hasta [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)].<br /><br /> Número máximo de páginas asignadas por este objeto de memoria. No admite valores NULL.|  
 |**page_size_in_bytes**|**int**|**Se aplica a**: desde [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] hasta [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].<br /><br /> Tamaño de las páginas asignadas por este objeto, en bytes. No admite valores NULL.|  
 |**max_pages_in_bytes**|**bigint**|Cantidad máxima de memoria que este objeto de memoria nunca usó. No admite valores NULL.|  
-|**page_allocator_address**|**varbinary(8)**|Dirección de memoria del asignador de la página. No admite valores NULL. Para obtener más información, consulte [sys.dm_os_memory_clerks &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-os-memory-clerks-transact-sql.md).|  
-|**creation_stack_address**|**varbinary(8)**|Exclusivamente para uso interno. Acepta valores NULL.|  
+|**page_allocator_address**|**varbinary (8)**|Dirección de memoria del asignador de la página. No admite valores NULL. Para obtener más información, consulte [sys.dm_os_memory_clerks &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-os-memory-clerks-transact-sql.md).|  
+|**creation_stack_address**|**varbinary (8)**|Exclusivamente para uso interno. Acepta valores NULL.|  
 |**sequence_num**|**int**|Exclusivamente para uso interno. Acepta valores NULL.|  
 |**partition_type**|**int**|El tipo de partición:<br /><br /> 0 - no cargas objeto de memoria<br /><br /> 1 - objeto de memoria cargas, actualmente no tienen particionada<br /><br /> 2 - objeto de memoria cargas, particionado por nodo NUMA. En un entorno con un solo nodo NUMA Esto equivale a 1.<br /><br /> 3 - objeto de memoria cargas, dividida por CPU.|  
 |**contention_factor**|**real**|Valor que especifica la contención en este objeto de memoria, con lo que significa que no hay contención de 0. El valor se actualiza cada vez que un número especificado de las asignaciones de memoria realizado reflejan contención durante ese período. Se aplica sólo a los objetos de memoria seguros para subprocesos.|  

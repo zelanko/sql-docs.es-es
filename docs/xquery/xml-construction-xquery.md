@@ -29,13 +29,13 @@ ms.assetid: a6330b74-4e52-42a4-91ca-3f440b3223cf
 caps.latest.revision: 44
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 9a3f85d368fa842f0e43eb8b0168c2d30741bfb2
-ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.openlocfilehash: 4bc059b4e7da83f69180f93a8ac4b514767b2e69
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/05/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="xml-construction-xquery"></a>Construcción de XML (XQuery)
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
@@ -553,7 +553,7 @@ test
 ### <a name="other-direct-xml-constructors"></a>Otros constructores directos de XML  
  Los constructores para el procesamiento de instrucciones y los comentarios XML utilizan la misma sintaxis que la de la construcción XML correspondiente. También se admiten los constructores calculados para nodos de texto, pero se utilizan básicamente en XML DML para construir nodos de texto.  
   
- **Tenga en cuenta** para obtener un ejemplo del uso de un constructor de nodo de texto explícito, vea el ejemplo específico de [insert &#40; XML DML &#41; ](../t-sql/xml/insert-xml-dml.md).  
+ **Tenga en cuenta** para obtener un ejemplo del uso de un constructor de nodo de texto explícito, vea el ejemplo específico de [insertar &#40;XML DML&#41;](../t-sql/xml/insert-xml-dml.md).  
   
  En la consulta siguiente, el XML construido incluye un elemento, dos atributos, un comentario y una instrucción de procesamiento. Tenga en cuenta que se utiliza una coma antes de <`FirstLocation`>, pues se está construyendo una secuencia.  
   

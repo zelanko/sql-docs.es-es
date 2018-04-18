@@ -1,16 +1,16 @@
 ---
-title: sp_refresh_log_shipping_monitor (Transact-SQL) | Microsoft Docs
-ms.custom: 
+title: sp_refresh_log_shipping_monitor (Transact-SQL) | Documentos de Microsoft
+ms.custom: ''
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine
-ms.service: 
+ms.service: ''
 ms.component: system-stored-procedures
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - sp_refresh_log_shipping_monitor
@@ -20,16 +20,16 @@ dev_langs:
 helpviewer_keywords:
 - sp_refresh_log_shipping_monitor
 ms.assetid: edefb912-31c5-4d99-9aba-06629afd0171
-caps.latest.revision: 
+caps.latest.revision: 21
 author: stevestein
 ms.author: sstein
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 7731ce78547a36284e95a43d80464c8e84ceccba
-ms.sourcegitcommit: c556eaf60a49af7025db35b7aa14beb76a8158c5
+ms.openlocfilehash: 2cda4f72387da9f35824fe4747eb31a0d5ec454d
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/03/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="sprefreshlogshippingmonitor-transact-sql"></a>sp_refresh_log_shipping_monitor (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -53,7 +53,7 @@ sp_refresh_log_shipping_monitor
  [  **@agent_id=** ] **'***agent_id***'**  
  Id. principal de la copia de seguridad o Id. secundario de la copia o restauración. *agent_id* es **uniqueidentifier** y no puede ser NULL.  
   
- [ **@agent_type=** ] **'***agent_type***'**  
+ [  **@agent_type=** ] **'***agent_type***'**  
  Es el tipo de trabajo de trasvase de registros.  
   
  0 = Copia de seguridad.  
@@ -81,7 +81,7 @@ sp_refresh_log_shipping_monitor
  Ninguno.  
   
 ## <a name="remarks"></a>Comentarios  
- **sp_refresh_log_shipping_monitor** actualiza el **log_shipping_monitor_primary**, **log_shipping_monitor_secondary**, **log_shipping_monitor_history_ detalle**, y **log_shipping_monitor_error_detail** tablas con información de sesión que ya no se han transferido. De esta manera, puede sincronizar el servidor de supervisión con el servidor primario o secundario si el monitor lleva un tiempo sin estar sincronizado. Además, puede eliminar la información del monitor en el servidor de supervisión, si así lo precisa.  
+ **sp_refresh_log_shipping_monitor** actualiza el **log_shipping_monitor_primary**, **log_shipping_monitor_secondary**, **log_shipping_monitor_history_detail** , y **log_shipping_monitor_error_detail** tablas con información de sesión que ya no se han transferido. De esta manera, puede sincronizar el servidor de supervisión con el servidor primario o secundario si el monitor lleva un tiempo sin estar sincronizado. Además, puede eliminar la información del monitor en el servidor de supervisión, si así lo precisa.  
   
  **sp_refresh_log_shipping_monitor** se debe ejecutar desde la **maestro** base de datos en el servidor principal o secundario.  
   
@@ -89,7 +89,7 @@ sp_refresh_log_shipping_monitor
  Solo los miembros de la **sysadmin** rol fijo de servidor puede ejecutar este procedimiento.  
   
 ## <a name="see-also"></a>Vea también  
- [Acerca del trasvase de registros &#40; SQL Server &#41;](../../database-engine/log-shipping/about-log-shipping-sql-server.md)   
+ [Acerca del trasvase de registros & #40; SQL Server & #41;](../../database-engine/log-shipping/about-log-shipping-sql-server.md)   
  [Procedimientos almacenados del sistema &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
   
   

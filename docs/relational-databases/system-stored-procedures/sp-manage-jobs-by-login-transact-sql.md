@@ -1,16 +1,16 @@
 ---
-title: sp_manage_jobs_by_login (Transact-SQL) | Microsoft Docs
-ms.custom: 
+title: sp_manage_jobs_by_login (Transact-SQL) | Documentos de Microsoft
+ms.custom: ''
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine
-ms.service: 
+ms.service: ''
 ms.component: system-stored-procedures
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - sp_manage_jobs_by_login
@@ -20,16 +20,16 @@ dev_langs:
 helpviewer_keywords:
 - sp_manage_jobs_by_login
 ms.assetid: 832ec15a-6e92-4eb5-8c4a-af4dba79fbaa
-caps.latest.revision: 
+caps.latest.revision: 27
 author: stevestein
 ms.author: sstein
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 2575a298f71475452dffe05b75adeaf41ac8f2fa
-ms.sourcegitcommit: c556eaf60a49af7025db35b7aa14beb76a8158c5
+ms.openlocfilehash: 93e1e2a25ef8ac06b3b60445ab6813949178dbb0
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/03/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="spmanagejobsbylogin-transact-sql"></a>sp_manage_jobs_by_login (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -52,10 +52,10 @@ sp_manage_jobs_by_login
  [  **@action=** ] **'***acción***'**  
  Acción que se va a realizar para el inicio de sesión especificado. *acción* es **varchar (10)**, no tiene ningún valor predeterminado. Cuando *acción*es **eliminar**, **sp_manage_jobs_by_login** elimina todos los trabajos que pertenecen a *current_owner_login_name*. Cuando *acción* es **REASIGNAR**, todos los trabajos se asignan a *new_owner_login_name*.  
   
- [ **@current_owner_login_name=** ] **'***current_owner_login_name***'**  
+ [  **@current_owner_login_name=** ] **'***current_owner_login_name***'**  
  Nombre de inicio de sesión del propietario del trabajo actual. *current_owner_login_name* es **sysname**, no tiene ningún valor predeterminado.  
   
- [ **@new_owner_login_name=** ] **'***new_owner_login_name***'**  
+ [  **@new_owner_login_name=** ] **'***new_owner_login_name***'**  
  Es el nombre de inicio de sesión del nuevo propietario del trabajo. Use este parámetro solo si *acción* es **REASIGNAR**. *new_owner_login_name* es **sysname**, su valor predeterminado es null.  
   
 ## <a name="return-code-values"></a>Valores de código de retorno  

@@ -1,16 +1,16 @@
 ---
 title: sp_mergemetadataretentioncleanup (Transact-SQL) | Documentos de Microsoft
-ms.custom: 
+ms.custom: ''
 ms.date: 03/03/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine
-ms.service: 
+ms.service: ''
 ms.component: system-stored-procedures
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - replication
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 applies_to:
 - SQL Server
@@ -20,16 +20,16 @@ f1_keywords:
 helpviewer_keywords:
 - sp_mergemetadataretentioncleanup
 ms.assetid: 4e8d6343-2a38-421d-a3f3-c37d437a0f88
-caps.latest.revision: 
+caps.latest.revision: 20
 author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 3f5ddc3ccb31599685dc9b41e383f29422b8b74e
-ms.sourcegitcommit: 45e4efb7aa828578fe9eb7743a1a3526da719555
+ms.openlocfilehash: 32a8e2654428569f189efd111839fbde7c6258f0
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="spmergemetadataretentioncleanup-transact-sql"></a>sp_mergemetadataretentioncleanup (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -67,7 +67,7 @@ sp_mergemetadataretentioncleanup [ [ @num_genhistory_rows = ] num_genhistory_row
 ## <a name="remarks"></a>Comentarios  
   
 > [!IMPORTANT]  
->  Si hay varias publicaciones en una base de datos y una de estas publicaciones utiliza un período de retención de publicación infinito, ejecutando **sp_mergemetadataretentioncleanup** no limpiará el seguimiento de cambios de replicación de mezcla metadatos de la base de datos. Por ese motivo, debe utilizar con cuidado la retención infinita de publicaciones. Para determinar si una publicación tiene un período de retención infinito, ejecute [sp_helpmergepublication &#40; Transact-SQL &#41; ](../../relational-databases/system-stored-procedures/sp-helpmergepublication-transact-sql.md) en el publicador y tenga en cuenta todas las publicaciones en el resultado se establecen con un valor de **0** para **retención**.  
+>  Si hay varias publicaciones en una base de datos y una de estas publicaciones utiliza un período de retención de publicación infinito, ejecutando **sp_mergemetadataretentioncleanup** no limpiará el seguimiento de cambios de replicación de mezcla metadatos de la base de datos. Por ese motivo, debe utilizar con cuidado la retención infinita de publicaciones. Para determinar si una publicación tiene un período de retención infinito, ejecute [sp_helpmergepublication &#40;Transact-SQL&#41; ](../../relational-databases/system-stored-procedures/sp-helpmergepublication-transact-sql.md) en el publicador y tenga en cuenta todas las publicaciones en el resultado se establecen con un valor de **0** para **retención**.  
   
 ## <a name="permissions"></a>Permissions  
  Solo los miembros de la **db_owner** rol fijo de base de datos o los usuarios en la lista de acceso de publicación para una base de datos publicada puede ejecutar **sp_mergemetadataretentioncleanup**.  

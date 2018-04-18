@@ -1,8 +1,8 @@
 ---
-title: sp_execute_external_script (Transact-SQL) | Microsoft Docs
+title: sp_execute_external_script (Transact-SQL) | Documentos de Microsoft
 ms.custom: ''
 ms.date: 01/22/2018
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine
 ms.service: ''
 ms.component: system-stored-procedures
@@ -22,16 +22,16 @@ dev_langs:
 helpviewer_keywords:
 - sp_execute_external_script
 ms.assetid: de4e1fcd-0e1a-4af3-97ee-d1becc7f04df
-caps.latest.revision: ''
+caps.latest.revision: 34
 author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 487b669cc7d664194cd769bde564faec9454479b
-ms.sourcegitcommit: 2e130e9f3ce8a7ffe373d7fba8b09e937c216386
+ms.openlocfilehash: b767e69b44d8303aab12a21e942e21c9a9741da4
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/28/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="spexecuteexternalscript-transact-sql"></a>sp_execute_external_script (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md.md)]
@@ -63,16 +63,16 @@ sp_execute_external_script
  @script = N'*script*'  
  Secuencia de comandos de idiomas externos especificada como una entrada literal o una variable. *secuencia de comandos* es **nvarchar (max)**.  
   
- [ @input_data_1_name = N'*input_data_1_name*' ]  
- Especifica el nombre de la variable utilizada para representar la consulta definida por @input_data_1. El tipo de datos de la variable en el script externo depende del idioma. En el caso de R, la variable de entrada es una trama de datos. En el caso de Python, la entrada debe ser tabular. *input_data_1_name* is **sysname**.  
+ [ @input_data_1_name = N'*input_data_1_name*']  
+ Especifica el nombre de la variable utilizada para representar la consulta definida por @input_data_1. El tipo de datos de la variable en el script externo depende del idioma. En el caso de R, la variable de entrada es una trama de datos. En el caso de Python, la entrada debe ser tabular. *input_data_1_name* es **sysname**.  
   
  Valor predeterminado es `InputDataSet`.  
   
- [ @input_data_1 =  N'*input_data_1*' ]  
+ [ @input_data_1 = N'*input_data_1*']  
  Especifica los datos de entrada utilizados por la secuencia de comandos externo en forma de un [!INCLUDE[tsql](../../includes/tsql-md.md)] consulta. Tipo de datos de *input_data_1* es **nvarchar (max)**.
   
- [ @output_data_1_name =  N'*output_data_1_name*' ]  
- Especifica el nombre de la variable en el script externo que contiene los datos que se devuelven a [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] tras la finalización de la llamada de procedimiento almacenado. El tipo de datos de la variable en el script externo depende del idioma. Para R, el resultado debe ser una trama de datos. Para Python, el resultado debe ser una trama de datos de pandas. *output_data_1_name* is **sysname**.  
+ [ @output_data_1_name = N'*output_data_1_name*']  
+ Especifica el nombre de la variable en el script externo que contiene los datos que se devuelven a [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] tras la finalización de la llamada de procedimiento almacenado. El tipo de datos de la variable en el script externo depende del idioma. Para R, el resultado debe ser una trama de datos. Para Python, el resultado debe ser una trama de datos de pandas. *output_data_1_name* es **sysname**.  
   
  Valor predeterminado es "OutputDataSet".  
   
@@ -129,11 +129,11 @@ Como alternativa, **conversión** la columna o el valor a un tipo compatible en 
   
 -   **timestamp**  
   
--   **datetime2**, **datetimeoffset**, **time**  
+-   **datetime2**, **datetimeoffset**, **tiempo**  
   
 -   **sql_variant**  
   
--   **text**, **image**  
+-   **texto**, **imagen**  
   
 -   **xml**  
   
@@ -255,7 +255,7 @@ Para puntuar, también puede usar la función nativa [PREDICT](../../t-sql/queri
  [Bibliotecas de R y tipos de datos de R](../../advanced-analytics/r/r-libraries-and-data-types.md)  
  [SQL Server R Services](../../advanced-analytics/r/sql-server-r-services.md)   
  [Problemas conocidos de servicios de aprendizaje de máquina SQL Server](../../advanced-analytics/known-issues-for-sql-server-machine-learning-services.md)   
- [CREATE EXTERNAL LIBRARY &#40;Transact-SQL&#41;](../../t-sql/statements/create-external-library-transact-sql.md)  
+ [Crear biblioteca externa &#40;Transact-SQL&#41;](../../t-sql/statements/create-external-library-transact-sql.md)  
  [sp_prepare &#40;Transact SQL&#41;](../../relational-databases/system-stored-procedures/sp-prepare-transact-sql.md)   
  [sp_configure &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-configure-transact-sql.md)   
  [Opción de configuración del servidor external scripts enabled](../../database-engine/configure-windows/external-scripts-enabled-server-configuration-option.md)   

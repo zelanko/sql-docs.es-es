@@ -1,8 +1,8 @@
 ---
-title: sys.dm_tran_locks (Transact-SQL) | Microsoft Docs
+title: Sys.dm_tran_locks (Transact-SQL) | Documentos de Microsoft
 ms.custom: ''
 ms.date: 03/30/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
 ms.service: ''
 ms.component: dmv's
@@ -27,11 +27,12 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: ec60197ba99cf24e0da74fd3b887b81d5cd0e44c
-ms.sourcegitcommit: 8b332c12850c283ae413e0b04b2b290ac2edb672
+monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
+ms.openlocfilehash: 5e4552d7acab5640a6e6b8210b73eff20bf963d0
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/05/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="sysdmtranlocks-transact-sql"></a>sys.dm_tran_locks (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -63,7 +64,7 @@ ms.lasthandoff: 04/05/2018
 |**request_owner_id**|**bigint**|Identificador del propietario específico de esta solicitud.<br /><br /> Si una transacción es la propietaria de la solicitud, este valor contiene el identificador de transacción<br /><br /> Cuando un objeto FileTable es el propietario de la solicitud, **request_owner_id** puede tener uno de los siguientes valores.<br /><br /> <br /><br /> -4: una objeto FileTable ha tomado un bloqueo de base de datos.<br /><br /> -3: una objeto FileTable ha tomado un bloqueo de tabla.<br /><br /> Otro valor: el valor representa un identificador de archivo. Este valor también aparece como **fcb_id** en la vista de administración dinámica [sys.dm_filestream_non_transacted_handles &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-filestream-non-transacted-handles-transact-sql.md).|  
 |**request_owner_guid**|**uniqueidentifier**|GUID del propietario específico de esta solicitud. Este valor solo se utiliza en una transacción distribuida cuando el valor corresponde al GUID del servicio MS DTC para esa transacción.|  
 |**request_owner_lockspace_id**|**nvarchar(32)**|[!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)] Este valor representa el Id. del espacio de bloqueo del solicitante. El Id. del espacio de bloqueo determina si dos solicitantes son compatibles entre sí y si pueden tener bloqueos en modos que, de otra forma, entrarían en conflicto entre sí.|  
-|**lock_owner_address**|**varbinary(8)**|Dirección de memoria de la estructura de datos interna utilizada para realizar el seguimiento de esta solicitud. Esta columna se puede combinar la con **resource_address** columna en **sys.dm_os_waiting_tasks**.|  
+|**lock_owner_address**|**varbinary (8)**|Dirección de memoria de la estructura de datos interna utilizada para realizar el seguimiento de esta solicitud. Esta columna se puede combinar la con **resource_address** columna en **sys.dm_os_waiting_tasks**.|  
 |**pdw_node_id**|**int**|**Se aplica a**: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)], [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]<br /><br /> <br /><br /> El identificador para el nodo que se encuentra en esta distribución.|  
   
 ## <a name="permissions"></a>Permissions
@@ -94,7 +95,7 @@ En [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)], requiere el `VIEW DATABASE 
   
  No es posible distinguir varios cursores que se ejecutan en una misma sesión y, por tanto, se tratan como una sola entidad.  
   
- Las transacciones distribuidas que no están asociadas a un valor de identificador de sesión son transacciones huérfanas y tienen asignado el valor de identificador de sesión -2. Para obtener más información, vea [KILL &#40; Transact-SQL &#41; ](../../t-sql/language-elements/kill-transact-sql.md).  
+ Las transacciones distribuidas que no están asociadas a un valor de identificador de sesión son transacciones huérfanas y tienen asignado el valor de identificador de sesión -2. Para obtener más información, vea [KILL & #40; Transact-SQL & #41; ](../../t-sql/language-elements/kill-transact-sql.md).  
   
 ## <a name="resource-details"></a>Detalles del recurso  
  En la tabla siguiente se enumera los recursos que están representados en el **resource_associated_entity_id** columna.  
@@ -204,19 +205,19 @@ En [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)], requiere el `VIEW DATABASE 
 |Recurso|Formato|Description|  
 |--------------|------------|-----------------|  
 |DATABASE|No aplicable|Id. de base de datos ya está disponible en la **resource_database_id** columna.|  
-|FILE|<file_id>|Id. del archivo representado por este recurso.|  
-|OBJECT|<object_id>|Id. del objeto representado por este recurso. Este objeto puede ser cualquier objeto mostrado en **sys.objects**, no solo una tabla.|  
+|FILE|< file_id >|Id. del archivo representado por este recurso.|  
+|OBJECT|< object_id >|Id. del objeto representado por este recurso. Este objeto puede ser cualquier objeto mostrado en **sys.objects**, no solo una tabla.|  
 |PAGE|<file_id>:<page_in_file>|Representa el Id. de página y de archivo de la página representada por este recurso.|  
-|KEY|<hash_value>|Representa un hash de las columnas de clave de la fila representada por este recurso.|  
+|KEY|< hash_value >|Representa un hash de las columnas de clave de la fila representada por este recurso.|  
 |EXTENT|<file_id>:<page_in_files>|Representa el Id. de página y de archivo de la extensión representada por este recurso. El Id. de extensión es el mismo que el Id. de página correspondiente a la primera página de la extensión.|  
 |RID|<file_id>:<page_in_file>:<row_on_page>|Representa el Id. de página y de fila de la fila representada por este recurso. Tenga en cuenta que si el Id. del objeto asociado es 99, este recurso representa una de las ocho zonas de página mixta en la primera página IAM de una cadena IAM.|  
-|APPLICATION|\<DbPrincipalId>:\<upto 32 characters>:(<hash_value>)|Representa el Id. de la entidad de seguridad de base de datos utilizada para asignar el ámbito de este recurso de bloqueo de aplicación. También se incluyen hasta 32 caracteres de la cadena del recurso correspondiente a este recurso de bloqueo de la aplicación. En determinados casos solo pueden mostrarse 2 caracteres porque la cadena completa ya no está disponible. Este comportamiento solo se produce en tiempo de recuperación de la base de datos para bloqueos de aplicaciones que se vuelven a adquirir como parte del proceso de recuperación. El valor hash representa un hash de la cadena de recurso completa correspondiente a este recurso de bloqueo de la aplicación.|  
+|APPLICATION|\<DbPrincipalId >:\<hasta 32 caracteres > :(< hash_value >)|Representa el Id. de la entidad de seguridad de base de datos utilizada para asignar el ámbito de este recurso de bloqueo de aplicación. También se incluyen hasta 32 caracteres de la cadena del recurso correspondiente a este recurso de bloqueo de la aplicación. En determinados casos solo pueden mostrarse 2 caracteres porque la cadena completa ya no está disponible. Este comportamiento solo se produce en tiempo de recuperación de la base de datos para bloqueos de aplicaciones que se vuelven a adquirir como parte del proceso de recuperación. El valor hash representa un hash de la cadena de recurso completa correspondiente a este recurso de bloqueo de la aplicación.|  
 |HOBT|No aplicable|Identificador de HoBt se incluye como el **resource_associated_entity_id**.|  
 |ALLOCATION_UNIT|No aplicable|Id. de unidad de asignación se incluye como el **resource_associated_entity_id**.|  
 |METADATA.ASSEMBLY|assembly_id = A|[!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]|  
 |METADATA.ASSEMBLY_CLR_NAME|$qname_id = Q|[!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]|  
 |METADATA.ASSEMBLY_TOKEN|assembly_id = A, $token_id|[!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]|  
-|METADATA.ASSYMMETRIC_KEY|asymmetric_key_id = A|[!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]|  
+|METADATOS. ASSYMMETRIC_KEY|asymmetric_key_id = A|[!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]|  
 |METADATA.AUDIT|audit_id = A|[!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]|  
 |METADATA.AUDIT_ACTIONS|device_id = D, major_id = M|[!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]|  
 |METADATA.AUDIT_SPECIFICATION|audit_specification_id = A|[!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]|  

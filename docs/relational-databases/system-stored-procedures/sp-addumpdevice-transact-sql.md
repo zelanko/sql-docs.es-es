@@ -1,16 +1,16 @@
 ---
 title: sp_addumpdevice (Transact-SQL) | Documentos de Microsoft
-ms.custom: 
+ms.custom: ''
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine
-ms.service: 
+ms.service: ''
 ms.component: system-stored-procedures
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - sp_addumpdevice_TSQL
@@ -21,16 +21,16 @@ helpviewer_keywords:
 - backup devices [SQL Server], defining
 - sp_addumpdevice
 ms.assetid: c2d2ae49-0808-46d8-8444-db69a69d0ec3
-caps.latest.revision: 
+caps.latest.revision: 49
 author: stevestein
 ms.author: sstein
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: dad0547ea803cfbf709b36f078d552435c848900
-ms.sourcegitcommit: c556eaf60a49af7025db35b7aa14beb76a8158c5
+ms.openlocfilehash: 444dbea29259eca54e815ce49c73df3986db8e11
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/03/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="spaddumpdevice-transact-sql"></a>sp_addumpdevice (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -54,13 +54,13 @@ sp_addumpdevice [ @devtype = ] 'device_type'
 ```  
   
 ## <a name="arguments"></a>Argumentos  
- [ **@devtype=** ] **'***device_type***'**  
+ [  **@devtype=** ] **'***device_type***'**  
  Es el tipo de dispositivo de copia de seguridad. *device_type* es **varchar (20)**, no tiene ningún valor predeterminado y puede ser uno de los siguientes valores.  
   
 |Value|Description|  
 |-----------|-----------------|  
 |**disk**|Archivo de disco duro que se utiliza como dispositivo de copia de seguridad.|  
-|**tape**|Todos los dispositivos de cinta admitidos por [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows.<br /><br /> Nota: La compatibilidad con dispositivos de cinta de copia de seguridad se quitará en una versión futura de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Evite utilizar esta característica en nuevos trabajos de desarrollo y tenga previsto modificar las aplicaciones que actualmente la utilizan.|  
+|**Cinta**|Todos los dispositivos de cinta admitidos por [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows.<br /><br /> Nota: La compatibilidad con dispositivos de cinta de copia de seguridad se quitará en una versión futura de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Evite utilizar esta característica en nuevos trabajos de desarrollo y tenga previsto modificar las aplicaciones que actualmente la utilizan.|  
   
  [  **@logicalname =** ] **'***nombreLógico***'**  
  Es el nombre lógico del dispositivo de copia de seguridad que se utiliza en las instrucciones BACKUP y RESTORE. *nombreLógico* es **sysname**, no tiene ningún valor predeterminado, y no puede ser NULL.  
@@ -78,7 +78,7 @@ sp_addumpdevice [ @devtype = ] 'device_type'
  [  **@cntrltype =** ] **'***tipoDeControlador***'**  
  Ha quedado obsoleto. Si se especifica, este parámetro se omite. Solo se admite para mantener la compatibilidad con versiones anteriores. Los nuevos usos de **sp_addumpdevice** debe omitir este parámetro.  
   
- [ **@devstatus =** ] **'***device_status***'**  
+ [  **@devstatus =** ] **'***device_status***'**  
  Ha quedado obsoleto. Si se especifica, este parámetro se omite. Solo se admite para mantener la compatibilidad con versiones anteriores. Los nuevos usos de **sp_addumpdevice** debe omitir este parámetro.  
   
 ## <a name="return-code-values"></a>Valores de código de retorno  

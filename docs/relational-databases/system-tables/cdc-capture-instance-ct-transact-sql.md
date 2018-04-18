@@ -1,16 +1,16 @@
 ---
 title: CDC. &lt;capture_instance&gt;_CT (Transact-SQL) | Documentos de Microsoft
-ms.custom: 
+ms.custom: ''
 ms.date: 05/01/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine
-ms.service: 
+ms.service: ''
 ms.component: system-tables
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - cdc
@@ -20,16 +20,16 @@ dev_langs:
 helpviewer_keywords:
 - cdc.<capture_instance>_CT
 ms.assetid: 979c8110-3c54-4e76-953c-777194bc9751
-caps.latest.revision: 
+caps.latest.revision: 27
 author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 53f2078f3894d5db7c398b2470b4a3625320e948
-ms.sourcegitcommit: 45e4efb7aa828578fe9eb7743a1a3526da719555
+ms.openlocfilehash: deb54a835c5c163061b371e8629b95ed0bfcdce9
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="cdcltcaptureinstancegtct-transact-sql"></a>CDC. &lt;capture_instance&gt;_CT (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -47,7 +47,7 @@ ms.lasthandoff: 11/21/2017
 |**__$seqval**|**binary(10)**|Valor de secuencia utilizado para ordenar los cambios de fila dentro de una transacción.|  
 |**__$operation**|**int**|Identifica la operación del lenguaje de manipulación de datos (DML) asociada con el cambio. Puede ser uno de los valores siguientes:<br /><br /> 1 = eliminar<br /><br /> 2 = insertar<br /><br /> 3 = actualizar (valores anteriores)<br /><br /> Los datos de columna tienen valores de fila antes de ejecutar la instrucción de actualización.<br /><br /> 4 = actualizar (valores nuevos)<br /><br /> Los datos de columna tienen valores de fila después de ejecutar la instrucción de actualización.|  
 |**__$update_mask**|**varbinary(128)**|Máscara de bits basada en los índices de columna de la tabla de cambios que identifica las columnas que cambiaron.|  
-|*\<captura de columnas de la tabla de origen >*|varía|Las columnas restantes de la tabla de cambios son las columnas de la tabla de origen que se identificaron como columnas capturadas cuando se creó la instancia de captura. Si no se especificó ninguna columna en la lista de columnas capturadas, todas las columnas en la tabla de origen se incluyen en esta tabla.|  
+|*\<columnas de la tabla de origen capturadas>*|varía|Las columnas restantes de la tabla de cambios son las columnas de la tabla de origen que se identificaron como columnas capturadas cuando se creó la instancia de captura. Si no se especificó ninguna columna en la lista de columnas capturadas, todas las columnas en la tabla de origen se incluyen en esta tabla.|  
 |**__ $command_id** |**int** |Realiza un seguimiento del orden de las operaciones dentro de una transacción. |  
   
 ## <a name="remarks"></a>Comentarios  
@@ -89,7 +89,7 @@ La `__$command_id` columna es la columna se introdujo en una actualización acum
  Para operaciones de inserción y eliminación, todos los bits de la máscara de actualización están activados. Para las operaciones de actualización, la máscara de actualización tanto en las filas de actualización antiguas como nuevas se modificará para reflejar las columnas que cambiaron durante la actualización.  
   
 ## <a name="see-also"></a>Vea también  
- [Sys.sp_cdc_enable_table &#40; Transact-SQL &#41;](../../relational-databases/system-stored-procedures/sys-sp-cdc-enable-table-transact-sql.md)   
- [Sys.sp_cdc_get_ddl_history &#40; Transact-SQL &#41;](../../relational-databases/system-stored-procedures/sys-sp-cdc-get-ddl-history-transact-sql.md)  
+ [sys.sp_cdc_enable_table &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sys-sp-cdc-enable-table-transact-sql.md)   
+ [Sys.sp_cdc_get_ddl_history &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sys-sp-cdc-get-ddl-history-transact-sql.md)  
   
   

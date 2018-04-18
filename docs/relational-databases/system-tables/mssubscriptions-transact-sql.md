@@ -1,16 +1,16 @@
 ---
 title: MSsubscriptions (Transact-SQL) | Documentos de Microsoft
-ms.custom: 
+ms.custom: ''
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine
-ms.service: 
+ms.service: ''
 ms.component: system-tables
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - replication
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 applies_to:
 - SQL Server
@@ -22,16 +22,16 @@ dev_langs:
 helpviewer_keywords:
 - MSsubscriptions system table
 ms.assetid: b7e8301d-d115-41f6-8d4f-e0d25f453b25
-caps.latest.revision: 
+caps.latest.revision: 18
 author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 6e37aa7c4c227739fe528abe4a2b067fe51a4ba4
-ms.sourcegitcommit: 45e4efb7aa828578fe9eb7743a1a3526da719555
+ms.openlocfilehash: 65eec6696b85d904d61767c486d6ab42ba68a1ef
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="mssubscriptions-transact-sql"></a>MSsubscriptions (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -41,7 +41,7 @@ ms.lasthandoff: 11/21/2017
 |Nombre de columna|Tipo de datos|Description|  
 |-----------------|---------------|-----------------|  
 |**publisher_database_id**|**int**|El Id. de la base de datos del publicador.|  
-|**iddeeditor**|**smallint**|El identificador del publicador.|  
+|**publisher_id**|**smallint**|El identificador del publicador.|  
 |**publisher_db**|**sysname**|Nombre de la base de datos del publicador.|  
 |**publication_id**|**int**|Id. de la publicación.|  
 |**article_id**|**int**|Id. del artículo.|  
@@ -54,7 +54,7 @@ ms.lasthandoff: 11/21/2017
 |**snapshot_seqno_flag**|**bit**|Indica que el origen del número de secuencia de transacción de instantánea, donde un valor de **1** significa que **subscription_seqno** es el número de secuencia de instantánea.|  
 |**independent_agent**|**bit**|Indica si hay un agente de distribución independiente para esta publicación.|  
 |**subscription_time**|**datetime**|Exclusivamente para uso interno.|  
-|**argumento loopback_detection**|**bit**|Se aplica a las suscripciones que forman parte de una topología de replicación transaccional bidireccional. La detección de bucles de retorno determina si el Agente de distribución envía las transacciones originadas en el suscriptor al mismo suscriptor:<br /><br /> **1** = no no volver a enviar.<br /><br /> **0** = las envía.<br /><br /> Nota: Esta columna solo se admite para mantener la compatibilidad con la funcionalidad de replicación bidireccional en [!INCLUDE[ssVersion2000](../../includes/ssversion2000-md.md)]. Para las versiones posteriores de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], se debe utilizar la replicación punto a punto en su lugar. Para obtener más información, consulte [Peer-to-Peer Transactional Replication](../../relational-databases/replication/transactional/peer-to-peer-transactional-replication.md).|  
+|**loopback_detection**|**bit**|Se aplica a las suscripciones que forman parte de una topología de replicación transaccional bidireccional. La detección de bucles de retorno determina si el Agente de distribución envía las transacciones originadas en el suscriptor al mismo suscriptor:<br /><br /> **1** = no no volver a enviar.<br /><br /> **0** = las envía.<br /><br /> Nota: Esta columna solo se admite para mantener la compatibilidad con la funcionalidad de replicación bidireccional en [!INCLUDE[ssVersion2000](../../includes/ssversion2000-md.md)]. Para las versiones posteriores de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], se debe utilizar la replicación punto a punto en su lugar. Para obtener más información, consulte [Peer-to-Peer Transactional Replication](../../relational-databases/replication/transactional/peer-to-peer-transactional-replication.md).|  
 |**agent_id**|**int**|Id. del agente.|  
 |**update_mode**|**tinyint**|Tipo de actualización.|  
 |**publisher_seqno**|**varbinary (16)**|Número de secuencia de la transacción en el publicador de esta suscripción.|  
@@ -63,6 +63,6 @@ ms.lasthandoff: 11/21/2017
 ## <a name="see-also"></a>Vea también  
  [Tablas de replicación](../../relational-databases/system-tables/replication-tables-transact-sql.md)   
  [Vistas de replicación](../../relational-databases/system-views/replication-views-transact-sql.md)   
- [sp_helpsubscription &#40; Transact-SQL &#41;](../../relational-databases/system-stored-procedures/sp-helpsubscription-transact-sql.md)  
+ [sp_helpsubscription &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-helpsubscription-transact-sql.md)  
   
   

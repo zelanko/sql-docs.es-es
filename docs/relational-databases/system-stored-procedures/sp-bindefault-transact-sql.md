@@ -1,8 +1,8 @@
 ---
-title: sp_bindefault (Transact-SQL) | Microsoft Docs
+title: sp_bindefault (Transact-SQL) | Documentos de Microsoft
 ms.custom: ''
 ms.date: 11/25/2015
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine, sql-database
 ms.service: ''
 ms.component: system-stored-procedures
@@ -25,11 +25,12 @@ author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: b3e23435d6c0a2db3809722856b9daa6b2d66505
-ms.sourcegitcommit: d6b1695c8cbc70279b7d85ec4dfb66a4271cdb10
+monikerRange: = azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions
+ms.openlocfilehash: 7a01ab44ac03ae5782f5983e781d21c9d32f8f0b
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/10/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="spbindefault-transact-sql"></a>sp_bindefault (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -51,10 +52,10 @@ sp_bindefault [ @defname = ] 'default' ,
 ```  
   
 ## <a name="arguments"></a>Argumentos  
- [ **@defname=** ] **'***default***'**  
+ [  **@defname=** ] **'***predeterminado***'**  
  Es el nombre del valor predeterminado creado por CREATE DEFAULT. *valor predeterminado* es **nvarchar(776)**, no tiene ningún valor predeterminado.  
   
- [ **@objname=** ] **'***object_name***'**  
+ [  **@objname=** ] **'***object_name***'**  
  Es el nombre de la tabla y columna, o el tipo de datos de alias al que se va a enlazar el valor predeterminado. *object_name* es **nvarchar(776)** no tiene ningún valor predeterminado. *object_name* no se pueden definir con la **varchar (max)**, **nvarchar (max)**, **varbinary (max)**, **xml**, o CLR tipos definidos por el usuario.  
   
  Si *object_name* es un nombre de una parte, se resuelve como un tipo de datos de alias. Si es un nombre de dos o tres partes, se resuelve primero como una tabla y columna; y si se produce un error en esta solución, se resuelve como un tipo de datos de alias. De forma predeterminada, las columnas existentes del tipo de datos de alias heredan *predeterminado*, a menos que el valor predeterminado se ha enlazado directamente a la columna. No se puede enlazar un valor predeterminado para un **texto**, **ntext**, **imagen**, **varchar (max)**, **nvarchar (max)**, **varbinary (max)**, **xml**, **marca de tiempo**, o CLR columna de tipo definido por el usuario, una columna con la propiedad IDENTITY, una columna calculada o una columna que ya tiene una restricción DEFAULT.  

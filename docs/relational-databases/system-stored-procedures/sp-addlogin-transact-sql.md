@@ -1,16 +1,16 @@
 ---
 title: sp_addlogin (Transact-SQL) | Documentos de Microsoft
-ms.custom: 
+ms.custom: ''
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine
-ms.service: 
+ms.service: ''
 ms.component: system-stored-procedures
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - sp_addlogin
@@ -20,16 +20,16 @@ dev_langs:
 helpviewer_keywords:
 - sp_addlogin
 ms.assetid: 030f19c3-a5e3-4b53-bfc4-de4bfca0fddc
-caps.latest.revision: 
+caps.latest.revision: 25
 author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 09a8425f9c3d773af00a0418ff4430839c221d87
-ms.sourcegitcommit: 9fbe5403e902eb996bab0b1285cdade281c1cb16
+ms.openlocfilehash: f191cf305941d837a65708aea62527c0649b6e7f
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/27/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="spaddlogin-transact-sql"></a>sp_addlogin (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -37,7 +37,7 @@ ms.lasthandoff: 11/27/2017
   Crea un nuevo inicio de sesión de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] que permite a un usuario conectar a una instancia de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] con la autenticación de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
 > [!IMPORTANT]  
->  [!INCLUDE[ssNoteDepFutureAvoid](../../includes/ssnotedepfutureavoid-md.md)]Use [CREATE LOGIN](../../t-sql/statements/create-login-transact-sql.md) en su lugar.  
+>  [!INCLUDE[ssNoteDepFutureAvoid](../../includes/ssnotedepfutureavoid-md.md)] Use [CREATE LOGIN](../../t-sql/statements/create-login-transact-sql.md) en su lugar.  
   
 > [!IMPORTANT]  
 >  [!INCLUDE[ssNoteWinAuthentication](../../includes/ssnotewinauthentication-md.md)]  
@@ -79,7 +79,7 @@ sp_addlogin [ @loginame = ] 'login'
  [ @encryptopt=] '*encryption_option*'  
  Especifica si la contraseña se pasa como texto sin cifrar o como hash de la contraseña de texto sin cifrar. Tenga en cuenta que no se realiza el cifrado. La palabra "cifrar" se utiliza aquí para la compatibilidad con versiones anteriores. Si se pasa una contraseña de texto sin cifrar, está en formato hash. El hash se almacena. *encryption_option* es **varchar (20)**, y puede tener uno de los siguientes valores.  
   
-|Valor|Descripción|  
+|Value|Description|  
 |-----------|-----------------|  
 |NULL|La contraseña se pasa como texto sin cifrar. Ésta es la opción predeterminada.|  
 |**skip_encryption**|La contraseña ya está en formato hash. El [!INCLUDE[ssDE](../../includes/ssde-md.md)] debe almacenar el valor sin volver a procesar el hash de la contraseña.|  
@@ -148,8 +148,8 @@ EXEC sp_addlogin 'Michael', 'B548bmM%f6', 'AdventureWorks2012', 'us_english', 0x
 ## <a name="see-also"></a>Vea también  
  [CREATE LOGIN &#40;Transact-SQL&#41;](../../t-sql/statements/create-login-transact-sql.md)   
  [sp_droplogin &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-droplogin-transact-sql.md)   
- [sp_helpuser &#40; Transact-SQL &#41;](../../relational-databases/system-stored-procedures/sp-helpuser-transact-sql.md)   
+ [sp_helpuser &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-helpuser-transact-sql.md)   
  [sp_revokelogin &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-revokelogin-transact-sql.md)   
- [xp_logininfo &#40; Transact-SQL &#41;](../../relational-databases/system-stored-procedures/xp-logininfo-transact-sql.md)  
+ [xp_logininfo &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/xp-logininfo-transact-sql.md)  
   
   

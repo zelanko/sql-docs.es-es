@@ -1,16 +1,16 @@
 ---
-title: sp_sequence_get_range (Transact-SQL) | Microsoft Docs
-ms.custom: 
+title: sp_sequence_get_range (Transact-SQL) | Documentos de Microsoft
+ms.custom: ''
 ms.date: 08/08/2015
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine, sql-data-warehouse
-ms.service: 
+ms.service: ''
 ms.component: system-stored-procedures
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - sp_sequence_get_range
@@ -21,16 +21,17 @@ helpviewer_keywords:
 - sequence number object, sp_sequence_get_range procedure
 - sp_sequence_get_range
 ms.assetid: 8ca6b0c6-8d9c-4eee-b02f-51ddffab4492
-caps.latest.revision: 
+caps.latest.revision: 19
 author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 58c36ec947eab4fbcc9511c67efae1af858ab6d0
-ms.sourcegitcommit: c556eaf60a49af7025db35b7aa14beb76a8158c5
+monikerRange: = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions
+ms.openlocfilehash: ad7851a091b531c0f13980023e22f4f2d545163b
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/03/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="spsequencegetrange-transact-sql"></a>sp_sequence_get_range (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2012-asdb-asdw-xxx-md](../../includes/tsql-appliesto-ss2012-asdb-asdw-xxx-md.md)]
@@ -57,29 +58,29 @@ sp_sequence_get_range [ @sequence_name = ] N'<sequence>'
 ```  
   
 ## <a name="arguments"></a>Argumentos  
- [  **@sequence_name**  =] **N**'*secuencia*'  
- Nombre del objeto de secuencia. El esquema es opcional. *sequence_name* is **nvarchar(776)**.  
+ [ **@sequence_name** =] **N**'*secuencia*'  
+ Nombre del objeto de secuencia. El esquema es opcional. *sequence_name* es **nvarchar(776)**.  
   
- [ **@range_size** = ] *range_size*  
- Número de valores que se van a capturar de la secuencia. **@range_size**es **bigint**.  
+ [ **@range_size** =] *range_size*  
+ Número de valores que se van a capturar de la secuencia. **@range_size** es **bigint**.  
   
- [ **@range_first_value** = ] *range_first_value*  
- El parámetro de salida devuelve el primer valor (mínimo o máximo) del objeto de secuencia que se usa para calcular el intervalo solicitado. **@range_first_value**es **sql_variant** con el mismo tipo base que el objeto de secuencia utilizado en la solicitud.  
+ [ **@range_first_value** =] *range_first_value*  
+ El parámetro de salida devuelve el primer valor (mínimo o máximo) del objeto de secuencia que se usa para calcular el intervalo solicitado. **@range_first_value** es **sql_variant** con el mismo tipo base que el objeto de secuencia utilizado en la solicitud.  
   
- [ **@range_last_value** = ] *range_last_value*  
- El parámetro de salida opcional devuelve el último valor del intervalo solicitado. **@range_last_value**es **sql_variant** con el mismo tipo base que el objeto de secuencia utilizado en la solicitud.  
+ [ **@range_last_value** =] *range_last_value*  
+ El parámetro de salida opcional devuelve el último valor del intervalo solicitado. **@range_last_value** es **sql_variant** con el mismo tipo base que el objeto de secuencia utilizado en la solicitud.  
   
- [  **@range_cycle_count**  =] range_cycle_count  
- El parámetro de salida opcional devuelve el número de veces que se recorre el objeto de secuencia para devolver el intervalo solicitado. **@range_cycle_count**es **int**.  
+ [ **@range_cycle_count** =] range_cycle_count  
+ El parámetro de salida opcional devuelve el número de veces que se recorre el objeto de secuencia para devolver el intervalo solicitado. **@range_cycle_count** es **int**.  
   
- [  **@sequence_increment**  =] *sequence_increment*  
- El parámetro de salida opcional devuelve el incremento del objeto de secuencia utilizado para calcular el intervalo solicitado. **@sequence_increment**es **sql_variant** con el mismo tipo base que el objeto de secuencia utilizado en la solicitud.  
+ [ **@sequence_increment** =] *sequence_increment*  
+ El parámetro de salida opcional devuelve el incremento del objeto de secuencia utilizado para calcular el intervalo solicitado. **@sequence_increment** es **sql_variant** con el mismo tipo base que el objeto de secuencia utilizado en la solicitud.  
   
- [ **@sequence_min_value** = ] *sequence_min_value*  
- El parámetro de salida opcional devuelve el valor mínimo del objeto de secuencia. **@sequence_min_value**es **sql_variant** con el mismo tipo base que el objeto de secuencia utilizado en la solicitud.  
+ [ **@sequence_min_value** =] *sequence_min_value*  
+ El parámetro de salida opcional devuelve el valor mínimo del objeto de secuencia. **@sequence_min_value** es **sql_variant** con el mismo tipo base que el objeto de secuencia utilizado en la solicitud.  
   
- [ **@sequence_max_value** = ] *sequence_max_value*  
- El parámetro de salida opcional devuelve el valor máximo del objeto de secuencia. **@sequence_max_value**es **sql_variant** con el mismo tipo base que el objeto de secuencia utilizado en la solicitud.  
+ [ **@sequence_max_value** =] *sequence_max_value*  
+ El parámetro de salida opcional devuelve el valor máximo del objeto de secuencia. **@sequence_max_value** es **sql_variant** con el mismo tipo base que el objeto de secuencia utilizado en la solicitud.  
   
 ## <a name="return-code-values"></a>Valores de código de retorno  
  0 (correcto) o 1 (error)  
@@ -196,9 +197,9 @@ Console.WriteLine(firstValueInRange.Value);
   
 ## <a name="see-also"></a>Vea también  
  [CREATE SEQUENCE &#40;Transact-SQL&#41;](../../t-sql/statements/create-sequence-transact-sql.md)   
- [ALTER SEQUENCE &#40; Transact-SQL &#41;](../../t-sql/statements/alter-sequence-transact-sql.md)   
+ [ALTER SEQUENCE &#40;Transact-SQL&#41;](../../t-sql/statements/alter-sequence-transact-sql.md)   
  [DROP SEQUENCE &#40;Transact-SQL&#41;](../../t-sql/statements/drop-sequence-transact-sql.md)   
- [VALOR siguiente para &#40; Transact-SQL &#41;](../../t-sql/functions/next-value-for-transact-sql.md)   
+ [NEXT VALUE FOR &#40;Transact-SQL&#41;](../../t-sql/functions/next-value-for-transact-sql.md)   
  [Números de secuencia](../../relational-databases/sequence-numbers/sequence-numbers.md)  
   
   

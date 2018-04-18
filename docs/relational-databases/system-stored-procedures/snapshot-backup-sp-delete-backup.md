@@ -1,32 +1,32 @@
 ---
-title: sp_delete_backup (Transact-SQL) | Microsoft Docs
-ms.custom: 
+title: sp_delete_backup (Transact-SQL) | Documentos de Microsoft
+ms.custom: ''
 ms.date: 06/03/2015
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine
-ms.service: 
+ms.service: ''
 ms.component: system-stored-procedures
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 dev_langs:
 - TSQL
 ms.assetid: 808e50ae-ff6e-4520-9ce2-530591d3d59b
-caps.latest.revision: 
+caps.latest.revision: 8
 author: stevestein
 ms.author: sstein
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 46bffa49e3d1586fe0639758b8d38c340f8933ea
-ms.sourcegitcommit: c556eaf60a49af7025db35b7aa14beb76a8158c5
+ms.openlocfilehash: 26f0dde7c29de4e9ded31217f5da6fdff952def2
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/03/2018
+ms.lasthandoff: 04/16/2018
 ---
-# <a name="snapshot-backup---spdeletebackup"></a>Snapshot Backup - sp_delete_backup
+# <a name="spdeletebackup-transact-sql"></a>sp_delete_backup (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md.md)]
 
   Elimina todas las instantáneas y el archivo de copia de seguridad que componen una copia de seguridad instantánea de la base de datos especificada. Este procedimiento almacenado del sistema es el único método recomendado para administrar conjuntos de copia de seguridad de instantánea. Para obtener más información, vea [Copias de seguridad de instantánea de archivos para archivos de base de datos de Azure](../../relational-databases/backup-restore/file-snapshot-backups-for-database-files-in-azure.md).  
@@ -43,11 +43,11 @@ sys.sp_delete_backup
 ```  
   
 ## <a name="arguments"></a>Argumentos  
- *[ @backup_url = ] backup_meta_file_url*  
+ *[ @backup_url =] backup_meta_file_url*  
  La dirección URL de la copia de seguridad va a eliminar, lo que elimina todas las instantáneas que componen el conjunto incluido el propio archivo de copia de seguridad especificado de la copia de seguridad.  
   
- *[ @db_name = ] database_name*  
- El nombre de la base de datos que contiene la instantánea que se va a eliminar. Cuando se proporciona un nombre de base de datos, el sistema comprueba que la dirección de URL de copia de seguridad proporcionada es una dirección URL de copia de seguridad para la base de datos especificada y usa [sp_delete_backup_file_snapshot &#40; Transact-SQL &#41; ](../../relational-databases/system-stored-procedures/snapshot-backup-sp-delete-backup-file-snapshot.md) para eliminar cada instantánea. Si no se proporciona ningún nombre de base de datos, no se realiza esta comprobación de base de datos.  
+ *[ @db_name =] database_name*  
+ El nombre de la base de datos que contiene la instantánea que se va a eliminar. Cuando un nombre de base de datos es siempre, el sistema comprueba que la dirección URL de copia de seguridad proporcionado es una dirección URL de copia de seguridad para la base de datos especificada y usa [sp_delete_backup_file_snapshot &#40;Transact-SQL&#41; ](../../relational-databases/system-stored-procedures/snapshot-backup-sp-delete-backup-file-snapshot.md) para eliminar cada instantánea. Si no se proporciona ningún nombre de base de datos, no se realiza esta comprobación de base de datos.  
   
 ## <a name="permissions"></a>Permissions  
  Requiere el permiso ALTER ANY DATABASE o el permiso ALTER en la base de datos especificada.  

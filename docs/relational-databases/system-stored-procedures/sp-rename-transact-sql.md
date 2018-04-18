@@ -1,16 +1,16 @@
 ---
-title: sp_rename (Transact-SQL) | Microsoft Docs
-ms.custom: 
+title: sp_rename (Transact-SQL) | Documentos de Microsoft
+ms.custom: ''
 ms.date: 01/09/2018
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine, sql-database
-ms.service: 
+ms.service: ''
 ms.component: system-stored-procedures
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - sp_rename_TSQL
@@ -23,16 +23,17 @@ helpviewer_keywords:
 - sp_rename
 - renaming tables
 ms.assetid: bc3548f0-143f-404e-a2e9-0a15960fc8ed
-caps.latest.revision: 
+caps.latest.revision: 54
 author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: Active
-ms.openlocfilehash: 158974d93e031d689318ea22f3bd0ba8189553ee
-ms.sourcegitcommit: 6b4aae3706247ce9b311682774b13ac067f60a79
+monikerRange: = azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions
+ms.openlocfilehash: 3e8a506b800ebb81c1721175009c41d7f2a748d3
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/18/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="sprename-transact-sql"></a>sp_rename (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -58,13 +59,13 @@ sp_rename [ @objname = ] 'object_name' , [ @newname = ] 'new_name'
   
  Las comillas solo se necesitan si se especifica un objeto completo. Si se proporciona un nombre completo, incluido el nombre de la base de datos, el nombre de la base de datos debe ser el de la base de datos actual. *object_name* es **nvarchar(776)**, no tiene ningún valor predeterminado.  
   
- [ @newname = ] '*new_name*'  
+ [ @newname =] '*new_name*'  
  Es el nuevo nombre del objeto especificado. *new_name* debe ser un nombre de una sola parte y debe seguir las reglas para identificadores. *NewName* es **sysname**, no tiene ningún valor predeterminado.  
   
 > [!NOTE]  
 >  Los nombres de los desencadenadores no pueden comenzar por # o ##.  
   
- [ @objtype = ] '*object_type*'  
+ [ @objtype =] '*object_type*'  
  Es el tipo de objeto cuyo nombre se va a cambiar. *object_type* es **varchar (13)**, su valor predeterminado es null y puede tener uno de estos valores.  
   
 |Value|Description|  
@@ -73,7 +74,7 @@ sp_rename [ @objname = ] 'object_name' , [ @newname = ] 'new_name'
 |DATABASE|Una base de datos definida por el usuario. Este tipo de objeto es necesario cuando se cambia el nombre de una base de datos|  
 |INDEX|Índice definido por el usuario. Si se cambia el nombre a un índice con estadísticas, también se cambia automáticamente a las estadísticas.|  
 |OBJECT|Realiza el seguimiento de un elemento de un tipo en [sys.objects](../../relational-databases/system-catalog-views/sys-objects-transact-sql.md). Por ejemplo, OBJECT podría utilizarse para cambiar el nombre de objetos como restricciones (CHECK, FOREIGN KEY, PRIMARY o UNIQUE KEY), tablas de usuario y reglas.|  
-|STATISTICS|**Se aplica a**: [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] a través de [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] y [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)].<br /><br /> Estadísticas que crea un usuario explícitamente o que se crean implícitamente con un índice. Si se cambia el nombre de las estadísticas de un índice, también se cambia automáticamente el nombre del índice.|  
+|STATISTICS|**Se aplica a**: [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] a [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] y [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)].<br /><br /> Estadísticas que crea un usuario explícitamente o que se crean implícitamente con un índice. Si se cambia el nombre de las estadísticas de un índice, también se cambia automáticamente el nombre del índice.|  
 |USERDATATYPE|A [tipos definidos por el usuario CLR](../../relational-databases/clr-integration-database-objects-user-defined-types/clr-user-defined-types.md) agregados mediante la ejecución [CREATE TYPE](../../t-sql/statements/create-type-transact-sql.md) o [sp_addtype](../../relational-databases/system-stored-procedures/sp-addtype-transact-sql.md).|  
   
 ## <a name="return-code-values"></a>Valores de código de retorno  
@@ -213,6 +214,6 @@ sp_rename 'Person.Person.ContactMail1', 'NewContact','Statistics';
  [sys.sql_expression_dependencies &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-sql-expression-dependencies-transact-sql.md)   
  [sys.sql_modules &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-sql-modules-transact-sql.md)   
  [Procedimientos almacenados del sistema &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)   
- [Motor de base de datos almacenados procedimientos &#40; Transact-SQL &#41;](../../relational-databases/system-stored-procedures/database-engine-stored-procedures-transact-sql.md)  
+ [Procedimientos almacenados del motor de base de datos &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/database-engine-stored-procedures-transact-sql.md)  
   
   

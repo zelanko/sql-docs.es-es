@@ -1,16 +1,16 @@
 ---
-title: sys.internal_partitions (Transact-SQL) | Microsoft Docs
-ms.custom: 
+title: Sys.internal_partitions (Transact-SQL) | Documentos de Microsoft
+ms.custom: ''
 ms.date: 06/10/2016
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine, sql-database
-ms.service: 
+ms.service: ''
 ms.component: system-catalog-views
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 applies_to:
 - Azure SQL Database
@@ -18,21 +18,22 @@ applies_to:
 dev_langs:
 - TSQL
 ms.assetid: 0262df2b-5ba7-4715-b17b-3d9ce470a38e
-caps.latest.revision: 
+caps.latest.revision: 13
 author: barbkess
 ms.author: barbkess
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: a3280403d6194bd3f5370985d31e672752ed8c25
-ms.sourcegitcommit: c556eaf60a49af7025db35b7aa14beb76a8158c5
+monikerRange: = azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions
+ms.openlocfilehash: 160441134e0f848d9b4c46d6501638e8d46e3244
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/03/2018
+ms.lasthandoff: 04/16/2018
 ---
-# <a name="sysinternalpartitions-transact-sql"></a>sys.internal_partitions (Transact-SQL)
+# <a name="sysinternalpartitions-transact-sql"></a>Sys.internal_partitions (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]
 
-  Devuelve una fila para cada conjunto de filas que realiza un seguimiento de los datos internos para los índices de almacén de columnas en tablas basadas en disco. Estos conjuntos de filas son internos a los índices de almacén de columnas y seguimiento eliminar filas, las asignaciones de grupo de filas y delta almacenan grupos de filas. Hacen un seguimiento de datos para cada uno para cada partición de tabla; cada tabla tiene al menos una partición. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]vuelve a crear los conjuntos de filas cada vez que se vuelve a generar el índice de almacén de columnas.   
+  Devuelve una fila para cada conjunto de filas que realiza un seguimiento de los datos internos para los índices de almacén de columnas en tablas basadas en disco. Estos conjuntos de filas son internos a los índices de almacén de columnas y seguimiento eliminar filas, las asignaciones de grupo de filas y delta almacenan grupos de filas. Hacen un seguimiento de datos para cada uno para cada partición de tabla; cada tabla tiene al menos una partición. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] vuelve a crear los conjuntos de filas cada vez que se vuelve a generar el índice de almacén de columnas.   
   
 |Nombre de columna|Tipo de datos|Description|  
 |-----------------|---------------|-----------------|  
@@ -68,7 +69,7 @@ WHERE p.object_id = OBJECT_ID ( '<table name' ) ;
 ```  
   
 ## <a name="see-also"></a>Vea también  
- [Vistas de catálogo de objetos &#40; Transact-SQL &#41;](../../relational-databases/system-catalog-views/object-catalog-views-transact-sql.md)   
+ [Object Catalog Views &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/object-catalog-views-transact-sql.md)  (Vistas de catálogo de objetos [Transact-SQL])  
  [Vistas de catálogo &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/catalog-views-transact-sql.md)   
  [Preguntas frecuentes sobre consultas del catálogo de sistema de SQL Server](../../relational-databases/system-catalog-views/querying-the-sql-server-system-catalog-faq.md)  
   

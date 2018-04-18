@@ -1,16 +1,16 @@
 ---
 title: sp_changesubscriptiondtsinfo (Transact-SQL) | Documentos de Microsoft
-ms.custom: 
+ms.custom: ''
 ms.date: 03/04/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine
-ms.service: 
+ms.service: ''
 ms.component: system-stored-procedures
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - replication
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 applies_to:
 - SQL Server
@@ -20,16 +20,16 @@ f1_keywords:
 helpviewer_keywords:
 - sp_changesubscriptiondtsinfo
 ms.assetid: 64fc085f-f81b-493b-b59a-ee6192d9736d
-caps.latest.revision: 
+caps.latest.revision: 16
 author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 6b551a265d30632f7ee96c86b78191388099c7d0
-ms.sourcegitcommit: 45e4efb7aa828578fe9eb7743a1a3526da719555
+ms.openlocfilehash: c6f1998ee847522f1237a55f5b6174861b774d69
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="spchangesubscriptiondtsinfo-transact-sql"></a>sp_changesubscriptiondtsinfo (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -52,16 +52,16 @@ sp_changesubscriptiondtsinfo [ [ @job_id = ] job_id ]
  [  **@job_id=**] *job_id*  
  Es el identificador del trabajo del agente de distribución para la suscripción de inserción. *job_id* es **varbinary (16)**, no tiene ningún valor predeterminado. Para obtener el Id. de trabajo de distribución, ejecute **sp_helpsubscription** o **sp_helppullsubscription**.  
   
- [  **@dts_package_name** =] **'***dts_package_name***'**  
+ [ **@dts_package_name**=] **'***dts_package_name***'**  
  Especifica el nombre del paquete DTS. *dts_package_name* es un **sysname**, su valor predeterminado es null. Por ejemplo, para especificar un paquete denominado **DTSPub_Package**, especificaría `@dts_package_name = N'DTSPub_Package'`.  
   
- [  **@dts_package_password** =] **'***dts_package_password***'**  
+ [ **@dts_package_password**=] **'***dts_package_password***'**  
  Especifica la contraseña del paquete. *dts_package_password* es **sysname** con un valor predeterminado es NULL, que especifica que la propiedad de contraseña se debe dejar sin cambios.  
   
 > [!NOTE]  
 >  Un paquete DTS debe tener una contraseña.  
   
- [  **@dts_package_location** =] **'***dts_package_location***'**  
+ [ **@dts_package_location**=] **'***dts_package_location***'**  
  Especifica la ubicación del paquete. *dts_package_location* es un **tipo (12)**, su valor predeterminado es null, que especifica que la ubicación del paquete se debe dejar sin cambios. La ubicación del paquete puede cambiarse a **distribuidor** o **suscriptor**.  
   
 ## <a name="return-code-values"></a>Valores de código de retorno  

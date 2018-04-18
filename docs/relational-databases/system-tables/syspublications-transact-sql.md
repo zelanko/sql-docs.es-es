@@ -1,16 +1,16 @@
 ---
 title: syspublications (Transact-SQL) | Documentos de Microsoft
-ms.custom: 
+ms.custom: ''
 ms.date: 03/17/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine
-ms.service: 
+ms.service: ''
 ms.component: system-tables
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - replication
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 applies_to:
 - SQL Server
@@ -22,16 +22,16 @@ dev_langs:
 helpviewer_keywords:
 - syspublications system table
 ms.assetid: a86eb4f5-1f7b-493e-af55-3d15cf878228
-caps.latest.revision: 
+caps.latest.revision: 40
 author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 410ba9ae2cd3329550ee7920b7213add598db5d3
-ms.sourcegitcommit: 45e4efb7aa828578fe9eb7743a1a3526da719555
+ms.openlocfilehash: 22a669d1295b7ad2ed057034d847b7e9789131f2
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="syspublications-transact-sql"></a>syspublications (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -56,7 +56,7 @@ ms.lasthandoff: 11/21/2017
 |**immediate_sync_ready**|**bit**|Indica si el Agente de instantáneas ha generado la instantánea y está lista para que la utilicen las nuevas suscripciones. Es significativo únicamente para publicaciones de actualización inmediata. **1** indica que la instantánea está lista.|  
 |**allow_sync_tran**|**bit**|Especifica si se permiten suscripciones de actualización inmediata en la publicación. **1** significa que se permiten suscripciones de actualización inmediata.|  
 |**autogen_sync_procs**|**bit**|Especifica si se ha generado en el publicador un procedimiento almacenado de sincronización para suscripciones de actualización inmediata. **1** significa que se genera en el publicador.|  
-|**retención**|**int**|El volumen de cambios, en horas, que se deben guardar para la publicación indicada.|  
+|**Retención**|**int**|El volumen de cambios, en horas, que se deben guardar para la publicación indicada.|  
 |**allowed_queued_tran**|**bit**|Especifica si se ha habilitado la colocación en cola de los cambios del suscriptor hasta que se puedan aplicar en el publicador. Si **1**, se ponen en cola cambios en el suscriptor.|  
 |**snapshot_in_defaultfolder**|**bit**|Especifica si los archivos de instantáneas se almacenan en la carpeta predeterminada.<br /><br /> **0** = instantánea de archivos se han almacenado en la ubicación alternativa especificada por *alternate_snapshot_folder*.<br /><br /> **1** = instantánea de archivos pueden encontrarse en la carpeta predeterminada.|  
 |**alt_snapshot_folder**|**nvarchar(255)**|Especifica la ubicación de la carpeta alternativa de la instantánea.|  
@@ -78,15 +78,15 @@ ms.lasthandoff: 11/21/2017
 |**backward_comp_level**|**int**|Nivel de compatibilidad de la base de datos, que puede ser uno de los valores siguientes:<br /><br /> **90** = [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)].<br /><br /> **100** = [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)].<br /><br /> **110** = [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)].<br /><br /> **120** = [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)].|  
 |**allow_initialize_from_backup**|**bit**|Indica si los suscriptores pueden inicializar una suscripción a esta publicación desde una copia de seguridad en lugar de una instantánea inicial. **1** significa que las suscripciones se pueden inicializar desde una copia de seguridad, y **0** significa que no. Para obtener más información, consulte [Initialize a Transactional Subscription Without a Snapshot](../../relational-databases/replication/initialize-a-transactional-subscription-without-a-snapshot.md).|  
 |**min_autonosync_lsn**|**binario**|[!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]|  
-|**replicate_ddl**|**int**|Indica si se admite la replicación de esquemas para la publicación. **1** indica que se replican instrucciones de DDL (lenguaje) de definición de datos ejecutadas en el publicador, y **0** indica que no se replican las instrucciones de DDL. Para más información, vea [Realizar cambios de esquema en bases de datos de publicaciones](../../relational-databases/replication/publish/make-schema-changes-on-publication-databases.md).|  
-|**Opciones**|**int**|Mapa de bits que especifica opciones de publicación adicionales. Los valores de opciones binarias son los siguientes:<br /><br /> **0 x 1** : habilitado para replicación punto a punto.<br /><br /> **0 x 2** -publicar solo cambios locales para replicación punto a punto.<br /><br /> **0 x 4** : habilitado para no[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] los suscriptores.<br /><br /> **0 x 8** : habilitado para la detección de conflictos punto a punto.|  
+|**replicate_ddl**|**int**|Indica si se admite la replicación de esquemas para la publicación. **1** indica que se replican instrucciones de DDL (lenguaje) de definición de datos ejecutadas en el publicador, y **0** indica que no se replican las instrucciones de DDL. Para más información, vea [Make Schema Changes on Publication Databases](../../relational-databases/replication/publish/make-schema-changes-on-publication-databases.md) (Realizar cambios de esquema en bases de datos de publicaciones).|  
+|**options**|**int**|Mapa de bits que especifica opciones de publicación adicionales. Los valores de opciones binarias son los siguientes:<br /><br /> **0 x 1** : habilitado para replicación punto a punto.<br /><br /> **0 x 2** -publicar solo cambios locales para replicación punto a punto.<br /><br /> **0 x 4** : habilitado para no[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] los suscriptores.<br /><br /> **0 x 8** : habilitado para la detección de conflictos punto a punto.|  
 |**originator_id**|**smallint**|Identifica cada nodo en una topología de replicación punto a punto para detectar conflictos. Para obtener más información, consulte [Conflict Detection in Peer-to-Peer Replication](../../relational-databases/replication/transactional/peer-to-peer-conflict-detection-in-peer-to-peer-replication.md).|  
   
 ## <a name="see-also"></a>Vea también  
- [Tablas de replicación &#40; Transact-SQL &#41;](../../relational-databases/system-tables/replication-tables-transact-sql.md)   
- [Vistas de replicación &#40; Transact-SQL &#41;](../../relational-databases/system-views/replication-views-transact-sql.md)   
- [sp_addpublication &#40; Transact-SQL &#41;](../../relational-databases/system-stored-procedures/sp-addpublication-transact-sql.md)   
+ [Tablas de replicación &#40;Transact-SQL&#41;](../../relational-databases/system-tables/replication-tables-transact-sql.md)   
+ [Vistas de replicación &#40;Transact-SQL&#41;](../../relational-databases/system-views/replication-views-transact-sql.md)   
+ [sp_addpublication &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-addpublication-transact-sql.md)   
  [sp_changepublication &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-changepublication-transact-sql.md)   
- [el procedimiento sp_helppublication &#40; Transact-SQL &#41;](../../relational-databases/system-stored-procedures/sp-helppublication-transact-sql.md)  
+ [el procedimiento sp_helppublication &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-helppublication-transact-sql.md)  
   
   

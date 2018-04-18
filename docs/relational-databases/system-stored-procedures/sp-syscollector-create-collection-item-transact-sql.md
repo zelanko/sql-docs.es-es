@@ -1,16 +1,16 @@
 ---
-title: sp_syscollector_create_collection_item (Transact-SQL) | Microsoft Docs
-ms.custom: 
+title: sp_syscollector_create_collection_item (Transact-SQL) | Documentos de Microsoft
+ms.custom: ''
 ms.date: 08/09/2016
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine
-ms.service: 
+ms.service: ''
 ms.component: system-stored-procedures
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - sp_syscollector_create_collection_item
@@ -21,16 +21,16 @@ helpviewer_keywords:
 - sp_syscollector_create_collection_item
 - data collector [SQL Server], stored procedures
 ms.assetid: 60dacf13-ca12-4844-b417-0bc0a8bf0ddb
-caps.latest.revision: 
+caps.latest.revision: 27
 author: stevestein
 ms.author: sstein
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 3fac04c31bdebdc98aa082fb9809fe505ce66eef
-ms.sourcegitcommit: c556eaf60a49af7025db35b7aa14beb76a8158c5
+ms.openlocfilehash: ca29db3a4df1da4cdf566ba3b8df06e8661027e7
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/03/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="spsyscollectorcreatecollectionitem-transact-sql"></a>sp_syscollector_create_collection_item (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -53,10 +53,10 @@ sp_syscollector_create_collection_item
 ```  
   
 ## <a name="arguments"></a>Argumentos  
- [ @collection_set_id = ] *collection_set_id*  
- Es el identificador único local del conjunto de recopilaciones. *collection_set_id* is **int**.  
+ [ @collection_set_id =] *collection_set_id*  
+ Es el identificador único local del conjunto de recopilaciones. *collection_set_id* es **int**.  
   
- [ @collector_type_uid = ] '*collector_type_uid*'  
+ [ @collector_type_uid =] '*collector_type_uid*'  
  Es el GUID que identifica el tipo de recopilador que se utilizará para este elemento *collector_type_uid* es **uniqueidentifier** sin valor predeterminado... Para obtener una lista de los tipos de recopilador, consulte la vista del sistema syscollector_collector_types.  
   
  [ @name =] '*nombre*'  
@@ -87,7 +87,7 @@ sp_syscollector_create_collection_item
  Debe pertenecer al rol fijo de base de datos dc_admin (con permiso EXECUTE) para ejecutar este procedimiento.  
   
 ## <a name="examples"></a>Ejemplos  
- En el ejemplo siguiente se crea un elemento de recopilación en función del tipo de recopilador `Generic T-SQL Query Collector Type` y se agrega al conjunto de recopilación denominado `Simple collection set test 2`. Para crear la colección especificada establecido, ejecute el ejemplo B en [sp_syscollector_create_collection_set &#40; Transact-SQL &#41; ](../../relational-databases/system-stored-procedures/sp-syscollector-create-collection-set-transact-sql.md).  
+ En el ejemplo siguiente se crea un elemento de recopilación en función del tipo de recopilador `Generic T-SQL Query Collector Type` y se agrega al conjunto de recopilación denominado `Simple collection set test 2`. Para crear la colección especificada establecido, ejecute el ejemplo B en [sp_syscollector_create_collection_set &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-syscollector-create-collection-set-transact-sql.md).  
   
 ```  
 USE msdb;  

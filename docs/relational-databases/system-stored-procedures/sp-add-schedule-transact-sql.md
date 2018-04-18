@@ -1,8 +1,8 @@
 ---
-title: sp_add_schedule (Transact-SQL) | Microsoft Docs
+title: sp_add_schedule (Transact-SQL) | Documentos de Microsoft
 ms.custom: ''
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine
 ms.service: ''
 ms.component: system-stored-procedures
@@ -25,11 +25,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: df04306671a8e2a0f0ded0fc7482e56955102a83
-ms.sourcegitcommit: d6b1695c8cbc70279b7d85ec4dfb66a4271cdb10
+ms.openlocfilehash: 5ce5f60759175964885532cf9cd674dde3a693a3
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/10/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="spaddschedule-transact-sql"></a>sp_add_schedule (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -64,7 +64,7 @@ sp_add_schedule [ @schedule_name = ] 'schedule_name'
  [  **@schedule_name =** ] **'***schedule_name***'**  
  Nombre de la programación. *schedule_name*es **sysname**, no tiene ningún valor predeterminado.  
   
- [ **@enabled =** ] *enabled*  
+ [  **@enabled =** ] *habilitado*  
  Indica el estado actual de la programación. *habilitado*es **tinyint**, su valor predeterminado es **1** (habilitado). Si **0**, la programación no está habilitada. Si la programación no está habilitada, no se ejecuta ningún trabajo en esta programación.  
   
  [ **@freq_type =** ] *freq_type*  
@@ -130,22 +130,22 @@ sp_add_schedule [ @schedule_name = ] 'schedule_name'
  [ **@active_end_date =** ] *active_end_date*  
  Fecha en la que puede detenerse la ejecución de un trabajo. *active_end_date*es **int**, su valor predeterminado es **99991231**, lo que indica el 31 de diciembre de 9999. Tiene el formato AAAAMMDD.  
   
- [ **@active_start_time =** ] *active_start_time*  
+ [  **@active_start_time =** ] *active_start_time*  
  La hora de un día entre *active_start_date* y *active_end_date* para comenzar la ejecución de un trabajo. *active_start_time*es **int**, su valor predeterminado es **000000**, lo que indica 12:00:00 A.M. en un reloj de 24 horas. Se debe especificar con el formato HHMMSS.  
   
- [ **@active_end_time =** ] *active_end_time*  
+ [  **@active_end_time =** ] *active_end_time*  
  La hora de un día entre *active_start_date* y *active_end_date* para finalizar la ejecución de un trabajo. *active_end_time*es **int**, su valor predeterminado es **235959**, lo que indica 11:59:59 p. M. en un reloj de 24 horas. Se debe especificar con el formato HHMMSS.  
   
- [ **@owner_login_name**= ] **'***owner_login_name***'**  
+ [ **@owner_login_name**=] **'***owner_login_name***'**  
  Nombre de la entidad de seguridad del servidor a la que pertenece la programación. *owner_login_name* es **sysname**, su valor predeterminado es null, lo que indica que la programación pertenece al creador.  
   
- [ **@schedule_uid**= ] *schedule_uid***OUTPUT**  
+ [ **@schedule_uid**=] *valor schedule_uid *** salida**  
  Es un identificador único para la programación. *valor schedule_uid* es una variable de tipo **uniqueidentifier**.  
   
- [ **@schedule_id**= ] *schedule_id***OUTPUT**  
+ [ **@schedule_id**=] *schedule_id *** salida**  
  Identificador de la programación. *schedule_id* es una variable de tipo **int**.  
   
- [ **@originating_server**= ] *server_name*  
+ [ **@originating_server**=] *nombre_servidor*  
  [!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]  
   
 ## <a name="return-code-values"></a>Valores de código de retorno  

@@ -1,16 +1,16 @@
 ---
-title: sp_help_targetserver (Transact-SQL) | Microsoft Docs
-ms.custom: 
+title: sp_help_targetserver (Transact-SQL) | Documentos de Microsoft
+ms.custom: ''
 ms.date: 03/06/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine
-ms.service: 
+ms.service: ''
 ms.component: system-stored-procedures
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - sp_help_targetserver_TSQL
@@ -20,16 +20,16 @@ dev_langs:
 helpviewer_keywords:
 - sp_help_targetserver
 ms.assetid: f841d3bd-901a-4980-ad0b-1c6eeba3f717
-caps.latest.revision: 
+caps.latest.revision: 35
 author: stevestein
 ms.author: sstein
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: c45b6bc34b8003d78cd60916b9db22557fb0f4b1
-ms.sourcegitcommit: c556eaf60a49af7025db35b7aa14beb76a8158c5
+ms.openlocfilehash: 91f89a27c0e41102bd19ae80e21a8d278b746ff2
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/03/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="sphelptargetserver-transact-sql"></a>sp_help_targetserver (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -60,14 +60,14 @@ sp_help_targetserver
 |-----------------|---------------|-----------------|  
 |**server_id**|**int**|Número de identificación del servidor.|  
 |**server_name**|**nvarchar(30)**|Nombre de servidor.|  
-|**ubicación**|**nvarchar(200)**|Ubicación del servidor especificado.|  
+|**Ubicación**|**nvarchar(200)**|Ubicación del servidor especificado.|  
 |**time_zone_adjustment**|**int**|Ajuste de zona horaria, en horas, según la hora del meridiano de Greenwich (GMT).|  
 |**enlist_date**|**datetime**|Fecha de alta del servidor especificado.|  
 |**last_poll_date**|**datetime**|Fecha del último sondeo del servidor en busca de trabajos.|  
 |**status**|**int**|Estado del servidor especificado.|  
 |**unread_instructions**|**int**|Indica si el servidor tiene instrucciones no leídas. Si se han descargado todas las filas, esta columna es **0**.|  
 |**local_time**|**datetime**|Fecha y hora locales del servidor de destino, que están basadas en la hora local del servidor de destino según el último sondeo del servidor maestro.|  
-|**enlisted_by_nt_user**|**nvarchar(100)**|Usuario de Microsoft Windows dado de alta en el servidor de destino.|  
+|**enlisted_by_nt_user**|**nvarchar (100)**|Usuario de Microsoft Windows dado de alta en el servidor de destino.|  
 |**poll_interval**|**int**|Frecuencia, en segundos, con la que el servidor de destino sondea el servicio SQLServerAgent principal para descargar trabajos y cargar el estado de los trabajos.|  
   
 ## <a name="permissions"></a>Permissions  

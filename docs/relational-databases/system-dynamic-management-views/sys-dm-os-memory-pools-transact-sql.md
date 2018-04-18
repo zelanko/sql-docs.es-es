@@ -1,8 +1,8 @@
 ---
-title: sys.dm_os_memory_pools (Transact-SQL) | Microsoft Docs
+title: Sys.dm_os_memory_pools (Transact-SQL) | Documentos de Microsoft
 ms.custom: ''
 ms.date: 03/13/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
 ms.service: ''
 ms.component: dmv's
@@ -27,11 +27,12 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: a270d59574a610533c32b4b474c86c6ca2d95e0c
-ms.sourcegitcommit: 8b332c12850c283ae413e0b04b2b290ac2edb672
+monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
+ms.openlocfilehash: 511693425e7b0b28cdf5db2621d93d536b0ecdbe
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/05/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="sysdmosmemorypools-transact-sql"></a>sys.dm_os_memory_pools (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -43,7 +44,7 @@ ms.lasthandoff: 04/05/2018
   
 |Nombre de columna|Tipo de datos|Description|  
 |-----------------|---------------|-----------------|  
-|**memory_pool_address**|**varbinary(8)**|Dirección de memoria de la entrada que representa el grupo de memoria. No admite valores NULL.|  
+|**memory_pool_address**|**varbinary (8)**|Dirección de memoria de la entrada que representa el grupo de memoria. No admite valores NULL.|  
 |**pool_id**|**int**|Id. de un grupo específico en un conjunto de grupos. No admite valores NULL.|  
 |**Tipo**|**nvarchar(60)**|Tipo de grupo de objetos. No admite valores NULL. Para obtener más información, consulte [sys.dm_os_memory_clerks &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-os-memory-clerks-transact-sql.md).|  
 |**Nombre**|**nvarchar(256)**|Nombre asignado por el sistema de este objeto de memoria. No admite valores NULL.|  

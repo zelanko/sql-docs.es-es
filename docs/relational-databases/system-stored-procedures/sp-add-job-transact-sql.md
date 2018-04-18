@@ -1,8 +1,8 @@
 ---
-title: sp_add_job (Transact-SQL) | Microsoft Docs
+title: sp_add_job (Transact-SQL) | Documentos de Microsoft
 ms.custom: ''
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine
 ms.service: ''
 ms.component: system-stored-procedures
@@ -25,11 +25,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 9f83b2b206b38783e53d2fb0ccdbf724a78b17d7
-ms.sourcegitcommit: d6b1695c8cbc70279b7d85ec4dfb66a4271cdb10
+ms.openlocfilehash: baa693e0765a8796a4f6fbed3284d440f5a1327d
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/10/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="spaddjob-transact-sql"></a>sp_add_job (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -64,16 +64,16 @@ sp_add_job [ @job_name = ] 'job_name'
  [  **@job_name =** ] **'***job_name***'**  
  Nombre del trabajo. El nombre debe ser único y no puede contener el porcentaje (**%**) caracteres. *job_name*es **nvarchar (128)**, no tiene ningún valor predeterminado.  
   
- [ **@enabled =** ] *enabled*  
+ [  **@enabled =** ] *habilitado*  
  Indica el estado del trabajo agregado. *habilitado*es **tinyint**, su valor predeterminado es 1 (habilitado). Si **0**, el trabajo no está habilitado y no se ejecuta según la programación; sin embargo, se puede ejecutar manualmente.  
   
- [ **@description =** ] **'***description***'**  
+ [  **@description =** ] **'***descripción***'**  
  Descripción del trabajo. *descripción* es **nvarchar (512)**, su valor predeterminado es null. Si *descripción* es se omite, se utiliza "Ninguna descripción disponible".  
   
  [ **@start_step_id =** ] *step_id*  
  Número de identificación del primer paso que se va a ejecutar para el trabajo. *step_id*es **int**, su valor predeterminado es 1.  
   
- [ **@category_name =** ] **'***category***'**  
+ [  **@category_name =** ] **'***categoría***'**  
  Categoría del trabajo. *categoría*es **sysname**, su valor predeterminado es null.  
   
  [ **@category_id =** ] *category_id*  
@@ -92,7 +92,7 @@ sp_add_job [ @job_name = ] 'job_name'
 |**2** (predeterminado)|En caso de error|  
 |**3**|Always|  
   
- [ **@notify_level_email =** ] *email_level*  
+ [  **@notify_level_email =** ] *email_level*  
  Valor que indica cuándo se debe enviar un mensaje de correo electrónico para notificar la finalización del trabajo. *email_level*es **int**, su valor predeterminado es **0**, lo que no significa que nunca. *email_level*utiliza los mismos valores que *eventlog_level*.  
   
  [ **@notify_level_netsend =** ] *netsend_level*  
@@ -116,7 +116,7 @@ sp_add_job [ @job_name = ] 'job_name'
 > [!NOTE]  
 >  Cuando *delete_level* es **3**, el trabajo se ejecuta sólo una vez, con independencia de las programaciones que definido para el trabajo. Además, si un trabajo se elimina a sí mismo, también se elimina todo el historial de trabajos.  
   
- [ **@job_id =** ] *job_id***OUTPUT**  
+ [  **@job_id =** ] *job_id *** salida**  
  Número de identificación que se ha asignado al trabajo si este se ha creado correctamente. *job_id*es una variable de salida de tipo **uniqueidentifier**, su valor predeterminado es null.  
   
 ## <a name="return-code-values"></a>Valores de código de retorno  

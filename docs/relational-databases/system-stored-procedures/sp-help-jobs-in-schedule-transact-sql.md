@@ -1,16 +1,16 @@
 ---
-title: sp_help_jobs_in_schedule (Transact-SQL) | Microsoft Docs
-ms.custom: 
+title: sp_help_jobs_in_schedule (Transact-SQL) | Documentos de Microsoft
+ms.custom: ''
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine
-ms.service: 
+ms.service: ''
 ms.component: system-stored-procedures
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - sp_help_jobs_in_schedule_TSQL
@@ -20,16 +20,16 @@ dev_langs:
 helpviewer_keywords:
 - sp_help_jobs_in_schedule
 ms.assetid: 1168aa2c-136b-4ba3-b18e-9070d95a26fa
-caps.latest.revision: 
+caps.latest.revision: 34
 author: stevestein
 ms.author: sstein
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: aac7c4d1cb1199f17e060c9c9d0d4437d8a3220c
-ms.sourcegitcommit: c556eaf60a49af7025db35b7aa14beb76a8158c5
+ms.openlocfilehash: 586e93481bf8f107901555c41dc36c524e5b5ba6
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/03/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="sphelpjobsinschedule-transact-sql"></a>sp_help_jobs_in_schedule (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -48,7 +48,7 @@ sp_help_jobs_in_schedule
 ```  
   
 ## <a name="arguments"></a>Argumentos  
- [  **@schedule_id =** ] *schedule_id*  
+ [ **@schedule_id =** ] *schedule_id*  
  Identificador de la programación de la que se va a mostrar información. *schedule_id* es **int**, no tiene ningún valor predeterminado. Cualquier *schedule_id* o *schedule_name* se puede especificar.  
   
  [  **@schedule_name =** ] **'***schedule_name***'**  
@@ -66,9 +66,9 @@ sp_help_jobs_in_schedule
 |**originating_server**|**nvarchar(30)**|Nombre del servidor del que proviene el trabajo.|  
 |**Nombre**|**sysname**|Nombre del trabajo.|  
 |**enabled**|**tinyint**|Indica si el trabajo está habilitado para su ejecución.|  
-|**description**|**nvarchar(512)**|Descripción del trabajo.|  
+|**Descripción**|**nvarchar(512)**|Descripción del trabajo.|  
 |**start_step_id**|**int**|Id. del paso del trabajo en el que debe comenzar la ejecución.|  
-|**category**|**sysname**|Categoría del trabajo|  
+|**Categoría**|**sysname**|Categoría del trabajo|  
 |**propietario**|**sysname**|Propietario del trabajo.|  
 |**notify_level_eventlog**|**int**|Máscara de bits que indica en qué circunstancias se debe registrar un evento de notificación en el registro de aplicación de Microsoft Windows. Puede ser uno de estos valores:<br /><br /> **0** no = nunca<br /><br /> **1** = cuando se realiza correctamente un trabajo<br /><br /> **2** = cuando se produce un error en el trabajo<br /><br /> **3** = cuando el trabajo se completa (independientemente del resultado del trabajo)|  
 |**notify_level_email**|**int**|Máscara de bits que indica en qué circunstancias se debe enviar una notificación por correo electrónico cuando se completa un trabajo. Los valores posibles son los mismos que para **notify_level_eventlog**.|  
@@ -124,7 +124,7 @@ GO
 ```  
   
 ## <a name="see-also"></a>Vea también  
- [Agente SQL Server almacena procedimientos &#40; Transact-SQL &#41;](../../relational-databases/system-stored-procedures/sql-server-agent-stored-procedures-transact-sql.md)   
+ [Procedimientos almacenados del Agente SQL Server &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sql-server-agent-stored-procedures-transact-sql.md)   
  [sp_add_schedule &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-add-schedule-transact-sql.md)   
  [sp_attach_schedule &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-attach-schedule-transact-sql.md)   
  [sp_delete_schedule &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-delete-schedule-transact-sql.md)   

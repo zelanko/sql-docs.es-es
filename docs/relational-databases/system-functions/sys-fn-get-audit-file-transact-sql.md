@@ -1,8 +1,8 @@
 ---
-title: sys.fn_get_audit_file (Transact-SQL) | Microsoft Docs
+title: Sys.fn_get_audit_file (Transact-SQL) | Documentos de Microsoft
 ms.custom: ''
 ms.date: 05/16/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine, sql-database
 ms.service: ''
 ms.component: system-functions
@@ -23,16 +23,17 @@ helpviewer_keywords:
 - sys.fn_get_audit_file function
 - fn_get_audit_file function
 ms.assetid: d6a78d14-bb1f-4987-b7b6-579ddd4167f5
-caps.latest.revision: ''
+caps.latest.revision: 27
 author: rothja
 ms.author: jroth
 manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 982113b9acc85b0dd340e2850ad6efb463a500cb
-ms.sourcegitcommit: 7246ef88fdec262fa0d34bf0e232f089e03a6911
+monikerRange: = azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions
+ms.openlocfilehash: 6dc30f57484714d70c7777a30ee43246c5980fcf
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/29/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="sysfngetauditfile-transact-sql"></a>sys.fn_get_audit_file (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -95,7 +96,7 @@ fn_get_audit_file ( file_pattern,
 |sequence_number|**int**|Realiza un seguimiento de la secuencia de registros de un único registro de auditoría que era demasiado grande para caber en el búfer de escritura destinado a las auditorías. No admite valores NULL.|  
 |action_id|**varchar(4)**|Id. de la acción. No admite valores NULL.|  
 |succeeded|**bit**|Indica si la acción que desencadenó el evento se ha llevado a cabo correctamente. No admite valores NULL. Para todos los eventos que no sean los eventos de inicio de sesión, esto solo notifica si la comprobación del permiso tuvo o no tuvo éxito, no la operación.<br /> 1 = correcto<br /> 0 = error|  
-|permission_bitmask|**varbinary(16)**|En algunas acciones, este es el permiso que se concedió, denegó o revocó.|  
+|permission_bitmask|**varbinary (16)**|En algunas acciones, este es el permiso que se concedió, denegó o revocó.|  
 |is_column_permission|**bit**|Marca que indica si éste es un permiso de nivel de columna. No admite valores NULL. Devuelve 0 si permission_bitmask = 0.<br /> 1 = verdadero<br /> 0 = falso|  
 |session_id|**smallint**|Identificador de la sesión en la que se produjo el evento. No admite valores NULL.|  
 |server_principal_id|**int**|Identificador del contexto de inicio de sesión en el que se realiza la acción. No admite valores NULL.|  

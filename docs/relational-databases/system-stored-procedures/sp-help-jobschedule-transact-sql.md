@@ -1,16 +1,16 @@
 ---
 title: sp_help_jobschedule (Transact-SQL) | Documentos de Microsoft
-ms.custom: 
+ms.custom: ''
 ms.date: 08/09/2016
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine
-ms.service: 
+ms.service: ''
 ms.component: system-stored-procedures
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - sp_help_jobschedule
@@ -20,16 +20,16 @@ dev_langs:
 helpviewer_keywords:
 - sp_help_jobschedule
 ms.assetid: 2cded902-9272-4667-ac4b-a4f95a9f008e
-caps.latest.revision: 
+caps.latest.revision: 34
 author: stevestein
 ms.author: sstein
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 87131f3a5347f24593798bbb81e9f81494897593
-ms.sourcegitcommit: c556eaf60a49af7025db35b7aa14beb76a8158c5
+ms.openlocfilehash: 731857bc70bcda1c7817db6e2cdc7eed3ad68236
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/03/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="sphelpjobschedule-transact-sql"></a>sp_help_jobschedule (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -64,7 +64,7 @@ sp_help_jobschedule { [ @job_id = ] job_id | [ @job_name = ] 'job_name' }
  [  **@schedule_id=** ] *schedule_id*  
  Número de identificación del elemento de programación del trabajo. *schedule_id*es **int**, su valor predeterminado es null.  
   
- [ **@include_description=** ] *include_description*  
+ [  **@include_description=** ] *include_description*  
  Especifica si se va a incluir la descripción de la programación en el conjunto de resultados. *include_description* es **bits**, su valor predeterminado es **0**. Cuando *include_description* es **0**, la descripción de la programación no se incluye en el conjunto de resultados. Cuando *include_description* es **1**, la descripción de la programación se incluye en el conjunto de resultados.  
   
 ## <a name="return-code-values"></a>Valores de código de retorno  
@@ -78,10 +78,10 @@ sp_help_jobschedule { [ @job_id = ] job_id | [ @job_name = ] 'job_name' }
 |**schedule_name**|**sysname**|Nombre de la programación.|  
 |**enabled**|**int**|Si la programación está habilitada (**1**) o no habilitada (**0**).|  
 |**freq_type**|**int**|Valor que indica cuándo el trabajo se va a ejecutar.<br /><br /> **1** = una vez<br /><br /> **4** = diariamente<br /><br /> **8** = semanalmente<br /><br /> **16** = mensualmente<br /><br /> **32** = mensualmente, relativo a la **freq_interval**<br /><br /> **64** = ejecutar cuando **SQLServerAgent** inicia el servicio.|  
-|**freq_interval**|**int**|Días cuando se ejecuta el trabajo. El valor depende del valor de **freq_type**. Para obtener más información, consulte [sp_add_schedule &#40; Transact-SQL &#41; ](../../relational-databases/system-stored-procedures/sp-add-schedule-transact-sql.md).|  
-|**freq_subday_type**|**int**|Unidades de **freq_subday_interval**. Para obtener más información, consulte [sp_add_schedule &#40; Transact-SQL &#41; ](../../relational-databases/system-stored-procedures/sp-add-schedule-transact-sql.md).|  
-|**freq_subday_interval**|**int**|Número de **freq_subday_type** períodos que transcurren entre cada ejecución del trabajo. Para obtener más información, consulte [sp_add_schedule &#40; Transact-SQL &#41; ](../../relational-databases/system-stored-procedures/sp-add-schedule-transact-sql.md).|  
-|**freq_relative_interval**|**int**|El trabajo programado de la **freq_interval** cada mes. Para obtener más información, consulte [sp_add_schedule &#40; Transact-SQL &#41; ](../../relational-databases/system-stored-procedures/sp-add-schedule-transact-sql.md).|  
+|**freq_interval**|**int**|Días cuando se ejecuta el trabajo. El valor depende del valor de **freq_type**. Para obtener más información, consulte [sp_add_schedule &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-add-schedule-transact-sql.md).|  
+|**freq_subday_type**|**int**|Unidades de **freq_subday_interval**. Para obtener más información, consulte [sp_add_schedule &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-add-schedule-transact-sql.md).|  
+|**freq_subday_interval**|**int**|Número de **freq_subday_type** períodos que transcurren entre cada ejecución del trabajo. Para obtener más información, consulte [sp_add_schedule &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-add-schedule-transact-sql.md).|  
+|**freq_relative_interval**|**int**|El trabajo programado de la **freq_interval** cada mes. Para obtener más información, consulte [sp_add_schedule &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-add-schedule-transact-sql.md).|  
 |**freq_recurrence_factor**|**int**|Número de meses entre las ejecuciones programadas del trabajo.|  
 |**active_start_date**|**int**|Fecha en que se activó la programación.|  
 |**active_end_date**|**int**|Fecha final de la programación.|  
@@ -94,7 +94,7 @@ sp_help_jobschedule { [ @job_id = ] job_id | [ @job_name = ] 'job_name' }
 |**schedule_uid**|**uniqueidentifier**|Identificador de la programación.|  
 |**job_count**|**int**|Recuento de trabajos devueltos.|  
   
-> **Nota:****sp_help_jobschedule** devuelve valores de la **dbo.sysjobschedules** y **dbo.sysschedules** tablas del sistema en **msdb** . **sysjobschedules** actualiza cada 20 minutos. Esto puede afectar a los valores devueltos por este procedimiento almacenado.  
+> **Nota:****sp_help_jobschedule** devuelve valores de la **dbo.sysjobschedules** y **dbo.sysschedules** tablas del sistema en **msdb** .   **sysjobschedules** actualiza cada 20 minutos. Esto puede afectar a los valores devueltos por este procedimiento almacenado.  
   
 ## <a name="remarks"></a>Comentarios  
  Los parámetros de **sp_help_jobschedule** puede utilizarse únicamente en ciertas combinaciones. Si *schedule_id* se especifica, ninguno *job_id* ni *job_name* puede especificarse. En caso contrario, el *job_id* o *job_name* parámetros se pueden usar con *schedule_name*.  

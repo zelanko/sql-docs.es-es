@@ -2,7 +2,7 @@
 title: sp_resyncmergesubscription (Transact-SQL) | Documentos de Microsoft
 ms.custom: ''
 ms.date: 03/04/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine
 ms.service: ''
 ms.component: system-stored-procedures
@@ -25,11 +25,11 @@ author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 676257b0429fa236780c435c934852fb7258a4b7
-ms.sourcegitcommit: d6b1695c8cbc70279b7d85ec4dfb66a4271cdb10
+ms.openlocfilehash: 93c48af023d34b5c73f1ea69c8bb6e26538cd8d6
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/10/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="spresyncmergesubscription-transact-sql"></a>sp_resyncmergesubscription (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -52,16 +52,16 @@ sp_resyncmergesubscription [ [ @publisher = ] 'publisher' ]
 ```  
   
 ## <a name="arguments"></a>Argumentos  
- [ **@publisher** = ] **'***publisher***'**  
+ [ **@publisher** =] **'***publisher***'**  
  Es el nombre del publicador. *Publisher* es **sysname**, su valor predeterminado es null. El valor NULL es válido si se ejecuta el procedimiento almacenado en el publicador. Si el procedimiento almacenado se ejecuta en el suscriptor, se debe especificar un publicador.  
   
  [ **@publisher_db** = ] **'***publisher_db***'**  
  Es el nombre de la base de datos de publicación. *publisher_db* es **sysname**, su valor predeterminado es null. El valor NULL es válido si se ejecuta el procedimiento almacenado en el publicador de la base de datos de publicación. Si el procedimiento almacenado se ejecuta en el suscriptor, se debe especificar un publicador.  
   
- [ **@publication** = ] **'***publication***'**  
+ [ **@publication** =] **'***publicación***'**  
  Es el nombre de la publicación. *publicación*es **sysname**, no tiene ningún valor predeterminado.  
   
- [ **@subscriber** = ] **'***subscriber***'**  
+ [ **@subscriber** =] **'***suscriptor***'**  
  Es el nombre del suscriptor. *suscriptor* es **sysname**, su valor predeterminado es null. El valor NULL es válido si el procedimiento almacenado se ejecuta en el suscriptor. Si el procedimiento almacenado se ejecuta en el publicador, se debe especificar un suscriptor.  
   
  [ **@subscriber_db** = ] **'***subscriber_db***'**  

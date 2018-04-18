@@ -1,16 +1,16 @@
 ---
-title: sp_post_msx_operation (Transact-SQL) | Microsoft Docs
-ms.custom: 
+title: sp_post_msx_operation (Transact-SQL) | Documentos de Microsoft
+ms.custom: ''
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine
-ms.service: 
+ms.service: ''
 ms.component: system-stored-procedures
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - sp_post_msx_operation
@@ -20,16 +20,16 @@ dev_langs:
 helpviewer_keywords:
 - sp_post_msx_operation
 ms.assetid: 085deef8-2709-4da9-bb97-9ab32effdacf
-caps.latest.revision: 
+caps.latest.revision: 29
 author: stevestein
 ms.author: sstein
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: b54a5b8dbf5539adb2d87ef6a095f4f78f767aff
-ms.sourcegitcommit: c556eaf60a49af7025db35b7aa14beb76a8158c5
+ms.openlocfilehash: 08cda2f3508e5c4f338c8e607654f5e41ed803f0
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/03/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="sppostmsxoperation-transact-sql"></a>sp_post_msx_operation (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -57,8 +57,8 @@ sp_post_msx_operation
   
 |Tipo de objeto|Operación|  
 |-----------------|---------------|  
-|**JOB**|INSERT<br /><br /> UPDATE<br /><br /> DELETE<br /><br /> START<br /><br /> STOP|  
-|**SERVER**|RE-ENLIST<br /><br /> DEFECT<br /><br /> SYNC-TIME<br /><br /> SET-POLL|  
+|**TRABAJO**|INSERT<br /><br /> UPDATE<br /><br /> DELETE<br /><br /> START<br /><br /> STOP|  
+|**SERVIDOR**|RE-ENLIST<br /><br /> DEFECT<br /><br /> SYNC-TIME<br /><br /> SET-POLL|  
 |**PROGRAMACIÓN**|INSERT<br /><br /> UPDATE<br /><br /> DELETE|  
   
  [  **@object_type =**] **'***objeto***'**  
@@ -67,13 +67,13 @@ sp_post_msx_operation
  [ **@job_id =**] *job_id*  
  Número de identificación del trabajo al que se aplica la operación. *job_id* es **uniqueidentifier**, no tiene ningún valor predeterminado. **0 x 00** indica todos los trabajos. Si *objeto* es **SERVER**, a continuación, *job_id*no es necesario.  
   
- [ **@specific_target_server =**] **'***target_server***'**  
+ [  **@specific_target_server =**] **'***target_server***'**  
  Nombre del servidor de destino al que se aplica la operación especificada. Si *job_id* se especifica, pero *target_server* no se especifica, las operaciones se exponen para todos los servidores de la tarea de trabajos. *target_server* es **nvarchar (30)**, su valor predeterminado es null.  
   
- [ **@value =**] *value*  
+ [  **@value =**] *valor*  
  Intervalo de sondeo, en segundos. *value* es de tipo **int**y su valor predeterminado es NULL. Especifique este parámetro solo si *operación* es **SET-POLL**.  
   
- [ **@schedule_uid=** ] *schedule_uid*  
+ [  **@schedule_uid=** ] *valor schedule_uid*  
  Identificador único de la programación a la que se aplica la operación. *valor schedule_uid* es **uniqueidentifier**, no tiene ningún valor predeterminado.  
   
 ## <a name="return-code-values"></a>Valores de código de retorno  

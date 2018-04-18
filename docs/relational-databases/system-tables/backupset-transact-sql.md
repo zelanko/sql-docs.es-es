@@ -1,16 +1,16 @@
 ---
 title: backupset (Transact-SQL) | Documentos de Microsoft
-ms.custom: 
+ms.custom: ''
 ms.date: 06/10/2016
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine, pdw
-ms.service: 
+ms.service: ''
 ms.component: system-tables
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - backupset
@@ -22,21 +22,22 @@ helpviewer_keywords:
 - backup media [SQL Server], backupset system table
 - backup sets [SQL Server]
 ms.assetid: 6ff79bbf-4acf-4f75-926f-38637ca8a943
-caps.latest.revision: 
+caps.latest.revision: 70
 author: stevestein
 ms.author: sstein
 manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: dd98b3e7e120e186901d8120243a35d620411ba2
-ms.sourcegitcommit: c556eaf60a49af7025db35b7aa14beb76a8158c5
+monikerRange: '>= aps-pdw-2016 || >= sql-server-2016 || = sqlallproducts-allversions'
+ms.openlocfilehash: 1675b6703b8729458ff10fae7d83a2c56328ee59
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/03/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="backupset-transact-sql"></a>backupset (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-pdw-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-pdw-md.md)]
 
-  Contiene una fila por cada conjunto de copia de seguridad. A *conjunto de copia de seguridad* contiene la copia de seguridad de una única operación de copia de seguridad correcta. Las instrucciones RESTORE, RESTORE FILELISTONLY, RESTORE HEADERONLY y RESTORE VERIFYONLY actúan sobre un solo conjunto de copia de seguridad en el conjunto de medios de los dispositivos de copia de seguridad especificados.  
+  Contiene una fila por cada conjunto de copia de seguridad. Un *conjunto de copia de seguridad* contiene la copia de seguridad de una sola operación de copia de seguridad realizada correctamente. Las instrucciones RESTORE, RESTORE FILELISTONLY, RESTORE HEADERONLY y RESTORE VERIFYONLY actúan sobre un solo conjunto de copia de seguridad en el conjunto de medios de los dispositivos de copia de seguridad especificados.  
   
  Esta tabla se almacena en la **msdb** base de datos.  
 
@@ -45,24 +46,24 @@ ms.lasthandoff: 02/03/2018
 |-----------------|---------------|-----------------|  
 |**backup_set_id**|**int**|Número de identificación único de conjunto de copia de seguridad que identifica al conjunto de copia de seguridad. Clave principal de identidad.|  
 |**backup_set_uuid**|**uniqueidentifier**|Número de identificación único de conjunto de copia de seguridad que identifica al conjunto de copia de seguridad.|  
-|**media_set_id**|**int**|Número de identificación único de conjunto de medios que identifica el conjunto de medios que contiene el conjunto de copia de seguridad. References **backupmediaset(media_set_id)**.|  
+|**media_set_id**|**int**|Número de identificación único de conjunto de medios que identifica el conjunto de medios que contiene el conjunto de copia de seguridad. Referencias **backupmediaset(media_set_id)**.|  
 |**first_family_number**|**tinyint**|Número de familia del medio en el que comienza el conjunto de copia de seguridad. Puede ser NULL.|  
 |**first_media_number**|**smallint**|Número de medio del medio en el que comienza el conjunto de copia de seguridad. Puede ser NULL.|  
 |**last_family_number**|**tinyint**|Número de familia del medio en el que termina el conjunto de copia de seguridad. Puede ser NULL.|  
 |**last_media_number**|**smallint**|Número de medio del medio en el que termina el conjunto de copia de seguridad. Puede ser NULL.|  
 |**catalog_family_number**|**tinyint**|Número de familia del medio que contiene el comienzo del directorio del conjunto de copia de seguridad. Puede ser NULL.|  
 |**catalog_media_number**|**smallint**|Número de medio del medio que contiene el comienzo del directorio del conjunto de copia de seguridad. Puede ser NULL.|  
-|**position**|**int**|Posición del conjunto de copia de seguridad utilizada en la operación de restauración para buscar el conjunto de copia de seguridad y los archivos correspondientes. Puede ser NULL. Para obtener más información, vea el archivo en [copia de seguridad &#40; Transact-SQL &#41; ](../../t-sql/statements/backup-transact-sql.md).|  
+|**position**|**int**|Posición del conjunto de copia de seguridad utilizada en la operación de restauración para buscar el conjunto de copia de seguridad y los archivos correspondientes. Puede ser NULL. Para obtener más información, vea el archivo en [copia de seguridad &#40;Transact-SQL&#41;](../../t-sql/statements/backup-transact-sql.md).|  
 |**expiration_date**|**datetime**|Fecha y hora de expiración del conjunto de copia de seguridad. Puede ser NULL.|  
 |**software_vendor_id**|**int**|Número de identificación del proveedor de software que escribe el encabezado de medios de copia de seguridad. Puede ser NULL.|  
 |**Nombre**|**nvarchar(128)**|Nombre del conjunto de copia de seguridad. Puede ser NULL.|  
-|**description**|**nvarchar(255)**|Descripción del conjunto de copia de seguridad. Puede ser NULL.|  
+|**Descripción**|**nvarchar(255)**|Descripción del conjunto de copia de seguridad. Puede ser NULL.|  
 |**user_name**|**nvarchar(128)**|Nombre del usuario que realiza la operación de copia de seguridad. Puede ser NULL.|  
-|**software_major_version**|**tinyint**|[!INCLUDE[msCoName](../../includes/msconame-md.md)] Número de versión principal de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Puede ser NULL.|  
-|**software_minor_version**|**tinyint**|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Número de versión secundaria. Puede ser NULL.|  
-|**software_build_version**|**smallint**|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Número de compilación. Puede ser NULL.|  
+|**software_major_version**|**tinyint**|[!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Número de versión principal. Puede ser NULL.|  
+|**software_minor_version**|**tinyint**|Número de versión secundaria de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Puede ser NULL.|  
+|**software_build_version**|**smallint**|Número de compilación de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Puede ser NULL.|  
 |**time_zone**|**smallint**|Diferencia entre la hora local (en la que tiene lugar la operación de copia de seguridad) y la hora universal coordinada (UTC) en intervalos de 15 minutos. Los valores pueden variar entre -48 y +48, inclusive. El valor 127 indica que se desconoce la diferencia. Por ejemplo, -20 es la hora estándar del Este (EST) o cinco horas después de UTC. Puede ser NULL.|  
-|**mtf_minor_version**|**tinyint**|[!INCLUDE[msCoName](../../includes/msconame-md.md)] Número de versión secundaria de formato de cinta. Puede ser NULL.|  
+|**mtf_minor_version**|**tinyint**|Número de versión secundaria del formato de cinta de [!INCLUDE[msCoName](../../includes/msconame-md.md)]. Puede ser NULL.|  
 |**first_lsn**|**numeric(25,0)**|Número de secuencia de registro de la primera entrada de registro del conjunto de copia de seguridad o de la más antigua. Puede ser NULL.|  
 |**last_lsn**|**numeric(25,0)**|Número de secuencia de registro de la siguiente entrada del registro después del conjunto de copia de seguridad. Puede ser NULL.|  
 |**checkpoint_lsn**|**numeric(25,0)**|Número de secuencia de registro de la entrada del registro en la que debe comenzar la operación de rehacer. Puede ser NULL.|  
@@ -73,12 +74,12 @@ ms.lasthandoff: 02/03/2018
 |**Tipo**|**char(1)**|Tipo de copia de seguridad. Puede ser:<br /><br /> D = Base de datos<br /><br /> I = Base de datos diferencial<br /><br /> L = Registro<br /><br /> F = Archivo o grupo de archivos<br /><br /> G = Archivo diferencial<br /><br /> P = Parcial<br /><br /> Q = Parcial diferencial<br /><br /> Puede ser NULL.|  
 |**sort_order**|**smallint**|Criterio de ordenación del servidor que realiza la operación de copia de seguridad. Puede ser NULL. Para obtener más información acerca de ordenación y las intercalaciones, vea [Collation and Unicode Support](../../relational-databases/collations/collation-and-unicode-support.md).|  
 |**code_page**|**smallint**|Página de códigos del servidor que realiza la operación de copia de seguridad. Puede ser NULL. Para obtener más información acerca de las páginas de código, vea [Collation and Unicode Support](../../relational-databases/collations/collation-and-unicode-support.md).|  
-|**compatibility_level**|**tinyint**|Configuración del nivel de compatibilidad para la base de datos. Puede ser:<br /><br /> 90 = [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)]<br /><br /> 100 = [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)]<br /><br /> 110 = [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]<br /><br /> 120 = [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)]<br /><br /> Puede ser NULL.<br /><br /> Para obtener más información sobre los niveles de compatibilidad, vea [Nivel de compatibilidad de ALTER DATABASE &#40;Transact-SQL&#41;](../../t-sql/statements/alter-database-transact-sql-compatibility-level.md).|  
+|**COMPATIBILITY_LEVEL**|**tinyint**|Configuración del nivel de compatibilidad para la base de datos. Puede ser:<br /><br /> 90 = [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)]<br /><br /> 100 = [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)]<br /><br /> 110 = [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]<br /><br /> 120 = [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)]<br /><br /> Puede ser NULL.<br /><br /> Para obtener más información sobre los niveles de compatibilidad, vea [Nivel de compatibilidad de ALTER DATABASE &#40;Transact-SQL&#41;](../../t-sql/statements/alter-database-transact-sql-compatibility-level.md).|  
 |**database_version**|**int**|Número de versión de la base de datos. Puede ser NULL.|  
 |**backup_size**|**numeric(20,0)**|Tamaño del conjunto de copia de seguridad, en bytes. Puede ser NULL. Para las copias de seguridad VSS, backup_size es un valor estimado.|  
 |**database_name**|**nvarchar(128)**|Nombre de la base de datos que forma parte de la operación de copia de seguridad. Puede ser NULL.|  
 |**server_name**|**nvarchar(128)**|Nombre del servidor en el que se ejecuta la operación de copia de seguridad de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Puede ser NULL.|  
-|**machine_name**|**nvarchar(128)**|Nombre del equipo en el que se ejecuta [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Puede ser NULL.|  
+|**NombreDeEquipo**|**nvarchar(128)**|Nombre del equipo en el que se ejecuta [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Puede ser NULL.|  
 |**flags**|**int**|En [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], **marcas** columna está en desuso y se ha sustituido con las siguientes columnas de bits:<br /><br /> **has_bulk_logged_data** <br /> **is_snapshot** <br /> **is_readonly** <br /> **is_single_user** <br /> **has_backup_checksums** <br /> **is_damaged** <br /> **begins_log_chain** <br /> **has_incomplete_metadata** <br /> **is_force_offline** <br /> **is_copy_only**<br /><br /> Puede ser NULL.<br /><br /> En los conjuntos de copia de seguridad de versiones anteriores de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], bits de marca:<br />1 = La copia de seguridad contiene datos registrados al mínimo. <br />2 = Se utilizó WITH SNAPSHOT. <br />4 = La base de datos era de solo lectura en el momento de la copia de seguridad.<br />8 = La base de datos estaba en modo de usuario único en el momento de la copia de seguridad.|  
 |**unicode_locale**|**int**|Configuración regional Unicode. Puede ser NULL.|  
 |**unicode_compare_style**|**int**|Estilo de comparación en Unicode. Puede ser NULL.|  
@@ -100,9 +101,9 @@ ms.lasthandoff: 02/03/2018
 |**fork_point_lsn**|**numeric(25,0)**|Si **first_recovery_fork_guid** no es igual a **last_recovery_fork_guid**, es el número de secuencia de registro del punto de bifurcación. En caso contrario, el valor es NULL.|  
 |**database_guid**|**uniqueidentifier**|Id. único de la base de datos. Esto corresponde a **BindingID** de RESTORE HEADERONLY. Cuando se restaura la base de datos, se asigna un valor nuevo.|  
 |**family_guid**|**uniqueidentifier**|Id. único de la base de datos original cuando se creó. Este valor permanece invariable cuando se restaura la base de datos, incluso con un nombre diferente.|  
-|**differential_base_lsn**|**numeric(25,0)**|LSN de base para copias de seguridad diferenciales. Para una única copia de seguridad diferencial; cambios con LSN mayores que o igual a **differential_base_lsn** se incluyen en la copia de seguridad diferencial.<br /><br /> Para una copia diferencial, el valor es NULL y la base de LSN debe determinarse en el nivel de archivo (vea [backupfile &#40; Transact-SQL &#41; ](../../relational-databases/system-tables/backupfile-transact-sql.md)).<br /><br /> Para los tipos de copia de seguridad no diferenciales, el valor siempre es NULL.|  
+|**differential_base_lsn**|**numeric(25,0)**|LSN de base para copias de seguridad diferenciales. Para una única copia de seguridad diferencial; cambios con LSN mayores que o igual a **differential_base_lsn** se incluyen en la copia de seguridad diferencial.<br /><br /> Para una copia diferencial, el valor es NULL y la base de LSN debe determinarse en el nivel de archivo (vea [backupfile &#40;Transact-SQL&#41;](../../relational-databases/system-tables/backupfile-transact-sql.md)).<br /><br /> Para los tipos de copia de seguridad no diferenciales, el valor siempre es NULL.|  
 |**differential_base_guid**|**uniqueidentifier**|Para una copia de seguridad diferencial con una única copia de seguridad base, el valor es el identificador único de la base diferencial.<br /><br /> Para las copias de seguridad diferenciales con varias copias de seguridad base, el valor es NULL y la base diferencial debe determinarse en el nivel de archivo.<br /><br /> Para los tipos de copia de seguridad no diferenciales, el valor es NULL.|  
-|**compressed_backup_size**|**Numeric(20,0)**|Recuento total de bytes de la copia de seguridad almacenada en disco.<br /><br /> Para calcular la razón de compresión, utilice **compressed_backup_size** y **backup_size**.<br /><br /> Durante una **msdb** actualización, este valor se establece en NULL. lo que indica que la copia de seguridad no está comprimida.|  
+|**compressed_backup_size**|**numeric(20,0)**|Recuento total de bytes de la copia de seguridad almacenada en disco.<br /><br /> Para calcular la razón de compresión, utilice **compressed_backup_size** y **backup_size**.<br /><br /> Durante una **msdb** actualización, este valor se establece en NULL. lo que indica que la copia de seguridad no está comprimida.|  
 |**key_algorithm**|**nvarchar(32)**|Algoritmo de cifrado usado para cifrar la copia de seguridad. El valor NO_Encryption indica que la copia de seguridad no se cifró.|  
 |**encryptor_thumbprint**|**varbinary(20)**|La huella digital del sistema de cifrado que se puede utilizar para encontrar el certificado o la clave asimétrica en la base de datos. Si la copia de seguridad no se cifró, este valor es NULL.|  
 |**encryptor_type**|**nvarchar(32)**|Tipo de sistema de cifrado usado: certificado o clave asimétrica. . Si la copia de seguridad no se cifró, este valor es NULL.|  
@@ -113,7 +114,7 @@ ms.lasthandoff: 02/03/2018
  Para reducir el número de filas en esta tabla y en otras tablas de historial y de copia de seguridad, ejecute el [sp_delete_backuphistory](../../relational-databases/system-stored-procedures/sp-delete-backuphistory-transact-sql.md) procedimiento almacenado.  
   
 ## <a name="see-also"></a>Vea también  
- [Copia de seguridad y restauración tablas &#40; Transact-SQL &#41;](../../relational-databases/system-tables/backup-and-restore-tables-transact-sql.md)   
+ [Copia de seguridad y restaurar tablas &#40;Transact-SQL&#41;](../../relational-databases/system-tables/backup-and-restore-tables-transact-sql.md)   
  [backupfile &#40;Transact-SQL&#41;](../../relational-databases/system-tables/backupfile-transact-sql.md)   
  [backupfilegroup &#40;Transact-SQL&#41;](../../relational-databases/system-tables/backupfilegroup-transact-sql.md)   
  [backupmediafamily &#40;Transact-SQL&#41;](../../relational-databases/system-tables/backupmediafamily-transact-sql.md)   
@@ -122,6 +123,6 @@ ms.lasthandoff: 02/03/2018
  [Conjuntos de medios, familias de medios y conjuntos de copias de seguridad &#40;SQL Server&#41;](../../relational-databases/backup-restore/media-sets-media-families-and-backup-sets-sql-server.md)   
  [Modelos de recuperación &#40;SQL Server&#41;](../../relational-databases/backup-restore/recovery-models-sql-server.md)   
  [RESTORE HEADERONLY &#40;Transact-SQL&#41;](../../t-sql/statements/restore-statements-headeronly-transact-sql.md)   
- [Copia de seguridad y restauración tablas &#40; Transact-SQL &#41;](../../relational-databases/system-tables/backup-and-restore-tables-transact-sql.md)  
+ [Copia de seguridad y restaurar tablas &#40;Transact-SQL&#41;](../../relational-databases/system-tables/backup-and-restore-tables-transact-sql.md)  
   
   

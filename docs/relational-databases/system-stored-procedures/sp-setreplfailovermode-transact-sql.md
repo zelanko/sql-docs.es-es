@@ -1,16 +1,16 @@
 ---
 title: sp_setreplfailovermode (Transact-SQL) | Documentos de Microsoft
-ms.custom: 
+ms.custom: ''
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine
-ms.service: 
+ms.service: ''
 ms.component: system-stored-procedures
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - replication
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 applies_to:
 - SQL Server
@@ -20,16 +20,16 @@ f1_keywords:
 helpviewer_keywords:
 - sp_setreplfailovermode
 ms.assetid: ca98a4c3-bea4-4130-88d7-79e0fd1e85f6
-caps.latest.revision: 
+caps.latest.revision: 25
 author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 68851fb6ad9a242536cc81c6688b7caed1067a2c
-ms.sourcegitcommit: 45e4efb7aa828578fe9eb7743a1a3526da719555
+ms.openlocfilehash: 39e640d539dad66402d90fc450b5c22a1e338f89
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="spsetreplfailovermode-transact-sql"></a>sp_setreplfailovermode (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -62,15 +62,15 @@ sp_setreplfailovermode [ @publisher= ] 'publisher'
  [**@failover_mode=**] **'***failover_mode***'**  
  Es el modo de conmutación por error de la suscripción. *failover_mode* es **nvarchar (10)** y puede tener uno de estos valores.  
   
-|Valor|Description|  
+|Value|Description|  
 |-----------|-----------------|  
 |**inmediata** o **sincronización**|A medida que se vayan modificando los datos en el suscriptor, se realiza una copia masiva de las modificaciones en el publicador.|  
-|**en cola**|Las modificaciones de datos se almacenan en un [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] cola.|  
+|**En cola**|Las modificaciones de datos se almacenan en un [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] cola.|  
   
 > [!NOTE]  
 >  [!INCLUDE[msCoName](../../includes/msconame-md.md)] Message Queue Server ha quedado desusado y ya no se admite.  
   
- [  **@override** =] *invalidar*  
+ [ **@override**=] *invalidar*  
  Exclusivamente para uso interno.  
   
 ## <a name="return-code-values"></a>Valores de código de retorno  

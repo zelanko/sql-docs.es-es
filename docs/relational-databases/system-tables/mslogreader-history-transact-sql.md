@@ -1,16 +1,16 @@
 ---
 title: MSlogreader_history (Transact-SQL) | Documentos de Microsoft
-ms.custom: 
+ms.custom: ''
 ms.date: 03/03/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine
-ms.service: 
+ms.service: ''
 ms.component: system-tables
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - replication
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 applies_to:
 - SQL Server
@@ -22,16 +22,16 @@ dev_langs:
 helpviewer_keywords:
 - MSlogreader_history system table
 ms.assetid: 2e399fa1-3591-4c1c-96b7-7964fe82c7c4
-caps.latest.revision: 
+caps.latest.revision: 29
 author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 191f696f65d744b66d2aa41b8841c24097bf6434
-ms.sourcegitcommit: 45e4efb7aa828578fe9eb7743a1a3526da719555
+ms.openlocfilehash: c1b119040efebb1724b026cdb213cfdb9389a0d8
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="mslogreaderhistory-transact-sql"></a>MSlogreader_history (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -45,7 +45,7 @@ ms.lasthandoff: 11/21/2017
 |**start_time**|**datetime**|Hora a la que comienza la ejecución del trabajo.|  
 |**time**|**datetime**|Hora a la que se registra el mensaje.|  
 |**duration**|**int**|Duración, en segundos, de la sesión del mensaje.|  
-|**comentarios**|**nvarchar(255)**|El texto del mensaje.|  
+|**Comentarios**|**nvarchar(255)**|El texto del mensaje.|  
 |**xact_seqno**|**varbinary (16)**|Número de secuencia de la última transacción procesada.|  
 |**delivery_time**|**int**|Se entrega la primera transacción de tiempo.|  
 |**delivered_transactions**|**int**|Número total de transacciones entregadas en la sesión.|  
@@ -58,7 +58,7 @@ ms.lasthandoff: 11/21/2017
 |**updateable_row**|**bit**|Establecido en **1** si la fila de historial se puede sobrescribir.|  
   
 ## <a name="see-also"></a>Vea también  
- [Tablas de replicación &#40; Transact-SQL &#41;](../../relational-databases/system-tables/replication-tables-transact-sql.md)   
+ [Tablas de replicación &#40;Transact-SQL&#41;](../../relational-databases/system-tables/replication-tables-transact-sql.md)   
  [Vistas de replicación &#40;Transact-SQL&#41;](../../relational-databases/system-views/replication-views-transact-sql.md)  
   
   

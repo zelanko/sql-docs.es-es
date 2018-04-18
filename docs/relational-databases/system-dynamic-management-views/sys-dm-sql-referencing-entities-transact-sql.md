@@ -1,16 +1,16 @@
 ---
-title: sys.dm_sql_referencing_entities (Transact-SQL) | Microsoft Docs
-ms.custom: 
+title: Sys.dm_sql_referencing_entities (Transact-SQL) | Documentos de Microsoft
+ms.custom: ''
 ms.date: 06/10/2016
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine, sql-database
-ms.service: 
+ms.service: ''
 ms.component: dmv's
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - sys.dm_sql_referencing_entities
@@ -22,16 +22,17 @@ dev_langs:
 helpviewer_keywords:
 - sys.dm_sql_referencing_entities dynamic management function
 ms.assetid: c16f8f0a-483f-4feb-842e-da90426045ae
-caps.latest.revision: 
+caps.latest.revision: 33
 author: stevestein
 ms.author: sstein
 manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 35e2f1be36365c2b1f5c8801a9e0d7749c70de7d
-ms.sourcegitcommit: c556eaf60a49af7025db35b7aa14beb76a8158c5
+monikerRange: = azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions
+ms.openlocfilehash: 9508681edc0d105e776dd5b580f6385bdb0d93a2
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/03/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="sysdmsqlreferencingentities-transact-sql"></a>sys.dm_sql_referencing_entities (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -71,7 +72,7 @@ sys.dm_sql_referencing_entities (
   
  *schema_name* es necesaria excepto cuando la clase que se hace referencia es PARTITION_FUNCTION.  
   
- *schema_name.referenced_entity_name* is **nvarchar(517)**.  
+ *schema_name.referenced_entity_name* es **nvarchar (517)**.  
   
  *< Referenced_class >* :: = {objeto | TIPO | XML_SCHEMA_COLLECTION | PARTITION_FUNCTION}  
  Es la clase de la entidad a la que se hace referencia. Solo se puede especificar una clase por instrucción.  
@@ -109,14 +110,14 @@ sys.dm_sql_referencing_entities (
 |-----------------|------------------------|-----------------------|  
 |Table|Sí*|Sí|  
 |Ver|Sí|Sí|  
-|[!INCLUDE[tsql](../../includes/tsql-md.md)] procedimiento almacenado **|Sí|Sí|  
+|Procedimiento almacenado de [!INCLUDE[tsql](../../includes/tsql-md.md)]**|Sí|Sí|  
 |procedimiento almacenado CLR|no|Sí|  
-|[!INCLUDE[tsql](../../includes/tsql-md.md)] función definida por el usuario|Sí|Sí|  
+|Función definida por el usuario de [!INCLUDE[tsql](../../includes/tsql-md.md)]|Sí|Sí|  
 |Función CLR definida por el usuario|no|Sí|  
 |Desencadenador CLR (DML y DDL)|no|no|  
-|[!INCLUDE[tsql](../../includes/tsql-md.md)] desencadenador DML|Sí|no|  
-|[!INCLUDE[tsql](../../includes/tsql-md.md)] desencadenador DDL de nivel de base de datos|Sí|no|  
-|[!INCLUDE[tsql](../../includes/tsql-md.md)] desencadenador DDL de nivel de servidor|Sí|no|  
+|Desencadenador DML de [!INCLUDE[tsql](../../includes/tsql-md.md)]|Sí|no|  
+|Desencadenador DDL de nivel de base de datos de [!INCLUDE[tsql](../../includes/tsql-md.md)]|Sí|no|  
+|Desencadenador DDL de nivel de servidor de [!INCLUDE[tsql](../../includes/tsql-md.md)]|Sí|no|  
 |Procedimientos almacenados extendidos|no|Sí|  
 |Cola|no|Sí|  
 |Synonym (Sinónimo)|no|Sí|  
@@ -124,7 +125,7 @@ sys.dm_sql_referencing_entities (
 |Colección de esquemas XML|no|Sí|  
 |Función de partición|no|Sí|  
   
- \*Una tabla se realiza un seguimiento como una entidad de referencia sólo cuando se hace referencia una [!INCLUDE[tsql](../../includes/tsql-md.md)] module, tipo definido por el usuario o la colección de esquemas XML en la definición de una columna calculada, una restricción CHECK o una restricción DEFAULT.  
+ \* Una tabla se realiza un seguimiento como una entidad de referencia sólo cuando se hace referencia una [!INCLUDE[tsql](../../includes/tsql-md.md)] module, tipo definido por el usuario o la colección de esquemas XML en la definición de una columna calculada, una restricción CHECK o una restricción DEFAULT.  
   
  ** No se realiza el seguimiento de los procedimientos almacenados numerados con un valor entero mayor que 1 como la entidad que hace referencia ni como la entidad a la que se hace referencia.  
   

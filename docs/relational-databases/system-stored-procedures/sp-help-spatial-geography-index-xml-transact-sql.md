@@ -1,16 +1,16 @@
 ---
 title: sp_help_spatial_geography_index_xml (Transact-SQL) | Documentos de Microsoft
-ms.custom: 
+ms.custom: ''
 ms.date: 06/10/2016
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine
-ms.service: 
+ms.service: ''
 ms.component: system-stored-procedures
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - sp_help_spatial_geography_index_xml_TSQL
@@ -20,16 +20,16 @@ dev_langs:
 helpviewer_keywords:
 - sp_help_spatial_geography_index_xml procedure
 ms.assetid: 821d4127-3ce5-4474-8561-043404a20d81
-caps.latest.revision: 
+caps.latest.revision: 14
 author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: ffc4f49e8087189e9fd7d364d4d9ee3cc668573a
-ms.sourcegitcommit: 9fbe5403e902eb996bab0b1285cdade281c1cb16
+ms.openlocfilehash: eba6e9c6fe0d979d9e07a7023d1746a1e0cfb2cd
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/27/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="sphelpspatialgeographyindexxml-transact-sql"></a>sp_help_spatial_geography_index_xml (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
@@ -85,9 +85,9 @@ select @x.value('(/Primary_Filter_Efficiency/text())[1]', 'float');
 ## <a name="see-also"></a>Vea también  
  [Procedimientos almacenados de índice espacial](http://msdn.microsoft.com/library/1be0f34e-3d5a-4a1f-9299-bd482362ec7a)   
  [sp_help_spatial_geography_index](../../relational-databases/system-stored-procedures/sp-help-spatial-geography-index-transact-sql.md)   
- [Información general de los índices espaciales](../../relational-databases/spatial/spatial-indexes-overview.md)   
+ [Información general sobre los índices espaciales](../../relational-databases/spatial/spatial-indexes-overview.md)   
  [Datos espaciales &#40;SQL Server&#41;](../../relational-databases/spatial/spatial-data-sql-server.md)   
  [Conceptos básicos de XQuery](../../xquery/xquery-basics.md)   
- [Referencia del lenguaje XQuery](../../xquery/xquery-language-reference-sql-server.md)  
+ [Referencia del lenguaje de XQuery](../../xquery/xquery-language-reference-sql-server.md)  
   
   

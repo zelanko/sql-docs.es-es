@@ -1,16 +1,16 @@
 ---
-title: sp_fulltext_service (Transact-SQL) | Microsoft Docs
-ms.custom: 
+title: sp_fulltext_service (Transact-SQL) | Documentos de Microsoft
+ms.custom: ''
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine
-ms.service: 
+ms.service: ''
 ms.component: system-stored-procedures
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - sp_fulltext_service
@@ -22,16 +22,16 @@ helpviewer_keywords:
 - sp_fulltext_service
 - Full-Text Search Upgrade Option
 ms.assetid: 17a91433-f9b6-4a40-88c4-8c704ec2de9f
-caps.latest.revision: 
+caps.latest.revision: 79
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: c51847237598fcd1e493fec3194463359198d929
-ms.sourcegitcommit: c556eaf60a49af7025db35b7aa14beb76a8158c5
+ms.openlocfilehash: 07e4a7e1832a91ebc2acd5da19839766b83619ea
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/03/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="spfulltextservice-transact-sql"></a>sp_fulltext_service (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -52,7 +52,7 @@ sp_fulltext_service [ [@action=] 'action'
  [  **@action=**] **'***acción***'**  
  Es la propiedad que se va a cambiar o restablecer. *acción* es **nvarchar (100),** no tiene ningún valor predeterminado. Para obtener una lista de un*c*ne propiedades, sus descripciones y los valores que se pueden establecer, vea la tabla en la *valor* argumento. Este argumento devuelve las propiedades siguientes: tipo de datos, valor actual, valor mínimo o máximo y estado de degradación, si procede.  
   
- [ **@value=**] *value*  
+ [  **@value=**] *valor*  
  Es el valor de la propiedad especificada. *valor* es **sql_variant**, su valor predeterminado es null. Si @value es null, **sp_fulltext_service** devuelve el valor actual. En la siguiente tabla se muestran las propiedades de acción, sus descripciones y los valores que se pueden establecer.  
   
 > [!NOTE]  

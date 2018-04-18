@@ -1,16 +1,16 @@
 ---
 title: MSdistribution_agents (Transact-SQL) | Documentos de Microsoft
-ms.custom: 
+ms.custom: ''
 ms.date: 10/28/2015
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine
-ms.service: 
+ms.service: ''
 ms.component: system-tables
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - replication
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 applies_to:
 - SQL Server
@@ -22,37 +22,37 @@ dev_langs:
 helpviewer_keywords:
 - MSdistribution_agents system table
 ms.assetid: 0e8f0653-1351-41d1-95d2-40f6d5a050ca
-caps.latest.revision: 
+caps.latest.revision: 30
 author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: f71cc1c79f36dcc14980ce4a04b1079fba6a8ee9
-ms.sourcegitcommit: 45e4efb7aa828578fe9eb7743a1a3526da719555
+ms.openlocfilehash: 1cfaf9388efc32949540731d0b311ac4f42c9110
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="msdistributionagents-transact-sql"></a>MSdistribution_agents (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
   El **MSdistribution_agents** tabla contiene una fila por cada agente de distribución que se ejecuta en el distribuidor local. Esta tabla se almacena en la base de datos de distribución.  
   
-|Nombre de columna|Tipo de datos|Descripción|  
+|Nombre de columna|Tipo de datos|Description|  
 |-----------------|---------------|-----------------|  
 |**id**|**int**|Id. del Agente de distribución.|  
 |**Nombre**|**nvarchar (100)**|Nombre del Agente de distribución.|  
 |**publisher_database_id**|**int**|El Id. de la base de datos del publicador.|  
-|**iddeeditor**|**smallint**|El identificador del publicador.|  
+|**publisher_id**|**smallint**|El identificador del publicador.|  
 |**publisher_db**|**sysname**|Nombre de la base de datos del publicador.|  
-|**publicación**|**sysname**|Nombre de la publicación.|  
+|**Publicación**|**sysname**|Nombre de la publicación.|  
 |**subscriber_id**|**smallint**|Id. del suscriptor, que solo utilizan los agentes conocidos. En el caso de los agentes anónimos, esta columna está reservada.|  
 |**subscriber_db**|**sysname**|El nombre de la base de datos de suscripción.|  
 |**subscription_type**|**int**|El tipo de suscripción:<br /><br /> **0** = inserción.<br /><br /> **1** = extracción.<br /><br /> **2** = anónima.|  
 |**local_job**|**bit**|Indica si hay un trabajo de agente SQL Server en el distribuidor local.|  
 |**job_id**|**binary (16)**|El número de identificación del trabajo.|  
 |**subscription_guid**|**binary (16)**|Id. de las suscripciones de este agente.|  
-|**profile_id**|**int**|El identificador de configuración de la [MSagent_profiles &#40; Transact-SQL &#41; ](../../relational-databases/system-tables/msagent-profiles-transact-sql.md) tabla.|  
+|**profile_id**|**int**|El identificador de configuración de la [MSagent_profiles &#40;Transact-SQL&#41; ](../../relational-databases/system-tables/msagent-profiles-transact-sql.md) tabla.|  
 |**anonymous_subid**|**uniqueidentifier**|Id. de un agente anónimo.|  
 |**subscriber_name**|**sysname**|Nombre del suscriptor, que solo utilizan los agentes anónimos.|  
 |**virtual_agent_id**|**int**|[!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]|  
@@ -65,7 +65,7 @@ ms.lasthandoff: 11/21/2017
 |**dts_package_name**|**sysname**|Nombre del paquete DTS. Por ejemplo, para un paquete denominado **DTSPub_Package**, especifique `@dts_package_name = N'DTSPub_Package'`.|  
 |**dts_package_password**|**nvarchar (524)**|Contraseña del paquete.|  
 |**dts_package_location**|**int**|La ubicación del paquete. La ubicación del paquete puede ser **distribuidor** o **suscriptor**.|  
-|**SID**|**varbinary (85)**|Número de identificación de seguridad (SID) del Agente de distribución o del Agente de mezcla durante su primera ejecución.|  
+|**SID**|**varbinary(85)**|Número de identificación de seguridad (SID) del Agente de distribución o del Agente de mezcla durante su primera ejecución.|  
 |**queue_server**|**sysname**|[!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]|  
 |**subscriber_security_mode**|**smallint**|Modo de seguridad utilizado por el agente cuando se conecta al suscriptor, que puede ser uno de los siguientes:<br /><br /> **0**  =  [!INCLUDE[msCoName](../../includes/msconame-md.md)] autenticación de SQL Server<br /><br /> **1**  =  [!INCLUDE[msCoName](../../includes/msconame-md.md)] autenticación de Windows.|  
 |**subscriber_login**|**sysname**|Inicio de sesión que se utilizará en la conexión con el suscriptor.|  

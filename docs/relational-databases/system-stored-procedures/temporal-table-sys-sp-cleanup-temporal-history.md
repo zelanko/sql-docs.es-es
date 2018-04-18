@@ -1,30 +1,31 @@
 ---
-title: sys.sp_cleanup_temporal_history | Microsoft Docs
-ms.custom: 
+title: Sys.sp_cleanup_temporal_history | Documentos de Microsoft
+ms.custom: ''
 ms.date: 03/04/2017
-ms.prod: 
+ms.prod: ''
 ms.prod_service: sql-database
 ms.service: sql-database
 ms.component: system-stored-procedures
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: 6eff30b4-b261-4f1f-b93c-1f69d754298d
-caps.latest.revision: 
+caps.latest.revision: 4
 author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 1539ae456b1159cf4fdd458948a905171e3d33aa
-ms.sourcegitcommit: c556eaf60a49af7025db35b7aa14beb76a8158c5
+monikerRange: = azure-sqldw-latest || = sqlallproducts-allversions
+ms.openlocfilehash: 463565c898ca351ea5b891a60b5b80aefd57c540
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/03/2018
+ms.lasthandoff: 04/16/2018
 ---
-# <a name="temporal-table---sysspcleanuptemporalhistory"></a>Tabla temporal - sys.sp_cleanup_temporal_history
+# <a name="sysspcleanuptemporalhistory-transact-sql"></a>Sys.sp_cleanup_temporal_history (Transact-SQL)
 [!INCLUDE[tsql-appliesto-xxxxxx-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-xxxxxx-asdb-xxxx-xxx-md.md)]
 
  ![Icono de vínculo de tema](../../database-engine/configure-windows/media/topic-link.gif "Icono de vínculo de tema") [Convenciones de sintaxis de Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
@@ -46,7 +47,7 @@ El nombre de la tabla temporal para la retención se invoca el Liberador de espa
 
 El nombre del esquema que la tabla temporal actual pertenece a
 
-*row_count_var* [OUTPUT]
+*row_count_var* [salida]
 
 El parámetro de salida que devuelve el número de filas eliminadas. Si la tabla de historial agrupado índice de almacén de columnas, se devolverá este parámetro siempre es 0.
   

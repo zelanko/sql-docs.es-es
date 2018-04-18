@@ -1,16 +1,16 @@
 ---
-title: sp_dbmmonitorhelpalert (Transact-SQL) | Microsoft Docs
-ms.custom: 
+title: sp_dbmmonitorhelpalert (Transact-SQL) | Documentos de Microsoft
+ms.custom: ''
 ms.date: 08/09/2016
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine
-ms.service: 
+ms.service: ''
 ms.component: system-stored-procedures
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - sp_dbmmonitorhelpalert_TSQL
@@ -21,16 +21,16 @@ helpviewer_keywords:
 - sp_dbmmonitorhelpalert
 - database mirroring [SQL Server], monitoring
 ms.assetid: 43911660-b4e4-4934-8c02-35221160aaec
-caps.latest.revision: 
+caps.latest.revision: 40
 author: stevestein
 ms.author: sstein
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: aa31d747ebfd9fbf56aee874f477468212bc161b
-ms.sourcegitcommit: c556eaf60a49af7025db35b7aa14beb76a8158c5
+ms.openlocfilehash: d2c0a90791e36d7628d99335116067143b1db0d2
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/03/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="spdbmmonitorhelpalert-transact-sql"></a>sp_dbmmonitorhelpalert (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -64,7 +64,7 @@ sp_dbmmonitorhelpalert database_name
 |4|Sobrecarga de confirmación del servidor reflejado|Especifica el número de milisegundos de retardo medio por transacción que se tolera antes de que se genere una advertencia en el servidor principal. Este retardo es la cantidad de sobrecarga en la que se incurre mientras la instancia del servidor principal espera a la instancia del servidor reflejado para escribir la entrada de registro de la transacción en la cola de puesta al día. Este valor solo es relevante en el modo de alta seguridad.|  
 |5|Período de retención|Metadatos que controlan cómo se conservan las filas largas en la tabla de estado de la creación de reflejo de la base de datos.|  
   
- Para obtener información acerca de los identificadores de evento correspondientes a las advertencias, consulte [alertas y umbrales de advertencia de uso de las métricas de rendimiento de creación de reflejo &#40; SQL Server &#41; ](../../database-engine/database-mirroring/use-warning-thresholds-and-alerts-on-mirroring-performance-metrics-sql-server.md).  
+ Para obtener información acerca de los identificadores de evento correspondientes a las advertencias, consulte [alertas y umbrales de advertencia de uso de las métricas de rendimiento de creación de reflejo &#40;SQL Server&#41;](../../database-engine/database-mirroring/use-warning-thresholds-and-alerts-on-mirroring-performance-metrics-sql-server.md).  
   
 ## <a name="return-code-values"></a>Valores de código de retorno  
  None  
@@ -75,7 +75,7 @@ sp_dbmmonitorhelpalert database_name
 |Columna|Data type|Description|  
 |------------|---------------|-----------------|  
 |**alert_id**|**int**|La tabla siguiente muestra la **alert_id** valor para cada métrica de rendimiento y la unidad de medida de la métrica mostrada en el **sp_dbmmonitorresults** conjunto de resultados:|  
-|**threshold**|**int**|Valor de umbral de la advertencia. Si se devuelve un valor superior a este umbral cuando se actualiza el estado de la creación de reflejos, se escribe una entrada en el registro de eventos de Windows. Este valor representa el número de KB, minutos o milisegundos, en función de la advertencia. Si el umbral no está establecido actualmente, el valor es NULL.<br /><br /> **Nota:** para ver los valores actuales, ejecute el [sp_dbmmonitorresults](../../relational-databases/system-stored-procedures/sp-dbmmonitorresults-transact-sql.md) procedimiento almacenado.|  
+|**Umbral**|**int**|Valor de umbral de la advertencia. Si se devuelve un valor superior a este umbral cuando se actualiza el estado de la creación de reflejos, se escribe una entrada en el registro de eventos de Windows. Este valor representa el número de KB, minutos o milisegundos, en función de la advertencia. Si el umbral no está establecido actualmente, el valor es NULL.<br /><br /> **Nota:** para ver los valores actuales, ejecute el [sp_dbmmonitorresults](../../relational-databases/system-stored-procedures/sp-dbmmonitorresults-transact-sql.md) procedimiento almacenado.|  
 |**enabled**|**bit**|0 = El evento está deshabilitado.<br /><br /> 1 = El evento está habilitado.<br /><br /> **Nota:** período de retención siempre está habilitado.|  
   
 |Value|Métrica de rendimiento|Unidad|  

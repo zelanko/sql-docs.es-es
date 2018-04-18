@@ -1,8 +1,8 @@
 ---
-title: sp_columns (Transact-SQL) | Microsoft Docs
+title: sp_columns (Transact-SQL) | Documentos de Microsoft
 ms.custom: ''
 ms.date: 10/17/2016
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
 ms.service: ''
 ms.component: system-stored-procedures
@@ -25,11 +25,12 @@ author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 7ea208a7c7c5c1cb969bfa556a5be27b32e5a856
-ms.sourcegitcommit: d6b1695c8cbc70279b7d85ec4dfb66a4271cdb10
+monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
+ms.openlocfilehash: 10415e417fcf62ac530e50abf82d5214272351e0
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/10/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="spcolumns-transact-sql"></a>sp_columns (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -84,9 +85,9 @@ sp_columns [ @table_name = ] object
 |**TYPE_NAME**|**sysname**|Cadena que representa un tipo de datos. El DBMS subyacente presenta este nombre del tipo de datos.|  
 |**PRECISION**|**int**|Número de dígitos significativos. El valor devuelto para la **precisión** columna está expresado en base 10.|  
 |**LENGTH**|**int**|Tamaño de transferencia de los datos. <sup>1</sup>|  
-|**SCALE**|**smallint**|Número de dígitos a la derecha del separador decimal.|  
+|**ESCALA**|**smallint**|Número de dígitos a la derecha del separador decimal.|  
 |**RADIX**|**smallint**|Base para tipos de datos numéricos.|  
-|**NULLABLE**|**smallint**|Especifica la nulabilidad.<br /><br /> 1 = Se admiten valores NULL.<br /><br /> 0 = No se admiten valores NULL.|  
+|**QUE ACEPTAN VALORES NULL**|**smallint**|Especifica la nulabilidad.<br /><br /> 1 = Se admiten valores NULL.<br /><br /> 0 = No se admiten valores NULL.|  
 |**COMENTARIOS**|**varchar(254)**|Este campo siempre devuelve NULL.|  
 |**COLUMN_DEF**|**nvarchar(4000)**|Valor predeterminado de la columna.|  
 |**SQL_DATA_TYPE**|**smallint**|Valor del tipo de datos SQL tal como aparece en el campo TYPE del descriptor. Esta columna es el mismo que el **DATA_TYPE** columna, excepto para la **datetime** y SQL-92 **intervalo** tipos de datos. Esta columna siempre devuelve un valor.|  

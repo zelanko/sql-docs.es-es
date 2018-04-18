@@ -1,16 +1,16 @@
 ---
 title: sp_changemergesubscription (Transact-SQL) | Documentos de Microsoft
-ms.custom: 
+ms.custom: ''
 ms.date: 03/16/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine
-ms.service: 
+ms.service: ''
 ms.component: system-stored-procedures
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - replication
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - sp_changemergesubscription_TSQL
@@ -18,16 +18,16 @@ f1_keywords:
 helpviewer_keywords:
 - sp_changemergesubscription
 ms.assetid: fd820f35-c189-4e2d-884d-b60c1c469f58
-caps.latest.revision: 
+caps.latest.revision: 23
 author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: f3fef5efe16fbc6a3684e077ef8dfca38b839753
-ms.sourcegitcommit: 45e4efb7aa828578fe9eb7743a1a3526da719555
+ms.openlocfilehash: eda4f52de6d6b072f8250a00dcff82623badb43c
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="spchangemergesubscription-transact-sql"></a>sp_changemergesubscription (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -64,10 +64,10 @@ sp_changemergesubscription [ [ @publication= ] 'publication' ]
  [  **@value=**] **'***valor***'**  
  Es el nuevo valor para el elemento especificado *propiedad*. *valor* es **nvarchar (255)**, y puede tener uno de los valores de la tabla.  
   
-|Propiedad|Valor|Description|  
+|Propiedad|Value|Description|  
 |--------------|-----------|-----------------|  
 |**Descripción**||Descripción de esta suscripción de mezcla.|  
-|**prioridad**||Es la prioridad de la suscripción. La prioridad la utiliza el solucionador predeterminado para elegir un ganador cuando se detectan conflictos.|  
+|**priority**||Es la prioridad de la suscripción. La prioridad la utiliza el solucionador predeterminado para elegir un ganador cuando se detectan conflictos.|  
 |**merge_job_login**||Inicio de sesión de la cuenta de [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows en la que se ejecuta el agente.|  
 |**merge_job_password**||Contraseña de la cuenta de Windows con la que se ejecuta el agente.|  
 |**publisher_security_mode**|**1**|Se utiliza la autenticación de Windows para la conexión con el publicador.|  
@@ -81,7 +81,7 @@ sp_changemergesubscription [ [ @publication= ] 'publication' ]
 |**sync_type**|**Automático**|El esquema y los datos iniciales de las tablas publicadas se transfieren primero al suscriptor.|  
 ||**Ninguno**|El suscriptor ya tiene el esquema y los datos iniciales de las tablas publicadas; los datos y las tablas del sistema se transfieren siempre.|  
 |**use_interactive_resolver**|**true**|Permite que los conflictos se resuelvan de forma interactiva para todos los artículos que lo permitan.|  
-||**false**|Los conflictos se resuelven de forma automática mediante un solucionador predeterminado o personalizado.|  
+||**False**|Los conflictos se resuelven de forma automática mediante un solucionador predeterminado o personalizado.|  
 |NULL (predeterminado)|NULL (predeterminado)||  
   
 ## <a name="return-code-values"></a>Valores de código de retorno  
@@ -96,9 +96,9 @@ sp_changemergesubscription [ [ @publication= ] 'publication' ]
  Solo los miembros de la **sysadmin** rol fijo de servidor o **db_owner** rol fijo de base de datos puede ejecutar **sp_changemergesubscription**.  
   
 ## <a name="see-also"></a>Vea también  
- [sp_addmergesubscription &#40; Transact-SQL &#41;](../../relational-databases/system-stored-procedures/sp-addmergesubscription-transact-sql.md)   
- [sp_dropmergesubscription &#40; Transact-SQL &#41;](../../relational-databases/system-stored-procedures/sp-dropmergesubscription-transact-sql.md)   
- [sp_helpmergesubscription &#40; Transact-SQL &#41;](../../relational-databases/system-stored-procedures/sp-helpmergesubscription-transact-sql.md)   
+ [sp_addmergesubscription &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-addmergesubscription-transact-sql.md)   
+ [sp_dropmergesubscription &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-dropmergesubscription-transact-sql.md)   
+ [sp_helpmergesubscription &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-helpmergesubscription-transact-sql.md)   
  [Procedimientos almacenados del sistema &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
   
   

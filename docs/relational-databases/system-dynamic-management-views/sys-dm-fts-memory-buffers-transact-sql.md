@@ -1,8 +1,8 @@
 ---
-title: sys.dm_fts_memory_buffers (Transact-SQL) | Microsoft Docs
+title: Sys.dm_fts_memory_buffers (Transact-SQL) | Documentos de Microsoft
 ms.custom: ''
 ms.date: 03/29/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine, sql-database
 ms.service: ''
 ms.component: dmv's
@@ -27,11 +27,12 @@ author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 178ee51f2d1aee656aff07d5bd3f22c12b795ab2
-ms.sourcegitcommit: 8b332c12850c283ae413e0b04b2b290ac2edb672
+monikerRange: = azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions
+ms.openlocfilehash: 942614fd09acd566491a570d7144634bb5a45f07
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/05/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="sysdmftsmemorybuffers-transact-sql"></a>sys.dm_fts_memory_buffers (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -45,7 +46,7 @@ ms.lasthandoff: 04/05/2018
 |Columna|Data type|Description|  
 |------------|---------------|-----------------|  
 |**pool_id**|**int**|Id. del grupo de memoria asignado.<br /><br /> 0 = Búferes pequeños<br /><br /> 1 = Búferes grandes|  
-|**memory_address**|**varbinary(8)**|Dirección del búfer de memoria asignado.|  
+|**memory_address**|**varbinary (8)**|Dirección del búfer de memoria asignado.|  
 |**Nombre**|**nvarchar(4000)**|Nombre del búfer de memoria compartida para el que se ha realizado esta asignación.|  
 |**is_free**|**bit**|Estado actual del búfer de memoria.<br /><br /> 0 = Disponible<br /><br /> 1 = Ocupado|  
 |**row_count**|**int**|Número de filas que controla actualmente este búfer.|  

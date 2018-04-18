@@ -1,16 +1,16 @@
 ---
-title: sp_attach_schedule (Transact-SQL) | Microsoft Docs
-ms.custom: 
+title: sp_attach_schedule (Transact-SQL) | Documentos de Microsoft
+ms.custom: ''
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine
-ms.service: 
+ms.service: ''
 ms.component: system-stored-procedures
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - sp_attach_schedule_TSQL
@@ -20,16 +20,16 @@ dev_langs:
 helpviewer_keywords:
 - sp_attach_schedule
 ms.assetid: 80c80eaf-cf23-4ed8-b8dd-65fe59830dd1
-caps.latest.revision: 
+caps.latest.revision: 34
 author: stevestein
 ms.author: sstein
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: d78d6c73d28325771460a1c055a6fb0b491c264c
-ms.sourcegitcommit: c556eaf60a49af7025db35b7aa14beb76a8158c5
+ms.openlocfilehash: 3dc76db676b05d358b6ec6b33b2b5043f7ac63de
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/03/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="spattachschedule-transact-sql"></a>sp_attach_schedule (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -58,7 +58,7 @@ sp_attach_schedule
 > [!NOTE]  
 >  Cualquier *job_id* o *job_name* debe especificarse, pero no pueden especificarse ambos.  
   
- [  **@schedule_id =** ] *schedule_id*  
+ [ **@schedule_id =** ] *schedule_id*  
  Número de identificación de la programación que se va a configurar para el trabajo. *schedule_id*es **int**, su valor predeterminado es null.  
   
  [  **@schedule_name =** ] **'***schedule_name***'**  
@@ -87,7 +87,7 @@ sp_attach_schedule
   
  Para detalles sobre los permisos de estos roles, consulte [Roles fijos de base de datos del Agente SQL Server](http://msdn.microsoft.com/library/719ce56b-d6b2-414a-88a8-f43b725ebc79).  
   
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] comprueba si el usuario es propietario el trabajo y la programación.  
+ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] comprueba si el usuario es propietario del trabajo y la programación.  
   
 ## <a name="examples"></a>Ejemplos  
  En el siguiente ejemplo se crea una programación llamada `NightlyJobs`. Los trabajos que usan esta programación se ejecutan a diario cuando la hora del servidor es `01:00`. En el ejemplo se asocia la programación a los trabajos `BackupDatabase` y `RunReports`.  

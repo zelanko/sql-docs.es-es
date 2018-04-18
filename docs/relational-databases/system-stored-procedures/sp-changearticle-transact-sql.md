@@ -1,16 +1,16 @@
 ---
 title: sp_changearticle (Transact-SQL) | Documentos de Microsoft
-ms.custom: 
+ms.custom: ''
 ms.date: 10/28/2015
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine
-ms.service: 
+ms.service: ''
 ms.component: system-stored-procedures
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - replication
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 applies_to:
 - SQL Server
@@ -20,16 +20,16 @@ f1_keywords:
 helpviewer_keywords:
 - sp_changearticle
 ms.assetid: 24c33ca5-f03a-4417-a267-131ca5ba6bb5
-caps.latest.revision: 
+caps.latest.revision: 77
 author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 3dacb8a0f83084d61c7ca55c5ae093bb57876b82
-ms.sourcegitcommit: 23433249be7ee3502c5b4d442179ea47305ceeea
+ms.openlocfilehash: 9f5c5722d588d864d698772c063efc64425d679d
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/20/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="spchangearticle-transact-sql"></a>sp_changearticle (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -82,8 +82,8 @@ sp_changearticle [ [@publication= ] 'publication' ]
 |**pre_creation_cmd**||Comando de creación previa que puede quitar, eliminar o truncar la tabla de destino antes de que se aplique la sincronización.|  
 ||**Ninguno**|No usa ningún comando.|  
 ||**quitar**|Quita la tabla de destino.|  
-||**eliminar**|Elimina la tabla de destino.|  
-||**truncar**|Trunca la tabla de destino.|  
+||**delete**|Elimina la tabla de destino.|  
+||**truncate**|Trunca la tabla de destino.|  
 |**pub_identity_range**||Controla el tamaño de los intervalos de identidad asignados en el suscriptor. No se admite para la replicación punto a punto.|  
 |**schema_option**||Especifica el mapa de bits de la opción de generación del esquema para el artículo especificado. *schema_option* es **binary (8)**. Para obtener más información, vea la sección Comentarios más adelante en este tema.|  
 ||**0 x 00**|Deshabilita el scripting del Agente de instantáneas.|  
@@ -124,7 +124,7 @@ sp_changearticle [ [@publication= ] 'publication' ]
 ||**0x400000000**|Replica la opción de compresión para los datos y los índices. Para obtener más información, consulte [Data Compression](../../relational-databases/data-compression/data-compression.md).|  
 ||**0 x 800000000**|Establezca esta opción para almacenar los datos de FILESTREAM en su propio grupo de archivos en el suscriptor. Si no se establece esta opción, los datos de FILESTREAM se almacenan en el grupo de archivos predeterminado. La replicación no crea grupos de archivos; por tanto, si establece esta opción, debe crear el grupo de archivos antes de aplicar la instantánea en el suscriptor. Para obtener más información sobre cómo crear objetos antes de aplicar la instantánea, vea [ejecutar Scripts antes y después de aplicar la instantánea](../../relational-databases/replication/execute-scripts-before-and-after-the-snapshot-is-applied.md).<br /><br /> Vea la opción relacionada **0 x 100000000**.|  
 ||**0x1000000000**|Convierte tipos common language runtime (CLR) definido por el usuario (UDT) más de 8.000 bytes a **varbinary (max)** para que las columnas de tipo UDT se pueden replicar en suscriptores que ejecutan [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)].|  
-||**0x2000000000**|Convierte el **hierarchyid** tipo de datos que **varbinary (max)** para que las columnas de tipo **hierarchyid** se pueden replicar en suscriptores que ejecutan [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)]. Para obtener más información sobre cómo usar **hierarchyid** columnas en las tablas replicadas, vea [hierarchyid &#40; Transact-SQL &#41; ](../../t-sql/data-types/hierarchyid-data-type-method-reference.md).|  
+||**0x2000000000**|Convierte el **hierarchyid** tipo de datos que **varbinary (max)** para que las columnas de tipo **hierarchyid** se pueden replicar en suscriptores que ejecutan [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)]. Para obtener más información sobre cómo usar **hierarchyid** columnas en las tablas replicadas, vea [hierarchyid &#40;Transact-SQL&#41;](../../t-sql/data-types/hierarchyid-data-type-method-reference.md).|  
 ||**0x4000000000**|Replica los índices filtrados de la tabla. Para obtener más información sobre los índices filtrados, vea [Create Filtered Indexes](../../relational-databases/indexes/create-filtered-indexes.md).|  
 ||**0x8000000000**|Convierte el **geography** y **geometry** tipos de datos **varbinary (max)** para que las columnas de estos tipos se pueden replicar en suscriptores que ejecutan [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)].|  
 ||**0x10000000000**|Replica índices en columnas de tipo **geography** y **geometría**.|  
@@ -137,11 +137,11 @@ sp_changearticle [ [@publication= ] 'publication' ]
 ||**No hay nombres de columna**|Los nombres de columnas no se incluyen en la instrucción INSERT replicada.|  
 ||**No hay particiones horizontales de dts**|La partición horizontal del artículo no se define mediante una suscripción transformable.|  
 ||**Ninguno**|Borra todas las opciones de estado en el [sysarticles](../../relational-databases/system-tables/sysarticles-transact-sql.md) tabla y marca el artículo como inactivo.|  
-||**parámetros**|Los cambios se propagan al suscriptor mediante comandos con parámetros. Es el valor predeterminado para los artículos nuevos.|  
-||**literales de cadena**|Los cambios se propagan al suscriptor mediante valores literales de cadena.|  
+||**parameters**|Los cambios se propagan al suscriptor mediante comandos con parámetros. Es el valor predeterminado para los artículos nuevos.|  
+||**Literales de cadena**|Los cambios se propagan al suscriptor mediante valores literales de cadena.|  
 |**sync_object**||Nombre de la tabla o vista utilizada para generar un archivo de salida de sincronización. El valor predeterminado es NULL. No es compatible con publicadores de Oracle.|  
-|**espacio de tablas**||Identifica el espacio de tablas utilizado por la tabla de registro de un artículo publicado desde una base de datos Oracle. Para más información, vea [Manage Oracle Databases](../../relational-databases/replication/non-sql/manage-oracle-tablespaces.md) (Administrar bases de datos de Oracle).|  
-|**umbral**||Valor de porcentaje que controla cuándo el Agente de distribución asigna un nuevo intervalo de identidad. No se admite para la replicación punto a punto.|  
+|**Espacio de tablas**||Identifica el espacio de tablas utilizado por la tabla de registro de un artículo publicado desde una base de datos Oracle. Para más información, vea [Manage Oracle Databases](../../relational-databases/replication/non-sql/manage-oracle-tablespaces.md) (Administrar bases de datos de Oracle).|  
+|**Umbral**||Valor de porcentaje que controla cuándo el Agente de distribución asigna un nuevo intervalo de identidad. No se admite para la replicación punto a punto.|  
 |**Tipo**||No es compatible con publicadores de Oracle.|  
 ||**logbased**|Artículo basado en registro.|  
 ||**logbased manualboth**|Artículo basado en registro con filtro manual y vista manual. Esta opción requiere que el *sync_object* y *filtro* también se puede establecer propiedades. No es compatible con publicadores de Oracle.|  
@@ -163,7 +163,7 @@ sp_changearticle [ [@publication= ] 'publication' ]
   
  Vea en la sección de Notas las propiedades que, si se cambian, requieren que se genere una instantánea nueva.  
   
- [  **@force_reinit_subscription=]***force_reinit_subscription*  
+ [**@force_reinit_subscription=] *** force_reinit_subscription*  
  Confirma que la acción realizada por este procedimiento almacenado puede requerir que se reinicialicen las suscripciones existentes. *force_reinit_subscription* es un **bits** con un valor predeterminado de **0**.  
   
  **0** especifica que los cambios en el artículo hacen que la suscripción para reinicializarla. Si el procedimiento almacenado detecta que el cambio requiere la reinicialización de las suscripciones existentes, se producirá un error y no se realizarán cambios.  
@@ -172,7 +172,7 @@ sp_changearticle [ [@publication= ] 'publication' ]
   
  Vea en la sección de Notas las propiedades que, si se cambian, requieren que se reinicialicen todas las suscripciones existentes.  
   
- [  **@publisher** =] **'***publisher***'**  
+ [ **@publisher**=] **'***publisher***'**  
  Especifica un publicador que no es de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. *Publisher* es **sysname**, su valor predeterminado es null.  
   
 > [!NOTE]  
@@ -255,10 +255,10 @@ sp_changearticle [ [@publication= ] 'publication' ]
 ## <a name="see-also"></a>Vea también  
  [Ver y modificar las propiedades del artículo](../../relational-databases/replication/publish/view-and-modify-article-properties.md)   
  [Cambiar las propiedades de la publicación y de los artículos](../../relational-databases/replication/publish/change-publication-and-article-properties.md)   
- [sp_addarticle &#40; Transact-SQL &#41;](../../relational-databases/system-stored-procedures/sp-addarticle-transact-sql.md)   
+ [sp_addarticle &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-addarticle-transact-sql.md)   
  [sp_articlecolumn &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-articlecolumn-transact-sql.md)   
  [sp_droparticle &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-droparticle-transact-sql.md)   
  [sp_helparticle &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-helparticle-transact-sql.md)   
- [sp_helparticlecolumns &#40; Transact-SQL &#41;](../../relational-databases/system-stored-procedures/sp-helparticlecolumns-transact-sql.md)  
+ [sp_helparticlecolumns &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-helparticlecolumns-transact-sql.md)  
   
   

@@ -1,16 +1,16 @@
 ---
 title: sp_showrowreplicainfo (Transact-SQL) | Documentos de Microsoft
-ms.custom: 
+ms.custom: ''
 ms.date: 03/03/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine
-ms.service: 
+ms.service: ''
 ms.component: system-stored-procedures
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - replication
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 applies_to:
 - SQL Server
@@ -20,16 +20,16 @@ f1_keywords:
 helpviewer_keywords:
 - sp_showrowreplicainfo
 ms.assetid: 6a9dbc1a-e1e1-40c4-97cb-8164a2288f76
-caps.latest.revision: 
+caps.latest.revision: 28
 author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: d584c011b61c8b8ad9e3fc55f10a1e7a2512fa97
-ms.sourcegitcommit: 45e4efb7aa828578fe9eb7743a1a3526da719555
+ms.openlocfilehash: 87857390035273ca2350f90175cc4254f182bb7c
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="spshowrowreplicainfo-transact-sql"></a>sp_showrowreplicainfo (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -49,7 +49,7 @@ sp_showrowreplicainfo [ [ @ownername = ] 'ownername' ]
 ```  
   
 ## <a name="arguments"></a>Argumentos  
- [  **@ownername** =] **'***ownername***'**  
+ [ **@ownername**=] **'***ownername***'**  
  Es el nombre del propietario de la tabla. *ownername* es **sysname**, su valor predeterminado es null. Este parámetro resulta útil para diferenciar las tablas en caso de que la base de datos contenga varias tablas con el mismo nombre pero con propietarios distintos.  
   
  [  **@tablename =**] **'***tablename***'**  
@@ -58,31 +58,31 @@ sp_showrowreplicainfo [ [ @ownername = ] 'ownername' ]
  [  **@rowguid =**] *rowguid*  
  Es el identificador único de la fila. *ROWGUID* es **uniqueidentifier**, no tiene ningún valor predeterminado.  
   
- [  **@show** =] **'***mostrar***'**  
+ [ **@show**=] **'***mostrar***'**  
  Determina la cantidad de información que se devuelve en el conjunto de resultados. *Mostrar* es **nvarchar (20)** con un valor predeterminado es BOTH. Si **fila**, se devuelve solo información de versión de fila. Si **columnas**, se devuelve solo información de versión de columna. Si **ambos**, filas y se devuelve información de columna.  
   
 ## <a name="result-sets-for-row-information"></a>Conjuntos de resultados para información de fila  
   
 |Nombre de columna|Tipo de datos|Description|  
 |-----------------|---------------|-----------------|  
-|**nombre_servidor**|**sysname**|Nombre del servidor que hospeda la base de datos que realizó la entrada de versión de fila.|  
+|**server_name**|**sysname**|Nombre del servidor que hospeda la base de datos que realizó la entrada de versión de fila.|  
 |**db_name**|**sysname**|Nombre de la base de datos que realizó esta entrada.|  
 |**db_nickname**|**binary(6)**|Alias de la base de datos que realizó esta entrada.|  
 |**version**|**int**|Versión de la entrada.|  
-|**current_state**|**nvarchar(9)**|Devuelve información sobre el estado actual de la fila.<br /><br /> **y** -datos de la fila representan el estado actual de la fila.<br /><br /> **n**-Datos de la fila no representan el estado actual de la fila.<br /><br /> **\<n / >** : no es aplicable.<br /><br /> **\<desconocido >** -no se puede determinar el estado actual.|  
+|**current_state**|**nvarchar(9)**|Devuelve información sobre el estado actual de la fila.<br /><br /> **y** -datos de la fila representan el estado actual de la fila.<br /><br /> **n** -datos de la fila no representan el estado actual de la fila.<br /><br /> **\<n / >** : no es aplicable.<br /><br /> **\<desconocido >** -no se puede determinar el estado actual.|  
 |**rowversion_table**|**nchar(17)**|Indica si las versiones de fila se almacenan en la [MSmerge_contents](../../relational-databases/system-tables/msmerge-contents-transact-sql.md) tabla o la [MSmerge_tombstone](../../relational-databases/system-tables/msmerge-tombstone-transact-sql.md) tabla.|  
-|**comentario**|**nvarchar(255)**|Información adicional acerca de esta entrada de versión de fila. Este campo suele estar vacío.|  
+|**Comentario**|**nvarchar(255)**|Información adicional acerca de esta entrada de versión de fila. Este campo suele estar vacío.|  
   
 ## <a name="result-sets-for-column-information"></a>Conjuntos de resultados para información de columna  
   
 |Nombre de columna|Tipo de datos|Description|  
 |-----------------|---------------|-----------------|  
-|**nombre_servidor**|**sysname**|Nombre del servidor que hospeda la base de datos que realizó la entrada de versión de columna.|  
+|**server_name**|**sysname**|Nombre del servidor que hospeda la base de datos que realizó la entrada de versión de columna.|  
 |**db_name**|**sysname**|Nombre de la base de datos que realizó esta entrada.|  
 |**db_nickname**|**binary(6)**|Alias de la base de datos que realizó esta entrada.|  
 |**version**|**int**|Versión de la entrada.|  
 |**colname**|**sysname**|Nombre de la columna del artículo que representa la entrada de la versión de columna.|  
-|**comentario**|**nvarchar(255)**|Información adicional acerca de esta entrada de versión de columna. Este campo suele estar vacío.|  
+|**Comentario**|**nvarchar(255)**|Información adicional acerca de esta entrada de versión de columna. Este campo suele estar vacío.|  
   
 ## <a name="result-set-for-both"></a>Conjuntos de resultados para ambos  
  Si el valor **ambos** elegido para *mostrar*, a continuación, se devuelven los conjuntos de resultados de la fila y la columna.  

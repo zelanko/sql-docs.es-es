@@ -1,16 +1,16 @@
 ---
 title: sp_showpendingchanges (Transact-SQL) | Documentos de Microsoft
-ms.custom: 
+ms.custom: ''
 ms.date: 03/04/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine
-ms.service: 
+ms.service: ''
 ms.component: system-stored-procedures
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - replication
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 applies_to:
 - SQL Server
@@ -20,16 +20,16 @@ f1_keywords:
 helpviewer_keywords:
 - sp_showpendingchanges
 ms.assetid: 8013a792-639d-4550-b262-e65d30f9d291
-caps.latest.revision: 
+caps.latest.revision: 17
 author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: a80816191ac9ad2cd9a210c59268b23f4ea3a093
-ms.sourcegitcommit: 45e4efb7aa828578fe9eb7743a1a3526da719555
+ms.openlocfilehash: 54a87a2162049fe6e3ec450a60836afffa406973
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="spshowpendingchanges-transact-sql"></a>sp_showpendingchanges (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -52,16 +52,16 @@ sp_showpendingchanges [ [ @destination_server = ] 'destination_server' ]
 ```  
   
 ## <a name="arguments"></a>Argumentos  
- [ @destination_server  **=**  ] **'***destination_server***'**  
+ [ @destination_server **=** ] **'***destination_server***'**  
  Es el nombre del servidor donde se aplican los cambios replicados. *destination_server* es **sysname**, su valor predeterminado es NULL.  
   
- [ @publication  **=**  ] **'***publicación***'**  
+ [ @publication **=** ] **'***publicación***'**  
  Es el nombre de la publicación. *publicación* es **sysname**, su valor predeterminado es null. Cuando *publicación* se especifica, resultados se limitan exclusivamente a la publicación especificada.  
   
- [ @article  **=**  ] **'***artículo***'**  
+ [ @article **=** ] **'***artículo***'**  
  Es el nombre del artículo. *artículo* es **sysname**, su valor predeterminado es null. Cuando *artículo* se especifica, resultados se limitan exclusivamente al artículo especificado.  
   
- [ @show_rows  **=**  ] *show_rows*  
+ [ @show_rows **=** ] *show_rows*  
  Especifica si el conjunto de resultados contiene información más específica acerca de los cambios pendientes y su valor predeterminado de **0**. Si un valor de **1** se especifica, el conjunto de resultados contiene las columnas is_delete y rowguid.  
   
 ## <a name="result-set"></a>Conjunto de resultados  

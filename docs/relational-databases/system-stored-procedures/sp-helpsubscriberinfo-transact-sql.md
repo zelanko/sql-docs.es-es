@@ -1,16 +1,16 @@
 ---
 title: sp_helpsubscriberinfo (Transact-SQL) | Documentos de Microsoft
-ms.custom: 
+ms.custom: ''
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine
-ms.service: 
+ms.service: ''
 ms.component: system-stored-procedures
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - replication
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - sp_helpsubscriberinfo
@@ -18,16 +18,16 @@ f1_keywords:
 helpviewer_keywords:
 - sp_helpsubscriberinfo
 ms.assetid: fbabe1ec-57cf-425c-bae7-af7f5d3198fd
-caps.latest.revision: 
+caps.latest.revision: 23
 author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 7ec5df274042b35d30a251c90802c06cd4347ab1
-ms.sourcegitcommit: 45e4efb7aa828578fe9eb7743a1a3526da719555
+ms.openlocfilehash: d564d0221b908b385bfea42ab9a9fbf4df72865c
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="sphelpsubscriberinfo-transact-sql"></a>sp_helpsubscriberinfo (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -46,7 +46,7 @@ sp_helpsubscriberinfo [ [ @subscriber =] 'subscriber']
   
 ## <a name="arguments"></a>Argumentos  
  [  **@subscriber =** ] **'***suscriptor***'**  
- Es el nombre del suscriptor. *suscriptor* es **sysname**, su valor predeterminado es  **%** , que devuelve toda la información.  
+ Es el nombre del suscriptor. *suscriptor* es **sysname**, su valor predeterminado es **%**, que devuelve toda la información.  
   
  [  **@publisher =** ] **'***publisher***'**  
  Es el nombre del publicador. *Publisher* es **sysname**y el valor predeterminado es el nombre del servidor actual.  
@@ -60,9 +60,9 @@ sp_helpsubscriberinfo [ [ @subscriber =] 'subscriber']
 |-----------------|---------------|-----------------|  
 |**publicador**|**sysname**|Nombre del publicador.|  
 |**suscriptor**|**sysname**|Nombre del suscriptor.|  
-|**tipo**|**tinyint**|Tipo de suscriptor:<br /><br /> **0**  =  [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] base de datos **1** = origen de datos ODBC|  
-|**inicio de sesión**|**sysname**|Id. de inicio de sesión para la autenticación de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].|  
-|**contraseña**|**sysname**|Contraseña de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] autenticación.|  
+|**Tipo**|**tinyint**|Tipo de suscriptor:<br /><br /> **0**  =  [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] base de datos **1** = origen de datos ODBC|  
+|**Inicio de sesión**|**sysname**|Id. de inicio de sesión para la autenticación de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].|  
+|**password**|**sysname**|Contraseña de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] autenticación.|  
 |**commit_batch_size**|**int**|No compatible.|  
 |**status_batch_size**|**int**|No compatible.|  
 |**flush_frequency**|**int**|No compatible.|  
@@ -83,7 +83,7 @@ sp_helpsubscriberinfo [ [ @subscriber =] 'subscriber']
 |**frequency_type2**|**int**|Frecuencia de ejecución del Agente de mezcla:<br /><br /> **1** = una vez<br /><br /> **2** = a petición<br /><br /> **4** = diariamente<br /><br /> **8** = semanalmente<br /><br /> **16** = mensualmente<br /><br /> **32** = mensualmente relativa<br /><br /> **64** = inicio automático<br /><br /> **128** = periódica|  
 |**frequency_interval2**|**int**|Valor que se aplica a la frecuencia establecida *frequency_type*.|  
 |**frequency_relative_interval2**|**int**|Fecha del agente de mezcla utiliza cuando *frequency_type* está establecido en 32 (mensual relativa):<br /><br /> **1** = primero<br /><br /> **2** = segundo<br /><br /> **4** = tercero<br /><br /> **8** = cuarto<br /><br /> **16** = último|  
-|**frequency_recurrence_factor2**|**int**|Factor de periodicidad utilizado por *frequency_type**.*|  
+|**frequency_recurrence_factor2**|**int**|Factor de periodicidad utilizado por *frequency_type **.*|  
 |**frequency_subday2**|**int**|Frecuencia de repetición de la programación durante el periodo definido:<br /><br /> **1** = una vez<br /><br /> **2** = segundo<br /><br /> **4** = minuto<br /><br /> **8** = hora|  
 |**frequency_subday_interval2**|**int**|Intervalo de *frequency_subday*.|  
 |**active_start_time_of_day2**|**int**|Hora del día en que el Agente de mezcla se programa por primera vez, con el formato HHMMSS.|  
@@ -101,12 +101,12 @@ sp_helpsubscriberinfo [ [ @subscriber =] 'subscriber']
  Solo los miembros de la **sysadmin** rol fijo de servidor, el **db_owner** rol fijo de base de datos o la lista de acceso de publicación para la publicación puede ejecutar **sp_helpsubscriberinfo**.  
   
 ## <a name="see-also"></a>Vea también  
- [sp_adddistpublisher &#40; Transact-SQL &#41;](../../relational-databases/system-stored-procedures/sp-adddistpublisher-transact-sql.md)   
- [sp_addpullsubscription &#40; Transact-SQL &#41;](../../relational-databases/system-stored-procedures/sp-addpullsubscription-transact-sql.md)   
- [sp_changesubscriber &#40; Transact-SQL &#41;](../../relational-databases/system-stored-procedures/sp-changesubscriber-transact-sql.md)   
- [sp_dropsubscriber &#40; Transact-SQL &#41;](../../relational-databases/system-stored-procedures/sp-dropsubscriber-transact-sql.md)   
+ [sp_adddistpublisher &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-adddistpublisher-transact-sql.md)   
+ [sp_addpullsubscription &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-addpullsubscription-transact-sql.md)   
+ [sp_changesubscriber &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-changesubscriber-transact-sql.md)   
+ [sp_dropsubscriber &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-dropsubscriber-transact-sql.md)   
  [sp_helpdistributor &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-helpdistributor-transact-sql.md)   
- [sp_helpserver &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-helpserver-transact-sql.md)   
+ [sp_helpserver & #40; Transact-SQL & #41;](../../relational-databases/system-stored-procedures/sp-helpserver-transact-sql.md)   
  [Procedimientos almacenados del sistema &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
   
   

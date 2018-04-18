@@ -1,16 +1,16 @@
 ---
 title: sp_changeqreader_agent (Transact-SQL) | Documentos de Microsoft
-ms.custom: 
+ms.custom: ''
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine
-ms.service: 
+ms.service: ''
 ms.component: system-stored-procedures
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - replication
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 applies_to:
 - SQL Server
@@ -20,16 +20,16 @@ f1_keywords:
 helpviewer_keywords:
 - sp_changeqreader_agent
 ms.assetid: d3fe79c5-31ef-4565-bf38-b476b5fb16f7
-caps.latest.revision: 
+caps.latest.revision: 21
 author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 0ce63f317910d84aae14f2457f383bce7ba291c1
-ms.sourcegitcommit: 45e4efb7aa828578fe9eb7743a1a3526da719555
+ms.openlocfilehash: 19ad4be8a78c972d5f4db30fbe02ef1d3df497bd
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="spchangeqreaderagent-transact-sql"></a>sp_changeqreader_agent (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -48,10 +48,10 @@ sp_changeqreader_agent [ [ @job_login = ] 'job_login' ]
 ```  
   
 ## <a name="arguments"></a>Argumentos  
- [  **@job_login** =] **'***job_login***'**  
+ [ **@job_login**=] **'***job_login***'**  
  Es el inicio de sesión de la cuenta de [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows en la que se ejecuta el agente. *job_login* es **nvarchar (257)**, su valor predeterminado es null.  
   
- [  **@job_password** =] **'***job_password***'**  
+ [ **@job_password**=] **'***job_password***'**  
  Es la contraseña de la cuenta de Windows en la que se ejecuta el agente. *job_password* es **sysname**, su valor predeterminado es null.  
   
  [  **@frompublisher=** ] *frompublisher*  
@@ -71,7 +71,7 @@ sp_changeqreader_agent [ [ @job_login = ] 'job_login' ]
  Solo los miembros de la **sysadmin** rol fijo de servidor puede ejecutar **sp_changeqreader_agent**.  
   
 ## <a name="see-also"></a>Vea también  
- [Ver y modificar la configuración de seguridad de la replicación](../../relational-databases/replication/security/view-and-modify-replication-security-settings.md)   
+ [View and Modify Replication Security Settings](../../relational-databases/replication/security/view-and-modify-replication-security-settings.md)  (Ver y modificar la configuración de seguridad de la replicación)  
  [sp_addqreader_agent &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-addqreader-agent-transact-sql.md)  
   
   

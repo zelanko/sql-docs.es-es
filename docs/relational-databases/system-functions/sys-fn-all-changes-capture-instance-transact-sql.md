@@ -1,16 +1,16 @@
 ---
-title: sys.fn_all_changes_&lt;capture_instance&gt; (Transact-SQL) | Microsoft Docs
-ms.custom: 
+title: Sys.fn_all_changes_&lt;capture_instance&gt; (Transact-SQL) | Documentos de Microsoft
+ms.custom: ''
 ms.date: 06/02/2016
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine
-ms.service: 
+ms.service: ''
 ms.component: system-functions
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 applies_to:
 - SQL Server (starting with 2008)
@@ -25,18 +25,18 @@ helpviewer_keywords:
 - fn_all_changes_<capture_instance>
 - sys.fn_all_changes_<capture_instance>
 ms.assetid: 564fae96-b88c-4f22-9338-26ec168ba6f5
-caps.latest.revision: 
+caps.latest.revision: 15
 author: rothja
 ms.author: jroth
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 0f8837e835a1e7ef4d8a4ecdf16adea077a9f878
-ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
+ms.openlocfilehash: c86286a8412f41dbc8c30bc5bcd68489aa27f99e
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/09/2018
+ms.lasthandoff: 04/16/2018
 ---
-# <a name="sysfnallchangesltcaptureinstancegt-transact-sql"></a>sys.fn_all_changes_&lt;capture_instance&gt; (Transact-SQL)
+# <a name="sysfnallchangesltcaptureinstancegt-transact-sql"></a>Sys.fn_all_changes_&lt;capture_instance&gt; (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
   Contenedores para la **todos los cambios** funciones de consulta. El procedimiento almacenado sys.sp_cdc_generate_wrapper_function genera los scripts necesarios para crear estas funciones.  
@@ -96,7 +96,7 @@ fn_all_changes_<capture_instance> ('start_time' ,'end_time', '<row_filter_option
 |-----------------|-----------------|-----------------|  
 |__CDC_STARTLSN|**binary(10)**|LSN de confirmación de la transacción que se asocia al cambio. Todos los cambios que se confirman en la misma transacción comparten el mismo LSN de confirmación.|  
 |__CDC_SEQVAL|**binary(10)**|Valor de secuencia que se usa para ordenar los cambios de fila en una transacción.|  
-|\<columnas de @column_list>|**varía**|Las columnas que se identifican en el *column_list* argumento para la función sp_cdc_generate_wrapper_function cuando se llama para generar el script que crea la función contenedora.|  
+|\<columnas de @column_list>|**Varía**|Las columnas que se identifican en el *column_list* argumento para la función sp_cdc_generate_wrapper_function cuando se llama para generar el script que crea la función contenedora.|  
 |__CDC_OPERATION|**nvarchar(2)**|Código de operación que indica qué operación hay que aplicar a la fila en el entorno de destino. Variará según el valor del argumento *row_filter_option* proporcionados en la llamada:<br /><br /> *row_filter_option* = 'all'<br /><br /> 'D' - operación de eliminación<br /><br /> 'I' - operación de inserción<br /><br /> 'UN' - valores nuevos de la operación de actualización<br /><br /> *row_filter_option* = 'all update old'<br /><br /> 'D' - operación de eliminación<br /><br /> 'I' - operación de inserción<br /><br /> 'UN' - valores nuevos de la operación de actualización<br /><br /> 'UO' - valores anteriores de la operación de actualización|  
 |\<columnas de @update_flag_list>|**bit**|Un indicador de bits se denomina anexando _uflag al nombre de columna. La marca siempre se establece en NULL cuando \__CDC_OPERATION se tenía ', 'I', de 'UO'. Cuando \__CDC_OPERATION es 'UN', se establece en 1 si la actualización generó un cambio en la columna correspondiente. En caso contrario, es 0.|  
   
@@ -113,7 +113,7 @@ fn_all_changes_<capture_instance> ('start_time' ,'end_time', '<row_filter_option
   
  Si se usa el parámetro @closed_high_end_point al crear el script, se pueden generar contenedores para admitir un límite superior cerrado o un límite superior abierto en la ventana de consulta especificada. Es decir, puede decidir si las entradas que tienen un tiempo de confirmación igual al límite superior del intervalo de extracción se incluirán en el intervalo. De forma predeterminada, se incluye el límite superior.  
   
- El conjunto de resultados devuelto por la **todos los cambios** función contenedora devuelve __ $start_lsn y \_ \_$seqval columnas de la tabla de cambios como columnas \__CDC_STARTLSN y \__ CDC_SEQVAL, respectivamente. Sigue a estos con solo las columnas sometidas a seguimiento que aparecían en el  *@column_list*  parámetro cuando se generó el contenedor. Si  *@column_list*  es NULL, todas las columnas se devuelven de origen sometidas a seguimiento. Las columnas de origen van seguidas de una columna de operación, \__CDC_OPERATION, que es una columna de uno o dos caracteres que identifica la operación.  
+ El conjunto de resultados devuelto por la **todos los cambios** función contenedora devuelve __ $start_lsn y \_ \_$seqval columnas de la tabla de cambios como columnas \__CDC_STARTLSN y \__ CDC_SEQVAL, respectivamente. Sigue a estos con solo las columnas sometidas a seguimiento que aparecían en el *@column_list* parámetro cuando se generó el contenedor. Si *@column_list* es NULL, todas las columnas se devuelven de origen sometidas a seguimiento. Las columnas de origen van seguidas de una columna de operación, \__CDC_OPERATION, que es una columna de uno o dos caracteres que identifica la operación.  
   
  A continuación, las marcas de bits se anexan al conjunto de resultados para cada columna que se identifica en el parámetro @update_flag_list. Para el **todos los cambios** contenedor, las marcas de bits siempre será NULL si __CDC_OPERATION es tenía ', 'I' o 'UO'. Si \__CDC_OPERATION es 'UN', la marca se establecerá en 1 ó 0, dependiendo de si la operación de actualización produjo un cambio en la columna.  
   

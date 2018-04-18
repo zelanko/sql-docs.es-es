@@ -1,16 +1,16 @@
 ---
 title: sysreplicationalerts (Transact-SQL) | Documentos de Microsoft
-ms.custom: 
+ms.custom: ''
 ms.date: 03/04/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine
-ms.service: 
+ms.service: ''
 ms.component: system-tables
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - replication
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 applies_to:
 - SQL Server
@@ -22,16 +22,16 @@ dev_langs:
 helpviewer_keywords:
 - sysreplicationalerts system table
 ms.assetid: 6ed15828-8cca-4cf0-b2ff-1ecd0d8db11a
-caps.latest.revision: 
+caps.latest.revision: 27
 author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 46550c4b3cca05eb6d3c434562970084530d4063
-ms.sourcegitcommit: 45e4efb7aa828578fe9eb7743a1a3526da719555
+ms.openlocfilehash: 0b3cbb8ee462007f59eac4aea41a10e0253651b3
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="sysreplicationalerts-transact-sql"></a>sysreplicationalerts (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -49,17 +49,17 @@ ms.lasthandoff: 11/21/2017
 |**time**|**datetime**|Hora de inserción del registro.|  
 |**publicador**|**sysname**|Nombre del publicador asociado al agente que ha activado esta alerta.|  
 |**publisher_db**|**sysname**|Base de datos del publicador asociada al agente que ha activado esta alerta.|  
-|**publicación**|**sysname**|Publicación asociada al agente que ha activado esta alerta.|  
+|**Publicación**|**sysname**|Publicación asociada al agente que ha activado esta alerta.|  
 |**publication_type**|**int**|Tipo de publicación:<br /><br /> **0** = instantánea.<br /><br /> **1** = transaccional.<br /><br /> **2** = la mezcla.|  
 |**suscriptor**|**sysname**|Nombre del suscriptor asociado al agente que ha activado esta alerta.|  
 |**subscriber_db**|**sysname**|Nombre de la base de datos del suscriptor asociada al agente que ha activado esta alerta.|  
-|**artículo**|**sysname**|Nombre del artículo asociado al agente que ha activado esta alerta.|  
+|**article**|**sysname**|Nombre del artículo asociado al agente que ha activado esta alerta.|  
 |**destination_object**|**sysname**|Nombre de la tabla de suscripciones asociada a la alerta.|  
 |**source_object**|**sysname**|Nombre de la tabla de publicaciones asociada a la alerta.|  
 |**alert_error_text**|**ntext**|Texto de la alerta.|  
   
 ## <a name="see-also"></a>Vea también  
- [Tablas de replicación &#40; Transact-SQL &#41;](../../relational-databases/system-tables/replication-tables-transact-sql.md)   
+ [Tablas de replicación &#40;Transact-SQL&#41;](../../relational-databases/system-tables/replication-tables-transact-sql.md)   
  [Vistas de replicación &#40;Transact-SQL&#41;](../../relational-databases/system-views/replication-views-transact-sql.md)  
   
   

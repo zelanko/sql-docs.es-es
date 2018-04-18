@@ -1,16 +1,16 @@
 ---
 title: sp_addmergepartition (Transact-SQL) | Documentos de Microsoft
-ms.custom: 
+ms.custom: ''
 ms.date: 03/06/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine
-ms.service: 
+ms.service: ''
 ms.component: system-stored-procedures
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - replication
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 applies_to:
 - SQL Server
@@ -20,16 +20,16 @@ f1_keywords:
 helpviewer_keywords:
 - sp_addmergepartition
 ms.assetid: 02a5f46b-e5ff-4932-a3ff-7f0fd82d0981
-caps.latest.revision: 
+caps.latest.revision: 31
 author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: e201cc5392379b09b38cf25df2e98ee2dfe96e7d
-ms.sourcegitcommit: 45e4efb7aa828578fe9eb7743a1a3526da719555
+ms.openlocfilehash: a169b85f0ae207f72ba0f142633aa323403745c3
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="spaddmergepartition-transact-sql"></a>sp_addmergepartition (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -48,13 +48,13 @@ sp_addmergepartition [ @publication = ] 'publication'
 ```  
   
 ## <a name="arguments"></a>Argumentos  
- [  **@publication** =] **'***publicación***'**  
+ [ **@publication**=] **'***publicación***'**  
  Es la publicación de mezcla en la que se va a crear la partición. *publicación* es **sysname**, no tiene ningún valor predeterminado. Si *suser_sname* se especifica, el valor de *hostname* debe ser NULL.  
   
- [  **@suser_sname** =] **'***suser_sname***'**  
+ [ **@suser_sname**=] **'***suser_sname***'**  
  Es el valor utilizado al crear la partición para una suscripción que está filtrada por el valor de la [SUSER_SNAME](../../t-sql/functions/suser-sname-transact-sql.md) función en el suscriptor. *SUSER_SNAME* es **sysname**, no tiene ningún valor predeterminado.  
   
- [  **@host_name** =] **'***host_name***'**  
+ [ **@host_name**=] **'***host_name***'**  
  Es el valor utilizado al crear la partición para una suscripción que está filtrada por el valor de la [HOST_NAME](../../t-sql/functions/host-name-transact-sql.md) función en el suscriptor. *HOST_NAME* es **sysname**, no tiene ningún valor predeterminado.  
   
 ## <a name="return-code-values"></a>Valores de código de retorno  
@@ -71,6 +71,6 @@ sp_addmergepartition [ @publication = ] 'publication'
   
 ## <a name="see-also"></a>Vea también  
  [Crear una instantánea para una publicación de mezcla con filtros con parámetros](../../relational-databases/replication/create-a-snapshot-for-a-merge-publication-with-parameterized-filters.md)   
- [Filtros de fila con parámetros](../../relational-databases/replication/merge/parameterized-filters-parameterized-row-filters.md)  
+ [Parameterized Row Filters](../../relational-databases/replication/merge/parameterized-filters-parameterized-row-filters.md)  
   
   

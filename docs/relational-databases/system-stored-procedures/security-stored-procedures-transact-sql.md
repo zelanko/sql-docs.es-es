@@ -1,16 +1,16 @@
 ---
 title: Seguridad procedimientos almacenados (Transact-SQL) | Documentos de Microsoft
-ms.custom: 
+ms.custom: ''
 ms.date: 07/17/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine, sql-database
-ms.service: 
+ms.service: ''
 ms.component: system-stored-procedures
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 applies_to:
 - Azure SQL Database
@@ -22,21 +22,22 @@ helpviewer_keywords:
 - stored procedures [SQL Server], security
 - security [SQL Server], stored procedures
 ms.assetid: 62b72907-7e95-4c97-9891-0c45d5b678ce
-caps.latest.revision: 
+caps.latest.revision: 22
 author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 59a87a888f23e722857952d6cdacb6165a092805
-ms.sourcegitcommit: 45e4efb7aa828578fe9eb7743a1a3526da719555
+monikerRange: = azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions
+ms.openlocfilehash: b894dd2099e41a2a0718cd443c079444cc18d475
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="security-stored-procedures-transact-sql"></a>Procedimientos almacenados de seguridad (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
-  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]admite el sistema siguiente procedimientos almacenados que se utilizan para administrar la seguridad. Algunos de estos procedimientos almacenados están en desuso pero siguen estando disponibles para la compatibilidad con versiones anteriores. Los temas correspondientes a procedimientos desusados indicarán su reemplazo.  
+  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] admite el sistema siguiente procedimientos almacenados que se utilizan para administrar la seguridad. Algunos de estos procedimientos almacenados están en desuso pero siguen estando disponibles para la compatibilidad con versiones anteriores. Los temas correspondientes a procedimientos desusados indicarán su reemplazo.  
 
 |||  
 |-|-|  
@@ -51,7 +52,7 @@ ms.lasthandoff: 11/21/2017
 |[sp_control_dbmasterkey_password](../../relational-databases/system-stored-procedures/sp-control-dbmasterkey-password-transact-sql.md) |[sp_dbfixedrolepermission](../../relational-databases/system-stored-procedures/sp-dbfixedrolepermission-transact-sql.md) (obsoleto)
 |[sp_defaultdb](../../relational-databases/system-stored-procedures/sp-defaultdb-transact-sql.md) (obsoleto) |[sp_defaultlanguage](../../relational-databases/system-stored-procedures/sp-defaultlanguage-transact-sql.md) (obsoleto)
 |[sp_denylogin](../../relational-databases/system-stored-procedures/sp-denylogin-transact-sql.md) (obsoleto) |[sp_describe_parameter_encryption](../../relational-databases/system-stored-procedures/sp-describe-parameter-encryption-transact-sql.md)
-|[sp_dropalias](../../relational-databases/system-stored-procedures/sp-dropalias-transact-sql.md) (obsoleto) |[Sys.sp_drop_trusted_assembly]( sys-sp-drop-trusted-assembly-transact-sql.md) |
+|[sp_dropalias](../../relational-databases/system-stored-procedures/sp-dropalias-transact-sql.md) (obsoleto) |[sys.sp_drop_trusted_assembly]( sys-sp-drop-trusted-assembly-transact-sql.md) |
 |[sp_dropapprole](../../relational-databases/system-stored-procedures/sp-dropapprole-transact-sql.md) (obsoleto) |[sp_droplinkedsrvlogin](../../relational-databases/system-stored-procedures/sp-droplinkedsrvlogin-transact-sql.md) |
 |[sp_droplogin](../../relational-databases/system-stored-procedures/sp-droplogin-transact-sql.md) (obsoleto) |[sp_dropremotelogin](../../relational-databases/system-stored-procedures/sp-dropremotelogin-transact-sql.md) (obsoleto) |
 |[sp_droprole](../../relational-databases/system-stored-procedures/sp-droprole-transact-sql.md) (obsoleto) |[sp_droprolemember](../../relational-databases/system-stored-procedures/sp-droprolemember-transact-sql.md) (obsoleto) |

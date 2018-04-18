@@ -1,16 +1,16 @@
 ---
 title: Sys.sequences (Transact-SQL) | Documentos de Microsoft
-ms.custom: 
+ms.custom: ''
 ms.date: 06/10/2016
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine, sql-database
-ms.service: 
+ms.service: ''
 ms.component: system-catalog-views
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - sys.sequences_TSQL
@@ -23,16 +23,17 @@ helpviewer_keywords:
 - sequence number object, sys. sequences catalog view
 - sys.sequences catalog view
 ms.assetid: 0e1b0e32-1cce-40f7-83c8-860ec660138a
-caps.latest.revision: 
+caps.latest.revision: 21
 author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 3a5efd9edac7b69a390501acce3058530b51eba7
-ms.sourcegitcommit: 45e4efb7aa828578fe9eb7743a1a3526da719555
+monikerRange: = azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions
+ms.openlocfilehash: 3ebefdaa061600b245bb95b49a05d54dd0020f4a
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="syssequences-transact-sql"></a>sys.sequences (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -43,7 +44,7 @@ ms.lasthandoff: 11/21/2017
 |-----------------|---------------|-----------------|  
 |\<hereda columnas >||Hereda todas las columnas de [sys.objects](../../relational-databases/system-catalog-views/sys-objects-transact-sql.md).|  
 |**start_value**|**sql_variant no NULL**|El valor de inicio del objeto de secuencia. Si se reinicia el objeto de secuencia usando ALTER SEQUENCE, se reiniciará en ese valor. Cuando el objeto de secuencia ciclos, continúa en el **minimum_value** o **maximum_value**, no el **start_value**.|  
-|**incremento**|**sql_variant no NULL**|El valor que se usa para incrementar el objeto de secuencia a continuación de cada valor generado.|  
+|**increment**|**sql_variant no NULL**|El valor que se usa para incrementar el objeto de secuencia a continuación de cada valor generado.|  
 |**minimum_value**|**sql_variant es NULL**|El valor mínimo que puede generar el objeto de secuencia. Después de llegar a este valor, el objeto de secuencia devolverá un error al intentar generar más valores o se reiniciará si se especifica la opción CYCLE. Si no se ha especificado MINVALUE, esta columna devuelve el valor mínimo admitido por el tipo de datos del generador de secuencias.|  
 |**maximum_value**|**sql_variant es NULL**|El valor máximo que puede generar el objeto de secuencia. Después de llegar a este valor, el objeto de secuencia empezará a devolver un error al intentar generar más valores o se reiniciará si se especifica la opción CYCLE. Si no se ha especificado MAXVALUE, esta columna devuelve el valor máximo admitido por el tipo de datos del objeto de secuencia.|  
 |**is_cycling**|**bits no NULL**|Devuelve 0 si se ha especificado NO CYCLE para el objeto de secuencia y 1 si se ha especificado CYCLE.|  
@@ -61,10 +62,10 @@ ms.lasthandoff: 11/21/2017
   
 ## <a name="see-also"></a>Vea también  
  [Números de secuencia](../../relational-databases/sequence-numbers/sequence-numbers.md)   
- [Crear secuencia de &#40; Transact-SQL &#41;](../../t-sql/statements/create-sequence-transact-sql.md)   
- [ALTER SEQUENCE &#40; Transact-SQL &#41;](../../t-sql/statements/alter-sequence-transact-sql.md)   
- [Eliminar secuencia &#40; Transact-SQL &#41;](../../t-sql/statements/drop-sequence-transact-sql.md)   
- [VALOR siguiente para &#40; Transact-SQL &#41;](../../t-sql/functions/next-value-for-transact-sql.md)   
- [sp_sequence_get_range &#40; Transact-SQL &#41;](../../relational-databases/system-stored-procedures/sp-sequence-get-range-transact-sql.md)  
+ [CREATE SEQUENCE &#40;Transact-SQL&#41;](../../t-sql/statements/create-sequence-transact-sql.md)   
+ [ALTER SEQUENCE &#40;Transact-SQL&#41;](../../t-sql/statements/alter-sequence-transact-sql.md)   
+ [DROP SEQUENCE &#40;Transact-SQL&#41;](../../t-sql/statements/drop-sequence-transact-sql.md)   
+ [NEXT VALUE FOR &#40;Transact-SQL&#41;](../../t-sql/functions/next-value-for-transact-sql.md)   
+ [sp_sequence_get_range &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-sequence-get-range-transact-sql.md)  
   
   

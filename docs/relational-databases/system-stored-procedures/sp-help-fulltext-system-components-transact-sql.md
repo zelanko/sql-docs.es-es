@@ -1,16 +1,16 @@
 ---
-title: sp_help_fulltext_system_components (Transact-SQL) | Microsoft Docs
-ms.custom: 
+title: sp_help_fulltext_system_components (Transact-SQL) | Documentos de Microsoft
+ms.custom: ''
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine, sql-data-warehouse
-ms.service: 
+ms.service: ''
 ms.component: system-stored-procedures
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - sp_help_fulltext_components_TSQL
@@ -20,16 +20,17 @@ dev_langs:
 helpviewer_keywords:
 - sp_help_fulltext_system_components
 ms.assetid: ac1fc7a0-7f46-4a12-8c5c-8d378226a8ce
-caps.latest.revision: 
+caps.latest.revision: 52
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 8bb8278204aa3b710875d3bab91a41abfe43a553
-ms.sourcegitcommit: c556eaf60a49af7025db35b7aa14beb76a8158c5
+monikerRange: = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions
+ms.openlocfilehash: 29ac6d68ff966d037f6f969d7483f3f1113fb127
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/03/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="sphelpfulltextsystemcomponents-transact-sql"></a>sp_help_fulltext_system_components (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-asdw-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-asdw-xxx-md.md)]
@@ -51,20 +52,20 @@ sp_help_fulltext_system_components
  'all'  
  Devuelve información para todos los componentes de texto completo.  
   
- [ **@component_type=** ] *component_type*  
+ [  **@component_type=** ] *component_type*  
  Especifica el tipo de componente. *component_type* puede ser uno de los siguientes:  
   
--   **wordbreaker**  
+-   **separador de palabras**  
   
 -   **filter**  
   
 -   **controlador de protocolo**  
   
--   **fullpath**  
+-   **FullPath**  
   
  Si se especifica una ruta de acceso completa, también se debe especificar *param* con la ruta de acceso completa del archivo DLL del componente; de lo contrario, se devuelve un mensaje de error.  
   
- [ **@param=** ] *param*  
+ [  **@param=** ] *param*  
  En función del tipo de componente, puede ser uno de los elementos siguientes: un identificador de configuración regional (LCID), la extensión de archivo con el prefijo ".", el nombre de componente completo del controlador de protocolo o la ruta de acceso completa del archivo DLL del componente.  
   
 ## <a name="return-code-values"></a>Valores de código de retorno  
@@ -75,12 +76,12 @@ sp_help_fulltext_system_components
   
 |Nombre de columna|Tipo de datos|Description|  
 |-----------------|---------------|-----------------|  
-|**componenttype**|**sysname**|Tipo de componente. Uno de los siguientes:<br /><br /> filter<br /><br /> protocol handler<br /><br /> wordbreaker|  
+|**componentType**|**sysname**|Tipo de componente. Uno de los siguientes:<br /><br /> filter<br /><br /> protocol handler<br /><br /> wordbreaker|  
 |**componentname**|**sysname**|Nombre del componente.|  
-|**clsid**|**uniqueidentifier**|Identificador de clase del componente.|  
-|**fullpath**|**nvarchar(256)**|Ruta de acceso a la ubicación del componente.<br /><br /> NULL = el llamador no es miembro del **serveradmin** rol fijo de servidor.|  
+|**CLSID**|**uniqueidentifier**|Identificador de clase del componente.|  
+|**FullPath**|**nvarchar(256)**|Ruta de acceso a la ubicación del componente.<br /><br /> NULL = el llamador no es miembro del **serveradmin** rol fijo de servidor.|  
 |**version**|**nvarchar(30)**|Versión del componente.|  
-|**manufacturer**|**sysname**|Nombre del fabricante del componente.|  
+|**fabricante**|**sysname**|Nombre del fabricante del componente.|  
   
  El siguiente conjunto de resultados se devuelve sólo si uno o más de un catálogo de texto completo existe siempre que use *component_type*.  
   
@@ -114,7 +115,7 @@ GO
 ```  
   
 ### <a name="c-determining-whether-a-specific-word-breaker-is-registered"></a>C. Determinar si un separador de palabras concreto está registrado  
- El ejemplo siguiente mostrará el separador de palabras del idioma turco (LCID = 1055) si se ha instalado en el sistema y si está registrado en la instancia del servicio. Este ejemplo especifica los nombres de parámetro,  **@component_type**  y  **@param** .  
+ El ejemplo siguiente mostrará el separador de palabras del idioma turco (LCID = 1055) si se ha instalado en el sistema y si está registrado en la instancia del servicio. Este ejemplo especifica los nombres de parámetro, **@component_type** y **@param**.  
   
 ```  
 EXEC sp_help_fulltext_system_components @component_type = 'wordbreaker', @param = 1055;  
@@ -147,6 +148,6 @@ GO
  [Ver o cambiar los filtros y separadores de palabras](../../relational-databases/search/view-or-change-registered-filters-and-word-breakers.md)   
  [Configurar y administrar separadores de palabras y lematizadores para la búsqueda](../../relational-databases/search/configure-and-manage-word-breakers-and-stemmers-for-search.md)   
  [Configurar y administrar filtros para búsquedas](../../relational-databases/search/configure-and-manage-filters-for-search.md)   
- [Búsquedas de texto completo y semántica almacenan procedimientos &#40; Transact-SQL &#41;](../../relational-databases/system-stored-procedures/full-text-search-and-semantic-search-stored-procedures-transact-sql.md)  
+ [Procedimientos almacenan de búsqueda de texto completo y la búsqueda semántica &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/full-text-search-and-semantic-search-stored-procedures-transact-sql.md)  
   
   

@@ -1,16 +1,16 @@
 ---
-title: sp_enum_login_for_proxy (Transact-SQL) | Microsoft Docs
-ms.custom: 
+title: sp_enum_login_for_proxy (Transact-SQL) | Documentos de Microsoft
+ms.custom: ''
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine
-ms.service: 
+ms.service: ''
 ms.component: system-stored-procedures
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - sp_enum_login_for_proxy_TSQL
@@ -20,16 +20,16 @@ dev_langs:
 helpviewer_keywords:
 - sp_enum_login_for_proxy
 ms.assetid: 62a75019-248a-44c8-a5cc-c79f55ea3acf
-caps.latest.revision: 
+caps.latest.revision: 18
 author: stevestein
 ms.author: sstein
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 8235a8c0fa9febcad446f9a6c48eecf6c470d592
-ms.sourcegitcommit: c556eaf60a49af7025db35b7aa14beb76a8158c5
+ms.openlocfilehash: 1d8deedb9e4a534c5d30534cf874e8be8af17324
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/03/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="spenumloginforproxy-transact-sql"></a>sp_enum_login_for_proxy (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -49,13 +49,13 @@ sp_enum_login_for_proxy
 ```  
   
 ## <a name="arguments"></a>Argumentos  
- [  **@name** =] '*nombre*'  
+ [ **@name**=] '*nombre*'  
  El nombre de un [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] entidad de seguridad, el inicio de sesión, el rol de servidor o **msdb** rol de base de datos para mostrar los servidores proxy. El nombre es **nvarchar (256)**, su valor predeterminado es null.  
   
- [ **@proxy_id**= ] *id*  
+ [ **@proxy_id**=] *Id.*  
  Número de identificación del proxy del que se muestra información. El *proxy_id* es **int**, su valor predeterminado es null. Ya sea la *Id. de* o *proxy_name* se puede especificar.  
   
- [  **@proxy_name** =] **'***proxy_name***'**  
+ [ **@proxy_name**=] **'***proxy_name***'**  
  Nombre del proxy del que se va a mostrar información. El *proxy_name* es **sysname**, su valor predeterminado es null. Ya sea la *Id. de* o *proxy_name* se puede especificar.  
   
 ## <a name="return-code-values"></a>Valores de código de retorno  

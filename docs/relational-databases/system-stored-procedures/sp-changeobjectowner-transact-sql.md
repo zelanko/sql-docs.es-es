@@ -1,16 +1,16 @@
 ---
 title: sp_changeobjectowner (Transact-SQL) | Documentos de Microsoft
-ms.custom: 
+ms.custom: ''
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine
-ms.service: 
+ms.service: ''
 ms.component: system-stored-procedures
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - sp_changeobjectowner_TSQL
@@ -20,16 +20,16 @@ dev_langs:
 helpviewer_keywords:
 - sp_changeobjectowner
 ms.assetid: 45b3dc1c-1cde-45b7-a248-5195c12973e9
-caps.latest.revision: 
+caps.latest.revision: 37
 author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 00d4fbb90a767294e3d529e6fa5706eecfd841f1
-ms.sourcegitcommit: 9fbe5403e902eb996bab0b1285cdade281c1cb16
+ms.openlocfilehash: 492c67ad4e5580e7ecccaa4580afe024ebae8ec4
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/27/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="spchangeobjectowner-transact-sql"></a>sp_changeobjectowner (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -37,7 +37,7 @@ ms.lasthandoff: 11/27/2017
   Cambia el propietario de un objeto en la base de datos actual.  
   
 > [!IMPORTANT]  
->  Este procedimiento almacenado solo funciona con los objetos disponibles en [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssVersion2000](../../includes/ssversion2000-md.md)]. [!INCLUDE[ssNoteDepFutureAvoid](../../includes/ssnotedepfutureavoid-md.md)]Use [ALTER SCHEMA](../../t-sql/statements/alter-schema-transact-sql.md) o [ALTER AUTHORIZATION](../../t-sql/statements/alter-authorization-transact-sql.md) en su lugar. **sp_changeobjectowner** cambia el esquema y el propietario. Para mantener la compatibilidad con versiones anteriores de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], este procedimiento almacenado solo cambia los propietarios de los objetos cuando el propietario actual y el nuevo poseen esquemas con el mismo nombre que sus nombres de usuario de base de datos.  
+>  Este procedimiento almacenado solo funciona con los objetos disponibles en [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssVersion2000](../../includes/ssversion2000-md.md)]. [!INCLUDE[ssNoteDepFutureAvoid](../../includes/ssnotedepfutureavoid-md.md)] Use [ALTER SCHEMA](../../t-sql/statements/alter-schema-transact-sql.md) o [ALTER AUTHORIZATION](../../t-sql/statements/alter-authorization-transact-sql.md) en su lugar. **sp_changeobjectowner** cambia el esquema y el propietario. Para mantener la compatibilidad con versiones anteriores de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], este procedimiento almacenado solo cambia los propietarios de los objetos cuando el propietario actual y el nuevo poseen esquemas con el mismo nombre que sus nombres de usuario de base de datos.  
   
 > [!IMPORTANT]  
 >  Se ha agregado un nuevo requisito a los permisos de este procedimiento almacenado.  
@@ -53,9 +53,9 @@ sp_changeobjectowner [ @objname = ] 'object' , [ @newowner = ] 'owner'
   
 ## <a name="arguments"></a>Argumentos  
  [  **@objname =** ] **'***objeto***'**  
- Es el nombre de una tabla, una vista, una función definida por el usuario o un procedimiento almacenado existentes en la base de datos actual. *objeto* es un **nvarchar(776)**, no tiene ningún valor predeterminado. *objeto* se puede calificar con el propietario del objeto existente, en el formulario *existing_owner.Object***.** *objeto* si el esquema y su propietario tienen el mismo nombre.  
+ Es el nombre de una tabla, una vista, una función definida por el usuario o un procedimiento almacenado existentes en la base de datos actual. *objeto* es un **nvarchar(776)**, no tiene ningún valor predeterminado. *objeto* se puede calificar con el propietario del objeto existente, en el formulario *existing_owner.Object***.*** objeto* si el esquema y su propietario tienen el mismo nombre.  
   
- [  **@newowner=**] **'***propietario* **'**  
+ [  **@newowner=**] **' *** propietario* **'**  
  Es el nombre de la cuenta de seguridad que corresponde al nuevo propietario del objeto. *propietario* es **sysname**, no tiene ningún valor predeterminado. *propietario* debe ser un usuario de base de datos válido, el rol de servidor [!INCLUDE[msCoName](../../includes/msconame-md.md)] inicio de sesión de Windows o grupo de Windows con acceso a la base de datos actual. Si el nuevo propietario es un usuario o grupo de Windows que no tiene una entidad de seguridad de base de datos correspondiente, se creará un usuario de base de datos.  
   
 ## <a name="return-code-values"></a>Valores de código de retorno  
@@ -78,10 +78,10 @@ GO
 ```  
   
 ## <a name="see-also"></a>Vea también  
- [ALTER SCHEMA &#40; Transact-SQL &#41;](../../t-sql/statements/alter-schema-transact-sql.md)   
+ [ALTER SCHEMA &#40;Transact-SQL&#41;](../../t-sql/statements/alter-schema-transact-sql.md)   
  [ALTER DATABASE &#40;Transact-SQL&#41;](../../t-sql/statements/alter-database-transact-sql.md)   
- [ALTER AUTHORIZATION &#40; Transact-SQL &#41;](../../t-sql/statements/alter-authorization-transact-sql.md)   
- [sp_changedbowner &#40; Transact-SQL &#41;](../../relational-databases/system-stored-procedures/sp-changedbowner-transact-sql.md)   
+ [ALTER AUTHORIZATION &#40;Transact-SQL&#41;](../../t-sql/statements/alter-authorization-transact-sql.md)   
+ [sp_changedbowner &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-changedbowner-transact-sql.md)   
  [Procedimientos almacenados del sistema &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
   
   

@@ -1,15 +1,15 @@
 ---
 title: Entorno de CLR hospedado | Documentos de Microsoft
-ms.custom: 
+ms.custom: ''
 ms.date: 03/17/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine
-ms.service: 
+ms.service: ''
 ms.component: clr
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: 
-ms.tgt_pltfrm: 
+ms.technology: ''
+ms.tgt_pltfrm: ''
 ms.topic: reference
 helpviewer_keywords:
 - type-safe code [CLR integration]
@@ -29,16 +29,16 @@ helpviewer_keywords:
 - hosted environments [CLR integration]
 - HPAs [CLR integration]
 ms.assetid: d280d359-08f0-47b5-a07e-67dd2a58ad73
-caps.latest.revision: 
+caps.latest.revision: 60
 author: rothja
 ms.author: jroth
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: b3aaf081b264cd74614af93fd58d130b19dfa4d5
-ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
+ms.openlocfilehash: 5beddb30dcf9948c2e11d0ad3110e21d485b14cf
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/09/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="clr-integration-architecture---clr-hosted-environment"></a>Arquitectura de integración de CLR - entorno hospedado CLR
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -142,7 +142,7 @@ ms.lasthandoff: 02/09/2018
   
  EXTERNAL_ACCESS proporciona una opción de seguridad intermedia, que permite al código tener acceso a los recursos externos a la base de datos, pero manteniendo las garantías de confiabilidad de SAFE.  
   
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] usa la capa de directiva de entidades emisoras de certificados de nivel de host para configurar una directiva de host que concede uno de los tres conjuntos de permisos basados en el conjunto de permisos almacenado en [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] catálogos. El código administrado que se ejecuta dentro de la base de datos siempre obtiene uno de estos conjuntos de permisos de acceso a código.  
+ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] usa la capa de directiva CAS de nivel de host para configurar una directiva de host que concede uno de los tres conjuntos de permisos basados en el conjunto de permisos almacenado en los catálogos de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. El código administrado que se ejecuta dentro de la base de datos siempre obtiene uno de estos conjuntos de permisos de acceso a código.  
   
 ### <a name="programming-model-restrictions"></a>Restricciones del modelo de programación  
  El modelo de programación para el código administrado de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] implica la escritura de funciones, procedimientos y tipos que normalmente no necesitan usar el estado mantenido a lo largo de varias invocaciones o compartir el estado entre varias sesiones de usuario. Además, como se explicó antes, la presencia de estado compartido puede producir excepciones críticas que tienen un impacto en la escalabilidad y la confiabilidad de la aplicación.  

@@ -1,16 +1,16 @@
 ---
 title: sp_dbmmonitorresults (Transact-SQL) | Documentos de Microsoft
-ms.custom: 
+ms.custom: ''
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine
-ms.service: 
+ms.service: ''
 ms.component: system-stored-procedures
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - sp_dbmmonitorresults
@@ -21,16 +21,16 @@ helpviewer_keywords:
 - sp_dbmmonitorresults
 - database mirroring [SQL Server], monitoring
 ms.assetid: d575e624-7d30-4eae-b94f-5a7b9fa5427e
-caps.latest.revision: 
+caps.latest.revision: 46
 author: stevestein
 ms.author: sstein
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: ce88354c3d378dbfa2e7bc71acd57ed52aaf5131
-ms.sourcegitcommit: c556eaf60a49af7025db35b7aa14beb76a8158c5
+ms.openlocfilehash: cfa798863af2c43f00908accf30c8d03c06202f9
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/03/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="spdbmmonitorresults-transact-sql"></a>sp_dbmmonitorresults (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -91,7 +91,7 @@ sp_dbmmonitorresults database_name
 |Nombre de columna|Tipo de datos|Description|  
 |-----------------|---------------|-----------------|  
 |**database_name**|**sysname**|Nombre de una base de datos reflejada.|  
-|**rol**|**int**|Rol de creación de reflejos actual de la instancia del servidor:<br /><br /> 1 = Entidad de seguridad<br /><br /> 2 = Reflejo|  
+|**Rol**|**int**|Rol de creación de reflejos actual de la instancia del servidor:<br /><br /> 1 = Entidad de seguridad<br /><br /> 2 = Reflejo|  
 |**mirroring_state**|**int**|Estado de la base de datos:<br /><br /> 0 = suspensión<br /><br /> 1 = desconectada<br /><br /> 2 = En proceso de sincronización<br /><br /> 3 = Pendiente de conmutación por error<br /><br /> 4 = Sincronizada|  
 |**witness_status**|**int**|El estado de conexión del testigo en la sesión de creación de reflejo de la base de datos puede ser:<br /><br /> 0 = Desconocido<br /><br /> 1 = Conectado<br /><br /> 2 = Desconectado|  
 |**log_generation_rate**|**int**|Cantidad (en kilobytes/seg.) de registro generado desde la actualización anterior del estado de la creación de reflejos de esta base de datos.|  

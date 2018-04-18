@@ -1,29 +1,30 @@
 ---
 title: Eliminar un origen de datos (ODBC) | Documentos de Microsoft
-ms.custom: 
+ms.custom: ''
 ms.date: 08/01/2016
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
-ms.service: 
+ms.service: ''
 ms.component: native-client-odbc-how-to
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: 
-ms.tgt_pltfrm: 
+ms.technology: ''
+ms.tgt_pltfrm: ''
 ms.topic: reference
 helpviewer_keywords:
 - data sources [ODBC]
 ms.assetid: 910e3e16-7b91-49d8-80bb-b4243926afaa
-caps.latest.revision: 
+caps.latest.revision: 19
 author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: a86c74ec8ebaec54801b045202469a217a4c4bf7
-ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
+monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
+ms.openlocfilehash: 43f23a11689cd85edcaa2dd12259469b5d6ca547
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/25/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="configuring-the-sql-server-odbc-driver---delete-a-data-source"></a>Configurar el controlador ODBC de SQL Server: eliminar un origen de datos
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -66,6 +67,6 @@ int main() {
 ```  
   
 ## <a name="see-also"></a>Vea también  
- [Agregar un origen de datos &#40; ODBC &#41;](../../relational-databases/native-client-odbc-how-to/configuring-the-sql-server-odbc-driver-add-a-data-source.md)  
+ [Agregar un origen de datos & #40; ODBC & #41;](../../relational-databases/native-client-odbc-how-to/configuring-the-sql-server-odbc-driver-add-a-data-source.md)  
   
   

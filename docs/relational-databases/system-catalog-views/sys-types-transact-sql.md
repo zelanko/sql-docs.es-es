@@ -1,16 +1,16 @@
 ---
 title: Sys.Types (Transact-SQL) | Documentos de Microsoft
-ms.custom: 
+ms.custom: ''
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
-ms.service: 
+ms.service: ''
 ms.component: system-catalog-views
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - types
@@ -23,16 +23,17 @@ helpviewer_keywords:
 - sys.types catalog view
 - table-valued parameters,sys.types
 ms.assetid: a5dbc842-71a0-4f62-b5e0-f560a99b7f8c
-caps.latest.revision: 
+caps.latest.revision: 33
 author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 0fab5cee5706b0d8a00638f35c3b91d639efb3b6
-ms.sourcegitcommit: 45e4efb7aa828578fe9eb7743a1a3526da719555
+monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
+ms.openlocfilehash: 17230214cbcbe4061de77ec01fbf848d3826914c
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="systypes-transact-sql"></a>sys.types (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -62,8 +63,8 @@ ms.lasthandoff: 11/21/2017
   
 ## <a name="see-also"></a>Vea también  
  [Vistas de catálogo &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/catalog-views-transact-sql.md)   
- [Tipos escalares, vistas de catálogo &#40; Transact-SQL &#41;](../../relational-databases/system-catalog-views/scalar-types-catalog-views-transact-sql.md)   
- [ALTER AUTHORIZATION &#40; Transact-SQL &#41;](../../t-sql/statements/alter-authorization-transact-sql.md)   
+ [Vistas de catálogo de tipos escalares &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/scalar-types-catalog-views-transact-sql.md)   
+ [ALTER AUTHORIZATION &#40;Transact-SQL&#41;](../../t-sql/statements/alter-authorization-transact-sql.md)   
  [OBJECTPROPERTY &#40;Transact-SQL&#41;](../../t-sql/functions/objectproperty-transact-sql.md)   
  [Preguntas frecuentes sobre consultas del catálogo de sistema de SQL Server](../../relational-databases/system-catalog-views/querying-the-sql-server-system-catalog-faq.md)  
   

@@ -1,15 +1,16 @@
 ---
-title: "Tamaño del conjunto de filas | Documentos de Microsoft"
-ms.custom: 
+title: Tamaño del conjunto de filas | Documentos de Microsoft
+ms.custom: ''
 ms.date: 01/19/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: drivers
-ms.service: 
+ms.service: ''
 ms.component: odbc
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: drivers
-ms.tgt_pltfrm: 
+ms.technology:
+- drivers
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - rowset size [ODBC]
@@ -18,16 +19,16 @@ helpviewer_keywords:
 - block cursors [ODBC]
 - result sets [ODBC], block cursors
 ms.assetid: 60366ae8-175c-456a-ae5e-bdd860786911
-caps.latest.revision: "5"
+caps.latest.revision: 5
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 0eb3e03c3fd2cad60b8f4a0e6c65aaaebbda03bb
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: 42870c60bfec0911b1a676b090a7d94bd5f42d1a
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="rowset-size"></a>Tamaño del conjunto de filas
 En función de qué tamaño de conjunto de filas que se usará en la aplicación. Normalmente, las aplicaciones basadas en pantalla siguen uno de dos estrategias. La primera consiste en establecer el tamaño del conjunto de filas en el número de filas que se muestran en la pantalla; Si el usuario cambia el tamaño de la pantalla, la aplicación también cambia el tamaño del conjunto de filas. La segunda es establecer el tamaño del conjunto de filas en un número mayor, como 100, lo que reduce el número de llamadas al origen de datos. La aplicación se desplaza localmente en el conjunto de filas siempre que sea posible y captura filas nuevas solo cuando desplaza fuera del conjunto de filas.  
@@ -38,6 +39,6 @@ En función de qué tamaño de conjunto de filas que se usará en la aplicación
   
 -   **SQLFetch** y **SQLFetchScroll** usar el tamaño del conjunto de filas en el momento de la llamada para determinar el número de filas para capturar. Sin embargo, **SQLFetchScroll** con un *FetchOrientation* de incrementos SQL_FETCH_NEXT el cursor basado en el conjunto de filas de la captura anterior y, a continuación, capturas un conjunto de filas en función del tamaño del conjunto de filas actual.  
   
--   **SQLSetPos** utiliza el tamaño de conjunto de filas que está en vigor a partir de la llamada anterior a **SQLFetch** o **SQLFetchScroll**, porque **SQLSetPos** funciona en un conjunto de filas que ya se ha establecido. **SQLSetPos** también recogerá el nuevo tamaño de conjunto de filas si **SQLBulkOperations** se ha llamado después de que se cambió el tamaño del conjunto de filas.  
+-   **SQLSetPos** utiliza el tamaño de conjunto de filas que está en vigor a partir de la llamada anterior a **SQLFetch** o **SQLFetchScroll**, porque **SQLSetPos** funciona en un conjunto de filas ya que se ha establecido. **SQLSetPos** también recogerá el nuevo tamaño de conjunto de filas si **SQLBulkOperations** se ha llamado después de que se cambió el tamaño del conjunto de filas.  
   
 -   **SQLBulkOperations** utiliza el tamaño de conjunto de filas en vigor en el momento de la llamada, ya que realiza operaciones en una tabla independiente de cualquier conjunto de filas capturada.

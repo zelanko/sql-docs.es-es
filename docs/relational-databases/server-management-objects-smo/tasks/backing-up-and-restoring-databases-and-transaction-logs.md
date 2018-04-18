@@ -1,15 +1,15 @@
 ---
 title: Copia de seguridad y restaurar bases de datos y registros de transacciones | Documentos de Microsoft
-ms.custom: 
+ms.custom: ''
 ms.date: 08/06/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine
-ms.service: 
+ms.service: ''
 ms.component: smo
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: 
-ms.tgt_pltfrm: 
+ms.technology: ''
+ms.tgt_pltfrm: ''
 ms.topic: reference
 helpviewer_keywords:
 - restoring databases [SMO]
@@ -21,16 +21,17 @@ helpviewer_keywords:
 - backing up databases [SMO]
 - database restores [SMO]
 ms.assetid: 1d7bd180-fd6c-4b38-a87b-351496040542
-caps.latest.revision: 
+caps.latest.revision: 49
 author: stevestein
 ms.author: sstein
 manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 12728d80dbae777438b4b9d63a2bc736d2f4ece5
-ms.sourcegitcommit: cb2f9d4db45bef37c04064a9493ac2c1d60f2c22
+monikerRange: = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions
+ms.openlocfilehash: c9f97eadc69df46e904c11c7c3d3df72949974ae
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/12/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="backing-up-and-restoring-databases-and-transaction-logs"></a>Realizar copias de seguridad y restaurar bases de datos y registros de transacciones
 [!INCLUDE[appliesto-ss-asdb-asdw-xxx-md](../../../includes/appliesto-ss-asdb-asdw-xxx-md.md)]
@@ -42,7 +43,7 @@ ms.lasthandoff: 01/12/2018
  Al igual que el <xref:Microsoft.SqlServer.Management.Smo.Backup> objeto, el <xref:Microsoft.SqlServer.Management.Smo.Restore> objeto no deben crearse mediante el uso de un **crear** método porque no representa ningún objeto en la instancia de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]. El objeto <xref:Microsoft.SqlServer.Management.Smo.Restore> es un conjunto de propiedades y métodos que se utilizan para restaurar una base de datos.  
   
 ## <a name="examples"></a>Ejemplos  
- Para utilizar cualquier ejemplo de código que se proporcione, deberá elegir el entorno de programación, la plantilla de programación y el lenguaje de programación en los que crear su aplicación. Para obtener más información, vea [crear a Visual C &#35; Proyecto SMO en Visual Studio .NET](../../../relational-databases/server-management-objects-smo/how-to-create-a-visual-csharp-smo-project-in-visual-studio-net.md).  
+ Para utilizar cualquier ejemplo de código que se proporcione, deberá elegir el entorno de programación, la plantilla de programación y el lenguaje de programación en los que crear su aplicación. Para obtener más información, consulte [crear a Visual C&#35; proyecto SMO en Visual Studio .NET](../../../relational-databases/server-management-objects-smo/how-to-create-a-visual-csharp-smo-project-in-visual-studio-net.md).  
   
 ## <a name="backing-up-databases-and-transaction-logs-in-visual-basic"></a>Realizar copias de seguridad de bases de datos y registros de transacciones en Visual Basic  
  En este ejemplo de código se muestra cómo realizar una copia de seguridad de una base de datos existente en un archivo y cómo restaurarla.  

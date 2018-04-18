@@ -1,16 +1,16 @@
 ---
 title: dbo.sysschedules (Transact-SQL) | Documentos de Microsoft
-ms.custom: 
+ms.custom: ''
 ms.date: 08/09/2016
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine
-ms.service: 
+ms.service: ''
 ms.component: system-tables
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - dbo.sysschedules_TSQL
@@ -22,16 +22,16 @@ dev_langs:
 helpviewer_keywords:
 - sysschedules system table
 ms.assetid: 4cac9237-7a69-4035-bb3e-928b76aad698
-caps.latest.revision: 
+caps.latest.revision: 17
 author: stevestein
 ms.author: sstein
 manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 9e402dfb4c7643c0f52965cfb69414810c0db21c
-ms.sourcegitcommit: c556eaf60a49af7025db35b7aa14beb76a8158c5
+ms.openlocfilehash: 15c683b263b8026503754e137d91d72e5ee7f0ce
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/03/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="dbosysschedules-transact-sql"></a>dbo.sysschedules (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -51,8 +51,8 @@ ms.lasthandoff: 02/03/2018
 |**freq_interval**|**int**|Días en que se ejecuta el trabajo. Depende del valor de **freq_type**. El valor predeterminado es **0**, lo que indica que **freq_interval** no se utiliza. Consulte la tabla siguiente para los valores posibles y sus efectos.|  
 |**freq_subday_type**|**int**|Unidades para el **freq_subday_interval**. Éstos son los valores posibles y sus descripciones.<br /><br /> <br /><br /> **1** : a la hora especificada<br /><br /> **2** : segundos<br /><br /> **4** : minutos<br /><br /> **8** : horas|  
 |**freq_subday_interval**|**int**|Número de **freq_subday_type** períodos que transcurren entre cada ejecución del trabajo.|  
-|**freq_relative_interval**|**int**|Cuando **freq_interval** se produce en cada mes, si **freq_interval** es **32** (relativo mensual). Puede ser uno de los siguientes valores:<br /><br /> **0** = **freq_relative_interval** no se utiliza<br /><br /> **1** = First<br /><br /> **2** = segundo<br /><br /> **4** = Third<br /><br /> **8** = cuarto<br /><br /> **16** = último|  
-|**freq_recurrence_**<br /><br /> **factor**|**int**|Número de semanas o meses entre las ejecuciones programadas de un trabajo. **freq_recurrence_factor** solo se utiliza si **freq_type** es **8**, **16**, o **32**. Si esta columna contiene **0**, **freq_recurrence_factor** no se utiliza.|  
+|**freq_relative_interval**|**int**|Cuando **freq_interval** se produce en cada mes, si **freq_interval** es **32** (relativo mensual). Puede ser uno de los siguientes valores:<br /><br /> **0** = **freq_relative_interval** no se utiliza<br /><br /> **1** = primero<br /><br /> **2** = segundo<br /><br /> **4** = tercero<br /><br /> **8** = cuarto<br /><br /> **16** = último|  
+|**freq_recurrence_**<br /><br /> **Factor de**|**int**|Número de semanas o meses entre las ejecuciones programadas de un trabajo. **freq_recurrence_factor** solo se utiliza si **freq_type** es **8**, **16**, o **32**. Si esta columna contiene **0**, **freq_recurrence_factor** no se utiliza.|  
 |**active_start_date**|**int**|Fecha en la que puede comenzar la ejecución de un trabajo. La fecha tiene el formato AAAAMMDD. NULL indica la fecha actual.|  
 |**active_end_date**|**int**|Fecha en la que puede detenerse la ejecución de un trabajo. La fecha tiene el formato AAAAMMDD.|  
 |**active_start_time**|**int**|Hora de un día entre **active_start_date** y **active_end_date** ese trabajo empieza a ejecutarse. La hora tiene el formato HHMMSS y se utiliza el reloj de 24 horas.|  
@@ -72,6 +72,6 @@ ms.lasthandoff: 02/03/2018
 |**128** (se ejecuta cuando el equipo está inactivo)|**freq_interval** no se utiliza (**0**)|  
   
 ## <a name="see-also"></a>Vea también  
- [dbo.sysjobschedules &#40; Transact-SQL &#41;](../../relational-databases/system-tables/dbo-sysjobschedules-transact-sql.md)  
+ [dbo.sysjobschedules & #40; Transact-SQL & #41;](../../relational-databases/system-tables/dbo-sysjobschedules-transact-sql.md)  
   
   

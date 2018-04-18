@@ -1,16 +1,16 @@
 ---
-title: sys.fn_get_sql (Transact-SQL) | Microsoft Docs
-ms.custom: 
+title: Sys.fn_get_sql (Transact-SQL) | Documentos de Microsoft
+ms.custom: ''
 ms.date: 06/10/2016
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine
-ms.service: 
+ms.service: ''
 ms.component: system-functions
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - fn_get_sql
@@ -26,16 +26,16 @@ helpviewer_keywords:
 - valid SQL handles [SQL Server]
 - SQL handles
 ms.assetid: d5fe49b5-0813-48f2-9efb-9187716b2fd4
-caps.latest.revision: 
+caps.latest.revision: 39
 author: rothja
 ms.author: jroth
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 941417a97ce739173e2aba195d51ec845848186f
-ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
+ms.openlocfilehash: d2f4572bfe948456f98e446d05e8c5601490431c
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/09/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="sysfngetsql-transact-sql"></a>sys.fn_get_sql (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -43,7 +43,7 @@ ms.lasthandoff: 02/09/2018
   Devuelve el texto de la instrucción SQL para el identificador SQL especificado.  
   
 > [!IMPORTANT]  
->  Esta característica se quitará en una versión futura de Microsoft SQL Server. Evite utilizar esta característica en nuevos trabajos de desarrollo y tenga previsto modificar las aplicaciones que actualmente la utilizan. Use sys.dm_exec_sql_text en su lugar. Para obtener más información, vea [sys.dm_exec_sql_text &#40; Transact-SQL &#41; ](../../relational-databases/system-dynamic-management-views/sys-dm-exec-sql-text-transact-sql.md).  
+>  Esta característica se quitará en una versión futura de Microsoft SQL Server. Evite utilizar esta característica en nuevos trabajos de desarrollo y tenga previsto modificar las aplicaciones que actualmente la utilizan. Use sys.dm_exec_sql_text en su lugar. Para obtener más información, consulte [sys.dm_exec_sql_text &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-exec-sql-text-transact-sql.md).  
   
  
   
@@ -71,7 +71,7 @@ sys.fn_get_sql ( SqlHandle )
 |texto|**texto**|Texto de la instrucción SQL. Este valor es NULL para objetos cifrados.|  
   
 ## <a name="remarks"></a>Comentarios  
- Puede obtener un identificador SQL válido de la columna sql_handle de la [sys.dm_exec_requests &#40; Transact-SQL &#41; ](../../relational-databases/system-dynamic-management-views/sys-dm-exec-requests-transact-sql.md) vista de administración dinámica.  
+ Puede obtener un identificador SQL válido de la columna sql_handle de la [sys.dm_exec_requests &#40;Transact-SQL&#41; ](../../relational-databases/system-dynamic-management-views/sys-dm-exec-requests-transact-sql.md) vista de administración dinámica.  
   
  Si se pasa un identificador que ya no existe en la memoria caché, fn_get_sq**l** devuelve un conjunto de resultados vacío. Si pasa un identificador no válido, el archivo por lotes se detiene y aparece un mensaje de error.  
   
@@ -102,7 +102,7 @@ GO
   
 ## <a name="see-also"></a>Vea también  
  [DBCC INPUTBUFFER &#40;Transact-SQL&#41;](../../t-sql/database-console-commands/dbcc-inputbuffer-transact-sql.md)   
- [sys.sysprocesses &#40;Transact-SQL&#41;](../../relational-databases/system-compatibility-views/sys-sysprocesses-transact-sql.md)   
+ [Sys.sysprocesses &#40;Transact-SQL&#41;](../../relational-databases/system-compatibility-views/sys-sysprocesses-transact-sql.md)   
  [sys.dm_exec_requests &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-exec-requests-transact-sql.md)  
   
   

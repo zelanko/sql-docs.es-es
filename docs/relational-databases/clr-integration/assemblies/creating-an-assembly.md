@@ -1,15 +1,15 @@
 ---
-title: "Creación de un ensamblado | Documentos de Microsoft"
-ms.custom: 
+title: Creación de un ensamblado | Documentos de Microsoft
+ms.custom: ''
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine
-ms.service: 
+ms.service: ''
 ms.component: clr
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: 
-ms.tgt_pltfrm: 
+ms.technology: ''
+ms.tgt_pltfrm: ''
 ms.topic: reference
 helpviewer_keywords:
 - creating assemblies
@@ -19,20 +19,20 @@ helpviewer_keywords:
 - EXTERNAL_ACCESS assemblies
 - assemblies [CLR integration], creating
 ms.assetid: a2bc503d-b6b2-4963-8beb-c11c323f18e0
-caps.latest.revision: 
+caps.latest.revision: 27
 author: rothja
 ms.author: jroth
 manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 01e863a5e39ebc32baba97b49e3421e5c8c202bc
-ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
+ms.openlocfilehash: 38cf3263e8fba94d20b9711321ed9260ed9a8a05
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/09/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="creating-an-assembly"></a>Crear un ensamblado
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
-Los objetos de base de datos administrados, como procedimientos almacenados o desencadenadores, se compilan y, a continuación, se implementan en unidades denominadas ensamblados. Los ensamblados de archivos DLL administrados deben registrarse en [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] para poder usar la funcionalidad que proporciona el ensamblado. Para registrar un ensamblado en una base de datos de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] , use la instrucción CREATE ASSEMBLY. En este tema se explica cómo registrar un ensamblado en una base de datos mediante la instrucción CREATE ASSEMBLY y cómo especificar la configuración de seguridad del ensamblado.  
+  Los objetos de base de datos administrados, como procedimientos almacenados o desencadenadores, se compilan y, a continuación, se implementan en unidades denominadas ensamblados. Los ensamblados de archivos DLL administrados deben registrarse en [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] para poder usar la funcionalidad que proporciona el ensamblado. Para registrar un ensamblado en una base de datos de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] , use la instrucción CREATE ASSEMBLY. En este tema se explica cómo registrar un ensamblado en una base de datos mediante la instrucción CREATE ASSEMBLY y cómo especificar la configuración de seguridad del ensamblado.  
   
 ## <a name="the-create-assembly-statement"></a>La instrucción CREATE ASSEMBLY  
  La instrucción CREATE ASSEMBLY se usa para crear un ensamblado en una base de datos. A continuación se muestra un ejemplo:  

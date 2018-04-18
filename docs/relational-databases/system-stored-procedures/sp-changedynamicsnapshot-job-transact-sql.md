@@ -1,16 +1,16 @@
 ---
 title: sp_changedynamicsnapshot_job (Transact-SQL) | Documentos de Microsoft
-ms.custom: 
+ms.custom: ''
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine
-ms.service: 
+ms.service: ''
 ms.component: system-stored-procedures
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - replication
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 applies_to:
 - SQL Server
@@ -20,16 +20,16 @@ f1_keywords:
 helpviewer_keywords:
 - sp_changedynamicsnapshot_job
 ms.assetid: ea0dacd2-a5fd-42f4-88dd-7d289b0ae017
-caps.latest.revision: 
+caps.latest.revision: 28
 author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 3c7c2aaa546d1951117c39835ae2a285d3533a78
-ms.sourcegitcommit: 45e4efb7aa828578fe9eb7743a1a3526da719555
+ms.openlocfilehash: 160831b54f96bb06652287934da87142c855a348
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="spchangedynamicsnapshotjob-transact-sql"></a>sp_changedynamicsnapshot_job (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -63,16 +63,16 @@ sp_changedynamicsnapshot_job [ @publication = ] 'publication'
  [  **@publication =** ] **'***publicación***'**  
  Es el nombre de la publicación. *publicación* es **sysname**, no tiene ningún valor predeterminado.  
   
- [  **@dynamic_snapshot_jobname =** ] **'***dynamic_snapshot_jobname***'**  
+ [ **@dynamic_snapshot_jobname =** ] **'***dynamic_snapshot_jobname***'**  
  Es el nombre del trabajo de instantánea que se cambia. *dynamic_snapshot_jobname*es **sysname**, con el valor predeterminado de N '%'. Si *dynamic_snapshot_jobid* se especifica, debe usar el valor predeterminado de *dynamic_snapshot_jobname*.  
   
- [  **@dynamic_snapshot_jobid =** ] **'***dynamic_snapshot_jobid***'**  
+ [ **@dynamic_snapshot_jobid =** ] **'***dynamic_snapshot_jobid***'**  
  Es el identificador del trabajo de instantánea que se cambia. *dynamic_snapshot_jobid* es **uniqueidentifier**, su valor predeterminado es NULL. Si *dynamic_snapshot_jobname*se especifica, debe usar el valor predeterminado de *dynamic_snapshot_jobid*.  
   
  [  **@frequency_type =** ] *frequency_type*  
  Es la frecuencia con que se programa el agente. *frequency_type* es **int**, y puede tener uno de los siguientes valores.  
   
-|Valor|Descripción|  
+|Value|Descripción|  
 |-----------|-----------------|  
 |**1**|Una vez|  
 |**2**|A petición|  
@@ -87,7 +87,7 @@ sp_changedynamicsnapshot_job [ @publication = ] 'publication'
  [  **@frequency_interval =** ] *frequency_interval*  
  Los días en que se ejecuta el agente. *frequency_interval* es **int**, y puede tener uno de los siguientes valores.  
   
-|Valor|Descripción|  
+|Value|Descripción|  
 |-----------|-----------------|  
 |**1**|Domingo|  
 |**2**|Lunes|  
@@ -104,7 +104,7 @@ sp_changedynamicsnapshot_job [ @publication = ] 'publication'
  [  **@frequency_subday =** ] *frequency_subday*  
  Es la frecuencia de repetición de la programación durante el periodo definido. *frequency_subday* es **int**, y puede tener uno de los siguientes valores.  
   
-|Valor|Descripción|  
+|Value|Descripción|  
 |-----------|-----------------|  
 |**1**|Una vez|  
 |**2**|Second|  
@@ -118,7 +118,7 @@ sp_changedynamicsnapshot_job [ @publication = ] 'publication'
  [  **@frequency_relative_interval =** ] *frequency_relative_interval*  
  Es la fecha de ejecución del Agente de mezcla. Este parámetro se utiliza cuando *frequency_type* está establecido en **32** (relativo mensual). *frequency_relative_interval* es **int**, y puede tener uno de los siguientes valores.  
   
-|Valor|Descripción|  
+|Value|Descripción|  
 |-----------|-----------------|  
 |**1**|Primero|  
 |**2**|Second|  
@@ -130,10 +130,10 @@ sp_changedynamicsnapshot_job [ @publication = ] 'publication'
  [  **@frequency_recurrence_factor =** ] *frequency_recurrence_factor*  
  Es el factor de periodicidad utilizado por *frequency_type*. *frequency_recurrence_factor* es **int**, su valor predeterminado es null.  
   
- [  **@active_start_date =** ] *active_start_date*  
+ [ **@active_start_date =** ] *active_start_date*  
  Es la fecha en que el agente de mezcla se programa por primera vez, con el formato AAAAMMDD. *active_start_date* es **int**, su valor predeterminado es null.  
   
- [  **@active_end_date =** ] *active_end_date*  
+ [ **@active_end_date =** ] *active_end_date*  
  Es la fecha en la que el agente de mezcla deja de estar programado, con el formato AAAAMMDD. *active_end_date* es **int**, su valor predeterminado es null.  
   
  [  **@active_start_time_of_day =** ] *active_start_time_of_day*  
@@ -163,7 +163,7 @@ sp_changedynamicsnapshot_job [ @publication = ] 'publication'
  Solo los miembros de la **sysadmin** rol fijo de servidor o **db_owner** rol fijo de base de datos puede ejecutar **sp_changedynamicsnapshot_job**.  
   
 ## <a name="see-also"></a>Vea también  
- [Ver y modificar la configuración de seguridad de la replicación](../../relational-databases/replication/security/view-and-modify-replication-security-settings.md)   
- [Instantáneas para publicaciones de combinación con filtros con parámetros](../../relational-databases/replication/snapshots-for-merge-publications-with-parameterized-filters.md)  
+ [View and Modify Replication Security Settings](../../relational-databases/replication/security/view-and-modify-replication-security-settings.md)  (Ver y modificar la configuración de seguridad de la replicación)  
+ [Snapshots for Merge Publications with Parameterized Filters](../../relational-databases/replication/snapshots-for-merge-publications-with-parameterized-filters.md)  
   
   

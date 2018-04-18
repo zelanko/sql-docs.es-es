@@ -1,16 +1,16 @@
 ---
 title: sp_check_subset_filter (Transact-SQL) | Documentos de Microsoft
-ms.custom: 
+ms.custom: ''
 ms.date: 03/06/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine
-ms.service: 
+ms.service: ''
 ms.component: system-stored-procedures
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - replication
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 applies_to:
 - SQL Server
@@ -25,16 +25,16 @@ f1_keywords:
 helpviewer_keywords:
 - sp_check_subset_filter
 ms.assetid: 525cfcfc-f317-478d-ba84-72e62285f160
-caps.latest.revision: 
+caps.latest.revision: 28
 author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 3341c4f5fc6c637f74dabf913730e6c6e30dfcea
-ms.sourcegitcommit: 45e4efb7aa828578fe9eb7743a1a3526da719555
+ms.openlocfilehash: 77b05fd5b606a7a25f4c6d229aa061643c7fd2b9
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="spchecksubsetfilter-transact-sql"></a>sp_check_subset_filter (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -53,13 +53,13 @@ sp_check_subset_filter [ @filtered_table = ] 'filtered_table'
 ```  
   
 ## <a name="arguments"></a>Argumentos  
- [  **@filtered_table** =] **'***filtered_table***'**  
+ [ **@filtered_table**=] **'***filtered_table***'**  
  Es el nombre de una tabla filtrada. *filtered_table* es **nvarchar (400)**, no tiene ningún valor predeterminado.  
   
- [  **@subset_filterclause**  =] **'***subset_filterclause***'**  
+ [ **@subset_filterclause** =] **'***subset_filterclause***'**  
  Es la cláusula de filtro que se comprueba. *subset_filterclause* es **nvarchar (1000)**, no tiene ningún valor predeterminado.  
   
- [  **@has_dynamic_filters** =] *has_dynamic_filters*  
+ [ **@has_dynamic_filters**=] *has_dynamic_filters*  
  Especifica si la cláusula de filtro es un filtro de fila con parámetros. *has_dynamic_filters* es **bits**, su valor predeterminado es null y es un parámetro de salida. Devuelve un valor de **1** cuando la cláusula de filtro es un filtro de fila con parámetros.  
   
 ## <a name="result-sets"></a>Conjuntos de resultados  
@@ -68,7 +68,7 @@ sp_check_subset_filter [ @filtered_table = ] 'filtered_table'
 |-----------------|---------------|-----------------|  
 |**can_use_partition_groups**|**bit**|Es si la publicación es apta para usar particiones precalculadas; donde **1** significa que las particiones precalculadas pueden estar usando, y **0** significa que no se puede usar.|  
 |**has_dynamic_filters**|**bit**|Especifica si la cláusula de filtro suministrada incluye al menos un filtro de fila con parámetros; donde **1** significa que se utiliza un filtro de fila con parámetros, y **0** significa que esa función no se utiliza.|  
-|**dynamic_filters_function_list**|**nvarchar (500)**|Lista de las funciones de la cláusula de filtro que filtran un artículo dinámicamente; las funciones están separadas por puntos y comas.|  
+|**dynamic_filters_function_list**|**nvarchar(500)**|Lista de las funciones de la cláusula de filtro que filtran un artículo dinámicamente; las funciones están separadas por puntos y comas.|  
 |**uses_host_name**|**bit**|Si el [HOST_NAME ()](../../t-sql/functions/host-name-transact-sql.md) función se utiliza en la cláusula de filtro, donde **1** significa que esta función está presente.|  
 |**uses_suser_sname**|**bit**|Si el [SUSER_SNAME ()](../../t-sql/functions/suser-sname-transact-sql.md) función se utiliza en la cláusula de filtro, donde **1** significa que esta función está presente.|  
   

@@ -1,29 +1,30 @@
 ---
-title: "Crear, modificar y quitar índices | Documentos de Microsoft"
-ms.custom: 
+title: Crear, modificar y quitar índices | Documentos de Microsoft
+ms.custom: ''
 ms.date: 08/06/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine
-ms.service: 
+ms.service: ''
 ms.component: smo
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: 
-ms.tgt_pltfrm: 
+ms.technology: ''
+ms.tgt_pltfrm: ''
 ms.topic: reference
 helpviewer_keywords:
 - indexes [SMO]
 ms.assetid: ad1befa5-46e0-4895-b9d3-42852e07607b
-caps.latest.revision: 
+caps.latest.revision: 50
 author: stevestein
 ms.author: sstein
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: d20eca4b6c27aee5f19b2b15cf51c374874d4415
-ms.sourcegitcommit: cb2f9d4db45bef37c04064a9493ac2c1d60f2c22
+monikerRange: = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions
+ms.openlocfilehash: d25f05da3840f8f3c94bd40094c123091fa3a019
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/12/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="creating-altering-and-removing-indexes"></a>Crear, modificar y eliminar índices
 [!INCLUDE[appliesto-ss-asdb-asdw-xxx-md](../../../includes/appliesto-ss-asdb-asdw-xxx-md.md)]
@@ -33,7 +34,7 @@ ms.lasthandoff: 01/12/2018
  Puede crear un índice en una columna XML especificando la propiedad <xref:Microsoft.SqlServer.Management.Smo.Index.IsXmlIndex%2A> del objeto <xref:Microsoft.SqlServer.Management.Smo.Index>.  
   
 ## <a name="examples"></a>Ejemplos  
- Para utilizar cualquier ejemplo de código que se proporcione, deberá elegir el entorno de programación, la plantilla de programación y el lenguaje de programación en los que crear su aplicación. Para obtener más información, vea [crear a Visual C &#35; Proyecto SMO en Visual Studio .NET](../../../relational-databases/server-management-objects-smo/how-to-create-a-visual-csharp-smo-project-in-visual-studio-net.md).  
+ Para utilizar cualquier ejemplo de código que se proporcione, deberá elegir el entorno de programación, la plantilla de programación y el lenguaje de programación en los que crear su aplicación. Para obtener más información, consulte [crear a Visual C&#35; proyecto SMO en Visual Studio .NET](../../../relational-databases/server-management-objects-smo/how-to-create-a-visual-csharp-smo-project-in-visual-studio-net.md).  
   
 ## <a name="creating-a-non-clustered-composite-index-in-visual-basic"></a>Crear un índice compuesto no clúster en Visual Basic  
  En este ejemplo de código se muestra cómo crear un índice compuesto no clúster. Para un índice compuesto, agregue más de una columna al índice. Establecer el <xref:Microsoft.SqlServer.Management.Smo.Index.IsClustered%2A> propiedad **False** para un índice no agrupado.  

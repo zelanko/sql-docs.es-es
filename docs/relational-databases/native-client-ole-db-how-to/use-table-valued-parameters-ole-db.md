@@ -1,27 +1,28 @@
 ---
-title: "Usar parámetros con valores de tabla (OLE DB) | Documentos de Microsoft"
-ms.custom: 
+title: Usar parámetros con valores de tabla (OLE DB) | Documentos de Microsoft
+ms.custom: ''
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
-ms.service: 
+ms.service: ''
 ms.component: native-client-ole-db-how-to
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: 
-ms.tgt_pltfrm: 
+ms.technology: ''
+ms.tgt_pltfrm: ''
 ms.topic: reference
 ms.assetid: 18cb684f-c307-4fda-a2ab-8b638416c3f0
-caps.latest.revision: 
+caps.latest.revision: 8
 author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 13268f402765d75c939f11a39ea196ac6d1d1e23
-ms.sourcegitcommit: a0aa5e611a0e6ebb74ac1e2f613e8916dc7a7617
+monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
+ms.openlocfilehash: e738a1d9a88661e750d5584350bc66a721fc2c8a
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/24/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="use-table-valued-parameters-ole-db"></a>Usar parámetros con valores de tabla (OLE DB)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -39,7 +40,7 @@ ms.lasthandoff: 01/24/2018
   
 -   Se muestra el control de errores para los errores SQLNCLI11.  
   
- Para obtener más información acerca de los parámetros con valores de tabla, vea [parámetros con valores de tabla &#40; Cliente nativo de SQL Server &#41; ](../../relational-databases/native-client/features/table-valued-parameters-sql-server-native-client.md).  
+ Para obtener más información acerca de los parámetros con valores de tabla, vea [parámetros con valores de tabla & #40; Cliente nativo de SQL Server & #41; ](../../relational-databases/native-client/features/table-valued-parameters-sql-server-native-client.md).  
   
 ## <a name="example"></a>Ejemplo  
  La primera lista de código ([!INCLUDE[tsql](../../includes/tsql-md.md)]) crea la base de datos utilizada por el ejemplo.  

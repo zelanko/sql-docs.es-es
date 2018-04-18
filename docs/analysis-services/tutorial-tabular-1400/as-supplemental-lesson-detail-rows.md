@@ -1,15 +1,15 @@
 ---
-title: "Lección complementaria de Analysis Services tutorial: filas de detalles | Documentos de Microsoft"
-description: "Describe cómo crear una expresión de filas de detalle en el tutorial de Analysis Services."
+title: 'Lección complementaria de Analysis Services tutorial: filas de detalles | Documentos de Microsoft'
+description: Describe cómo crear una expresión de filas de detalle en el tutorial de Analysis Services.
 ms.prod_service: analysis-services, azure-analysis-services
 services: analysis-services
 ms.suite: pro-bi
-documentationcenter: 
+documentationcenter: ''
 author: Minewiskan
 manager: kfile
-editor: 
-tags: 
-ms.assetid: 
+editor: ''
+tags: ''
+ms.assetid: ''
 ms.service: analysis-services
 ms.devlang: NA
 ms.topic: get-started-article
@@ -17,11 +17,12 @@ ms.tgt_pltfrm: NA
 ms.workload: na
 ms.date: 02/20/2018
 ms.author: owend
-ms.openlocfilehash: 7efcdc724792656a917b95892ed699bc57590ce7
-ms.sourcegitcommit: 7ed8c61fb54e3963e451bfb7f80c6a3899d93322
+monikerRange: '>= sql-analysis-services-2017 || = sqlallproducts-allversions'
+ms.openlocfilehash: bd138f17df94b94cbe51869b9e364bbd544509f2
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/20/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="supplemental-lesson---detail-rows"></a>Lección complementaria - filas de detalles
 
@@ -43,11 +44,11 @@ Echemos un vistazo a los detalles de la medida InternetTotalSales, antes de agre
   
 2.  En **PivotTable Fields**, agregue el **InternetTotalSales** medida de la tabla FactInternetSales y **valores**, **CalendarYear** de la tabla DimDate para **columnas**, y **Spanishcountryregionname** a **filas**. La tabla dinámica le proporciona los resultados de un agregado de la medida InternetTotalSales por regiones y año. 
 
-    ![as-lesson-detail-rows-pivottable](../tutorial-tabular-1400/media/as-lesson-detail-rows-pivottable.png)
+    ![como-lección-detalle-filas de tabla dinámica](../tutorial-tabular-1400/media/as-lesson-detail-rows-pivottable.png)
 
 3. En la tabla dinámica, haga doble clic en un valor agregado para un año y un nombre de región. A continuación se hace doble clic en el valor para el año 2014 y Australia. Una nueva hoja abre que contiene datos, pero los datos no resultan de utilidad.
 
-    ![as-lesson-detail-rows-pivottable](../tutorial-tabular-1400/media/as-lesson-detail-rows-sheet.png)
+    ![como-lección-detalle-filas de tabla dinámica](../tutorial-tabular-1400/media/as-lesson-detail-rows-sheet.png)
   
 Lo que queremos ver aquí es una tabla que contiene columnas y filas de datos que contribuyen al resultado de la medida InternetTotalSales agregado. Para ello, podemos agregar una expresión de filas de detalles como una propiedad de la medida.
 
@@ -59,7 +60,7 @@ Lo que queremos ver aquí es una tabla que contiene columnas y filas de datos qu
 
 2. En **propiedades** > **expresión de filas de detalle**, haga clic en el botón de editor para abrir el Editor de DAX.
 
-    ![as-lesson-detail-rows-ellipse](../tutorial-tabular-1400/media/as-lesson-detail-rows-ellipse.png)
+    ![como-lección-detalle-filas-elipse](../tutorial-tabular-1400/media/as-lesson-detail-rows-ellipse.png)
 
 3. En el Editor de DAX, escriba la siguiente expresión:
 
@@ -80,7 +81,7 @@ Lo que queremos ver aquí es una tabla que contiene columnas y filas de datos qu
 
 4. En Excel, elimine la hoja que creó en el paso 3, a continuación, haga doble clic en un valor agregado. Esta vez, con una propiedad de expresión de filas de detalle definida para la medida, una nueva hoja abre que contienen datos mucho más útiles.
 
-    ![as-lesson-detail-rows-detailsheet](../tutorial-tabular-1400/media/as-lesson-detail-rows-detailsheet.png)
+    ![como-lección-detalle-filas-detailsheet](../tutorial-tabular-1400/media/as-lesson-detail-rows-detailsheet.png)
 
 5. Volver a implementar el modelo.
 

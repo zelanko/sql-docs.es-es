@@ -1,30 +1,31 @@
 ---
 title: Restricciones del calendario gregoriano | Documentos de Microsoft
-ms.custom: 
+ms.custom: ''
 ms.date: 01/19/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: drivers
-ms.service: 
+ms.service: ''
 ms.component: odbc
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: drivers
-ms.tgt_pltfrm: 
+ms.technology:
+- drivers
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - data types [ODBC], Gregorian calendar
 - Gregorian calendar [ODBC]
 ms.assetid: 70667410-c582-4369-8e06-9d98e21cd2bf
-caps.latest.revision: "5"
+caps.latest.revision: 5
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 7ac773945c5c138ab6834aa7914d4028d1d5e156
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: 36cbe4802912e2497408498b32e48f8f201479f1
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="constraints-of-the-gregorian-calendar"></a>Restricciones del calendario gregoriano
 Tipos de datos de fecha y la fecha y hora y los campos al final de los tipos de datos interval, deben ajustarse a las restricciones del calendario gregoriano. Estas restricciones son los siguientes:  
@@ -37,6 +38,6 @@ Tipos de datos de fecha y la fecha y hora y los campos al final de los tipos de 
   
 -   El valor del campo minuto debe ser entre 0 y 59, ambos inclusive.  
   
--   En el campo de segundos al final de los tipos de datos interval, el valor del campo de segundos debe estar entre 0 y 59.9 (*n*), ambos inclusive, donde  *n*  es el número de dígitos en el precisión de fracciones de segundo.  
+-   En el campo de segundos al final de los tipos de datos interval, el valor del campo de segundos debe estar entre 0 y 59.9 (*n*), ambos inclusive, donde *n* es el número de dígitos en la precisión de fracciones de segundo.  
   
--   En el campo de segundos al final de los tipos de datos de fecha y hora, el valor del campo de segundos debe estar entre 0 y 61,9 (*n*), ambos inclusive, donde  *n*  especifica el número de "9" dígitos y el valor de  *n*  es la precisión de fracciones de segundo. (El intervalo de segundos permite como máximo dos segundos intercalares para mantener la sincronización de tiempo de sidereal).
+-   En el campo de segundos al final de los tipos de datos de fecha y hora, el valor del campo de segundos debe estar entre 0 y 61,9 (*n*), ambos inclusive, donde *n* especifica el número de dígitos "9" y el valor de *n*  es la precisión de fracciones de segundo. (El intervalo de segundos permite como máximo dos segundos intercalares para mantener la sincronización de tiempo de sidereal).

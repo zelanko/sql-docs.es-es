@@ -1,8 +1,8 @@
 ---
-title: sys.dm_fts_index_population (Transact-SQL) | Microsoft Docs
+title: Sys.dm_fts_index_population (Transact-SQL) | Documentos de Microsoft
 ms.custom: ''
 ms.date: 03/29/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine, sql-database
 ms.service: ''
 ms.component: dmv's
@@ -27,11 +27,12 @@ author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 0cfb07b67f17deeba2c0995ceace90335082cccb
-ms.sourcegitcommit: 8b332c12850c283ae413e0b04b2b290ac2edb672
+monikerRange: = azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions
+ms.openlocfilehash: 7fb871ad7a5a2e8a74615ef24cdc31ea3a68774a
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/05/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="sysdmftsindexpopulation-transact-sql"></a>sys.dm_fts_index_population (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -43,7 +44,7 @@ ms.lasthandoff: 04/05/2018
 |**database_id**|**int**|Identificador de la base de datos que contiene el índice de texto completo que se está rellenando.|  
 |**catalog_id**|**int**|Id. del catálogo de texto completo que contiene este índice de texto completo.|  
 |**table_id**|**int**|Id. de la tabla para la que se está llenando el índice de texto completo.|  
-|**memory_address**|**varbinary(8)**|Dirección de memoria de la estructura de datos interna utilizada para representar un rellenado activo.|  
+|**memory_address**|**varbinary (8)**|Dirección de memoria de la estructura de datos interna utilizada para representar un rellenado activo.|  
 |**population_type**|**int**|Tipo de llenado. Uno de los siguientes:<br /><br /> 1 = Llenado completo<br /><br /> 2 = Llenado basado en la marca de tiempo incremental<br /><br /> 3 = Actualización manual de los cambios de los que se ha realizado seguimiento<br /><br /> 4 = Actualización de fondo de los cambios de los que se ha realizado seguimiento.|  
 |**population_type_description**|**nvarchar(120)**|Descripción del tipo de llenado.|  
 |**is_clustered_index_scan**|**bit**|Indica si el llenado implica un recorrido en el índice clúster.|  

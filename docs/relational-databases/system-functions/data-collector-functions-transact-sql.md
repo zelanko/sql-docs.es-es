@@ -1,32 +1,32 @@
 ---
 title: Funciones de recopilador de datos (Transact-SQL) | Documentos de Microsoft
-ms.custom: 
+ms.custom: ''
 ms.date: 03/03/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine
-ms.service: 
+ms.service: ''
 ms.component: system-functions
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 dev_langs:
 - TSQL
 helpviewer_keywords:
 - data collector [SQL Server], functions
 ms.assetid: 8efe8bb4-face-4608-83f4-cc7c6e9faf31
-caps.latest.revision: 
+caps.latest.revision: 11
 author: rothja
 ms.author: jroth
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: d0fa6679ddfeadc73092aed55e14f5c5e04339ea
-ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
+ms.openlocfilehash: 546cd37affdf630afd96be699da588640034c9f0
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/09/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="data-collector-functions--transact-sql"></a>Funciones de recopilador de datos (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -44,6 +44,6 @@ ms.lasthandoff: 02/09/2018
  [Recopilación de datos](../../relational-databases/data-collection/data-collection.md)   
  [Procedimientos almacenados del recopilador de datos &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/data-collector-stored-procedures-transact-sql.md)   
  [Vistas del recopilador de datos &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/data-collector-views-transact-sql.md)   
- [Almacenamiento de datos de administración almacena procedimientos &#40; Transact-SQL &#41;](../../relational-databases/system-stored-procedures/management-data-warehouse-stored-procedures-transact-sql.md)  
+ [Procedimientos almacenados de almacén de datos de administración &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/management-data-warehouse-stored-procedures-transact-sql.md)  
   
   

@@ -1,16 +1,16 @@
 ---
-title: sp_trace_setfilter (Transact-SQL) | Microsoft Docs
-ms.custom: 
+title: sp_trace_setfilter (Transact-SQL) | Documentos de Microsoft
+ms.custom: ''
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine
-ms.service: 
+ms.service: ''
 ms.component: system-stored-procedures
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - sp_trace_setfilter
@@ -20,21 +20,21 @@ dev_langs:
 helpviewer_keywords:
 - sp_trace_setfilter
 ms.assetid: 11e7c7ac-a581-4a64-bb15-9272d5c1f7ac
-caps.latest.revision: 
+caps.latest.revision: 35
 author: stevestein
 ms.author: sstein
 manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 82c7d580f8ff94e0d7fb4452d1608f93b776fe3b
-ms.sourcegitcommit: c556eaf60a49af7025db35b7aa14beb76a8158c5
+ms.openlocfilehash: 64b40b4b7970db0252a873f6b3611d57672e3da0
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/03/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="sptracesetfilter-transact-sql"></a>sp_trace_setfilter (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
-  Aplica un filtro a un seguimiento. **sp_trace_setfilter** se puede ejecutar solo en seguimientos existentes que estén detenidos (*estado* es **0**). [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]Devuelve un error si este procedimiento almacenado se ejecuta en un seguimiento que no existe o cuyo *estado* no **0**.  
+  Aplica un filtro a un seguimiento. **sp_trace_setfilter** se puede ejecutar solo en seguimientos existentes que estén detenidos (*estado* es **0**). [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Devuelve un error si este procedimiento almacenado se ejecuta en un seguimiento que no existe o cuyo *estado* no **0**.  
   
 > [!IMPORTANT]  
 >  [!INCLUDE[ssNoteDepFutureAvoid](../../includes/ssnotedepfutureavoid-md.md)] Use eventos extendidos en su lugar.  
@@ -56,13 +56,13 @@ sp_trace_setfilter [ @traceid = ] trace_id
  [  **@traceid=** ] *trace_id*  
  Es el id. del seguimiento en el que se establece el filtro. *trace_id* es **int**, no tiene ningún valor predeterminado. El usuario utiliza este *trace_id* valor para identificar, modificar y controlar el seguimiento.  
   
- [ **@columnid=** ] *column_id*  
+ [  **@columnid=** ] *column_id*  
  Es el id. de la columna en la que se aplica el filtro. *column_id* es **int**, no tiene ningún valor predeterminado. Si *column_id* es NULL, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] borra todos los filtros para el seguimiento especificado.  
   
- [ **@logical_operator** = ] *logical_operator*  
+ [ **@logical_operator** =] *logical_operator*  
  Especifica si la operación AND (**0**) o OR (**1**) se aplica el operador. *logical_operator* es **int**, no tiene ningún valor predeterminado.  
   
- [ **@comparison_operator=** ] *comparison_operator*  
+ [  **@comparison_operator=** ] *comparison_operator*  
  Especifica el tipo de comparación que va a realizarse. *comparison_operator* es **int**, no tiene ningún valor predeterminado. Esta tabla contiene los operadores de comparación y sus valores representativos.  
   
 |Value|Operador de comparación|  
@@ -76,7 +76,7 @@ sp_trace_setfilter [ @traceid = ] trace_id
 |**6**|LIKE|  
 |**7**|No es como|  
   
- [ **@value=** ] *value*  
+ [  **@value=** ] *valor*  
  Especifica el valor en el que se va a filtrar. Tipo de datos de *valor* debe coincidir con el tipo de datos de la columna que desea filtrar. Por ejemplo, si el filtro está establecido en una columna de Id. de objeto que sea un **int** tipo de datos, *valor* debe ser **int**. Si *valor* es **nvarchar** o **varbinary**, puede tener una longitud máxima de 8000.  
   
  Cuando el operador de comparación es LIKE o NOT LIKE, el operador lógico puede incluir "%" u otro filtro adecuado para la operación LIKE.  

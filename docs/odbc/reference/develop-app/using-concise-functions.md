@@ -1,31 +1,32 @@
 ---
 title: Uso de funciones concisas | Documentos de Microsoft
-ms.custom: 
+ms.custom: ''
 ms.date: 01/19/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: drivers
-ms.service: 
+ms.service: ''
 ms.component: odbc
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: drivers
-ms.tgt_pltfrm: 
+ms.technology:
+- drivers
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - concise functions [ODBC]
 - functions [ODBC], concise functions
 - descriptors [ODBC], concise functions
 ms.assetid: 31ac070f-8c59-4fd5-bd5a-466bb27dbca0
-caps.latest.revision: "5"
+caps.latest.revision: 5
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: fecf227f991a3c9c6edfb1ce29f5b3b781898e45
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: 84e1a884406e4060b957279078b8bfb106b92661
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="using-concise-functions"></a>Uso de funciones concisas
 Algunas funciones ODBC obtienen acceso implícito a descriptores. Escritores de aplicaciones pueden resultar más conveniente que llamar a **SQLSetDescField** o **SQLGetDescField**. Estas funciones se denominan *concisa* funciones ya que realizan una serie de funciones, incluidas establecer u obtener los campos de descriptor. Algunas funciones concisas permiten a una aplicación establecer o recuperar varios campos de descriptor relacionados en una única llamada de función.  

@@ -1,16 +1,16 @@
 ---
-title: sys.dm_io_cluster_shared_drives (Transact-SQL) | Microsoft Docs
-ms.custom: 
+title: Sys.dm_io_cluster_shared_drives (Transact-SQL) | Documentos de Microsoft
+ms.custom: ''
 ms.date: 03/15/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine, pdw
-ms.service: 
+ms.service: ''
 ms.component: dmv's
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - sys.dm_io_cluster_shared_drives_TSQL
@@ -22,16 +22,17 @@ dev_langs:
 helpviewer_keywords:
 - sys.dm_io_cluster_shared_drives dynamic management view
 ms.assetid: c8fcced8-c780-49dc-99bd-6beb3ca532c4
-caps.latest.revision: 
+caps.latest.revision: 30
 author: stevestein
 ms.author: sstein
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 0c04a88653314158196c84af999348aba895141f
-ms.sourcegitcommit: c556eaf60a49af7025db35b7aa14beb76a8158c5
+monikerRange: '>= aps-pdw-2016 || >= sql-server-2016 || = sqlallproducts-allversions'
+ms.openlocfilehash: 8d42c66b4abe0fb227384cf1db6aa71e37f15000
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/03/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="sysdmioclustershareddrives-transact-sql"></a>sys.dm_io_cluster_shared_drives (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-pdw-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-pdw-md.md)]
@@ -50,7 +51,7 @@ ms.lasthandoff: 02/03/2018
  Cuando se habilita la agrupación en clústeres, la instancia en clúster de conmutación por error requiere que los archivos de datos y de registro estén en discos compartidos para que puedan estar accesibles después de que la instancia realice una conmutación por error a otro nodo. Cada una de las filas de esta vista representa un único disco compartido que utiliza esta instancia en clúster de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Para almacenar archivos de registros o datos de esta instancia de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] solo se pueden utilizar los discos enumerados en esta vista. Los discos enumerados en esta vista son los que están en el grupo de recursos del clúster asociado a la instancia.  
   
 > [!NOTE]  
->  Esta vista quedará desusada en una versión futura. Se recomienda que use [sys.dm_io_cluster_valid_path_names &#40; Transact-SQL &#41; ](../../relational-databases/system-dynamic-management-views/sys-dm-io-cluster-valid-path-names-transact-sql.md) en su lugar.  
+>  Esta vista quedará desusada en una versión futura. Se recomienda que use [sys.dm_io_cluster_valid_path_names &#40;Transact-SQL&#41; ](../../relational-databases/system-dynamic-management-views/sys-dm-io-cluster-valid-path-names-transact-sql.md) en su lugar.  
   
 ## <a name="permissions"></a>Permissions  
  El usuario debe tener permiso VIEW SERVER STATE para la instancia de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
@@ -75,7 +76,7 @@ SELECT * FROM sys.dm_io_cluster_shared_drives;
 ## <a name="see-also"></a>Vea también  
  [sys.dm_io_cluster_valid_path_names &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-io-cluster-valid-path-names-transact-sql.md)   
  [sys.dm_os_cluster_nodes &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-os-cluster-nodes-transact-sql.md)   
- [sys.fn_servershareddrives &#40;Transact-SQL&#41;](../../relational-databases/system-functions/sys-fn-servershareddrives-transact-sql.md)   
+ [Sys.fn_servershareddrives &#40;Transact-SQL&#41;](../../relational-databases/system-functions/sys-fn-servershareddrives-transact-sql.md)   
  [Funciones y vistas de administración dinámica &#40;Transact-SQL&#41;](~/relational-databases/system-dynamic-management-views/system-dynamic-management-views.md)  
   
   

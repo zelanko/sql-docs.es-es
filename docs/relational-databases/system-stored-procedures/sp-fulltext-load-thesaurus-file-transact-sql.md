@@ -1,16 +1,16 @@
 ---
-title: sp_fulltext_load_thesaurus_file (Transact-SQL) | Microsoft Docs
-ms.custom: 
+title: sp_fulltext_load_thesaurus_file (Transact-SQL) | Documentos de Microsoft
+ms.custom: ''
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine
-ms.service: 
+ms.service: ''
 ms.component: system-stored-procedures
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - sp_fulltext_load_thesaurus_file
@@ -22,16 +22,16 @@ helpviewer_keywords:
 - full-text indexes [SQL Server], thesaurus files
 - thesaurus [full-text search], editing
 ms.assetid: 73a309c3-6d22-42dc-a6fe-8a63747aa2e4
-caps.latest.revision: 
+caps.latest.revision: 22
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: de4468120488b4f7d8942ecf540c36370a36de7f
-ms.sourcegitcommit: c556eaf60a49af7025db35b7aa14beb76a8158c5
+ms.openlocfilehash: 6001b06b6caef3819b6243b7029a082f19257228
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/03/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="spfulltextloadthesaurusfile-transact-sql"></a>sp_fulltext_load_thesaurus_file (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -49,9 +49,9 @@ sys.sp_fulltext_load_thesaurus_file lcid [ , @loadOnlyIfNotLoaded  = action ]
   
 ## <a name="arguments"></a>Argumentos  
  *lcid*  
- Número entero que asigna el identificador de configuración regional (LCID) del idioma para el que desea lade la definición XML del diccionario de sinónimos. Para obtener los LCID de los idiomas que están disponibles en una instancia del servidor, use la [sys.fulltext_languages &#40; Transact-SQL &#41; ](../../relational-databases/system-catalog-views/sys-fulltext-languages-transact-sql.md) vista de catálogo.  
+ Número entero que asigna el identificador de configuración regional (LCID) del idioma para el que desea lade la definición XML del diccionario de sinónimos. Para obtener los LCID de los idiomas que están disponibles en una instancia del servidor, use la [sys.fulltext_languages &#40;Transact-SQL&#41; ](../../relational-databases/system-catalog-views/sys-fulltext-languages-transact-sql.md) vista de catálogo.  
   
- **@loadOnlyIfNotLoaded** = *acción*  
+ **@loadOnlyIfNotLoaded** = *Acción*  
  Especifica si el archivo de diccionario de sinónimos se carga en las tablas de diccionario de sinónimos internas aun cuando ya se haya cargado. *acción* es uno de:  
   
 |Value|Definición|  

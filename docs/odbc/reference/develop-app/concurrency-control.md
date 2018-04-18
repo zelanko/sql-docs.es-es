@@ -1,30 +1,31 @@
 ---
 title: Control de simultaneidad | Documentos de Microsoft
-ms.custom: 
+ms.custom: ''
 ms.date: 01/19/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: drivers
-ms.service: 
+ms.service: ''
 ms.component: odbc
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: drivers
-ms.tgt_pltfrm: 
+ms.technology:
+- drivers
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - transactions [ODBC], concurrency control
 - concurrency control [ODBC]
 ms.assetid: 75e4adb3-3d43-49c5-8c5e-8df96310d912
-caps.latest.revision: "5"
+caps.latest.revision: 5
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: ab0a0838c2bac6359452d3870cf3d3c7d8b472d3
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: ca6003893c767cf7fe3a5649097d816c96b6f064
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="concurrency-control"></a>Control de simultaneidad
 *Simultaneidad* es la capacidad de dos transacciones utilizan los mismos datos al mismo tiempo, y transacciones mayor aislamiento normalmente conlleva una simultaneidad reducida. Esto es porque el aislamiento de transacciones normalmente se implementa mediante el bloqueo de filas, y porque están bloqueados más filas, menos transacciones pueden realizarse sin que se bloquee temporalmente al menos una fila bloqueada. Mientras una simultaneidad reducida suele aceptarse como una solución de compromiso de los mayores niveles de aislamiento de transacción necesarios para mantener la integridad de la base de datos, puede convertirse en un problema en las aplicaciones interactivas con actividad alta de lectura/escritura que usan los cursores.  

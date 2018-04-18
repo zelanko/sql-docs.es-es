@@ -1,16 +1,16 @@
 ---
-title: sp_addmessage (Transact-SQL) | Microsoft Docs
-ms.custom: 
+title: sp_addmessage (Transact-SQL) | Documentos de Microsoft
+ms.custom: ''
 ms.date: 03/16/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine
-ms.service: 
+ms.service: ''
 ms.component: system-stored-procedures
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - sp_addmessage
@@ -20,16 +20,16 @@ dev_langs:
 helpviewer_keywords:
 - sp_addmessage
 ms.assetid: 54746d30-f944-40e5-a707-f2d9be0fb9eb
-caps.latest.revision: 
+caps.latest.revision: 25
 author: stevestein
 ms.author: sstein
 manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 1b8b71c14da2b38bbc16c63b39143fd0a85ebf30
-ms.sourcegitcommit: c556eaf60a49af7025db35b7aa14beb76a8158c5
+ms.openlocfilehash: b9ccc8c9b51de0b2c6c4d86acc107c9073efbfb1
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/03/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="spaddmessage-transact-sql"></a>sp_addmessage (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -49,7 +49,7 @@ sp_addmessage [ @msgnum= ] msg_id , [ @severity= ] severity , [ @msgtext= ] 'msg
 ```  
   
 ## <a name="arguments"></a>Argumentos  
- [ **@msgnum****=** ] *msg_id*  
+ [  **@msgnum*** =** ] *msg_id*  
  Es el identificador del mensaje de error. *msg_id* es **int** con un valor predeterminado es NULL. *msg_id* de error definidos por el usuario mensajes pueden ser un entero entre 50.001 y 2.147.483.647. La combinación de *msg_id* y *lenguaje* debe ser única; se devuelve un error si el identificador ya existe para el idioma especificado.  
   
  [  **@severity =** ]*gravedad*  
@@ -62,12 +62,12 @@ sp_addmessage [ @msgnum= ] msg_id , [ @severity= ] severity , [ @msgtext= ] 'msg
  Es el idioma de este mensaje. *idioma* es **sysname** con un valor predeterminado es NULL. Dado que se pueden instalar varios idiomas en el mismo servidor, *lenguaje* especifica el idioma en que está escrito cada mensaje. Cuando *lenguaje* es se omite, el idioma es el idioma predeterminado para la sesión.  
   
  [  **@with_log =** ] { **'**TRUE**'** | **'FALSE'** }  
- Especifica si el mensaje debe escribirse en el registro de aplicación Windows cuando se produzca. **@with_log**es **varchar (5)** con un valor predeterminado es FALSE. Si es TRUE, el error siempre se escribe en el registro de aplicación Windows. Si es FALSE, el error no siempre se escribe en el registro de aplicación Windows, pero se puede escribir, dependiendo de cómo se haya producido el error. Solo los miembros de la **sysadmin** rol de servidor puede usar esta opción.  
+ Especifica si el mensaje debe escribirse en el registro de aplicación Windows cuando se produzca. **@with_log** es **varchar (5)** con un valor predeterminado es FALSE. Si es TRUE, el error siempre se escribe en el registro de aplicación Windows. Si es FALSE, el error no siempre se escribe en el registro de aplicación Windows, pero se puede escribir, dependiendo de cómo se haya producido el error. Solo los miembros de la **sysadmin** rol de servidor puede usar esta opción.  
   
 > [!NOTE]  
 >  Si se escribe un mensaje en el registro de aplicación Windows, también se escribe en el archivo de registro de errores del [!INCLUDE[ssDE](../../includes/ssde-md.md)].  
   
- [  **@replace**   *=*  ] **'***reemplazar***'**  
+ [ **@replace** *=* ] **'***reemplazar***'**  
  Si se especifica como la cadena *reemplazar*, mensajes de error existentes se sobrescriben con el nuevo nivel de gravedad y el texto del mensaje. *Reemplace* es **varchar(7)** con un valor predeterminado es NULL. Esta opción debe especificarse si *msg_id* ya existe. Si se sustituye un mensaje en inglés de EE.UU., Se reemplaza el mensaje en inglés, el nivel de gravedad para todos los mensajes en los demás idiomas que tienen el mismo *msg_id*.  
   
 ## <a name="return-code-values"></a>Valores de código de retorno  

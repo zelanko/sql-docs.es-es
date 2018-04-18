@@ -1,16 +1,16 @@
 ---
-title: sys.availability_group_listener_ip_addresses (Transact-SQL) | Microsoft Docs
-ms.custom: 
+title: Sys.availability_group_listener_ip_addresses (Transact-SQL) | Documentos de Microsoft
+ms.custom: ''
 ms.date: 06/10/2016
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine
-ms.service: 
+ms.service: ''
 ms.component: system-catalog-views
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - availability_group_listener_ip_addresses
@@ -24,30 +24,30 @@ helpviewer_keywords:
 - Availability Groups [SQL Server], listeners
 - sys.availability_group_listener_ip_addresses catalog view
 ms.assetid: e515fa6b-1354-4110-9b70-ab2e6164c992
-caps.latest.revision: 
+caps.latest.revision: 12
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: b5635c066dc3cc420cd6a7f2392d79bd6ef162c7
-ms.sourcegitcommit: c556eaf60a49af7025db35b7aa14beb76a8158c5
+ms.openlocfilehash: 04266782711b0825e0766d9ea1edfd8f0d0ddce7
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/03/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="sysavailabilitygrouplisteneripaddresses-transact-sql"></a>sys.availability_group_listener_ip_addresses (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
 
   Devuelve una fila para cada dirección IP que está asociado a cualquier siempre en disponibilidad escucha de grupo en el clúster de clústeres de conmutación por error de servidor de Windows (WSFC).  
   
- Primary key:  **listener_id** + **ip_address** + **ip_sub_mask**  
+ Clave principal: **listener_id** + **dirección_IP** + **ip_sub_mask**  
   
   
 |Nombre de columna|Tipo de datos|Description|  
 |-----------------|---------------|-----------------|  
 |**listener_id**|**nvarchar(36)**|GUID de recurso del clúster de conmutación por error de Windows Server (WSFC).|  
 |**ip_address**|**nvarchar(48)**|Dirección IP virtual configurada del agente de escucha del grupo de disponibilidad. Devuelve una sola dirección IPv4 o IPv6.|  
-|**ip_subnet_mask**|**nvarchar(15)**|Máscara de subred de IP configurada para la dirección IPv4, si existe, que se configura para el agente de escucha del grupo de disponibilidad.<br /><br /> NULL = subred IPv6|  
+|**ip_subnet_mask**|**nvarchar (15)**|Máscara de subred de IP configurada para la dirección IPv4, si existe, que se configura para el agente de escucha del grupo de disponibilidad.<br /><br /> NULL = subred IPv6|  
 |**is_dhcp**|**bit**|Si la dirección IP está configurada por DHCP, puede ser:<br /><br /> 0 = La dirección IP no está configurada por DHCP.<br /><br /> 1 = La dirección IP está configurada por DHCP|  
 |**network_subnet_ip**|**nvarchar(48)**|Dirección IP de subred de red que especifica la subred a la que pertenece la dirección IP.|  
 |**network_subnet_prefix_length**|**int**|Longitud de prefijo de subred de red de la subred a la que pertenece la dirección IP.|  

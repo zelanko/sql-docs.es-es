@@ -1,15 +1,15 @@
 ---
 title: Con el encabezado SQL Server Native Client y archivos de biblioteca | Documentos de Microsoft
-ms.custom: 
+ms.custom: ''
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
-ms.service: 
+ms.service: ''
 ms.component: native-client|applications
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: 
-ms.tgt_pltfrm: 
+ms.technology: ''
+ms.tgt_pltfrm: ''
 ms.topic: reference
 helpviewer_keywords:
 - header files [SQL Server Native Client]
@@ -24,16 +24,17 @@ helpviewer_keywords:
 - ODBC applications, header files
 - SQLNCLI, library files
 ms.assetid: 69889a98-7740-4667-aecd-adfc0b37f6f0
-caps.latest.revision: 
+caps.latest.revision: 63
 author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: f1e71dc914c812e452636eddf664300c2820785b
-ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
+monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
+ms.openlocfilehash: c511b130397334faf22b22da37789c6ae10b869b
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/25/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="using-the-sql-server-native-client-header-and-library-files"></a>Utilizar los archivos de encabezado y de biblioteca de SQL Server Native Client
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -89,7 +90,7 @@ include "sqlncli.h";
   
 ## <a name="component-names-and-properties-by-version"></a>Nombres de componente y propiedades por versión  
   
-|Propiedad|SQL Server Native Client<br /><br /> Resultado de|SQL Server Native Client 10.0<br /><br /> SQL Server 2008|SQL Server Native Client 11.0<br /><br /> [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)]|MDAC|  
+|Propiedad|SQL Server Native Client<br /><br /> SQL Server 2005|SQL Server Native Client 10.0<br /><br /> SQL Server 2008|SQL Server Native Client 11.0<br /><br /> [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)]|MDAC|  
 |--------------|--------------------------------------------------|-------------------------------------------------------|---------------------------------------------------------------|----------|  
 |Nombre de controlador ODBC|SQL Native Client|SQL Server Native Client 10.0|SQL Server Native Client 11.0|SQL Server|  
 |Nombre de archivo de encabezado de ODBC|Sqlncli.h|Sqlncli.h|Sqlncli.h|Odbcss.h|  

@@ -1,16 +1,16 @@
 ---
 title: sp_helpstats (Transact-SQL) | Documentos de Microsoft
-ms.custom: 
+ms.custom: ''
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine, sql-database
-ms.service: 
+ms.service: ''
 ms.component: system-stored-procedures
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - sp_helpstats
@@ -20,16 +20,17 @@ dev_langs:
 helpviewer_keywords:
 - sp_helpstats
 ms.assetid: 00ab3cfd-2736-4fc0-b1b2-16dd49fb2fe5
-caps.latest.revision: 
+caps.latest.revision: 37
 author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 45d6df772da027568b1fbd7593e404f291246bb4
-ms.sourcegitcommit: 9fbe5403e902eb996bab0b1285cdade281c1cb16
+monikerRange: = azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions
+ms.openlocfilehash: aa8ecd07602cb03242247a47126a5b560bb58802
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/27/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="sphelpstats-transact-sql"></a>sp_helpstats (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -37,7 +38,7 @@ ms.lasthandoff: 11/27/2017
   Devuelve información estadística acerca de las columnas e índices de la tabla especificada.  
   
 > [!IMPORTANT]  
->  [!INCLUDE[ssNoteDepNextAvoid](../../includes/ssnotedepnextavoid-md.md)]Para obtener información sobre las estadísticas, consulte el [sys.stats](../../relational-databases/system-catalog-views/sys-stats-transact-sql.md) y [sys.stats_columns](../../relational-databases/system-catalog-views/sys-stats-columns-transact-sql.md) vistas de catálogo.  
+>  [!INCLUDE[ssNoteDepNextAvoid](../../includes/ssnotedepnextavoid-md.md)] Para obtener información sobre las estadísticas, consulte el [sys.stats](../../relational-databases/system-catalog-views/sys-stats-transact-sql.md) y [sys.stats_columns](../../relational-databases/system-catalog-views/sys-stats-columns-transact-sql.md) vistas de catálogo.  
   
  ![Icono de vínculo de tema](../../database-engine/configure-windows/media/topic-link.gif "Icono de vínculo de tema") [Convenciones de sintaxis de Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -68,7 +69,7 @@ sp_helpstats[ @objname = ] 'object_name'
 |**statistics_keys**|Claves en que se basa la estadística. Devuelve **nvarchar (2078)** y no puede ser nulo.|  
   
 ## <a name="remarks"></a>Comentarios  
- Utilice DBCC SHOW_STATISTICS para presentar información detallada de estadística acerca de cualquier índice o estadística en particular. Para obtener más información, vea [DBCC SHOW_STATISTICS &#40; Transact-SQL &#41; ](../../t-sql/database-console-commands/dbcc-show-statistics-transact-sql.md) y [sp_helpindex &#40; Transact-SQL &#41; ](../../relational-databases/system-stored-procedures/sp-helpindex-transact-sql.md).  
+ Utilice DBCC SHOW_STATISTICS para presentar información detallada de estadística acerca de cualquier índice o estadística en particular. Para obtener más información, consulte [DBCC SHOW_STATISTICS &#40;Transact-SQL&#41; ](../../t-sql/database-console-commands/dbcc-show-statistics-transact-sql.md) y [sp_helpindex &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-helpindex-transact-sql.md).  
   
 ## <a name="permissions"></a>Permissions  
  Debe pertenecer al rol **public** .  
@@ -108,6 +109,6 @@ EXEC sp_helpstats
   
 ## <a name="see-also"></a>Vea también  
  [Procedimientos almacenados del sistema &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)   
- [Motor de base de datos almacenados procedimientos &#40; Transact-SQL &#41;](../../relational-databases/system-stored-procedures/database-engine-stored-procedures-transact-sql.md)  
+ [Procedimientos almacenados del motor de base de datos &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/database-engine-stored-procedures-transact-sql.md)  
   
   

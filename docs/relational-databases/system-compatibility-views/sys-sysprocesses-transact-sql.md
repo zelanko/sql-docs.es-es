@@ -1,16 +1,16 @@
 ---
 title: Sys.sysprocesses (Transact-SQL) | Documentos de Microsoft
-ms.custom: 
+ms.custom: ''
 ms.date: 03/15/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine
-ms.service: 
+ms.service: ''
 ms.component: system-compatibility-views
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - sysprocesses_TSQL
@@ -23,16 +23,16 @@ helpviewer_keywords:
 - sys.sysprocesses compatibility view
 - sysprocesses system table
 ms.assetid: 60a36d36-54b3-4bd6-9cac-702205a21b16
-caps.latest.revision: 
+caps.latest.revision: 57
 author: rothja
 ms.author: jroth
 manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 551d266374d6fd367eb4bba9e1d76a6322461c31
-ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
+ms.openlocfilehash: 56a8fecff1c129a210766fa4820ee90a11ff2dbf
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/09/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="syssysprocesses-transact-sql"></a>sys.sysprocesses (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -44,7 +44,7 @@ ms.lasthandoff: 02/09/2018
   
 |Nombre de columna|Tipo de datos|Description|  
 |-----------------|---------------|-----------------|  
-|spid|**smallint**|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Identificador de sesión.|  
+|spid|**smallint**|Identificador de sesión de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].|  
 |kpid|**smallint**|Identificador de subproceso de Windows.|  
 |blocked|**smallint**|Id. de la sesión que bloquea la solicitud. Si esta columna es NULL, la solicitud no está bloqueada o la información de la sesión de bloqueo no está disponible (o no puede ser identificada).<br /><br /> -2 = El recurso de bloqueo es propiedad de una transacción distribuida huérfana.<br /><br /> -3 = El recurso de bloqueo es propiedad de una transacción de recuperación diferida.<br /><br /> -4 = No se pudo determinar el Id. de sesión del propietario del bloqueo temporal a causa de transiciones internas de estado del bloqueo temporal.|  
 |waittype|**binary(2)**|Reservado.|  
@@ -60,7 +60,7 @@ ms.lasthandoff: 02/09/2018
 |last_batch|**datetime**|Hora a la que un proceso de cliente ejecutó por última vez una llamada a un procedimiento almacenado remoto o una instrucción EXECUTE.|  
 |ecid|**smallint**|Identificador de contexto de ejecución usado para identificar de forma única los subprocesos que operan en nombre de un único proceso.|  
 |open_tran|**smallint**|Número de transacciones abiertas para el proceso.|  
-|status|**nchar(30)**|Estado del identificador de proceso. Los valores posibles son:<br /><br /> **inactivo**  =  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] está restableciendo la sesión.<br /><br /> **ejecuta** = la sesión está ejecutando uno o varios lotes. Si Conjuntos de resultados activos múltiples (MARS) está habilitado, una sesión puede ejecutar varios lotes. Para obtener más información, vea [utilizando conjuntos de resultados activos múltiples &#40; MARS &#41; ](../../relational-databases/native-client/features/using-multiple-active-result-sets-mars.md).<br /><br /> **fondo** = la sesión está ejecutando una tarea en segundo plano, como la detección de interbloqueos.<br /><br /> **reversión** = la sesión está realizando una reversión de transacciones.<br /><br /> **pendiente** = la sesión está esperando un subproceso de trabajo esté disponible.<br /><br /> **ejecutable** = la tarea en la sesión está en la cola de ejecutables de un programador mientras espera obtener un cuanto de tiempo.<br /><br /> **bloqueo por bucle** = la tarea en la sesión está esperando un bloqueo por bucle hasta que quede libre.<br /><br /> **suspende** = la sesión está esperando un evento, como una entrada para completar o.|  
+|status|**nchar(30)**|Estado del identificador de proceso. Los valores posibles son:<br /><br /> **inactivo**  =  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] está restableciendo la sesión.<br /><br /> **ejecuta** = la sesión está ejecutando uno o varios lotes. Si Conjuntos de resultados activos múltiples (MARS) está habilitado, una sesión puede ejecutar varios lotes. Para obtener más información, vea [utilizando conjuntos de resultados activos múltiples & #40; MARS & #41; ](../../relational-databases/native-client/features/using-multiple-active-result-sets-mars.md).<br /><br /> **fondo** = la sesión está ejecutando una tarea en segundo plano, como la detección de interbloqueos.<br /><br /> **reversión** = la sesión está realizando una reversión de transacciones.<br /><br /> **pendiente** = la sesión está esperando un subproceso de trabajo esté disponible.<br /><br /> **ejecutable** = la tarea en la sesión está en la cola de ejecutables de un programador mientras espera obtener un cuanto de tiempo.<br /><br /> **bloqueo por bucle** = la tarea en la sesión está esperando un bloqueo por bucle hasta que quede libre.<br /><br /> **suspende** = la sesión está esperando un evento, como una entrada para completar o.|  
 |sid|**binary(86)**|Identificador único global (GUID) del usuario.|  
 |hostname|**nchar(128)**|Nombre de la estación de trabajo.|  
 |program_name|**nchar(128)**|Nombre del programa de aplicación.|  
@@ -81,8 +81,8 @@ ms.lasthandoff: 02/09/2018
  Si un usuario tiene el permiso VIEW SERVER STATE en el servidor, verá todas las sesiones en ejecución de la instancia de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]; de lo contrario, el usuario solo verá la sesión actual.  
   
 ## <a name="see-also"></a>Vea también  
- [Funciones y vistas de administración dinámica &#40; relacionada con la ejecución Transact-SQL &#41;](../../relational-databases/system-dynamic-management-views/execution-related-dynamic-management-views-and-functions-transact-sql.md)   
- [Asignar tablas del sistema a vistas del sistema &#40; Transact-SQL &#41;](../../relational-databases/system-tables/mapping-system-tables-to-system-views-transact-sql.md)   
+ [Vistas de administración dinámica y funciones relacionadas con ejecuciones &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/execution-related-dynamic-management-views-and-functions-transact-sql.md)   
+ [Asignar tablas del sistema a vistas del sistema &#40;Transact-SQL&#41;](../../relational-databases/system-tables/mapping-system-tables-to-system-views-transact-sql.md)   
  [Vistas de compatibilidad &#40;Transact-SQL&#41;](~/relational-databases/system-compatibility-views/system-compatibility-views-transact-sql.md)  
   
   

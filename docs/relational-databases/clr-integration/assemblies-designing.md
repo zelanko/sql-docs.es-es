@@ -1,34 +1,34 @@
 ---
-title: "Diseñar ensamblados | Documentos de Microsoft"
-ms.custom: 
+title: Diseñar ensamblados | Documentos de Microsoft
+ms.custom: ''
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine
-ms.service: 
+ms.service: ''
 ms.component: clr
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: 
-ms.tgt_pltfrm: 
+ms.technology: ''
+ms.tgt_pltfrm: ''
 ms.topic: reference
 helpviewer_keywords:
 - designing assemblies [SQL Server]
 - assemblies [CLR integration], designing
 ms.assetid: 9c07f706-6508-41aa-a4d7-56ce354f9061
-caps.latest.revision: 
+caps.latest.revision: 29
 author: rothja
 ms.author: jroth
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: d5e491f922a034a55cb65e432e0c005f6cc18fc0
-ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
+ms.openlocfilehash: 769c0aa7f6d9593ab3e2360a0e26876f23f16b41
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/09/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="assemblies---designing"></a>Ensamblados - diseño
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
-En este tema se describen los siguientes aspectos que se deben tener en cuenta al diseñar ensamblados:  
+  En este tema se describen los siguientes aspectos que se deben tener en cuenta al diseñar ensamblados:  
   
 -   Empaquetar ensamblados  
   
@@ -41,7 +41,7 @@ En este tema se describen los siguientes aspectos que se deben tener en cuenta a
   
  Cuando empaquete código en un ensamblado, debe tener en cuenta lo siguiente:  
   
--   Los índices y tipos definidos por el usuario CLR que dependan de funciones definidas por el usuario CLR pueden provocar que haya datos almacenados en la base de datos que dependan del ensamblado. Normalmente, modificar el código de un ensamblado resulta más complejo cuando hay datos almacenados que dependen del ensamblado de la base de datos. Por lo tanto, en general es mejor separar el código en el que se basan las dependencias de datos almacenados (como los tipos y los índices definidos por el usuario que utilizan funciones definidas por el usuario) del código que no tiene tales dependencias de datos almacenados. Para obtener más información, consulte [implementar ensamblados](../../relational-databases/clr-integration/assemblies-implementing.md) y [ALTER ASSEMBLY &#40; Transact-SQL &#41; ](../../t-sql/statements/alter-assembly-transact-sql.md).  
+-   Los índices y tipos definidos por el usuario CLR que dependan de funciones definidas por el usuario CLR pueden provocar que haya datos almacenados en la base de datos que dependan del ensamblado. Normalmente, modificar el código de un ensamblado resulta más complejo cuando hay datos almacenados que dependen del ensamblado de la base de datos. Por lo tanto, en general es mejor separar el código en el que se basan las dependencias de datos almacenados (como los tipos y los índices definidos por el usuario que utilizan funciones definidas por el usuario) del código que no tiene tales dependencias de datos almacenados. Para obtener más información, consulte [implementar ensamblados](../../relational-databases/clr-integration/assemblies-implementing.md) y [ALTER ASSEMBLY &#40;Transact-SQL&#41;](../../t-sql/statements/alter-assembly-transact-sql.md).  
   
 -   Si parte del código administrado requiere un permiso de mayor nivel, es mejor separar ese código en un ensamblado diferente del correspondiente al código que no requiere ese nivel de permiso.  
   
@@ -64,7 +64,7 @@ En este tema se describen los siguientes aspectos que se deben tener en cuenta a
  Además, si se especifica UNSAFE, el código incluido en el ensamblado puede realizar operaciones que la comprobación de CLR considera sin seguridad de tipos. Estas operaciones pueden tener acceso a búferes de memoria en el espacio del proceso de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] de forma incontrolada. Los ensamblados UNSAFE también pueden trastornar potencialmente el sistema de seguridad de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] o de Common Language Runtime. Los permisos UNSAFE solo deben concederlos programadores o administradores experimentados a ensamblados de mucha confianza. Solo los miembros de la **sysadmin** rol fijo de servidor puede crear ensamblados no seguros.  
   
 ## <a name="restrictions-on-assemblies"></a>Restricciones en los ensamblados  
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] impone ciertas restricciones en el código administrado en los ensamblados para asegurarse de que puedan ejecutarse de forma confiable y escalable. Esto significa que, en los ensamblados con SAFE y EXTERNAL_ACCESS, no se permiten ciertas operaciones que pueden comprometer la estabilidad del servidor.  
+ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] impone ciertas restricciones en el código administrado de los ensamblados para asegurarse de que puedan ejecutarse de manera confiable y escalable. Esto significa que, en los ensamblados con SAFE y EXTERNAL_ACCESS, no se permiten ciertas operaciones que pueden comprometer la estabilidad del servidor.  
   
 ### <a name="disallowed-custom-attributes"></a>Atributos personalizados no permitidos  
  Los ensamblados no se pueden anotar con los siguientes atributos personalizados:  
@@ -124,7 +124,7 @@ System.Configuration
 ```  
   
 ## <a name="see-also"></a>Vea también  
- [Ensamblados &#40; motor de base de datos &#41;](../../relational-databases/clr-integration/assemblies-database-engine.md)   
+ [Ensamblados & #40; motor de base de datos & #41;](../../relational-databases/clr-integration/assemblies-database-engine.md)   
  [Seguridad de la integración de CLR](../../relational-databases/clr-integration/security/clr-integration-security.md)  
   
   

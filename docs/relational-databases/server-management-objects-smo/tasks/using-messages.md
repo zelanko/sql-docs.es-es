@@ -1,29 +1,30 @@
 ---
 title: Uso de mensajes | Documentos de Microsoft
-ms.custom: 
+ms.custom: ''
 ms.date: 08/06/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine
-ms.service: 
+ms.service: ''
 ms.component: smo
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: 
-ms.tgt_pltfrm: 
+ms.technology: ''
+ms.tgt_pltfrm: ''
 ms.topic: reference
 helpviewer_keywords:
 - messages [SMO]
 ms.assetid: 4037a866-4826-4c1f-890c-e7e3658adf13
-caps.latest.revision: 
+caps.latest.revision: 40
 author: stevestein
 ms.author: sstein
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 3ed18e9b9b7f91613a23d0146b79e0da2b056618
-ms.sourcegitcommit: cb2f9d4db45bef37c04064a9493ac2c1d60f2c22
+monikerRange: = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions
+ms.openlocfilehash: 95fea53553eea08880e2fa427dc34eaf81123fb4
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/12/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="using-messages"></a>Usar mensajes
 [!INCLUDE[appliesto-ss-asdb-asdw-xxx-md](../../../includes/appliesto-ss-asdb-asdw-xxx-md.md)]
@@ -33,7 +34,7 @@ ms.lasthandoff: 01/12/2018
  El objeto <xref:Microsoft.SqlServer.Management.Smo.UserDefinedMessageCollection> representa los mensajes definidos por el usuario mediante programación en SMO. Los mensajes definidos por el usuario existentes se pueden detectar realizando una iteración en la colección. Los nuevos mensajes definidos por el usuario se pueden crear creando instancias de un nuevo objeto **UserDefinedMessage** y estableciendo las propiedades adecuadas.  
   
 ## <a name="examples"></a>Ejemplos  
- Para los siguientes ejemplos de código, deberá seleccionar el entorno de programación, la plantilla de programación y el lenguaje de programación en los que crear su aplicación. Para obtener más información, vea [crear a Visual C &#35; Proyecto SMO en Visual Studio .NET](../../../relational-databases/server-management-objects-smo/how-to-create-a-visual-csharp-smo-project-in-visual-studio-net.md).  
+ Para los siguientes ejemplos de código, deberá seleccionar el entorno de programación, la plantilla de programación y el lenguaje de programación en los que crear su aplicación. Para obtener más información, consulte [crear a Visual C&#35; proyecto SMO en Visual Studio .NET](../../../relational-databases/server-management-objects-smo/how-to-create-a-visual-csharp-smo-project-in-visual-studio-net.md).  
   
 ## <a name="finding-a-particular-system-message-in-visual-basic"></a>Buscar un mensaje del sistema determinado en Visual Basic  
  En el ejemplo de código se muestra cómo identificar un mensaje del sistema por número de identificador y cómo mostrar el mensaje.  

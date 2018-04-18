@@ -1,16 +1,16 @@
 ---
-title: sp_help_fulltext_columns (Transact-SQL) | Microsoft Docs
-ms.custom: 
+title: sp_help_fulltext_columns (Transact-SQL) | Documentos de Microsoft
+ms.custom: ''
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine
-ms.service: 
+ms.service: ''
 ms.component: system-stored-procedures
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - sp_help_fulltext_columns
@@ -20,16 +20,16 @@ dev_langs:
 helpviewer_keywords:
 - sp_help_fulltext_columns
 ms.assetid: 92c8656b-f7fd-4904-9796-acc9ffed4106
-caps.latest.revision: 
+caps.latest.revision: 25
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 74905280aa6602c4ff2826d564b76ca8769e2dfc
-ms.sourcegitcommit: c556eaf60a49af7025db35b7aa14beb76a8158c5
+ms.openlocfilehash: 46f611667ca69f0e8daa2567dd8bd6c61162e18c
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/03/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="sphelpfulltextcolumns-transact-sql"></a>sp_help_fulltext_columns (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -53,7 +53,7 @@ sp_help_fulltext_columns [ [ @table_name = ] 'table_name' ] ]
  [  **@table_name=**] **'***table_name***'**  
  Es el nombre de tabla de una o dos partes para la que se solicita información de índice de texto completo. *table_name* es **nvarchar (517)**, su valor predeterminado es null. Si *table_name* se omite, se recupera información de la columna de índice de texto completo para cada tabla indizada de texto completo.  
   
- [ **@column_name=**] **'***column_name***'**  
+ [  **@column_name=**] **'***column_name***'**  
  Es el nombre de la columna cuyos metadatos de índice de texto completo se solicitan. *column_name* es **sysname**, su valor predeterminado es null. Si *column_name* se omite o es NULL, se devuelve información de columna de texto completo para cada columna de índice de texto completo de *table_name*. Si *table_name* también se omite o es NULL, se devuelve información de columna de índice de texto completo para cada columna de índice de texto completo de todas las tablas de la base de datos.  
   
 ## <a name="return-code-values"></a>Valores de código de retorno  

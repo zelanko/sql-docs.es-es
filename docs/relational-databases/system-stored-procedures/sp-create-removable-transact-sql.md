@@ -1,16 +1,16 @@
 ---
-title: sp_create_removable (Transact-SQL) | Microsoft Docs
-ms.custom: 
+title: sp_create_removable (Transact-SQL) | Documentos de Microsoft
+ms.custom: ''
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine
-ms.service: 
+ms.service: ''
 ms.component: system-stored-procedures
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - sp_create_removable
@@ -20,16 +20,16 @@ dev_langs:
 helpviewer_keywords:
 - sp_create_removable
 ms.assetid: 06e36ae5-f70d-4a26-9a7f-ee4b9360b355
-caps.latest.revision: 
+caps.latest.revision: 31
 author: stevestein
 ms.author: sstein
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: e7b5a66828c1ee49734e720137d3a0ededc0098e
-ms.sourcegitcommit: c556eaf60a49af7025db35b7aa14beb76a8158c5
+ms.openlocfilehash: c74f780b4e981fad39e7b6da6a531305000910cc
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/03/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="spcreateremovable-transact-sql"></a>sp_create_removable (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -83,7 +83,7 @@ sp_create_removable
  [  **@logsize=** ] *logsize*  
  Es el tamaño, en megabytes, del archivo que contiene el registro de transacciones. *logsize* es **int**. El mínimo *logsize* es 1.  
   
- [ **@datalogical1=** ] **'***datalogical***'**  
+ [  **@datalogical1=** ] **'***datalogical***'**  
  Es el nombre lógico de un archivo que contiene las tablas de datos. *datalogical* es **sysname**.  
   
  Debe ser un número de archivos de datos comprendido entre 1 y 16. Normalmente, se crea más de un archivo de datos cuando se espera que la base de datos tenga un gran tamaño y deba distribuirse en varios discos.  
@@ -114,11 +114,11 @@ sp_create_removable
 |Operación en base de datos|Permisos establecidos en archivos|  
 |---------------------------|------------------------------|  
 |Modificada para agregar un nuevo archivo|Creado|  
-|Copia de seguridad|Adjuntada|  
+|Realización de copia de seguridad|Adjuntada|  
 |Restaurada|Separada|  
   
 > [!NOTE]  
->  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] registro y no los datos de conjunto de permisos en archivos.  
+>  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] no establece permisos en archivos de datos y de registro.  
   
 ## <a name="examples"></a>Ejemplos  
  En el ejemplo siguiente se crea la base de datos `inventory` como una base de datos extraíble.  

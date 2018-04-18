@@ -1,29 +1,30 @@
 ---
 title: SQLSetDescField | Documentos de Microsoft
-ms.custom: 
+ms.custom: ''
 ms.date: 03/17/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
-ms.service: 
+ms.service: ''
 ms.component: native-client-odbc-api
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: 
-ms.tgt_pltfrm: 
+ms.technology: ''
+ms.tgt_pltfrm: ''
 ms.topic: reference
 helpviewer_keywords:
 - SQLSetDescField function
 ms.assetid: de4bed15-15be-4825-994c-1046255e725a
-caps.latest.revision: 
+caps.latest.revision: 23
 author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 795ec5a952ea13bcafe6cba688c11c671b69f72a
-ms.sourcegitcommit: a0aa5e611a0e6ebb74ac1e2f613e8916dc7a7617
+monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
+ms.openlocfilehash: b883a4f7fa079462c18b45d41915968763eb9ca5
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/24/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="sqlsetdescfield"></a>SQLSetDescField
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -38,20 +39,20 @@ ms.lasthandoff: 01/24/2018
   
  Al establecer SQL_SOPT_SS_PARAM_FOCUS en 0, se restaura acceso a los registros descriptores para parámetros.  
   
- Para obtener más información acerca de los parámetros con valores de tabla, vea [parámetros con valores de tabla &#40; ODBC &#41;](../../relational-databases/native-client-odbc-table-valued-parameters/table-valued-parameters-odbc.md).  
+ Para obtener más información acerca de los parámetros con valores de tabla, vea [parámetros con valores de tabla & #40; ODBC & #41;](../../relational-databases/native-client-odbc-table-valued-parameters/table-valued-parameters-odbc.md).  
   
 ## <a name="sqlsetdescfield-support-for-enhanced-date-and-time-features"></a>SQLSetDescField admite las características mejoradas de fecha y hora  
  Las características de fecha y hora se han mejorado en ODBC. Para obtener información sobre el campo descriptor proporcionado para los tipos de fecha y hora nueva, vea [parámetros y metadatos de resultados](../../relational-databases/native-client-odbc-date-time/metadata-parameter-and-result.md).  
   
- Para obtener más información, consulte [fecha y hora mejoras &#40; ODBC &#41;](../../relational-databases/native-client-odbc-date-time/date-and-time-improvements-odbc.md).  
+ Para obtener más información, consulte [fecha y hora mejoras & #40; ODBC & #41;](../../relational-databases/native-client-odbc-date-time/date-and-time-improvements-odbc.md).  
   
 ## <a name="sqlsetdescfield-support-for-large-clr-udts"></a>SQLSetDescField admite UDT CLR grandes  
- SQLSetDescField admite tipos de definidos por el usuario CLR (UDT) grandes. Para obtener más información, consulte [Large CLR User-Defined tipos &#40; ODBC &#41;](../../relational-databases/native-client/odbc/large-clr-user-defined-types-odbc.md).  
+ SQLSetDescField admite tipos de definidos por el usuario CLR (UDT) grandes. Para obtener más información, consulte [Large CLR User-Defined tipos & #40; ODBC & #41;](../../relational-databases/native-client/odbc/large-clr-user-defined-types-odbc.md).  
   
 ## <a name="sqlsetdescfield-support-for-sparse-columns"></a>SQLSetDescField admite columnas dispersas  
  SQLSetDecField puede usarse para establecer SQL_SOPT_SS_NAME_SCOPE en el descriptor de parámetro de aplicación (APD) a los valores SQL_SS_NAME_SCOPE_EXTENDED y SQL_SS_NAME_SCOPE_SPARSE_COLUMN_SET.  
   
- Para obtener más información, consulte [Sparse Columns Support &#40; ODBC &#41;](../../relational-databases/native-client/odbc/sparse-columns-support-odbc.md).  
+ Para obtener más información, consulte [Sparse Columns Support &#40;ODBC&#41;](../../relational-databases/native-client/odbc/sparse-columns-support-odbc.md).  
   
 ## <a name="see-also"></a>Vea también  
  [SQLSetDescField](http://go.microsoft.com/fwlink/?LinkId=80705)   

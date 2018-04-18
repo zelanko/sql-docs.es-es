@@ -1,16 +1,16 @@
 ---
-title: sys.dm_tran_commit_table (Transact-SQL) | Microsoft Docs
-ms.custom: 
+title: Sys.dm_tran_commit_table (Transact-SQL) | Documentos de Microsoft
+ms.custom: ''
 ms.date: 03/15/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine, sql-database
-ms.service: 
+ms.service: ''
 ms.component: dmv's
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - dm_tran_commit_table
@@ -22,18 +22,19 @@ dev_langs:
 helpviewer_keywords:
 - sys.dm_tran_commit_table dynamic management view
 ms.assetid: 732d23c5-1f6c-4e96-bc85-8f29b520cf0e
-caps.latest.revision: 
+caps.latest.revision: 17
 author: stevestein
 ms.author: sstein
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 17e42e8bf81db76b3034c6bf1e2e0111a6fc9671
-ms.sourcegitcommit: c556eaf60a49af7025db35b7aa14beb76a8158c5
+monikerRange: = azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions
+ms.openlocfilehash: 7ef5171ec533bd912c14d3623a9c01e93d79edf2
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/03/2018
+ms.lasthandoff: 04/16/2018
 ---
-# <a name="change-tracking---sysdmtrancommittable"></a>Change Tracking - sys.dm_tran_commit_table
+# <a name="change-tracking---sysdmtrancommittable"></a>Cambiar seguimiento - sys.dm_tran_commit_table
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
   Muestra una fila para cada transacción que se confirma para una tabla sometida al seguimiento de cambios de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. La vista de administración sys.dm_tran_commit_table, que se proporciona por compatibilidad, expone la información relacionada con la transacción que el seguimiento de cambios almacena en la tabla del sistema sys.syscommittab. En la tabla sys.syscommittab se proporciona una asignación persistente eficaz entre un identificador de transacción específico de la base de datos y el número de flujo de registro de confirmación (LSN) de la transacción y marca de tiempo de confirmación. Los datos que están almacenados en la tabla sys.syscommittab y que se exponen en esta vista de administración están sujetos a limpieza según el período de retención especificado cuando se configuró el seguimiento de cambios.  

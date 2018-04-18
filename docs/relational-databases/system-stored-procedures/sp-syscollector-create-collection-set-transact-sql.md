@@ -1,16 +1,16 @@
 ---
-title: sp_syscollector_create_collection_set (Transact-SQL) | Microsoft Docs
-ms.custom: 
+title: sp_syscollector_create_collection_set (Transact-SQL) | Documentos de Microsoft
+ms.custom: ''
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine
-ms.service: 
+ms.service: ''
 ms.component: system-stored-procedures
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - sp_syscollector_create_collection_set_TSQL
@@ -21,16 +21,16 @@ helpviewer_keywords:
 - data collector [SQL Server], stored procedures
 - sp_syscollector_create_collection_set
 ms.assetid: 69e9ff0f-c409-43fc-89f6-40c3974e972c
-caps.latest.revision: 
+caps.latest.revision: 30
 author: stevestein
 ms.author: sstein
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 50e5c77d8af3ae4ab42ef74ee18f7b49db2a7c57
-ms.sourcegitcommit: c556eaf60a49af7025db35b7aa14beb76a8158c5
+ms.openlocfilehash: 1e2aa88ff030e3fb938fdd00808d10c3c8b6cac9
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/03/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="spsyscollectorcreatecollectionset-transact-sql"></a>sp_syscollector_create_collection_set (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -79,10 +79,10 @@ sp_syscollector_create_collection_set
   
  El valor predeterminado de *collection_mode* es 0. Cuando *collection_mode* es 0, *valor schedule_uid* o *schedule_name* debe especificarse.  
   
- [ **@days_until_expiration =** ] *days_until_expiration*  
+ [  **@days_until_expiration =** ] *days_until_expiration*  
  Es el número de días que los datos recopilados se guardan en el almacén de administración de datos. *days_until_expiration* es **smallint** con un valor predeterminado de 730 (dos años). *days_until_expiration* debe ser 0 o un entero positivo.  
   
- [ **@proxy_id =** ] *proxy_id*  
+ [  **@proxy_id =** ] *proxy_id*  
  Es el identificador único para una cuenta proxy del Agente [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. *proxy_id* es **int** con un valor predeterminado es NULL. Si se especifica, *proxy_name* debe ser NULL. Para obtener *proxy_id*, consulte la tabla del sistema sysproxies. El rol fijo de base de datos dc_admin debe disponer de los permisos necesarios para obtener acceso al proxy. Para obtener más información, consulte [crear un Proxy del Agente SQL Server](http://msdn.microsoft.com/library/142e0c55-a8b9-4669-be49-b9dc602d5988).  
   
  [  **@proxy_name =** ] '*proxy_name*'  
@@ -122,10 +122,10 @@ sp_syscollector_create_collection_set
  [  **@description =** ] '*descripción*'  
  Es la descripción del conjunto de recopilación. *descripción* es **nvarchar (4000)** con un valor predeterminado es NULL.  
   
- [ **@collection_set_id =** ] *collection_set_id*  
+ [  **@collection_set_id =** ] *collection_set_id*  
  Es el identificador único local del conjunto de recopilaciones. *collection_set_id* es **int** con OUTPUT y es necesario.  
   
- [ **@collection_set_uid =** ] '*collection_set_uid*'  
+ [  **@collection_set_uid =** ] '*collection_set_uid*'  
  Es el GUID del conjunto de recopilación. *collection_set_uid* es **uniqueidentifier** con OUTPUT y su valor predeterminado es NULL.  
   
 ## <a name="return-code-values"></a>Valores de código de retorno  

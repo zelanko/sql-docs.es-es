@@ -1,37 +1,38 @@
 ---
 title: sp_special_columns_100 (almacenamiento de datos SQL) | Documentos de Microsoft
-ms.custom: 
+ms.custom: ''
 ms.date: 03/14/2017
-ms.prod: 
+ms.prod: ''
 ms.prod_service: sql-data-warehouse, pdw
 ms.service: sql-data-warehouse
 ms.component: system-stored-procedures
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 dev_langs:
 - TSQL
 ms.assetid: 5774fadc-77cc-46f8-8f9f-a0f9efe95e21
-caps.latest.revision: 
+caps.latest.revision: 9
 author: barbkess
 ms.author: barbkess
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 64aafbee1cae4cbdf8a2d43c7367fdbae6e40b27
-ms.sourcegitcommit: c556eaf60a49af7025db35b7aa14beb76a8158c5
+monikerRange: '>= aps-pdw-2016 || = azure-sqldw-latest || = sqlallproducts-allversions'
+ms.openlocfilehash: f63087431cfca9578d4af19c7a213a08806f97c8
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/03/2018
+ms.lasthandoff: 04/16/2018
 ---
-# <a name="spspecialcolumns100-sql-data-warehouse"></a>sp_special_columns_100 (SQL Data Warehouse)
+# <a name="spspecialcolumns100-sql-data-warehouse"></a>sp_special_columns_100 (almacenamiento de datos SQL)
 [!INCLUDE[tsql-appliesto-xxxxxx-xxxx-asdw-pdw-md](../../includes/tsql-appliesto-xxxxxx-xxxx-asdw-pdw-md.md)]
 
   Devuelve el conjunto óptimo de columnas que identifican de forma única a una fila de la tabla. También devuelve las columnas actualizadas automáticamente cuando una transacción actualiza cualquier valor de la fila.  
   
- ![Icono de vínculo de tema](../../database-engine/configure-windows/media/topic-link.gif "icono de vínculo de tema") [convenciones de sintaxis de Transact-SQL &#40; Transact-SQL &#41;](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![Icono de vínculo a temas](../../database-engine/configure-windows/media/topic-link.gif "Topic link icon") [Convenciones de sintaxis de Transact-SQL &#40;Transact-SQL&#41;](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>Sintaxis  
   
@@ -79,7 +80,7 @@ sp_special_columns_100 [ @table_name = ] 'table_name'
   
 |Nombre de columna|Tipo de datos|Description|  
 |-----------------|---------------|-----------------|  
-|SCOPE|**smallint**|Ámbito real del identificador de fila. Puede ser 0, 1 o 2. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]siempre devuelve 0. Este campo siempre devuelve un valor.<br /><br /> 0 = SQL_SCOPE_CURROW. Se garantiza que el Id. de fila es válido solo mientras esté colocado en esa fila. Una nueva selección posterior mediante el Id. de fila podría no devolver una fila si otra transacción ha actualizado o eliminado la fila.<br /><br /> 1 = SQL_SCOPE_TRANSACTION. Se garantiza que el Id. de fila es válido mientras dura la transacción actual.<br /><br /> 2 = SQL_SCOPE_SESSION. Se garantiza que el identificador de fila sea válido mientras dure la sesión (en los límites de la transacción).|  
+|SCOPE|**smallint**|Ámbito real del identificador de fila. Puede ser 0, 1 o 2. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Siempre devuelve 0. Este campo siempre devuelve un valor.<br /><br /> 0 = SQL_SCOPE_CURROW. Se garantiza que el Id. de fila es válido solo mientras esté colocado en esa fila. Una nueva selección posterior mediante el Id. de fila podría no devolver una fila si otra transacción ha actualizado o eliminado la fila.<br /><br /> 1 = SQL_SCOPE_TRANSACTION. Se garantiza que el Id. de fila es válido mientras dura la transacción actual.<br /><br /> 2 = SQL_SCOPE_SESSION. Se garantiza que el identificador de fila sea válido mientras dure la sesión (en los límites de la transacción).|  
 |COLUMN_NAME|**sysname**|Nombre de columna para cada columna de la *tabla*devuelto. Este campo siempre devuelve un valor.|  
 |DATA_TYPE|**smallint**|Tipo de datos de ODBC SQL.|  
 |TYPE_NAME|**sysname**|Nombre de tipo de datos dependiente del origen de datos; Por ejemplo, **char**, **varchar**, **dinero**, o **texto**.|  
@@ -94,7 +95,7 @@ sp_special_columns_100 [ @table_name = ] 'table_name'
 ## <a name="permissions"></a>Permissions  
  Es necesario contar con un permiso de tipo SELECT sobre el esquema.  
   
-## <a name="examples-includesssdwfullincludessssdwfull-mdmd-and-includesspdwincludessspdw-mdmd"></a>Ejemplos: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] y[!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
+## <a name="examples-includesssdwfullincludessssdwfull-mdmd-and-includesspdwincludessspdw-mdmd"></a>Ejemplos: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] y [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
  En el siguiente ejemplo se devuelve información acerca de la columna que identifica de forma exclusiva las filas en la tabla `FactFinance`.  
   
 ```  

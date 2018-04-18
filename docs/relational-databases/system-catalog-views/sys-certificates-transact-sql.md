@@ -1,16 +1,16 @@
 ---
 title: Sys.Certificates (Transact-SQL) | Documentos de Microsoft
-ms.custom: 
+ms.custom: ''
 ms.date: 03/15/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
-ms.service: 
+ms.service: ''
 ms.component: system-catalog-views
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - certificates
@@ -22,16 +22,17 @@ dev_langs:
 helpviewer_keywords:
 - sys.certificates catalog view
 ms.assetid: e5046102-a65c-401e-b80d-05636884dec9
-caps.latest.revision: 
+caps.latest.revision: 39
 author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 60cb7a204aaa38a3aaaa24b8c04bb676715de783
-ms.sourcegitcommit: 45e4efb7aa828578fe9eb7743a1a3526da719555
+monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
+ms.openlocfilehash: 812a342edbd7f8cca9ab594295fef42e4638fc44
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="syscertificates-transact-sql"></a>sys.certificates (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -43,18 +44,18 @@ ms.lasthandoff: 11/21/2017
 |**Nombre**|**sysname**|Nombre del certificado. Es único en la base de datos.|  
 |**certificate_id**|**int**|Id. del certificado. Es único en la base de datos.|  
 |**principal_id**|**int**|Id. de la entidad de seguridad de la base de datos que posee este certificado.|  
-|**pvt_key_encryption_type**|**Char(2)**|Indica cómo se ha cifrado la clave privada.<br /><br /> NA = No hay clave privada para el certificado<br /><br /> MK = La clave privada se ha cifrado mediante la clave maestra<br /><br /> PW = La clave privada se ha cifrado mediante una contraseña definida por el usuario<br /><br /> SK = La clave privada se ha cifrado mediante la clave maestra del servicio|  
-|**pvt_key_encryption_type_desc**|**nvarchar (60)**|Descripción de cómo se ha cifrado la clave privada.<br /><br /> NO_PRIVATE_KEY<br /><br /> ENCRYPTED_BY_MASTER_KEY<br /><br /> ENCRYPTED_BY_PASSWORD<br /><br /> ENCRYPTED_BY_SERVICE_MASTER_KEY|  
+|**pvt_key_encryption_type**|**char(2)**|Indica cómo se ha cifrado la clave privada.<br /><br /> NA = No hay clave privada para el certificado<br /><br /> MK = La clave privada se ha cifrado mediante la clave maestra<br /><br /> PW = La clave privada se ha cifrado mediante una contraseña definida por el usuario<br /><br /> SK = La clave privada se ha cifrado mediante la clave maestra del servicio|  
+|**pvt_key_encryption_type_desc**|**nvarchar(60)**|Descripción de cómo se ha cifrado la clave privada.<br /><br /> NO_PRIVATE_KEY<br /><br /> ENCRYPTED_BY_MASTER_KEY<br /><br /> ENCRYPTED_BY_PASSWORD<br /><br /> ENCRYPTED_BY_SERVICE_MASTER_KEY|  
 |**is_active_for_begin_dialog**|**bit**|Si el valor es 1, este certificado se utiliza para iniciar diálogos de servicio cifrados.|  
 |**issuer_name**|**nvarchar(442)**|Nombre del emisor del certificado.|  
 |**cert_serial_number**|**nvarchar(64)**|Número de serie del certificado.|  
-|**SID**|**varbinary (85)**|SID (identificador de seguridad) de inicio de sesión para este certificado.|  
-|**string_sid**|**nvarchar (128)**|Representación en forma de cadena del SID de inicio de sesión para este certificado.|  
+|**SID**|**varbinary(85)**|SID (identificador de seguridad) de inicio de sesión para este certificado.|  
+|**string_sid**|**nvarchar(128)**|Representación en forma de cadena del SID de inicio de sesión para este certificado.|  
 |**Asunto**|**nvarchar(4000)**|Asunto del certificado.|  
 |**expiry_date**|**datetime**|Fecha en que expira el certificado.|  
 |**start_date**|**datetime**|Fecha en que se valida el certificado.|  
-|**huella digital**|**varbinary(32)**|Hash SHA-1 del certificado. El hash SHA-1 es único globalmente.|  
-|**attested_by**|**nvarchar (260)**|Solo para uso del sistema.|  
+|**Huella digital**|**varbinary(32)**|Hash SHA-1 del certificado. El hash SHA-1 es único globalmente.|  
+|**attested_by**|**nvarchar(260)**|Solo para uso del sistema.|  
 |pvt_key_last_backup_date|**datetime**|Fecha y hora cuando la clave privada del certificado se exportó por última vez.|  
   
 ## <a name="permissions"></a>Permissions  

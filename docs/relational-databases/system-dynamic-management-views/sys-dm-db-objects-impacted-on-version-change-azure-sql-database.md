@@ -1,16 +1,16 @@
 ---
-title: sys.dm_db_objects_impacted_on_version_change (Azure SQL Database) | Microsoft Docs
-ms.custom: 
+title: Sys.dm_db_objects_impacted_on_version_change (base de datos de SQL Azure) | Documentos de Microsoft
+ms.custom: ''
 ms.date: 03/03/2017
-ms.prod: 
+ms.prod: ''
 ms.prod_service: sql-database
-ms.reviewer: 
+ms.reviewer: ''
 ms.service: sql-database
 ms.component: dmv's
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - sys.dm_db_objects_impacted_on_version_change_TSQL
@@ -23,16 +23,17 @@ helpviewer_keywords:
 - dm_db_objects_impacted_on_version_change
 - sys.dm_db_objects_impacted_on_version_change
 ms.assetid: b94af834-c4f6-4a27-80a6-e8e71fa8793a
-caps.latest.revision: 
+caps.latest.revision: 9
 author: stevestein
 ms.author: sstein
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 049b26742484e432cad95a6913fa3dad10d69dbe
-ms.sourcegitcommit: c556eaf60a49af7025db35b7aa14beb76a8158c5
+monikerRange: = azure-sqldw-latest || = sqlallproducts-allversions
+ms.openlocfilehash: 812f64934283d15674c8aa0ce1f305f7729f495f
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/03/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="sysdmdbobjectsimpactedonversionchange-azure-sql-database"></a>sys.dm_db_objects_impacted_on_version_change (Azure SQL Database)
 [!INCLUDE[tsql-appliesto-xxxxxx-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-xxxxxx-asdb-xxxx-xxx-md.md)]
@@ -74,7 +75,7 @@ class  class_desc        major_id    minor_id    dependency
   
 |Pedido de|Objeto afectado|Acción correctora|  
 |-----------|---------------------|-----------------------|  
-|1|**Índices**|Volver a generar los índices identificados mediante **sys.dm_db_objects_impacted_on_version_change** por ejemplo:`ALTER INDEX ALL ON <table> REBUILD`<br />o bien<br />`ALTER TABLE <table> REBUILD`|  
+|1|**Índices**|Volver a generar los índices identificados mediante **sys.dm_db_objects_impacted_on_version_change** por ejemplo:  `ALTER INDEX ALL ON <table> REBUILD`<br />o bien<br />`ALTER TABLE <table> REBUILD`|  
 |2|**Objeto**|Todas las restricciones identificadas por **sys.dm_db_objects_impacted_on_version_change** debe volver a validarse tras se vuelve a calcular los datos de geometría y geografía de la tabla subyacente. Para las restricciones, vuelva a realizar la validación mediante ALTER TABLE. <br />Por ejemplo: <br />`ALTER TABLE <tab> WITH CHECK CHECK CONSTRAINT <constraint name>`<br />o bien<br />`ALTER TABLE <tab> WITH CHECK CONSTRAINT ALL`|  
   
   

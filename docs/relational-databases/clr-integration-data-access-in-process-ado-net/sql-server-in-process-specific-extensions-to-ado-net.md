@@ -1,15 +1,15 @@
 ---
-title: "Extensiones específicas en proceso SQL Server a ADO.NET | Documentos de Microsoft"
-ms.custom: 
+title: Extensiones específicas en proceso SQL Server a ADO.NET | Documentos de Microsoft
+ms.custom: ''
 ms.date: 03/06/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine
-ms.service: 
+ms.service: ''
 ms.component: clr
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: 
-ms.tgt_pltfrm: 
+ms.technology: ''
+ms.tgt_pltfrm: ''
 ms.topic: reference
 helpviewer_keywords:
 - data access [CLR integration]
@@ -19,20 +19,20 @@ helpviewer_keywords:
 - in-process data access providers [CLR integration]
 - extensions [CLR integration]
 ms.assetid: 781b812e-eb14-472a-85fa-aa4cdb929bee
-caps.latest.revision: 
+caps.latest.revision: 33
 author: rothja
 ms.author: jroth
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 778957280803b758bbf31775d71a7aca141d8494
-ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
+ms.openlocfilehash: f45e07f79e2dc0b23d243da0622fef571d6a6669
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/09/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="sql-server-in-process-specific-extensions-to-adonet"></a>Extensiones específicas en proceso de SQL Server a ADO.NET
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
-Hay cuatro extensiones funcionales principales a ADO.NET que son específicamente para el uso en proceso. En los siguientes temas se tratan estas extensiones en detalle.  
+  Hay cuatro extensiones funcionales principales a ADO.NET que son específicamente para el uso en proceso. En los siguientes temas se tratan estas extensiones en detalle.  
   
 ## <a name="in-this-section"></a>En esta sección  
  [Objeto SqlContext](../../relational-databases/clr-integration-data-access-in-process-ado-net/sqlcontext-object.md)  

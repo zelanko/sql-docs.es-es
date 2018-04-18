@@ -1,16 +1,16 @@
 ---
 title: sp_tables (Transact-SQL) | Documentos de Microsoft
-ms.custom: 
+ms.custom: ''
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
-ms.service: 
+ms.service: ''
 ms.component: system-stored-procedures
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - sp_tables
@@ -20,16 +20,17 @@ dev_langs:
 helpviewer_keywords:
 - sp_tables
 ms.assetid: 787a2fa5-87a1-49bd-938b-6043c245f46b
-caps.latest.revision: 
+caps.latest.revision: 43
 author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 95a0bae2722c519cea3e1dac14c633fe582ed5a8
-ms.sourcegitcommit: 45e4efb7aa828578fe9eb7743a1a3526da719555
+monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
+ms.openlocfilehash: e4a32e77f966630af880795eb3020335078cd7e5
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="sptables-transact-sql"></a>sp_tables (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -63,9 +64,9 @@ sp_tables [ [ @table_name = ] 'name' ]
  En [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], si el usuario actual posee una tabla en la que se especifica el nombre, se devuelven las columnas de esa tabla. Si no se especifica el propietario y el usuario actual no es el propietario de una tabla con el nombre especificado, este procedimiento busca una tabla con el nombre especificado que pertenezca al propietario de la base de datos. Si existe una, se devuelven las columnas de esa tabla.  
   
  [  **@table_qualifier=** ] **'***calificador***'**  
- Es el nombre del calificador de tabla. *calificador de* es **sysname**, su valor predeterminado es null. Varios productos DBMS admiten nombres de tres partes para tablas (*calificador***.** *propietario***.** *nombre*). En [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], esta columna representa el nombre de la base de datos. En algunos productos, representa el nombre del servidor del entorno de base de datos de la tabla.  
+ Es el nombre del calificador de tabla. *calificador de* es **sysname**, su valor predeterminado es null. Varios productos DBMS admiten nombres de tres partes para tablas (*calificador***.*** propietario***.*** nombre*). En [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], esta columna representa el nombre de la base de datos. En algunos productos, representa el nombre del servidor del entorno de base de datos de la tabla.  
   
- [ **,** [  **@table_type=** ] **"'***tipo***'**, **'**tipo **'"** ]  
+ [ **,** [  **@table_type=** ] **"'***tipo***'**, **'**tipo**'"** ]  
  Es una lista de los valores, separados por comas, que proporcionan información acerca de todas las tablas de los tipos especificados. Puede tratarse de **tabla**, **SYSTEMTABLE**, y **vista**. *tipo de* es **varchar (100)**, su valor predeterminado es null.  
   
 > [!NOTE]  
@@ -75,7 +76,7 @@ sp_tables [ [ @table_name = ] 'name' ]
  Determina si los caracteres de subrayado ( _ ), porcentaje ( % ) y paréntesis ( [ o ] ) se interpretan como caracteres comodín. Los valores válidos son 0 (coincidencia de patrón desactivada) y 1 (coincidencia de patrón activada). *fUsePattern* es **bits**, su valor predeterminado es 1.  
   
 ## <a name="return-code-values"></a>Valores de código de retorno  
- Ninguno  
+ None  
   
 ## <a name="result-sets"></a>Conjuntos de resultados  
   
@@ -118,7 +119,7 @@ EXEC sp_tables
    @table_qualifier = 'AdventureWorks2012';  
 ```  
   
-## <a name="examples-includesssdwfullincludessssdwfull-mdmd-and-includesspdwincludessspdw-mdmd"></a>Ejemplos: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] y[!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
+## <a name="examples-includesssdwfullincludessssdwfull-mdmd-and-includesspdwincludessspdw-mdmd"></a>Ejemplos: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] y [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
   
 ### <a name="c-returning-a-list-of-objects-that-can-be-queried-in-the-current-environment"></a>C. Devolver una lista de objetos que se pueden consultar en el entorno actual  
  En el siguiente ejemplo se devuelve una lista de objetos que pueden ser consultas en el entorno actual.  
@@ -140,7 +141,7 @@ EXEC sp_tables
 ```  
   
 ## <a name="see-also"></a>Vea también  
- [Sys.SYNONYMS &#40; Transact-SQL &#41;](../../relational-databases/system-catalog-views/sys-synonyms-transact-sql.md)   
+ [Sys.SYNONYMS &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-synonyms-transact-sql.md)   
  [Procedimientos almacenados del sistema &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
   
   

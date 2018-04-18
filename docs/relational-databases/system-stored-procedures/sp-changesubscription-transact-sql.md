@@ -1,16 +1,16 @@
 ---
 title: sp_changesubscription (Transact-SQL) | Documentos de Microsoft
-ms.custom: 
+ms.custom: ''
 ms.date: 10/28/2015
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine
-ms.service: 
+ms.service: ''
 ms.component: system-stored-procedures
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - replication
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 applies_to:
 - SQL Server
@@ -22,21 +22,21 @@ f1_keywords:
 helpviewer_keywords:
 - sp_changesubscription
 ms.assetid: f9d91fe3-47cf-4915-b6bf-14c9c3d8a029
-caps.latest.revision: 
+caps.latest.revision: 40
 author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 5e2a49e9b60927d1838205a5ae594c01ee4a1ffb
-ms.sourcegitcommit: 45e4efb7aa828578fe9eb7743a1a3526da719555
+ms.openlocfilehash: d94c10040ec7dc82640a17e5454269790acca498
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="spchangesubscription-transact-sql"></a>sp_changesubscription (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
-  Cambia las propiedades de una suscripción de inserción transaccional o de instantáneas o de una suscripción de extracción relacionada con la replicación transaccional de actualización en cola. Para cambiar las propiedades de todos los demás tipos de suscripciones de extracción, utilice [sp_change_subscription_properties &#40; Transact-SQL &#41; ](../../relational-databases/system-stored-procedures/sp-change-subscription-properties-transact-sql.md). **sp_changesubscription** se ejecuta en el publicador de la base de datos de publicación.  
+  Cambia las propiedades de una suscripción de inserción transaccional o de instantáneas o de una suscripción de extracción relacionada con la replicación transaccional de actualización en cola. Para cambiar las propiedades de todos los demás tipos de suscripciones de extracción, utilice [sp_change_subscription_properties &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-change-subscription-properties-transact-sql.md). **sp_changesubscription** se ejecuta en el publicador de la base de datos de publicación.  
   
 > [!IMPORTANT]  
 >  Al configurar un publicador con un distribuidor remoto, los valores suministrados para todos los parámetros, incluidos *job_login* y *job_password*, se envían al distribuidor como texto sin formato. Antes de ejecutar este procedimiento almacenado, se recomienda cifrar la conexión entre el publicador y su distribuidor remoto. Para obtener más información, vea [Habilitar conexiones cifradas en el motor de base de datos &#40;Administrador de configuración de SQL Server&#41;](../../database-engine/configure-windows/enable-encrypted-connections-to-the-database-engine.md).  
@@ -57,16 +57,16 @@ sp_changesubscription [ @publication = ] 'publication'
 ```  
   
 ## <a name="arguments"></a>Argumentos  
- [  **@publication** =] **'***publicación***'**  
+ [ **@publication**=] **'***publicación***'**  
  Es el nombre de la publicación que se va a cambiar. *publicación*es **sysname**, no tiene ningún valor predeterminado  
   
- [  **@article**  =] **'***artículo***'**  
+ [ **@article** =] **'***artículo***'**  
  Es el nombre del artículo que se va a cambiar. *artículo* es **sysname**, no tiene ningún valor predeterminado.  
   
- [  **@subscriber**  =] **'***suscriptor***'**  
+ [ **@subscriber** =] **'***suscriptor***'**  
  Es el nombre del suscriptor. *suscriptor* es **sysname**, no tiene ningún valor predeterminado.  
   
- [  **@destination_db**  =] **'***destination_db***'**  
+ [ **@destination_db** =] **'***destination_db***'**  
  Es el nombre de la base de datos de suscripción. *destination_db* es **sysname**, no tiene ningún valor predeterminado.  
   
  [  **@property=**] **'***propiedad***'**  
@@ -75,7 +75,7 @@ sp_changesubscription [ @publication = ] 'publication'
  [  **@value=**] **'***valor***'**  
  Es el nuevo valor para el elemento especificado *propiedad*. *valor* es **nvarchar (4000)**, y puede tener uno de los valores de la tabla.  
   
-|Propiedad|Valor|Description|  
+|Propiedad|Value|Description|  
 |--------------|-----------|-----------------|  
 |**distrib_job_login**||Inicio de sesión de la cuenta de [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows en la que se ejecuta el agente.|  
 |**distrib_job_password**||Contraseña de la cuenta de Windows con la que se ejecuta el agente.|  
@@ -105,7 +105,7 @@ sp_changesubscription [ @publication = ] 'publication'
 ## <a name="remarks"></a>Comentarios  
  **sp_changesubscription** se utiliza en la replicación de instantáneas y transaccional.  
   
- **sp_changesubscription** solo se puede utilizar para modificar las propiedades de las suscripciones de inserción o extracción relacionadas con la replicación transaccional de actualización en cola. Para cambiar las propiedades de todos los demás tipos de suscripciones de extracción, utilice [sp_change_subscription_properties &#40; Transact-SQL &#41; ](../../relational-databases/system-stored-procedures/sp-change-subscription-properties-transact-sql.md).  
+ **sp_changesubscription** solo se puede utilizar para modificar las propiedades de las suscripciones de inserción o extracción relacionadas con la replicación transaccional de actualización en cola. Para cambiar las propiedades de todos los demás tipos de suscripciones de extracción, utilice [sp_change_subscription_properties &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-change-subscription-properties-transact-sql.md).  
   
  Después de cambiar un inicio de sesión o una contraseña de agente, debe detener y reiniciar el agente para que el cambio surta efecto.  
   
@@ -113,7 +113,7 @@ sp_changesubscription [ @publication = ] 'publication'
  Solo los miembros de la **sysadmin** rol fijo de servidor o **db_owner** rol fijo de base de datos puede ejecutar **sp_changesubscription**.  
   
 ## <a name="see-also"></a>Vea también  
- [sp_addsubscription &#40; Transact-SQL &#41;](../../relational-databases/system-stored-procedures/sp-addsubscription-transact-sql.md)   
- [sp_dropsubscription &#40; Transact-SQL &#41;](../../relational-databases/system-stored-procedures/sp-dropsubscription-transact-sql.md)  
+ [sp_addsubscription &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-addsubscription-transact-sql.md)   
+ [sp_dropsubscription &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-dropsubscription-transact-sql.md)  
   
   

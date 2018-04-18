@@ -2,7 +2,7 @@
 title: Función SQLTablePrivileges | Documentos de Microsoft
 ms.custom: ''
 ms.date: 01/19/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: drivers
 ms.service: ''
 ms.component: odbc
@@ -25,13 +25,13 @@ ms.assetid: 8cfdb64f-64c5-47e6-ad57-0533ac630afa
 caps.latest.revision: 27
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 6554826bdd2e63a6ce3baad75f747d3e923216a5
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: 8a7ab7a3ce90677e0d403aaf430fa3859e9dc2a0
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="sqltableprivileges-function"></a>Función SQLTablePrivileges
 **Conformidad**  
@@ -66,7 +66,7 @@ SQLRETURN SQLTablePrivileges(
  *NameLength1*  
  [Entrada] Longitud en caracteres de **CatalogName*.  
   
- *SchemaName*  
+ *schemaName*  
  [Entrada] Patrón de búsqueda de cadena para los nombres de esquema. Si un controlador es compatible con esquemas para algunas tablas pero no para otros usuarios, por ejemplo, cuando el controlador JDBC recupera datos de los DBMS tiene diferentes, una cadena vacía ("") indica las tablas que no tengan esquemas.  
   
  Si el atributo de instrucción SQL_ATTR_METADATA_ID está establecido en SQL_TRUE, *SchemaName* se trata como un identificador y su caso no es significativo. Si es SQL_FALSE, *SchemaName* es un argumento de valor de patrón; se trata literalmente y su caso es significativo.  
@@ -74,7 +74,7 @@ SQLRETURN SQLTablePrivileges(
  *NameLength2*  
  [Entrada] Longitud en caracteres de **SchemaName*.  
   
- *Nombre de tabla*  
+ *TableName*  
  [Entrada] Patrón de búsqueda de cadena para los nombres de tabla.  
   
  Si el atributo de instrucción SQL_ATTR_METADATA_ID está establecido en SQL_TRUE, *TableName* se trata como un identificador y su caso no es significativo. Si es SQL_FALSE, *TableName* es un argumento de valor de patrón; se trata literalmente y su caso es significativo.  

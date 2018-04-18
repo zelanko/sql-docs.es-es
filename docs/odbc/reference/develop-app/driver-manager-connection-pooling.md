@@ -1,15 +1,16 @@
 ---
-title: "Agrupación de conexiones de administrador de controladores | Documentos de Microsoft"
-ms.custom: 
+title: Agrupación de conexiones de administrador de controladores | Documentos de Microsoft
+ms.custom: ''
 ms.date: 01/19/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: drivers
-ms.service: 
+ms.service: ''
 ms.component: odbc
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: drivers
-ms.tgt_pltfrm: 
+ms.technology:
+- drivers
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - connection pooling [ODBC]
@@ -17,16 +18,16 @@ helpviewer_keywords:
 - connecting to driver [ODBC], connection pooling
 - connecting to data source [ODBC], connection pooling
 ms.assetid: ee95ffdb-5aa1-49a3-beb2-7695b27c3df9
-caps.latest.revision: "32"
+caps.latest.revision: 32
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: d2883c374768723eeff4100113873130eeea6da7
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: c18e4e09d620221541bea32dc80391a7e4b5ddd9
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="driver-manager-connection-pooling"></a>Agrupación de conexiones de administrador de controladores
 Agrupación de conexiones permite a una aplicación que utilice una conexión de un grupo de conexiones que no es necesario volver a establecer para cada usuario. Una vez creada y coloca en un grupo de una conexión, una aplicación puede reutilizar la conexión sin realizar el proceso de conexión completo.  
@@ -36,7 +37,7 @@ Agrupación de conexiones permite a una aplicación que utilice una conexión de
  Además de mejoras de rendimiento, la arquitectura de agrupación de conexiones permite a un entorno y sus conexiones asociadas para usarse en varios componentes en un único proceso. Esto significa que los componentes independientes en el mismo proceso pueden interactúan entre sí sin estar relacionados entre sí. Una conexión en un grupo de conexiones puede utilizar repetidamente en varios componentes.  
   
 > [!NOTE]  
->  Agrupación de conexiones puede utilizarse con una aplicación ODBC presenta ODBC 2. *x* comportamiento, siempre y cuando la aplicación puede llamar a *SQLSetEnvAttr*. Cuando se usa la agrupación de conexiones, la aplicación no debe ejecutar instrucciones SQL que cambiar la base de datos o en el contexto de la base de datos, como cambiar la \< *base de datos**nombre*>, que cambia el catálogo utilizado por un origen de datos.  
+>  Agrupación de conexiones puede utilizarse con una aplicación ODBC presenta ODBC 2. *x* comportamiento, siempre y cuando la aplicación puede llamar a *SQLSetEnvAttr*. Cuando se usa la agrupación de conexiones, la aplicación no debe ejecutar instrucciones SQL que cambiar la base de datos o en el contexto de la base de datos, como cambiar la \< *base de datos ** nombre*>, que cambia el catálogo utilizado por un origen de datos.  
   
  Un controlador ODBC debe ser completamente segura para subprocesos y las conexiones no deben tener afinidad de subprocesos para admitir la agrupación de conexiones. Esto significa que el controlador es capaz de controlar una llamada en cualquier subproceso en cualquier momento y puede conectarse en un subproceso, para usar la conexión en otro subproceso y desconectar en un subproceso terceros.  
   

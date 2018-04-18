@@ -1,15 +1,15 @@
 ---
 title: Crear un tipo definido por el usuario | Documentos de Microsoft
-ms.custom: 
+ms.custom: ''
 ms.date: 03/16/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine
-ms.service: 
+ms.service: ''
 ms.component: clr
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: 
-ms.tgt_pltfrm: 
+ms.technology: ''
+ms.tgt_pltfrm: ''
 ms.topic: reference
 dev_langs:
 - TSQL
@@ -17,20 +17,20 @@ helpviewer_keywords:
 - user-defined types [CLR integration], creating
 - UDTs [CLR integration], creating
 ms.assetid: 0feb8b08-4062-467b-8433-e88e4e302738
-caps.latest.revision: 
+caps.latest.revision: 15
 author: rothja
 ms.author: jroth
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: c9b8c9781e445e55b1b59d60db5d8e054da0d060
-ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
+ms.openlocfilehash: b83df5bac8e4cf35d82dc3cd80a74d1c093a1e80
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/09/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="creating-user-defined-types"></a>Crear tipos definidos por el usuario
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
-Para crear un tipo definido por el usuario (UDT) capaz de instalarse en [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], debe crear primero una clase en uno de los lenguajes de programación de .NET Framework compatibles, como Visual C# o Visual Basic, que se ajuste a las especificaciones para crear UDT. A continuación, la clase puede compilarse como una biblioteca de vínculos dinámicos (DLL), que puede cargarse en [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. También puede crear e implementar UDT con Visual Studio.  
+  Para crear un tipo definido por el usuario (UDT) capaz de instalarse en [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], debe crear primero una clase en uno de los lenguajes de programación de .NET Framework compatibles, como Visual C# o Visual Basic, que se ajuste a las especificaciones para crear UDT. A continuación, la clase puede compilarse como una biblioteca de vínculos dinámicos (DLL), que puede cargarse en [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. También puede crear e implementar UDT con Visual Studio.  
   
  La capacidad de ejecutar el código de Common Language Runtime (CLR) está establecida de forma predeterminada en OFF en [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. CLR puede habilitarse mediante la **sp_configure** procedimiento almacenado del sistema tal y como se muestra en la siguiente [!INCLUDE[tsql](../../includes/tsql-md.md)] instrucciones:  
   

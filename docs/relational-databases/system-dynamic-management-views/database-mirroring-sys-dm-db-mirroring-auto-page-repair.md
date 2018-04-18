@@ -1,16 +1,16 @@
 ---
 title: sys.dm_db_mirroring_auto_page_repair (Transact-SQL) | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 03/15/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine
-ms.service: 
+ms.service: ''
 ms.component: dmv's
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - dm_db_mirroring_auto_page_repair_TSQL
@@ -24,18 +24,18 @@ helpviewer_keywords:
 - database mirroring [SQL Server], automatic page repair
 - sys.dm_db_mirroring_auto_page_repair dynamic management view
 ms.assetid: 49f0fc2a-e25e-47e1-a135-563adb509af1
-caps.latest.revision: 
+caps.latest.revision: 17
 author: stevestein
 ms.author: sstein
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 35b8224cfb63709a6096aaa937aa19dd04d9c212
-ms.sourcegitcommit: c556eaf60a49af7025db35b7aa14beb76a8158c5
+ms.openlocfilehash: d71ed7405b896a4e8542a66f445a7b6ed9376092
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/03/2018
+ms.lasthandoff: 04/16/2018
 ---
-# <a name="database-mirroring---sysdmdbmirroringautopagerepair"></a>Database Mirroring - sys.dm_db_mirroring_auto_page_repair
+# <a name="database-mirroring---sysdmdbmirroringautopagerepair"></a>Base de datos de creación de reflejo - sys.dm_db_mirroring_auto_page_repair
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
   Devuelve una fila para cada intento de reparación de página automática en cualquier base de datos reflejada en la instancia del servidor. Esta vista contiene las filas para los últimos intentos de reparación de página automática en una base de datos reflejada determinada, con un máximo de 100 filas por base de datos. En cuanto una base de datos alcanza el máximo, la fila del siguiente intento de reparación de página automática reemplazará una de las entradas existentes. En la tabla siguiente se define el significado de las distintas columnas.  
@@ -57,7 +57,7 @@ ms.lasthandoff: 02/03/2018
 ## <a name="see-also"></a>Vea también  
  [Reparación de página automática &#40;grupos de disponibilidad/creación de reflejo de la base de datos&#41;](../../sql-server/failover-clusters/automatic-page-repair-availability-groups-database-mirroring.md)   
  [Funciones y vistas de administración dinámica &#40;Transact-SQL&#41;](~/relational-databases/system-dynamic-management-views/system-dynamic-management-views.md)   
- [suspect_pages &#40; Transact-SQL &#41;](../../relational-databases/system-tables/suspect-pages-transact-sql.md)   
+ [suspect_pages & #40; Transact-SQL & #41;](../../relational-databases/system-tables/suspect-pages-transact-sql.md)   
  [Administrar la tabla suspect_pages &#40;SQL Server&#41;](../../relational-databases/backup-restore/manage-the-suspect-pages-table-sql-server.md)  
   
   

@@ -1,16 +1,16 @@
 ---
-title: sys.fn_cdc_has_column_changed (Transact-SQL) | Microsoft Docs
-ms.custom: 
+title: Sys.fn_cdc_has_column_changed (Transact-SQL) | Documentos de Microsoft
+ms.custom: ''
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine
-ms.service: 
+ms.service: ''
 ms.component: system-functions
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 applies_to:
 - SQL Server (starting with 2008)
@@ -25,16 +25,16 @@ helpviewer_keywords:
 - sys.fn_cdc_has_column_changed
 - fn_cdc_has_column_changed
 ms.assetid: 2b9e6278-050d-4ffc-8d1a-09606180facc
-caps.latest.revision: 
+caps.latest.revision: 16
 author: rothja
 ms.author: jroth
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 22c44bf41cbb88098135f8a44432cad0acbc1fea
-ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
+ms.openlocfilehash: 4edeab1edc7b34978c7173a87cafdff7baf23c30
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/09/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="sysfncdchascolumnchanged-transact-sql"></a>sys.fn_cdc_has_column_changed (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -58,7 +58,7 @@ sys.fn_cdc_has_column_changed ( 'capture_instance','column_name' , update_mask )
  Es la columna capturada de la instancia de captura especificada para la que se creará un informe. *column_name* es **sysname**.  
   
  *update_mask*  
- Es la máscara que identifica las columnas actualizadas en cualquier fila de cambio asociada. *update_mask* is **varbinary(128)**.  
+ Es la máscara que identifica las columnas actualizadas en cualquier fila de cambio asociada. *update_mask* es **varbinary (128)**.  
   
 ## <a name="return-type"></a>Tipo devuelto  
  **bit**  

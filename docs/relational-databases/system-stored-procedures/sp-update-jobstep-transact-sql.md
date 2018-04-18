@@ -1,8 +1,8 @@
 ---
-title: sp_update_jobstep (Transact-SQL) | Microsoft Docs
+title: sp_update_jobstep (Transact-SQL) | Documentos de Microsoft
 ms.custom: ''
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine
 ms.service: ''
 ms.component: system-stored-procedures
@@ -25,11 +25,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: c81c22e3fb6de374b378df4ef52b316efe65fdb6
-ms.sourcegitcommit: d6b1695c8cbc70279b7d85ec4dfb66a4271cdb10
+ms.openlocfilehash: 196ef988c33ad6b039af73e498ffba85bc1b2f7e
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/10/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="spupdatejobstep-transact-sql"></a>sp_update_jobstep (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -71,22 +71,22 @@ sp_update_jobstep
  [ **@job_id =**] *job_id*  
  Número de identificación del trabajo al que perteneces el paso. *job_id*es **uniqueidentifier**, su valor predeterminado es null. Cualquier *job_id* o *job_name* debe especificarse, pero no pueden especificarse ambos.  
   
- [ **@job_name =**] **'***job_name***'**  
+ [  **@job_name =**] **'***job_name***'**  
  El nombre del trabajo al que pertenece el paso. *job_name*es **sysname**, su valor predeterminado es null. Cualquier *job_id* o *job_name* debe especificarse, pero no pueden especificarse ambos.  
   
  [ **@step_id =**] *step_id*  
  Número de identificación del paso de trabajo que va a modificarse. Este número no puede modificarse. *step_id*es **int**, no tiene ningún valor predeterminado.  
   
- [ **@step_name =**] **'***step_name***'**  
+ [  **@step_name =**] **'***step_name***'**  
  Es el nombre nuevo del paso. *Step_name*es **sysname**, su valor predeterminado es null.  
   
  [ **@subsystem =**] **'***subsystem***'**  
  El subsistema que utiliza el agente de Microsoft SQL Server para ejecutar *comando*. *subsistema* es **nvarchar (40)**, su valor predeterminado es null.  
   
- [ **@command =**] **'***command***'**  
+ [  **@command =**] **'***comando***'**  
  Los comandos que se ejecutará a través de *subsistema*. *comando* es **nvarchar (max)**, su valor predeterminado es null.  
   
- [ **@additional_parameters =**] **'***parameters***'**  
+ [  **@additional_parameters =**] **'***parámetros***'**  
  [!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]  
   
  [ **@cmdexec_success_code =**] *success_code*  
@@ -105,7 +105,7 @@ sp_update_jobstep
  [ **@on_success_step_id =**] *success_step_id*  
  El número de identificación del paso de este trabajo que se ejecutará si el paso termina correctamente y *success_action* es **4**. *success_step_id* es **int**, su valor predeterminado es null.  
   
- [ **@on_fail_action =**] *fail_action*  
+ [  **@on_fail_action =**] *fail_action*  
  La acción que se realizará si se produce un error en el paso. *fail_action* es **tinyint**, su valor predeterminado es null y puede tener uno de estos valores.  
   
 |Value|Descripción (acción)|  
@@ -115,7 +115,7 @@ sp_update_jobstep
 |**3**|Ir al paso siguiente.|  
 |**4**|Vaya al paso *fail_step_id **.*|  
   
- [ **@on_fail_step_id =**] *fail_step_id*  
+ [  **@on_fail_step_id =**] *fail_step_id.*  
  El número de identificación del paso de este trabajo que se ejecutará si se produce un error en el paso y *fail_action* es **4**. *fail_step_id* es **int**, su valor predeterminado es null.  
   
  [ **@server =**] **'***server***'**  
@@ -136,7 +136,7 @@ sp_update_jobstep
  [ **@os_run_priority =**] *run_priority*  
  [!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]  
   
- [ **@output_file_name =**] **'***file_name***'**  
+ [  **@output_file_name =**] **'***file_name***'**  
  Nombre del archivo en el que se guarda el resultado de este paso. *file_name* es **nvarchar (200)**, su valor predeterminado es null. Este parámetro solo es válido con comandos que se ejecutan en subsistemas [!INCLUDE[tsql](../../includes/tsql-md.md)] o CmdExec.  
   
  Para restablecer output_file_name en NULL, debe establecer *nombre_archivo_de_salida* en una cadena vacía (' ') o en una cadena de caracteres en blanco, pero no se puede usar el **CHAR(32)** (función). Por ejemplo, establezca este argumento en una cadena vacía del modo siguiente:  
@@ -154,10 +154,10 @@ sp_update_jobstep
 |**8**|Escribir el registro en la tabla (sobrescribir el historial existente)|  
 |**16**|Escribir el registro en la tabla (anexar al historial existente)|  
   
- [ **@proxy_id**= ] *proxy_id*  
+ [ **@proxy_id**=] *proxy_id*  
  Número de identificación del proxy con el que se ejecuta el paso de trabajo. *proxy_id* es de tipo **int**, su valor predeterminado es null. Si no hay ningún *proxy_id* se especifica, no *proxy_name* se especifica y no *nombre_usuario* se especifica, el paso de trabajo se ejecuta como la cuenta de servicio para [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] agente.  
   
- [ **@proxy_name**= ] **'***proxy_name***'**  
+ [ **@proxy_name**=] **'***proxy_name***'**  
  Nombre del proxy con el que se ejecuta el paso de trabajo. *proxy_name* es de tipo **sysname**, su valor predeterminado es null. Si no hay ningún *proxy_id* se especifica, no *proxy_name* se especifica y no *nombre_usuario* se especifica, el paso de trabajo se ejecuta como la cuenta de servicio para [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] agente.  
   
 ## <a name="return-code-values"></a>Valores de código de retorno  

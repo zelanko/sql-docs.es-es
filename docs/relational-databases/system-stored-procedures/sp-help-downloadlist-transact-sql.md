@@ -1,16 +1,16 @@
 ---
-title: sp_help_downloadlist (Transact-SQL) | Microsoft Docs
-ms.custom: 
+title: sp_help_downloadlist (Transact-SQL) | Documentos de Microsoft
+ms.custom: ''
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine
-ms.service: 
+ms.service: ''
 ms.component: system-stored-procedures
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - sp_help_downloadlist_TSQL
@@ -20,16 +20,16 @@ dev_langs:
 helpviewer_keywords:
 - sp_help_downloadlist
 ms.assetid: 745b265b-86e8-4399-b928-c6969ca1a2c8
-caps.latest.revision: 
+caps.latest.revision: 24
 author: stevestein
 ms.author: sstein
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: c768ab8d8908d6c62805539e3fb811cee293da55
-ms.sourcegitcommit: c556eaf60a49af7025db35b7aa14beb76a8158c5
+ms.openlocfilehash: b891780620de40d8541b7fc42e100b575e6ad7d1
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/03/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="sphelpdownloadlist-transact-sql"></a>sp_help_downloadlist (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -67,32 +67,32 @@ sp_help_downloadlist { [ @job_id = ] job_id | [ @job_name = ] 'job_name' }
   
 |Value|Description|  
 |-----------|-----------------|  
-|**DEFECT**|Operación del servidor que solicita al servidor de destino para dar de baja del servidor maestro **SQLServerAgent** servicio.|  
+|**DAR DE BAJA**|Operación del servidor que solicita al servidor de destino para dar de baja del servidor maestro **SQLServerAgent** servicio.|  
 |**DELETE**|Operación de trabajo que quita un trabajo completo.|  
 |**INSERT**|Operación de trabajo que inserta un trabajo completo o actualiza un trabajo existente. Esta operación incluye todos los pasos y programaciones del trabajo, si corresponde.|  
-|**RE-ENLIST**|Operación del servidor que hace que el servidor de destino vuelva a enviar la información de alta, incluidos el intervalo de sondeo y la zona horaria del dominio multiservidor. El servidor de destino también vuelve a descargar el **MSXOperator** detalles.|  
+|**VOLVER A DAR DE ALTA**|Operación del servidor que hace que el servidor de destino vuelva a enviar la información de alta, incluidos el intervalo de sondeo y la zona horaria del dominio multiservidor. El servidor de destino también vuelve a descargar el **MSXOperator** detalles.|  
 |**SET-POLL**|Operación del servidor que establece el intervalo, en segundos, con el que los servidores de destino sondean el dominio multiservidor. Si se especifica, *valor* se interpreta como el valor de intervalo necesario y puede ser un valor de **10** a **28.800**.|  
-|**START**|Operación de trabajo que solicita el inicio de la ejecución del trabajo.|  
-|**STOP**|Operación de trabajo que solicita la detención de la ejecución del trabajo.|  
-|**SYNC-TIME**|Operación de servidor que hace que el servidor de destino sincronice su reloj del sistema con el dominio multiservidor. Como ésta es una operación muy costosa, ejecútela de forma limitada, con poca frecuencia.|  
+|**INICIO**|Operación de trabajo que solicita el inicio de la ejecución del trabajo.|  
+|**DETENER**|Operación de trabajo que solicita la detención de la ejecución del trabajo.|  
+|**HORA DE SINCRONIZACIÓN**|Operación de servidor que hace que el servidor de destino sincronice su reloj del sistema con el dominio multiservidor. Como ésta es una operación muy costosa, ejecútela de forma limitada, con poca frecuencia.|  
 |**UPDATE**|Operación de trabajo que actualiza solo el **sysjobs** información para un trabajo, no los pasos de trabajo o las programaciones. Se llama automáticamente a **sp_update_job**.|  
   
- [ **@object_type=** ] **'***object_type***'**  
- Tipo de objeto del trabajo especificado. *object_type* es **varchar(64)**, su valor predeterminado es null. *object_type* puede ser JOB o SERVER. Para obtener más información acerca de cómo válido *object_type*valores, vea [sp_add_category &#40; Transact-SQL &#41; ](../../relational-databases/system-stored-procedures/sp-add-category-transact-sql.md).  
+ [  **@object_type=** ] **'***object_type***'**  
+ Tipo de objeto del trabajo especificado. *object_type* es **varchar(64)**, su valor predeterminado es null. *object_type* puede ser JOB o SERVER. Para obtener más información acerca de cómo válido *object_type*valores, consulte [sp_add_category &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-add-category-transact-sql.md).  
   
- [ **@object_name=** ] **'***object_name***'**  
+ [  **@object_name=** ] **'***object_name***'**  
  Nombre del objeto. *object_name* es **sysname**, su valor predeterminado es null. Si *object_type* es JOB, *object_name*es el nombre del trabajo. Si *object_type*es servidor, *object_name*es el nombre del servidor.  
   
- [ **@target_server=** ] **'***target_server***'**  
+ [  **@target_server=** ] **'***target_server***'**  
  El nombre del servidor de destino. *target_server* es **nvarchar (128)**, su valor predeterminado es null.  
   
- [ **@has_error=** ] *has_error*  
+ [  **@has_error=** ] *has_error*  
  Indica si el trabajo tiene que reconocer errores. *has_error* es **tinyint**, su valor predeterminado es null, lo que indica que no se debe reconocer ningún error. **1** indica que se deben reconocer todos los errores.  
   
  [  **@status=** ] *estado*  
  Estado del trabajo. *estado* es **tinyint**, su valor predeterminado es null.  
   
- [ **@date_posted=** ] *date_posted*  
+ [  **@date_posted=** ] *date_posted*  
  Fecha y hora desde las que se van a presentar las entradas en el conjunto de resultados. *date_posted* es **datetime**, su valor predeterminado es null.  
   
 ## <a name="return-code-values"></a>Valores de código de retorno  
@@ -102,7 +102,7 @@ sp_help_downloadlist { [ @job_id = ] job_id | [ @job_name = ] 'job_name' }
   
 |Nombre de columna|Tipo de datos|Description|  
 |-----------------|---------------|-----------------|  
-|**instance_id**|**int**|Número de identificación entero único de la instrucción.|  
+|**valor de instance_id**|**int**|Número de identificación entero único de la instrucción.|  
 |**source_server**|**nvarchar(30)**|Nombre de equipo del servidor del que proviene la instrucción. En [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] versión 7.0, esto siempre es el nombre del equipo del servidor principal (MSX).|  
 |**operation_code**|**nvarchar(4000)**|Código de operación de la instrucción.|  
 |**object_name**|**sysname**|Objeto afectado por la instrucción.|  

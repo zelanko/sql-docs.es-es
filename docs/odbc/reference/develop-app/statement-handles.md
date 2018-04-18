@@ -1,30 +1,31 @@
 ---
 title: Identificadores de instrucciones | Documentos de Microsoft
-ms.custom: 
+ms.custom: ''
 ms.date: 01/19/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: drivers
-ms.service: 
+ms.service: ''
 ms.component: odbc
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: drivers
-ms.tgt_pltfrm: 
+ms.technology:
+- drivers
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - statement handles [ODBC]
 - handles [ODBC], statement
 ms.assetid: 65d6d78b-a8c8-489a-9dad-f8d127a44882
-caps.latest.revision: "5"
+caps.latest.revision: 5
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 0d80db9c7ce795514dd362e37170aa58cce817c5
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: 1691020070667876d56414b3d93dee384538ae8f
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="statement-handles"></a>Identificadores de instrucciones
 A *instrucción* es más fácil pensar de como una instrucción SQL, como **seleccione \* de empleados**. Sin embargo, una instrucción es algo más que una instrucción SQL, consta de toda la información asociada a esa instrucción SQL, como los conjuntos de resultados creados por la instrucción y los parámetros utilizados en la ejecución de la instrucción. Una instrucción no es necesario tener una instrucción SQL definida por la aplicación. Por ejemplo, cuando una función de catálogo como **SQLTables** se ejecuta en una instrucción, se ejecuta una instrucción SQL predefinida que devuelve una lista de nombres de tabla.  

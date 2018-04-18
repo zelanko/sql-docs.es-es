@@ -1,15 +1,16 @@
 ---
-title: "Los cursores desplazables y aislamiento de transacción | Documentos de Microsoft"
-ms.custom: 
+title: Los cursores desplazables y aislamiento de transacción | Documentos de Microsoft
+ms.custom: ''
 ms.date: 01/19/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: drivers
-ms.service: 
+ms.service: ''
 ms.component: odbc
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: drivers
-ms.tgt_pltfrm: 
+ms.technology:
+- drivers
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - isolation levels [ODBC]
@@ -17,16 +18,16 @@ helpviewer_keywords:
 - transaction isolation [ODBC]
 - transactions [ODBC], isolation
 ms.assetid: f0216f4a-46e3-48ae-be0a-e2625e8403a6
-caps.latest.revision: "9"
+caps.latest.revision: 9
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 6c9e38f4287a8832d8e794940093ce696ac0eaf7
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: 68517f733dcb10f75669341bdef861b035b79a72
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="scrollable-cursors-and-transaction-isolation"></a>Los cursores desplazables y aislamiento de transacción
 En la tabla siguiente se enumera los factores que rigen la visibilidad de los cambios.  
@@ -46,17 +47,17 @@ En la tabla siguiente se enumera los factores que rigen la visibilidad de los ca
 |Cursor type\action|En sí mismo|El propietario<br /><br /> Transacciones de|Otro<br /><br /> Transacciones de<br /><br /> (RU[a])|Otro<br /><br /> Transacciones de<br /><br /> (RC[a])|Otro<br /><br /> Transacciones de<br /><br /> (RR[a])|Otro<br /><br /> Transacciones de<br /><br /> (S[a])|  
 |-------------------------|----------|-----------------|----------------------------------|----------------------------------|----------------------------------|---------------------------------|  
 |Estático|||||||  
-|Insert|Quizá [b]|no|no|no|no|no|  
-|Update|Quizá [b]|no|no|no|no|no|  
-|DELETE|Quizá [b]|no|no|no|no|no|  
+|Insert|Quizá [b]|no|No|No|No|no|  
+|Update|Quizá [b]|no|No|No|No|no|  
+|Delete|Quizá [b]|no|No|No|No|no|  
 |Dirigido por conjuntos de claves|||||||  
-|Insert|Quizá [b]|no|no|no|no|no|  
-|Update|Sí|Sí|Sí|Sí|no|no|  
-|DELETE|Quizá [b]|Sí|Sí|Sí|no|no|  
+|Insert|Quizá [b]|no|No|No|No|no|  
+|Update|Sí|Sí|Sí|Sí|No|no|  
+|Delete|Quizá [b]|Sí|Sí|Sí|No|no|  
 |Dinámica|||||||  
 |Insert|Sí|Sí|Sí|Sí|Sí|no|  
-|Update|Sí|Sí|Sí|Sí|no|no|  
-|DELETE|Sí|Sí|Sí|Sí|no|no|  
+|Update|Sí|Sí|Sí|Sí|No|no|  
+|Delete|Sí|Sí|Sí|Sí|No|no|  
   
  [a] las letras entre paréntesis indican el nivel de aislamiento de la transacción que contiene el cursor; el nivel de aislamiento de la otra transacción (en el que se realizó el cambio) es irrelevante.  
   

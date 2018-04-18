@@ -1,8 +1,8 @@
 ---
-title: sp_create_plan_guide (Transact-SQL) | Microsoft Docs
+title: sp_create_plan_guide (Transact-SQL) | Documentos de Microsoft
 ms.custom: ''
 ms.date: 03/16/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine
 ms.service: ''
 ms.component: system-stored-procedures
@@ -25,11 +25,11 @@ author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 70caae94a352f014757bd00099b43019c08f4a2c
-ms.sourcegitcommit: d6b1695c8cbc70279b7d85ec4dfb66a4271cdb10
+ms.openlocfilehash: d213b79938f0856d9e17b36366958a89e7ecd2be
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/10/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="spcreateplanguide-transact-sql"></a>sp_create_plan_guide (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -61,12 +61,12 @@ sp_create_plan_guide [ @name = ] N'plan_guide_name'
  [ @name =] N'*plan_guide_name*'  
  Es el nombre de la guía de plan. Los nombres de guía de plan se encuentran en el ámbito de la base de datos actual. *plan_guide_name* debe cumplir las reglas de [identificadores](../../relational-databases/databases/database-identifiers.md) y no puede comenzar con el signo de número (#). La longitud máxima de *plan_guide_name* es de 124 caracteres.  
   
- [ @stmt = ] N'*statement_text*'  
+ [ @stmt =] N'*statement_text*'  
  Es una instrucción [!INCLUDE[tsql](../../includes/tsql-md.md)] que se va a utilizar en la creación de una guía de plan. Cuando el [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] consulta optimizador reconoce una consulta que coincida con *statement_text*, *plan_guide_name* surte efecto. Para la creación de una guía de plan sea correcta, *statement_text* deben aparecer en el contexto especificado por el @type, @module_or_batch, y @params parámetros.  
   
  *statement_text* deben indicarse en una forma que permita al optimizador de consultas hacerlo coincidir con la instrucción correspondiente suministrada dentro del lote o módulo identificado por @module_or_batch y @params. Para obtener más información, vea la sección "Notas". El tamaño de *statement_text* solo está limitado por la memoria disponible del servidor.  
   
- [@type = ]N'{ OBJECT | SQL | TEMPLATE }'  
+ [@type =] N'{OBJETO | SQL | PLANTILLA}'  
  Es el tipo de entidad en la que *statement_text* aparece. Esto especifica el contexto para hacer coincidir *statement_text* a *plan_guide_name*.  
   
  OBJECT  
@@ -78,14 +78,14 @@ sp_create_plan_guide [ @name = ] N'plan_guide_name'
  TEMPLATE  
  Indica que la Guía de plan se aplica a cualquier consulta que se parametrice como se indica en *statement_text*. Si se especifica TEMPLATE, solo la PARAMETRIZACIÓN {FORCED | Se puede especificar la sugerencia de consulta SIMPLE} en el @hints parámetro. Para obtener más información acerca de las guías de plan de plantilla, consulte [especificar comportamiento de parametrización de consultas mediante guías de Plan utilizando](../../relational-databases/performance/specify-query-parameterization-behavior-by-using-plan-guides.md).  
   
- [@module_or_batch =] {N'[ *schema_name*. ] *object_name*' | N'*batch_text*' | NULL }  
+ [@module_or_batch =] {N'[ *schema_name*. ] *object_name*' | N'*batch_text*' | NULL}  
  Especifica el nombre del objeto en el que *statement_text* aparece, o el texto del lote en el que *statement_text* aparece. El texto del lote no puede incluir un uso*base de datos* instrucción.  
   
  Para obtener una guía de plan para que coincida con un lote enviado desde una aplicación, *batch_tex*debe suministrarse en el mismo formato, carácter de carácter, en que se envía a [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Para facilitar esta concordancia no se realiza ninguna conversión interna. Para obtener más información, vea la sección Comentarios.  
   
  [*schema_name*.] *object_name* especifica el nombre de un [!INCLUDE[tsql](../../includes/tsql-md.md)] almacenados procedimiento, función escalar, función con valores de tabla de múltiples instrucciones o [!INCLUDE[tsql](../../includes/tsql-md.md)] desencadenador DML que contiene *statement_text*. Si *schema_name* no se especifica, *schema_name* utiliza el esquema del usuario actual. Si se especifica NULL y @type = 'SQL', el valor de @module_or_batch se establece en el valor de @stmt. Si @type = ' plantilla**'**, @module_or_batch debe ser NULL.  
   
- [ @params = ]{ N'*@parameter_name data_type* [ ,*...n* ]' | NULL }  
+ [ @params =] {N' *@parameter_name data_type* [,*.. .n* ]' | NULL}  
  Especifica las definiciones de todos los parámetros que se incrustan en *statement_text*. @params se aplica solo cuando alguna de las acciones siguientes es true:  
   
 -   @type = 'SQL' o 'TEMPLATE'. Si 'TEMPLATE' @params no debe ser NULL.  

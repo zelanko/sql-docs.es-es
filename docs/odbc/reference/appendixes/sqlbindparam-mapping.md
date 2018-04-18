@@ -1,30 +1,31 @@
 ---
-title: "Asignación de SQLBindParam | Documentos de Microsoft"
-ms.custom: 
+title: Asignación de SQLBindParam | Documentos de Microsoft
+ms.custom: ''
 ms.date: 01/19/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: drivers
-ms.service: 
+ms.service: ''
 ms.component: odbc
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: drivers
-ms.tgt_pltfrm: 
+ms.technology:
+- drivers
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - SQLBindparam function [ODBC], mapping
 - mapping deprecated functions [ODBC], SQLBindParam
 ms.assetid: 375f8f24-36de-4946-916e-c75abc6f070d
-caps.latest.revision: "6"
+caps.latest.revision: 6
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 7c2ca8ae4b0b7b522259677b252e2b0d24d14b5d
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: 1a2c78cd97b6577be8d11d07325165d6d82cd895
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="sqlbindparam-mapping"></a>Asignación de SQLBindParam
 **SQLBindParam** no se puede llamar realmente en desuso porque no estaba presente en ODBC; sin embargo, todavía representa funcionalidad duplicada, debe exportarlo ya ISO y abra compatible con grupo de aplicaciones se va a usar el Administrador de controladores. Dado que **SQLBindParameter** contiene toda la funcionalidad de **SQLBindParam**, **SQLBindParam** va a asignar sobre **SQLBindParameter** (cuando el controlador subyacente es una aplicación ODBC 3*.x* controlador). Una aplicación ODBC 3*.x* controlador no es necesario implementar **SQLBindParam**.  

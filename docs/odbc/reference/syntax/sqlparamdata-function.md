@@ -2,7 +2,7 @@
 title: SQLParamData, función | Documentos de Microsoft
 ms.custom: ''
 ms.date: 01/19/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: drivers
 ms.service: ''
 ms.component: odbc
@@ -25,13 +25,13 @@ ms.assetid: 68fe010d-9539-4e5b-a260-c8d32423b1db
 caps.latest.revision: 26
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 4449d7b0af1c8138680d11b71b0a696d5f2d65fa
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: 395cf795659b47398639f30fbd863b1f2d385e55
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="sqlparamdata-function"></a>SQLParamData, función
 **Conformidad**  
@@ -84,7 +84,7 @@ SQLRETURN SQLParamData(
  Si **SQLParamData** se llama durante el envío de datos para un parámetro en una instrucción SQL, puede devolver cualquier SQLSTATE que puede ser devueltos por la función se llama para ejecutar la instrucción (**SQLExecute** o **SQLExecDirect**). Si se llama al enviar datos de una columna que se va a actualizar o agregar con **SQLBulkOperations** o se actualiza con **SQLSetPos**, puede devolver cualquier SQLSTATE, que puede ser devueltos por  **SQLBulkOperations** o **SQLSetPos**.  
   
 ## <a name="comments"></a>Comentarios  
- **SQLParamData** se puede llamar para proporcionar datos de datos en ejecución de dos usos: datos de parámetro que se usará en una llamada a **SQLExecute** o **SQLExecDirect**, o los datos de columna que se utilizará Cuando se actualiza o se agregan mediante una llamada a una fila **SQLBulkOperations** o actualizar a través de una llamada a **SQLSetPos**. En tiempo de ejecución, **SQLParamData** devuelve a la aplicación el controlador de un indicador de los datos que se requiere.  
+ **SQLParamData** se puede llamar para proporcionar datos de datos en ejecución de dos usos: datos de parámetro que se usará en una llamada a **SQLExecute** o **SQLExecDirect**, o datos de la columna que se utiliza cuando una fila se actualiza o se agregan mediante una llamada a **SQLBulkOperations** o actualizar a través de una llamada a **SQLSetPos**. En tiempo de ejecución, **SQLParamData** devuelve a la aplicación el controlador de un indicador de los datos que se requiere.  
   
  Cuando una aplicación llama **SQLExecute**, **SQLExecDirect**, **SQLBulkOperations**, o **SQLSetPos**, el controlador devuelve SQL_NEED_ DATOS si necesita datos de datos en ejecución. Una aplicación, a continuación, llama a **SQLParamData** para determinar qué datos se deben enviar. Si el controlador requiere que los datos de parámetro, el controlador devuelve en el  *\*ValuePtrPtr* el valor que la aplicación se coloca en el búfer de conjunto de filas del búfer de salida. La aplicación puede utilizar este valor para determinar qué datos de parámetro que se está solicitando el controlador. Si el controlador requiere que los datos de columna, el controlador devuelve en el  *\*ValuePtrPtr* almacenar en búfer la dirección que originalmente estaba enlazada la columna, como se indica a continuación:  
   

@@ -2,7 +2,7 @@
 title: Las matrices de parámetros de enlace | Documentos de Microsoft
 ms.custom: ''
 ms.date: 01/19/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: drivers
 ms.service: ''
 ms.component: odbc
@@ -20,13 +20,13 @@ ms.assetid: 037afe23-052d-4f3a-8aa7-45302b199ad0
 caps.latest.revision: 14
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 09b3a3c732b34a5a1a7a1d98e2ebe9740069f72e
-ms.sourcegitcommit: 8f1d1363e18e0c32ff250617ab6cb2da2147bf8e
+ms.openlocfilehash: 7c019c6669dcefe0992c27b786df83e4ce9c03c1
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/03/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="binding-arrays-of-parameters"></a>Las matrices de parámetros de enlace
 Las aplicaciones que utilizan matrices de parámetros de enlazar las matrices a los parámetros en la instrucción SQL. Hay dos estilos de enlace:  

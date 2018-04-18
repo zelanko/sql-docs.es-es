@@ -1,31 +1,32 @@
 ---
-title: "Las subclaves de la especificación del origen de datos | Documentos de Microsoft"
-ms.custom: 
+title: Las subclaves de la especificación del origen de datos | Documentos de Microsoft
+ms.custom: ''
 ms.date: 01/19/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: drivers
-ms.service: 
+ms.service: ''
 ms.component: odbc
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: drivers
-ms.tgt_pltfrm: 
+ms.technology:
+- drivers
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - data source specification subkeys [ODBC]
 - registry entries for data sources [ODBC], data source specification subkeys
 - subkeys [ODBC], data source specification subkeys
 ms.assetid: d7e88a07-e6ab-4258-a45d-1ca21234fbec
-caps.latest.revision: "5"
+caps.latest.revision: 5
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 6394b29ff1f76fd0f7edd24a3c239de367c3d58b
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: 5f3080d85b2c01491d94ecb75b956d6c67bc061b
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="data-source-specification-subkeys"></a>Subclaves de especificación del origen de datos
 Cada origen de datos aparece en la subclave de orígenes de datos ODBC tiene una subclave de su propio. Esta subclave tiene el mismo nombre que el valor correspondiente en la subclave de orígenes de datos ODBC. Los valores bajo esta subclave deben la DLL del controlador en la lista y pueden mostrar una descripción del origen de datos. Si el controlador admite traductores, los valores pueden enumerar el nombre de un traductor de manera predeterminada, el archivo DLL de traducción predeterminado y la opción de traducción predeterminado. Los valores también pueden mostrar otra información requerida por el controlador para conectarse al origen de datos. Por ejemplo, el controlador podría requerir un nombre de servidor, el nombre de base de datos o el nombre del esquema.  

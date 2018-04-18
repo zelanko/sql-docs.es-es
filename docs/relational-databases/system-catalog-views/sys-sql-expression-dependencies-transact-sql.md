@@ -1,16 +1,16 @@
 ---
 title: Sys.sql_expression_dependencies (Transact-SQL) | Documentos de Microsoft
-ms.custom: 
+ms.custom: ''
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine, sql-data-warehouse, pdw
-ms.service: 
+ms.service: ''
 ms.component: system-catalog-views
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - sys.sql_expression_dependencies
@@ -22,23 +22,24 @@ dev_langs:
 helpviewer_keywords:
 - sys.sql_expression_dependencies catalog view
 ms.assetid: 78a218e4-bf99-4a6a-acbf-ff82425a5946
-caps.latest.revision: 
+caps.latest.revision: 42
 author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 099229e10b875d738e970d8f2c4a0c9ac3e7b5e6
-ms.sourcegitcommit: 45e4efb7aa828578fe9eb7743a1a3526da719555
+monikerRange: '>= aps-pdw-2016 || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
+ms.openlocfilehash: 2e856435a18b89d9708112bd81ca2c8976371165
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="syssqlexpressiondependencies-transact-sql"></a>sys.sql_expression_dependencies (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-asdw-pdw-md](../../includes/tsql-appliesto-ss2008-xxxx-asdw-pdw-md.md)]
 
   Contiene una fila para cada dependencia por nombre en una entidad definida por el usuario en la base de datos actual. Esto incluye dependencias entre funciones definida por el usuario compiladas de forma nativa, escalares y otra [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] módulos. Se crea una dependencia entre dos entidades cuando una entidad, llamada la *hacía referencia a entidad*, aparece por nombre en una expresión SQL persistente de otra entidad, llamada la *que hacen referencia a entidad*. Por ejemplo, si en la definición de una vista se hace referencia a una tabla, la vista, como entidad que hace la referencia, depende de la tabla, la entidad a la que se hace referencia. Si desapareciera la tabla, la vista sería inservible.  
   
- Para obtener más información, consulte [Scalar User-Defined funciones para OLTP en memoria](../../relational-databases/in-memory-oltp/scalar-user-defined-functions-for-in-memory-oltp.md).  
+ Para obtener más información, vea [Funciones escalares definidas por el usuario para OLTP en memoria](../../relational-databases/in-memory-oltp/scalar-user-defined-functions-for-in-memory-oltp.md).  
   
  Puede utilizar esta vista de catálogo para notificar información de dependencia de las entidades siguientes:  
   
@@ -57,11 +58,11 @@ ms.lasthandoff: 11/21/2017
 |referencing_id|**int**|Identificador de la entidad que hace la referencia. No admite valores NULL.|  
 |referencing_minor_id|**int**|Identificador de la columna cuando la entidad de referencia es una columna; en caso contrario, es 0. No admite valores NULL.|  
 |referencing_class|**tinyint**|Clase de la entidad que hace la referencia.<br /><br /> 1 = Objeto o columna<br /><br /> 12 = Desencadenador DDL de base de datos<br /><br /> 13 = Desencadenador DDL de servidor<br /><br /> No admite valores NULL.|  
-|referencing_class_desc|**nvarchar (60)**|Descripción de la clase de la entidad que hace la referencia.<br /><br /> OBJECT_OR_COLUMN<br /><br /> DATABASE_DDL_TRIGGER<br /><br /> SERVER_DDL_TRIGGER<br /><br /> No admite valores NULL.|  
+|referencing_class_desc|**nvarchar(60)**|Descripción de la clase de la entidad que hace la referencia.<br /><br /> OBJECT_OR_COLUMN<br /><br /> DATABASE_DDL_TRIGGER<br /><br /> SERVER_DDL_TRIGGER<br /><br /> No admite valores NULL.|  
 |is_schema_bound_reference|**bit**|1 = La entidad a la que se hace referencia está enlazada a un esquema.<br /><br /> 0 = La entidad a la que se hace referencia no está enlazada a un esquema.<br /><br /> No admite valores NULL.|  
 |referenced_class|**tinyint**|Clase de la entidad a la que se hace referencia.<br /><br /> 1 = Objeto o columna<br /><br /> 6 = Tipo<br /><br /> 10 = Colección de esquemas XML<br /><br /> 21 = Función de partición<br /><br /> No admite valores NULL.|  
-|referenced_class_desc|**nvarchar (60)**|Descripción de la clase de la entidad a la que se hace referencia.<br /><br /> OBJECT_OR_COLUMN<br /><br /> TYPE<br /><br /> XML_SCHEMA_COLLECTION<br /><br /> PARTITION_FUNCTION<br /><br /> No admite valores NULL.|  
-|referenced_server_name|**sysname**|Nombre del servidor de la entidad a la que se hace referencia.<br /><br /> Esta columna se rellena para las dependencias entre servidores especificadas con un nombre de cuatro partes válido. Para obtener información sobre los nombres de varias partes, vea [convenciones de sintaxis de Transact-SQL &#40; Transact-SQL &#41; ](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md).<br /><br /> NULL para las entidades no enlazadas a un esquema a las que se hizo referencia sin especificar un nombre de cuatro partes.<br /><br /> NULL para las entidades enlazadas a esquema porque deben estar en la misma base de datos y, por tanto, solo pueden definirse con dos partes (*esquema.objeto*) nombre.|  
+|referenced_class_desc|**nvarchar(60)**|Descripción de la clase de la entidad a la que se hace referencia.<br /><br /> OBJECT_OR_COLUMN<br /><br /> TYPE<br /><br /> XML_SCHEMA_COLLECTION<br /><br /> PARTITION_FUNCTION<br /><br /> No admite valores NULL.|  
+|referenced_server_name|**sysname**|Nombre del servidor de la entidad a la que se hace referencia.<br /><br /> Esta columna se rellena para las dependencias entre servidores especificadas con un nombre de cuatro partes válido. Para obtener información sobre los nombres de varias partes, vea [convenciones de sintaxis de Transact-SQL &#40;Transact-SQL&#41;](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md).<br /><br /> NULL para las entidades no enlazadas a un esquema a las que se hizo referencia sin especificar un nombre de cuatro partes.<br /><br /> NULL para las entidades enlazadas a esquema porque deben estar en la misma base de datos y, por tanto, solo pueden definirse con dos partes (*esquema.objeto*) nombre.|  
 |referenced_database_name|**sysname**|Nombre de la base de datos de la entidad a la que se hace referencia.<br /><br /> Esta columna se rellena para las referencias entre bases de datos o entre servidores especificadas con un nombre válido de tres o cuatro partes.<br /><br /> NULL para las referencias no enlazadas a esquema especificadas con un nombre de una o dos partes.<br /><br /> NULL para las entidades enlazadas a esquema porque deben estar en la misma base de datos y, por tanto, solo pueden definirse con dos partes (*esquema.objeto*) nombre.|  
 |referenced_schema_name|**sysname**|Esquema al que pertenece la entidad a la que se hace referencia.<br /><br /> NULL para las referencias no enlazadas a esquema en las que se hacía referencia a la entidad sin especificar el nombre del esquema.<br /><br /> Nunca es NULL para las referencias enlazadas a un esquema porque las entidades enlazadas a un esquema deben definirse y hacerse referencia con un nombre de dos partes.|  
 |referenced_entity_name|**sysname**|Nombre de la entidad a la que se hace referencia. No admite valores NULL.|  
@@ -75,26 +76,26 @@ ms.lasthandoff: 11/21/2017
   
 |Tipo de entidad|Entidad que hace la referencia|Entidad a la que se hace referencia|  
 |-----------------|------------------------|-----------------------|  
-|Tabla|Sí*|Sí|  
+|Table|Sí*|Sí|  
 |Ver|Sí|Sí|  
-|Índice filtrado|Sí**|No|  
-|Estadísticas filtradas|Sí**|No|  
+|Índice filtrado|Sí**|no|  
+|Estadísticas filtradas|Sí**|no|  
 |Procedimiento almacenado [!INCLUDE[tsql](../../includes/tsql-md.md)]***|Sí|Sí|  
-|procedimiento almacenado CLR|No|Sí|  
+|procedimiento almacenado CLR|no|Sí|  
 |Función definida por el usuario de [!INCLUDE[tsql](../../includes/tsql-md.md)]|Sí|Sí|  
-|Función CLR definida por el usuario|No|Sí|  
-|Desencadenador CLR (DML y DDL)|No|No|  
-|Desencadenador DML de [!INCLUDE[tsql](../../includes/tsql-md.md)]|Sí|No|  
-|Desencadenador DDL de nivel de base de datos de [!INCLUDE[tsql](../../includes/tsql-md.md)]|Sí|No|  
-|Desencadenador DDL de nivel de servidor de [!INCLUDE[tsql](../../includes/tsql-md.md)]|Sí|No|  
-|Procedimientos almacenados extendidos|No|Sí|  
-|Cola|No|Sí|  
-|Synonym (Sinónimo)|No|Sí|  
-|Tipo (tipo CLR y alias definido por el usuario)|No|Sí|  
-|Colección de esquemas XML|No|Sí|  
-|Función de partición|No|Sí|  
+|Función CLR definida por el usuario|no|Sí|  
+|Desencadenador CLR (DML y DDL)|no|no|  
+|Desencadenador DML de [!INCLUDE[tsql](../../includes/tsql-md.md)]|Sí|no|  
+|Desencadenador DDL de nivel de base de datos de [!INCLUDE[tsql](../../includes/tsql-md.md)]|Sí|no|  
+|Desencadenador DDL de nivel de servidor de [!INCLUDE[tsql](../../includes/tsql-md.md)]|Sí|no|  
+|Procedimientos almacenados extendidos|no|Sí|  
+|Cola|no|Sí|  
+|Synonym (Sinónimo)|no|Sí|  
+|Tipo (tipo CLR y alias definido por el usuario)|no|Sí|  
+|Colección de esquemas XML|no|Sí|  
+|Función de partición|no|Sí|  
   
- \*Una tabla se realiza un seguimiento como una entidad de referencia sólo cuando se hace referencia una [!INCLUDE[tsql](../../includes/tsql-md.md)] module, tipo definido por el usuario o la colección de esquemas XML en la definición de una columna calculada, una restricción CHECK o una restricción DEFAULT.  
+ \* Una tabla se realiza un seguimiento como una entidad de referencia sólo cuando se hace referencia una [!INCLUDE[tsql](../../includes/tsql-md.md)] module, tipo definido por el usuario o la colección de esquemas XML en la definición de una columna calculada, una restricción CHECK o una restricción DEFAULT.  
   
  ** Se realiza el seguimiento de cada una de las columnas usadas en el predicado de filtro como una entidad de referencia.  
   

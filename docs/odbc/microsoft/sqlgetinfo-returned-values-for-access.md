@@ -1,16 +1,16 @@
 ---
 title: SQLGetInfo devuelve valores para el acceso a | Documentos de Microsoft
-ms.custom: 
+ms.custom: ''
 ms.date: 01/19/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: drivers
-ms.service: 
+ms.service: ''
 ms.component: odbc
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - drivers
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - ODBC desktop database drivers [ODBC], Access driver
@@ -19,16 +19,16 @@ helpviewer_keywords:
 - desktop database drivers [ODBC], Access driver
 - Access driver [ODBC], SQLGetInfo
 ms.assetid: c551e07f-30c4-41a2-8991-6010a3511d76
-caps.latest.revision: 
+caps.latest.revision: 6
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: c56a813ec873293fec2dc846da851fc9d36f2dae
-ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
+ms.openlocfilehash: 37778b8cd5d3ad020cb1af430dbbb33e837f4ae1
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/15/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="sqlgetinfo-returned-values-for-access"></a>SQLGetInfo devuelve valores para el acceso
 La tabla siguiente enumera el lenguaje C# defines para la *fInfoType* argumento y los correspondientes valores devueltos por **SQLGetInfo**. Esta información se puede recuperar pasando el lenguaje c. enumerado #defines a **SQLGetInfo** en el *fInfoType* argumento. Para obtener más información acerca de los valores devueltos por **SQLGetInfo**, consulte el *referencia del programador de ODBC*.  
@@ -51,7 +51,7 @@ La tabla siguiente enumera el lenguaje C# defines para la *fInfoType* argumento 
 |SQL_CATALOG_LOCATION|SQL_QL_START|  
 |SQL_CATALOG_NAME|"Y"|  
 |SQL_CATALOG_NAME_SEPARATOR|"."|  
-|SQL_CATALOG_TERM|"Database"|  
+|SQL_CATALOG_TERM|"Base de datos"|  
 |SQL_CATALOG_USAGE|Varios valores|  
 |SQL_COLLATION_SEQ|""|  
 |SQL_COLUMN_ALIAS|"Y"|  
@@ -92,7 +92,7 @@ La tabla siguiente enumera el lenguaje C# defines para la *fInfoType* argumento 
 |SQL_DATA_SOURCE_READ_ONLY|"N"|  
 |SQL_DATABASE_NAME|Nombre de archivo|  
 |SQL_DATETIME_LITERALS|0|  
-|SQL_DBMS_NAME|"ACCESS"|  
+|SQL_DBMS_NAME|"ACCESO"|  
 |SQL_DBMS_VER|Varios valores|  
 |SQL_DDL_INDEX|Varios valores|  
 |SQL_DEFAULT_TXN_ISOLATION|SQL_TXN_READ_COMMITTED|  
@@ -103,7 +103,7 @@ La tabla siguiente enumera el lenguaje C# defines para la *fInfoType* argumento 
 |SQL_DRIVER_HSTMT|Controlado por el Administrador de controladores.|  
 |SQL_DRIVER_NAME|"OdbcJt32.dll"|  
 |SQL_DRIVER_ODBC_VER|"3.51.0000"|  
-|SQL_DRIVER_VER|"4.00.*nnnn*" ( *nnnn*  especifica la fecha de compilación)|  
+|SQL_DRIVER_VER|"4.00.*nnnn*" (*nnnn* especifica la fecha de compilación)|  
 |SQL_DROP_ASSERTION|0|  
 |SQL_DROP_CHARACTER_SET|0|  
 |SQL_DROP_COLLATION|0|  
@@ -162,7 +162,7 @@ La tabla siguiente enumera el lenguaje C# defines para la *fInfoType* argumento 
 |SQL_SCHEMA_USAGE|0|  
 |SQL_SCROLL_OPTIONS|Varios valores|  
 |SQL_SEARCH_PATTERN_ESCAPE|"\\"|  
-|SQL_SERVER_NAME|"ACCESS"|  
+|SQL_SERVER_NAME|"ACCESO"|  
 |SQL_SPECIAL_CHARACTERS|"~`@#$%^&*_-+=\\}{"';:?/><,.!'[]&#124;"|  
 |SQL_STRING_FUNCTIONS|Varios valores|  
 |SQL_SUBQUERIES|Varios valores|  

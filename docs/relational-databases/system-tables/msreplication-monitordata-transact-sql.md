@@ -1,16 +1,16 @@
 ---
 title: MSreplication_monitordata (Transact-SQL) | Documentos de Microsoft
-ms.custom: 
+ms.custom: ''
 ms.date: 03/06/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine
-ms.service: 
+ms.service: ''
 ms.component: system-tables
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - replication
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 applies_to:
 - SQL Server
@@ -22,16 +22,16 @@ dev_langs:
 helpviewer_keywords:
 - MSreplication_monitordata system table
 ms.assetid: 843d3ffd-a1ef-4fd5-a744-c2252199793e
-caps.latest.revision: 
+caps.latest.revision: 16
 author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 6bab9e68284c9c8acbbdd1211530edb5014950aa
-ms.sourcegitcommit: 45e4efb7aa828578fe9eb7743a1a3526da719555
+ms.openlocfilehash: fa63fd758591cccf3e619a84aaf7d1184fe706bd
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="msreplicationmonitordata-transact-sql"></a>MSreplication_monitordata (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -46,7 +46,7 @@ ms.lasthandoff: 11/21/2017
 |**publicador**|**sysname**|El nombre del publicador.|  
 |**publisher_srvid**|**int**|El Id. del servidor del publicador.|  
 |**publisher_db**|**sysname**|El nombre de la base de datos de publicación.|  
-|**publicación**|**sysname**|Nombre de la publicación.|  
+|**Publicación**|**sysname**|Nombre de la publicación.|  
 |**publication_type**|**int**|El tipo de publicación; puede ser uno de estos valores:<br /><br /> **0** = publicación transaccional<br /><br /> **1** = publicación de instantáneas<br /><br /> **2** = publicación de combinación|  
 |**agent_type**|**int**|El tipo de agente de replicación; puede ser uno de estos valores:<br /><br /> **1** = agente de instantáneas<br /><br /> **2** = Agente lector del registro<br /><br /> **3** = agente de distribución<br /><br /> **4** = agente de mezcla<br /><br /> **9** = agente de lectura de cola|  
 |**agent_id**|**int**|El Id. del agente de replicación.|  
@@ -58,7 +58,7 @@ ms.lasthandoff: 11/21/2017
 |**last_distsync**|**datetime**|La fecha y la hora a las que se ejecutó por última vez el Agente de distribución.|  
 |**agentstoptime**|**datetime**|La fecha y la hora a las que se detuvo el agente.|  
 |**distdb**|**sysname**|El nombre de la base de datos de distribución para la suscripción.|  
-|**retención**|**int**|El período de retención para la publicación.|  
+|**Retención**|**int**|El período de retención para la publicación.|  
 |**time_stamp**|**datetime**|Solo para uso interno.|  
 |**worst_latency**|**int**|La mayor latencia, en segundos, para los cambios de datos propagados por los agentes de distribución o de registro del LOG para una publicación transaccional.|  
 |**best_latency**|**int**|La menor latencia, en segundos, para los cambios de datos propagados por los agentes de distribución o de registro del LOG para una publicación transaccional.|  
@@ -75,13 +75,13 @@ ms.lasthandoff: 11/21/2017
   
 ## <a name="see-also"></a>Vea también  
  [Supervisar la replicación mediante programación](../../relational-databases/replication/monitor/programmatically-monitor-replication.md)   
- [Tablas de replicación &#40; Transact-SQL &#41;](../../relational-databases/system-tables/replication-tables-transact-sql.md)   
- [Vistas de replicación &#40; Transact-SQL &#41;](../../relational-databases/system-views/replication-views-transact-sql.md)   
- [sp_replmonitorhelpsubscription &#40; Transact-SQL &#41;](../../relational-databases/system-stored-procedures/sp-replmonitorhelpsubscription-transact-sql.md)   
- [sp_replmonitorhelppublication &#40; Transact-SQL &#41;](../../relational-databases/system-stored-procedures/sp-replmonitorhelppublication-transact-sql.md)   
- [sp_replmonitorhelppublisher &#40; Transact-SQL &#41;](../../relational-databases/system-stored-procedures/sp-replmonitorhelppublisher-transact-sql.md)   
- [sp_replmonitorhelpmergesession &#40; Transact-SQL &#41;](../../relational-databases/system-stored-procedures/sp-replmonitorhelpmergesession-transact-sql.md)   
- [sp_replmonitorhelppublicationthresholds &#40; Transact-SQL &#41;](../../relational-databases/system-stored-procedures/sp-replmonitorhelppublicationthresholds-transact-sql.md)   
- [sp_replmonitorhelpmergesessiondetail &#40; Transact-SQL &#41;](../../relational-databases/system-stored-procedures/sp-replmonitorhelpmergesessiondetail-transact-sql.md)  
+ [Tablas de replicación &#40;Transact-SQL&#41;](../../relational-databases/system-tables/replication-tables-transact-sql.md)   
+ [Vistas de replicación &#40;Transact-SQL&#41;](../../relational-databases/system-views/replication-views-transact-sql.md)   
+ [sp_replmonitorhelpsubscription &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-replmonitorhelpsubscription-transact-sql.md)   
+ [sp_replmonitorhelppublication &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-replmonitorhelppublication-transact-sql.md)   
+ [sp_replmonitorhelppublisher &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-replmonitorhelppublisher-transact-sql.md)   
+ [sp_replmonitorhelpmergesession &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-replmonitorhelpmergesession-transact-sql.md)   
+ [sp_replmonitorhelppublicationthresholds &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-replmonitorhelppublicationthresholds-transact-sql.md)   
+ [sp_replmonitorhelpmergesessiondetail &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-replmonitorhelpmergesessiondetail-transact-sql.md)  
   
   

@@ -1,16 +1,16 @@
 ---
 title: SQLXML 4.0 Data Access Components | Documentos de Microsoft
-ms.custom: 
+ms.custom: ''
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine, sql-database
-ms.service: 
+ms.service: ''
 ms.component: sqlxml
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - dbe-xml
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: reference
 helpviewer_keywords:
 - data access [SQLXML]
@@ -20,20 +20,21 @@ helpviewer_keywords:
 - providers [SQLXML]
 - providers [SQLXML], listed
 ms.assetid: 5001e9fd-555c-4332-a57d-4d29a537454a
-caps.latest.revision: 
+caps.latest.revision: 27
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: ce0a5f172f049ac841cacac7fb041e4dda944cfd
-ms.sourcegitcommit: 37f0b59e648251be673389fa486b0a984ce22c81
+monikerRange: = azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions
+ms.openlocfilehash: 8881b4ebbc40c8ff9bcd8d1f0e00f84ec586a51b
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/12/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="sqlxml-40-data-access-components---sqlxmloledb-provider"></a>SQLXML 4.0 Data Access Components - proveedor SQLXMLOLEDB
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
-  [!INCLUDE[msCoName](../../../includes/msconame-md.md)] SQLXML 4.0 incluye tres proveedores de datos que pueden insertar datos XML y recuperar datos XML de una base de datos en [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]:  
+  [!INCLUDE[msCoName](../../../includes/msconame-md.md)] SQLXML 4.0 incluye tres proveedores de datos que pueden insertar y recuperar datos XML de una base de datos de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]:  
   
 -   proveedor SQLXMLOLEDB  
   
@@ -48,7 +49,7 @@ ms.lasthandoff: 02/12/2018
      Expone la funcionalidad de SQLXML 4.0 a través de una nueva tecnología de acceso a datos que extiende y complementa las versiones actuales de Microsoft Data Access Components (MDAC). SQLNCLI11 proporciona total compatibilidad con las características introducidas en [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)]. Para obtener más información, vea [Programación de SQL Server Native Client](../../../relational-databases/native-client/sql-server-native-client-programming.md).  
   
 ## <a name="in-this-section"></a>En esta sección  
- [Proveedor SQLXMLOLEDB &#40; SQLXML 4.0 &#41;](http://msdn.microsoft.com/library/fc489682-690a-4bb0-b5ac-237d376dc110)  
+ [Proveedor SQLXMLOLEDB &#40;SQLXML 4.0&#41;](http://msdn.microsoft.com/library/fc489682-690a-4bb0-b5ac-237d376dc110)  
  Describe el proveedor SQLXMLOLEDB y muestra su uso.  
   
   

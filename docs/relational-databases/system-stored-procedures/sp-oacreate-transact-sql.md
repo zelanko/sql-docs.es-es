@@ -1,16 +1,16 @@
 ---
 title: sp_OACreate (Transact-SQL) | Documentos de Microsoft
-ms.custom: 
+ms.custom: ''
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine
-ms.service: 
+ms.service: ''
 ms.component: system-stored-procedures
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - sp_OACreate
@@ -20,16 +20,16 @@ dev_langs:
 helpviewer_keywords:
 - sp_OACreate
 ms.assetid: eb84c0f1-26dd-48f9-9368-13ee4a30a27c
-caps.latest.revision: 
+caps.latest.revision: 32
 author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 5b36d46482582d877241d5ec621896d8aa4206fa
-ms.sourcegitcommit: 9fbe5403e902eb996bab0b1285cdade281c1cb16
+ms.openlocfilehash: 2edb7db6bf8d8ce9b0c9f1699aa989aa4fceddf0
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/27/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="spoacreate-transact-sql"></a>sp_OACreate (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -47,7 +47,7 @@ sp_OACreate { progid | clsid } , objecttoken OUTPUT [ , context ]
   
 ## <a name="arguments"></a>Argumentos  
  *Id. de programa*  
- Es el identificador de programa (ProgID) del objeto OLE que se va a crear. Esta cadena de caracteres describe la clase del objeto OLE y tiene el formato: **'***OLEComponent***.** *Objeto***'**  
+ Es el identificador de programa (ProgID) del objeto OLE que se va a crear. Esta cadena de caracteres describe la clase del objeto OLE y tiene el formato: **'***OLEComponent***. ***Objeto***'**  
   
  *OLEComponent* es el nombre del componente de servidor de automatización OLE, y *objeto* es el nombre del objeto OLE. El objeto OLE especificado debe ser válido y debe ser compatible con la **IDispatch** interfaz.  
   
@@ -61,7 +61,7 @@ sp_OACreate { progid | clsid } , objecttoken OUTPUT [ , context ]
  *objecttoken* **salida**  
  Es el token de objeto devuelto y debe ser una variable local del tipo de datos **int**. Este token de objeto identifica el objeto OLE creado y se utiliza en llamadas a otros procedimientos almacenados de OLE Automation.  
   
- *contexto*  
+ *Contexto*  
  Especifica el contexto de ejecución en que se ejecuta el objeto OLE recién creado. Si se especifica, este valor debe ser uno de los siguientes:  
   
  **1** = solo servidor OLE de proceso (interno.dll).  
@@ -130,7 +130,7 @@ GO
 ```  
   
 ## <a name="see-also"></a>Vea también  
- [Procedimientos &#40; almacenados de automatización OLE Transact-SQL &#41;](../../relational-databases/system-stored-procedures/ole-automation-stored-procedures-transact-sql.md)   
+ [OLE procedimientos almacenados de automatización &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/ole-automation-stored-procedures-transact-sql.md)   
  [Opción de configuración de servidor de procedimientos de automatización de OLE](../../database-engine/configure-windows/ole-automation-procedures-server-configuration-option.md)   
  [Ejemplo de script de automatización OLE](../../relational-databases/stored-procedures/ole-automation-sample-script.md)  
   

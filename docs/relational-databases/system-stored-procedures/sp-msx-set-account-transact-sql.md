@@ -1,16 +1,16 @@
 ---
-title: sp_msx_set_account (Transact-SQL) | Microsoft Docs
-ms.custom: 
+title: sp_msx_set_account (Transact-SQL) | Documentos de Microsoft
+ms.custom: ''
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine
-ms.service: 
+ms.service: ''
 ms.component: system-stored-procedures
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - sp_msx_set_account
@@ -20,16 +20,16 @@ dev_langs:
 helpviewer_keywords:
 - sp_msx_set_account
 ms.assetid: 314ec720-3a37-48f7-bb6b-8d5b894bf843
-caps.latest.revision: 
+caps.latest.revision: 26
 author: stevestein
 ms.author: sstein
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 7d463863e71a0ba2899a987fdb425d08c8f5245a
-ms.sourcegitcommit: c556eaf60a49af7025db35b7aa14beb76a8158c5
+ms.openlocfilehash: 393d432cddf58d6e7dc0682796af4214fe7be79c
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/03/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="spmsxsetaccount-transact-sql"></a>sp_msx_set_account (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -59,9 +59,9 @@ sp_msx_set_account [ @credential_name = ] 'credential_name'  | [ @credential_id 
  Ninguno.  
   
 ## <a name="remarks"></a>Comentarios  
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] utiliza las credenciales para almacenar la información de nombre y la contraseña de usuario que utiliza un servidor de destino para iniciar sesión en un servidor maestro. Este procedimiento establece la credencial que utiliza el Agente [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] de este servidor de destino para iniciar sesión en el servidor maestro.  
+ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] utiliza credenciales para almacenar la información de nombre de usuario y contraseña que utiliza un servidor de destino para iniciar sesión en un servidor maestro. Este procedimiento establece la credencial que utiliza el Agente [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] de este servidor de destino para iniciar sesión en el servidor maestro.  
   
- La credencial especificada debe existir. Para obtener más información acerca de cómo crear una credencial, vea [CREATE CREDENTIAL &#40; Transact-SQL &#41; ](../../t-sql/statements/create-credential-transact-sql.md).  
+ La credencial especificada debe existir. Para obtener más información acerca de cómo crear una credencial, vea [CREATE CREDENTIAL &#40;Transact-SQL&#41;](../../t-sql/statements/create-credential-transact-sql.md).  
   
 ## <a name="permissions"></a>Permissions  
  Permisos de ejecución para **sp_msx_set_account** predeterminada a los miembros de la **sysadmin** rol fijo de servidor.  
@@ -78,7 +78,7 @@ GO
 ```  
   
 ## <a name="see-also"></a>Vea también  
- [Agente SQL Server almacena procedimientos &#40; Transact-SQL &#41;](../../relational-databases/system-stored-procedures/sql-server-agent-stored-procedures-transact-sql.md)   
+ [Procedimientos almacenados del Agente SQL Server &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sql-server-agent-stored-procedures-transact-sql.md)   
  [CREATE CREDENTIAL &#40;Transact-SQL&#41;](../../t-sql/statements/create-credential-transact-sql.md)   
  [sp_msx_get_account &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-msx-get-account-transact-sql.md)  
   

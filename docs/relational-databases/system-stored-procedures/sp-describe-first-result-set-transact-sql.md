@@ -1,16 +1,16 @@
 ---
-title: sp_describe_first_result_set (Transact-SQL) | Microsoft Docs
-ms.custom: 
+title: sp_describe_first_result_set (Transact-SQL) | Documentos de Microsoft
+ms.custom: ''
 ms.date: 03/17/2018
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine, sql-database
-ms.service: 
+ms.service: ''
 ms.component: system-stored-procedures
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - sp_describe_first_result_set
@@ -20,16 +20,17 @@ dev_langs:
 helpviewer_keywords:
 - sp_describe_first_result_set
 ms.assetid: f2355a75-3a8e-43e6-96ad-4f41038f6d22
-caps.latest.revision: 
+caps.latest.revision: 22
 author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 76c5088e011f4111e67631a5e7cbfed1ff57059b
-ms.sourcegitcommit: 3ed9be04cc7fb9ab1a9ec230c298ad2932acc71b
+monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
+ms.openlocfilehash: 8860d9b24731b311b3161ccdfca0f163ba3204d9
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/17/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="spdescribefirstresultset-transact-sql"></a>sp_describe_first_result_set (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2012-all-md](../../includes/tsql-appliesto-ss2012-all-md.md)]
@@ -48,7 +49,7 @@ sp_describe_first_result_set [ @tsql = ] N'Transact-SQL_batch'
 ```  
   
 ## <a name="arguments"></a>Argumentos  
- [ **@tsql =** ] **'***Transact-SQL_batch***'**  
+ [  **@tsql =** ] **'***SQL_batch transact***'**  
  Una o varias instrucciones de [!INCLUDE[tsql](../../includes/tsql-md.md)]. *Transact-SQL_batch* puede ser **nvarchar (***n***)** o **nvarchar (max)**.  
   
  [  **@params =** ] **N'***parámetros***'**  
@@ -78,7 +79,7 @@ sp_describe_first_result_set [ @tsql = ] N'Transact-SQL_batch'
 |**Nombre**|**sysname es NULL**|Contiene el nombre de la columna si se puede determinar uno. De lo contrario, contendrá NULL.|  
 |**is_nullable**|**bits no NULL**|Contiene el valor 1 si la columna permite valores NULL, 0 si la columna no permite valores NULL y 1 si no se puede determinar si la columna permite valores NULL.|  
 |**system_type_id**|**int NOT NULL**|Contiene el system_type_id del tipo de datos de la columna tal como se especifica en sys.types. En el caso de los tipos de CLR, aunque la columna system_type_name devuelva NULL, esta columna devolverá el valor 240.|  
-|**system_type_name**|**nvarchar(256) NULL**|Contiene el nombre y los argumentos (como length, precision y scale) especificados para el tipo de datos de la columna. Si el tipo de datos es un tipo de alias definido por el usuario, el tipo de sistema subyacente se especifica aquí. Si es un tipo definido por el usuario de CLR, NULL se devuelve en esta columna.|  
+|**system_type_name**|**nvarchar (256) NULL**|Contiene el nombre y los argumentos (como length, precision y scale) especificados para el tipo de datos de la columna. Si el tipo de datos es un tipo de alias definido por el usuario, el tipo de sistema subyacente se especifica aquí. Si es un tipo definido por el usuario de CLR, NULL se devuelve en esta columna.|  
 |**max_length**|**Smallint no NULL**|Longitud máxima de la columna, en bytes.<br /><br /> -1 = la columna es de tipo de datos **varchar (max)**, **nvarchar (max)**, **varbinary (max)**, o **xml**.<br /><br /> Para **texto** columnas, el **max_length** valor será 16 o el valor establecido por **sp_tableoption 'text in row'**.|  
 |**precisión**|**tinyint no NULL**|Precisión de la columna, si está basada en números. De lo contrario, devuelve 0.|  
 |**escala**|**tinyint no NULL**|La escala de la columna se basa en valores numéricos. De lo contrario, devuelve 0.|  

@@ -1,29 +1,30 @@
 ---
-title: "Implementar la búsqueda de texto completo | Documentos de Microsoft"
-ms.custom: 
+title: Implementar la búsqueda de texto completo | Documentos de Microsoft
+ms.custom: ''
 ms.date: 08/06/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine
-ms.service: 
+ms.service: ''
 ms.component: smo
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: 
-ms.tgt_pltfrm: 
+ms.technology: ''
+ms.tgt_pltfrm: ''
 ms.topic: reference
 helpviewer_keywords:
 - full-text search [SMO]
 ms.assetid: 9ce9ad9c-f671-4760-90b5-e0c8ca051473
-caps.latest.revision: 
+caps.latest.revision: 47
 author: stevestein
 ms.author: sstein
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: fe4843e762233eae4e85be8662b1291b794c59a7
-ms.sourcegitcommit: cb2f9d4db45bef37c04064a9493ac2c1d60f2c22
+monikerRange: = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions
+ms.openlocfilehash: e88214b6fbed3b5622b0e9f5d7be70cdbf1ad9a5
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/12/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="implementing-full-text-search"></a>Implementar la búsqueda de texto completo
 [!INCLUDE[appliesto-ss-asdb-asdw-xxx-md](../../../includes/appliesto-ss-asdb-asdw-xxx-md.md)]
@@ -35,7 +36,7 @@ ms.lasthandoff: 01/12/2018
  Primero, cree un catálogo de texto completo en la base de datos llamando al constructor <xref:Microsoft.SqlServer.Management.Smo.FullTextCatalog> y especificando el nombre del catálogo. A continuación, cree el índice de texto completo llamando al constructor y especificando la tabla en la que se creará. A continuación, puede agregar columnas de índices al índice de texto completo, utilizando el objeto <xref:Microsoft.SqlServer.Management.Smo.FullTextIndexColumn> y proporcionando el nombre de la columna de la tabla. A continuación, establezca la propiedad <xref:Microsoft.SqlServer.Management.Smo.FullTextIndex.CatalogName%2A> en el catálogo que ha creado. Por último, llame al método <xref:Microsoft.SqlServer.Management.Smo.FullTextIndex.Create%2A> y cree el índice de texto completo en la instancia de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)].  
   
 ## <a name="example"></a>Ejemplo  
- Para utilizar cualquier ejemplo de código que se proporcione, deberá elegir el entorno de programación, la plantilla de programación y el lenguaje de programación en los que crear su aplicación. Para obtener más información, vea [crear a Visual C &#35; Proyecto SMO en Visual Studio .NET](../../../relational-databases/server-management-objects-smo/how-to-create-a-visual-csharp-smo-project-in-visual-studio-net.md).  
+ Para utilizar cualquier ejemplo de código que se proporcione, deberá elegir el entorno de programación, la plantilla de programación y el lenguaje de programación en los que crear su aplicación. Para obtener más información, consulte [crear a Visual C&#35; proyecto SMO en Visual Studio .NET](../../../relational-databases/server-management-objects-smo/how-to-create-a-visual-csharp-smo-project-in-visual-studio-net.md).  
   
 ## <a name="creating-a-full-text-search-service-in-visual-basic"></a>Crear un servicio de búsqueda en texto completo en Visual Basic  
  En este ejemplo del código se crea un catálogo de búsqueda de texto completo para la tabla `ProductCategory` de la base de datos de ejemplo [!INCLUDE[ssSampleDBnormal](../../../includes/sssampledbnormal-md.md)]. Después se crea un índice de búsqueda de texto completo en la columna Name de la tabla `ProductCategory` . El índice de búsqueda de texto completo requiere que ya haya un índice único definido en la columna.  

@@ -1,16 +1,16 @@
 ---
-title: sp_help_log_shipping_monitor (Transact-SQL) | Microsoft Docs
-ms.custom: 
+title: sp_help_log_shipping_monitor (Transact-SQL) | Documentos de Microsoft
+ms.custom: ''
 ms.date: 03/06/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine
-ms.service: 
+ms.service: ''
 ms.component: system-stored-procedures
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - sp_help_log_shipping_monitor_TSQL
@@ -20,16 +20,16 @@ dev_langs:
 helpviewer_keywords:
 - sp_help_log_shipping_monitor
 ms.assetid: a4e96c45-6dcd-471a-a494-b5c619459855
-caps.latest.revision: 
+caps.latest.revision: 23
 author: stevestein
 ms.author: sstein
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 96e9b3f2fa8e040789b15e0969fbb4de6ccb9e00
-ms.sourcegitcommit: c556eaf60a49af7025db35b7aa14beb76a8158c5
+ms.openlocfilehash: d48e5d889890c9ab657733aec2d564bb1c2f7eb5
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/03/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="sphelplogshippingmonitor-transact-sql"></a>sp_help_log_shipping_monitor (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -61,12 +61,12 @@ sp_help_log_shipping_monitor
 |**database_name**|**sysname**|Nombre de la base de datos.|  
 |**time_since_last_backup**|**int**|Período de tiempo, en minutos, transcurrido desde la última copia de seguridad de registros.<br /><br /> NULL = La información no está disponible o no es relevante.|  
 |**last_backup_file**|**nvarchar(500)**|Nombre del último archivo de copia de seguridad de registros correcto.<br /><br /> NULL = La información no está disponible o no es relevante.|  
-|**backup_threshold**|**int**|Período de tiempo, en minutos, que puede transcurrir después de la última copia de seguridad antes de que se genere un error threshold_alert. **backup_threshold** es **int**, su valor predeterminado es **60 minutos**.<br /><br /> NULL = La información no está disponible o no es relevante.<br /><br /> Este valor se puede cambiar mediante [sp_add_log_shipping_primary_database &#40; Transact-SQL &#41; ](../../relational-databases/system-stored-procedures/sp-add-log-shipping-primary-database-transact-sql.md).|  
-|**is_backup_alert_enabled**|**bit**|Especifica si una alerta se genera cuando **backup_threshold** se supera. El valor de uno (**1**), el valor predeterminado, significa que se generará la alerta.<br /><br /> NULL = La información no está disponible o no es relevante.<br /><br /> Este valor se puede cambiar mediante [sp_add_log_shipping_primary_database &#40; Transact-SQL &#41; ](../../relational-databases/system-stored-procedures/sp-add-log-shipping-primary-database-transact-sql.md).|  
+|**backup_threshold**|**int**|Período de tiempo, en minutos, que puede transcurrir después de la última copia de seguridad antes de que se genere un error threshold_alert. **backup_threshold** es **int**, su valor predeterminado es **60 minutos**.<br /><br /> NULL = La información no está disponible o no es relevante.<br /><br /> Este valor se puede cambiar mediante [sp_add_log_shipping_primary_database &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-add-log-shipping-primary-database-transact-sql.md).|  
+|**is_backup_alert_enabled**|**bit**|Especifica si una alerta se genera cuando **backup_threshold** se supera. El valor de uno (**1**), el valor predeterminado, significa que se generará la alerta.<br /><br /> NULL = La información no está disponible o no es relevante.<br /><br /> Este valor se puede cambiar mediante [sp_add_log_shipping_primary_database &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-add-log-shipping-primary-database-transact-sql.md).|  
 |**time_since_last_copy**|**int**|Período de tiempo, en minutos, transcurrido desde que se copió la última copia de seguridad de registros.<br /><br /> NULL = La información no está disponible o no es relevante.|  
 |**last_copied_file**|**nvarchar(500)**|Nombre del último archivo de copia de seguridad de registros que se copió correctamente.<br /><br /> NULL = La información no está disponible o no es relevante.|  
 |**time_since_last_restore**|**int**|Período de tiempo, en minutos, transcurrido desde que se restauró la última copia de seguridad de registros.<br /><br /> NULL = La información no está disponible o no es relevante.|  
-|**last_restored_file**|**nvarchar(500).**|Nombre del último archivo de copia de seguridad de registros que se restauró correctamente.<br /><br /> NULL = La información no está disponible o no es relevante.|  
+|**last_restored_file**|**nvarchar (500).**|Nombre del último archivo de copia de seguridad de registros que se restauró correctamente.<br /><br /> NULL = La información no está disponible o no es relevante.|  
 |**last_restored_latency**|**int**|Período de tiempo, en minutos, transcurrido desde que se creó la última copia de seguridad hasta que se restauró.<br /><br /> NULL = La información no está disponible o no es relevante.|  
 |**restore_threshold**|**int**|Número de minutos permitido entre las operaciones de restauración antes de que se genere una alerta. **restore_threshold** no puede ser NULL.|  
 |**is_restore_alert_enabled**|**bit**|Especifica si se generará una alerta cuando **restore_threshold** se supera. El valor de uno (**1**), el valor predeterminado, significa que se generará la alerta.<br /><br /> NULL = La información no está disponible o no es relevante.<br /><br /> Para establecer el umbral de restauración, utilice [sp_add_log_shipping_secondary_database](../../relational-databases/system-stored-procedures/sp-add-log-shipping-secondary-database-transact-sql.md).|  
@@ -78,7 +78,7 @@ sp_help_log_shipping_monitor
  Requiere la pertenencia al rol fijo de servidor **sysadmin** .  
   
 ## <a name="see-also"></a>Vea también  
- [Acerca del trasvase de registros &#40; SQL Server &#41;](../../database-engine/log-shipping/about-log-shipping-sql-server.md)   
+ [Acerca del trasvase de registros & #40; SQL Server & #41;](../../database-engine/log-shipping/about-log-shipping-sql-server.md)   
  [Procedimientos almacenados del sistema &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
   
   

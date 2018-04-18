@@ -1,16 +1,16 @@
 ---
 title: sp_resetsnapshotdeliveryprogress (Transact-SQL) | Documentos de Microsoft
-ms.custom: 
+ms.custom: ''
 ms.date: 03/03/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine
-ms.service: 
+ms.service: ''
 ms.component: system-stored-procedures
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - replication
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 applies_to:
 - SQL Server
@@ -20,16 +20,16 @@ f1_keywords:
 helpviewer_keywords:
 - sp_resetsnapshotdeliveryprogress
 ms.assetid: 5df7d86b-d343-4d9b-88b1-74429ed092e6
-caps.latest.revision: 
+caps.latest.revision: 24
 author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 0aa67918309c5c34bbe3826853c26cf7422c4666
-ms.sourcegitcommit: 45e4efb7aa828578fe9eb7743a1a3526da719555
+ms.openlocfilehash: ebe29fc0216e9da2875f259034679ca7479ae013
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="spresetsnapshotdeliveryprogress-transact-sql"></a>sp_resetsnapshotdeliveryprogress (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -47,10 +47,10 @@ sp_resetsnapshotdeliveryprogress [ [ @verbose_level = ] verbose_level ]
 ```  
   
 ## <a name="arguments"></a>Argumentos  
- [  **@verbose_level** =] *verbose_level*  
+ [ **@verbose_level**=] *verbose_level*  
  Especifica la cantidad de información devuelta. *verbose_level*es **int**, su valor predeterminado es **1**. Un valor de **1** significa que el error se devuelve si no se puede obtener los bloqueos necesarios en el **MSsnapshotdeliveryprogress** tabla, y **0** significa que se devuelve ningún error.  
   
- [  **@drop_table** =] **'***drop_table***'**  
+ [ **@drop_table**=] **'***drop_table***'**  
  Indica si se quita o trunca la tabla que contiene información sobre el progreso de la instantánea. *drop_table* es **nvarchar (5)**, su valor predeterminado es **FALSE**. que significa que la tabla se trunca. Si es True, la tabla se quita.  
   
 ## <a name="return-code-values"></a>Valores de código de retorno  

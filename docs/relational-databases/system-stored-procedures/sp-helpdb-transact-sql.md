@@ -1,16 +1,16 @@
 ---
 title: sp_helpdb (Transact-SQL) | Documentos de Microsoft
-ms.custom: 
+ms.custom: ''
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine
-ms.service: 
+ms.service: ''
 ms.component: system-stored-procedures
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - sp_helpdb
@@ -20,16 +20,16 @@ dev_langs:
 helpviewer_keywords:
 - sp_helpdb
 ms.assetid: 4c3e3302-6cf1-4b2b-8682-004049b578c3
-caps.latest.revision: 
+caps.latest.revision: 37
 author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: c1af0b93536006ba5f7b106c10935b07263a572b
-ms.sourcegitcommit: 2208a909ab09af3b79c62e04d3360d4d9ed970a7
+ms.openlocfilehash: 231e911d1438a16d4b1a2db234e895f8652ea375
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/02/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="sphelpdb-transact-sql"></a>sp_helpdb (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -60,7 +60,7 @@ sp_helpdb [ [ @dbname= ] 'name' ]
 |**db_size**|**nvarchar(13)**|Tamaño total de la base de datos.|  
 |**propietario**|**sysname**|Base de datos como propietario, **sa**.|  
 |**dbid**|**smallint**|Id. de la base de datos.|  
-|**creado**|**nvarchar(11)**|Fecha de creación de la base de datos.|  
+|**Creado**|**nvarchar(11)**|Fecha de creación de la base de datos.|  
 |**status**|**nvarchar(600)**|Lista de valores separados por comas de las opciones actualmente establecidas en la base de datos.<br /><br /> Las opciones con valores booleanos aparecen solamente si están habilitadas. Opciones no booleanas se muestran con sus valores correspondientes en el formulario de *option_name*=*valor*.<br /><br /> Para obtener más información, vea [ALTER DATABASE &#40;Transact-SQL&#41;](../../t-sql/statements/alter-database-transact-sql.md).|  
 |**COMPATIBILITY_LEVEL**|**tinyint**|Nivel de compatibilidad de la base de datos: 60, 65, 70, 80 o 90.|  
   
@@ -71,11 +71,11 @@ sp_helpdb [ [ @dbname= ] 'name' ]
 |**Nombre**|**nchar(128)**|Nombre de archivo lógico.|  
 |**FileID**|**smallint**|Identificador de archivo.|  
 |**nombre de archivo**|**nchar(260)**|Nombre del archivo en el sistema operativo (nombre de archivo físico).|  
-|**grupo de archivos**|**nvarchar(128)**|Grupo al que pertenece el archivo.<br /><br /> NULL = El archivo es de registro. Nunca forma parte de un grupo de archivos.|  
+|**filegroup**|**nvarchar(128)**|Grupo al que pertenece el archivo.<br /><br /> NULL = El archivo es de registro. Nunca forma parte de un grupo de archivos.|  
 |**size**|**nvarchar(18)**|Tamaño del archivo, en megabytes.|  
 |**MaxSize**|**nvarchar(18)**|Tamaño máximo que puede alcanzar el archivo. El valor UNLIMITED en este campo indica que el archivo puede aumentar hasta que el disco esté lleno.|  
 |**crecimiento**|**nvarchar(18)**|Incremento de crecimiento del archivo. Esto indica la cantidad de espacio que se agrega al archivo que se necesita espacio cada vez.|  
-|**uso de**|**varchar (9)**|Uso del archivo. Para un archivo de datos, el valor es **'solo datos'** y el archivo de registro es el valor de **'registro'**.|  
+|**Uso de**|**varchar (9)**|Uso del archivo. Para un archivo de datos, el valor es **'solo datos'** y el archivo de registro es el valor de **'registro'**.|  
   
 ## <a name="remarks"></a>Comentarios  
  El **estado** qué opciones se han establecido en ON en la base de datos de informes del conjunto de columnas en el resultado. Todas las opciones de base de datos no se notifican mediante la **estado** columna. Para ver una lista completa de la configuración de opción de base de datos actual, use la **sys.databases** vista de catálogo.  
@@ -103,13 +103,13 @@ GO
 ```  
   
 ## <a name="see-also"></a>Vea también  
- [Motor de base de datos almacenados procedimientos &#40; Transact-SQL &#41;](../../relational-databases/system-stored-procedures/database-engine-stored-procedures-transact-sql.md)   
+ [Procedimientos almacenados del motor de base de datos &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/database-engine-stored-procedures-transact-sql.md)   
  [ALTER DATABASE &#40;Transact-SQL&#41;](../../t-sql/statements/alter-database-transact-sql.md)   
  [CREATE DATABASE &#40;Transact-SQL de SQL Server&#41;](../../t-sql/statements/create-database-sql-server-transact-sql.md)   
  [sys.databases &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-databases-transact-sql.md)   
  [sys.database_files &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-database-files-transact-sql.md)   
- [Sys.FileGroups &#40; Transact-SQL &#41;](../../relational-databases/system-catalog-views/sys-filegroups-transact-sql.md)   
- [Sys.master_files &#40; Transact-SQL &#41;](../../relational-databases/system-catalog-views/sys-master-files-transact-sql.md)   
+ [sys.filegroups &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-filegroups-transact-sql.md)   
+ [sys.master_files &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-master-files-transact-sql.md)   
  [Procedimientos almacenados del sistema &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
   
   

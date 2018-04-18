@@ -1,16 +1,16 @@
 ---
-title: sys.dm_qn_subscriptions (Transact-SQL) | Microsoft Docs
-ms.custom: 
+title: Sys.dm_qn_subscriptions (Transact-SQL) | Documentos de Microsoft
+ms.custom: ''
 ms.date: 03/15/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine
-ms.service: 
+ms.service: ''
 ms.component: dmv's
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - dm_qn_subscriptions
@@ -22,16 +22,16 @@ dev_langs:
 helpviewer_keywords:
 - sys.dm_qn_subscriptions dynamic management view
 ms.assetid: a3040ce6-f5af-48fc-8835-c418912f830c
-caps.latest.revision: 
+caps.latest.revision: 26
 author: stevestein
 ms.author: sstein
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 2fdc34ae033de8baf0173bc7c86bd0fe05c7668f
-ms.sourcegitcommit: c556eaf60a49af7025db35b7aa14beb76a8158c5
+ms.openlocfilehash: 33406d97f24e1faa491264e33fa8200e8029e9f1
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/03/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="query-notifications---sysdmqnsubscriptions"></a>Consultar las notificaciones - sys.dm_qn_subscriptions
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -42,10 +42,10 @@ ms.lasthandoff: 02/03/2018
 |-----------------|---------------|-----------------|  
 |**id**|**int**|Id. de una suscripción.|  
 |**database_id**|**int**|Id. de la base de datos en la que se ha ejecutado la notificación. Esta base de datos almacena información relacionada con esta suscripción.|  
-|**sid**|**varbinary(85)**|Id. de seguridad de la entidad de seguridad del servidor que creó y es propietaria de esta suscripción.|  
+|**SID**|**varbinary(85)**|Id. de seguridad de la entidad de seguridad del servidor que creó y es propietaria de esta suscripción.|  
 |**object_id**|**int**|Id. de la tabla interna que almacena información acerca de los parámetros de suscripción.|  
-|**created**|**datetime**|Fecha y hora en que se creó la suscripción.|  
-|**timeout**|**int**|Tiempo de espera de la suscripción en segundos. La notificación se marcará para activarse después de transcurrido este tiempo.<br /><br /> Nota: El tiempo de activación real puede ser mayor que el tiempo de espera especificado. No obstante, si tiene lugar un cambio que invalida la suscripción después el tiempo de espera especificado, pero antes de que se active la suscripción, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] garantiza que la activación tiene lugar en el momento en que se realiza el cambio.|  
+|**Creado**|**datetime**|Fecha y hora en que se creó la suscripción.|  
+|**Tiempo de espera**|**int**|Tiempo de espera de la suscripción en segundos. La notificación se marcará para activarse después de transcurrido este tiempo.<br /><br /> Nota: El tiempo de activación real puede ser mayor que el tiempo de espera especificado. No obstante, si tiene lugar un cambio que invalida la suscripción después el tiempo de espera especificado, pero antes de que se active la suscripción, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] garantiza que la activación tiene lugar en el momento en que se realiza el cambio.|  
 |**status**|**int**|Indica el estado de la suscripción. Vea la tabla bajo las notas para obtener la lista de códigos.|  
   
 ## <a name="relationship-cardinalities"></a>Cardinalidades de relación  
@@ -140,7 +140,7 @@ GO
   
 ## <a name="see-also"></a>Vea también  
  [Funciones y vistas de administración dinámica &#40;Transact-SQL&#41;](~/relational-databases/system-dynamic-management-views/system-dynamic-management-views.md)   
- [Las notificaciones de consulta relacionadas con vistas de administración dinámica &#40; Transact-SQL &#41;](http://msdn.microsoft.com/library/92eb22d8-33f3-4c17-b32e-e23acdfbd8f4)   
- [Eliminar suscripción de notificación de consulta &#40; Transact-SQL &#41;](../../t-sql/language-elements/kill-query-notification-subscription-transact-sql.md)  
+ [Vistas de administración dinámica relacionadas con notificaciones de consulta &#40;Transact-SQL&#41;](http://msdn.microsoft.com/library/92eb22d8-33f3-4c17-b32e-e23acdfbd8f4)   
+ [KILL QUERY NOTIFICATION SUBSCRIPTION &#40;Transact-SQL&#41;](../../t-sql/language-elements/kill-query-notification-subscription-transact-sql.md)  
   
   

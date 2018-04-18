@@ -1,16 +1,16 @@
 ---
 title: syssubscriptions (Transact-SQL) | Documentos de Microsoft
-ms.custom: 
+ms.custom: ''
 ms.date: 03/06/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine
-ms.service: 
+ms.service: ''
 ms.component: system-tables
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - replication
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 applies_to:
 - SQL Server
@@ -22,16 +22,16 @@ dev_langs:
 helpviewer_keywords:
 - syssubscriptions system table
 ms.assetid: 106c1707-e0e0-49b4-ba50-25380c40fab2
-caps.latest.revision: 
+caps.latest.revision: 30
 author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: c581c037ed78a82a194f74faae709bd81d6bd41c
-ms.sourcegitcommit: 45e4efb7aa828578fe9eb7743a1a3526da719555
+ms.openlocfilehash: 595c729b9e60a26672b543d83b6fb47e57e8b215
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="syssubscriptions-transact-sql"></a>syssubscriptions (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -50,13 +50,13 @@ ms.lasthandoff: 11/21/2017
 |**distribution_jobid**|**binary (16)**|Id. de trabajo del Agente de distribución.|  
 |**timestamp**|**timestamp**|Marca de tiempo.|  
 |**update_mode**|**tinyint**|Modo de actualización:<br /><br /> **0** = solo lectura.<br /><br /> **1** = actualización inmediata.|  
-|**argumento loopback_detection**|**bit**|Se aplica a las suscripciones que forman parte de una topología de replicación transaccional bidireccional. La detección de bucles de retorno determina si el Agente de distribución envía las transacciones originadas en el suscriptor al mismo suscriptor:<br /><br /> **0** = las envía.<br /><br /> **1** = no no volver a enviar.|  
+|**loopback_detection**|**bit**|Se aplica a las suscripciones que forman parte de una topología de replicación transaccional bidireccional. La detección de bucles de retorno determina si el Agente de distribución envía las transacciones originadas en el suscriptor al mismo suscriptor:<br /><br /> **0** = las envía.<br /><br /> **1** = no no volver a enviar.|  
 |**queued_reinit**|**bit**|Especifica si el artículo está marcado para inicialización o reinicialización. Un valor de **1** especifica que el artículo suscrito está marcado para inicialización o reinicialización.|  
-|**nosync_type**|**tinyint**|Tipo de inicialización de la suscripción:<br /><br /> **0** = automático (instantánea)<br /><br /> **1** = solo admite replicación<br /><br /> **2** = inicializar con copia de seguridad<br /><br /> **3** = inicializar del número de secuencia de registro (LSN)<br /><br /> Para obtener más información, consulte el  **@sync_type**  parámetro de [sp_addsubscription](../../relational-databases/system-stored-procedures/sp-addsubscription-transact-sql.md).|  
+|**nosync_type**|**tinyint**|Tipo de inicialización de la suscripción:<br /><br /> **0** = automático (instantánea)<br /><br /> **1** = solo admite replicación<br /><br /> **2** = inicializar con copia de seguridad<br /><br /> **3** = inicializar del número de secuencia de registro (LSN)<br /><br /> Para obtener más información, consulte el **@sync_type** parámetro de [sp_addsubscription](../../relational-databases/system-stored-procedures/sp-addsubscription-transact-sql.md).|  
 |**SRVNAME**|**sysname**|Nombre del suscriptor.|  
   
 ## <a name="see-also"></a>Vea también  
- [Tablas de replicación &#40; Transact-SQL &#41;](../../relational-databases/system-tables/replication-tables-transact-sql.md)   
+ [Tablas de replicación &#40;Transact-SQL&#41;](../../relational-databases/system-tables/replication-tables-transact-sql.md)   
  [Vistas de replicación &#40;Transact-SQL&#41;](../../relational-databases/system-views/replication-views-transact-sql.md)  
   
   

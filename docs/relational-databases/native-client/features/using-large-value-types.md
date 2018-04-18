@@ -1,15 +1,15 @@
 ---
 title: Uso de tipos de valor grande | Documentos de Microsoft
-ms.custom: 
+ms.custom: ''
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
-ms.service: 
+ms.service: ''
 ms.component: native-client|features
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: 
-ms.tgt_pltfrm: 
+ms.technology: ''
+ms.tgt_pltfrm: ''
 ms.topic: reference
 helpviewer_keywords:
 - large value data types
@@ -19,22 +19,23 @@ helpviewer_keywords:
 - SQL Server Native Client ODBC driver, large value data types
 - SQL Server Native Client OLE DB provider, large value data types
 ms.assetid: 4a58b05c-8848-44bb-8704-f9f409efa5af
-caps.latest.revision: 
+caps.latest.revision: 53
 author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 54bc0998f8a275de6a0fb03398c461917a67a8e9
-ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
+monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
+ms.openlocfilehash: 420c4456970a2dcc0605bdc6d2f5ad3409298aec
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/25/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="using-large-value-types"></a>Usar tipos de valor grande
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
 [!INCLUDE[SNAC_Deprecated](../../../includes/snac-deprecated.md)]
 
-  Antes de [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)], trabajar con tipos de datos de valores grandes requería un tratamiento especial. Tipos de datos de valores grandes son aquellos que superan el tamaño máximo de fila de 8 KB. [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)]introdujo un **max** especificador para **varchar**, **nvarchar** y **varbinary** tipos de datos para permitir el almacenamiento de valores tan grandes como 2 ^ 31 -1 bytes. Columnas de la tabla y [!INCLUDE[tsql](../../../includes/tsql-md.md)] pueden especificar variables **varchar (max)**, **nvarchar (max)** o **varbinary (max)** tipos de datos.  
+  Antes de [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)], trabajar con tipos de datos de valores grandes requería un tratamiento especial. Tipos de datos de valores grandes son aquellos que superan el tamaño máximo de fila de 8 KB. [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)] introdujo un **max** especificador para **varchar**, **nvarchar** y **varbinary** tipos de datos para permitir el almacenamiento de valores tan grandes como 2 ^ 31 -1 bytes. Columnas de la tabla y [!INCLUDE[tsql](../../../includes/tsql-md.md)] pueden especificar variables **varchar (max)**, **nvarchar (max)** o **varbinary (max)** tipos de datos.  
   
 > [!NOTE]  
 >  Los tipos de datos de valor grande pueden tener un tamaño máximo comprendido entre 1 y 8 KB o pueden especificarse como ilimitados.  

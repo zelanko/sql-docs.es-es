@@ -2,7 +2,7 @@
 title: SQLBindCol (función) | Documentos de Microsoft
 ms.custom: ''
 ms.date: 01/19/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: drivers
 ms.service: ''
 ms.component: odbc
@@ -25,13 +25,13 @@ ms.assetid: 41a37655-84cd-423f-9daa-e0b47b88dc54
 caps.latest.revision: 37
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 4b2031680faefcdf0b701ad8065b9d90cd8678f8
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: 27b78b2b74e4990ce22d47fd433ae7147fc3d536
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="sqlbindcol-function"></a>SQLBindCol (función)
 **Conformidad**  
@@ -68,7 +68,7 @@ SQLRETURN SQLBindCol(
  También puede especificar un tipo de datos C extendido. Para obtener más información, consulte [tipos de datos C en ODBC](../../../odbc/reference/develop-app/c-data-types-in-odbc.md).  
   
  *TargetValuePtr*  
- [Entrada/salida diferida] Puntero al búfer de datos para enlazar a la columna. **SQLFetch** y **SQLFetchScroll** devolver datos en este búfer. **SQLBulkOperations** devuelve datos en este búfer cuando *operación* es SQL_FETCH_BY_BOOKMARK; recupera los datos de este búfer cuando *operación* es SQL_ADD o SQL_UPDATE_BY_BOOKMARK . **SQLSetPos** devuelve datos en este búfer cuando *operación* es SQL_REFRESH; recupera los datos de este búfer cuando *operación* es SQL_UPDATE.  
+ [Entrada/salida diferida] Puntero al búfer de datos para enlazar a la columna. **SQLFetch** y **SQLFetchScroll** devolver datos en este búfer. **SQLBulkOperations** devuelve datos en este búfer cuando *operación* es SQL_FETCH_BY_BOOKMARK; recupera los datos de este búfer cuando *operación* es SQL_ADD o SQL_UPDATE_BY_BOOKMARK. **SQLSetPos** devuelve datos en este búfer cuando *operación* es SQL_REFRESH; recupera los datos de este búfer cuando *operación* es SQL_UPDATE.  
   
  Si *TargetValuePtr* es un puntero nulo, el controlador desenlaza el búfer de datos para la columna. Una aplicación puede deshacer el enlace de todas las columnas mediante una llamada a **SQLFreeStmt** con la opción SQL_UNBIND. Una aplicación puede desenlazar el búfer de datos para una columna pero que siga habiendo un búfer de longitud/indicador enlazado para la columna, si la *TargetValuePtr* argumento en la llamada a **SQLBindCol** es un puntero nulo, pero el *StrLen_or_IndPtr* argumento es un valor válido.  
   

@@ -1,36 +1,37 @@
 ---
 title: Principales consideraciones de seguridad SQLXML | Documentos de Microsoft
-ms.custom: 
+ms.custom: ''
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine, sql-database
-ms.service: 
+ms.service: ''
 ms.component: sqlxml
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - dbe-xml
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: reference
 helpviewer_keywords:
 - security [SQLXML], about security
 ms.assetid: 330cd2ff-d5d5-4c8e-8f93-0869c977be94
-caps.latest.revision: 
+caps.latest.revision: 12
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: a447b0efceee45f759743b245a7351dc381ba208
-ms.sourcegitcommit: 37f0b59e648251be673389fa486b0a984ce22c81
+monikerRange: = azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions
+ms.openlocfilehash: 61dbae297d74069310898ef170b2677b460aeef6
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/12/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="core-sqlxml-security-considerations"></a>Consideraciones básicas de seguridad de SQLXML
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
-A continuación se indican instrucciones de seguridad para utilizar SQLXML en el acceso a datos.  
+  A continuación se indican instrucciones de seguridad para utilizar SQLXML en el acceso a datos.  
   
--   El proveedor SQLXMLOLEDB expone una **StreamFlags** propiedad que le permite establecer marcas que indica qué funcionalidad SQLXML debe habilitarse o deshabilitarse para cada instancia concreta. Puede utilizar esta propiedad para personalizar el uso de SQLXML y asegurarse de que solo se habilitan los componentes que desea. Para obtener más información, vea [proveedor SQLXMLOLEDB &#40; SQLXML 4.0 &#41; ](http://msdn.microsoft.com/library/fc489682-690a-4bb0-b5ac-237d376dc110).  
+-   El proveedor SQLXMLOLEDB expone una **StreamFlags** propiedad que le permite establecer marcas que indica qué funcionalidad SQLXML debe habilitarse o deshabilitarse para cada instancia concreta. Puede utilizar esta propiedad para personalizar el uso de SQLXML y asegurarse de que solo se habilitan los componentes que desea. Para obtener más información, consulte [proveedor SQLXMLOLEDB &#40;SQLXML 4.0&#41;](http://msdn.microsoft.com/library/fc489682-690a-4bb0-b5ac-237d376dc110).  
   
 -   Cuando se producen y se devuelven errores SQLXML, pueden incluir información sobre el esquema de la base de datos como nombres de tabla, nombres de columna o información de tipo. Debe tener cuidado al controlar estos errores para que los usuarios no puedan detectar fácilmente la información sobre la instalación de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] donde no esté previsto ni sea necesario.  
   

@@ -1,15 +1,15 @@
 ---
 title: Trabajar con tipos de datos | Documentos de Microsoft
-ms.custom: 
+ms.custom: ''
 ms.date: 08/06/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine
-ms.service: 
+ms.service: ''
 ms.component: smo
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: 
-ms.tgt_pltfrm: 
+ms.technology: ''
+ms.tgt_pltfrm: ''
 ms.topic: reference
 helpviewer_keywords:
 - DataType object
@@ -17,16 +17,17 @@ helpviewer_keywords:
 - data types [SMO]
 - SMO [SQL Server], data types
 ms.assetid: 1e0e736a-c709-4d89-aeb2-b32dcfd641fa
-caps.latest.revision: 
+caps.latest.revision: 45
 author: stevestein
 ms.author: sstein
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 575e2b0553bd37ca095c1864cc775547ace36a76
-ms.sourcegitcommit: cb2f9d4db45bef37c04064a9493ac2c1d60f2c22
+monikerRange: = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions
+ms.openlocfilehash: 14c774e9b1a02866c811fbad29954adff61ad5f3
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/12/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="working-with-data-types"></a>Trabajar con tipos de datos
 [!INCLUDE[appliesto-ss-asdb-asdw-xxx-md](../../../includes/appliesto-ss-asdb-asdw-xxx-md.md)]
@@ -66,7 +67,7 @@ ms.lasthandoff: 01/12/2018
  El <xref:Microsoft.SqlServer.Management.Smo.SqlDataType> enumeración contiene una lista de todos los [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]-tipos de datos admitidos.  
   
 ## <a name="examples"></a>Ejemplos  
-Para utilizar cualquier ejemplo de código que se proporcione, deberá elegir el entorno de programación, la plantilla de programación y el lenguaje de programación en los que crear su aplicación. Para obtener más información, vea [crear a Visual C &#35; Proyecto SMO en Visual Studio .NET](../../../relational-databases/server-management-objects-smo/how-to-create-a-visual-csharp-smo-project-in-visual-studio-net.md).  
+Para utilizar cualquier ejemplo de código que se proporcione, deberá elegir el entorno de programación, la plantilla de programación y el lenguaje de programación en los que crear su aplicación. Para obtener más información, consulte [crear a Visual C&#35; proyecto SMO en Visual Studio .NET](../../../relational-databases/server-management-objects-smo/how-to-create-a-visual-csharp-smo-project-in-visual-studio-net.md).  
   
   
 ## <a name="constructing-a-datatype-object-with-the-specification-in-the-constructor-in-visual-basic"></a>Construir un objeto DataType con la especificación del constructor de Visual Basic  

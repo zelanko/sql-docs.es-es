@@ -1,16 +1,16 @@
 ---
 title: Sys.syscolumns (Transact-SQL) | Documentos de Microsoft
-ms.custom: 
+ms.custom: ''
 ms.date: 03/15/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-enginel, sql-data-warehouse, pdw
-ms.service: 
+ms.service: ''
 ms.component: system-compatibility-views
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - sys.syscolumns
@@ -23,16 +23,17 @@ helpviewer_keywords:
 - syscolumns system table
 - sys.syscolumns compatibility view
 ms.assetid: 863fd87b-ff33-4ac5-9aa9-df21140681da
-caps.latest.revision: 
+caps.latest.revision: 32
 author: rothja
 ms.author: jroth
 manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 15de1e84d8b3dcbe9d1949cb0ba745cfea671287
-ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
+monikerRange: '>= aps-pdw-2016 || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
+ms.openlocfilehash: 1f1f149934c0d92df8a1184bc57a5fcb02f7673c
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/09/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="syssyscolumns-transact-sql"></a>sys.syscolumns (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-asdw-pdw-md](../../includes/tsql-appliesto-ss2008-xxxx-asdw-pdw-md.md)]
@@ -51,14 +52,14 @@ ms.lasthandoff: 02/09/2018
 |**xusertype**|**smallint**|Id. del tipo de datos extendido definido por el usuario. Produce un desbordamiento o devuelve NULL si el número de tipos de datos es superior a 32.767.|  
 |**length**|**smallint**|Longitud máxima de almacenamiento físico de **sys**. **tipos de**.|  
 |**xprec**|**tinyint**|[!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]|  
-|**xscale**|**tinyint**|[!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]|  
+|**XScale**|**tinyint**|[!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]|  
 |**colid**|**smallint**|Id. de columna o parámetro.|  
-|**xoffset**|**smallint**|[!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]|  
+|**XOffset**|**smallint**|[!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]|  
 |**bitpos**|**tinyint**|[!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]|  
-|**reserved**|**tinyint**|[!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]|  
+|**Reservado**|**tinyint**|[!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]|  
 |**colstat**|**smallint**|[!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]|  
 |**cdefault**|**int**|Id. del valor predeterminado de esta columna.|  
-|**domain**|**int**|Id. de la regla o restricción CHECK de esta columna.|  
+|**Dominio**|**int**|Id. de la regla o restricción CHECK de esta columna.|  
 |**number**|**smallint**|Número del subprocedimiento cuando el procedimiento está agrupado.<br /><br /> 0 = Entradas que no son de procedimiento|  
 |**colorder**|**smallint**|[!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]|  
 |**autoval**|**varbinary(8000)**|[!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]|  
@@ -67,16 +68,16 @@ ms.lasthandoff: 02/09/2018
 |**status**|**tinyint**|Mapa de bits utilizado para describir una propiedad de la columna o parámetro:<br /><br /> 0x08 = La columna admite valores NULL.<br /><br /> 0 x 10 = relleno ANSI activado al **varchar** o **varbinary** se han agregado las columnas. Se conservan los espacios en blanco **varchar** y se conservan los ceros finales **varbinary** columnas.<br /><br /> 0x40 = El parámetro es de tipo OUTPUT.<br /><br /> 0x80 = La columna es de identidad.|  
 |**Tipo**|**tinyint**|Tipo de almacenamiento físico de **sys**. **tipos de**.|  
 |**usertype**|**smallint**|Id. del tipo de datos definido por el usuario de **sys.types**. Produce un desbordamiento o devuelve NULL si el número de tipos de datos es superior a 32.767.|  
-|**printfmt**|**varchar(255)**|[!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]|  
-|**prec**|**smallint**|Nivel de precisión de la columna.<br /><br /> -1 = **xml** o tipo de valor grande.|  
+|**printfmt**|**varchar (255)**|[!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]|  
+|**Prec**|**smallint**|Nivel de precisión de la columna.<br /><br /> -1 = **xml** o tipo de valor grande.|  
 |**escala**|**int**|Escala de esta columna.<br /><br /> NULL = El tipo de datos no es numérico.|  
-|**iscomputed**|**int**|Marca que señala si es una columna calculada:<br /><br /> 0 = No calculada<br /><br /> 1 = Calculada|  
+|**es calculado**|**int**|Marca que señala si es una columna calculada:<br /><br /> 0 = No calculada<br /><br /> 1 = Calculada|  
 |**isoutparam**|**int**|Indica si el parámetro de procedimiento es un parámetro de salida:<br /><br /> 1 = True<br /><br /> 0 = False|  
-|**isnullable**|**int**|Indica si la columna admite valores NULL:<br /><br /> 1 = True<br /><br /> 0 = False|  
-|**intercalación**|**sysname**|Nombre de la intercalación de la columna. Es NULL si la columna no está basada en caracteres.|  
+|**IsNullable**|**int**|Indica si la columna admite valores NULL:<br /><br /> 1 = True<br /><br /> 0 = False|  
+|**Intercalación**|**sysname**|Nombre de la intercalación de la columna. Es NULL si la columna no está basada en caracteres.|  
   
 ## <a name="see-also"></a>Vea también  
- [Asignar tablas del sistema a vistas del sistema &#40; Transact-SQL &#41;](../../relational-databases/system-tables/mapping-system-tables-to-system-views-transact-sql.md)   
+ [Asignar tablas del sistema a vistas del sistema &#40;Transact-SQL&#41;](../../relational-databases/system-tables/mapping-system-tables-to-system-views-transact-sql.md)   
  [Vistas de compatibilidad &#40;Transact-SQL&#41;](~/relational-databases/system-compatibility-views/system-compatibility-views-transact-sql.md)  
   
   

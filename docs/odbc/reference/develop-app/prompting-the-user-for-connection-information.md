@@ -1,15 +1,16 @@
 ---
-title: "Preguntar al usuario información de conexión | Documentos de Microsoft"
-ms.custom: 
+title: Preguntar al usuario información de conexión | Documentos de Microsoft
+ms.custom: ''
 ms.date: 01/19/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: drivers
-ms.service: 
+ms.service: ''
 ms.component: odbc
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: drivers
-ms.tgt_pltfrm: 
+ms.technology:
+- drivers
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - connecting to data source [ODBC], SqlConnect
@@ -22,16 +23,16 @@ helpviewer_keywords:
 - prompting user for connection information [ODBC]
 - SQLDriverConnect function [ODBC], prompting user for connection information
 ms.assetid: da98e9b9-a4ac-4a9d-bae6-e9252b1fe1e5
-caps.latest.revision: "7"
+caps.latest.revision: 7
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: f72a196447399b6df74de8d46fa1eee572910fac
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: 796713fb12fe2eb70a0e7630ec558a63d7cfec4d
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="prompting-the-user-for-connection-information"></a>Preguntar al usuario información de conexión
 Si la aplicación utiliza **SQLConnect** y debe pedir al usuario ninguna información de conexión, como un nombre de usuario y una contraseña, debe hacerlo propio. Mientras que esto permite que la aplicación controlar su "apariencia y funcionamiento", se puede forzar a la aplicación para que contenga código específico del controlador. Esto se produce cuando la aplicación debe solicitar al usuario información de conexión específicos del controlador. Esto presenta una situación posible para las aplicaciones genéricas, que están diseñados para trabajar con todos los controladores, incluidos los controladores que no existen cuando se escribe la aplicación.  

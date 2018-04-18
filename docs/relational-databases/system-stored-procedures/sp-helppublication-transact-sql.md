@@ -1,16 +1,16 @@
 ---
 title: el procedimiento sp_helppublication (Transact-SQL) | Documentos de Microsoft
-ms.custom: 
+ms.custom: ''
 ms.date: 03/17/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine
-ms.service: 
+ms.service: ''
 ms.component: system-stored-procedures
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - replication
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 applies_to:
 - SQL Server
@@ -20,16 +20,16 @@ f1_keywords:
 helpviewer_keywords:
 - sp_helppublication
 ms.assetid: e801c3f0-dcbd-4b4a-b254-949a05f63518
-caps.latest.revision: 
+caps.latest.revision: 49
 author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: aa78ce2aa9ed1ba80a7ee733a2e458ba231d968f
-ms.sourcegitcommit: 45e4efb7aa828578fe9eb7743a1a3526da719555
+ms.openlocfilehash: 7160c358f0969c967cb0995e410f7e75427285bc
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="sphelppublication-transact-sql"></a>sp_helppublication (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -49,12 +49,12 @@ sp_helppublication [ [ @publication = ] 'publication' ]
   
 ## <a name="arguments"></a>Argumentos  
  [  **@publication =** ] **'***publicación***'**  
- Es el nombre de la publicación que se va a consultar. *publicación* es de tipo sysname y su valor predeterminado es  **%** , que devuelve información sobre todas las publicaciones.  
+ Es el nombre de la publicación que se va a consultar. *publicación* es de tipo sysname y su valor predeterminado es **%**, que devuelve información sobre todas las publicaciones.  
   
  [  **@found =** ] **'***encuentra***'** salida  
  Es una marca para indicar que se devuelven filas. *se encontró*es **int** y un parámetro de salida, su valor predeterminado es **23456**. **1** indica que se encuentra la publicación. **0** indica que no se encuentra la publicación.  
   
- [  **@publisher**  =] **'***publisher***'**  
+ [ **@publisher** =] **'***publisher***'**  
  Especifica un no[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] publisher. *publicador* es de tipo sysname y su valor predeterminado es null.  
   
 > [!NOTE]  
@@ -103,13 +103,13 @@ sp_helppublication [ [ @publication = ] 'publication' ]
 |backward_comp_level||Nivel de compatibilidad de la base de datos, que puede ser uno de los que se especifican a continuación:<br /><br /> **90** = [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)]<br /><br /> **100** = [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)]|  
 |publish_to_AD|**bit**|Especifica si la información de publicación se publica en [!INCLUDE[msCoName](../../includes/msconame-md.md)] Active Directory™. Un valor de **1** indica que se publica y un valor de **0** indica que no se publica.|  
 |allow_initialize_from_backup|**bit**|Indica si los suscriptores pueden inicializar una suscripción a esta publicación a partir de una copia de seguridad en lugar de una instantánea inicial. **1** significa que las suscripciones se pueden inicializar desde una copia de seguridad, y **0** significa que no. Para obtener más información, consulte [inicializar una suscripción transaccional sin una instantánea](../../relational-databases/replication/initialize-a-transactional-subscription-without-a-snapshot.md) una suscripción transaccional sin una instantánea.|  
-|replicate_ddl|**int**|Indica si la publicación admite replicación de esquema. **1** indica que se replican instrucciones de DDL (lenguaje) de definición de datos ejecutadas en el publicador, y **0** indica que no se replican las instrucciones de DDL. Para más información, vea [Realizar cambios de esquema en bases de datos de publicaciones](../../relational-databases/replication/publish/make-schema-changes-on-publication-databases.md).|  
+|replicate_ddl|**int**|Indica si la publicación admite replicación de esquema. **1** indica que se replican instrucciones de DDL (lenguaje) de definición de datos ejecutadas en el publicador, y **0** indica que no se replican las instrucciones de DDL. Para más información, vea [Make Schema Changes on Publication Databases](../../relational-databases/replication/publish/make-schema-changes-on-publication-databases.md) (Realizar cambios de esquema en bases de datos de publicaciones).|  
 |enabled_for_p2p|**int**|Indica si la publicación se puede utilizar en una topología de replicación punto a punto. **1** indica que la publicación admite la replicación punto a punto. Para obtener más información, consulte [Peer-to-Peer Transactional Replication](../../relational-databases/replication/transactional/peer-to-peer-transactional-replication.md).|  
 |publish_local_changes_only|**int**|[!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]|  
 |enabled_for_het_sub|**int**|Especifica si la publicación admite suscriptores que no son [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Un valor de **1** significa que no sea -[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] se admiten los suscriptores. Un valor de **0** supone que sólo [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] se admiten los suscriptores. Para más información, consulte [Non-SQL Server Subscribers](../../relational-databases/replication/non-sql/non-sql-server-subscribers.md).|  
 |enabled_for_p2p_conflictdetection|**int**|Especifica si el Agente de distribución detecta los conflictos para una publicación que está habilitada para la replicación punto a punto. Un valor de **1** significa que se detectan conflictos. Para obtener más información, consulte [Conflict Detection in Peer-to-Peer Replication](../../relational-databases/replication/transactional/peer-to-peer-conflict-detection-in-peer-to-peer-replication.md).|  
 |originator_id|**int**|Especifica un Id. para un nodo en una topología punto a punto. Este identificador se utiliza para la detección de conflictos si **enabled_for_p2p_conflictdetection** está establecido en **1**. Para obtener una lista de identificadores que ya se hayan utilizado, consulte la tabla del sistema [Mspeer_originatorid_history](../../relational-databases/system-tables/mspeer-originatorid-history-transact-sql.md) .|  
-|p2p_continue_onconflict|**int**|Especifica si el Agente de distribución continúa procesando los cambios cuando se detecta un conflicto. Un valor de **1** significa que el agente sigue procesando los cambios.<br /><br /> **\*\*Precaución \* \***  le recomendamos que use el valor predeterminado de **0**. Cuando esta opción se establece en **1**, el agente de distribución intenta converger los datos de la topología aplicando la fila en conflicto del nodo que tiene el identificador de originador más alto. Este método no garantiza la convergencia. Debe asegurarse de que la topología sea coherente una vez detectado un conflicto. Para obtener más información, vea "Controlar los conflictos" en [Conflict Detection in Peer-to-Peer Replication](../../relational-databases/replication/transactional/peer-to-peer-conflict-detection-in-peer-to-peer-replication.md).|  
+|p2p_continue_onconflict|**int**|Especifica si el Agente de distribución continúa procesando los cambios cuando se detecta un conflicto. Un valor de **1** significa que el agente sigue procesando los cambios.<br /><br /> **\*\* Precaución \* \***  le recomendamos que use el valor predeterminado de **0**. Cuando esta opción se establece en **1**, el agente de distribución intenta converger los datos de la topología aplicando la fila en conflicto del nodo que tiene el identificador de originador más alto. Este método no garantiza la convergencia. Debe asegurarse de que la topología sea coherente una vez detectado un conflicto. Para obtener más información, vea "Controlar los conflictos" en [Conflict Detection in Peer-to-Peer Replication](../../relational-databases/replication/transactional/peer-to-peer-conflict-detection-in-peer-to-peer-replication.md).|  
 |alllow_partition_switch|**int**|Especifica si las instrucciones ALTER TABLE...SWITCH se pueden ejecutar con la base de datos publicada. Para obtener más información, vea [Replicar tablas e índices con particiones](../../relational-databases/replication/publish/replicate-partitioned-tables-and-indexes.md).|  
 |replicate_partition_switch|**int**|Especifica si las instrucciones ALTER TABLE...SWITCH que se ejecutan con la base de datos publicada se deben replicar en los suscriptores. Esta opción es válida sólo si *allow_partition_switch* está establecido en **1**.|  
   
@@ -131,9 +131,9 @@ sp_helppublication [ [ @publication = ] 'publication' ]
   
 ## <a name="see-also"></a>Vea también  
  [Ver y modificar propiedades de publicación](../../relational-databases/replication/publish/view-and-modify-publication-properties.md)   
- [sp_addpublication &#40; Transact-SQL &#41;](../../relational-databases/system-stored-procedures/sp-addpublication-transact-sql.md)   
+ [sp_addpublication &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-addpublication-transact-sql.md)   
  [sp_changepublication &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-changepublication-transact-sql.md)   
- [sp_droppublication &#40; Transact-SQL &#41;](../../relational-databases/system-stored-procedures/sp-droppublication-transact-sql.md)   
+ [sp_droppublication &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-droppublication-transact-sql.md)   
  [Procedimientos almacenados de replicación &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/replication-stored-procedures-transact-sql.md)  
   
   

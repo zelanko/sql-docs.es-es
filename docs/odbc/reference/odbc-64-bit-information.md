@@ -1,27 +1,28 @@
 ---
-title: "Información de 64 bits ODBC | Documentos de Microsoft"
-ms.custom: 
+title: Información de 64 bits ODBC | Documentos de Microsoft
+ms.custom: ''
 ms.date: 01/19/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: drivers
-ms.service: 
+ms.service: ''
 ms.component: odbc
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: drivers
-ms.tgt_pltfrm: 
+ms.technology:
+- drivers
+ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: ed9851ce-44ee-4c8e-b626-1d0b52da30fe
-caps.latest.revision: "21"
+caps.latest.revision: 21
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: c1c7c878a850134d625c6c956449a400672ad6f7
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: c61f0177f6f4634c5ab3a68eb7bfbd267f4ee84a
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="odbc-64-bit-information"></a>Información de 64 bits ODBC
 A partir de Windows Server 2003, los sistemas operativos de Microsoft han admitido las bibliotecas ODBC de 64 bits. Los encabezados ODBC y bibliotecas que se incluyó por primera vez con el SDK de MDAC 2.7 contienen los cambios para permitir que los programadores a escribir fácilmente código para las nuevas plataformas de 64 bits. Al asegurarse de que su código utiliza los tipos ODBC definida enumerados a continuación, puede compilar el código fuente mismo tanto para plataformas de 64 bits y 32 bits basados en el **_WIN64** o **WIN32** macros.  

@@ -1,16 +1,16 @@
 ---
 title: sp_helplogins (Transact-SQL) | Documentos de Microsoft
-ms.custom: 
+ms.custom: ''
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine
-ms.service: 
+ms.service: ''
 ms.component: system-stored-procedures
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - sp_helplogins_TSQL
@@ -20,16 +20,16 @@ dev_langs:
 helpviewer_keywords:
 - sp_helplogins
 ms.assetid: f9ad3767-5b9f-420d-8922-b637811404f7
-caps.latest.revision: 
+caps.latest.revision: 22
 author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 75e0521889f38db02bfdc9eabd3332d3fa76afb9
-ms.sourcegitcommit: 9fbe5403e902eb996bab0b1285cdade281c1cb16
+ms.openlocfilehash: e2711c0b2a6b2e380fac4cb63ea295d5a4750442
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/27/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="sphelplogins-transact-sql"></a>sp_helplogins (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -46,8 +46,8 @@ sp_helplogins [ [ @LoginNamePattern = ] 'login' ]
 ```  
   
 ## <a name="arguments"></a>Argumentos  
- [  **@LoginNamePattern =** ] **'***inicio de sesión***'**  
- Es un nombre de inicio de sesión. *inicio de sesión* es **sysname**, su valor predeterminado es null. *inicio de sesión* debe existir si se especifica. Si *inicio de sesión* no es se especifica, se devuelve información sobre todos los inicios de sesión.  
+ [ **@LoginNamePattern =** ] **'***login***'**  
+ Es un nombre de inicio de sesión. *login* es de tipo **sysname** y su valor predeterminado es NULL. *inicio de sesión* debe existir si se especifica. Si *inicio de sesión* no es se especifica, se devuelve información sobre todos los inicios de sesión.  
   
 ## <a name="return-code-values"></a>Valores de código de retorno  
  0 (correcto) o 1 (error)  
@@ -58,7 +58,7 @@ sp_helplogins [ [ @LoginNamePattern = ] 'login' ]
 |Nombre de columna|Tipo de datos|Description|  
 |-----------------|---------------|-----------------|  
 |**LoginName**|**sysname**|Nombre de inicio de sesión.|  
-|**SID**|**varbinary (85)**|Identificador de seguridad (SID) del inicio de sesión.|  
+|**SID**|**varbinary(85)**|Identificador de seguridad (SID) del inicio de sesión.|  
 |**DefDBName**|**sysname**|Base de datos predeterminada que **LoginName** utiliza al conectarse a una instancia de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].|  
 |**DefLangName**|**sysname**|Idioma predeterminado utilizado por **LoginName**.|  
 |**Auser**|**Char (5)**|Sí = **LoginName** tiene un nombre de usuario asociado en una base de datos.<br /><br /> No = **LoginName** no tiene un nombre de usuario asociado.|  
@@ -108,9 +108,9 @@ John        pubs     John       User
 ```  
   
 ## <a name="see-also"></a>Vea también  
- [Seguridad almacena procedimientos &#40; Transact-SQL &#41;](../../relational-databases/system-stored-procedures/security-stored-procedures-transact-sql.md)   
- [sp_helpdb &#40; Transact-SQL &#41;](../../relational-databases/system-stored-procedures/sp-helpdb-transact-sql.md)   
- [sp_helpuser &#40; Transact-SQL &#41;](../../relational-databases/system-stored-procedures/sp-helpuser-transact-sql.md)   
+ [Procedimientos almacenados de seguridad &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/security-stored-procedures-transact-sql.md)   
+ [sp_helpdb &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-helpdb-transact-sql.md)   
+ [sp_helpuser &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-helpuser-transact-sql.md)   
  [Procedimientos almacenados del sistema &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
   
   

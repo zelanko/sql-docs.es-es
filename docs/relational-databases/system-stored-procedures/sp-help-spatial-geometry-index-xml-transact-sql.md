@@ -1,16 +1,16 @@
 ---
 title: sp_help_spatial_geometry_index_xml (Transact-SQL) | Documentos de Microsoft
-ms.custom: 
+ms.custom: ''
 ms.date: 06/10/2016
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine
-ms.service: 
+ms.service: ''
 ms.component: system-stored-procedures
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - sp_help_spatial_geometry_index_xml_TSQL
@@ -20,16 +20,16 @@ dev_langs:
 helpviewer_keywords:
 - sp_help_spatial_geometry_index_xml procedure
 ms.assetid: 9668ae6d-9ed5-418e-bb9a-9e7b66f7dd16
-caps.latest.revision: 
+caps.latest.revision: 14
 author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: b345a5b87ffc78c47052210a055ab3ee157effc0
-ms.sourcegitcommit: 9fbe5403e902eb996bab0b1285cdade281c1cb16
+ms.openlocfilehash: 75d4a07808aa47e748a0bd814587d19d34f74ce3
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/27/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="sphelpspatialgeometryindexxml-transact-sql"></a>sp_help_spatial_geometry_index_xml (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
@@ -64,7 +64,7 @@ sp_help_spatial_geometry_index [ @tabname =] 'tabname'
  Las propiedades que contienen valores NULL están incluidas en el conjunto XML que se devuelve.  
   
 ## <a name="example"></a>Ejemplo  
- En el ejemplo siguiente se utiliza `sp_help_spatial_geometry_index_xml` para investigar el índice espacial **SIndx_SpatialTable_geometry_col2** definido en la tabla **geometry_col** para el ejemplo de consulta determinado en  **@qs** . En este ejemplo se devuelven las propiedades básicas del índice especificado en un fragmento XML que muestra el nombre y valor de las propiedades seleccionadas.  
+ En el ejemplo siguiente se utiliza `sp_help_spatial_geometry_index_xml` para investigar el índice espacial **SIndx_SpatialTable_geometry_col2** definido en la tabla **geometry_col** para el ejemplo de consulta determinado en **@qs**. En este ejemplo se devuelven las propiedades básicas del índice especificado en un fragmento XML que muestra el nombre y valor de las propiedades seleccionadas.  
   
  Un [XQuery](../../xquery/xquery-basics.md) , a continuación, se ejecuta en el conjunto de resultados, devolver una propiedad concreta.  
   
@@ -84,9 +84,9 @@ SELECT @x.value('(/Primary_Filter_Efficiency/text())[1]', 'float');
  [Procedimientos almacenados de índice de argumentos y las propiedades de espaciales](../../relational-databases/system-stored-procedures/spatial-index-stored-procedures-arguments-and-properties.md)   
  [Procedimientos almacenados de índice espacial](http://msdn.microsoft.com/library/1be0f34e-3d5a-4a1f-9299-bd482362ec7a)   
  [sp_help_spatial_geometry_index](../../relational-databases/system-stored-procedures/sp-help-spatial-geometry-index-transact-sql.md)   
- [Información general de los índices espaciales](../../relational-databases/spatial/spatial-indexes-overview.md)   
+ [Información general sobre los índices espaciales](../../relational-databases/spatial/spatial-indexes-overview.md)   
  [Datos espaciales &#40;SQL Server&#41;](../../relational-databases/spatial/spatial-data-sql-server.md)   
  [Conceptos básicos de XQuery](../../xquery/xquery-basics.md)   
- [Referencia del lenguaje XQuery](../../xquery/xquery-language-reference-sql-server.md)  
+ [Referencia del lenguaje de XQuery](../../xquery/xquery-language-reference-sql-server.md)  
   
   

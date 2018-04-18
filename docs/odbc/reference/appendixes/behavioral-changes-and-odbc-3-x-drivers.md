@@ -1,31 +1,32 @@
 ---
 title: Cambios de comportamiento y los controladores ODBC 3.x | Documentos de Microsoft
-ms.custom: 
+ms.custom: ''
 ms.date: 01/19/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: drivers
-ms.service: 
+ms.service: ''
 ms.component: odbc
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: drivers
-ms.tgt_pltfrm: 
+ms.technology:
+- drivers
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - sql_attr_odbc_version [ODBC]
 - backward compatibility [ODBC], behavioral changes
 - compatibility [ODBC], behavioral changes
 ms.assetid: 88a503cc-bff7-42d9-83ff-8e232109ed06
-caps.latest.revision: "6"
+caps.latest.revision: 6
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: dc06520b8dcf2fe5686d041e1c48e50cf5555b79
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: 2fe50cf12ce72ad3da5f9f2cb1f180d5875ef875
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="behavioral-changes-and-odbc-3x-drivers"></a>Cambios de comportamiento y los controladores ODBC 3.x
 El atributo de entorno SQL_ATTR_ODBC_VERSION indica al controlador si necesita exhiba ODBC 2. *x* comportamiento u ODBC 3*.x* comportamiento. ¿Cómo se establece el atributo de entorno SQL_ATTR_ODBC_VERSION depende de la aplicación. ODBC 3*.x* las aplicaciones deben llamar a **SQLSetEnvAttr** para establecer este atributo después de que llame a **SQLAllocHandle** para asignar un identificador de entorno y antes de llamar a  **SQLAllocHandle** para asignar un identificador de conexión. Si no pueden hacer esto, el Administrador de controladores devuelve SQLSTATE HY010 (error de secuencia de función) en la última llamada a **SQLAllocHandle**.  

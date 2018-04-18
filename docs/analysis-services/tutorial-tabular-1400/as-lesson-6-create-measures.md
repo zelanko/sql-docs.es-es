@@ -1,15 +1,15 @@
 ---
-title: "Lección tutorial de Analysis Services 6: crear medidas | Documentos de Microsoft"
-description: "Describe cómo crear medidas en el proyecto de tutorial de Analysis Services."
+title: 'Lección tutorial de Analysis Services 6: crear medidas | Documentos de Microsoft'
+description: Describe cómo crear medidas en el proyecto de tutorial de Analysis Services.
 ms.prod_service: analysis-services, azure-analysis-services
 services: analysis-services
 ms.suite: pro-bi
-documentationcenter: 
+documentationcenter: ''
 author: Minewiskan
 manager: kfile
-editor: 
-tags: 
-ms.assetid: 
+editor: ''
+tags: ''
+ms.assetid: ''
 ms.service: analysis-services
 ms.devlang: NA
 ms.topic: get-started-article
@@ -17,11 +17,12 @@ ms.tgt_pltfrm: NA
 ms.workload: na
 ms.date: 02/20/2018
 ms.author: owend
-ms.openlocfilehash: b4de99f18366afefaeb5411e0fc5454d378b87f7
-ms.sourcegitcommit: 7ed8c61fb54e3963e451bfb7f80c6a3899d93322
+monikerRange: '>= sql-analysis-services-2017 || = sqlallproducts-allversions'
+ms.openlocfilehash: d37b1c5a307ea7f9c90fa29c83536a4b3d8ef0bf
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/20/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="create-measures"></a>Crear medidas
 
@@ -57,7 +58,7 @@ Este artículo forma parte de un tutorial de modelado tabular, que se debe compl
   
     Observe que la celda superior izquierda contiene ahora un nombre de medida, **DaysCurrentQuarterToDate**, seguido del resultado, **92**. El resultado no es relevante en este momento porque no se ha aplicado ningún filtro de usuario.
     
-      ![as-lesson6-newmeasure](../tutorial-tabular-1400/media/as-lesson6-newmeasure.png) 
+      ![newmeasure como lesson6](../tutorial-tabular-1400/media/as-lesson6-newmeasure.png) 
     
     A diferencia de las columnas calculadas, con fórmulas de medida puede escribir el nombre de medida, seguido por un signo de dos puntos seguido de la expresión de la fórmula.
 
@@ -84,7 +85,7 @@ Este artículo forma parte de un tutorial de modelado tabular, que se debe compl
   
     La característica de autosuma crea automáticamente una medida para la columna seleccionada usando la fórmula estándar de agregación DistinctCount.  
     
-       ![as-lesson6-newmeasure2](../tutorial-tabular-1400/media/as-lesson6-newmeasure2.png)
+       ![newmeasure2 como lesson6](../tutorial-tabular-1400/media/as-lesson6-newmeasure2.png)
   
 4.  En la cuadrícula de medidas, haga clic en la nueva medida y, a continuación, en la **propiedades** ventana, en **nombre de medida**, cambiar el nombre de la medida a **InternetDistinctCountSalesOrder**. 
  
@@ -95,7 +96,7 @@ Este artículo forma parte de un tutorial de modelado tabular, que se debe compl
 
     |Columna|Nombre de medida|Autosuma (∑)|Fórmula|  
     |----------------|----------|-----------------|-----------|  
-    |SalesOrderLineNumber|InternetOrderLinesCount|Count|=COUNTA([SalesOrderLineNumber])|  
+    |SalesOrderLineNumber|InternetOrderLinesCount|Count|=CountA([SalesOrderLineNumber])|  
     |OrderQuantity|InternetTotalUnits|SUM|=SUM([OrderQuantity])|  
     |DiscountAmount|InternetTotalDiscountAmount|SUM|=SUM([DiscountAmount])|  
     |TotalProductCost|InternetTotalProductCost|SUM|=SUM([TotalProductCost])|  

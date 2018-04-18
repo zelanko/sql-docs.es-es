@@ -1,29 +1,30 @@
 ---
-title: SQLSetDescRec | Microsoft Docs
-ms.custom: 
+title: SQLSetDescRec | Documentos de Microsoft
+ms.custom: ''
 ms.date: 03/17/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
-ms.service: 
+ms.service: ''
 ms.component: native-client-odbc-api
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: 
-ms.tgt_pltfrm: 
+ms.technology: ''
+ms.tgt_pltfrm: ''
 ms.topic: reference
 helpviewer_keywords:
 - SQLSetDescRec function
 ms.assetid: 203d02a2-aa09-462b-a489-a2cdd6f6023b
-caps.latest.revision: 
+caps.latest.revision: 23
 author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 26821deb5f1d2404d1ea41ede439cfde403c265b
-ms.sourcegitcommit: a0aa5e611a0e6ebb74ac1e2f613e8916dc7a7617
+monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
+ms.openlocfilehash: d583d2b918d580056ec81412b162617ebc726b58
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/24/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="sqlsetdescrec"></a>SQLSetDescRec
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -39,7 +40,7 @@ ms.lasthandoff: 01/24/2018
 |Parámetro|Atributo relacionado para tipos de parámetro con valores que no son de tabla, incluidas columnas de parámetro con valores de tabla|Atributo relacionado para parámetros con valores de tabla|  
 |---------------|--------------------------------------------------------------------------------------------------------|----------------------------------------------------|  
 |*Tipo*|SQL_DESC_TYPE|SQL_SS_TABLE|  
-|*SubType*|Pasa por alto|Para registros de tipo SQL_DATETIME o SQL_INTERVAL, establézcalo en SQL_DESC_DATETIME_INTERVAL_CODE.|  
+|*Subtipo*|Pasa por alto|Para registros de tipo SQL_DATETIME o SQL_INTERVAL, establézcalo en SQL_DESC_DATETIME_INTERVAL_CODE.|  
 |*Longitud*|SQL_DESC_OCTET_LENGTH|Longitud del nombre de tipo de parámetro con valores de tabla. Puede ser SQL_NTS si el nombre de tipo termina en NULL, o cero si no se requiere el nombre de tipo de parámetro con valores de tabla.|  
 |*Precisión*|SQL_DESC_PRECISION|SQL_DESC_ARRAY_SIZE|  
 |*Escala*|SQL_DESC_SCALE|Sin usar. Este parámetro debería ser cero.|  
@@ -47,12 +48,12 @@ ms.lasthandoff: 01/24/2018
 |*StringLengthPtr*|SQL_DESC_OCTET_LENGTH_PTR|SQL_DESC_OCTET_LENGTH_PTR<br /><br /> Para un parámetro con valores de tabla, éste es el número de filas que se van a transferir o SQL_DATA_AT_EXEC. Se trata de un puntero a un valor que contiene el número de filas que se va a transferir con SQLExecDirect.|  
 |*IndicatorPtr*|SQL_DESC_INDICATOR_PTR|SQL_DESC_INDICATOR_PTR|  
   
- Para obtener más información acerca de los parámetros con valores de tabla, vea [parámetros con valores de tabla &#40; ODBC &#41;](../../relational-databases/native-client-odbc-table-valued-parameters/table-valued-parameters-odbc.md).  
+ Para obtener más información acerca de los parámetros con valores de tabla, vea [parámetros con valores de tabla & #40; ODBC & #41;](../../relational-databases/native-client-odbc-table-valued-parameters/table-valued-parameters-odbc.md).  
   
 ## <a name="sqlsetdescrec-support-for-enhanced-date-and-time-features"></a>SQLSetDescRec admite las características mejoradas de fecha y hora  
  Los valores permitidos para los tipos de fecha y hora son los siguientes:  
   
-||*Tipo*|*SubType*|*Longitud*|*Precisión*|*Escala*|  
+||*Tipo*|*Subtipo*|*Longitud*|*Precisión*|*Escala*|  
 |-|------------|---------------|--------------|-----------------|-------------|  
 |datetime|SQL_DATETIME|SQL_CODE_TIMESTAMP|4|3|3|  
 |smalldatetime|SQL_SQL_DATETIME|SQL_CODE_TIMESTAMP|8|0|0|  
@@ -61,10 +62,10 @@ ms.lasthandoff: 01/24/2018
 |datetime2|SQL_DATETIME|SQL_CODE_TIMESTAMP|16|0..7|0..7|  
 |datetimeoffset|SQL_SS_TIMESTAMPOFFSET|0|20|0..7|0..7|  
   
- Para obtener más información, consulte [fecha y hora mejoras &#40; ODBC &#41;](../../relational-databases/native-client-odbc-date-time/date-and-time-improvements-odbc.md).  
+ Para obtener más información, consulte [fecha y hora mejoras & #40; ODBC & #41;](../../relational-databases/native-client-odbc-date-time/date-and-time-improvements-odbc.md).  
   
 ## <a name="sqlsetdescrec-support-for-large-clr-udts"></a>SQLSetDescRec admite UDT CLR grandes  
- **SQLSetDescRec** admite tipos de definidos por el usuario CLR (UDT) grandes. Para obtener más información, consulte [Large CLR User-Defined tipos &#40; ODBC &#41;](../../relational-databases/native-client/odbc/large-clr-user-defined-types-odbc.md).  
+ **SQLSetDescRec** admite tipos de definidos por el usuario CLR (UDT) grandes. Para obtener más información, consulte [Large CLR User-Defined tipos & #40; ODBC & #41;](../../relational-databases/native-client/odbc/large-clr-user-defined-types-odbc.md).  
   
 ## <a name="see-also"></a>Vea también  
  [SQLSetDescRec](http://go.microsoft.com/fwlink/?LinkId=80704)   

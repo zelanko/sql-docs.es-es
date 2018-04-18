@@ -1,16 +1,16 @@
 ---
-title: sys.fulltext_system_stopwords (Transact-SQL) | Microsoft Docs
-ms.custom: 
+title: Sys.fulltext_system_stopwords (Transact-SQL) | Documentos de Microsoft
+ms.custom: ''
 ms.date: 06/10/2016
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine, sql-database
-ms.service: 
+ms.service: ''
 ms.component: system-catalog-views
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - sys.fulltext_system_stopwords_TSQL
@@ -25,16 +25,17 @@ helpviewer_keywords:
 - full-text search [SQL Server], stopwords
 - stopwords [full-text search]
 ms.assetid: 487de53f-c637-4d78-85f6-fef5e768cd0c
-caps.latest.revision: 
+caps.latest.revision: 19
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 8c29e615afbaf86d9311fa2c4c3d35f3d6b00660
-ms.sourcegitcommit: c556eaf60a49af7025db35b7aa14beb76a8158c5
+monikerRange: = azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions
+ms.openlocfilehash: 2d7914885799c1ec1bbb276a443b88550cf5c33e
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/03/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="sysfulltextsystemstopwords-transact-sql"></a>sys.fulltext_system_stopwords (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -43,7 +44,7 @@ ms.lasthandoff: 02/03/2018
   
 |Nombre de columna|Tipo de datos|Description|  
 |-----------------|---------------|-----------------|  
-|**stopword**|**nvarchar(64)**|Término que se considera como coincidencia de palabra irrelevante.|  
+|**palabra irrelevante**|**nvarchar(64)**|Término que se considera como coincidencia de palabra irrelevante.|  
 |**language_id**|**int**|Identificador de configuración regional (LCID) del idioma. Este LCID se utiliza para la separación de palabras.|  
   
 ## <a name="permissions"></a>Permissions  
@@ -51,7 +52,7 @@ ms.lasthandoff: 02/03/2018
   
 ## <a name="see-also"></a>Vea también  
  [Vistas de catálogo &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/catalog-views-transact-sql.md)   
- [Vistas de catálogo de objetos &#40; Transact-SQL &#41;](../../relational-databases/system-catalog-views/object-catalog-views-transact-sql.md)   
+ [Object Catalog Views &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/object-catalog-views-transact-sql.md)  (Vistas de catálogo de objetos [Transact-SQL])  
  [sys.fulltext_stoplists &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-fulltext-stoplists-transact-sql.md)   
  [sys.fulltext_stopwords &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-fulltext-stopwords-transact-sql.md)   
  [Configurar y administrar palabras irrelevantes y listas de palabras irrelevantes para la búsqueda de texto completo](../../relational-databases/search/configure-and-manage-stopwords-and-stoplists-for-full-text-search.md)  

@@ -2,7 +2,7 @@
 title: Función SQLSetEnvAttr | Documentos de Microsoft
 ms.custom: ''
 ms.date: 01/19/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: drivers
 ms.service: ''
 ms.component: odbc
@@ -25,13 +25,13 @@ ms.assetid: 0343241c-4b15-4d4b-aa2b-2e8ab5215cd2
 caps.latest.revision: 38
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: c8a70e7d7de19f4f69a79db56742938ca0d61344
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: ef21f18346ad21afbba42d282763db5a527029f9
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="sqlsetenvattr-function"></a>Función SQLSetEnvAttr
 **Conformidad**  
@@ -61,7 +61,7 @@ SQLRETURN SQLSetEnvAttr(
  *ValuePtr*  
  [Entrada] Puntero a la capacidad de asociarse *atributo*. Dependiendo del valor de *atributo*, *ValuePtr* se ser un valor entero de 32 bits o señalar a una cadena de caracteres terminada en null.  
   
- *StringLength*  
+ *stringLength*  
  [Entrada] Si *ValuePtr* apunta a una cadena de caracteres o un búfer binario, este argumento debe ser la longitud de **ValuePtr*. Para los datos de cadena de caracteres, este argumento debe contener el número de bytes en la cadena.  
   
  Si *ValuePtr* es un entero, *StringLength* se omite.  
@@ -75,7 +75,7 @@ SQLRETURN SQLSetEnvAttr(
 |SQLSTATE|Error|Description|  
 |--------------|-----------|-----------------|  
 |01000|Advertencia general|Mensaje informativo de específicas del controlador. (La función devuelve SQL_SUCCESS_WITH_INFO).|  
-|01S02 DE SQLSTATE|Ha cambiado el valor de opción|El controlador no admitía el valor especificado en *ValuePtr* y sustituir un valor similar. (La función devuelve SQL_SUCCESS_WITH_INFO).|  
+|01S02|Ha cambiado el valor de opción|El controlador no admitía el valor especificado en *ValuePtr* y sustituir un valor similar. (La función devuelve SQL_SUCCESS_WITH_INFO).|  
 |HY000|Error general|Se produjo un error para que no hubo ninguna SQLSTATE específico y para el que se ha definido ningún SQLSTATE específico de la implementación. El mensaje de error devuelto por **SQLGetDiagRec** en el  *\*MessageText* búfer describe el error y su causa.|  
 |HY001|Error de asignación de memoria|El controlador no pudo asignar la memoria necesaria para admitir la ejecución o la finalización de la función.|  
 |HY009|Uso no válido del puntero null|El argumento de atributo identifica un atributo de entorno que requería un valor de cadena, y el *ValuePtr* argumento era un puntero nulo.|  

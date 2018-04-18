@@ -1,16 +1,16 @@
 ---
 title: sp_changereplicationserverpasswords (Transact-SQL) | Documentos de Microsoft
-ms.custom: 
+ms.custom: ''
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine
-ms.service: 
+ms.service: ''
 ms.component: system-stored-procedures
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - replication
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 applies_to:
 - SQL Server
@@ -20,16 +20,16 @@ f1_keywords:
 helpviewer_keywords:
 - sp_changereplicationserverpasswords
 ms.assetid: 9333da96-3a1c-4adb-9a74-5dac9ce596df
-caps.latest.revision: 
+caps.latest.revision: 27
 author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: fcd1cbfd5532703196e47d06f920ef7cfa81f019
-ms.sourcegitcommit: 45e4efb7aa828578fe9eb7743a1a3526da719555
+ms.openlocfilehash: d5a6e71440f8b167af8c875873f60da183ff3572
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="spchangereplicationserverpasswords-transact-sql"></a>sp_changereplicationserverpasswords (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -49,31 +49,31 @@ sp_changereplicationserverpasswords [ @login_type = ] login_type
 ```  
   
 ## <a name="arguments"></a>Argumentos  
- [  **@login_type**  =] *login_type*  
+ [ **@login_type** =] *login_type*  
  Es el tipo de autenticación de las credenciales proporcionadas. *LOGIN_TYPE* es **tinyint**, no tiene ningún valor predeterminado.  
   
  **1** = autenticación integrada de Windows  
   
  **0**  =  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] autenticación  
   
- [  **@login**  =] **'***inicio de sesión***'**  
+ [ **@login** =] **'***inicio de sesión***'**  
  Es el nombre de la cuenta de Windows o del inicio de sesión de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] que se va a cambiar. *inicio de sesión* es **nvarchar (257)**, no tiene ningún valor predeterminado  
   
- [  **@password**  =] **'***contraseña***'**  
+ [ **@password** =] **'***contraseña***'**  
  Es la nueva contraseña que se almacenará para el elemento especificado *inicio de sesión*. *contraseña* es **sysname**, no tiene ningún valor predeterminado.  
   
 > [!NOTE]  
 >  Después de cambiar una contraseña de replicación, es necesario detener y reiniciar cada agente que utilice la contraseña para que el cambio surta efecto en dicho agente.  
   
- [  **@server**  =] **'***server***'**  
+ [ **@server** =] **'***server***'**  
  Es la conexión con el servidor cuya contraseña almacenada se está cambiando. *servidor* es **sysname**, y puede tener uno de estos valores:  
   
-|Valor|Description|  
+|Value|Description|  
 |-----------|-----------------|  
-|**distribuidor**|Todas las conexiones del agente al distribuidor.|  
+|**Distribuidor**|Todas las conexiones del agente al distribuidor.|  
 |**publicador**|Todas las conexiones del agente al publicador.|  
 |**suscriptor**|Todas las conexiones del agente al suscriptor.|  
-|**%**(valor predeterminado)|Todas las conexiones del agente a todos los servidores de una topología de replicación.|  
+|**%** (valor predeterminado)|Todas las conexiones del agente a todos los servidores de una topología de replicación.|  
   
 ## <a name="return-code-values"></a>Valores de código de retorno  
  **0** (correcto) o **1** (error)  

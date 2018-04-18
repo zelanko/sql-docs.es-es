@@ -1,16 +1,16 @@
 ---
-title: sp_stop_job (Transact-SQL) | Microsoft Docs
-ms.custom: 
+title: sp_stop_job (Transact-SQL) | Documentos de Microsoft
+ms.custom: ''
 ms.date: 08/01/2016
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine
-ms.service: 
+ms.service: ''
 ms.component: system-stored-procedures
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - sp_stop_job_TSQL
@@ -20,16 +20,16 @@ dev_langs:
 helpviewer_keywords:
 - sp_stop_job
 ms.assetid: 64b4cc75-99a0-421e-b418-94e37595bbb0
-caps.latest.revision: 
+caps.latest.revision: 38
 author: stevestein
 ms.author: sstein
 manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 1276a936bece39cc875e5f80e8da5465f51bb4ee
-ms.sourcegitcommit: c556eaf60a49af7025db35b7aa14beb76a8158c5
+ms.openlocfilehash: 337eae0e521ded36eb49b02b56dcee51e9e2343c
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/03/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="spstopjob-transact-sql"></a>sp_stop_job (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -57,13 +57,13 @@ sp_stop_job
  [ **@job_id =**] *job_id*  
  Número de identificación del trabajo que se va a detener. *job_id* es **uniqueidentifier**, su valor predeterminado es null.  
   
- [ **@originating_server =**] **'***master_server***'**  
+ [  **@originating_server =**] **'***master_server***'**  
  Nombre del servidor principal. Si se especifica, se detienen todos los trabajos multiservidor. *master_server* es **nvarchar (128)**, su valor predeterminado es null. Especifique este parámetro únicamente cuando se llama **sp_stop_job** en un servidor de destino.  
   
 > [!NOTE]  
 >  Solo se puede especificar uno de los tres primeros parámetros.  
   
- [ **@server_name =**] **'***target_server***'**  
+ [  **@server_name =**] **'***target_server***'**  
  Nombre del servidor de destino específico en que se va a detener un trabajo multiservidor. *target_server* es **nvarchar (128)**, su valor predeterminado es null. Especifique este parámetro únicamente cuando se llama **sp_stop_job** en un servidor maestro para un trabajo multiservidor.  
   
 ## <a name="return-code-values"></a>Valores de código de retorno  

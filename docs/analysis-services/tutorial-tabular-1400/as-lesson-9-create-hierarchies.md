@@ -1,15 +1,15 @@
 ---
-title: "Lección tutorial de Analysis Services 9: crear jerarquías | Documentos de Microsoft"
-description: 
+title: 'Lección tutorial de Analysis Services 9: crear jerarquías | Documentos de Microsoft'
+description: ''
 ms.prod_service: analysis-services, azure-analysis-services
 services: analysis-services
 ms.suite: pro-bi
-documentationcenter: 
+documentationcenter: ''
 author: Minewiskan
 manager: kfile
-editor: 
-tags: 
-ms.assetid: 
+editor: ''
+tags: ''
+ms.assetid: ''
 ms.service: analysis-services
 ms.devlang: NA
 ms.topic: get-started-article
@@ -17,11 +17,12 @@ ms.tgt_pltfrm: NA
 ms.workload: na
 ms.date: 02/20/2018
 ms.author: owend
-ms.openlocfilehash: 63aaf396aedfb550321a3b583db235cd9561e586
-ms.sourcegitcommit: 7ed8c61fb54e3963e451bfb7f80c6a3899d93322
+monikerRange: '>= sql-analysis-services-2017 || = sqlallproducts-allversions'
+ms.openlocfilehash: 6821104370c324bf70c806cec96a7a1e53e7931d
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/20/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="create-hierarchies"></a>Crear jerarquías
 
@@ -56,7 +57,7 @@ Este artículo forma parte de un tutorial de modelado tabular, que se debe compl
 
 6.  Por último, agregue **EnglishProductName** a la jerarquía de categorías. Cámbiele el nombre **producto**.  
 
-    ![as-lesson9-category](../tutorial-tabular-1400/media/as-lesson9-category.png)
+    ![categoría como lesson9](../tutorial-tabular-1400/media/as-lesson9-category.png)
   
 #### <a name="to-create-hierarchies-in-the-dimdate-table"></a>Para crear jerarquías en la tabla DimDate  
   

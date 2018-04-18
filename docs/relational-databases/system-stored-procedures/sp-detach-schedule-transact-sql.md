@@ -1,16 +1,16 @@
 ---
-title: sp_detach_schedule (Transact-SQL) | Microsoft Docs
-ms.custom: 
+title: sp_detach_schedule (Transact-SQL) | Documentos de Microsoft
+ms.custom: ''
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine
-ms.service: 
+ms.service: ''
 ms.component: system-stored-procedures
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - sp_detach_schedule
@@ -20,16 +20,16 @@ dev_langs:
 helpviewer_keywords:
 - sp_detach_schedule
 ms.assetid: 9a1fc335-1bef-4638-a33a-771c54a5dd19
-caps.latest.revision: 
+caps.latest.revision: 34
 author: stevestein
 ms.author: sstein
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 784a8439519ad3a99edd35a085f306e838227151
-ms.sourcegitcommit: c556eaf60a49af7025db35b7aa14beb76a8158c5
+ms.openlocfilehash: 01ea4f9566f3a50b37f782b5e601b0aae734df19
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/03/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="spdetachschedule-transact-sql"></a>sp_detach_schedule (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -67,7 +67,7 @@ sp_detach_schedule
 > [!NOTE]  
 >  Cualquier *schedule_id* o *schedule_name* debe especificarse, pero no pueden especificarse ambos.  
   
- [ **@delete_unused_schedule=** ] *delete_unused_schedule*  
+ [  **@delete_unused_schedule=** ] *delete_unused_schedule*  
  Especifica si se van a eliminar las programaciones de trabajo no utilizadas. *delete_unused_schedule* es **bits**, su valor predeterminado es **0**, lo que significa que todas las programaciones se mantendrán, aunque ningún trabajo haga referencia a ellos. Si establece en **1**, las programaciones de trabajo no utilizadas se eliminan si ningún trabajo haga referencia a ellos.  
   
 ## <a name="return-code-values"></a>Valores de código de retorno  
@@ -89,7 +89,7 @@ sp_detach_schedule
   
  Para detalles sobre los permisos de estos roles, consulte [Roles fijos de base de datos del Agente SQL Server](http://msdn.microsoft.com/library/719ce56b-d6b2-414a-88a8-f43b725ebc79).  
   
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] comprueba si el usuario es propietario de la programación. Solo los miembros de la **sysadmin** rol fijo de servidor puede separar programaciones de trabajos que pertenecen a otro usuario.  
+ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] realiza una comprobación para determinar si el usuario es propietario de la programación. Solo los miembros de la **sysadmin** rol fijo de servidor puede separar programaciones de trabajos que pertenecen a otro usuario.  
   
 ## <a name="examples"></a>Ejemplos  
  En el siguiente ejemplo se quita una asociación entre una programación `'NightlyJobs'` y un trabajo `'BackupDatabase'`.  

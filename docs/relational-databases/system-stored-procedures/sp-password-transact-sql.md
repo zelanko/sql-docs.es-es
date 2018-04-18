@@ -1,16 +1,16 @@
 ---
 title: sp_password (Transact-SQL) | Documentos de Microsoft
-ms.custom: 
+ms.custom: ''
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine
-ms.service: 
+ms.service: ''
 ms.component: system-stored-procedures
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - sp_password
@@ -20,16 +20,16 @@ dev_langs:
 helpviewer_keywords:
 - sp_password
 ms.assetid: 0ecbec81-e637-44a9-a61e-11bf060ef084
-caps.latest.revision: 
+caps.latest.revision: 28
 author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: b461f601e94756d1406da13f1da99f8b1df50198
-ms.sourcegitcommit: 9fbe5403e902eb996bab0b1285cdade281c1cb16
+ms.openlocfilehash: 77671ef00e8a801e7606cd62660e4d4f373474f4
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/27/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="sppassword-transact-sql"></a>sp_password (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -37,7 +37,7 @@ ms.lasthandoff: 11/27/2017
   Agrega o cambia una contraseña para un [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] inicio de sesión.  
   
 > [!IMPORTANT]  
->  [!INCLUDE[ssNoteDepFutureAvoid](../../includes/ssnotedepfutureavoid-md.md)]Use [ALTER LOGIN](../../t-sql/statements/alter-login-transact-sql.md) en su lugar.  
+>  [!INCLUDE[ssNoteDepFutureAvoid](../../includes/ssnotedepfutureavoid-md.md)] Use [ALTER LOGIN](../../t-sql/statements/alter-login-transact-sql.md) en su lugar.  
   
  ![Icono de vínculo de tema](../../database-engine/configure-windows/media/topic-link.gif "Icono de vínculo de tema") [Convenciones de sintaxis de Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -61,13 +61,13 @@ sp_password [ [ @old = ] 'old_password' , ]
 >  No utilice una contraseña NULL. Utilice una contraseña segura. Para obtener más información, consulte [Strong Passwords](../../relational-databases/security/strong-passwords.md).  
   
  [  **@loginame=** ] **'***inicio de sesión***'**  
- Es el nombre del inicio de sesión afectado por el cambio de contraseña. *inicio de sesión* es **sysname**, su valor predeterminado es null. *inicio de sesión* ya debe existir y solo pueden especificarlo los miembros de la **sysadmin** o **securityadmin** roles fijos de servidor.  
+ Es el nombre del inicio de sesión afectado por el cambio de contraseña. *login* es de tipo **sysname** y su valor predeterminado es NULL. *inicio de sesión* ya debe existir y solo pueden especificarlo los miembros de la **sysadmin** o **securityadmin** roles fijos de servidor.  
   
 ## <a name="return-code-values"></a>Valores de código de retorno  
  0 (correcto) o 1 (error)  
   
 ## <a name="remarks"></a>Comentarios  
- **sp_password** llama a ALTER LOGIN. Esta instrucción admite opciones adicionales. Para obtener información acerca de cómo cambiar las contraseñas, consulte [ALTER LOGIN &#40; Transact-SQL &#41; ](../../t-sql/statements/alter-login-transact-sql.md).  
+ **sp_password** llama a ALTER LOGIN. Esta instrucción admite opciones adicionales. Para obtener información acerca de cómo cambiar las contraseñas, consulte [ALTER LOGIN &#40;Transact-SQL&#41;](../../t-sql/statements/alter-login-transact-sql.md).  
   
  **sp_password** no puede ejecutarse en una transacción definida por el usuario.  
   
@@ -97,7 +97,7 @@ GO
 ```  
   
 ## <a name="see-also"></a>Vea también  
- [Seguridad almacena procedimientos &#40; Transact-SQL &#41;](../../relational-databases/system-stored-procedures/security-stored-procedures-transact-sql.md)   
+ [Procedimientos almacenados de seguridad &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/security-stored-procedures-transact-sql.md)   
  [ALTER LOGIN &#40;Transact-SQL&#41;](../../t-sql/statements/alter-login-transact-sql.md)   
  [CREATE LOGIN &#40;Transact-SQL&#41;](../../t-sql/statements/create-login-transact-sql.md)   
  [sp_addlogin &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-addlogin-transact-sql.md)   

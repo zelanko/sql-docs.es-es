@@ -2,7 +2,7 @@
 title: Función SQLPutData | Documentos de Microsoft
 ms.custom: ''
 ms.date: 01/19/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: drivers
 ms.service: ''
 ms.component: odbc
@@ -25,13 +25,13 @@ ms.assetid: 9a60f004-1477-4c54-a20c-7378e1116713
 caps.latest.revision: 28
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 6d1a3d60c2a6cd5ed19f0183ba51a5a016ccfc36
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: cfe33eb04b4948dcba85aa2d9549c301eb65c8a6
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="sqlputdata-function"></a>Función SQLPutData
 **Conformidad**  
@@ -106,7 +106,7 @@ SQLRETURN SQLPutData(
  Si **SQLPutData** se llama durante el envío de datos para un parámetro en una instrucción SQL, puede devolver cualquier SQLSTATE que puede ser devueltos por la función se llama para ejecutar la instrucción (**SQLExecute** o **SQLExecDirect**). Si se llama al enviar datos de una columna que se va a actualizar o agregar con **SQLBulkOperations** o se actualiza con **SQLSetPos**, puede devolver cualquier SQLSTATE, que puede ser devueltos por  **SQLBulkOperations** o **SQLSetPos**.  
   
 ## <a name="comments"></a>Comentarios  
- **SQLPutData** se puede llamar para proporcionar datos de datos en ejecución de dos usos: datos de parámetro que se utilizarán en una llamada a **SQLExecute** o **SQLExecDirect**, o datos de la columna que se utilizará cuando una fila está actualizar o agregar una llamada a **SQLBulkOperations** o se actualiza mediante una llamada a **SQLSetPos**.  
+ **SQLPutData** se puede llamar para proporcionar datos de datos en ejecución de dos usos: datos de parámetro que se utilizarán en una llamada a **SQLExecute** o **SQLExecDirect**, o datos de las columnas que se usará cuando se actualiza una fila o agregar una llamada a **SQLBulkOperations** o se actualiza mediante una llamada a **SQLSetPos**.  
   
  Cuando una aplicación llama **SQLParamData** para determinar qué datos se deben enviar, el controlador devuelve un indicador de que la aplicación puede usar para determinar qué datos de parámetro para enviar o donde se pueden encontrar los datos de la columna. También devuelve SQL_NEED_DATA, que es un indicador a la aplicación que debe llamar a **SQLPutData** para enviar los datos. En el *DataPtr* argumento pasado a **SQLPutData**, la aplicación pasa un puntero al búfer que contiene los datos reales para el parámetro o columna.  
   

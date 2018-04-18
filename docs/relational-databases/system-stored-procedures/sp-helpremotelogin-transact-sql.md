@@ -1,16 +1,16 @@
 ---
 title: sp_helpremotelogin (Transact-SQL) | Documentos de Microsoft
-ms.custom: 
+ms.custom: ''
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine
-ms.service: 
+ms.service: ''
 ms.component: system-stored-procedures
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - sp_helpremotelogin_TSQL
@@ -20,16 +20,16 @@ dev_langs:
 helpviewer_keywords:
 - sp_helpremotelogin
 ms.assetid: 93f50869-2627-4642-899f-8f626f8833f4
-caps.latest.revision: 
+caps.latest.revision: 27
 author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: b34842bc6265d9a1615cb1f2e45d727b257a5c90
-ms.sourcegitcommit: 9fbe5403e902eb996bab0b1285cdade281c1cb16
+ms.openlocfilehash: 1c47b54288d561377444ed8797b2e493c483f8bb
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/27/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="sphelpremotelogin-transact-sql"></a>sp_helpremotelogin (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -50,10 +50,10 @@ sp_helpremotelogin [ [ @remoteserver = ] 'remoteserver' ]
 ```  
   
 ## <a name="arguments"></a>Argumentos  
- [ @remoteserver  **=**  ] **'***remoteserver***'**  
+ [ @remoteserver **=** ] **'***remoteserver***'**  
  Es el servidor remoto cuya información de inicio de sesión remoto se va a devolver. *remoteserver* es **sysname**, su valor predeterminado es null. Si *remoteserver* no es se especifica, se devuelve información sobre todos los servidores remotos definidos en el servidor local.  
   
- [ @remotename  **=**  ] **'***remote_name***'**  
+ [ @remotename **=** ] **'***remote_name***'**  
  Es un inicio de sesión remoto específico en el servidor remoto. *remote_name* es **sysname**, su valor predeterminado es null. Si *remote_name* no se especifica, obtener información acerca de todos los usuarios remotos definidos para *remoteserver* se devuelve.  
   
 ## <a name="return-code-values"></a>Valores de código de retorno  
@@ -91,10 +91,10 @@ EXEC sp_helpremotelogin;
 ```  
   
 ## <a name="see-also"></a>Vea también  
- [sp_addremotelogin &#40; Transact-SQL &#41;](../../relational-databases/system-stored-procedures/sp-addremotelogin-transact-sql.md)   
- [sp_dropremotelogin &#40; Transact-SQL &#41;](../../relational-databases/system-stored-procedures/sp-dropremotelogin-transact-sql.md)   
- [sp_helpserver &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-helpserver-transact-sql.md)   
- [sp_remoteoption &#40; Transact-SQL &#41;](../../relational-databases/system-stored-procedures/sp-remoteoption-transact-sql.md)   
+ [sp_addremotelogin &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-addremotelogin-transact-sql.md)   
+ [sp_dropremotelogin &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-dropremotelogin-transact-sql.md)   
+ [sp_helpserver & #40; Transact-SQL & #41;](../../relational-databases/system-stored-procedures/sp-helpserver-transact-sql.md)   
+ [sp_remoteoption &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-remoteoption-transact-sql.md)   
  [Procedimientos almacenados del sistema &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
   
   

@@ -1,15 +1,16 @@
 ---
 title: Mediante la longitud y los valores de indicador | Documentos de Microsoft
-ms.custom: 
+ms.custom: ''
 ms.date: 01/19/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: drivers
-ms.service: 
+ms.service: ''
 ms.component: odbc
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: drivers
-ms.tgt_pltfrm: 
+ms.technology:
+- drivers
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - data buffers [ODBC], length
@@ -17,16 +18,16 @@ helpviewer_keywords:
 - length of data buffers [ODBC]
 - buffers [ODBC], length
 ms.assetid: 849792f1-cb1e-4bc2-b568-c0aff0b66199
-caps.latest.revision: "6"
+caps.latest.revision: 6
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 6012ca2f1b307f475839c7357e813817e222051e
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: 5c3a817aa541d397a46ae75d09ed09ccbb550842
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="using-length-and-indicator-values"></a>Uso de longitud y valores de indicador
 El búfer de longitud/indicador se usa para pasar la longitud de bytes de los datos en el búfer de datos o un indicador especial como SQL_NULL_DATA, lo que indica que los datos son NULL. Dependiendo de la función en el que se utiliza, un búfer de longitud/indicador se define como un SQLINTEGER o un SQLSMALLINT. Por lo tanto, es necesario un único argumento para describirlo. Si el búfer de datos es un búfer de entrada nondeferred, este argumento contiene la longitud de bytes de los propios datos o un valor de indicador. A menudo se denomina *StrLen_or_Ind* o un nombre similar. Por ejemplo, el código siguiente llama **SQLPutData** para pasar un búfer completo de datos; la longitud de bytes (*ValueLen*) se pasa directamente porque el búfer de datos (*ValuePtr*) es un búfer de entrada.  
@@ -58,7 +59,7 @@ SQLGetData(hstmt, 1, SQL_C_CHAR, ValuePtr, sizeof(ValuePtr), &ValueLenOrInd);
   
  Las longitudes de los siguientes son válidas como valores de longitud/indicador:  
   
--   *n*, donde  *n*  > 0.  
+-   *n*, donde *n* > 0.  
   
 -   0.  
   

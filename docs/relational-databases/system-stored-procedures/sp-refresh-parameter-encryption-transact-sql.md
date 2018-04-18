@@ -1,16 +1,16 @@
 ---
 title: sp_refresh_parameter_encryption (Transact-SQL) | Documentos de Microsoft
-ms.custom: 
+ms.custom: ''
 ms.date: 01/11/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine, sql-database
-ms.service: 
+ms.service: ''
 ms.component: system-stored-procedures
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 f1_keywords:
 - sp_refresh_parameter_encryption
@@ -21,16 +21,17 @@ helpviewer_keywords:
 - sp_refresh_parameter_encryption
 - Always Encrypted, sp_refresh_parameter_encryption
 ms.assetid: 00b44baf-fcf0-4095-aabe-49fa87e77316
-caps.latest.revision: 
+caps.latest.revision: 3
 author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: a9343880058cef4ef86ce16613bc43821e8e8a24
-ms.sourcegitcommit: 2208a909ab09af3b79c62e04d3360d4d9ed970a7
+monikerRange: = azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions
+ms.openlocfilehash: 564d0bd6479d185ce37e1f4c293d73b87756edf8
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/02/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="sprefreshparameterencryption-transact-sql"></a>sp_refresh_parameter_encryption (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]
@@ -71,7 +72,7 @@ Los metadatos de cifrado para los parámetros de un módulo pueden quedar obsole
 
 Cuando se modifican las propiedades de cifrado de una tabla, `sp_refresh_parameter_encryption` se debe ejecutar para los módulos directa o indirectamente, que hacen referencia a la tabla. Este procedimiento almacenado puede llamarse en esos módulos en cualquier orden, sin solicitar al usuario a la primera actualización al módulo interno antes de pasar a sus llamadores.
 
-`sp_refresh_parameter_encryption`no afecta a ningún permiso, propiedades extendidas, o `SET` opciones que están asociadas con el objeto. 
+`sp_refresh_parameter_encryption` no afecta a ningún permiso, propiedades extendidas, o `SET` opciones que están asociadas con el objeto. 
 
 Para actualizar un desencadenador DDL de nivel de servidor, ejecute este procedimiento almacenado desde el contexto de cualquier base de datos.
 

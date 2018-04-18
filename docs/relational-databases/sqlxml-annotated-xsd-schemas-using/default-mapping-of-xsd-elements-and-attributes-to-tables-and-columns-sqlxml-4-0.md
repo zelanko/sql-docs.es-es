@@ -1,16 +1,16 @@
 ---
-title: "Atributos de elementos de asignación XSD a tablas y columnas (SQLXML 4.0) predeterminados | Documentos de Microsoft"
-ms.custom: 
+title: Atributos de elementos de asignación XSD a tablas y columnas (SQLXML 4.0) predeterminados | Documentos de Microsoft
+ms.custom: ''
 ms.date: 03/17/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine, sql-database
-ms.service: 
+ms.service: ''
 ms.component: sqlxml
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - dbe-xml
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: reference
 helpviewer_keywords:
 - XSD schemas [SQLXML], mapping attributes and elements
@@ -29,20 +29,21 @@ helpviewer_keywords:
 - table/view mapping [SQLXML], default mapping
 - element/attribute mapping [SQLXML]
 ms.assetid: 9a18e92a-6cfb-4a14-993a-663a95aabb63
-caps.latest.revision: 
+caps.latest.revision: 32
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 8307e0810ba9cfd55336287cae38526e91845b34
-ms.sourcegitcommit: 37f0b59e648251be673389fa486b0a984ce22c81
+monikerRange: = azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions
+ms.openlocfilehash: 2fb1d00e1ec69ede259af652c6d463084ba0501c
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/12/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="default-mapping-of-xsd-elements-and-attributes-to-tables-and-columns-sqlxml-40"></a>Asignación predeterminada de elementos y atributos XSD a tablas y columnas (SQLXML 4.0)
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
-De forma predeterminada, un elemento de tipo complejo en un esquema XSD anotado se asigna a una tabla (vista) con el mismo nombre en la base de datos especificada, mientras que un elemento o atributo de tipo simple se asigna a la columna con el mismo nombre en la tabla.  
+  De forma predeterminada, un elemento de tipo complejo en un esquema XSD anotado se asigna a una tabla (vista) con el mismo nombre en la base de datos especificada, mientras que un elemento o atributo de tipo simple se asigna a la columna con el mismo nombre en la tabla.  
   
 ## <a name="examples"></a>Ejemplos  
  Para crear muestras funcionales mediante los ejemplos siguientes, debe cumplir determinados requisitos. Para obtener más información, consulte [requisitos para ejecutar los ejemplos de SQLXML](../../relational-databases/sqlxml/requirements-for-running-sqlxml-examples.md).  
@@ -212,7 +213,7 @@ ctions">
 ```  
   
 ## <a name="see-also"></a>Vea también  
- [Consideraciones de seguridad de un esquema anotado &#40; SQLXML 4.0 &#41;](../../relational-databases/sqlxml-annotated-xsd-schemas-xpath-queries/security/annotated-schema-security-considerations-sqlxml-4-0.md)   
+ [Anotar las consideraciones de seguridad de esquema &#40;SQLXML 4.0&#41;](../../relational-databases/sqlxml-annotated-xsd-schemas-xpath-queries/security/annotated-schema-security-considerations-sqlxml-4-0.md)   
  [Datos XML &#40;SQL Server&#41;](../../relational-databases/xml/xml-data-sql-server.md)   
  [Compatibilidad con tipos de datos xml en SQLXML 4.0](../../relational-databases/sqlxml/xml-data-type-support-in-sqlxml-4-0.md)  
   

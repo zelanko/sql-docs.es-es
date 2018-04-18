@@ -1,16 +1,16 @@
 ---
 title: MSrepl_commands (Transact-SQL) | Documentos de Microsoft
-ms.custom: 
+ms.custom: ''
 ms.date: 03/03/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine
-ms.service: 
+ms.service: ''
 ms.component: system-tables
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - replication
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 applies_to:
 - SQL Server
@@ -22,16 +22,16 @@ dev_langs:
 helpviewer_keywords:
 - MSrepl_commands system table
 ms.assetid: 53b9f9cd-9429-47a0-aba2-908fc60e7036
-caps.latest.revision: 
+caps.latest.revision: 24
 author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: ee2da8ec88cc85128e13ef502c083358c623c92f
-ms.sourcegitcommit: 45e4efb7aa828578fe9eb7743a1a3526da719555
+ms.openlocfilehash: 6818b0189cc4c7effdbf19485ba2ee1a98f4a32d
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="msreplcommands-transact-sql"></a>MSrepl_commands (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -42,7 +42,7 @@ ms.lasthandoff: 11/21/2017
 |-----------------|---------------|-----------------|  
 |**publisher_database_id**|**int**|El Id. de la base de datos del publicador.|  
 |**xact_seqno**|**varbinary (16)**|El número de secuencia de transacción.|  
-|**tipo**|**int**|Tipo de comando.|  
+|**Tipo**|**int**|Tipo de comando.|  
 |**article_id**|**int**|Id. del artículo.|  
 |**originator_id**|**int**|Id. del originador.|  
 |**command_id**|**int**|Id. del comando.|  
@@ -52,8 +52,8 @@ ms.lasthandoff: 11/21/2017
 |**originator_lsn**|**varbinary (16)**|Identifica el LSN del comando en la publicación de origen. Se utiliza en la replicación transaccional punto a punto.|  
   
 ## <a name="see-also"></a>Vea también  
- [Tablas de replicación &#40; Transact-SQL &#41;](../../relational-databases/system-tables/replication-tables-transact-sql.md)   
- [Vistas de replicación &#40; Transact-SQL &#41;](../../relational-databases/system-views/replication-views-transact-sql.md)   
- [sp_replcmds &#40; Transact-SQL &#41;](../../relational-databases/system-stored-procedures/sp-replcmds-transact-sql.md)  
+ [Tablas de replicación &#40;Transact-SQL&#41;](../../relational-databases/system-tables/replication-tables-transact-sql.md)   
+ [Vistas de replicación &#40;Transact-SQL&#41;](../../relational-databases/system-views/replication-views-transact-sql.md)   
+ [sp_replcmds &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-replcmds-transact-sql.md)  
   
   

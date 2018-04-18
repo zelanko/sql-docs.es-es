@@ -1,16 +1,16 @@
 ---
-title: bcp_exec | Microsoft Docs
-ms.custom: 
+title: bcp_exec | Documentos de Microsoft
+ms.custom: ''
 ms.date: 03/06/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
-ms.service: 
+ms.service: ''
 ms.component: native-client-odbc-extensions-bulk-copy-functions
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: reference
 apiname:
 - bcp_exec
@@ -20,16 +20,17 @@ apitype: DLLExport
 helpviewer_keywords:
 - bcp_exec function
 ms.assetid: b23ea2cc-8545-4873-b0c1-57e76b0a3a7b
-caps.latest.revision: 
+caps.latest.revision: 36
 author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 9aa011135eba05c6cff1023f3168403c451c9e1a
-ms.sourcegitcommit: a0aa5e611a0e6ebb74ac1e2f613e8916dc7a7617
+monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
+ms.openlocfilehash: 17f835129b5c6632fdf22cc612212905af78d60d
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/24/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="bcpexec"></a>bcp_exec
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -63,7 +64,7 @@ RETCODE bcp_exec (
   
  **bcp_exec** es la única función de copia masiva que es probable que quede pendiente durante un período de tiempo indeterminado. Por lo tanto, es la única función de copia masiva que admite el modo asincrónico. Para establecer el modo asincrónico, utilice [SQLSetConnectAttr](../../relational-databases/native-client-odbc-api/sqlsetconnectattr.md) para establecer SQL_ATTR_ASYNC_ENABLE en SQL_ASYNC_ENABLE_ON antes de llamar a **bcp_exec**. Para comprobar si se ha completado, llame a **bcp_exec** con los mismos parámetros. Si la copia masiva no se ha completado todavía, **bcp_exec** devuelve SUCCEED_ASYNC. También devuelve en *pnRowsProcessed* un recuento del estado del número de filas enviadas al servidor. Las filas enviadas al servidor no se confirman hasta que se alcanza el final de un lote.  
   
- Para obtener información sobre una separación de cambio de copia masiva a partir de [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)], consulte [realizar operaciones de copia masiva &#40; ODBC &#41;](../../relational-databases/native-client-odbc-bulk-copy-operations/performing-bulk-copy-operations-odbc.md).  
+ Para obtener información sobre una separación de cambio de copia masiva a partir de [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)], consulte [realizar operaciones de copia masiva &#40;ODBC&#41;](../../relational-databases/native-client-odbc-bulk-copy-operations/performing-bulk-copy-operations-odbc.md).  
   
 ## <a name="example"></a>Ejemplo  
  En el siguiente ejemplo, se muestra cómo utilizar **bcp_exec**:  

@@ -1,16 +1,16 @@
 ---
-title: "Actualizar datos con diagramas de actualización XML (SQLXML 4.0) | Documentos de Microsoft"
-ms.custom: 
+title: Actualizar datos con diagramas de actualización XML (SQLXML 4.0) | Documentos de Microsoft
+ms.custom: ''
 ms.date: 03/17/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine, sql-database
-ms.service: 
+ms.service: ''
 ms.component: sqlxml
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - dbe-xml
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: reference
 helpviewer_keywords:
 - IDREF type attribute [SQLXML]
@@ -29,20 +29,21 @@ helpviewer_keywords:
 - updg:before attribute
 - record updates [SQLXML]
 ms.assetid: 90ef8a33-5ae3-4984-8259-608d2f1d727f
-caps.latest.revision: 
+caps.latest.revision: 28
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 01df178b47bb3aac688d12e54760cd530706fd94
-ms.sourcegitcommit: 37f0b59e648251be673389fa486b0a984ce22c81
+monikerRange: = azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions
+ms.openlocfilehash: 613fe19b4cb3a63b1998cfa5ef2c6a7368481c6c
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/12/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="updating-data-using-xml-updategrams-sqlxml-40"></a>Actualizar datos con diagramas de actualización XML (SQLXML 4.0)
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
-Al actualizar los datos existentes, debe especificar tanto el  **\<antes >** y  **\<después >** bloques. Los elementos especificados en la  **\<antes >** y  **\<después >** bloques describen el cambio deseado. El diagrama de actualización utiliza los elementos que se especifican en el  **\<antes >** bloque para identificar los registros existentes en la base de datos. Los elementos correspondientes en el  **\<después >** bloque indican cómo deberían quedar los registros después de ejecutar la operación de actualización. De esta información, el diagrama de actualización crea una instrucción SQL que coincide con el  **\<después >** bloque. A continuación, el diagrama de actualización utiliza esta instrucción para actualizar la base de datos.  
+  Al actualizar los datos existentes, debe especificar tanto el  **\<antes >** y  **\<después >** bloques. Los elementos especificados en la  **\<antes >** y  **\<después >** bloques describen el cambio deseado. El diagrama de actualización utiliza los elementos que se especifican en el  **\<antes >** bloque para identificar los registros existentes en la base de datos. Los elementos correspondientes en el  **\<después >** bloque indican cómo deberían quedar los registros después de ejecutar la operación de actualización. De esta información, el diagrama de actualización crea una instrucción SQL que coincide con el  **\<después >** bloque. A continuación, el diagrama de actualización utiliza esta instrucción para actualizar la base de datos.  
   
  Este es el formato del diagrama de actualización para una operación de actualización:  
   
@@ -61,10 +62,10 @@ Al actualizar los datos existentes, debe especificar tanto el  **\<antes >** y  
 </ROOT>  
 ```  
   
- **\<updg:before>**  
+ **\<updg: antes de >**  
  Los elementos de la  **\<antes >** bloque identifican los registros existentes en las tablas de base de datos.  
   
- **\<updg:after>**  
+ **\<updg: una vez >**  
  Los elementos de la  **\<después >** bloque describen cómo los registros especificados en el  **\<antes >** bloque debe tener un aspecto después de aplicaron las actualizaciones.  
   
  El **esquema de asignación** atributo identifica el esquema de asignación que va a usar el diagrama de actualización. Si el diagrama de actualización especifica un esquema de asignación, los nombres de elementos y atributos especificados en el  **\<antes >** y  **\<después >** bloques deben coincidir con los nombres en el esquema. El esquema de asignación asigna estos nombres de elementos o atributos a los nombres de columnas y tablas de base de datos.  
@@ -95,7 +96,7 @@ Al actualizar los datos existentes, debe especificar tanto el  **\<antes >** y  
 ## <a name="examples"></a>Ejemplos  
  Antes de utilizar los ejemplos del diagrama de actualización, tenga en cuenta lo siguiente:  
   
--   En la mayoría de los ejemplos se usa una asignación predeterminada (es decir, no se especifica ningún esquema de asignación en el diagrama de actualización). Para obtener más ejemplos de los diagramas de actualización que utilizan los esquemas de asignación, consulte [especificar un esquema de asignación anotados en un diagrama de actualización &#40; SQLXML 4.0 &#41; ](../../../relational-databases/sqlxml-annotated-xsd-schemas-xpath-queries/updategrams/specifying-an-annotated-mapping-schema-in-an-updategram-sqlxml-4-0.md).  
+-   En la mayoría de los ejemplos se usa una asignación predeterminada (es decir, no se especifica ningún esquema de asignación en el diagrama de actualización). Para obtener más ejemplos de los diagramas de actualización que utilizan los esquemas de asignación, consulte [especificar un esquema de asignación anotados en un diagrama de actualización &#40;SQLXML 4.0&#41;](../../../relational-databases/sqlxml-annotated-xsd-schemas-xpath-queries/updategrams/specifying-an-annotated-mapping-schema-in-an-updategram-sqlxml-4-0.md).  
   
 -   La mayoría de los ejemplos utilizan la base de datos de ejemplo AdventureWorks. Todas las actualizaciones se aplican a las tablas de esta base de datos. Puede restaurar la base de datos AdventureWorks.  
   
@@ -352,7 +353,7 @@ Al actualizar los datos existentes, debe especificar tanto el  **\<antes >** y  
   
      Para obtener más información, consulte [utilizar ADO para ejecutar consultas de SQLXML 4.0](../../../relational-databases/sqlxml/using-ado-to-execute-sqlxml-4-0-queries.md).  
   
- Para obtener más ejemplos de los diagramas de actualización que utilizan los esquemas de asignación, consulte [especificar un esquema de asignación anotados en un diagrama de actualización &#40; SQLXML 4.0 &#41; ](../../../relational-databases/sqlxml-annotated-xsd-schemas-xpath-queries/updategrams/specifying-an-annotated-mapping-schema-in-an-updategram-sqlxml-4-0.md).  
+ Para obtener más ejemplos de los diagramas de actualización que utilizan los esquemas de asignación, consulte [especificar un esquema de asignación anotados en un diagrama de actualización &#40;SQLXML 4.0&#41;](../../../relational-databases/sqlxml-annotated-xsd-schemas-xpath-queries/updategrams/specifying-an-annotated-mapping-schema-in-an-updategram-sqlxml-4-0.md).  
   
 ### <a name="f-using-a-mapping-schema-with-idrefs-attributes"></a>F. Usar un esquema de asignación con atributos IDREFS  
  En este ejemplo se muestra cómo los diagramas de actualización utilizan los atributos IDREFS en el esquema de asignación para actualizar registros en varias tablas. En este ejemplo, suponga que la base de datos está compuesta de las tablas siguientes:  
@@ -560,9 +561,9 @@ Al actualizar los datos existentes, debe especificar tanto el  **\<antes >** y  
 </Schema>  
 ```  
   
- Para obtener más ejemplos de los diagramas de actualización que utilizan los esquemas de asignación, consulte [especificar un esquema de asignación anotados en un diagrama de actualización &#40; SQLXML 4.0 &#41; ](../../../relational-databases/sqlxml-annotated-xsd-schemas-xpath-queries/updategrams/specifying-an-annotated-mapping-schema-in-an-updategram-sqlxml-4-0.md).  
+ Para obtener más ejemplos de los diagramas de actualización que utilizan los esquemas de asignación, consulte [especificar un esquema de asignación anotados en un diagrama de actualización &#40;SQLXML 4.0&#41;](../../../relational-databases/sqlxml-annotated-xsd-schemas-xpath-queries/updategrams/specifying-an-annotated-mapping-schema-in-an-updategram-sqlxml-4-0.md).  
   
 ## <a name="see-also"></a>Vea también  
- [Consideraciones de seguridad de diagrama de actualización &#40; SQLXML 4.0 &#41;](../../../relational-databases/sqlxml-annotated-xsd-schemas-xpath-queries/security/updategram-security-considerations-sqlxml-4-0.md)  
+ [Consideraciones de seguridad de updategram &#40;SQLXML 4.0&#41;](../../../relational-databases/sqlxml-annotated-xsd-schemas-xpath-queries/security/updategram-security-considerations-sqlxml-4-0.md)  
   
   

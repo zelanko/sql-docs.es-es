@@ -1,16 +1,16 @@
 ---
 title: sp_dsninfo (Transact-SQL) | Documentos de Microsoft
-ms.custom: 
+ms.custom: ''
 ms.date: 03/04/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine
-ms.service: 
+ms.service: ''
 ms.component: system-stored-procedures
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - replication
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 applies_to:
 - SQL Server
@@ -20,16 +20,16 @@ f1_keywords:
 helpviewer_keywords:
 - sp_dsninfo
 ms.assetid: 34648615-814b-42bc-95a3-50e86b42ec4d
-caps.latest.revision: 
+caps.latest.revision: 27
 author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 4882ce3dd87c60f4fceaeb2b770c8879fadf3b78
-ms.sourcegitcommit: 45e4efb7aa828578fe9eb7743a1a3526da719555
+ms.openlocfilehash: aa1403655e8ad134f8d214cffcecf916c881bb40
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="spdsninfo-transact-sql"></a>sp_dsninfo (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -56,7 +56,7 @@ sp_dsninfo [ @dsn =] 'dsn'
  [  **@infotype =**] **'***tipo_de_info***'**  
  Es el tipo de información que se va a devolver. Si *tipo_de_info* no se especifica o si se especifica NULL, se devuelven todos los tipos de información. *tipo_de_info* es **varchar (128)**, su valor predeterminado es null y puede tener uno de estos valores.  
   
-|Valor|Description|  
+|Value|Description|  
 |-----------|-----------------|  
 |**DBMS_NAME**|Especifica el nombre del proveedor del origen de datos.|  
 |**DBMS_VERSION**|Especifica la versión del origen de datos.|  
@@ -72,7 +72,7 @@ sp_dsninfo [ @dsn =] 'dsn'
  [  **@dso_type=**] *dso_type*  
  Es el tipo del origen de datos. *dso_type* es **int**, y puede tener uno de estos valores.  
   
-|Valor|Description|  
+|Value|Description|  
 |-----------|-----------------|  
 |**1** (predeterminado)|Origen de datos ODBC|  
 |**3**|Origen de datos OLE DB|  
@@ -96,7 +96,7 @@ sp_dsninfo [ @dsn =] 'dsn'
  Solo los miembros de la **sysadmin** rol fijo de servidor puede ejecutar **sp_dsninfo**.  
   
 ## <a name="see-also"></a>Vea también  
- [sp_enumdsn &#40; Transact-SQL &#41;](../../relational-databases/system-stored-procedures/sp-enumdsn-transact-sql.md)   
+ [sp_enumdsn &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-enumdsn-transact-sql.md)   
  [Procedimientos almacenados del sistema &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
   
   

@@ -1,16 +1,16 @@
 ---
-title: sys.dm_db_incremental_stats_properties (Transact-SQL) | Microsoft Docs
-ms.custom: 
+title: Sys.dm_db_incremental_stats_properties (Transact-SQL) | Documentos de Microsoft
+ms.custom: ''
 ms.date: 12/18/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine
-ms.service: 
+ms.service: ''
 ms.component: dmv's
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 applies_to:
 - SQL Server 2014
@@ -24,16 +24,16 @@ dev_langs:
 helpviewer_keywords:
 - sys.dm_db_incremental_stats_properties
 ms.assetid: aa0db893-34d1-419c-b008-224852e71307
-caps.latest.revision: 
+caps.latest.revision: 7
 author: stevestein
 ms.author: sstein
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 6187179f6599404dac86f92403cba507eb5e5fcc
-ms.sourcegitcommit: c556eaf60a49af7025db35b7aa14beb76a8158c5
+ms.openlocfilehash: 89309e660606a4ce9845ce71748fb37061d5628a
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/03/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="sysdmdbincrementalstatsproperties-transact-sql"></a>sys.dm_db_incremental_stats_properties (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2014-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2014-xxxx-xxxx-xxx-md.md)]
@@ -62,7 +62,7 @@ sys.dm_db_incremental_stats_properties (object_id, stats_id)
 |object_id|**int**|Identificador del objeto (tabla) para el que se devuelven las propiedades del objeto de estadísticas.|  
 |stats_id|**int**|Identificador del objeto de estadísticas. Es único en la tabla. Para obtener más información, vea [sysno incluye la vista.stats &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-stats-transact-sql.md)no incluye la vista.|
 |partition_number|**int**|El número de la partición que contiene la parte de la tabla.|  
-|last_updated|**datetime2**|Fecha y hora de la última actualización del objeto de estadísticas. Para obtener más información, consulte el [comentarios](#Remarks) sección en esta página.|  
+|last_updated|**datetime2**|Fecha y hora de la última actualización del objeto de estadísticas. Para más información, vea la sección [Comentarios](#Remarks) en esta página.|  
 |rows|**bigint**|El número total de filas que tenía la tabla la última vez que se actualizaron las estadísticas. Si las estadísticas se filtran o corresponden a un índice filtrado, el número de filas puede ser inferior al número de filas de la tabla.|  
 |rows_sampled|**bigint**|Número total de filas muestreadas para cálculos de estadísticas.|  
 |pasos|**int**|Número de pasos del histograma. Para obtener más información, vea [DBCC SHOW_STATISTICS &#40;Transact-SQL&#41;](../../t-sql/database-console-commands/dbcc-show-statistics-transact-sql.md)no incluye la vista.|  
@@ -79,7 +79,7 @@ sys.dm_db_incremental_stats_properties (object_id, stats_id)
  
  Este comportamiento permite el uso seguro de `sys.dm_db_incremental_stats_properties` cuando se aplica de manera cruzada a filas en vistas como `sys.objects` y `sys.stats`. Este método puede devolver propiedades de las estadísticas que corresponden a cada partición. Para ver las propiedades de las estadísticas combinadas en todas las particiones, use sys.dm_db_stats_properties en su lugar. 
 
-Fecha de actualización de estadísticas se almacena en la [statistics, objeto blob](../../relational-databases/statistics/statistics.md#DefinitionQOStatistics) junto con el [histograma](../../relational-databases/statistics/statistics.md#histogram) y [vector de densidad](../../relational-databases/statistics/statistics.md#density), pero no en los metadatos. Cuando se lee ningún dato para generar datos de estadísticas, no se creó el blob de estadísticas, no está disponible, la fecha y la *last_updated* columna es NULL. Este es el caso de las estadísticas filtradas para que el predicado no devuelve ninguna fila, o para nuevas tablas vacías.
+La fecha de actualización de estadísticas se almacena en el [objeto BLOB de estadísticas](../../relational-databases/statistics/statistics.md#DefinitionQOStatistics) junto con el [histograma](../../relational-databases/statistics/statistics.md#histogram) y el [vector de densidad](../../relational-databases/statistics/statistics.md#density), pero no en los metadatos. Cuando se lee ningún dato para generar datos de estadísticas, no se creó el blob de estadísticas, no está disponible, la fecha y la *last_updated* columna es NULL. Esto sucede en las estadísticas filtradas, en las que el predicado no devuelve ninguna fila, o en las tablas nuevas vacías.
 
 ## <a name="permissions"></a>Permissions  
  Necesita que el usuario tenga permisos de selección en columnas de estadísticas o posea la tabla, o que el usuario sea miembro del rol fijo de servidor `sysadmin`, del rol fijo de base de datos `db_owner` o del rol fijo de base de datos `db_ddladmin`.  

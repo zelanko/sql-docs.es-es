@@ -1,16 +1,16 @@
 ---
 title: sp_mergesubscription_cleanup (Transact-SQL) | Documentos de Microsoft
-ms.custom: 
+ms.custom: ''
 ms.date: 03/03/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine
-ms.service: 
+ms.service: ''
 ms.component: system-stored-procedures
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - replication
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 applies_to:
 - SQL Server
@@ -20,16 +20,16 @@ f1_keywords:
 helpviewer_keywords:
 - sp_mergesubscription_cleanup
 ms.assetid: bfad414f-2bda-4bf5-9507-56a1e743dfc4
-caps.latest.revision: 
+caps.latest.revision: 28
 author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 7c30f8192f454fe465a2aa3b3af5b43fb3acc17a
-ms.sourcegitcommit: 45e4efb7aa828578fe9eb7743a1a3526da719555
+ms.openlocfilehash: 3fa815abbba122960e88bbe045a573d9061c9f58
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="spmergesubscriptioncleanup-transact-sql"></a>sp_mergesubscription_cleanup (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -37,7 +37,7 @@ ms.lasthandoff: 11/21/2017
   Quita los metadatos, como los desencadenadores y las entradas, en **sysmergesubscriptions** y **sysmergearticles** después de quita la suscripción de inserción de mezcla especificada en el publicador. Este procedimiento almacenado se ejecuta en el suscriptor en la base de datos de suscripción.  
   
 > [!NOTE]  
->  Para una suscripción de extracción, se quitan los metadatos cuando [sp_dropmergepullsubscription &#40; Transact-SQL &#41; ](../../relational-databases/system-stored-procedures/sp-dropmergepullsubscription-transact-sql.md) se ejecuta.  
+>  Para una suscripción de extracción, se quitan los metadatos cuando [sp_dropmergepullsubscription &#40;Transact-SQL&#41; ](../../relational-databases/system-stored-procedures/sp-dropmergepullsubscription-transact-sql.md) se ejecuta.  
   
  ![Icono de vínculo de tema](../../database-engine/configure-windows/media/topic-link.gif "Icono de vínculo de tema") [Convenciones de sintaxis de Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -71,8 +71,8 @@ sp_mergesubscription_cleanup [ @publisher =] 'publisher'
   
 ## <a name="see-also"></a>Vea también  
  [Eliminar una suscripción de inserción](../../relational-databases/replication/delete-a-push-subscription.md)   
- [sp_expired_subscription_cleanup &#40; Transact-SQL &#41;](../../relational-databases/system-stored-procedures/sp-expired-subscription-cleanup-transact-sql.md)   
- [sp_subscription_cleanup &#40; Transact-SQL &#41;](../../relational-databases/system-stored-procedures/sp-subscription-cleanup-transact-sql.md)   
+ [sp_expired_subscription_cleanup &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-expired-subscription-cleanup-transact-sql.md)   
+ [sp_subscription_cleanup &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-subscription-cleanup-transact-sql.md)   
  [Procedimientos almacenados del sistema &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
   
   

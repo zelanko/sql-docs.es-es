@@ -1,16 +1,16 @@
 ---
-title: sp_delete_job (Transact-SQL) | Microsoft Docs
-ms.custom: 
+title: sp_delete_job (Transact-SQL) | Documentos de Microsoft
+ms.custom: ''
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine
-ms.service: 
+ms.service: ''
 ms.component: system-stored-procedures
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - sp_delete_job
@@ -20,16 +20,16 @@ dev_langs:
 helpviewer_keywords:
 - sp_delete_job
 ms.assetid: b85db6e4-623c-41f1-9643-07e5ea38db09
-caps.latest.revision: 
+caps.latest.revision: 43
 author: stevestein
 ms.author: sstein
 manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: dc32f2328e4153f79a7eb1c7e4115e455078791c
-ms.sourcegitcommit: c556eaf60a49af7025db35b7aa14beb76a8158c5
+ms.openlocfilehash: c578243ec78605216a3cb5c640e6779e712fec46
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/03/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="spdeletejob-transact-sql"></a>sp_delete_job (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -61,12 +61,12 @@ sp_delete_job { [ @job_id = ] job_id | [ @job_name = ] 'job_name' } ,
  [  **@originating_server=** ] **'***server***'**  
  Para uso interno.  
   
- [ **@delete_history=** ] *delete_history*  
+ [  **@delete_history=** ] *delete_history*  
  Especifica si se debe eliminar el historial del trabajo. *delete_history* es **bits**, su valor predeterminado es **1**. Cuando *delete_history* es **1**, se elimina el historial de trabajos para el trabajo. Cuando *delete_history* es **0**, no se elimina el historial de trabajos.  
   
  Tenga en cuenta que cuando se elimina un trabajo y no se elimina el historial, la información histórica para el trabajo no se mostrará en el [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] historial de trabajos de interfaz gráfica de usuario de agente, pero la información continúa estando en la **sysjobhistory**tabla el **msdb** base de datos.  
   
- [ **@delete_unused_schedule=** ] *delete_unused_schedule*  
+ [  **@delete_unused_schedule=** ] *delete_unused_schedule*  
  Especifica si se deben eliminar las programaciones adjuntas a este trabajo si no están adjuntas a ningún otro trabajo. *delete_unused_schedule* es **bits**, su valor predeterminado es **1**. Cuando *delete_unused_schedule* es **1**, las programaciones adjuntas a este trabajo se eliminan si no hay otros trabajos hacen referencia a la programación. Cuando *delete_unused_schedule* es **0**, no se eliminan las programaciones.  
   
 ## <a name="return-code-values"></a>Valores de código de retorno  
@@ -76,9 +76,9 @@ sp_delete_job { [ @job_id = ] job_id | [ @job_name = ] 'job_name' } ,
  None  
   
 ## <a name="remarks"></a>Comentarios  
- El  **@originating_server**  argumento está reservado para uso interno.  
+ El **@originating_server** argumento está reservado para uso interno.  
   
- El  **@delete_unused_schedule**  argumento proporciona compatibilidad con versiones anteriores de SQL Server quitando automáticamente las programaciones que no están adjuntas a ningún trabajo. Tenga en cuenta que este parámetro tiene como valor predeterminado el comportamiento compatible con versiones anteriores. Para mantener las programaciones que no están conectadas a un trabajo, debe proporcionar el valor **0** como el  **@delete_unused_schedule**  argumento.  
+ El **@delete_unused_schedule** argumento proporciona compatibilidad con versiones anteriores de SQL Server quitando automáticamente las programaciones que no están adjuntas a ningún trabajo. Tenga en cuenta que este parámetro tiene como valor predeterminado el comportamiento compatible con versiones anteriores. Para mantener las programaciones que no están conectadas a un trabajo, debe proporcionar el valor **0** como el **@delete_unused_schedule** argumento.  
   
  [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] ofrece un método gráfico sencillo para administrar trabajos y es el método recomendado para crear y administrar la infraestructura de trabajo.  
   

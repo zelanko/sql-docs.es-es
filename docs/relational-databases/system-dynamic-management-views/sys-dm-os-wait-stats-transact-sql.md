@@ -1,8 +1,8 @@
 ---
-title: sys.dm_os_wait_stats (Transact-SQL) | Microsoft Docs
+title: Sys.dm_os_wait_stats (Transact-SQL) | Documentos de Microsoft
 ms.custom: ''
 ms.date: 01/04/2018
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
 ms.service: ''
 ms.component: dmv's
@@ -27,11 +27,12 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.workload: Active
-ms.openlocfilehash: c37a8f78d18a3315c188959f2f8403ef055c3155
-ms.sourcegitcommit: 9351e8b7b68f599a95fb8e76930ab886db737e5f
+monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
+ms.openlocfilehash: 55eaa65cc99bdc2e25e860be65570be6c8e32bdd
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/06/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="sysdmoswaitstats-transact-sql"></a>sys.dm_os_wait_stats (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -94,7 +95,7 @@ Este comando restablece todos los contadores en 0.
   
  En la tabla siguiente se muestran los tipos de espera encontrados por las tareas.  
 
-|tipo |Description| 
+|Tipo |Description| 
 |-------------------------- |--------------------------| 
 |ABR |Solamente se identifica con fines informativos. No compatible. La compatibilidad con versiones posteriores no está garantizada.| | 
 |AM_INDBUILD_ALLOCATION |TBD <br />**Se aplica a**: desde [!INCLUDE[ssSQL12](../../includes/sssql11-md.md)] hasta [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].| 
@@ -793,7 +794,7 @@ Este comando restablece todos los contadores en 0.
 |REMOTE_DATA_ARCHIVE_SCHEMA_TASK_QUEUE |TBD <br /> **Se aplica a**: desde [!INCLUDE[ssSQL15_md](../../includes/sssql15-md.md)] hasta [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].| 
 |REPL_CACHE_ACCESS |Tiene lugar durante la sincronización en caché de artículos de una replicación. Durante estas esperas, el registro del LOG de replicación se detiene temporalmente y se bloquean las instrucciones de lenguaje de definición de datos (DLL) en una tabla publicada.| 
 |REPL_HISTORYCACHE_ACCESS |TBD| 
-|REPL_SCHEMA_ACCESS |Tiene lugar durante la sincronización de la información de versión del esquema de replicación. Este estado se produce cuando las instrucciones de DDL se ejecutan en el objeto replicado y cuando el registro del LOG genera o consume un esquema con versiones basado en las repeticiones de DDL.| 
+|REPL_SCHEMA_ACCESS |Tiene lugar durante la sincronización de la información de versión del esquema de replicación. Este estado se produce cuando las instrucciones de DDL se ejecutan en el objeto replicado y cuando el registro del LOG genera o consume un esquema con versiones basado en las repeticiones de DDL. Contención puede verse en este tipo de espera si tiene muchas bases de datos publicados en un publicador único con la replicación transaccional y las bases de datos publicados son muy activos.| 
 |REPL_TRANFSINFO_ACCESS |TBD <br /> **Se aplica a**: desde [!INCLUDE[ssSQL12](../../includes/sssql11-md.md)] hasta [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].| 
 |REPL_TRANHASHTABLE_ACCESS |TBD| 
 |REPL_TRANTEXTINFO_ACCESS |TBD <br /> **Se aplica a**: desde [!INCLUDE[ssSQL12](../../includes/sssql11-md.md)] hasta [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].| 

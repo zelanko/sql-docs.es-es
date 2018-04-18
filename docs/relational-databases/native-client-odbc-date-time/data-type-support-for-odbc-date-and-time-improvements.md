@@ -1,30 +1,31 @@
 ---
 title: Compatibilidad con tipos de datos Date de ODBC y mejoras de tiempo | Documentos de Microsoft
-ms.custom: 
+ms.custom: ''
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
-ms.service: 
+ms.service: ''
 ms.component: native-client-odbc-date-time
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: 
-ms.tgt_pltfrm: 
+ms.technology: ''
+ms.tgt_pltfrm: ''
 ms.topic: reference
 helpviewer_keywords:
 - date/time [ODBC], data type support
 - ODBC, date/time improvements
 ms.assetid: 8e0d9ba2-3ec1-4680-86e3-b2590ba8e2e9
-caps.latest.revision: 
+caps.latest.revision: 28
 author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 17acf73e2a190b1a9f55c07dc24d7ce391056aee
-ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
+monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
+ms.openlocfilehash: b92a4e5cbb678e4c40bda526b0796e4a3beaf696
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/25/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="data-type-support-for-odbc-date-and-time-improvements"></a>Compatibilidad con tipos de datos Date de ODBC y mejoras de tiempo
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -145,6 +146,6 @@ typedef struct tagSS_TIMESTAMPOFFSET_STRUCT {
  Si el **timezone_hour** es negativo, el **timezone_minute** debe ser negativo o cero. Si el **timezone_hour** es positivo, el **timezone_minute** debe ser positivo o cero. Si el **timezone_hour** es cero, las operaciones de asignación**timezone_minute** puede tener cualquier valor en el intervalo de-59 a + 59.  
   
 ## <a name="see-also"></a>Vea también  
- [Fecha y hora mejoras &#40; ODBC &#41;](../../relational-databases/native-client-odbc-date-time/date-and-time-improvements-odbc.md)  
+ [Fecha y hora mejoras & #40; ODBC & #41;](../../relational-databases/native-client-odbc-date-time/date-and-time-improvements-odbc.md)  
   
   

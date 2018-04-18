@@ -1,16 +1,16 @@
 ---
 title: srv_rpcoptions (API de procedimiento almacenado extendido) | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine
-ms.service: 
+ms.service: ''
 ms.component: extended-stored-procedures
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: reference
 apiname:
 - srv_rpcoptions
@@ -22,22 +22,22 @@ dev_langs:
 helpviewer_keywords:
 - srv_rpcoptions
 ms.assetid: dbcce5d1-d5a1-4379-9597-04e43af5923d
-caps.latest.revision: 
+caps.latest.revision: 30
 author: rothja
 ms.author: jroth
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 151157986bee12807eccf4919248fbeb7dbcc29a
-ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
-ms.translationtype: MT
+ms.openlocfilehash: fc2f288092e7e10c41dbdd84064bff4671dccf73
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
+ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/09/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="srvrpcoptions-extended-stored-procedure-api"></a>srv_rpcoptions (API de procedimiento almacenado extendido)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
     
 > [!IMPORTANT]  
->  [!INCLUDE[ssNoteDepFutureDontUse](../../includes/ssnotedepfuturedontuse-md.md)] En su lugar, use la integración de CLR.  
+>  [!INCLUDE[ssNoteDepFutureDontUse](../../includes/ssnotedepfuturedontuse-md.md)] Use la integración con CLR en su lugar.  
   
  Devuelve las opciones de tiempo de ejecución para el procedimiento almacenado remoto actual.  
   
@@ -57,7 +57,7 @@ srvproc
 ## <a name="returns"></a>Devuelve  
  Un mapa de bits que contiene las marcas en tiempo de ejecución combinadas en un OR lógico para el procedimiento almacenado remoto actual. Si no hay un procedimiento almacenado remoto actual, se devuelve 0 y se genera un mensaje.  
   
-## <a name="remarks"></a>Notas  
+## <a name="remarks"></a>Comentarios  
  En la tabla siguiente se describen las marcas de tiempo de ejecución.  
   
 |Marca de tiempo de ejecución|Description|  

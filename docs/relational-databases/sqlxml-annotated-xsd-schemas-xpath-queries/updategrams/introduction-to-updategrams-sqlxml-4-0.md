@@ -1,16 +1,16 @@
 ---
-title: "Introducción a los diagramas de actualización (SQLXML 4.0) | Documentos de Microsoft"
-ms.custom: 
+title: Introducción a los diagramas de actualización (SQLXML 4.0) | Documentos de Microsoft
+ms.custom: ''
 ms.date: 03/17/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine, sql-database
-ms.service: 
+ms.service: ''
 ms.component: sqlxml
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - dbe-xml
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: reference
 helpviewer_keywords:
 - explicit schema mapping [SQLXML]
@@ -25,27 +25,28 @@ helpviewer_keywords:
 - executing updategrams [SQLXML]
 - implicit schema mapping
 ms.assetid: cfe24e82-a645-4f93-ab16-39c21f90cce6
-caps.latest.revision: 
+caps.latest.revision: 12
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 2dc3ce73bfe3da97e6567c1819eea34a8bc1dfaa
-ms.sourcegitcommit: 37f0b59e648251be673389fa486b0a984ce22c81
+monikerRange: = azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions
+ms.openlocfilehash: 387646968ef4e44a43ec9ee2c50a06d4ba4b6e6c
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/12/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="introduction-to-updategrams-sqlxml-40"></a>Introducción a los diagramas de actualización (SQLXML 4.0)
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
-Puede modificar (Insertar, actualizar o eliminar) una base de datos en [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] desde un documento XML de documento mediante un diagrama de actualización o el OPENXML [!INCLUDE[tsql](../../../includes/tsql-md.md)] función.  
+  Puede modificar (Insertar, actualizar o eliminar) una base de datos en [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] desde un documento XML de documento mediante un diagrama de actualización o el OPENXML [!INCLUDE[tsql](../../../includes/tsql-md.md)] función.  
   
  La función OPENXML modifica una base de datos dividiendo el documento XML existente y proporcionando un conjunto de filas que puede pasarse a una instrucción INSERT, UPDATE o DELETE. Con OPENXML, las operaciones se realizan directamente en las tablas de la base de datos. Por lo tanto, el uso de OPENXML resulta más adecuado siempre que los proveedores de conjuntos de filas, como una tabla, puedan aparecer como un origen.  
   
  Al igual que OPENXML, un diagrama de actualización permite insertar, actualizar o eliminar datos en la base de datos; sin embargo, un diagrama de actualización funciona con las vistas XML proporcionadas por el esquema XSD (o XDR) anotado; por ejemplo, las actualizaciones se aplican a la vista XML proporcionada por el esquema de asignación. El esquema de asignación, a su vez, incluye la información necesaria para asignar elementos y atributos XML a las columnas y tablas de base de datos correspondientes. El diagrama de actualización usa esta información de asignación para actualizar las columnas y tablas de base de datos.  
   
 > [!NOTE]  
->  En esta documentación se asume que está familiarizado con la compatibilidad de las plantillas y el esquema de asignación de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]. Para obtener más información, vea [Introducción a los esquemas XSD anotados &#40; SQLXML 4.0 &#41; ](../../../relational-databases/sqlxml/annotated-xsd-schemas/introduction-to-annotated-xsd-schemas-sqlxml-4-0.md). Para obtener información sobre las aplicaciones heredadas que usan XDR, vea [esquemas XDR anotados &#40; funcionalidades desusadas en SQLXML 4.0 &#41;](../../../relational-databases/sqlxml/annotated-xsd-schemas/annotated-xdr-schemas-deprecated-in-sqlxml-4-0.md).  
+>  En esta documentación se asume que está familiarizado con la compatibilidad de las plantillas y el esquema de asignación de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]. Para obtener más información, vea [Introducción a los esquemas XSD anotados & #40; SQLXML 4.0 & #41; ](../../../relational-databases/sqlxml/annotated-xsd-schemas/introduction-to-annotated-xsd-schemas-sqlxml-4-0.md). Para obtener información sobre las aplicaciones heredadas que usan XDR, vea [esquemas XDR anotados &#40;desusado en SQLXML 4.0&#41;](../../../relational-databases/sqlxml/annotated-xsd-schemas/annotated-xdr-schemas-deprecated-in-sqlxml-4-0.md).  
   
 ## <a name="required-namespaces-in-the-updategram"></a>Espacios de nombres necesarios en el diagrama de actualización  
  Las palabras clave en un diagrama de actualización, como  **\<sincronización >**,  **\<antes >**, y  **\<después >**, existe en el **urn: schemas-microsoft-com: diagrama de actualización** espacio de nombres. Se usa un prefijo de espacio de nombres arbitrario. En esta documentación, el **updg** prefijo denota el **updategram** espacio de nombres.  
@@ -68,13 +69,13 @@ Puede modificar (Insertar, actualizar o eliminar) una base de datos en [!INCLUDE
   
  Las definiciones siguientes describen el rol de cada uno de estos bloques:  
   
- **\<before>**  
+ **\<antes de >**  
  Identifica el estado existente (que también recibe el nombre de "estado before") de la instancia de registro.  
   
- **\<after>**  
+ **\<una vez >**  
  Identifica el nuevo estado al que van a cambiarse los datos.  
   
- **\<sync>**  
+ **\<sincronización >**  
  Contiene el  **\<antes >** y  **\<después >** bloques. A  **\<sincronización >** bloque puede contener más de un conjunto de  **\<antes >** y  **\<después >** bloques. Si hay más de un conjunto de  **\<antes >** y  **\<después >** bloques, estos bloques (incluso si están vacías) debe especificarse como pares. Además, un diagrama de actualización puede tener más de un  **\<sincronización >** bloque. Cada  **\<sincronización >** bloque es una unidad de transacción (lo que significa que cualquier todo el contenido de la  **\<sincronización >** bloque se realiza o no se hace nada). Si especifica varios  **\<sincronización >** bloques en un diagrama de actualización, el error de un  **\<sincronización >** bloque no afecta a los demás  **\<sincronización >** bloques.  
   
  Si un diagrama de actualización elimina, inserta o actualiza una instancia de registro depende del contenido de la  **\<antes >** y  **\<después >** bloques:  
@@ -110,7 +111,7 @@ Puede modificar (Insertar, actualizar o eliminar) una base de datos en [!INCLUDE
   
  Si el diagrama de actualización realiza una actualización compleja (por ejemplo, insertando registros en varias tablas basándose en la relación de elementos primarios y secundarios que se especifica en el esquema de asignación), debe proporcionar explícitamente el esquema de asignación mediante la  **esquema de asignación** atributo en que se ejecuta el diagrama de actualización.  
   
- Dado que un diagrama de actualización es una plantilla, la ruta de acceso especificada para el esquema de asignación en el diagrama de actualización es relativa a la ubicación del archivo de plantilla (con respecto al lugar donde se almacena el diagrama de actualización). Para obtener más información, vea [especificar un esquema de asignación anotados en un diagrama de actualización &#40; SQLXML 4.0 &#41; ](../../../relational-databases/sqlxml-annotated-xsd-schemas-xpath-queries/updategrams/specifying-an-annotated-mapping-schema-in-an-updategram-sqlxml-4-0.md).  
+ Dado que un diagrama de actualización es una plantilla, la ruta de acceso especificada para el esquema de asignación en el diagrama de actualización es relativa a la ubicación del archivo de plantilla (con respecto al lugar donde se almacena el diagrama de actualización). Para obtener más información, consulte [especificar un esquema de asignación anotados en un diagrama de actualización &#40;SQLXML 4.0&#41;](../../../relational-databases/sqlxml-annotated-xsd-schemas-xpath-queries/updategrams/specifying-an-annotated-mapping-schema-in-an-updategram-sqlxml-4-0.md).  
   
 ## <a name="element-centric-and-attribute-centric-mapping-in-updategrams"></a>Asignación centrada en elementos y centrada en atributos en diagramas de actualización  
  Con la asignación predeterminada (cuando el esquema de asignación no se especifica en el diagrama de actualización), los elementos del diagrama de actualización se asignan a tablas y los elementos secundarios (en el caso de la asignación centrada en elementos) y los atributos (en el caso de asignación centrada en atributos) se asignan a columnas.  
@@ -180,6 +181,6 @@ Puede modificar (Insertar, actualizar o eliminar) una base de datos en [!INCLUDE
 -   Enviándolo como un comando OLE DB.  
   
 ## <a name="see-also"></a>Vea también  
- [Consideraciones de seguridad de diagrama de actualización &#40; SQLXML 4.0 &#41;](../../../relational-databases/sqlxml-annotated-xsd-schemas-xpath-queries/security/updategram-security-considerations-sqlxml-4-0.md)  
+ [Consideraciones de seguridad de updategram &#40;SQLXML 4.0&#41;](../../../relational-databases/sqlxml-annotated-xsd-schemas-xpath-queries/security/updategram-security-considerations-sqlxml-4-0.md)  
   
   

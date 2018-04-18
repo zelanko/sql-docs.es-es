@@ -1,16 +1,16 @@
 ---
 title: srv_sendrow (API de procedimiento almacenado extendido) | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 03/03/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine
-ms.service: 
+ms.service: ''
 ms.component: extended-stored-procedures
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: reference
 apiname:
 - srv_sendrow
@@ -22,22 +22,22 @@ dev_langs:
 helpviewer_keywords:
 - srv_sendrow
 ms.assetid: a08f608a-10e6-4bff-9b48-0d02e8026cdb
-caps.latest.revision: 
+caps.latest.revision: 31
 author: rothja
 ms.author: jroth
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 903cbdee1744d480c25fd849eadcd5123b8b7223
-ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
-ms.translationtype: MT
+ms.openlocfilehash: 518de8046365f1b74f8a5c54f669cc14aa33a0f6
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
+ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/09/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="srvsendrow-extended-stored-procedure-api"></a>srv_sendrow (API de procedimiento almacenado extendido)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
     
 > [!IMPORTANT]  
->  [!INCLUDE[ssNoteDepFutureDontUse](../../includes/ssnotedepfuturedontuse-md.md)] En su lugar, use la integración de CLR.  
+>  [!INCLUDE[ssNoteDepFutureDontUse](../../includes/ssnotedepfuturedontuse-md.md)] Use la integración con CLR en su lugar.  
   
  Transmite una fila de datos al cliente.  
   
@@ -57,7 +57,7 @@ srvproc
 ## <a name="returns"></a>Devuelve  
  SUCCEED o FAIL.  
   
-## <a name="remarks"></a>Notas  
+## <a name="remarks"></a>Comentarios  
  Se llama a la función **srv_sendrow** una vez por cada fila enviada al cliente. Todas las filas se deben enviar al cliente antes de se envíe cualquier mensaje, valor de estado o estado de finalización con **srv_sendmsg**, **srv_status**o **srv_senddone**.  
   
  El envío de una fila en la que no se han definido todas sus columnas con **srv_describe** hace que la aplicación API Procedimiento almacenado extendido provoque un mensaje de error informativo y devuelva FAIL al cliente. En este caso, la fila no se envía.  
@@ -68,7 +68,7 @@ srvproc
 > [!IMPORTANT]  
 >  Debe revisar minuciosamente el código fuente de los procedimientos almacenados extendidos y debe probar las DLL compiladas antes de instalarlas en el servidor de producción. Para obtener información acerca de la revisión y pruebas de seguridad, vea este [sitio web de Microsoft](http://go.microsoft.com/fwlink/?LinkID=54761&amp;clcid=0x409http://msdn.microsoft.com/security/).  
   
-## <a name="see-also"></a>Ver también  
+## <a name="see-also"></a>Vea también  
  [srv_describe &#40;API de procedimiento almacenado extendido&#41;](../../relational-databases/extended-stored-procedures-reference/srv-describe-extended-stored-procedure-api.md)  
   
   

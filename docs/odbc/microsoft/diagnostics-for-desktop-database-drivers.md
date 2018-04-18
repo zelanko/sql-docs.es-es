@@ -1,15 +1,16 @@
 ---
-title: "Controladores de base de datos de diagnóstico para escritorio | Documentos de Microsoft"
-ms.custom: 
+title: Controladores de base de datos de diagnóstico para escritorio | Documentos de Microsoft
+ms.custom: ''
 ms.date: 01/19/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: drivers
-ms.service: 
+ms.service: ''
 ms.component: odbc
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: drivers
-ms.tgt_pltfrm: 
+ms.technology:
+- drivers
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - Jet-based ODBC drivers [ODBC], diagnostic information
@@ -17,16 +18,16 @@ helpviewer_keywords:
 - ODBC desktop database drivers [ODBC], diagnostic information
 - diagnostic information [ODBC], desktop database drivers
 ms.assetid: 1c3740eb-62c6-4009-b4b2-570fcf5661e4
-caps.latest.revision: "6"
+caps.latest.revision: 6
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 5440d7cb38dfeef678a9b665397b789bf506be72
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: 2a3120fd230d15a8a940a6e631275e41bb79ed50
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="diagnostics-for-desktop-database-drivers"></a>Diagnóstico de controladores de escritorio de la base de datos
 Todos los errores y advertencias no modificado o parcialmente activada por el Administrador de controladores se administran mediante el controlador. El controlador también asigna nativo errores o los errores devueltos por el origen de datos para SQLSTATEs. Cada función aparecen en la *referencia del programador de ODBC* contiene una sección de "Diagnostics" que especifica las condiciones y los mensajes.  
@@ -37,15 +38,15 @@ Todos los errores y advertencias no modificado o parcialmente activada por el Ad
 |---------------------|-------------------|  
 |SQL_DIA_DYNAMIC_FUNCTION|No compatible|  
 |SQL_DIAG_CLASS_ORIGIN|Compatible. Siempre "ODBC 3.0" para las versiones 3.0 y versiones posteriores de este controlador.|  
-|SQL_DIAG_COLUMN_NUMBER|Admitida|  
+|SQL_DIAG_COLUMN_NUMBER|Compatible|  
 |SQL_DIAG_CURSOR_ROW_COUNT|No compatible|  
 |SQL_DIAG_DYNAMIC_FUNCTION_CODE|No compatible|  
-|SQL_DIAG_MESSAGE_TEXT|Admitida|  
-|SQL_DIAG_NATIVE|Admitida|  
-|SQL_DIAG_NUMBER|Admitida|  
+|SQL_DIAG_MESSAGE_TEXT|Compatible|  
+|SQL_DIAG_NATIVE|Compatible|  
+|SQL_DIAG_NUMBER|Compatible|  
 |SQL_DIAG_RETURNCODE|Compatible, pero implementado por el Administrador de controladores|  
-|SQL_DIAG_ROW_COUNT|Admitida|  
-|SQL_DIAG_ROW_NUMBER|Admitida|  
+|SQL_DIAG_ROW_COUNT|Compatible|  
+|SQL_DIAG_ROW_NUMBER|Compatible|  
 |SQL_DIAG_SERVER_NAME|No compatible|  
-|SQL_DIAG_SQLSTATE|Admitida|  
-|SQL_DIAG_SUBCLASS_ORIGIN|Admitida|
+|SQL_DIAG_SQLSTATE|Compatible|  
+|SQL_DIAG_SUBCLASS_ORIGIN|Compatible|

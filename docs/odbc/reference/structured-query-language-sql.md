@@ -1,31 +1,32 @@
 ---
 title: (SQL) de lenguaje de consulta estructurado | Documentos de Microsoft
-ms.custom: 
+ms.custom: ''
 ms.date: 01/19/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: drivers
-ms.service: 
+ms.service: ''
 ms.component: odbc
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: drivers
-ms.tgt_pltfrm: 
+ms.technology:
+- drivers
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - SQL [ODBC]
 - SQL [ODBC], about SQL
 - ODBC [ODBC], SQL
 ms.assetid: bebfd93e-0dc0-46b3-a531-518beb7ea976
-caps.latest.revision: "5"
+caps.latest.revision: 5
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: f51c5b639649a3d21ce515a1d4082e84be4f7329
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: babb38e88d471cedceaa94e3c6696f9b5b59dcce
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="structured-query-language-sql"></a>Lenguaje de consulta estructurado (SQL)
 Un DBMS típico permite a los usuarios almacenar, tener acceso y modificar datos en un modo organizado y eficaz. Originalmente, los usuarios de DBMS eran los programadores. Obtener acceso a los datos almacenados, es necesario escribir un programa en un lenguaje de programación, como COBOL. Mientras estos programas a menudo se escribieron para presentar una interfaz sencilla para un usuario no técnicos, acceso a los datos en sí requiere los servicios de un programador experto. No es práctico ocasional acceso a los datos.  

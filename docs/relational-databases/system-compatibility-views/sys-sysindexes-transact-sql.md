@@ -1,16 +1,16 @@
 ---
 title: Sys.sysindexes (Transact-SQL) | Documentos de Microsoft
-ms.custom: 
+ms.custom: ''
 ms.date: 06/10/2016
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine
-ms.service: 
+ms.service: ''
 ms.component: system-compatibility-views
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - sysindexes
@@ -23,16 +23,16 @@ helpviewer_keywords:
 - sysindexes system table
 - sys.sysindexes compatibility view
 ms.assetid: f483d89c-35c4-4a08-8f8b-737fd80d13f5
-caps.latest.revision: 
+caps.latest.revision: 57
 author: rothja
 ms.author: jroth
 manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 6871dcbbc0259e6aeca7b3d24ff6050b9608f199
-ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
+ms.openlocfilehash: 541b0de942e5b67c4c4be26ed1a6e29578a178ab
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/09/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="syssysindexes-transact-sql"></a>sys.sysindexes (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
@@ -51,10 +51,10 @@ ms.lasthandoff: 02/09/2018
 |**raíz**|**binary(6)**|Para **indid** > = 1, **raíz** es el puntero a la página raíz.<br /><br /> No usado cuando **indid** = 0.<br /><br /> NULL = índice tiene particiones cuando **indid** > 1.<br /><br /> NULL = la tabla tiene particiones cuando **indid** es 0 o 1.|  
 |**minlen**|**smallint**|Tamaño mínimo de una fila.|  
 |**keycnt**|**smallint**|Número de claves.|  
-|**groupid**|**smallint**|Id. del grupo de archivos en el que se creó el objeto.<br /><br /> NULL = índice tiene particiones cuando **indid** > 1.<br /><br /> NULL = la tabla tiene particiones cuando **indid** es 0 o 1.|  
-|**dpages**|**int**|Para **indid** = 0 o **indid** = 1, **dpages** es el número de páginas de datos utilizadas.<br /><br /> Para **indid** > 1, **dpages** es el número de páginas de índice utilizadas.<br /><br /> 0 = índice tiene particiones cuando **indid** > 1.<br /><br /> 0 = la tabla tiene particiones cuando **indid** es 0 o 1.<br /><br /> No producen resultados precisos en caso de desbordamiento de fila.|  
-|**reserved**|**int**|Para **indid** = 0 o **indid** = 1, **reservada** es el número de páginas asignadas para todos los índices y datos de la tabla.<br /><br /> Para **indid** > 1, **reservada** es el número de páginas asignadas para el índice.<br /><br /> 0 = índice tiene particiones cuando **indid** > 1.<br /><br /> 0 = la tabla tiene particiones cuando **indid** es 0 o 1.<br /><br /> No producen resultados precisos en caso de desbordamiento de fila.|  
-|**used**|**int**|Para **indid** = 0 o **indid** = 1, **utiliza** es el número total de páginas utilizado para todos los datos de índice y tabla.<br /><br /> Para **indid** > 1, **utiliza** es el número de páginas utilizadas para el índice.<br /><br /> 0 = índice tiene particiones cuando **indid** > 1.<br /><br /> 0 = la tabla tiene particiones cuando **indid** es 0 o 1.<br /><br /> No producen resultados precisos en caso de desbordamiento de fila.|  
+|**Id. de grupo**|**smallint**|Id. del grupo de archivos en el que se creó el objeto.<br /><br /> NULL = índice tiene particiones cuando **indid** > 1.<br /><br /> NULL = la tabla tiene particiones cuando **indid** es 0 o 1.|  
+|**Dpages**|**int**|Para **indid** = 0 o **indid** = 1, **dpages** es el número de páginas de datos utilizadas.<br /><br /> Para **indid** > 1, **dpages** es el número de páginas de índice utilizadas.<br /><br /> 0 = índice tiene particiones cuando **indid** > 1.<br /><br /> 0 = la tabla tiene particiones cuando **indid** es 0 o 1.<br /><br /> No producen resultados precisos en caso de desbordamiento de fila.|  
+|**Reservado**|**int**|Para **indid** = 0 o **indid** = 1, **reservada** es el número de páginas asignadas para todos los índices y datos de la tabla.<br /><br /> Para **indid** > 1, **reservada** es el número de páginas asignadas para el índice.<br /><br /> 0 = índice tiene particiones cuando **indid** > 1.<br /><br /> 0 = la tabla tiene particiones cuando **indid** es 0 o 1.<br /><br /> No producen resultados precisos en caso de desbordamiento de fila.|  
+|**usar**|**int**|Para **indid** = 0 o **indid** = 1, **utiliza** es el número total de páginas utilizado para todos los datos de índice y tabla.<br /><br /> Para **indid** > 1, **utiliza** es el número de páginas utilizadas para el índice.<br /><br /> 0 = índice tiene particiones cuando **indid** > 1.<br /><br /> 0 = la tabla tiene particiones cuando **indid** es 0 o 1.<br /><br /> No producen resultados precisos en caso de desbordamiento de fila.|  
 |**rowcnt**|**bigint**|Recuento de filas de datos se basa en **indid** = 0 y **indid** = 1.<br /><br /> 0 = índice tiene particiones cuando **indid** > 1.<br /><br /> 0 = la tabla tiene particiones cuando **indid** es 0 o 1.|  
 |**rowmodctr**|**int**|Cuenta el número total de filas insertadas, eliminadas o actualizadas desde la última vez que se actualizaron las estadísticas de la tabla.<br /><br /> 0 = índice tiene particiones cuando **indid** > 1.<br /><br /> 0 = la tabla tiene particiones cuando **indid** es 0 o 1.<br /><br /> En [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] y versiones posteriores, **rowmodctr** no es totalmente compatible con versiones anteriores. Para obtener más información, vea la sección Comentarios.|  
 |**reserved3**|**int**|Devuelve 0.<br /><br /> [!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]|  
@@ -63,16 +63,16 @@ ms.lasthandoff: 02/09/2018
 |**maxirow**|**smallint**|Tamaño máximo de una fila de índice no hoja.<br /><br /> En [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] y versiones posteriores, **maxirow** no es totalmente compatible con versiones anteriores.|  
 |**OrigFillFactor**|**tinyint**|Valor de factor de relleno original empleado cuando se creó el índice. Este valor no se mantiene, aunque puede ser útil si necesita volver a crear un índice y no recuerda el valor del factor de relleno que se utilizó originalmente.|  
 |**StatVersion**|**tinyint**|Devuelve 0.<br /><br /> [!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]|  
-|**reserved2**|**int**|Devuelve 0.<br /><br /> [!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]|  
+|**Reservado2**|**int**|Devuelve 0.<br /><br /> [!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]|  
 |**FirstIAM**|**binary(6)**|NULL = Índice con particiones.<br /><br /> [!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]|  
 |**impid**|**smallint**|Marca de implementación de índice.<br /><br /> Devuelve 0.<br /><br /> [!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]|  
-|**lockflags**|**smallint**|Se utiliza para restringir las granularidades de bloqueo que se tienen en cuenta para un índice. Por ejemplo, una tabla de búsqueda que es esencialmente de solo lectura se puede configurar de modo que solo imponga bloqueos en la tabla para minimizar el costo de bloqueo.|  
+|**LockFlags**|**smallint**|Se utiliza para restringir las granularidades de bloqueo que se tienen en cuenta para un índice. Por ejemplo, una tabla de búsqueda que es esencialmente de solo lectura se puede configurar de modo que solo imponga bloqueos en la tabla para minimizar el costo de bloqueo.|  
 |**pgmodctr**|**int**|Devuelve 0.<br /><br /> [!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]|  
-|**keys**|**varbinary(816)**|Lista de los Id. de columna para las columnas que forman la clave de índice.<br /><br /> Devuelve NULL.<br /><br /> Para mostrar las columnas de clave de índice, use [sys.sysindexkeys](../../relational-databases/system-compatibility-views/sys-sysindexkeys-transact-sql.md).|  
+|**Claves**|**varbinary(816)**|Lista de los Id. de columna para las columnas que forman la clave de índice.<br /><br /> Devuelve NULL.<br /><br /> Para mostrar las columnas de clave de índice, use [sys.sysindexkeys](../../relational-databases/system-compatibility-views/sys-sysindexkeys-transact-sql.md).|  
 |**Nombre**|**sysname**|Nombre del índice o estadística. Devuelve NULL cuando **indid** = 0. Modifique la aplicación para que busque un nombre de montón NULL.|  
 |**statblob**|**imagen**|Objeto binario grande de estadística (BLOB).<br /><br /> Devuelve NULL.|  
-|**maxlen**|**int**|[!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]|  
-|**rows**|**int**|Recuento de filas de datos se basa en **indid** = 0 y **indid** = 1, y el valor se repite para **indid** > 1.|  
+|**MAXLEN**|**int**|[!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]|  
+|**Filas**|**int**|Recuento de filas de datos se basa en **indid** = 0 y **indid** = 1, y el valor se repite para **indid** > 1.|  
   
 ## <a name="remarks"></a>Comentarios  
  Las columnas definidas como reservadas no deben utilizarse.  
@@ -93,7 +93,7 @@ ms.lasthandoff: 02/09/2018
   
 ## <a name="see-also"></a>Vea también  
  [Vistas de catálogo &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/catalog-views-transact-sql.md)   
- [Asignar tablas del sistema a vistas del sistema &#40; Transact-SQL &#41;](../../relational-databases/system-tables/mapping-system-tables-to-system-views-transact-sql.md)   
+ [Asignar tablas del sistema a vistas del sistema &#40;Transact-SQL&#41;](../../relational-databases/system-tables/mapping-system-tables-to-system-views-transact-sql.md)   
  [sys.indexes &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-indexes-transact-sql.md)  
   
   

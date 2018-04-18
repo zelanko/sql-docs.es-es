@@ -1,16 +1,16 @@
 ---
-title: "Introducción a los esquemas XSD anotados (SQLXML 4.0) | Documentos de Microsoft"
-ms.custom: 
+title: Introducción a los esquemas XSD anotados (SQLXML 4.0) | Documentos de Microsoft
+ms.custom: ''
 ms.date: 03/16/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine, sql-database
-ms.service: 
+ms.service: ''
 ms.component: sqlxml
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - dbe-xml
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: reference
 helpviewer_keywords:
 - namespaces [SQLXML], annotated XSD schemas
@@ -24,20 +24,21 @@ helpviewer_keywords:
 - annotated XSD schemas, examples
 - XML views [SQLXML]
 ms.assetid: 15282db1-65c4-43be-bdb7-e9ef49cb33a2
-caps.latest.revision: 
+caps.latest.revision: 29
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 75af2a4c0523c6cc592105a016950a2b89e090ff
-ms.sourcegitcommit: 37f0b59e648251be673389fa486b0a984ce22c81
+monikerRange: = azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions
+ms.openlocfilehash: f32ce7e230b3ba037eb60385173c9285c50a00bf
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/12/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="introduction-to-annotated-xsd-schemas-sqlxml-40"></a>Introducción a los esquemas XSD anotados (SQLXML 4.0)
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
-Puede crear vistas XML de datos relacionales utilizando el lenguaje de definición de esquemas XML (XSD). Estas vistas pueden consultarse después utilizando consultas XPath (Lenguaje de rutas XML). Es parecido a crear vistas utilizando instrucciones CREATE VIEW y, a continuación, especificar consultas SQL en la vista.  
+  Puede crear vistas XML de datos relacionales utilizando el lenguaje de definición de esquemas XML (XSD). Estas vistas pueden consultarse después utilizando consultas XPath (Lenguaje de rutas XML). Es parecido a crear vistas utilizando instrucciones CREATE VIEW y, a continuación, especificar consultas SQL en la vista.  
   
  Un esquema XML describe la estructura de un documento XML y también describe las diversas restricciones en los datos en el documento. Cuando se especifican consultas XPath en el esquema, la estructura del documento XML devuelto viene determinada por el esquema en el que se ejecuta la consulta XPath.  
   
@@ -126,18 +127,18 @@ Puede crear vistas XML de datos relacionales utilizando el lenguaje de definici�
 ## <a name="other-resources"></a>Otros recursos  
  Puede buscar más información sobre el lenguaje de definición de esquemas XML (XSD), el lenguaje de rutas XML (XPath) y el lenguaje de transformación basado en hojas de estilo (XSLT) en los siguientes sitios web:  
   
--   XML Schema Part 0: Primer, W3C Recommendation (http://www.w3.org/TR/xmlschema-0/)  
+-   XML Schema Part 0: Manual, el W3C recomendación (http://www.w3.org/TR/xmlschema-0/)  
   
--   XML Schema Part 1: Structures, W3C Recommendation (http://www.w3.org/TR/xmlschema-1/)  
+-   Esquema XML parte 1: Estructuras, W3C Recommendation (http://www.w3.org/TR/xmlschema-1/)  
   
--   XML Schema Part 2:Datatypes, W3C Recommendation (http://www.w3.org/TR/xmlschema-2/)  
+-   Esquema XML parte 2: Datatypes, W3C Recommendation (http://www.w3.org/TR/xmlschema-2/)  
   
--   XML Path Language (XPath) (http://www.w3.org/TR/xpath)  
+-   XML Path Language (XPath) ()http://www.w3.org/TR/xpath)  
   
--   XSL Transformations (XSLT) (http://www.w3.org/TR/xslt)  
+-   (XSL Transformations (XSLT)http://www.w3.org/TR/xslt)  
   
 ## <a name="see-also"></a>Vea también  
- [Consideraciones de seguridad de un esquema anotado &#40; SQLXML 4.0 &#41;](../../../relational-databases/sqlxml-annotated-xsd-schemas-xpath-queries/security/annotated-schema-security-considerations-sqlxml-4-0.md)   
- [Esquemas XDR anotados &#40; desusado en SQLXML 4.0 &#41;](../../../relational-databases/sqlxml/annotated-xsd-schemas/annotated-xdr-schemas-deprecated-in-sqlxml-4-0.md)  
+ [Anotar las consideraciones de seguridad de esquema &#40;SQLXML 4.0&#41;](../../../relational-databases/sqlxml-annotated-xsd-schemas-xpath-queries/security/annotated-schema-security-considerations-sqlxml-4-0.md)   
+ [Esquemas XDR anotados &#40;desusado en SQLXML 4.0&#41;](../../../relational-databases/sqlxml/annotated-xsd-schemas/annotated-xdr-schemas-deprecated-in-sqlxml-4-0.md)  
   
   

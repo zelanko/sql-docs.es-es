@@ -1,16 +1,16 @@
 ---
 title: sysmergepartitioninfoview (Transact-SQL) | Documentos de Microsoft
-ms.custom: 
+ms.custom: ''
 ms.date: 03/06/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine
-ms.service: 
+ms.service: ''
 ms.component: system-views
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - replication
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 applies_to:
 - SQL Server
@@ -22,16 +22,16 @@ dev_langs:
 helpviewer_keywords:
 - sysmergepartitioninfoview view
 ms.assetid: 714e2935-1bc7-4901-aea2-64b1bbda03d6
-caps.latest.revision: 
+caps.latest.revision: 16
 author: stevestein
 ms.author: sstein
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: ee0a46b7ec48d16bb2af2d528b4e832298c36a39
-ms.sourcegitcommit: c556eaf60a49af7025db35b7aa14beb76a8158c5
+ms.openlocfilehash: 92e3effdde5a4272094e55e7baed289d009ce275
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/03/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="sysmergepartitioninfoview-transact-sql"></a>sysmergepartitioninfoview (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -42,14 +42,14 @@ ms.lasthandoff: 02/03/2018
 |-----------------|---------------|-----------------|  
 |**Nombre**|**sysname**|El nombre del artículo.|  
 |**Tipo**|**tinyint**|Indica el tipo de artículo, que puede ser uno de los siguientes:<br /><br /> **0x0A** = tabla.<br /><br /> **0 x 20** = solamente esquema de procedimiento.<br /><br /> **0 x 40** = view schema only o solo el esquema de vista indizada.<br /><br /> **0 x 80** = solamente esquema de función.|  
-|**objid**|**int**|El identificador del objeto publicado.|  
+|**ObjID**|**int**|El identificador del objeto publicado.|  
 |**sync_objid**|**int**|Id. de objeto de la vista que representa el conjunto de datos sincronizado.|  
 |**view_type**|**tinyint**|Tipo de vista:<br /><br /> **0** = no es una vista; usar todo el objeto base.<br /><br /> **1** = vista permanente.<br /><br /> **2** = vista temporal.|  
 |**artid**|**uniqueidentifier**|El número de identificación único del artículo indicado.|  
-|**description**|**nvarchar(255)**|Descripción breve del artículo.|  
+|**Descripción**|**nvarchar(255)**|Descripción breve del artículo.|  
 |**pre_creation_command**|**tinyint**|La acción predeterminada que se realizará cuando el artículo se crea en la base de datos de suscripción:<br /><br /> **0** = none: si la tabla ya existe en el suscriptor, no se realiza ninguna acción.<br /><br /> **1** = drop: quita la tabla antes de volver a crearla.<br /><br /> **2** = delete: realiza una eliminación basada en la cláusula WHERE del filtro de subconjunto.<br /><br /> **3** = Truncate: igual que 2, pero elimina páginas en lugar de filas. Sin embargo, no precisa la cláusula WHERE.|  
 |**pubid**|**uniqueidentifier**|Id. de la publicación a la que pertenece el artículo actual.|  
-|**nickname**|**int**|Alias asignado para la identificación del artículo.|  
+|**Alias**|**int**|Alias asignado para la identificación del artículo.|  
 |**column_tracking**|**int**|Indica si está implementado el seguimiento de columnas en el artículo.|  
 |**status**|**tinyint**|Indica el estado del artículo, que puede ser uno de los siguientes:<br /><br /> **1** = Unsynced - el script de procesamiento inicial para publicar la tabla se ejecutará la próxima vez que se ejecuta el agente de instantáneas.<br /><br /> **2** = active - se ha ejecutado la secuencia de comandos de procesamiento inicial para publicar la tabla.|  
 |**conflict_table**|**sysname**|Nombre de la tabla local que contiene los registros en conflicto del artículo actual. Esta tabla solo tiene fines informativos y su contenido puede ser modificado o eliminado con rutinas de resolución de conflictos personalizadas, o directamente por el administrador.|  
@@ -62,7 +62,7 @@ ms.lasthandoff: 02/03/2018
 |**select_proc**|**sysname**|El nombre de un procedimiento almacenado generado automáticamente que utiliza el Agente de mezcla para llevar a cabo el bloqueo y buscar columnas y filas de un artículo.|  
 |**metadata_select_proc**|**sysname**|El nombre de un procedimiento almacenado generado automáticamente utilizado para obtener acceso a los metadatos de las tablas del sistema de replicación de mezcla.|  
 |**delete_proc**|**sysname**|El procedimiento utilizado para eliminar filas durante la sincronización.|  
-|**schema_option**|**binary(8)**|El mapa de bits de la opción de generación del esquema para el artículo dado. Para obtener información sobre admite *schema_option* valores, vea [sp_addmergearticle &#40; Transact-SQL &#41; ](../../relational-databases/system-stored-procedures/sp-addmergearticle-transact-sql.md).|  
+|**schema_option**|**binary (8)**|El mapa de bits de la opción de generación del esquema para el artículo dado. Para obtener información sobre admite *schema_option* valores, consulte [sp_addmergearticle &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-addmergearticle-transact-sql.md).|  
 |**destination_object**|**sysname**|Nombre de la tabla creada en el suscriptor.|  
 |**destination_owner**|**sysname**|Nombre del propietario del objeto de destino.|  
 |**resolver_clsid**|**nvarchar(50)**|Identificador del solucionador de conflictos personalizado. En un controlador de lógica empresarial, este valor es NULL.|  
@@ -88,7 +88,7 @@ ms.lasthandoff: 02/03/2018
 |**processing_order**|**int**|Indica el orden de procesamiento de artículos en una publicación de combinación; un valor de **0** indica que el artículo está desordenado y artículos se procesan por orden, de menor a mayor valor. Si existen dos artículos que tienen el mismo valor, se procesan al mismo tiempo. Para obtener más información, vea [Especificar el orden de procesamiento de los artículos de mezcla](../../relational-databases/replication/merge/specify-the-processing-order-of-merge-articles.md).|  
 |**upload_options**|**tinyint**|Define si es posible realizar cambios en el suscriptor o cargarlos desde él. Puede se uno de los siguientes valores.<br /><br /> **0** = no hay restricciones respecto a las actualizaciones realizadas en el suscriptor; todos los cambios se cargan en el publicador.<br /><br /> **1** = se permiten realizar cambios en el suscriptor, pero no se cargan en el publicador.<br /><br /> **2** = no se permiten cambios en el suscriptor.|  
 |**published_in_tran_pub**|**bit**|Indica que un artículo de una publicación de combinación también se publica en una publicación transaccional.<br /><br /> **0** = el artículo no está publicado en un artículo transaccional.<br /><br /> **1** = el artículo también se publica en un artículo transaccional.|  
-|**lightweight**|**bit**|[!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]|  
+|**ligero**|**bit**|[!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]|  
 |**procname_postfix**|**nchar(32)**|[!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]|  
 |**well_partitioned_lightweight**|**bit**|[!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]|  
 |**before_upd_view_objid**|**int**|El Id. de la vista de la tabla antes de las actualizaciones.|  
@@ -96,14 +96,14 @@ ms.lasthandoff: 02/03/2018
 |**compensate_for_errors**|**bit**|Indica si se llevan a cabo acciones de compensación cuando se producen errores durante la sincronización.<br /><br /> **0** = compensación se deshabilitan las acciones.<br /><br /> **1** = cambios que no se pueden aplicar en un suscriptor o publicador siempre conllevan acciones de compensación para deshacer estos cambios, que es el comportamiento predeterminado para la replicación de mezcla.<br /><br /> Nota: Un valor de **0** da como resultado de no convergencia.|  
 |**pub_range**|**bigint**|Tamaño del intervalo de identidad del publicador.|  
 |**intervalo**|**bigint**|Tamaño de los valores de identidad consecutivos que podrían asignarse a los suscriptores en un ajuste.|  
-|**threshold**|**int**|Porcentaje de umbral del intervalo de identidad.|  
+|**Umbral**|**int**|Porcentaje de umbral del intervalo de identidad.|  
 |**stream_blob_columns**|**bit**|Indica si se utiliza la optimización de transmisión para columnas de objetos binarios grandes. **1** significa que se intenta realizar la optimización.|  
 |**preserve_rowguidcol**|**bit**|Indica si la replicación utiliza una columna rowguid existente. Un valor de **1** significa que se utiliza una columna ROWGUIDCOL existente. **0** significa que la replicación agregará la columna ROWGUIDCOL.|  
 |**partition_view_id**|**int**|Identifica la vista que define a una partición del suscriptor.|  
 |**repl_view_id**|**int**|[!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]|  
 |**partition_deleted_view_rule**|**sysname**|La instrucción utilizada en un desencadenador de replicación de mezcla para recuperar el Id. de partición de cada fila eliminada o actualizada en función de sus valores de columna antiguos.|  
-|**partition_inserted_view_rule**|**Sysname**|La instrucción utilizada en un desencadenador de replicación de mezcla para recuperar el Id. de partición de cada fila insertada o actualizada en función de sus valores de columna nuevos.|  
-|**membership_eval_proc_name**|**sysname**|El nombre del procedimiento que se evalúa como el Id. de partición actual de filas de [MSmerge_contents &#40; Transact-SQL &#41; ](../../relational-databases/system-tables/msmerge-contents-transact-sql.md).|  
+|**partition_inserted_view_rule**|**sysname**|La instrucción utilizada en un desencadenador de replicación de mezcla para recuperar el Id. de partición de cada fila insertada o actualizada en función de sus valores de columna nuevos.|  
+|**membership_eval_proc_name**|**sysname**|El nombre del procedimiento que se evalúa como el Id. de partición actual de filas de [MSmerge_contents &#40;Transact-SQL&#41;](../../relational-databases/system-tables/msmerge-contents-transact-sql.md).|  
 |**column_list**|**sysname**|Una lista delimitada por comas de las columnas publicadas en un artículo.|  
 |**column_list_blob**|**sysname**|Una lista delimitada por comas de las columnas publicadas en un artículo, incluidas las columnas de objetos binarios grandes.|  
 |**expand_proc**|**sysname**|El nombre del procedimiento que vuelve a evaluar Id. de todas las filas secundarias de una fila principal recién insertada y de las filas principales que han experimentado un cambio en la partición o se haya eliminado la partición.|  
@@ -117,8 +117,8 @@ ms.lasthandoff: 02/03/2018
   
 ## <a name="see-also"></a>Vea también  
  [Administrar particiones para una publicación de mezcla con filtros con parámetros](../../relational-databases/replication/publish/manage-partitions-for-a-merge-publication-with-parameterized-filters.md)   
- [Tablas de replicación &#40; Transact-SQL &#41;](../../relational-databases/system-tables/replication-tables-transact-sql.md)   
- [Vistas de replicación &#40; Transact-SQL &#41;](../../relational-databases/system-views/replication-views-transact-sql.md)   
+ [Tablas de replicación &#40;Transact-SQL&#41;](../../relational-databases/system-tables/replication-tables-transact-sql.md)   
+ [Vistas de replicación &#40;Transact-SQL&#41;](../../relational-databases/system-views/replication-views-transact-sql.md)   
  [sp_addmergepartition &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-addmergepartition-transact-sql.md)   
  [sp_helpmergepartition &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-helpmergepartition-transact-sql.md)  
   

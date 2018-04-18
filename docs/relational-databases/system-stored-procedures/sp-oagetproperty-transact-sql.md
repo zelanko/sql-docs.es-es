@@ -1,16 +1,16 @@
 ---
 title: sp_OAGetProperty (Transact-SQL) | Documentos de Microsoft
-ms.custom: 
+ms.custom: ''
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine
-ms.service: 
+ms.service: ''
 ms.component: system-stored-procedures
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - sp_OAGetProperty_TSQL
@@ -20,16 +20,16 @@ dev_langs:
 helpviewer_keywords:
 - sp_OAGetProperty
 ms.assetid: 240eeeb9-6d8b-4930-b912-1d273ca0ab38
-caps.latest.revision: 
+caps.latest.revision: 27
 author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: a0132315386f5c7922ee778d4ec0067190c03fe9
-ms.sourcegitcommit: 9fbe5403e902eb996bab0b1285cdade281c1cb16
+ms.openlocfilehash: 773f9026b5f2c5afc515351c26aaea958e06894c
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/27/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="spoagetproperty-transact-sql"></a>sp_OAGetProperty (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -51,7 +51,7 @@ sp_OAGetProperty objecttoken , propertyname
  *objecttoken*  
  Es el token de objeto de un objeto OLE que se creó previamente mediante **sp_OACreate**.  
   
- *PropertyName*  
+ *propertyname*  
  Es el nombre de la propiedad del objeto OLE que se devolverá.  
   
  *PropertyValue* **salida**  
@@ -65,7 +65,7 @@ sp_OAGetProperty objecttoken , propertyname
   
  Si *propertyvalue* se especifica, pero la propiedad no devuelve un valor, se produce un error. Si la propiedad devuelve una matriz con más de dos dimensiones, se produce un error.  
   
- *índice*  
+ *index*  
  Es un parámetro de índice. Si se especifica, *índice* debe ser un valor de tipo de datos adecuado.  
   
  Algunas propiedades tienen parámetros. Estas propiedades se llaman propiedades indizadas y los parámetros se llaman parámetros de índice. Una propiedad puede tener varios parámetros de índice.  
@@ -133,7 +133,7 @@ END;
 ```  
   
 ## <a name="see-also"></a>Vea también  
- [Procedimientos &#40; almacenados de automatización OLE Transact-SQL &#41;](../../relational-databases/system-stored-procedures/ole-automation-stored-procedures-transact-sql.md)   
+ [OLE procedimientos almacenados de automatización &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/ole-automation-stored-procedures-transact-sql.md)   
  [Ejemplo de script de automatización OLE](../../relational-databases/stored-procedures/ole-automation-sample-script.md)  
   
   

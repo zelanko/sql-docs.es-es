@@ -1,16 +1,16 @@
 ---
 title: sp_describe_undeclared_parameters (Transact-SQL) | Documentos de Microsoft
-ms.custom: 
+ms.custom: ''
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine, sql-database
-ms.service: 
+ms.service: ''
 ms.component: system-stored-procedures
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - sp_describe_undeclared_parameters
@@ -20,21 +20,22 @@ dev_langs:
 helpviewer_keywords:
 - sp_describe_undeclared_parameters
 ms.assetid: 6f016da6-dfee-4228-8b0d-7cd8e7d5a354
-caps.latest.revision: 
+caps.latest.revision: 22
 author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: bae5aebe0afe1861251628bd0eb447ab97b226dd
-ms.sourcegitcommit: 9fbe5403e902eb996bab0b1285cdade281c1cb16
+monikerRange: = azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions
+ms.openlocfilehash: 55becb87f41fdc54aa4e618dc5be80d5292b1ea3
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/27/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="spdescribeundeclaredparameters-transact-sql"></a>sp_describe_undeclared_parameters (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2012-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-asdb-xxxx-xxx-md.md)]
 
-  Devuelve un conjunto de resultados que contiene metadatos sobre parámetros no declarados en un [!INCLUDE[tsql](../../includes/tsql-md.md)] por lotes. Considera cada parámetro que se usa en la  **@tsql**  por lotes, pero no se declara en  **@params** . Se devuelve un conjunto de resultados que contiene una fila para cada parámetro, con la información de tipo deducida para dicho parámetro. El procedimiento devuelve un resultado vacío establecer si el  **@tsql**  por lotes de entrada no tienen ningún parámetro excepto los declarados en  **@params** .  
+  Devuelve un conjunto de resultados que contiene metadatos sobre parámetros no declarados en un [!INCLUDE[tsql](../../includes/tsql-md.md)] por lotes. Considera cada parámetro que se usa en la **@tsql** por lotes, pero no se declara en **@params**. Se devuelve un conjunto de resultados que contiene una fila para cada parámetro, con la información de tipo deducida para dicho parámetro. El procedimiento devuelve un resultado vacío establecer si el **@tsql** por lotes de entrada no tienen ningún parámetro excepto los declarados en **@params**.  
   
  ![Icono de vínculo de tema](../../database-engine/configure-windows/media/topic-link.gif "Icono de vínculo de tema") [Convenciones de sintaxis de Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -52,7 +53,7 @@ sp_describe_undeclared_parameters
  Una o varias instrucciones de [!INCLUDE[tsql](../../includes/tsql-md.md)]. *Transact-SQL_batch* puede ser **nvarchar (***n***)** o **nvarchar (max)**.  
   
  [  **@params =** ] **N'***parámetros***'**  
- @paramsProporciona una cadena de declaración para los parámetros para el [!INCLUDE[tsql](../../includes/tsql-md.md)] por lotes, de forma similar a sp_executesql forma funciona. *Parámetros de* puede ser **nvarchar (***n***)** o **nvarchar (max)**.  
+ @params Proporciona una cadena de declaración para los parámetros para el [!INCLUDE[tsql](../../includes/tsql-md.md)] por lotes, de forma similar a sp_executesql forma funciona. *Parámetros de* puede ser **nvarchar (***n***)** o **nvarchar (max)**.  
   
  Es una cadena que contiene las definiciones de todos los parámetros que se han incrustado en *SQL_batch Transact*. La cadena debe ser una constante Unicode o una variable Unicode. Cada definición de parámetro se compone de un nombre de parámetro y un tipo de datos. n es un marcador de posición que indica definiciones de parámetros adicionales. Si la instrucción Transact-SQL o el lote en la instrucción no contiene parámetros, @params no es necesario. El valor predeterminado de este parámetro es NULL.  
   
@@ -71,7 +72,7 @@ sp_describe_undeclared_parameters
 |**Nombre**|**sysname NOT NULL**|Contiene el nombre del parámetro.|  
 |**suggested_system_type_id**|**int NOT NULL**|Contiene el **system_type_id** del tipo de datos del parámetro como se especifica en sys.types.<br /><br /> Para los tipos CLR, aunque la **system_type_name** columna devolverá NULL, esta columna devolverá el valor 240.|  
 |**suggested_system_type_name**|**nvarchar (256) NULL**|Contiene el nombre del tipo de datos. Incluye los argumentos (como length, precision y scale) especificados para el tipo de datos del parámetro. Si el tipo de datos es un tipo de alias definido por el usuario, el tipo de sistema subyacente se especifica aquí. Si es un tipo de datos definido por el usuario de CLR, NULL se devuelve en esta columna. Si no se puede deducir el tipo del parámetro, se devuelve NULL.|  
-|**suggested_max_length**|**smallint no NULL**|Vea sys.columns. para **max_length** descripción de la columna.|  
+|**suggested_max_length**|**Smallint no NULL**|Vea sys.columns. para **max_length** descripción de la columna.|  
 |**suggested_precision**|**tinyint no NULL**|Vea sys.columns. para obtener la descripción de la columna de precisión.|  
 |**suggested_scale**|**tinyint no NULL**|Vea sys.columns. para obtener la descripción de la columna de escala.|  
 |**suggested_user_type_id**|**int NULL**|Para los tipos de alias y CLR, contiene el user_type_id del tipo de datos de la columna tal y como se especifica en sys.types. De lo contrario, es NULL.|  
@@ -203,7 +204,7 @@ SELECT * FROM t1 WHERE @p1 = dbo.tbl(c1, @p2, @p3)
   
     -   **varchar(8000)**, **varchar (max)**, **nvarchar (4000)**, y **nvarchar (max)** : otros tipos de datos de cadena (como **texto**, **char (8000)**, **nvarchar (30)**, etc.) no se consideran.  
   
-    -   **varbinary (8000)** y **varbinary (max)** -no se consideran otros tipos de datos binarios (como **imagen**, **binary(8000)**,  **varbinary(30)**, etcetera.).  
+    -   **varbinary (8000)** y **varbinary (max)** -no se consideran otros tipos de datos binarios (como **imagen**, **binary(8000)**, **varbinary (30)** , etcetera.).  
   
     -   **fecha**, **Time (7)**, **smalldatetime**, **datetime**, **datetime2(7)**, **datetimeoffset(7)**  - Otra fecha y hora como tipos, **time(4)**, no se consideran.  
   
@@ -234,7 +235,7 @@ SELECT * FROM t1 WHERE @p1 = dbo.tbl(c1, @p2, @p3)
     SELECT * FROM t WHERE Col_Int = Col_smallint + @p  
     ```  
   
-     En este caso, **int** y **smallint** generan una conversión. Otros tipos de datos generan más de una conversión. Dado que **int** tiene prioridad sobre **smallint**, **int** se utiliza para @p. Para obtener más información acerca de la precedencia de tipo de datos, vea [prioridad de tipo de datos &#40; Transact-SQL &#41; ](../../t-sql/data-types/data-type-precedence-transact-sql.md).  
+     En este caso, **int** y **smallint** generan una conversión. Otros tipos de datos generan más de una conversión. Dado que **int** tiene prioridad sobre **smallint**, **int** se utiliza para @p. Para obtener más información acerca de la precedencia de tipo de datos, vea [precedencia del tipo de datos &#40;Transact-SQL&#41;](../../t-sql/data-types/data-type-precedence-transact-sql.md).  
   
      Esta regla solo se aplica si hay una conversión implícita entre cada tipo de datos que coincide según la regla 1 y el tipo de datos con la precedencia máxima. Si no hay ninguna conversión implícita, la deducción del tipo de datos no se puede realizar y genera un error. Por ejemplo, en la consulta `SELECT @p FROM t`, se produce un error de deducción de tipo de datos porque cualquier tipo de datos para @p sería igualmente buena. Por ejemplo, no hay ninguna conversión implícita de **int** a **xml**.  
   
@@ -280,8 +281,8 @@ WHERE object_id = @id OR NAME = @name',
 ```  
   
 ## <a name="see-also"></a>Vea también  
- [sp_describe_first_result_set &#40; Transact-SQL &#41;](../../relational-databases/system-stored-procedures/sp-describe-first-result-set-transact-sql.md)   
- [Sys.dm_exec_describe_first_result_set &#40; Transact-SQL &#41;](../../relational-databases/system-dynamic-management-views/sys-dm-exec-describe-first-result-set-transact-sql.md)   
- [Sys.dm_exec_describe_first_result_set_for_object &#40; Transact-SQL &#41;](../../relational-databases/system-dynamic-management-views/sys-dm-exec-describe-first-result-set-for-object-transact-sql.md)  
+ [sp_describe_first_result_set &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-describe-first-result-set-transact-sql.md)   
+ [sys.dm_exec_describe_first_result_set &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-exec-describe-first-result-set-transact-sql.md)   
+ [sys.dm_exec_describe_first_result_set_for_object &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-exec-describe-first-result-set-for-object-transact-sql.md)  
   
   

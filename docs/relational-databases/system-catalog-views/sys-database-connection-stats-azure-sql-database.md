@@ -1,16 +1,16 @@
 ---
 title: Sys.database_connection_stats (base de datos de SQL Azure) | Documentos de Microsoft
-ms.custom: 
+ms.custom: ''
 ms.date: 03/25/2016
-ms.prod: 
+ms.prod: ''
 ms.prod_service: sql-database
-ms.reviewer: 
+ms.reviewer: ''
 ms.service: sql-database
 ms.component: system-catalog-views
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - sys.database_connection_stats
@@ -23,21 +23,22 @@ helpviewer_keywords:
 - sys.database_connection_stats
 - database_connection_stats
 ms.assetid: 5c8cece0-63b0-4dee-8db7-6b43d94027ec
-caps.latest.revision: 
+caps.latest.revision: 13
 author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 16a713efdc16c13ce50f1f7b2465df55568df194
-ms.sourcegitcommit: 45e4efb7aa828578fe9eb7743a1a3526da719555
+monikerRange: = azure-sqldw-latest || = sqlallproducts-allversions
+ms.openlocfilehash: 0ab4255a4c13199a445335eef491ca0986ab3287
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="sysdatabaseconnectionstats-azure-sql-database"></a>sys.database_connection_stats (Azure SQL Database)
 [!INCLUDE[tsql-appliesto-xxxxxx-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-xxxxxx-asdb-xxxx-xxx-md.md)]
 
-  Contiene las estadísticas de [!INCLUDE[ssSDS](../../includes/sssds-md.md)] base de datos **conectividad** eventos, que proporcionan una visión general de aciertos de la conexión de base de datos y con errores. Para obtener más información acerca de los eventos de conectividad, vea tipos de eventos en [sys.event_log &#40; Base de datos SQL Azure &#41; ](../../relational-databases/system-catalog-views/sys-event-log-azure-sql-database.md).  
+  Contiene las estadísticas de [!INCLUDE[ssSDS](../../includes/sssds-md.md)] base de datos **conectividad** eventos, que proporcionan una visión general de aciertos de la conexión de base de datos y con errores. Para obtener más información acerca de los eventos de conectividad, vea tipos de eventos en [sys.event_log &#40;base de datos de SQL Azure&#41;](../../relational-databases/system-catalog-views/sys-event-log-azure-sql-database.md).  
   
 |Estadística|Tipo|Description|  
 |---------------|----------|-----------------|  
@@ -62,7 +63,7 @@ ms.lasthandoff: 11/21/2017
 |`Database1`|`2012-02-05 11:00:00`|`2012-02-05 11:05:00`|`0`|`7`|`7`|`0`|`0`|  
   
 ### <a name="interval-starttime-and-endtime"></a>Start_time y end_time de intervalo  
- Un evento se incluye en un intervalo de agregación cuando se produce el evento *en* o *después***start_time** y *antes de*  **end_time** para ese intervalo. Por ejemplo, un evento que ocurra exactamente el `2012-10-30 19:25:00.0000000` solo se incluiría en el segundo intervalo que se muestra a continuación:  
+ Un evento se incluye en un intervalo de agregación cuando se produce el evento *en* o *después *** start_time** y *antes *** end_time** para ese intervalo. Por ejemplo, un evento que ocurra exactamente el `2012-10-30 19:25:00.0000000` solo se incluiría en el segundo intervalo que se muestra a continuación:  
   
 ```  
   
@@ -80,7 +81,7 @@ start_time                    end_time
 ### <a name="errors-not-included"></a>Errores no incluidos  
  Esta vista puede no incluir toda la información de conexión y de error:  
   
--   Esta vista no incluye todos los [!INCLUDE[ssSDS](../../includes/sssds-md.md)] errores que pueden producirse, solo los especificados en tipos de evento en la base de datos [sys.event_log &#40; Base de datos SQL Azure &#41; ](../../relational-databases/system-catalog-views/sys-event-log-azure-sql-database.md).  
+-   Esta vista no incluye todos los [!INCLUDE[ssSDS](../../includes/sssds-md.md)] errores que pueden producirse, solo los especificados en tipos de evento en la base de datos [sys.event_log &#40;base de datos de SQL Azure&#41;](../../relational-databases/system-catalog-views/sys-event-log-azure-sql-database.md).  
   
 -   Si se produce un fallo en el equipo del centro de datos de [!INCLUDE[ssSDS](../../includes/sssds-md.md)], es posible que se pierda una pequeña cantidad de datos del servidor lógico de la tabla de eventos.  
   

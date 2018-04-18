@@ -1,15 +1,16 @@
 ---
 title: Tipos de datos de Microsoft Access | Documentos de Microsoft
-ms.custom: 
+ms.custom: ''
 ms.date: 01/19/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: drivers
-ms.service: 
+ms.service: ''
 ms.component: odbc
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: drivers
-ms.tgt_pltfrm: 
+ms.technology:
+- drivers
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - ODBC desktop database drivers [ODBC], Access driver
@@ -19,16 +20,16 @@ helpviewer_keywords:
 - access data types [ODBC]
 - data types [ODBC], Access driver
 ms.assetid: b537348a-bea0-4bd6-84a4-52a75292957f
-caps.latest.revision: "6"
+caps.latest.revision: 6
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Active
-ms.openlocfilehash: bee1801eb581272762b2f80d25eeb64d0220a256
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: 8faac619846998c1be7bc0577761b94bf6dc27ba
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="microsoft-access-data-types"></a>Tipos de datos de Microsoft Access
 La tabla siguiente muestran los tipos de datos de Microsoft Access, tipos de datos utilizados para crear tablas y tipos de datos SQL de ODBC.  
@@ -71,7 +72,7 @@ ARBINARY|VARBINARY|SQL_VARBINARY|
 |BINARY, VARBINARY y VARCHAR|Creación de una columna BINARY, VARBINARY o VARCHAR de cero o sin especificar longitud realmente devuelve una columna 510 bytes.|  
 |BYTE|Aunque un campo de número de acceso de Microsoft con un tamaño en bytes del campo es sin signo, un número negativo se puede insertar en el campo cuando se utiliza el controlador de Microsoft Access.|  
 |VARCHAR, CHAR y LONGVARCHAR|Un literal de cadena de caracteres puede contener cualquier carácter ANSI (1-255 decimal). Utilice dos consecutivos comillas (") para representar una comilla simple (').<br /><br /> Los procedimientos se deben utilizar para pasar datos de caracteres cuando se utiliza ningún carácter especial en una columna de tipo de datos de caracteres.|  
-|DATE|Los valores de fecha deben ser delimitados según el formato de fecha canónica de ODBC o delimitados por el delimitador de fecha y hora ("#"). En caso contrario, Microsoft Access tratará el valor como una expresión aritmética y no generará una advertencia o error.<br /><br /> Por ejemplo, la fecha de "5 de marzo de 1996" se deben representar como {d. ' 1996-03-05'} o #03/05/&#1996; en caso contrario, si sólo se envía 03/05/1993, Microsoft Access evaluará esta como 3 dividido entre 5 dividido por 1996. Este valor se redondea al entero 0 y, puesto que el día cero se asigna a 1899-12-31, se trata de la fecha utilizada.<br /><br /> Un carácter de canalización (&#124;) no se puede usar en un valor de fecha, incluso si en la parte posterior entre comillas.|  
+|DATE|Los valores de fecha deben ser delimitados según el formato de fecha canónica de ODBC o delimitados por el delimitador de fecha y hora ("#"). En caso contrario, Microsoft Access tratará el valor como una expresión aritmética y no generará una advertencia o error.<br /><br /> Por ejemplo, la fecha de "5 de marzo de 1996" se deben representar como {d. ' 1996-03-05'} o #03/05/1996 #; en caso contrario, si sólo se envía 03/05/1993, Microsoft Access evaluará esta como 3 dividido entre 5 dividido por 1996. Este valor se redondea al entero 0 y, puesto que el día cero se asigna a 1899-12-31, se trata de la fecha utilizada.<br /><br /> Un carácter de barra vertical (&#124;) no se puede usar en un valor de fecha, incluso si en la parte posterior entre comillas.|  
 |GUID|Tipo de datos limitado a 4.0 de Microsoft Access.|  
 |NUMERIC|Tipo de datos limitado a 4.0 de Microsoft Access.|  
   

@@ -24,13 +24,13 @@ ms.assetid: 39ca3d2e-e928-4333-872b-75c4ccde8e79
 caps.latest.revision: 23
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 8fc773e1770b907b6eba5e4d09372f0654054d47
-ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.openlocfilehash: ac5a80100f76b63286d0744503427f9f58bc0750
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/05/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="xquery-operators-against-the-xml-data-type"></a>Operadores XQuery con el tipo de datos XML
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
@@ -43,14 +43,14 @@ ms.lasthandoff: 12/05/2017
   
 -   Operadores de comparación general (=,! =, \<, >, \<=, > =)  
   
- Para obtener más información acerca de estos operadores, vea [expresiones de comparación &#40; XQuery &#41;](../xquery/comparison-expressions-xquery.md)  
+ Para obtener más información acerca de estos operadores, vea [expresiones de comparación &#40;XQuery&#41;](../xquery/comparison-expressions-xquery.md)  
   
 ## <a name="examples"></a>Ejemplos  
   
 ### <a name="a-using-general-operators"></a>A. Utilizar operadores generales  
  Esta consulta ilustra el uso de operadores generales que se aplican a secuencias y también para comparar secuencias. La consulta recupera una secuencia de números de teléfono para cada cliente de la **AdditionalContactInfo** columna de la **póngase en contacto con** tabla. Después, esta secuencia se compara con la secuencia de dos números de teléfono ("111-111-1111", "222-2222").  
   
- La consulta utiliza la  **=**  operador de comparación. Cada nodo de la secuencia en el lado derecho de la  **=**  operador se compara con cada nodo en la secuencia en el lado izquierdo. Si los nodos coinciden, la comparación de nodo es **TRUE**. Después, el valor se convierte a int y se compara con 1, y la consulta devuelve el Id. de cliente.  
+ La consulta utiliza la **=** operador de comparación. Cada nodo de la secuencia en el lado derecho de la **=** operador se compara con cada nodo en la secuencia en el lado izquierdo. Si los nodos coinciden, la comparación de nodo es **TRUE**. Después, el valor se convierte a int y se compara con 1, y la consulta devuelve el Id. de cliente.  
   
 ```  
 WITH XMLNAMESPACES (  
@@ -100,7 +100,7 @@ FROM Production.ProductModel
 where ProductModelID=19  
 ```  
   
- Dado que tanto los operandos para el **eq** operador son valores atómicos, el operador de valor se utiliza en la consulta. Puede escribir la misma consulta mediante el operador de comparación general (  **=**  ).  
+ Dado que tanto los operandos para el **eq** operador son valores atómicos, el operador de valor se utiliza en la consulta. Puede escribir la misma consulta mediante el operador de comparación general ( **=** ).  
   
 ## <a name="see-also"></a>Vea también  
  [Funciones de XQuery con el tipo de datos xml](../xquery/xquery-functions-against-the-xml-data-type.md)   

@@ -1,35 +1,36 @@
 ---
-title: "Enviar datos como un parámetro con valores de tabla con todos los valores en la memoria (ODBC) | Documentos de Microsoft"
-ms.custom: 
+title: Enviar datos como un parámetro con valores de tabla con todos los valores en la memoria (ODBC) | Documentos de Microsoft
+ms.custom: ''
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
-ms.service: 
+ms.service: ''
 ms.component: native-client-odbc-table-valued-parameters
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: 
-ms.tgt_pltfrm: 
+ms.technology: ''
+ms.tgt_pltfrm: ''
 ms.topic: reference
 helpviewer_keywords:
 - table-valued parameters (ODBC), sending data to a stored procedure with all values in memory
 ms.assetid: 8b96282f-00d5-4e28-8111-0a87ae6d7781
-caps.latest.revision: 
+caps.latest.revision: 16
 author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: b78fe6215d4d612b787cdd53316c66e30478fc34
-ms.sourcegitcommit: a0aa5e611a0e6ebb74ac1e2f613e8916dc7a7617
+monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
+ms.openlocfilehash: 9ba83ff39d4d5012655c31502fd99139b5a23aad
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/24/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="sending-data-as-a-table-valued-parameter-with-all-values-in-memory-odbc"></a>Enviar datos como un parámetro con valores de tabla con todos los valores en memoria (ODBC)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
 [!INCLUDE[SNAC_Deprecated](../../includes/snac-deprecated.md)]
 
-  En este tema se describe cómo enviar datos a un procedimiento almacenado como un parámetro con valores de tabla cuando todos los valores están en memoria. Para obtener otro ejemplo que muestra parámetros con valores de tabla, vea [usar parámetros &#40; ODBC &#41;](../../relational-databases/native-client-odbc-how-to/use-table-valued-parameters-odbc.md).  
+  En este tema se describe cómo enviar datos a un procedimiento almacenado como un parámetro con valores de tabla cuando todos los valores están en memoria. Para obtener otro ejemplo que muestra parámetros con valores de tabla, vea [usar parámetros &#40;ODBC&#41;](../../relational-databases/native-client-odbc-how-to/use-table-valued-parameters-odbc.md).  
   
 ## <a name="prerequisite"></a>Requisito previo  
  En este procedimiento se supone que se ha ejecutado el siguiente [!INCLUDE[tsql](../../includes/tsql-md.md)] en el servidor:  

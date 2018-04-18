@@ -1,26 +1,19 @@
 ---
-title: Crear un grupo de recursos para el aprendizaje automático | Documentos de Microsoft
-ms.custom: ''
-ms.date: 11/13/2017
-ms.reviewer: ''
-ms.suite: sql
-ms.prod: machine-learning-services
-ms.prod_service: machine-learning-services
-ms.component: r
-ms.technology: ''
-ms.tgt_pltfrm: ''
-ms.topic: article
-ms.author: heidist
+title: Crear un grupo de recursos para el aprendizaje automático de SQL Server | Documentos de Microsoft
+ms.prod: sql
+ms.technology: machine-learning
+ms.date: 04/15/2018
+ms.topic: conceptual
 author: HeidiSteen
+ms.author: heidist
 manager: cgronlun
-ms.workload: Inactive
-ms.openlocfilehash: afbcccda85e4d8e575306e5c17faeb8316b9b84c
-ms.sourcegitcommit: 059fc64ba858ea2adaad2db39f306a8bff9649c2
+ms.openlocfilehash: af01eb3308b08c4ef7cfc78e5ee615f8dd984713
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/04/2018
+ms.lasthandoff: 04/16/2018
 ---
-# <a name="create-a-resource-pool-for-machine-learning"></a>Crear un grupo de recursos para el aprendizaje automático
+# <a name="create-a-resource-pool-for-machine-learning-in-sql-server"></a>Crear un grupo de recursos para el aprendizaje automático de SQL Server
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
 
 Este artículo describe cómo puede crear un grupo de recursos específicamente para administrar cargas de trabajo de aprendizaje de máquina en SQL Server. Se supone que ya ha instalado y habilitado el características, de aprendizaje automático y volver a configurar la instancia para admitir la administración específica más de los recursos utilizados por un proceso externo, como R o Python.

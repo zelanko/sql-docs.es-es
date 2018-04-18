@@ -1,8 +1,8 @@
 ---
-title: sp_helpmergearticleconflicts (Transact-SQL) | Microsoft Docs
+title: sp_helpmergearticleconflicts (Transact-SQL) | Documentos de Microsoft
 ms.custom: ''
 ms.date: 03/04/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine
 ms.service: ''
 ms.component: system-stored-procedures
@@ -25,11 +25,11 @@ author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: b7a1d10d6d2ba731ceaaaba51b8f786b262a2e28
-ms.sourcegitcommit: d6b1695c8cbc70279b7d85ec4dfb66a4271cdb10
+ms.openlocfilehash: c1e1ff0c3a7706067a1686947a52db08d950c5e7
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/10/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="sphelpmergearticleconflicts-transact-sql"></a>sp_helpmergearticleconflicts (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -51,7 +51,7 @@ sp_helpmergearticleconflicts [ [ @publication = ] 'publication' ]
  [  **@publication=**] **'***publicación***'**  
  Es el nombre de la publicación de combinación. *publicación* es **sysname**, su valor predeterminado es **%**, que devuelve todos los artículos de la base de datos que tienen conflictos.  
   
- [ **@publisher=**] **'***publisher***'**  
+ [  **@publisher=**] **'***publisher***'**  
  Es el nombre del publicador. *publisher* es **sysname**, su valor predeterminado es null.  
   
  [ **@publisher_db=**] **'***publisher_db***'**  

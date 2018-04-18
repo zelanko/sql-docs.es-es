@@ -1,16 +1,16 @@
 ---
 title: srv_paramdata (API de procedimiento almacenado extendido) | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine
-ms.service: 
+ms.service: ''
 ms.component: extended-stored-procedures
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: reference
 apiname:
 - srv_paramdata
@@ -22,22 +22,22 @@ dev_langs:
 helpviewer_keywords:
 - srv_paramdata
 ms.assetid: 3104514d-b404-47c9-b6d7-928106384874
-caps.latest.revision: 
+caps.latest.revision: 30
 author: rothja
 ms.author: jroth
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: e5837ecf48a6e97f5408d86f20b39e057285d64b
-ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
-ms.translationtype: MT
+ms.openlocfilehash: 7ac122c9cb4403ee90c20961b1b4d8fad624bf80
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
+ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/09/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="srvparamdata-extended-stored-procedure-api"></a>srv_paramdata (API de procedimiento almacenado extendido)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
     
 > [!IMPORTANT]  
->  [!INCLUDE[ssNoteDepFutureDontUse](../../includes/ssnotedepfuturedontuse-md.md)] En su lugar, use la integración de CLR.  
+>  [!INCLUDE[ssNoteDepFutureDontUse](../../includes/ssnotedepfuturedontuse-md.md)] Use la integración con CLR en su lugar.  
   
  Devuelve el valor de un parámetro de llamada a un procedimiento almacenado remoto. La función **srv_paraminfo** ha reemplazado a esta.  
   
@@ -62,7 +62,7 @@ n
  Es el número del parámetro. El primer parámetro es número 1.  
   
 ## <a name="returns"></a>Devuelve  
- Un puntero al valor del parámetro. Si el parámetro *n*ésimo es NULL, no hay ningún parámetro *n*ésimo o no hay ningún procedimiento almacenado remoto, devuelve NULL. Si el valor del parámetro es una cadena, no podría terminar en NULL. Use **srv_paramlen** para determinar la longitud de la cadena.  
+ Un puntero al valor del parámetro. Si el *n*parámetro es NULL, no hay ningún *n*parámetro, o no hay ningún procedimiento almacenado, devuelve NULL. Si el valor del parámetro es una cadena, no podría terminar en NULL. Use **srv_paramlen** para determinar la longitud de la cadena.  
   
  Esta función devuelve los valores siguientes, si el parámetro es uno de los tipos de datos de [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Los datos de puntero incluyen si el puntero para el tipo de datos es válido (VP), NULL o no aplicable (N/A) y el contenido al que señalan los datos.  
   
@@ -79,7 +79,7 @@ n
   
  \*   los datos no terminan en NULL; no se produce ninguna advertencia de truncamiento en los datos >255 caracteres.  
   
-## <a name="remarks"></a>Notas  
+## <a name="remarks"></a>Comentarios  
  Si conoce el nombre de parámetro, puede usar **srv_paramnumber** para obtener el número de parámetro. Para determinar si un parámetro es NULL, use **srv_paramlen**.  
   
  Cuando se usan parámetros en una llamada a un procedimiento almacenado remoto, estos pueden pasarse por nombre o por posición (sin nombre). Se produce un error si la llamada al procedimiento almacenado remoto se realiza con algunos parámetros pasados por nombre y otros pasados por posición. Si se produce un error, se sigue llamando al controlador SRV_RPC, pero aparece como si no hubiera ningún parámetro y **srv_rpcparams** devuelve 0.  
@@ -87,7 +87,7 @@ n
 > [!IMPORTANT]  
 >  Debe revisar minuciosamente el código fuente de los procedimientos almacenados extendidos y debe probar las DLL compiladas antes de instalarlas en el servidor de producción. Para obtener información acerca de la revisión y pruebas de seguridad, vea este [sitio web de Microsoft](http://go.microsoft.com/fwlink/?LinkID=54761&amp;clcid=0x409http://msdn.microsoft.com/security/).  
   
-## <a name="see-also"></a>Ver también  
+## <a name="see-also"></a>Vea también  
  [srv_rpcparams &#40;API de procedimiento almacenado extendido&#41;](../../relational-databases/extended-stored-procedures-reference/srv-rpcparams-extended-stored-procedure-api.md)  
   
   

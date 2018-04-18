@@ -1,16 +1,16 @@
 ---
 title: MSmerge_partition_groups (Transact-SQL) | Documentos de Microsoft
-ms.custom: 
+ms.custom: ''
 ms.date: 03/06/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine
-ms.service: 
+ms.service: ''
 ms.component: system-tables
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - replication
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 applies_to:
 - SQL Server
@@ -22,16 +22,16 @@ dev_langs:
 helpviewer_keywords:
 - MSmerge_partition_groups system table
 ms.assetid: 5d56d780-ee40-4afc-9c2a-d1723d86e430
-caps.latest.revision: 
+caps.latest.revision: 13
 author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: fe1c16abfef4293a6d9013b3ef3eea8782a5a0d5
-ms.sourcegitcommit: 45e4efb7aa828578fe9eb7743a1a3526da719555
+ms.openlocfilehash: 199a9fb01b5cdbe9ce50f46f2e508bf2c94afbec
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="msmergepartitiongroups-transact-sql"></a>MSmerge_partition_groups (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -43,11 +43,11 @@ ms.lasthandoff: 11/21/2017
 |**partition_id**|**int**|Columna de identidad que proporciona un número de Id. único para la partición precalculada.|  
 |**publication_number**|**smallint**|El número de publicación, que se almacena en **sysmergepublications**.|  
 |**maxgen_whenadded**|**bigint**|Generación más alta que se conoce en el publicador en el momento de insertar la fila en esta tabla.|  
-|**using_partition_groups**|**bit**|Indica si la partición pertenece a una publicación que utiliza particiones precalculadas, y puede tener uno de estos valores:<br /><br /> **0** = publicación no utiliza particiones precalculadas.<br /><br /> **1** = la publicación utiliza particiones precalculadas.<br /><br /> Para obtener más información, vea [Optimización del rendimiento de los filtros con parámetros con particiones calculadas previamente](../../relational-databases/replication/merge/parameterized-filters-optimize-for-precomputed-partitions.md).|  
-|**HOST_NAME_FN**|**nvarchar (128)**|Valor que se suministra al utilizar filtros de fila con parámetros para generar particiones. Para más información, consulte [Parameterized Row Filters](../../relational-databases/replication/merge/parameterized-filters-parameterized-row-filters.md).|  
+|**using_partition_groups**|**bit**|Indica si la partición pertenece a una publicación que utiliza particiones precalculadas, y puede tener uno de estos valores:<br /><br /> **0** = publicación no utiliza particiones precalculadas.<br /><br /> **1** = la publicación utiliza particiones precalculadas.<br /><br /> Para obtener más información, vea [Optimizar el rendimiento de los filtros con parámetros con particiones calculadas previamente](../../relational-databases/replication/merge/parameterized-filters-optimize-for-precomputed-partitions.md).|  
+|**HOST_NAME_FN**|**nvarchar(128)**|Valor que se suministra al utilizar filtros de fila con parámetros para generar particiones. Para obtener más información, consulte [Parameterized Row Filters](../../relational-databases/replication/merge/parameterized-filters-parameterized-row-filters.md).|  
   
 ## <a name="see-also"></a>Vea también  
- [Tablas de replicación &#40; Transact-SQL &#41;](../../relational-databases/system-tables/replication-tables-transact-sql.md)   
+ [Tablas de replicación &#40;Transact-SQL&#41;](../../relational-databases/system-tables/replication-tables-transact-sql.md)   
  [Vistas de replicación &#40;Transact-SQL&#41;](../../relational-databases/system-views/replication-views-transact-sql.md)  
   
   

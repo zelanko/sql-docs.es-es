@@ -1,16 +1,16 @@
 ---
 title: sp_addlinkedserver (Transact-SQL) | Documentos de Microsoft
-ms.custom: 
+ms.custom: ''
 ms.date: 09/12/2016
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine
-ms.service: 
+ms.service: ''
 ms.component: system-stored-procedures
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - sp_addlinkedserver_TSQL
@@ -20,16 +20,16 @@ dev_langs:
 helpviewer_keywords:
 - sp_addlinkedserver
 ms.assetid: fed3adb0-4c15-4a1a-8acd-1b184aff558f
-caps.latest.revision: 
+caps.latest.revision: 70
 author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: Active
-ms.openlocfilehash: 35173890392c69d6ef6fe40c71b484ae9db3bee3
-ms.sourcegitcommit: 45e4efb7aa828578fe9eb7743a1a3526da719555
+ms.openlocfilehash: 52b40d4e2c995d00c357295fc1787fce579eed04
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="spaddlinkedserver-transact-sql"></a>sp_addlinkedserver (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -72,7 +72,7 @@ sp_addlinkedserver [ @server= ] 'server' [ , [ @srvproduct= ] 'product_name' ]
  Cuando se crea el servidor vinculado para el [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] proveedor OLE DB de Native Client, la instancia puede especificarse mediante la palabra clave SERVER como servidor =*servername*\\*nombreDeInstancia*para especificar una instancia específica de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. *ServerName* es el nombre del equipo en el que [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] se está ejecutando, y *nombreDeInstancia* es el nombre de la instancia específica de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] para que se conectará el usuario.  
   
 > [!NOTE]  
->  Para tener acceso a una base de datos reflejada, una cadena de conexión debe contener el nombre de la base de datos. Este nombre es necesario para que el proveedor de acceso a datos pueda intentar la conmutación por error. La base de datos se puede especificar en el  **@provstr**  o  **@catalog**  parámetro. Opcionalmente, la cadena de conexión también puede proporcionar un nombre de asociado de conmutación por error.  
+>  Para tener acceso a una base de datos reflejada, una cadena de conexión debe contener el nombre de la base de datos. Este nombre es necesario para que el proveedor de acceso a datos pueda intentar la conmutación por error. La base de datos se puede especificar en el **@provstr** o **@catalog** parámetro. Opcionalmente, la cadena de conexión también puede proporcionar un nombre de asociado de conmutación por error.  
   
  [  **@catalog=** ] **'***catálogo***'**  
  Es el catálogo que se utilizará cuando se realiza una conexión al proveedor OLE DB. *catálogo* es **sysname**, su valor predeterminado es null. *catálogo* se pasa como la propiedad DBPROP_INIT_CATALOG para inicializar el proveedor OLE DB. Cuando se define el servidor vinculado en una instancia de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], catalog se refiere a la base de datos predeterminada a la que se asigna el servidor vinculado.  
@@ -88,9 +88,9 @@ sp_addlinkedserver [ @server= ] 'server' [ , [ @srvproduct= ] 'product_name' ]
   
 |Origen de datos remotos de OLE DB|Proveedor OLE DB|product_name|provider_name|data_source|ubicación|provider_string|catálogo|  
 |-------------------------------|---------------------|-------------------|--------------------|------------------|--------------|----------------------|-------------|  
-|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]|[!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Proveedor native Client OLE DB|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]<sup>1</sup> (valor predeterminado)||||||  
-|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]|[!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Proveedor native Client OLE DB||**SQLNCLI**|Nombre de red de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (para la instancia predeterminada)|||Nombre de la base de datos (opcional)|  
-|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]|[!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Proveedor native Client OLE DB||**SQLNCLI**|*ServerName*\\*nombreDeInstancia* (para la instancia específica)|||Nombre de la base de datos (opcional)|  
+|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]|[!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Proveedor OLE DB de Native Client|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] <sup>1</sup> (valor predeterminado)||||||  
+|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]|[!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Proveedor OLE DB de Native Client||**SQLNCLI**|Nombre de red de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (para la instancia predeterminada)|||Nombre de la base de datos (opcional)|  
+|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]|[!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Proveedor OLE DB de Native Client||**SQLNCLI**|*ServerName*\\*nombreDeInstancia* (para la instancia específica)|||Nombre de la base de datos (opcional)|  
 |Oracle, versión 8 y posterior|Proveedor Oracle para OLE DB|Cualquiera|**OraOLEDB.Oracle**|Alias para base de datos Oracle||||  
 |Access/Jet|Proveedor Microsoft OLE DB para Jet|Cualquiera|**Microsoft.Jet.OLEDB.4.0**|Ruta de acceso completa del archivo de base de datos Jet||||  
 |Origen de datos ODBC|Proveedor Microsoft OLE DB para ODBC|Cualquiera|**MSDASQL**|DSN del sistema del origen de datos ODBC||||  
@@ -311,13 +311,13 @@ select * from myLinkedServer.myDatabase.dbo.myTable
 ```  
   
 ## <a name="see-also"></a>Vea también  
- [Las consultas distribuidas almacenan procedimientos &#40; Transact-SQL &#41;](../../relational-databases/system-stored-procedures/distributed-queries-stored-procedures-transact-sql.md)   
- [sp_addlinkedsrvlogin &#40; Transact-SQL &#41;](../../relational-databases/system-stored-procedures/sp-addlinkedsrvlogin-transact-sql.md)   
- [sp_addserver &#40; Transact-SQL &#41;](../../relational-databases/system-stored-procedures/sp-addserver-transact-sql.md)   
- [sp_dropserver &#40; Transact-SQL &#41;](../../relational-databases/system-stored-procedures/sp-dropserver-transact-sql.md)   
- [sp_serveroption &#40; Transact-SQL &#41;](../../relational-databases/system-stored-procedures/sp-serveroption-transact-sql.md)   
- [sp_setnetname &#40; Transact-SQL &#41;](../../relational-databases/system-stored-procedures/sp-setnetname-transact-sql.md)   
+ [Distribuye los procedimientos almacenados de consultas &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/distributed-queries-stored-procedures-transact-sql.md)   
+ [sp_addlinkedsrvlogin &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-addlinkedsrvlogin-transact-sql.md)   
+ [sp_addserver &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-addserver-transact-sql.md)   
+ [sp_dropserver &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-dropserver-transact-sql.md)   
+ [sp_serveroption &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-serveroption-transact-sql.md)   
+ [sp_setnetname &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-setnetname-transact-sql.md)   
  [Procedimientos almacenados del sistema &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)   
- [Tablas del sistema &#40; Transact-SQL &#41;](../../relational-databases/system-tables/system-tables-transact-sql.md)  
+ [Tablas del sistema &#40;Transact-SQL&#41;](../../relational-databases/system-tables/system-tables-transact-sql.md)  
   
   

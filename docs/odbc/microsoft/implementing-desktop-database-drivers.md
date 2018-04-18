@@ -1,31 +1,32 @@
 ---
-title: "Implementación de controladores de escritorio de la base de datos | Documentos de Microsoft"
-ms.custom: 
+title: Implementación de controladores de escritorio de la base de datos | Documentos de Microsoft
+ms.custom: ''
 ms.date: 01/19/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: drivers
-ms.service: 
+ms.service: ''
 ms.component: odbc
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: drivers
-ms.tgt_pltfrm: 
+ms.technology:
+- drivers
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - Jet-based ODBC drivers [ODBC], implementing
 - ODBC desktop database drivers [ODBC], implementing
 - desktop database drivers [ODBC], implementing
 ms.assetid: a8bf304b-eff1-447c-887c-dabdb5353a2d
-caps.latest.revision: "5"
+caps.latest.revision: 5
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 3994ed86f488748f3edd569ad80979d9871f588f
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: 2698be76ef5be6a4b890a1c2d9f2900ed4412cc8
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="implementing-desktop-database-drivers"></a>Implementación de controladores de escritorio de la base de datos
 Instrucciones y notas técnicas sobre cómo implementar y configurar los controladores de base de datos de escritorio de Microsoft ODBC pueden encontrarse en la Ayuda en pantalla de administrador de orígenes de datos ODBC. Puede tener acceso a este archivo durante rutinas de instalación de controlador de la [Administrador de orígenes de datos de Microsoft ODBC](../../odbc/admin/odbc-data-source-administrator.md).  
@@ -36,7 +37,7 @@ Instrucciones y notas técnicas sobre cómo implementar y configurar los control
   
 -   [Archivos de componentes ODBC](../../odbc/microsoft/odbc-component-files.md)  
   
--   [Requisitos de hardware y de software](../../odbc/microsoft/hardware-and-software-requirements-odbc.md)  
+-   [Requisitos de hardware y software](../../odbc/microsoft/hardware-and-software-requirements-odbc.md)  
   
 -   [Descriptores con controladores de escritorio de la base de datos](../../odbc/microsoft/descriptors-and-desktop-database-drivers.md)  
   

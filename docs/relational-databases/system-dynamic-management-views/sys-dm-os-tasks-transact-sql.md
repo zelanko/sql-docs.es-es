@@ -2,7 +2,7 @@
 title: sys.dm_os_tasks (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/13/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
 ms.service: ''
 ms.component: dmv's
@@ -27,11 +27,12 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: aaa991e936833e2e6af8899b1cc7aebae1eba1c9
-ms.sourcegitcommit: 8b332c12850c283ae413e0b04b2b290ac2edb672
+monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
+ms.openlocfilehash: 9e4aedb19e59f0c8169a951a4fecf6c135e92d4a
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/05/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="sysdmostasks-transact-sql"></a>sys.dm_os_tasks (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -43,7 +44,7 @@ ms.lasthandoff: 04/05/2018
   
 |Nombre de columna|Tipo de datos|Description|  
 |-----------------|---------------|-----------------|  
-|**task_address**|**varbinary(8)**|Dirección de memoria del objeto.|  
+|**task_address**|**varbinary (8)**|Dirección de memoria del objeto.|  
 |**task_state**|**nvarchar(60)**|Estado de la tarea. Puede ser uno de los siguientes:<br /><br /> PENDING: esperando un subproceso de trabajo.<br /><br /> RUNNABLE: se puede ejecutar, pero está esperando a recibir un cuanto.<br /><br /> RUNNING: ejecutándose actualmente en el programador.<br /><br /> SUSPENDED: tiene un trabajador, pero está esperando un evento.<br /><br /> DONE: completado.<br /><br /> SPINLOOP: atrapado en un subproceso.|  
 |**context_switches_count**|**int**|Número de cambios de contexto del programador que esta tarea ha completado.|  
 |**pending_io_count**|**int**|Número de entradas y salidas físicas realizadas por esta tarea.|  
@@ -53,9 +54,9 @@ ms.lasthandoff: 04/05/2018
 |**session_id**|**smallint**|Id. de la sesión que está asociada a la tarea.|  
 |**exec_context_id**|**int**|Id. del contexto de ejecución que está asociado a la tarea.|  
 |**request_id**|**int**|Id. de la solicitud de la tarea. Para obtener más información, consulte [sys.dm_exec_requests &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-exec-requests-transact-sql.md).|  
-|**worker_address**|**varbinary(8)**|Dirección de memoria del trabajador que ejecuta la tarea.<br /><br /> NULL = La tarea espera un trabajador que pueda ejecutarla o la tarea acaba de finalizar la ejecución.<br /><br /> Para obtener más información, consulte [sys.dm_os_workers &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-os-workers-transact-sql.md).|  
-|**host_address**|**varbinary(8)**|Dirección de memoria del host.<br /><br /> 0 = No se ha usado el hospedaje para crear la tarea. Esto ayuda a identificar el host que se ha utilizado para crear esta tarea.<br /><br /> Para obtener más información, consulte [sys.dm_os_hosts &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-os-hosts-transact-sql.md).|  
-|**parent_task_address**|**varbinary(8)**|Dirección de memoria de la tarea que es el elemento primario del objeto.|  
+|**worker_address**|**varbinary (8)**|Dirección de memoria del trabajador que ejecuta la tarea.<br /><br /> NULL = La tarea espera un trabajador que pueda ejecutarla o la tarea acaba de finalizar la ejecución.<br /><br /> Para obtener más información, consulte [sys.dm_os_workers &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-os-workers-transact-sql.md).|  
+|**host_address**|**varbinary (8)**|Dirección de memoria del host.<br /><br /> 0 = No se ha usado el hospedaje para crear la tarea. Esto ayuda a identificar el host que se ha utilizado para crear esta tarea.<br /><br /> Para obtener más información, consulte [sys.dm_os_hosts &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-os-hosts-transact-sql.md).|  
+|**parent_task_address**|**varbinary (8)**|Dirección de memoria de la tarea que es el elemento primario del objeto.|  
 |**pdw_node_id**|**int**|**Se aplica a**: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)], [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]<br /><br /> El identificador para el nodo que se encuentra en esta distribución.|  
   
 ## <a name="permissions"></a>Permissions

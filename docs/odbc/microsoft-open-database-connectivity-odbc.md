@@ -1,27 +1,28 @@
 ---
 title: Microsoft Open Database Connectivity (ODBC) | Documentos de Microsoft
-ms.custom: 
+ms.custom: ''
 ms.date: 01/19/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: drivers
-ms.service: 
+ms.service: ''
 ms.component: odbc
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: drivers
-ms.tgt_pltfrm: 
+ms.technology:
+- drivers
+ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: 278cf36e-9817-4ee3-842e-dbd149f15273
-caps.latest.revision: "20"
+caps.latest.revision: 20
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Active
-ms.openlocfilehash: 17ae2b4d9ceb1518a0c2e455c93c124df6954f3d
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: d9a19189f0f0982cffce894a22e55bd532d9de46
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="microsoft-open-database-connectivity-odbc"></a>Microsoft Open Database Connectivity (ODBC)
 La interfaz de Microsoft Open Database Connectivity (ODBC) es una interfaz de lenguaje de programación de C que hace posible que las aplicaciones tener acceso a datos desde una variedad de sistemas de administración de bases de datos (DBMS). ODBC es una interfaz de bajo nivel y de alto rendimiento que está diseñada específicamente para almacenes de datos relacionales.  

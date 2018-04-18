@@ -1,8 +1,8 @@
 ---
-title: sys.dm_exec_query_stats (Transact-SQL) | Microsoft Docs
+title: Sys.dm_exec_query_stats (Transact-SQL) | Documentos de Microsoft
 ms.custom: ''
 ms.date: 01/04/2018
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine, sql-database
 ms.service: ''
 ms.component: dmv's
@@ -27,11 +27,12 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.workload: Active
-ms.openlocfilehash: a5ad810ae111ce25311510a545f61915891f4e27
-ms.sourcegitcommit: 8b332c12850c283ae413e0b04b2b290ac2edb672
+monikerRange: = azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions
+ms.openlocfilehash: 02fec5c45a9cc4e928a5f2f9074d7e520aefd605
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/05/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="sysdmexecquerystats-transact-sql"></a>sys.dm_exec_query_stats (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -78,8 +79,8 @@ ms.lasthandoff: 04/05/2018
 |**last_elapsed_time**|**bigint**|Tiempo transcurrido, notificado en microsegundos (pero solo con precisión de milisegundos), para la ejecución completada más recientemente de este plan.|  
 |**min_elapsed_time**|**bigint**|Tiempo mínimo transcurrido, notificado en microsegundos (pero solo con precisión de milisegundos), para cualquier ejecución completada de este plan.|  
 |**max_elapsed_time**|**bigint**|Tiempo máximo transcurrido, notificado en microsegundos (pero solo con precisión de milisegundos), para cualquier ejecución completada de este plan.|  
-|**query_hash**|**Binary(8)**|Valor hash binario que se calcula en la consulta y que se usa para identificar consultas con una lógica similar. Puede usar el hash de consulta para determinar el uso de recursos agregados para las consultas que solo se diferencian en los valores literales.|  
-|**query_plan_hash**|**binary(8)**|Valor hash binario que se calcula en el plan de ejecución de consulta y que se usa para identificar planes de ejecución de consulta similares. Puede usar el hash del plan de consulta para buscar el costo acumulativo de las consultas con planes de ejecución similares.<br /><br /> Será siempre 0x000 cuando un procedimiento almacenado nativo consulte una tabla optimizada para memoria.|  
+|**query_hash**|**binary (8)**|Valor hash binario que se calcula en la consulta y que se usa para identificar consultas con una lógica similar. Puede usar el hash de consulta para determinar el uso de recursos agregados para las consultas que solo se diferencian en los valores literales.|  
+|**query_plan_hash**|**binary (8)**|Valor hash binario que se calcula en el plan de ejecución de consulta y que se usa para identificar planes de ejecución de consulta similares. Puede usar el hash del plan de consulta para buscar el costo acumulativo de las consultas con planes de ejecución similares.<br /><br /> Será siempre 0x000 cuando un procedimiento almacenado nativo consulte una tabla optimizada para memoria.|  
 |**total_rows**|**bigint**|Número total de filas devueltas por la consulta. No puede ser null.<br /><br /> Será siempre 0 cuando un procedimiento almacenado nativo consulte una tabla optimizada para memoria.|  
 |**last_rows**|**bigint**|Número de filas devueltas por la última ejecución de la consulta. No puede ser null.<br /><br /> Será siempre 0 cuando un procedimiento almacenado nativo consulte una tabla optimizada para memoria.|  
 |**min_rows**|**bigint**|Número mínimo de filas alguna vez devueltas por la consulta durante una ejecución. No puede ser null.<br /><br /> Será siempre 0 cuando un procedimiento almacenado nativo consulte una tabla optimizada para memoria.|  

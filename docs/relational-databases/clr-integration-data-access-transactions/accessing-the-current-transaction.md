@@ -1,35 +1,35 @@
 ---
-title: "Obtener acceso a la transacción actual | Documentos de Microsoft"
-ms.custom: 
+title: Obtener acceso a la transacción actual | Documentos de Microsoft
+ms.custom: ''
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine
-ms.service: 
+ms.service: ''
 ms.component: clr
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: 
-ms.tgt_pltfrm: 
+ms.technology: ''
+ms.tgt_pltfrm: ''
 ms.topic: reference
 helpviewer_keywords:
 - current transaction access
 - Current property
 - Transaction class
 ms.assetid: 1a4e2ce5-f627-4c81-8960-6a9968cefda2
-caps.latest.revision: 
+caps.latest.revision: 17
 author: rothja
 ms.author: jroth
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: abcc68d96e7516b31a231efeb4c5c851b10dee45
-ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
+ms.openlocfilehash: 139a1f2cf77ef6d38ce6dd90275912af32fa0ff2
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/09/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="accessing-the-current-transaction"></a>Obtener acceso a la transacción actual
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
-Si una transacción está activa en el momento en que código de common language runtime (CLR) con [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] está especificado, la transacción se expone a través de la **System.Transactions.Transaction** clase. La propiedad **Transaction.Current** permite obtener acceso a la transacción actual. En la mayoría de los casos, no es necesario obtener acceso a la transacción de forma explícita. Para las conexiones de bases de datos, ADO.NET comprueba **Transaction.Current** de forma automática cuando se llama al método **Connection.Open** y da de alta la conexión en esa transacción de forma transparente (a menos que la palabra clave **Enlist** esté establecida en False en la cadena de conexión).  
+  Si una transacción está activa en el momento en que código de common language runtime (CLR) con [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] está especificado, la transacción se expone a través de la **System.Transactions.Transaction** clase. La propiedad **Transaction.Current** permite obtener acceso a la transacción actual. En la mayoría de los casos, no es necesario obtener acceso a la transacción de forma explícita. Para las conexiones de bases de datos, ADO.NET comprueba **Transaction.Current** de forma automática cuando se llama al método **Connection.Open** y da de alta la conexión en esa transacción de forma transparente (a menos que la palabra clave **Enlist** esté establecida en False en la cadena de conexión).  
   
  Es posible que desee usar directamente el objeto **Transaction** en los escenarios siguientes:  
   

@@ -1,30 +1,31 @@
 ---
-title: "La gramática mínima de SQL | Documentos de Microsoft"
-ms.custom: 
+title: La gramática mínima de SQL | Documentos de Microsoft
+ms.custom: ''
 ms.date: 01/19/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: drivers
-ms.service: 
+ms.service: ''
 ms.component: odbc
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: drivers
-ms.tgt_pltfrm: 
+ms.technology:
+- drivers
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - minimum SQL syntax supported [ODBC]
 - ODBC drivers [ODBC], minimum SQL syntax supported
 ms.assetid: 4f36d785-104f-4fec-93be-f201203bc7c7
-caps.latest.revision: "6"
+caps.latest.revision: 6
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 130f434bfb0b41829d2c49782454fcf888af1e27
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: 3186090eb2c912f9d0e683210b00674d65f6e6e2
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="sql-minimum-grammar"></a>Gramática mínima de SQL
 Esta sección describe la sintaxis SQL mínima que debe ser compatible con un controlador ODBC. La sintaxis descrita en esta sección es un subconjunto de la sintaxis de nivel de entrada de SQL-92.  
@@ -57,7 +58,7 @@ Esta sección describe la sintaxis SQL mínima que debe ser compatible con un co
   
  *instrucción SELECT* :: =  
   
- Seleccione [todas las &#124; DISTINCT] *lista de selección*  
+ Seleccione [todos los &#124; DISTINCT] *lista de selección*  
   
  DESDE *lista de referencias de tabla*  
   
@@ -67,15 +68,15 @@ Esta sección describe la sintaxis SQL mínima que debe ser compatible con un co
   
  *instrucción* :: = *instrucción create table*  
   
- &#124; *busca en la instrucción de eliminación*  
+ &#124;*busca en la instrucción de eliminación*  
   
- &#124; *declaración de tabla de destino*  
+ &#124;*declaración de tabla de destino*  
   
- &#124; *instrucción insert*  
+ &#124;*instrucción insert*  
   
- &#124; *instrucción select*  
+ &#124;*instrucción select*  
   
- &#124; *búsquedas en la instrucción update*  
+ &#124;*búsquedas en la instrucción update*  
   
  *búsquedas en la instrucción Update*  
   

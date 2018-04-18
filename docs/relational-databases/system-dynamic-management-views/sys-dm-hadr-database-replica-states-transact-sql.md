@@ -1,16 +1,16 @@
 ---
-title: sys.dm_hadr_database_replica_states (Transact-SQL) | Microsoft Docs
-ms.custom: 
+title: Sys.dm_hadr_database_replica_states (Transact-SQL) | Documentos de Microsoft
+ms.custom: ''
 ms.date: 02/11/2018
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine
-ms.service: 
+ms.service: ''
 ms.component: dmv's
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - sys.dm_hadr_database_states_TSQL
@@ -23,16 +23,16 @@ helpviewer_keywords:
 - Availability Groups [SQL Server], monitoring
 - sys.dm_hadr_database_replica_states dynamic management view
 ms.assetid: 1a17b0c9-2535-4f3d-8013-cd0a6d08f773
-caps.latest.revision: 
+caps.latest.revision: 84
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: c69d36319ca4273fad7b1c4890bf27e4e4fa0797
-ms.sourcegitcommit: 37f0b59e648251be673389fa486b0a984ce22c81
+ms.openlocfilehash: d0c1fcebeb62701761134103e16ee8127372858d
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/12/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="sysdmhadrdatabasereplicastates-transact-sql"></a>sys.dm_hadr_database_replica_states (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
@@ -49,7 +49,7 @@ ms.lasthandoff: 02/12/2018
 |**replica_id**|**uniqueidentifier**|Identificador de la réplica de disponibilidad dentro del grupo de disponibilidad.|  
 |**group_database_id**|**uniqueidentifier**|Identificador de la base de datos dentro del grupo de disponibilidad. Este identificador es idéntico en cada réplica al que está unido esta base de datos.|  
 |**is_local**|**bit**|Si la base de datos de disponibilidad es local, uno de los siguientes:<br /><br /> 0 = La base de datos no es local en la instancia de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].<br /><br /> 1 = La base de datos es local en la instancia de servidor.|  
-|**is_primary_replica**|**bit**|Devuelve 1 si la réplica principal o 0 si se trata de una réplica secundaria.<br /><br />**Se aplica a:** [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] a través de [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].|  
+|**is_primary_replica**|**bit**|Devuelve 1 si la réplica principal o 0 si se trata de una réplica secundaria.<br /><br />**Se aplica a**: de [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] a [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].|  
 |**synchronization_state**|**tinyint**|Estado de movimiento de datos, uno de los siguientes valores.<br /><br /> 0 = no se están sincronizando. En una base de datos principal, indica que la base de datos no está lista para sincronizar su registro de transacciones con las bases de datos secundarias correspondientes. En una base de datos secundaria, indica que la base de datos no ha iniciado la sincronización del registro debido a un problema de conexión, se está suspendiendo o está pasando por estados de transición durante el inicio o en una conmutación de roles.<br /><br /> 1 = la sincronización. En una base de datos principal, indica que la base de datos está lista para aceptar una solicitud de examen de una base de datos secundaria. En una base de datos secundaria, indica que se está produciendo un movimiento de datos activo para la base de datos.<br /><br /> 2 = Synchronized. Una base de datos principal muestra SYNCHRONIZED en lugar de SYNCHRONIZING. Una base de datos secundaria de confirmación sincrónica se muestra como sincronizado cuando la memoria caché local indica que la base de datos está lista para la conmutación por error y está en proceso de sincronización.<br /><br /> 3 = revertir. Indica la fase en el proceso de reversión cuando una base de datos secundaria está obteniendo activamente páginas de la base de datos principal.<br />**Precaución:** cuando una base de datos en una réplica secundaria está en estado REVERTING, forzar la conmutación por error a la réplica secundaria deja la base de datos en un estado en el que no se puede iniciar como base de datos principal. O la base de datos tendrá que volverse a conectar como base de datos secundaria, o deberá aplicar las nuevas entradas del registro de una copia de seguridad de registros.<br /><br /> 4 = inicializar. Indica la fase de reversión cuando el registro de transacciones necesario para la puesta al día de una base de datos secundaria respecto al LSN de reversión se envía y se protege en una réplica secundaria.<br />**Precaución:** cuando una base de datos en una réplica secundaria está en estado INITIALIZING, forzar la conmutación por error a la réplica secundaria deja la base de datos en un estado donde se inicia como una base de datos principal. O la base de datos tendrá que volverse a conectar como base de datos secundaria, o deberá aplicar las nuevas entradas del registro de una copia de seguridad de registros.|  
 |**synchronization_state_desc**|**nvarchar(60)**|Descripción del estado de movimiento de datos, uno de los siguientes:<br /><br /> NOT SYNCHRONIZING<br /><br /> SYNCHRONIZING<br /><br /> SYNCHRONIZED<br /><br /> REVERTING<br /><br /> INITIALIZING|  
 |**is_commit_participant**|**bit**|0 = La confirmación de la transacción no está sincronizada con respecto a esta base de datos.<br /><br /> 1 = La confirmación de la transacción está sincronizada con respecto a esta base de datos.<br /><br /> Para una base de datos de una réplica de disponibilidad de confirmación asincrónica, este valor siempre es 0.<br /><br /> Para una base de datos en una replicación de disponibilidad de confirmación sincrónica, este valor es preciso solo en la base de datos principal.|  
@@ -76,10 +76,10 @@ ms.lasthandoff: 02/12/2018
 |**redo_rate**|**bigint**|Velocidad a la que las entradas de registro se rehacen en una base de dato secundaria, en kilobytes (kB)/segundo.|  
 |**filestream_send_rate**|**bigint**|Velocidad a la que los archivos FILESTREAM se envían a la réplica secundaria, en kilobytes (KB)/segundo.|  
 |**end_of_log_lsn**|**numeric(25,0)**|Fin local del LSN de registro. LSN actual correspondiente a la última entrada de registro en la memoria caché del registro en las bases de datos principal y secundaria. En la réplica principal, las filas secundarias reflejan el final del LSN de registro de los mensajes de progreso más recientes que las réplicas secundarias han enviado a la principal.<br /><br /> **end_of_log_lsn** refleja un identificador de bloque de registro rellenado con ceros. No es un número de secuencia de registro real. Para obtener más información, consulte [descripción de los valores de columna LSN](#LSNcolumns), más adelante en este tema.|  
-|**last_commit_lsn**|**Numeric(25,0)**|Número de secuencia de registro real correspondiente al último registro de confirmación del registro de transacciones.<br /><br /> En la base de datos principal, corresponde al último registro de confirmación procesado. Las filas para las bases de datos secundarias muestran el número de secuencia de registro que la réplica secundaria ha enviado a la principal.<br /><br /> En la réplica secundaria, es el último registro de confirmación que se rehízo.|  
+|**last_commit_lsn**|**numeric(25,0)**|Número de secuencia de registro real correspondiente al último registro de confirmación del registro de transacciones.<br /><br /> En la base de datos principal, corresponde al último registro de confirmación procesado. Las filas para las bases de datos secundarias muestran el número de secuencia de registro que la réplica secundaria ha enviado a la principal.<br /><br /> En la réplica secundaria, es el último registro de confirmación que se rehízo.|  
 |**last_commit_time**|**datetime**|Hora correspondiente al último registro de confirmación.<br /><br /> En la base de datos secundaria, esta hora es igual la misma que para la base de datos principal.<br /><br /> En la réplica principal, cada fila de la base de datos secundaria muestra la hora que la réplica secundaria que hospeda dicha base de datos secundaria ha notificado a la réplica principal. La diferencia de la hora entre la fila de la base de datos principal y una fila determinada de la base de datos secundaria representa aproximadamente el objetivo de tiempo de recuperación (RPO), suponiendo que el proceso de rehacer está puesto al día y que la réplica secundaria ha notificado el progreso a la réplica principal.|  
 |**low_water_mark_for_ghosts**|**bigint**|Un número que aumenta regularmente para la base de datos que indica una marca de límite inferior utilizada por la limpieza de registros fantasma en la base de datos principal. Si este número no aumenta con el tiempo, implica que no puede producirse la limpieza de registros fantasma. Para decidir qué filas fantasma se han de limpiar, la réplica principal utiliza el valor mínimo de esta columna para esta base de datos en todas las réplicas de disponibilidad (incluida la réplica principal).|  
-|**secondary_lag_seconds**|**bigint**|El número de segundos que la réplica secundaria está detrás de la réplica principal durante la sincronización.<br /><br />**Se aplica a:** [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] a través de [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].|  
+|**secondary_lag_seconds**|**bigint**|El número de segundos que la réplica secundaria está detrás de la réplica principal durante la sincronización.<br /><br />**Se aplica a**: de [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] a [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].|  
   
 ##  <a name="LSNcolumns"></a> Descripción de los valores de columna LSN  
  Los valores de la **end_of_log_lsn**, **last_hardened_lsn**, **last_received_lsn**, **last_sent_lsn**, **recuperación _lsn**, y **truncation_lsn** columnas no son números de secuencia de registro real (LSN). En su lugar, cada uno de estos valores refleja un identificador de bloque de registro rellenado con ceros.  

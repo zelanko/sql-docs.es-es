@@ -1,15 +1,15 @@
 ---
-title: "Información general de la integración CLR | Documentos de Microsoft"
-ms.custom: 
+title: Información general de la integración CLR | Documentos de Microsoft
+ms.custom: ''
 ms.date: 04/19/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine
-ms.service: 
+ms.service: ''
 ms.component: clr
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: 
-ms.tgt_pltfrm: 
+ms.technology: ''
+ms.tgt_pltfrm: ''
 ms.topic: reference
 helpviewer_keywords:
 - common language runtime [SQL Server], about CLR integration
@@ -20,27 +20,27 @@ helpviewer_keywords:
 - managed code [SQL Server], vs. extended stored procedures
 - execution at client vs. execution at server [CLR integration]
 ms.assetid: 5aa176da-3652-4afa-a742-4c40c77ce5c3
-caps.latest.revision: 
+caps.latest.revision: 50
 author: rothja
 ms.author: jroth
 manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: fce42787904d67dbe7e023321138fb57bd74b408
-ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
+ms.openlocfilehash: 9e0dd551de6b8ac7c9174d6cbccdb8378d195854
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/09/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="clr-integration---overview"></a>Integración de CLR - información general
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
-Common Language Runtime (CLR) es el núcleo de Microsoft .NET Framework y proporciona el entorno de ejecución de todo el código de .NET Framework. Se hace referencia al código que se ejecuta en CLR como código administrado. CLR proporciona varias funciones y servicios necesarios para la ejecución de programas, que incluyen la compilación Just-In-Time (JIT), la asignación y administración de memoria, el forzado de la seguridad de tipos, el control de excepciones, la administración de subprocesos y la seguridad.  Para obtener información, vea .NET Framework SDK.  
+  Common Language Runtime (CLR) es el núcleo de Microsoft .NET Framework y proporciona el entorno de ejecución de todo el código de .NET Framework. Se hace referencia al código que se ejecuta en CLR como código administrado. CLR proporciona varias funciones y servicios necesarios para la ejecución de programas, que incluyen la compilación Just-In-Time (JIT), la asignación y administración de memoria, el forzado de la seguridad de tipos, el control de excepciones, la administración de subprocesos y la seguridad.  Para obtener información, vea .NET Framework SDK.  
   
  Con CLR hospedado en Microsoft SQL Server (denominado integración CLR), puede crear procedimientos almacenados, desencadenadores, funciones definidas por el usuario, tipos definidos por el usuario y agregados definidos por el usuario en código administrado. Dado que el código administrado se compila a código nativo antes de la ejecución, puede lograr un aumento importante del rendimiento en algunas situaciones.  
   
  El código administrado utiliza Seguridad de acceso del código (CAS) para evitar que los ensamblados realicen ciertas operaciones. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] usa CAS para ayudar a proteger el código administrado y evitar poner en peligro el sistema operativo o el servidor de bases de datos.  
   
 ## <a name="advantages-of-clr-integration"></a>Ventajas de la integración CLR  
- [!INCLUDE[tsql](../../includes/tsql-md.md)] está diseñado específicamente para el acceso directo de datos y la manipulación de la base de datos. Aunque [!INCLUDE[tsql](../../includes/tsql-md.md)] destaca en el acceso y administración de datos, no es un lenguaje de programación completo. Por ejemplo, [!INCLUDE[tsql](../../includes/tsql-md.md)] no admite matrices, colecciones, bucles for-each, desplazamiento bit a bit o clases. Aunque algunas de estas construcciones se pueden simular en [!INCLUDE[tsql](../../includes/tsql-md.md)], el código administrado tiene compatibilidad integrada para estas construcciones. Dependiendo de la situación, estas características pueden proporcionar una razón de peso para implementar cierta funcionalidad de base de datos en el código administrado.  
+ [!INCLUDE[tsql](../../includes/tsql-md.md)] está diseñado específicamente para el acceso directo a los datos y la manipulación de la base de datos. Aunque [!INCLUDE[tsql](../../includes/tsql-md.md)] destaca en el acceso y administración de datos, no es un lenguaje de programación completo. Por ejemplo, [!INCLUDE[tsql](../../includes/tsql-md.md)] no admite matrices, colecciones, bucles for-each, desplazamiento bit a bit o clases. Aunque algunas de estas construcciones se pueden simular en [!INCLUDE[tsql](../../includes/tsql-md.md)], el código administrado tiene compatibilidad integrada para estas construcciones. Dependiendo de la situación, estas características pueden proporcionar una razón de peso para implementar cierta funcionalidad de base de datos en el código administrado.  
   
  Microsoft Visual Basic .NET y Microsoft Visual C# proporcionan capacidades orientadas a objetos como la encapsulación, la herencia y el polimorfismo. El código relacionado se puede organizar ahora con facilidad en las clases y espacios de nombres. Cuando trabaje con grandes cantidades de código del servidor, esto le permitirá organizar y mantener más fácilmente el código.  
   

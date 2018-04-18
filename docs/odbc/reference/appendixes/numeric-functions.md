@@ -1,30 +1,31 @@
 ---
-title: "Funciones numéricas | Documentos de Microsoft"
-ms.custom: 
+title: Funciones numéricas | Documentos de Microsoft
+ms.custom: ''
 ms.date: 01/19/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: drivers
-ms.service: 
+ms.service: ''
 ms.component: odbc
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: drivers
-ms.tgt_pltfrm: 
+ms.technology:
+- drivers
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - functions [ODBC], numeric functions
 - numeric functions [ODBC]
 ms.assetid: 4fa548dc-e8b0-4179-92ff-81d6a79d10c3
-caps.latest.revision: "5"
+caps.latest.revision: 5
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 8a4b3c0cca843e576fd200b6803db8f1bac5adcb
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: dd6bcf73b63e6fdf5dc61209ed990955c19e7851
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="numeric-functions"></a>Funciones numéricas
 La tabla siguiente describen las funciones numéricas que se incluyen en el conjunto de funciones escalares de ODBC. Mediante una llamada a **SQLGetInfo** con una *tipo de información* de SQL_NUMERIC_FUNCTIONS, una aplicación puede determinar qué funciones numéricas son compatibles con un controlador.  
@@ -45,7 +46,7 @@ La tabla siguiente describen las funciones numéricas que se incluyen en el conj
 |**ACOS (** *float_exp* **)** (ODBC 1.0)|Devuelve el arco coseno de *float_exp* como un ángulo, expresado en radianes.|  
 |**ASIN (** *float_exp* **)** (ODBC 1.0)|Devuelve el arcoseno de *float_exp* como un ángulo, expresado en radianes.|  
 |**ATAN (** *float_exp* **)** (ODBC 1.0)|Devuelve el arco tangente de *float_exp* como un ángulo, expresado en radianes.|  
-|**ATAN2 (** *float_exp1*, *float_exp2***)** (ODBC 2.0)|Devuelve el arco tangente de la *x* y *y* coordenadas, especificados por *float_exp1* y *float_exp2*, respectivamente, como un ángulo, se expresa en radianes.|  
+|**ATAN2 (** *float_exp1*, *float_exp2 ***)** (ODBC 2.0)|Devuelve el arco tangente de la *x* y *y* coordenadas, especificados por *float_exp1* y *float_exp2*, respectivamente, como un ángulo, se expresa en radianes.|  
 |**CEILING (** *numeric_exp* **)** (ODBC 1.0)|Devuelve el entero más pequeño mayor o igual que *numeric_exp*. El valor devuelto es el mismo tipo de datos que el parámetro de entrada.|  
 |**COS (** *float_exp* **)** (ODBC 1.0)|Devuelve el coseno de *float_exp*, donde *float_exp* es un ángulo expresado en radianes.|  
 |**COT (** *float_exp* **)** (ODBC 1.0)|Devuelve la cotangente de *float_exp*, donde *float_exp* es un ángulo expresado en radianes.|  
@@ -54,14 +55,14 @@ La tabla siguiente describen las funciones numéricas que se incluyen en el conj
 |**FLOOR (** *numeric_exp* **)** (ODBC 1.0)|Devuelve el entero más grande menor o igual a *numeric_exp*. El valor devuelto es el mismo tipo de datos que el parámetro de entrada.|  
 |**REGISTRO (** *float_exp* **)** (ODBC 1.0)|Devuelve el logaritmo natural de *float_exp*.|  
 |**LOG10 (** *float_exp* **)** (ODBC 2.0)|Devuelve la base 10 logaritmo de *float_exp*.|  
-|**MOD (** *integer_exp1*, *integer_exp2***)** (ODBC 1.0)|Devuelve el resto (módulo) de *integer_exp1* dividido por *integer_exp2*.|  
+|**MOD (** *integer_exp1*, *integer_exp2 ***)** (ODBC 1.0)|Devuelve el resto (módulo) de *integer_exp1* dividido por *integer_exp2*.|  
 |**PI ()** (ODBC 1.0)|Devuelve el valor constante de pi como un valor de punto flotante.|  
-|**POWER (** *numeric_exp*, *integer_exp***)** (ODBC 2.0)|Devuelve el valor de *numeric_exp* a la potencia de *integer_exp*.|  
+|**POWER (** *numeric_exp*, *integer_exp ***)** (ODBC 2.0)|Devuelve el valor de *numeric_exp* a la potencia de *integer_exp*.|  
 |**RADIANES (** *numeric_exp* **)** (ODBC 2.0)|Devuelve el número de radianes convertido a partir de *numeric_exp* grados.|  
 |**RAND (**[*integer_exp*]**)** (ODBC 1.0)|Devuelve un valor de punto flotante aleatorio con *integer_exp* como el valor de inicialización opcional.|  
-|**ROUND (** *numeric_exp*, *integer_exp***)** (ODBC 2.0)|Devuelve *numeric_exp* redondeado a *integer_exp* coloca a la derecha del separador decimal. Si *integer_exp* es negativo, *numeric_exp* se redondea a &#124; *integer_exp*&#124; posiciones a la izquierda del separador decimal.|  
+|**ROUND (** *numeric_exp*, *integer_exp ***)** (ODBC 2.0)|Devuelve *numeric_exp* redondeado a *integer_exp* coloca a la derecha del separador decimal. Si *integer_exp* es negativo, *numeric_exp* se redondea a &#124; *integer_exp* &#124; coloca a la izquierda del separador decimal.|  
 |**Inicio de sesión (** *numeric_exp* **)** (ODBC 1.0)|Devuelve un indicador del inicio de sesión de *numeric_exp*. Si *numeric_exp* es menor que cero, – 1 se devuelve. Si *numeric_exp* es igual a cero, se devuelve 0. Si *numeric_exp* es mayor que cero, se devuelve 1.|  
 |**SENO (** *float_exp* **)** (ODBC 1.0)|Devuelve el seno de *float_exp*, donde *float_exp* es un ángulo expresado en radianes.|  
 |**SQRT (** *float_exp* **)** (ODBC 1.0)|Devuelve la raíz cuadrada de *float_exp*.|  
 |**TAN (** *float_exp* **)** (ODBC 1.0)|Devuelve la tangente de *float_exp*, donde *float_exp* es un ángulo expresado en radianes.|  
-|**TRUNCATE (** *numeric_exp*, *integer_exp***)** (ODBC 2.0)|Devuelve *numeric_exp* truncado a *integer_exp* coloca a la derecha del separador decimal. Si *integer_exp* es negativo, *numeric_exp* se trunca a &#124; *integer_exp*&#124; posiciones a la izquierda del separador decimal.|
+|**TRUNCATE (** *numeric_exp*, *integer_exp ***)** (ODBC 2.0)|Devuelve *numeric_exp* truncado a *integer_exp* coloca a la derecha del separador decimal. Si *integer_exp* es negativo, *numeric_exp* se trunca a &#124; *integer_exp* &#124; coloca a la izquierda del separador decimal.|

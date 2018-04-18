@@ -1,16 +1,16 @@
 ---
-title: sys.dm_xe_sessions (Transact-SQL) | Microsoft Docs
-ms.custom: 
+title: Sys.dm_xe_sessions (Transact-SQL) | Documentos de Microsoft
+ms.custom: ''
 ms.date: 06/10/2016
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine
-ms.service: 
+ms.service: ''
 ms.component: dmv's
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - dm_xe_sessions_TSQL
@@ -23,16 +23,16 @@ helpviewer_keywords:
 - sys.dm_xe_sessions dynamic management view
 - extended events [SQL Server], views
 ms.assetid: defd6efb-9507-4247-a91f-dc6ff5841e17
-caps.latest.revision: 
+caps.latest.revision: 17
 author: stevestein
 ms.author: sstein
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 6c871158b5085d14eda8974530e392b5ed24baf5
-ms.sourcegitcommit: c556eaf60a49af7025db35b7aa14beb76a8158c5
+ms.openlocfilehash: 9198b8ac568f33591ee934458dbd1a58c2e71cbe
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/03/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="sysdmxesessions-transact-sql"></a>sys.dm_xe_sessions (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -41,12 +41,12 @@ ms.lasthandoff: 02/03/2018
     
 |Nombre de columna|Tipo de datos|Description|  
 |-----------------|---------------|-----------------|  
-|address|**varbinary(8)**|La dirección de memoria de la sesión. dirección es única en todo el sistema local. No admite valores NULL.|  
+|address|**varbinary (8)**|La dirección de memoria de la sesión. dirección es única en todo el sistema local. No admite valores NULL.|  
 |name|**nvarchar(256)**|El nombre de la sesión. nombre es único en el sistema local. No admite valores NULL.|  
 |pending_buffers|**int**|Número de búferes llenos pendientes de procesamiento. No admite valores NULL.|  
-|total_regular_buffers|**int**|Número total de búferes normales que están asociados a la sesión. No admite valores NULL.<br /><br /> Nota: Se utilizan búferes normales mayoría de los casos. Estos búferes son de tamaño suficiente para contener muchos eventos. Normalmente habrá tres búferes o más por cada sesión. El servidor determina automáticamente el número de búferes normales, según las particiones de memoria que se establecen a través de la opción MEMORY_PARTITION_MODE. El tamaño de los búferes normales es igual al valor de la opción MAX_MEMORY (que es de 4 MB de forma predeterminado) dividido por el número de búferes. Para obtener más información sobre la MEMORY_PARTITION_MODE y las opciones de MAX_MEMORY, vea [CREATE EVENT SESSION &#40; Transact-SQL &#41; ](../../t-sql/statements/create-event-session-transact-sql.md).|  
+|total_regular_buffers|**int**|Número total de búferes normales que están asociados a la sesión. No admite valores NULL.<br /><br /> Nota: Se utilizan búferes normales mayoría de los casos. Estos búferes son de tamaño suficiente para contener muchos eventos. Normalmente habrá tres búferes o más por cada sesión. El servidor determina automáticamente el número de búferes normales, según las particiones de memoria que se establecen a través de la opción MEMORY_PARTITION_MODE. El tamaño de los búferes normales es igual al valor de la opción MAX_MEMORY (que es de 4 MB de forma predeterminado) dividido por el número de búferes. Para obtener más información sobre la MEMORY_PARTITION_MODE y las opciones de MAX_MEMORY, vea [CREATE EVENT SESSION &#40;Transact-SQL&#41;](../../t-sql/statements/create-event-session-transact-sql.md).|  
 |regular_buffer_size|**bigint**|Tamaño en bytes del búfer de salida normal. No admite valores NULL.|  
-|total_large_buffers|**int**|Número total de búferes grandes. No admite valores NULL.<br /><br /> Nota: Los búferes grandes se usan cuando un evento es mayor que un búfer normal. Con este fin se reservan explícitamente. Los búferes grandes se asignan cuando se inicia la sesión del evento y su tamaño se determina según la opción MAX_EVENT_SIZE. Para obtener más información acerca de la opción MAX_EVENT_SIZE, vea [CREATE EVENT SESSION &#40; Transact-SQL &#41; ](../../t-sql/statements/create-event-session-transact-sql.md).|  
+|total_large_buffers|**int**|Número total de búferes grandes. No admite valores NULL.<br /><br /> Nota: Los búferes grandes se usan cuando un evento es mayor que un búfer normal. Con este fin se reservan explícitamente. Los búferes grandes se asignan cuando se inicia la sesión del evento y su tamaño se determina según la opción MAX_EVENT_SIZE. Para obtener más información acerca de la opción MAX_EVENT_SIZE, vea [CREATE EVENT SESSION &#40;Transact-SQL&#41;](../../t-sql/statements/create-event-session-transact-sql.md).|  
 |large_buffer_size|**bigint**|Tamaño en bytes del búfer grande. No admite valores NULL.|  
 |total_buffer_size|**bigint**|Tamaño total del búfer de memoria que se utiliza para almacenar los eventos de la sesión, en bytes. No admite valores NULL.|  
 |buffer_policy_flags|**int**|Mapa de bits que indica el comportamiento de los búferes de eventos de la sesión cuando todos los búferes están llenos y se activa un nuevo evento. No admite valores NULL.|  

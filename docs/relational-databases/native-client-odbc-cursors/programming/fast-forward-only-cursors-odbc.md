@@ -1,15 +1,15 @@
 ---
-title: "Cursores de solo avance rápido (ODBC) | Documentos de Microsoft"
-ms.custom: 
+title: Cursores de solo avance rápido (ODBC) | Documentos de Microsoft
+ms.custom: ''
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
-ms.service: 
+ms.service: ''
 ms.component: native-client-odbc-cursors
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: 
-ms.tgt_pltfrm: 
+ms.technology: ''
+ms.tgt_pltfrm: ''
 ms.topic: reference
 helpviewer_keywords:
 - fast forward-only cursors
@@ -17,16 +17,17 @@ helpviewer_keywords:
 - cursors [ODBC], fast forward-only
 - ODBC cursors, fast forward-only
 ms.assetid: 0707d07e-fc95-42ed-9280-b7e508ac8c62
-caps.latest.revision: 
+caps.latest.revision: 31
 author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 2de4f780218dcb665f4a4a1336e5557615bcc1cd
-ms.sourcegitcommit: a0aa5e611a0e6ebb74ac1e2f613e8916dc7a7617
+monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
+ms.openlocfilehash: 04cde52abf320d7fa99d4cb748d491e63bc0eb50
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/24/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="fast-forward-only-cursors-odbc"></a>Cursores de solo avance rápido (ODBC)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -40,13 +41,13 @@ ms.lasthandoff: 01/24/2018
   
  La aplicación solicita cursores de solo avance rápido mediante el atributo de instrucciones específico del controlador SQL_SOPT_SS_CURSOR_OPTIONS. Cuando se establece en SQL_CO_FFO, los cursores de solo avance rápido se habilitan sin captura automática. Cuando se establece en SQL_CO_FFO_AF, también se habilita la opción de captura automática. Para obtener más información acerca de la captura automática, consulte [utilizar la captura automática con cursores ODBC](../../../relational-databases/native-client-odbc-cursors/programming/using-autofetch-with-odbc-cursors.md).  
   
- Los cursores de solo avance rápido con captura automática pueden usarse para recuperar un pequeño conjunto de resultados con solo un viaje de ida y vuelta (round trip) al servidor. En estos pasos,  *n*  es el número de filas que se devuelven:  
+ Los cursores de solo avance rápido con captura automática pueden usarse para recuperar un pequeño conjunto de resultados con solo un viaje de ida y vuelta (round trip) al servidor. En estos pasos, *n* es el número de filas que se devuelven:  
   
 1.  Establezca SQL_SOPT_SS_CURSOR_OPTIONS en SQL_CO_FFO_AF.  
   
-2.  Establezca SQL_ATTR_ROW_ARRAY_SIZE en  *n*  + 1.  
+2.  Establezca SQL_ATTR_ROW_ARRAY_SIZE en *n* + 1.  
   
-3.  Enlazar las columnas de resultados a las matrices de  *n*  + 1 elementos (que es seguro si  *n*  + realmente se recopila la fila 1).  
+3.  Enlazar las columnas de resultados a las matrices de *n* + 1 elementos (que es seguro si *n* + realmente se recopila la fila 1).  
   
 4.  Abra el cursor con cualquiera **SQLExecDirect** o **SQLExecute**.  
   
@@ -61,6 +62,6 @@ ms.lasthandoff: 01/24/2018
 -   Dado que el tamaño del conjunto de filas se estableció en 1 más el número de filas del conjunto de resultados, el servidor detecta el final del cursor y cierra el cursor.  
   
 ## <a name="see-also"></a>Vea también  
- [Detalles de la programación de cursor &#40; ODBC &#41;](../../../relational-databases/native-client-odbc-cursors/programming/cursor-programming-details-odbc.md)  
+ [Detalles de la programación de cursor &#40;ODBC&#41;](../../../relational-databases/native-client-odbc-cursors/programming/cursor-programming-details-odbc.md)  
   
   

@@ -2,7 +2,7 @@
 title: Función SQLBindParameter | Documentos de Microsoft
 ms.custom: ''
 ms.date: 01/19/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: drivers
 ms.service: ''
 ms.component: odbc
@@ -25,13 +25,13 @@ ms.assetid: 38349d4b-be03-46f9-9d6a-e50dd144e225
 caps.latest.revision: 52
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 299e4ced3e6047f7d3e205d384d3191d43e70ef1
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: 54a22ecb571f6a6831023ee5c5d6c18149bff575
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="sqlbindparameter-function"></a>Función SQLBindParameter
 **Conformidad**  
@@ -131,7 +131,7 @@ SQLRETURN SQLBindParameter(
  Si *ParameterNumber* en la llamada a **SQLBindParameter** es mayor que el valor de SQL_DESC_COUNT, **SQLSetDescField** se llama para aumentar el valor de SQL_DESC_ CONTAR a *ParameterNumber*.  
   
 ## <a name="inputoutputtype-argument"></a>Argumento de InputOutputType  
- El *InputOutputType* argumento especifica el tipo del parámetro. Este argumento establece el campo SQL_DESC_PARAMETER_TYPE de la IPD. Todos los parámetros en instrucciones SQL que no llame a los procedimientos, como **insertar** instrucciones, son *entrada**parámetros*. Los parámetros en las llamadas a procedimiento pueden usar como entrados, entrada/salida o parámetros de salida. (Una aplicación llama **SQLProcedureColumns** para determinar el tipo de un parámetro en una llamada a procedimiento; se suponen que los parámetros cuyo tipo no se puede determinar son parámetros de entrada.)  
+ El *InputOutputType* argumento especifica el tipo del parámetro. Este argumento establece el campo SQL_DESC_PARAMETER_TYPE de la IPD. Todos los parámetros en instrucciones SQL que no llame a los procedimientos, como **insertar** instrucciones, son *entrada ** parámetros*. Los parámetros en las llamadas a procedimiento pueden usar como entrados, entrada/salida o parámetros de salida. (Una aplicación llama **SQLProcedureColumns** para determinar el tipo de un parámetro en una llamada a procedimiento; se suponen que los parámetros cuyo tipo no se puede determinar son parámetros de entrada.)  
   
  El *InputOutputType* argumento es uno de los siguientes valores:  
   
@@ -152,7 +152,7 @@ SQLRETURN SQLBindParameter(
   
      Después de ejecuta la instrucción, el controlador devuelve datos para el parámetro a la aplicación, a menos que la *ParameterValuePtr* y *StrLen_or_IndPtr* argumentos son ambos punteros nulos, en cuyo caso el controlador descarta el valor de salida. Si el origen de datos no devuelve un valor para un parámetro de salida, el controlador establece el **StrLen_or_IndPtr* búfer en SQL_NULL_DATA.  
   
--   SQL_PARAM_INPUT_OUTPUT_STREAM. Indica que se debe transmitir un parámetro de entrada/salida. **SQLGetData** pueden leer valores de parámetro en partes. *BufferLength* se omite porque la longitud del búfer se determinará en la llamada de **SQLGetData**. El valor de la *StrLen_or_IndPtr* debe contener el búfer SQL_NULL_DATA, SQL_DEFAULT_PARAM, SQL_DATA_AT_EXEC o el resultado de la macro SQL_LEN_DATA_AT_EXEC. Un parámetro debe estar enlazado como un parámetro de datos en ejecución (DAE) en la entrada si se transmitirá en la salida. *ParameterValuePtr* puede ser cualquier valor de puntero null no devolverá **SQLParamData** como definido por el usuario de token cuyo valor se pasaron con *ParameterValuePtr* de entrada y de salida. Para obtener más información, consulte [recuperar parámetros de salida mediante SQLGetData](../../../odbc/reference/develop-app/retrieving-output-parameters-using-sqlgetdata.md).  
+-   SQL_PARAM_INPUT_OUTPUT_STREAM. Indica que se debe transmitir un parámetro de entrada/salida. **SQLGetData** pueden leer valores de parámetro en partes. *BufferLength* se omite porque la longitud del búfer se determinará en la llamada de **SQLGetData**. El valor de la *StrLen_or_IndPtr* debe contener el búfer SQL_NULL_DATA, SQL_DEFAULT_PARAM, SQL_DATA_AT_EXEC o el resultado de la macro SQL_LEN_DATA_AT_EXEC. Un parámetro debe estar enlazado como un parámetro de datos en ejecución (DAE) en la entrada si se transmitirá en la salida. *ParameterValuePtr* puede ser cualquier valor de puntero null no devolverá **SQLParamData** como definido por el usuario de token cuyo valor se pasaron con *ParameterValuePtr* de entrada y salida. Para obtener más información, consulte [recuperar parámetros de salida mediante SQLGetData](../../../odbc/reference/develop-app/retrieving-output-parameters-using-sqlgetdata.md).  
   
 -   SQL_PARAM_OUTPUT_STREAM. Igual que SQL_PARAM_INPUT_OUTPUT_STREAM, para un parámetro de salida. **StrLen_or_IndPtr* se omite en la entrada.  
   
@@ -166,7 +166,7 @@ SQLRETURN SQLBindParameter(
 |SQL_PARAM_OUTPUT_STREAM|Se omite en la entrada.|Salida transmitidos|*ParameterValuePtr* puede ser cualquier valor de puntero, que se devolverá mediante **SQLParamData** como definido por el usuario de token cuyo valor se pasaron con *ParameterValuePtr*.|  
 |SQL_PARAM_INPUT_OUTPUT|SQL_LEN_DATA_AT_EXEC (*len*) o SQL_DATA_AT_EXEC|Entrada de elementos y búfer de salida enlazada|*ParameterValuePtr* es la dirección del búfer de salida, que también se devolverán por **SQLParamData** como definido por el usuario de token cuyo valor se pasaron con *ParameterValuePtr*.|  
 |SQL_PARAM_INPUT_OUTPUT|No SQL_LEN_DATA_AT_EXEC (*len*) o SQL_DATA_AT_EXEC|Entrada enlazados búfer y el búfer de salida enlazada|*ParameterValuePtr* es la dirección del búfer de entrada/salida compartido.|  
-L_PARAM_INPUT_OUTPUT_STREAM|SQL_LEN_DATA_AT_EXEC (*len*) o SQL_DATA_AT_EXEC|Entrada de partes y salida transmitidos|*ParameterValuePtr* puede ser cualquier valor de puntero no nulo, lo que devolverá **SQLParamData** como definido por el usuario de token cuyo valor se pasaron con *ParameterValuePtr* para ambos entrada y salida.|  
+L_PARAM_INPUT_OUTPUT_STREAM|SQL_LEN_DATA_AT_EXEC (*len*) o SQL_DATA_AT_EXEC|Entrada de partes y salida transmitidos|*ParameterValuePtr* puede ser cualquier valor de puntero no nulo, lo que devolverá **SQLParamData** como definido por el usuario de token cuyo valor se pasaron con *ParameterValuePtr* de entrada y de salida.|  
   
 > [!NOTE]  
 >  El controlador debe decidir qué tipos SQL se permiten cuando una aplicación enlaza un parámetro de entrada / salida o de salida tal y como se transmite por secuencias. El Administrador de controladores no generará un error para un tipo SQL no válido.  

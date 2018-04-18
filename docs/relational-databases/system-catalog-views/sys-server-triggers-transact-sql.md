@@ -1,16 +1,16 @@
 ---
 title: Sys.server_triggers (Transact-SQL) | Documentos de Microsoft
-ms.custom: 
+ms.custom: ''
 ms.date: 06/10/2016
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine
-ms.service: 
+ms.service: ''
 ms.component: system-catalog-views
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - server_triggers
@@ -22,16 +22,16 @@ dev_langs:
 helpviewer_keywords:
 - sys.server_triggers catalog view
 ms.assetid: 25926ff4-9271-45bf-bc32-d5d3344bd47a
-caps.latest.revision: 
+caps.latest.revision: 15
 author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: efbd010533b9c11d974db2ae20c8455ce4274231
-ms.sourcegitcommit: 9fbe5403e902eb996bab0b1285cdade281c1cb16
+ms.openlocfilehash: 6ef59089135cded1ed557fd628cbe93d45fc0620
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/27/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="sysservertriggers-transact-sql"></a>sys.server_triggers (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -43,10 +43,10 @@ ms.lasthandoff: 11/27/2017
 |**Nombre**|**sysname**|Nombre del desencadenador.|  
 |**object_id**|**int**|Id. del objeto.|  
 |**parent_class**|**tinyint**|Clase del elemento primario. Siempre es:<br /><br /> 100 = Servidor|  
-|**parent_class_desc**|**nvarchar (60)**|Descripción de la clase de elemento primario. Siempre es:<br /><br /> SERVIDOR.|  
+|**parent_class_desc**|**nvarchar(60)**|Descripción de la clase de elemento primario. Siempre es:<br /><br /> SERVIDOR.|  
 |**parent_id**|**int**|Siempre es 0 para los desencadenadores de SERVER.|  
-|**tipo**|**Char(2)**|Tipo de objeto:<br /><br /> TA = Desencadenador de ensamblado (CLR)<br /><br /> TR = Desencadenador SQL|  
-|**type_desc**|**nvarchar (60)**|Descripción de la clase del tipo de objeto.<br /><br /> CLR_TRIGGER<br /><br /> SQL_TRIGGER|  
+|**Tipo**|**char(2)**|Tipo de objeto:<br /><br /> TA = Desencadenador de ensamblado (CLR)<br /><br /> TR = Desencadenador SQL|  
+|**type_desc**|**nvarchar(60)**|Descripción de la clase del tipo de objeto.<br /><br /> CLR_TRIGGER<br /><br /> SQL_TRIGGER|  
 |**create_date**|**datetime**|Fecha de creación del desencadenador.|  
 |**modify_date**|**datetime**|Fecha en que se modificó el desencadenador por última vez mediante una instrucción ALTER.|  
 |**is_ms_shipped**|**bit**|Desencadenador creado en nombre del usuario por un componente interno de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].|  

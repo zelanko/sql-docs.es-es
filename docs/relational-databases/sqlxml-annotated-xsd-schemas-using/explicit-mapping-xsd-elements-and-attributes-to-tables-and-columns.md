@@ -1,16 +1,16 @@
 ---
-title: "Asignación explícita elementos y atributos XSD a tablas y columnas | Documentos de Microsoft"
-ms.custom: 
+title: Asignación explícita elementos y atributos XSD a tablas y columnas | Documentos de Microsoft
+ms.custom: ''
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine, sql-database
-ms.service: 
+ms.service: ''
 ms.component: sqlxml
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - dbe-xml
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: reference
 helpviewer_keywords:
 - explicit schema mapping [SQLXML]
@@ -31,20 +31,21 @@ helpviewer_keywords:
 - table mapping [SQLXML], explicit mapping
 - element/attribute mapping [SQLXML]
 ms.assetid: 7a5ebeb6-7322-4141-a307-ebcf95976146
-caps.latest.revision: 
+caps.latest.revision: 28
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: b2cc71e8ce8daf3da61754dc8e01d264d42c863a
-ms.sourcegitcommit: 37f0b59e648251be673389fa486b0a984ce22c81
+monikerRange: = azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions
+ms.openlocfilehash: b411f418f684ad54a7a04bce0a8c90484f475dc9
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/12/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="explicit-mapping-xsd-elements-and-attributes-to-tables-and-columns"></a>Asignación explícita elementos y atributos XSD a tablas y columnas
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
-Cuando se utiliza un esquema XSD para proporcionar una vista XML de la base de datos relacional, los elementos y atributos del esquema se deben asignar a tablas y columnas de la base de datos. Las filas de la tabla o vista de la base de datos se asignarán a elementos del documento XML. Los valores de columna de la base de datos se asignan a atributos o elementos.  
+  Cuando se utiliza un esquema XSD para proporcionar una vista XML de la base de datos relacional, los elementos y atributos del esquema se deben asignar a tablas y columnas de la base de datos. Las filas de la tabla o vista de la base de datos se asignarán a elementos del documento XML. Los valores de columna de la base de datos se asignan a atributos o elementos.  
   
  Cuando se especifican consultas XPath en el esquema XSD agregado, los datos de los elementos y atributos del esquema se recuperan de las tablas y columnas a las que se asignan. Para obtener un único valor de la base de datos, la asignación especificada en el esquema XSD debe tener una especificación de campo y relación. Si el nombre de un elemento o atributo no es el mismo nombre que el nombre de tabla o vista o columna a la que se asigna, el **SQL: relation** y **SQL: Field** anotaciones se usan para especificar la asignación entre un elemento o atributo de un documento XML y la tabla (vista) o columna en una base de datos.  
   

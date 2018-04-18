@@ -1,16 +1,16 @@
 ---
 title: Crear secciones CDATA mediante SQL-cdata (SQLXML 4.0) | Documentos de Microsoft
-ms.custom: 
+ms.custom: ''
 ms.date: 03/16/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine, sql-database
-ms.service: 
+ms.service: ''
 ms.component: sqlxml
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - dbe-xml
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: reference
 helpviewer_keywords:
 - markup characters [SQLXML]
@@ -22,20 +22,21 @@ helpviewer_keywords:
 - annotated XSD schemas, CDATA sections
 - sql:use-cdata
 ms.assetid: 26d2b9dc-f857-44ff-bcd4-aaf64ff809d0
-caps.latest.revision: 
+caps.latest.revision: 26
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 318c4d5dd0aba1b4195cebcd7c1815c4273b2077
-ms.sourcegitcommit: 37f0b59e648251be673389fa486b0a984ce22c81
+monikerRange: = azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions
+ms.openlocfilehash: 614f9f5c014b8f762992110108c6eccd2ac1f4e0
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/12/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="creating-cdata-sections-using-sqluse-cdata-sqlxml-40"></a>Crear secciones CDATA mediante sql:use-cdata (SQLXML 4.0)
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
-En XML, las secciones CDATA se usan para establecer secuencias de escape en bloques de texto que contienen caracteres que, de lo contrario, se reconocerían como caracteres de marcado.  
+  En XML, las secciones CDATA se usan para establecer secuencias de escape en bloques de texto que contienen caracteres que, de lo contrario, se reconocerían como caracteres de marcado.  
   
  Una base de datos en [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] de Microsoft puede contener a veces caracteres que el analizador XML trata como caracteres de marcado; por ejemplo, los corchetes angulares (< y >), el símbolo menor o igual que (<=) y la y comercial (&) se tratan como caracteres de marcado. Sin embargo, puede ajustar este tipo de caracteres especiales en una sección CDATA para evitar que se traten como caracteres de marcado. El analizador XML trata el texto de la sección CDATA como texto simple.  
   

@@ -1,26 +1,17 @@
 ---
-title: "Instalar componentes de aprendizaje automático de SQL Server sin acceso a internet | Documentos de Microsoft"
-ms.custom: 
-ms.date: 03/05/2018
-ms.reviewer: 
-ms.suite: sql
-ms.prod: machine-learning-services
-ms.prod_service: machine-learning-services
-ms.component: r
-ms.technology: 
-ms.tgt_pltfrm: 
-ms.topic: article
-ms.assetid: 
-caps.latest.revision: 
+title: Instalar componentes de aprendizaje automático de SQL Server sin acceso a internet | Documentos de Microsoft
+ms.prod: sql
+ms.technology: machine-learning
+ms.date: 04/15/2018
+ms.topic: conceptual
 author: HeidiSteen
 ms.author: heidist
 manager: cgronlun
-ms.workload: On Demand
-ms.openlocfilehash: 3f542786420eec8377dfe52ba3a1b73a24fbf524
-ms.sourcegitcommit: 8e897b44a98943dce0f7129b1c7c0e695949cc3b
+ms.openlocfilehash: 3ba344147b5d57a1c0168fbb5be93ae24b02b179
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/21/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="install-sql-server-machine-learning-components-without-internet-access"></a>Instalar componentes sin acceso a internet de aprendizaje de automático de SQL Server
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]

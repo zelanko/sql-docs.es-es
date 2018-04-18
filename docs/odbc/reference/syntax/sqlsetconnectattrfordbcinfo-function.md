@@ -2,7 +2,7 @@
 title: Función SQLSetConnectAttrForDbcInfo | Documentos de Microsoft
 ms.custom: ''
 ms.date: 01/19/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: drivers
 ms.service: ''
 ms.component: odbc
@@ -18,13 +18,13 @@ ms.assetid: a28fadb9-b998-472a-b252-709507e92005
 caps.latest.revision: 17
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 8ef62393ac00b7d094e6ba47613038fdf7ac2175
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: b71c2d308efd74f1ec2574d20d7f14455965715d
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="sqlsetconnectattrfordbcinfo-function"></a>SQLSetConnectAttrForDbcInfo (función)
 **Conformidad**  
@@ -53,7 +53,7 @@ SQLRETURN  SQLSetConnectAttrForDbcInfo(
  *ValuePtr*  
  [Entrada] Puntero a la capacidad de asociarse *atributo*. Dependiendo del valor de *atributo*, *ValuePtr* será un valor entero sin signo de 32 bits o hará referencia a una cadena de caracteres terminada en null. Tenga en cuenta que si el *atributo* argumento es un valor específico del controlador, el valor de *ValuePtr* puede ser un entero con signo.  
   
- *StringLength*  
+ *stringLength*  
  [Entrada] Si *atributo* es un atributo definido en ODBC y *ValuePtr* apunta a una cadena de caracteres o un búfer binario, este argumento debe ser la longitud de **ValuePtr*. Para los datos de cadena de caracteres, este argumento debe contener el número de bytes en la cadena.  
   
  Si *atributo* es un atributo definido en ODBC y *ValuePtr* es un entero, *StringLength* se omite.  

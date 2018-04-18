@@ -1,16 +1,16 @@
 ---
 title: sys.dm_exec_text_query_plan (Transact-SQL) | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 10/20/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine, sql-database
-ms.service: 
+ms.service: ''
 ms.component: dmv's
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - dm_exec_text_query_plan
@@ -22,21 +22,22 @@ dev_langs:
 helpviewer_keywords:
 - sys.dm_exec_text_query_plan dynamic management function
 ms.assetid: 9d5e5f59-6973-4df9-9eb2-9372f354ca57
-caps.latest.revision: 
+caps.latest.revision: 10
 author: stevestein
 ms.author: sstein
 manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 38650de120ae1c7cb80be3d279de9bfa0da37434
-ms.sourcegitcommit: c556eaf60a49af7025db35b7aa14beb76a8158c5
+monikerRange: = azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions
+ms.openlocfilehash: 8521e394e35d7762084f28c44426cd7cb25284cb
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/03/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="sysdmexectextqueryplan-transact-sql"></a>sys.dm_exec_text_query_plan (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
-  Devuelve el plan de presentación en formato de texto para un lote [!INCLUDE[tsql](../../includes/tsql-md.md)] o para una instrucción concreta dentro del mismo. El plan de consulta especificado por el identificador del plan puede estar almacenado en caché o ejecutándose. Esta función con valores de tabla es similar a [sys.dm_exec_query_plan &#40; Transact-SQL &#41; ](../../relational-databases/system-dynamic-management-views/sys-dm-exec-query-plan-transact-sql.md), pero tiene las siguientes diferencias:  
+  Devuelve el plan de presentación en formato de texto para un lote [!INCLUDE[tsql](../../includes/tsql-md.md)] o para una instrucción concreta dentro del mismo. El plan de consulta especificado por el identificador del plan puede estar almacenado en caché o ejecutándose. Esta función con valores de tabla es similar a [sys.dm_exec_query_plan &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-exec-query-plan-transact-sql.md), pero tiene las siguientes diferencias:  
   
 -   El resultado del plan de consulta se devuelve en formato de texto.  
   
@@ -71,8 +72,8 @@ El identificador del plan puede obtenerse de los siguientes objetos de administr
   
 -  [sys.dm_exec_requests](../../relational-databases/system-dynamic-management-views/sys-dm-exec-requests-transact-sql.md)  
   
-*statement_start_offset* | 0 | DEFAULT  
-Indica, en bytes, la posición inicial de la consulta que la fila describe en el texto del lote o del objeto permanente. *statement_start_offset* is **int**. El valor 0 indica el principio del lote. El valor predeterminado es 0.  
+*statement_start_offset* | 0 | VALOR PREDETERMINADO  
+Indica, en bytes, la posición inicial de la consulta que la fila describe en el texto del lote o del objeto permanente. *statement_start_offset* es **int**. El valor 0 indica el principio del lote. El valor predeterminado es 0.  
   
 El desplazamiento inicial de la instrucción puede obtenerse de los siguientes objetos de administración dinámica:  
   
@@ -80,10 +81,10 @@ El desplazamiento inicial de la instrucción puede obtenerse de los siguientes o
   
 -  [sys.dm_exec_requests](../../relational-databases/system-dynamic-management-views/sys-dm-exec-requests-transact-sql.md)  
   
-*statement_end_offset* | -1 | DEFAULT  
+*statement_end_offset* | -1 | VALOR PREDETERMINADO  
 Indica, en bytes, la posición final de la consulta que la fila describe en el texto del lote o del objeto permanente.  
   
-*statement_start_offset* is **int**.  
+*statement_start_offset* es **int**.  
   
 El valor -1 indica el final del lote. El valor predeterminado es -1.  
   
@@ -94,7 +95,7 @@ El valor -1 indica el final del lote. El valor predeterminado es -1.
 |**dbid**|**smallint**|Identificador de la base de datos de contexto que estaba activa al compilarse la instrucción [!INCLUDE[tsql](../../includes/tsql-md.md)] correspondiente a este plan. En el caso de instrucciones SQL ad hoc y preparadas, identificador de la base de datos en que se compilaron las instrucciones.<br /><br /> Esta columna acepta valores NULL.|  
 |**objectid**|**int**|Identificador del objeto (por ejemplo, procedimiento almacenado o función definida por el usuario) de este plan de consulta. Para lotes ad hoc y preparados, esta columna es **null**.<br /><br /> Esta columna acepta valores NULL.|  
 |**number**|**smallint**|Entero de procedimiento almacenado numerado. Por ejemplo, un grupo de procedimientos de la **pedidos** aplicación puede llamarse **orderproc; 1**, **orderproc; 2**, y así sucesivamente. Para lotes ad hoc y preparados, esta columna es **null**.<br /><br /> Esta columna acepta valores NULL.|  
-|**encrypted**|**bit**|Indica si el procedimiento almacenado correspondiente está cifrado.<br /><br /> 0 = no cifrado<br /><br /> 1 = cifrado<br /><br /> La columna no acepta valores NULL.|  
+|**Cifrado**|**bit**|Indica si el procedimiento almacenado correspondiente está cifrado.<br /><br /> 0 = no cifrado<br /><br /> 1 = cifrado<br /><br /> La columna no acepta valores NULL.|  
 |**query_plan**|**nvarchar(max)**|Contiene la representación del plan de presentación de tiempo de compilación del plan de ejecución de consulta que se especifica con *plan_handle*. El plan de presentación está en formato de texto. Se genera un plan para cada lote que contiene, por ejemplo, instrucciones [!INCLUDE[tsql](../../includes/tsql-md.md)] "ad hoc", llamadas a procedimientos almacenados y llamadas a funciones definidas por el usuario.<br /><br /> Esta columna acepta valores NULL.|  
   
 ## <a name="remarks"></a>Comentarios  

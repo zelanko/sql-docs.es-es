@@ -2,7 +2,7 @@
 title: Función SQLGetDiagField | Documentos de Microsoft
 ms.custom: ''
 ms.date: 01/19/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: drivers
 ms.service: ''
 ms.component: odbc
@@ -25,13 +25,13 @@ ms.assetid: 1dbc4398-97a8-4585-bb77-1f7ea75e24c4
 caps.latest.revision: 26
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: c202841d54e01758312c4e8388a78e583de9058c
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: f337b8455ba860caaf5e4a5b1bd4be1d0ee86c37
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="sqlgetdiagfield-function"></a>Función SQLGetDiagField
 **Conformidad**  
@@ -224,7 +224,7 @@ n-definición *|"CREAR EL DOMINIO"|SQL_DIAG_CREATE_DOMAIN|
 |*definición de la traducción*|"CREAR TRADUCCIÓN"|SQL_DIAG_CREATE_TRANSLATION|  
 |*posición de instrucción de actualización*|"LA ACTUALIZACIÓN DINÁMICA CURSOR"|SQL_DIAG_DYNAMIC_UPDATE_CURSOR|  
 |*búsquedas en la instrucción Update*|"ACTUALIZAR WHERE"|SQL_DIAG_UPDATE_WHERE|  
-|Desconocido|*cadena vacía*|SQL_DIAG_UNKNOWN_STATEMENT|  
+|Desconocido|*Cadena vacía*|SQL_DIAG_UNKNOWN_STATEMENT|  
   
 ## <a name="sequence-of-status-records"></a>Secuencia de registros de estado  
  Registros de estado se colocan en una secuencia basándose en el número de fila y el tipo del diagnóstico. El Administrador de controladores determina el orden final en el que se va a devolver registros de estado que genera. El controlador determina el orden final en el que se va a devolver registros de estado que genera.  

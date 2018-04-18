@@ -1,16 +1,16 @@
 ---
 title: sp_addpublication_snapshot (Transact-SQL) | Documentos de Microsoft
-ms.custom: 
+ms.custom: ''
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine
-ms.service: 
+ms.service: ''
 ms.component: system-stored-procedures
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - replication
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 applies_to:
 - SQL Server
@@ -20,16 +20,16 @@ f1_keywords:
 helpviewer_keywords:
 - sp_addpublication_snapshot
 ms.assetid: 192b6214-df6e-44a3-bdd4-9d933a981619
-caps.latest.revision: 
+caps.latest.revision: 39
 author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 9de7dc82dd63e8ea6b23d9c561a8fd7ea83da435
-ms.sourcegitcommit: 45e4efb7aa828578fe9eb7743a1a3526da719555
+ms.openlocfilehash: 6a04d94d0a650eb0349e599814fc2f1f614d4732
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="spaddpublicationsnapshot-transact-sql"></a>sp_addpublication_snapshot (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -72,7 +72,7 @@ sp_addpublication_snapshot [ @publication= ] 'publication'
  [  **@frequency_type=**] *frequency_type*  
  Es la frecuencia con que se ejecuta el agente de instantáneas. *frequency_type* es **int**, y puede tener uno de los siguientes valores.  
   
-|Valor|Descripción|  
+|Value|Descripción|  
 |-----------|-----------------|  
 |**1**|Vez.|  
 |**4** (valor predeterminado)|Diariamente|  
@@ -89,16 +89,16 @@ sp_addpublication_snapshot [ @publication= ] 'publication'
 |------------------------------|-----------------------------------|  
 |**1**|*frequency_interval* no se utiliza.|  
 |**4** (valor predeterminado)|Cada *frequency_interval* días, con un valor predeterminado de diariamente.|  
-|**8**|*frequency_interval* es uno o varios de los siguientes (combinado con un [&#124; (OR bit a bit) ](../../t-sql/language-elements/bitwise-or-transact-sql.md) operador lógico):<br /><br /> **1** = el domingo &#124;<br /><br /> **2** = el lunes &#124;<br /><br /> **4** = el martes &#124;<br /><br /> **8** = el miércoles &#124;<br /><br /> **16** = el jueves &#124;<br /><br /> **32** = el viernes &#124;<br /><br /> **64** = el sábado|  
+|**8**|*frequency_interval* es uno o varios de los siguientes (combinado con un [ &#124; (OR bit a bit)](../../t-sql/language-elements/bitwise-or-transact-sql.md) operador lógico):<br /><br /> **1** = el domingo&#124;<br /><br /> **2** = el lunes&#124;<br /><br /> **4** = el martes&#124;<br /><br /> **8** = el miércoles&#124;<br /><br /> **16** = el jueves&#124;<br /><br /> **32** = el viernes&#124;<br /><br /> **64** = el sábado|  
 |**16**|En el *frequency_interval* día del mes.|  
-|**32**|*frequency_interval* es uno de los siguientes:<br /><br /> **1** = el domingo &#124;<br /><br /> **2** = el lunes &#124;<br /><br /> **3** = el martes &#124;<br /><br /> **4** = el miércoles &#124;<br /><br /> **5** = el jueves &#124;<br /><br /> **6** = el viernes &#124;<br /><br /> **7** = el sábado &#124;<br /><br /> **8** = día &#124;<br /><br /> **9** = día de la semana &#124;<br /><br /> **10** = día del fin de semana|  
+|**32**|*frequency_interval* es uno de los siguientes:<br /><br /> **1** = el domingo&#124;<br /><br /> **2** = el lunes&#124;<br /><br /> **3** = el martes&#124;<br /><br /> **4** = el miércoles&#124;<br /><br /> **5** = el jueves&#124;<br /><br /> **6** = el viernes&#124;<br /><br /> **7** = el sábado&#124;<br /><br /> **8** = día&#124;<br /><br /> **9** = día de la semana&#124;<br /><br /> **10** = día del fin de semana|  
 |**64**|*frequency_interval* no se utiliza.|  
 |**128**|*frequency_interval* no se utiliza.|  
   
  [  **@frequency_subday=**] *frequency_subday*  
  Es la unidad de *freq_subday_interval*. *frequency_subday* es **int**, y puede tener uno de estos valores.  
   
-|Valor|Descripción|  
+|Value|Descripción|  
 |-----------|-----------------|  
 |**1**|Una vez|  
 |**2**|Second|  
@@ -129,31 +129,31 @@ sp_addpublication_snapshot [ @publication= ] 'publication'
  [  **@snapshot_job_name =** ] **'***snapshot_agent_name***'**  
  Es el nombre de un trabajo del agente de instantáneas existente, si se está utilizando un trabajo existente. *snapshot_agent_name* es **nvarchar (100)** con un valor predeterminado es NULL. Este parámetro es solo para uso interno y no se puede especificar al crear una publicación nueva. Si *snapshot_agent_name* no se especifica, *job_login* y *job_password* debe ser NULL.  
   
- [  **@publisher_security_mode** =] *publisher_security_mode*  
+ [ **@publisher_security_mode**=] *publisher_security_mode*  
  Es el modo de seguridad que el agente utiliza al conectarse al publicador. *publisher_security_mode* es **smallint**, su valor predeterminado es 1. **0** especifica [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] autenticación, y **1** especifica autenticación de Windows. Un valor de **0** debe especificarse para no[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] publicadores. [!INCLUDE[ssNoteWinAuthentication](../../includes/ssnotewinauthentication-md.md)]  
   
- [  **@publisher_login** =] **'***publisher_login***'**  
+ [ **@publisher_login**=] **'***publisher_login***'**  
  Es el inicio de sesión utilizado al conectar al publicador. *publisher_login* es **sysname**, su valor predeterminado es null. *publisher_login* debe especificarse cuando *publisher_security_mode* es **0**. Si *publisher_login* es NULL y *publisher_security_mode* es **1**, la cuenta de Windows especificada en *job_login* se utilizará Cuando se conecta al publicador.  
   
- [  **@publisher_password** =] **'***publisher_password***'**  
+ [ **@publisher_password**=] **'***publisher_password***'**  
  Es la contraseña utilizada para conectarse al publicador. *publisher_password* es **sysname**, su valor predeterminado es null.  
   
 > [!IMPORTANT]  
 >  No almacene información de autenticación en archivos de script. Para ayudar a mejorar la seguridad, se recomienda proporcionar nombres de inicio de sesión y contraseñas en tiempo de ejecución.  
   
- [  **@job_login** =] **'***job_login***'**  
+ [ **@job_login**=] **'***job_login***'**  
  Es el inicio de sesión de la cuenta de Windows en la que se ejecuta el agente. *job_login* es **nvarchar (257)**, su valor predeterminado es null. Esta cuenta de Windows siempre se utiliza para conexiones del agente con el distribuidor. Es preciso proporcionar este parámetro al crear un nuevo trabajo del Agente de instantáneas.  
   
 > [!NOTE]  
->  Para no -[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] publicadores, debe ser el mismo inicio de sesión especificado en [sp_adddistpublisher &#40; Transact-SQL &#41; ](../../relational-databases/system-stored-procedures/sp-adddistpublisher-transact-sql.md).  
+>  Para no -[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] publicadores, debe ser el mismo inicio de sesión especificado en [sp_adddistpublisher &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-adddistpublisher-transact-sql.md).  
   
- [  **@job_password** =] **'***job_password***'**  
+ [ **@job_password**=] **'***job_password***'**  
  Es la contraseña de la cuenta de Windows en la que se ejecuta el agente. *job_password* es **sysname**, no tiene ningún valor predeterminado. Es preciso proporcionar este parámetro al crear un nuevo trabajo del Agente de instantáneas.  
   
 > [!IMPORTANT]  
 >  No almacene información de autenticación en archivos de script. Para ayudar a mejorar la seguridad, se recomienda proporcionar nombres de inicio de sesión y contraseñas en tiempo de ejecución.  
   
- [  **@publisher** =] **'***publisher***'**  
+ [ **@publisher**=] **'***publisher***'**  
  Especifica un publicador que no es de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. *Publisher* es **sysname**, su valor predeterminado es null.  
   
 > [!NOTE]  
@@ -174,9 +174,9 @@ sp_addpublication_snapshot [ @publication= ] 'publication'
 ## <a name="see-also"></a>Vea también  
  [Crear una publicación](../../relational-databases/replication/publish/create-a-publication.md)   
  [Crear y aplicar una instantánea](../../relational-databases/replication/create-and-apply-the-snapshot.md)   
- [sp_addpublication &#40; Transact-SQL &#41;](../../relational-databases/system-stored-procedures/sp-addpublication-transact-sql.md)   
- [sp_changepublication_snapshot &#40; Transact-SQL &#41;](../../relational-databases/system-stored-procedures/sp-changepublication-snapshot-transact-sql.md)   
- [sp_startpublication_snapshot &#40; Transact-SQL &#41;](../../relational-databases/system-stored-procedures/sp-startpublication-snapshot-transact-sql.md)   
+ [sp_addpublication &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-addpublication-transact-sql.md)   
+ [sp_changepublication_snapshot &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-changepublication-snapshot-transact-sql.md)   
+ [sp_startpublication_snapshot &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-startpublication-snapshot-transact-sql.md)   
  [Procedimientos almacenados de replicación &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/replication-stored-procedures-transact-sql.md)  
   
   

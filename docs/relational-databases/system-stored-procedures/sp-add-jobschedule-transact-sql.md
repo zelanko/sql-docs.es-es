@@ -1,8 +1,8 @@
 ---
-title: sp_add_jobschedule (Transact-SQL) | Microsoft Docs
+title: sp_add_jobschedule (Transact-SQL) | Documentos de Microsoft
 ms.custom: ''
 ms.date: 07/28/2016
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine
 ms.service: ''
 ms.component: system-stored-procedures
@@ -25,11 +25,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: b2da9a4bf2bc1fb7e2768922b6b5dd4d93452571
-ms.sourcegitcommit: d6b1695c8cbc70279b7d85ec4dfb66a4271cdb10
+ms.openlocfilehash: e3e17e1cb49063da0916f04cac2a8c6a49e6e83c
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/10/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="spaddjobschedule-transact-sql"></a>sp_add_jobschedule (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -67,7 +67,7 @@ sp_add_jobschedule [ @job_id = ] job_id, | [ @job_name = ] 'job_name', [ @name =
 > [!NOTE]  
 >  Cualquier *job_id* o *job_name* debe especificarse, pero no pueden especificarse ambos.  
   
- [ **@name=** ] **'***name***'**  
+ [  **@name=** ] **'***nombre***'**  
  Nombre de la programación. *nombre* es **nvarchar (128)**, no tiene ningún valor predeterminado.  
   
  [ **@enabled=** ] *enabled_flag*  
@@ -143,10 +143,10 @@ sp_add_jobschedule [ @job_id = ] job_id, | [ @job_name = ] 'job_name', [ @name =
  [ **@active_end_time=***active_end_time*  
  Hora de un día entre *active_start_date* y *active_end_date* para finalizar la ejecución de trabajo. *active_end_time* es **int**, no tiene ningún valor predeterminado. La hora tiene el formato HHMMSS en un reloj de 24 horas.  
   
- [ **@schedule_id=***schedule_id***OUTPUT**  
+ [  **@schedule_id=***schedule_id***salida**  
  Número de identificación asignado a la programación si se ha creado correctamente. *schedule_id* es una variable de salida de tipo **int**, no tiene ningún valor predeterminado.  
   
- [ **@schedule_uid**= ] *schedule_uid***OUTPUT**  
+ [ **@schedule_uid**=] *valor schedule_uid *** salida**  
  Es un identificador único para la programación. *valor schedule_uid* es una variable de tipo **uniqueidentifier**.  
   
 ## <a name="return-code-values"></a>Valores de código de retorno  

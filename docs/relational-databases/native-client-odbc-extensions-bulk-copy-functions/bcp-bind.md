@@ -1,16 +1,16 @@
 ---
-title: bcp_bind | Microsoft Docs
-ms.custom: 
+title: bcp_bind | Documentos de Microsoft
+ms.custom: ''
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
-ms.service: 
+ms.service: ''
 ms.component: native-client-odbc-extensions-bulk-copy-functions
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: reference
 apiname:
 - bcp_bind
@@ -20,16 +20,17 @@ apitype: DLLExport
 helpviewer_keywords:
 - bcp_bind function
 ms.assetid: 6e335a5c-64b2-4bcf-a88f-35dc9393f329
-caps.latest.revision: 
+caps.latest.revision: 47
 author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 7bba3e1785df98b4f023d5296205503202cbc59c
-ms.sourcegitcommit: b4fd145c27bc60a94e9ee6cf749ce75420562e6b
+monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
+ms.openlocfilehash: 909c5251151a42e519778f5247665d65d101a119
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/01/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="bcpbind"></a>bcp_bind
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -129,16 +130,16 @@ bcp_bind(hdbc, szName, 0,
   
  [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] introdujo la compatibilidad con SQLXML y SQLUDT tokens de tipo de datos en el ***eDataType*** parámetro.  
  
- En la tabla siguiente enumera los tipos de datos enumerados válida y los tipos de datos ODBC C correspondientes.
+ En esta tabla se muestran los tipos de datos enumerados válidos y los tipos de datos ODBC C correspondientes.
   
 |eDataType|Tipo de C|  
 |-----------------------|------------|  
-|SQLTEXT|Char *|  
+|SQLTEXT|char *|  
 |SQLNTEXT|wchar_t *|  
-|SQLCHARACTER|Char *|  
-|SQLBIGCHAR|Char *|  
-|SQLVARCHAR|Char *|  
-|SQLBIGVARCHAR|Char *|  
+|SQLCHARACTER|char *|  
+|SQLBIGCHAR|char *|  
+|SQLVARCHAR|char *|  
+|SQLBIGVARCHAR|char *|  
 |SQLNCHAR|wchar_t *|  
 |SQLNVARCHAR|wchar_t *|  
 |SQLBINARY|unsigned char *|  
@@ -170,8 +171,8 @@ bcp_bind(hdbc, szName, 0,
 |SQLIMAGE|unsigned char *|  
 |SQLUDT|unsigned char *|  
 |SQLUNIQUEID|SQLGUID|  
-|SQLVARIANT|*Cualquier tipo de datos excepto:*<br />-texto<br />-ntext<br />-imagen<br />-   varchar(max)<br />-varbinary (max)<br />-   nvarchar(max)<br />-xml<br />-marca de tiempo|  
-|SQLXML|*Tipos de datos C admitidos:*<br />-   char*<br />-wchar_t *<br />-unsigned char *|  
+|SQLVARIANT|*Cualquier tipo de datos excepto:*<br />-   text<br />-   ntext<br />-   image<br />-   varchar(max)<br />-   varbinary(max)<br />-   nvarchar(max)<br />-   xml<br />-   timestamp|  
+|SQLXML|*Tipos de datos C admitidos:*<br />-   char*<br />-   wchar_t *<br />-   unsigned char *|  
   
  *idxServerCol*  
  Es la posición ordinal de la columna en la tabla de base de datos en la que se copian los datos. La primera columna de una tabla es la columna 1. La posición ordinal de una columna se notifica mediante [SQLColumns](../../relational-databases/native-client-odbc-api/sqlcolumns.md).  
@@ -217,9 +218,9 @@ bcp_bind(hdbc, szName, 0,
  Al llamar a [bcp_columns](../../relational-databases/native-client-odbc-extensions-bulk-copy-functions/bcp-columns.md) al usar **bcp_bind** genera un error.  
   
 ## <a name="bcpbind-support-for-enhanced-date-and-time-features"></a>Compatibilidad de bcp_bind con las características mejoradas de fecha y hora  
- Para obtener información acerca de los tipos utilizados con el *eDataType* parámetro para los tipos de fecha y hora, vea [cambios en la copia masiva para mejoradas de fecha y hora tipos &#40; OLE DB y ODBC &#41;](../../relational-databases/native-client-odbc-date-time/bulk-copy-changes-for-enhanced-date-and-time-types-ole-db-and-odbc.md).  
+ Para obtener información acerca de los tipos utilizados con el *eDataType* parámetro para los tipos de fecha y hora, vea [cambios en la copia masiva para tipos mejorada de fecha y hora &#40;OLE DB y ODBC&#41;](../../relational-databases/native-client-odbc-date-time/bulk-copy-changes-for-enhanced-date-and-time-types-ole-db-and-odbc.md).  
   
- Para obtener más información, consulte [fecha y hora mejoras &#40; ODBC &#41;](../../relational-databases/native-client-odbc-date-time/date-and-time-improvements-odbc.md).  
+ Para obtener más información, consulte [fecha y hora mejoras & #40; ODBC & #41;](../../relational-databases/native-client-odbc-date-time/date-and-time-improvements-odbc.md).  
   
 ## <a name="example"></a>Ejemplo  
   

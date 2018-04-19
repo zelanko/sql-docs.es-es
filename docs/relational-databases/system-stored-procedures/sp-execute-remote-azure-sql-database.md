@@ -1,16 +1,16 @@
 ---
 title: sp_execute_remote (base de datos de SQL Azure) | Documentos de Microsoft
-ms.custom: 
+ms.custom: ''
 ms.date: 02/01/2017
-ms.prod: 
+ms.prod: ''
 ms.prod_service: sql-database
-ms.reviewer: 
+ms.reviewer: ''
 ms.service: sql-database
 ms.component: system-stored-procedures
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 f1_keywords:
 - sp_execute_remote
@@ -19,18 +19,19 @@ helpviewer_keywords:
 - remote execution
 - queries, remote execution
 ms.assetid: ca89aa4c-c4c1-4c46-8515-a6754667b3e5
-caps.latest.revision: 
+caps.latest.revision: 17
 author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: a63fcd61563499894205c3cc55323480e8a805d7
-ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
-ms.translationtype: MT
+monikerRange: = azure-sqldw-latest || = sqlallproducts-allversions
+ms.openlocfilehash: d681bdeafa6fc39a01a41f067bf9cec7a809add6
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
+ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/15/2018
+ms.lasthandoff: 04/16/2018
 ---
-# <a name="spexecuteremote-azure-sql-database"></a>sp_execute_remote (Azure SQL Database)
+# <a name="spexecuteremote-azure-sql-database"></a>sp_execute_remote (base de datos de SQL Azure)
 [!INCLUDE[tsql-appliesto-xxxxxx-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-xxxxxx-asdb-xxxx-xxx-md.md)]
 
   Ejecuta un [!INCLUDE[tsql](../../includes/tsql-md.md)] instrucción en una sola remoto base de datos de SQL Azure o un conjunto de bases de datos que actúa como particiones en un esquema de partición horizontal.  
@@ -51,10 +52,10 @@ sp_execute_remote [ @data_source_name = ] datasourcename
 ```  
   
 ## <a name="arguments"></a>Argumentos  
- [ @data_source_name = ] *datasourcename*  
- Identifica el origen de datos externo que se ejecuta la instrucción. Vea [crear origen de datos externo &#40; Transact-SQL &#41; ](../../t-sql/statements/create-external-data-source-transact-sql.md). El origen de datos externo puede ser de tipo "RDBMS" o "SHARD_MAP_MANAGER".  
+ [ @data_source_name =] *datasourcename*  
+ Identifica el origen de datos externo que se ejecuta la instrucción. Vea [crear origen de datos externo &#40;Transact-SQL&#41;](../../t-sql/statements/create-external-data-source-transact-sql.md). El origen de datos externo puede ser de tipo "RDBMS" o "SHARD_MAP_MANAGER".  
   
- [ @stmt=] *instrucción*  
+ [ @stmt= ] *statement*  
  Es una cadena Unicode que contiene un [!INCLUDE[tsql](../../includes/tsql-md.md)] instrucción o lote. @stmt debe ser una constante Unicode o una variable Unicode. No se permite utilizar expresiones Unicode más complejas, como una concatenación de dos cadenas con el operador +. Las constantes de caracteres no están permitidas. Si se especifica una constante Unicode, debe ir precedida de un **N**. Por ejemplo, la constante Unicode **N 'sp_who'** es válido, pero la constante de caracteres **'sp_who'** no es. El tamaño de la cadena solo está limitado por la memoria disponible en el servidor de bases de datos. En los servidores de 64 bits, el tamaño de la cadena se limita a 2 GB, el tamaño máximo de **nvarchar (max)**.  
   
 > [!NOTE]  
@@ -62,7 +63,7 @@ sp_execute_remote [ @data_source_name = ] datasourcename
   
  Cada parámetro incluido en @stmt debe tener una entrada correspondiente tanto en la lista de definición de parámetros @params como en la lista de valores de parámetros.  
   
- [ @params= ] N'@*parameter_name**data_type* [ ,... *n* ] '  
+ [ @params=] N'@*parameter_name ** data_type* [,... *n* ] '  
  Es una cadena que contiene las definiciones de todos los parámetros que se han incrustado en @stmt. La cadena debe ser una constante Unicode o una variable Unicode. Cada definición de parámetro se compone de un nombre de parámetro y un tipo de datos. *n* es un marcador de posición que indica definiciones de parámetros adicionales. Todos los parámetros especificados en @stmtmust definirse en @params. Si la instrucción o el lote de [!INCLUDE[tsql](../../includes/tsql-md.md)] en @stmt no contiene parámetros, @params no es necesario. El valor predeterminado de este parámetro es NULL.  
   
  [ @param1=] '*value1*'  
@@ -78,16 +79,16 @@ sp_execute_remote [ @data_source_name = ] datasourcename
  Devuelve el conjunto de resultados de la primera instrucción de SQL.  
   
 ## <a name="permissions"></a>Permissions  
- Requiere `ALTER ANY EXTERNAL DATA SOURCE` permiso.  
+ Requiere el permiso `ALTER ANY EXTERNAL DATA SOURCE`.  
   
 ## <a name="remarks"></a>Comentarios  
  `sp_execute_remote` parámetros deben especificarse en el orden específico tal como se describe en la sección de sintaxis anterior. Si los parámetros se escriben desordenados, se producirá un mensaje de error.  
   
- `sp_execute_remote` tiene el mismo comportamiento que [EXECUTE &#40; Transact-SQL &#41; ](../../t-sql/language-elements/execute-transact-sql.md) con respecto a los lotes y el ámbito de nombres. La instrucción Transact-SQL o el lote en el sp_execute_remote  *@stmt*  parámetro no se compila hasta que se ejecuta la instrucción sp_execute_remote.  
+ `sp_execute_remote` tiene el mismo comportamiento que [EXECUTE &#40;Transact-SQL&#41; ](../../t-sql/language-elements/execute-transact-sql.md) con respecto a los lotes y el ámbito de nombres. La instrucción Transact-SQL o el lote en el sp_execute_remote *@stmt* parámetro no se compila hasta que se ejecuta la instrucción sp_execute_remote.  
   
  `sp_execute_remote` Agrega una columna adicional para el conjunto de resultados con el nombre '$ShardName' que contiene el nombre de la base de datos remoto que generó la fila.  
   
- `sp_execute_remote` Puede usar de forma similar a [sp_executesql &#40; Transact-SQL &#41; ](../../relational-databases/system-stored-procedures/sp-executesql-transact-sql.md).  
+ `sp_execute_remote` Puede usar de forma similar a [sp_executesql &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-executesql-transact-sql.md).  
   
 ## <a name="examples"></a>Ejemplos  
 ### <a name="simple-example"></a>Ejemplo sencillo  

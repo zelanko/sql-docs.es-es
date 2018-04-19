@@ -1,16 +1,16 @@
 ---
 title: CHANGETABLE (Transact-SQL) | Documentos de Microsoft
-ms.custom: 
+ms.custom: ''
 ms.date: 08/08/2016
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine, sql-database
-ms.service: 
+ms.service: ''
 ms.component: system-functions
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - CHANGETABLE_TSQL
@@ -21,16 +21,17 @@ helpviewer_keywords:
 - CHANGETABLE
 - change tracking [SQL Server], CHANGETABLE
 ms.assetid: d405fb8d-3b02-4327-8d45-f643df7f501a
-caps.latest.revision: 
+caps.latest.revision: 34
 author: rothja
 ms.author: jroth
 manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 6fa552ec5c819773153118be3b45374570b5d6e2
-ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
+monikerRange: = azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions
+ms.openlocfilehash: 16aa30d9074e2cd1508f896c1076538ff7371738
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/09/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="changetable-transact-sql"></a>CHANGETABLE (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -66,13 +67,13 @@ CHANGETABLE (
   
  Dado que el valor de last_sync_version lo obtiene la aplicación que realiza la llamada, la aplicación tiene que conservar el valor. Si la aplicación pierde este valor, será necesario reinicializar los datos.  
   
- *last_sync_version* is **bigint**. El valor debe ser escalar. Una expresión producirá un error de sintaxis.  
+ *last_sync_version* es **bigint**. El valor debe ser escalar. Una expresión producirá un error de sintaxis.  
   
  Si el valor es NULL, se devuelven todos los cambios a los que se ha realizado el seguimiento.  
   
- *last_sync_version* se debe validar para asegurarse de que no es demasiado antigua, porque algunos o todos los de la información de cambio podría haberse limpiada según el período de retención configurado para la base de datos. Para obtener más información, consulte [CHANGE_TRACKING_MIN_VALID_VERSION &#40; Transact-SQL &#41; ](../../relational-databases/system-functions/change-tracking-min-valid-version-transact-sql.md) y [modificar opciones de SET de base de datos &#40; Transact-SQL &#41; ](../../t-sql/statements/alter-database-transact-sql-set-options.md).  
+ *last_sync_version* se debe validar para asegurarse de que no es demasiado antigua, porque algunos o todos los de la información de cambio podría haberse limpiada según el período de retención configurado para la base de datos. Para obtener más información, consulte [CHANGE_TRACKING_MIN_VALID_VERSION &#40;Transact-SQL&#41; ](../../relational-databases/system-functions/change-tracking-min-valid-version-transact-sql.md) y [ALTER DATABASE SET Options &#40;Transact-SQL&#41;](../../t-sql/statements/alter-database-transact-sql-set-options.md).  
   
- VERSION *table*, { <primary_key_values> }  
+ VERSIÓN *tabla*, {< primary_key_values >}  
  Devuelve la última información de seguimiento de cambios para una fila especificada. Los valores de clave principal deben identificar la fila. <primary_key_values> identifica las columnas de clave principal y especifica los valores. Los nombres de columna de clave principal se pueden especificar en cualquier orden.  
   
  *Table*  
@@ -84,7 +85,7 @@ CHANGETABLE (
  *Valor*  
  Es el valor de la clave principal. Si hay varias columnas de clave principales, deben especificarse los valores en el mismo orden que las columnas aparecen en la *column_name* lista.  
   
- [COMO] *aliasTabla* [(*column_alias* [,...*n* ] ) ]  
+ [COMO] *aliasTabla* [(*column_alias* [,... *n* ])]  
  Proporciona los nombres de los resultados devueltos por CHANGETABLE.  
   
  *table_alias*  
@@ -105,7 +106,7 @@ CHANGETABLE (
 |-----------------|---------------|-----------------|  
 |SYS_CHANGE_VERSION|**bigint**|Valor de versión asociado al último cambio de la fila|  
 |SYS_CHANGE_CREATION_VERSION|**bigint**|Valores de versión asociados a la última operación de inserción.|  
-|SYS_CHANGE_OPERATION|**nchar(1)**|Especifica el tipo de cambio:<br /><br /> **U** = actualizar<br /><br /> **¿** = Inserción<br /><br /> **D.** = eliminar|  
+|SYS_CHANGE_OPERATION|**nchar (1)**|Especifica el tipo de cambio:<br /><br /> **U** = actualizar<br /><br /> **¿** = Inserción<br /><br /> **D.** = eliminar|  
 |SYS_CHANGE_COLUMNS|**varbinary(4100)**|Enumera las columnas que han cambiado desde last_sync_version (la básica). Tenga en cuenta que las columnas calculadas nunca se presentan como cambiadas.<br /><br /> El valor es NULL si se cumple una cualquiera de las siguientes condiciones:<br /><br /> El seguimiento de cambios de columna no está habilitado.<br /><br /> Se trata de una operación de eliminación o de inserción.<br /><br /> Se actualizaron en una única operación todas las columnas de clave no principal. No debería interpretarse directamente este valor binario. En su lugar, para interpretarlo utilice [change_tracking_is_column_in_mask ()](../../relational-databases/system-functions/change-tracking-is-column-in-mask-transact-sql.md).|  
 |SYS_CHANGE_CONTEXT|**varbinary(128)**|Cambiar la información de contexto que puede especificar opcionalmente usando la [WITH](../../relational-databases/system-functions/with-change-tracking-context-transact-sql.md) cláusula como parte de una instrucción INSERT, UPDATE o DELETE.|  
 |\<valor de columna de clave principal >|Igual que las columnas de tabla de usuario|Los valores de clave principal de la tabla con seguimiento. Estos valores identifican de manera única cada fila en la tabla de usuario.|  

@@ -1,15 +1,15 @@
 ---
-title: "Lección tutorial de Analysis Services 11: crear roles | Documentos de Microsoft"
-description: "Describe cómo crear roles en el proyecto de tutorial de Analysis Services."
+title: 'Lección tutorial de Analysis Services 11: crear roles | Documentos de Microsoft'
+description: Describe cómo crear roles en el proyecto de tutorial de Analysis Services.
 ms.prod_service: analysis-services, azure-analysis-services
 services: analysis-services
 ms.suite: pro-bi
-documentationcenter: 
+documentationcenter: ''
 author: Minewiskan
 manager: kfile
-editor: 
-tags: 
-ms.assetid: 
+editor: ''
+tags: ''
+ms.assetid: ''
 ms.service: analysis-services
 ms.devlang: NA
 ms.topic: get-started-article
@@ -17,11 +17,12 @@ ms.tgt_pltfrm: NA
 ms.workload: na
 ms.date: 02/20/2018
 ms.author: owend
-ms.openlocfilehash: b3ed6028a02b117fb6cdb87a8097d1e1eab48b0f
-ms.sourcegitcommit: 7ed8c61fb54e3963e451bfb7f80c6a3899d93322
+monikerRange: '>= sql-analysis-services-2017 || = sqlallproducts-allversions'
+ms.openlocfilehash: 15994491230e1952d699b028c96df5a972698e39
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/20/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="create-roles"></a>Crear roles
 
@@ -60,7 +61,7 @@ Este artículo forma parte de un tutorial de modelado tabular, que se debe compl
   
 4.  En la columna **Permisos** , haga clic en la lista desplegable y, después, seleccione el permiso **Lectura** . 
 
-    ![as-lesson11-new-role](../tutorial-tabular-1400/media/as-lesson11-new-role.png) 
+    ![como-lesson11-nueva-role](../tutorial-tabular-1400/media/as-lesson11-new-role.png) 
   
 5.  Opcional: Haga clic en el **miembros** ficha y, a continuación, haga clic en **agregar**. En el cuadro de diálogo **Seleccionar usuario o grupo** , especifique los usuarios o grupos de Windows de su organización que quiera incluir en el rol.  
   
@@ -79,7 +80,7 @@ Este artículo forma parte de un tutorial de modelado tabular, que se debe compl
     ```
     
     Una fórmula de filtro de fila se debe resolver como un valor booleano (TRUE o FALSE). Con esta fórmula, se especifica que sólo las filas con el valor de código de país región de "US" están visibles para el usuario.  
-    ![as-lesson11-role-filter](../tutorial-tabular-1400/media/as-lesson11-role-filter.png) 
+    ![como lesson11-rol-filtro](../tutorial-tabular-1400/media/as-lesson11-role-filter.png) 
   
 6.  Opcional: Haga clic en el **miembros** ficha y, a continuación, haga clic en **agregar**. En el cuadro de diálogo **Seleccionar usuario o grupo** , especifique los usuarios o grupos de Windows de su organización que quiera incluir en el rol.  
   

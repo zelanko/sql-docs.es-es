@@ -1,15 +1,16 @@
 ---
-title: "Tamaño de la columna | Documentos de Microsoft"
-ms.custom: 
+title: Tamaño de la columna | Documentos de Microsoft
+ms.custom: ''
 ms.date: 01/19/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: drivers
-ms.service: 
+ms.service: ''
 ms.component: odbc
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: drivers
-ms.tgt_pltfrm: 
+ms.technology:
+- drivers
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - data types [ODBC], column size
@@ -17,16 +18,16 @@ helpviewer_keywords:
 - SQL data types [ODBC], column characteristics
 - column size of data types [ODBC]
 ms.assetid: 541b83ab-b16d-4714-bcb2-3c3daa9a963b
-caps.latest.revision: "6"
+caps.latest.revision: 6
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 2bc56113933e993b5748564a1c64ef1798ed8ef1
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: 2178697aef549d86fedfa3d4bb70c8b45ba1f68e
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="column-size"></a>Tamaño de columna
 El tamaño de columna (o parámetro) de los tipos de datos numéricos se define como el número máximo de dígitos que se usan por el tipo de datos de la columna o del parámetro o la precisión de los datos. Para los tipos de carácter, ésta es la longitud en caracteres de los datos; para los tipos de datos binarios, el tamaño de la columna se define como la longitud en bytes de los datos. Para la hora, marca de tiempo y todos los tipos de datos de intervalo, este es el número de caracteres en la representación de caracteres de estos datos. El tamaño de columna definido para cada tipo de datos SQL concisa se muestra en la tabla siguiente.  
@@ -46,7 +47,7 @@ El tamaño de columna (o parámetro) de los tipos de datos numéricos se define 
 |Todos los tipos binarios [a], [b].|La longitud máxima o definida de la en bytes de la columna o parámetro. Por ejemplo, la longitud de una columna definida como Binary (10) es 10.|  
 |SQL_TYPE_DATE [c]|10 (el número de caracteres en el *aaaa-mm-dd* formato).|  
 |SQL_TYPE_TIME [c]|8 (el número de caracteres en el *hh-mm-ss* formato), o 9 + *s* (el número de caracteres en el *hh*formato [.fff...], donde *s*es la precisión de segundos).|  
-|SQL_TYPE_TIMESTAMP|16 (el número de caracteres en el *aaaa-mm-dd hh: mm* formato)<br /><br /> 19 (el número de caracteres en el *aaaa-mm-dd* *hh* formato)<br /><br /> o Administrador de configuración de<br /><br /> 20 + *s* (el número de caracteres en el *aaaa-mm-dd hh*formato [.fff...], donde *s* es la precisión de segundos).|  
+|SQL_TYPE_TIMESTAMP|16 (el número de caracteres en el *aaaa-mm-dd hh: mm* formato)<br /><br /> 19 (el número de caracteres en el *aaaa-mm-dd* *hh* formato)<br /><br /> o bien<br /><br /> 20 + *s* (el número de caracteres en el *aaaa-mm-dd hh*formato [.fff...], donde *s* es la precisión de segundos).|  
 |SQL_INTERVAL_SECOND|Donde *p* es el intervalo de precisión del principio y *s* es la precisión de segundos, *p* (si *s*= 0) o *p* + *s*+ 1 (si *s*> 0). [d]|  
 |SQL_INTERVAL_DAY_TO_SECOND|Donde *p* es el intervalo de precisión del principio y *s* es la precisión de segundos, 9 +*p* (si *s*= 0) o 10 +*p* + *s* (si *s*> 0). [d]|  
 |SQL_INTERVAL_HOUR_TO_SECOND|Donde *p* es el intervalo de precisión del principio y *s* es la precisión de segundos, 6 +*p* (si *s*= 0) o 7 +*p* + *s* (si *s*> 0). [d]|  

@@ -1,17 +1,17 @@
 ---
-title: "Execute (método) (conexión de ADO) | Documentos de Microsoft"
-ms.prod: sql-non-specified
+title: Execute (método) (conexión de ADO) | Documentos de Microsoft
+ms.prod: sql
 ms.prod_service: drivers
-ms.service: 
+ms.service: ''
 ms.component: ado
 ms.technology:
 - drivers
-ms.custom: 
+ms.custom: ''
 ms.date: 01/19/2017
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.tgt_pltfrm: ''
+ms.topic: conceptual
 apitype: COM
 f1_keywords:
 - Connection15::Execute
@@ -19,16 +19,16 @@ f1_keywords:
 helpviewer_keywords:
 - Execute method [ADO]
 ms.assetid: 03c69320-96b2-4d85-8d49-a13b13e31578
-caps.latest.revision: 
+caps.latest.revision: 13
 author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: ef36e770a2321357ed0d58153ad8e0b7493a232a
-ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
+ms.openlocfilehash: 05d1df49596da99bc98fba9cef7999772ea78f40
+ms.sourcegitcommit: bb044a48a6af9b9d8edb178dc8c8bd5658b9ff68
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/09/2018
+ms.lasthandoff: 04/18/2018
 ---
 # <a name="execute-method-ado-connection"></a>Execute (método) (conexión de ADO)
 Ejecuta la consulta especificada, la instrucción SQL, el procedimiento almacenado o la texto específico del proveedor.  
@@ -45,7 +45,7 @@ Set recordset = connection.Execute (CommandText, RecordsAffected, Options)
  Devuelve un [conjunto de registros ADO (objetos)](../../../ado/reference/ado-api/recordset-object-ado.md) referencia de objeto.  
   
 #### <a name="parameters"></a>Parámetros  
- *CommandText*  
+ *commandText*  
  A **cadena** valor que contiene la instrucción SQL, el procedimiento almacenado, una dirección URL o el texto específico del proveedor para ejecutar. **Opcionalmente,**, nombres de tabla se pueden usar pero solo si el proveedor es compatible con SQL. Por ejemplo, si un nombre de tabla "Clientes" se utiliza, ADO antepondrá automáticamente la sintaxis estándar Select de SQL para formar y pasar "SELECT * FROM Customers" como un [!INCLUDE[tsql](../../../includes/tsql_md.md)] instrucción al proveedor.  
   
  *RecordsAffected*  
@@ -54,7 +54,7 @@ Set recordset = connection.Execute (CommandText, RecordsAffected, Options)
  *Opciones*  
  Opcional. A **largo** valor que indica cómo el proveedor debe evaluar el argumento CommandText. Puede ser una máscara de bits de uno o varios [CommandTypeEnum](../../../ado/reference/ado-api/commandtypeenum.md) o [ExecuteOptionEnum](../../../ado/reference/ado-api/executeoptionenum.md) valores.  
   
- **Tenga en cuenta** Use la **ExecuteOptionEnum** valor **adExecuteNoRecords** para mejorar el rendimiento al minimizar el procesamiento interno y para las aplicaciones que se va a trasladar desde Visual Basic 6.0.  
+ **Tenga en cuenta** Use la **ExecuteOptionEnum** valor **adExecuteNoRecords** para mejorar el rendimiento al minimizar el procesamiento interno y para las aplicaciones que se va a trasladar de Visual Basic 6.0.  
   
  No utilice **adExecuteStream** con el **Execute** método de un **conexión** objeto.  
   

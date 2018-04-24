@@ -1,28 +1,22 @@
 ---
-title: Copia de seguridad y carga de información general de hardware para APS PDW
-author: barbkess
-ms.author: barbkess
+title: Copia de seguridad y la carga de hardware - almacenamiento de datos paralelos
+description: Para implementar los datos de extremo a extremo con el almacenamiento de datos paralelo (PDW) de la solución en Analytics Platform System (APS) de almacenamiento, debe crear un plan de copia de seguridad del almacenamiento de datos y cargar los datos. Utilice esta guía para adquirir y configurar servidores de copia de seguridad y cargar que satisfacen sus requisitos empresariales.
+author: mzaman1
 manager: craigg
-ms.prod: analytics-platform-system
-ms.prod_service: mpp-data-warehouse
-ms.service: ''
-ms.component: ''
-ms.suite: sql
-ms.custom: ''
-ms.technology: mpp-data-warehouse
-description: Para implementar los datos de end-to-end con almacenamiento de datos paralelos de SQL Server (PDW) de la solución en Analytics Platform System (APS) de almacenamiento, debe crear un plan de copia de seguridad del almacenamiento de datos y cargar los datos.
-ms.date: 10/20/2016
-ms.topic: article
-ms.assetid: 3a2ae046-f8d8-4a5c-b3c1-6ecee005df6c
-caps.latest.revision: 9
-ms.openlocfilehash: 8979b0d7b14f3e6b3de2834fdc800c5281d057ad
-ms.sourcegitcommit: 9351e8b7b68f599a95fb8e76930ab886db737e5f
+ms.prod: sql
+ms.technology: data-warehouse
+ms.topic: conceptual
+ms.date: 04/17/2018
+ms.author: murshedz
+ms.reviewer: martinle
+ms.openlocfilehash: 4d7f7b6b4edea9dacab7287a7936b7fd87fd7973
+ms.sourcegitcommit: 056ce753c2d6b85cd78be4fc6a29c2b4daaaf26c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/06/2018
+ms.lasthandoff: 04/19/2018
 ---
-# <a name="backup-and-loading-hardware-overview"></a>Copia de seguridad y cargar la información general de hardware
-Para implementar los datos de end-to-end con almacenamiento de datos paralelos de SQL Server (PDW) de la solución en Analytics Platform System (APS) de almacenamiento, debe crear un plan de copia de seguridad del almacenamiento de datos y cargar los datos. Utilice esta guía para adquirir y configurar servidores de copia de seguridad y cargar que satisfacen sus requisitos empresariales.  
+# <a name="backup-and-loading-hardware-overview---parallel-data-warehouse"></a>Copia de seguridad y cargar la información general de hardware - almacenamiento de datos paralelos
+Para implementar los datos de extremo a extremo con el almacenamiento de datos paralelo (PDW) de la solución en Analytics Platform System (APS) de almacenamiento, debe crear un plan de copia de seguridad del almacenamiento de datos y cargar los datos. Utilice esta guía para adquirir y configurar servidores de copia de seguridad y cargar que satisfacen sus requisitos empresariales.  
   
 ## <a name="acquire-and-configure-backup-servers"></a>Adquirir y configurar servidores de copia de seguridad  
 ![Proceso de copia de seguridad](media/backup-process.png "proceso de copia de seguridad")  

@@ -15,16 +15,17 @@ ms.topic: article
 f1_keywords:
 - sql13.ag.job.steps.f1
 ms.assetid: 231fe13e-c2dc-4149-a73e-1497e62c49e8
-caps.latest.revision: ''
+caps.latest.revision: 3
 author: stevestein
 ms.author: sstein
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: f083cf42cabbfc7ede7564524e63b1c96b00df75
-ms.sourcegitcommit: 34766933e3832ca36181641db4493a0d2f4d05c6
+monikerRange: = azuresqldb-mi-current || >= sql-server-2016 || = sqlallproducts-allversions
+ms.openlocfilehash: 63d0666ed482f2e200253f1ba4fe6b8e7b25a0c5
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/22/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="job-properties---new-job-steps-page"></a>Propiedades del trabajo - Nuevo trabajo (página Pasos)
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
@@ -34,7 +35,7 @@ ms.lasthandoff: 03/22/2018
 
 Utilice esta página para ver y organizar los pasos de trabajo para un trabajo del Agente [!INCLUDE[msCoName](../../includes/msconame_md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] .  
   
-## <a name="options"></a>.  
+## <a name="options"></a>Opciones  
 **Lista de pasos de trabajo**  
 Enumera los pasos de este trabajo.  
   

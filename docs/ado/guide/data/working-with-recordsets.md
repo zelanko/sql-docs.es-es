@@ -1,30 +1,30 @@
 ---
 title: Trabajar con conjuntos de registros | Documentos de Microsoft
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: drivers
-ms.service: 
+ms.service: ''
 ms.component: ado
 ms.technology:
 - drivers
-ms.custom: 
+ms.custom: ''
 ms.date: 01/19/2017
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.tgt_pltfrm: ''
+ms.topic: conceptual
 helpviewer_keywords:
 - Recordset object [ADO]
 ms.assetid: bdf9a56a-de4a-44de-9111-2f11ab7b16ea
-caps.latest.revision: 
+caps.latest.revision: 13
 author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: b29d34907c7e4dcccc8494101c819cca05c02066
-ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
+ms.openlocfilehash: e6e91a7596f2ad9e0e7e9cae31f28304809411f1
+ms.sourcegitcommit: bb044a48a6af9b9d8edb178dc8c8bd5658b9ff68
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/09/2018
+ms.lasthandoff: 04/18/2018
 ---
 # <a name="working-with-recordsets"></a>Trabajar con conjuntos de registros
 El **Recordset** objeto tiene características integradas que permiten reorganizar el orden de los datos en el conjunto de resultados, para buscar un registro específico en función de criterios que suministre e incluso a optimizar las operaciones de búsqueda con índices. Si estas características están disponibles para su uso depende del proveedor y en algunos casos, como el de la [índice](../../../ado/reference/ado-api/index-property.md) propiedad: la estructura del propio origen de datos.  
@@ -62,7 +62,7 @@ El **Recordset** objeto tiene características integradas que permiten reorganiz
   
  El operador de comparación del criterio puede ser"**>**"(mayor que),"**\<**" (menor que), "=" (igual), "> =" (mayor o igual que), "< =" (menor o igual que), " <> "(no igual) o"LIKE"(coincidencia de modelos).  
   
- El valor del criterio puede ser una cadena, un número de punto flotante o una fecha. Valores de cadena se delimitan con comillas simples o marcas "#" (signo de número) (por ejemplo, "estado = 'WA'" o "estado = WA #"). Los valores de fecha se delimitan con marcas de "#" (signo de número) (por ejemplo, "fecha_inicial > #7/22/&#97;").  
+ El valor del criterio puede ser una cadena, un número de punto flotante o una fecha. Valores de cadena se delimitan con comillas simples o marcas "#" (signo de número) (por ejemplo, "estado = 'WA'" o "estado = WA #"). Los valores de fecha se delimitan con marcas de "#" (signo de número) (por ejemplo, "fecha_inicial > #7/22/97 #").  
   
  Si el operador de comparación es "like", el valor de cadena puede contener un asterisco (*) para buscar una o más apariciones de cualquier carácter o una subcadena. Por ejemplo, "state like'm\*'" encuentra Maine y Massachusetts. También puede utilizar asteriscos iniciales y finales para buscar una subcadena que se encuentra dentro de los valores. Por ejemplo, "estado como '\*como\*'" encuentra Alaska, Arkansas y Massachusetts.  
   
@@ -94,7 +94,7 @@ El **Recordset** objeto tiene características integradas que permiten reorganiz
   
 -   *FieldName* debe ser un nombre de campo válido de la **conjunto de registros**. Si el nombre del campo contiene espacios, debe incluir el nombre entre corchetes.  
   
--   *Operador* debe ser uno de los siguientes:  **\<** ,  **>** ,  **\< =** ,  **>=**  ,  **<>** ,  **=** , o **como**.  
+-   *Operador* debe ser uno de los siguientes: **\<**, **>**, **\< =**, **>=** , **<>**, **=**, o **como**.  
   
 -   *Valor* es el valor con el que comparará los valores de campo (por ejemplo, `'Smith'`, `#8/24/95#`, `12.345`, o `$50.00`). Utilice comillas simples (') con las cadenas y signos de número (`#`) con las fechas. Para números, puede utilizar separadores decimales, signos de dólar y notación científica. Si *operador* es **como**, *valor* puede usar caracteres comodín. Solo el asterisco (\*) y caracteres comodín (%) que se permiten caracteres de signo de porcentaje, y deben ser el último carácter de la cadena. *Valor* no puede ser nulo.  
   

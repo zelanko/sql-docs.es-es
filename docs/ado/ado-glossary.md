@@ -1,30 +1,30 @@
 ---
 title: Glosario de ADO | Documentos de Microsoft
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: drivers
-ms.service: 
+ms.service: ''
 ms.component: ado
 ms.technology:
 - drivers
-ms.custom: 
+ms.custom: ''
 ms.date: 01/19/2017
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.tgt_pltfrm: ''
+ms.topic: conceptual
 helpviewer_keywords:
 - ADO, glossary
 ms.assetid: b0478836-4123-4357-969a-c5784fc28be5
-caps.latest.revision: 
+caps.latest.revision: 15
 author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 1b27ecc0b3905a12d453cc53d6ac941fc80708f9
-ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
+ms.openlocfilehash: d327b5e991127a533d4b599daf8c52cfb2dba1ba
+ms.sourcegitcommit: bb044a48a6af9b9d8edb178dc8c8bd5658b9ff68
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/09/2018
+ms.lasthandoff: 04/18/2018
 ---
 # <a name="ado-glossary-terms"></a>Glosario de términos de ADO
 En este tema define los términos relacionados con ADO.
@@ -47,7 +47,7 @@ En este tema define los términos relacionados con ADO.
 ## <a name="b"></a>B
  asignación de una entrada de enlace entre un campo en una tabla y una variable. En las extensiones de Visual C++ de ADO, **Recordset** campos se asignan a variables de C o C++.
 
- valor numérico de máscara de bits A destinado a una comparación de valores de bit a bit con otros valores numéricos, normalmente a opciones de marcador de parámetro o valores devueltos. Esta comparación se suele realizar mediante operadores lógicos bit a bit, como **y** y **o** en Visual Basic,  **&**  y **&#124;** en C++.
+ valor numérico de máscara de bits A destinado a una comparación de valores de bit a bit con otros valores numéricos, normalmente a opciones de marcador de parámetro o valores devueltos. Esta comparación se suele realizar mediante operadores lógicos bit a bit, como **y** y **o** en Visual Basic, **&** y **&#124;** en C++.
 
  Por ejemplo, la propiedad ADO **FieldAttributeEnum** valores pueden utilizarse como máscaras de bits para determinar los atributos de un campo. Suponga que desea determinar si un campo se puede actualizar. Puede comprobar con la siguiente expresión en Visual Basic:`Field.Attributes AND adFldUpdatable`
 
@@ -126,7 +126,7 @@ En este tema define los términos relacionados con ADO.
  propiedad de propiedades dinámicas A específicas de un proveedor de datos o el servicio de cursor. El **propiedades** colección de un objeto se rellena automáticamente con estos ("dinámicamente"). Un objeto no tiene propiedades dinámicas hasta que se conecte a un origen de datos mediante un proveedor de datos determinado. Vea también datos de proveedor, el cursor.
 
 ## <a name="e"></a>E
- Lista de una enumeración de constantes con nombre. Los valores enumerados no necesitan ser únicos. Sin embargo, el nombre de cada valor debe ser único dentro del ámbito donde se define la enumeración. En ADO, las enumeraciones se utilizan para parámetros numéricos y valores devuelven, para agregar significado al código de ADO y para proteger al programador de los valores numéricos (que pueden variar de una versión a otra). Por ejemplo, para abrir una variable static **Recordset**, use la **adOpenStatic** valor enumerado:`Recordset.Open ,,adOpenStatic`
+ Lista de una enumeración de constantes con nombre. Los valores enumerados no necesitan ser únicos. Sin embargo, el nombre de cada valor debe ser único dentro del ámbito donde se define la enumeración. En ADO, las enumeraciones se utilizan para parámetros numéricos y valores devuelven, para agregar significado al código de ADO y para proteger al programador de los valores numéricos (que pueden variar de una versión a otra). Por ejemplo, para abrir una variable static **Recordset**, use la **adOpenStatic** valor enumerado: `Recordset.Open ,,adOpenStatic`
 
  También se denomina *constante enumerada*. Vea también *constante*.
 
@@ -143,7 +143,7 @@ En este tema define los términos relacionados con ADO.
 
  jerarquía en general, una jerarquía es una estructura de clasificación con una parte superior de nivel y niveles subordinados. En ADO, jerárquica **conjuntos de registros** se usan para representar la relación de elementos primarios y secundarios entre un registro y un capítulo. También en ADO, **registro** y **flujo** objetos se pueden usar para tener acceso a las estructuras de árbol jerárquica, como una carpeta y sus documentos. ADO MD también incluye **jerarquía** objetos para representar una relación entre los niveles de una dimensión en un cubo OLAP. Vea también conjuntos de registros jerárquicos, relación de elementos primarios y secundarios, capítulo y árbol.
 
-## <a name="i-l"></a>I-L
+## <a name="i-l"></a>-L
  Un conjunto ISAPI (Internet Server Application Programming Interface) de funciones para servidores de Internet, como un Windows NT® Server o Windows 2000 Server ejecuta Microsoft® Internet Information Services (IIS).
 
  La clave de una o varias columnas en una tabla que identifican de forma única una fila; a menudo se utiliza para indizar una tabla.

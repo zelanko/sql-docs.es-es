@@ -1,31 +1,31 @@
 ---
-title: "Sección SQL del archivo de personalización | Documentos de Microsoft"
-ms.prod: sql-non-specified
+title: Sección SQL del archivo de personalización | Documentos de Microsoft
+ms.prod: sql
 ms.prod_service: drivers
-ms.service: 
+ms.service: ''
 ms.component: ado
 ms.technology:
 - drivers
-ms.custom: 
+ms.custom: ''
 ms.date: 01/19/2017
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.tgt_pltfrm: ''
+ms.topic: conceptual
 helpviewer_keywords:
 - SQL section in RDS [ADO]
 - customization file in RDS [ADO]
 ms.assetid: e65c2871-9986-44ff-b8b7-7f5eda91b3fa
-caps.latest.revision: 
+caps.latest.revision: 14
 author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 06b3a79e97c50df8c7eed17b1343030ca2280426
-ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
+ms.openlocfilehash: 6294ab601f527527cf69ca017e3643dfe98a1336
+ms.sourcegitcommit: bb044a48a6af9b9d8edb178dc8c8bd5658b9ff68
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/09/2018
+ms.lasthandoff: 04/18/2018
 ---
 # <a name="customization-file-sql-section"></a>Sección SQL del archivo de personalización
 El **sql** sección puede contener una nueva cadena SQL que reemplaza la cadena de comandos de cliente. Si no hay ninguna cadena de SQL en la sección, se omitirá la sección.  
@@ -49,13 +49,13 @@ SQL = " "
 ## <a name="syntax"></a>Sintaxis  
  Un entrada de cadena SQL de reemplazo tiene el formato:  
   
- **SQL=**   
- ***sqlString***  
+ **SQL =**   
+ ***SqlString***  
   
 |Parte|Description|  
 |----------|-----------------|  
 |**SQL**|Una cadena literal que indica que esta es una entrada de la sección SQL.|  
-|***sqlString***|Una cadena SQL que reemplaza la cadena de cliente.|  
+|***SqlString***|Una cadena SQL que reemplaza la cadena de cliente.|  
   
 ## <a name="see-also"></a>Vea también  
  [Sección Connect del archivo de personalización](../../../ado/guide/remote-data-service/customization-file-connect-section.md)   

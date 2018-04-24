@@ -1,6 +1,6 @@
 ---
 title: Proveedor Microsoft OLE DB para SQL Server | Documentos de Microsoft
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: drivers
 ms.service: ''
 ms.component: ado
@@ -11,7 +11,7 @@ ms.date: 01/19/2017
 ms.reviewer: ''
 ms.suite: sql
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - providers [ADO], OLE DB provider for SQL Server
 - OLE DB provider for SQL Server [ADO]
@@ -22,11 +22,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.workload: Active
-ms.openlocfilehash: 69e32ae7ddb254e18d0789f22bb6471da17a0c5e
-ms.sourcegitcommit: 9f4330a4b067deea396b8567747a6771f35e6eee
+ms.openlocfilehash: 2ec6a57af7dcc0e964445800823aef1c13aa1a4a
+ms.sourcegitcommit: bb044a48a6af9b9d8edb178dc8c8bd5658b9ff68
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/30/2018
+ms.lasthandoff: 04/18/2018
 ---
 # <a name="microsoft-ole-db-provider-for-sql-server-overview"></a>Proveedor Microsoft OLE DB para Introducción a SQL Server
 El proveedor Microsoft OLE DB para SQL Server, SQLOLEDB, permite que ADO tener acceso a Microsoft SQL Server.
@@ -217,7 +217,7 @@ EXECUTE SalesByCategory 'Produce', '1995'
 |Orden de acceso|DBPROP_ACCESSORDER|
 |Bloquear objetos de almacenamiento|DBPROP_BLOCKINGSTORAGEOBJECTS|
 |Tipo de marcador|DBPROP_BOOKMARKTYPE|
-|Bookmarkable|DBPROP_IROWSETLOCATE|
+|Admite marcadores|DBPROP_IROWSETLOCATE|
 |Cambiar filas insertadas|DBPROP_CHANGEINSERTEDROWS|
 |Privilegios de columna|DBPROP_COLUMNRESTRICT|
 |Notificación de conjunto de columnas|DBPROP_NOTIFYCOLUMNSET|
@@ -290,7 +290,7 @@ EXECUTE SalesByCategory 'Produce', '1995'
 |Ruta de acceso base|SSPROP_STREAM_BASEPATH|
 |Bloquear objetos de almacenamiento|DBPROP_BLOCKINGSTORAGEOBJECTS|
 |Tipo de marcador|DBPROP_BOOKMARKTYPE|
-|Bookmarkable|DBPROP_IROWSETLOCATE|
+|Admite marcadores|DBPROP_IROWSETLOCATE|
 |Cambiar filas insertadas|DBPROP_CHANGEINSERTEDROWS|
 |Privilegios de columna|DBPROP_COLUMNRESTRICT|
 |Notificación de conjunto de columnas|DBPROP_NOTIFYCOLUMNSET|

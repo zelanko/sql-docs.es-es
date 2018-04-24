@@ -1,33 +1,33 @@
 ---
 title: FieldAttributeEnum | Documentos de Microsoft
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: drivers
-ms.service: 
+ms.service: ''
 ms.component: ado
 ms.technology:
 - drivers
-ms.custom: 
+ms.custom: ''
 ms.date: 01/19/2017
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.tgt_pltfrm: ''
+ms.topic: conceptual
 apitype: COM
 f1_keywords:
 - FieldAttributeEnum
 helpviewer_keywords:
 - FieldAttributeEnum enumeration [ADO]
 ms.assetid: 6e34d886-005a-40dc-bd5c-6adcbf81e5cd
-caps.latest.revision: 
+caps.latest.revision: 12
 author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: e2b737b179a47aa28196bf8ff334dfe3256f91ef
-ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
+ms.openlocfilehash: eeeeea72ae2a0e3fc0ca777b16e70d1120f9d247
+ms.sourcegitcommit: bb044a48a6af9b9d8edb178dc8c8bd5658b9ff68
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/09/2018
+ms.lasthandoff: 04/18/2018
 ---
 # <a name="fieldattributeenum"></a>FieldAttributeEnum
 Especifica uno o más atributos de un [campo](../../../ado/reference/ado-api/field-object.md) objeto.  
@@ -49,7 +49,7 @@ Especifica uno o más atributos de un [campo](../../../ado/reference/ado-api/fie
 |**adFldRowID**|0x100|Indica que el campo contiene un identificador de fila persistente que no se puede escribir y no tiene ningún valor significativo salvo para identificar la fila (por ejemplo, un número de registro, identificador único y así sucesivamente).|  
 |**adFldRowVersion**|0x200|Indica que el campo contiene algún tipo de marca de hora o fecha usada para realizar el seguimiento de las actualizaciones.|  
 |**adFldUnknownUpdatable**|0x8|Indica que el proveedor no puede determinar si puede escribir en el campo.|  
-|**adFldUnspecified**|-1 0xFFFFFFFF|Indica que el proveedor no especifica los atributos del campo.|  
+|**adFldUnspecified**|-0xFFFFFFFF 1|Indica que el proveedor no especifica los atributos del campo.|  
 |**adFldUpdatable**|0x4|Indica que puede escribir en el campo.|  
   
 ## <a name="adowfc-equivalent"></a>Equivalente ADO/WFC  

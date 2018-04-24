@@ -1,27 +1,21 @@
 ---
-title: Cargador de la línea de comandos para el almacenamiento de datos paralelo de dwloader
-author: barbkess
-ms.author: barbkess
+title: dwloader cargador de línea de comandos - almacenamiento de datos paralelos | Documentos de Microsoft
+description: dwloader es una herramienta de línea de comandos de almacenamiento de datos paralelo (PDW) que carga filas de la tabla de forma masiva en una tabla existente.
+author: mzaman1
 manager: craigg
-ms.prod: analytics-platform-system
-ms.prod_service: mpp-data-warehouse
-ms.service: ''
-ms.component: ''
-ms.suite: sql
-ms.custom: ''
-ms.technology: mpp-data-warehouse
-description: '**dwloader** es una herramienta de línea de comandos de almacenamiento de datos paralelo (PDW) que carga filas de la tabla de forma masiva en una tabla existente.'
-ms.date: 11/04/2016
-ms.topic: article
-ms.assetid: f79b8354-fca5-41f7-81da-031fc2570a7c
-caps.latest.revision: 90
-ms.openlocfilehash: 83d04928aa0c8f7fe0156f557466edccc36470dd
-ms.sourcegitcommit: 9351e8b7b68f599a95fb8e76930ab886db737e5f
+ms.prod: sql
+ms.technology: data-warehouse
+ms.topic: conceptual
+ms.date: 04/17/2018
+ms.author: murshedz
+ms.reviewer: martinle
+ms.openlocfilehash: d5d8ead82525266148729f9773e47b933def349e
+ms.sourcegitcommit: 056ce753c2d6b85cd78be4fc6a29c2b4daaaf26c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/06/2018
+ms.lasthandoff: 04/19/2018
 ---
-# <a name="dwloader-command-line-loader"></a>Cargador de la línea de comandos de dwloader
+# <a name="dwloader-command-line-loader-for-parallel-data-warehouse"></a>Cargador de la línea de comandos para el almacenamiento de datos paralelo de dwloader
 **dwloader** es una herramienta de línea de comandos de almacenamiento de datos paralelo (PDW) que carga filas de la tabla de forma masiva en una tabla existente. Cuando se cargan filas, puede agregar todas las filas al final de la tabla (*modo append* o *fastappend modo*), anexar filas nuevas y actualizar filas existentes (*upsert modo*), o todos los elimine existente filas antes de la carga y, a continuación, insertar todas las filas en una tabla vacía (*recargar modo*).  
   
 **Proceso para cargar datos**  
@@ -46,7 +40,7 @@ ms.lasthandoff: 04/06/2018
     See [Install dwloader Command-Line Loader &#40;SQL Server PDW&#41;](install-dwloader-command-line-loader-sql-server-pdw.md). 
 --> 
   
-5.  Run **dwloader**.  
+5.  Ejecutar **dwloader**.  
   
     Inicie sesión en el servidor de carga y ejecuta el archivo ejecutable **dwloader.exe** con las opciones de línea de comandos adecuadas.  
   
@@ -223,14 +217,14 @@ Para los archivos de ASCII, valores NULL se representa mediante la colocación d
 **-e** *character_encoding*  
 Especifica un tipo de codificación de caracteres para los datos que va a cargarse desde el archivo de datos. Opciones son ASCII (valor predeterminado), UTF8, UTF16 o UTF16BE, donde UTF16 es poco endian y UTF16BE es big endian. Estas opciones distinguen mayúsculas de minúsculas.  
   
-**-t** *field_delimiter*  
+**-t** *delimitadordecampo*  
 El delimitador para cada campo (columna) en la fila. El delimitador de campo es uno o varios de estos caracteres de escape de ASCII o valores hexadecimales de ASCII...  
   
 |Nombre|Carácter de escape|Carácter hexadecimal|  
 |--------|--------------------|-----------------|  
-|Pestaña|\t|0x09|  
-|Retorno de carro (CR)|\r|0x0d|  
-|Salto de línea (LF)|\n|0x0a|  
+|Pestaña|\t|0 x 09|  
+|Retorno de carro (CR)|\r|0x0D|  
+|Salto de línea (LF)|\n|0x0A|  
 |CRLF|\r\n|0x0d0x0a|  
 |Coma|','|0x2c|  
 |Comilla doble|\\"|0x22|  
@@ -248,9 +242,9 @@ Ejemplos:
   
 \t -t  
   
--t '~|~'  
+-t ' ~ | ~'  
   
-**-r** *row_delimiter*  
+**-r** *delimitadordefilas*  
 El delimitador para cada fila del archivo de datos de origen. El delimitador de fila es uno o más valores ASCII.  
   
 Para especificar un retorno de carro (CR), avance de línea (LF) o carácter de tabulación como delimitador, puede usar los caracteres de escape (\r, \n, \t) ni sus valores hexadecimales (0 x, 0D, 09). Para especificar caracteres especiales como delimitadores, utilice su valor hexadecimal.  
@@ -282,7 +276,7 @@ Ejemplos:
   
 -s *  
   
--s 0x22  
+-s 0 x 22  
   
 < fixed_width_column_options>  
 Las opciones para un archivo de datos de origen que tiene columnas de longitud fija. De forma predeterminada, *source_data_file_name* contiene caracteres ASCII en columnas de longitud variable.  
@@ -300,9 +294,9 @@ Este archivo debe residir en el servidor de carga. La ruta de acceso puede ser u
   
 En el ejemplo se ha corregido el archivo de configuración de ancho:  
   
-SalesCode=3  
+SalesCode = 3  
   
-SalesID=10  
+SalesID = 10  
   
 Ejemplo líneas *source_data_file_name*:  
   
@@ -319,7 +313,7 @@ Especifica un tipo de codificación de caracteres para los datos que va a cargar
   
 No se admiten columnas de ancho fijo cuando – e es UTF8.  
   
-**-r** *row_delimiter*  
+**-r** *delimitadordefilas*  
 El delimitador para cada fila del archivo de datos de origen. El delimitador de fila es uno o más valores ASCII.  
   
 Para especificar un retorno de carro (CR), avance de línea (LF) o carácter de tabulación como delimitador, puede usar los caracteres de escape (\r, \n, \t) ni sus valores hexadecimales (0 x, 0D, 09). Para especificar caracteres especiales como delimitadores, utilice su valor hexadecimal.  
@@ -415,7 +409,7 @@ Varias columnas deben ser separados por comas sin espacios, o separados por coma
   
 Si dos filas en la tabla de origen tienen valores de clave coincidentes de mezcla, sus filas correspondientes deben ser idénticos.  
   
-reload  
+Volver a cargar  
 El cargador trunca la tabla de destino antes de insertar los datos de origen.  
   
 **-b** *batchsize*  
@@ -446,7 +440,7 @@ Cuando se usa con el valor de -rt, el cargador detiene la carga cuando el recuen
   
 Cuando se usa con porcentaje -rt, el cargador calcula el porcentaje a intervalos (-opción de rs). Por lo tanto, puede superar el porcentaje de filas con errores *reject_value*.  
   
-**-rs** *reject_sample_size*  
+**rs -** *reject_sample_size*  
 Usar con el `-rt percentage` opción para especificar las comprobaciones de porcentaje incremental. Por ejemplo, si reject_sample_size es 1000, el cargador de calcular el porcentaje de filas con errores después de que ha intentado cargar 1000 filas. Vuelve a calcular el porcentaje de filas con errores después de intentar cargar cada 1000 filas adicionales.  
   
 **-c**  
@@ -553,16 +547,16 @@ Anexar se puede ejecutar en modo multi-transaccional (mediante el argumento – 
   
 El modo append carga datos en dos fases. La primera fase carga los datos del archivo de origen en una tabla de ensayo simultáneamente (fragmentación puede producir). Segunda fase carga datos de la tabla de ensayo para la tabla final. La segunda fase se realiza un **INSERT INTO... Seleccione WITH (TABLOCK)** operación. En la tabla siguiente se muestra el comportamiento de bloqueo en la tabla final y comportamiento del registro cuando se usa de modo append:  
   
-|Tipo de tabla|Multi-transaction<br />Modo (-m)|Tabla está vacía|Simultaneidad compatibles|Registro|  
+|Tipo de tabla|Varias transacciones<br />Modo (-m)|Tabla está vacía|Simultaneidad compatibles|Registro|  
 |--------------|-----------------------------------|------------------|-------------------------|-----------|  
 |Montón|Sí|Sí|Sí|mínimo|  
 |Montón|Sí|No|Sí|mínimo|  
 |Montón|no|Sí|no|mínimo|  
 |Montón|no|No|no|mínimo|  
-|Cl|Sí|Sí|no|mínimo|  
-|Cl|Sí|No|Sí|Completa|  
-|Cl|no|Sí|no|mínimo|  
-|Cl|no|No|Sí|Completa|  
+|CL|Sí|Sí|no|mínimo|  
+|CL|Sí|No|Sí|Completa|  
+|CL|no|Sí|no|mínimo|  
+|CL|no|No|Sí|Completa|  
   
 Se muestra en la tabla anterior **dwloader** utilizando el modo de anexar cargar en un montón o una tabla de índice agrupado (CI), con o sin la marca múltiples transaccional y cargar en una tabla vacía o una tabla no vacía. Comportamiento de cada combinación de este tipo de carga de registro y el bloqueo se muestra en la tabla. Por ejemplo, cargar fase (2) con el modo append en un índice clúster sin modo multi-transaccional y en vacío tabla tendrá PDW cree un bloqueo exclusivo en la tabla y el registro es mínimo. Esto significa que un cliente no pueda cargar (2) fase y consultas simultáneamente en una tabla vacía. Sin embargo, cuando se carga con la misma configuración en una tabla no está vacía, PDW no emitirá un bloqueo exclusivo en la tabla y la simultaneidad es posible. Por desgracia, se produce un registro completo, ralentizan el proceso.  
   

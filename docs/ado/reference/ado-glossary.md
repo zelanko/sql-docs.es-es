@@ -5,12 +5,12 @@ ms.date: 01/19/2017
 ms.reviewer: ''
 ms.suite: sql
 ms.tgt_pltfrm: ''
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: drivers
 ms.service: ''
 ms.component: ado
 ms.technology: drivers
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - ADO, glossary
 ms.assetid: b0478836-4123-4357-969a-c5784fc28be5
@@ -18,11 +18,11 @@ caps.latest.revision: 15
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: f24e579d2cd1802b42ce4ae2cbc2d8b5b8e447e6
-ms.sourcegitcommit: 8f1d1363e18e0c32ff250617ab6cb2da2147bf8e
+ms.openlocfilehash: 6d53fe64298c22c145be537221aa20425bce0e51
+ms.sourcegitcommit: bb044a48a6af9b9d8edb178dc8c8bd5658b9ff68
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/03/2018
+ms.lasthandoff: 04/18/2018
 ---
 # <a name="ado-glossary"></a>Glosario de ADO
 En este tema define los términos relacionados con ADO.  
@@ -53,7 +53,7 @@ En este tema define los términos relacionados con ADO.
  entrada de enlace  
  Una asignación entre un campo en una tabla y una variable. En las extensiones de Visual C++ de ADO, **Recordset** campos se asignan a variables de C o C++.  
   
- bitmask  
+ Máscara de bits  
  Un valor numérico destinado a una comparación de valores de bit a bit con otros valores numéricos, normalmente para marcar opciones en parámetros o valores devueltos. Esta comparación se suele realizar mediante operadores lógicos bit a bit, como **y** y **o** en Visual Basic, **&** y **&#124;** en C++.  
   
  Por ejemplo, la propiedad ADO **FieldAttributeEnum** valores pueden utilizarse como máscaras de bits para determinar los atributos de un campo. Suponga que desea determinar si un campo se puede actualizar. Puede comprobar con la siguiente expresión en Visual Basic:`Field.Attributes AND adFldUpdatable`  
@@ -78,7 +78,7 @@ En este tema define los términos relacionados con ADO.
   
  Columnas de capítulo permiten definir una *elementos primarios y secundarios* relación donde la *primario* es el **Recordset** que contiene la columna de capítulo y  *secundario* es el **Recordset** representado por el capítulo.  
   
- chapter-alias  
+ alias de capítulo  
  Un alias que hace referencia a la columna anexada al elemento primario.  
   
  juego de caracteres  
@@ -187,7 +187,7 @@ En este tema define los términos relacionados con ADO.
  jerarquía  
  En general, una jerarquía es una estructura con una nivel superior de nivel y niveles subordinados. En ADO, jerárquica **conjuntos de registros** se usan para representar la relación de elementos primarios y secundarios entre un registro y un capítulo. También en ADO, **registro** y **flujo** objetos se pueden usar para tener acceso a las estructuras de árbol jerárquica, como una carpeta y sus documentos. ADO MD también incluye **jerarquía** objetos para representar una relación entre los niveles de una dimensión en un cubo OLAP. Vea también conjuntos de registros jerárquicos, relación de elementos primarios y secundarios, capítulo y árbol.  
   
-## <a name="i-l"></a>I-L  
+## <a name="i-l"></a>-L  
  ISAPI (interfaz de programación de aplicaciones de servidor de Internet)  
  Un conjunto de funciones para servidores de Internet, como un Windows NT® Server o Windows 2000 Server ejecuta Microsoft® Internet Information Services (IIS).  
   

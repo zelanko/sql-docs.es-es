@@ -1,32 +1,32 @@
 ---
 title: Recuperar conjuntos de resultados en secuencias | Documentos de Microsoft
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: drivers
-ms.service: 
+ms.service: ''
 ms.component: ado
 ms.technology:
 - drivers
-ms.custom: 
+ms.custom: ''
 ms.date: 01/19/2017
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.tgt_pltfrm: ''
+ms.topic: conceptual
 helpviewer_keywords:
 - streams [ADO], retrieving query results
 - query results into stream [ADO]
 - retrieving results into stream [ADO]
 ms.assetid: 996c1321-c926-4f57-8297-85c8c20de974
-caps.latest.revision: 
+caps.latest.revision: 12
 author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 34f1cc4730f984427d207162694c68e3641be575
-ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
+ms.openlocfilehash: 16d1518d2ddbe5accc6b55fdc0b778a6381e1a5f
+ms.sourcegitcommit: bb044a48a6af9b9d8edb178dc8c8bd5658b9ff68
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/09/2018
+ms.lasthandoff: 04/18/2018
 ---
 # <a name="retrieving-resultsets-into-streams"></a>Recuperar conjuntos de resultados en secuencias
 En lugar de recibir los resultados en tradicional **Recordset** objeto ADO en su lugar, puede recuperar los resultados de la consulta en una secuencia. La propiedad ADO **flujo** objeto (u otros objetos que admiten el COM **IStream** interfaz, como ASP **solicitar** y **respuesta** objetos ) puede usarse para contener estos resultados. Un uso de esta característica es para recuperar los resultados en formato XML. Con SQL Server, por ejemplo, los resultados XML pueden devolverse de varias maneras, por ejemplo, mediante la cláusula FOR XML con una consulta SELECT de SQL o utilizando una consulta XPath.  

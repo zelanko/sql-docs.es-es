@@ -1,32 +1,32 @@
 ---
-title: "Ejemplo (VBScript) del método Delete | Documentos de Microsoft"
-ms.prod: sql-non-specified
+title: Ejemplo (VBScript) del método Delete | Documentos de Microsoft
+ms.prod: sql
 ms.prod_service: drivers
-ms.service: 
+ms.service: ''
 ms.component: ado
 ms.technology:
 - drivers
-ms.custom: 
+ms.custom: ''
 ms.date: 01/19/2017
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.tgt_pltfrm: ''
+ms.topic: conceptual
 dev_langs:
 - VB
 helpviewer_keywords:
 - Delete method [ADO], VBScript example
 ms.assetid: 78935d6d-1c1a-4306-a83a-1763210c69f9
-caps.latest.revision: 
+caps.latest.revision: 12
 author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 7cc51b8cc985235d01ca572bb4b95e3e3b4c6055
-ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
+ms.openlocfilehash: 91f399394373b7fac5972653575d95037767b1d5
+ms.sourcegitcommit: bb044a48a6af9b9d8edb178dc8c8bd5658b9ff68
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/09/2018
+ms.lasthandoff: 04/18/2018
 ---
 # <a name="delete-method-example-vbscript"></a>Eliminar el ejemplo del método (VBScript)
 Este ejemplo se utiliza la [eliminar](../../../ado/reference/ado-api/delete-method-ado-recordset.md) método para quitar un registro especificado de un [conjunto de registros](../../../ado/reference/ado-api/recordset-object-ado.md).  

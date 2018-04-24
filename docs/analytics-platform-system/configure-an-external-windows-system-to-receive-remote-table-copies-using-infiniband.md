@@ -1,28 +1,21 @@
 ---
-title: Configurar el sistema externo de Windows para obtener copias de la tabla remota InfiniBand PDW
-author: barbkess
-ms.author: barbkess
+title: Configurar Windows para que reciben una copia de la tabla remota - almacenamiento de datos paralelos | Documentos de Microsoft
+description: Describe cómo adquirir y configurar un sistema de Windows no sea de dispositivo conectado con la red InfiniBand para su uso con la característica de copia de la tabla remota en almacenamiento de datos paralelos. El sistema de Windows va a hospedar la base de datos de SQL Server que recibe la copia de la tabla remota de una base de datos de SQL Server PDW. Es comprado por separado en el dispositivo y conectado a la red InfiniBand de dispositivo.
+author: mzaman1
 manager: craigg
-ms.prod: analytics-platform-system
-ms.prod_service: mpp-data-warehouse
-ms.service: ''
-ms.component: ''
-ms.technology: mpp-data-warehouse
-ms.custom: ''
-ms.date: 01/13/2017
-ms.reviewer: na
-ms.suite: sql
-ms.tgt_pltfrm: na
-ms.topic: article
-ms.assetid: f866890b-cad5-49ac-bbeb-848bfb26c2d5
-caps.latest.revision: 11
-ms.openlocfilehash: 32875c5c7b93f47dbf9dbcc01c621df402ab782d
-ms.sourcegitcommit: 9351e8b7b68f599a95fb8e76930ab886db737e5f
+ms.prod: sql
+ms.technology: data-warehouse
+ms.topic: conceptual
+ms.date: 04/17/2018
+ms.author: murshedz
+ms.reviewer: martinle
+ms.openlocfilehash: ed7122f497b0bdebd893eec75606bbb6382e9a73
+ms.sourcegitcommit: 056ce753c2d6b85cd78be4fc6a29c2b4daaaf26c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/06/2018
+ms.lasthandoff: 04/19/2018
 ---
-# <a name="configure-an-external-windows-system-to-receive-remote-table-copies-using-infiniband"></a>Configurar un sistema Windows externo para recibir copias de la tabla remota con InfiniBand
+# <a name="configure-an-external-windows-system-to-receive-remote-table-copies-using-infiniband---parallel-data-warehouse"></a>Configurar un sistema externo de Windows para recibir copias de la tabla remota con InfiniBand - almacenamiento de datos paralelos
 Describe cómo adquirir y configurar un sistema de Windows no sea de dispositivo conectado con la red InfiniBand para su uso con la característica de copia de la tabla remota en PDW de SQL Server. El sistema de Windows va a hospedar la base de datos de SQL Server que recibe la copia de la tabla remota de una base de datos de SQL Server PDW. Es comprado por separado en el dispositivo y conectado a la red InfiniBand de dispositivo.  
   
 > [!NOTE]  

@@ -1,32 +1,32 @@
 ---
 title: Las direcciones URL absolutas y relativas | Documentos de Microsoft
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: drivers
-ms.service: 
+ms.service: ''
 ms.component: ado
 ms.technology:
 - drivers
-ms.custom: 
+ms.custom: ''
 ms.date: 01/19/2017
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.tgt_pltfrm: ''
+ms.topic: conceptual
 helpviewer_keywords:
 - relative URLs [ADO]
 - absolute URLs [ADO]
 - URLs [ADO]
 ms.assetid: 6a34a7ef-50cc-4c3d-82f7-106b9a8f3caf
-caps.latest.revision: 
+caps.latest.revision: 12
 author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 3564236b7b6bee2ae21f1b78a4275fb615aa2e4e
-ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
+ms.openlocfilehash: 2482386f131b7e49134b5fdcbfaae7d0ec339b74
+ms.sourcegitcommit: bb044a48a6af9b9d8edb178dc8c8bd5658b9ff68
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/09/2018
+ms.lasthandoff: 04/18/2018
 ---
 # <a name="absolute-and-relative-urls"></a>Direcciones URL absolutas y relativas
 Una dirección URL especifica la ubicación de un destino almacenado en un equipo local o en red. El destino puede ser un archivo, directorio, página HTML, imagen, programa y así sucesivamente*.*  
@@ -39,7 +39,7 @@ Una dirección URL especifica la ubicación de un destino almacenado en un equip
   
  Una dirección URL relativa normalmente consta solo de la *ruta de acceso*y, opcionalmente, el *recursos*, pero no *esquema* o *server*. Las tablas siguientes definen las partes individuales del formato de dirección URL completa.  
   
- *scheme*  
+ *Esquema*  
  Especifica cómo el *recursos* se tiene acceso.  
   
  *servidor*  
@@ -48,7 +48,7 @@ Una dirección URL especifica la ubicación de un destino almacenado en un equip
  *path*  
  Especifica la secuencia de directorios que conducen al destino. Si *recursos* es se omite, el destino es el último directorio en *ruta de acceso*.  
   
- *resource*  
+ *Recursos*  
  Si se incluye, *recursos* es el destino, y normalmente es el nombre de un archivo. Puede ser un *archivo simple,* que contiene una secuencia binaria única de bytes, o un *documentos estructurados,* que contiene uno o varios almacenamientos y secuencias binarias de bytes.  
   
 ## <a name="url-scheme-registration"></a>Registro del esquema de direcciones URL  

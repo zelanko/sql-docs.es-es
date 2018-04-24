@@ -1,28 +1,21 @@
 ---
-title: Sesiones de usuario (SQL Server PDW)
-author: barbkess
-ms.author: barbkess
+title: Las sesiones de usuario en el sistema de la plataforma de análisis | Documentos de Microsoft"
+description: Sesiones de usuario en almacenamiento de datos paralelos del sistema de la plataforma de análisis.
+author: mzaman1
 manager: craigg
-ms.prod: analytics-platform-system
-ms.prod_service: mpp-data-warehouse
-ms.service: ''
-ms.component: ''
-ms.technology: mpp-data-warehouse
-ms.custom: ''
-ms.date: 01/13/2017
-ms.reviewer: na
-ms.suite: sql
-ms.tgt_pltfrm: na
-ms.topic: article
-ms.assetid: 0425cef2-de4d-4f42-91c5-cb1cd4bb1265
-caps.latest.revision: 15
-ms.openlocfilehash: 4ed0fab1fae1fe2d1a5a3ebb961d6c4d4747764f
-ms.sourcegitcommit: 9351e8b7b68f599a95fb8e76930ab886db737e5f
+ms.prod: sql
+ms.technology: data-warehouse
+ms.topic: conceptual
+ms.date: 04/17/2018
+ms.author: murshedz
+ms.reviewer: martinle
+ms.openlocfilehash: fc2e759d77953f739d77f6ad4eb371cc9747efdc
+ms.sourcegitcommit: 056ce753c2d6b85cd78be4fc6a29c2b4daaaf26c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/06/2018
+ms.lasthandoff: 04/19/2018
 ---
-# <a name="user-sessions"></a>Sesiones de usuario
+# <a name="user-sessions-in-analytics-platform-system"></a>Sesiones de usuario en el sistema de la plataforma de análisis
 Un inicio de sesión con los permisos adecuados puede administrar las sesiones de todos los inicios de sesión en un equipo de SQL Server PDW, incluidos realizar estas acciones:  
   
 -   Ver las sesiones actuales en el dispositivo, incluidas las sesiones activas e inactivas.  

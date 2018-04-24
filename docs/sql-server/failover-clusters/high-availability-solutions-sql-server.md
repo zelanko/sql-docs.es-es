@@ -1,15 +1,16 @@
 ---
 title: Soluciones de alta disponibilidad (SQL Server) | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 05/19/2016
 ms.prod: sql-non-specified
 ms.prod_service: database-engine
-ms.service: 
+ms.service: ''
 ms.component: failover-clusters
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: dbe-high-availability
-ms.tgt_pltfrm: 
+ms.technology:
+- dbe-high-availability
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - high availability [SQL Server], solutions
@@ -18,19 +19,20 @@ helpviewer_keywords:
 - availability [SQL Server]
 - server availability [SQL Server]
 ms.assetid: b2eda634-0f8e-4703-801b-7ba895544ff5
-caps.latest.revision: "84"
+caps.latest.revision: 84
 author: MikeRayMSFT
 ms.author: mikeray
-manager: jhubbard
+manager: craigg
 ms.workload: Active
-ms.openlocfilehash: 7af2a4035d3c528189cca77a4506e98db1acd93c
-ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.openlocfilehash: 2e8a25e4cca326edaa40fb850f8b5deed0a175bb
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/05/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="high-availability-solutions-sql-server"></a>Soluciones de alta disponibilidad (SQL Server)
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] En este tema se presentan varias soluciones de alta disponibilidad de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] que mejoran la disponibilidad de los servidores o las bases de datos. Una solución de alta disponibilidad enmascara los efectos de un error de hardware o software y mantiene la disponibilidad de las aplicaciones a fin de minimizar el tiempo de inactividad que perciben los usuarios.    
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+  En este tema se presentan varias soluciones de alta disponibilidad de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] que mejoran la disponibilidad de los servidores o las bases de datos. Una solución de alta disponibilidad enmascara los efectos de un error de hardware o software y mantiene la disponibilidad de las aplicaciones a fin de minimizar el tiempo de inactividad que perciben los usuarios.    
     
    
 >  **Nota:** ¿Quiere saber qué ediciones de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] admiten una determinada solución de alta disponibilidad? Vea la sección sobre alta disponibilidad AlwaysOn de [Características compatibles con las ediciones de SQL Server 2016](~/sql-server/editions-and-supported-features-for-sql-server-2016.md).    
@@ -48,7 +50,7 @@ ms.lasthandoff: 12/05/2017
  [!INCLUDE[ssHADR](../../includes/sshadr-md.md)] es una solución de alta disponibilidad y recuperación ante desastres de nivel empresarial presentada en [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] que permite maximizar la disponibilidad para una o varias bases de datos de usuario. [!INCLUDE[ssHADR](../../includes/sshadr-md.md)] necesita que las instancias de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] se encuentren en nodos de Clústeres de conmutación por error de Windows Server (WSFC). Para obtener más información, vea [Grupos de disponibilidad AlwaysOn &#40;SQL Server&#41;](../../database-engine/availability-groups/windows/always-on-availability-groups-sql-server.md).    
     
   
->  **Nota** Una FCI puede aprovechar las ventajas de [!INCLUDE[ssHADR](../../includes/sshadr-md.md)] para proporcionar recuperación remota ante desastres en la base de datos. Para obtener más información, vea [Clúster de conmutación por error y grupos de disponibilidad AlwaysOn &#40;SQL Server&#41;](../../database-engine/availability-groups/windows/failover-clustering-and-always-on-availability-groups-sql-server.md).    
+>  **Nota:** Una FCI puede aprovechar las ventajas de [!INCLUDE[ssHADR](../../includes/sshadr-md.md)] para proporcionar recuperación remota ante desastres en la base de datos. Para obtener más información, vea [Clúster de conmutación por error y grupos de disponibilidad AlwaysOn &#40;SQL Server&#41;](../../database-engine/availability-groups/windows/failover-clustering-and-always-on-availability-groups-sql-server.md).    
     
 *  Creación de reflejo de base de datos. **Nota:** [!INCLUDE[ssNoteDepFutureAvoid](../../includes/ssnotedepfutureavoid-md.md)] Se recomienda utilizar [!INCLUDE[ssHADR](../../includes/sshadr-md.md)] en su lugar.     
 La creación de reflejo de la base de datos es una solución para aumentar la disponibilidad de la base de datos mediante una conmutación por error casi inmediata. La creación de reflejo de la base de datos puede utilizarse para mantener una sola base de datos en estado de espera, o *base de datos reflejada*, para una base de datos de producción correspondiente a la que se conoce como *base de datos principal*. Para obtener más información, vea [Creación de reflejo de la base de datos &#40;SQL Server&#41;](../../database-engine/database-mirroring/database-mirroring-sql-server.md).    
@@ -65,7 +67,7 @@ La creación de reflejo de la base de datos es una solución para aumentar la di
     
        >  Recomendamos usar el trasvase de registros si ejecuta una edición de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] que no admite [!INCLUDE[ssHADR](../../includes/sshadr-md.md)]. Para obtener más información sobre qué ediciones de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] admiten [!INCLUDE[ssHADR](../../includes/sshadr-md.md)], vea la sección sobre alta disponibilidad AlwaysOn de [Características compatibles con las ediciones de SQL Server 2016](~/sql-server/editions-and-supported-features-for-sql-server-2016.md).    
     
-## <a name="see-also"></a>Vea también    
+## <a name="see-also"></a>Ver también    
  [Clústeres de conmutación por error de Windows Server &#40;WSFC&#41; con SQL Server](../../sql-server/failover-clusters/windows/windows-server-failover-clustering-wsfc-with-sql-server.md)     
  [Creación de reflejo de la base de datos: interoperabilidad y coexistencia &#40;SQL Server&#41;](../../database-engine/database-mirroring/database-mirroring-interoperability-and-coexistence-sql-server.md)     
  [Características desusadas del motor de base de datos de SQL Server 2016](../../database-engine/deprecated-database-engine-features-in-sql-server-2016.md)    

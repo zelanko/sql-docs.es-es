@@ -1,28 +1,22 @@
 ---
-title: Adquirir y configurar un servidor de carga (SQL Server PDW)
-author: barbkess
-ms.author: barbkess
+title: Adquirir y configurar un servidor de carga - almacenamiento de datos paralelos | Documentos de Microsoft
+description: Este artículo describe cómo adquirir y configurar un servidor de carga como un sistema de Windows no sea de dispositivo para el envío de cargas de datos para el almacenamiento de datos paralelo (PDW).
+author: mzaman1
 manager: craigg
-ms.prod: analytics-platform-system
-ms.prod_service: mpp-data-warehouse
-ms.service: ''
-ms.component: ''
-ms.suite: sql
-ms.custom: ''
-ms.technology: mpp-data-warehouse
-description: Adquirir y configurar un servidor de carga como un sistema de Windows no sea de dispositivo para el envío de cargas de datos para almacenamiento de datos paralelos de SQL Server.
-ms.date: 10/20/2016
-ms.topic: article
-ms.assetid: a434b174-a818-4f73-b218-264619bab664
-caps.latest.revision: 19
-ms.openlocfilehash: 566153d95f2affa5b8c5857d45f53c6b43a80a39
-ms.sourcegitcommit: 9351e8b7b68f599a95fb8e76930ab886db737e5f
+ms.prod: sql
+ms.technology: data-warehouse
+ms.topic: conceptual
+ms.date: 04/17/2018
+ms.author: murshedz
+ms.reviewer: martinle
+ms.openlocfilehash: a796616ad76ba62ea4174cf22c1517c489305055
+ms.sourcegitcommit: 056ce753c2d6b85cd78be4fc6a29c2b4daaaf26c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/06/2018
+ms.lasthandoff: 04/19/2018
 ---
-# <a name="acquire-and-configure-a-loading-server"></a>Adquirir y configurar un servidor de carga
-En este tema se describe cómo adquirir y configurar un servidor de carga como un sistema de Windows no sea de dispositivo para el envío de cargas de datos al almacenamiento de datos paralelo de SQL Server (PDW).  
+# <a name="acquire-and-configure-a-loading-server-for-parallel-data-warehouse"></a>Adquirir y configurar un servidor de carga para el almacenamiento de datos paralelos
+Este artículo describe cómo adquirir y configurar un servidor de carga como un sistema de Windows no sea de dispositivo para el envío de cargas de datos para el almacenamiento de datos paralelo (PDW).  
   
 ## <a name="Basics"></a>Conceptos básicos  
 El servidor de carga:  

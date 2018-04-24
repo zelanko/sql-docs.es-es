@@ -1,31 +1,31 @@
 ---
-title: "Métodos de ADO | Documentos de Microsoft"
-ms.prod: sql-non-specified
+title: Métodos de ADO | Documentos de Microsoft
+ms.prod: sql
 ms.prod_service: drivers
-ms.service: 
+ms.service: ''
 ms.component: ado
 ms.technology:
 - drivers
-ms.custom: 
+ms.custom: ''
 ms.date: 01/19/2017
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.tgt_pltfrm: ''
+ms.topic: conceptual
 helpviewer_keywords:
 - ADO, methods
 - methods [ADO]
 ms.assetid: a38c5670-ba28-44f3-bd5b-fcb46880e904
-caps.latest.revision: 
+caps.latest.revision: 12
 author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: e35be40ea3023338048bf729b9f4cea5b6048449
-ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
+ms.openlocfilehash: 4a2b180e8886931819dafe089e9012dcaa578694
+ms.sourcegitcommit: bb044a48a6af9b9d8edb178dc8c8bd5658b9ff68
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/09/2018
+ms.lasthandoff: 04/18/2018
 ---
 # <a name="ado-methods"></a>Métodos de ADO
 |||  
@@ -38,7 +38,7 @@ ms.lasthandoff: 02/09/2018
 |[CancelBatch](../../../ado/reference/ado-api/cancelbatch-method-ado.md)|Cancela una actualización por lotes pendientes.|  
 |[CancelUpdate](../../../ado/reference/ado-api/cancelupdate-method-ado.md)|Cancela los cambios realizados en la fila actual o nueva de un **Recordset** objeto, o el **campos** colección de un **registro** objeto antes de llamar a la  **Actualización** método.|  
 |[Desactivar](../../../ado/reference/ado-api/clear-method-ado.md)|Quita todos los **Error** objetos desde la **errores** colección.|  
-|[Clon](../../../ado/reference/ado-api/clone-method-ado.md)|Crea un duplicado **Recordset** objeto a partir de una existente **Recordset** objeto. Opcionalmente, especifica que la clonación sea de solo lectura.|  
+|[clon](../../../ado/reference/ado-api/clone-method-ado.md)|Crea un duplicado **Recordset** objeto a partir de una existente **Recordset** objeto. Opcionalmente, especifica que la clonación sea de solo lectura.|  
 |[Cerrar](../../../ado/reference/ado-api/close-method-ado.md)|Cierra un objeto abierto y los objetos dependientes.|  
 |[CompareBookmarks](../../../ado/reference/ado-api/comparebookmarks-method-ado.md)|Compara dos marcadores y devuelve una indicación de sus valores relativos.|  
 |[CopyRecord](../../../ado/reference/ado-api/copyrecord-method-ado.md)|Copia un archivo o directorio y su contenido a otra ubicación.|  
@@ -51,7 +51,7 @@ ms.lasthandoff: 02/09/2018
 |[Execute (comando ADO)](../../../ado/reference/ado-api/execute-method-ado-command.md)|Ejecuta la consulta, la instrucción SQL o el procedimiento almacenado especificado en el **CommandText** propiedad.|  
 |[Ejecutar (conexión de ADO)](../../../ado/reference/ado-api/execute-method-ado-connection.md)|Ejecuta la consulta especificada, la instrucción SQL, el procedimiento almacenado o la texto específico del proveedor.|  
 |[Buscar](../../../ado/reference/ado-api/find-method-ado.md)|Busca un **conjunto de registros** para la fila que cumple los criterios especificados.|  
-|[Flush](../../../ado/reference/ado-api/flush-method-ado.md)|Fuerza que el contenido de la **flujo** permanecen en el búfer de ADO en el objeto subyacente con el que el **flujo** está asociado.|  
+|[Vaciar](../../../ado/reference/ado-api/flush-method-ado.md)|Fuerza que el contenido de la **flujo** permanecen en el búfer de ADO en el objeto subyacente con el que el **flujo** está asociado.|  
 |[get_OLEDBCommand (método)](../../../ado/reference/ado-api/get-oledbcommand-method.md)|Devuelve el comando de OLE DB subyacentes, primero propagar cualquier información de parámetros que se establece en el comando de ADO en el comando de OLE DB.|  
 |[GetChildren](../../../ado/reference/ado-api/getchildren-method-ado.md)|Devuelve un **Recordset** cuyas filas representan los archivos y subdirectorios del directorio representado por este **registro**.|  
 |[GetChunk](../../../ado/reference/ado-api/getchunk-method-ado.md)|Devuelve todo o una parte del contenido de un texto de gran tamaño o datos binarios **campo** objeto.|  

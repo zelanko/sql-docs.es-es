@@ -1,28 +1,21 @@
 ---
-title: Software de servicio (Analytics Platform System)
-author: barbkess
-ms.author: barbkess
+title: Mantenimiento de software - Analytics Platform System | Documentos de Microsoft
+description: Software de servicio de Analytics Platform System (APS).
+author: mzaman1
 manager: craigg
-ms.prod: analytics-platform-system
-ms.prod_service: mpp-data-warehouse
-ms.service: ''
-ms.component: ''
-ms.technology: mpp-data-warehouse
-ms.custom: ''
-ms.date: 01/05/2017
-ms.reviewer: na
-ms.suite: sql
-ms.tgt_pltfrm: na
-ms.topic: article
-ms.assetid: cec4d924-c88f-470c-84bb-0af3e21aabf1
-caps.latest.revision: 33
-ms.openlocfilehash: 8bddf00569ad4c5e5c78e801399b589a9f6d5f42
-ms.sourcegitcommit: 9351e8b7b68f599a95fb8e76930ab886db737e5f
+ms.prod: sql
+ms.technology: data-warehouse
+ms.topic: conceptual
+ms.date: 04/17/2018
+ms.author: murshedz
+ms.reviewer: martinle
+ms.openlocfilehash: 7d9991dfb310e2cebc3c61bbd6f9f04a40a0f38e
+ms.sourcegitcommit: 056ce753c2d6b85cd78be4fc6a29c2b4daaaf26c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/06/2018
+ms.lasthandoff: 04/19/2018
 ---
-# <a name="software-servicing"></a>Mantenimiento de software
+# <a name="software-servicing-in-analytics-platform-system"></a>Mantenimiento de software en el sistema de la plataforma de análisis
 En esta sección resume lo requisitos para dispositivos de sistema de la plataforma de análisis, incluidas las revisiones de WSUS y de sistema de la plataforma de análisis de mantenimiento de software.  
   
 ## <a name="Basics"></a>Conceptos básicos de mantenimiento de software  

@@ -1,28 +1,22 @@
 ---
-title: Adquirir y configurar un servidor de copia de seguridad para PDW de APS
-author: barbkess
-ms.author: barbkess
+title: Adquirir y configurar un servidor de copia de seguridad - almacenamiento de datos paralelos | Documentos de Microsoft
+description: En este artículo se describe cómo configurar un sistema de Windows no sea de dispositivo como un servidor de reserva para su uso con las características de copia de seguridad y restauración de Analytics Platform System (APS) y almacenamiento de datos paralelo (PDW).
+author: mzaman1
 manager: craigg
-ms.prod: analytics-platform-system
-ms.prod_service: mpp-data-warehouse
-ms.service: ''
-ms.component: ''
-ms.suite: sql
-ms.custom: ''
-ms.technology: mpp-data-warehouse
-description: Configurar un sistema de Windows no sea de dispositivo como un servidor de reserva para su uso con la copia de seguridad y restaurar las características en Analytics Platform System (APS) y almacenamiento de datos paralelos (PDW) de SQL Server.
-ms.date: 10/20/2016
-ms.topic: article
-caps.latest.revision: 20
-ms.assetid: f8b769fe-c864-4d65-abcb-a9a287061702
-ms.openlocfilehash: 564a70d5fa483f2c34ef2598213a2c22074daf80
-ms.sourcegitcommit: 9351e8b7b68f599a95fb8e76930ab886db737e5f
+ms.prod: sql
+ms.technology: data-warehouse
+ms.topic: conceptual
+ms.date: 04/17/2018
+ms.author: murshedz
+ms.reviewer: martinle
+ms.openlocfilehash: 4464857e2b1e71a96f87e95d45df0577df987176
+ms.sourcegitcommit: 056ce753c2d6b85cd78be4fc6a29c2b4daaaf26c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/06/2018
+ms.lasthandoff: 04/19/2018
 ---
-# <a name="acquire-and-configure-a-backup-server"></a>Adquirir y configurar un servidor de copia de seguridad
-En este tema se describe cómo configurar un sistema de Windows no sea de dispositivo como un servidor de copia de seguridad para su uso con las características de copia de seguridad y restauración de Analytics Platform System (APS) y almacenamiento de datos paralelos (PDW) de SQL Server.  
+# <a name="acquire-and-configure-a-backup-server-for-parallel-data-warehouse"></a>Adquirir y configurar un servidor de copia de seguridad para el almacenamiento de datos paralelos
+En este artículo se describe cómo configurar un sistema de Windows no sea de dispositivo como un servidor de reserva para su uso con las características de copia de seguridad y restauración de Analytics Platform System (APS) y almacenamiento de datos paralelo (PDW).  
   
   
 ## <a name="Basics"></a>Conceptos básicos de copia de seguridad de servidor  

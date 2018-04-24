@@ -1,17 +1,17 @@
 ---
-title: "Find (método) (ADO) | Documentos de Microsoft"
-ms.prod: sql-non-specified
+title: Find (método) (ADO) | Documentos de Microsoft
+ms.prod: sql
 ms.prod_service: drivers
-ms.service: 
+ms.service: ''
 ms.component: ado
 ms.technology:
 - drivers
-ms.custom: 
+ms.custom: ''
 ms.date: 01/19/2017
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.tgt_pltfrm: ''
+ms.topic: conceptual
 apitype: COM
 f1_keywords:
 - Recordset15::raw_Find
@@ -19,16 +19,16 @@ f1_keywords:
 helpviewer_keywords:
 - Find method [ADO]
 ms.assetid: 55c9810a-d8ca-46c2-a9dc-80e7ee7aa188
-caps.latest.revision: 
+caps.latest.revision: 12
 author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: be29e1bc1126673f59dbd66f5f3c432b3ed2cc85
-ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
+ms.openlocfilehash: d1e46954ec7a0983927b1d375615fe6e6cbf10ee
+ms.sourcegitcommit: bb044a48a6af9b9d8edb178dc8c8bd5658b9ff68
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/09/2018
+ms.lasthandoff: 04/18/2018
 ---
 # <a name="find-method-ado"></a>Find (método) (ADO)
 Busca un [conjunto de registros](../../../ado/reference/ado-api/recordset-object-ado.md) para la fila que cumple los criterios especificados. Si lo desea, se puede especificar la dirección de la búsqueda, la fila inicial y el desplazamiento desde la fila inicial. Si se cumplen los criterios, la posición de fila actual se establece en el registro encontrado; en caso contrario, se establece la posición al final (o inicio) de la **conjunto de registros**.  
@@ -45,10 +45,10 @@ Find (Criteria, SkipRows, SearchDirection, Start)
  A **cadena** valor que contiene una instrucción que especifica el nombre de columna, el operador de comparación y el valor para usar en la búsqueda.  
   
  *SkipRows*  
- Optional*.* A **largo** valor, cuyo valor predeterminado es cero, que especifica el desplazamiento de fila de la fila actual o *iniciar* marcador que se va a comenzar la búsqueda. De forma predeterminada, se iniciará la búsqueda en la fila actual.  
+ Opcional*.* A **largo** valor, cuyo valor predeterminado es cero, que especifica el desplazamiento de fila de la fila actual o *iniciar* marcador que se va a comenzar la búsqueda. De forma predeterminada, se iniciará la búsqueda en la fila actual.  
   
  *SearchDirection*  
- Optional*.* A [SearchDirectionEnum](../../../ado/reference/ado-api/searchdirectionenum.md) valor que especifica si la búsqueda debe iniciar en la fila actual o la siguiente fila disponible en la dirección de la búsqueda. Detiene una búsqueda al final de la **Recordset** si el valor es **adSearchForward**. Se detiene una búsqueda en el inicio de la **Recordset** si el valor es **adSearchBackward**.  
+ Opcional*.* A [SearchDirectionEnum](../../../ado/reference/ado-api/searchdirectionenum.md) valor que especifica si la búsqueda debe iniciar en la fila actual o la siguiente fila disponible en la dirección de la búsqueda. Detiene una búsqueda al final de la **Recordset** si el valor es **adSearchForward**. Se detiene una búsqueda en el inicio de la **Recordset** si el valor es **adSearchBackward**.  
   
  *Iniciar*  
  Opcional. A **Variant** marcador que funciona como la posición inicial de la búsqueda.  
@@ -58,7 +58,7 @@ Find (Criteria, SkipRows, SearchDirection, Start)
   
  El operador de comparación *criterios* puede ser "**>**"(mayor que),"**\<**" (menor que), "=" (igual), "> =" (mayor o igual que), "< =" (menor o igual que), "<>" (no es igual a) o "like" (coincidencia de modelos).  
   
- El valor de *criterios* puede ser una cadena, un número de punto flotante o una fecha. Valores de cadena se delimitan con comillas simples o marcas "#" (signo de número) (por ejemplo, "estado = 'WA'" o "estado = WA #"). Los valores de fecha se delimitan con marcas de "#" (signo de número) (por ejemplo, "fecha_inicial > #7/22/&#97;"). Estos valores pueden contener horas, minutos y segundos para indicar las marcas de tiempo, pero no deben contener milisegundos o se producirán errores.  
+ El valor de *criterios* puede ser una cadena, un número de punto flotante o una fecha. Valores de cadena se delimitan con comillas simples o marcas "#" (signo de número) (por ejemplo, "estado = 'WA'" o "estado = WA #"). Los valores de fecha se delimitan con marcas de "#" (signo de número) (por ejemplo, "fecha_inicial > #7/22/97 #"). Estos valores pueden contener horas, minutos y segundos para indicar las marcas de tiempo, pero no deben contener milisegundos o se producirán errores.  
   
  Si el operador de comparación es "like", el valor de cadena puede contener un asterisco (*) para buscar una o más apariciones de cualquier carácter o una subcadena. Por ejemplo, "state like'm\*'" encuentra Maine y Massachusetts. También puede utilizar asteriscos iniciales y finales para buscar una subcadena dentro de los valores. Por ejemplo, "estado como '\*como\*'" encuentra Alaska, Arkansas y Massachusetts.  
   

@@ -1,34 +1,27 @@
 ---
-title: Supervisar el dispositivo mediante la consola de administración (Analytics Platform System)
-author: barbkess
-ms.author: barbkess
+title: Monitor con la consola de administración - sistema de la plataforma de análisis | Documentos de Microsoft
+description: Para el sistema de la plataforma de análisis, la consola de administración es una aplicación web que expone la información de estado, el estado y el rendimiento del equipo. Los usuarios conectarse a la consola de administración a través de un explorador de internet.
+author: mzaman1
 manager: craigg
-ms.prod: analytics-platform-system
-ms.prod_service: mpp-data-warehouse
-ms.service: ''
-ms.component: ''
-ms.technology: mpp-data-warehouse
-ms.custom: ''
-ms.date: 01/05/2017
-ms.reviewer: na
-ms.suite: sql
-ms.tgt_pltfrm: na
-ms.topic: article
-ms.assetid: 294ba6ac-b1ff-46ea-ba32-d8b32cb4cdc2
-caps.latest.revision: 26
-ms.openlocfilehash: 8da883797f8e9d09de0a5d160fc3383caf181590
-ms.sourcegitcommit: 9351e8b7b68f599a95fb8e76930ab886db737e5f
+ms.prod: sql
+ms.technology: data-warehouse
+ms.topic: conceptual
+ms.date: 04/17/2018
+ms.author: murshedz
+ms.reviewer: martinle
+ms.openlocfilehash: 5f7c6ef68a8f91121a63def8e2153a5c38873aa3
+ms.sourcegitcommit: 056ce753c2d6b85cd78be4fc6a29c2b4daaaf26c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/06/2018
+ms.lasthandoff: 04/19/2018
 ---
-# <a name="monitor-the-appliance-by-using-the-admin-console"></a>Supervisar el dispositivo mediante la consola de administración
+# <a name="monitor-the-appliance-with-the-admin-console---analytics-platform-system"></a>Supervisar el equipo con la consola de administración - Analytics Platform System
 La consola de administración es una aplicación web de SQL Server PDW que presenta la información de estado, el estado y el rendimiento del equipo. Los usuarios conectarse a la consola de administración a través de Internet Explorer.  
   
 ## <a name="About"></a>Acerca de la consola de administración  
-![Appliance Console Home](./media/monitor-the-appliance-by-using-the-admin-console/SQL_Server_PDW_AdminConsol_ApplHome.png "SQL_Server_PDW_AdminConsol_ApplHome")  
+![Inicio de la consola de dispositivo](./media/monitor-the-appliance-by-using-the-admin-console/SQL_Server_PDW_AdminConsol_ApplHome.png "SQL_Server_PDW_AdminConsol_ApplHome")  
   
-**Appliance**  
+**Dispositivo**  
 Inicio  
 Proporciona un rápido resumen del estado del dispositivo.  
   
@@ -53,7 +46,7 @@ Muestra una lista de las consultas en ejecución y las consultas de completado r
 Cargas  
 Muestra carga planes, el estado actual de cargas PDW y errores relacionados, si lo hay.  
   
-Backups/Restores  
+Las copias de seguridad/restauraciones  
 Muestra un registro de PDW de copia de seguridad y las operaciones de restauración.  
   
 Mantenimiento  

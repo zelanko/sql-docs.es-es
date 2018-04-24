@@ -1,28 +1,21 @@
 ---
-title: Usar un reenviador DNS para resolver nombres DNS no sea de dispositivo (APS)
-author: barbkess
-ms.author: barbkess
+title: Usar un reenviador DNS en el sistema de la plataforma de análisis | Documentos de Microsoft"
+description: Usar un reenviador DNS para resolver los nombres DNS no sea de dispositivo en el sistema de la plataforma de análisis.
+author: mzaman1
 manager: craigg
-ms.prod: analytics-platform-system
-ms.prod_service: mpp-data-warehouse
-ms.service: ''
-ms.component: ''
-ms.technology: mpp-data-warehouse
-ms.custom: ''
-ms.date: 01/05/2017
-ms.reviewer: na
-ms.suite: sql
-ms.tgt_pltfrm: na
-ms.topic: article
-ms.assetid: 123d8a83-b7fd-4dc9-90d4-fa01af2d629d
-caps.latest.revision: 21
-ms.openlocfilehash: 1d94319bd4d9ad3c25f74ca3393031d7ab916ee2
-ms.sourcegitcommit: 9351e8b7b68f599a95fb8e76930ab886db737e5f
+ms.prod: sql
+ms.technology: data-warehouse
+ms.topic: conceptual
+ms.date: 04/17/2018
+ms.author: murshedz
+ms.reviewer: martinle
+ms.openlocfilehash: 2f707d4c681c695105daf23d5fc640279bb83658
+ms.sourcegitcommit: 056ce753c2d6b85cd78be4fc6a29c2b4daaaf26c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/06/2018
+ms.lasthandoff: 04/19/2018
 ---
-# <a name="use-a-dns-forwarder-to-resolve-non-appliance-dns-names"></a>Usar un reenviador DNS para resolver nombres DNS no sea de dispositivo
+# <a name="use-a-dns-forwarder-to-resolve-non-appliance-dns-names-in-analytics-platform-system"></a>Usar un reenviador DNS para resolver nombres DNS no sea de dispositivo en el sistema de la plataforma de análisis
 Un reenviador DNS se puede configurar en los nodos de los servicios de dominio de Active Directory (***appliance_domain *-AD01** y ***appliance_domain *-AD02**) de su dispositivo de sistema de la plataforma de análisis para permitir las secuencias de comandos y las aplicaciones de software para tener acceso a servidores externos.  
   
 ## <a name="ResolveDNS"></a>Usar un reenviador DNS  

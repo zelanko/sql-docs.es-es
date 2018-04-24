@@ -1,25 +1,25 @@
 ---
-title: "Información general de SQL Server en Linux | Documentos de Microsoft"
-description: "Este artículo describe cómo SQL Server se ejecuta en Linux y proporciona información sobre cómo obtener más información."
+title: Información general de SQL Server en Linux | Documentos de Microsoft
+description: Este artículo describe cómo SQL Server se ejecuta en Linux y proporciona información sobre cómo obtener más información.
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.date: 03/20/2018
+ms.date: 04/17/2018
 ms.topic: article
 ms.prod: sql-non-specified
 ms.prod_service: database-engine
-ms.service: 
-ms.component: 
+ms.service: ''
+ms.component: ''
 ms.suite: sql
 ms.custom: sql-linux
 ms.technology: database-engine
 ms.assetid: 9dcc6a90-0add-42c2-815b-862e4e2a21ac
 ms.workload: Active
-ms.openlocfilehash: 3ec35adddc04a42ed885600a2e8402121c86107c
-ms.sourcegitcommit: 8e897b44a98943dce0f7129b1c7c0e695949cc3b
+ms.openlocfilehash: 6542e86862b64b3c880cc3300a37384c28ab039d
+ms.sourcegitcommit: 056ce753c2d6b85cd78be4fc6a29c2b4daaaf26c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/21/2018
+ms.lasthandoff: 04/19/2018
 ---
 # <a name="sql-server-on-linux"></a>SQL Server en Linux
 
@@ -60,3 +60,5 @@ Si ya está familiarizado con SQL Server, revise la [notas de la versión](sql-s
 > Para obtener respuestas a las preguntas más frecuentes, consulte el [SQL Server en Linux preguntas más frecuentes sobre](sql-server-linux-faq.md).
 
 [!INCLUDE[Get Help Options](../includes/paragraph-content/get-help-options.md)]
+
+[!INCLUDE[contribute-to-content](../includes/paragraph-content/contribute-to-content.md)]

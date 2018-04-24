@@ -1,32 +1,32 @@
 ---
 title: Proveedor Microsoft OLE DB para servicios de Index Server de Microsoft | Documentos de Microsoft
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: drivers
-ms.service: 
+ms.service: ''
 ms.component: ado
 ms.technology:
 - drivers
-ms.custom: 
+ms.custom: ''
 ms.date: 01/19/2017
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.tgt_pltfrm: ''
+ms.topic: conceptual
 helpviewer_keywords:
 - Indexing Service provider [ADO]
 - providers [ADO], OLE DB provider for Microsoft Indexing service
 - OLE DB provider for Microsoft Indexing service [ADO]
 ms.assetid: f86a0598-5097-471b-8318-d2c859d085f2
-caps.latest.revision: 
+caps.latest.revision: 15
 author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 861d5d18c3a3ba72d4f4b5ef6fc01f0e6a0e9fc8
-ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
+ms.openlocfilehash: f84d13fa3f4e2da728c914f2228233a04e64643f
+ms.sourcegitcommit: bb044a48a6af9b9d8edb178dc8c8bd5658b9ff68
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/09/2018
+ms.lasthandoff: 04/18/2018
 ---
 # <a name="microsoft-ole-db-provider-for-microsoft-indexing-service-overview"></a>Proveedor Microsoft OLE DB para Microsoft Introducción al servicio de indización
 El proveedor Microsoft OLE DB para servicios de Index Server de Microsoft proporciona acceso mediante programación de solo lectura para el sistema de archivos y datos Web indizados por servicios de Index Server de Microsoft. Las aplicaciones ADO pueden emitir consultas SQL para recuperar información de la propiedad de contenido y de archivos.
@@ -79,10 +79,10 @@ MSIDXS
 |[AbsolutePosition](../../../ado/reference/ado-api/absoluteposition-property-ado.md)|lectura/escritura|
 |[ActiveConnection](../../../ado/reference/ado-api/activeconnection-property-ado.md)|solo lectura|
 |[BOF](../../../ado/reference/ado-api/bof-eof-properties-ado.md)|solo lectura|
-|[Bookmark](../../../ado/reference/ado-api/bookmark-property-ado.md)*|lectura/escritura|
-|[CacheSize](../../../ado/reference/ado-api/cachesize-property-ado.md)|lectura/escritura|
+|[Marcador](../../../ado/reference/ado-api/bookmark-property-ado.md)*|lectura/escritura|
+|[cacheSize](../../../ado/reference/ado-api/cachesize-property-ado.md)|lectura/escritura|
 |[CursorLocation](../../../ado/reference/ado-api/cursorlocation-property-ado.md)|siempre **adUseServer**|
-|[CursorType](../../../ado/reference/ado-api/cursortype-property-ado.md)|always **adOpenStatic**|
+|[CursorType](../../../ado/reference/ado-api/cursortype-property-ado.md)|siempre **adOpenStatic**|
 |[EditMode](../../../ado/reference/ado-api/editmode-property.md)|siempre **adEditNone**|
 |[EOF](../../../ado/reference/ado-api/bof-eof-properties-ado.md)|solo lectura|
 |[Filtro](../../../ado/reference/ado-api/filter-property.md)|lectura/escritura|
@@ -106,7 +106,7 @@ MSIDXS
 |[Cancelar](../../../ado/reference/ado-api/cancel-method-ado.md)|Sí|
 |[CancelBatch](../../../ado/reference/ado-api/cancelbatch-method-ado.md)|no|
 |[CancelUpdate](../../../ado/reference/ado-api/cancelupdate-method-ado.md)|no|
-|[Clon](../../../ado/reference/ado-api/clone-method-ado.md)|Sí|
+|[clon](../../../ado/reference/ado-api/clone-method-ado.md)|Sí|
 |[Cerrar](../../../ado/reference/ado-api/close-method-ado.md)|Sí|
 |[Eliminar](../../../ado/reference/ado-api/delete-method-ado-recordset.md)|no|
 |[GetRows](../../../ado/reference/ado-api/getrows-method-ado.md)|Sí|

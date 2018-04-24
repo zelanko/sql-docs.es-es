@@ -1,29 +1,22 @@
 ---
-title: Instalación de hardware (Analytics Platform System)
-author: barbkess
-ms.author: barbkess
+title: 'Instalación de hardware: Analytics Platform System | Documentos de Microsoft'
+description: Este artículo describe cómo mover, desempaquetar e instalar el hardware de su dispositivo PDW de SQL Server. Este artículo es solo informativo y está diseñada para ayudarle a entender el proceso. Debe desempaquetar, instalarse y comprobar antes de se dedica a la el dispositivo. Participación del cliente es obligatorio para los elementos como los datos del centro de acceso, energía eléctrica y conexiones Ethernet.
+author: mzaman1
 manager: craigg
-ms.prod: analytics-platform-system
-ms.prod_service: mpp-data-warehouse
-ms.service: ''
-ms.component: ''
-ms.technology: mpp-data-warehouse
-ms.custom: ''
-ms.date: 01/05/2017
-ms.reviewer: na
-ms.suite: sql
-ms.tgt_pltfrm: na
-ms.topic: article
-ms.assetid: f4f612b9-f320-4391-952b-d3696cfbe2e2
-caps.latest.revision: 17
-ms.openlocfilehash: 24236e525efbc96c7e263a293f2a27582d700929
-ms.sourcegitcommit: 9351e8b7b68f599a95fb8e76930ab886db737e5f
+ms.prod: sql
+ms.technology: data-warehouse
+ms.topic: conceptual
+ms.date: 04/17/2018
+ms.author: murshedz
+ms.reviewer: martinle
+ms.openlocfilehash: 169b38a1228f909a79d7866eba20b85b4a56c30b
+ms.sourcegitcommit: 056ce753c2d6b85cd78be4fc6a29c2b4daaaf26c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/06/2018
+ms.lasthandoff: 04/19/2018
 ---
-# <a name="hardware-installation"></a>Instalación de hardware
-En este tema se describe cómo mover, desempaquetar e instalar el hardware de su dispositivo PDW de SQL Server. Este tema es solo informativo y está diseñada para ayudarle a entender el proceso. Debe desempaquetar, instalarse y comprobar antes de se dedica a la el dispositivo. Participación del cliente es obligatorio para los elementos como los datos del centro de acceso, energía eléctrica y conexiones Ethernet.  
+# <a name="hardware-installation-for-analytics-platform-system-appliance"></a>Instalación de hardware de dispositivo de sistema de la plataforma de análisis
+Este artículo describe cómo mover, desempaquetar e instalar el hardware de su dispositivo PDW de SQL Server. Este artículo es solo informativo y está diseñada para ayudarle a entender el proceso. Debe desempaquetar, instalarse y comprobar antes de se dedica a la el dispositivo. Participación del cliente es obligatorio para los elementos como los datos del centro de acceso, energía eléctrica y conexiones Ethernet.  
   
 ## <a name="BeforeMoving"></a>Antes de mover todos los componentes del muelle de carga  
 Realice las tareas siguientes antes de mover, desempaquete o cualquiera de los componentes del dispositivo en bastidor.  

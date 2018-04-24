@@ -1,30 +1,24 @@
 ---
-title: Cifrado de datos transparente para el almacenamiento de datos paralelos
-author: barbkess
-ms.author: barbkess
+title: 'Cifrado de datos transparente: almacenamiento de datos paralelos | Documentos de Microsoft'
+description: Cifrado de datos transparente (TDE) para el almacenamiento de datos paralelo (PDW) realiza el cifrado de E/S en tiempo real y el descifrado de los datos y archivos de registro de transacciones y los archivos de registro PDW especiales."
+author: mzaman1
 manager: craigg
-ms.prod: analytics-platform-system
-ms.prod_service: mpp-data-warehouse
-ms.service: ''
-ms.component: ''
-ms.suite: sql
-ms.custom: ''
-ms.technology: mpp-data-warehouse
-description: Cifrado de datos transparente (TDE) realiza el cifrado de E/S en tiempo real y el descifrado de los datos y archivos de registro de transacciones y los archivos de registro PDW especial.
-ms.date: 10/20/2016
-ms.topic: article
-ms.assetid: b82ad21d-09dd-43dd-8fab-bcf2c8c3ac6d
-caps.latest.revision: 22
-ms.openlocfilehash: d93d76018baeed1577b6831cbde359002c89416e
-ms.sourcegitcommit: 9351e8b7b68f599a95fb8e76930ab886db737e5f
+ms.prod: sql
+ms.technology: data-warehouse
+ms.topic: conceptual
+ms.date: 04/17/2018
+ms.author: murshedz
+ms.reviewer: martinle
+ms.openlocfilehash: 6dc8bef420939d64b569ae285e6a3525d57983bd
+ms.sourcegitcommit: 056ce753c2d6b85cd78be4fc6a29c2b4daaaf26c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/06/2018
+ms.lasthandoff: 04/19/2018
 ---
 # <a name="transparent-data-encryption"></a>Cifrado de datos transparente
-Puede tomar varias precauciones para proteger la base de datos, como diseñar un sistema seguro, cifrar los datos confidenciales e instalar un firewall alrededor de los servidores de bases de datos. Sin embargo, si se diera el caso de un robo de medios físicos (como unidades de disco o cintas de copia de seguridad), un usuario malintencionado solo tendría que restaurar o adjuntar la base de datos y examinar los datos. Una solución consiste en cifrar los datos confidenciales en la base de datos y usar un certificado para proteger las claves que se utilizan para cifrarlos. Esto evita que utilice los datos cualquiera que carezca de las claves, pero este tipo de protección debe planearse de antemano.  
+Puede tomar varias precauciones para proteger la base de datos, como diseñar un sistema seguro, cifrar los datos confidenciales e instalar un firewall alrededor de los servidores de bases de datos. Sin embargo, para un escenario en el que se diera el caso de los medios físicos (por ejemplo, unidades de disco o cintas de copia de seguridad), un tercero malintencionado puede restaurar o adjuntar la base de datos y examinar los datos. Una solución consiste en cifrar los datos confidenciales en la base de datos y usar un certificado para proteger las claves que se utilizan para cifrarlos. Esto evita que utilice los datos cualquiera que carezca de las claves, pero este tipo de protección debe planearse de antemano.  
   
-*Cifrado de datos transparente* (TDE) realiza el cifrado de E/S en tiempo real y el descifrado de los datos y archivos de registro de archivos de registro de transacciones y PDW especial. El cifrado utiliza una clave de cifrado de la base de datos (DEK), que está almacenada en el registro de arranque de la base de datos para que esté disponible durante la recuperación. La DEK es una clave simétrica protegida utilizando un certificado almacenado en la base de datos maestra de SQL Server PDW. TDE protege los datos "en reposo", es decir, los archivos de datos y de registro. Ofrece la posibilidad de cumplir muchas leyes, normativas y directrices establecidas en diversos sectores. También permite a los desarrolladores de software cifrar los datos mediante algoritmos de cifrado AES y 3DES sin cambiar las aplicaciones existentes.  
+*Cifrado de datos transparente* (TDE) realiza el cifrado de E/S en tiempo real y el descifrado de los datos y archivos de registro de archivos de registro de transacciones y PDW especial. El cifrado utiliza una clave de cifrado de la base de datos (DEK), que está almacenada en el registro de arranque de la base de datos para que esté disponible durante la recuperación. La DEK es una clave simétrica protegida utilizando un certificado almacenado en la base de datos maestra de SQL Server PDW. TDE protege los datos "en reposo", es decir, los archivos de datos y de registro. Ofrece la posibilidad de cumplir muchas leyes, normativas y directrices establecidas en diversos sectores. Esta característica permite a los desarrolladores de software cifrar los datos mediante el uso de algoritmos de cifrado AES y 3DES sin cambiar las aplicaciones existentes.  
   
 > [!IMPORTANT]  
 > TDE no proporciona cifrado de datos que se desplazan entre el cliente y el PDW. Para obtener más información acerca de cómo cifrar los datos entre el cliente y SQL Server PDW, vea [aprovisionar un certificado](provision-certificate.md).  
@@ -40,7 +34,7 @@ El cifrado del archivo de base de datos se realiza en el nivel de página. Las p
   
 En la siguiente ilustración muestra la jerarquía de claves de cifrado de TDE:  
   
-![Muestra la jerarquía que se describe en el tema. ] (media/tde-architecture.png "TDE_Architecture")  
+![Muestra la jerarquía](media/tde-architecture.png "TDE_Architecture")  
   
 ## <a name="using-tde"></a>Mediante el cifrado de datos transparente  
 Para usar TDE, siga estos pasos. Los tres primeros pasos solo se realizan una vez, cuando se prepara PDW de SQL Server para admitir TDE.  
@@ -49,11 +43,11 @@ Para usar TDE, siga estos pasos. Los tres primeros pasos solo se realizan una ve
   
 2.  Use **sp_pdw_database_encryption** para habilitar TDE en SQL Server PDW. Esta operación modifica las bases de datos temporales con el fin de garantizar la protección de datos temporales en el futuro y se producirá un error si intenta cuando hay alguna sesión activa que tienen tablas temporales. **sp_pdw_database_encryption** activa el enmascaramiento de datos de usuario en los registros de sistema PDW. (Para obtener más información acerca de enmascaramiento de datos de usuario en los registros de sistema PDW, vea [sp_pdw_log_user_data_masking](../relational-databases/system-stored-procedures/sp-pdw-log-user-data-masking-sql-data-warehouse.md).)  
   
-3.  Use [sp_pdw_add_network_credentials](../relational-databases/system-stored-procedures/sp-pdw-add-network-credentials-sql-data-warehouse.md) para crear una credencial que pueda autenticar y escribir en el recurso compartido donde se almacenará la copia de seguridad del certificado. Si ya existe una credencial para el servidor de almacenamiento previsto, se puede utilizar la credencial existente.  
+3.  Use [sp_pdw_add_network_credentials](../relational-databases/system-stored-procedures/sp-pdw-add-network-credentials-sql-data-warehouse.md) para crear una credencial que pueda autenticar y escribir en el recurso compartido donde se almacenará la copia de seguridad del certificado. Si ya existe una credencial para el servidor de almacenamiento previsto, puede usar la credencial existente.  
   
 4.  En la base de datos maestra, cree un certificado protegido por la clave maestra.  
   
-5.  El certificado para el recurso compartido de almacenamiento de copia de seguridad.  
+5.  Copia de seguridad del certificado para el recurso compartido de almacenamiento.  
   
 6.  En la base de datos de usuario, cree una clave de cifrado de base de datos y protéjala con el certificado que se almacena en la base de datos maestra.  
   
@@ -61,7 +55,7 @@ Para usar TDE, siga estos pasos. Los tres primeros pasos solo se realizan una ve
   
 En el ejemplo siguiente se ilustra el cifrado de la `AdventureWorksPDW2012` mediante un certificado con el nombre de la base de datos `MyServerCert`, creado en SQL Server PDW.  
   
-**Primero: Habilitar TDE en SQL Server PDW.** Esto solo es necesario una vez.  
+**Primero: Habilitar TDE en SQL Server PDW.** Esta acción solo es necesaria una vez.  
   
 ```sql  
 USE master;  
@@ -80,7 +74,7 @@ GO
 EXEC sp_pdw_add_network_credentials 'SECURE_SERVER', '<domain>\<Windows_user>', '<password>';  
 ```  
   
-**Segundo: Crear y copia de seguridad de un certificado en la base de datos maestra.** Esto solo es necesario una vez. Puede tener un certificado independiente para cada base de datos (recomendado), o puede proteger varias bases de datos con un certificado.  
+**Segundo: Crear y copia de seguridad de un certificado en la base de datos maestra.** Esta acción solo es necesario una vez. Puede tener un certificado independiente para cada base de datos (recomendado), o puede proteger varias bases de datos con un certificado.  
   
 ```sql  
 -- Create certificate in master  
@@ -98,7 +92,7 @@ BACKUP CERTIFICATE MyServerCert
 GO  
 ```  
   
-**Última: Crear la DEK y utilice ALTER DATABASE para cifrar una base de datos de usuario.** Esto se repite para cada base de datos está protegida por TDE.  
+**Última: Crear la DEK y utilice ALTER DATABASE para cifrar una base de datos de usuario.** Esta acción se repite para cada base de datos está protegida por TDE.  
   
 ```sql  
 USE AdventureWorksPDW2012;  
@@ -113,7 +107,7 @@ ALTER DATABASE AdventureWorksPDW2012 SET ENCRYPTION ON;
 GO  
 ```  
   
-El programa de las operaciones de cifrado y descifrado se ejecutan en subprocesos en segundo plano, con SQL Server. Puede ver el estado de estas operaciones mediante las vistas de catálogo y las vistas de administración dinámica de la lista que se muestra más adelante en este tema.  
+El programa de las operaciones de cifrado y descifrado se ejecutan en subprocesos en segundo plano, con SQL Server. Puede ver el estado de estas operaciones mediante las vistas de catálogo y vistas de administración dinámica de la lista que aparece más adelante en este artículo.  
   
 > [!CAUTION]  
 > Los archivos de copia de seguridad de las bases de datos que tienen habilitado TDE también se cifran mediante la clave de cifrado de la base de datos. Como consecuencia, al restaurar estas copias de seguridad debe estar disponible el certificado que protege la clave de cifrado de la base de datos. Esto significa que, además de hacer copias de seguridad de la base de datos, tiene que asegurarse de que mantiene copias de seguridad de los certificados del servidor para evitar la pérdida de datos. Si el certificado deja de estar disponible, perderá los datos.  
@@ -147,7 +141,7 @@ Ver los metadatos relacionados con TDE, se requiere el `CONTROL SERVER` permiso.
 ## <a name="considerations"></a>Consideraciones  
 Mientras se realiza el examen del proceso de nuevo cifrado para una operación de cifrado de base de datos, las operaciones de mantenimiento de la base de datos están deshabilitadas.  
   
-Puede encontrar el estado de la base de datos de cifrado mediante la **sys.dm_pdw_nodes_database_encryption_keys** vista de administración dinámica. Para obtener más información, consulte el *vistas de catálogo y vistas de administración dinámica* sección anteriormente en este tema).  
+Puede encontrar el estado de la base de datos de cifrado mediante la **sys.dm_pdw_nodes_database_encryption_keys** vista de administración dinámica. Para obtener más información, consulte el *vistas de catálogo y vistas de administración dinámica* sección anteriormente en este artículo.  
   
 ### <a name="restrictions"></a>Restricciones  
 Las siguientes operaciones no están permitidas durante la `CREATE DATABASE ENCRYPTION KEY`, `ALTER DATABASE ENCRYPTION KEY`, `DROP DATABASE ENCRYPTION KEY`, o `ALTER DATABASE...SET ENCRYPTION` las instrucciones.  
@@ -245,7 +239,7 @@ Ejemplo de la acción de actualización. Reemplace `**********` con la contrase�
   
 `setup.exe /Action=ProvisionUpgrade … DMKPassword='**********'  `  
   
-Ejemplo de la acción de la máquina virtual de reemplazo.  
+Ejemplo de la acción que se va a reemplazar una máquina virtual.  
   
 `setup.exe /Action=ReplaceVM … DMKPassword='**********'  `  
   
@@ -253,7 +247,7 @@ Durante la actualización, si se cifra un base de datos de usuario y la contrase
   
 `*** WARNING \*\*\* DMK is detected in master database, but could not be recovered automatically! The DMK password was either not provided or is incorrect!  `
   
-Por favor, ejecutar manualmente estas instrucciones en PDW y reiniciar el dispositivo después de con el fin de recuperar la base:  
+Ejecute estos instrucción manualmente en PDW y reiniciar el dispositivo después de con el fin de recuperar la base:  
   
 ```sql
 OPEN MASTER KEY DECRYPTION BY PASSWORD = '<DMK password>';  
@@ -273,7 +267,7 @@ A distributed query failed: Database '<db_name>' cannot be opened due to inacces
 El impacto en el rendimiento de TDE varía según el tipo de datos, cómo se almacena y el tipo de actividad de carga de trabajo de SQL Server PDW. Cuando protegida por TDE, la E/S de lectura y, a continuación, descifrar los datos o el cifrado y, a continuación, escribir datos es una actividad de uso intensivo de CPU y tiene más efecto cuando se producen otras actividades de uso intensivo de CPU al mismo tiempo. Dado que TDE cifra `tempdb`, TDE puede afectar al rendimiento de las bases de datos que no estén cifrados. Para obtener una idea exacta de rendimiento, debe probar todo el sistema con la actividad de consultas y los datos.  
   
 ## <a name="related-content"></a>Contenido relacionado  
-Los vínculos siguientes contienen información general acerca de cómo SQL Server administra el cifrado. Estos temas pueden ayudarle a entender el cifrado de SQL Server, pero en estos temas no tienen información específica de PDW de SQL Server y describen las características que no están presentes en PDW de SQL Server.  
+Los vínculos siguientes contienen información general acerca de cómo SQL Server administra el cifrado. Estos artículos pueden ayudarle a entender el cifrado de SQL Server, pero estos artículos no tienen información específica de PDW de SQL Server y describen las características que no están presentes en PDW de SQL Server.  
   
 -   [Cifrado de SQL Server](../relational-databases/security/encryption/sql-server-encryption.md)  
   

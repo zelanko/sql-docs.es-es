@@ -1,33 +1,33 @@
 ---
 title: Propiedad ConnectionString (ADO) | Documentos de Microsoft
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: drivers
-ms.service: 
+ms.service: ''
 ms.component: ado
 ms.technology:
 - drivers
-ms.custom: 
+ms.custom: ''
 ms.date: 01/19/2017
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.tgt_pltfrm: ''
+ms.topic: conceptual
 apitype: COM
 f1_keywords:
 - Connection15::ConnectionString
 helpviewer_keywords:
 - ConnectionString property [ADO]
 ms.assetid: 3be75b75-4d36-4479-ab64-9a456869252a
-caps.latest.revision: 
+caps.latest.revision: 18
 author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: aaf33c9a4fd5b628307195b9b9a7d1743d24d7f2
-ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
+ms.openlocfilehash: 68c7a10a4b674b9ff4092c37c332dffd7e5ff199
+ms.sourcegitcommit: bb044a48a6af9b9d8edb178dc8c8bd5658b9ff68
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/09/2018
+ms.lasthandoff: 04/18/2018
 ---
 # <a name="connectionstring-property-ado"></a>Propiedad ConnectionString (ADO)
 Indica la información utilizada para establecer una conexión con un origen de datos.  
@@ -42,11 +42,11 @@ Indica la información utilizada para establecer una conexión con un origen de 
   
 |Argumento|Description|  
 |--------------|-----------------|  
-|*Provider=*|Especifica el nombre de un proveedor que se usará para la conexión.|  
+|*Proveedor =*|Especifica el nombre de un proveedor que se usará para la conexión.|  
 |*Nombre de archivo =*|Especifica el nombre de un archivo específico del proveedor (por ejemplo, un objeto de origen de datos almacenados) que contiene información de conexión predefinida.|  
 |*Proveedor remoto =*|Especifica el nombre de un proveedor que se usará al abrir una conexión de cliente. (Solo servicio de datos remotos).|  
 |*Servidor remoto =*|Especifica el nombre de ruta de acceso del servidor que se usará al abrir una conexión de cliente. (Solo servicio de datos remotos).|  
-|*URL=*|Especifica la cadena de conexión como una dirección URL absoluta que identifica un recurso, como un archivo o directorio.|  
+|*DIRECCIÓN URL =*|Especifica la cadena de conexión como una dirección URL absoluta que identifica un recurso, como un archivo o directorio.|  
   
  Después de establecer el **ConnectionString** propiedad y abra el [conexión](../../../ado/reference/ado-api/connection-object-ado.md) de objeto, el proveedor puede alterar el contenido de la propiedad, por ejemplo, mediante la asignación de los nombres de argumento definidos por ADO a sus equivalentes para el proveedor específico.  
   
@@ -59,7 +59,7 @@ Indica la información utilizada para establecer una conexión con un origen de 
  Duplicados de un argumento en el **ConnectionString** propiedad se omite. Se utiliza la última instancia de uno de los argumentos.  
   
 > [!NOTE]
->  **Uso de servicios de datos remoto** cuando se utiliza en un lado del cliente **conexión** objeto, el **ConnectionString** propiedad puede incluir solo el *proveedor remoto*y *servidor remoto* parámetros.  
+>  **Uso de servicios de datos remoto** cuando se utiliza en un lado del cliente **conexión** objeto, el **ConnectionString** propiedad puede incluir solo el *proveedor remoto* y *servidor remoto* parámetros.  
   
  La tabla siguiente muestra el proveedor de ADO predeterminado para cada sistema operativo Windows:  
   

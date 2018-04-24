@@ -1,32 +1,32 @@
 ---
-title: "Ejemplo del método GetRows (JScript) | Documentos de Microsoft"
-ms.prod: sql-non-specified
+title: Ejemplo del método GetRows (JScript) | Documentos de Microsoft
+ms.prod: sql
 ms.prod_service: drivers
-ms.service: 
+ms.service: ''
 ms.component: ado
 ms.technology:
 - drivers
-ms.custom: 
+ms.custom: ''
 ms.date: 01/19/2017
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.tgt_pltfrm: ''
+ms.topic: conceptual
 dev_langs:
 - JScript
 helpviewer_keywords:
 - Getrows method [ADO], JScript example
 ms.assetid: d33467a5-5a56-450d-98c1-c3ce6f9f103c
-caps.latest.revision: 
+caps.latest.revision: 10
 author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: a6b3d16d4d9fb84d56a3bb7941f03348410d7d3d
-ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
+ms.openlocfilehash: eba9296e18e8a25613c73b23bf4b0858eb341cb6
+ms.sourcegitcommit: bb044a48a6af9b9d8edb178dc8c8bd5658b9ff68
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/09/2018
+ms.lasthandoff: 04/18/2018
 ---
 # <a name="getrows-method-example-jscript"></a>Ejemplo del método GetRows (JScript)
 Este ejemplo se utiliza la [GetRows](../../../ado/reference/ado-api/getrows-method-ado.md) método para recuperar todas las filas de la *Customers* tabla desde una [Recordset](../../../ado/reference/ado-api/recordset-object-ado.md) y rellenar una matriz con los datos resultantes. El **GetRows** método devolverá un menor que el número deseado de filas en dos casos: cualquier if [EOF](../../../ado/reference/ado-api/bof-eof-properties-ado.md) se ha alcanzado, o si **GetRows** intentó recuperar un registro que era eliminada por otro usuario. La función devuelve **False** sólo si se produce el segundo caso. Corte y pegue el código siguiente en el Bloc de notas u otro editor de texto y guárdelo como **GetRowsJS.asp**.  

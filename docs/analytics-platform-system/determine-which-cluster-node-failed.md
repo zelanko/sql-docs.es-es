@@ -1,29 +1,22 @@
 ---
-title: Determinar qué nodo de clúster no pudo (Analytics Platform System)
-author: barbkess
-ms.author: barbkess
+title: 'Determinar el nodo de clúster con errores: Analytics Platform System | Documentos de Microsoft'
+description: En este artículo se describe cómo determinar el nombre del nodo Analytics Platform System (APS) que se produjo un error después de que se ha producido un clúster de conmutación por error y se ha producido una alerta de conmutación por error de clúster. Como parte de la solución de problemas de un clúster de conmutación por error, debe determinar el nombre del nodo que generó un error antes de ponerse en contacto con Microsoft para ayudarle a resolver el problema.
+author: mzaman1
 manager: craigg
-ms.prod: analytics-platform-system
-ms.prod_service: mpp-data-warehouse
-ms.service: ''
-ms.component: ''
-ms.technology: mpp-data-warehouse
-ms.custom: ''
-ms.date: 01/05/2017
-ms.reviewer: na
-ms.suite: sql
-ms.tgt_pltfrm: na
-ms.topic: article
-ms.assetid: 1e001117-a1b6-4357-bf25-e85aba3f1cf0
-caps.latest.revision: 21
-ms.openlocfilehash: 201d11f7c3e5e7d50e1138ab41edf4fbdb60a6b9
-ms.sourcegitcommit: 9351e8b7b68f599a95fb8e76930ab886db737e5f
+ms.prod: sql
+ms.technology: data-warehouse
+ms.topic: conceptual
+ms.date: 04/17/2018
+ms.author: murshedz
+ms.reviewer: martinle
+ms.openlocfilehash: 031c8033e91d7a7f74ca8c4409bc02296a22ebcf
+ms.sourcegitcommit: 056ce753c2d6b85cd78be4fc6a29c2b4daaaf26c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/06/2018
+ms.lasthandoff: 04/19/2018
 ---
-# <a name="determine-which-cluster-node-failed"></a>Determinar en qué nodo de clúster no se pudo
-En este tema se describe cómo determinar el nombre del nodo PDW de SQL Server que se produjo un error después de que se ha producido un clúster de conmutación por error y se ha producido una alerta de conmutación por error de clúster. Como parte de la solución de problemas de un clúster de conmutación por error, debe determinar el nombre del nodo que generó un error antes de ponerse en contacto con Microsoft para ayudarle a resolver el problema.  
+# <a name="determine-which-cluster-node-failed-for-analytics-platform-system"></a>Determinar qué clúster de nodo de error de sistema de la plataforma de análisis
+En este tema se describe cómo determinar el nombre del nodo Analytics Platform System (APS) que se produjo un error después de que se ha producido un clúster de conmutación por error y se ha producido una alerta de conmutación por error de clúster. Como parte de la solución de problemas de un clúster de conmutación por error, debe determinar el nombre del nodo que generó un error antes de ponerse en contacto con Microsoft para ayudarle a resolver el problema.  
   
 ## <a name="Background"></a>Segundo plano  
 Para lograr alta disponibilidad en SQL Server PDW, el nodo de Control y los nodos de cálculo se configuran como componentes activos o pasivos de clústeres de conmutación por error de Windows. Cuando se produce un error en un servidor activo responder a las solicitudes de críticos del sistema, el servidor pasivo conmuta por error y realiza las funciones del servidor que no se pudo.  

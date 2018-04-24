@@ -1,33 +1,33 @@
 ---
-title: "Abrir y cerrar el ejemplo de los métodos (VB) | Documentos de Microsoft"
-ms.prod: sql-non-specified
+title: Abrir y cerrar el ejemplo de los métodos (VB) | Documentos de Microsoft
+ms.prod: sql
 ms.prod_service: drivers
-ms.service: 
+ms.service: ''
 ms.component: ado
 ms.technology:
 - drivers
-ms.custom: 
+ms.custom: ''
 ms.date: 01/19/2017
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.tgt_pltfrm: ''
+ms.topic: conceptual
 dev_langs:
 - VB
 helpviewer_keywords:
 - Close method [ADO], Visual Basic example
 - Open method [ADO], Visual Basic example
 ms.assetid: 1311d561-0e86-40f5-8cbc-ad8f13e626d1
-caps.latest.revision: 
+caps.latest.revision: 10
 author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 1b69303657d88f1ea74f7ff969d8380d0954b886
-ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
+ms.openlocfilehash: 394d64b7b34a1c0506a010d4e4b7a1dba29168d8
+ms.sourcegitcommit: bb044a48a6af9b9d8edb178dc8c8bd5658b9ff68
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/09/2018
+ms.lasthandoff: 04/18/2018
 ---
 # <a name="open-and-close-methods-example-vb"></a>Ejemplo de los métodos de apertura y cierre (VB)
 Este ejemplo se utiliza la **abiertos** y [cerrar](../../../ado/reference/ado-api/close-method-ado.md) métodos tanto [Recordset](../../../ado/reference/ado-api/recordset-object-ado.md) y [conexión](../../../ado/reference/ado-api/connection-object-ado.md) objetos que se han abierto.  

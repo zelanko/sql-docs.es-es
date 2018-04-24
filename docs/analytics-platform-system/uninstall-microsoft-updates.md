@@ -1,29 +1,22 @@
 ---
-title: Desinstalar actualizaciones de Microsoft (Analytics Platform System)
-author: barbkess
-ms.author: barbkess
+title: Desinstalar actualizaciones de Microsoft - Analytics Platform System | Documentos de Microsoft"
+description: Desinstalar actualizaciones de Microsoft Analytics Platform System (APS).
+author: mzaman1
 manager: craigg
-ms.prod: analytics-platform-system
-ms.prod_service: mpp-data-warehouse
-ms.service: ''
-ms.component: ''
-ms.technology: mpp-data-warehouse
-ms.custom: ''
-ms.date: 01/05/2017
-ms.reviewer: na
-ms.suite: sql
-ms.tgt_pltfrm: na
-ms.topic: article
-ms.assetid: df61570a-210d-4154-822f-98acd721f075
-caps.latest.revision: 19
-ms.openlocfilehash: b428cdacefefa96cdd5c500d34225c6963f5cb1f
-ms.sourcegitcommit: 9351e8b7b68f599a95fb8e76930ab886db737e5f
+ms.prod: sql
+ms.technology: data-warehouse
+ms.topic: conceptual
+ms.date: 04/17/2018
+ms.author: murshedz
+ms.reviewer: martinle
+ms.openlocfilehash: 57d0eb3616cf3567f63d75029f79cea6709ed955
+ms.sourcegitcommit: 056ce753c2d6b85cd78be4fc6a29c2b4daaaf26c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/06/2018
+ms.lasthandoff: 04/19/2018
 ---
-# <a name="uninstall-microsoft-updates"></a>Desinstalar actualizaciones de Microsoft
-En este tema se describe cómo desinstalar una actualización de Microsoft instalada previamente en el dispositivo de sistema de la plataforma de análisis.  
+# <a name="uninstall-microsoft-updates-in-analytics-platform-system"></a>Desinstalar actualizaciones de Microsoft en el sistema de la plataforma de análisis
+En este artículo se describe cómo desinstalar una actualización de Microsoft instalada previamente en el dispositivo de sistema de la plataforma de análisis.  
   
 ## <a name="before-you-begin"></a>Antes de comenzar  
   
@@ -32,7 +25,7 @@ Para llevar a cabo estos pasos, necesitará:
   
 -   Un inicio de sesión de sistema de la plataforma de análisis con permisos para tener acceso a la consola de administración para supervisar el dispositivo.  
   
--   Conocimiento de la cuenta de administrador de dominio del tejido que inicie sesión en el  *<Fabric Domain>***-HST01** nodo.  
+-   Conocimiento de la cuenta de administrador de dominio del tejido para iniciar sesión en el  *<Fabric Domain>***-HST01** nodo.  
   
 ## <a name="HowToUninstallMSFT"></a>Para desinstalar las actualizaciones de Microsoft  
   
@@ -44,9 +37,10 @@ Para llevar a cabo estos pasos, necesitará:
     C:\pdwinst\media\setup.exe /action="RemoveMicrosoftUpdate" /DomainAdminPasswords="<password>"  
     ```  
   
-## <a name="see-also"></a>Vea también  
-[Descargue y aplique las actualizaciones de Microsoft &#40;sistema de la plataforma de análisis&#41;](download-and-apply-microsoft-updates.md)  
-[Aplicar las revisiones del sistema de plataforma de análisis &#40;sistema de la plataforma de análisis&#41;](apply-analytics-platform-system-hotfixes.md)  
-[Desinstalar las revisiones del sistema de plataforma de análisis &#40;sistema de la plataforma de análisis&#41;](uninstall-analytics-platform-system-hotfixes.md)  
-[Mantenimiento de software &#40;sistema de la plataforma de análisis&#41;](software-servicing.md)  
+## <a name="next-steps"></a>Pasos siguientes
+Para obtener más información, vea:
+- [Descargue y aplique las actualizaciones de Microsoft &#40;sistema de la plataforma de análisis&#41;](download-and-apply-microsoft-updates.md) 
+- [Aplicar las revisiones del sistema de plataforma de análisis &#40;sistema de la plataforma de análisis&#41;](apply-analytics-platform-system-hotfixes.md)  
+- [Desinstalar las revisiones del sistema de plataforma de análisis &#40;sistema de la plataforma de análisis&#41;](uninstall-analytics-platform-system-hotfixes.md)  
+- [Mantenimiento de software &#40;sistema de la plataforma de análisis&#41;](software-servicing.md)  
   

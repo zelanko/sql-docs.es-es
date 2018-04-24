@@ -1,29 +1,22 @@
 ---
-title: Estado de mantenimiento del dispositivo de monitor (Analytics Platform System)
-author: barbkess
-ms.author: barbkess
+title: 'Supervisar el estado del dispositivo: Analytics Platform System'
+description: Cómo supervisar el estado de un dispositivo de sistema de la plataforma de análisis mediante la consola de administración, o consultando directamente las vistas de administración dinámica de almacenamiento de datos paralelos.
+author: mzaman1
 manager: craigg
-ms.prod: analytics-platform-system
-ms.prod_service: mpp-data-warehouse
-ms.service: ''
-ms.component: ''
-ms.technology: mpp-data-warehouse
-ms.custom: ''
-ms.date: 01/05/2017
-ms.reviewer: na
-ms.suite: sql
-ms.tgt_pltfrm: na
-ms.topic: article
-ms.assetid: 91132e3c-3137-4670-adaa-8a7b234fb8d2
-caps.latest.revision: 12
-ms.openlocfilehash: 346e7f00973a59ce23ebe4fb4e018157c7a03c84
-ms.sourcegitcommit: 9351e8b7b68f599a95fb8e76930ab886db737e5f
+ms.prod: sql
+ms.technology: data-warehouse
+ms.topic: conceptual
+ms.date: 04/17/2018
+ms.author: murshedz
+ms.reviewer: martinle
+ms.openlocfilehash: d8616d291dcaa8afadc01c9bd237903ca6c13573
+ms.sourcegitcommit: 056ce753c2d6b85cd78be4fc6a29c2b4daaaf26c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/06/2018
+ms.lasthandoff: 04/19/2018
 ---
 # <a name="monitor-appliance-health-state"></a>Monitor de estado de dispositivo
-En este tema se explica cómo supervisar el estado de un dispositivo PDW de SQL Server mediante la consola de administración, o consultando directamente las vistas de administración dinámica de SQL Server PDW.  
+En este artículo se explica cómo supervisar el estado de un dispositivo de sistema de la plataforma de análisis mediante la consola de administración, o consultando directamente las vistas de administración dinámica de almacenamiento de datos paralelos. 
   
 ## <a name="to-monitor-the-appliance-state"></a>Para supervisar el estado de dispositivo  
 Un administrador del sistema puede utilizar la consola de administración o las vistas de administración dinámica (DMV) de SQL Server PDW para recuperar la jerarquía completa de nodos, componentes y software. El siguiente diagrama ofrece una visión de alto nivel de los componentes que supervisa PDW de SQL Server.  
@@ -37,7 +30,7 @@ Para recuperar el estado del componente mediante el uso de la consola de adminis
   
 2.  En la página de estado de dispositivo, haga clic en un nodo específico para ver los detalles del nodo.  
   
-    ![PDW Admin Console State](./media/monitor-appliance-health-state/SQL_Server_PDW_AdminConsol_State.png "SQL_Server_PDW_AdminConsol_State")  
+    ![Estado de consola de administración de PDW](./media/monitor-appliance-health-state/SQL_Server_PDW_AdminConsol_State.png "SQL_Server_PDW_AdminConsol_State")  
   
 ### <a name="monitor-component-status-by-using-system-views"></a>Supervisar el estado de componente mediante el uso de vistas del sistema  
 Para recuperar el estado del componente mediante el uso de vistas del sistema, use [sys.dm_pdw_component_health_status](../relational-databases/system-dynamic-management-views/sys-dm-pdw-component-health-status-transact-sql.md). Por ejemplo, la consulta siguiente recupera el estado de todos los componentes.  
@@ -75,7 +68,7 @@ ORDER BY
   
 Posibles valores devueltos para la propiedad de estado son:  
   
--   Ok  
+-   Vale  
   
 -   No críticos  
   

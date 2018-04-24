@@ -18,16 +18,17 @@ ms.assetid: fc2fc949-746f-40c7-b5d4-3fd51ccfbd7b
 caps.latest.revision: 25
 author: MikeRayMSFT
 ms.author: mikeray
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: ff1ff9689876177cb55aaeea6689e49a478fd6d2
-ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.openlocfilehash: 8829a826c0e31d1c37cf7b65478cbd781cf89d0c
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/05/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="management-of-logins-and-jobs-after-role-switching-sql-server"></a>Administración de inicios de sesión y trabajos tras la conmutación de roles (SQL Server)
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] Al implementar una solución de alta disponibilidad o de recuperación ante desastres para una base de datos de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], es importante reproducir información relevante que se almacena para dicha base de datos en las bases de datos **master** o **msdb**. Generalmente, la información relevante incluye los trabajos de la base de datos principal y los inicios de sesión de los usuarios o los procesos que necesitan conectarse con la base de datos. Debe duplicar esta información en las instancias de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] que hospeden una base de datos reflejada o secundaria. Si es posible, tras la conmutación de roles es mejor reproducir mediante programación la información en la nueva base de datos principal.  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+  Al implementar una solución de alta disponibilidad o de recuperación ante desastres para una base de datos de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , es importante reproducir información relevante que se almacena para dicha base de datos en las bases de datos **master** o **msdb** . Generalmente, la información relevante incluye los trabajos de la base de datos principal y los inicios de sesión de los usuarios o los procesos que necesitan conectarse con la base de datos. Debe duplicar esta información en las instancias de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] que hospeden una base de datos reflejada o secundaria. Si es posible, tras la conmutación de roles es mejor reproducir mediante programación la información en la nueva base de datos principal.  
   
 ## <a name="logins"></a>Inicios de sesión  
  En las instancias de servidor que hospeden una copia de la base de datos, debe reproducir los inicios de sesión que tengan permiso de acceso a la base de datos principal. Cuando cambie el rol principal, solo los usuarios cuyos inicios de sesión existan en la nueva instancia del servidor principal podrán tener acceso la nueva base de datos principal. Los usuarios cuyos inicios de sesión no estén definidos en la nueva instancia del servidor principal se quedarán huérfanos y no podrán tener acceso a la base de datos.  
@@ -44,7 +45,7 @@ ms.lasthandoff: 12/05/2017
   
  Para obtener más información, vea [Usuarios huérfanos con creación de reflejo de la base de datos y trasvase de registros](http://blogs.msdn.com/b/sqlserverfaq/archive/2009/04/13/orphaned-users-with-database-mirroring-and-log-shipping.aspx) (un blog del motor de base de datos).  
   
-## <a name="jobs"></a>Jobs  
+## <a name="jobs"></a>trabajos  
  Los trabajos, como, por ejemplo, los trabajos de copia de seguridad, requieren una consideración especial. Normalmente, tras una conmutación de roles, el propietario de la base de datos o el administrador del sistema deben volver a crear los trabajos de la nueva base de datos principal.  
   
  Cuando esté disponible la que antes era la instancia del servidor principal, debería eliminar los trabajos originales en dicha instancia de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Observe que los trabajos de la base de datos reflejada actual generan un error porque la base de datos se encuentra en el estado RESTORING y, por lo tanto, no está disponible.  
@@ -52,7 +53,7 @@ ms.lasthandoff: 12/05/2017
 > [!NOTE]  
 >  Las distintas instancias de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] pueden configurarse de forma diferente, con distintas letras de unidad, por ejemplo. Los trabajos para cada asociado deben permitir tales diferencias.  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Ver también  
  [Administrar los metadatos cuando una base de datos pasa a estar disponible en otra instancia del servidor &#40;SQL Server&#41;](../../relational-databases/databases/manage-metadata-when-making-a-database-available-on-another-server.md)   
  [Solucionar problemas de usuarios huérfanos &#40;SQL Server&#41;](../../sql-server/failover-clusters/troubleshoot-orphaned-users-sql-server.md)  
   

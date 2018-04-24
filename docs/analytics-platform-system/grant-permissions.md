@@ -1,26 +1,22 @@
 ---
-title: Conceder permisos
-author: barbkess
-ms.author: barbkess
+title: Permisos GRANT T-SQL - almacenamiento de datos paralelos | Documentos de Microsoft
+description: Permisos GRANT T-SQL para las operaciones de base de datos de almacenamiento de datos paralelos.
+author: mzaman1
 manager: craigg
-ms.prod: analytics-platform-system
-ms.prod_service: mpp-data-warehouse
-ms.service: ''
-ms.component: ''
-ms.technology: mpp-data-warehouse
-ms.custom: ''
-ms.date: 01/05/2017
-ms.reviewer: na
-ms.suite: sql
-ms.tgt_pltfrm: na
-ms.topic: article
-ms.openlocfilehash: 35542a9ea2544f0bdd357d3609937e1596e00a3f
-ms.sourcegitcommit: 9351e8b7b68f599a95fb8e76930ab886db737e5f
+ms.prod: sql
+ms.technology: data-warehouse
+ms.topic: conceptual
+ms.date: 04/17/2018
+ms.author: murshedz
+ms.reviewer: martinle
+ms.openlocfilehash: 01ef7b199a07be8bbc2dc1dee40d9c4d5771db1b
+ms.sourcegitcommit: 056ce753c2d6b85cd78be4fc6a29c2b4daaaf26c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/06/2018
+ms.lasthandoff: 04/19/2018
 ---
-# <a name="grant-permissions"></a>Conceder permisos
+# <a name="grant-t-sql-permissions-for-parallel-data-warehouse"></a>Permisos GRANT T-SQL para almacenamiento de datos paralelos
+Permisos GRANT T-SQL para las operaciones de base de datos de almacenamiento de datos paralelos.
 
 ## <a name="grant-permissions-to-submit-database-queries"></a>Conceder permisos para enviar consultas de base de datos
 En esta sección se describe cómo conceder permisos a los roles de base de datos y los usuarios para consultar los datos en el dispositivo PDW de SQL Server.  
@@ -252,4 +248,4 @@ Para crear los inicios de sesión de administrador, consulte [funciones fijas de
 [CREAR EL INICIO DE SESIÓN](../t-sql/statements/create-login-transact-sql.md)  
 [CREAR USUARIO](../t-sql/statements/create-user-transact-sql.md)  
 [CREAR ROL](../t-sql/statements/create-role-transact-sql.md)  
-[Load](load-overview.md)  
+[Carga](load-overview.md)  

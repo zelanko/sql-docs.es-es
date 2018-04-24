@@ -1,24 +1,21 @@
 ---
-title: 'Actualizado: Analytics Platform System para documentos de SQL Server | Documentos de Microsoft'
+title: 'Actualizado: Analytics Platform System documentos | Documentos de Microsoft'
 description: Mostrar fragmentos de contenido actualizado para recientemente modificadas en documentación, Analytics Platform System para Microsoft SQL Server.
+author: mzaman1
 manager: craigg
-author: MightyPen
-ms.author: genemi
-ms.topic: article
-ms.custom: UpdArt.exe
-ms.suite: sql
-ms.prod_service: sql-non-specified
-ms.component: aps-pdw
-ms.date: 02/03/2018
-ms.openlocfilehash: f3a8a14c0c01ff99c8ad613bbc9f5e1e01955e7e
-ms.sourcegitcommit: d6b1695c8cbc70279b7d85ec4dfb66a4271cdb10
+ms.prod: sql
+ms.technology: data-warehouse
+ms.topic: conceptual
+ms.date: 04/17/2018
+ms.author: murshedz
+ms.reviewer: martinle
+ms.openlocfilehash: 94b7666476874e610991ebf838ad259f3d0bb85a
+ms.sourcegitcommit: 056ce753c2d6b85cd78be4fc6a29c2b4daaaf26c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/08/2018
+ms.lasthandoff: 04/19/2018
 ---
 # <a name="new-and-recently-updated-analytics-platform-system-for-sql-server"></a>Nuevos y actualizados recientemente: Analytics Platform System para SQL Server
-
-
 
 Casi todos los días, Microsoft actualiza algunos de los artículos existentes en su [Docs.Microsoft.com](http://docs.microsoft.com/) sitio Web de documentación. Este artículo muestra extractos de los artículos actualizados recientemente. También pueden aparecer vínculos a artículos nuevos.
 

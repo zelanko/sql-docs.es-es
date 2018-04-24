@@ -1,30 +1,30 @@
 ---
 title: Los errores de ADO | Documentos de Microsoft
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: drivers
-ms.service: 
+ms.service: ''
 ms.component: ado
 ms.technology:
 - drivers
-ms.custom: 
+ms.custom: ''
 ms.date: 02/15/2017
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.tgt_pltfrm: ''
+ms.topic: conceptual
 helpviewer_keywords:
 - errors [ADO]
 ms.assetid: 9bb84114-a1df-4122-a1b8-ad98dcd85cc3
-caps.latest.revision: 
+caps.latest.revision: 8
 author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 06fc6433f6f1d5f00b7b6d619dce9169e1fb67c3
-ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
+ms.openlocfilehash: 7319f978370134775d7f89593716beac9fb73fab
+ms.sourcegitcommit: bb044a48a6af9b9d8edb178dc8c8bd5658b9ff68
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/09/2018
+ms.lasthandoff: 04/18/2018
 ---
 # <a name="ado-run-time-errors"></a>Errores de tiempo de ejecución de ADO
 Los errores de ADO se notifican a su programa como errores en tiempo de ejecución. Puede usar el mecanismo de interceptación de errores de su lenguaje de programación para capturar y controlarlos. Por ejemplo, en Visual Basic, utilice la **On Error** instrucción. En Visual C++, depende del método que estás usando para tener acceso a las bibliotecas de ADO. Con #import, utilice un **try-catch** bloque. En caso contrario, los programadores de C++ necesitan recuperar el objeto de error explícitamente mediante una llamada a **GetErrorInfo**. El siguiente procedimiento sub de Visual Basic muestra cómo interceptar un error de ADO:

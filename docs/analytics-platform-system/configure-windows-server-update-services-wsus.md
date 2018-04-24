@@ -1,28 +1,21 @@
 ---
-title: Configurar Windows Server Update Services (WSUS) (sistema de plataforma de análisis)
-author: barbkess
-ms.author: barbkess
+title: Configurar WSUS - sistema de la plataforma de análisis | Documentos de Microsoft
+description: Estas instrucciones le guiará por los pasos para utilizar al Asistente para que configuración de Windows Server Update Services (WSUS) para configurar WSUS para Analytics Platform System.
+author: mzaman1
 manager: craigg
-ms.prod: analytics-platform-system
-ms.prod_service: mpp-data-warehouse
-ms.service: ''
-ms.component: ''
-ms.technology: mpp-data-warehouse
-ms.custom: ''
-ms.date: 01/05/2017
-ms.reviewer: na
-ms.suite: sql
-ms.tgt_pltfrm: na
-ms.topic: article
-ms.assetid: a10b2884-468e-41ef-bd59-8df894381254
-caps.latest.revision: 41
-ms.openlocfilehash: 31427bc55017cf9c069e8cd4a467dfdb9608ca3f
-ms.sourcegitcommit: d6b1695c8cbc70279b7d85ec4dfb66a4271cdb10
+ms.prod: sql
+ms.technology: data-warehouse
+ms.topic: conceptual
+ms.date: 04/17/2018
+ms.author: murshedz
+ms.reviewer: martinle
+ms.openlocfilehash: dfddc93672dfeb5840afe4cb97e668e3c12132c3
+ms.sourcegitcommit: 056ce753c2d6b85cd78be4fc6a29c2b4daaaf26c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/10/2018
+ms.lasthandoff: 04/19/2018
 ---
-# <a name="configure-windows-server-update-services-wsus"></a>Configurar Windows Server Update Services (WSUS)
+# <a name="configure-windows-server-update-services-wsus-in-analytics-platform-system"></a>Configurar Windows Server Update Services (WSUS) en el sistema de la plataforma de análisis
 Estas instrucciones le guiará por los pasos para utilizar al Asistente para que configuración de Windows Server Update Services (WSUS) para configurar WSUS para Analytics Platform System. Debe configurar WSUS para poder aplicar las actualizaciones de software para el dispositivo. WSUS se ha instalado en la máquina virtual VMM del dispositivo.  
   
 Para obtener más información acerca de cómo configurar WSUS, consulte la [Guía de instalación paso a paso de WSUS](http://go.microsoft.com/fwlink/?LinkId=202417) en el sitio Web WSUS. Después de configurar WSUS, consulte [descarga y aplicar las actualizaciones de Microsoft &#40;Analytics Platform System&#41; ](download-and-apply-microsoft-updates.md) para iniciar una actualización.  
@@ -113,7 +106,7 @@ Para configurar WSUS, debe:
   
     Si este servidor requiere un servidor proxy para tener acceso a Microsoft Update o en otro servidor de nivel superior, puede configurar aquí, y la configuración del servidor proxy en caso contrario, haga clic en **siguiente**.  
   
-    ![WSUS Proxy](./media/configure-windows-server-update-services-wsus/WSUS_Wiz5a.png "WSUS_Wiz5a")  
+    ![WSUS-Proxy](./media/configure-windows-server-update-services-wsus/WSUS_Wiz5a.png "WSUS_Wiz5a")  
   
     #### <a name="to-configure-proxy-server-settings"></a>Para configurar el servidor proxy  
   

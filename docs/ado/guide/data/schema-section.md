@@ -1,30 +1,30 @@
 ---
-title: "Sección de esquema | Documentos de Microsoft"
-ms.prod: sql-non-specified
+title: Sección de esquema | Documentos de Microsoft
+ms.prod: sql
 ms.prod_service: drivers
-ms.service: 
+ms.service: ''
 ms.component: ado
 ms.technology:
 - drivers
-ms.custom: 
+ms.custom: ''
 ms.date: 01/19/2017
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.tgt_pltfrm: ''
+ms.topic: conceptual
 helpviewer_keywords:
 - Schema section [ADO]
 ms.assetid: 4ac6e524-2c92-48e8-b871-0a4b5c8fda18
-caps.latest.revision: 
+caps.latest.revision: 5
 author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 51c10f0fb21bdab8c83d799d635153b62c2c6e58
-ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
+ms.openlocfilehash: 86231be99be321361310dfcbd7fb2669a002a418
+ms.sourcegitcommit: bb044a48a6af9b9d8edb178dc8c8bd5658b9ff68
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/09/2018
+ms.lasthandoff: 04/18/2018
 ---
 # <a name="schema-section"></a>Sección de esquema
 La sección de esquema es necesaria. Como se muestra en el ejemplo anterior, ADO escribe metadatos detallados sobre cada columna debe conservar la semántica de los valores de datos tanto como sea posible para la actualización. Sin embargo, para cargar el XML, ADO sólo requiere los nombres de las columnas y el conjunto de filas al que pertenecen. Este es un ejemplo de un esquema mínimo:  

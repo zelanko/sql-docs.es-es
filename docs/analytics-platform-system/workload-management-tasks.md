@@ -1,26 +1,22 @@
 ---
-title: Tareas de administración de cargas de trabajo
-author: barbkess
-ms.author: barbkess
+title: 'Tareas de administración de cargas de trabajo: Analytics Platform System | Documentos de Microsoft'
+description: Tareas de administración de cargas de trabajo en el sistema de la plataforma de análisis.
+author: mzaman1
 manager: craigg
-ms.prod: analytics-platform-system
-ms.prod_service: mpp-data-warehouse
-ms.service: ''
-ms.component: ''
-ms.technology: mpp-data-warehouse
-ms.custom: ''
-ms.date: 01/12/2017
-ms.reviewer: na
-ms.suite: sql
-ms.tgt_pltfrm: na
-ms.topic: article
-ms.openlocfilehash: 0a9c3ffd4768d78a4063ad40f7903dfe00b647e5
-ms.sourcegitcommit: 9351e8b7b68f599a95fb8e76930ab886db737e5f
+ms.prod: sql
+ms.technology: data-warehouse
+ms.topic: conceptual
+ms.date: 04/17/2018
+ms.author: murshedz
+ms.reviewer: martinle
+ms.openlocfilehash: 16206cb5cefd68b19e1640592b903890808b5a31
+ms.sourcegitcommit: 056ce753c2d6b85cd78be4fc6a29c2b4daaaf26c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/06/2018
+ms.lasthandoff: 04/19/2018
 ---
-# <a name="workload-management-tasks"></a>Tareas de administración de cargas de trabajo
+# <a name="workload-management-tasks-in-analytics-platform-system"></a>Tareas de administración de cargas de trabajo en el sistema de la plataforma de análisis
+Tareas de administración de cargas de trabajo en el sistema de la plataforma de análisis.
 
 ## <a name="view-login-members-of-each-resource-class"></a>Ver los miembros de inicio de sesión de cada clase de recurso
 Describe cómo mostrar a los miembros de inicio de sesión de cada rol de servidor de la clase de recurso en PDW de SQL Server. Utilice esta consulta para averiguar la clase de recursos permitido para las solicitudes enviadas por cada inicio de sesión.  
@@ -45,7 +41,7 @@ WHERE
   
 Si un inicio de sesión no está en esta lista, sus solicitudes recibirán los recursos predeterminados. Si un inicio de sesión es miembro de más de una clase de recurso, la clase más grande tiene prioridad.  
   
-Las asignaciones de recursos se muestran en la [administración de cargas de trabajo](workload-management.md) tema.  
+Las asignaciones de recursos se muestran en [administración de cargas de trabajo](workload-management.md).  
   
 ## <a name="change-the-system-resources-allocated-to-a-request"></a>Los recursos de sistema asignados a una solicitud de cambio
 Describe cómo averiguar qué recursos de clase de una solicitud de PDW de SQL Server se ejecuta en y, a continuación, cómo cambiar los recursos del sistema para esa solicitud. Cambiar los recursos para una solicitud, es necesario cambiar la pertenencia de la clase de recurso del inicio de sesión enviando la solicitud, mediante el uso de la [ALTER SERVER ROLE](../t-sql/statements/alter-server-role-transact-sql.md) instrucción.  
@@ -71,9 +67,9 @@ WHERE
 GO  
 ```  
   
-Si no hay inicios de sesión que son miembros de un rol de servidor de la clase de recurso, la tabla resultante estará vacía. En este caso, si la consulta devuelve un inicio de sesión denominado Ching, a continuación, cuando Ching envía una solicitud, la solicitud recibirá los recursos del sistema de forma predeterminada, que es menor que los recursos del sistema de clase de recurso. Si un inicio de sesión es miembro de más de una clase de recurso, la clase más grande tiene prioridad.  
+Si no hay inicios de sesión que son miembros de un rol de servidor de la clase de recurso, la tabla resultante estará vacía. En este caso, si la consulta devuelve un inicio de sesión denominado Ching, a continuación, cuando Ching envía una solicitud, la solicitud recibirán los recursos del sistema de forma predeterminada, que son menores que los recursos del sistema de clase de recurso. Si un inicio de sesión es miembro de más de una clase de recurso, la clase más grande tiene prioridad.  
   
-Para obtener una lista de asignaciones de recursos para cada clase de recursos, consulte [administración de cargas de trabajo](workload-management.md) tema.  
+Para obtener una lista de asignaciones de recursos para cada clase de recursos, consulte [administración de cargas de trabajo](workload-management.md).  
   
 ### <a name="step-2-run-the-request-under-a-login-with-different-resource-class-membership"></a>Paso 2: Ejecutar la solicitud en un inicio de sesión con la pertenencia de la clase de recursos distinto  
 Hay dos maneras de ejecutar una solicitud con cualquier recursos del sistema de mayor o menor:  
@@ -90,7 +86,7 @@ ALTER SERVER ROLE xlargerc ADD MEMBER Ching;
   
 Ching ahora es un miembro de la largerc y los roles de servidor xlargerc. Cuando Ching envía las solicitudes, las solicitudes recibirán los recursos del sistema xlargerc.  
   
-En el ejemplo siguiente, se retrocede Ching al rol de servidor mediumrc.  Para ello, debe quitará xlargerc y roles de servidor largerc y agregarse al rol de servidor mediumrc.  
+En el ejemplo siguiente, se retrocede Ching al rol de servidor mediumrc.  Para cambiar a la nueva función, el inicio de sesión debe quitarla xlargerc y roles de servidor largerc y agregado a la función de servidor mediumrc.  
   
 ```sql  
 -- Move login Ching back to using medium system resources for requests.  
@@ -99,7 +95,7 @@ ALTER SERVER ROLE largerc DROP MEMBER Ching;
 ALTER SERVER ROLE mediumrc ADD MEMBER Ching;  
 ```  
   
-Ching ahora es un miembro del rol de servidor mediumrc.  En el ejemplo siguiente se cambia Ching para que los recursos del sistema predeterminado para sus solicitudes.  
+Ching ahora es un miembro del rol de servidor mediumrc.  En el ejemplo siguiente se cambia Ching para que los recursos del sistema de forma predeterminada para las solicitudes.  
   
 ```sql  
 -- Move login Ching to use the default system resources for requests.  
@@ -109,13 +105,13 @@ ALTER SERVER ROLE mediumrc DROP MEMBER Ching;
 Para obtener más información acerca de cómo cambiar la pertenencia al rol de clase de recursos, consulte [ALTER SERVER ROLE](../t-sql/statements/alter-server-role-transact-sql.md).  
 
 ## <a name="change-a-login-to-the-default-system-resources-for-its-requests"></a>Cambiar un inicio de sesión a los recursos del sistema predeterminado para sus solicitudes
-Describe cómo cambiar las asignaciones de recursos de sistema asignadas a un inicio de sesión de SQL Server PDW para los importes de forma predeterminada. Esto afecta a los recursos del sistema que PDW de SQL Server asigna a las solicitudes enviadas por el inicio de sesión.  
+Describe cómo cambiar las asignaciones de recursos de sistema asignadas a un inicio de sesión de SQL Server PDW para los importes de forma predeterminada. 
   
 Para obtener descripciones de clase de recursos, consulte [administración de cargas de trabajo](workload-management.md)  
   
 Cuando un inicio de sesión no es un miembro de cualquier rol de servidor de la clase de recurso, las solicitudes enviadas por el inicio de sesión recibirá la cantidad de recursos del sistema predeterminada.  
   
-Suponga que el inicio de sesión Matt actualmente es un miembro de todos los roles de servidor de clase de recursos y desea volver a tener sus solicitudes reciba únicamente los recursos de forma predeterminada.  En el ejemplo siguiente se asigna los recursos predeterminados a las solicitudes de Matt colocando su pertenencia a todas las funciones de servidor de clase de recurso tres.  
+Suponga que el inicio de sesión Matt actualmente es un miembro de todos los roles de servidor de clase de recursos y desea volver a tener las solicitudes de recepción únicamente los recursos de forma predeterminada.  En el ejemplo siguiente se asigna los recursos predeterminados a las solicitudes de Matt colocando su pertenencia a todas las funciones de servidor de clase de recurso tres.  
   
 ```sql  
 --Give the requests submitted by Matt the default system resources   
@@ -130,7 +126,7 @@ Describe cómo averiguar el número de ranuras necesarias para una solicitud que
   
 Para obtener más información, consulte [administración de cargas de trabajo](workload-management.md).  
   
-Una solicitud podría estar esperando demasiado tiempo sin que ejecuta. Uno de los métodos para solucionar este problema consiste en buscar el número de ranuras de la simultaneidad que necesita de la solicitud.  En el ejemplo siguiente se muestra el número de ranuras de simultaneidad necesaria para cada solicitud en espera.  
+Una solicitud podría estar esperando demasiado tiempo sin que ejecuta. Uno de los métodos para solucionar problemas de la solicitud consiste en buscar el número de ranuras de la simultaneidad que necesita de la solicitud.  En el ejemplo siguiente se muestra el número de ranuras de simultaneidad necesaria para cada solicitud en espera.  
   
 ```sql  
 --Display the number of concurrency slots required   

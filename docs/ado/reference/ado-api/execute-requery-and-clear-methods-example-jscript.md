@@ -1,17 +1,17 @@
 ---
-title: "Execute, Requery y Clear ejemplo de los métodos (JScript) | Documentos de Microsoft"
-ms.prod: sql-non-specified
+title: Execute, Requery y Clear ejemplo de los métodos (JScript) | Documentos de Microsoft
+ms.prod: sql
 ms.prod_service: drivers
-ms.service: 
+ms.service: ''
 ms.component: ado
 ms.technology:
 - drivers
-ms.custom: 
+ms.custom: ''
 ms.date: 01/19/2017
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.tgt_pltfrm: ''
+ms.topic: conceptual
 dev_langs:
 - JScript
 helpviewer_keywords:
@@ -19,16 +19,16 @@ helpviewer_keywords:
 - Clear method [ADO], JScript example
 - Execute method [ADO], JScript example
 ms.assetid: 51a87e91-c9d9-4e49-af47-79cce2c4cfe0
-caps.latest.revision: 
+caps.latest.revision: 10
 author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 14e497eae1211dce02e5c05581d1ddf29dce3570
-ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
+ms.openlocfilehash: 38b2921e9615bc23acec31326cf4d5b44b5dc0ad
+ms.sourcegitcommit: bb044a48a6af9b9d8edb178dc8c8bd5658b9ff68
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/09/2018
+ms.lasthandoff: 04/18/2018
 ---
 # <a name="execute-requery-and-clear-methods-example-jscript"></a>Execute, Requery y Clear ejemplo de los métodos (JScript)
 Este ejemplo se muestra la **Execute** método cuando se ejecuta desde una [comando](../../../ado/reference/ado-api/command-object-ado.md) objeto y un [conexión](../../../ado/reference/ado-api/connection-object-ado.md) objeto. También usa el [Requery](../../../ado/reference/ado-api/requery-method.md) método para recuperar los datos actuales en un [Recordset](../../../ado/reference/ado-api/recordset-object-ado.md)y el [borrar](../../../ado/reference/ado-api/clear-method-ado.md) método para borrar el contenido de la [errores](../../../ado/reference/ado-api/errors-collection-ado.md)colección. (El **errores** es acceso a la colección a través de la **conexión** objeto de la [ActiveConnection](../../../ado/reference/ado-api/activeconnection-property-ado.md) propiedad de la [Recordset](../../../ado/reference/ado-api/recordset-object-ado.md).) Asignar nombre al archivo **ExecuteJS.asp al**.  

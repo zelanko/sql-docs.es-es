@@ -1,31 +1,21 @@
 ---
-title: Almacenamiento de datos paralelos de sistema de plataforma de análisis de instrucciones de T-SQL | Documentos de Microsoft
-author: barbkess
-ms.author: barbkess
+title: Instrucciones de T-SQL - almacenamiento de datos paralelos | Documentos de Microsoft
+description: Instrucciones de T-SQL para analítica Platform System (APS) SQL Server Parallel almacenamiento de datos (PDW).
+author: mzaman1
 manager: craigg
-ms.prod: analytics-platform-system
-ms.prod_service: mpp-data-warehouse
-ms.service: ''
-ms.component: ''
-ms.suite: sql
-ms.custom: ''
-ms.technology: mpp-data-warehouse
-description: Instrucciones de Transact-SQL (T-SQL) para análisis Platform System (APS) SQL Server paralelo almacenamiento de datos (PDW).
-documentationcenter: NA
-editor: ''
-ms.assetid: 0abc5934-1e67-491a-b7d7-8b520d1ae98e
-ms.devlang: NA
-ms.topic: article
-ms.tgt_pltfrm: NA
-ms.workload: data-services
-ms.date: 12/15/2016
-ms.openlocfilehash: 2109e1aaa48fb95da2b4d8b36aee7bbc86ea4ef4
-ms.sourcegitcommit: 9351e8b7b68f599a95fb8e76930ab886db737e5f
+ms.prod: sql
+ms.technology: data-warehouse
+ms.topic: conceptual
+ms.date: 04/17/2018
+ms.author: murshedz
+ms.reviewer: martinle
+ms.openlocfilehash: 86bf74778ab78fc42ad1151a341e5c2d232da7aa
+ms.sourcegitcommit: 056ce753c2d6b85cd78be4fc6a29c2b4daaaf26c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/06/2018
+ms.lasthandoff: 04/19/2018
 ---
-# <a name="t-sql-topics"></a>Temas de T-SQL
+# <a name="t-sql-statements-for-parallel-data-warehouse"></a>Instrucciones de T-SQL para almacenamiento de datos paralelos
 Instrucciones de Transact-SQL (T-SQL) para análisis Platform System (APS) SQL Server paralelo almacenamiento de datos (PDW).
 
 ## <a name="data-definition-language-ddl-statements"></a>Instrucciones de lenguaje de definición (DDL) de datos

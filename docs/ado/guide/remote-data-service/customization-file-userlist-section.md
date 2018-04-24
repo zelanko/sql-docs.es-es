@@ -1,31 +1,31 @@
 ---
-title: "Sección UserList del archivo de personalización | Documentos de Microsoft"
-ms.prod: sql-non-specified
+title: Sección UserList del archivo de personalización | Documentos de Microsoft
+ms.prod: sql
 ms.prod_service: drivers
-ms.service: 
+ms.service: ''
 ms.component: ado
 ms.technology:
 - drivers
-ms.custom: 
+ms.custom: ''
 ms.date: 01/19/2017
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.tgt_pltfrm: ''
+ms.topic: conceptual
 helpviewer_keywords:
 - UserList section in rds [ADO]
 - customization file in RDS [ADO]
 ms.assetid: 42e8ec20-eaac-4a95-8cb8-4bba93a75bcb
-caps.latest.revision: 
+caps.latest.revision: 13
 author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 5f883b100d522f90ae802578256108ee9e658b71
-ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
+ms.openlocfilehash: 0184e0289a5f56904e87360900be2409b6d2f248
+ms.sourcegitcommit: bb044a48a6af9b9d8edb178dc8c8bd5658b9ff68
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/09/2018
+ms.lasthandoff: 04/18/2018
 ---
 # <a name="customization-file-userlist-section"></a>Sección UserList del archivo de personalización
 El **userlist** sección pertenece a la **conectar** sección con la misma sección *identificador* parámetro.  
@@ -38,12 +38,12 @@ El **userlist** sección pertenece a la **conectar** sección con la misma secci
 ## <a name="syntax"></a>Sintaxis  
  Una entrada de acceso de usuario tiene el formato:  
   
- *nombre de usuario***=**   
+ *Nombre de usuario* **=**   
  ***accessRights***  
   
 |Parte|Description|  
 |----------|-----------------|  
-|*nombre de usuario*|El *nombre de usuario* de la persona que utiliza esta conexión. Establece los nombres de usuario válido con IIS **Service Manager** cuadro de diálogo.|  
+|*userName*|El *nombre de usuario* de la persona que utiliza esta conexión. Establece los nombres de usuario válido con IIS **Service Manager** cuadro de diálogo.|  
 |***accessRights***|Uno de los siguientes derechos de acceso:<br /><br /> -   **NoAccess** : usuario no puede obtener acceso al origen de datos.<br />-   **ReadOnly** : el usuario puede leer el origen de datos.<br />-   **Lectura y escritura** : usuario puede leer o escribir en el origen de datos.|  
   
 ## <a name="see-also"></a>Vea también  

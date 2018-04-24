@@ -1,31 +1,31 @@
 ---
-title: "Método Execute21 (RDS) | Documentos de Microsoft"
-ms.prod: sql-non-specified
+title: Método Execute21 (RDS) | Documentos de Microsoft
+ms.prod: sql
 ms.prod_service: drivers
-ms.service: 
+ms.service: ''
 ms.component: ado
 ms.technology:
 - drivers
-ms.custom: 
+ms.custom: ''
 ms.date: 01/19/2017
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.tgt_pltfrm: ''
+ms.topic: conceptual
 apitype: COM
 helpviewer_keywords:
 - Execute21 method [RDS]
 ms.assetid: 9f131c8d-1497-416d-8209-abb481c38f7b
-caps.latest.revision: 
+caps.latest.revision: 17
 author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: fd79bbbd0ccce5e5e2f2bef181ba958c76f6afb5
-ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
+ms.openlocfilehash: f0eb7764c01ee7ae8cfd5cb27371dd9d5fa390b2
+ms.sourcegitcommit: bb044a48a6af9b9d8edb178dc8c8bd5658b9ff68
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/09/2018
+ms.lasthandoff: 04/18/2018
 ---
 # <a name="execute21-method-rds"></a>Método Execute21 (RDS)
 Ejecuta la solicitud y crea un conjunto de registros de ADO para su uso en ADO 2.1.  
@@ -41,13 +41,13 @@ object.Execute21(ConnectionString As String, HandlerString As String, QueryStrin
 ```  
   
 #### <a name="parameters"></a>Parámetros  
- *ConnectionString*  
+ *connectionString*  
  Una cadena que se utiliza para conectar con el proveedor OLE DB donde se enviará la solicitud para su ejecución. Si se especifica utilizando un controlador *HandlerString*, puede modificar o reemplazar la cadena de conexión.  
   
  *HandlerString*  
  La cadena identifica el controlador que se usarán con esta ejecución. La cadena consta de dos partes. La primera parte contiene el nombre (ProgID) del controlador que se usará. La segunda parte de la cadena contiene argumentos que se pasan al controlador. Cómo se interpreta la cadena de argumentos es específico del controlador. Las dos partes se separan mediante la primera instancia de una coma en la cadena (aunque puede contener comas adicionales en la cadena de argumentos). Los argumentos son opcionales.  
   
- *QueryString*  
+ *Cadena de consulta*  
  Un comando en el lenguaje de comandos admitido por el proveedor OLE DB identificado en la cadena de conexión. Para los proveedores basados en SQL, es posible que contenga un [!INCLUDE[tsql](../../../includes/tsql_md.md)] instrucción de comandos, pero para los proveedores no son de SQL (por ejemplo, MSDataShape) no puede ser un [!INCLUDE[tsql](../../../includes/tsql_md.md)] instrucción de consulta.  
   
  Además, si se está usando un controlador (y se recomienda encarecidamente que se usa un controlador), el controlador puede modificar o reemplazar el valor especificado aquí. Por ejemplo, el controlador normalmente reemplaza *QueryString* con una cadena de consulta mediante el archivo. ini. De forma predeterminada, se utiliza el archivo Msdfmap.ini.  

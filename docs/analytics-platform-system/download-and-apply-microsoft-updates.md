@@ -1,28 +1,21 @@
 ---
-title: Descargue y aplique las actualizaciones de Microsoft (Analytics Platform System)
-author: barbkess
-ms.author: barbkess
+title: Descargar actualizaciones de Microsoft - sistema de la plataforma de análisis | Documentos de Microsoft
+description: Este tema describe cómo descargar actualizaciones desde el catálogo de Microsoft Update para Windows Server Update Services (WSUS) y esas actualizaciones se aplican a los servidores de dispositivo de sistema de la plataforma de análisis. Microsoft Update instalará todas las actualizaciones aplicables para Windows y SQL Server. WSUS está instalado en la máquina virtual VMM del dispositivo.
+author: mzaman1
 manager: craigg
-ms.prod: analytics-platform-system
-ms.prod_service: mpp-data-warehouse
-ms.service: ''
-ms.component: ''
-ms.technology: mpp-data-warehouse
-ms.custom: ''
-ms.date: 01/05/2017
-ms.reviewer: na
-ms.suite: sql
-ms.tgt_pltfrm: na
-ms.topic: article
-ms.assetid: 4f69df44-8549-4a8a-b10c-f91908594856
-caps.latest.revision: 51
-ms.openlocfilehash: b1bbb32473ff89ee137c0de0fcdb0b3750c31889
-ms.sourcegitcommit: 9351e8b7b68f599a95fb8e76930ab886db737e5f
+ms.prod: sql
+ms.technology: data-warehouse
+ms.topic: conceptual
+ms.date: 04/17/2018
+ms.author: murshedz
+ms.reviewer: martinle
+ms.openlocfilehash: b98a2be90f222fc2c531c1f1983f8882bdab640e
+ms.sourcegitcommit: 056ce753c2d6b85cd78be4fc6a29c2b4daaaf26c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/06/2018
+ms.lasthandoff: 04/19/2018
 ---
-# <a name="download-and-apply-microsoft-updates"></a>Descargue y aplique las actualizaciones de Microsoft
+# <a name="download-and-apply-microsoft-updates-for-analytics-platform-system"></a>Descargue y aplique las actualizaciones de Microsoft para el sistema de la plataforma de análisis
 Este tema describe cómo descargar actualizaciones desde el catálogo de Microsoft Update para Windows Server Update Services (WSUS) y esas actualizaciones se aplican a los servidores de dispositivo de sistema de la plataforma de análisis. Microsoft Update instalará todas las actualizaciones aplicables para Windows y SQL Server. WSUS está instalado en la máquina virtual VMM del dispositivo.  
   
 ## <a name="TOP"></a>Antes de empezar  

@@ -1,29 +1,23 @@
 ---
-title: Mensajes de error (SQL Server PDW)
-author: barbkess
-ms.author: barbkess
+title: Mensajes de error - almacenamiento de datos paralelos | Documentos de Microsoft
+description: Mensajes de error de almacenamiento de datos (PDW) paralelo notifican los errores y problemas detectados por los componentes PDW y también pueden incluir errores de SQL Server que apareció a través de PDW. Estos mensajes de error utilizan una sintaxis coherente para presentar información. Descripción de esta sintaxis le permitirá identificar y corregir problemas.
+author: mzaman1
 manager: craigg
-ms.prod: analytics-platform-system
-ms.prod_service: mpp-data-warehouse
-ms.service: ''
-ms.component: ''
-ms.technology: mpp-data-warehouse
-ms.custom: ''
-ms.date: 01/13/2017
-ms.reviewer: na
-ms.suite: sql
-ms.tgt_pltfrm: na
-ms.topic: article
-ms.assetid: e6223cba-2dec-4b8a-bc10-e2ef6a821fe0
-caps.latest.revision: 9
-ms.openlocfilehash: 38512cbdb3f43144ecfdf4c3ca3dc28c4a019e16
-ms.sourcegitcommit: 9351e8b7b68f599a95fb8e76930ab886db737e5f
+ms.prod: sql
+ms.technology: data-warehouse
+ms.topic: conceptual
+ms.date: 04/17/2018
+ms.author: murshedz
+ms.reviewer: martinle
+ms.openlocfilehash: 33bdf11388ae52959d264e2df091e9c9669b159b
+ms.sourcegitcommit: 056ce753c2d6b85cd78be4fc6a29c2b4daaaf26c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/06/2018
+ms.lasthandoff: 04/19/2018
 ---
-# <a name="error-messages"></a>mensajes de error
-Mensajes de error de SQL Server PDW notifican los errores y problemas detectados por los componentes de SQL Server PDW y también pueden incluir errores de SQL Server que apareció a través de SQL Server PDW. Estos mensajes de error utilizan una sintaxis coherente para presentar información. Descripción de esta sintaxis le permitirá identificar y corregir problemas en SQL Server PDW.  
+# <a name="error-messages-in-parallel-data-warehouse"></a>Mensajes de error en el almacenamiento de datos paralelos
+
+Mensajes de error de almacenamiento de datos (PDW) paralelo notifican los errores y problemas detectados por los componentes PDW y también pueden incluir errores de SQL Server que apareció a través de PDW. Estos mensajes de error utilizan una sintaxis coherente para presentar información. Descripción de esta sintaxis le permitirá identificar y corregir problemas en SQL Server PDW.  
   
 ## <a name="Basics"></a>Conceptos básicos del mensaje de error  
 Mensajes de error que se devuelven siguen la misma sintaxis.  

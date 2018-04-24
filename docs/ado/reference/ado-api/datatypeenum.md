@@ -1,33 +1,33 @@
 ---
 title: DataTypeEnum | Documentos de Microsoft
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: drivers
-ms.service: 
+ms.service: ''
 ms.component: ado
 ms.technology:
 - drivers
-ms.custom: 
+ms.custom: ''
 ms.date: 01/19/2017
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.tgt_pltfrm: ''
+ms.topic: conceptual
 apitype: COM
 f1_keywords:
 - DataTypeEnum
 helpviewer_keywords:
 - DataTypeEnum enumeration [ADO]
 ms.assetid: 2c57eca6-9336-4b06-ba10-9fef5926b1d0
-caps.latest.revision: 
+caps.latest.revision: 14
 author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: f99476b2ccbf9e405d29eca6adbf49ce22fc3f85
-ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
+ms.openlocfilehash: 0603713db7a1a1e7012b1dd28328d4ea2c668304
+ms.sourcegitcommit: bb044a48a6af9b9d8edb178dc8c8bd5658b9ff68
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/09/2018
+ms.lasthandoff: 04/18/2018
 ---
 # <a name="datatypeenum"></a>DataTypeEnum
 Especifica el tipo de datos de un [campo](../../../ado/reference/ado-api/field-object.md), [parámetro](../../../ado/reference/ado-api/parameter-object.md), o [propiedad](../../../ado/reference/ado-api/property-object-ado.md). El indicador de tipo OLE DB correspondiente se muestra entre paréntesis en la columna de descripción de la tabla siguiente.  
@@ -43,7 +43,7 @@ Especifica el tipo de datos de un [campo](../../../ado/reference/ado-api/field-o
 |**adChar**|129|Indica un valor de cadena (DBTYPE_STR).|  
 |**adCurrency**|6|Indica un valor de moneda (DBTYPE_CY). Moneda es un número de punto fijo con cuatro dígitos a la derecha del separador decimal. Se almacena en un entero de ocho bytes con signo escalado por 10.000.|  
 |**adDate**|7|Indica un valor de fecha (DBTYPE_DATE). Una fecha se almacena como valor doble, la parte entera es el número de días transcurridos desde el 30 de diciembre de 1899 y la parte fraccionaria de los cuales es la fracción de un día.|  
-|**adDBDate**|133|Indica un valor de fecha (aaaammdd) (DBTYPE_DBDATE).|  
+|**adDBData**|133|Indica un valor de fecha (aaaammdd) (DBTYPE_DBDATE).|  
 |**adDBTime**|134|Indica un valor de hora (hhmmss) (DBTYPE_DBTIME).|  
 |**adDBTimeStamp**|135|Indica una marca de fecha y hora (aaaammddhhmmss más una fracción en milmillonésimas) (DBTYPE_DBTIMESTAMP).|  
 |**adDecimal**|14|Indica un valor numérico exacto con una precisión y escala fijas (DBTYPE_DECIMAL).|  
@@ -53,7 +53,7 @@ Especifica el tipo de datos de un [campo](../../../ado/reference/ado-api/field-o
 |**adFileTime**|64|Indica un valor de 64 bits que representa el número de intervalos de 100 nanosegundos desde el 1 de enero de 1601 (DBTYPE_FILETIME).|  
 |**adGUID**|72|Indica un identificador único global (GUID) (DBTYPE_GUID).|  
 |**adIDispatch**|9|Indica un puntero a un **IDispatch** interfaz en un objeto COM (DBTYPE_IDISPATCH).<br /><br /> **Tenga en cuenta** ADO no admite actualmente este tipo de datos. Su uso puede provocar resultados imprevisibles.|  
-|**adInteger**|3|Indica un entero de cuatro bytes con signo (DBTYPE_I4).|  
+|**Tipos**|3|Indica un entero de cuatro bytes con signo (DBTYPE_I4).|  
 |**adIUnknown**|13|Indica un puntero a un **IUnknown** interfaz en un objeto COM (DBTYPE_IUNKNOWN).<br /><br /> **Tenga en cuenta** ADO no admite actualmente este tipo de datos. Su uso puede provocar resultados imprevisibles.|  
 |**adLongVarBinary**|205|Indica un valor binario long.|  
 |**adLongVarChar**|201|Indica un valor de cadena larga.|  

@@ -15,16 +15,17 @@ ms.topic: article
 f1_keywords:
 - sql13.ag.proxy.permissions.f1
 ms.assetid: 3e3c42fe-5b61-45e5-8e46-9807bdec5389
-caps.latest.revision: ''
+caps.latest.revision: 3
 author: stevestein
 ms.author: sstein
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 7c64ce13926a8d5bc4c928c0a3a907d1fce12082
-ms.sourcegitcommit: 34766933e3832ca36181641db4493a0d2f4d05c6
+monikerRange: = azuresqldb-mi-current || >= sql-server-2016 || = sqlallproducts-allversions
+ms.openlocfilehash: 370459b4b96b9134d202db15c712258707f259aa
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/22/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="proxy-account-properties---new-proxy-account-principals-tab"></a>Propiedades de cuenta de proxy - Nueva cuenta de proxy (pestaña Entidades de seguridad)
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
@@ -34,7 +35,7 @@ ms.lasthandoff: 03/22/2018
 
 Use esta página para ver o cambiar las entidades de seguridad que pueden utilizar una cuenta de proxy del Agente [!INCLUDE[msCoName](../../includes/msconame_md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] en los pasos de trabajo.  
   
-## <a name="options"></a>.  
+## <a name="options"></a>Opciones  
 **Entidades de seguridad de la cuenta de proxy**  
 Muestra las entidades de seguridad que pueden utilizar esta cuenta de proxy.  
   

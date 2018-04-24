@@ -1,16 +1,16 @@
 ---
 title: ALTER PROCEDURE (Transact-SQL) | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 05/01/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
-ms.service: 
+ms.service: ''
 ms.component: t-sql|statements
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - ALTER_PROCEDURE_TSQL
@@ -25,16 +25,17 @@ helpviewer_keywords:
 - modifying stored procedures
 - stored procedures [SQL Server], modifying
 ms.assetid: ed9b2f76-11ec-498d-a95e-75b490a75733
-caps.latest.revision: 
+caps.latest.revision: 69
 author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: e37551d9e5a2d33a7b5ab3a4ab29c028cce0d2c4
-ms.sourcegitcommit: 2208a909ab09af3b79c62e04d3360d4d9ed970a7
+monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
+ms.openlocfilehash: c07ffc325c78302ac3cc2098f37dc7cf07a5add4
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/02/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="alter-procedure-transact-sql"></a>ALTER PROCEDURE (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -115,7 +116,7 @@ AS { [ BEGIN ] sql_statement [ ; ] [ ,...n ] [ END ] }
  Indica que se trata de un parámetro devuelto.  
   
  READONLY  
- Indica que el parámetro no se puede actualizar ni modificar en el cuerpo del procedimiento. Si el tipo de parámetro es un tipo con valores de tabla, se debe especificar READONLY.  
+ Indica que el parámetro no se puede actualizar ni modificar dentro del cuerpo del procedimiento. Si el tipo de parámetro es un tipo con valores de tabla, se debe especificar READONLY.  
   
  RECOMPILE  
  Indica que [!INCLUDE[ssDE](../../includes/ssde-md.md)] no almacena en la memoria caché ningún plan para este procedimiento y el procedimiento se vuelve a compilar en tiempo de ejecución.  
@@ -123,7 +124,7 @@ AS { [ BEGIN ] sql_statement [ ; ] [ ,...n ] [ END ] }
  ENCRYPTION  
  **Se aplica a**: SQL Server (desde [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] hasta [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]) y [!INCLUDE[ssSDSFull](../../includes/sssdsfull-md.md)].  
   
- Indica que [!INCLUDE[ssDE](../../includes/ssde-md.md)] convertirá el texto original de la instrucción ALTER PROCEDURE en un formato protegido. La salida de la protección no es directamente visible en ninguna de las vistas de catálogo de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Los usuarios que no disponen de acceso a las tablas del sistema o a los archivos de base de datos no pueden recuperar el texto protegido. Sin embargo, estará disponible para los usuarios con privilegios que puedan obtener acceso a las tablas del sistema a través del [puerto DAC](../../database-engine/configure-windows/diagnostic-connection-for-database-administrators.md) o directamente a los archivos de base de datos. Además, los usuarios que pueden adjuntar un depurador al proceso del servidor pueden recuperar el procedimiento original de la memoria en tiempo de ejecución. Para obtener más información sobre cómo acceder al sistema, vea [Configuración de visibilidad de los metadatos](../../relational-databases/security/metadata-visibility-configuration.md).  
+ Indica que [!INCLUDE[ssDE](../../includes/ssde-md.md)] convertirá el texto original de la instrucción ALTER PROCEDURE en un formato protegido. La salida de la protección no es directamente visible en ninguna de las vistas de catálogo de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Los usuarios que no disponen de acceso a las tablas del sistema o a los archivos de base de datos no pueden recuperar el texto protegido. En cambio, estará disponible para los usuarios con privilegios que puedan obtener acceso a las tablas del sistema a través del [puerto DAC](../../database-engine/configure-windows/diagnostic-connection-for-database-administrators.md) o directamente a los archivos de base de datos. Además, los usuarios que pueden adjuntar un depurador al proceso del servidor pueden recuperar el procedimiento original de la memoria en tiempo de ejecución. Para más información sobre cómo tener acceso al sistema, vea [Configuración de visibilidad de los metadatos](../../relational-databases/security/metadata-visibility-configuration.md).  
   
  Los procedimientos creados mediante esta opción no se pueden publicar como parte de la replicación de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
@@ -148,12 +149,12 @@ AS { [ BEGIN ] sql_statement [ ; ] [ ,...n ] [ END ] }
  { [ BEGIN ] *sql_statement* [;] [ ...*n* ] [ END ] }  
  Una o más instrucciones [!INCLUDE[tsql](../../includes/tsql-md.md)] que comprenden el cuerpo del procedimiento. Puede usar las palabras clave BEGIN y END opcionales para incluir las instrucciones. Para obtener más información, vea las secciones Prácticas recomendadas, Comentarios generales, así como Limitaciones y restricciones que aparecen en [CREATE PROCEDURE &#40;Transact-SQL&#41;](../../t-sql/statements/create-procedure-transact-sql.md).  
   
- NOMBRE EXTERNO *assembly_name***.***class_name***.***method_name*  
+ EXTERNAL NAME *assembly_name ***.*** class_name ***.*** method_name*  
  **Se aplica a**: desde [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] hasta [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].  
   
  Especifica el método de un ensamblado de [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] para un procedimiento CLR almacenado al que se va a hacer referencia. *class_name* debe ser un identificador [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] válido y debe existir como clase en el ensamblado. Si la clase tiene un nombre calificado como espacio de nombres que utiliza un punto (**.**) para separar las partes del espacio de nombres, el nombre de la clase debe estar delimitado por corchetes (**[]**) o comillas (**""**). El método especificado debe ser un método estático de la clase.  
   
- De manera predeterminada, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] no puede ejecutar código CLR. Se pueden crear, modificar y quitar objetos de base de datos que hagan referencia a módulos de Common Language Runtime; sin embargo, estas referencias no se pueden ejecutar en [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] hasta que se habilite la [opción clr enabled](../../database-engine/configure-windows/clr-enabled-server-configuration-option.md). Para habilitar esta opción, use [sp_configure](../../relational-databases/system-stored-procedures/sp-configure-transact-sql.md).  
+ De manera predeterminada, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] no puede ejecutar código CLR. Se pueden crear, modificar y quitar objetos de base de datos que hagan referencia a módulos de Common Language Runtime, pero estas referencias no se pueden ejecutar en [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] hasta que se habilite la [opción clr enabled](../../database-engine/configure-windows/clr-enabled-server-configuration-option.md). Para habilitar esta opción, use [sp_configure](../../relational-databases/system-stored-procedures/sp-configure-transact-sql.md).  
   
 > [!NOTE]  
 >  Los procedimientos CLR no se admiten en las bases de datos independientes.  

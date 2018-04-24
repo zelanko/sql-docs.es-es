@@ -1,16 +1,16 @@
 ---
 title: FREETEXT (Transact-SQL) | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 10/23/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: sql-database
-ms.service: 
+ms.service: ''
 ms.component: t-sql|queries
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - FREETEXT
@@ -24,16 +24,16 @@ helpviewer_keywords:
 - words in predicate [full-text search]
 - column searches [full-text search]
 ms.assetid: 2f199d3c-440e-4bcf-bdb5-82bb3994005d
-caps.latest.revision: 
+caps.latest.revision: 44
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: e6687946e13dd6c801fcd256a0e463bdacb3779f
-ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
+ms.openlocfilehash: aa5d3e162d7f21732b20689d45970c3157d7522e
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/25/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="freetext-transact-sql"></a>FREETEXT (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -66,7 +66,7 @@ FREETEXT ( { column_name | (column_list) | * }
  Es el nombre de una o varias columnas indizadas de texto completo de la tabla especificada en la cláusula FROM. Las columnas pueden ser de tipo **char**, **varchar**, **nchar**, **nvarchar**, **text**, **ntext**, **image**, **xml**, **varbinary** o **varbinary(max)**.  
   
  *lista_de_columnas*  
- Indica que se pueden especificar varias columnas, separadas por una coma. *lista_de_columnas* debe ir entre paréntesis. A menos que se especifique *language_term*, el idioma de todas las columnas de *column_list* debe ser el mismo.  
+ Indica que se pueden especificar varias columnas, separadas por una coma. *column_list* debe ir entre paréntesis. A menos que se especifique *language_term*, el idioma de todas las columnas de *column_list* debe ser el mismo.  
   
  \*  
  Especifica que todas las columnas que se hayan registrado para la búsqueda de texto completo se tienen que usar para buscar la *cadena_freetext* determinada. Si en la cláusula FROM hay más de una tabla, \* se tiene que especificar con el nombre de la tabla. A menos que se especifique *language_term*, el idioma de todas las columnas de la tabla debe ser el mismo.  
@@ -92,7 +92,7 @@ WHERE FREETEXT(Description, @SearchWord);
   
 ```  
   
- Como el "examen de parámetros" no funciona con la conversión, use **nvarchar** para obtener mejor rendimiento. En el ejemplo, declare `@SearchWord` como `nvarchar(30)`.  
+ Como el "examen de parámetros" no funciona con la conversión, use **nvarchar** para lograr un mejor rendimiento. En el ejemplo, declare `@SearchWord` como `nvarchar(30)`.  
   
 ```  
   
@@ -108,8 +108,8 @@ WHERE FREETEXT(Description, @SearchWord);
   
  También puede usar la sugerencia de consulta OPTIMIZE FOR para los casos en que se genera un plan que no es óptimo.  
   
- LANGUAGE *término_de_idioma*  
- Es el idioma cuyos recursos se utilizarán en la separación de palabras, la lematización, los diccionarios de sinónimos y la eliminación de palabras irrelevantes como parte de la consulta. Este parámetro es opcional y puede especificarse como un valor hexadecimal, un entero o una cadena correspondiente al identificador de configuración regional (LCID) de un idioma. Si se especifica *término_de_idioma*, el idioma que representa se aplicará a todos los elementos de la condición de búsqueda. Si no se especifica ningún valor, se utiliza el idioma de texto completo de la columna.  
+ LANGUAGE *language_term*  
+ Es el idioma cuyos recursos se utilizarán en la separación de palabras, la lematización, los diccionarios de sinónimos y la eliminación de palabras irrelevantes como parte de la consulta. Este parámetro es opcional y puede especificarse como un valor hexadecimal, un entero o una cadena correspondiente al identificador de configuración regional (LCID) de un idioma. Si se especifica *language_term*, el idioma que representa se aplicará a todos los elementos de la condición de búsqueda. Si no se especifica ningún valor, se utiliza el idioma de texto completo de la columna.  
   
  Si se almacenan juntos documentos de idiomas diferentes como objetos binarios grandes (BLOB) en una sola columna, el identificador de configuración regional (LCID) de un documento determinado determina qué idioma se usa para indizar su contenido. Al consultar este tipo de columna, especificar *LANGUAGE**language_term* puede aumentar la probabilidad de encontrar una coincidencia acertada.  
   
@@ -117,14 +117,14 @@ WHERE FREETEXT(Description, @SearchWord);
   
  Si el valor está en formato DBCS (juego de caracteres de doble byte), [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] lo convertirá a Unicode.  
   
- Si el idioma especificado no es válido o no hay recursos instalados que se correspondan con ese idioma, [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] devuelve un error. Para usar recursos de idioma neutro, especifique 0x0 como *término_de_idioma*.  
+ Si el idioma especificado no es válido o no hay recursos instalados que se correspondan con ese idioma, [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] devuelve un error. Para usar recursos de idioma neutro, especifique 0x0 como *language_term*.  
   
 ## <a name="general-remarks"></a>Notas generales  
  Los predicados y las funciones de texto completo operan en una única tabla, que se obtiene del predicado FROM. Para buscar en varias tablas, utilice una tabla combinada en la cláusula FROM a fin de buscar en un conjunto de resultados que sea el producto de dos o más tablas.  
   
 Las consultas de texto completo que utilizan FREETEXT son menos precisas que las consultas de texto completo que utilizan CONTAINS. El motor de búsqueda de texto completo de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] identifica las palabras y las frases importantes. No se le da significado especial a ninguna de las palabras clave reservadas o caracteres comodín que suelen tener significado cuando se especifican en el parámetro \<contiene_condición_de_búsqueda> del predicado CONTAINS.
   
- Los predicados de texto completo no se permiten en la [cláusula OUTPUT](../../t-sql/queries/output-clause-transact-sql.md) cuando el nivel de compatibilidad de la base de datos se establece en 100.  
+ Los predicados de texto completo no se pueden usar en la [cláusula OUTPUT](../../t-sql/queries/output-clause-transact-sql.md) cuando el nivel de compatibilidad de la base de datos está establecido en 100.  
   
 > [!NOTE]  
 >  La función FREETEXTTABLE es útil para los mismos tipos de coincidencias que el predicado FREETEXT. Se puede hacer referencia a esta función como un nombre de tabla normal en la [cláusula FROM](../../t-sql/queries/from-transact-sql.md) de una instrucción SELECT. Para obtener más información, vea [FREETEXTTABLE &#40;Transact-SQL&#41;](../../relational-databases/system-functions/freetexttable-transact-sql.md).  
@@ -169,7 +169,7 @@ GO
  [CREATE FULLTEXT CATALOG &#40;Transact-SQL&#41;](../../t-sql/statements/create-fulltext-catalog-transact-sql.md)   
  [CREATE FULLTEXT INDEX &#40;Transact-SQL&#41;](../../t-sql/statements/create-fulltext-index-transact-sql.md)   
  [Crear y administrar índices de texto completo](../../relational-databases/search/create-and-manage-full-text-indexes.md)   
- [Consulta con búsqueda de texto completo](../../relational-databases/search/query-with-full-text-search.md)   
+ [Consultar con búsqueda de texto completo](../../relational-databases/search/query-with-full-text-search.md)   
  [Crear consultas de búsqueda de texto completo &#40;Visual Database Tools&#41;](http://msdn.microsoft.com/library/537fa556-390e-4c88-9b8e-679848d94abc)   
  [CONTAINS &#40;Transact-SQL&#41;](../../t-sql/queries/contains-transact-sql.md)   
  [CONTAINSTABLE &#40;Transact-SQL&#41;](../../relational-databases/system-functions/containstable-transact-sql.md)   

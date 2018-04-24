@@ -1,16 +1,16 @@
 ---
 title: DENY (permisos de entidad de seguridad de base de datos de Transact-SQL) | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 05/15/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine, sql-database
-ms.service: 
+ms.service: ''
 ms.component: t-sql|statements
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 dev_langs:
 - TSQL
@@ -29,16 +29,16 @@ helpviewer_keywords:
 - denying permissions [SQL Server], application roles
 - application roles [SQL Server], permissions
 ms.assetid: e2429a5d-e9be-4c05-be20-414d1038a63a
-caps.latest.revision: 
+caps.latest.revision: 29
 author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 5f2934637cf18a1188de37c0aba40dac171cd0e9
-ms.sourcegitcommit: 45e4efb7aa828578fe9eb7743a1a3526da719555
+ms.openlocfilehash: f19f37a3d291c0461424a011729f0792f0c3ccb8
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="deny-database-principal-permissions-transact-sql"></a>DENY (permisos de entidad de seguridad de base de datos de Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -77,15 +77,15 @@ DENY permission [ ,...n ]
  Especifica un permiso que se puede denegar en la entidad de seguridad de base de datos. Para obtener una lista de permisos, vea la sección Comentarios que se muestra posteriormente en este tema.  
   
  USER ::*database_user*  
- Especifica la clase y nombre del usuario para el que se deniega el permiso. Se necesita el calificador de ámbito (**::**).  
+ Especifica la clase y nombre del usuario para el que se deniega el permiso. El calificador de ámbito (**::**) es obligatorio.  
   
  ROLE ::*database_role*  
- Especifica la clase y el nombre del rol para el que se deniega el permiso. Se necesita el calificador de ámbito (**::**).  
+ Especifica la clase y el nombre del rol para el que se deniega el permiso. El calificador de ámbito (**::**) es obligatorio.  
   
  APPLICATION ROLE ::*application_role*  
- **Se aplica a**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] hasta [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)], [!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)].  
+ **Se aplica a**: de [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] a [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)], [!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)].  
   
- Especifica la clase y el nombre del rol de aplicación para el que se deniega el permiso. Se necesita el calificador de ámbito (**::**).  
+ Especifica la clase y el nombre del rol de aplicación para el que se deniega el permiso. El calificador de ámbito (**::**) es obligatorio.  
   
  CASCADE  
  Indica que el permiso que se va a denegar también se denegará a otras entidades de seguridad a las que esta entidad de seguridad ha concedido permisos.  
@@ -100,7 +100,7 @@ DENY permission [ ,...n ]
  Especifica un rol de base de datos.  
   
  *Application_role*  
- **Se aplica a**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] hasta [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)], [!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)].  
+ **Se aplica a**: de [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] a [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)], [!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)].  
   
  Especifica un rol de aplicación.  
   
@@ -179,7 +179,7 @@ GO
 ### <a name="c-denying-impersonate-permission-on-a-user-to-an-application-role"></a>C. Denegar el permiso IMPERSONATE para un usuario a un rol de aplicación  
  En el ejemplo siguiente se deniega el permiso `IMPERSONATE` para el usuario `HamithaL` al rol de aplicación `AccountsPayable17` de [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)].  
   
-**Se aplica a**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] hasta [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)], [!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)].  
+**Se aplica a**: de [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] a [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)], [!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)].  
   
 ```  
 USE AdventureWorks2012;  

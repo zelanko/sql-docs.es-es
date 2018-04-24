@@ -1,32 +1,34 @@
 ---
-title: "Guías del desarrollador para SQL Server | Microsoft Docs"
+title: Guías del desarrollador para SQL Server | Microsoft Docs
 ms.date: 10/19/2016
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine, sql-database, analysis-services, integration-services, reporting-services, master-data-services
-ms.service: 
+ms.service: ''
 ms.component: relational-databases-misc
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.custom: 
-ms.technology: 
-ms.tgt_pltfrm: 
+ms.custom: ''
+ms.technology: ''
+ms.tgt_pltfrm: ''
 ms.topic: article
 f1_keywords:
 - sql13.portal.DevRef.f1
 ms.assetid: e60866bf-c726-479e-8a38-6bced16f527c
-caps.latest.revision: 
+caps.latest.revision: 24
 author: stevestein
 ms.author: sstein
 manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: eac97b7988a9e929578863e97fad9ecd8c20070f
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+monikerRange: = azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions
+ms.openlocfilehash: 5275c3bfb72c654934b05a74d73f924482287152
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="developer-guides-for-sql-server"></a>Guías del desarrollador para SQL Server
-[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../includes/appliesto-ss-asdb-xxxx-xxx-md.md)] Integre casi cualquier característica de SQL Server a través de código personalizado mediante las interfaces y los modelos de programación. Cada área de características incluye API nativas y administradas que se usan para la recopilación de datos, el acceso a datos, la administración del servidor o la visualización de datos.  
+[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
+  Integre casi cualquier característica de SQL Server a través de código personalizado mediante las interfaces y los modelos de programación. Cada área de características incluye API nativas y administradas que se usan para la recopilación de datos, el acceso a datos, la administración del servidor o la visualización de datos.  
   
 ## <a name="sql-server-developer-edition-free"></a>SQL Server Developer Edition (gratis)
 

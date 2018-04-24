@@ -1,16 +1,16 @@
 ---
 title: Expresiones (Transact-SQL) | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 03/15/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
-ms.service: 
+ms.service: ''
 ms.component: t-sql|language-elements
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 dev_langs:
 - TSQL
@@ -23,16 +23,17 @@ helpviewer_keywords:
 - simple expressions [SQL Server]
 - complex expressions [SQL Server]
 ms.assetid: ee53c5c8-e36c-40f9-8cd1-d933791b98fa
-caps.latest.revision: 
+caps.latest.revision: 29
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ms.workload: Active
-ms.openlocfilehash: 49efa9c940ff4428747942c88259bdd58b96a658
-ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
+monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
+ms.openlocfilehash: 5423e9db9a6f41669d4adeaa8903f3c4af4508b0
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/25/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="expressions-transact-sql"></a>Expresiones (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -89,7 +90,7 @@ ms.lasthandoff: 01/25/2018
   
 |Término|Definición|  
 |----------|----------------|  
-|*constant*|Es un símbolo que representa un único valor de datos específico. Para obtener más información, vea [Constantes &#40;Transact-SQL&#41;](../../t-sql/data-types/constants-transact-sql.md).|  
+|*constant*|Es un símbolo que representa un único valor de datos específico. Para más información, vea [Constantes &#40;Transact-SQL&#41;](../../t-sql/data-types/constants-transact-sql.md).|  
 |*scalar_function*|Es una unidad de sintaxis [!INCLUDE[tsql](../../includes/tsql-md.md)] que proporciona un servicio específico y devuelve un valor único. *scalar_function* puede incluir funciones escalares integradas, como las funciones SUM, GETDATE o CAST, o funciones escalares definidas por el usuario.|  
 |[ *table_name***.** ]|Es el nombre o alias de una tabla.|  
 |*column*|Es el nombre de una columna. En una expresión solo se admite el nombre de la columna.|  
@@ -99,7 +100,7 @@ ms.lasthandoff: 01/25/2018
 |{ *unary_operator* }|Los operadores unarios solo se pueden aplicar a las expresiones que se evalúen como un tipo de datos numérico. Es un operador que solo tiene un operando numérico:<br /><br /> + indica que es un número positivo.<br /><br /> - indica que es un número negativo.<br /><br /> ~ indica el operador complementario.|  
 |{ *binary_operator* }|Es un operador que define la forma en que deben combinarse dos expresiones para producir un único resultado. *binary_operator* puede ser un operador aritmético, el operador de asignación (=), un operador bit a bit, un operador de comparación, un operador lógico, el operador de concatenación de cadena (+) o un operador unario. Para obtener más información sobre operadores, vea [Operadores &#40;Transact-SQL&#41;](../../t-sql/language-elements/operators-transact-sql.md).|  
 |*ranking_windowed_function*|Es cualquier función de categoría de [!INCLUDE[tsql](../../includes/tsql-md.md)]. Para obtener más información, vea [Funciones de categoría &#40;Transact-SQL&#41;](../../t-sql/functions/ranking-functions-transact-sql.md).|  
-|*aggregate_windowed_function*|Es cualquier función de agregado de [!INCLUDE[tsql](../../includes/tsql-md.md)] con la cláusula OVER. Para obtener más información, vea [OVER &#40;Cláusula de Transact-SQL&#41;](../../t-sql/queries/select-over-clause-transact-sql.md).|  
+|*aggregate_windowed_function*|Es cualquier función de agregado de [!INCLUDE[tsql](../../includes/tsql-md.md)] con la cláusula OVER. Para más información, vea [Cláusula OVER &#40;Transact-SQL&#41;](../../t-sql/queries/select-over-clause-transact-sql.md).|  
   
 ## <a name="expression-results"></a>Resultados de la expresión  
  Para una expresión sencilla creada con una constante, variable, función escalar o nombre de columna, el tipo de datos, intercalación, precisión, escala y valor de la expresión es el tipo de datos, intercalación, precisión, escala y valor del elemento de referencia.  
@@ -121,7 +122,7 @@ ms.lasthandoff: 01/25/2018
   
  Si no se admite la conversión implícita o explícita admitida, las dos expresiones no se pueden combinar.  
   
- La intercalación de cualquier expresión que se evalúa como una cadena de caracteres se establece según las reglas de prioridad de intercalación. Para obtener más información, vea [Prioridad de intercalación &#40;Transact-SQL&#41;](../../t-sql/statements/collation-precedence-transact-sql.md).  
+ La intercalación de cualquier expresión que se evalúa como una cadena de caracteres se establece según las reglas de prioridad de intercalación. Para más información, vea [Prioridad de intercalación &#40;Transact-SQL&#41;](../../t-sql/statements/collation-precedence-transact-sql.md).  
   
  En un lenguaje de programación como C o [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[vbprvb](../../includes/vbprvb-md.md)], una expresión siempre se evalúa como un resultado único. Las expresiones de una lista de selección de [!INCLUDE[tsql](../../includes/tsql-md.md)] constituyen una variación de esta regla: la expresión se evalúa individualmente para cada fila del conjunto de resultados. Una única expresión puede tener un valor distinto en cada fila del conjunto de resultados, pero cada fila tiene un único valor para la expresión. Por ejemplo, en esta instrucción `SELECT`, tanto la referencia a `ProductID` como el término `1+2` de la lista seleccionada son expresiones:  
   

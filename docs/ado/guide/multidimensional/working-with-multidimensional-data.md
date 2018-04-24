@@ -1,35 +1,35 @@
 ---
 title: Trabajar con datos multidimensionales | Documentos de Microsoft
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: drivers
-ms.service: 
+ms.service: ''
 ms.component: ado
 ms.technology:
 - drivers
-ms.custom: 
+ms.custom: ''
 ms.date: 01/19/2017
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.tgt_pltfrm: ''
+ms.topic: conceptual
 helpviewer_keywords:
 - multidimensional data [ADO]
 ms.assetid: 84387746-aa3e-44fd-ad6c-a8214a6966dc
-caps.latest.revision: 
+caps.latest.revision: 10
 author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: c96d7fda2e02aeefa6225f1cea602f6ed6c7dc2e
-ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
+ms.openlocfilehash: 07cb3078fd8d47d9c843eec09b4ee6bc72c820db
+ms.sourcegitcommit: bb044a48a6af9b9d8edb178dc8c8bd5658b9ff68
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/09/2018
+ms.lasthandoff: 04/18/2018
 ---
 # <a name="working-with-multidimensional-data"></a>Trabajar con datos multidimensionales
 A *cellset* es el resultado de una consulta de datos multidimensionales. Consta de una colección de ejes, normalmente no más de cuatro ejes y normalmente sólo dos o tres. Un *eje* es una colección de miembros de una o más dimensiones, que se utiliza para localizar o filtrar valores específicos de un cubo.  
   
- A *posición* es un punto de un eje. Para un eje que consta de una sola dimensión, estas posiciones son un subconjunto de los miembros de dimensión. Si un eje consta de más de una dimensión, cada posición es una entidad compuesta, que tiene  *n*  elementos where  *n*  es el número de dimensiones orientadas a lo largo del eje. Cada parte de la posición es un miembro de una dimensión que lo componen.  
+ A *posición* es un punto de un eje. Para un eje que consta de una sola dimensión, estas posiciones son un subconjunto de los miembros de dimensión. Si un eje consta de más de una dimensión, cada posición es una entidad compuesta, que tiene *n* elementos where *n* es el número de dimensiones orientadas a lo largo del eje. Cada parte de la posición es un miembro de una dimensión que lo componen.  
   
  Por ejemplo, si las dimensiones de geografía y producto de un cubo que contiene datos de ventas se orientan a lo largo del eje x de un conjunto de celdas, una posición a lo largo de este eje puede contener a los miembros "EE" y "Equipos". En este ejemplo, para determinar una posición a lo largo del eje x se requiere que los miembros de cada dimensión se orientan a lo largo del eje.  
   

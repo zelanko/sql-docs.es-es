@@ -1,17 +1,17 @@
 ---
 title: Errores del proveedor | Documentos de Microsoft
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: drivers
-ms.service: 
+ms.service: ''
 ms.component: ado
 ms.technology:
 - drivers
-ms.custom: 
+ms.custom: ''
 ms.date: 01/19/2017
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.tgt_pltfrm: ''
+ms.topic: conceptual
 helpviewer_keywords:
 - errors collection [ADO]
 - provider errors [ADO]
@@ -19,16 +19,16 @@ helpviewer_keywords:
 - errors [ADO], provider
 - Error object [ADO], provider errors
 ms.assetid: cc7d6ff9-2034-45c6-9d61-90b177010054
-caps.latest.revision: 
+caps.latest.revision: 5
 author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 2ce82243dda984375bef3a1630650ff27c68dd09
-ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
+ms.openlocfilehash: 14f79d299850bf6163fb328b0dd54be9d84f9a7b
+ms.sourcegitcommit: bb044a48a6af9b9d8edb178dc8c8bd5658b9ff68
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/09/2018
+ms.lasthandoff: 04/18/2018
 ---
 # <a name="provider-errors"></a>Errores del proveedor
 Cuando se produce un error de proveedor, se devuelve un error de tiempo de ejecución de -2147467259. Si recibe este error, revise el **errores** colección de activos **conexión** objeto, que contiene uno o más errores que describen lo que ha sucedido.  
@@ -76,7 +76,7 @@ End Function
 |**Description**|Una descripción de texto del error que se ha producido.|  
 |**HelpContext, HelpFile**|Hace referencia al archivo de ayuda y el tema de ayuda que contiene una descripción del error que se ha producido.|  
 |**NativeError**|El número de error específico del proveedor.|  
-|**Number**|Un entero largo que representa el número (aparecen en la **ErrorValueEnum**) del error que se ha producido.|  
+|**Número**|Un entero largo que representa el número (aparecen en la **ErrorValueEnum**) del error que se ha producido.|  
 |**Source**|Indica el nombre del objeto o la aplicación que ha generado un error.|  
 |**SQLState**|Un código de error de cinco caracteres que devuelve el proveedor durante el proceso de una instrucción SQL.|  
   

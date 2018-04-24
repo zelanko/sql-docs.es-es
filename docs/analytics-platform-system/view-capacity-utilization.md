@@ -1,34 +1,27 @@
 ---
-title: Ver uso de capacidad (Analytics Platform System)
-author: barbkess
-ms.author: barbkess
+title: Ver el uso de capacidad en el sistema de la plataforma de análisis | Documentos de Microsoft
+description: Ver el uso de capacidad en el sistema de la plataforma de análisis.
+author: mzaman1
 manager: craigg
-ms.prod: analytics-platform-system
-ms.prod_service: mpp-data-warehouse
-ms.service: ''
-ms.component: ''
-ms.technology: mpp-data-warehouse
-ms.custom: ''
-ms.date: 01/05/2017
-ms.reviewer: na
-ms.suite: sql
-ms.tgt_pltfrm: na
-ms.topic: article
-ms.assetid: 373633ca-c5af-4618-88e8-58ca84e8e5f4
-caps.latest.revision: 9
-ms.openlocfilehash: 03da2fa3295153c08de1f844866a45ab0ca8ea8c
-ms.sourcegitcommit: 9351e8b7b68f599a95fb8e76930ab886db737e5f
+ms.prod: sql
+ms.technology: data-warehouse
+ms.topic: conceptual
+ms.date: 04/17/2018
+ms.author: murshedz
+ms.reviewer: martinle
+ms.openlocfilehash: fcd440f3add9ff6823c9104fc94af736d3fdee4e
+ms.sourcegitcommit: 056ce753c2d6b85cd78be4fc6a29c2b4daaaf26c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/06/2018
+ms.lasthandoff: 04/19/2018
 ---
-# <a name="view-capacity-utilization"></a>Ver uso de capacidad
+# <a name="view-capacity-utilization-in-analytics-platform-system"></a>Ver el uso de capacidad en el sistema de la plataforma de análisis
 Este tema explica cómo ver la utilización de la capacidad en el dispositivo PDW de SQL Server.  
   
 ## <a name="to-view-capacity-utilization-by-using-admin-console"></a>Para ver la utilización de la capacidad mediante la consola de administración  
 Para ver el espacio utilizado, abra la consola de administración y haga clic en el **almacenamiento** ficha. Hay un **almacenamiento** ficha de la región PDW y la región HDI.  
   
-![PDW Admin Console Storage](./media/view-capacity-utilization/SQL_Server_PDW_AdminConsol_StorageV2.png "SQL_Server_PDW_AdminConsol_StorageV2")  
+![Almacenamiento de la consola de administración PDW](./media/view-capacity-utilization/SQL_Server_PDW_AdminConsol_StorageV2.png "SQL_Server_PDW_AdminConsol_StorageV2")  
   
 ## <a name="to-view-capacity-utilization-by-using-queries"></a>Para ver la utilización de la capacidad mediante el uso de consultas  
 Para saber si un nodo está quedando sin espacio, el sistema de supervisión de estado de SQL Server PDW ya supervisa el espacio libre para todos los volúmenes dentro de cada nodo.  

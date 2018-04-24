@@ -1,33 +1,33 @@
 ---
-title: "Más información acerca de la persistencia de Recordset | Documentos de Microsoft"
-ms.prod: sql-non-specified
+title: Más información acerca de la persistencia de Recordset | Documentos de Microsoft
+ms.prod: sql
 ms.prod_service: drivers
-ms.service: 
+ms.service: ''
 ms.component: ado
 ms.technology:
 - drivers
-ms.custom: 
+ms.custom: ''
 ms.date: 01/19/2017
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.tgt_pltfrm: ''
+ms.topic: conceptual
 helpviewer_keywords:
 - persisting data [ADO]
 - data updates [ADO], persisting data
 - data persistence [ADO]
 - updating data [ADO], persisting data
 ms.assetid: a9b287f5-04b0-4514-8143-f67879ca9842
-caps.latest.revision: 
+caps.latest.revision: 14
 author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: c5dedcc3c1326c8b71844637c24f81835472ae9e
-ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
+ms.openlocfilehash: febf4b165cef77e26ec79de08b14ce97e944526b
+ms.sourcegitcommit: bb044a48a6af9b9d8edb178dc8c8bd5658b9ff68
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/09/2018
+ms.lasthandoff: 04/18/2018
 ---
 # <a name="more-about-recordset-persistence"></a>Más información acerca de la persistencia de conjunto de registros
 El objeto de conjunto de registros ADO admite almacenar el contenido de un **Recordset** objeto en un archivo mediante su [guardar](../../../ado/reference/ado-api/save-method.md) método. El archivo almacenado persistentemente exista en una variable local de unidad, server, o como una dirección URL en un servidor Web del sitio. Más adelante, se puede restaurar el archivo con cualquiera el [abiertos](../../../ado/reference/ado-api/open-method-ado-recordset.md) método de la **Recordset** objeto o la [Execute](../../../ado/reference/ado-api/execute-method-ado-connection.md) método de la [conexión](../../../ado/reference/ado-api/connection-object-ado.md) objeto.  

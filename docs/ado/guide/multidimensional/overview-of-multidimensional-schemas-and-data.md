@@ -1,30 +1,30 @@
 ---
-title: "Información general de esquemas y datos multidimensionales | Documentos de Microsoft"
-ms.prod: sql-non-specified
+title: Información general de esquemas y datos multidimensionales | Documentos de Microsoft
+ms.prod: sql
 ms.prod_service: drivers
-ms.service: 
+ms.service: ''
 ms.component: ado
 ms.technology:
 - drivers
-ms.custom: 
+ms.custom: ''
 ms.date: 01/19/2017
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.tgt_pltfrm: ''
+ms.topic: conceptual
 helpviewer_keywords:
 - multidimensional schemas and data
 ms.assetid: ce37fa06-c581-4d80-9a9b-c3aa66408909
-caps.latest.revision: 
+caps.latest.revision: 11
 author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 518cb68ec75fb998ee2a53500db0dc096a38d678
-ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
+ms.openlocfilehash: 061c8df1aff59c97df54a973491d333858288fd4
+ms.sourcegitcommit: bb044a48a6af9b9d8edb178dc8c8bd5658b9ff68
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/09/2018
+ms.lasthandoff: 04/18/2018
 ---
 # <a name="overview-of-multidimensional-schemas-and-data"></a>Información general de esquemas y datos multidimensionales
 ## <a name="understanding-multidimensional-schemas"></a>Esquemas multidimensionales  
@@ -65,15 +65,15 @@ Hamburg, Munich, Stuttgart}
   
  Cada nivel tiene un conjunto de miembros, como se indica a continuación:  
   
--   Todo el mundo`= {All}`  
+-   Todo el mundo `= {All}`  
   
--   Continentes`= {North America, Europe}`  
+-   Continentes `= {North America, Europe}`  
   
--   Países`= {Canada, USA, UK, Germany}`  
+-   Países `= {Canada, USA, UK, Germany}`  
   
--   Regiones`= {Canada-East, Canada-West, USA-NE, USA-NW, USA-SE, USA-SW, England, Ireland, Scotland, Wales, Germany-North, Germany-South}`  
+-   Regiones `= {Canada-East, Canada-West, USA-NE, USA-NW, USA-SE, USA-SW, England, Ireland, Scotland, Wales, Germany-North, Germany-South}`  
   
--   Ciudades`= {Ottawa, Toronto, Vancouver, Calgary, Seattle, Boise, Los Angeles, Houston, Shreveport, Miami, Boston, New York, London, Dover, Glasgow, Edinburgh, Cardiff, Pembroke, Belfast, Derry, Berlin, Hamburg, Munich, Stuttgart}`  
+-   Ciudades `= {Ottawa, Toronto, Vancouver, Calgary, Seattle, Boise, Los Angeles, Houston, Shreveport, Miami, Boston, New York, London, Dover, Glasgow, Edinburgh, Cardiff, Pembroke, Belfast, Derry, Berlin, Hamburg, Munich, Stuttgart}`  
   
 ### <a name="members"></a>Miembros  
  Los miembros del nivel de hoja de una jerarquía no tienen elementos secundarios y los miembros del nivel raíz tienen ningún elemento primario. Todos los demás miembros tienen al menos un elemento primario y al menos un elemento secundario. Por ejemplo, un recorrido transversal parcial del árbol de jerarquía de la dimensión Geography genera las relaciones de elementos primarios y secundarios siguientes:  

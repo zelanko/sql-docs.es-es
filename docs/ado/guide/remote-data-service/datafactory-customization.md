@@ -1,30 +1,30 @@
 ---
-title: "Personalización de DataFactory | Documentos de Microsoft"
-ms.prod: sql-non-specified
+title: Personalización de DataFactory | Documentos de Microsoft
+ms.prod: sql
 ms.prod_service: drivers
-ms.service: 
+ms.service: ''
 ms.component: ado
 ms.technology:
 - drivers
-ms.custom: 
+ms.custom: ''
 ms.date: 01/19/2017
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.tgt_pltfrm: ''
+ms.topic: conceptual
 helpviewer_keywords:
 - DataFactory customization in RDS [ADO]
 ms.assetid: 86d77985-a0d0-405a-8587-c85a20540a0e
-caps.latest.revision: 
+caps.latest.revision: 14
 author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 7f286af82af900116eb0cbc4e8154d046d45b342
-ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
+ms.openlocfilehash: 6926c858ca9b1f8c09014b8637c8a17c6ca33f7b
+ms.sourcegitcommit: bb044a48a6af9b9d8edb178dc8c8bd5658b9ff68
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/09/2018
+ms.lasthandoff: 04/18/2018
 ---
 # <a name="datafactory-customization"></a>Personalización de DataFactory
 Servicio de datos remoto (RDS) proporciona una manera fácil tener acceso a datos en un sistema cliente/servidor de tres niveles. Un control de datos de cliente especifica los parámetros de cadena de conexión y comando para realizar una consulta en un origen de datos remoto o la cadena de conexión y [Recordset](../../../ado/reference/ado-api/recordset-object-ado.md) parámetros para realizar una actualización del objeto.  

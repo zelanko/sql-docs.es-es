@@ -1,6 +1,6 @@
 ---
-title: "Configuración de SQL Server con las variables de entorno | Documentos de Microsoft"
-description: "Este artículo describe cómo usar las variables de entorno para configurar valores específicos de 2017 de SQL Server en Linux."
+title: Configuración de SQL Server con las variables de entorno | Documentos de Microsoft
+description: Este artículo describe cómo usar las variables de entorno para configurar valores específicos de 2017 de SQL Server en Linux.
 author: rothja
 ms.author: jroth
 manager: craigg
@@ -8,18 +8,18 @@ ms.date: 02/20/2018
 ms.topic: article
 ms.prod: sql-non-specified
 ms.prod_service: database-engine
-ms.service: 
-ms.component: 
+ms.service: ''
+ms.component: ''
 ms.suite: sql
 ms.custom: sql-linux
 ms.technology: database-engine
-ms.assetid: 
+ms.assetid: ''
 ms.workload: On Demand
-ms.openlocfilehash: e6d21c8f2e7636ee787bbd735b3d69b71ac20671
-ms.sourcegitcommit: 57f45ee008141ddf009b1c1195442529e0ea1508
+ms.openlocfilehash: 523959047c7b7cd7cce36138650b8cc52873f73e
+ms.sourcegitcommit: f3aa02a0f27cc1d3d5450f65cc114d6228dd9d49
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/21/2018
+ms.lasthandoff: 04/23/2018
 ---
 # <a name="configure-sql-server-settings-with-environment-variables-on-linux"></a>Configuración de SQL Server con las variables de entorno en Linux
 
@@ -53,6 +53,7 @@ Puede utilizar varias variables de entorno diferente para configurar SQL Server 
 | **MSSQL_AGENT_ENABLED** | Habilitar el Agente SQL Server. Por ejemplo, se habilita 'true' y 'false' está deshabilitado. De forma predeterminada, el agente está deshabilitado.  |
 | **MSSQL_MASTER_DATA_FILE** | Establece la ubicación del archivo de datos de base de datos maestra. |
 | **MSSQL_MASTER_LOG_FILE** | Establece la ubicación del archivo de registro de base de datos maestra. |
+| **MSSQL_ERROR_LOG_FILE** | Establece la ubicación de los archivos de registro de errores. |
 
 
 ## <a name="example-initial-setup"></a>Ejemplo: el programa de instalación inicial

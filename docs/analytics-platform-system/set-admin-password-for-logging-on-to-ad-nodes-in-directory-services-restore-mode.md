@@ -1,28 +1,21 @@
 ---
-title: Establecer contraseña de inicio de sesión de administrador de nodos de AD en modo de restauración de servicios de directorio (APS)
-author: barbkess
-ms.author: barbkess
+title: 'Establecer contraseña de Active Directory: Analytics Platform System | Documentos de Microsoft'
+description: Establecer contraseña de inicio de sesión de administrador de nodos de Active Directory en modo de restauración de servicios de directorio de Analytics Platform System (APS).
+author: mzaman1
 manager: craigg
-ms.prod: analytics-platform-system
-ms.prod_service: mpp-data-warehouse
-ms.service: ''
-ms.component: ''
-ms.technology: mpp-data-warehouse
-ms.custom: ''
-ms.date: 01/05/2017
-ms.reviewer: na
-ms.suite: sql
-ms.tgt_pltfrm: na
-ms.topic: article
-ms.assetid: 97a9c715-2763-417d-b45c-bb0180759e47
-caps.latest.revision: 20
-ms.openlocfilehash: 3e09305152a2892ae4acaf7096921d2a73345b63
-ms.sourcegitcommit: 9351e8b7b68f599a95fb8e76930ab886db737e5f
+ms.prod: sql
+ms.technology: data-warehouse
+ms.topic: conceptual
+ms.date: 04/17/2018
+ms.author: murshedz
+ms.reviewer: martinle
+ms.openlocfilehash: e74689216c1485fc0c11c588acb151269e2b5d2b
+ms.sourcegitcommit: 056ce753c2d6b85cd78be4fc6a29c2b4daaaf26c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/06/2018
+ms.lasthandoff: 04/19/2018
 ---
-# <a name="set-admin-password-for-logging-on-to-ad-nodes-in-directory-services-restore-mode-dsrm"></a>Establecer contraseña de administrador para iniciar sesión en los nodos de AD en modo de restauración de servicios de directorio (DSRM)
+# <a name="set-admin-password-for-logging-on-to-ad-nodes-in-directory-services-restore-mode-dsrm---analytics-platform-system"></a>Establecer contraseña de administrador para iniciar sesión en nodos de AD en servicios de directorio restaurar el modo (DSRM) - sistema de la plataforma de análisis
 Modo de restauración de servicios de directorio (DSRM) es un modo de arranque para reparar o recuperar los servicios de dominio de Active Directory (AD DS). Se utiliza para iniciar sesión en los nodos de dispositivo AD cuando se produzca error AD DS o cuando AD DS debe restaurarse. La contraseña de DSRM se inicializó durante la instalación del dispositivo en el sitio del proveedor de hardware y debe ser cambiada por el administrador del equipo. Sistema de la plataforma de análisis tiene dos AD DS (controladores de dominio); ***appliance_domain *-AD01** y ***appliance_domain *-AD02**. Para cada nodo de dispositivo AD, cambie la contraseña DSRM con los siguientes pasos.  
   
 ## <a name="HowToDSRM"></a>Para restablecer la contraseña de administrador  

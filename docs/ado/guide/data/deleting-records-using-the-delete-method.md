@@ -1,33 +1,33 @@
 ---
-title: "Eliminar registros mediante el método Delete | Documentos de Microsoft"
-ms.prod: sql-non-specified
+title: Eliminar registros mediante el método Delete | Documentos de Microsoft
+ms.prod: sql
 ms.prod_service: drivers
-ms.service: 
+ms.service: ''
 ms.component: ado
 ms.technology:
 - drivers
-ms.custom: 
+ms.custom: ''
 ms.date: 01/19/2017
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.tgt_pltfrm: ''
+ms.topic: conceptual
 helpviewer_keywords:
 - ADO, deleting records
 - deleting records [ADO]
 - editing data [ADO], Delete method
 - Delete method [ADO]
 ms.assetid: bfed5cfa-7f57-463b-9da2-0c612a079d30
-caps.latest.revision: 
+caps.latest.revision: 11
 author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 23238ea9992931cea607feb3fbd73ddefb9201f3
-ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
+ms.openlocfilehash: f73534da8e2b99e410413673481d1a317e0e730e
+ms.sourcegitcommit: bb044a48a6af9b9d8edb178dc8c8bd5658b9ff68
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/09/2018
+ms.lasthandoff: 04/18/2018
 ---
 # <a name="deleting-records-using-the-delete-method"></a>Eliminar registros mediante el método Delete
 Mediante el **eliminar** método marca el registro actual o un grupo de registros en un **Recordset** objeto para su eliminación. Si el **Recordset** objeto no permitir eliminación de registros, se produce un error. Si está en modo de actualización inmediata, las eliminaciones se producen en la base de datos inmediatamente. Si un registro no puede eliminarse correctamente (debido a infracciones de la integridad de la base de datos, por ejemplo), el registro permanecerá en modo de edición después de llamar a **Update.** Esto significa que se debe cancelar la actualización mediante [CancelUpdate](../../../ado/reference/ado-api/cancelupdate-method-ado.md) antes de trasladarse fuera del registro actual (por ejemplo, si se usa [cerrar](../../../ado/reference/ado-api/close-method-ado.md), [mover](../../../ado/reference/ado-api/move-method-ado.md), o [ NextRecordset](../../../ado/reference/ado-api/nextrecordset-method-ado.md)).  

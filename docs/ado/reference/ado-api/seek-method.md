@@ -1,17 +1,17 @@
 ---
-title: "Método Seek | Documentos de Microsoft"
-ms.prod: sql-non-specified
+title: Método Seek | Documentos de Microsoft
+ms.prod: sql
 ms.prod_service: drivers
-ms.service: 
+ms.service: ''
 ms.component: ado
 ms.technology:
 - drivers
-ms.custom: 
+ms.custom: ''
 ms.date: 01/19/2017
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.tgt_pltfrm: ''
+ms.topic: conceptual
 apitype: COM
 f1_keywords:
 - Recordset21::Seek
@@ -19,16 +19,16 @@ f1_keywords:
 helpviewer_keywords:
 - Seek method [ADO]
 ms.assetid: 129293d2-19d3-4940-bf64-483ee72fb4a1
-caps.latest.revision: 
+caps.latest.revision: 12
 author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: af29a65772019a31c495fedc546b204e98455809
-ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
+ms.openlocfilehash: 11fe64054cef55d1098c293f5acc0ade4540f74c
+ms.sourcegitcommit: bb044a48a6af9b9d8edb178dc8c8bd5658b9ff68
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/09/2018
+ms.lasthandoff: 04/18/2018
 ---
 # <a name="seek-method"></a>El método de búsqueda
 Busca el índice de un [Recordset](../../../ado/reference/ado-api/recordset-object-ado.md) a encontrar rápidamente la fila que coincide con los valores especificados y cambia la posición de fila actual a dicha fila.  
@@ -41,7 +41,7 @@ recordset.Seek KeyValues, SeekOption
 ```  
   
 #### <a name="parameters"></a>Parámetros  
- *KeyValues*  
+ *KeyValue*  
  Una matriz de **Variant** valores. Un índice consta de una o varias columnas y la matriz contiene un valor que se compara con cada columna correspondiente.  
   
  *SeekOption*  

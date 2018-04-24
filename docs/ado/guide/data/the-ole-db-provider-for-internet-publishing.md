@@ -1,17 +1,17 @@
 ---
-title: "El proveedor OLE DB para la publicación en Internet | Documentos de Microsoft"
-ms.prod: sql-non-specified
+title: El proveedor OLE DB para la publicación en Internet | Documentos de Microsoft
+ms.prod: sql
 ms.prod_service: drivers
-ms.service: 
+ms.service: ''
 ms.component: ado
 ms.technology:
 - drivers
-ms.custom: 
+ms.custom: ''
 ms.date: 01/19/2017
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.tgt_pltfrm: ''
+ms.topic: conceptual
 helpviewer_keywords:
 - OLE DB provider for Internet publishing [ADO]
 - ADO, Internet publishing
@@ -19,16 +19,16 @@ helpviewer_keywords:
 - Internet publishing [ADO]
 - providers [ADO], OLE DB provider for Internet publishing
 ms.assetid: 4869aafa-7401-4ce1-93ce-45406a60274f
-caps.latest.revision: 
+caps.latest.revision: 11
 author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 128d8531f1a5f4c2ebff06b9db8b1510964bdcd4
-ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
+ms.openlocfilehash: c3dfd95a9df4e67effa659e3d76d92ce1927d778
+ms.sourcegitcommit: bb044a48a6af9b9d8edb178dc8c8bd5658b9ff68
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/09/2018
+ms.lasthandoff: 04/18/2018
 ---
 # <a name="the-ole-db-provider-for-internet-publishing"></a>El proveedor OLE DB para la publicación en Internet
 La propiedad ADO [registro](../../../ado/reference/ado-api/record-object-ado.md) y [flujo](../../../ado/reference/ado-api/stream-object-ado.md) objetos pueden utilizarse con el proveedor Microsoft OLE DB para publicación en Internet (Internet Publishing Provider) para tener acceso y manipular los recursos, como archivos o carpetas Web proporcionados por Microsoft FrontPage. Con ADO, puede especificar el origen de un **registro**, **flujo**, o [Recordset](../../../ado/reference/ado-api/recordset-object-ado.md) sea una dirección URL. Puede, a continuación, cargar, descargar, mover, copiar y eliminar recursos o manipular directamente las propiedades del recurso.  

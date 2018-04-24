@@ -1,32 +1,32 @@
 ---
 title: Ejemplo de propiedad DefinedSize (VC ++) | Documentos de Microsoft
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: drivers
-ms.service: 
+ms.service: ''
 ms.component: ado
 ms.technology:
 - drivers
-ms.custom: 
+ms.custom: ''
 ms.date: 01/19/2017
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.tgt_pltfrm: ''
+ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
 - DefinedSize property [ADOX], VC++ example
 ms.assetid: cc752ae4-58c4-4a7b-bfb2-0454e90fe2e7
-caps.latest.revision: 
+caps.latest.revision: 10
 author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: f7a9366879aa23b1ceefa6bfe688f168fff2dfee
-ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
+ms.openlocfilehash: 57609bce13555f6a8927c48c7d3d2a39f3169628
+ms.sourcegitcommit: bb044a48a6af9b9d8edb178dc8c8bd5658b9ff68
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/09/2018
+ms.lasthandoff: 04/18/2018
 ---
 # <a name="definedsize-property-example-vc"></a>Ejemplo de propiedad DefinedSize (VC ++)
 Este ejemplo se muestra la [DefinedSize](../../../ado/reference/adox-api/definedsize-property-adox.md) propiedad de un [columna](../../../ado/reference/adox-api/column-object-adox.md). El código se vuelven a definir el tamaño de la columna FirstName de la **empleados** tabla de la *Northwind* base de datos. A continuación, el cambio en los valores de la FirstName [campo](../../../ado/reference/ado-api/field-object.md) de un [Recordset](../../../ado/reference/ado-api/recordset-object-ado.md) tomando como base la **empleados** se muestra la tabla. Tenga en cuenta que de forma predeterminada, el campo FirstName deja de estar rellena con espacios cuando haya redefinido la **DefinedSize** propiedad.  

@@ -1,30 +1,30 @@
 ---
 title: 'Paso 5: Control de datos es realizado utilizable (Tutorial de RDS) | Documentos de Microsoft'
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: drivers
-ms.service: 
+ms.service: ''
 ms.component: ado
 ms.technology:
 - drivers
-ms.custom: 
+ms.custom: ''
 ms.date: 01/19/2017
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.tgt_pltfrm: ''
+ms.topic: conceptual
 helpviewer_keywords:
 - RDS tutorial [ADO], datacontrol made usable
 ms.assetid: ed5c4a24-9804-4c85-817e-317652acb9b4
-caps.latest.revision: 
+caps.latest.revision: 14
 author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: bc51b8047a4eddc007dfbb46cbc087676800d54b
-ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
+ms.openlocfilehash: 6c152323f13f8f21cef1485f81a81f5a01dcde71
+ms.sourcegitcommit: bb044a48a6af9b9d8edb178dc8c8bd5658b9ff68
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/09/2018
+ms.lasthandoff: 04/18/2018
 ---
 # <a name="step-5-datacontrol-is-made-usable-rds-tutorial"></a>Paso 5: Control de datos es realizado utilizable (Tutorial de RDS)
 El valor devuelto **Recordset** objeto está disponible para su uso. Puede examinar, navegue o editarlo como lo haría con cualquier otro **conjunto de registros**. ¿Qué puede hacer con el **Recordset** depende del entorno. Visual Basic y Visual C++ poseen controles visuales que pueden usar un **Recordset** directa o indirectamente con la Ayuda de un control de datos.  

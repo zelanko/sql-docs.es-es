@@ -1,17 +1,17 @@
 ---
-title: "Execute, Requery y Clear ejemplo de los métodos (VC ++) | Documentos de Microsoft"
-ms.prod: sql-non-specified
+title: Execute, Requery y Clear ejemplo de los métodos (VC ++) | Documentos de Microsoft
+ms.prod: sql
 ms.prod_service: drivers
-ms.service: 
+ms.service: ''
 ms.component: ado
 ms.technology:
 - drivers
-ms.custom: 
+ms.custom: ''
 ms.date: 01/19/2017
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.tgt_pltfrm: ''
+ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -19,16 +19,16 @@ helpviewer_keywords:
 - Clear method [ADO], VC++ example
 - Execute method [ADO], VC++ example
 ms.assetid: ada6acc1-82eb-4cfa-8f2f-617a916ffd8d
-caps.latest.revision: 
+caps.latest.revision: 11
 author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: cfff2bf11c7e28291fd34075f0c48c54a92b9c04
-ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
+ms.openlocfilehash: ed534461e3f0305cc0dd017abbb508d6322aa77e
+ms.sourcegitcommit: bb044a48a6af9b9d8edb178dc8c8bd5658b9ff68
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/09/2018
+ms.lasthandoff: 04/18/2018
 ---
 # <a name="execute-requery-and-clear-methods-example-vc"></a>Execute, Requery y Clear ejemplo de los métodos (VC ++)
 Este ejemplo se muestra la **Execute** método cuando se ejecuta desde una [comando](../../../ado/reference/ado-api/command-object-ado.md) objeto y un [conexión](../../../ado/reference/ado-api/connection-object-ado.md) objeto. También usa el [Requery](../../../ado/reference/ado-api/requery-method.md) método para recuperar los datos actuales en un [recordset](../../../ado/reference/ado-api/recordset-object-ado.md)y el [borrar](../../../ado/reference/ado-api/clear-method-ado.md) método para borrar el contenido de la [errores](../../../ado/reference/ado-api/errors-collection-ado.md)colección. Las funciones ExecuteCommand y PrintOutput son necesarias para poder ejecutar este ejemplo.  

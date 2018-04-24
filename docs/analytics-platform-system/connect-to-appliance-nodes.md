@@ -1,29 +1,22 @@
 ---
-title: Conectarse a los nodos de dispositivo (Analytics Platform System)
-author: barbkess
-ms.author: barbkess
+title: Conectarse a dispositivo nodos - Analytics Platform System | Documentos de Microsoft
+description: En este artículo se explica las diversas formas para conectarse a cada nodo en el dispositivo de sistema de la plataforma de análisis.
+author: mzaman1
 manager: craigg
-ms.prod: analytics-platform-system
-ms.prod_service: mpp-data-warehouse
-ms.service: ''
-ms.component: ''
-ms.technology: mpp-data-warehouse
-ms.custom: ''
-ms.date: 01/05/2017
-ms.reviewer: na
-ms.suite: sql
-ms.tgt_pltfrm: na
-ms.topic: article
-ms.assetid: f975aa91-c816-4b29-89bf-923ab5b4abb4
-caps.latest.revision: 19
-ms.openlocfilehash: 9b95bc8285625170c9c9b4a91eeae99dcd3907a5
-ms.sourcegitcommit: 9351e8b7b68f599a95fb8e76930ab886db737e5f
+ms.prod: sql
+ms.technology: data-warehouse
+ms.topic: conceptual
+ms.date: 04/17/2018
+ms.author: murshedz
+ms.reviewer: martinle
+ms.openlocfilehash: 2d7d634023c5fc3d0a6f522b5f60933ce3b96272
+ms.sourcegitcommit: 056ce753c2d6b85cd78be4fc6a29c2b4daaaf26c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/06/2018
+ms.lasthandoff: 04/19/2018
 ---
-# <a name="connect-to-appliance-nodes"></a>Conectarse a los nodos de dispositivo
-En este tema se explica las diversas formas para conectarse a cada nodo en el dispositivo de sistema de la plataforma de análisis.  
+# <a name="connect-to-appliance-nodes-in-analytics-platform-system"></a>Conectarse a los nodos de dispositivo de sistema de la plataforma de análisis
+En este artículo se explica las diversas formas para conectarse a cada nodo en el dispositivo de sistema de la plataforma de análisis.  
   
 ## <a name="connecting-with-hadoop"></a>Conectar con Hadoop  
 Antes de usar Hadoop con SQL Server PDW, pida al administrador de dispositivo para instalar el entorno de tiempo de ejecución de Java en PDW de SQL Server. Para obtener instrucciones, consulte [configurar PolyBase conectividad a datos externos &#40;Analytics Platform System&#41; ](configure-polybase-connectivity-to-external-data.md) en la Guía de operaciones de dispositivo.  

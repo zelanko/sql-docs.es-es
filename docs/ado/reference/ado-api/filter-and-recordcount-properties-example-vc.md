@@ -1,33 +1,33 @@
 ---
 title: Ejemplo de propiedades de RecordCount (VC ++) y filtro | Documentos de Microsoft
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: drivers
-ms.service: 
+ms.service: ''
 ms.component: ado
 ms.technology:
 - drivers
-ms.custom: 
+ms.custom: ''
 ms.date: 01/19/2017
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.tgt_pltfrm: ''
+ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
 - RecordCount property [ADO], VC++ example
 - Filter property [ADO], VC++ example
 ms.assetid: b71346cb-3b09-4b8c-a600-976171a1c336
-caps.latest.revision: 
+caps.latest.revision: 15
 author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 2432adfdd2a4d4a66a3ccf0379a653ad4bb95f50
-ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
+ms.openlocfilehash: 3ef95acddadf87e941dfc0a8e388f251586d8e14
+ms.sourcegitcommit: bb044a48a6af9b9d8edb178dc8c8bd5658b9ff68
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/09/2018
+ms.lasthandoff: 04/18/2018
 ---
 # <a name="filter-and-recordcount-properties-example-vc"></a>Filtro y ejemplo de las propiedades RecordCount (VC ++)
 Este ejemplo se utiliza la [filtro](../../../ado/reference/ado-api/filter-property.md) propiedad para abrir una nueva [Recordset](../../../ado/reference/ado-api/recordset-object-ado.md) en función de una condición especificada aplicada a un archivo **conjunto de registros**. Usa el [RecordCount](../../../ado/reference/ado-api/recordcount-property-ado.md) propiedad para mostrar el número de registros en los dos **conjuntos de registros**. La función FilterField es necesaria ejecutar este procedimiento.  

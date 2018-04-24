@@ -1,32 +1,32 @@
 ---
-title: "Procedimientos de ejemplo de método Append (VB) | Documentos de Microsoft"
-ms.prod: sql-non-specified
+title: Procedimientos de ejemplo de método Append (VB) | Documentos de Microsoft
+ms.prod: sql
 ms.prod_service: drivers
-ms.service: 
+ms.service: ''
 ms.component: ado
 ms.technology:
 - drivers
-ms.custom: 
+ms.custom: ''
 ms.date: 01/19/2017
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.tgt_pltfrm: ''
+ms.topic: conceptual
 dev_langs:
 - VB
 helpviewer_keywords:
 - Append method [ADOX], Visual Basic example
 ms.assetid: ce83b966-474b-4f57-8eb9-370996dfc5c0
-caps.latest.revision: 
+caps.latest.revision: 10
 author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 8982cc8970cfbb79912688b038f1745d9d4b5612
-ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
+ms.openlocfilehash: a46c7dd2ab095a6bc50dab15cf3a1b9a1cb3024d
+ms.sourcegitcommit: bb044a48a6af9b9d8edb178dc8c8bd5658b9ff68
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/09/2018
+ms.lasthandoff: 04/18/2018
 ---
 # <a name="procedures-append-method-example-vb"></a>Procedimientos de ejemplo de método Append (VB)
 El código siguiente muestra cómo utilizar un [comando](../../../ado/reference/ado-api/command-object-ado.md) objeto y el [procedimientos](../../../ado/reference/adox-api/procedures-collection-adox.md) colección [anexado](../../../ado/reference/adox-api/append-method-adox-procedures.md) método para crear un nuevo procedimiento en el origen de datos subyacente.  

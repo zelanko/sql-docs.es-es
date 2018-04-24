@@ -1,15 +1,16 @@
 ---
-title: "Reparación de página automática (grupos de disponibilidad: creación de reflejo de la base de datos) | Microsoft Docs"
-ms.custom: 
+title: 'Reparación de página automática (grupos de disponibilidad: creación de reflejo de la base de datos) | Microsoft Docs'
+ms.custom: ''
 ms.date: 05/17/2016
 ms.prod: sql-non-specified
 ms.prod_service: database-engine
-ms.service: 
+ms.service: ''
 ms.component: failover-clusters
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: dbe-high-availability
-ms.tgt_pltfrm: 
+ms.technology:
+- dbe-high-availability
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - automatic page repair
@@ -17,19 +18,20 @@ helpviewer_keywords:
 - database mirroring [SQL Server], automatic page repair
 - suspect pages [SQL Server]
 ms.assetid: cf2e3650-5fac-4f34-b50e-d17765578a8e
-caps.latest.revision: "31"
+caps.latest.revision: 31
 author: MikeRayMSFT
 ms.author: mikeray
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: b1f5007a8c6b8f222d0708692ecc802f6409738d
-ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.openlocfilehash: 3977d1893d009b9a427a28d4f320d31c1e747d03
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/05/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="automatic-page-repair-availability-groups-database-mirroring"></a>Reparación de página automática (grupos de disponibilidad: creación de reflejo de base de datos)
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] La reparación de página automática es compatible con la creación de reflejo de la base de datos y con [!INCLUDE[ssHADR](../../includes/sshadr-md.md)]. Cuando ciertos tipos de errores dañan una página, dejándola ilegible, un asociado de creación de reflejo de la base de datos (ya sea principal o reflejado) o una réplica de disponibilidad (principal o secundaria) intenta recuperar la página automáticamente. El asociado y la réplica que no pueden leer la página solicitan una nueva copia de la página a su asociado o a otra réplica. Si la solicitud se realiza correctamente, la copia legible sustituirá a la página ilegible y esto resuelve el error en la mayoría de los casos.  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+  La reparación de página automática es compatible con la creación de reflejo de la base de datos y con [!INCLUDE[ssHADR](../../includes/sshadr-md.md)]. Cuando ciertos tipos de errores dañan una página, dejándola ilegible, un asociado de creación de reflejo de la base de datos (ya sea principal o reflejado) o una réplica de disponibilidad (principal o secundaria) intenta recuperar la página automáticamente. El asociado y la réplica que no pueden leer la página solicitan una nueva copia de la página a su asociado o a otra réplica. Si la solicitud se realiza correctamente, la copia legible sustituirá a la página ilegible y esto resuelve el error en la mayoría de los casos.  
   
  Hablando en general, la creación de reflejo de la base de datos y [!INCLUDE[ssHADR](../../includes/sshadr-md.md)] controlan los errores de E/S de formas equivalentes. Las pocas diferencias se describen aquí.  
   
@@ -51,7 +53,7 @@ ms.lasthandoff: 12/05/2017
 ##  <a name="ErrorTypes"></a> Error Types That Cause an Automatic Page-Repair Attempt  
  La reparación de página automática de la creación de reflejo de la base de datos intenta reparar únicamente aquellas páginas de un archivo de datos en las que una operación no se ha realizado correctamente debido a uno de los errores que se muestran en la siguiente tabla.  
   
-|Número de error|Descripción|Instancias que provocan el intento de una reparación de página automática|  
+|Número de error|Description|Instancias que provocan el intento de una reparación de página automática|  
 |------------------|-----------------|---------------------------------------------------------|  
 |823|Se toman medidas solo cuando el sistema operativo ha realizado una prueba cíclica de redundancia (CRC) en la que se ha producido un error en los datos.|ERROR_CRC. El valor del sistema operativo para este error es de 23.|  
 |824|Errores lógicos.|Los errores de datos lógicos, como la escritura incompleta o la suma incorrecta de comprobación de página.|  
@@ -116,7 +118,7 @@ ms.lasthandoff: 12/05/2017
      Devuelve una fila para cada intento de reparación de página automática en cualquier base de datos reflejada en la instancia del servidor.  
   
  
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Ver también  
  [Administrar la tabla suspect_pages &#40;SQL Server&#41;](../../relational-databases/backup-restore/manage-the-suspect-pages-table-sql-server.md)   
  [Información general de los grupos de disponibilidad AlwaysOn &#40;SQL Server&#41;](../../database-engine/availability-groups/windows/overview-of-always-on-availability-groups-sql-server.md)   
  [Creación de reflejo de la base de datos &#40;SQL Server&#41;](../../database-engine/database-mirroring/database-mirroring-sql-server.md)  

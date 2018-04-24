@@ -1,34 +1,36 @@
 ---
-title: "Configuración de los votos y modos de cuórum WSFC (SQL Server) | Microsoft Docs"
-ms.custom: 
+title: Configuración de los votos y modos de cuórum WSFC (SQL Server) | Microsoft Docs
+ms.custom: ''
 ms.date: 10/03/2016
 ms.prod: sql-non-specified
 ms.prod_service: database-engine
-ms.service: 
+ms.service: ''
 ms.component: failover-clusters
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: dbe-high-availability
-ms.tgt_pltfrm: 
+ms.technology:
+- dbe-high-availability
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - Availability Groups [SQL Server], WSFC clusters
 - quorum [SQL Server], AlwaysOn and WSFC quorum
 - failover clustering [SQL Server], AlwaysOn Availability Groups
 ms.assetid: ca0d59ef-25f0-4047-9130-e2282d058283
-caps.latest.revision: "15"
+caps.latest.revision: 15
 author: MikeRayMSFT
 ms.author: mikeray
-manager: jhubbard
+manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: d9c0a87d4229aa94cf30ddc61394656377456eea
-ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.openlocfilehash: 13c6e85b191619c61c4a38ffabf4db6f3310af39
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/05/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="wsfc-quorum-modes-and-voting-configuration-sql-server"></a>Configuración de los votos y modos de quórum WSFC (SQL Server)
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] Tanto [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] como las instancias de clúster de conmutación por error (FCI) de AlwaysOn aprovechan los clústeres de conmutación por error de Windows Server (WSFC) como tecnología de plataforma.  WSFC usa un método basado en quórum para supervisar el estado general del clúster y maximizar la tolerancia a errores en el nivel de nodo. Entender los modos de cuórum WSFC y la configuración de las votaciones en los nodos es muy importante para el diseño, el funcionamiento y la solución de problemas de una solución de recuperación ante desastres AlwaysOn de alta disponibilidad.  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+  Tanto [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)][!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] como las instancias de clúster de conmutación por error (FCI) de AlwaysOn aprovechan los Clústeres de conmutación por error de Windows Server (WSFC) como tecnología de plataforma.  WSFC usa un método basado en quórum para supervisar el estado general del clúster y maximizar la tolerancia a errores en el nivel de nodo. Entender los modos de cuórum WSFC y la configuración de las votaciones en los nodos es muy importante para el diseño, el funcionamiento y la solución de problemas de una solución de recuperación ante desastres AlwaysOn de alta disponibilidad.  
   
  **En este tema:**  
   
@@ -126,7 +128,7 @@ ms.lasthandoff: 12/05/2017
   
 -   [Ver la configuración de NodeWeight de quórum de clúster](../../../sql-server/failover-clusters/windows/view-cluster-quorum-nodeweight-settings.md)  
   
--   [Configurar los valores de NodeWeight de quórum de clúster](../../../sql-server/failover-clusters/windows/configure-cluster-quorum-nodeweight-settings.md)  
+-   [Configurar los valores de NodeWeight de cuórum de clúster](../../../sql-server/failover-clusters/windows/configure-cluster-quorum-nodeweight-settings.md)  
   
 ##  <a name="RelatedContent"></a> Contenido relacionado  
   
@@ -138,7 +140,7 @@ ms.lasthandoff: 12/05/2017
   
 -   [Guía paso a paso para configurar el quórum en un clúster de conmutación por error](http://technet.microsoft.com/library/cc770620\(WS.10\).aspx)  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Ver también  
  [Recuperación ante desastres del clúster WSFC mediante cuórum forzado &#40;SQL Server&#41;](../../../sql-server/failover-clusters/windows/wsfc-disaster-recovery-through-forced-quorum-sql-server.md)   
  [Clústeres de conmutación por error de Windows Server &#40;WSFC&#41; con SQL Server](../../../sql-server/failover-clusters/windows/windows-server-failover-clustering-wsfc-with-sql-server.md)  
   

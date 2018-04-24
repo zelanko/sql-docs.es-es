@@ -1,32 +1,32 @@
 ---
 title: Elemento de ejemplo de la propiedad (VB) | Documentos de Microsoft
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: drivers
-ms.service: 
+ms.service: ''
 ms.component: ado
 ms.technology:
 - drivers
-ms.custom: 
+ms.custom: ''
 ms.date: 01/19/2017
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.tgt_pltfrm: ''
+ms.topic: conceptual
 dev_langs:
 - VB
 helpviewer_keywords:
 - Item property [ADO], Visual Basic example
 ms.assetid: b4476603-691b-4081-8797-a3d0b331dce5
-caps.latest.revision: 
+caps.latest.revision: 10
 author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 3174bd0428d97ed228d4a9b30ff13b0d49e3962f
-ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
+ms.openlocfilehash: cf4f6c78b5dd6c93dfcb0ae43a5fa1b271c64c2d
+ms.sourcegitcommit: bb044a48a6af9b9d8edb178dc8c8bd5658b9ff68
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/09/2018
+ms.lasthandoff: 04/18/2018
 ---
 # <a name="item-property-example-vb"></a>Ejemplo de la propiedad de elemento (VB)
 Este ejemplo se muestra cómo el [elemento](../../../ado/reference/ado-api/item-property-ado.md) propiedad tiene acceso a los miembros de una colección. El ejemplo se abre la ***autores*** tabla de la ***Pubs*** base de datos con un comando con parámetros.  

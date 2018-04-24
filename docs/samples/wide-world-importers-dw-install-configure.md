@@ -17,11 +17,12 @@ ms.author: barbkess
 manager: craigg
 robots: noindex,nofollow
 ms.workload: On Demand
-ms.openlocfilehash: e4328da10d2ec51083f3b1dbc23d6b0f5fa5da21
-ms.sourcegitcommit: d6b1695c8cbc70279b7d85ec4dfb66a4271cdb10
+monikerRange: '>= sql-server-2016 || = sqlallproducts-allversions'
+ms.openlocfilehash: 6de9d9493178689a29cc90e79e228a9cb07aaace
+ms.sourcegitcommit: bb044a48a6af9b9d8edb178dc8c8bd5658b9ff68
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/08/2018
+ms.lasthandoff: 04/18/2018
 ---
 # <a name="wideworldimportersdw-installation-and-configuration"></a>WideWorldImportersDW instalación y configuración
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -34,13 +35,13 @@ Instrucciones de instalación y configuración para la base de datos de WideWorl
 
 La versión más reciente del ejemplo:
 
-[wide-world-importers-release](http://go.microsoft.com/fwlink/?LinkID=800630)
+[Wide world importers versión](http://go.microsoft.com/fwlink/?LinkID=800630)
 
 Descargar el ejemplo WideWorldImportersDW base de datos copia de seguridad/bacpac que corresponde a la edición de SQL Server o base de datos de SQL Azure.
 
 Código fuente para volver a crear la base de datos de ejemplo está disponible en la ubicación siguiente. Tenga en cuenta que el rellenado de datos se basa en ETL de la base de datos OLTP (WideWorldImporters):
 
-[wide-world-importers-source](https://github.com/Microsoft/sql-server-samples/tree/master/samples/databases/wide-world-importers/wwi-dw-database-scripts)
+[Wide world importers origen](https://github.com/Microsoft/sql-server-samples/tree/master/samples/databases/wide-world-importers/wwi-dw-database-scripts)
 
 ## <a name="install"></a>Install
 
@@ -77,4 +78,4 @@ La base de datos de ejemplo puede hacer uso de PolyBase en archivos de consulta 
 1. En SQL Server Management Studio, conéctese a la base de datos de WideWorldImportersDW y abrir una nueva ventana de consulta.
 2. Ejecute el siguiente comando de T-SQL para habilitar el uso de PolyBase en la base de datos:
 
-   EXECUTE [Application].[Configuration_ApplyPolyBase]
+   EJECUTE [aplicación]. [Configuration_ApplyPolyBase]

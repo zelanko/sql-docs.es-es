@@ -1,17 +1,17 @@
 ---
 title: Objeto DataControl (RDS) | Documentos de Microsoft
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: drivers
-ms.service: 
+ms.service: ''
 ms.component: ado
 ms.technology:
 - drivers
-ms.custom: 
+ms.custom: ''
 ms.date: 01/19/2017
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.tgt_pltfrm: ''
+ms.topic: conceptual
 apitype: COM
 f1_keywords:
 - DataControl
@@ -19,16 +19,16 @@ f1_keywords:
 helpviewer_keywords:
 - DataControl object [ADO]
 ms.assetid: d85ea4fc-451c-436e-97b8-58f92b149dd0
-caps.latest.revision: 
+caps.latest.revision: 15
 author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: d7b3e0927f902f52138cdb37091df14652845fa4
-ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
+ms.openlocfilehash: 88fa818b04e55e7d6ad8c8c1c8d984e5cd0680bf
+ms.sourcegitcommit: bb044a48a6af9b9d8edb178dc8c8bd5658b9ff68
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/09/2018
+ms.lasthandoff: 04/18/2018
 ---
 # <a name="datacontrol-object-rds"></a>Objeto DataControl (RDS)
 Enlaza una consulta de datos [Recordset](../../../ado/reference/ado-api/recordset-object-ado.md) a uno o varios controles (por ejemplo, un cuadro de texto, el control de cuadrícula o cuadro combinado) para mostrar el **Recordset** datos en una página Web.  
@@ -58,7 +58,7 @@ Enlaza una consulta de datos [Recordset](../../../ado/reference/ado-api/recordse
  Todas las propiedades de la **RDS. DataControl** son opcionales porque los objetos comerciales personalizados pueden reemplazar su funcionalidad.  
   
 > [!NOTE]
->  Si utiliza una consulta para varios resultados, solo la primera [Recordset](../../../ado/reference/ado-api/recordset-object-ado.md) se devuelve. Si se necesitan varios conjuntos de resultados, asigne cada uno a su propio **DataControl**. Un ejemplo de una consulta para varios resultados podría ser la siguiente:`"Select * from Authors, Select * from Topics"`  
+>  Si utiliza una consulta para varios resultados, solo la primera [Recordset](../../../ado/reference/ado-api/recordset-object-ado.md) se devuelve. Si se necesitan varios conjuntos de resultados, asigne cada uno a su propio **DataControl**. Un ejemplo de una consulta para varios resultados podría ser la siguiente: `"Select * from Authors, Select * from Topics"`  
   
  Adición de "DFMode = 20;" a la cadena de conexión cuando se utiliza el **RDS. DataControl** objeto puede mejorar el rendimiento del servidor cuando se actualizan los datos. Con esta configuración, el **RDSServer.DataFactory** objeto en el servidor usa el modo de requiere menos recursos. Sin embargo, las siguientes características no están disponibles en esta configuración:  
   

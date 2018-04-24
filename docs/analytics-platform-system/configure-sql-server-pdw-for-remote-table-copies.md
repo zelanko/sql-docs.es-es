@@ -1,28 +1,21 @@
 ---
-title: Configurar SQL Server PDW para copias de la tabla remota (SQL Server PDW)
-author: barbkess
-ms.author: barbkess
+title: Configurar el almacenamiento de datos paralelos para las copias de la tabla remota | Documentos de Microsoft
+description: Describe cómo configurar el almacenamiento de datos paralelos para usar la característica de copia de la tabla remota para copiar tablas a las bases de datos de SMP de SQL Server en los servidores no sea de dispositivo.
+author: mzaman1
 manager: craigg
-ms.prod: analytics-platform-system
-ms.prod_service: mpp-data-warehouse
-ms.service: ''
-ms.component: ''
-ms.technology: mpp-data-warehouse
-ms.custom: ''
-ms.date: 01/13/2017
-ms.reviewer: na
-ms.suite: sql
-ms.tgt_pltfrm: na
-ms.topic: article
-ms.assetid: 496b4214-5891-404c-8237-c2a1e09db6d5
-caps.latest.revision: 11
-ms.openlocfilehash: 46fdb88ce3a244946b89f14320229905793564ac
-ms.sourcegitcommit: 9351e8b7b68f599a95fb8e76930ab886db737e5f
+ms.prod: sql
+ms.technology: data-warehouse
+ms.topic: conceptual
+ms.date: 04/17/2018
+ms.author: murshedz
+ms.reviewer: martinle
+ms.openlocfilehash: 3f71a0c67639918820bca8f6f8f38b9f354154f3
+ms.sourcegitcommit: 056ce753c2d6b85cd78be4fc6a29c2b4daaaf26c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/06/2018
+ms.lasthandoff: 04/19/2018
 ---
-# <a name="configure-sql-server-pdw-for-remote-table-copies"></a>Configurar SQL Server PDW para copias de la tabla remota
+# <a name="configure-parallel-data-warehouse-for-remote-table-copies"></a>Configurar el almacenamiento de datos paralelos para las copias de la tabla remota
 Describe cómo configurar SQL Server PDW para usar la característica de copia de la tabla remota para copiar tablas a las bases de datos de SMP de SQL Server en los servidores no sea de dispositivo.  
   
 En este tema se describe uno de los pasos de configuración para configurar la copia de la tabla remota. Para obtener una lista de todos los pasos de configuración, consulte [copia de tabla remota](remote-table-copy.md).  

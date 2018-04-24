@@ -1,29 +1,22 @@
 ---
-title: Supervisión de consultas activas (SQL Server PDW)
-author: barbkess
-ms.author: barbkess
+title: Supervisar consultas activas - almacenamiento de datos paralelos | Documentos de Microsoft
+description: Utilice las vistas de sistema de la consola de administración y almacenamiento de datos paralelos para supervisar consultas activas en el sistema de la plataforma de análisis.
+author: mzaman1
 manager: craigg
-ms.prod: analytics-platform-system
-ms.prod_service: mpp-data-warehouse
-ms.service: ''
-ms.component: ''
-ms.technology: mpp-data-warehouse
-ms.custom: ''
-ms.date: 01/13/2017
-ms.reviewer: na
-ms.suite: sql
-ms.tgt_pltfrm: na
-ms.topic: article
-ms.assetid: bb73f790-0537-414b-8dc2-f1eb69b92362
-caps.latest.revision: 7
-ms.openlocfilehash: 8a792e8dc4f29a257568f37350ba1b2c792c88fe
-ms.sourcegitcommit: 9351e8b7b68f599a95fb8e76930ab886db737e5f
+ms.prod: sql
+ms.technology: data-warehouse
+ms.topic: conceptual
+ms.date: 04/17/2018
+ms.author: murshedz
+ms.reviewer: martinle
+ms.openlocfilehash: 057e5448b68ea7a7f8f23bc57d1a3b0308b300d2
+ms.sourcegitcommit: 056ce753c2d6b85cd78be4fc6a29c2b4daaaf26c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/06/2018
+ms.lasthandoff: 04/19/2018
 ---
-# <a name="monitoring-active-queries"></a>Supervisión de consultas activas
-Este tema muestra cómo utilizar la consola de administración y las vistas del sistema PDW de SQL Server para supervisar consultas activas. Vea [supervisar el dispositivo mediante la consola de administración](monitor-the-appliance-by-using-the-admin-console.md) y [vistas del sistema](tsql-system-views.md) para obtener información sobre estas herramientas.  
+# <a name="monitoring-active-queries---parallel-data-warehouse"></a>Supervisión de consultas activas - almacenamiento de datos paralelos
+Este artículo muestra cómo utilizar la consola de administración y las vistas del sistema PDW de SQL Server para supervisar consultas activas. Vea [supervisar el dispositivo mediante la consola de administración](monitor-the-appliance-by-using-the-admin-console.md) y [vistas del sistema](tsql-system-views.md) para obtener información sobre estas herramientas.  
   
 ## <a name="prerequisites"></a>Requisitos previos  
 Independientemente del método utilizado para supervisar consultas activas, el inicio de sesión debe tener los permisos descritos en "Usar todos los de la consola de administración" en [conceder permisos para usar la consola de administración](grant-permissions.md#grant-permissions-to-use-the-admin-console).  

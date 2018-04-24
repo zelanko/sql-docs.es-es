@@ -1,17 +1,17 @@
 ---
-title: "Método ReadText | Documentos de Microsoft"
-ms.prod: sql-non-specified
+title: Método ReadText | Documentos de Microsoft
+ms.prod: sql
 ms.prod_service: drivers
-ms.service: 
+ms.service: ''
 ms.component: ado
 ms.technology:
 - drivers
-ms.custom: 
+ms.custom: ''
 ms.date: 01/19/2017
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.tgt_pltfrm: ''
+ms.topic: conceptual
 apitype: COM
 f1_keywords:
 - _Stream::raw_ReadText
@@ -19,16 +19,16 @@ f1_keywords:
 helpviewer_keywords:
 - ReadText method [ADO]
 ms.assetid: be5a409e-cf87-4859-9ea5-713401755a77
-caps.latest.revision: 
+caps.latest.revision: 16
 author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: e26f365d2b25bab878f0a8b9a321240d7c8ee347
-ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
+ms.openlocfilehash: a2557106f3a4560181465dbd6f21fcb65bd5db0b
+ms.sourcegitcommit: bb044a48a6af9b9d8edb178dc8c8bd5658b9ff68
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/09/2018
+ms.lasthandoff: 04/18/2018
 ---
 # <a name="readtext-method"></a>Método ReadText
 Lee un número de caracteres del texto especificado [flujo](../../../ado/reference/ado-api/stream-object-ado.md) objeto.  
@@ -53,7 +53,7 @@ String = Stream.ReadText ( NumChars)
 > [!NOTE]
 >  El **ReadText** método se utiliza con secuencias de texto ([tipo](../../../ado/reference/ado-api/type-property-ado-stream.md) es **adTypeText**). Para secuencias binarias (**tipo** es **adTypeBinary**), utilice [lectura](../../../ado/reference/ado-api/read-method.md).  
   
- Las consultas que dan como resultado una gran cantidad de datos XML que se devuelven a través de la **ReadText** método del objeto de flujo de objeto de datos ActiveX (ADO) puede tardar una gran cantidad de tiempo de ejecución; si esto se hace en un componente COM + que se invoca desde una Página ASP, en la sesión del usuario se puede agotar el tiempo. ADO convierte datos de objeto de secuencia de codificación UTF-8 a Unicode; la reasignación de memoria frecuentes implicada en la conversión de una gran cantidad de datos a la vez lleva bastante tiempo. Para resolver, realizar llamadas repetidas a la **ReadText** método de la propiedad ADO objeto command y especifique un número más pequeño de caracteres. Las pruebas han demostrado que un valor equivalente a 128K (131.072) es óptimo. Tiempo de respuesta disminuye a medida que se reduce este valor. Para obtener más información, vea el artículo de Knowledge Base 280067, "PRB: recuperar documentos XML muy grandes de SQL Server 2000 mediante el método ReadText de objeto de secuencia de ADO puede ser lento", en Microsoft Knowledge Base en http://support.microsoft.com.  
+ Las consultas que dan como resultado una gran cantidad de datos XML que se devuelven a través de la **ReadText** método del objeto de flujo de objeto de datos ActiveX (ADO) puede tardar una gran cantidad de tiempo de ejecución; si esto se hace en un componente COM + que se invoca desde una Página ASP, en la sesión del usuario se puede agotar el tiempo. ADO convierte datos de objeto de secuencia de codificación UTF-8 a Unicode; la reasignación de memoria frecuentes implicada en la conversión de una gran cantidad de datos a la vez lleva bastante tiempo. Para resolver, realizar llamadas repetidas a la **ReadText** método de la propiedad ADO objeto command y especifique un número más pequeño de caracteres. Las pruebas han demostrado que un valor equivalente a 128K (131.072) es óptimo. Tiempo de respuesta disminuye a medida que se reduce este valor. Para obtener más información, vea el artículo de Knowledge Base 280067, "PRB: recuperar documentos XML muy grandes de SQL Server 2000 mediante el método ReadText de objeto de secuencia de ADO puede ser lento", de Microsoft Knowledge Base en http://support.microsoft.com.  
   
 ## <a name="applies-to"></a>Se aplica a  
  [Objeto de secuencia (ADO)](../../../ado/reference/ado-api/stream-object-ado.md)  

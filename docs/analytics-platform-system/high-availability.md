@@ -1,28 +1,22 @@
 ---
-title: Alta disponibilidad de sistema de la plataforma de análisis
-author: barbkess
-ms.author: barbkess
+title: Alta disponibilidad en el sistema de la plataforma de análisis | Documentos de Microsoft
+description: Obtenga información acerca de cómo Analytics Platform System (APS) se ha diseñado para lograr alta disponibilidad.
+author: mzaman1
 manager: craigg
-ms.prod: analytics-platform-system
-ms.prod_service: mpp-data-warehouse
-ms.service: ''
-ms.component: ''
-ms.suite: sql
-ms.custom: ''
-ms.technology: mpp-data-warehouse
-description: Describe cómo Analytics Platform System (APS) se ha diseñado para lograr alta disponibilidad.
-ms.date: 10/20/2016
-ms.topic: article
-ms.assetid: 5ab245e9-0316-4d25-a626-4745ce856925
-caps.latest.revision: 9
-ms.openlocfilehash: 9fd057a4cd673f06034e0093ca93be7ceaf345ea
-ms.sourcegitcommit: 9351e8b7b68f599a95fb8e76930ab886db737e5f
+ms.prod: sql
+ms.technology: data-warehouse
+ms.topic: conceptual
+ms.date: 04/17/2018
+ms.author: murshedz
+ms.reviewer: martinle
+ms.openlocfilehash: 5c8a562ab105e1bc40b590916d0881757036aeff
+ms.sourcegitcommit: 056ce753c2d6b85cd78be4fc6a29c2b4daaaf26c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/06/2018
+ms.lasthandoff: 04/19/2018
 ---
 # <a name="analytics-platform-system-high-availability"></a>Alta disponibilidad de sistema de la plataforma de análisis
-Describe cómo Analytics Platform System (APS) se ha diseñado para lograr alta disponibilidad.  
+Obtenga información acerca de cómo Analytics Platform System (APS) se ha diseñado para lograr alta disponibilidad.  
   
 ## <a name="high-availability-architecture"></a>Arquitectura de alta disponibilidad  
 ![La arquitectura del dispositivo](media/appliance-architecture.png "la arquitectura del dispositivo")  

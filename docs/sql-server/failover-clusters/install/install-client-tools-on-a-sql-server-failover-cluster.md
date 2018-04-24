@@ -1,30 +1,32 @@
 ---
-title: "Instalar las herramientas de cliente en un clúster de conmutación por error de SQL Server | Microsoft Docs"
-ms.custom: 
+title: Instalar las herramientas de cliente en un clúster de conmutación por error de SQL Server | Microsoft Docs
+ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql-non-specified
 ms.prod_service: database-engine
-ms.service: 
+ms.service: ''
 ms.component: failover-clusters
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: setup-install
-ms.tgt_pltfrm: 
+ms.technology:
+- setup-install
+ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: 3c82d510-9798-46be-bebb-cac9bef56936
-caps.latest.revision: "9"
+caps.latest.revision: 9
 author: MikeRayMSFT
 ms.author: mikeray
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 6ceab14497f719a8bac3ee44c855f7f1f870d0d6
-ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.openlocfilehash: 472e7d723efd5041a257c8655c398aa62f69bb75
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/05/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="install-client-tools-on-a-sql-server-failover-cluster"></a>Instalar las herramientas de cliente en un clúster de conmutación por error de SQL Server
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] Las herramientas cliente como [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)] son características compartidas comunes a todas las instancias de la misma máquina. Son compatibles con versiones anteriores, con versiones de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] admitidas que se pueden instalar en paralelo. Solo existe una versión de las herramientas de cliente en un nodo a la vez.  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+  Las herramientas de cliente tales como [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)] son características compartidas comunes a todas las instancias del mismo equipo. Son compatibles con versiones anteriores, con versiones de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] admitidas que se pueden instalar en paralelo. Solo existe una versión de las herramientas de cliente en un nodo a la vez.  
   
  Si las herramientas de cliente de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] se instalan durante el proceso de instalación en el primer nodo del clúster de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] , se agregarán automáticamente a los nodos que se puedan agregar más adelante a la instancia de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] usando Agregar nodo.  
   
@@ -58,7 +60,7 @@ ms.lasthandoff: 12/05/2017
 ### <a name="uninstalling-includessnoversionincludesssnoversion-mdmd-client-tools"></a>Desinstalar las Herramientas de cliente de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]  
  Aparecen en Agregar o quitar programas en el Panel de control como **[!INCLUDE[msCoName](../../../includes/msconame-md.md)][!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)]**y se pueden quitar desde ahí. Si usa Quitar nodo para desinstalar una instancia de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] del clúster de conmutación por error, los componentes cliente no se desinstalarán al mismo tiempo.  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Ver también  
  [Ver y leer los archivos de registro de instalación de SQL Server](../../../database-engine/install-windows/view-and-read-sql-server-setup-log-files.md)  
   
   

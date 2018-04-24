@@ -1,28 +1,21 @@
 ---
-title: Alimentación del dispositivo de APS o desactivar (Analytics Platform System)
-author: barbkess
-ms.author: barbkess
+title: El dispositivo o desactivar - Analytics Platform System de energía | Documentos de Microsoft
+description: Alimentación del dispositivo o desactivar para Analytics Platform System
+author: mzaman1
 manager: craigg
-ms.prod: analytics-platform-system
-ms.prod_service: mpp-data-warehouse
-ms.service: ''
-ms.component: ''
-ms.technology: mpp-data-warehouse
-ms.custom: ''
-ms.date: 01/05/2017
-ms.reviewer: na
-ms.suite: sql
-ms.tgt_pltfrm: na
-ms.topic: article
-ms.assetid: 2258f8e3-e7a1-4455-8a5e-10d4d15775d6
-caps.latest.revision: 45
-ms.openlocfilehash: 04473682d04a5b3ff26a5dec0081300d83052f09
-ms.sourcegitcommit: 9351e8b7b68f599a95fb8e76930ab886db737e5f
+ms.prod: sql
+ms.technology: data-warehouse
+ms.topic: conceptual
+ms.date: 04/17/2018
+ms.author: murshedz
+ms.reviewer: martinle
+ms.openlocfilehash: 54829190d03a889ade31383662bf192516934012
+ms.sourcegitcommit: 056ce753c2d6b85cd78be4fc6a29c2b4daaaf26c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/06/2018
+ms.lasthandoff: 04/19/2018
 ---
-# <a name="power-the-aps-appliance-on-or-off"></a>Encender el dispositivo de APS o apagar
+# <a name="power-the-appliance-on-or-off-for-analytics-platform-system"></a>Alimentación del dispositivo o desactivar para Analytics Platform System
 En este tema se describe cómo encender o apagar el Systemappliance de plataforma de análisis que se ejecuta el almacenamiento de datos paralelos y, opcionalmente, ejecuta una región de HDInsight. Utilice este tema cuando se mueve un dispositivo de sistema de la plataforma de análisis, o a la potencia en un dispositivo después de un error de alimentación grave.  
   
 Activando el dispositivo y desactivar no es el mismo que iniciar y detener los servicios del dispositivo. Para obtener información acerca de ese tema, consulte [estado de los servicios PDW &#40;Analytics Platform System&#41;](pdw-services-status.md). Para obtener información acerca de cómo activar y activar o desactivar un almacenamiento de datos paralelo de SQL Server 2008, consulte el archivo de Ayuda de almacenamiento de datos paralelo de SQL Server 2008. Para obtener información acerca de cómo activar y activar o desactivar un SQL Server 2012 AU1 o almacenamiento de datos paralelos de AU2, consulte el archivo de ayuda para esas versiones.  

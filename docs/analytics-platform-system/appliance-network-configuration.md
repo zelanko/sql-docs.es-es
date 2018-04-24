@@ -1,29 +1,22 @@
 ---
-title: Configuración de red del dispositivo (Analytics Platform System)
-author: barbkess
-ms.author: barbkess
+title: 'Configuración de red del dispositivo: Analytics Platform System | Documentos de Microsoft'
+description: El dispositivo Analytics Platform System (APS) está creado y configurado con un conjunto de corrección de direcciones IP a lo largo de todos los servidores y dispositivos aplicables de fábrica del IHV. Con la entrega del dispositivo, la dirección de IP externas (Ethernet) debe configurarse para que coincida con los requisitos de centro de datos del cliente específico.
+author: mzaman1
 manager: craigg
-ms.prod: analytics-platform-system
-ms.prod_service: mpp-data-warehouse
-ms.service: ''
-ms.component: ''
-ms.technology: mpp-data-warehouse
-ms.custom: ''
-ms.date: 01/05/2017
-ms.reviewer: na
-ms.suite: sql
-ms.tgt_pltfrm: na
-ms.topic: article
-ms.assetid: 8e2b9abe-963d-479b-a4a7-1739fcb3e249
-caps.latest.revision: 27
-ms.openlocfilehash: fcee7a037b3fbffc56e923f9be875074628398c3
-ms.sourcegitcommit: 9351e8b7b68f599a95fb8e76930ab886db737e5f
+ms.prod: sql
+ms.technology: data-warehouse
+ms.topic: conceptual
+ms.date: 04/17/2018
+ms.author: murshedz
+ms.reviewer: martinle
+ms.openlocfilehash: 2db040c63d3c31f93cd0b72e48422e806aef01e0
+ms.sourcegitcommit: 056ce753c2d6b85cd78be4fc6a29c2b4daaaf26c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/06/2018
+ms.lasthandoff: 04/19/2018
 ---
-# <a name="appliance-network-configuration"></a>Configuración de red del dispositivo
-El dispositivo PDW de SQL Server está creado y configurado con un conjunto de corrección de direcciones IP a lo largo de todos los servidores y dispositivos aplicables de fábrica del IHV. Con la entrega del dispositivo, la dirección de IP externas (Ethernet) debe configurarse para que coincida con los requisitos de centro de datos del cliente específico.  
+# <a name="appliance-network-configuration-for-analytics-platform-system"></a>Configuración de red de dispositivo de sistema de la plataforma de análisis
+El dispositivo Analytics Platform System (APS) está creado y configurado con un conjunto de corrección de direcciones IP a lo largo de todos los servidores y dispositivos aplicables de fábrica del IHV. Con la entrega del dispositivo, la dirección de IP externas (Ethernet) debe configurarse para que coincida con los requisitos de centro de datos del cliente específico.  
   
 > [!NOTE]  
 > PDW V1 requerido 8 externo IP (*orientada hacia el cliente*) nodos de bastidor de direcciones para proporcionar conectividad externa a cada uno del control. PDW 2012 (V2) había mejorado de las comunicaciones de red mediante la exposición de todos los componentes del dispositivo de forma externa a través de direcciones IP. Este enfoque proporciona un diseño más eficaz que reduce los costos y aumenta la flexibilidad y mejora el movimiento de datos, la carga de datos y la integración de Hadoop. El número de direcciones IP necesarias depende del número de nodos en el dispositivo y la presencia de características como HDInsight. Para dar cabida a este bloque mayor de direcciones IP, el cliente deberá configurar una subred independiente para PDW. En esta subred, habrá suficiente espacio de direcciones IP (hasta 250 direcciones) para dar cabida a los componentes de hasta 5 bastidores PDW.  

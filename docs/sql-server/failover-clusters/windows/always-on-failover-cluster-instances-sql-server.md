@@ -1,15 +1,16 @@
 ---
-title: "Instancias de clúster de conmutación por error de AlwaysOn (SQL Server) | Microsoft Docs"
-ms.custom: 
+title: Instancias de clúster de conmutación por error de AlwaysOn (SQL Server) | Microsoft Docs
+ms.custom: ''
 ms.date: 01/18/2017
 ms.prod: sql-non-specified
 ms.prod_service: database-engine
-ms.service: 
+ms.service: ''
 ms.component: failover-clusters
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: dbe-high-availability
-ms.tgt_pltfrm: 
+ms.technology:
+- dbe-high-availability
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - clustering [SQL Server]
@@ -22,16 +23,16 @@ helpviewer_keywords:
 - failover clustering [SQL Server]
 - AlwaysOn [SQL Server], see failover clustering [SQL Server]
 ms.assetid: 86a15b33-4d03-4549-8ea2-b45e4f1baad7
-caps.latest.revision: "80"
+caps.latest.revision: 80
 author: MikeRayMSFT
 ms.author: mikeray
-manager: jhubbard
+manager: craigg
 ms.workload: Active
-ms.openlocfilehash: bfe05c5095d83cdf0963a6e3a7c04687462e4092
-ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.openlocfilehash: 2c1de2d64be3cb0850ba7e410ba1edb1deb9f019
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/05/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="always-on-failover-cluster-instances-sql-server"></a>Instancias de clúster de conmutación por error de AlwaysOn (SQL Server)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -140,7 +141,7 @@ ms.lasthandoff: 12/05/2017
  Binarios de SQL Server  
  Los archivos binarios del producto se instalan localmente en cada nodo de la FCI; es un proceso similar a las instalaciones independientes de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] . Sin embargo, durante el inicio, los servicios no se inician automáticamente sino que son administrados por WSFC.  
   
- Almacenamiento  
+ Storage  
  Al contrario que en el grupo de disponibilidad, una FCI debe usar el almacenamiento compartido entre todos los nodos de la FCI para el almacenamiento de la base de datos y del registro. El almacenamiento compartido puede realizarse en forma de discos de clúster de WSFC, discos de una SAN, Espacios de almacenamiento directo (S2D) o recursos compartidos de archivos en un SMB. De esta manera, todos los nodos de la FCI tienen la misma vista de datos de instancia cada vez que se produce una conmutación por error. Sin embargo, esto significa que el almacenamiento compartido tiene la posibilidad de ser el punto de error único y la FCI depende de la solución de almacenamiento subyacente para garantizar la protección de datos.  
   
  Nombre de red  

@@ -18,16 +18,17 @@ ms.assetid: 39ceaac5-42fa-4b5d-bfb6-54403d7f0dc9
 caps.latest.revision: 45
 author: MikeRayMSFT
 ms.author: mikeray
-manager: jhubbard
+manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 09a372b1e2b2f2b9026259918d3b11ed3ad2d3b6
-ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.openlocfilehash: 91a6c3525ed89624bca7289bd76963cd932b9623
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/05/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="failover-policy-for-failover-cluster-instances"></a>Directiva de conmutación por error para instancias de clústeres de conmutación por error
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] En una instancia de clúster de conmutación por error (FCI) de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)], solo puede haber un nodo propietario del grupo de recursos de clúster de conmutación por error de Windows Server (WSFC) en cada momento. Las solicitudes del cliente se sirven a través de este nodo de la FCI. En caso de que se produzca un error o un reinicio incorrecto, la propiedad del grupo se traslada a otro nodo de WSFC de la FCI. Este proceso se denomina conmutación por error. [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] aumenta la confiabilidad de la detección de errores y proporciona una directiva de conmutación por error flexible.  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+  En una instancia de clúster de conmutación por error (FCI) de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] , solo puede haber un nodo propietario del grupo de recursos de clúster de conmutación por error de Windows Server (WSFC) en cada momento. Las solicitudes del cliente se sirven a través de este nodo de la FCI. En caso de que se produzca un error o un reinicio incorrecto, la propiedad del grupo se traslada a otro nodo de WSFC de la FCI. Este proceso se denomina conmutación por error. [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] aumenta la confiabilidad de la detección de errores y proporciona una directiva de conmutación por error flexible.  
   
  Una FCI de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] depende del servicio de WSFC subyacente para la detección de conmutaciones por error. Por tanto, son dos los mecanismos que determinan el comportamiento de conmutación por error de la FCI: el primero es la funcionalidad nativa de WSFC y el segundo es la funcionalidad agregada por la instalación de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] .  
   
@@ -99,7 +100,7 @@ ms.lasthandoff: 12/05/2017
   
  Consulte [sp_server_diagnostics &#40;Transact-SQL&#41;](../../../relational-databases/system-stored-procedures/sp-server-diagnostics-transact-sql.md), ya que este procedimiento almacenado del sistema juega un papel importante en los niveles de condiciones de error.  
   
-|Level|Condición|Descripción|  
+|Level|Condición|Description|  
 |-----------|---------------|-----------------|  
 |0|No hay conmutación automática por error ni reinicio|Indica que no se activará la conmutación por error ni el reinicio automáticamente si se dan condiciones de error. Este nivel solo tiene como finalidad el mantenimiento del sistema.|  
 |1|Conmutación por error o reinicio si el servidor tiene error|Indica que se reiniciará el servidor o se desencadenará una conmutación por error si se produce la siguiente condición:<br /><br /> El servicio SQL Server se apaga.|  
@@ -115,7 +116,7 @@ ms.lasthandoff: 12/05/2017
   
  Para obtener más información sobre el mantenimiento del cuórum, vea [Configuración de los votos y modos de cuórum WSFC &#40;SQL Server&#41;](../../../sql-server/failover-clusters/windows/wsfc-quorum-modes-and-voting-configuration-sql-server.md).  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Ver también  
  [ALTER SERVER CONFIGURATION &#40;Transact-SQL&#41;](../../../t-sql/statements/alter-server-configuration-transact-sql.md)  
   
   

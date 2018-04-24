@@ -1,29 +1,22 @@
 ---
-title: Dispositivo de monitor con System Center Operations Manager (APS)
-author: barbkess
-ms.author: barbkess
+title: Monitor con SCOM - sistema de la plataforma de análisis | Documentos de Microsoft
+description: Use System Center Operations Manager (SCOM) para supervisar el dispositivo Analytics Platform System (APS).
+author: mzaman1
 manager: craigg
-ms.prod: analytics-platform-system
-ms.prod_service: mpp-data-warehouse
-ms.service: ''
-ms.component: ''
-ms.technology: mpp-data-warehouse
-ms.custom: ''
-ms.date: 01/05/2017
-ms.reviewer: na
-ms.suite: sql
-ms.tgt_pltfrm: na
-ms.topic: article
-ms.assetid: de6cbf6e-f2e9-4877-94df-9c13b1182d56
-caps.latest.revision: 14
-ms.openlocfilehash: 02bdd22c66729ab471298e211b619e1cb1e4565c
-ms.sourcegitcommit: 9351e8b7b68f599a95fb8e76930ab886db737e5f
+ms.prod: sql
+ms.technology: data-warehouse
+ms.topic: conceptual
+ms.date: 04/17/2018
+ms.author: murshedz
+ms.reviewer: martinle
+ms.openlocfilehash: c2b26462ab37cf7d63960ff7db6e20c57e8290bb
+ms.sourcegitcommit: 056ce753c2d6b85cd78be4fc6a29c2b4daaaf26c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/06/2018
+ms.lasthandoff: 04/19/2018
 ---
-# <a name="monitor-the-appliance-by-using-system-center-operations-manager"></a>Supervisar el dispositivo mediante el uso de System Center Operations Manager
-Describe cómo usar System Center Operations Manager para supervisar SQL Server PDW y HDInsight.  
+# <a name="monitor-with-system-center-operations-manager---analytics-platform-system"></a>Monitor con System Center Operations Manager - sistema de la plataforma de análisis
+Use System Center Operations Manager (SCOM) para supervisar el dispositivo Analytics Platform System (APS).
   
 ## <a name="before-you-begin"></a>Antes de comenzar  
   
@@ -33,7 +26,7 @@ Describe cómo usar System Center Operations Manager para supervisar SQL Server 
   
 2.  Debe tener instalado SQL Server 2008 R2 Native Client o SQL Server 2012 Native Client.  
   
-3.  Los módulos de administración para supervisar SQL Server PDW y HDInsight se deben instalar, importar y configurar. Utilice las siguientes instrucciones para realizar estas tareas.  
+3.  Los módulos de administración para supervisar SQL Server PDW y HDInsight se deben instalar, importar y configurar. Utilice los siguientes artículos para obtener instrucciones para realizar estas tareas.  
   
     -   [Instalar los módulos de administración de SCOM &#40;sistema de la plataforma de análisis&#41;](install-the-scom-management-packs.md)  
   
@@ -50,12 +43,12 @@ Después de configurar los módulos de administración de SCOM, haga clic en el 
 ### <a name="alerts"></a>Alertas  
 Las alertas son dónde puede encontrar las alertas actuales para administrar.  
   
-![Alerts](./media/monitor-the-appliance-by-using-system-center-operations-manager/SCOM_SCOM.png "SCOM_SCOM")  
+![Alertas](./media/monitor-the-appliance-by-using-system-center-operations-manager/SCOM_SCOM.png "SCOM_SCOM")  
   
 ### <a name="appliances"></a>Dispositivos  
-Los dispositivos son donde encontrará los dispositivos detectados y supervisados actualmente SQL Server PDW en su entorno. Si un dispositivo no se muestra aquí y ha creado la conexión de ODBC que, a continuación, puede haber algún problema con su cuenta de PDWWatcher. Si aparecen como "No supervisado" puede haber algún problema con su cuenta de PDWMonitor. Tenga paciencia SCOM no realizar cambios en tiempo real, pero comprueba periódicamente si hay nuevos dispositivos supervisar y periódicamente envía consultas a los dispositivos para su supervisión.  
+Los dispositivos son donde encontrará los dispositivos detectados y supervisados actualmente SQL Server PDW en su entorno. Si un dispositivo no se muestra aquí y ha creado la conexión de ODBC que, a continuación, puede haber algún problema con su cuenta de PDWWatcher. Si muestra como "No supervisado", puede haber algún problema con su cuenta de PDWMonitor. Tenga paciencia ya que SCOM no realizar cambios en tiempo real, pero comprueba periódicamente si hay nuevos dispositivos supervisar y periódicamente envía consultas a los dispositivos para su supervisión.  
   
-![Appliances](./media/monitor-the-appliance-by-using-system-center-operations-manager/SCOM_SCOM2.png "SCOM_SCOM2")  
+![Dispositivos](./media/monitor-the-appliance-by-using-system-center-operations-manager/SCOM_SCOM2.png "SCOM_SCOM2")  
   
 ### <a name="appliances-diagram"></a>Diagrama de dispositivos  
 La página de diagrama de dispositivos es donde puede obtener un vistazo el estado de su dispositivo con una vista de árbol:  
@@ -65,7 +58,7 @@ La página de diagrama de dispositivos es donde puede obtener un vistazo el esta
 ### <a name="nodes"></a>Nodos  
 Por último, la nodos vista le permite ver el estado de su dispositivo a través de cada nodo:  
   
-![Nodes](./media/monitor-the-appliance-by-using-system-center-operations-manager/SCOM_SCOM4.png "SCOM_SCOM4")  
+![Nodos](./media/monitor-the-appliance-by-using-system-center-operations-manager/SCOM_SCOM4.png "SCOM_SCOM4")  
   
 ## <a name="see-also"></a>Vea también  
 <!-- MISSING LINKS [Common Metadata Query Examples &#40;SQL Server PDW&#41;](../sqlpdw/common-metadata-query-examples-sql-server-pdw.md)  -->  

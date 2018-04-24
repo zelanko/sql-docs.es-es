@@ -15,16 +15,17 @@ ms.topic: article
 f1_keywords:
 - sql13.ag.alert.response.f1
 ms.assetid: 72daf008-f9ea-4077-b217-5048e7759d3e
-caps.latest.revision: ''
+caps.latest.revision: 4
 author: stevestein
 ms.author: sstein
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: f4c5882dec04bebe4cebddfeae4bb61d5b12a130
-ms.sourcegitcommit: 34766933e3832ca36181641db4493a0d2f4d05c6
+monikerRange: = azuresqldb-mi-current || >= sql-server-2016 || = sqlallproducts-allversions
+ms.openlocfilehash: 1760f58371e2c70b4c2f40f77f8eb85ca0d8b210
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/22/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="alert-properties---new-alert-response-page"></a>Propiedades de alerta - Nueva alerta (página Respuesta)
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
@@ -34,7 +35,7 @@ ms.lasthandoff: 03/22/2018
 
 Use esta página para especificar el trabajo que desea ejecutar y obtener una lista de operadores a los que se notificará en respuesta a una alerta del Agente [!INCLUDE[msCoName](../../includes/msconame_md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] .  
 
-## <a name="options"></a>.  
+## <a name="options"></a>Opciones  
 **Ejecutar trabajo**  
 Habilita las opciones **Lista de trabajos**, **Nuevo trabajo** y **Ver trabajo** .  
   

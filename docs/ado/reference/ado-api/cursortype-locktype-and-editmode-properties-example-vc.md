@@ -1,17 +1,17 @@
 ---
 title: CursorType, LockType y ejemplo de las propiedades EditMode (VC ++) | Documentos de Microsoft
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: drivers
-ms.service: 
+ms.service: ''
 ms.component: ado
 ms.technology:
 - drivers
-ms.custom: 
+ms.custom: ''
 ms.date: 01/19/2017
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.tgt_pltfrm: ''
+ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -19,16 +19,16 @@ helpviewer_keywords:
 - EditMode property [ADO], VC++ example
 - CursorType property [ADO], VC++ example
 ms.assetid: b2a80e44-03d8-426e-81b6-dd9dfc30e181
-caps.latest.revision: 
+caps.latest.revision: 11
 author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 9ab38e935694c17d27d8a451465e217129b1b3a0
-ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
+ms.openlocfilehash: 3b5308a04e71a29e6544419ddbe28d1eb8f117e2
+ms.sourcegitcommit: bb044a48a6af9b9d8edb178dc8c8bd5658b9ff68
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/09/2018
+ms.lasthandoff: 04/18/2018
 ---
 # <a name="cursortype-locktype-and-editmode-properties-example-vc"></a>CursorType, LockType y ejemplo de las propiedades EditMode (VC ++)
 En este ejemplo se muestra cómo establecer el [CursorType](../../../ado/reference/ado-api/cursortype-property-ado.md) y [LockType](../../../ado/reference/ado-api/locktype-property-ado.md) propiedades antes de abrir un [conjunto de registros](../../../ado/reference/ado-api/recordset-object-ado.md). También muestra el valor de la [EditMode](../../../ado/reference/ado-api/editmode-property.md) propiedad bajo varias condiciones. La función EditModeOutput es necesaria ejecutar este procedimiento.  

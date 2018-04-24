@@ -1,29 +1,22 @@
 ---
-title: Aplicación de supervisión (Analytics Platform System)
-author: barbkess
-ms.author: barbkess
+title: 'Supervisión de aplicaciones: Analytics Platform System | Documentos de Microsoft'
+description: Esta guía de supervisión de dispositivo describe las herramientas y tareas para supervisar el dispositivo de sistema de la plataforma de análisis.
+author: mzaman1
 manager: craigg
-ms.prod: analytics-platform-system
-ms.prod_service: mpp-data-warehouse
-ms.service: ''
-ms.component: ''
-ms.technology: mpp-data-warehouse
-ms.custom: ''
-ms.date: 01/05/2017
-ms.reviewer: na
-ms.suite: sql
-ms.tgt_pltfrm: na
-ms.topic: article
-ms.assetid: 253864fb-9178-41d2-a0ae-5dd9fd0a4fda
-caps.latest.revision: 25
-ms.openlocfilehash: f361b56581fd5a8dadb4ff41c387074abc006879
-ms.sourcegitcommit: 9351e8b7b68f599a95fb8e76930ab886db737e5f
+ms.prod: sql
+ms.technology: data-warehouse
+ms.topic: conceptual
+ms.date: 04/17/2018
+ms.author: murshedz
+ms.reviewer: martinle
+ms.openlocfilehash: f87734a14337e7e35655439ddf70f0a126147eb7
+ms.sourcegitcommit: 056ce753c2d6b85cd78be4fc6a29c2b4daaaf26c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/06/2018
+ms.lasthandoff: 04/19/2018
 ---
-# <a name="appliance-monitoring"></a>Supervisión de dispositivo
-Esta guía de supervisión de dispositivo describe las herramientas y tareas para supervisar el dispositivo PDW de SQL Server.  
+# <a name="appliance-monitoring-for-analytics-platform-system"></a>Supervisión de dispositivo de sistema de la plataforma de análisis
+Esta guía de supervisión de dispositivo describe las herramientas y tareas para supervisar el dispositivo de sistema de la plataforma de análisis.  
   
 ## <a name="Basics"></a>Aspectos básicos de supervisión y herramientas  
 Los valores y la información que se puede supervisar en el dispositivo PDW de SQL Server son amplias. Por ejemplo, los siguientes son típicos de tareas de supervisión.  

@@ -1,28 +1,21 @@
 ---
-title: Realizar un seguimiento de las alertas de dispositivo (Analytics Platform System)
-author: barbkess
-ms.author: barbkess
+title: Realizar un seguimiento de las alertas de dispositivo - Analytics Platform System | Documentos de Microsoft
+description: Realizar un seguimiento de las alertas de dispositivo en el sistema de la plataforma de análisis.
+author: mzaman1
 manager: craigg
-ms.prod: analytics-platform-system
-ms.prod_service: mpp-data-warehouse
-ms.service: ''
-ms.component: ''
-ms.technology: mpp-data-warehouse
-ms.custom: ''
-ms.date: 01/05/2017
-ms.reviewer: na
-ms.suite: sql
-ms.tgt_pltfrm: na
-ms.topic: article
-ms.assetid: 631345d9-4967-461a-8922-e5f8fd33f48f
-caps.latest.revision: 14
-ms.openlocfilehash: 825617eb8ff8d1e6c20bd891a53e85aba71f6100
-ms.sourcegitcommit: 9351e8b7b68f599a95fb8e76930ab886db737e5f
+ms.prod: sql
+ms.technology: data-warehouse
+ms.topic: conceptual
+ms.date: 04/17/2018
+ms.author: murshedz
+ms.reviewer: martinle
+ms.openlocfilehash: 82803e6f20e4a710f317e2e7a541c4a1c72ed08d
+ms.sourcegitcommit: 056ce753c2d6b85cd78be4fc6a29c2b4daaaf26c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/06/2018
+ms.lasthandoff: 04/19/2018
 ---
-# <a name="track-appliance-alerts"></a>Realizar un seguimiento de las alertas de dispositivo
+# <a name="track-appliance-alerts-in-analytics-platform-system"></a>Realizar un seguimiento de las alertas de dispositivo en el sistema de la plataforma de análisis
 Este tema explica cómo usar la consola de administración y las vistas del sistema para realizar un seguimiento de las alertas en un dispositivo PDW de SQL Server.  
   
 ## <a name="to-track-appliance-alerts"></a>Para realizar el seguimiento de las alertas de dispositivo  
@@ -33,7 +26,7 @@ SQL Server PDW registra las alertas en el [sys.dm_pdw_component_health_alerts](.
 ### <a name="view-alerts-by-using-the-admin-console"></a>Ver alertas mediante la consola de administración  
 Hay un **alertas** pestaña de la región PDW, la región HDI y para la región de tejido de la aplicación. Después de producirse la conmutación por error, el evento de conmutación por error se incluye en el número de alertas en la página. Hay una página de la región PDW, la región HDI y para la región de tejido de la aplicación. Cada página de mantenimiento tiene una pestaña. Para obtener más información sobre una alerta, haga clic en el **estado** página, el **alertas** ficha y, a continuación, haga clic en una alerta.  
   
-![PDW Admin Console Alerts](./media/track-appliance-alerts/SQL_Server_PDW_AdminConsole_AlertsV2.png "SQL_Server_PDW_AdminConsole_AlertsV2")  
+![Las alertas de la consola de administración PDW](./media/track-appliance-alerts/SQL_Server_PDW_AdminConsole_AlertsV2.png "SQL_Server_PDW_AdminConsole_AlertsV2")  
   
 En el **alertas** página:  
   

@@ -1,29 +1,22 @@
 ---
-title: Importar el módulo de administración de SCOM para PDW (Analytics Platform System)
-author: barbkess
-ms.author: barbkess
+title: 'Importar el módulo de administración de SCOM: Analytics Platform System | Documentos de Microsoft'
+description: Siga estos pasos para importar los módulos de administración de System Center Operations Manager (SCOM) para Analytics Platform System (APS). Los módulos de administración necesarias para supervisar el almacenamiento de datos paralelos de SCOM.
+author: mzaman1
 manager: craigg
-ms.prod: analytics-platform-system
-ms.prod_service: mpp-data-warehouse
-ms.service: ''
-ms.component: ''
-ms.technology: mpp-data-warehouse
-ms.custom: ''
-ms.date: 01/05/2017
-ms.reviewer: na
-ms.suite: sql
-ms.tgt_pltfrm: na
-ms.topic: article
-ms.assetid: fa735041-8e58-4886-ae3b-36f3c6298b12
-caps.latest.revision: 6
-ms.openlocfilehash: d8accd7106cce2274e60793e123779e87b8dfd49
-ms.sourcegitcommit: 9351e8b7b68f599a95fb8e76930ab886db737e5f
+ms.prod: sql
+ms.technology: data-warehouse
+ms.topic: conceptual
+ms.date: 04/17/2018
+ms.author: murshedz
+ms.reviewer: martinle
+ms.openlocfilehash: e60d87ae58b0804a0a7296f8b489df7441683c5b
+ms.sourcegitcommit: 056ce753c2d6b85cd78be4fc6a29c2b4daaaf26c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/06/2018
+ms.lasthandoff: 04/19/2018
 ---
-# <a name="import-the-scom-management-pack-for-pdw"></a>Importar el módulo de administración de SCOM para PDW
-Siga estos pasos para importar los módulos de administración de System Center Operations Manager (SCOM) para SQL Server PDW. Los módulos de administración necesarias para supervisar SQL Server PDW de SCOM.  
+# <a name="import-the-scom-management-pack---analytics-platform-system"></a>Importar el módulo de administración de SCOM - sistema de la plataforma de análisis
+Siga estos pasos para importar los módulos de administración de System Center Operations Manager (SCOM) para Analytics Platform System (APS). Los módulos de administración necesarias para supervisar el almacenamiento de datos paralelos de SCOM. 
   
 ## <a name="BeforeBegin"></a>Antes de empezar  
 **Requisitos previos**  

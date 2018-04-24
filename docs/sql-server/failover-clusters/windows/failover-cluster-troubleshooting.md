@@ -1,34 +1,36 @@
 ---
-title: "Solucionar problemas de clústeres de conmutación por error | Microsoft Docs"
-ms.custom: 
+title: Solucionar problemas de clústeres de conmutación por error | Microsoft Docs
+ms.custom: ''
 ms.date: 10/21/2015
 ms.prod: sql-non-specified
 ms.prod_service: database-engine
-ms.service: 
+ms.service: ''
 ms.component: failover-clusters
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: dbe-high-availability
-ms.tgt_pltfrm: 
+ms.technology:
+- dbe-high-availability
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - troublshooting, failover clustering
 - failover clustering, troubleshooting
 - cluster troubleshooting
 ms.assetid: 84012320-5a7b-45b0-8feb-325bf0e21324
-caps.latest.revision: "12"
+caps.latest.revision: 12
 author: MikeRayMSFT
 ms.author: mikeray
-manager: jhubbard
+manager: craigg
 ms.workload: Active
-ms.openlocfilehash: 5c68c3b282241cfe56e60762e70d2d22e4a64d7b
-ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.openlocfilehash: 85d9a421358b026cab07832965f8e27dc7efb071
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/05/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="failover-cluster-troubleshooting"></a>Solucionar problemas de clústeres de conmutación por error
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] Este tema proporciona información acerca de lo siguiente:  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+  Este tema proporciona información acerca de lo siguiente:  
   
 -   Pasos básicos en la solución de problemas.  
   
@@ -190,7 +192,7 @@ Clúster de conmutación por error incorpora una medida de seguridad integrada p
   
  Si los procedimientos almacenados extendidos utilizan componentes COM, el administrador debe registrarlos en cada nodo del clúster. La información para cargar y ejecutar los componentes COM debe estar en el Registro del nodo activo para que los componentes se puedan crear. En caso contrario, la información permanece en el Registro del equipo donde se registraron por primera vez los componentes COM.  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Ver también  
  [Ver y leer los archivos de registro de instalación de SQL Server](../../../database-engine/install-windows/view-and-read-sql-server-setup-log-files.md)   
  [Cómo funcionan los procedimientos almacenados extendidos](../../../relational-databases/extended-stored-procedures-programming/how-extended-stored-procedures-work.md)   
  [Características de ejecución de los procedimientos almacenados extendidos](../../../relational-databases/extended-stored-procedures-programming/execution-characteristics-of-extended-stored-procedures.md)  

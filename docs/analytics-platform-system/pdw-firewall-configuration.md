@@ -1,28 +1,21 @@
 ---
-title: Configuración del Firewall PDW (Analytics Platform System)
-author: barbkess
-ms.author: barbkess
+title: Configuración del firewall PDW - Analytics Platform System | Documentos de Microsoft
+description: La página de firewall de SQL Server PDW Configuration Manager permite habilitar o deshabilitar las reglas de firewall que permiten o impedir el acceso a puertos específicos en el dispositivo de sistema de la plataforma de análisis.
+aauthor: mzaman1
 manager: craigg
-ms.prod: analytics-platform-system
-ms.prod_service: mpp-data-warehouse
-ms.service: ''
-ms.component: ''
-ms.technology: mpp-data-warehouse
-ms.custom: ''
-ms.date: 01/05/2017
-ms.reviewer: na
-ms.suite: sql
-ms.tgt_pltfrm: na
-ms.topic: article
-ms.assetid: 191f292d-16bc-4166-b855-158854ad062d
-caps.latest.revision: 28
-ms.openlocfilehash: 8795f2254160a4ba605643b89dc4b9df0cce4c7f
-ms.sourcegitcommit: 9351e8b7b68f599a95fb8e76930ab886db737e5f
+ms.prod: sql
+ms.technology: data-warehouse
+ms.topic: conceptual
+ms.date: 04/17/2018
+ms.author: murshedz
+ms.reviewer: martinle
+ms.openlocfilehash: 8ccfd60aee7647c2421870a09ab5fa9b2653b99d
+ms.sourcegitcommit: 056ce753c2d6b85cd78be4fc6a29c2b4daaaf26c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/06/2018
+ms.lasthandoff: 04/19/2018
 ---
-# <a name="pdw-firewall-configuration"></a>Configuración de Firewall PDW
+# <a name="parallel-data-warehouse-firewall-configuration-in-analytics-platform-system"></a>Configuración de firewall de almacenamiento de datos paralelo en el sistema de la plataforma de análisis
 El **Firewall** página de SQL Server PDW Configuration Manager le permite habilitar o deshabilitar las reglas de firewall que permiten o impedir el acceso a puertos específicos en el dispositivo de sistema de la plataforma de análisis.  
   
 ## <a name="to-manage-ports-and-firewall-rules-for-appliance-nodes"></a>Para administrar los puertos y las reglas para los nodos de dispositivo de firewall  
@@ -45,7 +38,7 @@ Se abren los puertos siguientes para las conexiones de cliente procedentes de fu
 |Acceso de cliente de SQL para PDW (TDS)|17001|CTL|  
 |Acceso de cliente de cargador (dwloader & SSIS)|8001|CTL|  
 |Acceso al escritorio remoto|3389|CTL, CMP|  
-|SSIS BinaryLoaderDataChannel|16551|CTL|  
+|BinaryLoaderDataChannel SSIS|16551|CTL|  
 |dwloader BinaryLoaderDataChannel|16551|CMP|  
 |SSL cifra las conexiones (para las comunicaciones internas, para tener acceso a la consola de administración y tener acceso a servicios de clúster de HDInsight)|443|Todos los nodos|  
 |Flujo de Control de carga SQL Server PDW - las credenciales de Windows|8002|CTL|  

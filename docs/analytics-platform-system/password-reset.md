@@ -1,28 +1,21 @@
 ---
-title: Restablecimiento de contraseña (Analytics Platform System)
-author: barbkess
-ms.author: barbkess
+title: 'Restablecimiento de contraseña: Analytics Platform System | Documentos de Microsoft'
+description: La página de restablecimiento de contraseña permite cambiar la contraseña de las cuentas de administrador utilizada Analytics Platform System.
+author: mzaman1
 manager: craigg
-ms.prod: analytics-platform-system
-ms.prod_service: mpp-data-warehouse
-ms.service: ''
-ms.component: ''
-ms.technology: mpp-data-warehouse
-ms.custom: ''
-ms.date: 01/05/2017
-ms.reviewer: na
-ms.suite: sql
-ms.tgt_pltfrm: na
-ms.topic: article
-ms.assetid: a0f808fc-e120-430b-b6c9-11f2b1c90bf3
-caps.latest.revision: 26
-ms.openlocfilehash: 0574cf85dc4baaf6d92159aa423a0b1771042c59
-ms.sourcegitcommit: 9351e8b7b68f599a95fb8e76930ab886db737e5f
+ms.prod: sql
+ms.technology: data-warehouse
+ms.topic: conceptual
+ms.date: 04/17/2018
+ms.author: murshedz
+ms.reviewer: martinle
+ms.openlocfilehash: 63fbb097bf1ca926223ce7c0114c8da5d10cd969
+ms.sourcegitcommit: 056ce753c2d6b85cd78be4fc6a29c2b4daaaf26c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/06/2018
+ms.lasthandoff: 04/19/2018
 ---
-# <a name="password-reset"></a>Restablecimiento de contraseña
+# <a name="password-reset---analytics-platform-system"></a>Restablecimiento de contraseña: Analytics Platform System
 El **de restablecimiento de contraseña** página le permite cambiar la contraseña de las cuentas de administrador utilizada Analytics Platform System.  
   
 > [!WARNING]  
@@ -30,16 +23,16 @@ El **de restablecimiento de contraseña** página le permite cambiar la contrase
   
 Se dan las contraseñas de sistema de la plataforma de análisis cuando el dispositivo se entrega. Siempre debe cambiar las contraseñas a los nuevos valores al asumir la responsabilidad de su dispositivo. Hay tres contraseñas para actualizar. Las contraseñas no tiene que ser el mismo que entre sí.  
   
-**F<*xxxx*>\Administrator**  
+**F <*xxxx*> \Administrator**  
 El **administrador** del dominio de aplicación.  
   
-**.\Administrator**  
+**. \Administrator**  
 La variable local **administrador** cuenta en los equipos que hospedan las máquinas virtuales.  
   
 > [!IMPORTANT]  
 > Dispositivo de actualizaciones 1, **Configuration Manager** no da el cambio de la contraseña de las cuentas de administrador local en el PDW VM. Si es necesario, póngase en contacto con CSS para obtener instrucciones adicionales.  
   
-**sa**  
+**SA**  
 El **sa** inicio de sesión en SQL Server. **SA** es un miembro de la **sysadmin** rol fijo de servidor y es un administrador de SQL Server. La contraseña de la **sa** también se puede cambiar el inicio de sesión mediante el uso de la **ALTER LOGIN** instrucción.  
   
 ## <a name="password-requirements"></a>Requisitos de contraseña  

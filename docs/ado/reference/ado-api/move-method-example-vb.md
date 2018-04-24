@@ -1,32 +1,32 @@
 ---
-title: "Mover el ejemplo del método (VB) | Documentos de Microsoft"
-ms.prod: sql-non-specified
+title: Mover el ejemplo del método (VB) | Documentos de Microsoft
+ms.prod: sql
 ms.prod_service: drivers
-ms.service: 
+ms.service: ''
 ms.component: ado
 ms.technology:
 - drivers
-ms.custom: 
+ms.custom: ''
 ms.date: 01/19/2017
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.tgt_pltfrm: ''
+ms.topic: conceptual
 dev_langs:
 - VB
 helpviewer_keywords:
 - Move method [ADO], Visual Basic example
 ms.assetid: 55eb797a-0205-40d2-a797-55b216d1d3bb
-caps.latest.revision: 
+caps.latest.revision: 10
 author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 68061546bf86dca96d927d120a4b62f390d3dff6
-ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
+ms.openlocfilehash: 90a4c5e1b4d7ac47d2aa4216217ef27c7ab0186d
+ms.sourcegitcommit: bb044a48a6af9b9d8edb178dc8c8bd5658b9ff68
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/09/2018
+ms.lasthandoff: 04/18/2018
 ---
 # <a name="move-method-example-vb"></a>Ejemplo del método Move (VB)
 Este ejemplo se utiliza la [mover](../../../ado/reference/ado-api/move-method-ado.md) método para colocar el puntero del registro en función de los proporcionados por el usuario.  

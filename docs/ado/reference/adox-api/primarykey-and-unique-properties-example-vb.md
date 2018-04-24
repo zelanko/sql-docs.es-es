@@ -1,33 +1,33 @@
 ---
-title: "PrimaryKey y un ejemplo de propiedades únicas (VB) | Documentos de Microsoft"
-ms.prod: sql-non-specified
+title: PrimaryKey y un ejemplo de propiedades únicas (VB) | Documentos de Microsoft
+ms.prod: sql
 ms.prod_service: drivers
-ms.service: 
+ms.service: ''
 ms.component: ado
 ms.technology:
 - drivers
-ms.custom: 
+ms.custom: ''
 ms.date: 01/19/2017
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.tgt_pltfrm: ''
+ms.topic: conceptual
 dev_langs:
 - VB
 helpviewer_keywords:
 - Unique property [ADOX], Visual Basic example
 - PrimaryKey property [ADOX], Visual Basic example
 ms.assetid: f536acac-06ea-4b39-bfba-ee9902b01615
-caps.latest.revision: 
+caps.latest.revision: 9
 author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 7fbb3844149af7a036749a44ce70a425b4701706
-ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
+ms.openlocfilehash: 9d4180fd60fa5edc8f9bbee5d26c33d4072bc135
+ms.sourcegitcommit: bb044a48a6af9b9d8edb178dc8c8bd5658b9ff68
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/09/2018
+ms.lasthandoff: 04/18/2018
 ---
 # <a name="primarykey-and-unique-properties-example-vb"></a>PrimaryKey y un ejemplo de propiedades únicas (VB)
 Este ejemplo se muestra la [PrimaryKey](../../../ado/reference/adox-api/primarykey-property-adox.md) y [Unique](../../../ado/reference/adox-api/unique-property-adox.md) propiedades de un [índice](../../../ado/reference/adox-api/index-object-adox.md). El código crea una nueva tabla con dos columnas. El **PrimaryKey** y **Unique** propiedades se utilizan para establecer una columna como la clave principal para el que no se permiten valores duplicados.  

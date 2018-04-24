@@ -1,6 +1,6 @@
 ---
-title: "Introducción a SQL Server 2017 en Ubuntu | Documentos de Microsoft"
-description: "Este tutorial rápido muestra cómo instalar SQL Server 2017 en Ubuntu y, a continuación, crear y consultar una base de datos con sqlcmd."
+title: Introducción a SQL Server 2017 en Ubuntu | Documentos de Microsoft
+description: Este tutorial rápido muestra cómo instalar SQL Server 2017 en Ubuntu y, a continuación, crear y consultar una base de datos con sqlcmd.
 author: rothja
 ms.author: jroth
 manager: craigg
@@ -8,18 +8,18 @@ ms.date: 02/22/2018
 ms.topic: article
 ms.prod: sql-non-specified
 ms.prod_service: database-engine
-ms.service: 
-ms.component: 
+ms.service: ''
+ms.component: ''
 ms.suite: sql
 ms.custom: sql-linux
 ms.technology: database-engine
 ms.assetid: 31c8c92e-12fe-4728-9b95-4bc028250d85
 ms.workload: Active
-ms.openlocfilehash: 9aa37f843d446357997bf553ca87d2d93b41bfb9
-ms.sourcegitcommit: f0c5e37c138be5fb2cbb93e9f2ded307665b54ea
+ms.openlocfilehash: fd3b175cd8440d17da0f341cd13f65bb044f45a0
+ms.sourcegitcommit: bb044a48a6af9b9d8edb178dc8c8bd5658b9ff68
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/24/2018
+ms.lasthandoff: 04/18/2018
 ---
 # <a name="quickstart-install-sql-server-and-create-a-database-on-ubuntu"></a>Inicio rápido: Instalar SQL Server y crear una base de datos en Ubuntu
 
@@ -34,7 +34,7 @@ En este tutorial rápido, primero instalar SQL Server 2017 en Ubuntu 16.04. A co
 
 Debe tener una máquina Ubuntu 16.04 con **al menos 2 GB** de memoria.
 
-Para instalar Ubuntu en su propio equipo, vaya a [http://www.ubuntu.com/download/server](http://www.ubuntu.com/download/server). También puede crear máquinas virtuales de Ubuntu en Azure. Vea [crear y administrar máquinas virtuales de Linux con la CLI de Azure](https://docs.microsoft.com/azure/virtual-machines/linux/tutorial-manage-vm).
+Para instalar Ubuntu en su propio equipo, vaya a [ http://www.ubuntu.com/download/server ](http://www.ubuntu.com/download/server). También puede crear máquinas virtuales de Ubuntu en Azure. Vea [crear y administrar máquinas virtuales de Linux con la CLI de Azure](https://docs.microsoft.com/azure/virtual-machines/linux/tutorial-manage-vm).
 
 > [!NOTE]
 > En este momento, el [subsistema de Windows para Linux](https://msdn.microsoft.com/commandline/wsl/about) para Windows 10 no se admite como un destino de instalación.
@@ -96,29 +96,45 @@ En este momento, SQL Server se ejecuta en su equipo Ubuntu y está listo para us
 
 Para crear una base de datos, debe conectarse con una herramienta que se puede ejecutar instrucciones Transact-SQL en SQL Server. Los siguientes pasos instalación las herramientas de línea de comandos de SQL Server: [sqlcmd](../tools/sqlcmd-utility.md) y [bcp](../tools/bcp-utility.md).
 
-1. Importar las claves GPG repositorio público:
+Siga estos pasos para instalar el **mssql herramientas** en Ubuntu. 
+
+1. Importar las claves GPG repositorio público.
 
    ```bash
-   wget -qO- https://packages.microsoft.com/keys/microsoft.asc | sudo apt-key add -
+   curl https://packages.microsoft.com/keys/microsoft.asc | sudo apt-key add -
    ```
 
-1. Registre el repositorio de Microsoft Ubuntu:
+1. Registrar el repositorio de Microsoft Ubuntu.
 
    ```bash
-   sudo add-apt-repository "$(wget -qO- https://packages.microsoft.com/config/ubuntu/16.04/prod.list)"
+   curl https://packages.microsoft.com/config/ubuntu/16.04/prod.list | sudo tee /etc/apt/sources.list.d/msprod.list
    ```
 
-1. Actualizar la lista de orígenes y ejecute el comando de instalación con el paquete de desarrollador de unixODBC:
+1. Actualizar la lista de orígenes y ejecute el comando de instalación con el paquete de desarrollador de unixODBC.
 
    ```bash
-   sudo apt-get update
-   sudo apt-get install -y mssql-tools unixodbc-dev
+   sudo apt-get update 
+   sudo apt-get install mssql-tools unixodbc-dev
    ```
 
-1. Para mayor comodidad, agregue `/opt/mssql-tools/bin/` a su **ruta de acceso** variable de entorno. Esto le permite ejecutar las herramientas sin especificar la ruta de acceso completa. Ejecute los comandos siguientes para modificar el **ruta de acceso** para las sesiones de inicio de sesión y las sesiones / no-inicio de sesión interactivo:
+   > [!Note] 
+   > Para actualizar a la versión más reciente de **mssql herramientas** ejecute los siguientes comandos:
+   >    ```bash
+   >   sudo apt-get update 
+   >   sudo apt-get install mssql-tools 
+   >   ```
+
+1. **Opcional**: agregar `/opt/mssql-tools/bin/` a su **ruta de acceso** variable de entorno en un shell de bash.
+
+   Para realizar **sqlcmd y bcp** accesible desde el shell de bash en las sesiones de inicio de sesión, modifique la **ruta de acceso** en el **~/.bash_profile** archivo con el comando siguiente:
 
    ```bash
    echo 'export PATH="$PATH:/opt/mssql-tools/bin"' >> ~/.bash_profile
+   ```
+
+   Para realizar **sqlcmd y bcp** accesible desde el shell de bash en las sesiones / no-inicio de sesión interactivo, modifique la **ruta de acceso** en el **~/.bashrc** archivo con el comando siguiente:
+
+   ```bash
    echo 'export PATH="$PATH:/opt/mssql-tools/bin"' >> ~/.bashrc
    source ~/.bashrc
    ```
@@ -128,7 +144,7 @@ Para crear una base de datos, debe conectarse con una herramienta que se puede e
 >
 > * [SQL Server Operations Studio (versión preliminar)](../sql-operations-studio/what-is.md)
 > * [SQL Server Management Studio](sql-server-linux-develop-use-ssms.md)
-> * [Visual Studio Code](sql-server-linux-develop-use-vscode.md).
+> * [Código de Visual Studio](sql-server-linux-develop-use-vscode.md).
 > * [mssql-cli (versión preliminar)](https://blogs.technet.microsoft.com/dataplatforminsider/2017/12/12/try-mssql-cli-a-new-interactive-command-line-tool-for-sql-server/)
 
 [!INCLUDE [Connect, create, and query data](../includes/sql-linux-quickstart-connect-query.md)]

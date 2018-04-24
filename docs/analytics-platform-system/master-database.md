@@ -1,29 +1,21 @@
 ---
-title: base de datos maestra (PDW de SQL Server)
-author: barbkess
-ms.author: barbkess
+title: 'Base de datos maestra: almacenamiento de datos paralelos | Documentos de Microsoft'
+description: Obtenga información acerca de la base de datos maestra en almacenamiento de datos paralelos.
+author: mzaman1
 manager: craigg
-ms.prod: analytics-platform-system
-ms.prod_service: mpp-data-warehouse
-ms.service: ''
-ms.component: ''
-ms.technology: mpp-data-warehouse
-ms.custom: ''
-ms.date: 01/13/2017
-ms.reviewer: na
-ms.suite: sql
-ms.tgt_pltfrm: na
-ms.topic: article
-ms.assetid: c71617c0-6689-4f52-81c6-58f4cf7c7377
-caps.latest.revision: 8
-ms.workload: not set
-ms.openlocfilehash: 0031e4720c7fbcf7e60b7e35a59d16ad31a24103
-ms.sourcegitcommit: 9351e8b7b68f599a95fb8e76930ab886db737e5f
+ms.prod: sql
+ms.technology: data-warehouse
+ms.topic: conceptual
+ms.date: 04/17/2018
+ms.author: murshedz
+ms.reviewer: martinle
+ms.openlocfilehash: bf07b9c27e08a49cb0866b177a0ec37fed4528a0
+ms.sourcegitcommit: 056ce753c2d6b85cd78be4fc6a29c2b4daaaf26c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/06/2018
+ms.lasthandoff: 04/19/2018
 ---
-# <a name="master-database"></a>Base de datos maestra
+# <a name="master-database---parallel-data-warehouse"></a>Base de datos maestra: almacenamiento de datos paralelos
 La base de datos maestra de SQL Server PDW almacena información de inicio de sesión de nivel de dispositivo y el catálogo de base de datos. Es una base de datos maestra de SQL Server reside en el nodo de Control. Por lo tanto, proporciona una funcionalidad similar a SQL Server PDW como maestro se proporciona con SQL Server.  
   
 Para obtener más información acerca de las bases de datos del sistema, consulte [bases de datos de sistema](system-databases.md).  

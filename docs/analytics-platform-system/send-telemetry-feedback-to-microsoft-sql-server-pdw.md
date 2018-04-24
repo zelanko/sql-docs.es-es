@@ -1,35 +1,28 @@
 ---
-title: Enviar comentarios de telemetría a Microsoft (SQL Server PDW)
-author: barbkess
-ms.author: barbkess
+title: 'Comentarios de telemetría: Analytics Platform System | Documentos de Microsoft'
+description: Envíe sus comentarios de telemetría a Microsoft para Analytics Platform System.
+author: mzaman1
 manager: craigg
-ms.prod: analytics-platform-system
-ms.prod_service: mpp-data-warehouse
-ms.service: ''
-ms.component: ''
-ms.technology: mpp-data-warehouse
-ms.custom: ''
-ms.date: 01/05/2017
-ms.reviewer: na
-ms.suite: sql
-ms.tgt_pltfrm: na
-ms.topic: article
-ms.assetid: 40a994f0-7eff-4db9-9572-401d6e1187a0
-caps.latest.revision: 18
-ms.openlocfilehash: 970533d5c0220ac651074977f7f522a480d5e2a4
-ms.sourcegitcommit: 9351e8b7b68f599a95fb8e76930ab886db737e5f
+ms.prod: sql
+ms.technology: data-warehouse
+ms.topic: conceptual
+ms.date: 04/17/2018
+ms.author: murshedz
+ms.reviewer: martinle
+ms.openlocfilehash: 747274cd03e9cbd5dd2eab4423458700331358dd
+ms.sourcegitcommit: 056ce753c2d6b85cd78be4fc6a29c2b4daaaf26c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/06/2018
+ms.lasthandoff: 04/19/2018
 ---
-# <a name="send-telemetry-feedback-to-microsoft"></a>Enviar comentarios de telemetría a Microsoft
-Sistema de la plataforma de análisis tiene una característica de telemetría opcional que envía datos de la consola de administración a Microsoft. Le recomendamos que habilite esta opción para ayudarnos a mejorar el producto.  
+# <a name="send-telemetry-feedback-to-microsoft-for-analytics-platform-system"></a>Enviar comentarios de telemetría a Microsoft para Analytics Platform System
+Sistema de la plataforma de análisis tiene una característica de telemetría opcional que envía datos de la consola de administración a Microsoft. 
   
 > [!NOTE]  
 > En esta versión, Microsoft no se está supervisando activamente los datos de telemetría. Los datos se está recopilando solo con fines de análisis.  
   
 ## <a name="privacy"></a>Privacidad  
-Para proporcionar la protección de la privacidad máximo, puntos de acceso se distribuye sin habilitar la telemetría. Antes de habilitar esta característica, revise la [declaración de privacidad de Microsoft Analytics Platform System](http://go.microsoft.com/fwlink/?LinkId=400902). A continuación, a participar en ejecución de la secuencia de comandos de PowerShell que se describe a continuación.  
+Para proporcionar la protección de la privacidad máximo, puntos de acceso se distribuye sin habilitar la telemetría. Antes de habilitar esta característica, revise la [declaración de privacidad de Microsoft Analytics Platform System](http://go.microsoft.com/fwlink/?LinkId=400902). Para dejar de participar en, ejecute la secuencia de comandos de PowerShell que se describe a continuación.  
   
 ## <a name="enable"></a>Habilite la telemetría  
 **El reenvío de DNS:** enviar datos de telemetría a Microsoft requiere Analytics Platform System para conectarse a internet a través de un reenviador DNS. Para habilitar esta característica, debe habilitar DNS de reenvío en todos los hosts y máquinas virtuales de la carga de trabajo. Invocar la `Enable-RemoteMonitoring` comando con el `SetupDnsForwarder` opción para configurar el reenvío de DNS y habilite la telemetría correctamente. Invocar la `Enable-RemoteMonitoring` comando sin el `SetupDnsForwarder` cuando el reenvío de DNS ya está configurado y que solo desea habilitar la supervisión de latidos.  
@@ -116,9 +109,10 @@ Si ve errores o información que le guíe para creer que el comando no tuvo éxi
   
 No hay peligro en cuando se ejecuta el `Disable-RemoteMonitoring` comando varias veces.  
   
-## <a name="see-also"></a>Vea también  
-[Supervisar el dispositivo mediante la consola de administración &#40;sistema de la plataforma de análisis&#41;](monitor-the-appliance-by-using-the-admin-console.md)  
-[Supervisar el dispositivo mediante el uso de vistas del sistema &#40;sistema de la plataforma de análisis&#41;](monitor-the-appliance-by-using-system-views.md)  
-[Supervisar el dispositivo mediante el uso de System Center Operations Manager &#40;sistema de la plataforma de análisis&#41;](monitor-the-appliance-by-using-system-center-operations-manager.md)  
-[Usar un reenviador DNS para resolver nombres DNS no sea de dispositivo &#40;sistema de la plataforma de análisis&#41;](use-a-dns-forwarder-to-resolve-non-appliance-dns-names.md)  
+## <a name="next-steps"></a>Pasos siguientes
+Para obtener más información, vea:
+- [Supervisar el dispositivo mediante la consola de administración &#40;sistema de la plataforma de análisis&#41;](monitor-the-appliance-by-using-the-admin-console.md)  
+- [Supervisar el dispositivo mediante el uso de vistas del sistema &#40;sistema de la plataforma de análisis&#41;](monitor-the-appliance-by-using-system-views.md)  
+- [Supervisar el dispositivo mediante el uso de System Center Operations Manager &#40;sistema de la plataforma de análisis&#41;](monitor-the-appliance-by-using-system-center-operations-manager.md)  
+- [Usar un reenviador DNS para resolver nombres DNS no sea de dispositivo &#40;sistema de la plataforma de análisis&#41;](use-a-dns-forwarder-to-resolve-non-appliance-dns-names.md)  
   

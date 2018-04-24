@@ -5,12 +5,12 @@ ms.date: 01/19/2017
 ms.reviewer: ''
 ms.suite: sql
 ms.tgt_pltfrm: ''
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: drivers
 ms.service: ''
 ms.component: ado
 ms.technology: drivers
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - ADO, what's new
 ms.assetid: 667673f2-3151-432b-894a-3fc60b704ea4
@@ -19,11 +19,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 283d7ff395edf23668d1921e1f3f2c2e3c985446
-ms.sourcegitcommit: 8f1d1363e18e0c32ff250617ab6cb2da2147bf8e
+ms.openlocfilehash: 53cbc9dd9fe0f2043026345e3385bdcdb2075f39
+ms.sourcegitcommit: bb044a48a6af9b9d8edb178dc8c8bd5658b9ff68
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/03/2018
+ms.lasthandoff: 04/18/2018
 ---
 # <a name="ado-features-for-each-release"></a>Características de ADO para cada versión
 Este tema enumeran las nuevas características introducidas con cada versión de ADO, ADO MD y ADOX.
@@ -37,30 +37,30 @@ Este tema enumeran las nuevas características introducidas con cada versión de
  *No se permite el acceso de unidad de disco duro fuera de una zona de confianza.*
 En entre dominios scripting debidos a sitios no es de confianza, se deshabilitan las siguientes operaciones: **Stream.SaveToFile**, **Stream.LoadFromFile**, **Recordset.Save**, y **Recordset.Open**, que se usa junto con el **adCmdFile** marca o con el proveedor Microsoft OLE DB persistencia (MSPersist).
 
- **Recordset.Open** *,***Recordset.Save** *,***Stream.SaveToFile** *, y* **Stream.LoadFromFile***operan sobre solo los archivos físicos.* 
+ **Recordset.Open** *,***Recordset.Save** *,***Stream.SaveToFile** *, y* **Stream.LoadFromFile***operan sobre solo los archivos físicos.*
 Estos métodos ahora comprobar que los identificadores de archivo señalan a solo los archivos físicos.
 
- **Recordset.ActiveCommand***devuelve un error cuando se invoca desde una página HTML/ASP.* 
+ **Recordset.ActiveCommand***devuelve un error cuando se invoca desde una página HTML/ASP.*
 Esto evita que el **comando** objeto desde que se usen incorrectamente.
 
- *El número de***conjuntos de registros***devuelto por una anidada***forma***comando tiene un límite superior.* 
+ *El número de***conjuntos de registros***devuelto por una anidada***forma***comando tiene un límite superior.*
 Un comando shape anidado ahora devuelve un máximo de 512 **conjuntos de registros**. Esto significa que un **forma** comando ya no se puede anidar en cualquier nivel de profundidad. En su lugar, la profundidad del nivel máxima es 512, si cada comando da como resultado un único (elemento secundario) **conjunto de registros**. If, en cualquier nivel, una **forma** comando devuelve varios **conjuntos de registros**, el nivel máximo de profundidad será inferior a 512.
 
 ## <a name="ado-27"></a>ADO 2.7
  *compatibilidad con la plataforma de 64 bits* ADO 2.7 introduce compatibilidad con procesadores de 64 bits.
 
 ## <a name="ado-26"></a>ADO 2.6
- **CubDef.GetSchemaObject***método* a partir de ADO 2.6, objetos de ADO MD se pueden recuperar con nombres únicos, según lo especificado por el [UniqueName (propiedad, ADO MD)](../../ado/reference/ado-md-api/uniquename-property-ado-md.md).   No es necesario conocer los nombres de los objetos primarios y colecciones de elementos primarios no es necesario que se debe rellenar para recuperar un objeto de esquema. Vea [GetSchemaObject (método) (ADO MD)](../../ado/reference/ado-md-api/getschemaobject-method-ado-md.md).
+ **CubDef.GetSchemaObject***método* a partir de ADO 2.6, objetos de ADO MD se pueden recuperar con nombres únicos, según lo especificado por el [UniqueName (propiedad, ADO MD)](../../ado/reference/ado-md-api/uniquename-property-ado-md.md). No es necesario conocer los nombres de los objetos primarios y colecciones de elementos primarios no es necesario que se debe rellenar para recuperar un objeto de esquema. Vea [GetSchemaObject (método) (ADO MD)](../../ado/reference/ado-md-api/getschemaobject-method-ado-md.md).
 
  *Secuencias de comandos* el **comando** objeto es compatible con los comandos en formato de secuencia como una alternativa al uso de la **CommandText** propiedad. El [(ADO) de la propiedad CommandStream](../../ado/reference/ado-api/commandstream-property-ado.md) puede utilizarse para especificar plantillas XML o diagramas de actualización como la **comando** de entrada con el proveedor Microsoft OLE DB para SQL Server.
 
- **Dialecto***propiedad* [dialecto](../../ado/reference/ado-api/dialect-property.md) es una nueva propiedad que define la sintaxis y generales de reglas que el proveedor se usa para analizar la cadena o secuencia.  
+ **Dialecto***propiedad* [dialecto](../../ado/reference/ado-api/dialect-property.md) es una nueva propiedad que define la sintaxis y generales de reglas que el proveedor se usa para analizar la cadena o secuencia.
 
- **Command.Execute***método* el [ejecutar el método](../../ado/reference/ado-api/execute-method-ado-command.md) de ADO **comando** objeto se ha mejorado para utilizar secuencias de entrada y salida.  
+ **Command.Execute***método* el [ejecutar el método](../../ado/reference/ado-api/execute-method-ado-command.md) de ADO **comando** objeto se ha mejorado para utilizar secuencias de entrada y salida.
 
  *Campo statusvalues* si el usuario encuentra un error DB_E_ERRORSOCCURRED cuando se modifica un **campo** de un **Recordset**, ADO ahora rellenará el **Field.Status**propiedad con la información de estado adecuado para que el usuario tendrá que obtener más información acerca del fallo. Vea [propiedad Status (Field ADO)](../../ado/reference/ado-api/status-property-ado-field.md).
 
- **NamedParameters***propiedad* [NamedParameters](../../ado/reference/ado-api/namedparameters-property-ado.md) es una nueva propiedad de la **comando** denominado objeto que indica que debe usar el proveedor parámetros.  
+ **NamedParameters***propiedad* [NamedParameters](../../ado/reference/ado-api/namedparameters-property-ado.md) es una nueva propiedad de la **comando** denominado objeto que indica que debe usar el proveedor parámetros.
 
  *Conjuntos de resultados en las secuencias de* ADO puede devolver conjuntos de resultados de un origen de datos en un **flujo**, en lugar de un **Recordset** objeto. Con la versión más reciente del proveedor de Microsoft OLE DB para SQL Server, puede obtener resultados XML del proveedor mediante la ejecución de una consulta de "XML". A **flujo** que recibe el conjunto de resultados se pueden abrir con un comando "XML" como el origen. Vea [recuperar conjuntos de resultados en secuencias](../../ado/guide/data/retrieving-resultsets-into-streams.md).
 

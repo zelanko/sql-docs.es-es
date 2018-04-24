@@ -1,17 +1,17 @@
 ---
-title: "ADO para el índice de sintaxis de Visual C++ con #import | Documentos de Microsoft"
-ms.prod: sql-non-specified
+title: 'ADO para el índice de sintaxis de Visual C++ con #import | Documentos de Microsoft'
+ms.prod: sql
 ms.prod_service: drivers
-ms.service: 
+ms.service: ''
 ms.component: ado
 ms.technology:
 - drivers
-ms.custom: 
+ms.custom: ''
 ms.date: 01/19/2017
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.tgt_pltfrm: ''
+ms.topic: conceptual
 apitype: COM
 dev_langs:
 - C++
@@ -20,16 +20,16 @@ helpviewer_keywords:
 - 'ADO for Visual C++ syntax with #import [ADO]'
 - '#import [ADO]'
 ms.assetid: 5930ccd2-5bab-448a-b0bf-773b8a83e87c
-caps.latest.revision: 
+caps.latest.revision: 10
 author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 8829dcf3f55d7281ee2db8f3f09b474e95bc26a7
-ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
+ms.openlocfilehash: 8d878875f2e7f9002e00acef81fafaa89153b933
+ms.sourcegitcommit: bb044a48a6af9b9d8edb178dc8c8bd5658b9ff68
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/09/2018
+ms.lasthandoff: 04/18/2018
 ---
 # <a name="ado-for-visual-c-syntax-index-with-import"></a>ADO para el índice de sintaxis de Visual C++ con #import
 Este índice es una referencia cruzada a la referencia del lenguaje ADO basado en Microsoft Visual C++ y la **#import** directiva.  
@@ -56,7 +56,7 @@ Este índice es una referencia cruzada a la referencia del lenguaje ADO basado e
   
 -   [Objeto de registro](../../../ado/reference/ado-api/record-visual-c-syntax-index-with-sharpimport.md)  
   
--   [Recordset Object](../../../ado/reference/ado-api/recordset-visual-c-syntax-index-with-sharpimport.md)  
+-   [Objeto de conjunto de registros](../../../ado/reference/ado-api/recordset-visual-c-syntax-index-with-sharpimport.md)  
   
 -   [Objeto de secuencia](../../../ado/reference/ado-api/stream-visual-c-syntax-index-with-sharpimport.md)  
   

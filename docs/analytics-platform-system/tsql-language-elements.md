@@ -1,33 +1,22 @@
 ---
-title: Elementos del lenguaje T-SQL - almacenamiento de datos paralelos de sistema de plataforma de análisis | Documentos de Microsoft
-author: barbkess
-ms.author: barbkess
+title: Elementos del lenguaje T-SQL - almacenamiento de datos paralelos | Documentos de Microsoft
+description: Elementos del lenguaje T-SQL para analítica Platform System (APS) SQL Server Parallel almacenamiento de datos (PDW).
+author: mzaman1
 manager: craigg
-ms.prod: analytics-platform-system
-ms.prod_service: mpp-data-warehouse
-ms.service: ''
-ms.component: ''
-ms.suite: sql
-ms.custom: ''
-ms.technology: mpp-data-warehouse
-description: Elementos del lenguaje Transact-SQL (T-SQL) para análisis Platform System (APS) SQL Server paralelo almacenamiento de datos (PDW).
-services: sql-data-warehouse
-documentationcenter: NA
-editor: ''
-ms.assetid: ea0b9a3e-e489-458e-addc-cc153e5cc158
-ms.devlang: NA
-ms.topic: article
-ms.tgt_pltfrm: NA
-ms.workload: data-services
-ms.date: 12/15/2016
-ms.openlocfilehash: fc6d1b69896ffeef0402d0b359f3b978bf43d961
-ms.sourcegitcommit: 9351e8b7b68f599a95fb8e76930ab886db737e5f
+ms.prod: sql
+ms.technology: data-warehouse
+ms.topic: conceptual
+ms.date: 04/17/2018
+ms.author: murshedz
+ms.reviewer: martinle
+ms.openlocfilehash: d9e2011ef30864e35245f59cab0861ea116d1502
+ms.sourcegitcommit: 056ce753c2d6b85cd78be4fc6a29c2b4daaaf26c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/06/2018
+ms.lasthandoff: 04/19/2018
 ---
-# <a name="language-elements"></a>Elementos de lenguaje
-Elementos del lenguaje Transact-SQL (T-SQL) para análisis Platform System (APS) SQL Server paralelo almacenamiento de datos (PDW).
+# <a name="t-sql-language-elements-for-parallel-data-warehouse"></a>Elementos del lenguaje T-SQL para almacenamiento de datos paralelos
+Elementos del lenguaje T-SQL para analítica Platform System (APS) SQL Server Parallel almacenamiento de datos (PDW).
 
 ## <a name="core-elements"></a>Elementos básicos
 * [convenciones de sintaxis](../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)
@@ -35,7 +24,7 @@ Elementos del lenguaje Transact-SQL (T-SQL) para análisis Platform System (APS)
 * [palabras clave reservadas](../t-sql/language-elements/reserved-keywords-transact-sql.md)
 * [Intercalaciones](https://msdn.microsoft.com/library/ff848763.aspx)
 * [Comentarios](../t-sql/language-elements/comment-transact-sql.md)
-* [constants](../t-sql/data-types/constants-transact-sql.md)
+* [Constantes](../t-sql/data-types/constants-transact-sql.md)
 * [Tipos de datos](../t-sql/data-types/data-types-transact-sql.md)
 * [EXECUTE](../t-sql/language-elements/execute-transact-sql.md)
 * [Expresiones](../t-sql/language-elements/expressions-transact-sql.md)
@@ -235,7 +224,7 @@ Elementos del lenguaje Transact-SQL (T-SQL) para análisis Platform System (APS)
 * [XACT_STATE](../t-sql/functions/xact-state-transact-sql.md)
 
 ## <a name="transactions"></a>Transactions
-* [transactions](../t-sql/language-elements/transactions-sql-data-warehouse.md)
+* [Transacciones](../t-sql/language-elements/transactions-sql-data-warehouse.md)
 
 ## <a name="diagnostic-sessions"></a>Sesiones de diagnóstico
 * [CREATE DIAGNOSTICS SESSION](../t-sql/language-elements/create-diagnostics-session-transact-sql.md)

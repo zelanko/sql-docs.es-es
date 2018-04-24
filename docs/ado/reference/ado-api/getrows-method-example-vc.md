@@ -1,32 +1,32 @@
 ---
-title: "Ejemplo del método GetRows (VC ++) | Documentos de Microsoft"
-ms.prod: sql-non-specified
+title: Ejemplo del método GetRows (VC ++) | Documentos de Microsoft
+ms.prod: sql
 ms.prod_service: drivers
-ms.service: 
+ms.service: ''
 ms.component: ado
 ms.technology:
 - drivers
-ms.custom: 
+ms.custom: ''
 ms.date: 01/19/2017
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.tgt_pltfrm: ''
+ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
 - Getrows method [ADO], VC++ example
 ms.assetid: 08e5c5bf-f7de-4bf9-97a9-f214c128ad8c
-caps.latest.revision: 
+caps.latest.revision: 14
 author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: c274e0f029c88137c874b5d9b2294e95f87a6001
-ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
+ms.openlocfilehash: b614b99db38553ffc763696be4cb4cedecd4e3c3
+ms.sourcegitcommit: bb044a48a6af9b9d8edb178dc8c8bd5658b9ff68
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/09/2018
+ms.lasthandoff: 04/18/2018
 ---
 # <a name="getrows-method-example-vc"></a>Ejemplo del método GetRows (VC ++)
 Este ejemplo se utiliza la [GetRows](../../../ado/reference/ado-api/getrows-method-ado.md) método para recuperar un número especificado de filas de un [Recordset](../../../ado/reference/ado-api/recordset-object-ado.md) y rellenar una matriz con los datos resultantes. El **GetRows** método devolverá menor que el número deseado de filas en dos casos: cualquier if [EOF](../../../ado/reference/ado-api/bof-eof-properties-ado.md) se ha alcanzado, o si **GetRows** intentó recuperar un registro que era eliminada por otro usuario. La función devuelve **False** sólo si se produce el segundo caso. La función GetRowsOK es necesaria ejecutar este procedimiento.  

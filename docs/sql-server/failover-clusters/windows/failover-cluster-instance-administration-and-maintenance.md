@@ -1,15 +1,16 @@
 ---
-title: "Administración y mantenimiento de la instancia de clúster de conmutación por error | Microsoft Docs"
-ms.custom: 
+title: Administración y mantenimiento de la instancia de clúster de conmutación por error | Microsoft Docs
+ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql-non-specified
 ms.prod_service: database-engine
-ms.service: 
+ms.service: ''
 ms.component: failover-clusters
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: dbe-high-availability
-ms.tgt_pltfrm: 
+ms.technology:
+- dbe-high-availability
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - user accounts [SQL Server], failover clustering
@@ -25,19 +26,20 @@ helpviewer_keywords:
 - removing nodes
 - virtual servers [SQL Server], adding nodes
 ms.assetid: 2d5c63e9-8061-45c3-94db-8dd3100b8a91
-caps.latest.revision: "35"
+caps.latest.revision: 35
 author: MikeRayMSFT
 ms.author: mikeray
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 964ce2dcfcff3edb1de4822ee01982583062f958
-ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.openlocfilehash: 1a05ccc3c7e1bec3419dd8555f40cd3576456f80
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/05/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="failover-cluster-instance-administration-and-maintenance"></a>Administración y mantenimiento de la instancia de clúster de conmutación por error
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] Las tareas de mantenimiento, como agregar o quitar nodos de una instancia de clúster de conmutación por error (FCI) AlwaysOn existente, se llevan a cabo mediante el programa de instalación de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]. Otras tareas de administración, como cambiar el recurso de dirección IP o recuperarse de determinados escenarios de la FCI, se llevan a cabo con el complemento Administrador de clústeres de conmutación por error, que es el complemento de administración del servicio de clústeres de conmutación por error de Windows Server (WSFC).  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+  Las tareas de mantenimiento, como agregar o quitar nodos de una instancia de clúster de conmutación por error (FCI) AlwaysOn existente, se llevan a cabo mediante el programa de instalación de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] . Otras tareas de administración, como cambiar el recurso de dirección IP o recuperarse de determinados escenarios de la FCI, se llevan a cabo con el complemento Administrador de clústeres de conmutación por error, que es el complemento de administración del servicio de clústeres de conmutación por error de Windows Server (WSFC).  
   
 ## <a name="maintaining-a-failover-cluster-instance"></a>Realizar el mantenimiento de una instancia de clúster de conmutación por error  
  Después de instalar una FCI, puede cambiarla o repararla con el programa de instalación de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] . Por ejemplo, puede agregar nodos adicionales a una FCI, ejecutar una FCI como instancia independiente o quitar un nodo de la configuración de una FCI.  
@@ -68,7 +70,7 @@ ms.lasthandoff: 12/05/2017
 |Describe el procedimiento que se usa para recuperarse de un error de clúster de conmutación por error de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] .|[Recuperarse de un error en una instancia de clúster de conmutación por error](../../../sql-server/failover-clusters/windows/recover-from-failover-cluster-instance-failure.md)|  
 |Describe el procedimiento que se usa para cambiar el recurso de dirección IP de una instancia de clúster de conmutación por error de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] .|[Cambiar la dirección IP de una instancia de clúster de conmutación por error](../../../sql-server/failover-clusters/windows/change-the-ip-address-of-a-failover-cluster-instance.md)|  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Ver también  
  [Configurar los valores de la propiedad HealthCheckTimeout](../../../sql-server/failover-clusters/windows/configure-healthchecktimeout-property-settings.md)   
  [Configurar los valores de la propiedad FailureConditionLevel](../../../sql-server/failover-clusters/windows/configure-failureconditionlevel-property-settings.md)   
  [Ver y leer el registro de diagnósticos de la instancia de clúster de conmutación por error](../../../sql-server/failover-clusters/windows/view-and-read-failover-cluster-instance-diagnostics-log.md)  

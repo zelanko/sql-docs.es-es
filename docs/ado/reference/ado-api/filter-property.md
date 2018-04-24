@@ -1,6 +1,6 @@
 ---
 title: Propiedad de filtro | Documentos de Microsoft
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: drivers
 ms.service: ''
 ms.component: ado
@@ -11,23 +11,23 @@ ms.date: 03/20/2018
 ms.reviewer: ''
 ms.suite: sql
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 apitype: COM
 f1_keywords:
 - Recordset15::Filter
 helpviewer_keywords:
 - Filter property
 ms.assetid: 80263a7a-5d21-45d1-84fc-34b7a9be4c22
-caps.latest.revision: ''
+caps.latest.revision: 11
 author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 8c3b06134dcf65ead3a97577a6d08fd46ec2f52e
-ms.sourcegitcommit: ccb05cb5a4cccaf7ffa9e85a4684fa583bab914e
+ms.openlocfilehash: 7b8e5bfa7cce9bd808dc562a6d702a8cb28727d2
+ms.sourcegitcommit: bb044a48a6af9b9d8edb178dc8c8bd5658b9ff68
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/22/2018
+ms.lasthandoff: 04/18/2018
 ---
 # <a name="filter-property"></a>Propiedad de filtro
 Indica un filtro para los datos en un [conjunto de registros](../../../ado/reference/ado-api/recordset-object-ado.md).  
@@ -52,7 +52,7 @@ La cadena de criterios se compone de cláusulas con el formato *NombreCampo-Oper
   
 -   Operador debe ser uno de los siguientes valores: \<, >, \<=, > =, <>, =, o **como**.  
   
--   Valor es el valor con el que comparará los valores de campo (por ejemplo, 'Smith', #8/24/&#95;, 12.345 o 50,00 $). Use comillas simples con las cadenas y los signos de número (#) con las fechas. Para números, puede utilizar separadores decimales, signos de dólar y notación científica. Si el operador es **como**, valor puede utilizar caracteres comodín. Se permiten solo el asterisco (*) ni caracteres comodín de signo de porcentaje (%), y deben ser el último carácter de la cadena. el valor no puede ser Null.  
+-   Valor es el valor con el que comparará los valores de campo (por ejemplo, 'Smith', #8/24/95 #, 12.345 o 50,00 $). Use comillas simples con las cadenas y los signos de número (#) con las fechas. Para números, puede utilizar separadores decimales, signos de dólar y notación científica. Si el operador es **como**, valor puede utilizar caracteres comodín. Se permiten solo el asterisco (*) ni caracteres comodín de signo de porcentaje (%), y deben ser el último carácter de la cadena. el valor no puede ser Null.  
   
 > [!NOTE]
 >  Para incluir comillas simples (') en el valor de filtro, utilice dos comillas simples para representar una. Por ejemplo, para filtrar por o ' Malley, la cadena de criterios debe ser `"col1 = 'O''Malley'"`. Para incluir comillas simples al principio y al final del valor de filtro, encierre la cadena con un signo de almohadilla (#). Por ejemplo, para filtrar por '1', la cadena de criterios debe ser `"col1 = #'1'#"`.  
@@ -95,7 +95,7 @@ Solo los filtros en el formato de las cadenas de criterios afectan al contenido 
   
 -   Se realizaron modificaciones en los campos de una tabla con varias claves.  
   
-En la tabla siguiente se resume los efectos de **adFilterPendingRecords** diferentes combinaciones de filtrado y modificaciones. La columna izquierda muestra las posibles modificaciones. Se pueden realizar modificaciones en cualquiera de los campos sin clave, en el campo de clave en una tabla con una clave única, o en cualquiera de los campos de clave en una tabla con varias claves. La fila superior muestra el criterio de filtrado. Filtrado puede basarse en cualquiera de los campos no clave, el campo de clave en una tabla con una clave única, o cualquiera de los campos de clave en una tabla con varias claves. Las celdas de intersección muestran los resultados. A  **+**  signo significa que aplicar **adFilterPendingRecords** da como resultado un valor no vacío **conjunto de registros**. A  **-**  signo significa vacío **conjunto de registros**.  
+En la tabla siguiente se resume los efectos de **adFilterPendingRecords** diferentes combinaciones de filtrado y modificaciones. La columna izquierda muestra las posibles modificaciones. Se pueden realizar modificaciones en cualquiera de los campos sin clave, en el campo de clave en una tabla con una clave única, o en cualquiera de los campos de clave en una tabla con varias claves. La fila superior muestra el criterio de filtrado. Filtrado puede basarse en cualquiera de los campos no clave, el campo de clave en una tabla con una clave única, o cualquiera de los campos de clave en una tabla con varias claves. Las celdas de intersección muestran los resultados. A **+** signo significa que aplicar **adFilterPendingRecords** da como resultado un valor no vacío **conjunto de registros**. A **-** signo significa vacío **conjunto de registros**.  
   
 ||No son claves|Clave única|Varias claves|
 |-|--------------|----------------|-------------------|

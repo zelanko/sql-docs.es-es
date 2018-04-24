@@ -1,31 +1,31 @@
 ---
 title: Propiedades ADOX | Documentos de Microsoft
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: drivers
-ms.service: 
+ms.service: ''
 ms.component: ado
 ms.technology:
 - drivers
-ms.custom: 
+ms.custom: ''
 ms.date: 01/19/2017
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.tgt_pltfrm: ''
+ms.topic: conceptual
 helpviewer_keywords:
 - properties [ADOX]
 - ADOX, properties
 ms.assetid: 2ddf19e4-312e-4d21-8053-a6fc4b738ad4
-caps.latest.revision: 
+caps.latest.revision: 10
 author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 779d8fe872fe5db8d36b7dc7feb2f0e4742595be
-ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
+ms.openlocfilehash: 51fded3ef911f44a2f2f8e43e6df520af889f636
+ms.sourcegitcommit: bb044a48a6af9b9d8edb178dc8c8bd5658b9ff68
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/09/2018
+ms.lasthandoff: 04/18/2018
 ---
 # <a name="adox-properties"></a>Propiedades ADOX
 |||  
@@ -45,7 +45,7 @@ ms.lasthandoff: 02/09/2018
 |[NumericScale](../../../ado/reference/adox-api/numericscale-property-adox.md)|Indica la escala de un valor numérico en la columna.|  
 |[ParentCatalog](../../../ado/reference/adox-api/parentcatalog-property-adox.md)|Especifica el catálogo principal de una tabla o columna para proporcionar acceso a propiedades específicas del proveedor.|  
 |[Precisión](../../../ado/reference/adox-api/precision-property-adox.md)|Indica la precisión máxima de valores de datos de la columna.|  
-|[PrimaryKey](../../../ado/reference/adox-api/primarykey-property-adox.md)|Indica si el índice representa la clave principal en la tabla.|  
+|[primaryKey](../../../ado/reference/adox-api/primarykey-property-adox.md)|Indica si el índice representa la clave principal en la tabla.|  
 |[RelatedColumn](../../../ado/reference/adox-api/relatedcolumn-property-adox.md)|Indica el nombre de la columna relacionada en la tabla relacionada (sólo columnas de clave).|  
 |[RelatedTable](../../../ado/reference/adox-api/relatedtable-property-adox.md)|Indica el nombre de la tabla relacionada.|  
 |[SortOrder](../../../ado/reference/adox-api/sortorder-property-adox.md)|Indica la secuencia de ordenación para la columna (solo columnas de índice).|  

@@ -1,28 +1,22 @@
 ---
-title: Cargas de monitor para el almacén de datos en paralelo
-author: barbkess
-ms.author: barbkess
+title: Supervisar las cargas de almacenamiento de datos paralelos | Documentos de Microsoft
+description: Supervisar las cargas activas y recientes mediante la consola de administración de análisis de plataforma System (APS) o las vistas de sistema de (PDW) de almacenamiento de datos paralelo".
+author: mzaman1
 manager: craigg
-ms.prod: analytics-platform-system
-ms.prod_service: mpp-data-warehouse
-ms.service: ''
-ms.component: ''
-ms.suite: sql
-ms.custom: ''
-ms.technology: mpp-data-warehouse
-description: Puede supervisar active y reciente [dwloader](dwloader.md) carga mediante la consola de administración de Analytics Platform System (APS) o las vistas del sistema de almacenamiento de datos paralelo (PDW).
-ms.date: 10/20/2016
-ms.topic: article
-ms.assetid: c0c55c16-00bc-4676-8970-a8e10b3e9408
-caps.latest.revision: 6
-ms.openlocfilehash: e520fa01eef0c25e1cf094ee412a9530afaf70b7
-ms.sourcegitcommit: 9351e8b7b68f599a95fb8e76930ab886db737e5f
+ms.prod: sql
+ms.technology: data-warehouse
+ms.topic: conceptual
+ms.date: 04/17/2018
+ms.author: murshedz
+ms.reviewer: martinle
+ms.openlocfilehash: 3230f170348f5952148894bd1fdb1ecc36a790bc
+ms.sourcegitcommit: 056ce753c2d6b85cd78be4fc6a29c2b4daaaf26c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/06/2018
+ms.lasthandoff: 04/19/2018
 ---
-# <a name="monitor-loads"></a>El Monitor de carga
-Puede supervisar active y reciente [dwloader](dwloader.md) carga mediante la consola de administración de Analytics Platform System (APS) o el almacenamiento de datos paralelo (PDW) [vistas del sistema](https://azure.microsoft.com/documentation/articles/sql-data-warehouse-reference-tsql-system-views/). 
+# <a name="monitor-loads-into-parallel-data-warehouse"></a>Supervisar las cargas en almacenamiento de datos paralelos
+Monitor que se active y reciente [dwloader](dwloader.md) carga mediante la consola de administración de Analytics Platform System (APS) o el almacenamiento de datos paralelo (PDW) [vistas del sistema](https://azure.microsoft.com/documentation/articles/sql-data-warehouse-reference-tsql-system-views/). 
   
 > [!TIP]  
 > Algunas cargas se inician mediante el uso de las instrucciones INSERT o herramientas de business intelligence que usar instrucciones SQL para realizar la carga. 

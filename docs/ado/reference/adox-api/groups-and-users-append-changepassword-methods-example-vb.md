@@ -1,33 +1,33 @@
 ---
-title: "Los usuarios y grupos, ChangePassword ejemplo de métodos Append (VB) | Documentos de Microsoft"
-ms.prod: sql-non-specified
+title: Los usuarios y grupos, ChangePassword ejemplo de métodos Append (VB) | Documentos de Microsoft
+ms.prod: sql
 ms.prod_service: drivers
-ms.service: 
+ms.service: ''
 ms.component: ado
 ms.technology:
 - drivers
-ms.custom: 
+ms.custom: ''
 ms.date: 01/19/2017
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.tgt_pltfrm: ''
+ms.topic: conceptual
 dev_langs:
 - VB
 helpviewer_keywords:
 - ChangePassword method [ADOX], Visual Basic example
 - Append method [ADOX], Visual Basic example
 ms.assetid: c9426757-9cdd-4a95-b506-d3d011569109
-caps.latest.revision: 
+caps.latest.revision: 10
 author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 04b09bd74a1bdd56fb91b83c6bf36b68365f59bb
-ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
+ms.openlocfilehash: a2c233eea6416050a350a1349d1e037facfb183d
+ms.sourcegitcommit: bb044a48a6af9b9d8edb178dc8c8bd5658b9ff68
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/09/2018
+ms.lasthandoff: 04/18/2018
 ---
 # <a name="groups-and-users-append-changepassword-methods-example-vb"></a>Los usuarios y grupos, ChangePassword ejemplo de métodos Append (VB)
 Este ejemplo se muestra la [anexado](../../../ado/reference/adox-api/append-method-adox-groups.md) método de [grupos](../../../ado/reference/adox-api/groups-collection-adox.md), así como el [anexado](../../../ado/reference/adox-api/append-method-adox-users.md) método de [usuarios](../../../ado/reference/adox-api/users-collection-adox.md) agregando un nuevo [Grupo](../../../ado/reference/adox-api/group-object-adox.md) y una nueva [usuario](../../../ado/reference/adox-api/user-object-adox.md) en el sistema. El nuevo **grupo** se anexa a la **grupos** colección del nuevo **usuario**. Por lo tanto, la nueva **usuario** se agrega a la **grupo**. Además, el [ChangePassword](../../../ado/reference/adox-api/changepassword-method-adox.md) método se utiliza para especificar el **usuario** contraseña.  

@@ -1,31 +1,31 @@
 ---
 title: Proveedor Microsoft OLE DB para ODBC | Documentos de Microsoft
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: drivers
-ms.service: 
+ms.service: ''
 ms.component: ado
 ms.technology:
 - drivers
-ms.custom: 
+ms.custom: ''
 ms.date: 01/19/2017
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.tgt_pltfrm: ''
+ms.topic: conceptual
 helpviewer_keywords:
 - OLE DB provider for ODBC [ADO]
 - providers [ADO], OLE DB provider for ODBC
 ms.assetid: 2dc0372d-e74d-4d0f-9c8c-04e5a168c148
-caps.latest.revision: 
+caps.latest.revision: 16
 author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 556fd77c3802576952fd6cbac3d36d7883a67063
-ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
+ms.openlocfilehash: a05ee69c7b22365dd6acbbaf6ff15d078279c5ee
+ms.sourcegitcommit: bb044a48a6af9b9d8edb178dc8c8bd5658b9ff68
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/15/2018
+ms.lasthandoff: 04/18/2018
 ---
 # <a name="microsoft-ole-db-provider-for-odbc-overview"></a>Proveedor Microsoft OLE DB para ODBC Introducción
 Para un programador de ADO o RDS, un mundo ideal sería aquel en los datos que cada origen expone una interfaz OLE DB, por lo que podría llamar ADO directamente en el origen de datos. Aunque cada vez más proveedores de base de datos están implementando interfaces OLE DB, algunos orígenes de datos aún no están expuestos de esta forma. Sin embargo, la mayoría de los sistemas DBMS en la actualidad son accesibles a través de ODBC.
@@ -185,8 +185,8 @@ DATABASE=database; UID=MyUserID; PWD=MyPassword"
 |[AbsolutePosition](../../../ado/reference/ado-api/absoluteposition-property-ado.md)|no disponible|no disponible|lectura/escritura|lectura/escritura|
 |[ActiveConnection](../../../ado/reference/ado-api/activeconnection-property-ado.md)|lectura/escritura|lectura/escritura|lectura/escritura|lectura/escritura|
 |[BOF](../../../ado/reference/ado-api/bof-eof-properties-ado.md)|solo lectura|solo lectura|solo lectura|solo lectura|
-|[Bookmark](../../../ado/reference/ado-api/bookmark-property-ado.md)|no disponible|no disponible|lectura/escritura|lectura/escritura|
-|[CacheSize](../../../ado/reference/ado-api/cachesize-property-ado.md)|lectura/escritura|lectura/escritura|lectura/escritura|lectura/escritura|
+|[Marcador](../../../ado/reference/ado-api/bookmark-property-ado.md)|no disponible|no disponible|lectura/escritura|lectura/escritura|
+|[cacheSize](../../../ado/reference/ado-api/cachesize-property-ado.md)|lectura/escritura|lectura/escritura|lectura/escritura|lectura/escritura|
 |[CursorLocation](../../../ado/reference/ado-api/cursorlocation-property-ado.md)|lectura/escritura|lectura/escritura|lectura/escritura|lectura/escritura|
 |[CursorType](../../../ado/reference/ado-api/cursortype-property-ado.md)|lectura/escritura|lectura/escritura|lectura/escritura|lectura/escritura|
 |[EditMode](../../../ado/reference/ado-api/editmode-property.md)|solo lectura|solo lectura|solo lectura|solo lectura|
@@ -312,7 +312,7 @@ DATABASE=database; UID=MyUserID; PWD=MyPassword"
 |Orden de acceso|DBPROP_ACCESSORDER|
 |Bloquear objetos de almacenamiento|DBPROP_BLOCKINGSTORAGEOBJECTS|
 |Tipo de marcador|DBPROP_BOOKMARKTYPE|
-|Bookmarkable|DBPROP_IROWSETLOCATE|
+|Admite marcadores|DBPROP_IROWSETLOCATE|
 |Cambiar filas insertadas|DBPROP_CHANGEINSERTEDROWS|
 |Privilegios de columna|DBPROP_COLUMNRESTRICT|
 |Notificación de conjunto de columnas|DBPROP_NOTIFYCOLUMNSET|
@@ -378,7 +378,7 @@ DATABASE=database; UID=MyUserID; PWD=MyPassword"
 |Orden de acceso|DBPROP_ACCESSORDER|
 |Bloquear objetos de almacenamiento|DBPROP_BLOCKINGSTORAGEOBJECTS|
 |Tipo de marcador|DBPROP_BOOKMARKTYPE|
-|Bookmarkable|DBPROP_IROWSETLOCATE|
+|Admite marcadores|DBPROP_IROWSETLOCATE|
 |Cambiar filas insertadas|DBPROP_CHANGEINSERTEDROWS|
 |Privilegios de columna|DBPROP_COLUMNRESTRICT|
 |Notificación de conjunto de columnas|DBPROP_NOTIFYCOLUMNSET|

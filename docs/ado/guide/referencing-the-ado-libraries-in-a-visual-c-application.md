@@ -4,13 +4,13 @@ ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
 ms.suite: sql
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: drivers
 ms.service: ''
 ms.component: ado
 ms.technology: drivers
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -23,11 +23,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: d5cbc06a7ddf9452a96d2a3edff30b941a8d5f2b
-ms.sourcegitcommit: 8f1d1363e18e0c32ff250617ab6cb2da2147bf8e
+ms.openlocfilehash: a8053304a845eefbe51b1c24221a063cf4496679
+ms.sourcegitcommit: bb044a48a6af9b9d8edb178dc8c8bd5658b9ff68
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/03/2018
+ms.lasthandoff: 04/18/2018
 ---
 # <a name="referencing-the-ado-libraries-in-a-visual-c-application"></a>Hacer referencia a las bibliotecas de ADO en una aplicación de Visual C++
 Para usar la versión más reciente de ADO en una aplicación de Visual C++, utilice la siguiente `#import` directiva:  
@@ -42,12 +42,12 @@ Para usar la versión más reciente de ADO en una aplicación de Visual C++, uti
 ## <a name="backward-compatibility"></a>Compatibilidad con versiones anteriores  
  Para usar versiones anteriores de ADO, reemplace *msado15.dll* anteriormente con una de las siguientes bibliotecas de tipos.  
   
--   *msado27.tlb*, ADO 2.7 Type Library  
+-   *msado27.tlb*, biblioteca de tipos 2.7 ADO  
   
 -   *msado26.tlb*, biblioteca de tipos 2.6 ADO  
   
--   *msado25.tlb*, ADO 2.5 Type Library  
+-   *msado25.tlb*, biblioteca de tipos 2,5 ADO  
   
--   *msado21.tlb*, ADO 2.1 Type Library  
+-   *MSADO21*, biblioteca de tipos 2.1 ADO  
   
--   *msado20.tlb*, ADO 2.0 Type Library
+-   *msado20.tlb*, biblioteca de tipos 2.0 ADO

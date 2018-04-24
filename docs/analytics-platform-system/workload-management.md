@@ -1,28 +1,22 @@
 ---
-title: Administración de cargas de trabajo (SQL Server PDW)
-author: barbkess
-ms.author: barbkess
+title: Administración de cargas de trabajo en el sistema de la plataforma de análisis | Documentos de Microsoft
+description: Administración de cargas de trabajo en el sistema de la plataforma de análisis.
+author: mzaman1
 manager: craigg
-ms.prod: analytics-platform-system
-ms.prod_service: mpp-data-warehouse
-ms.service: ''
-ms.component: ''
-ms.technology: mpp-data-warehouse
-ms.custom: ''
-ms.date: 01/12/2017
-ms.reviewer: na
-ms.suite: sql
-ms.tgt_pltfrm: na
-ms.topic: article
-ms.assetid: 69063b1a-a8f3-453a-83ab-afbe7eb4f463
-caps.latest.revision: 11
-ms.openlocfilehash: 6dde6c1af7b704e5bd1ed0e03516ad94f191ad9d
-ms.sourcegitcommit: 9351e8b7b68f599a95fb8e76930ab886db737e5f
+ms.prod: sql
+ms.technology: data-warehouse
+ms.topic: conceptual
+ms.date: 04/17/2018
+ms.author: murshedz
+ms.reviewer: martinle
+ms.openlocfilehash: 6fba7a7e5dfded26d617ac905449a4799c19249b
+ms.sourcegitcommit: 056ce753c2d6b85cd78be4fc6a29c2b4daaaf26c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/06/2018
+ms.lasthandoff: 04/19/2018
 ---
-# <a name="workload-management"></a>Administración de cargas de trabajo
+# <a name="workload-management-in-analytics-platform-system"></a>Administración de cargas de trabajo en el sistema de la plataforma de análisis
+
 Capacidades de administración de cargas de trabajo de SQL Server PDW permiten a los usuarios y administradores asignar solicitudes previamente establecer configuraciones de memoria y simultaneidad. Use Administración de cargas de trabajo para mejorar el rendimiento de la carga de trabajo, ya sea coherente o mixto, lo que permite solicitudes para tener los recursos adecuados sin privar a las solicitudes para siempre.  
   
 Por ejemplo, con las técnicas de administración de cargas de trabajo en PDW de SQL Server, puede:  

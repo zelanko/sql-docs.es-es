@@ -1,29 +1,22 @@
 ---
-title: Supervisar el dispositivo mediante el uso de vistas del sistema (sistema de plataforma de análisis)
-author: barbkess
-ms.author: barbkess
+title: Monitor con vistas del sistema - Analytics Platform System | Documentos de Microsoft
+description: Este artículo enumeran las vistas del sistema que se pueden utilizar para supervisar el dispositivo de sistema de la plataforma de análisis.
+author: mzaman1
 manager: craigg
-ms.prod: analytics-platform-system
-ms.prod_service: mpp-data-warehouse
-ms.service: ''
-ms.component: ''
-ms.technology: mpp-data-warehouse
-ms.custom: ''
-ms.date: 01/05/2017
-ms.reviewer: na
-ms.suite: sql
-ms.tgt_pltfrm: na
-ms.topic: article
-ms.assetid: d6e34c16-12ba-4a6f-80a7-391bca5ba534
-caps.latest.revision: 8
-ms.openlocfilehash: c6e756946e7ed558d6875bf5b330e1ebc9c35f5d
-ms.sourcegitcommit: 9351e8b7b68f599a95fb8e76930ab886db737e5f
+ms.prod: sql
+ms.technology: data-warehouse
+ms.topic: conceptual
+ms.date: 04/17/2018
+ms.author: murshedz
+ms.reviewer: martinle
+ms.openlocfilehash: 363e18441d95884b025de2ec07f0fed276852eb0
+ms.sourcegitcommit: 056ce753c2d6b85cd78be4fc6a29c2b4daaaf26c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/06/2018
+ms.lasthandoff: 04/19/2018
 ---
-# <a name="monitor-the-appliance-by-using-system-views"></a>Supervisar el dispositivo mediante el uso de vistas del sistema
-Este tema enumeran las vistas del sistema que se pueden utilizar para supervisar SQL Server PDW.  
+# <a name="monitor-the-appliance-with-system-views---analytics-platform-system"></a>Supervisar el dispositivo con vistas del sistema - Analytics Platform System
+Este artículo enumeran las vistas del sistema que se pueden utilizar para supervisar SQL Server PDW.  
   
 ## <a name="to-monitor-the-appliance-by-using-system-views"></a>Para supervisar el dispositivo mediante el uso de vistas del sistema  
 PDW de SQL Server incluye vistas del sistema completa que le permiten obtener información detallada sobre el estado de dispositivo, el estado y el rendimiento. Esta tabla proporcionan vínculos a vistas del sistema que pueden utilizarse para cada función de supervisión.  

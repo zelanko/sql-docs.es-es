@@ -15,16 +15,17 @@ ms.topic: article
 f1_keywords:
 - sql13.ag.proxy.references.f1
 ms.assetid: 52f6b2a7-2274-4c35-86be-0278c27cd418
-caps.latest.revision: ''
+caps.latest.revision: 4
 author: stevestein
 ms.author: sstein
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 6bc15e548d83db9c49800a4b240ee7d80450aefb
-ms.sourcegitcommit: 34766933e3832ca36181641db4493a0d2f4d05c6
+monikerRange: = azuresqldb-mi-current || >= sql-server-2016 || = sqlallproducts-allversions
+ms.openlocfilehash: 6df0bfc5ea244228bb4993318bb6f5797d199366
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/22/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="proxy-account-properties-references-tab"></a>Propiedades de proxy (pestaña Referencias)
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
@@ -34,7 +35,7 @@ ms.lasthandoff: 03/22/2018
 
 Esta página de solo lectura presenta una lista de los pasos del trabajo que hacen referencia a una cuenta de proxy del Agente [!INCLUDE[msCoName](../../includes/msconame_md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] .  
   
-## <a name="options"></a>.  
+## <a name="options"></a>Opciones  
 **Nombre del trabajo**  
 Nombres de los trabajos que usan esta cuenta de proxy.  
   

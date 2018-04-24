@@ -1,27 +1,21 @@
 ---
-title: Certificado PDW aprovisionamiento (Analytics Platform System)
-author: barbkess
-ms.author: barbkess
+title: Certificado de aprovisionamiento - Analytics Platform System | Documentos de Microsoft
+description: Suministro de certificados en el sistema de la plataforma de análisis.
+author: mzaman1
 manager: craigg
-ms.prod: analytics-platform-system
-ms.prod_service: mpp-data-warehouse
-ms.service: ''
-ms.component: ''
-ms.suite: sql
-ms.custom: ''
-ms.technology: mpp-data-warehouse
-description: La página de aprovisionamiento de certificados de PDW de análisis de plataforma de sistema de Configuration Manager importa o quita el certificado utilizado por PDW.
-ms.date: 01/05/2017
-ms.topic: article
-ms.assetid: 0a423b7d-c6ea-45c1-80b0-26758170594c
-caps.latest.revision: 22
-ms.openlocfilehash: 13e4f6ba3aeb105813ae53eee3a15ce41616273a
-ms.sourcegitcommit: 9351e8b7b68f599a95fb8e76930ab886db737e5f
+ms.prod: sql
+ms.technology: data-warehouse
+ms.topic: conceptual
+ms.date: 04/17/2018
+ms.author: murshedz
+ms.reviewer: martinle
+ms.openlocfilehash: 82907692bbba3ad92e796e8ecc8bb99e3141cb1a
+ms.sourcegitcommit: 056ce753c2d6b85cd78be4fc6a29c2b4daaaf26c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/06/2018
+ms.lasthandoff: 04/19/2018
 ---
-# <a name="pdw-certificate-provisioning"></a>Suministro de certificados PDW
+# <a name="certificate-provisioning-in-analytics-platform-system"></a>Suministro de certificados en el sistema de la plataforma de análisis
 El **suministro de certificados de PDW** página de Analytics Platform System**Configuration Manager** importa o quita el certificado utilizado por PDW. 
 
 El uso, un certificado para cifrar las conexiones contribuye a una comunicación segura al nodo de Control a través de los clientes de SQL Server, herramientas que usan los controladores de SQL Server PDW, el [consola de administración de](monitor-the-appliance-by-using-the-admin-console.md), y los servicios de integración de carga. 

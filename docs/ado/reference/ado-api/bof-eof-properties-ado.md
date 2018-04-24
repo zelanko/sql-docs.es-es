@@ -1,17 +1,17 @@
 ---
 title: BOF, EOF (propiedades) (ADO) | Documentos de Microsoft
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: drivers
-ms.service: 
+ms.service: ''
 ms.component: ado
 ms.technology:
 - drivers
-ms.custom: 
+ms.custom: ''
 ms.date: 01/19/2017
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.tgt_pltfrm: ''
+ms.topic: conceptual
 apitype: COM
 f1_keywords:
 - Recordset15::BOF
@@ -20,16 +20,16 @@ helpviewer_keywords:
 - EOF property [ADO]
 - BOF property [ADO]
 ms.assetid: 36c31ab2-f3b6-4281-89b6-db7e04e38fd2
-caps.latest.revision: 
+caps.latest.revision: 13
 author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 9eb298b7bc18a959a6cd7d044a4c166ee77065eb
-ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
+ms.openlocfilehash: 1941b22639091d673bb687c3ae8b2d9ea1fdf063
+ms.sourcegitcommit: bb044a48a6af9b9d8edb178dc8c8bd5658b9ff68
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/09/2018
+ms.lasthandoff: 04/18/2018
 ---
 # <a name="bof-eof-properties-ado"></a>BOF, EOF (propiedades) (ADO)
 -   **BOF** indica que la posición del registro actual está delante del primer registro en un [Recordset](../../../ado/reference/ado-api/recordset-object-ado.md) objeto.  
@@ -68,9 +68,9 @@ ms.lasthandoff: 02/09/2018
 ||BOF|EOF|  
 |------|---------|---------|  
 |**MoveFirst**, **MoveLast**|Establecido en **es True**|Establecido en **es True**|  
-|**Mover** 0|No hay ningún cambio|No hay ningún cambio|  
-|**MovePrevious**, **mover** < 0|Establecido en **es True**|No hay ningún cambio|  
-|**MoveNext**, **mover** > 0|No hay ningún cambio|Establecido en **es True**|  
+|**Mover** 0|Sin cambios|Sin cambios|  
+|**MovePrevious**, **mover** < 0|Establecido en **es True**|Sin cambios|  
+|**MoveNext**, **mover** > 0|Sin cambios|Establecido en **es True**|  
   
 ## <a name="applies-to"></a>Se aplica a  
  [Objeto de conjunto de registros (ADO)](../../../ado/reference/ado-api/recordset-object-ado.md)  

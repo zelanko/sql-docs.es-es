@@ -1,6 +1,6 @@
 ---
 title: Configurar SQL Server en Linux | Documentos de Microsoft
-description: "Este artículo describe cómo usar la herramienta mssql-conf para configurar SQL Server 2017 en Linux."
+description: Este artículo describe cómo usar la herramienta mssql-conf para configurar SQL Server 2017 en Linux.
 author: rothja
 ms.author: jroth
 manager: craigg
@@ -8,18 +8,18 @@ ms.date: 02/20/2018
 ms.topic: article
 ms.prod: sql-non-specified
 ms.prod_service: database-engine
-ms.service: 
-ms.component: 
+ms.service: ''
+ms.component: ''
 ms.suite: sql
 ms.custom: sql-linux
 ms.technology: database-engine
 ms.assetid: 06798dff-65c7-43e0-9ab3-ffb23374b322
 ms.workload: On Demand
-ms.openlocfilehash: 7b921f563b769a1a4c6a3edb5089a04050d0df74
-ms.sourcegitcommit: 57f45ee008141ddf009b1c1195442529e0ea1508
+ms.openlocfilehash: 8ec5bd425731b296c4e15c56d654f291bd4c511b
+ms.sourcegitcommit: 056ce753c2d6b85cd78be4fc6a29c2b4daaaf26c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/21/2018
+ms.lasthandoff: 04/19/2018
 ---
 # <a name="configure-sql-server-on-linux-with-the-mssql-conf-tool"></a>Configurar SQL Server en Linux con la herramienta mssql-conf
 
@@ -62,7 +62,7 @@ ms.lasthandoff: 02/21/2018
 
 ## <a id="agent"></a> Habilitar el Agente SQL Server
 
-El **sqlagent.enabled** configuración permite [Agente SQL Server](sql-server-linux-run-sql-server-agent-job.md). De forma predeterminada, el Agente SQL Server está deshabilitado.
+El **sqlagent.enabled** configuración permite [Agente SQL Server](sql-server-linux-run-sql-server-agent-job.md). De forma predeterminada, el Agente SQL Server está deshabilitado. Si **sqlagent.enabled** no está presente en el archivo de configuración mssql.conf, a continuación, SQL Server internamente se da por supuesto que el Agente SQL Server está habilitado.
 
 Para cambiar esta configuración, siga estos pasos:
 
@@ -357,10 +357,10 @@ La primera captura fase se controla mediante la **coredump.coredumptype** config
 
     | Tipo | Description |
     |-----|-----|
-    | **mini** | Mini es el tipo de archivo de volcado de memoria más pequeño. Usa la información del sistema Linux para determinar los subprocesos y módulos en el proceso. El volcado de memoria contiene únicamente las pilas de subprocesos del entorno de host y los módulos. No contiene las referencias de memoria indirecta o variables globales. |
+    | **Mini** | Mini es el tipo de archivo de volcado de memoria más pequeño. Usa la información del sistema Linux para determinar los subprocesos y módulos en el proceso. El volcado de memoria contiene únicamente las pilas de subprocesos del entorno de host y los módulos. No contiene las referencias de memoria indirecta o variables globales. |
     | **miniplus** | MiniPlus es similar a mini, pero incluye memoria adicional. Entienda el funcionamiento interno de SQLPAL y el entorno de host, agregar las siguientes regiones de memoria para el volcado de memoria:</br></br> -Varias variables globales</br> -Toda la memoria por encima de 64TB</br> -Denominado se encontraron regiones en **$ / proc / pid/asignaciones**</br> -Memoria indirecta de subprocesos y las pilas</br> : Información del subproceso</br> -Asociado del Teb y del Peb</br> : Información del módulo</br> -Árbol VMM y VAD |
-    | **filtered** | Diseño de usos filtrado basado en resta donde se incluye toda la memoria en el proceso a menos que se excluyan específicamente. El diseño entiende el funcionamiento interno de SQLPAL y el entorno de host, excepto algunas regiones desde el volcado de memoria.
-    | **full** | Completa se encuentra un volcado de memoria de proceso completo que incluye todas las regiones en **/proc / $pid/asignaciones**. Esto no se controla mediante **coredump.captureminiandfull** configuración. |
+    | **Filtrar** | Diseño de usos filtrado basado en resta donde se incluye toda la memoria en el proceso a menos que se excluyan específicamente. El diseño entiende el funcionamiento interno de SQLPAL y el entorno de host, excepto algunas regiones desde el volcado de memoria.
+    | **Completa** | Completa se encuentra un volcado de memoria de proceso completo que incluye todas las regiones en **/proc / $pid/asignaciones**. Esto no se controla mediante **coredump.captureminiandfull** configuración. |
 
 ## <a id="dbmail"></a> Establecer el perfil de correo electrónico de base de datos predeterminado de SQL Server en Linux
 
@@ -474,10 +474,10 @@ Las siguientes opciones configura TLS para una instancia de SQL Server que se ej
 
 |Opción |Description |
 |--- |--- |
-|**network.forceencryption** |Si es 1, a continuación, [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] obliga a todas las conexiones que se cifren. De forma predeterminada, esta opción es 0. |
+|**Network.forceencryption** |Si es 1, a continuación, [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] obliga a todas las conexiones que se cifren. De forma predeterminada, esta opción es 0. |
 |**network.tlscert** |Archivo de la ruta de acceso absoluta para el certificado que [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] utiliza para TLS. Ejemplo: `/etc/ssl/certs/mssql.pem` el archivo de certificado debe ser accesible para la cuenta de mssql. Microsoft recomienda restringir el acceso al archivo mediante `chown mssql:mssql <file>; chmod 400 <file>`. |
 |**network.tlskey** |Archivo de la ruta de acceso absoluta a la clave privada que [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] utiliza para TLS. Ejemplo: `/etc/ssl/private/mssql.key` el archivo de certificado debe ser accesible para la cuenta de mssql. Microsoft recomienda restringir el acceso al archivo mediante `chown mssql:mssql <file>; chmod 400 <file>`. |
-|**network.tlsprotocols** |Una lista separada por comas de las TLS protocolos se admiten en SQL Server. [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] siempre intenta negociar el protocolo permitido más fuerte. Si un cliente no es compatible con cualquier protocolo permitido, [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] rechazará el intento de conexión.  Para la compatibilidad, se permiten todos los protocolos admitidos de forma predeterminada (1.2, 1.1, 1.0).  Si los clientes admiten TLS 1.2, Microsoft recomienda que permite solo TLS 1.2. |
+|**Network.tlsprotocols** |Una lista separada por comas de las TLS protocolos se admiten en SQL Server. [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] siempre intenta negociar el protocolo permitido más fuerte. Si un cliente no es compatible con cualquier protocolo permitido, [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] rechazará el intento de conexión.  Para la compatibilidad, se permiten todos los protocolos admitidos de forma predeterminada (1.2, 1.1, 1.0).  Si los clientes admiten TLS 1.2, Microsoft recomienda que permite solo TLS 1.2. |
 |**network.tlsciphers** |Especifica los cifrados permitidos por [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] para TLS. Esta cadena debe tener el formato por [formato de lista de cifrado de OpenSSL](https://www.openssl.org/docs/man1.0.2/apps/ciphers.html). En general, no es necesario cambiar esta opción. <br /> De forma predeterminada, se permiten los cifrados siguientes: <br /> `ECDHE-ECDSA-AES128-GCM-SHA256:ECDHE-ECDSA-AES256-GCM-SHA384:ECDHE-RSA-AES128-GCM-SHA256:ECDHE-RSA-AES256-GCM-SHA384:ECDHE-ECDSA-AES128-SHA256:ECDHE-ECDSA-AES256-SHA384:ECDHE-RSA-AES128-SHA256:ECDHE-RSA-AES256-SHA384:ECDHE-ECDSA-AES256-SHA:ECDHE-ECDSA-AES128-SHA:ECDHE-RSA-AES256-SHA:ECDHE-RSA-AES128-SHA:AES256-GCM-SHA384:AES128-GCM-SHA256:AES256-SHA256:AES128-SHA256:AES256-SHA:AES128-SHA` |
 | **network.kerberoskeytabfile** |Ruta de acceso al archivo de tabla de claves de Kerberos |
 

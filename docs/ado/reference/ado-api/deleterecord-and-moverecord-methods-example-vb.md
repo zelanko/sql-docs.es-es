@@ -1,33 +1,33 @@
 ---
-title: "Ejemplo DeleteRecord y MoveRecord métodos (VB) | Documentos de Microsoft"
-ms.prod: sql-non-specified
+title: Ejemplo DeleteRecord y MoveRecord métodos (VB) | Documentos de Microsoft
+ms.prod: sql
 ms.prod_service: drivers
-ms.service: 
+ms.service: ''
 ms.component: ado
 ms.technology:
 - drivers
-ms.custom: 
+ms.custom: ''
 ms.date: 01/19/2017
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.tgt_pltfrm: ''
+ms.topic: conceptual
 dev_langs:
 - VB
 helpviewer_keywords:
 - MoveRecord method [ADO], Visual Basic example
 - DeleteRecord method [ADO], Visual Basic example
 ms.assetid: c3937d1e-9872-47e5-a22e-b147637f2388
-caps.latest.revision: 
+caps.latest.revision: 10
 author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 055d5a093f96c30fe30224996ccfff5905a3a75c
-ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
+ms.openlocfilehash: af05e941113e554d0bd5859433292fca15fb74ba
+ms.sourcegitcommit: bb044a48a6af9b9d8edb178dc8c8bd5658b9ff68
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/09/2018
+ms.lasthandoff: 04/18/2018
 ---
 # <a name="deleterecord-and-moverecord-methods-example-vb"></a>Ejemplo DeleteRecord y MoveRecord métodos (VB)
 En este ejemplo se muestra cómo copiar, mover, editar y eliminar el contenido de un archivo de texto que se publican en una carpeta Web. Incluyen otras propiedades y métodos que se utilizan [GetChildren](../../../ado/reference/ado-api/getchildren-method-ado.md), [ParentURL](../../../ado/reference/ado-api/parenturl-property-ado.md), [origen](../../../ado/reference/ado-api/source-property-ado-record.md), y [vaciar](../../../ado/reference/ado-api/flush-method-ado.md).  

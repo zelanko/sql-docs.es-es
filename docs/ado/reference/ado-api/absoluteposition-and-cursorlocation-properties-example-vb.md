@@ -1,33 +1,33 @@
 ---
 title: Ejemplo AbsolutePosition y CursorLocation propiedades (VB) | Documentos de Microsoft
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: drivers
-ms.service: 
+ms.service: ''
 ms.component: ado
 ms.technology:
 - drivers
-ms.custom: 
+ms.custom: ''
 ms.date: 01/19/2017
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.tgt_pltfrm: ''
+ms.topic: conceptual
 dev_langs:
 - VB
 helpviewer_keywords:
 - AbsolutePosition property [ADO], Visual Basic example
 - CursorLocation property [ADO], Visual Basic example
 ms.assetid: c4755799-c60a-4b5e-a01f-b85dd0e0a7f9
-caps.latest.revision: 
+caps.latest.revision: 11
 author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: bad290a12639f759fe5145176b4aaaa3b12ff77d
-ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
+ms.openlocfilehash: 7c9124f0ec3b45541efc2c550d96208109f6d5ee
+ms.sourcegitcommit: bb044a48a6af9b9d8edb178dc8c8bd5658b9ff68
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/09/2018
+ms.lasthandoff: 04/18/2018
 ---
 # <a name="absoluteposition-and-cursorlocation-properties-example-vb"></a>Ejemplo AbsolutePosition y CursorLocation propiedades (VB)
 Este ejemplo se muestra cómo el [AbsolutePosition](../../../ado/reference/ado-api/absoluteposition-property-ado.md) propiedad puede realizar un seguimiento del progreso de un bucle que enumera todos los registros de un [conjunto de registros](../../../ado/reference/ado-api/recordset-object-ado.md). Usa el [CursorLocation](../../../ado/reference/ado-api/cursorlocation-property-ado.md) propiedad para permitir la **AbsolutePosition** propiedad estableciendo el cursor en un cursor de cliente.  

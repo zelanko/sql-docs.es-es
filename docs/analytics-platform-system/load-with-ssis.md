@@ -1,27 +1,21 @@
 ---
-title: Cargar datos con Integration Services
-author: barbkess
-ms.author: barbkess
+title: Carga con Integration Services - almacenamiento de datos paralelos | Documentos de Microsoft
+description: Proporciona información de referencia e implementación para cargar datos en el almacenamiento de datos paralelo (PDW) con los paquetes de SQL Server Integration Services (SSIS).
+author: mzaman1
 manager: craigg
-ms.prod: analytics-platform-system
-ms.prod_service: mpp-data-warehouse
-ms.service: ''
-ms.component: ''
-ms.suite: sql
-ms.custom: ''
-ms.technology: mpp-data-warehouse
-description: Proporciona información de referencia e implementación para cargar datos en almacenamiento de datos paralelos de SQL Server mediante el uso de paquetes de SQL Server Integration Services (SSIS).
-ms.date: 10/20/2016
-ms.topic: article
-ms.assetid: 9bdb559a-a91c-4342-8a6e-438cb93f975c
-caps.latest.revision: 69
-ms.openlocfilehash: d32e6b97d036437f6a28b81622873d14854d304f
-ms.sourcegitcommit: 9351e8b7b68f599a95fb8e76930ab886db737e5f
+ms.prod: sql
+ms.technology: data-warehouse
+ms.topic: conceptual
+ms.date: 04/17/2018
+ms.author: murshedz
+ms.reviewer: martinle
+ms.openlocfilehash: efc077bda6d05642107a6e8694d53418401ff12c
+ms.sourcegitcommit: 056ce753c2d6b85cd78be4fc6a29c2b4daaaf26c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/06/2018
+ms.lasthandoff: 04/19/2018
 ---
-# <a name="load-data-with-integration-services"></a>Carga los datos con Integration Services
+# <a name="load-data-with-integration-services-to-parallel-data-warehouse"></a>Carga los datos con Integration Services para almacenamiento de datos paralelos
 Proporciona información de referencia e implementación para cargar datos en almacenamiento de datos paralelos de SQL Server mediante el uso de paquetes de SQL Server Integration Services (SSIS).  
   
 <!-- MISSING LINKS

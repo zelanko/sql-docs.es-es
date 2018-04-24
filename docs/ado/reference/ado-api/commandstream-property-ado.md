@@ -1,33 +1,33 @@
 ---
 title: La propiedad CommandStream (ADO) | Documentos de Microsoft
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: drivers
-ms.service: 
+ms.service: ''
 ms.component: ado
 ms.technology:
 - drivers
-ms.custom: 
+ms.custom: ''
 ms.date: 01/19/2017
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.tgt_pltfrm: ''
+ms.topic: conceptual
 apitype: COM
 f1_keywords:
 - _Command::CommandStream
 helpviewer_keywords:
 - CommandStream property [ADO]
 ms.assetid: f78f61b6-87e0-48dc-961e-83d0e20da58e
-caps.latest.revision: 
+caps.latest.revision: 13
 author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 4ba80c7527dad72860c2c58336ffe3bfabcc29ad
-ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
+ms.openlocfilehash: f720cc4ab3b388f974d34e23690b8aef91c20ba3
+ms.sourcegitcommit: bb044a48a6af9b9d8edb178dc8c8bd5658b9ff68
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/09/2018
+ms.lasthandoff: 04/18/2018
 ---
 # <a name="commandstream-property-ado"></a>Propiedad CommandStream (ADO)
 Indica la secuencia que se usa como entrada para un [comando](../../../ado/reference/ado-api/command-object-ado.md) objeto.  

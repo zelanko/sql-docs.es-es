@@ -1,31 +1,31 @@
 ---
 title: Resumen del controlador de eventos de ADO | Documentos de Microsoft
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: drivers
-ms.service: 
+ms.service: ''
 ms.component: ado
 ms.technology:
 - drivers
-ms.custom: 
+ms.custom: ''
 ms.date: 01/19/2017
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.tgt_pltfrm: ''
+ms.topic: conceptual
 helpviewer_keywords:
 - events [ADO], about event handlers
 - event handlers [ADO]
 ms.assetid: b34f4472-5e04-4a2c-ab64-38d6eca31a69
-caps.latest.revision: 
+caps.latest.revision: 10
 author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: d9e182d5b1e1b8755250cbf620ac102a7eacde0f
-ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
+ms.openlocfilehash: 6090b9e4c1bfec3ca6e4dfcd4b8d9291e35faee8
+ms.sourcegitcommit: bb044a48a6af9b9d8edb178dc8c8bd5658b9ff68
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/09/2018
+ms.lasthandoff: 04/18/2018
 ---
 # <a name="ado-connection-and-recordset-events"></a>Conexión ADO y los eventos de conjunto de registros
 Dos objetos ADO pueden provocar eventos: el [conexión](../../../ado/reference/ado-api/connection-object-ado.md) objeto y el [Recordset](../../../ado/reference/ado-api/recordset-object-ado.md) objeto. El **ConnectionEvent** familia pertenece a las operaciones en el **conexión** objeto y el **RecordsetEvent** familia pertenece a las operaciones en el  **Conjunto de registros** objeto.
@@ -38,7 +38,7 @@ Dos objetos ADO pueden provocar eventos: el [conexión](../../../ado/reference/a
 
 |ConnectionEvent|Description|
 |---------------------|-----------------|
-|[BeginTransComplete, CommitTransComplete, RollbackTransComplete](../../../ado/reference/ado-api/begintranscomplete-committranscomplete-and-rollbacktranscomplete-events-ado.md)|**Administración de transacciones** : notificación de que ha iniciado la transacción actual en la conexión, confirmar o revertir.|
+|[RollbackTransComplete BeginTransComplete, CommitTransComplete,](../../../ado/reference/ado-api/begintranscomplete-committranscomplete-and-rollbacktranscomplete-events-ado.md)|**Administración de transacciones** : notificación de que ha iniciado la transacción actual en la conexión, confirmar o revertir.|
 |[WillConnect](../../../ado/reference/ado-api/willconnect-event-ado.md), [ConnectComplete, desconectar](../../../ado/reference/ado-api/connectcomplete-and-disconnect-events-ado.md)|**Administración de conexiones** : notificación de que se iniciará la conexión actual, se ha iniciado o ha finalizado.|
 |[WillExecute](../../../ado/reference/ado-api/willexecute-event-ado.md), [ExecuteComplete](../../../ado/reference/ado-api/executecomplete-event-ado.md)|**Administración de la ejecución del comando** : notificación de que la ejecución del comando actual en la conexión se iniciará o ha finalizado.|
 |[InfoMessage](../../../ado/reference/ado-api/infomessage-event-ado.md)|**Informativo** : notificación de que no hay información adicional sobre la operación actual.|

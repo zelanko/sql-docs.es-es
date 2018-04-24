@@ -1,36 +1,38 @@
 ---
-title: "Recuperación ante desastres del clúster WSFC mediante cuórum forzado (SQL Server) | Microsoft Docs"
-ms.custom: 
+title: Recuperación ante desastres del clúster WSFC mediante cuórum forzado (SQL Server) | Microsoft Docs
+ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql-non-specified
 ms.prod_service: database-engine
-ms.service: 
+ms.service: ''
 ms.component: failover-clusters
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: dbe-high-availability
-ms.tgt_pltfrm: 
+ms.technology:
+- dbe-high-availability
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - Availability Groups [SQL Server], WSFC clusters
 - quorum [SQL Server], AlwaysOn and WSFC quorum
 - failover clustering [SQL Server], AlwaysOn Availability Groups
 ms.assetid: 6cefdc18-899e-410c-9ae4-d6080f724046
-caps.latest.revision: "21"
+caps.latest.revision: 21
 author: MikeRayMSFT
 ms.author: mikeray
-manager: jhubbard
+manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 16d17e02c0594f3906651b0f270c8a36e891e69d
-ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.openlocfilehash: 145742e14b82fa992a40ef7ca629e47ada88bce5
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/05/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="wsfc-disaster-recovery-through-forced-quorum-sql-server"></a>Recuperación ante desastres del clúster WSFC mediante quórum forzado (SQL Server)
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] El error de cuórum se produce, normalmente, por un desastre sistémico, un error de comunicaciones persistente o una configuración incorrecta que afecta a varios nodos del clúster de WSFC.  Es necesaria la intervención manual para la recuperación de un error de quórum.  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+  El error de quórum se produce normalmente por un desastre sistémico, un error de comunicaciones persistente o una configuración incorrecta que afecta a varios nodos del clúster WSFC.  Es necesaria la intervención manual para la recuperación de un error de quórum.  
   
--   **Antes de empezar:**  [Requisitos previos](#Prerequisites), [Seguridad](#Security)  
+-   **Before you start:**  [Prerequisites](#Prerequisites), [Security](#Security)  
   
 -   **Recuperación ante desastres de WSFC con el procedimiento de quórum forzado** [Recuperación ante desastres de WSFC con el procedimiento de quórum forzado](#Main)  
   
@@ -115,7 +117,7 @@ ms.lasthandoff: 12/05/2017
   
 -   [Realizar una conmutación por error manual forzada de un grupo de disponibilidad &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/perform-a-forced-manual-failover-of-an-availability-group-sql-server.md)  
   
--   [Ver la configuración de NodeWeight de quórum de clúster](../../../sql-server/failover-clusters/windows/view-cluster-quorum-nodeweight-settings.md)  
+-   [Ver la configuración de NodeWeight de cuórum de clúster](../../../sql-server/failover-clusters/windows/view-cluster-quorum-nodeweight-settings.md)  
   
 -   [Configurar los valores de NodeWeight de quórum de clúster](../../../sql-server/failover-clusters/windows/configure-cluster-quorum-nodeweight-settings.md)  
   
@@ -123,11 +125,11 @@ ms.lasthandoff: 12/05/2017
   
 ##  <a name="RelatedContent"></a> Contenido relacionado  
   
--   [Ver eventos y registros para un clúster de conmutación por error](http://technet.microsoft.com/library/cc772342\(WS.10\).aspx)  
+-   [View Events and Logs for a Failover Cluster](http://technet.microsoft.com/library/cc772342\(WS.10\).aspx)  
   
 -   [Cmdlet de clúster de conmutación por error Get-ClusterLog](http://technet.microsoft.com/library/ee461045.aspx)  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Ver también  
  [Clústeres de conmutación por error de Windows Server &#40;WSFC&#41; con SQL Server](../../../sql-server/failover-clusters/windows/windows-server-failover-clustering-wsfc-with-sql-server.md)  
   
   

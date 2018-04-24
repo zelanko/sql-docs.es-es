@@ -1,27 +1,21 @@
 ---
-title: Restaurar una base de datos protegida por TDE en almacenamiento de datos paralelos
-author: barbkess
-ms.author: barbkess
+title: Restaurar una base de datos protegida por TDE - almacenamiento de datos paralelos | Documentos de Microsoft
+description: Siga estos pasos para restaurar una base de datos que se cifra mediante el cifrado transparente de los datos en almacenamiento de datos paralelos de sistema de plataforma de análisis.
+author: mzaman1
 manager: craigg
-ms.prod: analytics-platform-system
-ms.prod_service: mpp-data-warehouse
-ms.service: ''
-ms.component: ''
-ms.suite: sql
-ms.custom: ''
-ms.technology: mpp-data-warehouse
-description: Siga estos pasos para restaurar una base de datos que se cifra mediante el cifrado de datos transparente.
-ms.date: 10/20/2016
-ms.topic: article
-ms.assetid: ffb681ca-8598-4614-b06c-660376333fc3
-caps.latest.revision: 4
-ms.openlocfilehash: 2421b618f9f1d736b90fd882aad9e3ab9aae82f5
-ms.sourcegitcommit: 9351e8b7b68f599a95fb8e76930ab886db737e5f
+ms.prod: sql
+ms.technology: data-warehouse
+ms.topic: conceptual
+ms.date: 04/17/2018
+ms.author: murshedz
+ms.reviewer: martinle
+ms.openlocfilehash: a791d4110dc70c506025f8f11fb06b9ba2e5dcb3
+ms.sourcegitcommit: 056ce753c2d6b85cd78be4fc6a29c2b4daaaf26c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/06/2018
+ms.lasthandoff: 04/19/2018
 ---
-# <a name="restore-a-database-protected-by-tde"></a>Restaurar una base de datos protegida por TDE
+# <a name="restore-a-database-protected-by-tde-in-parallel-data-warehouse"></a>Restaurar una base de datos protegida por TDE en almacenamiento de datos paralelos
 Siga estos pasos para restaurar una base de datos que se cifra mediante el cifrado de datos transparente.  
   
 El [usar cifrado de datos transparente](transparent-data-encryption.md#using-tde) en el ejemplo se incluye código para habilitar TDE en la `AdventureWorksPDW2012` base de datos. El código siguiente continúa ese ejemplo, crear una copia de seguridad de la base de datos en el dispositivo Analytics Platform System (APS) original y, a continuación, restaurar el certificado y la base de datos en otro dispositivo.  

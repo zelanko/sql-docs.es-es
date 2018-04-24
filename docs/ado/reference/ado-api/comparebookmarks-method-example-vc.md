@@ -1,32 +1,32 @@
 ---
-title: "Ejemplo del método CompareBookmarks (VC ++) | Documentos de Microsoft"
-ms.prod: sql-non-specified
+title: Ejemplo del método CompareBookmarks (VC ++) | Documentos de Microsoft
+ms.prod: sql
 ms.prod_service: drivers
-ms.service: 
+ms.service: ''
 ms.component: ado
 ms.technology:
 - drivers
-ms.custom: 
+ms.custom: ''
 ms.date: 01/19/2017
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.tgt_pltfrm: ''
+ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
 - CompareBookmarks method [ADO], VC++ example
 ms.assetid: 24ab3f3a-29c5-4ee1-942e-2634c02d0778
-caps.latest.revision: 
+caps.latest.revision: 12
 author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 763348579fb243de90352a17145cd546c42c38fc
-ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
+ms.openlocfilehash: a02a535e5f717b7c031ee0f2f7ba6047f2deb1ca
+ms.sourcegitcommit: bb044a48a6af9b9d8edb178dc8c8bd5658b9ff68
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/09/2018
+ms.lasthandoff: 04/18/2018
 ---
 # <a name="comparebookmarks-method-example-vc"></a>Ejemplo del método CompareBookmarks (VC ++)
 Este ejemplo se muestra la [CompareBookmarks](../../../ado/reference/ado-api/comparebookmarks-method-ado.md) método. El valor relativo de los marcadores rara vez es necesario a menos que un marcador determinado es de algún modo especial.  

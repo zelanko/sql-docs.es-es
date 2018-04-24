@@ -1,30 +1,30 @@
 ---
-title: "Método get_OLEDBCommand | Documentos de Microsoft"
-ms.prod: sql-non-specified
+title: Método get_OLEDBCommand | Documentos de Microsoft
+ms.prod: sql
 ms.prod_service: drivers
-ms.service: 
+ms.service: ''
 ms.component: ado
 ms.technology:
 - drivers
-ms.custom: 
+ms.custom: ''
 ms.date: 01/19/2017
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.tgt_pltfrm: ''
+ms.topic: conceptual
 helpviewer_keywords:
 - get_OLEDBCommand method [ADO]
 ms.assetid: 23d551f5-3d5b-434b-ade6-fef15f1710e7
-caps.latest.revision: 
+caps.latest.revision: 5
 author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: ecd498c747fe653f7322828c8cbfd7144ee20106
-ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
+ms.openlocfilehash: 01e6082d17932dfc85e7ce7ca1ecd3f09d69bc5a
+ms.sourcegitcommit: bb044a48a6af9b9d8edb178dc8c8bd5658b9ff68
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/09/2018
+ms.lasthandoff: 04/18/2018
 ---
 # <a name="getoledbcommand-method"></a>get_OLEDBCommand (método)
 Devuelve el subyacente comando de OLE DB, en primer lugar propagar cualquier información de parámetro establecida en el comando de ADO para el comando de OLE DB.  

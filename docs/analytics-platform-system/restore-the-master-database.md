@@ -1,28 +1,21 @@
 ---
-title: Restaurar la base de datos maestra (Analytics Platform System)
-author: barbkess
-ms.author: barbkess
+title: 'Restaurar base de datos maestra: Analytics Platform System | Documentos de Microsoft'
+description: Restaure la base de datos maestra en el sistema de la plataforma de análisis.
+author: mzaman1
 manager: craigg
-ms.prod: analytics-platform-system
-ms.prod_service: mpp-data-warehouse
-ms.service: ''
-ms.component: ''
-ms.technology: mpp-data-warehouse
-ms.custom: ''
-ms.date: 01/05/2017
-ms.reviewer: na
-ms.suite: sql
-ms.tgt_pltfrm: na
-ms.topic: article
-ms.assetid: 7870021a-0d89-422e-b8ea-1cc95b45c139
-caps.latest.revision: 11
-ms.openlocfilehash: 0f1acb692198873897d5dc26e2074beab4517e44
-ms.sourcegitcommit: 9351e8b7b68f599a95fb8e76930ab886db737e5f
+ms.prod: sql
+ms.technology: data-warehouse
+ms.topic: conceptual
+ms.date: 04/17/2018
+ms.author: murshedz
+ms.reviewer: martinle
+ms.openlocfilehash: 184184f332225e76e152c2d909cfff788b4fea91
+ms.sourcegitcommit: 056ce753c2d6b85cd78be4fc6a29c2b4daaaf26c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/06/2018
+ms.lasthandoff: 04/19/2018
 ---
-# <a name="restore-the-master-database"></a>Restaurar la base de datos maestra
+# <a name="restore-the-master-database-in-analytics-platform-system"></a>Restaurar la base de datos maestra en el sistema de la plataforma de análisis
 El **Restore Master** página de SQL Server PDW Configuration Manager le permite restaurar la base de datos maestra desde una copia de seguridad.  
   
 ## <a name="before-you-begin"></a>Antes de comenzar  

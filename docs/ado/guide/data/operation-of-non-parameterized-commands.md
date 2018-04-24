@@ -1,31 +1,31 @@
 ---
-title: "Funcionamiento de los comandos sin parámetros | Documentos de Microsoft"
-ms.prod: sql-non-specified
+title: Funcionamiento de los comandos sin parámetros | Documentos de Microsoft
+ms.prod: sql
 ms.prod_service: drivers
-ms.service: 
+ms.service: ''
 ms.component: ado
 ms.technology:
 - drivers
-ms.custom: 
+ms.custom: ''
 ms.date: 01/19/2017
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.tgt_pltfrm: ''
+ms.topic: conceptual
 helpviewer_keywords:
 - non-parameterized commands [ADO]
 - data shaping [ADO], non-parameterized commands
 ms.assetid: 9700e50a-9f17-4ba3-8afb-f750741dc6ca
-caps.latest.revision: 
+caps.latest.revision: 11
 author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 1a025cf381bdf5a51cb825294bf5a5399fc033b2
-ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
+ms.openlocfilehash: 3d09a577f464c5fd2e9725fcc3d475ca0360b2bf
+ms.sourcegitcommit: bb044a48a6af9b9d8edb178dc8c8bd5658b9ff68
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/09/2018
+ms.lasthandoff: 04/18/2018
 ---
 # <a name="operation-of-non-parameterized-commands"></a>Funcionamiento de los comandos sin parámetros
 Para los comandos sin parámetros, se ejecutan todos los comandos de proveedor y el **conjuntos de registros** se crean durante la ejecución del comando. Si el comando se ejecuta sincrónicamente, todos los **conjuntos de registros** se llenará totalmente. Si se ha seleccionado un modo de llenado asincrónico, el estado relleno de la **conjuntos de registros** dependerá del modo de llenado y el tamaño de la **conjuntos de registros**.  

@@ -1,32 +1,32 @@
 ---
 title: Proveedor Microsoft OLE DB para Microsoft Jet | Documentos de Microsoft
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: drivers
-ms.service: 
+ms.service: ''
 ms.component: ado
 ms.technology:
 - drivers
-ms.custom: 
+ms.custom: ''
 ms.date: 01/19/2017
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.tgt_pltfrm: ''
+ms.topic: conceptual
 helpviewer_keywords:
 - Jet provider for OLE DB [ADO]
 - providers [ADO], OLE DB provider for Microsoft Jet
 - OLE DB provider for Microsoft Jet [ADO]
 ms.assetid: fd956da1-5203-40af-aa7e-fc13a6c6581f
-caps.latest.revision: 
+caps.latest.revision: 16
 author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 5d703eff7e65b590961a4bc78a70032050e1b395
-ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
+ms.openlocfilehash: 253de8c53055269efb6a9e15c9d9a5ca940606e8
+ms.sourcegitcommit: bb044a48a6af9b9d8edb178dc8c8bd5658b9ff68
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/09/2018
+ms.lasthandoff: 04/18/2018
 ---
 # <a name="microsoft-ole-db-provider-for-microsoft-jet-overview"></a>Proveedor Microsoft OLE DB para Microsoft Jet Introducción
 El proveedor OLE DB para Microsoft Jet permite que ADO tener acceso a las bases de datos de Microsoft Jet.
@@ -197,7 +197,7 @@ Microsoft.Jet.OLEDB.4.0
 |Conjunto de filas de sólo anexar|DBPROP_APPENDONLY|
 |Bloquear objetos de almacenamiento|DBPROP_BLOCKINGSTORAGEOBJECTS|
 |Tipo de marcador|DBPROP_BOOKMARKTYPE|
-|Bookmarkable|DBPROP_IROWSETLOCATE|
+|Admite marcadores|DBPROP_IROWSETLOCATE|
 |Marcadores ordenados|DBPROP_ORDEREDBOOKMARKS|
 |Almacenar en caché las columnas diferidas|DBPROP_CACHEDEFERRED|
 |Cambiar filas insertadas|DBPROP_CHANGEINSERTEDROWS|
@@ -275,7 +275,7 @@ Microsoft.Jet.OLEDB.4.0
 |Conjunto de filas de sólo anexar|DBPROP_APPENDONLY|
 |Bloquear objetos de almacenamiento|DBPROP_BLOCKINGSTORAGEOBJECTS|
 |Tipo de marcador|DBPROP_BOOKMARKTYPE|
-|Bookmarkable|DBPROP_IROWSETLOCATE|
+|Admite marcadores|DBPROP_IROWSETLOCATE|
 |Cambiar filas insertadas|DBPROP_CHANGEINSERTEDROWS|
 |Privilegios de columna|DBPROP_COLUMNRESTRICT|
 |Notificación de conjunto de columnas|DBPROP_NOTIFYCOLUMNSET|

@@ -1,33 +1,33 @@
 ---
-title: "Vistas de colección, ejemplo de la propiedad CommandText (VB) | Documentos de Microsoft"
-ms.prod: sql-non-specified
+title: Vistas de colección, ejemplo de la propiedad CommandText (VB) | Documentos de Microsoft
+ms.prod: sql
 ms.prod_service: drivers
-ms.service: 
+ms.service: ''
 ms.component: ado
 ms.technology:
 - drivers
-ms.custom: 
+ms.custom: ''
 ms.date: 01/19/2017
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.tgt_pltfrm: ''
+ms.topic: conceptual
 dev_langs:
 - VB
 helpviewer_keywords:
 - CommandText property [ADOX]
 - Views collection [ADOX], Visual Basic example
 ms.assetid: a05a0190-352d-44ff-9488-0c94e9fb656e
-caps.latest.revision: 
+caps.latest.revision: 11
 author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 0d610a39e0f22a893597652fcf4916e0164a920b
-ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
+ms.openlocfilehash: c62ddb72b1968c74d232bc0bb02548ec8a6b80ad
+ms.sourcegitcommit: bb044a48a6af9b9d8edb178dc8c8bd5658b9ff68
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/09/2018
+ms.lasthandoff: 04/18/2018
 ---
 # <a name="views-collection-commandtext-property-example-vb"></a>Colección de vistas, ejemplo de la propiedad CommandText (VB)
 El código siguiente muestra cómo utilizar el [comando](../../../ado/reference/adox-api/command-property-adox.md) propiedad que se va a actualizar el texto de una vista.  

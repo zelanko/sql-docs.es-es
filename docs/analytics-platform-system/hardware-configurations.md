@@ -1,27 +1,21 @@
 ---
-title: Configuraciones de hardware (Analytics Platform System)
-author: barbkess
-ms.author: barbkess
+title: 'Las configuraciones de hardware: Analytics Platform System | Documentos de Microsoft'
+description: El hardware del equipo Analytics Platform System (APS) está diseñado con unidades escalables para que comprar la cantidad correcta de procesamiento y almacenamiento según sus requisitos empresariales. El dispositivo escala almacenamiento almacenamiento de datos paralelos de unos pocos terabytes a más de 6 petabytes de datos.
+author: mzaman1
 manager: craigg
-ms.prod: analytics-platform-system
-ms.prod_service: mpp-data-warehouse
-ms.service: ''
-ms.component: ''
-ms.suite: sql
-ms.custom: ''
-ms.technology: mpp-data-warehouse
-description: El hardware Analytics Platform System (APS) está diseñado con unidades escalables para que comprar la cantidad correcta de procesamiento y almacenamiento según sus requisitos empresariales.
-ms.date: 01/05/2017
-ms.topic: article
-ms.assetid: f95945b7-97ae-4ab9-bae5-c792a516acea
-caps.latest.revision: 9
-ms.openlocfilehash: d6f4b25584826d637db0a5f51ebe8ede458136c2
-ms.sourcegitcommit: 9351e8b7b68f599a95fb8e76930ab886db737e5f
+ms.prod: sql
+ms.technology: data-warehouse
+ms.topic: conceptual
+ms.date: 04/17/2018
+ms.author: murshedz
+ms.reviewer: martinle
+ms.openlocfilehash: 5677298e1924959c83cd95b86845e37eab7340e9
+ms.sourcegitcommit: 056ce753c2d6b85cd78be4fc6a29c2b4daaaf26c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/06/2018
+ms.lasthandoff: 04/19/2018
 ---
-# <a name="hardware-configurations"></a>Configuraciones de hardware
+# <a name="hardware-configurations---analytics-platform-system"></a>Configuraciones de hardware: Analytics Platform System
 El hardware Analytics Platform System (APS) está diseñado con unidades escalables para que comprar la cantidad correcta de procesamiento y almacenamiento según sus requisitos empresariales. El dispositivo escala para SQL Server Parallel datos Wareouse (PDW) de unos pocos Terabytes a más de 6 Petabytes de datos de almacenamiento.  
   
 ## <a name="contents"></a>Contenido  

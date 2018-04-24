@@ -1,29 +1,21 @@
 ---
-title: (SQL Server PDW) de la base de datos tempdb
-author: barbkess
-ms.author: barbkess
+title: Base de datos tempdb - almacenamiento de datos paralelos | Documentos de Microsoft
+description: Base de datos de tempdb en almacenamiento de datos paralelos.
+author: mzaman1
 manager: craigg
-ms.prod: analytics-platform-system
-ms.prod_service: mpp-data-warehouse
-ms.service: ''
-ms.component: ''
-ms.technology: mpp-data-warehouse
-ms.custom: ''
-ms.date: 01/13/2017
-ms.reviewer: na
-ms.suite: sql
-ms.tgt_pltfrm: na
-ms.topic: article
-ms.assetid: 5840033d-2dc6-4576-8a5f-067e2a58b170
-caps.latest.revision: 22
-ms.workload: not set
-ms.openlocfilehash: 6a52f21b266d277f3bda205803d38431598545f7
-ms.sourcegitcommit: 9351e8b7b68f599a95fb8e76930ab886db737e5f
+ms.prod: sql
+ms.technology: data-warehouse
+ms.topic: conceptual
+ms.date: 04/17/2018
+ms.author: murshedz
+ms.reviewer: martinle
+ms.openlocfilehash: 7e11f4eff980358f4b4906f8a100cfc509d19dd5
+ms.sourcegitcommit: 056ce753c2d6b85cd78be4fc6a29c2b4daaaf26c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/06/2018
+ms.lasthandoff: 04/19/2018
 ---
-# <a name="tempdb-database"></a>Base de datos tempdb
+# <a name="tempdb-database-in-parallel-data-warehouse"></a>base de datos tempdb en almacenamiento de datos paralelos
 **tempdb** es una base de datos del sistema de PDW de SQL Server que almacena las tablas temporales locales para las bases de datos de usuario. Tablas temporales se usan a menudo para mejorar el rendimiento de las consultas. Por ejemplo, puede usar una tabla temporal para modularizar una secuencia de comandos y reutilizar los datos calculados.  
   
 Para obtener más información acerca de las bases de datos del sistema, consulte [bases de datos de sistema](system-databases.md).  

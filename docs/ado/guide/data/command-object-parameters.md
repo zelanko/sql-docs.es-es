@@ -1,30 +1,30 @@
 ---
-title: "Parámetros del objeto Command | Documentos de Microsoft"
-ms.prod: sql-non-specified
+title: Parámetros del objeto Command | Documentos de Microsoft
+ms.prod: sql
 ms.prod_service: drivers
-ms.service: 
+ms.service: ''
 ms.component: ado
 ms.technology:
 - drivers
-ms.custom: 
+ms.custom: ''
 ms.date: 01/19/2017
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.tgt_pltfrm: ''
+ms.topic: conceptual
 helpviewer_keywords:
 - Command object [ADO], parameters
 ms.assetid: 10e7ef4a-78bf-4e91-931e-cbc6c065dd4c
-caps.latest.revision: 
+caps.latest.revision: 14
 author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 527ed7c9e6e3a3f250fd559b479637414be3989f
-ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
+ms.openlocfilehash: d55af0ad3553a9129ff9e54308b68b14a622c154
+ms.sourcegitcommit: bb044a48a6af9b9d8edb178dc8c8bd5658b9ff68
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/09/2018
+ms.lasthandoff: 04/18/2018
 ---
 # <a name="command-object-parameters"></a>Parámetros del objeto Command
 El tema anterior descrito [crear y ejecutar un comando Simple](../../../ado/guide/data/creating-and-executing-a-simple-command.md). Un uso más interesante para el [comando](../../../ado/reference/ado-api/command-object-ado.md) objeto se muestra en el ejemplo siguiente, en el que ya se incluyó el comando SQL. Esta modificación permite volver a usar el comando, pasando un valor diferente para el parámetro cada vez. Dado que la [propiedad preparado](../../../ado/reference/ado-api/prepared-property-ado.md) propiedad en el **comando** objeto se establece en **true**, ADO requerirá que el proveedor compilar el comando especificado en [ CommandText](../../../ado/reference/ado-api/commandtext-property-ado.md) antes de ejecutar por primera vez. También se conservan el comando compilado en la memoria. Esto ralentiza la ejecución del comando ligeramente la primera vez que se ejecute debido a la sobrecarga necesaria para preparar la base de datos pero da como resultado una mejora del rendimiento cada vez que se llamó el comando a partir de ahí. Por lo tanto, se deben preparar comandos solo si se van a utilizar más de una vez.  

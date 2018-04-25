@@ -1,8 +1,8 @@
 ---
-title: 'Cómo: especificar tipos de datos SQL Server cuando se usa el controlador SQLSRV | Documentos de Microsoft'
+title: Especificación de tipos de datos de SQL Server cuando se utiliza el controlador SQLSRV
 ms.custom: ''
 ms.date: 01/19/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: drivers
 ms.service: ''
 ms.component: php
@@ -16,16 +16,16 @@ helpviewer_keywords:
 - converting data types
 - streaming data
 ms.assetid: 1fcf73cb-5634-4d89-948f-9326f1dbd030
-caps.latest.revision: ''
+caps.latest.revision: 18
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: f88116134641d955c886bdee840982fa7710b934
-ms.sourcegitcommit: 2e130e9f3ce8a7ffe373d7fba8b09e937c216386
-ms.translationtype: MT
+ms.openlocfilehash: f7e10688144a78d7ab897d0d4354e49b7bb2e26e
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
+ms.translationtype: MTE
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/28/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="how-to-specify-sql-server-data-types-when-using-the-sqlsrv-driver"></a>Cómo especificar tipos de datos de SQL Server cuando se utiliza el controlador SQLSRV
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]
@@ -37,7 +37,7 @@ Para especificar el tipo de datos de SQL Server, debe usar la matriz *$params* o
 En los pasos siguientes se resume cómo especificar el tipo de datos de SQL Server al enviar datos al servidor:  
   
 > [!NOTE]  
-> Si no se especifica ningún tipo de datos de SQL Server, se usan los tipos de valor predeterminado. Para obtener información sobre todos los tipos de datos SQL Server, consulte [Default SQL Server Data Types](../../connect/php/default-sql-server-data-types.md).  
+> Si no se especifica ningún tipo de datos de SQL Server, se utilizarán tipos predeterminados. Para obtener información sobre todos los tipos de datos SQL Server, consulte [Default SQL Server Data Types](../../connect/php/default-sql-server-data-types.md).  
   
 1.  Defina una consulta de Transact-SQL que inserta o actualiza datos. Utilice signos de interrogación (?) como marcadores de posición para los valores de parámetro de la consulta.  
   
@@ -45,7 +45,7 @@ En los pasos siguientes se resume cómo especificar el tipo de datos de SQL Serv
   
 3.  Cree la matriz *$params* que se utilizará al preparar o ejecutar la consulta. Tenga en cuenta que cada elemento de la matriz *$params* también debe ser una matriz cuando se especifica el tipo de datos de SQL Server.  
   
-4.  Especifique el tipo de datos de SQL Server deseado mediante el uso adecuado **SQLSRV_SQLTYPE_\***  constante como cuarto parámetro en cada submatriz de la *$params* matriz. Para obtener una lista completa de la **SQLSRV_SQLTYPE_\***  constantes, vea la sección de SQLTYPEs de [constantes &#40;Microsoft Drivers for PHP para SQL Server&#41;](../../connect/php/constants-microsoft-drivers-for-php-for-sql-server.md). Por ejemplo, en el código siguiente, *$changeDate*, *$rate*y *$payFrequency* se especifican respectivamente como los tipos de datos de SQL Server **datetime**, **dinero**y **tinyint** en la matriz *$params* . Como no se especifica ningún tipo de datos de SQL Server para *$employeeId* y se inicializa en un valor entero, se utiliza el tipo de SQL Server predeterminado **integer** .  
+4.  Especifique el tipo de datos de SQL Server deseado mediante la constante **SQLSRV\*SQLTYPE*** adecuada como cuarto parámetro en cada submatriz de la matriz $params. Para obtener una lista completa de las constantes de **SQLSRV\*SQLTYPE**[, vea la sección de SQLTYPE de ](../../connect/php/constants-microsoft-drivers-for-php-for-sql-server.md)Constantes &#40;Controladores de Microsoft para PHP para SQL Server&#41;. Por ejemplo, en el código siguiente, *$changeDate*, *$rate*y *$payFrequency* se especifican respectivamente como los tipos de datos de SQL Server **datetime**, **dinero**y **tinyint** en la matriz *$params* . Como no se especifica ningún tipo de datos de SQL Server para *$employeeId* y se inicializa en un valor entero, se utiliza el tipo de SQL Server predeterminado **integer** .  
   
     ```  
     $employeeId = 5;  
@@ -61,9 +61,9 @@ En los pasos siguientes se resume cómo especificar el tipo de datos de SQL Serv
     ```  
   
 ## <a name="example"></a>Ejemplo  
-En el ejemplo siguiente se inserta datos en la *HumanResources.EmployeePayHistory* tabla de la base de datos de AdventureWorks. Se especifican tipos de datos de SQL Server para los parámetros *$changeDate*, *$rate*y *$payFrequency* . El tipo de datos de SQL Server predeterminado se utiliza para el parámetro *$employeeId* . Para comprobar que los datos se han insertado correctamente, se recuperan y muestran los mismos datos.  
+En el ejemplo siguiente se insertan datos en la tabla *HumanResources.EmployeePayHistory* de la base de datos de Adventureworks. Se especifican tipos de datos de SQL Server para los parámetros *$changeDate*, *$rate*y *$payFrequency* . El tipo de datos de SQL Server predeterminado se utiliza para el parámetro *$employeeId* . Para comprobar que los datos se han insertado correctamente, se recuperan y muestran los mismos datos.  
   
-En este ejemplo se da por supuesto que SQL Server y el [AdventureWorks](https://github.com/Microsoft/sql-server-samples/tree/master/samples/databases/adventure-works) base de datos se instalan en el equipo local. Los resultados se agregan a la consola cuando se ejecuta el ejemplo en la línea de comandos.  
+En este ejemplo se da por hecho que SQL Server y la base de datos de [AdventureWorks](https://github.com/Microsoft/sql-server-samples/tree/master/samples/databases/adventure-works) están instalados en el equipo local. Los resultados se agregan a la consola cuando se ejecuta el ejemplo en la línea de comandos.  
   
 ```  
 <?php  
@@ -141,7 +141,7 @@ sqlsrv_close($conn);
 ?>  
 ```  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Ver también  
 [Recuperación de datos](../../connect/php/retrieving-data.md)
 
 [Sobre los ejemplos de código de la documentación](../../connect/php/about-code-examples-in-the-documentation.md)

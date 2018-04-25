@@ -2,7 +2,7 @@
 title: Comparación de las funciones de ejecución | Documentos de Microsoft
 ms.custom: ''
 ms.date: 03/26/2018
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: drivers
 ms.service: ''
 ms.component: php
@@ -15,16 +15,16 @@ ms.topic: article
 helpviewer_keywords:
 - executing queries
 ms.assetid: 130fc0fd-87dd-46b2-918f-de9dc572c769
-caps.latest.revision: ''
+caps.latest.revision: 18
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: a906ec1a197cb6ede1570c9202cc955f8432ff79
-ms.sourcegitcommit: 2e130e9f3ce8a7ffe373d7fba8b09e937c216386
-ms.translationtype: MT
+ms.openlocfilehash: 921f96668cab29ad6fa2e8b43b8c3908f83e01ab
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
+ms.translationtype: MTE
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/28/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="comparing-execution-functions"></a>Comparación de las funciones de ejecución
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]
@@ -43,7 +43,7 @@ Si está utilizando el controlador PDO_SQLSRV, puede ejecutar una consulta con u
   
 -   [PDO::prepare](../../connect/php/pdo-prepare.md) e [PDOStatement::execute](../../connect/php/pdostatement-execute.md).  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Ver también  
 [Referencia de API del controlador SQLSRV](../../connect/php/sqlsrv-driver-api-reference.md)
 
 [Referencia del controlador PDO_SQLSRV](../../connect/php/pdo-sqlsrv-driver-reference.md)

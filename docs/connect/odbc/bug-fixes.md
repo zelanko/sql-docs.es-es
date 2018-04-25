@@ -2,7 +2,7 @@
 title: Lista de errores corregidos | Documentos de Microsoft
 ms.custom: ''
 ms.date: 04/04/2018
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: drivers
 ms.service: ''
 ms.component: odbc
@@ -20,11 +20,11 @@ author: v-makouz
 ms.author: genemi
 manager: kenvh
 ms.workload: Active
-ms.openlocfilehash: 5187e07d18c6a967ce0a8fadbac370273684c9dc
-ms.sourcegitcommit: d6b1695c8cbc70279b7d85ec4dfb66a4271cdb10
-ms.translationtype: MT
+ms.openlocfilehash: 58da69ed6c4b7b046f8d1bc1ddf4e23b71b99a29
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
+ms.translationtype: MTE
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/08/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="list-of-bugs-fixed"></a>Lista de errores corregidos
 
@@ -36,7 +36,7 @@ Esta página contiene una lista de errores corregidos en cada versión, a partir
 - Corregido un error error 22003 en SQLGetData cuando el tamaño del búfer transferido en es menor, a continuación, los datos recuperados (Windows)
 - Corregido mensajes de error de AAL truncados
 - Se corrige un error poco frecuente en Windows de 32 bits al convertir de flotante el número de punto en un entero
-- Se corrigió un problema donde insertar doble en un campo decimal con Always Encrypted en haría ningún error de truncamiento de datos de retorno
+- Se corrigió un problema donde insertar doble en un campo decimal con Always Encrypted en devolvería error de truncamiento de datos
 - Rol fijo de una advertencia en el instalador de Mac OS
 - Envío incorrecto estado fijo para SQL Server durante el intento de recuperación de la sesión cuando se habilitan resistencia de conexión tanto la agrupación de conexiones, haciendo que la sesión de ser eliminados por el servidor
 

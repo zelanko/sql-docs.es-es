@@ -1,26 +1,26 @@
 ---
-title: "Propiedades de SQL Server (pestaña parámetros de inicio) | Documentos de Microsoft"
-ms.custom: 
+title: Propiedades de SQL Server (pestaña parámetros de inicio) | Documentos de Microsoft
+ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql-non-specified
 ms.prod_service: sql-tools
-ms.service: 
+ms.service: ''
 ms.component: configuration-manager
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: 16942624-5374-446c-8de4-ee6ed34d6e94
-caps.latest.revision: 
+caps.latest.revision: 10
 author: stevestein
 ms.author: sstein
 manager: craigg
 ms.workload: Inactive
 ms.openlocfilehash: c845f8c174f96ba2e0dd5595d49721ae800777e2
 ms.sourcegitcommit: c556eaf60a49af7025db35b7aa14beb76a8158c5
-ms.translationtype: MT
+ms.translationtype: MTE
 ms.contentlocale: es-ES
 ms.lasthandoff: 02/03/2018
 ---
@@ -38,7 +38,7 @@ Utilice este cuadro de diálogo para agregar o quitar parámetros de inicio para
  Para quitar un parámetro, selecciónelo y haga clic en **Quitar**.  
   
 ## <a name="parameter-format"></a>Formato de parámetros  
- No incluya un separador entre parámetros. El Administrador de configuración de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] lo agrega automáticamente. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]Aplica los siguientes requisitos de parámetro.  
+ No incluya un separador entre parámetros. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] lo agrega automáticamente. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] aplica los requisitos de parámetro siguientes.  
   
 -   Los espacios iniciales y finales se recortan de los parámetros de inicio.  
   
@@ -68,7 +68,7 @@ Utilice este cuadro de diálogo para agregar o quitar parámetros de inicio para
   
 |Parámetro|Descripción breve|  
 |---------------|-----------------------|  
-|-m|Inicia una instancia de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] en modo de usuario único.|  
+|-M|Inicia una instancia de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] en modo de usuario único.|  
 |-T1204|Devuelve los recursos y los tipos de bloqueos que participan en un interbloqueo, además del comando actual afectado.|  
 |-T1224|Deshabilita la extensión de bloqueo en función del número de bloqueos.|  
 |-T3608|Evita que [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] se inicie automáticamente y recupere bases de datos excepto la base de datos maestra.|  

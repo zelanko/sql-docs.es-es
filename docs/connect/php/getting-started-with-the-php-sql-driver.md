@@ -2,7 +2,7 @@
 title: Introducción a los controladores de Microsoft para PHP para SQL Server | Documentos de Microsoft
 ms.custom: ''
 ms.date: 03/26/2018
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: drivers
 ms.service: ''
 ms.component: php
@@ -13,16 +13,16 @@ ms.technology:
 ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: 66b042c6-479f-4a89-92c8-8c5dce67643f
-caps.latest.revision: ''
+caps.latest.revision: 25
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 48811b32eaaf76b586fce57d4d1592704dfe1dc3
-ms.sourcegitcommit: 2e130e9f3ce8a7ffe373d7fba8b09e937c216386
-ms.translationtype: MT
+ms.openlocfilehash: c829a111b86430a8deaa71bdbda0c5a6a5d7ead4
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
+ms.translationtype: MTE
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/28/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="getting-started-with-the-microsoft-drivers-for-php-for-sql-server"></a>Introducción a los controladores de Microsoft para PHP para SQL Server
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]
@@ -35,7 +35,7 @@ En esta sección se proporciona información sobre los requisitos del sistema re
 * [Step 3: Proof of concept connecting to SQL using PHP (Paso 3: prueba de concepto de la conexión a SQL con PHP)](../../connect/php/step-3-proof-of-concept-connecting-to-sql-using-php.md)  
 * [Step 4: Connect resiliently to SQL with PHP (Paso 4: conectarse con resistencia a SQL con PHP)](../../connect/php/step-4-connect-resiliently-to-sql-with-php.md)  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Ver también  
 [Aplicación de ejemplo &#40;controlador SQLSRV&#41;](../../connect/php/example-application-sqlsrv-driver.md)
 
 [Programación de guía para los controladores de Microsoft para PHP para SQL Server](../../connect/php/programming-guide-for-php-sql-driver.md)

@@ -1,26 +1,26 @@
 ---
-title: "Propiedades de SQL Server Browser (pestaña servicio) | Documentos de Microsoft"
-ms.custom: 
+title: Propiedades de SQL Server Browser (pestaña servicio) | Documentos de Microsoft
+ms.custom: ''
 ms.date: 03/16/2017
 ms.prod: sql-non-specified
 ms.prod_service: sql-tools
-ms.service: 
+ms.service: ''
 ms.component: configuration-manager
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: 98ace9b0-72d5-4b72-9b7b-11fbc490981a
-caps.latest.revision: 
+caps.latest.revision: 16
 author: stevestein
 ms.author: sstein
 manager: craigg
 ms.workload: Inactive
 ms.openlocfilehash: a452f7c408853994044a27de165e867449c60363
 ms.sourcegitcommit: c556eaf60a49af7025db35b7aa14beb76a8158c5
-ms.translationtype: MT
+ms.translationtype: MTE
 ms.contentlocale: es-ES
 ms.lasthandoff: 02/03/2018
 ---
@@ -34,7 +34,7 @@ El programa Explorador de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.m
  **Ruta de acceso binaria**  
  Muestra la ubicación de los archivos de programa utilizados por el servicio.  
   
- **Control de error**  
+ **Control de errores**  
  1 indica `SERVICE_ERROR_NORMAL`. Si el servicio no se inicia al iniciar el equipo, el programa de inicio registra el error y muestra un cuadro de mensaje emergente pero continúa con la operación de inicio. Este valor no puede modificarse.  
   
  **Código de salida**  
@@ -64,7 +64,7 @@ El programa Explorador de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.m
  **State**  
  Indica si el servicio está en ejecución, detenido o deshabilitado. "**…**" indica que hay un cambio de estado pendiente.  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Ver también  
  [Servicio SQL Server Browser](../../tools/configuration-manager/sql-server-browser-service.md)  
   
   

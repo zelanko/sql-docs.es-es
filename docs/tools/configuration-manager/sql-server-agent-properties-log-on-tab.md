@@ -1,26 +1,26 @@
 ---
-title: "Propiedades de agente SQL Server (pestaña iniciar sesión) | Documentos de Microsoft"
-ms.custom: 
+title: Propiedades de agente SQL Server (pestaña iniciar sesión) | Documentos de Microsoft
+ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql-non-specified
 ms.prod_service: sql-tools
-ms.service: 
+ms.service: ''
 ms.component: configuration-manager
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: 01fc6329-5d6b-4186-9565-395f375477bb
-caps.latest.revision: 
+caps.latest.revision: 18
 author: stevestein
 ms.author: sstein
 manager: craigg
 ms.workload: Inactive
 ms.openlocfilehash: f74928db1958fbb8ec607bac83b45612a6129e46
 ms.sourcegitcommit: c556eaf60a49af7025db35b7aa14beb76a8158c5
-ms.translationtype: MT
+ms.translationtype: MTE
 ms.contentlocale: es-ES
 ms.lasthandoff: 02/03/2018
 ---
@@ -36,7 +36,7 @@ Utilice la pestaña **Iniciar sesión** del cuadro de diálogo **Propiedades de 
  Especifique una cuenta de sistema local, que no requiere una contraseña. No obstante, la cuenta del sistema local puede restringir la interacción del servicio con otros servidores, en función de los privilegios que se le hayan concedido.  
   
  **Esta cuenta**  
- Especifique una cuenta de usuario local o de dominio que utilice la autenticación de Windows. [!INCLUDE[msCoName](../../includes/msconame-md.md)]le recomienda utilizar una cuenta de usuario de dominio con derechos mínimos para los servicios. Para obtener información acerca de cómo seleccionar una cuenta, vea el tema sobre la configuración de cuentas de servicios de Windows en los Libros en pantalla.  
+ Especifique una cuenta de usuario local o de dominio que utilice la autenticación de Windows. [!INCLUDE[msCoName](../../includes/msconame-md.md)] recomienda utilizar una cuenta de usuario de dominio que tenga derechos mínimos para los servicios. Para obtener información acerca de cómo seleccionar una cuenta, vea el tema sobre la configuración de cuentas de servicios de Windows en los Libros en pantalla.  
   
  **Nombre de cuenta**  
  Escriba el nombre de la cuenta de usuario local o de dominio.  

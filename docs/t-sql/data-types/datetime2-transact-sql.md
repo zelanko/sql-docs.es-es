@@ -1,16 +1,16 @@
 ---
 title: datetime2 (Transact-SQL) | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 7/23/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
-ms.service: 
+ms.service: ''
 ms.component: t-sql|data-types
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - datetime2
@@ -24,16 +24,17 @@ helpviewer_keywords:
 - data types [SQL Server], date and time
 - datetime2 data type [SQL Server]
 ms.assetid: 868017f3-214f-43ef-8536-cc1632a2288f
-caps.latest.revision: 
+caps.latest.revision: 58
 author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: Active
-ms.openlocfilehash: 70a3f27fc59fcc904679040029e47f312017dbe3
-ms.sourcegitcommit: 45e4efb7aa828578fe9eb7743a1a3526da719555
+monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
+ms.openlocfilehash: 4c49b540669ba403d2be278e25bc724b5dea7684
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="datetime2-transact-sql"></a>datetime2 (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -46,7 +47,7 @@ Define una fecha que se combina con una hora del día basada en un reloj de 24 h
 |--------------|-----------|  
 |Sintaxis|**datetime2** [(*precisión de fracciones de segundo*)]|  
 |Uso|DECLARE @MyDatetime2 **datetime2(7)**<br /><br /> CREATE TABLE Table1 ( Column1 **datetime2(7)** )|  
-|Formato de literal de cadena predeterminado<br /><br /> (se usa para el cliente de nivel inferior)|AAAA-MM-DD hh:mm:ss[.fracciones de segundos]<br /><br /> Para más información, vea la sección "Compatibilidad con versiones anteriores de los clientes de niveles inferiores" más adelante.|  
+|Formato de literal de cadena predeterminado<br /><br /> (se usa para el cliente de nivel inferior)|AAAA-MM-DD hh:mm:ss[.fracciones de segundos]<br /><br /> Para más información, vea la sección "Compatibilidad con versiones anteriores de clientes de niveles inferiores" más adelante.|  
 |Intervalo de fechas|De 0001-01-01 a 31.12.99<br /><br /> Del 1 de enero del año 1 después de Cristo al 31 de diciembre de 9999|  
 |Intervalo de horas|De 00:00:00 a 23:59:59.9999999|  
 |Intervalo de ajuste de zona horaria|None|  
@@ -78,7 +79,7 @@ En las siguientes tablas se enumeran los formatos de literales de cadena ISO 860
 La compatibilidad ANSI e ISO 8601 de [date](../../t-sql/data-types/date-transact-sql.md) y [time](../../t-sql/data-types/time-transact-sql.md) es válida también para **datetime2**.
   
 ##  <a name="backward-compatibility-for-down-level-clients"></a>Compatibilidad con versiones anteriores de los clientes de niveles inferiores  
-Algunos clientes de niveles inferiores no admiten los tipos de datos **time**, **date**, **datetime2** y **datetimeoffset**. En la tabla siguiente se muestra la asignación de tipo entre una instancia de nivel superior de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] y los clientes de nivel inferior.
+Algunos clientes de nivel inferior no admiten los tipos de datos **time**, **date**, **datetime2** y **datetimeoffset**. En la tabla siguiente se muestra la asignación de tipo entre una instancia de nivel superior de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] y los clientes de nivel inferior.
   
 |Tipo de datos de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]|El formato del literal de cadena predeterminado se pasó al cliente de nivel inferior|ODBC de nivel inferior|OLEDB de nivel inferior|JDBC de nivel inferior|SQLCLIENT de nivel inferior|  
 | --- | --- | --- | --- | --- | --- |
@@ -107,7 +108,7 @@ SELECT @datetime2 AS '@datetime2', @date AS '@date';
 --2016-12-21 00:00:00.0000000 2016-12-21
 ```  
   
-Cuando la conversión es desde **time(n)**, se copia el componente de fecha y el componente de hora se establece en "1900-01-01". En el siguiente ejemplo se muestran los resultados de convertir un valor `time(7)` en un valor `datetime2`.  
+Cuando la conversión es desde **time(n)**, se copia el componente de hora y el componente de fecha se establece en "1900-01-01". En el siguiente ejemplo se muestran los resultados de convertir un valor `time(7)` en un valor `datetime2`.  
   
 ```sql
 DECLARE @time time(7) = '12:10:16.1234567';
@@ -121,7 +122,7 @@ SELECT @datetime2 AS '@datetime2', @time AS '@time';
 --1900-01-01 12:10:16.1234567 12:10:16.1234567
 ```  
   
-Cuando la conversión es desde **smalldatetime**, se copian las horas y minutos. Los segundos y las fracciones de segundo se establecen en 0. En el código siguiente se muestran los resultados de convertir un valor `smalldatetime` en un valor `datetime2`.  
+Cuando la conversión es desde **smalldatetime**, se copian las horas y los minutos. Los segundos y las fracciones de segundo se establecen en 0. En el código siguiente se muestran los resultados de convertir un valor `smalldatetime` en un valor `datetime2`.  
   
 ```sql
 DECLARE @smalldatetime smalldatetime = '12-01-16 12:32';

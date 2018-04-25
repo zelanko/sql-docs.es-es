@@ -1,35 +1,36 @@
 ---
-title: "Lección 2: Creación y administración de los datos de una tabla jerárquica | Microsoft Docs"
-ms.custom: 
+title: 'Lección 2: Creación y administración de los datos de una tabla jerárquica | Microsoft Docs'
+ms.custom: ''
 ms.date: 03/01/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine
-ms.service: 
+ms.service: ''
 ms.component: tables
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 applies_to:
 - SQL Server 2016
 helpviewer_keywords:
 - HierarchyID
 ms.assetid: 95f55cff-4abb-4c08-97b3-e3ae5e8b24e2
-caps.latest.revision: 
+caps.latest.revision: 10
 author: stevestein
 ms.author: sstein
 manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 2650a8b35801747ae9a3b84fb048bcbeab724121
-ms.sourcegitcommit: 6b4aae3706247ce9b311682774b13ac067f60a79
+ms.openlocfilehash: 591d25ee642df6cda18d8e81c5b2ac6d803053d9
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/18/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="lesson-2-creating-and-managing-data-in-a-hierarchical-table"></a>Lección 2: Crear y administrar los datos de una tabla jerárquica
-[!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)] En la lección 1, ha modificado una tabla existente para usar el tipo de datos **hierarchyid** y ha rellenado la columna **hierarchyid** con la representación de los datos existentes. En esta lección, se iniciará con una nueva tabla e insertará los datos utilizando los métodos jerárquicos. A continuación, se consultarán y manipularán los datos utilizando los métodos jerárquicos.  
+[!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
+En la lección 1, ha modificado una tabla existente para usar el tipo de datos **hierarchyid** y ha rellenado la columna **hierarchyid** con la representación de los datos existentes. En esta lección, se iniciará con una nueva tabla e insertará los datos utilizando los métodos jerárquicos. A continuación, se consultarán y manipularán los datos utilizando los métodos jerárquicos.  
   
 En esta lección se incluyen los temas siguientes:  
   

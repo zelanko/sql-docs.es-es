@@ -1,34 +1,35 @@
 ---
 title: Clase de eventos Lock:Deadlock Chain | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine, sql-database
-ms.service: 
+ms.service: ''
 ms.component: event-classes
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - Deadlock Chain event class
 ms.assetid: 9883127b-aa34-4235-88cc-c161cd2112cc
-caps.latest.revision: 
+caps.latest.revision: 35
 author: stevestein
 ms.author: sstein
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 5b22c7d953bbbe6417c207628b6e3d2faaf0de5a
-ms.sourcegitcommit: 37f0b59e648251be673389fa486b0a984ce22c81
+monikerRange: = azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions
+ms.openlocfilehash: 94bcc84fd109f59d594ce673bdafa7a127ea4924
+ms.sourcegitcommit: beaad940c348ab22d4b4a279ced3137ad30c658a
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/12/2018
+ms.lasthandoff: 04/20/2018
 ---
 # <a name="lockdeadlock-chain-event-class"></a>Lock:Deadlock Chain (clase de eventos)
-[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
-La clase de eventos Lock:Deadlock Chain se produce para cada participante en un interbloqueo.  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+  La clase de eventos Lock:Deadlock Chain se produce para cada participante en un interbloqueo.  
   
  Utilice la clase de eventos Lock:Deadlock Chain para supervisar si se cumplen las condiciones del interbloqueo. Esta información es útil para determinar si los interbloqueos afectan de forma significativa al rendimiento de la aplicación y qué objetos están implicados. Se puede examinar el código de la aplicación que modifica estos objetos para determinar si se pueden realizar cambios para minimizar los interbloqueos.  
   

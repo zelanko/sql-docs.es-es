@@ -1,16 +1,16 @@
 ---
-title: "REVOKE XML (permisos de colección de esquemas de Transact-SQL) | Microsoft Docs"
-ms.custom: 
+title: REVOKE XML (permisos de colección de esquemas de Transact-SQL) | Microsoft Docs
+ms.custom: ''
 ms.date: 08/10/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: pdw, sql-database
-ms.service: 
+ms.service: ''
 ms.component: t-sql|statements
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 dev_langs:
 - TSQL
@@ -19,16 +19,17 @@ helpviewer_keywords:
 - XML schema collections [SQL Server], permissions
 - schema collections [SQL Server], permissions
 ms.assetid: 8ca0973c-30b2-4633-a165-c09b13cc81ae
-caps.latest.revision: 
+caps.latest.revision: 22
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 7a8ffbc542c9a9490f497ff590f6bcf995979ed4
-ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
+monikerRange: '>= aps-pdw-2016 || >= sql-server-2016 || = sqlallproducts-allversions'
+ms.openlocfilehash: f03a2d178c23e567d5c9d422bcc92957dbd275ac
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/25/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="revoke-xml-schema-collection-permissions-transact-sql"></a>REVOKE (permisos de colección de esquemas XML de Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-pdw-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-pdw-md.md)]
@@ -64,7 +65,7 @@ REVOKE [ GRANT OPTION FOR ] permission [ ,...n ] ON
  Especifica un permiso que se puede revocar en una colección de esquemas XML. Para obtener una lista de permisos, vea la sección Comentarios que se muestra posteriormente en este tema.  
   
  ON XML SCHEMA COLLECTION :: [ *schema_name***.** ] *XML_schema_collection_name*  
- Especifica la colección de esquemas XML en la que se va a revocar el permiso. Se requiere el calificador de ámbito (::). Si no se especifica *schema_name*, se usa el esquema predeterminado. Si se especifica *schema_name*, se requiere el calificador de ámbito de esquema (.).  
+ Especifica la colección de esquemas XML en la que se va a revocar el permiso. Se requiere el calificador de ámbito (::). Si no se especifica *schema_name*, se usa el esquema predeterminado. Si se especifica *schema_name*, se necesita el calificador de ámbito de esquema (.).  
   
  GRANT OPTION  
  Indica que se revocará el derecho de conceder el permiso especificado a otras entidades de seguridad. No se revocará el permiso.  
@@ -81,7 +82,7 @@ REVOKE [ GRANT OPTION FOR ] permission [ ,...n ] ON
  { TO | FROM } \<*database_principal*>  
  Especifica la entidad de seguridad desde la que se revoca el permiso.  
   
- AS \<database_principal> Especifica una entidad de seguridad de la que la entidad de seguridad que ejecuta esta consulta deriva su derecho a revocar el permiso.  
+ AS \<database_principal> especifica una entidad de seguridad de la que la entidad de seguridad que ejecuta esta consulta deriva su derecho de revocar el permiso.  
   
  *Database_user*  
  Especifica un usuario de base de datos.  
@@ -108,7 +109,7 @@ REVOKE [ GRANT OPTION FOR ] permission [ ,...n ] ON
  Especifica un usuario de base de datos sin entidad de seguridad de servidor correspondiente.  
   
 ## <a name="remarks"></a>Notas  
- Puede ver información sobre colecciones de esquemas XML en la vista de catálogo [sys.xml_schema_collections](../../relational-databases/system-catalog-views/sys-xml-schema-collections-transact-sql.md).  
+ Encontrará información sobre las colecciones de esquemas XML en la vista de catálogo [sys.xml_schema_collections](../../relational-databases/system-catalog-views/sys-xml-schema-collections-transact-sql.md).  
   
  Se produce un error en la instrucción si no se especifica CASCADE al revocar un permiso de una entidad de seguridad que tenía concedido ese permiso con GRANT OPTION.  
   

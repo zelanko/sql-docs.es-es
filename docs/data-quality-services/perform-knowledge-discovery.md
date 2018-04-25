@@ -18,18 +18,21 @@ f1_keywords:
 - sql13.dqs.kb.kbanalyze.f1
 - sql13.dqs.kb.kbmap.f1
 ms.assetid: 34a0ea16-02e6-46ed-90bc-dede68687f63
-caps.latest.revision: ''
+caps.latest.revision: 38
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 0958845553a92f18e64c5fd39a3a62229bf9ed7b
-ms.sourcegitcommit: 34766933e3832ca36181641db4493a0d2f4d05c6
+ms.openlocfilehash: cd936e2ceeba5b2b20f922bbd6a59d430c44de4b
+ms.sourcegitcommit: bb044a48a6af9b9d8edb178dc8c8bd5658b9ff68
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/22/2018
+ms.lasthandoff: 04/18/2018
 ---
 # <a name="perform-knowledge-discovery"></a>Realizar la detección de conocimiento
+
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
+
   En este tema se describe cómo crear una base de conocimiento mediante la detección de conocimiento. Durante el proceso de detección, [!INCLUDE[ssDQSnoversion](../includes/ssdqsnoversion-md.md)] (DQS) analiza los datos de un origen de datos de ejemplo mediante un proceso asistido por PC, y agrega el conocimiento adquirido a la base de conocimiento. Este conocimiento se puede modificar y mejorar en el paso **Administrar valores del dominio** de la actividad de detección de conocimiento, o en la actividad de administración de dominios.  
   
  La detección de conocimiento es un proceso asistido por PC que consta de tres pasos que deben completarse obligatoriamente.  

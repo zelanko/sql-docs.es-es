@@ -1,8 +1,8 @@
 ---
 title: Destinos para eventos extendidos en SQL Server | Microsoft Docs
 ms.custom: ''
-ms.date: 04/02/2018
-ms.prod: sql-non-specified
+ms.date: 04/17/2018
+ms.prod: sql
 ms.prod_service: database-engine, sql-database
 ms.service: ''
 ms.reviewer: ''
@@ -16,11 +16,12 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 06ac9f1d58fef9a2c8344de8e56e9bccb7024a31
-ms.sourcegitcommit: 094c46e7fa6de44735ed0040c65a40ec3d951b75
+monikerRange: = azuresqldb-current || = azuresqldb-mi-current || >= sql-server-2016 || = sqlallproducts-allversions
+ms.openlocfilehash: 90dc83f080a2b2b64771ccb48e5cc3839e0a67e7
+ms.sourcegitcommit: bb044a48a6af9b9d8edb178dc8c8bd5658b9ff68
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/06/2018
+ms.lasthandoff: 04/18/2018
 ---
 # <a name="targets-for-extended-events-in-sql-server"></a>Destinos para eventos extendidos en SQL Server
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -154,11 +155,14 @@ El destino **event_file** escribe el resultado de la sesión de eventos desde el
 
 - El sistema usa el nombre de archivo que elige como prefijo al que se anexa un entero largo basado en fecha y hora, seguido de la extensión .xel.
 
+::: moniker range="= azuresqldb-current || = azuresqldb-mi-current || = sqlallproducts-allversions"
+
 > [!NOTE]
 > Azure SQL Database admite el destino **event_file**, pero solo usando un blob en Azure Storage para el resultado. SQL Database no puede almacenar el resultado del evento en un archivo en la unidad de disco duro local.
+>
 > Para ver un ejemplo de código de **event_file** particular de SQL Database (y de Instancia administrada de SQL Database), vea [Código de destino del archivo de evento para eventos extendidos en SQL Database](https://docs.microsoft.com/azure/sql-database/sql-database-xevent-code-event-file).
 
-<!-- After OPS Versioning is live, the above !NOTE could be converted into a "3colon ZONE".  GeneMi = MightyPen. -->
+::: moniker-end
 
 
 #### <a name="create-event-session-with-eventfile-target"></a>CREATE EVENT SESSION con destino **event_file**

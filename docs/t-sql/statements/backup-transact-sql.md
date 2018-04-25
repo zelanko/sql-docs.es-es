@@ -2,7 +2,7 @@
 title: BACKUP (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/30/2018
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: sql-database
 ms.service: ''
 ms.component: t-sql|statements
@@ -53,11 +53,12 @@ author: barbkess
 ms.author: barbkess
 manager: craigg
 ms.workload: Active
-ms.openlocfilehash: ad21db12a4d147f8d999c7774a773082cbc6b1b5
-ms.sourcegitcommit: 059fc64ba858ea2adaad2db39f306a8bff9649c2
+monikerRange: = azuresqldb-mi-current || >= sql-server-2016 || = sqlallproducts-allversions
+ms.openlocfilehash: e49f7f6f0849382ba7558c106c339c331679a5b5
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/04/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="backup-transact-sql"></a>BACKUP (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdbmi-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdbmi-xxxx-xxx-md.md )]
@@ -212,7 +213,7 @@ LOG **Se aplica a:** SQL Server
   
  Para más información, vea [Copias de seguridad de archivos completas &#40;SQL Server&#41;](../../relational-databases/backup-restore/full-file-backups-sql-server.md) y [Realizar copias de seguridad de archivos y grupos de archivos &#40;SQL Server&#41;](../../relational-databases/backup-restore/back-up-files-and-filegroups-sql-server.md).  
   
- READ_WRITE_FILEGROUPS [ **,** FILEGROUP = { *logical_filegroup_name* | **@***logical_filegroup_name_var* } [ **,**...*n* ] ]  
+ READ_WRITE_FILEGROUPS [ **,** FILEGROUP = { *logical_filegroup_name* | **@***logical_filegroup_name_var* } [ **,**...* n* ] ]  
  Especifica una copia de seguridad parcial. Una copia de seguridad parcial incluye todos los archivos de lectura/escritura en una base de datos: el grupo de archivos principal y los grupos de archivos secundarios de lectura/escritura, así como los grupos de archivos o archivos de solo lectura especificados.  
   
  READ_WRITE_FILEGROUPS  
@@ -233,7 +234,7 @@ TO \<backup_device> [ **,**...*n* ] Indica que el conjunto de [dispositivos de c
   
 \<backup_device> **Se aplica a:** SQL Server Especifica el dispositivo de copia de seguridad físico o lógico que se va a usar en la operación de copia de seguridad.  
   
- { *logical_device_name* | **@***logical_device_name_var* } **Se aplica a:** SQL Server Es el nombre lógico del dispositivo de copia de seguridad en que se hace la copia de seguridad de la base de datos. El nombre lógico debe seguir las reglas definidas para los identificadores. Si se proporciona como una variable (@*logical_device_name_var*), el nombre del dispositivo de copia de seguridad se puede especificar como una constante de cadena (@*logical_device_name_var***=** nombre lógico del dispositivo de copia de seguridad) o como una variable de tipo de datos de cadena de caracteres, excepto los tipos de datos **ntext** o **text**.  
+ { *logical_device_name* | **@***logical_device_name_var* } **Se aplica a:** SQL Server Es el nombre lógico del dispositivo de copia de seguridad en que se hace la copia de seguridad de la base de datos. El nombre lógico debe seguir las reglas definidas para los identificadores. Si se proporciona como una variable (@* logical_device_name_var *), el nombre del dispositivo de copia de seguridad se puede especificar como una constante de cadena (@* logical_device_name_var***=** nombre lógico del dispositivo de copia de seguridad) o como una variable de tipo de datos de cadena de caracteres, excepto los tipos de datos **ntext** o **text**.  
   
  { DISK | TAPE | URL} **=** { **'***physical_device_name***'** | **@***physical_device_name_var* | 'NUL' } **Se aplica a:** DISK, TAPE y URL se aplican a SQL Server. URL solo se aplica a Instancia administrada de SQL Database Especifica un archivo de disco o un dispositivo de cinta, o un servicio de Windows Azure Blob Storage. El formato de las direcciones URL solo se usa para crear copias de seguridad en el servicio Microsoft Azure Storage. Para obtener información y ejemplos, vea [Copia de seguridad y restauración de SQL Server con el servicio Microsoft Azure Blob Storage](../../relational-databases/backup-restore/sql-server-backup-and-restore-with-microsoft-azure-blob-storage-service.md). Para ver un tutorial, vea [Tutorial: Copias de seguridad y restauración de SQL Server en el servicio Azure Blob Storage](~/relational-databases/tutorial-sql-server-backup-and-restore-to-azure-blob-storage-service.md). 
 
@@ -358,7 +359,7 @@ Si no se especifica ninguna opción, la fecha de expiración se determina con el
 > [!IMPORTANT]  
 > Estas opciones solo impiden que [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] sobrescriba un archivo. Las cintas se pueden borrar utilizando otros métodos, y los archivos de disco se pueden eliminar usando el sistema operativo. Para obtener más información acerca de la comprobación de la expiración, vea SKIP y FORMAT en este tema.  
   
-EXPIREDATE **=** { **'***date***'** | **@***date_var* } Especifica cuándo expira el conjunto de copia de seguridad y se puede sobrescribir. Si se proporciona como una variable (@*date_var*), esta fecha debe seguir el formato **datetime** configurado para el sistema y se debe especificar de uno de los siguientes modos:  
+EXPIREDATE **=** { **'***date***'** | **@***date_var* } Especifica cuándo expira el conjunto de copia de seguridad y se puede sobrescribir. Si se proporciona como una variable (@* date_var*), esta fecha debe seguir el formato **datetime** configurado para el sistema y se debe especificar de uno de los siguientes modos:  
   
 -   Constante de cadena (@*date_var* **=** date)  
 -   Variable de un tipo de datos de cadena de caracteres (excepto los tipos de datos **ntext** o **text**)  

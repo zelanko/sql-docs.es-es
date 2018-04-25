@@ -1,16 +1,16 @@
 ---
 title: ALTER WORKLOAD GROUP (Transact-SQL) | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 01/04/2018
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: sql-database
-ms.service: 
+ms.service: ''
 ms.component: t-sql|statements
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - ALTER_WORKLOAD_GROUP_TSQL
@@ -20,23 +20,23 @@ dev_langs:
 helpviewer_keywords:
 - ALTER WORKLOAD GROUP statement
 ms.assetid: 957addce-feb0-4e54-893e-5faca3cd184c
-caps.latest.revision: 
+caps.latest.revision: 56
 author: barbkess
 ms.author: barbkess
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: d48a892ef00610cc0d69ff8d2a36e0fce4be7704
-ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
+ms.openlocfilehash: 4bdc49a57b8b864284fa4411ddb0b970bed1c704
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/25/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="alter-workload-group-transact-sql"></a>ALTER WORKLOAD GROUP (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
   Cambia una configuración existente del grupo de cargas de trabajo de Resource Governor y, opcionalmente, la asigna a un grupo de recursos de Resource Governor.  
   
- ![Icono de vínculo a temas](../../database-engine/configure-windows/media/topic-link.gif "Icono de vínculo a temas") [Convenciones de sintaxis de Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md).  
+ ![Icono de vínculo de tema](../../database-engine/configure-windows/media/topic-link.gif "Topic link icon") [Convenciones de sintaxis de Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md).  
   
 ## <a name="syntax"></a>Sintaxis  
   
@@ -56,10 +56,10 @@ ALTER WORKLOAD GROUP { group_name | "default" }
   
 ## <a name="arguments"></a>Argumentos  
  *group_name* | "**default**"  
- Es el nombre de un grupo de cargas de trabajo definido por un usuario ya existente o el grupo de cargas de trabajo predeterminado de Resource Governor.  
+ Es el nombre de un grupo de cargas de trabajo definido por un usuario ya existente o el grupo de cargas de trabajo predeterminado del regulador de recursos.  
   
 > [!NOTE]  
-> Resource Governor crea los grupos "default" e internos al instalarse [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
+> El regulador de recursos crea los grupos "default" e internos al instalarse [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
  La opción "default" debe estar incluida entre comillas ("") o corchetes ([]) si se utiliza con ALTER WORKLOAD GROUP para evitar el conflicto con DEFAULT, que es una palabra reservada del sistema. Para obtener más información, vea [Database Identifiers](../../relational-databases/databases/database-identifiers.md).  
   
@@ -84,13 +84,13 @@ ALTER WORKLOAD GROUP { group_name | "default" }
 > [!NOTE]  
 > La cantidad especificada se refiere únicamente a la memoria concedida para la ejecución de la consulta.  
   
- *value* debe ser 0 o un entero positivo. El intervalo permitido para *value* es de 0 a 100. El valor predeterminado de *value* es 25.  
+ *valor* debe ser 0 o un entero positivo. El intervalo permitido para *value* es de 0 a 100. El valor predeterminado de *valor* es 25.  
   
  Observe lo siguiente:  
   
--   Establecer *value* en 0 evita la ejecución de consultas con operaciones SORT y HASH JOIN en grupos de cargas de trabajo definidos por el usuario.  
+-   Establecer *valor* en 0 evita la ejecución de consultas con operaciones SORT y HASH JOIN en grupos de cargas de trabajo definidos por el usuario.  
   
--   No es recomendable establecer *value* en un valor superior a 70 porque es posible que el servidor no pueda reservar suficiente memoria si se están ejecutando otras consultas simultáneas. Esto puede dar lugar al final a un error de tiempo de espera de consulta 8645.  
+-   No es recomendable establecer *valor* en un valor superior a 70 porque es posible que el servidor no pueda reservar memoria suficiente si se están ejecutando otras consultas simultáneas. Esto puede dar lugar al final a un error de tiempo de espera de consulta 8645.  
   
 > [!NOTE]  
 >  Si los requisitos de memoria de consulta superan el límite especificado por este parámetro, el servidor hace lo siguiente:  
@@ -102,10 +102,10 @@ ALTER WORKLOAD GROUP { group_name | "default" }
 >  Tenga en cuenta que ambos casos están sujetos a un error de tiempo de espera 8645 si el servidor no tiene suficiente memoria física.  
   
  REQUEST_MAX_CPU_TIME_SEC =*value*  
- Especifica la cantidad máxima de tiempo de CPU, en segundos, que puede usar una solicitud. *value* debe ser 0 o un entero positivo. El valor predeterminado de *value* es 0, que indica una cantidad ilimitada.  
+ Especifica la cantidad máxima de tiempo de CPU, en segundos, que puede usar una solicitud. *valor* debe ser 0 o un entero positivo. El valor predeterminado de *value* es 0, que indica una cantidad ilimitada.  
   
 > [!NOTE]  
-> De forma predeterminada, Resource Governor no evita que una solicitud continúe si se supera el tiempo máximo. Sin embargo, se generará un evento. Para obtener más información, vea [CPU Threshold Exceeded (clase de eventos)](../../relational-databases/event-classes/cpu-threshold-exceeded-event-class.md). 
+> De forma predeterminada, Resource Governor no evita que una solicitud continúe si se supera el tiempo máximo. Sin embargo, se generará un evento. Para obtener más información, vea [Clase de eventos Umbral de la CPU superado](../../relational-databases/event-classes/cpu-threshold-exceeded-event-class.md). 
 
 > [!IMPORTANT]
 > A partir de [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)] CU3 y si se usa la [marca de seguimiento 2422](../../t-sql/database-console-commands/dbcc-traceon-trace-flags-transact-sql.md), Resource Governor anula una solicitud cuando se supera el tiempo máximo.
@@ -140,7 +140,7 @@ ALTER WORKLOAD GROUP { group_name | "default" }
  Una vez configurado DOP, solo se puede reducir ante la concesión de presión de memoria. La reconfiguración del grupo de cargas de trabajo no es visible mientras se espera en la cola de concesión de memoria.  
   
  GROUP_MAX_REQUESTS =*value*  
- Especifica el número máximo de solicitudes simultáneas que pueden ejecutarse en el grupo de cargas de trabajo. *value* debe ser 0 o un entero positivo. El valor predeterminado de *value*, 0, permite solicitudes ilimitadas. Cuando se alcanza el máximo de solicitudes simultáneas, un usuario de ese grupo puede iniciar sesión, pero se coloca en estado de espera hasta que las solicitudes simultáneas caigan por debajo del valor especificado.  
+ Especifica el número máximo de solicitudes simultáneas que pueden ejecutarse en el grupo de cargas de trabajo. *valor* debe ser 0 o un entero positivo. El valor predeterminado de *valor*, 0, permite solicitudes ilimitadas. Cuando se alcanza el máximo de solicitudes simultáneas, un usuario de ese grupo puede iniciar sesión, pero se coloca en estado de espera hasta que las solicitudes simultáneas caigan por debajo del valor especificado.  
   
  USING { *pool_name* | "**default**" }  
  Asocia el grupo de cargas de trabajo al grupo de recursos definido por el usuario identificado por *pool_name*, lo que coloca el grupo de cargas de trabajo en el grupo de recursos. Si no se proporciona *pool_name* o si no se usa el argumento USING, el grupo de cargas de trabajo se coloca en el grupo predeterminado de Resource Governor que se haya definido previamente.  
@@ -162,13 +162,13 @@ ALTER WORKLOAD GROUP { group_name | "default" }
 > [!CAUTION]  
 >  El borrado de los planes almacenados en caché de un grupo de recursos asociado a más de un grupo de cargas de trabajo afecta a todos los grupos de cargas de trabajo con el grupo de recursos definido por el usuario identificado por *pool_name*.  
   
- Si va a ejecutar instrucciones de DDL, se recomienda familiarizarse primero con los estados de Resource Governor. Para obtener más información, vea [Resource Governor](../../relational-databases/resource-governor/resource-governor.md).  
+ Si va a ejecutar instrucciones de DDL, se recomienda familiarizarse primero con los estados del regulador de recursos. Para obtener más información, vea [Resource Governor](../../relational-databases/resource-governor/resource-governor.md).  
   
- REQUEST_MEMORY_GRANT_PERCENT: en [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] se permite que la creación de índices use más memoria del área de trabajo que la concedida inicialmente para mejorar el rendimiento. Resource Governor admite este tratamiento especial en versiones posteriores; sin embargo, la concesión inicial y cualquier concesión de memoria adicional están limitadas por la configuración del grupo de cargas de trabajo y del grupo de recursos de servidor.  
+ REQUEST_MEMORY_GRANT_PERCENT: en [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] se permite que la creación de índices use más memoria del área de trabajo que la concedida inicialmente para mejorar el rendimiento. El regulador de recursos admite este tratamiento especial en versiones posteriores; sin embargo, la concesión inicial y cualquier concesión de memoria adicional están limitadas por la configuración del grupo de cargas de trabajo y del grupo de recursos de servidor.  
   
  **Creación de índices en una tabla con particiones**  
   
- La memoria usada para la creación de índices en una tabla con particiones no alineada es proporcional al número de particiones involucradas.  Si la memoria total necesaria supera el límite por consulta (REQUEST_MAX_MEMORY_GRANT_PERCENT) impuesto por la configuración del grupo de cargas de trabajo de Resource Governor, puede que esta creación de índices no se ejecute. Dado que el grupo de cargas de trabajo "predeterminado" permite que una consulta supere el límite por consulta con la memoria mínima necesaria para iniciar la compatibilidad con [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)], es posible que el usuario pueda ejecutar la misma creación de índices en el grupo de cargas de trabajo "predeterminado" si el grupo de recursos de servidor "predeterminado" tiene configurada una memoria total suficiente para ejecutar dicha consulta.  
+ La memoria usada para la creación de índices en una tabla con particiones no alineada es proporcional al número de particiones involucradas.  Si la memoria total necesaria supera el límite por consulta (REQUEST_MAX_MEMORY_GRANT_PERCENT) impuesto por la configuración del grupo de cargas de trabajo del regulador de recursos, puede que esta creación de índices no se ejecute. Dado que el grupo de cargas de trabajo "predeterminado" permite que una consulta supere el límite por consulta con la memoria mínima necesaria para iniciar la compatibilidad con [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)], es posible que el usuario pueda ejecutar la misma creación de índices en el grupo de cargas de trabajo "predeterminado" si el grupo de recursos de servidor "predeterminado" tiene configurada una memoria total suficiente para ejecutar dicha consulta.  
   
 ## <a name="permissions"></a>Permisos  
  Requiere el permiso CONTROL SERVER.  
@@ -195,7 +195,7 @@ GO
 ```  
   
 ## <a name="see-also"></a>Ver también  
- [Resource Governor](../../relational-databases/resource-governor/resource-governor.md)   
+ [Regulador de recursos](../../relational-databases/resource-governor/resource-governor.md)   
  [CREATE WORKLOAD GROUP &#40;Transact-SQL&#41;](../../t-sql/statements/create-workload-group-transact-sql.md)   
  [DROP WORKLOAD GROUP &#40;Transact-SQL&#41;](../../t-sql/statements/drop-workload-group-transact-sql.md)   
  [CREATE RESOURCE POOL &#40;Transact-SQL&#41;](../../t-sql/statements/create-resource-pool-transact-sql.md)   

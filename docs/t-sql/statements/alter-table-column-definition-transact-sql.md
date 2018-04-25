@@ -1,16 +1,16 @@
 ---
 title: column_definition (Transact-SQL) | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 05/05/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
-ms.service: 
+ms.service: ''
 ms.component: t-sql|statements
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - column_definition
@@ -23,16 +23,17 @@ helpviewer_keywords:
 - column properties [SQL Server]
 - column definitions [SQL Server]
 ms.assetid: a1742649-ca29-4d9b-9975-661cdbf18f78
-caps.latest.revision: 
+caps.latest.revision: 78
 author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: d50bda05bd0487a60e9a909500be2ea3d65fed92
-ms.sourcegitcommit: 45e4efb7aa828578fe9eb7743a1a3526da719555
+monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
+ms.openlocfilehash: 40b95f6475239b533811526025dedf3055b5c09b
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="alter-table-columndefinition-transact-sql"></a>ALTER TABLE column_definition (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -110,10 +111,10 @@ column_name <data_type>
 -   El esquema **dbo** de la base de datos actual.  
   
 *precisión*  
- Es la precisión del tipo de datos especificado. Para más información sobre los valores de precisión válidos, vea [Precision, Scale, and Length &#40;Transact-SQL&#41;](../../t-sql/data-types/precision-scale-and-length-transact-sql.md) [Precisión, escala y longitud &#40;Transact-SQL&#41;].  
+ Es la precisión del tipo de datos especificado. Para obtener más información sobre los valores de precisión válidos, vea [Precisión, escala y longitud &#40;Transact-SQL&#41;](../../t-sql/data-types/precision-scale-and-length-transact-sql.md).  
   
 *escala*  
- Es la escala del tipo de datos especificado. Para más información sobre los valores de escala válidos, vea [Precision, Scale, and Length &#40;Transact-SQL&#41;](../../t-sql/data-types/precision-scale-and-length-transact-sql.md) [Precisión, escala y longitud &#40;Transact-SQL&#41;].  
+ Es la escala del tipo de datos especificado. Para obtener más información sobre los valores de escala válidos, vea [Precisión, escala y longitud &#40;Transact-SQL&#41;](../../t-sql/data-types/precision-scale-and-length-transact-sql.md).  
   
 **max**  
  Solo se aplica a los tipos de datos **varchar**, **nvarchar** y **varbinary**. Éstos se utilizan para almacenar 2^31 bytes de datos de caracteres y binarios y 2^30 bytes de datos Unicode.  
@@ -193,7 +194,7 @@ ROWGUIDCOL
  ROWGUIDCOL no impone la unicidad de los valores almacenados en la columna. Asimismo, tampoco genera automáticamente valores para nuevas filas que se insertan en la tabla. Para generar valores únicos para cada columna, utilice la función NEWID en instrucciones INSERT o especifique la función NEWID como la predeterminada para la columna. Para más información, vea [NEWID &#40;Transact-SQL&#41;](../../t-sql/functions/newid-transact-sql.md) e [INSERT &#40;Transact-SQL&#41;](../../t-sql/statements/insert-transact-sql.md).  
   
 SPARSE  
- Indica que la columna es una columna dispersa. El almacenamiento de columnas dispersas está optimizado para los valores NULL. Las columnas dispersas no se pueden designar como NOT NULL. Para obtener restricciones adicionales y más información sobre columnas dispersas, vea [Usar columnas dispersas](../../relational-databases/tables/use-sparse-columns.md).  
+ Indica que la columna es una columna dispersa. El almacenamiento de columnas dispersas está optimizado para los valores NULL. Las columnas dispersas no se pueden designar como NOT NULL. Para conocer otras restricciones y leer más información sobre columnas dispersas, vea [Usar columnas dispersas](../../relational-databases/tables/use-sparse-columns.md).  
   
 \<column_constraint>  
  Para obtener las definiciones de los argumentos de restricción de columna, vea [column_constraint &#40;Transact-SQL&#41;](../../t-sql/statements/alter-table-column-constraint-transact-sql.md).  
@@ -209,7 +210,7 @@ ENCRYPTION_TYPE = { DETERMINISTIC | RANDOMIZED }
   
  El**cifrado aleatorio** utiliza un método que cifra los datos de una manera menos predecible. El cifrado aleatorio es más seguro, pero impide las búsquedas de igualdad, la agrupación y la unión en columnas cifradas. No se pueden indizar columnas que usen cifrado aleatorio.  
   
- Use el cifrado determinista para las columnas que se vayan a usar como parámetros de búsqueda o de agrupación, como por ejemplo, un número de identificación de gobierno. Use el cifrado aleatorio para datos como números de tarjeta de crédito, que no estén agrupados con otros registros ni se estén usando para combinar tablas, y en los que no se realicen búsquedas porque se estén usando otras columnas (por ejemplo, un número de transacción) para buscar la fila que contiene la columna cifrada en cuestión.  
+ Use el cifrado determinista para las columnas que se vayan a usar como parámetros de búsqueda o de agrupación, como por ejemplo, un número de identificación gubernamental. Use el cifrado aleatorio para datos como números de tarjeta de crédito, que no estén agrupados con otros registros ni se estén usando para combinar tablas, y en los que no se realicen búsquedas porque se estén usando otras columnas (por ejemplo, un número de transacción) para buscar la fila que contiene la columna cifrada en cuestión.  
   
  Las columnas deben ser de un tipo de datos aplicable.  
   
@@ -233,7 +234,7 @@ ADD MASKED WITH ( FUNCTION = ' *mask_function* ')
   
 -   random()  
   
- Para conocer más parámetros de función, vea [Enmascaramiento dinámico de datos](../../relational-databases/security/dynamic-data-masking.md).  
+ Para conocer más parámetros de función, vea [Enmascaramiento de datos dinámicos](../../relational-databases/security/dynamic-data-masking.md).  
   
 ## <a name="remarks"></a>Notas  
  Si se agrega una columna que tiene un tipo de datos **uniqueidentifier**, se puede definir con un valor predeterminado que use la función NEWID() para proporcionar los valores de identificador único de la nueva columna para cada fila existente en la tabla.  

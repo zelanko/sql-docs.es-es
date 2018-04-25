@@ -15,21 +15,24 @@ ms.topic: article
 f1_keywords:
 - sql13.dqs.clienthome.f1
 ms.assetid: 7c6ec469-bc7d-4d19-8e21-11dcf8ade108
-caps.latest.revision: ''
+caps.latest.revision: 14
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: ec74905b85cc048e84d7cd4996cfb02ff03191a4
-ms.sourcegitcommit: 34766933e3832ca36181641db4493a0d2f4d05c6
+ms.openlocfilehash: 2cfbc7192c1e8ecb4b8873ecade45a0b3f67a4e8
+ms.sourcegitcommit: bb044a48a6af9b9d8edb178dc8c8bd5658b9ff68
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/22/2018
+ms.lasthandoff: 04/18/2018
 ---
 # <a name="data-quality-client-home-screen"></a>Página de inicio del cliente de calidad de datos
+
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
+
   Utilice esta pantalla para obtener acceso a las interfaces de usuario de cada uno de los tres grupos principales de tareas de [!INCLUDE[ssDQSnoversion](../includes/ssdqsnoversion-md.md)] (DQS): administración de bases de conocimiento, proyectos de calidad de datos y administración.  
   
-## <a name="options"></a>.  
+## <a name="options"></a>Opciones  
   
 ### <a name="knowledge-base-management"></a>Administración de bases de conocimiento  
  Una base de conocimiento de DQS es un repositorio de metadatos que DQS utiliza para mejorar la calidad de los datos. Estos metadatos los crean tanto la plataforma DQS en un proceso de detección de conocimiento asistido por PC como el administrador de datos en un proceso interactivo de administración de dominios.  

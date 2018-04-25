@@ -13,18 +13,21 @@ ms.technology:
 ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: 830e33bc-dd15-4f8e-a4ac-d8634b78fe45
-caps.latest.revision: ''
+caps.latest.revision: 9
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 4d2e84f851fb8fdba29424de7ee9664b4724e2ec
-ms.sourcegitcommit: 34766933e3832ca36181641db4493a0d2f4d05c6
+ms.openlocfilehash: d0b805297ba84fe30dbc393dd73a968bc32f6a52
+ms.sourcegitcommit: bb044a48a6af9b9d8edb178dc8c8bd5658b9ff68
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/22/2018
+ms.lasthandoff: 04/18/2018
 ---
 # <a name="detaching-and-attaching-dqs-databases"></a>Separar y adjuntar bases de datos de DQS
+
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
+
   En este tema se describe cómo adjuntar y separar las bases de datos de DQS.  
   
 ##  <a name="BeforeYouBegin"></a> Antes de empezar  
@@ -49,7 +52,7 @@ ms.lasthandoff: 03/22/2018
 -   Debe disponer del rol dqs_administrator en la base de datos DQS_MAIN para terminar las actividades o detener los procesos en ejecución en DQS.  
   
 ##  <a name="Detach"></a> Separar bases de datos de DQS  
- Cuando se separa una base de datos de DQS mediante SQL Server Management Studio, los archivos separados permanecen en el equipo, y se pueden volver a adjuntar a la misma instancia de SQL Server o mover a otro servidor y adjuntarlos allí. Generalmente, los archivos de base de datos de DQS están disponibles en la ubicación siguiente en el equipo de Data Quality Services: C:\Archivos de programa\Microsoft SQL Server\MSSQL13.*<nombre_instancia>*\MSSQL\DATA.  
+ Cuando se separa una base de datos de DQS mediante SQL Server Management Studio, los archivos separados permanecen en el equipo, y se pueden volver a adjuntar a la misma instancia de SQL Server o mover a otro servidor y adjuntarlos allí. Generalmente, los archivos de base de datos de DQS están disponibles en la ubicación siguiente en el equipo de Data Quality Services: C:\Archivos de programa\Microsoft SQL Server\MSSQL13.*<nombre_instancia>* \MSSQL\DATA.  
   
 1.  Inicie Microsoft SQL Server Management Studio y conéctese a la instancia adecuada de SQL Server.  
   

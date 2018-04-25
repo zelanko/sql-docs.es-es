@@ -1,16 +1,16 @@
 ---
 title: ALTER RESOURCE POOL (Transact-SQL) | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 05/01/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: sql-database
-ms.service: 
+ms.service: ''
 ms.component: t-sql|statements
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - ALTER_RESOURCE_POOL_TSQL
@@ -20,16 +20,16 @@ dev_langs:
 helpviewer_keywords:
 - ALTER RESOURCE POOL
 ms.assetid: 9c1c4cfb-0e3b-4f01-bf57-3fce94c7d1d4
-caps.latest.revision: 
+caps.latest.revision: 47
 author: barbkess
 ms.author: barbkess
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 4edf3d8f20cc3705a6303d55f471dfa74c250f74
-ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
+ms.openlocfilehash: c6b9a6c43d61573ca5bc895ac5f9ef8d0ee9715f
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/25/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="alter-resource-pool-transact-sql"></a>ALTER RESOURCE POOL (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -74,13 +74,13 @@ ALTER RESOURCE POOL { pool_name | "default" }
 > [!NOTE]  
 >  Todos los grupos de cargas de trabajo y de recursos predefinidos usan nombres en minúsculas, como "predeterminado". Debe tenerse esto en cuenta en los servidores que usan una intercalación que distingue entre mayúsculas y minúsculas. En los servidores que usan una intercalación que no distingue entre mayúsculas y minúsculas, como SQL_Latin1_General_CP1_CI_AS, los nombres "predeterminado" y "Predeterminado" son equivalentes.  
   
- MIN_CPU_PERCENT =*valor*  
+ MIN_CPU_PERCENT =*value*  
  Especifica el ancho banda de la CPU promedio garantizado para todas las solicitudes en el grupo de recursos de servidor cuando hay contención de CPU. *valor* es un entero con un valor predeterminado de 0. El intervalo permitido para *value* es de 0 a 100.  
   
  MAX_CPU_PERCENT =*value*  
  Especifica el promedio máximo de ancho banda de CPU que recibirán todas las solicitudes en el grupo de recursos de servidor cuando hay contención de CPU. *value* es un entero con un valor predeterminado de 100. El intervalo permitido para *value* es de 1 a 100.  
   
- CAP_CPU_PERCENT =*valor*  
+ CAP_CPU_PERCENT =*value*  
  **Se aplica a**: desde [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] hasta [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].  
   
  Especifica la capacidad máxima de CPU de destino para las solicitudes del grupo de recursos. *value* es un entero con un valor predeterminado de 100. El intervalo permitido para *value* es de 1 a 100.  
@@ -105,18 +105,18 @@ INNER JOIN sys.dm_os_schedulers AS sc
       AND sc.scheduler_id < 1048576;  
 ```  
   
- MIN_MEMORY_PERCENT =*valor*  
+ MIN_MEMORY_PERCENT =*value*  
  Especifica la cantidad mínima de memoria reservada para este grupo de recursos de servidor que no se puede compartir con otros grupos de recursos de servidor. *valor* es un entero con un valor predeterminado de 0. El intervalo permitido para *value* es de 0 a 100.  
   
  MAX_MEMORY_PERCENT =*value*  
  Especifica la memoria total del servidor que puede ser utilizada por las solicitudes en este grupo de recursos de servidor. *value* es un entero con un valor predeterminado de 100. El intervalo permitido para *value* es de 1 a 100.  
   
- MIN_IOPS_PER_VOLUME =*valor*  
+ MIN_IOPS_PER_VOLUME =*value*  
  **Se aplica a**: desde [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] hasta [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].  
   
  Especifica el número mínimo de operaciones de E/S por segundo (IOPS) por volumen de disco que se deben reservar para el grupo de recursos de servidor. El intervalo permitido para *value* es de 0 a 2^31-1 (2.147.483.647). Especifique 0 si no desea indicar un umbral mínimo para el grupo.  
   
- MAX_IOPS_PER_VOLUME =*valor*  
+ MAX_IOPS_PER_VOLUME =*value*  
  **Se aplica a**: desde [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] hasta [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].  
   
  Especifica el número máximo de operaciones de E/S por segundo (IOPS) por volumen de disco que se deben permitir para el grupo de recursos de servidor. El intervalo permitido para *value* es de 0 a 2^31-1 (2.147.483.647). Especifique 0 para establecer un umbral ilimitado para el grupo. El valor predeterminado es 0.  

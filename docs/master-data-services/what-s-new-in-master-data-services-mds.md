@@ -13,18 +13,21 @@ ms.technology:
 ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: ad530f60-d480-4457-ba7a-93a10c8a1695
-caps.latest.revision: ''
+caps.latest.revision: 85
 author: leolimsft
 ms.author: lle
 manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 583d8f49803b7a9d527583644540c7d93e103cf6
-ms.sourcegitcommit: 6ac1956307d8255dc544e1063922493b30907b80
+ms.openlocfilehash: 8f48092fa22f540805feefda03b02389e6544300
+ms.sourcegitcommit: bb044a48a6af9b9d8edb178dc8c8bd5658b9ff68
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/05/2018
+ms.lasthandoff: 04/18/2018
 ---
 # <a name="what39s-new-in-master-data-services-mds"></a>Novedades de Master Data Services (MDS)
+
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
+
 [!INCLUDE[feedback-stackoverflow-msdn-connect-md](../includes/feedback-stackoverflow-msdn-connect-md.md)]
 
   Este tema resume los cambios y actualizaciones en la versión [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)] de [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)]. 
@@ -43,7 +46,7 @@ ms.lasthandoff: 03/05/2018
   
  Las mejoras de rendimiento permiten crear modelos más grandes, cargar datos de manera más eficaz y obtener un mejor rendimiento general. Esto incluye la mejora del rendimiento del complemento para Microsoft Excel, que se ha optimizado para reducir los tiempos de carga de datos y habilitar el complemento para administrar entidades mayores.  
   
- Para obtener más información sobre el complemento para Microsoft Excel, vea [Complemento Master Data Services para Microsoft Excel](../master-data-services/microsoft-excel-add-in/master-data-services-add-in-for-microsoft-excel.md).  
+ Para obtener más información sobre el complemento para Microsoft Excel, vea [Master Data Services Add-in for Microsoft Excel](../master-data-services/microsoft-excel-add-in/master-data-services-add-in-for-microsoft-excel.md).  
   
  Se incluyen las siguientes mejoras de características.  
   

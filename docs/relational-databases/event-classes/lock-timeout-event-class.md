@@ -1,34 +1,35 @@
 ---
 title: Clase de eventos Lock:Timeout | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine, sql-database
-ms.service: 
+ms.service: ''
 ms.component: event-classes
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - Timeout event class
 ms.assetid: 8492f4be-4ea9-4059-80e0-9e7b71597da9
-caps.latest.revision: 
+caps.latest.revision: 38
 author: stevestein
 ms.author: sstein
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: f50705fbc3639cc5301a1c2c4c621cff1e14ef94
-ms.sourcegitcommit: 37f0b59e648251be673389fa486b0a984ce22c81
+monikerRange: = azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions
+ms.openlocfilehash: 65d461f49ea49245fd050a004162f1c3dafb36f1
+ms.sourcegitcommit: beaad940c348ab22d4b4a279ced3137ad30c658a
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/12/2018
+ms.lasthandoff: 04/20/2018
 ---
 # <a name="locktimeout-event-class"></a>Lock:Timeout (clase de eventos)
-[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
-La clase de eventos Lock:Timeout indica que una solicitud de bloqueo de un recurso, como una página, ha agotado el tiempo de espera debido a que existía otra transacción que mantenía un bloqueo de cierre en el recurso necesario. El tiempo de espera está determinado por la función del sistema @@LOCK_TIMEOUT y se puede establecer con la instrucción SET LOCK_TIMEOUT.  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+  La clase de eventos Lock:Timeout indica que una solicitud de bloqueo de un recurso, como una página, ha agotado el tiempo de espera debido a que existía otra transacción que mantenía un bloqueo de cierre en el recurso necesario. El tiempo de espera está determinado por la función del sistema @@LOCK_TIMEOUT y se puede establecer con la instrucción SET LOCK_TIMEOUT.  
   
  Utilice la clase de eventos Lock:Timeout para supervisar cuándo se producen las condiciones de tiempo de espera. Esta información es útil para determinar si los tiempos de espera afectan al rendimiento de la aplicación de manera significativa y qué objetos están implicados. Puede examinar el código de aplicación que modifica estos objetos para determinar si se pueden realizar cambios para minimizar los tiempos de espera.  
   

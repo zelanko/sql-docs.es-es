@@ -13,17 +13,20 @@ ms.technology:
 ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: 486e4216-a946-4c6e-828c-61bc905f7ec1
-caps.latest.revision: ''
+caps.latest.revision: 49
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 16d4773a4e54048ae8f5c90b73439f44b728615b
-ms.sourcegitcommit: 34766933e3832ca36181641db4493a0d2f4d05c6
+ms.openlocfilehash: c690e397688ad457970e5da1c45ce2d6b9b372d0
+ms.sourcegitcommit: bb044a48a6af9b9d8edb178dc8c8bd5658b9ff68
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/22/2018
+ms.lasthandoff: 04/18/2018
 ---
 # <a name="install-data-quality-services"></a>Instalar Data Quality Services
+
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
+
   [!INCLUDE[ssDQSnoversionLong](../../includes/ssdqsnoversionlong-md.md)] (DQS) contiene los dos componentes siguientes: **[!INCLUDE[ssDQSServer](../../includes/ssdqsserver-md.md)]** y **[!INCLUDE[ssDQSClient](../../includes/ssdqsclient-md.md)]**.  
   
 |Componente DQS|Description|  
@@ -87,7 +90,7 @@ ms.lasthandoff: 03/22/2018
   
     -   Se crea el procedimiento almacenado DQInitDQS_MAIN en la base de datos maestra.  
   
-    -   El archivo DQS_install.log se crea normalmente en la carpeta C:\Archivos de programa\Microsoft SQL Server\MSSQL13.*<nombre_instancia>*\MSSQL\Log. El archivo contiene información sobre las acciones que se realizan en la ejecución del archivo DQSInstaller.exe.  
+    -   El archivo DQS_install.log se crea normalmente en la carpeta C:\Archivos de programa\Microsoft SQL Server\MSSQL13.*<nombre_instancia>* \MSSQL\Log. El archivo contiene información sobre las acciones que se realizan en la ejecución del archivo DQSInstaller.exe.  
   
     -   Si una base de datos de Master Data Services se encuentra en la misma instancia de SQL Server que el [!INCLUDE[ssDQSServer](../../includes/ssdqsserver-md.md)], se crea un usuario asignado al inicio de sesión de Master Data Services y se le concede el rol dqs_administrator en la base de datos DQS_MAIN.  
   

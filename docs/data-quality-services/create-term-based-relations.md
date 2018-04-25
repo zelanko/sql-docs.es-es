@@ -15,18 +15,21 @@ ms.topic: article
 f1_keywords:
 - sql13.dqs.dm.kbtermsbased.f1
 ms.assetid: 66db9277-d892-4dae-8a82-060fd3ba6949
-caps.latest.revision: ''
+caps.latest.revision: 27
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 28e8894e78e95eb69cba639b4d60825982244ab9
-ms.sourcegitcommit: 34766933e3832ca36181641db4493a0d2f4d05c6
+ms.openlocfilehash: 94db4c27897da2ebbd399d7946085b15f5f7b68d
+ms.sourcegitcommit: bb044a48a6af9b9d8edb178dc8c8bd5658b9ff68
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/22/2018
+ms.lasthandoff: 04/18/2018
 ---
 # <a name="create-term-based-relations"></a>Crear relaciones basadas en términos
+
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
+
   En este tema se describe cómo crear relaciones basadas en términos para un dominio de [!INCLUDE[ssDQSnoversion](../includes/ssdqsnoversion-md.md)] (DQS). Una relación basada en términos (TBR) permite corregir términos que forman parte de los valores de un dominio. Permiten considerar como sinónimos idénticos varios valores que son idénticos salvo por la ortografía de una parte común. Por ejemplo, podría configurar una relación basada en términos que cambiara el término “Inc.” por “Incorporated”. El término “Inc.” se cambiará cada vez que aparezca en el dominio. Las instancias de “Contoso, Inc.” se cambiarán por “Contoso, Incorporated”, y ambos valores se considerarán sinónimos exactos.  
   
  Para utilizar relaciones basadas en términos, es necesario crear una lista de pares formados por un valor y una corrección, como “Inc.” e “Incorporated” o “Sénior” y “Sr.”. Una relación basada en términos permite cambiar un término en todo el dominio sin necesidad de establecer manualmente como sinónimo cada valor del dominio. Puede indicar que se corrija un valor aunque el proceso de detección de conocimiento no lo haya detectado previamente. Si la transformación de una relación basada en términos hace que dos valores sean idénticos, DQS creará entre ellos una relación de sinónimos (en la detección del conocimiento), una relación de corrección (en la corrección de datos) o una coincidencia exacta (en la coincidencia).  

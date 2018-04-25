@@ -2,7 +2,7 @@
 title: CREATE TRIGGER (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 08/10/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine, sql-database
 ms.service: ''
 ms.component: t-sql|statements
@@ -36,11 +36,11 @@ author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: Active
-ms.openlocfilehash: 23cb33dffcc9753200d24116b4a6d279c8fe8db5
-ms.sourcegitcommit: 059fc64ba858ea2adaad2db39f306a8bff9649c2
+ms.openlocfilehash: e7b9f91e07459d4b1cbfaadff59a77c844a81aa4
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/04/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="create-trigger-transact-sql"></a>CREATE TRIGGER (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -266,7 +266,7 @@ SELECT * FROM deleted;
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] permite actualizar las columnas **text**, **ntext** o **image** mediante el uso del desencadenador INSTEAD OF en tablas o vistas.  
   
 > [!IMPORTANT]  
->  Los tipos de datos **ntext**, **text** e **image** se quitarán en una versión futura de [!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Evite su uso en nuevos trabajos de desarrollo y piense en modificar las aplicaciones que los usan actualmente. Use [nvarchar(max)](../../t-sql/data-types/nchar-and-nvarchar-transact-sql.md), [varchar(max)](../../t-sql/data-types/char-and-varchar-transact-sql.md)y [varbinary(max)](../../t-sql/data-types/binary-and-varbinary-transact-sql.md) en su lugar. Tanto los desencadenadores AFTER como INSTEAD OF admiten los datos **varchar(MAX)**, **nvarchar(MAX)**y **varbinary(MAX)** en las tablas insertadas y eliminadas.  
+>  Los tipos de datos **ntext**, **text** e **image** se quitarán en una versión futura de [!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Evite su uso en nuevos trabajos de desarrollo y piense en modificar las aplicaciones que los usan actualmente. Use [nvarchar(max)](../../t-sql/data-types/nchar-and-nvarchar-transact-sql.md), [varchar(max)](../../t-sql/data-types/char-and-varchar-transact-sql.md)y [varbinary(max)](../../t-sql/data-types/binary-and-varbinary-transact-sql.md) en su lugar. Tanto los desencadenadores AFTER como INSTEAD OF admiten los datos **varchar(MAX)**, **nvarchar(MAX)** y **varbinary(MAX)** en las tablas insertadas y eliminadas.  
   
  Para los desencadenadores en tablas optimizadas para memoria, el único *sql_statement* permitido en el nivel superior es un bloque ATOMIC. El código T-SQL permitido dentro del bloque ATOMIC está limitado por el código T-SQL permitido dentro de los procedimientos nativos.  
   

@@ -1,16 +1,16 @@
 ---
 title: CREATE BROKER PRIORITY (Transact-SQL) | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 03/06/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: sql-database
-ms.service: 
+ms.service: ''
 ms.component: t-sql|statements
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - CREATE BROKER PRIORITY
@@ -28,16 +28,16 @@ dev_langs:
 helpviewer_keywords:
 - CREATE BROKER PRIORITY statement
 ms.assetid: e0bbebfa-b7c3-4825-8169-7281f7e6de98
-caps.latest.revision: 
+caps.latest.revision: 40
 author: barbkess
 ms.author: barbkess
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 524909a3f12040460950448e77c177f3b1aeef8d
-ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
+ms.openlocfilehash: 9503c441d1c57bf84e27b6190b1afc751be8861e
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/25/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="create-broker-priority-transact-sql"></a>CREATE BROKER PRIORITY (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -88,7 +88,7 @@ FOR CONVERSATION
  *LocalServiceName*  
  Especifica que la prioridad de conversación se puede aplicar a lo siguiente:  
   
--   Cualquier extremo iniciador de conversación cuyo nombre de servicio iniciador coincida con *LocalServiceName*.  
+-   Cualquier extremo iniciador de conversación cuyo nombre de servicio de iniciador coincida con *LocalServiceName*.  
   
 -   Cualquier extremo de destino de conversación cuyo nombre de servicio de destino coincida con *LocalServiceName*.  
   
@@ -102,12 +102,12 @@ FOR CONVERSATION
   
  *RemoteServiceName* es un literal de tipo **nvarchar(256)**. [!INCLUDE[ssSB](../../includes/sssb-md.md)] usa una comparación byte a byte para buscar una coincidencia con la cadena *RemoteServiceName*. En la comparación se distinguen mayúsculas y minúsculas, y no se considera la intercalación actual. El servicio de destino puede estar en la instancia actual de [!INCLUDE[ssDE](../../includes/ssde-md.md)] o en una instancia remota de [!INCLUDE[ssDE](../../includes/ssde-md.md)].  
   
- '*RemoteServiceName*'  
+ "*RemoteServiceName*"  
  Especifica que la prioridad de conversación se puede aplicar a lo siguiente:  
   
--   Cualquier extremo iniciador de conversación cuyo nombre de servicio de destino asociado coincida con *RemoteServiceName*.  
+-   Cualquier extremo de iniciador de conversación cuyo nombre de servicio de destino asociado coincida con *RemoteServiceName*.  
   
--   Cualquier extremo de destino de conversación cuyo nombre de servicio iniciador asociado coincida con *RemoteServiceName*.  
+-   Cualquier extremo de destino de conversación cuyo nombre de servicio de iniciador asociado coincida con *RemoteServiceName*.  
   
  ANY  
  Especifica que la prioridad de conversación puede aplicarse a cualquier extremo de conversación, independientemente del nombre del servicio remoto que esté asociado al extremo.  

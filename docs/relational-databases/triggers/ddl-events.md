@@ -1,36 +1,37 @@
 ---
 title: Eventos DDL | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 11/01/2016
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine, sql-database
-ms.service: 
+ms.service: ''
 ms.component: triggers
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - dbe-ddl
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - DDL events
 - DDL triggers, events
 - events [SQL Server], DDL
 ms.assetid: 62ef24b4-3553-4aed-b62a-670980bae501
-caps.latest.revision: 
+caps.latest.revision: 29
 author: rothja
 ms.author: jroth
 manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 9ab16db537c4033f0dd68ddd457e9e1a341a7449
-ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
+monikerRange: = azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions
+ms.openlocfilehash: 3f65b5b259ef635f1b77932bec9e01decca58fcf
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/09/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="ddl-events"></a>Eventos DDL
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
-En las tablas siguientes se indican los eventos DDL que se pueden utilizar para activar un desencadenador DDL o una notificación de eventos. Tenga en cuenta que cada evento corresponde a una instrucción o un procedimiento almacenado de [!INCLUDE[tsql](../../includes/tsql-md.md)] , con la sintaxis modificada para que incluya un carácter de subrayado (_) entre las palabras clave.  
+  En las tablas siguientes se indican los eventos DDL que se pueden utilizar para activar un desencadenador DDL o una notificación de eventos. Tenga en cuenta que cada evento corresponde a una instrucción o un procedimiento almacenado de [!INCLUDE[tsql](../../includes/tsql-md.md)] , con la sintaxis modificada para que incluya un carácter de subrayado (_) entre las palabras clave.  
   
 > [!IMPORTANT]  
 >  Los procedimientos almacenados del sistema que realizan operaciones similares a DDL también pueden activar desencadenadores DLL y notificaciones de eventos. Pruebe los desencadenadores DDL y las notificaciones de eventos para determinar sus respuestas a los procedimientos almacenados del sistema que se ejecutan. Por ejemplo, tanto la instrucción CREATE TYPE como el procedimiento almacenado **sp_addtype** activarán un desencadenador DDL o una notificación de eventos creada en un evento CREATE_TYPE.  

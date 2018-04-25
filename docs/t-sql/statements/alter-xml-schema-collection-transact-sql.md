@@ -1,16 +1,16 @@
 ---
 title: ALTER XML SCHEMA COLLECTION (Transact-SQL) | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: sql-database
-ms.service: 
+ms.service: ''
 ms.component: t-sql|statements
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - ALTER_XML_SCHEMA_COLLECTION_TSQL
@@ -31,16 +31,16 @@ helpviewer_keywords:
 - schema collections [SQL Server], modifying
 - multiple schema namespaces
 ms.assetid: e311c425-742a-4b0d-b847-8b974bf66d53
-caps.latest.revision: 
+caps.latest.revision: 23
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: b33ecc2a5ca9838e5f9dd80dabd9bbddf90250ee
-ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
+ms.openlocfilehash: cc97d52c0d3d67443f6ed83f24db1104b7be47ee
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/25/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="alter-xml-schema-collection-transact-sql"></a>ALTER XML SCHEMA COLLECTION (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -181,13 +181,13 @@ SET @MySchemaCollection  = N' copy the schema collection here';
 CREATE XML SCHEMA COLLECTION AS @MySchemaCollection;   
 ```  
   
- La variable del ejemplo es de tipo `nvarchar(max)`. La variable también puede ser del tipo de datos **xml**; si es así, se convierte implícitamente a una cadena (string).  
+ La variable del ejemplo es de tipo `nvarchar(max)`. La variable también puede ser del tipo de datos **xml**; si es así, se convierte de forma implícita en una cadena.  
   
  Para obtener más información, vea [Ver una colección de esquemas XML almacenada](../../relational-databases/xml/view-a-stored-xml-schema-collection.md).  
   
  Puede almacenar colecciones de esquemas en una columna de tipo **xml**. En este caso, para crear una colección de esquemas XML, realice los pasos siguientes:  
   
-1.  Recupere la colección de esquemas de la columna con el uso de una instrucción SELECT y asígnela a una variable de tipo **xml** o **varchar**.  
+1.  Recupere la colección de esquemas de la columna mediante una instrucción SELECT y asígnela a una variable de tipo **xml** o **varchar**.  
   
 2.  Especifique el nombre de la variable en la instrucción CREATE XML SCHEMA COLLECTION.  
   
@@ -249,7 +249,7 @@ GO
 ```  
   
 ### <a name="c-importing-a-schema-that-does-not-specify-a-target-namespace"></a>C. Importar un esquema que no especifique un espacio de nombres de destino  
- Si un esquema que no contiene el atributo **targetNamespace** (espacio de nombres de destino) se importa en una colección, sus componentes se asocian al espacio de nombres de destino de cadena vacía, tal como se muestra en el ejemplo siguiente. Tenga en cuenta que si no asocia uno o varios esquemas importados en la colección, varios componentes del esquema (potencialmente no relacionados) se asociarán al espacio de nombres de cadena vacía predeterminado.  
+ Si un esquema que no contiene un atributo **targetNamespace** se importa en una colección, sus componentes se asocian al espacio de nombres de destino de cadena vacío, como se muestra en el ejemplo siguiente. Tenga en cuenta que si no asocia uno o varios esquemas importados en la colección, varios componentes del esquema (potencialmente no relacionados) se asociarán al espacio de nombres de cadena vacía predeterminado.  
   
 ```  
 -- Create a collection that contains a schema with no target namespace.  

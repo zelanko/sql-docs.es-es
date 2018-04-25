@@ -1,16 +1,16 @@
 ---
 title: CREATE AGGREGATE (Transact-SQL) | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: sql-database
-ms.service: 
+ms.service: ''
 ms.component: t-sql|statements
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - CREATE_AGGREGATE_TSQL
@@ -24,16 +24,16 @@ helpviewer_keywords:
 - aggregate functions [SQL Server], user-defined
 - user-defined functions [CLR integration]
 ms.assetid: 62eebc19-9f15-4245-94fa-b3fcd64a9d42
-caps.latest.revision: 
+caps.latest.revision: 50
 author: barbkess
 ms.author: barbkess
 manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 07509e36b76aad995297cfae0147df7e8db41c20
-ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
+ms.openlocfilehash: e5fb189cbb6e2dda34b8b1012e73e5e1c4b780d3
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/25/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="create-aggregate-transact-sql"></a>CREATE AGGREGATE (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -68,7 +68,7 @@ EXTERNAL NAME assembly_name [ .class_name ]
  Es el nombre de la función de agregado que desea crear.  
   
  **@** *param_name*  
- Uno o más parámetros en el agregado definido por el usuario. El usuario debe proporcionar un valor del parámetro cuando se ejecute la función de agregado. Especifique un nombre de parámetro con una arroba (**@**) como primer carácter. El nombre del parámetro debe cumplir las reglas de los [identificadores](../../relational-databases/databases/database-identifiers.md). Los parámetros son locales para la función.  
+ Uno o más parámetros en el agregado definido por el usuario. El usuario debe proporcionar un valor del parámetro cuando se ejecute la función de agregado. Especifique un nombre de parámetro con una arroba (**@**) como primer carácter. El nombre del parámetro debe cumplir las mismas reglas para [identifiers](../../relational-databases/databases/database-identifiers.md). Los parámetros son locales para la función.  
   
  *system_scalar_type*  
  Es cualquiera de los tipos de datos escalares del sistema de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] que contienen el valor del parámetro de entrada o el valor devuelto. Todos los tipos de datos escalares se pueden usar como parámetros para un agregado definido por el usuario, excepto **text**, **ntext** e **image**. No se pueden especificar tipos no escalares, como **cursor** y **table**.  

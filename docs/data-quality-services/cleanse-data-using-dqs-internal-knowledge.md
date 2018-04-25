@@ -18,18 +18,21 @@ f1_keywords:
 - sql13.dqs.dqproject.correction.f1
 - sql13.dqs.dqproject.export.f1
 ms.assetid: c96b13ad-02a6-4646-bcc7-b4a8d490f5cc
-caps.latest.revision: ''
+caps.latest.revision: 26
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: ed7b80a8efa3f80ba349144afa2b931e4d255ec1
-ms.sourcegitcommit: 34766933e3832ca36181641db4493a0d2f4d05c6
+ms.openlocfilehash: 419f6ae4c8c7c5e19117aaeb86d730e1c625ee44
+ms.sourcegitcommit: bb044a48a6af9b9d8edb178dc8c8bd5658b9ff68
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/22/2018
+ms.lasthandoff: 04/18/2018
 ---
 # <a name="cleanse-data-using-dqs-internal-knowledge"></a>Limpiar datos mediante el conocimiento de DQS (interno)
+
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
+
   En este tema se describe cómo limpiar los datos mediante un proyecto de calidad de datos de [!INCLUDE[ssDQSnoversion](../includes/ssdqsnoversion-md.md)] (DQS). La limpieza de datos se realiza en los datos de origen utilizando una base de conocimiento generada en DQS a partir de un conjunto de datos de alta calidad. Para obtener más información, consulte [Crear una base de conocimiento](../data-quality-services/building-a-knowledge-base.md).  
   
  La limpieza de datos se realiza en cuatro fases: una fase de *asignación* en la que se identifica el origen de datos que se va a limpiar y se asigna a los dominios requeridos de una base de conocimiento, una fase de *limpieza asistida por PC* en la que DQS aplica la base de conocimiento a los datos que se van a limpiar y propone o realiza cambios en los datos de origen, una fase de *limpieza interactiva* en la que los administradores de datos pueden analizar los cambios en los datos, así como aceptarlos o rechazarlos, y, por último, la fase de *exportación* que le permite exportar los datos limpios. Cada uno de estos procesos se realiza en una página distinta del asistente para la actividad de limpieza, lo que le permite desplazarse de una página a otra, volver a ejecutar el proceso, y cerrar un proceso de limpieza específico y volver a la misma fase del proceso. DQS proporciona estadísticas sobre los datos de origen y los resultados de limpieza que permiten tomar decisiones fundadas sobre la limpieza de datos.  

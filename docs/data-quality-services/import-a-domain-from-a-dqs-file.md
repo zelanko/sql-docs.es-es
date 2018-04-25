@@ -13,18 +13,21 @@ ms.technology:
 ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: fabd88b0-22b3-4543-a993-6d5b202ded80
-caps.latest.revision: ''
+caps.latest.revision: 18
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 54a1d2f72e65b054336f27cf629a40fec7abaa15
-ms.sourcegitcommit: 34766933e3832ca36181641db4493a0d2f4d05c6
+ms.openlocfilehash: 69b7f5a369330a6dd961926189f465f6eea7e81a
+ms.sourcegitcommit: bb044a48a6af9b9d8edb178dc8c8bd5658b9ff68
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/22/2018
+ms.lasthandoff: 04/18/2018
 ---
 # <a name="import-a-domain-from-a-dqs-file"></a>Importar un dominio desde un archivo .dqs
+
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
+
   En este tema se describe cómo importar un dominio desde un archivo .dqs a una base de conocimiento existente de [!INCLUDE[ssDQSnoversion](../includes/ssdqsnoversion-md.md)] (DQS). Los archivos de datos .dqs se crean al exportar un dominio o una base de conocimiento desde la aplicación [!INCLUDE[ssDQSClient](../includes/ssdqsclient-md.md)] . El archivo de datos .dqs está cifrado, por lo que no se puede ver.  
   
  El uso de un archivo de datos .dqs para exportar un dominio de una base de conocimiento e importarlo a continuación en otra simplifica el proceso de generación del conocimiento, lo que permite ahorrar tiempo y esfuerzo. Le permite compartir un dominio y su conocimiento con otras personas, ahorrándoles tiempo. Es posible importar tanto un dominio individual como un dominio compuesto (dominio que contiene varios dominios únicos). Un archivo .dqs que contiene un solo dominio incluye todos los datos de dominio incluidas propiedades, valores y datos de reglas de dominio salvo la información de datos de referencia asignada. Un archivo .dqs que contiene un dominio compuesto incluye todos los datos de este, incluidos los de los dominios individuales que lo forman, así como las propiedades, relaciones de valor y reglas de CD del dominio compuesto, salvo los datos de referencia asignados. Se importarán tanto los datos publicados como los no publicados.  

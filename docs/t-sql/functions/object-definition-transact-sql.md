@@ -1,16 +1,16 @@
 ---
 title: OBJECT_DEFINITION (Transact-SQL) | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine, sql-database
-ms.service: 
+ms.service: ''
 ms.component: t-sql|functions
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - OBJECT_DEFINITION_TSQL
@@ -23,16 +23,16 @@ helpviewer_keywords:
 - displaying source text
 - OBJECT_DEFINITION function
 ms.assetid: 2ac837c7-eca9-4d29-b06e-72e30450c68d
-caps.latest.revision: 
+caps.latest.revision: 27
 author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 98d50823e1f84060b94a8956b3ed885fc15cd593
-ms.sourcegitcommit: 45e4efb7aa828578fe9eb7743a1a3526da719555
+ms.openlocfilehash: 2db072b1df3d07b8b8534a4b9bbff0acd09057b5
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="objectdefinition-transact-sql"></a>OBJECT_DEFINITION (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -61,7 +61,7 @@ OBJECT_DEFINITION ( object_id )
  Un usuario solo puede ver los metadatos de elementos protegibles que posea o para los que se le haya concedido permiso. Esto significa que las funciones integradas de emisión de metadatos, como OBJECT_DEFINITION, pueden devolver NULL si el usuario no tiene ningún permiso para el objeto. Para obtener más información, consulte [Metadata Visibility Configuration](../../relational-databases/security/metadata-visibility-configuration.md).  
   
 ## <a name="remarks"></a>Notas  
- [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] presupone que *object_id* se encuentra en el contexto de la base de datos actual. La intercalación de la definición del objeto siempre coincide con la del contexto de la base de datos que realiza la llamada.  
+ El [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] da por hecho que *object_id* se encuentra en el contexto de la base de datos actual. La intercalación de la definición del objeto siempre coincide con la del contexto de la base de datos que realiza la llamada.  
   
  OBJECT_DEFINITION se aplica a los siguientes tipos de objeto:  
   

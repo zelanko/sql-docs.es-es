@@ -1,16 +1,16 @@
 ---
 title: REVOKE (permisos de entidad de seguridad de servidor de Transact-SQL) | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 08/10/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: sql-database
-ms.service: 
+ms.service: ''
 ms.component: t-sql|statements
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 dev_langs:
 - TSQL
@@ -22,16 +22,16 @@ helpviewer_keywords:
 - logins [SQL Server], revoking
 - REVOKE statement, logins
 ms.assetid: 75409024-f150-4326-af16-9d60e900df18
-caps.latest.revision: 
+caps.latest.revision: 30
 author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 6573515d0bb50695fcde4cf94e002aa5d6be7025
-ms.sourcegitcommit: 45e4efb7aa828578fe9eb7743a1a3526da719555
+ms.openlocfilehash: d297d1e51c4f14393da86b68fdd76a610f9ddde9
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="revoke-server-principal-permissions-transact-sql"></a>REVOKE (permisos de entidad de seguridad de servidor de Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -68,7 +68,7 @@ REVOKE [ GRANT OPTION FOR ] permission [ ,...n ] }
  Especifica el inicio de sesión de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] en el que se va a revocar el permiso. Se necesita el calificador de ámbito (**::**).  
   
  SERVER ROLE **::** *server_role*  
- Especifica el rol de servidor para el que se revoca el permiso. Se necesita el calificador de ámbito (**::**).  
+ Especifica el rol de servidor para el que se revoca el permiso. El calificador de ámbito (**::**) es obligatorio.  
   
  { FROM | TO } \<server_principal> Especifica el inicio de sesión o el rol de servidor de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] desde el que se va a revocar el permiso.  
   

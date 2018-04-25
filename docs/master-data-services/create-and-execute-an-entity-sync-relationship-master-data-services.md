@@ -1,30 +1,33 @@
 ---
-title: "Crear y ejecutar una relación de sincronización de entidades (Master Data Services) | Microsoft Docs"
-ms.custom: 
+title: Crear y ejecutar una relación de sincronización de entidades (Master Data Services) | Microsoft Docs
+ms.custom: ''
 ms.date: 03/01/2017
 ms.prod: sql-non-specified
 ms.prod_service: mds
-ms.service: 
+ms.service: ''
 ms.component: non-specific
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - master-data-services
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: 0ddceab4-d2b3-4bc1-bd9c-6b852200b414
-caps.latest.revision: 
+caps.latest.revision: 6
 author: leolimsft
 ms.author: lle
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: aaa835322bda0e98ac9059bce4612abed5c59a92
-ms.sourcegitcommit: 6ac1956307d8255dc544e1063922493b30907b80
+ms.openlocfilehash: b733f6d608cbf96433e17ca48a75a08aefcd8256
+ms.sourcegitcommit: bb044a48a6af9b9d8edb178dc8c8bd5658b9ff68
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/05/2018
+ms.lasthandoff: 04/18/2018
 ---
 # <a name="create-and-execute-an-entity-sync-relationship-master-data-services"></a>Crear y ejecutar una relación de sincronización de entidades (Master Data Services)
+
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
+
   La sincronización de entidades es una sincronización unidireccional y repetible entre versiones de entidades que proporciona una forma de compartir datos de entidad entre diferentes modelos.  
   
 ## <a name="prerequisites"></a>Prerequisites  
@@ -116,13 +119,13 @@ ms.lasthandoff: 03/05/2018
   
 -   **Last Attempt Error**(Error de último intento): muestra información de error relativa al último intento de sincronización.  
   
--   **Creado por:**nombre del usuario que creó la sincronización.  
+-   **Creado por:** nombre del usuario que creó la sincronización.  
   
--   **El:**fecha y hora en que se creó la sincronización.  
+-   **El:** fecha y hora en que se creó la sincronización.  
   
--   **Actualizado por:**nombre del usuario que actualizó la sincronización por última vez.  
+-   **Actualizado por:** nombre del usuario que actualizó la sincronización por última vez.  
   
--   **El:**fecha y hora en que se actualizó la sincronización por última vez.  
+-   **El:** fecha y hora en que se actualizó la sincronización por última vez.  
   
 ## <a name="next-steps"></a>Next Steps  
  [Modificación y eliminación de una relación de sincronización de entidades &#40;Master Data Services&#41;](../master-data-services/edit-and-delete-an-entity-sync-relationship-master-data-services.md)  

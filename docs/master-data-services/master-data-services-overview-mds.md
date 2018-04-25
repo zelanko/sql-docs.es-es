@@ -1,16 +1,16 @@
 ---
-title: "Introducción a Master Data Services (MDS) | Microsoft Docs"
-ms.custom: 
+title: Introducción a Master Data Services (MDS) | Microsoft Docs
+ms.custom: ''
 ms.date: 02/14/2017
 ms.prod: sql-non-specified
 ms.prod_service: mds
-ms.service: 
+ms.service: ''
 ms.component: non-specific
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - master-data-services
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 keywords:
 - what is master data
@@ -18,19 +18,22 @@ helpviewer_keywords:
 - Master Data Services, overview
 - Master Data Services
 ms.assetid: 8a4c28b1-6061-4850-80b6-132438b8c156
-caps.latest.revision: 
+caps.latest.revision: 28
 author: leolimsft
 ms.author: lle
 manager: craigg
 ms.workload: Active
-ms.openlocfilehash: a60fddbc00fa808590a06bc3263dfe6bc966f18b
-ms.sourcegitcommit: 6ac1956307d8255dc544e1063922493b30907b80
+ms.openlocfilehash: 8702bafc6b62d4c75d9dc76a32931e16dbe84e76
+ms.sourcegitcommit: 056ce753c2d6b85cd78be4fc6a29c2b4daaaf26c
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/05/2018
+ms.lasthandoff: 04/19/2018
 ---
 # <a name="master-data-services-overview-mds"></a>Introducción a Master Data Services (MDS)
-  En este tema se describen las características de administración y organización de datos principales de [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)]. 
+
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
+
+ En este tema se describen las características de administración y organización de datos principales de [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)]. 
   
  [!INCLUDE[ssMDSshort_md](../includes/ssmdsshort-md.md)] le permite administrar un conjunto principal de los datos de su organización. Puede organizar los datos en modelos, crear reglas para actualizar los datos y controlar quién actualiza los datos. Puede usar Excel para compartir el conjunto de datos maestros con otras personas de su organización. 
   

@@ -1,16 +1,16 @@
 ---
 title: TRY_PARSE (Transact-SQL) | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine, sql-database
-ms.service: 
+ms.service: ''
 ms.component: t-sql|functions
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - TRY_PARSE_TSQL
@@ -20,16 +20,16 @@ dev_langs:
 helpviewer_keywords:
 - TRY_PARSE function
 ms.assetid: 292bac1d-edd8-468c-8ff1-8c7de625bc55
-caps.latest.revision: 
+caps.latest.revision: 16
 author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 0b26f46431909dd4fbfaa820db8c3869333f555d
-ms.sourcegitcommit: 45e4efb7aa828578fe9eb7743a1a3526da719555
+ms.openlocfilehash: 21e0b8b9219abca64ba0f2e802b627b4c7cb9271
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="tryparse-transact-sql"></a>TRY_PARSE (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2012-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-asdb-xxxx-xxx-md.md)]
@@ -57,7 +57,7 @@ TRY_PARSE ( string_value AS data_type [ USING culture ] )
  *culture*  
  Cadena opcional que identifica la referencia cultural en la que se da formato a *string_value*.  
   
- Si no se proporciona el argumento *culture*, se usará el idioma de la sesión actual. Este idioma se establece implícitamente o explícitamente mediante la instrucción SET LANGUAGE. *culture* acepta cualquier referencia cultural compatible con .NET Framework; no se limita a los idiomas admitidos explícitamente por [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Si el argumento *culture* no es válido, PARSE produce un error.  
+ Si no se proporciona el argumento *culture*, se usará el idioma de la sesión actual. Este idioma se establece implícitamente o explícitamente mediante la instrucción SET LANGUAGE. *culture* acepta cualquier referencia cultural compatible con .NET Framework; no se limita a los idiomas admitidos explícitamente por [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Si el argumento *culture* no es válido, PARSE desencadena un error.  
   
 ## <a name="return-types"></a>Tipos devueltos  
  Devuelve el resultado de la expresión, traducido al tipo de datos solicitado, o NULL si se produce un error en la conversión.  
@@ -110,21 +110,21 @@ TRY_PARSE ( string_value AS data_type [ USING culture ] )
 |Português|Portugués|2070|pt-PT|  
 |Suomi|Finlandés|1035|fi|  
 |Svenska|Sueco|1053|sv-SE|  
-|Čeština|Czech|1029|Cs-CZ|  
+|čeština|Czech|1029|Cs-CZ|  
 |magyar|Húngaro|1038|Hu-HU|  
 |polski|Polaco|1045|Pl-PL|  
-|Română|Rumano|1048|Ro-RO|  
+|română|Rumano|1048|Ro-RO|  
 |hrvatski|Croata|1050|hr-HR|  
-|Slovenčina|Eslovaco|1051|Sk-SK|  
+|slovenčina|Eslovaco|1051|Sk-SK|  
 |slovenski|Esloveno|1060|Sl-SI|  
-|Eλληνικά|Greek|1032|El-GR|  
-|Български|Búlgaro|1026|bg-BG|  
-|Pусский|Ruso|1049|Ru-RU|  
+|ελληνικά|Greek|1032|El-GR|  
+|български|Búlgaro|1026|bg-BG|  
+|русский|Ruso|1049|Ru-RU|  
 |Türkçe|Turco|1055|Tr-TR|  
 |British|British English|2057|en-GB|  
 |eesti|Estonio|1061|Et-EE|  
-|Latviešu|Letón|1062|lv-LV|  
-|Lietuvių|Lituano|1063|lt-LT|  
+|latviešu|Letón|1062|lv-LV|  
+|lietuvių|Lituano|1063|lt-LT|  
 |Português (Brasil)|Portugués (Brasil)|1046|pt-BR|  
 |繁體中文|Chino tradicional|1028|zh-TW|  
 |한국어|Coreano|1042|Ko-KR|  

@@ -1,16 +1,16 @@
 ---
 title: DECLARE @local_variable (Transact-SQL) | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 07/24/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
-ms.service: 
+ms.service: ''
 ms.component: t-sql|language-elements
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - DECLARE
@@ -23,16 +23,17 @@ helpviewer_keywords:
 - DECLARE statement
 - declaring variables
 ms.assetid: d1635ebb-f751-4de1-8bbc-cae161f90821
-caps.latest.revision: 
+caps.latest.revision: 76
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ms.workload: Active
-ms.openlocfilehash: 6e56a4895dc5ec1ba03489ffc60e9f9e7b441d18
-ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
+monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
+ms.openlocfilehash: 787aca04c84d9f88eee456e92d93753356709cba
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/25/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="declare-localvariable-transact-sql"></a>DECLARE @local_variable (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -129,7 +130,7 @@ Define el tipo de datos de **table**. La declaración de tabla incluye definicio
  [ COLLATE *collation_name*]  
  Especifica la intercalación de la columna. *collation_name* puede ser un nombre de intercalación de Windows o un nombre de intercalación de SQL, y solo es aplicable a las columnas de los tipos de datos **char**, **varchar**, **text**, **nchar**, **nvarchar** y **ntext**. Si no se especifica, se asignará a la columna la intercalación del tipo de datos definido por el usuario, si la columna es de un tipo de datos definido por el usuario, o la intercalación de la base de datos actual.  
   
- Para más información sobre los nombres de intercalación de Windows y SQL, vea [COLLATE &#40;Transact-SQL&#41;](~/t-sql/statements/collations.md).  
+ Para obtener más información sobre los nombres de intercalación de Windows y SQL, vea [COLLATE &#40;Transact-SQL&#41;](~/t-sql/statements/collations.md).  
   
  DEFAULT  
  Especifica el valor suministrado para la columna cuando no se ha especificado explícitamente un valor durante una inserción. Las definiciones DEFAULT se pueden aplicar a cualquier columna excepto a las definidas como **timestamp** o a aquellas que tengan la propiedad IDENTITY. Las definiciones DEFAULT desaparecen cuando se quita la tabla. Solo se puede utilizar un valor constante como valor predeterminado, por ejemplo, una cadena de caracteres, una función del sistema como SYSTEM_USER() o el valor NULL. Para mantener la compatibilidad con las versiones anteriores de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], se puede asignar un nombre de restricción a DEFAULT.  

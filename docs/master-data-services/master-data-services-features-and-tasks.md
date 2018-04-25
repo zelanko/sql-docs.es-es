@@ -1,30 +1,33 @@
 ---
-title: "Características y tareas de Master Data Services | Microsoft Docs"
-ms.custom: 
+title: Características y tareas de Master Data Services | Microsoft Docs
+ms.custom: ''
 ms.date: 04/01/2016
 ms.prod: sql-non-specified
 ms.prod_service: mds
-ms.service: 
+ms.service: ''
 ms.component: non-specific
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - master-data-services
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: 19519697-c219-44a8-9339-ee1b02545445
-caps.latest.revision: 
+caps.latest.revision: 8
 author: leolimsft
 ms.author: lle
 manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: a64d484a0739e17e947370d2760886bcbac7dd90
-ms.sourcegitcommit: 6ac1956307d8255dc544e1063922493b30907b80
+ms.openlocfilehash: a85118fdc5499a47a491ae1229713a4d58d87451
+ms.sourcegitcommit: bb044a48a6af9b9d8edb178dc8c8bd5658b9ff68
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/05/2018
+ms.lasthandoff: 04/18/2018
 ---
 # <a name="master-data-services-features-and-tasks"></a>Características y tareas de Master Data Services
+
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
+
   Aprenda a utilizar [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] para administrar los datos maestros de su organización. Aprenda a crear y manipular objetos del modelo, que son contenedores de los datos. Aprenda a organizar y mantener los propios datos maestros. Aprenda a importar y exportar datos maestros, y a compartir modelos entre entornos de prueba y producción. Por último, aprenda a desarrollar aplicaciones personalizadas que tengan acceso al servicio web de [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] .  
   
 ## <a name="create-structures-to-contain-data"></a>Crear estructuras que contengan datos  

@@ -17,18 +17,21 @@ f1_keywords:
 - sql13.dqs.kb.kbmatchingpolicy.f1
 - sql13.dqs.kb.kbmatchingresults.f1
 ms.assetid: cce77a06-ca31-47b6-8146-22edf001d605
-caps.latest.revision: ''
+caps.latest.revision: 43
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 5c9fe7a9614c1b389362edd0b40284508329fc1b
-ms.sourcegitcommit: 34766933e3832ca36181641db4493a0d2f4d05c6
+ms.openlocfilehash: cc6cc423dc00cb7a9615102217bfd3736d8ca7a1
+ms.sourcegitcommit: bb044a48a6af9b9d8edb178dc8c8bd5658b9ff68
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/22/2018
+ms.lasthandoff: 04/18/2018
 ---
 # <a name="create-a-matching-policy"></a>Crear una directiva de coincidencia
+
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
+
   En este tema se describe cómo crear una directiva de coincidencia en una base de conocimiento de [!INCLUDE[ssDQSnoversion](../includes/ssdqsnoversion-md.md)] (DQS). El proceso de búsqueda de coincidencias se prepara en DQS ejecutando la actividad Directiva de coincidencia con los datos de ejemplo. En esta actividad creará y probará una o varias reglas de coincidencia en la directiva y después publicará la base de conocimiento para poner a disposición pública las reglas de coincidencia. Solo puede haber una directiva de coincidencia en cada base de conocimiento, pero esta directiva puede contener varias reglas de coincidencia.  
   
  La creación de directivas de coincidencia se realiza en tres etapas: un proceso de asignación en el que se identifica el origen de datos y se asignan dominios a las columnas, un proceso de directiva de coincidencia en el que se pueden crear una o varias reglas de coincidencia y probar cada regla de coincidencia por separado, y un proceso de resultados de búsqueda de coincidencias en el que se ejecutan todas las reglas de coincidencia juntas y, si se está satisfecho con ellas, se agrega la directiva a la base de conocimiento. Cada uno de estos procesos se realiza en una página distinta del asistente para la actividad Directiva de coincidencia, lo que le permite desplazarse de una página a otra, volver a ejecutar el proceso y cerrar un proceso de directiva de coincidencia específico y volver a la misma fase del proceso. Después de comprobar todas las reglas juntas, si lo desea puede volver a la página **Directiva de coincidencia** , modificar una de las reglas, probarla de nuevo por separado y, a continuación, volver a la página **Resultados de búsqueda de coincidencias** para volver a ejecutar todas las reglas juntas. DQS proporciona estadísticas sobre los datos de origen, las reglas de coincidencia y los resultados de búsqueda de coincidencias que permiten tomar decisiones fundadas sobre la directiva de coincidencia para poder mejorarla.  

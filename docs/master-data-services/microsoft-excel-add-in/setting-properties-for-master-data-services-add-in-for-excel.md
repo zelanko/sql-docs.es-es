@@ -1,30 +1,33 @@
 ---
 title: Establecer propiedades para el complemento Master Data Services para Excel | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 03/01/2017
 ms.prod: sql-non-specified
 ms.prod_service: mds
-ms.service: 
+ms.service: ''
 ms.component: microsoft-excel-add-in
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - master-data-services
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: cab1c662-5d40-4c16-9f5c-36ff9608810b
-caps.latest.revision: 
+caps.latest.revision: 8
 author: leolimsft
 ms.author: lle
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: f04c236ea1534ce5f2d33313117dd082cb75bd6c
-ms.sourcegitcommit: 6ac1956307d8255dc544e1063922493b30907b80
+ms.openlocfilehash: 52aea28e23773a8b419497f7a211d8738ddbc07d
+ms.sourcegitcommit: bb044a48a6af9b9d8edb178dc8c8bd5658b9ff68
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/05/2018
+ms.lasthandoff: 04/18/2018
 ---
 # <a name="setting-properties-for-master-data-services-add-in-for-excel"></a>Establecer propiedades para el complemento Master Data Services para Excel
+
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
+
   La configuración del complemento Master Data Services para Excel determina el modo en que se cargan los datos desde MDS en el complemento de Excel y el modo en que se publican desde el complemento de Excel en MDS.  
   
  Para configurar el complemento de Excel, abra **Excel**, haga clic en el menú **Datos maestros** y, luego, haga clic en **Configuración**. Cualquier usuario con acceso a Excel puede cambiar esta configuración. La configuración se aplica al equipo en el que está abierto Excel.  

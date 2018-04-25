@@ -1,16 +1,16 @@
 ---
 title: CREATE XML INDEX (Transact-SQL) | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 08/10/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine, sql-database
-ms.service: 
+ms.service: ''
 ms.component: t-sql|statements
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - XML_TSQL
@@ -30,16 +30,16 @@ helpviewer_keywords:
 - index creation [SQL Server], XML indexes
 - XML indexes [SQL Server], creating
 ms.assetid: c510cfbc-68be-4736-b3cc-dc5b7aa51f14
-caps.latest.revision: 
+caps.latest.revision: 38
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 133c957937d1c05cd108eeb2deb0847cd7944771
-ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
+ms.openlocfilehash: f91e623d31626fa1063dd525f06e137ace751bc9
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/25/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="create-xml-index-transact-sql"></a>CREATE XML INDEX (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -163,7 +163,7 @@ CREATE [ PRIMARY ] XML INDEX index_name
 > [!NOTE]  
 >  Los valores de fill factor 0 y 100 son idénticos.  
   
- La configuración de FILLFACTOR solo se aplica cuando se crea o se vuelve a generar el índice. [!INCLUDE[ssDE](../../includes/ssde-md.md)] no mantiene dinámicamente el porcentaje especificado de espacio disponible de las páginas. Para ver la configuración de fill factor, use la vista de catálogo [sys.indexes](../../relational-databases/system-catalog-views/sys-indexes-transact-sql.md).  
+ La configuración de FILLFACTOR solo se aplica cuando se crea o se vuelve a generar el índice. [!INCLUDE[ssDE](../../includes/ssde-md.md)] no mantiene dinámicamente el porcentaje especificado de espacio disponible de las páginas. Para ver la configuración del factor de relleno, use la vista de catálogo [sys.indexes](../../relational-databases/system-catalog-views/sys-indexes-transact-sql.md).  
   
 > [!IMPORTANT]  
 >  La creación de un índice clúster con un valor de FILLFACTOR menor que 100 afecta a la cantidad de espacio de almacenamiento que ocupan los datos, porque [!INCLUDE[ssDE](../../includes/ssde-md.md)] vuelve a distribuir los datos cuando crea el índice clúster.  
@@ -171,10 +171,10 @@ CREATE [ PRIMARY ] XML INDEX index_name
  Para obtener más información, vea [Especificar el factor de relleno para un índice](../../relational-databases/indexes/specify-fill-factor-for-an-index.md).  
   
  SORT_IN_TEMPDB **=** { ON | **OFF** }  
- Indica si se deben almacenar resultados temporales de orden en **tempdb**. El valor predeterminado es OFF.  
+ Indica si deben almacenarse resultados temporales de orden en **tempdb**. El valor predeterminado es OFF.  
   
  ON  
- Los resultados de orden intermedios usados para generar el índice se almacenan en **tempdb**. Esto puede reducir el tiempo necesario para crear un índice si **tempdb** y la base de datos de usuarios están en conjuntos de discos distintos. Sin embargo, esto aumenta la cantidad de espacio en disco utilizado durante la generación del índice.  
+ Los resultados de ordenación intermedios utilizados para generar el índice se almacenan en **tempdb**. Esto puede reducir el tiempo necesario para crear un índice si **tempdb** y la base de datos de usuarios están en conjuntos de discos distintos. Sin embargo, esto aumenta la cantidad de espacio en disco utilizado durante la generación del índice.  
   
  OFF  
  Los resultados de orden intermedios se almacenan en la misma base de datos que el índice.  
@@ -227,7 +227,7 @@ CREATE [ PRIMARY ] XML INDEX index_name
 > [!IMPORTANT]  
 >  Aunque la opción MAXDOP se admite sintácticamente para todos los índices XML, para un índice XML primario, CREATE XML INDEX utiliza un solo procesador.  
   
- *max_degree_of_parallelism* puede ser:  
+ *max_degree_of_parallelism* puede tener estos valores:  
   
  1  
  Suprime la generación de planes paralelos.  

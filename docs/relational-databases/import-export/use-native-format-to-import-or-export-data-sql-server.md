@@ -2,7 +2,7 @@
 title: Usar el formato nativo para importar o exportar datos (SQL Server) | Microsoft Docs
 ms.custom: ''
 ms.date: 09/30/2016
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
 ms.service: ''
 ms.component: import-export
@@ -21,11 +21,12 @@ author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 6c979bd304e2715c587596d73c9e750b5935078b
-ms.sourcegitcommit: d6b1695c8cbc70279b7d85ec4dfb66a4271cdb10
-ms.translationtype: MT
+monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
+ms.openlocfilehash: 2920af076cd626ff689d8ed634ffb8b4cb4e4915
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
+ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/10/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="use-native-format-to-import-or-export-data-sql-server"></a>Usar el formato nativo para importar o exportar datos (SQL Server)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -92,7 +93,7 @@ Puede importar datos con formato nativo a una tabla mediante el uso de [bcp](../
 
 El formato nativo admite las siguientes opciones de comando:  
 
-|Command|Opción|Description|  
+|Comando|Opción|Description|  
 |-------------|------------|-----------------|  
 |BCP|**-n**|Hace que la utilidad bcp use los tipos de datos nativos de los datos.*|  
 |BULK INSERT|DATAFILETYPE **='native'**|Utiliza los tipos de datos nativos o nativos anchos de los datos. Tenga en cuenta que DATAFILETYPE no es necesario si el archivo de formato especifica los tipos de datos.|  
@@ -155,7 +156,7 @@ Notepad D:\BCP\myNative.fmt
 En los siguientes ejemplos se usan la base de datos y los archivos de formato creados anteriormente.
 
 ### **Usar bcp y el formato nativo para exportar datos**<a name="bcp_native_export"></a>
-Modificador**-n** y comando **OUT** .  Nota: el archivo de datos creado en este ejemplo se usará en todos los ejemplos siguientes.  En un símbolo del sistema, escriba los comandos siguientes:
+Modificador **-n** y comando **OUT** .  Nota: el archivo de datos creado en este ejemplo se usará en todos los ejemplos siguientes.  En un símbolo del sistema, escriba los comandos siguientes:
 
 ```cmd
 bcp TestDatabase.dbo.myNative OUT D:\BCP\myNative.bcp -T -n
@@ -165,7 +166,7 @@ NOTEPAD D:\BCP\myNative.bcp
 ```
 
 ### **Usar bcp y el formato nativo para importar datos sin un archivo de formato**<a name="bcp_native_import"></a>
-Modificador**-n** y comando **IN** .  En un símbolo del sistema, escriba los comandos siguientes:
+Modificador **-n** y comando **IN** .  En un símbolo del sistema, escriba los comandos siguientes:
 
 ```cmd
 REM Truncate table (for testing)
@@ -179,7 +180,7 @@ SQLCMD -Q "SELECT * FROM TestDatabase.dbo.myNative;"
 ```
 
 ### **Usar bcp y el formato nativo para importar datos con un archivo de formato no XML**<a name="bcp_native_import_fmt"></a>
-Modificadores**-n** y **-f** switches y **IN** commy.  En un símbolo del sistema, escriba los comandos siguientes:
+Modificadores **-n** y **-f** switches y **IN** commy.  En un símbolo del sistema, escriba los comandos siguientes:
 
 ```cmd
 REM Truncate table (for testing)
@@ -249,7 +250,7 @@ Para usar formatos de datos para la importación o exportación masivas
   
 -   [Usar el formato nativo Unicode para importar o exportar datos &#40;SQL Server&#41;](../../relational-databases/import-export/use-unicode-native-format-to-import-or-export-data-sql-server.md)  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Ver también  
  [bcp Utility](../../tools/bcp-utility.md)   
  [BULK INSERT &#40;Transact-SQL&#41;](../../t-sql/statements/bulk-insert-transact-sql.md)   
  [Tipos de datos &#40;Transact-SQL&#41;](../../t-sql/data-types/data-types-transact-sql.md)   

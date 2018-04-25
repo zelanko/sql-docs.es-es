@@ -1,16 +1,16 @@
 ---
 title: STEquals (tipo de datos geometry) | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 08/03/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine, sql-database
-ms.service: 
+ms.service: ''
 ms.component: t-sql|spatial-geography
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - STEquals (geometry Data Type)
@@ -20,16 +20,16 @@ dev_langs:
 helpviewer_keywords:
 - STEquals (geometry Data Type)
 ms.assetid: 808f0e25-9e68-4ba7-9329-07ec950698f3
-caps.latest.revision: 
+caps.latest.revision: 25
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 8e7aadcdf5d0527fe46337f56c5e98017afc4dd7
-ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
+ms.openlocfilehash: a5f78d524005317b3cb6e3e4c8cc550d9dafd083
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/25/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="stequals-geometry-data-type"></a>STEquals (tipo de datos geometry)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -53,7 +53,7 @@ Devuelve 1 si una instancia de **geometry** representa el mismo conjunto de punt
  Tipo de valor devuelto de CLR: **SqlBoolean**  
   
 ## <a name="remarks"></a>Notas  
- Este método siempre devuelve null si no coinciden los identificadores de referencia espacial (SRID) de las instancias de **geometry**.  
+ Este método siempre devuelve NULL si no coinciden los identificadores de referencia espacial (SRID) de las instancias de **geometry**.  
   
 ## <a name="examples"></a>Ejemplos  
  En el ejemplo siguiente se crean dos instancias de `geometry` con `STGeomFromText()` que son iguales, pero no trivialmente iguales, y se usa `STEquals()` para comprobar su igualdad.  

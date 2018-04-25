@@ -1,16 +1,16 @@
 ---
 title: DBCC CHECKCATALOG (Transact-SQL) | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 11/14/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: sql-database
-ms.service: 
+ms.service: ''
 ms.component: t-sql|database-console-commands
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - DBCC_CHECKCATALOG_TSQL
@@ -26,16 +26,16 @@ helpviewer_keywords:
 - integrity [SQL Server], catalogs
 - consistency [SQL Server], catalogs
 ms.assetid: 8076eb4e-f049-44bf-9a35-45cdd6ef0105
-caps.latest.revision: 
+caps.latest.revision: 51
 author: barbkess
 ms.author: barbkess
 manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 7c8b73259e599e0001706cfaf09dca30d7d31a5b
-ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
+ms.openlocfilehash: 6e5f9258cc9b2c74407968703be1c2c2901ae4b3
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/25/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="dbcc-checkcatalog-transact-sql"></a>DBCC CHECKCATALOG (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -75,7 +75,7 @@ Cuando finaliza el comando DBCC CATALOG, se escribe un mensaje en el registro de
 |4|Se ha detectado una infracción de acceso o aserción.|  
 |5|Error desconocido que cancela el comando DBCC.|  
   
-DBCC CHECKCATALOG realiza varias comprobaciones de coherencia entre las tablas de metadatos del sistema. DBCC CHECKCATALOG utiliza una instantánea de base de datos interna para proporcionar la coherencia transaccional que necesita para realizar estas comprobaciones. Para obtener más información, vea [Ver el tamaño del archivo disperso de una instantánea de base de datos &#40;Transact-SQL&#41;](../../relational-databases/databases/view-the-size-of-the-sparse-file-of-a-database-snapshot-transact-sql.md) y la sección "Uso de comandos DBCC en instantáneas internas de la base de datos" de [DBCC &#40;Transact-SQL&#41;](../../t-sql/database-console-commands/dbcc-transact-sql.md).
+DBCC CHECKCATALOG realiza varias comprobaciones de coherencia entre las tablas de metadatos del sistema. DBCC CHECKCATALOG utiliza una instantánea de base de datos interna para proporcionar la coherencia transaccional que necesita para realizar estas comprobaciones. Para más información, vea [Ver el tamaño del archivo disperso de una instantánea de base de datos &#40;Transact-SQL&#41;](../../relational-databases/databases/view-the-size-of-the-sparse-file-of-a-database-snapshot-transact-sql.md) y la sección "Uso de comandos DBCC en instantáneas internas de la base de datos" de [DBCC &#40;Transact-SQL&#41;](../../t-sql/database-console-commands/dbcc-transact-sql.md).
 Si no se puede crear una instantánea, DBCC CHECKCATALOG adquiere un bloqueo de base de datos exclusivo para obtener la coherencia necesaria. Si se detecta cualquier incoherencia, no se podrá reparar y será necesario restaurar la base de datos a partir de una copia de seguridad.
   
 > [!NOTE]  

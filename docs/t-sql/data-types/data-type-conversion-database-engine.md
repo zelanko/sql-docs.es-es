@@ -1,16 +1,16 @@
 ---
-title: "Conversión de tipos de datos (motor de base de datos) | Microsoft Docs"
-ms.custom: 
+title: Conversión de tipos de datos (motor de base de datos) | Microsoft Docs
+ms.custom: ''
 ms.date: 7/23/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
-ms.service: 
+ms.service: ''
 ms.component: t-sql|data-types
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 dev_langs:
 - TSQL
@@ -23,16 +23,17 @@ helpviewer_keywords:
 - explicit data type conversions [SQL Server]
 - converting data types [SQL Server], about converting data types
 ms.assetid: ffacf45e-a488-48d0-9bb0-dcc7fd365299
-caps.latest.revision: 
+caps.latest.revision: 37
 author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: Active
-ms.openlocfilehash: 811eacd3dc0cbbd622fc6eac6ad91a6e740554f4
-ms.sourcegitcommit: 45e4efb7aa828578fe9eb7743a1a3526da719555
+monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
+ms.openlocfilehash: 9443c64daa514c83e6493606f961e501b26f04f6
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="data-type-conversion-database-engine"></a>Conversión de tipos de datos (motor de base de datos)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -105,7 +106,7 @@ En la tabla siguiente se describen las conversiones de tipos de datos de [!INCLU
 |**datetime**, **smalldatetime**|**Date**|  
 |Cualquiera establecido en NULL|**Variant** establecido en NULL|  
   
-Los valores únicos de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] se convierten a un valor único de [!INCLUDE[vbprvb](../../includes/vbprvb-md.md)], con la excepción de los valores **binary**, **varbinary** e **image**. Estos valores se convierten a una matriz **Byte()** unidimensional en [!INCLUDE[vbprvb](../../includes/vbprvb-md.md)]. Esta matriz tiene un intervalo de **Byte(**0 to *length*1**)** donde *length* es el número de bytes en los valores [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] **binary**, **varbinary** o **image**.
+Los valores únicos de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] se convierten a un valor único de [!INCLUDE[vbprvb](../../includes/vbprvb-md.md)], con la excepción de los valores **binary**, **varbinary** e **image**. Estos valores se convierten a una matriz **Byte()** unidimensional en [!INCLUDE[vbprvb](../../includes/vbprvb-md.md)]. Esta matriz tiene un intervalo de **Byte(** 0 to *length*1 **)** donde *length* es el número de bytes en los valores [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] **binary**, **varbinary** o **image**.
   
 A continuación se indican las conversiones de tipos de datos de [!INCLUDE[vbprvb](../../includes/vbprvb-md.md)] a tipos de datos de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].
   

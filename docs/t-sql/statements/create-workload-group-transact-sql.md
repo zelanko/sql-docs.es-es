@@ -1,16 +1,16 @@
 ---
 title: CREATE WORKLOAD GROUP (Transact-SQL) | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 01/04/2018
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: sql-database
-ms.service: 
+ms.service: ''
 ms.component: t-sql|statements
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - WORKLOAD GROUP
@@ -22,16 +22,16 @@ dev_langs:
 helpviewer_keywords:
 - CREATE WORKLOAD GROUP statement
 ms.assetid: d949e540-9517-4bca-8117-ad8358848baa
-caps.latest.revision: 
+caps.latest.revision: 47
 author: barbkess
 ms.author: barbkess
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: cec1360259d78679fab31a45a074d5fbbf3779b5
-ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
+ms.openlocfilehash: de17c3a1d00554e36537ce76eafcebba2ac0e55d
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/25/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="create-workload-group-transact-sql"></a>CREATE WORKLOAD GROUP (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -75,7 +75,7 @@ CREATE WORKLOAD GROUP group_name
   
  IMPORTANCE es local para el grupo de recursos de servidor; los grupos de cargas de trabajo de importancia distinta dentro del mismo grupo de recursos de servidor se influyen entre sí, pero no influyen en los grupos de cargas de trabajo de otro grupo de recursos de servidor.  
   
- REQUEST_MAX_MEMORY_GRANT_PERCENT =*valor*  
+ REQUEST_MAX_MEMORY_GRANT_PERCENT =*value*  
  Especifica la cantidad máxima de memoria que una única solicitud puede tomar del grupo. Este porcentaje es relativo al tamaño del grupo de recursos de servidor especificado por MAX_MEMORY_PERCENT.  
   
 > [!NOTE]  
@@ -98,11 +98,11 @@ CREATE WORKLOAD GROUP group_name
 >   
 >  Tenga en cuenta que ambos casos están sujetos a un error de tiempo de espera 8645 si el servidor no tiene suficiente memoria física.  
   
- REQUEST_MAX_CPU_TIME_SEC =*valor*  
- Especifica la cantidad máxima de tiempo de CPU, en segundos, que puede usar una solicitud. *valor* debe ser 0 o un entero positivo. El valor predeterminado de *valor* es 0, que indica una cantidad ilimitada.  
+ REQUEST_MAX_CPU_TIME_SEC =*value*  
+ Especifica la cantidad máxima de tiempo de CPU, en segundos, que puede usar una solicitud. *valor* debe ser 0 o un entero positivo. El valor predeterminado de *value* es 0, que indica una cantidad ilimitada.  
   
 > [!NOTE]  
-> De forma predeterminada, Resource Governor no impedirá que una solicitud continúe si se supera el tiempo máximo. Sin embargo, se generará un evento. Para obtener más información, vea [Clase de eventos Umbral de la CPU superado](../../relational-databases/event-classes/cpu-threshold-exceeded-event-class.md).  
+> De forma predeterminada, Resource Governor no evita que una solicitud continúe si se supera el tiempo máximo. Sin embargo, se generará un evento. Para obtener más información, vea [Clase de eventos Umbral de la CPU superado](../../relational-databases/event-classes/cpu-threshold-exceeded-event-class.md).  
 
 > [!IMPORTANT]
 > A partir de [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)] CU3 y si se usa la [marca de seguimiento 2422](../../t-sql/database-console-commands/dbcc-traceon-trace-flags-transact-sql.md), Resource Governor anula una solicitud cuando se supera el tiempo máximo. 
@@ -115,7 +115,7 @@ CREATE WORKLOAD GROUP group_name
   
  *valor* debe ser 0 o un entero positivo. El valor predeterminado de *valor*, 0, usa un cálculo interno basado en el costo de la consulta para determinar el tiempo máximo.  
   
- MAX_DOP =*valor*  
+ MAX_DOP =*value*  
  Especifica el grado máximo de paralelismo (DOP) para las solicitudes paralelas. *valor* debe ser 0 o un entero positivo. El intervalo permitido para *value* es de 0 a 64. El valor predeterminado para *valor*, 0, usa la configuración global. MAX_DOP se trata de la siguiente manera:  
   
 -   MAX_DOP como sugerencia de consulta resulta eficaz siempre y cuando no supere el MAX_DOP del grupo de cargas de trabajo. Si el valor de la sugerencia de consulta MAXDOP supera el valor configurado mediante el Regulador de recursos, el Motor de base de datos emplea el valor MAXDOP del Regulador de recursos.  
@@ -128,7 +128,7 @@ CREATE WORKLOAD GROUP group_name
   
 -   Una vez configurado DOP, solo se puede reducir ante la concesión de presión de memoria. La reconfiguración del grupo de cargas de trabajo no es visible mientras se espera en la cola de concesión de memoria.  
   
- GROUP_MAX_REQUESTS =*valor*  
+ GROUP_MAX_REQUESTS =*value*  
  Especifica el número máximo de solicitudes simultáneas que pueden ejecutarse en el grupo de cargas de trabajo. *valor* debe ser 0 o un entero positivo. El valor predeterminado de *valor*, 0, permite solicitudes ilimitadas. Cuando se alcanza el máximo de solicitudes simultáneas, un usuario de ese grupo puede iniciar sesión, pero se coloca en estado de espera hasta que las solicitudes simultáneas caigan por debajo del valor especificado.  
   
  USING { *pool_name* | **"default"** }  

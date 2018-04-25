@@ -2,7 +2,7 @@
 title: CREATE COLUMNSTORE INDEX (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 08/10/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
 ms.service: ''
 ms.component: t-sql|statements
@@ -36,11 +36,12 @@ author: barbkess
 ms.author: barbkess
 manager: craigg
 ms.workload: Active
-ms.openlocfilehash: 461809bcf59b143f39d62b4cca7919a09168638f
-ms.sourcegitcommit: 8b332c12850c283ae413e0b04b2b290ac2edb672
+monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
+ms.openlocfilehash: 96716c0089734ddb038ae117211fcade0d810689
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/05/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="create-columnstore-index-transact-sql"></a>CREATE COLUMNSTORE INDEX (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2012-all-md](../../includes/tsql-appliesto-ss2012-all-md.md)]
@@ -173,7 +174,7 @@ ON
    *filegroup_name*  
    Especifica el grupo de archivos para almacenar el índice clúster de almacén de columnas. Si no se especifica ninguna ubicación y la tabla no tiene particiones, el índice usa el mismo grupo de archivos que la tabla o la vista subyacente. El grupo de archivos debe existir previamente.  
 
-   **"**default**"**  
+   **"** default **"**  
    Para crear el índice en el grupo de archivos predeterminado, use "default" o [ default ].  
   
    Si se especifica "default", la opción QUOTED_IDENTIFIER debe tener el valor ON para la sesión actual. QUOTED_IDENTIFIER es ON de forma predeterminada. Para obtener más información, vea [SET QUOTED_IDENTIFIER &#40;Transact-SQL&#41;](../../t-sql/statements/set-quoted-identifier-transact-sql.md).  
@@ -257,10 +258,10 @@ ON
 *filegroup_name*  
    Especifica el nombre de un grupo de archivos en el que se va a crear el índice. Si no se especifica *filegroup_name* y la tabla no tiene particiones, el índice usa el mismo grupo de archivos que la tabla subyacente. El grupo de archivos debe existir previamente.  
  
-**"**default**"**  
+**"** default **"**  
 Crea el índice especificado en el grupo de archivos predeterminado.  
   
-El término predeterminado (default), en este contexto, no es una palabra clave. Es un identificador para el grupo de archivos predeterminado y debe delimitarse, como en ON **"**default**"** u ON **[**default**]**. Si se especifica "default", la opción QUOTED_IDENTIFIER debe tener el valor ON para la sesión actual. Esta es la configuración predeterminada. Para obtener más información, vea [SET QUOTED_IDENTIFIER &#40;Transact-SQL&#41;](../../t-sql/statements/set-quoted-identifier-transact-sql.md).  
+El término predeterminado (default), en este contexto, no es una palabra clave. Es un identificador para el grupo de archivos predeterminado y debe delimitarse, como en ON **"** default **"** u ON **[** default **]**. Si se especifica "default", la opción QUOTED_IDENTIFIER debe tener el valor ON para la sesión actual. Esta es la configuración predeterminada. Para obtener más información, vea [SET QUOTED_IDENTIFIER &#40;Transact-SQL&#41;](../../t-sql/statements/set-quoted-identifier-transact-sql.md).  
   
 ##  <a name="Permissions"></a> Permissions  
  Requiere el permiso ALTER en la tabla.  

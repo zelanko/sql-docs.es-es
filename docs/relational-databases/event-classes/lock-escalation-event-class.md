@@ -1,35 +1,36 @@
 ---
 title: Clase de eventos Lock:Escalation | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine, sql-database
-ms.service: 
+ms.service: ''
 ms.component: event-classes
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - Escalation event class
 - lock escalation [SQL Server], event class
 ms.assetid: d253b44c-7600-4afa-a3a7-03cc937c6a4b
-caps.latest.revision: 
+caps.latest.revision: 47
 author: stevestein
 ms.author: sstein
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 90a86e21ca421d50bc94035fb57505630738fbb0
-ms.sourcegitcommit: 37f0b59e648251be673389fa486b0a984ce22c81
+monikerRange: = azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions
+ms.openlocfilehash: 399af418d43ec95ab6335c7bc76f677525f4db97
+ms.sourcegitcommit: beaad940c348ab22d4b4a279ced3137ad30c658a
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/12/2018
+ms.lasthandoff: 04/20/2018
 ---
 # <a name="lockescalation-event-class"></a>Lock:Escalation (clase de eventos)
-[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
-La clase de eventos **Lock:Escalation** indica que un bloqueo específico se ha convertido en un bloqueo general; por ejemplo, un bloqueo de fila se ha convertido en un bloqueo de objeto. La clase de eventos de ampliación tiene Id. de Evento 60.  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+  La clase de eventos **Lock:Escalation** indica que un bloqueo específico se ha convertido en un bloqueo general; por ejemplo, un bloqueo de fila se ha convertido en un bloqueo de objeto. La clase de eventos de ampliación tiene Id. de Evento 60.  
   
 ## <a name="lockescalation-event-class-data-columns"></a>Columnas de datos de la clase de evento Lock:Escalation  
   

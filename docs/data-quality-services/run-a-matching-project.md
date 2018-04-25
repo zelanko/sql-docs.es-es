@@ -17,18 +17,21 @@ f1_keywords:
 - sql13.dqs.matchingproject.matching.f1
 - sql13.dqs.matchingproject.export.f1
 ms.assetid: 6aa9d199-83ce-4b5d-8497-71eef9258745
-caps.latest.revision: ''
+caps.latest.revision: 36
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: cd76d59bc0c13742633185766f559bd3d189e228
-ms.sourcegitcommit: 34766933e3832ca36181641db4493a0d2f4d05c6
+ms.openlocfilehash: ae48076185149d0ba1306260459ec7b34dcc8123
+ms.sourcegitcommit: bb044a48a6af9b9d8edb178dc8c8bd5658b9ff68
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/22/2018
+ms.lasthandoff: 04/18/2018
 ---
 # <a name="run-a-matching-project"></a>Ejecutar un proyecto de coincidencia
+
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
+
   En este tema se describe cómo realizar la búsqueda de coincidencias de datos en [!INCLUDE[ssDQSnoversion](../includes/ssdqsnoversion-md.md)] (DQS). El proceso de búsqueda de coincidencias identifica los clústeres de registros coincidentes en función de las reglas de coincidencia existentes en la directiva de coincidencia, designa un registro de cada clúster como el registro que permanece basándose en una regla de permanencia, y exporta los resultados. DQS realiza el proceso de búsqueda de coincidencias, también denominado eliminación de datos duplicados, en un proceso asistido por PC, pero es usted quien crea las reglas de coincidencia de forma interactiva y quien selecciona la regla de permanencia entre varias opciones, por lo que también es quien controla el proceso de búsqueda de coincidencias.  
   
  La búsqueda de coincidencias se realiza en tres fases: un proceso de asignación en el que se identifica el origen de datos y se asignan los dominios a dicho origen de datos, un proceso de búsqueda de coincidencias en el que se ejecuta el análisis de coincidencia, y un proceso de permanencia y exportación en el que se designa la regla de permanencia y se exportan los resultados de la búsqueda de coincidencias. Cada uno de estos procesos se realiza en una página distinta del asistente para la actividad de coincidencia, lo que le permite desplazarse de una página a otra, volver a ejecutar el proceso, y cerrar un proceso de búsqueda de coincidencias específico y volver a la misma fase del proceso. DQS proporciona estadísticas sobre los datos de origen, las reglas de coincidencia y los resultados de búsqueda de coincidencias que permiten tomar decisiones fundadas sobre la búsqueda de coincidencias y sobre cómo refinar este proceso.  

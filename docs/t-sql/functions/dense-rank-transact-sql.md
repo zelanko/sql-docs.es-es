@@ -1,16 +1,16 @@
 ---
 title: DENSE_RANK (Transact-SQL) | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 03/16/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
-ms.service: 
+ms.service: ''
 ms.component: t-sql|functions
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - DENSE_RANK_TSQL
@@ -23,16 +23,17 @@ helpviewer_keywords:
 - tied rows [SQL Server]
 - ranking rows
 ms.assetid: 03871fc6-9592-4016-b0b2-ff543f132b20
-caps.latest.revision: 
+caps.latest.revision: 47
 author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: Active
-ms.openlocfilehash: fd11621293a410a4ac5adb71b0c1fd62f07e03a8
-ms.sourcegitcommit: 45e4efb7aa828578fe9eb7743a1a3526da719555
+monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
+ms.openlocfilehash: 8fad571ad9883122128130b022fc3f8e8cd188a4
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="denserank-transact-sql"></a>DENSE_RANK (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -156,19 +157,19 @@ WHERE TerritoryID IS NOT NULL AND SalesYTD <> 0;
   
 |FirstName|LastName|Row Number|Rank|Dense Rank|Quartile|SalesYTD|PostalCode|  
 |---------------|--------------|----------------|----------|----------------|--------------|--------------|----------------|  
-|Michael|Blythe|1|1|1|1|4557045.0459|98027|  
-|Linda|Mitchell|2|1|1|1|5200475.2313|98027|  
-|Jillian|Carson|3|1|1|1|3857163.6332|98027|  
-|Garrett|Vargas|4|1|1|1|1764938.9859|98027|  
-|Tsvi|Reiter|5|1|1|2|2811012.7151|98027|  
-|Shu|Ito|6|6|2|2|3018725.4858|98055|  
-|José|Saraiva|7|6|2|2|3189356.2465|98055|  
-|David|Campbell|8|6|2|3|3587378.4257|98055|  
-|Tete|Mensa Annan|9|6|2|3|1931620.1835|98055|  
-|Lynn|Tsoflias|10|6|2|3|1758385.926|98055|  
-|Rachel|Valdez|11|6|2|4|2241204.0424|98055|  
-|Jae|Pak|12|6|2|4|5015682.3752|98055|  
-|Ranjit|Varkey Chudukatil|13|6|2|4|3827950.238|98055| 
+|Michael|Blythe|1|1|1|1|4 557 045,0459|98027|  
+|Linda|Mitchell|2|1|1|1|5 200 475,2313|98027|  
+|Jillian|Carson|3|1|1|1|3 857 163,6332|98027|  
+|Garrett|Vargas|4|1|1|1|1 764 938,9859|98027|  
+|Tsvi|Reiter|5|1|1|2|2 811 012,7151|98027|  
+|Shu|Ito|6|6|2|2|3 018 725,4858|98055|  
+|José|Saraiva|7|6|2|2|3 189 356,2465|98055|  
+|David|Campbell|8|6|2|3|3 587 378,4257|98055|  
+|Tete|Mensa Annan|9|6|2|3|1 931 620,1835|98055|  
+|Lynn|Tsoflias|10|6|2|3|1 758 385,926|98055|  
+|Rachel|Valdez|11|6|2|4|2 241 204,0424|98055|  
+|Jae|Pak|12|6|2|4|5 015 682,3752|98055|  
+|Ranjit|Varkey Chudukatil|13|6|2|4|3 827 950,238|98055| 
 
 
 ## <a name="examples-includesssdwfullincludessssdwfull-mdmd-and-includesspdwincludessspdw-mdmd"></a>Ejemplos: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] y [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  

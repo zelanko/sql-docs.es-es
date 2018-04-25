@@ -1,33 +1,33 @@
 ---
-title: "Búsqueda de texto completo | Microsoft Docs"
-ms.custom: 
-ms.date: 07/29/2016
-ms.prod: sql-non-specified
+title: Búsqueda de texto completo | Microsoft Docs
+ms.custom: ''
+ms.date: 04/10/2018
+ms.prod: sql
 ms.prod_service: database-engine, sql-database
-ms.service: 
 ms.component: search
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology:
-- dbe-search
-ms.tgt_pltfrm: 
+ms.technology: database-engine
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - full-text search [SQL Server]
 ms.assetid: a0ce315d-f96d-4e5d-b4eb-ff76811cab75
-caps.latest.revision: 
+caps.latest.revision: 54
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ms.workload: Active
-ms.openlocfilehash: f69fa33969aeaa0d6ae1064651afd6c93c93d353
-ms.sourcegitcommit: f02598eb8665a9c2dc01991c36f27943701fdd2d
+monikerRange: = azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions
+ms.openlocfilehash: 31862df0971da8de6e6ced430f7095587f9f7926
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/13/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="full-text-search"></a>Búsqueda de texto completo
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
+
 La búsqueda de texto completo en [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] y [!INCLUDE[ssSDSFull](../../includes/sssdsfull-md.md)] permite a los usuarios y aplicaciones ejecutar consultas de texto completo en datos basados en caracteres en las tablas de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .
   
 ## <a name="basic-tasks"></a>Tareas básicas
@@ -139,7 +139,7 @@ Los índices de texto completo incluyen una o varias columnas basadas en caracte
 ###  <a name="indexing"></a> Proceso de indización de texto completo  
  Cuando se inicia un rellenado de texto completo (también conocido como rastreo), el motor de texto completo inserta lotes grandes de datos en la memoria y lo notifica al host de demonio de filtro. El host filtra y establece separaciones de palabras en los datos, y convierte los datos convertidos en las listas de palabras invertidas. A continuación, la búsqueda de texto completo extrae los datos convertidos de las listas de palabras, procesa los datos para quitar las palabras irrelevantes y conserva las listas de palabras para un lote en uno o varios índices invertidos.  
   
- Al indexar datos almacenados en una columna **varbinary(max)** o **image** , el filtro, que implementa la interfaz **IFilter** , extrae texto basándose en el formato de archivo especificado para los datos (por ejemplo, [!INCLUDE[msCoName](../../includes/msconame-md.md)] Word). En algunos casos, los componentes de filtro requieren que los datos de tipo **varbinary(max)**o **image** se escriban en la carpeta de filtro de datos, en lugar de insertarse en la memoria.  
+ Al indexar datos almacenados en una columna **varbinary(max)** o **image** , el filtro, que implementa la interfaz **IFilter** , extrae texto basándose en el formato de archivo especificado para los datos (por ejemplo, [!INCLUDE[msCoName](../../includes/msconame-md.md)] Word). En algunos casos, los componentes de filtro requieren que los datos de tipo **varbinary(max)** o **image** se escriban en la carpeta de filtro de datos, en lugar de insertarse en la memoria.  
   
  Como parte del procesamiento, los datos de texto recopilados se pasan a través de un separador de palabras para dividir el texto en tokens o palabras clave individuales. El idioma que se usa para la tokenización se especifica en el nivel de columna o bien se identifica en los datos **varbinary(max)**, **image**o **xml** por medio del componente de filtro.  
   

@@ -1,34 +1,35 @@
 ---
 title: Clases de eventos configurables por el usuario | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine, sql-database
-ms.service: 
+ms.service: ''
 ms.component: event-classes
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - User-Configurable event class
 ms.assetid: 06fe5f07-a0dd-4968-b123-56b124a86020
-caps.latest.revision: 
+caps.latest.revision: 33
 author: stevestein
 ms.author: sstein
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 6858694e1407806db8763d8de3dd01feda3bab59
-ms.sourcegitcommit: 37f0b59e648251be673389fa486b0a984ce22c81
+monikerRange: = azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions
+ms.openlocfilehash: 50fe3bdd1c835279b6575475e3d3f580ceff18da
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/12/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="user-configurable-event-class"></a>clases de eventos configurables por el usuario
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
-Utilice las categorías de eventos configurables por el usuario para supervisar eventos definidos por el usuario. Cree clases de eventos definidas por el usuario para supervisar eventos cuya supervisión no es posible con las clases de eventos suministradas por el sistema que pertenecen a otras categorías de eventos. Por ejemplo, se puede crear un evento definido por el usuario para supervisar el progreso de la aplicación que se está probando. A medida que se ejecuta la aplicación, pueden generarse eventos en los puntos predefinidos, lo que permite determinar el punto de ejecución actual de la aplicación.  
+  Utilice las categorías de eventos configurables por el usuario para supervisar eventos definidos por el usuario. Cree clases de eventos definidas por el usuario para supervisar eventos cuya supervisión no es posible con las clases de eventos suministradas por el sistema que pertenecen a otras categorías de eventos. Por ejemplo, se puede crear un evento definido por el usuario para supervisar el progreso de la aplicación que se está probando. A medida que se ejecuta la aplicación, pueden generarse eventos en los puntos predefinidos, lo que permite determinar el punto de ejecución actual de la aplicación.  
   
 ## <a name="user-configurable-event-class-data-columns"></a>Columnas de datos de las clases de eventos configurables por el usuario  
   

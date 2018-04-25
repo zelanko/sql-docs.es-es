@@ -1,30 +1,30 @@
 ---
-title: "Base de datos de publicación | Microsoft Docs"
-ms.custom: 
+title: Base de datos de publicación | Microsoft Docs
+ms.custom: ''
 ms.date: 03/03/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine
-ms.service: 
+ms.service: ''
 ms.component: replication
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - replication
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 f1_keywords:
 - sql13.rep.newpubwizard.publicationdatabase.f1
 ms.assetid: a9fafc9b-9963-4b59-97a0-3472158fa665
-caps.latest.revision: 
+caps.latest.revision: 23
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 23969b740711c3c3184438d984953a1535820f34
-ms.sourcegitcommit: ab25b08a312d35489a2c4a6a0d29a04bbd90f64d
+ms.openlocfilehash: 5453a747b502c01f7bc16b5e0f0bd18c9c2669e8
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/08/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="publication-database"></a>Base de datos de publicaciones
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -36,7 +36,7 @@ ms.lasthandoff: 03/08/2018
   
 -   Ejecuta **sp_replicationdboption** y establece **True** en la opción **publish** (para publicaciones transaccionales o de instantáneas) o **merge publish**(para publicaciones de combinación).  
   
-## <a name="options"></a>.  
+## <a name="options"></a>Opciones  
  **Bases de datos**  
  Seleccione el nombre de la base de datos que contiene los datos o los objetos de base de datos que desea publicar.  
   

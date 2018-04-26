@@ -1,35 +1,35 @@
 ---
-title: "Revertir una base de datos a una instantánea de base de datos | Microsoft Docs"
-ms.custom: 
+title: Revertir una base de datos a una instantánea de base de datos | Microsoft Docs
+ms.custom: ''
 ms.date: 03/09/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine
-ms.service: 
+ms.service: ''
 ms.component: databases
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - database snapshots [SQL Server], reverting to
 - reverting databases
 ms.assetid: 8f74dd31-c9ca-4537-8760-0c7648f0787d
-caps.latest.revision: 
+caps.latest.revision: 58
 author: stevestein
 ms.author: sstein
 manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 4a93fde67cfb08245607153afbddaffd1aca6669
-ms.sourcegitcommit: d8ab09ad99e9ec30875076acee2ed303d61049b7
+ms.openlocfilehash: 73937db1d92e704085af59291d04bd557ccdc3d3
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/23/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="revert-a-database-to-a-database-snapshot"></a>Revertir una base de datos a una instantánea de base de datos
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
-Si se dañan los datos de una base de datos en línea, revertir la base de datos a una instantánea de base de datos anterior puede ser, en algunos casos, ser una alternativa adecuada a restaurar la base de datos a partir de una copia de seguridad. Por ejemplo, revertir una base de datos puede resultar útil para revertir un error grave del usuario que sea reciente, por ejemplo la eliminación de una tabla. Tenga en cuenta que se pierden todos los cambios realizados después de que se creara la instantánea.  
+  Si se dañan los datos de una base de datos en línea, revertir la base de datos a una instantánea de base de datos anterior puede ser, en algunos casos, ser una alternativa adecuada a restaurar la base de datos a partir de una copia de seguridad. Por ejemplo, revertir una base de datos puede resultar útil para revertir un error grave del usuario que sea reciente, por ejemplo la eliminación de una tabla. Tenga en cuenta que se pierden todos los cambios realizados después de que se creara la instantánea.  
   
 -   **Antes de empezar:**  
   

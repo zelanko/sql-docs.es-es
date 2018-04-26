@@ -1,31 +1,32 @@
 ---
-title: "Supervisión de los componentes de SQL Server | Microsoft Docs"
-ms.custom: 
+title: Supervisión de los componentes de SQL Server | Microsoft Docs
+ms.custom: ''
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine
-ms.service: 
+ms.service: ''
 ms.component: performance
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: e8f1b16b-ea40-4e12-886c-967ebda4e6e4
-caps.latest.revision: 
+caps.latest.revision: 8
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: e42a68231284071a38797fa76085123ab89e92fe
-ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
+ms.openlocfilehash: 98a13e1b94edad10f54f21e1028521696d450f64
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/18/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="monitor-sql-server-components"></a>Supervisar los componentes de SQL Server
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] La supervisión es importante, puesto que[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ofrece un servicio en un entorno dinámico. Los datos de la aplicación cambian. El tipo de acceso que requieren los usuarios cambia. La forma de conexión de los usuarios cambia. También pueden cambiar los tipos de aplicaciones que tienen acceso a [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , pero [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] administra automáticamente los recursos del sistema, como la memoria y el espacio en disco, para minimizar la necesidad de optimizar manualmente el sistema. La supervisión permite a los administradores identificar las tendencias de funcionamiento para determinar si es necesario realizar cambios.  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+  La supervisión es importante, puesto que [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ofrece un servicio en un entorno dinámico. Los datos de la aplicación cambian. El tipo de acceso que requieren los usuarios cambia. La forma de conexión de los usuarios cambia. También pueden cambiar los tipos de aplicaciones que tienen acceso a [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , pero [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] administra automáticamente los recursos del sistema, como la memoria y el espacio en disco, para minimizar la necesidad de optimizar manualmente el sistema. La supervisión permite a los administradores identificar las tendencias de funcionamiento para determinar si es necesario realizar cambios.  
   
  Para supervisar cualquier componente de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] eficazmente:  
   

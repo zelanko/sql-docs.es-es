@@ -1,34 +1,35 @@
 ---
 title: Clase de eventos Log File Auto Grow | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine, sql-database
-ms.service: 
+ms.service: ''
 ms.component: event-classes
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - Log File Auto Grow event class
 ms.assetid: e9b023db-6944-4035-9a83-300f34a58454
-caps.latest.revision: 
+caps.latest.revision: 31
 author: stevestein
 ms.author: sstein
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 6efa82b3f566ab866969649e615d8cf09c1eea05
-ms.sourcegitcommit: 37f0b59e648251be673389fa486b0a984ce22c81
+monikerRange: = azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions
+ms.openlocfilehash: 9ca46bfe52bc3a6c764557ae002b63090e65b53d
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/12/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="log-file-auto-grow-event-class"></a>Log File Auto Grow, clase de eventos
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
-La clase de eventos **Log File Auto Grow** indica que el archivo de registro creció automáticamente. Este evento no se desencadena si el archivo de registro se aumentó explícitamente mediante ALTER DATABASE.  
+  La clase de eventos **Log File Auto Grow** indica que el archivo de registro creció automáticamente. Este evento no se desencadena si el archivo de registro se aumentó explícitamente mediante ALTER DATABASE.  
   
  Incluya la clase de eventos **Log File Auto Grow** en seguimientos que supervisen el crecimiento del archivo de registro. Cuando esta clase de eventos se incluye en un seguimiento, la cantidad de sobrecarga será baja a menos que el archivo de registro crezca automáticamente con frecuencia.  
   

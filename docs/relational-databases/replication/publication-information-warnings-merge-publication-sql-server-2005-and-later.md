@@ -1,30 +1,30 @@
 ---
-title: "Información de publicación, Advertencias (Publicación de combinación, SQL Server 2005 y posteriores) | Microsoft Docs"
-ms.custom: 
+title: Información de publicación, Advertencias (Publicación de combinación, SQL Server 2005 y posteriores) | Microsoft Docs
+ms.custom: ''
 ms.date: 03/04/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine
-ms.service: 
+ms.service: ''
 ms.component: replication
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - replication
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 f1_keywords:
 - sql13.rep.monitor.publicationinfo.warningsandagents.merge.f1
 ms.assetid: 9bef3565-5f13-42ac-8723-ebe55b0c11e6
-caps.latest.revision: 
+caps.latest.revision: 27
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: ff89a5c3cd17f79ae90d57e987edd30827e3bee0
-ms.sourcegitcommit: ab25b08a312d35489a2c4a6a0d29a04bbd90f64d
+ms.openlocfilehash: 12742c3e89e06542d252371132fcda9fad2b10b1
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/08/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="publication-information-warnings-merge-publication-sql-server-2005-and-later"></a>Información de publicación, Advertencias (Publicación de combinación, SQL Server 2005 y posterior)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -59,7 +59,7 @@ ms.lasthandoff: 03/08/2018
   
  Además de mostrar una advertencia en el Monitor de replicación, llegar a un umbral también puede desencadenar una alerta. Para definir alertas, haga clic en **Configurar alertas** y proporcione información en el cuadro de diálogo **Configurar alertas de replicación** .  
   
-## <a name="options"></a>.  
+## <a name="options"></a>Opciones  
  **Habilitado**  
  Seleccione esta opción si desea habilitar una advertencia y especificar un umbral asociado.  
   

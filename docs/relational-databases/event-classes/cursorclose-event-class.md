@@ -1,34 +1,35 @@
 ---
 title: CursorClose, clase de eventos | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine, sql-database
-ms.service: 
+ms.service: ''
 ms.component: event-classes
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - CursorClose event class
 ms.assetid: 5c9bd070-4e4c-4281-b896-1e61a4bd403e
-caps.latest.revision: 
+caps.latest.revision: 37
 author: stevestein
 ms.author: sstein
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: e35763a70260b8d542ca290c91a27cb9e290ecbb
-ms.sourcegitcommit: 37f0b59e648251be673389fa486b0a984ce22c81
+monikerRange: = azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions
+ms.openlocfilehash: bd9435c4e5eccff10877e1b645abfd96d1887520
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/12/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="cursorclose-event-class"></a>CursorClose, clase de eventos
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
-Los eventos de cierre de cursores tienen lugar cuando [!INCLUDE[ssDE](../../includes/ssde-md.md)] cierra y desasigna un cursor. La clase de evento **CursorClose** describe los eventos de cierre de cursores que se producen en los cursores de la interfaz de programación de aplicaciones (API). Esta clase de evento tiene lugar cuando se cierra una instrucción de cursor de [!INCLUDE[tsql](../../includes/tsql-md.md)] mediante ODBC, OLE DB o DB-Library.  
+  Los eventos de cierre de cursores tienen lugar cuando [!INCLUDE[ssDE](../../includes/ssde-md.md)] cierra y desasigna un cursor. La clase de evento **CursorClose** describe los eventos de cierre de cursores que se producen en los cursores de la interfaz de programación de aplicaciones (API). Esta clase de evento tiene lugar cuando se cierra una instrucción de cursor de [!INCLUDE[tsql](../../includes/tsql-md.md)] mediante ODBC, OLE DB o DB-Library.  
   
  Incluya la clase de evento **CursorClose** en los seguimientos que registren el rendimiento de los cursores. La cantidad de sobrecarga generada depende de la frecuencia con la que se utilicen los cursores en la base de datos durante el seguimiento. Si el uso de los cursores es extenso, el seguimiento puede obstaculizar el rendimiento de manera significativa.  
   

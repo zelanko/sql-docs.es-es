@@ -1,16 +1,16 @@
 ---
 title: Especificar terminadores de campo y de fila (SQL Server) | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 08/10/2016
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
-ms.service: 
+ms.service: ''
 ms.component: import-export
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - dbe-bulk-import-export
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - bcp utility [SQL Server], terminators
@@ -19,16 +19,17 @@ helpviewer_keywords:
 - row terminators [SQL Server]
 - terminators [SQL Server]
 ms.assetid: f68b6782-f386-4947-93c4-e89110800704
-caps.latest.revision: 
+caps.latest.revision: 39
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ms.workload: Active
-ms.openlocfilehash: 8d596be8f4ae978a3eafe58d1cf9e8e52241f49c
-ms.sourcegitcommit: 6bd21109abedf64445bdb3478eea5aaa7553fa46
-ms.translationtype: MT
+monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
+ms.openlocfilehash: ce4a92bea3af9709fadfbf4ba9b4dc356afd9fb3
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
+ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/20/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="specify-field-and-row-terminators-sql-server"></a>Especificar terminadores de campo y de fila (SQL Server)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -105,7 +106,7 @@ ms.lasthandoff: 03/20/2018
   
  El comando **bcp** contiene los siguientes modificadores.  
   
-|Switch|Descripción|  
+|Switch|Description|  
 |------------|-----------------|  
 |**-c**|Especifica que los campos de datos se cargarán como datos de caracteres.|  
 |**-t** `,`|Especifica una coma (,) como terminador de campo.|  
@@ -174,9 +175,9 @@ bcp AdventureWorks..myDepartment in C:\myDepartment-c-t.txt -c -t , -r \n -T
 #### <a name="b-using-bulk-insert-to-interactively-specify-terminators"></a>B. Usar BULK INSERT para especificar terminadores interactivamente  
  En el ejemplo siguiente se importa de forma masiva el archivo de datos `Department-c-t.txt` mediante una instrucción `BULK INSERT` que utiliza los calificadores que figuran en la siguiente tabla:  
   
-|Opción|Atributo|  
+|Opción|Attribute|  
 |------------|---------------|  
-|DATAFILETYPE **='**char**'**|Especifica que los campos de datos se cargarán como datos de caracteres.|  
+|DATAFILETYPE **='** char **'**|Especifica que los campos de datos se cargarán como datos de caracteres.|  
 |FIELDTERMINATOR **='**`,`**'**|Especifica una coma (`,`) como terminador de campo.|  
 |ROWTERMINATOR **='**`\n`**'**|Especifica el terminador de fila como un carácter de nueva línea.|  
   
@@ -194,7 +195,7 @@ BULK INSERT myDepartment FROM 'C:\myDepartment-c-t.txt'
 GO  
 ```  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Ver también  
  [bcp Utility](../../tools/bcp-utility.md)   
  [BULK INSERT &#40;Transact-SQL&#41;](../../t-sql/statements/bulk-insert-transact-sql.md)   
  [OPENROWSET &#40;Transact-SQL&#41;](../../t-sql/functions/openrowset-transact-sql.md)   

@@ -2,7 +2,7 @@
 title: Usar el formato de caracteres para importar o exportar datos (SQL Server) | Microsoft Docs
 ms.custom: ''
 ms.date: 09/29/2016
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
 ms.service: ''
 ms.component: import-export
@@ -21,11 +21,12 @@ author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: c3eff449d858ce95e1df141363571f73c0c5813d
-ms.sourcegitcommit: d6b1695c8cbc70279b7d85ec4dfb66a4271cdb10
-ms.translationtype: MT
+monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
+ms.openlocfilehash: f7bf18d9a0cff7b9185b66e3cfecebbcb2d5c443
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
+ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/10/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="use-character-format-to-import-or-export-data-sql-server"></a>Usar el formato de caracteres para importar o exportar datos (SQL Server)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -69,7 +70,7 @@ Puede importar datos en formato de caracteres en una tabla usando [bcp](../../to
   
 El formato de caracteres se puede usar con las siguientes opciones de comando:  
   
-|Command|Opción|Description|  
+|Comando|Opción|Description|  
 |-------------|------------|-----------------|  
 |BCP|**-c**|Hace que la utilidad bcp use datos de caracteres.*|  
 |BULK INSERT|DATAFILETYPE **='char'**|Utiliza el formato de caracteres al importar datos masivamente.|  
@@ -130,7 +131,7 @@ Notepad D:\BCP\myChar.fmt
 En los siguientes ejemplos se usan la base de datos y los archivos de formato creados anteriormente.
 
 ### **Usar el formato de caracteres para importar o exportar datos**<a name="bcp_char_export"></a>
-Modificador**-c** y comando **OUT** .  Nota: el archivo de datos creado en este ejemplo se usará en todos los ejemplos siguientes.  En el símbolo del sistema, escriba el siguiente comando:
+Modificador **-c** y comando **OUT** .  Nota: el archivo de datos creado en este ejemplo se usará en todos los ejemplos siguientes.  En el símbolo del sistema, escriba el siguiente comando:
 
 ```cmd
 bcp TestDatabase.dbo.myChar OUT D:\BCP\myChar.bcp -T -c
@@ -140,7 +141,7 @@ NOTEPAD D:\BCP\myChar.bcp
 ```
 
 ### **Usar bcp y el formato de caracteres para importar datos sin un archivo de formato**<a name="bcp_char_import"></a>
-Modificador**-c** y comando **IN** .  En el símbolo del sistema, escriba el siguiente comando:
+Modificador **-c** y comando **IN** .  En el símbolo del sistema, escriba el siguiente comando:
 
 ```cmd
 REM Truncate table (for testing)
@@ -154,7 +155,7 @@ SQLCMD -Q "SELECT * FROM TestDatabase.dbo.myChar;"
 ```
 
 ### **Usar bcp y el formato de caracteres para importar datos con un archivo de formato no XML**<a name="bcp_char_import_fmt"></a>
-Modificadores**-c** y **-f** switches y **IN** commy.  En el símbolo del sistema, escriba el siguiente comando:
+Modificadores **-c** y **-f** switches y **IN** commy.  En el símbolo del sistema, escriba el siguiente comando:
 
 ```cmd
 REM Truncate table (for testing)
@@ -224,7 +225,7 @@ Para usar formatos de datos para la importación o exportación masivas
   
 -   [Usar el formato nativo Unicode para importar o exportar datos &#40;SQL Server&#41;](../../relational-databases/import-export/use-unicode-native-format-to-import-or-export-data-sql-server.md)  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Ver también  
  [bcp Utility](../../tools/bcp-utility.md)   
  [BULK INSERT &#40;Transact-SQL&#41;](../../t-sql/statements/bulk-insert-transact-sql.md)   
  [OPENROWSET &#40;Transact-SQL&#41;](../../t-sql/functions/openrowset-transact-sql.md)   

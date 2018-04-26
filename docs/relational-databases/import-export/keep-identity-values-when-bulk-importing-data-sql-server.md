@@ -1,32 +1,33 @@
 ---
 title: Mantenimiento de valores de identidad al importar datos de forma masiva (SQL Server) | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 09/21/2016
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
-ms.service: 
+ms.service: ''
 ms.component: import-export
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - dbe-bulk-import-export
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - identity values [SQL Server], bulk imports
 - data formats [SQL Server], identity values
 - bulk importing [SQL Server], identity values
 ms.assetid: 45894a3f-2d8a-4edd-9568-afa7d0d3061f
-caps.latest.revision: 
+caps.latest.revision: 22
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 076fe1050d7ac2c6d0696b0dd0baff051597ad30
-ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
+monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
+ms.openlocfilehash: b42d3b8aac19fee197aaa4307dc4f1191d30948f
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/15/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="keep-identity-values-when-bulk-importing-data-sql-server"></a>Mantener valores de identidad al importar datos de forma masiva (SQL Server)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -128,7 +129,7 @@ Notepad D:\BCP\myIdentity.fmt
 Los ejemplos siguientes usan la base de datos, el archivo de datos y los archivos de formato que se han creado anteriormente.
   
 ### **Usar [BCP](../../tools/bcp-utility.md) y mantener valores de identidad sin un archivo de formato**<a name="bcp_identity"></a>
-Modificador**-E** .  En el símbolo del sistema, escriba el siguiente comando:
+Modificador **-E** .  En el símbolo del sistema, escriba el siguiente comando:
 ```
 REM Truncate table (for testing)
 SQLCMD -Q "TRUNCATE TABLE TestDatabase.dbo.myIdentity;"
@@ -141,7 +142,7 @@ SQLCMD -Q "SELECT * FROM TestDatabase.dbo.myIdentity;"
 ```
 
 ### **Usar [BCP](../../tools/bcp-utility.md) y mantener valores de identidad con un [archivo de formato no XML](../../relational-databases/import-export/non-xml-format-files-sql-server.md)**<a name="bcp_identity_fmt"></a>
-Modificadores**-E** y **-f** .  En el símbolo del sistema, escriba el siguiente comando:
+Modificadores **-E** y **-f** .  En el símbolo del sistema, escriba el siguiente comando:
 ```
 REM Truncate table (for testing)
 SQLCMD -Q "TRUNCATE TABLE TestDatabase.dbo.myIdentity;"

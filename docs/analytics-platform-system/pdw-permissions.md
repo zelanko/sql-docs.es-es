@@ -1,29 +1,22 @@
 ---
-title: Permisos de PDW (SQL Server PDW)
-author: barbkess
-ms.author: barbkess
+title: Los permisos de almacenamiento de datos paralelos | Documentos de Microsoft
+description: Este artículo describen los requisitos y opciones para administrar permisos de base de datos de almacenamiento de datos paralelos.
+author: mzaman1
 manager: craigg
-ms.prod: analytics-platform-system
-ms.prod_service: mpp-data-warehouse
-ms.service: ''
-ms.component: ''
-ms.technology: mpp-data-warehouse
-ms.custom: ''
-ms.date: 01/05/2017
-ms.reviewer: na
-ms.suite: sql
-ms.tgt_pltfrm: na
-ms.topic: article
-ms.assetid: 7e271980-bec8-424b-9f68-cea11b4e64e8
-caps.latest.revision: 23
-ms.openlocfilehash: 95843be163714be27e6eeb7f28825e98a5371e19
-ms.sourcegitcommit: 9351e8b7b68f599a95fb8e76930ab886db737e5f
+ms.prod: sql
+ms.technology: data-warehouse
+ms.topic: conceptual
+ms.date: 04/17/2018
+ms.author: murshedz
+ms.reviewer: martinle
+ms.openlocfilehash: 16ed81d3349cd1e641a66a95d9993e2a86ca4098
+ms.sourcegitcommit: 056ce753c2d6b85cd78be4fc6a29c2b4daaaf26c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/06/2018
+ms.lasthandoff: 04/19/2018
 ---
-# <a name="pdw-permissions"></a>Permisos de PDW
-Este tema describe los requisitos y opciones para administrar permisos de base de datos para SQL Server PDW.  
+# <a name="managing-permissions-in-parallel-data-warehouse"></a>Administrar permisos en el almacenamiento de datos paralelos
+Este artículo describen los requisitos y opciones para administrar permisos de base de datos para SQL Server PDW.  
   
 ## <a name="BackupRestoreBasics"></a>Conceptos básicos de permiso de motor de base de datos  
 Permisos del motor de base de datos en SQL Server PDW se administran en el nivel de servidor mediante inicios de sesión y en el nivel de base de datos a través de los usuarios de base de datos y roles de base de datos definido por el usuario.  
@@ -224,7 +217,7 @@ El sistema de roles fijos de servidor y roles fijos de base de datos es un siste
 ## <a name="fixed-server-roles"></a>Roles fijos de servidor
 SQL Server crea automáticamente los roles fijos de servidor. PDW de SQL Server tiene una implementación limitada de roles fijos de servidor de SQL Server. Solo el **sysadmin** y **público** tienen inicios de sesión de usuario como miembros. El **setupadmin** y **dbcreator** roles son utilizados internamente por SQL Server PDW. No se pueden agregar miembros adicionales o quitarse de ninguna función.  
   
-### <a name="sysadmin-fixed-server-role"></a>sysadmin Fixed Server Role  
+### <a name="sysadmin-fixed-server-role"></a>sysadmin rol fijo de servidor  
 Los miembros del rol fijo de servidor **sysadmin** pueden realizar cualquier actividad en el servidor. El **sa** inicio de sesión es el único miembro de la **sysadmin** rol fijo de servidor. No se puede agregar inicios de sesión adicionales a la **sysadmin** rol fijo de servidor. La concesión del permiso **CONTROL SERVER** es similar a la pertenencia al rol fijo de servidor **sysadmin**. El siguiente ejemplo se concede el **CONTROL SERVER** permiso para un inicio de sesión denominado Fay.  
   
 ```sql  

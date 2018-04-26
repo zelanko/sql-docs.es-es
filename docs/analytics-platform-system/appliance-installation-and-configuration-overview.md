@@ -1,29 +1,22 @@
 ---
-title: Instalación de dispositivo y la información general de configuración (Analytics Platform System)
-author: barbkess
-ms.author: barbkess
+title: Dispositivo, instale y configure - Analytics Platform System | Documentos de Microsoft
+description: Le guía a los administradores del equipo Analytics Platform System (APS) a través de los pasos iniciales para configurar y empezar a usar el dispositivo de nuevo.
+author: mzaman1
 manager: craigg
-ms.prod: analytics-platform-system
-ms.prod_service: mpp-data-warehouse
-ms.service: ''
-ms.component: ''
-ms.technology: mpp-data-warehouse
-ms.custom: ''
-ms.date: 01/05/2017
-ms.reviewer: na
-ms.suite: sql
-ms.tgt_pltfrm: na
-ms.topic: article
-ms.assetid: 10934f62-4acf-4ca5-b550-f426ba81fe11
-caps.latest.revision: 23
-ms.openlocfilehash: df27bb16f24e313f7cb1d7c7f5ced912c0a09e1d
-ms.sourcegitcommit: 9351e8b7b68f599a95fb8e76930ab886db737e5f
+ms.prod: sql
+ms.technology: data-warehouse
+ms.topic: conceptual
+ms.date: 04/17/2018
+ms.author: murshedz
+ms.reviewer: martinle
+ms.openlocfilehash: 5b6aa75cdab85fce9ef308d3e853ddb0107c28ee
+ms.sourcegitcommit: 056ce753c2d6b85cd78be4fc6a29c2b4daaaf26c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/06/2018
+ms.lasthandoff: 04/19/2018
 ---
-# <a name="appliance-installation-and-configuration-overview"></a>Introducción a la configuración e instalación de dispositivo
-Le guía a los administradores del equipo PDW de SQL Server a través de los pasos iniciales para configurar y empezar a usar el nuevo dispositivo PDW de SQL Server.  
+# <a name="appliance-installation-and-configuration-for-analytics-platform-system"></a>Instalación del equipo y la configuración de sistema de la plataforma de análisis
+Le guía a los administradores del equipo Analytics Platform System (APS) a través de los pasos iniciales para configurar y empezar a usar el dispositivo de nuevo.  
   
 <!-- MISSING LINKS ## <a name="BeforeYouBegin"></a>Before You Begin  
 Before you begin to install, configure, and use your new appliance, we recommend reviewing information about the appliance components. Review the following to familiarize yourself with the appliance:  

@@ -1,36 +1,37 @@
 ---
-title: "Cuadro de diálogo Vista detallada de resultados | Microsoft Docs"
-ms.custom: 
+title: Cuadro de diálogo Vista detallada de resultados | Microsoft Docs
+ms.custom: ''
 ms.date: 03/01/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine
-ms.service: 
+ms.service: ''
 ms.component: performance-monitor
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 f1_keywords:
 - sql13.swb.results.f1
 - sql13.swb.dmf.policy.resultdetails.f1
 ms.assetid: 366f0ff8-722a-40a9-934f-854147e4933d
-caps.latest.revision: 
+caps.latest.revision: 21
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: aa4a078b2e5e130e8bc4f739dab5b515b37852ec
-ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
+ms.openlocfilehash: 8621c94436016de1cc9ccdbc9041db17d2dab99a
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/18/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="results-detailed-view-dialog-box"></a>Cuadro de diálogo Vista detallada de resultados
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] Este cuadro de diálogo muestra los resultados de la evaluación de una directiva cuando se ejecuta una mediante el cuadro de diálogo **Evaluar directivas** y se hace clic en **Evaluar**. Este cuadro de diálogo es de solo lectura y le ayuda a entender qué parte de una expresión de propiedad podría no ser correcta.  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+  Este cuadro de diálogo muestra los resultados de la evaluación de una directiva cuando se ejecuta una mediante el cuadro de diálogo **Evaluar directivas** y se hace hacer clic en **Ver**. Este cuadro de diálogo es de solo lectura y le ayuda a entender qué parte de una expresión de propiedad podría no ser correcta.  
   
-## <a name="options"></a>.  
+## <a name="options"></a>Opciones  
  **Y/O**  
  Cuando hay más de una expresión de propiedad, indica si las expresiones de propiedad son acumulativas o alternativas.  
   

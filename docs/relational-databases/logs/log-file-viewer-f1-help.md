@@ -1,32 +1,32 @@
 ---
 title: Ayuda F1 del Visor de archivos de registro | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine
-ms.service: 
+ms.service: ''
 ms.component: logs
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: reference
 f1_keywords:
 - sql13.swb.configurelogs.errorlog.f1
 helpviewer_keywords:
 - Log File Viewer
 ms.assetid: 2243845c-4880-4aa0-9ee8-0a97a128996b
-caps.latest.revision: 
+caps.latest.revision: 38
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: f0954373b331ff4ffac7de48e1adccf00cec66ec
-ms.sourcegitcommit: 0d904c23663cebafc48609671156c5ccd8521315
+ms.openlocfilehash: 0600a7c8f64ba6d5b53b8826e53ca1c5371ebdc2
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/19/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="log-file-viewer-f1-help"></a>Ayuda F1 del Visor de archivos de registro
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -36,7 +36,7 @@ ms.lasthandoff: 03/19/2018
   
  El número de filas que se muestran para los registros de auditoría se puede configurar en la página **Explorador de objetos de SQL Server/Comandos** del cuadro de diálogo **Herramientas/Opciones**. Para obtener la descripción de las columnas que se muestran para los registros de auditoría, vea [sys.fn_get_audit_file &#40;Transact-SQL&#41;](../../relational-databases/system-functions/sys-fn-get-audit-file-transact-sql.md).  
   
-## <a name="options"></a>.  
+## <a name="options"></a>Opciones  
  **Cargar registro**  
  Abre un cuadro de diálogo donde puede especificar un archivo de registro para cargar.  
   

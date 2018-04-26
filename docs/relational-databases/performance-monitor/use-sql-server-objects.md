@@ -2,7 +2,7 @@
 title: Usar objetos de SQL Server | Microsoft Docs
 ms.custom: ''
 ms.date: 03/17/2016
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine
 ms.service: ''
 ms.component: performance-monitor
@@ -38,11 +38,11 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 4a11f27ebd08fc7d1e7377f7d84fb5e3f95f4e13
-ms.sourcegitcommit: d6b1695c8cbc70279b7d85ec4dfb66a4271cdb10
-ms.translationtype: MT
+ms.openlocfilehash: 274458b006e0c7530b4fdd9af35e656319b965b7
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
+ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/10/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="use-sql-server-objects"></a>Usar objetos de SQL Server
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -78,7 +78,7 @@ ms.lasthandoff: 04/10/2018
 ##  <a name="SQLServerAgentPOs"></a> Objetos de rendimiento del Agente SQL Server  
  En la tabla siguiente se enumeran los objetos de rendimiento proporcionados para el Agente [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] :  
   
-|Objeto de rendimiento|Descripción|  
+|Objeto de rendimiento|Description|  
 |------------------------|-----------------|  
 |[SQLAgent:Alerts](../../relational-databases/performance-monitor/sql-server-agent-alerts-object.md)|Proporciona información acerca de las alertas del Agente [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .|  
 |[SQLAgent:Jobs](../../relational-databases/performance-monitor/sql-server-agent-jobs-object.md)|Proporciona información acerca de los trabajos del Agente [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .|  
@@ -88,7 +88,7 @@ ms.lasthandoff: 04/10/2018
 ##  <a name="ServiceBrokerPOs"></a> Objetos de rendimiento de Service Broker  
  En la tabla siguiente se enumeran los objetos de rendimiento proporcionados para [!INCLUDE[ssSB](../../includes/sssb-md.md)].  
   
-|Objeto de rendimiento|Descripción|  
+|Objeto de rendimiento|Description|  
 |------------------------|-----------------|  
 |[SQLServer:Broker Activation](../../relational-databases/performance-monitor/sql-server-broker-activation-object.md)|Proporciona información acerca de las tareas activadas de [!INCLUDE[ssSB](../../includes/sssb-md.md)].|  
 |[SQLServer:Broker Statistics](../../relational-databases/performance-monitor/sql-server-broker-statistics-object.md)|Proporciona información general sobre [!INCLUDE[ssSB](../../includes/sssb-md.md)] .|  
@@ -97,7 +97,7 @@ ms.lasthandoff: 04/10/2018
 ##  <a name="SQLServerPOs"></a> Objetos de rendimiento de SQL Server  
  En la tabla siguiente se describen los objetos de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
   
-|Objeto de rendimiento|Descripción|  
+|Objeto de rendimiento|Description|  
 |------------------------|-----------------|  
 |[SQLServer:Access Methods](../../relational-databases/performance-monitor/sql-server-access-methods-object.md)|Mide y realiza búsquedas mediante objetos de base de datos de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] y su asignación (por ejemplo, el número de búsquedas de índices o de páginas asignadas a índices y datos).|  
 |[SQLServer:Backup Device](../../relational-databases/performance-monitor/sql-server-backup-device-object.md)|Proporciona información acerca de dispositivos de copia de seguridad utilizados para operaciones de copias de seguridad y restauración, como el rendimiento del dispositivo.|  
@@ -136,7 +136,7 @@ ms.lasthandoff: 04/10/2018
 ##  <a name="SQLServerReplicationPOs"></a> Objetos de rendimiento de replicación de SQL Server  
  En la tabla siguiente se enumeran los objetos de rendimiento proporcionados para la replicación de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] :  
   
-|Objeto de rendimiento|Descripción|  
+|Objeto de rendimiento|Description|  
 |------------------------|-----------------|  
 |**SQLServer:Agentes de replicación**<br /><br /> **SQLServer:Instantánea de replicación**<br /><br /> **SQLServer:Lector del registro de replicación**<br /><br /> **SQLServer:Distribuidor de replicación**<br /><br /> **SQLServer:Mezcla de replicación**<br /><br /> Para más información, vea [Monitoring Replication with System Monitor](../../relational-databases/replication/monitor/monitoring-replication-with-system-monitor.md).|Proporciona información acerca de la actividad del agente de replicación.|  
   
@@ -146,7 +146,7 @@ ms.lasthandoff: 04/10/2018
 ##  <a name="RequiredPermissions"></a> Permisos necesarios  
  La posibilidad de utilizar los objetos de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] depende de los permisos de Windows, salvo **SQLAgent:Alertas**. Los usuarios deben ser miembros del rol fijo de servidor **sysadmin** para poder utilizar **SQLAgent:Alerts**.  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Ver también  
  [Usar objetos de rendimiento](http://msdn.microsoft.com/library/830b843a-6b2a-4620-a51b-98358e9fc54b)   
  [sys.dm_os_performance_counters &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-os-performance-counters-transact-sql.md)  
   

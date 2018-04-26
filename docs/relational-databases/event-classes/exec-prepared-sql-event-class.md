@@ -1,34 +1,35 @@
 ---
 title: Exec Prepared SQL (clase de eventos) | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine, sql-database
-ms.service: 
+ms.service: ''
 ms.component: event-classes
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - Exec Prepared SQL event class
 ms.assetid: 2c61859b-00c9-4267-aef3-bc3ad075db69
-caps.latest.revision: 
+caps.latest.revision: 31
 author: stevestein
 ms.author: sstein
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 15ff424bc176592357cb9187851d4898815bbc0c
-ms.sourcegitcommit: 37f0b59e648251be673389fa486b0a984ce22c81
+monikerRange: = azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions
+ms.openlocfilehash: c5ce09b3feba61a63d80755fbfb0d70fcf3050d7
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/12/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="exec-prepared-sql-event-class"></a>Exec Prepared SQL, clase de eventos
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
-La clase de eventos Exec Prepared SQL indica que SqlClient, ODBC, OLE DB o DB-Library ha ejecutado una o varias instrucciones [!INCLUDE[tsql](../../includes/tsql-md.md)] preparadas.  
+  La clase de eventos Exec Prepared SQL indica que SqlClient, ODBC, OLE DB o DB-Library ha ejecutado una o varias instrucciones [!INCLUDE[tsql](../../includes/tsql-md.md)] preparadas.  
   
 ## <a name="exec-prepared-sql-event-class-data-columns"></a>Columnas de datos de la clase de evento Exec Prepared SQL  
   

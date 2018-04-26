@@ -2,7 +2,7 @@
 title: Seguimiento de eventos para Windows como destino | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine, sql-database
 ms.service: ''
 ms.reviewer: ''
@@ -20,11 +20,12 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 9e48a2aa7178e80fd44eb27e0f61400328abbadc
-ms.sourcegitcommit: 094c46e7fa6de44735ed0040c65a40ec3d951b75
+monikerRange: = azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions
+ms.openlocfilehash: 424a671a4ee42865442d92e26b68f6941775c2ca
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/06/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="event-tracing-for-windows-target"></a>seguimiento de eventos para Windows de destino
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -82,7 +83,7 @@ ms.lasthandoff: 04/06/2018
     > [!IMPORTANT]  
     >  No se puede cambiar la ruta de acceso del archivo después de que la primera sesión se haya iniciado.  
   
--   Los archivos MOF (Managed Object Format) se encuentran en *\<su ruta de instalación>*\Microsoft SQL Server\Shared. Para obtener más información, vea [Formato de objetos administrados](http://go.microsoft.com/fwlink/?LinkId=92851) en MSDN.  
+-   Los archivos MOF (Managed Object Format) se encuentran en *\<su ruta de instalación>* \Microsoft SQL Server\Shared. Para obtener más información, vea [Formato de objetos administrados](http://go.microsoft.com/fwlink/?LinkId=92851) en MSDN.  
   
 ## <a name="adding-the-target-to-a-session"></a>Agregar el destino a una sesión  
  Para agregar el destino ETW a una sesión de eventos extendidos, debe incluir la siguiente instrucción al crear o modificar una sesión de eventos:  

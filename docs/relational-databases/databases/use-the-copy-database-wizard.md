@@ -1,16 +1,16 @@
 ---
 title: Usar el Asistente para copiar bases de datos | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 07/26/2016
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine
-ms.service: 
+ms.service: ''
 ms.component: databases
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 f1_keywords:
 - sql13.swb.cdw.packageconfiguration.f1
@@ -28,19 +28,20 @@ helpviewer_keywords:
 - Copy Database Wizard
 - starting Copy Database Wizard
 ms.assetid: 7a999fc7-0a26-4a0d-9eeb-db6fc794f3cb
-caps.latest.revision: 
+caps.latest.revision: 64
 author: stevestein
 ms.author: sstein
 manager: craigg
 ms.workload: Active
-ms.openlocfilehash: 534d9cd96831bfc79475f99111580e36f3603add
-ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
+ms.openlocfilehash: 103e5a579ea802636e0d79c6a9ec531cdff3784c
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/18/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="use-the-copy-database-wizard"></a>Usar el Asistente para copiar bases de datos
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] El Asistente para copiar bases de datos permite mover o copiar bases de datos y determinados objetos de servidor de una instancia de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] a otra fácilmente, sin tiempo de inactividad del servidor. Mediante este asistente, puede hacer lo siguiente: 
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+El Asistente para copiar bases de datos permite mover o copiar bases de datos y determinados objetos de servidor de una instancia de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]  a otra fácilmente, sin tiempo de inactividad del servidor. Mediante este asistente, puede hacer lo siguiente: 
   
 -   Elegir un servidor de origen y de destino  
   

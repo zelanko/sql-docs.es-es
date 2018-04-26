@@ -1,29 +1,31 @@
 ---
 title: Importar y exportar datos de SQL Server y de Azure SQL Database | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 10/27/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
-ms.service: 
+ms.service: ''
 ms.component: import-export
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 74f7d68b9e3feb4e65c1a287b69a580802719199
-ms.sourcegitcommit: fbbb050f43ecb780281b370ec73fdcd472eb0ecc
+monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
+ms.openlocfilehash: b8f4820fa0a48256d14e712f3228f3637b42ec67
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/06/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="import-and-export-data-from-sql-server-and-azure-sql-database"></a>Importar y exportar datos de SQL Server y de Azure SQL Database
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)] Puede usar diversos métodos para importar y exportar datos de SQL Server y Azure SQL Database. Estos métodos incluyen instrucciones Transact-SQL, herramientas de línea de comandos y asistentes.
+[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
+Puede usar diversos métodos para importar y exportar datos de SQL Server y Azure SQL Database. Estos métodos incluyen instrucciones Transact-SQL, herramientas de línea de comandos y asistentes.
 
 También puede importar y exportar datos en distintos formatos de datos. Estos formatos incluyen archivos planos, Excel, las principales bases de datos relacionales y distintos servicios en la nube.
 

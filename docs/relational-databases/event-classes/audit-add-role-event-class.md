@@ -1,34 +1,35 @@
 ---
 title: Audit Add Role (clase de eventos) | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine, sql-database
-ms.service: 
+ms.service: ''
 ms.component: event-classes
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - Audit Add Role event class
 ms.assetid: 4ea55922-608c-4db2-8b3f-873862755bba
-caps.latest.revision: 
+caps.latest.revision: 30
 author: stevestein
 ms.author: sstein
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 2778e11c0ab2cc417dce4fd13d05426a6de340b1
-ms.sourcegitcommit: 37f0b59e648251be673389fa486b0a984ce22c81
+monikerRange: = azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions
+ms.openlocfilehash: fa214f5d5c3c85eb2b73f2c4170f04653e5f033d
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/12/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="audit-add-role-event-class"></a>Audit Add Role, clase de eventos
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
-La clase de eventos **Audit Add Role** se produce cuando se agrega un rol de base de datos a una base de datos o se elimina de ésta. Los procedimientos almacenados **sp_addrole** y **sp_droprole** usan esta clase de eventos.  
+  La clase de eventos **Audit Add Role** se produce cuando se agrega un rol de base de datos a una base de datos o se elimina de ésta. Los procedimientos almacenados **sp_addrole** y **sp_droprole** usan esta clase de eventos.  
   
  Es posible que esta clase de eventos se elimine de una versión futura de [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. En su lugar, se recomienda usar la clase de eventos **Audit Database Principal Management** .  
   

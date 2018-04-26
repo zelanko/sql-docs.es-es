@@ -1,35 +1,36 @@
 ---
 title: Cuadro de herramientas (Ayuda F1) | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine
-ms.service: 
+ms.service: ''
 ms.component: maintenance-plans
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: reference
 f1_keywords:
 - vs.toolbox
 helpviewer_keywords:
 - Toolbox [SQL Server Management Studio]
 ms.assetid: d8401ecc-7d47-49df-aae5-22a148eeb23f
-caps.latest.revision: 
+caps.latest.revision: 22
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: a339068c7fe7f467a40f0b04bb3f08a6eecaefa9
-ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
+ms.openlocfilehash: 3b4a0a7f0aa62e57968fac4d2ca94d50c8ac5218
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/18/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="toolbox-component-f1-help"></a>Cuadro de herramientas (Ayuda F1)
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] El **cuadro de herramientas** muestra varios elementos que se utilizan en los proyectos de [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]. El **cuadro de herramientas** puede abrirse desde el menú **Ver** , y esta ventana puede acoplarse como se desee. Cuando está acoplado, el **cuadro de herramientas** puede estar abierto de forma permanente o puede configurarse de modo que se **oculte automáticamente** si no se utiliza.  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+  El**cuadro de herramientas** muestra varios elementos que se utilizan en los proyectos de [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] . El **cuadro de herramientas** puede abrirse desde el menú **Ver** , y esta ventana puede acoplarse como se desee. Cuando está acoplado, el **cuadro de herramientas** puede estar abierto de forma permanente o puede configurarse de modo que se **oculte automáticamente** si no se utiliza.  
   
  Los elementos del**cuadro de herramientas** se pueden arrastrar y colocar, o bien copiar y pegar en los editores de código o en superficies de vistas de diseño de [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)].  
   

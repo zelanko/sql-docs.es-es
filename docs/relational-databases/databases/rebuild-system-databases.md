@@ -1,16 +1,16 @@
 ---
-title: "Nueva generación de bases de datos del sistema | Microsoft Docs"
-ms.custom: 
+title: Nueva generación de bases de datos del sistema | Microsoft Docs
+ms.custom: ''
 ms.date: 06/06/2016
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine
-ms.service: 
+ms.service: ''
 ms.component: databases
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - master database [SQL Server], rebuilding
@@ -18,20 +18,20 @@ helpviewer_keywords:
 - rebuilding databases, master
 - system databases [SQL Server], rebuilding
 ms.assetid: af457ecd-523e-4809-9652-bdf2e81bd876
-caps.latest.revision: 
+caps.latest.revision: 39
 author: stevestein
 ms.author: sstein
 manager: craigg
 ms.workload: Active
-ms.openlocfilehash: 3a1d3cd6a2cb8183acf9d4f787e9d434dcc5577d
-ms.sourcegitcommit: 7ed8c61fb54e3963e451bfb7f80c6a3899d93322
+ms.openlocfilehash: 3291ec725dac23a1a6d9b95f94a4f7f4035f4a36
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/20/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="rebuild-system-databases"></a>Volver a generar bases de datos del sistema
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
-Las bases de datos del sistema deben volver a generarse para corregir problemas por daños en las bases de datos [maestra](../../relational-databases/databases/master-database.md), [modelo](../../relational-databases/databases/model-database.md), [msdb](../../relational-databases/databases/msdb-database.md)o de [recursos](../../relational-databases/databases/resource-database.md) , o para modificar la intercalación de nivel de servidor predeterminada. En este tema se ofrecen instrucciones paso a paso para volver a generar las bases de datos del sistema en [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].  
+  Las bases de datos del sistema deben volver a generarse para corregir problemas por daños en las bases de datos [maestra](../../relational-databases/databases/master-database.md), [modelo](../../relational-databases/databases/model-database.md), [msdb](../../relational-databases/databases/msdb-database.md)o de [recursos](../../relational-databases/databases/resource-database.md) , o para modificar la intercalación de nivel de servidor predeterminada. En este tema se ofrecen instrucciones paso a paso para volver a generar las bases de datos del sistema en [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].  
   
  **En este tema**  
   
@@ -113,8 +113,8 @@ Las bases de datos del sistema deben volver a generarse para corregir problemas 
     |/ACTION=REBUILDDATABASE|Especifica que el programa de instalación vuelva a crear las bases de datos del sistema.|  
     |/INSTANCENAME=*InstanceName*|Es el nombre de la instancia de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Para la instancia predeterminada, escriba MSSQLSERVER.|  
     |/SQLSYSADMINACCOUNTS=*accounts*|Especifica las cuentas individuales o de grupos de Windows que se agregarán al rol fijo de servidor **sysadmin** . Si especifica varias cuentas, sepárelas con un espacio en blanco. Escriba, por ejemplo, **BUILTIN\Administrators MyDomain\MyUser**. Cuando está especificando una cuenta que contiene un espacio en blanco dentro del nombre, agregue la cuenta entre comillas tipográficas. Escriba, por ejemplo, **NT AUTHORITY\SYSTEM**.|  
-    |[ /SAPWD=*StrongPassword* ]|Especifica la contraseña de la cuenta [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] **de** . Este parámetro es obligatorio si la instancia usa el modo Autenticación mixta (autenticación de[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] y de Windows).<br /><br /> **\*\* Nota de seguridad \*\***La cuenta **sa** es una cuenta conocida de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] y suele ser el objetivo de usuarios malintencionados. Es muy importante que use una contraseña segura en el inicio de sesión de **sa** .<br /><br /> No especifique este parámetro para el modo Autenticación de Windows.|  
-    |[ /SQLCOLLATION=*CollationName* ]|Especifica una nueva intercalación de nivel de servidor. Este parámetro es opcional. Cuando no se especifica, se usa la intercalación actual del servidor.<br /><br /> **\*\* Importante \*\***Al cambiar la intercalación de nivel de servidor, no se cambia la de las bases de datos de usuario existentes. Todas las bases de datos de usuario nuevas usarán la nueva intercalación de manera predeterminada.<br /><br /> Para obtener más información, vea [Configurar o cambiar la intercalación del servidor](../../relational-databases/collations/set-or-change-the-server-collation.md).|  
+    |[ /SAPWD=*StrongPassword* ]|Especifica la contraseña de la cuenta [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] **de** . Este parámetro es obligatorio si la instancia usa el modo Autenticación mixta (autenticación de[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] y de Windows).<br /><br /> **\*\* Nota de seguridad \*\*** La cuenta **sa** es una cuenta conocida de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] y suele ser el objetivo de usuarios malintencionados. Es muy importante que use una contraseña segura en el inicio de sesión de **sa** .<br /><br /> No especifique este parámetro para el modo Autenticación de Windows.|  
+    |[ /SQLCOLLATION=*CollationName* ]|Especifica una nueva intercalación de nivel de servidor. Este parámetro es opcional. Cuando no se especifica, se usa la intercalación actual del servidor.<br /><br /> **\*\* Importante \*\*** Al cambiar la intercalación de nivel de servidor, no se cambia la de las bases de datos de usuario existentes. Todas las bases de datos de usuario nuevas usarán la nueva intercalación de manera predeterminada.<br /><br /> Para obtener más información, vea [Configurar o cambiar la intercalación del servidor](../../relational-databases/collations/set-or-change-the-server-collation.md).|  
     |[ /SQLTEMPDBFILECOUNT=númeroDeArchivos ]|Especifica el número de archivos de datos de tempdb. Este valor se puede aumentar hasta 8 o hasta el número de núcleos, lo que sea mayor.<br /><br /> Valor predeterminado: 8 o el número de núcleos, lo que sea menor.|  
     |[ /SQLTEMPDBFILESIZE=tamañoDeArchivoEnMB ]|Especifica el tamaño inicial en MB de cada archivo de datos de tempdb. El programa de instalación permite que el tamaño alcance los 1024 MB.<br /><br /> Valor predeterminado: 8|  
     |[ /SQLTEMPDBFILEGROWTH=tamañoDeArchivoEnMB ]|Especifica el incremento de crecimiento de archivo en MB de cada archivo de datos de tempdb. El valor 0 indica que el crecimiento automático está desactivado y no se permite más espacio. El programa de instalación permite que el tamaño alcance los 1024 MB.<br /><br /> Valor predeterminado: 64|  

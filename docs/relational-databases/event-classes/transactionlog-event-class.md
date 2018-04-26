@@ -1,34 +1,35 @@
 ---
 title: TransactionLog (clase de eventos) | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine, sql-database
-ms.service: 
+ms.service: ''
 ms.component: event-classes
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - TransactionLog event class
 ms.assetid: bbcf09c6-3128-4775-b3de-e986a70411e0
-caps.latest.revision: 
+caps.latest.revision: 33
 author: stevestein
 ms.author: sstein
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 8d9f3f46c005665450baec0869fe956c38696b27
-ms.sourcegitcommit: 37f0b59e648251be673389fa486b0a984ce22c81
+monikerRange: = azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions
+ms.openlocfilehash: 8901fe73da3940ac54f27df3b228e208e432274d
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/12/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="transactionlog-event-class"></a>TransactionLog [clase de eventos]
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
-Use la clase de eventos TransactionLog para supervisar la actividad de los registros de transacciones en una instancia del [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)].  
+  Use la clase de eventos TransactionLog para supervisar la actividad de los registros de transacciones en una instancia del [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)].  
   
 ## <a name="transactionlog-event-class-data-columns"></a>Columnas de datos de la clase de evento TransactionLog  
   

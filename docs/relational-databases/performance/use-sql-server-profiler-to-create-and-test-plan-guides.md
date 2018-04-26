@@ -1,16 +1,16 @@
 ---
-title: "Usar SQL Server Profiler para crear y probar guías de plan | Microsoft Docs"
-ms.custom: 
+title: Usar SQL Server Profiler para crear y probar guías de plan | Microsoft Docs
+ms.custom: ''
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine
-ms.service: 
+ms.service: ''
 ms.component: performance
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - dbe-plan-guides
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - checking plan guides
@@ -25,19 +25,20 @@ helpviewer_keywords:
 - Profiler [SQL Server Profiler], plan guides
 - query-to-plan guide matching [SQL Server]
 ms.assetid: 7018dbf0-1a1a-411a-88af-327bedf9cfbd
-caps.latest.revision: 
+caps.latest.revision: 31
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 5bbb800f0f0bd06e32357cda69d9a01a5c25e866
-ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
+ms.openlocfilehash: 0a19fd733c0367c53c56228aeb1e04293f3eb2ad
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/18/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="use-sql-server-profiler-to-create-and-test-plan-guides"></a>Usar SQL Server Profiler para crear y probar guías de plan
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] Cuando cree una guía de plan, puede usar [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] para capturar el texto exacto de la consulta con el fin de usarlo en el argumento *statement_text* del procedimiento almacenado **sp_create_plan_guide**. Esto contribuye a garantizar que la guía de plan coincidirá con la consulta en tiempo de compilación. Una vez creada la guía de plan, se puede utilizar también el [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] para probar que, realmente, esa guía de plan coincidirá con la consulta. Por lo general, debe probar las guías de plan mediante el [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] para comprobar que se buscan las coincidencias de la consulta con la guía de plan.  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+  Cuando cree una guía de plan, puede usar [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] para capturar el texto exacto de la consulta con el fin de usarlo en el argumento *statement_text* del procedimiento almacenado **sp_create_plan_guide** . Esto contribuye a garantizar que la guía de plan coincidirá con la consulta en tiempo de compilación. Una vez creada la guía de plan, se puede utilizar también el [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] para probar que, realmente, esa guía de plan coincidirá con la consulta. Por lo general, debe probar las guías de plan mediante el [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] para comprobar que se buscan las coincidencias de la consulta con la guía de plan.  
   
 ## <a name="capturing-query-text-by-using-sql-server-profiler"></a>Capturar texto de consulta utilizando SQL Server Profiler  
  Si ejecuta una consulta y captura el texto exactamente como se envió a [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] utilizando el [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)], puede crear una guía de plan de tipo SQL o TEMPLATE que coincidirá exactamente con el texto de la consulta. Esto garantiza que el optimizador de consultas utiliza la guía de plan.  
@@ -73,7 +74,7 @@ WHERE h.OrderDate BETWEEN '20000101' and '20050101';
   
 7.  Abra el archivo de texto del lote en el Bloc de notas y copie el texto en el búfer de copiar y pegar.  
   
-8.  Cree la guía de plan y pegue el texto copiado entre las comillas (**''**) especificadas para el argumento **@stmt** . Debe utilizar un carácter de escape con las comillas simples en el argumento **@stmt** utilizando delante de ellas otra comilla simple. Al insertar estas comillas simples, tenga cuidado de no agregar ni quitar ningún otro carácter. Por ejemplo, el literal de fecha **'**20000101**'** debe delimitarse como **''**20000101**''**.  
+8.  Cree la guía de plan y pegue el texto copiado entre las comillas (**''**) especificadas para el argumento **@stmt** . Debe utilizar un carácter de escape con las comillas simples en el argumento **@stmt** utilizando delante de ellas otra comilla simple. Al insertar estas comillas simples, tenga cuidado de no agregar ni quitar ningún otro carácter. Por ejemplo, el literal de fecha **'** 20000101 **'** debe delimitarse como **''** 20000101 **''**.  
   
  Ésta es la guía de plan:  
   

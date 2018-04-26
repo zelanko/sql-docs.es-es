@@ -1,16 +1,16 @@
 ---
-title: "Mantenimiento de valores NULL o uso de valores predeterminados durante la importación en bloque (SQL Server) | Microsoft Docs"
-ms.custom: 
+title: Mantenimiento de valores NULL o uso de valores predeterminados durante la importación en bloque (SQL Server) | Microsoft Docs
+ms.custom: ''
 ms.date: 09/20/2016
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
-ms.service: 
+ms.service: ''
 ms.component: import-export
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - dbe-bulk-import-export
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - bulk importing [SQL Server], null values
@@ -23,16 +23,17 @@ helpviewer_keywords:
 - OPENROWSET function, bulk importing
 - data formats [SQL Server], default values
 ms.assetid: 6b91d762-337b-4345-a159-88abb3e64a81
-caps.latest.revision: 
+caps.latest.revision: 41
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 5a92149a67789fa37b80fb841a5691efb2d375c1
-ms.sourcegitcommit: c556eaf60a49af7025db35b7aa14beb76a8158c5
+monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
+ms.openlocfilehash: 73c367d0d9f1f985c4e65cfdd821ef4534c5b2c6
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/03/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="keep-nulls-or-use-default-values-during-bulk-import-sql-server"></a>Mantener valores NULL o usar valores predeterminados durante la importación masiva (SQL Server)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -146,7 +147,7 @@ Los ejemplos siguientes usan la base de datos, el archivo de datos y los archivo
 
 ### **Usar [BCP](../../tools/bcp-utility.md) y mantener valores NULL sin un archivo de formato**<a name="bcp_null"></a>
 
-Modificador**-k** .  En el símbolo del sistema, escriba el siguiente comando:
+Modificador **-k** .  En el símbolo del sistema, escriba el siguiente comando:
 
 ```cmd
 REM Truncate table (for testing)
@@ -160,7 +161,7 @@ SQLCMD -Q "SELECT * FROM TestDatabase.dbo.myNulls;"
 ```
   
 ### **Usar [BCP](../../tools/bcp-utility.md) y mantener valores NULL con un [archivo de formato no XML](../../relational-databases/import-export/non-xml-format-files-sql-server.md)**<a name="bcp_null_fmt"></a>
-Modificadores**-k** y **-f** . En el símbolo del sistema, escriba el siguiente comando:
+Modificadores **-k** y **-f** . En el símbolo del sistema, escriba el siguiente comando:
 
 ```cmd
 REM Truncate table (for testing)
@@ -188,7 +189,7 @@ SQLCMD -Q "SELECT * FROM TestDatabase.dbo.myNulls;"
 ```
   
 ### **Usar [BCP](../../tools/bcp-utility.md) y usar valores predeterminados con un [archivo de formato no XML](../../relational-databases/import-export/non-xml-format-files-sql-server.md)**<a name="bcp_default_fmt"></a>
-Modificador**-f** .  En el símbolo del sistema, escriba el siguiente comando:
+Modificador **-f** .  En el símbolo del sistema, escriba el siguiente comando:
 
 ```cmd
 REM Truncate table (for testing)

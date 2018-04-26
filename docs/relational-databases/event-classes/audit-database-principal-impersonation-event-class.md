@@ -1,34 +1,35 @@
 ---
 title: Audit Database Principal Impersonation (clase de eventos) | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine, sql-database
-ms.service: 
+ms.service: ''
 ms.component: event-classes
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - Audit Database Principal Impersonation event class
 ms.assetid: 1b29dea4-3727-4c5f-8362-4ca0374de0b6
-caps.latest.revision: 
+caps.latest.revision: 21
 author: stevestein
 ms.author: sstein
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 7c800a82942b046dd3a346f5f5720279950cbb9a
-ms.sourcegitcommit: 37f0b59e648251be673389fa486b0a984ce22c81
+monikerRange: = azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions
+ms.openlocfilehash: 9446ca2824164e3d57ddff59de3748c51d635dbd
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/12/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="audit-database-principal-impersonation-event-class"></a>Audit Database Principal Impersonation, clase de eventos
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
-La clase de eventos **Audit Database Principal Impersonation** se produce cuando hay una suplantación en el ámbito de la base de datos, como EXECUTE AS \<*usuario*> o SETUSER.  
+  La clase de eventos **Audit Database Principal Impersonation** se produce cuando hay una suplantación en el ámbito de la base de datos, como EXECUTE AS \<*usuario*> o SETUSER.  
   
 ## <a name="audit-database-principal-impersonation-event-class-data-columns"></a>Columnas de datos de la clase de eventos Audit Database Principal Impersonation  
   

@@ -1,34 +1,35 @@
 ---
 title: Clase de eventos Sort Warnings | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine, sql-database
-ms.service: 
+ms.service: ''
 ms.component: event-classes
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - Sort Warnings event class
 ms.assetid: 2ee479c8-66e4-45e9-a4c9-49d418e25a72
-caps.latest.revision: 
+caps.latest.revision: 31
 author: stevestein
 ms.author: sstein
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 1d4516aaaeb429ae735251a272dc77b1f6ba4edb
-ms.sourcegitcommit: 37f0b59e648251be673389fa486b0a984ce22c81
+monikerRange: = azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions
+ms.openlocfilehash: 21694a628cde3aa602f1b4bfd404fe74a05ba645
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/12/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="sort-warnings-event-class"></a>Sort Warnings, clase de eventos
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
-La clase de eventos Sort Warnings indica que las operaciones de orden no caben en la memoria. Esto no incluye aquellas operaciones de orden que implican la creación de índices, solo las operaciones de orden dentro de una consulta (como las de una cláusula ORDER BY en una instrucción SELECT).  
+  La clase de eventos Sort Warnings indica que las operaciones de orden no caben en la memoria. Esto no incluye aquellas operaciones de orden que implican la creación de índices, solo las operaciones de orden dentro de una consulta (como las de una cláusula ORDER BY en una instrucción SELECT).  
   
  Si una consulta que incluye una operación de ordenación genera una clase de eventos Sort Warnings con el valor 2 para la columna de datos EventSubClass, podría verse afectado el rendimiento de la consulta, ya que es necesario pasar muchas veces por los datos para ordenarlos. Examine la consulta para determinar si se puede eliminar la operación de orden.  
   

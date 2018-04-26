@@ -2,7 +2,7 @@
 title: Cuadro de diálogo Ver directivas | Microsoft Docs
 ms.custom: ''
 ms.date: 03/01/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine
 ms.service: ''
 ms.component: performance-monitor
@@ -20,14 +20,15 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 6e339d3fa4719aac58023a62a1d858b6a98dfe5d
-ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
+ms.openlocfilehash: 1894766e8e52810318e67c3eda1ed1f92d6414d2
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/18/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="view-policies-dialog-box"></a>Cuadro de diálogo Ver directivas
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] Utilice este cuadro de diálogo para ver las directivas que están vigentes para este destino. Este cuadro de diálogo muestra directivas relevantes, sus categorías de directiva e información sobre las directivas.  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+  Utilice este cuadro de diálogo para ver las directivas que están vigentes para este destino. Este cuadro de diálogo muestra directivas relevantes, sus categorías de directiva e información sobre las directivas.  
   
 ## <a name="options"></a>Opciones  
  **Estado de la directiva de mantenimiento**  

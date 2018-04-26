@@ -1,28 +1,29 @@
 ---
 title: Tutoriales del motor de base de datos | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 08/02/2016
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine, sql-database
-ms.service: 
+ms.service: ''
 ms.component: relational-databases-misc
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - dbe-query-tuning
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: 32bd8af8-a832-4dc8-afff-01668e6b2b51
-caps.latest.revision: 
+caps.latest.revision: 14
 author: rothja
 ms.author: jroth
 manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 3765d87fd95fdc07513319d1c4f175ec66e9f813
-ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
+monikerRange: = azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions
+ms.openlocfilehash: 68aa0255d50eabd13f3a42b5dd89d4651c4d78c6
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/09/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="database-engine-tutorials"></a>Tutoriales del motor de base de datos
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -52,7 +53,7 @@ En este tutorial se usa un escenario para ilustrar los conceptos de seguridad de
 [Tutorial: Administrar servidores mediante administración basada en directivas](../relational-databases/policy-based-management/tutorial-administering-servers-by-using-policy-based-management.md)  
 En este tutorial se enseña a crear directivas que aplican las normas de administración del sitio.  
   
-[Tutorial: copias de seguridad y restauración de SQL Server en el servicio de almacenamiento Blob de Windows Azure](~/relational-databases/tutorial-sql-server-backup-and-restore-to-azure-blob-storage-service.md)  
+[Copias de seguridad y restauración de SQL Server en el servicio Microsoft Azure Blob Storage](~/relational-databases/tutorial-sql-server-backup-and-restore-to-azure-blob-storage-service.md)  
 Este tutorial ilustra el modo de hacer una copia de seguridad y una restauración de SQL Server para el servicio Azure Blob Storage.  
   
 [Tutorial: Using the Microsoft Azure Blob storage service with SQL Server 2016 databases (Tutorial: Usar el servicio de almacenamiento de blobs de Microsoft Azure con bases de datos de SQL Server 2016) ](tutorial-use-azure-blob-storage-service-with-sql-server-2016.md)  

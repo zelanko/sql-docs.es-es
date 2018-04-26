@@ -1,30 +1,30 @@
 ---
 title: Agregar o editar filtro | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine
-ms.service: 
+ms.service: ''
 ms.component: replication
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - replication
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 f1_keywords:
 - sql13.rep.newpubwizard.addeditfilter.f1
 ms.assetid: bdd7c71d-1c59-4044-bfe8-c85f908345bb
-caps.latest.revision: 
+caps.latest.revision: 27
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: fb3b474111eb0ec1ba5dc8c2e307fe1af653c91f
-ms.sourcegitcommit: ab25b08a312d35489a2c4a6a0d29a04bbd90f64d
+ms.openlocfilehash: 332d02a43291257c567b93a4d689e932d67e7a8f
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/08/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="add-or-edit-filter"></a>Agregar filtro o Editar filtro
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -37,7 +37,7 @@ ms.lasthandoff: 03/08/2018
   
  Mediante los filtros de fila, puede especificar un subconjunto de filas de la tabla que desea publicar. Puede utilizar filtros de filas para eliminar filas que no necesitan ver los usuarios (como las filas que contienen información importante o confidencial) o crear distintas particiones de datos que se enviarán a distintos suscriptores. La publicación de distintas particiones de datos para distintos suscriptores también puede ayudar a evitar conflictos que podrían causar la actualización simultánea de los mismos datos realizada por varios suscriptores.  
   
-## <a name="options"></a>.  
+## <a name="options"></a>Opciones  
  Este cuadro de diálogo incluye un proceso de dos pasos para las publicaciones transaccionales y de instantáneas y un proceso de tres pasos para las publicaciones de combinación. Todos los tipos de publicaciones requieren que seleccione la tabla que desea filtrar y una o más columnas que se incluirán en el filtro, en donde el filtro se define como una cláusula WHERE estándar.  
   
 1.  **Seleccione la tabla que desea filtrar**  

@@ -1,34 +1,35 @@
 ---
 title: 'TM: Begin Tran Starting (clase de eventos) | Microsoft Docs'
-ms.custom: 
+ms.custom: ''
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine, sql-database
-ms.service: 
+ms.service: ''
 ms.component: event-classes
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - 'TM: Begin Tran Starting event class'
 ms.assetid: 34a35b0e-7bd1-480d-8cc8-00614adae84e
-caps.latest.revision: 
+caps.latest.revision: 22
 author: stevestein
 ms.author: sstein
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 706dc7b3c2f430870f2109703ad3d4aa49e00d5a
-ms.sourcegitcommit: 37f0b59e648251be673389fa486b0a984ce22c81
+monikerRange: = azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions
+ms.openlocfilehash: 5d8dbedab423b7b4786ccb14d06e9d1e72c9c279
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/12/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="tm-begin-tran-starting-event-class"></a>TM: Begin Tran Starting, clase de eventos
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
-La clase de eventos TM: Begin Tran Starting indica que se está iniciando una solicitud BEGIN TRANSACTION. La solicitud se envía desde el cliente a través de la interfaz de administración de transacciones.  
+  La clase de eventos TM: Begin Tran Starting indica que se está iniciando una solicitud BEGIN TRANSACTION. La solicitud se envía desde el cliente a través de la interfaz de administración de transacciones.  
   
 ## <a name="tm-begin-tran-starting-event-class-data-columns"></a>Columnas de datos de la clase de eventos TM: Begin Tran Starting  
   

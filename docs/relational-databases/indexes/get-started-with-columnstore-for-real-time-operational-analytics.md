@@ -1,28 +1,29 @@
 ---
-title: "Introducción al almacén de columnas para análisis operativos en tiempo real | Microsoft Docs"
-ms.custom: 
+title: Introducción al almacén de columnas para análisis operativos en tiempo real | Microsoft Docs
+ms.custom: ''
 ms.date: 03/08/2016
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine, sql-database
-ms.service: 
+ms.service: ''
 ms.component: indexes
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: get-started-article
 ms.assetid: e1328615-6b59-4473-8a8d-4f360f73187d
-caps.latest.revision: 
+caps.latest.revision: 40
 author: barbkess
 ms.author: barbkess
 manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: a9f8fc41e72885a9a08d7779afa611e07e1dc8f5
-ms.sourcegitcommit: 37f0b59e648251be673389fa486b0a984ce22c81
+monikerRange: = azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions
+ms.openlocfilehash: 59ce255693bd9148b5f63d18ec26eb522f52a181
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/12/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="get-started-with-columnstore-for-real-time-operational-analytics"></a>Introducción al almacén de columnas para análisis operativos en tiempo real
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -206,7 +207,7 @@ CREATE NONCLUSTERED COLUMNSTORE index t_colstor_cci on t_colstor (accountkey, ac
   
  A continuación encontrará algunos procedimientos recomendados.  
   
--   **Carga de trabajo de inserción/consulta:**si la carga de trabajo consiste principalmente en insertar datos y realizar consultas sobre estos, la opción recomendada para COMPRESSION_DELAY es 0. Las filas recién insertadas se comprimirán cuando se haya insertado 1 millón de filas en un solo grupo de filas delta.  
+-   **Carga de trabajo de inserción/consulta:** si la carga de trabajo consiste principalmente en insertar datos y realizar consultas sobre estos, la opción recomendada para COMPRESSION_DELAY es 0. Las filas recién insertadas se comprimirán cuando se haya insertado 1 millón de filas en un solo grupo de filas delta.  
     Algunos ejemplos de este tipo de carga de trabajo son: (a) carga de trabajo de DW tradicional o (b) análisis de secuencia de clics cuando hay que analizar el patrón de clics en una aplicación web.  
   
 -   **Carga de trabajo OLTP:** si la carga de trabajo hace un uso profuso de DML (es decir, un uso combinado intensivo de actualizaciones, eliminaciones e inserciones), puede ver la fragmentación de índices de almacén de columnas examinando el sys de DMV. dm_db_column_store_row_group_physical_stats. Si ve que más de un 10 % de las filas se marcan como eliminadas en los grupos de filas comprimidos recientemente, puede usar la opción COMPRESSION_DELAY para agregar un retraso cuando las filas sean aptas para la compresión. Por ejemplo, si en la carga de trabajo las filas recién insertadas se mantienen como ‘activas’ (es decir, se actualizan varias veces) durante, digamos, 60 minutos, conviene establecer la opción COMPRESSION_DELAY en 60.  

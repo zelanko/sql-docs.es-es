@@ -1,28 +1,29 @@
 ---
 title: Construcciones Transact-SQL no admitidas por OLTP en memoria | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 11/21/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine, sql-database
-ms.service: 
+ms.service: ''
 ms.component: in-memory-oltp
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine-imoltp
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: e3f8009c-319d-4d7b-8993-828e55ccde11
-caps.latest.revision: 
+caps.latest.revision: 51
 author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 572486311385af37057641e6f2371791bcfe70f8
-ms.sourcegitcommit: 37f0b59e648251be673389fa486b0a984ce22c81
+monikerRange: = azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions
+ms.openlocfilehash: b739085a61fea5537f91954e0e75981fd7709688
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/12/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="transact-sql-constructs-not-supported-by-in-memory-oltp"></a>Construcciones Transact-SQL no admitidas por OLTP en memoria
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -73,7 +74,7 @@ ms.lasthandoff: 02/12/2018
 |Operación|Actualización de columnas de clave principal|Las columnas de clave principal de las tablas optimizadas para memoria y los tipos de tablas no se pueden actualizar. Si es necesario actualizar la clave principal, elimine la fila antigua e inserte la nueva fila con la clave principal actualizada.|  
 |Operación|CREATE INDEX|Los índices de las tablas optimizadas para memoria deben especificarse insertados con la instrucción **CREATE TABLE** o con la instrucción **ALTER TABLE** .|  
 |Operación|CREATE FULLTEXT INDEX|Las tablas optimizadas para memoria no admiten índices de texto completo.|  
-|Operación|Cambios en los esquemas|Las tablas con optimización para memoria y los procedimientos almacenados compilados de forma nativa no admiten determinados cambios en los esquemas:<br/> [!INCLUDE[ssSDSFull_md](../../includes/ssSDSFull-md.md)] y SQL Server a partir de [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)]: se admiten las operaciones ALTER TABLE, ALTER PROCEDURE y sp_rename. No se admiten otros cambios en el esquema, por ejemplo, al agregar propiedades extendidas.<br/><br/>[!INCLUDE[ssSQL15-md](../../includes/sssql15-md.md)]: se admiten las operaciones ALTER TABLE y ALTER PROCEDURE. No se admiten otros cambios en el esquema, incluido sp_rename.<br/><br/>[!INCLUDE[ssSQL14-md](../../includes/sssql14-md.md)]: no se admiten cambios en el esquema. Para cambiar la definición de una tabla con optimización para memoria o un procedimiento almacenado compilado de forma nativa, primero quite el objeto y, a continuación, vuelva a crearlo con la definición deseada.| 
+|Operación|Cambios en los esquemas|Las tablas con optimización para memoria y los procedimientos almacenados compilados de forma nativa no admiten determinados cambios en los esquemas:<br/> [!INCLUDE[ssSDSFull_md](../../includes/ssSDSFull-md.md)] y SQL Server a partir de [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)]: se admiten las operaciones ALTER TABLE, ALTER PROCEDURE, y sp_rename. No se admiten otros cambios en el esquema, por ejemplo, al agregar propiedades extendidas.<br/><br/>[!INCLUDE[ssSQL15-md](../../includes/sssql15-md.md)]: se admiten las operaciones ALTER TABLE y ALTER PROCEDURE. No se admiten otros cambios en el esquema, incluido sp_rename.<br/><br/>[!INCLUDE[ssSQL14-md](../../includes/sssql14-md.md)]: no se admiten cambios en el esquema. Para cambiar la definición de una tabla con optimización para memoria o un procedimiento almacenado compilado de forma nativa, primero quite el objeto y, a continuación, vuelva a crearlo con la definición deseada.| 
 |Operación|TRUNCATE TABLE|Las tablas optimizadas para memoria no admiten la operación TRUNCATE. Para quitar todas las filas de una tabla, elimínelas con **DELETE FROM***table* o quite y vuelva a crear la tabla.|  
 |Operación|ALTER AUTHORIZATION|No es posible cambiar el propietario de una tabla optimizada para memoria o de un procedimiento almacenado compilado de forma nativa existente. Para cambiar el propietario, quite y vuelva a crear la tabla o el procedimiento.|  
 |Operación|ALTER SCHEMA|No se admite la transferencia de una tabla o de un procedimiento almacenado compilado de forma nativa existente. Quite y vuelva a crear el objeto que va a transferir entre esquemas.|  
@@ -177,7 +178,7 @@ ms.lasthandoff: 02/12/2018
 |Característica|Declaraciones de variable de tabla alineada.|Las variables de tabla deben hacer referencia explícitamente a los tipos definidos de tabla optimizada para memoria. Debe crear un tipo de tabla optimizada para memoria y usar ese tipo para la declaración de la variable, en lugar de especificar el tipo insertado.|  
 |Característica|Tablas basadas en disco|No se puede tener acceso a las tablas basadas en disco desde procedimientos almacenados compilados de forma nativa. Quite las referencias a las tablas basadas en disco desde los procedimientos almacenados compilados de forma nativa. O bien, migre las tablas basadas en disco a la memoria optimizada.|  
 |Característica|Vistas|No se puede tener acceso a las vistas desde procedimientos almacenados compilados de forma nativa. En lugar de a las vistas, haga referencia a las tablas base subyacentes.|  
-|Característica|Funciones con valores de tabla|**Se aplica a**: [!INCLUDE[ssSDSFull_md](../../includes/ssSDSFull-md.md)] y SQL Server a partir de [!INCLUDE[ssSQL15-md](../../includes/sssql15-md.md)]<br/>En los módulos T-SQL compilados de forma nativa no se puede tener acceso a funciones con valores de tabla de varias instrucciones. Se admiten las funciones con valores de tabla insertadas, pero deben crearse con la opción NATIVE_COMPILATION.<br/><br/>**Se aplica a**: [!INCLUDE[ssSQL14-md](../../includes/ssSQL14-md.md)]<br/>En los módulos T-SQL compilados de forma nativa no se puede hacer referencia a funciones con valores de tabla.|  
+|Característica|Funciones con valores de tabla|**Se aplica a:** [!INCLUDE[ssSDSFull_md](../../includes/ssSDSFull-md.md)] y SQL Server a partir de [!INCLUDE[ssSQL15-md](../../includes/sssql15-md.md)]<br/>En los módulos T-SQL compilados de forma nativa no se puede tener acceso a funciones con valores de tabla de varias instrucciones. Se admiten las funciones con valores de tabla insertadas, pero deben crearse con la opción NATIVE_COMPILATION.<br/><br/>**Se aplica a**: [!INCLUDE[ssSQL14-md](../../includes/ssSQL14-md.md)]<br/>En los módulos T-SQL compilados de forma nativa no se puede hacer referencia a funciones con valores de tabla.|  
 |Opción|PRINT|Quitar referencia|  
 |Característica|DDL|No se admite DDL en los módulos T-SQL compilados de forma nativa.|  
 |Opción|STATISTICS XML|No compatible. Al ejecutar una consulta con STATISTICS XML habilitada, el contenido XML se devuelve sin la parte del procedimiento almacenado compilado de forma nativa.|  

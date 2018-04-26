@@ -1,16 +1,16 @@
 ---
-title: "Tablas e índices con particiones | Microsoft Docs"
-ms.custom: 
+title: Tablas e índices con particiones | Microsoft Docs
+ms.custom: ''
 ms.date: 01/20/2016
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine, sql-database
-ms.service: 
+ms.service: ''
 ms.component: partitions
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - dbe-partition
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - partitioned tables [SQL Server], about partitioned tables
@@ -18,19 +18,21 @@ helpviewer_keywords:
 - partitioned tables [SQL Server], architecture
 - partitioned indexes [SQL Server], about partitioned indexes
 ms.assetid: cc5bf181-18a0-44d5-8bd7-8060d227c927
-caps.latest.revision: 
+caps.latest.revision: 48
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.workload: Active
-ms.openlocfilehash: 6e5758702f60671b64fc97d9e9e98b89a80ccd6f
-ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
+monikerRange: = azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions
+ms.openlocfilehash: d8af645cee08f550eb8d22ba06d6ab68da50312e
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/18/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="partitioned-tables-and-indexes"></a>Partitioned Tables and Indexes
-[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] es compatible con la creación de particiones de tabla e índice. Los datos de tablas e índices con particiones se dividen en unidades que pueden propagarse por más de un grupo de archivos de la base de datos. Los datos se dividen en sentido horizontal, de forma que los grupos de filas se asignan a particiones individuales. Las particiones de un índice o una tabla deben encontrarse en la misma base de datos. La tabla o el índice se tratarán como una sola entidad lógica cuando se realicen consultas o actualizaciones en los datos. Antes de [!INCLUDE[ssSQL15_md](../../includes/sssql15-md.md)] SP1, las tablas e índices con particiones no estaban disponibles en todas las ediciones de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Para obtener una lista de las características admitidas por las ediciones de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], vea [Características compatibles con las ediciones de SQL Server 2016](../../sql-server/editions-and-supported-features-for-sql-server-2016.md).  
+[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
+  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] es compatible con la creación de particiones de tabla e índice. Los datos de tablas e índices con particiones se dividen en unidades que pueden propagarse por más de un grupo de archivos de la base de datos. Los datos se dividen en sentido horizontal, de forma que los grupos de filas se asignan a particiones individuales. Las particiones de un índice o una tabla deben encontrarse en la misma base de datos. La tabla o el índice se tratarán como una sola entidad lógica cuando se realicen consultas o actualizaciones en los datos. Antes de [!INCLUDE[ssSQL15_md](../../includes/sssql15-md.md)] SP1, las tablas e índices con particiones no estaban disponibles en todas las ediciones de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Para obtener una lista de las características admitidas por las ediciones de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], vea [Características compatibles con las ediciones de SQL Server 2016](../../sql-server/editions-and-supported-features-for-sql-server-2016.md).  
   
 > [!IMPORTANT]  
 >  [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] admite hasta 15.000 particiones de forma predeterminada. En las versiones anteriores a [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)], el número de particiones está limitado a 1.000 de forma predeterminada. En sistemas basados en x86, se puede crear una tabla o un índice con más de 1000 particiones pero no se admite.  
@@ -58,7 +60,7 @@ ms.lasthandoff: 01/18/2018
  Objeto de base de datos que asigna las particiones de una función de partición a un conjunto de grupos de archivos. La principal razón para colocar las particiones en distintos grupos de archivos es garantizar que se puedan realizar operaciones de copia de seguridad en particiones de forma independiente. Esto se debe a que se pueden realizar copias de seguridad en grupos de archivos individuales.  
   
  Columna de partición  
- La columna de una tabla o índice que una función de partición usa para crear particiones en la tabla o índice. Las columnas calculadas que participan en una función de partición deben marcarse explícitamente como PERSISTED. Todos los tipos de datos válidos para el uso en columnas de índice pueden utilizarse como una columna de partición con la excepción de **timestamp**. No se pueden especificar los tipos de datos **ntext**, **text**, **image**, **xml**, **varchar(max)**, **nvarchar(max)**o **varbinary(max)** . Tampoco se pueden especificar columnas de tipo de datos de alias y de tipo definido por el usuario de Common Language Runtime (CLR) de Microsoft .NET Framework.  
+ La columna de una tabla o índice que una función de partición usa para crear particiones en la tabla o índice. Las columnas calculadas que participan en una función de partición deben marcarse explícitamente como PERSISTED. Todos los tipos de datos válidos para el uso en columnas de índice pueden utilizarse como una columna de partición con la excepción de **timestamp**. No se pueden especificar los tipos de datos **ntext**, **text**, **image**, **xml**, **varchar(max)**, **nvarchar(max)** o **varbinary(max)** . Tampoco se pueden especificar columnas de tipo de datos de alias y de tipo definido por el usuario de Common Language Runtime (CLR) de Microsoft .NET Framework.  
   
  Índices alineados  
  Un índice que se compila con el mismo esquema de partición que su tabla correspondiente. Cuando una tabla y sus índices están alineados, SQL Server puede dividir las particiones de forma rápida y eficaz al mismo tiempo que mantiene la estructura de la partición tanto en la tabla como en sus índices. Un índice no tiene por qué participar en la misma función de partición con nombre para alinearse con su tabla base. Sin embargo, la función de partición del índice y la tabla base debe ser básicamente la misma puesto que 1) los argumentos de las funciones de la partición tienen el mismo tipo de datos, 2) definen el mismo número de particiones y 3) definen los mismos valores de límite para las particiones.  

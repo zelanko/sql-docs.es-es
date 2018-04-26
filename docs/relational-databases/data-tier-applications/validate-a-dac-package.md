@@ -1,16 +1,16 @@
 ---
 title: Validar un paquete de DAC | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine
-ms.service: 
+ms.service: ''
 ms.component: data-tier-applications
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - dbe-data-tier-apps
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - data-tier application [SQL Server], validate
@@ -20,19 +20,20 @@ helpviewer_keywords:
 - data-tier application [SQL Server], view
 - view DAC
 ms.assetid: 726ffcc2-9221-424a-8477-99e3f85f03bd
-caps.latest.revision: 
+caps.latest.revision: 17
 author: stevestein
 ms.author: sstein
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: c8eba0d38c9a36f9f66009283126e34f55f38202
-ms.sourcegitcommit: b6116b434d737d661c09b78d0f798c652cf149f3
+ms.openlocfilehash: ba3545d31259d2eb27b63f871b2cfbdfee9ad3ee
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/17/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="validate-a-dac-package"></a>Validar un paquete de DAC
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] Es aconsejable revisar el contenido de un paquete DAC antes de implementarlo en producción y validar las acciones de actualización antes de actualizar una DAC existente. Esto es especialmente aconsejable al implementar paquetes que no se desarrollaron en su organización.  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+  Es aconsejable revisar el contenido de un paquete DAC antes de implementarlo en producción y validar las acciones de actualización antes de actualizar una DAC existente. Esto es especialmente aconsejable al implementar paquetes que no se desarrollaron en su organización.  
   
 1.  **Antes de empezar:**  [Requisitos previos](#Prerequisites)  
   

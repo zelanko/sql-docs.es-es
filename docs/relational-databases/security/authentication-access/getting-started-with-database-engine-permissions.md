@@ -1,30 +1,31 @@
 ---
-title: "Introducción a los permisos de los motores de bases de datos | Microsoft Docs"
-ms.custom: 
+title: Introducción a los permisos de los motores de bases de datos | Microsoft Docs
+ms.custom: ''
 ms.date: 01/03/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
-ms.service: 
+ms.service: ''
 ms.component: security
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: get-started-article
 helpviewer_keywords:
 - permissions [SQL Server], getting started
 ms.assetid: 051af34e-bb5b-403e-bd33-007dc02eef7b
-caps.latest.revision: 
+caps.latest.revision: 15
 author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 4292564f8e3e392bd01d5b1e580e1f28251840bd
-ms.sourcegitcommit: 6b1618aa3b24bf6759b00a820e09c52c4996ca10
+monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
+ms.openlocfilehash: f6d87f2072d7380d9d1592fc106e256c55361b2d
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/15/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="getting-started-with-database-engine-permissions"></a>Introducción a los permisos de los motores de bases de datos
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -164,9 +165,9 @@ GRANT CONTROL ON DATABASE::SalesDB TO Ted;
  El primer permiso mencionado antes (`GRANT SELECT ON OBJECT::Region TO Ted;`) es el más pormenorizado, es decir, esa instrucción es el permiso mínimo posible que concede `SELECT`. No incluye permisos para los objetos subordinados. Se recomienda conceder siempre el permiso mínimo posible, pero, por el contrario, concederlo en los niveles superiores para simplificar el sistema de concesiones. Por tanto, si Ted necesita permisos para todo el esquema, conceda `SELECT` una vez en el nivel de esquema, en lugar de conceder `SELECT` en el nivel de tabla o vista varias veces. El diseño de la base de datos ejerce un impacto importante sobre el éxito que puede tener esta estrategia. Esta estrategia funcionará mejor si la base de datos está diseñada de forma que los objetos que necesiten permisos idénticos se incluyan en un único esquema.  
   
 ## <a name="list-of-permissions"></a>Lista de permisos  
- [!INCLUDE[ssSQL15](../../../includes/sssql15-md.md)] tiene 230 permisos. [!INCLUDE[ssSQL14](../../../includes/sssql14-md.md)] tiene 219 permisos. [!INCLUDE[ssSQL11](../../../includes/sssql11-md.md)] tiene 214 permisos. [!INCLUDE[ssKilimanjaro](../../../includes/sskilimanjaro-md.md)] tiene 195 permisos. [!INCLUDE[ssSDS](../../../includes/sssds-md.md)], [!INCLUDE[ssDW](../../../includes/ssdw-md.md)]y [!INCLUDE[ssAPS](../../../includes/ssaps-md.md)] tienen menos permisos porque solo exponen una parte del motor de base de datos, aunque cada uno tiene permisos que no son aplicables a [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]. El gráfico siguiente muestra los permisos y las relaciones entre ellos. Algunos de los permisos de nivel superior (como `CONTROL SERVER`) se muestran varias veces. En este tema, el póster es demasiado pequeño para leerlo. Haga clic en la imagen para descargar el **póster de los permisos de los motores de bases de datos** en formato pdf.  
-  
-[![Permisos de los motores de bases de datos](../../../relational-databases/security/media/database-engine-permissions.PNG)](https://aka.ms/sql-permissions-poster)
+ [!INCLUDE[ssSQL15](../../../includes/sssql15-md.md)] tiene 230 permisos. [!INCLUDE[ssSQL14](../../../includes/sssql14-md.md)] tiene 219 permisos. [!INCLUDE[ssSQL11](../../../includes/sssql11-md.md)] tiene 214 permisos. [!INCLUDE[ssKilimanjaro](../../../includes/sskilimanjaro-md.md)] tiene 195 permisos. [!INCLUDE[ssSDS](../../../includes/sssds-md.md)], [!INCLUDE[ssDW](../../../includes/ssdw-md.md)]y [!INCLUDE[ssAPS](../../../includes/ssaps-md.md)] tienen menos permisos porque solo exponen una parte del motor de base de datos, aunque cada uno tiene permisos que no son aplicables a [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]. 
+ 
+ [!INCLUDE[database-engine-permissions](../../../includes/paragraph-content/database-engine-permissions.md)]
  
  Para ver un gráfico que muestra las relaciones entre las entidades de seguridad de [!INCLUDE[ssDE](../../../includes/ssde-md.md)] y los objetos de servidor y base de datos, consulte [Permissions Hierarchy &#40;Database Engine&#41;](../../../relational-databases/security/permissions-hierarchy-database-engine.md) (Jerarquía de permisos [motor de base de datos]).  
   

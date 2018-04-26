@@ -1,16 +1,16 @@
 ---
 title: Usar la utilidad sqlcmd | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 06/06/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: sql-tools
-ms.service: 
+ms.service: ''
 ms.component: ssms-scripting
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 dev_langs:
 - TSQL
@@ -20,19 +20,21 @@ helpviewer_keywords:
 - statements [SQL Server], executing
 - sqlcmd utility, about sqlcmd utility
 ms.assetid: 3ec89119-7314-43ef-9e91-12e72bb63d62
-caps.latest.revision: 
+caps.latest.revision: 50
 author: mightypen
 ms.author: genemi
 manager: craigg
 ms.workload: Active
-ms.openlocfilehash: ea2018f4b9b0ad9c0ef29dbacaeaa6e7639a1a34
-ms.sourcegitcommit: a0aa5e611a0e6ebb74ac1e2f613e8916dc7a7617
+monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
+ms.openlocfilehash: e11152d3dc2342bbad99be13742155422c929158
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/24/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="sqlcmd---use-the-utility"></a>sqlcmd: usar la utilidad
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)] La utilidad **sqlcmd** es una herramienta de línea de comandos para la ejecución ad hoc e interactiva de instrucciones y scripts de [!INCLUDE[tsql](../../includes/tsql-md.md)] y para la automatización de tareas de creación de scripts de [!INCLUDE[tsql](../../includes/tsql-md.md)]. Para usar **sqlcmd** interactivamente o para compilar archivos de script que se ejecutan mediante **sqlcmd**, los usuarios deben estar familiarizados con [!INCLUDE[tsql](../../includes/tsql-md.md)]. La utilidad **sqlcmd** se usa normalmente de las formas siguientes:  
+[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
+  La utilidad **sqlcmd** es una herramienta de línea de comandos para la ejecución ad hoc e interactiva de instrucciones y scripts de [!INCLUDE[tsql](../../includes/tsql-md.md)] y para la automatización de tareas de creación de scripts de [!INCLUDE[tsql](../../includes/tsql-md.md)] . Para usar **sqlcmd** interactivamente o para compilar archivos de script que se ejecutan mediante **sqlcmd**, los usuarios deben estar familiarizados con [!INCLUDE[tsql](../../includes/tsql-md.md)]. La utilidad **sqlcmd** se usa normalmente de las formas siguientes:  
   
 -   Los usuarios escriben instrucciones [!INCLUDE[tsql](../../includes/tsql-md.md)] de una forma similar al modo en que trabajan con el símbolo del sistema. Los resultados se muestran en el símbolo del sistema. Para abrir una ventana del símbolo del sistema, escriba "cmd" en el cuadro de búsqueda de Windows y haga clic en **Símbolo del sistema** para abrirla. En el símbolo del sistema, escriba **sqlcmd** seguido de una lista de opciones que quiera. Para obtener una lista completa de las opciones admitidas por **sqlcmd**, vea [sqlcmd (utilidad)](../../tools/sqlcmd-utility.md).  
   

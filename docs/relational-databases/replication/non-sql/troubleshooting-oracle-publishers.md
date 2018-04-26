@@ -1,31 +1,31 @@
 ---
 title: Solucionar problemas de los publicadores de Oracle | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine
-ms.service: 
+ms.service: ''
 ms.component: replication
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - replication
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - Oracle publishing [SQL Server replication], troubleshooting
 - troubleshooting [SQL Server replication], Oracle publishing
 ms.assetid: be94f1c1-816b-4b1d-83f6-2fd6f5807ab7
-caps.latest.revision: 
+caps.latest.revision: 62
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 44c98b6b2a184c3e438a2e993adcc26a871069f3
-ms.sourcegitcommit: ab25b08a312d35489a2c4a6a0d29a04bbd90f64d
+ms.openlocfilehash: f5ada9a491160ae119ac4792f26640854fcacc0f
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/08/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="troubleshooting-oracle-publishers"></a>Solucionar problemas de los publicadores de Oracle
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -163,7 +163,7 @@ ms.lasthandoff: 03/08/2018
   
 2.  En el cuadro de diálogo **Ejecutar** , escriba **regedit**y, a continuación, haga clic en **Aceptar**.  
   
-3.  Navegue hasta HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Microsoft SQL Server\\*\<nombreInstancia>*\Providers.  
+3.  Navegue hasta HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Microsoft SQL Server\\*\<nombreInstancia>* \Providers.  
   
      Se debe incluir en Proveedores una carpeta denominada OraOLEDB.Oracle. En esta carpeta debe encontrarse el nombre de valor DWORD **AllowInProcess**, con un valor de **1**.  
   
@@ -239,7 +239,7 @@ ms.lasthandoff: 03/08/2018
 ## <a name="changes-are-made-that-require-reconfiguration-of-the-publisher"></a>Se han realizado cambios que requieren volver a configurar el publicador  
  Los cambios en los procedimientos o en las tablas de metadatos de la replicación obligan a quitar y configurar de nuevo el publicador. Para volver a configurar el publicador, debe quitarlo y configurarlo de nuevo con [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)], Transact-SQL o RMO. Para más información sobre la configuración del publicador, vea [Configurar un publicador de Oracle](../../../relational-databases/replication/non-sql/configure-an-oracle-publisher.md).  
   
- **Para eliminar un publicador de Oracle (**SQL Server Management Studio**)**  
+ **Para eliminar un publicador de Oracle (** SQL Server Management Studio **)**  
   
 1.  Conéctese al distribuidor del publicador de Oracle en [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)] y expanda el nodo de servidor.  
   

@@ -1,31 +1,32 @@
 ---
-title: "Guía de arquitectura de subprocesos y tareas | Microsoft Docs"
-ms.custom: 
+title: Guía de arquitectura de subprocesos y tareas | Microsoft Docs
+ms.custom: ''
 ms.date: 10/26/2016
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine, sql-database
-ms.service: 
+ms.service: ''
 ms.component: relational-databases-misc
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - guide, thread and task architecture
 - thread and task architecture guide
 ms.assetid: 925b42e0-c5ea-4829-8ece-a53c6cddad3b
-caps.latest.revision: 
+caps.latest.revision: 3
 author: rothja
 ms.author: jroth
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 1684760951c661e50111028594c576661028da6e
-ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
+monikerRange: = azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions
+ms.openlocfilehash: 9d17f3c6543d78efc86f07cec995ddbdc03cd195
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/09/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="thread-and-task-architecture-guide"></a>guía de arquitectura de subprocesos y tareas
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -53,7 +54,7 @@ La sobrecarga que supone el cambio de contexto de los subprocesos no es excesiva
 
 Estos sistemas pueden notar un pequeño incremento en el rendimiento si el valor de agrupación ligera se establece en 1.
 
-No se recomienda utilizar la programación en modo de fibra para un funcionamiento habitual. La razón es que puede reducir el rendimiento al eliminar las ventajas normales del cambio de contexto, y que algunos componentes de SQL Server no funcionan correctamente en modo de fibra. Para obtener más información, vea lightweight pooling (opción de configuración del servidor).
+No se recomienda utilizar la programación en modo de fibra para un funcionamiento habitual. La razón es que puede reducir el rendimiento al impedir las ventajas normales del cambio de contexto, y que algunos componentes de SQL Server no funcionan correctamente en modo de fibra. Para obtener más información, vea lightweight pooling (opción de configuración del servidor).
 
 ## <a name="thread-and-fiber-execution"></a>Ejecución de subprocesos y fibras
 

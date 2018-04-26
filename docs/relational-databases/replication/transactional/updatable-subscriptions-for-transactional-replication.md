@@ -1,16 +1,16 @@
 ---
-title: "Suscripciones actualizables para la replicación transaccional | Microsoft Docs"
-ms.custom: 
+title: Suscripciones actualizables para la replicación transaccional | Microsoft Docs
+ms.custom: ''
 ms.date: 07/21/2016
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine
-ms.service: 
+ms.service: ''
 ms.component: replication
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - replication
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - transactional replication, updatable subscriptions
@@ -20,16 +20,16 @@ helpviewer_keywords:
 - subscriptions [SQL Server replication], updatable
 - updatable subscriptions
 ms.assetid: 8eec95cb-3a11-436e-bcee-bdcd05aa5c5a
-caps.latest.revision: 
+caps.latest.revision: 60
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: c4922de0c287e5263163f56d151455fea9a836f9
-ms.sourcegitcommit: ab25b08a312d35489a2c4a6a0d29a04bbd90f64d
+ms.openlocfilehash: d33ebae50e932efe39bd062d96ab1af46f2e2969
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/08/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="updatable-subscriptions---for-transactional-replication"></a>Suscripciones actualizables para la replicación transaccional
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -89,7 +89,7 @@ ms.lasthandoff: 03/08/2018
   
 -   Los suscriptores no pueden actualizar o insertar valores **text**, **ntext** o **image** porque no es posible leer en las tablas insertadas o eliminadas dentro de los desencadenadores de seguimiento de cambios de replicación. Igualmente, los suscriptores no pueden actualizar o insertar valores **text** o **image** utilizando **WRITETEXT** o **UPDATETEXT** porque el publicador sobrescribe los datos. En su lugar, puede dividir las columnas **text** y **image** en una tabla independiente y modificar las dos tablas en una transacción.  
   
-     Para actualizar los objetos grandes de un suscriptor, utilice los tipos de datos **varchar(max)**, **nvarchar(max)**y **varbinary(max)** en lugar de **text**, **ntext**y **image** , respectivamente.  
+     Para actualizar los objetos grandes de un suscriptor, utilice los tipos de datos **varchar(max)**, **nvarchar(max)** y **varbinary(max)** en lugar de **text**, **ntext**y **image** , respectivamente.  
   
 -   No se permiten actualizaciones de claves únicas (incluidas las claves principales) que generen duplicados (por ejemplo, una actualización con el formato `UPDATE <column> SET <column> =<column>+1` ) y se rechazarán debido a una infracción de unicidad. Esto se debe a que la replicación propaga las actualizaciones de conjuntos realizadas en el suscriptor como instrucciones **UPDATE** individuales para cada fila afectada.  
   

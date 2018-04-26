@@ -1,16 +1,16 @@
 ---
-title: "Reducción de la carga de optimización del servidor de producción | Microsoft Docs"
-ms.custom: 
+title: Reducción de la carga de optimización del servidor de producción | Microsoft Docs
+ms.custom: ''
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine, sql-database
-ms.service: 
+ms.service: ''
 ms.component: performance
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - overhead [Database Engine Tuning Advisor]
@@ -21,19 +21,21 @@ helpviewer_keywords:
 - production servers [SQL Server]
 - offload tuning overhead [SQL Server]
 ms.assetid: bb95ecaf-444a-4771-a625-e0a91c8f0709
-caps.latest.revision: 
+caps.latest.revision: 39
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 17d4f6a412677dbdfa580baeec777ed069cdc7d1
-ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
+monikerRange: = azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions
+ms.openlocfilehash: 124c7be2ec961ff536c8b3909579176964c58c6b
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/18/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="reduce-the-production-server-tuning-load"></a>Reducir la carga de optimización del servidor de producción
-[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)] [!INCLUDE[ssDE](../../includes/ssde-md.md)] El Asistente para la optimización se basa en el optimizador de consultas para analizar una carga de trabajo y realizar recomendaciones de optimización. La realización de este análisis en el servidor de producción le agrega carga y puede perjudicar su rendimiento durante la sesión de optimización. Puede reducir el efecto en la carga del servidor durante una sesión de optimización utilizando un servidor de pruebas además del servidor de producción.  
+[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
+  [!INCLUDE[ssDE](../../includes/ssde-md.md)] se basa en el optimizador de consultas para analizar una carga de trabajo y realizar recomendaciones de optimización. La realización de este análisis en el servidor de producción le agrega carga y puede perjudicar su rendimiento durante la sesión de optimización. Puede reducir el efecto en la carga del servidor durante una sesión de optimización utilizando un servidor de pruebas además del servidor de producción.  
   
 ## <a name="how-database-engine-tuning-advisor-uses-a-test-server"></a>Cómo utiliza el Asistente para la optimización de motor de base de datos un servidor de prueba  
  El modo tradicional de utilizar un servidor de prueba consiste en copiar todos los datos del servidor de producción al servidor de prueba, optimizar el servidor de prueba y luego implementar la recomendación en el servidor de producción. Este proceso elimina el impacto negativo de rendimiento que sufriría el servidor de producción, pero no es la solución idónea. Por ejemplo, cuando sea necesario copiar grandes volúmenes de datos del servidor de producción al de prueba, el consumo de tiempo y recursos se dispara. Además, el hardware del servidor de prueba no suele ser tan eficaz como el hardware implementado en los servidores de producción. El proceso de optimización se basa en el optimizador de consultas y las recomendaciones que éste genera se basan en parte del hardware subyacente. Si el hardware del servidor de pruebas no es idéntico al del servidor de producción, disminuirá la calidad de las recomendaciones que efectúe el Asistente para la optimización de [!INCLUDE[ssDE](../../includes/ssde-md.md)] .  

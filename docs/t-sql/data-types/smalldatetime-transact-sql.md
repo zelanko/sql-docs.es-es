@@ -1,16 +1,16 @@
 ---
 title: smalldatetime (Transact-SQL) | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 7/22/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
-ms.service: 
+ms.service: ''
 ms.component: t-sql|data-types
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - smalldatetime_TSQL
@@ -24,16 +24,17 @@ helpviewer_keywords:
 - date and time [SQL Server], smalldatetime
 - data types [SQL Server], date and time
 ms.assetid: 68b74610-d54c-4c8e-b4b2-7e3747546ee0
-caps.latest.revision: 
+caps.latest.revision: 50
 author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: Active
-ms.openlocfilehash: 07ab6616d91d0508c2c52f7e3b8be4e03127ecaa
-ms.sourcegitcommit: 45e4efb7aa828578fe9eb7743a1a3526da719555
+monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
+ms.openlocfilehash: cf5273a362de4a4eb86f266d252fe4c853900e1c
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="smalldatetime-transact-sql"></a>smalldatetime (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -52,7 +53,7 @@ Define una fecha que se combina con una hora del día. La hora está en un forma
 |Formatos de literal de cadena predeterminados<br /><br /> (se usa para el cliente de nivel inferior)|No aplicable|  
 |Intervalo de fechas|De 1900-01-01 a 2079-06-06<br /><br /> Del 1 de enero de 1900 hasta el 6 de junio de 2079|  
 |Intervalo de horas|De 00:00:00 a 23:59:59<br /><br /> 2007-05-09 23:59:59 se redondeará a<br /><br /> 2007-05-10 00:00:00|  
-|Intervalos de elementos|AAAA es una cifra de cuatro dígitos comprendida entre 1900 y 2079 que representa un año.<br /><br /> MM es una cifra de dos dígitos, comprendida entre 01 y 12, que representa un mes del año especificado.<br /><br /> DD es una cifra de dos dígitos, comprendida entre 01 y 31 (según el mes), que representa un día del mes especificado.<br /><br /> hh es una cifra de dos dígitos comprendida entre 00 y 23 que representa la hora.<br /><br /> mm es una cifra de dos dígitos comprendida entre 00 y 59 que representa los minutos.<br /><br /> s es una cifra de dos dígitos comprendida entre 00 y 59 que representa los segundos. Los valores de 29,998 segundos o menos se redondean a la baja hasta el minuto más cercano; los valores de 29,999 segundos o más se redondean al alza hasta el minuto más cercano.|  
+|Intervalos de elementos|AAAA es una cifra de cuatro dígitos comprendida entre 1900 y 2079 que representa un año.<br /><br /> MM es una cifra de dos dígitos, comprendida entre 01 y 12, que representa un mes del año especificado.<br /><br /> DD es una cifra de dos dígitos, comprendida entre 01 y 31 dependiendo del mes, que representa un día del mes especificado.<br /><br /> hh es una cifra de dos dígitos comprendida entre 00 y 23 que representa la hora.<br /><br /> mm es una cifra de dos dígitos comprendida entre 00 y 59 que representa los minutos.<br /><br /> s es una cifra de dos dígitos comprendida entre 00 y 59 que representa los segundos. Los valores de 29,998 segundos o menos se redondean a la baja hasta el minuto más cercano; los valores de 29,999 segundos o más se redondean al alza hasta el minuto más cercano.|  
 |Longitud en caracteres|19 posiciones como máximo|  
 |Tamaño de almacenamiento|4 bytes, fijo.|  
 |Precisión|Un minuto|  

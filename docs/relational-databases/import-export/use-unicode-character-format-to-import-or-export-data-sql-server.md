@@ -1,31 +1,32 @@
 ---
 title: Usar el formato de caracteres Unicode para importar o exportar datos (SQL Server) | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 09/30/2016
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
-ms.service: 
+ms.service: ''
 ms.component: import-export
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - dbe-bulk-import-export
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - data formats [SQL Server], Unicode character
 - Unicode [SQL Server], bulk importing and exporting
 ms.assetid: 74342a11-c1c0-4746-b482-7f3537744a70
-caps.latest.revision: 
+caps.latest.revision: 37
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: c6a9afc3b92d4de54b166e56c745e28898937c59
-ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
+monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
+ms.openlocfilehash: 168797b37247a0309d09b80960e2ae5089e7d51b
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/15/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="use-unicode-character-format-to-import-or-export-data-sql-server"></a>Usar el formato de caracteres Unicode para importar o exportar datos (SQL Server)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -147,7 +148,7 @@ Notepad D:\BCP\myWidechar.fmt
 En los siguientes ejemplos se usan la base de datos y los archivos de formato creados anteriormente.
 
 ### **Usar bcp y el formato de caracteres para exportar datos**<a name="bcp_widechar_export"></a>
-Modificador**-w** y comando **OUT** .  Nota: el archivo de datos creado en este ejemplo se usará en todos los ejemplos siguientes.  En un símbolo del sistema, escriba los comandos siguientes:
+Modificador **-w** y comando **OUT** .  Nota: el archivo de datos creado en este ejemplo se usará en todos los ejemplos siguientes.  En un símbolo del sistema, escriba los comandos siguientes:
 ```
 bcp TestDatabase.dbo.myWidechar OUT D:\BCP\myWidechar.bcp -T -w
 
@@ -156,7 +157,7 @@ NOTEPAD D:\BCP\myWidechar.bcp
 ```
 
 ### **Usar bcp y el formato de caracteres Unicode para importar datos sin un archivo de formato**<a name="bcp_widechar_import"></a>
-Modificador**-w** y comando **IN** .  En un símbolo del sistema, escriba los comandos siguientes:
+Modificador **-w** y comando **IN** .  En un símbolo del sistema, escriba los comandos siguientes:
 ```
 REM Truncate table (for testing)
 SQLCMD -Q "TRUNCATE TABLE TestDatabase.dbo.myWidechar;"
@@ -168,7 +169,7 @@ REM Review results is SSMS
 ```
 
 ### **Usar bcp y el formato de caracteres Unicode para importar datos con un archivo de formato no XML**<a name="bcp_widechar_import_fmt"></a>
-Modificadores**-w** y **-f** switches y **IN** commy.  Se deberá aplicar una solución alternativa, puesto que este ejemplo implica bcp, un archivo de formato, un carácter Unicode y el primer campo de datos del archivo de datos es un campo sin caracteres.  Consulte la sección [Consideraciones especiales sobre el uso del formato de caracteres Unicode, bcp y un archivo de formato](#special_considerations), que aparece más arriba.  El archivo de datos `myWidechar.bcp` se alterará mediante la adición de un registro adicional como registro "ficticio", que se omitirá con el modificador `-F 2` .
+Modificadores **-w** y **-f** switches y **IN** commy.  Se deberá aplicar una solución alternativa, puesto que este ejemplo implica bcp, un archivo de formato, un carácter Unicode y el primer campo de datos del archivo de datos es un campo sin caracteres.  Consulte la sección [Consideraciones especiales sobre el uso del formato de caracteres Unicode, bcp y un archivo de formato](#special_considerations), que aparece más arriba.  El archivo de datos `myWidechar.bcp` se alterará mediante la adición de un registro adicional como registro "ficticio", que se omitirá con el modificador `-F 2` .
 
 En un símbolo del sistema, escriba los siguientes comandos y siga los pasos de modificación:
 ```

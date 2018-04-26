@@ -1,16 +1,16 @@
 ---
 title: DBCC OPENTRAN (Transact-SQL) | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 11/14/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: sql-database
-ms.service: 
+ms.service: ''
 ms.component: t-sql|database-console-commands
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - DBCC_OPENTRAN_TSQL
@@ -28,16 +28,16 @@ helpviewer_keywords:
 - checking open transactions
 - oldest transactions [SQL Server]
 ms.assetid: 63163843-226f-42d3-9e2c-b634fbf06943
-caps.latest.revision: 
+caps.latest.revision: 40
 author: barbkess
 ms.author: barbkess
 manager: craigg
 ms.workload: Active
-ms.openlocfilehash: 3c4166a34b06531389b4f8ad57f6c826bfbb664d
-ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
+ms.openlocfilehash: 985c2f056ad22fcb10ed839704efc5d7dc493765
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/25/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="dbcc-opentran-transact-sql"></a>DBCC OPENTRAN (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -63,7 +63,7 @@ DBCC OPENTRAN
   
 ## <a name="arguments"></a>Argumentos  
  *database_name* | *database_id*| 0  
- Es el nombre o el identificador de la base de datos de la que se va a presentar la información de la transacción más antigua. Si no se especifica o se especifica 0, se utiliza la base de datos actual. Los nombres de las bases de datos deben ajustarse a las reglas de los [identificadores](../../relational-databases/databases/database-identifiers.md).  
+ Es el nombre o el identificador de la base de datos de la que se va a presentar la información de la transacción más antigua. Si no se especifica o se especifica 0, se utiliza la base de datos actual. Los nombres de las bases de datos deben cumplir las reglas de los [identificadores](../../relational-databases/databases/database-identifiers.md).  
   
  TABLERESULTS  
  Especifica los resultados en un formato tabular que se puede cargar en una tabla. Utilice esta opción para crear una tabla de resultados que se pueda insertar en una tabla y hacer comparaciones. Cuando no se especifica esta opción, se da formato a los resultados de modo que sean legibles.  

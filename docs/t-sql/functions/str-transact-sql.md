@@ -1,16 +1,16 @@
 ---
 title: STR (Transact-SQL) | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 03/16/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
-ms.service: 
+ms.service: ''
 ms.component: t-sql|functions
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - STR
@@ -23,16 +23,17 @@ helpviewer_keywords:
 - character data [SQL Server]
 - STR function
 ms.assetid: de03531b-d9e7-4c3c-9604-14e582ac20c6
-caps.latest.revision: 
+caps.latest.revision: 39
 author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: Active
-ms.openlocfilehash: 04386cd8dafb69d08c72b460f3794963c8b6da36
-ms.sourcegitcommit: 6b4aae3706247ce9b311682774b13ac067f60a79
+monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
+ms.openlocfilehash: d4eb6ae0f5cc4a669cf69140e406ad36d4d5bf11
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/18/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="str-transact-sql"></a>STR (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -61,7 +62,7 @@ STR ( float_expression [ , length [ , decimal ] ] )
  **varchar**  
   
 ## <a name="remarks"></a>Notas  
- Si se especifican, los valores de los parámetros *length* y *decimal* de STR deben ser positivos. El número se redondea a un entero de forma predeterminada o si el parámetro decimal es 0. La longitud especificada debe ser mayor o igual que la parte del número situada delante del separador decimal más el signo del número (si lo hay). Una *float_expression* corta se justifica a la derecha según la longitud especificada y una *float_expression* larga se trunca según el número de decimales especificados. Por ejemplo, STR(12**,**10) da como resultado 12. Se justifica a la derecha en el conjunto de resultados. Sin embargo, STR(1223**,**2) trunca el conjunto de resultados a **. Las funciones de cadena se pueden anidar.  
+ Si se especifican, los valores de los parámetros *length* y *decimal* de STR deben ser positivos. El número se redondea a un entero de forma predeterminada o si el parámetro decimal es 0. La longitud especificada debe ser mayor o igual que la parte del número situada delante del separador decimal más el signo del número (si lo hay). Una *float_expression* corta se justifica a la derecha según la longitud especificada y una *float_expression* larga se trunca según el número de decimales especificados. Por ejemplo, STR(12 **,** 10) da como resultado 12. Se justifica a la derecha en el conjunto de resultados. Sin embargo, STR(1223 **,** 2) trunca el conjunto de resultados a **. Las funciones de cadena se pueden anidar.  
   
 > [!NOTE]  
 >  Para convertir a datos Unicode, utilice STR en una función de conversión CONVERT o [CAST](../../t-sql/functions/cast-and-convert-transact-sql.md).  

@@ -1,34 +1,35 @@
 ---
 title: Clase de eventos SP:CacheMiss | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine, sql-database
-ms.service: 
+ms.service: ''
 ms.component: event-classes
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - SP:CacheMiss event class
 ms.assetid: 82229233-f772-4558-95a0-d54584d1b1ae
-caps.latest.revision: 
+caps.latest.revision: 38
 author: stevestein
 ms.author: sstein
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: a68b4ddb187fc9ff48bb0cb85c6d63dc61cca714
-ms.sourcegitcommit: 37f0b59e648251be673389fa486b0a984ce22c81
+monikerRange: = azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions
+ms.openlocfilehash: d6ae7b03e5459567a3bf12db53882d9bba8e8150
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/12/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="spcachemiss-event-class"></a>SP:CacheMiss [clase de eventos]
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
-La clase de eventos SP:CacheMiss indica que el procedimiento no se encuentra en la caché. Si la clase de eventos SP:CacheMiss se produce con frecuencia, puede indicar que es necesario asignar más memoria a [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]y aumentar así el tamaño de la caché de procedimientos.  
+  La clase de eventos SP:CacheMiss indica que el procedimiento no se encuentra en la caché. Si la clase de eventos SP:CacheMiss se produce con frecuencia, puede indicar que es necesario asignar más memoria a [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]y aumentar así el tamaño de la caché de procedimientos.  
   
 ## <a name="spcachemiss-event-class-data-columns"></a>Columnas de datos de la clase de eventos SP:CacheMiss  
   

@@ -1,16 +1,16 @@
 ---
-title: "Aumentar el rendimiento de la replicación de mezcla | Microsoft Docs"
-ms.custom: 
+title: Aumentar el rendimiento de la replicación de mezcla | Microsoft Docs
+ms.custom: ''
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine
-ms.service: 
+ms.service: ''
 ms.component: replication
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - replication
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - publications [SQL Server replication], design and performance
@@ -22,16 +22,16 @@ helpviewer_keywords:
 - performance [SQL Server replication], merge replication
 - agents [SQL Server replication], performance
 ms.assetid: f929226f-b83d-4900-a07c-a62f64527c7f
-caps.latest.revision: 
+caps.latest.revision: 47
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 4490561c6902497eba6d8a775790df1e19026a29
-ms.sourcegitcommit: ab25b08a312d35489a2c4a6a0d29a04bbd90f64d
+ms.openlocfilehash: 540fe157f33e4f5a9e597a9c1b5128a7acca26b0
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/08/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="enhance-merge-replication-performance"></a>Aumentar el rendimiento de la replicación de mezcla
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -49,7 +49,7 @@ ms.lasthandoff: 03/08/2018
   
 -   Considere la posibilidad de aplicar una normalización excesiva a las tablas que incluyan tipos de datos de objetos grandes (LOB).  
   
-     Cuando se produce la sincronización, el Agente de mezcla puede tener que leer y transferir todas las filas de datos de un publicador o un suscriptor. Si la fila contiene columnas que utilizan LOB, este proceso puede requerir una asignación de memoria adicional y causar un impacto negativo en el rendimiento aunque no se hayan actualizado estas columnas. Para reducir la probabilidad de que se produzca este impacto en el rendimiento, considere colocar las columnas LOB en una tabla independiente con una relación de uno a uno al resto de datos de las filas. Los tipos de datos **text**, **ntext**y **image** han quedado desusados. Si incluye LOB, se recomienda que utilice los tipos de datos **varchar(max)**, **nvarchar(max)**y **varbinary(max)**, respectivamente.  
+     Cuando se produce la sincronización, el Agente de mezcla puede tener que leer y transferir todas las filas de datos de un publicador o un suscriptor. Si la fila contiene columnas que utilizan LOB, este proceso puede requerir una asignación de memoria adicional y causar un impacto negativo en el rendimiento aunque no se hayan actualizado estas columnas. Para reducir la probabilidad de que se produzca este impacto en el rendimiento, considere colocar las columnas LOB en una tabla independiente con una relación de uno a uno al resto de datos de las filas. Los tipos de datos **text**, **ntext**y **image** han quedado desusados. Si incluye LOB, se recomienda que utilice los tipos de datos **varchar(max)**, **nvarchar(max)** y **varbinary(max)**, respectivamente.  
   
 ## <a name="publication-design"></a>Diseño de la publicación  
   

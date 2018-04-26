@@ -1,34 +1,35 @@
 ---
 title: Clase de eventos SQLTransaction | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine, sql-database
-ms.service: 
+ms.service: ''
 ms.component: event-classes
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - SQLTransaction event class
 ms.assetid: 4e175aa3-4f3d-4b23-a423-4a7a1bd4e84e
-caps.latest.revision: 
+caps.latest.revision: 36
 author: stevestein
 ms.author: sstein
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 8467e9365a3ca5b3087879be256f285e4c2ed55b
-ms.sourcegitcommit: 37f0b59e648251be673389fa486b0a984ce22c81
+monikerRange: = azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions
+ms.openlocfilehash: ce0308c230b88181429a859984dc86e7307a12ca
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/12/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="sqltransaction-event-class"></a>SQLTransaction, clase de eventos
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
-Utilice la clase de eventos SQLTransaction para supervisar el inicio y el final de las transacciones, especialmente al probar aplicaciones, desencadenadores o procedimientos almacenados.  
+  Utilice la clase de eventos SQLTransaction para supervisar el inicio y el final de las transacciones, especialmente al probar aplicaciones, desencadenadores o procedimientos almacenados.  
   
 ## <a name="sqltransaction-event-class-data-columns"></a>Columnas de datos de la clase de eventos SQLTransaction  
   

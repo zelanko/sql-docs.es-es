@@ -2,7 +2,7 @@
 title: Grupos de acciones y acciones de SQL Server Audit | Microsoft Docs
 ms.custom: ''
 ms.date: 10/19/2016
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine
 ms.service: ''
 ms.component: security
@@ -29,14 +29,15 @@ author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 2a6dbc0a4fd646a93f6b0934d3297579e7e44398
-ms.sourcegitcommit: 45e4efb7aa828578fe9eb7743a1a3526da719555
+ms.openlocfilehash: 46c7676c207da04ade84dad14018c7b5c984dd0a
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="sql-server-audit-action-groups-and-actions"></a>Grupos de acciones y acciones de SQL Server Audit
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] La característica [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Audit le permite auditar grupos de eventos y eventos individuales de nivel de servidor y de base de datos. Para obtener más información, vea [SQL Server Audit &#40;motor de base de datos&#41;](../../../relational-databases/security/auditing/sql-server-audit-database-engine.md).  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+  La característica [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Audit permite auditar grupos de eventos y eventos individuales de nivel de servidor y de base de datos. Para obtener más información, vea [SQL Server Audit &#40;motor de base de datos&#41;](../../../relational-databases/security/auditing/sql-server-audit-database-engine.md).  
   
  [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] constan de cero o más elementos de acción de auditoría. Estos elementos pueden ser grupos de acciones, como Server_Object_Change_Group, o acciones individuales tales como las operaciones SELECT en una tabla.  
   
@@ -78,7 +79,7 @@ ms.lasthandoff: 11/21/2017
   
  En la tabla siguiente se describen los grupos de acciones de auditoría de nivel de servidor y se proporciona la clase de eventos de SQL Server equivalente cuando corresponda.  
   
-|Nombre del grupo de acciones|Descripción|  
+|Nombre del grupo de acciones|Description|  
 |-----------------------|-----------------|  
 |APPLICATION_ROLE_CHANGE_PASSWORD_GROUP|Este evento se desencadena cuando se cambia una contraseña para un rol de aplicación. Equivalente a [Audit App Role Change Password Event Class](../../../relational-databases/event-classes/audit-app-role-change-password-event-class.md).|  
 |AUDIT_CHANGE_GROUP|Este evento se desencadena al crear, modificar o eliminar una auditoría. Este evento se desencadena al crear, modificar o eliminar una especificación de auditoría. Todos los cambios realizados en una auditoría se auditan en ella. Equivalente a [Audit Change Audit Event Class](../../../relational-databases/event-classes/audit-change-audit-event-class.md).|  
@@ -114,7 +115,7 @@ ms.lasthandoff: 11/21/2017
 |SERVER_PERMISSION_CHANGE_GROUP|Este evento se desencadena al emitir una instrucción GRANT, REVOKE o DENY para los permisos en el ámbito del servidor, como la creación de un inicio de sesión. Equivalente a [Audit Server Scope GDR Event Class](../../../relational-databases/event-classes/audit-server-scope-gdr-event-class.md).|  
 |SERVER_PRINCIPAL_CHANGE_GROUP|Este evento se desencadena al crear, modificar o quitar entidades de seguridad de servidor. Equivalente a [Audit Server Principal Management Event Class](../../../relational-databases/event-classes/audit-server-principal-management-event-class.md).<br /><br /> Este evento se desencadena cuando una entidad de seguridad emite los procedimientos almacenados sp_defaultdb o sp_defaultlanguage o las instrucciones ALTER LOGIN. Equivalente a [Audit Addlogin Event Class](../../../relational-databases/event-classes/audit-addlogin-event-class.md).<br /><br /> Este evento se desencadena en los procedimientos almacenados sp_addlogin y sp_droplogin. También es equivalente a [Audit Login Change Property Event Class](../../../relational-databases/event-classes/audit-login-change-property-event-class.md).<br /><br /> Este evento se desencadena para los procedimientos almacenados sp_grantlogin y sp_revokelogin. Equivalente a [Audit Login GDR Event Class](../../../relational-databases/event-classes/audit-login-gdr-event-class.md).|  
 |SERVER_PRINCIPAL_IMPERSONATION_GROUP|Este evento se desencadena cuando hay una suplantación en el ámbito del servidor, como EXECUTE AS \<inicioDeSesión>. Equivalente a [Audit Server Principal Impersonation Event Class](../../../relational-databases/event-classes/audit-server-principal-impersonation-event-class.md).|  
-|SERVER_ROLE_MEMBER_CHANGE_GROUP|Este evento se desencadena cuando se agrega o quita un inicio de sesión en un rol fijo de servidor. Este evento se desencadena para los procedimientos almacenados sp_addsrvrolemember y sp_dropsrvrolemember. Equivalente a [Audit Add Login to Server Role, clase de eventos](../../../relational-databases/event-classes/audit-add-login-to-server-role-event-class.md).|  
+|SERVER_ROLE_MEMBER_CHANGE_GROUP|Este evento se desencadena cuando se agrega o quita un inicio de sesión en un rol fijo de servidor. Este evento se desencadena para los procedimientos almacenados sp_addsrvrolemember y sp_dropsrvrolemember. Equivalente a [Audit Add Login to Server Role Event Class](../../../relational-databases/event-classes/audit-add-login-to-server-role-event-class.md).|  
 |SERVER_STATE_CHANGE_GROUP|Este evento se desencadena al modificar el estado del servicio de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] . Equivalente a [Audit Server Starts and Stops Event Class](../../../relational-databases/event-classes/audit-server-starts-and-stops-event-class.md).|  
 |SUCCESSFUL_DATABASE_AUTHENTICATION_GROUP|Indica que una entidad de seguridad inició una sesión correctamente en una base de datos independiente. Equivalente a la clase de eventos de auditoría correcta de autenticación de base de datos.|  
 |SUCCESSFUL_LOGIN_GROUP|Indica que una entidad de seguridad ha iniciado correctamente una sesión de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]. Los eventos de esta clase los producen nuevas conexiones o conexiones reutilizadas de un grupo de conexiones. Equivalente a [Audit Login Event Class](../../../relational-databases/event-classes/audit-login-event-class.md).|  
@@ -133,7 +134,7 @@ ms.lasthandoff: 11/21/2017
   
  En la tabla siguiente se describen los grupos de acciones de auditoría de nivel de base de datos y se proporciona la clase de eventos de SQL Server equivalente cuando corresponda.  
   
-|Nombre del grupo de acciones|Descripción|  
+|Nombre del grupo de acciones|Description|  
 |-----------------------|-----------------|  
 |APPLICATION_ROLE_CHANGE_PASSWORD_GROUP|Este evento se desencadena cuando se cambia una contraseña para un rol de aplicación. Equivalente a [Audit App Role Change Password Event Class](../../../relational-databases/event-classes/audit-app-role-change-password-event-class.md).|  
 |AUDIT_CHANGE_GROUP|Este evento se desencadena al crear, modificar o eliminar una auditoría. Este evento se desencadena al crear, modificar o eliminar una especificación de auditoría. Todos los cambios realizados en una auditoría se auditan en ella. Equivalente a [Audit Change Audit Event Class](../../../relational-databases/event-classes/audit-change-audit-event-class.md).|  
@@ -163,13 +164,13 @@ ms.lasthandoff: 11/21/2017
 ## <a name="database-level-audit-actions"></a>Acciones de auditoría de nivel de base de datos  
  Las acciones de nivel de base de datos admiten la auditoría de acciones específicas directamente en objetos de esquema y de esquema de la base de datos, como por ejemplo tablas, vistas, procedimientos almacenados, funciones, procedimientos almacenados extendidos, colas o sinónimos. No se auditan los tipos, colección de esquemas XML, base de datos y esquema. La auditoría de objetos de esquema se puede configurar en esquema y base de datos, que indica que se auditarán los eventos en todos los objetos de esquema que contiene el esquema especificado o la base de datos. En la tabla siguiente se describen las acciones de auditoría de nivel de base de datos.  
   
-|Acción|Descripción|  
+|Acción|Description|  
 |------------|-----------------|  
 |SELECT|Este evento se desencadena al emitir una instrucción SELECT.|  
 |UPDATE|Este evento se desencadena al emitir una instrucción UPDATE.|  
 |INSERT|Este evento se desencadena al emitir una instrucción INSERT.|  
-|DELETE|Este evento se desencadena al emitir una instrucción DELETE.|  
-|EXECUTE|Este evento se desencadena al emitir una instrucción EXECUTE.|  
+|Delete|Este evento se desencadena al emitir una instrucción DELETE.|  
+|Ejecute|Este evento se desencadena al emitir una instrucción EXECUTE.|  
 |RECEIVE|Este evento se desencadena al emitir una instrucción RECEIVE.|  
 |REFERENCES|Este evento se desencadena al comprobar un permiso REFERENCES.|  
   
@@ -183,7 +184,7 @@ ms.lasthandoff: 11/21/2017
 ## <a name="audit-level-audit-action-groups"></a>Grupos de acciones de auditoría de nivel de auditoría  
  También es posible auditar las acciones del proceso de auditoría. Esto puede realizarse en el ámbito del servidor o en el ámbito de la base de datos. En el ámbito de la base de datos, solo se produce para las especificaciones de auditoría de base de datos. En la tabla siguiente se describen los grupos de acciones de auditoría de nivel de auditoría.  
   
-|Nombre del grupo de acciones|Descripción|  
+|Nombre del grupo de acciones|Description|  
 |-----------------------|-----------------|  
 |AUDIT_ CHANGE_GROUP|Este evento se desencadena al emitir uno de los comandos siguientes:<br /><br /> CREATE SERVER AUDIT<br /><br /> ALTER SERVER AUDIT<br /><br /> DROP SERVER AUDIT<br /><br /> CREATE SERVER AUDIT SPECIFICATION<br /><br /> ALTER SERVER AUDIT SPECIFICATION<br /><br /> DROP SERVER AUDIT SPECIFICATION<br /><br /> CREATE DATABASE AUDIT SPECIFICATION<br /><br /> ALTER DATABASE AUDIT SPECIFICATION<br /><br /> DROP DATABASE AUDIT SPECIFICATION|  
   

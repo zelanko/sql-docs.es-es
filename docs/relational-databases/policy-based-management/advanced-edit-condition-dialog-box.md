@@ -1,35 +1,36 @@
 ---
-title: "Cuadro de diálogo Edición avanzada (condición) | Microsoft Docs"
-ms.custom: 
+title: Cuadro de diálogo Edición avanzada (condición) | Microsoft Docs
+ms.custom: ''
 ms.date: 08/12/2016
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine
-ms.service: 
+ms.service: ''
 ms.component: performance-monitor
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 f1_keywords:
 - sql13.swb.dmf.condition.advancededit.f1
 ms.assetid: a0bbe501-78c5-45ad-9087-965d04855663
-caps.latest.revision: 
+caps.latest.revision: 44
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 6f7d494c40e02e96d53f827e9553c743d72660d0
-ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
+ms.openlocfilehash: 34d57610273cd1496c0cfb7be8e79f3ba674d671
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/18/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="advanced-edit-condition-dialog-box"></a>Cuadro de diálogo Edición avanzada (condición)
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] Use el cuadro de diálogo **Edición avanzada** para crear expresiones complejas para las condiciones de administración basada en directivas.  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+  Use el cuadro de diálogo **Advanced Edit** para crear expresiones complejas para las condiciones de administración basada en directivas.  
   
-## <a name="options"></a>.  
+## <a name="options"></a>Opciones  
  **Valor de celda**  
  Muestra la función o expresión que se utilizará para el valor de celda al crearlo. Al hacer clic en **Aceptar**, el valor de celda aparecerá en la celda **Campo** o **Valor** en el cuadro de expresión de condición del cuadro de diálogo **Crear nueva condición** o **Abrir condición** en la página **General** .  
   
@@ -90,15 +91,15 @@ ms.lasthandoff: 01/18/2018
 |**Guid()**|Guid Guid(String *guidString*)|Devuelve un GUID a partir de una cadena.|*guidString* : es la representación de cadena del GUID que se va a crear.|Devuelve el GUID creado a partir de la cadena.|`Guid('12340000-0000-3455-0000-000000000454')`|  
 |**IsNull()**|Variant IsNull (Variant *check_expression*, Variant *replacement_value*)|Se devuelve el valor de *check_expression* si no es NULL; en caso contrario, se devuelve *replacement_value* . Si los tipos son diferentes, *replacement_value* se convierte implícitamente en el tipo de *check_expression*.|*check_expression* : es la expresión que se va a comprobar si es NULL. *check_expression* : puede ser de cualquier tipo compatible de administración basada en directivas: Numeric, String, Bool, DateTime, Array y Guid.<br /><br /> *replacement_value* : es la expresión que se devuelve si *check_expression* es NULL. *replacement_value* debe ser de un tipo que se convierta implícitamente en el tipo de *check_expression*.|Se devuelve el tipo de *check_expression* si *check_expression* no es NULL; de lo contrario, se devuelve el tipo de *replacement_value* .||  
 |**Len()**|Numeric Len (*string_expression*)|Devuelve el número de caracteres de la expresión de cadena dada, excluyendo los espacios en blanco del final.|*string_expression* : es la expresión de cadena que se va a evaluar.|Devuelve un valor de categoría con el tipo de datos integer.|`Len('Hello')` devuelve `5` en este ejemplo.|  
-|**Lower()**|String Lower (String*_expression*)|Devuelve la cadena después de convertir todos los caracteres en mayúscula a minúscula.|*expression* : es la expresión de la cadena de origen.|Devuelve una cadena que representa la expresión de cadena de origen después de haber convertido todos los caracteres en mayúscula a minúscula.|`Len('HeLlO')` devuelve `'hello'` en este ejemplo.|  
+|**Lower()**|String Lower (String *_expression*)|Devuelve la cadena después de convertir todos los caracteres en mayúscula a minúscula.|*expression* : es la expresión de la cadena de origen.|Devuelve una cadena que representa la expresión de cadena de origen después de haber convertido todos los caracteres en mayúscula a minúscula.|`Len('HeLlO')` devuelve `'hello'` en este ejemplo.|  
 |**Mod()**|Numeric Mod (Numeric *expression_dividend*, Numeric *expression_divisor*)|Proporciona el resto entero después de dividir la primera expresión numérica por la segunda expresión numérica.|*expression_dividend* : es la expresión numérica entre la que se va a dividir. *expression_dividend* debe ser una expresión válida de cualquiera de los tipos de datos de las categorías de tipos de datos enteros y numéricos.<br /><br /> *expression_divisor* : es la expresión numérica entre la que se divide el dividendo. *expression_divisor* debe ser una expresión válida de cualquiera de los tipos de datos de las categorías de tipos de datos enteros y numéricos.|Devuelve un valor de categoría con el tipo de datos integer.|`Mod(Property1, 3)`|  
 |**Multiplicar()**|Numeric Multiply (Numeric *expression1*, Numeric *expression2*)|Multiplica dos expresiones.|*expression1* y *expression2* : es cualquier expresión válida de cualquiera de los tipos de datos de la categoría numeric, excepto el tipo de datos **datetime** .|Devuelve el tipo de datos del argumento que tenga mayor prioridad.|`Multiply(Property1, .20)`|  
 |**Potencia()**|Numeric Power (Numeric *numeric_expression*, Numeric *expression_power*)|Devuelve el valor de la expresión especificada elevado a la potencia especificada.|*numeric_expression* : es una expresión de la categoría de tipos de datos numérico exacto o numérico aproximado, excepto para el tipo de datos bit.<br /><br /> *expression_power* : es la potencia a la que se eleva *numeric_expression*. *expression_power* puede ser una expresión de la categoría de tipos de datos numérico exacto o numérico aproximado, excepto para el tipo de datos **bit** .|El tipo devuelto es el mismo de *numeric_expression*.|`Power(Property1, 3)`|  
 |**Redondear()**|Numeric Round (Numeric *expression*, Numeric *expression_precision*)|Devuelve una expresión numérica, redondeada a la longitud o precisión especificada.|*expression* : es una expresión de la categoría de tipos de datos numérico exacto o numérico aproximado, excepto para el tipo de datos **bit** .<br /><br /> *expression_precision* : es la precisión con la que se redondea la expresión. Si *expression_precision* es un número positivo, *numeric_expression* se redondea al número de posiciones decimales especificado por la longitud. Si *expression_precision* es un número negativo, *numeric_expression* se redondea a la izquierda del separador decimal, según lo especificado por *expression_precision*.|Devuelve el mismo tipo que *numeric_expression*.|`Round(5.333, 0)`|  
-|**String()**|String String (Variant*_expression*)|Convierte una variante en una cadena.|*expression* : es la expresión variant que se va a convertir en una cadena.|Devuelve el valor de cadena de la expresión variant.|`String(4)`|  
+|**String()**|String String (Variant *_expression*)|Convierte una variante en una cadena.|*expression* : es la expresión variant que se va a convertir en una cadena.|Devuelve el valor de cadena de la expresión variant.|`String(4)`|  
 |**Sum()**|Numeric Sum (*VarArgs*)|Devuelve la suma de todos los valores de una lista de argumentos. La suma se puede utilizar con valores numéricos.|*VarArgs*: es una lista de expresiones Variant de la categoría de tipo de datos numérico exacto o numérico aproximado, excepto el tipo de datos **bit** .|Devuelve la suma de todos los valores de expresión en el tipo de datos de expresión más preciso.<br /><br /> Si el resultado de la expresión es de la categoría **integer**, **numeric**, **money** o **small money**, o de la categoría **float** o **real** , los tipos devueltos son **int**, **numeric**, **money**y **float**; respectivamente.|`Sum(1.0, 2.0, 3.0, 4.0, 5.0)` devuelve `15` en este ejemplo.|  
 |**True()**|Bool TRUE()|Devuelve el valor booleano TRUE.||Devuelve el valor booleano TRUE.|`IsDatabaseMailEnabled = True()`|  
-|**Upper()**|String Upper (String*_expression*)|Devuelve la cadena después de convertir todos los caracteres en minúscula a mayúscula.|*expression* : es la expresión de la cadena de origen.|Devuelve una cadena que representa la expresión de cadena de origen después de convertir todos los caracteres en minúscula a mayúscula.|`Upper('HeLlO')` devuelve `'HELLO'` en este ejemplo.|  
+|**Upper()**|String Upper (String *_expression*)|Devuelve la cadena después de convertir todos los caracteres en minúscula a mayúscula.|*expression* : es la expresión de la cadena de origen.|Devuelve una cadena que representa la expresión de cadena de origen después de convertir todos los caracteres en minúscula a mayúscula.|`Upper('HeLlO')` devuelve `'HELLO'` en este ejemplo.|  
   
 ## <a name="see-also"></a>Vea también  
  [Cuadro de diálogo Crear nueva condición o Abrir condición, página General](../../relational-databases/policy-based-management/create-new-condition-or-open-condition-dialog-box-general-page.md)   

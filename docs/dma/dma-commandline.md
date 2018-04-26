@@ -2,7 +2,7 @@
 title: Ejecutar desde la línea de comandos (SQL Server datos Migration Assistant) | Documentos de Microsoft
 ms.custom: ''
 ms.date: 09/01/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: dma
 ms.service: ''
 ms.component: ''
@@ -21,11 +21,11 @@ author: HJToland3
 ms.author: jtoland
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 6147d01802a363082baf27d6b909e2c98f9afef2
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: 0bf0437354f90a03f1d1cf68be074df3f4234676
+ms.sourcegitcommit: a85a46312acf8b5a59a8a900310cf088369c4150
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="run-data-migration-assistant-from-the-command-line"></a>Ejecutar el Asistente de migración de datos desde la línea de comandos
 Con la versión 2.1 y versiones posteriores, cuando instale el Asistente de migración de datos, también se instalará dmacmd.exe en *% ProgramFiles %\\el Asistente para la migración de datos de Microsoft\\*. Use dmacmd.exe para evaluar las bases de datos en modo desatendido y generar el resultado al archivo JSON o CSV. Esto es especialmente útil al evaluar varias bases de datos o bases de datos muy grandes. 

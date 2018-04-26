@@ -2,7 +2,7 @@
 title: Migración de inicios de sesión de SQL Server (Asistente de migración de datos) | Documentos de Microsoft
 ms.custom: ''
 ms.date: 08/31/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: dma
 ms.service: ''
 ms.component: ''
@@ -21,11 +21,11 @@ author: HJToland3
 ms.author: jtoland
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 5d3347eb2aff8e14c3938880dde6fe1879eb910d
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: 45836159a2708166dc367c73a03f33d75eabe850
+ms.sourcegitcommit: a85a46312acf8b5a59a8a900310cf088369c4150
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="migrating-sql-server-logins-using-data-migration-assistant"></a>Migrar los inicios de sesión de SQL Server mediante el Asistente de migración de datos
 

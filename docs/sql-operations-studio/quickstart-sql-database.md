@@ -1,9 +1,9 @@
-﻿---
-title: "Inicio rápido: Conectarse y consultar una base de datos de SQL Azure con SQL Operations Studio (versión preliminar) | Documentos de Microsoft"
-description: "Este tutorial rápido muestra cómo utilizar SQL Operations Studio (versión preliminar) para conectarse a una base de datos SQL y ejecutar una consulta"
+---
+title: 'Inicio rápido: Conectarse y consultar una base de datos de SQL Azure con SQL Operations Studio (versión preliminar) | Documentos de Microsoft'
+description: Este tutorial rápido muestra cómo utilizar SQL Operations Studio (versión preliminar) para conectarse a una base de datos SQL y ejecutar una consulta
 ms.custom: tools|sos
 ms.date: 03/08/2018
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.reviewer: alayu; erickang; sstein
 ms.suite: sql
 ms.prod_service: sql-tools
@@ -14,11 +14,11 @@ author: yualan
 ms.author: alayu
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 82fbe7376d762940815c7739311e69672b7fbff6
-ms.sourcegitcommit: 6c06267f3eeeb3f0d6fc4c57e1387621720ca8bf
+ms.openlocfilehash: 5ecee0879282a31f08fb98bceb0241a5faf0ca2f
+ms.sourcegitcommit: a85a46312acf8b5a59a8a900310cf088369c4150
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/09/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="quickstart-use-includename-sosincludesname-sos-shortmd-to-connect-and-query-azure-sql-database"></a>Inicio rápido: Usar [!INCLUDE[name-sos](../includes/name-sos-short.md)] para conectarse y consultar la base de datos SQL de Azure
 
@@ -59,7 +59,7 @@ Use [!INCLUDE[name-sos](../includes/name-sos-short.md)] para establecer una cone
 
    ![Nuevo icono de conexión](media/quickstart-sql-database/new-connection-screen.png)  
 
-3. Si el servidor no tiene una regla de firewall que permita las SQL Operations Studio para conectarse, el **crear nueva regla de firewall** se abrirá el formulario. Complete el formulario para crear una nueva regla de firewall. Para obtener más información, consulte [las reglas de Firewall](https://docs.microsoft.com/azure/sql-database/sql-database-firewall-configure).
+3. Si el servidor no tiene una regla de firewall que permita las operaciones de SQL Studio para conectarse, el **crear nueva regla de firewall** se abrirá el formulario. Complete el formulario para crear una nueva regla de firewall. Para obtener más información, consulte [las reglas de Firewall](https://docs.microsoft.com/azure/sql-database/sql-database-firewall-configure).
 
    ![Nueva regla de firewall](media/quickstart-sql-database/firewall.png)  
 

@@ -1,24 +1,24 @@
 ---
-title: "Implementar un clúster marcapasos para SQL Server en Linux | Documentos de Microsoft"
-description: "Este tutorial muestra cómo implementar un clúster marcapasos para SQL Server en Linux."
+title: Implementar un clúster marcapasos para SQL Server en Linux | Documentos de Microsoft
+description: Este tutorial muestra cómo implementar un clúster marcapasos para SQL Server en Linux.
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.date: 12/11/2017
 ms.topic: article
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine
-ms.service: 
-ms.component: 
+ms.service: ''
+ms.component: ''
 ms.suite: sql
 ms.custom: sql-linux
 ms.technology: database-engine
 ms.workload: On Demand
-ms.openlocfilehash: 303629364a954fec1328d571ec3b6f3df57b6527
-ms.sourcegitcommit: f02598eb8665a9c2dc01991c36f27943701fdd2d
+ms.openlocfilehash: 10560a49c334f1b65800fb9a21ce4f0116a42536
+ms.sourcegitcommit: a85a46312acf8b5a59a8a900310cf088369c4150
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/13/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="deploy-a-pacemaker-cluster-for-sql-server-on-linux"></a>Implementar un clúster marcapasos para SQL Server en Linux
 
@@ -151,7 +151,7 @@ Configuración Ubuntu es similar a RHEL. Sin embargo, hay una diferencia importa
    
 2. Siga los pasos descritos en la sección RHEL para crear el clúster marcapasos.
 
-**SLES**
+**SLES GRANDE**
 
 El proceso para crear un clúster marcapasos es completamente diferente en SLES en RHEL y Ubuntu. Cómo crear un clúster con SLES de documentos de los pasos siguientes.
 1. Inicie el proceso de configuración de clúster mediante la ejecución 
@@ -219,7 +219,7 @@ sudo apt-get install mssql-server-ha mssql-server-agent
 sudo systemctl restart mssql-server
 ```
 
-**SLES**
+**SLES GRANDE**
 
 ```bash
 sudo zypper install mssql-server-ha mssql-server-agent

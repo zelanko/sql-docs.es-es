@@ -1,16 +1,16 @@
 ---
-title: "Especificar ejes en un paso de expresión de ruta de acceso | Documentos de Microsoft"
-ms.custom: 
+title: Especificar ejes en un paso de expresión de ruta de acceso | Documentos de Microsoft
+ms.custom: ''
 ms.date: 03/17/2017
-ms.prod: sql-non-specified
-ms.prod_service: sql-non-specified
-ms.service: 
+ms.prod: sql
+ms.prod_service: sql
+ms.service: ''
 ms.component: xquery
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 applies_to:
 - SQL Server
@@ -26,16 +26,16 @@ helpviewer_keywords:
 - descendant-or-self axis
 - parent axis
 ms.assetid: c44fb843-0626-4496-bde0-52ca0bac0a9e
-caps.latest.revision: 
+caps.latest.revision: 30
 author: rothja
 ms.author: jroth
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 44ae49e51ac3fab0ca4b2cd8363601a14a3edf0b
-ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
+ms.openlocfilehash: cf4ee579274a503d72a0774ec08cd4adb0a4a6ee
+ms.sourcegitcommit: a85a46312acf8b5a59a8a900310cf088369c4150
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/09/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="path-expressions---specifying-axis"></a>Expresiones de ruta de acceso: especificación de eje
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
@@ -48,17 +48,17 @@ ms.lasthandoff: 02/09/2018
   
 -   [Cero o más calificadores de paso (opcionales)](../xquery/path-expressions-specifying-predicates.md)  
   
- Para obtener más información, vea [expresiones de ruta de acceso &#40; XQuery &#41; ](../xquery/path-expressions-xquery.md).  
+ Para obtener más información, consulte [expresiones de ruta de acceso &#40;XQuery&#41;](../xquery/path-expressions-xquery.md).  
   
  La implementación de XQuery en [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] admite los pasos de eje siguientes:  
   
 |Eje|Description|  
 |----------|-----------------|  
-|**child**|Devuelve elementos secundarios del nodo de contexto.|  
-|**descendant**|Devuelve todos los descendientes del nodo de contexto.|  
+|**Elemento secundario**|Devuelve elementos secundarios del nodo de contexto.|  
+|**descendiente**|Devuelve todos los descendientes del nodo de contexto.|  
 |**parent**|Devuelve el elemento primario del nodo de contexto.|  
-|**attribute**|Devuelve atributos del nodo de contexto.|  
-|**self**|Devuelve el propio nodo de contexto.|  
+|**Atributo**|Devuelve atributos del nodo de contexto.|  
+|**En sí mismo**|Devuelve el propio nodo de contexto.|  
 |**descendant-or-self**|Devuelve el nodo de contexto y todos los descendientes del mismo.|  
   
  Todos estos ejes, excepto el **primario** eje, son ejes directos. El **primario** eje es un eje inverso, pues realiza búsquedas hacia atrás en la jerarquía del documento. Por ejemplo, la expresión de ruta de acceso relativa `child::ProductDescription/child::Summary` tiene dos pasos, y cada uno especifica un eje `child`. El primer paso recupera los \<ProductDescription > elementos secundarios del nodo de contexto. Para cada \<ProductDescription > nodo de elemento, el segundo paso recupera los \<resumen > elementos secundarios del nodo de elemento.  
@@ -195,7 +195,7 @@ WHERE  ProductModelID=19
 </ProductDescription>  
 ```  
   
- La consulta establece una variable de iteración, `$f`, en la instrucción FLWOR para devolver el elemento secundario del elemento `<Features>`. Para obtener más información, vea [instrucción FLWOR e iteración &#40; XQuery &#41; ](../xquery/flwor-statement-and-iteration-xquery.md). Por cada característica, la cláusula `return` construye un XML de la forma siguiente:  
+ La consulta establece una variable de iteración, `$f`, en la instrucción FLWOR para devolver el elemento secundario del elemento `<Features>`. Para obtener más información, consulte [FLWOR instrucción e iteración &#40;XQuery&#41;](../xquery/flwor-statement-and-iteration-xquery.md). Por cada característica, la cláusula `return` construye un XML de la forma siguiente:  
   
 ```  
 <Feature ProductModelID="...">...</Feature>  

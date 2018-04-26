@@ -1,7 +1,7 @@
 ---
 title: Catálogo de base de datos OLTP WideWorldImporters - SQL | Documentos de Microsoft
-ms.prod: sql-non-specified
-ms.prod_service: sql-non-specified
+ms.prod: sql
+ms.prod_service: sql
 ms.service: ''
 ms.component: samples
 ms.technology:
@@ -17,11 +17,11 @@ ms.author: barbkess
 manager: craigg
 robots: noindex,nofollow
 ms.workload: On Demand
-ms.openlocfilehash: 9f4cabeaa5dafe2de26d760b1c03377ba10c2890
-ms.sourcegitcommit: d6b1695c8cbc70279b7d85ec4dfb66a4271cdb10
+ms.openlocfilehash: d7240025e36f64ac6a11194d81ba563d4e7c49b0
+ms.sourcegitcommit: a85a46312acf8b5a59a8a900310cf088369c4150
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/08/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="wideworldimporters-database-catalog"></a>Catálogo de base de datos WideWorldImporters
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -185,7 +185,7 @@ Se trata de los procedimientos empleados en una aplicación de cliente, como un 
 
 Los procedimientos almacenados en este esquema se utilizan el proceso ETL. Obtienen los datos necesarios de varias tablas para el período de tiempo necesario para la [paquete ETL](wide-world-importers-perform-etl.md).
 
-### <a name="dataloadsimulation-schema"></a>DataLoadSimulation Schema
+### <a name="dataloadsimulation-schema"></a>Esquema de DataLoadSimulation
 
 Simula una carga de trabajo que inserta las compras y ventas. El procedimiento almacenado principal es `PopulateDataToCurrentDate`, que se utiliza para insertar datos de ejemplo hasta la fecha actual.
 

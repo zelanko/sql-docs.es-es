@@ -1,16 +1,16 @@
 ---
 title: Expresiones de ruta de acceso (XQuery) | Documentos de Microsoft
-ms.custom: 
+ms.custom: ''
 ms.date: 03/17/2017
-ms.prod: sql-non-specified
-ms.prod_service: sql-non-specified
-ms.service: 
+ms.prod: sql
+ms.prod_service: sql
+ms.service: ''
 ms.component: xquery
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 applies_to:
 - SQL Server
@@ -21,16 +21,16 @@ helpviewer_keywords:
 - path expressions [XQuery]
 - expressions [XQuery], path
 ms.assetid: b93fa36c-bf69-46b9-b137-f597d66fd0c0
-caps.latest.revision: 
+caps.latest.revision: 27
 author: rothja
 ms.author: jroth
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: e47b66d37e7b43f2921d8d6edf626a6b9178b7e8
-ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
+ms.openlocfilehash: 11a2f9d6d2189bbb20708497b25dcb87484891f6
+ms.sourcegitcommit: a85a46312acf8b5a59a8a900310cf088369c4150
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/09/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="path-expressions-xquery"></a>Expresiones de ruta de acceso (XQuery)
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
@@ -59,10 +59,10 @@ ms.lasthandoff: 02/09/2018
 ## <a name="axis-step"></a>Paso de eje  
  Un paso de eje en una expresión de ruta de acceso está formado por las partes que se indican a continuación.  
   
- [axis](../xquery/path-expressions-specifying-axis.md)  
+ [eje](../xquery/path-expressions-specifying-axis.md)  
  Define la dirección del movimiento. Se trata de un paso de eje de una expresión de ruta de acceso que empieza en el nodo de contexto y se navega hasta los nodos disponibles en la dirección especificada por el eje.  
   
- [prueba de nodo](../xquery/path-expressions-specifying-node-test.md)  
+ [Prueba de nodo](../xquery/path-expressions-specifying-node-test.md)  
  Especifica el tipo de nodo o los nombres de nodo que se seleccionarán.  
   
  Cero o más predicados opcionales  
@@ -88,7 +88,7 @@ ms.lasthandoff: 02/09/2018
 id(/a/b)  
 ```  
   
- Para obtener más información acerca de la función Id., vea [Id. de función &#40; XQuery &#41; ](../xquery/functions-on-sequences-id.md).  
+ Para obtener más información acerca de la función Id., vea [Id. de función &#40;XQuery&#41;](../xquery/functions-on-sequences-id.md).  
   
 ## <a name="in-this-section"></a>En esta sección  
  [Especificar ejes en un paso de expresión de ruta de acceso](../xquery/path-expressions-specifying-axis.md)  

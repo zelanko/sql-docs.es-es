@@ -1,25 +1,25 @@
 ---
 title: Administrar SQL Server en Linux con PowerShell | Documentos de Microsoft
-description: "Este artículo proporciona información general sobre cómo usar PowerShell en Windows con SQL Server en Linux."
+description: Este artículo proporciona información general sobre cómo usar PowerShell en Windows con SQL Server en Linux.
 author: rothja
 ms.author: jroth
 manager: craigg
 ms.date: 10/02/2017
 ms.topic: article
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine
-ms.service: 
-ms.component: 
+ms.service: ''
+ms.component: ''
 ms.suite: sql
 ms.custom: sql-linux
 ms.technology: database-engine
 ms.assetid: a3492ce1-5d55-4505-983c-d6da8d1a94ad
 ms.workload: Inactive
-ms.openlocfilehash: f7324a270323950444741cfe713ad0eb5f01aa10
-ms.sourcegitcommit: f02598eb8665a9c2dc01991c36f27943701fdd2d
+ms.openlocfilehash: 8869f87ec6e69844155a2bf0361a90e07b30de24
+ms.sourcegitcommit: a85a46312acf8b5a59a8a900310cf088369c4150
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/13/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="use-powershell-on-windows-to-manage-sql-server-on-linux"></a>Usar PowerShell en Windows para administrar SQL Server en Linux
 
@@ -76,7 +76,7 @@ Copie y pegue los siguientes comandos en el símbolo del sistema de PowerShell. 
 - Cree una instancia de la [Server](https://msdn.microsoft.com/en-us/library/microsoft.sqlserver.management.smo.server.aspx) objeto
 - Conectarse a la **Server** y mostrar una serie de propiedades
 
-No olvide reemplazar  **\<your_server_instance\>**  con la dirección IP o el nombre de host de la instancia de SQL Server 2017 en Linux.
+No olvide reemplazar **\<your_server_instance\>** con la dirección IP o el nombre de host de la instancia de SQL Server 2017 en Linux.
 
 ```powershell
 # Prompt for credentials to login into SQL Server
@@ -116,7 +116,7 @@ Copie y pegue los siguientes comandos en el símbolo del sistema de PowerShell. 
 - Use la **Get SqlErrorLog** para conectarse a la instancia de SQL Server 2017 en Linux y recuperar el error se registra desde **ayer**
 - Canalizar la salida del **Out-GridView** cmdlet
 
-No olvide reemplazar  **\<your_server_instance\>**  con la dirección IP o el nombre de host de la instancia de SQL Server 2017 en Linux.
+No olvide reemplazar **\<your_server_instance\>** con la dirección IP o el nombre de host de la instancia de SQL Server 2017 en Linux.
 
 ```powershell
 # Prompt for credentials to login into SQL Server

@@ -1,37 +1,38 @@
 ---
-title: "Configuración de copias de seguridad de trasvase de registros de transacciones | Microsoft Docs"
-ms.custom: 
+title: Configuración de copias de seguridad de trasvase de registros de transacciones | Microsoft Docs
+ms.custom: ''
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine
-ms.service: 
+ms.service: ''
 ms.component: log-shipping
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 f1_keywords:
 - sql13.swb.databaseproperties.logshipping.settings.tlogback.f1
 ms.assetid: 9a6e6c16-7f71-412b-bba6-7bffac001277
-caps.latest.revision: 
+caps.latest.revision: 27
 author: stevestein
 ms.author: sstein
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 01a15e3ebf54cae459aad00052e009774d125c56
-ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
+ms.openlocfilehash: d9deb810c671861087452f737891900042855e4a
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/18/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="log-shipping-transaction-log-backup-settings"></a>Configuración de copias de seguridad de trasvase de registros de transacciones
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] Utilice este cuadro de diálogo para configurar y modificar los parámetros de copia de seguridad de registros de transacciones para una configuración de trasvase de registros.  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+  Utilice este cuadro de diálogo para configurar y modificar los parámetros de copia de seguridad de registros de transacciones para una configuración de trasvase de registros.  
   
  Para obtener una explicación de los conceptos relacionados con el trasvase de registros, vea [Acerca del trasvase de registros &#40;SQL Server&#41;](../../database-engine/log-shipping/about-log-shipping-sql-server.md).  
   
-## <a name="options"></a>.  
+## <a name="options"></a>Opciones  
  **Ruta de red a esta carpeta de copia de seguridad**  
  Escriba en este cuadro el recurso compartido de red para la carpeta de copia de seguridad. La carpeta local donde se guardan las copias de seguridad de registros de transacciones deben estar compartidas, de forma que los trabajos de copia del trasvase de registros puedan copiar estos archivos en el servidor secundario. Debe conceder permisos de lectura para este recurso compartido de red a la cuenta de proxy con la que se ejecuta el trabajo de copia en la instancia del servidor secundario. De forma predeterminada, ésta es la cuenta de servicio SQLServerAgent de la instancia del servidor secundario; el administrador puede elegir otra cuenta de proxy para el trabajo.  
   

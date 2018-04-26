@@ -1,30 +1,30 @@
 ---
-title: "Restaurar la base de datos (página General) | Microsoft Docs"
-ms.custom: 
+title: Restaurar la base de datos (página General) | Microsoft Docs
+ms.custom: ''
 ms.date: 07/01/2016
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine
-ms.service: 
+ms.service: ''
 ms.component: backup-restore
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - dbe-backup-restore
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 f1_keywords:
 - sql13.swb.restoredb.general.f1
 ms.assetid: 160cf58c-b06a-475f-9a69-2b051e5767ab
-caps.latest.revision: 
+caps.latest.revision: 89
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: db20fb80e64e3ffecee629dd5fc9310755ff58b0
-ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
+ms.openlocfilehash: 8fa9f76292c05a5c2b7ea75e9dcf4d37d5dc142c
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/18/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="restore-database-general-page"></a>Restaurar la base de datos (página General)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -45,7 +45,7 @@ ms.lasthandoff: 01/18/2018
   
  La restauración de una copia de seguridad cifrada requiere permisos **VIEW DEFINITION** al certificado o a la clave asimétrica que se usó para el cifrado durante la copia de seguridad.  
   
-## <a name="options"></a>.  
+## <a name="options"></a>Opciones  
   
 ### <a name="source"></a>Source  
  Las opciones del panel **Restore from**(Restaurar desde) identifican la ubicación de los conjuntos de copia de seguridad para la base de datos y los conjuntos de copia de seguridad que quiere restaurar.  

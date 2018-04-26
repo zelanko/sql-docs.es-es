@@ -1,16 +1,16 @@
 ---
 title: Extraer una DAC de una base de datos | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 07/18/2016
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine
-ms.service: 
+ms.service: ''
 ms.component: data-tier-applications
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - dbe-data-tier-apps
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 f1_keywords:
 - sql13.swb.extractdacwizard.validationandsummary.f1
@@ -24,19 +24,20 @@ helpviewer_keywords:
 - data-tier application [SQL Server], extract
 - wizard [DAC], extract
 ms.assetid: ae52a723-91c4-43fd-bcc7-f8de1d1f90e5
-caps.latest.revision: 
+caps.latest.revision: 21
 author: stevestein
 ms.author: sstein
 manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 510eb23505fde879a82d3ded7282cabd410cacaf
-ms.sourcegitcommit: b6116b434d737d661c09b78d0f798c652cf149f3
+ms.openlocfilehash: 35745b0b3e167a34ceb73f8e7cee7f9af7d8d3d6
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/17/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="extract-a-dac-from-a-database"></a>Extraer una DAC de una base de datos
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] Use el **Asistente para extraer aplicación de capa de datos** o un script de Windows PowerShell para extraer un paquete de aplicación de capa de datos (DAC) de una base de datos de SQL Server existente. El proceso de extracción crea un archivo de paquete DAC que contiene definiciones de los objetos de base de datos y sus elementos relacionados a nivel de instancia. Por ejemplo, un archivo de paquete DAC contiene las tablas de base de datos, procedimientos almacenados, vistas y usuarios, junto con los inicios de sesión que se asignan a los usuarios de la base de datos.  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+  Use el **Asistente para extraer aplicación de capa de datos** o un script de Windows PowerShell para extraer un paquete de aplicación de capa de datos (DAC) de una base de datos de SQL Server existente. El proceso de extracción crea un archivo de paquete DAC que contiene definiciones de los objetos de base de datos y sus elementos relacionados a nivel de instancia. Por ejemplo, un archivo de paquete DAC contiene las tablas de base de datos, procedimientos almacenados, vistas y usuarios, junto con los inicios de sesión que se asignan a los usuarios de la base de datos.  
   
  
 ## <a name="before-you-begin"></a>Antes de comenzar  
@@ -105,7 +106,7 @@ Seleccione los datos de referencia que quiera incluir en el archivo de paquete d
 ###  <a name="ValidateSummary"></a> Validation and summary page  
  En esta página, el asistente valida que una aplicación de capa de datos (DAC) admite todos los objetos de base de datos. También comprueba las dependencias entre los objetos de base de datos para determinar el conjunto de objetos que se pueden incluir correctamente en la DAC. Tras ello, muestra el informe de validación y resume las opciones que ha seleccionado en este asistente. Para cambiar una opción, haga clic en **Anterior**. Para empezar a extraer una DAC, haga clic en **Siguiente**.  
   
-> **NOTA:**Si una DAC no admite uno o varios objetos, el botón **Siguiente** está deshabilitado y el proceso de extracción no puede continuar. En estos casos, se recomienda quitar los objetos no admitidos y volver a ejecutar este asistente.  
+> **NOTA:** Si una DAC no admite uno o varios objetos, el botón **Siguiente** está deshabilitado y el proceso de extracción no puede continuar. En estos casos, se recomienda quitar los objetos no admitidos y volver a ejecutar este asistente.  
   
  **Resumen:** un resumen de las opciones que ha seleccionado aparecen en **Propiedades de DAC**. Los resultados de la validación se enumeran en **Objetos de DAC**. La validación produce tres tipos de resultados:  
   

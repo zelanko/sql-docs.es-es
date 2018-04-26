@@ -1,34 +1,35 @@
 ---
 title: CursorImplicitConversion, clase de eventos | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine, sql-database
-ms.service: 
+ms.service: ''
 ms.component: event-classes
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - CursorImplicitConversion event class
 ms.assetid: 44d12e23-146a-42e6-bb38-1f2f6a035bad
-caps.latest.revision: 
+caps.latest.revision: 34
 author: stevestein
 ms.author: sstein
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 62c9ff7500944f749523a2aa42f01d8106bf54d5
-ms.sourcegitcommit: 37f0b59e648251be673389fa486b0a984ce22c81
+monikerRange: = azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions
+ms.openlocfilehash: d7e3f4bb563b1386392b5dd8892eb22bf000a0c0
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/12/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="cursorimplicitconversion-event-class"></a>CursorImplicitConversion, clase de eventos
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
-La clase de eventos **CursorImplicitConversion** describe los eventos de conversión implícita de cursor que se producen en los cursores de las API (interfaces de programación de aplicaciones) o de [!INCLUDE[tsql](../../includes/tsql-md.md)] . Los eventos de conversión implícita de cursor se producen cuando [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] ejecuta una instrucción Transact-SQL no compatible con los cursores de servidor del tipo solicitado. El [!INCLUDE[ssDE](../../includes/ssde-md.md)] devuelve un error que indica que el tipo de cursor ha cambiado.  
+  La clase de eventos **CursorImplicitConversion** describe los eventos de conversión implícita de cursor que se producen en los cursores de las API (interfaces de programación de aplicaciones) o de [!INCLUDE[tsql](../../includes/tsql-md.md)] . Los eventos de conversión implícita de cursor se producen cuando [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] ejecuta una instrucción Transact-SQL no compatible con los cursores de servidor del tipo solicitado. El [!INCLUDE[ssDE](../../includes/ssde-md.md)] devuelve un error que indica que el tipo de cursor ha cambiado.  
   
  Incluya la clase de evento **CursorImplicitConversion** en seguimientos que están registrando el rendimiento de cursores.  
   

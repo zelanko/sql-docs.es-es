@@ -1,34 +1,35 @@
 ---
 title: Exchange Spill (clase de eventos) | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine, sql-database
-ms.service: 
+ms.service: ''
 ms.component: event-classes
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - Exchange Spill event class
 ms.assetid: fb876cec-f88d-4975-b3fd-0fb85dc0a7ff
-caps.latest.revision: 
+caps.latest.revision: 30
 author: stevestein
 ms.author: sstein
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 542f3a89a81184fe78375fb987f6d7ceb9f7281f
-ms.sourcegitcommit: 37f0b59e648251be673389fa486b0a984ce22c81
+monikerRange: = azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions
+ms.openlocfilehash: 6e9b8847a3bbbbeb85a3b27d8bd225eb8eb96bb2
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/12/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="exchange-spill-event-class"></a>Exchange Spill, clase de eventos
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
-La clase de evento **Exchange Spill** indica que los búferes de comunicación de un plan de consulta paralelo se han escrito de forma temporal en la base de datos **tempdb** . Esto sucede raramente y solo cuando un plan de consulta tiene múltiples recorridos de intervalo.  
+  La clase de evento **Exchange Spill** indica que los búferes de comunicación de un plan de consulta paralelo se han escrito de forma temporal en la base de datos **tempdb** . Esto sucede raramente y solo cuando un plan de consulta tiene múltiples recorridos de intervalo.  
   
  Normalmente, la consulta [!INCLUDE[tsql](../../includes/tsql-md.md)] que genera tales recorridos de intervalo tiene muchos operadores BETWEEN, cada uno de los cuales selecciona un intervalo de filas de una tabla o un índice. Como alternativa, puede obtener múltiples intervalos mediante expresiones como (T.a > 10 AND T.a < 20) OR (T.a > 100 AND T.a < 120). Además, los planes de consulta deben requerir que estos intervalos se recorran en orden, bien porque hay una cláusula ORDER BY en T.a, o bien porque un iterador del plan requiere que éste consuma las tuplas en orden.  
   

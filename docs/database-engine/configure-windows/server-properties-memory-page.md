@@ -2,7 +2,7 @@
 title: Propiedades del servidor (página Memoria) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/08/2016
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine
 ms.service: ''
 ms.component: configure-windows
@@ -20,18 +20,19 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 57a2f7e2b4f0a75cf212d79284b85c00eda92d81
-ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
+ms.openlocfilehash: a614fb49bb9e346d97b3c573d03e8911db53f2f3
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/18/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="server-properties---memory-page"></a>Propiedades del servidor (página Memoria)
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] Utilice esta página para ver o modificar las opciones de memoria del servidor. Cuando **Cantidad mínima de memoria del servidor** está establecida en 0 y **Cantidad máxima de memoria del servidor** está establecida en 2147483647 MB, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] puede aprovechar la cantidad óptima de memoria en un momento dado, dependiendo de la cantidad de memoria que utilicen en ese momento el sistema operativo y otras aplicaciones. Al cambiar la carga del equipo y de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , también cambia la memoria asignada. Puede limitar aún más esta asignación de memoria dinámica a los valores máximos y mínimos que se especifican a continuación.  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+  Utilice esta página para ver o modificar las opciones de memoria del servidor. Cuando **Cantidad mínima de memoria del servidor** está establecida en 0 y **Cantidad máxima de memoria del servidor** está establecida en 2147483647 MB, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] puede aprovechar la cantidad óptima de memoria en un momento dado, dependiendo de la cantidad de memoria que utilicen en ese momento el sistema operativo y otras aplicaciones. Al cambiar la carga del equipo y de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , también cambia la memoria asignada. Puede limitar aún más esta asignación de memoria dinámica a los valores máximos y mínimos que se especifican a continuación.  
   
-## <a name="options"></a>.  
+## <a name="options"></a>Opciones  
  **Cantidad mínima de memoria del servidor (en MB)**  
- Especifica que [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] debe empezar, al menos, con la cantidad mínima de memoria asignada y no debe liberar memoria por debajo de este valor. Establezca este valor basándose en el tamaño y la actividad de la instancia de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Establezca siempre la opción en un valor razonable para asegurarse de que el sistema operativo no requiere demasiada memoria de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] y no inhibe el rendimiento de Windows.  
+ Especifica que [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] debe empezar, al menos, con la cantidad mínima de memoria asignada y no debe liberar memoria por debajo de este valor. Establezca este valor basándose en el tamaño y la actividad de la instancia de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Establezca siempre la opción en un valor razonable para asegurarse de que el sistema operativo no requiere demasiada memoria de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] y no impide el rendimiento de Windows.  
   
  **Cantidad máxima de memoria del servidor (en MB)**  
  Especifica la cantidad máxima de memoria que [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] puede asignar cuando se inicia y mientras se ejecuta. Puede establecer esta opción de configuración como un valor específico si sabe que se ejecutan varias aplicaciones al mismo tiempo que [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] y desea que estas aplicaciones tengan memoria suficiente para ejecutarse. Si estas otras aplicaciones, por ejemplo, los servidores web o de correo electrónico, solo solicitan memoria cuando la necesitan, no establezca la opción, ya que [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] suministrará memoria cuando sea necesario. Sin embargo, a menudo las aplicaciones utilizan la memoria disponible cuando se inician y no solicitan más aunque sea necesario. Si una aplicación con este comportamiento se ejecuta en el mismo equipo que [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]simultáneamente, establezca la opción con un valor que garantice que la memoria que requiere la aplicación no está asignada por [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. La cantidad de memoria mínima que puede especificar para **max server memory** es 128 MB. (64 megabytes (MB) para sistemas de 32 bits anteriores).  

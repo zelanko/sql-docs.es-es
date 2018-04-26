@@ -2,7 +2,7 @@
 title: Propiedades del servidor (página Configuración de base de datos) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine
 ms.service: ''
 ms.component: configure-windows
@@ -20,16 +20,17 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 6219f83025b6e2fdaceaa36958582f6c7ba73544
-ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
+ms.openlocfilehash: 669088b678c04de730f83ebf8de59d10751cd676
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/18/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="server-properties---database-settings-page"></a>Propiedades del servidor (página Configuración de base de datos)
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] Utilice esta página para ver o modificar la configuración de la base de datos.  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+  Utilice esta página para ver o modificar la configuración de la base de datos.  
   
-## <a name="options"></a>.  
+## <a name="options"></a>Opciones  
  **Factor predeterminado de relleno de índices**  
  Especifica cuánto se debe llenar cada página de índice de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] cuando se crea un nuevo índice con los datos existentes. El factor de relleno influye en el rendimiento, ya que [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] debe dedicar tiempo a dividir las páginas cuando se rellenan.  
   

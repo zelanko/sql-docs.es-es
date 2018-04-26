@@ -1,16 +1,16 @@
 ---
 title: Gravedad de los errores del Motor de base de datos | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 03/16/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine
-ms.service: 
+ms.service: ''
 ms.component: errors-events
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - user-defined error messages [SQL Server]
@@ -19,24 +19,25 @@ helpviewer_keywords:
 - errors [SQL Server], severity
 - TRY...CATCH [SQL Server]
 ms.assetid: 3e7f5925-6edd-42e1-bf17-f7deb03993a7
-caps.latest.revision: 
+caps.latest.revision: 21
 author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: a399c817aef67a59ef9a4e7edff00391a9173b88
-ms.sourcegitcommit: 45e4efb7aa828578fe9eb7743a1a3526da719555
+ms.openlocfilehash: f48f4b4b774538f9ca388e8a8fbaf1e0f9b1aded
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="database-engine-error-severities"></a>Niveles de gravedad de error del motor de base de datos
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] Cuando [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] muestra un error, la gravedad del mismo indica el tipo de problema detectado por [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+  Cuando el [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]muestra un error, la gravedad del error indica el tipo de problema detectado por [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
 ## <a name="levels-of-severity"></a>Niveles de gravedad  
  En la siguiente tabla se enumeran y describen los niveles de gravedad de los errores mostrados por el [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)].  
   
-|Nivel de gravedad|Descripción|  
+|Nivel de gravedad|Description|  
 |--------------------|-----------------|  
 |0-9|Mensajes informativos que devuelven información de estado o informan sobre errores que no son graves. El [!INCLUDE[ssDE](../../includes/ssde-md.md)] no muestra errores del sistema con gravedades de 0 a 9.|  
 |10|Mensajes informativos que devuelven información de estado o informan sobre errores que no son graves. Por razones de compatibilidad, el [!INCLUDE[ssDE](../../includes/ssde-md.md)] convierte la gravedad 10 en gravedad 0 antes de devolver la información de errores a la aplicación que hace la llamada.|  
@@ -75,7 +76,7 @@ ms.lasthandoff: 11/21/2017
 ## <a name="retrieving-error-severity"></a>recuperar la gravedad del error  
  La función del sistema ERROR_SEVERITY se puede utilizar para recuperar la gravedad del error que provocó la ejecución del bloque CATCH de un constructor TRY…CATCH. Si se le llama fuera del ámbito de un bloque CATCH, ERROR_SEVERITY devuelve el valor NULL. Para obtener más información, vea [ERROR_SEVERITY &#40;Transact-SQL&#41;](../../t-sql/functions/error-severity-transact-sql.md).  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Ver también  
  [Descripción de errores del motor de base de datos](../../relational-databases/errors-events/understanding-database-engine-errors.md)   
  [sys.messages &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/messages-for-errors-catalog-views-sys-messages.md)   
  [Funciones del sistema &#40;Transact-SQL&#41;](../../relational-databases/system-functions/system-functions-for-transact-sql.md)   

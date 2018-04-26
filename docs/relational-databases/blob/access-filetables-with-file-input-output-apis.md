@@ -1,34 +1,34 @@
 ---
 title: Obtener acceso a FileTables con API de entrada-salida de archivo | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 08/25/2016
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine
-ms.service: 
+ms.service: ''
 ms.component: blob
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - dbe-blob
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - FileTables [SQL Server], accessing files with file APIs
 ms.assetid: fa504c5a-f131-4781-9a90-46e6c2de27bb
-caps.latest.revision: 
+caps.latest.revision: 16
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: f482eb2ff361f6c923076093ceb22ab873f0ce8f
-ms.sourcegitcommit: f02598eb8665a9c2dc01991c36f27943701fdd2d
+ms.openlocfilehash: d03a42d802d5e1da9b699f4edb3e6e40529d77b7
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/13/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="access-filetables-with-file-input-output-apis"></a>Obtener acceso a FileTables con API de entrada-salida de archivo
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
-Describe el funcionamiento de E/S del sistema de archivos en una FileTable.  
+  Describe el funcionamiento de E/S del sistema de archivos en una FileTable.  
   
 ##  <a name="accessing"></a> Empezar a usar API de E/S con FileTables  
  El principal uso previsto para las FileTables se realizará a través del sistema de archivos de Windows y las API de E/S de archivos. Las FileTables no admiten el acceso no transaccional a través del variado conjunto de API de E/S de archivos disponibles.  

@@ -2,7 +2,7 @@
 title: Características en desuso del motor de base de datos de SQL Server 2017 | Microsoft Docs
 ms.custom: ''
 ms.date: 06/09/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine
 ms.service: ''
 ms.component: database-engine
@@ -22,11 +22,12 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 30fee63cd25509d56bd2c55cd682ae31fc801691
-ms.sourcegitcommit: 8b332c12850c283ae413e0b04b2b290ac2edb672
+monikerRange: '>= sql-server-2017 || = sqlallproducts-allversions'
+ms.openlocfilehash: 345c1e8766c1136577848b5fd5bae31f53ac4478
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/05/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="deprecated-database-engine-features-in-sql-server-2017"></a>Características en desuso del motor de base de datos de SQL Server 2017
 [!INCLUDE[tsql-appliesto-ss2017-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2017-xxxx-xxxx-xxx-md.md)]
@@ -79,7 +80,7 @@ WHERE object_name = 'SQLServer:Deprecated Features';
 |Tipos de datos|Sintaxis de**timestamp** para el tipo de datos **rowversion** |Sintaxis del tipo de datos**rowversion** |timestamp|158|  
 |Tipos de datos|Capacidad de insertar valores NULL en columnas **timestamp** .|Utilice DEFAULT en su lugar.|INSERT NULL en columnas TIMESTAMP|179|  
 |Tipos de datos|Opción de tabla 'text in row'|Use los tipos de datos **varchar(max)**, **nvarchar(max)** y **varbinary(max)**. Para obtener más información, vea [sp_tableoption &#40;Transact-SQL&#41;](../relational-databases/system-stored-procedures/sp-tableoption-transact-sql.md).|Opción de tabla Text in row|9|  
-|Tipos de datos|Tipos de datos:<br /><br /> **texto**<br /><br /> **ntext**<br /><br /> **imagen**|Use los tipos de datos **varchar(max)**, **nvarchar(max)**y **varbinary(max)** .|Tipos de datos: **text**, **ntext** o **image**.|4|  
+|Tipos de datos|Tipos de datos:<br /><br /> **texto**<br /><br /> **ntext**<br /><br /> **imagen**|Use los tipos de datos **varchar(max)**, **nvarchar(max)** y **varbinary(max)** .|Tipos de datos: **text**, **ntext** o **image**.|4|  
 |Administración de bases de datos|sp_attach_db<br /><br /> sp_attach_single_file_db|Instrucción CREATE DATABASE con la opción FOR ATTACH. Si desea volver a generar varios archivos de registro y uno o más tienen una ubicación nueva, utilice la opción FOR ATTACH_REBUILD_LOG.|sp_attach_db<br /><br /> sp_attach_single_file_db|81<br /><br /> 82|  
 |Objetos de base de datos|CREATE DEFAULT<br /><br /> DROP DEFAULT<br /><br /> sp_bindefault<br /><br /> sp_unbindefault|Palabra clave DEFAULT en CREATE TABLE y ALTER TABLE.|CREATE_DROP_DEFAULT<br /><br /> sp_bindefault<br /><br /> sp_unbindefault|162<br /><br /> 64<br /><br /> 65|  
 |Objetos de base de datos|CREATE RULE<br /><br /> DROP RULE<br /><br /> sp_bindrule<br /><br /> sp_unbindrule|Palabra clave CHECK en CREATE TABLE y ALTER TABLE.|CREATE_DROP_RULE<br /><br /> sp_bindrule<br /><br /> sp_unbindrule|161<br /><br /> 66<br /><br /> 67|  

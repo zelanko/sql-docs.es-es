@@ -1,16 +1,16 @@
 ---
 title: Opciones de inicio del servicio de motor de base de datos | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 11/23/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine
-ms.service: 
+ms.service: ''
 ms.component: configure-windows
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - single-user mode [SQL Server], startup option
@@ -28,19 +28,20 @@ helpviewer_keywords:
 - startup parameters [SQL Server]
 - starting SQL Server, parameters
 ms.assetid: d373298b-f6cf-458a-849d-7083ecb54ef5
-caps.latest.revision: 
+caps.latest.revision: 80
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 2d73b39465c5f0f05244cd4d1d20b3e2fad6eac9
-ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
+ms.openlocfilehash: 47452c7a2f858dd72cf847f80f2352acace2d5a1
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/18/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="database-engine-service-startup-options"></a>Opciones de inicio del servicio de motor de base de datos
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] Las opciones de inicio señalan ciertas ubicaciones de archivos necesarias durante el inicio y especifican algunas condiciones generales del servidor. La mayoría de los usuarios no necesitan especificar opciones de inicio a menos que estén solucionando un problema de [!INCLUDE[ssDE](../../includes/ssde-md.md)] o que tengan un problema muy poco frecuente y que se les indique que usen una opción de inicio desde el soporte al cliente de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+  Las opciones de inicio señalan ciertas ubicaciones de archivos necesarios durante el inicio y especifican algunas condiciones generales del servidor. La mayoría de los usuarios no necesitan especificar opciones de inicio a menos que estén solucionando un problema de [!INCLUDE[ssDE](../../includes/ssde-md.md)] o que tengan un problema muy poco frecuente y que se les indique que usen una opción de inicio desde el soporte al cliente de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
   
 > [!WARNING]  
 >  El uso incorrecto de opciones de inicio puede afectar al rendimiento del servidor y puede impedir que [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] inicie.  
@@ -54,14 +55,14 @@ ms.lasthandoff: 01/18/2018
   
 ## <a name="list-of-startup-options"></a>Lista de opciones de inicio  
 ### <a name="default-startup-options"></a>Opciones de inicio predeterminadas  
-|.|Description|  
+|Opciones|Description|  
 |-----------------------------|-----------------|  
 |**-d**  *master_file_path*|Ruta de acceso completa del archivo de base de datos maestra (normalmente, C:\Archivos de programa\Microsoft SQL Server\MSSQL.*n*\MSSQL\Data\master.mdf). Si no proporciona esta opción, se usarán los parámetros del Registro existentes.|  
 |**-e**  *error_log_path*|Ruta de acceso completa del archivo de registro de errores (normalmente, C:\Archivos de programa\Microsoft SQL Server\MSSQL.*n*\MSSQL\LOG\ERRORLOG). Si no proporciona esta opción, se usarán los parámetros del Registro existentes.|  
 |**-l**  *master_log_path*|Ruta de acceso completa del archivo de registro de la base de datos maestra (normalmente, C:\Archivos de programa\Microsoft SQL Server\MSSQL.*n*\MSSQL\Data\mastlog.ldf). Si no especifica esta opción, se usarán los parámetros del Registro existentes.|  
   
 ### <a name="other-startup-options"></a>Otras opciones de inicio   
-|. |Description|   
+|Opciones |Description|   
 |---------------------------|-----------------|  
 |**-c**|Acorta el tiempo de inicio al iniciar [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] desde el símbolo del sistema. Normalmente, [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] se inicia como un servicio llamando al Administrador de control de servicios. Dado que [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] no se inicia como un servicio cuando se inicia desde el símbolo del sistema, use **-c** para omitir este paso.|  
 |**-f**|Inicia una instancia de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] con la configuración mínima. Esta opción resulta útil si el valor de una opción de configuración (por ejemplo, la confirmación excesiva de memoria) ha impedido el inicio del servidor. Al iniciar [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] en modo de configuración mínimo, se coloca [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] en modo de usuario único. Para obtener más información, vea la descripción para **-m** de aquí.|  

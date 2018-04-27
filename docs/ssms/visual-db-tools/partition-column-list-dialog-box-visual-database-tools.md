@@ -2,7 +2,7 @@
 title: Cuadro de diálogo Lista de columnas de particiones (Visual Database Tools) | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: sql-tools
 ms.service: ''
 ms.component: ssms-visual-db
@@ -20,14 +20,15 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: f01884482a43f1aff3a6d833bdae0a431f284d01
-ms.sourcegitcommit: b6116b434d737d661c09b78d0f798c652cf149f3
+ms.openlocfilehash: 13e2c797ff53f14aebfdaa2aaf2801c5279c23fb
+ms.sourcegitcommit: a85a46312acf8b5a59a8a900310cf088369c4150
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/17/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="partition-column-list-dialog-box-visual-database-tools"></a>Lista de columnas de particiones (cuadro de diálogo, Visual Database Tools)
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)] Si una tabla tiene un esquema de partición asociado, puede usar este cuadro de diálogo para elegir en qué columnas se aplica la función de partición. Para que esta función se ejecute correctamente, el tipo de datos de la columna en la que se aplique la función debe ser el mismo que el tipo de datos de la columna definida en la función de partición.  
+[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
+Si una tabla tiene un esquema de partición asociado, puede utilizar este cuadro de diálogo para elegir en qué columna o columnas se aplica la función de partición. Para que esta función se ejecute correctamente, el tipo de datos de la columna en la que se aplique la función debe ser el mismo que el tipo de datos de la columna definida en la función de partición.  
   
 Para obtener más información sobre los esquemas y las funciones de partición, vea los Libros en pantalla de SQL Server.  
   

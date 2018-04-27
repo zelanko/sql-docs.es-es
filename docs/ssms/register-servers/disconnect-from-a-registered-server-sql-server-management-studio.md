@@ -1,16 +1,16 @@
 ---
 title: Desconectarse de un servidor registrado (SQL Server Management Studio) | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 03/01/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: sql-tools
-ms.service: 
+ms.service: ''
 ms.component: ssms-registration
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - Registered Servers [SQL Server], connections
@@ -18,20 +18,20 @@ helpviewer_keywords:
 - Registered Servers [SQL Server], disconnecting
 - disconnecting registered servers [SQL Server]
 ms.assetid: 31eacc9a-f814-4845-b252-b3b998271200
-caps.latest.revision: 
+caps.latest.revision: 20
 author: stevestein
 ms.author: sstein
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: a41c28806be100d553a77362db504b0807647575
-ms.sourcegitcommit: 37f0b59e648251be673389fa486b0a984ce22c81
+ms.openlocfilehash: d71c46c788f0cd38c84292c9fd061d2661f457eb
+ms.sourcegitcommit: a85a46312acf8b5a59a8a900310cf088369c4150
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/12/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="disconnect-from-a-registered-server-sql-server-management-studio"></a>Desconectarse de un servidor registrado (SQL Server Management Studio)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
-En este tema se describe cómo desconectar el Explorador de objetos de un servidor en cualquier momento en [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]. Al desconectar el Explorador de objetos no se desconectan otros componentes de [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] , como el Editor SQL.  
+  En este tema se describe cómo desconectar el Explorador de objetos de un servidor en cualquier momento en [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]. Al desconectar el Explorador de objetos no se desconectan otros componentes de [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] , como el Editor SQL.  
   
 ##  <a name="SSMSProcedure"></a>  
   

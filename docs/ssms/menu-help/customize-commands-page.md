@@ -1,33 +1,35 @@
 ---
-title: "Personalizar (página Comandos) | Microsoft Docs"
-ms.custom: 
+title: Personalizar (página Comandos) | Microsoft Docs
+ms.custom: ''
 ms.date: 01/19/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: sql-tools
-ms.service: 
+ms.service: ''
 ms.component: ssms-menu
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: tools-ssms
-ms.tgt_pltfrm: 
+ms.technology:
+- tools-ssms
+ms.tgt_pltfrm: ''
 ms.topic: article
 f1_keywords:
 - sql13.swb.vs.customizecom.f1
 - vs.customize.commands
 ms.assetid: c8965f2c-51d9-437d-a6f3-8ac2075ede6b
-caps.latest.revision: "3"
+caps.latest.revision: 3
 author: stevestein
 ms.author: sstein
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: fca3838ebce7827c6f44fbffe21f3ed05d17d024
-ms.sourcegitcommit: b6116b434d737d661c09b78d0f798c652cf149f3
+ms.openlocfilehash: ba2fad35bbc2bc085144beabcf7aad8de992f5dd
+ms.sourcegitcommit: a85a46312acf8b5a59a8a900310cf088369c4150
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/17/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="customize-commands-page"></a>Personalizar (página Comandos)
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)] Este cuadro de diálogo permite agregar y quitar comandos en las barras de herramientas y menús, y también cambiar las imágenes que se usan para los botones de barra de herramientas o comandos de menú. Para tener acceso a la página **Comandos** , haga clic en **Personalizar** en el menú **Herramientas** y, a continuación, haga clic en **Comandos**.  
+[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
+Este cuadro de diálogo permite agregar comandos en las barras de herramientas y menús, y eliminarlos de éstos; también permite cambiar las imágenes que se utilizan para los botones de barra de herramientas o los comandos de los menús. Para tener acceso a la página **Comandos** , haga clic en **Personalizar** en el menú **Herramientas** y, a continuación, haga clic en **Comandos**.  
   
 ## <a name="uielement-list"></a>Lista de UIElement  
 **Categorías**  

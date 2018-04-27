@@ -2,7 +2,7 @@
 title: Cuadro de diálogo Índices XML (Visual Database Tools) | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: sql-tools
 ms.service: ''
 ms.component: ssms-visual-db
@@ -20,16 +20,17 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: f47274fe87b23da05550d05b28af1b003fa9a2bc
-ms.sourcegitcommit: b6116b434d737d661c09b78d0f798c652cf149f3
+ms.openlocfilehash: 3cda93dbe33a812a21a5a3575c730cb36e48dfb8
+ms.sourcegitcommit: a85a46312acf8b5a59a8a900310cf088369c4150
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/17/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="xml-indexes-dialog-box-visual-database-tools"></a>Índices XML (cuadro de diálogo, Visual Database Tools)
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)] Use el cuadro de diálogo **Índices XML** para crear índices para las columnas de tipo de datos XML que no pueden indexarse con el cuadro de diálogo **Índice y claves**. Cada columna XML puede tener más de un índice XML, pero el primero que se cree (principal) será la base de los otros (secundarios). Si elimina el índice XML principal, también se eliminarán los índices secundarios.  
+[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
+Utilice el cuadro de diálogo **Índices XML** para crear índices para las columnas de tipo de datos XML que no pueden indizarse utilizando el cuadro de diálogo **Índice y claves** . Cada columna XML puede tener más de un índice XML, pero el primero que se cree (principal) será la base de los otros (secundarios). Si elimina el índice XML principal, también se eliminarán los índices secundarios.  
   
-## <a name="options"></a>.  
+## <a name="options"></a>Opciones  
 **Índice XML seleccionado**  
 Enumera los índices XML existentes. Selecciónelo para mostrar sus propiedades en la cuadrícula que aparece a la derecha. Si la lista está vacía, no se ha definido ninguna para la tabla.  
   

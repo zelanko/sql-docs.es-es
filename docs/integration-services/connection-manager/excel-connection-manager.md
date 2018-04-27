@@ -1,7 +1,7 @@
 ---
 title: Administrador de conexiones con Excel | Microsoft Docs
 ms.date: 04/02/2018
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: integration-services
 ms.service: ''
 ms.component: connection-manager
@@ -25,11 +25,11 @@ author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: c36d49debc132b6e67b2bcbd2a37df75007419ff
-ms.sourcegitcommit: 059fc64ba858ea2adaad2db39f306a8bff9649c2
+ms.openlocfilehash: e273a5c9c41162a130769cf685096b4176752825
+ms.sourcegitcommit: a85a46312acf8b5a59a8a900310cf088369c4150
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/04/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="excel-connection-manager"></a>Administrador de conexiones con Excel
   Un Administrador de conexiones con Excel permite a un paquete conectarse a un archivo de libro de [!INCLUDE[msCoName](../../includes/msconame-md.md)] Excel. El origen de Excel y el destino de Excel que incluye [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] usan el Administrador de conexiones con Excel.  
@@ -59,7 +59,7 @@ ms.lasthandoff: 04/04/2018
 ## <a name="excel-connection-manager-editor"></a>Editor de Administrador de conexiones con Excel
   Utilice el cuadro de diálogo **Editor del administrador de conexiones con Excel** para agregar una conexión a un archivo de libro de [!INCLUDE[ofprexcel](../../includes/ofprexcel-md.md)] existente o nuevo.  
   
-### <a name="options"></a>.  
+### <a name="options"></a>Opciones  
  **Ruta de acceso del archivo Excel**  
  Escriba la ruta de acceso y el nombre de archivo de un archivo de libro de Excel nuevo o existente.  
    

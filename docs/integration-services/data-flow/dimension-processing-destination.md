@@ -1,16 +1,16 @@
 ---
 title: Destino de procesamiento de dimensiones | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: integration-services
-ms.service: 
+ms.service: ''
 ms.component: data-flow
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - integration-services
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 f1_keywords:
 - sql13.dts.designer.dimensionprocessingdest.f1
@@ -23,16 +23,16 @@ helpviewer_keywords:
 - destinations [Integration Services], Dimension Processing
 - dimensions [Analysis Services], processing
 ms.assetid: 4c49bb95-7259-42f4-a785-bb6aaf5f8566
-caps.latest.revision: 
+caps.latest.revision: 40
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 6cb11b490a2ec920d61f55bd403cbbd7c4a36e8b
-ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
+ms.openlocfilehash: 0cd52f33fc861b5b59055fc9c1bbe8840e46fc81
+ms.sourcegitcommit: a85a46312acf8b5a59a8a900310cf088369c4150
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/25/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="dimension-processing-destination"></a>procesamiento de dimensiones, destino
   El destino de Procesamiento de dimensiones carga y procesa una dimensión de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] . Para más información sobre las dimensiones, vea [Dimensiones &#40;Analysis Services - Datos multidimensionales&#41;](../../analysis-services/multidimensional-models-olap-logical-dimension-objects/dimensions-analysis-services-multidimensional-data.md).  
@@ -63,7 +63,7 @@ ms.lasthandoff: 01/25/2018
 ## <a name="dimension-processing-destination-editor-connection-manager-page"></a>Editor de destino de procesamiento de dimensiones (página Administrador de conexiones)
   Utilice la página **Administrador de conexiones** del cuadro de diálogo **Editor de destino de procesamiento de dimensiones** para especificar una conexión a un proyecto de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] o a una instancia de [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)].  
   
-### <a name="options"></a>.  
+### <a name="options"></a>Opciones  
  **Connection manager**  
  Seleccione un administrador de conexiones existente de la lista, o haga clic en **Nuevo** para crear un nuevo administrador de conexiones.  
   
@@ -85,7 +85,7 @@ ms.lasthandoff: 01/25/2018
 ## <a name="dimension-processing-destination-editor-mappings-page"></a>Editor de destino de procesamiento de dimensiones (página Asignaciones)
   Utilice la página **Asignaciones** del cuadro de diálogo **Editor de destino de procesamiento de dimensiones** para asignar columnas de entrada a columnas de dimensión.  
   
-### <a name="options"></a>.  
+### <a name="options"></a>Opciones  
  **Columnas de entrada disponibles**  
  Muestra la lista de columnas de entrada disponibles. Utilice una operación de arrastrar y colocar para asignar columnas de entrada disponibles de la tabla a columnas de destino.  
   
@@ -101,7 +101,7 @@ ms.lasthandoff: 01/25/2018
 ## <a name="dimension-processing-destination-editor-advanced-page"></a>Editor de destino de procesamiento de dimensiones (página Avanzadas)
   Utilice la página **Avanzadas** del cuadro de diálogo **Editor de destino de procesamiento de dimensiones** para configurar el control de errores.  
   
-### <a name="options"></a>.  
+### <a name="options"></a>Opciones  
  **Utilizar la configuración de error predeterminada**  
  Especifica si debe utilizarse el control de errores predeterminado de [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] . Este valor es **True**de forma predeterminada.  
   

@@ -2,7 +2,7 @@
 title: Cuadro de diálogo Imprimir | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: sql-tools
 ms.service: ''
 ms.component: ssms-visual-db
@@ -20,14 +20,15 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 7d1d8ce6a37a0fa70f2f6cb59af991892108fefd
-ms.sourcegitcommit: b6116b434d737d661c09b78d0f798c652cf149f3
+ms.openlocfilehash: 81939dd7f08387f896a9bb342327917bbe8a5eda
+ms.sourcegitcommit: a85a46312acf8b5a59a8a900310cf088369c4150
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/17/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="print-dialog-box"></a>Cuadro de diálogo Imprimir
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)] Puede especificar cómo quiere imprimir un documento seleccionando las opciones del cuadro de diálogo **Imprimir**.  
+[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
+Puede especificar cómo desea imprimir un documento seleccionando las opciones del cuadro de diálogo **Imprimir** .  
   
 ## <a name="printer"></a>Impresora  
 **Nombre**  

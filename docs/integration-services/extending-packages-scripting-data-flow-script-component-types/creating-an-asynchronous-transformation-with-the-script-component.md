@@ -1,15 +1,15 @@
 ---
-title: "Crear una transformación asincrónica con el componente de script | Microsoft Docs"
-ms.custom: 
+title: Crear una transformación asincrónica con el componente de script | Microsoft Docs
+ms.custom: ''
 ms.date: 03/17/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: integration-services
-ms.service: 
+ms.service: ''
 ms.component: extending-packages-scripting-data-flow-script-component-types
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: 
-ms.tgt_pltfrm: 
+ms.technology: ''
+ms.tgt_pltfrm: ''
 ms.topic: reference
 applies_to:
 - SQL Server 2016 Preview
@@ -20,16 +20,16 @@ helpviewer_keywords:
 - transformation components [Integration Services]
 - Script component [Integration Services], transformation components
 ms.assetid: 0d814404-21e4-4a68-894c-96fa47ab25ae
-caps.latest.revision: 
+caps.latest.revision: 63
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 7a7d607fda10fa8e3ae020e6b702867e9f8ef0a2
-ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
+ms.openlocfilehash: c7a8ecd16aa8ea4957b54195feb66b3b8824d6b1
+ms.sourcegitcommit: a85a46312acf8b5a59a8a900310cf088369c4150
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/25/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="creating-an-asynchronous-transformation-with-the-script-component"></a>Crear una transformación asincrónica con el componente de script
   Un componente de transformación se utiliza en el flujo de datos de un paquete de [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] para modificar y analizar los datos cuando pasan del origen al destino. Una transformación con salidas sincrónicas procesa cada fila de entrada a medida que pasa por el componente. Una transformación con salidas asincrónicas puede esperar hasta haber recibido todas las filas de entrada para completar su procesamiento o puede generar algunas filas antes de haber recibido todas las filas de entrada. En este tema se describe una transformación asincrónica. Si el procesamiento requiere una transformación sincrónica, vea [Crear una transformación sincrónica con el componente de script](../../integration-services/extending-packages-scripting-data-flow-script-component-types/creating-a-synchronous-transformation-with-the-script-component.md). Para obtener más información acerca de las diferencias que existen entre los componentes sincrónicos y asincrónicos, vea [Understanding Synchronous and Asynchronous Transformations](../../integration-services/understanding-synchronous-and-asynchronous-transformations.md) (Descripción de las transformaciones sincrónicas y asincrónicas).  
@@ -103,7 +103,7 @@ ms.lasthandoff: 01/25/2018
   
  En una transformación asincrónica, puede usar el método AddRow para agregar filas a la salida, según corresponda, desde los métodos ProcessInputRow o ProcessInput. No es necesario utilizar el método CreateNewOutputRows. Si escribe una sola fila de resultados (como resultados de agregación) para una salida determinada, puede crear la fila de salida de antemano con el método CreateNewOutputRows y rellenar sus valores más adelante, después de procesar todas las filas de entrada. Sin embargo, no resulta útil crear varias filas en el método CreateNewOutputRows, ya que el componente de script solamente permite usar la fila actual en una entrada o salida. El método CreateNewOutputRows es más importante en un componente de origen donde no hay filas de entrada que procesar.  
   
- Puede que también desee invalidar el propio método ProcessInput para poder realizar un procesamiento adicional preliminar o final, antes o después de usar un bucle para recorrer el búfer de entrada y llamar a ProcessInputRow para cada fila. Por ejemplo, uno de los ejemplos de código de este tema invalida ProcessInput para contar el número de direcciones de una ciudad concreta mientras ProcessInputRow usa un bucle para recorrer las filas**.** En el ejemplo se escribe el valor de resumen en la segunda salida después de procesarse todas las filas. El ejemplo completa la salida de ProcessInput porque los búferes de salida ya no están disponibles al llamar a PostExecute.  
+ Puede que también desee invalidar el propio método ProcessInput para poder realizar un procesamiento adicional preliminar o final, antes o después de usar un bucle para recorrer el búfer de entrada y llamar a ProcessInputRow para cada fila. Por ejemplo, uno de los ejemplos de código de este tema invalida ProcessInput para contar el número de direcciones de una ciudad concreta mientras ProcessInputRow usa un bucle para recorrer las filas **.** En el ejemplo se escribe el valor de resumen en la segunda salida después de procesarse todas las filas. El ejemplo completa la salida de ProcessInput porque los búferes de salida ya no están disponibles al llamar a PostExecute.  
   
  En función de sus requisitos, puede que también desee escribir script en los métodos PreExecute y PostExecute, disponibles en la clase ScriptMain, para realizar un procesamiento preliminar o final.  
   

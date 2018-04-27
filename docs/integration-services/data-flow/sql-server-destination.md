@@ -1,16 +1,16 @@
 ---
 title: Destino de SQL Server | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: integration-services
-ms.service: 
+ms.service: ''
 ms.component: data-flow
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - integration-services
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 f1_keywords:
 - sql13.dts.designer.sqlserverdest.f1
@@ -24,16 +24,16 @@ helpviewer_keywords:
 - inserting data
 - bulk load [Integration Services]
 ms.assetid: a0227cd8-6944-4547-87e8-7b2507e26442
-caps.latest.revision: 
+caps.latest.revision: 65
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 0b47f04704002aa14fb957dc05a593695d2f689b
-ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
+ms.openlocfilehash: abc13529e3883faad8fd3e4191faec1a37162bed
+ms.sourcegitcommit: a85a46312acf8b5a59a8a900310cf088369c4150
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/25/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="sql-server-destination"></a>SQL Server, destino
   El destino de SQL Server se conecta a una base de datos local de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] y realiza una carga masiva de datos en tablas y vistas de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . No se puede usar el destino de SQL Server en paquetes con acceso a una base de datos de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] en un servidor remoto. En su lugar, los paquetes deben utilizar el destino de OLE DB. Para más información, consulte [OLE DB Destination](../../integration-services/data-flow/ole-db-destination.md).  
@@ -128,7 +128,7 @@ ms.lasthandoff: 01/25/2018
 ## <a name="sql-destination-editor-connection-manager-page"></a>Editor de destino de SQL (página Administrador de conexiones)
   Utilice la página **Administrador de conexiones** del cuadro de diálogo **Editor de destino de SQL** para especificar la información de orígenes de datos y para obtener una vista previa de los resultados. El destino [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] carga los datos en tablas o vistas en una base de datos de [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
   
-### <a name="options"></a>.  
+### <a name="options"></a>Opciones  
  **Administrador de conexiones OLE DB**  
  Seleccione una conexión existente de la lista o cree una nueva conexión haciendo clic en **Nueva**.  
   
@@ -150,7 +150,7 @@ ms.lasthandoff: 01/25/2018
 ## <a name="sql-destination-editor-mappings-page"></a>Editor de destino de SQL (página Asignaciones)
   Utilice la página **Asignaciones** del cuadro de diálogo **Editor de destino de SQL** para asignar columnas de entrada a columnas de destino.  
   
-### <a name="options"></a>.  
+### <a name="options"></a>Opciones  
  **Columnas de entrada disponibles**  
  Muestra la lista de columnas de entrada disponibles. Utilice una operación de arrastrar y colocar para asignar columnas de entrada disponibles de la tabla a columnas de destino.  
   
@@ -166,7 +166,7 @@ ms.lasthandoff: 01/25/2018
 ## <a name="sql-destination-editor-advanced-page"></a>Editor de destino de SQL (página Avanzadas)
   Utilice la página **Avanzadas** del cuadro de diálogo **Editor de destino de SQL** para especificar opciones avanzadas de inserción masiva.  
   
-### <a name="options"></a>.  
+### <a name="options"></a>Opciones  
  **Mantener valores de identidad**  
  Especifique si la tarea debe insertar valores en columnas de identidad. El valor predeterminado de esta propiedad es **False**.  
   

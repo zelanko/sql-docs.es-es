@@ -2,7 +2,7 @@
 title: Cuadro de diálogo Elegir carpetas de búsqueda (Visual Studio) | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: sql-tools
 ms.service: ''
 ms.component: ssms-menu
@@ -20,18 +20,19 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 7b0bddd8bb76fa236f84cc4229b6da5ff979b2aa
-ms.sourcegitcommit: b6116b434d737d661c09b78d0f798c652cf149f3
+ms.openlocfilehash: 8777f992c6081b13c86a3f916d65ccc6be9be571
+ms.sourcegitcommit: a85a46312acf8b5a59a8a900310cf088369c4150
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/17/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="choose-search-folders-dialog-box-visual-studio"></a>Cuadro de diálogo Elegir carpetas de búsqueda (Visual Studio)
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)] Permite reunir, guardar y revisar sus propios conjuntos con nombre de carpetas de búsqueda y especificar el orden en que deben realizarse las búsquedas. Para que se muestre este cuadro de diálogo, seleccione el botón **Examinar (...)** situado junto a la lista desplegable **Buscar en** en Buscar en archivos o Reemplazar en archivos, en la ventana Buscar y reemplazar.  
+[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
+Le permite reunir, guardar y revisar sus propios conjuntos con nombre de carpetas de búsqueda, y especificar el orden en que deben realizarse las búsquedas. Para que se muestre este cuadro de diálogo, seleccione el botón **Examinar (...)** situado junto a la lista desplegable **Buscar en** en Buscar en archivos o Reemplazar en archivos, en la ventana Buscar y reemplazar.  
   
 Agregue carpetas a la lista **Carpetas seleccionadas** , escriba un nombre para este conjunto de carpetas en el campo **Conjunto de carpetas** y haga clic en **Aplicar** para guardarlo. Este ámbito personalizado de búsqueda podrá seleccionarse por nombre posteriormente en las listas desplegables **Buscar en** , en **Buscar en archivos** y **Reemplazar en archivos**. Para quitar un conjunto de carpetas personalizado de las listas **Buscar en** , seleccione su nombre en el campo **Conjunto de carpetas** y haga clic en **Eliminar**.  
   
-## <a name="options"></a>.  
+## <a name="options"></a>Opciones  
 Los controles que se muestran a continuación se encuentran disponibles para ayudarle a reunir, guardar y revisar sus propios conjuntos con nombre de carpetas de búsqueda.  
   
 **Conjunto de carpetas**  

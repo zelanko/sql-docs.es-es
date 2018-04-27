@@ -1,16 +1,16 @@
 ---
-title: "Funciones (expresión de SSIS) | Microsoft Docs"
-ms.custom: 
+title: Funciones (expresión de SSIS) | Microsoft Docs
+ms.custom: ''
 ms.date: 03/01/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: integration-services
-ms.service: 
+ms.service: ''
 ms.component: expressions
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - integration-services
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - functions [Integration Services]
@@ -19,16 +19,16 @@ helpviewer_keywords:
 - SQL Server Integration Services, functions
 - SSIS, functions
 ms.assetid: e9a41a31-94f4-46a4-b737-c707dd59ce48
-caps.latest.revision: 
+caps.latest.revision: 36
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 836ecde7ff2cb458b2f93aeb239d0ab83c51cb6b
-ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
+ms.openlocfilehash: 270943b66e7a52731daefe2ce3bbd5fccd3d80cd
+ms.sourcegitcommit: a85a46312acf8b5a59a8a900310cf088369c4150
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/25/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="functions-ssis-expression"></a>Funciones (expresión de SSIS)
   El lenguaje de expresiones incluye un conjunto de funciones que pueden usarse en las expresiones. Las expresiones pueden usar una sola función, pero generalmente utilizan varias funciones, combinándolas con operadores.  

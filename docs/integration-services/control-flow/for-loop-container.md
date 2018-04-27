@@ -1,16 +1,16 @@
 ---
 title: Contenedor de bucles Para | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: integration-services
-ms.service: 
+ms.service: ''
 ms.component: control-flow
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - integration-services
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 f1_keywords:
 - sql13.dts.designer.forloopcontainerdetails.f1
@@ -20,16 +20,16 @@ helpviewer_keywords:
 - containers [Integration Services], For Loop
 - For Loop containers
 ms.assetid: 44cf7355-992b-4bbf-a28c-bfb012de06f6
-caps.latest.revision: 
+caps.latest.revision: 55
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 6fb4c80904f506c28ad4a67e6df6c476a354a7cd
-ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
+ms.openlocfilehash: 3062db607cb3f0ead45a29002abe5db5de937bf7
+ms.sourcegitcommit: a85a46312acf8b5a59a8a900310cf088369c4150
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/25/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="for-loop-container"></a>Contenedor de bucles For
   El contenedor de bucles For define un flujo de control que se repite en un paquete. La implementación del bucle es similar a la estructura de bucle **For** de los lenguajes de programación. En cada repetición del bucle, el contenedor de bucles For evalúa una expresión y repite el flujo de trabajo hasta que la expresión se evalúe como **False**.  
@@ -100,7 +100,7 @@ Use la página **Bucle For** del cuadro de diálogo **Editor de bucles For** par
   
  Para obtener información acerca del contenedor de bucles For y cómo utilizarlo en paquetes, vea [For Loop Container](../../integration-services/control-flow/for-loop-container.md).  
   
-### <a name="options"></a>.  
+### <a name="options"></a>Opciones  
  **InitExpression**  
  Opcionalmente, escriba una expresión que inicialice los valores utilizados por el bucle.  
   

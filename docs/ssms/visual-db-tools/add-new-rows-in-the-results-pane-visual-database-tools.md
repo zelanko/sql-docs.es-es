@@ -1,15 +1,16 @@
 ---
 title: Agregar nuevas filas en el panel Resultados (Visual Database Tools) | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 01/19/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: sql-tools
-ms.service: 
+ms.service: ''
 ms.component: ssms-visual-db
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: tools-ssms
-ms.tgt_pltfrm: 
+ms.technology:
+- tools-ssms
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - View Designer, Results pane
@@ -19,19 +20,20 @@ helpviewer_keywords:
 - adding rows
 - row additions [SQL Server], Results pane
 ms.assetid: 59891c84-3f54-4ab9-8b86-72c59627b480
-caps.latest.revision: "3"
+caps.latest.revision: 3
 author: stevestein
 ms.author: sstein
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 7e6585253bd81c11059d8021cf972ca57129730a
-ms.sourcegitcommit: b6116b434d737d661c09b78d0f798c652cf149f3
+ms.openlocfilehash: 2e549d9e898691a665cfcad566b7107c7b974b79
+ms.sourcegitcommit: a85a46312acf8b5a59a8a900310cf088369c4150
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/17/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="add-new-rows-in-the-results-pane-visual-database-tools"></a>Agregar nuevas filas en el panel Resultados (Visual Database Tools)
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)] Puede agregar datos nuevos escribiéndolos manualmente o pegándolos desde otro programa, como el Bloc de notas o Excel. La fila que se vaya a pegar deberá tener exactamente el mismo número y tipos de columnas que la tabla en la que se pegue. Puede pegar varias filas en el panel Resultados de una vez.  
+[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
+Puede agregar datos nuevos escribiéndolos manualmente o pegándolos desde otro programa, como el Bloc de notas o Excel. La fila que se vaya a pegar deberá tener exactamente el mismo número y tipos de columnas que la tabla en la que se pegue. Puede pegar varias filas en el panel Resultados de una vez.  
   
 Para más información sobre cómo ingresar los datos, consulte [Reglas para actualizar resultados &#40;Visual Database Tools&#41;](../../ssms/visual-db-tools/rules-for-updating-results-visual-database-tools.md).  
   

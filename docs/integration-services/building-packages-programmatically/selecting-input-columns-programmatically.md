@@ -1,15 +1,15 @@
 ---
-title: "Seleccionar mediante programación las columnas de entrada | Microsoft Docs"
-ms.custom: 
+title: Seleccionar mediante programación las columnas de entrada | Microsoft Docs
+ms.custom: ''
 ms.date: 03/06/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: integration-services
-ms.service: 
+ms.service: ''
 ms.component: building-packages-programmatically
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: 
-ms.tgt_pltfrm: 
+ms.technology: ''
+ms.tgt_pltfrm: ''
 ms.topic: reference
 applies_to:
 - SQL Server 2016 Preview
@@ -25,16 +25,16 @@ helpviewer_keywords:
 - data flow [Integration Services], column mapping
 - data flow [Integration Services], components
 ms.assetid: b53b110a-dcf4-4464-ae98-81e892ab74c3
-caps.latest.revision: 
+caps.latest.revision: 49
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 37610e7a14cef8512059929ac1ea04faa79bed38
-ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
+ms.openlocfilehash: 2e7aef21b01ebfefb3db99af9e982eda72d1c0eb
+ms.sourcegitcommit: a85a46312acf8b5a59a8a900310cf088369c4150
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/25/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="selecting-input-columns-programmatically"></a>Seleccionar mediante programación las columnas de entrada
   Después de haber conectado los componentes mediante programación, seleccione las columnas de los componentes de nivel superior que transformará en componentes de nivel inferior o por los que pasará a los componentes de nivel inferior. Si no selecciona las columnas de entrada para el componente, el componente no recibe ninguna fila de la tarea de flujo de datos.  

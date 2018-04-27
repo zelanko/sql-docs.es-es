@@ -1,16 +1,16 @@
 ---
 title: Rutas de Integration Services | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 03/04/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: integration-services
-ms.service: 
+ms.service: ''
 ms.component: data-flow
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - integration-services
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 f1_keywords:
 - sql13.dts.designer.patheditor.general.f1
@@ -23,16 +23,16 @@ helpviewer_keywords:
 - destinations [Integration Services], paths
 - sources [Integration Services], paths
 ms.assetid: 6c4629a9-2ede-4011-9101-3b342249640e
-caps.latest.revision: 
+caps.latest.revision: 41
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 86d567d804c64c769823b33cc50ff231d310a760
-ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
+ms.openlocfilehash: 7e20807ed1f4972eeb722055e7671fd259aca9dd
+ms.sourcegitcommit: a85a46312acf8b5a59a8a900310cf088369c4150
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/25/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="integration-services-paths"></a>Rutas de Integration Services
   Una ruta conecta dos componentes en un flujo de datos conectando la salida de un componente de flujo de datos con la entrada de otro componente. Una ruta tiene un origen y un destino. Por ejemplo, si una ruta conecta un origen de OLE DB y una transformación Ordenar, el origen de OLE DB es el origen de la ruta y la transformación Ordenar es el destino de la ruta. El origen es el componente donde se inicia la ruta y el destino es el componente donde finaliza la ruta.  
@@ -68,7 +68,7 @@ Utilice el cuadro de diálogo **Editor de rutas de flujo de datos** para estable
   
  Utilice el nodo **General** del cuadro de diálogo **Editor de rutas de flujo de datos** para nombrar y describir la ruta, y para especificar las opciones de anotación de ruta.  
   
-### <a name="options"></a>.  
+### <a name="options"></a>Opciones  
  **Nombre**  
  Proporcione un nombre único para la ruta.  
   
@@ -93,7 +93,7 @@ Utilice el cuadro de diálogo **Editor de rutas de flujo de datos** para estable
 ## <a name="metadata-page---data-flow-path-editor"></a>Página Metadatos: Editor de rutas de flujo de datos
 Utilice la página **Metadatos** del cuadro de diálogo **Editor de rutas de flujo de datos** para ver los metadatos de las columnas de rutas.  
   
-### <a name="options"></a>.  
+### <a name="options"></a>Opciones  
  **Metadatos de ruta**  
  Muestra los metadatos de columna. Haga clic en los encabezados de columna para ordenar los datos de columna.  
   
@@ -133,7 +133,7 @@ Utilice la página **Metadatos** del cuadro de diálogo **Editor de rutas de flu
 ## <a name="data-viewers-page---data-flow-path-editor"></a>Página Visores de datos: Editor de rutas de flujo de datos
 Utilice la página **Visores de datos** del cuadro de diálogo **Editor de rutas de flujo de datos** para administrar los visores de datos que se adjuntan a la ruta.  
   
-### <a name="options"></a>.  
+### <a name="options"></a>Opciones  
  **Nombre**  
  Muestra los visores de datos.  
   

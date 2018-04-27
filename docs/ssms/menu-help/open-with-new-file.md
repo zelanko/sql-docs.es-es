@@ -2,7 +2,7 @@
 title: Abrir con (nuevo archivo) | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: sql-tools
 ms.service: ''
 ms.component: ssms-menu
@@ -22,16 +22,17 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: f7df416a20f8b8bae22e10e72fd35904c460808b
-ms.sourcegitcommit: b6116b434d737d661c09b78d0f798c652cf149f3
+ms.openlocfilehash: e8241708f1748f12bfd9f701de62d7f41058dc40
+ms.sourcegitcommit: a85a46312acf8b5a59a8a900310cf088369c4150
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/17/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="open-with-new-file"></a>Abrir con (Nuevo archivo)
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)] Puede abrir un documento en uno o varios editores si hace clic en **Abrir** en el menú **Archivo** y, después, hace clic en **Archivo**. En el cuadro de diálogo **Abrir archivo** , seleccione el archivo, haga clic en la flecha de **Abrir** y, después, haga clic en **Abrir con**. En el cuadro de diálogo **Abrir con** , haga clic en el programa que desee de la lista **Seleccione el programa que desee usar** y, a continuación, haga clic en **Abrir**.  
+[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
+Puede abrir un documento en uno o varios editores si hace clic en **Abrir** en el menú **Archivo** y, a continuación, hace clic en **Archivo**. En el cuadro de diálogo **Abrir archivo** , seleccione el archivo, haga clic en la flecha de **Abrir** y, después, haga clic en **Abrir con**. En el cuadro de diálogo **Abrir con** , haga clic en el programa que desee de la lista **Seleccione el programa que desee usar** y, a continuación, haga clic en **Abrir**.  
   
-## <a name="options"></a>.  
+## <a name="options"></a>Opciones  
 **Seleccione el programa que desee usar**  
 Muestra los editores disponibles en [!INCLUDE[msCoName](../../includes/msconame_md.md)] Visual Studio para el tipo de archivo seleccionado. Elija en la lista el editor con el que desea abrir el documento o haga clic en **Agregar** para incluir un nuevo editor en la lista.  
   

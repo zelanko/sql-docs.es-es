@@ -1,36 +1,36 @@
 ---
 title: Servidores registrados (Ayuda F1) | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: sql-tools
-ms.service: 
+ms.service: ''
 ms.component: ssms-registration
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: reference
 helpviewer_keywords:
 - SQL Server Management Studio [SQL Server], Help
 - Registered Servers [SQL Server], help
 - SQL Server Management Studio Help [SQL Server], registered servers
 ms.assetid: 59f76b28-ba78-4a1a-b5d5-8b581f30114d
-caps.latest.revision: 
+caps.latest.revision: 23
 author: stevestein
 ms.author: sstein
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: fec25c98a971d3f38d4113042d50a25469e56777
-ms.sourcegitcommit: 37f0b59e648251be673389fa486b0a984ce22c81
+ms.openlocfilehash: 22a9a95e73b34a9c094abf24a0b12998bc8cfc87
+ms.sourcegitcommit: a85a46312acf8b5a59a8a900310cf088369c4150
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/12/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="registered-servers-f1-help"></a>Servidores registrados (Ayuda F1)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
-Esta sección contiene la Ayuda F1 del componente Servidores registrados de [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]. Describa las distintas opciones.
+  Esta sección contiene la Ayuda F1 del componente Servidores registrados de [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]. Describa las distintas opciones.
   
  Para información sobre Servidores registrados y obtener vínculos a todo lo que puede hacer con ellos, vaya al tema [Servidores registrados](../../tools/sql-server-management-studio/register-servers.md) . 
  
@@ -42,7 +42,7 @@ Esta sección contiene la Ayuda F1 del componente Servidores registrados de [!IN
   
  Para obtener acceso a esta página, en Servidores registrados, haga clic en **Reporting Services** , en la barra de herramientas de **Servidores registrados** haga clic con el botón derecho en cualquier grupo de servidores registrados como, por ejemplo, **Reporting Services**, seleccione **Nuevo**y haga clic en **Registro de servidor**.  
   
-### <a name="options"></a>.  
+### <a name="options"></a>Opciones  
  **Tipo de servidor**  
  Cuando se registra un servidor desde Servidores registrados, el cuadro **Tipo de servidor** es de solo lectura y coincide con el tipo de servidor que se muestra en el panel **Servidores registrados** . Para registrar un tipo de servidor diferente, haga clic en el servidor que desee en la barra de herramientas de **Servidores registrados** antes de comenzar a registrar un nuevo servidor.  
   
@@ -88,7 +88,7 @@ Esta sección contiene la Ayuda F1 del componente Servidores registrados de [!IN
   
  Para obtener acceso a esta página, en Servidores registrados, haga clic en **Analysis Services** , en la barra de herramientas de Servidores registrados haga clic con el botón derecho en cualquier grupo de servidores registrados como, por ejemplo, **Analysis Services**, seleccione **Nuevo**y haga clic en **Registro de servidor**.  
   
-### <a name="options"></a>.  
+### <a name="options"></a>Opciones  
  **Tipo de servidor**  
  Cuando se registra un servidor desde Servidores registrados, el cuadro **Tipo de servidor** es de solo lectura y coincide con el tipo de servidor que se muestra en el panel Servidores registrados. Para registrar un tipo de servidor diferente, haga clic en el servidor que desee en la barra de herramientas de **Servidores registrados** antes de comenzar a registrar un nuevo servidor.  
   
@@ -122,7 +122,7 @@ Esta sección contiene la Ayuda F1 del componente Servidores registrados de [!IN
   
  Para obtener acceso a esta página, en Servidores registrados, haga clic en **Integration Services** en la barra de herramientas de **Servidores registrados** , haga clic con el botón derecho en cualquier grupo de servidores registrados, seleccione **Nuevo**y, luego, haga clic en **Registro de servidor**.  
   
-### <a name="options"></a>.  
+### <a name="options"></a>Opciones  
  **Tipo de servidor**  
  Cuando registra un servidor en Servidores registrados, el cuadro **Tipo de servidor** es de solo lectura y corresponde al tipo de servidor que se muestra en Servidores registrados. Para registrar un tipo diferente de servidor, haga clic en **Motor de base de datos**, **Analysis Server**, **Reporting Services**, **SQL Server Compact** **Edition**o **Integration Services** en la barra de herramientas de **Servidores registrados** antes de iniciar el registro de un nuevo servidor.  
   

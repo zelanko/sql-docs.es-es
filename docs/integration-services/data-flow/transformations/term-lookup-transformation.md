@@ -1,16 +1,16 @@
 ---
-title: "Transformación Búsqueda de términos | Microsoft Docs"
-ms.custom: 
+title: Transformación Búsqueda de términos | Microsoft Docs
+ms.custom: ''
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: integration-services
-ms.service: 
+ms.service: ''
 ms.component: data-flow
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - integration-services
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 f1_keywords:
 - sql13.dts.designer.termlookuptrans.f1
@@ -26,16 +26,16 @@ helpviewer_keywords:
 - counting extracted items
 - Term Lookup transformation
 ms.assetid: 3c0fa2f8-cb6a-4371-b184-7447be001de1
-caps.latest.revision: 
+caps.latest.revision: 56
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 1d4c2104bf9a24def61fe2c2c77020ef6a0a4c24
-ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
+ms.openlocfilehash: 9b6b42af122b90a0b90b4ac35c58451023655f14
+ms.sourcegitcommit: a85a46312acf8b5a59a8a900310cf088369c4150
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/25/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="term-lookup-transformation"></a>Búsqueda de términos, transformación
   La transformación Búsqueda de términos compara los términos extraídos del texto en una columna de entrada de transformación con los términos de una tabla de referencia. A continuación, cuenta la cantidad de veces que un término aparece en la tabla de búsqueda en el conjunto de datos de entrada y escribe el recuento junto con el término de la tabla de referencia en columnas en la salida de transformación. Esta transformación resulta útil para crear una lista personalizada de palabras basada en el texto de entrada, que incluye estadísticas de frecuencia de aparición de palabras.  
@@ -113,7 +113,7 @@ ms.lasthandoff: 01/25/2018
 ## <a name="term-lookup-transformation-editor-term-lookup-tab"></a>Editor de transformación Búsqueda de términos (pestaña Búsqueda de términos)
   Use la pestaña **Búsqueda de términos** del cuadro de diálogo **Editor de transformación Búsqueda de términos** para asignar una columna de entrada a una columna de búsqueda en una tabla de referencia y para proporcionar un alias a cada columna de salida.  
   
-### <a name="options"></a>.  
+### <a name="options"></a>Opciones  
  **Columnas de entrada disponibles**  
  Con las casillas, seleccione las columnas de entrada que se van a pasar directamente a la salida sin cambios. Arrastre una columna de entrada a la lista **Columnas de referencia disponibles** para asignarla a una columna de búsqueda en la tabla de referencia. Las columnas de entrada y búsqueda deben coincidir en los tipos de datos admitidos, DT_NTEXT o DT_WSTR. Seleccione una línea de asignación y haga clic con el botón derecho para editar las asignaciones en el cuadro de diálogo [Crear relaciones](../../../integration-services/data-flow/transformations/create-relationships.md) .  
   
@@ -132,7 +132,7 @@ ms.lasthandoff: 01/25/2018
 ## <a name="term-lookup-transformation-editor-reference-table-tab"></a>Editor de transformación Búsqueda de términos (pestaña Tabla de referencia)
   Use la pestaña **Tabla de referencia** del cuadro de diálogo **Editor de transformación Búsqueda de términos** para especificar la conexión con la tabla de referencia (búsqueda).  
   
-### <a name="options"></a>.  
+### <a name="options"></a>Opciones  
  **OLE DB, administrador de conexiones**  
  Seleccione un administrador de conexiones de la lista o cree una conexión haciendo clic en **Nuevo**.  
   
@@ -148,7 +148,7 @@ ms.lasthandoff: 01/25/2018
 ## <a name="term-lookup-transformation-editor-advanced-tab"></a>Editor de transformación Búsqueda de términos (pestaña Avanzadas)
   Use la pestaña **Avanzadas** del cuadro de diálogo **Editor de transformación Búsqueda de términos** para especificar si en la búsqueda es necesario distinguir mayúsculas de minúsculas.  
   
-### <a name="options"></a>.  
+### <a name="options"></a>Opciones  
  **Utilizar búsqueda de términos con distinción de mayúsculas y minúsculas**  
  Indique si desea que en la búsqueda se distingan las mayúsculas de las minúsculas. El valor predeterminado es **False**.  
   

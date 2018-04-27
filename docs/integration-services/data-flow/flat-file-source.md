@@ -1,16 +1,16 @@
 ---
 title: Origen de archivo plano | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 03/01/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: integration-services
-ms.service: 
+ms.service: ''
 ms.component: data-flow
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - integration-services
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 f1_keywords:
 - sql13.dts.designer.flatfilesource.f1
@@ -23,16 +23,16 @@ helpviewer_keywords:
 - flat files
 - Flat File source
 ms.assetid: 4a64f7f3-f25d-4db0-93b3-a29496030e58
-caps.latest.revision: 
+caps.latest.revision: 50
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 4bc2455f71ec0aa3f927249d50524cfb98f9b380
-ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
+ms.openlocfilehash: dfb8f75feeca8669f87622c895aa681121ede8f7
+ms.sourcegitcommit: a85a46312acf8b5a59a8a900310cf088369c4150
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/25/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="flat-file-source"></a>origen de archivo plano
   El origen de archivo plano lee datos de un archivo de texto. El archivo de texto puede tener formato delimitado, de ancho fijo o mixto.  
@@ -81,7 +81,7 @@ ms.lasthandoff: 01/25/2018
   
 -   Un administrador de conexiones de varios archivos planos, si el origen son varios archivos planos y la tarea Flujo de datos se encuentra en un contenedor de bucles, como el contenedor de bucles For. En cada bucle del contenedor, el origen de archivos planos carga los datos del siguiente nombre de archivo que proporciona el administrador de conexiones de varios archivos planos. Para más información, consulte [Multiple Flat Files Connection Manager](../../integration-services/connection-manager/multiple-flat-files-connection-manager.md).  
   
-### <a name="options"></a>.  
+### <a name="options"></a>Opciones  
  **Flat file connection manager**  
  Seleccione un administrador de conexiones de la lista o cree un nuevo administrador de conexiones haciendo clic en **Nuevo**.  
   
@@ -100,7 +100,7 @@ ms.lasthandoff: 01/25/2018
 > [!NOTE]  
 >  La propiedad **FileNameColumnName** del origen de archivo plano y la propiedad **FastParse** de sus columnas de salida no están disponibles en el **Editor de origen de archivos planos**, pero se puede establecer con el **Editor avanzado**. Para obtener más información acerca de estas propiedades, vea la sección sobre el origen de archivos planos en [Flat File Custom Properties](../../integration-services/data-flow/flat-file-custom-properties.md).  
   
-### <a name="options"></a>.  
+### <a name="options"></a>Opciones  
  **Columnas externas disponibles**  
  Muestra la lista de columnas externas disponibles en el origen de datos. Esta tabla no se puede usar para agregar o quitar columnas.  
   
@@ -113,7 +113,7 @@ ms.lasthandoff: 01/25/2018
 ## <a name="flat-file-source-editor-error-output-page"></a>Editor de origen de archivos planos (página Salida de error)
   Use la página **Salida de error** del cuadro de diálogo **Editor de origen de archivos planos** para seleccionar opciones de control de errores y establecer las propiedades en las columnas de salida de error.  
   
-### <a name="options"></a>.  
+### <a name="options"></a>Opciones  
  **Entrada/salida**  
  Muestra el nombre del origen de datos.  
   

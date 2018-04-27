@@ -2,7 +2,7 @@
 title: Páginas de propiedades de SQL Server Management Studio | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: sql-tools
 ms.service: ''
 ms.component: ssms
@@ -20,14 +20,15 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 3a74c0a9090936fc172642e06d3608c407718712
-ms.sourcegitcommit: b6116b434d737d661c09b78d0f798c652cf149f3
+ms.openlocfilehash: 0d465ecadb7f818cae84d407e1ec52db50502fcd
+ms.sourcegitcommit: a85a46312acf8b5a59a8a900310cf088369c4150
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/17/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="property-pages-in-sql-server-management-studio"></a>Páginas de propiedades de SQL Server Management Studio
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../includes/appliesto-ss-asdb-asdw-pdw-md.md)] En los cuadros de diálogo de páginas de propiedades de [!INCLUDE[msCoName](../includes/msconame_md.md)] [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull_md.md)] se usa un formato común para mostrar la información con categorías que se expanden y se contraen. Los campos que aparecen dependen de la propiedad concreta. Las propiedades atenuadas son de solo lectura. Muy cerca de la parte superior de cada página de propiedades se encuentran los botones Por categorías y Alfabético.  
+[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
+Los cuadros de diálogo de las páginas de propiedades de [!INCLUDE[msCoName](../includes/msconame_md.md)] [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull_md.md)] utilizan un formato común para mostrar la información con categorías que se expanden y se contraen. Los campos que aparecen dependen de la propiedad concreta. Las propiedades atenuadas son de solo lectura. Muy cerca de la parte superior de cada página de propiedades se encuentran los botones Por categorías y Alfabético.  
   
 En la tabla siguiente se describen los elementos comunes de los cuadros de diálogo de las páginas de propiedades de [!INCLUDE[ssManStudio](../includes/ssmanstudio_md.md)] .  
   

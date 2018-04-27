@@ -1,16 +1,16 @@
 ---
-title: "Transformación Exportar columna | Microsoft Docs"
-ms.custom: 
+title: Transformación Exportar columna | Microsoft Docs
+ms.custom: ''
 ms.date: 03/01/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: integration-services
-ms.service: 
+ms.service: ''
 ms.component: data-flow
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - integration-services
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 f1_keywords:
 - sql13.dts.designer.exportcolumntrans.f1
@@ -24,16 +24,16 @@ helpviewer_keywords:
 - inserting data
 - truncate options [Integration Services]
 ms.assetid: 678d2dfc-e40c-4fbb-b2cc-42fffc44478a
-caps.latest.revision: 
+caps.latest.revision: 45
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: feb8ed42fe6e9f53db23b3be1586a163bfbad43b
-ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
+ms.openlocfilehash: 9ddfcbb615c2ded4af0d75cc42bb791ac5568910
+ms.sourcegitcommit: a85a46312acf8b5a59a8a900310cf088369c4150
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/25/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="export-column-transformation"></a>Transformación Exportar columna
   La transformación Exportar columna lee datos de un flujo de datos e inserta dichos datos en un archivo. Por ejemplo, si el flujo de datos contiene información de productos, como una foto de cada producto, puede usar la transformación Exportar columna para guardar las imágenes en archivos.  
@@ -81,7 +81,7 @@ ms.lasthandoff: 01/25/2018
 ## <a name="export-column-transformation-editor-columns-page"></a>Editor de transformación Exportar columna (página Columnas)
   Use la página **Columnas** del cuadro de diálogo **Editor de transformación Exportar columna** para especificar las columnas del flujo de datos que desea extraer a los archivos. Podrá especificar si desea que la transformación Exportar columna anexe los datos a un archivo o sobrescriba un archivo existente.  
   
-### <a name="options"></a>.  
+### <a name="options"></a>Opciones  
  **Columna Extraer**  
  Seleccione de la lista las columnas de entrada que contengan datos de texto o imagen. Todas las filas deben poseer definiciones para la **Columna Extraer** y la **Columna Ruta de archivo**.  
   
@@ -100,7 +100,7 @@ ms.lasthandoff: 01/25/2018
 ## <a name="export-column-transformation-editor-error-output-page"></a>Editor de transformación Exportar columna (página Salida de error)
   Use la página **Salida de error** del cuadro de diálogo **Editor de transformación Exportar columna** para especificar cómo se controlan los errores.  
   
-### <a name="options"></a>.  
+### <a name="options"></a>Opciones  
  **Entrada/salida**  
  Muestra el nombre de la salida. Haga clic en el nombre para expandir la vista e incluir columnas.  
   

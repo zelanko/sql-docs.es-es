@@ -1,18 +1,19 @@
 ---
-title: "Temas de procedimientos de diseño de consultas y vistas (Visual Database Tools) | Microsoft Docs"
-ms.custom: 
+title: Temas de procedimientos de diseño de consultas y vistas (Visual Database Tools) | Microsoft Docs
+ms.custom: ''
 ms.date: 01/19/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: sql-tools
-ms.service: 
+ms.service: ''
 ms.component: ssms-visual-db
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: tools-ssms
-ms.tgt_pltfrm: 
+ms.technology:
+- tools-ssms
+ms.tgt_pltfrm: ''
 ms.topic: article
 f1_keywords:
-- "• vs.solutionexplorer.file.query"
+- • vs.solutionexplorer.file.query
 - vs.solutionexplorer.file.query
 helpviewer_keywords:
 - queries [Visual Database Tools]
@@ -23,19 +24,20 @@ helpviewer_keywords:
 - Query Designer [SQL Server], about Query Designer
 - Visual Database Tools [SQL Server], queries
 ms.assetid: 200903f4-1208-4563-9dca-26aabaacfa20
-caps.latest.revision: "3"
+caps.latest.revision: 3
 author: stevestein
 ms.author: sstein
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 33b5f17a28639d750e1c3df36c5619d33740c3db
-ms.sourcegitcommit: b6116b434d737d661c09b78d0f798c652cf149f3
+ms.openlocfilehash: b5a5a89ba59156316ed448215a58abcc833b2591
+ms.sourcegitcommit: a85a46312acf8b5a59a8a900310cf088369c4150
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/17/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="design-queries-and-views-how-to-topics-visual-database-tools"></a>Temas de procedimientos de diseño de consultas y vistas (Visual Database Tools)
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)] El Diseñador de consultas y vistas le ayuda a crear y mantener los componentes de recuperación y manipulación de datos de la aplicación.  
+[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
+El Diseñador de consultas y vistas le ayudará a crear y mantener los componentes de recuperación y manipulación de datos de la aplicación.  
   
 ## <a name="in-this-section"></a>En esta sección  
 [Abrir el Diseñador de consultas y vistas &#40;Visual Database Tools&#41;](../../ssms/visual-db-tools/open-the-query-and-view-designer-visual-database-tools.md)  

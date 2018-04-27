@@ -2,7 +2,7 @@
 title: Trabajar con archivos de Excel con la tarea Script | Microsoft Docs
 ms.custom: ''
 ms.date: 04/02/2018
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: integration-services
 ms.service: ''
 ms.component: extending-packages-scripting-task-examples
@@ -25,11 +25,11 @@ author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: a533795d6d6017c885b887e35b8e996ab82493df
-ms.sourcegitcommit: 059fc64ba858ea2adaad2db39f306a8bff9649c2
+ms.openlocfilehash: 8c9816f0fb04fc7196692efc7bfa1addde5e0f53
+ms.sourcegitcommit: a85a46312acf8b5a59a8a900310cf088369c4150
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/04/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="working-with-excel-files-with-the-script-task"></a>Trabajar con archivos de Excel con la tarea Script
   [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] proporciona el administrador de conexiones de Excel, el origen de Excel y el destino de Excel para trabajar con datos almacenados en hojas de cálculo en el formato de archivo de [!INCLUDE[msCoName](../../includes/msconame-md.md)] Excel. Las técnicas descritas en este tema usan la tarea Script para obtener información acerca de las bases de datos de Excel disponibles (archivos de libro) y tablas (hojas de cálculo y rangos con nombre).
@@ -152,7 +152,7 @@ public class ScriptMain
   
 2.  En el **Editor de la tarea Script**, en la pestaña **Script**, haga clic en **ReadOnlyVariables** y escriba el valor de propiedad mediante uno de los métodos siguientes:  
   
-    -   Escriba **ExcelTable** y **ExcelFile** separado por comas**.**  
+    -   Escriba **ExcelTable** y **ExcelFile** separado por comas **.**  
   
          -O bien-  
   

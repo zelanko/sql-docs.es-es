@@ -2,7 +2,7 @@
 title: Destino de Excel | Microsoft Docs
 ms.custom: ''
 ms.date: 04/02/2018
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: integration-services
 ms.service: ''
 ms.component: data-flow
@@ -26,11 +26,11 @@ author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 794d9041bc3057d2737c88e2815d98a9d441beb3
-ms.sourcegitcommit: 059fc64ba858ea2adaad2db39f306a8bff9649c2
+ms.openlocfilehash: ccce46386f5b797cef005aeed9ebd1eb65724034
+ms.sourcegitcommit: a85a46312acf8b5a59a8a900310cf088369c4150
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/04/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="excel-destination"></a>Destino de Excel
   El destino de Excel carga datos en hojas de cálculo o rangos en libros de [!INCLUDE[msCoName](../../includes/msconame-md.md)] Excel.  
@@ -119,7 +119,7 @@ ms.lasthandoff: 04/04/2018
 ## <a name="excel-destination-editor-mappings-page"></a>Editor de destino de Excel (página Asignaciones)
   Utilice la página **Asignaciones** del cuadro de diálogo **Editor de destino de Excel** para asignar columnas de entrada a columnas de destino.  
   
-### <a name="options"></a>.  
+### <a name="options"></a>Opciones  
  **Columnas de entrada disponibles**  
  Muestra la lista de columnas de entrada disponibles. Utilice una operación de arrastrar y colocar para asignar columnas de entrada disponibles de la tabla a columnas de destino.  
   
@@ -135,7 +135,7 @@ ms.lasthandoff: 04/04/2018
 ## <a name="excel-destination-editor-error-output-page"></a>Editor de destino de Excel (página Salida de error)
   Utilice la página **Avanzadas** del cuadro de diálogo **Editor de destino de Excel** para especificar opciones para el control de errores.  
   
-### <a name="options"></a>.  
+### <a name="options"></a>Opciones  
  **Entrada o salida**  
  Muestra el nombre del origen de datos.  
   

@@ -1,16 +1,16 @@
 ---
 title: Tarea Procesamiento de Analysis Services | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: integration-services
-ms.service: 
+ms.service: ''
 ms.component: control-flow
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - integration-services
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 f1_keywords:
 - sql13.dts.designer.asprocessingtask.f1
@@ -20,16 +20,16 @@ helpviewer_keywords:
 - Analysis Services Processing task
 - processing objects [Integration Services]
 ms.assetid: e5748836-b4ce-4e17-ab6b-617a336f02f4
-caps.latest.revision: 
+caps.latest.revision: 52
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: cad0ce4adcf182892b62473aacb9e1c8d310f6c4
-ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
+ms.openlocfilehash: 9541398a40c29f18d377beea645234830fbf206f
+ms.sourcegitcommit: a85a46312acf8b5a59a8a900310cf088369c4150
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/25/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="analysis-services-processing-task"></a>Procesamiento de Analysis Services, tarea
   La tarea Procesamiento de [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] procesa objetos de [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] como modelos tabulares, cubos, dimensiones y modelos de minería de datos.  
@@ -89,7 +89,7 @@ ms.lasthandoff: 01/25/2018
 ## <a name="analysis-services-processing-task-editor-general-page"></a>Editor de la tarea de procesamiento de Analysis Services (página General)
   Use la página **General** del cuadro de diálogo **Editor de la tarea de procesamiento de Analysis Services** para describir y asignar un nombre a la tarea de procesamiento de Analysis Services.  
   
-### <a name="options"></a>.  
+### <a name="options"></a>Opciones  
  **Nombre**  
  Escriba un nombre único para la tarea de procesamiento de Analysis Services. Este nombre se utiliza como etiqueta en el icono de tarea.  
   
@@ -112,7 +112,7 @@ ms.lasthandoff: 01/25/2018
   
 4.  Los valores de las operaciones por lotes se omiten para los modelos tabulares.  
   
-### <a name="options"></a>.  
+### <a name="options"></a>Opciones  
  **administrador de conexiones de Analysis Services**  
  Seleccione un administrador de conexiones de Analysis Services de la lista o haga clic en **Nuevo** para crear uno.  
   

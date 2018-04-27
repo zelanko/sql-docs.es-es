@@ -2,7 +2,7 @@
 title: Agregar un proyecto existente a una solución | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: sql-tools
 ms.service: ''
 ms.component: ssms-solutions
@@ -24,14 +24,15 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: ad071db3d2a369abe5dc9161e91b837369a475f9
-ms.sourcegitcommit: b6116b434d737d661c09b78d0f798c652cf149f3
+ms.openlocfilehash: 35fa29319d738a97cc4e136ed3b5afeb8a73b330
+ms.sourcegitcommit: a85a46312acf8b5a59a8a900310cf088369c4150
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/17/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="add-an-existing-project-to-a-solution"></a>Agregar un proyecto existente a una solución
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)] Se pueden agregar uno o varios proyectos a una solución ya existente. Un proyecto puede estar asociado a más de una solución.  
+[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
+Se pueden agregar uno o varios proyectos a una solución ya existente. Un proyecto puede estar asociado a más de una solución.  
   
 ### <a name="to-add-an-existing-project-to-a-solution"></a>Para agregar un proyecto existente a una solución  
   

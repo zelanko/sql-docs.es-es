@@ -2,7 +2,7 @@
 title: Elegir elementos del cuadro de herramientas (página Tareas de mantenimiento) | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: sql-tools
 ms.service: ''
 ms.component: ssms-menu
@@ -23,16 +23,17 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 5f53e840362768dde02db91d5305f043fc384985
-ms.sourcegitcommit: b6116b434d737d661c09b78d0f798c652cf149f3
+ms.openlocfilehash: f471d5997f3fe20639ca37606f3b82e3ac53fa63
+ms.sourcegitcommit: a85a46312acf8b5a59a8a900310cf088369c4150
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/17/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="choose-toolbox-items-maintenance-tasks-page"></a>Elegir elementos del cuadro de herramientas (página Tareas de mantenimiento)
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)] En esta pestaña del cuadro de diálogo **Personalizar el cuadro de herramientas** se muestra una lista de todos los componentes de tareas de mantenimiento registrados en el equipo y permite cambiar los que se muestran en el cuadro de herramientas. Puede abrir el cuadro de diálogo **Personalizar el cuadro de herramientas** en el menú **Herramientas** . Para ordenar la lista de componentes, seleccione un encabezado de columna.  
+[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
+Esta pestaña del cuadro de diálogo **Personalizar el cuadro de herramientas** muestra una lista de todos los componentes de tareas de mantenimiento registrados en el equipo y permite cambiar los que muestra el cuadro de herramientas. Puede abrir el cuadro de diálogo **Personalizar el cuadro de herramientas** en el menú **Herramientas** . Para ordenar la lista de componentes, seleccione un encabezado de columna.  
   
-## <a name="options"></a>.  
+## <a name="options"></a>Opciones  
 La pestaña **Tareas de mantenimiento** incluye las siguientes columnas de información.  
   
 **Nombre**  
@@ -46,7 +47,7 @@ Muestra la fecha de la última modificación del componente.
   
 Haga clic en un nombre para mostrar los atributos del componente en los cuadros **Idioma** y **Versión** , además del icono.  
   
-## <a name="options"></a>.  
+## <a name="options"></a>Opciones  
 **Idioma**  
 Idioma del componente.  
   

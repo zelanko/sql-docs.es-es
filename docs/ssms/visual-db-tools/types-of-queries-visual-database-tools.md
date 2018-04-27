@@ -1,15 +1,16 @@
 ---
 title: Tipos de consultas (Visual Database Tools) | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 01/19/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: sql-tools
-ms.service: 
+ms.service: ''
 ms.component: ssms-visual-db
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: tools-ssms
-ms.tgt_pltfrm: 
+ms.technology:
+- tools-ssms
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - queries [Visual Database Tools]
@@ -18,19 +19,20 @@ helpviewer_keywords:
 - View Designer, query creation
 - Visual Database Tools [SQL Server], queries
 ms.assetid: 76b6fc0e-c324-4d66-b6ed-496fa25fea1e
-caps.latest.revision: "4"
+caps.latest.revision: 4
 author: stevestein
 ms.author: sstein
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 71a0f7fbd4edf00b9f2eb8f84807f0fb2baa6318
-ms.sourcegitcommit: b6116b434d737d661c09b78d0f798c652cf149f3
+ms.openlocfilehash: 37bf68c41b7ab51592824eb51594e32da4f14ce5
+ms.sourcegitcommit: a85a46312acf8b5a59a8a900310cf088369c4150
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/17/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="types-of-queries-visual-database-tools"></a>Tipos de consultas (Visual Database Tools)
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)] El Diseñador de consultas y vistas proporciona características integradas para algunos tipos de consulta (de selección, inserción de resultados, inserción de valores, actualización, eliminación y creación de tabla) y admite también las consultas de unión, búsqueda de texto completo y de expresiones CASE.  
+[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
+El Diseñador de consultas y vistas proporciona características integradas para algunos tipos de consulta (Select, Insert Results, Insert Values, Update, Delete y Make Table) y admite también las consultas UNION, las búsquedas de texto completo y las consultas de expresiones CASE.  
   
 ## <a name="in-this-section"></a>En esta sección  
 [Tipos de consultas compatibles &#40;Visual Database Tools&#41;](../../ssms/visual-db-tools/supported-query-types-visual-database-tools.md)  

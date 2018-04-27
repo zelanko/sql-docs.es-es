@@ -2,7 +2,7 @@
 title: Ayuda de F1 de Visual Database Tools | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: sql-tools
 ms.service: ''
 ms.component: ssms-visual-db
@@ -20,14 +20,15 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: b5c1404c4f5dceb9ca5ef5b6a9be5c8a64a24dd7
-ms.sourcegitcommit: b6116b434d737d661c09b78d0f798c652cf149f3
+ms.openlocfilehash: ae151529619af34a8d801ef0efa1f82818e4d977
+ms.sourcegitcommit: a85a46312acf8b5a59a8a900310cf088369c4150
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/17/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="visual-database-tools-f1-help"></a>Ayuda de F1 de Visual Database Tools
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)] En estos temas se tratan los comandos y opciones de los cuadros de diálogo y ventanas de propiedades de los elementos de Visual Database Tools, como la ventana Propiedades de tabla y la pestaña Propiedades de columna.  
+[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
+En estos temas se tratan los comandos y las opciones de los cuadros de diálogo y las ventanas de propiedades de los elementos de Visual Database Tools, como la ventana Propiedades de la tabla y la pestaña Propiedades de columna.  
   
 Para obtener acceso a los temas del cuadro de diálogo, presione F1 cuando éste esté abierto y tenga el foco. Para obtener acceso a los temas de ventana de propiedades, haga clic en la ventana Propiedades y presione F1.  
   

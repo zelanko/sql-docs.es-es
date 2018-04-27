@@ -2,7 +2,7 @@
 title: catalog.revoke_permission (base de datos de SSISDB) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: integration-services
 ms.service: ''
 ms.component: system-stored-procedures
@@ -21,11 +21,11 @@ author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: a2c71f38fd26b56cedc2b3309067b26b1a161966
-ms.sourcegitcommit: d6b1695c8cbc70279b7d85ec4dfb66a4271cdb10
-ms.translationtype: MT
+ms.openlocfilehash: 77d957cb9b0ca6f5e3fc69eb493269785945ff91
+ms.sourcegitcommit: a85a46312acf8b5a59a8a900310cf088369c4150
+ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/10/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="catalogrevokepermission-ssisdb-database"></a>catalog.revoke_permission (base de datos de SSISDB)
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
@@ -70,10 +70,10 @@ catalog.revoke_permission [ @object_type = ] object_type
 ## <a name="result-sets"></a>Conjuntos de resultados  
  None  
   
-## <a name="remarks"></a>Comentarios  
+## <a name="remarks"></a>Notas  
  None  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>Permisos  
  Este procedimiento almacenado necesita uno de los permisos siguientes:  
   
 -   Permisos ASSIGN_PERMISSIONS en el objeto  
@@ -82,7 +82,7 @@ catalog.revoke_permission [ @object_type = ] object_type
   
 -   Pertenencia al rol de servidor de **sysadmin**  
   
-## <a name="remarks"></a>Comentarios  
+## <a name="remarks"></a>Notas  
  Si se especifica permission_type, el procedimiento almacenado quita el permiso asignado explícitamente a la entidad de seguridad del objeto. Aunque cuando no haya ninguna de esas instancias, el procedimiento devuelve un valor de código correcto (`0`). Si se omite permission_type, el procedimiento almacenado quita todos los permisos de la entidad de seguridad del objeto.  
   
 > [!NOTE]  

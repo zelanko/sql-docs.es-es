@@ -1,16 +1,16 @@
 ---
-title: "Transformación Agrupación aproximada | Microsoft Docs"
-ms.custom: 
+title: Transformación Agrupación aproximada | Microsoft Docs
+ms.custom: ''
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: integration-services
-ms.service: 
+ms.service: ''
 ms.component: data-flow
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - integration-services
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 f1_keywords:
 - sql13.dts.designer.fuzzygroupingtrans.f1
@@ -31,16 +31,16 @@ helpviewer_keywords:
 - data cleaning [Integration Services]
 - duplicate data [Integration Services]
 ms.assetid: e43f17bd-9d13-4a8f-9f29-cce44cac1025
-caps.latest.revision: 
+caps.latest.revision: 58
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 03ffaa3d6dda388fc660feafc68a57fd8ce6346c
-ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
+ms.openlocfilehash: a12b82c9a0c33438edad684b3fd7a6b5228435d4
+ms.sourcegitcommit: a85a46312acf8b5a59a8a900310cf088369c4150
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/25/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="fuzzy-grouping-transformation"></a>Agrupación aproximada, transformación
   La transformación Agrupación aproximada realiza tareas de limpieza de datos, identificando filas de datos que probablemente se van a duplicar y seleccionando una fila de datos canónica para utilizarla en la normalización de los datos.  
@@ -110,7 +110,7 @@ ms.lasthandoff: 01/25/2018
 > [!NOTE]  
 >  El servidor especificado por la conexión debe ejecutar [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]. La transformación Agrupación aproximada crea objetos de datos temporales en tempdb que pueden ser tan grandes como toda la entrada de la transformación. Mientras se ejecuta la transformación, se emiten consultas de servidor a esos objetos temporales. Esto puede afectar al rendimiento general del servidor.  
   
-### <a name="options"></a>.  
+### <a name="options"></a>Opciones  
  **Administrador de conexiones OLE DB**  
  Seleccione un administrador de conexiones OLE DB existente con el cuadro de lista, o bien cree una conexión con el botón **Nuevo** .  
   
@@ -120,7 +120,7 @@ ms.lasthandoff: 01/25/2018
 ## <a name="fuzzy-grouping-transformation-editor-columns-tab"></a>Editor de transformación Agrupación aproximada (pestaña Columnas)
   Use la pestaña **Columnas** del cuadro de diálogo **Editor de transformación Agrupación aproximada** para especificar las columnas utilizadas para agrupar filas con valores duplicados.  
   
-### <a name="options"></a>.  
+### <a name="options"></a>Opciones  
  **Columnas de entrada disponibles**  
  Seleccione en esta lista las columnas de entrada utilizadas para agrupar filas con valores duplicados.  
   
@@ -167,7 +167,7 @@ ms.lasthandoff: 01/25/2018
 > [!NOTE]  
 >  Las propiedades **Exhaustive** y **MaxMemoryUsage** de la transformación Agrupación aproximada no están disponibles en el **Editor de transformación Agrupación aproximada**, pero se pueden establecer con el **Editor avanzado**. Para obtener más información acerca de estas propiedades, vea la sección sobre la transformación Agrupación aproximada en [Transformation Custom Properties](../../../integration-services/data-flow/transformations/transformation-custom-properties.md).  
   
-### <a name="options"></a>.  
+### <a name="options"></a>Opciones  
  **Nombre de la columna de clave de entrada**  
  Especifique el nombre de una columna de salida que contenga el identificador único para cada fila de entrada. La columna **_key_in** tiene un valor que identifica de forma exclusiva cada fila.  
   

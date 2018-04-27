@@ -1,16 +1,16 @@
 ---
-title: "Tarea Transferir inicios de sesión | Microsoft Docs"
-ms.custom: 
+title: Tarea Transferir inicios de sesión | Microsoft Docs
+ms.custom: ''
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: integration-services
-ms.service: 
+ms.service: ''
 ms.component: control-flow
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - integration-services
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 f1_keywords:
 - sql13.dts.designer.transferloginstask.f1
@@ -19,16 +19,16 @@ f1_keywords:
 helpviewer_keywords:
 - Transfer Logins task [Integration Services]
 ms.assetid: 1df60fd6-c019-405d-8155-c330dbac2cc1
-caps.latest.revision: 
+caps.latest.revision: 25
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: e62891da63a881b525067dbb3afba820eed24b26
-ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
+ms.openlocfilehash: 2d85caeb45f34e1f1e7591e712dbfd6df9c3ffb9
+ms.sourcegitcommit: a85a46312acf8b5a59a8a900310cf088369c4150
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/25/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="transfer-logins-task"></a>Tarea Transferir inicios de sesión
   La tarea Transferir inicios de sesión transfiere uno o varios inicios de sesión entre instancias de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
@@ -91,7 +91,7 @@ ms.lasthandoff: 01/25/2018
 ## <a name="transfer-logins-task-editor-general-page"></a>Editor de la tarea Transferir inicios de sesión (página General)
   Utilice la página **General** del cuadro de diálogo **Editor de la tarea Transferir inicios de sesión** para asignar un nombre y describir la tarea Transferir inicios de sesión.  
   
-### <a name="options"></a>.  
+### <a name="options"></a>Opciones  
  **Nombre**  
  Escriba un nombre único para la tarea Transferir inicios de sesión. Este nombre se utiliza como etiqueta en el icono de tarea.  
   
@@ -107,7 +107,7 @@ ms.lasthandoff: 01/25/2018
 > [!IMPORTANT]  
 >  Cuando se ejecuta la tarea Transferir inicios de sesión, se crean inicios de sesión en el servidor de destino con contraseñas aleatorias y se deshabilitan las contraseñas. Para utilizar estos inicios de sesión, un miembro del rol fijo de servidor **sysadmin** debe cambiar las contraseñas y, a continuación, habilitarlas. El inicio de sesión **sa** no se puede transferir.  
   
-### <a name="options"></a>.  
+### <a name="options"></a>Opciones  
  **SourceConnection**  
  Seleccione un administrador de conexiones SMO de la lista, o bien haga clic en **\<Nueva conexión…>** para crear una conexión al servidor de origen.  
   

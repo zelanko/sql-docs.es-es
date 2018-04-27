@@ -2,7 +2,7 @@
 title: Origen de Excel | Microsoft Docs
 ms.custom: ''
 ms.date: 04/02/2018
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: integration-services
 ms.service: ''
 ms.component: data-flow
@@ -26,11 +26,11 @@ author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 6a9795de30c7d4fbe2ede9a17043a916e5953cd5
-ms.sourcegitcommit: 059fc64ba858ea2adaad2db39f306a8bff9649c2
+ms.openlocfilehash: d275a24264a3ac174908f364c99975d4a0ec0014
+ms.sourcegitcommit: a85a46312acf8b5a59a8a900310cf088369c4150
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/04/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="excel-source"></a>Origen de Excel
   El origen de Excel extrae datos de hojas de cálculo o de rangos de libros de [!INCLUDE[msCoName](../../includes/msconame-md.md)] Excel.  
@@ -168,7 +168,7 @@ ms.lasthandoff: 04/04/2018
 ## <a name="excel-source-editor-columns-page"></a>Editor de origen de Excel (página Columnas)
   Use la página **Columnas** del cuadro de diálogo **Editor de origen de Excel** para asignar una columna de salida a cada columna externa (origen).  
   
-### <a name="options"></a>.  
+### <a name="options"></a>Opciones  
  **Columnas externas disponibles**  
  Muestra la lista de columnas externas disponibles en el origen de datos. Esta tabla no se puede usar para agregar o quitar columnas.  
   
@@ -181,7 +181,7 @@ ms.lasthandoff: 04/04/2018
 ## <a name="excel-source-editor-error-output-page"></a>Editor de origen de Excel (página Salida de error)
   Utilice la página **Salida de error** del cuadro de diálogo **Editor de origen de Excel** para seleccionar opciones de control de errores y establecer las propiedades en las columnas de salida de errores.  
   
-### <a name="options"></a>.  
+### <a name="options"></a>Opciones  
  **Entrada o salida**  
  Muestra el nombre del origen de datos.  
   

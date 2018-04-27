@@ -2,7 +2,7 @@
 title: Usar informes personalizados con las propiedades de nodo del Explorador de objetos | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: sql-tools
 ms.service: ''
 ms.component: ssms-objects
@@ -20,14 +20,15 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 0cf165a803e6b6b8fa5640b5dd3e38173f59fa4c
-ms.sourcegitcommit: b6116b434d737d661c09b78d0f798c652cf149f3
+ms.openlocfilehash: c7e7370e0158b806305437d599198be966bd184f
+ms.sourcegitcommit: a85a46312acf8b5a59a8a900310cf088369c4150
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/17/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="use-custom-reports-with-object-explorer-node-properties"></a>Usar informes personalizados con las propiedades de nodo del Explorador de objetos
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)] Los informes personalizados se pueden ejecutar en el contexto de un nodo del Explorador de objetos si hacen referencia a los parámetros de informe de ese nodo. Esto permite que los informes usen el contexto actual como, por ejemplo, la base de datos actual o un objeto de la base de datos o del servidor.  
+[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
+Los informes personalizados se pueden ejecutar en el contexto de un nodo del Explorador de objetos si los informes personalizados hacen referencia a los parámetros de informe de dicho nodo. Esto permite que los informes usen el contexto actual como, por ejemplo, la base de datos actual o un objeto de la base de datos o del servidor.  
   
 ## <a name="object-explorer-node-report-parameters"></a>Parámetros del informe de un nodo del Explorador de objetos  
   

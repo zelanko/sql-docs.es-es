@@ -2,7 +2,7 @@
 title: Lista de columnas (cuadro de diálogo, Visual Database Tools) | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: sql-tools
 ms.service: ''
 ms.component: ssms-visual-db
@@ -20,20 +20,21 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 12131847bea81558f979516b413c9e6db0e2ecc7
-ms.sourcegitcommit: b6116b434d737d661c09b78d0f798c652cf149f3
+ms.openlocfilehash: 841c5c8ffd80ea335a96628009ce4aab185876ef
+ms.sourcegitcommit: a85a46312acf8b5a59a8a900310cf088369c4150
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/17/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="column-list-dialog-box-visual-database-tools"></a>Lista de columnas (cuadro de diálogo, Visual Database Tools)
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)] Al escribir consultas, puede ser útil ver una lista de columnas disponibles en los objetos con valores de tabla seleccionados.  
+[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
+Al escribir consultas, puede ser útil ver una lista de columnas disponibles en los objetos con valores de tabla seleccionados.  
   
 Para tener acceso a este cuadro de diálogo, en el panel Diagrama del menú **Diseñador de consultas** , haga clic con el botón derecho en el encabezado de un objeto con valores de tabla y, luego, haga clic en **Propiedades**. En la ventana **Propiedades** , haga clic en el campo **Lista de columnas** . A continuación, haga clic en los puntos suspensivos **(...)** que aparecen a la derecha del campo.  
   
 Este cuadro de diálogo proporciona una lista de las columnas en el objeto con valores de tabla seleccionado y propiedades básicas, como los tipos de datos y si las columnas permiten valores NULL.  
   
-## <a name="options"></a>.  
+## <a name="options"></a>Opciones  
 **Nombre**  
 Muestra el nombre de las columnas en el objeto con valores de tabla seleccionado.  
   

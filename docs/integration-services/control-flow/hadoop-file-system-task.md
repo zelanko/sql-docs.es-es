@@ -1,30 +1,30 @@
 ---
 title: Tarea Sistema de archivos de Hadoop | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 03/01/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: integration-services
-ms.service: 
+ms.service: ''
 ms.component: control-flow
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - integration-services
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 f1_keywords:
 - sql13.ssis.designer.hadoopfiletask.f1
 ms.assetid: 594aaf5d-7703-4788-897d-fb95aca798c5
-caps.latest.revision: 
+caps.latest.revision: 7
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 540e8e939321a81dfcf044516ce81fd0e6b4d6f4
-ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
+ms.openlocfilehash: b963428b347e86b10f8110b21c95b32f1c10eea0
+ms.sourcegitcommit: a85a46312acf8b5a59a8a900310cf088369c4150
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/25/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="hadoop-file-system-task"></a>Tarea Sistema de archivos de Hadoop
   La tarea Sistema de archivos de Hadoop permite que un paquete SSIS copie archivos de, en o dentro de un clúster de Hadoop.  
@@ -33,7 +33,7 @@ ms.lasthandoff: 01/25/2018
   
  ![Editor de la tarea Sistema de archivos de Hadoop](../../integration-services/control-flow/media/hadoop-filesystem-task.png "Editor de la tarea Sistema de archivos de Hadoop")  
   
-## <a name="options"></a>.  
+## <a name="options"></a>Opciones  
  Configure las siguientes opciones en el cuadro de diálogo **Hadoop File System Task Editor** (Editor de la tarea Sistema de archivos de Hadoop).  
   
 |Campo|Description|  

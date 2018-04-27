@@ -1,15 +1,16 @@
 ---
-title: "Personalizar los menús y los métodos abreviados de teclado | Microsoft Docs"
-ms.custom: 
+title: Personalizar los menús y los métodos abreviados de teclado | Microsoft Docs
+ms.custom: ''
 ms.date: 01/19/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: sql-tools
-ms.service: 
+ms.service: ''
 ms.component: ssms
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: tools-ssms
-ms.tgt_pltfrm: 
+ms.technology:
+- tools-ssms
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - SQL Server Management Studio [SQL Server], shortcuts
@@ -22,19 +23,20 @@ helpviewer_keywords:
 - customizing menus [SQL Server]
 - accelerator keys
 ms.assetid: fb4edf3c-71b6-4645-b1d1-ddfdd69f0d7b
-caps.latest.revision: "5"
+caps.latest.revision: 5
 author: stevestein
 ms.author: sstein
 manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 26565d1078d8fcb813cc634ce5d3cee05d151f4a
-ms.sourcegitcommit: b6116b434d737d661c09b78d0f798c652cf149f3
+ms.openlocfilehash: bb45c4a93083ddd6fc5c6757fe38698efd139149
+ms.sourcegitcommit: a85a46312acf8b5a59a8a900310cf088369c4150
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/17/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="customize-menus-and-shortcut-keys"></a>Personalizar los menús y los métodos abreviados de teclado
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../includes/appliesto-ss-asdb-asdw-pdw-md.md)] Una tecla de método abreviado permite seleccionar un botón o comando de menú presionando ALT+*<single letter>*. Por ejemplo, para abrir el menú **Editar** , presione ALT+E. Puede reorganizar y modificar los botones, los menús y los comandos de menú de la barra de herramientas mediante el cuadro de diálogo **Personalizar** . Se proporcionan instrucciones para cambiar la configuración mediante el mouse (ratón) y mediante el teclado.  
+[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
+Una tecla de aceleración permite seleccionar un botón o comando de menú presionando ALT+*<single letter>*. Por ejemplo, para abrir el menú **Editar** , presione ALT+E. Puede reorganizar y modificar los botones, los menús y los comandos de menú de la barra de herramientas mediante el cuadro de diálogo **Personalizar** . Se proporcionan instrucciones para cambiar la configuración mediante el mouse (ratón) y mediante el teclado.  
   
 Las teclas de aceleración de los procedimientos almacenados que usan la tecla Ctrl se pueden crear desde la página **Teclado** del cuadro de diálogo **Herramientas**/**Opciones** .  
   

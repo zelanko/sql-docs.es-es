@@ -1,28 +1,28 @@
 ---
-title: "Oracle CDC Service​ | Microsoft Docs"
-ms.custom: 
+title: Oracle CDC Service​ | Microsoft Docs
+ms.custom: ''
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: integration-services
-ms.service: 
+ms.service: ''
 ms.component: change-data-capture
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - integration-services
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: 47759ddc-358d-405b-acb9-189ada76ea6d
-caps.latest.revision: 
+caps.latest.revision: 8
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 7371c120f4ff874a878a77cd3db0df8755aebd75
-ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
+ms.openlocfilehash: 25b308788b7249f052cd877ac7e4b801f50eb5e4
+ms.sourcegitcommit: a85a46312acf8b5a59a8a900310cf088369c4150
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/25/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="the-oracle-cdc-service"></a>El servicio CDC de Oracle
   El servicio CDC de Oracle es un servicio de Windows que ejecuta el programa xdbcdcsvc.exe. El servicio CDC de Oracle se puede configurar para ejecutar varios servicios de Windows en el mismo equipo, cada uno de ellos con un nombre de servicio de Windows diferente. Se suelen crear varios servicios de Windows CDC de Oracle en un único equipo para obtener una mejor separación entre ellos o cuando cada uno de ellos debe trabajar con una instancia de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] diferente.  

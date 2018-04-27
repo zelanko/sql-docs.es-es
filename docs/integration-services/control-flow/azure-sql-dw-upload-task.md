@@ -1,31 +1,31 @@
 ---
 title: Tarea de carga de Azure SQL DW | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 12/16/2016
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: integration-services
-ms.service: 
+ms.service: ''
 ms.component: control-flow
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - integration-services
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 f1_keywords:
 - SQL13.DTS.DESIGNER.AFPDWUPTASK.F1
 - sql14.dts.designer.afpdwuptask.f1
 ms.assetid: eef82c89-228a-4dc7-9bd0-ea00f57692f5
-caps.latest.revision: 
+caps.latest.revision: 5
 author: Lingxi-Li
 ms.author: lingxl
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 2d6c95bda5faf7f3ccf8f6b9bc4774a66d482e51
-ms.sourcegitcommit: 6bd21109abedf64445bdb3478eea5aaa7553fa46
-ms.translationtype: MT
+ms.openlocfilehash: bff2df8d44cf8406a507fb764cb409f766f15bab
+ms.sourcegitcommit: a85a46312acf8b5a59a8a900310cf088369c4150
+ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/20/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="azure-sql-dw-upload-task"></a>Tarea de carga de Azure SQL DW
 La **tarea de carga de Azure SQL DW** habilita un paquete SSIS para cargar datos locales en una tabla de Azure SQL Data Warehouse (DW). El formato de archivo de origen de datos que se admite actualmente es texto delimitado en codificación UTF8. El proceso de carga sigue el enfoque eficaz de PolyBase, tal y como se describe en el artículo [Estrategias y patrones de carga de Azure SQL Data Warehouse](https://blogs.msdn.microsoft.com/sqlcat/2016/02/06/azure-sql-data-warehouse-loading-patterns-and-strategies/). En concreto, los datos primero se cargan en Azure Blob Storage y, a continuación, en Azure SQL DW. Por lo tanto, esta tarea requiere una cuenta de Azure Blob Storage.

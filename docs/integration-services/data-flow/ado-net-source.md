@@ -1,16 +1,16 @@
 ---
 title: Origen de ADO NET | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: integration-services
-ms.service: 
+ms.service: ''
 ms.component: data-flow
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - integration-services
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 f1_keywords:
 - sql13.dts.designer.adonetsource.f1
@@ -24,16 +24,16 @@ helpviewer_keywords:
 - .NET Framework [Integration Services]
 - DataReader source
 ms.assetid: 2a2f1750-2cda-4dda-9dca-623a96a6b3c0
-caps.latest.revision: 
+caps.latest.revision: 101
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 05753f3cea7979f78499dc68cb4baa784367b383
-ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
+ms.openlocfilehash: 4142fa0f9a01631574cca90a3a21b2047cd30820
+ms.sourcegitcommit: a85a46312acf8b5a59a8a900310cf088369c4150
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/25/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="ado-net-source"></a>Origen de ADO NET
   El origen de ADO NET consume datos de un proveedor .NET y hace que los datos estén disponibles para el flujo de datos.  
@@ -158,7 +158,7 @@ ms.lasthandoff: 01/25/2018
   
 3.  En el **Editor de orígenes de ADO NET**, haga clic en **Columnas**.  
   
-### <a name="options"></a>.  
+### <a name="options"></a>Opciones  
  **Columnas externas disponibles**  
  Muestra la lista de columnas externas disponibles en el origen de datos. Esta tabla no se puede usar para agregar o quitar columnas.  
   
@@ -181,7 +181,7 @@ ms.lasthandoff: 01/25/2018
   
 3.  En el **Editor de orígenes de ADO NET**, haga clic en **Salida de error**.  
   
-### <a name="options"></a>.  
+### <a name="options"></a>Opciones  
  **Entrada/salida**  
  Muestra el nombre del origen de datos.  
   

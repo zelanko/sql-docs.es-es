@@ -1,28 +1,28 @@
 ---
 title: Change Data Capture Service para Oracle de Attunity (Ayuda de F1) | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 03/20/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: integration-services
-ms.service: 
+ms.service: ''
 ms.component: change-data-capture
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - integration-services
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: reference
 ms.assetid: 0617fca6-1bc1-4ad2-9986-fab94ea0a6f0
-caps.latest.revision: 
+caps.latest.revision: 6
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: fdc72cfc3a6265c54d8b7f78a1266cea1a0e8756
-ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
+ms.openlocfilehash: af7aa5b49a382160e10a7208838e38528c03471e
+ms.sourcegitcommit: a85a46312acf8b5a59a8a900310cf088369c4150
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/25/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="change-data-capture-service-for-oracle-by-attunity-f1-help"></a>Servicio de captura de datos modificados para Oracle de Attunity (Ayuda de F1)
   La Consola de configuración del servicio CDC se emplea para definir, actualizar y eliminar un servicio CDC de Oracle local.  

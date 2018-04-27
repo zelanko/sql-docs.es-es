@@ -2,7 +2,7 @@
 title: Trabajar con diagramas de base de datos (Visual Database Tools) | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: sql-tools
 ms.service: ''
 ms.component: ssms-visual-db
@@ -25,14 +25,15 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: d1e2aa0e2e1c3ff69319e4183f6d68352f5937ea
-ms.sourcegitcommit: b6116b434d737d661c09b78d0f798c652cf149f3
+ms.openlocfilehash: b46ab578e647c885dec4d99cb390786bef0cf897
+ms.sourcegitcommit: a85a46312acf8b5a59a8a900310cf088369c4150
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/17/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="work-with-database-diagrams-visual-database-tools"></a>Trabajar con diagramas de base de datos (Visual Database Tools)
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)] Puede crear un diagrama visual de la base de datos con el Diseñador de base de datos. En los temas siguientes se tratan los conceptos básicos relativos al uso del diseñador para trabajar con diagramas de base de datos.  
+[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
+Puede crear un diagrama visual de la base de datos con el Diseñador de base de datos. En los temas siguientes se tratan los conceptos básicos relativos al uso del diseñador para trabajar con diagramas de base de datos.  
   
 ## <a name="in-this-section"></a>En esta sección  
 [Crear un diagrama de base de datos nuevo &#40;Visual Database Tools&#41;](../../ssms/visual-db-tools/create-a-new-database-diagram-visual-database-tools.md)  

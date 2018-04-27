@@ -1,16 +1,16 @@
 ---
 title: Trabajos del Agente SQL Server para paquetes | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: integration-services
-ms.service: 
+ms.service: ''
 ms.component: packages
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - integration-services
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - jobs [Integration Services]
@@ -18,16 +18,16 @@ helpviewer_keywords:
 - scheduling packages [Integration Services]
 - SQL Server Agent [Integration Services]
 ms.assetid: ecf7a5f9-b8a7-47f1-9ac0-bac07cb89e31
-caps.latest.revision: 
+caps.latest.revision: 54
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ms.workload: Active
-ms.openlocfilehash: 6b43c3a8b3d438bb211570921e06bb2085c0d022
-ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
+ms.openlocfilehash: 50d8803f21ddb9687bfcc861a683932a0ba53f44
+ms.sourcegitcommit: a85a46312acf8b5a59a8a900310cf088369c4150
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/25/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="sql-server-agent-jobs-for-packages"></a>Trabajos del Agente SQL Server para paquetes
   Puede automatizar y programar la ejecución de paquetes de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] mediante el Agente [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Puede programar paquetes que se implementan en el servidor de [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] y se almacena en [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], el almacén de paquetes de [!INCLUDE[ssIS](../../includes/ssis-md.md)] y el sistema de archivos.  
@@ -144,7 +144,7 @@ ms.lasthandoff: 01/25/2018
   
      **Origen del paquete**: Catálogo de SSIS  
   
-    |Pestaña|.|  
+    |Pestaña|Opciones|  
     |---------|-------------|  
     |**Paquete**|**Server**<br /><br /> Escriba o seleccione el nombre de la instancia del servidor de bases de datos que hospeda el catálogo de SSISDB.<br /><br /> Cuando **Catálogo de SSIS** es el origen del paquete, puede iniciar sesión en el servidor usando solo una cuenta de usuario de Microsoft Windows. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] no está disponible.|  
     ||**Paquete**<br /><br /> Haga clic en el botón de puntos suspensivos y seleccione un paquete.<br /><br /> Está seleccionando un paquete de una carpeta bajo el nodo **Catálogos de Integration Services** del **Explorador de objetos**.|  
@@ -153,14 +153,14 @@ ms.lasthandoff: 01/25/2018
     |**Avanzadas**<br /><br /> Se encuentra en la pestaña **Configuration** .|Configure los siguientes valores adicionales para la ejecución del paquete:|  
     ||**Invalidaciones de propiedad**:<br /><br /> Haga clic en **Agregar** para especificar un nuevo valor para una propiedad del paquete, especifique la ruta de acceso de la propiedad e indique si el valor de propiedad es importante. El servidor de [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] cifra la información confidencial. Para editar o quitar la configuración de una propiedad, haga clic en una fila en el cuadro **Invalidaciones de propiedad** y, a continuación, haga clic en **Editar** o en **Quitar**. Puede averiguar la ruta de acceso de la propiedad realizando una de las siguientes acciones.<br /><br /> - Copie la ruta de acceso de propiedad del archivo de configuración XML (\*.dtsconfig). La ruta de acceso aparece en la sección Configuration, como un valor del atributo Path. A continuación se muestra un ejemplo de la ruta de acceso para la propiedad MaximumErrorCount: \Package.Properties[MaximumErrorCount]<br /><br /> - Ejecute el **Asistente para la configuración de paquetes** y copie las rutas de acceso de propiedad de la página final **Finalización del asistente** . Después puede cancelar el asistente.<br /><br /> <br /><br /> Nota: La opción **Invalidaciones de propiedad** está pensada para paquetes cuyas configuraciones actualizó desde una versión anterior de [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]. Los paquetes que se crean con [!INCLUDE[ssISCurrent](../../includes/ssiscurrent-md.md)] y se implementan en el servidor de [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] usan parámetros en lugar de configuraciones.|  
     ||**Nivel de registro**<br /><br /> Seleccione uno de los niveles de registro siguientes para la ejecución del paquete. Tenga en cuenta que la selección del nivel de registro **Rendimiento** o **Detallado** puede afectar al rendimiento de la ejecución del paquete.<br /><br /> **Ninguno**:<br />                          El registro está desactivado. Solo se registra el estado de ejecución del paquete.<br /><br /> **Básico**:<br />                          Se registran todos los eventos, excepto los eventos personalizados y de diagnóstico. Es el valor predeterminado para el nivel de registro.<br /><br /> **Rendimiento**:<br />                          Solo se registran las estadísticas de rendimiento, y los eventos OnError y OnWarning.<br /><br /> **Detallado**:<br />                          Se registran todos los eventos, incluidos los eventos personalizados y de diagnóstico.<br /><br /> El nivel de registro que seleccione determinará la información que se muestra en las vistas de SSISDB y en los informes para el servidor de [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] . Para más información, consulte [Registro de Integration Services (SSIS)](../../integration-services/performance/integration-services-ssis-logging.md).|  
-    ||**Volcado de errores**<br /><br /> Especifique si se generarán archivos de volcado de depuración cuando se produzca algún error durante la ejecución del paquete. Los archivos contienen información sobre la ejecución del paquete que puede ayudarle a solucionar problemas. Si se selecciona esta opción y se produce un error durante la ejecución, [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] crea un archivo .mdmp (archivo binario) y un archivo .tmp (archivo de texto). De forma predeterminada, [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] almacena los archivos en la carpeta *\<unidad>:*\Archivos de programa\Microsoft SQL Server\110\Shared\ErrorDumps.|  
+    ||**Volcado de errores**<br /><br /> Especifique si se generarán archivos de volcado de depuración cuando se produzca algún error durante la ejecución del paquete. Los archivos contienen información sobre la ejecución del paquete que puede ayudarle a solucionar problemas. Si se selecciona esta opción y se produce un error durante la ejecución, [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] crea un archivo .mdmp (archivo binario) y un archivo .tmp (archivo de texto). De forma predeterminada, [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] almacena los archivos en la carpeta *\<unidad>:* \Archivos de programa\Microsoft SQL Server\110\Shared\ErrorDumps.|  
     ||**Tiempo de ejecución de 32 bits**<br /><br /> Indique si quiere ejecutar el paquete mediante una versión de 32 bits de la utilidad dtexec en un equipo de 64 bits que tenga la versión de 64 bits de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] y el Agente [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] instalado.<br /><br /> Quizás necesite ejecutar el paquete con la versión de 32 bits dtexec si por ejemplo el paquete usa un proveedor OLE DB nativo que no está disponible en una versión de 64 bits. Para obtener más información, vea [Consideraciones sobre 64 bits para Integration Services](http://msdn.microsoft.com/library/ms141766\(SQL.105\).aspx).<br /><br /> De forma predeterminada, al seleccionar el tipo de paso de trabajo **Paquete SQL Server Integration Services** , el Agente [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ejecuta el paquete con la versión de la utilidad dtexec que el sistema invoca automáticamente. El sistema invoca la versión de 32 o de 64 bits de la utilidad en función del procesador del equipo, y la versión de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] y del Agente [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] que se ejecuta en el equipo.|  
   
      **Origen del paquete**:  SQL Server, el almacén de paquetes SSIS o sistema de archivos  
   
      Muchas de las opciones que se pueden establecer para los paquetes almacenados en SQL Server, el Almacén de paquetes SSIS o el sistema de archivos corresponden a las opciones de la línea de comandos para la utilidad **dtexec** de símbolo del sistema. Para más información sobre la utilidad y las opciones de la línea de comandos, vea [Utilidad dtexec](../../integration-services/packages/dtexec-utility.md).  
   
-    |Pestaña|.|  
+    |Pestaña|Opciones|  
     |---------|-------------|  
     |**Paquete**<br /><br /> Estas son las opciones de la pestaña para los paquetes almacenados en [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] o en el Almacén de paquetes [!INCLUDE[ssIS](../../includes/ssis-md.md)] .|**Server**<br /><br /> Escriba o seleccione el nombre de la instancia de servidor de bases de datos para [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] o el servicio [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] .|  
     ||**Utilizar autenticación de Windows**<br /><br /> Seleccione esta opción para iniciar sesión en el servidor con una cuenta de usuario de Microsoft Windows.|  

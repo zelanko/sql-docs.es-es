@@ -2,7 +2,7 @@
 title: Utilidad de ejecución de paquetes (dtexecui) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: integration-services
 ms.service: ''
 ms.component: packages
@@ -31,14 +31,14 @@ author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: de1484e04318c45057213226016379326e670304
-ms.sourcegitcommit: d6b1695c8cbc70279b7d85ec4dfb66a4271cdb10
-ms.translationtype: MT
+ms.openlocfilehash: dd6097e9c173196466870fea63a0c1334c7a37b5
+ms.sourcegitcommit: a85a46312acf8b5a59a8a900310cf088369c4150
+ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/10/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="execute-package-utility-dtexecui"></a>Utilidad de ejecución de paquetes (dtexecui)
-  Use la **Utilidad de ejecución de paquetes** para ejecutar paquetes de [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]. La utilidad ejecuta los paquetes almacenados en una de estas tres ubicaciones: la base de datos de [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , el almacén de paquetes de [!INCLUDE[ssIS](../../includes/ssis-md.md)] y el sistema de archivos. Esta interfaz de usuario, que se puede iniciar desde [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] o escribiendo **dtexecui** en el símbolo del sistema, es una alternativa a ejecutar paquetes con la herramienta del símbolo del sistema **DTExec** .  
+  Use la **Utilidad de ejecución de paquetes** para ejecutar paquetes de [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] . La utilidad ejecuta los paquetes almacenados en una de estas tres ubicaciones: la base de datos de [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , el almacén de paquetes de [!INCLUDE[ssIS](../../includes/ssis-md.md)] y el sistema de archivos. Esta interfaz de usuario, que se puede iniciar desde [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] o escribiendo **dtexecui** en el símbolo del sistema, es una alternativa a ejecutar paquetes con la herramienta del símbolo del sistema **DTExec** .  
   
  Los paquetes se ejecutan en el mismo proceso que la utilidad **dtexecui.exe** . Como esta utilidad es una herramienta de 32 bits, los paquetes que se ejecutan con **dtexecui.exe** en un entorno de 64 bits se ejecutan en Windows en Win32 (WOW). Al desarrollar y probar comandos mediante la utilidad dtexecui.exe en un equipo de 64 bits, debe probar los comandos en modo de 64 bits mediante la versión de 64 bits de **dtexecui.exe** antes de implementar o programar los comandos en un servidor de producción.  
   
@@ -73,14 +73,14 @@ ms.lasthandoff: 04/10/2018
   
 |||  
 |-|-|  
-|Value|Description|  
+|Valor|Description|  
 |**SQL Server**|Seleccione esta opción si el paquete reside en [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Especifique una instancia de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] y proporcione un nombre de usuario y una contraseña para llevar a cabo la autenticación de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Cada nombre de usuario y contraseña agrega las opciones **/USER** *username* y **/PASSWORD** *password* options to the commy prompt.|  
 |**Sistema de archivos**|Seleccione esta opción si el paquete reside en el sistema de archivos.|  
 |**Almacén de paquetes SSIS**|Seleccione esta opción si el paquete reside en el Almacén de paquetes [!INCLUDE[ssIS](../../includes/ssis-md.md)] .|  
   
  Cada una de estas selecciones tiene el siguiente conjunto de opciones.  
   
- **Execute**  
+ **Ejecutar**  
  Haga clic para ejecutar el paquete.  
   
  **Cerrar**  
@@ -146,7 +146,7 @@ ms.lasthandoff: 04/10/2018
  **Quitar**  
  Seleccione un archivo de configuración de la lista y, después, haga clic en **Quitar**.  
   
- **Execute**  
+ **Ejecutar**  
  Haga clic para ejecutar el paquete.  
   
  **Cerrar**  
@@ -168,7 +168,7 @@ ms.lasthandoff: 04/10/2018
  **Quitar**  
  Para quitar un archivo de comandos, selecciónelo en el cuadro de texto y haga clic en el botón **Quitar** .  
   
- **Execute**  
+ **Ejecutar**  
  Haga clic para ejecutar el paquete.  
   
  **Cerrar**  
@@ -181,13 +181,13 @@ ms.lasthandoff: 04/10/2018
  **Connection Manager**  
  Active esta casilla para que la columna **Cadena de conexión** se pueda editar.  
   
- **Description**  
+ **Descripción**  
  Vea una descripción de cada administrador de conexiones. Las descripciones no se pueden editar.  
   
  **Cadena de conexión**  
  Edite la cadena de conexión para un administrador de conexiones. Este campo solamente se puede editar si la casilla **Administrador de conexiones** está activada.  
   
- **Execute**  
+ **Ejecutar**  
  Haga clic para ejecutar el paquete.  
   
  **Cerrar**  
@@ -234,7 +234,7 @@ ms.lasthandoff: 04/10/2018
  **Eventos de consola**  
  Indica los eventos y los tipos de mensajes que se notificarán.  
   
- **None**  
+ **Ninguno**  
  Seleccione esta opción para no obtener elaborar ningún informe.  
   
  **Errores**  
@@ -282,7 +282,7 @@ ms.lasthandoff: 04/10/2018
  **Hora de inicio y finalización**  
  Seleccione esta opción para notificar cuándo el paquete comienza y termina.  
   
- **Execute**  
+ **Ejecutar**  
  Haga clic para ejecutar el paquete.  
   
  **Cerrar**  
@@ -301,7 +301,7 @@ ms.lasthandoff: 04/10/2018
  **Quitar**  
  Seleccione un proveedor de registro y haga clic para quitarlo.  
   
- **Execute**  
+ **Ejecutar**  
  Haga clic para ejecutar el paquete.  
   
  **Cerrar**  
@@ -320,7 +320,7 @@ ms.lasthandoff: 04/10/2018
  **Quitar**  
  Seleccione una ruta de acceso a una propiedad y haga clic para quitarla.  
   
- **Execute**  
+ **Ejecutar**  
  Haga clic para ejecutar el paquete.  
   
  **Cerrar**  
@@ -351,7 +351,7 @@ ms.lasthandoff: 04/10/2018
  Id. de versión  
  Especifique el número de identificación de la versión.  
   
- **Execute**  
+ **Ejecutar**  
  Haga clic para ejecutar el paquete.  
   
  **Cerrar**  
@@ -370,13 +370,13 @@ ms.lasthandoff: 04/10/2018
  **Command line**  
  Muestra la línea de comandos actual. Podrá editarla si ha seleccionado la opción para editar la línea de comandos manualmente.  
   
- **Execute**  
+ **Ejecutar**  
  Haga clic para ejecutar el paquete.  
   
  **Cerrar**  
  Haga clic en esta opción para cerrar el cuadro de diálogo **Utilidad de ejecución de paquetes** .  
   
-## <a name="see-also"></a>Vea también  
- [DTExec (utilidad)](../../integration-services/packages/dtexec-utility.md)  
+## <a name="see-also"></a>Ver también  
+ [dtexec (utilidad)](../../integration-services/packages/dtexec-utility.md)  
   
   

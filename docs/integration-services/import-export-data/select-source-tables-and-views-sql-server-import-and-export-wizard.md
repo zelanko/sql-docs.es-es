@@ -2,7 +2,7 @@
 title: Seleccionar tablas y vistas de origen (Asistente para importación y exportación de SQL Server) | Microsoft Docs
 ms.custom: ''
 ms.date: 04/02/2018
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: integration-services
 ms.service: ''
 ms.component: import-export-data
@@ -20,11 +20,11 @@ author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: b2424f3f7ad290a3ae81c7b97a39abf55f52e771
-ms.sourcegitcommit: 059fc64ba858ea2adaad2db39f306a8bff9649c2
+ms.openlocfilehash: d54bc394abb518238e6c00eb65e7b8121d9f2410
+ms.sourcegitcommit: a85a46312acf8b5a59a8a900310cf088369c4150
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/04/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="select-source-tables-and-views-sql-server-import-and-export-wizard"></a>Seleccionar tablas y vistas de origen (Asistente para importación y exportación de SQL Server)
   Después de especificar que quiere copiar una tabla completa o después de proporcionar una consulta, el Asistente para importación y exportación de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] muestra **Seleccionar tablas y vistas de origen**. En esta página, seleccione las tablas y vistas que quiera copiar. A continuación, asigne las tablas de origen a las tablas de destino nuevas o existentes. Opcionalmente, revise la asignación de columnas individuales y obtenga una vista previa de los datos de ejemplo.

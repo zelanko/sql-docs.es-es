@@ -1,16 +1,16 @@
 ---
 title: Registro de Integration Services (SSIS) | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: integration-services
-ms.service: 
+ms.service: ''
 ms.component: performance
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - integration-services
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 f1_keywords:
 - sql13.dts.designer.configuredtslogs.containers.f1
@@ -32,16 +32,16 @@ helpviewer_keywords:
 - Text File log provider
 - SQL Server log provider
 ms.assetid: 65e17889-371f-4951-9a7e-9932b2d0dcde
-caps.latest.revision: 
+caps.latest.revision: 69
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ms.workload: Active
-ms.openlocfilehash: f1082fb2dc121b3751a14b4cf1e291c8da9425ab
-ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
+ms.openlocfilehash: 603f1d339745e83c3a16ec5b036a8c2f2cc4c980
+ms.sourcegitcommit: a85a46312acf8b5a59a8a900310cf088369c4150
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/25/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="integration-services-ssis-logging"></a>Registro de Integration Services (SSIS)
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] incluye proveedores de registro que se pueden usar para implementar registros en paquetes, contenedores y tareas. Con los registros, se puede capturar información de tiempo de ejecución sobre un paquete, lo que le ayuda a auditar y solucionar los problemas de un paquete cada vez que se ejecuta. Por ejemplo, un registro puede capturar el nombre del operador que ejecutó el paquete y la hora en que el paquete empezó y terminó.  
@@ -286,7 +286,7 @@ ms.lasthandoff: 01/25/2018
 ###  <a name="container"></a> Configurar las opciones en el panel Contenedores  
  Utilice el panel **Contenedores** del cuadro de diálogo **Configurar registros de SSIS** para habilitar el paquete y sus contenedores para registro.  
   
-#### <a name="options"></a>.  
+#### <a name="options"></a>Opciones  
  **Contenedores**  
  Active las casillas en la vista jerárquica para habilitar el paquete y sus contenedores para registro:  
   
@@ -301,7 +301,7 @@ ms.lasthandoff: 01/25/2018
 ###  <a name="provider"></a> Configurar las opciones en la pestaña Proveedores y registros  
  Use la pestaña **Proveedores y registros** del cuadro de diálogo **Configurar registros de SSIS** con el fin de crear y configurar registros para la captura de eventos en tiempo de ejecución.  
   
-#### <a name="options"></a>.  
+#### <a name="options"></a>Opciones  
  **Tipo de proveedor**  
  Seleccione un tipo de proveedor de registro de la lista.  
   
@@ -325,7 +325,7 @@ ms.lasthandoff: 01/25/2018
 ###  <a name="detail"></a> Configurar las opciones en la pestaña Detalles  
  Utilice la pestaña **Detalles** del cuadro de diálogo **Configurar registros de SSIS** para especificar los eventos que se van a habilitar para el registro y los detalles de información que se van a registrar. La información que selecciona se aplica a todos los proveedores de registro del paquete. Por ejemplo, no puede escribir cierta información en la instancia de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] e información diferente en un archivo de texto.  
   
-#### <a name="options"></a>.  
+#### <a name="options"></a>Opciones  
  **Eventos**  
  Habilite o deshabilite eventos para el registro.  
   

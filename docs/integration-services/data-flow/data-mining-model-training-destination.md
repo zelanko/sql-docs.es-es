@@ -1,16 +1,16 @@
 ---
-title: "Destino de Entrenamiento del modelo de minería de datos | Microsoft Docs"
-ms.custom: 
+title: Destino de Entrenamiento del modelo de minería de datos | Microsoft Docs
+ms.custom: ''
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: integration-services
-ms.service: 
+ms.service: ''
 ms.component: data-flow
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - integration-services
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 f1_keywords:
 - sql13.dts.designer.dataminingmodeltrainingdest.f1
@@ -22,16 +22,16 @@ helpviewer_keywords:
 - mining models [Analysis Services], training
 - training mining models
 ms.assetid: 6bc8cbe2-46af-4f7b-93d6-86779313c9d7
-caps.latest.revision: 
+caps.latest.revision: 46
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: de320d943bf8159b211af64caa32cb37d09a7da9
-ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
+ms.openlocfilehash: 6b30be7d03d20a9bb426d7e37df634d6ba92620a
+ms.sourcegitcommit: a85a46312acf8b5a59a8a900310cf088369c4150
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/25/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="data-mining-model-training-destination"></a>entrenamiento del modelo de minería de datos, destino
   El destino de Entrenamiento del modelo de minería de datos entrena los modelos de minería de datos pasando los datos que recibe el destino por los algoritmos de modelos de minería de datos. Un destino puede entrenar varios modelos de minería de datos si los modelos se generan sobre la misma estructura de minería de datos. Para obtener más información, consulte [Mining Structure Columns](../../analysis-services/data-mining/mining-structure-columns.md) y [Mining Model Columns](../../analysis-services/data-mining/mining-model-columns.md).  
@@ -59,7 +59,7 @@ ms.lasthandoff: 01/25/2018
 ## <a name="data-mining-model-training-editor-connection-tab"></a>Editor de entrenamiento de modelos de minería de datos (pestaña Conexión)
   Utilice la página **Conexión** del cuadro de diálogo **Editor de entrenamiento de modelos de minería de datos** para seleccionar un modelo de minería de datos para entrenar.  
   
-### <a name="options"></a>.  
+### <a name="options"></a>Opciones  
  **Administrador de conexiones**  
  Seleccione una conexión de la lista de conexiones existentes de [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] , o bien cree una conexión de [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] con el botón **Nueva** que se describe más adelante.  
   
@@ -78,7 +78,7 @@ ms.lasthandoff: 01/25/2018
 ## <a name="data-mining-model-training-editor-columns-tab"></a>Editor de entrenamiento de modelos de minería de datos (pestaña Columnas)
   Utilice la página **Columnas** del cuadro de diálogo **Editor de entrenamiento de modelos de minería de datos** para asignar columnas de entrada a las columnas de la estructura de minería de datos.  
   
-## <a name="options"></a>.  
+## <a name="options"></a>Opciones  
  **Columnas de entrada disponibles**  
  Muestra la lista de columnas de entrada disponibles. Arrastre las columnas de entrada para asignarlas a las columnas de la estructura de minería de datos.  
   

@@ -1,16 +1,16 @@
 ---
 title: Contenedor de bucles Para cada uno | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 08/22/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: integration-services
-ms.service: 
+ms.service: ''
 ms.component: control-flow
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - integration-services
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 f1_keywords:
 - sql13.dts.designer.foreachloopcontainer.f1
@@ -33,16 +33,16 @@ helpviewer_keywords:
 - foreach enumerators [Integration Services]
 - containers [Integration Services], Foreach Loop
 ms.assetid: dd6cc2ba-631f-4adf-89dc-29ef449c6933
-caps.latest.revision: 
+caps.latest.revision: 73
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 834bdc1febf1f066847b33f1490f076151357e98
-ms.sourcegitcommit: 6bd21109abedf64445bdb3478eea5aaa7553fa46
-ms.translationtype: MT
+ms.openlocfilehash: 9d60344e799f0c32205c5ed697d23c645523bfe9
+ms.sourcegitcommit: a85a46312acf8b5a59a8a900310cf088369c4150
+ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/20/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="foreach-loop-container"></a>Contenedor Foreach Loop
   El contenedor de bucles Foreach define un flujo de control que se repite en un paquete. La implementación del bucle es similar a la estructura de bucle **Foreach** de los lenguajes de programación. En un paquete, los bucles se habilitan mediante un enumerador Foreach.  El contenedor de bucles Foreach repite el flujo de control para cada miembro de un enumerador especificado.  
@@ -106,7 +106,7 @@ ms.lasthandoff: 03/20/2018
   
  El contenedor de bucles Foreach no proporciona una funcionalidad, sino solamente la estructura en la que se genera el flujo de control repetible, se especifica un tipo de enumerador y se configura el enumerador. Para proporcionar la funcionalidad del contenedor, debe incluir por lo menos una tarea en el contenedor de bucles Foreach. Para más información, consulte [Integration Services Tasks](../../integration-services/control-flow/integration-services-tasks.md).  
   
- El contenedor de bucles Foreach puede incluir un flujo de control con varias tareas y otros contenedores. Agregar tareas y contenedores a un contenedor de bucles Foreach es similar a agregarlas a un paquete, salvo que las tareas y contenedores se arrastran al contenedor de bucles Foreach en lugar de al paquete. Si el contenedor de bucles Foreach incluye más de una tarea o contenedor, puede conectarlos mediante restricciones de precedencia, tal y como se hace en un paquete. Para más información, consulte [Precedence Constraints](../../integration-services/control-flow/precedence-constraints.md).  
+ El contenedor de bucles Foreach puede incluir un flujo de control con varias tareas y otros contenedores. Agregar tareas y contenedores a un contenedor de bucles Foreach es similar a agregarlas a un paquete, salvo que las tareas y contenedores se arrastran al contenedor de bucles Foreach en lugar de al paquete. Si el contenedor de bucles Foreach incluye más de una tarea o contenedor, puede conectarlos mediante restricciones de precedencia, tal y como se hace en un paquete. Para obtener más información, vea [Restricciones de precedencia](../../integration-services/control-flow/precedence-constraints.md).  
   
 ### <a name="add-and-configure-a-foreach-loop-container"></a>Agregar y configurar el contenedor de bucles Para cada uno
   
@@ -118,7 +118,7 @@ ms.lasthandoff: 03/20/2018
   
 4.  Configure el contenedor de bucles Foreach. Para más información, vea [configurar un contenedor de bucles Foreach](http://msdn.microsoft.com/library/519c6f96-5e1f-47d2-b96a-d49946948c25).  
 
-## <a name="configure-a-foreach-loop-container"></a>configurar un contenedor de bucles Foreach
+## <a name="configure-a-foreach-loop-container"></a>Configurar un contenedor de bucles Foreach
 Este procedimiento describe cómo configurar un contenedor de bucles Foreach, incluyendo expresiones de propiedad en los niveles de enumerador y contenedor.  
   
 1.  En [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)], abra el proyecto de [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] que contiene el paquete que desea.  
@@ -193,7 +193,7 @@ Utilice la página **General** del cuadro de diálogo **Editor de bucles Foreach
 > [!NOTE]  
 >  Los nombres de objeto deben ser únicos en un paquete.  
   
- **Description**  
+ **Descripción**  
  Escriba una descripción del contenedor de bucles Foreach.  
 
 ## <a name="collection-page---foreach-loop-editor"></a>Página Colección: Editor de bucles Para cada uno
@@ -205,7 +205,7 @@ Utilice la página **General** del cuadro de diálogo **Editor de bucles Foreach
  **Enumerador**  
  Seleccione el tipo de enumerador de la lista. Esta propiedad presenta las opciones indicadas en la siguiente tabla:  
   
-|Value|Description|  
+|Valor|Description|  
 |-----------|-----------------|  
 |**Enumerador de archivos para Para cada uno**|Enumera archivos. Si selecciona este valor se muestran las opciones dinámicas en la sección **Enumerador de archivos para Foreach**.|  
 |**Enumerador de elementos para Para cada uno**|Enumera los valores de un elemento. Si selecciona este valor se muestran las opciones dinámicas en la sección **Enumerador de elementos para Foreach**.|  
@@ -298,7 +298,7 @@ Utilice la página **General** del cuadro de diálogo **Editor de bucles Foreach
 > [!NOTE]  
 >  La variable debe tener el tipo de datos Object o, de lo contrario, se producirán errores.  
   
- **Temas relacionados:** [Variables de Integration Services &#40;SSIS&#41;](../../integration-services/integration-services-ssis-variables.md), [Agregar variable](http://msdn.microsoft.com/library/d09b5d31-433f-4f7c-8c68-9df3a97785d5).  
+ **Temas relacionados:** [Variables de Integration Services &#40;SSIS&#41;](../../integration-services/integration-services-ssis-variables.md), [Agregar variable](http://msdn.microsoft.com/library/d09b5d31-433f-4f7c-8c68-9df3a97785d5)  
   
  **Filas en la primera tabla**  
  Seleccione esta opción si desea enumerar solo las filas de la primera tabla.  
@@ -334,7 +334,7 @@ Utilice la página **General** del cuadro de diálogo **Editor de bucles Foreach
  **Variable**  
  Seleccione una variable de la lista o haga clic en \<**Nueva variable…**> para crear una.  
   
- **Temas relacionados:** [Variables de Integration Services &#40;SSIS&#41;](../../integration-services/integration-services-ssis-variables.md), [Agregar variable](http://msdn.microsoft.com/library/d09b5d31-433f-4f7c-8c68-9df3a97785d5).  
+ **Temas relacionados:** [Variables de Integration Services &#40;SSIS&#41;](../../integration-services/integration-services-ssis-variables.md), [Agregar variable](http://msdn.microsoft.com/library/d09b5d31-433f-4f7c-8c68-9df3a97785d5)  
   
 #### <a name="enumerator--foreach-nodelist-enumerator"></a>Enumerador = Enumerador de lista de nodos para Foreach  
  El enumerador de lista de nodos para Foreach se utiliza para enumerar el conjunto de nodos XML que resultan de aplicar una expresión XPath a un archivo XML. Por ejemplo, si el bucle Foreach incluye una tarea Script, puede utilizar el enumerador de lista de nodos para Foreach para pasar un valor que coincida con los criterios de la expresión XPath del archivo XML a la tarea Script.  
@@ -346,7 +346,7 @@ Utilice la página **General** del cuadro de diálogo **Editor de bucles Foreach
  **DocumentSourceType**  
  Seleccione el tipo de origen del documento XML. Esta propiedad presenta las opciones indicadas en la siguiente tabla:  
   
-|Value|Description|  
+|Valor|Description|  
 |-----------|-----------------|  
 |**Entrada directa**|Establezca el origen para un documento XML.|  
 |**Conexión de archivos**|Seleccione el archivo que contiene el documento XML.|  
@@ -366,7 +366,7 @@ Utilice la página **General** del cuadro de diálogo **Editor de bucles Foreach
  **EnumerationType**  
  Seleccione un tipo de enumeración de la lista. Esta propiedad presenta las opciones indicadas en la siguiente tabla:  
   
-|Value|Description|  
+|Valor|Description|  
 |-----------|-----------------|  
 |**Navigator**|Se enumera mediante un objeto XPathNavigator.|  
 |**Node**|Se enumeran los nodos devueltos por una operación XPath.|  
@@ -376,7 +376,7 @@ Utilice la página **General** del cuadro de diálogo **Editor de bucles Foreach
  **OuterXPathStringSourceType**  
  Seleccione el tipo de origen de la cadena XPath. Esta propiedad presenta las opciones indicadas en la siguiente tabla: 
   
-|Value|Description|  
+|Valor|Description|  
 |-----------|-----------------|  
 |**Entrada directa**|Establezca el origen para un documento XML.|  
 |**Conexión de archivos**|Seleccione el archivo que contiene el documento XML.|  
@@ -399,7 +399,7 @@ Utilice la página **General** del cuadro de diálogo **Editor de bucles Foreach
  **InnerXPathStringSourceType**  
  Seleccione el tipo de origen de la cadena XPath interna. Esta propiedad presenta las opciones indicadas en la siguiente tabla:  
   
-|Value|Description|  
+|Valor|Description|  
 |-----------|-----------------|  
 |**Entrada directa**|Establezca el origen para un documento XML.|  
 |**Conexión de archivos**|Seleccione el archivo que contiene el documento XML.|  
@@ -537,7 +537,7 @@ Utilice el cuadro de diálogo **Restricciones de esquema** para establecer las r
 Utilice el cuadro de diálogo **Columnas Foreach Item** para definir las columnas en los elementos que el enumerador Foreach Item enumera.  
   
 ### <a name="options"></a>Opciones  
- **Column**  
+ **Columna**  
  Enumera las columnas.  
   
  **Tipo de datos**  
@@ -562,10 +562,10 @@ Use el cuadro de diálogo **Seleccionar enumeración de SMO** para especificar e
  **Rellenar previamente**  
  Use la opción **Rellenar previamente** con el tipo de enumeración Objetos.  
   
- **Nombres de**  
+ **Nombres**  
  Utilice el tipo de enumeración Nombres.  
   
- **Urn**  
+ **URN**  
  Utilice el tipo de enumeración URN.  
   
  **Ubicaciones**  
@@ -578,7 +578,7 @@ Use el cuadro de diálogo **Seleccionar enumeración de SMO** para especificar e
   
  Para evitar consecuencias negativas de tiempos no determinativos en la ejecución paralela de tareas en el bucle, se debe configurar el paquete para que ejecute solamente un ejecutable a la vez. Por ejemplo, si un paquete puede ejecutar varias tareas simultáneamente, un contenedor de bucles Foreach que enumera archivos en la carpeta, recupera los nombres de los archivos y luego utiliza una tarea Ejecutar SQL para insertar los nombres de archivos en una tabla puede incurrir en conflictos de escritura cuando dos instancias de la tarea Ejecutar SQL intentan escribir al mismo tiempo. Para más información, vea [Usar expresiones de propiedad en paquetes](../../integration-services/expressions/use-property-expressions-in-packages.md).  
 
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Ver también  
  [Flujo de control](../../integration-services/control-flow/control-flow.md)   
  [Contenedores de Integration Services](../../integration-services/control-flow/integration-services-containers.md)  
   

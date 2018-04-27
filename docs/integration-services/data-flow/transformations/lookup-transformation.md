@@ -1,16 +1,16 @@
 ---
-title: "Transformación Búsqueda | Microsoft Docs"
-ms.custom: 
+title: Transformación Búsqueda | Microsoft Docs
+ms.custom: ''
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: integration-services
-ms.service: 
+ms.service: ''
 ms.component: data-flow
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - integration-services
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 f1_keywords:
 - sql13.dts.designer.lookuptrans.f1
@@ -26,16 +26,16 @@ helpviewer_keywords:
 - lookups [Integration Services]
 - exact matches [Integration Services]
 ms.assetid: de1cc8de-e7af-4727-b5a5-a1f0a739aa09
-caps.latest.revision: 
+caps.latest.revision: 106
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 5530fc22bd6657e3cf0888d2cca8bc8d92b01895
-ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
+ms.openlocfilehash: 4c4f5d687472d9ca5933d13cae4c0e6cd55634f0
+ms.sourcegitcommit: a85a46312acf8b5a59a8a900310cf088369c4150
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/25/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="lookup-transformation"></a>Transformación de búsqueda
   La transformación Búsqueda realiza búsquedas mediante la combinación de datos de columnas de entrada con columnas de un conjunto de datos de referencia. La búsqueda se utiliza para tener acceso a información adicional en una tabla relacionada que está basada en valores de columnas comunes.  
@@ -150,7 +150,7 @@ ms.lasthandoff: 01/25/2018
 ## <a name="lookup-transformation-editor-general-page"></a>Editor de transformación Búsqueda (página General)
   Utilice la página **General** del cuadro de diálogo Editor de transformación Búsqueda para seleccionar el modo de caché y el tipo de conexión, y especificar cómo administrar las filas sin entradas coincidentes.  
   
-### <a name="options"></a>.  
+### <a name="options"></a>Opciones  
  **Caché completa**  
  Generey cargue el conjunto de datos de referencia en la caché antes de que se ejecute la transformación Búsqueda.  
   
@@ -179,7 +179,7 @@ ms.lasthandoff: 01/25/2018
 ## <a name="lookup-transformation-editor-connection-page"></a>Editor de transformación Búsqueda (página Conexión)
   Utilice la página **Conexión** del cuadro de diálogo **Editor de transformación Búsqueda** para seleccionar un administrador de conexiones. Si selecciona un administrador de conexiones OLE DB, también selecciona una consulta, tabla o vista para generar el conjunto de datos de referencia.  
   
-### <a name="options"></a>.  
+### <a name="options"></a>Opciones  
  Las opciones siguientes están disponibles al seleccionar **Caché completa** y **Administrador de conexiones de caché** en la página General del cuadro de diálogo **Editor de transformación Búsqueda** .  
   
  **Cache connection manager**  
@@ -226,7 +226,7 @@ ms.lasthandoff: 01/25/2018
 ## <a name="lookup-transformation-editor-columns-page"></a>Editor de transformación Búsqueda (página Columnas)
   Use la página **Columnas** del cuadro de diálogo **Editor de transformación Búsqueda** para especificar la combinación entre la tabla de origen y la tabla de referencia, y para seleccionar columnas de búsqueda de la tabla de referencia.  
   
-### <a name="options"></a>.  
+### <a name="options"></a>Opciones  
  **Columnas de entrada disponibles**  
  Muestra la lista de columnas de entrada disponibles. Las columnas de entrada son las columnas del flujo de datos de un origen conectado. Las columnas de entrada y la columna de búsqueda deben tener tipos de datos coincidentes.  
   
@@ -255,7 +255,7 @@ ms.lasthandoff: 01/25/2018
 ## <a name="lookup-transformation-editor-advanced-page"></a>Editor de transformación Búsqueda (página Avanzadas)
   Utilice la página **Avanzadas** del cuadro de diálogo **Editor de transformación Búsqueda** para configurar el almacenamiento parcial en caché y modificar la instrucción SQL para la transformación Búsqueda.  
   
-### <a name="options"></a>.  
+### <a name="options"></a>Opciones  
  **Tamaño de caché (32 bits)**  
  Ajuste el tamaño de caché (en megabytes) para los equipos de 32 bits. El valor predeterminado es 5 megabytes.  
   

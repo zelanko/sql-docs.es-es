@@ -2,7 +2,7 @@
 title: Seleccionar objetos (Explorador de objetos) | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: sql-tools
 ms.service: ''
 ms.component: ssms-objects
@@ -20,16 +20,17 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 0d0caa751a54dba0f3e6d36f1d757d440c24d3ec
-ms.sourcegitcommit: b6116b434d737d661c09b78d0f798c652cf149f3
+ms.openlocfilehash: 0fdf458f4300e184fc00a8ee8116e7147f66b4d3
+ms.sourcegitcommit: a85a46312acf8b5a59a8a900310cf088369c4150
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/17/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="select-objects-object-explorer"></a>Seleccionar objetos (Explorador de objetos)
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)] Use el cuadro de diálogo **Seleccionar objetos** para agregar un objeto a una lista de otro cuadro de diálogo. El título del cuadro de diálogo y las opciones disponibles dependerán de como haya se haya abierto. Solo aparecerán las opciones disponibles; por ejemplo, solo los inicios de sesión están disponibles cuando selecciona un propietario para un nuevo objeto.  
+[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
+Use el cuadro de diálogo **Seleccionar objetos** para agregar un objeto a una lista de otro cuadro de diálogo. El título del cuadro de diálogo y las opciones disponibles dependerán de como haya se haya abierto. Solo aparecerán las opciones disponibles; por ejemplo, solo los inicios de sesión están disponibles cuando selecciona un propietario para un nuevo objeto.  
   
-## <a name="options"></a>.  
+## <a name="options"></a>Opciones  
 **Seleccionar estos tipos de objeto**  
 Muestra una lista de los tipos a los que pertenecen los objetos que se van a seleccionar. Los tipos incluyen entidades de seguridad y elementos protegibles de nivel de base de datos y nivel de [!INCLUDE[msCoName](../../includes/msconame_md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] . Este cuadro se llena con las selecciones efectuadas en el cuadro de diálogo **Seleccionar tipos de objetos** , al que se tiene acceso mediante el botón **Tipo de objeto** .  
   

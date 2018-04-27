@@ -2,7 +2,7 @@
 title: catalog.deny_permission (base de datos de SSISDB) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/04/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: integration-services
 ms.service: ''
 ms.component: system-stored-procedures
@@ -18,11 +18,11 @@ author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: a04ae959af4c0a23b3a954e590df424aa1536949
-ms.sourcegitcommit: d6b1695c8cbc70279b7d85ec4dfb66a4271cdb10
-ms.translationtype: MT
+ms.openlocfilehash: b354bace5929c4d53d492de3d07590975ab7cf1b
+ms.sourcegitcommit: a85a46312acf8b5a59a8a900310cf088369c4150
+ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/10/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="catalogdenypermission-ssisdb-database"></a>catalog.deny_permission (base de datos de SSISDB)
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
@@ -67,7 +67,7 @@ catalog.deny_permission [ @object_type = ] object_type
 ## <a name="result-sets"></a>Conjuntos de resultados  
  None  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>Permisos  
  Este procedimiento almacenado necesita uno de los permisos siguientes:  
   
 -   Permiso MANAGE_PERMISSIONS en el objeto  
@@ -76,7 +76,7 @@ catalog.deny_permission [ @object_type = ] object_type
   
 -   Pertenencia al rol de servidor de **sysadmin**  
   
-## <a name="remarks"></a>Comentarios  
+## <a name="remarks"></a>Notas  
  Este procedimiento almacenado le permite denegar los tipos de permiso descritos en la tabla siguiente:  
   
 |Valor de permission_type|Nombre del permiso|Descripción del permiso|Tipos de objetos aplicables|  

@@ -1,28 +1,28 @@
 ---
 title: Script de registro complementario de Oracle | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 03/01/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: integration-services
-ms.service: 
+ms.service: ''
 ms.component: change-data-capture
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - integration-services
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: 5e6ee618-b89b-46c7-92ad-4fc5ef7b777a
-caps.latest.revision: 
+caps.latest.revision: 6
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: a4f97617decf23356dc663805494d5a2d9e2d72c
-ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
+ms.openlocfilehash: 5197a20bac3fa979f27bee5720ce4278c0a93d4f
+ms.sourcegitcommit: a85a46312acf8b5a59a8a900310cf088369c4150
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/15/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="oracle-supplemental-logging-script"></a>Script de registro complementario de Oracle
   Este cuadro de diálogo muestra el script de registro complementario de Oracle.  
@@ -31,7 +31,7 @@ ms.lasthandoff: 02/15/2018
   
  Dependiendo de las directivas DBA de Oracle de la organización, la ejecución del script de registro complementario puede necesitar su revisión y aprobación por parte de un administrador de bases de datos de Oracle.  
   
-## <a name="options"></a>.  
+## <a name="options"></a>Opciones  
  A continuación se indican las opciones disponibles sobre cómo ejecutar el script.  
   
  **Ejecutar script**  

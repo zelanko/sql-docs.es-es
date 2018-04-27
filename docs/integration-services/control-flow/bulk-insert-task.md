@@ -1,16 +1,16 @@
 ---
-title: "Tarea Inserción masiva| Microsoft Docs"
-ms.custom: 
+title: Tarea Inserción masiva| Microsoft Docs
+ms.custom: ''
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: integration-services
-ms.service: 
+ms.service: ''
 ms.component: control-flow
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - integration-services
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 f1_keywords:
 - sql13.dts.designer.bulkinserttask.f1
@@ -21,16 +21,16 @@ helpviewer_keywords:
 - Bulk Insert task
 - copying data [Integration Services]
 ms.assetid: c5166156-6b4c-4369-81ed-27c4ce7040ae
-caps.latest.revision: 
+caps.latest.revision: 61
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: f0cf4aaff6e1108572000af08ad233038adf29b9
-ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
+ms.openlocfilehash: 3d5d2ac1ee71fa67ee426c6e9beba05d78fd06a1
+ms.sourcegitcommit: a85a46312acf8b5a59a8a900310cf088369c4150
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/25/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="bulk-insert-task"></a>Inserción masiva, tarea
   La tarea Inserción masiva proporciona una forma muy eficaz de copiar grandes cantidades de datos a una tabla o vista de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Por ejemplo, suponga que su empresa almacena una lista de productos de un millón de filas en un sistema central, pero el sistema de comercio electrónico de la empresa usa [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] para rellenar páginas web. Debe actualizar la tabla de productos de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] todas las noches con la lista maestra de productos del gran sistema. Para ello, debe guardar la lista de productos con un formato delimitado por tabuladores y utilizar la tarea Inserción masiva para copiar los datos directamente a la tabla de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
@@ -126,7 +126,7 @@ ms.lasthandoff: 01/25/2018
   
  Para más información sobre las inserciones masivas, vea [Tarea Inserción masiva](../../integration-services/control-flow/bulk-insert-task.md) y [Archivos de formato para importar o exportar datos &#40;SQL Server&#41;](../../relational-databases/import-export/format-files-for-importing-or-exporting-data-sql-server.md).  
   
-### <a name="options"></a>.  
+### <a name="options"></a>Opciones  
  **Conexión**  
  Seleccione un administrador de conexiones OLE DB de la lista, o bien haga clic en \<**Nueva conexión…**> para crear una conexión.  
   
@@ -171,7 +171,7 @@ ms.lasthandoff: 01/25/2018
 ## <a name="bulk-insert-task-editor-general-page"></a>Editor de la tarea Inserción masiva (página General)
   Use la página **General** del cuadro de diálogo **Editor de la tarea Inserción masiva** para asignar un nombre y describir la tarea Inserción masiva.  
   
-### <a name="options"></a>.  
+### <a name="options"></a>Opciones  
  **Nombre**  
  Escriba un nombre único para la tarea Inserción masiva. Este nombre se utiliza como etiqueta en el icono de tarea.  
   
@@ -186,7 +186,7 @@ ms.lasthandoff: 01/25/2018
   
  Para más información sobre las inserciones masivas, vea [Tarea Inserción masiva](../../integration-services/control-flow/bulk-insert-task.md) y [BULK INSERT &#40;Transact-SQL&#41;](../../t-sql/statements/bulk-insert-transact-sql.md).  
   
-### <a name="options"></a>.  
+### <a name="options"></a>Opciones  
  **CodePage**  
  Especifique la página de códigos de los datos incluidos en el archivo de datos.  
   

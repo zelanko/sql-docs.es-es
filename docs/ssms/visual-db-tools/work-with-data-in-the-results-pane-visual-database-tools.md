@@ -1,15 +1,16 @@
 ---
 title: Trabajar con datos en el panel Resultados (Visual Database Tools) | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 01/19/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: sql-tools
-ms.service: 
+ms.service: ''
 ms.component: ssms-visual-db
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: tools-ssms
-ms.tgt_pltfrm: 
+ms.technology:
+- tools-ssms
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - View Designer, Results pane
@@ -21,19 +22,20 @@ helpviewer_keywords:
 - queries [SQL Server], results
 - Results pane
 ms.assetid: 4f8a0080-91ef-4442-83ae-53be2f478c54
-caps.latest.revision: "4"
+caps.latest.revision: 4
 author: stevestein
 ms.author: sstein
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 506bb355413caeac330509853278f667bf73ee49
-ms.sourcegitcommit: b6116b434d737d661c09b78d0f798c652cf149f3
+ms.openlocfilehash: 6eea731585668ee27cc81e330744e5aa4fac60e6
+ms.sourcegitcommit: a85a46312acf8b5a59a8a900310cf088369c4150
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/17/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="work-with-data-in-the-results-pane-visual-database-tools"></a>Trabajar con datos en el panel Resultados (Visual Database Tools)
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)] Después de ejecutar una consulta o vista, los resultados se muestran en el panel Resultados. A continuación, puede trabajar con esos resultados. Por ejemplo, puede agregar y eliminar filas, especificar o modificar datos y navegar fácilmente entre conjuntos de resultados de gran tamaño.  
+[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
+Después de ejecutar una consulta o vista, los resultados se muestran en el panel Resultados. A continuación, puede trabajar con esos resultados. Por ejemplo, puede agregar y eliminar filas, especificar o modificar datos y navegar fácilmente entre conjuntos de resultados de gran tamaño.  
   
 La información siguiente puede ayudarle a evitar problemas y a trabajar eficazmente con sus conjuntos de resultados.  
   

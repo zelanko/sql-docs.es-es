@@ -1,16 +1,16 @@
 ---
 title: Ventana Variables | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 03/01/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: integration-services
-ms.service: 
+ms.service: ''
 ms.component: non-specific
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - integration-services
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 f1_keywords:
 - sql13.dts.designer.variables.f1
@@ -18,16 +18,16 @@ f1_keywords:
 helpviewer_keywords:
 - Variables Window dialog box
 ms.assetid: f405e5ce-ef69-4c58-8c7d-a3d44dfe9ab0
-caps.latest.revision: 
+caps.latest.revision: 53
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: a9e602fb4caf9487246e13607f8f925e416a90b9
-ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
+ms.openlocfilehash: d8486d268eb213b10cc8ec420d844d5ed8f4d5cc
+ms.sourcegitcommit: a85a46312acf8b5a59a8a900310cf088369c4150
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/25/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="variables-window"></a>Ventana Variables
   Use la ventana **Variables** para crear y modificar variables definidas por el usuario y ver variables del sistema.  
@@ -39,7 +39,7 @@ ms.lasthandoff: 01/25/2018
 > [!NOTE]  
 >  Los valores de las propiedades **Nombre** y **Espacio de nombres** deben empezar con una letra, como se define en el Estándar Unicode 2.0, o un carácter de subrayado (_). Los caracteres siguientes pueden ser letras o números, tal como se define en el Estándar Unicode 2.0, o el carácter de subrayado (\_).  
   
-## <a name="options"></a>.  
+## <a name="options"></a>Opciones  
  **Agregar variable**  
  Agrega una variable definida por el usuario.  
   

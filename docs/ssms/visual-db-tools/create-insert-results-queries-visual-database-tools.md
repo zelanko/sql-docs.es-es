@@ -1,15 +1,16 @@
 ---
-title: "Crear consultas de inserción de resultados (Visual Database Tools) | Microsoft Docs"
-ms.custom: 
+title: Crear consultas de inserción de resultados (Visual Database Tools) | Microsoft Docs
+ms.custom: ''
 ms.date: 01/19/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: sql-tools
-ms.service: 
+ms.service: ''
 ms.component: ssms-visual-db
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: tools-ssms
-ms.tgt_pltfrm: 
+ms.technology:
+- tools-ssms
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - queries [SQL Server], types
@@ -18,19 +19,20 @@ helpviewer_keywords:
 - Insert Results query
 - queries [SQL Server], results
 ms.assetid: 8770d630-09cc-47ec-a0e9-e9de2d7bbc89
-caps.latest.revision: "4"
+caps.latest.revision: 4
 author: stevestein
 ms.author: sstein
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 77d9cd92950ddecc334fd5d75c3092bc5b3b4214
-ms.sourcegitcommit: b6116b434d737d661c09b78d0f798c652cf149f3
+ms.openlocfilehash: f263be2f5d69dcd6f877bba15f3644b214df58f7
+ms.sourcegitcommit: a85a46312acf8b5a59a8a900310cf088369c4150
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/17/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="create-insert-results-queries-visual-database-tools"></a>Crear consultas de inserción de resultados (Visual Database Tools)
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)] Puede copiar filas de una tabla a otra o dentro de una misma tabla mediante una consulta de inserción de resultados. Por ejemplo, en una tabla `titles` , puede utilizar una consulta de inserción de resultados para copiar la información de todos los títulos de una editorial en una segunda tabla y proporcionar esa tabla a la editorial. Una consulta de inserción de resultados es similar a una consulta de creación de tabla, con la diferencia de que la primera copia las filas en una tabla existente.  
+[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
+Puede copiar filas de una tabla a otra o dentro de una misma tabla utilizando una consulta de inserción de resultados. Por ejemplo, en una tabla `titles` , puede utilizar una consulta de inserción de resultados para copiar la información de todos los títulos de una editorial en una segunda tabla y proporcionar esa tabla a la editorial. Una consulta de inserción de resultados es similar a una consulta de creación de tabla, con la diferencia de que la primera copia las filas en una tabla existente.  
   
 > [!TIP]  
 > También puede copiar filas de una tabla a otra mediante las funciones de cortar y pegar. Cree una consulta para cada tabla y ejecútelas. Copie las filas que desee de una cuadrícula de resultados a la otra.  

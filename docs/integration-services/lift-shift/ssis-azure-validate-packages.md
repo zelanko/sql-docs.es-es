@@ -1,23 +1,23 @@
 ---
-title: "Validación de paquetes de SSIS implementados en Azure | Microsoft Docs"
+title: Validación de paquetes de SSIS implementados en Azure | Microsoft Docs
 ms.date: 11/27/2017
 ms.topic: article
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: integration-services
-ms.service: 
+ms.service: ''
 ms.component: lift-shift
 ms.suite: sql
-ms.custom: 
+ms.custom: ''
 ms.technology:
 - integration-services
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 15f838e93a5473a2d2345ae8c297f9b92eb2a23e
-ms.sourcegitcommit: 19e1c4067142d33e8485cb903a7a9beb7d894015
+ms.openlocfilehash: 6e2bf8f48751d819293edbaa0e40a85e74b0c513
+ms.sourcegitcommit: a85a46312acf8b5a59a8a900310cf088369c4150
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/28/2017
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="validate-ssis-packages-deployed-to-azure"></a>Validación de paquetes de SSIS implementados en Azure
 Al implementar un proyecto de SQL Server Integration Services (SSIS) en la base de datos Catálogo de SSIS (SSISDB) de un servidor de Azure, el asistente para la implementación de paquetes agrega un paso de validación adicional después de la página **Revisión**. Durante este paso de validación se comprueba si hay errores conocidos en los paquetes del proyecto que puedan evitar que se ejecuten según lo esperado en Azure SSIS Integration Runtime. A continuación, se muestran las advertencias aplicables en la página **Validate** del asistente.

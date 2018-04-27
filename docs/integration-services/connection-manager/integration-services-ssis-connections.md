@@ -1,16 +1,16 @@
 ---
 title: Conexiones de Integration Services (SSIS) | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: integration-services
-ms.service: 
+ms.service: ''
 ms.component: connection-manager
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - integration-services
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 f1_keywords:
 - sql13.asvs.connectionmanager.f1
@@ -26,16 +26,16 @@ helpviewer_keywords:
 - connections [Integration Services]
 - SQL Server Integration Services packages, connections
 ms.assetid: 72f5afa3-d636-410b-9e81-2ffa27772a8c
-caps.latest.revision: 
+caps.latest.revision: 92
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ms.workload: Active
-ms.openlocfilehash: 1fb279220f0ec15cc81613d2dfcc3c0bb68a3b1b
-ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
+ms.openlocfilehash: 0f11d9e2acfac903bd77b2931a06d5a17af9782c
+ms.sourcegitcommit: a85a46312acf8b5a59a8a900310cf088369c4150
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/25/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="integration-services-ssis-connections"></a>Conexiones de Integration Services (SSIS)
   [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] utilizan conexiones para realizar diferentes tareas y para implementar características de [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] .  
@@ -171,7 +171,7 @@ Se puede crear un administrador de conexiones en el nivel de paquete o en el niv
   
      Se abrirá el cuadro de diálogo personalizado para el tipo de administrador de conexiones seleccionado. Para obtener más información acerca de los tipos de administradores de conexiones y las opciones disponibles, vea la siguiente tabla de opciones.  
   
-    |Administrador de conexiones|.|  
+    |Administrador de conexiones|Opciones|  
     |------------------------|-------------|  
     |[Administrador de conexiones ADO](../../integration-services/connection-manager/ado-connection-manager.md)|[Configurar el administrador de conexiones OLE DB](../../integration-services/connection-manager/configure-ole-db-connection-manager.md)|  
     |[Administrador de conexiones ADO.NET](../../integration-services/connection-manager/ado-net-connection-manager.md)|[Configurar el administrador de conexiones ADO.NET](../../integration-services/connection-manager/configure-ado-net-connection-manager.md)|  
@@ -207,7 +207,7 @@ Se puede crear un administrador de conexiones en el nivel de paquete o en el niv
   
      Se abrirá el cuadro de diálogo personalizado para el tipo de administrador de conexiones seleccionado. Para obtener más información acerca de los tipos de administradores de conexiones y las opciones disponibles, vea la siguiente tabla de opciones.  
   
-    |Administrador de conexiones|.|  
+    |Administrador de conexiones|Opciones|  
     |------------------------|-------------|  
     |[Administrador de conexiones ADO](../../integration-services/connection-manager/ado-connection-manager.md)|[Configurar el administrador de conexiones OLE DB](../../integration-services/connection-manager/configure-ole-db-connection-manager.md)|  
     |[Administrador de conexiones ADO.NET](../../integration-services/connection-manager/ado-net-connection-manager.md)|[Configurar el administrador de conexiones ADO.NET](../../integration-services/connection-manager/configure-ado-net-connection-manager.md)|  
@@ -239,7 +239,7 @@ Utilice el cuadro de diálogo **Agregar administrador de conexiones SSIS** para 
   
  Para obtener más información sobre los administradores de conexión, vea [Conexiones de Integration Services &#40;SSIS&#41;](../../integration-services/connection-manager/integration-services-ssis-connections.md).  
   
-#### <a name="options"></a>.  
+#### <a name="options"></a>Opciones  
  **Tipo de administrador de conexiones**  
  Seleccione un tipo de conexión y haga clic en **Agregar**, o bien haga doble clic en un tipo de conexión para especificar las propiedades de conexión con el editor para cada tipo de conexión.  
   
@@ -316,7 +316,7 @@ Todos los administradores de conexión se pueden configurar en la ventana **Prop
   
 4.  En el área **Administradores de conexiones** , haga doble clic en el administrador de conexiones para abrir el cuadro de diálogo **Administrador de conexiones** . Para obtener información acerca de tipos específicos de administradores de conexión y de las opciones disponibles para cada tipo, vea la tabla siguiente.  
   
-    |Administrador de conexiones|.|  
+    |Administrador de conexiones|Opciones|  
     |------------------------|-------------|  
     |[Administrador de conexiones ADO](../../integration-services/connection-manager/ado-connection-manager.md)|[Configurar el administrador de conexiones OLE DB](../../integration-services/connection-manager/configure-ole-db-connection-manager.md)|  
     |[Administrador de conexiones ADO.NET](../../integration-services/connection-manager/ado-net-connection-manager.md)|[Configurar el administrador de conexiones ADO.NET](../../integration-services/connection-manager/configure-ado-net-connection-manager.md)|  

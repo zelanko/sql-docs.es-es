@@ -1,34 +1,36 @@
 ---
 title: Descartar los cambios realizados en consultas (Visual Database Tools) | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 01/19/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: sql-tools
-ms.service: 
+ms.service: ''
 ms.component: ssms-visual-db
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: tools-ssms
-ms.tgt_pltfrm: 
+ms.technology:
+- tools-ssms
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - reverting queries
 - queries [SQL Server], discarding changes
 - discarding query changes
 ms.assetid: 7bb17ece-1222-4622-b476-5789d7641c64
-caps.latest.revision: "4"
+caps.latest.revision: 4
 author: stevestein
 ms.author: sstein
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 5412ede653f8bd6eb67091dd4ebc532b1d7f1b19
-ms.sourcegitcommit: b6116b434d737d661c09b78d0f798c652cf149f3
+ms.openlocfilehash: 230445e105f24623cf5b049a5d07eed5c6177311
+ms.sourcegitcommit: a85a46312acf8b5a59a8a900310cf088369c4150
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/17/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="discard-changes-made-to-queries-visual-database-tools"></a>Descartar los cambios realizados en consultas (Visual Database Tools)
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)] Puede descartar los cambios realizados en una definición de consulta antes de guardarlos. Una vez que se han guardado, no pueden volver a su estado anterior.  
+[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
+Puede descartar los cambios realizados en una definición de consulta antes de guardarlos. Una vez que se han guardado, no pueden volver a su estado anterior.  
   
 > [!NOTE]  
 > Para deshacer los cambios realizados en los valores en el panel Resultados, presione la tecla ESC para salir del registro. Si sale de un registro y recibe un aviso en el que se indica que los datos no se van a confirmar en la base de datos, puede presionar también la tecla ESC para volver al valor anterior.  

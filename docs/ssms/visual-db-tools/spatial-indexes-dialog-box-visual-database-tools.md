@@ -2,7 +2,7 @@
 title: Cuadro de diálogo Índices espaciales (Visual Database Tools) | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: sql-tools
 ms.service: ''
 ms.component: ssms-visual-db
@@ -20,18 +20,19 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: bfaa6bfd65d898bedcbf7568f86c99b9c4b6a952
-ms.sourcegitcommit: b6116b434d737d661c09b78d0f798c652cf149f3
+ms.openlocfilehash: 452b561ad55bd845902ab6b03edf9b98d621fb0c
+ms.sourcegitcommit: a85a46312acf8b5a59a8a900310cf088369c4150
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/17/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="spatial-indexes-dialog-box-visual-database-tools"></a>Cuadro de diálogo Índices espaciales (Visual Database Tools)
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)] Use el cuadro de diálogo **Índices espaciales** para crear índices para las columnas del tipo de datos **Geometry** o **Geography** (*columnas espaciales*) que no pueden indexarse mediante el cuadro de diálogo **Índice y claves**. Cada columna espacial puede tener más de un índice espacial, pero se deben crear de uno en uno.  
+[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
+Use el cuadro de diálogo **Índices espaciales** para crear índices para las columnas del tipo de datos **geometry** o **geography** (*columnas espaciales*) que no pueden indizarse mediante el cuadro de diálogo **Índice y claves** . Cada columna espacial puede tener más de un índice espacial, pero se deben crear de uno en uno.  
   
 Para más información sobre las restricciones de la creación de índices espaciales, consulte [Información general sobre los índices espaciales](http://msdn.microsoft.com/en-us/b1ae7b78-182a-459e-ab28-f743e43f8293).  
   
-## <a name="options"></a>.  
+## <a name="options"></a>Opciones  
 **Índice espacial seleccionado**  
 Enumera los índices espaciales existentes. Seleccione un índice para mostrar sus propiedades. Si la lista está vacía, no se han definido índices espaciales para la tabla.  
   

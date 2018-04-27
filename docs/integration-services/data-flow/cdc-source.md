@@ -2,7 +2,7 @@
 title: Origen CDC | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: integration-services
 ms.service: ''
 ms.component: data-flow
@@ -23,11 +23,11 @@ author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 632174b48536a4111125b24cfc85503ed6868a20
-ms.sourcegitcommit: d6b1695c8cbc70279b7d85ec4dfb66a4271cdb10
-ms.translationtype: MT
+ms.openlocfilehash: f0552a81beb1bce6a578b058953236453bc8e47f
+ms.sourcegitcommit: a85a46312acf8b5a59a8a900310cf088369c4150
+ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/10/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="cdc-source"></a>origen de CDC
   El origen CDC lee un intervalo de datos modificados de las tablas de cambios de [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] y entrega los cambios de nivel inferior a otros componentes de SSIS.  
@@ -109,9 +109,9 @@ use <cdc-enabled-database-name>
   
 -   [Editor de origen de CDC &#40;página Administrador de conexiones&#41;](../../integration-services/data-flow/cdc-source-editor-connection-manager-page.md)  
   
--   [Editor de origen de CDC & #40; Página columnas & #41;](../../integration-services/data-flow/cdc-source-editor-columns-page.md)  
+-   [Editor de origen de CDC &#40;página Columnas&#41;](../../integration-services/data-flow/cdc-source-editor-columns-page.md)  
   
--   [Editor de origen de CDC & #40; Página de salida de error & #41;](../../integration-services/data-flow/cdc-source-editor-error-output-page.md)  
+-   [Editor de origen de CDC &#40;página Salida de error&#41;](../../integration-services/data-flow/cdc-source-editor-error-output-page.md)  
   
  El cuadro de diálogo **Editor avanzado** contiene las propiedades que se pueden establecer mediante programación.  
   
@@ -229,7 +229,7 @@ use <cdc-enabled-database-name>
  **Truncamiento**  
  Seleccione la forma en la que el origen de CDC debe controlar el truncamiento en un flujo: omitir el error, redirigir la fila o hacer que el componente no funcione.  
   
- **Description**  
+ **Descripción**  
  No se usa.  
   
  **Establecer este valor en las celdas seleccionadas**  

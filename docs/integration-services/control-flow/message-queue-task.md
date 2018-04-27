@@ -1,16 +1,16 @@
 ---
 title: Tarea Cola de mensajes | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: integration-services
-ms.service: 
+ms.service: ''
 ms.component: control-flow
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - integration-services
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 f1_keywords:
 - sql13.dts.designer.messagequeuetask.f1
@@ -24,16 +24,16 @@ helpviewer_keywords:
 - messages [Integration Services]
 - sending messages
 ms.assetid: ae1d8fad-6649-4e93-b589-14a32d07da33
-caps.latest.revision: 
+caps.latest.revision: 68
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: d58b3c497860668dee90836193ff9bd788852715
-ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
+ms.openlocfilehash: 83de0e38a8e7f4d5144b68daa83e84a4b67f0892
+ms.sourcegitcommit: a85a46312acf8b5a59a8a900310cf088369c4150
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/25/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="message-queue-task"></a>Message Queue Task
   La tarea Cola de mensajes le permite usar Message Queue Server (que también recibe el nombre de MSMQ) para enviar y recibir mensajes entre paquetes de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] , o enviar mensajes a una cola de aplicaciones procesada por una aplicación personalizada. Estos mensajes pueden adoptar la forma de texto simple, archivos o variables y sus valores.  
@@ -109,7 +109,7 @@ ms.lasthandoff: 01/25/2018
 ## <a name="message-queue-task-editor-general-page"></a>Editor de la tarea Cola de mensajes (página General)
   Utilice la página **General** del cuadro de diálogo **Editor de la tarea Cola de mensajes** para asignar un nombre y describir la tarea Cola de mensajes, especificar el formato del mensaje e indicar si la tarea envía o recibe o mensajes.  
   
-### <a name="options"></a>.  
+### <a name="options"></a>Opciones  
  **Nombre**  
  Proporcione un nombre único para la tarea Cola de mensajes. Este nombre se utiliza como etiqueta en el icono de tarea.  
   
@@ -133,7 +133,7 @@ ms.lasthandoff: 01/25/2018
 ## <a name="message-queue-task-editor-send-page"></a>Editor de la tarea Cola de mensajes (página Enviar)
   Utilice la página **Enviar** del cuadro de diálogo **Editor de la tarea Cola de mensajes** para configurar una tarea Cola de mensajes para enviar mensajes desde un paquete de [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] .  
   
-### <a name="options"></a>.  
+### <a name="options"></a>Opciones  
  **UseEncryption**  
  Indica si se debe cifrar el mensaje. El valor predeterminado es **False**.  
   
@@ -174,7 +174,7 @@ ms.lasthandoff: 01/25/2018
 ## <a name="message-queue-task-editor-receive-page"></a>Editor de la tarea Cola de mensajes (página Recibir)
   Use la página **Recibir** del cuadro de diálogo **Editor de la tarea Cola de mensajes** para configurar una tarea de la cola de mensajes para recibir mensajes de [!INCLUDE[msCoName](../../includes/msconame-md.md)] Message Queuing (MSMQ).  
   
-### <a name="options"></a>.  
+### <a name="options"></a>Opciones  
  **RemoveFromMessageQueue**  
  Indique si desea eliminar el mensaje de la cola una vez recibido. De manera predeterminada, este valor se establece en **False**.  
   
@@ -285,7 +285,7 @@ ms.lasthandoff: 01/25/2018
 ## <a name="select-variables"></a>Seleccionar variables
   Utilice el cuadro de diálogo **Seleccionar variables** para especificar las variables que se van a utilizar en una operación de envío de mensaje en la tarea Cola de mensajes. La lista **Variables disponibles** incluye las variables definidas por el usuario y de sistema que se encuentran en el ámbito de la tarea Cola de mensaje o en su contenedor principal. La tarea utiliza las variables de la lista **Variables seleccionadas** .  
   
-### <a name="options"></a>.  
+### <a name="options"></a>Opciones  
  **Variables disponibles**  
  Seleccione una o más variables.  
   

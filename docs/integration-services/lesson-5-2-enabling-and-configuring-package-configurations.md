@@ -1,30 +1,30 @@
 ---
 title: 'Paso 2: Habilitar y configurar las configuraciones de paquetes | Microsoft Docs'
-ms.custom: 
+ms.custom: ''
 ms.date: 03/01/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: integration-services
-ms.service: 
+ms.service: ''
 ms.component: tutorial
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - integration-services
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: get-started-article
 applies_to:
 - SQL Server 2016
 ms.assetid: 005218ab-8dd5-48e9-a185-6bc60cd43a7a
-caps.latest.revision: 
+caps.latest.revision: 39
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ms.workload: Active
-ms.openlocfilehash: 1a63c43606d2a27da3469c4cedb83654c79c1bf1
-ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
+ms.openlocfilehash: 05badd9b5954f079adab16d57b9c428d6c733db7
+ms.sourcegitcommit: a85a46312acf8b5a59a8a900310cf088369c4150
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/25/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="lesson-5-2---enabling-and-configuring-package-configurations"></a>Lección 5-2: Habilitar y configurar las configuraciones de paquetes
 En esta tarea, convertirá el proyecto al modelo de implementación de paquetes y habilitará las configuraciones de paquetes mediante el Asistente para configuración de paquetes. Usará este asistente para generar un archivo de configuración XML que contiene parámetros de configuración para la propiedad **Directory** del contenedor de bucles Foreach. El valor de la propiedad Directory se proporciona a través de una variable nueva de nivel de paquete que puede actualizarse durante la ejecución. Además, rellenará una carpeta nueva de datos de ejemplo que utilizará durante las pruebas.  
@@ -52,7 +52,7 @@ En esta tarea, convertirá el proyecto al modelo de implementación de paquetes 
   
 9. En el **Editor de expresiones de propiedad**, haga clic en la lista **Propiedad** y seleccione **Directorio**.  
   
-10. En el cuadro **Expresión** , haga clic en el botón de puntos suspensivos**(…)**.  
+10. En el cuadro **Expresión** , haga clic en el botón de puntos suspensivos **(…)**.  
   
 11. En el **Generador de expresiones**, expanda la carpeta Variables y arrastre la variable **User:varFolderName** al cuadro **Expresión** .  
   

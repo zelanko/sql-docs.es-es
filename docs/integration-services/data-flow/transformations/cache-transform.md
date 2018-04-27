@@ -1,16 +1,16 @@
 ---
-title: "Transformación de caché | Microsoft Docs"
-ms.custom: 
+title: Transformación de caché | Microsoft Docs
+ms.custom: ''
 ms.date: 03/07/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: integration-services
-ms.service: 
+ms.service: ''
 ms.component: data-flow
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - integration-services
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 f1_keywords:
 - sql13.dts.designer.cachetrans.f1
@@ -19,16 +19,16 @@ f1_keywords:
 helpviewer_keywords:
 - Cache transform
 ms.assetid: a5683fc8-9c32-4634-819e-e9815627e4f1
-caps.latest.revision: 
+caps.latest.revision: 30
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 83d157914c7090273a213a7f2ed4b6e5ea7f2fa5
-ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
+ms.openlocfilehash: 819aa38bc5c974b4d6f295ad99e1224a4aae9369
+ms.sourcegitcommit: a85a46312acf8b5a59a8a900310cf088369c4150
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/25/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="cache-transform"></a>Transformación de caché
   La transformación de caché genera un conjunto de datos de referencia para la transformación de búsqueda escribiendo datos de un origen de datos conectado del flujo de datos en un Administrador de conexiones de caché. La transformación Búsqueda realiza búsquedas mediante la combinación de datos de las columnas de entrada procedentes de un origen de datos conectado con columnas de la base de datos de referencia.  
@@ -69,7 +69,7 @@ ms.lasthandoff: 01/25/2018
   
  Para obtener más información acerca del administrador de conexiones de caché, vea [Cache Connection Manager](../../../integration-services/data-flow/transformations/cache-connection-manager.md).  
   
-### <a name="options"></a>.  
+### <a name="options"></a>Opciones  
  **Cache connection manager**  
  Seleccione un administrador de conexiones de caché existente usando la lista o cree una conexión mediante el botón **Nueva** .  
   

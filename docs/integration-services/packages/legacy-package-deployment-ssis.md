@@ -1,16 +1,16 @@
 ---
-title: "Implementación de paquetes heredada (SSIS) | Microsoft Docs"
-ms.custom: 
+title: Implementación de paquetes heredada (SSIS) | Microsoft Docs
+ms.custom: ''
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: integration-services
-ms.service: 
+ms.service: ''
 ms.component: packages
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - integration-services
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 f1_keywords:
 - sql13.dts.designer.packageconfigurationorganizer.f1
@@ -34,16 +34,16 @@ helpviewer_keywords:
 - packages [Integration Services], deploying
 - SSIS packages, deploying
 ms.assetid: 0f5fc7be-e37e-4ecd-ba99-697c8ae3436f
-caps.latest.revision: 
+caps.latest.revision: 46
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: f0a4d37996a1add0c028f9481b1dc232190a19a3
-ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
+ms.openlocfilehash: f8e3308aa72bb69002a71c1743cdcfb56dd03333
+ms.sourcegitcommit: a85a46312acf8b5a59a8a900310cf088369c4150
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/25/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="legacy-package-deployment-ssis"></a>Implementación de paquetes heredada (SSIS)
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] incluye herramientas y asistentes para facilitar la implementación de paquetes del equipo de desarrollo en el servidor de producción o en otros equipos.  
@@ -267,7 +267,7 @@ ConfiguredValueType NVARCHAR(20) NOT NULL
   
  Las configuraciones de paquetes actualizan los valores de las propiedades de los objetos de paquete en tiempo de ejecución. Cuando se carga un paquete, los valores de las configuraciones reemplazan los valores establecidos cuando se desarrolló el paquete. [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] admite distintos tipos de configuración. Por ejemplo, se puede utilizar un archivo XML que contenga múltiples configuraciones o una variable de entorno que contenga una única configuración. Para más información, consulte [Package Configurations](../../integration-services/packages/package-configurations.md).  
   
-### <a name="options"></a>.  
+### <a name="options"></a>Opciones  
  **Habilitar configuraciones de paquetes**  
  Seleccione esta opción para utilizar las configuraciones incluidas con el paquete.  
   
@@ -308,7 +308,7 @@ ConfiguredValueType NVARCHAR(20) NOT NULL
 ### <a name="welcome-to-the-package-configuration-wizard-page"></a>Asistente para la configuración de paquetes (página principal)  
  Use el **Asistente para la configuración de SSIS** para crear configuraciones que actualizan las propiedades de un paquete y sus objetos en tiempo de ejecución.  
   
-#### <a name="options"></a>.  
+#### <a name="options"></a>Opciones  
  **No volver a mostrar esta página**  
  Omite la página de bienvenida la próxima vez que abre el asistente.  
   
@@ -407,7 +407,7 @@ ConfiguredValueType NVARCHAR(20) NOT NULL
 ### <a name="select-objects-to-export-page"></a>Página Seleccionar objetos para la exportación  
  Use la página **Seleccionar propiedad de destino o Seleccionar propiedades para la exportación** para especificar las propiedades de objetos contenidas en la configuración. La posibilidad de seleccionar varias propiedades solo está disponible si se selecciona el tipo de configuración XML.  
   
-#### <a name="options"></a>.  
+#### <a name="options"></a>Opciones  
  **Objetos**  
  Expanda la jerarquía de paquetes y seleccione las propiedades que desea exportar.  
   
@@ -420,7 +420,7 @@ ConfiguredValueType NVARCHAR(20) NOT NULL
 ### <a name="completing-the-wizard-page"></a>Página Finalización del asistente  
  Utilice la página **Finalización del asistente** para asignar un nombre a la configuración y ver los valores utilizados por el asistente para crear la configuración. Una vez que finaliza el asistente, se muestra el **Organizador de configuraciones de paquetes** , que enumera todas las configuraciones para el paquete.  
   
-#### <a name="options"></a>.  
+#### <a name="options"></a>Opciones  
  **Nombre de la configuración**  
  Escriba el nombre de la configuración.  
   
@@ -589,7 +589,7 @@ ConfiguredValueType NVARCHAR(20) NOT NULL
 ### <a name="configure-packages-page"></a>Página Configurar paquetes  
  Utilice la página **Configurar paquetes** para modificar la configuración de los paquetes.  
   
-#### <a name="options"></a>.  
+#### <a name="options"></a>Opciones  
  **Archivo de configuración**  
  Para modificar el contenido de un archivo de configuración, seleccione el archivo en la lista.  
   
@@ -625,7 +625,7 @@ ConfiguredValueType NVARCHAR(20) NOT NULL
 ### <a name="deploy-ssis-packages-page"></a>Página Implementar paquetes SSIS  
  Use la página **Implementar paquetes SSIS** para especificar dónde instalar paquetes de [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] y sus dependencias.  
   
-#### <a name="options"></a>.  
+#### <a name="options"></a>Opciones  
  **Implementación en el sistema de archivos**  
  Implementa paquetes y dependencias en una carpeta determinada del sistema de archivos.  
   
@@ -650,7 +650,7 @@ ConfiguredValueType NVARCHAR(20) NOT NULL
 ### <a name="select-installation-folder-page"></a>Página Seleccionar la carpeta de instalación  
  Use la página **Seleccionar la carpeta de instalación** para especificar la carpeta del sistema de archivos en la que desea instalar los paquetes y sus dependencias.  
   
-#### <a name="options"></a>.  
+#### <a name="options"></a>Opciones  
  **Carpeta**  
  Permite especificar la ruta y la carpeta en la que se desea copiar el paquete y sus dependencias.  
   
@@ -666,7 +666,7 @@ ConfiguredValueType NVARCHAR(20) NOT NULL
 ### <a name="specify-target-sql-server-page"></a>Página Especificar el SQL Server de destino  
  Use la página **Especificar el SQL Server de destino** para especificar las opciones de implementación del paquete en una instancia de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
-#### <a name="options"></a>.  
+#### <a name="options"></a>Opciones  
  **Nombre del servidor**  
  Especifique el nombre del servidor en el que se implementarán los paquetes.  
   

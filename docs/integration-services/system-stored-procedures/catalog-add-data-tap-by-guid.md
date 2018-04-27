@@ -1,28 +1,28 @@
 ---
 title: catalog.add_data_tap_by_guid | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 03/06/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: integration-services
-ms.service: 
+ms.service: ''
 ms.component: system-stored-procedures
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - integration-services
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 ms.assetid: ed9d7fa3-61a1-4e21-ba43-1ead7dfc74eb
-caps.latest.revision: 
+caps.latest.revision: 15
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 088d7eeda34d83a0bd54b0626216663725a94d5d
-ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
+ms.openlocfilehash: c69317a8739a5547042a035c0c2b2fc13cc7d434
+ms.sourcegitcommit: a85a46312acf8b5a59a8a900310cf088369c4150
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/25/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="catalogadddatatapbyguid"></a>catalog.add_data_tap_by_guid
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
@@ -55,7 +55,7 @@ catalog add_data_tap_by_guid [ @execution_id = ] execution_id
  El parámetro *dataflow_path_id_string* es de tipo **nvarchar(4000)**.  
   
  [ @data_filename = ] *data_filename*  
- Nombre del archivo que almacena los datos derivados. Si la tarea Flujo de datos se ejecuta en un bucle Foreach o en un contenedor de bucles For, los datos derivados se almacenan en archivos diferentes para cada iteración del bucle. Cada archivo tiene como prefijo un número que corresponde a una iteración. Los archivos de derivación de datos se escriben en la carpeta "*\<Carpeta de instalación de SQL Server>*\130\DTS\\". El parámetro *data_filename* es de tipo **nvarchar(4000)**.  
+ Nombre del archivo que almacena los datos derivados. Si la tarea Flujo de datos se ejecuta en un bucle Foreach o en un contenedor de bucles For, los datos derivados se almacenan en archivos diferentes para cada iteración del bucle. Cada archivo tiene como prefijo un número que corresponde a una iteración. Los archivos de derivación de datos se escriben en la carpeta "*\<Carpeta de instalación de SQL Server>* \130\DTS\\". El parámetro *data_filename* es de tipo **nvarchar(4000)**.  
   
  [ @max_rows = ] max_rows  
  Número de filas que se capturan durante la derivación de datos. Si no se especifica este valor, se capturan todas las filas. El parámetro max_rows es de tipo **int**.  

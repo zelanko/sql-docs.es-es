@@ -1,15 +1,16 @@
 ---
 title: Ventana Propiedades (Management Studio) | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 01/19/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: sql-tools
-ms.service: 
+ms.service: ''
 ms.component: ssms
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: tools-ssms
-ms.tgt_pltfrm: 
+ms.technology:
+- tools-ssms
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - viewing properties
@@ -17,23 +18,24 @@ helpviewer_keywords:
 - Properties window [SQL Server Management Studio]
 - modifying properties
 ms.assetid: 6a9a1389-df8d-4cfc-928b-eccbf884a22d
-caps.latest.revision: "4"
+caps.latest.revision: 4
 author: stevestein
 ms.author: sstein
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 7a96f9d9eb04873cd18219a65c73e0ae705a5096
-ms.sourcegitcommit: b6116b434d737d661c09b78d0f798c652cf149f3
+ms.openlocfilehash: 4f36e8ff5c8aefa17371e11164ab45b52e8d5e27
+ms.sourcegitcommit: a85a46312acf8b5a59a8a900310cf088369c4150
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/17/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="properties-window-management-studio"></a>Ventana Propiedades (Management Studio)
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../includes/appliesto-ss-asdb-asdw-pdw-md.md)] Use esta ventana para ver las propiedades de los elementos seleccionados. También puede utilizarla para ver las propiedades de archivos, proyectos y soluciones. Para obtener acceso a esta ventana, haga clic en **Ventana Propiedades** en el menú **Ver** .  
+[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
+Utilice esta ventana para ver las propiedades de los elementos seleccionados. También puede utilizarla para ver las propiedades de archivos, proyectos y soluciones. Para obtener acceso a esta ventana, haga clic en **Ventana Propiedades** en el menú **Ver** .  
   
 La ventana de propiedades muestra distintos tipos de campos de edición, dependiendo de los requisitos de cada propiedad. Las propiedades atenuadas son de solo lectura.  
   
-## <a name="options"></a>.  
+## <a name="options"></a>Opciones  
   
 |Elemento|Description|  
 |-----------|---------------|  

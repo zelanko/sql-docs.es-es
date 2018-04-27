@@ -1,32 +1,32 @@
 ---
-title: "Catálogo de SSIS | Microsoft Docs"
-ms.custom: 
+title: Catálogo de SSIS | Microsoft Docs
+ms.custom: ''
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: integration-services
-ms.service: 
+ms.service: ''
 ms.component: service
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - integration-services
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 f1_keywords:
 - sql13.ssis.ssms.iscreatecatalog.f1
 - sql13.ssis.ssms.iscatalogprop.general.f1
 - sql13.ssis.dbupgradewizard.f1
 ms.assetid: 24bd987e-164a-48fd-b4f2-cbe16a3cd95e
-caps.latest.revision: 
+caps.latest.revision: 28
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ms.workload: Active
-ms.openlocfilehash: b8812ba8a3a96fc17ab9c9ec5083699ef5a7d03b
-ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
+ms.openlocfilehash: 50a4beefe7038fbce957209b9c34863d076bec41
+ms.sourcegitcommit: a85a46312acf8b5a59a8a900310cf088369c4150
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/25/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="ssis-catalog"></a>Catálogo de SSIS
   El catálogo de **SSISDB** es el eje central cuando se trabaja con proyectos de [!INCLUDE[ssISnoversion_md](../../includes/ssisnoversion-md.md)] (SSIS) que ha implementado en el servidor [!INCLUDE[ssISnoversion_md](../../includes/ssisnoversion-md.md)]. Por ejemplo, establece los parámetros del proyecto y del paquete, configura entornos para especificar los valores en tiempo de ejecución para los paquetes, ejecuta paquetes y soluciona los problemas de los mismos, y administra las operaciones del servidor de [!INCLUDE[ssISnoversion_md](../../includes/ssisnoversion-md.md)] .  
@@ -380,7 +380,7 @@ Para ejecutar el **trabajo de mantenimiento del servidor SSIS**, SSIS crea el in
   
 ###  <a name="options"></a> Configurar las opciones  
   
-#### <a name="options"></a>.  
+#### <a name="options"></a>Opciones  
  En la tabla siguiente se describen algunas propiedades del cuadro de diálogo y las propiedades correspondientes de la vista catalog.catalog_property.  
   
 |Nombre de la propiedad (cuadro de diálogo Propiedades del catálogo)|Nombre de la propiedad (vista catalog.catalog_property).|Description|  
@@ -420,7 +420,7 @@ Para ejecutar el **trabajo de mantenimiento del servidor SSIS**, SSIS crea el in
   
     1.  En el Explorador de objetos de [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)], expanda el nodo **Seguridad** y el nodo **Inicios de sesión** .  
   
-    2.  Haga clic con el botón derecho en **##MS_SSISServerCleanupJobLogin##**y, después, haga clic en **Incluir inicio de sesión como** > **CREATE To** > **Nueva ventana del Editor de consultas**.  
+    2.  Haga clic con el botón derecho en **##MS_SSISServerCleanupJobLogin##** y, después, haga clic en **Incluir inicio de sesión como** > **CREATE To** > **Nueva ventana del Editor de consultas**.  
   
 5.  Si restaura la base de datos de SSISDB a una instancia de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] en la que nunca se ha creado el catálogo de SSISDB, genere el script CREATE PROCEDURE para sp_ssis_startup como se indica aquí. Para obtener más información, vea [CREATE PROCEDURE &#40;Transact-SQL&#41;](../../t-sql/statements/create-procedure-transact-sql.md).  
   

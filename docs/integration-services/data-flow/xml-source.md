@@ -1,16 +1,16 @@
 ---
 title: Origen XML | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: integration-services
-ms.service: 
+ms.service: ''
 ms.component: data-flow
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - integration-services
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 f1_keywords:
 - sql13.dts.designer.xmlsource.f1
@@ -22,16 +22,16 @@ helpviewer_keywords:
 - XML source [Integration Services]
 - XML Source Editor
 ms.assetid: 68c27ea5-e93d-4e26-bfb2-d967ca0a5282
-caps.latest.revision: 
+caps.latest.revision: 47
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: abc73a10f3538df038d9b4488199666288a3ca57
-ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
+ms.openlocfilehash: 9e862605c34de37a9937cacd396a5fb645aac76c
+ms.sourcegitcommit: a85a46312acf8b5a59a8a900310cf088369c4150
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/25/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="xml-source"></a>Origen XML
   El origen XML lee un archivo de datos XML y rellena las columnas de la salida de origen con los datos.  
@@ -138,7 +138,7 @@ ms.lasthandoff: 01/25/2018
 ## <a name="xml-source-editor-columns-page"></a>Editor de origen de XML (página Columnas)
   Use el nodo **Columnas** del cuadro de diálogo **Editor de origen de XML** para asignar una columna de salida a una columna externa (origen).  
   
-### <a name="options"></a>.  
+### <a name="options"></a>Opciones  
  **Columnas externas disponibles**  
  Muestra la lista de columnas externas disponibles en el origen de datos. Esta tabla no se puede usar para agregar o quitar columnas.  
   
@@ -151,7 +151,7 @@ ms.lasthandoff: 01/25/2018
 ## <a name="xml-source-editor-error-output-page"></a>Editor de origen de XML (página Salida de error)
   Utilice la página **Salida de error** del cuadro de diálogo **Editor de origen de XML** para seleccionar las opciones de control de errores y para establecer las propiedades en las columnas de salida de errores.  
   
-### <a name="options"></a>.  
+### <a name="options"></a>Opciones  
  **Entrada/salida**  
  Muestra el nombre del origen de datos.  
   

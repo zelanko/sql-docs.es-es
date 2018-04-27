@@ -2,7 +2,7 @@
 title: Propiedades de objeto con valores de tabla (Visual Database Tools) | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: sql-tools
 ms.service: ''
 ms.component: ssms-visual-db
@@ -20,14 +20,15 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 59393ef73eb121fced9a2c7d0232c49d707d1efd
-ms.sourcegitcommit: b6116b434d737d661c09b78d0f798c652cf149f3
+ms.openlocfilehash: 80af649c5ab068f4aebfc357bdd565577ce30046
+ms.sourcegitcommit: a85a46312acf8b5a59a8a900310cf088369c4150
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/17/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="table-valued-object-properties-visual-database-tools"></a>Propiedades de objeto con valores de tabla (Visual Database Tools)
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)] Estas propiedades aparecen en la ventana Propiedades cuando selecciona un objeto con valores de tabla en el **Diseñador de consultas y vistas**. El objeto con valores de tabla puede ser una vista, un sinónimo, una tabla derivada o una función con valores de tabla. A menos que se indique lo contrario, estas propiedades son de solo lectura en la ventana **Propiedades** .  
+[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
+Estas propiedades aparecen en la ventana Propiedades cuando selecciona un objeto con valores de tabla en el **Diseñador de vistas y de consultas**. El objeto con valores de tabla puede ser una vista, un sinónimo, una tabla derivada o una función con valores de tabla. A menos que se indique lo contrario, estas propiedades son de solo lectura en la ventana **Propiedades** .  
   
 > [!NOTE]  
 > Las propiedades de este tema se ordenan por categoría en lugar de alfabéticamente.  

@@ -1,30 +1,30 @@
 ---
-title: "Finalización del asistente (Asistente para importación y exportación de SQL Server) | Microsoft Docs"
-ms.custom: 
+title: Finalización del asistente (Asistente para importación y exportación de SQL Server) | Microsoft Docs
+ms.custom: ''
 ms.date: 03/16/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: integration-services
-ms.service: 
+ms.service: ''
 ms.component: import-export-data
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - integration-services
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 f1_keywords:
 - sql13.dts.impexpwizard.completewizard.f1
 ms.assetid: fbf0aa37-fd9e-47e1-82b4-26c1359ec3da
-caps.latest.revision: 
+caps.latest.revision: 46
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 738281bcaef0bce47cfc4c54890b48fd840eb91c
-ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
+ms.openlocfilehash: 610c8ac500933802beffecd8f97e4fcc6a62862b
+ms.sourcegitcommit: a85a46312acf8b5a59a8a900310cf088369c4150
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/25/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="complete-the-wizard-sql-server-import-and-export-wizard"></a>Finalización del asistente (Asistente para importación y exportación de SQL Server)
 Después de especificar si quiere ejecutar la operación de copia inmediatamente (y, de manera opcional, después de guardar el paquete que creó el asistente), el Asistente para importación y exportación de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] mostrará **Finalización del asistente**. En esta página, revise las opciones que ha realizado en el asistente y, después, haga clic en **Finalizar** para iniciar la operación de copia.

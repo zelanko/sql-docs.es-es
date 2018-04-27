@@ -1,30 +1,30 @@
 ---
-title: "Editor de origen de SAP BW (página Columnas) | Microsoft Docs"
-ms.custom: 
+title: Editor de origen de SAP BW (página Columnas) | Microsoft Docs
+ms.custom: ''
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: integration-services
-ms.service: 
+ms.service: ''
 ms.component: data-flow
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - integration-services
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 f1_keywords:
 - sql13.dts.designer.sapbwsource.columns.f1
 ms.assetid: c2ec8bb7-be9b-4783-ad88-32512de784b0
-caps.latest.revision: 
+caps.latest.revision: 10
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 33b0ea8d0c8774aa128ff4698cad163fd08d9645
-ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
+ms.openlocfilehash: d349d00572029ebe7c32634b0643433dd191bff1
+ms.sourcegitcommit: a85a46312acf8b5a59a8a900310cf088369c4150
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/25/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="sap-bw-source-editor-columns-page"></a>Editor de origen de SAP BW (página Columnas)
   Use la página **Columnas** del **Editor de origen de SAP BW** para asignar una columna de salida a cada columna externa (origen).  
@@ -45,7 +45,7 @@ ms.lasthandoff: 01/25/2018
   
 3.  En **Editor de origen de SAP BW**, haga clic en **Columnas** para abrir la página **Columnas** del editor.  
   
-## <a name="options"></a>.  
+## <a name="options"></a>Opciones  
   
 > [!NOTE]  
 >  Si no conoce todos los valores necesarios para configurar el origen, puede que tenga que ponerse en contacto con el administrador de SAP.  

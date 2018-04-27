@@ -1,16 +1,16 @@
 ---
 title: Variables de Integration Services (SSIS) | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: integration-services
-ms.service: 
+ms.service: ''
 ms.component: non-specific
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - integration-services
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - variables [Integration Services], passing between packages
@@ -21,16 +21,16 @@ helpviewer_keywords:
 - variables [Integration Services], about variables
 - values [Integration Services]
 ms.assetid: c1e81ad6-628b-46d4-9b09-d2866517b6ca
-caps.latest.revision: 
+caps.latest.revision: 60
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ms.workload: Active
-ms.openlocfilehash: 141b245a49e1d2fa6f83b886c70c159ab089c2fa
-ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
+ms.openlocfilehash: 5abbc2d243cf324abd3940d1d2fac7c82376770c
+ms.sourcegitcommit: a85a46312acf8b5a59a8a900310cf088369c4150
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/25/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="integration-services-ssis-variables"></a>Variables de Integration Services (SSIS)
   Las variables almacenan valores que un paquete de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] y sus contenedores, tareas y controladores de eventos pueden usar en tiempo de ejecución. Los scripts en la tarea Script y el componente Script también pueden usar variables. Las restricciones de precedencia que ordenan tareas y contenedores en un flujo de trabajo pueden usar variables cuando sus definiciones de restricciones incluyen expresiones.  
@@ -198,7 +198,7 @@ Una variable tiene opciones para establecer el valor de la variable y el tipo de
 ### <a name="add-variable-dialog-box"></a>Agregar variable, cuadro de diálogo
 Utilice el cuadro de diálogo **Agregar variable** para especificar las propiedades de una nueva variable.  
   
-#### <a name="options"></a>.  
+#### <a name="options"></a>Opciones  
  **Contenedor**  
  Seleccione un contenedor de la lista. El contenedor define el ámbito de la variable. El contenedor puede ser el paquete o un ejecutable del mismo.  
   

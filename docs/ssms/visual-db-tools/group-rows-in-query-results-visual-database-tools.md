@@ -1,34 +1,36 @@
 ---
 title: Agrupar filas en los resultados de la consulta (Visual Database Tools) | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 01/19/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: sql-tools
-ms.service: 
+ms.service: ''
 ms.component: ssms-visual-db
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: tools-ssms
-ms.tgt_pltfrm: 
+ms.technology:
+- tools-ssms
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - summarizing table subsets
 - grouping rows
 - grouping query results
 ms.assetid: b07082d5-4d55-4903-9af9-4c470554c6d3
-caps.latest.revision: "5"
+caps.latest.revision: 5
 author: stevestein
 ms.author: sstein
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: f5de6f1138be5413cfc7112d697ea662b04b9d44
-ms.sourcegitcommit: b6116b434d737d661c09b78d0f798c652cf149f3
+ms.openlocfilehash: c66729fee4be279fe48ce657d85e4b2dbb97fef1
+ms.sourcegitcommit: a85a46312acf8b5a59a8a900310cf088369c4150
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/17/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="group-rows-in-query-results-visual-database-tools"></a>Agrupar filas en los resultados de la consulta (Visual Database Tools)
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)] Si quiere crear subtotales o mostrar otra información de resumen para los subconjuntos de una tabla, debe crear grupos mediante una consulta de funciones agregadas. Cada grupo resume los datos para todas las filas de la tabla que tienen el mismo valor.  
+[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
+Si desea crear subtotales o mostrar otra información de resumen para los subconjuntos de una tabla, debe crear grupos mediante una consulta de funciones agregadas. Cada grupo resume los datos para todas las filas de la tabla que tienen el mismo valor.  
   
 Por ejemplo, es posible que desee ver el precio medio de un libro en la tabla `titles` , pero con los resultados desglosados por editorial. Para ello, agrupe la consulta por editorial (por ejemplo, `pub_id`). El resultado de la consulta podría tener el siguiente aspecto:  
   

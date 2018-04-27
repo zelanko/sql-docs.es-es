@@ -1,9 +1,9 @@
 ---
-title: 'Tutorial: Crear un widget de información personalizada en las SQL Operations Studio (preview) | Documentos de Microsoft'
-description: Este tutorial muestra cómo compilar widgets de insight personalizados y agregarlos a los paneles de base de datos y el servidor en las SQL Operations Studio (preview).
+title: 'Tutorial: Crear un widget de información personalizada en las operaciones de SQL Studio (versión preliminar) | Documentos de Microsoft'
+description: Este tutorial muestra cómo compilar widgets de insight personalizados y agregarlos a los paneles de base de datos y el servidor en las operaciones de SQL Studio (versión preliminar).
 ms.custom: tools|sos
 ms.date: 11/15/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.reviewer: alayu; erickang; sstein
 ms.suite: sql
 ms.prod_service: sql-tools
@@ -14,11 +14,11 @@ author: erickangMSFT
 ms.author: erickang
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 344cf021a4a0abc13fc8c531875c604095c8c0d1
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: 97a5177bf4f0dd9e5ae3ae1b097285bd7a8d42b5
+ms.sourcegitcommit: a85a46312acf8b5a59a8a900310cf088369c4150
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="tutorial-build-a-custom-insight-widget"></a>Tutorial: Crear un widget de información personalizada
 
@@ -35,8 +35,8 @@ Durante este tutorial aprenderá cómo:
 
 Este tutorial requiere SQL Server o base de datos de SQL Azure *TutorialDB*. Para crear el *TutorialDB* base de datos, complete uno de los siguientes tutoriales:
 
-- [Conectarse y consultar mediante SQL Server[!INCLUDE[name-sos-short](../includes/name-sos-short.md)]](quickstart-sql-server.md)
-- [Conectarse y consultar mediante la base de datos de SQL Azure[!INCLUDE[name-sos-short](../includes/name-sos-short.md)]](quickstart-sql-database.md)
+- [Conectarse y consultar mediante SQL Server [!INCLUDE[name-sos-short](../includes/name-sos-short.md)]](quickstart-sql-server.md)
+- [Conectarse y consultar mediante la base de datos de SQL Azure [!INCLUDE[name-sos-short](../includes/name-sos-short.md)]](quickstart-sql-database.md)
 
 
 ## <a name="run-your-own-query-and-view-the-result-in-a-chart-view"></a>Ejecutar su propia consulta y ver el resultado en una vista de gráfico

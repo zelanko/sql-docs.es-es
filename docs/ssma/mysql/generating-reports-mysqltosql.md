@@ -1,6 +1,6 @@
 ---
 title: Generación de informes (MySQLToSQL) | Documentos de Microsoft
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: sql-tools
 ms.service: ''
 ms.component: ssma-mysql
@@ -23,11 +23,11 @@ author: Shamikg
 ms.author: Shamikg
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: b452d85718dbdca6ade3c40417fa8b200ea74cdc
-ms.sourcegitcommit: 9351e8b7b68f599a95fb8e76930ab886db737e5f
+ms.openlocfilehash: 44e368d2839725a99b3c2d38db6c24e1c9114537
+ms.sourcegitcommit: a85a46312acf8b5a59a8a900310cf088369c4150
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/06/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="generating-reports-mysqltosql"></a>Generación de informes (MySQLToSQL)
 Se generan los informes de ciertas actividades que se realizan mediante comandos en la consola SSMA al nivel de árbol de objetos.  
@@ -40,13 +40,13 @@ Utilice el procedimiento siguiente para generar informes:
   
     ||||  
     |-|-|-|  
-    |**Sl. No.**|**Command**|**Título del informe**|  
-    |1|generate-assessment-report|AssessmentReport&lt;n&gt;.XML|  
-    |2|convert-schema|SchemaConversionReport&lt;n&gt;.XML|  
-    |3|migrar datos|DataMigrationReport&lt;n&gt;.XML|  
-    |4|instrucción de sql Convert|ConvertSQLReport&lt;n&gt;.XML|  
-    |5|destino sincronizar|TargetSynchronizationReport&lt;n&gt;.XML|  
-    |6|actualización de base de datos|SourceDBRefreshReport&lt;n&gt;.XML|  
+    |**SL. No.**|**Command**|**Título del informe**|  
+    |1|informe de evaluación generar|AssessmentReport&lt;n&gt;. XML|  
+    |2|convertir esquema|SchemaConversionReport&lt;n&gt;. XML|  
+    |3|migrar datos|DataMigrationReport&lt;n&gt;. XML|  
+    |4|instrucción de sql Convert|ConvertSQLReport&lt;n&gt;. XML|  
+    |5|destino sincronizar|TargetSynchronizationReport&lt;n&gt;. XML|  
+    |6|actualización de base de datos|SourceDBRefreshReport&lt;n&gt;. XML|  
   
     > [!IMPORTANT]  
     > Un informe de salida es distinto de los informes de evaluación. El primero es un informe sobre el rendimiento de un comando ejecutado al, el segundo es un informe XML para su uso mediante programación.  
@@ -57,7 +57,7 @@ Utilice el procedimiento siguiente para generar informes:
   
     ||||  
     |-|-|-|  
-    |**Sl. No.**|**Parámetros y comandos**|**Descripción de salida**|  
+    |**SL. No.**|**Parámetros y comandos**|**Descripción de salida**|  
     |1|detallado = "false"|Genera un informe resumido de la actividad.|  
     |2|detallado = "true"|Genera un informe de estado resumida y detallada para cada actividad.|  
   
@@ -68,9 +68,9 @@ Utilice el procedimiento siguiente para generar informes:
   
     ||||  
     |-|-|-|  
-    |**Sl. No.**|**Parámetros y comandos**|**Descripción de salida**|  
-    |1|report-errors=”false”|No hay detalles de error / advertencia / mensajes de información.|  
-    |2|report-errors=”true”|Error detallado / advertencia / mensajes de información.|  
+    |**SL. No.**|**Parámetros y comandos**|**Descripción de salida**|  
+    |1|informe de errores = "false"|No hay detalles de error / advertencia / mensajes de información.|  
+    |2|informe de errores = "true"|Error detallado / advertencia / mensajes de información.|  
   
     > [!NOTE]  
     > La configuración de informe de errores especificados anteriormente son aplicable para informe de evaluación generar, convert-schema, migrar datos, comandos de la instrucción de sql de convert.  
@@ -117,9 +117,9 @@ El comando **destino sincronizar** tiene **informe de errores a** parámetro, qu
   
 **error:** especifica si se debe especificar los errores de sincronización como advertencias o errores. Opciones disponibles en el error:  
   
--   report-total-as-warning  
+-   total de informes como advertencia  
   
--   report-each-as-warning  
+-   informes-each-como-advertencia  
   
 -   Error-script  
   
@@ -147,9 +147,9 @@ El comando **actualización de base de datos** tiene **informe de errores a** pa
   
 **error:** especifica si se debe especificar la actualización de errores como advertencias o errores. Opciones disponibles en el error:  
   
--   report-total-as-warning  
+-   total de informes como advertencia  
   
--   report-each-as-warning  
+-   informes-each-como-advertencia  
   
 -   Error-script  
   

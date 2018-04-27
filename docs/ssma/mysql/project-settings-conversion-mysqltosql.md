@@ -1,6 +1,6 @@
 ---
 title: Configuración (conversión) (MySQLToSQL) del proyecto | Documentos de Microsoft
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: sql-tools
 ms.service: ''
 ms.component: ssma-mysql
@@ -21,11 +21,11 @@ author: Shamikg
 ms.author: Shamikg
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: e731155b4adadfe8a5a05edafd97f90bd3de263b
-ms.sourcegitcommit: 9351e8b7b68f599a95fb8e76930ab886db737e5f
+ms.openlocfilehash: 47bb86d67219dd5656a6864a4603adc382a36128
+ms.sourcegitcommit: a85a46312acf8b5a59a8a900310cf088369c4150
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/06/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="project-settings-conversion-mysqltosql"></a>Configuración del proyecto (conversión) (MySQLToSQL)
 La página de conversión de la **configuración del proyecto** cuadro de diálogo contiene la configuración que permiten personalizar cómo SSMA convierte la sintaxis de MySQL a la sintaxis de SQL Server o SQL Azure.  
@@ -97,8 +97,8 @@ El panel de conversión está disponible en la **configuración del proyecto** y
 |||  
 |-|-|  
 |**Término**|**Definición**|  
-|**Cuadro de límite de predeterminado {XMAX&#124;XMIN&#124;YMAX&#124;YMIN} para los índices espaciales**|Define el valor predeterminado de {XMAX&#124;XMIN&#124;YMAX&#124;YMIN} parámetro del rectángulo de selección utilizadas en índices espaciales.<br /><br />**Modo predeterminado**<br /><br />XMAX: 100<br /><br />XMIN: 0<br /><br />YMAX: 100<br /><br />YMIN: 0<br /><br />**Modo optimista**<br /><br />XMAX: 100<br /><br />XMIN: 0<br /><br />YMAX:  100<br /><br />YMIN: 0<br /><br />**Modo completo**<br /><br />XMAX: 100<br /><br />XMIN: 0<br /><br />YMAX: 100<br /><br />YMIN: 0|  
-|**Densidad de cuadrícula predeterminada para los índices espaciales**|Define el valor predeterminado para LEVEL_1, LEVEL_2, LEVEL_3 y LEVEL_4 de densidad de cuadrícula utilizada en índices espaciales.<br /><br />**Modo predeterminado**<br /><br />LEVEL_1: predeterminado<br /><br />LEVEL_2: predeterminado<br /><br />LEVEL_3: predeterminado<br /><br />LEVEL_4: Default<br /><br />**Modo optimista**<br /><br />LEVEL_1: predeterminado<br /><br />LEVEL_2: predeterminado<br /><br />LEVEL_3: predeterminado<br /><br />LEVEL_4: Default<br /><br />**Modo completo**<br /><br />LEVEL_1: predeterminado<br /><br />LEVEL_2: predeterminado<br /><br />LEVEL_3: predeterminado<br /><br />LEVEL_4: Default|  
+|**Cuadro de límite de predeterminado {XMAX&#124;XMIN&#124;YMAX&#124;YMIN} para los índices espaciales**|Define el valor predeterminado de {XMAX&#124;XMIN&#124;YMAX&#124;YMIN} parámetro del rectángulo de selección utilizadas en índices espaciales.<br /><br />**Modo predeterminado**<br /><br />XMAX: 100<br /><br />XMIN: 0<br /><br />YMAX: 100<br /><br />YMIN: 0<br /><br />**Modo optimista**<br /><br />XMAX: 100<br /><br />XMIN: 0<br /><br />YMAX: 100<br /><br />YMIN: 0<br /><br />**Modo completo**<br /><br />XMAX: 100<br /><br />XMIN: 0<br /><br />YMAX: 100<br /><br />YMIN: 0|  
+|**Densidad de cuadrícula predeterminada para los índices espaciales**|Define el valor predeterminado para LEVEL_1, LEVEL_2, LEVEL_3 y LEVEL_4 de densidad de cuadrícula utilizada en índices espaciales.<br /><br />**Modo predeterminado**<br /><br />LEVEL_1: predeterminado<br /><br />LEVEL_2: predeterminado<br /><br />LEVEL_3: predeterminado<br /><br />LEVEL_4: predeterminado<br /><br />**Modo optimista**<br /><br />LEVEL_1: predeterminado<br /><br />LEVEL_2: predeterminado<br /><br />LEVEL_3: predeterminado<br /><br />LEVEL_4: predeterminado<br /><br />**Modo completo**<br /><br />LEVEL_1: predeterminado<br /><br />LEVEL_2: predeterminado<br /><br />LEVEL_3: predeterminado<br /><br />LEVEL_4: predeterminado|  
   
 ### <a name="transactions"></a>Transactions  
   

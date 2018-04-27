@@ -1,22 +1,22 @@
 ---
-title: 'Actualizado: los documentos de las SQL Operations Studio | Documentos de Microsoft'
-description: Mostrar fragmentos de contenido actualizado para recientemente modificadas en documentación, las SQL Operations Studio.
+title: 'Actualizado: los documentos de las operaciones de SQL Studio | Documentos de Microsoft'
+description: Mostrar fragmentos de contenido actualizado para recientemente modificadas en documentación, las operaciones de SQL Studio.
 manager: craigg
 author: MightyPen
 ms.author: genemi
 ms.topic: article
 ms.custom: UpdArt.exe
 ms.suite: sql
-ms.prod_service: sql-non-specified
+ms.prod_service: sql
 ms.component: ssops
 ms.date: 02/03/2018
-ms.openlocfilehash: 339cf28ac985e1614b4aaece3fb099d0144a309a
-ms.sourcegitcommit: d6b1695c8cbc70279b7d85ec4dfb66a4271cdb10
+ms.openlocfilehash: 0b75d515624e2452c8af625bf7c31c1859786a48
+ms.sourcegitcommit: a85a46312acf8b5a59a8a900310cf088369c4150
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/08/2018
+ms.lasthandoff: 04/26/2018
 ---
-# <a name="new-and-recently-updated-sql-operations-studio-docs"></a>Las nuevas y recientemente actualizado: los documentos de las SQL Operations Studio
+# <a name="new-and-recently-updated-sql-operations-studio-docs"></a>Las nuevas y recientemente actualizado: los documentos de las operaciones de SQL Studio
 
 
 
@@ -29,7 +29,7 @@ Actualizaciones recientes se notifican para el siguiente intervalo de fechas y e
 
 
 - *Intervalo de fechas de las actualizaciones:* &nbsp; del **03-12-2017** &nbsp; al &nbsp; **03-02-2018**
-- *Área de asunto:* &nbsp; **SQL Operations Studio**.
+- *Área de asunto:* &nbsp; **Studio de operaciones SQL**.
 
 
 
@@ -41,7 +41,7 @@ Actualizaciones recientes se notifican para el siguiente intervalo de fechas y e
 Los siguientes vínculos llevan a nuevos artículos que se han agregado recientemente.
 
 
-1. [Notas de la versión de las SQL Operations Studio (preview)](release-notes.md)
+1. [Notas de la versión de las operaciones de SQL Studio (versión preliminar)](release-notes.md)
 
 
 
@@ -67,7 +67,7 @@ Por estas y otras razones, no se copie el código de estos fragmentos y no toma 
 
 En esta lista compacta se proporcionan vínculos a todos los artículos actualizados que aparecen en la sección de extractos.
 
-1. [Descargue e instale las SQL Operations Studio (preview)](#TitleNum_1)
+1. [Descargue e instale las operaciones de SQL Studio (versión preliminar)](#TitleNum_1)
 
 
 
@@ -78,7 +78,7 @@ En esta lista compacta se proporcionan vínculos a todos los artículos actualiz
 
 <a name="TitleNum_1"/>
 
-### <a name="1-nbsp-download-and-install-sql-operations-studio-previewdownloadmd"></a>1. &nbsp; [Descargue e instale las SQL Operations Studio (preview)](download.md)
+### <a name="1-nbsp-download-and-install-sql-operations-studio-previewdownloadmd"></a>1. &nbsp; [Descargue e instale las operaciones de SQL Studio (versión preliminar)](download.md)
 
 *Actualizado: 18-01-2018* &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; 
 
@@ -94,25 +94,25 @@ En esta lista compacta se proporcionan vínculos a todos los artículos actualiz
 |Plataforma|Descargar|Fecha de lanzamiento|
 |:---|:---|:---|
 |Windows|[Instalador](https://go.microsoft.com/fwlink/?linkid=866480)<br>[.zip](https://go.microsoft.com/fwlink/?linkid=866479)|17 de enero de 2018 |
-|macOS|[.zip](https://go.microsoft.com/fwlink/?linkid=866481)|17 de enero de 2018 |
-|Linux|[.deb](https://go.microsoft.com/fwlink/?linkid=866484)<br>[.rpm](https://go.microsoft.com/fwlink/?linkid=866483)<br>[.tar.gz](https://go.microsoft.com/fwlink/?linkid=866482)|17 de enero de 2018|
+|MacOS|[.zip](https://go.microsoft.com/fwlink/?linkid=866481)|17 de enero de 2018 |
+|Linux|[.DEB](https://go.microsoft.com/fwlink/?linkid=866484)<br>[.rpm](https://go.microsoft.com/fwlink/?linkid=866483)<br>[. tar.gz](https://go.microsoft.com/fwlink/?linkid=866482)|17 de enero de 2018|
 
 Para obtener más información acerca de la versión más reciente, consulte el [notas de la versión](release-notes.md).
 
-**Obtener SQL Operations Studio (preview) para Windows**
+**Obtener operaciones de SQL Studio (versión preliminar) para Windows**
 
 
-Esta versión de las SQL Operations Studio (preview) incluye una experiencia de instalador de Windows estándar y .zip:
+Esta versión de las operaciones de SQL Studio (vista previa) incluye una experiencia de instalador de Windows estándar y .zip:
 
 **Instalador**
 
-1. Descargue y ejecute la [instalador SQL Operations Studio (preview) para Windows](https://go.microsoft.com/fwlink/?linkid=866480).
-1. Iniciar la aplicación de las SQL Operations Studio (preview).
+1. Descargue y ejecute la [instalador Studio de operaciones de SQL (vista previa) para Windows](https://go.microsoft.com/fwlink/?linkid=866480).
+1. Iniciar la aplicación de las operaciones de SQL Studio (versión preliminar).
 
 
 **archivo .zip**
 
-1. Descargar [.zip SQL Operations Studio (preview) para Windows](https://go.microsoft.com/fwlink/?linkid=866479).
+1. Descargar [.zip Studio de operaciones de SQL (vista previa) para Windows](https://go.microsoft.com/fwlink/?linkid=866479).
 
 
 

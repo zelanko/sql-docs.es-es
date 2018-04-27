@@ -1,16 +1,16 @@
 ---
 title: Expresiones SequenceType (XQuery) | Documentos de Microsoft
-ms.custom: 
+ms.custom: ''
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
-ms.prod_service: sql-non-specified
-ms.service: 
+ms.prod: sql
+ms.prod_service: sql
+ms.service: ''
 ms.component: xquery
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 applies_to:
 - SQL Server
@@ -22,16 +22,16 @@ helpviewer_keywords:
 - expressions [XQuery], SequenceType
 - cast as operator
 ms.assetid: ad3573da-d820-4d1c-81c4-a83c4640ce22
-caps.latest.revision: 
+caps.latest.revision: 25
 author: rothja
 ms.author: jroth
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 3fa5ebb01c50823b5fe329063d9fc63023ce2478
-ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
+ms.openlocfilehash: 0885694aa774a74d694742bf62e32efdcf3a7552
+ms.sourcegitcommit: a85a46312acf8b5a59a8a900310cf088369c4150
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/09/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="sequencetype-expressions-xquery"></a>Expresiones SequenceType (XQuery)
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
@@ -321,7 +321,7 @@ select @x.query(' declare namespace CustOrders="Customers";
   
 -   No se admiten las secuencias completas, como `(1,2) instance of xs:integer*`.  
   
--   Cuando se utiliza una forma de la **element()** de secuencia de tipo que especifica un nombre de tipo, como `element(ElementName, TypeName)`, el tipo debe estar calificado con un signo de interrogación (?). Por ejemplo, `element(Title, xs:string?)` indica que el elemento puede ser NULL. [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]no se admite la detección de tiempo de ejecución de la **xsi: nil** propiedad mediante el uso de `instance of`.  
+-   Cuando se utiliza una forma de la **element()** de secuencia de tipo que especifica un nombre de tipo, como `element(ElementName, TypeName)`, el tipo debe estar calificado con un signo de interrogación (?). Por ejemplo, `element(Title, xs:string?)` indica que el elemento puede ser NULL. [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] no se admite la detección de tiempo de ejecución de la **xsi: nil** propiedad mediante el uso de `instance of`.  
   
 -   Si el valor de `Expression` procede de un elemento o atributo del tipo unión, [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] solo podrá identificar el tipo primitivo, no derivado, del que procede el tipo del valor. Por ejemplo, si se define <`e1`> para que tenga un tipo estático de (xs:integer | xs:string), el ejemplo siguiente devolverá False.  
   
@@ -417,6 +417,6 @@ select @x.query('xs:date("2000-01-01Z")')
   
 ## <a name="see-also"></a>Vea también  
  [Expresiones XQuery](../xquery/xquery-expressions.md)   
- [Sistema de tipos &#40; XQuery &#41;](../xquery/type-system-xquery.md)  
+ [Sistema de tipos &#40;XQuery&#41;](../xquery/type-system-xquery.md)  
   
   

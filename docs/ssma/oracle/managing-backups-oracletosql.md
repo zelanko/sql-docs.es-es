@@ -1,30 +1,31 @@
 ---
 title: Administrar copias de seguridad (OracleToSQL) | Documentos de Microsoft
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: sql-tools
-ms.service: 
+ms.service: ''
 ms.component: ssma-oracle
-ms.custom: 
+ms.custom: ''
 ms.date: 01/19/2017
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: sql-ssma
-ms.tgt_pltfrm: 
+ms.technology:
+- sql-ssma
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - Oracle Backup Management
 - SQL Server Backup Management
 ms.assetid: a1a03ef9-b6e8-4127-bad0-eae261251472
-caps.latest.revision: "6"
+caps.latest.revision: 6
 author: Shamikg
 ms.author: Shamikg
 manager: v-thobro
 ms.workload: Inactive
-ms.openlocfilehash: eba65be518ebd986c6f074a1702ca72945d2fff6
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: ad029ca277a426b7bb49e95fff9f830b69796be4
+ms.sourcegitcommit: a85a46312acf8b5a59a8a900310cf088369c4150
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="managing-backups-oracletosql"></a>Administrar copias de seguridad (OracleToSQL)
 Administración de copia de seguridad de Oracle permite copias de seguridad y restauración de datos de la tabla antes o después de ejecutar una prueba. También puede administrar el contenido de copia de seguridad con el cuadro de diálogo Administrar contenido de copia de seguridad.  
@@ -42,7 +43,7 @@ Los siguientes botones están disponibles en el cuadro de diálogo:
   
 -   Haga clic en el **cancelar** botón para cerrar el cuadro de diálogo.  
   
-### <a name="restore"></a>Restaurar  
+### <a name="restore"></a>Restore  
 Para abrir el cuadro de diálogo de restauración, en el menú de la herramienta de comprobación, seleccione Administración de copia de seguridad de Oracle, a continuación, haga clic en restaurar... Allí encontrará un árbol que contiene las tablas disponibles en la copia de seguridad. Seleccione una o más tablas para restaurar sus datos.  
   
 Los siguientes botones están disponibles en el cuadro de diálogo:  
@@ -78,7 +79,7 @@ Los siguientes botones están disponibles en el cuadro de diálogo:
   
 -   Haga clic en el **cancelar** botón para cerrar el cuadro de diálogo.  
   
-### <a name="restore"></a>Restaurar  
+### <a name="restore"></a>Restore  
 Para abrir el cuadro de diálogo de restauración, en el menú de evaluador seleccione Administración de copia de seguridad de SQL Server, haga clic en restauración... Allí encontrará un árbol que contiene las tablas disponibles en la copia de seguridad. Seleccione uno o más tabla para restaurar sus datos.  
   
 Los siguientes botones están disponibles en el cuadro de diálogo:  
@@ -101,5 +102,5 @@ Los siguientes botones están disponibles en el cuadro de diálogo:
 -   Haga clic en el **cerrar** botón para cerrar el cuadro de diálogo.  
   
 ## <a name="see-also"></a>Vea también  
-[Pruebas migran objetos de base de datos &#40; OracleToSQL &#41;](../../ssma/oracle/testing-migrated-database-objects-oracletosql.md)  
+[Pruebas de objetos de base de datos migran &#40;OracleToSQL&#41;](../../ssma/oracle/testing-migrated-database-objects-oracletosql.md)  
   

@@ -1,6 +1,6 @@
 ---
 title: Configuración (objetos del sistema de carga) del proyecto (DB2ToSQL) | Documentos de Microsoft
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: sql-tools
 ms.service: ''
 ms.component: ssma-db2
@@ -21,11 +21,11 @@ author: Shamikg
 ms.author: Shamikg
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: f0ec81e97380007724ba1cfeb9ee2580ca64edd0
-ms.sourcegitcommit: 9351e8b7b68f599a95fb8e76930ab886db737e5f
+ms.openlocfilehash: d6fa389cfe6dea25a8974a47a4c77024720da312
+ms.sourcegitcommit: a85a46312acf8b5a59a8a900310cf088369c4150
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/06/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="project-settingsloading-system-objects-db2tosql"></a>Configuración (objetos del sistema de carga) del proyecto (DB2ToSQL)
 La página cargar objetos de sistema de la **configuración del proyecto** cuadro de diálogo permite especificar qué objetos del sistema DB2 SSMA se convierte y se carga en [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)].  
@@ -39,21 +39,21 @@ El panel de objetos del sistema de carga está disponible en la **configuración
 ## <a name="default-settings"></a>Configuración predeterminada  
 Convertir los objetos del sistema consume recursos del sistema y lleva tiempo. Para mejorar el rendimiento, SSMA selecciona sólo los objetos del sistema usados con más frecuencia, como se muestra en la lista siguiente:  
   
--   SYS.DBMS_OUTPUT  
+-   SYS. DBMS_OUTPUT  
   
--   SYS.DBMS_PIPE  
+-   SYS. DBMS_PIPE  
   
--   SYS.DBMS_UTILITY  
+-   SYS. DBMS_UTILITY  
   
 -   SYS. ESTÁNDAR  
   
--   SYS.UTL_FILE  
+-   SYS. UTL_FILE  
   
 -   SYS.DBMS_LOB  
   
 -   SYS.DBMS_SQL  
   
--   SYS.DBMS_SESSION  
+-   SYS. DBMS_SESSION  
   
 Si los objetos de DB2 hacen referencia a objetos del sistema adicionales, debe seleccionar los objetos. Si no selecciona los objetos del sistema que hacen referencia los objetos de base de datos de DB2, SSMA va a notificar errores de conversión. Si recibe errores de conversión causados por falta de objetos del sistema, seleccione los objetos que faltan en este cuadro de diálogo. A continuación, puede repetir la conversión según sea necesario.  
   

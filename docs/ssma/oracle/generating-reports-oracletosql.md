@@ -1,38 +1,39 @@
 ---
-title: "Generación de informes (OracleToSQL) | Documentos de Microsoft"
-ms.prod: sql-non-specified
+title: Generación de informes (OracleToSQL) | Documentos de Microsoft
+ms.prod: sql
 ms.prod_service: sql-tools
-ms.service: 
+ms.service: ''
 ms.component: ssma-oracle
-ms.custom: 
+ms.custom: ''
 ms.date: 01/19/2017
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: sql-ssma
-ms.tgt_pltfrm: 
+ms.technology:
+- sql-ssma
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - Report Generation in Oracle Console, synchronize-target
 - Report Generation in Oracle Console,refresh-from-database
 - Report Generation in Oracle Console,write-summary-report-to
 ms.assetid: ccad6262-01e1-447a-bd2b-c105154c80ce
-caps.latest.revision: "17"
+caps.latest.revision: 17
 author: Shamikg
 ms.author: Shamikg
 manager: v-thobro
 ms.workload: Inactive
-ms.openlocfilehash: aaadc1f77e9fb7e0179f46f4a2186322aa2ad656
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: 8d3abe0e02eca67da132cd4f89ed592a00b16383
+ms.sourcegitcommit: a85a46312acf8b5a59a8a900310cf088369c4150
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="generating-reports-oracletosql"></a>Generación de informes (OracleToSQL)
 Se generan los informes de ciertas actividades que se realizan mediante comandos en la consola SSMA al nivel de árbol de objetos.  
   
 Utilice el procedimiento siguiente para generar informes:  
   
-1.  Especifique el **escritura-resumen-informe de** parámetro. El informe al respecto se almacena como el nombre de archivo (si se especifica) o en la carpeta especifique. El nombre de archivo es definido por el sistema como se mencionó en la tabla siguiente where,  **&lt; n &gt;**  es el número de archivo único que se incrementa con un dígito con cada ejecución del mismo comando.  
+1.  Especifique el **escritura-resumen-informe de** parámetro. El informe al respecto se almacena como el nombre de archivo (si se especifica) o en la carpeta especifique. El nombre de archivo es definido por el sistema como se mencionó en la tabla siguiente where, **&lt;n&gt;** es el número de archivo único que se incrementa con un dígito con cada ejecución del mismo comando.  
   
     Los comandos de à respecto de los informes son:  
   
@@ -49,7 +50,7 @@ Utilice el procedimiento siguiente para generar informes:
     > [!IMPORTANT]  
     > Un informe de salida es distinto de los informes de evaluación. El primero es un informe sobre el rendimiento de un comando ejecutado al, el segundo es un informe XML para su uso mediante programación.  
   
-    Para las opciones de comando para los informes de salida (de Sl. No. 2 a 4 anteriores), consulte el [ejecutando la consola SSMA &#40; OracleToSQL &#41;](../../ssma/oracle/executing-the-ssma-console-oracletosql.md) sección.  
+    Para las opciones de comando para los informes de salida (de Sl. No. 2 a 4 anteriores), consulte el [ejecutando la consola SSMA &#40;OracleToSQL&#41; ](../../ssma/oracle/executing-the-ssma-console-oracletosql.md) sección.  
   
 2.  Indica el grado de detalle que desee en el informe de salida con la configuración de nivel de detalle del informe:  
   
@@ -94,7 +95,7 @@ Utilice el procedimiento siguiente para generar informes:
 ```  
   
 ### <a name="synchronize-target"></a>destino sincronizar:  
-El comando **destino sincronizar** tiene **informe de errores a** parámetro, que especifica la ubicación del informe de error para la operación de sincronización. A continuación, un archivo con nombre **TargetSynchronizationReport&lt;n&gt;. XML** se crea en la ubicación especificada, donde  **&lt; n &gt;**  es el número de archivo único que se incrementa con un dígito con cada ejecución del mismo comando.  
+El comando **destino sincronizar** tiene **informe de errores a** parámetro, que especifica la ubicación del informe de error para la operación de sincronización. A continuación, un archivo con nombre **TargetSynchronizationReport&lt;n&gt;. XML** se crea en la ubicación especificada, donde **&lt;n&gt;** es el número de archivo único que se incrementa con un dígito con cada ejecución del mismo comando.  
   
 **Nota:** si se proporciona la ruta de acceso de carpeta, el parámetro 'informe-errores-to' se convierte en un atributo opcional para el comando 'sincronizar el destino'.  
   
@@ -120,7 +121,7 @@ El comando **destino sincronizar** tiene **informe de errores a** parámetro, qu
 -   Error-script  
   
 ### <a name="refresh-from-database"></a>actualización-de-base de datos:  
-El comando **actualización de base de datos** tiene **informe de errores a** parámetro, que especifica la ubicación del informe de error para la operación de actualización. A continuación, un archivo con nombre **SourceDBRefreshReport&lt;n&gt;. XML** se crea en la ubicación especificada, donde  **&lt; n &gt;**  es el número de archivo único que se incrementa con un dígito con cada ejecución del mismo comando.  
+El comando **actualización de base de datos** tiene **informe de errores a** parámetro, que especifica la ubicación del informe de error para la operación de actualización. A continuación, un archivo con nombre **SourceDBRefreshReport&lt;n&gt;. XML** se crea en la ubicación especificada, donde **&lt;n&gt;** es el número de archivo único que se incrementa con un dígito con cada ejecución del mismo comando.  
   
 **Nota:** si se proporciona la ruta de acceso de carpeta, el parámetro 'informe-errores-to' se convierte en un atributo opcional para el comando 'sincronizar el destino'.  
   

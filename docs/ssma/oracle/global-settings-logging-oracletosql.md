@@ -1,34 +1,35 @@
 ---
-title: "Configuración global (registro) (OracleToSQL) | Documentos de Microsoft"
-ms.prod: sql-non-specified
+title: Configuración global (registro) (OracleToSQL) | Documentos de Microsoft
+ms.prod: sql
 ms.prod_service: sql-tools
-ms.service: 
+ms.service: ''
 ms.component: ssma-oracle
-ms.custom: 
+ms.custom: ''
 ms.date: 01/19/2017
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: sql-ssma
-ms.tgt_pltfrm: 
+ms.technology:
+- sql-ssma
+ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: 12dbcd77-2b90-4fa1-9cf9-239231ea5773
-caps.latest.revision: "4"
+caps.latest.revision: 4
 author: Shamikg
 ms.author: Shamikg
 manager: v-thobro
 ms.workload: Inactive
-ms.openlocfilehash: d5e0cab604baad282c06367e3271915329d358b7
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: df2e8fd5376ddf37d02380ba1a4f1c516f023e7a
+ms.sourcegitcommit: a85a46312acf8b5a59a8a900310cf088369c4150
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="global-settings-logging-oracletosql"></a>Configuración global (registro) (OracleToSQL)
 Use la **configuración Global** cuadro de diálogo para especificar la configuración del registro para SSMA. Por lo general, debería cambiar esta configuración solo cuando se trabaja con servicios de soporte técnico.  
   
 Para tener acceso a este cuadro de diálogo, en la **herramientas** menú, seleccione **configuración Global** y, a continuación, haga clic en el **registro** situado en la parte inferior del panel izquierdo.  
   
-## <a name="options"></a>.  
+## <a name="options"></a>Opciones  
 **Nivel de mensajes**  
 Las siguientes opciones están disponibles en **nivel de mensajes**:  
   
@@ -54,7 +55,7 @@ Para cada opción en **nivel de mensajes**, configure uno de los siguientes nive
 |**Error irrecuperable**|Escribir solo mensajes de error grave en el registro.|  
 |**Error**|Escribir los errores y mensajes de error grave en el registro.|  
 |**Advertencia**|Escribir mensajes de error grave, error y de advertencia en el registro.|  
-|**Información de**|Escribir informativos, advertencias, errores y mensajes de error grave en el registro.|  
+|**información de**|Escribir informativos, advertencias, errores y mensajes de error grave en el registro.|  
 |**Depuración**|Escribir todos los mensajes, incluidos los mensajes, en el registro de depuración.|  
   
 **Ruta de acceso de archivo de registro**  

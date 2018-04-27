@@ -2,7 +2,7 @@
 title: Introducción a SSMA para SAP ASE (SybaseToSQL) | Documentos de Microsoft
 ms.custom: ''
 ms.date: 09/30/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: sql-tools
 ms.service: ''
 ms.component: ssma-sybase
@@ -21,11 +21,11 @@ author: Shamikg
 ms.author: Shamikg
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 34910ce2592f765d5fac0decaadfc48f5f173ed0
-ms.sourcegitcommit: 9351e8b7b68f599a95fb8e76930ab886db737e5f
+ms.openlocfilehash: 2b502bd5cfe2c1a7df2129294b279a2b7b3a407a
+ms.sourcegitcommit: a85a46312acf8b5a59a8a900310cf088369c4150
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/06/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="getting-started-with-ssma-for-sap-ase-sybasetosql"></a>Introducción a SSMA para SAP ASE (SybaseToSQL)
 [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] Migration Assistant (SSMA) para SAP ASE le permite rápidamente convertir esquemas de base de datos de SAP Adaptive Server Enterprise (ASE) a [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] o esquemas de base de datos de SQL Azure, cargue los esquemas resultantes a [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] o base de datos de SQL Azure, y migrar datos desde SAP ASE a [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] o base de datos SQL Azure.  
@@ -109,7 +109,7 @@ SSMA contiene los siguientes menús:
 |**Editar**|Contiene comandos para buscar y trabajar con texto en las páginas de detalles, como copiar [!INCLUDE[tsql](../../includes/tsql_md.md)] desde el panel de detalles SQL. También contiene el **administrar marcadores** opción, donde puede ver una lista de los marcadores existentes. Puede usar los botones en el lado derecho del cuadro de diálogo para administrar los marcadores.|  
 |**Ver**|Contiene el **sincronizar metadatos exploradores** comando. Esto sincroniza los objetos entre el Explorador de metadatos de Sybase y [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] o en el Explorador de metadatos de SQL Azure. También contiene comandos para mostrar y ocultar el **salida** y **lista de errores** paneles y una opción **diseños** para administrar los diseños.|  
 |**Herramientas**|Contiene comandos para crear informes, exportar los datos y migrar objetos y los datos. También proporciona acceso a la **configuración Global** y **configuración del proyecto** cuadros de diálogo.|  
-|**Tester**|Contiene comandos para crear comandos para la administración de copia de seguridad de base de datos, ver los resultados de pruebas y casos de prueba.|  
+|**Herramienta de comprobación**|Contiene comandos para crear comandos para la administración de copia de seguridad de base de datos, ver los resultados de pruebas y casos de prueba.|  
 |**Ayuda**|Proporciona acceso a la Ayuda de SSMA y a la **sobre** cuadro de diálogo.|  
   
 ### <a name="output-pane-and-error-list-pane"></a>Panel de resultados y el panel de lista de errores  

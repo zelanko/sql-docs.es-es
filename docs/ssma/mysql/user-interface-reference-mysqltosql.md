@@ -1,6 +1,6 @@
 ---
 title: Referencia de la interfaz de usuario (MySQLToSQL) | Documentos de Microsoft
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: sql-tools
 ms.service: ''
 ms.component: ssma-mysql
@@ -21,11 +21,11 @@ author: Shamikg
 ms.author: Shamikg
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: c58f4cd84e2d5264a92c8cfaf302d8ed9915f4cc
-ms.sourcegitcommit: 9351e8b7b68f599a95fb8e76930ab886db737e5f
+ms.openlocfilehash: 50426d858148dd1771f0fdab9566513a358cfbcd
+ms.sourcegitcommit: a85a46312acf8b5a59a8a900310cf088369c4150
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/06/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="user-interface-reference-mysqltosql"></a>Referencia de la interfaz de usuario (MySQLToSQL)
 Esta sección incluye temas de ayuda para SQL Server Migration Assistant (SSMA) para MySQL.  
@@ -57,7 +57,7 @@ La tabla siguiente enumera los cuadros de diálogo SSMA:
 |[Configuración del proyecto &#40;base de datos de SQL Azure&#41; &#40;MySQLToSQL&#41;](../../ssma/mysql/project-settings-azure-sql-db-mysqltosql.md)|Use la página de SQL Azure de la **configuración del proyecto** cuadro de diálogo para personalizar la configuración de conectividad para migrar los datos de MySQL a SQL Azure.|  
 |[Configuración del proyecto &#40;la asignación de tipo&#41; &#40;MySQLToSQL&#41;](../../ssma/mysql/project-settings-type-mapping-mysqltosql.md)|Use la página de asignación de tipo de la **configuración del proyecto** cuadro de diálogo para especificar las asignaciones de tipos de valor predeterminado para todas las bases de datos y objetos de base de datos de SSMA para proyecto de MySQL.|  
 |[Actualizar desde la base de datos &#40;MySQLToSQL&#41;](../../ssma/mysql/refresh-from-database-mysqltosql.md)|Use la **actualizar desde la base de datos** cuadro de diálogo para seleccionar objetos para actualizar desde la base de datos de MySQL.|  
-|[Save Metadata  &#40;MySQLToSQL&#41;](../../ssma/mysql/save-metadata-mysqltosql.md)|El **guardar metadatos** cuadro de diálogo aparece cuando se guarda un proyecto que le faltan metadatos.|  
+|[Guardar metadatos &#40;MySQLToSQL&#41;](../../ssma/mysql/save-metadata-mysqltosql.md)|El **guardar metadatos** cuadro de diálogo aparece cuando se guarda un proyecto que le faltan metadatos.|  
   
 ## <a name="see-also"></a>Vea también  
 [Introducción a SSMA para MySQL &#40;MySQLToSQL&#41;](../../ssma/mysql/getting-started-with-ssma-for-mysql-mysqltosql.md)  

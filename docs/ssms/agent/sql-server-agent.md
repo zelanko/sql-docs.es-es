@@ -16,16 +16,17 @@ helpviewer_keywords:
 - SQL Server Agent, about SQL Server Agent
 - automatic administration steps
 ms.assetid: 8d1dc600-aabb-416f-b3af-fbc9fccfd0ec
-caps.latest.revision: ''
+caps.latest.revision: 5
 author: stevestein
 ms.author: sstein
 manager: craigg
 ms.workload: Active
-ms.openlocfilehash: 54d2642817bfb96f29a87535c6eda004e6a2d777
-ms.sourcegitcommit: 34766933e3832ca36181641db4493a0d2f4d05c6
+monikerRange: = azuresqldb-mi-current || >= sql-server-2016 || = sqlallproducts-allversions
+ms.openlocfilehash: 4d074c9d90df6065326e30de581c7b512d7affdc
+ms.sourcegitcommit: 056ce753c2d6b85cd78be4fc6a29c2b4daaaf26c
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/22/2018
+ms.lasthandoff: 04/19/2018
 ---
 # <a name="sql-server-agent"></a>Agente SQL Server
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
@@ -116,7 +117,7 @@ Un *operador* define información de contacto para las personas responsables del
 -   **net send**  
   
 > [!NOTE]  
-> Para enviar notificaciones mediante **net send,**se debe iniciar el servicio Windows Messenger en el equipo en el que reside el Agente [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] .  
+> Para enviar notificaciones mediante **net send,** se debe iniciar el servicio Windows Messenger en el equipo en el que reside el Agente [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] .  
   
 > [!IMPORTANT]  
 > Las opciones Buscapersonas y **net send** se quitarán del Agente [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] en una versión futura de [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]. Evite utilizar estas características en los nuevos trabajos de programación y planee modificar las aplicaciones que actualmente las utilizan.  
@@ -132,7 +133,7 @@ Puede definir un operador como alias de un grupo de personas. De esta manera, to
 Los miembros de los roles fijos de base de datos **SQLAgentUserRole**, **SQLAgentReaderRole**y **SQLAgentOperatorRole** de **msdb**y los miembros del rol fijo de servidor **sysadmin** tienen acceso al Agente [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] . Un usuario que no pertenezca a ninguno de estos roles no puede utilizar el Agente [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] . Para más información sobre los roles que usa el Agente [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] , consulte [Implementar la seguridad del Agente SQL Server](../../ssms/agent/implement-sql-server-agent-security.md).  
   
 ### <a name="subsystems"></a>Subsistemas  
-Un subsistema es un objeto predefinido que representa las funciones disponibles para un paso de trabajo. Cada proxy tiene acceso a uno o varios subsistemas. Los subsistemas proporcionan seguridad, ya que delimitan el acceso a las que funciones que están disponibles para el proxy. Cada paso de trabajo se ejecuta en el contexto de un proxy, con la excepción de los pasos de trabajo de [!INCLUDE[tsql](../../includes/tsql_md.md)] . [!INCLUDE[tsql](../../includes/tsql_md.md)] utilizan el comando EXECUTE AS para establecer el contexto de seguridad.  
+Un subsistema es un objeto predefinido que representa las funciones disponibles para un paso de trabajo. Cada proxy tiene acceso a uno o varios subsistemas. Los subsistemas proporcionan seguridad, ya que delimitan el acceso a las que funciones que están disponibles para el proxy. Cada paso de trabajo se ejecuta en el contexto de un proxy, con la excepción de los pasos de trabajo de [!INCLUDE[tsql](../../includes/tsql_md.md)] . El trabajo [!INCLUDE[tsql](../../includes/tsql_md.md)] usa el comando EXECUTE AS para establecer el contexto de seguridad como su propietario.  
   
 [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] define los subsistemas incluidos en la tabla siguiente:  
   

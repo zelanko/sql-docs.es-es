@@ -2,7 +2,7 @@
 title: Conectarse a Sybase ASE (SybaseToSQL) | Documentos de Microsoft
 ms.custom: ''
 ms.date: 01/19/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: sql-tools
 ms.service: ''
 ms.component: ssma-sybase
@@ -23,11 +23,11 @@ author: Shamikg
 ms.author: Shamikg
 manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 7ab617555d71bb2067b1c2d2c8e073e74af6e908
-ms.sourcegitcommit: 9351e8b7b68f599a95fb8e76930ab886db737e5f
+ms.openlocfilehash: 3c663218b700acb40892a763db93d02629388d27
+ms.sourcegitcommit: a85a46312acf8b5a59a8a900310cf088369c4150
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/06/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="connecting-to-sybase-ase-sybasetosql"></a>Conectarse a Sybase ASE (SybaseToSQL)
 Migrar bases de datos de Sybase Adaptive Server Enterprise (ASE) a [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] o SQL Azure, debe conectarse al servidor adaptable que contiene las bases de datos que se van a migrar. Cuando se conecta, SSMA obtiene metadatos acerca de todas las bases de datos en el servidor adaptable y muestra los metadatos de la base de datos en el panel Explorador de metadatos de Sybase. SSMA almacena información sobre el servidor de base de datos, pero no almacena las contraseñas.  
@@ -39,21 +39,21 @@ Metadatos acerca del servidor adaptable no se actualizan automáticamente. En su
 ## <a name="required-ase-permissions"></a>Permisos necesarios ASE  
 La cuenta que se usa para conectarse a ASE debe tener al menos **público** acceso a la base de datos maestra y a las bases de datos de origen para migrarlos a [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] o SQL Azure. Además, para seleccionar los permisos en las tablas que se van a migrar, el usuario debe tener permisos SELECT en las tablas del sistema siguientes:  
   
--   [source_db].dbo.sysobjects  
+-   .dbo.sysobjects [source_db]  
   
--   [source_db].dbo.syscolumns  
+-   .dbo.syscolumns [source_db]  
   
--   [source_db].dbo.sysusers  
+-   .dbo.sysusers [source_db]  
   
--   [source_db].dbo.systypes  
+-   .dbo.systypes [source_db]  
   
--   [source_db].dbo.sysconstraints  
+-   .dbo.sysconstraints [source_db]  
   
--   [source_db].dbo.syscomments  
+-   .dbo.syscomments [source_db]  
   
 -   [source_db].dbo.sysindexes  
   
--   [source_db].dbo.sysreferences  
+-   .dbo.sysreferences [source_db]  
   
 -   master.dbo.sysdatabases  
   

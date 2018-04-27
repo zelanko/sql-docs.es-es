@@ -25,16 +25,16 @@ helpviewer_keywords:
 - SQL Server Management Studio [SQL Server], tutorials
 - scripts [SQL Server], SQL Server Management Studio
 ms.assetid: d2bade70-07cf-4d94-b5d2-88aecb538ed1
-caps.latest.revision: ''
+caps.latest.revision: 22
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.workload: Active
-ms.openlocfilehash: e6d1650a126991292680a40a0faa76f5ae8ffa42
-ms.sourcegitcommit: ccb05cb5a4cccaf7ffa9e85a4684fa583bab914e
+ms.openlocfilehash: 879326583f507b44a23955a42857fd6a8cea911b
+ms.sourcegitcommit: 056ce753c2d6b85cd78be4fc6a29c2b4daaaf26c
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/22/2018
+ms.lasthandoff: 04/19/2018
 ---
 # <a name="tutorials-for-sql-server-management-studio-ssms"></a>Tutoriales de SQL Server Management Studio (SSMS)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -52,24 +52,24 @@ A continuación se muestran los temas que se tratan en los tutoriales:
   
 - [Tutorial: Conectarse a SQL Server y efectuar consultas con SSMS](connect-query-sql-server.md)
 
-    En esta sección aprenderá a conectarse a su instancia de SQL Server. También aprenderá algunos comandos básicos de Transact-SQL (T-SQL) para crear y consultar una base de datos nueva. 
+    En este tutorial aprenderá a conectarse a su instancia de SQL Server. También aprenderá algunos comandos básicos de Transact-SQL (T-SQL) para crear y consultar una base de datos nueva. 
 
 - [Tutorial: Crear scripts de objetos en SSMS](scripting-ssms.md)
 
-    En esta sección aprenderá a crear scripts de distintos objetos en SSMS, incluidas las bases de datos y las consultas. 
+    En este tutorial aprenderá a crear scripts de distintos objetos en SSMS, incluidas las bases de datos y las consultas. 
 
 - [Tutorial: Usar plantillas en SSMS](templates-ssms.md)
    
-    En esta sección aprenderá a trabajar con las plantillas predefinidas en SSMS. 
+    En este tutorial aprenderá a trabajar con las plantillas predefinidas en SSMS. Las plantillas, una característica poco conocida, almacenan fragmentos de código Transact-SQL para diferentes tareas de administración de bases de datos. 
 
 - [Tutorial: Configuración de SSMS](ssms-configuration.md)
 
-    En esta sección aprenderá los conceptos básicos de la configuración del entorno de SSMS. 
+    En este tutorial, aprenderá los conceptos básicos de la configuración de su entorno de SSMS, como cambiar el diseño del entorno. También conocerá los diferentes componentes de SSMS. 
   
 
 - [Tutorial: Otras recomendaciones y trucos al usar SSMS](ssms-tricks.md)
 
-    En esta sección aprenderá otras recomendaciones y trucos a la hora de usar SSMS. El tutorial incluye las siguientes lecciones:
+    En este tutorial aprenderá otras recomendaciones y trucos a la hora de usar SSMS. Se incluyen las siguientes lecciones:
     - Agregar y quitar marcas de comentario del texto
     - Aplicar sangría al texto
     - Filtrar objetos en el Explorador de objetos

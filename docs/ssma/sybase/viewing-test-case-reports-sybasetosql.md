@@ -2,7 +2,7 @@
 title: Ver informes de casos de prueba (SybaseToSQL) | Documentos de Microsoft
 ms.custom: ''
 ms.date: 01/19/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: sql-tools
 ms.service: ''
 ms.component: ssma-sybase
@@ -23,11 +23,11 @@ author: Shamikg
 ms.author: Shamikg
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: fe87892c50992968da7ada9b5a3b33a34442fbe6
-ms.sourcegitcommit: 9351e8b7b68f599a95fb8e76930ab886db737e5f
+ms.openlocfilehash: 85344975d2112957df412cf6f60f1937efbced80
+ms.sourcegitcommit: a85a46312acf8b5a59a8a900310cf088369c4150
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/06/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="viewing-test-case-reports-sybasetosql"></a>Ver informes de casos de prueba (SybaseToSQL)
 El informe de casos de prueba muestra los resultados de pruebas de comprobación y la información de prueba general. En caso de error de prueba, también se muestra información sobre los datos que no coincidan en objetos comprobados.  
@@ -52,7 +52,7 @@ Muestra el estado de ejecución como **correcto** o **error**.
 **Resultado de prueba de objetos**  
 Una comparación de los resultados (éxito o error) y las diferencias que SSMA evaluador detectó en caso de error.  
   
-**Finalization**  
+**Finalización**  
 Muestra el estado de ejecución como **correcto** o **error**.  
   
 ## <a name="see-also"></a>Vea también  

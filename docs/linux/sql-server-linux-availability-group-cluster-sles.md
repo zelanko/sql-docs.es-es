@@ -1,25 +1,25 @@
 ---
-title: "Configuración de clúster SLES para grupo de disponibilidad de SQL Server | Documentos de Microsoft"
-description: 
+title: Configuración de clúster SLES para grupo de disponibilidad de SQL Server | Documentos de Microsoft
+description: ''
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.date: 05/17/2017
 ms.topic: article
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine
-ms.service: 
-ms.component: 
+ms.service: ''
+ms.component: ''
 ms.suite: sql
 ms.custom: sql-linux
 ms.technology: database-engine
 ms.assetid: 85180155-6726-4f42-ba57-200bf1e15f4d
 ms.workload: Inactive
-ms.openlocfilehash: 9b0c068ce56a2f499ee452b56ca54025485163f5
-ms.sourcegitcommit: f02598eb8665a9c2dc01991c36f27943701fdd2d
+ms.openlocfilehash: 4fa3cd388fc1f4d22ee781721145d0fc4c465682
+ms.sourcegitcommit: a85a46312acf8b5a59a8a900310cf088369c4150
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/13/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="configure-sles-cluster-for-sql-server-availability-group"></a>Configuración de clúster SLES para grupo de disponibilidad de SQL Server
 
@@ -33,7 +33,7 @@ Para obtener más información sobre la configuración de clúster, opciones de 
 >En este momento, la integración de SQL Server con marcapasos en Linux no es como acoplamiento como con WSFC en Windows. Servicio de SQL Server en Linux no es compatible con clústeres. Marcapasos controla todas las de la orquestación de los recursos de clúster, incluido el recurso de grupo de disponibilidad. En Linux, no deben depender siempre en disponibilidad grupo vistas de administración dinámica (DMV) que proporcionan información de clúster como sys.dm_hadr_cluster. Además, el nombre de red virtual es específico de WSFC, no hay ningún equivalente de la misma en marcapasos. Puede crear un agente de escucha para usarlo para la reconexión transparente después de la conmutación por error, pero tendrá que registrar manualmente el nombre de agente de escucha en el servidor DNS con la dirección IP utilizada para crear el recurso IP virtual (como se explica en las secciones siguientes).
 
 
-## <a name="roadmap"></a>Roadmap
+## <a name="roadmap"></a>Guía básica
 
 El procedimiento para crear un grupo de disponibilidad para la alta disponibilidad es diferente entre servidores Linux y un clúster de conmutación por error de Windows Server. En la lista siguiente describe los pasos generales: 
 

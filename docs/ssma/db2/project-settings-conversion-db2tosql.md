@@ -1,6 +1,6 @@
 ---
 title: Configuración (conversión) (DB2ToSQL) del proyecto | Documentos de Microsoft
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: sql-tools
 ms.service: ''
 ms.component: ssma-db2
@@ -21,11 +21,11 @@ author: Shamikg
 ms.author: Shamikg
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 389d5da7b3940464150ca52618595fd8bd518fb8
-ms.sourcegitcommit: 9351e8b7b68f599a95fb8e76930ab886db737e5f
+ms.openlocfilehash: 5ad3409125f4e6862304e02f05b03bcf821923ba
+ms.sourcegitcommit: a85a46312acf8b5a59a8a900310cf088369c4150
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/06/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="project-settings-conversion-db2tosql"></a>Configuración del proyecto (conversión) (DB2ToSQL)
 La página de conversión de la **configuración del proyecto** cuadro de diálogo contiene la configuración que permiten personalizar cómo SSMA convierte la sintaxis de DB2 a [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] sintaxis.  
@@ -81,7 +81,7 @@ Esta configuración especifica cómo se asignan los esquemas de DB2 a esquemas d
   
 1.  **Esquema de la base de datos:** en este modo DB2 esquema 'sch1' se asignará al esquema de SQL Server 'dbo' en la base de datos de SQL Server 'sch1' de forma predeterminada.  
   
-2.  **Esquema al esquema:**en este modo DB2 esquema 'sch1' se asignará al esquema de SQL Server 'sch1' en la base de datos de SQL Server predeterminado proporcionado en el cuadro de diálogo de conexión de forma predeterminada.  
+2.  **Esquema al esquema:** en este modo DB2 esquema 'sch1' se asignará al esquema de SQL Server 'sch1' en la base de datos de SQL Server predeterminado proporcionado en el cuadro de diálogo de conexión de forma predeterminada.  
   
 Al seleccionar un modo de conversión en el **modo** cuadro, SSMA aplica la siguiente configuración:  
   

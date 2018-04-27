@@ -2,7 +2,7 @@
 title: Ejecutar la consola SSMA (SybaseToSQL) | Documentos de Microsoft
 ms.custom: ''
 ms.date: 09/27/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: sql-tools
 ms.service: ''
 ms.component: ssma-sybase
@@ -30,11 +30,11 @@ author: Shamikg
 ms.author: Shamikg
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 85ffcf0158ea7f28e53addc7d8a5cb1878dbcb38
-ms.sourcegitcommit: 9351e8b7b68f599a95fb8e76930ab886db737e5f
+ms.openlocfilehash: ae312cdb14d6e2e963fb4d967402a7209ffb8a36
+ms.sourcegitcommit: a85a46312acf8b5a59a8a900310cf088369c4150
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/06/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="executing-the-ssma-console-sybasetosql"></a>Ejecutar la consola SSMA (SybaseToSQL)
 Microsoft proporciona un conjunto robusto de script de comandos del archivo para ejecutar y controlar las actividades SSMA. Las secciones posteriores detallan los mismos.  
@@ -50,7 +50,7 @@ Este comando crea un nuevo proyecto SSMA.
   
 -   `project-folder` indica la carpeta del proyecto obtener creado.  
   
--   `project-name` indica el nombre del proyecto. {string}  
+-   `project-name` indica el nombre del proyecto. {cadena}  
   
 -   `overwrite-if-exists`Atributo opcional indica si se debe sobrescribir un proyecto existente. {valor} booleano  
   
@@ -77,9 +77,9 @@ El atributo 'tipo de proyecto' es **sql-server-2008** de forma predeterminada.
 ### <a name="open-project"></a>Abrir proyecto  
 Este comando abre el proyecto.
 
--   `project-folder` indica la carpeta del proyecto obtener creado. El comando produce un error si la carpeta especificada no existe.  {string}  
+-   `project-folder` indica la carpeta del proyecto obtener creado. El comando produce un error si la carpeta especificada no existe.  {cadena}  
   
--   `project-name` indica el nombre del proyecto. El comando produce un error si el proyecto especificado no existe.  {string}  
+-   `project-name` indica el nombre del proyecto. El comando produce un error si el proyecto especificado no existe.  {cadena}  
   
 **Ejemplo de sintaxis:**  
   
@@ -123,7 +123,7 @@ Los comandos de conexión de base de datos ayudan a conectar a la base de datos.
 > - El **examinar** no se admite la característica de la interfaz de usuario en la consola.  
 > - Para obtener más información sobre 'Crear archivos de Script', vea [crear archivos de Script &#40;SybaseToSQL&#41;](../../ssma/sybase/creating-script-files-sybasetosql.md).  
   
-### <a name="connect-source-database"></a>connect-source-database  
+### <a name="connect-source-database"></a>datos de origen conectarse  
 Este comando realiza la conexión a la base de datos de origen y carga los metadatos de alto nivel de la base de datos de origen, pero no todos los metadatos.
   
 Si no se puede establecer la conexión con el origen, se genera un error y la aplicación de consola detiene la ejecución.
@@ -136,7 +136,7 @@ La definición del servidor se recupera desde el atributo de nombre definido par
 <connect-source-database  server="<server-unique-name>"/>  
 ```  
   
-### <a name="force-load-sourcetarget-database"></a>force-load-source/target-database  
+### <a name="force-load-sourcetarget-database"></a>forzar carga-origen/destino-bases de datos  
 Este comando carga los metadatos de origen, y resulta útil para trabajar en el proyecto de migración sin conexión.  
   
 Si no se puede establecer la conexión con el origen o destino, se genera un error y la aplicación de consola detiene la ejecución.  
@@ -153,7 +153,7 @@ Este comando requiere uno o varios nodos de la metabase como parámetro de líne
 </force-load>  
 ```  
   
-### <a name="reconnect-source-database"></a>reconnect-source-database  
+### <a name="reconnect-source-database"></a>datos de origen volver a conectar  
 Este comando vuelve a conectarse a la base de datos de origen pero no carga los metadatos a diferencia del comando de datos de origen de conexión.  
   
 Si no se puede establecer el volver a conectar con el origen, se genera un error y la aplicación de consola detiene la ejecución.  
@@ -164,7 +164,7 @@ Si no se puede establecer el volver a conectar con el origen, se genera un error
 <reconnect-source-database  server="<server-unique-name>"/>  
 ```  
   
-### <a name="connect-target-database"></a>connect-target-database  
+### <a name="connect-target-database"></a>datos de destino conectarse  
 Este comando se conecta a la base de datos de SQL Server de destino y carga los metadatos de alto nivel de la base de datos de destino pero no los metadatos por completo.  
   
 Si no se puede establecer la conexión con el destino, se genera un error y la aplicación de consola detiene la ejecución.  
@@ -177,7 +177,7 @@ La definición del servidor se recupera desde el atributo de nombre definido par
 <connect-target-database  server="<server-unique-name>"/>  
 ```  
   
-### <a name="reconnect-target-database"></a>reconnect-target-database  
+### <a name="reconnect-target-database"></a>datos de destino volver a conectar  
   
 Este comando vuelve a conectarse a la base de datos de destino pero no carga los metadatos, a diferencia del comando de conexión de datos de destino.  
   
@@ -192,7 +192,7 @@ Si la (conexión con el destino re) no se puede establecer, se genera un error y
 ## <a name="report-commands"></a>Comandos de informe  
 Los comandos de informes generan informes sobre el rendimiento de diversas actividades de consola SSMA.  
   
-### <a name="generate-assessment-report"></a>generate-assessment-report  
+### <a name="generate-assessment-report"></a>informe de evaluación generar  
   
 Este comando genera informes de evaluación de la base de datos de origen.  
   
@@ -261,7 +261,7 @@ o bien
 ## <a name="migration-commands"></a>Comandos de migración  
 Los comandos de migración convertir el esquema de base de datos de destino en el esquema de origen y migración los datos al servidor de destino.  
   
-### <a name="convert-schema"></a>convert-schema  
+### <a name="convert-schema"></a>convertir esquema  
 Este comando realiza la conversión de esquema de origen al esquema de destino.  
   
 Si no se realiza la conexión de base de datos de origen o de destino antes de ejecutar este comando o se produce un error en la conexión con el servidor de base de datos de origen o de destino durante la ejecución del comando, se genera un error y se cierra la aplicación de consola.  
@@ -382,7 +382,7 @@ El comando de preparación de la migración inicia la asignación de esquema ent
 > [!NOTE]  
 > La salida de consola predeterminada para los comandos de migración es informe de salida 'Total' con ningún informe de error detallado: resumen sólo en el nodo de raíz del árbol de objeto de origen.  
   
-### <a name="map-schema"></a>map-schema  
+### <a name="map-schema"></a>esquema de asignación  
 Este comando proporciona la asignación de esquema de la base de datos de origen al esquema de destino.  
   
 -   `source-schema` Especifica el esquema de origen para migrar.  
@@ -416,9 +416,9 @@ Si no se realiza la conexión de base de datos de destino antes de ejecutar este
   
 -   `on-error:` Especifica si se debe especificar los errores de sincronización como advertencias o errores. Opciones disponibles en el error:  
   
-    -   report-total-as-warning  
+    -   total de informes como advertencia  
   
-    -   report-each-as-warning  
+    -   informes-each-como-advertencia  
   
     -   Error-script  
   
@@ -477,9 +477,9 @@ Este comando requiere uno o varios nodos de la metabase como parámetro de líne
   
 -   `on-error:` Especifica si se debe llamar a los errores de actualización como advertencias o errores. Opciones disponibles en el error:  
   
-    -   report-total-as-warning  
+    -   total de informes como advertencia  
   
-    -   report-each-as-warning  
+    -   informes-each-como-advertencia  
   
     -   Error-script  
   
@@ -524,7 +524,7 @@ o bien
 ## <a name="script-generation-commands"></a>Secuencias de comandos de generación  
 Los comandos de generación de Script realizan dos tareas: ayudan a guardar la salida en un archivo de script en la consola y registre la salida de T-SQL en la consola o un archivo basado en el parámetro especificado.  
   
-### <a name="save-as-script"></a>save-as-script  
+### <a name="save-as-script"></a>Guardar como secuencia de comandos  
 Este comando se utiliza para guardar las secuencias de comandos de los objetos en un archivo se ha mencionado cuando metabase = destino. Esto es una alternativa al comando de sincronización en que se obtenga las secuencias de comandos y ejecutar la misma base de datos de destino.  
   
 Este comando requiere uno o varios nodos de la metabase como parámetro de línea de comandos.  

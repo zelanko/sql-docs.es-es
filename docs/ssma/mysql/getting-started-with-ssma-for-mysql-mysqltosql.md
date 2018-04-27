@@ -1,6 +1,6 @@
 ---
 title: Introducción a SSMA para MySQL (MySQLToSQL) | Documentos de Microsoft
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: sql-tools
 ms.service: ''
 ms.component: ssma-mysql
@@ -25,11 +25,11 @@ author: Shamikg
 ms.author: Shamikg
 manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: efe3b32103e655213cecedbc9312233d5fd2c2d9
-ms.sourcegitcommit: 9351e8b7b68f599a95fb8e76930ab886db737e5f
+ms.openlocfilehash: eac1a3e0b45669194dc78c34fbe28526f17c005b
+ms.sourcegitcommit: a85a46312acf8b5a59a8a900310cf088369c4150
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/06/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="getting-started-with-ssma-for-mysql-mysqltosql"></a>Introducción a SSMA para MySQL (MySQLToSQL)
 SQL Server Migration Assistant (SSMA) para MySQL le permite convertir esquemas de base de datos de MySQL a esquemas de SQL Server o base de datos de SQL Azure, cargar los esquemas resultantes en SQL Server o base de datos de SQL Azure y migrar datos de MySQL a SQL Server o base de datos de SQL Azure rápidamente.  
@@ -66,10 +66,10 @@ Para obtener más información sobre estas tareas y cómo realizarlas, vea [migr
   
 Las secciones siguientes describen las características de la interfaz de usuario SSMA.  
   
-### <a name="metadata-explorers"></a>Metadata Explorers  
+### <a name="metadata-explorers"></a>Exploradores de metadatos  
 SSMA contiene dos exploradores de metadatos para examinar y realizar acciones en las bases de datos de SQL Server y MySQL.  
   
-### <a name="mysql-metadata-explorer"></a>MySQL Metadata Explorer  
+### <a name="mysql-metadata-explorer"></a>Explorador de metadatos de MySQL  
 Explorador de metadatos de MySQL muestra información acerca de los esquemas de MySQL. Mediante el Explorador de metadatos de MySQL, puede realizar las siguientes tareas:  
   
 -   Examinar los objetos de cada esquema.  
@@ -107,7 +107,7 @@ La siguiente tabla muestra los comandos de barra de herramientas de la migració
   
 |||  
 |-|-|  
-|**Button**|**Función**|  
+|**Botón**|**Función**|  
 |**Crear informe**|Convierte los objetos seleccionados de MySQL a SQL Server o base de datos de SQL Azure objetos y, a continuación, crea un informe que muestra cómo se realiza correctamente la conversión.<br /><br />Este comando está deshabilitado a menos que se seleccionan objetos en el Explorador de metadatos de MySQL.|  
 |**Convertir esquema**|Convierte los objetos seleccionados de MySQL a los objetos de SQL Server o base de datos de SQL Azure.<br /><br />Este comando está deshabilitado a menos que se seleccionan objetos en el Explorador de metadatos de MySQL.|  
 |**Migrar datos**|Migra los datos de la base de datos de MySQL a SQL Server o base de datos de SQL Azure. Antes de ejecutar este comando, debe convertir los esquemas de MySQL a esquemas de SQL Server o base de datos de SQL Azure y, a continuación, cargar los objetos en SQL Server o base de datos de SQL Azure.<br /><br />Este comando está deshabilitado a menos que se seleccionan objetos en el Explorador de metadatos de MySQL.|  

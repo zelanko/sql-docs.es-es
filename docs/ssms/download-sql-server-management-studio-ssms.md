@@ -1,7 +1,7 @@
 ---
 title: Descargar SQL Server Management Studio (SSMS) | Microsoft Docs
 ms.custom: ''
-ms.date: 04/06/2018
+ms.date: 04/17/2018
 ms.prod: sql-non-specified
 ms.prod_service: sql-tools
 ms.service: ''
@@ -31,11 +31,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.workload: Active
-ms.openlocfilehash: 28606246c37a4a081b1dd9766519c837db41f5d9
-ms.sourcegitcommit: d6b1695c8cbc70279b7d85ec4dfb66a4271cdb10
+ms.openlocfilehash: 4343fe350d541a04b5aad44df457d09f69af3bcb
+ms.sourcegitcommit: bb044a48a6af9b9d8edb178dc8c8bd5658b9ff68
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/08/2018
+ms.lasthandoff: 04/18/2018
 ---
 # <a name="download-sql-server-management-studio-ssms"></a>Descarga de SQL Server Management Studio (SSMS)
 [!INCLUDE[appliesto-ss-asdb-asdw-xxx-md](../includes/appliesto-ss-asdb-asdw-xxx-md.md)]
@@ -50,6 +50,9 @@ SSMS 17.x es la generación más reciente de *SQL Server Management Studio* y pr
 **[![descargar](../ssdt/media/download.png) Descargar SQL Server Management Studio 17.6](https://go.microsoft.com/fwlink/?linkid=870039)**
 
 **[![descargar](../ssdt/media/download.png) Descargar el paquete de actualización de SQL Server Management Studio 17.6 (actualización de la versión 17.x a la 17.6)](https://go.microsoft.com/fwlink/?linkid=870041)**
+
+> [!WARNING]
+> Hay un problema conocido por el que SSMS 17.6 tiene un comportamiento inestable y se bloquea al usar [planes de mantenimiento](../relational-databases/maintenance-plans/maintenance-plans.md). Si usa planes de mantenimiento, no instale SSMS 17.6. Si ya ha instalado la versión 17.6 y experimenta este problema, cambie a la versión 17.5 de SSMS. 
 
 **Información de versión**
 
@@ -161,13 +164,9 @@ Actualmente existe un problema conocido que provoca que SSMS 17.6 se bloquee al 
 
 ## <a name="feedback"></a>Comentarios
 
-![needhelp_person_icon](../ssms/media/needhelp_person_icon.png) [Foro de Herramientas de cliente de SQL](https://social.msdn.microsoft.com/Forums/en-US/home?forum=sqltools)  
-
+![needhelp_person_icon](../ssms/media/needhelp_person_icon.png) [Foro de Herramientas de cliente de SQL](https://social.msdn.microsoft.com/Forums/en-US/home?forum=sqltools)
 
 [!INCLUDE[get-help-options](../includes/paragraph-content/get-help-options.md)]
-
-
-
 
 ## <a name="see-also"></a>Ver también
 
@@ -175,3 +174,5 @@ Actualmente existe un problema conocido que provoca que SSMS 17.6 se bloquee al 
 - [Documentación de SQL Server Management Studio](sql-server-management-studio-ssms.md)
 - [Service Pack y actualizaciones adicionales](https://technet.microsoft.com/sqlserver/ff803383.aspx)
 - [Descargar SQL Server Data Tools (SSDT)](../ssdt/download-sql-server-data-tools-ssdt.md)
+
+[!INCLUDE[contribute-to-content](../includes/paragraph-content/contribute-to-content.md)]

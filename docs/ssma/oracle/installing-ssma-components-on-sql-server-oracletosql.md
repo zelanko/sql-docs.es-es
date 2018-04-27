@@ -1,30 +1,31 @@
 ---
-title: "Instalación de componentes SSMA en SQL Server (OracleToSQL) | Documentos de Microsoft"
-ms.prod: sql-non-specified
+title: Instalación de componentes SSMA en SQL Server (OracleToSQL) | Documentos de Microsoft
+ms.prod: sql
 ms.prod_service: sql-tools
-ms.service: 
+ms.service: ''
 ms.component: ssma-oracle
-ms.custom: 
+ms.custom: ''
 ms.date: 01/19/2017
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: sql-ssma
-ms.tgt_pltfrm: 
+ms.technology:
+- sql-ssma
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - Installign the Extension Pack
 - SQL Server Database Objects
 ms.assetid: 33070e5f-4e39-4b70-ae81-b8af6e4983c5
-caps.latest.revision: "7"
+caps.latest.revision: 7
 author: Shamikg
 ms.author: Shamikg
 manager: v-thobro
 ms.workload: Inactive
-ms.openlocfilehash: 76880266efb8c38bffdaa4223e49822c6d3b0778
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: 9dc0fbc22cedb1c7aa7d4ac3bd342c6acb91ba88
+ms.sourcegitcommit: a85a46312acf8b5a59a8a900310cf088369c4150
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="installing-ssma-components-on-sql-server-oracletosql"></a>Instalación de componentes SSMA en SQL Server (OracleToSQL)
 Además de instalar SSMA, debe instalar también componentes en el equipo que está ejecutando [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]. Estos componentes incluyen el módulo de extensión SSMA, que admite la migración de datos y proveedores de Oracle para habilitar la conectividad de servidor a servidor.  
@@ -34,12 +35,12 @@ Las bases de datos, agrega el módulo de extensión SSMA **sysdb** y **ssmateste
   
 Además, al migrar datos a [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)], SSMA crea [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] trabajos del agente cuando se usa el motor de migración de datos de lado de servidor para migrar los datos.  
   
-### <a name="prerequisites"></a>Prerequisites  
+### <a name="prerequisites"></a>Requisitos previos  
 Antes de instalar SSMA para componentes de servidor de Oracle en [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)], asegúrese de que el sistema cumple los requisitos siguientes:  
   
--   [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]está instalada la instancia. SSMA no es compatible con SQL Server 2008 Express Edition.  
+-   [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] está instalada la instancia. SSMA no es compatible con SQL Server 2008 Express Edition.  
   
--   [!INCLUDE[msCoName](../../includes/msconame_md.md)]Windows Installer 3.1 o una versión posterior.  
+-   [!INCLUDE[msCoName](../../includes/msconame_md.md)] Windows Installer 3.1 o una versión posterior.  
   
 -   El proveedor de cliente de Oracle o el proveedor OLE DB para Oracle y la conectividad a la base de datos de Oracle que se va a migrar. Puede instalar a proveedores desde el CD del producto de Oracle o el sitio Web de Oracle.  
   
@@ -60,7 +61,7 @@ Puede instalar el paquete de extensión cualquier momento antes de migrar datos 
   
     Según la versión de WinZip tiene, puede haga doble clic en el archivo, o haga clic en el archivo y seleccione **extraer todo** o **abierto en WinZip**. Siga las instrucciones en la interfaz de usuario de WinZip para extraer los archivos.  
   
-2.  Copie SSMA para paquete de extensión de Oracle. *n*. Install.exe, donde  *n*  es el número de compilación, en el equipo que está ejecutando [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)].  
+2.  Copie SSMA para paquete de extensión de Oracle. *n*. Install.exe, donde *n* es el número de compilación, en el equipo que está ejecutando [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)].  
   
 3.  Haga doble clic en SSMA para paquete de extensión de Oracle. *n*. Install.exe.  
   
@@ -84,7 +85,7 @@ Puede instalar el paquete de extensión cualquier momento antes de migrar datos 
   
     Autenticación de Windows usará las credenciales de Windows para intentar iniciar sesión en la instancia de [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]. Si selecciona [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] autenticación, debe escribir una [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] nombre de inicio de sesión y una contraseña.  
   
-11. En la página siguiente, seleccione **instalar bases de datos de utilidades**  *n* , donde  *n*  es el número de versión y, a continuación, haga clic en **siguiente**.  
+11. En la página siguiente, seleccione **instalar bases de datos de utilidades** *n*, donde *n* es el número de versión y, a continuación, haga clic en **siguiente**.  
   
     El **sysdb** se crea la base de datos y las funciones definidas por el usuario y procedimientos almacenados se crean en esa base de datos.  
   
@@ -110,6 +111,6 @@ Después de instalar el paquete de extensión, tendrá que vea una **ssma_oracle
 Cada vez que se van a migrar datos a [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)], SSMA crea un [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] trabajo del agente. Estos trabajos se denominan **{GUID} del paquete de migración de datos de ssma_oracle**y pueden verse en la [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] nodo de agente de [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull_md.md)] en la carpeta de trabajos.  
   
 ## <a name="see-also"></a>Vea también  
-[Instalación de SSMA para cliente de Oracle &#40; OracleToSQL &#41;](../../ssma/oracle/installing-ssma-for-oracle-client-oracletosql.md)  
-[Migrar bases de datos de Oracle a SQL Server &#40; OracleToSQL &#41;](../../ssma/oracle/migrating-oracle-databases-to-sql-server-oracletosql.md)  
+[Instalación de SSMA para cliente de Oracle &#40;OracleToSQL&#41;](../../ssma/oracle/installing-ssma-for-oracle-client-oracletosql.md)  
+[Bases de datos de migración de Oracle a SQL Server &#40;OracleToSQL&#41;](../../ssma/oracle/migrating-oracle-databases-to-sql-server-oracletosql.md)  
   

@@ -1,27 +1,25 @@
 ---
-title: "Notas de la versión de SQL Server 2012 Service Pack | Microsoft Docs"
-ms.prod: sql-non-specified
+title: Notas de la versión de SQL Server 2012 Service Pack | Microsoft Docs
+ms.prod: sql
 ms.prod_service: sql-non-specified
-ms.service: 
-ms.component: sql-non-specified
-ms.technology: server-general
-ms.custom: 
+ms.technology: supportability
+ms.custom: ''
 ms.date: 2/26/2018
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: 67cb8b3e-3d82-47f4-840d-0f12a3bff565
-caps.latest.revision: 
 author: craigg-msft
 ms.author: craigg
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: e0aa6379b2d0a0675c0ebc999e3fcee603d5b5fb
-ms.sourcegitcommit: 6e819406554efbd17bbf84cf210d8ebeddcf772d
+monikerRange: = sql-server-2014 || = sqlallproducts-allversions
+ms.openlocfilehash: c89264e120ce67a814d102f0306f74e06c3d79f8
+ms.sourcegitcommit: bb044a48a6af9b9d8edb178dc8c8bd5658b9ff68
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/27/2018
+ms.lasthandoff: 04/18/2018
 ---
 # <a name="sql-server-2012-service-pack-release-notes"></a>Notas de la versión de SQL Server 2012 Service Pack
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
@@ -152,7 +150,7 @@ Para obtener una lista completa de errores y de problemas conocidos corregidos e
 3.  Haga clic en **Galería de PowerPivot**.  
   
 #### <a name="to-use-powerpivot-for-excel-with-excel-2013-you-must-use-the-add-in-that-is-installed-with-excel"></a>Para usar PowerPivot para Excel con Excel 2013, debe usar el complemento que se instala con Excel  
-**Problema:** con Office 2010, PowerPivot para Excel es un complemento independiente que se puede descargar de [http://www.microsoft.com/bi/powerpivot.aspx](http://www.microsoft.com/bi/powerpivot.aspx). También se puede descargar desde el [Centro de descarga Microsoft](http://www.microsoft.com/download/details.aspx?id=29074). Tenga en cuenta que se pueden descargar dos versiones del complemento PowerPivot: una incluida con SQL Server 2008 R2y otra incluida con SQL Server 2012. Sin embargo, en el caso de Office 2013, PowerPivot para Excel se incluye con Office y se instala al instalar Excel. Si bien las versiones de SQL Server 2008 R2 y SQL Server 2012 de PowerPivot para Excel 2010 no son compatibles con Excel 2013, puede instalar PowerPivot para Excel 2010 en el equipo cliente si desea ejecutar Excel 2010 en paralelo con Excel 2013. Es decir, las dos versiones de Excel pueden coexistir, así como sus complementos PowerPivot correspondientes.  
+**Problema:** con Office 2010, PowerPivot para Excel es un complemento independiente que se puede descargar desde [http://www.microsoft.com/bi/powerpivot.aspx](http://www.microsoft.com/bi/powerpivot.aspx). También se puede descargar desde el [Centro de descarga Microsoft](http://www.microsoft.com/download/details.aspx?id=29074). Tenga en cuenta que se pueden descargar dos versiones del complemento PowerPivot: una incluida con SQL Server 2008 R2y otra incluida con SQL Server 2012. Sin embargo, en el caso de Office 2013, PowerPivot para Excel se incluye con Office y se instala al instalar Excel. Si bien las versiones de SQL Server 2008 R2 y SQL Server 2012 de PowerPivot para Excel 2010 no son compatibles con Excel 2013, puede instalar PowerPivot para Excel 2010 en el equipo cliente si desea ejecutar Excel 2010 en paralelo con Excel 2013. Es decir, las dos versiones de Excel pueden coexistir, así como sus complementos PowerPivot correspondientes.  
   
 **Solución alternativa** : para usar PowerPivot para Excel 2013 debe habilitar el complemento COM. En Excel 2013, seleccione **Archivo** | **Opciones** | **Complementos**. En el cuadro desplegable **Administrar** , seleccione **Complementos COM** y haga clic en **Ir**. En **Complementos COM**, seleccione **Microsoft Office PowerPivot para Excel 2013** y haga clic en **Aceptar**.  
   

@@ -1,9 +1,9 @@
 ---
-title: 'Inicio rápido: Conectarse y consultar SQL Server mediante las SQL Operations Studio (preview) | Documentos de Microsoft'
-description: Este tutorial rápido muestra cómo utilizar las SQL Operations Studio (preview) para conectarse a SQL Server y ejecute una consulta
+title: 'Inicio rápido: Conectarse y consultar SQL Server mediante las operaciones de SQL Studio (versión preliminar) | Documentos de Microsoft'
+description: Este tutorial rápido muestra cómo utilizar las operaciones de SQL Studio (versión preliminar) para conectarse a SQL Server y ejecute una consulta
 ms.custom: tools|sos
 ms.date: 03/08/2018
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.reviewer: alayu; erickang; sstein
 ms.suite: sql
 ms.prod_service: sql-tools
@@ -14,11 +14,11 @@ author: yualan
 ms.author: alayu
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 5c0f78537429026583fe970a65426bc909a46557
-ms.sourcegitcommit: 6c06267f3eeeb3f0d6fc4c57e1387621720ca8bf
+ms.openlocfilehash: a1820cd0a69313afa2a57b6d96721f375307cb71
+ms.sourcegitcommit: a85a46312acf8b5a59a8a900310cf088369c4150
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/09/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="quickstart-connect-and-query-sql-server-using-includename-sosincludesname-sos-shortmd"></a>Inicio rápido: Conectarse y consultar mediante SQL Server [!INCLUDE[name-sos](../includes/name-sos-short.md)]
 Este tutorial rápido muestra cómo usar [!INCLUDE[name-sos](../includes/name-sos-short.md)] para conectarse a SQL Server y, a continuación, utilice las instrucciones de Transact-SQL (T-SQL) para crear el *TutorialDB* utilizados en [!INCLUDE[name-sos](../includes/name-sos-short.md)] tutoriales.
@@ -30,8 +30,8 @@ Para completar este tutorial rápido, necesita [!INCLUDE[name-sos](../includes/n
 - [Instalar [!INCLUDE[name-sos](../includes/name-sos-short.md)] ](download.md).
 
 Si no tiene acceso a SQL Server, seleccione la plataforma de uno de los vínculos siguientes (asegúrese de recordar el inicio de sesión de SQL y la contraseña!):
-- [Windows - descarga SQL Server 2017 Developer Edition](https://www.microsoft.com/en-us/sql-server/sql-server-downloads)
-- [macOS - descargar SQL Server 2017 en Docker](https://docs.microsoft.com/en-us/sql/linux/quickstart-install-connect-docker)
+- [Windows - Descargar SQL Server 2017 Developer Edition](https://www.microsoft.com/en-us/sql-server/sql-server-downloads)
+- [macOS - Descargar SQL Server 2017 en Docker](https://docs.microsoft.com/en-us/sql/linux/quickstart-install-connect-docker)
 - [Linux: descarga de SQL Server de 2017 Developer Edition](https://docs.microsoft.com/en-us/sql/linux/sql-server-linux-overview#install) -sólo debe seguir los pasos hasta *crear y consultar datos*.
 
 

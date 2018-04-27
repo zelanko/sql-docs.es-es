@@ -1,10 +1,8 @@
 ---
 title: Notas de la versión de SQL Server 2012 | Microsoft Docs
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: sql-non-specified
-ms.service: ''
-ms.component: sql-non-specified
-ms.technology: server-general
+ms.technology: supportability
 ms.custom: ''
 ms.date: 01/31/2017
 ms.reviewer: ''
@@ -14,19 +12,20 @@ ms.topic: article
 helpviewer_keywords:
 - Release Notes, SQL Server
 ms.assetid: 9ccb390a-67a9-4593-85ea-2b4c41c4620f
-caps.latest.revision: 21
 author: craigg-msft
 ms.author: craigg
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: e7adc5d4b4fdcf8886b2c8d08bce8de90d9b3eb1
-ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+monikerRange: = sql-server-2014 || = sqlallproducts-allversions
+ms.openlocfilehash: 6786ab20e983647a9b83ee383017fc8bd106d8a4
+ms.sourcegitcommit: bb044a48a6af9b9d8edb178dc8c8bd5658b9ff68
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/05/2017
+ms.lasthandoff: 04/18/2018
 ---
 # <a name="sql-server-2012-release-notes"></a>Notas de la versión de SQL Server 2012
-[!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)] En este documento de notas de la versión se describen los problemas conocidos que debe conocer antes de instalar Microsoft SQL Server 2012 o solucionar sus problemas ([haga clic aquí para descargarlo](http://go.microsoft.com/fwlink/?LinkId=238647)). Este documento de notas de la versión solo está disponible en línea, no en el disco de instalación, y se actualiza periódicamente.  
+[!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
+En este documento de notas de la versión se describen los problemas conocidos que debe conocer antes de instalar o solucionar problemas de Microsoft SQL Server 2012 ([haga clic aquí para descargarlo](http://go.microsoft.com/fwlink/?LinkId=238647)). Este documento de notas de la versión solo está disponible en línea, no en el disco de instalación, y se actualiza periódicamente.  
   
 Para obtener una introducción e información acerca de cómo instalar SQL Server 2012, vea el documento Léame de SQL Server 2012. El documento Léame está disponible en el disco de instalación y en la página de descarga [Léame](http://download.microsoft.com/download/3/B/D/3BD9DD65-D3E3-43C3-BB50-0ED850A82AD5/ENU/Readme.htm) . También puede encontrar más información en los [Libros en pantalla de SQL Server](http://go.microsoft.com/fwlink/?LinkId=190948) y en los foros de [SQL Server](http://go.microsoft.com/fwlink/?LinkId=213599).  
   
@@ -69,7 +68,7 @@ Antes de instalar [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)], tenga en c
 <pre>The following error has occurred:  
 Service 'SQLBrowser' start request failed. Click 'Retry' to retry the failed action, or click 'Cancel' to cancel this action and continue setup.</pre>  
   
-o bien  
+o Administrador de configuración de  
   
 <pre>The following error has occurred:  
 SQL Server Browser configuration for feature 'SQL_Browser_Redist_SqlBrowser_Cpu32' was cancelled by user after a previous installation failure. The last attempted step: Starting the SQL Server Browser service 'SQLBrowser', and waiting for up to '900' seconds for the process to complete.</pre>  
@@ -99,7 +98,7 @@ Puede instalar SQL Server en Windows Server 2008 R2 Server Core SP1 con las limi
   
 **Solución alternativa:** para configurar la base de datos de estadísticas de lenguaje semántico como requisito previo para la indización semántica, realice las tareas siguientes:  
   
-1.  Busque y ejecute el paquete de Windows Installer denominado SemanticLanguageDatabase.msi en el disco de instalación de SQL Server para extraer la base de datos. Para SQL Server 2012 Express, descargue la base de datos de estadísticas de lenguaje semántico del [Centro de descarga de Microsoft](https://www.microsoft.com/download/details.aspx?id=35582) (http://go.microsoft.com/fwlink/?LinkId=221787) y, a continuación, ejecute el paquete de Windows Installer.  
+1.  Busque y ejecute el paquete de Windows Installer denominado SemanticLanguageDatabase.msi en el disco de instalación de SQL Server para extraer la base de datos. Para SQL Server 2012 Express, descargue la base de datos de estadísticas de lenguaje semántico del [Centro de descarga de Microsoft](https://www.microsoft.com/download/details.aspx?id=35582) (http://go.microsoft.com/fwlink/?LinkId=221787)) y, después, ejecute el paquete de Windows Installer.  
   
 2.  Mueva la base de datos a una carpeta de datos apropiada. Si deja la base de datos en la ubicación predeterminada, debe cambiar los permisos para poderla adjuntar correctamente.  
   
@@ -347,7 +346,7 @@ Se producen problemas con la Tarea de procesamiento de AS cuando se trabaja con 
 ### <a name="45-controls-do-not-scale-properly-on-large-font-sizes"></a>4.5 Los controles no se adaptan correctamente en los tamaños de fuente grandes  
 **Problema:** si cambia el tamaño del texto a “Más grande: 150%” (en Windows Server 2008 o Windows 7), o bien cambia el valor de Configuración de ppp personalizada a 200% (en Windows 7), los botones **Cancelar** y **Crear** de la página **Nueva base de conocimiento** no están accesibles.  
   
-**Solución alternativa:**para resolver el problema, establezca la fuente en un tamaño menor.  
+**Solución alternativa:** para resolver el problema, establezca la fuente en un tamaño menor.  
   
 ### <a name="46-screen-resolution-of-800x600-is-not-supported"></a>4.6 No se admite la resolución de pantalla de 800x600  
 **Problema:** la aplicación Data Quality Client no se muestra correctamente si la resolución de pantalla se establece en 800x600.  
@@ -506,7 +505,7 @@ En la tabla siguiente se resume la compatibilidad de controlador para Grupos de 
 |Controlador|Conmutación por error de múltiples subredes|Intención de aplicaciones|Enrutamiento de solo lectura|Conmutación por error de varias subredes: conmutación por error más rápida del extremo de una sola subred|Conmutación por error de múltiples subredes: resolución de instancias con nombre para las instancias en clúster SQL|  
 |----------|--------------------------|----------------------|----------------------|------------------------------------------------------------------|---------------------------------------------------------------------------------|  
 |SQL Native Client 11.0 ODBC|Sí|Sí|Sí|Sí|Sí|  
-|SQL Native Client 11.0 OLEDB|No|Sí|Sí|No|No|  
+|SQL Native Client 11.0 OLEDB|no|Sí|Sí|no|no|  
 |ADO.NET con .NET Framework 4.0 con revisión de conectividad**\&#42;**|Sí|Sí|Sí|Sí|Sí|  
 |ADO.NET con .NET Framework 3.5 SP1 con revisión de conectividad **\&#42;\&#42;**|Sí|Sí|Sí|Sí|Sí|  
 |Controlador JDBC 4.0 de Microsoft para SQL Server|Sí|Sí|Sí|Sí|Sí|  
@@ -611,7 +610,7 @@ El servicio CDC para Oracle es un servicio de Windows que examina los registros 
   
 3.  Instale SQL Server 2012 con la función MDS en el nodo del clúster principal y luego instale SQL Server 2012 con la característica MDS en los nodos de clúster adicionales.  
   
-Para obtener más información sobre los problemas e información sobre cómo realizar los pasos anteriores, vea [http://support.microsoft.com/kb/2683467](http://support.microsoft.com/kb/2683467).  
+Para obtener más información sobre los problemas y cómo realizar los pasos anteriores, vea [http://support.microsoft.com/kb/2683467](http://support.microsoft.com/kb/2683467).  
   
 ### <a name="72-microsoft-silverlight-5-required"></a>7.2 Se necesita Microsoft Silverlight 5  
 Para trabajar en la aplicación web Master Data Manager, Silverlight 5.0 debe estar instalado en el equipo cliente. Si no tiene la versión necesaria de Silverlight, se le pedirá que la instale cuando navegue a un área de la aplicación web que la necesite. Puede instalar Silverlight 5 desde [http://go.microsoft.com/fwlink/?LinkId=243096](http://go.microsoft.com/fwlink/?LinkId=243096).  

@@ -1,6 +1,6 @@
 ---
 title: Obtener acceso a los esquemas de inventario (AccessToSQL) | Documentos de Microsoft
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: sql-tools
 ms.service: ''
 ms.component: ssma-access
@@ -48,11 +48,11 @@ author: Shamikg
 ms.author: Shamikg
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: d68215dd768a2fbd4e6723d7ca98ef9a5c96c72d
-ms.sourcegitcommit: 9351e8b7b68f599a95fb8e76930ab886db737e5f
+ms.openlocfilehash: a279ed084f4d7dc3b2574ed71332acf9bfe61c8f
+ms.sourcegitcommit: a85a46312acf8b5a59a8a900310cf088369c4150
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/06/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="access-inventory-schemas-accesstosql"></a>Esquemas de inventario de acceso (AccessToSQL)
 En las siguientes secciones se describen las tablas que se crean de SSMA al exportar esquemas de acceso a [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)].  
@@ -66,7 +66,7 @@ Metadatos de la base de datos se exportan a la **SSMA_Access_InventoryDatabases*
 |**DatabaseName**|**nvarchar(4000)**|El nombre de la base de datos de Access.|  
 |**ExportTime**|**datetime**|La fecha y hora de que creación de estos metadatos por SSMA.|  
 |**FilePath**|**nvarchar(4000)**|El nombre completo de ruta de acceso y de la base de datos de Access.|  
-|**FileSize**|**bigint**|El tamaño de la base de datos de Access en KB.|  
+|**Tamaño de archivo**|**bigint**|El tamaño de la base de datos de Access en KB.|  
 |**FileOwner**|**nvarchar(4000)**|La cuenta de Windows que se especifica como el propietario de la base de datos de Access.|  
 |**DateCreated**|**datetime**|La fecha y hora de que creación de la base de datos de Access.|  
 |**DateModified**|**datetime**|La fecha y hora de que última modificación de la base de datos de Access.|  
@@ -80,7 +80,7 @@ Metadatos de la base de datos se exportan a la **SSMA_Access_InventoryDatabases*
 |**Intercalación**|**nvarchar(4000)**|La intercalación de la base de datos de Access. Las intercalaciones determinan cómo se ordena y compara cadenas de una base de datos.|  
 |**JetVersion**|**nvarchar(4000)**|Versión del motor de base de datos de Jet. Bases de datos de Access utilizan el motor de base de datos de Jet subyacente.|  
 |**IsUpdatable**|**bit**|Indica si se puede actualizar la base de datos. Si el valor es 1, la base de datos es actualizable. Si el valor es 0, la base de datos es de solo lectura.|  
-|**QueryTimeout**|**int**|El ODBC consulta espera valor configurado para la base de datos, en segundos. El valor predeterminado es 60 segundos.|  
+|**queryTimeout**|**int**|El ODBC consulta espera valor configurado para la base de datos, en segundos. El valor predeterminado es 60 segundos.|  
   
 ## <a name="tables"></a>Tablas  
 Metadatos de las tablas se exportan a la **SSMA_Access_InventoryTables** tabla. Esta tabla contiene las columnas siguientes:  
@@ -106,9 +106,9 @@ Metadatos de columna se exportan a la **SSMA_Access_InventoryColumns** tabla. Es
 |**ColumnName**|**nvarchar(4000)**|Nombre de la columna.|  
 |**IsNullable**|**bit**|Especifica si la columna puede contener valores null. Si el valor es 1, la columna puede contener valores null. Si el valor es 0, la columna no puede contener valores null. Tenga en cuenta que la regla de validación puede utilizarse también para evitar que los valores null.|  
 |**DataType**|**nvarchar(4000)**|Tipo de datos de acceso de la columna, como **texto** o **largo**.|  
-|**IsAutoIncrement**|**bit**|Especifica si la columna incrementa automáticamente valores enteros. Si el valor es 1, los enteros se incrementa automáticamente.|  
+|**Disautoincrement**|**bit**|Especifica si la columna incrementa automáticamente valores enteros. Si el valor es 1, los enteros se incrementa automáticamente.|  
 |**Ordinal**|**smallint**|El orden de la columna en la tabla, comenzando por cero.|  
-|**DefaultValue**|**nvarchar(4000)**|El valor predeterminado de la columna.|  
+|**defaultValue**|**nvarchar(4000)**|El valor predeterminado de la columna.|  
 |**ValidationRule**|**nvarchar(4000)**|La regla que se utiliza para validar los datos se agreguen o se actualicen en la columna.|  
   
 ## <a name="indexes"></a>Índices  
@@ -148,7 +148,7 @@ Metadatos de la consulta se exportan a la **SSMA_Access_InventoryQueries** tabla
 |---------------|-------------|---------------|  
 |**DatabaseId**|**uniqueidentifier**|Identifica la base de datos que contiene esta consulta.|  
 |**QueryId**|**int**|Incremento entero que identifica la consulta. Esta columna es la clave principal de la tabla.|  
-|**QueryName**|**nvarchar(4000)**|El nombre de la consulta.|  
+|**Nombredeconsulta**|**nvarchar(4000)**|El nombre de la consulta.|  
 |**QueryText**|**nvarchar(4000)**|El código de consulta SQL, como una instrucción SELECT.|  
 |**IsUpdateable**|**bit**|Especifica si la consulta es actualizable o de solo lectura.|  
 |**QueryType**|**nvarchar(4000)**|Especifica el tipo de consulta, como **seleccione** o **SetOperation**.|  
@@ -160,7 +160,7 @@ Metadatos de formulario se exportan a la **SSMA_Access_InventoryForms** tabla. E
 |Nombre de la columna|Tipo de datos|Description|  
 |---------------|-------------|---------------|  
 |**DatabaseId**|**uniqueidentifier**|Identifica la base de datos que contiene este formulario.|  
-|**FormId**|**int**|Incremento entero que identifica el formulario. Esta columna es la clave principal de la tabla.|  
+|**Idform**|**int**|Incremento entero que identifica el formulario. Esta columna es la clave principal de la tabla.|  
 |**FormName**|**nvarchar(4000)**|El nombre del formulario.|  
   
 ## <a name="macros"></a>Macros  
@@ -170,7 +170,7 @@ Macro metadatos se exportan a la **SSMA_Access_InventoryMacros** tabla. Esta tab
 |---------------|-------------|---------------|  
 |**DatabaseId**|**uniqueidentifier**|Identifica la base de datos que contiene la macro.|  
 |**MacroId**|**int**|Incremento entero que identifica la macro. Esta columna es la clave principal de la tabla.|  
-|**MacroName**|**nvarchar(4000)**|El nombre de la macro.|  
+|**Nombredemacro**|**nvarchar(4000)**|El nombre de la macro.|  
   
 ## <a name="reports"></a>Informes  
 Metadatos del informe se exportan a la **SSMA_Access_InventoryReports** tabla. Esta tabla contiene las columnas siguientes:  
@@ -178,7 +178,7 @@ Metadatos del informe se exportan a la **SSMA_Access_InventoryReports** tabla. E
 |Nombre de la columna|Tipo de datos|Description|  
 |---------------|-------------|---------------|  
 |**DatabaseId**|**uniqueidentifier**|Identifica la base de datos que contiene el informe.|  
-|**ReportId**|**int**|Incremento entero que identifica el informe. Esta columna es la clave principal de la tabla.|  
+|**Identificador informe que**|**int**|Incremento entero que identifica el informe. Esta columna es la clave principal de la tabla.|  
 |**ReportName**|**nvarchar(4000)**|Nombre del informe.|  
   
 ## <a name="modules"></a>Módulos  
@@ -187,8 +187,8 @@ Los metadatos del módulo se exportan a la **SSMA_Access_InventoryModules** tabl
 |Nombre de la columna|Tipo de datos|Description|  
 |---------------|-------------|---------------|  
 |**DatabaseId**|**uniqueidentifier**|Identifica la base de datos que contiene el módulo.|  
-|**ModuleId**|**int**|Incremento entero que identifica el módulo. Esta columna es la clave principal de la tabla.|  
-|**ModuleName**|**nvarchar(4000)**|El nombre del módulo.|  
+|**Identificador de módulo**|**int**|Incremento entero que identifica el módulo. Esta columna es la clave principal de la tabla.|  
+|**moduleName**|**nvarchar(4000)**|El nombre del módulo.|  
   
 ## <a name="see-also"></a>Vea también  
 [Exportación de un inventario de Access](http://msdn.microsoft.com/en-us/7e1941fb-3d14-4265-aff6-c77a4026d0ed)  

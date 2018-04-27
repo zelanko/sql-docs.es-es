@@ -1,6 +1,6 @@
 ---
 title: Convertir objetos de base de datos de Access (AccessToSQL) | Documentos de Microsoft
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: sql-tools
 ms.service: ''
 ms.component: ssma-access
@@ -41,11 +41,11 @@ author: Shamikg
 ms.author: Shamikg
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: c05d0dd92d0802260f59f86fef13e617f6eea899
-ms.sourcegitcommit: 9351e8b7b68f599a95fb8e76930ab886db737e5f
+ms.openlocfilehash: adf6b62a0cddd53eaebd3cacc33ef05730bc08a6
+ms.sourcegitcommit: a85a46312acf8b5a59a8a900310cf088369c4150
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/06/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="converting-access-database-objects-accesstosql"></a>Convertir objetos de base de datos de Access (AccessToSQL)
 Después de haber agregado las bases de datos de Access y conectado a [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] o SQL Azure, SSMA muestra los metadatos para el acceso y [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] u objetos de base de datos de SQL Azure. Puede seleccionar ahora los objetos de base de datos de Access y, a continuación, convertir los esquemas a [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] o esquemas de SQL Azure.  
@@ -73,7 +73,7 @@ La siguiente tabla muestra qué objetos de acceso se convierten y resultante [!I
 |Query|ver<br /><br />Consultas más SELECT se convierten en vistas. Otras consultas, como las consultas de actualización, no se migran.<br /><br />Consultas SELECT que toman parámetros no se convierten, ni tampoco las consultas de tablas de referencias cruzadas.|  
 |informe|no se pudo convertir|  
 |formulario|no se pudo convertir|  
-|macro|no se pudo convertir|  
+|(Macro)|no se pudo convertir|  
 |Módulo|no se pudo convertir|  
 |Valor predeterminado|Valor predeterminado|  
 |Permitir cero propiedad de columna de longitud|restricción CHECK|  

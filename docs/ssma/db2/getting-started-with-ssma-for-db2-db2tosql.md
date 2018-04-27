@@ -1,6 +1,6 @@
 ---
 title: Introducción a SSMA para DB2 (DB2ToSQL) | Documentos de Microsoft
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: sql-tools
 ms.service: ''
 ms.component: ssma-db2
@@ -21,11 +21,11 @@ author: Shamikg
 ms.author: Shamikg
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: fc731bb0b202fbec4b7eeccc4de60cf9a4943404
-ms.sourcegitcommit: 9351e8b7b68f599a95fb8e76930ab886db737e5f
+ms.openlocfilehash: 11e0869f3e15c01337f2e86cb3294cbf9c94eb5b
+ms.sourcegitcommit: a85a46312acf8b5a59a8a900310cf088369c4150
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/06/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="getting-started-with-ssma-for-db2-db2tosql"></a>Introducción a SSMA para DB2 (DB2ToSQL)
 [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] Migration Assistant (SSMA) para DB2 permite rápidamente convertir esquemas de base de datos de DB2 a [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] esquemas, cargar los esquemas resultantes a [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] y migrar datos de DB2 a [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)].  
@@ -52,10 +52,10 @@ Para obtener más información sobre estas tareas y cómo realizarlas, vea [migr
   
 Las secciones siguientes describen las características de la interfaz de usuario SSMA.  
   
-### <a name="metadata-explorers"></a>Metadata Explorers  
+### <a name="metadata-explorers"></a>Exploradores de metadatos  
 SSMA contiene dos exploradores de metadatos para examinar y realizar acciones en DB2 y [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] las bases de datos.  
   
-#### <a name="db2-metadata-explorer"></a>DB2 Metadata Explorer  
+#### <a name="db2-metadata-explorer"></a>DB2 Explorador de metadatos  
 Explorador de metadatos de DB2 muestra información acerca de los esquemas de DB2. Mediante el Explorador de metadatos de DB2, puede realizar las siguientes tareas:  
   
 -   Examinar los objetos de cada esquema.  
@@ -64,7 +64,7 @@ Explorador de metadatos de DB2 muestra información acerca de los esquemas de DB
   
 -   Seleccionar tablas para la migración de datos y, a continuación, migrar los datos de esas tablas en [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]. Para obtener más información, consulte [migrar bases de datos DB2 a SQL Server &#40;DB2ToSQL&#41;](../../ssma/db2/migrating-db2-databases-to-sql-server-db2tosql.md).  
   
-#### <a name="sql-server-metadata-explorer"></a>SQL Server Metadata Explorer  
+#### <a name="sql-server-metadata-explorer"></a>Explorador de metadatos SQL Server  
 [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] Explorador de metadatos muestra información sobre una instancia de [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]. Cuando se conecta a una instancia de [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)], SSMA recupera metadatos acerca de esa instancia y lo almacena en el archivo de proyecto.  
   
 Puede usar [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] Explorador de metadatos para seleccionar objetos de base de datos de DB2 convertidos y, a continuación, sincroniza esos objetos con la instancia de [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)].  

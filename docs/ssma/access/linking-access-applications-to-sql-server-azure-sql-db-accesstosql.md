@@ -1,15 +1,16 @@
 ---
 title: 'Vincular las aplicaciones de acceso a SQL Server: base de datos de SQL Azure | Documentos de Microsoft'
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: sql-tools
-ms.service: 
+ms.service: ''
 ms.component: ssma-access
-ms.custom: 
+ms.custom: ''
 ms.date: 08/17/2017
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: sql-ssma
-ms.tgt_pltfrm: 
+ms.technology:
+- sql-ssma
+ms.tgt_pltfrm: ''
 ms.topic: article
 applies_to:
 - Azure SQL Database
@@ -28,16 +29,16 @@ helpviewer_keywords:
 - slow performance
 - unlinking tables
 ms.assetid: 82374ad2-7737-4164-a489-13261ba393d4
-caps.latest.revision: "19"
+caps.latest.revision: 19
 author: Shamikg
 ms.author: Shamikg
 manager: murato
 ms.workload: On Demand
-ms.openlocfilehash: aa06650106584d975c6bf45855473dc1d80a100d
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: 1a1b658217a8d18642daca9028ae01334b22395c
+ms.sourcegitcommit: a85a46312acf8b5a59a8a900310cf088369c4150
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="linking-access-applications-to-sql-server---azure-sql-db-accesstosql"></a>Vincular las aplicaciones de Access a SQL Server: base de datos de SQL de Azure (AccessToSQL)
 Si desea usar las aplicaciones de Access existentes con [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)], puede vincular las tablas de Access originales a la migrados [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] o tablas de SQL Azure. Vinculación modifica la base de datos de Access para que las páginas de acceso a las consultas, formularios, informes y datos usan los datos de la [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] o base de datos de SQL Azure en lugar de los datos de la base de datos de Access.  
@@ -57,7 +58,7 @@ Cuando se vincula una tabla de Access a un [!INCLUDE[ssNoVersion](../../includes
   
 2.  Haga clic en **tablas**y, a continuación, seleccione **vínculo**.  
   
-[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]Migration Assistant (SSMA) para acceso realiza una copia de seguridad de la tabla de acceso original y crea una tabla vinculada.  
+[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] Migration Assistant (SSMA) para acceso realiza una copia de seguridad de la tabla de acceso original y crea una tabla vinculada.  
   
 Después de vincular las tablas, las tablas de SSMA aparecen con un icono de vínculo pequeño. En Access, las tablas aparecen con un icono de "vinculado", que es un globo terráqueo con una flecha que apunta a él.  
   
@@ -134,7 +135,7 @@ Recordset.LastModified
 ```  
   
 ### <a name="new-records-are-not-available"></a>No hay disponibles nuevos registros  
-**Causa:** cuando se agrega un registro a un [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] o una tabla de SQL Azure mediante el uso de VBA, si el campo de índice único de la tabla tiene un valor predeterminado y no asigna un valor a ese campo, el nuevo registro no aparece hasta que vuelva a abrir la tabla en [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] o SQL Azure. Si se intenta obtener un valor desde el nuevo registro, recibirá el mensaje de error siguiente:  
+**Causa:** cuando se agrega un registro a un [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] o una tabla de SQL Azure mediante el uso de VBA, si el campo de índice único de la tabla tiene un valor predeterminado y no asigna un valor a ese campo, el nuevo registro no aparece hasta que vuelva a abrir la tabla en [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] o S SQL Azure. Si se intenta obtener un valor desde el nuevo registro, recibirá el mensaje de error siguiente:  
   
 `Run-time error '3167' Record is deleted.`  
   

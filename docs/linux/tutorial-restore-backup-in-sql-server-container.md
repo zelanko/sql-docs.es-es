@@ -1,24 +1,24 @@
 ---
 title: Restaurar una base de datos de SQL Server en Docker | Documentos de Microsoft
-description: "Este tutorial muestra cómo restaurar una copia de seguridad de base de datos de SQL Server en un nuevo contenedor de Linux Docker."
+description: Este tutorial muestra cómo restaurar una copia de seguridad de base de datos de SQL Server en un nuevo contenedor de Linux Docker.
 author: rothja
 ms.author: jroth
 manager: craigg
 ms.date: 10/02/2017
 ms.topic: article
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine
-ms.service: 
-ms.component: 
+ms.service: ''
+ms.component: ''
 ms.suite: sql
 ms.custom: sql-linux
 ms.technology: database-engine
 ms.workload: Inactive
-ms.openlocfilehash: ea1aa01f3917c0d6ee4423861a3bf4fb985f53fa
-ms.sourcegitcommit: f02598eb8665a9c2dc01991c36f27943701fdd2d
+ms.openlocfilehash: ad11495a927d5ca37e15cb872a200a55beb93b35
+ms.sourcegitcommit: a85a46312acf8b5a59a8a900310cf088369c4150
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/13/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="restore-a-sql-server-database-in-a-linux-docker-container"></a>Restaurar una base de datos de SQL Server en un contenedor Linux Docker
 
@@ -35,16 +35,16 @@ Este tutorial muestra cómo mover y restaurar un archivo de copia de seguridad d
 
 ## <a name="prerequisites"></a>Requisitos previos
 
-* Motor de docker 1.8 + en cualquier admite la distribución de Linux o Docker para Mac y Windows. Para obtener más información, consulte [instalar Docker](https://docs.docker.com/engine/installation/).
-* Mínimo de 2 GB de espacio en disco
-* Mínimo de 2 GB de RAM
+* Motor de Docker 1.8 o versiones posteriores en cualquier distribución de Linux admitida o Docker para Mac y Windows. Para obtener más información, consulte [Instalar Docker](https://docs.docker.com/engine/installation/).
+* Un mínimo de 2 GB de espacio en disco.
+* Un mínimo de 2 GB de RAM.
 * [Requisitos del sistema para SQL Server en Linux](sql-server-linux-setup.md#system).
 
 ## <a name="pull-and-run-the-container-image"></a>Extraer y ejecutar la imagen de contenedor
 
 1. Abra un terminal de bash en Linux/Mac o una sesión de PowerShell con privilegios elevados en Windows.
 
-1. Extraiga la imagen de contenedor de SQL Server para Linux de 2017 de Docker Hub.
+1. Extraiga la imagen de contenedor de SQL Server 2017 para Linux de Docker Hub.
 
     ```bash
     sudo docker pull microsoft/mssql-server-linux:2017-latest
@@ -76,9 +76,9 @@ Este tutorial muestra cómo mover y restaurar un archivo de copia de seguridad d
     Este comando crea un contenedor de 2017 de SQL Server con la edición Developer (valor predeterminado). Puerto de SQL Server **1433** se expone en el host como puerto **1401**. Opcional `-v sql1data:/var/opt/mssql` parámetro crea un contenedor de volumen de datos denominado **sql1ddata**. Esto se utiliza para conservar los datos creados por SQL Server.
 
    > [!NOTE]
-   > El proceso para ejecutar las ediciones de SQL Server de producción en contenedores es ligeramente diferente. Para obtener más información, consulte [ejecutar producción imágenes del contenedor](sql-server-linux-configure-docker.md#production). Si utiliza los mismos nombres de contenedor y puertos, el resto de este tutorial sigue funcionando con contenedores de producción.
+   > El proceso para ejecutar las ediciones de SQL Server de producción en contenedores es ligeramente diferente. Para obtener más información, vea [Run production container image](sql-server-linux-configure-docker.md#production) (Ejecutar imágenes de contenedor de producción). Si utiliza los mismos nombres de contenedor y puertos, el resto de este tutorial sigue funcionando con contenedores de producción.
 
-1. Para ver los contenedores de Docker, use el `docker ps` comando.
+1. Para ver los contenedores de Docker, use el comando `docker ps`.
 
     ```bash
     sudo docker ps -a
@@ -88,7 +88,7 @@ Este tutorial muestra cómo mover y restaurar un archivo de copia de seguridad d
     docker ps -a
     ```
  
-1. Si el **estado** columna muestra un estado de **una**, a continuación, se ejecuta SQL Server en el contenedor y escucha en el puerto especificado en el **puertos** columna. Si el **estado** columna para el contenedor se muestra en SQL Server **Exited**, consulte el [sección de la Guía de configuración de solución de problemas](sql-server-linux-configure-docker.md#troubleshooting).
+1. Si la columna **ESTADO** muestra el estado **Activo**, esto indica que SQL Server se está ejecutando en el contenedor y que está escuchando en el puerto especificado en la columna **PUERTOS**. Si la columna **ESTADO** de su contenedor de SQL Server muestra **Cerrado**, consulte la [sección Solución de problemas de la guía de configuración](sql-server-linux-configure-docker.md#troubleshooting).
 
    ```
    $ sudo docker ps -a

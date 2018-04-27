@@ -1,9 +1,9 @@
 ---
-title: Utilizar widgets de una visión general para supervisar los servidores y bases de datos de las SQL Operations Studio (preview) | Documentos de Microsoft
-description: Obtenga información acerca de los widgets de una visión general de las SQL Operations Studio (preview).
+title: Utilizar widgets de una visión general para supervisar los servidores y bases de datos de las operaciones de SQL Studio (versión preliminar) | Documentos de Microsoft
+description: Obtenga información acerca de los widgets de una visión general de las operaciones de SQL Studio (versión preliminar).
 ms.custom: tools|sos
 ms.date: 11/15/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.reviewer: alayu; erickang; sstein
 ms.suite: sql
 ms.prod_service: sql-tools
@@ -14,13 +14,13 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: d810e0b5ed89b93ac3d56a12758285fbd297092b
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: 076bca7864a6111a5fa4758d5ecd074b01812d65
+ms.sourcegitcommit: a85a46312acf8b5a59a8a900310cf088369c4150
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 04/26/2018
 ---
-# <a name="manage-servers-and-databases-with-insight-widgets-in-includename-sosincludesname-sos-shortmd"></a>Administrar servidores y bases de datos con los widgets de una visión general de[!INCLUDE[name-sos](../includes/name-sos-short.md)]
+# <a name="manage-servers-and-databases-with-insight-widgets-in-includename-sosincludesname-sos-shortmd"></a>Administrar servidores y bases de datos con los widgets de una visión general de [!INCLUDE[name-sos](../includes/name-sos-short.md)]
 
 Widgets de Insight toman las consultas de Transact-SQL (T-SQL) que se usa para supervisar servidores y bases de datos y los convierte en visualizaciones precisos. 
 
@@ -41,7 +41,7 @@ Para saltar en y empezar a crear diferentes tipos de widgets de información, co
 
 ## <a name="sql-queries"></a>Consultas SQL 
 
-[!INCLUDE[name-sos](../includes/name-sos-short.md)]intenta evitar introducir aún otro usuario de lenguaje o a la sobrecarga de la interfaz por lo que intenta usar T-SQL tanto como sea posible con la configuración mínima de JSON. Configuración de widgets de una perspectiva con T-SQL aprovecha el número innumerables de orígenes de consultas T-SQL útiles que se pueden convertir en detalle widgets existentes.
+[!INCLUDE[name-sos](../includes/name-sos-short.md)] intenta evitar introducir aún otro usuario de lenguaje o a la sobrecarga de la interfaz por lo que intenta usar T-SQL tanto como sea posible con la configuración mínima de JSON. Configuración de widgets de una perspectiva con T-SQL aprovecha el número innumerables de orígenes de consultas T-SQL útiles que se pueden convertir en detalle widgets existentes.
 
 Widgets de una perspectiva se componen de uno o dos consultas de T-SQL:
 * *Consulta de widget de Insight* es obligatorio, y es la consulta que devuelve los datos que aparecen en el widget.
@@ -49,7 +49,7 @@ Widgets de una perspectiva se componen de uno o dos consultas de T-SQL:
 
 Una consulta de widget de una perspectiva define un conjunto de datos que representa un recuento o un gráfico. Consulta de detalles de información se utiliza para mostrar información de detalle de información relevante en un formato tabular en el panel de detalles de una visión general. 
 
-[!INCLUDE[name-sos](../includes/name-sos-short.md)]ejecuta consultas de widget de una visión general y se asigna el conjunto de resultados de consulta al conjunto de datos de un gráfico, a continuación, lo representa. Cuando los usuarios abran los detalles de una idea, ejecuta la consulta de detalles de una visión general e imprime el resultado en una vista de cuadrícula en el cuadro de diálogo.
+[!INCLUDE[name-sos](../includes/name-sos-short.md)] ejecuta consultas de widget de una visión general y se asigna el conjunto de resultados de consulta al conjunto de datos de un gráfico, a continuación, lo representa. Cuando los usuarios abran los detalles de una idea, ejecuta la consulta de detalles de una visión general e imprime el resultado en una vista de cuadrícula en el cuadro de diálogo.
 
 La idea básica es escribir una consulta de T-SQL de una manera para que se pueda usar como un conjunto de datos de un recuento, el gráfico y el widget de gráfico. 
 

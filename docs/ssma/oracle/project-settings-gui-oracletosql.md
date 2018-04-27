@@ -1,27 +1,28 @@
 ---
-title: "Configuración (GUI) (OracleToSQL) del proyecto | Documentos de Microsoft"
-ms.prod: sql-non-specified
+title: Configuración (GUI) (OracleToSQL) del proyecto | Documentos de Microsoft
+ms.prod: sql
 ms.prod_service: sql-tools
-ms.service: 
+ms.service: ''
 ms.component: ssma-oracle
-ms.custom: 
+ms.custom: ''
 ms.date: 01/19/2017
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: sql-ssma
-ms.tgt_pltfrm: 
+ms.technology:
+- sql-ssma
+ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: 9727df6d-b0f5-464b-a349-d32b626cedef
-caps.latest.revision: "3"
+caps.latest.revision: 3
 author: Shamikg
 ms.author: Shamikg
 manager: v-thobro
 ms.workload: Inactive
-ms.openlocfilehash: 2f97219f1039eb027646119c223cfbc09e81c2f8
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: 153de9ef870a78e15c085e18f37c9c94103277d0
+ms.sourcegitcommit: a85a46312acf8b5a59a8a900310cf088369c4150
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="project-settings-gui-oracletosql"></a>Configuración del proyecto (GUI) (OracleToSQL)
 La configuración del proyecto de interfaz gráfica de usuario le permite configurar la aparecen de los datos en el **datos** ficha y si se debe mostrar el informe de evaluación después de la conversión o no.  
@@ -32,7 +33,7 @@ El panel de la interfaz gráfica de usuario está disponible en la **configuraci
   
 -   Use la **configuración de proyecto predeterminada** cuadro de diálogo para establecer opciones de interfaz de usuario para todos los proyectos. Para acceder a la configuración de la interfaz gráfica de usuario, en la **herramientas** menú, seleccione **la configuración predeterminada del proyecto**, seleccione el tipo de proyecto de migración para el que se requiere para puede ver o cambiar de configuración **versión de destino de migración** de lista desplegable y, a continuación, haga clic en **GUI** en la parte inferior del panel izquierdo.  
   
-## <a name="options"></a>.  
+## <a name="options"></a>Opciones  
 **Número máximo de filas de origen**  
 Configura el número de filas de datos que se muestran en la **datos** pestaña de la tabla de origen seleccionado.  
   

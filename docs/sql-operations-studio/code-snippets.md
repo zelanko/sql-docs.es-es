@@ -1,10 +1,10 @@
 ---
-title: Crear fragmentos de código en las SQL Operations Studio (preview) | Documentos de Microsoft
-description: Obtenga información acerca de cómo crear y utilizar fragmentos de código SQL en las SQL Operations Studio (preview)
+title: Crear fragmentos de código en las operaciones de SQL Studio (versión preliminar) | Documentos de Microsoft
+description: Obtenga información acerca de cómo crear y utilizar fragmentos de código SQL en las operaciones de SQL Studio (versión preliminar)
 ms.custom: tools|sos
 ms.date: 11/15/2017
 ms.reviewer: alayu; erickang; sstein
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.suite: sql
 ms.prod_service: sql-tools
 ms.component: sos
@@ -14,17 +14,17 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 4670c824b1e52776c3d81d097beeb4ccd9e62e2d
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: f51c14d2c3824baa1b2730d352b94d9cfdc097bc
+ms.sourcegitcommit: a85a46312acf8b5a59a8a900310cf088369c4150
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 04/26/2018
 ---
-# <a name="create-and-use-code-snippets-to-quickly-create-transact-sql-t-sql-scripts-in-includename-sosincludesname-sos-shortmd"></a>Crear y utilizar fragmentos de código para crear rápidamente scripts de Transact-SQL (T-SQL) en[!INCLUDE[name-sos](../includes/name-sos-short.md)]
+# <a name="create-and-use-code-snippets-to-quickly-create-transact-sql-t-sql-scripts-in-includename-sosincludesname-sos-shortmd"></a>Crear y utilizar fragmentos de código para crear rápidamente scripts de Transact-SQL (T-SQL) en [!INCLUDE[name-sos](../includes/name-sos-short.md)]
 
 Fragmentos de código en el código [!INCLUDE[name-sos](../includes/name-sos-short.md)] son plantillas que resulten más fácil crean bases de datos y objetos de base de datos. 
 
-[!INCLUDE[name-sos](../includes/name-sos-short.md)]proporciona varios fragmentos de código de T-SQL que le ayudarán a generar rápidamente la sintaxis correcta. 
+[!INCLUDE[name-sos](../includes/name-sos-short.md)] proporciona varios fragmentos de código de T-SQL que le ayudarán a generar rápidamente la sintaxis correcta. 
 
 También se pueden crear fragmentos de código definido por el usuario.
 
@@ -61,7 +61,7 @@ Puede definir sus propios fragmentos de código. Para abrir el archivo de fragme
 1. Seleccione **SQL**:
 
    > [!NOTE]
-   > [!INCLUDE[name-sos](../includes/name-sos-short.md)]hereda su funcionalidad de fragmento de código de código de Visual Studio para que este artículo se describe específicamente con fragmentos de código SQL. Para obtener más información, consulte [crear sus propios fragmentos](https://code.visualstudio.com/docs/editor/userdefinedsnippets) en la documentación de Visual Studio Code. 
+   > [!INCLUDE[name-sos](../includes/name-sos-short.md)] hereda su funcionalidad de fragmento de código de código de Visual Studio para que este artículo se describe específicamente con fragmentos de código SQL. Para obtener más información, consulte [crear sus propios fragmentos](https://code.visualstudio.com/docs/editor/userdefinedsnippets) en la documentación de Visual Studio Code. 
 
    ![Reemplace el campo de plantilla](media/code-snippets/select-sql.png)
 

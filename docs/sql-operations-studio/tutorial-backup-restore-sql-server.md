@@ -1,9 +1,9 @@
 ---
-title: Copia de seguridad y restaurar una base de datos con las SQL Operations Studio (preview) | Documentos de Microsoft
-description: Obtenga información acerca de cómo una copia de seguridad y restaurar una base de datos con las SQL Operations Studio (preview)
+title: Copia de seguridad y restaurar una base de datos con las operaciones de SQL Studio (versión preliminar) | Documentos de Microsoft
+description: Obtenga información acerca de cómo una copia de seguridad y restaurar una base de datos con las operaciones de SQL Studio (versión preliminar)
 ms.custom: tools|sos
 ms.date: 11/15/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.reviewer: alayu; erickang; sstein
 ms.suite: sql
 ms.prod_service: sql-tools
@@ -14,13 +14,13 @@ author: erickangMSFT
 ms.author: erickang
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 46ef55aa54275e356eff9674aac10a27b36d758e
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: baf76f3d403f74bc84ecafc4d2c84bce340a0e2e
+ms.sourcegitcommit: a85a46312acf8b5a59a8a900310cf088369c4150
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 04/26/2018
 ---
-# <a name="backup-and-restore-using-includename-sosincludesname-sos-shortmd"></a>Copia de seguridad y restauración con[!INCLUDE[name-sos](../includes/name-sos-short.md)]
+# <a name="backup-and-restore-using-includename-sosincludesname-sos-shortmd"></a>Copia de seguridad y restauración con [!INCLUDE[name-sos](../includes/name-sos-short.md)]
 
 En este tutorial, aprenderá a utilizar [!INCLUDE[name-sos](../includes/name-sos-short.md)] para:
 > [!div class="checklist"]
@@ -34,7 +34,7 @@ En este tutorial, aprenderá a utilizar [!INCLUDE[name-sos](../includes/name-sos
 
 Este tutorial requiere que el servidor SQL *TutorialDB*. Para crear el *TutorialDB* base de datos, complete uno de los siguientes tutoriales:
 
-- [Conectarse y consultar mediante SQL Server[!INCLUDE[name-sos-short](../includes/name-sos-short.md)]](quickstart-sql-server.md)
+- [Conectarse y consultar mediante SQL Server [!INCLUDE[name-sos-short](../includes/name-sos-short.md)]](quickstart-sql-server.md)
 
 
 ## <a name="backup-a-database"></a>Copia de seguridad de una base de datos

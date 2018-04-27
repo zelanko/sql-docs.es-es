@@ -1,6 +1,6 @@
 ---
 title: Asignación de caracteres de SQL Server y MySQL establece (MySQLToSQL) | Documentos de Microsoft
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: sql-tools
 ms.service: ''
 ms.component: ssma-mysql
@@ -21,11 +21,11 @@ author: Shamikg
 ms.author: Shamikg
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 793c7362024e402e52523da8c0f007f525fe2650
-ms.sourcegitcommit: 9351e8b7b68f599a95fb8e76930ab886db737e5f
+ms.openlocfilehash: affbdb7f6e6015f440bda1b6e7aa10e22d321048
+ms.sourcegitcommit: a85a46312acf8b5a59a8a900310cf088369c4150
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/06/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="mapping-mysql-and-sql-server-character-set-mysqltosql"></a>Asignación de caracteres de SQL Server y MySQL establece (MySQLToSQL)
 Juego de caracteres (juego de caracteres) se puede especificar para tipos de datos de caracteres, expresiones y literales de MySQL.  
@@ -90,17 +90,17 @@ Asignación de conjunto de caracteres varía en los niveles de otro nodo, a sabe
     ||||  
     |-|-|-|  
     |**Nombre del juego de caracteres**|**Descripción de juego de caracteres**|**Tipo de conjunto de caracteres de destino (valor predeterminado)**|  
-    |big5|Chino tradicional Big5|NCHAR/NVARCHAR (valor predeterminado)|  
+    |Big5|Chino tradicional Big5|NCHAR/NVARCHAR (valor predeterminado)|  
     |dec8|Europeo occidental de diciembre|CHAR/VARCHAR (valor predeterminado)|  
-    |cp850|Europeo occidental DOS|CHAR/VARCHAR (valor predeterminado)|  
+    |CP850|Europeo occidental DOS|CHAR/VARCHAR (valor predeterminado)|  
     |hp8|Europeo occidental de HP|CHAR/VARCHAR (valor predeterminado)|  
     |koi8r|KOI8-R Relcom ruso|CHAR/VARCHAR (valor predeterminado)|  
     |Latín 1|CP1252 oeste europeo|CHAR/VARCHAR (valor predeterminado)|  
     |Latin2|ISO 8859-2 Centroeuropeo|CHAR/VARCHAR (valor predeterminado)|  
     |swe7|7 bits sueco|CHAR/VARCHAR (valor predeterminado)|  
-    |ascii|US ASCII|CHAR/VARCHAR (valor predeterminado)|  
+    |ASCII|US ASCII|CHAR/VARCHAR (valor predeterminado)|  
     |ujis|EUC-JP japonés|NCHAR/NVARCHAR (valor predeterminado)|  
-    |sjis|Japonés Shift-JIS|NCHAR/NVARCHAR (valor predeterminado)|  
+    |SJIS|Japonés Shift-JIS|NCHAR/NVARCHAR (valor predeterminado)|  
     |Hebreo|ISO 8859-8 Hebreo|CHAR/VARCHAR (valor predeterminado)|  
     |tis620|TIS620 tailandés|CHAR/VARCHAR (valor predeterminado)|  
     |eucKR|Coreano EUC-KR|NCHAR/NVARCHAR (valor predeterminado)|  
@@ -108,7 +108,7 @@ Asignación de conjunto de caracteres varía en los niveles de otro nodo, a sabe
     |gb2312|GB2312 Chino simplificado|NCHAR/NVARCHAR (valor predeterminado)|  
     |Griego|ISO 8859-7 Griego|CHAR/VARCHAR (valor predeterminado)|  
     |CP 1250|Centroeuropeo de Windows|CHAR/VARCHAR (valor predeterminado)|  
-    |gbk|GBK chino simplificado|NCHAR/NVARCHAR (valor predeterminado)|  
+    |GBK|GBK chino simplificado|NCHAR/NVARCHAR (valor predeterminado)|  
     |Latin5|ISO 8859-9 Turco|CHAR/VARCHAR (valor predeterminado)|  
     |armscii8|Armenio ARMSCII-8|CHAR/VARCHAR (valor predeterminado)|  
     |UTF8|Unicode UTF-8|NCHAR/NVARCHAR (valor predeterminado)|  
@@ -118,12 +118,12 @@ Asignación de conjunto de caracteres varía en los niveles de otro nodo, a sabe
     |macce|Mac Centroeuropeo|CHAR/VARCHAR (valor predeterminado)|  
     |MacRoman|Europeo occidental de Mac|CHAR/VARCHAR (valor predeterminado)|  
     |cp852|Centro de DOS Europea|CHAR/VARCHAR (valor predeterminado)|  
-    |Latin7|ISO 8859-13 Baltic|CHAR/VARCHAR (valor predeterminado)|  
+    |Latin7|ISO 8859-13 Báltico|CHAR/VARCHAR (valor predeterminado)|  
     |CP 1251|Windows cirílico|CHAR/VARCHAR (valor predeterminado)|  
     |CP 1256|Árabe de Windows|CHAR/VARCHAR (valor predeterminado)|  
     |CP 1257|Windows Báltico|CHAR/VARCHAR (valor predeterminado)|  
     |binary|Juego de caracteres binarios pseudo|CHAR/VARCHAR (valor predeterminado)|  
-    |geostd8|GEOSTD8 Georgian|CHAR/VARCHAR (valor predeterminado)|  
+    |geostd8|Georgiano GEOSTD8|CHAR/VARCHAR (valor predeterminado)|  
     |cp932|SJIS en japonés de Windows|NCHAR/NVARCHAR (valor predeterminado)|  
     |eucjpms|UJIS para japonés de Windows|NCHAR/NVARCHAR (valor predeterminado)|  
   

@@ -1,9 +1,9 @@
 ---
-title: Utilizar autenticación de Active Directory (Kerberos) cuando se conecta con las SQL Operations Studio (preview) | Documentos de Microsoft
-description: Obtenga información acerca de cómo habilitar Kerberos para usar autenticación de Active Directory para las SQL Operations Studio (preview)
+title: Utilizar autenticación de Active Directory (Kerberos) cuando se conecta con las operaciones de SQL Studio (versión preliminar) | Documentos de Microsoft
+description: Obtenga información acerca de cómo habilitar Kerberos para usar autenticación de Active Directory para las operaciones de SQL Studio (versión preliminar)
 ms.custom: tools|sos
 ms.date: 11/17/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.reviewer: alayu; erickang; sstein
 ms.suite: sql
 ms.prod_service: sql-tools
@@ -14,11 +14,11 @@ author: meet-bhagdev
 ms.author: meetb
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: dbd229a0106506f744074df760ee10f871474ebb
-ms.sourcegitcommit: 094c46e7fa6de44735ed0040c65a40ec3d951b75
+ms.openlocfilehash: c100ce441ae9bb2285df967c35f4083ca4802ad2
+ms.sourcegitcommit: a85a46312acf8b5a59a8a900310cf088369c4150
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/06/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="connect-includename-sosincludesname-sos-shortmd-to-your-sql-server-using-windows-authentication---kerberos"></a>Conectar [!INCLUDE[name-sos](../includes/name-sos-short.md)] a SQL Server mediante la autenticación de Windows - Kerberos 
 
@@ -94,7 +94,7 @@ sudo realm join contoso.com -U 'user@CONTOSO.COM' -v
 * Success
 ```
    
-### <a name="redhat-enterprise-linux"></a>RedHat Enterprise Linux
+### <a name="redhat-enterprise-linux"></a>Enterprise RedHat Linux
 ```bash
 sudo yum install realmd krb5-workstation
 ```
@@ -126,7 +126,7 @@ sudo realm join contoso.com -U 'user@CONTOSO.COM' -v
    
 ```
 
-### <a name="macos"></a>macOS
+### <a name="macos"></a>MacOS
 
 - Combine el macOS con el controlador de dominio de Active Directory [siguiendo estos pasos] (https://support.apple.com/kb/PH26282?viewlocale=en_US&locale=en_US).
 

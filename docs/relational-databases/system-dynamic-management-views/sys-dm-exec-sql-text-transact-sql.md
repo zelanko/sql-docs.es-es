@@ -28,11 +28,11 @@ ms.author: sstein
 manager: craigg
 ms.workload: On Demand
 monikerRange: = azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: aa92fecfa13610fb5e8720238629321bfb6c62c5
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
+ms.openlocfilehash: 727a7752eea98f778780056c0940873580e6682c
+ms.sourcegitcommit: a85a46312acf8b5a59a8a900310cf088369c4150
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="sysdmexecsqltext-transact-sql"></a>sys.dm_exec_sql_text (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -82,7 +82,7 @@ Identifica de forma exclusiva un plan de consulta para un lote que está almacen
 |**texto**|**nvarchar (max** **)**|Texto de la consulta de SQL.<br /><br /> Este valor es NULL para objetos cifrados.|  
   
 ## <a name="permissions"></a>Permissions  
- es necesario contar con el permiso VIEW SERVER STATE en el servidor.  
+ Requiere el permiso `VIEW SERVER STATE` en el servidor.  
   
 ## <a name="remarks"></a>Comentarios  
 Para las consultas ad hoc, los identificadores de SQL son valores de hash basados en el texto SQL que se va a enviar al servidor y pueden originarse en cualquier base de datos. 

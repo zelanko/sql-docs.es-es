@@ -1,6 +1,6 @@
 ---
 title: Ejecutar la consola SSMA (DB2ToSQL) | Documentos de Microsoft
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: sql-tools
 ms.service: ''
 ms.component: ssma-db2
@@ -21,11 +21,11 @@ author: Shamikg
 ms.author: Shamikg
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: f491f5afc0beea80943e976c64785afba200ad7c
-ms.sourcegitcommit: 9351e8b7b68f599a95fb8e76930ab886db737e5f
+ms.openlocfilehash: 816c37c3ac9c26c80d0f3a95ed27af135b9e874c
+ms.sourcegitcommit: a85a46312acf8b5a59a8a900310cf088369c4150
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/06/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="executing-the-ssma-console-db2tosql"></a>Ejecutar la consola SSMA (DB2ToSQL)
 Microsoft proporciona un conjunto robusto de script de comandos del archivo para ejecutar y controlar las actividades SSMA. Las secciones posteriores detallan los mismos. La aplicación de consola utiliza ciertos comandos del archivo de secuencia de comandos estándar como enumerados en esta sección.  
@@ -43,7 +43,7 @@ Crea un nuevo proyecto SSMA.
   
 -   `project-folder` indica la carpeta del proyecto obtener creado.  
   
--   `project-name` indica el nombre del proyecto. {string}  
+-   `project-name` indica el nombre del proyecto. {cadena}  
   
 -   `overwrite-if-exists`Atributo opcional indica si se debe sobrescribir un proyecto existente. {valor} booleano  
   
@@ -76,9 +76,9 @@ Abre un proyecto existente.
   
 **Script**  
   
--   `project-folder` indica la carpeta del proyecto obtener creado. El comando produce un error si la carpeta especificada no existe.  {string}  
+-   `project-folder` indica la carpeta del proyecto obtener creado. El comando produce un error si la carpeta especificada no existe.  {cadena}  
   
--   `project-name` indica el nombre del proyecto. El comando produce un error si el proyecto especificado no existe.  {string}  
+-   `project-name` indica el nombre del proyecto. El comando produce un error si el proyecto especificado no existe.  {cadena}  
   
 **Ejemplo de sintaxis:**  
   
@@ -133,7 +133,7 @@ Los comandos de conexión de base de datos ayudan a conectar a la base de datos.
   
 **Command**  
   
-connect-source-database  
+datos de origen conectarse  
   
 -   Realiza la conexión a la base de datos de origen y carga los metadatos de nivel alto de la base de datos de origen, pero no todos los metadatos.  
   
@@ -150,7 +150,7 @@ Definición de servidor se recupera desde el atributo de nombre definido para ca
 ```  
 **Command**  
   
-force-load-source/target-database  
+forzar carga-origen/destino-bases de datos  
   
 -   Carga los metadatos de origen.  
   
@@ -180,7 +180,7 @@ o bien
 ```  
 **Command**  
   
-reconnect-source-database  
+datos de origen volver a conectar  
   
 -   Vuelve a conectarse a la base de datos de origen pero no carga los metadatos a diferencia del comando de datos de origen de conexión.  
   
@@ -195,7 +195,7 @@ reconnect-source-database
 ```  
 **Command**  
   
-connect-target-database  
+datos de destino conectarse  
   
 -   Se conecta a la base de datos de SQL Server de destino y carga los metadatos de nivel alto de la base de datos de destino pero no los metadatos por completo.  
   
@@ -212,7 +212,7 @@ Definición de servidor se recupera desde el atributo de nombre definido para ca
 ```  
 **Command**  
   
-reconnect-target-database  
+datos de destino volver a conectar  
   
 -   Vuelve a conectarse a la base de datos de destino pero no carga los metadatos, a diferencia del comando de conexión de datos de destino.  
   
@@ -231,7 +231,7 @@ Los comandos de informes generan informes sobre el rendimiento de diversas activ
   
 **Command**  
   
-generate-assessment-report  
+informe de evaluación generar  
   
 -   Genera informes de evaluación de la base de datos de origen.  
   
@@ -305,7 +305,7 @@ Los comandos de migración convertir el esquema de base de datos de destino en e
   
 **Command**  
   
-convert-schema  
+convertir esquema  
   
 -   Realiza la conversión de esquema de origen al esquema de destino.  
   
@@ -441,7 +441,7 @@ El comando de preparación de la migración inicia la asignación de esquema ent
   
 **Command**  
   
-map-schema  
+esquema de asignación  
   
 Asignación de esquema de base de datos de origen al esquema de destino.  
   
@@ -462,7 +462,7 @@ Asignación de esquema de base de datos de origen al esquema de destino.
 ```  
 **Command**  
   
-map-schema  
+esquema de asignación  
   
 Asignación de esquema de base de datos de origen al esquema de destino.  
   
@@ -505,9 +505,9 @@ destino sincronizar
   
 -   `on-error:` Especifica si se debe especificar los errores de sincronización como advertencias o errores. Opciones disponibles en el error:  
   
-    -   report-total-as-warning  
+    -   total de informes como advertencia  
   
-    -   report-each-as-warning  
+    -   informes-each-como-advertencia  
   
     -   Error-script  
   
@@ -570,9 +570,9 @@ Requiere uno o varios nodos de la metabase como parámetro de línea de comandos
   
 -   `on-error:` Especifica si se debe especificar la actualización de errores como advertencias o errores. Opciones disponibles en el error:  
   
-    -   report-total-as-warning  
+    -   total de informes como advertencia  
   
-    -   report-each-as-warning  
+    -   informes-each-como-advertencia  
   
     -   Error-script  
   
@@ -619,7 +619,7 @@ Los comandos de generación de Script realizan dos tareas: ayudan a guardar la s
   
 **Command**  
   
-save-as-script  
+Guardar como secuencia de comandos  
   
 Usado para guardar las secuencias de comandos de los objetos en un archivo que se ha mencionado cuando metabase = destino, ésta es una alternativa al comando de sincronización que se obtendrá las secuencias de comandos y ejecutar la misma base de datos de destino.  
   

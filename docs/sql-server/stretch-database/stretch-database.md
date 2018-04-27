@@ -1,30 +1,30 @@
 ---
 title: Stretch Database | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 06/27/2016
 ms.prod: sql-non-specified
 ms.prod_service: database-engine
-ms.service: 
+ms.service: ''
 ms.component: stretch-database
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - dbe-stretch
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - Stretch Database
 ms.assetid: ce6db775-21a5-40bc-95a1-f560376d4ee2
-caps.latest.revision: 
+caps.latest.revision: 39
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 30361d4466b7495945a7dae857bbcd52fd86103a
-ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
+ms.openlocfilehash: 5356a2578b5c5d25dba440729e4f902ecb886dc6
+ms.sourcegitcommit: bb044a48a6af9b9d8edb178dc8c8bd5658b9ff68
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/09/2018
+ms.lasthandoff: 04/18/2018
 ---
 # <a name="stretch-database"></a>Stretch Database
 [!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx-md-winonly](../../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md-winonly.md)]
@@ -50,7 +50,7 @@ ms.lasthandoff: 02/09/2018
  Relájese mientras extiende las aplicaciones más importantes a la nube sin correr ningún tipo de riesgo. Always Encrypted de SQL Server permite cifrar los datos en movimiento. La seguridad de nivel de fila y otras características de seguridad avanzadas de SQL Server funcionan también con Stretch Database para proteger los datos.  
   
 ## <a name="what-does-stretch-database-do"></a>¿Qué hace Stretch Database?  
- Después de habilitar Stretch Database en al menos una tabla, una base de datos y una instancia de SQL Server, comenzará a migrar silenciosamente los datos inactivos a Azure.  
+ Después de habilitar Stretch Database en al menos una tabla y una base de datos y seleccionar una instancia de SQL Server, comenzará a migrar silenciosamente los datos inactivos a Azure.  
   
 -   Si los datos inactivos están almacenados en otra tabla, puede migrarla entera.  
   

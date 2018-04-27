@@ -1,9 +1,9 @@
 ---
-title: Obtener acceso rápidamente a información y tareas comunes en las SQL Operations Studio (preview) | Documentos de Microsoft
-description: Obtenga información acerca de cómo mostrar widgets de detalle en las SQL Operations Studio (preview).
+title: Obtener acceso rápidamente a información y tareas comunes en las operaciones de SQL Studio (versión preliminar) | Documentos de Microsoft
+description: Obtenga información acerca de cómo mostrar widgets de detalle en las operaciones de SQL Studio (versión preliminar).
 ms.custom: tools|sos
 ms.date: 11/15/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.reviewer: alayu; erickang; sstein
 ms.suite: sql
 ms.prod_service: sql-tools
@@ -14,13 +14,13 @@ author: yualan
 ms.author: alayu
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 7b501b653920d2a8ff7e3e8ed4656c8154b344f6
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: ad7fcbab5a01828cccd855da2d65ba3199e0b41b
+ms.sourcegitcommit: a85a46312acf8b5a59a8a900310cf088369c4150
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 04/26/2018
 ---
-# <a name="dashboards-in-includename-sosincludesname-sos-shortmd"></a>Paneles en[!INCLUDE[name-sos](../includes/name-sos-short.md)]
+# <a name="dashboards-in-includename-sosincludesname-sos-shortmd"></a>Paneles en [!INCLUDE[name-sos](../includes/name-sos-short.md)]
 
 Para ver un panel, el menú contextual de un servidor o la base de datos y seleccione **administrar**.
 
@@ -107,11 +107,11 @@ Con [!INCLUDE[name-sos](../includes/name-sos-short.md)]de configuración de acci
 
 ## <a name="sample-insight-action-definition"></a>Definición de acción de una visión general de ejemplo
 
-```"actions"{}```define una acción de una perspectiva. Acción puede definirse en un ámbito específico como ```"server"```, ```"database"``` y así sucesivamente y [!INCLUDE[name-sos](../includes/name-sos-short.md)] pasa la información de contexto de conexión actual a la acción. 
+```"actions"{}``` define una acción de una perspectiva. Acción puede definirse en un ámbito específico como ```"server"```, ```"database"``` y así sucesivamente y [!INCLUDE[name-sos](../includes/name-sos-short.md)] pasa la información de contexto de conexión actual a la acción. 
 
-Por ejemplo, cuando se inicia la acción de restauración para base de datos WideWorldImporters ```"database": "${Database}"``` definición indica que se pase ```Database``` valor de columna en el resultado de la consulta a la acción de restauración. A continuación, restaure el inicio de una acción para la base de datos. ```"types"```es una matriz json y varias acciones pueden mostrarse en la matriz. Básicamente se convierte en un menú contextual en el cuadro de diálogo Detalles de la información que el usuario puede haga clic en y realice la acción. 
+Por ejemplo, cuando se inicia la acción de restauración para base de datos WideWorldImporters ```"database": "${Database}"``` definición indica que se pase ```Database``` valor de columna en el resultado de la consulta a la acción de restauración. A continuación, restaure el inicio de una acción para la base de datos. ```"types"``` es una matriz json y varias acciones pueden mostrarse en la matriz. Básicamente se convierte en un menú contextual en el cuadro de diálogo Detalles de la información que el usuario puede haga clic en y realice la acción. 
 
-> [!INCLUDE[name-sos](../includes/name-sos-short.md)]vista previa 0.17.1 ha habilitado la "copia de seguridad", "restaurar", "nueva consulta" y "nuevas bases de datos" como tipos de acción.
+> [!INCLUDE[name-sos](../includes/name-sos-short.md)] vista previa 0.17.1 ha habilitado la "copia de seguridad", "restaurar", "nueva consulta" y "nuevas bases de datos" como tipos de acción.
 
 ```json
 "details": {

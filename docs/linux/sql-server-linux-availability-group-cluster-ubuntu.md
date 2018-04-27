@@ -1,25 +1,25 @@
 ---
-title: "Configurar grupo de disponibilidad de SQL Server del clúster Ubuntu | Documentos de Microsoft"
-description: 
+title: Configurar grupo de disponibilidad de SQL Server del clúster Ubuntu | Documentos de Microsoft
+description: ''
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.date: 01/30/2018
 ms.topic: article
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine
-ms.service: 
-ms.component: 
+ms.service: ''
+ms.component: ''
 ms.suite: sql
 ms.custom: sql-linux
 ms.technology: database-engine
 ms.assetid: dd0d6fb9-df0a-41b9-9f22-9b558b2b2233
 ms.workload: Inactive
-ms.openlocfilehash: 5f52c5f83ca91b196f0bf2f05e98fb73133b4c8a
-ms.sourcegitcommit: f02598eb8665a9c2dc01991c36f27943701fdd2d
+ms.openlocfilehash: 842e09ffd1a9d219f3d39362f51f18187446a9b2
+ms.sourcegitcommit: a85a46312acf8b5a59a8a900310cf088369c4150
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/13/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="configure-ubuntu-cluster-and-availability-group-resource"></a>Configurar clúster Ubuntu y grupo de disponibilidad de recursos
 
@@ -32,7 +32,7 @@ Este documento explica cómo crear un clúster de tres nodos en Ubuntu y agregar
 
 En las siguientes secciones abordan los pasos necesarios para configurar una solución de clúster de conmutación por error. 
 
-## <a name="roadmap"></a>Roadmap
+## <a name="roadmap"></a>Guía básica
 
 Los pasos para crear un grupo de disponibilidad en servidores Linux para lograr alta disponibilidad son diferentes de los pasos en un clúster de conmutación por error de Windows Server. En la lista siguiente describe los pasos generales: 
 

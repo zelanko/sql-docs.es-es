@@ -1,37 +1,38 @@
 ---
 title: Crear archivos de valor de la Variable (OracleToSQL) | Documentos de Microsoft
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: sql-tools
-ms.service: 
+ms.service: ''
 ms.component: ssma-oracle
-ms.custom: 
+ms.custom: ''
 ms.date: 01/19/2017
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: sql-ssma
-ms.tgt_pltfrm: 
+ms.technology:
+- sql-ssma
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - Variable Value File Creation
 - Variable Value File, Variable Value File Validation
 ms.assetid: f583d81a-8e34-41b1-8100-ee3a6a82213b
-caps.latest.revision: "26"
+caps.latest.revision: 26
 author: Shamikg
 ms.author: Shamikg
 manager: v-thobro
 ms.workload: Inactive
-ms.openlocfilehash: 5a311dfe5be380a1e4b5fc7cf65eb84fe942d872
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: dc3691f92c44d6647a77376f15bcd3e9ffc8dd22
+ms.sourcegitcommit: a85a46312acf8b5a59a8a900310cf088369c4150
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="creating-variable-value-files-oracletosql"></a>Crear archivos de valor de la Variable (OracleToSQL)
 Archivo de valores de variable es un archivo XML que contiene los valores de parámetro de comandos como el nombre del servidor de origen o de destino que cambian con frecuencia de la migración de un servidor a otro. Cuando se produce un gran número de migraciones de base de datos, varios archivos de variable para almacenar el valor de cada servidor de origen se creará y se hace referencia en un archivo de script maestra con la **– v** cambiar en la línea de comandos. Esto ayuda a mantener los valores estáticos en unos pocos archivos de script con los valores de variables en varios archivos de variable.  
   
 > [!NOTE]  
 > 1.  Los nombres de variable son el prefijo y sufijo con un símbolo $ (dólar). Si las variables no se asignan un valor en el archivo de valor de la variable, se producirá un error durante el análisis del archivo de script resultante en demora el proceso de ejecución de la consola.  
-> 2.  The escape character for **$** is **$$**. Si el valor de un valor de variable o estático de un parámetro contiene  **$**  símbolos (dólar), a continuación,  **$$**  debe especificarse para tratarlo como un carácter en lugar de una variable.  
+> 2.  The escape character for **$** is **$$**. Si el valor de un valor de variable o estático de un parámetro contiene **$** símbolos (dólar), a continuación, **$$** debe especificarse para tratarlo como un carácter en lugar de una variable.  
 > 3.  Por motivos de mantenimiento, las variables pueden declararse dentro de `‘variable-group’` variables definidas por elementos de una separación lógica del usuario.  Uso de este elemento no es obligatorio.  
   
 **Ejemplos:**  
@@ -94,7 +95,7 @@ Archivo de valores de variable es un archivo XML que contiene los valores de par
 ```  
   
 ## <a name="next-step"></a>Paso siguiente  
-El siguiente paso en la utilización de la consola es [crear los archivos de conexión de servidor &#40; OracleToSQL &#41;](../../ssma/oracle/creating-the-server-connection-files-oracletosql.md)  
+El siguiente paso en la utilización de la consola es [crear los archivos de conexión de servidor &#40;OracleToSQL&#41;](../../ssma/oracle/creating-the-server-connection-files-oracletosql.md)  
   
 ## <a name="see-also"></a>Vea también  
 [Crear los archivos del servidor (Oracle)](http://msdn.microsoft.com/en-us/002f129e-0868-48ad-a4b4-c68b5007e12e)  

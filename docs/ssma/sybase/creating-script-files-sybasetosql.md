@@ -2,7 +2,7 @@
 title: Crear archivos de Script (SybaseToSQL) | Documentos de Microsoft
 ms.custom: ''
 ms.date: 01/19/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: sql-tools
 ms.service: ''
 ms.component: ssma-sybase
@@ -26,11 +26,11 @@ author: Shamikg
 ms.author: Shamikg
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 9639d7527d910e61cd799ab616f10eb20b5262e4
-ms.sourcegitcommit: 9351e8b7b68f599a95fb8e76930ab886db737e5f
+ms.openlocfilehash: 7125d91c2c5e2a64dab36e75337f695b81e1b99e
+ms.sourcegitcommit: a85a46312acf8b5a59a8a900310cf088369c4150
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/06/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="creating-script-files-sybasetosql"></a>Crear archivos de Script (SybaseToSQL)
 El primer paso antes de iniciar la aplicación de consola SSMA consiste en crear el archivo de script y si es necesario crear el archivo de valor de la variable y el archivo de conexión de servidor.  
@@ -77,7 +77,7 @@ Las opciones configurables por el usuario incluyen:
   
     </output-providers>  
     ```  
-    *or*  
+    *o*  
   
     ```xml  
     <…All commands…>  
@@ -114,7 +114,7 @@ Las opciones configurables por el usuario incluyen:
   
     </output-providers>  
     ```  
-    *or*  
+    *o*  
   
     ```xml  
     <migrate-data>  
@@ -147,7 +147,7 @@ Las opciones configurables por el usuario incluyen:
   
     </output-providers>  
     ```  
-    *or*  
+    *o*  
   
     ```xml  
     <!-- Connect to target database -->  
@@ -180,7 +180,7 @@ Las opciones configurables por el usuario incluyen:
   
     </output-providers>  
     ```  
-    *or*  
+    *o*  
   
     ```xml  
     <!--synchronization-->  
@@ -191,7 +191,7 @@ Las opciones configurables por el usuario incluyen:
   
     </synchronize-target>  
     ```  
-    *or*  
+    *o*  
   
     ```xml  
     <!--data migration-->  
@@ -226,7 +226,7 @@ Las opciones configurables por el usuario incluyen:
   
     </output-providers>  
     ```  
-    *or*  
+    *o*  
   
     ```xml  
     <convert-schema object-name="<object-name>">  
@@ -279,7 +279,7 @@ Las opciones configurables por el usuario incluyen:
   
     </output-providers>  
     ```  
-    *or*  
+    *o*  
   
     ```xml  
     <…All commands…>  
@@ -321,7 +321,7 @@ Las opciones configurables por el usuario incluyen:
   
     </output-providers>  
     ```  
-    *or*  
+    *o*  
   
     ```xml  
     <…All commands…>  

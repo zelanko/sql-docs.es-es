@@ -28,11 +28,11 @@ ms.author: sstein
 manager: craigg
 ms.workload: Active
 monikerRange: = azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: 02fec5c45a9cc4e928a5f2f9074d7e520aefd605
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
+ms.openlocfilehash: 0118022e8e9c24e2e26c4a559068fc02aaef79e4
+ms.sourcegitcommit: a85a46312acf8b5a59a8a900310cf088369c4150
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="sysdmexecquerystats-transact-sql"></a>sys.dm_exec_query_stats (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -111,18 +111,18 @@ ms.lasthandoff: 04/16/2018
 |**last_used_threads**|**bigint**|El número de subprocesos paralelos utilizados cuando la última ejecución de este plan. Siempre es 0 para consultar una tabla con optimización para memoria.<br /><br /> **Se aplica a**: desde [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] hasta [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].|  
 |**min_used_threads**|**bigint**|El número mínimo de subprocesos paralelos utilizados este plan utilizado alguna vez durante una ejecución. Siempre es 0 para consultar una tabla con optimización para memoria.<br /><br /> **Se aplica a**: desde [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] hasta [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].|  
 |**max_used_threads**|**bigint**|El número máximo de subprocesos paralelos utilizados este plan utilizado alguna vez durante una ejecución. Siempre es 0 para consultar una tabla con optimización para memoria.<br /><br /> **Se aplica a**: desde [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] hasta [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].|  
-|**total_columnstore_segment_reads**|**bigint**|La suma total de segmentos de almacén de columnas leídas por la consulta. No puede ser null.<br /><br /> **Se aplica a**: a partir de [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)] CU3|    
-|**last_columnstore_segment_reads**|**bigint**|El número de segmentos de almacén de columnas leídas por la última ejecución de la consulta. No puede ser null.<br /><br /> **Se aplica a**: a partir de [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)] CU3|    
-|**min_columnstore_segment_reads**|**bigint**|El número mínimo de segmentos de almacén de columnas alguna vez leídas por la consulta durante una ejecución. No puede ser null.<br /><br /> **Se aplica a**: a partir de [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)] CU3|    
-|**max_columnstore_segment_reads**|**bigint**|El número máximo de segmentos de almacén de columnas alguna vez leídas por la consulta durante una ejecución. No puede ser null.<br /><br /> **Se aplica a**: a partir de [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)] CU3|    
-|**total_columnstore_segment_skips**|**bigint**|La suma total de segmentos de almacén de columnas omitidos por la consulta. No puede ser null.<br /><br /> **Se aplica a**: a partir de [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)] CU3|    
-|**last_columnstore_segment_skips**|**bigint**|El número de segmentos de almacén de columnas que se omiten en la última ejecución de la consulta. No puede ser null.<br /><br /> **Se aplica a**: a partir de [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)] CU3|    
-|**min_columnstore_segment_skips**|**bigint**|El número mínimo de segmentos de almacén de columnas que nunca se omiten en la consulta durante una ejecución. No puede ser null.<br /><br /> **Se aplica a**: a partir de [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)] CU3|    
-|**max_columnstore_segment_skips**|**bigint**|El número máximo de segmentos de almacén de columnas que nunca se omiten en la consulta durante una ejecución. No puede ser null.<br /><br /> **Se aplica a**: a partir de [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)] CU3|
-|**total_spills**|**bigint**|El número total de páginas derramado mediante la ejecución de esta consulta desde que se compiló.<br /><br /> **Se aplica a**: a partir de [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)] CU3|  
-|**last_spills**|**bigint**|El número de páginas derramado la última vez que se ejecutó la consulta.<br /><br /> **Se aplica a**: a partir de [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)] CU3|  
-|**min_spills**|**bigint**|El número mínimo de páginas que esta consulta se derrama alguna vez durante una ejecución.<br /><br /> **Se aplica a**: a partir de [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)] CU3|  
-|**max_spills**|**bigint**|El número máximo de páginas que esta consulta se derrama alguna vez durante una ejecución.<br /><br /> **Se aplica a**: a partir de [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)] CU3|  
+|**total_columnstore_segment_reads**|**bigint**|La suma total de segmentos de almacén de columnas leídas por la consulta. No puede ser null.<br /><br /> **Se aplica a**: a partir de [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] SP2 y [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)] CU3|    
+|**last_columnstore_segment_reads**|**bigint**|El número de segmentos de almacén de columnas leídas por la última ejecución de la consulta. No puede ser null.<br /><br /> **Se aplica a**: a partir de [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] SP2 y [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)] CU3|    
+|**min_columnstore_segment_reads**|**bigint**|El número mínimo de segmentos de almacén de columnas alguna vez leídas por la consulta durante una ejecución. No puede ser null.<br /><br /> **Se aplica a**: a partir de [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] SP2 y [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)] CU3|    
+|**max_columnstore_segment_reads**|**bigint**|El número máximo de segmentos de almacén de columnas alguna vez leídas por la consulta durante una ejecución. No puede ser null.<br /><br /> **Se aplica a**: a partir de [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] SP2 y [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)] CU3|    
+|**total_columnstore_segment_skips**|**bigint**|La suma total de segmentos de almacén de columnas omitidos por la consulta. No puede ser null.<br /><br /> **Se aplica a**: a partir de [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] SP2 y [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)] CU3|    
+|**last_columnstore_segment_skips**|**bigint**|El número de segmentos de almacén de columnas que se omiten en la última ejecución de la consulta. No puede ser null.<br /><br /> **Se aplica a**: a partir de [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] SP2 y [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)] CU3|    
+|**min_columnstore_segment_skips**|**bigint**|El número mínimo de segmentos de almacén de columnas que nunca se omiten en la consulta durante una ejecución. No puede ser null.<br /><br /> **Se aplica a**: a partir de [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] SP2 y [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)] CU3|    
+|**max_columnstore_segment_skips**|**bigint**|El número máximo de segmentos de almacén de columnas que nunca se omiten en la consulta durante una ejecución. No puede ser null.<br /><br /> **Se aplica a**: a partir de [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] SP2 y [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)] CU3|
+|**total_spills**|**bigint**|El número total de páginas derramado mediante la ejecución de esta consulta desde que se compiló.<br /><br /> **Se aplica a**: a partir de [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] SP2 y [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)] CU3|  
+|**last_spills**|**bigint**|El número de páginas derramado la última vez que se ejecutó la consulta.<br /><br /> **Se aplica a**: a partir de [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] SP2 y [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)] CU3|  
+|**min_spills**|**bigint**|El número mínimo de páginas que esta consulta se derrama alguna vez durante una ejecución.<br /><br /> **Se aplica a**: a partir de [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] SP2 y [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)] CU3|  
+|**max_spills**|**bigint**|El número máximo de páginas que esta consulta se derrama alguna vez durante una ejecución.<br /><br /> **Se aplica a**: a partir de [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] SP2 y [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)] CU3|  
 |**pdw_node_id**|**int**|El identificador para el nodo que se encuentra en esta distribución.<br /><br /> **Se aplica a**: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)], [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]| 
 
 > [!NOTE]

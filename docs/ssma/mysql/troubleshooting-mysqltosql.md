@@ -1,6 +1,6 @@
 ---
 title: Solución de problemas (MySQLToSQL) | Documentos de Microsoft
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: sql-tools
 ms.service: ''
 ms.component: ssma-mysql
@@ -21,11 +21,11 @@ author: Shamikg
 ms.author: Shamikg
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: dcac08ae203f0f1243b929f0254233e2a3351a8c
-ms.sourcegitcommit: 9351e8b7b68f599a95fb8e76930ab886db737e5f
+ms.openlocfilehash: c2bacab63460d36c7e3e7edaf8384943aafc2508
+ms.sourcegitcommit: a85a46312acf8b5a59a8a900310cf088369c4150
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/06/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="troubleshooting-mysqltosql"></a>Solución de problemas (MySQLToSQL)
 No es raro en mitad de problemas de migración ejecutando los comandos o scripts de la consola.  

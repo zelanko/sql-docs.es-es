@@ -1,16 +1,16 @@
 ---
 title: Tipo de sistema (XQuery) | Documentos de Microsoft
-ms.custom: 
+ms.custom: ''
 ms.date: 08/10/2016
-ms.prod: sql-non-specified
-ms.prod_service: sql-non-specified
-ms.service: 
+ms.prod: sql
+ms.prod_service: sql
+ms.service: ''
 ms.component: xquery
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 applies_to:
 - SQL Server
@@ -28,16 +28,16 @@ helpviewer_keywords:
 - built-in XML schema types [SQL Server]
 - xs prefix [XML in SQL Server]
 ms.assetid: 22d6f861-d058-47ee-b550-cbe9092dcb12
-caps.latest.revision: 
+caps.latest.revision: 28
 author: rothja
 ms.author: jroth
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 5e0c8e060eede58292de8f47a39c563059927513
-ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
+ms.openlocfilehash: d84021e20c56be6d889ba1936d385432a5d8e481
+ms.sourcegitcommit: a85a46312acf8b5a59a8a900310cf088369c4150
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/09/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="type-system-xquery"></a>Sistema de tipos (XQuery)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -52,14 +52,14 @@ ms.lasthandoff: 02/09/2018
   
 -   El valor con tipo y el valor de cadena de un nodo.  
   
--   El [datos función &#40; XQuery &#41; ](../xquery/data-accessor-functions-data-xquery.md) y [cadena Function &#40; XQuery &#41; ](../xquery/data-accessor-functions-string-xquery.md).  
+-   El [datos función &#40;XQuery&#41; ](../xquery/data-accessor-functions-data-xquery.md) y [función de cadena &#40;XQuery&#41;](../xquery/data-accessor-functions-string-xquery.md).  
   
 -   La equiparación del tipo de secuencia devuelto por una expresión.  
   
 ## <a name="built-in-types-of-xml-schema"></a>Tipos integrados de esquema XML  
  Los tipos integrados de esquema XML tienen el prefijo de espacio de nombres predefinido xs. Algunos de estos tipos son **xs: Integer** y **xs: String**. Todos estos tipos integrados son compatibles y se pueden utilizar al crear una colección de esquemas XML.  
   
- Al consultar XML con tipo, el tipo estático y dinámico de los nodos se determina a partir de la colección de esquemas XML asociada a la columna o variable que se consulta. Para obtener más información acerca de los tipos estáticos y dinámicos, consulte [el contexto de expresión y evaluación de la consulta &#40; XQuery &#41; ](../xquery/expression-context-and-query-evaluation-xquery.md). Por ejemplo, la consulta siguiente se especifica en un tipo **xml** columna (`Instructions`). La expresión utiliza `instance of` para comprobar que el valor con tipo del atributo `LotSize` devuelto es de tipo `xs:decimal`.  
+ Al consultar XML con tipo, el tipo estático y dinámico de los nodos se determina a partir de la colección de esquemas XML asociada a la columna o variable que se consulta. Para obtener más información acerca de los tipos estáticos y dinámicos, consulte [el contexto de expresión y evaluación de la consulta &#40;XQuery&#41;](../xquery/expression-context-and-query-evaluation-xquery.md). Por ejemplo, la consulta siguiente se especifica en un tipo **xml** columna (`Instructions`). La expresión utiliza `instance of` para comprobar que el valor con tipo del atributo `LotSize` devuelto es de tipo `xs:decimal`.  
   
 ```  
 SELECT Instructions.query('  
@@ -110,9 +110,9 @@ SELECT @x.query( '/a[1] instance of element()')
   
  Puede usar el **data()** o **string()** función para recuperar el valor de un nodo:  
   
--   El [datos función &#40; XQuery &#41; ](../xquery/data-accessor-functions-data-xquery.md) devuelve el valor con tipo de un nodo.  
+-   El [datos función &#40;XQuery&#41; ](../xquery/data-accessor-functions-data-xquery.md) devuelve el valor con tipo de un nodo.  
   
--   El [cadena Function &#40; XQuery &#41; ](../xquery/data-accessor-functions-string-xquery.md) devuelve el valor de cadena del nodo.  
+-   El [función de cadena &#40;XQuery&#41; ](../xquery/data-accessor-functions-string-xquery.md) devuelve el valor de cadena del nodo.  
   
  En la siguiente colección de esquemas XML, se define el elemento <`root`> del tipo entero:  
   

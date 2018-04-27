@@ -1,27 +1,28 @@
 ---
-title: "Finalizar la preparación del caso de prueba (OracleToSQL) | Documentos de Microsoft"
-ms.prod: sql-non-specified
+title: Finalizar la preparación del caso de prueba (OracleToSQL) | Documentos de Microsoft
+ms.prod: sql
 ms.prod_service: sql-tools
-ms.service: 
+ms.service: ''
 ms.component: ssma-oracle
-ms.custom: 
+ms.custom: ''
 ms.date: 01/19/2017
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: sql-ssma
-ms.tgt_pltfrm: 
+ms.technology:
+- sql-ssma
+ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: 32f38713-7ae4-48d3-980d-74cadc8545a0
-caps.latest.revision: "6"
+caps.latest.revision: 6
 author: Shamikg
 ms.author: Shamikg
 manager: v-thobro
 ms.workload: Inactive
-ms.openlocfilehash: f6bf969705a049e03212500a3112e643fbe7654a
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: 7b1ca4a9af16b008a1f971541d07069b39f8f9b6
+ms.sourcegitcommit: a85a46312acf8b5a59a8a900310cf088369c4150
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="finishing-test-case-preparation-oracletosql"></a>Finalizar la preparación del caso de prueba (OracleToSQL)
 Página final del asistente muestra la descripción del caso de prueba y obtener información acerca de los objetos implicados en la prueba. Además, en esta página se pueden establecer la prueba de opciones de ejecución.  
@@ -50,7 +51,7 @@ Permite la reversión automática de los datos después de la ejecución de prue
 -   Si elige **n**, todos los cambios de datos se guardarán de ejecución de prueba.  
   
 ### <a name="auxiliary-tables-saving-mode"></a>Tablas auxiliares de modo de ahorro  
-Define el modo de guardar para tablas auxiliares creados durante la ejecución de pruebas. Vea la descripción de las tablas auxiliares en el [ejecutar casos de prueba &#40; OracleToSQL &#41;](../../ssma/oracle/running-test-cases-oracletosql.md) tema.  
+Define el modo de guardar para tablas auxiliares creados durante la ejecución de pruebas. Vea la descripción de las tablas auxiliares en el [ejecutar casos de prueba &#40;OracleToSQL&#41; ](../../ssma/oracle/running-test-cases-oracletosql.md) tema.  
   
 -   Si selecciona **guardar siempre**, siempre se almacenarán datos de la tabla auxiliar para su uso posterior.  
   
@@ -63,7 +64,7 @@ Define el modo de guardar para tablas auxiliares creados durante la ejecución d
 Haga clic en el **finalizar** botón para guardar el caso de prueba preparada en [repositorios de prueba usando (OracleToSQL)](http://msdn.microsoft.com/en-us/f941cce4-d3e3-4aeb-a88a-4f101a97a9f4).  
   
 ## <a name="see-also"></a>Vea también  
-[Mediante la prueba repositorios &#40; OracleToSQL &#41;](../../ssma/oracle/using-test-repositories-oracletosql.md)  
-[Ejecutar casos de prueba &#40; OracleToSQL &#41;](../../ssma/oracle/running-test-cases-oracletosql.md)  
-[Pruebas migran objetos de base de datos &#40; OracleToSQL &#41;](../../ssma/oracle/testing-migrated-database-objects-oracletosql.md)  
+[Uso de repositorios de prueba &#40;OracleToSQL&#41;](../../ssma/oracle/using-test-repositories-oracletosql.md)  
+[Ejecutar casos de prueba &#40;OracleToSQL&#41;](../../ssma/oracle/running-test-cases-oracletosql.md)  
+[Pruebas de objetos de base de datos migran &#40;OracleToSQL&#41;](../../ssma/oracle/testing-migrated-database-objects-oracletosql.md)  
   

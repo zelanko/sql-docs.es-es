@@ -2,7 +2,7 @@
 title: Opciones de línea de comandos en la consola SSMA (SybaseToSQL) | Documentos de Microsoft
 ms.custom: ''
 ms.date: 01/19/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: sql-tools
 ms.service: ''
 ms.component: ssma-sybase
@@ -23,11 +23,11 @@ author: Shamikg
 ms.author: Shamikg
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 4926712b260fe20dc42518ed1bccb70bb0ab306c
-ms.sourcegitcommit: 9351e8b7b68f599a95fb8e76930ab886db737e5f
+ms.openlocfilehash: b76d8debc23900a72945e6cf0a37d8d54d012e64
+ms.sourcegitcommit: a85a46312acf8b5a59a8a900310cf088369c4150
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/06/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="command-line-options-in-ssma-console-sybasetosql"></a>Opciones de línea de comandos en la consola SSMA (SybaseToSQL)
 Microsoft le ofrece un potente conjunto de opciones de línea de comandos para ejecutar y controlar las actividades SSMA. Las secciones posteriores detallan los mismos.  

@@ -1,6 +1,6 @@
 ---
 title: Convertir esquemas de Oracle (OracleToSQL) | Documentos de Microsoft
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: sql-tools
 ms.service: ''
 ms.component: ssma-oracle
@@ -20,11 +20,11 @@ author: Shamikg
 ms.author: Shamikg
 manager: v-thobro
 ms.workload: On Demand
-ms.openlocfilehash: 208378f2be9ad4eea080df758616e554c1262905
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: 61bea3173bcb085e551c35a3c2c746626f5ba0bb
+ms.sourcegitcommit: a85a46312acf8b5a59a8a900310cf088369c4150
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="converting-oracle-schemas-oracletosql"></a>Convertir esquemas de Oracle (OracleToSQL)
 Después de haberse conectado a Oracle, conectado a [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)], y el proyecto de conjunto y las opciones de asignación de datos, puede convertir objetos de base de datos de Oracle para [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] objetos de base de datos.  
@@ -35,7 +35,7 @@ Convertir objetos de base de datos toma las definiciones de objeto de Oracle, se
 Durante la conversión, SSMA imprime mensajes de salida en el panel de resultados y mensajes de error en el panel de lista de errores. Use la información de salida y el error para determinar si tiene que modificar las bases de datos de Oracle o el proceso de conversión para obtener los resultados de la conversión deseada.  
   
 ## <a name="setting-conversion-options"></a>Establecer las opciones de conversión  
-Antes de convertir objetos, revise las opciones de conversión de proyecto en el **configuración del proyecto** cuadro de diálogo. Mediante este cuadro de diálogo, puede establecer cómo SSMA convierte las funciones y variables globales. Para obtener más información, vea [configuración del proyecto &#40; Conversión &#41; &#40; OracleToSQL &#41; ](../../ssma/oracle/project-settings-conversion-oracletosql.md).  
+Antes de convertir objetos, revise las opciones de conversión de proyecto en el **configuración del proyecto** cuadro de diálogo. Mediante este cuadro de diálogo, puede establecer cómo SSMA convierte las funciones y variables globales. Para obtener más información, consulte [configuración del proyecto &#40;conversión&#41; &#40;OracleToSQL&#41;](../../ssma/oracle/project-settings-conversion-oracletosql.md).  
   
 ## <a name="conversion-results"></a>Resultados de la conversión  
 La siguiente tabla muestra qué objetos de Oracle se convierten y resultante [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] objetos:  
@@ -116,7 +116,7 @@ Para cada elemento que no se pudo convertir, deberá determinar qué desea hacer
   
 -   Puede modificar el código fuente de procedimientos en el **SQL** ficha.  
   
--   Puede modificar el objeto en la base de datos de Oracle para quitar o revisar cargue código problemático. Para cargar el código actualizado en SSMA, tendrá que actualizar los metadatos. Para obtener más información, consulte [conectarse a base de datos de Oracle &#40; OracleToSQL &#41;](../../ssma/oracle/connecting-to-oracle-database-oracletosql.md).  
+-   Puede modificar el objeto en la base de datos de Oracle para quitar o revisar cargue código problemático. Para cargar el código actualizado en SSMA, tendrá que actualizar los metadatos. Para obtener más información, consulte [conectarse a la base de datos de Oracle &#40;OracleToSQL&#41;](../../ssma/oracle/connecting-to-oracle-database-oracletosql.md).  
   
 -   Puede excluir el objeto de la migración. En [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] Explorador de metadatos y el Explorador de metadatos de Oracle, desactive la casilla de verificación situada junto al elemento antes de cargar los objetos en [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] y migración de datos de Oracle.  
   
@@ -124,5 +124,5 @@ Para cada elemento que no se pudo convertir, deberá determinar qué desea hacer
 El siguiente paso del proceso de migración consiste en [cargar los objetos convertidos en SQL Server](http://msdn.microsoft.com/en-us/a8ae33b2-1883-4785-922b-ea0e31c0b37a).  
   
 ## <a name="see-also"></a>Vea también  
-[Migrar bases de datos de Oracle a SQL Server &#40; OracleToSQL &#41;](../../ssma/oracle/migrating-oracle-databases-to-sql-server-oracletosql.md)  
+[Bases de datos de migración de Oracle a SQL Server &#40;OracleToSQL&#41;](../../ssma/oracle/migrating-oracle-databases-to-sql-server-oracletosql.md)  
   

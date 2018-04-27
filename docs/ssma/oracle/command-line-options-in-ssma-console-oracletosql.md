@@ -1,15 +1,16 @@
 ---
-title: "Opciones de línea de comandos en la consola SSMA (OracleToSQL) | Documentos de Microsoft"
-ms.prod: sql-non-specified
+title: Opciones de línea de comandos en la consola SSMA (OracleToSQL) | Documentos de Microsoft
+ms.prod: sql
 ms.prod_service: sql-tools
-ms.service: 
+ms.service: ''
 ms.component: ssma-oracle
-ms.custom: 
+ms.custom: ''
 ms.date: 01/19/2017
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: sql-ssma
-ms.tgt_pltfrm: 
+ms.technology:
+- sql-ssma
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - Command Line Options, Help Option
@@ -17,16 +18,16 @@ helpviewer_keywords:
 - Command Line Options, Variable Value File Option
 - Command Line Options,Script File Option
 ms.assetid: bf4a9313-349e-4ebf-9c89-9f5bb515f9ff
-caps.latest.revision: "12"
+caps.latest.revision: 12
 author: Shamikg
 ms.author: Shamikg
 manager: v-thobro
 ms.workload: Inactive
-ms.openlocfilehash: a5b0502ba12f5151679b6e4468bdb046b490ecc0
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: 0c1061732d28120432da9e8f4e20e129af066027
+ms.sourcegitcommit: a85a46312acf8b5a59a8a900310cf088369c4150
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="command-line-options-in-ssma-console-oracletosql"></a>Opciones de línea de comandos en la consola SSMA (OracleToSQL)
 Microsoft le proporciona un opciones de línea de comandos de conjunto robusto para ejecutar y controlar las actividades SSMA. Las secciones posteriores detallan los mismos.  
@@ -164,21 +165,21 @@ Muestra el resumen de la sintaxis de las opciones de la consola SSMA:
   
 `C:\>SSMAforOracleConsole.EXE -?`  
   
-Para una vista tabular de las opciones de línea de comandos de consola SSMA, consulte [apéndice - 1 &#40; OracleToSQL &#41;](../../ssma/oracle/appendix-1-oracletosql.md).  
+Para una vista tabular de las opciones de línea de comandos de consola SSMA, consulte [apéndice - 1 &#40;OracleToSQL&#41;](../../ssma/oracle/appendix-1-oracletosql.md).  
   
 ### <a name="securepassword-help-option-securepassword--help"></a>Opción de ayuda SecurePassword: – securepassword-? / Help  
 Muestra el resumen de la sintaxis de las opciones de la consola SSMA:  
   
 `C:\>SSMAforOracleConsole.EXE -securepassword -?`  
   
-Para una vista tabular de las opciones de línea de comandos de consola SSMA, consulte [apéndice - 1 &#40; OracleToSQL &#41;](../../ssma/oracle/appendix-1-oracletosql.md)  
+Para una vista tabular de las opciones de línea de comandos de consola SSMA, consulte [apéndice - 1 &#40;OracleToSQL&#41;](../../ssma/oracle/appendix-1-oracletosql.md)  
   
 ### <a name="next-step"></a>Paso siguiente  
 El paso siguiente depende de los requisitos del proyecto:  
   
--   Para especificar una contraseña o la exportación / importación de contraseñas, vea [administrar contraseñas &#40; OracleToSQL &#41;](../../ssma/oracle/managing-passwords-oracletosql.md).  
+-   Para especificar una contraseña o la exportación / importación de contraseñas, vea [administrar contraseñas &#40;OracleToSQL&#41;](../../ssma/oracle/managing-passwords-oracletosql.md).  
   
--   Para generar informes, consulte [generar informes &#40; OracleToSQL &#41;](../../ssma/oracle/generating-reports-oracletosql.md).  
+-   Para generar informes, consulte [generar informes &#40;OracleToSQL&#41;](../../ssma/oracle/generating-reports-oracletosql.md).  
   
--   Para solucionar problemas en la consola, consulte [Troubleshooting &#40; OracleToSQL &#41;](../../ssma/oracle/troubleshooting-oracletosql.md).  
+-   Para solucionar problemas en la consola, consulte [solución de problemas &#40;OracleToSQL&#41;](../../ssma/oracle/troubleshooting-oracletosql.md).  
   

@@ -1,6 +1,6 @@
 ---
 title: Asignación de tipos de datos SQL Server (MySQLToSQL) y MySQL | Documentos de Microsoft
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: sql-tools
 ms.service: ''
 ms.component: ssma-mysql
@@ -24,11 +24,11 @@ author: Shamikg
 ms.author: Shamikg
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: ee34e34e1b0048fd1cb15744cc215962e5a563e5
-ms.sourcegitcommit: 9351e8b7b68f599a95fb8e76930ab886db737e5f
+ms.openlocfilehash: 67a23e286e6d3a7c125d37e5f5cb68f01751fba0
+ms.sourcegitcommit: a85a46312acf8b5a59a8a900310cf088369c4150
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/06/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="mapping-mysql-and-sql-server-data-types-mysqltosql"></a>Asignación de tipos de datos SQL Server (MySQLToSQL) y MySQL
 Los tipos de base de datos de MySQL difieren entre [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] o tipos de base de datos de SQL Azure. Al convertir objetos de base de datos de MySQL a [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] u objetos de SQL Azure, debe especificar cómo se asignan los tipos de datos de MySQL a [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] o SQL Azure. Puede aceptar las asignaciones de tipos de datos de forma predeterminada, o puede personalizar las asignaciones como se muestra en los procedimientos siguientes.  

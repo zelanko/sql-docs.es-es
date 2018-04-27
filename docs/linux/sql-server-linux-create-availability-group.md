@@ -1,24 +1,24 @@
 ---
 title: Crear y configurar un grupo de disponibilidad para SQL Server en Linux | Documentos de Microsoft
-description: "Este tutorial muestra cómo crear y configurar grupos de disponibilidad para SQL Server en Linux."
+description: Este tutorial muestra cómo crear y configurar grupos de disponibilidad para SQL Server en Linux.
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.date: 12/11/2017
 ms.topic: article
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine
-ms.service: 
-ms.component: 
+ms.service: ''
+ms.component: ''
 ms.suite: sql
 ms.custom: sql-linux
 ms.technology: database-engine
 ms.workload: On Demand
-ms.openlocfilehash: 97ec3cd688f69995f4d907d305ce4d14d4724efc
-ms.sourcegitcommit: 6e16d1616985d65484c72f5e0f34fb2973f828f4
+ms.openlocfilehash: f02ec690caec1c33b4a316707c0011c8be032580
+ms.sourcegitcommit: a85a46312acf8b5a59a8a900310cf088369c4150
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/16/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="create-and-configure-an-availability-group-for-sql-server-on-linux"></a>Crear y configurar un grupo de disponibilidad para SQL Server en Linux
 
@@ -628,7 +628,7 @@ El recurso de AG que se crea es un tipo especial de recurso denominado un clon. 
     sudo pcs resource create <NameForIPResource> ocf:heartbeat:IPaddr2 ip=<IPAddress> cidr_netmask=<Netmask>
     ```
 
-    **SLES**
+    **SLES GRANDE**
     
     ```bash
     crm configure \
@@ -648,7 +648,7 @@ El recurso de AG que se crea es un tipo especial de recurso denominado un clon. 
     sudo pcs constraint colocation add <NameForIPResource> <NameForAGResource>-master INFINITY with-rsc-role=Master
     ```
 
-    **SLES**
+    **SLES GRANDE**
     
     ```bash
     crm configure <NameForConstraint> inf: \
@@ -666,7 +666,7 @@ El recurso de AG que se crea es un tipo especial de recurso denominado un clon. 
     sudo pcs constraint order promote <NameForAGResource>-master then start <NameForIPResource>
     ```
     
-    **SLES**
+    **SLES GRANDE**
     
     ```bash
     crm configure \

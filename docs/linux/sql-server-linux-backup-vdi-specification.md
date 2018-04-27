@@ -1,25 +1,25 @@
 ---
-title: "Especificación de copia de seguridad de VDI, SQL Server en Linux | Documentos de Microsoft"
-description: "Especificación de interfaz de dispositivo Virtual de copia de seguridad de SQL Server."
+title: Especificación de copia de seguridad de VDI, SQL Server en Linux | Documentos de Microsoft
+description: Especificación de interfaz de dispositivo Virtual de copia de seguridad de SQL Server.
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.date: 03/17/2017
 ms.topic: article
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine
-ms.service: 
-ms.component: 
+ms.service: ''
+ms.component: ''
 ms.suite: sql
 ms.custom: sql-linux
 ms.technology: database-engine
 ms.assetid: 0250ba2b-8cdd-450e-9109-bf74f70e1247
 ms.workload: Inactive
-ms.openlocfilehash: 9760b93a1e224c35617b4161d8996ff0ed3dff67
-ms.sourcegitcommit: f02598eb8665a9c2dc01991c36f27943701fdd2d
+ms.openlocfilehash: 52792f4ef8734afbc45d491277e8671af19b234c
+ms.sourcegitcommit: a85a46312acf8b5a59a8a900310cf088369c4150
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/13/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="sql-server-on-linux-vdi-client-sdk-specification"></a>SQL Server en el cliente de Linux VDI especificación de SDK
 
@@ -110,7 +110,7 @@ En este capítulo se incluyen descripciones de cada una de las funciones de clie
 
 | Parámetros | Argumento | Explicación
 | ----- | ----- | ------ |
-| | **timeout** | Este es el tiempo de espera en milisegundos. Usar infinito o un número entero negativo para evitar el tiempo de espera.
+| | **Tiempo de espera** | Este es el tiempo de espera en milisegundos. Usar infinito o un número entero negativo para evitar el tiempo de espera.
 | | **cfg** | Tras la ejecución correcta, contiene la configuración seleccionada por el servidor. Para obtener más información, consulte "Configuración" más adelante en este documento.
 
 | Valores devueltos | Argumento | Explicación
@@ -146,7 +146,7 @@ En este capítulo se incluyen descripciones de cada una de las funciones de clie
 | |**VD_E_INVALID** |El nombre del dispositivo no es válido. No es uno de los nombres que se sabe que componen el conjunto.
 
 **Comentarios** VD_E_OPEN puede devolverse sin problema. El cliente puede llamar a OpenDevice por medio de un bucle hasta que se devuelve este código.
-Si se configura más de un dispositivo, por ejemplo  *n*  dispositivos, devolverá el conjunto de dispositivos virtuales  *n*  interfaces de dispositivo único.
+Si se configura más de un dispositivo, por ejemplo *n* dispositivos, devolverá el conjunto de dispositivos virtuales *n* interfaces de dispositivo único.
 
 El `GetConfiguration` función puede utilizarse para esperar hasta que se pueden abrir los dispositivos.
 Si esta función no se realiza correctamente, se devuelve un valor null a través de la ppVirtualDevice.
@@ -165,7 +165,7 @@ Si esta función no se realiza correctamente, se devuelve un valor null a travé
 
 | Parámetros | Argumento | Explicación
 | ----- | ----- | ------ |
-| |**timeout** |Se trata de tiempo de espera, en milisegundos. Utilice INFINTE para esperar indefinidamente. Use 0 para sondear en busca de un comando. Si no hay ningún comando está actualmente disponible, se devuelve VD_E_TIMEOUT. Si se produce el tiempo de espera, el cliente decide la siguiente acción.
+| |**Tiempo de espera** |Se trata de tiempo de espera, en milisegundos. Utilice INFINTE para esperar indefinidamente. Use 0 para sondear en busca de un comando. Si no hay ningún comando está actualmente disponible, se devuelve VD_E_TIMEOUT. Si se produce el tiempo de espera, el cliente decide la siguiente acción.
 | |**Timeout** |Se trata de tiempo de espera, en milisegundos. Utilice INFINTE o un valor negativo para esperar indefinidamente. Use 0 para sondear en busca de un comando. Si no hay ningún comando está disponible antes de que expire el tiempo de espera, se devuelve VD_E_TIMEOUT. Si se produce el tiempo de espera, el cliente decide la siguiente acción.
 | |**ppCmd** |Cuando un comando se devuelve correctamente, el parámetro devuelve la dirección de un comando para ejecutar. La memoria devuelta es de solo lectura. Cuando se completa el comando, este puntero se pasa a la rutina CompleteCommand. Para obtener más información acerca de cada comando, vea "Comandos" más adelante en este documento.
         
@@ -198,7 +198,7 @@ Cuando esta rutina se debe bloquear para esperar un comando, el subproceso se de
 | ----- | ----- | ------ |
 | |**pCmd** |Se trata de la dirección de un comando devuelto anteriormente desde ClientVirtualDevice::GetCommand.
 | |**completionCode** |Se trata de un código de estado que indica el estado de finalización. Este parámetro se debe devolver para todos los comandos. El código devuelto debe ser adecuado para el comando que se está realizando. ERROR_SUCCESS se utiliza en todos los casos para denotar un comando ejecutado correctamente. Para obtener la lista completa de los posibles códigos, vea el archivo vdierror.h. Aparece una lista de códigos de estado típico para cada comando en "Comandos" más adelante en este documento.
-| |**bytesTransferred** |Este es el número de bytes transferidos correctamente. Esto solo se devuelve para transferencia de datos de comandos de lectura y escritura.
+| |**BytesTransferred** |Este es el número de bytes transferidos correctamente. Esto solo se devuelve para transferencia de datos de comandos de lectura y escritura.
 | |**position** |Se trata de una respuesta al comando GetPosition solo.
         
 | Valores devueltos | Argumento | Explicación

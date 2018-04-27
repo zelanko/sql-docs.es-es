@@ -1,6 +1,6 @@
 ---
 title: Asignación de Oracle y tipos de datos SQL Server (OracleToSQL) | Documentos de Microsoft
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: sql-tools
 ms.service: ''
 ms.component: ssma-oracle
@@ -20,17 +20,17 @@ author: Shamikg
 ms.author: Shamikg
 manager: v-thobro
 ms.workload: Inactive
-ms.openlocfilehash: 8984f279cb6a42d057093f048a29149a7be2d981
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: 14abe4d362eead87d83ab8ea9b9082f8c2c8f566
+ms.sourcegitcommit: a85a46312acf8b5a59a8a900310cf088369c4150
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="mapping-oracle-and-sql-server-data-types-oracletosql"></a>Asignación de Oracle y tipos de datos SQL Server (OracleToSQL)
 Tipos de bases de datos de Oracle se diferencian [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] tipos base de datos. Al convertir objetos de base de datos de Oracle a [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] objetos, debe especificar cómo se asignan los tipos de datos de Oracle para [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]. Puede aceptar las asignaciones de tipos de datos de forma predeterminada, o puede personalizar las asignaciones como se muestra en las secciones siguientes.  
   
 ## <a name="default-mappings"></a>Asignaciones predeterminadas  
-SSMA tiene un conjunto predeterminado de asignaciones de tipos de datos. Para obtener la lista de asignaciones predeterminadas, vea [configuración del proyecto &#40; Asignación de tipos de &#41; &#40; OracleToSQL &#41; ](../../ssma/oracle/project-settings-type-mapping-oracletosql.md).  
+SSMA tiene un conjunto predeterminado de asignaciones de tipos de datos. Para obtener la lista de asignaciones predeterminadas, vea [configuración del proyecto &#40;Type Mapping&#41; &#40;OracleToSQL&#41;](../../ssma/oracle/project-settings-type-mapping-oracletosql.md).  
   
 ## <a name="type-mapping-inheritance"></a>Tipo de asignación de herencia  
 Puede personalizar las asignaciones de tipos en el nivel de proyecto, el nivel de categoría de objeto (por ejemplo, todos los procedimientos almacenados) o el nivel de objeto. Configuración se hereda del nivel superior, a menos que se invaliden en un nivel inferior. Por ejemplo, si asigna **smallmoney** a **dinero** en el nivel de proyecto, todos los objetos en el proyecto usará esta asignación a menos que personalice la asignación en el nivel de objeto o una categoría.  
@@ -84,7 +84,7 @@ El siguiente procedimiento muestra cómo asignar tipos de datos en el proyecto, 
   
     4.  En **tipo de destino**, seleccione el destino [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] tipo de datos.  
   
-        Algunos tipos requieren una longitud del tipo de datos de destino. Si es necesario, escriba la nueva longitud de datos en el **reemplazar con** cuadro y, a continuación,[!INCLUDE[clickOK](../../includes/clickok_md.md)]  
+        Algunos tipos requieren una longitud del tipo de datos de destino. Si es necesario, escriba la nueva longitud de datos en el **reemplazar con** cuadro y, a continuación, [!INCLUDE[clickOK](../../includes/clickok_md.md)]  
   
 4.  Para quitar una asignación de tipo de datos personalizado, haga lo siguiente:  
   
@@ -94,9 +94,9 @@ El siguiente procedimiento muestra cómo asignar tipos de datos en el proyecto, 
   
         No se puede quitar asignaciones heredadas. Sin embargo, asignaciones heredadas son reemplazadas por las asignaciones personalizadas en un objeto específico o una categoría de objeto.  
   
-## <a name="next-steps"></a>Next Steps  
+## <a name="next-steps"></a>Pasos siguientes  
 El paso siguiente del proceso de migración consiste en [crear un informe de evaluación](http://msdn.microsoft.com/en-us/4de9bcf6-1346-4740-87f9-7f24a8226357) o [convertir objetos de base de datos de Oracle a la sintaxis de SQL Server](http://msdn.microsoft.com/en-us/e021182d-31da-443d-b110-937f5db27272). Si crea un informe de evaluación, objetos de Oracle se convierten automáticamente durante la evaluación.  
   
 ## <a name="see-also"></a>Vea también  
-[Migrar bases de datos de Oracle a SQL Server &#40; OracleToSQL &#41;](../../ssma/oracle/migrating-oracle-databases-to-sql-server-oracletosql.md)  
+[Bases de datos de migración de Oracle a SQL Server &#40;OracleToSQL&#41;](../../ssma/oracle/migrating-oracle-databases-to-sql-server-oracletosql.md)  
   

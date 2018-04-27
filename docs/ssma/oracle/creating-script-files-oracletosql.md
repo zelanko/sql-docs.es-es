@@ -1,31 +1,32 @@
 ---
 title: Crear archivos de Script (OracleToSQL) | Documentos de Microsoft
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: sql-tools
-ms.service: 
+ms.service: ''
 ms.component: ssma-oracle
-ms.custom: 
+ms.custom: ''
 ms.date: 01/19/2017
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: sql-ssma
-ms.tgt_pltfrm: 
+ms.technology:
+- sql-ssma
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - Script File Creation, Configuring Oracle Console Settings
 - Script File Creation, Non-Configurable option
 - Script File Creation, Script File Validation
 ms.assetid: 55e5bc68-3040-4f07-bb00-0408a17c9821
-caps.latest.revision: "37"
+caps.latest.revision: 37
 author: Shamikg
 ms.author: Shamikg
 manager: v-thobro
 ms.workload: Inactive
-ms.openlocfilehash: 469802e908d287d5612697b77711aa5ef4f01455
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: 087bde0aca02a1101cb1914a69e0d5982d294732
+ms.sourcegitcommit: a85a46312acf8b5a59a8a900310cf088369c4150
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="creating-script-files-oracletosql"></a>Crear archivos de Script (OracleToSQL)
 El primer paso antes de iniciar la aplicación de consola SSMA consiste en crear el archivo de script y si es necesario crear el archivo de valor de la variable y el archivo de conexión de servidor.  
@@ -349,14 +350,14 @@ La opción no configurable es:
 -   **Número máximo de intentos de reconexión:** cuando una conexión establecida se agota el tiempo o se interrumpe deba a errores de red, el servidor es necesario volver a conectarse. Se permiten los intentos de reconexión hasta un máximo de **5** reintentos transcurrido ese período, la consola realiza automáticamente la reconexión. La funcionalidad de reconexión automática reduce el esfuerzo de volver a ejecutar la secuencia de comandos.  
   
 ## <a name="server-connection-parameters"></a>Parámetros de conexión de servidor  
-Parámetros de conexión de servidor pueden definirse en el archivo de script o en el archivo de conexión de servidor. Consulte la [crear los archivos de conexión de servidor &#40; OracleToSQL &#41;](../../ssma/oracle/creating-the-server-connection-files-oracletosql.md) sección para obtener más detalles.  
+Parámetros de conexión de servidor pueden definirse en el archivo de script o en el archivo de conexión de servidor. Consulte la [crear los archivos de conexión de servidor &#40;OracleToSQL&#41; ](../../ssma/oracle/creating-the-server-connection-files-oracletosql.md) sección para obtener más detalles.  
   
 ## <a name="script-commands"></a>Comandos de script  
 El archivo de script contiene una secuencia de comandos de flujo de trabajo de migración en el formato XML. La aplicación de consola SSMA procesa la migración en el orden de los comandos que aparecen en el archivo de script.  
   
 Por ejemplo, una migración típica de datos de una tabla específica en una base de datos de Oracle sigue la jerarquía de: esquema -&gt; tabla.  
   
-Cuando todos los comandos en el archivo de script se ejecuta correctamente, la aplicación de consola SSMA sale y devuelve el control al usuario. El contenido de un archivo de script es más o menos estático con información sobre las variable contenidas en una [crear archivos de valores de Variable &#40; OracleToSQL &#41;](../../ssma/oracle/creating-variable-value-files-oracletosql.md) o, en una sección independiente dentro del archivo de script para los valores de las variables.  
+Cuando todos los comandos en el archivo de script se ejecuta correctamente, la aplicación de consola SSMA sale y devuelve el control al usuario. El contenido de un archivo de script es más o menos estático con información sobre las variable contenidas en una [crear archivos de valores de Variable &#40;OracleToSQL&#41; ](../../ssma/oracle/creating-variable-value-files-oracletosql.md) o, en una sección independiente dentro del archivo de script para los valores de las variables.  
   
 **Ejemplo:**  
   
@@ -397,14 +398,14 @@ Se proporcionan plantillas que consta de 3 archivos de script (para la ejecució
   
 Puede ejecutar las plantillas (archivos) después de cambiar los parámetros que aparecen en él para relevancia.  
   
-Lista completa de los comandos de script puede encontrarse en [ejecutando la consola SSMA &#40; OracleToSQL &#41;](../../ssma/oracle/executing-the-ssma-console-oracletosql.md)  
+Lista completa de los comandos de script puede encontrarse en [ejecutando la consola SSMA &#40;OracleToSQL&#41;](../../ssma/oracle/executing-the-ssma-console-oracletosql.md)  
   
 ## <a name="script-file-validation"></a>Validación del archivo de script  
 El usuario puede validar fácilmente su archivo de script en el archivo de definición de esquema **'O2SSConsoleScriptSchema.xsd'** disponible en la carpeta 'Esquemas'.  
   
 ## <a name="next-step"></a>Paso siguiente  
-El siguiente paso en la utilización de la consola es [crear archivos de valores Variable &#40; OracleToSQL &#41;](../../ssma/oracle/creating-variable-value-files-oracletosql.md).  
+El siguiente paso en la utilización de la consola es [crear archivos de valores Variable &#40;OracleToSQL&#41;](../../ssma/oracle/creating-variable-value-files-oracletosql.md).  
   
 ## <a name="see-also"></a>Vea también  
-[Crear archivos de valor de la Variable &#40; OracleToSQL &#41;](../../ssma/oracle/creating-variable-value-files-oracletosql.md)  
+[Crear archivos de valor de la Variable &#40;OracleToSQL&#41;](../../ssma/oracle/creating-variable-value-files-oracletosql.md)  
   

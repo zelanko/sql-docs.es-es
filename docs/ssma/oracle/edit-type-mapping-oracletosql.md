@@ -1,27 +1,28 @@
 ---
-title: "Editar la asignación de tipo (OracleToSQL) | Documentos de Microsoft"
-ms.prod: sql-non-specified
+title: Editar la asignación de tipo (OracleToSQL) | Documentos de Microsoft
+ms.prod: sql
 ms.prod_service: sql-tools
-ms.service: 
+ms.service: ''
 ms.component: ssma-oracle
-ms.custom: 
+ms.custom: ''
 ms.date: 01/19/2017
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: sql-ssma
-ms.tgt_pltfrm: 
+ms.technology:
+- sql-ssma
+ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: 7078b4ed-c779-4bf3-8db8-f9dcb3edd50f
-caps.latest.revision: "4"
+caps.latest.revision: 4
 author: Shamikg
 ms.author: Shamikg
 manager: v-thobro
 ms.workload: Inactive
-ms.openlocfilehash: b737d23608fa538019d55cc4825a29001238ee1e
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: c089d4f05ff66ea01d74f43538b886b82066f4e1
+ms.sourcegitcommit: a85a46312acf8b5a59a8a900310cf088369c4150
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="edit-type-mapping-oracletosql"></a>Editar la asignación de tipo (OracleToSQL)
 El **Editar asignación de tipo** cuadro de diálogo permite especificar cómo se asignan los tipos entre los objetos de base de datos de origen y de destino.  
@@ -34,7 +35,7 @@ Puede tener acceso a este cuadro de diálogo en varios lugares:
   
 Asignaciones de tipo específico de la tabla invalidación base de datos y las asignaciones de tipos de proyecto. Las asignaciones específicas de la base de datos invalidan las asignaciones de project.  
   
-## <a name="options"></a>.  
+## <a name="options"></a>Opciones  
 **Tipo de origen**  
 Seleccione el tipo de datos de origen se asignan a un [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] tipo de datos.  
   

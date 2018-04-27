@@ -1,7 +1,7 @@
 ---
 title: Sys.dm_os_wait_stats (Transact-SQL) | Documentos de Microsoft
 ms.custom: ''
-ms.date: 01/04/2018
+ms.date: 04/23/2018
 ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
 ms.service: ''
@@ -28,11 +28,11 @@ ms.author: mathoma
 manager: craigg
 ms.workload: Active
 monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
-ms.openlocfilehash: 55eaa65cc99bdc2e25e860be65570be6c8e32bdd
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
+ms.openlocfilehash: bea0f427b3a88179f41a928830787b043c245934
+ms.sourcegitcommit: a85a46312acf8b5a59a8a900310cf088369c4150
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="sysdmoswaitstats-transact-sql"></a>sys.dm_os_wait_stats (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -174,8 +174,8 @@ Este comando restablece todos los contadores en 0.
 |CONNECTION_ENDPOINT_LOCK |TBD <br /> **Se aplica a**: desde [!INCLUDE[ssSQL15_md](../../includes/sssql15-md.md)] hasta [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].| 
 |COUNTRECOVERYMGR |TBD <br /> **Se aplica a**: desde [!INCLUDE[ssSQL12](../../includes/sssql11-md.md)] hasta [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].| 
 |CREATE_DATINISERVICE |TBD <br /> **Se aplica a**: desde [!INCLUDE[ssSQL12](../../includes/sssql11-md.md)] hasta [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].| 
-|CXCONSUMER |Tiene lugar con planes de consulta paralelos cuando un subproceso consumidor espera un subproceso productor enviar filas. Esto es una parte normal de ejecución en paralelo. <br /> **Se aplica a**: [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)] CU3 y [!INCLUDE[ssSDS](../../includes/sssds-md.md)]|
-|CXPACKET |Se produce con planes de consulta paralelos al sincronizar el iterador de intercambios del procesador de consultas y cuando generar y consumir filas. Si la espera es excesiva y no se puede reducir ajustando la consulta (por ejemplo, agregando índices), considere la posibilidad de ajustar el umbral de costo para paralelismo o de reducir el grado de paralelismo.<br /> **Nota:** en [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)] CU3 y [!INCLUDE[ssSDS](../../includes/sssds-md.md)], CXPACKET solo hace referencia que se va a sincronizar el iterador de intercambios del procesador de consultas, así como generar filas para los subprocesos de consumidor. Subprocesos de consumidor se realiza un seguimiento por separado en el tipo de espera CXCONSUMER.| 
+|CXCONSUMER |Tiene lugar con planes de consulta paralelos cuando un subproceso consumidor espera un subproceso productor enviar filas. Esto es una parte normal de ejecución en paralelo. <br /> **Se aplica a**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (a partir de [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] SP2, [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)] CU3), [!INCLUDE[ssSDS](../../includes/sssds-md.md)]|
+|CXPACKET |Se produce con planes de consulta paralelos al sincronizar el iterador de intercambios del procesador de consultas y cuando generar y consumir filas. Si la espera es excesiva y no se puede reducir ajustando la consulta (por ejemplo, agregando índices), considere la posibilidad de ajustar el umbral de costo para paralelismo o de reducir el grado de paralelismo.<br /> **Nota:** a partir de [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] SP2, [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)] CU3, y [!INCLUDE[ssSDS](../../includes/sssds-md.md)], CXPACKET solo hace referencia que se va a sincronizar el iterador de intercambios del procesador de consultas, así como generar filas para los subprocesos de consumidor. Subprocesos de consumidor se realiza un seguimiento por separado en el tipo de espera CXCONSUMER.| 
 |CXROWSET_SYNC |Tiene lugar durante un examen de intervalo en paralelo.| 
 |DAC_INIT |Tiene lugar mientras se inicializa la conexión de administrador dedicada.| 
 |DBCC_SCALE_OUT_EXPR_CACHE |TBD <br /> **Se aplica a**: desde [!INCLUDE[ssSQL12](../../includes/sssql11-md.md)] hasta [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].| 

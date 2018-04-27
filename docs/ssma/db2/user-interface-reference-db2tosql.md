@@ -1,6 +1,6 @@
 ---
 title: Referencia de la interfaz de usuario (DB2ToSQL) | Documentos de Microsoft
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: sql-tools
 ms.service: ''
 ms.component: ssma-db2
@@ -21,11 +21,11 @@ author: Shamikg
 ms.author: Shamikg
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: cf237368144d4072ea1e6f3a3e130a0d0608650f
-ms.sourcegitcommit: 9351e8b7b68f599a95fb8e76930ab886db737e5f
+ms.openlocfilehash: 5bd7b694ba638e9e069c7f61bb7a84b6eeb54670
+ms.sourcegitcommit: a85a46312acf8b5a59a8a900310cf088369c4150
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/06/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="user-interface-reference-db2tosql"></a>Referencia de la interfaz de usuario (DB2ToSQL)
 Esta sección incluye temas de Ayuda [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] Migration Assistant (SSMA) para DB2.  
@@ -55,7 +55,7 @@ La tabla siguiente enumera los cuadros de diálogo SSMA:
 |[Configuración del proyecto&#40;objetos del sistema de carga&#41; &#40;DB2ToSQL&#41;](../../ssma/db2/project-settings-loading-system-objects-db2tosql.md)|Utilice la página cargar objetos de sistema de la **configuración del proyecto** convierte y se carga en el cuadro de diálogo para especificar qué sistema DB2 objetos SSMA [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)].|  
 |[Configuración del proyecto &#40;la asignación de tipo&#41; &#40;DB2ToSQL&#41;](../../ssma/db2/project-settings-type-mapping-db2tosql.md)|Use la página de asignación de tipo de la **configuración del proyecto** cuadro de diálogo para especificar las asignaciones de tipos de valor predeterminado para todas las bases de datos y objetos de base de datos de SSMA para proyecto de DB2.|  
 |[Actualizar desde la base de datos &#40;DB2ToSQL&#41;](../../ssma/db2/refresh-from-database-db2tosql.md)|Use la **actualizar desde la base de datos** cuadro de diálogo para seleccionar objetos para actualizar desde la base de datos DB2.|  
-|[Save Metadata &#40;DB2ToSQL&#41;](../../ssma/db2/save-metadata-db2tosql.md)|El **guardar metadatos** cuadro de diálogo aparece cuando se guarda un proyecto que le faltan metadatos.|  
+|[Guardar metadatos &#40;DB2ToSQL&#41;](../../ssma/db2/save-metadata-db2tosql.md)|El **guardar metadatos** cuadro de diálogo aparece cuando se guarda un proyecto que le faltan metadatos.|  
   
 ## <a name="see-also"></a>Vea también  
 [Introducción a SSMA para DB2 &#40;DB2ToSQL&#41;](../../ssma/db2/getting-started-with-ssma-for-db2-db2tosql.md)  

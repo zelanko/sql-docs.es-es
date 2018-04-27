@@ -1,6 +1,6 @@
 ---
 title: Configuración global (registro) (MySQLToSQL) | Documentos de Microsoft
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: sql-tools
 ms.service: ''
 ms.component: ssma-mysql
@@ -21,11 +21,11 @@ author: Shamikg
 ms.author: Shamikg
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 7c0014fc222c045a0a35766f1d20225c3bf68866
-ms.sourcegitcommit: 9351e8b7b68f599a95fb8e76930ab886db737e5f
+ms.openlocfilehash: 07b857c7fbd9d303eb100e6bf7df5785f1ec3f6c
+ms.sourcegitcommit: a85a46312acf8b5a59a8a900310cf088369c4150
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/06/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="global-settings-logging--mysqltosql"></a>Configuración global (registro) (MySQLToSQL)
 Use la **configuración Global** cuadro de diálogo para especificar la configuración del registro para SSMA. Por lo general, debería cambiar esta configuración solo cuando se trabaja con servicios de soporte técnico.  
@@ -39,12 +39,12 @@ Las siguientes opciones están disponibles en **nivel de mensajes**:
 |Opción|Description|  
 |----------|---------------|  
 |**[todas las categorías]**|Se usa para establecer el nivel de registro para todas las opciones siguientes.|  
-|**Collector**|Recopila los metadatos sobre el esquema de origen y lo guarda en el proyecto.|  
+|**Recopilador**|Recopila los metadatos sobre el esquema de origen y lo guarda en el proyecto.|  
 |**Convertidor**|Convierte las estructuras de los objetos de base de datos de origen, como tablas y procedimientos almacenados, en correspondiente [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] estructuras.|  
 |**Migrador de datos**|Migra los datos de la base de datos de origen en [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)].|  
-|**Formatter**|Subcomponente del convertidor que genera scripts para el [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] esquema.|  
+|**Formateador**|Subcomponente del convertidor que genera scripts para el [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] esquema.|  
 |**Interfaz gráfica de usuario**|Mensajes que aparecen cuando se utiliza la herramienta SSMA.|  
-|**Linker**|Resuelve los identificadores de SQL y se proporciona información a otros componentes.|  
+|**Vinculador**|Resuelve los identificadores de SQL y se proporciona información a otros componentes.|  
 |**Otro**|Todos los mensajes que no están en cualquier otra categoría.|  
 |**Analizador**|Analiza el esquema de origen.|  
 |**Sincronizador**|Carga del origen de objetos de base de datos en [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)].|  
@@ -57,7 +57,7 @@ Para cada opción en **nivel de mensajes**, configure uno de los siguientes nive
 |**Error irrecuperable**|Escribir solo mensajes de error grave en el registro.|  
 |**Error**|Escribir los errores y mensajes de error grave en el registro.|  
 |**Advertencia**|Escribir mensajes de error grave, error y de advertencia en el registro.|  
-|**Info**|Escribir informativos, advertencias, errores y mensajes de error grave en el registro.|  
+|**información de**|Escribir informativos, advertencias, errores y mensajes de error grave en el registro.|  
 |**Depuración**|Escribir todos los mensajes, incluidos los mensajes, en el registro de depuración.|  
   
 **Ruta de acceso de archivo de registro**  

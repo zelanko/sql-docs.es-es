@@ -1,9 +1,9 @@
 ---
-title: 'Tutorial: Usar el editor de Transact-SQL de las SQL Operations Studio (preview) para crear objetos de base de datos | Documentos de Microsoft'
-description: Este tutorial muestra las características claves de SQL Operations Studio (preview) que simplifican el uso de T-SQL.
+title: 'Tutorial: Usar el editor de Transact-SQL de las operaciones de SQL Studio (versión preliminar) para crear objetos de base de datos | Documentos de Microsoft'
+description: Este tutorial muestra las características claves de Studio de operaciones de SQL (vista previa) que simplifican el uso de T-SQL.
 ms.custom: tools|sos
 ms.date: 03/13/2018
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.reviewer: alayu; erickang; sstein
 ms.suite: sql
 ms.prod_service: sql-tools
@@ -14,11 +14,11 @@ author: erickangMSFT
 ms.author: erickang
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: db9cc8185742980b649f9fcc11eced5687201464
-ms.sourcegitcommit: 6b1618aa3b24bf6759b00a820e09c52c4996ca10
+ms.openlocfilehash: 5fec80de2d2e86871926a36c7d1601a217b1b737
+ms.sourcegitcommit: a85a46312acf8b5a59a8a900310cf088369c4150
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/15/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="tutorial-use-the-transact-sql-editor-to-create-database-objects---includename-sosincludesname-sos-shortmd"></a>Tutorial: Usar el editor de Transact-SQL para crear objetos de base de datos- [!INCLUDE[name-sos](../includes/name-sos-short.md)]
 
@@ -63,14 +63,14 @@ Este tutorial requiere SQL Server o base de datos de SQL Azure *TutorialDB*. Par
 
 ## <a name="use-t-sql-snippets-to-create-stored-procedures"></a>Usar fragmentos de código de T-SQL para crear procedimientos almacenados
 
-Las SQL Operations Studio proporciona muchos fragmentos de código de T-SQL integrados para crear rápidamente las instrucciones.
+Las operaciones de SQL Studio proporciona muchos fragmentos de código de T-SQL integrados para crear rápidamente las instrucciones.
 
 
 1. Abra un nuevo editor de consultas presionando **CTRL+n**.
 
 2. Tipo de **sql** en el editor, la flecha hacia abajo hasta **sqlCreateStoredProcedure**y presione la *ficha* clave (o *ENTRAR*) para cargar el crear almacenado fragmento de código de procedimiento.
 
-   ![snippet-list](./media/tutorial-sql-editor/snippet-list.png)
+   ![lista de fragmentos](./media/tutorial-sql-editor/snippet-list.png)
 
 3. El fragmento de código de procedimiento almacenado de crear tiene dos campos que se configure para su edición rápida, *StoredProcedureName* y *SchemaName*. Seleccione *StoredProcedureName*, menú contextual y seleccione **cambiar todas las apariciones**. Ahora escriba *getCustomer* y todos los *StoredProcedureName* cambian las entradas a *getCustomer*.
 
@@ -117,7 +117,7 @@ Ahora se crea el procedimiento almacenado y el **resultados** panel muestra el c
 
 ## <a name="use-peek-definition"></a>Usar definición de Peek 
 
-Las SQL Operations Studio proporciona la capacidad para ver una definición de objetos con la característica de definición de peek. Esta sección crea un segundo procedimiento almacenado y utiliza la definición de peek para ver cuáles son las columnas de una tabla para crear rápidamente el cuerpo del procedimiento almacenado.
+Las operaciones de SQL Studio proporciona la capacidad para ver una definición de objetos con la característica de definición de peek. Esta sección crea un segundo procedimiento almacenado y utiliza la definición de peek para ver cuáles son las columnas de una tabla para crear rápidamente el cuerpo del procedimiento almacenado.
 
 1. Abra un nuevo editor presionando **CTRL+n**. 
 

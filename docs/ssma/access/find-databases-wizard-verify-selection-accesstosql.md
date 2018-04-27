@@ -1,6 +1,6 @@
 ---
 title: Buscar bases de datos (Compruebe la selección) (AccessToSQL) | Documentos de Microsoft
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: sql-tools
 ms.service: ''
 ms.component: ssma-access
@@ -23,11 +23,11 @@ author: Shamikg
 ms.author: Shamikg
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 915cc8c97e05489fb72a7193ce764faf55ed0b62
-ms.sourcegitcommit: 9351e8b7b68f599a95fb8e76930ab886db737e5f
+ms.openlocfilehash: 18da6d0d9961d5dc0d4a4d8ad92bcd3705ed0665
+ms.sourcegitcommit: a85a46312acf8b5a59a8a900310cf088369c4150
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/06/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="find-databases-wizard-verify-selection-accesstosql"></a>Buscar bases de datos (Compruebe la selección) (AccessToSQL)
 La página de selección de comprobar del Asistente para buscar las bases de datos incluyen los archivos que se va a agregar a SSMA. Si la lista de archivos es incorrecta, haga clic en **volver** para modificar la lista. En caso contrario, haga clic en **finalizar** para agregar los archivos.  

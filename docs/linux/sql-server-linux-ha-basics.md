@@ -1,24 +1,24 @@
 ---
-title: "Conceptos básicos de la disponibilidad de SQL Server para las implementaciones de Linux | Documentos de Microsoft"
-description: 
+title: Conceptos básicos de la disponibilidad de SQL Server para las implementaciones de Linux | Documentos de Microsoft
+description: ''
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.date: 11/27/2017
 ms.topic: article
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine
-ms.service: 
-ms.component: 
+ms.service: ''
+ms.component: ''
 ms.suite: sql
 ms.custom: sql-linux
 ms.technology: database-engine
 ms.workload: On Demand
-ms.openlocfilehash: fd2079b0b0186192fc3b55e7a6ccefd25c1a46bc
-ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
+ms.openlocfilehash: e5dfaf9932664ec06d6c3554e42c2f7d3fe1bfff
+ms.sourcegitcommit: a85a46312acf8b5a59a8a900310cf088369c4150
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/15/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="sql-server-availability-basics-for-linux-deployments"></a>Conceptos básicos de la disponibilidad de SQL Server para las implementaciones de Linux
 
@@ -76,7 +76,7 @@ copia el archivo MyAGCert.cer en la carpeta especificada en el otro servidor. Te
 
 Samba, que es la variante de Linux de bloque de mensajes del servidor (SMB), también puede utilizarse para crear recursos compartidos de acceso a las rutas de acceso UNC, como `\\SERVERNAME\SHARE`. Para obtener más información acerca de cómo configurar Samba, consulte la información en los siguientes vínculos para cada distribución:
 -   [RHEL](https://access.redhat.com/documentation/en-US/Red_Hat_Enterprise_Linux/6/html/Managing_Confined_Services/chap-Managing_Confined_Services-Samba.html)
--   [SLES](https://www.suse.com/documentation/sles11/book_sle_admin/data/cha_samba.html)
+-   [SLES GRANDE](https://www.suse.com/documentation/sles11/book_sle_admin/data/cha_samba.html)
 -   [Ubuntu](https://help.ubuntu.com/community/Samba)
 
 También se pueden utilizar recursos compartidos SMB basado en Windows; Recursos compartidos de SMB no necesitan estar basada en Linux, siempre y cuando la parte de cliente de Samba está configurada correctamente en el servidor que hospeda Linux [!INCLUDE[ssnoversion-md](../includes/ssnoversion-md.md)] y el recurso compartido no tiene derechos de acceso. Para los miembros de un entorno mixto, esto sería una forma de aprovechar la infraestructura existente para Linux-based [!INCLUDE[ssnoversion-md](../includes/ssnoversion-md.md)] las implementaciones.
@@ -122,7 +122,7 @@ sudo firewall-cmd --permanent --add-service=high-availability
 
 **Documentación del firewall:**
 -   [RHEL](https://access.redhat.com/documentation/en-us/red_hat_enterprise_linux/7/html/high_availability_add-on_reference/s1-firewalls-haar)
--   [SLES](https://www.suse.com/documentation/sle-ha-12/singlehtml/book_sleha/book_sleha.html)
+-   [SLES GRANDE](https://www.suse.com/documentation/sle-ha-12/singlehtml/book_sleha/book_sleha.html)
 
 ### <a name="install-includessnoversion-mdincludesssnoversion-mdmd-packages-for-availability"></a>Instalar [!INCLUDE[ssnoversion-md](../includes/ssnoversion-md.md)] paquetes de disponibilidad
 En basado en Windows [!INCLUDE[ssnoversion-md](../includes/ssnoversion-md.md)] instalación, algunos componentes se instalan incluso en una instalación de motor básico, mientras que otros no lo están. En Linux, solo el [!INCLUDE[ssnoversion-md](../includes/ssnoversion-md.md)] motor se instala como parte del proceso de instalación. Todo lo demás es opcional. Para alta disponibilidad [!INCLUDE[ssnoversion-md](../includes/ssnoversion-md.md)] instancias en Linux, se deben instalar dos paquetes con [!INCLUDE[ssnoversion-md](../includes/ssnoversion-md.md)]: [!INCLUDE[ssnoversion-md](../includes/ssnoversion-md.md)] agente (*agente de server mssql*) y el paquete de alta disponibilidad (HA) ( *MSSQL-server-ha*). Mientras [!INCLUDE[ssnoversion-md](../includes/ssnoversion-md.md)] agente es técnicamente opcional, se [!INCLUDE[ssnoversion-md](../includes/ssnoversion-md.md)]del programador de trabajos y es obligatorio para el trasvase de registros, por lo que se recomienda la instalación. En las instalaciones basadas en Windows, [!INCLUDE[ssnoversion-md](../includes/ssnoversion-md.md)] agente no es opcional.
@@ -156,7 +156,7 @@ En Linux, mientras que cada distribución admitido tiene marcapasos disponibles,
 
 Para obtener documentación completa sobre marcapasos, incluida una explicación más detallada de todo el contenido es con información de referencia completa, para RHEL y SLES:
 -   [RHEL](https://access.redhat.com/documentation/en-US/Red_Hat_Enterprise_Linux/7/html/High_Availability_Add-On_Reference/ch-overview-HAAR.html)
--   [SLES](https://www.suse.com/documentation/sle_ha/book_sleha/data/book_sleha.html)
+-   [SLES GRANDE](https://www.suse.com/documentation/sle_ha/book_sleha/data/book_sleha.html)
 
 Ubuntu no tiene una guía para la disponibilidad.
 

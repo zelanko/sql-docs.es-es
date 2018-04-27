@@ -1,6 +1,6 @@
 ---
 title: Configuración (migración) (DB2ToSQL) del proyecto | Documentos de Microsoft
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: sql-tools
 ms.service: ''
 ms.component: ssma-db2
@@ -21,11 +21,11 @@ author: Shamikg
 ms.author: Shamikg
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 5d143857c00815a8d219b5add7b3281cf982723d
-ms.sourcegitcommit: 9351e8b7b68f599a95fb8e76930ab886db737e5f
+ms.openlocfilehash: 20c89f448c30a3a09fa3f4b2806e91d68ac7c479
+ms.sourcegitcommit: a85a46312acf8b5a59a8a900310cf088369c4150
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/06/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="project-settings-migration-db2tosql"></a>Configuración del proyecto (migración) (DB2ToSQL)
 La página de migración de la **configuración del proyecto** cuadro de diálogo contiene la configuración que permiten personalizar cómo SSMA migra datos de DB2 a [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)].  

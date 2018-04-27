@@ -2,7 +2,7 @@
 title: Referencia de la interfaz de usuario (SybaseToSQL) | Documentos de Microsoft
 ms.custom: ''
 ms.date: 01/19/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: sql-tools
 ms.service: ''
 ms.component: ssma-sybase
@@ -21,11 +21,11 @@ author: Shamikg
 ms.author: Shamikg
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 0587d8217cfb51535d0bc9d0e99d7f0384eab851
-ms.sourcegitcommit: 9351e8b7b68f599a95fb8e76930ab886db737e5f
+ms.openlocfilehash: f7fd4a94c0c08ddb2c66d0fc24f53b77c0ae6f4c
+ms.sourcegitcommit: a85a46312acf8b5a59a8a900310cf088369c4150
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/06/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="user-interface-reference-sybasetosql"></a>Referencia de la interfaz de usuario (SybaseToSQL)
 Esta sección incluye temas de Ayuda [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] Migration Assistant (SSMA) para Sybase.  
@@ -54,7 +54,7 @@ Esta sección incluye temas de Ayuda [!INCLUDE[ssNoVersion](../../includes/ssnov
 |[Configuración del proyecto &#40;sincronización&#41; &#40;SybaseToSQL&#41;](../../ssma/sybase/project-settings-synchronization-sybasetosql.md)|Use la página de sincronización de la **configuración del proyecto** cuadro de diálogo para personalizar cómo SSMA para Sybase crea o modifica migra objetos de base de datos en [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] o SQL Azure.|  
 |[Configuración del proyecto &#40;base de datos de SQL Azure &#41; &#40;SybaseToSQL&#41;](../../ssma/sybase/project-settings-azure-sql-db-sybasetosql.md)|Use la página de SQL Azure de la **configuración del proyecto** cuadro de diálogo para personalizar la configuración de conectividad para migrar los datos de Sybase a SQL Azure.|  
 |[Configuración del proyecto &#40;la asignación de tipo&#41; &#40;SybaseToSQL&#41;](../../ssma/sybase/project-settings-type-mapping-sybasetosql.md)|Use la página de asignación de tipo de la **configuración del proyecto** cuadro de diálogo para especificar las asignaciones de tipos de valor predeterminado para todas las bases de datos y objetos de base de datos de SSMA para Sybase proyecto.|  
-|[Save Metadata  &#40;SybaseToSQL&#41;](../../ssma/sybase/save-metadata-sybasetosql.md)|El **guardar metadatos** cuadro de diálogo aparece cuando se guarda un proyecto que le faltan metadatos.|  
+|[Guardar metadatos &#40;SybaseToSQL&#41;](../../ssma/sybase/save-metadata-sybasetosql.md)|El **guardar metadatos** cuadro de diálogo aparece cuando se guarda un proyecto que le faltan metadatos.|  
   
 ## <a name="see-also"></a>Vea también  
 [Introducción a SSMA para Sybase &#40;SybaseToSQL&#41;](../../ssma/sybase/getting-started-with-ssma-for-sybase-sybasetosql.md)  

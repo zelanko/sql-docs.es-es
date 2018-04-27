@@ -2,7 +2,7 @@
 title: Conectarse a la base de datos de SQL Azure (SybaseToSQL) | Documentos de Microsoft
 ms.custom: ''
 ms.date: 01/19/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: sql-tools
 ms.service: ''
 ms.component: ssma-sybase
@@ -21,11 +21,11 @@ author: Shamikg
 ms.author: Shamikg
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 823532a0107db9bcbc6781f25466fb135ffeeefe
-ms.sourcegitcommit: 9351e8b7b68f599a95fb8e76930ab886db737e5f
+ms.openlocfilehash: 93cb125bf4571697cb9c7a687b2dd2702301f86d
+ms.sourcegitcommit: a85a46312acf8b5a59a8a900310cf088369c4150
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/06/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="connecting-to-azure-sql-db-sybasetosql"></a>Conectarse a la base de datos de SQL Azure (SybaseToSQL)
 Para migrar las bases de datos de Sybase a base de datos de SQL Azure, debe conectarse a la instancia de destino de la base de datos de SQL Azure. Cuando se conecta, SSMA obtiene metadatos acerca de todas las bases de datos en la instancia de base de datos de SQL Azure y muestra los metadatos de la base de datos en el Explorador de metadatos de base de datos de SQL Azure. SSMA almacena la información de la instancia de base de datos de SQL de Azure están conectados a, pero no almacena las contraseñas.  

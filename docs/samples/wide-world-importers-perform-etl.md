@@ -1,7 +1,7 @@
 ---
 title: 'WideWorldImportersDW: flujo de trabajo ETL | Documentos de Microsoft'
-ms.prod: sql-non-specified
-ms.prod_service: sql-non-specified
+ms.prod: sql
+ms.prod_service: sql
 ms.service: ''
 ms.component: samples
 ms.technology:
@@ -17,11 +17,11 @@ ms.author: barbkess
 manager: craigg
 robots: noindex,nofollow
 ms.workload: Inactive
-ms.openlocfilehash: 5b475ee3299431327237efdeee723a88dd832784
-ms.sourcegitcommit: d6b1695c8cbc70279b7d85ec4dfb66a4271cdb10
+ms.openlocfilehash: 65001407ac1991fe80c8b20e64aa795585a2e6c9
+ms.sourcegitcommit: a85a46312acf8b5a59a8a900310cf088369c4150
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/08/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="wideworldimportersdw-etl-workflow"></a>Flujo de trabajo de WideWorldImportersDW ETL
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -55,13 +55,13 @@ Después de esto, una serie de tareas de flujo de datos carga cada dimensión y,
 
 La versión más reciente del ejemplo:
 
-[wide-world-importers-release](http://go.microsoft.com/fwlink/?LinkID=800630)
+[Wide world importers versión](http://go.microsoft.com/fwlink/?LinkID=800630)
 
 Descargue el archivo de paquete SSIS **ETL.ispac diario**.
 
 Código fuente para volver a crear la base de datos de ejemplo está disponible en la ubicación siguiente.
 
-[wide-world-importers](https://github.com/Microsoft/sql-server-samples/tree/master/samples/databases/wide-world-importers/wwi-integration-etl)
+[importadores de todo el mundo](https://github.com/Microsoft/sql-server-samples/tree/master/samples/databases/wide-world-importers/wwi-integration-etl)
 
 ## <a name="install"></a>Install
 

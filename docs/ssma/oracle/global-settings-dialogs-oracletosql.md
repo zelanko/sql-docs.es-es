@@ -1,34 +1,35 @@
 ---
-title: "Configuración global (cuadros de diálogo) (OracleToSQL) | Documentos de Microsoft"
-ms.prod: sql-non-specified
+title: Configuración global (cuadros de diálogo) (OracleToSQL) | Documentos de Microsoft
+ms.prod: sql
 ms.prod_service: sql-tools
-ms.service: 
+ms.service: ''
 ms.component: ssma-oracle
-ms.custom: 
+ms.custom: ''
 ms.date: 01/19/2017
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: sql-ssma
-ms.tgt_pltfrm: 
+ms.technology:
+- sql-ssma
+ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: 43989355-cebf-4d8b-ba3d-fa8546e70230
-caps.latest.revision: "3"
+caps.latest.revision: 3
 author: Shamikg
 ms.author: Shamikg
 manager: v-pelars
 ms.workload: Inactive
-ms.openlocfilehash: aa5f62dbde4489b17f2863fcbe1ebbf751e1198d
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: 4b227e7becb0ea85469406263cdd13eb17137e3a
+ms.sourcegitcommit: a85a46312acf8b5a59a8a900310cf088369c4150
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="global-settings-dialogs--oracletosql"></a>Configuración global (cuadros de diálogo) (OracleToSQL)
 Use la página de los cuadros de diálogo de la **configuración Global** cuadro de diálogo para especificar la acción predeterminada del usuario y la configuración de advertencia de SSMA.  
   
 Para acceder a la configuración del cuadro de diálogo en el **herramientas** menú, seleccione **configuración Global**, haga clic en **GUI** en la parte inferior del panel izquierdo y, a continuación, seleccione **cuadros de diálogo**.  
   
-## <a name="options"></a>.  
+## <a name="options"></a>Opciones  
 **Advertir antes de sobrescribir objetos**  
 Cuando SSMA convierte los objetos en SQL Server, es podrán que algunos objetos ya existan en los metadatos del proyecto SQL Server. Estos objetos pueden ya convertidos a o los objetos simplemente pueden tener el mismo nombre en el esquema de destino como objetos que se va a convertir.  
   

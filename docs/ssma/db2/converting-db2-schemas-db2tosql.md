@@ -1,6 +1,6 @@
 ---
 title: Convertir esquemas de DB2 (DB2ToSQL) | Documentos de Microsoft
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: sql-tools
 ms.service: ''
 ms.component: ssma-db2
@@ -21,11 +21,11 @@ author: Shamikg
 ms.author: Shamikg
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 2483c178999952ed552c78016aa1a4d4c994512d
-ms.sourcegitcommit: 9351e8b7b68f599a95fb8e76930ab886db737e5f
+ms.openlocfilehash: ef7efc485836b6b65b6f2236bd2a7682422b78e4
+ms.sourcegitcommit: a85a46312acf8b5a59a8a900310cf088369c4150
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/06/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="converting-db2-schemas-db2tosql"></a>Convertir esquemas de DB2 (DB2ToSQL)
 Después de haberse conectado a DB2, conectado a [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)], y el proyecto de conjunto y las opciones de asignación de datos, puede convertir los objetos de base de datos de DB2 a [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] objetos de base de datos.  

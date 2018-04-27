@@ -1,16 +1,16 @@
 ---
-title: "Especificar la prueba de nodo en un paso de expresión de ruta de acceso | Documentos de Microsoft"
-ms.custom: 
+title: Especificar la prueba de nodo en un paso de expresión de ruta de acceso | Documentos de Microsoft
+ms.custom: ''
 ms.date: 03/17/2017
-ms.prod: sql-non-specified
-ms.prod_service: sql-non-specified
-ms.service: 
+ms.prod: sql
+ms.prod_service: sql
+ms.service: ''
 ms.component: xquery
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 dev_langs:
 - XML
@@ -18,16 +18,16 @@ helpviewer_keywords:
 - axis step [XQuery]
 - node test [XQuery]
 ms.assetid: ffe27a4c-fdf3-4c66-94f1-7e955a36cadd
-caps.latest.revision: 
+caps.latest.revision: 24
 author: rothja
 ms.author: jroth
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 1fd2f4955285cec9ba0569ac39138088b8015df5
-ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
+ms.openlocfilehash: 3ff610c579553847dc82193cff9a28b474f0b433
+ms.sourcegitcommit: a85a46312acf8b5a59a8a900310cf088369c4150
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/09/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="path-expressions---specifying-node-test"></a>Expresiones de ruta de acceso: especificar la prueba de nodo
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -40,7 +40,7 @@ ms.lasthandoff: 02/09/2018
   
 -   [Cero o más calificadores de paso (opcionales)](../xquery/path-expressions-specifying-predicates.md)  
   
- Para obtener más información, vea [expresiones de ruta de acceso &#40; XQuery &#41; ](../xquery/path-expressions-xquery.md).  
+ Para obtener más información, consulte [expresiones de ruta de acceso &#40;XQuery&#41;](../xquery/path-expressions-xquery.md).  
   
  Una prueba de nodo es una condición y es el segundo componente del paso de eje en una expresión de ruta de acceso. Todos los nodos seleccionados por un paso deben satisfacer esta condición. Para la expresión de ruta de acceso `/child::ProductDescription`, la prueba de nodo es `ProductDescription`. Este paso solo recupera los nodos de elemento secundarios cuyo nombre sea ProductDescription.  
   

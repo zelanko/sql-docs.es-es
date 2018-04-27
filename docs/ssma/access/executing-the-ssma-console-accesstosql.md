@@ -1,6 +1,6 @@
 ---
 title: Ejecutar la consola SSMA (AccessToSQL) | Documentos de Microsoft
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: sql-tools
 ms.service: ''
 ms.component: ssma-access
@@ -21,11 +21,11 @@ author: Shamikg
 ms.author: Shamikg
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 4400ab959c61b23c3a98c817c03506631a4d61af
-ms.sourcegitcommit: 9351e8b7b68f599a95fb8e76930ab886db737e5f
+ms.openlocfilehash: 5f754441a32346c616e381f8d7f8929354589dcf
+ms.sourcegitcommit: a85a46312acf8b5a59a8a900310cf088369c4150
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/06/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="executing-the-ssma-console-accesstosql"></a>Ejecutar la consola SSMA (AccessToSQL)
 Microsoft le ofrece un potente conjunto de comandos del archivo de secuencia de comandos y opciones de línea de comandos para ejecutar y controlar las actividades SSMA. Las secciones posteriores detallan los mismos.  
@@ -41,23 +41,23 @@ Crear nueva-proyectos: crea un nuevo proyecto SSMA.
   
 -   `project-folder` indica la carpeta del proyecto obtener creado.  
   
--   `project-name` indica el nombre del proyecto. {string}  
+-   `project-name` indica el nombre del proyecto. {cadena}  
   
 -   `overwrite-if-exists`Atributo opcional indica si se debe sobrescribir un proyecto existente. {valor} booleano  
   
 -   `project-type` es un atributo opcional.  Las siguientes opciones están disponibles para el tipo de proyecto:  
   
-    -   sql-server-2005  
+    -   SQL-server-2005  
   
-    -   sql-server-2008  
+    -   SQL-server-2008  
   
-    -   sql-server-2012  
+    -   SQL-server-2012  
   
-    -   sql-server-2014  
+    -   SQL-server-2014  
   
-    -   sql-server-2016  
+    -   SQL-server-2016  
   
-    -   sql-azure  
+    -   SQL azure  
   
     Valor predeterminado es "sql-server-2008".  
   
@@ -86,9 +86,9 @@ proyecto de abrir: abre un proyecto existente.
   
 **Script**  
   
--   `project-folder` indica la carpeta del proyecto obtener creado. El comando produce un error si la carpeta especificada no existe.  {string}  
+-   `project-folder` indica la carpeta del proyecto obtener creado. El comando produce un error si la carpeta especificada no existe.  {cadena}  
   
--   `project-name` indica el nombre del proyecto. El comando produce un error si el proyecto especificado no existe.  {string}  
+-   `project-name` indica el nombre del proyecto. El comando produce un error si el proyecto especificado no existe.  {cadena}  
   
 **Ejemplo de sintaxis:**  
   
@@ -142,7 +142,7 @@ Para obtener más información sobre 'Crear archivos de Script', vea [crear arch
   
 **Command**  
   
-connect-source-database  
+datos de origen conectarse  
   
 -   Realiza la conexión a la base de datos de origen y carga los metadatos de nivel alto de la base de datos de origen, pero no todos los metadatos.  
   
@@ -181,7 +181,7 @@ o bien
 ```  
 **Command**  
   
-force-load-source/target-database  
+forzar carga-origen/destino-bases de datos  
   
 -   Carga los metadatos de origen.  
   
@@ -213,7 +213,7 @@ o bien
 ```  
 **Command**  
   
-reconnect-source-database  
+datos de origen volver a conectar  
   
 -   Vuelve a conectarse a la base de datos de origen pero no carga los metadatos a diferencia del comando de datos de origen de conexión.  
   
@@ -228,7 +228,7 @@ reconnect-source-database
 ```  
 **Command**  
   
-connect-target-database  
+datos de destino conectarse  
   
 -   Se conecta a la base de datos de SQL Server o SQL Azure de destino y carga los metadatos de nivel alto de la base de datos de destino pero no los metadatos por completo.  
   
@@ -245,7 +245,7 @@ Definición de servidor se recupera desde el atributo de nombre definido para ca
 ```  
 **Command**  
   
-reconnect-target-database  
+datos de destino volver a conectar  
   
 -   Vuelve a conectarse a la base de datos de destino pero no carga los metadatos, a diferencia del comando de conexión de datos de destino.  
   
@@ -264,7 +264,7 @@ Los comandos de informes generan informes sobre el rendimiento de diversas activ
   
 **Command**  
   
-generate-assessment-report  
+informe de evaluación generar  
   
 -   Genera informes de evaluación de la base de datos de origen.  
   
@@ -339,7 +339,7 @@ La salida de consola predeterminada para los comandos de migración es informe d
   
 **Command**  
   
-convert-schema  
+convertir esquema  
   
 -   Realiza la conversión de esquema de origen al esquema de destino.  
   
@@ -557,9 +557,9 @@ destino sincronizar
   
 3.  `on-error:` Especifica si se debe especificar los errores de sincronización como advertencias o errores. Opciones disponibles en el error:  
   
-    -   report-total-as-warning  
+    -   total de informes como advertencia  
   
-    -   report-each-as-warning  
+    -   informes-each-como-advertencia  
   
     -   Error-script  
   
@@ -622,9 +622,9 @@ Requiere uno o varios nodos de la metabase como parámetro de línea de comandos
   
 3.  `on-error:` Especifica si se debe especificar la actualización de errores como advertencias o errores. Opciones disponibles en el error:  
   
-    -   report-total-as-warning  
+    -   total de informes como advertencia  
   
-    -   report-each-as-warning  
+    -   informes-each-como-advertencia  
   
     -   Error-script  
   
@@ -671,7 +671,7 @@ La generación del Script comandos ayudan a guardar la salida de la consola en u
   
 **Command**  
   
-save-as-script  
+Guardar como secuencia de comandos  
   
 Usado para guardar las secuencias de comandos de los objetos en un archivo que se ha mencionado cuando metabase = destino, ésta es una alternativa al comando de sincronización que se obtendrá las secuencias de comandos y ejecutar la misma base de datos de destino.  
   

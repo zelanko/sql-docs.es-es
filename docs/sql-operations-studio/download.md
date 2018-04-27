@@ -1,9 +1,9 @@
-﻿---
+---
 title: Descargue e instale Microsoft SQL operaciones Studio (versión preliminar) | Documentos de Microsoft
 description: Descargue e instale Microsoft SQL operaciones Studio (versión preliminar) para Windows, Mac OS o Linux
 ms.custom: tools|sos
-ms.date: 03/28/2018
-ms.prod: sql-non-specified
+ms.date: 04/25/2018
+ms.prod: sql
 ms.reviewer: alayu; erickang; sstein
 ms.suite: sql
 ms.prod_service: sql-tools
@@ -14,23 +14,23 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 836d34cdb019b7defd16736b21485a32474a8757
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
+ms.openlocfilehash: 7df740f3c50e8f4db5324e37908ec11ea83aed15
+ms.sourcegitcommit: a85a46312acf8b5a59a8a900310cf088369c4150
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="download-and-install-sql-operations-studio-preview"></a>Descargue e instale SQL Operations Studio (versión preliminar)
 
 [!INCLUDE[name-sos](../includes/name-sos.md)] se ejecuta en Windows, Mac OS y Linux.
 
-Descargue e instale la versión más reciente, la *marzo Public Preview*:
+Descargue e instale la versión más reciente, la *abril Public Preview*:
 
 |Plataforma|Descargar|Fecha de lanzamiento| Versión |
 |:---|:---|:---|:---|
-|Windows|[Instalador](https://go.microsoft.com/fwlink/?linkid=870837)<br>[.zip](https://go.microsoft.com/fwlink/?linkid=870838)|28 de marzo de 2018 |0.27.3|
-|MacOS|[.zip](https://go.microsoft.com/fwlink/?linkid=870839)|28 de marzo de 2018 |0.27.3|
-|Linux|[.DEB](https://go.microsoft.com/fwlink/?linkid=870842)<br>[.rpm](https://go.microsoft.com/fwlink/?linkid=870841)<br>[. tar.gz](https://go.microsoft.com/fwlink/?linkid=870840)|28 de marzo de 2018 |0.27.3|
+|Windows|[Instalador](https://go.microsoft.com/fwlink/?linkid=872717)<br>[.zip](https://go.microsoft.com/fwlink/?linkid=872718)|25 de abril de 2018 |0.28.6|
+|MacOS|[.zip](https://go.microsoft.com/fwlink/?linkid=872719)|25 de abril de 2018 |0.28.6|
+|Linux|[.DEB](https://go.microsoft.com/fwlink/?linkid=872722)<br>[.rpm](https://go.microsoft.com/fwlink/?linkid=872721)<br>[. tar.gz](https://go.microsoft.com/fwlink/?linkid=872720)|25 de abril de 2018 |0.28.6|
 
 Para obtener más información acerca de la versión más reciente, consulte el [notas de la versión](release-notes.md).
 
@@ -40,20 +40,20 @@ Esta versión de [!INCLUDE[name-sos](../includes/name-sos-short.md)] incluye una
 
 **Instalador**
 
-1. Descargue y ejecute la [ [!INCLUDE[name-sos](../includes/name-sos-short.md)] instalador para Windows](https://go.microsoft.com/fwlink/?linkid=870837).
+1. Descargue y ejecute la [ [!INCLUDE[name-sos](../includes/name-sos-short.md)] instalador para Windows](https://go.microsoft.com/fwlink/?linkid=872717).
 1. Iniciar el [!INCLUDE[name-sos-short](../includes/name-sos-short.md)] aplicación.
 
 
 **archivo .zip**
 
-1. Descargar [ [!INCLUDE[name-sos](../includes/name-sos-short.md)] .zip para Windows](https://go.microsoft.com/fwlink/?linkid=870838).
+1. Descargar [ [!INCLUDE[name-sos](../includes/name-sos-short.md)] .zip para Windows](https://go.microsoft.com/fwlink/?linkid=872718).
 2. Busque el archivo descargado y extráigalo.
 3. Ejecutar `\sqlops-windows\sqlops.exe`
 
 
 ## <a name="get-sql-operations-studio-preview-for-macos"></a>Obtener SQL Operations Studio (versión preliminar) para macOS
 
-1. Descargar [ [!INCLUDE[name-sos](../includes/name-sos-short.md)] para macOS](https://go.microsoft.com/fwlink/?linkid=870839).
+1. Descargar [ [!INCLUDE[name-sos](../includes/name-sos-short.md)] para macOS](https://go.microsoft.com/fwlink/?linkid=872719).
 2. Para expandir el contenido del archivo zip, haga doble clic en él.
 3. Para realizar [!INCLUDE[name-sos](../includes/name-sos-short.md)] disponibles en la *Launchpad*, arrastre *sqlops.app* a la *aplicaciones* carpeta.
 
@@ -61,9 +61,9 @@ Esta versión de [!INCLUDE[name-sos](../includes/name-sos-short.md)] incluye una
 ## <a name="get-sql-operations-studio-preview-for-linux"></a>Obtener SQL Operations Studio (versión preliminar) para Linux
 
 1. Descargar [!INCLUDE[name-sos](../includes/name-sos-short.md)] para Linux mediante uno de los instaladores o el archivo tar.gz:
-    - [.DEB](https://go.microsoft.com/fwlink/?linkid=870842)
-    - [.rpm](https://go.microsoft.com/fwlink/?linkid=870841)
-    - [. tar.gz](https://go.microsoft.com/fwlink/?linkid=870840)
+    - [.DEB](https://go.microsoft.com/fwlink/?linkid=872722)
+    - [.rpm](https://go.microsoft.com/fwlink/?linkid=872721)
+    - [. tar.gz](https://go.microsoft.com/fwlink/?linkid=872720)
 1. Para extraer el archivo e inicie [!INCLUDE[name-sos](../includes/name-sos-short.md)], abra una nueva ventana de Terminal y escriba los siguientes comandos:
 
    **Instalación de Debian:**

@@ -2,7 +2,7 @@
 title: Propiedades de agente SQL Server (pestaña iniciar sesión) | Documentos de Microsoft
 ms.custom: ''
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: sql-tools
 ms.service: ''
 ms.component: configuration-manager
@@ -18,15 +18,15 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: f74928db1958fbb8ec607bac83b45612a6129e46
-ms.sourcegitcommit: c556eaf60a49af7025db35b7aa14beb76a8158c5
+ms.openlocfilehash: b312d870902f9a6b997da325a819b5a8caccc3e4
+ms.sourcegitcommit: a85a46312acf8b5a59a8a900310cf088369c4150
 ms.translationtype: MTE
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/03/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="sql-server-agent-properties-log-on-tab"></a>Propiedades de Agente SQL Server (pestaña Iniciar sesión)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
-Utilice la pestaña **Iniciar sesión** del cuadro de diálogo **Propiedades de Agente SQL Server** para especificar la cuenta que utiliza el servicio Agente [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , así como para iniciar y detener el servicio. Cambiar la contraseña de una cuenta surte efecto inmediato, sin necesidad de reiniciar el servicio.  
+  Utilice la pestaña **Iniciar sesión** del cuadro de diálogo **Propiedades de Agente SQL Server** para especificar la cuenta que utiliza el servicio Agente [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , así como para iniciar y detener el servicio. Cambiar la contraseña de una cuenta surte efecto inmediato, sin necesidad de reiniciar el servicio.  
   
 > [!NOTE]  
 >  Cuando cambie el nombre de cuenta utilizado por un servicio en una instancia en clúster, la nueva cuenta debe formar parte del grupo de dominios que haya especificado durante la instalación para el servicio modificado, o bien debe tener permiso para agregar miembros a ese grupo. Si no tiene permisos para modificar la pertenencia al grupo, póngase en contacto con el administrador del dominio.  

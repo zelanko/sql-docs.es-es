@@ -1,28 +1,29 @@
 ---
 title: Registro de cambios para SQL Server Data Tools (SSDT) | Microsoft Docs
-ms.custom: 
-ms.date: 02/09/2018
+ms.custom: ''
+ms.date: 04/10/2018
 ms.prod: sql-non-specified
 ms.prod_service: sql-tools
-ms.service: 
+ms.service: ''
 ms.component: ssdt
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - tools-ssdt
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: b071f8b8-c8e5-44e0-bbb6-04804dd1863a
-caps.latest.revision: 
+caps.latest.revision: 31
 author: stevestein
 ms.author: sstein
 manager: craigg
 ms.workload: Active
-ms.openlocfilehash: cd69c5ff505f60aacd131976a5f42edef02a4d4d
-ms.sourcegitcommit: 99102cdc867a7bdc0ff45e8b9ee72d0daade1fd3
+monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
+ms.openlocfilehash: fc65a1f3cc8cd112309851665c847c76ca691393
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/11/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="changelog-for-sql-server-data-tools-ssdt"></a>Registro de cambios para SQL Server Data Tools (SSDT)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -30,26 +31,57 @@ Este registro de cambios hace referencia a [SQL Server Data Tools (SSDT)](downlo
   
 Para ver entradas detalladas sobre las novedades y los cambios, consulte [el blog del equipo de SSDT](https://blogs.msdn.microsoft.com/ssdt/).
 
+
+
+## <a name="ssdt-for-visual-studio-2017-1560"></a>SSDT para Visual Studio 2017 (15.6.0)
+Número de compilación: 14.0.16162.0  
+Fecha de lanzamiento: 10 de abril de 2018
+  
+### <a name="whats-new"></a>Novedades
+
+**SSIS:**
+
+1.  Se corrige un problema por el que la tarea de procesamiento de sistema autónomo (AS) no registra ningún paso de procesamiento al establecer SQLServer2016 o SQLServer2017 como destino.
+2.  Se corrige un problema por el que se produce una infracción de acceso al abrir dtsx con nombres de tareas muy largos y no escrito en inglés en SSDT.
+3.  Se corrige un problema por el que, a veces, la lista de variables de ScriptTask desaparece de la interfaz de usuario de la tarea.
+4.  Se corrige un problema por el que se genera un error al agregar una copia del paquete existente si la ubicación del paquete es SQL Server.
+5.  Se corrige un problema por el que el foco se bloquea al acceder al cuadro combinado en algunos cuadros de diálogo del editor.
+6.  Se corrige un problema por el que el fondo no cambia junto al tema de VS.
+7.  Se corrige un problema por el que la etiqueta de anotación y carga es invisible en el tema oscuro.
+8.  Se corrige un problema por el que la propiedad de estado no se define correctamente para los elementos eliminados del cuadro de herramientas de SSIS.
+9.  Se corrige un problema por el que nunca se puede ejecutar WebServiceTask.
+10. Se corrige un problema por el que la implementación del paquete genera un error si la cadena de conexión está establecida como variable con una expresión que depende de los parámetros del proyecto.
+
+**Instalador:**
+
+1.  Se agrega el vínculo "Programa para la mejora de la experiencia del usuario de SQL Server Data Tools" en el aviso de privacidad.
+2.  Se corrige un problema por el que la ventana instalador de VS aparece como elemento emergente al seleccionar la opción "Instalar la nueva instancia de SQL Server Data Tools para Visual Studio 2017".
+
+### <a name="known-issues"></a>Problemas conocidos:
+1.  La tarea Ejecutar paquete de SSIS no admite la depuración cuando ExecuteOutofProcess está establecido en True. Este problema solo se aplica a la depuración. Las funciones de guardado, implementación y ejecución mediante DTExec.exe o el catálogo de SSIS no se verán afectadas.
+
+
+
 ## <a name="ssdt-for-visual-studio-2017-1552"></a>SSDT para Visual Studio 2017 (15.5.2)
 Número de compilación: 14.0.16156.0
   
 ### <a name="whats-new"></a>Novedades
 
 **SSIS**
-1.  Se corrige un problema que se produce al migrar proyectos de SSIS 2008 cuando SSAS y SSIS están instalados en la misma instancia de VS 2017.
+1.  Se corrige un problema por el que la migración de proyectos de SSIS 2008 genera un error si SSAS y SSIS están instalados en la misma instancia de VS 2017.
 2.  Se corrige un problema que impide que los proyectos de Rdlc se compilen cuando el diseñador de informes Rdlc y SSIS están instalados en la misma instancia de VS 2017.
 3.  Se corrige un problema que impide que se actualice el color de la anotación.
 4.  Se corrige un problema por el que algunas cadenas en el editor del administrador de conexiones de Hadoop se truncan en otros idiomas.
 5.  Se corrige un problema por el que algunas cadenas se truncan en el editor del administrador de conexiones de OData.
 6.  Se corrige un problema por el que algunas cadenas se truncan en la ventana del Asistente para importar proyectos de Integration Services.
-7.  Se corrige un problema del título en la ventana de información del cuadro de herramientas de SSIS.
+7.  Se corrige un problema en el título de la ventana de información del cuadro de herramientas de SSIS.
 8.  Se corrige un problema por el que algunas cadenas se truncan en la ventana del Asistente para implementación de Integration Services. 
 
 **Instalador**
 - Se corrige un problema por el que a veces se produce el error "No se puede encontrar el archivo especificado (0x80070002)" al descargar la carga útil.  
 
 ### <a name="known-issues"></a>Problemas conocidos
-- La tarea Ejecutar paquete de SSIS no admite la depuración cuando ExecuteOutofProcess está establecido en True. Este problema solo se aplica a la depuración. Las funciones de guardado, implementación y ejecución mediante DTExec.exe o el catálogo de SSIS no se verán afectadas.
+- La tarea Ejecutar paquete de SSIS no admite la depuración si *ExecuteOutofProcess* está establecido en *True*. Este problema solo se aplica a la depuración. Las funciones de guardado, implementación y ejecución mediante DTExec.exe o el catálogo de SSIS no se verán afectadas.
 
 
 

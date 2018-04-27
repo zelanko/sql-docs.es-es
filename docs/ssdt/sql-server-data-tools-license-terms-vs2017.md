@@ -1,27 +1,29 @@
 ---
-title: "Términos de licencia de SQL Server Data Tools y Visual Studio 2017| Microsoft Docs"
-ms.custom: 
+title: Términos de licencia de SQL Server Data Tools y Visual Studio 2017| Microsoft Docs
+ms.custom: ''
 ms.date: 08/04/2017
 ms.prod: sql-non-specified
 ms.prod_service: sql-tools
-ms.service: 
+ms.service: ''
 ms.component: ssdt
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: tools-ssdt
-ms.tgt_pltfrm: 
+ms.technology:
+- tools-ssdt
+ms.tgt_pltfrm: ''
 ms.topic: article
-ms.assetid: 
-caps.latest.revision: "5"
+ms.assetid: ''
+caps.latest.revision: 5
 author: stevestein
 ms.author: sstein
 manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 2b6ea2fd9010dda3032eedef00f05f649dd5f3d1
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
+ms.openlocfilehash: 077a076404df690475226b42f34fd2ba4e8287de
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="sql-server-data-tools---license-terms"></a>Términos de licencia de SQL Server Data Tools
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -85,7 +87,7 @@ de Microsoft para este software, a menos que haya otros términos que acompañen
 &nbsp;&nbsp;**a.    Elemento de informe de mapa para SQL Server Reporting Services.** El software puede incluir características que recuperan contenido como mapas, imágenes y otros datos a través de la interfaz de programación de aplicaciones de Bing Maps (o su marca sucesora) (las “API de Bing Maps”). Estas características se han diseñado para crear informes que muestren datos en la parte superior de los mapas, vistas aéreas e imágenes híbridas. Si se incluyeran estas características, podrá utilizarlas para crear y ver documentos dinámicos o estáticos. Esto se efectuará únicamente en combinación y a través de métodos y medios de acceso integrados en el software. No puede copiar, almacenar, archivar o crear de ningún otro modo una base de datos del contenido disponible mediante las API de Bing Maps. No podrá utilizar lo que se detalla a continuación para fin alguno, aunque se encuentre disponible a través de las API de Bing Maps:  
 * API de Mapas de Bing para proporcionar orientación/rutas basadas en sensor, o  
 * ni los datos del estado del tráfico ni la vista de pájaro (o cualquier metadato asociado).  
-El uso de Mapas de Bing también está regido por los términos de uso de Mapas de Bing para usuarios finales, disponibles en http://go.microsoft.com/?linkid=9710837 y la declaración de privacidad de Mapas de Bing disponible en http://go.microsoft.com/fwlink/?LinkID=248686.  
+El uso de Mapas de Bing también se rige por los términos de uso de Mapas de Bing para usuarios finales, disponibles en http://go.microsoft.com/?linkid=9710837, y la declaración de privacidad de Mapas de Bing, disponible en http://go.microsoft.com/fwlink/?LinkID=248686.  
   
 &nbsp;&nbsp;**b.**  Este software está diseñado para permitir a los usuarios de SQL Server Integration Services (SSIS) (a) mover datos entre almacenes de datos locales y Microsoft Online Services y (b) desencadenar determinadas acciones de Microsoft Online Services. Para ello, el software usa protocolos de Internet a fin de (i) enviar datos a estos servicios, incluidos sus propios datos tal como usted indique y datos sobre la configuración del software, y (ii) solicitar datos de estos servicios, incluidos sus propios datos tal como usted indique y datos sobre la naturaleza y la configuración de Microsoft Online Services. Una vez que haya configurado el software para comunicarse con estos servicios, no podrá recibir avisos independientes cuando el software se conecte a estos servicios.  
   

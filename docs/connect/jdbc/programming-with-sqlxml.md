@@ -1,27 +1,28 @@
 ---
 title: Programar con SQLXML | Documentos de Microsoft
-ms.custom: 
+ms.custom: ''
 ms.date: 01/19/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: drivers
-ms.service: 
+ms.service: ''
 ms.component: jdbc
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: drivers
-ms.tgt_pltfrm: 
+ms.technology:
+- drivers
+ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: 4d2cc57c-7293-4d92-b8b1-525e2b35f591
-caps.latest.revision: "23"
+caps.latest.revision: 23
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 7b69bbf94ea08bbd7452cc577cee896777947d74
-ms.sourcegitcommit: 2713f8e7b504101f9298a0706bacd84bf2eaa174
-ms.translationtype: MT
+ms.openlocfilehash: 91d2b0b1048b6385bcae2b3c9aa523962a4c1d22
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
+ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/18/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="programming-with-sqlxml"></a>Programar con SQLXML
 [!INCLUDE[Driver_JDBC_Download](../../includes/driver_jdbc_download.md)]
@@ -56,14 +57,14 @@ ms.lasthandoff: 11/18/2017
   
 |Nombre de método|Objeto SQLXML de captador<br /><br /> (lectura)|Objeto SQLXML establecedor<br /><br /> (escritura)|  
 |-----------------|-------------------------------------------|-------------------------------------------|  
-|CallableStatement.setSQLXML()|No se admite|Admitida|  
-|CallableStatement.setObject()|No se admite|Admitida|  
-|PreparedStatement.setSQLXML()|No se admite|Admitida|  
-|PreparedStatement.setObject()|No se admite|Admitida|  
-|ResultSet.updateSQLXML()|No se admite|Admitida|  
-|ResultSet.updateObject()|No se admite|Admitida|  
-|ResultSet.getSQLXML()|Admitida|No se admite|  
-|CallableStatement.getSQLXML()|Admitida|No se admite|  
+|CallableStatement.setSQLXML()|No se admite|Compatible|  
+|CallableStatement.setObject()|No se admite|Compatible|  
+|PreparedStatement.setSQLXML()|No se admite|Compatible|  
+|PreparedStatement.setObject()|No se admite|Compatible|  
+|ResultSet.updateSQLXML()|No se admite|Compatible|  
+|ResultSet.updateObject()|No se admite|Compatible|  
+|ResultSet.getSQLXML()|Compatible|No se admite|  
+|CallableStatement.getSQLXML()|Compatible|No se admite|  
   
  Tal como se muestra en el área superior, los métodos SQLXML establecedor no funcionarán con los objetos SQLXML de lectura; similarmente, los métodos captadores no funcionarán con los objetos SQLXML de escritura.  
   

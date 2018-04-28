@@ -3,7 +3,7 @@ title: Creación de aplicaciones con el controlador OLE DB para SQL Server | Doc
 description: Generar aplicaciones con el controlador OLE DB para SQL Server
 ms.custom: ''
 ms.date: 03/26/2018
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
 ms.service: ''
 ms.component: oledb|applications
@@ -22,14 +22,16 @@ author: pmasl
 ms.author: Pedro.Lopes
 manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 4bc33a78bc0f2782a7f41ff6242bc3fdcc3a7525
-ms.sourcegitcommit: 9351e8b7b68f599a95fb8e76930ab886db737e5f
-ms.translationtype: MT
+ms.openlocfilehash: b64ce2fbf1be2537ddf5a2f5c3ed91b63cd9431b
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
+ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/06/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="building-applications-with-ole-db-driver-for-sql-server"></a>Generar aplicaciones con el controlador OLE DB para SQL Server
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
+
+[!INCLUDE[Driver_OLEDB_Download](../../../includes/driver_oledb_download.md)]
 
   Al desarrollar una aplicación que utiliza el controlador OLE DB para la biblioteca de SQL Server, hay una serie de problemas que entran en juego. Los temas de esta sección tratan muchos de estos problemas, incluyendo la actualización de MDAC a controlador de OLE DB para SQL Server, mediante el controlador OLE DB para SQL Server encabezado y archivos de biblioteca y una visión general de las distintas cadenas de conexión que puede usarse con el controlador OLE DB para S SQL Server.  
 
@@ -59,5 +61,5 @@ ms.lasthandoff: 04/06/2018
  Describe cómo los distintos componentes de acceso a datos pueden utilizarse con diferentes versiones del controlador de OLE DB para SQL Server.  
 
 ## <a name="see-also"></a>Vea también  
- [Controlador OLE DB para la programación de SQL Server](../../oledb/oledb-driver-for-sql-server-programming.md)     
+ [Controlador OLE DB para SQL Server](../../oledb/oledb-driver-for-sql-server.md)     
  [Temas "Cómo..." de OLE DB](../../oledb/ole-db-how-to/ole-db-how-to-topics.md)  

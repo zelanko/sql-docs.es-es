@@ -1,30 +1,33 @@
 ---
-title: "Método getObject (java.lang.String, java.util.Map) | Documentos de Microsoft"
-ms.custom: 
+title: Método getObject (java.lang.String, java.util.Map) | Documentos de Microsoft
+ms.custom: ''
 ms.date: 01/19/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: drivers
-ms.service: 
+ms.service: ''
 ms.component: jdbc
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: drivers
-ms.tgt_pltfrm: 
+ms.technology:
+- drivers
+ms.tgt_pltfrm: ''
 ms.topic: article
-apiname: SQLServerCallableStatement.getObject (java.lang.String, Java.util.Map)
-apilocation: sqljdbc.jar
+apiname:
+- SQLServerCallableStatement.getObject (java.lang.String, Java.util.Map)
+apilocation:
+- sqljdbc.jar
 apitype: Assembly
 ms.assetid: e174eb81-d569-479e-a171-365cd6d44b6a
-caps.latest.revision: "16"
+caps.latest.revision: 16
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 8faffb28aae83859a03f29b5ed0e728d4ac7220a
-ms.sourcegitcommit: 2713f8e7b504101f9298a0706bacd84bf2eaa174
-ms.translationtype: MT
+ms.openlocfilehash: 4bc3b111bd7b75a842ff1d59b43d2ba3107cdb86
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
+ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/18/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="getobject-method-javalangstring-javautilmap"></a>Método getObject (java.lang.String, java.util.Map)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -47,7 +50,7 @@ public java.lang.Object getObject(java.lang.String sCol,
   
  A **cadena** que contiene el nombre del parámetro.  
   
- *m*  
+ *M*  
   
  Un objeto de mapa.  
   
@@ -75,7 +78,7 @@ public java.lang.Object getObject(java.lang.String sCol,
 -   Un valor de tipo **datetimeoffset** se devolverá como un objeto microsoft.sql.DateTimeOffset.  
   
 ## <a name="see-also"></a>Vea también  
- [Método getObject &#40; SQLServerCallableStatement &#41;](../../../connect/jdbc/reference/getobject-method-sqlservercallablestatement.md)   
+ [Método getObject &#40;SQLServerCallableStatement&#41;](../../../connect/jdbc/reference/getobject-method-sqlservercallablestatement.md)   
  [Miembros de SQLServerCallableStatement](../../../connect/jdbc/reference/sqlservercallablestatement-members.md)   
  [Clase SQLServerCallableStatement](../../../connect/jdbc/reference/sqlservercallablestatement-class.md)  
   

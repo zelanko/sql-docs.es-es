@@ -1,30 +1,33 @@
 ---
-title: "Método getTables (SQLServerDatabaseMetaData) | Documentos de Microsoft"
-ms.custom: 
+title: Método getTables (SQLServerDatabaseMetaData) | Documentos de Microsoft
+ms.custom: ''
 ms.date: 01/19/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: drivers
-ms.service: 
+ms.service: ''
 ms.component: jdbc
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: drivers
-ms.tgt_pltfrm: 
+ms.technology:
+- drivers
+ms.tgt_pltfrm: ''
 ms.topic: article
-apiname: SQLServerDatabaseMetaData.getTables
-apilocation: sqljdbc.jar
+apiname:
+- SQLServerDatabaseMetaData.getTables
+apilocation:
+- sqljdbc.jar
 apitype: Assembly
 ms.assetid: a7514673-3457-4541-9560-28a8284ad9e3
-caps.latest.revision: "15"
+caps.latest.revision: 15
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: c469b56d30e93ba96378df87490be5cea83d8c2a
-ms.sourcegitcommit: 2713f8e7b504101f9298a0706bacd84bf2eaa174
-ms.translationtype: MT
+ms.openlocfilehash: 2b020065a3285cb93f3230e75a929b85f1c9a3ff
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
+ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/18/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="gettables-method-sqlserverdatabasemetadata"></a>Método getTables (SQLServerDatabaseMetaData)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -42,11 +45,11 @@ public java.sql.ResultSet getTables(java.lang.String catalog,
 ```  
   
 #### <a name="parameters"></a>Parámetros  
- *catálogo*  
+ *catalog*  
   
  A **cadena** que contiene el nombre del catálogo. Si se proporciona un valor NULL en este parámetro, indicará que no es necesario utilizar el nombre de catálogo.  
   
- *esquema*  
+ *schema*  
   
  A **cadena** que contiene el patrón de nombre de esquema. Si se proporciona un valor NULL en este parámetro, indicará que no es necesario utilizar el nombre de esquema.  
   
@@ -54,7 +57,7 @@ public java.sql.ResultSet getTables(java.lang.String catalog,
   
  A **cadena** que contiene el patrón de nombre de tabla.  
   
- *tipos de*  
+ *Tipos de*  
   
  Una matriz de cadenas que contiene los tipos de tablas que se van a incluir. El valor NULL indica que todos los tipos de tablas deberían estar incluidos.  
   
@@ -75,7 +78,7 @@ public java.sql.ResultSet getTables(java.lang.String catalog,
 |TABLE_SCHEM|**String**|El nombre de esquema de la tabla.|  
 |TABLE_NAME|**String**|El nombre de la tabla.|  
 |TABLE_TYPE|**String**|Tipo de la tabla.|  
-|REMARKS|**String**|La descripción de la tabla.<br /><br /> **Nota:** [!INCLUDE[ssNoVersion](../../../includes/ssnoversion_md.md)] no devuelve un valor para esta columna.|  
+|REMARKS|**String**|La descripción de la tabla.<br /><br /> **Nota:** [!INCLUDE[ssNoVersion](../../../includes/ssnoversion_md.md)] no devuelve un valor para esta columna.  |  
 |TYPE_CAT|**String**|El controlador JDBC no lo admite.|  
 |TYPE_SCHEM|**String**|El controlador JDBC no lo admite.|  
 |TYPE_NAME|**String**|El controlador JDBC no lo admite.|  

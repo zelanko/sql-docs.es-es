@@ -1,27 +1,28 @@
 ---
 title: Uso de tipos de datos avanzados | Documentos de Microsoft
-ms.custom: 
+ms.custom: ''
 ms.date: 01/19/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: drivers
-ms.service: 
+ms.service: ''
 ms.component: jdbc
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: drivers
-ms.tgt_pltfrm: 
+ms.technology:
+- drivers
+ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: b39461d3-48d6-4048-8300-1a886c00756d
-caps.latest.revision: "58"
+caps.latest.revision: 58
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 5ca19754f3332c1832405085ad1b04fb36380bd9
-ms.sourcegitcommit: 2713f8e7b504101f9298a0706bacd84bf2eaa174
-ms.translationtype: MT
+ms.openlocfilehash: df610dec98d98d497b21b5e297781fa0a3375bf8
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
+ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/18/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="using-advanced-data-types"></a>Usar tipos de datos avanzados
 [!INCLUDE[Driver_JDBC_Download](../../includes/driver_jdbc_download.md)]
@@ -34,7 +35,7 @@ ms.lasthandoff: 11/18/2017
 |Tipos de SQL Server|Tipos de JDBC (Tipos de java.sql.)|Tipos del lenguaje Java|  
 |----------------------|-----------------------------------|-------------------------|  
 |varbinary(max)<br /><br /> imagen|LONGVARBINARY|Byte [] \(predeterminado), Blob, InputStream, cadena|  
-|texto<br /><br /> varchar(max)|LONGVARCHAR|String (default), Clob, InputStream|  
+|texto<br /><br /> ntext|LONGVARCHAR|String (default), Clob, InputStream|  
 |ntext<br /><br /> nvarchar(max)|LONGVARCHAR<br /><br /> LONGNVARCHAR (Java SE 6.0)|String (default), Clob, NClob (Java SE 6.0)|  
 |xml|LONGVARCHAR<br /><br /> SQLXML (Java SE 6.0)|String (default), InputStream, Clob, byte[],Blob, SQLXML (Java SE 6.0)|  
 |UDT<sup>1</sup>|VARBINARY|String (default), byte[], InputStream|  
@@ -50,7 +51,7 @@ ms.lasthandoff: 11/18/2017
 >  Valores CLOB se pueden usar con [!INCLUDE[ssVersion2005](../../includes/ssversion2005_md.md)] (o posterior) tipos de datos de valor grande. En concreto, los tipos CLOB se pueden usar con la **varchar (max)** y **nvarchar (max)** tipos de datos, tipos BLOB pueden usarse con **varbinary (max)** y **imagen**  tipos de datos y los tipos NCLOB pueden utilizarse con **ntext** y **nvarchar (max)**.  
   
 ## <a name="large-value-data-types"></a>Tipos de datos de valores grandes  
- En versiones anteriores de [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)], trabajar con datos de valores grandes tipos requería un tratamiento especial. Los tipos de datos de gran tamaño son aquellos que superan el tamaño de fila máximo de 8 KB. [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]Introduce un especificador de máximo para **varchar**, **nvarchar**, y **varbinary** tipos de datos para permitir el almacenamiento de valores tan grandes como 2 ^ 31 bytes. Columnas de la tabla y [!INCLUDE[tsql](../../includes/tsql_md.md)] pueden especificar variables **varchar (max)**, **nvarchar (max)**, o **varbinary (max)** tipos de datos.  
+ En versiones anteriores de [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)], trabajar con datos de valores grandes tipos requería un tratamiento especial. Los tipos de datos de gran tamaño son aquellos que superan el tamaño de fila máximo de 8 KB. [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] Introduce un especificador de máximo para **varchar**, **nvarchar**, y **varbinary** tipos de datos para permitir el almacenamiento de valores tan grandes como 2 ^ 31 bytes. Columnas de la tabla y [!INCLUDE[tsql](../../includes/tsql_md.md)] pueden especificar variables **varchar (max)**, **nvarchar (max)**, o **varbinary (max)** tipos de datos.  
   
  Los escenarios principales en los que se trabaja con tipos de valores grandes implican su recuperación de una base de datos o agregarlos a una base de datos. Las siguientes secciones describen diferentes enfoques para realizar estas tareas.  
   
@@ -139,7 +140,7 @@ rs.updateRow();
  Para obtener más información sobre tipos de valores grandes, consulte "Uso de tipos de valores grandes" en los Libros en pantalla de SQL Server.  
   
 ## <a name="xml-data-type"></a>Tipos de datos XML  
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]Proporciona un **xml** tipo de datos que le permite almacenar documentos XML y fragmentos en un [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] base de datos. El **xml** tipo de datos es un tipo de datos integrado en [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]y es en cierta forma es similar a otros tipos integrados, como **int** y **varchar**. Como con otros tipos integrados, puede usar el **xml** tipo de datos como un tipo de columna cuando crea una tabla, como un tipo de variable, un tipo de parámetro o un tipo de valor devuelto de función; o en [!INCLUDE[tsql](../../includes/tsql_md.md)] funciones CAST y CONVERT.  
+ [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] Proporciona un **xml** tipo de datos que le permite almacenar documentos XML y fragmentos en un [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] base de datos. El **xml** tipo de datos es un tipo de datos integrado en [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]y es en cierta forma es similar a otros tipos integrados, como **int** y **varchar**. Como con otros tipos integrados, puede usar el **xml** tipo de datos como un tipo de columna cuando crea una tabla, como un tipo de variable, un tipo de parámetro o un tipo de valor devuelto de función; o en [!INCLUDE[tsql](../../includes/tsql_md.md)] funciones CAST y CONVERT.  
   
  En el controlador JDBC, el **xml** se puede asignar el tipo de datos como una cadena, matriz de bytes, secuencia, objeto CLOB, BLOB o SQLXML. Cadena es el valor predeterminado. Desde la versión 2.0 del controlador JDBC, este controlador proporciona compatibilidad con la API de JDBC 4.0, que presenta la interfaz SQLXML. La interfaz SQLXML define métodos para interactuar y manipular datos XML. El **SQLXML** tipo de datos se asigna a la [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] **xml** tipo de datos. Para obtener más información acerca de cómo leer y escribir datos XML desde y hacia la base de datos relacional con el **SQLXML** tipo de datos de Java, consulte [compatibilidad con datos XML](../../connect/jdbc/supporting-xml-data.md).  
   
@@ -151,7 +152,7 @@ rs.updateRow();
   
 -   Acceso a XML como una matriz de bytes con un BOM inicial, cuando está codificado en UTF-16 para el intercambio con otros procesadores de XML y archivos en discos.  
   
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]requiere un BOM inicial para XML codificado en UTF-16. La aplicación debe proporcionarlo cuando los valores de parámetro XML se proporcionen como matrices de bytes. [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]siempre produce valores XML como UTF-16 cadenas sin BOM o declaración de codificación incrustada. Cuando se recuperan valores XML como byte[], BinaryStream o Blob, se agrega al principio del valor un BOM de UTF-16.  
+ [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] requiere un BOM inicial para XML codificado en UTF-16. La aplicación debe proporcionarlo cuando los valores de parámetro XML se proporcionen como matrices de bytes. [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] siempre produce valores XML como UTF-16 cadenas sin BOM o declaración de codificación incrustada. Cuando se recuperan valores XML como byte[], BinaryStream o Blob, se agrega al principio del valor un BOM de UTF-16.  
   
  Para obtener más información sobre la **xml** tipo de datos, vea "tipos de datos xml" en [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] libros en pantalla.  
   

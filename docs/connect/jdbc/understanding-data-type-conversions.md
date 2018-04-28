@@ -1,27 +1,28 @@
 ---
-title: "Conversiones de tipos de datos de descripción | Documentos de Microsoft"
-ms.custom: 
+title: Conversiones de tipos de datos de descripción | Documentos de Microsoft
+ms.custom: ''
 ms.date: 01/19/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: drivers
-ms.service: 
+ms.service: ''
 ms.component: jdbc
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: drivers
-ms.tgt_pltfrm: 
+ms.technology:
+- drivers
+ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: 98fa7488-aac3-45b4-8aa4-83ed6ab638b4
-caps.latest.revision: "34"
+caps.latest.revision: 34
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 8ba1a10fc33dc5e80fb300eaa31e849692c55041
-ms.sourcegitcommit: 2713f8e7b504101f9298a0706bacd84bf2eaa174
-ms.translationtype: MT
+ms.openlocfilehash: e18bd56e110cccab17488de752ba5ab4c8666fa9
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
+ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/18/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="understanding-data-type-conversions"></a>Descripción de las conversiones de tipos de datos
 [!INCLUDE[Driver_JDBC_Download](../../includes/driver_jdbc_download.md)]
@@ -81,9 +82,9 @@ ms.lasthandoff: 11/18/2017
   
 -   **Convertido (y)**: las conversiones de un Java **numérico** tipo a un servidor subyacente **numérico** tipo que sea menor. Esta conversión es normal y sigue [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] convenciones de conversión. Precisión siempre se trunca (nunca se redondea) y el desbordamiento produce un error de conversión no admitida. Por ejemplo, mediante updateDecimal con un valor de "1,9999" en un subyacente entero columna da como resultado un "1" en la columna de destino; pero si se pasa de "3000000000", el controlador produce un error.  
   
--   **Dependiente de datos (z)**: las conversiones de un Java **cadena** tipo subyacente [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] tipo de datos depende de las siguientes condiciones: el controlador envía el **cadena** valor [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] y [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] realiza las conversiones si es necesario. Si sendStringParametersAsUnicode se establece en true y subyacente [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] es de tipo de datos **imagen**, [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] no permite la conversión **nvarchar** a **imagen** y genera una excepción SQLServerException. Si sendStringParametersAsUnicode se establece en false y subyacente [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] es de tipo de datos **imagen**, [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] permite la conversión **varchar** a **imagen**y no produce una excepción.  
+-   **Dependiente de datos (z)**: las conversiones de un Java **cadena** tipo al subyacente [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] tipo de datos depende de las siguientes condiciones: el controlador envía el **cadena** valor a [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] y [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] realiza las conversiones si es necesario. Si sendStringParametersAsUnicode se establece en true y subyacente [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] es de tipo de datos **imagen**, [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] no permite la conversión **nvarchar** a **imagen** y genera una excepción SQLServerException. Si sendStringParametersAsUnicode se establece en false y subyacente [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] es de tipo de datos **imagen**, [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] permite la conversión **varchar** a **imagen**y no produce una excepción.  
   
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]realiza las conversiones y devuelve errores al controlador JDBC cuando hay problemas.  
+ [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] realiza las conversiones y devuelve errores al controlador JDBC cuando hay problemas.  
   
  Cuando el [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] es de tipo de datos de columna **XML**, el valor de datos debe ser válido **XML**. Al llamar a métodos updateBlob, updateBinaryStream o updateBytes, el valor de datos debe ser la representación de cadena hexadecimal de los caracteres XML. Por ejemplo:  
   
@@ -110,9 +111,9 @@ ms.lasthandoff: 11/18/2017
   
 -   **Convertido (y)**: las conversiones de un Java **numérico** tipo a un servidor subyacente **numérico** tipo que sea menor. Esta conversión es normal y sigue [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] convenciones de conversión. La precisión siempre se trunca, nunca se redondea, y el desbordamiento lanza un error de conversión no admitida. Por ejemplo, mediante updateDecimal con un valor de "1,9999" en un subyacente entero columna da como resultado un "1" en la columna de destino; pero si se pasa de "3000000000", el controlador produce un error.  
   
--   **Dependiente de datos (z)**: las conversiones de un Java **cadena** tipo subyacente [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] tipo de datos depende de las siguientes condiciones: el controlador envía el **cadena** valor [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] y [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] realiza las conversiones si es necesario. Si la propiedad de conexión sendStringParametersAsUnicode se establece en true y subyacente [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] es de tipo de datos **imagen**, [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] no permite la conversión **nvarchar** a **imagen** y genera una excepción SQLServerException. Si sendStringParametersAsUnicode se establece en false y subyacente [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] es de tipo de datos **imagen**, [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] permite la conversión **varchar** a **imagen**y no produce una excepción.  
+-   **Dependiente de datos (z)**: las conversiones de un Java **cadena** tipo al subyacente [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] tipo de datos depende de las siguientes condiciones: el controlador envía el **cadena** valor a [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] y [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] realiza las conversiones si es necesario. Si la propiedad de conexión sendStringParametersAsUnicode se establece en true y subyacente [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] es de tipo de datos **imagen**, [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] no permite la conversión **nvarchar** a **imagen** y genera una excepción SQLServerException. Si sendStringParametersAsUnicode se establece en false y subyacente [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] es de tipo de datos **imagen**, [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] permite la conversión **varchar** a **imagen**y no produce una excepción.  
   
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]realiza el grueso de las conversiones de establecimiento y devuelve errores al controlador JDBC cuando hay problemas. Las conversiones del lado cliente son la excepción y no se realiza únicamente en el caso de **fecha**, **tiempo**, **timestamp**, **booleano**y  **Cadena** valores.  
+ [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] realiza el grueso de las conversiones de establecimiento y devuelve errores al controlador JDBC cuando hay problemas. Las conversiones del lado cliente son la excepción y no se realiza únicamente en el caso de **fecha**, **tiempo**, **timestamp**, **booleano**y  **Cadena** valores.  
   
  Cuando el [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] es de tipo de datos de columna **XML**, el valor de datos debe ser válido **XML**. Cuando se llama a los métodos setObject(byte[], SQLXML), setObject(inputStream, SQLXML) o setObject(Blob, SQLXML), el valor de los datos debería ser una representación de cadena hexadecimal de los caracteres XML. Por ejemplo:  
   

@@ -1,30 +1,33 @@
 ---
-title: "Método getIndexInfo (SQLServerDatabaseMetaData) | Documentos de Microsoft"
-ms.custom: 
+title: Método getIndexInfo (SQLServerDatabaseMetaData) | Documentos de Microsoft
+ms.custom: ''
 ms.date: 01/19/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: drivers
-ms.service: 
+ms.service: ''
 ms.component: jdbc
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: drivers
-ms.tgt_pltfrm: 
+ms.technology:
+- drivers
+ms.tgt_pltfrm: ''
 ms.topic: article
-apiname: SQLServerDatabaseMetaData.getIndexInfo
-apilocation: sqljdbc.jar
+apiname:
+- SQLServerDatabaseMetaData.getIndexInfo
+apilocation:
+- sqljdbc.jar
 apitype: Assembly
 ms.assetid: 8a677cc6-8e33-4e57-8678-0849345aa8d0
-caps.latest.revision: "15"
+caps.latest.revision: 15
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 0400e9241fa1856a33a6c483734b3f87e7285758
-ms.sourcegitcommit: 2713f8e7b504101f9298a0706bacd84bf2eaa174
-ms.translationtype: MT
+ms.openlocfilehash: 7ae3de9c4d636d27b802437b1787e6b28c31387b
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
+ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/18/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="getindexinfo-method-sqlserverdatabasemetadata"></a>Método getIndexInfo (SQLServerDatabaseMetaData)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -47,7 +50,7 @@ public java.sql.ResultSet getIndexInfo(java.lang.String cat,
   
  A **cadena** que contiene el nombre del catálogo.  
   
- *esquema*  
+ *schema*  
   
  A **cadena** que contiene el nombre del esquema.  
   
@@ -55,7 +58,7 @@ public java.sql.ResultSet getIndexInfo(java.lang.String cat,
   
  A **cadena** que contiene el nombre de tabla.  
   
- *único*  
+ *Único*  
   
  **True** si solo se devuelven índices para valores únicos. **false** si se devuelven todos los índices.  
   
@@ -82,13 +85,13 @@ public java.sql.ResultSet getIndexInfo(java.lang.String cat,
 |NON_UNIQUE|**boolean**|Indica si los valores de índice pueden ser no únicos.|  
 |INDEX_QUALIFIER|**String**|El nombre del propietario del índice. Se devolverá un valor NULL cuando TYPE sea tableIndexStatistic.|  
 |INDEX_NAME|**String**|El nombre del índice.|  
-|TYPE|**corto**|El tipo del índice. Puede ser uno de los siguientes valores:<br /><br /> tableIndexStatistic (0)<br /><br /> tableIndexClustered (1)<br /><br /> tableIndexHashed (2)<br /><br /> tableIndexOther (3)|  
-|ORDINAL_POSITION|**corto**|Posición ordinal de la columna en el índice. La primera columna del índice es 1.|  
+|TYPE|**Corto**|El tipo del índice. Puede ser uno de los siguientes valores:<br /><br /> tableIndexStatistic (0)<br /><br /> tableIndexClustered (1)<br /><br /> tableIndexHashed (2)<br /><br /> tableIndexOther (3)|  
+|ORDINAL_POSITION|**Corto**|Posición ordinal de la columna en el índice. La primera columna del índice es 1.|  
 |COLUMN_NAME|**String**|Nombre de la columna.|  
-|ASC_OR_DESC|**String**|Orden utilizado en la intercalación del índice: Puede ser uno de los siguientes valores:<br /><br /> A (ascendente)<br /><br /> D (descendente)<br /><br /> NULL (no aplicable)<br /><br /> **Nota:** [!INCLUDE[ssNoVersion](../../../includes/ssnoversion_md.md)] siempre devuelve "A".|  
+|ASC_OR_DESC|**String**|Orden utilizado en la intercalación del índice: Puede ser uno de los siguientes valores:<br /><br /> A (ascendente)<br /><br /> D (descendente)<br /><br /> NULL (no aplicable)<br /><br /> **Nota:** [!INCLUDE[ssNoVersion](../../../includes/ssnoversion_md.md)] siempre devuelve "A".  |  
 |CARDINALITY|**int**|Número de filas de la tabla o de valores únicos del índice.|  
 |PAGES|**int**|El número de páginas utilizadas para almacenar el índice o tabla.|  
-|FILTER_CONDITION|**String**|Condición del filtro.<br /><br /> **Nota:** [!INCLUDE[ssNoVersion](../../../includes/ssnoversion_md.md)] siempre devuelve null.|  
+|FILTER_CONDITION|**String**|Condición del filtro.<br /><br /> **Nota:** [!INCLUDE[ssNoVersion](../../../includes/ssnoversion_md.md)] siempre devuelve null.  |  
   
 > [!NOTE]  
 >  Para obtener más información acerca de los datos devueltos por el método getIndexInfo, vea "sp_indexes (Transact-SQL)" en [!INCLUDE[ssNoVersion](../../../includes/ssnoversion_md.md)] libros en pantalla.  

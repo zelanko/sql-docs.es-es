@@ -1,27 +1,28 @@
 ---
-title: "Usar almacenamiento en búfer adaptable | Documentos de Microsoft"
-ms.custom: 
+title: Usar almacenamiento en búfer adaptable | Documentos de Microsoft
+ms.custom: ''
 ms.date: 01/19/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: drivers
-ms.service: 
+ms.service: ''
 ms.component: jdbc
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: drivers
-ms.tgt_pltfrm: 
+ms.technology:
+- drivers
+ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: 92d4e3be-c3e9-4732-9a60-b57f4d0f7cb7
-caps.latest.revision: "53"
+caps.latest.revision: 53
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 4743d48d09625dd4ce1840b61abb58497057789d
-ms.sourcegitcommit: 2713f8e7b504101f9298a0706bacd84bf2eaa174
-ms.translationtype: MT
+ms.openlocfilehash: 194301cbaa751beedb3ba70bfb78bc6062b0841f
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
+ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/18/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="using-adaptive-buffering"></a>Usar el almacenamiento en búfer adaptable
 [!INCLUDE[Driver_JDBC_Download](../../includes/driver_jdbc_download.md)]
@@ -34,7 +35,7 @@ ms.lasthandoff: 11/18/2017
   
 -   **La consulta genera un conjunto de resultados muy grande:** la aplicación puede ejecutar una instrucción SELECT que genera más filas de la aplicación puede almacenar en memoria. En versiones anteriores, la aplicación tenía que utilizar un cursor de servidor para evitar un OutOfMemoryError. El almacenamiento en búfer adaptable permite hacer un paso de solo lectura y solo avance de un conjunto de resultados arbitrariamente grande sin requerir un cursor de servidor.  
   
--   **La consulta genera gran**[SQLServerResultSet](../../connect/jdbc/reference/sqlserverresultset-class.md)**columnas o**[SQLServerCallableStatement](../../connect/jdbc/reference/sqlservercallablestatement-class.md)**los valores de parámetro:**  La aplicación puede recuperar un valor único (columna o parámetro OUT) que es demasiado grande para caber completamente en memoria de la aplicación. Almacenamiento en búfer adaptable permite a la aplicación cliente recuperar este valor como una secuencia, utilizando el getAsciiStream, el getBinaryStream o los métodos de getCharacterStream. La aplicación recupera el valor de la [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] tal y como lee de la secuencia.  
+-   **La consulta genera gran**[SQLServerResultSet](../../connect/jdbc/reference/sqlserverresultset-class.md)**columnas o**[SQLServerCallableStatement](../../connect/jdbc/reference/sqlservercallablestatement-class.md)**los valores de parámetro:** La aplicación puede recuperar un valor único (columna o parámetro OUT) que es demasiado grande para caber completamente en memoria de la aplicación. Almacenamiento en búfer adaptable permite a la aplicación cliente recuperar este valor como una secuencia, utilizando el getAsciiStream, el getBinaryStream o los métodos de getCharacterStream. La aplicación recupera el valor de la [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] tal y como lee de la secuencia.  
   
 > [!NOTE]  
 >  Con el almacenamiento en búfer adaptable, el controlador JDBC solamente almacena en búfer las cantidad de datos que debe almacenar. El controlador no proporciona un método público para controlar o limitar el tamaño del búfer.  

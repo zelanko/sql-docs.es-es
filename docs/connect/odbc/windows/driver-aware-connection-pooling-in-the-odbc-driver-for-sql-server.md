@@ -1,27 +1,28 @@
 ---
-title: "Agrupación de conexiones dependientes del controlador en el controlador ODBC para SQL Server | Documentos de Microsoft"
-ms.custom: 
+title: Agrupación de conexiones dependientes del controlador en el controlador ODBC para SQL Server | Documentos de Microsoft
+ms.custom: ''
 ms.date: 01/19/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: drivers
-ms.service: 
+ms.service: ''
 ms.component: odbc
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: drivers
-ms.tgt_pltfrm: 
+ms.technology:
+- drivers
+ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: 455ab165-8e4d-4df9-a1d7-2b532bfd55d6
-caps.latest.revision: "15"
+caps.latest.revision: 15
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 67cb0f520c9e75606c7e1ffcae42d20d87a3d9fb
-ms.sourcegitcommit: 2713f8e7b504101f9298a0706bacd84bf2eaa174
-ms.translationtype: MT
+ms.openlocfilehash: 2567b047216edd151197446aaa79822ab19a93ca
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
+ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/18/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="driver-aware-connection-pooling-in-the-odbc-driver-for-sql-server"></a>Agrupación de conexiones dependientes del controlador ODBC para SQL Server
 [!INCLUDE[Driver_ODBC_Download](../../../includes/driver_odbc_download.md)]
@@ -73,7 +74,7 @@ Si uno de los siguientes id. de atributo de conexión o palabras clave de cadena
     
 - Si hay una diferencia en cualquiera de los siguientes atributos de conexión entre la cadena de conexión y una cadena de conexión agrupada, no se utilizará una conexión agrupada.  
   
-    |Attribute|ODBC Driver 13|Controlador ODBC 11|  
+    |Atributo|ODBC Driver 13|Controlador ODBC 11|  
     |-|-|-|  
     |`SQL_ATTR_CURRENT_CATALOG`|Sí|Sí|
     |`SQL_ATTR_PACKET_SIZE`|Sí|Sí|
@@ -93,7 +94,7 @@ Si uno de los siguientes id. de atributo de conexión o palabras clave de cadena
     |`SQL_COPT_SS_SERVER_SPN`|Sí|Sí|
     |`SQL_COPT_SS_TRUST_SERVER_CERTIFICATE`|Sí|Sí|
     |`SSPROP_AUTH_REPL_SERVER_NAME`|Sí|Sí|
-    |`SQL_COPT_SS_TNIR`|Sí|No|
+    |`SQL_COPT_SS_TNIR`|Sí|no|
  
 -   El controlador puede restablecer y ajustar los siguientes atributos y palabras clave de conexión sin realizar una llamada de red adicional. El controlador restablece estos parámetros para garantizar que la conexión no contenga información incorrecta.  
   
@@ -113,7 +114,7 @@ Si uno de los siguientes id. de atributo de conexión o palabras clave de cadena
   
      Si cambia uno de los siguientes atributos de conexión, se puede reutilizar una conexión existente.  El controlador restablecerá el valor según proceda. El controlador puede restablecer estos atributos en el cliente sin realizar una llamada de red adicional.  
   
-    |Attribute|ODBC Driver 13|Controlador ODBC 11|  
+    |Atributo|ODBC Driver 13|Controlador ODBC 11|  
     |-|-|-|  
     |Todos los atributos de instrucción|Sí|Sí|
     |`SQL_ATTR_AUTOCOMMIT`|Sí|Sí|

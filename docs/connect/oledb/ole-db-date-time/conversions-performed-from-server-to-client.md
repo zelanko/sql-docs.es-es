@@ -3,7 +3,7 @@ title: Las conversiones realizan de servidor a cliente | Documentos de Microsoft
 description: Conversiones realizadas de servidor a cliente
 ms.custom: ''
 ms.date: 03/26/2018
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
 ms.service: ''
 ms.component: ole-db-date-time
@@ -17,13 +17,13 @@ helpviewer_keywords:
 - conversions [OLE DB], server to client
 author: pmasl
 ms.author: Pedro.Lopes
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 188cba2a9ea012e36632a94572cd3b738b525729
-ms.sourcegitcommit: 9351e8b7b68f599a95fb8e76930ab886db737e5f
-ms.translationtype: MT
+ms.openlocfilehash: 52b1a92e30f0b90f2ade7315b9cc3e6e67f05abc
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
+ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/06/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="conversions-performed-from-server-to-client"></a>Conversiones realizadas de servidor a cliente
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -35,17 +35,17 @@ ms.lasthandoff: 04/06/2018
   
 |A -><br /><br /> De|DATE|DBDATE|DBTIME|DBTIME2|DBTIMESTAMP|DBTIMESTAMPOFFSET|FILETIME|BYTES|VARIANT|SSVARIANT|BSTR|STR|WSTR|  
 |----------------------|----------|------------|------------|-------------|-----------------|-----------------------|--------------|-----------|-------------|---------------|----------|---------|----------|  
-|Date|1, 7|Aceptar|-|-|1|1, 3|1, 7|-|OK (VT_BSTR)|Aceptar|Aceptar|4|4|  
-|Time|5, 6, 7|-|9|Aceptar|6|3, 6|5, 6|-|OK (VT_BSTR)|Aceptar|Aceptar|4|4|  
+|Date|1, 7|Aceptar|-|-|1|1, 3|1, 7|-|ACEPTAR (VT_BSTR)|Aceptar|Aceptar|4|4|  
+|Time|5, 6 o 7|-|9|Aceptar|6|3, 6|5, 6|-|ACEPTAR (VT_BSTR)|Aceptar|Aceptar|4|4|  
 |Smalldatetime|7|8|9, 10|10|Aceptar|3|7|-|7 (VT_DATE)|Aceptar|Aceptar|4|4|  
 |Fecha y hora|5, 7|8|9, 10|10|Aceptar|3|7|-|7 (VT_DATE)|Aceptar|Aceptar|4|4|  
-|Datetime2|5, 7|8|9, 10|10|7|3|5, 7|-|OK (VT_BSTR)|Aceptar|Aceptar|4|4|  
-|Datetimeoffset|5, 7, 11|8, 11|9, 10, 11|10, 11|7, 11|Aceptar|5, 7, 11|-|OK (VT_BSTR)|Aceptar|Aceptar|4|4|  
+|Datetime2|5, 7|8|9, 10|10|7|3|5, 7|-|ACEPTAR (VT_BSTR)|Aceptar|Aceptar|4|4|  
+|Datetimeoffset|5, 7, 11|8, 11|9, 10, 11|10, 11|7, 11|Aceptar|5, 7, 11|-|ACEPTAR (VT_BSTR)|Aceptar|Aceptar|4|4|  
 |Char, Varchar,<br /><br /> Nchar, Nvarchar|7, 13|12|12, 9|12|12|12|7, 13|N/D|N/D|N/D|N/D|N/D|N/D|  
 |Sql_variant<br /><br /> (datetime)|7|8|9, 10|10|Aceptar|3|7|-|7 (VT_DATE)|Aceptar|Aceptar|4|4|  
 |Sql_variant<br /><br /> (smalldatetime)|7|8|9, 10|10|Aceptar|3|7|-|7 (VT_DATE)|Aceptar|Aceptar|4|4|  
 |Sql_variant<br /><br /> (date)|1, 7|Aceptar|2|2|1|1, 3|1, 7|-|OK (VT_BSTR)|Aceptar|Aceptar|4|4|  
-|Sql_variant<br /><br /> (time)|5, 6, 7|2|6|Aceptar|6|3, 6|5, 6|-|OK (VT_BSTR)|Aceptar|Aceptar|4|4|  
+|Sql_variant<br /><br /> (time)|5, 6 o 7|2|6|Aceptar|6|3, 6|5, 6|-|OK (VT_BSTR)|Aceptar|Aceptar|4|4|  
 |Sql_variant<br /><br /> (datetime2)|5, 7|8|9, 10|10|Aceptar|3|5, 7|-|OK (VT_BSTR)|Aceptar|Aceptar|4|4|  
 |Sql_variant<br /><br /> (datetimeoffset)|5, 7, 11|8, 11|9, 10, 11|10, 11|7, 11|Aceptar|5, 7, 11|-|OK (VT_BSTR)|Aceptar|Aceptar|4|4|  
   

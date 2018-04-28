@@ -1,28 +1,28 @@
 ---
-title: "Información general sobre el controlador JDBC | Documentos de Microsoft"
-ms.custom: 
+title: Información general sobre el controlador JDBC | Documentos de Microsoft
+ms.custom: ''
 ms.date: 01/18/2018
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: drivers
-ms.service: 
+ms.service: ''
 ms.component: jdbc
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - drivers
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: 939a8773-2583-49a4-bf00-6b892fbe39dc
-caps.latest.revision: 
+caps.latest.revision: 57
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 3783933de0579de9c0da9f227280656b3583b7b7
-ms.sourcegitcommit: 9d0467265e052b925547aafaca51e5a5e93b7e38
-ms.translationtype: MT
+ms.openlocfilehash: 6ac8d19b9bc3147fd661b4911c970d950252e556
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
+ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/02/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="overview-of-the-jdbc-driver"></a>Introducción al controlador JDBC
 [!INCLUDE[Driver_JDBC_Download](../../includes/driver_jdbc_download.md)]
@@ -44,7 +44,7 @@ ms.lasthandoff: 03/02/2018
 |[Redistribución de Microsoft JDBC Driver](../../connect/jdbc/redistributing-the-microsoft-jdbc-driver.md)|Describe cómo registrarse para redistribuir Microsoft JDBC Driver.|  
 |[Más información sobre el controlador JDBC](../../connect/jdbc/finding-additional-jdbc-driver-information.md)|Describe dónde encontrar más información sobre Microsoft JDBC Driver, incluidos los vínculos a recursos externos.|  
 |[Matriz de compatibilidad de Microsoft JDBC Driver para SQL Server](../../connect/jdbc/microsoft-jdbc-driver-for-sql-server-support-matrix.md)|Matriz de compatibilidad y directiva de ciclo de vida de soporte de Microsoft JDBC Driver para SQL Server.|  
-|[Más frecuentes preguntas &#40; Preguntas más frecuentes sobre &#41; para el controlador JDBC](../../connect/jdbc/frequently-asked-questions-faq-for-jdbc-driver.md)|Preguntas más frecuentes sobre Microsoft JDBC Driver.|  
+|[Preguntas más frecuentes &#40;preguntas más frecuentes sobre&#41; para el controlador JDBC](../../connect/jdbc/frequently-asked-questions-faq-for-jdbc-driver.md)|Preguntas más frecuentes sobre Microsoft JDBC Driver.|  
 |[Dependencias de características de Microsoft JDBC Driver para SQL Server](../../connect/jdbc/feature-dependencies-of-microsoft-jdbc-driver-for-sql-server.md)|Dependencias de características de Microsoft JDBC Driver para SQL Server.|
 
 ## <a name="see-also"></a>Vea también  

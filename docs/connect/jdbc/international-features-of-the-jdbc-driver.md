@@ -1,34 +1,35 @@
 ---
-title: "Características internacionales del controlador JDBC | Documentos de Microsoft"
-ms.custom: 
+title: Características internacionales del controlador JDBC | Documentos de Microsoft
+ms.custom: ''
 ms.date: 01/19/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: drivers
-ms.service: 
+ms.service: ''
 ms.component: jdbc
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: drivers
-ms.tgt_pltfrm: 
+ms.technology:
+- drivers
+ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: bbb74a1d-9278-401f-9530-7b5f45aa79de
-caps.latest.revision: "40"
+caps.latest.revision: 40
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: f323a5728aa9f63ba5283a34694c1e00baa0bb91
-ms.sourcegitcommit: 2713f8e7b504101f9298a0706bacd84bf2eaa174
-ms.translationtype: MT
+ms.openlocfilehash: 7a9960483a410875f4c91d2b809b27f5c74c7d4b
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
+ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/18/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="international-features-of-the-jdbc-driver"></a>Características internacionales del controlador JDBC
 [!INCLUDE[Driver_JDBC_Download](../../includes/driver_jdbc_download.md)]
 
   Las características de internacionalización de la [!INCLUDE[jdbcNoVersion](../../includes/jdbcnoversion_md.md)] incluyen lo siguiente:  
   
--   Compatibilidad para una experiencia totalmente localizada en los mismos idiomas que[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]  
+-   Compatibilidad para una experiencia totalmente localizada en los mismos idiomas que [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]  
   
 -   Compatibilidad con las conversiones de idioma de Java para la configuración regional confidencial [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] datos  
   

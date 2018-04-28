@@ -1,23 +1,24 @@
 ---
-title: "Resistencia de conexión inactiva"
+title: Resistencia de conexión inactiva
 ms.date: 07/13/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: drivers
-ms.service: 
+ms.service: ''
 ms.component: php
 ms.suite: sql
-ms.custom: 
-ms.technology: drivers
+ms.custom: ''
+ms.technology:
+- drivers
 ms.topic: article
 author: david-puglielli
 ms.author: v-dapugl
 manager: v-hakaka
 ms.workload: Inactive
-ms.openlocfilehash: 6c36086404c8767ea30c85b2ebd77340d11732ab
-ms.sourcegitcommit: 2713f8e7b504101f9298a0706bacd84bf2eaa174
-ms.translationtype: MT
+ms.openlocfilehash: a736fc5dafc3c58401c54ab51d1a11d1753f3479
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
+ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/18/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="idle-connection-resiliency"></a>Resistencia de conexión inactiva
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]
@@ -37,7 +38,7 @@ Si el producto de **ConnectRetryCount** multiplicado por **ConnectRetryInterval*
 
 Resistencia de conexión se aplica cuando la conexión está inactiva. Errores que se producen al ejecutar una transacción, por ejemplo, no se desencadenarán intentos de reconexión: se producirá un error tal y como se esperaría en caso contrario. Las situaciones siguientes, conocidas como estados de sesión no podrán recuperarse, no desencadenarán intentos de reconexión:
 
-* tablas temporales
+* Tablas temporales
 * Cursores globales y locales
 * Bloqueos de transacciones de nivel de contexto de transacción y sesión
 * Bloqueos de aplicación

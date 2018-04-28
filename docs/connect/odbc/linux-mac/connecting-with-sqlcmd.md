@@ -2,7 +2,7 @@
 title: Conectar con sqlcmd | Documentos de Microsoft
 ms.custom: ''
 ms.date: 01/19/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: drivers
 ms.service: ''
 ms.component: odbc
@@ -18,13 +18,13 @@ ms.assetid: 61a2ec0d-1bcb-4231-bea0-cff866c21463
 caps.latest.revision: 45
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: c08f390860a35ccbd5dd743317a52df80c05ef52
-ms.sourcegitcommit: 2713f8e7b504101f9298a0706bacd84bf2eaa174
-ms.translationtype: MT
+ms.openlocfilehash: a1f7b720841ac3392af027a6bc23869ff832ba48
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
+ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/18/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="connecting-with-sqlcmd"></a>Conexión con sqlcmd
 [!INCLUDE[Driver_ODBC_Download](../../../includes/driver_odbc_download.md)]
@@ -70,7 +70,7 @@ En la versión actual, están disponibles las siguientes opciones:
   
 - -k quite o reemplace los caracteres de control.  
   
-- **-K***application_intent*  
+- **-K *** application_intent*  
 Declara el tipo de carga de trabajo de la aplicación al conectarse a un servidor. El único valor actualmente admitido es **de solo lectura**. Si **-K** no se especifica, `sqlcmd` no admitirá la conectividad a una réplica secundaria en un grupo de disponibilidad AlwaysOn. Para obtener más información, consulte [controlador ODBC en Linux y macOS - alta disponibilidad y recuperación ante desastres](../../../connect/odbc/linux-mac/odbc-driver-on-linux-support-for-high-availability-disaster-recovery.md).  
   
 > [!NOTE]  
@@ -80,7 +80,7 @@ Declara el tipo de carga de trabajo de la aplicación al conectarse a un servido
 
 - -m *error_level* Control qué mensajes de error se envían a stdout.  
   
-- **-M***multisubnet_failover*  
+- **-M *** multisubnet_failover*  
 Especifique siempre **-M** al conectarse a una escucha de un grupo de disponibilidad de [!INCLUDE[ssSQL11](../../../includes/sssql11_md.md)] o a una instancia de clúster de conmutación por error de [!INCLUDE[ssSQL11](../../../includes/sssql11_md.md)]. **-M** proporciona para la detección más rápida de las conmutaciones por error y la conexión con el servidor (actualmente) activo. Si **-M** no se especifica, el valor de **-M** será OFF. Para obtener más información acerca de [!INCLUDE[ssHADR](../../../includes/sshadr_md.md)], consulte [controlador ODBC en Linux y macOS - alta disponibilidad y recuperación ante desastres](../../../connect/odbc/linux-mac/odbc-driver-on-linux-support-for-high-availability-disaster-recovery.md).  
   
 > [!NOTE]  
@@ -96,7 +96,7 @@ Especifique siempre **-M** al conectarse a una escucha de un grupo de disponibil
   
 - -q *commandline_query* ejecutar una consulta cuando `sqlcmd` se inicia, pero no se cierra cuando la consulta ha terminado de ejecutarse.  
 
-- -Q *commandline_query* ejecutar una consulta cuando `sqlcmd` se inicia. `sqlcmd`se cerrará cuando finalice la consulta.  
+- -Q *commandline_query* ejecutar una consulta cuando `sqlcmd` se inicia. `sqlcmd` se cerrará cuando finalice la consulta.  
 
 - mensajes de error de redirecciones - r a stderr.
 
@@ -104,7 +104,7 @@ Especifique siempre **-M** al conectarse a una escucha de un grupo de disponibil
   
 - -s *column_separator_char* especificar el carácter de separador de columnas.  
 
-- -S [*protocol*:] *server*[**,***port*]  
+- -S [*protocolo*:] *server*[**, *** puerto*]  
 Especifique la instancia de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion_md.md)] para conectarse a, o si es -D utiliza, un DSN. El controlador ODBC en Linux y macOS requiere -S. Tenga en cuenta que **tcp** es el único protocolo válido.  
   
 - -t *query_timeout* especificar el número de segundos antes de que expire un comando (o la instrucción SQL).  
@@ -216,13 +216,13 @@ Se admiten las siguientes entradas en un DSN de Linux o Mac OS:
 
 -   **ApplicationIntent = ReadOnly**  
 
--   **Base de datos =***database_name*  
+-   **Base de datos = *** database_name*  
   
 -   **Controlador = controlador ODBC 11 para SQL Server** o **controlador = 13 el controlador ODBC para SQL Server**
   
 -   **MultiSubnetFailover = Yes**  
   
--   **Server =***server_name_or_IP_address*  
+-   **Server = *** server_name_or_IP_address*  
   
 -   **Trusted_Connection=yes**|**no**  
   

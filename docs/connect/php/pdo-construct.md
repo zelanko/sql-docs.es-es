@@ -1,8 +1,8 @@
 ---
-title: PDO::__construct | Microsoft Docs
+title: 'PDO:: __construct | Documentos de Microsoft'
 ms.custom: ''
 ms.date: 01/19/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: drivers
 ms.service: ''
 ms.component: php
@@ -13,16 +13,16 @@ ms.technology:
 ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: 3ee53aff-6fe4-44cd-a15b-51770c98c712
-caps.latest.revision: ''
+caps.latest.revision: 18
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 3a1c40e8e31cbba9eb93155c3f81f6dd03452b59
-ms.sourcegitcommit: 2e130e9f3ce8a7ffe373d7fba8b09e937c216386
-ms.translationtype: MT
+ms.openlocfilehash: d9cf4a81701d1ad4ddaa1491ea877331f933a9e5
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
+ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/28/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="pdoconstruct"></a>PDO::__construct
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]
@@ -43,7 +43,7 @@ PDO::__construct($dsn [,$username [,$password [,$driver_options ]]] )
   
 *$password*: opcional. Una cadena que contiene la contraseña del usuario. Para establecer la conexión utilizando la autenticación de [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] , especifique la contraseña. Para establecer la conexión utilizando la autenticación de Windows, especifique `""`.  
   
-*$driver_options*: Optional. Puede especificar los atributos del Administrador de controladores de PDO y [!INCLUDE[ssDriverPHP](../../includes/ssdriverphp_md.md)] atributos de controladores específicos--PDO:: sqlsrv_attr_encoding y PDO:: sqlsrv_attr_direct_query. Un atributo no válido no genera una excepción. solo lo harán cuando se especifican con [PDO::setAttribute](../../connect/php/pdo-setattribute.md).  
+*$driver_options*: opcional. Puede especificar los atributos del Administrador de controladores de PDO y [!INCLUDE[ssDriverPHP](../../includes/ssdriverphp_md.md)] atributos de controladores específicos--PDO:: sqlsrv_attr_encoding y PDO:: sqlsrv_attr_direct_query. Un atributo no válido no genera una excepción. solo lo harán cuando se especifican con [PDO::setAttribute](../../connect/php/pdo-setattribute.md).  
   
 ## <a name="return-value"></a>Valor devuelto  
 Devuelve un objeto de PDO. Si se produce un error, devuelve un objeto PDOException.  

@@ -1,27 +1,28 @@
 ---
 title: Los miembros de SQLServerResultSet | Documentos de Microsoft
-ms.custom: 
+ms.custom: ''
 ms.date: 01/19/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: drivers
-ms.service: 
+ms.service: ''
 ms.component: jdbc
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: drivers
-ms.tgt_pltfrm: 
+ms.technology:
+- drivers
+ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: 2a438d5d-2d6a-46a0-a2ae-f35fbae4a472
-caps.latest.revision: "22"
+caps.latest.revision: 22
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 767bc38218c81b81db91e5949bf2431ca4e98e95
-ms.sourcegitcommit: 2713f8e7b504101f9298a0706bacd84bf2eaa174
-ms.translationtype: MT
+ms.openlocfilehash: 610ace1ea15f69277cba1e4bd37b365a2c3e1cc9
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
+ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/18/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="sqlserverresultset-members"></a>Miembros SQLServerResultSet
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -54,7 +55,7 @@ ms.lasthandoff: 11/18/2017
   
 |Nombre|Description|  
 |----------|-----------------|  
-|[absoluta](../../../connect/jdbc/reference/absolute-method-sqlserverresultset.md)|Mueve el cursor a la fila especificada en este [SQLServerResultSet](../../../connect/jdbc/reference/sqlserverresultset-class.md) objeto.|  
+|[Absoluta](../../../connect/jdbc/reference/absolute-method-sqlserverresultset.md)|Mueve el cursor a la fila especificada en este [SQLServerResultSet](../../../connect/jdbc/reference/sqlserverresultset-class.md) objeto.|  
 |[afterLast](../../../connect/jdbc/reference/afterlast-method-sqlserverresultset.md)|Mueve el cursor hasta después de la última fila de esta [SQLServerResultSet](../../../connect/jdbc/reference/sqlserverresultset-class.md) objeto.|  
 |[beforeFirst](../../../connect/jdbc/reference/beforefirst-method-sqlserverresultset.md)|Mueve el cursor a antes de la primera fila de este [SQLServerResultSet](../../../connect/jdbc/reference/sqlserverresultset-class.md) objeto.|  
 |[cancelRowUpdates](../../../connect/jdbc/reference/cancelrowupdates-method-sqlserverresultset.md)|Cancela las actualizaciones realizadas en la fila actual en este [SQLServerResultSet](../../../connect/jdbc/reference/sqlserverresultset-class.md) objeto.|  
@@ -63,25 +64,25 @@ ms.lasthandoff: 11/18/2017
 |[deleteRow](../../../connect/jdbc/reference/deleterow-method-sqlserverresultset.md)|Elimina la fila actual de este[SQLServerResultSet](../../../connect/jdbc/reference/sqlserverresultset-class.md) objeto y de la base de datos subyacente.|  
 |[Finalizar](../../../connect/jdbc/reference/finalize-method-sqlserverresultset.md)|Esto cierra explícitamente [SQLServerResultSet](../../../connect/jdbc/reference/sqlserverresultset-class.md) objeto.|  
 |[findColumn](../../../connect/jdbc/reference/findcolumn-method-sqlserverresultset.md)|Recupera el índice de la primera columna de búsqueda de coincidencias para el nombre de columna especificado en este [SQLServerResultSet](../../../connect/jdbc/reference/sqlserverresultset-class.md) objeto.|  
-|[primera](../../../connect/jdbc/reference/first-method-sqlserverresultset.md)|Mueve el cursor a la primera fila de este [SQLServerResultSet](../../../connect/jdbc/reference/sqlserverresultset-class.md) objeto.|  
+|[first](../../../connect/jdbc/reference/first-method-sqlserverresultset.md)|Mueve el cursor a la primera fila de este [SQLServerResultSet](../../../connect/jdbc/reference/sqlserverresultset-class.md) objeto.|  
 |[getArray](../../../connect/jdbc/reference/getarray-method-sqlserverresultset.md)|Recupera el valor de la columna designada en la fila actual de este [SQLServerResultSet](../../../connect/jdbc/reference/sqlserverresultset-class.md) objeto como un objeto de matriz.|  
 |[getAsciiStream](../../../connect/jdbc/reference/getasciistream-method-sqlserverresultset.md)|Recupera el valor de la columna designada en la fila actual de este [SQLServerResultSet](../../../connect/jdbc/reference/sqlserverresultset-class.md) objeto como una secuencia de caracteres ASCII.|  
 |[getBigDecimal](../../../connect/jdbc/reference/getbigdecimal-method-sqlserverresultset.md)|Recupera el valor del índice de columna designado en la fila actual de este [SQLServerResultSet](../../../connect/jdbc/reference/sqlserverresultset-class.md) objeto como java.math.BigDecimal.|  
 |[getBinaryStream](../../../connect/jdbc/reference/getbinarystream-method-sqlserverresultset.md)|Recupera el valor de la columna designada en la fila actual de este [SQLServerResultSet](../../../connect/jdbc/reference/sqlserverresultset-class.md) objeto como una secuencia binaria de bytes no interpretados.|  
-|[getBlob](../../../connect/jdbc/reference/getblob-method-sqlserverresultset.md)|Recupera el valor de la columna designada en la fila actual de este [SQLServerResultSet](../../../connect/jdbc/reference/sqlserverresultset-class.md) objeto como un objeto Blob en el lenguaje de programación Java.|  
-|[getBoolean](../../../connect/jdbc/reference/getboolean-method-sqlserverresultset.md)|Recupera el valor de la columna designada en la fila actual de este [SQLServerResultSet](../../../connect/jdbc/reference/sqlserverresultset-class.md) objeto como un **booleano** en el lenguaje de programación Java.|  
-|[getByte](../../../connect/jdbc/reference/getbyte-method-sqlserverresultset.md)|Recupera el valor de la columna designada en la fila actual de este [SQLServerResultSet](../../../connect/jdbc/reference/sqlserverresultset-class.md) objeto como un **bytes** en el lenguaje de programación Java.|  
-|[getBytes](../../../connect/jdbc/reference/getbytes-method-sqlserverresultset.md)|Recupera el valor de la columna designada en la fila actual de este [SQLServerResultSet](../../../connect/jdbc/reference/sqlserverresultset-class.md) objeto como un **bytes** matriz en el lenguaje de programación Java.|  
+|[GetBlob](../../../connect/jdbc/reference/getblob-method-sqlserverresultset.md)|Recupera el valor de la columna designada en la fila actual de este [SQLServerResultSet](../../../connect/jdbc/reference/sqlserverresultset-class.md) objeto como un objeto Blob en el lenguaje de programación Java.|  
+|[GetBoolean](../../../connect/jdbc/reference/getboolean-method-sqlserverresultset.md)|Recupera el valor de la columna designada en la fila actual de este [SQLServerResultSet](../../../connect/jdbc/reference/sqlserverresultset-class.md) objeto como un **booleano** en el lenguaje de programación Java.|  
+|[GetByte](../../../connect/jdbc/reference/getbyte-method-sqlserverresultset.md)|Recupera el valor de la columna designada en la fila actual de este [SQLServerResultSet](../../../connect/jdbc/reference/sqlserverresultset-class.md) objeto como un **bytes** en el lenguaje de programación Java.|  
+|[GetBytes](../../../connect/jdbc/reference/getbytes-method-sqlserverresultset.md)|Recupera el valor de la columna designada en la fila actual de este [SQLServerResultSet](../../../connect/jdbc/reference/sqlserverresultset-class.md) objeto como un **bytes** matriz en el lenguaje de programación Java.|  
 |[getCharacterStream](../../../connect/jdbc/reference/getcharacterstream-method-sqlserverresultset.md)|Recupera el valor de la columna designada en la fila actual de este [SQLServerResultSet](../../../connect/jdbc/reference/sqlserverresultset-class.md) objeto como un objeto java.io.Reader.|  
 |[getClob](../../../connect/jdbc/reference/getclob-method-sqlserverresultset.md)|Recupera el valor de la columna designada en la fila actual de este [SQLServerResultSet](../../../connect/jdbc/reference/sqlserverresultset-class.md) objeto como un objeto Clob en el lenguaje de programación Java.|  
 |[getConcurrency](../../../connect/jdbc/reference/getconcurrency-method-sqlserverresultset.md)|Recupera el modo de simultaneidad de este [SQLServerResultSet](../../../connect/jdbc/reference/sqlserverresultset-class.md) objeto.|  
 |[getCursorName](../../../connect/jdbc/reference/getcursorname-method-sqlserverresultset.md)|Recupera el nombre del cursor SQL utilizado por este [SQLServerResultSet](../../../connect/jdbc/reference/sqlserverresultset-class.md) objeto.|  
 |[getDate](../../../connect/jdbc/reference/getdate-method-sqlserverresultset.md)|Recupera el valor de la columna designada en la fila actual de este [SQLServerResultSet](../../../connect/jdbc/reference/sqlserverresultset-class.md) objeto como un objeto java.sql.Date en el lenguaje de programación Java.|  
 |[getDateTimeOffset](../../../connect/jdbc/reference/getdatetimeoffset-sqlserverresultset.md)|Recupera el valor de la columna especificada como un[clase DateTimeOffset](../../../connect/jdbc/reference/datetimeoffset-class.md) objeto.|  
-|[getDouble](../../../connect/jdbc/reference/getdouble-method-sqlserverresultset.md)|Recupera el valor de la columna designada en la fila actual de este [SQLServerResultSet](../../../connect/jdbc/reference/sqlserverresultset-class.md) objeto como un **doble** en el lenguaje de programación Java.|  
+|[GetDouble](../../../connect/jdbc/reference/getdouble-method-sqlserverresultset.md)|Recupera el valor de la columna designada en la fila actual de este [SQLServerResultSet](../../../connect/jdbc/reference/sqlserverresultset-class.md) objeto como un **doble** en el lenguaje de programación Java.|  
 |[getFetchDirection](../../../connect/jdbc/reference/getfetchdirection-method-sqlserverresultset.md)|Recupera la dirección de la captura para este [SQLServerResultSet](../../../connect/jdbc/reference/sqlserverresultset-class.md) objeto.|  
 |[getFetchSize](../../../connect/jdbc/reference/getfetchsize-method-sqlserverresultset.md)|Recupera el tamaño de captura para este [SQLServerResultSet](../../../connect/jdbc/reference/sqlserverresultset-class.md) objeto.|  
-|[getFloat](../../../connect/jdbc/reference/getfloat-method-sqlserverresultset.md)|Recupera el valor de la columna designada en la fila actual de este [SQLServerResultSet](../../../connect/jdbc/reference/sqlserverresultset-class.md) objeto como un **float** en el lenguaje de programación Java.|  
+|[GetFloat](../../../connect/jdbc/reference/getfloat-method-sqlserverresultset.md)|Recupera el valor de la columna designada en la fila actual de este [SQLServerResultSet](../../../connect/jdbc/reference/sqlserverresultset-class.md) objeto como un **float** en el lenguaje de programación Java.|  
 |[getHoldability](../../../connect/jdbc/reference/getholdability-method-sqlserverresultset.md)|Recupera la capacidad de alojamiento de este [SQLServerResultSet](../../../connect/jdbc/reference/sqlserverresultset-class.md) objeto.|  
 |[getInt](../../../connect/jdbc/reference/getint-method-sqlserverresultset.md)|Recupera el valor de la columna designada en la fila actual de este [SQLServerResultSet](../../../connect/jdbc/reference/sqlserverresultset-class.md) objeto como un **int** en el lenguaje de programación Java.|  
 |[getLong](../../../connect/jdbc/reference/getlong-method-sqlserverresultset.md)|Recupera el valor de la columna designada en la fila actual de este [SQLServerResultSet](../../../connect/jdbc/reference/sqlserverresultset-class.md) objeto como un **largo** en el lenguaje de programación Java.|  
@@ -89,35 +90,35 @@ ms.lasthandoff: 11/18/2017
 |[getNCharacterStream](../../../connect/jdbc/reference/getncharacterstream-method-sqlserverresultset.md)|Recupera el valor de la columna designada en la fila actual de la [SQLServerResultSet](../../../connect/jdbc/reference/sqlserverresultset-class.md) objeto como un objeto de lector.|  
 |[getNClob](../../../connect/jdbc/reference/getnclob-method-sqlserverresultset.md)|Recupera el valor de la columna designada en la fila actual de la [SQLServerResultSet](../../../connect/jdbc/reference/sqlserverresultset-class.md)objeto como un **NClob** objeto en el lenguaje de programación Java.|  
 |[getNString](../../../connect/jdbc/reference/getnstring-method-sqlserverresultset.md)|Recupera el valor de la columna designada en la fila actual de la [SQLServerResultSet](../../../connect/jdbc/reference/sqlserverresultset-class.md) objeto como una cadena en el Java lenguaje de programación.|  
-|[getObject](../../../connect/jdbc/reference/getobject-method-sqlserverresultset.md)|Obtiene el valor de la columna designada en la fila actual de este [SQLServerResultSet](../../../connect/jdbc/reference/sqlserverresultset-class.md) objeto como un objeto en el lenguaje de programación Java.|  
+|[GetObject](../../../connect/jdbc/reference/getobject-method-sqlserverresultset.md)|Obtiene el valor de la columna designada en la fila actual de este [SQLServerResultSet](../../../connect/jdbc/reference/sqlserverresultset-class.md) objeto como un objeto en el lenguaje de programación Java.|  
 |[getRef](../../../connect/jdbc/reference/getref-method-sqlserverresultset.md)|Recupera el valor de la columna designada en la fila actual de este [SQLServerResultSet](../../../connect/jdbc/reference/sqlserverresultset-class.md) objeto como un objeto de referencia en el lenguaje de programación Java.|  
 |[getRow](../../../connect/jdbc/reference/getrow-method-sqlserverresultset.md)|Recupera el número de fila actual.|  
 |[getShort](../../../connect/jdbc/reference/getshort-method-sqlserverresultset.md)|Recupera el valor de la columna designada en la fila actual de este [SQLServerResultSet](../../../connect/jdbc/reference/sqlserverresultset-class.md) objeto como un **breve** en el lenguaje de programación Java.|  
 |[getStatement](../../../connect/jdbc/reference/getstatement-method-sqlserverresultset.md)|Recupera el [SQLServerStatement](../../../connect/jdbc/reference/sqlserverstatement-class.md) objeto que generó este [SQLServerResultSet](../../../connect/jdbc/reference/sqlserverresultset-class.md) objeto.|  
-|[getString](../../../connect/jdbc/reference/getstring-method-sqlserverresultset.md)|Recupera el valor de la columna designada en la fila actual de este [SQLServerResultSet](../../../connect/jdbc/reference/sqlserverresultset-class.md) objeto como un **cadena** en el lenguaje de programación Java.|  
+|[GetString](../../../connect/jdbc/reference/getstring-method-sqlserverresultset.md)|Recupera el valor de la columna designada en la fila actual de este [SQLServerResultSet](../../../connect/jdbc/reference/sqlserverresultset-class.md) objeto como un **cadena** en el lenguaje de programación Java.|  
 |[getSQLXML](../../../connect/jdbc/reference/getsqlxml-method-sqlserverresultset.md)|Recupera el valor de la columna designada en la fila actual de la [SQLServerResultSet](../../../connect/jdbc/reference/sqlserverresultset-class.md) objeto como un **SQLXML** objeto.|  
 |[getTime](../../../connect/jdbc/reference/gettime-method-sqlserverresultset.md)|Recupera el valor de la columna designada en la fila actual de este [SQLServerResultSet](../../../connect/jdbc/reference/sqlserverresultset-class.md) objeto como un objeto java.sql.Time en el lenguaje de programación Java.|  
 |[getTimestamp](../../../connect/jdbc/reference/gettimestamp-method-sqlserverresultset.md)|Recupera el valor de la columna designada en la fila actual de este [SQLServerResultSet](../../../connect/jdbc/reference/sqlserverresultset-class.md) objeto como un objeto java.sql.Timestamp en el lenguaje de programación Java.|  
-|[getType](../../../connect/jdbc/reference/gettype-method-sqlserverresultset.md)|Recupera el tipo de cursor de [SQLServerResultSet](../../../connect/jdbc/reference/sqlserverresultset-class.md) objeto.|  
+|[GetType](../../../connect/jdbc/reference/gettype-method-sqlserverresultset.md)|Recupera el tipo de cursor de [SQLServerResultSet](../../../connect/jdbc/reference/sqlserverresultset-class.md) objeto.|  
 |[getUnicodeStream](../../../connect/jdbc/reference/getunicodestream-method-sqlserverresultset.md)|Recupera el valor de la columna designada en la fila actual de este [SQLServerResultSet](../../../connect/jdbc/reference/sqlserverresultset-class.md) objeto como una secuencia de caracteres Unicode.|  
 |[getURL](../../../connect/jdbc/reference/geturl-method-sqlserverresultset.md)|Recupera el valor de la columna designada en la fila actual de este [SQLServerResultSet](../../../connect/jdbc/reference/sqlserverresultset-class.md) objeto como un objeto de dirección URL.|  
 |[getWarnings](../../../connect/jdbc/reference/getwarnings-method-sqlserverresultset.md)|Recupera la primera advertencia que notifican las llamadas en el objeto [SQLServerResultSet](../../../connect/jdbc/reference/sqlserverresultset-class.md) objeto.|  
 |[insertRow](../../../connect/jdbc/reference/insertrow-method-sqlserverresultset.md)|Inserta el contenido de la fila de inserción en esto [SQLServerResultSet](../../../connect/jdbc/reference/sqlserverresultset-class.md) objeto y en la base de datos.|  
 |[isAfterLast](../../../connect/jdbc/reference/isafterlast-method-sqlserverresultset.md)|Recupera si el cursor está después de la última fila en esta [SQLServerResultSet](../../../connect/jdbc/reference/sqlserverresultset-class.md) objeto.|  
 |[isBeforeFirst](../../../connect/jdbc/reference/isbeforefirst-method-sqlserverresultset.md)|Recupera si el cursor está antes de la primera fila en esta [SQLServerResultSet](../../../connect/jdbc/reference/sqlserverresultset-class.md) objeto.|  
-|[isClosed](../../../connect/jdbc/reference/isclosed-method-sqlserverresultset.md)|Indica si este [SQLServerResultSet](../../../connect/jdbc/reference/sqlserverresultset-class.md) objeto se ha cerrado.|  
+|[IsClosed](../../../connect/jdbc/reference/isclosed-method-sqlserverresultset.md)|Indica si este [SQLServerResultSet](../../../connect/jdbc/reference/sqlserverresultset-class.md) objeto se ha cerrado.|  
 |[isFirst](../../../connect/jdbc/reference/isfirst-method-sqlserverresultset.md)|Recupera si el cursor está en la primera fila de este [SQLServerResultSet](../../../connect/jdbc/reference/sqlserverresultset-class.md) objeto.|  
 |[isLast](../../../connect/jdbc/reference/islast-method-sqlserverresultset.md)|Recupera si el cursor está en la última fila de esta [SQLServerResultSet](../../../connect/jdbc/reference/sqlserverresultset-class.md) objeto.|  
 |[último](../../../connect/jdbc/reference/last-method-sqlserverresultset.md)|Mueve el cursor a la última fila en esta [SQLServerResultSet](../../../connect/jdbc/reference/sqlserverresultset-class.md) objeto.|  
 |[moveToCurrentRow](../../../connect/jdbc/reference/movetocurrentrow-method-sqlserverresultset.md)|Mueve el cursor a la posición del cursor guardados, normalmente la fila actual.|  
 |[moveToInsertRow](../../../connect/jdbc/reference/movetoinsertrow-method-sqlserverresultset.md)|Mueve el cursor a la fila de inserción.|  
-|[siguiente](../../../connect/jdbc/reference/next-method-sqlserverresultset.md)|Mueve el cursor una fila hacia abajo desde su posición actual.|  
+|[Siguiente](../../../connect/jdbc/reference/next-method-sqlserverresultset.md)|Mueve el cursor una fila hacia abajo desde su posición actual.|  
 |[anterior](../../../connect/jdbc/reference/previous-method-sqlserverresultset.md)|Mueve el cursor a la fila anterior en este [SQLServerResultSet](../../../connect/jdbc/reference/sqlserverresultset-class.md) objeto.|  
 |[refreshRow](../../../connect/jdbc/reference/refreshrow-method-sqlserverresultset.md)|Actualiza la fila actual con el valor más reciente en la base de datos.|  
-|[relativa](../../../connect/jdbc/reference/relative-method-sqlserverresultset.md)|Mueve el cursor a la cantidad dada de filas, con respecto a la fila actual, positivo o una dirección negativa.|  
-|[rowDeleted](../../../connect/jdbc/reference/rowdeleted-method-sqlserverresultset.md)|Recupera si se ha eliminado una fila.|  
+|[relative](../../../connect/jdbc/reference/relative-method-sqlserverresultset.md)|Mueve el cursor a la cantidad dada de filas, con respecto a la fila actual, positivo o una dirección negativa.|  
+|[RowDeleted](../../../connect/jdbc/reference/rowdeleted-method-sqlserverresultset.md)|Recupera si se ha eliminado una fila.|  
 |[rowInserted](../../../connect/jdbc/reference/rowinserted-method-sqlserverresultset.md)|Recupera si la fila actual ha tenido una inserción.|  
-|[rowUpdated](../../../connect/jdbc/reference/rowupdated-method-sqlserverresultset.md)|Recupera si se ha actualizado la fila actual.|  
+|[RowUpdated](../../../connect/jdbc/reference/rowupdated-method-sqlserverresultset.md)|Recupera si se ha actualizado la fila actual.|  
 |[setFetchDirection](../../../connect/jdbc/reference/setfetchdirection-method-sqlserverresultset.md)|Ofrece una sugerencia sobre la dirección en la que las filas en esta [SQLServerResultSet](../../../connect/jdbc/reference/sqlserverresultset-class.md) se procesará el objeto.|  
 |[setFetchSize](../../../connect/jdbc/reference/setfetchsize-method-sqlserverresultset.md)|Ofrece el controlador JDBC una sugerencia sobre el número de filas que se debe capturar desde la base de datos cuando se necesitan más filas para este [SQLServerResultSet](../../../connect/jdbc/reference/sqlserverresultset-class.md) objeto.|  
 |[updateArray](../../../connect/jdbc/reference/updatearray-method-sqlserverresultset.md)|Actualiza la columna designada con un objeto de matriz.|  

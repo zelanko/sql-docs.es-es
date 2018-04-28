@@ -3,7 +3,7 @@ title: Actualizar una aplicación a controlador OLE DB para SQL Server de MDAC |
 description: Actualizar una aplicación a controlador de OLE DB para SQL Server de MDAC
 ms.custom: ''
 ms.date: 03/26/2018
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
 ms.service: ''
 ms.component: oledb|applications
@@ -21,16 +21,18 @@ helpviewer_keywords:
 - OLE DB Driver for SQL Server, updating applications
 author: pmasl
 ms.author: Pedro.Lopes
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 61056a6951176b4257856b114a512f6f81dfc33e
-ms.sourcegitcommit: 9351e8b7b68f599a95fb8e76930ab886db737e5f
-ms.translationtype: MT
+ms.openlocfilehash: d7754d3db286c69245c626f9af018749c38592b5
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
+ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/06/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="updating-an-application-to-ole-db-driver-for-sql-server-from-mdac"></a>Actualizar una aplicación a controlador OLE DB para SQL Server de MDAC
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
+
+[!INCLUDE[Driver_OLEDB_Download](../../../includes/driver_oledb_download.md)]
 
   Hay una serie de diferencias entre el controlador OLE DB para SQL Server y Microsoft Data Access Components (MDAC); a partir de Windows Vista, los componentes de acceso a datos se denominan ahora Windows Data Access Components (o Windows DAC). Aunque ambos proporcionan acceso a datos nativos a [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] bases de datos, controlador de OLE DB para SQL Server se ha diseñado específicamente para exponer las nuevas características de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)], al mismo tiempo, mantener la compatibilidad con versiones anteriores.   
 

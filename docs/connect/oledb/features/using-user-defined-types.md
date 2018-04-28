@@ -3,7 +3,7 @@ title: Usar tipos definidos por el usuario | Documentos de Microsoft
 description: Usar tipos definidos por el usuario con el controlador OLE DB para SQL Server
 ms.custom: ''
 ms.date: 03/26/2018
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
 ms.service: ''
 ms.component: oledb|features
@@ -26,13 +26,13 @@ helpviewer_keywords:
 - ISSCommandWithParameters interface
 author: pmasl
 ms.author: Pedro.Lopes
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: e982746608d6fc6bae25a6f54ee58fee5b9a52a8
-ms.sourcegitcommit: 9351e8b7b68f599a95fb8e76930ab886db737e5f
-ms.translationtype: MT
+ms.openlocfilehash: f21392f638ef2def0bfa14109e1a2fd2b889d9c8
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
+ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/06/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="using-user-defined-types"></a>Usar tipos definidos por el usuario
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -50,15 +50,15 @@ ms.lasthandoff: 04/06/2018
 ### <a name="data-bindings-and-coercions"></a>Enlaces y conversiones de datos  
  En la tabla siguiente se describe el enlace y la conversión que tiene lugar al usar los tipos de datos enumerados con un UDT de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]. Las columnas UDT se exponen a través del controlador de OLE DB para SQL Server como DBTYPE_UDT. Puede obtener metadatos mediante los conjuntos de filas de esquema adecuados, de modo que pueda administrar sus propios tipos definidos como objetos.  
   
-|Tipo de datos|A datos XML<br /><br /> **UDT**|A datos XML<br /><br /> **non-UDT**|Desde datos XML<br /><br /> **UDT**|Desde datos XML<br /><br /> **non-UDT**|  
+|Tipo de datos|A datos XML<br /><br /> **UDT**|A datos XML<br /><br /> **no definido por el usuario**|Desde datos XML<br /><br /> **UDT**|Desde datos XML<br /><br /> **no definido por el usuario**|  
 |---------------|---------------------------|--------------------------------|-----------------------------|----------------------------------|  
-|DBTYPE_UDT|Supported<sup>6</sup>|Error<sup>1</sup>|Supported<sup>6</sup>|Error<sup>5</sup>|  
-|DBTYPE_BYTES|Supported<sup>6</sup>|N/A<sup>2</sup>|Supported<sup>6</sup>|N/A<sup>2</sup>|  
+|DBTYPE_UDT|Admite<sup>6</sup>|Error<sup>1</sup>|Admite<sup>6</sup>|Error<sup>5</sup>|  
+|DBTYPE_BYTES|Admite<sup>6</sup>|N/A<sup>2</sup>|Admite<sup>6</sup>|N/A<sup>2</sup>|  
 |DBTYPE_WSTR|Admite<sup>3,6</sup>|N/A<sup>2</sup>|Admite<sup>4,6</sup>|N/A<sup>2</sup>|  
-|DBTYPE_BSTR|Admite<sup>3,6</sup>|N/A<sup>2</sup>|Supported<sup>4</sup>|N/A<sup>2</sup>|  
+|DBTYPE_BSTR|Admite<sup>3,6</sup>|N/A<sup>2</sup>|Admite<sup>4</sup>|N/A<sup>2</sup>|  
 |DBTYPE_STR|Admite<sup>3,6</sup>|N/A<sup>2</sup>|Admite<sup>4,6</sup>|N/A<sup>2</sup>|  
 |DBTYPE_IUNKNOWN|No compatible|N/A<sup>2</sup>|No compatible|N/A<sup>2</sup>|  
-|DBTYPE_VARIANT (VT_UI1 &#124; VT_ARRAY)|Supported<sup>6</sup>|N/A<sup>2</sup>|Supported<sup>4</sup>|N/A<sup>2</sup>|  
+|DBTYPE_VARIANT (VT_UI1 &#124; VT_ARRAY)|Admite<sup>6</sup>|N/A<sup>2</sup>|Admite<sup>4</sup>|N/A<sup>2</sup>|  
 |DBTYPE_VARIANT (VT_BSTR)|Admite<sup>3,6</sup>|N/A<sup>2</sup>|N/D|N/A<sup>2</sup>|  
   
  <sup>1</sup>si un servidor de tipo distinto de DBTYPE_UDT se especifica con **ICommandWithParameters:: SetParameterInfo** y el tipo de descriptor de acceso es DBTYPE_UDT, se produce un error cuando se ejecuta la instrucción (DB_E_ERRORSOCCURRED; el estado del parámetro es DBSTATUS_E_BADACCESSOR). De lo contrario, los datos se envían al servidor, pero el servidor devuelve un error que indica que no hay ninguna conversión implícita de UDT al tipo de datos del parámetro.  

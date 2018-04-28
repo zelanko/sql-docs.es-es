@@ -1,27 +1,28 @@
 ---
-title: "getSchemas (método) (String, String) | Documentos de Microsoft"
-ms.custom: 
+title: getSchemas (método) (String, String) | Documentos de Microsoft
+ms.custom: ''
 ms.date: 01/19/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: drivers
-ms.service: 
+ms.service: ''
 ms.component: jdbc
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: drivers
-ms.tgt_pltfrm: 
+ms.technology:
+- drivers
+ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: 672171ac-976f-4605-9bee-2a5e141d92cb
-caps.latest.revision: "17"
+caps.latest.revision: 17
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 1309f95e5ccdb95c6cfe2f60fe88bf6b26794fdf
-ms.sourcegitcommit: 2713f8e7b504101f9298a0706bacd84bf2eaa174
-ms.translationtype: MT
+ms.openlocfilehash: d1ae8055502f62d1cb3843f3076b50fc282a8013
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
+ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/18/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="getschemas-method-string-string"></a>Método getSchemas (String, String)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -37,7 +38,7 @@ public ResultSet getSchemas(java.lang.String catalog,
 ```  
   
 #### <a name="parameters"></a>Parámetros  
- *catálogo*  
+ *catalog*  
   
  El nombre de un catálogo en la base de datos. Si es una cadena vacía "", el resultado incluye los esquemas sin un catálogo. Si es **null**, el nombre del catálogo no se utiliza para la búsqueda.  
   

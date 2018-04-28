@@ -3,7 +3,7 @@ title: Controlador OLE DB para SQL Server Support for High Availability, Disaste
 description: Controlador de OLE DB para SQL Server admite alta disponibilidad y recuperación ante desastres
 ms.custom: ''
 ms.date: 04/04/2018
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
 ms.service: ''
 ms.component: oledb|features
@@ -15,13 +15,13 @@ ms.tgt_pltfrm: ''
 ms.topic: reference
 author: pmasl
 ms.author: Pedro.Lopes
-manager: jhubbard
+manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 1c23f1147b525ae35050ee47fe0c6278d03b3181
-ms.sourcegitcommit: 094c46e7fa6de44735ed0040c65a40ec3d951b75
-ms.translationtype: MT
+ms.openlocfilehash: dc6bba3823e1683baa7962bd11889fbaca83dea4
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
+ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/06/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="ole-db-driver-for-sql-server-support-for-high-availability-disaster-recovery"></a>Controlador OLE DB para SQL Server Support for High Availability, Disaster Recovery
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -82,7 +82,7 @@ El controlador OLE DB para SQL Server admite tanto la **ApplicationIntent** y **
   
 Las dos palabras clave de cadena de conexión de OLE DB se agregaron para admitir [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] en el controlador OLE DB para SQL Server:  
   
--   **ApplicationIntent** 
+-   **Intención de aplicaciones** 
 -   **MultiSubnetFailover**  
   
  Para obtener más información sobre las palabras clave de cadena de conexión en el controlador de OLE DB para SQL Server, vea [Using Connection String Keywords con controlador OLE DB para SQL Server](../../oledb/applications/using-connection-string-keywords-with-oledb-driver-for-sql-server.md).  
@@ -103,7 +103,7 @@ Un controlador de OLE DB para la aplicación de SQL Server puede utilizar uno de
  -   **IDataInitialize:: GetDatasource**  
  **IDataInitialize::GetDataSource** toma una cadena de conexión de entrada que puede contener la palabra clave **Application Intent**.  
   
- -   **IDBProperties::SetProperties**  
+ -   **IDBProperties:: SetProperties**  
  Para establecer el valor de la propiedad **ApplicationIntent**, llame a **IDBProperties::SetProperties** pasando la propiedad **SSPROP_INIT_APPLICATIONINTENT** con valor "**ReadWrite**" o "**ReadOnly**" o la propiedad **DBPROP_INIT_PROVIDERSTRING** con el valor que contiene "**ApplicationIntent=ReadOnly**" o "**ApplicationIntent=ReadWrite**".  
   
 Puede especificar la intención de aplicaciones en el campo Propiedades de intención de aplicaciones de la pestaña Todo del cuadro de diálogo **Propiedades de vínculo de datos**.  
@@ -126,7 +126,7 @@ Un controlador de OLE DB para la aplicación de SQL Server puede utilizar uno de
  -   **IDataInitialize:: GetDatasource**  
  **IDataInitialize:: GetDatasource** toma una cadena de conexión de entrada que puede contener el **MultiSubnetFailover** palabra clave.  
 
--   **IDBProperties::SetProperties**  
+-   **IDBProperties:: SetProperties**  
 Para establecer el **MultiSubnetFailover** valor de propiedad, llamada **IDBProperties:: SetProperties** pasando el **SSPROP_INIT_MULTISUBNETFAILOVER** propiedad con el valor  **VARIANT_TRUE** o **VARIANT_FALSE** o **DBPROP_INIT_PROVIDERSTRING** propiedad con el valor "**MultiSubnetFailover = Yes** "o"**MultiSubnetFailover = No**".
 
 #### <a name="example"></a>Ejemplo

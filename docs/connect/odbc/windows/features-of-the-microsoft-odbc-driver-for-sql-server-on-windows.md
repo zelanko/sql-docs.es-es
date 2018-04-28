@@ -1,27 +1,28 @@
 ---
-title: "Características de Microsoft ODBC Driver for SQL Server en Windows | Documentos de Microsoft"
-ms.custom: 
+title: Características de Microsoft ODBC Driver for SQL Server en Windows | Documentos de Microsoft
+ms.custom: ''
 ms.date: 01/19/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: drivers
-ms.service: 
+ms.service: ''
 ms.component: odbc
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: drivers
-ms.tgt_pltfrm: 
+ms.technology:
+- drivers
+ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: 76326eeb-1144-4b9f-85db-50524c655d30
-caps.latest.revision: "22"
+caps.latest.revision: 22
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 204b8ba3c81bae77c6a663e93f2b541c8aca0727
-ms.sourcegitcommit: 2713f8e7b504101f9298a0706bacd84bf2eaa174
-ms.translationtype: MT
+ms.openlocfilehash: 3ed744446edb7141a8a4b3b970ad7ec866dea794
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
+ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/18/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="features-of-the-microsoft-odbc-driver-for-sql-server-on-windows"></a>Características de Microsoft ODBC Driver for SQL Server en Windows
 [!INCLUDE[Driver_ODBC_Download](../../../includes/driver_odbc_download.md)]
@@ -49,7 +50,7 @@ La opción – l Especifica el número de segundos antes de que un `bcp.exe` ini
 ODBC Driver for [!INCLUDE[ssNoVersion](../../../includes/ssnoversion_md.md)] admite [agrupación de conexiones dependientes del controlador](http://msdn.microsoft.com/library/hh405031(VS.85).aspx). Para obtener más información, consulte [Driver-Aware Connection Pooling in the ODBC Driver for SQL Server](../../../connect/odbc/windows/driver-aware-connection-pooling-in-the-odbc-driver-for-sql-server.md).  
   
 ### <a name="asynchronous-execution-notification-method"></a>Ejecución asincrónica (método de notificación)  
-ODBC Driver for [!INCLUDE[ssNoVersion](../../../includes/ssnoversion_md.md)] admite [ejecución asincrónica (método de notificación)](http://msdn.microsoft.com/library/hh405038(VS.85).aspx). Para obtener un ejemplo de uso, consulte [ejecución asincrónica &#40; Método de notificación &#41; Ejemplo](../../../connect/odbc/windows/asynchronous-execution-notification-method-sample.md).  
+ODBC Driver for [!INCLUDE[ssNoVersion](../../../includes/ssnoversion_md.md)] admite [ejecución asincrónica (método de notificación)](http://msdn.microsoft.com/library/hh405038(VS.85).aspx). Para obtener un ejemplo de uso, consulte [ejecución asincrónica &#40;método de notificación&#41; ejemplo](../../../connect/odbc/windows/asynchronous-execution-notification-method-sample.md).  
   
 ### <a name="connection-resiliency"></a>Resistencia de conexión
 Para garantizar que las aplicaciones permanecen conectadas a una base de datos SQL de Microsoft Azure, el controlador ODBC de Windows puede restaurar conexiones inactivas. Para obtener más información, consulte [Connection Resiliency in the Windows ODBC Driver](../../../connect/odbc/windows/connection-resiliency-in-the-windows-odbc-driver.md).  
@@ -58,7 +59,7 @@ Para garantizar que las aplicaciones permanecen conectadas a una base de datos S
 
 En [!INCLUDE[ssNoVersion](../../../includes/ssnoversion_md.md)] Native Client, el `-y0` opción `sqlcmd.exe` hace que la salida se trunque en 1 MB si el ancho de pantalla es 0.
   
-A partir de la versión ODBC Driver 11 para [!INCLUDE[ssNoVersion](../../../includes/ssnoversion_md.md)], no hay ningún límite en la cantidad de datos que se pueden recuperar en una sola columna cuando `–y0` se especifica. `sqlcmd.exe`Ahora transmite columnas tan grandes como 2 GB ([!INCLUDE[ssNoVersion](../../../includes/ssnoversion_md.md)] máximo del tipo de datos).  
+A partir de la versión ODBC Driver 11 para [!INCLUDE[ssNoVersion](../../../includes/ssnoversion_md.md)], no hay ningún límite en la cantidad de datos que se pueden recuperar en una sola columna cuando `–y0` se especifica. `sqlcmd.exe` Ahora transmite columnas tan grandes como 2 GB ([!INCLUDE[ssNoVersion](../../../includes/ssnoversion_md.md)] máximo del tipo de datos).  
   
 Otra diferencia es que si se especifica tanto `-h` y `-y0` ahora produce un error notificando que las opciones son incompatibles. `-h`, que especifica el número de filas que se va a imprimir entre los encabezados de columna y nunca ha sido compatible con `-y0`, se omitió aunque se imprimiera ningún encabezado.
   

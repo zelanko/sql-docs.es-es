@@ -1,28 +1,28 @@
 ---
-title: "Requisitos del sistema, instalación y archivos de controlador | Documentos de Microsoft"
-ms.custom: 
+title: Requisitos del sistema, instalación y archivos de controlador | Documentos de Microsoft
+ms.custom: ''
 ms.date: 02/14/2018
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: drivers
-ms.service: 
+ms.service: ''
 ms.component: odbc
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - drivers
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: d90fa182-1dab-4d6f-bd85-a04dd1479986
-caps.latest.revision: 
+caps.latest.revision: 26
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 8e23264905c2a8b706b32a906d7dbf2dc3dd165b
-ms.sourcegitcommit: 8e897b44a98943dce0f7129b1c7c0e695949cc3b
-ms.translationtype: MT
+ms.openlocfilehash: 7a6ce94207d79c58c5d615be723b3d44d69cdaf9
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
+ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/21/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="system-requirements-installation-and-driver-files"></a>Requisitos del sistema, instalación y archivos del controlador
 [!INCLUDE[Driver_ODBC_Download](../../../includes/driver_odbc_download.md)]
@@ -103,7 +103,7 @@ Por ejemplo, cuando se compila una aplicación ODBC con `msodbcsql11.lib` y `mso
 |msodbcsql17.dll o <br> msodbcsql13.dll o <br> msodbcsql11.dll|El archivo de biblioteca de vínculos dinámicos (DLL) que contiene toda la funcionalidad del controlador. Este archivo está instalado en % SYSTEMROOT%\System32.|  
 |msodbcdiag17.dll o <br> msodbcdiag13.dll o <br> msodbcdiag11.dll|El archivo de biblioteca de vínculos dinámicos (DLL) que contiene la interfaz de diagnósticos (seguimiento) del controlador. Este archivo está instalado en % SYSTEMROOT%\System32.|
 |msodbcsqlr17.rll o <br> msodbcsqlr13.rll o <br> msodbcsqlr11.rll|El archivo de recursos asociado de la biblioteca de controladores. Este archivo está instalado en % SYSTEMROOT%\System32\1033.| 
-|s13ch_msodbcsql.chm or <br> s11ch_msodbcsql.chm |El archivo de Ayuda del Asistente para orígenes de datos que documenta cómo crear un origen de datos para el controlador. Este archivo se instala en %SYSTEMROOT%\System32\1033 <br /> <br /> **Nota:** no hay ningún archivo chm para 17 del controlador ODBC. |  
+|s13ch_msodbcsql.chm o <br> s11ch_msodbcsql.chm |El archivo de Ayuda del Asistente para orígenes de datos que documenta cómo crear un origen de datos para el controlador. Este archivo se instala en %SYSTEMROOT%\System32\1033 <br /> <br /> **Nota:** no hay ningún archivo chm para 17 del controlador ODBC. |  
 |msodbcsql.h|El archivo de encabezado que contiene todas las definiciones nuevas necesarias para usar el controlador.<br /><br /> **Nota:**  No se puede hacer referencia a msodbcsql.h y odbcss.h en el mismo programa.<br /><br /> msodbcsql.h de 17 del controlador de ODBC o 13 está instalado en %PROGRAMFILES%\Microsoft SQL Server\Client SDK\ODBC\130\SDK. <br /> msodbcsql.h para ODBC Driver 11 se instala en %PROGRAMFILES%\Microsoft SQL Server\Client SDK\ODBC\110\SDK.| 
 |msodbcsql17.lib o <br> msodbcsql13.lib o <br> msodbcsql11.lib|El archivo de biblioteca necesario para llamar a la **bcp** funciones de utilidad que forman parte del controlador.<br /><br /> **Nota:** si hace referencia a este archivo de biblioteca en el programa, asegúrese de que está en la ruta del sistema y en la ruta de acceso de sistema de los usuarios que usen la aplicación.<br /><br /> msodbcsql17.lib o msodbcsql13.lib está instalado en %PROGRAMFILES%\Microsoft SQL Server\Client SDK\ODBC\130\SDK.<br /> msodbcsql11.lib está instalado en %PROGRAMFILES%\Microsoft SQL Server\Client SDK\ODBC\110\SDK.|
 

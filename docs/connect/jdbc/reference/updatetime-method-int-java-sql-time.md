@@ -1,30 +1,33 @@
 ---
-title: "Método updateTime (int, java.sql.Time) | Documentos de Microsoft"
-ms.custom: 
+title: Método updateTime (int, java.sql.Time) | Documentos de Microsoft
+ms.custom: ''
 ms.date: 01/19/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: drivers
-ms.service: 
+ms.service: ''
 ms.component: jdbc
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: drivers
-ms.tgt_pltfrm: 
+ms.technology:
+- drivers
+ms.tgt_pltfrm: ''
 ms.topic: article
-apiname: SQLServerResultSet.updateTime (int, java.sql.Time)
-apilocation: sqljdbc.jar
+apiname:
+- SQLServerResultSet.updateTime (int, java.sql.Time)
+apilocation:
+- sqljdbc.jar
 apitype: Assembly
 ms.assetid: fa7a3ca5-1111-4480-97ca-65b632aa1e5b
-caps.latest.revision: "19"
+caps.latest.revision: 19
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 345d7146ffec61068f97aa3581b39c6b9434f32f
-ms.sourcegitcommit: 2713f8e7b504101f9298a0706bacd84bf2eaa174
-ms.translationtype: MT
+ms.openlocfilehash: dca763b48c5efd27a501f0232fa5891b5399117c
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
+ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/18/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="updatetime-method-int-javasqltime"></a>Método updateTime (int, java.sql.Time)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -40,7 +43,7 @@ public void updateTime(int index,
 ```  
   
 #### <a name="parameters"></a>Parámetros  
- *índice*  
+ *index*  
   
  Un **int** que indica el índice de columna.  
   
@@ -55,7 +58,7 @@ public void updateTime(int index,
  Este método updateTime especificado por el método updateTime en la interfaz java.sql.ResultSet.  
   
 ## <a name="see-also"></a>Vea también  
- [Método updateTime &#40; SQLServerResultSet &#41;](../../../connect/jdbc/reference/updatetime-method-sqlserverresultset.md)   
+ [Método updateTime &#40;SQLServerResultSet&#41;](../../../connect/jdbc/reference/updatetime-method-sqlserverresultset.md)   
  [Miembros de SQLServerResultSet](../../../connect/jdbc/reference/sqlserverresultset-members.md)   
  [Clase SQLServerResultSet](../../../connect/jdbc/reference/sqlserverresultset-class.md)  
   

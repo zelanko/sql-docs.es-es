@@ -1,27 +1,28 @@
 ---
 title: Solucionar problemas de conectividad | Documentos de Microsoft
-ms.custom: 
+ms.custom: ''
 ms.date: 01/19/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: drivers
-ms.service: 
+ms.service: ''
 ms.component: jdbc
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: drivers
-ms.tgt_pltfrm: 
+ms.technology:
+- drivers
+ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: bfba0b49-2e1f-411d-a625-d25fad9ea12d
-caps.latest.revision: "23"
+caps.latest.revision: 23
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 1566b30797b45a0eaa40491658f4fc3381c683f9
-ms.sourcegitcommit: 2713f8e7b504101f9298a0706bacd84bf2eaa174
-ms.translationtype: MT
+ms.openlocfilehash: b213cb9d2a3527b967afef5dc28aa11d82fd0f9d
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
+ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/18/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="troubleshooting-connectivity"></a>Solución de los problemas de conectividad
 [!INCLUDE[Driver_JDBC_Download](../../includes/driver_jdbc_download.md)]
@@ -32,7 +33,7 @@ ms.lasthandoff: 11/18/2017
   
 -   TCP/IP no está habilitada para [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)], o el número de servidor o el puerto especificado no es correcto. Compruebe que [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] esté escuchando con TCP/IP en el servidor especificado y el puerto. Esto se puede notificar con una excepción similar a: "Error al establecer la conexión. Error al establecer la conexión de TCP/IP con el host". Esto indica una de las siguientes causas:  
   
-    -   [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]se instala pero no ha instalado TCP/IP como protocolo de red para [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] mediante el uso de la [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] utilidad de red para [!INCLUDE[ssVersion2000](../../includes/ssversion2000_md.md)], o la [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] Configuration Manager para [!INCLUDE[ssVersion2005](../../includes/ssversion2005_md.md)] y versiones posteriores.  
+    -   [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] se instala pero no ha instalado TCP/IP como protocolo de red para [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] mediante el uso de la [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] utilidad de red para [!INCLUDE[ssVersion2000](../../includes/ssversion2000_md.md)], o la [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] Configuration Manager para [!INCLUDE[ssVersion2005](../../includes/ssversion2005_md.md)] y versiones posteriores.  
   
     -   TCP/IP se instala como un [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] protocolo, pero no está escuchando en el puerto especificado en la dirección URL de conexión de JDBC. El puerto predeterminado es 1433, pero [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] se puede configurar durante la instalación del producto para escuchar en cualquier puerto. Asegúrese de que [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] está escuchando en el puerto 1433. O, si se ha cambiado el puerto, asegúrese de que el puerto especificado en la URL de conexión de JDBC coincide con el puerto modificado. Para obtener más información sobre las URL de conexión de JDBC, consulte [generar URL de conexión](../../connect/jdbc/building-the-connection-url.md).  
   

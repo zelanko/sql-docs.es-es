@@ -1,30 +1,33 @@
 ---
-title: "Método getColumns (SQLServerDatabaseMetaData) | Documentos de Microsoft"
-ms.custom: 
+title: Método getColumns (SQLServerDatabaseMetaData) | Documentos de Microsoft
+ms.custom: ''
 ms.date: 01/19/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: drivers
-ms.service: 
+ms.service: ''
 ms.component: jdbc
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: drivers
-ms.tgt_pltfrm: 
+ms.technology:
+- drivers
+ms.tgt_pltfrm: ''
 ms.topic: article
-apiname: SQLServerDatabaseMetaData.getColumns
-apilocation: sqljdbc.jar
+apiname:
+- SQLServerDatabaseMetaData.getColumns
+apilocation:
+- sqljdbc.jar
 apitype: Assembly
 ms.assetid: f173fa5d-e114-4a37-a5c4-2baad9ff3af1
-caps.latest.revision: "39"
+caps.latest.revision: 39
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 8d13702e93a5979c53a9bf8fa7e6d7beec161f83
-ms.sourcegitcommit: 2713f8e7b504101f9298a0706bacd84bf2eaa174
-ms.translationtype: MT
+ms.openlocfilehash: 7d6b0df43a82b288f475c1325c66670cf6290933
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
+ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/18/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="getcolumns-method-sqlserverdatabasemetadata"></a>Método getColumns (SQLServerDatabaseMetaData)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -42,11 +45,11 @@ public java.sql.ResultSet getColumns(java.lang.String catalog,
 ```  
   
 #### <a name="parameters"></a>Parámetros  
- *catálogo*  
+ *catalog*  
   
  A **cadena** que contiene el nombre del catálogo.  
   
- *esquema*  
+ *schema*  
   
  A **cadena** que contiene el patrón de nombre de esquema.  
   
@@ -110,14 +113,14 @@ public java.sql.ResultSet getColumns(java.lang.String catalog,
   
  La columna DATA_TYPE tiene los cambios siguientes:  
   
-|[!INCLUDE[ssNoVersion](../../../includes/ssnoversion_md.md)]Tipo de datos|Tipo devuelto en el controlador JDBC 2.0 (o si está conectado a [!INCLUDE[ssVersion2005](../../../includes/ssversion2005_md.md)]) y constante numérica asociada|Tipo de valor devuelto en el controlador JDBC 3.0 cuando se conecta a [!INCLUDE[ssKatmai](../../../includes/sskatmai_md.md)] o posterior|  
+|[!INCLUDE[ssNoVersion](../../../includes/ssnoversion_md.md)] Tipo de datos|Tipo devuelto en el controlador JDBC 2.0 (o si está conectado a [!INCLUDE[ssVersion2005](../../../includes/ssversion2005_md.md)]) y constante numérica asociada|Tipo de valor devuelto en el controlador JDBC 3.0 cuando se conecta a [!INCLUDE[ssKatmai](../../../includes/sskatmai_md.md)] o posterior|  
 |-------------------------------------------------------------------|----------------------------------------------------------------------------------------------------------------------------------------------------|-------------------------------------------------------------------------------------------------------------|  
 |tipo definido por el usuario mayor que 8 KB|LONGVARBINARY (-4)|VARBINARY (-3)|  
 |geography|LONGVARBINARY (-4)|VARBINARY (-3)|  
 |geometry|LONGVARBINARY (-4)|VARBINARY (-3)|  
 |varbinary(max)|LONGVARBINARY (-4)|VARBINARY (-3)|  
 |nvarchar(max)|LONGVARCHAR (-1) o LONGNVARCHAR (JDBC 4) (-16)|VARCHAR (12) o NVARCHAR (JDBC 4) (-9)|  
-|varchar(max)|LONGVARCHAR (-1)|VARCHAR (12)|  
+|ntext|LONGVARCHAR (-1)|VARCHAR (12)|  
 |time|VARCHAR (12) o NVARCHAR (JDBC 4) (-9)|TIME (-154)|  
 |date|VARCHAR (12) o NVARCHAR (JDBC 4) (-9)|DATE (91)|  
 |datetime2|VARCHAR (12) o NVARCHAR (JDBC 4) (-9)|TIMESTAMP (93)|  
@@ -125,7 +128,7 @@ public java.sql.ResultSet getColumns(java.lang.String catalog,
   
  La columna COLUMN_SIZE tiene los siguientes cambios:  
   
-|[!INCLUDE[ssNoVersion](../../../includes/ssnoversion_md.md)]Tipo de datos|Tipo devuelto en el controlador JDBC 2.0|Tipo devuelto en el controlador JDBC 3.0|  
+|[!INCLUDE[ssNoVersion](../../../includes/ssnoversion_md.md)] Tipo de datos|Tipo devuelto en el controlador JDBC 2.0|Tipo devuelto en el controlador JDBC 3.0|  
 |-------------------------------------------------------------------|------------------------------------|------------------------------------|  
 |nvarchar(max)|1073741823|2147483647 (metadatos de base de datos)|  
 |xml|1073741823|2147483647 (metadatos de base de datos)|  
@@ -137,15 +140,15 @@ public java.sql.ResultSet getColumns(java.lang.String catalog,
   
  La columna BUFFER_LENGTH tiene el siguiente cambio:  
   
-|[!INCLUDE[ssNoVersion](../../../includes/ssnoversion_md.md)]Tipo de datos|Tipo devuelto en el controlador JDBC 2.0|Tipo devuelto en el controlador JDBC 3.0|  
+|[!INCLUDE[ssNoVersion](../../../includes/ssnoversion_md.md)] Tipo de datos|Tipo devuelto en el controlador JDBC 2.0|Tipo devuelto en el controlador JDBC 3.0|  
 |-------------------------------------------------------------------|------------------------------------|------------------------------------|  
 |tipo definido por el usuario mayor que 8 KB||2147483647|  
   
  La columna TYPE_NAME tiene los siguientes cambios:  
   
-|[!INCLUDE[ssNoVersion](../../../includes/ssnoversion_md.md)]Tipo de datos|Tipo devuelto en el controlador JDBC 2.0|Tipo devuelto en el controlador JDBC 3.0|  
+|[!INCLUDE[ssNoVersion](../../../includes/ssnoversion_md.md)] Tipo de datos|Tipo devuelto en el controlador JDBC 2.0|Tipo devuelto en el controlador JDBC 3.0|  
 |-------------------------------------------------------------------|------------------------------------|------------------------------------|  
-|varchar(max)|texto|varchar|  
+|ntext|texto|varchar|  
 |varbinary(max)|imagen|varbinary|  
   
  La columna DECIMAL_DIGITS tiene los siguientes cambios:  
@@ -159,9 +162,9 @@ public java.sql.ResultSet getColumns(java.lang.String catalog,
   
  La columna SQL_DATA_TYPE tiene los siguientes cambios:  
   
-|[!INCLUDE[ssNoVersion](../../../includes/ssnoversion_md.md)]Tipo de datos|[!INCLUDE[ssNoVersion](../../../includes/ssnoversion_md.md)]Valor de datos de 2008 en el controlador JDBC 2.0|[!INCLUDE[ssNoVersion](../../../includes/ssnoversion_md.md)]Valor de datos de 2008 en el controlador JDBC 3.0|  
+|[!INCLUDE[ssNoVersion](../../../includes/ssnoversion_md.md)] Tipo de datos|[!INCLUDE[ssNoVersion](../../../includes/ssnoversion_md.md)] Valor de datos de 2008 en el controlador JDBC 2.0|[!INCLUDE[ssNoVersion](../../../includes/ssnoversion_md.md)] Valor de datos de 2008 en el controlador JDBC 3.0|  
 |-------------------------------------------------------------------|--------------------------------------------------------------------------------------------|--------------------------------------------------------------------------------------------|  
-|varchar(max)|-10|-9|  
+|ntext|-10|-9|  
 |nvarchar(max)|-1|-9|  
 |xml|-10|-152|  
 |tipo definido por el usuario menor o igual que 8 KB|-3|-151|  

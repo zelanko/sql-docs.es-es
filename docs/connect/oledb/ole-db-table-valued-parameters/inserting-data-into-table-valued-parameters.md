@@ -3,7 +3,7 @@ title: Insertar datos en parámetros con valores de tabla | Documentos de Micros
 description: Usar el controlador OLE DB para SQL Server para insertar datos en parámetros con valores de tabla
 ms.custom: ''
 ms.date: 03/26/2018
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
 ms.service: ''
 ms.component: ole-db-table-valued-parameters
@@ -17,13 +17,13 @@ helpviewer_keywords:
 - table-valued parameters, inserting data into
 author: pmasl
 ms.author: Pedro.Lopes
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: c0235f4652b21e81efba02b20a94604587ccab57
-ms.sourcegitcommit: 9351e8b7b68f599a95fb8e76930ab886db737e5f
-ms.translationtype: MT
+ms.openlocfilehash: 33a7b1deb545e5c5e124dbd0244f71ac518a1f1d
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
+ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/06/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="inserting-data-into-table-valued-parameters"></a>Insertar datos en parámetros con valores de tabla
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -57,15 +57,15 @@ ms.lasthandoff: 04/06/2018
   
  Para usar el modelo de extracción, los consumidores deben proporcionar su propia implementación de un objeto de conjunto de filas. Cuando se usa el modelo de extracción con conjuntos de filas de parámetro con valores de tabla (CLSID_ROWSET_TVP), el consumidor se debe agregar el objeto de conjunto de filas de parámetro con valores de tabla que el proveedor expone a través de la ITableDefinitionWithConstraints:: Método CreateTableWithConstraints o el método IOpenRowset:: OpenRowset. Solo se espera que el objeto de consumidor invalide la implementación de la interfaz IRowset. Debe invalidar las funciones siguientes:  
   
--   IRowset::GetNextRows  
+-   IRowset:: GetNextRows  
   
 -   IRowset::AddRefRows  
   
--   IRowset::GetData  
+-   IRowset:: GetData  
   
 -   IRowset::ReleaseRows  
   
--   IRowset::RestartPosition  
+-   IRowset:: RestartPosition  
   
  Controlador de OLE DB para SQL Server leerá una o más filas a la vez del consumidor de objeto de conjunto de filas para admitir el comportamiento de transmisión por secuencias en parámetros con valores de tabla. Por ejemplo, el usuario podría tener los datos del conjunto de filas de parámetro con valores de tabla en el disco (no en memoria) y puede implementar la funcionalidad para leer los datos desde el disco cuando sea necesario por el controlador OLE DB para SQL Server.  
   

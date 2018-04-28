@@ -1,27 +1,28 @@
 ---
 title: 'Paso 1: Configurar el entorno de desarrollo de Python pymssql | Documentos de Microsoft'
-ms.custom: 
+ms.custom: ''
 ms.date: 01/19/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: drivers
-ms.service: 
+ms.service: ''
 ms.component: python
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: drivers
-ms.tgt_pltfrm: 
+ms.technology:
+- drivers
+ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: 6d392a5e-b08e-4b35-9e99-61260888fc41
-caps.latest.revision: "7"
+caps.latest.revision: 7
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Active
-ms.openlocfilehash: 91916f56a4bbdad46c7fc391257c4575886c28dc
-ms.sourcegitcommit: 2713f8e7b504101f9298a0706bacd84bf2eaa174
-ms.translationtype: MT
+ms.openlocfilehash: 73ebcc99421ef0afcc15d13241c6fb6ffffd10c9
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
+ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/18/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="step-1-configure-development-environment-for-pymssql-python-development"></a>Paso 1: Configurar el entorno de desarrollo para pymssql desarrollo Python
 Debe configurar el entorno de desarrollo con los requisitos previos para desarrollar una aplicación con el controlador Python para SQL Server.    
@@ -31,8 +32,8 @@ Tenga en cuenta que los controladores de SQL de Python utilizan el protocolo TDS
 ## <a name="windows"></a>Windows  
   
 1. **Instalar en tiempo de ejecución de Python y pip Administrador de paquetes**  
-a. Vaya a [python.org](https://www.python.org/downloads/)  
-b. Haga clic en el vínculo apropiado de msi de instalador de Windows.   
+A. Vaya a [python.org](https://www.python.org/downloads/)  
+B. Haga clic en el vínculo apropiado de msi de instalador de Windows.   
 c. Ejecutar una vez descargado el archivo msi para instalar en tiempo de ejecución de Python  
   
 2. **Descargar el módulo de pymssql** de [aquí](http://www.lfd.uci.edu/~gohlke/pythonlibs/#pymssql)  
@@ -68,8 +69,8 @@ c. Ejecutar una vez descargado el archivo msi para instalar en tiempo de ejecuci
 ## <a name="mac"></a>Mac  
   
 1. **Instalar en tiempo de ejecución de Python y pip Administrador de paquetes**  
-a. Vaya a [python.org](https://www.python.org/downloads/)  
-b. Haga clic en el vínculo apropiado de pkg de instalador de Mac.   
+A. Vaya a [python.org](https://www.python.org/downloads/)  
+B. Haga clic en el vínculo apropiado de pkg de instalador de Mac.   
 c. Ejecutar una vez descargado el paquete para instalar en tiempo de ejecución de Python  
   
 2.  **Abra terminal**  

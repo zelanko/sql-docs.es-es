@@ -19,7 +19,7 @@ manager: craigg
 ms.workload: Inactive
 ms.openlocfilehash: 59fef29133e271c62b459dbb9a1f9ffa8d2c51fe
 ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
-ms.translationtype: MTE
+ms.translationtype: HT
 ms.contentlocale: es-ES
 ms.lasthandoff: 04/16/2018
 ---
@@ -28,7 +28,7 @@ ms.lasthandoff: 04/16/2018
 
   Controlador de OLE DB para SQL Server agrega la columna DBCOLUMN_BASETABLEINSTANCE a IColumnsRowset:: Getcolumnrowset. Esta columna devuelve DBTYPE_I2 y está reservada para su uso por parte de Microsoft. La información de esta columna está sujeta a cambios en versiones futuras.  
   
-## <a name="see-also"></a>Ver también  
- [Interfaces &#40;OLE DB&#41;](../../oledb/ole-db-interfaces/oledb-driver-for-sql-server-ole-db-interfaces.md) 
+## <a name="see-also"></a>Vea también  
+ [Interfaces & #40; OLE DB & #41;](../../oledb/ole-db-interfaces/oledb-driver-for-sql-server-ole-db-interfaces.md) 
   
   

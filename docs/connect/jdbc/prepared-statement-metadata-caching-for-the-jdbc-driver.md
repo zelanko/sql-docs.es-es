@@ -1,28 +1,28 @@
 ---
-title: "Preparado para el controlador JDBC el almacenamiento en caché de metadatos de instrucción | Documentos de Microsoft"
-ms.custom: 
+title: Preparado para el controlador JDBC el almacenamiento en caché de metadatos de instrucción | Documentos de Microsoft
+ms.custom: ''
 ms.date: 01/19/2018
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: drivers
-ms.service: 
+ms.service: ''
 ms.component: jdbc
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - drivers
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
-ms.assetid: 
-caps.latest.revision: 
+ms.assetid: ''
+caps.latest.revision: 1
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 13d4c0766552d9472038ffe7f2ff7fed6d73584d
-ms.sourcegitcommit: 9d0467265e052b925547aafaca51e5a5e93b7e38
-ms.translationtype: MT
+ms.openlocfilehash: eb093c9102cbafde8e43fc69f2860831634bfee5
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
+ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/02/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="prepared-statement-metadata-caching-for-the-jdbc-driver"></a>Almacenamiento en caché para el controlador JDBC de metadatos de instrucción preparada
 [!INCLUDE[Driver_JDBC_Download](../../includes/driver_jdbc_download.md)]
@@ -48,7 +48,7 @@ Un cambio más introducido de 6.1.6-preview es que, antes de esto, controlador s
 |-----------|-----------------|  
 |int getDiscardedServerPreparedStatementCount()|Devuelve el número de pendientes actualmente preparada acciones de cancelación de preparación de instrucción.|
 |void closeUnreferencedPreparedStatementHandles()|Fuerza a las solicitudes de unprepare para cualquier instrucción preparada descartados pendientes que se ejecute.|
-|boolean getEnablePrepareOnFirstPreparedStatementCall()|Devuelve el comportamiento de una instancia de conexión específica. Si es false la primera ejecución y llama a sp_executesql no prepara una instrucción, una vez que la segunda ejecución ocurre llama sp_prepexec y un identificador de instrucción preparada realmente de la instalación. Después de las ejecuciones llamadas sp_execute. Esto evita la necesidad de sp_unprepare en la instrucción preparada cierre si la instrucción solo se ejecuta una vez. El valor predeterminado de esta opción se puede cambiar por setDefaultEnablePrepareOnFirstPreparedStatementCall() que realiza la llamada.|
+|booleano getEnablePrepareOnFirstPreparedStatementCall()|Devuelve el comportamiento de una instancia de conexión específica. Si es false la primera ejecución y llama a sp_executesql no prepara una instrucción, una vez que la segunda ejecución ocurre llama sp_prepexec y un identificador de instrucción preparada realmente de la instalación. Después de las ejecuciones llamadas sp_execute. Esto evita la necesidad de sp_unprepare en la instrucción preparada cierre si la instrucción solo se ejecuta una vez. El valor predeterminado de esta opción se puede cambiar por setDefaultEnablePrepareOnFirstPreparedStatementCall() que realiza la llamada.|
 |void setEnablePrepareOnFirstPreparedStatementCall(boolean value)|Especifica el comportamiento de una instancia de conexión específica. Si el valor es false la primera ejecución y llama a sp_executesql no prepara una instrucción, una vez que la segunda ejecución ocurre llama sp_prepexec y un identificador de instrucción preparada realmente de la instalación. Después de las ejecuciones llamadas sp_execute. Esto evita la necesidad de sp_unprepare en la instrucción preparada cierre si la instrucción solo se ejecuta una vez.|
 |int getServerPreparedStatementDiscardThreshold()|Devuelve el comportamiento de una instancia de conexión específica. Esta configuración controla cuántas pendientes preparado descarte instrucción acciones (sp_unprepare) pueden estar pendientes por conexión antes de que se ejecuta una llamada para limpiar los controladores pendientes en el servidor. Si el valor es < = 1, cancelación de preparación de las acciones se ejecutan inmediatamente en cierre la instrucción preparada. Si se establece en {@literal >} 1, estas llamadas se procesan por lotes juntos para evitar una sobrecarga de sp_unprepare que realiza la llamada con demasiada frecuencia. El valor predeterminado de esta opción se puede cambiar por getDefaultServerPreparedStatementDiscardThreshold() que realiza la llamada.|
 |void setServerPreparedStatementDiscardThreshold(int value)|Especifica el comportamiento de una instancia de conexión específica. Esta configuración controla cuántas pendientes preparado descarte instrucción acciones (sp_unprepare) pueden estar pendientes por conexión antes de que se ejecuta una llamada para limpiar los controladores pendientes en el servidor. Si el valor es < = 1 unprepare acciones se ejecutan inmediatamente en cierre la instrucción preparada. Si se establece en 1 > estas llamadas se procesan por lotes juntos para evitar una sobrecarga de la llamada a sp_unprepare con demasiada frecuencia.|
@@ -58,7 +58,7 @@ Un cambio más introducido de 6.1.6-preview es que, antes de esto, controlador s
 |Nuevo método|Description|  
 |-----------|-----------------|  
 |void setEnablePrepareOnFirstPreparedStatementCall(boolean enablePrepareOnFirstPreparedStatementCall)|Si esta configuración es false la primera ejecución de una instrucción preparada y llama a sp_executesql no prepara una instrucción, una vez que la segunda ejecución ocurre llama sp_prepexec y un identificador de instrucción preparada realmente de la instalación. Después de las ejecuciones llamadas sp_execute. Esto evita la necesidad de sp_unprepare en la instrucción preparada cierre si la instrucción solo se ejecuta una vez.|
-|boolean getEnablePrepareOnFirstPreparedStatementCall()|Si esta configuración se devuelve false la primera ejecución de una instrucción preparada llama a sp_executesql y no prepara una instrucción, una vez que se produce la segunda ejecución, llama a sp_prepexec y un identificador de instrucción preparada realmente de la instalación. Después de las ejecuciones llamadas sp_execute. Esto evita la necesidad de sp_unprepare en la instrucción preparada cierre si la instrucción solo se ejecuta una vez.|
+|booleano getEnablePrepareOnFirstPreparedStatementCall()|Si esta configuración se devuelve false la primera ejecución de una instrucción preparada llama a sp_executesql y no prepara una instrucción, una vez que se produce la segunda ejecución, llama a sp_prepexec y un identificador de instrucción preparada realmente de la instalación. Después de las ejecuciones llamadas sp_execute. Esto evita la necesidad de sp_unprepare en la instrucción preparada cierre si la instrucción solo se ejecuta una vez.|
 |void setServerPreparedStatementDiscardThreshold(int serverPreparedStatementDiscardThreshold)|Esta configuración controla cuántas pendientes preparado descarte instrucción acciones (sp_unprepare) pueden estar pendientes por conexión antes de que se ejecuta una llamada para limpiar los controladores pendientes en el servidor. Si el valor es < = 1 unprepare acciones se ejecutan inmediatamente en cierre la instrucción preparada. Si se establece en {@literal >} 1 estas llamadas se procesan por lotes juntos para evitar una sobrecarga de la llamada a sp_unprepare con demasiada frecuencia|
 |int getServerPreparedStatementDiscardThreshold()|Esta configuración controla cuántas pendientes preparado descarte instrucción acciones (sp_unprepare) pueden estar pendientes por conexión antes de que se ejecuta una llamada para limpiar los controladores pendientes en el servidor. Si el valor es < = 1 unprepare acciones se ejecutan inmediatamente en cierre la instrucción preparada. Si se establece en {@literal >} 1 estas llamadas se procesan por lotes juntos para evitar una sobrecarga de la llamada a sp_unprepare con demasiada frecuencia.|
 

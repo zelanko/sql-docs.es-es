@@ -1,30 +1,33 @@
 ---
-title: "Método getBigDecimal (java.lang.String, int) | Documentos de Microsoft"
-ms.custom: 
+title: Método getBigDecimal (java.lang.String, int) | Documentos de Microsoft
+ms.custom: ''
 ms.date: 01/19/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: drivers
-ms.service: 
+ms.service: ''
 ms.component: jdbc
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: drivers
-ms.tgt_pltfrm: 
+ms.technology:
+- drivers
+ms.tgt_pltfrm: ''
 ms.topic: article
-apiname: SQLServerCallableStatement.getBigDecimal (java.lang.String, int)
-apilocation: sqljdbc.jar
+apiname:
+- SQLServerCallableStatement.getBigDecimal (java.lang.String, int)
+apilocation:
+- sqljdbc.jar
 apitype: Assembly
 ms.assetid: 6967ba55-9c9a-4f6f-a4d2-8ee9c9a82c14
-caps.latest.revision: "11"
+caps.latest.revision: 11
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 8e274ca6ab08b109a3c4cdd021ca69b91ee1ef9e
-ms.sourcegitcommit: 2713f8e7b504101f9298a0706bacd84bf2eaa174
-ms.translationtype: MT
+ms.openlocfilehash: e7c0365f833498f8c47cb049f029d208e36c7d97
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
+ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/18/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="getbigdecimal-method-javalangstring-int"></a>Método getBigDecimal (java.lang.String, int)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -61,7 +64,7 @@ public java.math.BigDecimal getBigDecimal(java.lang.String sCol,
  Este método getBigDecimal especificado por el método getBigDecimal en la interfaz java.sql.CallableStatement.  
   
 ## <a name="see-also"></a>Vea también  
- [Método getBigDecimal &#40; SQLServerCallableStatement &#41;](../../../connect/jdbc/reference/getbigdecimal-method-sqlservercallablestatement.md)   
+ [Método getBigDecimal &#40;SQLServerCallableStatement&#41;](../../../connect/jdbc/reference/getbigdecimal-method-sqlservercallablestatement.md)   
  [Miembros de SQLServerCallableStatement](../../../connect/jdbc/reference/sqlservercallablestatement-members.md)   
  [Clase SQLServerCallableStatement](../../../connect/jdbc/reference/sqlservercallablestatement-class.md)  
   

@@ -2,7 +2,7 @@
 title: 'Pdostatement:: Fetch | Documentos de Microsoft'
 ms.custom: ''
 ms.date: 01/19/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: drivers
 ms.service: ''
 ms.component: php
@@ -13,16 +13,16 @@ ms.technology:
 ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: 4368e362-5bda-4da1-8462-33714683c39f
-caps.latest.revision: ''
+caps.latest.revision: 19
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: a7326279bc150c25c712ca708dcd137a9e0d805d
-ms.sourcegitcommit: 2e130e9f3ce8a7ffe373d7fba8b09e937c216386
-ms.translationtype: MT
+ms.openlocfilehash: 0ca4ca734983e1611453ed1f0c5468f5c0cb2576
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
+ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/28/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="pdostatementfetch"></a>PDOStatement::fetch
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]
@@ -70,8 +70,8 @@ Si el cursor es desplazable (PDO::ATTR_CURSOR = PDO::CURSOR_SCROLL), el método 
 |PDO::FETCH_ORI_PRIOR|Recupera la fila anterior.|  
 |PDO::FETCH_ORI_FIRST|Recupera la primera fila.|  
 |PDO::FETCH_ORI_LAST|Recupera la última fila.|  
-|PDO::FETCH_ORI_ABS, *num*|Recupera la fila solicitada en $*cursor_offset* por número de fila.|  
-|PDO::FETCH_ORI_REL, *num*|Recupera la fila solicitada en $*cursor_offset* por su posición relativa desde la posición actual.|  
+|Fetch_ori_abs, *num*|Recupera la fila solicitada en $*cursor_offset* por número de fila.|  
+|Fetch_ori_rel, *num*|Recupera la fila solicitada en $*cursor_offset* por su posición relativa desde la posición actual.|  
   
 Si el valor especificado para $*cursor_offset* $*cursor_orientation* los resultados en una posición fuera del límite de conjunto de resultados, fetch se producirá un error.  
   

@@ -2,7 +2,7 @@
 title: Compatibilidad del controlador JDBC con alta disponibilidad y recuperación ante desastres | Documentos de Microsoft
 ms.custom: ''
 ms.date: 04/04/2018
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: drivers
 ms.service: ''
 ms.component: jdbc
@@ -16,13 +16,13 @@ ms.assetid: 62de4be6-b027-427d-a7e5-352960e42877
 caps.latest.revision: 40
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 1e41503e9b319d1e4372d93d835c4791563fd2da
-ms.sourcegitcommit: 094c46e7fa6de44735ed0040c65a40ec3d951b75
-ms.translationtype: MT
+ms.openlocfilehash: 5ad954bb250765d29dd6600ca98e4a01844f1831
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
+ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/06/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="jdbc-driver-support-for-high-availability-disaster-recovery"></a>Compatibilidad del controlador JDBC con alta disponibilidad y recuperación ante desastres
 [!INCLUDE[Driver_JDBC_Download](../../includes/driver_jdbc_download.md)]
@@ -31,9 +31,9 @@ ms.lasthandoff: 04/06/2018
   
  A partir de la versión 4.0 de la [!INCLUDE[jdbcNoVersion](../../includes/jdbcnoversion_md.md)], puede especificar el agente de escucha del grupo de disponibilidad de una (alta disponibilidad y recuperación ante desastres) grupo de disponibilidad (AG) en la propiedad de conexión. Si un [!INCLUDE[jdbcNoVersion](../../includes/jdbcnoversion_md.md)] aplicación está conectada a una base de datos de AlwaysOn que conmuta por error, se pierde la conexión original y la aplicación debe abrir una conexión nueva para seguir trabajando después de la conmutación por error. El siguiente [propiedades de conexión](../../connect/jdbc/setting-the-connection-properties.md) se agregaron en [!INCLUDE[jdbc_40](../../includes/jdbc_40_md.md)]:  
   
--   **multiSubnetFailover**  
+-   **MultiSubnetFailover**  
   
--   **applicationIntent**
+-   **Intención de aplicaciones**
  
 Especifique multiSubnetFailover = true cuando se conecta a la escucha del grupo de disponibilidad de un grupo de disponibilidad o una instancia de clúster de conmutación por error. Tenga en cuenta que **multiSubnetFailover** es false de forma predeterminada. Use **applicationIntent** para declarar el tipo de carga de trabajo de la aplicación. Vea las secciones a continuación para obtener más detalles.
  

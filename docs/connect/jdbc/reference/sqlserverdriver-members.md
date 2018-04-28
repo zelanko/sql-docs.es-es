@@ -1,27 +1,28 @@
 ---
 title: Los miembros de SQLServerDriver | Documentos de Microsoft
-ms.custom: 
+ms.custom: ''
 ms.date: 01/19/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: drivers
-ms.service: 
+ms.service: ''
 ms.component: jdbc
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: drivers
-ms.tgt_pltfrm: 
+ms.technology:
+- drivers
+ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: 079c7eb7-71e4-4109-83de-f6d785433c95
-caps.latest.revision: "9"
+caps.latest.revision: 9
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 014f8a62606362426df6c304d0dbb164e4032dc8
-ms.sourcegitcommit: 2713f8e7b504101f9298a0706bacd84bf2eaa174
-ms.translationtype: MT
+ms.openlocfilehash: 93b41e48111ded71e3b621e3042ea5949875a0c3
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
+ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/18/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="sqlserverdriver-members"></a>Miembros de SQLServerDriver
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -45,10 +46,10 @@ ms.lasthandoff: 11/18/2017
 |Nombre|Description|  
 |----------|-----------------|  
 |[acceptsURL](../../../connect/jdbc/reference/acceptsurl-method-sqlserverdriver.md)|Comprueba que la URL determinada sea válida.|  
-|[conectar](../../../connect/jdbc/reference/connect-method-sqlserverdriver.md)|Realiza una conexión a la base de datos.|  
+|[connect](../../../connect/jdbc/reference/connect-method-sqlserverdriver.md)|Realiza una conexión a la base de datos.|  
 |[getMajorVersion](../../../connect/jdbc/reference/getmajorversion-method-sqlserverdriver.md)|Devuelve el número de versión principal del controlador JDBC.|  
 |[getMinorVersion](../../../connect/jdbc/reference/getminorversion-method-sqlserverdriver.md)|Devuelve el número de versión secundaria del controlador JDBC.|  
-|[getPropertyInfo](../../../connect/jdbc/reference/getpropertyinfo-method-sqlserverdriver.md)|Se utiliza para detectar las propiedades necesarias para efectuar la conexión a una base de datos.|  
+|[GetPropertyInfo](../../../connect/jdbc/reference/getpropertyinfo-method-sqlserverdriver.md)|Se utiliza para detectar las propiedades necesarias para efectuar la conexión a una base de datos.|  
 |[jdbcCompliant](../../../connect/jdbc/reference/jdbccompliant-method-sqlserverdriver.md)|Comprueba si el controlador JDBC está conforme con las especificaciones de JDBC.|  
   
 ## <a name="inherited-methods"></a>Métodos heredados  

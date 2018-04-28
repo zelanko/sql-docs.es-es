@@ -1,27 +1,28 @@
 ---
 title: 'Paso 1: Configurar el entorno de desarrollo para el desarrollo de Node.js | Documentos de Microsoft'
-ms.custom: 
+ms.custom: ''
 ms.date: 01/19/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: drivers
-ms.service: 
+ms.service: ''
 ms.component: node-js
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: drivers
-ms.tgt_pltfrm: 
+ms.technology:
+- drivers
+ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: 2dad01f1-fadf-4ac9-9b4d-26be3d301886
-caps.latest.revision: "17"
+caps.latest.revision: 17
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 7d723913fbc63e65a28031421da004e942f49f6e
-ms.sourcegitcommit: 2713f8e7b504101f9298a0706bacd84bf2eaa174
-ms.translationtype: MT
+ms.openlocfilehash: 8d64b53947882f1883d034fde8da24f1b83dabfa
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
+ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/18/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="step-1--configure-development-environment-for-nodejs-development"></a>Paso 1: Configurar el entorno de desarrollo para la implementación de Node.js
 Debe configurar el entorno de desarrollo con los requisitos previos para desarrollar una aplicación con el controlador Node.js para SQL Server.  El método más común consiste en usar el Administrador de paquetes de nodo (npm) para instalar el módulo tedioso, pero puede descargar el módulo tedioso directamente en [Github](https://github.com/pekim/tedious) si lo prefiere.  
@@ -31,8 +32,8 @@ Tenga en cuenta que el controlador Node.js utiliza el protocolo TDS, que está h
 ## <a name="windows"></a>Windows  
   
 1. **Instalar el Administrador de paquetes npm y tiempo de ejecución de Node.js**  
-a. Vaya a [Node.js](https://nodejs.org/en/download/)  
-b. Haga clic en el vínculo apropiado de msi de instalador de Windows.   
+A. Vaya a [Node.js](https://nodejs.org/en/download/)  
+B. Haga clic en el vínculo apropiado de msi de instalador de Windows.   
 c. Una vez descargado, ejecute el archivo msi para instalar Node.js  
   
 2. **Abra cmd.exe**  
@@ -83,8 +84,8 @@ c. Una vez descargado, ejecute el archivo msi para instalar Node.js
 ## <a name="mac"></a>Mac  
   
 1. **Instalar el Administrador de paquetes npm y tiempo de ejecución de Node.js**  
-a. Vaya a [Node.js](https://nodejs.org/en/download/)  
-b. Haga clic en el vínculo apropiado de instalador de Mac OS.  
+A. Vaya a [Node.js](https://nodejs.org/en/download/)  
+B. Haga clic en el vínculo apropiado de instalador de Mac OS.  
 c. Una vez descargado, ejecute el dmg para instalar Node.js  
   
 2. **Abra terminal**  

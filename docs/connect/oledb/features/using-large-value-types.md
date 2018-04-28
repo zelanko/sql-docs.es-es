@@ -3,7 +3,7 @@ title: Uso de tipos de valor grande | Documentos de Microsoft
 description: Utilizar tipos de valor grande con controlador OLE DB para SQL Server
 ms.custom: ''
 ms.date: 03/26/2018
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
 ms.service: ''
 ms.component: oledb|features
@@ -21,13 +21,13 @@ helpviewer_keywords:
 - OLE DB Driver for SQL Server, large value data types
 author: pmasl
 ms.author: Pedro.Lopes
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 252670fd1231efde3e9840ce28ab2ed2c4c42227
-ms.sourcegitcommit: 9351e8b7b68f599a95fb8e76930ab886db737e5f
-ms.translationtype: MT
+ms.openlocfilehash: 8366d4ea0b307600f2e13a456dac8a437fd6ca45
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
+ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/06/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="using-large-value-types"></a>Usar tipos de valor grande
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -68,11 +68,11 @@ ms.lasthandoff: 04/06/2018
   
  Al notificar el tamaño máximo de una columna, se notificarán el controlador OLE DB para SQL Server:  
   
--   El tamaño máximo definido, que, por ejemplo, es 2000 para una **varchar (**2000**)** columna, o  
+-   El tamaño máximo definido, que, por ejemplo, es 2000 para una **varchar (** 2000 **)** columna, o  
   
 -   El valor "ilimitado" que en el caso de un **varchar (max)** columna es igual a ~ 0. Este valor se establece para la propiedad de metadatos DBCOLUMN_COLUMNSIZE.  
   
- Se aplicarán las reglas de conversión estándar a un **varchar (max)** columna, lo que significa que cualquier conversión que sea válido para un **varchar (**2000**)** columna también será válida para un **varchar (max)** columna. Lo mismo puede decirse de **nvarchar (max)** y **varbinary (max)** columnas.  
+ Se aplicarán las reglas de conversión estándar a un **varchar (max)** columna, lo que significa que cualquier conversión que sea válido para un **varchar (** 2000 **)** columna también será válida para un **varchar (max)** columna. Lo mismo puede decirse de **nvarchar (max)** y **varbinary (max)** columnas.  
   
  A la hora de recuperar tipos de valor grande, el enfoque más eficaz consiste en enlazar como DBTYPE_IUNKNOWN y establecer la propiedad DBPROP_ACCESSORDER del conjunto de filas en DBPROPVAL_AO_SEQUENTIALSTORAGEOBJECTS. Esto hará que el valor se transmita directamente desde la red sin almacenarse en el búfer intermedio, como en el ejemplo siguiente:  
   

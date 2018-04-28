@@ -1,30 +1,33 @@
 ---
-title: "Método getTypeInfo (SQLServerDatabaseMetaData) | Documentos de Microsoft"
-ms.custom: 
+title: Método getTypeInfo (SQLServerDatabaseMetaData) | Documentos de Microsoft
+ms.custom: ''
 ms.date: 01/19/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: drivers
-ms.service: 
+ms.service: ''
 ms.component: jdbc
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: drivers
-ms.tgt_pltfrm: 
+ms.technology:
+- drivers
+ms.tgt_pltfrm: ''
 ms.topic: article
-apiname: SQLServerDatabaseMetaData.getTypeInfo
-apilocation: sqljdbc.jar
+apiname:
+- SQLServerDatabaseMetaData.getTypeInfo
+apilocation:
+- sqljdbc.jar
 apitype: Assembly
 ms.assetid: 23208f01-c1bf-4235-b29c-9051d3df59a3
-caps.latest.revision: "21"
+caps.latest.revision: 21
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 2424ec8f3b484272d2311ac7880cc8810561bd2e
-ms.sourcegitcommit: 2713f8e7b504101f9298a0706bacd84bf2eaa174
-ms.translationtype: MT
+ms.openlocfilehash: 032ddf6a5f266fa68c6a735dd7f59cf4df02c68e
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
+ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/18/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="gettypeinfo-method-sqlserverdatabasemetadata"></a>Método getTypeInfo (SQLServerDatabaseMetaData)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -52,20 +55,20 @@ public java.sql.ResultSet getTypeInfo()
 |Nombre|Tipo|Description|  
 |----------|----------|-----------------|  
 |TYPE_NAME|**String**|El nombre del tipo de datos.|  
-|DATA_TYPE|**corto**|Tipo de datos SQL de java.sql.Types.|  
+|DATA_TYPE|**Corto**|Tipo de datos SQL de java.sql.Types.|  
 |PRECISION|**int**|Número total de dígitos significativos.|  
 |LITERAL_PREFIX|**String**|El carácter o caracteres utilizados antes de una constante.|  
 |LITERAL_SUFFIX|**String**|Carácter o caracteres utilizados para terminar una constante.|  
 |CREATE_PARAMS|**String**|Descripción de los parámetros de creación para el tipo de datos.|  
-|NULLABLE|**corto**|Indica si la columna puede contener un valor NULL. Puede ser uno de los siguientes valores:<br /><br /> typeNoNulls (0)<br /><br /> typeNullable (1)<br /><br /> typeNullableUnknown (2)|  
+|NULLABLE|**Corto**|Indica si la columna puede contener un valor NULL. Puede ser uno de los siguientes valores:<br /><br /> typeNoNulls (0)<br /><br /> typeNullable (1)<br /><br /> typeNullableUnknown (2)|  
 |CASE_SENSITIVE|**boolean**|Indica si el tipo de datos distingue mayúsculas de minúsculas. "**true**"si el tipo es entre mayúsculas y minúsculas; en caso contrario,"**false**".|  
-|SEARCHABLE|**corto**|Indica si la columna se puede utilizar en una cláusula WHERE de SQL. Puede ser uno de los siguientes valores:<br /><br /> typePredNone (0)<br /><br /> typePredChar (1)<br /><br /> typePredBasic (2)<br /><br /> typeSeachable (3)|  
+|SEARCHABLE|**Corto**|Indica si la columna se puede utilizar en una cláusula WHERE de SQL. Puede ser uno de los siguientes valores:<br /><br /> typePredNone (0)<br /><br /> typePredChar (1)<br /><br /> typePredBasic (2)<br /><br /> typeSeachable (3)|  
 |UNSIGNED_ATTRIBUTE|**boolean**|Indica el signo del tipo de datos. "**true**"si el tipo es sin signo; de lo contrario,"**false**".|  
 |FIXED_PREC_SCALE|**boolean**|Indica que el tipo de datos puede ser un valor de moneda. "**true**" si el tipo de datos es de tipo moneda; en caso contrario, "**false**".|  
 |AUTO_INCREMENT|**boolean**|Indica que el tipo de datos se puede incrementarse automáticamente. "**true**"si el tipo puede incrementar automáticamente; en caso contrario,"**false**".|  
 |LOCAL_TYPE_NAME|**String**|Nombre localizado del tipo de datos.|  
-|MINIMUM_SCALE|**corto**|Número máximo de dígitos a la derecha del signo decimal.|  
-|MAXIMUM_SCALE|**corto**|Número mínimo de dígitos a la derecha del signo decimal.|  
+|MINIMUM_SCALE|**Corto**|Número máximo de dígitos a la derecha del signo decimal.|  
+|MAXIMUM_SCALE|**Corto**|Número mínimo de dígitos a la derecha del signo decimal.|  
 |SQL_DATA_TYPE|**int**|El controlador JDBC no lo admite.|  
 |SQL_DATETIME_SUB|**int**|El controlador JDBC no lo admite.|  
 |NUM_PREC_RADIX|**int**|El número de bits o dígitos para calcular el número máximo que puede tener una columna.|  

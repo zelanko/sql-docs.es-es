@@ -1,27 +1,28 @@
 ---
-title: "Ejemplo de ejecución asincrónica (método de notificación) | Documentos de Microsoft"
-ms.custom: 
+title: Ejemplo de ejecución asincrónica (método de notificación) | Documentos de Microsoft
+ms.custom: ''
 ms.date: 01/19/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: drivers
-ms.service: 
+ms.service: ''
 ms.component: odbc
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: drivers
-ms.tgt_pltfrm: 
+ms.technology:
+- drivers
+ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: 55c51fff-119d-445f-8732-c1569966e559
-caps.latest.revision: "8"
+caps.latest.revision: 8
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 62d8485bec26053efd84891407255eeba2103492
-ms.sourcegitcommit: 2713f8e7b504101f9298a0706bacd84bf2eaa174
-ms.translationtype: MT
+ms.openlocfilehash: e971ee6725f27afcd8f8b9c8accdd37176f1cf6c
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
+ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/18/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="asynchronous-execution-notification-method-sample"></a>Ejemplo de ejecución asincrónica (método de notificación)
 [!INCLUDE[Driver_ODBC_Download](../../../includes/driver_odbc_download.md)]

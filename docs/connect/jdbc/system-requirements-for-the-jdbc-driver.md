@@ -1,28 +1,28 @@
 ---
 title: Requisitos del sistema para el controlador JDBC | Documentos de Microsoft
-ms.custom: 
+ms.custom: ''
 ms.date: 01/19/2018
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: drivers
-ms.service: 
+ms.service: ''
 ms.component: jdbc
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - drivers
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: 447792bb-f39b-49b4-9fd0-1ef4154c74ab
-caps.latest.revision: 
+caps.latest.revision: 73
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Active
-ms.openlocfilehash: e6a4aa824e50fd10add0b40c483b74b674e56a6e
-ms.sourcegitcommit: 9d0467265e052b925547aafaca51e5a5e93b7e38
-ms.translationtype: MT
+ms.openlocfilehash: a7ad308b0ca7ea617ab9f6e2882f800e6aa92d58
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
+ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/02/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="system-requirements-for-the-jdbc-driver"></a>Requisitos del sistema para el controlador JDBC
 [!INCLUDE[Driver_JDBC_Download](../../includes/driver_jdbc_download.md)]
@@ -63,7 +63,7 @@ ms.lasthandoff: 03/02/2018
 |---------|-----------------------------|----------------------|-----------------|   
 |mssql-jdbc-6.4.0.jre7.jar|4.1|7|Requiere la versión 7.0 de Java Runtime Environment (JRE). Uso de JRE 6.0 o inferior produce una excepción.<br /><br /> Nuevas características de 6.4 incluyen: autenticación de Azure AD para Linux, método de entidad de seguridad y la contraseña para la detección automática de dominio KERBEROS de SPN para la autenticación entre dominios, delegación limitada de Kerberos, el tiempo de espera de consulta, el tiempo de espera de Socket, Kerberos y preparada reutilización de identificador de instrucción. |  
 |mssql-jdbc-6.4.0.jre8.jar|4.2|8|Requiere la versión 8.0 de Java Runtime Environment (JRE). Uso de JRE 7.0 o inferior produce una excepción.<br /><br /> Nuevas características de 6.4 incluyen: autenticación de Azure AD para Linux, método de entidad de seguridad y la contraseña para la detección automática de dominio KERBEROS de SPN para la autenticación entre dominios, delegación limitada de Kerberos, el tiempo de espera de consulta, el tiempo de espera de Socket, Kerberos y preparada reutilización de identificador de instrucción. |    
-|mssql-jdbc-6.4.0.jre9.jar|4.3|9|Requiere un entorno de tiempo de ejecución de Java (JRE) 9.0. Uso de JRE 8.0 o inferior produce una excepción.<br /><br /> Nuevas características de 6.4 incluyen: autenticación de Azure AD para Linux, método de entidad de seguridad y la contraseña para la detección automática de dominio KERBEROS de SPN para la autenticación entre dominios, delegación limitada de Kerberos, el tiempo de espera de consulta, el tiempo de espera de Socket, Kerberos y preparada reutilización de identificador de instrucción. |    
+|MSSQL-jdbc-6.4.0.jre9.jar|4.3|9|Requiere un entorno de tiempo de ejecución de Java (JRE) 9.0. Uso de JRE 8.0 o inferior produce una excepción.<br /><br /> Nuevas características de 6.4 incluyen: autenticación de Azure AD para Linux, método de entidad de seguridad y la contraseña para la detección automática de dominio KERBEROS de SPN para la autenticación entre dominios, delegación limitada de Kerberos, el tiempo de espera de consulta, el tiempo de espera de Socket, Kerberos y preparada reutilización de identificador de instrucción. |    
 
 
   El 6.4 del controlador JDBC también está disponible en el repositorio Central de Maven y puede agregado a un proyecto de Maven agregando el código siguiente en el POM. XML 
@@ -85,8 +85,8 @@ ms.lasthandoff: 03/02/2018
   
 |JAR|Cumplimiento con la versión JDBC|Versión de Java recomendada|Description|  
 |---------|-----------------------------|----------------------|-----------------|   
-|mssql-jdbc-6.2.1.jre7.jar|4.1|7|Requiere la versión 7.0 de Java Runtime Environment (JRE). Uso de JRE 6.0 o inferior produce una excepción.<br /><br /> Nuevas características de 6.2 incluyen: autenticación de Azure AD para Linux, método de entidad de seguridad y la contraseña para la detección automática de dominio KERBEROS de SPN para la autenticación entre dominios, delegación limitada de Kerberos, el tiempo de espera de consulta, el tiempo de espera de Socket, Kerberos y preparada identificador de instrucciones volver a usar. |  
-|mssql-jdbc-6.2.1.jre8.jar|4.2|8|Requiere la versión 8.0 de Java Runtime Environment (JRE). Uso de JRE 7.0 o inferior produce una excepción.<br /><br /> Nuevas características de 6.2 incluyen: autenticación de Azure AD para Linux, método de entidad de seguridad y la contraseña para la detección automática de dominio KERBEROS de SPN para la autenticación entre dominios, delegación limitada de Kerberos, el tiempo de espera de consulta, el tiempo de espera de Socket, Kerberos y preparada identificador de instrucción volver a usar|    
+|MSSQL-jdbc-6.2.1.jre7.jar|4.1|7|Requiere la versión 7.0 de Java Runtime Environment (JRE). Uso de JRE 6.0 o inferior produce una excepción.<br /><br /> Nuevas características de 6.2 incluyen: autenticación de Azure AD para Linux, método de entidad de seguridad y la contraseña para la detección automática de dominio KERBEROS de SPN para la autenticación entre dominios, delegación limitada de Kerberos, el tiempo de espera de consulta, el tiempo de espera de Socket, Kerberos y preparada identificador de instrucciones volver a usar. |  
+|MSSQL-jdbc-6.2.1.jre8.jar|4.2|8|Requiere la versión 8.0 de Java Runtime Environment (JRE). Uso de JRE 7.0 o inferior produce una excepción.<br /><br /> Nuevas características de 6.2 incluyen: autenticación de Azure AD para Linux, método de entidad de seguridad y la contraseña para la detección automática de dominio KERBEROS de SPN para la autenticación entre dominios, delegación limitada de Kerberos, el tiempo de espera de consulta, el tiempo de espera de Socket, Kerberos y preparada identificador de instrucción volver a usar|    
 
   El 6.2 del controlador JDBC también está disponible en el repositorio Central de Maven y puede agregado a un proyecto de Maven agregando el código siguiente en el POM. XML 
   

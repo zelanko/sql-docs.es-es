@@ -1,27 +1,28 @@
 ---
-title: "Descripción de los niveles de aislamiento | Documentos de Microsoft"
-ms.custom: 
+title: Descripción de los niveles de aislamiento | Documentos de Microsoft
+ms.custom: ''
 ms.date: 01/19/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: drivers
-ms.service: 
+ms.service: ''
 ms.component: jdbc
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: drivers
-ms.tgt_pltfrm: 
+ms.technology:
+- drivers
+ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: 2c41e23a-da6c-4650-b5fc-b5fe53ba65c3
-caps.latest.revision: "17"
+caps.latest.revision: 17
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 5acd91539652aefd7eee0049bb2e1ccc277c16a0
-ms.sourcegitcommit: 2713f8e7b504101f9298a0706bacd84bf2eaa174
-ms.translationtype: MT
+ms.openlocfilehash: 0115d8c16c63882990a462c0fde8d146e91dbf88
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
+ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/18/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="understanding-isolation-levels"></a>Descripción de los niveles de aislamiento
 [!INCLUDE[Driver_JDBC_Download](../../includes/driver_jdbc_download.md)]
@@ -52,10 +53,10 @@ ms.lasthandoff: 11/18/2017
 |Nivel de aislamiento|Lectura de datos sucios|lectura no repetible|Fantasma|  
 |---------------------|----------------|-------------------------|-------------|  
 |Lectura no confirmada|Sí|Sí|Sí|  
-|Lectura confirmada|No|Sí|Sí|  
-|Lectura repetible|No|No|Sí|  
-|Snapshot|No|No|No|  
-|Serializable|No|No|No|  
+|Lectura confirmada|no|Sí|Sí|  
+|Lectura repetible|no|No|Sí|  
+|Snapshot|no|No|no|  
+|Serializable|no|No|no|  
   
  Las transacciones se deben ejecutar en un nivel de aislamiento de lectura repetible, al menos, para evitar las pérdidas de actualizaciones que pueden producirse cuando dos transacciones recuperan la misma fila, y a continuación la actualizan según los valores recuperados originalmente. Si las dos transacciones actualizan las filas con una única instrucción UPDATE y no basan la actualización en los valores recuperados previamente, la pérdida de las actualizaciones no puede producirse en el nivel de aislamiento predeterminado de lectura confirmada.  
   

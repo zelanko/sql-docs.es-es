@@ -1,27 +1,28 @@
 ---
-title: "Descripción de los tipos de Cursor | Documentos de Microsoft"
-ms.custom: 
+title: Descripción de los tipos de Cursor | Documentos de Microsoft
+ms.custom: ''
 ms.date: 01/19/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: drivers
-ms.service: 
+ms.service: ''
 ms.component: jdbc
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: drivers
-ms.tgt_pltfrm: 
+ms.technology:
+- drivers
+ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: 4f4d3db7-4f76-450d-ab63-141237a4f034
-caps.latest.revision: "51"
+caps.latest.revision: 51
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: dfd697881fbde24c797707990d53c2cc33576a24
-ms.sourcegitcommit: 2713f8e7b504101f9298a0706bacd84bf2eaa174
-ms.translationtype: MT
+ms.openlocfilehash: 1611575b0f0401b47cf468837f39a6a8dd36aa49
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
+ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/18/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="understanding-cursor-types"></a>Descripción de los tipos de cursor
 [!INCLUDE[Driver_JDBC_Download](../../includes/driver_jdbc_download.md)]
@@ -82,7 +83,7 @@ ms.lasthandoff: 11/18/2017
  Con los cursores dinámicos, las filas actualizadas conservarán su posición dentro del búfer de captura hasta que el búfer de captura que permanece defina la ventana.  Las filas actualizadas podrían reaparecer después en posiciones diferentes dentro del conjunto de resultados, o podrían desaparecer por completo. Las aplicaciones que tienen que evitar incoherencias transitorias en el conjunto de resultados deberían usar un tamaño de lectura de 1 (de forma predeterminada es de 8 filas con simultaneidad de CONCUR_SS_SCROLL_LOCKS y de 128 filas con otras).  
   
 ## <a name="cursor-conversion"></a>Conversión de cursores  
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]en ocasiones, puede elegir implementar un tipo de cursor que no sea el solicitado, lo que se conoce como conversión implícita del cursor (o degradación del cursor). Para obtener más información acerca de la conversión implícita del cursor, vea el tema "Using Implicit Cursor Conversions" en [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] libros en pantalla.  
+ [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] en ocasiones, puede elegir implementar un tipo de cursor que no sea el solicitado, lo que se conoce como conversión implícita del cursor (o degradación del cursor). Para obtener más información acerca de la conversión implícita del cursor, vea el tema "Using Implicit Cursor Conversions" en [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] libros en pantalla.  
   
  Con [!INCLUDE[ssVersion2000](../../includes/ssversion2000_md.md)], al actualizar los datos a través de ResultSet.TYPE_SCROLL_SENSITIVE y ResultSet.CONCUR_UPDATABLE lo establece, se produce una excepción con un mensaje "el cursor es READ ONLY". Esta excepción se produce porque el [!INCLUDE[ssVersion2000](../../includes/ssversion2000_md.md)] ha realizado una conversión implícita del cursor para ese resultado establecido y no ha devuelto el cursor actualizado que se ha solicitado.  
   

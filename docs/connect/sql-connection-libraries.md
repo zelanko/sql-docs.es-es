@@ -5,23 +5,23 @@ author: MightyPen
 ms.service: ''
 ms.component: connect
 ms.suite: sql
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: drivers
 ms.technology: dbe-data-tier-apps
 ms.custom: ''
 ms.workload: data-management
 ms.topic: article
-ms.date: 03/29/2018
+ms.date: 04/10/2018
 ms.author: genemi
-ms.openlocfilehash: c6c459949c63dc11308ac5bf042149775950882d
-ms.sourcegitcommit: 9351e8b7b68f599a95fb8e76930ab886db737e5f
-ms.translationtype: MT
+ms.openlocfilehash: 467f49e9cab080c67f96369a0eeeda9dd588726d
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
+ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/06/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="connection-modules-for-microsoft-sql-databases"></a>Módulos de conexión para bases de datos SQL de Microsoft
 
-Este artículo contiene vínculos de descarga a los módulos de conexión o *controladores* que los programas cliente pueden utilizar para interactuar con [Microsoft SQL Server](../index.md)y con su gemelas en la nube [Azure Base de datos SQL](http://docs.microsoft.com/azure/sql-database/). Controladores estén disponibles para una amplia variedad de lenguajes de programación, con los siguientes sistemas operativos:
+Este artículo contiene vínculos de descarga a los módulos de conexión o *controladores* que los programas cliente pueden utilizar para interactuar con [Microsoft SQL Server](../relational-databases/database-features.md)y con su gemelas en la nube [Azure Base de datos SQL](http://docs.microsoft.com/azure/sql-database/). Controladores estén disponibles para una amplia variedad de lenguajes de programación, con los siguientes sistemas operativos:
 
 - Linux (Ubuntu)
 - MacOS
@@ -54,10 +54,10 @@ although the FWLink is less precise than is http://github.com/Microsoft/msphpsql
 | Lenguaje | Descargue el controlador SQL |
 | :------- | :---------------------- |
 | C# | [ADO.NET](http://www.microsoft.com/net/download/)<br /><br />[Núcleo de. NET, para Ubuntu Linux](https://www.microsoft.com/net/core#Ubuntu)<br />[Núcleo de. NET, para MacOS](https://www.microsoft.com/net/core#macos)<br />[Núcleo de. NET, para Windows](https://www.microsoft.com/net/core) |
-| C++ | [ODBC](./odbc/download-odbc-driver-for-sql-server.md)<br /><br />[OLE DB](./oledb/oledb-driver-for-sql-server-programming.md) |
+| C++ | [ODBC](./odbc/download-odbc-driver-for-sql-server.md)<br /><br />[OLE DB](https://go.microsoft.com/fwlink/?linkid=871294) |
 | Java | [JDBC](./jdbc/download-microsoft-jdbc-driver-for-sql-server.md) |
 | Node.js | [Controlador de Node.js, las instrucciones de instalación](./node-js/step-1-configure-development-environment-for-node-js-development.md) |
-| PHP | *Sistema operativo:*<br /><br />[Controladores de Windows para PHP](https://www.microsoft.com/download/details.aspx?id=55642)<br />[Linux o Mac OS controlador PHP desde Github](http://github.com/Microsoft/msphpsql/) |
+| PHP | [PHP](./php/download-drivers-php-sql-server.md) |
 | Python | [pyodbc, las instrucciones de instalación](./python/pyodbc/step-1-configure-development-environment-for-pyodbc-python-development.md)<br />[Descargar ODBC](./odbc/download-odbc-driver-for-sql-server.md) |
 | Ruby | [Controlador Ruby, las instrucciones de instalación](./ruby/step-1-configure-development-environment-for-ruby-development.md)<br />[Página de descarga Ruby](https://rubyinstaller.org/downloads/) |
 | &nbsp; | <br /> |

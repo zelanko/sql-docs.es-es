@@ -3,7 +3,7 @@ title: Con el controlador OLE DB para SQL Server encabezado y archivos de biblio
 description: Utilizando el controlador OLE DB para los archivos de encabezado y biblioteca de SQL Server
 ms.custom: ''
 ms.date: 03/26/2018
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
 ms.service: ''
 ms.component: oledb|applications
@@ -25,22 +25,24 @@ helpviewer_keywords:
 - MSOLEDBSQL, library files
 author: pmasl
 ms.author: Pedro.Lopes
-manager: jhubbard
+manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 932a5c8d272bf975e4931326b96bea495e927a08
-ms.sourcegitcommit: 9351e8b7b68f599a95fb8e76930ab886db737e5f
-ms.translationtype: MT
+ms.openlocfilehash: d518924d129beef40ec4f24dce0cc01b7de25977
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
+ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/06/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="using-the-ole-db-driver-for-sql-server-header-and-library-files"></a>Usar el controlador OLE DB para SQL Server encabezado y archivos de biblioteca
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
+
+[!INCLUDE[Driver_OLEDB_Download](../../../includes/driver_oledb_download.md)]
 
   El controlador OLE DB para el encabezado de SQL Server y los archivos de biblioteca se instalan cuando se selecciona el controlador OLE DB para la opción de SDK de SQL Server durante el proceso de instalación. Al desarrollar una aplicación, es importante copiar e instalar todos los archivos necesarios para el desarrollo en el entorno de desarrollo. Para obtener más información sobre la instalación y redistribución de controlador de OLE DB para SQL Server, vea [instalar controlador OLE DB para SQL Server](../../oledb/applications/installing-oledb-driver-for-sql-server.md).  
   
  El controlador OLE DB para el encabezado de SQL Server y los archivos de biblioteca se instalan en la siguiente ubicación:  
   
- *% PROGRAM FILES %*\Microsoft SQL Server\Client SDK\OLEDB\180\SDK  
+ *% PROGRAM FILES %* \Microsoft SQL Server\Client SDK\OLEDB\180\SDK  
   
  El controlador OLE DB para el archivo de encabezado de SQL Server (msoledbsql.h) puede utilizarse para agregar el controlador OLE DB para la funcionalidad de acceso de datos de SQL Server a sus aplicaciones personalizadas. El controlador OLE DB para el archivo de encabezado de SQL Server contiene todas las definiciones, atributos, propiedades y interfaces necesarias para aprovechar las ventajas de las nuevas características introdujeron en [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)].  
   

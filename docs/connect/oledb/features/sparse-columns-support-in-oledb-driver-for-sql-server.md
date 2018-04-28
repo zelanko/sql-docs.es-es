@@ -3,7 +3,7 @@ title: Compatibilidad con columnas dispersas en el controlador OLE DB para SQL S
 description: Compatibilidad con columnas dispersas en el controlador de OLE DB para SQL Server
 ms.custom: ''
 ms.date: 03/26/2018
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
 ms.service: ''
 ms.component: oledb|features
@@ -18,13 +18,13 @@ helpviewer_keywords:
 - sparse columns, OLE DB
 author: pmasl
 ms.author: Pedro.Lopes
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: ffb8b7f18cf9c1653e5c77217f1d1dd339333fcf
-ms.sourcegitcommit: 9351e8b7b68f599a95fb8e76930ab886db737e5f
-ms.translationtype: MT
+ms.openlocfilehash: 08de456a687ffdde2889cb3bd26bd5dbfa39a5dc
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
+ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/06/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="sparse-columns-support-in-ole-db-driver-for-sql-server"></a>Compatibilidad con columnas dispersas en el controlador OLE DB para SQL Server
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -67,6 +67,6 @@ ms.lasthandoff: 04/06/2018
  Sin embargo, si **queryout** se utiliza para la exportación y hace referencia a las columnas dispersas que son miembros de la columna dispersa establecida por su nombre, no se puede realizar una importación directa en una tabla con estructura similar. Esto es porque BCP utiliza los metadatos de forma coherente con una **seleccione \***  operación para la importación y no se puede hacer coincidir **column_set** columnas de miembros con estos metadatos. Para importar **column_set** las columnas miembro individualmente, debe definir una vista en la tabla que hace referencia a lo que se desea **column_set** columnas y se debe realizar la operación de importación mediante la vista.  
   
 ## <a name="see-also"></a>Vea también  
- [Programación del controlador OLE DB para SQL Server](../../oledb/oledb-driver-for-sql-server-programming.md)  
+ [Controlador OLE DB para SQL Server](../../oledb/oledb-driver-for-sql-server.md)  
   
   

@@ -3,7 +3,7 @@ title: Leer una columna FILESTREAM en el archivo utilizando IBCPSession (OLE DB)
 description: Leer una columna FILESTREAM en un archivo utilizando IBCPSession (OLE DB)
 ms.custom: ''
 ms.date: 03/26/2018
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
 ms.service: ''
 ms.component: ole-db-how-to
@@ -15,20 +15,20 @@ ms.tgt_pltfrm: ''
 ms.topic: reference
 author: pmasl
 ms.author: Pedro.Lopes
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 3828927497b98a0c9c24a17e669c492dec60bde1
-ms.sourcegitcommit: 9351e8b7b68f599a95fb8e76930ab886db737e5f
-ms.translationtype: MT
+ms.openlocfilehash: 2d83f3cab28f30588825707db4aed1bb93c7fc3d
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
+ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/06/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="read-a-filestream-column-to-file-using-ibcpsession-ole-db"></a>Leer una columna FILESTREAM en un archivo utilizando IBCPSession (OLE DB)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
 
   En este ejemplo se lee una columna FILESTREAM en un archivo mediante la interfaz IBCPSession y escribe un archivo de formato.  
   
- Para obtener más información sobre la característica filestream, vea [compatibilidad con FILESTREAM &#40;OLE DB&#41;](../../../oledb/ole-db/filestream-support-ole-db.md).  
+ Para obtener más información sobre la característica filestream, vea [compatibilidad con FILESTREAM](../../../oledb/features/filestream-support.md).  
   
 ## <a name="example"></a>Ejemplo  
  Asegúrese de que la variable de entorno INCLUDE incluye el directorio que contiene msoledbsql.h.  

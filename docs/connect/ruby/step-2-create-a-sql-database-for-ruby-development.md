@@ -1,27 +1,28 @@
 ---
 title: 'Paso 2: Crear una base de datos SQL para el desarrollo Ruby | Documentos de Microsoft'
-ms.custom: 
+ms.custom: ''
 ms.date: 08/08/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: drivers
-ms.service: 
+ms.service: ''
 ms.component: ruby
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: drivers
-ms.tgt_pltfrm: 
+ms.technology:
+- drivers
+ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: bffa9c3d-cf88-4cf4-8110-d11f7948980d
-caps.latest.revision: "3"
+caps.latest.revision: 3
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 010429543a9bf879d5f8c46de838f542a33e5942
-ms.sourcegitcommit: 2713f8e7b504101f9298a0706bacd84bf2eaa174
-ms.translationtype: MT
+ms.openlocfilehash: 9e001119b50d9fc3968b34e99867091c290a7cad
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
+ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/18/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="step-2-create-a-sql-database-for-ruby-development"></a>Paso 2: Crear una base de datos SQL para el desarrollo Ruby
 

@@ -2,7 +2,7 @@
 title: Mediante la autenticación integrada | Documentos de Microsoft
 ms.custom: ''
 ms.date: 01/19/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: drivers
 ms.service: ''
 ms.component: odbc
@@ -18,13 +18,13 @@ ms.assetid: 9499ffdf-e0ee-4d3c-8bca-605371eb52d9
 caps.latest.revision: 23
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 162b94d551ea8625b6b22fafec61e19038dc2051
-ms.sourcegitcommit: 2713f8e7b504101f9298a0706bacd84bf2eaa174
-ms.translationtype: MT
+ms.openlocfilehash: edc89fa38ae3b4554f44290cf36073d6c6a0625b
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
+ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/18/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="using-integrated-authentication"></a>Uso de la autenticación integrada
 [!INCLUDE[Driver_ODBC_Download](../../../includes/driver_odbc_download.md)]
@@ -89,7 +89,7 @@ Los desarrolladores pueden implementar una aplicación que utilice un servidor v
   
 -   El servidor de aplicaciones se autentica como otra base de datos y se conecta a [!INCLUDE[ssNoVersion](../../../includes/ssnoversion_md.md)].  
   
--   [!INCLUDE[ssNoVersion](../../../includes/ssnoversion_md.md)]se autentica como un usuario de base de datos a otra base de datos ([!INCLUDE[ssNoVersion](../../../includes/ssnoversion_md.md)].  
+-   [!INCLUDE[ssNoVersion](../../../includes/ssnoversion_md.md)] se autentica como un usuario de base de datos a otra base de datos ([!INCLUDE[ssNoVersion](../../../includes/ssnoversion_md.md)].  
   
 Tras configurar la autenticación integrada, las credenciales se transmiten al servidor vinculado.  
   
@@ -101,17 +101,17 @@ Para tener acceso a [!INCLUDE[ssNoVersion](../../../includes/ssnoversion_md.md)]
   
 Es un error utilizar `-T` con el `-U` o `-P` opción.
   
-## <a name="supported-syntax-for-an-spn-registered-by-includessnoversionincludesssnoversionmdmd"></a>Sintaxis compatible con un SPN registrado por[!INCLUDE[ssNoVersion](../../../includes/ssnoversion_md.md)]
+## <a name="supported-syntax-for-an-spn-registered-by-includessnoversionincludesssnoversionmdmd"></a>Sintaxis compatible con un SPN registrado por [!INCLUDE[ssNoVersion](../../../includes/ssnoversion_md.md)]
 
 La sintaxis que usan los SPN en la cadena de conexión o atributos de conexión es como sigue:  
 
-|Sintaxis|Descripción|  
+|Sintaxis|Description|  
 |----------|---------------|  
-|MSSQLSvc/*fqdn*:*port*|SPN predeterminado generado por el proveedor cuando se usa TCP. *port* es un número de puerto TCP. *fqdn* es un nombre de dominio completo.|  
+|MSSQLSvc/*fqdn*:*port*|SPN predeterminado generado por el proveedor cuando se usa TCP. *puerto* en un número de puerto TCP. *fqdn* es un nombre de dominio completo.|  
   
 ## <a name="authenticating-a-linux-or-macos-computer-with-active-directory"></a>Autenticar un Linux o macOS equipo con Active Directory
 
-Para configurar Kerberos, escriba datos en el `krb5.conf` archivo. `krb5.conf`se encuentra en `/etc/` pero puede hacer referencia a otro archivo utilizando la sintaxis p. ej. `export KRB5_CONFIG=/home/dbapp/etc/krb5.conf`. El siguiente es un ejemplo `krb5.conf` archivo:  
+Para configurar Kerberos, escriba datos en el `krb5.conf` archivo. `krb5.conf` se encuentra en `/etc/` pero puede hacer referencia a otro archivo utilizando la sintaxis p. ej. `export KRB5_CONFIG=/home/dbapp/etc/krb5.conf`. El siguiente es un ejemplo `krb5.conf` archivo:  
   
 ```  
 [libdefaults]  

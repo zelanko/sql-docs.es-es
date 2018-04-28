@@ -2,7 +2,7 @@
 title: Opciones de conexión | Documentos de Microsoft
 ms.custom: ''
 ms.date: 03/26/2018
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: drivers
 ms.service: ''
 ms.component: php
@@ -13,16 +13,16 @@ ms.technology:
 ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: 6d1ea295-8e34-438e-8468-4bbc0f76192c
-caps.latest.revision: ''
+caps.latest.revision: 37
 author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: e9e8d87f7c1da0574264744459070a04b9b959e2
-ms.sourcegitcommit: 2e130e9f3ce8a7ffe373d7fba8b09e937c216386
-ms.translationtype: MT
+ms.openlocfilehash: 9a8047220d7f09f9a3dea6e750886c13138bdf58
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
+ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/28/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="connection-options"></a>Opciones de conexión
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]
@@ -38,7 +38,7 @@ En este tema se enumera las opciones que se permiten en la matriz asociativa (al
 |Autenticación|Una de las siguientes cadenas:<br /><br />'SqlPassword'<br /><br />'ActiveDirectoryPassword'|Especifica el modo de autenticación.|No se ha establecido.|  
 |CharacterSet<br /><br />(no compatible con el controlador PDO_SQLSRV)|String|Especifica el juego de caracteres que se utiliza para enviar datos al servidor.<br /><br />Los valores posibles son SQLSRV_ENC_CHAR y UTF-8. Para obtener más información, consulte [Cómo enviar y recuperar datos UTF-8 gracias a la compatibilidad integrada con UTF-8](../../connect/php/how-to-send-and-retrieve-utf-8-data-using-built-in-utf-8-support.md).|SQLSRV_ENC_CHAR|  
 |ColumnEncryption<br /><br />(solo se admite en Windows)|**Habilitado** o **deshabilitado**|Especifica si la característica Always Encrypted está habilitada o no. |Deshabilitado|  
-|ConnectionPooling|1 o **True** para activar la agrupación de conexiones.<br /><br />0 o **False** para desactivar la agrupación de conexiones.|Especifica si la conexión se asigna desde una agrupación de conexiones (1 o **true**) o no (0 o **false**).<sup> 1</sup>|**true** (1)|  
+|ConnectionPooling|1 o **True** para activar la agrupación de conexiones.<br /><br />0 o **False** para desactivar la agrupación de conexiones.|Especifica si la conexión se asigna desde una agrupación de conexiones (1 o **true**) o no (0 o **false**).<sup> 1</sup>|**True** (1)|  
 |ConnectRetryCount|Número entero comprendido entre 0 y 255 (ambos inclusive)|El número máximo de intentos para restablecer una conexión interrumpida antes de desistir. De forma predeterminada, se realiza un intento único para volver a establecer una conexión cuando se divide. Un valor de 0 significa que no se intentará ninguna reconexión.|1|  
 |ConnectRetryInterval|Número entero comprendido entre 1 y 60 (inclusive)|El tiempo, en segundos, entre los intentos para restablecer una conexión. La aplicación intentará volver a conectarse inmediatamente cuando detecta una conexión interrumpida y, a continuación, esperará a ConnectRetryInterval segundos antes de volver a intentarlo. Esta palabra clave se omite si ConnectRetryCount es igual a 0.|1|  
 |Base de datos|String|Especifica el nombre de la base de datos en uso para la conexión que se va a establecer<sup>2</sup>.|La base de datos predeterminada del inicio de sesión que se va a utilizar.|  
@@ -49,7 +49,7 @@ En este tema se enumera las opciones que se permiten en la matriz asociativa (al
 |MultipleActiveResultSets|1 o **True** para utilizar conjuntos de resultados activos múltiples.<br /><br />0 o **False** para deshabilitar conjuntos de resultados activos múltiples.|Deshabilita o habilita explícitamente la compatibilidad con conjuntos de resultados activos múltiples (MARS).<br /><br />Para obtener más información, consulte [Cómo: deshabilitar Active múltiples &#40;MARS&#41;](../../connect/php/how-to-disable-multiple-active-resultsets-mars.md).|True (1)|  
 |MultiSubnetFailover|String|Especifique siempre **multiSubnetFailover = yes** al conectarse a la escucha del grupo de disponibilidad de un [!INCLUDE[ssSQL11](../../includes/sssql11_md.md)] grupo de disponibilidad o una [!INCLUDE[ssSQL11](../../includes/sssql11_md.md)] instancia de clúster de conmutación por error. **multiSubnetFailover = yes** configura [!INCLUDE[ssDriverPHP](../../includes/ssdriverphp_md.md)] para proporcionar una detección más rápida y conexión con el servidor (actualmente) activo. Los valores posibles Yes y No.<br /><br />Para obtener más información acerca de [!INCLUDE[ssDriverPHP](../../includes/ssdriverphp_md.md)] compatibilidad con [!INCLUDE[ssHADR](../../includes/sshadr_md.md)], consulte [compatibilidad con alta disponibilidad y recuperación ante desastres](../../connect/php/php-driver-for-sql-server-support-for-high-availability-disaster-recovery.md).|no|  
 |PWD<br /><br />(no compatible con el controlador PDO_SQLSRV)|String|Especifica la contraseña asociada con el identificador de usuario que se utilizará al conectarse con la autenticación de SQL Server<sup>4</sup>.|No hay ningún valor establecido.|  
-|QuotedId|1 o **true** para usar las reglas de SQL-92.<br /><br />0 o **False** para usar las reglas heredadas.|Especifica si se debe usar las reglas de SQL-92 para identificadores entrecomillados (1 o **true**) o para usar las reglas heredadas de Transact-SQL (0 o **false**).|**true** (1)|  
+|QuotedId|1 o **true** para usar las reglas de SQL-92.<br /><br />0 o **False** para usar las reglas heredadas.|Especifica si se debe usar las reglas de SQL-92 para identificadores entrecomillados (1 o **true**) o para usar las reglas heredadas de Transact-SQL (0 o **false**).|**True** (1)|  
 |ReturnDatesAsStrings<br /><br />(no compatible con el controlador PDO_SQLSRV)|1 o **True** para devolver tipos de fecha y hora como cadenas.<br /><br />0 o **False** para devolver tipos de fecha y hora como tipos de datos PHP **DateTime** .|Recupera tipos de fecha y hora (datetime, date, time, datetime2 y datetimeoffset) como cadenas o como tipos de datos PHP. Cuando se utiliza el controlador PDO_SQLSRV, las fechas se devuelven como cadenas. El controlador PDO_SQLSRV no tiene ningún **datetime** tipo.<br /><br />Para obtener más información, vea [Cómo recuperar el tipo de fecha y hora como cadenas con el controlador SQLSRV](../../connect/php/how-to-retrieve-date-and-time-type-as-strings-using-the-sqlsrv-driver.md).|**False**|  
 |De desplazamiento|String|"en búfer" indica que desea que un cursor de cliente (en búfer), que permite almacenar en caché un conjunto de resultados en memoria completo. Para obtener más información, consulte [tipos de Cursor &#40;controlador SQLSRV&#41;](../../connect/php/cursor-types-sqlsrv-driver.md).|Cursor de solo avance|  
 |Server<br /><br />(no compatible con el controlador SQLSRV)|String|El nombre de la instancia de [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] a la que se conectará.<br /><br />También puede especificar un nombre de red virtual para conectarse a un grupo de disponibilidad AlwaysOn. Para obtener más información acerca de [!INCLUDE[ssDriverPHP](../../includes/ssdriverphp_md.md)] compatibilidad con [!INCLUDE[ssHADR](../../includes/sshadr_md.md)], consulte [compatibilidad con alta disponibilidad y recuperación ante desastres](../../connect/php/php-driver-for-sql-server-support-for-high-availability-disaster-recovery.md).|Server es una palabra clave obligatoria (aunque no tiene que ser la primera palabra clave de la cadena de conexión). Si no se pasa un nombre de servidor a la palabra clave, se realiza un intento para conectarse a la instancia local.<br /><br />El valor transmitido al servidor puede ser el nombre de una instancia de [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] o la dirección IP de la instancia. También puede especificar un número de puerto (por ejemplo, `sqlsrv:server=(local),1033`).<br /><br />A partir de la versión 3.0 de los [!INCLUDE[ssDriverPHP](../../includes/ssdriverphp_md.md)] , también puede especificar una instancia de LocalDB con `server=(localdb)\instancename`. Para obtener más información, consulte [admite LocalDB](../../connect/php/php-driver-for-sql-server-support-for-localdb.md).|  

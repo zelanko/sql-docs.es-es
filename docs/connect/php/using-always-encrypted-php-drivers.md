@@ -1,7 +1,7 @@
 ---
 title: Uso de Always Encrypted con los controladores PHP para SQL Server | Documentos de Microsoft
 ms.date: 01/08/2018
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: drivers
 ms.service: ''
 ms.component: php
@@ -14,11 +14,11 @@ author: v-kaywon
 ms.author: v-kaywon
 manager: mbarwin
 ms.workload: Inactive
-ms.openlocfilehash: 588a0471866b1b33a3e485b321193edfd0c9187d
-ms.sourcegitcommit: 2e130e9f3ce8a7ffe373d7fba8b09e937c216386
-ms.translationtype: MT
+ms.openlocfilehash: 2896e0d2d121219fae926bd6304cd4415e0a6214
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
+ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/28/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="using-always-encrypted-with-the-php-drivers-for-sql-server"></a>Uso de Always Encrypted con los controladores PHP para SQL Server
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]
@@ -99,7 +99,7 @@ Los ejemplos siguientes muestran cómo usar los controladores de SQLSRV y PDO_SQ
   -   Controlador SQLSRV:
    -   Si desea que el controlador para determinar los tipos SQL para las columnas cifradas, el usuario debe usar `sqlsrv_prepare` y `sqlsrv_execute`.
    -   Si `sqlsrv_query` es preferido, el usuario es responsable de la especificación de los tipos SQL para todos los parámetros. El tipo SQL especificado debe incluir la longitud de cadena para tipos de cadena y la escala y precisión para los tipos decimales.
-  -   PDO_SQLSRV Driver:
+  -   Controlador PDO_SQLSRV:
    -   El atributo de instrucción `PDO::SQLSRV_ATTR_DIRECT_QUERY` no se admite en una consulta parametrizada.
    -   El atributo de instrucción `PDO::ATTR_EMULATE_PREPARES` no se admite en una consulta parametrizada.
    

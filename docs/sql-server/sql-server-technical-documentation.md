@@ -24,23 +24,31 @@ author: craigg-msft
 ms.author: craigg
 manager: jhubbard
 ms.workload: Active
-monikerRange: '>= sql-server-2016 || = sqlallproducts-allversions'
-ms.openlocfilehash: b09bbe3776db2e3dd4835ccc9d8951b71efe6207
-ms.sourcegitcommit: 31df356f89c4cd91ba90dac609a7eb50b13836de
+monikerRange: '>= sql-server-linux-2017  || >= sql-server-2016 || = sqlallproducts-allversions'
+ms.openlocfilehash: d375db4cbc060dbd5245446e2e3de4ee3f8fe146
+ms.sourcegitcommit: 9f61aa4d556bb5726b1e49d619ae2bbccf1590e3
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/27/2018
+ms.lasthandoff: 04/29/2018
 ---
 # <a name="sql-server-documentation"></a>Documentación de SQL Server
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
 
-::: moniker range=">= sql-analysis-services-2017 || >= sql-server-linux-2017 || >= sql-server-2017  || = sqlallproducts-allversions"
+::: moniker range=">= sql-server-linux-2017 || >= sql-server-2017  || = sqlallproducts-allversions"
 SQL Server es una pieza fundamental de la plataforma de datos de Microsoft. SQL Server es líder del sector de sistemas de administración de bases de datos operativas (ODBMS). Esta documentación ayuda a instalar, configurar y usar SQL Server en Windows y Linux. El contenido incluye ejemplos descentralizados, ejemplos de código y vídeos. Para temas sobre el lenguaje de SQL Server, consulte [Referencia del lenguaje](../t-sql/language-reference.md).
 ::: moniker-end
 
-::: moniker range="= sql-analysis-services-2016 || = sql-server-2016"
+::: moniker range="= sql-server-2016"
 SQL Server es una pieza fundamental de la plataforma de datos de Microsoft. SQL Server es líder del sector de sistemas de administración de bases de datos operativas (ODBMS). Esta documentación ayuda a instalar, configurar y usar SQL Server en Windows. El contenido incluye ejemplos descentralizados, ejemplos de código y vídeos. Para temas sobre el lenguaje de SQL Server, consulte [Referencia del lenguaje](../t-sql/language-reference.md).
 ::: moniker-end
+
+
+
+
+
+<!-- Moniker assignments nicely designed so that exactly 1 of these next 3 little WhatsNew tables will be displayed
+ at any one time, regardless of user's moniker choice.
+-->
 
 ::: moniker range="= sqlallproducts-allversions"
 |Novedades  | Notas de la versión  |
@@ -48,16 +56,22 @@ SQL Server es una pieza fundamental de la plataforma de datos de Microsoft. SQL 
 |[Novedades de SQL Server 2017](../sql-server/what-s-new-in-sql-server-2017.md)     | [Notas de la versión de SQL Server 2017](../sql-server/sql-server-2017-release-notes.md)        |
 |[Novedades de SQL Server 2016](../sql-server/what-s-new-in-sql-server-2016.md)     | [Notas de la versión de SQL Server 2016](../sql-server/sql-server-2016-release-notes.md)        |
 ::: moniker-end
-::: moniker range="= sql-analysis-services-2017 || = sql-server-linux-2017 || = sql-server-2017"
+
+::: moniker range="= sql-server-linux-2017 || = sql-server-2017"
 |Novedades  | Notas de la versión  |
 |---------|---------|
 |[Novedades de SQL Server 2017](../sql-server/what-s-new-in-sql-server-2017.md)     | [Notas de la versión de SQL Server 2017](../sql-server/sql-server-2017-release-notes.md)        |
 ::: moniker-end
-::: moniker range="=sql-server-2016 || =sqlallproducts-allversions"
+
+::: moniker range="=sql-server-2016"
 |Novedades  | Notas de la versión  |
 |---------|---------|
 |[Novedades de SQL Server 2016](../sql-server/what-s-new-in-sql-server-2016.md)     | [Notas de la versión de SQL Server 2016](../sql-server/sql-server-2016-release-notes.md)        |
 ::: moniker-end
+
+
+
+
 
 ![info_tip](../sql-server/media/info-tip.png) El contenido de SQL Server 2014 pronto se combinará con el del sitio .docs.  Por ahora, vea:
 - [Libros en pantalla de SQL Server 2014](https://msdn.microsoft.com/en-us/library/ms130214(v=sql.120).aspx)
@@ -65,7 +79,7 @@ SQL Server es una pieza fundamental de la plataforma de datos de Microsoft. SQL 
 - [SQL Server 2014 Release Notes](../sql-server/sql-server-2014-release-notes.md)
 - [Versiones anteriores](https://docs.microsoft.com/en-us/previous-versions/sql/)
 
-::: moniker range="= sql-analysis-services-2016 || = sql-server-2016"
+::: moniker range="= sql-server-2016"
 **Probar SQL Server**
 - [![Descargar desde el Centro de evaluación](../includes/media/download2.png)](http://go.microsoft.com/fwlink/?LinkID=829477) [Descargar SQL Server para Windows](http://go.microsoft.com/fwlink/?LinkID=829477)
 - [![Descargar desde el Centro de evaluación](../includes/media/download2.png)](../ssms/download-sql-server-management-studio-ssms.md) [Descargar SQL Server Management Studio (SSMS)](../ssms/download-sql-server-management-studio-ssms.md)
@@ -73,7 +87,7 @@ SQL Server es una pieza fundamental de la plataforma de datos de Microsoft. SQL 
 - [![Creación de una máquina virtual](../includes/media/azure-vm.png)](https://azure.microsoft.com/services/virtual-machines/sql-server/?wt.mc_id=sqL16_vm) [Obtener una máquina virtual con SQL Server](https://azure.microsoft.com/services/virtual-machines/sql-server/?wt.mc_id=sqL16_vm)
 ::: moniker-end
 
-::: moniker range=">= sql-analysis-services-2017 || >= sql-server-2017 || >= sql-server-linux-2017 || = sqlallproducts-allversions"
+::: moniker range=">= sql-server-2017 || >= sql-server-linux-2017 || = sqlallproducts-allversions"
 **Probar SQL Server**
 - [![Descargar desde el Centro de evaluación](../includes/media/download2.png)](http://go.microsoft.com/fwlink/?LinkID=829477) [Descargar SQL Server para Windows](http://go.microsoft.com/fwlink/?LinkID=829477)
 - [![Instalar SQL Server en Linux](../includes/media/download2.png)](../linux/sql-server-linux-setup.md) [Instalar SQL Server en Linux](../linux/sql-server-linux-setup.md)
@@ -82,7 +96,7 @@ SQL Server es una pieza fundamental de la plataforma de datos de Microsoft. SQL 
 - [![Creación de una máquina virtual](../includes/media/azure-vm.png)](https://azure.microsoft.com/services/virtual-machines/sql-server/?wt.mc_id=sqL16_vm) [Obtener una máquina virtual con SQL Server](https://azure.microsoft.com/services/virtual-machines/sql-server/?wt.mc_id=sqL16_vm)
 ::: moniker-end
 
-::: moniker range=">= sql-analysis-services-2016 || >= sql-server-linux-2017 || >=sql-server-2016 || = sqlallproducts-allversions"
+::: moniker range=">= sql-server-linux-2017 || >=sql-server-2016 || = sqlallproducts-allversions"
 ## <a name="sql-server-technologies"></a>Tecnologías de SQL Server
 
 |||
@@ -97,7 +111,7 @@ SQL Server es una pieza fundamental de la plataforma de datos de Microsoft. SQL 
 |![Master Data Services](../sql-server/media/master-data-services.png)|**[Master Data Services](../master-data-services/master-data-services-installation-and-configuration.md)**<br /><br /> [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] es la solución de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] para la administración de datos maestros. Una solución basada en [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] ayuda a asegurarse de que los informes y los análisis se basan en la información correcta. Con [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)], se crea un repositorio central de los datos maestros y se mantiene un registro auditable y protegible de los mismos a medida que van cambiando con el tiempo.|
 ::: moniker-end
 
-::: moniker range="= sql-analysis-services-2016 || = sql-server-2016"
+::: moniker range="= sql-server-2016"
 ## <a name="migrate-and-move-data"></a>Migrar y mover los datos
 
 - [Importar y exportar datos con el Asistente para importación y exportación de SQL Server](../integration-services/import-export-data/import-and-export-data-with-the-sql-server-import-and-export-wizard.md)
@@ -105,7 +119,7 @@ SQL Server es una pieza fundamental de la plataforma de datos de Microsoft. SQL 
 - [Microsoft Data Migration Assistant](https://www.microsoft.com/download/details.aspx?id=53595)
 ::: moniker-end
 
-::: moniker range=">= sql-analysis-services-2017 || >= sql-server-2017 || >= sql-server-linux-2017 || = sqlallproducts-allversions"
+::: moniker range=">= sql-server-2017 || >= sql-server-linux-2017 || = sqlallproducts-allversions"
 ## <a name="migrate-and-move-data"></a>Migrar y mover los datos
 
 - [Importar y exportar datos con el Asistente para importación y exportación de SQL Server](../integration-services/import-export-data/import-and-export-data-with-the-sql-server-import-and-export-wizard.md)

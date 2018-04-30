@@ -2,7 +2,7 @@
 title: Guardar como | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: sql-tools
 ms.service: ''
 ms.component: ssms-menu
@@ -22,14 +22,15 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 16e9002516156238be7eac9faa203b64f0d23318
-ms.sourcegitcommit: b6116b434d737d661c09b78d0f798c652cf149f3
+ms.openlocfilehash: d3414012f6873feba14c1701ea72cdd9f998ff2b
+ms.sourcegitcommit: a85a46312acf8b5a59a8a900310cf088369c4150
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/17/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="save-as"></a>Guardar como
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)] Se usa para guardar una instancia del elemento actual en una ubicación especificada y en un formato de archivo determinado. Haga clic en **Guardar** *<file>* **como** en el menú **Archivo** (donde *<file>* es el nombre del elemento actual), o bien presione ALT+F, A en el Editor de código.  
+[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
+Se usa para guardar una instancia del elemento actual en una ubicación especificada y en un formato de archivo determinado. Haga clic en **Guardar** *<file>* **como** en el menú **Archivo** (donde *<file>* es el nombre del elemento actual), o bien presione ALT+F, A en el Editor de código.  
   
 ## <a name="central-panel"></a>Panel central  
 **Guardar en**  
@@ -39,7 +40,7 @@ Busque la carpeta del proyecto actual en este menú desplegable. Al seleccionar 
 Utilice esta opción para ver el nombre del archivo actual, cambiar el nombre del archivo o filtrar los archivos y las carpetas que aparecen. Para filtrar los archivos y las carpetas que aparecen, escriba un nombre de archivo parcial o completo que sirva de filtro. Puede usar el asterisco (`*`) como carácter comodín.  
   
 > [!TIP]  
-> Para mostrar archivos en ubicaciones web o de red, escriba una dirección URL o una ruta de red en el cuadro **Nombre de archivo** . Por ejemplo, "http://miSitioWeb" muestra los archivos disponibles en la ubicación web "miSitioWeb" y "\\\miServidor\miRecursoCompartido" muestra los archivos disponibles en la ubicación "miRecursoCompartido" en "miServidor".  
+> Para mostrar archivos en ubicaciones web o de red, escriba una dirección URL o una ruta de red en el cuadro **Nombre de archivo** . Por ejemplo, "http://mywebsite" muestra los archivos disponibles en la ubicación web "miSitioWeb" y "\\\miServidor\miRecursoCompartido" muestra los archivos disponibles en la ubicación "miRecursoCompartido" en "miServidor".  
   
 **Guardar como tipo**  
 Utilice esta opción para seleccionar un nuevo tipo de archivo para el elemento seleccionado. Los tipos de archivo que aparecen incluyen todos los tipos de archivo disponibles a los que puede convertirse el elemento seleccionado.  

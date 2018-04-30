@@ -1,27 +1,28 @@
 ---
-title: "SQL Server Management Studio: términos de licencia | Microsoft Docs"
-ms.custom: 
+title: 'SQL Server Management Studio: términos de licencia | Microsoft Docs'
+ms.custom: ''
 ms.date: 01/19/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: sql-tools
-ms.service: 
+ms.service: ''
 ms.component: ssms
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: tools-ssms
-ms.tgt_pltfrm: 
+ms.technology:
+- tools-ssms
+ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: 8f3d273c-c663-4341-aa2f-5ed8ebcba5b0
-caps.latest.revision: "9"
+caps.latest.revision: 9
 author: stevestein
 ms.author: sstein
 manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: c718bbcd3df4d304f0e14cb1a5a01f46d77fe857
-ms.sourcegitcommit: b6116b434d737d661c09b78d0f798c652cf149f3
+ms.openlocfilehash: 3690381b8c1b539bf4f30c8508cd927964e40f1e
+ms.sourcegitcommit: a85a46312acf8b5a59a8a900310cf088369c4150
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/17/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="sql-server-management-studio---license-terms"></a>SQL Server Management Studio: términos de licencia
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -78,7 +79,7 @@ de Microsoft para este software, a menos que haya otros términos que acompañen
   
 **3.    SERVICIOS BASADOS EN INTERNET.** Microsoft proporciona con el software servicios basados en Internet. Microsoft podrá modificarlos o cancelarlos en cualquier momento.  
   
-&nbsp;&nbsp;**a.    Consentimiento para Servicios Basados en Internet.** La característica del software que se describe a continuación y en la Declaración de privacidad de SQL Server posibilita la conexión con sistemas informáticos de Microsoft o de proveedores de servicios a través de Internet. En algunos casos, no recibirá ninguna notificación independiente cuando esto ocurra. El Cliente puede optar por desactivar esta característica o por no utilizarla. Para obtener más información sobre esta característica, consulte [http://go.microsoft.com/fwlink/?LinkID=398120](http://go.microsoft.com/fwlink/?LinkID=398120). **El uso de esta característica constituirá un consentimiento de su parte para la transmisión de esta información**. Microsoft no utilizará esta información para identificarle ni ponerse en contacto con usted.  
+&nbsp;&nbsp;**a.    Consentimiento para Servicios Basados en Internet.** La característica del software que se describe a continuación y en la Declaración de privacidad de SQL Server posibilita la conexión con sistemas informáticos de Microsoft o de proveedores de servicios a través de Internet. En algunos casos, no recibirá ninguna notificación independiente cuando esto ocurra. El Cliente puede optar por desactivar esta característica o por no utilizarla. Para obtener más información sobre esta característica, vea [http://go.microsoft.com/fwlink/?LinkID=398120](http://go.microsoft.com/fwlink/?LinkID=398120). **El uso de esta característica constituirá un consentimiento de su parte para la transmisión de esta información**. Microsoft no utilizará esta información para identificarle ni ponerse en contacto con usted.  
   
 &nbsp;&nbsp;**i.    Información del Equipo.** La siguiente característica utiliza protocolos de Internet, que envían a los sistemas pertinentes información de su equipo, como su dirección de protocolo de Internet, el tipo de sistema operativo, el explorador y el nombre y la versión del software que esté utilizando, además del código de idioma del dispositivo en que instaló el software. Microsoft utiliza esta información para poner el servicio basado en Internet a su disposición.  
   

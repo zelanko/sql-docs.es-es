@@ -3,15 +3,16 @@
 
 # [Guías de SQL Server](sql-server-guides.md)
 ## Guía de solución de problemas y supervisión de grupos de disponibilidad AlwaysOn
-## [Diseño de índices](sql-server-index-design-guide.md)
+## [Arquitectura y diseño de los índices](sql-server-index-design-guide.md)
 ## [Arquitectura de administración de memoria](memory-management-architecture-guide.md)
 ### [Leer páginas](reading-pages.md)  
 ### [Escribir páginas](writing-pages.md)
 ## [Arquitectura de páginas y extensiones](pages-and-extents-architecture-guide.md)
 ## [Optimización y validación posterior a la migración](post-migration-validation-and-optimization-guide.md)
+## [Rendimiento](../relational-databases/performance/performance-center-for-sql-server-database-engine-and-azure-sql-database.md) 
 ## [Arquitectura de procesamiento de consultas](query-processing-architecture-guide.md)
 ## [Arquitectura de subprocesos y tareas](thread-and-task-architecture-guide.md)
-## [Arquitectura y administración de registros de transacciones](sql-server-transaction-log-architecture-and-management-guide.md)
+## [Guía de arquitectura y administración de registros de transacciones](sql-server-transaction-log-architecture-and-management-guide.md)
 ## [Guía de versiones de fila y bloqueo de transacciones](sql-server-transaction-locking-and-row-versioning-guide.md)
 
 # [Copias de seguridad y restauración](../relational-databases/backup-restore/back-up-and-restore-of-sql-server-databases.md)
@@ -57,7 +58,6 @@
 
 # [Combinaciones](../relational-databases/performance/joins.md)
 # [Particiones](../relational-databases/partitions/partitioned-tables-and-indexes.md)
-# [Rendimiento](../relational-databases/performance/performance-center-for-sql-server-database-engine-and-azure-sql-database.md)
 # [Administración basada en directivas](../relational-databases/policy-based-management/administer-servers-by-using-policy-based-management.md)
 # [PolyBase](../relational-databases/polybase/polybase-guide.md)
 # [Replicación](../relational-databases/replication/sql-server-replication.md)

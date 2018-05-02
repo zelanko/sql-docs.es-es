@@ -1,16 +1,16 @@
 ---
-title: "Información del depurador de Transact-SQL | Microsoft Docs"
-ms.custom: 
+title: Información del depurador de Transact-SQL | Microsoft Docs
+ms.custom: ''
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: sql-tools
-ms.service: 
+ms.service: ''
 ms.component: ssms-scripting
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - Transact-SQL debugger, Locals Window
@@ -20,19 +20,21 @@ helpviewer_keywords:
 - Transact-SQL debugger, QuickWatch
 - Transact-SQL debugger, viewing information
 ms.assetid: b99819cc-f388-41a1-b304-36e78ce24147
-caps.latest.revision: 
+caps.latest.revision: 15
 author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 4222cf4e92319b12779251750805c9e888776873
-ms.sourcegitcommit: a0aa5e611a0e6ebb74ac1e2f613e8916dc7a7617
+monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
+ms.openlocfilehash: 7ff61f3cc84829372e305ffe40aefff870531679
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/24/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="transact-sql-debugger---information"></a>Transact-SQL Debugger - Information (Depurador de Transact-SQL: Información)
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)] Siempre que el depurador pare temporalmente la ejecución de una instrucción [!INCLUDE[tsql](../../includes/tsql-md.md)] específica, puede usar las distintas ventanas del depurador para ver el estado de la ejecución actual.  
+[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
+  Siempre que el depurador detenga la ejecución de una instrucción [!INCLUDE[tsql](../../includes/tsql-md.md)] específica, puede usar las distintas ventanas del depurador para ver el estado de la ejecución actual.  
   
 ## <a name="debugger-windows"></a>Ventanas del depurador  
  En el modo de depurador, éste abre dos ventanas en la parte inferior de la ventana principal de [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] . El depurador muestra toda su información en estas dos ventanas. Cada una de ellas tiene pestañas que puede seleccionar para controlar el conjunto de información que se muestra en la ventana. La ventana izquierda del depurador contiene las pestañas **Variables locales**, **Inspección1**, **Inspección2**, **Inspección3**e **Inspección4** . La ventana derecha del depurador contiene las pestañas **Pila de llamadas**, **Subprocesos**, **Puntos de interrupción**, **Ventana de comandos**y **Salida** .  

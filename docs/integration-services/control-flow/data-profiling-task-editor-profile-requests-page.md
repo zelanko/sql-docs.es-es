@@ -1,32 +1,32 @@
 ---
-title: "Editor de tareas de generación de perfiles de datos (página Solicitudes de perfil) | Microsoft Docs"
-ms.custom: 
+title: Editor de tareas de generación de perfiles de datos (página Solicitudes de perfil) | Microsoft Docs
+ms.custom: ''
 ms.date: 03/01/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: integration-services
-ms.service: 
+ms.service: ''
 ms.component: control-flow
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - integration-services
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 f1_keywords:
 - sql13.dts.designer.dataprofilingtask.profilerequests.f1
 helpviewer_keywords:
 - Data Profiling Task Editor
 ms.assetid: c72acb3d-380e-436e-8041-ed364eddfabd
-caps.latest.revision: 
+caps.latest.revision: 26
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: e6883b8ec802392c0ae4d3a92a41f54433d403f8
-ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
+ms.openlocfilehash: e851690a9961916c5aa73ae94338a168fb809e7c
+ms.sourcegitcommit: a85a46312acf8b5a59a8a900310cf088369c4150
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/25/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="data-profiling-task-editor-profile-requests-page"></a>Editor de tareas de generación de perfiles de datos (página Solicitudes de perfil)
   Use la página **Solicitudes de perfil** del **Editor de tareas de generación de perfiles de datos** para seleccionar y configurar los perfiles que desee calcular. En una única tarea de generación de perfiles puede calcular varias filas para varias columnas o combinaciones de columnas en varias tablas o vistas.  
@@ -76,7 +76,7 @@ ms.lasthandoff: 01/25/2018
 |**Solicitud de perfil de claves candidatas**|Calcule un perfil de claves candidatas.<br /><br /> Este perfil notifica si una columna o conjunto de columnas es una clave, o una clave aproximada, para la tabla seleccionada. Este perfil también puede ayudarle a identificar problemas de los datos, por ejemplo valores en una posible columna de clave.|  
 |**Solicitud de perfil de distribución de longitud de columnas**|Calcule un perfil de distribución de longitud de columnas.<br /><br /> El perfil de distribución de longitud de columnas indica las diferentes longitudes de los valores de cadena de la columna seleccionada y el porcentaje de filas de la tabla que cada longitud representa. Este perfil puede ayudarle a identificar los problemas de los datos, por ejemplo valores que no sean válidos. Por ejemplo, genera un perfil de una columna de códigos de estados de Estados Unidos de dos caracteres y detecta valores menores de dos caracteres.|  
 |**Solicitud de perfil de proporción de columnas nulas**|Calcule un perfil de proporción de columnas nulas.<br /><br /> El perfil de proporción de columnas nulas notifica el porcentaje de valores nulos en la columna seleccionada. Este perfil puede ayudarle a identificar problemas en los datos, por ejemplo una proporción inesperadamente alta de valores nulos en una columna. Por ejemplo, genera un perfil de una columna de códigos postales y detecta un porcentaje inaceptablemente alto de códigos que faltan.|  
-|**Solicitud de perfil de patrón de columnas**|Calcule un perfil de patrón de columnas.<br /><br /> El perfil de patrón de columnas notifica un conjunto de expresiones regulares que cubren el porcentaje especificado de valores en una columna de cadenas. Este perfil puede ayudarle también a identificar problemas de los datos, por ejemplo cadenas que no sean válidas. Este perfil también puede sugerir expresiones regulares que se pueden usar en el futuro para validar los valores nuevos. Por ejemplo, un perfil de patrón de una columna de códigos postales podría generar las expresiones regulares \d{5}-\d{4}, \d{5} y \d{9}. Si ve otras expresiones regulares, es posible que los datos contengan valores no válidos o tengan un formato incorrecto.|  
+|**Solicitud de perfil de patrón de columnas**|Calcule un perfil de patrón de columnas.<br /><br /> El perfil de patrón de columnas notifica un conjunto de expresiones regulares que cubren el porcentaje especificado de valores en una columna de cadenas. Este perfil puede ayudarle también a identificar problemas de los datos, por ejemplo cadenas que no sean válidas. Este perfil también puede sugerir expresiones regulares que se pueden usar en el futuro para validar los valores nuevos. Por ejemplo, un perfil de patrón de una columna de códigos postales podría generar las expresiones regulares: \d{5}-\d{4}, \d{5} y \d{9}. Si ve otras expresiones regulares, es posible que los datos contengan valores no válidos o tengan un formato incorrecto.|  
 |**Solicitud de perfil de estadísticas de columnas**|Seleccione esta opción para calcular un perfil de estadísticas de columnas utilizando la configuración predeterminada para todas las columnas aplicables de la tabla o vista seleccionada.<br /><br /> El perfil de estadísticas de columnas notifica estadísticas, como los valores mínimo, máximo y promedio, y la desviación estándar para las columnas numéricas, y los valores mínimo y máximo para las columnas **datetime** . Este perfil puede ayudarle a identificar problemas de los datos, por ejemplo fechas que no sean válidas. Por ejemplo, genera un perfil de una columna de fechas históricas y detecta una fecha máxima futura.|  
 |**Solicitud de perfil de distribución de valores de columna**|Calcule un perfil de distribución de valores de columnas.<br /><br /> El perfil de distribución de valores de columnas notifica todos los valores distintos en la columna seleccionada y el porcentaje de filas en la tabla que cada valor representa. Este perfil también puede notificar valores que representan más de un porcentaje especificado en la tabla. Este perfil puede ayudarle a identificar problemas en los datos, por ejemplo un número incorrecto de valores distintos en una columna. Por ejemplo, suponga que genera un perfil de una columna que contiene los estados de Estados Unidos y detecta más de 50 valores distintos.|  
 |**Solicitud de perfil de dependencia funcional**|Calcule un perfil de dependencia funcional.<br /><br /> El perfil de dependencia funcional notifica hasta qué punto los valores de una columna (la columna dependiente) dependen de los valores de otra columna o de un conjunto de columnas (la columna determinante). Este perfil puede ayudarle también a identificar problemas de los datos, por ejemplo valores que no sean válidos. Por ejemplo, suponga que genera un perfil de la dependencia entre una columna de códigos postales de Estados Unidos y una columna de los estados. El mismo código postal debería tener siempre el mismo estado, pero el perfil detecta infracciones de esta dependencia.|  

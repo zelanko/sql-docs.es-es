@@ -1,30 +1,31 @@
 ---
-title: "Revise los resultados de la reproducción | Documentos de Microsoft"
-ms.custom: 
+title: Revise los resultados de la reproducción | Documentos de Microsoft
+ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql-non-specified
 ms.prod_service: sql-tools
-ms.service: 
+ms.service: ''
 ms.component: distributed-replay
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: database-engine
-ms.tgt_pltfrm: 
+ms.technology:
+- database-engine
+ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: da999781-f0ff-47eb-ba7a-09c0ed8f61ad
-caps.latest.revision: "21"
+caps.latest.revision: 21
 author: stevestein
 ms.author: sstein
 manager: craigg
 ms.workload: Inactive
 ms.openlocfilehash: ffcc2c8b5a8eb97acea95e841b24ca800b87df9d
 ms.sourcegitcommit: b6116b434d737d661c09b78d0f798c652cf149f3
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: es-ES
 ms.lasthandoff: 01/17/2018
 ---
 # <a name="review-the-replay-results"></a>Revisar los resultados de la reproducción
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]Después de la [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] característica Distributed Replay completa una reproducción distribuida, la actividad de reproducción para cada cliente se puede capturar y guardar en los archivos de seguimiento de resultados en cada cliente. Para capturar esta actividad, debe usar el parámetro **-o** al ejecutar la herramienta de administración con la opción **replay** . Para obtener más información sobre la opción replay, vea [Opción Replay &#40;herramienta de administración de Distributed Replay&#41;](../../tools/distributed-replay/replay-option-distributed-replay-administration-tool.md).  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] Una vez que la característica [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Distributed Replay completa una reproducción distribuida, la actividad de reproducción de cada cliente se puede capturar y guardar en los archivos de seguimiento de resultados de cada cliente. Para capturar esta actividad, debe usar el parámetro **-o** al ejecutar la herramienta de administración con la opción **replay** . Para obtener más información sobre la opción replay, vea [Opción Replay &#40;herramienta de administración de Distributed Replay&#41;](../../tools/distributed-replay/replay-option-distributed-replay-administration-tool.md).  
   
  El elemento XML `<ResultDirectory>` del archivo de configuración del cliente, `DReplayClient.xml`, ubicado en cada cliente, especifica la ubicación donde se almacenan los archivos de seguimiento de resultados. Los archivos de seguimiento del directorio de resultados del cliente se sobrescriben en cada reproducción.  
   
@@ -62,7 +63,7 @@ ms.lasthandoff: 01/17/2018
 ## <a name="column-descriptions-for-result-trace"></a>Descripciones de columna para el seguimiento de resultados  
  En la tabla siguiente se describen las columnas de los datos de seguimiento de resultados.  
   
-|Nombre de columna de datos|Tipo de datos|Descripción|Identificador de columna|  
+|Nombre de columna de datos|Tipo de datos|Description|Identificador de columna|  
 |----------------------|---------------|-----------------|---------------|  
 |EventClass|**nvarchar**|Nombre de la clase de eventos.|1|  
 |EventSequence|**bigint**|Para los errores de proveedor y los errores internos y advertencias, este es el flujo de eventos de captura que corresponde al error o advertencia.<br /><br /> Para todas las demás clase de eventos, esta es la secuencia del evento en los datos de seguimiento originales.|2|  
@@ -82,10 +83,10 @@ ms.lasthandoff: 01/17/2018
 |ReplayHostName|**nvarchar**|El nombre del equipo en el que se ejecuta el cliente durante la reproducción.|16|  
 |ApplicationName|**nvarchar**|El nombre de la aplicación cliente que creó la conexión de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] durante la captura.|17|  
   
-## <a name="see-also"></a>Vea también  
- [Reproducción distribuida de SQL Server](../../tools/distributed-replay/sql-server-distributed-replay.md)   
- [Requisitos de Distributed Replay](../../tools/distributed-replay/distributed-replay-requirements.md)   
- [Opciones de línea de comandos de la herramienta de administración &#40; utilidad Distributed Replay &#41;](../../tools/distributed-replay/administration-tool-command-line-options-distributed-replay-utility.md)   
+## <a name="see-also"></a>Ver también  
+ [SQL Server Distributed Replay](../../tools/distributed-replay/sql-server-distributed-replay.md)   
+ [Distributed Replay Requirements](../../tools/distributed-replay/distributed-replay-requirements.md)   
+ [Opciones de línea de comandos de la herramienta de administración &#40;utilidad Distributed Replay&#41;](../../tools/distributed-replay/administration-tool-command-line-options-distributed-replay-utility.md)   
  [Configurar Distributed Replay](../../tools/distributed-replay/configure-distributed-replay.md)  
   
   

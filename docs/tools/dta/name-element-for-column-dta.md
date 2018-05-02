@@ -24,12 +24,12 @@ manager: craigg
 ms.workload: Inactive
 ms.openlocfilehash: 9bb4027f057fdfcd3c6aa4802708bfe39361ecff
 ms.sourcegitcommit: b6116b434d737d661c09b78d0f798c652cf149f3
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: es-ES
 ms.lasthandoff: 01/17/2018
 ---
 # <a name="name-element-for-column-dta"></a>Name (DTA, elemento de Column)
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]Especifica el nombre de una columna de índice en una configuración especificada por el usuario.  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] Especifica el nombre de una columna de índice en una configuración especificada por el usuario.  
   
 ## <a name="syntax"></a>Sintaxis  
   
@@ -40,9 +40,9 @@ ms.lasthandoff: 01/17/2018
         <Name>...</Name>  
 ```  
   
-## <a name="element-characteristics"></a>Características de los elementos  
+## <a name="element-characteristics"></a>Características del elemento  
   
-|Característica|Descripción|  
+|Característica|Description|  
 |--------------------|-----------------|  
 |**Tipo y longitud de los datos**|**string**, longitud ilimitada.|  
 |**Valor predeterminado**|Ninguno.|  
@@ -52,13 +52,13 @@ ms.lasthandoff: 01/17/2018
   
 |Relación|Elementos|  
 |------------------|--------------|  
-|**Elemento primario**|[Elemento de columna de índice &#40; DTA &#41;](../../tools/dta/column-element-for-index-dta.md)|  
+|**Elemento primario**|[Column &#40;DTA, elemento de Index&#41;](../../tools/dta/column-element-for-index-dta.md)|  
 |**Elementos secundarios**|Ninguno.|  
   
 ## <a name="example"></a>Ejemplo  
  Para obtener un ejemplo de uso de este elemento, vea [Ejemplo de archivo de entrada XML con configuración especificada por el usuario &#40;DTA&#41;](../../tools/dta/xml-input-file-sample-with-user-specified-configuration-dta.md).  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Ver también  
  [Referencia del archivo de entrada XML &#40;Asistente para la optimización de motor de base de datos&#41;](../../tools/dta/xml-input-file-reference-database-engine-tuning-advisor.md)  
   
   

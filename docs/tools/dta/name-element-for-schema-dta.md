@@ -24,12 +24,12 @@ manager: craigg
 ms.workload: Inactive
 ms.openlocfilehash: d9a5dffc32af6fb146abf3e53a5334b122ad2fa7
 ms.sourcegitcommit: b6116b434d737d661c09b78d0f798c652cf149f3
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: es-ES
 ms.lasthandoff: 01/17/2018
 ---
 # <a name="name-element-for-schema-dta"></a>Name (DTA, elemento de Schema)
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]Contiene el nombre del esquema.  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] Contiene el nombre del esquema.  
   
 ## <a name="syntax"></a>Sintaxis  
   
@@ -41,9 +41,9 @@ ms.lasthandoff: 01/17/2018
         <Name>...</Name>  
 ```  
   
-## <a name="element-characteristics"></a>Características de los elementos  
+## <a name="element-characteristics"></a>Características del elemento  
   
-|Característica|Descripción|  
+|Característica|Description|  
 |--------------------|-----------------|  
 |**Tipo y longitud de los datos**|**string**, entre 1 y 255 caracteres|  
 |**Valor predeterminado**|Ninguno.|  
@@ -53,13 +53,13 @@ ms.lasthandoff: 01/17/2018
   
 |Relación|Elementos|  
 |------------------|--------------|  
-|**Elemento primario**|[Elemento de esquema de base de datos &#40; DTA &#41;](../../tools/dta/schema-element-for-database-dta.md)|  
+|**Elemento primario**|[Schema &#40;DTA, elemento de Database&#41;](../../tools/dta/schema-element-for-database-dta.md)|  
 |**Elementos secundarios**|Ninguno.|  
   
 ## <a name="example"></a>Ejemplo  
  Para obtener un ejemplo del uso de este elemento, vea [Elemento Server &#40;DTA&#41;](../../tools/dta/server-element-dta.md).  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Ver también  
  [Referencia del archivo de entrada XML &#40;Asistente para la optimización de motor de base de datos&#41;](../../tools/dta/xml-input-file-reference-database-engine-tuning-advisor.md)  
   
   

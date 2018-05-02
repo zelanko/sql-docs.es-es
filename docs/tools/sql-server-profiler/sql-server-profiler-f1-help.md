@@ -1,15 +1,16 @@
 ---
-title: "Cuadros de diálogo de SQL Server Profiler | Documentos de Microsoft"
-ms.custom: 
+title: Cuadros de diálogo de SQL Server Profiler | Documentos de Microsoft
+ms.custom: ''
 ms.date: 07/07/2017
 ms.prod: sql-non-specified
 ms.prod_service: sql-tools
-ms.service: 
+ms.service: ''
 ms.component: sql-server-profiler
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: database-engine
-ms.tgt_pltfrm: 
+ms.technology:
+- database-engine
+ms.tgt_pltfrm: ''
 ms.topic: reference
 f1_keywords:
 - sql13.pro.traceproperties.general.f1;
@@ -43,19 +44,19 @@ helpviewer_keywords:
 - Replay Configuration dialog box
 - Find dialog box
 ms.assetid: e57b9160-4b78-4353-abb2-bfdbdf523d7a
-caps.latest.revision: "23"
+caps.latest.revision: 23
 author: stevestein
 ms.author: sstein
 manager: craigg
 ms.workload: Inactive
 ms.openlocfilehash: 284333202ee48153b0de4d513502e35edc73acaf
 ms.sourcegitcommit: b6116b434d737d661c09b78d0f798c652cf149f3
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: es-ES
 ms.lasthandoff: 01/17/2018
 ---
 # <a name="sql-server-profiler-dialog-boxes"></a>Cuadros de diálogo de SQL Server Profiler
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]Microsoft [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] es una herramienta que captura [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] eventos desde un servidor. Los eventos se guardan en un archivo de seguimiento que posteriormente se puede analizar o utilizar para reproducir una serie de pasos específicos cuando se intenta diagnosticar un problema. Los siguientes son los comandos y las opciones de configuración de los cuadros de diálogo de [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)].  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] Microsoft [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] es una herramienta que captura eventos de [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] de un servidor. Los eventos se guardan en un archivo de seguimiento que posteriormente se puede analizar o utilizar para reproducir una serie de pasos específicos cuando se intenta diagnosticar un problema. Los siguientes son los comandos y las opciones de configuración de los cuadros de diálogo de [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)].  
 ## <a name="trace-properties"></a>Propiedades de seguimiento
 ### <a name="general-tab"></a>Pestaña General
 Utilice la pestaña **General** del cuadro de diálogo **Propiedades de seguimiento** para ver o especificar las propiedades de un seguimiento.  
@@ -76,7 +77,7 @@ Utilice la pestaña **General** del cuadro de diálogo **Propiedades de seguimie
 | **Establecer número máximo de filas (en miles)**|Especifica el número máximo de filas en las que guardar los datos. El valor predeterminado es 1000 filas. 
 |**Habilitar hora de detención de seguimiento**|Establece la fecha y la hora de finalización y de cierre del seguimiento. 
 
-### <a name="events-selection-tab"></a>Pestaña selección de eventos
+### <a name="events-selection-tab"></a>Pestaña Selección de eventos
 Utilice la pestaña **Selección de eventos** del cuadro de diálogo **Propiedades de seguimiento** para ver o especificar columnas de datos y eventos de seguimiento.  
 |Elemento|Description
 |---|---
@@ -90,7 +91,7 @@ Utilice la pestaña **Selección de eventos** del cuadro de diálogo **Propiedad
 
 ## <a name="trace-template-properties"></a>Propiedades de la plantilla de seguimiento 
 ### <a name="new-general-tab"></a>Nueva (pestaña General)
-Utilice la pestaña **General** del cuadro de diálogo **Propiedades de la plantilla de seguimiento** para crear nuevas plantillas de seguimiento mediante las siguientes opciones. Para tener acceso a este cuadro de diálogo, en la [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] **archivo** menú, elija **plantillas**y, a continuación, haga clic en **nuevo**.
+Utilice la pestaña **General** del cuadro de diálogo **Propiedades de la plantilla de seguimiento** para crear nuevas plantillas de seguimiento mediante las siguientes opciones. Para acceder a este cuadro de diálogo, en el menú [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] **Archivo**, coloque el cursor sobre **Plantillas** y haga clic en **Nueva**.
 |Elemento|Description
 |---|---
 |**Seleccionar tipo de servidor**|Especifique el tipo de servidor donde se utilizará esta plantilla.  
@@ -106,7 +107,7 @@ Utilice la pestaña **General** del cuadro de diálogo **Propiedades de la plant
 |**Seleccionar nombre de plantilla**|Seleccione la plantilla que desea editar.  
 |**Usar como plantilla predeterminada para tipo de servidor seleccionado**|Utilice esta plantilla como valor predeterminado en seguimientos creados para este tipo de servidor.  
 
-### <a name="events-selection-tab"></a>Pestaña selección de eventos
+### <a name="events-selection-tab"></a>Pestaña Selección de eventos
 Utilice la pestaña **Selección de eventos** del cuadro de diálogo **Propiedades de la plantilla de seguimiento** para ver, editar o especificar las clases de eventos y las columnas de datos que se van a incluir en una plantilla de seguimiento del [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] .  
 |Elemento|Description
 |---|---
@@ -115,9 +116,9 @@ Utilice la pestaña **Selección de eventos** del cuadro de diálogo **Propiedad
 |Filtros|Especifique los filtros haciendo clic en el encabezado de la columna de datos y especificando los criterios de filtro. Las columnas de datos filtradas se indican mediante un icono de filtro situado a la izquierda de la etiqueta de columna en el cuadro de diálogo **Editar filtro** .  
 |**Mostrar todos los eventos**|Se muestran todos los eventos disponibles. Esta opción está activada de forma predeterminada si crea una nueva plantilla que no se base en una plantilla existente. Desactive esta opción para ocultar todos los eventos no seleccionados en la cuadrícula **Selección de eventos** .  
 |**Mostrar todas las columnas**|Muestra todas las columnas de datos disponibles. Esta opción está activada de forma predeterminada si crea una nueva plantilla que no se base en una plantilla existente. Desactive esta opción para ocultar todas las columnas de datos no seleccionadas en la cuadrícula **Selección de eventos** .  
-|**Filtros de columnas**|Inicia el cuadro de diálogo **Editar filtro** , que muestra un icono de filtro a la izquierda de la etiqueta de columna de datos. Utilice el cuadro de diálogo **Editar filtro** para editar los filtros de las columnas de datos.  
+|**Filtros de columnas**|Inicia el cuadro de diálogo **Editar filtro**, que muestra un icono de filtro a la izquierda de la etiqueta de columna de datos. Utilice el cuadro de diálogo **Editar filtro** para editar los filtros de las columnas de datos.  
 |**Organizar columnas**|Cambia el orden de las columnas del seguimiento y agrupa los resultados en una o más columnas. 
-## <a name="trace-file-properties"></a>Propiedades de archivo de seguimiento 
+## <a name="trace-file-properties"></a>Propiedades del archivo de seguimiento 
 ### <a name="general-tab"></a>Pestaña General
 Utilice la pestaña **General** del cuadro de diálogo **Propiedades del archivo de seguimiento** para ver las propiedades de un archivo de seguimiento.  
 Para ver esta ventana, abra un archivo de seguimiento. A continuación, en el menú **Archivo** , haga clic en **Propiedades**.  
@@ -130,7 +131,7 @@ Para ver esta ventana, abra un archivo de seguimiento. A continuación, en el me
 |**Tamaño de archivo (KB)**|Tamaño del archivo de seguimiento en kilobytes (KB).  
 |**Creado**|Fecha y hora en que se creó el archivo de seguimiento.  
 |**Modificado** |Fecha y hora en que se modificó el archivo de seguimiento.  
-### <a name="events-selection-tab"></a>Pestaña selección de eventos
+### <a name="events-selection-tab"></a>Pestaña Selección de eventos
 Utilice la pestaña **Selección de eventos** del cuadro de diálogo **Propiedades del archivo de seguimiento** para ver las propiedades de columna del seguimiento o quitar columnas de datos del seguimiento.  
 Para ver esta ventana, abra un archivo de seguimiento. Después, en el menú **Archivo** , haga clic en **Propiedades**y, a continuación, haga clic en la pestaña **Selección de eventos** .  
 |Elemento|Description
@@ -143,7 +144,7 @@ Para ver esta ventana, abra un archivo de seguimiento. Después, en el menú **A
 |**Filtros de columnas**|Inicia el cuadro de diálogo **Editar filtro** , que muestra un icono de filtro a la izquierda de la etiqueta de columna para las columnas de datos filtradas. Utilice el cuadro de diálogo **Editar filtro** para editar los filtros de las columnas de datos.  
 |**Organizar columnas**|Después de seleccionar la columna **Eventos** y la columna de datos de las que se va a realizar un seguimiento, haga clic en **Organizar columnas** para que la cuadrícula reordene la columna en la ventana de resultados del seguimiento.  
 ## <a name="trace-table-properties"></a>Propiedades de la tabla de seguimiento
-### <a name="events-selection-tab"></a>Pestaña selección de eventos
+### <a name="events-selection-tab"></a>Pestaña Selección de eventos
 Utilice la pestaña **Selección de eventos** del cuadro de diálogo **Propiedades de la tabla de seguimiento** para ver las propiedades de columna de datos y eventos del seguimiento o para quitar eventos o columnas del seguimiento.  
 Para ver esta ventana, use [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] para abrir una tabla de seguimiento. Después, en el menú **Archivo** , haga clic en **Propiedades**y, a continuación, haga clic en la pestaña **Selección de eventos** .  
 |Elemento|Description
@@ -153,7 +154,7 @@ Para ver esta ventana, use [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler
 |Filtros|Especifique los filtros haciendo clic en el encabezado de la columna de datos y especificando los criterios de filtro. Las columnas de datos filtradas se indican mediante un icono de filtro situado a la izquierda de la etiqueta de columna en el cuadro de diálogo **Editar filtro** .  
 |**Mostrar todos los eventos**|Se muestran todos los eventos disponibles. De forma predeterminada, solo se muestran las filas de la cuadrícula **Selección de eventos** que están seleccionadas. Desactive esta casilla para ocultar todos los eventos que no estén seleccionados en la cuadrícula **Selección de eventos** . Si se activa **Mostrar todos los eventos** y se está viendo un archivo o una tabla de seguimiento, todos los eventos que se grabaron en el seguimiento se mostrarán en la ventana de seguimiento.  
 |**Mostrar todas las columnas**|Muestra todas las columnas de datos disponibles. De forma predeterminada, solo se muestran las columnas de datos seleccionadas. Desactive esta casilla para ocultar todas las columnas de datos que no estén seleccionadas en la cuadrícula **Selección de eventos** .  
-|**Filtros de columnas**|Inicia el cuadro de diálogo **Editar filtro** , en el que se muestra un icono de filtro a la izquierda de la etiqueta de la columna. Puede utilizar este cuadro de diálogo para editar los filtros de las columnas de datos.  
+|**Filtros de columnas**|Inicia el cuadro de diálogo **Editar filtro**, en el que se muestra un icono de filtro a la izquierda de la etiqueta de la columna. Puede utilizar este cuadro de diálogo para editar los filtros de las columnas de datos.  
 |**Organizar columnas** |Después de seleccionar la columna **Eventos** y la columna de datos de las que se va a realizar un seguimiento, haga clic en **Organizar columnas** para que la cuadrícula reordene la columna en la ventana de resultados del seguimiento.  
 ## <a name="performance-counters-limit"></a>Límite de contadores de rendimiento
 Utilice el cuadro de diálogo Límite de contadores de rendimiento para limitar la información de un archivo de registro de rendimiento del Monitor de sistema cuando lo correlacione con un seguimiento del [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] . Puede utilizar este cuadro de diálogo para seleccionar los contadores que deben mostrarse y utilizarse para la correlación.  
@@ -171,7 +172,7 @@ Utilice el cuadro de diálogo **Opciones generales** para ver o especificar las 
 |**Nombre de fuente**|Muestra el nombre de la fuente utilizada en la cuadrícula de resultados de seguimiento durante los seguimientos.  
 |**Tamaño de fuente**|Muestra el tamaño de la fuente utilizada en la cuadrícula de resultados de seguimiento durante los seguimientos.  
 |**Elegir fuente**|Abre un cuadro de diálogo para cambiar la configuración de fuente.  
-|**Usar la configuración regional para mostrar valores de fecha y hora**|Muestra los valores de fecha y hora en la configuración regional establecida en el equipo. Si no selecciona esta opción, los valores de fecha y hora se muestran en el formato fijo que utiliza Microsoft [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], que incluye milisegundos. Tenga en cuenta que esta casilla de verificación activa o desactiva cambia las columnas de tiempo como formato de presentación **StartTime** y **EndTime**. Pero no cambia los parámetros del valor **DateTime** dentro de los eventos de lenguaje o las llamadas a procedimientos remotos (RPC).  
+|**Usar la configuración regional para mostrar valores de fecha y hora**|Muestra los valores de fecha y hora en la configuración regional establecida en el equipo. Si no selecciona esta opción, los valores de fecha y hora se muestran en el formato fijo que utiliza Microsoft [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], que incluye milisegundos. Observe que si activa o desactiva esta casilla se cambia el formato de presentación de las columnas de hora como **Hora de inicio** y **Hora de finalización**. Pero no cambia los parámetros del valor **DateTime** dentro de los eventos de lenguaje o las llamadas a procedimientos remotos (RPC).  
 |**Mostrar valores en la columna Duración en microsegundos**|Muestra los valores en microsegundos en la columna de datos **Duración** de los seguimientos. De manera predeterminada, la columna **Duración** muestra los valores en milisegundos.  
 ### <a name="tracing-options"></a>Opciones de seguimiento  
 |Elemento|Description
@@ -190,7 +191,7 @@ Utilice el cuadro de diálogo **Opciones generales** para ver o especificar las 
 |**Número predeterminado de subprocesos de reproducción**|Especifique el número de subprocesos de reproducción que se utilizarán simultáneamente. Un número más alto consume más recursos durante la reproducción, pero aumenta la simultaneidad.  
 |**Intervalo de espera del monitor de estado predeterminado (seg.)**|Especifique el intervalo de espera de la reproducción en segundos. El valor predeterminado es 3600 segundos (1 hora). Esta configuración afecta al tiempo que puede ejecutarse un subproceso antes de que lo finalice el monitor de estado.  
 |**Intervalo de sondeo del monitor de estado predeterminado (seg.)**|Especifique el intervalo de sondeo del monitor de estado durante la reproducción en segundos. El valor predeterminado es 60 segundos. Este valor permite al usuario configurar la frecuencia con que el monitor de estado sondea los candidatos para terminar.
-## <a name="source-table-database-engine-tuning-advisor-select-workload-table"></a>Tabla de origen (tabla de base de datos motor Tuning Advisor seleccionar carga de trabajo)
+## <a name="source-table-database-engine-tuning-advisor-select-workload-table"></a>Tabla de origen (Asistente para la optimización de motor de base de datos, Seleccionar tabla de carga de trabajo)
 Microsoft SQL Server Profiler y el Asistente para la optimización utilizan este cuadro de diálogo para seleccionar tablas.  
 - En Profiler, use el cuadro de diálogo **Tabla de origen** a fin de especificar una tabla de origen para una tabla de seguimiento. Esta última es una tabla desde la que se carga un seguimiento y su contenido se ve y usa para reproducir el seguimiento.  
 - En el Asistente para la optimización, use el cuadro de diálogo **Seleccionar tabla de carga de trabajo** para seleccionar una tabla de base de datos que contenga información de seguimiento del generador de perfiles para usarse como carga de trabajo de optimización, o bien para obtener una vista previa del contenido de la tabla antes de iniciar el análisis de optimización.  
@@ -217,7 +218,7 @@ Para ver esta ventana, utilice el [!INCLUDE[ssSqlProfiler](../../includes/sssqlp
 |---|---
 |**Servidor de reproducción**|Muestra la instancia de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] con la que se establece la conexión para la reproducción.  
 |**Cambiar...**|Inicia el cuadro de diálogo **Conectar al servidor** para conectarse a otro servidor.  
-|**Guardar en el archivo** |Guarda los resultados de la reproducción en un archivo. [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)]Muestra el cuadro de diálogo de archivo estándar, donde puede especificar la ubicación para guardar el archivo.  
+|**Guardar en el archivo** |Guarda los resultados de la reproducción en un archivo. [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] muestra el cuadro de diálogo de archivo estándar, en el puede especificar la ubicación en la que se guarda el archivo.  
 |**Guardar en la tabla**|Guarda los resultados de la reproducción en una tabla. [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] muestra el cuadro de diálogo de selección de tabla, en el puede especificar la ubicación en la que se guarda la tabla.  
 |**Número de subprocesos de reproducción**|Especifique el número de subprocesos de reproducción que se utilizarán simultáneamente. Un número mayor consume más recursos durante la reproducción, pero ésta es más rápida y simultánea.  
 |**Reproducir eventos en el orden del seguimiento**|Reproduce los eventos de forma secuencial. Utilice esta opción si reproduce un seguimiento para depuración.  
@@ -243,8 +244,8 @@ Utilice el cuadro de diálogo **Buscar** para buscar un seguimiento para palabra
  Para abrir este cuadro de diálogo en el [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)], en el menú **Editar** , haga clic en **Buscar**.  
 |Elemento|Description
 |---|---
-|**Find what**|Escriba el texto que desea buscar. La búsqueda mostrará cualquier cadena que contenga la cadena especificada. Por ejemplo, la búsqueda de "Completed" devolverá "SQL:BatchCompleted". No se admiten caracteres comodín (*, ?, etc.).  
-|**Buscar en columna**|Haga clic en una columna de datos para buscar o hacer clic  **\<todas las columnas >** para buscar todas las columnas de datos en el seguimiento.  
+|**Buscar**|Escriba el texto que desea buscar. La búsqueda mostrará cualquier cadena que contenga la cadena especificada. Por ejemplo, la búsqueda de "Completed" devolverá "SQL:BatchCompleted". No se admiten caracteres comodín (*, ?, etc.).  
+|**Buscar en columna**|Haga clic en la columna de datos en la que quiere realizar la búsqueda o haga clic en **\<Todas las columnas>** para realizar la búsqueda en todas las columnas de datos del seguimiento.  
 |**Coincidir mayúsculas y minúsculas**|Busca texto en el que se usen las mismas mayúsculas y minúsculas que en el cuadro **Buscar** . Desactive esta casilla para buscar ejemplos del seguimiento que tengan caracteres tanto en mayúscula como en minúscula.  
 |**Solo palabras completas**|Limita la búsqueda a palabras completas. Desactive la casilla **Solo palabras completas** si desea realizar la búsqueda de algunos caracteres de una palabra.  
 |**Buscar siguiente**|Busca el ejemplo siguiente de los caracteres del cuadro **Buscar** .  
@@ -279,6 +280,6 @@ Utilice el cuadro de diálogo **Seleccionar nombre de plantilla** para seleccion
 
 ## <a name="see-also"></a>Vea también 
 [SQL Server Profiler](../../tools/sql-server-profiler/sql-server-profiler.md)   
-[Supervisión de la actividad y rendimiento del servidor](../../relational-databases/performance/server-performance-and-activity-monitoring.md)  
+[Supervisión de la actividad y el rendimiento del servidor](../../relational-databases/performance/server-performance-and-activity-monitoring.md)  
   
   

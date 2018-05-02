@@ -24,12 +24,12 @@ manager: craigg
 ms.workload: On Demand
 ms.openlocfilehash: 6acb93ddde56546e170b01c093dff843a2ea5968
 ms.sourcegitcommit: b6116b434d737d661c09b78d0f798c652cf149f3
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: es-ES
 ms.lasthandoff: 01/17/2018
 ---
-# <a name="lesson-1-1---tuning-a-workload"></a>Lección 1-1-optimizar una carga de trabajo
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]El Asistente para la optimización de motor de base de datos puede utilizarse para encontrar el mejor diseño físico de la base de datos de rendimiento de las consultas en las bases de datos y tablas que seleccionó para la optimización.  
+# <a name="lesson-1-1---tuning-a-workload"></a>Lección 1-1: Optimizar una carga de trabajo
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] El Asistente para la optimización de motor de base de datos permite determinar el mejor diseño físico de la base de datos para el rendimiento de las consultas en las bases de datos y las tablas que seleccione para optimizar.  
   
 En esta tarea se usa la base de datos de ejemplo [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] . Con el objeto de mejorar la seguridad, las bases de datos de ejemplo no se instalan de forma predeterminada. Para instalarlas, consulte [Instalar ejemplos de SQL Server y bases de datos de ejemplo](http://sqlserversamples.codeplex.com).  
   

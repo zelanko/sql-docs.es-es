@@ -24,12 +24,12 @@ manager: craigg
 ms.workload: Inactive
 ms.openlocfilehash: 32f1958fcf5b69d9a3b8ef7b3fdf63f67216d9d0
 ms.sourcegitcommit: b6116b434d737d661c09b78d0f798c652cf149f3
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: es-ES
 ms.lasthandoff: 01/17/2018
 ---
 # <a name="server-element-dta"></a>Server (DTA, elemento)
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]Contiene la información de identificación para el servidor en el que las bases de datos residen que desea optimizar.  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] Contiene la información de identificación del servidor en el que residen las bases de datos que se quieren optimizar.  
   
 ## <a name="syntax"></a>Sintaxis  
   
@@ -41,9 +41,9 @@ ms.lasthandoff: 01/17/2018
     </Server>  
 ```  
   
-## <a name="element-characteristics"></a>Características de los elementos  
+## <a name="element-characteristics"></a>Características del elemento  
   
-|Característica|Descripción|  
+|Característica|Description|  
 |--------------------|-----------------|  
 |**Tipo y longitud de los datos**|Ninguno.|  
 |**Valor predeterminado**|Ninguno.|  
@@ -53,10 +53,10 @@ ms.lasthandoff: 01/17/2018
   
 |Relación|Elementos|  
 |------------------|--------------|  
-|**Elemento primario**|[Elemento DTAInput &#40; DTA &#41;](../../tools/dta/dtainput-element-dta.md)|  
-|**Elementos secundarios**|[Elemento de nombre de servidor &#40; DTA &#41;](../../tools/dta/name-element-for-server-dta.md)<br /><br /> [Elemento de la base de datos de servidor &#40; DTA &#41;](../../tools/dta/database-element-for-server-dta.md)|  
+|**Elemento primario**|[Elemento DTAInput &#40;DTA&#41;](../../tools/dta/dtainput-element-dta.md)|  
+|**Elementos secundarios**|[Name &#40;DTA, elemento de Server&#41;](../../tools/dta/name-element-for-server-dta.md)<br /><br /> [Elemento Database para servidor &#40;DTA&#41;](../../tools/dta/database-element-for-server-dta.md)|  
   
-## <a name="remarks"></a>Comentarios  
+## <a name="remarks"></a>Notas  
  Solo es posible especificar un elemento **Server** para el elemento **DTAInput** . Este elemento tiene el nombre **ServerDetailsTypecomplexType** en el esquema XML DTA. No confunda este elemento **Server** con el elemento secundario de **Configuration** . Para obtener más información, vea [Server &#40;DTA, elemento de Configuration&#41;](../../tools/dta/server-element-for-configuration-dta.md).  
   
 ## <a name="example"></a>Ejemplo  
@@ -77,7 +77,7 @@ ms.lasthandoff: 01/17/2018
 </Server  
 ```  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Ver también  
  [Referencia del archivo de entrada XML &#40;Asistente para la optimización de motor de base de datos&#41;](../../tools/dta/xml-input-file-reference-database-engine-tuning-advisor.md)  
   
   

@@ -1,26 +1,26 @@
 ---
-title: Servicios de SQL Server | Documentos de Microsoft
-ms.custom: 
+title: SQL Server Services | Microsoft Docs
+ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql-non-specified
 ms.prod_service: sql-tools
-ms.service: 
+ms.service: ''
 ms.component: configuration-manager
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: 97193ac4-aa97-489c-9e81-6fcbdf88aebf
-caps.latest.revision: 
+caps.latest.revision: 22
 author: stevestein
 ms.author: sstein
 manager: craigg
 ms.workload: Inactive
 ms.openlocfilehash: b932a110e49ededd17a3895eb7aeb3efee3e106c
 ms.sourcegitcommit: c556eaf60a49af7025db35b7aa14beb76a8158c5
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: es-ES
 ms.lasthandoff: 02/03/2018
 ---
@@ -32,9 +32,9 @@ Esta sección contiene los temas de la Ayuda F1 para los cuadros de diálogo de 
 >  Si abre el **Administrador de configuración de SQL Server** en el nodo de un clúster que no hospeda los recursos, los servicios aparecerán detenidos.  
   
 > [!NOTE]  
->  Si los nodos de los Servicios de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] no se rellenan con los servicios de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] que están disponibles en el equipo, es posible que no tenga permisos suficientes para obtener acceso al Instrumental de administración de Windows (WMI). Para configurar los permisos para WMI, busque el tema en los Libros en pantalla, "Cómo: Configure WMI para mostrar Estado del Servidor en "herramientas SQL Server.  
+>  Si los nodos de los Servicios de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] no se rellenan con los servicios de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] que están disponibles en el equipo, es posible que no tenga permisos suficientes para obtener acceso al Instrumental de administración de Windows (WMI). Para configurar los permisos de WMI, en Libros en pantalla busque el tema "Cómo: Configurar WMI para mostrar el estado del servidor en Herramientas de SQL Server".  
   
-## <a name="see-also"></a>Vea también  
- [Ayuda del Administrador de configuración de servidor SQL](../../tools/configuration-manager/sql-server-configuration-manager-help.md)  
+## <a name="see-also"></a>Ver también  
+ [Ayuda del Administrador de configuración de SQL Server](../../tools/configuration-manager/sql-server-configuration-manager-help.md)  
   
   

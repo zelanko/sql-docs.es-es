@@ -24,12 +24,12 @@ manager: craigg
 ms.workload: Inactive
 ms.openlocfilehash: 93b5886a489f4570dd62249f8620d11b868ee663
 ms.sourcegitcommit: b6116b434d737d661c09b78d0f798c652cf149f3
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: es-ES
 ms.lasthandoff: 01/17/2018
 ---
 # <a name="eventstring-element-dta"></a>EventString (DTA, elemento)
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]Especifica un [!INCLUDE[tsql](../../includes/tsql-md.md)] cargas de trabajo de secuencia de comandos directamente en el archivo de entrada XML.  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] Especifica una carga de trabajo de script [!INCLUDE[tsql](../../includes/tsql-md.md)] directamente en el archivo de entrada XML.  
   
 ## <a name="syntax"></a>Sintaxis  
   
@@ -44,13 +44,13 @@ ms.lasthandoff: 01/17/2018
   
 ## <a name="element-attributes"></a>Atributos del elemento  
   
-|Atributo|Description|  
+|Attribute|Description|  
 |---------------|-----------------|  
-|**Peso**|Opcional. Especifica el factor de peso de la consulta (un factor de importancia) del evento especificado. Utilice un tipo de datos **float** para especificar el peso. Por ejemplo, **Weight**="100.01". El valor mínimo que se puede especificar para **Weight** es "0".|  
+|**Weight**|Opcional. Especifica el factor de peso de la consulta (un factor de importancia) del evento especificado. Utilice un tipo de datos **float** para especificar el peso. Por ejemplo, **Weight**="100.01". El valor mínimo que se puede especificar para **Weight** es "0".|  
   
-## <a name="element-characteristics"></a>Características de los elementos  
+## <a name="element-characteristics"></a>Características del elemento  
   
-|Característica|Descripción|  
+|Característica|Description|  
 |--------------------|-----------------|  
 |**Tipo y longitud de los datos**|**string**, longitud ilimitada.|  
 |**Valor predeterminado**|Ninguno.|  
@@ -60,13 +60,13 @@ ms.lasthandoff: 01/17/2018
   
 |Relación|Elementos|  
 |------------------|--------------|  
-|**Elemento primario**|[Workload, elemento &#40; DTA &#41;](../../tools/dta/workload-element-dta.md)|  
+|**Elemento primario**|[Workload &#40;DTA, elemento&#41;](../../tools/dta/workload-element-dta.md)|  
 |**Elementos secundarios**|Ninguno.|  
   
 ## <a name="example"></a>Ejemplo  
  Para obtener un ejemplo de uso de este elemento, vea [Ejemplo de archivo de entrada XML con carga de trabajo insertada &#40;DTA&#41;](../../tools/dta/xml-input-file-sample-with-inline-workload-dta.md).  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Ver también  
  [Referencia del archivo de entrada XML &#40;Asistente para la optimización de motor de base de datos&#41;](../../tools/dta/xml-input-file-reference-database-engine-tuning-advisor.md)  
   
   

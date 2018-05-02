@@ -22,14 +22,14 @@ manager: craigg
 ms.workload: Inactive
 ms.openlocfilehash: ec4a757306f0e63e2e85b70526a211667a70f6e6
 ms.sourcegitcommit: b6116b434d737d661c09b78d0f798c652cf149f3
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: es-ES
 ms.lasthandoff: 01/17/2018
 ---
 # <a name="sqllogship-application"></a>sqllogship (aplicación)
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]El **sqllogship** aplicación realiza una copia de seguridad, copiar, o la operación de restauración y las tareas de limpieza asociadas en una configuración de trasvase de registros. La operación se realiza en una instancia específica de [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] para una base de datos determinada.  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] La aplicación **sqllogship** realiza una operación de copia de seguridad, copia o restauración y las tareas de limpieza asociadas en una configuración de trasvase de registros. La operación se realiza en una instancia específica de [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] para una base de datos determinada.  
   
- ![Icono de vínculo de tema](../database-engine/configure-windows/media/topic-link.gif "icono de vínculo de tema") para las convenciones de sintaxis, vea [referencia de utilidad de símbolo del sistema &#40; motor de base de datos &#41;](../tools/command-prompt-utility-reference-database-engine.md).  
+ ![Icono de vínculo de tema](../database-engine/configure-windows/media/topic-link.gif "icono de vínculo de tema") para las convenciones de sintaxis, vea [referencia de utilidad de línea de comandos &#40;motor de base de datos&#41;](../tools/command-prompt-utility-reference-database-engine.md).  
   
 ## <a name="syntax"></a>Sintaxis  
   
@@ -65,26 +65,26 @@ sqllogship -server instance_name { -backup primary_id | -copy secondary_id | -re
 |0|No se obtienen mensajes de depuración ni de seguimiento.|  
 |1|Se obtienen mensajes de control de errores.|  
 |2|Se obtienen mensajes de control de errores y advertencias.|  
-|**3**|Se obtienen mensajes de control de errores, advertencias e informativos. Es el valor predeterminado.|  
+|**3**|Se obtienen mensajes de control de errores, advertencias e informativos. Este es el valor predeterminado.|  
 |4|Se obtienen todos los mensajes de depuración y traza.|  
   
  **–logintimeout** *timeout_value*  
- Especifica la cantidad de tiempo asignado al intento de iniciar sesión en la instancia del servidor antes de que se agote el tiempo de espera del intento. El valor predeterminado es 15 segundos. *timeout_value* es **int ***.*  
+ Especifica la cantidad de tiempo asignado al intento de iniciar sesión en la instancia del servidor antes de que se agote el tiempo de espera del intento. El valor predeterminado es 15 segundos. *timeout_value* es de tipo **int***.*  
   
  **-querytimeout** *timeout_value*  
- Especifica la cantidad de tiempo asignado para iniciar la operación especificada antes de que se agote el tiempo de espera. El valor predeterminado es sin tiempo de espera. *timeout_value* es **int ***.*  
+ Especifica la cantidad de tiempo asignado para iniciar la operación especificada antes de que se agote el tiempo de espera. El valor predeterminado es sin tiempo de espera. *timeout_value* es de tipo **int***.*  
   
-## <a name="remarks"></a>Comentarios  
+## <a name="remarks"></a>Notas  
  Se recomienda que use los trabajos de copia de seguridad, copia y restauración para realizar la copia de seguridad, copia y restauración cuando sea posible. Para iniciar estos trabajos desde una operación por lotes u otra aplicación, llame al procedimiento almacenado [sp_start_job](../relational-databases/system-stored-procedures/sp-start-job-transact-sql.md) .  
   
  El historial de trasvase de registros creado por **sqllogship** se combina con el historial creado por los trabajos de copia de seguridad, copia y restauración de trasvase de registros. Si tiene previsto usar **sqllogship** repetidamente para realizar operaciones de copia de seguridad, copia y restauración para una configuración de trasvase de registros, considere la posibilidad de deshabilitar los trabajos de trasvase de registros correspondientes. Para obtener más información, consulte [Disable or Enable a Job](http://msdn.microsoft.com/library/5041261f-0c32-4d4a-8bee-59a6c16200dd).  
   
  La aplicación **sqllogship** , SqlLogShip.exe, está instalada en el directorio x:\Archivos de programa\Microsoft SQL Server\130\Tools\Binn.  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>Permisos  
  **sqllogship** usa la autenticación de Windows. La cuenta de la autenticación de Windows donde se ejecuta el comando requiere acceso al directorio de Windows y permisos de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] . El requisito depende de si el comando **sqllogship** especifica la opción **-backup**, **-copy**o **-restore** .  
   
-|Opción|Acceso al directorio|Permissions|  
+|Opción|Acceso al directorio|Permisos|  
 |------------|----------------------|-----------------|  
 |**-backup**|Requiere acceso de lectura/escritura al directorio de copia de seguridad.|Requiere los mismos permisos que la instrucción BACKUP. Para obtener más información, vea [BACKUP &#40;Transact-SQL&#41;](../t-sql/statements/backup-transact-sql.md).|  
 |**-copy**|Requiere acceso de lectura al directorio de copia de seguridad y acceso de escritura al directorio de copia.|Requiere los mismos permisos que el procedimiento almacenado [sp_help_log_shipping_secondary_database](../relational-databases/system-stored-procedures/sp-help-log-shipping-secondary-database-transact-sql.md) .|  
@@ -93,7 +93,7 @@ sqllogship -server instance_name { -backup primary_id | -copy secondary_id | -re
 > [!NOTE]  
 >  Para conocer las rutas de acceso de los directorios de copia de seguridad y copia, puede ejecutar el procedimiento almacenado **sp_help_log_shipping_secondary_database** o examinar la tabla **log_shipping_secondary** en **msdb**. Las rutas de acceso al directorio de copia de seguridad y al de destino se encuentran en las columnas **backup_source_directory** y **backup_destination_directory** respectivamente.  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Ver también  
  [Acerca del trasvase de registros &#40;SQL Server&#41;](../database-engine/log-shipping/about-log-shipping-sql-server.md)   
  [log_shipping_primary_databases &#40;Transact-SQL&#41;](../relational-databases/system-tables/log-shipping-primary-databases-transact-sql.md)   
  [log_shipping_secondary &#40;Transact-SQL&#41;](../relational-databases/system-tables/log-shipping-secondary-transact-sql.md)   

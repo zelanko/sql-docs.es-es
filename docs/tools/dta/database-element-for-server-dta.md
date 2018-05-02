@@ -24,12 +24,12 @@ manager: craigg
 ms.workload: Inactive
 ms.openlocfilehash: d5150ec15a3cdd1f218bb108b8e305eaae7f2121
 ms.sourcegitcommit: b6116b434d737d661c09b78d0f798c652cf149f3
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: es-ES
 ms.lasthandoff: 01/17/2018
 ---
 # <a name="database-element-for-server-dta"></a>Elemento Database para servidor (DTA)
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]Especifica la base de datos que desea optimizar en un servidor específico.  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] Especifica la base de datos que se desea optimizar en un servidor concreto.  
   
 ## <a name="syntax"></a>Sintaxis  
   
@@ -40,9 +40,9 @@ ms.lasthandoff: 01/17/2018
     <Database>...</Database>  
 ```  
   
-## <a name="element-characteristics"></a>Características de los elementos  
+## <a name="element-characteristics"></a>Características del elemento  
   
-|Característica|Descripción|  
+|Característica|Description|  
 |--------------------|-----------------|  
 |Tipo y longitud de los datos|Ninguno.|  
 |Valor predeterminado|Ninguno.|  
@@ -53,15 +53,15 @@ ms.lasthandoff: 01/17/2018
 |Relación|Elementos|  
 |------------------|--------------|  
 |Elemento primario|[Server &#40;DTA, elemento&#41;](../../tools/dta/server-element-dta.md)|  
-|Elementos secundarios|[Name &#40;DTA, elemento de Database&#41;](../../tools/dta/name-element-for-database-dta.md)<br /><br /> [Elemento de esquema de base de datos & #40; DTA & #41;](../../tools/dta/schema-element-for-database-dta.md)|  
+|Elementos secundarios|[Name &#40;DTA, elemento de Database&#41;](../../tools/dta/name-element-for-database-dta.md)<br /><br /> [Schema &#40;DTA, elemento de Database&#41;](../../tools/dta/schema-element-for-database-dta.md)|  
   
-## <a name="remarks"></a>Comentarios  
+## <a name="remarks"></a>Notas  
  Este elemento tiene el nombre **DatabaseDetailsTypecomplexType** en el esquema XML del Asistente para la optimización de motor de base de datos. No confunda este elemento **Database** con el que tiene al elemento **Configuration** como raíz primaria. Para obtener más información, vea [Database &#40;DTA, elemento de Configuration&#41;](../../tools/dta/database-element-for-configuration-dta.md).  
   
 ## <a name="example"></a>Ejemplo  
  Para obtener un ejemplo del uso del elemento **Database** , vea [Server &#40;DTA, elemento&#41;](../../tools/dta/server-element-dta.md).  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Ver también  
  [Referencia del archivo de entrada XML &#40;Asistente para la optimización de motor de base de datos&#41;](../../tools/dta/xml-input-file-reference-database-engine-tuning-advisor.md)  
   
   

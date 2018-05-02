@@ -1,30 +1,30 @@
 ---
-title: "Protocolos de cliente: denominado propiedades de canalizaciones (pestaña protocolo) | Documentos de Microsoft"
-ms.custom: 
+title: 'Protocolos de cliente: propiedades de canalizaciones con nombre (pestaña Protocolo) | Microsoft Docs'
+ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql-non-specified
 ms.prod_service: sql-tools
-ms.service: 
+ms.service: ''
 ms.component: configuration-manager
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - pipes [SQL Server], connecting to
 - Named Pipes [SQL Server], default pipe
 - client protocols [SQL Server]
 ms.assetid: 30fbae62-2f2e-4d36-9c6e-3444fff68781
-caps.latest.revision: 
+caps.latest.revision: 23
 author: stevestein
 ms.author: sstein
 manager: craigg
 ms.workload: Inactive
 ms.openlocfilehash: 67a401a8edf4c6818899b755d9444edd09165972
 ms.sourcegitcommit: c556eaf60a49af7025db35b7aa14beb76a8158c5
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: es-ES
 ms.lasthandoff: 02/03/2018
 ---
@@ -41,7 +41,7 @@ En el Administrador de configuración de [!INCLUDE[msCoName](../../includes/msco
  **Habilitado**  
  Los valores posibles son **Yes** y **No**.  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Ver también  
  [Elegir un protocolo de red](http://msdn.microsoft.com/library/6565fb7d-b076-4447-be90-e10d0dec359a)  
   
   

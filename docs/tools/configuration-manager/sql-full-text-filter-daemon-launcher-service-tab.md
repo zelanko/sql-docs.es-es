@@ -1,32 +1,32 @@
 ---
-title: "Selector de demonio de filtro de texto completo SQL (pestaña servicio) | Documentos de Microsoft"
-ms.custom: 
+title: Selector de demonio de filtro de texto completo de SQL (pestaña Servicio) | Microsoft Docs
+ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql-non-specified
 ms.prod_service: sql-tools
-ms.service: 
+ms.service: ''
 ms.component: configuration-manager
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: 6aad7ebe-c4be-4d37-8536-61502f51faa2
-caps.latest.revision: 
+caps.latest.revision: 8
 author: stevestein
 ms.author: sstein
 manager: craigg
 ms.workload: Inactive
 ms.openlocfilehash: 61c90f8579a4656ba3bc5be5e111afd2dabf7487
 ms.sourcegitcommit: c556eaf60a49af7025db35b7aa14beb76a8158c5
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: es-ES
 ms.lasthandoff: 02/03/2018
 ---
 # <a name="sql-full-text-filter-daemon-launcher-service-tab"></a>Selector del demonio de filtro de texto completo de SQL (pestaña Servicio)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
-A partir de [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)], el Selector de demonio de filtro de texto completo de SQL (selector FDHOST) se usa en el texto completo de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Este servicio debe estar ejecutándose si se utiliza la búsqueda de texto completo. Para obtener información sobre los procesos de host de demonio de filtro, vea "Arquitectura de la búsqueda de texto completo" en los Libros en pantalla de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
+A partir de [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)], el Selector de demonio de filtro de texto completo de SQL (selector FDHOST) se usa en el texto completo de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Este servicio debe estar ejecutándose si se utiliza la búsqueda de texto completo. Para obtener información sobre los procesos de host de demonio de filtro, vea "Arquitectura de la búsqueda de texto completo" en los Libros en pantalla de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
   
  Use la pestaña **Servicio**del cuadro de diálogo **Propiedades de Selector de demonio de filtro de texto completo de SQL** para ver o especificar las opciones siguientes.  
   

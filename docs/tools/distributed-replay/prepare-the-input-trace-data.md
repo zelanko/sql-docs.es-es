@@ -1,30 +1,31 @@
 ---
 title: Preparar los datos de seguimiento de entrada | Documentos de Microsoft
-ms.custom: 
+ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql-non-specified
 ms.prod_service: sql-tools
-ms.service: 
+ms.service: ''
 ms.component: distributed-replay
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: database-engine
-ms.tgt_pltfrm: 
+ms.technology:
+- database-engine
+ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: c14fd3d2-5770-47c2-a851-cc13ddbc9bf5
-caps.latest.revision: "23"
+caps.latest.revision: 23
 author: stevestein
 ms.author: sstein
 manager: craigg
 ms.workload: Inactive
 ms.openlocfilehash: 7cda1a0a932a914e85618359cb067b2e4da2a0f7
 ms.sourcegitcommit: b6116b434d737d661c09b78d0f798c652cf149f3
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: es-ES
 ms.lasthandoff: 01/17/2018
 ---
 # <a name="prepare-the-input-trace-data"></a>Preparar los datos de seguimiento de entrada
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]Para poder iniciar una reproducción distribuida con la [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] característica Distributed Replay, debe preparar los datos de seguimiento de entrada iniciando la fase de preprocesamiento desde la herramienta de administración de reproducción distribuida. En la fase de preprocesamiento, el controlador de reproducción distribuida procesa la información de seguimiento y genera un archivo intermedio:  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] Para poder iniciar una repetición distribuida con la característica [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Distributed Replay, debe preparar la información de seguimiento de entrada iniciando la fase de preprocesamiento desde la herramienta de administración Distributed Replay. En la fase de preprocesamiento, el controlador de reproducción distribuida procesa la información de seguimiento y genera un archivo intermedio:  
   
  ![Fase de preproceso de Distributed replay](../../tools/distributed-replay/media/preprocess.gif "fase de preproceso de Distributed replay")  
   
@@ -35,7 +36,7 @@ ms.lasthandoff: 01/17/2018
   
 ### <a name="to-prepare-the-input-trace-data"></a>Para preparar la información de seguimiento de entrada  
   
-1.  **(Opcional) Modificar los valores de configuración de preprocesamiento:**si quiere modificar los valores de configuración de preprocesamiento, por ejemplo, si se van a filtrar las sesiones del sistema o se va a configurar el tiempo máximo de inactividad, debe modificar el elemento `<PreprocessModifiers>` del archivo de configuración de preprocesamiento basado en XML, `DReplay.exe.preprocess.config`. Si modifica el archivo de configuración de preprocesamiento, se recomienda que modifique una copia en vez del original. Para modificar los valores de configuración, siga estos pasos:  
+1.  **(Opcional) Modificar los valores de configuración de preprocesamiento:** si quiere modificar los valores de configuración de preprocesamiento, por ejemplo, si se van a filtrar las sesiones del sistema o se va a configurar el tiempo máximo de inactividad, debe modificar el elemento `<PreprocessModifiers>` del archivo de configuración de preprocesamiento basado en XML, `DReplay.exe.preprocess.config`. Si modifica el archivo de configuración de preprocesamiento, se recomienda que modifique una copia en vez del original. Para modificar los valores de configuración, siga estos pasos:  
   
     1.  Haga una copia del archivo de configuración de preprocesamiento predeterminado, `DReplay.exe.preprocess.config`, y cambie el nombre del nuevo archivo. El archivo de configuración de preprocesamiento predeterminado se encuentra en la carpeta de instalación de la herramienta de administración.  
   
@@ -63,10 +64,10 @@ ms.lasthandoff: 01/17/2018
   
 3.  Una vez completada la fase de preprocesamiento, el archivo intermedio se almacena en el directorio de trabajo del controlador. Para iniciar la fase de reproducción de eventos, debe ejecutar la herramienta de administración con la opción **replay** . Para obtener más información, vea [Reproducir datos de seguimiento](../../tools/distributed-replay/replay-trace-data.md).  
   
-## <a name="see-also"></a>Vea también  
- [Reproducción distribuida de SQL Server](../../tools/distributed-replay/sql-server-distributed-replay.md)   
- [Requisitos de Distributed Replay](../../tools/distributed-replay/distributed-replay-requirements.md)   
- [Opciones de línea de comandos de la herramienta de administración &#40; utilidad Distributed Replay &#41;](../../tools/distributed-replay/administration-tool-command-line-options-distributed-replay-utility.md)   
+## <a name="see-also"></a>Ver también  
+ [SQL Server Distributed Replay](../../tools/distributed-replay/sql-server-distributed-replay.md)   
+ [Distributed Replay Requirements](../../tools/distributed-replay/distributed-replay-requirements.md)   
+ [Opciones de línea de comandos de la herramienta de administración &#40;utilidad Distributed Replay&#41;](../../tools/distributed-replay/administration-tool-command-line-options-distributed-replay-utility.md)   
  [Configurar Distributed Replay](../../tools/distributed-replay/configure-distributed-replay.md)  
   
   

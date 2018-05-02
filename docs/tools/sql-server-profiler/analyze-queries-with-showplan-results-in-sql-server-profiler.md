@@ -1,34 +1,35 @@
 ---
-title: Analizar consultas con resultados de SHOWPLAN en SQL Server Profiler | Documentos de Microsoft
-ms.custom: 
+title: Analizar consultas con resultados de SHOWPLAN en SQL Server Profiler | Microsoft Docs
+ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql-non-specified
 ms.prod_service: sql-tools
-ms.service: 
+ms.service: ''
 ms.component: sql-server-profiler
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: database-engine
-ms.tgt_pltfrm: 
+ms.technology:
+- database-engine
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - events [SQL Server], Showplan
 - Profiler [SQL Server Profiler], Showplan results
 - SQL Server Profiler, Showplan results
 ms.assetid: 6a2f7727-141c-4f59-8613-2e452bc78467
-caps.latest.revision: "30"
+caps.latest.revision: 30
 author: stevestein
 ms.author: sstein
 manager: craigg
 ms.workload: Inactive
 ms.openlocfilehash: fc385ac38ff22a0b07231aa1ae81c332eb91c63f
 ms.sourcegitcommit: b6116b434d737d661c09b78d0f798c652cf149f3
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: es-ES
 ms.lasthandoff: 01/17/2018
 ---
 # <a name="analyze-queries-with-showplan-results-in-sql-server-profiler"></a>Analizar consultas con resultados de SHOWPLAN en SQL Server Profiler
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]Puede agregar clases de eventos Showplan a una definición de seguimiento que permitan que [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] para recopilar y mostrar información del plan de consulta en el seguimiento. También es posible extraer los eventos Showplan de los otros eventos recopilados en el seguimiento y guardarlos en un archivo XML independiente.  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] Puede agregar clases de eventos Showplan a una definición de seguimiento que permitan que [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] recopile y muestre información del plan de consulta en el seguimiento. También es posible extraer los eventos Showplan de los otros eventos recopilados en el seguimiento y guardarlos en un archivo XML independiente.  
   
  La extracción de eventos Showplan del seguimiento puede hacerse de dos formas:  
   
@@ -41,7 +42,7 @@ ms.lasthandoff: 01/17/2018
 ## <a name="showplan-events"></a>Showplan (eventos)  
  Los eventos de seguimiento Showplan se enumeran y describen en la siguiente tabla:  
   
-|Nombre del evento|Descripción|  
+|Nombre del evento|Description|  
 |----------------|-----------------|  
 |**Performance statistics**|Indica la primera vez que se guarda en caché un plan de presentación compilado, cuándo se vuelve a compilar y cuándo se quita de la caché del plan. La columna **TextData** contiene el plan de presentación en formato XML. Para obtener más información, vea [Performance Statistics (clase de eventos)](../../relational-databases/event-classes/performance-statistics-event-class.md).|  
 |**Showplan All**|Muestra el plan de consulta con detalles completos de la compilación de la instrucción [!INCLUDE[tsql](../../includes/tsql-md.md)] ejecutada. Por ejemplo, puede mostrar listas de columnas y estimaciones de costes. Para más información, consulte [Showplan All Event Class](../../relational-databases/event-classes/showplan-all-event-class.md).|  
@@ -53,7 +54,7 @@ ms.lasthandoff: 01/17/2018
 |**Showplan XML For Query Compile**|Muestra el plan de consulta al compilar la consulta. Para más información, consulte [Showplan XML for Query Compile Event Class](../../relational-databases/event-classes/showplan-xml-for-query-compile-event-class.md).|  
 |**Showplan XML Statistics Profile**|Muestra el plan de consulta con detalles completos acerca del tiempo de ejecución en formato XML. Por ejemplo, esta clase de evento captura el número de filas que pasan por cada operador de la instrucción [!INCLUDE[tsql](../../includes/tsql-md.md)] que se está ejecutando. Para más información, consulte [Showplan XML Statistics Profile Event Class](../../relational-databases/event-classes/showplan-xml-statistics-profile-event-class.md).|  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Ver también  
  [Rendimiento (categoría de eventos)](../../relational-databases/event-classes/performance-event-category.md)  
   
   

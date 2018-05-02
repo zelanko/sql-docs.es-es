@@ -1,15 +1,16 @@
 ---
 title: Plantillas SQL Server Profiler | Documentos de Microsoft
-ms.custom: 
+ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql-non-specified
 ms.prod_service: sql-tools
-ms.service: 
+ms.service: ''
 ms.component: sql-server-profiler
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: database-engine
-ms.tgt_pltfrm: 
+ms.technology:
+- database-engine
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - default SQL Server Profiler templates
@@ -19,19 +20,19 @@ helpviewer_keywords:
 - predefined templates [SQL Server Profiler]
 - SQL Server Profiler, templates
 ms.assetid: b674e491-dc58-47a1-acdd-7028e9a201fc
-caps.latest.revision: "35"
+caps.latest.revision: 35
 author: stevestein
 ms.author: sstein
 manager: craigg
 ms.workload: On Demand
 ms.openlocfilehash: b02daf16a7cb1be9d7b0f12d1b75c217575a5e4b
 ms.sourcegitcommit: b6116b434d737d661c09b78d0f798c652cf149f3
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: es-ES
 ms.lasthandoff: 01/17/2018
 ---
 # <a name="sql-server-profiler-templates"></a>Plantillas de SQL Server Profiler
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]Puede usar [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] para crear plantillas que definan las columnas de datos y las clases de evento para incluirlas en seguimientos. Después de definir y guardar la plantilla, ejecute un seguimiento que registre los datos de cada clase de evento que ha seleccionado. Una sola plantilla puede utilizarse en varios seguimientos puesto que la plantilla no se ejecuta como tal.  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] Puede utilizar [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] para crear plantillas que definan las clases de eventos y columnas de datos que desea incluir en los seguimientos. Después de definir y guardar la plantilla, ejecute un seguimiento que registre los datos de cada clase de evento que ha seleccionado. Una sola plantilla puede utilizarse en varios seguimientos puesto que la plantilla no se ejecuta como tal.  
   
  [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] incluye plantillas de seguimiento predefinidas para que pueda configurar fácilmente las clases de evento que seguramente necesitará para seguimientos concretos. La plantilla Standard, por ejemplo, le ayuda a crear un seguimiento genérico para registrar inicios y cierres de sesión, lotes finalizados e información de conexión. Esta plantilla permite ejecutar seguimientos sin modificarlos o como punto de inicio para plantillas adicionales con configuraciones de evento distintas.  
   
@@ -65,10 +66,10 @@ ms.lasthandoff: 01/17/2018
 > [!NOTE]  
 >  La plantilla predeterminada es específica para un tipo de servidor concreto. Si la cambia para un tipo de servidor, seguirá siendo la misma para el resto de tipos de servidor. Para obtener más información sobre cómo configurar una plantilla predeterminada para un servidor específico, vea [Configurar los valores predeterminados de definición de seguimiento &#40;SQL Server Profiler&#41;](../../tools/sql-server-profiler/set-trace-definition-defaults-sql-server-profiler.md).  
   
-## <a name="see-also"></a>Vea también  
- [Crear una plantilla de seguimiento &#40; Analizador de SQL Server &#41;](../../tools/sql-server-profiler/create-a-trace-template-sql-server-profiler.md)   
- [Modificar una plantilla de seguimiento &#40; Analizador de SQL Server &#41;](../../tools/sql-server-profiler/modify-a-trace-template-sql-server-profiler.md)   
- [Exportar una plantilla de seguimiento &#40; Analizador de SQL Server &#41;](../../tools/sql-server-profiler/export-a-trace-template-sql-server-profiler.md)   
+## <a name="see-also"></a>Ver también  
+ [Crear una plantilla de seguimiento &#40;SQL Server Profiler&#41;](../../tools/sql-server-profiler/create-a-trace-template-sql-server-profiler.md)   
+ [Modificar una plantilla de seguimiento &#40;SQL Server Profiler&#41;](../../tools/sql-server-profiler/modify-a-trace-template-sql-server-profiler.md)   
+ [Exportar una plantilla de seguimiento &#40;SQL Server Profiler&#41;](../../tools/sql-server-profiler/export-a-trace-template-sql-server-profiler.md)   
  [Importar una plantilla de seguimiento &#40;SQL Server Profiler&#41;](../../tools/sql-server-profiler/import-a-trace-template-sql-server-profiler.md)  
   
   

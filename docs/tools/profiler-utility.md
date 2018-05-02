@@ -1,15 +1,16 @@
 ---
 title: Analizador (utilidad) | Documentos de Microsoft
-ms.custom: 
+ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql-non-specified
 ms.prod_service: sql-tools
-ms.service: 
+ms.service: ''
 ms.component: profiler
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: database-engine
-ms.tgt_pltfrm: 
+ms.technology:
+- database-engine
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - command prompt utilities [SQL Server], profiler90 utility
@@ -18,19 +19,19 @@ helpviewer_keywords:
 - SQL Server Profiler, starting
 - starting SQL Server Profiler
 ms.assetid: e91c30a9-0d29-4f84-bcb8-e8fb62afadda
-caps.latest.revision: "42"
+caps.latest.revision: 42
 author: stevestein
 ms.author: sstein
 manager: craigg
 ms.workload: Inactive
 ms.openlocfilehash: 9eb834190093ae44b8ccc80334b33bd3e0c147a1
 ms.sourcegitcommit: b6116b434d737d661c09b78d0f798c652cf149f3
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: es-ES
 ms.lasthandoff: 01/17/2018
 ---
 # <a name="profiler-utility"></a>Analizador (utilidad)
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]El **profiler** utilidad inicia el [!INCLUDE[ssSqlProfiler](../includes/sssqlprofiler-md.md)] herramienta. Los argumentos opcionales que se enumeran más adelante en este tema permiten controlar cómo se inicia la aplicación.  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] La utilidad **profiler** inicia la herramienta [!INCLUDE[ssSqlProfiler](../includes/sssqlprofiler-md.md)]. Los argumentos opcionales que se enumeran más adelante en este tema permiten controlar cómo se inicia la aplicación.  
   
 > [!NOTE]  
 >  La utilidad **profiler** no está pensada para la creación de scripts en seguimientos. Para más información, consulte [SQL Server Profiler](../tools/sql-server-profiler/sql-server-profiler.md).  
@@ -123,14 +124,14 @@ profiler
  **/Z**  *file_size*  
  Especifica el tamaño del archivo de seguimiento en megabytes (MB). El tamaño predeterminado es 5 MB. Si está habilitada la sustitución incremental de archivos, todos los archivos de sustitución incremental estarán limitados al valor especificado en el argumento.  
   
-## <a name="remarks"></a>Comentarios  
+## <a name="remarks"></a>Notas  
  Para iniciar un seguimiento con una plantilla específica, use las opciones **/S** y **/T** juntas. Por ejemplo, para iniciar un seguimiento mediante la plantilla Standard en MyServer\MyInstance, escriba lo siguiente en el símbolo del sistema:  
   
 ```  
 profiler /S MyServer\MyInstance /T "Standard"  
 ```  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Ver también  
  [Referencia de la utilidad del símbolo del sistema &#40;motor de base de datos&#41;](../tools/command-prompt-utility-reference-database-engine.md)  
   
   

@@ -1,34 +1,35 @@
 ---
-title: Organizar las columnas mostradas en un seguimiento (SQL Server Profiler) | Documentos de Microsoft
-ms.custom: 
+title: Organizar las columnas mostradas en un seguimiento (SQL Server Profiler) | Microsoft Docs
+ms.custom: ''
 ms.date: 03/01/2017
 ms.prod: sql-non-specified
 ms.prod_service: sql-tools
-ms.service: 
+ms.service: ''
 ms.component: sql-server-profiler
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: database-engine
-ms.tgt_pltfrm: 
+ms.technology:
+- database-engine
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - organizing trace columns displayed [SQL Server]
 - arranging trace columns displayed
 - traces [SQL Server], data columns
 ms.assetid: 6b923f94-0eb1-467e-82f6-ceed43f77017
-caps.latest.revision: "14"
+caps.latest.revision: 14
 author: stevestein
 ms.author: sstein
 manager: craigg
 ms.workload: Inactive
 ms.openlocfilehash: e33c1452d14aecf1d5120ff876ae55aea6b83830
 ms.sourcegitcommit: b6116b434d737d661c09b78d0f798c652cf149f3
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: es-ES
 ms.lasthandoff: 01/17/2018
 ---
 # <a name="organize-columns-displayed-in-a-trace-sql-server-profiler"></a>Organizar las columnas mostradas en un seguimiento (SQL Server Profiler)
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]Puede agrupar las columnas de datos en un seguimiento seleccionando **organizar columnas** en la tabla de seguimiento o **propiedades de archivo de seguimiento** cuadro de diálogo, o bien al definir un seguimiento. La agrupación de las columnas de datos permite analizar mejor la salida del seguimiento del [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] . Para obtener más información, vea [Ver y analizar seguimientos con SQL Server Profiler](../../tools/sql-server-profiler/view-and-analyze-traces-with-sql-server-profiler.md).  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] Puede agrupar las columnas de datos de una seguimiento seleccionando **Organizar columnas** en la tabla de seguimiento o el cuadro de diálogo **Propiedades del archivo de seguimiento**, o bien al definir un seguimiento. La agrupación de las columnas de datos permite analizar mejor la salida del seguimiento del [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] . Para obtener más información, vea [Ver y analizar seguimientos con SQL Server Profiler](../../tools/sql-server-profiler/view-and-analyze-traces-with-sql-server-profiler.md).  
   
  **Organizar columnas** permite agrupar los eventos de seguimiento o agruparlos y agregarlos por las columnas de datos que seleccione.  
   
@@ -88,9 +89,9 @@ ms.lasthandoff: 01/17/2018
   
 7.  Para volver a una vista normal de los datos del seguimiento, haga clic en **Vista agrupada** en el menú **Ver** , lo que cancela la selección. Si desea volver a la vista agregada, haga clic de nuevo en **Vista agregada** en el menú **Ver** para volver a seleccionarla. Recuerde que también puede hacer clic en **Vista agrupada** en el menú **Ver** para mostrar los eventos del seguimiento sin contraerlos.  
   
-## <a name="see-also"></a>Vea también  
- [Crear un seguimiento &#40; Analizador de SQL Server &#41;](../../tools/sql-server-profiler/create-a-trace-sql-server-profiler.md)   
- [Abrir una tabla de seguimiento &#40; Analizador de SQL Server &#41;](../../tools/sql-server-profiler/open-a-trace-table-sql-server-profiler.md)   
+## <a name="see-also"></a>Ver también  
+ [Crear un seguimiento &#40;SQL Server Profiler&#41;](../../tools/sql-server-profiler/create-a-trace-sql-server-profiler.md)   
+ [Abrir una tabla de seguimiento &#40;SQL Server Profiler&#41;](../../tools/sql-server-profiler/open-a-trace-table-sql-server-profiler.md)   
  [Abrir un archivo de seguimiento &#40;SQL Server Profiler&#41;](../../tools/sql-server-profiler/open-a-trace-file-sql-server-profiler.md)  
   
   

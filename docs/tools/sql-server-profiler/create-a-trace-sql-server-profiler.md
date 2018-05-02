@@ -22,12 +22,12 @@ manager: craigg
 ms.workload: On Demand
 ms.openlocfilehash: 9b40c4ab9616ec4d7a1271c5e3b5c1a0a36be2e7
 ms.sourcegitcommit: b6116b434d737d661c09b78d0f798c652cf149f3
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: es-ES
 ms.lasthandoff: 01/17/2018
 ---
 # <a name="create-a-trace-sql-server-profiler"></a>Crear un seguimiento (SQL Server Profiler)
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]Este tema describe cómo usar [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] para crear un seguimiento.  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] En este tema se describe cómo utilizar [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] para crear un seguimiento.  
   
 ### <a name="to-create-a-trace"></a>Para crear un seguimiento  
   
@@ -35,7 +35,7 @@ ms.lasthandoff: 01/17/2018
   
      Aparecerá el cuadro de diálogo **Propiedades de seguimiento** .  
   
-    > **NOTA:** El cuadro de diálogo **Propiedades de seguimiento** no aparece y, en su lugar, se inicia el seguimiento, es porque seleccionó **Iniciar el seguimiento inmediatamente tras realizar la conexión** . Para desactivar esta configuración, en el **herramientas* * menú, haga clic en **opciones**y desactive la iniciar la traza inmediatamente tras realizar la casilla de verificación de la conexión.  
+    > **NOTA:** El cuadro de diálogo **Propiedades de seguimiento** no aparece y, en su lugar, se inicia el seguimiento, es porque seleccionó **Iniciar el seguimiento inmediatamente tras realizar la conexión** . Para desactivar esta configuración, en el menú **Herramientas**, haga clic en **Opciones** y desactive la casilla Iniciar el seguimiento inmediatamente tras realizar la conexión.  
   
 2.  En el cuadro **Nombre de seguimiento** , escriba un nombre para el seguimiento.  
   
@@ -60,7 +60,7 @@ ms.lasthandoff: 01/17/2018
 7.  Haga clic en **Ejecutar** para iniciar el seguimiento.  
   
 ## <a name="see-also"></a>Vea también  
- [Permisos necesarios para ejecutar el Analizador SQL Server](../../tools/sql-server-profiler/permissions-required-to-run-sql-server-profiler.md)   
+ [Permisos necesarios para ejecutar SQL Server Profiler](../../tools/sql-server-profiler/permissions-required-to-run-sql-server-profiler.md)   
  [Plantillas y permisos de SQL Server Profiler](../../tools/sql-server-profiler/sql-server-profiler-templates-and-permissions.md)   
  [SQL Server Profiler](../../tools/sql-server-profiler/sql-server-profiler.md)   
  [Establecer correlaciones de un seguimiento con datos del registro de rendimiento de Windows &#40;SQL Server Profiler&#41;](../../tools/sql-server-profiler/correlate-a-trace-with-windows-performance-log-data-sql-server-profiler.md)  

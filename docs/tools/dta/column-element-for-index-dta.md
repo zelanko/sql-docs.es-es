@@ -24,12 +24,12 @@ manager: craigg
 ms.workload: Inactive
 ms.openlocfilehash: ec9be70ff9d3605159bd47c4a4fd77f5bb1c6111
 ms.sourcegitcommit: b6116b434d737d661c09b78d0f798c652cf149f3
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: es-ES
 ms.lasthandoff: 01/17/2018
 ---
 # <a name="column-element-for-index-dta"></a>Column (DTA, elemento de Index)
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]Especifica las columnas en el que se crea el índice para una configuración especificada por el usuario.  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] Establece las columnas de una configuración especificada por el usuario en las que se va a crear el índice.  
   
 ## <a name="syntax"></a>Sintaxis  
   
@@ -75,7 +75,7 @@ ms.lasthandoff: 01/17/2018
   
 ## <a name="element-characteristics"></a>Características del elemento  
   
-|Característica|Descripción|  
+|Característica|Description|  
 |--------------------|-----------------|  
 |**Tipo y longitud de los datos**|Ninguno.|  
 |**Valor predeterminado**|Ninguno.|  
@@ -85,13 +85,13 @@ ms.lasthandoff: 01/17/2018
   
 |Relación|Elementos|  
 |------------------|--------------|  
-|**Elemento primario**|[Index, elemento &#40; DTA &#41;](../../tools/dta/index-element-dta.md)|  
-|**Elementos secundarios**|[Elemento de nombre de columna &#40; DTA &#41;](../../tools/dta/name-element-for-column-dta.md)|  
+|**Elemento primario**|[Index &#40;DTA, elemento&#41;](../../tools/dta/index-element-dta.md)|  
+|**Elementos secundarios**|[Elemento Name de Column &#40;DTA&#41;](../../tools/dta/name-element-for-column-dta.md)|  
   
 ## <a name="example"></a>Ejemplo  
  Para obtener un ejemplo de uso de este elemento, vea [Ejemplo de archivo de entrada XML con configuración especificada por el usuario &#40;DTA&#41;](../../tools/dta/xml-input-file-sample-with-user-specified-configuration-dta.md).  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Ver también  
  [Referencia del archivo de entrada XML &#40;Asistente para la optimización de motor de base de datos&#41;](../../tools/dta/xml-input-file-reference-database-engine-tuning-advisor.md)  
   
   

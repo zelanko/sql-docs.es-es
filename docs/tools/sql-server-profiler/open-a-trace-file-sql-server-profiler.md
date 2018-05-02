@@ -22,12 +22,12 @@ manager: craigg
 ms.workload: On Demand
 ms.openlocfilehash: f0863fb837aa6ba0ed156c573c6c89c3c015b5dd
 ms.sourcegitcommit: b6116b434d737d661c09b78d0f798c652cf149f3
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: es-ES
 ms.lasthandoff: 01/17/2018
 ---
 # <a name="open-a-trace-file-sql-server-profiler"></a>Abrir un archivo de seguimiento (SQL Server Profiler)
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]Este tema describe cómo abrir un archivo de seguimiento usando [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)].  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] En este tema se describe cómo abrir un archivo de seguimiento mediante [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)].  
   
 ### <a name="to-open-a-trace-file"></a>Para abrir un archivo de seguimiento  
   
@@ -35,7 +35,7 @@ ms.lasthandoff: 01/17/2018
   
 2.  En el cuadro de diálogo **Abrir archivo** , seleccione el archivo de datos de seguimiento que desee abrir.  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Ver también  
  [SQL Server Profiler](../../tools/sql-server-profiler/sql-server-profiler.md)  
   
   

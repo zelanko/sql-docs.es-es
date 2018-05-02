@@ -1,15 +1,16 @@
 ---
 title: sqlmaint (utilidad) | Documentos de Microsoft
-ms.custom: 
+ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql-non-specified
 ms.prod_service: sql-tools
-ms.service: 
+ms.service: ''
 ms.component: sqlmaint
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: database-engine
-ms.tgt_pltfrm: 
+ms.technology:
+- database-engine
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - database maintenance plans [SQL Server]
@@ -20,19 +21,19 @@ helpviewer_keywords:
 - maintenance plans [SQL Server], command prompt
 - backing up [SQL Server], sqlmaint utility
 ms.assetid: 937a9932-4aed-464b-b97a-a5acfe6a50de
-caps.latest.revision: "47"
+caps.latest.revision: 47
 author: stevestein
 ms.author: sstein
 manager: craigg
 ms.workload: Inactive
 ms.openlocfilehash: 5384932d020b62b3e88d28cc37e3155a4a72f6ee
 ms.sourcegitcommit: b6116b434d737d661c09b78d0f798c652cf149f3
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: es-ES
 ms.lasthandoff: 01/17/2018
 ---
 # <a name="sqlmaint-utility"></a>sqlmaint, utilidad
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]El**sqlmaint** utilidad realiza un conjunto especificado de operaciones de mantenimiento en una o más bases de datos. Use **sqlmaint** para ejecutar comprobaciones de DBCC, realizar una copia de seguridad de una base de datos y su registro de transacciones, actualizar estadísticas y volver a generar índices. Todas las actividades de mantenimiento de bases de datos generan un informe que se puede enviar a un archivo de texto designado, un archivo HTML o una cuenta de correo electrónico. **sqlmaint** ejecuta los planes de mantenimiento de bases de datos creados con versiones anteriores de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]. Para ejecutar los planes de mantenimiento de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] desde el símbolo del sistema, emplee la [utilidad dtexec](../integration-services/packages/dtexec-utility.md).  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] La utilidad **sqlmaint** realiza un conjunto especificado de operaciones de mantenimiento en una o varias bases de datos. Use **sqlmaint** para ejecutar comprobaciones de DBCC, realizar una copia de seguridad de una base de datos y su registro de transacciones, actualizar estadísticas y volver a generar índices. Todas las actividades de mantenimiento de bases de datos generan un informe que se puede enviar a un archivo de texto designado, un archivo HTML o una cuenta de correo electrónico. **sqlmaint** ejecuta los planes de mantenimiento de bases de datos creados con versiones anteriores de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]. Para ejecutar los planes de mantenimiento de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] desde el símbolo del sistema, emplee la [utilidad dtexec](../integration-services/packages/dtexec-utility.md).  
   
 > [!IMPORTANT]  
 >  [!INCLUDE[ssNoteDepNextAvoid](../includes/ssnotedepnextavoid-md.md)] Use en su lugar la característica de plan de mantenimiento de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]. Para obtener más información sobre los planes de mantenimiento, vea [Planes de mantenimiento](../relational-databases/maintenance-plans/maintenance-plans.md).  
@@ -86,7 +87,7 @@ number[minutes | hours | days | weeks | months]
  Especifica que debe devolverse el diagrama de sintaxis para **sqlmaint** . Este parámetro debe utilizarse solo.  
   
  **-S** *server_name*[ **\\***instance_name*]  
- Especifica la instancia de destino de [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]. Especifique *server_name* para conectar con la instancia predeterminada de [!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)] en ese servidor. Especifique *nombre_servidor***\\***instance_name* para conectarse a una instancia con nombre de [!INCLUDE[ssDE](../includes/ssde-md.md)] en ese servidor. Si no se especifica ningún servidor, **sqlmaint** se conecta a la instancia predeterminada de [!INCLUDE[ssDE](../includes/ssde-md.md)] en el equipo local.  
+ Especifica la instancia de destino de [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]. Especifique *server_name* para conectar con la instancia predeterminada de [!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)] en ese servidor. Especifique *server_name***\\*** instance_name* para conectar con una instancia con nombre de [!INCLUDE[ssDE](../includes/ssde-md.md)] en ese servidor. Si no se especifica ningún servidor, **sqlmaint** se conecta a la instancia predeterminada de [!INCLUDE[ssDE](../includes/ssde-md.md)] en el equipo local.  
   
  **-U** *login_ID*  
  Especifica el Id. de inicio de sesión que va a utilizarse para conectar al servidor. Si no se especifica, **sqlmaint** intenta utilizar la autenticación de [!INCLUDE[msCoName](../includes/msconame-md.md)] Windows. Si *login_ID* contiene caracteres especiales, debe incluirse entre comillas dobles ("); de lo contrario, las comillas dobles son opcionales.  
@@ -135,7 +136,7 @@ c:\Program Files\Microsoft SQL Server\Mssql\Backup\AdventureWorks2012_maint_1996
  Se requiere el nombre UNC completo del archivo para *html_file* cuando **sqlmaint** tiene acceso a un servidor remoto.  
   
  **-DelHtmlRpt** \<*time_period*>  
- Especifica que debe eliminarse cualquier informe HTML en el directorio de informes si supera el intervalo de tiempo posterior a la creación del archivo del informe \< *time_period*>. **-DelHtmlRpt** busca archivos cuyo nombre se ajuste al patrón generado a partir del parámetro *html_file*. Si *html_file* es c:\Program Files\Microsoft SQL Server\Mssql\Backup\AdventureWorks2012_maint.htm, entonces **- DelHtmlRpt** hace **sqlmaint** para eliminar los archivos cuyos nombres coincidan con el patrón de C:\Program Files\Microsoft SQL Server\Mssql\Backup\AdventureWorks2012_maint\*.htm y que sean más antiguos que el especificado \< *time_period*>.  
+ Especifica que debe eliminarse cualquier informe HTML del directorio de informes si el intervalo de tiempo posterior a la creación del archivo de informe supera el valor de \<*time_period*>. **-DelHtmlRpt** busca archivos cuyo nombre se ajuste al patrón generado a partir del parámetro *html_file*. Si *html_file* es C:\Archivos de programa\Microsoft SQL Server\Mssql\Backup\AdventureWorks2012_maint.htm, **-DelHtmlRpt** hará que **sqlmaint** elimine todos los archivos cuyos nombres coincidan con el patrón C:\Archivos de programa\Microsoft SQL Server\Mssql\Backup\AdventureWorks2012_maint\*.htm y que sean más antiguos que el valor de \<*time_period*> especificado.  
   
  **-RmUnusedSpace** *threshold_percent free_percent*  
  Especifica que se quite el espacio no usado de la base de datos especificada en **-D**. Esta opción solo resulta útil para aquellas bases de datos definidas para crecer automáticamente. *Threshold_percent* especifica en megabytes el tamaño que debe alcanzar la base de datos antes de que **sqlmaint** intente quitar el espacio de datos no usado. Si la base de datos es menor que el valor de *threshold_percent*, no se realiza ninguna acción. *Free_percent* especifica la cantidad de espacio no usado que debe conservarse en la base de datos, especificado como porcentaje del tamaño final de la base de datos. Por ejemplo, si una base de datos de 200 MB contiene 100 MB de datos y se especifica el valor 10 para *free_percent* , el tamaño final de la base de datos será de 110 MB. Tenga en cuenta que una base de datos no se ampliará si ocupa menos espacio que la suma de *free_percent* más el espacio ocupado por los datos de la base de datos. Por ejemplo, si una base de datos de 108 MB tiene 100 MB de datos y se especifica 10 para *free_percent* , la base de datos no se ampliará a 110 MB; se mantendrá con un espacio de 108 MB.  
@@ -205,7 +206,7 @@ dbname_log_yyyymmddhhmm.BAK
  Especifica que el medio de la copia de seguridad es un disco.  
   
  **-DelBkUps**< *time_period* >  
- Para las copias de seguridad de disco, especifica que cualquier archivo de copia de seguridad en el directorio de copia de seguridad deben eliminarse si se supera el intervalo de tiempo posterior a la creación de la copia de seguridad la \< *time_period*>.  
+ Para copias de seguridad en disco, especifica que deben eliminarse todos los archivos de copia de seguridad del directorio de copia de seguridad si el intervalo de tiempo posterior a la creación de la copia de seguridad supera el valor de \<*time_period*>.  
   
  **-CrBkSubDir**  
  Para copias de seguridad en disco, especifica que se cree un subdirectorio en el directorio [*backup_path*] o en el directorio de copia de seguridad predeterminado, si también se especifica **-UseDefDir** . El nombre del subdirectorio se genera a partir del nombre de la base de datos especificado en **-D**. **-CrBkSubDir** ofrece una sencilla forma de poner todas las copias de seguridad de diferentes bases de datos en subdirectorios separados sin tener que cambiar el parámetro *backup_path* .  
@@ -233,7 +234,7 @@ dbname_log_yyyymmddhhmm.BAK
   
  Si solo se especifica *number* , la parte de fecha predeterminada es **weeks**.  
   
-## <a name="remarks"></a>Comentarios  
+## <a name="remarks"></a>Notas  
  La utilidad **sqlmaint** realiza operaciones de mantenimiento en una o varias bases de datos. Si se especifica **-D** , las operaciones especificadas en los modificadores restantes solo se realizan en la base de datos indicada. Si se especifica **-PlanName** o **-PlanID** , la única información que **sqlmaint** recupera del plan de mantenimiento indicado es la lista de bases de datos del plan. Todas las operaciones especificadas en los parámetros **sqlmaint** restantes se aplican en cada base de datos de la lista obtenida del plan. La utilidad **sqlmaint** no aplica ninguna de las actividades de mantenimiento definidas en el propio plan.  
   
  La utilidad **sqlmaint** devuelve 0 si se ejecuta correctamente o 1 si se produce algún error. Se informa del error:  
@@ -244,7 +245,7 @@ dbname_log_yyyymmddhhmm.BAK
   
 -   Si se detecta un error general.  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>Permisos  
  La utilidad **sqlmaint** puede ejecutarla cualquier usuario de Windows con permiso de **lectura y ejecución** para `sqlmaint.exe`, que está almacenado de manera predeterminada en la carpeta `x:\Program Files\Microsoft SQL Server\MSSQL13.MSSQLSERVER1\MSSQL\Binn` . Además, el inicio de sesión de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] especificado con **-login_ID** debe tener los permisos de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] necesarios para realizar la acción indicada. Si la conexión con [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] utiliza la autenticación de Windows, el inicio de sesión de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] asignado al usuario de Windows autenticado debe tener los permisos de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] necesarios para realizar la acción especificada.  
   
  Por ejemplo, para usar **-BkUpDB** , es necesario tener permiso para ejecutar la instrucción BACKUP. Para usar el argumento **-UpdOptiStats** , es necesario tener permiso para ejecutar la instrucción UPDATE STATISTICS. Para obtener más información, vea las secciones sobre permisos en los temas correspondientes de los Libros en pantalla.  
@@ -275,7 +276,7 @@ sqlmaint -S MyServer -PlanName MyUserDBPlan -BkUpDB -BkUpMedia DISK -UseDefDir -
 sqlmaint -S MyServer -BkUpDB -BkUpMedia DISK -UseDefDir  
 ```  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Ver también  
  [BACKUP &#40;Transact-SQL&#41;](../t-sql/statements/backup-transact-sql.md)   
  [UPDATE STATISTICS &#40;Transact-SQL&#41;](../t-sql/statements/update-statistics-transact-sql.md)  
   

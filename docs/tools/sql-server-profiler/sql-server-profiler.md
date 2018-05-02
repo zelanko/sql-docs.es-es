@@ -1,15 +1,16 @@
 ---
 title: Analizador de SQL Server | Documentos de Microsoft
-ms.custom: 
+ms.custom: ''
 ms.date: 10/24/2016
 ms.prod: sql-non-specified
 ms.prod_service: sql-tools
-ms.service: 
+ms.service: ''
 ms.component: sql-server-profiler
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: database-engine
-ms.tgt_pltfrm: 
+ms.technology:
+- database-engine
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - Profiler [SQL Server Profiler], about SQL Server Profiler
@@ -27,19 +28,19 @@ helpviewer_keywords:
 - database performance [SQL Server], SQL Server Profiler
 - trace [SQL Server]
 ms.assetid: 3ad5f33d-559e-41a4-bde6-bb98792f7f1a
-caps.latest.revision: "46"
+caps.latest.revision: 46
 author: stevestein
 ms.author: sstein
 manager: craigg
 ms.workload: Active
 ms.openlocfilehash: 8a6f1151141c3f0641ba35b92d8c9cd8b1639a14
 ms.sourcegitcommit: b6116b434d737d661c09b78d0f798c652cf149f3
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: es-ES
 ms.lasthandoff: 01/17/2018
 ---
 # <a name="sql-server-profiler"></a>SQL Server Profiler
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)][!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] es una interfaz para crear y administrar seguimientos y analizar y reproducir resultados de seguimiento. Los eventos se guardan en un archivo de seguimiento que posteriormente se puede analizar o utilizar para reproducir una serie de pasos específicos cuando se intenta diagnosticar un problema.  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] es una interfaz para crear y administrar seguimientos y analizar y reproducir resultados de seguimiento. Los eventos se guardan en un archivo de seguimiento que posteriormente se puede analizar o utilizar para reproducir una serie de pasos específicos cuando se intenta diagnosticar un problema.  
   
 >**IMPORTANTE:**  
 > Se anuncia el desuso de [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] para captura y reproducción de seguimiento de [!INCLUDE[ssDE](../../includes/ssde-md.md)] . Estas características **están** disponibles en SQL Server 2016, pero se quitarán en una versión posterior.
@@ -51,19 +52,19 @@ ms.lasthandoff: 01/17/2018
 
  ## <a name="where-is-the-profiler"></a>¿Dónde está Profiler?
  
- Puede iniciar Profiler de diferentes maneras desde SSMS. [Este es un tema que se enumeran las formas de iniciar el generador de perfiles.](start-sql-server-profiler.md)
+ Puede iniciar Profiler de diferentes maneras desde SSMS. [En este tema se enumeran las maneras de iniciar Profiler.](start-sql-server-profiler.md)
   
 ## <a name="capture-and-replay-trace-data"></a>Captura y reproducción de datos de seguimiento 
 En la siguiente tabla se muestran las características que se recomienda usar en [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] para capturar y reproducir los datos de seguimiento.
   
 ||||  
 |-|-|-|  
-|**Característica\carga de trabajo**|**Motor relacional**|**Analysis Services**|  
+|**Característica\Carga de trabajo de destino**|**Motor relacional**|**Analysis Services**|  
 |**Captura de seguimiento**|Interfaz gráfica de usuario de[eventos extendidos](../../relational-databases/extended-events/extended-events.md) en SQL Server Management Studio|SQL Server Profiler|  
 |**Reproducción de seguimiento**|[Distributed Replay](../distributed-replay/sql-server-distributed-replay.md)|SQL Server Profiler|  
   
 ## <a name="sql-server-profiler"></a>SQL Server Profiler  
- El [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] de Microsoft es una interfaz gráfica de usuario de Seguimiento de SQL que se usa para supervisar una instancia de [!INCLUDE[ssDE](../../includes/ssde-md.md)] o de Analysis Services. Puede capturar y guardar datos acerca de cada evento en un archivo o en una tabla para analizarlos posteriormente. Por ejemplo, puede supervisar un entorno de producción para ver qué procedimientos almacenados afectan negativamente al rendimiento al ejecutarse demasiado lentamente. [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)]se usa para actividades como:  
+ El [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] de Microsoft es una interfaz gráfica de usuario de Seguimiento de SQL que se usa para supervisar una instancia de [!INCLUDE[ssDE](../../includes/ssde-md.md)] o de Analysis Services. Puede capturar y guardar datos acerca de cada evento en un archivo o en una tabla para analizarlos posteriormente. Por ejemplo, puede supervisar un entorno de producción para ver qué procedimientos almacenados afectan negativamente al rendimiento al ejecutarse demasiado lentamente. [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] se usa para actividades como las siguientes:  
   
 -   Seguir los pasos de consultas con problemas para buscar la causa de los mismos.  
   
@@ -116,14 +117,14 @@ En la siguiente tabla se muestran las características que se recomienda usar en
   
 -   **Audit Logout**  
   
--   **Bloqueo: adquirido**  
+-   **Lock:Acquired**  
   
--   **Bloqueo: publicado**  
+-   **Lock:Released**  
   
  **EventCategory**  
  Una categoría de eventos define cómo se agrupan los eventos en el [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)]. Por ejemplo, todas las clases de eventos de bloqueo se agrupan dentro de la categoría de eventos **Bloqueos** . Sin embargo, las categorías de eventos solo existen en el [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)]. Este término no refleja cómo se agrupan los eventos del motor.  
   
- **Objeto DataColumn**  
+ **DataColumn**  
  Una columna de datos es un atributo de una clase de evento capturada en el seguimiento. Como la clase de evento determina el tipo de datos que se pueden recopilar, no se aplicarán todas las columnas de datos a todas las clases de evento. Por ejemplo, en un seguimiento que capture la clase de evento **Lock:Acquired** , la columna de datos **BinaryData** contiene el valor del Id. o la fila de la página bloqueada, pero la columna de datos **Integer Data** no contiene ningún valor porque no es aplicable a la clase de evento que se captura.  
   
  **Plantilla**  
@@ -134,7 +135,7 @@ En la siguiente tabla se muestran las características que se recomienda usar en
   
  SQL Server ofrece dos formas de incluir en un seguimiento una instancia de SQL Server: puede hacerlo con el [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] o con procedimientos almacenados del sistema.  
   
- **Filtro**  
+ **Filter**  
  Al crear un seguimiento o una plantilla, puede definir criterios para filtrar los datos recopilados por el evento. Para que los seguimientos no sean demasiado grandes, puede filtrarlos de forma que solo se recopile un subconjunto de los datos del evento. Por ejemplo, puede limitar los nombres de usuario de Microsoft Windows del seguimiento a usuarios específicos, con lo que reducirá los datos de salida.  
   
  Si no se establece un filtro, se devolverán todos los eventos de las clases de eventos seleccionadas en el resultado del seguimiento.  
@@ -143,8 +144,8 @@ En la siguiente tabla se muestran las características que se recomienda usar en
   
 |Descripción de la tarea|Tema|  
 |----------------------|-----------|  
-|Enumera las plantillas predefinidas que SQL Server proporciona para supervisar determinados tipos de eventos y los permisos necesarios para la reproducción de seguimientos.|[SQL Server Profiler Templates and Permissions](../../tools/sql-server-profiler/sql-server-profiler-templates-and-permissions.md) (Plantillas y permisos de SQL Server Profiler)|  
-|Describe cómo ejecutar SQL Server Profiler.|[Permisos necesarios para ejecutar el Analizador SQL Server](../../tools/sql-server-profiler/permissions-required-to-run-sql-server-profiler.md)|  
+|Enumera las plantillas predefinidas que SQL Server proporciona para supervisar determinados tipos de eventos y los permisos necesarios para la reproducción de seguimientos.|[Plantillas y permisos de SQL Server Profiler](../../tools/sql-server-profiler/sql-server-profiler-templates-and-permissions.md)|  
+|Describe cómo ejecutar SQL Server Profiler.|[Permisos necesarios para ejecutar SQL Server Profiler](../../tools/sql-server-profiler/permissions-required-to-run-sql-server-profiler.md)|  
 |Describe cómo crear un seguimiento.|[Crear un seguimiento &#40;SQL Server Profiler&#41;](../../tools/sql-server-profiler/create-a-trace-sql-server-profiler.md)|  
 |Describe cómo especificar eventos y columnas de datos para un archivo de seguimiento.|[Especificar eventos y columnas de datos para un archivo de seguimiento &#40;SQL Server Profiler&#41;](../../tools/sql-server-profiler/specify-events-and-data-columns-for-a-trace-file-sql-server-profiler.md)|  
 |Describe cómo guardar los resultados de seguimiento en un archivo.|[Guardar los resultados de un seguimiento en un archivo &#40;SQL Server Profiler&#41;](../../tools/sql-server-profiler/save-trace-results-to-a-file-sql-server-profiler.md)|  
@@ -189,7 +190,7 @@ En la siguiente tabla se muestran las características que se recomienda usar en
 |Describe cómo iniciar SQL Server Profiler.|[Iniciar SQL Server Profiler](../../tools/sql-server-profiler/start-sql-server-profiler.md)|  
 |Describe cómo guardar seguimientos y plantillas de seguimiento.|[Guardar seguimientos y plantillas de seguimiento](../../tools/sql-server-profiler/save-traces-and-trace-templates.md)|  
 |Describe cómo modificar plantillas de seguimiento.|[Modificar plantillas de seguimiento](../../tools/sql-server-profiler/modify-trace-templates.md)|  
-|Describe cómo establecer correlaciones de un seguimiento con datos del registro de rendimiento de Windows.|[Correlacionar un seguimiento con datos del registro de rendimiento de Windows](../../tools/sql-server-profiler/correlate-a-trace-with-windows-performance-log-data.md)|  
+|Describe cómo establecer correlaciones de un seguimiento con datos del registro de rendimiento de Windows.|[Correlacionar un seguimiento con los datos del registro de rendimiento de Windows](../../tools/sql-server-profiler/correlate-a-trace-with-windows-performance-log-data.md)|  
 |Describe cómo ver y analizar seguimiento con SQL Server Profiler.|[Ver y analizar seguimientos con SQL Server Profiler](../../tools/sql-server-profiler/view-and-analyze-traces-with-sql-server-profiler.md)|  
 |Describe cómo analizar interbloqueos con SQL Server Profiler.|[Analizar interbloqueos con SQL Server Profiler](../../tools/sql-server-profiler/analyze-deadlocks-with-sql-server-profiler.md)|  
 |Describe cómo analizar consultas con resultados de SHOWPLAN en SQL Server Profiler.|[Analizar consultas con resultados de SHOWPLAN en SQL Server Profiler](../../tools/sql-server-profiler/analyze-queries-with-showplan-results-in-sql-server-profiler.md)|  
@@ -199,10 +200,10 @@ En la siguiente tabla se muestran las características que se recomienda usar en
 |Enumera los procedimientos almacenados del sistema que usa [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] para supervisar el rendimiento y la actividad.|[Procedimientos almacenados de SQL Server Profiler &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sql-server-profiler-stored-procedures-transact-sql.md)|  
   
 ## <a name="see-also"></a>Vea también  
- [Categoría de eventos bloqueos](../../relational-databases/event-classes/locks-event-category.md)   
- [Categoría de eventos sesiones](../../relational-databases/event-classes/sessions-event-category.md)   
- [Categoría de eventos de procedimientos almacenados](../../relational-databases/event-classes/stored-procedures-event-category.md)   
- [Categoría de eventos TSQL](../../relational-databases/event-classes/tsql-event-category.md)   
- [Supervisión de la actividad y rendimiento del servidor](../../relational-databases/performance/server-performance-and-activity-monitoring.md)  
+ [Bloqueos (categoría de eventos)](../../relational-databases/event-classes/locks-event-category.md)   
+ [Sesiones (categoría de eventos)](../../relational-databases/event-classes/sessions-event-category.md)   
+ [Procedimientos almacenados (categoría de eventos)](../../relational-databases/event-classes/stored-procedures-event-category.md)   
+ [TSQL (categoría de eventos)](../../relational-databases/event-classes/tsql-event-category.md)   
+ [Supervisión de la actividad y el rendimiento del servidor](../../relational-databases/performance/server-performance-and-activity-monitoring.md)  
   
   

@@ -1,29 +1,29 @@
 ---
-title: "Propiedades de TCP/IP (pestaña de direcciones IP) | Documentos de Microsoft"
-ms.custom: 
+title: Propiedades de TCP/IP (pestaña de direcciones IP) | Documentos de Microsoft
+ms.custom: ''
 ms.date: 08/24/2016
 ms.prod: sql-non-specified
 ms.prod_service: sql-tools
-ms.service: 
+ms.service: ''
 ms.component: configuration-manager
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - ports [SQL Server], listening on
 - listening [SQL Server], on ports
 ms.assetid: 4c17ed45-9da7-4bec-bce6-970109fe7365
-caps.latest.revision: 
+caps.latest.revision: 47
 author: stevestein
 ms.author: sstein
 manager: craigg
 ms.workload: On Demand
 ms.openlocfilehash: 78513a9ebe1a0418a5dac367dc49b790d3197019
 ms.sourcegitcommit: c556eaf60a49af7025db35b7aa14beb76a8158c5
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: es-ES
 ms.lasthandoff: 02/03/2018
 ---
@@ -43,7 +43,7 @@ Use el cuadro de diálogo **Propiedades de TCP/IP (pestaña Direcciones IP)** pa
  **Activo**  
  Indica que la dirección IP está activa en el equipo. No está disponible para **IPAll**.  
   
- **Habilitado**  
+ **Enabled**  
  Si la propiedad **Escuchar todo** del cuadro de diálogo **Propiedades de TCP/IP (pestaña Protocolo)** se ha establecido en **No**, esta propiedad indicará si SQL Server está escuchando en la dirección IP. Si la propiedad **Escuchar todo** del cuadro de diálogo **Propiedades de TCP/IP (pestaña Protocolo)** se ha establecido en **Sí**, se omitirá esta propiedad. No está disponible para **IPAll**.  
   
  **Dirección IP**  
@@ -67,9 +67,9 @@ Use el cuadro de diálogo **Propiedades de TCP/IP (pestaña Direcciones IP)** pa
 ## <a name="additional-topics-in-books-online"></a>Temas adicionales en los libros en pantalla  
  En MSDN puede encontrar temas como **Configurar un servidor para que escuche en un puerto TCP específico (Administrador de configuración de SQL Server)** y **Configurar el motor de base de datos para escuchar en varios puertos TCP**.  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Ver también  
  [Elegir un protocolo de red](https://msdn.microsoft.com/library/ms187892(v=sql.120).aspx)   
- [Crear una cadena de conexión válida con TCP / IP](creating-a-valid-connection-string-using-tcp-ip.md)   
+ [Crear una cadena de conexión válida con TCP/IP](creating-a-valid-connection-string-using-tcp-ip.md)   
  [Servicio SQL Server Browser](https://msdn.microsoft.com/library/ms181087(v=sql.130).aspx)  
   
   

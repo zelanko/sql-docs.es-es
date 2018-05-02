@@ -1,30 +1,31 @@
 ---
 title: Instalar Distributed Replay | Documentos de Microsoft
-ms.custom: 
+ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql-non-specified
 ms.prod_service: sql-tools
-ms.service: 
+ms.service: ''
 ms.component: distributed-replay
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: setup-install
-ms.tgt_pltfrm: 
+ms.technology:
+- setup-install
+ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: ea1171da-f50e-4f16-bedc-5e468a46477f
-caps.latest.revision: "21"
+caps.latest.revision: 21
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.workload: Inactive
 ms.openlocfilehash: 88758300356023e7a97df0b87cce3a44ed06897f
 ms.sourcegitcommit: b6116b434d737d661c09b78d0f798c652cf149f3
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: es-ES
 ms.lasthandoff: 01/17/2018
 ---
 # <a name="install-distributed-replay"></a>Instalar Distributed Replay
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]Puede instalar Distributed Replay en una de estas tres maneras:  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] Puede instalar Distributed Replay en una de estas tres maneras:  
   
 -   [Instalar Distributed Replay desde el Asistente para instalación](#bkmk_wizard)  
   
@@ -69,7 +70,7 @@ ms.lasthandoff: 01/17/2018
   
      \- O BIEN  
   
-     \<Compartir el directorio de características > \Tools\\(directorio de características compartidas alternativo proporcionado por el usuario)  
+     \<Directorio de características compartidas\Tools\\(directorio de características compartidas alternativo proporcionado por el usuario)  
   
 -   En un sistema de 64 bits:  
   
@@ -77,7 +78,7 @@ ms.lasthandoff: 01/17/2018
   
      \- O BIEN  
   
-     \<Compartir el directorio de características (x86) > \Tools\\(directorio proporcionado por el usuario características compartidas alternativo (x86))  
+     \<Directorio de características compartidas (x86)>\Tools\\(directorio de características compartidas (x86) alternativo proporcionado por el usuario)  
   
 #### <a name="to-install-distributed-replay-features"></a>Para instalar las características de Distributed Replay  
   
@@ -111,7 +112,7 @@ ms.lasthandoff: 01/17/2018
   
     -   Cuenta virtual y MSA (cuenta de servicio administrada)  
   
-    -   Servicios de red, servicios locales y sistema  
+    -   Network Services, servicios locales y sistema  
   
      No se aceptan cuentas de grupo (locales o de dominio) y otras cuentas integradas (como Todos).  
   
@@ -119,7 +120,7 @@ ms.lasthandoff: 01/17/2018
   
     1.  En equipos de 32 bits, la ruta de instalación predeterminada es **C:\Archivos de programa\\[!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]\\**  
   
-    2.  En los equipos de 64 bits, la ruta de instalación predeterminada es **C:\Program Files (x86)\\[!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]\\**  
+    2.  En equipos de 64 bits, la ruta de instalación predeterminada es **C:\Archivos de programa (x86)\\[!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]\\**  
   
 9. Cuando termine, haga clic en **Siguiente**.  
   
@@ -163,11 +164,11 @@ ms.lasthandoff: 01/17/2018
 |---------------|-----------------|----------------------|  
 |/CTLRSVCACCOUNT<br /><br /> **Opcional**|Cuenta de servicio para el servicio Distributed Replay Controller.|Comprueba la cuenta y la contraseña|  
 |/CTLRSVCPASSWORD<br /><br /> **Opcional**|Contraseña de la cuenta de servicio de Distributed Replay Controller.|Comprueba la cuenta y la contraseña|  
-|/CTLRSTARTUPTYPE<br /><br /> **Opcional**|Tipo de inicio para el servicio Distributed Replay Controller.|Automática<br /><br /> Deshabilitado<br /><br /> Manual|  
+|/CTLRSTARTUPTYPE<br /><br /> **Opcional**|Tipo de inicio para el servicio Distributed Replay Controller.|Automático<br /><br /> Deshabilitado<br /><br /> Manual|  
 |/CTLRUSERS<br /><br /> **Opcional**|Especifica los usuarios que tienen permisos para el servicio de Distributed Replay Controller.|Conjunto de cadenas de la cuenta de usuario que usan " " (espacio) en delimitador<br /><br /> **Importante**: al configurar el servicio Distributed Replay Controller, puede especificar una o más cuentas de usuario que se usarán para ejecutar los servicios Distributed Replay Client. La lista siguiente es una relación de las cuentas admitidas:<br /><br /> Cuenta de usuario de dominio<br /><br /> Cuenta de usuario local creada por el usuario<br /><br /> Administrador<br /><br /> Administrador<br /><br /> Cuenta virtual y MSA (cuenta de servicio administrada)<br /><br /> Servicios de red, servicios locales y sistema<br /><br /> <br /><br /> Nota: No se aceptan cuentas de grupo (locales o de dominio) y otras cuentas integradas (como Todos).|  
 |/CLTSVCACCOUNT<br /><br /> **Opcional**|Cuenta de servicio para el servicio de cliente de Distributed Replay.|Comprueba la cuenta y la contraseña|  
 |/CLTSVCPASSWORD<br /><br /> **Opcional**|Contraseña de la cuenta de servicio de Distributed Replay Client.|Comprueba la cuenta y la contraseña|  
-|/CLTSTARTUPTYPE<br /><br /> **Opcional**|Tipo de inicio para el servicio de cliente de Distributed Replay.|Automática<br /><br /> Deshabilitado<br /><br /> Manual|  
+|/CLTSTARTUPTYPE<br /><br /> **Opcional**|Tipo de inicio para el servicio de cliente de Distributed Replay.|Automático<br /><br /> Deshabilitado<br /><br /> Manual|  
 |/CLTCTLRNAME<br /><br /> **Opcional**|Nombre del equipo con el que se comunica el cliente para el servicio de Distributed Replay Controller.||  
 |/CLTWORKINGDIR<br /><br /> **Opcional**|Directorio de trabajo para el servicio de Distributed Replay Client.|Ruta de acceso válida|  
 |/CLTRESULTDIR<br /><br /> **Opcional**|Directorio de resultados para el servicio de Distributed Replay Client.|Ruta de acceso válida|  
@@ -220,11 +221,11 @@ Setup.exe /CTLRSVCPASSWORD="ctlrsvcpswd" /CLTSVCPASSWORD="cltsvcpswd" / Configur
 > [!NOTE]  
 >  Debe especificar ambas contraseñas en la línea de comandos porque no puede configurarlas en el archivo de configuración.  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Ver también  
  [Características compatibles con las ediciones de SQL Server 2016](~/sql-server/editions-and-supported-features-for-sql-server-2016.md)   
- [Reproducción distribuida de SQL Server](../../tools/distributed-replay/sql-server-distributed-replay.md)   
- [Requisitos de Distributed Replay](../../tools/distributed-replay/distributed-replay-requirements.md)   
- [Opciones de línea de comandos de la herramienta de administración &#40; utilidad Distributed Replay &#41;](../../tools/distributed-replay/administration-tool-command-line-options-distributed-replay-utility.md)   
+ [SQL Server Distributed Replay](../../tools/distributed-replay/sql-server-distributed-replay.md)   
+ [Distributed Replay Requirements](../../tools/distributed-replay/distributed-replay-requirements.md)   
+ [Opciones de línea de comandos de la herramienta de administración &#40;utilidad Distributed Replay&#41;](../../tools/distributed-replay/administration-tool-command-line-options-distributed-replay-utility.md)   
  [Configurar Distributed Replay](../../tools/distributed-replay/configure-distributed-replay.md)  
   
   

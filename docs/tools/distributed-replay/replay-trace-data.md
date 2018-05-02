@@ -1,30 +1,31 @@
 ---
 title: Reproducir datos de seguimiento | Documentos de Microsoft
-ms.custom: 
+ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql-non-specified
 ms.prod_service: sql-tools
-ms.service: 
+ms.service: ''
 ms.component: distributed-replay
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: database-engine
-ms.tgt_pltfrm: 
+ms.technology:
+- database-engine
+ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: 19ff5285-fb9d-4fd1-97c4-ec72c311c384
-caps.latest.revision: "19"
+caps.latest.revision: 19
 author: stevestein
 ms.author: sstein
 manager: craigg
 ms.workload: Inactive
 ms.openlocfilehash: 1b63690aadee587a51f910cfc43915a04aa39bf4
 ms.sourcegitcommit: b6116b434d737d661c09b78d0f798c652cf149f3
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: es-ES
 ms.lasthandoff: 01/17/2018
 ---
 # <a name="replay-trace-data"></a>Reproducir datos de seguimiento
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]Puede iniciar una reproducción distribuida con la [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] característica Distributed Replay después de haber preparado los datos de seguimiento de entrada. Para obtener más información, vea [Preparar los datos de seguimiento de entrada](../../tools/distributed-replay/prepare-the-input-trace-data.md).  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] Puede iniciar una reproducción distribuida con la característica [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Distributed Replay después de haber preparado los datos de seguimiento de entrada. Para obtener más información, vea [Preparar los datos de seguimiento de entrada](../../tools/distributed-replay/prepare-the-input-trace-data.md).  
   
  Utilice la opción **replay** de la herramienta de administración para iniciar la fase de reproducción de eventos de Distributed Replay. Esta fase consta de dos partes: la distribución de los datos de seguimiento y el inicio y sincronización de la reproducción distribuida.  
   
@@ -71,9 +72,9 @@ ms.lasthandoff: 01/17/2018
   
 3.  Una vez finalizada la reproducción distribuida, la herramienta de administración devuelve información de resumen. Si se especificó la opción **-o** , la actividad de reproducción se ha guardado en los archivos de seguimiento de resultados en cada cliente. Para obtener más información sobre los archivos de seguimiento de resultados, vea [Revisar los resultados de la reproducción](../../tools/distributed-replay/review-the-replay-results.md).  
   
-## <a name="see-also"></a>Vea también  
- [Requisitos de Distributed Replay](../../tools/distributed-replay/distributed-replay-requirements.md)   
- [Opciones de línea de comandos de la herramienta de administración &#40; utilidad Distributed Replay &#41;](../../tools/distributed-replay/administration-tool-command-line-options-distributed-replay-utility.md)   
+## <a name="see-also"></a>Ver también  
+ [Distributed Replay Requirements](../../tools/distributed-replay/distributed-replay-requirements.md)   
+ [Opciones de línea de comandos de la herramienta de administración &#40;utilidad Distributed Replay&#41;](../../tools/distributed-replay/administration-tool-command-line-options-distributed-replay-utility.md)   
  [Configurar Distributed Replay](../../tools/distributed-replay/configure-distributed-replay.md)  
   
   

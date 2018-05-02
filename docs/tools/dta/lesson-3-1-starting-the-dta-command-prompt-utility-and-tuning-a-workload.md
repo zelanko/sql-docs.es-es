@@ -1,5 +1,5 @@
 ---
-title: A partir de la utilidad del símbolo del sistema dta y optimizar una carga de trabajo | Documentos de Microsoft
+title: Iniciar la utilidad del símbolo del sistema dta y optimizar una carga de trabajo | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql-non-specified
@@ -24,12 +24,12 @@ manager: craigg
 ms.workload: Inactive
 ms.openlocfilehash: b4adf756444c22146108fead4f607c20c6108dc3
 ms.sourcegitcommit: b6116b434d737d661c09b78d0f798c652cf149f3
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: es-ES
 ms.lasthandoff: 01/17/2018
 ---
-# <a name="lesson-3-1---starting-the-dta-command-prompt-utility-and-tuning-a-workload"></a>Lección 3-1: iniciar la utilidad del símbolo del sistema dta y optimizar una carga de trabajo
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]Esta tarea le guiará a partir de la **dta** utilidad, ver su ayuda y, a continuación, se usa para optimizar una carga de trabajo desde el símbolo del sistema. Se usará la carga de trabajo (MyScript.sql) que ha creado para la práctica sobre la interfaz gráfica de usuario (GUI) del Asistente para la optimización de motor de base de datos: [Optimizar una carga de trabajo](../../tools/dta/lesson-1-1-tuning-a-workload.md).  
+# <a name="lesson-3-1---starting-the-dta-command-prompt-utility-and-tuning-a-workload"></a>Lección 3-1: Iniciar la utilidad del símbolo del sistema dta y optimizar una carga de trabajo
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] Esta tarea le guía por los pasos necesarios para iniciar la utilidad **dta**, ver su Ayuda y usarla para optimizar una carga de trabajo desde el símbolo del sistema. Se usará la carga de trabajo (MyScript.sql) que ha creado para la práctica sobre la interfaz gráfica de usuario (GUI) del Asistente para la optimización de motor de base de datos: [Optimizar una carga de trabajo](../../tools/dta/lesson-1-1-tuning-a-workload.md).  
   
 En este tutorial se usa la base de datos de ejemplo [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] . Por motivos de seguridad, las bases de datos de ejemplo no se instalan de manera predeterminada. Para instalarlas, consulte [Instalar ejemplos de SQL Server y bases de datos de ejemplo](http://sqlserversamples.codeplex.com).  
   
@@ -73,7 +73,7 @@ Cuando haya finalizado las lecciones de este tutorial, consulte los temas siguie
   
 Para volver al principio del tutorial, consulte [Tutorial: Asistente para la optimización de motor de base de datos](../../tools/dta/tutorial-database-engine-tuning-advisor.md).  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Ver también  
 [Tutoriales del motor de base de datos](../../relational-databases/database-engine-tutorials.md)  
   
   

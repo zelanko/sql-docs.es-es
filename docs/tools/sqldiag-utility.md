@@ -1,15 +1,16 @@
 ---
-title: SQLdiag (utilidad) | Documentos de Microsoft
-ms.custom: 
+title: SQLdiag, utilidad | Microsoft Docs
+ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql-non-specified
 ms.prod_service: sql-tools
-ms.service: 
+ms.service: ''
 ms.component: sqldiag
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: database-engine
-ms.tgt_pltfrm: 
+ms.technology:
+- database-engine
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - command prompt utilities [SQL Server], SQLdiag
@@ -31,19 +32,19 @@ helpviewer_keywords:
 - automatic diagnostic collection
 - clusters [SQL Server], diagnostic collection
 ms.assetid: 45ba1307-33d1-431e-872c-a6e4556f5ff2
-caps.latest.revision: "58"
+caps.latest.revision: 58
 author: stevestein
 ms.author: sstein
 manager: craigg
 ms.workload: On Demand
 ms.openlocfilehash: dd4a4a1627a4a92a6d2f1942cfd9ad618105422d
 ms.sourcegitcommit: b6116b434d737d661c09b78d0f798c652cf149f3
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: es-ES
 ms.lasthandoff: 01/17/2018
 ---
 # <a name="sqldiag-utility"></a>SQLdiag , utilidad
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]El **SQLdiag** es una utilidad de recopilación de diagnóstico de uso general que se pueden ejecutar como una aplicación de consola o como un servicio. Puede usar **SQLdiag** para recopilar los archivos de datos y de registro de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] y otros tipos de servidores, y para supervisar los servidores a lo largo del tiempo o solucionar problemas específicos de los mismos. **SQLdiag** se ha diseñado para acelerar y simplificar la recopilación de información de diagnóstico para los Servicios de soporte técnico de [!INCLUDE[msCoName](../includes/msconame-md.md)] .  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] La utilidad **SQLdiag** es una herramienta de recopilación de diagnósticos de uso general que se puede ejecutar como una aplicación de consola o como un servicio. Puede usar **SQLdiag** para recopilar los archivos de datos y de registro de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] y otros tipos de servidores, y para supervisar los servidores a lo largo del tiempo o solucionar problemas específicos de los mismos. **SQLdiag** se ha diseñado para acelerar y simplificar la recopilación de información de diagnóstico para los Servicios de soporte técnico de [!INCLUDE[msCoName](../includes/msconame-md.md)] .  
   
 > [!NOTE]  
 >  Esta utilidad podría modificarse y las aplicaciones o scripts que dependen del comportamiento o de los argumentos de su línea de comandos podrían no funcionar correctamente en versiones posteriores.  
@@ -54,11 +55,11 @@ ms.lasthandoff: 01/17/2018
   
 -   Registros de eventos de Windows  
   
--   [!INCLUDE[ssSqlProfiler](../includes/sssqlprofiler-md.md)]seguimientos  
+-   [!INCLUDE[ssSqlProfiler](../includes/sssqlprofiler-md.md)] seguimientos  
   
--   [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]información de bloqueo  
+-   [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] información de bloqueo  
   
--   [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]información de configuración  
+-   [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] información de configuración  
   
  Puede especificar los tipos de información que quiere que **SQLdiag** recopile si modifica el archivo de configuración SQLDiag.xml, que se describe en la siguiente sección.  
   
@@ -117,7 +118,7 @@ sqldiag
 > [!NOTE]  
 >  **SQLdiag** no anexa la salida a la carpeta de salida actual cuando se inicia. Solo puede sobrescribir la carpeta de salida predeterminada (opción 1) o cambiar el nombre de la carpeta (opción 2) y, a continuación, escribir la salida en la nueva carpeta de salida predeterminada denominada SQLDIAG.  
   
- **/M** *machine1* [ *machine2**machineN*] | *@machinelistfile*  
+ **/M** *machine1* [ *machine2 ** machineN*] | *@machinelistfile*  
  Invalida los equipos especificados en el archivo de configuración. De forma predeterminada, el archivo de configuración es SQLDiag.Xml, o se establece con el parámetro **/I** . Al especificar más de un equipo, separe cada nombre de equipo con un espacio.  
   
  Con *@machinelistfile* se especifica un nombre de archivo de la lista de equipos que se va a almacenar en el archivo de configuración.  
@@ -233,10 +234,10 @@ sqldiag
   
  El argumento **/A** , que especifica una instancia con nombre de **SQLdiag**, es el único que se puede usar con **START**, **STOP**o **STOP_ABORT** para controlar una instancia específica del servicio **SQLdiag** . Por ejemplo:  
   
- **SQLDIAG START /A** *SQLdiag_application_name*  
+ **SQLDIAG START /A** *SQLdiag_nombre_aplicación*  
   
 ## <a name="security-requirements"></a>Requisitos de seguridad  
- A menos que **SQLdiag** se ejecute en modo genérico (especificando el argumento de la línea de comandos **/G** ), el usuario que ejecuta **SQLdiag** debe ser miembro del grupo **Administradores** de Windows y del rol fijo de servidor [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] **sysadmin** . De forma predeterminada, **SQLdiag** conecta con [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] mediante la autenticación de Windows, pero también admite la autenticación de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] .  
+ A menos que **SQLdiag** se ejecute en modo genérico (especificando el argumento de la línea de comandos **/G** ), el usuario que ejecuta **SQLdiag** debe ser miembro del grupo **Administradores** de Windows y del rol fijo de servidor [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] **sysadmin** fixed server role. De forma predeterminada, **SQLdiag** conecta con [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] mediante la autenticación de Windows, pero también admite la autenticación de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] .  
   
 ## <a name="performance-considerations"></a>Consideraciones de rendimiento  
  Los efectos sobre el rendimiento de la ejecución de **SQLdiag** dependen del tipo de datos de diagnóstico cuya recopilación se haya configurado. Por ejemplo, si ha configurado **SQLdiag** para recopilar la información de seguimiento de [!INCLUDE[ssSqlProfiler](../includes/sssqlprofiler-md.md)] , cuanto mayor sea el número de clases de eventos de las que decida realizar un seguimiento, más se verá afectado el rendimiento del servidor.  
@@ -300,7 +301,7 @@ SQLDIAG STOP /A Instance1
 >  Use **SQLDiag STOP** o **SQLDIAG STOP_ABORT** para detener el servicio **SQLdiag** . No use la consola Servicios de Windows para detener **SQLdiag** u otros servicios de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] .  
   
 ## <a name="automatically-starting-and-stopping-sqldiag"></a>Iniciar y detener automáticamente SQLdiag  
- Para iniciar y detener la recopilación de datos de diagnóstico en un momento determinado automáticamente, use el **/B *** start_time* y **/E *** stop_time* argumentos, usando la notación de 24 horas. Por ejemplo, si está solucionando un problema que suele aparecer a las 02:00:00 aproximadamente, puede configurar **SQLdiag** para empezar a recopilar automáticamente datos de diagnóstico a la 01:00 y dejar de recopilarlos a las 03:00:00. Use los argumentos **/B** y **/E** para especificar la hora de inicio y detención. Utilice la notación de 24 horas para especificar una hora y una fecha de inicio y de finalización exactas con el formato AAAAMMDD_HH:MM:SS. Para especificar una hora de inicio o detención relativa, anteponga **+** a la hora de inicio o de detención y omita la parte de la fecha (AAAAMMDD_) como se muestra en el siguiente ejemplo, lo que hace que **SQLdiag** espere 1 hora antes de empezar a recopilar información; después recopila la información durante 3 horas hasta que se detiene y se cierra:  
+ Para iniciar y detener automáticamente la recopilación de datos de diagnóstico a una hora especificada, use los argumentos **/B***hora_inicio* y **/E***hora_finalización* con la notación de 24 horas. Por ejemplo, si está solucionando un problema que suele aparecer a las 02:00:00 aproximadamente, puede configurar **SQLdiag** para empezar a recopilar automáticamente datos de diagnóstico a la 01:00 y dejar de recopilarlos a las 03:00:00. Use los argumentos **/B** y **/E** para especificar la hora de inicio y detención. Utilice la notación de 24 horas para especificar una hora y una fecha de inicio y de finalización exactas con el formato AAAAMMDD_HH:MM:SS. Para especificar una hora de inicio o detención relativa, anteponga **+** a la hora de inicio o de detención y omita la parte de la fecha (AAAAMMDD_) como se muestra en el siguiente ejemplo, lo que hace que **SQLdiag** espere 1 hora antes de empezar a recopilar información; después recopila la información durante 3 horas hasta que se detiene y se cierra:  
   
 ```  
 sqldiag /B +01:00:00 /E +03:00:00  
@@ -361,17 +362,17 @@ SQLDIAG START /A Instance1
  No se permite pausar el servicio **SQLdiag** .  
   
 ## <a name="running-multiple-instances-of-sqldiag"></a>Ejecutar varias instancias de SQLdiag  
- Ejecutar varias instancias de **SQLdiag** en el mismo equipo mediante la especificación de **/A *** SQLdiag_application_name* en la línea de comandos. Resulta útil para recopilar distintos conjuntos de diagnósticos de la misma instancia de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] de forma simultánea. Por ejemplo, puede configurar una instancia con nombre de **SQLdiag** para que ejecute una recopilación de datos ligera de forma constante. De este modo, si se produce un problema específico en [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)], puede ejecutar la instancia predeterminada de **SQLdiag** para recopilar los diagnósticos relativos a ese problema o para recopilar un conjunto de diagnósticos que los servicios de soporte al cliente de [!INCLUDE[msCoName](../includes/msconame-md.md)] le hayan solicitado para diagnosticar un problema.  
+ Para ejecutar varias instancias de **SQLdiag** en el mismo equipo, especifique **/A***SQLdiag_nombre_aplicación* en la línea de comandos. Resulta útil para recopilar distintos conjuntos de diagnósticos de la misma instancia de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] de forma simultánea. Por ejemplo, puede configurar una instancia con nombre de **SQLdiag** para que ejecute una recopilación de datos ligera de forma constante. De este modo, si se produce un problema específico en [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)], puede ejecutar la instancia predeterminada de **SQLdiag** para recopilar los diagnósticos relativos a ese problema o para recopilar un conjunto de diagnósticos que los servicios de soporte al cliente de [!INCLUDE[msCoName](../includes/msconame-md.md)] le hayan solicitado para diagnosticar un problema.  
   
 ## <a name="collecting-diagnostic-data-from-clustered-sql-server-instances"></a>Recopilar datos de diagnóstico de instancias de SQL Server en clúster  
- **SQLdiag** permite recopilar datos de diagnóstico de instancias de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] en clúster. Para recopilar los diagnósticos de clúster [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] instancias, asegúrese de que **"."**  se especifica para el **nombre** atributo de la  **\<máquina >** en la configuración del archivo SQLDiag.Xml y no se especifica la **/G** argumento en la línea de comandos. De forma predeterminada, se especifica **"."** para el atributo **name** del archivo de configuración y se desactiva el argumento **/G**. Normalmente, cuando se realiza la recopilación desde una instancia de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] en clúster, no es necesario editar el archivo de configuración ni cambiar los argumentos de la línea de comandos.  
+ **SQLdiag** permite recopilar datos de diagnóstico de instancias de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] en clúster. Para recopilar diagnósticos de instancias de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] agrupadas, asegúrese de que se especifica **"."** para el atributo **name** del elemento **\<Machine>** en el archivo de configuración SQLDiag.Xml y no especifique el argumento **/G** en la línea de comandos. De forma predeterminada, se especifica **"."** para el atributo **name** del archivo de configuración y se desactiva el argumento **/G** . Normalmente, cuando se realiza la recopilación desde una instancia de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] en clúster, no es necesario editar el archivo de configuración ni cambiar los argumentos de la línea de comandos.  
   
- Si se especifica **"."** como nombre de equipo, **SQLdiag** detecta que se está ejecutando en un clúster y recupera simultáneamente la información de diagnóstico de todas las instancias virtuales de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] instaladas en el clúster. Si desea recopilar información de diagnóstico de solo una instancia virtual de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] que se ejecuta en un equipo, especifique ese servidor virtual [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] para el **nombre** atributo de la  **\<máquina >** elemento en SQLDiag.Xml.  
+ Si se especifica **"."** como nombre de equipo, **SQLdiag** detecta que se está ejecutando en un clúster y recupera simultáneamente la información de diagnóstico de todas las instancias virtuales de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] instaladas en el clúster. Si quiere recopilar información de diagnóstico solo de una de las instancias virtuales de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] que se ejecutan en el equipo, especifique ese [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] virtual para el atributo **name** del elemento **\<Machine>** de SQLDiag.Xml.  
   
 > [!NOTE]  
->  Para recopilar información de seguimiento de [!INCLUDE[ssSqlProfiler](../includes/sssqlprofiler-md.md)] desde instancias agrupadas de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)], deben habilitarse los recursos compartidos con fines administrativos (ADMIN$) en el clúster.  
+>  Para recopilar información de seguimiento de [!INCLUDE[ssSqlProfiler](../includes/sssqlprofiler-md.md)] desde instancias agrupadas de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] , deben habilitarse los recursos compartidos con fines administrativos (ADMIN$) en el clúster.  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Ver también  
  [Referencia de la utilidad del símbolo del sistema &#40;motor de base de datos&#41;](../tools/command-prompt-utility-reference-database-engine.md)  
   
   

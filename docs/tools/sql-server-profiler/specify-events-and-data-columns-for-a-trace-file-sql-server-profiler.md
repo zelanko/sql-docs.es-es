@@ -1,15 +1,16 @@
 ---
-title: Especificar eventos y columnas de datos para un archivo de seguimiento (SQL Server Profiler) | Documentos de Microsoft
-ms.custom: 
+title: Especificar eventos y columnas de datos para un archivo de seguimiento (SQL Server Profiler) | Microsoft Docs
+ms.custom: ''
 ms.date: 03/01/2017
 ms.prod: sql-non-specified
 ms.prod_service: sql-tools
-ms.service: 
+ms.service: ''
 ms.component: sql-server-profiler
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: database-engine
-ms.tgt_pltfrm: 
+ms.technology:
+- database-engine
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - adding events
@@ -18,19 +19,19 @@ helpviewer_keywords:
 - removing events
 - traces [SQL Server], events
 ms.assetid: 7da715a3-2f03-4063-b6a4-20fd7b44e675
-caps.latest.revision: "24"
+caps.latest.revision: 24
 author: stevestein
 ms.author: sstein
 manager: craigg
 ms.workload: Inactive
 ms.openlocfilehash: 45184a8741296f43b29029776741def6704a6aaf
 ms.sourcegitcommit: b6116b434d737d661c09b78d0f798c652cf149f3
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: es-ES
 ms.lasthandoff: 01/17/2018
 ---
 # <a name="specify-events-and-data-columns-for-a-trace-file-sql-server-profiler"></a>Especificar eventos y columnas de datos para un archivo de seguimiento (SQL Server Profiler)
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]Este tema describe cómo especificar las columnas de datos y las clases de evento para seguimientos mediante [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)].  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] En este tema se describe el modo de especificar clases de eventos y columnas de datos para seguimientos mediante [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)].  
   
 ### <a name="to-specify-events-and-data-columns-for-a-trace"></a>Para especificar eventos y columnas de datos para un seguimiento  
   
@@ -53,7 +54,7 @@ ms.lasthandoff: 01/17/2018
   
 2.  Opcionalmente, aplique filtros al seguimiento. Para obtener más información, vea [Filtrar eventos en un seguimiento &#40;SQL Server Profiler&#41;](../../tools/sql-server-profiler/filter-events-in-a-trace-sql-server-profiler.md).  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Ver también  
  [SQL Server Profiler](../../tools/sql-server-profiler/sql-server-profiler.md)  
   
   

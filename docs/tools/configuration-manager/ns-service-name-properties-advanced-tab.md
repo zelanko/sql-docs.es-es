@@ -20,12 +20,12 @@ manager: craigg
 ms.workload: Inactive
 ms.openlocfilehash: 73501245691b58e973fe7e268ef8b7cf4459e025
 ms.sourcegitcommit: d6b1695c8cbc70279b7d85ec4dfb66a4271cdb10
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: es-ES
 ms.lasthandoff: 04/10/2018
 ---
-# <a name="nsltservice-namegt-properties-advanced-tab"></a>NS$&lt;nombre del servicio&gt; propiedades (pestaña Avanzadas)
+# <a name="nsltservice-namegt-properties-advanced-tab"></a>Propiedades de NS$&lt;nombre del servicio&gt; (pestaña Avanzadas)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
-  [!INCLUDE[ssNS](../../includes/ssns-md.md)] se implementa como un servicio denominado en el formato **NS$ *** < tiene nombre >*. Si se han definido propiedades personalizadas, aparecen en esta pestaña junto con los valores correspondientes. Es posible que no aparezcan propiedades en esta pestaña.  
+  [!INCLUDE[ssNS](../../includes/ssns-md.md)] se implementa como un servicio con un nombre que tiene el formato **NS$***<nombre_configurado por el usuario>*. Si se han definido propiedades personalizadas, aparecen en esta pestaña junto con los valores correspondientes. Es posible que no aparezcan propiedades en esta pestaña.  
   
   

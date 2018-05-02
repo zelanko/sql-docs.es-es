@@ -1,26 +1,26 @@
 ---
-title: "Protocolos de propiedades MSSQLSERVER (pestaña avanzada) | Documentos de Microsoft"
-ms.custom: 
+title: Propiedades de Protocolos de MSSQLSERVER (pestaña Opciones avanzadas) | Microsoft Docs
+ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql-non-specified
 ms.prod_service: sql-tools
-ms.service: 
+ms.service: ''
 ms.component: configuration-manager
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: abd5ca68-825f-4c07-b27c-3b3a79d03d74
-caps.latest.revision: 
+caps.latest.revision: 7
 author: stevestein
 ms.author: sstein
 manager: craigg
 ms.workload: Inactive
 ms.openlocfilehash: 2a1cfb458983a017352384f4074be455ee4994c5
 ms.sourcegitcommit: c556eaf60a49af7025db35b7aa14beb76a8158c5
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: es-ES
 ms.lasthandoff: 02/03/2018
 ---
@@ -48,7 +48,7 @@ Utilice la pestaña **Opciones avanzadas** del cuadro de diálogo **Protocolos d
  **Se aceptan SPN NTLM**  
  Cuando la instancia de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] se identifica mediante más de un nombre principal de servicio NTLM (SPN), enumere los SPN aquí como una serie de cadenas separadas por puntos y coma. Por ejemplo, el valor **MSSQLSvc/HostName1.Contoso.com;MSSQLSvc/HostName2.Contoso.com**indica que se permiten los clientes que intentan conectarse a los SPN denominados **MSSQLSvc/HOST1.Contoso.com** y **MSSQLSvc/HOST2.Contoso.com** . La variable tiene una longitud máxima de 2048 caracteres.  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Ver también  
  [Protección ampliada para la autenticación con Reporting Services](../../reporting-services/security/extended-protection-for-authentication-with-reporting-services.md)  
   
   

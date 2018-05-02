@@ -1,9 +1,9 @@
 ---
-title: Las SQL Operations Studio (preview) usuario y la configuración de área de trabajo | Documentos de Microsoft
-description: Cómo modificar la configuración de área de trabajo y las SQL Operations Studio (preview) usuario.
+title: Las operaciones de SQL Studio (versión preliminar) usuario y la configuración de área de trabajo | Documentos de Microsoft
+description: Cómo modificar la configuración de área de trabajo y las operaciones de SQL Studio usuario (vista previa).
 ms.custom: tools|sos
 ms.date: 11/15/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.reviewer: alayu; erickang; sstein
 ms.suite: sql
 ms.prod_service: sql-tools
@@ -14,17 +14,17 @@ author: yualan
 ms.author: alayu
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 6e87461fb2973bec630ed21975a80cdbc17cd1cd
-ms.sourcegitcommit: b6116b434d737d661c09b78d0f798c652cf149f3
-ms.translationtype: MT
+ms.openlocfilehash: 7ec3ddc85512f0ae071865f4806358a5da28ff09
+ms.sourcegitcommit: a85a46312acf8b5a59a8a900310cf088369c4150
+ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/17/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="user-and-workspace-settings"></a>Configuración de área de trabajo y de usuario
 
 Es fácil de configurar [!INCLUDE[name-sos](../includes/name-sos-short.md)] a su gusto a través de configuración. Casi todas las partes de [!INCLUDE[name-sos](../includes/name-sos-short.md)]del editor, la interfaz de usuario y el comportamiento funcional tiene opciones puede modificar.
 
-[!INCLUDE[name-sos](../includes/name-sos-short.md)]proporciona dos ámbitos diferentes para la configuración:
+[!INCLUDE[name-sos](../includes/name-sos-short.md)] proporciona dos ámbitos diferentes para la configuración:
 
 * **Usuario** estas opciones se aplican globalmente a cualquier instancia de [!INCLUDE[name-sos](../includes/name-sos-short.md)] abrir.
 * **Área de trabajo** configuración de área de trabajo son configuraciones específicas de una carpeta en el equipo y sólo están disponibles cuando la carpeta se abre en la barra lateral de explorador. Opciones de configuración definidas en este ámbito de invalidan el ámbito del usuario.
@@ -47,15 +47,15 @@ Cambios en la configuración se vuelven a cargar por [!INCLUDE[name-sos](../incl
 
 Dependiendo de la plataforma, el archivo de configuración de usuario se encuentra aquí:
 
-* **Windows**`%APPDATA%\sqlops\User\settings.json`
+* **Windows** `%APPDATA%\sqlops\User\settings.json`
 * **Mac** `$HOME/Library/Application Support/sqlops/User/settings.json`
-* **Linux**`$HOME/.config/sqlops/User/settings.json`
+* **Linux** `$HOME/.config/sqlops/User/settings.json`
 
 El archivo de configuración de área de trabajo se encuentra en la `.[!INCLUDE[name-sos](../includes/name-sos-short.md)]` carpeta del proyecto.
 
 ## <a name="hot-exit"></a>Salida activa
 
-SQL Operations Studio recordará los cambios no guardados a los archivos cuando se cierra de forma predeterminada. Esto es igual que la característica de salida activas en el código de Visual Studio.
+Operaciones de SQL Studio recordará los cambios no guardados a los archivos cuando se cierra de forma predeterminada. Esto es igual que la característica de salida activas en el código de Visual Studio.
 
 De forma predeterminada, la salida activa está desactivada. Habilitar activa salida mediante la edición de la `files.hotExit` configuración. Para obtener más información, consulte [salida activa (en la documentación de Visual Studio Code)](https://code.visualstudio.com/docs/editor/codebasics#_hot-exit).
 

@@ -2,7 +2,7 @@
 title: NS$&lt;nombre del servicio&gt; propiedades (pestaña iniciar sesión) | Documentos de Microsoft
 ms.custom: ''
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: sql-tools
 ms.service: ''
 ms.component: configuration-manager
@@ -18,15 +18,15 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 512d1281ca516256631845d0283b50f8f58f82d5
-ms.sourcegitcommit: c556eaf60a49af7025db35b7aa14beb76a8158c5
-ms.translationtype: HT
+ms.openlocfilehash: bfe2aa22e110339e84403c6bbef2807ff0275076
+ms.sourcegitcommit: a85a46312acf8b5a59a8a900310cf088369c4150
+ms.translationtype: MTE
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/03/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="nsltservice-namegt-properties-log-on-tab"></a>Propiedades de NS$&lt;nombre de servicio&gt; (pestaña Iniciar sesión)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
-Utilice la pestaña **Iniciar sesión** del cuadro de diálogo **Propiedades de Notification Services** para especificar la cuenta que utiliza el servicio [!INCLUDE[ssNS](../../includes/ssns-md.md)] así como para iniciar y detener el servicio.  
+  Utilice la pestaña **Iniciar sesión** del cuadro de diálogo **Propiedades de Notification Services** para especificar la cuenta que utiliza el servicio [!INCLUDE[ssNS](../../includes/ssns-md.md)] así como para iniciar y detener el servicio.  
   
 ## <a name="options"></a>Opciones  
  **Cuenta de sistema local**  

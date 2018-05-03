@@ -2,7 +2,7 @@
 title: Distributed Replay Requirements | Documentos de Microsoft
 ms.custom: ''
 ms.date: 01/18/2018
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: sql-tools
 ms.service: ''
 ms.component: distributed-replay
@@ -18,14 +18,15 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.workload: ondemand
-ms.openlocfilehash: 3267939b053be638ae40ab33e0e7e02776bf918c
-ms.sourcegitcommit: 6b4aae3706247ce9b311682774b13ac067f60a79
-ms.translationtype: HT
+ms.openlocfilehash: 8db7e6c00c83de21ff37b65dc79d8751ebb10471
+ms.sourcegitcommit: a85a46312acf8b5a59a8a900310cf088369c4150
+ms.translationtype: MTE
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/18/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="distributed-replay-requirements"></a>Distributed Replay Requirements
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] Antes de utilizar la característica [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Distributed Replay, tenga en cuenta los requisitos de productos que se describen en este tema.  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+  Antes de utilizar la característica Distributed Replay de [!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , tenga en cuenta los requisitos de productos que se describen en este tema.  
   
 ## <a name="input-trace-requirements"></a>Requisitos del seguimiento de entrada  
  Para reproducir correctamente los datos de seguimiento, deben cumplir los requisitos de versión y el formato, y contener las columnas y eventos necesarios.  

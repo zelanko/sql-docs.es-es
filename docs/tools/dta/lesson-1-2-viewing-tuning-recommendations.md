@@ -2,7 +2,7 @@
 title: Ver recomendaciones de optimización | Documentos de Microsoft
 ms.custom: ''
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: sql-tools
 ms.service: ''
 ms.component: dta
@@ -22,14 +22,15 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 634534fb9fa7f97e61431a481ab847bd87e2806a
-ms.sourcegitcommit: b6116b434d737d661c09b78d0f798c652cf149f3
-ms.translationtype: HT
+ms.openlocfilehash: fe49d0959cdeb89b40e953cf0600ffc0675e74bc
+ms.sourcegitcommit: a85a46312acf8b5a59a8a900310cf088369c4150
+ms.translationtype: MTE
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/17/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="lesson-1-2---viewing-tuning-recommendations"></a>Lección 1-2: Ver recomendaciones de optimización
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] En esta tarea, se utiliza la sesión de optimización que creó en [Optimizar una carga de trabajo](../../tools/dta/lesson-1-1-tuning-a-workload.md). Después de optimizar la base de datos [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] mediante el script [!INCLUDE[tsql](../../includes/tsql-md.md)] MyScript.sql, el Asistente para la optimización de [!INCLUDE[ssDE](../../includes/ssde-md.md)] muestra los resultados en la pestaña **Recomendaciones** . La tarea siguiente trata sobre la pestaña **Recomendaciones** de la interfaz gráfica de usuario (GUI) del Asistente para la optimización de [!INCLUDE[ssDE](../../includes/ssde-md.md)] y le guía para que explore la información que proporciona sobre los resultados de la sesión de optimización.  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+En esta tarea, se utiliza la sesión de optimización que creó en [Tuning a Workload](../../tools/dta/lesson-1-1-tuning-a-workload.md). Después de optimizar la base de datos [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] mediante el script [!INCLUDE[tsql](../../includes/tsql-md.md)] MyScript.sql, el Asistente para la optimización de [!INCLUDE[ssDE](../../includes/ssde-md.md)] muestra los resultados en la pestaña **Recomendaciones** . La tarea siguiente trata sobre la pestaña **Recomendaciones** de la interfaz gráfica de usuario (GUI) del Asistente para la optimización de [!INCLUDE[ssDE](../../includes/ssde-md.md)] y le guía para que explore la información que proporciona sobre los resultados de la sesión de optimización.  
   
 ### <a name="view-tuning-recommendations"></a>Ver las recomendaciones de optimización  
   

@@ -2,7 +2,7 @@
 title: dta (Utilidad) | Microsoft Docs
 ms.custom: ''
 ms.date: 01/09/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: sql-tools
 ms.service: ''
 ms.component: dta
@@ -28,14 +28,15 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: e003329968d6ebd960f66c56051a20ac91523e47
-ms.sourcegitcommit: b6116b434d737d661c09b78d0f798c652cf149f3
-ms.translationtype: HT
+ms.openlocfilehash: 7e9849894a011294f63f9e50a0b79eff3ce10897
+ms.sourcegitcommit: a85a46312acf8b5a59a8a900310cf088369c4150
+ms.translationtype: MTE
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/17/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="dta-utility"></a>dta, utilidad
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] La utilidad **dta** es la versión del símbolo del sistema del Asistente para la optimización de motor de base de datos. La utilidad **dta** está diseñada para permitir usar la funcionalidad del Asistente para la optimización de motor de base de datos en aplicaciones y scripts.  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+  La utilidad **dta** es la versión del símbolo del sistema del Asistente para la optimización de motor de base de datos. La utilidad **dta** está diseñada para permitir usar la funcionalidad del Asistente para la optimización de motor de base de datos en aplicaciones y scripts.  
   
  Al igual que el Asistente para la optimización de motor de base de datos, la utilidad **dta** analiza una carga de trabajo y recomienda estructuras de diseño físico para mejorar el rendimiento del servidor para esa carga de trabajo. La carga de trabajo puede ser una caché del plan, un archivo de seguimiento de [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] , una tabla o un script [!INCLUDE[tsql](../../includes/tsql-md.md)] . Las estructuras de diseño físico incluyen índices, vistas indizadas y particiones. Después de analizar una carga de trabajo, la utilidad **dta** genera una recomendación para el diseño físico de bases de datos y puede generar el script necesario para implementar la recomendación. Las cargas de trabajo se pueden especificar desde el símbolo del sistema con el argumento **-if** o **-it** . También puede especificar un archivo de entrada XML desde el símbolo del sistema con el argumento **-ix** . En ese caso, la carga de trabajo se especifica en el archivo de entrada XML.  
   

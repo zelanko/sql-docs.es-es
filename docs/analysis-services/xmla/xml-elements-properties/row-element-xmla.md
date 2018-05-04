@@ -29,15 +29,15 @@ caps.latest.revision: 13
 author: Minewiskan
 ms.author: owend
 manager: kfile
-ms.workload: Inactive
-ms.openlocfilehash: e28026dda3ddb43e1ed43ac427851b8fa4ff773c
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
-ms.translationtype: MT
+ms.openlocfilehash: 8e295bb3faddcc9e012e8d928e6a1095f1982907
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="row-element-xmla"></a>Elemento row (XMLA)
-[!INCLUDE[ssas-appliesto-sqlas-aas](../../../includes/ssas-appliesto-sqlas-aas.md)]Contiene una sola fila de datos para un [raíz](../../../analysis-services/xmla/xml-elements-properties/root-element-xmla.md) elemento que contiene datos tabulares devueltos por un [Discover](../../../analysis-services/xmla/xml-elements-methods-discover.md) o [Execute](../../../analysis-services/xmla/xml-elements-methods-execute.md) llamada al método.  
+[!INCLUDE[ssas-appliesto-sqlas-aas](../../../includes/ssas-appliesto-sqlas-aas.md)]
+  Contiene una fila única de datos para un elemento [root](../../../analysis-services/xmla/xml-elements-properties/root-element-xmla.md) que contiene datos tabulares devueltos por una llamada al método [Discover](../../../analysis-services/xmla/xml-elements-methods-discover.md) o [Execute](../../../analysis-services/xmla/xml-elements-methods-execute.md) .  
   
 ## <a name="syntax"></a>Sintaxis  
   
@@ -50,19 +50,19 @@ ms.lasthandoff: 01/08/2018
 </root>  
 ```  
   
-## <a name="element-characteristics"></a>Características del elemento  
+## <a name="element-characteristics"></a>Características de los elementos  
   
-|Característica|Description|  
+|Característica|Descripción|  
 |--------------------|-----------------|  
-|Tipo y longitud de los datos|None|  
-|Valor predeterminado|None|  
+|Tipo y longitud de los datos|Ninguno|  
+|Valor predeterminado|Ninguno|  
 |Cardinalidad|0-n: elemento opcional que puede aparecer más de una vez.|  
   
 ## <a name="element-relationships"></a>Relaciones del elemento  
   
 |Relación|Elemento|  
 |------------------|-------------|  
-|Elementos primarios|[raíz](../../../analysis-services/xmla/xml-elements-properties/root-element-xmla.md) (mediante el [conjunto de filas](../../../analysis-services/xmla/xml-data-types/rowset-data-type-xmla.md) tipo de datos)|  
+|Elementos primarios|[root](../../../analysis-services/xmla/xml-elements-properties/root-element-xmla.md) (con el tipo de datos [Rowset](../../../analysis-services/xmla/xml-data-types/rowset-data-type-xmla.md) )|  
 |Elementos secundarios|Uno o más elementos de columna.|  
   
 ## <a name="remarks"></a>Comentarios  
@@ -101,9 +101,9 @@ ms.lasthandoff: 01/08/2018
 </row>  
 ```  
   
- Para obtener más información sobre la nomenclatura de columna e información de esquema para los datos tabulares, vea [tipo de conjunto de filas de datos &#40; XMLA &#41; ](../../../analysis-services/xmla/xml-data-types/rowset-data-type-xmla.md).  
+ Para obtener más información sobre la nomenclatura de columna e información de esquema para los datos tabulares, vea [tipo de conjunto de filas de datos & #40; XMLA & #41; ](../../../analysis-services/xmla/xml-data-types/rowset-data-type-xmla.md).  
   
 ## <a name="see-also"></a>Vea también  
- [Propiedades &#40; XMLA &#41;](../../../analysis-services/xmla/xml-elements-properties/xml-elements-properties.md)  
+ [Propiedades & #40; XMLA & #41;](../../../analysis-services/xmla/xml-elements-properties/xml-elements-properties.md)  
   
   

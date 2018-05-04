@@ -1,44 +1,23 @@
 ---
-title: "Examinar un modelo usando el Visor de árboles de Microsoft | Documentos de Microsoft"
-ms.custom: 
-ms.date: 03/14/2017
-ms.prod: analysis-services
-ms.prod_service: analysis-services
-ms.service: 
+title: Examinar un modelo usando el Visor de árboles de Microsoft | Documentos de Microsoft
+ms.date: 05/01/2018
+ms.prod: sql
+ms.technology: analysis-services
 ms.component: data-mining
-ms.reviewer: 
-ms.suite: pro-bi
-ms.technology: 
-ms.tgt_pltfrm: 
 ms.topic: article
-helpviewer_keywords:
-- Tree Viewer [Analysis Services]
-- predictions [Analysis Services], discrete attributes
-- mining model content, viewing
-- predictions [Analysis Services], continuous attributes
-- mining legend [Analysis Services]
-- discrete attributes [Analysis Services]
-- Microsoft Decision Trees algorithm [Analysis Services]
-- decision tree algorithms [Analysis Services]
-- Microsoft Tree Viewer
-- decision trees [Analysis Services]
-- dependencies [Analysis Services]
-- continuous attributes
-ms.assetid: 0c96d518-ed20-40b7-8d62-b26ad6244287
-caps.latest.revision: 
-author: Minewiskan
 ms.author: owend
+ms.reviewer: owend
+author: minewiskan
 manager: kfile
-ms.workload: Inactive
-ms.openlocfilehash: 61e3be434f2029216742813178b041b083174362
-ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
+ms.openlocfilehash: 6477ccf19b3f2e626f098e455fc999fd07c565dd
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/15/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="browse-a-model-using-the-microsoft-tree-viewer"></a>Examinar un modelo usando el Visor de árboles de Microsoft
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
-El Visor de árboles de [!INCLUDE[msCoName](../../includes/msconame-md.md)] en [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] muestra los árboles de decisión que se generan con el algoritmo de árboles de decisión de [!INCLUDE[msCoName](../../includes/msconame-md.md)] . El algoritmo de árboles de decisión de [!INCLUDE[msCoName](../../includes/msconame-md.md)] es un algoritmo del árbol de decisión híbrido que admite clasificación y regresión. Por consiguiente, también puede usar este visor para ver modelos basados en el algoritmo de regresión lineal de [!INCLUDE[msCoName](../../includes/msconame-md.md)] . El algoritmo de árboles de decisión de [!INCLUDE[msCoName](../../includes/msconame-md.md)] se usa para el modelo de predicción de los atributos discretos y continuos. Para obtener más información acerca de este algoritmo, vea [Microsoft Decision Trees Algorithm](../../analysis-services/data-mining/microsoft-decision-trees-algorithm.md).  
+  El Visor de árboles de [!INCLUDE[msCoName](../../includes/msconame-md.md)] en [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] muestra los árboles de decisión que se generan con el algoritmo de árboles de decisión de [!INCLUDE[msCoName](../../includes/msconame-md.md)] . El algoritmo de árboles de decisión de [!INCLUDE[msCoName](../../includes/msconame-md.md)] es un algoritmo del árbol de decisión híbrido que admite clasificación y regresión. Por consiguiente, también puede usar este visor para ver modelos basados en el algoritmo de regresión lineal de [!INCLUDE[msCoName](../../includes/msconame-md.md)] . El algoritmo de árboles de decisión de [!INCLUDE[msCoName](../../includes/msconame-md.md)] se usa para el modelo de predicción de los atributos discretos y continuos. Para obtener más información acerca de este algoritmo, vea [Microsoft Decision Trees Algorithm](../../analysis-services/data-mining/microsoft-decision-trees-algorithm.md).  
   
 > [!NOTE]  
 >  Para ver información detallada sobre las ecuaciones utilizadas en el modelo y los modelos que se detectaron, utilice el Visor de árbol de contenido genérico de [!INCLUDE[msCoName](../../includes/msconame-md.md)] . Para más información, vea [Examinar un modelo usando el Visor de árbol de contenido genérico de Microsoft](../../analysis-services/data-mining/browse-a-model-using-the-microsoft-generic-content-tree-viewer.md) o [Visor de árbol de contenido genérico de Microsoft &#40;Minería de datos&#41;](http://msdn.microsoft.com/library/751b4393-f6fd-48c1-bcef-bdca589ce34c).  
@@ -112,7 +91,7 @@ El Visor de árboles de [!INCLUDE[msCoName](../../includes/msconame-md.md)] en [
   
 ## <a name="see-also"></a>Vea también  
  [Algoritmo de árboles de decisión de Microsoft](../../analysis-services/data-mining/microsoft-decision-trees-algorithm.md)   
- [Visores de modelos de minería de datos &#40; el Diseñador de modelo de minería de datos &#41;](http://msdn.microsoft.com/library/4ba391d5-c97b-4848-ba7c-7d096fa4b7dd)   
+ [Visores de modelos de minería de datos & #40; el Diseñador de modelo de minería de datos & #41;](http://msdn.microsoft.com/library/4ba391d5-c97b-4848-ba7c-7d096fa4b7dd)   
  [Tareas y tareas del Visor de modelo de minería de datos](../../analysis-services/data-mining/mining-model-viewer-tasks-and-how-tos.md)   
  [Herramientas de minería de datos](../../analysis-services/data-mining/data-mining-tools.md)   
  [Visores de modelos de minería de datos](../../analysis-services/data-mining/data-mining-model-viewers.md)  

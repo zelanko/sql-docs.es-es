@@ -23,15 +23,15 @@ caps.latest.revision: 40
 author: Minewiskan
 ms.author: owend
 manager: kfile
-ms.workload: Inactive
-ms.openlocfilehash: 32df882f6f6b34c4cd5049713240460c62324ddb
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
-ms.translationtype: MT
+ms.openlocfilehash: ad15c20b68b3ccc69dee5b39c839f9f8dd0b2fab
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="dbschemacolumns-rowset"></a>Conjunto de filas DBSCHEMA_COLUMNS
-[!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]Proporciona información de columna para todas las columnas que cumplen los criterios de restricción proporcionados.  
+[!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]
+  Proporciona información de columna de todas las columnas que cumplen los criterios de restricción proporcionados.  
   
 ## <a name="rowset-columns"></a>Columnas del conjunto de filas  
  El **DBSCHEMA_COLUMNS** filas contiene las columnas siguientes.  

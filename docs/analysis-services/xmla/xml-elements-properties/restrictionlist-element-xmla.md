@@ -29,15 +29,15 @@ caps.latest.revision: 11
 author: Minewiskan
 ms.author: owend
 manager: kfile
-ms.workload: Inactive
-ms.openlocfilehash: eeabf1889208ab4cf31b0d0b65d336ccf62ba84e
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
-ms.translationtype: MT
+ms.openlocfilehash: c3308d4e65fd502c5ff4195477ed114eaedb0acf
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="restrictionlist-element-xmla"></a>Elemento RestrictionList (XMLA)
-[!INCLUDE[ssas-appliesto-sqlas-aas](../../../includes/ssas-appliesto-sqlas-aas.md)]Contiene una colección de columnas de restricción y valores usados por la [Discover](../../../analysis-services/xmla/xml-elements-methods-discover.md) método.  
+[!INCLUDE[ssas-appliesto-sqlas-aas](../../../includes/ssas-appliesto-sqlas-aas.md)]
+  Contiene una colección de columnas de restricción y valores usados por el método [Discover](../../../analysis-services/xmla/xml-elements-methods-discover.md) .  
   
 ## <a name="syntax"></a>Sintaxis  
   
@@ -50,13 +50,13 @@ ms.lasthandoff: 01/08/2018
 </Restrictions>  
 ```  
   
-## <a name="element-characteristics"></a>Características del elemento  
+## <a name="element-characteristics"></a>Características de los elementos  
   
-|Característica|Description|  
+|Característica|Descripción|  
 |--------------------|-----------------|  
-|Tipo y longitud de los datos|None|  
-|Valor predeterminado|None|  
-|Cardinalidad|0-1: Elemento opcional que puede aparecer una y solo una vez.|  
+|Tipo y longitud de los datos|Ninguno|  
+|Valor predeterminado|Ninguno|  
+|Cardinalidad|0-1: Elemento opcional que puede aparecer solo una vez.|  
   
 ## <a name="element-relationships"></a>Relaciones del elemento  
   
@@ -69,6 +69,6 @@ ms.lasthandoff: 01/08/2018
  El elemento **RestrictionList** contiene una colección de columnas de restricción en la que los datos devueltos por el método **Discover** se pueden filtrar. Cada columna de restricción del elemento **RestrictionList** está definida por un elemento XML diferente. El valor de la columna de restricción son los datos que contienen el elemento XML y el nombre de la columna de restricción se corresponde al nombre del elemento XML.  
   
 ## <a name="see-also"></a>Vea también  
- [Propiedades &#40; XMLA &#41;](../../../analysis-services/xmla/xml-elements-properties/xml-elements-properties.md)  
+ [Propiedades & #40; XMLA & #41;](../../../analysis-services/xmla/xml-elements-properties/xml-elements-properties.md)  
   
   

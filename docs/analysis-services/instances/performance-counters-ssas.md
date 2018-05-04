@@ -1,31 +1,23 @@
 ---
 title: Contadores de rendimiento (SSAS) | Documentos de Microsoft
-ms.custom: 
-ms.date: 03/14/2017
-ms.prod: analysis-services
-ms.prod_service: analysis-services
-ms.service: 
-ms.component: data-mining
-ms.reviewer: 
-ms.suite: pro-bi
-ms.technology: 
-ms.tgt_pltfrm: 
+ms.date: 05/02/2018
+ms.prod: sql
+ms.technology: analysis-services
+ms.component: ''
 ms.topic: article
-ms.assetid: 05d7d5ab-a96c-4f82-94b1-48a657d7c580
-caps.latest.revision: 
-author: Minewiskan
 ms.author: owend
+ms.reviewer: owend
+author: minewiskan
 manager: kfile
-ms.workload: On Demand
-ms.openlocfilehash: edaf6abe5becb215a58f8ae229562c774d1f0fd1
-ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
+ms.openlocfilehash: d440c3f6c663abc4da4a873a85a7173c1e150480
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/15/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="performance-counters-ssas"></a>Contadores de rendimiento (SSAS)
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
-Mediante el Monitor de rendimiento, puede supervisar el rendimiento de una instancia de Microsoft SQL Server Analysis Services (SSAS) mediante contadores de rendimiento.  
+  Mediante el Monitor de rendimiento, puede supervisar el rendimiento de una instancia de Microsoft SQL Server Analysis Services (SSAS) mediante contadores de rendimiento.  
   
  El Monitor de rendimiento es un complemento de [!INCLUDE[msCoName](../../includes/msconame-md.md)] Management Control (MMC) que hace un seguimiento del uso de los recursos. Para iniciar este complemento MMC, escriba **PerfMon** en el símbolo del sistema, o bien, en el Panel de control, haga clic en **Herramientas administrativas**y, después, en **Monitor de rendimiento**. El Monitor de rendimiento permite seguir la actividad y el rendimiento de los servidores y los procesos mediante objetos y contadores predefinidos, y supervisar los eventos mediante contadores definidos por el usuario. El Monitor de rendimiento recopila recuentos en lugar de datos sobre los eventos, como, por ejemplo, uso de la memoria, cantidad de transacciones activas o actividad de la CPU. También puede establecer umbrales en contadores específicos para generar alertas que notifiquen a los operadores.  
   

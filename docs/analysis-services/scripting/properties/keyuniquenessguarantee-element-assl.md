@@ -27,15 +27,15 @@ caps.latest.revision: 32
 author: Minewiskan
 ms.author: owend
 manager: kfile
-ms.workload: Inactive
-ms.openlocfilehash: 8090bf2013e95b9e12aac5e52b668c780199da4f
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
-ms.translationtype: MT
+ms.openlocfilehash: 21baaf5ce1d72770b5e144812c312c8c32dc4df3
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="keyuniquenessguarantee-element-assl"></a>Elemento KeyUniquenessGuarantee (ASSL)
-[!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]Indica si la relación entre la clave de atributo y su nombre y la relación de los atributos relacionados, se garantiza que sea válido.  
+[!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]
+  Indica si se garantiza la validez de la relación entre la clave de atributo y su nombre y la relación con los atributos relacionados.  
   
 ## <a name="syntax"></a>Sintaxis  
   
@@ -48,27 +48,27 @@ ms.lasthandoff: 01/08/2018
 </DimensionAttribute>  
 ```  
   
-## <a name="element-characteristics"></a>Características del elemento  
+## <a name="element-characteristics"></a>Características de los elementos  
   
-|Característica|Description|  
+|Característica|Descripción|  
 |--------------------|-----------------|  
-|Tipo y longitud de los datos|Boolean|  
+|Tipo y longitud de los datos|Booleano|  
 |Valor predeterminado|False|  
-|Cardinalidad|0-1: Elemento opcional que puede aparecer una y solo una vez.|  
+|Cardinalidad|0-1: Elemento opcional que puede aparecer solo una vez.|  
   
 ## <a name="element-relationships"></a>Relaciones del elemento  
   
 |Relación|Elemento|  
 |------------------|-------------|  
 |Elemento primario|[DimensionAttribute](../../../analysis-services/scripting/data-type/dimensionattribute-data-type-assl.md)|  
-|Elementos secundarios|None|  
+|Elementos secundarios|Ninguno|  
   
 ## <a name="remarks"></a>Comentarios  
- [!INCLUDE[msCoName](../../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] utiliza la **KeyUniquenessGuarantee** elemento para optimizar la construcción de consulta para recuperar los miembros del origen de datos subyacente para este atributo.  
+ [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] usa el **KeyUniquenessGuarantee** elemento para optimizar la construcción de consulta para recuperar los miembros del origen de datos subyacente para este atributo.  
   
  El elemento que corresponde al elemento primario de **KeyUniquenessGuarantee** en el objeto de Analysis Management Objects (AMO) es el modelo <xref:Microsoft.AnalysisServices.DimensionAttribute>.  
   
 ## <a name="see-also"></a>Vea también  
- [Propiedades &#40; ASSL &#41;](../../../analysis-services/scripting/properties/properties-assl.md)  
+ [Propiedades & #40; ASSL & #41;](../../../analysis-services/scripting/properties/properties-assl.md)  
   
   

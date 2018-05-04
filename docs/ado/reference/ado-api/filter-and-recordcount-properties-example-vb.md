@@ -22,12 +22,11 @@ caps.latest.revision: 11
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.workload: On Demand
-ms.openlocfilehash: 2a9369d44976f5cc4543277876ded62967a68702
-ms.sourcegitcommit: bb044a48a6af9b9d8edb178dc8c8bd5658b9ff68
-ms.translationtype: MT
+ms.openlocfilehash: 57283c3deae4ec0e954e811533e6a844b888a039
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/18/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="filter-and-recordcount-properties-example-vb"></a>Filtro y ejemplo de las propiedades RecordCount (VB)
 En este ejemplo abierto un [Recordset](../../../ado/reference/ado-api/recordset-object-ado.md) en la tabla de publicadores en el ***Pubs*** base de datos. A continuación, utiliza el [filtro](../../../ado/reference/ado-api/filter-property.md) propiedad para limitar el número de registros visibles a aquellos editores en un determinado país o región. El **RecordCount** propiedad se utiliza para mostrar la diferencia entre los conjuntos de registros filtrados y sin filtrar.  

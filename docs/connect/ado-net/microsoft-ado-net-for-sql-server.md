@@ -38,11 +38,11 @@ ADO.NET es la tecnología básica de acceso a datos para lenguajes .NET. Utilice
 ## <a name="documentation"></a>Documentación  
 * [ADO.NET](https://msdn.microsoft.com/library/e80y5yhx.aspx)  
 * [SQL Server y ADO.NET](https://msdn.microsoft.com/library/kb9s9ks0.aspx)  
-* [System.Data.SqlClient Namespace](https://msdn.microsoft.com/library/system.data.sqlclient.aspx)  
+* [Espacio de nombres System.Data.SqlClient](https://msdn.microsoft.com/library/system.data.sqlclient.aspx)  
   
 ## <a name="community"></a>Comunidad  
-* [Foro de proveedores administrados de ADO.NET](http://social.msdn.microsoft.com/Forums/en-US/adodotnetdataproviders/threads/)  
-* [Foro de DataSet de ADO.NET](http://social.msdn.microsoft.com/Forums/en-US/adodotnetdataset/threads)  
+* [Foro de los proveedores de datos administrados de ADO.NET](http://social.msdn.microsoft.com/Forums/en-US/adodotnetdataproviders/threads/)  
+* [Foro de ADO.NET DataSet](http://social.msdn.microsoft.com/Forums/en-US/adodotnetdataset/threads)  
   
 ## <a name="more-samples"></a>Más ejemplos  
 * [Ejemplos de código de ADO.NET](https://msdn.microsoft.com/library/dw70f090.aspx)  

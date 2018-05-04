@@ -27,15 +27,15 @@ caps.latest.revision: 36
 author: Minewiskan
 ms.author: owend
 manager: kfile
-ms.workload: Inactive
-ms.openlocfilehash: 3f534760f9da53580a581561ff5ecc5fd409232a
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
-ms.translationtype: MT
+ms.openlocfilehash: 9db7d095e0cb0202f085677b6ca6eee4d5bd2e7e
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="attributeallmembername-element-assl"></a>Elemento AttributeAllMemberName (ASSL)
-[!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]Contiene el título, en el idioma predeterminado para el miembro All de la dimensión.  
+[!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]
+  Contiene el título en el idioma predeterminado para el miembro All de la dimensión.  
   
 ## <a name="syntax"></a>Sintaxis  
   
@@ -48,26 +48,26 @@ ms.lasthandoff: 01/08/2018
 </Dimension>  
 ```  
   
-## <a name="element-characteristics"></a>Características del elemento  
+## <a name="element-characteristics"></a>Características de los elementos  
   
-|Característica|Description|  
+|Característica|Descripción|  
 |--------------------|-----------------|  
-|Tipo y longitud de los datos|String|  
-|Valor predeterminado|None|  
-|Cardinalidad|0-1: Elemento opcional que puede aparecer una y solo una vez.|  
+|Tipo y longitud de los datos|Cadena|  
+|Valor predeterminado|Ninguno|  
+|Cardinalidad|0-1: Elemento opcional que puede aparecer solo una vez.|  
   
 ## <a name="element-relationships"></a>Relaciones del elemento  
   
 |Relación|Elemento|  
 |------------------|-------------|  
-|Elemento primario|[Dimension](../../../analysis-services/scripting/objects/dimension-element-assl.md)|  
-|Elementos secundarios|None|  
+|Elemento primario|[Dimensión](../../../analysis-services/scripting/objects/dimension-element-assl.md)|  
+|Elementos secundarios|Ninguno|  
   
 ## <a name="remarks"></a>Comentarios  
  El elemento que corresponde al elemento primario de **AttributeAllMemberName** en el objeto de Analysis Management Objects (AMO) es el modelo <xref:Microsoft.AnalysisServices.Dimension>.  
   
 ## <a name="see-also"></a>Vea también  
- [Configurar el &#40; Todas las &#41; Nivel de las jerarquías de atributo](../../../analysis-services/multidimensional-models/database-dimensions-configure-the-all-level-for-attribute-hierarchies.md)   
- [Propiedades &#40; ASSL &#41;](../../../analysis-services/scripting/properties/properties-assl.md)  
+ [Configurar la &#40;todos los&#41; nivel para las jerarquías de atributo](../../../analysis-services/multidimensional-models/database-dimensions-configure-the-all-level-for-attribute-hierarchies.md)   
+ [Propiedades & #40; ASSL & #41;](../../../analysis-services/scripting/properties/properties-assl.md)  
   
   

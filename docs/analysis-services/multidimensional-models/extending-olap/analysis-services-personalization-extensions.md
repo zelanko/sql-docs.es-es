@@ -1,34 +1,23 @@
 ---
 title: Las extensiones de personalización de Analysis Services | Documentos de Microsoft
-ms.custom: ''
-ms.date: 03/14/2017
-ms.prod: analysis-services
-ms.prod_service: analysis-services
-ms.service: ''
-ms.component: ''
-ms.reviewer: ''
-ms.suite: pro-bi
-ms.technology: ''
-ms.tgt_pltfrm: ''
-ms.topic: reference
-applies_to:
-- SQL Server 2016 Preview
-helpviewer_keywords:
-- personalization extensions [Multidimensional Databases]
-ms.assetid: 0f144059-24e0-40c0-bde4-d48c75e46598
-caps.latest.revision: 22
-author: Minewiskan
+ms.date: 05/02/2018
+ms.prod: sql
+ms.technology: analysis-services
+ms.component: olap
+ms.topic: article
 ms.author: owend
+ms.reviewer: owend
+author: minewiskan
 manager: kfile
-ms.workload: Inactive
-ms.openlocfilehash: bd55cabe877554254b63ba31e80a504117d2cf36
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+ms.openlocfilehash: d06db85a9d9e75238c2aa2c4e25e0feb28a9daf1
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="analysis-services-personalization-extensions"></a>Extensiones de personalización de Analysis Services
-[!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)][!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] extensiones de personalización constituyen el fundamento de la idea de implementar una arquitectura de complemento. En una arquitectura de este tipo se pueden desarrollar de forma dinámica nuevos objetos y funcionalidad de cubo, y compartirlos fácilmente con otros programadores. Por lo tanto, [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] las extensiones de personalización proporcionan la funcionalidad que permite lograr lo siguiente:  
+[!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]
+  [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] las extensiones de personalización constituyen el fundamento de la idea de implementar una arquitectura de complemento. En una arquitectura de este tipo se pueden desarrollar de forma dinámica nuevos objetos y funcionalidad de cubo, y compartirlos fácilmente con otros programadores. Por lo tanto, [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] las extensiones de personalización proporcionan la funcionalidad que permite lograr lo siguiente:  
   
 -   **Diseño e implementación dinámicos** inmediatamente después de diseñar e implementar [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] extensiones de personalización, los usuarios tienen acceso a los objetos y la funcionalidad al principio de la siguiente sesión de usuario.  
   
@@ -40,7 +29,7 @@ ms.lasthandoff: 01/08/2018
   
  Las extensiones de personalización de [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] tienen muchos usos. Por ejemplo, supongamos que su compañía tiene ventas que implican monedas diferentes. Crea un miembro calculado que devuelve las ventas consolidadas en la moneda local de la persona que está teniendo acceso al cubo. Crea este miembro como una extensión de personalización. A continuación, comparte este miembro calculado con un grupo de usuarios. Una vez compartido, los usuarios tienen acceso inmediato al miembro calculado en cuanto se conectan al servidor. Tienen acceso aunque no usen la misma interfaz que la que se usó para crear el miembro calculado.  
   
- [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)]las extensiones de personalización son una modificación simple y elegante de la arquitectura de ensamblado administrado existente y se exponen en la [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] <xref:Microsoft.AnalysisServices.AdomdServer> objeto modelo, la sintaxis de expresiones multidimensionales (MDX) y conjuntos de filas de esquema.  
+ [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] las extensiones de personalización son una modificación simple y elegante de la arquitectura de ensamblado administrado existente y se exponen en la [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] <xref:Microsoft.AnalysisServices.AdomdServer> objeto modelo, la sintaxis de expresiones multidimensionales (MDX) y conjuntos de filas de esquema.  
   
 ## <a name="logical-architecture"></a>Arquitectura lógica  
  La arquitectura de las extensiones de personalización de [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] se basa en la arquitectura de ensamblado administrado y en los cuatro elementos básicos siguientes:  
@@ -123,19 +112,19 @@ ms.lasthandoff: 01/08/2018
 #### <a name="adomdcommand-class"></a>Clase AdomdCommand  
  La clase <xref:Microsoft.AnalysisServices.AdomdServer.AdomdCommand> admite ahora los comandos MDX siguientes:  
   
--   [CREATE MEMBER &#40;instrucción MDX&#41;](../../../mdx/mdx-data-definition-create-member.md)  
+-   [CREATE MEMBER, instrucción & #40; MDX & #41;](../../../mdx/mdx-data-definition-create-member.md)  
   
--   [Declaración de miembro UPDATE &#40; MDX &#41;](../../../mdx/mdx-data-definition-update-member.md)  
+-   [Declaración de miembro UPDATE &#40;MDX&#41;](../../../mdx/mdx-data-definition-update-member.md)  
   
--   [DROP MEMBER, instrucción &#40; MDX &#41;](../../../mdx/mdx-data-definition-drop-member.md)  
+-   [DROP MEMBER, instrucción &#40;MDX&#41;](../../../mdx/mdx-data-definition-drop-member.md)  
   
--   [CREATE SET &#40;Instrucción, MDX&#41;](../../../mdx/mdx-data-definition-create-set.md)  
+-   [CREAR la instrucción SET & #40; MDX & #41;](../../../mdx/mdx-data-definition-create-set.md)  
   
--   [QUITE la instrucción SET &#40; MDX &#41;](../../../mdx/mdx-data-definition-drop-set.md)  
+-   [Instrucción de conjunto de DROP &#40;MDX&#41;](../../../mdx/mdx-data-definition-drop-set.md)  
   
--   [CREAR KPI, instrucción &#40; MDX &#41;](../../../mdx/mdx-data-definition-create-kpi.md)  
+-   [Instrucción CREATE KPI &#40;MDX&#41;](../../../mdx/mdx-data-definition-create-kpi.md)  
   
--   [Eliminar KPI, instrucción &#40; MDX &#41;](../../../mdx/mdx-data-definition-drop-kpi.md)  
+-   [Instrucción de DROP KPI &#40;MDX&#41;](../../../mdx/mdx-data-definition-drop-kpi.md)  
   
 ### <a name="mdx-extensions-and-enhancements"></a>Extensiones y mejoras de MDX  
  El comando CREATE MEMBER se mejora con la **título** propiedad, el **display_folder** propiedad y el **associated_measure_group** propiedad.  

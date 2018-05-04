@@ -11,7 +11,7 @@ ms.suite: sql
 ms.technology:
 - drivers
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - backward compatibility [ODBC], standards compliance
 - compatibility [ODBC], standards compliance
@@ -21,15 +21,14 @@ caps.latest.revision: 5
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: 796491fa284113d350cd7f0233ce95a4f3ceb37a
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
-ms.translationtype: MT
+ms.openlocfilehash: 9eb141c5754bf6cd7d5dd52324d784ee2a87b6ac
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="backward-compatibility-and-standards-compliance"></a>Compatibilidad con versiones anteriores y el cumplimiento de estándares
-Compatibilidad con versiones anteriores es la capacidad de los componentes más recientes de ODBC para trabajar con componentes ODBC anteriores. Las secciones siguientes describen cómo estos componentes se ven afectados por los cambios en ODBC 3*.x*. Direcciones de la información contenida en ellos principalmente la escritura de una aplicación ODBC 3*.x* aplicación y cómo hacia atrás en que se tratan los problemas de compatibilidad con controladores ODBC. Para obtener instrucciones específicas acerca de cómo mantener la compatibilidad problemas afectan a la escritura de una aplicación ODBC 3*.x* controladores, consulte [apéndice G: controlador directrices para mantener la compatibilidad](../../../odbc/reference/appendixes/appendix-g-driver-guidelines-for-backward-compatibility.md).  
+Compatibilidad con versiones anteriores es la capacidad de los componentes más recientes de ODBC para trabajar con componentes ODBC anteriores. Las secciones siguientes describen cómo estos componentes se ven afectados por los cambios en ODBC 3 *.x*. Direcciones de la información contenida en ellos principalmente la escritura de una aplicación ODBC 3 *.x* aplicación y cómo hacia atrás en que se tratan los problemas de compatibilidad con controladores ODBC. Para obtener instrucciones específicas acerca de cómo mantener la compatibilidad problemas afectan a la escritura de una aplicación ODBC 3 *.x* controladores, consulte [apéndice G: controlador directrices para mantener la compatibilidad](../../../odbc/reference/appendixes/appendix-g-driver-guidelines-for-backward-compatibility.md).  
   
  Esta sección contiene los temas siguientes.  
   

@@ -22,12 +22,11 @@ caps.latest.revision: 14
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: 8d87b4b2295b3798f3c9179bd1ebc3cfdaa99e16
-ms.sourcegitcommit: bb044a48a6af9b9d8edb178dc8c8bd5658b9ff68
-ms.translationtype: MT
+ms.openlocfilehash: 7fd2fdbb1df6e5d1947f8345b959dcf2f44e060d
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/18/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="absoluteposition-property-ado"></a>Propiedad AbsolutePosition (ADO)
 Indica la posición ordinal de un [Recordset](../../../ado/reference/ado-api/recordset-object-ado.md) registro actual del objeto.  

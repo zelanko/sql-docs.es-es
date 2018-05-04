@@ -11,7 +11,7 @@ ms.suite: sql
 ms.technology:
 - drivers
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - mapping deprecated functions [ODBC], about mapping deprecated functions
 - backward compatibility [ODBC], mapping deprecated functions
@@ -24,21 +24,20 @@ caps.latest.revision: 5
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: cfa4d8cd2a21363e1b3aa0588ae4def8ed011005
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
-ms.translationtype: MT
+ms.openlocfilehash: ddde5411238efb7104931e05f34752ab6f52e014
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="mapping-deprecated-functions"></a>Asignación de funciones en desuso.
-Esta sección describen las funciones en desuso cómo se asignan por ODBC 3*.x* el Administrador de controladores para garantizar la compatibilidad con versiones anteriores de ODBC 3*.x* controladores que se usan con ODBC 2. *x* aplicaciones. El Administrador de controladores se realiza esta asignación independientemente de la versión de la aplicación. Dado que cada una de la 2 de ODBC. *x* funciones en la lista siguiente se asigna a la correspondiente ODBC 3*.x* funcionar cuando se llama en una aplicación ODBC 3*.x* controlador ODBC 3*.x*controlador no tiene que implementar la API ODBC 2. *x* funciones.  
+Esta sección describen las funciones en desuso cómo se asignan por ODBC 3 *.x* el Administrador de controladores para garantizar la compatibilidad con versiones anteriores de ODBC 3 *.x* controladores que se usan con ODBC 2. *x* aplicaciones. El Administrador de controladores se realiza esta asignación independientemente de la versión de la aplicación. Dado que cada una de la 2 de ODBC. *x* funciones en la lista siguiente se asigna a la correspondiente ODBC 3 *.x* funcionar cuando se llama en una aplicación ODBC 3 *.x* controlador ODBC 3 *.x*controlador no tiene que implementar la API ODBC 2. *x* funciones.  
   
- La asignación en la lista se desencadena cuando el controlador es una aplicación ODBC 3*.x* controlador y el controlador no admite la función que se va a asignar.  
+ La asignación en la lista se desencadena cuando el controlador es una aplicación ODBC 3 *.x* controlador y el controlador no admite la función que se va a asignar.  
   
- En la tabla siguiente se incluyen las funciones de todos los duplicados que se introdujeron en ODBC 3*.x*.  
+ En la tabla siguiente se incluyen las funciones de todos los duplicados que se introdujeron en ODBC 3 *.x*.  
   
-|ODBC 2. *x* (función)|ODBC 3*.x* (función)|  
+|ODBC 2. *x* (función)|ODBC 3 *.x* (función)|  
 |-------------------------|-------------------------|  
 |**SQLAllocConnect**|**SQLAllocHandle**|  
 |**SQLAllocEnv**|**SQLAllocHandle**|  
@@ -58,7 +57,7 @@ Esta sección describen las funciones en desuso cómo se asignan por ODBC 3*.x* 
 |**SQLSetStmtOption**|**SQLSetStmtAttr**|  
 |**SQLTransact**|**SQLEndTran**|  
   
- [1], aunque esta función no existía en ODBC 2*.x*, se encuentra en los estándares Open Group e ISO.  
+ [1], aunque esta función no existía en ODBC 2 *.x*, se encuentra en los estándares Open Group e ISO.  
   
  [2] se trata de una función ODBC 1.0.  
   

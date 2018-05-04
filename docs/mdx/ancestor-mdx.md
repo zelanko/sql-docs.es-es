@@ -22,12 +22,11 @@ caps.latest.revision: 46
 author: Minewiskan
 ms.author: owend
 manager: erikre
-ms.workload: Inactive
-ms.openlocfilehash: a8a7eee3ad6767c0a40dedb8f334c9767778e0d7
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
-ms.translationtype: MT
+ms.openlocfilehash: f5271c7e096ef7a6b09efc7cc818b31ccd1ec699
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="ancestor-mdx"></a>Ancestor (MDX)
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
@@ -52,14 +51,14 @@ Ancestor(Member_Expression, Distance)
  *Level_Expression*  
  Expresión MDX válida que devuelve un nivel.  
   
- *Distancia*  
+ *distancia*  
  Expresión numérica válida que especifica la distancia desde el miembro especificado.  
   
 ## <a name="remarks"></a>Comentarios  
  Con el **antecesor** función, se proporciona la función con una expresión de miembro MDX y, a continuación, se proporciona una expresión MDX de un nivel que sea un antecesor del miembro o una expresión numérica que representa el número de niveles por encima de ese miembro. Con esta información, el **antecesores** función devuelve el miembro antecesor en ese nivel.  
   
 > [!NOTE]  
->  Para devolver un conjunto que contiene el miembro antecesor, en lugar de simplemente el miembro antecesor, utilice la [antecesores &#40; MDX &#41; ](../mdx/ancestors-mdx.md) (función).  
+>  Para devolver un conjunto que contiene el miembro antecesor, en lugar de simplemente el miembro antecesor, utilice la [antecesores &#40;MDX&#41; ](../mdx/ancestors-mdx.md) (función).  
   
  Si se especifica una expresión de nivel, la **antecesor** función devuelve el antecesor del miembro especificado en el nivel especificado. Si el miembro especificado no se encuentra dentro de la misma jerarquía que el nivel especificado, la función devuelve un error.  
   
@@ -113,6 +112,6 @@ FROM [Adventure Works]
 ```  
   
 ## <a name="see-also"></a>Vea también  
- [Referencia de funciones MDX &#40; MDX &#41;](../mdx/mdx-function-reference-mdx.md)  
+ [Referencia de funciones MDX & #40; MDX & #41;](../mdx/mdx-function-reference-mdx.md)  
   
   

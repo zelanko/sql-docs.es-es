@@ -20,12 +20,11 @@ caps.latest.revision: 15
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: bc00af717ef3161f414525f109236b0aba0c442e
-ms.sourcegitcommit: bb044a48a6af9b9d8edb178dc8c8bd5658b9ff68
-ms.translationtype: MT
+ms.openlocfilehash: 0835a305ce4e7c748c4b7a8c931a586f70d2bafa
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/18/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="customization-file-connect-section"></a>Sección Connect del archivo de personalización
 El comportamiento predeterminado del controlador es Denegar todas las conexiones. El **conectar** sección especifica las excepciones de ese comportamiento. Por ejemplo, si todos los **conectar** secciones están ausentes o vacías, a continuación, de forma predeterminada no se pudo establecer ninguna conexión.  

@@ -27,15 +27,15 @@ caps.latest.revision: 35
 author: Minewiskan
 ms.author: owend
 manager: kfile
-ms.workload: Inactive
-ms.openlocfilehash: 7be55c41cda4f5be8e7f2313f87840eb81e50249
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
-ms.translationtype: MT
+ms.openlocfilehash: d6c82d8c88cf1d991405227d402154b46441d86e
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="datasourceid-element-assl"></a>Elemento DataSourceID (ASSL)
-[!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]Identifica la [DataSource](../../../analysis-services/scripting/objects/datasource-element-assl.md) elemento asociado con el elemento primario.  
+[!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]
+  Identifica el elemento [DataSource](../../../analysis-services/scripting/objects/datasource-element-assl.md) asociado al elemento primario.  
   
 ## <a name="syntax"></a>Sintaxis  
   
@@ -48,12 +48,12 @@ ms.lasthandoff: 01/08/2018
 </CubeBinding>  
 ```  
   
-## <a name="element-characteristics"></a>Características del elemento  
+## <a name="element-characteristics"></a>Características de los elementos  
   
-|Característica|Description|  
+|Característica|Descripción|  
 |--------------------|-----------------|  
-|Tipo y longitud de los datos|None|  
-|Valor predeterminado|None|  
+|Tipo y longitud de los datos|Ninguno|  
+|Valor predeterminado|Ninguno|  
 |Cardinalidad|Depende del contexto|  
   
 ## <a name="element-relationships"></a>Relaciones del elemento  
@@ -61,13 +61,13 @@ ms.lasthandoff: 01/08/2018
 |Relación|Elemento|  
 |------------------|-------------|  
 |Elementos primarios|[CubeBinding](../../../analysis-services/scripting/data-type/cubebinding-data-type-out-of-line-assl.md), [CubeDimensionBinding](../../../analysis-services/scripting/data-type/cubedimensionbinding-data-type-assl.md), [DimensionBinding](../../../analysis-services/scripting/data-type/dimensionbinding-data-type-assl.md), [MeasureGroupBinding](../../../analysis-services/scripting/data-type/measuregroupbinding-data-type-assl.md), [QueryBinding](../../../analysis-services/scripting/data-type/querybinding-data-type-assl.md), [DataSourceView](../../../analysis-services/scripting/objects/datasourceview-element-assl.md), [TableBinding](../../../analysis-services/scripting/data-type/tablebinding-data-type-assl.md)|  
-|Elementos secundarios|None|  
+|Elementos secundarios|Ninguno|  
   
 ## <a name="remarks"></a>Comentarios  
  Los elementos que corresponden a los elementos primarios de **DataSourceID** en el modelo de objetos de Analysis Management Objects (AMO) son <xref:Microsoft.AnalysisServices.CubeDimensionBinding>, <xref:Microsoft.AnalysisServices.DimensionBinding>, <xref:Microsoft.AnalysisServices.MeasureGroupBinding>, <xref:Microsoft.AnalysisServices.QueryBinding>, <xref:Microsoft.AnalysisServices.DataSourceView>y <xref:Microsoft.AnalysisServices.TableBinding>.  
   
 ## <a name="see-also"></a>Vea también  
- [Id. de elemento &#40; ASSL &#41;](../../../analysis-services/scripting/properties/id-element-assl.md)   
- [Propiedades &#40; ASSL &#41;](../../../analysis-services/scripting/properties/properties-assl.md)  
+ [Id. de elemento &#40;ASSL&#41;](../../../analysis-services/scripting/properties/id-element-assl.md)   
+ [Propiedades & #40; ASSL & #41;](../../../analysis-services/scripting/properties/properties-assl.md)  
   
   

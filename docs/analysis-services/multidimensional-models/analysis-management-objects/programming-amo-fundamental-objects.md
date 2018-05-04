@@ -1,37 +1,19 @@
 ---
 title: Programar objetos fundamentales de AMO | Documentos de Microsoft
-ms.custom: 
-ms.date: 02/14/2018
-ms.prod: analysis-services
-ms.prod_service: analysis-services
-ms.service: 
-ms.component: 
-ms.reviewer: 
-ms.suite: pro-bi
-ms.technology: 
-ms.tgt_pltfrm: 
-ms.topic: reference
-applies_to:
-- SQL Server 2016 Preview
-helpviewer_keywords:
-- server objects [AMO]
-- programming [AMO]
-- AMO, database objects
-- AMO, server objects
-- Analysis Management Objects, server objects
-- database objects [AMO]
-- Analysis Management Objects, database objects
-ms.assetid: 3f1ab656-f3bc-432d-8b6d-cdf204e5be10
-caps.latest.revision: 
-author: Minewiskan
+ms.date: 05/02/2018
+ms.prod: sql
+ms.technology: analysis-services
+ms.component: amo
+ms.topic: article
 ms.author: owend
+ms.reviewer: owend
+author: minewiskan
 manager: kfile
-ms.workload: Inactive
-ms.openlocfilehash: bcbf7e3c05fb0166324e1953b5656e8038ec682f
-ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
+ms.openlocfilehash: 2bc8a2cf279f204d76e96657bfb25c0ebfe14329
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/15/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="programming-amo-fundamental-objects"></a>Programar objetos fundamentales de AMO
   Los objetos fundamentales son generalmente objetos simples y sencillos. Estos objetos se crean normalmente con instancias y después, cuando ya no se necesitan, el usuario se desconecta de ellos. Las clases fundamentales incluyen los objetos siguientes: <xref:Microsoft.AnalysisServices.Server>, <xref:Microsoft.AnalysisServices.Database>, <xref:Microsoft.AnalysisServices.DataSource>y <xref:Microsoft.AnalysisServices.DataSourceView>. El único objeto complejo en los objetos fundamentales de AMO es <xref:Microsoft.AnalysisServices.DataSourceView>, que requiere detalles para generar el modelo abstracto que representa la vista del origen de datos.  
@@ -196,7 +178,7 @@ static Database ProcessDatabase(Database db, ProcessType pt)
 }  
 ```  
   
-##  <a name="DataSource">Objetos de origen de datos</a>  
+##  <a name="DataSource"></a> Objetos de origen de datos  
  Un objeto <xref:Microsoft.AnalysisServices.DataSource> es el vínculo entre [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] y la base de datos donde residen los datos. El objeto <xref:Microsoft.AnalysisServices.DataSourceView> define el esquema que representa el modelo subyacente para [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)]. Un objeto <xref:Microsoft.AnalysisServices.DataSource> se puede considerar como una cadena de conexión a la base de datos donde residen los datos.  
   
  En el código de ejemplo siguiente se muestra cómo se crea un objeto <xref:Microsoft.AnalysisServices.DataSource>. En el ejemplo se comprueba que el servidor todavía existe, el objeto <xref:Microsoft.AnalysisServices.Server> está conectado y la base de datos existe. Si el objeto <xref:Microsoft.AnalysisServices.DataSource> existe, se quita y se vuelve a crear. El objeto <xref:Microsoft.AnalysisServices.DataSource> se crea con el mismo nombre e identificador interno. En este ejemplo, no se realiza ninguna comprobación en la cadena de conexión para indicarlo.  
@@ -219,7 +201,7 @@ static string CreateDataSource(Database db, string strDataSourceName, string str
 }  
 ```  
   
-##  <a name="DSV">Objetos DataSourceView</a>  
+##  <a name="DSV"></a> Objetos DataSourceView  
  El objeto <xref:Microsoft.AnalysisServices.DataSourceView> es el responsable de almacenar el modelo del esquema para [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)]. Para que el objeto <xref:Microsoft.AnalysisServices.DataSourceView> almacene el esquema, primero se debe construir el esquema. Los esquemas se construyen sobre los objetos DataSet, del espacio de nombres System.Data.  
   
  En el código de ejemplo siguiente se creará parte del esquema que se incluye en el proyecto de ejemplo de Analysis Services basado en AdventureWorks. En el ejemplo se crean definiciones de esquema para las tablas, columnas calculadas, relaciones y relaciones compuestas. Los esquemas son conjuntos de datos permanentes.  
@@ -563,7 +545,7 @@ static void AddCompositeRelation(DataSourceView dsv, String fkTableName, String 
  <xref:Microsoft.AnalysisServices>   
  [Introducción a las clases AMO](../../../analysis-services/multidimensional-models/analysis-management-objects/amo-classes-introduction.md)   
  [Clases fundamentales de AMO](../../../analysis-services/multidimensional-models/analysis-management-objects/amo-fundamental-classes.md)   
- [Arquitectura lógica &#40; Analysis Services - datos multidimensionales &#41;](../../../analysis-services/multidimensional-models/olap-logical/understanding-microsoft-olap-logical-architecture.md)   
- [Objetos de base de datos &#40; Analysis Services - datos multidimensionales &#41;](../../../analysis-services/multidimensional-models/olap-logical/database-objects-analysis-services-multidimensional-data.md)  
+ [Arquitectura lógica & #40; Analysis Services - datos multidimensionales & #41;](../../../analysis-services/multidimensional-models/olap-logical/understanding-microsoft-olap-logical-architecture.md)   
+ [Objetos de base de datos & #40; Analysis Services - datos multidimensionales & #41;](../../../analysis-services/multidimensional-models/olap-logical/database-objects-analysis-services-multidimensional-data.md)  
   
   

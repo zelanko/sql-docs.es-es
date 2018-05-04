@@ -1,24 +1,25 @@
 ---
-title: "Página principal de la programación del cliente SQL | Documentos de Microsoft"
-description: "Página de concentrador con vínculos anotado a descargas y documentación de diversas combinaciones de idiomas y los sistemas operativos para conectarse a SQL Server o base de datos de SQL Azure."
+title: Página principal de la programación del cliente SQL | Documentos de Microsoft
+description: Página de concentrador con vínculos anotado a descargas y documentación de diversas combinaciones de idiomas y los sistemas operativos para conectarse a SQL Server o base de datos de SQL Azure.
 author: MightyPen
-ms.date: 11/29/2017
-ms.prod: sql-non-specified
+ms.date: 04/16/2018
+ms.prod: sql
 ms.prod_service: drivers
-ms.service: 
+ms.service: ''
 ms.component: connect
 ms.suite: sql
-ms.custom: 
-ms.technology: drivers
+ms.custom: ''
+ms.technology:
+- drivers
 ms.topic: article
 ms.reviewer: meetb
 ms.author: genemi
 ms.workload: Inactive
-ms.openlocfilehash: 804a1f1e27e531d2282775db63628ed02fb50829
-ms.sourcegitcommit: 61fc9f81c295c2b93781ef194e9a2ebd475f800d
-ms.translationtype: MT
+ms.openlocfilehash: 886cf05cf5d52d4f4619047f43f1f78449441a9d
+ms.sourcegitcommit: bb044a48a6af9b9d8edb178dc8c8bd5658b9ff68
+ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/29/2017
+ms.lasthandoff: 04/18/2018
 ---
 # <a name="homepage-for-client-programming-to-microsoft-sql-server"></a>Página principal de programación para Microsoft SQL Server del cliente
 
@@ -31,7 +32,7 @@ Bienvenido a la página principal sobre programación para interactuar con Micro
 - Muestra las áreas y subáreas de la documentación jerárquica para determinados idiomas, si procede.
 
 
-#### <a name="azure-sql-database"></a>Base de datos SQL de Azure
+#### <a name="azure-sql-database"></a>Azure SQL Database
 
 En cualquier lenguaje determinado, el código que se conecta a SQL Server es casi idéntico al código para conectarse a la base de datos de SQL Azure.
 
@@ -56,9 +57,9 @@ En la siguiente tabla, cada imagen de lenguaje es un vínculo a los detalles sob
 
 | &nbsp; | &nbsp; | &nbsp; |
 | :-- | :-- | :-- |
-| &nbsp;[ ![Logotipo de C#][image-ref-320-csharp]](#an-110-ado-net-docu) | &nbsp;[ ![ORM Entity Framework de .NET Framework][image-ref-333-ef]](#an-116-csharp-ef-orm) | &nbsp;[ ![Logotipo de Java][image-ref-330-java]](#an-130-jdbc-docu) |
-| &nbsp;[ ![Node.js logotipo][image-ref-340-node]](#an-140-node-js-docu) | &nbsp; [**`ODBC for C++`**](#an-160-odbc-cpp-docu)<br/>[![CPP más grande][image-ref-322-cpp]](#an-160-odbc-cpp-docu) | &nbsp;[ ![Logotipo PHP][image-ref-360-php]](#an-170-php-docu) |
-| &nbsp;[ ![Logotipo de Python][image-ref-370-python]](#an-180-python-docu) | &nbsp;[ ![Ruby logotipo][image-ref-380-ruby]](#an-190-ruby-docu) | &nbsp; ... |
+| &nbsp; [![Logotipo de C#][image-ref-320-csharp]](#an-110-ado-net-docu) | &nbsp; [![ORM Entity Framework de .NET Framework][image-ref-333-ef]](#an-116-csharp-ef-orm) | &nbsp; [![Logotipo de Java][image-ref-330-java]](#an-130-jdbc-docu) |
+| &nbsp; [![Logotipo de Node.js][image-ref-340-node]](#an-140-node-js-docu) | &nbsp; [**`ODBC for C++`**](#an-160-odbc-cpp-docu)<br/>[![CPP más grande][image-ref-322-cpp]](#an-160-odbc-cpp-docu) | &nbsp; [![Logotipo PHP][image-ref-360-php]](#an-170-php-docu) |
+| &nbsp; [![Logotipo de Python][image-ref-370-python]](#an-180-python-docu) | &nbsp; [![Logotipo de Ruby][image-ref-380-ruby]](#an-190-ruby-docu) | &nbsp; ... |
 | &nbsp; | &nbsp; | <br />|
 
 
@@ -107,7 +108,7 @@ EF tiene relaciones directas o indirectas con las siguientes tecnologías:
 
 - .NET Framework
 - [LINQ to SQL](http://docs.microsoft.com/dotnet/framework/data/adonet/sql/linq/), o [LINQ to Entities](http://docs.microsoft.com/dotnet/framework/data/adonet/ef/language-reference/linq-to-entities)
-- Mejoras de sintaxis del lenguaje, como el  **=>**  operador de C#.
+- Mejoras de sintaxis del lenguaje, como el **=>** operador de C#.
 - Programas útiles que generan código fuente de las clases que se asignan a las tablas de la base de datos SQL. Por ejemplo, [EdmGen.exe](http://docs.microsoft.com/dotnet/framework/data/adonet/ef/edm-generator-edmgen-exe).
 
 

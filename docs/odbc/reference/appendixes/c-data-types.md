@@ -11,7 +11,7 @@ ms.suite: sql
 ms.technology:
 - drivers
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - data types [ODBC], C data types
 - C data types [ODBC], about C data types
@@ -22,12 +22,11 @@ caps.latest.revision: 19
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.workload: On Demand
-ms.openlocfilehash: a092b4354da4869b56143d090c3ed114567e58eb
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
-ms.translationtype: MT
+ms.openlocfilehash: 08f5738d39c862184d989ed8581e488adb5da1c3
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="c-data-types"></a>Tipos de datos C
 Tipos de datos ODBC C indican el tipo de datos de búferes de C que se usa para almacenar datos en la aplicación.  
@@ -140,7 +139,7 @@ struct tagSQLGUID {
   
  [c] en ODBC 2. *x*, los tipos de datos de fecha, hora y marca de tiempo de C son SQL_C_DATE, SQL_C_TIME y SQL_C_TIMESTAMP.  
   
- [d] ODBC 3*.x* las aplicaciones deben utilizar SQL_C_VARBOOKMARK, no SQL_C_BOOKMARK. Cuando una aplicación ODBC 3*.x* aplicación funciona con una API ODBC 2. *x* controlador ODBC 3*.x* el Administrador de controladores se asignarán SQL_C_VARBOOKMARK a SQL_C_BOOKMARK.  
+ [d] ODBC 3 *.x* las aplicaciones deben utilizar SQL_C_VARBOOKMARK, no SQL_C_BOOKMARK. Cuando una aplicación ODBC 3 *.x* aplicación funciona con una API ODBC 2. *x* controlador ODBC 3 *.x* el Administrador de controladores se asignarán SQL_C_VARBOOKMARK a SQL_C_BOOKMARK.  
   
  [e] un número se almacena en la *val* campo de la estructura SQL_NUMERIC_STRUCT como un entero con escala, en el modo little-endian (el byte más a la izquierda que se va al byte menos significativo). Por ejemplo, el número 10.001 en base 10, con una escala de 4, se escala a un entero de 100010. Dado que es 186AA en formato hexadecimal, el valor de SQL_NUMERIC_STRUCT sería "AA 86 01 00 00... 00", con el número de bytes definido por el SQL_MAX_NUMERIC_LEN **#define**.  
   
@@ -152,9 +151,9 @@ struct tagSQLGUID {
   
  [h] algunos compiladores no podría proporcionar _int64.  
   
- [i] _SQL_C_BOOKMARK está en desuso en ODBC 3*.x*.  
+ [i] _SQL_C_BOOKMARK está en desuso en ODBC 3 *.x*.  
   
- [j] _SQL_C_SHORT, SQL_C_LONG y SQL_C_TINYINT se reemplazaron en ODBC por tipos signed y unsigned: SQL_C_SSHORT y SQL_C_USHORT, SQL_C_SLONG y SQL_C_ULONG y SQL_C_STINYINT y SQL_C_UTINYINT. Una aplicación ODBC 3*.x* controlador que debe trabajar con ODBC 2. *x* las aplicaciones deben admitir SQL_C_SHORT, SQL_C_LONG y SQL_C_TINYINT, porque cuando se les llama, el Administrador de controladores pasa a través del controlador.  
+ [j] _SQL_C_SHORT, SQL_C_LONG y SQL_C_TINYINT se reemplazaron en ODBC por tipos signed y unsigned: SQL_C_SSHORT y SQL_C_USHORT, SQL_C_SLONG y SQL_C_ULONG y SQL_C_STINYINT y SQL_C_UTINYINT. Una aplicación ODBC 3 *.x* controlador que debe trabajar con ODBC 2. *x* las aplicaciones deben admitir SQL_C_SHORT, SQL_C_LONG y SQL_C_TINYINT, porque cuando se les llama, el Administrador de controladores pasa a través del controlador.  
   
  [k] SQL_C_GUID se puede convertir sólo a SQL_CHAR o SQL_WCHAR.  
   

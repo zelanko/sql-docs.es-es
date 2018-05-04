@@ -27,15 +27,15 @@ caps.latest.revision: 38
 author: Minewiskan
 ms.author: owend
 manager: kfile
-ms.workload: Inactive
-ms.openlocfilehash: c270c264bb018f499e36fc5b3f54e959d4838f20
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
-ms.translationtype: MT
+ms.openlocfilehash: 63be7efbfbc6adc7b667ed3a7a57be67fedf0787
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="cubebinding-data-type-out-of-line-assl"></a>Tipo de datos CubeBinding (fuera de línea) (ASSL)
-[!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]Define un tipo de datos primitivo que representa la relación entre un [cubo](../../../analysis-services/scripting/objects/cube-element-assl.md) elemento y un [DataSource](../../../analysis-services/scripting/objects/datasource-element-assl.md) elemento.  
+[!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]
+  Define un tipo de datos primitivo que representa la relación existente entre un elemento [Cube](../../../analysis-services/scripting/objects/cube-element-assl.md) y un elemento [DataSource](../../../analysis-services/scripting/objects/datasource-element-assl.md) .  
   
 ## <a name="syntax"></a>Sintaxis  
   
@@ -51,24 +51,24 @@ ms.lasthandoff: 01/08/2018
   
 ## <a name="data-type-characteristics"></a>Características del tipo de datos  
   
-|Característica|Description|  
+|Característica|Descripción|  
 |--------------------|-----------------|  
-|Tipos de datos básicos|None|  
-|Tipos de datos derivados|None|  
+|Tipos de datos base|Ninguno|  
+|Tipos de datos derivados|Ninguno|  
   
 ## <a name="data-type-relationships"></a>Relaciones entre tipos de datos  
   
 |Relación|Elemento|  
 |------------------|-------------|  
-|Elementos primarios|None|  
-|Elementos secundarios|[Origen de datos](../../../analysis-services/scripting/objects/datasource-element-assl.md), [DataSourceID](../../../analysis-services/scripting/properties/datasourceid-element-assl.md), [identificador](../../../analysis-services/scripting/properties/id-element-assl.md), [MeasureGroup](../../../analysis-services/scripting/objects/measuregroup-element-assl.md)|  
-|Elementos derivados|[Enlace](../../../analysis-services/xmla/xml-elements-properties/binding-element-xmla.md) ([enlaces](../../../analysis-services/xmla/xml-elements-properties/bindings-element-xmla.md) colección de [proceso](../../../analysis-services/xmla/xml-elements-commands/process-element-xmla.md) o [lote](../../../analysis-services/xmla/xml-elements-commands/batch-element-xmla.md) comandos)|  
+|Elementos primarios|Ninguno|  
+|Elementos secundarios|[DataSource](../../../analysis-services/scripting/objects/datasource-element-assl.md), [DataSourceID](../../../analysis-services/scripting/properties/datasourceid-element-assl.md), [ID](../../../analysis-services/scripting/properties/id-element-assl.md), [MeasureGroup](../../../analysis-services/scripting/objects/measuregroup-element-assl.md)|  
+|Elementos derivados|[Binding](../../../analysis-services/xmla/xml-elements-properties/binding-element-xmla.md) (colección[Bindings](../../../analysis-services/xmla/xml-elements-properties/bindings-element-xmla.md) de comandos [Process](../../../analysis-services/xmla/xml-elements-commands/process-element-xmla.md) o [Batch](../../../analysis-services/xmla/xml-elements-commands/batch-element-xmla.md) )|  
   
 ## <a name="remarks"></a>Comentarios  
- Para obtener más información acerca de los enlaces fuera de línea, consulte [orígenes de datos y enlaces &#40; SSAS Multidimensional &#41; ](../../../analysis-services/multidimensional-models/data-sources-and-bindings-ssas-multidimensional.md).  
+ Para obtener más información acerca de los enlaces fuera de línea, consulte [orígenes de datos y enlaces & #40; SSAS Multidimensional & #41; ](../../../analysis-services/multidimensional-models/data-sources-and-bindings-ssas-multidimensional.md).  
   
 ## <a name="see-also"></a>Vea también  
- [Tipo de enlace de datos &#40; ASSL &#41;](../../../analysis-services/scripting/data-type/binding-data-type-assl.md)   
- [Analysis Services Scripting Language tipos de datos XML &#40; ASSL &#41;](../../../analysis-services/scripting/data-type/analysis-services-scripting-language-xml-data-types-assl.md)  
+ [Tipo de enlace de datos & #40; ASSL & #41;](../../../analysis-services/scripting/data-type/binding-data-type-assl.md)   
+ [Analysis Services Scripting Language tipos de datos XML & #40; ASSL & #41;](../../../analysis-services/scripting/data-type/analysis-services-scripting-language-xml-data-types-assl.md)  
   
   

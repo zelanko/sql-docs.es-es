@@ -26,12 +26,11 @@ caps.latest.revision: 32
 author: Minewiskan
 ms.author: owend
 manager: erikre
-ms.workload: Inactive
-ms.openlocfilehash: 9b45b45da18ea7c9047609ffb47bc5a698e43a21
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
-ms.translationtype: MT
+ms.openlocfilehash: 79d7b9ce37017f9744dc3e2684457fbba5a4b13a
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="identifiers-mdx"></a>Identificadores (MDX)
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
@@ -62,7 +61,7 @@ ms.lasthandoff: 01/08/2018
   
     -   El carácter de subrayado (_).  
   
-3.  El identificador no debe ser una palabra clave reservada de DMX. Las palabras clave reservadas de DMX no distinguen entre mayúsculas y minúsculas. Para obtener más información, vea [palabras clave reservadas &#40; La sintaxis de MDX &#41; ](../mdx/reserved-keywords-mdx-syntax.md).  
+3.  El identificador no debe ser una palabra clave reservada de DMX. Las palabras clave reservadas de DMX no distinguen entre mayúsculas y minúsculas. Para obtener más información, consulte [palabras clave reservadas &#40;sintaxis MDX&#41;](../mdx/reserved-keywords-mdx-syntax.md).  
   
 4.  No se permiten los caracteres especiales o los espacios incrustados.  
   
@@ -141,8 +140,8 @@ ms.lasthandoff: 01/08/2018
  También se ha delimitado el identificador Measures del ejemplo anterior para mostrar la delimitación de más de un identificador.  
   
 ## <a name="see-also"></a>Vea también  
- [Referencia del lenguaje MDX &#40; MDX &#41;](../mdx/mdx-language-reference-mdx.md)   
- [Aspectos básicos de consulta MDX &#40; Analysis Services &#41;](../analysis-services/multidimensional-models/mdx/mdx-query-fundamentals-analysis-services.md)   
- [Elementos de sintaxis MDX &#40; MDX &#41;](../mdx/mdx-syntax-elements-mdx.md)  
+ [Referencia del lenguaje MDX & #40; MDX & #41;](../mdx/mdx-language-reference-mdx.md)   
+ [Aspectos básicos de consulta MDX & #40; Analysis Services & #41;](../analysis-services/multidimensional-models/mdx/mdx-query-fundamentals-analysis-services.md)   
+ [Elementos de sintaxis MDX &#40;MDX&#41;](../mdx/mdx-syntax-elements-mdx.md)  
   
   

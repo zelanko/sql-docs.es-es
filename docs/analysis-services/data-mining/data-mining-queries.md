@@ -1,37 +1,23 @@
 ---
-title: "Las consultas de minería de datos | Documentos de Microsoft"
-ms.custom: 
-ms.date: 03/06/2017
-ms.prod: analysis-services
-ms.prod_service: analysis-services
-ms.service: 
+title: Las consultas de minería de datos | Documentos de Microsoft
+ms.date: 05/01/2018
+ms.prod: sql
+ms.technology: analysis-services
 ms.component: data-mining
-ms.reviewer: 
-ms.suite: pro-bi
-ms.technology: 
-ms.tgt_pltfrm: 
 ms.topic: article
-helpviewer_keywords:
-- prediction queries [Analysis Services]
-- queries [DMX], creating
-- prediction queries [DMX]
-- Prediction Query Builder
-- mining models [Analysis Services], querying
-ms.assetid: 802806a6-69bb-4c3c-b9aa-d1a1ddfc7fc2
-caps.latest.revision: 
-author: Minewiskan
 ms.author: owend
+ms.reviewer: owend
+author: minewiskan
 manager: kfile
-ms.workload: On Demand
-ms.openlocfilehash: 260a6d48b6da55f65098790df73b01a10e35e126
-ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
+ms.openlocfilehash: eb1e42ac7f9cf3aeaf58d6e1fb3f913c8c164047
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/15/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="data-mining-queries"></a>Consultas de minería de datos
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
-Las consultas de minería de datos son útiles para muchos propósitos. Puede hacer lo siguiente:  
+  Las consultas de minería de datos son útiles para muchos propósitos. Puede hacer lo siguiente:  
   
 -   Aplicar el modelo a nuevos datos, para realizar una o varias predicciones. Proporcionar valores de entrada como parámetros o en un lote.  
   
@@ -60,7 +46,7 @@ Las consultas de minería de datos son útiles para muchos propósitos. Puede ha
 ##  <a name="bkmk_Understand"></a> Descripción de las consultas de minería de datos  
  [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] admite los siguientes tipos de consultas:  
   
--   [Consultas de predicción &#40; minería de datos &#41;](../../analysis-services/data-mining/prediction-queries-data-mining.md)  
+-   [Consultas de predicción & #40; minería de datos & #41;](../../analysis-services/data-mining/prediction-queries-data-mining.md)  
   
      Consultas que realizan deducciones basadas en los patrones del modelo y partiendo de los datos de entrada.  
   
@@ -68,7 +54,7 @@ Las consultas de minería de datos son útiles para muchos propósitos. Puede ha
   
      Consultas que devuelven metadatos, estadísticas y otra información sobre el propio modelo.  
   
--   [Las consultas de obtención de detalles &#40; minería de datos &#41;](../../analysis-services/data-mining/drillthrough-queries-data-mining.md)  
+-   [Las consultas de obtención de detalles & #40; minería de datos & #41;](../../analysis-services/data-mining/drillthrough-queries-data-mining.md)  
   
      Consultas que pueden recuperar los datos de casos subyacentes del modelo o incluso los datos de la estructura que no se utilizó en el modelo.  
   
@@ -149,13 +135,13 @@ Las consultas de minería de datos son útiles para muchos propósitos. Puede ha
 ## <a name="in-this-section"></a>En esta sección  
  Los temas de esta sección presentan cada tipo de consulta de minería de datos con más detalle, y proporcionan vínculos a ejemplos detallados de cómo crear consultas en los modelos de minería de datos.  
   
- [Consultas de predicción &#40; minería de datos &#41;](../../analysis-services/data-mining/prediction-queries-data-mining.md)  
+ [Consultas de predicción & #40; minería de datos & #41;](../../analysis-services/data-mining/prediction-queries-data-mining.md)  
   
  [Consultas de contenido &#40;minería de datos&#41;](../../analysis-services/data-mining/content-queries-data-mining.md)  
   
  [Consultas de obtención de detalles &#40;minería de datos&#41;](../../analysis-services/data-mining/drillthrough-queries-data-mining.md)  
   
- [Consultas de definición de datos &#40; minería de datos &#41;](../../analysis-services/data-mining/data-definition-queries-data-mining.md)  
+ [Consultas de definición de datos & #40; minería de datos & #41;](../../analysis-services/data-mining/data-definition-queries-data-mining.md)  
   
  [Herramientas de consulta de minería de datos](../../analysis-services/data-mining/data-mining-query-tools.md)  
   
@@ -174,7 +160,7 @@ Las consultas de minería de datos son útiles para muchos propósitos. Puede ha
 |Usar los componentes de minería de datos en Integration Services|[Data Mining Query Task](../../integration-services/control-flow/data-mining-query-task.md)<br /><br /> [Data Mining Query Transformation](../../integration-services/data-flow/transformations/data-mining-query-transformation.md)|  
   
 ## <a name="see-also"></a>Vea también  
- [Algoritmos de minería de datos &#40; Analysis Services: minería de datos &#41;](../../analysis-services/data-mining/data-mining-algorithms-analysis-services-data-mining.md)   
+ [Algoritmos de minería de datos & #40; Analysis Services: minería de datos & #41;](../../analysis-services/data-mining/data-mining-algorithms-analysis-services-data-mining.md)   
  [Contenido del modelo de minería de datos &#40;Analysis Services - Minería de datos&#41;](../../analysis-services/data-mining/mining-model-content-analysis-services-data-mining.md)  
   
   

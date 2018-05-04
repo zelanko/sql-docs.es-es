@@ -1,36 +1,35 @@
 ---
-title: "Algoritmo de regresión logística de Microsoft | Documentos de Microsoft"
-ms.custom: 
+title: Algoritmo de regresión logística de Microsoft | Documentos de Microsoft
+ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: analysis-services
 ms.prod_service: analysis-services
-ms.service: 
+ms.service: ''
 ms.component: data-mining
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: pro-bi
-ms.technology: 
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.technology: ''
+ms.tgt_pltfrm: ''
+ms.topic: conceptual
 helpviewer_keywords:
 - logical regression algorithms [Analysis Services]
 - algorithms [data mining]
 - neural network algorithms [Analysis Services]
 - regression algorithms [Analysis Services]
 ms.assetid: 3dd54d07-1c3b-4b87-b7f0-b962ed8cf844
-caps.latest.revision: 
+caps.latest.revision: 22
 author: Minewiskan
 ms.author: owend
 manager: kfile
-ms.workload: Inactive
-ms.openlocfilehash: 8a5fbba7e01d56f77d376f41ac259744b1a4344d
-ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
-ms.translationtype: MT
+ms.openlocfilehash: dd07a9b2b56393e18f7115f3caf8e251b3f9572f
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/15/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="microsoft-logistic-regression-algorithm"></a>Algoritmo de regresión logística de Microsoft
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
-La regresión logística es una técnica estadística conocida que se usa para modelar los resultados binarios.  
+  La regresión logística es una técnica estadística conocida que se usa para modelar los resultados binarios.  
   
  Existen varias implementaciones de regresión logística en la investigación estadística, que utilizan diferentes técnicas de aprendizaje. El algoritmo de Regresión logística de [!INCLUDE[msCoName](../../includes/msconame-md.md)] se ha implementado utilizando una variación del algoritmo de Red neuronal de [!INCLUDE[msCoName](../../includes/msconame-md.md)] . Este algoritmo comparte muchas de las cualidades de las redes neurales pero es más fácil de entrenar.  
   

@@ -22,12 +22,11 @@ caps.latest.revision: 32
 author: Minewiskan
 ms.author: owend
 manager: erikre
-ms.workload: Inactive
-ms.openlocfilehash: 0c777583e5ae027ab3f2ada53b4b168431e3390a
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
-ms.translationtype: MT
+ms.openlocfilehash: 9a3a17d50ac15f7f59b41881d95a6e0c5fc2a3a6
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="tupletostr-mdx"></a>TupleToStr (MDX)
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
@@ -46,7 +45,7 @@ TupleToStr(Tuple_Expression)
  Expresión MDX válida que devuelve una tupla.  
   
 ## <a name="remarks"></a>Comentarios  
- Esta función se utiliza para transferir una representación de cadena de una tupla a una función externa para su análisis. La cadena que se devuelve está entre llaves {} y cada miembro, si hay más de uno expresamente definido en la tupla, está separado por una coma.  
+ Esta función se utiliza para transferir una representación de cadena de una tupla a una función externa para su análisis. La cadena devuelta aparece encerrada entre llaves {} y cada miembro, si más de uno expresamente definido en la tupla, está separado por una coma.  
   
 ## <a name="examples"></a>Ejemplos  
  El ejemplo siguiente devuelve la cadena ([Date].[Calendar Year].&[2001],[Geography].[Geography].[Country].&[United States]) :  
@@ -77,6 +76,6 @@ FROM [Adventure Works]
 ```  
   
 ## <a name="see-also"></a>Vea también  
- [Referencia de funciones MDX &#40; MDX &#41;](../mdx/mdx-function-reference-mdx.md)  
+ [Referencia de funciones MDX & #40; MDX & #41;](../mdx/mdx-function-reference-mdx.md)  
   
   

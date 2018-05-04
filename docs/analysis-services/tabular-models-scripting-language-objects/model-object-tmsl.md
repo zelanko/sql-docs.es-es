@@ -1,30 +1,30 @@
 ---
 title: Objeto de modelo (TMSL) | Documentos de Microsoft
-ms.custom: 
+ms.custom: ''
 ms.date: 05/30/2017
 ms.prod: analysis-services
 ms.prod_service: analysis-services, azure-analysis-services
-ms.service: 
-ms.component: 
-ms.reviewer: 
+ms.service: ''
+ms.component: ''
+ms.reviewer: ''
 ms.suite: pro-bi
-ms.technology: 
-ms.tgt_pltfrm: 
+ms.technology: ''
+ms.tgt_pltfrm: ''
 ms.topic: reference
 ms.assetid: 9382d0d6-2d4b-49ad-a0eb-35970f0f3afb
-caps.latest.revision: "7"
+caps.latest.revision: 7
 author: Minewiskan
 ms.author: owend
 manager: kfile
-ms.workload: Inactive
-ms.openlocfilehash: dadb4807613b23449fd87dfea35acc0d6d201615
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
-ms.translationtype: MT
+ms.openlocfilehash: 6690d9407edb3002a1924440f85b379da6c18260
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="model-object-tmsl"></a>Objeto de modelo (TMSL)
-[!INCLUDE[ssas-appliesto-sqlas-aas](../../includes/ssas-appliesto-sqlas-aas.md)]Define un modelo Tabular. Hay un modelo por base de datos y una base de datos que se pueden especificar en un determinado comando. Un objeto de base de datos es el objeto primario.  
+[!INCLUDE[ssas-appliesto-sqlas-aas](../../includes/ssas-appliesto-sqlas-aas.md)]
+  Define un modelo Tabular. Hay un modelo por base de datos y una base de datos que se pueden especificar en un determinado comando. Un objeto de base de datos es el objeto primario.  
   
  Las definiciones de modelo son demasiado grandes para reproducir toda la sintaxis de un tema. Por esta razón, una las partes principales para resaltar la sintaxis parcial puede encontrarse a continuación, con vínculos a los objetos secundarios.  
   
@@ -53,13 +53,13 @@ ms.lasthandoff: 01/08/2018
  La secuencia de intercalación. Vea [escenarios de globalización para Analysis Services](../../analysis-services/globalization-scenarios-for-analysis-services.md) para obtener más información.  
   
  tablas  
- La colección completa de tablas en el modelo, incluidas las particiones, las columnas, medidas, KPI y anotaciones. Vea [tablas objeto &#40; TMSL &#41; ](../../analysis-services/tabular-models-scripting-language-objects/tables-object-tmsl.md) para obtener más información.  
+ La colección completa de tablas en el modelo, incluidas las particiones, las columnas, medidas, KPI y anotaciones. Vea [Tables, objeto &#40;TMSL&#41; ](../../analysis-services/tabular-models-scripting-language-objects/tables-object-tmsl.md) para obtener más información.  
   
  relaciones  
- Especifica la relación entre cada par de tablas, incluidas las propiedades que configurar la dirección del filtro y la seguridad. Vea [objeto relaciones &#40; TMSL &#41; ](../../analysis-services/tabular-models-scripting-language-objects/relationships-object-tmsl.md) para obtener más información.  
+ Especifica la relación entre cada par de tablas, incluidas las propiedades que configurar la dirección del filtro y la seguridad. Vea [objeto relaciones &#40;TMSL&#41; ](../../analysis-services/tabular-models-scripting-language-objects/relationships-object-tmsl.md) para obtener más información.  
   
  orígenes de datos  
- Una o varias conexiones a bases de datos externos que proporciona datos para el modelo o utilizar para pasan a través de consultas. Vea [orígenes de datos de objeto &#40; TMSL &#41; ](../../analysis-services/tabular-models-scripting-language-objects/datasources-object-tmsl.md) para obtener más información.  
+ Una o varias conexiones a bases de datos externos que proporciona datos para el modelo o utilizar para pasan a través de consultas. Vea [objeto de orígenes de datos &#40;TMSL&#41; ](../../analysis-services/tabular-models-scripting-language-objects/datasources-object-tmsl.md) para obtener más información.  
   
  roles  
  Objetos que asocian un permiso de base de datos, cuentas de usuario registrado y, opcionalmente, filtros de seguridad en DAX para control de acceso personalizado.  
@@ -70,7 +70,7 @@ ms.lasthandoff: 01/08/2018
  Al crear, reemplazar o modificar un objeto de modelo, especificar todas las propiedades de lectura y escritura de la definición del objeto. Omisión de una propiedad de lectura y escritura se considera una operación de eliminación.  
   
 ## <a name="partial-syntax"></a>Sintaxis parcial  
- Dado que esta definición de objeto es tan grande, se muestran solo las propiedades primer nivel. Vea [definiciones de objetos tabulares modelo de lenguaje de Scripting &#40; TMSL &#41; ](../../analysis-services/tabular-models-scripting-language-objects/tmsl-reference-tabular-objects.md) para obtener una lista de objetos secundarios.  
+ Dado que esta definición de objeto es tan grande, se muestran solo las propiedades primer nivel. Vea [definiciones de objetos Tabular Model Scripting Language &#40;TMSL&#41; ](../../analysis-services/tabular-models-scripting-language-objects/tmsl-reference-tabular-objects.md) para obtener una lista de objetos secundarios.  
   
 ```  
     "model": {  
@@ -95,7 +95,7 @@ ms.lasthandoff: 01/08/2018
   
 ```  
   
-## <a name="see-also"></a>Ver también  
+## <a name="see-also"></a>Vea también  
  [Tabular Model Scripting Language &#40;TMSL&#41; Reference (Referencia de Tabular Model Scripting Language [TMSL])](../../analysis-services/tabular-model-scripting-language-tmsl-reference.md)   
  [Nivel de compatibilidad para modelos tabulares de Analysis Services](../../analysis-services/tabular-models/compatibility-level-for-tabular-models-in-analysis-services.md)  
   

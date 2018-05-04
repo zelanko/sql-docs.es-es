@@ -31,12 +31,11 @@ caps.latest.revision: 30
 author: Minewiskan
 ms.author: owend
 manager: erikre
-ms.workload: Inactive
-ms.openlocfilehash: 86fd2ea716fd0366149937af749c240fe01e486d
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
-ms.translationtype: MT
+ms.openlocfilehash: 5c4309b2b3aceb51ba17de90cdf33e62653da573
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="comments-dmx"></a>Comentarios (DMX)
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
@@ -53,20 +52,20 @@ ms.lasthandoff: 01/08/2018
   
  [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] admite los siguientes tipos de caracteres en comentarios:  
   
--   **(barras diagonales dobles).** Estos caracteres de comentario sirven para escribir un comentario en la misma línea que el código que se va a ejecutar o en una línea independiente. [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]evalúa todos los elementos de la barra diagonal doble hasta el final de la línea como parte del comentario. Para crear un comentario de varias líneas, use la barra diagonal doble al principio de cada línea de comentario. Para obtener más información sobre este carácter de comentario, vea [barra diagonal doble &#40; Comentario &#41; &#40; DMX &#41; ](../dmx/double-slash-comment-dmx.md).  
+-   **(barras diagonales dobles).** Estos caracteres de comentario sirven para escribir un comentario en la misma línea que el código que se va a ejecutar o en una línea independiente. [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] evalúa todos los elementos de la barra diagonal doble hasta el final de la línea como parte del comentario. Para crear un comentario de varias líneas, use la barra diagonal doble al principio de cada línea de comentario. Para obtener más información sobre este carácter de comentario, vea [barra diagonal doble &#40;comentario&#41; &#40;DMX&#41;](../dmx/double-slash-comment-dmx.md).  
   
--   **--(guiones dobles).** Estos caracteres de comentario sirven para escribir un comentario en la misma línea que el código que se va a ejecutar o en una línea independiente. [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] considera como comentario todo lo que figura desde el guión doble hasta el final de la línea. Para crear un comentario de varias líneas, use el guión doble al principio de cada línea de comentario. Para obtener más información sobre este carácter de comentario, vea [--&#40; Comentario &#41; &#40; DMX &#41; Resumen de](../dmx/comment-dmx-summary.md).  
+-   **--(guiones dobles).** Estos caracteres de comentario sirven para escribir un comentario en la misma línea que el código que se va a ejecutar o en una línea independiente. [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] considera como comentario todo lo que figura desde el guión doble hasta el final de la línea. Para crear un comentario de varias líneas, use el guión doble al principio de cada línea de comentario. Para obtener más información sobre este carácter de comentario, vea [-- &#40;comentario&#41; &#40;DMX&#41; resumen](../dmx/comment-dmx-summary.md).  
   
--   **/\*... \*/ (barra diagonal y asterisco pares de caracteres).** Estos caracteres de comentario sirven para escribir un comentario en la misma línea que el código que se va a ejecutar, en una línea independiente o en medio de código ejecutable. [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]se evalúa como todo, desde el par de apertura de comentario (/ *) para el par de cierre de comentario (\*/) como parte del comentario. Para crear un comentario ocupe varias líneas, inicie el comentario con el par de caracteres de apertura de comentario (/\*) y finalice el comentario con el par de caracteres de cierre de comentario (\*/). Ningún otro carácter de comentario debe aparecer en ninguna línea del comentario. Para obtener más información sobre este carácter de comentario, vea [estrella barra diagonal &#40; Comentario &#41; &#40; DMX &#41; ](../dmx/slash-star-comment-dmx.md).  
+-   **/\* ... \*/ (barra diagonal y asterisco pares de caracteres).** Estos caracteres de comentario sirven para escribir un comentario en la misma línea que el código que se va a ejecutar, en una línea independiente o en medio de código ejecutable. [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] se evalúa como todo, desde el par de apertura de comentario (/ *) para el par de cierre de comentario (\*/) como parte del comentario. Para crear un comentario ocupe varias líneas, inicie el comentario con el par de caracteres de apertura de comentario (/\*) y finalice el comentario con el par de caracteres de cierre de comentario (\*/). Ningún otro carácter de comentario debe aparecer en ninguna línea del comentario. Para obtener más información sobre este carácter de comentario, vea [barra diagonal estrella &#40;comentario&#41; &#40;DMX&#41;](../dmx/slash-star-comment-dmx.md).  
   
-## <a name="see-also"></a>Ver también  
- [Extensiones de minería de datos &#40; DMX &#41; Referencia](../dmx/data-mining-extensions-dmx-reference.md)   
- [Extensiones de minería de datos &#40; DMX &#41; Referencia de funciones](../dmx/data-mining-extensions-dmx-function-reference.md)   
- [Extensiones de minería de datos &#40; DMX &#41; Referencia de operadores](../dmx/data-mining-extensions-dmx-operator-reference.md)   
- [Extensiones de minería de datos &#40; DMX &#41; Referencia de instrucciones](../dmx/data-mining-extensions-dmx-statements.md)   
- [Extensiones de minería de datos &#40; DMX &#41; Convenciones de sintaxis](../dmx/data-mining-extensions-dmx-syntax-conventions.md)   
- [Extensiones de minería de datos &#40; DMX &#41; Elementos de sintaxis](../dmx/data-mining-extensions-dmx-syntax-elements.md)   
- [Funciones de predicción generales &#40; DMX &#41;](../dmx/general-prediction-functions-dmx.md)   
+## <a name="see-also"></a>Vea también  
+ [Extensiones de minería de datos &#40;DMX&#41; Referencia](../dmx/data-mining-extensions-dmx-reference.md)   
+ [Extensiones de minería de datos &#40;DMX&#41; Referencia de funciones](../dmx/data-mining-extensions-dmx-function-reference.md)   
+ [Extensiones de minería de datos &#40;DMX&#41; Referencia de operadores](../dmx/data-mining-extensions-dmx-operator-reference.md)   
+ [Extensiones de minería de datos &#40;DMX&#41; Referencia de instrucciones](../dmx/data-mining-extensions-dmx-statements.md)   
+ [Extensiones de minería de datos &#40;DMX&#41; Convenciones de sintaxis](../dmx/data-mining-extensions-dmx-syntax-conventions.md)   
+ [Extensiones de minería de datos &#40;DMX&#41; Elementos de sintaxis](../dmx/data-mining-extensions-dmx-syntax-elements.md)   
+ [Funciones de predicción generales &#40;DMX&#41;](../dmx/general-prediction-functions-dmx.md)   
  [Estructura y el uso de consultas de predicción DMX](../dmx/structure-and-usage-of-dmx-prediction-queries.md)   
  [Descripción de la instrucción Select de DMX](../dmx/understanding-the-dmx-select-statement.md)  
   

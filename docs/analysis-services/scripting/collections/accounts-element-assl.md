@@ -27,15 +27,15 @@ caps.latest.revision: 44
 author: Minewiskan
 ms.author: owend
 manager: kfile
-ms.workload: Inactive
-ms.openlocfilehash: 68975a4da8425a423f38bed174c180ea5d27299b
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
-ms.translationtype: MT
+ms.openlocfilehash: 9a7d5e4f01c28247e07ed18fa1d49a56394eba35
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="accounts-element-assl"></a>Elemento Accounts (ASSL)
-[!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]Contiene la colección de tipos de cuenta que se definen en un [base de datos](../../../analysis-services/scripting/objects/database-element-assl.md) elemento.  
+[!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]
+  Contiene la colección de tipos de cuenta que se definen en un [base de datos](../../../analysis-services/scripting/objects/database-element-assl.md) elemento.  
   
 ## <a name="syntax"></a>Sintaxis  
   
@@ -50,13 +50,13 @@ ms.lasthandoff: 01/08/2018
 </Database>  
 ```  
   
-## <a name="element-characteristics"></a>Características del elemento  
+## <a name="element-characteristics"></a>Características de los elementos  
   
-|Característica|Description|  
+|Característica|Descripción|  
 |--------------------|-----------------|  
 |Tipo y longitud de los datos|Ninguno (colección)|  
 |Valor predeterminado|Ninguno (colección)|  
-|Cardinalidad|0-1: Elemento opcional que puede aparecer una y solo una vez.|  
+|Cardinalidad|0-1: Elemento opcional que puede aparecer solo una vez.|  
   
 ## <a name="element-relationships"></a>Relaciones del elemento  
   
@@ -65,7 +65,7 @@ ms.lasthandoff: 01/08/2018
 |Elementos primarios|[Base de datos](../../../analysis-services/scripting/objects/database-element-assl.md)|  
 |Elementos secundarios|[Cuenta](../../../analysis-services/scripting/objects/account-element-assl.md)|  
   
-## <a name="remarks"></a>Notas  
+## <a name="remarks"></a>Comentarios  
  Dimensiones, cuyo [tipo](../../../analysis-services/scripting/properties/type-element-dimension-assl.md) elemento está establecido en *cuentas*, puede tener un atributo que especifica el tipo de cuenta, como Income, Expense etc., representado por miembros de la dimensión. El tipo de cuenta, a continuación, se usa por [medida](../../../analysis-services/scripting/objects/measure-element-assl.md) elementos, cuyo [AggregationFunction](../../../analysis-services/scripting/properties/aggregatefunction-element-assl.md) elemento está establecido en *ByAccount*, para determinar la función de agregación que se utiliza al Agregar a los miembros de esa dimensión. El elemento **Accounts** contiene una colección de elementos **Account** que representan los tipos de cuenta y la función de agregación que se deberían utilizar para cada tipo de cuenta.  
   
  Un tipo de cuenta debe aparecer si la función de agregado es diferente del valor predeterminado utilizado por [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] para cada tipo de cuenta.  
@@ -74,8 +74,8 @@ ms.lasthandoff: 01/08/2018
   
  El elemento correspondiente en el modelo de objetos de Analysis Management Objects (AMO) es <xref:Microsoft.AnalysisServices.AccountCollection>.  
   
-## <a name="see-also"></a>Ver también  
- [Elemento AccountType &#40; ASSL &#41;](../../../analysis-services/scripting/properties/accounttype-element-assl.md)   
- [Colecciones de &#40; ASSL &#41;](../../../analysis-services/scripting/collections/collections-assl.md)  
+## <a name="see-also"></a>Vea también  
+ [Elemento AccountType &#40;ASSL&#41;](../../../analysis-services/scripting/properties/accounttype-element-assl.md)   
+ [Colecciones de & #40; ASSL & #41;](../../../analysis-services/scripting/collections/collections-assl.md)  
   
   

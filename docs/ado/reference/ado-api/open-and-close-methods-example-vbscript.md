@@ -22,12 +22,11 @@ caps.latest.revision: 10
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.workload: On Demand
-ms.openlocfilehash: 7a14f2db15af9ddfc40988802b1dca53c82d1076
-ms.sourcegitcommit: bb044a48a6af9b9d8edb178dc8c8bd5658b9ff68
-ms.translationtype: MT
+ms.openlocfilehash: 1dad2cdaee9427904136c7a087753eebc6a777bd
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/18/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="open-and-close-methods-example-vbscript"></a>Ejemplo de los métodos de apertura y cierre (VBScript)
 Este ejemplo se utiliza la [abiertos](../../../ado/reference/ado-api/open-method-ado-recordset.md) y [cerrar](../../../ado/reference/ado-api/close-method-ado.md) métodos tanto [Recordset](../../../ado/reference/ado-api/recordset-object-ado.md) y [conexión](../../../ado/reference/ado-api/connection-object-ado.md) objetos que se han abierto.  

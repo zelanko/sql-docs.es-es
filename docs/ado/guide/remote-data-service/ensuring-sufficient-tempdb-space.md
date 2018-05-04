@@ -19,12 +19,11 @@ caps.latest.revision: 14
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: f71e88ce0d15ac28973850a3af8fd742eea54a18
-ms.sourcegitcommit: bb044a48a6af9b9d8edb178dc8c8bd5658b9ff68
-ms.translationtype: MT
+ms.openlocfilehash: 0b80874fcb1f6be96e6e8c7f1a87916ac69f2517
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/18/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="ensuring-sufficient-tempdb-space"></a>Garantizar espacio suficiente en TempDB
 Si se producen errores mientras se procesan [Recordset](../../../ado/reference/ado-api/recordset-object-ado.md) objetos que requieren espacio en Microsoft SQL Server 6.5 de procesamiento, deberá aumentar el tamaño de TempDB. (Algunas consultas requieren espacio de procesamiento temporal; por ejemplo, una consulta con una cláusula ORDER BY requiere un criterio de ordenación de la **Recordset**, lo que requiere espacio temporal.)  

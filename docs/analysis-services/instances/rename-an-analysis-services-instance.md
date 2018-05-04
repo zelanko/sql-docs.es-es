@@ -1,36 +1,23 @@
 ---
 title: Cambiar el nombre de una instancia de Analysis Services | Documentos de Microsoft
-ms.custom: 
-ms.date: 03/14/2017
-ms.prod: analysis-services
-ms.prod_service: analysis-services
-ms.service: 
-ms.component: data-mining
-ms.reviewer: 
-ms.suite: pro-bi
-ms.technology: 
-ms.tgt_pltfrm: 
+ms.date: 05/02/2018
+ms.prod: sql
+ms.technology: analysis-services
+ms.component: ''
 ms.topic: article
-helpviewer_keywords:
-- instances of Analysis Services, renaming
-- renaming instances of Analysis Services
-- names [Analysis Services], renaming instances
-- names [Analysis Services]
-ms.assetid: 87494741-4a2e-4fed-8061-418fd1e111c3
-caps.latest.revision: 
-author: Minewiskan
 ms.author: owend
+ms.reviewer: owend
+author: minewiskan
 manager: kfile
-ms.workload: Inactive
-ms.openlocfilehash: bc7c79c56282f662a6392f966364ae7f38bc4395
-ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
+ms.openlocfilehash: 48729d35a5c5c5e0e0808862f1317877b1ee3be6
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/15/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="rename-an-analysis-services-instance"></a>Cambiar el nombre de una instancia de Analysis Services
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
-Puede cambiar el nombre de una instancia existente de [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] si usa la herramienta **Cambiar nombre de instancia** , que se instala con Management Studio (instalación web).  
+  Puede cambiar el nombre de una instancia existente de [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] si usa la herramienta **Cambiar nombre de instancia** , que se instala con Management Studio (instalación web).  
   
 > [!IMPORTANT]  
 >  Cuando se cambia el nombre de la instancia, la herramienta Cambiar nombre de instancia de [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] se ejecuta con privilegios elevados, actualizando el nombre de servicio de Windows, las cuentas de seguridad y las entradas de Registro asociados a esa instancia. Para garantizar que estas acciones se realizan, asegúrese de ejecutar esta herramienta como administrador del sistema local.  

@@ -1,36 +1,23 @@
 ---
-title: "Introducción a la arquitectura lógica (Analysis Services - datos multidimensionales) | Documentos de Microsoft"
-ms.custom: 
-ms.date: 03/15/2017
-ms.prod: analysis-services
-ms.prod_service: analysis-services
-ms.service: 
-ms.component: 
-ms.reviewer: 
-ms.suite: pro-bi
-ms.technology: 
-ms.tgt_pltfrm: 
-ms.topic: reference
-applies_to:
-- SQL Server 2016 Preview
-helpviewer_keywords:
-- cubes [Analysis Services], examples
-- cubes [Analysis Services], about cubes
-ms.assetid: 1a547bce-dacf-4d32-bc0f-3829f4b026e1
-caps.latest.revision: 
-author: Minewiskan
+title: Introducción a la arquitectura lógica (Analysis Services - datos multidimensionales) | Documentos de Microsoft
+ms.date: 05/02/2018
+ms.prod: sql
+ms.technology: analysis-services
+ms.component: olap
+ms.topic: article
 ms.author: owend
+ms.reviewer: owend
+author: minewiskan
 manager: kfile
-ms.workload: Inactive
-ms.openlocfilehash: dacdeff9764aaa11277118cb494900bf6f42e6aa
-ms.sourcegitcommit: d8ab09ad99e9ec30875076acee2ed303d61049b7
+ms.openlocfilehash: 4b4231e51818145a731c698848566d64562ba097
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/23/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="logical-architecture-overview-analysis-services---multidimensional-data"></a>Información general de arquitectura lógica (Analysis Services - Datos multidimensionales)
 [!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]
-Analysis Services funciona en un modo de implementación de servidor que determina la arquitectura de memoria y el entorno en tiempo de ejecución utilizados por diferentes tipos de modelos de Analysis Services. Determina el modo de servidor durante la instalación. **Modo multidimensional y minería de datos** admite OLAP tradicional y minería de datos. **Modo tabular** es compatible con los modelos tabulares. **El modo integrado de SharePoint** hace referencia a una instancia de Analysis Services que se instaló como [!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)] para SharePoint, que se usa para cargar y consultar Excel o [!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)] modelos de datos dentro de un libro.  
+  Analysis Services funciona en un modo de implementación de servidor que determina la arquitectura de memoria y el entorno en tiempo de ejecución utilizados por diferentes tipos de modelos de Analysis Services. Determina el modo de servidor durante la instalación. **Modo multidimensional y minería de datos** admite OLAP tradicional y minería de datos. **Modo tabular** es compatible con los modelos tabulares. **El modo integrado de SharePoint** hace referencia a una instancia de Analysis Services que se instaló como [!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)] para SharePoint, que se usa para cargar y consultar Excel o [!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)] modelos de datos dentro de un libro.  
   
  En este tema se explica la arquitectura básica de Analysis Services cuando se usa en modo Multidimensional y Minería de datos. Para obtener más información acerca de los otros modos, consulte [modelado Tabular ](../../../analysis-services/tabular-models/tabular-models-ssas.md) y [comparar tabulares y multidimensionales ](../../../analysis-services/comparing-tabular-and-multidimensional-solutions-ssas.md).  
   
@@ -90,13 +77,13 @@ Analysis Services funciona en un modo de implementación de servidor que determi
 ||||.|||Último|||  
 |-|-|-|--------------|-|-|----------|-|-|  
 ||||All Sources|Eastern Hemisphere|Western Hemisphere|All Sources|Eastern Hemisphere|Western Hemisphere|  
-|All Time|||25110|6547|18563|29 de diciembre de 99|Dec-22-99|29 de diciembre de 99|  
+|All Time|||25110|6547|18563|29 de diciembre de 99|DEC-22-99|29 de diciembre de 99|  
 ||1st half||11173|2977|8196|Jun-28-99|Jun-20-99|Jun-28-99|  
 |||1st quarter|5108|1452|3656|Mar-30-99|Mar-19-99|Mar-30-99|  
 |||2nd quarter|6065|1525|4540|Jun-28-99|Jun-20-99|Jun-28-99|  
-||2nd half||13937|3570|10367|29 de diciembre de 99|Dec-22-99|29 de diciembre de 99|  
+||2nd half||13937|3570|10367|29 de diciembre de 99|DEC-22-99|29 de diciembre de 99|  
 |||3rd quarter|6119|1444|4675|Sep-30-99|Sep-18-99|Sep-30-99|  
-|||4th quarter|7818|2126|5692|29 de diciembre de 99|Dec-22-99|29 de diciembre de 99|  
+|||4th quarter|7818|2126|5692|29 de diciembre de 99|DEC-22-99|29 de diciembre de 99|  
   
  Una vez definido un cubo, se pueden crear agregaciones o cambiar agregaciones existentes para establecer opciones, como que las agregaciones se precalculen durante el procesamiento o se calculen en el momento de la consulta. **Tema relacionado:**[agregaciones y diseños de agregaciones](../../../analysis-services/multidimensional-models-olap-logical-cube-objects/aggregations-and-aggregation-designs.md).  
   
@@ -119,7 +106,7 @@ Analysis Services funciona en un modo de implementación de servidor que determi
 |||||||  
 |-|-|-|-|-|-|  
 |Import_ReceiptKey|RouteKey|SourceKey|TimeKey|.|Último|  
-|3516987|1|6|1|15|Jan-10-99|  
+|3516987|1|6|1|15|10 de enero de 99|  
 |3554790|1|6|1|40|19 de enero de 99|  
 |3572673|1|6|1|34|Jan-27-99|  
 |3600974|1|6|1|45|Feb-02-99|  
@@ -128,7 +115,7 @@ Analysis Services funciona en un modo de implementación de servidor que determi
   
  En la tabla anterior, cada fila tiene los mismos valores para la **RouteKey**, **SourceKey**, y **TimeKey** columnas, que indica que dichas filas contribuyen a la misma celda del cubo.  
   
- En este ejemplo se representa un cubo muy sencillo, en donde el cubo tiene un solo grupo de medida y todas las tablas de dimensiones se combinan en la tabla de hechos en un esquema en estrella. Otro esquema común es el esquema de copo de nieve, en el que una o más tablas de dimensiones se combinan con otra tabla de dimensiones, en lugar de combinarse directamente con la tabla de hechos. **Tema relacionado:**[dimensiones &#40; Analysis Services - datos multidimensionales &#41; ](../../../analysis-services/multidimensional-models-olap-logical-dimension-objects/dimensions-analysis-services-multidimensional-data.md).  
+ En este ejemplo se representa un cubo muy sencillo, en donde el cubo tiene un solo grupo de medida y todas las tablas de dimensiones se combinan en la tabla de hechos en un esquema en estrella. Otro esquema común es el esquema de copo de nieve, en el que una o más tablas de dimensiones se combinan con otra tabla de dimensiones, en lugar de combinarse directamente con la tabla de hechos. **Tema relacionado:**[dimensiones &#40;Analysis Services - datos multidimensionales&#41;](../../../analysis-services/multidimensional-models-olap-logical-dimension-objects/dimensions-analysis-services-multidimensional-data.md).  
   
  Este ejemplo contiene una sola tabla de hechos. Cuando un cubo tiene varias tablas de hechos, las medidas de cada tabla de hechos se organizan en grupos de medida y un grupo de medida se relaciona con un determinado conjunto de dimensiones mediante relaciones de dimensiones definidas. Estas relaciones se definen mediante la especificación de las tablas participantes en la vista del origen de datos y la granularidad de la relación. **Tema relacionado:**[las relaciones entre dimensiones](../../../analysis-services/multidimensional-models-olap-logical-cube-objects/dimension-relationships.md).  
   

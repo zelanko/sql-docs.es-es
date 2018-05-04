@@ -1,31 +1,30 @@
 ---
 title: Bidireccional entre los filtros en los modelos tabulares | Documentos de Microsoft
-ms.custom: 
+ms.custom: ''
 ms.date: 02/21/2018
 ms.prod: analysis-services
 ms.prod_service: analysis-services, azure-analysis-services
-ms.service: 
+ms.service: ''
 ms.component: multidimensional-tabular
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: pro-bi
-ms.technology: 
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.technology: ''
+ms.tgt_pltfrm: ''
+ms.topic: conceptual
 ms.assetid: 5e810707-f58d-4581-8f99-7371fa75b6ac
-caps.latest.revision: 
+caps.latest.revision: 14
 author: Minewiskan
 ms.author: owend
 manager: kfile
-ms.workload: On Demand
-ms.openlocfilehash: b3d4854a602dc3eb7b02a50dc760409243a64313
-ms.sourcegitcommit: d8ab09ad99e9ec30875076acee2ed303d61049b7
-ms.translationtype: MT
+ms.openlocfilehash: 07f44c1d5e92e65931f7d362b959e45d0943d65f
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/23/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="bi-directional-cross-filters-in-tabular-models"></a>Filtros cruzados bidireccionales en los modelos tabulares
 [!INCLUDE[ssas-appliesto-sqlas-aas](../../includes/ssas-appliesto-sqlas-aas.md)]
-Como novedad en SQL Server 2016 se ha introducido un enfoque integrado para permitir los *filtros cruzados bidireccionales* en los modelos tabulares, lo que elimina la necesidad de usar soluciones DAX manuales para propagar el contexto de filtro en las relaciones entre tablas.  
+  Como novedad en SQL Server 2016 se ha introducido un enfoque integrado para permitir los *filtros cruzados bidireccionales* en los modelos tabulares, lo que elimina la necesidad de usar soluciones DAX manuales para propagar el contexto de filtro en las relaciones entre tablas.  
   
  Si descomponemos el concepto en sus componentes, el *filtrado cruzado* es la capacidad de establecer un contexto de filtro en una tabla en función de los valores de una tabla relacionada, mientras que la transferencia de un contexto de filtro a una segunda tabla relacionada en el otro lado de una relación de tabla es *bidireccional* . Como su nombre indica, es posible realizar la segmentación en ambas direcciones de la relación, en lugar de en una sola.  Internamente, el filtrado bidireccional expande el contexto de filtro para consultar un superconjunto de los datos.  
   
@@ -66,18 +65,18 @@ Como novedad en SQL Server 2016 se ha introducido un enfoque integrado para perm
 ## <a name="walkthrough-an-example"></a>Tutorial de ejemplo  
  La mejor manera de comprender el valor del filtrado cruzado bidireccional es a través de un ejemplo. Considere el siguiente conjunto de datos de [ContosoRetailDW](http://www.microsoft.com/en-us/download/details.aspx?id=18279), que refleja la cardinalidad y los filtros cruzados que se crean de forma predeterminada.  
   
- ![SSAS-BIDI-2-Model](../../analysis-services/tabular-models/media/ssas-bidi-2-model.PNG "SSAS-BIDI-2-Model")  
+ ![SSAS-BIDI-2-modelo](../../analysis-services/tabular-models/media/ssas-bidi-2-model.PNG "modelo-SSAS-BIDI-2")  
   
 > [!NOTE]  
 >  De forma predeterminada, durante la importación de datos, las relaciones de tablas se crean automáticamente en las configuraciones de varios a uno derivadas de las relaciones de clave externa y clave principal entre la tabla de hechos y las tablas de dimensiones relacionadas.  
   
  Observe que la dirección del filtro va de las tablas de dimensiones a la tabla de hechos. Las promociones, los productos, las fechas, el cliente y la geografía del cliente son filtros válidos que producen correctamente la agregación de una medida, con un valor real que varía según las dimensiones usadas.  
   
- ![ssas-bidi-3-defaultrelationships](../../analysis-services/tabular-models/media/ssas-bidi-3-defaultrelationships.PNG "ssas-bidi-3-defaultrelationships")  
+ ![SSAS-bidi-3-defaultrelationships](../../analysis-services/tabular-models/media/ssas-bidi-3-defaultrelationships.PNG "ssas-bidi-3-defaultrelationships")  
   
  En este sencillo esquema de estrella, las pruebas en Excel confirman que los datos se segmentan bien cuando los flujos procedentes de las tablas de dimensiones en filas y columnas se filtran en datos agregados proporcionados por la medida **Sum of Sales** (Suma de ventas) que se encuentra en la tabla central **FactOnlineSales** .  
   
- ![ssas-bidi-4-excelSumSales](../../analysis-services/tabular-models/media/ssas-bidi-4-excelsumsales.PNG "ssas-bidi-4-excelSumSales")  
+ ![SSAS-bidi-4-excelSumSales](../../analysis-services/tabular-models/media/ssas-bidi-4-excelsumsales.PNG "ssas-bidi-4-excelSumSales")  
   
  Siempre y cuando las medidas se extraigan de la tabla de hechos y el contexto de filtro finalice en la tabla de hechos, las agregaciones se filtrarán correctamente para este modelo. Pero ¿qué ocurre si quiere crear medidas en otra parte, como un recuento distintivo en la tabla de productos o clientes, o un promedio de descuento en la tabla de promociones, y le interesa que el contexto de filtro existente se extienda a esa medida?  
   
@@ -87,7 +86,7 @@ Como novedad en SQL Server 2016 se ha introducido un enfoque integrado para perm
   
  Después de agregar un filtro cruzado bidireccional entre **FactOnlineSales** y **DimProduct**, las filas de la tabla de productos se filtran correctamente por fabricante y fecha.  
   
- ![ssas-bidi-6-prodcount-withfilter](../../analysis-services/tabular-models/media/ssas-bidi-6-prodcount-withfilter.png "ssas-bidi-6-prodcount-withfilter")  
+ ![SSAS-bidi-6-prodcount-withfilter](../../analysis-services/tabular-models/media/ssas-bidi-6-prodcount-withfilter.png "ssas-bidi-6-prodcount-withfilter")  
   
 ## <a name="learn-step-by-step"></a>Obtener información paso a paso  
  Puede probar los filtros cruzados bidireccionales llevando a cabo los pasos de este tutorial. Para poder continuar, necesita:  
@@ -138,7 +137,7 @@ Como novedad en SQL Server 2016 se ha introducido un enfoque integrado para perm
   
      En este momento puede editar los nombres si quiere que sean más legibles en el modelo.  
   
-     ![ssas-bidi-7-ImportData](../../analysis-services/tabular-models/media/ssas-bidi-7-importdata.PNG "ssas-bidi-7-ImportData")  
+     ![SSAS-bidi-7-ImportData](../../analysis-services/tabular-models/media/ssas-bidi-7-importdata.PNG "ssas-bidi-7-ImportData")  
   
 6.  Importe los datos.  
   
@@ -147,11 +146,11 @@ Como novedad en SQL Server 2016 se ha introducido un enfoque integrado para perm
 ### <a name="review-default-table-relationships"></a>Revisar las relaciones de tabla predeterminadas  
  Cambie a la vista de diagrama: **Modelo** > **Vista de modelo** > **Vista de diagrama**. La cardinalidad y las relaciones activas se indican visualmente. Todas las relaciones son relaciones uno a varios entre dos tablas cualesquiera relacionadas.  
   
- ![SSAS-BIDI-2-Model](../../analysis-services/tabular-models/media/ssas-bidi-2-model.PNG "SSAS-BIDI-2-Model")  
+ ![SSAS-BIDI-2-modelo](../../analysis-services/tabular-models/media/ssas-bidi-2-model.PNG "modelo-SSAS-BIDI-2")  
   
  También puede hacer clic en **Tabla** > **Administrar relaciones** para ver la misma información en un diseño de tabla.  
   
- ![ssas-bidi-3-defaultrelationships](../../analysis-services/tabular-models/media/ssas-bidi-3-defaultrelationships.PNG "ssas-bidi-3-defaultrelationships")  
+ ![SSAS-bidi-3-defaultrelationships](../../analysis-services/tabular-models/media/ssas-bidi-3-defaultrelationships.PNG "ssas-bidi-3-defaultrelationships")  
   
 ### <a name="create-measures"></a>Crear medidas  
  Necesitará una agregación para sumar las cantidades de ventas por distintas facetas de datos dimensionales. En **DimProduct,** puede crear una medida que cuente los productos y usarla después en un análisis de comercialización de productos que muestre un recuento de cuántos productos participaron en las ventas de un año determinado, una región determinada o un tipo de cliente.  

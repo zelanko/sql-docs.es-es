@@ -11,7 +11,7 @@ ms.suite: sql
 ms.technology:
 - drivers
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - state transitions [ODBC]
 - unallocated state [ODBC]
@@ -23,12 +23,11 @@ caps.latest.revision: 5
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: c94806fae462803c3323c3e3c5768751e53a5467
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
-ms.translationtype: MT
+ms.openlocfilehash: bd212668646a5d02059250b7ecfc4f8b81ec406c
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="state-transitions"></a>Transiciones de estado
 ODBC define discretos *estados* para cada entorno, cada conexión y cada instrucción. Por ejemplo, el entorno tiene tres posibles estados: sin asignar (en la que no se asigna ningún entorno), asignado (en el que se asigna un entorno pero no se asigna a ninguna conexión) y conexión (en el que un entorno y una o varias conexiones son asignado). Las conexiones tienen siete estados posibles; las instrucciones tienen 13 estados posibles.  

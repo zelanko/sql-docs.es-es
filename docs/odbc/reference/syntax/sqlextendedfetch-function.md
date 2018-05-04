@@ -11,7 +11,7 @@ ms.suite: sql
 ms.technology:
 - drivers
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 apiname:
 - SQLExtendedFetch
 apilocation:
@@ -26,12 +26,11 @@ caps.latest.revision: 26
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: 08611c1a798f9c25ae57d518e46d94193239ca1f
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
-ms.translationtype: MT
+ms.openlocfilehash: ee25cf1b7b4df806c3ea999205d14117aac3c038
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="sqlextendedfetch-function"></a>Función SQLExtendedFetch
 **Conformidad**  
@@ -41,7 +40,7 @@ ms.lasthandoff: 04/16/2018
  **SQLExtendedFetch** recupera el conjunto especificado de filas de datos del conjunto de resultados y devuelve datos para todas las columnas enlazadas. Conjuntos de filas se pueden especificar en una posición absoluta o relativa o marcador.  
   
 > [!NOTE]  
->  En ODBC 3*.x*, **SQLExtendedFetch** se ha reemplazado por **SQLFetchScroll**. ODBC 3*.x* aplicaciones no deben llamar a **SQLExtendedFetch**; en su lugar, debe llamar a **SQLFetchScroll**. Asigna el Administrador de controladores **SQLFetchScroll** a **SQLExtendedFetch** cuando se trabaja con una API ODBC 2*.x* controlador. ODBC 3*.x* controladores deben admitir **SQLExtendedFetch** si desean trabajar con ODBC 2*.x* aplicaciones que llamen a él. Para obtener más información, vea "Comentarios" y [compatibilidad con versiones anteriores, los cursores desplazables y cursores de bloque](../../../odbc/reference/appendixes/block-cursors-scrollable-cursors-and-backward-compatibility.md) en Apéndice G: controlador directrices para la compatibilidad con versiones anteriores.  
+>  En ODBC 3 *.x*, **SQLExtendedFetch** se ha reemplazado por **SQLFetchScroll**. ODBC 3 *.x* aplicaciones no deben llamar a **SQLExtendedFetch**; en su lugar, debe llamar a **SQLFetchScroll**. Asigna el Administrador de controladores **SQLFetchScroll** a **SQLExtendedFetch** cuando se trabaja con una API ODBC 2 *.x* controlador. ODBC 3 *.x* controladores deben admitir **SQLExtendedFetch** si desean trabajar con ODBC 2 *.x* aplicaciones que llamen a él. Para obtener más información, vea "Comentarios" y [compatibilidad con versiones anteriores, los cursores desplazables y cursores de bloque](../../../odbc/reference/appendixes/block-cursors-scrollable-cursors-and-backward-compatibility.md) en Apéndice G: controlador directrices para la compatibilidad con versiones anteriores.  
   
 ## <a name="syntax"></a>Sintaxis  
   
@@ -129,9 +128,9 @@ SQLRETURN SQLExtendedFetch(
   
 -   Las llamadas a **SQLExtendedFetch** no se pueden mezclar con las llamadas a **SQLFetch** o **SQLFetchScroll**y si **SQLBulkOperations** se llama antes de llama a cualquier función de captura, **SQLExtendedFetch** no se puede llamar hasta que se cierra y se vuelve a abrir el cursor. Es decir, **SQLExtendedFetch** puede llamarse únicamente en el estado de la instrucción S7. Para obtener más información, consulte [instrucción transiciones](../../../odbc/reference/appendixes/statement-transitions.md) en tablas de transición de estado de apéndice B: ODBC.  
   
- Cuando una aplicación llama **SQLFetchScroll** durante el uso de una API ODBC 2*.x* controlador, el Administrador de controladores asigna esta llamada a **SQLExtendedFetch**. Para obtener más información, vea "SQLFetchScroll y ODBC 2*.x* controladores" en [SQLFetchScroll](../../../odbc/reference/syntax/sqlfetchscroll-function.md).  
+ Cuando una aplicación llama **SQLFetchScroll** durante el uso de una API ODBC 2 *.x* controlador, el Administrador de controladores asigna esta llamada a **SQLExtendedFetch**. Para obtener más información, vea "SQLFetchScroll y ODBC 2 *.x* controladores" en [SQLFetchScroll](../../../odbc/reference/syntax/sqlfetchscroll-function.md).  
   
- En ODBC 2*.x*, **SQLExtendedFetch** se llamó para capturar varias filas y **SQLFetch** se llamó para capturar una sola fila. En ODBC 3*.x*, por otro lado, **SQLFetch** puede llamarse para capturar varias filas.  
+ En ODBC 2 *.x*, **SQLExtendedFetch** se llamó para capturar varias filas y **SQLFetch** se llamó para capturar una sola fila. En ODBC 3 *.x*, por otro lado, **SQLFetch** puede llamarse para capturar varias filas.  
   
 ## <a name="related-functions"></a>Funciones relacionadas  
   

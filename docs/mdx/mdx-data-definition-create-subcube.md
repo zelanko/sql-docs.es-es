@@ -26,12 +26,11 @@ caps.latest.revision: 32
 author: Minewiskan
 ms.author: owend
 manager: erikre
-ms.workload: Inactive
-ms.openlocfilehash: bf2b3d21aa2eac4bc982b75257f8c1e2d87ea46b
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
-ms.translationtype: MT
+ms.openlocfilehash: 6a1021b7a1443e598352f762bf4ecfdc3cea5e2a
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="mdx-data-definition---create-subcube"></a>Definición de datos MDX - crear SUBCUBO
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
@@ -53,14 +52,14 @@ CREATE SUBCUBE Cube_Name AS Select_Statement
  *Select_Statement*  
  Expresión MDX (Expresiones multidimensionales) válida SELECT que no contiene cláusulas WITH, NON EMPTY o HAVING y no solicita propiedades de dimensión o celda.  
   
- Vea [seleccione instrucción &#40; MDX &#41; ](../mdx/mdx-data-manipulation-select.md) para obtener una explicación detallada de sintaxis en instrucciones Select y **NON VISUAL** cláusula.  
+ Vea [instrucción SELECT &#40;MDX&#41; ](../mdx/mdx-data-manipulation-select.md) para obtener una explicación detallada de sintaxis en instrucciones Select y **NON VISUAL** cláusula.  
   
 ## <a name="remarks"></a>Comentarios  
  Cuando se excluyen los miembros predeterminados de la definición de un subcubo, las coordenadas cambian a su vez. Para los atributos que pueden agregarse, el miembro predeterminado se mueve al miembro [Todos]. Para los atributos que no pueden agregarse, el miembro predeterminado se mueve a un miembro que existe en el subcubo. En la tabla siguiente se ofrece un ejemplo de subcubo y las combinaciones de miembros predeterminados.  
   
 |Miembro predeterminado original|Puede agregarse|Subselección|Miembro predeterminado revisado|  
 |-----------------------------|-----------------------|---------------|----------------------------|  
-|Time.Year.All|Sí|{Time.Year.2003}|No hay ningún cambio|  
+|Time.Year.All|Sí|{Time.Year.2003}|Sin cambios|  
 |Time.Year. [1997]|Sí|{Time.Year.2003}|Time.Year.All|  
 |Time.Year. [1997]|no|{Time.Year.2003}|Time.Year. [2003]|  
 |Time.Year. [1997]|Sí|{Time.Year.2003, Time.Year.2004}|Time.Year.All|  
@@ -70,7 +69,7 @@ CREATE SUBCUBE Cube_Name AS Select_Statement
   
  Los objetos de sesión creados en el contexto de un área de subcubo se quitan cuando se quita el subcubo.  
   
- Para obtener más información acerca de los subcubos, vea [generar subcubos en MDX &#40; MDX &#41; ](../analysis-services/multidimensional-models/mdx/building-subcubes-in-mdx-mdx.md).  
+ Para obtener más información acerca de los subcubos, vea [generar subcubos en MDX &#40;MDX&#41;](../analysis-services/multidimensional-models/mdx/building-subcubes-in-mdx-mdx.md).  
   
 ## <a name="example"></a>Ejemplo  
  El ejemplo siguiente crea un subcubo que limita el espacio aparente del cubo a los miembros que existen con el país Canadá. A continuación, utiliza el **miembros** función para devolver todos los miembros del país en el nivel de jerarquía definida por el usuario Geography - devuelve solo el país Canadá.  
@@ -146,9 +145,9 @@ SELECT [Geography].[Country].[Country].MEMBERS ON 0
  La columna [All Products] y la fila [All Resellers] contienen los totales de todos los miembros y no solo de los que están visibles.  
   
 ## <a name="see-also"></a>Vea también  
- [Conceptos clave de MDX &#40; Analysis Services &#41;](../analysis-services/multidimensional-models/mdx/key-concepts-in-mdx-analysis-services.md)   
- [Instrucciones de Scripting de MDX &#40; MDX &#41;](../mdx/mdx-scripting-statements-mdx.md)   
- [DROP SUBCUBE, instrucción &#40; MDX &#41;](../mdx/mdx-data-definition-drop-subcube.md)   
- [Instrucción SELECT &#40; MDX &#41;](../mdx/mdx-data-manipulation-select.md)  
+ [Conceptos clave de MDX & #40; Analysis Services & #41;](../analysis-services/multidimensional-models/mdx/key-concepts-in-mdx-analysis-services.md)   
+ [Instrucciones de Scripting MDX &#40;MDX&#41;](../mdx/mdx-scripting-statements-mdx.md)   
+ [Instrucción de SUBCUBO de DROP &#40;MDX&#41;](../mdx/mdx-data-definition-drop-subcube.md)   
+ [Instrucción SELECT & #40; MDX & #41;](../mdx/mdx-data-manipulation-select.md)  
   
   

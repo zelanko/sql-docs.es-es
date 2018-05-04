@@ -11,7 +11,7 @@ ms.suite: sql
 ms.technology:
 - drivers
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - ODBC cursor library [ODBC], backward compatibility
 - compatibility [ODBC], cursor library
@@ -24,15 +24,14 @@ caps.latest.revision: 8
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: 0bac09cb2b45274a5589c152a5b0e714b71f8dc1
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
-ms.translationtype: MT
+ms.openlocfilehash: ca642308b52f52eda4f18f467ae70413ba7f3c04
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="cursor-library-operations"></a>Operaciones de la biblioteca de cursores
 > [!IMPORTANT]  
 >  Esta característica se quitará en una versión futura de Windows. Evite utilizar esta característica en nuevos trabajos de desarrollo y piense en modificar las aplicaciones que actualmente utilizan esta característica. Microsoft recomienda usar la funcionalidad del controlador cursor.  
   
- Si una aplicación que trabaja con una API ODBC 2*.x* controlador realiza llamadas a ODBC 3. *x* biblioteca de cursores, la aplicación puede usar ODBC 3. *x* características que no son compatibles con la API ODBC 2*.x* controlador. Un escritor de la aplicación debe tener cuidado, cómo se utilizan estas características, sin embargo. Uso de ODBC 3. *x* biblioteca de cursores no realiza un ODBC 2*.x* controlador en una aplicación ODBC 3. *x* controlador.
+ Si una aplicación que trabaja con una API ODBC 2 *.x* controlador realiza llamadas a ODBC 3. *x* biblioteca de cursores, la aplicación puede usar ODBC 3. *x* características que no son compatibles con la API ODBC 2 *.x* controlador. Un escritor de la aplicación debe tener cuidado, cómo se utilizan estas características, sin embargo. Uso de ODBC 3. *x* biblioteca de cursores no realiza un ODBC 2 *.x* controlador en una aplicación ODBC 3. *x* controlador.

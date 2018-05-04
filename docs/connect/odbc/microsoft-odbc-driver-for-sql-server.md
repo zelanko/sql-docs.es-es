@@ -10,22 +10,21 @@ ms.suite: sql
 ms.technology:
 - drivers
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 9f2ae91b-06af-4c9a-9d24-062df7bc4662
 caps.latest.revision: 12
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.workload: Active
-ms.openlocfilehash: a9e480bd8ab948c02be27aa82a8bcd8caa2d7015
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
+ms.openlocfilehash: 7f7d037b0080b754e8a0ba65efc22a92ce43873b
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="microsoft-odbc-driver-for-sql-server"></a>Controlador ODBC de Microsoft para SQL Server
 
-![Descarga-CTRL+MAYÚS+TAB-dentro de un círculo](../../ssdt/media/download.png)[para descargar el controlador ODBC](../sql-connection-libraries.md#anchor-20-drivers-relational-access)
+[!INCLUDE[Driver_ODBC_Download](../../includes/driver_odbc_download.md)]
 
 ODBC es la API de acceso de datos nativo principal para aplicaciones escritas en C y C++ para SQL Server. No hay un controlador ODBC para la mayoría de los orígenes de datos. Otros lenguajes que pueden usar ODBC incluyen COBOL, Perl, PHP y Python. ODBC se usa ampliamente en escenarios de integración de datos.
 
@@ -33,15 +32,15 @@ El controlador ODBC incluye herramientas como [ **sqlcmd** ](../../tools/sqlcmd-
 
 ## <a name="code-example-in-c"></a>Ejemplo de código de C++
 
-Tenemos un archivo .zip pequeño que contiene el código fuente de un programa de C++ que utiliza ODBC:
+El siguiente ejemplo de C++ muestra cómo usar las API de ODBC para conectarse y tener acceso a una base de datos:
 
 - [Ejemplo de código de C++, con ODBC](../../odbc/reference/sample-odbc-program.md)
 
 ## <a name="download"></a>Descargar
 
-- ![Descarga-CTRL+MAYÚS+TAB-dentro de un círculo](../../ssdt/media/download.png)[para descargar el controlador ODBC](../sql-connection-libraries.md#anchor-20-drivers-relational-access)
+- ![Descarga-CTRL+MAYÚS+TAB-dentro de un círculo](../../ssdt/media/download.png)[para descargar el controlador ODBC](download-odbc-driver-for-sql-server.md)
 
-## <a name="documentation"></a>Documentación  
+## <a name="documentation"></a>Documentación
 
 ### <a name="features"></a>Características
 

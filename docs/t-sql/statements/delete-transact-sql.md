@@ -1,16 +1,16 @@
 ---
 title: DELETE (Transact-SQL) | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 05/10/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
-ms.service: 
+ms.service: ''
 ms.component: t-sql|statements
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - DELETE
@@ -28,16 +28,17 @@ helpviewer_keywords:
 - row removal [SQL Server], DELETE statement
 - deleting data
 ms.assetid: ed6b2105-0f35-408f-ba51-e36ade7ad5b2
-caps.latest.revision: 
+caps.latest.revision: 78
 author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: Active
-ms.openlocfilehash: f0741ba08adf5299e8a4f5a3021f533d44988459
-ms.sourcegitcommit: 45e4efb7aa828578fe9eb7743a1a3526da719555
+monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
+ms.openlocfilehash: a30704357c724c3a7e5ecc78569aecdd62687e8d
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="delete-transact-sql"></a>DELETE (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -98,10 +99,10 @@ DELETE FROM [database_name . [ schema ] . | schema. ] table_name
  WITH \<common_table_expression>  
  Especifica el conjunto de resultados de nombre temporal, también conocido como expresión de tabla común, definido dentro del ámbito de la instrucción DELETE. El conjunto de resultados se deriva de una instrucción SELECT.  
   
- Las expresiones de tabla comunes también se pueden utilizar con las instrucciones SELECT, INSERT, UPDATE y CREATE VIEW. Para obtener más información, vea [WITH common_table_expression &#40;Transact-SQL&#41;](../../t-sql/queries/with-common-table-expression-transact-sql.md).  
+ Las expresiones de tabla comunes también se pueden utilizar con las instrucciones SELECT, INSERT, UPDATE y CREATE VIEW. Para más información, vea [WITH common_table_expression &#40;Transact-SQL&#41;](../../t-sql/queries/with-common-table-expression-transact-sql.md).  
   
  TOP **(***expression***)** [ PERCENT ]  
- Especifica el número o el porcentaje de filas aleatorias que se van a eliminar. *expression* puede ser un número o un porcentaje de las filas. Las filas a las que se hace referencia en la expresión TOP utilizada con INSERT, UPDATE o DELETE no se ordenan. Para obtener más información, vea [TOP &#40;Transact-SQL&#41;](../../t-sql/queries/top-transact-sql.md).  
+ Especifica el número o el porcentaje de filas aleatorias que se van a eliminar. *expression* puede ser un número o un porcentaje de las filas. Las filas a las que se hace referencia en la expresión TOP utilizada con INSERT, UPDATE o DELETE no se ordenan. Para más información, vea [TOP &#40;Transact-SQL&#41;](../../t-sql/queries/top-transact-sql.md).  
   
  FROM  
  Palabra clave opcional que se puede usar entre la palabra clave DELETE y el destino *table_or_view_name* o *rowset_function_limited*.  
@@ -133,10 +134,10 @@ DELETE FROM [database_name . [ schema ] . | schema. ] table_name
  Función [OPENQUERY](../../t-sql/functions/openquery-transact-sql.md) u [OPENROWSET](../../t-sql/functions/openrowset-transact-sql.md), dependiendo del proveedor.  
   
  WITH **(** \<table_hint_limited> [... *n*] **)**  
- Especifica una o varias sugerencias de tabla que están permitidas en una tabla de destino. La palabra clave WITH y los paréntesis son obligatorios. No se permiten NOLOCK ni READUNCOMMITTED. Para obtener más información sobre las sugerencias de tabla, vea [Sugerencias de tabla &#40;Transact-SQL&#41;](../../t-sql/queries/hints-transact-sql-table.md).  
+ Especifica una o varias sugerencias de tabla que están permitidas en una tabla de destino. La palabra clave WITH y los paréntesis son obligatorios. No se permiten NOLOCK ni READUNCOMMITTED. Para más información sobre las sugerencias de tabla, vea [Sugerencias de tabla &#40;Transact-SQL&#41;](../../t-sql/queries/hints-transact-sql-table.md).  
   
  \<OUTPUT_Clause>  
- Devuelve filas eliminadas, o expresiones basadas en ellas, como parte de la operación DELETE. La cláusula OUTPUT no se admite en instrucciones DML dirigidas a tablas o vistas remotas. Para obtener más información, vea [Cláusula OUTPUT &#40;Transact-SQL&#41;](../../t-sql/queries/output-clause-transact-sql.md).  
+ Devuelve filas eliminadas, o expresiones basadas en ellas, como parte de la operación DELETE. La cláusula OUTPUT no se admite en instrucciones DML dirigidas a tablas o vistas remotas. Para más información, vea [Cláusula OUTPUT &#40;Transact-SQL&#41;](../../t-sql/queries/output-clause-transact-sql.md).  
   
  FROM *table_source*  
  Especifica una cláusula FROM adicional. Esta extensión de [!INCLUDE[tsql](../../includes/tsql-md.md)] para DELETE permite especificar datos de \<table_source> y eliminar las filas correspondientes de la tabla en la primera cláusula FROM.  
@@ -155,7 +156,7 @@ DELETE FROM [database_name . [ schema ] . | schema. ] table_name
 -   Las eliminaciones por posición utilizan la cláusula CURRENT OF para especificar un cursor. La operación de eliminación se produce en la posición actual del cursor. Este método puede ser más preciso que una instrucción DELETE por búsqueda que utilice una cláusula WHERE *search_condition* para calificar las filas que se van a eliminar. Una instrucción DELETE por búsqueda elimina varias filas si la condición de búsqueda no identifica exclusivamente una única fila.  
   
 \<search_condition>  
- Especifica las condiciones restrictivas de las filas que se van a eliminar. No hay límite en el número de predicados que se pueden incluir en una condición de búsqueda. Para obtener más información, vea [Condición de búsqueda &#40;Transact-SQL&#41;](../../t-sql/queries/search-condition-transact-sql.md).  
+ Especifica las condiciones restrictivas de las filas que se van a eliminar. No hay límite en el número de predicados que se pueden incluir en una condición de búsqueda. Para más información, vea [Condición de búsqueda &#40;Transact-SQL&#41;](../../t-sql/queries/search-condition-transact-sql.md).  
   
  CURRENT OF  
  Especifica que la instrucción DELETE se ejecutará en la posición actual del cursor especificado.  
@@ -175,7 +176,7 @@ DELETE FROM [database_name . [ schema ] . | schema. ] table_name
 ## <a name="best-practices"></a>Procedimientos recomendados  
  Para eliminar todas las filas de una tabla, use TRUNCATE TABLE. TRUNCATE TABLE es más rápido que DELETE y utiliza menos recursos de los registros de transacciones y de sistema. TRUNCATE TABLE tiene restricciones; por ejemplo, la tabla no puede participar en la replicación. Para obtener más información, vea [TRUNCATE TABLE &#40;Transact-SQL&#41;](../../t-sql/statements/truncate-table-transact-sql.md).  
   
- Use la función @@ROWCOUNT para devolver el número de filas eliminadas a la aplicación cliente. Para obtener más información, consulte [@@ROWCOUNT &#40;Transact-SQL&#41;](../../t-sql/functions/rowcount-transact-sql.md).  
+ Use la función @@ROWCOUNT para devolver el número de filas eliminadas a la aplicación cliente. Para más información, vea [@@ROWCOUNT &#40;Transact-SQL&#41;](../../t-sql/functions/rowcount-transact-sql.md).  
   
 ## <a name="error-handling"></a>Tratamiento de errores  
  Puede implementar el control de errores de la instrucción DELETE especificando la instrucción en una construcción TRY…CATCH.  
@@ -189,7 +190,7 @@ DELETE FROM [database_name . [ schema ] . | schema. ] table_name
   
  Al eliminar una fila que contiene una columna FILESTREAM, también elimina los archivos del sistema de archivos subyacentes. El recolector de elementos no utilizados de FILESTREAM quita los archivos subyacentes. Para obtener más información, consulte [Obtener acceso a datos FILESTREAM con Transact-SQL](../../relational-databases/blob/access-filestream-data-with-transact-sql.md).  
   
- No se puede especificar la cláusula FROM en una instrucción DELETE que haga referencia, directa o indirectamente, a una vista que tiene definido un desencadenador INSTEAD OF. Para obtener más información sobre los desencadenadores INSTEAD OF, vea [CREATE TRIGGER &#40;Transact-SQL&#41;](../../t-sql/statements/create-trigger-transact-sql.md).  
+ No se puede especificar la cláusula FROM en una instrucción DELETE que haga referencia, directa o indirectamente, a una vista que tiene definido un desencadenador INSTEAD OF. Para más información sobre los desencadenadores INSTEAD OF, vea [CREATE TRIGGER &#40;Transact-SQL&#41;](../../t-sql/statements/create-trigger-transact-sql.md).  
   
 ## <a name="limitations-and-restrictions"></a>Limitaciones y restricciones  
  Cuando se usa TOP con DELETE, las filas a las que hace referencia no están organizadas de ninguna manera y la cláusula ORDER BY no se puede especificar directamente en esta instrucción. Si necesita utilizar TOP para eliminar filas por un orden cronológico significativo, debe usar TOP junto con una cláusula ORDER BY en una instrucción de subselección. Vea la sección Ejemplos que aparece más adelante en este tema.  
@@ -320,7 +321,7 @@ DELETE spqh
 ```  
   
 #### <a name="e-using-top-to-limit-the-number-of-rows-deleted"></a>E. Utilizar TOP para limitar el número de filas eliminadas  
- Cuando se utiliza una cláusula TOP (*n*) con DELETE, la operación de eliminación se realiza en una selección aleatoria de un número de filas *n*. En el ejemplo siguiente se eliminan `20` filas aleatorias de la tabla `PurchaseOrderDetail` de la base de datos [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)] cuyas fechas de vencimiento sean anteriores al 1 de julio de 2006.  
+ Cuando se usa una cláusula TOP (*n*) con DELETE, la operación de eliminación se realiza en una selección aleatoria de un número de filas *n*. En el ejemplo siguiente se eliminan `20` filas aleatorias de la tabla `PurchaseOrderDetail` de la base de datos [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)] cuyas fechas de vencimiento sean anteriores al 1 de julio de 2006.  
   
 ```  
 DELETE TOP (20)   
@@ -346,7 +347,7 @@ GO
 **Se aplica a**: desde [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] hasta [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].  
   
 #### <a name="f-deleting-data-from-a-remote-table-by-using-a-linked-server"></a>F. Eliminar datos de una tabla remota usando un servidor vinculado  
- En el ejemplo siguiente se eliminan filas de una tabla remota. En el ejemplo se comienza creando un vínculo al origen de datos remoto mediante [sp_addlinkedserver](../../relational-databases/system-stored-procedures/sp-addlinkedserver-transact-sql.md). El nombre del servidor vinculado, `MyLinkServer`, se especifica después como parte del nombre de objeto de cuatro partes con el formato *server.catalog.schema.object*.  
+ En el ejemplo siguiente se eliminan filas de una tabla remota. En el ejemplo primero se crea un vínculo al origen de datos remoto mediante [sp_addlinkedserver](../../relational-databases/system-stored-procedures/sp-addlinkedserver-transact-sql.md). El nombre del servidor vinculado, `MyLinkServer`, se especifica después como parte del nombre de objeto de cuatro partes con el formato *server.catalog.schema.object*.  
   
 ```  
 USE master;  
@@ -463,7 +464,7 @@ OPTION ( LABEL = N'label1' );
 ```  
   
 ### <a name="n-using-a-label-and-a-query-hint-with-the-delete-statement"></a>N. Usar una etiqueta y una sugerencia de consulta con la instrucción DELETE  
- Esta consulta muestra la sintaxis básica para usar una sugerencia de combinación de consulta con la instrucción DELETE. Para obtener más información sobre las sugerencias de combinación y cómo usar la cláusula OPTION, vea [OPTION (PDW de SQL Server)](http://msdn.microsoft.com/en-us/72bbce98-305b-42fa-a19f-d89620621ecc).  
+ Esta consulta muestra la sintaxis básica para usar una sugerencia de combinación de consulta con la instrucción DELETE. Para más información sobre las sugerencias de combinación y cómo usar la cláusula OPTION, vea [OPTION (PDW de SQL Server)](http://msdn.microsoft.com/en-us/72bbce98-305b-42fa-a19f-d89620621ecc).  
   
 ```  
 -- Uses AdventureWorks  

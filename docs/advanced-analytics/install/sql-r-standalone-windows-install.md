@@ -7,16 +7,16 @@ ms.topic: conceptual
 author: HeidiSteen
 ms.author: heidist
 manager: cgronlun
-ms.openlocfilehash: 7562a807fd53b2148b1b7787db5efb4c3cda7134
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
+ms.openlocfilehash: e7e5b61cb8e41d818fc13d1cc97cd4d998256efc
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="install-sql-server-2016-r-server-standalone"></a>Instalar a SQL Server 2016 R Server (independiente)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
 
-En este artículo se describe cómo usar el programa de instalación de SQL Server 2016 para instalar la versión independiente de **R 2016 de SQL Server**. Si tiene una edición Enterprise o Software Assurance, instalar la R Server independiente en un servidor de producción es gratuito.
+En este artículo se describe cómo usar el programa de instalación de SQL Server 2016 para instalar la versión independiente de **R 2016 de SQL Server**.
 
 ## <a name="bkmk_prereqs"> </a> Lista de comprobación previa a la instalación
 

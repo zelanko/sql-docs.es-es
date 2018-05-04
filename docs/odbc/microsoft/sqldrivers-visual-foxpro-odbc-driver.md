@@ -11,7 +11,7 @@ ms.suite: sql
 ms.technology:
 - drivers
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - SQLDrivers function [ODBC], Visual FoxPro ODBC Driver
 ms.assetid: 179b11e0-665f-45a2-b926-c3d870a0dab8
@@ -19,12 +19,11 @@ caps.latest.revision: 5
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: 1b94970456fe45afa4a304fcea8d475890175a99
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
-ms.translationtype: MT
+ms.openlocfilehash: a8bb25806b0359abc53bca60f0f8e17f74d2ddb3
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="sqldrivers-visual-foxpro-odbc-driver"></a>SQLDrivers (controlador ODBC de Visual FoxPro)
 > [!NOTE]  

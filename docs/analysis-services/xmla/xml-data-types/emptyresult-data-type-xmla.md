@@ -29,15 +29,15 @@ caps.latest.revision: 28
 author: Minewiskan
 ms.author: owend
 manager: kfile
-ms.workload: Inactive
-ms.openlocfilehash: d9eb4f523fb783e9ded2e1a1d9d9c26e220331c5
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
-ms.translationtype: MT
+ms.openlocfilehash: 54f4160d5f92ce9f17a56d7d123acd9ad7e60d9b
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="emptyresult-data-type-xmla"></a>Tipo de datos EmptyResult (XMLA)
-[!INCLUDE[ssas-appliesto-sqlas-aas](../../../includes/ssas-appliesto-sqlas-aas.md)]Define un tipo de datos derivado que representa un [raíz](../../../analysis-services/xmla/xml-elements-properties/root-element-xmla.md) elemento que no devuelve datos desde una [Discover](../../../analysis-services/xmla/xml-elements-methods-discover.md) o [Execute](../../../analysis-services/xmla/xml-elements-methods-execute.md) llamada al método.  
+[!INCLUDE[ssas-appliesto-sqlas-aas](../../../includes/ssas-appliesto-sqlas-aas.md)]
+  Define un tipo de datos derivado que representa un [raíz](../../../analysis-services/xmla/xml-elements-properties/root-element-xmla.md) elemento que no devuelve datos desde una [Discover](../../../analysis-services/xmla/xml-elements-methods-discover.md) o [Execute](../../../analysis-services/xmla/xml-elements-methods-execute.md) llamada al método.  
   
  **Espacio de nombres** urn:schemas-microsoft-com:xml-analysis:empty  
   
@@ -52,17 +52,17 @@ ms.lasthandoff: 01/08/2018
   
 ## <a name="data-type-characteristics"></a>Características del tipo de datos  
   
-|Característica|Description|  
+|Característica|Descripción|  
 |--------------------|-----------------|  
 |Tipos de datos base|[Conjunto de resultados](../../../analysis-services/xmla/xml-data-types/resultset-data-type-xmla.md)|  
-|Tipos de datos derivados|None|  
+|Tipos de datos derivados|Ninguno|  
   
 ## <a name="data-type-relationships"></a>Relaciones entre tipos de datos  
   
 |Relación|Elemento|  
 |------------------|-------------|  
-|Elementos primarios|None|  
-|Elementos secundarios|None|  
+|Elementos primarios|Ninguno|  
+|Elementos secundarios|Ninguno|  
 |Elementos derivados|[raíz](../../../analysis-services/xmla/xml-elements-properties/root-element-xmla.md)|  
   
 ## <a name="remarks"></a>Comentarios  
@@ -78,6 +78,6 @@ ms.lasthandoff: 01/08/2018
 ```  
   
 ## <a name="see-also"></a>Vea también  
- [Tipos de datos XML &#40; XMLA &#41;](../../../analysis-services/xmla/xml-data-types/xml-data-types-xmla.md)  
+ [Tipos de datos XML &#40;XMLA&#41;](../../../analysis-services/xmla/xml-data-types/xml-data-types-xmla.md)  
   
   

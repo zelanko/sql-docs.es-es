@@ -11,7 +11,7 @@ ms.suite: sql
 ms.technology:
 - drivers
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - batches [ODBC], executing
 - SQL statements [ODBC], batches
@@ -20,12 +20,11 @@ caps.latest.revision: 6
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: 0ebbba1ef4141ed71a80afa91c28d9b12a6dbacc
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
-ms.translationtype: MT
+ms.openlocfilehash: 8f888b1719653ed48e3ecf28fc356506aa06a31e
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="executing-batches"></a>Ejecución de lotes
 Antes de que una aplicación ejecuta un lote de instrucciones, debe comprobar primero si son compatibles. Para ello, la aplicación llama **SQLGetInfo** con las opciones de SQL_BATCH_SUPPORT, SQL_PARAM_ARRAY_ROW_COUNTS y SQL_PARAM_ARRAY_SELECTS. La primera opción devuelve si generación de recuento de filas y el resultado de conjunto: generar instrucciones son compatibles con lotes explícitos y procedimientos, mientras las dos últimas opciones devuelven información acerca de la disponibilidad de recuentos de filas y el resultado se establece en parámetros ejecución.  

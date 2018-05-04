@@ -21,12 +21,11 @@ caps.latest.revision: 10
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: 011f08da24f4109ec50cba80013c2f4b2673680a
-ms.sourcegitcommit: bb044a48a6af9b9d8edb178dc8c8bd5658b9ff68
-ms.translationtype: MT
+ms.openlocfilehash: 2dffab0ab4a42a3a67258a6ba6af44124857e593
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/18/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="refresh-method-example-vb"></a>Actualización de ejemplo del método (VB)
 Este ejemplo muestra cómo utilizar el [actualizar](../../../ado/reference/ado-api/refresh-method-ado.md) método para actualizar la [parámetros](../../../ado/reference/ado-api/parameters-collection-ado.md) colección para un procedimiento almacenado [comando](../../../ado/reference/ado-api/command-object-ado.md) objeto.  

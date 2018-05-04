@@ -10,7 +10,7 @@ ms.reviewer: ''
 ms.suite: pro-bi
 ms.technology: ''
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql13.asvs.bidtoolset.versioncompat.f1
 ms.assetid: 8943d78d-4a73-4be8-ad14-3d428f5abd06
@@ -18,12 +18,11 @@ caps.latest.revision: 27
 author: Minewiskan
 ms.author: owend
 manager: kfile
-ms.workload: On Demand
-ms.openlocfilehash: 6fbd08b52c50e8ea010f4fcc6664176935457322
-ms.sourcegitcommit: 8f1d1363e18e0c32ff250617ab6cb2da2147bf8e
-ms.translationtype: MT
+ms.openlocfilehash: 6777bd4ccf60ceed1ff1892c494c9236b682b4a0
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/03/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="compatibility-level-for-analysis-services-tabular-models"></a>Nivel de compatibilidad para los modelos tabulares de Analysis Services
 [!INCLUDE[ssas-appliesto-sqlas-aas](../../includes/ssas-appliesto-sqlas-aas.md)]
@@ -49,8 +48,8 @@ Características principales en el nivel de compatibilidad de 1400 incluyen:
 |**Nivel de compatibilidad**|**Versión del servidor**| 
 |1400|Servicios de análisis de Azure, SQL Server de 2017 |  
 |1200|Servicios de análisis de Azure, SQL Server de 2017, SQL Server 2016| 
-|1103|SQL Server 2017*, SQL Server 2016, SQL Server 2014, SQL Server 2012 SP1|  
-|1100|SQL Server 2017*, SQL Server 2016, SQL Server 2014, SQL Server 2012 SP1, SQL Server 2012| 
+|1103|SQL Server de 2017 *, SQL Server 2016, SQL Server 2014, SQL Server 2012 SP1|  
+|1100|SQL Server de 2017 *, SQL Server 2016, SQL Server 2014, SQL Server 2012 SP1, SQL Server 2012| 
 
 \* niveles de compatibilidad 1100 y 1103 están desusados en SQL Server 2017.
   

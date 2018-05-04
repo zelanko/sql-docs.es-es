@@ -1,5 +1,5 @@
 ---
-title: '&gt;(Mayor que) (MDX) | Documentos de Microsoft'
+title: '&gt; (Mayor que) (MDX) | Documentos de Microsoft'
 ms.custom: ''
 ms.date: 03/02/2016
 ms.prod: analysis-services
@@ -23,14 +23,13 @@ caps.latest.revision: 33
 author: Minewiskan
 ms.author: owend
 manager: erikre
-ms.workload: Inactive
-ms.openlocfilehash: f60f464114d9ff0c2bf51257d03ec9e0952a7a7f
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
-ms.translationtype: MT
+ms.openlocfilehash: 0706b604d1a1aa7be55ab856e6f3cfec53ea9e8a
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 05/03/2018
 ---
-# <a name="gt-greater-than-mdx"></a>&gt;(Mayor que) (MDX)
+# <a name="gt-greater-than-mdx"></a>&gt; (Mayor que) (MDX)
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
 
   Realiza una operación de comparación que determina si el valor de una expresión multidimensional (MDX) es mayor que el valor de otra expresión MDX.  
@@ -77,6 +76,6 @@ WHERE
 ```  
   
 ## <a name="see-also"></a>Vea también  
- [Referencia de operadores MDX &#40; MDX &#41;](../mdx/mdx-operator-reference-mdx.md)  
+ [Referencia de operadores MDX &#40;MDX&#41;](../mdx/mdx-operator-reference-mdx.md)  
   
   

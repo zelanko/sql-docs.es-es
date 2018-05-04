@@ -1,16 +1,16 @@
 ---
-title: "Los valores que faltan (Analysis Services: minería de datos) | Documentos de Microsoft"
-ms.custom: 
+title: 'Los valores que faltan (Analysis Services: minería de datos) | Documentos de Microsoft'
+ms.custom: ''
 ms.date: 03/20/2017
 ms.prod: analysis-services
 ms.prod_service: analysis-services
-ms.service: 
+ms.service: ''
 ms.component: data-mining
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: pro-bi
-ms.technology: 
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.technology: ''
+ms.tgt_pltfrm: ''
+ms.topic: conceptual
 helpviewer_keywords:
 - attributes [data mining]
 - MISSING_VALUE_SUBSTITUTION
@@ -19,20 +19,19 @@ helpviewer_keywords:
 - null values [Analysis Services]
 - coding [Data Mining]
 ms.assetid: 2b34abdc-7ed4-4ec1-8780-052a704d6dbe
-caps.latest.revision: 
+caps.latest.revision: 17
 author: Minewiskan
 ms.author: owend
 manager: kfile
-ms.workload: Inactive
-ms.openlocfilehash: 78f57e86acdbcf9292e462854c97ebf4c91f79b1
-ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
-ms.translationtype: MT
+ms.openlocfilehash: afc031617c0d4e5f0c93e011b2a1a40432227290
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/15/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="missing-values-analysis-services---data-mining"></a>Valores ausentes (Analysis Services - Minería de datos)
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
-Controlar los  *valores ausentes* correctamente constituye una parte importante del modelado eficiente. En esta sección se explica qué son los valores ausentes, y se describen las características proporcionadas en [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] para trabajar con valores ausentes al generar estructuras y modelos de minería de datos.  
+  Controlar los  *valores ausentes* correctamente constituye una parte importante del modelado eficiente. En esta sección se explica qué son los valores ausentes, y se describen las características proporcionadas en [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] para trabajar con valores ausentes al generar estructuras y modelos de minería de datos.  
   
 ## <a name="definition-of-missing-values-in-data-mining"></a>Definición de los valores ausentes en la minería de datos  
  Un valor ausente puede tener distintos significados. Es posible que el campo no fuera aplicable, que el evento no se produjera o que los datos no estuvieran disponibles. También puede deberse a que la persona que escribió los datos no conocía el valor correcto, o no se preocupó de rellenar un campo.  
@@ -115,13 +114,13 @@ El algoritmo de árboles de decisión proporciona un ajuste adicional que ayuda 
   
 |Tareas|Vínculos|  
 |-----------|-----------|  
-|Agregar marcas a columnas del modelo individuales para controlar la administración de los valores ausentes|[Ver o cambiar modelado marcas &#40; minería de datos &#41;](../../analysis-services/data-mining/view-or-change-modeling-flags-data-mining.md)|  
+|Agregar marcas a columnas del modelo individuales para controlar la administración de los valores ausentes|[Ver o cambiar modelado marcas & #40; minería de datos & #41;](../../analysis-services/data-mining/view-or-change-modeling-flags-data-mining.md)|  
 |Establecer propiedades en un modelo de minería de datos para controlar la administración de los valores ausentes|[Cambiar las propiedades de un modelo de minería de datos](../../analysis-services/data-mining/change-the-properties-of-a-mining-model.md)|  
-|Obtenga información acerca de cómo especificar las marcas de modelado en DMX|[Marcas de modelado &#40; DMX &#41;](../../dmx/modeling-flags-dmx.md)|  
+|Obtenga información acerca de cómo especificar las marcas de modelado en DMX|[Marcas de modelado & #40; DMX & #41;](../../dmx/modeling-flags-dmx.md)|  
 |Modificar la forma en la que la estructura de minería de datos administra los valores ausentes|[Cambiar las propiedades de una estructura de minería de datos](../../analysis-services/data-mining/change-the-properties-of-a-mining-structure.md)|  
   
 ## <a name="see-also"></a>Vea también  
- [Contenido del modelo de minería de datos &#40; Analysis Services: minería de datos &#41;](../../analysis-services/data-mining/mining-model-content-analysis-services-data-mining.md)   
- [Modelado marcas &#40; minería de datos &#41;](../../analysis-services/data-mining/modeling-flags-data-mining.md)  
+ [Contenido del modelo de minería de datos & #40; Analysis Services: minería de datos & #41;](../../analysis-services/data-mining/mining-model-content-analysis-services-data-mining.md)   
+ [Modelado marcas & #40; minería de datos & #41;](../../analysis-services/data-mining/modeling-flags-data-mining.md)  
   
   

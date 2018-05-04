@@ -11,7 +11,7 @@ ms.suite: sql
 ms.technology:
 - drivers
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - SQLGetStmtOption function [ODBC], mapping
 - mapping deprecated functions [ODBC], SQLGetStmtOption
@@ -20,15 +20,14 @@ caps.latest.revision: 5
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: ce6b64f9151808e8b02f3036638d7322d3012938
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
-ms.translationtype: MT
+ms.openlocfilehash: ceb6213d6e10195cff663d4206d21a62f3e2fc75
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="sqlgetstmtoption-mapping"></a>Asignación de SQLGetStmtOption
-Cuando una aplicación llama **SQLGetStmtOption** a una aplicación ODBC 3*.x* controlador que no lo admite, la llamada a  
+Cuando una aplicación llama **SQLGetStmtOption** a una aplicación ODBC 3 *.x* controlador que no lo admite, la llamada a  
   
 ```  
 SQLGetStmtOption(hstmt, fOption, pvParam)  
@@ -58,6 +57,6 @@ SQLGetStmtOption(hstmt, fOption, pvParam)
   
  Opciones de conexión de la cadena definida por ODBC, el Administrador de controladores establece la *BufferLength* argumento en la llamada a **SQLGetConnectAttr** a la longitud máxima predefinida (SQL_MAX_OPTION_STRING_LENGTH); para una opción de conexión que no son cadenas, *BufferLength* se establece en 0.  
   
- La opción de instrucción SQL_GET_BOOKMARK está en desuso en ODBC 3*.x*. Para una aplicación ODBC 3*.x* controlador para trabajar con ODBC 2. *x* las aplicaciones que utilizan SQL_GET_BOOKMARK, debe admitir SQL_GET_BOOKMARK. Para una aplicación ODBC 3*.x* controlador para trabajar con ODBC 2. *x* de las aplicaciones, deben admitir establecer SQL_USE_BOOKMARKS en SQL_UB_ON y debe exponer los marcadores de longitud fija. Si una aplicación ODBC 3*.x* controlador admite solamente los marcadores de longitud variable, marcadores de longitud no fija, debe devolver HYC00 SQLSTATE (característica opcional no implementada) si una API ODBC 2. *x* aplicación intenta establecer SQL_USE_BOOKMARKS a SQL_UB_ON.  
+ La opción de instrucción SQL_GET_BOOKMARK está en desuso en ODBC 3 *.x*. Para una aplicación ODBC 3 *.x* controlador para trabajar con ODBC 2. *x* las aplicaciones que utilizan SQL_GET_BOOKMARK, debe admitir SQL_GET_BOOKMARK. Para una aplicación ODBC 3 *.x* controlador para trabajar con ODBC 2. *x* de las aplicaciones, deben admitir establecer SQL_USE_BOOKMARKS en SQL_UB_ON y debe exponer los marcadores de longitud fija. Si una aplicación ODBC 3 *.x* controlador admite solamente los marcadores de longitud variable, marcadores de longitud no fija, debe devolver HYC00 SQLSTATE (característica opcional no implementada) si una API ODBC 2. *x* aplicación intenta establecer SQL_USE_BOOKMARKS a SQL_UB_ON.  
   
- Para una aplicación ODBC 3*.x* controlador, el Administrador de controladores ya no se comprueba para ver si *opción* es entre SQL_STMT_OPT_MIN y SQL_STMT_OPT_MAX o es mayor que SQL_CONNECT_OPT_DRVR_START. El controlador debe comprobarlo.
+ Para una aplicación ODBC 3 *.x* controlador, el Administrador de controladores ya no se comprueba para ver si *opción* es entre SQL_STMT_OPT_MIN y SQL_STMT_OPT_MAX o es mayor que SQL_CONNECT_OPT_DRVR_START. El controlador debe comprobarlo.

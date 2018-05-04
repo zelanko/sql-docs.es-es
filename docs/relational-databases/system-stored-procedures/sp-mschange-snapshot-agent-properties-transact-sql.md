@@ -24,12 +24,11 @@ caps.latest.revision: 20
 author: edmacauley
 ms.author: edmaca
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: b3219fc1832d781e3156ec4a2284c3a8e861db67
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
-ms.translationtype: MT
+ms.openlocfilehash: 864b6d3fdaddf900d416685499571ccd6d9dd198
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="spmschangesnapshotagentproperties-transact-sql"></a>sp_MSchange_snapshot_agent_properties (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -128,7 +127,7 @@ sp_MSchange_snapshot_agent_properties [ @publisher = ] 'publisher'
  Es el modo de seguridad que el agente utiliza al conectarse al publicador. *publisher_security_mode* es **int**, no tiene ningún valor predeterminado. **0** especifica [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] autenticación, y **1** especifica autenticación de Windows. Un valor de **0** debe especificarse para no[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] publicadores. [!INCLUDE[ssNoteWinAuthentication](../../includes/ssnotewinauthentication-md.md)]  
   
  [ **@publisher_login**=] **'***publisher_login***'**  
- Es el inicio de sesión utilizado al conectar al publicador. *publisher_login* es **sysname**, no tiene ningún valor predeterminado. *publisher_login* debe especificarse cuando *publisher_security_mode* es **0**. Si *publisher_login* es NULL y el publicador*_ ** security_mode* es **1**, la cuenta de Windows especificada en *job_login* será se utiliza al conectarse al publicador.  
+ Es el inicio de sesión utilizado al conectar al publicador. *publisher_login* es **sysname**, no tiene ningún valor predeterminado. *publisher_login* debe especificarse cuando *publisher_security_mode* es **0**. Si *publisher_login* es NULL y el publicador *_ ** security_mode* es **1**, la cuenta de Windows especificada en *job_login* será se utiliza al conectarse al publicador.  
   
  [ **@publisher_password**=] **'***publisher_password***'**  
  Es la contraseña utilizada para conectarse al publicador. *publisher_password* es **nvarchar (524)**, no tiene ningún valor predeterminado.  

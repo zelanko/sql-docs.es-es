@@ -11,7 +11,7 @@ ms.suite: sql
 ms.technology:
 - drivers
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - display size of data types [ODBC]
 - size of data types [ODBC]
@@ -22,12 +22,11 @@ caps.latest.revision: 6
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: 8f0cd835b31863fa8427f4cb175c66ded5f7e308
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
-ms.translationtype: MT
+ms.openlocfilehash: 9a4735e4e05c4ffe3b9f22f94149c027c1da1034
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="display-size"></a>Tamaño de presentación
 El tamaño de presentación de una columna es el número máximo de caracteres necesarios para mostrar los datos en formato de carácter. En la tabla siguiente define el tamaño de presentación para cada tipo de datos SQL de ODBC.  

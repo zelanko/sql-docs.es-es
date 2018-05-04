@@ -1,35 +1,23 @@
 ---
-title: "Crear una nueva estructura de minería de datos OLAP | Documentos de Microsoft"
-ms.custom: 
-ms.date: 03/14/2017
-ms.prod: analysis-services
-ms.prod_service: analysis-services
-ms.service: 
+title: Crear una nueva estructura de minería de datos OLAP | Documentos de Microsoft
+ms.date: 05/01/2018
+ms.prod: sql
+ms.technology: analysis-services
 ms.component: data-mining
-ms.reviewer: 
-ms.suite: pro-bi
-ms.technology: 
-ms.tgt_pltfrm: 
 ms.topic: article
-helpviewer_keywords:
-- mining structures [Analysis Services], OLAP
-- mining structures [Analysis Services], creating
-- OLAP [Analysis Services], mining models
-ms.assetid: 368f4273-a016-4748-bcb6-505a3e745af3
-caps.latest.revision: 
-author: Minewiskan
 ms.author: owend
+ms.reviewer: owend
+author: minewiskan
 manager: kfile
-ms.workload: Inactive
-ms.openlocfilehash: a60a88bbf9816e4af0260cde3063f5bd6d5240e6
-ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
+ms.openlocfilehash: 0fddfe905885463d567c21285b2f9a62c6105cb6
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/15/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="create-a-new-olap-mining-structure"></a>Crear una estructura de minería de datos OLAP
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
-Puede usar el Asistente para minería de datos de [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] para crear una estructura de minería de datos que utilice datos de un modelo multidimensional. Los modelos de minería de datos basados en los cubos OLAP pueden utilizar las columnas y los valores de las tablas de hechos, las dimensiones y los grupos de medida como atributos para el análisis.  
+  Puede usar el Asistente para minería de datos de [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] para crear una estructura de minería de datos que utilice datos de un modelo multidimensional. Los modelos de minería de datos basados en los cubos OLAP pueden utilizar las columnas y los valores de las tablas de hechos, las dimensiones y los grupos de medida como atributos para el análisis.  
   
 ### <a name="to-create-a-new-olap-mining-structure"></a>Para crear una estructura de minería de datos OLAP  
   

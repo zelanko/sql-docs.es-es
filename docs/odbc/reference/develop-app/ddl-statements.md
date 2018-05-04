@@ -11,7 +11,7 @@ ms.suite: sql
 ms.technology:
 - drivers
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - SQL statements [ODBC], interoperability
 - interoperability of SQL statements [ODBC], DDL statements
@@ -21,12 +21,11 @@ caps.latest.revision: 5
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: 61605252563150f4bb957eda14a95c5745650656
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
-ms.translationtype: MT
+ms.openlocfilehash: 28a8beb7646ea9542b940d5106cf4177dbf2430e
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="ddl-statements"></a>Instrucciones DDL
 Las instrucciones de lenguaje de definición (DDL) de datos varían enormemente entre DBMS. SQL de ODBC define las instrucciones para las operaciones más habituales de definición de datos: crear y quitar tablas, índices y vistas; modificar tablas; conceder y revocar privilegios. Todas las demás instrucciones de DDL son específicos del origen de datos. Por lo tanto, las aplicaciones interoperables no pueden realizar algunas operaciones de definición de datos. En general, esto no supone un problema, porque estas operaciones tienden a ser muy específica de los DBMS y son más adecuadas izquierda para el software de administración de base de datos propietaria incluidos con la mayoría de los DBMS o el programa de instalación que se incluye con el controlador.  

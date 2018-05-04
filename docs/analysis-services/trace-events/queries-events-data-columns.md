@@ -18,15 +18,15 @@ caps.latest.revision: 33
 author: Minewiskan
 ms.author: owend
 manager: kfile
-ms.workload: Inactive
-ms.openlocfilehash: f329c73f2fbfd0b99e45c2012fb90b90ec52f879
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
-ms.translationtype: MT
+ms.openlocfilehash: d4159c87fb93415ab615d63eb52cd4516ce96fda
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="queries-events-data-columns"></a>Columnas de datos de Eventos de consultas
-[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]La categoría de eventos de eventos de consultas tiene las siguientes clases de evento:  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
+  La categoría de eventos Eventos de consultas tiene las siguientes clases de eventos:  
   
 |**Identificador del evento**|**Nombre del evento**|**Descripción del evento**|  
 |------------------|--------------------|---------------------------|  
@@ -66,7 +66,7 @@ ms.lasthandoff: 01/08/2018
 |CurrentTime|2|5|Contiene la hora actual del evento, si está disponible. Para filtrar, los formatos esperados son "AAAA-MM-DD" y "AAAA-MM-DD HH:MM:SS".|  
 |StartTime|3|5|Contiene la hora a la que se inició el evento, si está disponible. Para filtrar, los formatos esperados son "AAAA-MM-DD" y "AAAA-MM-DD HH:MM:SS".|  
 |EndTime|4|5|Contiene la hora a la que finalizó el evento. Esta columna no se llena para las clases de eventos de inicio, como SQL:BatchStarting o SP:Starting. Para filtrar, los formatos esperados son "AAAA-MM-DD" y "AAAA-MM-DD HH:MM:SS".|  
-|Duration|5|2|Contiene la cantidad de tiempo transcurrido (en milisegundos) que duró el evento.|  
+|Duración|5|2|Contiene la cantidad de tiempo transcurrido (en milisegundos) que duró el evento.|  
 |CPUTime|6|2|Contiene la cantidad de tiempo de CPU (en milisegundos) usada por el evento.|  
 |Severity|22|1|Contiene el nivel de gravedad de una excepción asociada al evento de consulta. Los valores son:<br /><br /> 0 = Correcto.<br /><br /> 1 = De información<br /><br /> 2 = Advertencia<br /><br /> 3 = Error|  
 |Success|23|1|Contiene el éxito o el fracaso de un evento de consulta. Los valores son:<br /><br /> 0 = Error<br /><br /> 1 = Correcto|  
@@ -84,6 +84,6 @@ ms.lasthandoff: 01/08/2018
 |ServerName|43|8|Contiene el nombre de la instancia de [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] en la que se ha producido el evento de consulta.|  
   
 ## <a name="see-also"></a>Vea también  
- [Categoría Eventos de consultas](../../analysis-services/trace-events/queries-events-category.md)  
+ [Categoría eventos de consultas](../../analysis-services/trace-events/queries-events-category.md)  
   
   

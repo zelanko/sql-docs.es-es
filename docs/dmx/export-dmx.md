@@ -25,12 +25,11 @@ caps.latest.revision: 39
 author: Minewiskan
 ms.author: owend
 manager: erikre
-ms.workload: Inactive
-ms.openlocfilehash: cc1b2baa40c0e8b6b40a5dddf2c336a4141b4810
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
-ms.translationtype: MT
+ms.openlocfilehash: a37e8eb706ca4528b94575a43c0e6daf96aa281d
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="export-dmx"></a>EXPORT (DMX)
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
@@ -45,10 +44,10 @@ EXPORT <object type> <object name>[, <object name>] [<object type> <object name>
 ```  
   
 ## <a name="arguments"></a>Argumentos  
- *tipo de objeto*  
+ *Tipo de objeto*  
  Opcional el tipo de objeto que se va a exportar (modelo de minería de datos o la estructura de minería de datos).  
   
- *nombre de objeto*  
+ *Nombre de objeto*  
  Opcional. Nombre del objeto que se va a exportar.  
   
  *nombre de archivo*  
@@ -74,10 +73,10 @@ EXPORT MINING MODEL [Association] TO 'C:\Association_NEW.abf' WITH DEPENDENCIES
 ```  
   
 ## <a name="see-also"></a>Vea también  
- [Extensiones de minería de datos &#40; DMX &#41; Instrucciones de definición de datos](../dmx/dmx-statements-data-definition.md)   
- [Extensiones de minería de datos &#40; DMX &#41; Instrucciones de manipulación de datos](../dmx/dmx-statements-data-manipulation.md)   
- [Extensiones de minería de datos &#40; DMX &#41; Referencia de instrucciones](../dmx/data-mining-extensions-dmx-statements.md)   
- [IMPORTAR &#40; DMX &#41;](../dmx/import-dmx.md)   
+ [Extensiones de minería de datos &#40;DMX&#41; las instrucciones de definición de datos](../dmx/dmx-statements-data-definition.md)   
+ [Extensiones de minería de datos &#40;DMX&#41; instrucciones de manipulación de datos](../dmx/dmx-statements-data-manipulation.md)   
+ [Extensiones de minería de datos &#40;DMX&#41; Referencia de instrucciones](../dmx/data-mining-extensions-dmx-statements.md)   
+ [IMPORTAR &AMP;#40;DMX&AMP;#41;](../dmx/import-dmx.md)   
  [Exportar e importar objetos de minería de datos](../analysis-services/data-mining/export-and-import-data-mining-objects.md)  
   
   

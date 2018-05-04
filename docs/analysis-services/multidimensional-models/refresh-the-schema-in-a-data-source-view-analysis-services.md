@@ -1,35 +1,23 @@
 ---
 title: Actualizar el esquema de una vista del origen de datos (Analysis Services) | Documentos de Microsoft
-ms.custom: 
-ms.date: 03/01/2017
-ms.prod: analysis-services
-ms.prod_service: analysis-services
-ms.service: 
-ms.component: data-mining
-ms.reviewer: 
-ms.suite: pro-bi
-ms.technology: 
-ms.tgt_pltfrm: 
+ms.date: 05/02/2018
+ms.prod: sql
+ms.technology: analysis-services
+ms.component: multidimensional-models
 ms.topic: article
-helpviewer_keywords:
-- data source views [Analysis Services], schema updates
-- refreshing data source views
-- data source views [Analysis Services], refreshing
-ms.assetid: 634b0504-1437-43e7-8ac7-3248ac7989a3
-caps.latest.revision: 
-author: Minewiskan
 ms.author: owend
+ms.reviewer: owend
+author: minewiskan
 manager: kfile
-ms.workload: On Demand
-ms.openlocfilehash: 31b9c4f95cca42e2150cab40b92308df89efbef6
-ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
+ms.openlocfilehash: 9d3cf2ef0c5368664d52ecc9ff0c21a8edfa6061
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/15/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="refresh-the-schema-in-a-data-source-view-analysis-services"></a>Actualizar el esquema de una vista del origen de datos (Analysis Services)
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
-Después de definir una vista del origen de datos (DSV) en un proyecto o base de datos de [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)], el esquema de un origen de datos subyacente puede cambiar. Estos cambios no se detectan ni se actualizan automáticamente en un proyecto de desarrollo. Además, si implementó el proyecto en un servidor y Analysis Services no puede establecer conexión con el origen de datos externo, se producirán errores de procesamiento.  
+  Después de definir una vista del origen de datos (DSV) en un proyecto o base de datos de [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)], el esquema de un origen de datos subyacente puede cambiar. Estos cambios no se detectan ni se actualizan automáticamente en un proyecto de desarrollo. Además, si implementó el proyecto en un servidor y Analysis Services no puede establecer conexión con el origen de datos externo, se producirán errores de procesamiento.  
   
  Para actualizar la DSV de forma que coincida con el origen de datos externo, puede hacerlo en Business Intelligence Development Studio (BIDS). El proceso de actualización de la DSV detecta los cambios que se han producido en los orígenes de datos externos en los que se basa la DSV, y crea una lista con dichos cambios; en ella se enumeran las adiciones o eliminaciones que han tenido lugar en el origen de datos externo. A continuación, puede aplicar el conjunto de cambios a la DSV para que esta se vuelva a alinear con el origen de datos subyacente. Tenga en cuenta que a menudo es necesario trabajo adicional para actualizar los cubos y las dimensiones del proyecto que usa la DSV.  
   

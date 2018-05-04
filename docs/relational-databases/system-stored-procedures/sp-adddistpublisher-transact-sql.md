@@ -24,12 +24,11 @@ caps.latest.revision: 35
 author: edmacauley
 ms.author: edmaca
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: 0332ecba1226855d841ba9f8619e660cb72e91af
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
-ms.translationtype: MT
+ms.openlocfilehash: 3ca0d66f6b5a4df2e0d4f4fa79d9eb882159c431
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="spadddistpublisher-transact-sql"></a>sp_adddistpublisher (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -79,10 +78,10 @@ sp_adddistpublisher [ @publisher= ] 'publisher'
 >  No utilice una contraseña en blanco. Utilice una contraseña segura.  
   
  [  **@working_directory=**] **'***working_directory***'**  
- Es el nombre del directorio de trabajo utilizado para almacenar archivos de datos y de esquema para la publicación. *working_directory* es **nvarchar (255)**y el valor predeterminado es la carpeta ReplData para esta instancia de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], por ejemplo, 'C:\Program Files\Microsoft SQL Server\MSSQL\MSSQ.1\ReplData'. El nombre se debe especificar en el formato UNC.  
+ Es el nombre del directorio de trabajo utilizado para almacenar archivos de datos y de esquema para la publicación. *working_directory* es **nvarchar (255)** y el valor predeterminado es la carpeta ReplData para esta instancia de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], por ejemplo, 'C:\Program Files\Microsoft SQL Server\MSSQL\MSSQ.1\ReplData'. El nombre se debe especificar en el formato UNC.  
   
  [  **@trusted=**] **'***confianza***'**  
- Este parámetro ha quedado desusado y solamente se proporciona por compatibilidad con versiones anteriores. *confianza* es **nvarchar (5)**y si se establece en cualquier cosa menos **false** se producirá un error.  
+ Este parámetro ha quedado desusado y solamente se proporciona por compatibilidad con versiones anteriores. *confianza* es **nvarchar (5)** y si se establece en cualquier cosa menos **false** se producirá un error.  
   
  [  **@encrypted_password=**] *encrypted_password*  
  Establecer *encrypted_password* ya no se admite. Intentando establecer esta **bits** parámetro **1** se producirá un error.  

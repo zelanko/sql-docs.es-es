@@ -11,7 +11,7 @@ ms.suite: sql
 ms.technology:
 - drivers
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - connecting to driver [ODBC], file data sources
 - SQLDriverConnect function [ODBC], connecting using file data sources
@@ -24,12 +24,11 @@ caps.latest.revision: 7
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.workload: On Demand
-ms.openlocfilehash: 70b0f5dd8c8ff133d1eb1b1a35c5ce24a7cc7ad5
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
-ms.translationtype: MT
+ms.openlocfilehash: c598ed0eff0bbc760406332779df7a2839f97849
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="connecting-using-file-data-sources"></a>Conectar con orígenes de datos de archivo
 La información de conexión para un origen de datos de archivo se almacena en un archivo de DSN. Como resultado, la cadena de conexión se puede utilizar repetidamente a un solo usuario o compartir entre varios usuarios si tienen instalado el controlador apropiado. El archivo contiene un nombre de controlador (u otro nombre de origen de datos en el caso de un origen de datos de archivo no se puede compartir) y si lo desea, una cadena de conexión que se puede usar por **SQLDriverConnect**. El Administrador de controladores genera la cadena de conexión de la llamada a **SQLDriverConnect** de las palabras clave en el archivo de DSN.  

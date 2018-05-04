@@ -29,15 +29,15 @@ caps.latest.revision: 12
 author: Minewiskan
 ms.author: owend
 manager: kfile
-ms.workload: Inactive
-ms.openlocfilehash: ad12131fe961f279bf0d670d91ab03900a8a6ad1
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
-ms.translationtype: MT
+ms.openlocfilehash: e28ea0859b689cec5d1ebeae987fdf55dc768205
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="axisinfo-element-xmla"></a>Elemento AxisInfo (XMLA)
-[!INCLUDE[ssas-appliesto-sqlas-aas](../../../includes/ssas-appliesto-sqlas-aas.md)]Representa los metadatos de un solo eje contenido por el elemento primario [AxesInfo](../../../analysis-services/xmla/xml-elements-properties/axesinfo-element-xmla.md) elemento.  
+[!INCLUDE[ssas-appliesto-sqlas-aas](../../../includes/ssas-appliesto-sqlas-aas.md)]
+  Representa los metadatos de un solo eje contenido por el elemento primario [AxesInfo](../../../analysis-services/xmla/xml-elements-properties/axesinfo-element-xmla.md) elemento.  
   
 ## <a name="syntax"></a>Sintaxis  
   
@@ -52,12 +52,12 @@ ms.lasthandoff: 01/08/2018
 </AxesInfo>  
 ```  
   
-## <a name="element-characteristics"></a>Características del elemento  
+## <a name="element-characteristics"></a>Características de los elementos  
   
-|Característica|Description|  
+|Característica|Descripción|  
 |--------------------|-----------------|  
-|Tipo y longitud de los datos|None|  
-|Valor predeterminado|None|  
+|Tipo y longitud de los datos|Ninguno|  
+|Valor predeterminado|Ninguno|  
 |Cardinalidad|1-n: Elemento necesario que puede aparecer más de una vez.|  
   
 ## <a name="element-relationships"></a>Relaciones del elemento  
@@ -69,7 +69,7 @@ ms.lasthandoff: 01/08/2018
   
 ## <a name="attributes"></a>Atributos  
   
-|Attribute|Description|  
+|Atributo|Description|  
 |---------------|-----------------|  
 |Nombre|Atributo **String** requerido. El nombre del eje.|  
   
@@ -77,6 +77,6 @@ ms.lasthandoff: 01/08/2018
  En un **raíz** elemento que usa el **MDDataSet** objeto, un **AxisInfo** elemento contiene una colección de **HierarchyInfo** elementos que , combinado con el valor de la **nombre** atributo, representa la definición de un eje único devuelto en el conjunto de datos multidimensional.  
   
 ## <a name="see-also"></a>Vea también  
- [Propiedades &#40; XMLA &#41;](../../../analysis-services/xmla/xml-elements-properties/xml-elements-properties.md)  
+ [Propiedades & #40; XMLA & #41;](../../../analysis-services/xmla/xml-elements-properties/xml-elements-properties.md)  
   
   

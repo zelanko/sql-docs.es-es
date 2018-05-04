@@ -11,7 +11,7 @@ ms.suite: sql
 ms.technology:
 - drivers
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - SQLFreeStmt function [ODBC], mapping
 - mapping deprecated functions [ODBC], SQLFreeStmt
@@ -20,15 +20,14 @@ caps.latest.revision: 5
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: 72f3924b668750030329e118e7201cbc0ea835d8
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
-ms.translationtype: MT
+ms.openlocfilehash: 77392dff0f22fcabd26b54cad700bb5cebcde2bf
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="sqlfreestmt-mapping"></a>Asignación de SQLFreeStmt
-Cuando una aplicación llama **SQLFreeStmt** con una *opción* argumento de SQL_DROP a través de una aplicación ODBC 3*.x* controlador, la llamada a  
+Cuando una aplicación llama **SQLFreeStmt** con una *opción* argumento de SQL_DROP a través de una aplicación ODBC 3 *.x* controlador, la llamada a  
   
 ```  
 SQLFreeStmt(hstmt, SQL_DROP)   

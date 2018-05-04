@@ -28,17 +28,16 @@ caps.latest.revision: 17
 author: Minewiskan
 ms.author: owend
 manager: erikre
-ms.workload: Inactive
-ms.openlocfilehash: 0e0dd4c6f3a5fe6fddf538389581f1554704691c
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
-ms.translationtype: MT
+ms.openlocfilehash: a6ed1613fdb2d0b6f77cbbf0724bfdf74d5249cc
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="mdx-data-definition---create-global-cube"></a>Definición de datos MDX - Crear cubo GLOBAL
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
 
-  Crea y rellena un cubo guardado de forma local basado en un subcubo de un cubo del servidor. No es necesaria una conexión al servidor para conectarse al cubo almacenado de forma local. Para obtener más información acerca de los cubos locales, consulte [cubos locales &#40; Analysis Services - datos multidimensionales &#41; ](../analysis-services/multidimensional-models/olap-physical/local-cubes-analysis-services-multidimensional-data.md).  
+  Crea y rellena un cubo guardado de forma local basado en un subcubo de un cubo del servidor. No es necesaria una conexión al servidor para conectarse al cubo almacenado de forma local. Para obtener más información acerca de los cubos locales, consulte [cubos locales &#40;Analysis Services - datos multidimensionales&#41;](../analysis-services/multidimensional-models/olap-physical/local-cubes-analysis-services-multidimensional-data.md).  
   
 ## <a name="syntax"></a>Sintaxis  
   
@@ -217,7 +216,7 @@ MEMBER [Date].[Fiscal].[Fiscal Year].&[2005]
 ```  
   
 ## <a name="see-also"></a>Vea también  
- [Instrucciones de definición de datos MDX &#40; MDX &#41;](../mdx/mdx-data-definition-statements-mdx.md)   
- [Crear instrucción de cubo de sesión &#40; MDX &#41;](../mdx/mdx-data-definition-create-session-cube.md)  
+ [Instrucciones de definición de datos MDX &#40;MDX&#41;](../mdx/mdx-data-definition-statements-mdx.md)   
+ [Instrucción CREATE SESSION CUBE &#40;MDX&#41;](../mdx/mdx-data-definition-create-session-cube.md)  
   
   

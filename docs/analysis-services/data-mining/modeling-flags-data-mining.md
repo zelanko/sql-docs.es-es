@@ -1,16 +1,16 @@
 ---
-title: "Marcas de modelado (minería de datos) | Documentos de Microsoft"
-ms.custom: 
+title: Marcas de modelado (minería de datos) | Documentos de Microsoft
+ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: analysis-services
 ms.prod_service: analysis-services
-ms.service: 
+ms.service: ''
 ms.component: data-mining
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: pro-bi
-ms.technology: 
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.technology: ''
+ms.tgt_pltfrm: ''
+ms.topic: conceptual
 helpviewer_keywords:
 - attributes [data mining]
 - data types [data mining]
@@ -24,16 +24,15 @@ helpviewer_keywords:
 - MODEL_EXISTENCE_ONLY column
 - coding [Data Mining]
 ms.assetid: 8826d5ce-9ba8-4490-981b-39690ace40a4
-caps.latest.revision: 
+caps.latest.revision: 48
 author: Minewiskan
 ms.author: owend
 manager: kfile
-ms.workload: Inactive
-ms.openlocfilehash: 0b7139d1120e9b244ae4bc20e32951c52cc7f37d
-ms.sourcegitcommit: 6bd21109abedf64445bdb3478eea5aaa7553fa46
-ms.translationtype: MT
+ms.openlocfilehash: 3b093edcee33ee9172342de04cd9bb01e62d7547
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/20/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="modeling-flags-data-mining"></a>Marcas de modelado (Minería de datos)
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
@@ -111,13 +110,13 @@ WHERE MODEL_NAME = '<model name>'
   
 |Tarea|Tema|  
 |----------|-----------|  
-|Modificar las marcas de modelado mediante el Diseñador de minería de datos|[Ver o cambiar modelado marcas &#40; minería de datos &#41;](../../analysis-services/data-mining/view-or-change-modeling-flags-data-mining.md)|  
+|Modificar las marcas de modelado mediante el Diseñador de minería de datos|[Ver o cambiar modelado marcas & #40; minería de datos & #41;](../../analysis-services/data-mining/view-or-change-modeling-flags-data-mining.md)|  
 |Especificar una sugerencia al algoritmo para recomendar regresores probables|[Especificar una columna para utilizar como regresor en un modelo](../../analysis-services/data-mining/specify-a-column-to-use-as-regressor-in-a-model.md)|  
-|Ver las marcas de modelado admitidas por algoritmos concretos (en la sección Marcas de modelado de cada tema de referencia del algoritmo)|[Algoritmos de minería de datos &#40; Analysis Services: minería de datos &#41;](../../analysis-services/data-mining/data-mining-algorithms-analysis-services-data-mining.md)|  
+|Ver las marcas de modelado admitidas por algoritmos concretos (en la sección Marcas de modelado de cada tema de referencia del algoritmo)|[Algoritmos de minería de datos & #40; Analysis Services: minería de datos & #41;](../../analysis-services/data-mining/data-mining-algorithms-analysis-services-data-mining.md)|  
 |Obtener más información acerca de las columnas de la estructura de minería de datos y las propiedades que se pueden establecer en ellas|[Columnas de la estructura de minería de datos](../../analysis-services/data-mining/mining-structure-columns.md)|  
 |Obtener información sobre las marcas de modelado y las columnas del modelo de minería de datos que se pueden aplicar en el modelo|[Columnas del modelo de minería de datos](../../analysis-services/data-mining/mining-model-columns.md)|  
 |Ver la sintaxis para trabajar con marcas de modelado en instrucciones DMX|[Marcas de modelado &#40;DMX&#41;](../../dmx/modeling-flags-dmx.md)|  
-|Descripción de los valores que faltan y cómo trabajar con ellos|[Los valores que faltan &#40; Analysis Services: minería de datos &#41;](../../analysis-services/data-mining/missing-values-analysis-services-data-mining.md)|  
+|Descripción de los valores que faltan y cómo trabajar con ellos|[Los valores que faltan & #40; Analysis Services: minería de datos & #41;](../../analysis-services/data-mining/missing-values-analysis-services-data-mining.md)|  
 |Obtener información sobre cómo administrar los modelos y las estructuras y establecer las propiedades de uso|[Mover objetos de minería de datos](../../analysis-services/data-mining/moving-data-mining-objects.md)|  
   
   

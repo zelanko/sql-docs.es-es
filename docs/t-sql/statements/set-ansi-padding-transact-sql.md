@@ -1,16 +1,16 @@
 ---
 title: SET ANSI_PADDING (Transact-SQL) | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 12/04/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: sql-data-warehouse, pdw, sql-database
-ms.service: 
+ms.service: ''
 ms.component: t-sql|statements
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - ANSI_PADDING_TSQL
@@ -26,16 +26,17 @@ helpviewer_keywords:
 - SET ANSI_PADDING statement
 - trailing blanks
 ms.assetid: 92bd29a3-9beb-410e-b7e0-7bc1dc1ae6d0
-caps.latest.revision: 
+caps.latest.revision: 47
 author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 532df95a03b15d545c682d30b3b4d68e10ea5913
-ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+monikerRange: '>= aps-pdw-2016 || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
+ms.openlocfilehash: 5150d33ddb663329fda2fa60dc09571bd59d37bc
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/05/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="set-ansipadding-transact-sql"></a>SET ANSI_PADDING (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-asdw-pdw-md](../../includes/tsql-appliesto-ss2008-xxxx-asdw-pdw-md.md)]
@@ -70,13 +71,13 @@ SET ANSI_PADDING ON
   
 |Configuración|char(*n*) NOT NULL o binary(*n*) NOT NULL|char(*n*) NULL o binary(*n*) NULL|varchar(*n*) o varbinary(*n*)|  
 |-------------|----------------------------------------------------|--------------------------------------------|----------------------------------------|  
-|ON|Rellena el valor original (con espacios en blanco finales en las columnas **char** y con ceros finales en las columnas **binary**) hasta completar la longitud de la columna.|Sigue las mismas reglas que para **char(***n***)** o **binary(***n***)** NOT NULL cuando SET ANSI_PADDING está en ON.|Los espacios en blanco finales en los valores de caracteres insertados en las columnas **varchar** no se recortan. Los ceros a la derecha en los valores binarios insertados en las columnas **varbinary** no se recortan. Los valores no se rellenan hasta completar la longitud de la columna.|  
+|ON|Rellena el valor original (con espacios en blanco finales en las columnas **char** y con ceros finales en las columnas **binary**) hasta completar la longitud de la columna.|Sigue las mismas reglas que para **char(***n***)** o **binary(***n***)** NOT NULL cuando SET ANSI_PADDING está establecido en ON.|Los espacios en blanco finales en los valores de caracteres insertados en las columnas **varchar** no se recortan. Los ceros a la derecha en los valores binarios insertados en las columnas **varbinary** no se recortan. Los valores no se rellenan hasta completar la longitud de la columna.|  
 |OFF|Rellena el valor original (con espacios en blanco finales en las columnas **char** y con ceros finales en las columnas **binary**) hasta completar la longitud de la columna.|Sigue las mismas reglas que para **varchar** o **varbinary** cuando SET ANSI_PADDING está en OFF.|Los espacios en blanco finales en los valores de carácter insertados en una columna **varchar** se recortan. Los ceros a la derecha en los valores binarios insertados en una columna **varbinary** se recortan.|  
   
 > [!NOTE]  
 >  Cuando se rellenan las columnas **char**, se incluyen espacios en blanco y en las columnas **binary** se incluyen ceros. Cuando se recortan las columnas **char**, se recortan los espacios en blanco finales; en las columnas **binary** se recortan los ceros finales.  
   
- SET ANSI_PADDING también debe ser ON al crear o cambiar índices en columnas calculadas o vistas indizadas. Para obtener más información sobre las configuraciones de las opciones SET requeridas con vistas indizadas e índices en columnas calculadas, vea el apartado "Considerations When You Use the SET Statements" (Consideraciones al utilizar las instrucciones SET) en [SET Statements &#40;Transact-SQL&#41;](../../t-sql/statements/set-statements-transact-sql.md) (Instrucciones SET (Transact-SQL).  
+ SET ANSI_PADDING también debe ser ON al crear o cambiar índices en columnas calculadas o vistas indizadas. Para más información sobre las configuraciones de las opciones SET necesarias con vistas indizadas e índices en columnas calculadas, vea el apartado "Consideraciones al utilizar las instrucciones SET" en [Instrucciones SET &#40;Transact-SQL&#41;](../../t-sql/statements/set-statements-transact-sql.md).  
   
  El valor predeterminado de SET ANSI_PADDING es ON. El controlador ODBC de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client y el proveedor OLE DB de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client para [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] establecen automáticamente ANSI_PADDING en ON al conectarse. Esta opción se puede configurar en los orígenes de datos ODBC, en los atributos de conexión de ODBC o en las propiedades de conexión OLE DB establecidas en la aplicación antes de conectar. SET ANSI_PADDING tiene como opción predeterminada OFF en las conexiones desde aplicaciones DB-Library.  
   

@@ -19,12 +19,11 @@ caps.latest.revision: 4
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: f01b852cff7bd31a3db8c607a38e4e66da10cc8e
-ms.sourcegitcommit: bb044a48a6af9b9d8edb178dc8c8bd5658b9ff68
-ms.translationtype: MT
+ms.openlocfilehash: 86bf0db62ea607bf9957ed2566d7d223540090dd
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/18/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="idsoshapeextensions-interface"></a>Interfaz IDSOShapeExtensions
 Obtiene el objeto de origen de datos OLE DB subyacente para el proveedor de formas.  

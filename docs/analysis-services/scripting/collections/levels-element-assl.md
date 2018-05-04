@@ -27,15 +27,15 @@ caps.latest.revision: 31
 author: Minewiskan
 ms.author: owend
 manager: kfile
-ms.workload: Inactive
-ms.openlocfilehash: 0cc03b4d0698d4d90e0e1e9a0fbd7d025341cba3
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
-ms.translationtype: MT
+ms.openlocfilehash: 396772052a05b9c827341129847a7bdd8c4708fc
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="levels-element-assl"></a>Elemento Levels (ASSL)
-[!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]Contiene la colección de [nivel](../../../analysis-services/scripting/objects/level-element-assl.md) elementos en una [jerarquía](../../../analysis-services/scripting/objects/hierarchy-element-assl.md) elemento.  
+[!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]
+  Contiene la colección de [nivel](../../../analysis-services/scripting/objects/level-element-assl.md) elementos en una [jerarquía](../../../analysis-services/scripting/objects/hierarchy-element-assl.md) elemento.  
   
 ## <a name="syntax"></a>Sintaxis  
   
@@ -50,25 +50,25 @@ ms.lasthandoff: 01/08/2018
 </Hierarchy>  
 ```  
   
-## <a name="element-characteristics"></a>Características del elemento  
+## <a name="element-characteristics"></a>Características de los elementos  
   
-|Característica|Description|  
+|Característica|Descripción|  
 |--------------------|-----------------|  
-|Tipo y longitud de los datos|None|  
-|Valor predeterminado|None|  
-|Cardinalidad|0-1: Elemento opcional que puede aparecer una y solo una vez.|  
+|Tipo y longitud de los datos|Ninguno|  
+|Valor predeterminado|Ninguno|  
+|Cardinalidad|0-1: Elemento opcional que puede aparecer solo una vez.|  
   
 ## <a name="element-relationships"></a>Relaciones del elemento  
   
 |Relación|Elemento|  
 |------------------|-------------|  
-|Elementos primarios|[Hierarchy](../../../analysis-services/scripting/objects/hierarchy-element-assl.md)|  
-|Elementos secundarios|[Level](../../../analysis-services/scripting/objects/level-element-assl.md)|  
+|Elementos primarios|[Jerarquía de](../../../analysis-services/scripting/objects/hierarchy-element-assl.md)|  
+|Elementos secundarios|[Nivel](../../../analysis-services/scripting/objects/level-element-assl.md)|  
   
-## <a name="remarks"></a>Notas  
+## <a name="remarks"></a>Comentarios  
  El elemento correspondiente en el modelo de objetos de Analysis Management Objects (AMO) es <xref:Microsoft.AnalysisServices.LevelCollection>.  
   
-## <a name="see-also"></a>Ver también  
- [Colecciones de &#40; ASSL &#41;](../../../analysis-services/scripting/collections/collections-assl.md)  
+## <a name="see-also"></a>Vea también  
+ [Colecciones de & #40; ASSL & #41;](../../../analysis-services/scripting/collections/collections-assl.md)  
   
   

@@ -3,64 +3,64 @@ title: Comandos de Tabular modelo Scripting Language (TMSL) | Documentos de Micr
 ms.date: 05/30/2017
 ms.prod: analysis-services
 ms.prod_service: analysis-services, azure-analysis-services
-ms.service: 
-ms.component: 
-ms.reviewer: 
+ms.service: ''
+ms.component: ''
+ms.reviewer: ''
 ms.suite: pro-bi
-ms.custom: 
-ms.technology: 
-ms.tgt_pltfrm: 
+ms.custom: ''
+ms.technology: ''
+ms.tgt_pltfrm: ''
 ms.topic: reference
 ms.assetid: 4eb07192-6f53-4426-830a-d63a945dbcab
-caps.latest.revision: "12"
+caps.latest.revision: 12
 author: Minewiskan
 ms.author: owend
 manager: kfile
-ms.workload: Inactive
-ms.openlocfilehash: 39959a86e064da782097ddc75d9d3651b4d436fa
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
-ms.translationtype: MT
+ms.openlocfilehash: 9a40f9dad379ca93a9fc95d604e40cc901f2464a
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="tmsl-reference---commands"></a>Referencia TMSL - comandos
-[!INCLUDE[ssas-appliesto-sqlas-aas](../../includes/ssas-appliesto-sqlas-aas.md)]Puede ejecutar comandos en un punto de conexión XMLA, formular definiciones de objetos JSON mediante la Tabular Model Scripting Language (TMSL), en bases de datos de modelo Tabular.   Vea [definiciones de objetos tabulares modelo de lenguaje de Scripting &#40; TMSL &#41; ](../../analysis-services/tabular-models-scripting-language-objects/tmsl-reference-tabular-objects.md) para obtener una lista de objetos que se usan con los siguientes comandos.  
+[!INCLUDE[ssas-appliesto-sqlas-aas](../../includes/ssas-appliesto-sqlas-aas.md)]
+  Puede ejecutar comandos en un punto de conexión XMLA, formular definiciones de objetos JSON mediante la Tabular Model Scripting Language (TMSL), en bases de datos de modelo Tabular.   Vea [definiciones de objetos Tabular Model Scripting Language &#40;TMSL&#41; ](../../analysis-services/tabular-models-scripting-language-objects/tmsl-reference-tabular-objects.md) para obtener una lista de objetos que se usan con los siguientes comandos.  
   
 ## <a name="object-operations"></a>Operaciones de objeto  
   
 |||  
 |-|-|  
-|[ALTER comando &#40; TMSL &#41;](../../analysis-services/tabular-models-scripting-language-commands/alter-command-tmsl.md)|Modificar en línea a un objeto sin tener que especificar la definición completa.|  
-|[Crear comandos &#40; TMSL &#41;](../../analysis-services/tabular-models-scripting-language-commands/create-command-tmsl.md)|Crea un nuevo objeto, incluidos a sus descendientes.|  
-|[El comando CreateOrReplace &#40; TMSL &#41;](../../analysis-services/tabular-models-scripting-language-commands/createorreplace-command-tmsl.md)|Crear o reemplazar las partes de una definición de objeto. Se debe proporcionar la definición completa.|  
-|[Eliminar comando &#40; TMSL &#41;](../../analysis-services/tabular-models-scripting-language-commands/delete-command-tmsl.md)|Eliminar un objeto, incluidos a sus descendientes.|  
+|[ALTER, comando &#40;TMSL&#41;](../../analysis-services/tabular-models-scripting-language-commands/alter-command-tmsl.md)|Modificar en línea a un objeto sin tener que especificar la definición completa.|  
+|[Crear un comando &#40;TMSL&#41;](../../analysis-services/tabular-models-scripting-language-commands/create-command-tmsl.md)|Crea un nuevo objeto, incluidos a sus descendientes.|  
+|[El comando CreateOrReplace &#40;TMSL&#41;](../../analysis-services/tabular-models-scripting-language-commands/createorreplace-command-tmsl.md)|Crear o reemplazar las partes de una definición de objeto. Se debe proporcionar la definición completa.|  
+|[Comando Delete &#40;TMSL&#41;](../../analysis-services/tabular-models-scripting-language-commands/delete-command-tmsl.md)|Eliminar un objeto, incluidos a sus descendientes.|  
   
 ## <a name="data-refresh-operations"></a>Operaciones de actualización de datos  
   
 |||  
 |-|-|  
-|[El comando MergePartitions &#40; TMSL &#41;](../../analysis-services/tabular-models-scripting-language-commands/mergepartitions-command-tmsl.md)|Combinar una partición de destino en un origen y elimine el destino.|  
-|[Actualizar comandos &#40; TMSL &#41;](../../analysis-services/tabular-models-scripting-language-commands/refresh-command-tmsl.md)|Procesar una base de datos, tabla o partición.|  
+|[El comando MergePartitions &#40;TMSL&#41;](../../analysis-services/tabular-models-scripting-language-commands/mergepartitions-command-tmsl.md)|Combinar una partición de destino en un origen y elimine el destino.|  
+|[Comando Refresh &#40;TMSL&#41;](../../analysis-services/tabular-models-scripting-language-commands/refresh-command-tmsl.md)|Procesar una base de datos, tabla o partición.|  
   
 ## <a name="scripting"></a>Scripting  
   
 |||  
 |-|-|  
-|[El comando Sequence &#40; TMSL &#41;](../../analysis-services/tabular-models-scripting-language-commands/sequence-command-tmsl.md)|Procesar por lotes las operaciones de forma secuencial o en paralelo|  
+|[Secuencia de comandos &#40;TMSL&#41;](../../analysis-services/tabular-models-scripting-language-commands/sequence-command-tmsl.md)|Procesar por lotes las operaciones de forma secuencial o en paralelo|  
   
 ## <a name="database-management-operations"></a>Operaciones de administración de base de datos  
   
 |||  
 |-|-|  
-|[Asociar comandos &#40; TMSL &#41;](../../analysis-services/tabular-models-scripting-language-commands/attach-command-tmsl.md)|Agrega un archivo al servidor.|  
-|[Separar comando &#40; TMSL &#41;](../../analysis-services/tabular-models-scripting-language-commands/detach-command-tmsl.md)|Quita un archivo de los servidores.|  
-|[Comando de copia de seguridad &#40; TMSL &#41;](../../analysis-services/tabular-models-scripting-language-commands/backup-command-tmsl.md)|Crea un archivo de copia de seguridad de una base de datos.|  
-|[Restaurar comandos &#40; TMSL &#41;](../../analysis-services/tabular-models-scripting-language-commands/restore-command-tmsl.md)|Restaura la base de datos en el servidor.|  
-|[Sincronizar el comando &#40; TMSL &#41;](../../analysis-services/tabular-models-scripting-language-commands/synchronize-command-tmsl.md)|Sincroniza una base de datos de Analysis Services con otra base de datos existente.|  
+|[El comando Attach &#40;TMSL&#41;](../../analysis-services/tabular-models-scripting-language-commands/attach-command-tmsl.md)|Agrega un archivo al servidor.|  
+|[Detach, comando &#40;TMSL&#41;](../../analysis-services/tabular-models-scripting-language-commands/detach-command-tmsl.md)|Quita un archivo de los servidores.|  
+|[Comando de copia de seguridad &#40;TMSL&#41;](../../analysis-services/tabular-models-scripting-language-commands/backup-command-tmsl.md)|Crea un archivo de copia de seguridad de una base de datos.|  
+|[Comando restore &#40;TMSL&#41;](../../analysis-services/tabular-models-scripting-language-commands/restore-command-tmsl.md)|Restaura la base de datos en el servidor.|  
+|[Synchronize, comando &#40;TMSL&#41;](../../analysis-services/tabular-models-scripting-language-commands/synchronize-command-tmsl.md)|Sincroniza una base de datos de Analysis Services con otra base de datos existente.|  
   
 ## <a name="see-also"></a>Vea también  
  [Tabular Model Scripting Language &#40;TMSL&#41; Reference (Referencia de Tabular Model Scripting Language [TMSL])](../../analysis-services/tabular-model-scripting-language-tmsl-reference.md)   
- [Instalar proveedores de datos de Analysis Services &#40; AMO, ADOMD.NET, MSOLAP &#41;](../../analysis-services/instances/install-windows/install-analysis-services-data-providers-amo-adomd-net-msolap.md)   
+ [Instalar proveedores de datos de Analysis Services &#40;AMO, ADOMD.NET, MSOLAP&#41;](../../analysis-services/instances/install-windows/install-analysis-services-data-providers-amo-adomd-net-msolap.md)   
  [Nivel de compatibilidad para modelos tabulares de Analysis Services](../../analysis-services/tabular-models/compatibility-level-for-tabular-models-in-analysis-services.md)  
   
   

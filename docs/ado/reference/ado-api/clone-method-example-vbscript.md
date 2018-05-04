@@ -21,12 +21,11 @@ caps.latest.revision: 11
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: 15cc2e6d11486dd46d22c248921ec6fe4467e89e
-ms.sourcegitcommit: bb044a48a6af9b9d8edb178dc8c8bd5658b9ff68
-ms.translationtype: MT
+ms.openlocfilehash: 8283ca63a17a436b12832adf39aee69f22f0b7b5
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/18/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="clone-method-example-vbscript"></a>Ejemplo del método Clone (VBScript)
 Este ejemplo se utiliza la [clon](../../../ado/reference/ado-api/clone-method-ado.md) método para crear copias de un [Recordset](../../../ado/reference/ado-api/recordset-object-ado.md) y, a continuación, permite al usuario sitúe el puntero registro de cada copia de forma independiente.  

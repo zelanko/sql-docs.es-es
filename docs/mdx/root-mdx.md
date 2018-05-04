@@ -22,17 +22,16 @@ caps.latest.revision: 32
 author: Minewiskan
 ms.author: owend
 manager: erikre
-ms.workload: Inactive
-ms.openlocfilehash: 16e6fb8fb10816391a25d71a717cff5f4c7abe58
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
-ms.translationtype: MT
+ms.openlocfilehash: ef6d95e700e8eda518a33eb5d9482ef8a77d82b4
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="root-mdx"></a>Root (MDX)
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
 
-  Devuelve una tupla que consta de la **todos los** miembros de cada jerarquía de atributo dentro del ámbito actual en un cubo, dimensión o tupla. Para obtener más información acerca del ámbito, consulte [instrucción SCOPE &#40; MDX &#41; ](../mdx/mdx-scripting-scope.md).  
+  Devuelve una tupla que consta de la **todos los** miembros de cada jerarquía de atributo dentro del ámbito actual en un cubo, dimensión o tupla. Para obtener más información acerca del ámbito, consulte [instrucción SCOPE &#40;MDX&#41;](../mdx/mdx-scripting-scope.md).  
   
 > [!NOTE]  
 >  Si una jerarquía de atributo no tiene un **todos los** miembros, la tupla contiene el miembro predeterminado de esa jerarquía.  
@@ -91,6 +90,6 @@ WHERE [Measures].[Order Count]
 ```  
   
 ## <a name="see-also"></a>Vea también  
- [Referencia de funciones MDX &#40; MDX &#41;](../mdx/mdx-function-reference-mdx.md)  
+ [Referencia de funciones MDX & #40; MDX & #41;](../mdx/mdx-function-reference-mdx.md)  
   
   

@@ -1,29 +1,28 @@
 ---
-title: "Agrupar miembros de atributo automáticamente | Documentos de Microsoft"
-ms.custom: 
+title: Agrupar miembros de atributo automáticamente | Documentos de Microsoft
+ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: analysis-services
 ms.prod_service: analysis-services
-ms.service: 
-ms.component: 
-ms.reviewer: 
+ms.service: ''
+ms.component: ''
+ms.reviewer: ''
 ms.suite: pro-bi
-ms.technology: 
-ms.tgt_pltfrm: 
+ms.technology: ''
+ms.tgt_pltfrm: ''
 ms.topic: get-started-article
 applies_to:
 - SQL Server 2016
 ms.assetid: 9fb2cda3-a122-4a4c-82e0-3454865eef04
-caps.latest.revision: 
+caps.latest.revision: 14
 author: Minewiskan
 ms.author: owend
 manager: kfile
-ms.workload: Inactive
-ms.openlocfilehash: 86d4c1dcc16cc97b04a3c228087a9e9793cc5651
-ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
-ms.translationtype: MT
+ms.openlocfilehash: 3610dd5b5c2e6c597b6a6eda8eeebd3bfcb1b2d8
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/15/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="lesson-4-3---automatically-grouping-attribute-members"></a>Lección 4: 3: Agrupar automáticamente los miembros de atributo
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
@@ -36,7 +35,7 @@ La propiedad **DiscretizationMethod** determina si [!INCLUDE[ssASnoversion](../i
 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] crea intervalos de grupos de modo que la población total de los miembros de dimensión quede distribuida de forma homogénea en los grupos.  
   
 **Clusters**  
-[!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] crea grupos realizando una agrupación en clústeres unidimensionales en los valores de entrada mediante el método de agrupación en clústeres k-means con distribuciones gausianas. Esta opción solo es válida para columnas numéricas.  
+[!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] crea grupos realizando una agrupación en clústeres unidimensionales en los valores de entrada mediante el método de agrupación en clústeres mediana-K con distribuciones gausianas. Esta opción solo es válida para columnas numéricas.  
   
 Una vez que haya especificado un método de agrupación, debe especificar el número de grupos mediante la propiedad **DiscretizationBucketCount** . Para obtener más información, consulte [Agrupar miembros de atributos &#40;discretización&#41;](../analysis-services/multidimensional-models/attribute-properties-group-attribute-members.md)  
   
@@ -136,7 +135,7 @@ En las tareas de este tema, habilitará distintos tipos de agrupaciones para lo 
 [Ocultar y deshabilitar jerarquías de atributo](../analysis-services/lesson-4-4-hiding-and-disabling-attribute-hierarchies.md)  
   
 ## <a name="see-also"></a>Vea también  
-[Agrupar miembros de atributo &#40; discretización &#41;](../analysis-services/multidimensional-models/attribute-properties-group-attribute-members.md)  
+[Agrupar miembros de atributo & #40; discretización & #41;](../analysis-services/multidimensional-models/attribute-properties-group-attribute-members.md)  
   
   
   

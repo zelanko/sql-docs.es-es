@@ -1,34 +1,33 @@
 ---
-title: "Arquitectura física (Analysis Services: minería de datos) | Documentos de Microsoft"
-ms.custom: 
+title: 'Arquitectura física (Analysis Services: minería de datos) | Documentos de Microsoft'
+ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: analysis-services
 ms.prod_service: analysis-services
-ms.service: 
+ms.service: ''
 ms.component: data-mining
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: pro-bi
-ms.technology: 
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.technology: ''
+ms.tgt_pltfrm: ''
+ms.topic: conceptual
 helpviewer_keywords:
 - server architecture [Analysis Services]
 - architecture [Analysis Services]
 ms.assetid: 25eeecf0-6e85-4527-b94d-5503d27edaed
-caps.latest.revision: 
+caps.latest.revision: 22
 author: Minewiskan
 ms.author: owend
 manager: kfile
-ms.workload: Inactive
-ms.openlocfilehash: a8a4319e77588c13a06a6c648bcfafa11fb7c92b
-ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
-ms.translationtype: MT
+ms.openlocfilehash: 034f28cb159aad73e1d7b18201971eb514d4fce3
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/15/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="physical-architecture-analysis-services---data-mining"></a>Arquitectura física (Analysis Services - Minería de datos)
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
-  [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] usa tanto componentes de servidor como de cliente para proporcionar la funcionalidad de minería de datos en las aplicaciones Business Intelligence:  
+  [!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] usa componentes de servidor y cliente para proporcionar la funcionalidad de minería de datos para aplicaciones de business intelligence:  
   
 -   El componente de servidor se implementa como servicio de Microsoft Windows. Puede tener varias instancias en el mismo equipo, con cada instancia de [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] implementada como instancia independiente del servicio de Windows.  
   
@@ -58,6 +57,6 @@ ms.lasthandoff: 02/15/2018
  Todas las comunicaciones entre un cliente y el servidor de Analysis Services usan XMLA, que es un protocolo independiente de la plataforma y del lenguaje. Cuando se recibe una solicitud de un cliente, Analysis Services determina si está relacionada con OLAP o con la minería de datos, y la enruta apropiadamente. Para obtener más información, vea [Componentes de servidor del motor OLAP](../../analysis-services/multidimensional-models/olap-physical/olap-engine-server-components.md).  
   
 ## <a name="see-also"></a>Vea también  
- [Arquitectura lógica &#40; Analysis Services: minería de datos &#41;](../../analysis-services/data-mining/logical-architecture-analysis-services-data-mining.md)  
+ [Arquitectura lógica & #40; Analysis Services: minería de datos & #41;](../../analysis-services/data-mining/logical-architecture-analysis-services-data-mining.md)  
   
   

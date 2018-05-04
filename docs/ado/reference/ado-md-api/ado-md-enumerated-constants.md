@@ -19,12 +19,11 @@ caps.latest.revision: 9
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: b3258927d884308786b01ffcd72d608e1f5c0722
-ms.sourcegitcommit: bb044a48a6af9b9d8edb178dc8c8bd5658b9ff68
-ms.translationtype: MT
+ms.openlocfilehash: 22fbfb7f64f136b59f773e13caa60ed17a610380
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/18/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="ado-md-enumerated-constants"></a>Constantes enumeradas de ADO MD
 Para facilitar la depuración, las constantes enumeradas de ADO MD muestran un valor para cada constante. Sin embargo, este valor es puramente informativo y puede cambiar de una versión de ADO MD a otra. El código sólo debería depender del nombre, no el valor real, de constantes enumeradas.  

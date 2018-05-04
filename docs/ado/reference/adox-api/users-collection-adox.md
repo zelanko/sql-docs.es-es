@@ -24,12 +24,11 @@ caps.latest.revision: 10
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: 9063eb3155db7ed9b9a7fb9ec4ece8cd9550b342
-ms.sourcegitcommit: bb044a48a6af9b9d8edb178dc8c8bd5658b9ff68
-ms.translationtype: MT
+ms.openlocfilehash: 0b474bff4885c2c184bd837e679700e284b23d61
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/18/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="users-collection-adox"></a>Colección Users (ADOX)
 Todos los contiene almacenados [usuario](../../../ado/reference/adox-api/user-object-adox.md) objetos de un [catálogo](../../../ado/reference/adox-api/catalog-object-adox.md) o [grupo](../../../ado/reference/adox-api/group-object-adox.md).  

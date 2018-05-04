@@ -2,7 +2,7 @@
 title: TOP (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/16/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
 ms.service: ''
 ms.component: t-sql|queries
@@ -28,11 +28,12 @@ author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ms.workload: Active
-ms.openlocfilehash: 926de1152e7c1223441d9ac85da11246049e31ea
-ms.sourcegitcommit: d6b1695c8cbc70279b7d85ec4dfb66a4271cdb10
-ms.translationtype: MT
+monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
+ms.openlocfilehash: 38b365674914575ab9bc25706fe5b9b3d0c012cc
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
+ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/10/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="top-transact-sql"></a>TOP (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -234,7 +235,7 @@ GO
 ###  <a name="DML"></a> Limitar las filas afectadas por DELETE, INSERT o UPDATE  
   
 #### <a name="a-using-top-to-limit-the-number-of-rows-deleted"></a>A. Utilizar TOP para limitar el número de filas eliminadas  
- Cuando una parte superior (*n*) se utiliza la cláusula con la eliminación, la operación de eliminación se realiza en una selección sin definir de *n* número de filas. Es decir, la instrucción DELETE elige cualquier (*n*) número de filas que cumplen los criterios definidos en la cláusula WHERE. En el ejemplo siguiente se eliminan `20` filas de la tabla `PurchaseOrderDetail` cuyas fechas de vencimiento son anteriores al 1 de julio de 2002.  
+ Cuando se usa una cláusula TOP (*n*) con DELETE, la operación de eliminación se realiza en una selección sin definir de *n* número de filas. Es decir, la instrucción DELETE elige cualquier número (*n*) de filas que cumplen los criterios definidos en la cláusula WHERE. En el ejemplo siguiente se eliminan `20` filas de la tabla `PurchaseOrderDetail` cuyas fechas de vencimiento son anteriores al 1 de julio de 2002.  
   
 ```sql  
 USE AdventureWorks2012;  
@@ -300,7 +301,7 @@ GO
 ```  
   
 #### <a name="c-using-top-to-limit-the-number-of-rows-updated"></a>C. Utilizar TOP para limitar el número de filas actualizadas  
- En el ejemplo siguiente se usa la cláusula TOP para actualizar filas de una tabla. Cuando una parte superior (*n*) se utiliza la cláusula con la actualización, la operación de actualización se realiza en un número indefinido de filas. Es decir, la instrucción UPDATE elige cualquier (*n*) número de filas que cumplen los criterios definidos en la cláusula WHERE. En el ejemplo siguiente se asignan 10 clientes de un vendedor a otro.  
+ En el ejemplo siguiente se usa la cláusula TOP para actualizar filas de una tabla. Cuando se usa una cláusula TOP (*n*) con UPDATE, la operación de actualización se realiza sobre un número sin definir de filas. Es decir, la instrucción UPDATE elige cualquier número (*n*) de filas que cumplen los criterios definidos en la cláusula WHERE. En el ejemplo siguiente se asignan 10 clientes de un vendedor a otro.  
   
 ```sql  
 USE AdventureWorks2012;  
@@ -342,7 +343,7 @@ FROM DimEmployee ORDER BY LastName;
   
  Resultado: se devuelven 33 filas, ya que tres empleados llamados Brown ocupan la fila 31.  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Ver también  
  [SELECT &#40;Transact-SQL&#41;](../../t-sql/queries/select-transact-sql.md)   
  [INSERT &#40;Transact-SQL&#41;](../../t-sql/statements/insert-transact-sql.md)   
  [UPDATE &#40;Transact-SQL&#41;](../../t-sql/queries/update-transact-sql.md)   

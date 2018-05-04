@@ -1,32 +1,23 @@
 ---
 title: Compartir las fuentes de datos mediante una biblioteca de fuentes de datos (PowerPivot para SharePoint) | Documentos de Microsoft
-ms.custom: ''
-ms.date: 03/01/2017
-ms.prod: analysis-services
-ms.prod_service: analysis-services
-ms.service: ''
-ms.component: data-mining
-ms.reviewer: ''
-ms.suite: pro-bi
-ms.technology: ''
-ms.tgt_pltfrm: ''
+ms.date: 05/02/2018
+ms.prod: sql
+ms.technology: analysis-services
+ms.component: ppvt-sharepoint
 ms.topic: article
-helpviewer_keywords:
-- data feeds [Analysis Services with SharePoint]
-ms.assetid: 4ec98dec-0cd2-4727-bb79-5bf6f8a865d6
-caps.latest.revision: 26
-author: Minewiskan
 ms.author: owend
+ms.reviewer: owend
+author: minewiskan
 manager: kfile
-ms.workload: Inactive
-ms.openlocfilehash: 3c9b2b0c9ed6a70ce6e596bd1afe8bd2b49fc3a4
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+ms.openlocfilehash: 6298382b8aa9fa61b197f2b220f10be85636a557
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="share-data-feeds-using-a-data-feed-library-power-pivot-for-sharepoint"></a>Compartir las fuentes de distribución de datos mediante una biblioteca de fuentes de distribución de datos (Power Pivot para SharePoint)
-[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]Una fuente de datos es un flujo de datos XML que se genera a partir de un servicio o aplicación que expone los datos en el formato Atom. Se usa cada vez más para transportar los datos entre las aplicaciones y a los visores del lado cliente. En una implementación de [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] para SharePoint, las fuentes de distribución de datos se usan para rellenar un origen de datos de [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] con datos de una aplicación o servicio que pueden usar Atom.  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
+  Una fuente de distribución de datos es un flujo de datos XML que se genera a partir de un servicio o aplicación que expone los datos en el formato en línea de Atom. Se usa cada vez más para transportar los datos entre las aplicaciones y a los visores del lado cliente. En una implementación de [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] para SharePoint, las fuentes de distribución de datos se usan para rellenar un origen de datos de [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] con datos de una aplicación o servicio que pueden usar Atom.  
   
  Si ya utiliza una combinación de aplicaciones que pueden usar Atom, puede que nunca necesite saber cómo se generan y usan las fuentes porque la transferencia de datos se realiza sin problemas entre las aplicaciones. Sin embargo, las organizaciones que utilizan soluciones personalizadas para publicar fuentes Atom a menudo necesitan una manera de hacer que las fuentes estén disponibles para los trabajadores de la información. Una forma de conseguirlo es crear y compartir archivos de documento de servicio de datos (.atomsvc) que proporcionan las conexiones a los orígenes en línea que producen las fuentes. Una biblioteca de propósito especial, denominada biblioteca de fuentes de distribución de datos, permite crear y compartir los documentos de servicio de datos en una aplicación web de SharePoint.  
   

@@ -1,37 +1,19 @@
 ---
-title: "Diseñar agregaciones (XMLA) | Documentos de Microsoft"
-ms.custom: 
-ms.date: 02/14/2018
-ms.prod: analysis-services
-ms.prod_service: analysis-services
-ms.service: 
-ms.component: 
-ms.reviewer: 
-ms.suite: pro-bi
-ms.technology: 
-ms.tgt_pltfrm: 
-ms.topic: reference
-applies_to:
-- SQL Server 2016 Preview
-helpviewer_keywords:
-- statistical information [XML for Analysis]
-- batches [XML for Analysis]
-- aggregations [Analysis Services], XML for Analysis
-- XMLA, aggregations
-- queries [XMLA]
-- XML for Analysis, aggregations
-- iterative aggregation process [XMLA]
-ms.assetid: 4dd27afa-10c7-408d-bc24-ca74217ddbcb
-caps.latest.revision: 
-author: Minewiskan
+title: Diseñar agregaciones (XMLA) | Documentos de Microsoft
+ms.date: 05/02/2018
+ms.prod: sql
+ms.technology: analysis-services
+ms.component: xmla
+ms.topic: article
 ms.author: owend
+ms.reviewer: owend
+author: minewiskan
 manager: kfile
-ms.workload: Inactive
-ms.openlocfilehash: 07e7d766fa70662c55330ef2a7569ecf22b88ccc
-ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
+ms.openlocfilehash: f020d4b154ecfef556b13be45fced0fa6095f17e
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/15/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="designing-aggregations-xmla"></a>Diseñar agregaciones (XMLA)
   Los diseños de agregaciones están asociados a las particiones de un grupo de medida determinado para asegurar que las particiones usan la misma estructura al almacenar agregaciones. Utilizando la misma estructura de almacenamiento para particiones le permite definir con facilidad las particiones que pueden combinarse más tarde mediante el [MergePartitions](../../analysis-services/xmla/xml-elements-commands/mergepartitions-element-xmla.md) comando. Para obtener más información acerca de los diseños de agregaciones, consulte [agregaciones y diseños de agregaciones](../../analysis-services/multidimensional-models-olap-logical-cube-objects/aggregations-and-aggregation-designs.md).  
@@ -74,7 +56,7 @@ ms.lasthandoff: 02/15/2018
  Por ejemplo, la cadena "011" haría referencia a una consulta que implicaría una dimensión con tres atributos, de los que el segundo y el tercero estarían incluidos en la consulta.  
   
 > [!NOTE]  
->  Algunos atributos no se tienen en cuenta en el conjunto de datos. Para obtener más información sobre los atributos excluidos, consulte [Query, elemento &#40; XMLA &#41; ](../../analysis-services/xmla/xml-elements-properties/query-element-xmla.md).  
+>  Algunos atributos no se tienen en cuenta en el conjunto de datos. Para obtener más información sobre los atributos excluidos, consulte [elemento Query &#40;XMLA&#41;](../../analysis-services/xmla/xml-elements-properties/query-element-xmla.md).  
   
  Cada dimensión del grupo de medida que contiene el diseño de agregaciones está representada por un valor *Dataset* en el elemento **Query** . El orden de los valores de *Dataset* debe coincidir con el orden de las dimensiones incluidas en el grupo de medidas.  
   
@@ -85,7 +67,7 @@ ms.lasthandoff: 02/15/2018
  Para generar de manera iterativa diseñar agregaciones, debe enviar varios **DesignAggregations** comandos para proporcionar un control exhaustivo sobre el proceso de diseño. El Asistente para diseñar agregaciones usa este mismo enfoque para proporcionar un control exhaustivo sobre el proceso de diseño. Para obtener más información, consulte [ayuda de F1 de Asistente de diseño de agregaciones](http://msdn.microsoft.com/library/39e23cf1-6405-4fb6-bc14-ba103314362d).  
   
 > [!NOTE]  
->  Para diseñar agregaciones de forma iterativa, se requiere una sesión explícita. Para obtener más información acerca de sesiones explícitas, vea [administrar conexiones y sesiones &#40; XMLA &#41; ](../../analysis-services/multidimensional-models-scripting-language-assl-xmla/managing-connections-and-sessions-xmla.md).  
+>  Para diseñar agregaciones de forma iterativa, se requiere una sesión explícita. Para obtener más información acerca de sesiones explícitas, vea [administrar conexiones y sesiones &#40;XMLA&#41;](../../analysis-services/multidimensional-models-scripting-language-assl-xmla/managing-connections-and-sessions-xmla.md).  
   
  Para iniciar el proceso iterativo, envíe primero un **DesignAggregations** comando que contiene la información siguiente:  
   
@@ -104,7 +86,7 @@ ms.lasthandoff: 02/15/2018
 ### <a name="designing-aggregations-using-a-batch-process"></a>Diseñar agregaciones mediante un proceso por lotes  
  También puede diseñar agregaciones en un proceso por lotes mediante el envío de una sola **DesignAggregations** comando que contiene el **pasos**, **tiempo**, **almacenamiento** , y **optimización** valores de propiedad en la que está dirigido y se limita el proceso de diseño completo. Si desea que la optimización basada en uso, las consultas de objetivo en el que va dirigido el proceso de diseño también deben incluirse en la **consultas** propiedad. También asegúrese de que el **Materialize** propiedad se establece en true, para que el proceso de diseño guarda las agregaciones definidas en el diseño de agregaciones cuando finaliza el comando.  
   
- Puede diseñar agregaciones mediante un proceso por lotes en una sesión tanto implícita como explícita. Para obtener más información acerca de las sesiones implícitas y explícitas, vea [administrar conexiones y sesiones &#40; XMLA &#41; ](../../analysis-services/multidimensional-models-scripting-language-assl-xmla/managing-connections-and-sessions-xmla.md).  
+ Puede diseñar agregaciones mediante un proceso por lotes en una sesión tanto implícita como explícita. Para obtener más información acerca de las sesiones implícitas y explícitas, vea [administrar conexiones y sesiones &#40;XMLA&#41;](../../analysis-services/multidimensional-models-scripting-language-assl-xmla/managing-connections-and-sessions-xmla.md).  
   
 ## <a name="returning-design-statistics"></a>Devolver estadísticas de diseño  
  Cuando el **DesignAggregations** comando devuelve el control a la aplicación cliente, el comando devuelve un conjunto de filas que contiene una sola fila que representa las estadísticas de diseño para el comando. El conjunto de filas contiene las columnas que se muestran en la tabla siguiente.  

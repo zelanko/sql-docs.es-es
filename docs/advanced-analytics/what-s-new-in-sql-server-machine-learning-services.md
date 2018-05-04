@@ -2,16 +2,16 @@
 title: ¿Qué&#39;s nuevo en servicios de aprendizaje de máquina de SQL Server | Documentos de Microsoft
 ms.prod: sql
 ms.technology: machine-learning
-ms.date: 04/15/2018
+ms.date: 05/02/2018
 ms.topic: conceptual
 author: HeidiSteen
 ms.author: heidist
 manager: cgronlun
-ms.openlocfilehash: 0f0487d26e602504fc776b1262414488e24c8336
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
+ms.openlocfilehash: 405e4636525898268c54f1a3d603c9e5da3dc14d
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="whats-new-in-sql-server-machine-learning-services"></a>Novedades en servicios de aprendizaje de máquina de SQL Server 
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
@@ -25,7 +25,9 @@ Esta versión agrega compatibilidad con Python y algoritmos de aprendizaje autom
 Esta versión también introducida **aprendizaje de máquina SQL Server (independiente)**, totalmente independiente de SQL Server, para las cargas de trabajo de R y Python que desea ejecutar en un sistema dedicado. Con el servidor independiente, puede distribuir y escalar las soluciones de R o Python sin usar SQL Server.
 
 | Versión | Actualización de la función |
-|---------|---------------|
+|---------|----------------|
+| CU 6 | Correcciones de errores y actualización de paquetes, pero no características nuevas de anuncios. Correcciones incluyen compatibilidad con tipos de datos de fecha y hora de consulta SPEES para Python y mensajes de error mejorados en microsoftml cuando faltan modelos previamente entrenados. |
+| CU 5 | Correcciones de errores y actualización de paquetes, pero no características nuevas de anuncios. Revisiones incluyen mejoras para transformar las funciones y variables en revoscalepy, corregir los errores de tiempo basadas en la ruta de acceso en rxInstallPackages, corregir las conexiones en un bucle invertido para RxExec y las funciones de rx_exec y las revisiones de mensajes de advertencia. |
 | CU 4 | Correcciones de errores y actualización de paquetes, pero no características nuevas de anuncios. |
 | CU 3 | Serialización en revoscalepy, de modelo de Python mediante la [rx_serialize_model función](https://docs.microsoft.com/machine-learning-server/python-reference/revoscalepy/rx-serialize-model).<br/><br/>[Puntuación nativo](sql-native-scoring.md) además de mejoras en [en tiempo real de puntuación](real-time-scoring.md). Con la puntuación en bases de datos, el rendimiento es un millón de filas por segundo a través de modelos de R. En esta actualización, la puntuación en tiempo real y la puntuación nativo ofrecen un mejor rendimiento en varias filas y la puntuación del lote. Nativo de puntuación utiliza una función de T-SQL para puntuar rápida puede ejecutar en cualquier edición de SQL Server, incluso en Linux. La función no requiere ninguna instalación de R o una configuración adicional. Esto significa que puede entrenar un modelo en otra parte, guárdela en SQL Server y, a continuación, realizar puntuaciones sin llamar nunca a R. Para obtener más información sobre las metodologías de puntuación, vea [cómo llevar a cabo en tiempo real de puntuación de puntuación nativo](r/how-to-do-realtime-scoring.md). |
 | CU 2 | Correcciones de errores y actualización de paquetes, pero no características nuevas de anuncios. |

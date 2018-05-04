@@ -11,7 +11,7 @@ ms.suite: sql
 ms.technology:
 - drivers
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 apiname:
 - SQLFreeHandle
 apilocation:
@@ -26,12 +26,11 @@ caps.latest.revision: 35
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: 601d1257b99e3c3a9713730ef1ea110905d0143f
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
-ms.translationtype: MT
+ms.openlocfilehash: 41ed0af53844edfe55203e8310ce326fb2c4e2b8
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="sqlfreehandle-function"></a>Función SQLFreeHandle
 **Conformidad**  
@@ -41,7 +40,7 @@ ms.lasthandoff: 04/16/2018
  **SQLFreeHandle** libera los recursos asociados con un identificador de entorno, conexión, instrucción o descriptor específico.  
   
 > [!NOTE]  
->  Esta función es una función genérica para la liberación de identificadores. Reemplaza las funciones ODBC 2.0 **SQLFreeConnect** (para liberar un identificador de conexión) y **SQLFreeEnv** (para liberar un identificador de entorno). **SQLFreeConnect** y **SQLFreeEnv** están desusadas en ODBC 3*.x*. **SQLFreeHandle** también reemplaza a la función de ODBC 2.0 **SQLFreeStmt** (con la SQL_DROP *opción*) para la liberación de un identificador de instrucción. Para obtener más información, vea "Comentarios". Para obtener más información sobre lo que el Administrador de controladores se asigna esta función cuando una aplicación ODBC 3*.x* aplicación está trabajando con una API ODBC 2*.x* controladores, consulte [asignación de funciones de reemplazo para hacia atrás Compatibilidad de las aplicaciones](../../../odbc/reference/develop-app/mapping-replacement-functions-for-backward-compatibility-of-applications.md).  
+>  Esta función es una función genérica para la liberación de identificadores. Reemplaza las funciones ODBC 2.0 **SQLFreeConnect** (para liberar un identificador de conexión) y **SQLFreeEnv** (para liberar un identificador de entorno). **SQLFreeConnect** y **SQLFreeEnv** están desusadas en ODBC 3 *.x*. **SQLFreeHandle** también reemplaza a la función de ODBC 2.0 **SQLFreeStmt** (con la SQL_DROP *opción*) para la liberación de un identificador de instrucción. Para obtener más información, vea "Comentarios". Para obtener más información sobre lo que el Administrador de controladores se asigna esta función cuando una aplicación ODBC 3 *.x* aplicación está trabajando con una API ODBC 2 *.x* controladores, consulte [asignación de funciones de reemplazo para hacia atrás Compatibilidad de las aplicaciones](../../../odbc/reference/develop-app/mapping-replacement-functions-for-backward-compatibility-of-applications.md).  
   
 ## <a name="syntax"></a>Sintaxis  
   
@@ -90,7 +89,7 @@ SQLRETURN SQLFreeHandle(
 |HY017|Uso no válido de un identificador de descriptor asignado automáticamente.|(DM) la *controlar* argumento se estableció en el identificador de un descriptor asignado automáticamente.|  
 |HY117|Se suspende la conexión debido al estado de transacción desconocido. Solo se desconecte y se permiten las funciones de solo lectura.|(DM) para obtener más información sobre el estado suspendido, consulte [función SQLEndTran](../../../odbc/reference/syntax/sqlendtran-function.md).|  
 |HYT01|Tiempo de espera de conexión expirado|El período de tiempo de espera de conexión finalizó antes de que el origen de datos se respondió a la solicitud. El período de tiempo de espera de conexión se establece a través de **SQLSetConnectAttr**, SQL_ATTR_CONNECTION_TIMEOUT.|  
-|IM001|Controlador no admite esta función|(DM) la *HandleType* argumento era SQL_HANDLE_DESC y el controlador fue un ODBC 2*.x* controlador.<br /><br /> (DM) la *HandleType* argumento era SQL_HANDLE_STMT y el controlador no era un controlador de ODBC válido.|  
+|IM001|Controlador no admite esta función|(DM) la *HandleType* argumento era SQL_HANDLE_DESC y el controlador fue un ODBC 2 *.x* controlador.<br /><br /> (DM) la *HandleType* argumento era SQL_HANDLE_STMT y el controlador no era un controlador de ODBC válido.|  
   
 ## <a name="comments"></a>Comentarios  
  **SQLFreeHandle** se utiliza para liberar identificadores de entornos, las conexiones, instrucciones y descriptores, tal como se describe en las secciones siguientes. Para obtener información general acerca de los identificadores, vea [identificadores](../../../odbc/reference/develop-app/handles.md).  
@@ -103,7 +102,7 @@ SQLRETURN SQLFreeHandle(
  Si el entorno es un entorno compartido, la aplicación que llama **SQLFreeHandle** con un *HandleType* de SQL_HANDLE_ENV ya no tiene acceso para el entorno después de la llamada, pero el entorno no necesariamente se liberarán los recursos. La llamada a **SQLFreeHandle** disminuye el recuento de referencias del entorno. El recuento de referencias se mantiene mediante el Administrador de controladores. Si no llegue a cero, no se libera el entorno compartido, porque todavía está siendo utilizado por otro componente. Si el recuento de referencias llega a cero, se liberan los recursos del entorno compartido.  
   
 ## <a name="freeing-a-connection-handle"></a>Liberar un identificador de conexión  
- Antes de llamar a **SQLFreeHandle** con un *HandleType* de SQL_HANDLE_DBC, una aplicación debe llamar a **SQLDisconnect** para la conexión si no hay una conexión en el objeto controlar*.* En caso contrario, la llamada a **SQLFreeHandle** devuelve SQL_ERROR y la conexión sigue siendo válida.  
+ Antes de llamar a **SQLFreeHandle** con un *HandleType* de SQL_HANDLE_DBC, una aplicación debe llamar a **SQLDisconnect** para la conexión si no hay una conexión en el objeto controlar *.* En caso contrario, la llamada a **SQLFreeHandle** devuelve SQL_ERROR y la conexión sigue siendo válida.  
   
  Para obtener más información, consulte [identificadores de conexión](../../../odbc/reference/develop-app/connection-handles.md) y [desconectarse de un origen de datos o el controlador](../../../odbc/reference/develop-app/disconnecting-from-a-data-source-or-driver.md).  
   
@@ -116,7 +115,7 @@ SQLRETURN SQLFreeHandle(
  Una llamada a **SQLFreeHandle** con un *HandleType* de SQL_HANDLE_DESC libera el identificador de descriptor en *controlar*. La llamada a **SQLFreeHandle** no libera memoria asignada por la aplicación que puede hacer referencia a un campo de puntero (incluidos SQL_DESC_DATA_PTR, SQL_DESC_INDICATOR_PTR y SQL_DESC_OCTET_LENGTH_PTR) de cualquier registro del descriptor de *controlar*. Cuando se libere el identificador, se libera la memoria asignada por el controlador para los campos que no son campos de puntero. Cuando se libera un identificador de descriptor asignado por el usuario, todas las instrucciones que tenía ha asociado el controlador liberado vuelven a sus identificadores correspondientes descriptor asignado automáticamente.  
   
 > [!NOTE]  
->  ODBC 2*.x* controladores no admiten la liberación de descriptor de identificadores, tal y como no admiten asignar identificadores de descriptor.  
+>  ODBC 2 *.x* controladores no admiten la liberación de descriptor de identificadores, tal y como no admiten asignar identificadores de descriptor.  
   
  Tenga en cuenta que **SQLDisconnect** quita automáticamente las instrucciones y los descriptores de abierto en la conexión. Cuando una aplicación libera un identificador de instrucción, el controlador libera todos los descriptores de generado automáticamente asociados con ese identificador.  
   

@@ -24,12 +24,11 @@ caps.latest.revision: 34
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: c779b314553c1895071ab04b5131d998c029cc94
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
-ms.translationtype: MT
+ms.openlocfilehash: cfc84d05393174ba804a5c3fc407da0e2fbe2159
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="sphelpnotification-transact-sql"></a>sp_help_notification (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -52,7 +51,7 @@ sp_help_notification
   
 ## <a name="arguments"></a>Argumentos  
  [  **@object_type =**] **'***object_type***'**  
- Tipo de información que se va a devolver. *object_type*es **char (9)**, no tiene ningún valor predeterminado. *object_type* puede ser ALERTS, que presenta las alertas asignadas al nombre del operador especificado*,* u OPERATORS, que presenta los operadores responsables del nombre de alerta especificado*.*  
+ Tipo de información que se va a devolver. *object_type*es **char (9)**, no tiene ningún valor predeterminado. *object_type* puede ser ALERTS, que presenta las alertas asignadas al nombre del operador especificado *,* u OPERATORS, que presenta los operadores responsables del nombre de alerta especificado *.*  
   
  [  **@name =**] **'***nombre***'**  
  Un nombre de operador (si *object_type* es OPERATORS) o un nombre de la alerta (si *object_type* es ALERTS). *nombre* es **sysname**, no tiene ningún valor predeterminado.  

@@ -11,7 +11,7 @@ ms.suite: sql
 ms.technology:
 - drivers
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - transitioning states [ODBC], statement
 - state transitions [ODBC], statement
@@ -21,12 +21,11 @@ caps.latest.revision: 8
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: a0566a32a2c34efca52391aea656c6908a7f8906
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
-ms.translationtype: MT
+ms.openlocfilehash: 94696a2975436669567db926b3d66020dd29ab5b
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="statement-transitions"></a>Transiciones de instrucción
 Instrucciones de ODBC tienen los siguientes estados.  
@@ -330,7 +329,7 @@ Instrucciones de ODBC tienen los siguientes estados.
   
  [1] esta fila muestra las transiciones cuando *opción* era SQL_CLOSE.  
   
- [2] esta fila muestra las transiciones cuando *opción* era SQL_UNBIND o SQL_RESET_PARAMS. Si el *opción* argumento era SQL_DROP y el controlador subyacente es una aplicación ODBC 3*.x* controlador, el Administrador de controladores se asigna a una llamada a **SQLFreeHandle** con  *HandleType* establecido en SQL_HANDLE_STMT. Para obtener más información, consulte la tabla de transición para [SQLFreeHandle](../../../odbc/reference/syntax/sqlfreehandle-function.md).  
+ [2] esta fila muestra las transiciones cuando *opción* era SQL_UNBIND o SQL_RESET_PARAMS. Si el *opción* argumento era SQL_DROP y el controlador subyacente es una aplicación ODBC 3 *.x* controlador, el Administrador de controladores se asigna a una llamada a **SQLFreeHandle** con  *HandleType* establecido en SQL_HANDLE_STMT. Para obtener más información, consulte la tabla de transición para [SQLFreeHandle](../../../odbc/reference/syntax/sqlfreehandle-function.md).  
   
 ## <a name="sqlgetconnectattr"></a>SQLGetConnectAttr  
   

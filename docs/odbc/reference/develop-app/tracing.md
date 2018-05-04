@@ -11,7 +11,7 @@ ms.suite: sql
 ms.technology:
 - drivers
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - tracing options [ODBC], about tracing
 - driver manager [ODBC], tracing
@@ -20,15 +20,14 @@ caps.latest.revision: 5
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: e7511981cfe9ec533455ee61c4cf75d33ec020cb
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
-ms.translationtype: MT
+ms.openlocfilehash: 7549f0790aa13882dc04ead78f097cf0035993e6
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="tracing"></a>Seguimiento
-El Administrador de controladores ODBC tiene una utilidad de seguimiento que permite a la secuencia de llamadas a funciones realizadas por una aplicación ODBC se registran y transcripción en un archivo de registro. El seguimiento se realiza mediante una DLL de seguimiento que captura llamadas realizadas entre la aplicación y el Administrador de controladores y entre el Administrador de controladores y el controlador. Este método de creación de trazas sustituye el seguimiento realizado por la API ODBC 2*.x* Administrador de controladores y el seguimiento se realizan en ODBC 2*.x* por ODBC Spy.  
+El Administrador de controladores ODBC tiene una utilidad de seguimiento que permite a la secuencia de llamadas a funciones realizadas por una aplicación ODBC se registran y transcripción en un archivo de registro. El seguimiento se realiza mediante una DLL de seguimiento que captura llamadas realizadas entre la aplicación y el Administrador de controladores y entre el Administrador de controladores y el controlador. Este método de creación de trazas sustituye el seguimiento realizado por la API ODBC 2 *.x* Administrador de controladores y el seguimiento se realizan en ODBC 2 *.x* por ODBC Spy.  
   
  Esta sección contiene los temas siguientes.  
   

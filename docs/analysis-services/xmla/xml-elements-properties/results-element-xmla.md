@@ -29,17 +29,17 @@ caps.latest.revision: 11
 author: Minewiskan
 ms.author: owend
 manager: kfile
-ms.workload: Inactive
-ms.openlocfilehash: 3b68533f174d5502c77d94be70aab4f0ff676071
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
-ms.translationtype: MT
+ms.openlocfilehash: d59d5be9eaf822b21ea3b5a24e0dacbe9dec56f7
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="results-element-xmla"></a>Elemento results (XMLA)
-[!INCLUDE[ssas-appliesto-sqlas-aas](../../../includes/ssas-appliesto-sqlas-aas.md)]Contiene una colección de [raíz](../../../analysis-services/xmla/xml-elements-properties/root-element-xmla.md) elementos devueltos por la [Execute](../../../analysis-services/xmla/xml-elements-methods-execute.md) método mediante el [lote](../../../analysis-services/xmla/xml-elements-commands/batch-element-xmla.md) comando.  
+[!INCLUDE[ssas-appliesto-sqlas-aas](../../../includes/ssas-appliesto-sqlas-aas.md)]
+  Contiene una colección de elementos [root](../../../analysis-services/xmla/xml-elements-properties/root-element-xmla.md) devuelta por el método [Execute](../../../analysis-services/xmla/xml-elements-methods-execute.md) utilizando el comando [Batch](../../../analysis-services/xmla/xml-elements-commands/batch-element-xmla.md) .  
   
- **Namespace**`http://schemas.microsoft.com/analysisservices/2003/xmla-multipleresults`  
+ **Namespace** `http://schemas.microsoft.com/analysisservices/2003/xmla-multipleresults`  
   
 ## <a name="syntax"></a>Sintaxis  
   
@@ -52,13 +52,13 @@ ms.lasthandoff: 01/08/2018
 </return>  
 ```  
   
-## <a name="element-characteristics"></a>Características del elemento  
+## <a name="element-characteristics"></a>Características de los elementos  
   
-|Característica|Description|  
+|Característica|Descripción|  
 |--------------------|-----------------|  
-|Tipo y longitud de los datos|None|  
-|Valor predeterminado|None|  
-|Cardinalidad|0-1: Elemento opcional que puede aparecer una y solo una vez.|  
+|Tipo y longitud de los datos|Ninguno|  
+|Valor predeterminado|Ninguno|  
+|Cardinalidad|0-1: Elemento opcional que puede aparecer solo una vez.|  
   
 ## <a name="element-relationships"></a>Relaciones del elemento  
   
@@ -73,6 +73,6 @@ ms.lasthandoff: 01/08/2018
  Para los comandos **Batch** no transaccionales, el elemento **results** contiene un elemento **root** para cada comando ejecutado por el comando **Batch** , independientemente de si el comando se completa correctamente o sin éxito. Para los comandos **Batch** transaccionales, el elemento **results** contiene solamente un elemento **root** , que contiene la información de error del comando que no se ha ejecutado correctamente dentro del comando **Batch** .  
   
 ## <a name="see-also"></a>Vea también  
- [Propiedades &#40; XMLA &#41;](../../../analysis-services/xmla/xml-elements-properties/xml-elements-properties.md)  
+ [Propiedades & #40; XMLA & #41;](../../../analysis-services/xmla/xml-elements-properties/xml-elements-properties.md)  
   
   

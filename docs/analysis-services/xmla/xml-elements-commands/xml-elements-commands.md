@@ -1,40 +1,41 @@
 ---
 title: Comandos (XMLA) | Documentos de Microsoft
-ms.custom: 
+ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: analysis-services
 ms.prod_service: analysis-services, azure-analysis-services
-ms.service: 
-ms.component: 
-ms.reviewer: 
+ms.service: ''
+ms.component: ''
+ms.reviewer: ''
 ms.suite: pro-bi
-ms.technology: 
-ms.tgt_pltfrm: 
+ms.technology: ''
+ms.tgt_pltfrm: ''
 ms.topic: reference
-applies_to: SQL Server 2016 Preview
+applies_to:
+- SQL Server 2016 Preview
 helpviewer_keywords:
 - commands [XML for Analysis]
 - XML for Analysis, commands
 - XMLA, commands
 ms.assetid: c8a93ea6-8eb5-4204-b037-69cb442a0082
-caps.latest.revision: "14"
+caps.latest.revision: 14
 author: Minewiskan
 ms.author: owend
 manager: kfile
-ms.workload: Inactive
-ms.openlocfilehash: 3ffde9e4cc1500ee0637225dc76153f3d81b463f
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
-ms.translationtype: MT
+ms.openlocfilehash: ea5be05775550aa74316f81caff3641caa383683
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="xml-elements---commands"></a>Elementos XML - comandos
-[!INCLUDE[ssas-appliesto-sqlas-aas](../../../includes/ssas-appliesto-sqlas-aas.md)]Esta sección de referencia contiene XML para los elementos de Analysis (XMLA) que pueden utilizarse dentro de la **comando** elemento durante un **Execute** llamada al método.  
+[!INCLUDE[ssas-appliesto-sqlas-aas](../../../includes/ssas-appliesto-sqlas-aas.md)]
+  Esta sección de referencia contiene XML para los elementos de Analysis (XMLA) que pueden utilizarse dentro de la **comando** elemento durante un **Execute** llamada al método.  
   
 |Elemento|Description|  
 |-------------|-----------------|  
-|[Elemento Alter (XMLA)](../../../analysis-services/xmla/xml-elements-commands/alter-element-xmla.md)|Contiene elementos de Analysis Services Scripting Language (ASSL) utilizados por el [Execute](../../../analysis-services/xmla/xml-elements-methods-execute.md) método para modificar los objetos en una instancia de [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)].|  
-|[Elemento backup](../../../analysis-services/xmla/xml-elements-commands/backup-element-xmla.md)|Realiza una copia de un [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] base de datos a un archivo de copia de seguridad.|  
+|[Elemento ALTER (XMLA)](../../../analysis-services/xmla/xml-elements-commands/alter-element-xmla.md)|Contiene elementos del Lenguaje de scripting de Analysis Services (ASSL) utilizados por el método [Execute](../../../analysis-services/xmla/xml-elements-methods-execute.md) para modificar objetos en una instancia de [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)].|  
+|[Elemento backup](../../../analysis-services/xmla/xml-elements-commands/backup-element-xmla.md)|Hace copia de seguridad de una base de datos de [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] en un archivo de copia de seguridad.|  
 |[Elemento por lotes](../../../analysis-services/xmla/xml-elements-commands/batch-element-xmla.md)|Realiza XML de uno o más para los comandos de Analysis (XMLA) como una operación por lotes, ya sea de forma secuencial o en paralelo, en una instancia de [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)].|  
 |[Elemento BeginTransaction](../../../analysis-services/xmla/xml-elements-commands/begintransaction-element-xmla.md)|Comienza una transacción en la sesión actual con una instancia de Analysis Services.|  
 |[Elemento Cancel](../../../analysis-services/xmla/xml-elements-commands/cancel-element-xmla.md)|Cancela un comando actualmente en ejecución en una instancia de Analysis Services.|  

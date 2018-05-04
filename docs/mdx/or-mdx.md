@@ -22,12 +22,11 @@ caps.latest.revision: 27
 author: Minewiskan
 ms.author: owend
 manager: erikre
-ms.workload: Inactive
-ms.openlocfilehash: 3816be8be6945e21d3e6863292d4ed718a2352a2
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
-ms.translationtype: MT
+ms.openlocfilehash: 6a9dddd834662871afa7fa08bb27ed9d4249628e
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="or-mdx"></a>OR (MDX)
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
@@ -51,7 +50,7 @@ Expression1 OR Expression2
 ## <a name="return-value"></a>Valor devuelto  
  Un valor booleano que devuelve **true** si uno o ambos argumentos se evalúan como **true**; en caso contrario, **false**.  
   
-## <a name="remarks"></a>Notas  
+## <a name="remarks"></a>Comentarios  
  El **o** operador trata a ambos argumentos como valores booleanos (cero, 0, como **false**; en caso contrario, **true**) antes de que el operador realice la disyunción lógica. La tabla siguiente se muestra cómo el **o** operador realiza la disyunción lógica.  
   
 |*Expression1*|*Expression2*|Valor devuelto|  
@@ -79,7 +78,7 @@ FROM [Adventure Works]
 WHERE(MEASURES.ORDEMO)  
 ```  
   
-## <a name="see-also"></a>Ver también  
- [Referencia de operadores MDX &#40; MDX &#41;](../mdx/mdx-operator-reference-mdx.md)  
+## <a name="see-also"></a>Vea también  
+ [Referencia de operadores MDX &#40;MDX&#41;](../mdx/mdx-operator-reference-mdx.md)  
   
   

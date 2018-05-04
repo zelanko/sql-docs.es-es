@@ -1,34 +1,33 @@
 ---
-title: "Ejemplos de consultas de modelo de regresión logística | Documentos de Microsoft"
-ms.custom: 
+title: Ejemplos de consultas de modelo de regresión logística | Documentos de Microsoft
+ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: analysis-services
 ms.prod_service: analysis-services
-ms.service: 
+ms.service: ''
 ms.component: data-mining
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: pro-bi
-ms.technology: 
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.technology: ''
+ms.tgt_pltfrm: ''
+ms.topic: conceptual
 helpviewer_keywords:
 - logistic regression [Analysis Services]
 - content queries [DMX]
 ms.assetid: 7c8e13a3-5c67-46c2-abfa-4881e6ef9c62
-caps.latest.revision: 
+caps.latest.revision: 22
 author: Minewiskan
 ms.author: owend
 manager: kfile
-ms.workload: Inactive
-ms.openlocfilehash: a716193df7a74d9845cc8f70434bb525883f5936
-ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
-ms.translationtype: MT
+ms.openlocfilehash: a53db2a4eeb3cc75b36c3b2b402328fe23805917
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/15/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="logistic-regression-model-query-examples"></a>Ejemplos de consultas de modelos de regresión logística
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
-Cuando se crea una consulta en un modelo de minería de datos, puede tratarse de una consulta de contenido, que proporciona detalles de los patrones detectados durante el análisis, o de una consulta de predicción, que utiliza los patrones del modelo para realizar predicciones con los nuevos datos.  
+  Cuando se crea una consulta en un modelo de minería de datos, puede tratarse de una consulta de contenido, que proporciona detalles de los patrones detectados durante el análisis, o de una consulta de predicción, que utiliza los patrones del modelo para realizar predicciones con los nuevos datos.  
   
  En esta sección se explica cómo crear consultas para los modelos que se basan en el algoritmo de regresión logística de Microsoft.  
   
@@ -197,13 +196,13 @@ NATURAL PREDICTION JOIN
 |||  
 |-|-|  
 |función de predicción|Uso|  
-|[IsDescendant &#40; DMX &#41;](../../dmx/isdescendant-dmx.md)|Determina si un nodo es un elemento secundario de otro nodo del modelo.|  
-|[PredictAdjustedProbability &#40; DMX &#41;](../../dmx/predictadjustedprobability-dmx.md)|Devuelve la probabilidad ajustada de un estado especificado.|  
-|[PredictHistogram &#40; DMX &#41;](../../dmx/predicthistogram-dmx.md)|Devuelve un valor o un conjunto de valores predichos para una columna especificada.|  
-|[PredictProbability &#40; DMX &#41;](../../dmx/predictprobability-dmx.md)|Devuelve la probabilidad de un estado especificado.|  
-|[PredictStdev &#40; DMX &#41;](../../dmx/predictstdev-dmx.md)|Devuelve la desviación estándar del valor predicho.|  
-|[PredictSupport &#40; DMX &#41;](../../dmx/predictsupport-dmx.md)|Devuelve el valor de soporte de un estado especificado.|  
-|[PredictVariance &#40; DMX &#41;](../../dmx/predictvariance-dmx.md)|Devuelve la varianza de una columna especificada.|  
+|[IsDescendant & #40; DMX & #41;](../../dmx/isdescendant-dmx.md)|Determina si un nodo es un elemento secundario de otro nodo del modelo.|  
+|[PredictAdjustedProbability & #40; DMX & #41;](../../dmx/predictadjustedprobability-dmx.md)|Devuelve la probabilidad ajustada de un estado especificado.|  
+|[PredictHistogram & #40; DMX & #41;](../../dmx/predicthistogram-dmx.md)|Devuelve un valor o un conjunto de valores predichos para una columna especificada.|  
+|[PredictProbability & #40; DMX & #41;](../../dmx/predictprobability-dmx.md)|Devuelve la probabilidad de un estado especificado.|  
+|[PredictStdev & #40; DMX & #41;](../../dmx/predictstdev-dmx.md)|Devuelve la desviación estándar del valor predicho.|  
+|[PredictSupport & #40; DMX & #41;](../../dmx/predictsupport-dmx.md)|Devuelve el valor de soporte de un estado especificado.|  
+|[PredictVariance & #40; DMX & #41;](../../dmx/predictvariance-dmx.md)|Devuelve la varianza de una columna especificada.|  
   
  Para consultar una lista de las funciones comunes a todos los algoritmos de [!INCLUDE[msCoName](../../includes/msconame-md.md)], vea [Funciones de predicción generales &#40;DMX&#41;](../../dmx/general-prediction-functions-dmx.md). Para obtener la sintaxis de funciones concretas, vea [Referencia de funciones de Extensiones de minería de datos &#40;DMX&#41;](../../dmx/data-mining-extensions-dmx-function-reference.md).  
   
@@ -214,7 +213,7 @@ NATURAL PREDICTION JOIN
  [Consultas de minería de datos](../../analysis-services/data-mining/data-mining-queries.md)   
  [Algoritmo de regresión logística de Microsoft](../../analysis-services/data-mining/microsoft-logistic-regression-algorithm.md)   
  [Referencia técnica del algoritmo de regresión logística de Microsoft](../../analysis-services/data-mining/microsoft-logistic-regression-algorithm-technical-reference.md)   
- [Contenido del modelo de minería de datos para los modelos de regresión logística &#40; Analysis Services: minería de datos &#41;](../../analysis-services/data-mining/mining-model-content-for-logistic-regression-models.md)   
- [Lección 5: Generar neuronal red y los modelos de regresión logística &#40; Tutorial de minería de datos intermedios &#41;](http://msdn.microsoft.com/library/42c3701a-1fd2-44ff-b7de-377345bbbd6b)  
+ [Contenido del modelo de minería de datos para los modelos de regresión logística & #40; Analysis Services: minería de datos & #41;](../../analysis-services/data-mining/mining-model-content-for-logistic-regression-models.md)   
+ [Lección 5: Generar neuronal red y los modelos de regresión logística & #40; Tutorial de minería de datos intermedios & #41;](http://msdn.microsoft.com/library/42c3701a-1fd2-44ff-b7de-377345bbbd6b)  
   
   

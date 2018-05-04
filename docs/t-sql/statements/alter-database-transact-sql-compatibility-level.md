@@ -1,8 +1,8 @@
 ---
 title: Nivel de compatibilidad de ALTER DATABASE (Transact-SQL) | Microsoft Docs
 ms.custom: ''
-ms.date: 01/30/2018
-ms.prod: sql-non-specified
+ms.date: 04/18/2018
+ms.prod: sql
 ms.prod_service: database-engine, sql-database
 ms.service: ''
 ms.component: t-sql|statements
@@ -26,16 +26,16 @@ helpviewer_keywords:
 - db compatibility level
 - db compat level
 ms.assetid: ca5fd220-d5ea-4182-8950-55d4101a86f6
-caps.latest.revision: ''
+caps.latest.revision: 89
 author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: Active
-ms.openlocfilehash: d22ee796f75c4c4736c983801a63293b8a44e7cb
-ms.sourcegitcommit: 3ed9be04cc7fb9ab1a9ec230c298ad2932acc71b
+ms.openlocfilehash: 4fba23a746773bf24f8d2e130bd7e445f8f796df
+ms.sourcegitcommit: beaad940c348ab22d4b4a279ced3137ad30c658a
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/17/2018
+ms.lasthandoff: 04/20/2018
 ---
 # <a name="alter-database-transact-sql-compatibility-level"></a>Nivel de compatibilidad de ALTER DATABASE (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -73,13 +73,11 @@ SET COMPATIBILITY_LEVEL = { 140 | 130 | 120 | 110 | 100 | 90 }
 |SQL Server 2000|8|80|80|  
   
 > [!NOTE]  
-> **Azure [!INCLUDE[ssSDS](../../includes/sssds-md.md)]** V12 se lanzó en diciembre de 2014. Uno de los aspectos de esta versión era que las bases de datos recién creadas tenían su nivel de compatibilidad establecido en 120. En 2015 SQL Database se empezó a admitir el nivel 130, aunque el valor predeterminado permaneció en 120.  
+> En SQL Database, a partir de **enero de 2018**, el nivel de compatibilidad predeterminado es 140 para las bases de datos recién creadas. No actualizamos el nivel de compatibilidad de las bases de datos existentes. Queda a la elección de los clientes. Dicho esto, recomendamos encarecidamente a los clientes que planeen pasarse al nivel de compatibilidad más reciente para que puedan aprovechar las últimas mejoras.
 > 
-> A partir de **mediados de junio de 2016**, el nivel de compatibilidad predeterminado en [!INCLUDE[ssSDS](../../includes/sssds-md.md)] es 130 (y no 120) en el caso de las bases de datos **recién creadas**. Las bases de datos existentes creadas antes de mediados de junio de 2016 no se ven afectadas por esto y mantienen su nivel de compatibilidad actual (100, 110 o 120). 
-> 
-> Si quiere que sus bases de datos tengan el nivel 130 en general, pero por algún motivo prefiere el algoritmo de **estimación de cardinalidad** del nivel 110, vea [ALTER DATABASE SCOPED CONFIGURATION &#40;Transact-SQL&#41;](../../t-sql/statements/alter-database-scoped-configuration-transact-sql.md) y, en particular, su palabra clave `LEGACY_CARDINALITY_ESTIMATION = ON`.  
+> Si quiere que sus bases de datos tengan el nivel 140 en general, pero por algún motivo prefiere el algoritmo de **estimación de cardinalidad** del nivel 110, vea [ALTER DATABASE SCOPED CONFIGURATION &#40;Transact-SQL&#41;](../../t-sql/statements/alter-database-scoped-configuration-transact-sql.md) y, en particular, su palabra clave `LEGACY_CARDINALITY_ESTIMATION = ON`.
 >  
->  Para más información sobre cómo valorar las diferencias de rendimiento de las consultas más importantes entre dos niveles de compatibilidad de [!INCLUDE[ssSDS](../../includes/sssds-md.md)], vea la [mejora en el rendimiento de las consultas con el nivel de compatibilidad 130 de Azure SQL Database](http://azure.microsoft.com/documentation/articles/sql-database-compatibility-level-query-performance-130/).
+>  Para más información sobre cómo valorar las diferencias de rendimiento de las consultas más importantes entre dos niveles de compatibilidad de [!INCLUDE[ssSDS](../../includes/sssds-md.md)], vea la [mejora en el rendimiento de las consultas con el nivel de compatibilidad 130 de Azure SQL Database](http://azure.microsoft.com/documentation/articles/sql-database-compatibility-level-query-performance-130/). Tenga en cuenta que en este artículo se hace referencia al nivel de compatibilidad 130 y a SQL Server, aunque se aplica la misma metodología a los traslados al nivel de compatibilidad 140 para SQL Server y Azure SQL DB.
 
 
  Ejecute la siguiente consulta para conocer la versión del [!INCLUDE[ssDE](../../includes/ssde-md.md)] al que está conectado.  
@@ -99,6 +97,9 @@ SELECT name, compatibility_level FROM sys.databases;
   
 ## <a name="remarks"></a>Notas  
 En todas las instalaciones de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], el nivel de compatibilidad predeterminado se establece en la versión del [!INCLUDE[ssDE](../../includes/ssde-md.md)]. Las bases de datos se establecen en este nivel a menos que la base de datos **modelo** tenga un nivel de compatibilidad inferior. Cuando una base de datos se actualiza desde una versión anterior de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], dicha base de datos mantiene su nivel de compatibilidad si es al menos la versión mínima permitida para esa instancia de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Actualizar una base de datos con un nivel de compatibilidad inferior al nivel permitido hace que la base de datos se establezca en el nivel de compatibilidad más bajo permitido. Esto se aplica a las bases de datos del usuario y del sistema. Use **ALTER DATABASE** para cambiar el nivel de compatibilidad de la base de datos. Para ver el nivel de compatibilidad actual de una base de datos, consulte la columna **compatibility_level** en la vista de catálogo [sys.databases](../../relational-databases/system-catalog-views/sys-databases-transact-sql.md).  
+
+> [!NOTE]  
+> Una [base de datos de distribución](../../relational-databases/replication/distribution-database.md) creada en una versión anterior de SQL Server y que se actualiza a [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] RTM o Service Pack 1 tiene el nivel de compatibilidad 90, que no es compatible con otras bases de datos. Esto no afecta a la funcionalidad de la replicación. Si se actualiza a un service pack o a una versión posterior de SQL Server, el nivel de compatibilidad de la base de datos de distribución aumentará para coincidir con el de la base de datos **maestra**.
   
 ## <a name="using-compatibility-level-for-backward-compatibility"></a>Usar el nivel de compatibilidad para la compatibilidad con versiones anteriores  
  El nivel de compatibilidad afecta solo al comportamiento de la base de datos especificada y no a todo el servidor. El nivel de compatibilidad solo proporciona compatibilidad parcial con versiones anteriores de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. A partir del modo de compatibilidad 130, las nuevas características que afectan a los planes de consulta se han agregado solo al nuevo modo de compatibilidad. La finalidad es minimizar el riesgo durante las actualizaciones que surgen de la disminución del rendimiento debido a cambios en el plan de consulta. Desde el plano de las aplicaciones, el objetivo sigue siendo estar el nivel de compatibilidad más reciente para heredar algunas de las nuevas características, así como las mejoras de rendimiento efectuadas en el espacio del optimizador de consultas, pero hacerlo de un modo controlado. Use el nivel de compatibilidad como ayuda provisional para la migración, para solucionar diferencias de comportamiento entre las versiones que se controlan con el valor de nivel de compatibilidad correspondiente. Para más información, vea las prácticas recomendadas de actualización más adelante en el artículo.  

@@ -8,10 +8,9 @@ ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
 ms.suite: sql
-ms.technology:
-- sql-ssma
+ms.technology: ssma
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 applies_to:
 - Azure SQL Database
 - SQL Server
@@ -22,12 +21,11 @@ caps.latest.revision: 13
 author: Shamikg
 ms.author: Shamikg
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: a984e654c14f4ee5b65d49a88dc911b082682581
-ms.sourcegitcommit: a85a46312acf8b5a59a8a900310cf088369c4150
-ms.translationtype: MT
+ms.openlocfilehash: eec542f62d71f8d5974e7eae2d703b6e49646559
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/26/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="find-databases-wizard-select-files-accesstosql"></a>Buscar el Asistente de bases de datos (seleccionados archivos) (AccessToSQL)
 La página Seleccionar archivos del Asistente para buscar las bases de datos incluyen los archivos que se encontraron durante la búsqueda. Para seleccionar un archivo que desea agregar a SSMA, seleccione la fila que contiene el nombre de archivo. Una vez haya terminado, haga clic en **siguiente** para ver la página de selección comprobar.  

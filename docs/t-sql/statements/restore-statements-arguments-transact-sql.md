@@ -1,16 +1,16 @@
 ---
 title: Argumentos de RESTORE (Transact-SQL) | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 09/05/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: sql-database
-ms.service: 
+ms.service: ''
 ms.component: t-sql|statements
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 dev_langs:
 - TSQL
@@ -18,16 +18,16 @@ helpviewer_keywords:
 - RESTORE statement, arguments
 - RESTORE statement
 ms.assetid: 4bfe5734-3003-4165-afd4-b1131ea26e2b
-caps.latest.revision: 
+caps.latest.revision: 154
 author: barbkess
 ms.author: barbkess
 manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: db010db48a42113c147751021404ac0dbc29ecaf
-ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
+ms.openlocfilehash: d97ddc0e186a4234fcebf895734e00cc37d36ec0
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/25/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="restore-statements---arguments-transact-sql"></a>Instrucciones RESTORE: argumentos (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -72,7 +72,7 @@ ms.lasthandoff: 01/25/2018
  { *database_name* | **@***database_name_var*}  
  **Compatible con:** [RESTORE](../../t-sql/statements/restore-statements-transact-sql.md)  
   
- Es la base de datos en la que se restaura el registro o la base de datos completa. Si se proporciona como una variable (**@***database_name_var*), este nombre se puede especificar como una constante de cadena (**@***database_name_var* = *database*_*name*) o como una variable de un tipo de datos de cadena de caracteres, excepto los tipos de datos **ntext** o **text**.  
+ Es la base de datos en la que se restaura el registro o la base de datos completa. Si se proporciona como una variable (**@***database_name_var*), este nombre se puede especificar como una constante de cadena (**@***database_name_var* = *database*_* name*) o como una variable de un tipo de datos de cadena de caracteres, excepto los tipos de datos **ntext** o **text**.  
   
  \<file_or_filegroup_or_page> [ **,**...*n* ]  
  **Compatible con:** [RESTORE](../../t-sql/statements/restore-statements-transact-sql.md)  
@@ -98,7 +98,7 @@ FILEGROUP **=** { *logical_filegroup_name* | **@***logical_filegroup_name_var* }
 READ_WRITE_FILEGROUPS  
  Selecciona todos los grupos de archivos de lectura y escritura. Esta opción es especialmente útil cuando se desean restaurar grupos de archivos de solo lectura después de los grupos de archivos de lectura y escritura anteriores a los grupos de archivos de solo lectura.  
   
-PAGE = **'***file***:***page* [ **,**...*n* ]**'**  
+PAGE = **'***file***:***page* [ **,**...* n* ]**'**  
  Especifica una lista de una o varias páginas para una restauración de página (que solo se admite en bases de datos que utilizan los modelos de recuperación completa o de recuperación optimizado para cargas masivas de registros). Éstos son sus valores:  
   
 PAGE  
@@ -123,7 +123,7 @@ PAGE
  [ **,**...*n* ]  
  Es un marcador de posición que indica que se pueden especificar varios archivos y grupos de archivos y páginas en una lista separada por comas. El número es ilimitado.  
   
-FROM { \<backup_device> [ **,**...*n* ]| \<database_snapshot> } Normalmente, especifica los dispositivos de copia de seguridad desde los que se restaurará la copia de seguridad. Alternativamente, en una instrucción RESTORE DATABASE, la cláusula FROM puede especificar el nombre de una instantánea de base de datos a la que va a revertir la base de datos, en cuyo caso no se admite ninguna cláusula WITH.  
+FROM { \<backup_device> [ **,**...*n* ]| \<database_snapshot> } Normalmente especifica los dispositivos de copia de seguridad desde los que se restaurará la copia de seguridad. Alternativamente, en una instrucción RESTORE DATABASE, la cláusula FROM puede especificar el nombre de una instantánea de base de datos a la que va a revertir la base de datos, en cuyo caso no se admite ninguna cláusula WITH.  
   
  Si se omite la cláusula FROM, no se produce la restauración de la copia de seguridad. En su lugar, se recupera la base de datos. Esto permite recuperar una base de datos restaurada con la opción NORECOVERY o cambiar a un servidor en espera. Si se omite la cláusula FROM, se debe especificar NORECOVERY, RECOVERY o STANDBY en la cláusula WITH.  
   
@@ -135,7 +135,7 @@ FROM { \<backup_device> [ **,**...*n* ]| \<database_snapshot> } Normalmente, esp
   
  { *logical_backup_device_name* | **@***logical_backup_device_name_var* } es el nombre lógico, que debe seguir las reglas de los identificadores, del dispositivo (o dispositivos) de copia de seguridad creado por **sp_addumpdevice** desde el que se restaura la base de datos. Si se proporciona como una variable (**@***logical_backup_device_name_var*), el nombre del dispositivo de copia de seguridad se puede especificar como una constante de cadena (**@***logical_backup_device_name_var* = *logical_backup_device_name*) o como una variable de tipo de datos de cadena de caracteres, excepto los tipos de datos **ntext** o **text**.  
   
- {DISK | TAPE } **=** { **'***physical_backup_device_name***'** | **@***physical_backup_device_name_var* } Permite restaurar las copias de seguridad guardadas en el dispositivo de disco o cinta con nombre. Los tipos de dispositivo de disco y cinta deben especificarse con el nombre real (por ejemplo, nombre de archivo y ruta de acceso completa) del dispositivo: `DISK ='Z:\SQLServerBackups\AdventureWorks.bak'` o `TAPE ='\\\\.\TAPE0'`. Si se especifica como una variable (**@***physical_backup_device_name_var*), el nombre del dispositivo se puede especificar como una constante de cadena (**@***physical_backup_device_name_var* = '*physical_backup_device_name*') o como una variable de tipo de datos de cadena de caracteres, excepto los tipos de datos **ntext** o **text**.  
+ {DISK | TAPE } **=** { **'***physical_backup_device_name***'** | **@***physical_backup_device_name_var* } Permite restaurar las copias de seguridad guardadas en el dispositivo de disco o cinta con nombre. Los tipos de dispositivo de disco y cinta deben especificarse con el nombre real (por ejemplo, nombre de archivo y ruta de acceso completa) del dispositivo: `DISK ='Z:\SQLServerBackups\AdventureWorks.bak'` o `TAPE ='\\\\.\TAPE0'`. Si se especifica como una variable (**@***physical_backup_device_name_var*), el nombre del dispositivo se puede especificar como una constante de cadena (**@***physical_backup_device_name_var* = '* physical_backup_device_name*') o como una variable de tipo de datos de cadena de caracteres, excepto los tipos de datos **ntext** o **text**.  
   
  Si utiliza un servidor de red con un nombre UNC (que debe contener el nombre del equipo), especifique un tipo de dispositivo de disco. Para más información sobre cómo usar los nombres UNC, vea [Dispositivos de copia de seguridad &#40;SQL Server&#41;](../../relational-databases/backup-restore/backup-devices-sql-server.md).  
   
@@ -354,7 +354,7 @@ FILE **=**{ *backup_set_file_number* | **@***backup_set_file_number* }
   
  Especifica el número total de búferes de E/S que se van a utilizar para la operación de restauración. Puede especificar cualquier entero positivo; no obstante, un número de búferes demasiado grande podría provocar errores de "memoria insuficiente" a causa de un espacio de direcciones virtuales inadecuado en el proceso Sqlservr.exe.  
   
- El espacio total usado por los búferes viene determinado por: *buffercount***\****maxtransfersize*.  
+ El espacio total usado por los búferes viene determinado por: *buffercount***\**** maxtransfersize*.  
   
  MAXTRANSFERSIZE **=** { *maxtransfersize* | **@***maxtransfersize_variable* }  
  **Compatible con:** [RESTORE](../../t-sql/statements/restore-statements-transact-sql.md)  
@@ -511,7 +511,7 @@ Use KEEP_REPLICATION al configurar la replicación para que funcione con el tras
   
  Para obtener más información, vea [Restaurar una base de datos de SQL Server a un momento dado &#40;modelo de recuperación completa&#41;](../../relational-databases/backup-restore/restore-a-sql-server-database-to-a-point-in-time-full-recovery-model.md).  
   
- STOPATMARK **=** { **'***mark_name***'** | **'**lsn:*lsn_number***'** } [ AFTER **'***datetime***'** ]  
+ STOPATMARK **=** { **'***mark_name***'** | **'** lsn:*lsn_number***'** } [ AFTER **'***datetime***'** ]  
  Especifica que la recuperación se realice en un punto de recuperación especificado. La transacción especificada se incluye en la recuperación, pero solo se confirma si estaba confirmada inicialmente cuando se generó.  
   
  Tanto RESTORE DATABASE como RESTORE LOG admiten el parámetro *lsn_number*. Este parámetro especifica un número de secuencia de registro.  
@@ -525,7 +525,7 @@ Use KEEP_REPLICATION al configurar la replicación para que funcione con el tras
   
  Para más información, vea [Usar transacciones marcadas para recuperar bases de datos relacionadas sistemáticamente &#40;modelo de recuperación completa&#41;](../../relational-databases/backup-restore/use-marked-transactions-to-recover-related-databases-consistently.md) y [Recuperar a un número de secuencia de registro &#40;SQL Server&#41;](../../relational-databases/backup-restore/recover-to-a-log-sequence-number-sql-server.md).  
   
- STOPBEFOREMARK **=** { **'***mark_name***'** | **'**lsn:*lsn_number***'** } [ AFTER **'***datetime***'** ]  
+ STOPBEFOREMARK **=** { **'***mark_name***'** | **'** lsn:*lsn_number***'** } [ AFTER **'***datetime***'** ]  
  Especifica que la recuperación se realice en un punto de recuperación especificado. La transacción especificada no se incluye en la recuperación y se revertirá cuando se utilice WITH RECOVERY.  
   
  Tanto RESTORE DATABASE como RESTORE LOG admiten el parámetro *lsn_number*. Este parámetro especifica un número de secuencia de registro.  

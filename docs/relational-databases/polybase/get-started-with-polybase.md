@@ -1,16 +1,16 @@
 ---
-title: "Introducción a PolyBase | Microsoft Docs"
-ms.custom: 
+title: Introducción a PolyBase | Microsoft Docs
+ms.custom: ''
 ms.date: 08/15/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine
-ms.service: 
+ms.service: ''
 ms.component: polybase
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine-polybase
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: get-started-article
 helpviewer_keywords:
 - PolyBase
@@ -21,16 +21,16 @@ helpviewer_keywords:
 - Azure blob storage export
 - Hadoop import, PolyBase getting started
 - Hadoop export, Polybase getting started
-caps.latest.revision: 
+caps.latest.revision: 78
 author: barbkess
 ms.author: barbkess
 manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 9b28ca40643cec6661564c439657e1a3454929be
-ms.sourcegitcommit: 37f0b59e648251be673389fa486b0a984ce22c81
+ms.openlocfilehash: 7c406a55361eb8a948f385f3bf7e76257c216720
+ms.sourcegitcommit: f3aa02a0f27cc1d3d5450f65cc114d6228dd9d49
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/12/2018
+ms.lasthandoff: 04/23/2018
 ---
 # <a name="get-started-with-polybase"></a>Introducción a PolyBase
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -45,33 +45,10 @@ ms.lasthandoff: 02/12/2018
   
 -   Sabrá cómo administrar objetos PolyBase en SQL Server Management Studio (SSMS).  
   
--   Dispondrá de ejemplos de consultas que utilizan objetos PolyBase.  
-  
-## <a name="prerequisites"></a>Prerequisites  
- Instancia de [SQL Server (64 bits)](https://www.microsoft.com/evalcenter/evaluate-sql-server-2016) con lo siguiente:  
-  
--   Microsoft .NET Framework 4.5.  
-  
--   La versión de Oracle Java SE RunTime Environment (JRE) 7.51 o una superior (64 bits). (Tanto [JRE](http://www.oracle.com/technetwork/java/javase/downloads/jre8-downloads-2133155.html) como [Server JRE](http://www.oracle.com/technetwork/java/javase/downloads/server-jre8-downloads-2133154.html) funcionarán). Vaya a la página de [descargas de Java SE](http://www.oracle.com/technetwork/java/javase/downloads/index.html). El programa de instalación generará un error si JRE no está presente.   
-  
--   Mínimo de memoria: 4 GB  
-  
--   Espacio disponible en disco duro mínimo: 2 GB    
-
--   La conectividad TCP/IP debe estar habilitada. (Vea [Habilitar o deshabilitar un protocolo de red de servidor](../../database-engine/configure-windows/enable-or-disable-a-server-network-protocol.md)). Las ediciones SQL Server Developer y Express tienen TCP/IP deshabilitado de forma predeterminada. PolyBase se puede instalar, pero no se iniciará completamente hasta que se habilite TCP/IP. Debe habilitar manualmente TCP/IP para tener la funcionalidad PolyBase. 
-  
- 
- Un origen de datos externo, como uno de los siguientes:  
-  
--   Un clúster de Hadoop. Para saber qué versiones son compatibles, vea [Configurar PolyBase](#supported).  
-
--   Almacenamiento de blobs de Azure
-
-> [!NOTE]
->   Si va a usar la funcionalidad de aplicación de cálculos en Hadoop, deberá asegurarse de que el clúster de Hadoop de destino tiene componentes principales de HDFS, Yarn/MapReduce con el servidor de JobHistory habilitado. PolyBase envía la consulta de la aplicación a través de MapReduce y extrae el estado desde el servidor JobHistory. Sin alguno de los componentes, se producirá un error en la consulta. 
+-   Dispondrá de ejemplos de consultas que utilizan objetos PolyBase.    
 
 ## <a name="install-polybase"></a>Instalación de PolyBase  
- Si no ha instalado PolyBase, consulte [Instalación de PolyBase](../../relational-databases/polybase/polybase-installation.md).  
+Si no ha instalado PolyBase, consulte [Instalación de PolyBase](../../relational-databases/polybase/polybase-installation.md). En el artículo de instalación se explican los requisitos previos.
   
 ### <a name="how-to-confirm-installation"></a>Cómo confirmar la instalación  
  Después de la instalación, ejecute el siguiente comando para confirmar que se ha instalado correctamente PolyBase. Si PolyBase está instalado, devuelve 1; en caso contrario, 0.  

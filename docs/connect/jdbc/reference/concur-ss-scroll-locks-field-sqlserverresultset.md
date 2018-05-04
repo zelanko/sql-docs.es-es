@@ -32,7 +32,7 @@ ms.lasthandoff: 04/16/2018
 # <a name="concurssscrolllocks-field-sqlserverresultset"></a>Campo CONCUR_SS_SCROLL_LOCKS (SQLServerResultSet)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
 
-  Se utiliza para especificar un [!INCLUDE[ssNoVersion](../../../includes/ssnoversion_md.md)] tipo de simultaneidad optimista con bloqueos de fila de lectura/escritura.  
+  Se utiliza para especificar un tipo de simultaneidad optimista de lectura y escritura de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion_md.md)] con bloqueos de fila.  
   
 ## <a name="syntax"></a>Sintaxis  
   
@@ -44,8 +44,8 @@ public static final int CONCUR_SS_SCROLL_LOCKS
 ## <a name="field-value"></a>Valor de campo  
  Un **int** valo 1009.  
   
-## <a name="see-also"></a>Vea también  
- [Miembros de SQLServerResultSet](../../../connect/jdbc/reference/sqlserverresultset-members.md)   
+## <a name="see-also"></a>Ver también  
+ [Miembros SQLServerResultSet](../../../connect/jdbc/reference/sqlserverresultset-members.md)   
  [Clase SQLServerResultSet](../../../connect/jdbc/reference/sqlserverresultset-class.md)  
   
   

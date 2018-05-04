@@ -14,11 +14,11 @@ author: yualan
 ms.author: alayu
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 7ec3ddc85512f0ae071865f4806358a5da28ff09
-ms.sourcegitcommit: a85a46312acf8b5a59a8a900310cf088369c4150
+ms.openlocfilehash: bbabb96b46a7054ed22daf034413df05c903e553
+ms.sourcegitcommit: 31df356f89c4cd91ba90dac609a7eb50b13836de
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/26/2018
+ms.lasthandoff: 04/27/2018
 ---
 # <a name="user-and-workspace-settings"></a>Configuración de área de trabajo y de usuario
 
@@ -35,7 +35,7 @@ El comando de menú **archivo** > **preferencias** > **configuración** (**códi
 
 También puede abrir la configuración de área de trabajo y usuario de la **comando paleta** (**Ctrl + Mayús + P**) con **preferencias: abra Configuración de usuario** y  **Preferencias: Abrir la configuración de área de trabajo** o use el método abreviado de teclado (**Ctrl +**).
 
-En el ejemplo siguiente se deshabilita los números de línea en el editor y configura las líneas de ajuste automáticamente basándose en el tamaño del editor de texto.
+En el ejemplo siguiente se deshabilita los números de línea en el editor y configura las líneas de código que se les aplica sangría automáticamente.
 
 ![Configuración de ejemplo](media/settings/sample-settings.png)
 

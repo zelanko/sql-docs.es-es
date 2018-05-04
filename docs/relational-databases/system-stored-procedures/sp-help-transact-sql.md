@@ -24,13 +24,12 @@ caps.latest.revision: 60
 author: edmacauley
 ms.author: edmaca
 manager: craigg
-ms.workload: Active
 monikerRange: = azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: be83dee5f8f4fa4f9e5893bc71964dd3a8df4e3c
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
-ms.translationtype: MT
+ms.openlocfilehash: 337e2f9f66c4fefb678248c97f5b109ec195a8d0
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="sphelp-transact-sql"></a>sp_help (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -49,7 +48,7 @@ sp_help [ [ @objname = ] 'name' ]
   
 ## <a name="arguments"></a>Argumentos  
  [  **@objname=**] **'***nombre***'**  
- Es el nombre de cualquier objeto en **sysobjects** o tipo de los datos definidos por el usuario en el **systypes** tabla. *nombre* es **nvarchar (**776**)**, su valor predeterminado es null. No se aceptan nombres de bases de datos.  Se deben delimitar dos o tres nombres de partes, como "Person.AddressType" o [Person.AddressType].   
+ Es el nombre de cualquier objeto en **sysobjects** o tipo de los datos definidos por el usuario en el **systypes** tabla. *nombre* es **nvarchar (** 776 **)**, su valor predeterminado es null. No se aceptan nombres de bases de datos.  Se deben delimitar dos o tres nombres de partes, como "Person.AddressType" o [Person.AddressType].   
    
   
 ## <a name="return-code-values"></a>Valores de código de retorno  
@@ -62,31 +61,31 @@ sp_help [ [ @objname = ] 'name' ]
   
     |Nombre de columna|Tipo de datos|Description|  
     |-----------------|---------------|-----------------|  
-    |**Nombre**|**nvarchar (**128**)**|Nombre del objeto|  
-    |**Propietario**|**nvarchar (**128**)**|Propietario del objeto (esta es la entidad de seguridad de base de datos que posee el objeto. De forma predeterminada, es el propietario del esquema que contiene el objeto).|  
-    |**object_type**|**nvarchar (**31**)**|Tipo de objeto|  
+    |**Nombre**|**nvarchar (** 128 **)**|Nombre del objeto|  
+    |**Propietario**|**nvarchar (** 128 **)**|Propietario del objeto (esta es la entidad de seguridad de base de datos que posee el objeto. De forma predeterminada, es el propietario del esquema que contiene el objeto).|  
+    |**object_type**|**nvarchar (** 31 **)**|Tipo de objeto|  
   
 2.  Si *nombre* es un [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] tipo de datos o tipo de datos definido por el usuario, **sp_help** devuelve este conjunto de resultados.  
   
     |Nombre de columna|Tipo de datos|Description|  
     |-----------------|---------------|-----------------|  
-    |**TYPE_NAME**|**nvarchar (**128**)**|Nombre del tipo de datos.|  
-    |**Storage_type**|**nvarchar (**128**)**|Nombre del tipo de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].|  
+    |**TYPE_NAME**|**nvarchar (** 128 **)**|Nombre del tipo de datos.|  
+    |**Storage_type**|**nvarchar (** 128 **)**|Nombre del tipo de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].|  
     |**Longitud**|**smallint**|Longitud física del tipo de datos (en bytes).|  
     |**Prec**|**int**|Precisión (número total de dígitos).|  
     |**Escala**|**int**|Número de dígitos a la derecha del separador decimal.|  
-    |**Admisión de valores NULL**|**varchar (**35**)**|Indica si se permiten valores NULL: Yes o No.|  
-    |**default_name**|**nvarchar (**128**)**|Nombre de un valor predeterminado enlazado a este tipo.<br /><br /> NULL = No hay un valor predeterminado enlazado.|  
-    |**rule_name**|**nvarchar (**128**)**|Nombre de una regla enlazada a este tipo.<br /><br /> NULL = No hay un valor predeterminado enlazado.|  
+    |**Admisión de valores NULL**|**varchar (** 35 **)**|Indica si se permiten valores NULL: Yes o No.|  
+    |**default_name**|**nvarchar (** 128 **)**|Nombre de un valor predeterminado enlazado a este tipo.<br /><br /> NULL = No hay un valor predeterminado enlazado.|  
+    |**rule_name**|**nvarchar (** 128 **)**|Nombre de una regla enlazada a este tipo.<br /><br /> NULL = No hay un valor predeterminado enlazado.|  
     |**Intercalación**|**sysname**|Intercalación del tipo de datos. NULL para tipos de datos que no sean de caracteres.|  
   
 3.  Si *nombre* es cualquier objeto de base de datos que no sea un tipo de datos, **sp_help** devuelve este resultado conjuntos de resultados de conjunto y también adicional, según el tipo de objeto especificado.  
   
     |Nombre de columna|Tipo de datos|Description|  
     |-----------------|---------------|-----------------|  
-    |**Nombre**|**nvarchar (**128**)**|Nombre de la tabla|  
-    |**Propietario**|**nvarchar (**128**)**|Propietario de la tabla.|  
-    |**Tipo**|**nvarchar (**31**)**|Tipo de tabla.|  
+    |**Nombre**|**nvarchar (** 128 **)**|Nombre de la tabla|  
+    |**Propietario**|**nvarchar (** 128 **)**|Propietario de la tabla.|  
+    |**Tipo**|**nvarchar (** 31 **)**|Tipo de tabla.|  
     |**Created_datetime**|**datetime**|Tabla de fecha creada|  
   
      Según el objeto de base de datos especificado, **sp_help** devuelve conjuntos de resultados adicionales.  
@@ -97,22 +96,22 @@ sp_help [ [ @objname = ] 'name' ]
   
         |Nombre de columna|Tipo de datos|Description|  
         |-----------------|---------------|-----------------|  
-        |**column_name**|**nvarchar (**128**)**|Nombre de columna.|  
-        |**Tipo**|**nvarchar (**128**)**|Tipo de datos de la columna.|  
-        |**Calculado**|**varchar (**35**)**|Indica si los valores de la columna son calculados: Yes o No.|  
+        |**column_name**|**nvarchar (** 128 **)**|Nombre de columna.|  
+        |**Tipo**|**nvarchar (** 128 **)**|Tipo de datos de la columna.|  
+        |**Calculado**|**varchar (** 35 **)**|Indica si los valores de la columna son calculados: Yes o No.|  
         |**Longitud**|**int**|Longitud de la columna en bytes.<br /><br /> Nota: Si el tipo de datos de columna es un tipo de valor grande (**varchar (max)**, **nvarchar (max)**, **varbinary (max)**, o **xml**), el valor será se mostrará como -1.|  
-        |**Prec**|**Char (**5**)**|Precisión de la columna.|  
-        |**Escala**|**Char (**5**)**|Escala de la columna.|  
-        |**Admisión de valores NULL**|**varchar (**35**)**|Indica si se permiten valores NULL en la columna: Yes o No.|  
-        |**TrimTrailingBlanks**|**varchar (**35**)**|Recorta los espacios en blanco finales. Devuelve Yes o No.|  
-        |**FixedLenNullInSource**|**varchar (**35**)**|Se conserva únicamente por compatibilidad con versiones anteriores.|  
+        |**Prec**|**Char (** 5 **)**|Precisión de la columna.|  
+        |**Escala**|**Char (** 5 **)**|Escala de la columna.|  
+        |**Admisión de valores NULL**|**varchar (** 35 **)**|Indica si se permiten valores NULL en la columna: Yes o No.|  
+        |**TrimTrailingBlanks**|**varchar (** 35 **)**|Recorta los espacios en blanco finales. Devuelve Yes o No.|  
+        |**FixedLenNullInSource**|**varchar (** 35 **)**|Se conserva únicamente por compatibilidad con versiones anteriores.|  
         |**Intercalación**|**sysname**|Intercalación de la columna. NULL para los tipos de datos.|  
   
     -   Conjunto de resultados adicional devuelto en las columnas de identidad:  
   
         |Nombre de columna|Tipo de datos|Description|  
         |-----------------|---------------|-----------------|  
-        |**Identidad**|**nvarchar (**128**)**|Nombre de la columna cuyo tipo de datos se declara como identidad.|  
+        |**Identidad**|**nvarchar (** 128 **)**|Nombre de la columna cuyo tipo de datos se declara como identidad.|  
         |**Valor de inicialización**|**numeric**|Valor inicial de la columna de identidad.|  
         |**Incremento**|**numeric**|Incremento que se va a utilizar en los valores de esta columna.|  
         |**No disponible para replicación**|**int**|Propiedad IDENTITY no se aplica cuando un inicio de sesión de replicación, como **sqlrepl**, inserta datos en la tabla:<br /><br /> 1 = True<br /><br /> 0 = False|  
@@ -127,40 +126,40 @@ sp_help [ [ @objname = ] 'name' ]
   
         |Nombre de columna|Tipo de datos|Description|  
         |-----------------|---------------|-----------------|  
-        |**Data_located_on_filegroup**|**nvarchar (**128**)**|Grupo de archivos en el que se encuentran los datos: Principal, Secundario o Registro de transacciones.|  
+        |**Data_located_on_filegroup**|**nvarchar (** 128 **)**|Grupo de archivos en el que se encuentran los datos: Principal, Secundario o Registro de transacciones.|  
   
     -   Conjunto de resultados adicional devuelto en los índices:  
   
         |Nombre de columna|Tipo de datos|Description|  
         |-----------------|---------------|-----------------|  
         |**index_name**|**sysname**|Nombre del índice.|  
-        |**index_description**|**varchar (**210**)**|Descripción del índice.|  
-        |**index_keys**|**nvarchar (**2078**)**|Nombres de las columnas en las que se ha generado el índice. Devuelve NULL para los índices de almacén de columnas optimizados de memoria xVelocity.|  
+        |**index_description**|**varchar (** 210 **)**|Descripción del índice.|  
+        |**index_keys**|**nvarchar (** 2078 **)**|Nombres de las columnas en las que se ha generado el índice. Devuelve NULL para los índices de almacén de columnas optimizados de memoria xVelocity.|  
   
     -   Conjunto de resultados adicional devuelto en las restricciones:  
   
         |Nombre de columna|Tipo de datos|Description|  
         |-----------------|---------------|-----------------|  
-        |**constraint_type**|**nvarchar (**146**)**|Tipo de restricción.|  
-        |**constraint_name**|**nvarchar (**128**)**|Nombre de la restricción.|  
-        |**delete_action**|**nvarchar (**9**)**|Indica si la acción DELETE es: NO_ACTION, CASCADE, SET_NULL, SET_DEFAULT o N/A.<br /><br /> Solo se aplica a las restricciones FOREIGN KEY.|  
-        |**update_action**|**nvarchar (**9**)**|Indica si la acción UPDATE es: NO_ACTION, CASCADE, SET_NULL, SET_DEFAULT o N/A.<br /><br /> Solo se aplica a las restricciones FOREIGN KEY.|  
-        |**status_enabled**|**varchar (**8**)**|Indica si la restricción está habilitada: Habilitada, Deshabilitada o N/A.<br /><br /> Solo se aplica a las restricciones CHECK y FOREIGN KEY.|  
-        |**status_for_replication**|**varchar (**19**)**|Indica si la restricción es para replicación.<br /><br /> Solo se aplica a las restricciones CHECK y FOREIGN KEY.|  
-        |**constraint_keys**|**nvarchar (**2078**)**|Nombres de las columnas que componen la restricción o, en el caso de valores predeterminados y reglas, el texto que define el valor predeterminado o la regla.|  
+        |**constraint_type**|**nvarchar (** 146 **)**|Tipo de restricción.|  
+        |**constraint_name**|**nvarchar (** 128 **)**|Nombre de la restricción.|  
+        |**delete_action**|**nvarchar (** 9 **)**|Indica si la acción DELETE es: NO_ACTION, CASCADE, SET_NULL, SET_DEFAULT o N/A.<br /><br /> Solo se aplica a las restricciones FOREIGN KEY.|  
+        |**update_action**|**nvarchar (** 9 **)**|Indica si la acción UPDATE es: NO_ACTION, CASCADE, SET_NULL, SET_DEFAULT o N/A.<br /><br /> Solo se aplica a las restricciones FOREIGN KEY.|  
+        |**status_enabled**|**varchar (** 8 **)**|Indica si la restricción está habilitada: Habilitada, Deshabilitada o N/A.<br /><br /> Solo se aplica a las restricciones CHECK y FOREIGN KEY.|  
+        |**status_for_replication**|**varchar (** 19 **)**|Indica si la restricción es para replicación.<br /><br /> Solo se aplica a las restricciones CHECK y FOREIGN KEY.|  
+        |**constraint_keys**|**nvarchar (** 2078 **)**|Nombres de las columnas que componen la restricción o, en el caso de valores predeterminados y reglas, el texto que define el valor predeterminado o la regla.|  
   
     -   Conjunto de resultados adicional devuelto en los objetos de referencia:  
   
         |Nombre de columna|Tipo de datos|Description|  
         |-----------------|---------------|-----------------|  
-        |**Tabla hace referencia**|**nvarchar (**516**)**|Identifica otros objetos de base de datos que hacen referencia a la tabla.|  
+        |**Tabla hace referencia**|**nvarchar (** 516 **)**|Identifica otros objetos de base de datos que hacen referencia a la tabla.|  
   
     -   Conjunto de resultados adicional devuelto en los procedimientos almacenados, las funciones o los procedimientos almacenados extendidos.  
   
         |Nombre de columna|Tipo de datos|Description|  
         |-----------------|---------------|-----------------|  
-        |**parameter_name**|**nvarchar (**128**)**|Nombre del parámetro del procedimiento almacenado.|  
-        |**Tipo**|**nvarchar (**128**)**|Tipo de datos del parámetro del procedimiento almacenado.|  
+        |**parameter_name**|**nvarchar (** 128 **)**|Nombre del parámetro del procedimiento almacenado.|  
+        |**Tipo**|**nvarchar (** 128 **)**|Tipo de datos del parámetro del procedimiento almacenado.|  
         |**Longitud**|**smallint**|Longitud máxima de almacenamiento físico en bytes.|  
         |**Prec**|**int**|Precisión o número total de dígitos.|  
         |**Escala**|**int**|Número de dígitos a la derecha del separador decimal.|  

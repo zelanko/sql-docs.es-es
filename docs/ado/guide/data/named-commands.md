@@ -1,11 +1,9 @@
 ---
 title: Llamado Commands | Documentos de Microsoft
 ms.prod: sql
-ms.prod_service: drivers
-ms.service: ''
+ms.prod_service: connectivity
 ms.component: ado
-ms.technology:
-- drivers
+ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
@@ -20,12 +18,11 @@ caps.latest.revision: 14
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: 4e9f82cc25d589d222b312e362252e4447f3bea0
-ms.sourcegitcommit: bb044a48a6af9b9d8edb178dc8c8bd5658b9ff68
+ms.openlocfilehash: 823ee61431555d978fb33aa0f9a58264af1ce2c1
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/18/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="named-commands"></a>Comandos con nombre
 [Crear y ejecutar un comando Simple](../../../ado/guide/data/creating-and-executing-a-simple-command.md) muestra una manera de ejecutar un comando. Hay otra forma: puede realizar un comando con nombre y, a continuación, llamar a este método con el nombre de comando directamente en el **conexión** objeto (asignado a la **ActiveConnection** propiedad de la **comando** objeto). Un comando de nomenclatura significa asignar un nombre a la **nombre** propiedad de un **comando** objeto. Por ejemplo,  

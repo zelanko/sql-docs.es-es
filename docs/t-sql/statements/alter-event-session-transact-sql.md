@@ -1,16 +1,16 @@
 ---
 title: ALTER EVENT SESSION (Transact-SQL) | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 08/07/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: sql-database
-ms.service: 
+ms.service: ''
 ms.component: t-sql|statements
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - ALTER EVENT SESSION
@@ -22,16 +22,16 @@ helpviewer_keywords:
 - extended events [SQL Server], Transact-SQL
 - ALTER EVENT SESSION statement
 ms.assetid: da006ac9-f914-4995-a2fb-25b5d971cd90
-caps.latest.revision: 
+caps.latest.revision: 46
 author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 593be40520403888b5ad2584515820f1935bb270
-ms.sourcegitcommit: 45e4efb7aa828578fe9eb7743a1a3526da719555
+ms.openlocfilehash: ee51bf09c10af0ec4382debe3276e092cb323db2
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="alter-event-session-transact-sql"></a>ALTER EVENT SESSION (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -140,7 +140,7 @@ ON SERVER
 |DROP EVENT \<event_specifier>|Quita el evento identificado por *\<event_specifier>*. \<event_specifier> debe ser válido en la sesión de eventos.|  
 |ADD TARGET \<event_target_specifier>|Asocia el destino identificado por \<event_target_specifier> con la sesión de eventos.|
 |[*event_module_guid*].*event_package_name*.*target_name*|El nombre de un destino en la sesión de eventos, donde:<br /><br /> -   *event_module_guid* es el GUID del módulo que contiene el evento.<br />-   *event_package_name* es el paquete que contiene el objeto de la acción.<br />-   *target_name* es la acción. Las acciones aparecen en la vista sys.dm_xe_objects como object_type 'target'.|  
-|SET { *target_parameter_name*= \<value> [, ...*n*] }|Establece un parámetro de destino. Los parámetros de destino aparecen en la vista sys.dm_xe_object_columns como column_type "customizable" y object_name = *target_name*.<br /><br /> **NOTA** Si usa el destino de búfer en anillo, le recomendamos que establezca el parámetro de destino max_memory en 2048 kilobytes (KB) para intentar evitar el truncamiento de los datos en la salida XML. Para más información sobre cuándo usar los diferentes tipos de destino, vea [Destinos para eventos extendidos en SQL Server](http://msdn.microsoft.com/library/e281684c-40d1-4cf9-a0d4-7ea1ecffa384).|  
+|SET { *target_parameter_name*= \<value> [, ...*n*] }|Establece un parámetro de destino. Los parámetros de destino aparecen en la vista sys.dm_xe_object_columns como column_type 'customizable' y object_name = *target_name*.<br /><br /> **NOTA** Si usa el destino de búfer en anillo, le recomendamos que establezca el parámetro de destino max_memory en 2048 kilobytes (KB) para intentar evitar el truncamiento de los datos en la salida XML. Para más información sobre cuándo usar los diferentes tipos de destino, vea [Destinos para eventos extendidos en SQL Server](http://msdn.microsoft.com/library/e281684c-40d1-4cf9-a0d4-7ea1ecffa384).|  
 |DROP TARGET \<event_target_specifier>|Quita el destino identificado por \<event_target_specifier>. \<event_target_specifier> debe ser válido en la sesión de eventos.|  
 |EVENT_RETENTION_MODE = { **ALLOW_SINGLE_EVENT_LOSS** &#124; ALLOW_MULTIPLE_EVENT_LOSS &#124; NO_EVENT_LOSS }|Especifica el modo de retención de eventos usado para controlar las pérdidas de eventos.<br /><br /> **ALLOW_SINGLE_EVENT_LOSS**<br /> Puede perderse un evento de la sesión. Se elimina un único evento solo cuando todos los búferes de eventos están llenos. La pérdida de un único evento cuando los búferes de eventos están llenos permite un rendimiento de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] aceptable, al mismo tiempo que minimiza las pérdidas de datos en el flujo de eventos procesado.<br /><br /> ALLOW_MULTIPLE_EVENT_LOSS<br /> En la sesión pueden perderse búferes completos de eventos que contienen varios eventos. El número de eventos perdidos depende del tamaño de la memoria asignada a la sesión, del particionamiento de la memoria y del tamaño de los eventos del búfer. Esta opción minimiza el impacto en el rendimiento del servidor si los búferes de eventos se llenan rápidamente, pero se puede perder un gran número de eventos de la sesión.<br /><br /> NO_EVENT_LOSS<br /> No se permite ninguna pérdida de eventos. Esta opción asegura que se van a retener todos los eventos que aparezcan. Al utilizar esta opción, se obliga a todas las tareas que activan eventos a esperar hasta que haya espacio disponible en un búfer de eventos. Esto puede producir problemas detectables de rendimiento mientras la sesión de eventos está activa. Las conexiones de usuario pueden detenerse a la espera de que se quiten eventos del búfer.|  
 |MAX_DISPATCH_LATENCY = { *seconds* SECONDS &#124; **INFINITE** }|Especifica el tiempo que los eventos se almacenan en memoria antes de enviarse a los destinos de la sesión de eventos. El valor de latencia mínimo es de 1 segundo. Sin embargo, puede usarse el valor 0 para especificar la latencia INFINITE. De forma predeterminada, este valor está establecido en 30 segundos.<br /><br /> *seconds* SECONDS<br /> Tiempo, en segundos, que hay que esperar antes de que empiecen a vaciarse los búferes en los destinos. *seconds* es un número entero.<br /><br /> **INFINITE**<br /> Los búferes se vacían en los destinos solo si están llenos o cuando se cierra la sesión de eventos.<br /><br /> **NOTA** MAX_DISPATCH_LATENCY = 0 SECONDS es equivalente a MAX_DISPATCH_LATENCY = INFINITE.|  

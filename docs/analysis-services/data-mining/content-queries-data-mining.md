@@ -1,31 +1,23 @@
 ---
-title: "Consultas (minería de datos) de contenido | Documentos de Microsoft"
-ms.custom: 
-ms.date: 03/06/2017
-ms.prod: analysis-services
-ms.prod_service: analysis-services
-ms.service: 
+title: Consultas (minería de datos) de contenido | Documentos de Microsoft
+ms.date: 05/01/2018
+ms.prod: sql
+ms.technology: analysis-services
 ms.component: data-mining
-ms.reviewer: 
-ms.suite: pro-bi
-ms.technology: 
-ms.tgt_pltfrm: 
 ms.topic: article
-ms.assetid: c4f4a5a8-a230-4222-bece-9d563501f65f
-caps.latest.revision: 
-author: Minewiskan
 ms.author: owend
+ms.reviewer: owend
+author: minewiskan
 manager: kfile
-ms.workload: Inactive
-ms.openlocfilehash: cae138336afe7590bf23f42532096dc910010848
-ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
+ms.openlocfilehash: 057134e35d748c49a535fb32070484d7d228c5d3
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/15/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="content-queries-data-mining"></a>Consultas de contenido (minería de datos)
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
-Una consulta de contenido es una manera de extraer información sobre las estadísticas internas y la estructura del modelo de minería de datos. A veces, una consulta de contenido puede proporcionar detalles que no están disponibles con facilidad en el visor. También puede usar los resultados de una consulta de contenido para extraer información mediante programación para otros usos.  
+  Una consulta de contenido es una manera de extraer información sobre las estadísticas internas y la estructura del modelo de minería de datos. A veces, una consulta de contenido puede proporcionar detalles que no están disponibles con facilidad en el visor. También puede usar los resultados de una consulta de contenido para extraer información mediante programación para otros usos.  
   
  En esta sección se proporciona información general sobre los tipos de información que se pueden recuperar usando una consulta de contenido, así como la sintaxis DMX general para este tipo de consultas.  
   

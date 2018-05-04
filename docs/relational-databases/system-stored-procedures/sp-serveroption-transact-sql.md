@@ -25,12 +25,11 @@ caps.latest.revision: 40
 author: edmacauley
 ms.author: edmaca
 manager: craigg
-ms.workload: On Demand
-ms.openlocfilehash: 688f63fb4dd2ecbd1594dd0750343d08a594f7b5
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
-ms.translationtype: MT
+ms.openlocfilehash: 7bc3948044bbfd37d5ddb5a4dad32f3dc9e09725
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="spserveroption-transact-sql"></a>sp_serveroption (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -53,7 +52,7 @@ sp_serveroption [@server = ] 'server'
  Es el nombre del servidor para el que se establece la opción. *server* es de tipo **sysname**y no tiene ningún valor predeterminado.  
   
  [  **@optname =** ] **'***option_name***'**  
- Es la opción que se va a establecer en el servidor especificado. *option_name* es **varchar (**35**)**, no tiene ningún valor predeterminado. *option_name* puede ser cualquiera de los siguientes valores.  
+ Es la opción que se va a establecer en el servidor especificado. *option_name* es **varchar (** 35 **)**, no tiene ningún valor predeterminado. *option_name* puede ser cualquiera de los siguientes valores.  
   
 |Value|Description|  
 |-----------|-----------------|  
@@ -73,7 +72,7 @@ sp_serveroption [@server = ] 'server'
 |**promoción de transacciones de procedimientos remotos**|Use esta opción para proteger las acciones de un procedimiento entre servidores a través de una transacción del Coordinador de transacciones distribuidas de [!INCLUDE[msCoName](../../includes/msconame-md.md)] (MS DTC). Cuando esta opción es TRUE (u ON) al llamar a un procedimiento almacenado remoto inicia una transacción distribuida y se da de alta en MS DTC. La instancia de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] que efectúa la llamada al procedimiento almacenado remoto es el originador de la transacción y controla su realización. Posteriormente, cuando se ejecuta para la conexión una instrucción COMMIT TRANSACTION o ROLLBACK TRANSACTION, la instancia que controla la transacción solicita a MS DTC que administre la realización de la transacción distribuida entre los servidores participantes.<br /><br /> Una vez iniciada una transacción distribuida de [!INCLUDE[tsql](../../includes/tsql-md.md)], se pueden realizar llamadas a procedimientos almacenados remotos en otras instancias de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] que se hayan definido como servidores vinculados. Todos los servidores vinculados se dan de alta en la transacción distribuida de [!INCLUDE[tsql](../../includes/tsql-md.md)] y MS DTC se asegura de que la transacción se complete en cada uno de ellos.<br /><br /> Si esta opción está establecida en FALSE (u OFF), una transacción local no se promoverá a una transacción distribuida mientras se llame a una llamada a procedimiento remoto en un servidor vinculado.<br /><br /> Si antes de realizar una llamada a procedimiento entre servidores, la transacción ya es una transacción distribuida, esta opción no tiene efecto alguno. La llamada a procedimiento en un servidor vinculado se ejecutará en la misma transacción distribuida.<br /><br /> Si antes de realizar una llamada a procedimiento entre servidores, no existe ninguna transacción activa en la conexión, esta opción no tiene efecto alguno. A continuación, el procedimiento se ejecuta en el servidor vinculado sin transacciones activas.<br /><br /> El valor predeterminado para esta opción es TRUE (u ON).|  
   
  [  **@optvalue =**] **'***option_value***'**  
- Especifica si el *option_name* debe habilitarse (**TRUE** o **en**) o deshabilitado (**FALSE** o **desactivar**). *option_value* es **varchar (**10**)**, no tiene ningún valor predeterminado.  
+ Especifica si el *option_name* debe habilitarse (**TRUE** o **en**) o deshabilitado (**FALSE** o **desactivar**). *option_value* es **varchar (** 10 **)**, no tiene ningún valor predeterminado.  
   
  *option_value* puede ser un entero no negativo para la **tiempo de espera de conexión** y **tiempo de espera de consulta** opciones. Para el **nombre de intercalación** opción, *option_value* puede ser un nombre de intercalación o NULL.  
   

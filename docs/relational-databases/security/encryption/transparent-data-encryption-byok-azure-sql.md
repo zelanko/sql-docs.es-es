@@ -16,15 +16,16 @@ ms.component: security
 ms.workload: On Demand
 ms.tgt_pltfrm: ''
 ms.topic: article
-ms.date: 04/03/2018
+ms.date: 04/19/2018
 ms.author: aliceku
-ms.openlocfilehash: e8e5456b1c6e8ca160e677907a97976c8f2b0374
-ms.sourcegitcommit: d6b1695c8cbc70279b7d85ec4dfb66a4271cdb10
+monikerRange: = azuresqldb-current || = azure-sqldw-latest || = sqlallproducts-allversions
+ms.openlocfilehash: 77dee541f04218f8e84fc0428a0d8e34001e829a
+ms.sourcegitcommit: beaad940c348ab22d4b4a279ced3137ad30c658a
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/08/2018
+ms.lasthandoff: 04/20/2018
 ---
-# <a name="transparent-data-encryption-with-bring-your-own-key-preview-support-for-azure-sql-database-and-data-warehouse"></a>Cifrado de datos transparente compatible con Bring Your Own Key (versión preliminar) para Azure SQL Database y SQL Data Warehouse
+# <a name="transparent-data-encryption-with-bring-your-own-key-support-for-azure-sql-database-and-data-warehouse"></a>Cifrado de datos transparente compatible con Bring Your Own Key para Azure SQL Database y SQL Data Warehouse
 [!INCLUDE[appliesto-xx-asdb-asdw-xxx-md](../../../includes/appliesto-xx-asdb-asdw-xxx-md.md)]
 
 La compatibilidad con Bring Your Own Key (BYOK) del [Cifrado de datos transparente (TDE)](transparent-data-encryption.md) permite cifrar la Clave de cifrado de base de datos (DEK) con una clave asimétrica llamada "protector del TDE".  El protector del TDE se almacena bajo su control en [Azure Key Vault](https://docs.microsoft.com/azure/key-vault/key-vault-secure-your-key-vault), el sistema de administración de claves externas basado en la nube de Azure. Azure Key Vault es el primer servicio de administración de claves en el que TDE ha integrado la compatibilidad con BYOK. El protector del TDE se encarga de cifrar y descifrar la DEK de TDE, que se almacena en la página de arranque de la base de datos. El protector del TDE se almacena en Azure Key Vault y permanece siempre en el almacén de claves. Si se revoca el acceso del servidor al almacén de claves, las bases de datos no se pueden descifrar ni leer en la memoria.  El protector del TDE se establece en el nivel de servidor lógico, y todas las bases de datos asociadas a ese servidor heredan dicha configuración. 
@@ -65,9 +66,9 @@ Cuando TDE se configura por primera vez para usar un protector del TDE de Key Va
 
 ### <a name="guidelines-for-configuring-azure-key-vault"></a>Directrices para configurar Azure Key Vault
 
-- Use un almacén de claves con la opción de [eliminación temporal](https://docs.microsoft.com/azure/key-vault/key-vault-ovw-soft-delete) habilitada para protegerlo de una pérdida de datos en caso de que se eliminen por error una clave o un almacén de claves:  
-  - Los recursos eliminados temporalmente se conservan durante un período de tiempo determinado de 90 días, a menos que se recuperen o purguen.
-  - Las acciones de **recuperación** y **purga** tienen permisos propios asociados a una directiva de acceso al almacén de claves. 
+- Configure un almacén de claves con la opción de [eliminación temporal](https://docs.microsoft.com/azure/key-vault/key-vault-ovw-soft-delete) habilitada para protegerlo de una pérdida de datos en caso de que se eliminen por error (o de forma malintencionada) una clave o un almacén de claves.  Se trata de un **requisito estricto** para TDE con BYOK:  
+  - Los recursos eliminados temporalmente se conservan durante 90 días, a menos que se recuperen o purguen.
+  - Las acciones **recover** y **purge** tienen sus propios permisos definidos en una directiva de acceso al almacén de claves. 
 - Conceda al servidor lógico acceso al almacén de datos usando su identidad de Azure Active Directory (Azure AD).  Si se usa la IU del portal, la identidad de Azure AD se crea automáticamente y los permisos de acceso al almacén de claves se conceden al servidor.  Al utilizar PowerShell para configurar TDE con BYOK, se debe crear la identidad de Azure AD y comprobar su finalización. Vea [Configuración de TDE con BYOK](transparent-data-encryption-byok-azure-sql-configure.md) para recibir instrucciones paso a paso para usar PowerShell.
 
   >[!NOTE]
@@ -122,7 +123,8 @@ En la siguiente sección se tratan con más detalle los pasos de instalación y 
 ### <a name="azure-key-vault-configuration-steps"></a>Pasos de configuración de Azure Key Vault
 
 - Instale [PowerShell](https://docs.microsoft.com/en-us/powershell/azure/install-azurerm-ps?view=azurermps-5.6.0). 
-- Cree dos almacenes de Azure Key Vault en dos regiones diferentes mediante [ PowerShell para habilitar la propiedad "soft-delete"](https://docs.microsoft.com/en-us/azure/key-vault/key-vault-soft-delete-powershell) en los almacenes de claves (esta opción aún no está disponible desde el portal de Azure Key Vault, pero la requiere SQL). 
+- Cree dos almacenes de Azure Key Vault en dos regiones diferentes mediante [ PowerShell para habilitar la propiedad "soft-delete"](https://docs.microsoft.com/en-us/azure/key-vault/key-vault-soft-delete-powershell) en los almacenes de claves (esta opción aún no está disponible desde el portal de Azure Key Vault, pero la requiere SQL).
+- Los dos almacenes de Azure Key Vault deben estar ubicados en las dos regiones disponibles de la misma ubicación geográfica de Azure para que la copia de seguridad y la restauración de las claves funcionen.  Si necesita que los dos almacenes de claves estén en zonas geográficas diferentes para cumplir los requisitos de Geo-DR de SQL, siga el [proceso BYOK](https://docs.microsoft.com/en-us/azure/key-vault/key-vault-hsm-protected-keys) que permite importar las claves desde un HSM local.
 - Cree una clave en el primer almacén de claves:  
   - Clave RSA/RSA-HSA 2048 
   - Sin fechas de expiración 
@@ -138,7 +140,7 @@ Pasos para crear una implementación:
 - Seleccione el panel de TDE del servidor lógico y siga estos pasos para cada servidor lógico de SQL:  
    - Seleccione el almacén de Azure Key Vault de la misma región. 
    - Seleccione la clave que se va a usar como protector del TDE: cada servidor usará la copia local del protector del TDE. 
-   - Si se hace en el portal, se creará un [identificador de aplicación](https://docs.microsoft.com/en-us/azure/active-directory/managed-service-identity/overview) para el servidor lógico de SQL, que se usa para asignar los permisos lógicos de SQL Server para acceder al almacén de claves (no debe eliminar esta identidad).  El acceso se puede revocar eliminando los permisos de Azure Key Vault. para el servidor lógico de SQL, que se usa para asignar los permisos lógicos de SQL Server para acceder al almacén de claves (no debe eliminar esta identidad).  El acceso se puede revocar eliminando los permisos de Azure Key Vault. 
+   - Si se hace en el portal, se creará un [identificador de aplicación](https://docs.microsoft.com/en-us/azure/active-directory/managed-service-identity/overview) para el servidor lógico de SQL, que se usa para asignar los permisos lógicos de SQL Server para acceder al almacén de claves (no debe eliminar esta identidad).  El acceso se puede revocar eliminando los permisos de Azure Key Vault. para el servidor lógico de SQL, que se usa para asignar los permisos lógicos de SQL Server para acceder al almacén de claves.
 - Cree la base de datos principal. 
 - Siga la [guía de replicación geográfica activa](https://docs.microsoft.com/en-us/azure/sql-database/sql-database-geo-replication-overview) para llevar a cabo el escenario. Este paso creará la base de datos secundaria.
 

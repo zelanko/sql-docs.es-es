@@ -11,7 +11,7 @@ ms.suite: sql
 ms.technology:
 - drivers
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - driver manager [ODBC], role in connection process
 - connecting to data source [ODBC], driver manager
@@ -22,12 +22,11 @@ caps.latest.revision: 7
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: 9f6b57322f96f469060db134eead3c09071e7dde
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
-ms.translationtype: MT
+ms.openlocfilehash: 85839606036b56f058f6347b57d45ca296e23b96
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="driver-manager39s-role-in-the-connection-process"></a>El Administrador de controladores&#39;s rol en el proceso de conexión
 Recuerde que las aplicaciones no llamar a las funciones del controlador directamente. En su lugar, que llamen a funciones de administrador de controladores con el mismo nombre y el Administrador de controladores llama a las funciones de controlador. Normalmente, esto puede ocurrir casi inmediatamente. Por ejemplo, la aplicación llama **SQLExecute** en el Administrador de controladores y después algunas comprobaciones de errores, el Administrador de controladores llama **SQLExecute** en el controlador.  

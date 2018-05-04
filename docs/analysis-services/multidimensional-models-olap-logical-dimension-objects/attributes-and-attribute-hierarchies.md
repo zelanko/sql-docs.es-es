@@ -1,48 +1,26 @@
 ---
-title: "Atributos y jerarquías de atributo | Documentos de Microsoft"
-ms.custom: 
-ms.date: 03/06/2017
-ms.prod: analysis-services
-ms.prod_service: analysis-services
-ms.service: 
-ms.component: 
-ms.reviewer: 
-ms.suite: pro-bi
-ms.technology: 
-ms.tgt_pltfrm: 
-ms.topic: reference
-applies_to:
-- SQL Server 2016 Preview
-helpviewer_keywords:
-- regular attributes [Analysis Services]
-- parent attributes [Analysis Services]
-- hierarchies [Analysis Services], attribute
-- attributes [Analysis Services], about attributes
-- account attributes [Analysis Services]
-- dimensions [Analysis Services], attributes
-- key attributes [Analysis Services]
-- OLAP objects [Analysis Services], attributes
-- attributes [Analysis Services], relationships
-- attributes [Analysis Services]
-- relationships [Analysis Services], attributes
-ms.assetid: 59de1ea2-e7a9-4a53-9ee0-14be52e95643
-caps.latest.revision: 
-author: Minewiskan
+title: Atributos y jerarquías de atributo | Documentos de Microsoft
+ms.date: 05/02/2018
+ms.prod: sql
+ms.technology: analysis-services
+ms.component: olap
+ms.topic: article
 ms.author: owend
+ms.reviewer: owend
+author: minewiskan
 manager: kfile
-ms.workload: On Demand
-ms.openlocfilehash: 012caa5210886a9c2f6e72a6c1b7338154358d1f
-ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
+ms.openlocfilehash: 009b5857470b106cb5c68301537dceb438ec4406
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/15/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="attributes-and-attribute-hierarchies"></a>Atributos y jerarquías de atributos
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
-Las dimensiones son colecciones de atributos que están enlazados a una o varias columnas de una tabla o vista de la vista del origen de datos.  
+  Las dimensiones son colecciones de atributos que están enlazados a una o varias columnas de una tabla o vista de la vista del origen de datos.  
   
 ## <a name="key-attribute"></a>Atributo clave  
- Cada dimensión contiene un atributo clave. Cada atributo está enlazado a una o varias columnas de una tabla de dimensiones. El atributo clave es el atributo de una dimensión que identifica las columnas de la tabla principal de dimensiones que se utilizan en las relaciones de clave externa con la tabla de hechos. Normalmente, el atributo clave representa a la columna o columnas de clave principal de la tabla de dimensiones. Puede definir una clave principal lógica en una tabla de una vista del origen de datos que carece de clave principal física en el origen de datos subyacente. **Para obtener más información**, consulte [definir claves principales lógicas en una vista del origen de datos &#40; Analysis Services &#41; ](../../analysis-services/multidimensional-models/define-logical-primary-keys-in-a-data-source-view-analysis-services.md). Al definir atributos clave, el Asistente para cubos y el Asistente para dimensiones intentan hacer uso de las columnas de clave principal de la tabla de dimensiones en la vista del origen de datos. Si la tabla de dimensiones no tiene definida una clave principal lógica o una clave principal física, los asistentes no podrán definir correctamente los atributos clave de la dimensión.  
+ Cada dimensión contiene un atributo clave. Cada atributo está enlazado a una o varias columnas de una tabla de dimensiones. El atributo clave es el atributo de una dimensión que identifica las columnas de la tabla principal de dimensiones que se utilizan en las relaciones de clave externa con la tabla de hechos. Normalmente, el atributo clave representa a la columna o columnas de clave principal de la tabla de dimensiones. Puede definir una clave principal lógica en una tabla de una vista del origen de datos que carece de clave principal física en el origen de datos subyacente. **Para obtener más información**, consulte [definir claves principales lógicas en una vista del origen de datos &#40;Analysis Services&#41;](../../analysis-services/multidimensional-models/define-logical-primary-keys-in-a-data-source-view-analysis-services.md). Al definir atributos clave, el Asistente para cubos y el Asistente para dimensiones intentan hacer uso de las columnas de clave principal de la tabla de dimensiones en la vista del origen de datos. Si la tabla de dimensiones no tiene definida una clave principal lógica o una clave principal física, los asistentes no podrán definir correctamente los atributos clave de la dimensión.  
   
 ## <a name="binding-an-attribute-to-columns-in-data-source-view-tables-or-views"></a>Enlazar un atributo a columnas de tablas o vistas de vistas del origen de datos  
  Un atributo está enlazado a columnas de las tablas o vistas de una o varias vistas del origen de datos. Un atributo siempre está enlazado a una o más columnas de clave, lo que determina los miembros incluidos en el atributo. De manera predeterminada, es la única columna a la que está enlazado un atributo. Un atributo también se puede enlazar a una o más columnas adicionales para fines específicos. Por ejemplo, de un atributo **NameColumn** propiedad determina el nombre que aparece para el usuario para cada miembro de atributo: esta propiedad del atributo se puede enlazar a una columna de dimensión en particular a través de una vista del origen de datos o puede ser enlazar a una columna calculada en la vista del origen de datos. Para obtener más información, consulte [Dimension Attribute Properties Reference](../../analysis-services/multidimensional-models/dimension-attribute-properties-reference.md).  

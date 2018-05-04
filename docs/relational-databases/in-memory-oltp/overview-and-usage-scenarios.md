@@ -1,28 +1,29 @@
 ---
-title: "Información general y escenarios de uso | Microsoft Docs"
-ms.custom: 
+title: Información general y escenarios de uso | Microsoft Docs
+ms.custom: ''
 ms.date: 04/10/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine, sql-database
-ms.service: 
+ms.service: ''
 ms.component: in-memory-oltp
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: 62c964c5-eae4-4cf1-9024-d5a19adbd652
-caps.latest.revision: 
+caps.latest.revision: 5
 author: jodebrui
 ms.author: jodebrui
 manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 75f077fc93196e07bdada34924a2edbd2b02d6ab
-ms.sourcegitcommit: 37f0b59e648251be673389fa486b0a984ce22c81
+monikerRange: = azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions
+ms.openlocfilehash: 2bbf55de6f63d6d78165e9c7a57685bb7fdea4ca
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/12/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="overview-and-usage-scenarios"></a>Información general y escenarios de uso
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -99,7 +100,7 @@ El repositorio de ejemplos de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-
 
 - [Quorum duplica la carga de trabajo de la base de datos clave mientras disminuye el uso en 70% con el uso de OLTP en memoria en Azure SQL Database](http://customers.microsoft.com/story/quorum-doubles-key-databases-workload-while-lowering-dtu-with-sql-database)
 - EdgeNet ha aumentado el rendimiento de la carga de datos por lote y ha eliminado la necesidad de mantener una caché de nivel intermedio gracias a OLTP en memoria en [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)]: [Una empresa de servicios de datos obtiene acceso en tiempo real a los datos de productos con la tecnología en memoria](https://customers.microsoft.com/en-us/story/data-services-firm-gains-real-time-access-to-product-d)
-- Beth Israel Deaconess Medical Center ha podido aumentar considerablemente la tasa de ingesta de datos desde los controladores de dominio y manejar los picos en la carga de trabajo con OLTP en memoria en [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)]: [https://customers.microsoft.com/es-es/story/strengthening-data-security-and-creating-more-time-for]
+- Beth Israel Deaconess Medical Center ha podido aumentar considerablemente la tasa de ingesta de datos desde los controladores de dominio y manejar los picos en la carga de trabajo con OLTP en memoria en [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)]: [https://customers.microsoft.com/en-us/story/strengthening-data-security-and-creating-more-time-for]
 
 ### <a name="caching-and-session-state"></a>Almacenamiento en caché y estado de sesión
 

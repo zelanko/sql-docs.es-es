@@ -28,12 +28,11 @@ caps.latest.revision: 43
 author: Minewiskan
 ms.author: owend
 manager: erikre
-ms.workload: Inactive
-ms.openlocfilehash: 77ca2c4e3a63db80ff21a91309f5fc531e5ba3ca
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
-ms.translationtype: MT
+ms.openlocfilehash: e27b11836c0619c1415718cce3e38029ac8359d1
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="mdx-data-manipulation---update-cube"></a>Manipulación de datos MDX - UPDATE CUBE
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
@@ -86,7 +85,7 @@ UPDATE [ CUBE ] Cube_Name
 <New Value> / Count(leaf cells that are contained in <tuple>)  
 ```  
   
- **USE_EQUAL_INCREMENT:**cada celda hoja que contribuye a la celda actualizada se cambiará según la siguiente expresión.  
+ **USE_EQUAL_INCREMENT:** cada celda hoja que contribuye a la celda actualizada se cambiará según la siguiente expresión.  
   
 ```  
 <leaf cell value> = <leaf cell value> +   
@@ -128,6 +127,6 @@ Weight_Expression = <leaf cell value> / <existing value>
   
 ## <a name="see-also"></a>Vea también  
  <xref:Microsoft.AnalysisServices.AdomdClient.AdomdConnection.ConnectionString%2A>   
- [Instrucciones de manipulación de datos MDX &#40; MDX &#41;](../mdx/mdx-data-manipulation-statements-mdx.md)  
+ [Instrucciones de manipulación de datos MDX &#40;MDX&#41;](../mdx/mdx-data-manipulation-statements-mdx.md)  
   
   

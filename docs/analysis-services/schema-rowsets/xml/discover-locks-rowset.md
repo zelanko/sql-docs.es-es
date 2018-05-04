@@ -20,15 +20,15 @@ caps.latest.revision: 14
 author: Minewiskan
 ms.author: owend
 manager: kfile
-ms.workload: Inactive
-ms.openlocfilehash: 6b164727506042ad2f202e0cc797ab8ede1e2903
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
-ms.translationtype: MT
+ms.openlocfilehash: d93f7d578defe5aa10aaa8e1a5f7ac94c3cc05ea
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="discoverlocks-rowset"></a>DISCOVER_LOCKS, conjunto de filas
-[!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]Proporciona información sobre los bloqueos pendientes actuales en el servidor.  
+[!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]
+  Proporciona información sobre los bloqueos pendientes actuales en el servidor.  
   
 ## <a name="rowset-columns"></a>Columnas del conjunto de filas  
  El conjunto de filas **DISCOVER_LOCKS** contiene las siguientes columnas.  
@@ -62,7 +62,7 @@ ms.lasthandoff: 01/08/2018
   
 ## <a name="lock-types"></a>Tipos de bloqueo  
   
-|Nombre de bloque|Valor|Description|  
+|Nombre de bloque|Value|Description|  
 |---------------|-----------|-----------------|  
 |LOCK_NONE|0x0000000|Ningún bloqueo.|  
 |LOCK_SESSION_LOCK|0x0000001|Sesión inactiva; no interfiere con otros bloqueos.|  
@@ -75,6 +75,6 @@ ms.lasthandoff: 01/08/2018
 |LOCK_INVALID|0x0000080|Bloqueo no válido.|  
   
 ## <a name="see-also"></a>Vea también  
- [Conjuntos de filas de esquema de XML for Analysis](../../../analysis-services/schema-rowsets/xml/xml-for-analysis-schema-rowsets.md)  
+ [XML para conjuntos de filas de esquema de análisis](../../../analysis-services/schema-rowsets/xml/xml-for-analysis-schema-rowsets.md)  
   
   

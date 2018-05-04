@@ -1,42 +1,23 @@
 ---
 title: Procesar un modelo multidimensional (Analysis Services) | Documentos de Microsoft
-ms.custom: 
-ms.date: 03/04/2017
-ms.prod: analysis-services
-ms.prod_service: analysis-services
-ms.service: 
-ms.component: data-mining
-ms.reviewer: 
-ms.suite: pro-bi
-ms.technology: 
-ms.tgt_pltfrm: 
+ms.date: 05/02/2018
+ms.prod: sql
+ms.technology: analysis-services
+ms.component: multidimensional-models
 ms.topic: article
-helpviewer_keywords:
-- online mode [Analysis Services]
-- processing objects [Analysis Services]
-- partitions [Analysis Services], processing
-- jobs [Analysis Services]
-- objects [Analysis Services], processing
-- reprocessing objects
-- impact analysis [Analysis Services]
-- dimensions [Analysis Services], processing
-- project mode [Analysis Services]
-- cubes [Analysis Services], processing
-ms.assetid: 625aa5a6-aa09-4bac-be8a-778fa81c5a61
-caps.latest.revision: 
-author: Minewiskan
 ms.author: owend
+ms.reviewer: owend
+author: minewiskan
 manager: kfile
-ms.workload: Inactive
-ms.openlocfilehash: 3b53e351836edaecfc37230b389b4fba308eb3d3
-ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
+ms.openlocfilehash: 2782a29b4c37420d354da27c09e58ac8654025ac
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/15/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="processing-a-multidimensional-model-analysis-services"></a>Procesar un modelo multidimensional (Analysis Services)
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
-El procesamiento es el paso, o serie de pasos, en los que Analysis Services carga datos de un origen de datos relacional en un modelo multidimensional. Para los objetos que utilizan el almacenamiento MOLAP, los datos se guardan en el disco en la carpeta de archivos de base de datos. Para el almacenamiento ROLAP, el procesamiento se produce a petición, en respuesta a una consulta MDX en un objeto. Para los objetos que utilizan el almacenamiento ROLAP, el procesamiento hace referencia a la actualización de la memoria caché antes de devolver los resultados de la consulta.  
+  El procesamiento es el paso, o serie de pasos, en los que Analysis Services carga datos de un origen de datos relacional en un modelo multidimensional. Para los objetos que utilizan el almacenamiento MOLAP, los datos se guardan en el disco en la carpeta de archivos de base de datos. Para el almacenamiento ROLAP, el procesamiento se produce a petición, en respuesta a una consulta MDX en un objeto. Para los objetos que utilizan el almacenamiento ROLAP, el procesamiento hace referencia a la actualización de la memoria caché antes de devolver los resultados de la consulta.  
   
  De forma predeterminada, el procesamiento aparece cuando se implementa una solución al servidor. También puede procesar toda o parte de una solución, ya sea de modo ad hoc mediante herramientas como [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] o [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)], o según una programación utilizando [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] y el Agente SQL Server. Al realizar un cambio estructural en el modelo, como quitar una dimensión o cambiar el nivel de compatibilidad, deberá procesarse de nuevo para sincronizar los aspectos físicos y lógicos del modelo.  
   
@@ -87,6 +68,6 @@ El procesamiento es el paso, o serie de pasos, en los que Analysis Services carg
   
 ## <a name="see-also"></a>Vea también  
  [Arquitectura lógica &#40;Analysis Services - Datos multidimensionales&#41;](../../analysis-services/multidimensional-models/olap-logical/understanding-microsoft-olap-logical-architecture.md)   
- [Objetos de base de datos &#40; Analysis Services - datos multidimensionales &#41;](../../analysis-services/multidimensional-models/olap-logical/database-objects-analysis-services-multidimensional-data.md)  
+ [Objetos de base de datos & #40; Analysis Services - datos multidimensionales & #41;](../../analysis-services/multidimensional-models/olap-logical/database-objects-analysis-services-multidimensional-data.md)  
   
   

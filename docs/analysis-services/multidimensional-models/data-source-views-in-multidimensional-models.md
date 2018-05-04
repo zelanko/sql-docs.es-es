@@ -1,39 +1,23 @@
 ---
 title: Vistas en modelos multidimensionales del origen de datos | Documentos de Microsoft
-ms.custom: 
-ms.date: 03/01/2017
-ms.prod: analysis-services
-ms.prod_service: analysis-services
-ms.service: 
-ms.component: data-mining
-ms.reviewer: 
-ms.suite: pro-bi
-ms.technology: 
-ms.tgt_pltfrm: 
+ms.date: 05/02/2018
+ms.prod: sql
+ms.technology: analysis-services
+ms.component: multidimensional-models
 ms.topic: article
-helpviewer_keywords:
-- data source views [Analysis Services]
-- data source views [Analysis Services], about data source views
-- SQL Server Analysis Services, data source views
-- data source views [Analysis Services], multiple
-- Analysis Services, data source views
-- multiple data source views
-- SSAS, data source views
-ms.assetid: 4c12376f-4fc2-492b-9a00-93eec34571ed
-caps.latest.revision: 
-author: Minewiskan
 ms.author: owend
+ms.reviewer: owend
+author: minewiskan
 manager: kfile
-ms.workload: On Demand
-ms.openlocfilehash: 9e443b461a01c7a8e2ba04e7d759984062f63d6c
-ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
+ms.openlocfilehash: 6c65164c136e55ea7149427cce4c69606e6f5d75
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/15/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="data-source-views-in-multidimensional-models"></a>Vistas del origen de datos en modelos multidimensionales
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
-Una vista del origen de datos (DSV) es una abstracción de un origen de datos relacional que se convierte en la base de los cubos y dimensiones creadas en un proyecto multidimensional. La finalidad de una DSV es proporcionar el control sobre las estructuras de datos utilizadas en el proyecto, y trabajar independientemente de los orígenes de datos subyacentes (por ejemplo, la capacidad de cambiar de nombre o concatenar columnas sin modificar directamente el origen de datos original).  
+  Una vista del origen de datos (DSV) es una abstracción de un origen de datos relacional que se convierte en la base de los cubos y dimensiones creadas en un proyecto multidimensional. La finalidad de una DSV es proporcionar el control sobre las estructuras de datos utilizadas en el proyecto, y trabajar independientemente de los orígenes de datos subyacentes (por ejemplo, la capacidad de cambiar de nombre o concatenar columnas sin modificar directamente el origen de datos original).  
   
  Puede crear varias vistas del origen de datos en un proyecto o una base de datos de [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] en uno o varios orígenes de datos y crear cada una de ellas de forma que cumpla los requisitos de una solución distinta.  
   

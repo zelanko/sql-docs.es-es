@@ -24,12 +24,11 @@ caps.latest.revision: 69
 author: edmacauley
 ms.author: edmaca
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: 296a54187b415d79a4cc036f9111091cb6b1b415
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
-ms.translationtype: MT
+ms.openlocfilehash: f0f667c71bd1e67b311aad2d8da93b48e605ca79
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="spaddpublication-transact-sql"></a>sp_addpublication (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -181,7 +180,7 @@ sp_addpublication [ @publication = ] 'publication'
  Especifica la ubicación de la carpeta alternativa de la instantánea. *alternate_snapshot_folder* es **nvarchar (255)** con un valor predeterminado es NULL.  
   
  [  **@pre_snapshot_script=** ] **'***pre_snapshot_script***'**  
- Especifica un puntero a un **.sql** ubicación del archivo. *pre_snapshot_script* es **nvarchar (255),**con un valor predeterminado es NULL. El Agente de distribución ejecutará el script previo a la instantánea antes de la ejecución de cualquiera de los scripts de objetos replicados al aplicar la instantánea en un suscriptor. El script se ejecuta en el contexto de seguridad utilizado por el Agente de distribución al conectarse a la base de datos de suscripciones.  
+ Especifica un puntero a un **.sql** ubicación del archivo. *pre_snapshot_script* es **nvarchar (255),** con un valor predeterminado es NULL. El Agente de distribución ejecutará el script previo a la instantánea antes de la ejecución de cualquiera de los scripts de objetos replicados al aplicar la instantánea en un suscriptor. El script se ejecuta en el contexto de seguridad utilizado por el Agente de distribución al conectarse a la base de datos de suscripciones.  
   
  [  **@post_snapshot_script=** ] **'***post_snapshot_script***'**  
  Especifica un puntero a un **.sql** ubicación del archivo. *post_snapshot_script* es **nvarchar (255)**, su valor predeterminado es null. El Agente de distribución ejecutará el script posterior a la instantánea después de que se apliquen el resto de scripts de objetos replicados y datos durante la sincronización inicial. El script se ejecuta en el contexto de seguridad utilizado por el Agente de distribución al conectarse a la base de datos de suscripciones.  

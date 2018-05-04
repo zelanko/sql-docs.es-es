@@ -10,18 +10,17 @@ ms.reviewer: ''
 ms.suite: pro-bi
 ms.technology: ''
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: dc26489a-4c27-4b89-8215-6d245427c350
 caps.latest.revision: 12
 author: Minewiskan
 ms.author: owend
 manager: kfile
-ms.workload: Inactive
-ms.openlocfilehash: 8093acbb0886699bcb9c781c636b37f249f96bee
-ms.sourcegitcommit: 8f1d1363e18e0c32ff250617ab6cb2da2147bf8e
-ms.translationtype: MT
+ms.openlocfilehash: 7a854dd2925304203fb5b0ed36666b32278bb82d
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/03/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="related-projects-for-data-mining-solutions"></a>Proyectos relacionados en las soluciones de minería de datos
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
@@ -109,11 +108,11 @@ ms.lasthandoff: 04/03/2018
   
  Para obtener más información sobre cómo usar Reporting Services con consultas DMX como origen de datos, vea los siguientes vínculos:  
   
- [Recuperar datos de un modelo de minería de datos &#40; DMX &#41; &#40; SSRS &#41;](../../reporting-services/report-data/retrieve-data-from-a-data-mining-model-dmx-ssrs.md)  
+ [Recuperar datos de un modelo de minería de datos & #40; DMX & #41; & #40; SSRS & #41;](../../reporting-services/report-data/retrieve-data-from-a-data-mining-model-dmx-ssrs.md)  
   
  [Interfaz de usuario del Diseñador de consultas DMX de Analysis Services](../../reporting-services/report-data/analysis-services-dmx-query-designer-user-interface.md)  
   
- [Tipo de conexión de Analysis Services para DMX &#40; SSRS &#41;](../../reporting-services/report-data/analysis-services-connection-type-for-dmx-ssrs.md)  
+ [Tipo de conexión de Analysis Services para DMX & #40; SSRS & #41;](../../reporting-services/report-data/analysis-services-connection-type-for-dmx-ssrs.md)  
   
  Sin embargo, no es necesario utilizar DMX como origen de datos. Los componentes de [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] para minería de datos también permite guardar los resultados de una consulta de predicción en una base de datos relacional. Si tiene un flujo de trabajo establecido para actualizar los modelos con [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)], las predicciones de persistencia y otros resultados de consulta de minería de datos en SQL Server le permiten utilizar [!INCLUDE[ssCrescent](../../includes/sscrescent-md.md)] para los informes, así como otras herramientas que no interactúen con DMX.  
   

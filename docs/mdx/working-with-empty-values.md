@@ -21,12 +21,11 @@ caps.latest.revision: 36
 author: Minewiskan
 ms.author: owend
 manager: erikre
-ms.workload: On Demand
-ms.openlocfilehash: 37b91bc83640a10c9905726fdabb49c7816d77a1
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
-ms.translationtype: MT
+ms.openlocfilehash: 92920642feb9d517067b41206e3cdb7c15f8302b
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="working-with-empty-values"></a>Trabajar con valores vacíos
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
@@ -126,7 +125,7 @@ WHERE([Date].[Calendar].[Calendar Year].&[2001])
   
  `FROM [Adventure Works]`  
   
- Para obtener más información, consulte [NonEmpty &#40; MDX &#41; ](../mdx/nonempty-mdx.md).  
+ Para obtener más información, consulte [NonEmpty &#40;MDX&#41;](../mdx/nonempty-mdx.md).  
   
 ## <a name="empty-values-and-comparison-operators"></a>Valores vacíos y operadores de comparación  
  Cuando hay valores vacíos en los datos, los operadores lógicos y de comparación pueden devolver un tercer resultado EMPTY en lugar de simplemente TRUE o FALSE. Esta necesidad de una lógica de tres valores es el origen de muchos errores de la aplicación. En estas tablas se destaca el efecto que supone escribir comparaciones con valores vacíos.  
@@ -135,7 +134,7 @@ WHERE([Date].[Calendar].[Calendar Year].&[2001])
   
 |y|TRUE|EMPTY|FALSE|  
 |---------|----------|-----------|-----------|  
-|**ES TRUE**|TRUE|FALSE|FALSE|  
+|**TRUE**|TRUE|FALSE|FALSE|  
 |**VACÍA**|FALSE|EMPTY|FALSE|  
 |**FALSE**|FALSE|FALSE|FALSE|  
   
@@ -143,7 +142,7 @@ WHERE([Date].[Calendar].[Calendar Year].&[2001])
   
 |O BIEN|TRUE|FALSE|  
 |--------|----------|-----------|  
-|**ES TRUE**|TRUE|TRUE|  
+|**TRUE**|TRUE|TRUE|  
 |**VACÍA**|TRUE|TRUE|  
 |**FALSE**|TRUE|FALSE|  
   
@@ -156,8 +155,8 @@ WHERE([Date].[Calendar].[Calendar Year].&[2001])
 |FALSE|TRUE|  
   
 ## <a name="see-also"></a>Vea también  
- [Referencia de funciones MDX &#40; MDX &#41;](../mdx/mdx-function-reference-mdx.md)   
- [Referencia de operadores MDX &#40; MDX &#41;](../mdx/mdx-operator-reference-mdx.md)   
- [Expresiones &#40; MDX &#41;](../mdx/expressions-mdx.md)  
+ [Referencia de funciones MDX & #40; MDX & #41;](../mdx/mdx-function-reference-mdx.md)   
+ [Referencia de operadores MDX &#40;MDX&#41;](../mdx/mdx-operator-reference-mdx.md)   
+ [Expresiones &#40;MDX&#41;](../mdx/expressions-mdx.md)  
   
   

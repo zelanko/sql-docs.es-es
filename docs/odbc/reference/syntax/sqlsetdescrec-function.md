@@ -11,7 +11,7 @@ ms.suite: sql
 ms.technology:
 - drivers
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 apiname:
 - SQLSetDescRec
 apilocation:
@@ -26,12 +26,11 @@ caps.latest.revision: 22
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: f3830cb70bee0abf557882b55af2b4787e9f3280
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
-ms.translationtype: MT
+ms.openlocfilehash: 67110cfb1f6130153ced12525a2bd7f475b8e63a
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="sqlsetdescrec-function"></a>Sqlsetdescrec, función
 **Conformidad**  
@@ -107,7 +106,7 @@ SQLRETURN SQLSetDescRec(
 |HY013|Error de administración de memoria|No se pudo procesar la llamada de función porque los objetos subyacentes de la memoria no se pudieron tener acceso, posiblemente debido a condiciones de memoria insuficiente.|  
 |HY016|No se puede modificar un descriptor de fila de implementación|El *DescriptorHandle* argumento estaba asociado con un IRD.|  
 |HY021|Información de descriptor incoherente|El *tipo* campo o cualquier otro campo asociado con el campo SQL_DESC_TYPE en el descriptor, no era válido o coherente.<br /><br /> Información del descriptor de comprobarse durante una comprobación de coherencia no era coherente. (Vea "Comprobaciones de coherencia," más adelante en esta sección).|  
-|HY090|Longitud de búfer o cadena no válida|(DM) el controlador fue un ODBC 2*.x* controlador, el descriptor fue un descartar la *ColumnNumber* argumento se establece en 0 y el valor especificado para el argumento *BufferLength* era no es igual a 4.|  
+|HY090|Longitud de búfer o cadena no válida|(DM) el controlador fue un ODBC 2 *.x* controlador, el descriptor fue un descartar la *ColumnNumber* argumento se establece en 0 y el valor especificado para el argumento *BufferLength* era no es igual a 4.|  
 |HY117|Se suspende la conexión debido al estado de transacción desconocido. Solo se desconecte y se permiten las funciones de solo lectura.|(DM) para obtener más información sobre el estado suspendido, consulte [función SQLEndTran](../../../odbc/reference/syntax/sqlendtran-function.md).|  
 |HYT01|Tiempo de espera de conexión expirado|El período de tiempo de espera de conexión finalizó antes de que el origen de datos se respondió a la solicitud. El período de tiempo de espera de conexión se establece a través de **SQLSetConnectAttr**, SQL_ATTR_CONNECTION_TIMEOUT.|  
 |IM001|Controlador no admite esta función|(DM) el controlador asociado a la *DescriptorHandle* no admite la función.|  

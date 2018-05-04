@@ -1,16 +1,16 @@
 ---
 title: UPDATE (Transact-SQL) | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 09/06/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
-ms.service: 
+ms.service: ''
 ms.component: t-sql|queries
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - UPDATE_TSQL
@@ -40,16 +40,17 @@ helpviewer_keywords:
 - FROM clause, UPDATE statement
 - WHERE clause, UPDATE statement
 ms.assetid: 40e63302-0c68-4593-af3e-6d190181fee7
-caps.latest.revision: 
+caps.latest.revision: 91
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ms.workload: Active
-ms.openlocfilehash: 227cafdd68eddac2ff6a515853f0fcded0c07f63
-ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
+monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
+ms.openlocfilehash: 4e9de41bb284045477426e6044f2449f62f1d58b
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/25/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="update-transact-sql"></a>UPDATE (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -192,7 +193,7 @@ SET { column_name = { expression | NULL } } [ ,...n ]
  *method_name* **(** *argument* [ **,**... *n*] **)**  
  Es un método mutador público no estático de *udt_column_name* que usa uno o varios argumentos.  
   
- **.**WRITE **(***expression***,***@Offset***,***@Length***)**  
+ **.** WRITE **(***expression***,***@Offset***,***@Length***)**  
  Especifica que se va a modificar una sección del valor de *column_name*. *expresión* reemplaza a unidades *@Length* a partir de *@Offset* de *column_name*. Solo se pueden especificar con esta cláusula columnas de tipo **varchar(max)**, **nvarchar(max)** o **varbinary(max)**. *column_name* no puede ser NULL y no se puede calificar con un nombre de tabla o un alias de tabla.  
   
  *expression* es el valor que se copia en *column_name*. *expression* se debe evaluar, o bien se debe poder convertir implícitamente al tipo *column_name*. Si *expression* se establece en NULL, se omitirá *@Length* y se truncará el valor de *column_name* en el valor *@Offset* especificado.  
@@ -336,21 +337,21 @@ GO
 >  Los tipos de datos **ntext**, **text** e **image** se quitarán en una versión futura de [!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Evite su uso en nuevos trabajos de desarrollo y piense en modificar las aplicaciones que los usan actualmente. Use [nvarchar(max)](../../t-sql/data-types/nchar-and-nvarchar-transact-sql.md), [varchar(max)](../../t-sql/data-types/char-and-varchar-transact-sql.md)y [varbinary(max)](../../t-sql/data-types/binary-and-varbinary-transact-sql.md) en su lugar.  
   
 ### <a name="updating-large-value-data-types"></a>Actualizar tipos de datos de valores grandes  
- Use la cláusula **.**WRITE (*expression***,** *@Offset***,***@Length*) para realizar una actualización parcial o completa de los tipos de datos **varchar(max)**, **nvarchar(max)** y **varbinary(max)**. Por ejemplo, la actualización parcial de una columna **varchar(max)** podría eliminar o modificar solo los 200 primeros caracteres de la columna, mientras que una actualización completa eliminaría o modificaría todos los datos de la columna. Las actualizaciones **.**WRITE que insertan o anexan datos nuevos se registran mínimamente si se ha establecido para la base de datos el modelo de recuperación optimizado para cargas masivas de registros o el modelo de recuperación simple. El registro mínimo no se utiliza cuando se actualizan los datos existentes. Para más información, consulte [El registro de transacciones &#40;SQL Server&#41;](../../relational-databases/logs/the-transaction-log-sql-server.md).  
+ Use la cláusula **.** WRITE (*expression***,** *@Offset ***,***@Length*) para realizar una actualización parcial o completa de los tipos de datos **varchar(max)**, **nvarchar(max)** y **varbinary(max)**. Por ejemplo, la actualización parcial de una columna **varchar(max)** podría eliminar o modificar solo los 200 primeros caracteres de la columna, mientras que una actualización completa eliminaría o modificaría todos los datos de la columna. Las actualizaciones **.** WRITE que insertan o anexan datos nuevos se registran mínimamente si se ha establecido para la base de datos el modelo de recuperación optimizado para cargas masivas de registros o el modelo de recuperación simple. El registro mínimo no se utiliza cuando se actualizan los datos existentes. Para más información, consulte [El registro de transacciones &#40;SQL Server&#41;](../../relational-databases/logs/the-transaction-log-sql-server.md).  
   
  El [!INCLUDE[ssDE](../../includes/ssde-md.md)] convierte una actualización parcial en actualización completa cuando la instrucción UPDATE realiza una de estas acciones:  
 -   Cambia una columna de clave de la tabla o vista con particiones.  
 -   Modifica más de una fila y también actualiza la clave de un índice clúster no único en un valor no constante.  
   
-No se puede usar la cláusula **.**WRITE para actualizar una columna NULL o establecer el valor de *column_name* como NULL.  
+No se puede usar la cláusula **.** WRITE para actualizar una columna NULL o establecer el valor de *column_name* como NULL.  
   
 *@Offset* y *@Length* se especifican en bytes para los tipos de datos **varbinary** y **varchar**, y en caracteres para el tipo de datos **nvarchar**. Se calculan los desplazamientos correspondientes para las intercalaciones del juego de caracteres de doble byte (DBCS).  
   
 Para que el rendimiento sea óptimo, se recomienda insertar o actualizar los datos en tamaños de fragmento que sean múltiplos de 8.040 bytes.  
   
-Si se hace referencia en una cláusula OUTPUT a la columna modificada por la cláusula **.**WRITE, el valor completo de la columna, ya sea la imagen anterior de **deleted.***column_name* o la imagen posterior de **inserted.***column_name*, se devuelve en la columna que se ha especificado en la variable de la tabla. Vea el ejemplo R a continuación.  
+Si se hace referencia en una cláusula OUTPUT a la columna modificada por la cláusula **.** WRITE, el valor completo de la columna, ya sea la imagen anterior de **deleted.***column_name* o la imagen posterior de **inserted.***column_name*, se devuelve en la columna que se ha especificado en la variable de la tabla. Vea el ejemplo R a continuación.  
   
-Para obtener la misma funcionalidad de **.**WRITE con otros tipos de datos de carácter o binarios, use [STUFF &#40;Transact-SQL&#41;](../../t-sql/functions/stuff-transact-sql.md).  
+Para obtener la misma funcionalidad de **.** WRITE con otros tipos de datos de carácter o binarios, use [STUFF &#40;Transact-SQL&#41;](../../t-sql/functions/stuff-transact-sql.md).  
   
 ### <a name="updating-user-defined-type-columns"></a>Actualizar columnas de tipos definidos por el usuario  
  Hay varios métodos para actualizar los valores de columnas de tipos definidos por el usuario:  
@@ -464,7 +465,7 @@ ID     Value
  Una instrucción UPDATE siempre adquiere un bloqueo exclusivo (X) en la tabla que modifica y retiene ese bloqueo hasta que se completa la transacción. Con un bloqueo exclusivo, ninguna otra transacción puede modificar los datos. Puede especificar sugerencias de tabla para invalidar este comportamiento predeterminado durante la ejecución de la instrucción UPDATE especificando otro método de bloqueo, sin embargo se recomienda que solo los desarrolladores y administradores de bases de datos experimentados usen las sugerencias y únicamente como último recurso. Para obtener más información, vea [Sugerencias de tabla &#40;Transact-SQL&#41;](../../t-sql/queries/hints-transact-sql-table.md).  
   
 ## <a name="logging-behavior"></a>Comportamiento del registro  
- La instrucción UPDATE se registra, pero las actualizaciones parciales de tipos de datos de valores grandes mediante la cláusula **.**WRITE se registran mínimamente. Para obtener más información, vea "Actualizar tipos de datos de valores grandes" en la sección anterior "Tipos de datos".  
+ La instrucción UPDATE se registra, pero las actualizaciones parciales de tipos de datos de valores grandes mediante la cláusula **.** WRITE se registran mínimamente. Para obtener más información, vea "Actualizar tipos de datos de valores grandes" en la sección anterior "Tipos de datos".  
   
 ## <a name="security"></a>Seguridad  
   
@@ -529,7 +530,7 @@ GO
 ```  
   
 #### <a name="d-using-the-top-clause"></a>D. Usar la cláusula TOP  
- En los siguientes ejemplos use la cláusula TOP para limitar el número de filas que se modifican en una instrucción UPDATE. Cuando se usa una cláusula TOP (*n*) con UPDATE, la operación de actualización se realiza en una selección aleatoria de un número de filas '*n*'. En el ejemplo siguiente se actualiza un 25 por ciento la columna `VacationHours` en 10 filas aleatorias de la tabla `Employee`.  
+ En los siguientes ejemplos use la cláusula TOP para limitar el número de filas que se modifican en una instrucción UPDATE. Cuando se usa una cláusula TOP (*n*) con UPDATE, la operación de actualización se realiza en una selección aleatoria de un número de filas *n*. En el ejemplo siguiente se actualiza un 25 por ciento la columna `VacationHours` en 10 filas aleatorias de la tabla `Employee`.  
   
 ```sql  
 USE AdventureWorks2012;
@@ -1016,7 +1017,7 @@ GO
  En los ejemplos de esta sección se muestra cómo usar UPDATE en otras instrucciones.  
   
 #### <a name="ab-using-update-in-a-stored-procedure"></a>AB. Usar UPDATE en un procedimiento almacenado  
- En el ejemplo siguiente se usa una instrucción UPDATE en un procedimiento almacenado. El procedimiento toma un parámetro de entrada `@NewHours` y un parámetro de salida `@RowCount`. El valor del parámetro `@NewHours`se usa en la instrucción UPDATE para actualizar la columna `VacationHours` de la tabla `HumanResources.Employee`. El parámetro de salida `@RowCount` se usa para devolver el número de filas afectadas a una variable local. La expresión CASE se utiliza en la cláusula SET para determinar el valor que está establecido para `VacationHours` condicionalmente. Cuando se paga al empleado por hora (`SalariedFlag` = 0), `VacationHours` se establece en el número actual de horas más el valor especificado en `@NewHours`; de lo contrario, `VacationHours` se establece en el valor especificado en `@NewHours`.  
+ En el ejemplo siguiente se usa una instrucción UPDATE en un procedimiento almacenado. El procedimiento toma un parámetro de entrada `@NewHours` y un parámetro de salida `@RowCount`. El valor del parámetro `@NewHours` se usa en la instrucción UPDATE para actualizar la columna `VacationHours` de la tabla `HumanResources.Employee`. El parámetro de salida `@RowCount` se usa para devolver el número de filas afectadas a una variable local. La expresión CASE se utiliza en la cláusula SET para determinar el valor que está establecido para `VacationHours` condicionalmente. Cuando se paga al empleado por hora (`SalariedFlag` = 0), `VacationHours` se establece en el número actual de horas más el valor especificado en `@NewHours`; de lo contrario, `VacationHours` se establece en el valor especificado en `@NewHours`.  
   
 ```sql  
 USE AdventureWorks2012;  

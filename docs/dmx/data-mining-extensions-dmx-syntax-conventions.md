@@ -22,12 +22,11 @@ caps.latest.revision: 13
 author: Minewiskan
 ms.author: owend
 manager: erikre
-ms.workload: Inactive
-ms.openlocfilehash: 564e0dddd4d1d5c3ea417b9b8a4f1f01404219d4
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
-ms.translationtype: MT
+ms.openlocfilehash: 821c13f6a0d6e695249d873477a5145fc64b1b4c
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="data-mining-extensions-dmx-syntax-conventions"></a>Convenciones de sintaxis de Extensiones de minería de datos (DMX)
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
@@ -42,10 +41,10 @@ ms.lasthandoff: 01/08/2018
 |`[ ]` (corchetes)|Contienen elementos de sintaxis opcionales. No escriba los corchetes.|  
 |{} (llaves)|Contienen elementos de sintaxis obligatorios. No escriba las llaves.|  
 |, ...|Indica que el elemento anterior a la coma se puede repetir muchas veces. Los elementos se separan mediante comas.|  
-|\<etiqueta >:: =|Nombre de un bloque de sintaxis. Esta convención sirve para agrupar y etiquetar secciones de sintaxis extensas o una unidad de sintaxis que se puede usar en varias ubicaciones dentro de una instrucción. Cada ubicación en la que se puede utilizar el bloque de sintaxis se indica con la etiqueta incluida entre comillas angulares, como \<etiqueta >.|  
+|\<label> ::=|Nombre de un bloque de sintaxis. Esta convención sirve para agrupar y etiquetar secciones de sintaxis extensas o una unidad de sintaxis que se puede usar en varias ubicaciones dentro de una instrucción. Cada ubicación en la que se puede utilizar el bloque de sintaxis se indica con la etiqueta incluida entre comillas angulares, como \<etiqueta >.|  
   
 ## <a name="see-also"></a>Vea también  
- [Extensiones de minería de datos &#40; DMX &#41; Referencia](../dmx/data-mining-extensions-dmx-reference.md)  
+ [Extensiones de minería de datos & #40; DMX & #41; Referencia](../dmx/data-mining-extensions-dmx-reference.md)  
   
   
 

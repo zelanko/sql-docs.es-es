@@ -1,32 +1,23 @@
 ---
 title: Jerarquías desiguales | Documentos de Microsoft
-ms.custom: ''
-ms.date: 03/04/2017
-ms.prod: analysis-services
-ms.prod_service: analysis-services
-ms.service: ''
-ms.component: data-mining
-ms.reviewer: ''
-ms.suite: pro-bi
-ms.technology: ''
-ms.tgt_pltfrm: ''
+ms.date: 05/02/2018
+ms.prod: sql
+ms.technology: analysis-services
+ms.component: multidimensional-models
 ms.topic: article
-helpviewer_keywords:
-- ragged hierarchies [Analysis Services]
-ms.assetid: e40a5788-7ede-4b0f-93ab-46ca33d0cace
-caps.latest.revision: 16
-author: Minewiskan
 ms.author: owend
+ms.reviewer: owend
+author: minewiskan
 manager: kfile
-ms.workload: On Demand
-ms.openlocfilehash: c1a8c252af66d893a6fe540da71d05fcb09ad8e0
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+ms.openlocfilehash: 8def84c48c3764d81b9510c1ccf6f244e8efeec8
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="user-defined-hierarchies---ragged-hierarchies"></a>Jerarquías definidas por el usuario - jerarquías desiguales
-[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]Una jerarquía desigual es una jerarquía definida por el usuario que tiene un número impar de niveles. Por ejemplo, un organigrama donde un director de alto nivel tiene tanto directores de departamento como no directores a su cargo o jerarquías geográficas que constan de País-Región-Ciudad, donde algunas ciudades no tienen un Estado o Provincia primario, como Washington D.C., Ciudad del Vaticano o Nueva Delhi.  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
+  Una jerarquía desigual es una jerarquía definida por el usuario que tiene un número impar de niveles. Por ejemplo, un organigrama donde un director de alto nivel tiene tanto directores de departamento como no directores a su cargo o jerarquías geográficas que constan de País-Región-Ciudad, donde algunas ciudades no tienen un Estado o Provincia primario, como Washington D.C., Ciudad del Vaticano o Nueva Delhi.  
   
  En la mayoría de las jerarquías de una dimensión, cada nivel tiene el mismo número de miembros por encima de él que cualquier otro miembro del mismo nivel. Una jerarquía desigual es diferente en el sentido de que el primario lógico de al menos un miembro no se encuentra en el nivel que está inmediatamente por encima del miembro. Cuando ocurre esto, la jerarquía desciende a distintos niveles de diferentes rutas de obtención de detalles. En una aplicación cliente, esto puede hacer que las rutas de obtención de detalles sean innecesariamente complicadas.  
   
@@ -62,7 +53,7 @@ ms.lasthandoff: 01/08/2018
   
     |Configuración de HideMemberIf|Description|  
     |--------------------------|-----------------|  
-    |**Never**|Los miembros del nivel nunca están ocultos. Este es el valor predeterminado.|  
+    |**Never**|Los miembros del nivel nunca están ocultos. Es el valor predeterminado.|  
     |**OnlyChildWithNoName**|Un miembro del nivel está oculto cuando es el único elemento secundario de su elemento primario y su nombre es nulo o es una cadena vacía.|  
     |**OnlyChildWithParentName**|Un miembro del nivel está oculto cuando es el único elemento secundario de su elemento primario y su nombre es el mismo que el de su primario.|  
     |**NoName**|Un miembro del nivel está oculto cuando su nombre está vacío.|  
@@ -80,6 +71,6 @@ ms.lasthandoff: 01/08/2018
  [Crear jerarquías definidas por el usuario](../../analysis-services/multidimensional-models/user-defined-hierarchies-create.md)   
  [Jerarquías de usuario](../../analysis-services/multidimensional-models-olap-logical-dimension-objects/user-hierarchies.md)   
  [Dimensiones de elementos primarios y secundarios](../../analysis-services/multidimensional-models/parent-child-dimension.md)   
- [Propiedades de cadena de conexión &#40;Analysis Services&#41;](../../analysis-services/instances/connection-string-properties-analysis-services.md)  
+ [Propiedades de la cadena de conexión & #40; Analysis Services & #41;](../../analysis-services/instances/connection-string-properties-analysis-services.md)  
   
   

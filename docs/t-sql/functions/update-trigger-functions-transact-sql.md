@@ -1,16 +1,16 @@
 ---
-title: UPDATE() (Transact-SQL) | Documentos de Microsoft
-ms.custom: 
+title: UPDATE() (Transact-SQL) | Microsoft Docs
+ms.custom: ''
 ms.date: 03/15/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine, sql-database
-ms.service: 
+ms.service: ''
 ms.component: t-sql|functions
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - UPDATE()_TSQL
@@ -28,18 +28,18 @@ helpviewer_keywords:
 - verifying column updates
 - checking column updates
 ms.assetid: 8e3be25b-2e3b-4d1f-a610-dcbbd8d72084
-caps.latest.revision: 
+caps.latest.revision: 29
 author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 6d5b93a4f98e382ccb6504e1d20d6e974a031f86
-ms.sourcegitcommit: 45e4efb7aa828578fe9eb7743a1a3526da719555
+ms.openlocfilehash: b91d175788e3f67e8a4e4cc1484e9648072c4cef
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 04/16/2018
 ---
-# <a name="update---trigger-functions-transact-sql"></a>UPDATE - funciones de desencadenador (Transact-SQL)
+# <a name="update---trigger-functions-transact-sql"></a>UPDATE: funciones de desencadenador (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
   Devuelve un valor booleano que indica si se intentó utilizar INSERT o UPDATE en una columna especificada de una tabla o vista. UPDATE() se utiliza en cualquier lugar del cuerpo de un desencadenador INSERT o UPDATE de [!INCLUDE[tsql](../../includes/tsql-md.md)] para probar si el desencadenador debe ejecutar ciertas acciones.  
@@ -54,23 +54,23 @@ UPDATE ( column )
 ```  
   
 ## <a name="arguments"></a>Argumentos  
- *columna*  
- Es el nombre de la columna que se va a probar para una acción INSERT o UPDATE. Debido a que el nombre de la tabla se especifica en la cláusula ON del desencadenador, no lo incluya antes del nombre de la columna. La columna puede tener cualquier [tipo de datos](../../t-sql/data-types/data-types-transact-sql.md) admite [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. No obstante, no se pueden utilizar columnas calculadas en este contexto.  
+ *column*  
+ Es el nombre de la columna que se va a probar para una acción INSERT o UPDATE. Debido a que el nombre de la tabla se especifica en la cláusula ON del desencadenador, no lo incluya antes del nombre de la columna. Esta columna puede ser de cualquier [tipo de datos](../../t-sql/data-types/data-types-transact-sql.md) admitido por [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. No obstante, no se pueden utilizar columnas calculadas en este contexto.  
   
 ## <a name="return-types"></a>Tipos devueltos  
  Boolean  
   
-## <a name="remarks"></a>Comentarios  
+## <a name="remarks"></a>Notas  
  UPDATE() devuelve TRUE independientemente de si un intento de INSERT o UPDATE tiene éxito.  
   
- Para probar una acción INSERT o UPDATE para más de una columna, especifique una actualización independiente (*columna*) cláusula después de la primera de ellas. También puede probar acciones INSERT o UPDATE en varias columnas con COLUMNS_UPDATED, que devuelve un patrón de bits que indica las columnas que se insertaron o se actualizaron.  
+ Para probar una acción INSERT o UPDATE en más de una columna, especifique una cláusula UPDATE(*column*) distinta a continuación de la primera. También puede probar acciones INSERT o UPDATE en varias columnas con COLUMNS_UPDATED, que devuelve un patrón de bits que indica las columnas que se insertaron o se actualizaron.  
   
  IF UPDATE devuelve el valor TRUE en las acciones INSERT porque en las columnas se insertaron valores explícitos o implícitos (NULL).  
   
 > [!NOTE]  
->  IF UPDATE (*columna*n) cláusula funciona igual que un IF Si... ELSE o WHILE (cláusula) y puede utilizar BEGIN... Bloque final. Para obtener más información, vea [lenguaje de Control de flujo &#40; Transact-SQL &#41; ](~/t-sql/language-elements/control-of-flow.md).  
+>  La cláusula IF UPDATE(*column*) funciona de forma idéntica a una instrucción IF, IF…ELSE o WHILE, y puede usar el bloque BEGIN…END. Para más información, vea [Lenguaje de control de flujo &#40;Transact-SQL&#41;](~/t-sql/language-elements/control-of-flow.md).  
   
- UPDATE (*columna*) puede usarse en cualquier lugar dentro del cuerpo de un [!INCLUDE[tsql](../../includes/tsql-md.md)] desencadenador.  
+ UPDATE(*column*) se puede usar en cualquier lugar del cuerpo de un desencadenador [!INCLUDE[tsql](../../includes/tsql-md.md)].  
   
 ## <a name="examples"></a>Ejemplos  
  En el ejemplo siguiente se crea un desencadenador que imprime un mensaje para el cliente si alguien intenta actualizar las columnas `StateProvinceID` o `PostalCode` de la tabla `Address`.  
@@ -98,8 +98,8 @@ WHERE PostalCode = '12345';
 GO  
 ```  
   
-## <a name="see-also"></a>Vea también  
- [COLUMNS_UPDATED &#40; Transact-SQL &#41;](../../t-sql/functions/columns-updated-transact-sql.md)   
+## <a name="see-also"></a>Ver también  
+ [COLUMNS_UPDATED &#40;Transact-SQL&#41;](../../t-sql/functions/columns-updated-transact-sql.md)   
  [CREATE TRIGGER &#40;Transact-SQL&#41;](../../t-sql/statements/create-trigger-transact-sql.md)  
   
   

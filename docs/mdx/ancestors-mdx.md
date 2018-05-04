@@ -22,12 +22,11 @@ caps.latest.revision: 46
 author: Minewiskan
 ms.author: owend
 manager: erikre
-ms.workload: Inactive
-ms.openlocfilehash: 3bf406938a92ec3b3c8829b3e1cb59098ea62524
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
-ms.translationtype: MT
+ms.openlocfilehash: 3bf71b6d2b228d3178d4dba420aecefe34e14668
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="ancestors-mdx"></a>Ancestors (MDX)
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
@@ -52,10 +51,10 @@ Ancestors(Member_Expression, Distance)
  *Level_Expression*  
  Expresión MDX válida que devuelve un nivel.  
   
- *Distancia*  
+ *distancia*  
  Expresión numérica válida que especifica la distancia desde el miembro especificado.  
   
-## <a name="remarks"></a>Notas  
+## <a name="remarks"></a>Comentarios  
  Con el **antecesores** función, se proporciona la función con una expresión de miembro MDX y, a continuación, se proporciona una expresión MDX de un nivel que sea un antecesor de ese miembro o una expresión numérica que representa el número de niveles por encima de ese miembro. Con esta información, el **antecesores** función devuelve el conjunto de miembros (que será un conjunto que consta de un miembro) en ese nivel.  
   
 > [!NOTE]  
@@ -111,7 +110,7 @@ SELECT {
 FROM [Adventure Works]  
 ```  
   
-## <a name="see-also"></a>Ver también  
- [Referencia de funciones MDX &#40; MDX &#41;](../mdx/mdx-function-reference-mdx.md)  
+## <a name="see-also"></a>Vea también  
+ [Referencia de funciones MDX & #40; MDX & #41;](../mdx/mdx-function-reference-mdx.md)  
   
   

@@ -1,16 +1,16 @@
 ---
 title: ALTER VIEW (Transact-SQL) | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 05/10/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine, sql-database
-ms.service: 
+ms.service: ''
 ms.component: t-sql|statements
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - ALTER_VIEW_TSQL
@@ -23,16 +23,16 @@ helpviewer_keywords:
 - modifying views
 - ALTER VIEW statement
 ms.assetid: 03eba220-13e2-49e3-bd9d-ea9df84dc28c
-caps.latest.revision: 
+caps.latest.revision: 32
 author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: Active
-ms.openlocfilehash: 79d889411d7e974a6ddabd6a753b45f332f1f62a
-ms.sourcegitcommit: 45e4efb7aa828578fe9eb7743a1a3526da719555
+ms.openlocfilehash: f20a6326f33f0cd41116d3a3c20dcdfad163eea2
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="alter-view-transact-sql"></a>ALTER VIEW (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -74,12 +74,12 @@ AS select_statement
 >  En las columnas de la vista, los permisos de un nombre de columna se aplican mediante una instrucción CREATE VIEW o ALTER VIEW, independientemente del origen de los datos subyacentes. Por ejemplo, si se conceden permisos para la columna **SalesOrderID** en una instrucción CREATE VIEW, una instrucción ALTER VIEW puede cambiar el nombre de la columna **SalesOrderID**, por ejemplo, a **OrderRef**, y aún tener los permisos asociados con la vista usando **SalesOrderID**.  
   
  ENCRYPTION  
- **Se aplica a**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] hasta [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] y [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)].  
+ **Se aplica a**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] a [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] y [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)].  
   
  Cifra las entradas en [sys.syscomments](../../relational-databases/system-compatibility-views/sys-syscomments-transact-sql.md) que contienen el texto de la instrucción ALTER VIEW. WITH ENCRYPTION evita que la vista se publique como parte de la replicación de SQL Server.  
   
  SCHEMABINDING  
- Enlaza la vista al esquema de las tablas subyacentes. Cuando se especifica SCHEMABINDING, las tablas base no se pueden modificar de forma que afecten a la definición de la vista. La propia definición de la vista debe modificarse o quitarse primero para eliminar las dependencias de la tabla que se va a modificar. Cuando se usa SCHEMABINDING, *select_statement* debe incluir los nombres en dos partes (*schema***.***object*) de las tablas, las vistas o las funciones definidas por el usuario a las que se hace referencia. Todos los objetos a los que se hace referencia se deben encontrar en la misma base de datos.  
+ Enlaza la vista al esquema de las tablas subyacentes. Cuando se especifica SCHEMABINDING, las tablas base no se pueden modificar de forma que afecten a la definición de la vista. La propia definición de la vista debe modificarse o quitarse primero para eliminar las dependencias de la tabla que se va a modificar. Cuando se usa SCHEMABINDING, *select_statement* debe incluir los nombres en dos partes (*schema ***.*** object*) de las tablas, las vistas o las funciones definidas por el usuario a las que se hace referencia. Todos los objetos a los que se hace referencia se deben encontrar en la misma base de datos.  
   
  Las vistas o las tablas que participan en una vista creada con la cláusula SCHEMABINDING no se pueden quitar a menos que se quite o cambie esa vista de forma que deje de tener un enlace de esquema. En caso contrario, [!INCLUDE[ssDE](../../includes/ssde-md.md)] genera un error. Además, se genera un error al ejecutar las instrucciones ALTER TABLE sobre tablas que participan en vistas que tienen enlaces de esquemas si estas instrucciones afectan a la definición de la vista.  
   

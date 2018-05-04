@@ -1,36 +1,36 @@
 ---
 title: Acerca de la captura de datos modificados (SQL Server) | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine
-ms.service: 
+ms.service: ''
 ms.component: track-changes
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - change data capture [SQL Server], about
 - change data capture [SQL Server]
 - 22832 (Database Engine error)
 ms.assetid: 7d8c4684-9eb1-4791-8c3b-0f0bb15d9634
-caps.latest.revision: 
+caps.latest.revision: 21
 author: rothja
 ms.author: jroth
 manager: craigg
 ms.workload: Active
-ms.openlocfilehash: a56878e9a37195e63e03b04b84c4a8d296844ff2
-ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
+ms.openlocfilehash: b6347faf1a4de6590063f892cf44f5d58c90cdc0
+ms.sourcegitcommit: bb044a48a6af9b9d8edb178dc8c8bd5658b9ff68
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/15/2018
+ms.lasthandoff: 04/18/2018
 ---
 # <a name="about-change-data-capture-sql-server"></a>Acerca de la captura de datos modificados (SQL Server)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
-La captura de datos modificados registra la actividad de inserción, actualización y eliminación que se aplica a una tabla de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Esto hace que los detalles de estos cambios estén disponibles en un formato relacional de fácil uso. La información de las columnas y los metadatos que se necesitan para aplicar los cambios a un entorno de destino se capturan para las filas modificadas y se almacenan en tablas de cambios que reflejan la estructura de columnas de las tablas de origen sometidas a seguimiento. Se proporcionan funciones con valores de tabla para permitir el acceso sistemático a los datos modificados por los consumidores.  
+  La captura de datos modificados registra la actividad de inserción, actualización y eliminación que se aplica a una tabla de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Esto hace que los detalles de estos cambios estén disponibles en un formato relacional de fácil uso. La información de las columnas y los metadatos que se necesitan para aplicar los cambios a un entorno de destino se capturan para las filas modificadas y se almacenan en tablas de cambios que reflejan la estructura de columnas de las tablas de origen sometidas a seguimiento. Se proporcionan funciones con valores de tabla para permitir el acceso sistemático a los datos modificados por los consumidores.  
   
  Un buen ejemplo de consumidor de datos a quien va dirigida esta tecnología es una aplicación de extracción, transformación y carga (ETL). Una aplicación ETL carga incrementalmente los datos modificados de las tablas de origen de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] en un almacenamiento de datos o data mart. Aunque la representación de las tablas de origen dentro del almacén de datos debe reflejar los cambios en las tablas de origen, una tecnología de extremo a extremo que actualice una réplica del origen no resulta adecuada en este caso. En su lugar, necesita un flujo de datos modificados confiable y estructurado de forma que los consumidores puedan aplicarlo a representaciones de destino dispares de los datos. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] proporciona esta tecnología.  
   
@@ -113,7 +113,33 @@ La captura de datos modificados registra la actividad de inserción, actualizaci
  Ambos trabajos del Agente [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] se diseñaron con el fin de ser lo suficientemente flexibles y configurables como para satisfacer las necesidades básicas de los entornos de captura de datos modificados. Sin embargo, en ambos casos, los procedimientos almacenados subyacentes que proporcionan la funcionalidad básica se han expuesto para posibilitar una mayor personalización.  
   
  La captura de datos modificados no puede funcionar correctamente cuando el servicio Motor de base de datos o el servicio Agente SQL Server se ejecuta con la cuenta NETWORK SERVICE. Esto puede ocasionar el error 22832.  
-  
+ 
+## <a name="working-with-database-and-table-collation-differences"></a>Trabajar con diferencias de intercalación de base de datos y de tabla
+
+Es importante ser consciente de un caso en el que se tienen distintas intercalaciones entre la base de datos y las columnas de una tabla configurada para la captura de datos modificados. La captura de datos modificados usa el almacenamiento provisional para rellenar las tablas laterales. Si una tabla tiene columnas CHAR o VARCHAR con intercalaciones que son diferentes de la intercalación de base de datos y esas columnas almacenan caracteres que no son ASCII (por ejemplo, caracteres DBCS de doble byte), es posible que la captura de datos modificados no pueda conservar los datos modificados de manera coherente con los datos de las tablas base. Esto se debe a que las variables del almacenamiento provisional no pueden tener intercalaciones asociadas a estas.
+
+Plantéese la posibilidad de aplicar uno de los siguientes métodos para asegurarse de que la captura de datos modificados sea coherente con las tablas base:
+
+- Use el tipo de datos NCHAR o NVARCHAR para las columnas que contienen datos que no sean ASCII.
+
+- También puede usar la misma intercalación para las columnas y para la base de datos.
+
+Por ejemplo, si tiene una base de datos que usa una intercalación de SQL_Latin1_General_CP1_CI_AS, observe la siguiente tabla:
+
+```tsql
+CREATE TABLE T1( 
+     C1 INT PRIMARY KEY, 
+     C2 VARCHAR(10) collate Chinese_PRC_CI_AI)
+```
+
+La captura de datos modificados podría no capturar los datos binarios de la columna C2, dado que su intercalación es diferente (Chinese_PRC_CI_AI). Use NVARCHAR para evitar este problema:
+
+```tsql
+CREATE TABLE T1( 
+     C1 INT PRIMARY KEY, 
+     C2 NVARCHAR(10) collate Chinese_PRC_CI_AI --Unicode data type, CDC works well with this data type)
+```
+
 ## <a name="see-also"></a>Ver también  
  [Seguimiento de cambios de datos &#40;SQL Server&#41;](../../relational-databases/track-changes/track-data-changes-sql-server.md)   
  [Habilitar y deshabilitar la captura de datos modificados &#40;SQL Server&#41;](../../relational-databases/track-changes/enable-and-disable-change-data-capture-sql-server.md)   

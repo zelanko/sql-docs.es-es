@@ -26,12 +26,11 @@ caps.latest.revision: 11
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: e2ef9ba5408aa41e3deda4c73e40057d916e1b31
-ms.sourcegitcommit: bb044a48a6af9b9d8edb178dc8c8bd5658b9ff68
-ms.translationtype: MT
+ms.openlocfilehash: ce1861d78db74a92831fd133c9f5a7a7c77aa3ae
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/18/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="rowposition-property-ado"></a>RowPosition (propiedad, ADO)
 Obtiene o establece OLE DB **RowPosition** objeto de/en un **ADORecordsetConstruction** objeto. Cuando se usa **put_RowPosition** para establecer el **RowPosition** objeto resultante **Recordset** de objeto usa la **RowPosition** objeto determinar la fila actual.  

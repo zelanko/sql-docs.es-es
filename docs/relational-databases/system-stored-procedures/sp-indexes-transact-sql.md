@@ -24,12 +24,11 @@ caps.latest.revision: 38
 author: edmacauley
 ms.author: edmaca
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: bebd14116b2b8cea0c1f0836571c994ba3fbd340
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
-ms.translationtype: MT
+ms.openlocfilehash: f30211d37fb84df1c4b1a24920a98beaa778fa9a
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="spindexes-transact-sql"></a>sp_indexes (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -91,7 +90,7 @@ sp_indexes [ @table_server = ] 'table_server'
 |ASC_OR_DESC|**varchar**|Es el orden utilizado en la intercalación:<br /><br /> A = Ascendente<br /><br /> D = Descendente<br /><br /> NULL = No aplicable<br /><br /> [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] siempre devuelve A.|  
 |CARDINALITY|**int**|Es el número de filas de la tabla o valores únicos del índice.|  
 |PAGES|**int**|Número de páginas para el almacenamiento del índice o la tabla.|  
-|FILTER_CONDITION|**nvarchar (**4000**)**|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] no devuelve ningún valor.|  
+|FILTER_CONDITION|**nvarchar (** 4000 **)**|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] no devuelve ningún valor.|  
   
 ## <a name="permissions"></a>Permissions  
  Es necesario contar con un permiso de tipo SELECT sobre el esquema.  

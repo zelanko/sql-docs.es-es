@@ -29,15 +29,15 @@ caps.latest.revision: 14
 author: Minewiskan
 ms.author: owend
 manager: kfile
-ms.workload: Inactive
-ms.openlocfilehash: 8591a521cb1d3fce934e32be3d7b5cd3a4a977c4
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
-ms.translationtype: MT
+ms.openlocfilehash: 23f6c8d3ed1dbf073b09beec5c67b1b096f11e34
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="batch-element-xmla"></a>Elemento Batch (XMLA)
-[!INCLUDE[ssas-appliesto-sqlas-aas](../../../includes/ssas-appliesto-sqlas-aas.md)]Realiza XML de uno o más para los comandos de Analysis (XMLA) como una operación por lotes, ya sea de forma secuencial o en paralelo, en una instancia de [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)].  
+[!INCLUDE[ssas-appliesto-sqlas-aas](../../../includes/ssas-appliesto-sqlas-aas.md)]
+  Realiza XML de uno o más para los comandos de Analysis (XMLA) como una operación por lotes, ya sea de forma secuencial o en paralelo, en una instancia de [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)].  
   
 ## <a name="syntax"></a>Sintaxis  
   
@@ -55,12 +55,12 @@ ms.lasthandoff: 01/08/2018
 </Command>  
 ```  
   
-## <a name="element-characteristics"></a>Características del elemento  
+## <a name="element-characteristics"></a>Características de los elementos  
   
-|Característica|Description|  
+|Característica|Descripción|  
 |--------------------|-----------------|  
-|Tipo y longitud de los datos|None|  
-|Valor predeterminado|None|  
+|Tipo y longitud de los datos|Ninguno|  
+|Valor predeterminado|Ninguno|  
 |Cardinalidad|0-n: elemento opcional que puede aparecer más de una vez.|  
   
 ## <a name="element-relationships"></a>Relaciones del elemento  
@@ -72,19 +72,19 @@ ms.lasthandoff: 01/08/2018
   
 ## <a name="attributes"></a>Atributos  
   
-|Attribute|Description|  
+|Atributo|Description|  
 |---------------|-----------------|  
 |ProcessAffectedObjects|(Opcional **booleano** atributo) indica si se procesarán todos los objetos que requieren volver a procesar.<br /><br /> Si establece en true, el [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] instancia procesa los objetos que requieren reprocesamiento como resultado del procesamiento de un objeto incluido en la **lote** comando.<br /><br /> Si establece en **false**, el [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] instancia procesa solo los objetos incluidos en el **lote** comando.|  
 |Transaction|(Opcional **booleano** atributo) indica si el comando se incluye en el **lote** comando se tratan como una única transacción o transacciones individuales.<br /><br /> Si establece en true, todos los comandos incluidos en el **lote** comando se considera una sola transacción. Si cualquiera de los comandos se produce un error, los comandos ejecutados antes del comando con errores se revierten y el **lote** comando detiene sin ejecutar los comandos siguientes.<br /><br /> Si establece en **false**, **lote** comando intenta ejecutar todos los comandos y confirma los resultados de cada comando que se completa correctamente.|  
   
-## <a name="remarks"></a>Notas  
+## <a name="remarks"></a>Comentarios  
   
 > [!WARNING]  
 >  Command/Execute/Statement no se admite actualmente en una operación por lotes.  
   
- Para obtener más información acerca de cómo realizar operaciones por lotes en XMLA, vea [realizar operaciones por lotes &#40; XMLA &#41; ](../../../analysis-services/multidimensional-models-scripting-language-assl-xmla/performing-batch-operations-xmla.md).  
+ Para obtener más información acerca de cómo realizar operaciones por lotes en XMLA, vea [realizar operaciones por lotes &#40;XMLA&#41;](../../../analysis-services/multidimensional-models-scripting-language-assl-xmla/performing-batch-operations-xmla.md).  
   
-## <a name="see-also"></a>Ver también  
- [Comandos &#40; XMLA &#41;](../../../analysis-services/xmla/xml-elements-commands/xml-elements-commands.md)  
+## <a name="see-also"></a>Vea también  
+ [Comandos & #40; XMLA & #41;](../../../analysis-services/xmla/xml-elements-commands/xml-elements-commands.md)  
   
   

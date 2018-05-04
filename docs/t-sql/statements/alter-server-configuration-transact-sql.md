@@ -1,16 +1,16 @@
 ---
 title: ALTER SERVER CONFIGURATION (Transact-SQL) | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 05/01/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: sql-database
-ms.service: 
+ms.service: ''
 ms.component: t-sql|statements
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - ALTER SERVER CONFIGURATION
@@ -23,16 +23,16 @@ helpviewer_keywords:
 - ALTER SERVER CONFIGURATION statement
 - setting process affinity
 ms.assetid: f3059e42-5f6f-4a64-903c-86dca212a4b4
-caps.latest.revision: 
+caps.latest.revision: 72
 author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 4489934ad1bb21c79cbb0ece01e7d061fd794c2a
-ms.sourcegitcommit: 45e4efb7aa828578fe9eb7743a1a3526da719555
+ms.openlocfilehash: e21a2e591b9bd5c38d4abf458c938b17563cc89c
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="alter-server-configuration-transact-sql"></a>ALTER SERVER CONFIGURATION (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -214,7 +214,7 @@ SQLDUMPEREDUMPFLAGS
 **Se aplica a**: desde [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] hasta [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].  
   
  ON  
- Habilita la opción de extensión del grupo de búferes. Esta opción extiende el tamaño del grupo de búferes con almacenamiento no volátil como unidades de estado sólido (SSD) para conservar las páginas de datos limpias en el grupo. Para obtener más información sobre esta característica, vea [Buffer Pool Extension](../../database-engine/configure-windows/buffer-pool-extension.md). La extensión del grupo de búferes no está disponible en todas las ediciones de SQL Server. Para obtener más información, consulte [Características compatibles con las ediciones de SQL Server 2016](../../sql-server/editions-and-supported-features-for-sql-server-2016.md).  
+ Habilita la opción de extensión del grupo de búferes. Esta opción extiende el tamaño del grupo de búferes con almacenamiento no volátil como unidades de estado sólido (SSD) para conservar las páginas de datos limpias en el grupo. Para obtener más información sobre esta característica, vea [Buffer Pool Extension](../../database-engine/configure-windows/buffer-pool-extension.md). La extensión del grupo de búferes no está disponible en todas las ediciones de SQL Server. Para obtener más información, consulte [Ediciones y características admitidas de SQL Server 2016](../../sql-server/editions-and-supported-features-for-sql-server-2016.md).  
   
  FILENAME = 'os_file_path_and_name'  
  Define la ruta de acceso al directorio y el nombre del archivo de la memoria caché de la extensión del grupo de búferes. La extensión de archivo se debe especificar como .BPE. Debe desactivar BUFFER POOL EXTENSION para poder modificar FILENAME.  

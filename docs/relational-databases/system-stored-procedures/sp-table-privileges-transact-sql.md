@@ -24,12 +24,11 @@ caps.latest.revision: 36
 author: edmacauley
 ms.author: edmaca
 manager: craigg
-ms.workload: On Demand
-ms.openlocfilehash: 2eb872a8ca079bbde96ad3667d687618cba7414a
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
-ms.translationtype: MT
+ms.openlocfilehash: 4ca9192b53e2fa1e6b8eaeb66b4cddd923dd7631
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="sptableprivileges-transact-sql"></a>sp_table_privileges (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -50,10 +49,10 @@ sp_table_privileges [ @table_name = ] 'table_name'
   
 ## <a name="arguments"></a>Argumentos  
  [ @table_name=] '*table_name*'  
- Es la tabla que se usa para devolver información de catálogo. *table_name* es **nvarchar (**384**)**, no tiene ningún valor predeterminado. Se admite la coincidencia de patrón de caracteres comodín.  
+ Es la tabla que se usa para devolver información de catálogo. *table_name* es **nvarchar (** 384 **)**, no tiene ningún valor predeterminado. Se admite la coincidencia de patrón de caracteres comodín.  
   
  [ @table_owner=] '*table_owner*'  
- Es el propietario de la tabla de la tabla utilizada para devolver información del catálogo. *TABLE_OWNER*es **nvarchar (**384**)**, su valor predeterminado es null. Se admite la coincidencia de patrón de caracteres comodín. Si no se especifica el propietario, se aplican las reglas de visibilidad de tabla predeterminadas del DBMS subyacente.  
+ Es el propietario de la tabla de la tabla utilizada para devolver información del catálogo. *TABLE_OWNER*es **nvarchar (** 384 **)**, su valor predeterminado es null. Se admite la coincidencia de patrón de caracteres comodín. Si no se especifica el propietario, se aplican las reglas de visibilidad de tabla predeterminadas del DBMS subyacente.  
   
  Si el usuario actual posee una tabla con el nombre especificado, se devuelven las columnas de dicha tabla. Si *propietario* no se especifica y el usuario actual no posee una tabla con los valores especificados *nombre*, este procedimiento busca una tabla con los valores especificados *table_name* pertenecen a la propietario de la base de datos. Si existe una, se devuelven las columnas de esa tabla.  
   

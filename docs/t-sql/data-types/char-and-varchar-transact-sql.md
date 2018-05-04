@@ -1,16 +1,16 @@
 ---
 title: char y varchar (Transact-SQL) | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 7/23/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
-ms.service: 
+ms.service: ''
 ms.component: t-sql|data-types
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - varchar
@@ -25,16 +25,17 @@ helpviewer_keywords:
 - variable-length data types [SQL Server]
 - varchar data type
 ms.assetid: 282cd982-f4fb-4b22-b2df-9e8478f13f6a
-caps.latest.revision: 
+caps.latest.revision: 48
 author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: Active
-ms.openlocfilehash: 4c383e3b3ff5b79604454f80443c9042633797bf
-ms.sourcegitcommit: 45e4efb7aa828578fe9eb7743a1a3526da719555
+monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
+ms.openlocfilehash: 2147de81da2779ecec2369e59a4a67db49e8dc0b
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="char-and-varchar-transact-sql"></a>char y varchar (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -42,12 +43,12 @@ ms.lasthandoff: 11/21/2017
 Estos tipos de datos son de longitud fija o variable.  
   
 ## <a name="arguments"></a>Argumentos  
-**char** [ ( *n* ) ] Datos de cadena no Unicode de longitud fija. *n* define la longitud de la cadena y debe ser un valor entre 1 y 8000. El tamaño de almacenamiento es de *n* bytes. El sinónimo ISO para **char** es **character**.
+**char** [ ( *n* ) ] Datos de cadena no Unicode de longitud fija. *n* define la longitud de la cadena y debe ser un valor entre 1 y 8.000. El tamaño de almacenamiento es de *n* bytes. El sinónimo ISO para **char** es **character**.
   
-**varchar** [ ( *n* | **max** ) ] Datos de cadena no Unicode de longitud variable. *n* define la longitud de la cadena y puede ser un valor entre 1 y 8000. **max** indica que el tamaño máximo de almacenamiento es de 2^31-1 bytes (2 GB). El tamaño de almacenamiento es la longitud real de los datos especificados + 2 bytes. Los sinónimos ISO para **varchar** son **charvarying** o **charactervarying**.
+**varchar** [ ( *n* | **max** ) ] Datos de cadena no Unicode de longitud variable. *n* define la longitud de la cadena y puede ser un valor entre 1 y 8.000. **max** indica que el tamaño máximo de almacenamiento es de 2^31-1 bytes (2 GB). El tamaño de almacenamiento es la longitud real de los datos especificados + 2 bytes. Los sinónimos ISO para **varchar** son **charvarying** o **charactervarying**.
   
 ## <a name="remarks"></a>Notas  
-Cuando no se especifica el argumento *n* en una instrucción de definición de datos o de declaración de variable, la longitud predeterminada es 1. Cuando no se especifica *n* al utilizar las funciones CAST y CONVERT, la longitud predeterminada es 30.
+Cuando no se especifica el argumento *n* en una instrucción de definición de datos o de declaración de variable, la longitud predeterminada es 1. Cuando no se especifica *n* al usar las funciones CAST y CONVERT, la longitud predeterminada es 30.
   
 Los objetos que utilizan **char** o **varchar** se asignan a la intercalación predeterminada de la base de datos, a menos que se asigne una intercalación específica por medio de la cláusula COLLATE. La intercalación controla la página de códigos utilizada para almacenar los datos de caracteres.
   
@@ -58,7 +59,7 @@ Si tiene sitios que admiten varios idiomas, considere el uso de tipos de datos U
   
 Si SET ANSI_PADDING es OFF cuando se ejecuta CREATE TABLE o ALTER TABLE, una columna de tipo **char** definida como NULL se trata como si fuera de tipo **varchar**.
   
-Si la página de códigos de la intercalación utiliza caracteres de doble byte, el tamaño de almacenamiento sigue siendo de *n* bytes. Dependiendo de la cadena de caracteres, el tamaño de almacenamiento de *n* bytes puede ser inferior a *n* caracteres.
+Si la página de códigos de la intercalación usa caracteres de doble byte, el tamaño de almacenamiento sigue siendo de *n* bytes. Dependiendo de la cadena de caracteres, el tamaño de almacenamiento de *n* bytes puede ser inferior a *n* caracteres.
 
 > [!WARNING]
 > Cada columna varchar(max) o nvarchar(max) cuyo valor no sea NULL requiere 24 bytes de asignación fija adicional que se descuentan del límite de 8060 bytes de las filas durante una operación de ordenación. Esto puede crear un límite implícito del número de columnas varchar(max) o varchar(max) cuyo valor no sea NULL que es posible crear en una tabla.  
@@ -81,7 +82,7 @@ Las expresiones de caracteres que se convierten a los tipos de datos **money** o
 ## <a name="examples"></a>Ejemplos  
   
 ### <a name="a-showing-the-default-value-of-n-when-used-in-variable-declaration"></a>A. Mostrar el valor predeterminado de n cuando se usa en una declaración de variable.  
-En el ejemplo siguiente se muestra que el valor predeterminado de *n* es 1 para los tipos de datos `char` y `varchar` cuando se utilizan en una declaración de variable.
+En el ejemplo siguiente se muestra que el valor predeterminado de *n* es 1 para los tipos de datos `char` y `varchar` cuando se usan en una declaración de variable.
   
 ```sql
 DECLARE @myVariable AS varchar = 'abc';  
@@ -140,7 +141,7 @@ DECLARE @myid uniqueidentifier = NEWID();
 SELECT CONVERT(char(255), @myid) AS 'char';  
 ```  
   
-En el ejemplo siguiente se muestra el truncamiento de los datos cuando el valor es demasiado largo para el tipo de datos al que se va a convertir. Puesto que el tipo **uniqueidentifier** está limitado a 36 caracteres, se truncan los caracteres que superan esa longitud.
+En el ejemplo siguiente se muestra el truncamiento de los datos cuando el valor es demasiado largo para el tipo de datos al que se va a convertir. Como el tipo **uniqueidentifier** tiene un límite de 36 caracteres, se truncan los caracteres que superan esa longitud.
   
 ```sql
 DECLARE @ID nvarchar(max) = N'0E984725-C51C-4BF4-9960-E1C80E27ABA0wrong';  

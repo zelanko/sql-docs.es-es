@@ -21,12 +21,11 @@ caps.latest.revision: 13
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: fa5dcd9c68fce287a4b274ccf68c9f260909792b
-ms.sourcegitcommit: bb044a48a6af9b9d8edb178dc8c8bd5658b9ff68
-ms.translationtype: MT
+ms.openlocfilehash: 45389b5e0f7bcbe225d443ee4423b16c0b5e3cf4
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/18/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="status-property-example-vc"></a>Ejemplo de la propiedad de estado (VC ++)
 Este ejemplo se utiliza la [estado](../../../ado/reference/ado-api/status-property-ado-recordset.md) propiedad que se va a mostrar los registros que se han modificado en una operación por lotes antes de que se ha producido una actualización por lotes.  

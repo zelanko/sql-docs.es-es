@@ -1,16 +1,16 @@
 ---
 title: CREATE INDEX (Transact-SQL) | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 12/21/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
-ms.service: 
+ms.service: ''
 ms.component: t-sql|statements
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - CREATE INDEX
@@ -56,16 +56,17 @@ helpviewer_keywords:
 - secondary indexes [SQL Server]
 - XML indexes [SQL Server], creating
 ms.assetid: d2297805-412b-47b5-aeeb-53388349a5b9
-caps.latest.revision: 
+caps.latest.revision: 223
 author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: Active
-ms.openlocfilehash: 48d755dcd5257a3208c087db44df1e9fd262ddcc
-ms.sourcegitcommit: 4aeedbb88c60a4b035a49754eff48128714ad290
+monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
+ms.openlocfilehash: 431a26ae4bc8a7a00afcff70f65128e8108b500d
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/05/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="create-index-transact-sql"></a>CREATE INDEX (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -261,7 +262,7 @@ Crea un índice que especifica la ordenación lógica de una tabla. Con un índi
   
  Se admiten todos los tipos de datos, a excepción de **text**, **ntext**e **image**. El índice se debe crear o regenerar sin conexión (ONLINE = OFF) si el tipo de datos de alguna de las columnas que no son de clave especificadas es **varchar(max)**, **nvarchar(max)** o **varbinary(max)**.  
   
- Las columnas calculadas que son deterministas, y precisas o imprecisas, pueden ser columnas incluidas. Las columnas calculadas derivadas de los tipos de datos **image**, **ntext**, **text**, **varchar(max)**, **nvarchar(max)**, **varbinary(max)**y **xml** se pueden incluir en columnas que no son clave, siempre que el tipo de datos de la columna calculada esté disponible como una columna incluida. Para obtener más información, vea [Indexes on Computed Columns](../../relational-databases/indexes/indexes-on-computed-columns.md).  
+ Las columnas calculadas que son deterministas, y precisas o imprecisas, pueden ser columnas incluidas. Las columnas calculadas derivadas de los tipos de datos **image**, **ntext**, **text**, **varchar(max)**, **nvarchar(max)**, **varbinary(max)** y **xml** se pueden incluir en columnas que no son clave, siempre que el tipo de datos de la columna calculada esté disponible como una columna incluida. Para obtener más información, vea [Indexes on Computed Columns](../../relational-databases/indexes/indexes-on-computed-columns.md).  
   
  Para obtener información sobre cómo crear un índice XML, vea [CREATE XML INDEX &#40;Transact-SQL&#41;](../../t-sql/statements/create-xml-index-transact-sql.md).  
   
@@ -280,38 +281,38 @@ Crea un índice que especifica la ordenación lógica de una tabla. Con un índi
  Los índices filtrados no se aplican a los índices XML ni a los índices de texto completo. Para los índices UNIQUE, solo las filas seleccionadas deben tener valores de índice únicos. Los índices filtrados no admiten la opción IGNORE_DUP_KEY.  
   
 ON *partition_scheme_name* **( *column_name* )**  
-**Se aplica a**: desde [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] hasta [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] y [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)].  
+**Se aplica a**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] a [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] y [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)].  
   
- Especifica el esquema de partición que define los grupos de archivos a los que se asignarán las particiones de un índice con particiones. El esquema de partición debe existir dentro de la base de datos mediante la ejecución de [CREATE PARTITION SCHEME](../../t-sql/statements/create-partition-scheme-transact-sql.md) o de [ALTER PARTITION SCHEME](../../t-sql/statements/alter-partition-scheme-transact-sql.md). *column_name* especifica la columna en la que se van a crear las particiones de un índice con particiones. Esta columna debe coincidir con el tipo de datos, la longitud y la precisión del argumento de la función de partición que *partition_scheme_name* emplea. *column_name* no está limitado a las columnas de la definición de índice. Se puede especificar cualquier columna de la tabla base, excepto en el caso de partición de un índice UNIQUE, en el que se debe elegir *column_name* entre las columnas utilizadas como clave única. Esta restricción permite que [!INCLUDE[ssDE](../../includes/ssde-md.md)] compruebe la unicidad de los valores de clave en una única partición solamente.  
+ Especifica el esquema de partición que define los grupos de archivos a los que se asignarán las particiones de un índice con particiones. El esquema de partición debe existir dentro de la base de datos mediante la ejecución de [CREATE PARTITION SCHEME](../../t-sql/statements/create-partition-scheme-transact-sql.md) o [ALTER PARTITION SCHEME](../../t-sql/statements/alter-partition-scheme-transact-sql.md). *column_name* especifica la columna en la que se van a crear las particiones de un índice con particiones. Esta columna debe coincidir con el tipo de datos, la longitud y la precisión del argumento de la función de partición que *partition_scheme_name* emplea. *column_name* no está limitado a las columnas de la definición de índice. Se puede especificar cualquier columna de la tabla base, excepto en el caso de partición de un índice UNIQUE, en el que se debe elegir *column_name* entre las columnas usadas como clave única. Esta restricción permite que [!INCLUDE[ssDE](../../includes/ssde-md.md)] compruebe la unicidad de los valores de clave en una única partición solamente.  
   
 > [!NOTE]  
 > Cuando se crean particiones en un índice clúster no único, [!INCLUDE[ssDE](../../includes/ssde-md.md)] agrega de forma predeterminada la columna de partición a la lista de claves del índice clúster, en caso de que aún no se hubiera especificado. Cuando se crean particiones en un índice no clúster que tampoco es único, [!INCLUDE[ssDE](../../includes/ssde-md.md)] agrega la columna de partición como una columna sin clave (incluida) del índice, si aún no se especificó.  
   
- Si no se ha especificado *partition_scheme_name* o *filegroup* y se han creado particiones en la tabla, el índice se coloca en el mismo esquema de partición y se usa la misma columna de partición que en la tabla subyacente.  
+ Si no se especificó *partition_scheme_name* o *filegroup* y se crearon particiones en la tabla, el índice se coloca en el mismo esquema de partición y usa la misma columna de partición que en la tabla subyacente.  
   
 > [!NOTE]  
 > No se puede especificar un esquema de partición en un índice XML. Si se crean particiones en la tabla base, el índice XML usa el mismo esquema de partición que la tabla.  
   
- Para obtener más información sobre los índices con particiones, vea [Partitioned Tables and Indexes](../../relational-databases/partitions/partitioned-tables-and-indexes.md) (Tablas e índices con particiones).  
+ Para más información sobre los índices con particiones, vea [Tablas e índices con particiones](../../relational-databases/partitions/partitioned-tables-and-indexes.md).  
   
  ON *filegroup_name*  
  **Se aplica a**: desde [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] hasta [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].  
   
  Crea el índice especificado en el grupo de archivos especificado. Si no se ha especificado una ubicación y la tabla o vista no tiene particiones, el índice utiliza el mismo grupo de archivos que la tabla o vista subyacente. El grupo de archivos debe existir previamente.  
   
- ON **"**default**"**  
- **Se aplica a**: desde [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] hasta [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] y [!INCLUDE[ssCurrent](../../includes/sssdsfull-md.md)].  
+ ON **"** default **"**  
+ **Se aplica a**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] a [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] y [!INCLUDE[ssCurrent](../../includes/sssdsfull-md.md)].  
   
  Crea el índice especificado en el grupo de archivos predeterminado.  
   
- El término predeterminado (default), en este contexto, no es una palabra clave. Es un identificador del grupo de archivos predeterminado y debe delimitarse, como en ON **"**default**"** u ON **[**default**]**. Si se especifica "default", la opción QUOTED_IDENTIFIER debe tener el valor ON para la sesión actual. Esta es la configuración predeterminada. Para obtener más información, vea [SET QUOTED_IDENTIFIER &#40;Transact-SQL&#41;](../../t-sql/statements/set-quoted-identifier-transact-sql.md).  
+ El término predeterminado (default), en este contexto, no es una palabra clave. Es un identificador para el grupo de archivos predeterminado y debe delimitarse, como en ON **"** default **"** u ON **[** default **]**. Si se especifica "default", la opción QUOTED_IDENTIFIER debe tener el valor ON para la sesión actual. Esta es la configuración predeterminada. Para obtener más información, vea [SET QUOTED_IDENTIFIER &#40;Transact-SQL&#41;](../../t-sql/statements/set-quoted-identifier-transact-sql.md).  
   
  [ FILESTREAM_ON { *filestream_filegroup_name* | *partition_scheme_name* | "NULL" } ]  
  **Se aplica a**: desde [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] hasta [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].  
   
  Especifica la posición de datos FILESTREAM para la tabla cuando se crea un índice clúster. La cláusula FILESTREAM_ON permite mover los datos FILESTREAM a otro esquema de partición o a otro grupo de archivos FILESTREAM.  
   
- *filestream_filegroup_name* es el nombre de un grupo de archivos FILESTREAM. El grupo de archivos debe tener un archivo definido para el grupo de archivos, utilizando para ello las instrucciones [CREATE DATABASE](../../t-sql/statements/create-database-sql-server-transact-sql.md) o [ALTER DATABASE](../../t-sql/statements/alter-database-transact-sql.md); de lo contrario, se producirá un error.  
+ *filestream_filegroup_name* es el nombre de un grupo de archivos FILESTREAM. El grupo de archivos debe tener un archivo definido para el grupo de archivos, usando para ello las instrucciones [CREATE DATABASE](../../t-sql/statements/create-database-sql-server-transact-sql.md) o [ALTER DATABASE](../../t-sql/statements/alter-database-transact-sql.md); en caso contrario, se produce un error.  
   
  Si se crean particiones de la tabla, la cláusula FILESTREAM_ON deberá incluirse y especificar un esquema de partición de grupos de archivos FILESTREAM que utilice la misma función de partición y columnas de partición que el esquema de partición para la tabla. En caso contrario, se produce un error.  
   
@@ -338,14 +339,14 @@ ON *partition_scheme_name* **( *column_name* )**
   
  A partir de [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)], el objeto puede ser una tabla almacenada con un índice de almacén de columnas agrupado.  
   
- [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] admite el formato de nombre de tres partes *database_name***.**[*schema_name*]**.***object_name* cuando *database_name* es la base de datos actual o *database_name* es tempdb y *object_name* comienza por #.  
+ [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] admite el formato de nombre de tres partes *database_name***.**[* schema_name *]**.***object_name* cuando *database_name* es la base de datos actual o *database_name* es tempdb y *object_name* comienza por #.  
   
  **\<relational_index_option>::=**  
   
  Especifica las opciones que se van a utilizar en la creación del índice.  
   
  PAD_INDEX = { ON | **OFF** }  
- **Se aplica a**: desde [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] hasta [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] y [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)].  
+ **Se aplica a**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] a [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] y [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)].  
   
  Especifica el relleno del índice. El valor predeterminado es OFF.  
   
@@ -360,7 +361,7 @@ ON *partition_scheme_name* **( *column_name* )**
  En la sintaxis compatible con versiones anteriores, WITH PAD_INDEX es equivalente a WITH PAD_INDEX = ON.  
   
  FILLFACTOR **=***fillfactor*  
- **Se aplica a**: desde [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] hasta [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] y [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)].  
+ **Se aplica a**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] a [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] y [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)].  
   
  Especifica un porcentaje que indica cuánto debe llenar el [!INCLUDE[ssDE](../../includes/ssde-md.md)] el nivel hoja de cada página de índice durante la creación o nueva generación de los índices. *fillfactor* debe ser un valor entero comprendido entre 1 y 100. Si *fillfactor* es 100, el [!INCLUDE[ssDE](../../includes/ssde-md.md)] crea índices con las páginas hoja llenas al máximo de su capacidad.  
   
@@ -377,12 +378,12 @@ ON *partition_scheme_name* **( *column_name* )**
  Indica si deben almacenarse resultados temporales de orden en **tempdb**. El valor predeterminado es OFF.  
   
  ON  
- Los resultados de orden intermedios usados para generar el índice se almacenan en **tempdb**. Esto puede reducir el tiempo necesario para crear un índice si **tempdb** y la base de datos de usuarios están en conjuntos de discos distintos. Sin embargo, esto aumenta la cantidad de espacio en disco utilizado durante la generación del índice.  
+ Los resultados de ordenación intermedios utilizados para generar el índice se almacenan en **tempdb**. Esto puede reducir el tiempo necesario para crear un índice si **tempdb** y la base de datos de usuarios están en conjuntos de discos distintos. Sin embargo, esto aumenta la cantidad de espacio en disco utilizado durante la generación del índice.  
   
  OFF  
  Los resultados de orden intermedios se almacenan en la misma base de datos que el índice.  
   
- Además del espacio necesario en la base de datos del usuario para crear el índice, **tempdb** debe tener la misma cantidad de espacio adicional para almacenar los resultados de orden intermedio. Para obtener más información, vea [Opción SORT_IN_TEMPDB para índices](../../relational-databases/indexes/sort-in-tempdb-option-for-indexes.md).  
+ Además del espacio necesario en la base de datos del usuario para crear el índice, **tempdb** debe tener la misma cantidad de espacio adicional para almacenar los resultados de orden intermedio. Para más información, vea [Opción SORT_IN_TEMPDB para índices](../../relational-databases/indexes/sort-in-tempdb-option-for-indexes.md).  
   
  En la sintaxis compatible con versiones anteriores, WITH SORT_IN_TEMPDB es equivalente a WITH SORT_IN_TEMPDB = ON.  
   
@@ -397,7 +398,7 @@ ON *partition_scheme_name* **( *column_name* )**
   
  IGNORE_DUP_KEY no se puede establecer en ON para los índices creados en una vista, los índices que no sean únicos, los índices XML, los índices espaciales y los índices filtrados.  
   
- Para ver IGNORE_DUP_KEY, utilice [sys.indexes](../../relational-databases/system-catalog-views/sys-indexes-transact-sql.md).  
+ Para ver IGNORE_DUP_KEY, use [sys.indexes](../../relational-databases/system-catalog-views/sys-indexes-transact-sql.md).  
   
  En la sintaxis compatible con versiones anteriores, WITH IGNORE_DUP_KEY es equivalente a WITH IGNORE_DUP_KEY = ON.  
   
@@ -462,7 +463,7 @@ Especifica si las tablas subyacentes y los índices asociados están disponibles
  OFF  
  Los bloqueos de tabla se aplican durante la operación de índice. Una operación de índice sin conexión para crear, volver a crear o quitar un índice clúster, o para volver a crear o quitar un índice no clúster, adquiere un bloqueo de modificación del esquema (Sch-M) de la tabla. Esto evita que todos los usuarios tengan acceso a la tabla subyacente durante la operación. Una operación de índice sin conexión que crea un índice no clúster adquiere un bloqueo compartido (S) en la tabla. Esto evita que se realicen actualizaciones en la tabla subyacente, pero permite la realización de operaciones de lectura, como instrucciones SELECT.  
   
- Para obtener más información acerca de las operaciones de índice en línea, vea [Cómo funcionan las operaciones de índice en línea](../../relational-databases/indexes/how-online-index-operations-work.md).  
+ Para más información, vea [Cómo funcionan las operaciones de índice en línea](../../relational-databases/indexes/how-online-index-operations-work.md).  
   
  Los índices, incluidos los índices de las tablas temp globales, se pueden crear en línea, con las excepciones siguientes:  
   
@@ -476,7 +477,7 @@ Especifica si las tablas subyacentes y los índices asociados están disponibles
 Para más información, consulte [Perform Index Operations Online](../../relational-databases/indexes/perform-index-operations-online.md).  
   
 ALLOW_ROW_LOCKS = { **ON** | OFF }  
-**Se aplica a**: desde [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] hasta [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] y [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)].  
+**Se aplica a**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] a [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] y [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)].  
   
  Especifica si se permiten los bloqueos de fila. El valor predeterminado es ON.  
   
@@ -487,7 +488,7 @@ ALLOW_ROW_LOCKS = { **ON** | OFF }
  No se usan los bloqueos de fila.  
   
 ALLOW_PAGE_LOCKS = { **ON** | OFF }  
-**Se aplica a**: desde [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] hasta [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] y [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)].  
+**Se aplica a**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] a [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] y [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)].  
   
  Especifica si se permiten bloqueos de página. El valor predeterminado es ON.  
   
@@ -502,7 +503,7 @@ MAXDOP = *max_degree_of_parallelism*
   
  Reemplaza la opción de configuración de **max_degree_of_parallelism** mientras dure la operación de índice. Para obtener más información, vea [Configure the max degree of parallelism Server Configuration Option](../../database-engine/configure-windows/configure-the-max-degree-of-parallelism-server-configuration-option.md). Utilice MAXDOP para establecer un límite para el número de procesadores utilizados en la ejecución de un plan paralelo. El máximo es 64 procesadores.  
   
- *max_degree_of_parallelism* puede ser:  
+ *max_degree_of_parallelism* puede tener estos valores:  
   
  1  
  Suprime la generación de planes paralelos.  
@@ -530,10 +531,10 @@ MAXDOP = *max_degree_of_parallelism*
  PAGE  
  El índice o las particiones especificadas se comprimen mediante la compresión de página.  
   
- Para obtener más información sobre la compresión, vea [Compresión de datos](../../relational-databases/data-compression/data-compression.md).  
+ Para más información sobre la compresión, vea [Compresión de datos](../../relational-databases/data-compression/data-compression.md).  
   
 ON PARTITIONS **(** { \<partition_number_expression> | \<range> } [ **,**...*n* ] **)**      
-**Se aplica a**: desde [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] hasta [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] y [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)].  
+**Se aplica a**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] a [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] y [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)].  
   
  Especifica las particiones a las que se aplica el valor DATA_COMPRESSION. Si el índice no tiene particiones, el argumento ON PARTITIONS generará un error. Si no se proporciona la cláusula ON PARTITIONS, la opción DATA_COMPRESSION se aplica a todas las particiones de un índice con particiones.  
   
@@ -543,7 +544,7 @@ ON PARTITIONS **(** { \<partition_number_expression> | \<range> } [ **,**...*n* 
 -   Proporcionar los números de partición de varias particiones separados por comas, por ejemplo: ON PARTITIONS (1, 5).  
 -   Proporcionar intervalos y particiones individuales: ON PARTITIONS (2, 4, 6 TO 8).  
   
- \<range> se puede especificar como números de partición separados por la palabra TO, por ejemplo: ON PARTITIONS (6 TO 8).  
+ \<range> se puede especificar como números de partición separados por la palabra TO, como por ejemplo: ON PARTITIONS (6 TO 8).  
   
  Para establecer diferentes tipos de compresión de datos para distintas particiones, especifique la opción DATA_COMPRESSION más de una vez, por ejemplo:  
  
@@ -648,7 +649,7 @@ DATA_COMPRESSION = PAGE ON PARTITIONS (3, 5)
   
  Las restricciones UNIQUE o PRIMARY KEY pueden contener una columna calculada siempre que cumplan con todas las condiciones de creación del índice. En concreto, la columna calculada debe ser determinista y precisa, o determinista y persistente. Para obtener más información sobre el determinismo, vea [Funciones deterministas y no deterministas](../../relational-databases/user-defined-functions/deterministic-and-nondeterministic-functions.md).  
   
- Las columnas calculadas derivadas de los tipos de datos **image**, **ntext**, **text**, **varchar(max)**, **nvarchar(max)**, **varbinary(max)**y **xml** se pueden indexar como una columna de clave o columna sin clave incluida, siempre que el tipo de datos de la columna calculada esté disponible como una columna índice de clave o sin clave. Por ejemplo, no puede crear un índice XML principal en una columna **xml** calculada. Si el tamaño de clave de índice supera los 900 bytes, se muestra un mensaje de advertencia.  
+ Las columnas calculadas derivadas de los tipos de datos **image**, **ntext**, **text**, **varchar(max)**, **nvarchar(max)**, **varbinary(max)** y **xml** se pueden indexar como una columna de clave o columna sin clave incluida, siempre que el tipo de datos de la columna calculada esté disponible como una columna índice de clave o sin clave. Por ejemplo, no puede crear un índice XML principal en una columna **xml** calculada. Si el tamaño de clave de índice supera los 900 bytes, se muestra un mensaje de advertencia.  
   
  La creación de un índice en una columna calculada puede producir un error en una operación de inserción o actualización que antes funcionaba. Este error podría ocurrir cuando la columna calculada produce un error aritmético. Por ejemplo, aunque la columna calculada `c` de la tabla siguiente produzca un error aritmético, la instrucción `INSERT` funcionará.  
   
@@ -757,7 +758,7 @@ CREATE NONCLUSTERED INDEX IX_SalesPerson_SalesQuota_SalesYTD ON Sales.SalesPerso
 ```  
   
 ### <a name="c-create-an-index-on-a-table-in-another-database"></a>C. Crear un índice en una tabla de otra base de datos  
- En el ejemplo siguiente se crea un índice no agrupado en la columna `VendorID` de la tabla `ProductVendor`en la base de datos `Purchasing`.  
+ En el ejemplo siguiente se crea un índice no agrupado en la columna `VendorID` de la tabla `ProductVendor` en la base de datos `Purchasing`.  
   
 ```sql  
 CREATE CLUSTERED INDEX IX_ProductVendor_VendorID ON Purchasing..ProductVendor (VendorID);   
@@ -939,7 +940,7 @@ GO
 ### <a name="j-create-a-partitioned-index"></a>J. Crear un índice con particiones  
  En el ejemplo siguiente se crea un índice no clúster con particiones en `TransactionsPS1`, un esquema de partición existente en la base de datos [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)]. En este ejemplo se supone que se ha instalado el ejemplo de índice con particiones.  
   
-**Se aplica a**: desde [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] hasta [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] y [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)].  
+**Se aplica a**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] a [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] y [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)].  
   
 ```sql  
 CREATE NONCLUSTERED INDEX IX_TransactionHistory_ReferenceOrderID  

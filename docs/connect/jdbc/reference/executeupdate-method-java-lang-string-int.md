@@ -32,7 +32,7 @@ ms.lasthandoff: 04/16/2018
 # <a name="executeupdate-method-javalangstring-int"></a>Método executeUpdate (java.lang.String, int)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
 
-  Se ejecuta la instrucción SQL especificada y señala el [!INCLUDE[jdbcNoVersion](../../../includes/jdbcnoversion_md.md)] con la marca indicada sobre si el generado automáticamente claves que se produce este [SQLServerStatement](../../../connect/jdbc/reference/sqlserverstatement-class.md) objeto debe estar disponible para la recuperación.  
+  Ejecuta la instrucción SQL especificada y señala el [!INCLUDE[jdbcNoVersion](../../../includes/jdbcnoversion_md.md)] con la marca indicada sobre si las claves generadas automáticamente por este objeto [SQLServerStatement](../../../connect/jdbc/reference/sqlserverstatement-class.md) deben estar disponibles para su recuperación.  
   
 ## <a name="syntax"></a>Sintaxis  
   
@@ -49,26 +49,26 @@ public final int executeUpdate(java.lang.String sql,
   
  *flag*  
   
- Un **int** valor que indica si las claves generadas automáticamente deben estar disponibles. Es preciso que sea una de las constantes siguientes:  
+ Un valor **int** que indica si las claves generadas automáticamente deben estar disponibles. Es preciso que sea una de las constantes siguientes:  
   
  RETURN_GENERATED_KEYS  
   
  NO_GENERATED_KEYS  
   
 ## <a name="return-value"></a>Valor devuelto  
- Un **int** que indica el número de filas afectadas o 0 si se utiliza una instrucción DDL.  
+ Un valor **int** que indica el número de filas afectadas o 0 si se usa una instrucción DDL.  
   
 ## <a name="exceptions"></a>Excepciones  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
-## <a name="remarks"></a>Comentarios  
+## <a name="remarks"></a>Notas  
  Este método executeUpdate es especificado por el método executeUpdate en la interfaz java.sql.Statement.  
   
- Si ejecuta un procedimiento almacenado da como resultado un recuento de actualizaciones que es mayor que uno, o que genera más de un conjunto de resultados, use la [ejecutar](../../../connect/jdbc/reference/execute-method-sqlserverstatement.md) método para ejecutar el procedimiento almacenado.  
+ Si la ejecución de un procedimiento almacenado produce un recuento de actualización mayor que uno o que genera más de un conjunto de resultados, use el método [execute](../../../connect/jdbc/reference/execute-method-sqlserverstatement.md) para ejecutar el procedimiento almacenado.  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Ver también  
  [Método executeUpdate &#40;SQLServerStatement&#41;](../../../connect/jdbc/reference/executeupdate-method-sqlserverstatement.md)   
- [Miembros de SQLServerStatement](../../../connect/jdbc/reference/sqlserverstatement-members.md)   
+ [Miembros SQLServerStatement](../../../connect/jdbc/reference/sqlserverstatement-members.md)   
  [Clase SQLServerStatement](../../../connect/jdbc/reference/sqlserverstatement-class.md)  
   
   

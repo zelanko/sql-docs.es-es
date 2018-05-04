@@ -1,34 +1,23 @@
 ---
-title: "Elegir y asignar datos de entrada para una consulta de predicción | Documentos de Microsoft"
-ms.custom: 
-ms.date: 03/01/2017
-ms.prod: analysis-services
-ms.prod_service: analysis-services
-ms.service: 
+title: Elegir y asignar datos de entrada para una consulta de predicción | Documentos de Microsoft
+ms.date: 05/01/2018
+ms.prod: sql
+ms.technology: analysis-services
 ms.component: data-mining
-ms.reviewer: 
-ms.suite: pro-bi
-ms.technology: 
-ms.tgt_pltfrm: 
 ms.topic: article
-helpviewer_keywords:
-- tables [Analysis Services], prediction queries
-- Mining Model Prediction [Analysis Services], input tables
-ms.assetid: 00d330a0-879d-4da0-9f29-53c288116f4d
-caps.latest.revision: 
-author: Minewiskan
 ms.author: owend
+ms.reviewer: owend
+author: minewiskan
 manager: kfile
-ms.workload: Inactive
-ms.openlocfilehash: 6694a4e59637f96240afd1f2b04575ede20c2dfe
-ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
+ms.openlocfilehash: 8c5cc795af2833b297def7728018bba65a7f4927
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/15/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="choose-and-map-input-data-for-a-prediction-query"></a>Elegir y asignar datos de entrada para una consulta de predicción
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
-Generalmente, la creación de predicciones a partir de un modelo de minería de datos se realiza proporcionando datos nuevos al modelo. (La excepción son los modelos de serie temporal, que pueden realizar predicciones basadas únicamente en datos históricos). Para proporcionar nuevos datos al modelo, debe asegurarse de que los datos están disponibles como parte de una vista del origen de datos. Si conoce de antemano los datos que va a usar para la predicción, puede incluirlos en la vista del origen de datos usada para crear el modelo. De lo contrario, es posible que tenga que crear una nueva vista del origen de datos. Para más información, vea [Vistas del origen de datos en modelos multidimensionales](../../analysis-services/multidimensional-models/data-source-views-in-multidimensional-models.md).  
+  Generalmente, la creación de predicciones a partir de un modelo de minería de datos se realiza proporcionando datos nuevos al modelo. (La excepción son los modelos de serie temporal, que pueden realizar predicciones basadas únicamente en datos históricos). Para proporcionar nuevos datos al modelo, debe asegurarse de que los datos están disponibles como parte de una vista del origen de datos. Si conoce de antemano los datos que va a usar para la predicción, puede incluirlos en la vista del origen de datos usada para crear el modelo. De lo contrario, es posible que tenga que crear una nueva vista del origen de datos. Para más información, vea [Vistas del origen de datos en modelos multidimensionales](../../analysis-services/multidimensional-models/data-source-views-in-multidimensional-models.md).  
   
  Algunas veces, los datos que necesita se encuentran en varias tablas en una combinación de uno a varios. Es el caso de los datos usados para los modelos de asociación o los modelos de clústeres de secuencia, que usan una tabla de casos vinculada a una tabla anidada que contiene detalles sobre productos o transacciones. Si el modelo usa una estructura de tabla de casos anidados, los datos usados para la predicción también deben tener dicha estructura.  
   
@@ -125,6 +114,6 @@ Generalmente, la creación de predicciones a partir de un modelo de minería de 
      Si ya existe una relación, las columnas del modelo de minería de datos se asignan automáticamente a las columnas que tienen el mismo nombre en la tabla de entrada. Puede modificar la relación entre la tabla anidada y la tabla de casos haciendo clic en **Modificar combinación**, que abre el cuadro de diálogo **Crear relación** .  
   
 ## <a name="see-also"></a>Vea también  
- [Consultas de predicción &#40; minería de datos &#41;](../../analysis-services/data-mining/prediction-queries-data-mining.md)  
+ [Consultas de predicción & #40; minería de datos & #41;](../../analysis-services/data-mining/prediction-queries-data-mining.md)  
   
   

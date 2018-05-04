@@ -1,44 +1,23 @@
 ---
-title: "Modos de almacenamiento y procesamiento de la partición | Documentos de Microsoft"
-ms.custom: 
-ms.date: 03/14/2017
-ms.prod: analysis-services
-ms.prod_service: analysis-services
-ms.service: 
-ms.component: 
-ms.reviewer: 
-ms.suite: pro-bi
-ms.technology: 
-ms.tgt_pltfrm: 
-ms.topic: reference
-applies_to:
-- SQL Server 2016 Preview
-helpviewer_keywords:
-- storage [Analysis Services], partitions
-- hybrid OLAP
-- data storage [Analysis Services]
-- relational OLAP
-- multidimensional OLAP
-- partitions [Analysis Services], storage
-- storing data [Analysis Services], partitions
-- HOLAP
-- MOLAP
-- ROLAP
-ms.assetid: 86d17547-a0b6-47ac-876c-d7a5b15ac327
-caps.latest.revision: 
-author: Minewiskan
+title: Modos de almacenamiento y procesamiento de la partición | Documentos de Microsoft
+ms.date: 05/02/2018
+ms.prod: sql
+ms.technology: analysis-services
+ms.component: olap
+ms.topic: article
 ms.author: owend
+ms.reviewer: owend
+author: minewiskan
 manager: kfile
-ms.workload: On Demand
-ms.openlocfilehash: 2d5eab13f606ada93eaf927e8c01ecb09644b7ac
-ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
+ms.openlocfilehash: 3792cc06fc1fd679f5b708d5e1eec618038951af
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/15/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="partitions---partition-storage-modes-and-processing"></a>Particiones - procesamiento y modos de almacenamiento de partición
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
-El modo de almacenamiento de una partición afecta al rendimiento de las consultas y el procesamiento, a los requisitos de almacenamiento y a las ubicaciones de almacenamiento de la partición y de su grupo de medida y cubo primario.  La elección del modo de almacenamiento afecta también a las opciones de procesamiento.  
+  El modo de almacenamiento de una partición afecta al rendimiento de las consultas y el procesamiento, a los requisitos de almacenamiento y a las ubicaciones de almacenamiento de la partición y de su grupo de medida y cubo primario.  La elección del modo de almacenamiento afecta también a las opciones de procesamiento.  
   
  Una partición puede utilizar uno de estos tres modos de almacenamiento básicos:  
   
@@ -53,7 +32,7 @@ El modo de almacenamiento de una partición afecta al rendimiento de las consult
 ## <a name="molap"></a>MOLAP  
  El modo de almacenamiento MOLAP da lugar a que las agregaciones de la partición y una copia de sus datos de origen se almacenen en una estructura multidimensional en [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]. Esta estructura MOLAP está muy optimizada para maximizar el rendimiento de las consultas. La ubicación de almacenamiento puede estar en el equipo en donde se define la partición o en otro equipo que ejecute [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]. Dado que una copia de los datos de origen reside en la estructura multidimensional, las consultas se pueden resolver sin necesidad de obtener acceso a los datos de origen de la partición. Si se utilizan agregaciones, los tiempos de respuesta a las consultas pueden disminuir notablemente. Los datos de la estructura MOLAP de la partición están tan actualizados como el procesamiento más reciente de la misma.  
   
- A medida que cambian los datos de origen, los objetos con almacenamiento MOLAP se deben procesar periódicamente para incorporar estos cambios y ponerlos a disposición de los usuarios. El procesamiento actualiza los datos en la estructura MOLAP, ya sea completamente o incrementalmente. El tiempo entre un procesamiento y el siguiente crea un periodo de latencia durante el cual los datos de los objetos OLAP podrían no coincidir con los datos de origen. Es posible actualizar los objetos en almacenamiento MOLAP completamente o incrementalmente sin dejar sin conexión la partición o el cubo. Sin embargo, hay casos en que puede ser necesario dejar sin conexión un cubo para procesar algunos cambios estructurales de objetos OLAP. El tiempo de inactividad requerido para actualizar el almacenamiento MOLAP se puede minimizar actualizando y procesando cubos en un servidor de ensayo y utilizando la sincronización de bases de datos para copiar los objetos procesados en el servidor de producción. También se puede usar el almacenamiento en caché automático para minimizar la latencia y maximizar la disponibilidad, a la vez que se mantiene gran parte de las ventajas de rendimiento del almacenamiento MOLAP. Para obtener más información, vea [almacenamiento en caché automático &#40; Particiones &#41; ](../../analysis-services/multidimensional-models-olap-logical-cube-objects/partitions-proactive-caching.md), [Synchronize Analysis Services Databases](../../analysis-services/multidimensional-models/synchronize-analysis-services-databases.md), y [procesar un modelo multidimensional &#40; Analysis Services &#41; ](../../analysis-services/multidimensional-models/processing-a-multidimensional-model-analysis-services.md).  
+ A medida que cambian los datos de origen, los objetos con almacenamiento MOLAP se deben procesar periódicamente para incorporar estos cambios y ponerlos a disposición de los usuarios. El procesamiento actualiza los datos en la estructura MOLAP, ya sea completamente o incrementalmente. El tiempo entre un procesamiento y el siguiente crea un periodo de latencia durante el cual los datos de los objetos OLAP podrían no coincidir con los datos de origen. Es posible actualizar los objetos en almacenamiento MOLAP completamente o incrementalmente sin dejar sin conexión la partición o el cubo. Sin embargo, hay casos en que puede ser necesario dejar sin conexión un cubo para procesar algunos cambios estructurales de objetos OLAP. El tiempo de inactividad requerido para actualizar el almacenamiento MOLAP se puede minimizar actualizando y procesando cubos en un servidor de ensayo y utilizando la sincronización de bases de datos para copiar los objetos procesados en el servidor de producción. También se puede usar el almacenamiento en caché automático para minimizar la latencia y maximizar la disponibilidad, a la vez que se mantiene gran parte de las ventajas de rendimiento del almacenamiento MOLAP. Para obtener más información, consulte [almacenamiento en caché automático &#40;particiones&#41;](../../analysis-services/multidimensional-models-olap-logical-cube-objects/partitions-proactive-caching.md), [Synchronize Analysis Services Databases](../../analysis-services/multidimensional-models/synchronize-analysis-services-databases.md), y [procesar un modelo multidimensional &#40; Analysis Services&#41;](../../analysis-services/multidimensional-models/processing-a-multidimensional-model-analysis-services.md).  
   
 ## <a name="rolap"></a>ROLAP  
  El modo de almacenamiento ROLAP hace que las agregaciones de la partición se almacenen en vistas indizadas de la base de datos relacional que se especificó en el origen de datos de la partición. A diferencia del modo de almacenamiento MOLAP, ROLAP no hace que se almacene una copia de los datos del origen en las carpetas de datos de [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]. En su lugar, cuando no se pueden derivar los resultados de la caché de consultas, se utilizan las vistas indizadas del origen de datos para responder a las consultas. La respuesta a las consultas suele ser más lenta con el almacenamiento ROLAP que con los modos de almacenamiento MOLAP o HOLAP. El tiempo de procesamiento también suele ser más lento con ROLAP. No obstante, ROLAP permite a los usuarios ver los datos en tiempo real y ahorrar espacio de almacenamiento al trabajar con conjuntos de datos grandes a los que no se suele consultar con frecuencia, como datos puramente históricos.  
@@ -93,8 +72,8 @@ El modo de almacenamiento de una partición afecta al rendimiento de las consult
  Las particiones almacenadas como HOLAP son más pequeñas que sus equivalentes MOLAP dado que no contienen datos de origen y responden más rápidamente que las particiones ROLAP a las consultas que implican datos de resumen. El modo de almacenamiento HOLAP suele ser más adecuado para particiones en cubos que requieren una respuesta de consultas rápida para resúmenes basados en una gran cantidad de datos de origen. No obstante, si los usuarios generan consultas que deben utilizar datos del nivel hoja (por ejemplo, para calcular valores medios), MOLAP suele ser una opción mejor.  
   
 ## <a name="see-also"></a>Vea también  
- [Almacenamiento en caché automático &#40; Particiones &#41;](../../analysis-services/multidimensional-models-olap-logical-cube-objects/partitions-proactive-caching.md)   
+ [Almacenamiento en caché automático & #40; Particiones & #41;](../../analysis-services/multidimensional-models-olap-logical-cube-objects/partitions-proactive-caching.md)   
  [Sincronizar bases de datos de Analysis Services](../../analysis-services/multidimensional-models/synchronize-analysis-services-databases.md)   
- [Particiones &#40; Analysis Services - datos multidimensionales &#41;](../../analysis-services/multidimensional-models-olap-logical-cube-objects/partitions-analysis-services-multidimensional-data.md)  
+ [Particiones & #40; Analysis Services - datos multidimensionales & #41;](../../analysis-services/multidimensional-models-olap-logical-cube-objects/partitions-analysis-services-multidimensional-data.md)  
   
   

@@ -27,12 +27,11 @@ caps.latest.revision: 39
 author: Minewiskan
 ms.author: owend
 manager: erikre
-ms.workload: Inactive
-ms.openlocfilehash: 8780f95cab9d124b78d486e86b78897a2f2d6d39
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
-ms.translationtype: MT
+ms.openlocfilehash: 1db5a0a41669c97728cdb12107d18b0467481a42
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="mdx-data-definition---alter-cube"></a>Definición de datos MDX - ALTER CUBE
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
@@ -132,11 +131,11 @@ CELL CALCULATION Calculation_Name
  *Member_Name*  
  Expresión de cadena válida que proporciona un nombre de miembro o una clave de miembro.  
   
-### <a name="remarks"></a>Notas  
+### <a name="remarks"></a>Comentarios  
  Si no se utiliza la cláusula WITH DESCENDANTS, los elementos secundarios de un miembro quitado se convierten en elementos secundarios del elemento primario del miembro quitado. Si se utiliza la cláusula WITH DESCENDANTS, también se quitan todos los descendientes y sus filas de la tabla de dimensiones.  
   
 > [!NOTE]  
->  Para obtener información acerca de cómo quitar miembros calculados, conjuntos con nombre, acciones y cálculos de celdas, vea [DROP MEMBER, instrucción &#40; MDX &#41; ](../mdx/mdx-data-definition-drop-member.md), [Eliminar instrucción SET &#40; MDX &#41; ](../mdx/mdx-data-definition-drop-set.md), [Eliminar acción instrucción &#40; MDX &#41; ](../mdx/mdx-data-definition-drop-action.md), y [DROP CELL CALCULATION instrucción &#40; MDX &#41; ](../mdx/mdx-data-definition-drop-cell-calculation.md).  
+>  Para obtener información acerca de cómo quitar miembros calculados, conjuntos con nombre, acciones y cálculos de celdas, vea [DROP MEMBER, instrucción &#40;MDX&#41;](../mdx/mdx-data-definition-drop-member.md), [DROP instrucción SET &#40;MDX&#41;](../mdx/mdx-data-definition-drop-set.md), [Instrucción de acción DROP &#40;MDX&#41;](../mdx/mdx-data-definition-drop-action.md), y [DROP CELL CALCULATION instrucción &#40;MDX&#41;](../mdx/mdx-data-definition-drop-cell-calculation.md).  
   
 ## <a name="updating-the-default-dimension-member"></a>Actualizar el miembro de dimensión predeterminado  
  Esta cláusula actualiza el miembro predeterminado de un cubo y se utiliza en el script de cálculo MDX para definir un miembro predeterminado. El miembro predeterminado puede especificarse para la dimensión de base de datos, una dimensión de cubo o para un inicio de sesión de usuario. Además, se puede cambiar el miembro predeterminado durante una sesión.  
@@ -148,7 +147,7 @@ CELL CALCULATION Calculation_Name
  *MDX_Expression*  
  Expresión MDX válida que devuelve un miembro único.  
   
-### <a name="remarks"></a>Notas  
+### <a name="remarks"></a>Comentarios  
  La expresión MDX especificada puede ser estática o dinámica.  
   
 ## <a name="moving-a-dimension-member"></a>Mover un miembro de dimensión  
@@ -180,9 +179,9 @@ CELL CALCULATION Calculation_Name
  Expresión escalar MDX válida que define el valor de la propiedad de miembro calculado.  
   
 ## <a name="creating-a-cell-calculation"></a>Crear un cálculo de celda  
- Para obtener más información acerca de cómo crear un cálculo de celda mediante la instrucción ALTER CUBE, vea [DROP CELL CALCULATION instrucción &#40; MDX &#41; ](../mdx/mdx-data-definition-drop-cell-calculation.md).  
+ Para obtener más información acerca de cómo crear un cálculo de celda mediante la instrucción ALTER CUBE, vea [DROP CELL CALCULATION instrucción &#40;MDX&#41;](../mdx/mdx-data-definition-drop-cell-calculation.md).  
   
-## <a name="see-also"></a>Ver también  
- [Instrucciones de definición de datos MDX &#40; MDX &#41;](../mdx/mdx-data-definition-statements-mdx.md)  
+## <a name="see-also"></a>Vea también  
+ [Instrucciones de definición de datos MDX &#40;MDX&#41;](../mdx/mdx-data-definition-statements-mdx.md)  
   
   

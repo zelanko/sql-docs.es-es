@@ -21,12 +21,11 @@ caps.latest.revision: 10
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: a3513431ecfcd9539e2e5e4eb1e1dad7edecd114
-ms.sourcegitcommit: bb044a48a6af9b9d8edb178dc8c8bd5658b9ff68
-ms.translationtype: MT
+ms.openlocfilehash: 35e73785de98258b66e7feb487fffa74b53114e7
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/18/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="views-append-method-example-vb"></a>Vistas de ejemplo de método Append (VB)
 El código siguiente muestra cómo utilizar un [comando](../../../ado/reference/ado-api/command-object-ado.md) objeto y el [vistas](../../../ado/reference/adox-api/views-collection-adox.md) colección [anexado](../../../ado/reference/adox-api/append-method-adox-views.md) método para crear una nueva vista en el origen de datos subyacente.  

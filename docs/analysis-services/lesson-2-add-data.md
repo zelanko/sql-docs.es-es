@@ -1,28 +1,28 @@
 ---
-title: "Lección 2: Agregar datos | Documentos de Microsoft"
-ms.custom: 
+title: 'Lección 2: Agregar datos | Documentos de Microsoft'
+ms.custom: ''
 ms.date: 06/19/2017
 ms.prod: analysis-services
 ms.prod_service: analysis-services, azure-analysis-services
-ms.service: 
-ms.component: 
-ms.reviewer: 
+ms.service: ''
+ms.component: ''
+ms.reviewer: ''
 ms.suite: pro-bi
-ms.technology: 
-ms.tgt_pltfrm: 
+ms.technology: ''
+ms.tgt_pltfrm: ''
 ms.topic: get-started-article
-applies_to: SQL Server 2016
+applies_to:
+- SQL Server 2016
 ms.assetid: 13c3a8cc-b1db-4aba-ad9b-038b7971be8d
-caps.latest.revision: "33"
+caps.latest.revision: 33
 author: Minewiskan
 ms.author: owend
 manager: kfile
-ms.workload: On Demand
-ms.openlocfilehash: 05a93e001f4b5deb7be0aa3367ad74278e90d70a
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
-ms.translationtype: MT
+ms.openlocfilehash: 5976c7113de52fa34611d0809f525ddd74c1a861
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="lesson-2-add-data"></a>Lección 2: Agregar datos
 [!INCLUDE[ssas-appliesto-sql2016-later-aas](../includes/ssas-appliesto-sql2016-later-aas.md)]
@@ -33,7 +33,7 @@ Con el Asistente para importación de tabla, puede importar datos desde una vari
   
 Tiempo estimado para completar esta lección: **20 minutos**  
   
-## <a name="prerequisites"></a>Prerequisites  
+## <a name="prerequisites"></a>Requisitos previos  
 Este tema es parte de un tutorial de creación de modelos tabulares, que se debe completar en orden. Antes de realizar las tareas de esta lección, debe haber completado la lección anterior: [Lección 1: Crear un nuevo proyecto de modelo tabular](../analysis-services/lesson-1-create-a-new-tabular-model-project.md).  
   
 ## <a name="create-a-connection"></a>Crear una conexión  
@@ -93,7 +93,7 @@ La tabla DimCustomer que va a importar desde la base de datos de ejemplo contien
     
     **DimDate**
     
-      |columna|  
+      |Columna|  
       |--------|  
       |**DateKey**|  
       |**SpanishDayNameOfWeek**|  
@@ -103,7 +103,7 @@ La tabla DimCustomer que va a importar desde la base de datos de ejemplo contien
   
     **DimGeography**
   
-      |columna|  
+      |Columna|  
       |-------------|  
       |**SpanishCountryRegionName**|  
       |**FrenchCountryRegionName**|  
@@ -111,7 +111,7 @@ La tabla DimCustomer que va a importar desde la base de datos de ejemplo contien
   
     **DimProduct**
   
-      |columna|  
+      |Columna|  
       |-----------|  
       |**SpanishProductName**|  
       |**FrenchProductName**|  
@@ -126,21 +126,21 @@ La tabla DimCustomer que va a importar desde la base de datos de ejemplo contien
   
     **DimProductCategory**
   
-      |columna|  
+      |Columna|  
       |--------------------|  
       |**SpanishProductCategoryName**|  
       |**FrenchProductCategoryName**|  
   
     **DimProductSubcategory**
   
-      |columna|  
+      |Columna|  
       |-----------------------|  
       |**SpanishProductSubcategoryName**|  
       |**FrenchProductSubcategoryName**|  
   
     **FactInternetSales**
   
-      |columna|  
+      |Columna|  
       |------------------|  
       |**OrderDateKey**|  
       |**DueDateKey**|  

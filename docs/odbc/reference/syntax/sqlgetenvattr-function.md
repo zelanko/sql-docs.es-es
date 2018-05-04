@@ -11,7 +11,7 @@ ms.suite: sql
 ms.technology:
 - drivers
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 apiname:
 - SQLGetEnvAttr
 apilocation:
@@ -26,12 +26,11 @@ caps.latest.revision: 22
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: 11c2b83057291f04e7476abddc63c0ccb9954b85
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
-ms.translationtype: MT
+ms.openlocfilehash: 010a47003b044a400abaaaef5cd7ffd3c80d94d3
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="sqlgetenvattr-function"></a>SQLGetEnvAttr (función)
 **Conformidad**  
@@ -92,10 +91,10 @@ SQLRETURN SQLGetEnvAttr(
 ## <a name="comments"></a>Comentarios  
  Para obtener una lista de atributos, vea [SQLSetEnvAttr](../../../odbc/reference/syntax/sqlsetenvattr-function.md). No hay ningún atributo de entorno específicas del controlador. Si *atributo* especifica un atributo que devuelve una cadena, *ValuePtr* debe ser un puntero a un búfer en el que se va a devolver la cadena. La longitud máxima de la cadena, incluido el byte de finalización en null, será *BufferLength* bytes.  
   
- **SQLGetEnvAttr** se puede llamar en cualquier momento entre la asignación y liberación de un identificador de entorno. Todos los atributos de entorno definidos correctamente para la aplicación para el entorno se conservan hasta que **SQLFreeHandle** se llama en el *EnvironmentHandle* con un *HandleType*de SQL_HANDLE_ENV. Se puede asignar más de un identificador de entorno al mismo tiempo en ODBC 3*.x*. Un atributo de entorno en un entorno no se ve afectado cuando se ha asignado otro entorno.  
+ **SQLGetEnvAttr** se puede llamar en cualquier momento entre la asignación y liberación de un identificador de entorno. Todos los atributos de entorno definidos correctamente para la aplicación para el entorno se conservan hasta que **SQLFreeHandle** se llama en el *EnvironmentHandle* con un *HandleType*de SQL_HANDLE_ENV. Se puede asignar más de un identificador de entorno al mismo tiempo en ODBC 3 *.x*. Un atributo de entorno en un entorno no se ve afectado cuando se ha asignado otro entorno.  
   
 > [!NOTE]  
->  El atributo de entorno SQL_ATTR_OUTPUT_NTS es compatible con aplicaciones compatibles con los estándares. Cuando **SQLGetEnvAttr** se denomina ODBC 3*.x* siempre el Administrador de controladores devuelve SQL_TRUE para este atributo. Se puede establecer SQL_ATTR_OUTPUT_NTS en SQL_TRUE sólo mediante una llamada a **SQLSetEnvAttr**.  
+>  El atributo de entorno SQL_ATTR_OUTPUT_NTS es compatible con aplicaciones compatibles con los estándares. Cuando **SQLGetEnvAttr** se denomina ODBC 3 *.x* siempre el Administrador de controladores devuelve SQL_TRUE para este atributo. Se puede establecer SQL_ATTR_OUTPUT_NTS en SQL_TRUE sólo mediante una llamada a **SQLSetEnvAttr**.  
   
 ## <a name="related-functions"></a>Funciones relacionadas  
   

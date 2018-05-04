@@ -23,15 +23,15 @@ caps.latest.revision: 29
 author: Minewiskan
 ms.author: owend
 manager: kfile
-ms.workload: Inactive
-ms.openlocfilehash: e8a03e34bf6ea617e650132f2a81fb065a014d80
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
-ms.translationtype: MT
+ms.openlocfilehash: c26528fd259dbb950d29b36271cd60be6bb05b5a
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="mdschemafunctions-rowset"></a>Conjunto de filas MDSCHEMA_FUNCTIONS
-[!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]Describe las funciones disponibles para las aplicaciones cliente conectadas a la base de datos.  
+[!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]
+  Describe las funciones que están disponibles para las aplicaciones cliente conectadas a la base de datos.  
   
 ## <a name="rowset-columns"></a>Columnas del conjunto de filas  
  El **MDSCHEMA_FUNCTIONS** filas contiene las columnas siguientes.  
@@ -63,7 +63,7 @@ ms.lasthandoff: 01/08/2018
 |**NOMBRE_FUNCIÓN**|**DBTYPE_WSTR**|Opcional.|  
 |**ORIGEN**|**DBTYPE_I4**|Opcional.|  
   
-## <a name="see-also"></a>Ver también  
- [OLE DB para los conjuntos de filas de esquema OLAP](../../../analysis-services/schema-rowsets/ole-db-olap/ole-db-for-olap-schema-rowsets.md)  
+## <a name="see-also"></a>Vea también  
+ [OLE DB para OLAP Schema Rowsets](../../../analysis-services/schema-rowsets/ole-db-olap/ole-db-for-olap-schema-rowsets.md)  
   
   

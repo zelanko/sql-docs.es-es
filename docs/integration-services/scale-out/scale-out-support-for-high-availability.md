@@ -1,36 +1,38 @@
 ---
 title: Compatibilidad con la escalabilidad horizontal de SQL Server Integration Services (SSIS) para una alta disponibilidad | Microsoft Docs
 ms.description: This article describes how to configure SSIS Scale Out for high availability
-ms.custom: 
+ms.custom: ''
 ms.date: 12/19/2017
 ms.prod: sql-non-specified
 ms.prod_service: integration-services
-ms.service: 
+ms.service: ''
 ms.component: scale-out
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - integration-services
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
-caps.latest.revision: 
+caps.latest.revision: 1
 author: haoqian
 ms.author: haoqian
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 906edbe80e7c762cdd9a271218d790edc9da8f5b
-ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
+ms.openlocfilehash: a1f0f7f06da7032049496a2c2820fbe5c8abe6a8
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/25/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="scale-out-support-for-high-availability"></a>Compatibilidad con la escalabilidad horizontal para una alta disponibilidad
 
 En la escalabilidad horizontal de SSIS, la alta disponibilidad del trabajo se proporciona a través de la ejecución de paquetes con varios trabajos de escalabilidad horizontal.
 
-La alta disponibilidad del Servicio principal de escalabilidad horizontal se consigue con el [catálogo Always On para SSIS](../catalog/ssis-catalog.md#always-on-for-ssis-catalog-ssisdb) y los clústeres de conmutación por error de Windows. En esta solución, hay varias instancias del Servicio principal de escalabilidad horizontal que se hospedan en un clúster de conmutación por error de Windows. Si el Servicio principal de escalabilidad horizontal o SSISDB están desactivados en el nodo principal, el servicio o SSISDB en el nodo secundario continuarán aceptando solicitudes de usuario y comunicándose con los trabajos de escalabilidad horizontal. 
+La alta disponibilidad en el lado del servicio principal de escalabilidad horizontal se logra con [Always On para el catálogo de SSIS](../catalog/ssis-catalog.md#always-on-for-ssis-catalog-ssisdb) y los clústeres de conmutación por error de Windows. En esta solución se hospedan varias instancias del servicio principal de escalabilidad horizontal en un clúster de conmutación por error de Windows. Si el Servicio principal de escalabilidad horizontal o SSISDB están desactivados en el nodo principal, el servicio o SSISDB en el nodo secundario continuarán aceptando solicitudes de usuario y comunicándose con los trabajos de escalabilidad horizontal.
 
-Para configurar la alta disponibilidad del Servicio principal de escalabilidad horizontal, haga lo siguiente:
+Como alternativa, la alta disponibilidad en el lado del servicio principal de escalabilidad horizontal se puede lograr con Instancia de clúster de conmutación por error de SQL Server. Vea [Scale Out support for high availability via SQL Server failover cluster instance](scale-out-failover-cluster-instance.md) (Compatibilidad con la escalabilidad horizontal para una alta disponibilidad mediante Instancia de clústeres de conmutación por error de SQL Server).
+
+Para configurar la alta disponibilidad en el lado del servicio principal de escalabilidad horizontal con AlwaysOn para el catálogo de SSIS, haga lo siguiente:
 
 ## <a name="1-prerequisites"></a>1. Prerequisites
 Configure un clúster de conmutación por error de Windows. Vea la entrada de blog [Installing the Failover Cluster Feature and Tools for Windows Server 2012](http://blogs.msdn.com/b/clustering/archive/2012/04/06/10291601.aspx) (Instalación de las herramientas y la característica de clúster de conmutación por error para Windows Server 2012) para obtener instrucciones. Instale la característica y las herramientas en todos los nodos del clúster.

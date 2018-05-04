@@ -21,12 +21,11 @@ caps.latest.revision: 19
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: fd6bd1d650f3aedabe1f6b13bc0503e0961b7ffe
-ms.sourcegitcommit: bb044a48a6af9b9d8edb178dc8c8bd5658b9ff68
-ms.translationtype: MT
+ms.openlocfilehash: 025eca1f753c738533298731763fa9c0df70f65e
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/18/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="registering-a-custom-business-object"></a>Registrar un objeto comercial personalizado
 Para iniciar correctamente un objeto comercial personalizado (.dll o .exe) a través del servidor Web, se debe especificar ProgID del objeto de negocios en el registro como se explica en este procedimiento. Esta característica RDS protege la seguridad del servidor Web al ejecutar sólo ejecutables autorizados.  

@@ -23,12 +23,11 @@ caps.latest.revision: 5
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: 14f79d299850bf6163fb328b0dd54be9d84f9a7b
-ms.sourcegitcommit: bb044a48a6af9b9d8edb178dc8c8bd5658b9ff68
-ms.translationtype: MT
+ms.openlocfilehash: ddc3e887e15b856e0caddc9b97f4bb1e1f6078d1
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/18/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="provider-errors"></a>Errores del proveedor
 Cuando se produce un error de proveedor, se devuelve un error de tiempo de ejecución de -2147467259. Si recibe este error, revise el **errores** colección de activos **conexión** objeto, que contiene uno o más errores que describen lo que ha sucedido.  

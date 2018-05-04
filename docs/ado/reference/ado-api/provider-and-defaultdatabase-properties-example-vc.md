@@ -22,12 +22,11 @@ caps.latest.revision: 12
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: d1529314e0e14f1cae6de34196961a22b9e4bef4
-ms.sourcegitcommit: bb044a48a6af9b9d8edb178dc8c8bd5658b9ff68
-ms.translationtype: MT
+ms.openlocfilehash: 662a8104c52d3f9b0053e2a75e880dbf4dd7472b
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/18/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="provider-and-defaultdatabase-properties-example-vc"></a>Ejemplo Provider y DefaultDatabase propiedades (VC ++)
 Este ejemplo se muestra la [proveedor](../../../ado/reference/ado-api/provider-property-ado.md) propiedad abriendo tres [conexión](../../../ado/reference/ado-api/connection-object-ado.md) objetos mediante diferentes proveedores. También usa el [DefaultDatabase](../../../ado/reference/ado-api/defaultdatabase-property.md) propiedad para establecer la base de datos predeterminada para el proveedor ODBC de Microsoft.  

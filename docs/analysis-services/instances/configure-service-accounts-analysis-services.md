@@ -1,36 +1,23 @@
 ---
 title: Configurar cuentas de servicio (Analysis Services) | Documentos de Microsoft
-ms.custom: 
-ms.date: 03/14/2017
-ms.prod: analysis-services
-ms.prod_service: analysis-services
-ms.service: 
-ms.component: data-mining
-ms.reviewer: 
-ms.suite: pro-bi
-ms.technology: 
-ms.tgt_pltfrm: 
+ms.date: 05/02/2018
+ms.prod: sql
+ms.technology: analysis-services
+ms.component: ''
 ms.topic: article
-helpviewer_keywords:
-- security [Analysis Services], logon accounts
-- logon accounts [Analysis Services]
-- accounts [Analysis Services]
-- logon accounts [Analysis Services], about logon accounts
-ms.assetid: b481bd51-e077-42f6-8598-ce08c1a38716
-caps.latest.revision: 
-author: Minewiskan
 ms.author: owend
+ms.reviewer: owend
+author: minewiskan
 manager: kfile
-ms.workload: On Demand
-ms.openlocfilehash: 090f81a3668e91ce8c18e10a1bb7ee5fccc52365
-ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
+ms.openlocfilehash: b2a6f76cc85c4e595f05d372b6318a862534408a
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/15/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="configure-service-accounts-analysis-services"></a>Configurar las cuentas de servicio (Analysis Services)
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
-El aprovisionamiento de cuentas para todo un producto se documenta en [Configurar los permisos y las cuentas de servicio de Windows](../../database-engine/configure-windows/configure-windows-service-accounts-and-permissions.md), un tema que contiene gran cantidad de información sobre las cuentas de servicio de todos los servicios de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], incluido [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]. Consulte ese tema para obtener información sobre los tipos de cuenta válidos, los privilegios de Windows que se asignan durante la instalación, los permisos del sistema de archivos, los permisos del Registro, etc.  
+  El aprovisionamiento de cuentas para todo un producto se documenta en [Configurar los permisos y las cuentas de servicio de Windows](../../database-engine/configure-windows/configure-windows-service-accounts-and-permissions.md), un tema que contiene gran cantidad de información sobre las cuentas de servicio de todos los servicios de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], incluido [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]. Consulte ese tema para obtener información sobre los tipos de cuenta válidos, los privilegios de Windows que se asignan durante la instalación, los permisos del sistema de archivos, los permisos del Registro, etc.  
   
  En este tema se ofrece información complementaria para [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)], que incluye los permisos adicionales necesarios para las instalaciones tabulares y para instalaciones en clúster. Además se ocupa de los permisos necesarios para admitir las operaciones del servidor. Por ejemplo, puede configurar operaciones de consultas y procesamiento para que se ejecuten en la cuenta del servicio, en cuyo caso deberá otorgar permisos adicionales para que funcione.  
   
@@ -132,7 +119,7 @@ El aprovisionamiento de cuentas para todo un producto se documenta en [Configura
 3.  Use **Windows Explorer** | **Archivos de programa** | **Microsoft SQL Server** | MSASxx.MSSQLServer | **OLAP** | **ubicación** para comprobar que las propiedades de seguridad de carpeta se conceden al grupo de seguridad en el paso 2.  
   
 > [!NOTE]  
->  Nunca quite o modifique un SID. Para restaurar un SID por servicio que se eliminó accidentalmente, vea [http://support.microsoft.com/kb/2620201](http://support.microsoft.com/kb/2620201).  
+>  Nunca quite o modifique un SID. Para restaurar un SID por servicio que se eliminó accidentalmente, vea [ http://support.microsoft.com/kb/2620201 ](http://support.microsoft.com/kb/2620201).  
   
  **Más información sobre SID por servicio**  
   
@@ -143,7 +130,7 @@ El aprovisionamiento de cuentas para todo un producto se documenta en [Configura
  Dado que el SID es inmutable, las ACL del sistema de archivos se crean durante la instalación del servicio y se pueden usar de forma indefinida, independientemente de la frecuencia con la que se cambie la cuenta de servicio. Como medida de seguridad adicional, las ACL que especifican permisos mediante un SID aseguran que solo una única instancia de un servicio tiene acceso a los archivos ejecutables de programas y a las carpetas de datos, incluso aunque haya otros servicios que se ejecuten bajo la misma cuenta.  
   
 ##  <a name="bkmk_tasks"></a> Otorgar permisos adicionales de Analysis Servicies para operaciones de servidor específicas  
- [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] ejecuta algunas tareas en el contexto de seguridad de la cuenta de servicio (o cuenta de inicio de sesión) que se usa para iniciar [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]y ejecuta otras tareas en el contexto de seguridad del usuario que las solicita.  
+ [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]ejecuta algunas tareas en el contexto de seguridad de la cuenta de servicio (o la cuenta de inicio de sesión) que se usa para iniciar [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]y ejecuta otras tareas en el contexto de seguridad del usuario que solicita la tarea.  
   
  En la tabla siguiente se describen los permisos adicionales necesarios para que las tareas se ejecuten como la cuenta de servicio.  
   

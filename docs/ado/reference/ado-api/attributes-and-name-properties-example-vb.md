@@ -22,12 +22,11 @@ caps.latest.revision: 10
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: 3149bf0d9514c64aa8c80febbc0cadf2514678aa
-ms.sourcegitcommit: bb044a48a6af9b9d8edb178dc8c8bd5658b9ff68
-ms.translationtype: MT
+ms.openlocfilehash: 2123d4f0f80db7f2e135f23b41a7afea5f59fc1e
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/18/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="attributes-and-name-properties-example-vb"></a>Ejemplo de propiedades de nombre (VB) y atributos
 Este ejemplo muestra el valor de la [atributos](../../../ado/reference/ado-api/attributes-property-ado.md) propiedad [conexión](../../../ado/reference/ado-api/connection-object-ado.md), [campo](../../../ado/reference/ado-api/field-object.md), y [propiedad](../../../ado/reference/ado-api/property-object-ado.md) objetos. Usa el [nombre](../../../ado/reference/ado-api/name-property-ado.md) propiedad para mostrar el nombre de cada **campo** y **propiedad** objeto.  

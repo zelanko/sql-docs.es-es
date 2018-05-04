@@ -1,16 +1,16 @@
 ---
 title: RECEIVE (Transact-SQL) | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 07/26/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: sql-database
-ms.service: 
+ms.service: ''
 ms.component: t-sql|statements
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - RECEIVE_TSQL
@@ -24,16 +24,16 @@ helpviewer_keywords:
 - receiving messages
 - retrieving messages
 ms.assetid: 878c6c14-37ab-4b87-9854-7f8f42bac7dd
-caps.latest.revision: 
+caps.latest.revision: 50
 author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: ed6bfbd57bda9c2c3e7649be91ded91605af153f
-ms.sourcegitcommit: 45e4efb7aa828578fe9eb7743a1a3526da719555
+ms.openlocfilehash: 0ec4c3011336b8feca6df673bf06021d46b30bdd
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="receive-transact-sql"></a>RECEIVE (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -113,7 +113,7 @@ ms.lasthandoff: 11/21/2017
  conversation_group_id = *conversation_group_id*  
  Especifica el grupo de conversación para los mensajes recibidos. El valor de *conversation_group_id* proporcionado debe ser un **uniqueidentifier** o un tipo convertible en **uniqueidentifier**.  
   
- TIMEOUT *timeout*  
+ TIMEOUT *tiempo_de_espera*  
  Especifica el tiempo, en milisegundos, durante el que la instrucción espera un mensaje. Esta cláusula solo se puede utilizar con la cláusula WAITFOR. Si no se especifica esta cláusula o el tiempo de espera es -**1**, el tiempo de espera es ilimitado. Si se agota el tiempo de espera, RECEIVE devuelve un conjunto de resultados vacío.  
   
 ## <a name="remarks"></a>Notas  

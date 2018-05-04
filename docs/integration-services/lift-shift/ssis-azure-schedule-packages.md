@@ -1,30 +1,31 @@
 ---
-title: "Programar la ejecución de paquetes SSIS en Azure | Microsoft Docs"
-ms.date: 01/16/2018
+title: Programar la ejecución de paquetes SSIS en Azure | Microsoft Docs
+ms.date: 04/17/2018
 ms.topic: article
 ms.prod: sql-non-specified
 ms.prod_service: integration-services
-ms.service: 
+ms.service: ''
 ms.component: lift-shift
 ms.suite: sql
-ms.custom: 
+ms.custom: ''
 ms.technology:
 - integration-services
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 4724d7a306e59e05d17f466643146d868f372a7f
-ms.sourcegitcommit: d8ab09ad99e9ec30875076acee2ed303d61049b7
+ms.openlocfilehash: 94d0bb3462fe2dac81194e881521299f2b8c6e38
+ms.sourcegitcommit: bb044a48a6af9b9d8edb178dc8c8bd5658b9ff68
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/23/2018
+ms.lasthandoff: 04/18/2018
 ---
 # <a name="schedule-the-execution-of-an-ssis-package-on-azure"></a>Programar la ejecución de un paquete SSIS en Azure
 Puede programar la ejecución de paquetes almacenados en la base de datos del catálogo de SSISDB en un servidor de Azure SQL Database. Para ello, elija una de las opciones de programación siguientes:
 -   [Agente SQL Server](#agent)
 -   [Trabajos elásticos de SQL Database](#elastic)
--   [Actividad de procedimiento almacenado de SQL Server de Azure Data Factory](#sproc)
+-   [Actividad de ejecución de un paquete SSIS en Azure Data Factory](#activities)
+-   [Actividad de procedimiento almacenado de SQL Server de Azure Data Factory](#activities)
 
 ## <a name="agent"></a> Programar un paquete mediante el Agente SQL Server
 
@@ -142,13 +143,15 @@ EXEC jobs.sp_update_job @job_name='ExecutePackageJob', @enabled=1,
     @schedule_interval_type='Minutes', @schedule_interval_count=60 
 ```
 
-## <a name="sproc"> Programar un paquete con la actividad de procedimiento almacenado de SQL Server de Azure Data Factory</a>
+## <a name="activities"></a> Programar un paquete con Azure Data Factory
 
-Para obtener más información sobre cómo programar un paquete SSIS con la actividad de procedimiento almacenado de Azure Data Factory, vea los siguientes artículos:
+Para obtener información sobre cómo programar un paquete SSIS usando actividades de Azure Data Factory, consulte los siguientes artículos:
 
--   Data Factory, versión 2: [Invocar paquetes SSIS mediante la actividad de procedimiento almacenado en Azure Data Factory](https://docs.microsoft.com/azure/data-factory/how-to-invoke-ssis-package-stored-procedure-activity)
+-   Para Data Factory, versión 2: [Run an SSIS package using SSIS activity in Azure Data Factory](https://docs.microsoft.com/azure/data-factory/how-to-invoke-ssis-package-ssis-activity) (Ejecutar un paquete SSIS mediante una actividad SSIS en Azure Data Factory)
 
--   Data Factory, versión 1: [Invocar paquetes SSIS mediante la actividad de procedimiento almacenado en Azure Data Factory](https://docs.microsoft.com/azure/data-factory/v1/how-to-invoke-ssis-package-stored-procedure-activity)
+-   Para Data Factory, versión 2: [Invocación de un paquete de SSIS mediante una actividad de procedimiento almacenado de Azure Data Factory](https://docs.microsoft.com/azure/data-factory/how-to-invoke-ssis-package-stored-procedure-activity)
+
+-   Para Data Factory, versión 1: [Invocación de un paquete de SSIS mediante una actividad de procedimiento almacenado de Azure Data Factory](https://docs.microsoft.com/azure/data-factory/v1/how-to-invoke-ssis-package-stored-procedure-activity)
 
 ## <a name="next-steps"></a>Pasos siguientes
 Para obtener más información, sobre el Agente SQL Server, consulte [Trabajos del Agente SQL Server para paquetes](../packages/sql-server-agent-jobs-for-packages.md).

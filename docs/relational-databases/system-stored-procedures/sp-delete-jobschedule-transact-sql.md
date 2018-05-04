@@ -24,12 +24,11 @@ caps.latest.revision: 38
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: 81cc3f4ce5fcfdaa9ba36828b3ba1133c3825ed4
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
-ms.translationtype: MT
+ms.openlocfilehash: 9a571ce63cd2870185109aeeb96ee4dd12548ee3
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="spdeletejobschedule-transact-sql"></a>sp_delete_jobschedule (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -42,7 +41,7 @@ ms.lasthandoff: 04/16/2018
 ## <a name="remarks"></a>Comentarios  
  Ahora, las programaciones de trabajos se pueden administrar independientemente de los trabajos. Para quitar una programación de un trabajo, use **sp_detach_schedule**. Para eliminar una programación, use **sp_delete_schedule**.  
   
-> **Nota:****sp_delete_jobschedule** no admite programaciones que están conectadas a varios trabajos.   Si llama a un script existente **sp_delete_jobschedule** para quitar una programación que está conectada a más de un trabajo, el procedimiento devuelve un error.  
+> **Nota:****sp_delete_jobschedule** no admite programaciones que están conectadas a varios trabajos. Si llama a un script existente **sp_delete_jobschedule** para quitar una programación que está conectada a más de un trabajo, el procedimiento devuelve un error.  
   
 ## <a name="permissions"></a>Permissions  
  De forma predeterminada, los miembros del rol fijo de servidor **sysadmin** pueden ejecutar este procedimiento almacenado. Al resto de usuarios se les debe conceder uno de los siguientes roles fijos de base de datos del Agente [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] en la base de datos **msdb** :  

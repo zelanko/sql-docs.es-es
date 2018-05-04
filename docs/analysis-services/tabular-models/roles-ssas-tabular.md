@@ -1,31 +1,30 @@
 ---
 title: Roles | Documentos de Microsoft
-ms.custom: 
+ms.custom: ''
 ms.date: 03/17/2017
 ms.prod: analysis-services
 ms.prod_service: analysis-services, azure-analysis-services
-ms.service: 
+ms.service: ''
 ms.component: data-mining
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: pro-bi
-ms.technology: 
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.technology: ''
+ms.tgt_pltfrm: ''
+ms.topic: conceptual
 ms.assetid: e547382a-c064-4bc6-818c-5127890af334
-caps.latest.revision: 
+caps.latest.revision: 29
 author: Minewiskan
 ms.author: owend
 manager: kfile
-ms.workload: On Demand
-ms.openlocfilehash: 15030b1b2c5345d3072ff188356aaa532857c90b
-ms.sourcegitcommit: d8ab09ad99e9ec30875076acee2ed303d61049b7
-ms.translationtype: MT
+ms.openlocfilehash: c23948ae3a3326a6d8139b7e9556164108b9e1d6
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/23/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="roles"></a>Roles
 [!INCLUDE[ssas-appliesto-sqlas-aas](../../includes/ssas-appliesto-sqlas-aas.md)]
-Los roles, en los modelos tabulares, definen los permisos de los miembros para un modelo. Los miembros del rol pueden realizar en el modelo las acciones definidas por el permiso de rol. Los roles que se han definido con permisos de lectura también pueden proporcionar seguridad adicional en el nivel de fila mediante filtros de fila. 
+  Los roles, en los modelos tabulares, definen los permisos de los miembros para un modelo. Los miembros del rol pueden realizar en el modelo las acciones definidas por el permiso de rol. Los roles que se han definido con permisos de lectura también pueden proporcionar seguridad adicional en el nivel de fila mediante filtros de fila. 
   
  Para SQL Server Analysis Services, roles contienen a miembros de usuario por nombre de usuario o grupo de Windows y permisos (lectura, process, administrador). Para los servicios de análisis de Azure, los usuarios deben estar en su Azure Active Directory y los nombres de usuario y grupos especificados deben ser por una dirección de correo electrónico profesional o UPN. 
   
@@ -79,7 +78,7 @@ Los roles, en los modelos tabulares, definen los permisos de los miembros para u
   
  El efecto neto de estos permisos en la tabla Transactions es que los miembros podrán consultar las filas de datos en las que el cliente sea de los EE. UU., la categoría de producto sea bicycles y el año sea 2008. Los usuarios no podrán consultar ninguna de las transacciones que no cumplan las tres condiciones anteriores, a menos que sean miembros de otro rol que les conceda estos permisos.  
   
- Puede usar el filtro *=FALSE()*para denegar el acceso a todas las filas de una tabla completa.  
+ Puede usar el filtro *=FALSE()* para denegar el acceso a todas las filas de una tabla completa.  
   
 ### <a name="dynamic-security"></a>Seguridad dinámica  
  Seguridad dinámica proporciona una manera de definir la seguridad en el nivel de fila según el nombre del usuario que ha iniciado sesión actualmente o la propiedad CustomData devuelta por una cadena de conexión. Para implementar seguridad dinámica, debe incluir en el modelo una tabla con los valores de inicio de sesión (nombre de usuario de Windows) para los usuarios, así como un campo que se pueda utilizar para definir un permiso específico; por ejemplo, una tabla de los dimEmployees con un Id. de acceso (dominio \ nombredeusuario) junto con un valor de departamento para cada empleado.  

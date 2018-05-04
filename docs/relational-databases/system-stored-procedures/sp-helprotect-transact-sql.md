@@ -24,12 +24,11 @@ caps.latest.revision: 24
 author: edmacauley
 ms.author: edmaca
 manager: craigg
-ms.workload: On Demand
-ms.openlocfilehash: 3e0942b8d2b66a76db9e50616f63d6d7a3cc959e
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
-ms.translationtype: MT
+ms.openlocfilehash: 0c92f72b54b5b3d420e2e4cbdbfe616f9e6f090f
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="sphelprotect-transact-sql"></a>sp_helprotect (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -55,7 +54,7 @@ sp_helprotect [ [ @name = ] 'object_statement' ]
   
 ## <a name="arguments"></a>Argumentos  
  [  **@name =** ] **'***object_statement***'**  
- Es el nombre del objeto de la base de datos actual, o una instrucción, cuyos permisos se van a presentar. *el argumento object_statement* es **nvarchar(776)**, su valor predeterminado es null, que devuelve todos los permisos de objetos e instrucciones. Si el valor es un objeto (tabla, vista, procedimiento almacenado o procedimiento almacenado extendido), tiene que ser un objeto válido de la base de datos actual. El nombre del objeto puede incluir un calificador de propietario en el formulario *propietario***.*** objeto*.  
+ Es el nombre del objeto de la base de datos actual, o una instrucción, cuyos permisos se van a presentar. *el argumento object_statement* es **nvarchar(776)**, su valor predeterminado es null, que devuelve todos los permisos de objetos e instrucciones. Si el valor es un objeto (tabla, vista, procedimiento almacenado o procedimiento almacenado extendido), tiene que ser un objeto válido de la base de datos actual. El nombre del objeto puede incluir un calificador de propietario en el formulario *propietario ***.*** objeto*.  
   
  Si *object_statement* es una instrucción puede ser una instrucción CREATE.  
   

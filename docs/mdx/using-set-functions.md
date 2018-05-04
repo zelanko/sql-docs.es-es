@@ -20,12 +20,11 @@ caps.latest.revision: 24
 author: Minewiskan
 ms.author: owend
 manager: erikre
-ms.workload: Inactive
-ms.openlocfilehash: c0afa99103cbb10c29c66bc375dc10d206560fd8
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
-ms.translationtype: MT
+ms.openlocfilehash: b0946bd46910077d2ffe1a2bbd2ffa31be919e75
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="using-set-functions"></a>Usar funciones de conjuntos
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
@@ -34,7 +33,7 @@ ms.lasthandoff: 01/08/2018
   
  Las funciones de conjunto, al igual que las funciones de tupla y de conjunto, son esenciales para negociar las estructuras multidimensionales de Analysis Services. Las funciones de conjuntos son vitales para obtener resultados de las consultas MDX (Expresiones multidimensionales) porque las expresiones de conjuntos definen los ejes de una consulta MDX.  
   
- Una de las funciones de conjunto más común es el [miembros &#40; Conjunto de &#41; &#40; MDX &#41; ](../mdx/members-set-mdx.md) función, que recupera un conjunto que contiene todos los miembros de una dimensión, jerarquía o nivel. A continuación se muestra un ejemplo de su uso dentro de una consulta:  
+ Una de las funciones de conjunto más común es el [miembros &#40;establecer&#41; &#40;MDX&#41; ](../mdx/members-set-mdx.md) función, que recupera un conjunto que contiene todos los miembros de una dimensión, jerarquía o nivel. A continuación se muestra un ejemplo de su uso dentro de una consulta:  
   
  `SELECT`  
   
@@ -54,7 +53,7 @@ ms.lasthandoff: 01/08/2018
   
  `FROM [Adventure Works]`  
   
- Es otra función que se utiliza el [Crossjoin &#40; MDX &#41; ](../mdx/crossjoin-mdx.md) (función). Devuelve un conjunto de tuplas que representan el producto cartesiano de los conjuntos pasados en el mismo como parámetros. En términos prácticos, esta función permite crear ejes 'anidados' o 'de referencias cruzadas' en las consultas:  
+ Es otra función que se utiliza la [Crossjoin &#40;MDX&#41; ](../mdx/crossjoin-mdx.md) (función). Devuelve un conjunto de tuplas que representan el producto cartesiano de los conjuntos pasados en el mismo como parámetros. En términos prácticos, esta función permite crear ejes 'anidados' o 'de referencias cruzadas' en las consultas:  
   
  `SELECT`  
   
@@ -82,7 +81,7 @@ ms.lasthandoff: 01/08/2018
   
  `FROM [Adventure Works]`  
   
- El [descendientes &#40; MDX &#41; ](../mdx/descendants-mdx.md) función es similar el **elementos secundarios** funcionar, pero es más eficaz. Devuelve los descendientes de cualquier miembro en uno o varios niveles de una jerarquía:  
+ El [descendientes &#40;MDX&#41; ](../mdx/descendants-mdx.md) función es similar el **elementos secundarios** funcionar, pero es más eficaz. Devuelve los descendientes de cualquier miembro en uno o varios niveles de una jerarquía:  
   
  SELECT  
   
@@ -104,7 +103,7 @@ ms.lasthandoff: 01/08/2018
   
  FROM [Adventure Works]  
   
- El [orden &#40; MDX &#41; ](../mdx/order-mdx.md) función le permite ordenar el contenido de un conjunto en orden ascendente o descendente según una expresión numérica determinada. La consulta siguiente devuelve los mismos miembros en filas que la consulta anterior, pero ahora los ordena por la medida Internet Sales Amount:  
+ El [orden &#40;MDX&#41; ](../mdx/order-mdx.md) función le permite ordenar el contenido de un conjunto en orden ascendente o descendente según una expresión numérica determinada. La consulta siguiente devuelve los mismos miembros en filas que la consulta anterior, pero ahora los ordena por la medida Internet Sales Amount:  
   
  `SELECT`  
   
@@ -134,7 +133,7 @@ ms.lasthandoff: 01/08/2018
   
  Esta consulta también muestra la forma en que el conjunto devuelto por una función de conjunto, Descendants, puede pasarse como parámetro a otra función de conjunto, Order.  
   
- Filtrar un conjunto según ciertos criterios resulta muy útil al escribir consultas, y para ello puede usar el [filtro &#40; MDX &#41; ](../mdx/filter-mdx.md) funcione, tal como se muestra en el ejemplo siguiente:  
+ Filtrar un conjunto según ciertos criterios resulta muy útil al escribir consultas, y para ello puede usar el [filtro &#40;MDX&#41; ](../mdx/filter-mdx.md) funcione, tal como se muestra en el ejemplo siguiente:  
   
  `SELECT`  
   
@@ -162,7 +161,7 @@ ms.lasthandoff: 01/08/2018
   
  `FROM [Adventure Works]`  
   
- Existen otras funciones más sofisticadas que permiten filtrar un conjunto de otras maneras. Por ejemplo, la consulta siguiente muestra el [TopCount &#40; MDX &#41; ](../mdx/topcount-mdx.md) función devuelve los n elementos superiores de un conjunto:  
+ Existen otras funciones más sofisticadas que permiten filtrar un conjunto de otras maneras. Por ejemplo, la consulta siguiente muestra el [TopCount &#40;MDX&#41; ](../mdx/topcount-mdx.md) función devuelve los n elementos superiores de un conjunto:  
   
  `SELECT`  
   
@@ -188,7 +187,7 @@ ms.lasthandoff: 01/08/2018
   
  `FROM [Adventure Works]`  
   
- Por último, es posible realizar una serie de operaciones de conjunto lógico mediante funciones como [Intersect &#40; MDX &#41; ](../mdx/intersect-mdx.md), [Unión &#40; MDX &#41; ](../mdx/union-mdx.md) y [excepto &#40; MDX &#41; ](../mdx/except-mdx-function.md) funciones. En la consulta siguiente se muestran ejemplos de las dos últimas funciones:  
+ Por último, es posible realizar una serie de operaciones de conjunto lógico mediante funciones como [Intersect &#40;MDX&#41;](../mdx/intersect-mdx.md), [unión &#40;MDX&#41; ](../mdx/union-mdx.md) y [excepto &#40;MDX&#41; ](../mdx/except-mdx-function.md) funciones. En la consulta siguiente se muestran ejemplos de las dos últimas funciones:  
   
  `SELECT`  
   
@@ -227,7 +226,7 @@ ms.lasthandoff: 01/08/2018
  `FROM [Adventure Works]`  
   
 ## <a name="see-also"></a>Vea también  
- [Funciones &#40; La sintaxis de MDX &#41;](../mdx/functions-mdx-syntax.md)   
+ [Funciones &#40;sintaxis MDX&#41;](../mdx/functions-mdx-syntax.md)   
  [Usar funciones de miembro](../mdx/using-member-functions.md)   
  [Uso de funciones de tupla](../mdx/using-tuple-functions.md)  
   

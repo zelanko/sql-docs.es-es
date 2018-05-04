@@ -1,35 +1,34 @@
 ---
-title: "Ejemplos de consultas de modelo de clústeres de secuencia | Documentos de Microsoft"
-ms.custom: 
+title: Ejemplos de consultas de modelo de clústeres de secuencia | Documentos de Microsoft
+ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: analysis-services
 ms.prod_service: analysis-services
-ms.service: 
+ms.service: ''
 ms.component: data-mining
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: pro-bi
-ms.technology: 
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.technology: ''
+ms.tgt_pltfrm: ''
+ms.topic: conceptual
 helpviewer_keywords:
 - sequence clustering algorithms [Analysis Services]
 - content queries [DMX]
 - sequence [Analysis Services]
 ms.assetid: 64bebcdc-70ab-43fb-8d40-57672a126602
-caps.latest.revision: 
+caps.latest.revision: 22
 author: Minewiskan
 ms.author: owend
 manager: kfile
-ms.workload: Inactive
-ms.openlocfilehash: 5e7b6cf1a00c650e49282e611eae18bed14b9179
-ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
-ms.translationtype: MT
+ms.openlocfilehash: ba0770f707dbd27b4efafcc648040da8dbbed4db
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/15/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="sequence-clustering-model-query-examples"></a>Ejemplos de consultas de modelos de clústeres de secuencia
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
-Cuando se crea una consulta en un modelo de minería de datos, puede tratarse de una consulta de contenido, que proporciona detalles sobre la información almacenada en el modelo, o se puede crear una consulta de predicción, que utiliza los patrones del modelo para realizar predicciones según los datos nuevos que se proporcionen. En un modelo de agrupación en clústeres de secuencia, las consultas de contenido normalmente proporcionan detalles adicionales sobre los clústeres que se encontraron o las transiciones dentro de esos clústeres. También se pueden recuperar metadatos sobre el modelo mediante una consulta.  
+  Cuando se crea una consulta en un modelo de minería de datos, puede tratarse de una consulta de contenido, que proporciona detalles sobre la información almacenada en el modelo, o se puede crear una consulta de predicción, que utiliza los patrones del modelo para realizar predicciones según los datos nuevos que se proporcionen. En un modelo de agrupación en clústeres de secuencia, las consultas de contenido normalmente proporcionan detalles adicionales sobre los clústeres que se encontraron o las transiciones dentro de esos clústeres. También se pueden recuperar metadatos sobre el modelo mediante una consulta.  
   
  Las consultas de predicción en un modelo de agrupación en clústeres de secuencia suelen realizar recomendaciones basadas en las secuencias y transiciones, en los atributos sin secuencia que se incluían en el modelo o en una combinación de atributos de secuencia y sin secuencia.  
   
@@ -265,16 +264,16 @@ AS t
 |[ClusterDistance &#40;DMX&#41;](../../dmx/clusterdistance-dmx.md)|Devuelve la distancia del caso de entrada con relación al clúster especificado o, si no se ha especificado ninguno, la distancia del caso de entrada del clúster más probable.<br /><br /> Esta función se puede usar con cualquier tipo de modelo de agrupación en clústeres (EM, mediana-K, etc.), pero los resultados difieren según el algoritmo.|  
 |[ClusterProbability &#40;DMX&#41;](../../dmx/clusterprobability-dmx.md)|Devuelve la probabilidad de que el caso de entrada pertenezca al clúster especificado.|  
 |[IsInNode &#40;DMX&#41;](../../dmx/isinnode-dmx.md)|Indica si el nodo especificado contiene el caso actual.|  
-|[PredictAdjustedProbability &#40; DMX &#41;](../../dmx/predictadjustedprobability-dmx.md)|Devuelve la probabilidad ajustada de un estado especificado.|  
+|[PredictAdjustedProbability & #40; DMX & #41;](../../dmx/predictadjustedprobability-dmx.md)|Devuelve la probabilidad ajustada de un estado especificado.|  
 |[PredictAssociation &#40;DMX&#41;](../../dmx/predictassociation-dmx.md)|Predice los miembros de asociaciones.|  
 |[PredictCaseLikelihood &#40;DMX&#41;](../../dmx/predictcaselikelihood-dmx.md)|Devuelve la probabilidad de que un caso de entrada se ajuste al modelo existente.|  
-|[PredictHistogram &#40; DMX &#41;](../../dmx/predicthistogram-dmx.md)|Devuelve una tabla que representa un histograma para la predicción de una columna determinada.|  
-|[PredictNodeId &#40; DMX &#41;](../../dmx/predictnodeid-dmx.md)|Devuelve el Node_ID del nodo en que está clasificado el caso.|  
-|[PredictProbability &#40; DMX &#41;](../../dmx/predictprobability-dmx.md)|Devuelve la probabilidad de un estado especificado.|  
+|[PredictHistogram & #40; DMX & #41;](../../dmx/predicthistogram-dmx.md)|Devuelve una tabla que representa un histograma para la predicción de una columna determinada.|  
+|[PredictNodeId & #40; DMX & #41;](../../dmx/predictnodeid-dmx.md)|Devuelve el Node_ID del nodo en que está clasificado el caso.|  
+|[PredictProbability & #40; DMX & #41;](../../dmx/predictprobability-dmx.md)|Devuelve la probabilidad de un estado especificado.|  
 |[PredictSequence &#40;DMX&#41;](../../dmx/predictsequence-dmx.md)|Predice valores de secuencia futuros para un conjunto de datos de secuencia especificado.|  
 |[PredictStdev &#40;DMX&#41;](../../dmx/predictstdev-dmx.md)|Devuelve la desviación estándar predicha para la columna especificada.|  
-|[PredictSupport &#40; DMX &#41;](../../dmx/predictsupport-dmx.md)|Devuelve el valor de soporte de un estado especificado.|  
-|[PredictVariance &#40; DMX &#41;](../../dmx/predictvariance-dmx.md)|Devuelve la varianza de una columna especificada.|  
+|[PredictSupport & #40; DMX & #41;](../../dmx/predictsupport-dmx.md)|Devuelve el valor de soporte de un estado especificado.|  
+|[PredictVariance & #40; DMX & #41;](../../dmx/predictvariance-dmx.md)|Devuelve la varianza de una columna especificada.|  
   
  Para consultar una lista de las funciones comunes a todos los algoritmos de [!INCLUDE[msCoName](../../includes/msconame-md.md)], vea [Funciones de predicción generales &#40;DMX&#41;](../../dmx/general-prediction-functions-dmx.md). Para más información sobre la sintaxis de funciones específicas, vea [Referencia de funciones de Extensiones de minería de datos &#40;DMX&#41;](../../dmx/data-mining-extensions-dmx-function-reference.md).  
   
@@ -282,6 +281,6 @@ AS t
  [Consultas de minería de datos](../../analysis-services/data-mining/data-mining-queries.md)   
  [Referencia técnica del algoritmo de agrupación en clústeres de secuencia de Microsoft](../../analysis-services/data-mining/microsoft-sequence-clustering-algorithm-technical-reference.md)   
  [Algoritmo de clústeres de secuencia de Microsoft](../../analysis-services/data-mining/microsoft-sequence-clustering-algorithm.md)   
- [Contenido del modelo de minería de datos para modelos de agrupación en clústeres de secuencia &#40; Analysis Services: minería de datos &#41;](../../analysis-services/data-mining/mining-model-content-for-sequence-clustering-models.md)  
+ [Contenido del modelo de minería de datos para modelos de agrupación en clústeres de secuencia & #40; Analysis Services: minería de datos & #41;](../../analysis-services/data-mining/mining-model-content-for-sequence-clustering-models.md)  
   
   

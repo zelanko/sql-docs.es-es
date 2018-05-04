@@ -22,12 +22,11 @@ caps.latest.revision: 12
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: 97bf0ae26c06ee25b5a41e43fb2fa0c026ae6540
-ms.sourcegitcommit: bb044a48a6af9b9d8edb178dc8c8bd5658b9ff68
-ms.translationtype: MT
+ms.openlocfilehash: 4bf6ae9d0ca300aa6db2665a52a27aace52b6bcc
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/18/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="bookmark-property-ado"></a>Bookmark (propiedad) (ADO)
 Indica un marcador que identifica de forma única el registro actual en un [Recordset](../../../ado/reference/ado-api/recordset-object-ado.md) de un objeto o establece el registro actual un **Recordset** objeto en el registro identificado por un marcador válido.  

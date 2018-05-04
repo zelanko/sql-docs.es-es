@@ -27,12 +27,11 @@ caps.latest.revision: 34
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: d413a9a07af247a62611946bf687c53e6f42d878
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
-ms.translationtype: MT
+ms.openlocfilehash: 74f62d7f55ac1ad62d7b5fdd1a04f3fb574a3532
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="syssysoledbusers-transact-sql"></a>sys.sysoledbusers (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -46,9 +45,9 @@ ms.lasthandoff: 04/16/2018
 |Nombre de columna|Tipo de datos|Description|  
 |-----------------|---------------|-----------------|  
 |**rmtsrvid**|**smallint**|SID (número de identificación de seguridad) del servidor.|  
-|**rmtloginame**|**nvarchar (**128**)**|Nombre del inicio de sesión remoto que **loginsid** para vinculado se asigna a **rmtservid**.|  
-|**rmtpassword**|**nvarchar (**128**)**|Devuelve NULL.|  
-|**loginsid**|**varbinary (**85**)**|SID del inicio de sesión local que se va a asignar.|  
+|**rmtloginame**|**nvarchar (** 128 **)**|Nombre del inicio de sesión remoto que **loginsid** para vinculado se asigna a **rmtservid**.|  
+|**rmtpassword**|**nvarchar (** 128 **)**|Devuelve NULL.|  
+|**loginsid**|**varbinary (** 85 **)**|SID del inicio de sesión local que se va a asignar.|  
 |**status**|**smallint**|Si este valor es 1, la asignación debe utilizar las credenciales del usuario.|  
 |**ChangeDate**|**datetime**|Fecha en que cambió por última vez la información de asignación.|  
   

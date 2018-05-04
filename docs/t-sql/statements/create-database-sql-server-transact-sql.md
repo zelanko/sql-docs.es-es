@@ -1,16 +1,16 @@
 ---
 title: CREATE DATABASE (SQL Server Transact-SQL) | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 08/10/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: sql-database
-ms.service: 
+ms.service: ''
 ms.component: t-sql|statements
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - DATABASE_TSQL
@@ -38,16 +38,16 @@ helpviewer_keywords:
 - moving databases
 - attaching databases [SQL Server], CREATE DATABASE...FOR ATTACH
 ms.assetid: 29ddac46-7a0f-4151-bd94-75c1908c89f8
-caps.latest.revision: 
+caps.latest.revision: 212
 author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: Active
-ms.openlocfilehash: 7c6e52f8e36ed40e18c2aeab162a75c39f186c97
-ms.sourcegitcommit: 82c9868b5bf95e5b0c68137ba434ddd37fc61072
+ms.openlocfilehash: 0f3542d669db53ab247af1ebdef60c692e12b965
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/22/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="create-database-sql-server-transact-sql"></a>CREATE DATABASE (Transact-SQL de SQL Server)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -156,7 +156,7 @@ CREATE DATABASE database_snapshot_name
   
  CONTAINMENT = { NONE | PARTIAL }  
 
-**Se aplica a**: desde [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] hasta [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].
+**Se aplica a**: de [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] a [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]
   
  Especifica el estado de contención de la base de datos. NONE = base de datos dependiente. PARTIAL = base de datos parcialmente independiente.  
   
@@ -178,7 +178,7 @@ CREATE DATABASE database_snapshot_name
   
  No se puede especificar un nombre de intercalación con las cláusulas FOR ATTACH o FOR ATTACH_REBUILD_LOG. Para obtener información acerca de cómo cambiar la intercalación de una base de datos adjuntada, visite este [sitio web de Microsoft](http://go.microsoft.com/fwlink/?linkid=16419&kbid=325335).  
   
- Para obtener más información sobre los nombres de intercalación de Windows y SQL, consulte [COLLATE &#40;Transact-SQL&#41;](~/t-sql/statements/collations.md).  
+ Para obtener más información sobre los nombres de intercalación de Windows y SQL, vea [COLLATE &#40;Transact-SQL&#41;](~/t-sql/statements/collations.md).  
   
 > [!NOTE]  
 >  Las bases de datos independientes se intercalan de modo diferente al de las bases de datos dependientes. Para obtener más información, consulte [Intercalaciones de bases de datos independientes](../../relational-databases/databases/contained-database-collations.md).  
@@ -412,7 +412,7 @@ CREATE DATABASE database_snapshot_name
   
  CONTAINS MEMORY_OPTIMIZED_DATA  
 
-**Se aplica a**: desde [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] hasta [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].
+**Se aplica a**: de [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] a [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]
   
  Especifica que el grupo de archivos almacena los datos memory_optimized en el sistema de archivos. Para obtener más información, vea [OLTP en memoria &#40;optimización en memoria&#41;](../../relational-databases/in-memory-oltp/in-memory-oltp-in-memory-optimization.md). Solo se admite un grupo de archivos MEMORY_OPTIMIZED_DATA por cada base de datos. Para que los ejemplos de código que crean un grupo de archivos almacenen datos optimizados para memoria, consulte [Crear una tabla con optimización para memoria y un procedimiento almacenado compilado de forma nativa](../../relational-databases/in-memory-oltp/creating-a-memory-optimized-table-and-a-natively-compiled-stored-procedure.md).  
   

@@ -1,30 +1,31 @@
 ---
 title: CREATE TABLE (Azure SQL Data Warehouse) | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 07/14/2017
-ms.prod: 
+ms.prod: ''
 ms.prod_service: sql-data-warehouse, pdw
-ms.reviewer: 
+ms.reviewer: ''
 ms.service: sql-data-warehouse
 ms.component: t-sql|statements
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 dev_langs:
 - TSQL
 ms.assetid: ea21c73c-40e8-4c54-83d4-46ca36b2cf73
-caps.latest.revision: 
+caps.latest.revision: 59
 author: barbkess
 ms.author: barbkess
 manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: f6e639bf97ed132b6ace7128b4cbe9b6f3ce474e
-ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
+monikerRange: '>= aps-pdw-2016 || = azure-sqldw-latest || = sqlallproducts-allversions'
+ms.openlocfilehash: 8ec342637bfea8b611fb79800da9f04f58a621bc
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/25/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="create-table-azure-sql-data-warehouse"></a>CREATE TABLE (Azure SQL Data Warehouse)
 [!INCLUDE[tsql-appliesto-xxxxxx-xxxx-asdw-pdw-md](../../includes/tsql-appliesto-xxxxxx-xxxx-asdw-pdw-md.md)]
@@ -164,7 +165,7 @@ Crea una o varias particiones de tabla. Se trata de segmentos de tabla horizonta
 |*partition_column_name*| Especifica la columna que va a usar [!INCLUDE[ssSDW](../../includes/sssdw-md.md)] para crear particiones de las filas. Esta columna puede ser de cualquier tipo de datos. [!INCLUDE[ssSDW](../../includes/sssdw-md.md)] ordena los valores de columna de partición en orden ascendente. El orden de bajo a alto va de `LEFT` a `RIGHT` de acuerdo a la especificación de `RANGE`. |  
 | `RANGE LEFT` | Especifica que el valor de límite pertenece a la partición de la izquierda (los valores más bajos). El valor predeterminado es LEFT. |
 | `RANGE RIGHT` | Especifica que el valor de límite pertenece a la partición de la derecha (los valores más altos). | 
-| `FOR VALUES` ( *valor_de_límite* [,...*n*] ) | Especifica los valores de límite para la partición. *valor_de_límite* es una expresión constante. No puede ser NULL. Debe coincidir o ser implícitamente convertible al tipo de datos de *partition_column_name*. No se puede truncar durante la conversión implícita para que el tamaño y la escala del valor no coincidan con el tipo de datos de *partition_column_name*<br></br><br></br>Si se especifica la cláusula `PARTITION`, pero no se especifica un valor de límite, [!INCLUDE[ssSDW](../../includes/sssdw-md.md)] creará una tabla con particiones con una partición. Si procede, más adelante se puede dividir la tabla en dos particiones.<br></br><br></br>Si se especifica un valor de límite, la tabla resultante tendrá dos particiones; una para los valores inferiores al valor de límite y otra para los valores superiores al valor de límite. Tenga en cuenta que si se mueve una partición a una tabla sin particiones, la tabla sin particiones recibirá los datos, pero no tendrá los límites de partición en sus metadatos.| 
+| `FOR VALUES` ( *boundary_value* [,...*n*] ) | Especifica los valores de límite para la partición. *valor_de_límite* es una expresión constante. No puede ser NULL. Debe coincidir o ser implícitamente convertible al tipo de datos de *partition_column_name*. No se puede truncar durante la conversión implícita para que el tamaño y la escala del valor no coincidan con el tipo de datos de *partition_column_name*<br></br><br></br>Si se especifica la cláusula `PARTITION`, pero no se especifica un valor de límite, [!INCLUDE[ssSDW](../../includes/sssdw-md.md)] creará una tabla con particiones con una partición. Si procede, más adelante se puede dividir la tabla en dos particiones.<br></br><br></br>Si se especifica un valor de límite, la tabla resultante tendrá dos particiones; una para los valores inferiores al valor de límite y otra para los valores superiores al valor de límite. Tenga en cuenta que si se mueve una partición a una tabla sin particiones, la tabla sin particiones recibirá los datos, pero no tendrá los límites de partición en sus metadatos.| 
  
  Vea [Crear una tabla con particiones](#PartitionedTable) en la sección Ejemplos.
 
@@ -174,10 +175,10 @@ Crea una o varias particiones de tabla. Se trata de segmentos de tabla horizonta
 Para obtener una tabla de conversiones de tipos de datos, vea la sección Conversiones implícitas de [CAST y CONVERT (Transact-SQL)](http://msdn.microsoft.com/library/ms187928/).
 
 `datetimeoffset` [ ( *n* ) ]  
- El valor predeterminado para *n* es 7.  
+ El valor predeterminado de *n* es 7.  
   
  `datetime2` [ ( *n* ) ]  
-Igual que `datetime`, salvo que puede se especificar el número de fracciones de segundo. El valor predeterminado para *n* es `7`.  
+Igual que `datetime`, salvo que puede se especificar el número de fracciones de segundo. El valor predeterminado de *n* es `7`.  
   
 |Valor *n*|Precisión|Escala|  
 |--:|--:|-:|  
@@ -200,7 +201,7 @@ Igual que `datetime`, salvo que puede se especificar el número de fracciones de
  Almacena una fecha con un máximo de 10 caracteres para el año, el mes y el día según el calendario gregoriano. El tamaño de almacenamiento es de 3 bytes. La fecha se almacena como un entero.  
   
  `time` [ ( *n* ) ]  
- El valor predeterminado para *n* es `7`.  
+ El valor predeterminado de *n* es `7`.  
   
  `float` [ ( *n* ) ]  
  Tipo de datos numérico aproximado que se usa con datos numéricos de punto flotante. Los datos de punto flotante son aproximados, lo que significa que no todos los valores del rango del tipo de datos se pueden representar con exactitud. *n* especifica el número de bits que se usa para almacenar la mantisa del `float` en notación científica. Por tanto, *n* determina el tamaño de almacenamiento y la precisión. Si se especifica *n*, debe ser un valor entre `1` y `53`. El valor predeterminado de *n* es `53`.  
@@ -264,13 +265,13 @@ Igual que `datetime`, salvo que puede se especificar el número de fracciones de
  Datos de caracteres no Unicode de longitud variable, con una longitud de *n* bytes. *n* debe ser un valor entre `1` y `8000`. `max` indica que el tamaño máximo de almacenamiento es 2^31-1 bytes (2 GB). El tamaño de almacenamiento es la longitud real de los datos especificados + 2 bytes.  
   
  `char` [ ( *n* ) ]  
- Datos de caracteres no Unicode de longitud fija, con una longitud de *n* bytes. *n* debe ser un valor entre `1` y `8000`. El tamaño de almacenamiento es de *n* bytes. El valor predeterminado para *n* es `1`.  
+ Datos de caracteres no Unicode de longitud fija, con una longitud de *n* bytes. *n* debe ser un valor entre `1` y `8000`. El tamaño de almacenamiento es de *n* bytes. El valor predeterminado de *n* es `1`.  
   
  `varbinary` [ ( *n*  | `max` ) ]  -- `max` solo se aplica a [!INCLUDE[ssSDW](../../includes/sssdw-md.md)].  
- Datos binarios de longitud variable. *n* puede ser un valor entre `1` y `8000`. `max` indica que el tamaño máximo de almacenamiento es de 2^31-1 bytes (2 GB). El tamaño de almacenamiento es la longitud real de los datos especificados + 2 bytes. El valor predeterminado para *n* es 7.  
+ Datos binarios de longitud variable. *n* puede ser un valor entre `1` y `8000`. `max` indica que el tamaño máximo de almacenamiento es de 2^31-1 bytes (2 GB). El tamaño de almacenamiento es la longitud real de los datos especificados + 2 bytes. El valor predeterminado de *n* es 7.  
   
  `binary` [ ( *n* ) ]  
- Datos binarios de longitud fija con una longitud de *n* bytes. *n* puede ser un valor entre `1` y `8000`. El tamaño de almacenamiento es de *n* bytes. El valor predeterminado para *n* es `7`.  
+ Datos binarios de longitud fija con una longitud de *n* bytes. *n* puede ser un valor entre `1` y `8000`. El tamaño de almacenamiento es de *n* bytes. El valor predeterminado de *n* es `7`.  
   
  `uniqueidentifier`  
  Es un GUID de 16 bytes.  

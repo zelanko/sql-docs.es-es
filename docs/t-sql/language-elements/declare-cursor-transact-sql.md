@@ -1,16 +1,16 @@
 ---
 title: DECLARE CURSOR (Transact-SQL) | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine, sql-database
-ms.service: 
+ms.service: ''
 ms.component: t-sql|language-elements
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - DECLARE_CURSOR_TSQL
@@ -27,16 +27,16 @@ helpviewer_keywords:
 - Transact-SQL cursors, attributes
 - global cursors [SQL Server]
 ms.assetid: 5a3a27aa-03e8-4c98-a27e-809282379b21
-caps.latest.revision: 
+caps.latest.revision: 51
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ms.workload: Active
-ms.openlocfilehash: 79bf3115ef4e1d929e3e4a1b3ff731a1977ba28e
-ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
+ms.openlocfilehash: 06c6a0f6915c3120d3aca4d1d1bcfff9995e8c08
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/25/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="declare-cursor-transact-sql"></a>DECLARE CURSOR (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -142,7 +142,7 @@ DECLARE cursor_name CURSOR [ LOCAL | GLOBAL ]
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] convierte implícitamente el cursor a otro tipo si las cláusulas de la instrucción *select_statement* entran en conflicto con la funcionalidad del tipo de cursor solicitado. Para obtener más información, vea el tema relativo a las conversiones de cursor implícitas.  
   
  FOR UPDATE [OF *column_name* [**,**...*n*]]  
- Define las columnas actualizables en el cursor. Si se especifica OF *column_name* [**,**...*n*], solo las columnas enumeradas admiten modificaciones. Si se especifica UPDATE sin una lista de columnas, se pueden actualizar todas las columnas, a menos que se haya especificado la opción de simultaneidad READ_ONLY.  
+ Define las columnas actualizables en el cursor. Si se especifica OF*column_name* [**,**...*n*], solo las columnas enumeradas admiten modificaciones. Si se especifica UPDATE sin una lista de columnas, se pueden actualizar todas las columnas, a menos que se haya especificado la opción de simultaneidad READ_ONLY.  
   
 ## <a name="remarks"></a>Notas  
  DECLARE CURSOR define los atributos de un cursor de servidor de [!INCLUDE[tsql](../../includes/tsql-md.md)], como su comportamiento de desplazamiento y la consulta utilizada para generar el conjunto de resultados sobre el que opera el cursor. La instrucción OPEN llena el conjunto de resultados y la instrucción FETCH devuelve una fila del conjunto de resultados. La instrucción CLOSE libera el conjunto de resultados actual asociado al cursor. La instrucción DEALLOCATE libera los recursos que utiliza el cursor.  

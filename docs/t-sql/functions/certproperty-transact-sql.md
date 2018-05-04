@@ -1,16 +1,16 @@
 ---
 title: CERTPROPERTY (Transact-SQL) | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 07/24/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine, sql-database
-ms.service: 
+ms.service: ''
 ms.component: t-sql|functions
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - CERTPROPERTY
@@ -22,16 +22,16 @@ helpviewer_keywords:
 - schemas [SQL Server], names
 - CERTPROPERTY function
 ms.assetid: 966c09aa-bc4e-45b0-ba53-c8381871f638
-caps.latest.revision: 
+caps.latest.revision: 22
 author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: d63968d8b07a37ea49662bd0727632a1675b3913
-ms.sourcegitcommit: 45e4efb7aa828578fe9eb7743a1a3526da719555
+ms.openlocfilehash: c393479727eae943a512b0e2953028a90a3dd123
+ms.sourcegitcommit: bb044a48a6af9b9d8edb178dc8c8bd5658b9ff68
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 04/18/2018
 ---
 # <a name="certproperty-transact-sql"></a>CERTPROPERTY (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -52,42 +52,42 @@ CertProperty ( Cert_ID , '<PropertyName>' )
   
 ## <a name="arguments"></a>Argumentos  
 *Cert_ID*  
-Es el id. del certificado. *Cert_ID* es de tipo int.
+El valor del identificador de certificado, con el tipo de datos int.
   
 *Expiry_Date*  
-Es la fecha de expiración del certificado.
+La fecha de expiración del certificado.
   
 *Start_Date*  
-Es la fecha en que el certificado pasa a ser válido.
+La fecha en la que el certificado pasa a ser válido.
   
 *Issuer_Name*  
-Es el nombre del emisor del certificado.
+El nombre del emisor de certificado.
   
 *Cert_Serial_Number*  
-Es el número de serie del certificado.
+El número de serie del certificado.
   
 *Asunto*  
-Es el asunto del certificado.
+El asunto del certificado.
   
  *SID*  
-Es el SID del certificado. También es el SID de cualquier inicio de sesión o usuario asignado a este certificado.
+El SID del certificado. También es el SID de cualquier inicio de sesión o usuario asignado a este certificado.
   
 *String_SID*  
-Es el SID del certificado como una cadena de caracteres. También es el SID de cualquier inicio de sesión o usuario asignado al certificado.
+El SID del certificado como una cadena de caracteres. También es el SID de cualquier inicio de sesión o usuario asignado al certificado.
   
 ## <a name="return-types"></a>Tipos de valores devueltos
 La especificación de propiedad debe estar entre comillas simples.
   
-El tipo devuelto depende de la propiedad especificada en la llamada de función. Todos los valores devueltos se agrupan en el tipo devuelto de **sql_variant**.
+El tipo de valor devuelto depende de la propiedad especificada en la llamada de función. El tipo de valor devuelto **sql_variant** encapsula todos los valores devueltos.
 -   *Expiry_Date* y *Start_Date* devuelven **datetime**.  
--   *Cert_Serial_Number*, *Issuer_Name*, *Subject* y *String_SID* devuelven **nvarchar**.  
+-   *Cert_Serial_Number*, *Issuer_Name*, *String_SID* y *Subject* devuelven **nvarchar**.  
 -   *SID* devuelve **varbinary**.  
   
 ## <a name="remarks"></a>Notas  
-Encontrará información sobre los certificados en la vista de catálogo [sys.certificates](../../relational-databases/system-catalog-views/sys-certificates-transact-sql.md).
+Consulte la información de los certificados en la vista de catálogo [sys.certificates](../../relational-databases/system-catalog-views/sys-certificates-transact-sql.md).
   
 ## <a name="permissions"></a>Permisos  
-Requiere algunos permisos en el certificado y que el llamador no tenga denegado el permiso VIEW DEFINITION en el certificado.
+Es necesario tener los permisos apropiados en el certificado y que el autor de la llamada no tenga denegado el permiso VIEW en el certificado. Vea [CREATE CERTIFICATE &#40;Transact-SQL&#41;](../../t-sql/statements/create-certificate-transact-sql.md) y [GRANT CERTIFICATE PERMISSIONS &#40;Transact-SQL&#41;](../../t-sql/statements/grant-certificate-permissions-transact-sql.md) para obtener más información sobre los permisos de certificado.
   
 ## <a name="examples"></a>Ejemplos  
 En el siguiente ejemplo se devuelve el asunto del certificado.
@@ -96,7 +96,7 @@ En el siguiente ejemplo se devuelve el asunto del certificado.
 -- First create a certificate.  
 CREATE CERTIFICATE Marketing19 WITH   
     START_DATE = '04/04/2004' ,  
-    EXPIRY_DATE = '07/07/2007' ,  
+    EXPIRY_DATE = '07/07/2040' ,  
     SUBJECT = 'Marketing Print Division';  
 GO  
   

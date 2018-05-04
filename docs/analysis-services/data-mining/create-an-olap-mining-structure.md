@@ -1,31 +1,23 @@
 ---
-title: "Crear una estructura de minería de datos OLAP | Documentos de Microsoft"
-ms.custom: 
-ms.date: 03/14/2017
-ms.prod: analysis-services
-ms.prod_service: analysis-services
-ms.service: 
+title: Crear una estructura de minería de datos OLAP | Documentos de Microsoft
+ms.date: 05/01/2018
+ms.prod: sql
+ms.technology: analysis-services
 ms.component: data-mining
-ms.reviewer: 
-ms.suite: pro-bi
-ms.technology: 
-ms.tgt_pltfrm: 
 ms.topic: article
-ms.assetid: 21cbdc9d-d33c-4026-b9ef-1be2bd92b3b1
-caps.latest.revision: 
-author: Minewiskan
 ms.author: owend
+ms.reviewer: owend
+author: minewiskan
 manager: kfile
-ms.workload: Inactive
-ms.openlocfilehash: d321050e1568a505e6b3550d3af07fc176ddb566
-ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
+ms.openlocfilehash: 9b5ad8add984db3c83cfc6b3af99f430035f56d8
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/15/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="create-an-olap-mining-structure"></a>Crear una estructura de minería de datos OLAP
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
-La creación de un modelo de minería de datos basado en un cubo OLAP o en otro almacén de datos multidimensionales presenta numerosas ventajas. Una solución OLAP ya contiene enormes cantidades de datos que han sido bien organizados, limpiados y con un formato correcto; sin embargo, su complejidad es tal que es poco probable que los usuarios encuentren patrones significativos para la exploración ad hoc. La minería de datos permite detectar nuevas correlaciones y proporcionar una visión general práctica.  
+  La creación de un modelo de minería de datos basado en un cubo OLAP o en otro almacén de datos multidimensionales presenta numerosas ventajas. Una solución OLAP ya contiene enormes cantidades de datos que han sido bien organizados, limpiados y con un formato correcto; sin embargo, su complejidad es tal que es poco probable que los usuarios encuentren patrones significativos para la exploración ad hoc. La minería de datos permite detectar nuevas correlaciones y proporcionar una visión general práctica.  
   
  En este tema se describe cómo crear una estructura de minería de datos OLAP, en función de una dimensión y de las medidas relacionadas en una solución MDX existente.  
   
@@ -44,7 +36,7 @@ La creación de un modelo de minería de datos basado en un cubo OLAP o en otro 
 ##  <a name="bkmk_Reqs"></a> Requisitos para los modelos y la estructura de minería de datos OLAP  
  Si va a diseñar un modelo de minería de datos OLAP, el origen de datos ya existe en la base de datos que se usó para generar el cubo. No puede conectarse a un cubo remoto y generar objetos de minería de datos; los objetos del cubo deben estar disponibles dentro de la misma solución que la base de datos con la estructura de minería de datos que se creará.  
   
- Si no tiene los archivos de proyecto originales o no quiere modificarlos, puede usar la opción de Visual Studio **Importar del servidor (multidimensional y minería de datos)**para obtener una copia de los metadatos y los objetos de la solución. Puede modificar el destino de la implementación, modificar los orígenes de datos y trabajar con los objetos de cubo sin afectar a los objetos existentes.  
+ Si no tiene los archivos de proyecto originales o no quiere modificarlos, puede usar la opción de Visual Studio **Importar del servidor (multidimensional y minería de datos)** para obtener una copia de los metadatos y los objetos de la solución. Puede modificar el destino de la implementación, modificar los orígenes de datos y trabajar con los objetos de cubo sin afectar a los objetos existentes.  
   
  Para obtener más información, vea [Importar un proyecto de minería de datos mediante el Asistente para la importación de Analysis Services](../../analysis-services/data-mining/import-a-data-mining-project-using-the-analysis-services-import-wizard.md).  
   
@@ -115,10 +107,10 @@ La creación de un modelo de minería de datos basado en un cubo OLAP o en otro 
   
 |Tarea|Caso de ejemplo|Algoritmo|  
 |----------|---------------------|---------------|  
-|Agrupar miembros en clústeres|Segmentar una dimensión de cliente en función de las propiedades de miembro del cliente, los productos que éste adquiere cliente y la cantidad de dinero que gastan los clientes.|[!INCLUDE[msCoName](../../includes/msconame-md.md)] Algoritmo de clústeres|  
-|Buscar miembros interesantes o anómalos|Identificar tiendas interesantes o anómalas en una dimensión de tiendas basada en ventas, beneficios, ubicación de la tiendas y tamaño.|[!INCLUDE[msCoName](../../includes/msconame-md.md)] Algoritmo de árboles de decisión|  
-|Buscar celdas interesantes o anómalas|Identificar ventas en tiendas que no siguen las tendencias habituales en un período de tiempo.|[!INCLUDE[msCoName](../../includes/msconame-md.md)] Algoritmo de serie temporal|  
-|Buscar correlaciones|Identifique los factores que están relacionados con el tiempo de inactividad del servidor, como la región, el tipo de equipo, el sistema operativo o la fecha de compra.|[!INCLUDE[msCoName](../../includes/msconame-md.md)] Algoritmo Bayes Naïve|  
+|Agrupar miembros en clústeres|Segmentar una dimensión de cliente en función de las propiedades de miembro del cliente, los productos que éste adquiere cliente y la cantidad de dinero que gastan los clientes.|Algoritmo de clústeres de [!INCLUDE[msCoName](../../includes/msconame-md.md)]|  
+|Buscar miembros interesantes o anómalos|Identificar tiendas interesantes o anómalas en una dimensión de tiendas basada en ventas, beneficios, ubicación de la tiendas y tamaño.|Algoritmo de árboles de decisión de [!INCLUDE[msCoName](../../includes/msconame-md.md)]|  
+|Buscar celdas interesantes o anómalas|Identificar ventas en tiendas que no siguen las tendencias habituales en un período de tiempo.|[!INCLUDE[msCoName](../../includes/msconame-md.md)]Algoritmo de serie temporal|  
+|Buscar correlaciones|Identifique los factores que están relacionados con el tiempo de inactividad del servidor, como la región, el tipo de equipo, el sistema operativo o la fecha de compra.|[!INCLUDE[msCoName](../../includes/msconame-md.md)]Algoritmo Naïve Bayes|  
   
 ##  <a name="bkmk_Filters"></a>Segmentar un cubo frente a. Modelos de filtrado  
  Segmentar el cubo mientras crea un modelo es igual que crear un filtro en un modelo de minería de datos relacional. En un modelo relacional, el filtro en el origen de datos se define como una cláusula WHERE en una instrucción SQL; en un cubo, se usa el editor para crear instrucciones de filtro mediante MDX.  
@@ -166,7 +158,7 @@ La creación de un modelo de minería de datos basado en un cubo OLAP o en otro 
 >  Solo estos tipos de modelo admiten la creación de dimensiones de minería de datos: los modelos basados en el algoritmo de clústeres de Microsoft, el algoritmo de árboles de decisión de Microsoft o el algoritmo de asociación de Microsoft.  
   
 ## <a name="see-also"></a>Vea también  
- [Algoritmos de minería de datos &#40; Analysis Services: minería de datos &#41;](../../analysis-services/data-mining/data-mining-algorithms-analysis-services-data-mining.md)   
+ [Algoritmos de minería de datos & #40; Analysis Services: minería de datos & #41;](../../analysis-services/data-mining/data-mining-algorithms-analysis-services-data-mining.md)   
  [Columnas de estructura de minería de datos](../../analysis-services/data-mining/mining-structure-columns.md)   
  [Columnas del modelo de minería de datos](../../analysis-services/data-mining/mining-model-columns.md)   
  [Propiedades del modelo de minería de datos](../../analysis-services/data-mining/mining-model-properties.md)   

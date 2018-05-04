@@ -26,13 +26,12 @@ caps.latest.revision: 45
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.workload: On Demand
 monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
-ms.openlocfilehash: aeab15ee29bcc56e0814d4976bcb2e5239f818ff
-ms.sourcegitcommit: a85a46312acf8b5a59a8a900310cf088369c4150
-ms.translationtype: MT
+ms.openlocfilehash: feee77f5f8abf73fe364f13c18df63d5e8c35f36
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/26/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="sysdmdbfilespaceusage-transact-sql"></a>sys.dm_db_file_space_usage (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -54,7 +53,7 @@ ms.lasthandoff: 04/26/2018
 |user_object_reserved_page_count|**bigint**|Número total de páginas asignadas desde extensiones uniformes para objetos de usuario en la base de datos. En el recuento se incluyen las páginas no utilizadas de una extensión asignada.<br /><br /> No se incluyen las páginas IAM porque siempre se asignan desde extensiones mixtas. Se incluyen las páginas PFS si están asignadas desde una extensión uniforme.<br /><br /> Puede usar la columna total_pages de la [sys.allocation_units](../../relational-databases/system-catalog-views/sys-allocation-units-transact-sql.md) vista para devolver el recuento de páginas reservadas de cada unidad de asignación en el objeto de usuario de catálogo. No obstante, tenga en cuenta que la columna total_pages incluye las páginas IAM.|  
 |internal_object_reserved_page_count|**bigint**|Número total de páginas en extensiones uniformes asignadas para objetos internos en el archivo. En el recuento se incluyen las páginas no utilizadas de una extensión asignada.<br /><br /> No se incluyen las páginas IAM porque siempre se asignan desde extensiones mixtas. Se incluyen las páginas PFS si están asignadas desde una extensión uniforme.<br /><br /> No existe ninguna vista de catálogo ni objeto de administración dinámica que devuelva el recuento de páginas de cada objeto interno.|  
 |mixed_extent_page_count|**bigint**|Número total de páginas asignadas y no asignadas en extensiones mixtas asignadas en el archivo. Las extensiones mixtas contienen páginas asignadas a diferentes objetos. Este recuento no incluye todas las páginas IAM del archivo.|
-|modified_extent_page_count|**bigint**|**Se aplica a**: [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] SP2 a través de [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].<br /><br />Número total de páginas modificadas en asigna extensiones del archivo desde la última copia de seguridad de base de datos completa. El número de página modificada se puede usar para realizar el seguimiento de la cantidad de cambios diferenciales de la base de datos desde la última copia de seguridad completa, para decidir si se necesita la copia de seguridad diferencial.|
+|modified_extent_page_count|**bigint**|**Se aplica a**: de [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] SP2 a [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].<br /><br />Número total de páginas modificadas en asigna extensiones del archivo desde la última copia de seguridad de base de datos completa. El número de página modificada se puede usar para realizar el seguimiento de la cantidad de cambios diferenciales de la base de datos desde la última copia de seguridad completa, para decidir si se necesita la copia de seguridad diferencial.|
 |pdw_node_id|**int**|**Se aplica a**: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)], [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]<br /><br /> El identificador para el nodo que se encuentra en esta distribución.|  
 |distribution_id|**int**|**Se aplica a**: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)], [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]<br /><br /> El identificador numérico único asociado con la distribución.|  
   

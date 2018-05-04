@@ -11,7 +11,7 @@ ms.suite: sql
 ms.technology:
 - drivers
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - compatibility [ODBC], SQLGetInfo
 - backward compatibility [ODBC], SQLGetInfo
@@ -21,15 +21,14 @@ caps.latest.revision: 6
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: 91f38a5c5ad19d5df6e253ee2fdbf7bf44eec930
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
-ms.translationtype: MT
+ms.openlocfilehash: 8cee4d4e5e6b8874d1fe4abf305844e74ebc7cc5
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="sqlgetinfo-support"></a>Compatibilidad con SQLGetInfo
-Cuando un ODBC 2. *x* aplicación llama **SQLGetInfo** a una aplicación ODBC 3*.x* controlador, el *tipo de información* argumentos en la tabla siguiente deben ser compatibles.  
+Cuando un ODBC 2. *x* aplicación llama **SQLGetInfo** a una aplicación ODBC 3 *.x* controlador, el *tipo de información* argumentos en la tabla siguiente deben ser compatibles.  
   
 |*Tipo de información*|Devuelve|  
 |----------------|-------------|  
@@ -43,6 +42,6 @@ Cuando un ODBC 2. *x* aplicación llama **SQLGetInfo** a una aplicación ODBC 3*
 |SQL_SCROLL_CONCURRENCY (ODBC 1.0)|Una máscara de bits SQLINTEGER enumerar las opciones de control de simultaneidad admitidas para el cursor.<br /><br /> La máscara de bits siguiente se utiliza para determinar qué opciones son compatibles:<br /><br /> SQL_SCCO_READ_ONLY = Cursor es de solo lectura. No se permiten actualizaciones.<br /><br /> SQL_SCCO_LOCK = Cursor usará el nivel más bajo de bloqueo suficiente para asegurarse de que se puede actualizar la fila.<br /><br /> SQL_SCCO_OPT_ROWVER = Cursor utiliza control de simultaneidad optimista, comparar las versiones de fila, como SQLBase ROWID o Sybase TIMESTAMP.<br /><br /> SQL_SCCO_OPT_VALUES = Cursor utiliza control de simultaneidad optimista, comparar los valores.|  
 |SQL_STATIC_SENSITIVITY (ODBC 2.0)|Una máscara de bits SQLINTEGER enumerar si los cambios realizados por una aplicación a un cursor estático o controlado por conjunto de claves a través de **SQLSetPos** o actualización por posición o las instrucciones delete se pueden detectar mediante esa aplicación.<br /><br /> SQL_SS_ADDITIONS = Added filas son visibles para el cursor; se puede desplazar el cursor a estas filas. En estas filas se agregan al cursor depende del controlador.<br /><br /> SQL_SS_DELETIONS = Deleted filas ya no están disponibles para el cursor y no dejan a un "agujero" en el conjunto de resultados; Después de que el cursor se desplaza de una fila eliminada, éste no se puede volver a esa fila.<br /><br /> SQL_SS_UPDATES = las actualizaciones a las filas son visibles hasta el cursor; Si el cursor se desplaza desde y devuelve a la fila actualizada, los datos devueltos por el cursor están los datos actualizados, no los datos originales. Esta opción aplica a los cursores estáticos solo a o actualizaciones en los cursores dinámicos que no se actualizan la clave. Esta opción no se aplica para un cursor dinámico o en el caso en el que se cambia una clave en un cursor mixto.<br /><br /> Si una aplicación puede detectar los cambios realizados en el conjunto de resultados por otros usuarios, incluidos otros cursores en la misma aplicación, depende del tipo de cursor.|  
   
- Una aplicación ODBC 3*.x* aplicación trabajar con una aplicación ODBC 3*.x* controlador no debe llamar a **SQLGetInfo** con el *tipo de información* argumentos describen en anterior a la tabla sino que debe utilizar ODBC 3*.x* *tipo de información* los argumentos se muestran en el párrafo siguiente. No hay una correspondencia exacta entre *tipo de información* argumentos que se usan en ODBC 2. *x* y los que se usan en ODBC 3*.x*. Una aplicación ODBC 3*.x* aplicación trabajar con una API ODBC 2. *x* controlador, por otro lado, debe usar el *tipo de información* argumentos se ha descrito anteriormente.  
+ Una aplicación ODBC 3 *.x* aplicación trabajar con una aplicación ODBC 3 *.x* controlador no debe llamar a **SQLGetInfo** con el *tipo de información* argumentos describen en anterior a la tabla sino que debe utilizar ODBC 3 *.x* *tipo de información* los argumentos se muestran en el párrafo siguiente. No hay una correspondencia exacta entre *tipo de información* argumentos que se usan en ODBC 2. *x* y los que se usan en ODBC 3 *.x*. Una aplicación ODBC 3 *.x* aplicación trabajar con una API ODBC 2. *x* controlador, por otro lado, debe usar el *tipo de información* argumentos se ha descrito anteriormente.  
   
  Algunos de los tipos de información en la tabla anterior se ha sustituido por los tipos de información de atributos de cursor. Estos tipos son SQL_FETCH_DIRECTION, SQL_LOCK_TYPES, SQL_POS_OPERATIONS, SQL_POSITIONED_STATEMENTS, SQL_SCROLL_CONCURRENCY y SQL_STATIC_SENSITIVITY de información en desuso. Los nuevos tipos de atributos de cursor son SQL_XXX_CURSOR_ATTRIBUTES1and SQL_XXX_CURSOR_ATTRIBUTES2, donde XXX es igual a DYNAMIC, FORWARD_ONLY, KEYSET_DRIVEN o STATIC. Cada uno de los nuevos tipos de indica las capacidades de controlador para un tipo de cursor simple. Para obtener más información acerca de estas opciones, consulte la [SQLGetInfo](../../../odbc/reference/syntax/sqlgetinfo-function.md) descripción de la función.

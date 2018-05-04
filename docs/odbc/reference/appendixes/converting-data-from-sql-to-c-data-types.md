@@ -11,7 +11,7 @@ ms.suite: sql
 ms.technology:
 - drivers
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - data conversions from SQL to C types [ODBC]
 - data conversions from SQL to C types [ODBC], about converting
@@ -27,19 +27,18 @@ caps.latest.revision: 7
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: fe89608061d82cf54a16394e5ce1a8f901e23523
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
-ms.translationtype: MT
+ms.openlocfilehash: 72fa649a1c894109557c58f79b1590466020c156
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="converting-data-from-sql-to-c-data-types"></a>Convertir datos de SQL a tipos de datos C
 Cuando una aplicación llama **SQLFetch**, **SQLFetchScroll**, o **SQLGetData**, el controlador recupera los datos del origen de datos. Si es necesario, convierte los datos del tipo de datos en el que el controlador recuperado para el tipo de datos especificado por la *TargetType* argumento en **SQLBindCol** o **SQLGetData.** Por último, almacena los datos en la ubicación señalada por la *TargetValuePtr* argumento en **SQLBindCol** o **SQLGetData** (y el campo SQL_DESC_DATA_PTR de la descartar).  
   
  En la tabla siguiente muestra las conversiones no admitidas de SQL de ODBC tipos de datos a tipos de datos C de ODBC. Un círculo relleno indica la conversión de valor predeterminado para un tipo de datos SQL (el tipo de datos C a la que los datos se convertirá cuando el valor de *TargetType* es SQL_C_DEFAULT). Un círculo vacío indica una conversión compatible.  
   
- Para una aplicación ODBC 3*.x* aplicación trabajar con una API ODBC 2. *x* controlador, conversión de datos específico del controlador podrían no admitir tipos.  
+ Para una aplicación ODBC 3 *.x* aplicación trabajar con una API ODBC 2. *x* controlador, conversión de datos específico del controlador podrían no admitir tipos.  
   
  El formato de los datos convertidos no se ve afectado por el valor de país Windows®.  
   

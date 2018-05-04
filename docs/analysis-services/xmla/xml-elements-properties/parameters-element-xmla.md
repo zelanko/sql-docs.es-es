@@ -29,15 +29,15 @@ caps.latest.revision: 11
 author: Minewiskan
 ms.author: owend
 manager: kfile
-ms.workload: Inactive
-ms.openlocfilehash: 8756ded720e9884596a7a7aaab6fdd6e2271ef7a
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
-ms.translationtype: MT
+ms.openlocfilehash: c181399d5f512f4aa1f803c95f7cc5ff32e201b9
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="parameters-element-xmla"></a>Elemento Parameters (XMLA)
-[!INCLUDE[ssas-appliesto-sqlas-aas](../../../includes/ssas-appliesto-sqlas-aas.md)]Contiene una colección de [parámetro](../../../analysis-services/xmla/xml-elements-properties/parameter-element-xmla.md) elementos utilizados por la [Execute](../../../analysis-services/xmla/xml-elements-methods-execute.md) método.  
+[!INCLUDE[ssas-appliesto-sqlas-aas](../../../includes/ssas-appliesto-sqlas-aas.md)]
+  Contiene una colección de [parámetro](../../../analysis-services/xmla/xml-elements-properties/parameter-element-xmla.md) elementos utilizados por la [Execute](../../../analysis-services/xmla/xml-elements-methods-execute.md) método.  
   
  **Namespace:**`urn:schemas-microsoft-com:xml-analysis`  
   
@@ -54,19 +54,19 @@ ms.lasthandoff: 01/08/2018
 </Execute>  
 ```  
   
-## <a name="element-characteristics"></a>Características del elemento  
+## <a name="element-characteristics"></a>Características de los elementos  
   
-|Característica|Description|  
+|Característica|Descripción|  
 |--------------------|-----------------|  
-|Tipo y longitud de los datos|None|  
-|Valor predeterminado|None|  
-|Cardinalidad|0-1: Elemento opcional que puede aparecer una y solo una vez.|  
+|Tipo y longitud de los datos|Ninguno|  
+|Valor predeterminado|Ninguno|  
+|Cardinalidad|0-1: Elemento opcional que puede aparecer solo una vez.|  
   
 ## <a name="element-relationships"></a>Relaciones del elemento  
   
 |Relación|Elemento|  
 |------------------|-------------|  
-|Elementos primarios|[Ejecutar](../../../analysis-services/xmla/xml-elements-methods-execute.md)|  
+|Elementos primarios|[Execute](../../../analysis-services/xmla/xml-elements-methods-execute.md)|  
 |Elementos secundarios|[Parámetro](../../../analysis-services/xmla/xml-elements-properties/parameter-element-xmla.md)|  
   
 ## <a name="remarks"></a>Comentarios  
@@ -75,6 +75,6 @@ ms.lasthandoff: 01/08/2018
  Si el comando XMLA no utiliza la **parámetros** elemento, se puede omitir el elemento cuando se llama a la **Execute** método.  
   
 ## <a name="see-also"></a>Vea también  
- [Propiedades &#40; XMLA &#41;](../../../analysis-services/xmla/xml-elements-properties/xml-elements-properties.md)  
+ [Propiedades & #40; XMLA & #41;](../../../analysis-services/xmla/xml-elements-properties/xml-elements-properties.md)  
   
   

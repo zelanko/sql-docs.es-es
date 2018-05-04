@@ -11,7 +11,7 @@ ms.suite: sql
 ms.technology:
 - drivers
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - transaction isolation [ODBC]
 - transactions [ODBC], isolation
@@ -20,12 +20,11 @@ caps.latest.revision: 5
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: 4ce01239b29c22815bf17ca596d72731e451a9e1
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
-ms.translationtype: MT
+ms.openlocfilehash: 577ab7d59e2769a4960e6b76ec0258a30ea5f8a0
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="transaction-isolation"></a>Aislamiento de transacción
 *Aislamiento de transacción* hace referencia al grado de interacción entre varias transacciones simultáneas. Para ver por qué esto es importante, debe buscar primero en la idea de la posibilidad de serializar.  

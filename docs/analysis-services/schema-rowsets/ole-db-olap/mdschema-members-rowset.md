@@ -23,15 +23,15 @@ caps.latest.revision: 36
 author: Minewiskan
 ms.author: owend
 manager: kfile
-ms.workload: Inactive
-ms.openlocfilehash: 8ee6e7231d4a3a3696de68e3c22b8cad7eb05a92
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
-ms.translationtype: MT
+ms.openlocfilehash: a199a80277c56825dad9d5ac00909244b57844d4
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="mdschemamembers-rowset"></a>Conjunto de filas MDSCHEMA_MEMBERS
-[!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]Se describen a los miembros dentro de una base de datos.  
+[!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]
+  Describe los miembros incluidos en una base de datos.  
   
 ## <a name="rowset-columns"></a>Columnas del conjunto de filas  
  El **MDSCHEMA_MEMBERS** filas contiene las columnas siguientes.  
@@ -84,7 +84,7 @@ ms.lasthandoff: 01/08/2018
 |**TREE_OP**|**DBTYPE_I4**|(Opcional) Solo se aplica a un único miembro:<br /><br /> **MDTREEOP_ANCESTORS** (**0 x 20**) devuelve todos los antecesores.<br /><br /> **MDTREEOP_CHILDREN** (**0 x 01**) devuelve solo los elementos secundarios inmediatos.<br /><br /> **MDTREEOP_SIBLINGS** (**0 x 02**) devuelve los miembros del mismo nivel.<br /><br /> **MDTREEOP_PARENT** (**0 x 04**) devuelve solo el elemento primario inmediato.<br /><br /> **MDTREEOP_SELF** (**0 x 08**) devuelve a sí mismo en la lista de filas devueltas.<br /><br /> **MDTREEOP_DESCENDANTS** (**0 x 10**) devuelve todos los descendientes.|  
 |**CUBE_SOURCE**|**DBTYPE_UI2**|(Opcional) La restricción predeterminada es un valor de 1. Un mapa de bits con uno de los siguientes valores válidos:<br /><br /> 1 CUBO<br /><br /> 2 DIMENSIÓN|  
   
-## <a name="see-also"></a>Ver también  
- [OLE DB para los conjuntos de filas de esquema OLAP](../../../analysis-services/schema-rowsets/ole-db-olap/ole-db-for-olap-schema-rowsets.md)  
+## <a name="see-also"></a>Vea también  
+ [OLE DB para OLAP Schema Rowsets](../../../analysis-services/schema-rowsets/ole-db-olap/ole-db-for-olap-schema-rowsets.md)  
   
   

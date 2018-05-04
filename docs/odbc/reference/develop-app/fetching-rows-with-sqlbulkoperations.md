@@ -11,7 +11,7 @@ ms.suite: sql
 ms.technology:
 - drivers
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - data updates [ODBC], bookmarks
 - SQLBulkOperations function [ODBC], fetching rows
@@ -24,12 +24,11 @@ caps.latest.revision: 5
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: 764320d44ac0844b96f0c2873213909b1b1e4ddd
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
-ms.translationtype: MT
+ms.openlocfilehash: 4d3223ddb5c97fb35e57cb4e2344d6dae8b389d7
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="fetching-rows-with-sqlbulkoperations"></a>Capturar filas con SQLBulkOperations
 Datos pueden ser volver a capturar en un conjunto de filas mediante marcadores mediante una llamada a **SQLBulkOperations.** Las filas que se va a capturar se identifican mediante los marcadores en una columna de marcador enlazado. No se capturan las columnas con un valor de SQL_COLUMN_IGNORE.  

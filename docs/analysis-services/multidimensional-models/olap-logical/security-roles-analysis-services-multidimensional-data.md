@@ -1,43 +1,23 @@
 ---
 title: Roles de seguridad (Analysis Services - datos multidimensionales) | Documentos de Microsoft
-ms.custom: 
-ms.date: 03/14/2017
-ms.prod: analysis-services
-ms.prod_service: analysis-services
-ms.service: 
-ms.component: 
-ms.reviewer: 
-ms.suite: pro-bi
-ms.technology: 
-ms.tgt_pltfrm: 
-ms.topic: reference
-applies_to:
-- SQL Server 2016 Preview
-helpviewer_keywords:
-- storage [Analysis Services], roles
-- Analysis Services objects, roles
-- security [Analysis Services], roles
-- roles [Analysis Services], about roles
-- server roles [Analysis Services]
-- database roles [Analysis Services]
-- roles [Analysis Services]
-- storing data [Analysis Services], roles
-- access rights [Analysis Services], roles
-ms.assetid: 5b7e9cef-ff68-4d8e-99bc-e0094ced1baa
-caps.latest.revision: 
-author: Minewiskan
+ms.date: 05/02/2018
+ms.prod: sql
+ms.technology: analysis-services
+ms.component: olap
+ms.topic: article
 ms.author: owend
+ms.reviewer: owend
+author: minewiskan
 manager: kfile
-ms.workload: Inactive
-ms.openlocfilehash: 05863ae6e4ec85afecc3d19bf7ade4535ab54369
-ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
+ms.openlocfilehash: 9dfdaaf55bb4bf5eb71f15177985f0240ff95065
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/15/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="security-roles--analysis-services---multidimensional-data"></a>Roles de seguridad (Analysis Services - Datos multidimensionales)
 [!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]
-Las funciones se utilizan en [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] para administrar la seguridad para [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] objetos y datos. En términos simples, un rol asocia los identificadores de seguridad (SID) de usuarios de Microsoft Windows y grupos que tienen derechos de acceso específicos y los permisos definidos para los objetos administrados por una instancia de [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)]. Se proporcionan dos tipos de roles en [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)]:  
+  Las funciones se utilizan en [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] para administrar la seguridad para [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] objetos y datos. En términos simples, un rol asocia los identificadores de seguridad (SID) de usuarios de Microsoft Windows y grupos que tienen derechos de acceso específicos y los permisos definidos para los objetos administrados por una instancia de [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)]. Se proporcionan dos tipos de roles en [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)]:  
   
 -   El rol del servidor, que es un rol fijo que proporciona acceso de administrador a una instancia de [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)].  
   
@@ -93,7 +73,7 @@ Las funciones se utilizan en [!INCLUDE[msCoName](../../../includes/msconame-md.m
 |Administer<br /><br /> Nota: Solo en permisos de base de datos|{**true**, **false**}<br /><br /> Valor predeterminado =**false**|Especifica si los miembros pueden administrar una base de datos.<br /><br /> **true** permite el acceso de los miembros a todos los objetos en una base de datos.<br /><br /> Un miembro puede tener permisos para administrar una base de datos concreta, pero no otras.|  
   
 ## <a name="see-also"></a>Vea también  
- [Permisos y derechos de acceso &#40; Analysis Services - datos multidimensionales &#41;](http://msdn.microsoft.com/library/59fa3573-f985-46cb-8042-7da71bd59a7b)   
- [Autorización de acceso a objetos y operaciones &#40; Analysis Services &#41;](../../../analysis-services/multidimensional-models/authorizing-access-to-objects-and-operations-analysis-services.md)  
+ [Permisos y derechos de acceso & #40; Analysis Services - datos multidimensionales & #41;](http://msdn.microsoft.com/library/59fa3573-f985-46cb-8042-7da71bd59a7b)   
+ [Autorización de acceso a objetos y operaciones & #40; Analysis Services & #41;](../../../analysis-services/multidimensional-models/authorizing-access-to-objects-and-operations-analysis-services.md)  
   
   

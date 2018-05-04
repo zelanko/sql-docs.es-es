@@ -1,16 +1,16 @@
 ---
 title: CREATE SERVICE (Transact-SQL) | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 03/06/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: sql-database
-ms.service: 
+ms.service: ''
 ms.component: t-sql|statements
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - CREATE_SERVICE_TSQL
@@ -24,16 +24,16 @@ helpviewer_keywords:
 - CREATE SERVICE statement
 - contracts [Service Broker], service creation
 ms.assetid: fb804fa2-48eb-4878-a12f-4e0d5f4bc9e3
-caps.latest.revision: 
+caps.latest.revision: 43
 author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 5298494b6c3be0685df771f6d86e11c7b788d002
-ms.sourcegitcommit: 45e4efb7aa828578fe9eb7743a1a3526da719555
+ms.openlocfilehash: 31e92f6c96b5e7cbb3da9f7dbc1b196c63d2dc8f
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="create-service-transact-sql"></a>CREATE SERVICE (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -69,7 +69,7 @@ CREATE SERVICE service_name
  *contract_name*  
  Especifica un contrato para el que este servicio puede ser un destino. Los programas de servicio inician conversaciones con este servicio utilizando los contratos especificados. Si no se especifica ningún contrato, el servicio solo puede iniciar conversaciones.  
   
- **[**DEFAULT**]**  
+ **[** DEFAULT **]**  
  Especifica que el servicio puede ser un destino para conversaciones que sigan el contrato DEFAULT. En el contexto de esta cláusula, DEFAULT no es una palabra clave y debe delimitarse como un identificador. El contrato DEFAULT permite que los dos extremos de la conversación envíen mensajes del tipo DEFAULT. El tipo de mensajes DEFAULT utiliza la validación NONE.  
   
 ## <a name="remarks"></a>Notas  

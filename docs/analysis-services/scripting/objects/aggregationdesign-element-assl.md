@@ -27,15 +27,15 @@ caps.latest.revision: 37
 author: Minewiskan
 ms.author: owend
 manager: kfile
-ms.workload: Inactive
-ms.openlocfilehash: 535cf75969963c8b94992fa267034bf4f73c9735
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
-ms.translationtype: MT
+ms.openlocfilehash: 3b47f7bdedcd87b5dc90de314e4d03dc883b9928
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="aggregationdesign-element-assl"></a>Elemento AggregationDesign (ASSL)
-[!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]Define un conjunto de definiciones de agregación que se pueden compartir entre varias particiones en una base de datos.  
+[!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]
+  Define un conjunto de definiciones de agregación que se pueden compartir en varias particiones de una base de datos.  
   
 ## <a name="syntax"></a>Sintaxis  
   
@@ -55,12 +55,12 @@ ms.lasthandoff: 01/08/2018
 </AggregationDesigns>  
 ```  
   
-## <a name="element-characteristics"></a>Características del elemento  
+## <a name="element-characteristics"></a>Características de los elementos  
   
-|Característica|Description|  
+|Característica|Descripción|  
 |--------------------|-----------------|  
-|Tipo y longitud de los datos|None|  
-|Valor predeterminado|None|  
+|Tipo y longitud de los datos|Ninguno|  
+|Valor predeterminado|Ninguno|  
 |Cardinalidad|0-n: elemento opcional que puede aparecer más de una vez.|  
   
 ## <a name="element-relationships"></a>Relaciones del elemento  
@@ -74,9 +74,9 @@ ms.lasthandoff: 01/08/2018
  El elemento correspondiente en el modelo de objetos de Analysis Management Objects (AMO) es <xref:Microsoft.AnalysisServices.AggregationDesign>.  
   
 ## <a name="see-also"></a>Vea también  
- [Partition, elemento &#40; ASSL &#41;](../../../analysis-services/scripting/objects/partition-element-assl.md)   
- [Aggregation, elemento &#40; ASSL &#41;](../../../analysis-services/scripting/objects/aggregation-element-assl.md)   
- [Aggregations, elemento &#40; ASSL &#41;](../../../analysis-services/scripting/collections/aggregations-element-assl.md)   
- [Objetos de &#40; ASSL &#41;](../../../analysis-services/scripting/objects/objects-assl.md)  
+ [Elemento de la partición &#40;ASSL&#41;](../../../analysis-services/scripting/objects/partition-element-assl.md)   
+ [Aggregation, elemento & #40; ASSL & #41;](../../../analysis-services/scripting/objects/aggregation-element-assl.md)   
+ [Elemento Aggregations &#40;ASSL&#41;](../../../analysis-services/scripting/collections/aggregations-element-assl.md)   
+ [Objetos de & #40; ASSL & #41;](../../../analysis-services/scripting/objects/objects-assl.md)  
   
   

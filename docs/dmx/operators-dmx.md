@@ -22,12 +22,11 @@ caps.latest.revision: 35
 author: Minewiskan
 ms.author: owend
 manager: erikre
-ms.workload: Inactive
-ms.openlocfilehash: 8d6ae8c58b610ca5c709e85afaa033d99c8555af
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
-ms.translationtype: MT
+ms.openlocfilehash: 0924501c9bee458ff7c9cc6d9d6e57889621be71
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="operators-dmx"></a>Operadores (DMX)
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
@@ -40,26 +39,26 @@ ms.lasthandoff: 01/08/2018
   
 -   Implementar una decisión entre columnas o expresiones.  
   
- DMX emplea varias categorías de operadores, que se describen en las siguientes secciones. Para obtener información adicional acerca de los operadores individuales, consulte [extensiones de minería de datos &#40; DMX &#41; Referencia de operadores](../dmx/data-mining-extensions-dmx-operator-reference.md).  
+ DMX emplea varias categorías de operadores, que se describen en las siguientes secciones. Para obtener información adicional acerca de los operadores individuales, consulte [extensiones de minería de datos &#40;DMX&#41; Operator Reference](../dmx/data-mining-extensions-dmx-operator-reference.md).  
   
 |Categoría de operador|Tipo de operación|  
 |-----------------------|-----------------------|  
-|[Aritmética operadores &#40; DMX &#41;](../dmx/operators-arithmetic.md)|Realizan sumas, restas, multiplicaciones o divisiones.|  
-|[Operadores de comparación &#40; DMX &#41;](../dmx/operators-comparison.md)|Comparan un valor con otro valor o con una expresión.|  
-|[Lógico operadores &#40; DMX &#41;](../dmx/operators-logical.md)|Prueban si una condición es cierta, como AND, OR o NOT.|  
-|[Operadores unarios &#40; DMX &#41;](../dmx/operators-unary.md)|Realizan una operación en un único operando.|  
+|[Operadores aritméticos &#40;DMX&#41;](../dmx/operators-arithmetic.md)|Realizan sumas, restas, multiplicaciones o divisiones.|  
+|[Operadores de comparación &#40;DMX&#41;](../dmx/operators-comparison.md)|Comparan un valor con otro valor o con una expresión.|  
+|[Operadores lógicos &#40;DMX&#41;](../dmx/operators-logical.md)|Prueban si una condición es cierta, como AND, OR o NOT.|  
+|[Operadores unarios &#40;DMX&#41;](../dmx/operators-unary.md)|Realizan una operación en un único operando.|  
   
- Puede utilizar operadores para combinar expresiones más sencillas de DMX y crear así expresiones más complejas. En las expresiones complejas, los operadores se evalúan en un orden que se basa en la definición de [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] de la precedencia de operadores. Los operadores con mayor precedencia se ejecutan antes que los operadores con menor precedencia. Para obtener más información acerca de las expresiones, vea [expresiones &#40; DMX &#41;](../dmx/expressions-dmx.md).  
+ Puede utilizar operadores para combinar expresiones más sencillas de DMX y crear así expresiones más complejas. En las expresiones complejas, los operadores se evalúan en un orden que se basa en la definición de [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] de la precedencia de operadores. Los operadores con mayor precedencia se ejecutan antes que los operadores con menor precedencia. Para obtener más información acerca de las expresiones, vea [expresiones &#40;DMX&#41;](../dmx/expressions-dmx.md).  
   
  Cuando se combinan expresiones sencillas para formar una expresión compleja, el tipo de datos de la expresión resultante está determinado por la combinación de las reglas de los operadores con las reglas de la precedencia de tipo de datos. Si el resultado es un carácter o un valor de Unicode, [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] determina la intercalación del resultado mediante la combinación de las reglas de los operadores con las reglas de precedencia de la intercalación. También hay reglas que determinan la precisión, escala y longitud del resultado basándose en la precisión, escala y longitud de las expresiones sencillas.  
   
-## <a name="see-also"></a>Ver también  
- [Extensiones de minería de datos &#40; DMX &#41; Referencia](../dmx/data-mining-extensions-dmx-reference.md)   
- [Extensiones de minería de datos &#40; DMX &#41; Referencia de funciones](../dmx/data-mining-extensions-dmx-function-reference.md)   
- [Extensiones de minería de datos &#40; DMX &#41; Referencia de instrucciones](../dmx/data-mining-extensions-dmx-statements.md)   
- [Extensiones de minería de datos &#40; DMX &#41; Convenciones de sintaxis](../dmx/data-mining-extensions-dmx-syntax-conventions.md)   
- [Extensiones de minería de datos &#40; DMX &#41; Elementos de sintaxis](../dmx/data-mining-extensions-dmx-syntax-elements.md)   
- [Funciones de predicción generales &#40; DMX &#41;](../dmx/general-prediction-functions-dmx.md)   
+## <a name="see-also"></a>Vea también  
+ [Extensiones de minería de datos &#40;DMX&#41; Referencia](../dmx/data-mining-extensions-dmx-reference.md)   
+ [Extensiones de minería de datos &#40;DMX&#41; Referencia de funciones](../dmx/data-mining-extensions-dmx-function-reference.md)   
+ [Extensiones de minería de datos &#40;DMX&#41; Referencia de instrucciones](../dmx/data-mining-extensions-dmx-statements.md)   
+ [Extensiones de minería de datos &#40;DMX&#41; Convenciones de sintaxis](../dmx/data-mining-extensions-dmx-syntax-conventions.md)   
+ [Extensiones de minería de datos &#40;DMX&#41; Elementos de sintaxis](../dmx/data-mining-extensions-dmx-syntax-elements.md)   
+ [Funciones de predicción generales &#40;DMX&#41;](../dmx/general-prediction-functions-dmx.md)   
  [Estructura y el uso de consultas de predicción DMX](../dmx/structure-and-usage-of-dmx-prediction-queries.md)   
  [Descripción de la instrucción Select de DMX](../dmx/understanding-the-dmx-select-statement.md)  
   

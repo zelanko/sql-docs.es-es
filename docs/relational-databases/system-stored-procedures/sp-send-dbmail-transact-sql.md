@@ -25,12 +25,11 @@ caps.latest.revision: 72
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.workload: Active
-ms.openlocfilehash: 1c33d72b5f89c73e409f82d9e8c851aa740dd54e
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
-ms.translationtype: MT
+ms.openlocfilehash: ba13be54b517541ee0e14ac291d871aa8654561f
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="spsenddbmail-transact-sql"></a>sp_send_dbmail (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -131,7 +130,7 @@ sp_send_dbmail [ [ @profile_name = ] 'profile_name' ]
  Lista de nombres, separados por punto y coma, de los archivos que se van a adjuntar al mensaje de correo. Especifique los archivos de la lista como rutas de acceso absolutas. La lista de los datos adjuntos es de tipo **nvarchar (max)**. De forma predeterminada, Correo electrónico de base de datos limita los datos adjuntos a 1 MB por archivo.  
   
  [  **@query=** ] **'***consulta***'**  
- Consulta que se va a ejecutar. Los resultados de la consulta pueden adjuntarse como archivo o incluirse en el cuerpo del mensaje de correo electrónico. La consulta es de tipo **nvarchar (max)**y puede contener cualquier [!INCLUDE[tsql](../../includes/tsql-md.md)] instrucciones. Tenga en cuenta que la consulta se ejecuta en una sesión independiente, las variables locales por lo que en el script que llama a **sp_send_dbmail** no están disponibles para la consulta.  
+ Consulta que se va a ejecutar. Los resultados de la consulta pueden adjuntarse como archivo o incluirse en el cuerpo del mensaje de correo electrónico. La consulta es de tipo **nvarchar (max)** y puede contener cualquier [!INCLUDE[tsql](../../includes/tsql-md.md)] instrucciones. Tenga en cuenta que la consulta se ejecuta en una sesión independiente, las variables locales por lo que en el script que llama a **sp_send_dbmail** no están disponibles para la consulta.  
   
  [  **@execute_query_database=** ] **'***execute_query_database***'**  
  Contexto de base de datos dentro del cual el procedimiento almacenado ejecuta la consulta. El parámetro es de tipo **sysname**, con un valor predeterminado de la base de datos actual. Este parámetro solo es aplicable si **@query** se especifica.  

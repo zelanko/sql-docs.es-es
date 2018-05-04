@@ -20,12 +20,11 @@ helpviewer_keywords:
 author: pmasl
 ms.author: Pedro.Lopes
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: 982790c72cd4179c78305ac76bf7178b8af80896
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
+ms.openlocfilehash: 83ac9f1e36172d6af5a7b55909e2a73bee7f81a8
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="components-of-ole-db-driver-for-sql-server"></a>Componentes de controlador OLE DB para SQL Server
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -39,7 +38,7 @@ ms.lasthandoff: 04/16/2018
 |msoledbsql.dll|El archivo de biblioteca de vínculos dinámicos (DLL) que contiene todo el controlador OLE DB para la funcionalidad de SQL Server.|  
 |msoledbsqlr.rll|El archivo de recursos asociado para el controlador OLE DB para la biblioteca de SQL Server.|   
 |msoledbsql.h|El controlador OLE DB para el archivo de encabezado de SQL Server que contiene todas las definiciones nuevas necesarias para poder usar el controlador OLE DB para SQL Server. Este archivo de encabezado reemplaza el archivo de encabezado sqloledb.h.<br /><br /> Nota: Puede hacer referencia a msoledbsql.h y sqloledb.h en el mismo programa siempre que sqloledb.h se defina en primer lugar.|  
-|msoledbsql.lib|El archivo de biblioteca necesario para directamente llamada la **bcp** funciones de utilidad que forman parte del controlador OLE DB para SQL Server.<br /><br /> Nota: Si se hace referencia al archivo msoledbsql.lib en el código de programación, tiene que asegurarse de que el archivo msoledbsql.dll está en la ruta del sistema y en la ruta de acceso de sistema de los usuarios que utilizan la aplicación.|  
+|msoledbsql.lib|El archivo de biblioteca necesario para directamente llamada la [OpenSqlFilestream](../../../relational-databases/blob/access-filestream-data-with-opensqlfilestream.md) función a la que pertenece el controlador OLE DB para SQL Server.<br /><br /> Nota: Si se hace referencia al archivo msoledbsql.lib en el código de programación, tiene que asegurarse de que el archivo msoledbsql.dll está en la ruta del sistema y en la ruta de acceso de sistema de los usuarios que utilizan la aplicación.|  
 
 ## <a name="see-also"></a>Vea también  
  [Compilación de aplicaciones con el controlador OLE DB para SQL Server](../../oledb/applications/building-applications-with-oledb-driver-for-sql-server.md)  

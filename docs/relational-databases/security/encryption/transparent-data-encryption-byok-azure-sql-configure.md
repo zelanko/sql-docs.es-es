@@ -18,17 +18,18 @@ ms.devlang: azurecli, powershell
 ms.topic: article
 ms.date: 03/15/2018
 ms.author: aliceku
-ms.openlocfilehash: 9d1fee3a22bfa930f70a8c6e2585f60acaf5f419
-ms.sourcegitcommit: 8e897b44a98943dce0f7129b1c7c0e695949cc3b
+monikerRange: = azuresqldb-current || = azure-sqldw-latest || = sqlallproducts-allversions
+ms.openlocfilehash: eed635cc4b58c5ec975f0b77f8e3b69f87fd65ff
+ms.sourcegitcommit: bb044a48a6af9b9d8edb178dc8c8bd5658b9ff68
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/21/2018
+ms.lasthandoff: 04/18/2018
 ---
-# <a name="powershell-and-cli-enable-transparent-data-encryption-using-your-own-key-from-azure-key-vault-preview"></a>PowerShell y CLI: Habilitar el Cifrado de datos transparente con su propia clave desde Azure Key Vault (versión preliminar)
+# <a name="powershell-and-cli-enable-transparent-data-encryption-using-your-own-key-from-azure-key-vault"></a>PowerShell y CLI: Habilitar el Cifrado de datos transparente con su propia clave desde Azure Key Vault
 
 [!INCLUDE[appliesto-xx-asdb-asdw-xxx-md](../../../includes/appliesto-xx-asdb-asdw-xxx-md.md)]
 
-En esta guía de procedimientos aprenderá a usar una clave desde Azure Key Vault para el Cifrado de datos transparente (TDE) (en versión preliminar) en un almacén de datos o una base de datos SQL. Para obtener más información sobre la compatibilidad del TDE con Bring Your Own Key (BYOK) (en versión preliminar), vea [Cifrado de datos transparente compatible con Bring Your Own Key (versión preliminar) para Azure SQL Database y SQL Data Warehouse](transparent-data-encryption-byok-azure-sql.md). 
+En esta guía de procedimientos aprenderá a usar una clave desde Azure Key Vault para el Cifrado de datos transparente (TDE) en un almacén de datos o una base de datos SQL. Para obtener más información sobre la compatibilidad del TDE con Bring Your Own Key (BYOK), vea [TDE Bring Your Own Key to Azure SQL](transparent-data-encryption-byok-azure-sql.md) (TDE con Bring Your Own Key en Azure SQL). 
 
 ## <a name="prerequisites-for-powershell"></a>Requisitos previos de PowerShell
 

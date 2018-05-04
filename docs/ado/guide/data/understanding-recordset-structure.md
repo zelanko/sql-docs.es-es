@@ -1,11 +1,9 @@
 ---
 title: Descripción de la estructura Recordset | Documentos de Microsoft
 ms.prod: sql
-ms.prod_service: drivers
-ms.service: ''
+ms.prod_service: connectivity
 ms.component: ado
-ms.technology:
-- drivers
+ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
@@ -19,12 +17,11 @@ caps.latest.revision: 10
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: 97c118a40e0fb6952f170050bb4b0f3d218363a4
-ms.sourcegitcommit: bb044a48a6af9b9d8edb178dc8c8bd5658b9ff68
+ms.openlocfilehash: fb889e2f907e1158819997f2f6ba85e4c7ce80c7
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/18/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="understanding-recordset-structure"></a>Descripción de conjunto de registros de la estructura
 Cada **Recordset** tiene un **campos** colección formada por uno o varios **campo** objetos. A **campo** objeto suele representar una columna de tabla. Los temas siguientes explican cómo navegar por la **campos** colección y obtener información acerca de cada campo. A continuación, se explicará qué tipo de información está disponible a través de la **campo** objeto y cómo utilizarlo.  

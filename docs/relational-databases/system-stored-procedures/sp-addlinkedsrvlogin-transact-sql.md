@@ -24,12 +24,11 @@ caps.latest.revision: 41
 author: edmacauley
 ms.author: edmaca
 manager: craigg
-ms.workload: On Demand
-ms.openlocfilehash: ef468f7ea427e2e7226bccf45e1192c9a6abcc4b
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
-ms.translationtype: MT
+ms.openlocfilehash: 62b73908bc65698cc6f84124a76214398f75fa4a
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="spaddlinkedsrvlogin-transact-sql"></a>sp_addlinkedsrvlogin (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -53,8 +52,8 @@ sp_addlinkedsrvlogin [ @rmtsrvname = ] 'rmtsrvname'
  [ @rmtsrvname **=** ] **'***rmtsrvname***'**  
  Es el nombre de un servidor vinculado al que se aplica la asignación de inicio de sesión. *rmtsrvname* es **sysname**, no tiene ningún valor predeterminado.  
   
- [ @useself **=** ] **'**TRUE**'** | 'FALSE' | 'NULL'  
- Determina si se debe conectar a *rmtsrvname* suplantando inicios de sesión locales o enviando explícitamente un inicio de sesión y una contraseña. El tipo de datos es **varchar (**8**)**, con un valor predeterminado es TRUE.  
+ [ @useself **=** ] **'** TRUE **'** | 'FALSE' | 'NULL'  
+ Determina si se debe conectar a *rmtsrvname* suplantando inicios de sesión locales o enviando explícitamente un inicio de sesión y una contraseña. El tipo de datos es **varchar (** 8 **)**, con un valor predeterminado es TRUE.  
   
  Un valor TRUE especifica que los inicios de sesión utilizan sus propias credenciales para conectarse a *rmtsrvname*, con el *rmtuser* y *rmtpassword* argumentos que se pasa por alto. FALSE especifica que la *rmtuser* y *rmtpassword* argumentos se utilizan para conectarse a *rmtsrvname* para el elemento especificado *locallogin* . Si *rmtuser* y *rmtpassword* también está establecido en NULL, ningún inicio de sesión o la contraseña se utiliza para conectarse al servidor vinculado.  
   

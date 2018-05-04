@@ -1,30 +1,30 @@
 ---
 title: Agregar un origen de datos al modelo Tabular (Analysis Services AMO-TOM) | Documentos de Microsoft
-ms.custom: 
+ms.custom: ''
 ms.date: 03/07/2017
 ms.prod: analysis-services
 ms.prod_service: analysis-services, azure-analysis-services
-ms.service: 
-ms.component: 
-ms.reviewer: 
+ms.service: ''
+ms.component: ''
+ms.reviewer: ''
 ms.suite: pro-bi
-ms.technology: 
-ms.tgt_pltfrm: 
+ms.technology: ''
+ms.tgt_pltfrm: ''
 ms.topic: reference
 ms.assetid: e54a8a1b-b964-4b6e-9057-44d50af676c0
-caps.latest.revision: "6"
+caps.latest.revision: 6
 author: Minewiskan
 ms.author: owend
 manager: kfile
-ms.workload: Inactive
-ms.openlocfilehash: 501e99294ccc603a8815448c7c23b380ea125b46
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
-ms.translationtype: MT
+ms.openlocfilehash: 3892601961f95b0d4dd4f0de0d3767eff01186d1
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="add-a-data-source-to-tabular-model-analysis-services-amo-tom"></a>Agregar un origen de datos al modelo Tabular (Analysis Services AMO-TOM)
-[!INCLUDE[ssas-appliesto-sqlas-aas](../../includes/ssas-appliesto-sqlas-aas.md)]El **DataSource** clase en el espacio de nombres Microsoft.AnalysisServices.Tabular es una abstracción de un modelo Tabular origen de datos que especifica el tipo y la ubicación de los datos importados durante una operación de actualización de datos. 
+[!INCLUDE[ssas-appliesto-sqlas-aas](../../includes/ssas-appliesto-sqlas-aas.md)]
+El **DataSource** clase en el espacio de nombres Microsoft.AnalysisServices.Tabular es una abstracción de un modelo Tabular origen de datos que especifica el tipo y la ubicación de los datos importados durante una operación de actualización de datos. 
 
 Puede agregar un origen de datos al modelo Tabular creando instancias de un objeto de una clase derivada de **DataSource**y, a continuación, agréguelo a la **orígenes de datos** colección del objeto de modelo. Para confirmar los cambios en el servidor, llame a **Model.SaveChanges()** o **Database.Update(UpdateOptions.ExpandFull)**. 
 

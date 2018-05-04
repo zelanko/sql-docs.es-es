@@ -10,7 +10,7 @@ ms.reviewer: ''
 ms.suite: pro-bi
 ms.technology: ''
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - mining structures [Analysis Services], how-to topics
 ms.assetid: 085962c2-b50b-4a3b-8176-a0b920e2593a
@@ -18,21 +18,21 @@ caps.latest.revision: 28
 author: Minewiskan
 ms.author: owend
 manager: kfile
-ms.workload: Inactive
-ms.openlocfilehash: a9b949aa861e9db20c60f64c75d5edd41e9247c9
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
-ms.translationtype: MT
+ms.openlocfilehash: 3e98ecfe66ced313bbd40812bc546cf877d97604
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="mining-structure-tasks-and-how-tos"></a>Tareas y procedimientos de las estructuras de minería de datos
-[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]El **estructura de minería de datos** pestaña del Diseñador de minería de datos en [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] contiene herramientas que puede usar para crear, editar y procesar una estructura de minería de datos.  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
+  La pestaña **Estructura de minería de datos** del Diseñador de minería de datos de [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] contiene herramientas que se pueden utilizar para crear, editar y procesar una estructura de minería de datos.  
   
 ## <a name="in-this-section"></a>En esta sección  
   
--   [Crear una estructura de minería de datos relacional](../../analysis-services/data-mining/create-a-new-relational-mining-structure.md)  
+-   [Crear una nueva estructura de minería de datos relacional](../../analysis-services/data-mining/create-a-new-relational-mining-structure.md)  
   
--   [Crear una estructura de minería de datos OLAP](../../analysis-services/data-mining/create-a-new-olap-mining-structure.md)  
+-   [Crear una nueva estructura de minería de datos OLAP](../../analysis-services/data-mining/create-a-new-olap-mining-structure.md)  
   
 -   [Agregar columnas a una estructura de minería de datos](../../analysis-services/data-mining/add-columns-to-a-mining-structure.md)  
   
@@ -42,7 +42,7 @@ ms.lasthandoff: 01/08/2018
   
 -   [Cambiar las propiedades de una estructura de minería de datos](../../analysis-services/data-mining/change-the-properties-of-a-mining-structure.md)  
   
--   [Editar la vista del origen de datos usada para una estructura de minería de datos](../../analysis-services/data-mining/edit-the-data-source-view-used-for-a-mining-structure.md)  
+-   [Editar la vista del origen de datos utilizada para una estructura de minería de datos](../../analysis-services/data-mining/edit-the-data-source-view-used-for-a-mining-structure.md)  
   
 -   [Procesar una estructura de minería de datos](../../analysis-services/data-mining/process-a-mining-structure.md)  
   

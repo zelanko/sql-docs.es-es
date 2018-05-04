@@ -11,7 +11,7 @@ ms.suite: sql
 ms.technology:
 - drivers
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - escape sequences [ODBC], literals
 ms.assetid: 2b42a52a-6353-494c-a179-3a7533cd729f
@@ -19,17 +19,16 @@ caps.latest.revision: 7
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: 9b9102d2c54c308304ea326d5a3a710a7703f275
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
-ms.translationtype: MT
+ms.openlocfilehash: 19cc77adb85cca9aa2c273c02f3090bc2ae0ae19
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="date-time-and-timestamp-literals"></a>Fecha, hora y marca de tiempo literales
 La secuencia de escape para literales de fecha, hora y marca de tiempo es  
   
- **{***-tipo* **'** *valor* **'}**   
+ **{***-tipo* **'** *valor* **'}**  
   
  donde *tipo literal* es uno de los valores enumerados en la tabla siguiente.  
   

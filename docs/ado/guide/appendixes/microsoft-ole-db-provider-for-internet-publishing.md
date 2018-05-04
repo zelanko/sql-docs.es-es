@@ -21,12 +21,11 @@ caps.latest.revision: 10
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: 26b77c49d4275ace0bcb95ec1495f0637e5b19f2
-ms.sourcegitcommit: bb044a48a6af9b9d8edb178dc8c8bd5658b9ff68
-ms.translationtype: MT
+ms.openlocfilehash: 36a5b9c97f88ae853a7ed65efbe614122e57ed51
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/18/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="microsoft-ole-db-provider-for-internet-publishing-overview"></a>Proveedor Microsoft OLE DB para la publicación de información general en Internet
 El proveedor Microsoft OLE DB para publicación en Internet permite a ADO para tener acceso a recursos atendido por Microsoft FrontPage o Microsoft Internet Information Server. Los recursos incluyen archivos de código fuente de web, como archivos HTML o carpetas de web de Windows 2000.

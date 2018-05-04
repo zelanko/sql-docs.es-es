@@ -27,15 +27,15 @@ caps.latest.revision: 36
 author: Minewiskan
 ms.author: owend
 manager: kfile
-ms.workload: Inactive
-ms.openlocfilehash: e3b3e6f80c157dbb867aaf4362a39e6ed91cd974
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
-ms.translationtype: MT
+ms.openlocfilehash: 9c71f680f1693e3053f04ade746c27bef12fde0b
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="tableid-element-assl"></a>Elemento TableID (ASSL)
-[!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]Contiene el identificador (ID) de la tabla (desde la [DataSourceView](../../../analysis-services/scripting/objects/datasourceview-element-assl.md) elemento) asociado con el elemento primario.  
+[!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]
+  Contiene el identificador (ID) de la tabla (desde la [DataSourceView](../../../analysis-services/scripting/objects/datasourceview-element-assl.md) elemento) asociado con el elemento primario.  
   
 ## <a name="syntax"></a>Sintaxis  
   
@@ -48,12 +48,12 @@ ms.lasthandoff: 01/08/2018
 </ColumnBinding>  
 ```  
   
-## <a name="element-characteristics"></a>Características del elemento  
+## <a name="element-characteristics"></a>Características de los elementos  
   
-|Característica|Description|  
+|Característica|Descripción|  
 |--------------------|-----------------|  
-|Tipo y longitud de los datos|String|  
-|Valor predeterminado|None|  
+|Tipo y longitud de los datos|Cadena|  
+|Valor predeterminado|Ninguno|  
 |Cardinalidad|1-1: Elemento necesario que se produce una vez y solo una vez.|  
   
 ## <a name="element-relationships"></a>Relaciones del elemento  
@@ -61,7 +61,7 @@ ms.lasthandoff: 01/08/2018
 |Relación|Elemento|  
 |------------------|-------------|  
 |Elementos primarios|[ColumnBinding](../../../analysis-services/scripting/data-type/columnbinding-data-type-assl.md), [DSVTableBinding](../../../analysis-services/scripting/data-type/dsvtablebinding-data-type-assl.md), [IncrementalProcessingNotification](../../../analysis-services/scripting/objects/incrementalprocessingnotification-element-assl.md), [RowBinding](../../../analysis-services/scripting/data-type/rowbinding-data-type-assl.md)|  
-|Elementos secundarios|None|  
+|Elementos secundarios|Ninguno|  
   
 ## <a name="remarks"></a>Comentarios  
  La tabla identificada por **TableID** se debe encontrar en el origen de datos al que está enlazado el objeto propietario (dimensión o cubo).  
@@ -69,6 +69,6 @@ ms.lasthandoff: 01/08/2018
  Los elementos que corresponden a los elementos primarios de **TableID** en el modelo de objetos de Analysis Management Objects (AMO) son <xref:Microsoft.AnalysisServices.ColumnBinding>, <xref:Microsoft.AnalysisServices.DSVTableBinding>, <xref:Microsoft.AnalysisServices.IncrementalProcessingNotification>, y <xref:Microsoft.AnalysisServices.RowBinding>.  
   
 ## <a name="see-also"></a>Vea también  
- [Propiedades &#40; ASSL &#41;](../../../analysis-services/scripting/properties/properties-assl.md)  
+ [Propiedades & #40; ASSL & #41;](../../../analysis-services/scripting/properties/properties-assl.md)  
   
   

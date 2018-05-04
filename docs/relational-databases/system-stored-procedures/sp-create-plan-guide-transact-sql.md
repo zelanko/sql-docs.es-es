@@ -24,12 +24,11 @@ caps.latest.revision: 82
 author: edmacauley
 ms.author: edmaca
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: d213b79938f0856d9e17b36366958a89e7ecd2be
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
-ms.translationtype: MT
+ms.openlocfilehash: 09c1ccc4ba5b01b434ee4794a058ccfae4ccfa61
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="spcreateplanguide-transact-sql"></a>sp_create_plan_guide (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -83,7 +82,7 @@ sp_create_plan_guide [ @name = ] N'plan_guide_name'
   
  Para obtener una guía de plan para que coincida con un lote enviado desde una aplicación, *batch_tex*debe suministrarse en el mismo formato, carácter de carácter, en que se envía a [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Para facilitar esta concordancia no se realiza ninguna conversión interna. Para obtener más información, vea la sección Comentarios.  
   
- [*schema_name*.] *object_name* especifica el nombre de un [!INCLUDE[tsql](../../includes/tsql-md.md)] almacenados procedimiento, función escalar, función con valores de tabla de múltiples instrucciones o [!INCLUDE[tsql](../../includes/tsql-md.md)] desencadenador DML que contiene *statement_text*. Si *schema_name* no se especifica, *schema_name* utiliza el esquema del usuario actual. Si se especifica NULL y @type = 'SQL', el valor de @module_or_batch se establece en el valor de @stmt. Si @type = ' plantilla**'**, @module_or_batch debe ser NULL.  
+ [*schema_name*.] *object_name* especifica el nombre de un [!INCLUDE[tsql](../../includes/tsql-md.md)] almacenados procedimiento, función escalar, función con valores de tabla de múltiples instrucciones o [!INCLUDE[tsql](../../includes/tsql-md.md)] desencadenador DML que contiene *statement_text*. Si *schema_name* no se especifica, *schema_name* utiliza el esquema del usuario actual. Si se especifica NULL y @type = 'SQL', el valor de @module_or_batch se establece en el valor de @stmt. Si @type = ' plantilla **'**, @module_or_batch debe ser NULL.  
   
  [ @params =] {N' *@parameter_name data_type* [,*.. .n* ]' | NULL}  
  Especifica las definiciones de todos los parámetros que se incrustan en *statement_text*. @params se aplica solo cuando alguna de las acciones siguientes es true:  
@@ -123,7 +122,7 @@ sp_create_plan_guide [ @name = ] N'plan_guide_name'
   
  Cuando @type = 'SQL' y @module_or_batch se establece en NULL, el valor de @module_or_batch se establece en el valor de @stmt. Esto significa que el valor de *statement_text* deben proporcionarse en exactamente el mismo formato, carácter de carácter, en que se envía a [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Para facilitar esta concordancia no se realiza ninguna conversión interna.  
   
- Cuando [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] coincide con el valor de *statement_text* a *batch_text* y  *@parameter_name data_type* [,*.. .n* ], o Si @type = **'**objeto ', el texto de la consulta correspondiente dentro de *object_name*, no se consideran los siguientes elementos de cadena:  
+ Cuando [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] coincide con el valor de *statement_text* a *batch_text* y  *@parameter_name data_type* [,*.. .n* ], o Si @type = **'** objeto ', el texto de la consulta correspondiente dentro de *object_name*, no se consideran los siguientes elementos de cadena:  
   
 -   Los caracteres de espacio en blanco (tabulaciones, espacios, retornos de carro o avances de línea) dentro de una cadena.  
   

@@ -11,7 +11,7 @@ ms.suite: sql
 ms.technology:
 - drivers
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - connection pooling [ODBC]
 - pooled connections [ODBC]
@@ -22,12 +22,11 @@ caps.latest.revision: 32
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: c18e4e09d620221541bea32dc80391a7e4b5ddd9
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
-ms.translationtype: MT
+ms.openlocfilehash: 69736f00cc4d357da0f6da7d4fbf3886144d1553
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="driver-manager-connection-pooling"></a>Agrupación de conexiones de administrador de controladores
 Agrupación de conexiones permite a una aplicación que utilice una conexión de un grupo de conexiones que no es necesario volver a establecer para cada usuario. Una vez creada y coloca en un grupo de una conexión, una aplicación puede reutilizar la conexión sin realizar el proceso de conexión completo.  
@@ -45,7 +44,7 @@ Agrupación de conexiones permite a una aplicación que utilice una conexión de
   
  El Administrador de controladores determina si se debe usar una conexión específica en un grupo de acuerdo con los argumentos pasados en **SQLConnect** o **SQLDriverConnect**y de acuerdo con los atributos de conexión establecer después de que se asignó la conexión.  
   
- Cuando el Administrador de controladores es la agrupación de conexiones, debe ser capaz de determinar si una conexión sigue funcionando antes de entregar espera de la conexión. En caso contrario, el Administrador de controladores mantiene en repartir la conexión que no responde a la aplicación cada vez que se produce un error de red transitorios. Se ha definido un nuevo atributo de conexión de ODBC 3*.x*: SQL_ATTR_CONNECTION_DEAD. Se trata de un atributo de conexión de solo lectura que devuelva SQL_CD_TRUE o SQL_CD_FALSE. El valor SQL_CD_TRUE significa que la conexión se ha perdido, mientras que el valor SQL_CD_FALSE significa que la conexión está activa. (Controladores conforme a las versiones anteriores de ODBC también pueden admitir este atributo.)  
+ Cuando el Administrador de controladores es la agrupación de conexiones, debe ser capaz de determinar si una conexión sigue funcionando antes de entregar espera de la conexión. En caso contrario, el Administrador de controladores mantiene en repartir la conexión que no responde a la aplicación cada vez que se produce un error de red transitorios. Se ha definido un nuevo atributo de conexión de ODBC 3 *.x*: SQL_ATTR_CONNECTION_DEAD. Se trata de un atributo de conexión de solo lectura que devuelva SQL_CD_TRUE o SQL_CD_FALSE. El valor SQL_CD_TRUE significa que la conexión se ha perdido, mientras que el valor SQL_CD_FALSE significa que la conexión está activa. (Controladores conforme a las versiones anteriores de ODBC también pueden admitir este atributo.)  
   
  Un controlador debe implementar eficazmente esta opción o afectará el rendimiento de la agrupación de conexiones. En concreto, una llamada para obtener el atributo de conexión no debería causar ida y vuelta al servidor. En su lugar, un controlador debe devolver el último estado conocido de la conexión. La conexión está inactivo si no se pudo el último recorrido en el servidor y no inactivas si se realizó correctamente en el último recorrido.  
   

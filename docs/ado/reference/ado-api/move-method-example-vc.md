@@ -21,12 +21,11 @@ caps.latest.revision: 15
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: 98bdad7cb290685cc9fccdf6f87f7214c75a5f96
-ms.sourcegitcommit: bb044a48a6af9b9d8edb178dc8c8bd5658b9ff68
-ms.translationtype: MT
+ms.openlocfilehash: d97d5684b2a634aadc00815399911e46ca05ec37
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/18/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="move-method-example-vc"></a>Ejemplo del método Move (VC ++)
 Este ejemplo se utiliza la [mover](../../../ado/reference/ado-api/move-method-ado.md) método para colocar el puntero del registro en función de los proporcionados por el usuario.  

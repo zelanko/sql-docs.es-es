@@ -22,12 +22,11 @@ caps.latest.revision: 12
 author: Minewiskan
 ms.author: owend
 manager: erikre
-ms.workload: Inactive
-ms.openlocfilehash: b58b0d983008fadb96ce5b527ec2283a5dd34367
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
-ms.translationtype: MT
+ms.openlocfilehash: 980d214f31a955e73cd2362f41b8d3b84f1f4726
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="istrainingcase-dmx"></a>IsTrainingCase (DMX)
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
@@ -52,7 +51,7 @@ IsTrainingCase()
 > [!NOTE]  
 >  Obtención de detalles debe habilitarse en el modelo si desea utilizar las funciones IsTrainingCase o IsTestCase para devolver detalles sobre los casos del modelo. Para obtener más información, vea [Habilitar la obtención de detalles para un modelo de minería](../analysis-services/data-mining/enable-drillthrough-for-a-mining-model.md).  
   
- Para devolver casos que forman parte del conjunto de datos de prueba, use la función [IsTestCase &#40; DMX &#41;](../dmx/istestcase-dmx.md).  
+ Para devolver casos que forman parte del conjunto de datos de prueba, use la función [IsTestCase &#40;DMX&#41;](../dmx/istestcase-dmx.md).  
   
 ## <a name="examples"></a>Ejemplos  
  En el ejemplo siguiente se usa el modelo de minería de datos agrupación en clústeres en el escenario de distribución de correo directo en el [Tutorial básico de minería de datos](http://msdn.microsoft.com/library/6602edb6-d160-43fb-83c8-9df5dddfeb9c). La consulta solo devuelve los casos que se utilizaron para entrenar el modelo de minería de datos. Además, los casos de entrenamiento se restringen a los clientes menores de 40 años.  
@@ -64,11 +63,11 @@ WHERE IsTrainingCase()
 AND [Age] <40  
 ```  
   
- Para obtener ejemplos de cómo consultar los casos que se usan en la minería de datos, vea [SELECT FROM &#60; modelo &#62;. CASOS &#40; DMX &#41; ](../dmx/select-from-model-cases-dmx.md) y [SELECT FROM &#60; estructura &#62;. CASOS](../dmx/select-from-structure-cases.md).  
+ Para obtener ejemplos de cómo consultar los casos que se usan en la minería de datos, vea [SELECT FROM &#60;modelo&#62;. CASOS &#40;DMX&#41; ](../dmx/select-from-model-cases-dmx.md) y [SELECT FROM &#60;estructura&#62;. CASOS](../dmx/select-from-structure-cases.md).  
   
 ## <a name="see-also"></a>Vea también  
  [Conjuntos de datos de aprendizaje y prueba](../analysis-services/data-mining/training-and-testing-data-sets.md)   
- [Funciones &#40; DMX &#41;](../dmx/functions-dmx.md)   
+ [Funciones &#40;DMX&#41;](../dmx/functions-dmx.md)   
  [Consultas de minería de datos](../analysis-services/data-mining/data-mining-queries.md)  
   
   

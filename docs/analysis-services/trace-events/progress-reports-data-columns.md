@@ -18,15 +18,15 @@ caps.latest.revision: 34
 author: Minewiskan
 ms.author: owend
 manager: kfile
-ms.workload: Inactive
-ms.openlocfilehash: eb8a5e4ba89eb9fc56b3498829e2ab2733c74b18
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
-ms.translationtype: MT
+ms.openlocfilehash: 65e1c17fed698cfc38b993c5b369037cfe63c963
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="progress-reports-data-columns"></a>Columnas de datos de Informes de progreso
-[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]La categoría de eventos de informes de progreso tiene las siguientes clases de evento:  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
+  La categoría de eventos Informes de progreso tiene las siguientes clases de eventos:  
   
 |**Identificador del evento**|**Nombre del evento**|**Descripción del evento**|  
 |------------------|--------------------|---------------------------|  
@@ -71,7 +71,7 @@ ms.lasthandoff: 01/08/2018
 |CurrentTime|2|5|Contiene la hora actual del evento incluido en el informe, si está disponible. Para filtrar, los formatos esperados son "AAAA-MM-DD" y "AAAA-MM-DD HH:MM:SS".|  
 |StartTime|3|5|Contiene la hora a la que se inició el evento, si está disponible. Para filtrar, los formatos esperados son "AAAA-MM-DD" y "AAAA-MM-DD HH:MM:SS".|  
 |EndTime|4|5|Contiene la hora a la que finalizó el evento. Esta columna no se llena para las clases de eventos de inicio, como SQL:BatchStarting o SP:Starting. Para filtrar, los formatos esperados son "AAAA-MM-DD" y "AAAA-MM-DD HH:MM:SS".|  
-|Duration|5|2|Contiene la cantidad de tiempo transcurrido (en milisegundos) que tarda el evento.|  
+|Duración|5|2|Contiene la cantidad de tiempo transcurrido (en milisegundos) que tarda el evento.|  
 |CPUTime|6|2|Contiene la cantidad de tiempo de CPU (en milisegundos) usada por el evento.|  
 |JobID|7|1|Contiene el identificador de trabajo asociado al evento incluido en el informe.|  
 |SessionType|8|8|Contiene el tipo de sesión (la entidad que produce el evento) asociada al evento incluido en el informe. Para procesar eventos, los valores son:<br /><br /> 1= Usuario<br /><br /> 2= Almacenamiento en caché automático<br /><br /> 3= Procesamiento diferido|  
@@ -128,7 +128,7 @@ ms.lasthandoff: 01/08/2018
 |CurrentTime|2|5|Contiene la hora actual del evento incluido en el informe, si está disponible. Para filtrar, los formatos esperados son "AAAA-MM-DD" y "AAAA-MM-DD HH:MM:SS".|  
 |StartTime|3|5|Contiene la hora a la que se inició el evento, si está disponible. Para filtrar, los formatos esperados son "AAAA-MM-DD" y "AAAA-MM-DD HH:MM:SS".|  
 |EndTime|4|5|Contiene la hora a la que finalizó el evento. Esta columna no se llena para las clases de eventos de inicio, como SQL:BatchStarting o SP:Starting. Para filtrar, los formatos esperados son "AAAA-MM-DD" y "AAAA-MM-DD HH:MM:SS".|  
-|Duration|5|2|Contiene la cantidad de tiempo transcurrido (en milisegundos) que tarda el evento.|  
+|Duración|5|2|Contiene la cantidad de tiempo transcurrido (en milisegundos) que tarda el evento.|  
 |JobID|7|1|Contiene el identificador de trabajo asociado al evento incluido en el informe.|  
 |SessionType|8|8|Contiene el tipo de sesión (la entidad que produce el evento) asociada al evento incluido en el informe. Para procesar eventos, los valores son:<br /><br /> 1= Usuario<br /><br /> 2= Almacenamiento en caché automático<br /><br /> 3= Procesamiento diferido|  
 |ProgressTotal|9|1|Contiene el total del progreso para el evento incluido en el informe.|  
@@ -147,7 +147,7 @@ ms.lasthandoff: 01/08/2018
 |TextData|42|9|Contiene los datos de texto asociados al evento incluido en el informe.|  
 |ServerName|43|8|Contiene el nombre de la instancia de [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] en la que ha tenido lugar el evento incluido en el informe.|  
   
-## <a name="see-also"></a>Ver también  
- [Progress Reports Event Category](../../analysis-services/trace-events/progress-reports-event-category.md)  
+## <a name="see-also"></a>Vea también  
+ [Informes de progreso, categoría de eventos](../../analysis-services/trace-events/progress-reports-event-category.md)  
   
   

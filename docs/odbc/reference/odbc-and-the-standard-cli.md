@@ -11,7 +11,7 @@ ms.suite: sql
 ms.technology:
 - drivers
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - ODBC [ODBC], CLI
 - CLI [ODBC]
@@ -23,12 +23,11 @@ caps.latest.revision: 6
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: ef863329a0f0c8a7c7b8aaef6f55717fbbc1f638
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
-ms.translationtype: MT
+ms.openlocfilehash: 4d1b9654979f7c71ce1b3c8d238e62e056e75264
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="odbc-and-the-standard-cli"></a>ODBC y la CLI estándar
 ODBC se alinea con las siguientes especificaciones y estándares que tratan con la interfaz de nivel de llamada (CLI). (Las características ODBC son un superconjunto de cada uno de estos estándares).  
@@ -41,7 +40,7 @@ ODBC se alinea con las siguientes especificaciones y estándares que tratan con 
   
 -   Una aplicación escrita en las especificaciones de ISO CLI y Open Group funcionará con una aplicación ODBC 3. *x* controlador o un controlador compatible con los estándares cuando se compila con ODBC 3. *x* archivos de encabezado y vincular con ODBC 3. *x* bibliotecas, y cuando obtiene acceso al controlador a través de ODBC 3. *x* el Administrador de controladores.  
   
--   Un controlador que se escriben en las especificaciones de Open Group y ISO CLI funcionará con una aplicación ODBC 3*.x* aplicación o una aplicación compatible con los estándares cuando se compila con ODBC 3*.x* archivos de encabezado y vincular con ODBC 3*.x* bibliotecas, y cuando la aplicación obtiene acceso al controlador a través de ODBC 3*.x* el Administrador de controladores. (Para obtener más información, consulte [controladores y aplicaciones compatibles con los estándares](../../odbc/reference/develop-app/standards-compliant-applications-and-drivers.md).  
+-   Un controlador que se escriben en las especificaciones de Open Group y ISO CLI funcionará con una aplicación ODBC 3 *.x* aplicación o una aplicación compatible con los estándares cuando se compila con ODBC 3 *.x* archivos de encabezado y vincular con ODBC 3 *.x* bibliotecas, y cuando la aplicación obtiene acceso al controlador a través de ODBC 3 *.x* el Administrador de controladores. (Para obtener más información, consulte [controladores y aplicaciones compatibles con los estándares](../../odbc/reference/develop-app/standards-compliant-applications-and-drivers.md).  
   
  El nivel de conformidad de interfaz principal incluye todas las características de la CLI de ISO y todas las características no opcionales de la CLI de grupo abierto. Características opcionales de la CLI de grupo abierto aparecen en niveles más altos de conformidad de interfaz. Dado que todos los ODBC 3. *x* controladores son necesarios para admitir las características en el nivel de conformidad de interfaz de núcleos, lo siguiente es verdadero:  
   

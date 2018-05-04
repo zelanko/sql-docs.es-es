@@ -11,7 +11,7 @@ ms.suite: sql
 ms.technology:
 - drivers
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - target DBMSs and drivers in interoperability [ODBC]
 - interoperability [ODBC], target dbmss and drivers
@@ -20,12 +20,11 @@ caps.latest.revision: 5
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: 904383158c521cad2e29889020d35bf2374ad517
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
-ms.translationtype: MT
+ms.openlocfilehash: f275e344b49f62f1ecc55430c603c0f31f333aa6
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="determining-the-target-dbmss-and-drivers"></a>Determinar el DBMS de destino y los controladores
 La siguiente pregunta a tener en cuenta es, ¿cuáles son el DBMS de destino para la aplicación y los controladores estén disponibles que admiten los DBMS? Dado que las aplicaciones genéricas tienden a ser muy interoperable, la pregunta del DBMS de destino es más apropiada para aplicaciones personalizadas y verticales. Sin embargo, la pregunta de controladores de destino se aplica a todas las aplicaciones, porque los controladores varían ampliamente en velocidad, la calidad, la compatibilidad con las características y la disponibilidad. Además, si hay controladores para redistribuir con la aplicación, el costo y la disponibilidad de planes de licencias deben tenerse en cuenta.  

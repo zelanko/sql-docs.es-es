@@ -24,12 +24,11 @@ caps.latest.revision: 108
 author: edmacauley
 ms.author: edmaca
 manager: craigg
-ms.workload: On Demand
-ms.openlocfilehash: bc5ed5d56541436e80eeafdccb1b1cdfe3ec6c9c
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
-ms.translationtype: MT
+ms.openlocfilehash: 03167b2b5544b4800cde32bed572f51bc82bd077
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="spaddarticle-transact-sql"></a>sp_addarticle (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -183,7 +182,7 @@ sp_addarticle [ @publication = ] 'publication'
  Es una cláusula de restricción (WHERE) que define un filtro horizontal. Al especificar la cláusula de restricción, omita la palabra clave WHERE. *filter_clause* es **ntext**, su valor predeterminado es null. Para obtener más información, vea [Filtrar datos publicados](../../relational-databases/replication/publish/filter-published-data.md).  
   
  [  **@schema_option =**] *schema_option*  
- Es una máscara de bits de la opción de generación del esquema para el artículo dado. *schema_option* es **binary (8)**y puede ser el [| (OR bit a bit) ](../../t-sql/language-elements/bitwise-or-transact-sql.md) producto de uno o varios de estos valores:  
+ Es una máscara de bits de la opción de generación del esquema para el artículo dado. *schema_option* es **binary (8)** y puede ser el [| (OR bit a bit) ](../../t-sql/language-elements/bitwise-or-transact-sql.md) producto de uno o varios de estos valores:  
   
 > [!NOTE]  
 >  Si este valor es NULL, el sistema genera automáticamente una opción de esquema válida para el artículo dependiendo de las propiedades del artículo. El **opciones de esquema predeterminadas** tabla en la sección Notas muestra el valor que se elegirá según la combinación del tipo de artículo y el tipo de replicación.  

@@ -22,17 +22,16 @@ caps.latest.revision: 33
 author: Minewiskan
 ms.author: owend
 manager: erikre
-ms.workload: Inactive
-ms.openlocfilehash: 53598a178d8b11e03feb81634d76a46974aedfe2
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
-ms.translationtype: MT
+ms.openlocfilehash: 2efbc1d57b79ae1794db19564553d4aa91cf65bf
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="reserved-keywords-dmx"></a>Palabras clave reservadas (DMX)
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
 
-  [!INCLUDE[msCoName](../includes/msconame-md.md)][!INCLUDE[ssASversion2005](../includes/ssasversion2005-md.md)] reserva ciertas palabras clave para su uso exclusivo. Estas palabras clave no se pueden usar en ninguna parte de las instrucciones DMX (Extensiones de minería de datos), excepto en las posiciones que define [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] en la referencia del lenguaje DMX. Estas palabras clave DMX restringidas incluyen los miembros siguientes:  
+  [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssASversion2005](../includes/ssasversion2005-md.md)] reserva ciertas palabras clave para su uso exclusivo. Estas palabras clave no se pueden usar en ninguna parte de las instrucciones DMX (Extensiones de minería de datos), excepto en las posiciones que define [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] en la referencia del lenguaje DMX. Estas palabras clave DMX restringidas incluyen los miembros siguientes:  
   
 -   Todas las instrucciones de definición de datos aparecen en el tema, [instrucciones de definición de datos de DMX](../dmx/dmx-statements-data-definition.md).  
   
@@ -46,13 +45,13 @@ ms.lasthandoff: 01/08/2018
   
  Cuando se asignan nombres a objetos de una base de datos, se recomienda usar una convención de nomenclatura que evite las palabras clave reservadas.  
   
- Si la base de datos contiene nombres que coinciden con las palabras clave reservadas, deberá usar identificadores delimitados al hacer referencia a esos objetos. Para obtener más información, consulte [identificadores &#40; DMX &#41;](../dmx/identifiers-dmx.md).  
+ Si la base de datos contiene nombres que coinciden con las palabras clave reservadas, deberá usar identificadores delimitados al hacer referencia a esos objetos. Para obtener más información, consulte [identificadores &#40;DMX&#41;](../dmx/identifiers-dmx.md).  
   
 ## <a name="see-also"></a>Vea también  
- [Extensiones de minería de datos &#40; DMX &#41; Referencia](../dmx/data-mining-extensions-dmx-reference.md)   
- [Extensiones de minería de datos &#40; DMX &#41; Referencia de instrucciones](../dmx/data-mining-extensions-dmx-statements.md)   
- [Extensiones de minería de datos &#40; DMX &#41; Convenciones de sintaxis](../dmx/data-mining-extensions-dmx-syntax-conventions.md)   
- [Extensiones de minería de datos &#40; DMX &#41; Elementos de sintaxis](../dmx/data-mining-extensions-dmx-syntax-elements.md)   
+ [Extensiones de minería de datos &#40;DMX&#41; Referencia](../dmx/data-mining-extensions-dmx-reference.md)   
+ [Extensiones de minería de datos &#40;DMX&#41; Referencia de instrucciones](../dmx/data-mining-extensions-dmx-statements.md)   
+ [Extensiones de minería de datos &#40;DMX&#41; Convenciones de sintaxis](../dmx/data-mining-extensions-dmx-syntax-conventions.md)   
+ [Extensiones de minería de datos &#40;DMX&#41; Elementos de sintaxis](../dmx/data-mining-extensions-dmx-syntax-elements.md)   
  [Descripción de la instrucción Select de DMX](../dmx/understanding-the-dmx-select-statement.md)  
   
   

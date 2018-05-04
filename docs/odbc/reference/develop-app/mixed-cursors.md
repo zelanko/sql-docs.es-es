@@ -11,7 +11,7 @@ ms.suite: sql
 ms.technology:
 - drivers
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - mixed cursors [ODBC]
 - cursors [ODBC], dynamic
@@ -24,12 +24,11 @@ caps.latest.revision: 5
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: 16fd4840718c286adfe711b6b7322154f7f5f9cb
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
-ms.translationtype: MT
+ms.openlocfilehash: 27038553bb380c67f66d8137354d7cbec4ff1a33
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="mixed-cursors"></a>Cursores mixtos
 Un cursor mixto es una combinación de un cursor controlado por conjunto de claves y un cursor dinámico. Se utiliza cuando el conjunto de resultados es demasiado grande para guardar razonablemente claves para el conjunto de resultados completo. Cursores mixtos se implementan mediante la creación de un conjunto de claves que es menor que el conjunto de resultados completo pero mayor que el conjunto de filas.  

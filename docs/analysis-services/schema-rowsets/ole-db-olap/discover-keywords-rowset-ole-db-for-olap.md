@@ -23,15 +23,15 @@ caps.latest.revision: 12
 author: Minewiskan
 ms.author: owend
 manager: kfile
-ms.workload: Inactive
-ms.openlocfilehash: 896aad63ea49741e91b728b688812cf0c5f22e08
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
-ms.translationtype: MT
+ms.openlocfilehash: fb9e1edd38951aa391fc6ecb11a928d20d6c337d
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="discoverkeywords-rowset-ole-db-for-olap"></a>Conjunto de filas DISCOVER_KEYWORDS (OLE DB para OLAP)
-[!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]Enumera una lista de palabras reservadas por el proveedor.  
+[!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]
+  Enumera una lista de palabras reservada por el proveedor.  
   
 ## <a name="rowset-columns"></a>Columnas del conjunto de filas  
  El conjunto de filas DISCOVER_KEYWORDS contiene las columnas siguientes.  
@@ -50,6 +50,6 @@ ms.lasthandoff: 01/08/2018
 |**Palabra clave**|**DBTYPE_WSTR**|Opcional.|  
   
 ## <a name="see-also"></a>Vea también  
- [OLE DB para los conjuntos de filas de esquema OLAP](../../../analysis-services/schema-rowsets/ole-db-olap/ole-db-for-olap-schema-rowsets.md)  
+ [OLE DB para OLAP Schema Rowsets](../../../analysis-services/schema-rowsets/ole-db-olap/ole-db-for-olap-schema-rowsets.md)  
   
   

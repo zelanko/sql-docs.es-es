@@ -25,12 +25,11 @@ caps.latest.revision: 21
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: 9f6a86d97bd56cc85758b955327900d6c830d232
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
-ms.translationtype: MT
+ms.openlocfilehash: 43c6455c5db50ea2df8dffbda3096135e79f5008
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="spsyscollectorsetwarehouseinstancename-transact-sql"></a>sp_syscollector_set_warehouse_instance_name (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -50,7 +49,7 @@ sp_syscollector_set_warehouse_instance_name [ @instance_name = ] 'instance_name'
  [ @instance_name =] '*instance_name*'  
  Es el nombre de la instancia. *instance_name* es **sysname** y el valor predeterminado es la instancia local si es NULL.  
   
-> **Nota:***instance_name* debe ser el nombre de instancia completo, que consta del nombre del equipo y el nombre de instancia en el formulario *computerName* \\ *nombreDeInstancia*.    
+> **Nota:***instance_name* debe ser el nombre de instancia completo, que consta del nombre del equipo y el nombre de instancia en el formulario *computerName* \\ *nombreDeInstancia*.  
   
 ## <a name="return-code-values"></a>Valores de código de retorno  
  **0** (correcto) o **1** (error)  

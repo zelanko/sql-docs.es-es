@@ -1,31 +1,23 @@
 ---
 title: Power Pivot Usage Data Collection | Documentos de Microsoft
-ms.custom: 
-ms.date: 03/14/2017
-ms.prod: analysis-services
-ms.prod_service: analysis-services
-ms.service: 
-ms.component: data-mining
-ms.reviewer: 
-ms.suite: pro-bi
-ms.technology: 
-ms.tgt_pltfrm: 
+ms.date: 05/02/2018
+ms.prod: sql
+ms.technology: analysis-services
+ms.component: ppvt-sharepoint
 ms.topic: article
-ms.assetid: 9057cb89-fb17-466e-a1ce-192c8ca20692
-caps.latest.revision: 
-author: Minewiskan
 ms.author: owend
+ms.reviewer: owend
+author: minewiskan
 manager: kfile
-ms.workload: Inactive
-ms.openlocfilehash: 69286dea78c53adc50b447ffa8e55339d07c4d9e
-ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
+ms.openlocfilehash: 331b90f3bca4f9a50e545e8dec3e6896c8fefa6f
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/15/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="power-pivot-usage-data-collection"></a>Recopilación de datos de uso de Power Pivot
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
-La recopilación de datos de uso es una característica propia de SharePoint para las granjas. [!INCLUDE[ssGemini_md](../../includes/ssgemini-md.md)] para SharePoint usa y extiende este sistema para proporcionar informes en el panel de administración de [!INCLUDE[ssGemini_md](../../includes/ssgemini-md.md)] que muestran cómo se usan los datos y servicios de [!INCLUDE[ssGemini_md](../../includes/ssgemini-md.md)] . Según cómo haya instalado SharePoint, la recopilación de datos de uso podría estar desactivada para la granja. El administrador de una granja debe habilitar el registro de uso para crear los datos de uso que aparecen en el panel de administración de [!INCLUDE[ssGemini_md](../../includes/ssgemini-md.md)] .  
+  La recopilación de datos de uso es una característica propia de SharePoint para las granjas. [!INCLUDE[ssGemini_md](../../includes/ssgemini-md.md)] para SharePoint usa y extiende este sistema para proporcionar informes en el panel de administración de [!INCLUDE[ssGemini_md](../../includes/ssgemini-md.md)] que muestran cómo se usan los datos y servicios de [!INCLUDE[ssGemini_md](../../includes/ssgemini-md.md)] . Según cómo haya instalado SharePoint, la recopilación de datos de uso podría estar desactivada para la granja. El administrador de una granja debe habilitar el registro de uso para crear los datos de uso que aparecen en el panel de administración de [!INCLUDE[ssGemini_md](../../includes/ssgemini-md.md)] .  
   
  Para obtener información sobre los datos de uso en el Panel de administración de [!INCLUDE[ssGemini_md](../../includes/ssgemini-md.md)] , vea [Panel de administración de Power Pivot y datos de uso](../../analysis-services/power-pivot-sharepoint/power-pivot-management-dashboard-and-usage-data.md).  
   

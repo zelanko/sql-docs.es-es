@@ -11,7 +11,7 @@ ms.suite: sql
 ms.technology:
 - drivers
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - backward compatibility [ODBC], new features in release
 - ODBC drivers [ODBC], backward compatibility
@@ -23,15 +23,14 @@ caps.latest.revision: 7
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: bb8ca5b716e4414d39597da9671b7c823461b2ee
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
-ms.translationtype: MT
+ms.openlocfilehash: 77620585dffabc97a9e85455236bf51b575d0d3a
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="new-features"></a>Nuevas características
-Se ha introducido la nueva funcionalidad siguiente en ODBC 3. *x*. Un ODBC 3. *x* aplicación trabajar con una API ODBC 2*.x* controlador no podrá utilizar esta funcionalidad. ODBC 3. *x* el Administrador de controladores no se asigna estas características cuando se trabaja con una API ODBC 2*.x* controlador.  
+Se ha introducido la nueva funcionalidad siguiente en ODBC 3. *x*. Un ODBC 3. *x* aplicación trabajar con una API ODBC 2 *.x* controlador no podrá utilizar esta funcionalidad. ODBC 3. *x* el Administrador de controladores no se asigna estas características cuando se trabaja con una API ODBC 2 *.x* controlador.  
   
 -   Las funciones que toman un descriptor de controlan como argumento: **SQLSetDescField**, **SQLGetDescField**, **SQLSetDescRec**, **SQLGetDescRec**, y **SQLCopyDesc**.  
   

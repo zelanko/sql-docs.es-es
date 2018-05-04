@@ -1,38 +1,19 @@
 ---
-title: "AMO otras clases y métodos | Documentos de Microsoft"
-ms.custom: 
-ms.date: 02/14/2018
-ms.prod: analysis-services
-ms.prod_service: analysis-services
-ms.service: 
-ms.component: 
-ms.reviewer: 
-ms.suite: pro-bi
-ms.technology: 
-ms.tgt_pltfrm: 
-ms.topic: reference
-applies_to:
-- SQL Server 2016 Preview
-helpviewer_keywords:
-- restores [AMO]
-- AMO, backup and restore
-- capture logs [AMO]
-- AmoException class [AMO]
-- Analysis Management Objects, backup and restore
-- assembly objects [AMO]
-- traces [AMO]
-- backups [AMO]
-ms.assetid: 60ed5cfa-3a03-4161-8271-0a71a3ae363b
-caps.latest.revision: 
-author: Minewiskan
+title: AMO otras clases y métodos | Documentos de Microsoft
+ms.date: 05/02/2018
+ms.prod: sql
+ms.technology: analysis-services
+ms.component: amo
+ms.topic: article
 ms.author: owend
+ms.reviewer: owend
+author: minewiskan
 manager: kfile
-ms.workload: Inactive
-ms.openlocfilehash: 5ae261375e96cf6bfa322262b0b13653b9534331
-ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
+ms.openlocfilehash: 9923daa4b7cb9b504fde047f073579279b3d05e8
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/15/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="amo-other-classes-and-methods"></a>Otras clases y métodos de AMO
   Esta sección contiene clases comunes que no son específicas de OLAP o de minería de datos, y que son útiles cuando se administran objetos en [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)]. Estas clases incluyen características como procedimientos almacenados, seguimientos, excepciones y copias de seguridad y restauración.  
@@ -53,7 +34,7 @@ ms.lasthandoff: 02/15/2018
   
  ![Otras clases de AMO](../../../analysis-services/multidimensional-models/analysis-management-objects/media/amo-otherclasses.gif "otras clases de AMO")  
   
-##  <a name="Assembly">Objetos de ensamblado</a>  
+##  <a name="Assembly"></a> Objetos de ensamblado  
  Para crear un objeto <xref:Microsoft.AnalysisServices.Assembly>, éste se agrega a la colección de ensamblados del servidor y el objeto <xref:Microsoft.AnalysisServices.Assembly> se actualiza en el servidor mediante el método Update.  
   
  Para quitar un objeto <xref:Microsoft.AnalysisServices.Assembly>, éste se tiene que quitar mediante el método Drop del objeto <xref:Microsoft.AnalysisServices.Assembly>. Al quitar un objeto <xref:Microsoft.AnalysisServices.Assembly> de la colección de ensamblados de la base de datos, no se quita el ensamblado, únicamente le impide verlo en su aplicación hasta que vuelva a ejecutarla.  
@@ -63,7 +44,7 @@ ms.lasthandoff: 02/15/2018
 > [!IMPORTANT]  
 >  Los ensamblados COM pueden suponer un riesgo para la seguridad. Debido a esto y a otras consideraciones, los ensamblados COM están en desuso en [!INCLUDE[ssASversion10](../../../includes/ssasversion10-md.md)]. Es posible que este tipo de ensamblados no esté disponible en versiones futuras.  
   
-##  <a name="Backup">Métodos de restauración y copia de seguridad</a>  
+##  <a name="Backup"></a> Métodos de restauración y copia de seguridad  
  Las copias de seguridad y restauración son métodos que se usan para realizar copias de una base de datos [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] y recuperar la base de datos a partir de la copia. El método de copias de seguridad pertenece al objeto <xref:Microsoft.AnalysisServices.Database> y el método de restauración pertenece al objeto <xref:Microsoft.AnalysisServices.Server>.  
   
  Los administradores del servidor y bases de datos son los únicos que pueden realizar una copia de seguridad de una base de datos. Los administradores del servidor son los únicos que pueden restaurar una base de datos en un servidor distinto del servidor en el que se realizó la copia de seguridad. Los administradores de bases de datos pueden restaurar una base de datos sobrescribiendo la base de datos existente solo si son propietarios de la base de datos que se va a sobrescribir. Después de una restauración, puede que el administrador de bases de datos pierda el acceso a la base de datos restaurada si se restauró con sus definiciones de seguridad originales.  
@@ -74,11 +55,11 @@ ms.lasthandoff: 02/15/2018
  Para realizar una copia de seguridad de una base de datos, use el método de copias de seguridad del objeto de la base de datos con el nombre del archivo de copia de seguridad como un parámetro.  
   
 ##### <a name="default-values"></a>Valores predeterminados:  
- AllowOverwrite=**false**  
+ AllowOverwrite =**false**  
   
  BackupRemotePartitions=**false**  
   
- Security=**CopyAll**  
+ Seguridad =**CopyAll**  
   
  ApplyCompression=**true**  
   
@@ -86,11 +67,11 @@ ms.lasthandoff: 02/15/2018
  Para restaurar una base de datos a un servidor, use el método de restauración del servidor con el archivo de copia de seguridad como un parámetro.  
   
 ##### <a name="default-values"></a>Valores predeterminados:  
- AllowOverwrite=**false**  
+ AllowOverwrite =**false**  
   
  DataSourceType=**Remote**  
   
- Security=**CopyAll**  
+ Seguridad =**CopyAll**  
   
 ##### <a name="restrictions"></a>Restricciones  
   
@@ -116,7 +97,7 @@ ms.lasthandoff: 02/15/2018
   
 -   **Contraseña**, si no están en blanco, especifica que el servidor cifrará el archivo de copia de seguridad.  
   
-##  <a name="Traces">Objetos de seguimiento</a>  
+##  <a name="Traces"></a> Objetos de seguimiento  
  El seguimiento es un marco que se usa para supervisar, reproducir y administrar una instancia de [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)]. Una aplicación cliente, como [!INCLUDE[ssSqlProfiler](../../../includes/sssqlprofiler-md.md)], suscribe a un seguimiento y el servidor devuelve los eventos de seguimiento según lo especificado en la definición de seguimiento.  
   
  Una clase de eventos describe cada evento. La clase de eventos describe el tipo de evento que se genera. En una clase de eventos, las subclases de eventos describen un nivel más concreto de clasificación. Varias columnas describen cada evento. Las columnas que describen un evento de seguimiento son coherentes para todos los eventos y siguen la estructura de Seguimiento de SQL. La información registrada en cada columna puede diferir dependiendo de la clase de eventos; es decir, se define un conjunto predefinido de columnas para cada seguimiento, pero el significado de la columna puede diferir dependiendo de la clase de eventos. Por ejemplo, la columna TextData se usa para registrar el ASSL original para todos los eventos de instrucción.  
@@ -155,14 +136,14 @@ ms.lasthandoff: 02/15/2018
   
 6.  Continúe con su aplicación.  
   
-##  <a name="CaptureLog">Clase CaptureLog y atributo CaptureXML</a>  
+##  <a name="CaptureLog"></a> Clase CaptureLog y atributo CaptureXML  
  Todas las acciones que ejecuta AMO se envían al servidor como mensajes XMLA. AMO proporciona los recursos para capturar todos estos mensajes sin los encabezados SOAP. Para obtener más información, consulte [Introducción a las clases de AMO](../../../analysis-services/multidimensional-models/analysis-management-objects/amo-classes-introduction.md). CaptureLog es el mecanismo de AMO para generar script de objetos y operaciones; los objetos y operaciones se incluyen en el script en XMLA.  
   
  Para empezar a capturar el código XML, debe establecerse en la propiedad del objeto de servidor CaptureXML **true**. A continuación, todas las acciones que se enviarán al servidor se comenzarán a capturar en la clase CaptureLog, sin las acciones que se envían al servidor. CaptureLog se considera una clase porque tiene un método, Clear, que se usa para borrar el registro de captura.  
   
  Para leer el registro, consiga la colección de cadenas e inicie la iteración sobre las cadenas. Asimismo, puede concatenar todos los registros en una cadena mediante el método ConcatenateCaptureLog del objeto de servidor. ConcatenateCaptureLog debe tener tres parámetros, dos de los cuales son necesarios. Los parámetros necesarios son *transaccional*, de tipo booleano, y *paralelo*, de tipo booleano. Si *transaccional* está establecido en **true**, indica que se creará el archivo por lotes XML como una sola transacción en lugar de cada comando que se va a trata como una transacción independiente. Si *paralelo* está establecido en **true**, indica que se va a grabar todos los comandos del archivo por lotes para la ejecución simultánea en lugar de secuencialmente como se registraron.  
   
-##  <a name="AMO">Clase de excepción AMOException</a>  
+##  <a name="AMO"></a> Clase de excepción AMOException  
  Use la clase de excepción AMOException para detectar con facilidad las excepciones que produce AMO en su aplicación.  
   
  AMO producirá excepciones en los diferentes problemas encontrados. En la tabla siguiente se enumera el tipo de excepciones que controla AMO. Las excepciones se derivan de la clase <xref:Microsoft.AnalysisServices.AmoException>.  
@@ -178,7 +159,7 @@ ms.lasthandoff: 02/15/2018
 ## <a name="see-also"></a>Vea también  
  <xref:Microsoft.AnalysisServices>   
  [Introducción a las clases AMO](../../../analysis-services/multidimensional-models/analysis-management-objects/amo-classes-introduction.md)   
- [Arquitectura lógica &#40; Analysis Services - datos multidimensionales &#41;](../../../analysis-services/multidimensional-models/olap-logical/understanding-microsoft-olap-logical-architecture.md)   
- [Objetos de base de datos &#40; Analysis Services - datos multidimensionales &#41;](../../../analysis-services/multidimensional-models/olap-logical/database-objects-analysis-services-multidimensional-data.md)  
+ [Arquitectura lógica & #40; Analysis Services - datos multidimensionales & #41;](../../../analysis-services/multidimensional-models/olap-logical/understanding-microsoft-olap-logical-architecture.md)   
+ [Objetos de base de datos & #40; Analysis Services - datos multidimensionales & #41;](../../../analysis-services/multidimensional-models/olap-logical/database-objects-analysis-services-multidimensional-data.md)  
   
   

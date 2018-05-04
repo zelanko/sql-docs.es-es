@@ -11,7 +11,7 @@ ms.suite: sql
 ms.technology:
 - drivers
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 apiname:
 - SQLInstallDriverEx
 apilocation:
@@ -26,12 +26,11 @@ caps.latest.revision: 16
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: 85c6bcc740743473e8563fc3c3c25e967caff095
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
-ms.translationtype: MT
+ms.openlocfilehash: 427a72ebdf63df7bb8d3d1ef93f306c9167782d5
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="sqlinstalldriverex-function"></a>SQLInstallDriverEx (función)
 **Conformidad**  
@@ -106,9 +105,9 @@ BOOL SQLInstallDriverEx(
 ## <a name="comments"></a>Comentarios  
  El *lpszDriver* argumento es una lista de atributos en forma de pares de palabra clave y valor. Cada par se termina con un byte null, y toda la lista se termina con un byte nulo. (Es decir, dos bytes nulos marcan el final de la lista.) El formato de esta lista es como sigue:  
   
- *controlador desc* **\\**0Driver**=***nombre del controlador de archivo DLL***\\**0 [el programa de instalación **= ***nombre del programa de instalación de archivo DLL***\\**0]  
+ *controlador desc* **\\** 0Driver**=***nombre del controlador de archivo DLL***\\** 0 [el programa de instalación **= ***nombre del programa de instalación de archivo DLL***\\** 0]  
   
- [*controlador-attr-palabraclave1***=***value1 ***\\**0] [*controlador-attr-palabraclave2***=*** value2 ***\\**0]... **\\**0  
+ [*controlador-attr-palabraclave1***=*** value1 ***\\** 0] [* controlador-attr-palabraclave2***=*** value2 ***\\** 0]... **\\** 0  
   
  donde \0 es un byte nulo y *controlador-attr-keywordn* es cualquier palabra clave de atributo de controlador. Las palabras clave deben aparecer en el orden especificado. Por ejemplo, imagine que un controlador de archivos de texto con formato tiene controlador independiente y el programa de instalación de archivos DLL y puede utilizar archivos con las extensiones .txt y .csv. El *lpszDriver* argumento para este controlador podría ser el siguiente:  
   

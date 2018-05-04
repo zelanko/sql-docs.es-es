@@ -1,35 +1,34 @@
 ---
-title: "Contenido del modelo para los modelos de serie temporal de minería de datos (Analysis Services: minería de datos) | Documentos de Microsoft"
-ms.custom: 
+title: 'Contenido del modelo para los modelos de serie temporal de minería de datos (Analysis Services: minería de datos) | Documentos de Microsoft'
+ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: analysis-services
 ms.prod_service: analysis-services
-ms.service: 
+ms.service: ''
 ms.component: data-mining
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: pro-bi
-ms.technology: 
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.technology: ''
+ms.tgt_pltfrm: ''
+ms.topic: conceptual
 helpviewer_keywords:
 - time series algorithms [Analysis Services]
 - time series [Analysis Services]
 - mining model content, time series models
 ms.assetid: bb225387-fbbf-4189-b172-9daa2495fa9c
-caps.latest.revision: 
+caps.latest.revision: 26
 author: Minewiskan
 ms.author: owend
 manager: kfile
-ms.workload: Inactive
-ms.openlocfilehash: 31909fbe1a60bca85249d7c28b11574a512f442d
-ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
-ms.translationtype: MT
+ms.openlocfilehash: f68c5aa0af3130b58f196a33cadf66404b964ee5
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/15/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="mining-model-content-for-time-series-models-analysis-services---data-mining"></a>Contenido del modelo de minería de datos para los modelos de serie temporal (Analysis Services - Minería de datos)
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
-Todos los modelos de minería de datos utilizan la misma estructura para almacenar su contenido. Esta estructura se define según el conjunto de filas de esquema de contenido de minería de datos. Sin embargo, dentro de esa estructura estándar, los nodos que contienen información están organizados de maneras diferentes que representan varios tipos de árboles. En este tema se describe cómo se organizan los nodos, y lo que significa cada uno de ellos, para los modelos de minería de datos basados en el algoritmo de serie temporal [!INCLUDE[msCoName](../../includes/msconame-md.md)] .  
+  Todos los modelos de minería de datos utilizan la misma estructura para almacenar su contenido. Esta estructura se define según el conjunto de filas de esquema de contenido de minería de datos. Sin embargo, dentro de esa estructura estándar, los nodos que contienen información están organizados de maneras diferentes que representan varios tipos de árboles. En este tema se describe cómo se organizan los nodos, y lo que significa cada uno de ellos, para los modelos de minería de datos basados en el algoritmo de serie temporal [!INCLUDE[msCoName](../../includes/msconame-md.md)] .  
   
  Para obtener una explicación del contenido general del modelo de minería de datos que se aplica a todos los tipos de modelos, vea [Contenido del modelo de minería de datos &#40;Analysis Services - Minería de datos&#41;](../../analysis-services/data-mining/mining-model-content-analysis-services-data-mining.md).  
   
@@ -314,7 +313,7 @@ WHERE NODE_TYPE = 15
 ##  <a name="bkmk_ARIMA_1"></a> Descripción del árbol ARIMA  
  Cada estructura en un modelo ARIMA se corresponde con una *periodicidad* o *estructura periódica*. Una estructura periódica es un patrón de datos que se repite a lo largo de la serie de datos. Se permite alguna variación secundaria en el patrón, dentro de los límites estadísticos. La periodicidad se mide según las unidades de tiempo predeterminadas que se utilizaron en los datos de entrenamiento. Por ejemplo, si los datos de entrenamiento proporcionan datos de ventas para cada día, la unidad de tiempo predeterminada será un día, y todas las estructuras periódicas se definirán como un número concreto de días.  
   
- Cada período que el algoritmo detecta obtiene su propio nodo de estructura. Por ejemplo, si se están analizando los datos de las ventas diarias, el modelo podría detectar estructuras periódicas que representen semanas. En este caso, el algoritmo creará dos estructuras periódicas en el modelo terminado: una para el período diario predeterminado, que se indica como \{1\}, y otra para las semanas, que se indica mediante \{7\}.  
+ Cada período que el algoritmo detecta obtiene su propio nodo de estructura. Por ejemplo, si se están analizando los datos de las ventas diarias, el modelo podría detectar estructuras periódicas que representen semanas. En este caso, el algoritmo crearía dos estructuras periódicas en el modelo terminado: uno para el período diario predeterminado, que se indica con la notación {1}, y otro para las semanas, que se indica mediante {7}.  
   
  Por ejemplo, la siguiente consulta devuelve todas las estructuras ARIMA de un modelo de minería de datos.  
   
@@ -378,7 +377,7 @@ AND (NODE_TYPE = 29 or NODE_TYPE = 30)
 ### <a name="time-series-formula-for-arima"></a>Fórmula de serie temporal para ARIMA  
  Para ver la fórmula completa de cualquier nodo ARIMA, recomendamos utilizar la **Leyenda de minería de datos** del [Visor de series temporales de Microsoft](../../analysis-services/data-mining/browse-a-model-using-the-microsoft-time-series-viewer.md), que presenta el orden de regresión automática, las medias móviles y otros elementos de la ecuación organizados en un formato coherente.  
   
--   [Ver la fórmula de serie temporal de un modelo &#40; minería de datos &#41;](../../analysis-services/data-mining/view-the-formula-for-a-time-series-model-data-mining.md)  
+-   [Ver la fórmula de serie temporal de un modelo & #40; minería de datos & #41;](../../analysis-services/data-mining/view-the-formula-for-a-time-series-model-data-mining.md)  
   
  En esta sección se presenta una ecuación de ejemplo y se explican los términos básicos.  
   
@@ -389,7 +388,7 @@ AND (NODE_TYPE = 29 or NODE_TYPE = 30)
   
 `ARIMA ({1,1},0,{1,1.49791920964142,1.10640053499397,0.888873034670339,-5.05429403071953E-02,-0.905265316720334,-0.961908900643379,-0.649991020901922}) Intercept:56.8888888888889`  
   
- Esta ecuación está en el formato ARIMA largo, que incluye los valores de los coeficientes y la intersección. El formato abreviado de esta ecuación sería {1,0,7}, donde 1 indica el período como un recuento de intervalos de tiempo, 0 indica el orden de diferencia de los términos y 7 indica el número de coeficientes.  
+ Esta ecuación está en el formato ARIMA largo, que incluye los valores de los coeficientes y la intersección. El formato abreviado de esta ecuación sería {1,0,7}, donde 1 indica el período como un recuento de intervalos de tiempo, 0 indica que el orden de diferencia de término y 7 indica el número de coeficientes.  
   
 > [!NOTE]  
 >  Analysis Services calcula una constante para hallar la varianza, pero la constante en sí no se muestra en la interfaz de usuario. Sin embargo, puede ver la varianza correspondiente a cualquier punto de la serie como una función de esta constante; para ello, seleccione **Mostrar desviaciones** en la vista **Gráfico** . La Información sobre herramientas para cada serie de datos muestra la varianza correspondiente a un punto predicho concreto.  
@@ -444,7 +443,7 @@ AND (NODE_TYPE = 29 or NODE_TYPE = 30)
  Puede resultar complicado recuperar información de un árbol ARTXP, porque la información correspondiente a cada división se encuentra en un lugar diferente dentro del árbol. Por consiguiente, con un modelo ARTXP, debe obtener todas las piezas y, a continuación, procesarlas de alguna forma para reconstituir la fórmula completa. Recuperar una ecuación a partir de un modelo ARIMA es más fácil, porque el árbol pone la fórmula a su disposición en distintos puntos. Para obtener información sobre cómo crear una consulta que recupere esta información, vea [Ejemplos de consultas de modelos de serie temporal](../../analysis-services/data-mining/time-series-model-query-examples.md).  
   
 ## <a name="see-also"></a>Vea también  
- [Contenido del modelo de minería de datos &#40; Analysis Services: minería de datos &#41;](../../analysis-services/data-mining/mining-model-content-analysis-services-data-mining.md)   
+ [Contenido del modelo de minería de datos & #40; Analysis Services: minería de datos & #41;](../../analysis-services/data-mining/mining-model-content-analysis-services-data-mining.md)   
  [Algoritmo de serie temporal de Microsoft](../../analysis-services/data-mining/microsoft-time-series-algorithm.md)   
  [Ejemplos de consultas de modelo de serie temporal](../../analysis-services/data-mining/time-series-model-query-examples.md)   
  [Referencia técnica del algoritmo de serie temporal de Microsoft](../../analysis-services/data-mining/microsoft-time-series-algorithm-technical-reference.md)  

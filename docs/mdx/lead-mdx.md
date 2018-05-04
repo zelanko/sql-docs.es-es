@@ -22,12 +22,11 @@ caps.latest.revision: 32
 author: Minewiskan
 ms.author: owend
 manager: erikre
-ms.workload: Inactive
-ms.openlocfilehash: c53f5c6c240404975318764716a1b6a333064536
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
-ms.translationtype: MT
+ms.openlocfilehash: 8fee382cd27de7bbe1435b4c509dc38a5c068423
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="lead-mdx"></a>Lead (MDX)
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
@@ -55,7 +54,7 @@ Member_Expression.Lead( Index )
   
  Si la posición inicial especificada es negativa, el **provocar** función devuelve un miembro anterior.  
   
- `Lead(1)`es equivalente a la [NextMember](../mdx/nextmember-mdx.md) función. `Lead(-1)`es equivalente a la [PrevMember](../mdx/prevmember-mdx.md) función.  
+ `Lead(1)` es equivalente a la [NextMember](../mdx/nextmember-mdx.md) función. `Lead(-1)` es equivalente a la [PrevMember](../mdx/prevmember-mdx.md) función.  
   
  El **provocar** función es similar a la [Lag](../mdx/lag-mdx.md) funcione, salvo que la **Lag** función busca en la dirección opuesta a la **provocar** función. Es decir, `Lead(n)` es equivalente a `Lag(-n)`.  
   
@@ -77,6 +76,6 @@ FROM [Adventure Works]
 ```  
   
 ## <a name="see-also"></a>Vea también  
- [Referencia de funciones MDX &#40; MDX &#41;](../mdx/mdx-function-reference-mdx.md)  
+ [Referencia de funciones MDX & #40; MDX & #41;](../mdx/mdx-function-reference-mdx.md)  
   
   

@@ -22,12 +22,11 @@ caps.latest.revision: 11
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: 96cda7fc0a6768f614024c58f0ec3d20fdcd1cfd
-ms.sourcegitcommit: bb044a48a6af9b9d8edb178dc8c8bd5658b9ff68
-ms.translationtype: MT
+ms.openlocfilehash: b3a3bd9f746c53a046644dff8840a09024addb7c
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/18/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="parameter-object"></a>Objeto Parameter
 Representa un parámetro o un argumento asociado con un [comando](../../../ado/reference/ado-api/command-object-ado.md) objeto basado en una consulta con parámetros o un procedimiento almacenado.  

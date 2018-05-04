@@ -1,34 +1,23 @@
 ---
 title: Definir dimensiones vinculadas | Documentos de Microsoft
-ms.custom: 
-ms.date: 03/04/2017
-ms.prod: analysis-services
-ms.prod_service: analysis-services
-ms.service: 
-ms.component: data-mining
-ms.reviewer: 
-ms.suite: pro-bi
-ms.technology: 
-ms.tgt_pltfrm: 
+ms.date: 05/02/2018
+ms.prod: sql
+ms.technology: analysis-services
+ms.component: multidimensional-models
 ms.topic: article
-helpviewer_keywords:
-- dimensions [Analysis Services], linked
-- linked dimensions [Analysis Services]
-ms.assetid: d5ad5eae-5dde-46a6-91c3-c8766d016dec
-caps.latest.revision: 
-author: Minewiskan
 ms.author: owend
+ms.reviewer: owend
+author: minewiskan
 manager: kfile
-ms.workload: Inactive
-ms.openlocfilehash: 2d9b665cc3aa5dd70ea481cd6b3328ffb6d7aa82
-ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
+ms.openlocfilehash: 9f779e994f38565f7c793c9b2a419d2c80b307f8
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/15/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="define-linked-dimensions"></a>Definir dimensiones vinculadas
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
-Una dimensión vinculada se basa en una dimensión creada y almacenada en otra base de datos de Analysis Services de la misma versión y con el mismo nivel de compatibilidad. Con una dimensión vinculada, puede crear, almacenar y mantener una dimensión en una base de datos y permitir que esa dimensión esté disponible para los usuarios de varias bases de datos. Para los usuarios, una dimensión vinculada es como cualquier otra dimensión.  
+  Una dimensión vinculada se basa en una dimensión creada y almacenada en otra base de datos de Analysis Services de la misma versión y con el mismo nivel de compatibilidad. Con una dimensión vinculada, puede crear, almacenar y mantener una dimensión en una base de datos y permitir que esa dimensión esté disponible para los usuarios de varias bases de datos. Para los usuarios, una dimensión vinculada es como cualquier otra dimensión.  
   
  Las dimensiones vinculadas son de solo lectura. Si desea modificar la dimensión o crear relaciones nuevas, debe cambiar la dimensión de origen, y después eliminar y volver a crear la dimensión vinculada y sus relaciones. No puede actualizar una dimensión vinculada para elegir cambios del objeto de origen.  
   

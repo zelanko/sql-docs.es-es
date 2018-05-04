@@ -1,37 +1,23 @@
 ---
-title: "Ejemplos de consultas de modelo de asociación | Documentos de Microsoft"
-ms.custom: 
-ms.date: 03/14/2017
-ms.prod: analysis-services
-ms.prod_service: analysis-services
-ms.service: 
+title: Ejemplos de consultas de modelo de asociación | Documentos de Microsoft
+ms.date: 05/01/2018
+ms.prod: sql
+ms.technology: analysis-services
 ms.component: data-mining
-ms.reviewer: 
-ms.suite: pro-bi
-ms.technology: 
-ms.tgt_pltfrm: 
 ms.topic: article
-helpviewer_keywords:
-- itemsets [Analysis Services]
-- association algorithms [Analysis Services]
-- rules [Data Mining]
-- association rules
-- content queries [DMX]
-ms.assetid: 68b39f5c-c439-44ac-8046-6f2d36649059
-caps.latest.revision: 
-author: Minewiskan
 ms.author: owend
+ms.reviewer: owend
+author: minewiskan
 manager: kfile
-ms.workload: Inactive
-ms.openlocfilehash: 1313c2933ba37f161edd4980a6b931388f60e13b
-ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
+ms.openlocfilehash: 965faf24b55fb206746076d5773c158fa20375de
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/15/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="association-model-query-examples"></a>Ejemplos de consultas del modelo de asociación
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
-Cuando se crea una consulta en un modelo de minería de datos, puede tratarse de una consulta de contenido, que proporciona detalles sobre las reglas y los conjuntos de elementos detectados durante el análisis, o una consulta de predicción, que utiliza las asociaciones detectadas en los datos para realizar predicciones. En un modelo de asociación, las predicciones se basan normalmente en reglas y se pueden utilizar para realizar recomendaciones, mientras que las consultas de contenido normalmente exploran la relación entre los conjuntos de elementos. También se puede recuperar metadatos sobre el modelo.  
+  Cuando se crea una consulta en un modelo de minería de datos, puede tratarse de una consulta de contenido, que proporciona detalles sobre las reglas y los conjuntos de elementos detectados durante el análisis, o una consulta de predicción, que utiliza las asociaciones detectadas en los datos para realizar predicciones. En un modelo de asociación, las predicciones se basan normalmente en reglas y se pueden utilizar para realizar recomendaciones, mientras que las consultas de contenido normalmente exploran la relación entre los conjuntos de elementos. También se puede recuperar metadatos sobre el modelo.  
   
  En esta sección se explica cómo crear estos tipos de consultas en modelos basados en el algoritmo de reglas de asociación de [!INCLUDE[msCoName](../../includes/msconame-md.md)] .  
   
@@ -232,19 +218,19 @@ ORDER BY NODE_SUPPORT DESC
 |||  
 |-|-|  
 |Función de predicción|Uso|  
-|[IsDescendant &#40; DMX &#41;](../../dmx/isdescendant-dmx.md)|Determina si un nodo es un elemento secundario de otro nodo en el gráfico de red neuronal.|  
-|[IsInNode &#40; DMX &#41;](../../dmx/isinnode-dmx.md)|Indica si el nodo especificado contiene el caso actual.|  
-|[PredictAdjustedProbability &#40; DMX &#41;](../../dmx/predictadjustedprobability-dmx.md)|Devuelve la probabilidad ponderada.|  
-|[PredictAssociation &#40; DMX &#41;](../../dmx/predictassociation-dmx.md)|Predice los miembros de un conjunto de datos asociativo.|  
-|[PredictHistogram &#40; DMX &#41;](../../dmx/predicthistogram-dmx.md)|Devuelve una tabla de valores relacionados con el valor de predicción actual.|  
-|[PredictNodeId &#40; DMX &#41;](../../dmx/predictnodeid-dmx.md)|Devuelve el Node_ID de cada caso.|  
-|[PredictProbability &#40; DMX &#41;](../../dmx/predictprobability-dmx.md)|Devuelve la probabilidad del valor de predicción.|  
-|[PredictSupport &#40; DMX &#41;](../../dmx/predictsupport-dmx.md)|Devuelve el valor de soporte de un estado especificado.|  
-|[PredictVariance &#40; DMX &#41;](../../dmx/predictvariance-dmx.md)|Devuelve la varianza del valor de predicción.|  
+|[IsDescendant & #40; DMX & #41;](../../dmx/isdescendant-dmx.md)|Determina si un nodo es un elemento secundario de otro nodo en el gráfico de red neuronal.|  
+|[IsInNode & #40; DMX & #41;](../../dmx/isinnode-dmx.md)|Indica si el nodo especificado contiene el caso actual.|  
+|[PredictAdjustedProbability & #40; DMX & #41;](../../dmx/predictadjustedprobability-dmx.md)|Devuelve la probabilidad ponderada.|  
+|[PredictAssociation & #40; DMX & #41;](../../dmx/predictassociation-dmx.md)|Predice los miembros de un conjunto de datos asociativo.|  
+|[PredictHistogram & #40; DMX & #41;](../../dmx/predicthistogram-dmx.md)|Devuelve una tabla de valores relacionados con el valor de predicción actual.|  
+|[PredictNodeId & #40; DMX & #41;](../../dmx/predictnodeid-dmx.md)|Devuelve el Node_ID de cada caso.|  
+|[PredictProbability & #40; DMX & #41;](../../dmx/predictprobability-dmx.md)|Devuelve la probabilidad del valor de predicción.|  
+|[PredictSupport & #40; DMX & #41;](../../dmx/predictsupport-dmx.md)|Devuelve el valor de soporte de un estado especificado.|  
+|[PredictVariance & #40; DMX & #41;](../../dmx/predictvariance-dmx.md)|Devuelve la varianza del valor de predicción.|  
   
 ## <a name="see-also"></a>Vea también  
  [Algoritmo de asociación de Microsoft](../../analysis-services/data-mining/microsoft-association-algorithm.md)   
  [Referencia técnica del algoritmo de asociación de Microsoft](../../analysis-services/data-mining/microsoft-association-algorithm-technical-reference.md)   
- [Contenido del modelo de minería de datos para modelos de asociación &#40; Analysis Services: minería de datos &#41;](../../analysis-services/data-mining/mining-model-content-for-association-models-analysis-services-data-mining.md)  
+ [Contenido del modelo de minería de datos para modelos de asociación & #40; Analysis Services: minería de datos & #41;](../../analysis-services/data-mining/mining-model-content-for-association-models-analysis-services-data-mining.md)  
   
   

@@ -1,33 +1,32 @@
 ---
 title: Conjunto de filas DISCOVER_STORAGE_TABLES | Documentos de Microsoft
-ms.custom: 
+ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: analysis-services
 ms.prod_service: analysis-services
-ms.service: 
-ms.component: 
-ms.reviewer: 
+ms.service: ''
+ms.component: ''
+ms.reviewer: ''
 ms.suite: pro-bi
-ms.technology: 
-ms.tgt_pltfrm: 
+ms.technology: ''
+ms.tgt_pltfrm: ''
 ms.topic: reference
 applies_to:
 - SQL Server 2016 Preview
 ms.assetid: 13df6f10-8efe-4fe9-83a6-96d108809ed1
-caps.latest.revision: 
+caps.latest.revision: 13
 author: Minewiskan
 ms.author: owend
 manager: kfile
-ms.workload: Inactive
-ms.openlocfilehash: 51b5bd319480be4c7757d4fb642859af54f209a3
-ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
-ms.translationtype: MT
+ms.openlocfilehash: 2bfa54e95a97aeb8bd79b9551da461473c4be980
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/15/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="discoverstoragetables-rowset"></a>DISCOVER_STORAGE_TABLES, conjunto de filas
 [!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]
-Permite al cliente determinar las tablas incluidas en una base de datos de Analysis Services que se ejecuta en modo Tabular o SharePoint.  
+  Permite al cliente determinar las tablas incluidas en una base de datos de Analysis Services que se ejecuta en modo Tabular o SharePoint.  
   
 ## <a name="rowset-columns"></a>Columnas del conjunto de filas  
  El conjunto de filas **DISCOVER_STORAGE_TABLES** contiene las siguientes columnas.  
@@ -35,7 +34,7 @@ Permite al cliente determinar las tablas incluidas en una base de datos de Analy
 |**Nombre de columna**|**Indicador de tipo**|**Longitud**|**Description**|  
 |---------------------|------------------------|----------------|---------------------|  
 |**DATABASE_NAME**|**DBTYPE_WSTR**||Especifica el nombre de la base de datos que contiene las tablas.<br /><br /> El conjunto de filas **DISCOVER_STORAGE_TABLES** puede restringirse mediante esta columna. Si esta columna no se utiliza para restringir el conjunto de filas, se utiliza la base de datos actual.|  
-|**CUBE_NAME**|**DBTYPE_WSTR**||Especifica el cubo o el modelo que contiene las tablas.<br /><br /> El conjunto de filas **DISCOVER_STORAGE_TABLES** puede restringirse mediante esta columna.|  
+|**RESTRICCIONES OBLIGATORIAS CUBE_NAME**|**DBTYPE_WSTR**||Especifica el cubo o el modelo que contiene las tablas.<br /><br /> El conjunto de filas **DISCOVER_STORAGE_TABLES** puede restringirse mediante esta columna.|  
 |**MEASURE_GROUP_NAME**|**DBTYPE_WSTR**||Nombre del grupo de medida.|  
 |**PARTICIÓN**|**DBTYPE_WSTR**||Nombre de la partición.|  
 |**DIMENSION_NAME**|**DBTYPE_WSTR**||Nombre de la dimensión.|  
@@ -51,7 +50,7 @@ Permite al cliente determinar las tablas incluidas en una base de datos de Analy
 |**Nombre de columna**|**Indicador de tipo**|**Estado de restricción**|  
 |---------------------|------------------------|---------------------------|  
 |**DATABASE_NAME**|**DBTYPE_WSTR**|Opcional.|  
-|**CUBE_NAME**|**DBTYPE_WSTR**|Opcional.|  
+|**RESTRICCIONES OBLIGATORIAS CUBE_NAME**|**DBTYPE_WSTR**|Opcional.|  
 |**MEASURE_GROUP_NAME**|**DBTYPE_WSTR**|Opcional|  
 |**PARTICIÓN**|**DBTYPE_WSTR**|Opcional|  
   

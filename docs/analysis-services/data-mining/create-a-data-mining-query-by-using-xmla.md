@@ -1,32 +1,23 @@
 ---
 title: Crear una consulta de minería de datos utilizando XMLA | Documentos de Microsoft
-ms.custom: ''
-ms.date: 03/04/2017
-ms.prod: analysis-services
-ms.prod_service: analysis-services
-ms.service: ''
+ms.date: 05/01/2018
+ms.prod: sql
+ms.technology: analysis-services
 ms.component: data-mining
-ms.reviewer: ''
-ms.suite: pro-bi
-ms.technology: ''
-ms.tgt_pltfrm: ''
 ms.topic: article
-helpviewer_keywords:
-- content queries [DMX]
-ms.assetid: 8f6b6008-006c-4792-9bd1-64c30dc3fd41
-caps.latest.revision: 11
-author: Minewiskan
 ms.author: owend
+ms.reviewer: owend
+author: minewiskan
 manager: kfile
-ms.workload: Inactive
-ms.openlocfilehash: fa60ad8ee91839e04c424c5fe2d23723e495bbd4
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+ms.openlocfilehash: 8732b3f366d5805f6321b4e07fe0de1dbc73fb42
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="create-a-data-mining-query-by-using-xmla"></a>Crear una consulta de minería de datos utilizando XMLA
-[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]Puede crear una variedad de consultas en objetos de minería de datos mediante AMO, DMX o XML/a.  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
+  Puede crear diversas consultas con los objetos de minería de datos utilizando AMO, DMX o XML/A.  
   
  XML se utiliza para la comunicación entre el servidor de Analysis Services y todos los clientes. Por consiguiente, aunque generalmente es mucho más fácil crear consultas de contenido utilizando DMX, puede escribirlas con las instrucciones COMMAND y DISCOVER de XML/A, con un cliente que admita el protocolo SOAP o creando una consulta XML/A en [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)].  
   
@@ -50,9 +41,9 @@ ms.lasthandoff: 01/08/2018
   
      En el panel **Resultados** se devuelve una lista de conjuntos de filas de esquema que contiene los nombres de los conjuntos de filas de esquema y las columnas de conjunto de filas para todos los conjuntos de filas disponibles en la instancia actual.  
   
-2.  En el **consulta** panel, coloque el cursor después ** \<lista de restricciones >** y presione ENTRAR para agregar una nueva línea.  
+2.  En el **consulta** panel, coloque el cursor después  **\<lista de restricciones >** y presione ENTRAR para agregar una nueva línea.  
   
-3.  Coloque el cursor en la línea en blanco y escriba ** \<NombreDeEsquema > DMSCHEMA_MINING_MODEL_CONTENT\</SchemaName >**  
+3.  Coloque el cursor en la línea en blanco y escriba  **\<NombreDeEsquema > DMSCHEMA_MINING_MODEL_CONTENT\</SchemaName >**  
   
      La sección completa para las restricciones debería aparecer de la forma siguiente:  
   
@@ -105,7 +96,7 @@ ms.lasthandoff: 01/08/2018
      El panel Resultados muestra la definición de esquema, junto con los valores para el modelo especificado.  
   
 ## <a name="see-also"></a>Vea también  
- [Contenido del modelo de minería de datos &#40;Analysis Services - Minería de datos&#41;](../../analysis-services/data-mining/mining-model-content-analysis-services-data-mining.md)   
+ [Contenido del modelo de minería de datos & #40; Analysis Services: minería de datos & #41;](../../analysis-services/data-mining/mining-model-content-analysis-services-data-mining.md)   
  [Conjuntos de filas de esquema de minería de datos](../../analysis-services/schema-rowsets/data-mining/data-mining-schema-rowsets.md)  
   
   

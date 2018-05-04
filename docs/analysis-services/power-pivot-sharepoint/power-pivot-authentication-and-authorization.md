@@ -1,31 +1,23 @@
 ---
 title: Power Pivot Authentication and Authorization | Documentos de Microsoft
-ms.custom: 
-ms.date: 03/01/2017
-ms.prod: analysis-services
-ms.prod_service: analysis-services
-ms.service: 
-ms.component: data-mining
-ms.reviewer: 
-ms.suite: pro-bi
-ms.technology: 
-ms.tgt_pltfrm: 
+ms.date: 05/02/2018
+ms.prod: sql
+ms.technology: analysis-services
+ms.component: ppvt-sharepoint
 ms.topic: article
-ms.assetid: 48230cc0-4037-4f99-8360-dadf4bc169bd
-caps.latest.revision: 
-author: Minewiskan
 ms.author: owend
+ms.reviewer: owend
+author: minewiskan
 manager: kfile
-ms.workload: Inactive
-ms.openlocfilehash: 691bf8b3fd2e26a3f906c88fbc8ceb840b636f6c
-ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
+ms.openlocfilehash: 710db3b55eb8e3bd1e885dfd71e2bde15360092c
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/15/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="power-pivot-authentication-and-authorization"></a>Autenticación y autorización de PowerPivot
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
-Una implementación de [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] para SharePoint que se ejecuta dentro de una granja de servidores de SharePoint 2010 usa el subsistema de autenticación y el modelo de autorización que proporcionan los servidores de SharePoint. La infraestructura de seguridad de SharePoint se extiende al contenido y a las operaciones de [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] , ya que todo el contenido relacionado con [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)]está almacenado en bases de datos de contenido de SharePoint y todas las operaciones relacionadas con [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)]las realizan los servicios compartidos de [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] en la granja. Los usuarios que solicitan un libro que contenga los datos [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] se autentican con una identidad de usuario de SharePoint que se basa en su identidad de usuario de Windows. Los permisos para ver el libro determinan si la solicitud se concede o se deniega.  
+  Una implementación de [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] para SharePoint que se ejecuta dentro de una granja de servidores de SharePoint 2010 usa el subsistema de autenticación y el modelo de autorización que proporcionan los servidores de SharePoint. La infraestructura de seguridad de SharePoint se extiende al contenido y a las operaciones de [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] , ya que todo el contenido relacionado con [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)]está almacenado en bases de datos de contenido de SharePoint y todas las operaciones relacionadas con [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)]las realizan los servicios compartidos de [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] en la granja. Los usuarios que solicitan un libro que contenga los datos [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] se autentican con una identidad de usuario de SharePoint que se basa en su identidad de usuario de Windows. Los permisos para ver el libro determinan si la solicitud se concede o se deniega.  
   
  Dado que para el análisis de los datos de autoservicio se requiere la integración con Excel Services, la protección de un servidor de [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] requiere que también se conozca la seguridad de Excel Services. Cuando un usuario consulta una tabla dinámica que tiene una conexión de datos a datos [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] , Excel Services reenvía una solicitud de conexión de datos a un servidor de [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] de la granja para cargar los datos. Esta interacción entre los servidores requiere saber cómo establecer una configuración de seguridad para ambos.  
   

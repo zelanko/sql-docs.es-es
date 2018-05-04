@@ -26,12 +26,11 @@ helpviewer_keywords:
 author: pmasl
 ms.author: Pedro.Lopes
 manager: craigg
-ms.workload: On Demand
-ms.openlocfilehash: d518924d129beef40ec4f24dce0cc01b7de25977
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
+ms.openlocfilehash: 8ed2d5385806ee439cc67111c83cc08ea786e160
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="using-the-ole-db-driver-for-sql-server-header-and-library-files"></a>Usar el controlador OLE DB para SQL Server encabezado y archivos de biblioteca
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -46,7 +45,7 @@ ms.lasthandoff: 04/16/2018
   
  El controlador OLE DB para el archivo de encabezado de SQL Server (msoledbsql.h) puede utilizarse para agregar el controlador OLE DB para la funcionalidad de acceso de datos de SQL Server a sus aplicaciones personalizadas. El controlador OLE DB para el archivo de encabezado de SQL Server contiene todas las definiciones, atributos, propiedades y interfaces necesarias para aprovechar las ventajas de las nuevas características introdujeron en [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)].  
   
- Además del controlador OLE DB para el archivo de encabezado de SQL Server, también hay un archivo de biblioteca de msoledbsql.lib que es la biblioteca de exportación para [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] funcionalidad del programa de copia masiva (BCP).  
+ Además del controlador OLE DB para el archivo de encabezado de SQL Server, también hay un archivo de biblioteca de msoledbsql.lib que es la biblioteca de exportación para [OpenSqlFilestream](../../../relational-databases/blob/access-filestream-data-with-opensqlfilestream.md) funcionalidad.  
   
  El controlador OLE DB para el archivo de encabezado de SQL Server es compatible con el archivo de encabezado de sqloledb.h usado con Microsoft Data Access Components (MDAC), pero no contiene CLSID para SQLOLEDB (el proveedor OLE DB para [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] incluido con MDAC) o de símbolos para Funcionalidad XML (lo que no es compatible con controlador de OLE DB para SQL Server).    
   

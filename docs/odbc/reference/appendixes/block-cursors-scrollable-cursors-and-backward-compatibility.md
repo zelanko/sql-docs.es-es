@@ -11,7 +11,7 @@ ms.suite: sql
 ms.technology:
 - drivers
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - scrollable cursors [ODBC]
 - cursors [ODBC], backward compatibility
@@ -23,17 +23,16 @@ caps.latest.revision: 5
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: 7e25e546b359dd7178739e074664c3239fcfbdba
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
-ms.translationtype: MT
+ms.openlocfilehash: c22ef4ebf761b647f4b0e6bb8c65ccd3457fe694
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="block-cursors-scrollable-cursors-and-backward-compatibility"></a>Cursores de bloque y los cursores desplazables, compatibilidad con versiones anteriores
 La existencia de ambos **SQLFetchScroll** y **SQLExtendedFetch** representa el primer clear divide en ODBC entre la aplicación de interfaz de programación (API), que es el conjunto de funciones de la las llamadas de la aplicación y la interfaz de proveedor de servicio (SPI), que es el conjunto de funciones el controlador implementa. Esta división es necesaria para que ODBC 3. *x*, que usa **SQLFetchScroll**, bealigned con los estándares y también ser compatibles con ODBC 2. *x*, que usa **SQLExtendedFetch**.  
   
- ODBC 3*.x* API, que es el conjunto de funciones de la aplicación llama, incluye **SQLFetchScroll** y relacionados con los atributos de instrucción. ODBC 3*.x* SPI, que es el conjunto de funciones implementa el controlador, incluye **SQLFetchScroll**, **SQLExtendedFetch**y relacionados con los atributos de instrucción. Dado que ODBC no exige formalmente esta división entre la API y el SPI, es posible que ODBC 3*.x* las aplicaciones llamen a **SQLExtendedFetch** y relacionados con los atributos de instrucción. Sin embargo, no hay ninguna razón para ODBC 3*.x* aplicación para hacer esto. Para obtener más información acerca de las API y el SPI, vea la introducción a [arquitectura ODBC](../../../odbc/reference/odbc-architecture.md).  
+ ODBC 3 *.x* API, que es el conjunto de funciones de la aplicación llama, incluye **SQLFetchScroll** y relacionados con los atributos de instrucción. ODBC 3 *.x* SPI, que es el conjunto de funciones implementa el controlador, incluye **SQLFetchScroll**, **SQLExtendedFetch**y relacionados con los atributos de instrucción. Dado que ODBC no exige formalmente esta división entre la API y el SPI, es posible que ODBC 3 *.x* las aplicaciones llamen a **SQLExtendedFetch** y relacionados con los atributos de instrucción. Sin embargo, no hay ninguna razón para ODBC 3 *.x* aplicación para hacer esto. Para obtener más información acerca de las API y el SPI, vea la introducción a [arquitectura ODBC](../../../odbc/reference/odbc-architecture.md).  
   
  Para obtener información sobre qué funciones y la declaración de atributos de una aplicación ODBC 3. *x* aplicación debe utilizar con los cursores desplazables y el bloque, vea [cursores de bloque y los cursores desplazables, compatibilidad con versiones anteriores de las aplicaciones ODBC 3.x](../../../odbc/reference/develop-app/block-cursors-scrollable-backward-compatibility-odbc-3-x-applications.md).  
   

@@ -27,15 +27,15 @@ caps.latest.revision: 39
 author: Minewiskan
 ms.author: owend
 manager: kfile
-ms.workload: Inactive
-ms.openlocfilehash: 78a5160e76a0cff9a1709fc8bb4222c03b7fac0e
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
-ms.translationtype: MT
+ms.openlocfilehash: 7ea349ad42fb18b2543bc94091a7a9021733175b
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="dimension-element-assl"></a>Elemento Dimension (ASSL)
-[!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]Define una dimensión.  
+[!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]
+  Define una dimensión.  
   
 ## <a name="syntax"></a>Sintaxis  
   
@@ -58,17 +58,17 @@ ms.lasthandoff: 01/08/2018
 </Dimensions>  
 ```  
   
-## <a name="element-characteristics"></a>Características del elemento  
+## <a name="element-characteristics"></a>Características de los elementos  
   
-|Característica|Description|  
+|Característica|Descripción|  
 |--------------------|-----------------|  
-|Tipo y longitud de los datos|Vea la siguiente tabla.|  
-|Valor predeterminado|None|  
+|Tipo y longitud de los datos|Vea la tabla siguiente.|  
+|Valor predeterminado|Ninguno|  
 |Cardinalidad|0-n: elemento opcional que puede aparecer más de una vez.|  
   
 |Antecesor o elemento primario|Tipo de datos|  
 |------------------------|---------------|  
-|[Base de datos](../../../analysis-services/scripting/objects/database-element-assl.md)|[Dimension](../../../analysis-services/scripting/data-type/dimension-data-type-assl.md)|  
+|[Base de datos](../../../analysis-services/scripting/objects/database-element-assl.md)|[Dimensión](../../../analysis-services/scripting/data-type/dimension-data-type-assl.md)|  
 |[Agregación](../../../analysis-services/scripting/objects/aggregation-element-assl.md)|[AggregationDimension](../../../analysis-services/scripting/data-type/aggregationdimension-data-type-assl.md)|  
 |[AggregationDesign](../../../analysis-services/scripting/objects/aggregationdesign-element-assl.md)|[AggregationDesignDimension](../../../analysis-services/scripting/data-type/aggregationdesigndimension-data-type-assl.md)|  
 |[AggregationInstance](../../../analysis-services/scripting/objects/aggregationinstance-element-assl.md)|[AggregationInstanceCubeDimension](../../../analysis-services/scripting/data-type/aggregationinstancecubedimension-data-type-assl.md)|  
@@ -80,13 +80,13 @@ ms.lasthandoff: 01/08/2018
   
 |Relación|Elemento|  
 |------------------|-------------|  
-|Elementos primarios|[Dimensions](../../../analysis-services/scripting/collections/dimensions-element-assl.md)|  
-|Elementos secundarios|None|  
+|Elementos primarios|[Dimensiones](../../../analysis-services/scripting/collections/dimensions-element-assl.md)|  
+|Elementos secundarios|Ninguno|  
   
 ## <a name="remarks"></a>Comentarios  
  Los elementos correspondientes en el modelo de objetos de Analysis Management Objects (AMO) son <xref:Microsoft.AnalysisServices.Dimension>, <xref:Microsoft.AnalysisServices.AggregationDimension>, <xref:Microsoft.AnalysisServices.AggregationDesignDimension>, <xref:Microsoft.AnalysisServices.CubeDimension>, <xref:Microsoft.AnalysisServices.MeasureGroupDimension>, y <xref:Microsoft.AnalysisServices.PerspectiveDimension>.  
   
 ## <a name="see-also"></a>Vea también  
- [Objetos de &#40; ASSL &#41;](../../../analysis-services/scripting/objects/objects-assl.md)  
+ [Objetos de & #40; ASSL & #41;](../../../analysis-services/scripting/objects/objects-assl.md)  
   
   

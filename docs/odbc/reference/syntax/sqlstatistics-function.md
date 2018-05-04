@@ -11,7 +11,7 @@ ms.suite: sql
 ms.technology:
 - drivers
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 apiname:
 - SQLStatistics
 apilocation:
@@ -26,12 +26,11 @@ caps.latest.revision: 23
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: d18b910da6bf23aa507c3fecc7994a59cf74e705
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
-ms.translationtype: MT
+ms.openlocfilehash: 6f91845e85a9af9f99e137368f6bdb7f8570a2cc
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="sqlstatistics-function"></a>Función SQLStatistics
 **Conformidad**  
@@ -92,7 +91,7 @@ SQLRETURN SQLStatistics(
   
  SQL_ENSURE solicita que el controlador incondicionalmente recuperar las estadísticas. (Los controladores que solo cumplen el estándar Open Group y no admiten extensiones de ODBC no será capaces de admitir SQL_ENSURE.)  
   
- SQL_QUICK solicita que el controlador de recuperar la CARDINALIDAD y las páginas solo si están siempre disponibles desde el servidor. En este caso, el controlador no garantiza que los valores sean actuales. (Las aplicaciones que se escriben en el estándar Open Group siempre obtendrá un comportamiento SQL_QUICK de ODBC 3*.x*-controladores compatibles.)  
+ SQL_QUICK solicita que el controlador de recuperar la CARDINALIDAD y las páginas solo si están siempre disponibles desde el servidor. En este caso, el controlador no garantiza que los valores sean actuales. (Las aplicaciones que se escriben en el estándar Open Group siempre obtendrá un comportamiento SQL_QUICK de ODBC 3 *.x*-controladores compatibles.)  
   
 ## <a name="returns"></a>Devuelve  
  SQL_SUCCESS, SQL_SUCCESS_WITH_INFO, SQL_STILL_EXECUTING, SQL_ERROR o SQL_INVALID_HANDLE.  
@@ -132,9 +131,9 @@ SQLRETURN SQLStatistics(
 > [!NOTE]  
 >  Para obtener más información sobre el uso general, los argumentos y los datos devueltos de funciones de catálogo ODBC, vea [funciones de catálogo](../../../odbc/reference/develop-app/catalog-functions.md).  
   
- Las columnas siguientes se cambió para ODBC 3*.x*. Los cambios de nombre de columna no afectan a la compatibilidad con versiones anteriores porque las aplicaciones enlazar por número de columna.  
+ Las columnas siguientes se cambió para ODBC 3 *.x*. Los cambios de nombre de columna no afectan a la compatibilidad con versiones anteriores porque las aplicaciones enlazar por número de columna.  
   
-|Columna de ODBC 2.0|ODBC 3*.x* columna|  
+|Columna de ODBC 2.0|ODBC 3 *.x* columna|  
 |---------------------|-----------------------|  
 |TABLE_QUALIFIER|TABLE_CAT|  
 |TABLE_OWNER|TABLE_SCHEM|  

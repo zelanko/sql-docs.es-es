@@ -11,7 +11,7 @@ ms.suite: sql
 ms.technology:
 - drivers
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - transfer octet length of data types [ODBC]
 - size of data types [ODBC]
@@ -22,12 +22,11 @@ caps.latest.revision: 5
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: 5cb7bde54dd58d874e2ef7d994afc6372d9591c6
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
-ms.translationtype: MT
+ms.openlocfilehash: 59b790845ee6360edcb5c5ea796e9ad910c397a4
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="transfer-octet-length"></a>Longitud de bytes de transferencia
 La longitud de bytes de transferencia de una columna es el número máximo de bytes que se devuelven a la aplicación cuando se transfieren datos a su tipo de datos C predeterminado. Para datos de caracteres, la longitud de bytes de transferencia no incluye espacio para el carácter de terminación null. La longitud de octeto de transferencia de una columna puede ser diferente del número de bytes necesarios para almacenar los datos en el origen de datos.  

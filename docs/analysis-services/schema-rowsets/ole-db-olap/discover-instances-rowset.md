@@ -23,15 +23,15 @@ caps.latest.revision: 30
 author: Minewiskan
 ms.author: owend
 manager: kfile
-ms.workload: Inactive
-ms.openlocfilehash: 39705d4efdcec8ed190bc58e2ac1888b3aeef7fe
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
-ms.translationtype: MT
+ms.openlocfilehash: d6761a62ebb6d47594273550f56a1450c8f38360
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="discoverinstances-rowset"></a>Conjunto de filas DISCOVER_INSTANCES
-[!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]Describe las instancias en el servidor.  
+[!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]
+  Describe las instancias en el servidor.  
   
 ## <a name="rowset-columns"></a>Columnas del conjunto de filas  
  El conjunto de filas **DISCOVER_INSTANCES** contiene las siguientes columnas.  
@@ -52,6 +52,6 @@ ms.lasthandoff: 01/08/2018
 |**INSTANCE_NAME**|**DBTYPE_WSTR**|Opcional.|  
   
 ## <a name="see-also"></a>Vea también  
- [OLE DB para los conjuntos de filas de esquema OLAP](../../../analysis-services/schema-rowsets/ole-db-olap/ole-db-for-olap-schema-rowsets.md)  
+ [OLE DB para OLAP Schema Rowsets](../../../analysis-services/schema-rowsets/ole-db-olap/ole-db-for-olap-schema-rowsets.md)  
   
   

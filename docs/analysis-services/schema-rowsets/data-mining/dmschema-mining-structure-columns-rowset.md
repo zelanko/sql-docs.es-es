@@ -23,15 +23,15 @@ caps.latest.revision: 35
 author: Minewiskan
 ms.author: owend
 manager: kfile
-ms.workload: Inactive
-ms.openlocfilehash: 25a6ba694cad584a0c1d6e229ab1f029d288d11e
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
-ms.translationtype: MT
+ms.openlocfilehash: bbfd30d94a7f6ad129eee3ee82e9bb7fb951c19f
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="dmschemaminingstructurecolumns-rowset"></a>Conjunto de filas DMSCHEMA_MINING_STRUCTURE_COLUMNS
-[!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]Describe las columnas individuales de todas las estructuras de minería de datos implementadas en un servidor que ejecuta [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)].  
+[!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]
+  Describe las columnas individuales de todas las estructuras de minería de datos implementadas en un servidor que ejecuta [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)].  
   
 ## <a name="rowset-columns"></a>Columnas del conjunto de filas  
  El **DMSCHEMA_MINING_STRUCTURE_COLUMNS** filas contiene las columnas siguientes.  
@@ -39,11 +39,11 @@ ms.lasthandoff: 01/08/2018
 |Nombre de columna|Indicador de tipo|Longitud|Description|  
 |-----------------|--------------------|------------|-----------------|  
 |**STRUCTURE_CATALOG**|**DBTYPE_WSTR**||Nombre del catálogo.|  
-|**STRUCTURE_SCHEMA**|**DBTYPE_WSTR**||Nombre del esquema sin certificar. [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)]no admite los esquemas, por lo que esta columna es siempre **NULL**.|  
+|**STRUCTURE_SCHEMA**|**DBTYPE_WSTR**||Nombre del esquema sin certificar. [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] no admite los esquemas, por lo que esta columna es siempre **NULL**.|  
 |**NOMBRE_ESTRUCTURA**|**DBTYPE_WSTR**||Nombre de la estructura. Esta columna no puede contener una **NULL**.|  
 |**COLUMN_NAME**|**DBTYPE_WSTR**||Nombre de la columna. La unicidad solamente se garantiza entre las columnas que comparten el mismo patrón. Por ejemplo, dos columnas anidadas pueden tener el mismo nombre si pertenecen a dos tablas anidadas distintas dentro de la misma estructura.|  
 |**COLUMN_GUID**|**DBTYPE_GUID**||GUID de la columna. Los proveedores que no utilizan GUID para identificar las columnas deben devolver **NULL** en esta columna.|  
-|**COLUMN_PROPID**|**DBTYPE_UI4**||Identificador de propiedad de la columna. Los proveedores que no asocian identificadores de propiedad a las columnas deben devolver **NULL** en esta columna. [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)][!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] devuelve **NULL** para esta columna.|  
+|**COLUMN_PROPID**|**DBTYPE_UI4**||Identificador de propiedad de la columna. Los proveedores que no asocian identificadores de propiedad a las columnas deben devolver **NULL** en esta columna. [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] Devuelve **NULL** para esta columna.|  
 |**ORDINAL_POSITION**|**DBTYPE_UI4**||El ordinal de la columna. Las columnas se numeran a partir de 1. **NULL** si no hay ningún valor ordinal estable para la columna.|  
 |**COLUMN_HASDEFAULT**|**DBTYPE_BOOL**||Valor booleano que indica si esta columna tiene un valor predeterminado.<br /><br /> **TRUE** si la columna tiene un valor predeterminado.<br /><br /> **FALSE** si la columna no tiene un valor predeterminado o si no se sabe si la columna tiene un valor predeterminado.|  
 |**COLUMN_DEFAULT**|**DBTYPE_WSTR**||El valor predeterminado de la columna. Un proveedor puede exponer **DBCOLUMN_DEFAULTVALUE** pero no **DBCOLUMN_HASDEFAULT** (para tablas ISO) en el conjunto de filas devuelto por **IColumnsRowset:: GetColumnsRowset**.<br /><br /> Si el valor predeterminado es **NULL**, **COLUMN_HASDEFAULT** es **TRUE** y **COLUMN_DEFAULT** columna es un **NULL** valor.|  

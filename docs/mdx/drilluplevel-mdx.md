@@ -22,12 +22,11 @@ caps.latest.revision: 32
 author: Minewiskan
 ms.author: owend
 manager: erikre
-ms.workload: Inactive
-ms.openlocfilehash: ec561536a098e927731a3359edae3f2e35f3d481
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
-ms.translationtype: MT
+ms.openlocfilehash: a9a7a12201a365af2cb6f7b3256414dfa77479e1
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="drilluplevel-mdx"></a>DrillupLevel (MDX)
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
@@ -48,7 +47,7 @@ DrillupLevel(Set_Expression [ , Level_Expression ] )
  *Level_Expression*  
  Expresión MDX válida que devuelve un nivel.  
   
-## <a name="remarks"></a>Notas  
+## <a name="remarks"></a>Comentarios  
  El **DrillupLevel** función devuelve un conjunto de miembros se organiza jerárquicamente según los miembros incluidos en el conjunto especificado. Se mantiene el orden entre los miembros del conjunto especificado.  
   
  Si se especifica una expresión de nivel, la **DrillupLevel** función crea el conjunto mediante la recuperación solo aquellos miembros que están por encima del nivel especificado. Si se especifica una expresión de nivel y no hay un miembro del nivel especificado representado en el conjunto especificado, se devuelve el conjunto especificado.  
@@ -70,7 +69,7 @@ SELECT DrillUpLevel
   WHERE [Measures].[Internet Order Quantity]  
 ```  
   
-## <a name="see-also"></a>Ver también  
- [Referencia de funciones MDX &#40; MDX &#41;](../mdx/mdx-function-reference-mdx.md)  
+## <a name="see-also"></a>Vea también  
+ [Referencia de funciones MDX & #40; MDX & #41;](../mdx/mdx-function-reference-mdx.md)  
   
   

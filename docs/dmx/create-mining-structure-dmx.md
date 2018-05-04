@@ -25,17 +25,16 @@ caps.latest.revision: 45
 author: Minewiskan
 ms.author: owend
 manager: erikre
-ms.workload: Inactive
-ms.openlocfilehash: e7c12fe48c10b0fac4a89e2aa9a8e2b2ea0dce2f
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
-ms.translationtype: MT
+ms.openlocfilehash: 47bdba77b79b49011bbd6b48547ffe9cc34aa270
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="create-mining-structure-dmx"></a>CREAR ESTRUCTURA DE MINERÍA DE DATOS (DMX)
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
 
-  Crea una nueva estructura de minería de datos en una base de datos y, opcionalmente, define las particiones de aprendizaje y de pruebas. Después de haber creado la estructura de minería de datos, puede usar el [modificar la estructura de minería de datos &#40; DMX &#41;](../dmx/alter-mining-structure-dmx.md) instrucción para agregar modelos a la estructura de minería de datos.  
+  Crea una nueva estructura de minería de datos en una base de datos y, opcionalmente, define las particiones de aprendizaje y de pruebas. Después de haber creado la estructura de minería de datos, puede usar el [ALTER MINING STRUCTURE &#40;DMX&#41; ](../dmx/alter-mining-structure-dmx.md) instrucción para agregar modelos a la estructura de minería de datos.  
   
 ## <a name="syntax"></a>Sintaxis  
   
@@ -112,18 +111,18 @@ CREATE [SESSION] MINING STRUCTURE <structure>
   
  Para obtener una lista de los tipos de datos, tipos de contenido, distribuciones de columnas y marcadores de modelado que pueden usarse en la definición de una columna de estructura, vea los siguientes temas:  
   
--   [Tipos de datos &#40; minería de datos &#41;](../analysis-services/data-mining/data-types-data-mining.md)  
+-   [Tipos de datos & #40; minería de datos & #41;](../analysis-services/data-mining/data-types-data-mining.md)  
   
--   [Contenido tipos &#40; minería de datos &#41;](../analysis-services/data-mining/content-types-data-mining.md)  
+-   [Contenido tipos & #40; minería de datos & #41;](../analysis-services/data-mining/content-types-data-mining.md)  
   
--   [Distribuciones de columnas &#40; minería de datos &#41;](../analysis-services/data-mining/column-distributions-data-mining.md)  
+-   [Distribuciones de columnas &#40;minería de datos&#41;](../analysis-services/data-mining/column-distributions-data-mining.md)  
   
--   [Modelado marcas &#40; minería de datos &#41;](../analysis-services/data-mining/modeling-flags-data-mining.md)  
+-   [Modelado marcas & #40; minería de datos & #41;](../analysis-services/data-mining/modeling-flags-data-mining.md)  
   
  Puede definir varios valores de marcas de modelado para una columna. Sin embargo, solo puede haber un tipo de contenido y un tipo de datos para cada columna.  
   
 ### <a name="column-relationships"></a>Relaciones entre columnas  
- Puede agregar una cláusula a cualquier instrucción de definición de columna para describir la relación existente entre dos columnas. [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]admite el uso de las siguientes acciones \<relación de columna > cláusula.  
+ Puede agregar una cláusula a cualquier instrucción de definición de columna para describir la relación existente entre dos columnas. [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] admite el uso de las siguientes acciones \<relación de columna > cláusula.  
   
  **RELACIONADOS CON**  
  Indica una jerarquía de valores. El destino de una columna RELATED TO puede ser una columna de clave de una tabla anidada, una columna de valores discretos en la fila de caso u otra columna con una cláusula RELATED TO, que indica una jerarquía de más niveles.  
@@ -154,7 +153,7 @@ WITH HOLDOUT (2000 CASES OR 20 PERCENT)
  En los ejemplos siguientes se muestra cómo crear una estructura de minería de datos con exclusión mediante DMX.  
   
 ### <a name="example-1-adding-a-structure-with-no-training-set"></a>Ejemplo 1: agregar una estructura sin un conjunto de aprendizaje  
- En el ejemplo siguiente se crea una estructura de minería de datos denominada `New Mailing` sin crear ningún modelo de minería de datos asociado y sin utilizar la exclusión. Para obtener información sobre cómo agregar un modelo de minería de datos a la estructura, vea [modificar la estructura de minería de datos &#40; DMX &#41;](../dmx/alter-mining-structure-dmx.md).  
+ En el ejemplo siguiente se crea una estructura de minería de datos denominada `New Mailing` sin crear ningún modelo de minería de datos asociado y sin utilizar la exclusión. Para obtener información sobre cómo agregar un modelo de minería de datos a la estructura, vea [ALTER MINING STRUCTURE &#40;DMX&#41;](../dmx/alter-mining-structure-dmx.md).  
   
 ```  
 CREATE MINING STRUCTURE [New Mailing]  
@@ -195,8 +194,8 @@ WITH HOLDOUT(25 PERCENT OR 2000 CASES) REPEATABLE(0)
 ```  
   
 ## <a name="see-also"></a>Vea también  
- [Extensiones de minería de datos &#40; DMX &#41; Instrucciones de definición de datos](../dmx/dmx-statements-data-definition.md)   
- [Extensiones de minería de datos &#40; DMX &#41; Instrucciones de manipulación de datos](../dmx/dmx-statements-data-manipulation.md)   
- [Referencia de instrucciones de Extensiones de minería de datos &#40;DMX&#41;](../dmx/data-mining-extensions-dmx-statements.md)  
+ [Extensiones de minería de datos &#40;DMX&#41; las instrucciones de definición de datos](../dmx/dmx-statements-data-definition.md)   
+ [Extensiones de minería de datos &#40;DMX&#41; instrucciones de manipulación de datos](../dmx/dmx-statements-data-manipulation.md)   
+ [Extensiones de minería de datos & #40; DMX & #41; Referencia de instrucciones](../dmx/data-mining-extensions-dmx-statements.md)  
   
   

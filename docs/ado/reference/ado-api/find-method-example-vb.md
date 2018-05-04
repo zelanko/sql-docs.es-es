@@ -21,12 +21,11 @@ caps.latest.revision: 11
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.workload: On Demand
-ms.openlocfilehash: b609ca6b6ec82964a3adc114f4dcf72bd036b90d
-ms.sourcegitcommit: bb044a48a6af9b9d8edb178dc8c8bd5658b9ff68
-ms.translationtype: MT
+ms.openlocfilehash: 19ac7451ddd8a405c9729c2a11409a660c48d07e
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/18/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="find-method-example-vb"></a>Ejemplo (VB) del método Find
 Este ejemplo se utiliza la [Recordset](../../../ado/reference/ado-api/recordset-object-ado.md) del objeto [buscar](../../../ado/reference/ado-api/find-method-ado.md) método para localizar y contar el número de títulos de empresa en el ***Pubs*** base de datos. En el ejemplo se da por supuesto que el proveedor subyacente no admite una funcionalidad similar.  

@@ -1,36 +1,23 @@
 ---
-title: "Aplicar un filtro a un modelo de minería de datos | Documentos de Microsoft"
-ms.custom: 
-ms.date: 03/19/2017
-ms.prod: analysis-services
-ms.prod_service: analysis-services
-ms.service: 
+title: Aplicar un filtro a un modelo de minería de datos | Documentos de Microsoft
+ms.date: 05/01/2018
+ms.prod: sql
+ms.technology: analysis-services
 ms.component: data-mining
-ms.reviewer: 
-ms.suite: pro-bi
-ms.technology: 
-ms.tgt_pltfrm: 
 ms.topic: article
-helpviewer_keywords:
-- model filter [data mining]
-- filters [data mining]
-- filtering input rows [Analysis Services]
-- filtering data [Analysis Services]
-ms.assetid: 4d0abeb5-e939-46d3-9097-6e0358244300
-caps.latest.revision: 
-author: Minewiskan
 ms.author: owend
+ms.reviewer: owend
+author: minewiskan
 manager: kfile
-ms.workload: Inactive
-ms.openlocfilehash: 57fedca20966d9ad7520b51ee850738e1e51b0e9
-ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
+ms.openlocfilehash: a0becff140d0630b85f66345b9f7ac8a7db2730d
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/15/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="apply-a-filter-to-a-mining-model"></a>Aplicar un filtro a un modelo de minería de datos
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
-Si la estructura de minería de datos contiene una tabla anidada, puede aplicar un filtro a la tabla de casos, a la tabla anidada o a ambas.  
+  Si la estructura de minería de datos contiene una tabla anidada, puede aplicar un filtro a la tabla de casos, a la tabla anidada o a ambas.  
   
  El siguiente procedimiento muestra cómo crear ambos tipos de filtros: filtros de casos y filtros de filas de tabla anidada.  
   
@@ -113,7 +100,7 @@ WHERE [Model] <> 'Water Bottle' )
   
 7.  Haga clic en **Valor** y escriba un valor.  
   
-     Por ejemplo, para **Columna de la estructura de minería de datos,** seleccione **Model**. Para **Operador**, seleccione **<>**y escriba el valor **Water Bottle**. Esta condición crea la siguiente expresión de filtro:  
+     Por ejemplo, para **Columna de la estructura de minería de datos,** seleccione **Model**. Para **Operador**, seleccione **<>** y escriba el valor **Water Bottle**. Esta condición crea la siguiente expresión de filtro:  
   
 ```  
 EXISTS (SELECT * FROM [<nested table name>] WHERE [Model] <> 'Water Bottle' )   
@@ -132,7 +119,7 @@ EXISTS (SELECT * FROM [<nested table name>] WHERE [Model] <> 'Water Bottle' )
     >  Si cambia manualmente una parte de la expresión de filtro, la cuadrícula se deshabilitará y a partir de este momento deberá trabajar solo con la expresión de filtro en modo de edición de texto. Para restaurar el modo de edición de cuadrícula, debe borrar la expresión de filtro y comenzar de nuevo.  
   
 ## <a name="see-also"></a>Vea también  
- [Filtros para modelos de minería de datos &#40; Analysis Services: minería de datos &#41;](../../analysis-services/data-mining/filters-for-mining-models-analysis-services-data-mining.md)   
+ [Filtros para modelos de minería de datos & #40; Analysis Services: minería de datos & #41;](../../analysis-services/data-mining/filters-for-mining-models-analysis-services-data-mining.md)   
  [Tareas y tareas de modelo de minería de datos](../../analysis-services/data-mining/mining-model-tasks-and-how-tos.md)   
  [Eliminar un filtro de un modelo de minería de datos](../../analysis-services/data-mining/delete-a-filter-from-a-mining-model.md)  
   

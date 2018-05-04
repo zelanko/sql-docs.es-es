@@ -29,15 +29,15 @@ caps.latest.revision: 15
 author: Minewiskan
 ms.author: owend
 manager: kfile
-ms.workload: Inactive
-ms.openlocfilehash: c50ff4e923e046a157c06ccb139e1b8645d1e9aa
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
-ms.translationtype: MT
+ms.openlocfilehash: a7d33e58fde8a1141004b9161b69b1f813112db5
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="cancel-element-xmla"></a>Elemento Cancel (XMLA)
-[!INCLUDE[ssas-appliesto-sqlas-aas](../../../includes/ssas-appliesto-sqlas-aas.md)]Cancela un comando que se está ejecutando un [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] instancia.  
+[!INCLUDE[ssas-appliesto-sqlas-aas](../../../includes/ssas-appliesto-sqlas-aas.md)]
+  Cancela un comando que se está ejecutando un [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] instancia.  
   
 ## <a name="syntax"></a>Sintaxis  
   
@@ -53,12 +53,12 @@ ms.lasthandoff: 01/08/2018
 </Command>  
 ```  
   
-## <a name="element-characteristics"></a>Características del elemento  
+## <a name="element-characteristics"></a>Características de los elementos  
   
-|Característica|Description|  
+|Característica|Descripción|  
 |--------------------|-----------------|  
-|Tipo y longitud de los datos|None|  
-|Valor predeterminado|None|  
+|Tipo y longitud de los datos|Ninguno|  
+|Valor predeterminado|Ninguno|  
 |Cardinalidad|0-n: elemento opcional que puede aparecer más de una vez.|  
   
 ## <a name="element-relationships"></a>Relaciones del elemento  
@@ -75,10 +75,10 @@ ms.lasthandoff: 01/08/2018
   
  Normalmente, el comando **Cancel** se utiliza para cancelar comandos que se están ejecutando actualmente en la sesión activa. En ese caso, no se debe especificar ninguno de los elementos secundarios del comando **Cancel** . Los administradores también pueden utilizar el comando **Cancel** para cancelar comandos que se ejecutan en conexiones o sesiones que no sean la sesión activa actualmente. Los miembros de un rol que tiene permisos de administración de una base de datos determinada pueden cancelar comandos de conexiones y sesiones aplicables a esa base de datos, mientras que los administradores del servidor pueden cancelar comandos de conexiones y sesiones de una instancia de los Analysis Service determinada.  
   
- Para recuperar información sobre las conexiones actuales y las sesiones para un [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] instancia, el **Discover** el método puede ejecutarse para solicitar, respectivamente, los conjuntos de filas de esquema DISCOVER_CONNECTIONS y DISCOVER_SESSIONS. Los miembros de un rol que tienen permisos de administración para una base de datos determinada solo pueden devolver sesiones de una base de datos determinada especificando esa base de datos en la columna de restricción de SESSION_CURRENT_DATABASE para el conjunto de filas de esquema de DISCOVER_SESSIONS. Para obtener más información sobre la **Discover** método, consulte [método detectar &#40; XMLA &#41; ](../../../analysis-services/xmla/xml-elements-methods-discover.md).  
+ Para recuperar información sobre las conexiones actuales y las sesiones para un [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] instancia, el **Discover** el método puede ejecutarse para solicitar, respectivamente, los conjuntos de filas de esquema DISCOVER_CONNECTIONS y DISCOVER_SESSIONS. Los miembros de un rol que tienen permisos de administración para una base de datos determinada solo pueden devolver sesiones de una base de datos determinada especificando esa base de datos en la columna de restricción de SESSION_CURRENT_DATABASE para el conjunto de filas de esquema de DISCOVER_SESSIONS. Para obtener más información sobre la **Discover** método, consulte [método detectar &#40;XMLA&#41;](../../../analysis-services/xmla/xml-elements-methods-discover.md).  
   
 ## <a name="see-also"></a>Vea también  
- [Elemento de lote &#40; XMLA &#41;](../../../analysis-services/xmla/xml-elements-commands/batch-element-xmla.md)   
- [Comandos &#40; XMLA &#41;](../../../analysis-services/xmla/xml-elements-commands/xml-elements-commands.md)  
+ [Elemento de lote & #40; XMLA & #41;](../../../analysis-services/xmla/xml-elements-commands/batch-element-xmla.md)   
+ [Comandos & #40; XMLA & #41;](../../../analysis-services/xmla/xml-elements-commands/xml-elements-commands.md)  
   
   

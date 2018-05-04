@@ -1,37 +1,23 @@
 ---
 title: FORMAT_STRING, contenido (MDX) | Documentos de Microsoft
-ms.custom: 
-ms.date: 03/13/2017
-ms.prod: analysis-services
-ms.prod_service: analysis-services
-ms.service: 
-ms.component: data-mining
-ms.reviewer: 
-ms.suite: pro-bi
-ms.technology: 
-ms.tgt_pltfrm: 
+ms.date: 05/02/2018
+ms.prod: sql
+ms.technology: analysis-services
+ms.component: mdx
 ms.topic: article
-helpviewer_keywords:
-- formats [Analysis Services], string values
-- VALUE property
-- formats [Analysis Services], numeric values
-- FORMATTED_VALUE property
-- FORMAT_STRING contents
-ms.assetid: c354c938-0328-4b8e-adc5-3b52fd2a7152
-caps.latest.revision: 
-author: Minewiskan
 ms.author: owend
+ms.reviewer: owend
+author: minewiskan
 manager: kfile
-ms.workload: On Demand
-ms.openlocfilehash: b2e191b852e9d68c9f5e3790e38b9a15f5759324
-ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
+ms.openlocfilehash: 0abbc6911435f77466a647eac13304fda12b22b7
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/15/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="mdx-cell-properties---formatstring-contents"></a>Propiedades de celda MDX - FORMAT_STRING, contenido
 [!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]
-La propiedad de celda **FORMAT_STRING** da formato a la propiedad **VALUE** de la celda, lo que crea el valor para la propiedad de la celda **FORMATTED_VALUE** . La propiedad de celda **FORMAT_STRING** controla los valores sin formato numéricos y de cadena con la aplicación de una expresión de formato al valor para devolver un valor con formato para la propiedad de celda **FORMATTED_VALUE** . En las siguientes tablas se detallan la sintaxis y los caracteres de formato utilizados para controlar los valores numéricos y de cadena.  
+  La propiedad de celda **FORMAT_STRING** da formato a la propiedad **VALUE** de la celda, lo que crea el valor para la propiedad de la celda **FORMATTED_VALUE** . La propiedad de celda **FORMAT_STRING** controla los valores sin formato numéricos y de cadena con la aplicación de una expresión de formato al valor para devolver un valor con formato para la propiedad de celda **FORMATTED_VALUE** . En las siguientes tablas se detallan la sintaxis y los caracteres de formato utilizados para controlar los valores numéricos y de cadena.  
   
 ## <a name="string-values"></a>Valores de cadena  
  Una expresión de formato para cadenas puede tener una sección o dos, separadas con punto y coma (;).  
@@ -85,9 +71,9 @@ La propiedad de celda **FORMAT_STRING** da formato a la propiedad **VALUE** de l
 |**,**|Representa un separador de miles que separa los millares de las centenas en un número que tiene cuatro o más posiciones a la izquierda del separador decimal.<br /><br /> El uso estándar del separador de miles se especifica si el formato contiene un separador de miles delimitado por marcadores de posición de dígitos (**0** o **#**).<br /><br /> Dos separadores de miles adyacentes o un separador de miles inmediatamente a la izquierda del separador decimal (tanto si se ha especificado un decimal como si no), significan "escalar el número dividiéndolo por 1000, redondeándolo como sea preciso". Por ejemplo, puede usar la cadena de formato "**##0**,," para representar 100 millones como 100. Los números menores que 1 millón se muestran como 0. Dos separadores de miles adyacentes en cualquier posición que no sea la inmediatamente a la izquierda del separador decimal se tratan como si especificaran el uso de un separador de miles.<br /><br /> El carácter real utilizado como separador de miles en la salida con formato depende del formato de número que reconozca el sistema informático.<br /><br /> Nota: En algunas configuraciones regionales se utiliza el punto como separador de miles.|  
 |**:**|Representa un separador de hora que separa horas, minutos y segundos cuando se asigna formato a los valores de hora.<br /><br /> Nota: En algunas configuraciones regionales se utilizan otros caracteres como separador de hora.<br /><br /> El carácter real utilizado como separador de hora en la salida con formato viene determinado por la configuración del sistema del equipo.|  
 |**/**|Representa un separador de fecha que separa el día, el mes y el año cuando se asigna formato a los valores de fecha.<br /><br /> El carácter real utilizado como separador de fecha en la salida con formato viene determinado por la configuración del sistema del equipo.<br /><br /> Nota: En algunas configuraciones regionales se utilizan otros caracteres como separador de fecha.|  
-|**E- E+ e- e+**|Representa el formato científico.<br /><br /> Si la expresión de formato contiene como mínimo un marcador de posición de dígito (**0** o **#**) a la derecha de **E-**, **E+**, **e-**o **e+**, el valor con formato se muestra en formato científico y se inserta E o e entre el número y su exponente. El número de marcadores de posición de dígitos a la derecha determina el número de dígitos del exponente. Use **E-** o **e-** para incluir un signo menos junto a los exponentes negativos. Use **E+** o **e+** para incluir un signo menos junto a los exponentes negativos y un signo más junto a los exponentes positivos.|  
+|**E- E+ e- e+**|Representa el formato científico.<br /><br /> Si la expresión de formato contiene como mínimo un marcador de posición de dígito (**0** o **#**) a la derecha de **E-**, **E+**, **e-** o **e+**, el valor con formato se muestra en formato científico y se inserta E o e entre el número y su exponente. El número de marcadores de posición de dígitos a la derecha determina el número de dígitos del exponente. Use **E-** o **e-** para incluir un signo menos junto a los exponentes negativos. Use **E+** o **e+** para incluir un signo menos junto a los exponentes negativos y un signo más junto a los exponentes positivos.|  
 |**- + $ ( )**|Muestra un carácter literal.<br /><br /> Para mostrar un carácter distinto del que aparece en la lista, escriba una barra diagonal inversa (**\\**) antes del carácter o delimite el carácter con comillas dobles (**" "**).|  
-|**\\**|Muestra el siguiente carácter en la cadena de formato.<br /><br /> Para mostrar un carácter con un significado especial como un carácter literal, escriba una barra diagonal inversa (**\\**) antes del carácter. La barra diagonal inversa no se muestra. Utilizar una barra diagonal inversa es equivalente a delimitar el siguiente carácter con comillas dobles. Para mostrar una barra diagonal inversa, use dos barras diagonales inversas (**\\\\**). A continuación se indican algunos ejemplos de caracteres que no pueden mostrarse como caracteres literales:<br /><br /> <br /><br /> Los caracteres de formato de fecha y hora:**a**, **c**, **d**, **h**, **m**, **n**, **p**, **q**, **s**, **t**, **w**, **y**, **/**y **:**<br /><br /> Los caracteres de formato numérico:**#**, **0**, **%**, **E**, **e**, **coma**y **punto**<br /><br /> Los caracteres de formato de cadena:**@**, **&**, **\<**, **>**y **!**|  
+|**\\**|Muestra el siguiente carácter en la cadena de formato.<br /><br /> Para mostrar un carácter con un significado especial como un carácter literal, escriba una barra diagonal inversa (**\\**) antes del carácter. La barra diagonal inversa no se muestra. Utilizar una barra diagonal inversa es equivalente a delimitar el siguiente carácter con comillas dobles. Para mostrar una barra diagonal inversa, use dos barras diagonales inversas (**\\\\**). A continuación se indican algunos ejemplos de caracteres que no pueden mostrarse como caracteres literales:<br /><br /> <br /><br /> Los caracteres de formato de fecha y hora:**a**, **c**, **d**, **h**, **m**, **n**, **p**, **q**, **s**, **t**, **w**, **y**, **/** y **:**<br /><br /> Los caracteres de formato numérico:**#**, **0**, **%**, **E**, **e**, **coma**y **punto**<br /><br /> Los caracteres de formato de cadena:**@**, **&**, **\<**, **>** y **!**|  
 |**"ABC"**|Muestra la cadena entre comillas dobles (**" "**).<br /><br /> Para asignar formato a una cadena desde dentro del código, use Chr(**34**) para delimitar el texto. (El código de carácter para las comillas dobles es **34**).|  
   
 ### <a name="named-numeric-formats"></a>Formatos numéricos con nombre  
@@ -157,8 +143,8 @@ La propiedad de celda **FORMAT_STRING** da formato a la propiedad **VALUE** de l
   
 ## <a name="see-also"></a>Vea también  
  [LANGUAGE y FORMAT_STRING en FORMATTED_VALUE.](../../../analysis-services/multidimensional-models/mdx/mdx-cell-properties-formatted-value-property.md)   
- [Mediante las propiedades de celda &#40; MDX &#41;](../../../analysis-services/multidimensional-models/mdx/mdx-cell-properties-using-cell-properties.md)   
- [Creación y uso de valores de propiedad &#40; MDX &#41;](http://msdn.microsoft.com/library/0cafb269-03c8-4183-b6e9-220f071e4ef2)   
- [Aspectos básicos de consulta MDX &#40; Analysis Services &#41;](../../../analysis-services/multidimensional-models/mdx/mdx-query-fundamentals-analysis-services.md)  
+ [Mediante las propiedades de celda & #40; MDX & #41;](../../../analysis-services/multidimensional-models/mdx/mdx-cell-properties-using-cell-properties.md)   
+ [Creación y uso de valores de propiedad & #40; MDX & #41;](http://msdn.microsoft.com/library/0cafb269-03c8-4183-b6e9-220f071e4ef2)   
+ [Aspectos básicos de consulta MDX & #40; Analysis Services & #41;](../../../analysis-services/multidimensional-models/mdx/mdx-query-fundamentals-analysis-services.md)  
   
   

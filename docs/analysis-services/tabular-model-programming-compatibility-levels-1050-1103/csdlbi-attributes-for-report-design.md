@@ -1,33 +1,32 @@
 ---
-title: "Atributos CSDLBI para el diseño de informes | Documentos de Microsoft"
-ms.custom: 
+title: Atributos CSDLBI para el diseño de informes | Documentos de Microsoft
+ms.custom: ''
 ms.date: 03/04/2017
 ms.prod: analysis-services
 ms.prod_service: analysis-services
-ms.service: 
-ms.component: 
-ms.reviewer: 
+ms.service: ''
+ms.component: ''
+ms.reviewer: ''
 ms.suite: pro-bi
-ms.technology: 
-ms.tgt_pltfrm: 
+ms.technology: ''
+ms.tgt_pltfrm: ''
 ms.topic: reference
 applies_to:
 - SQL Server 2016 Preview
 ms.assetid: 61ba3a27-790e-43bc-b421-e01bf2fdbda6
-caps.latest.revision: 
+caps.latest.revision: 9
 author: Minewiskan
 ms.author: owend
 manager: kfile
-ms.workload: Inactive
-ms.openlocfilehash: 4b2c46d037112cb79502e8d0ce56a5c9c319ec09
-ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
-ms.translationtype: MT
+ms.openlocfilehash: dc31de2ee816712630ddbd5c953248a9cf73d3d4
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/15/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="csdlbi-attributes-for-report-design"></a>Atributos CSDLBI para el diseño de informes
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
-En esta sección se describen los atributos de las extensiones de CSDL para la creación de modelos tabulares que afectan al diseño de consultas de [!INCLUDE[ssCrescent](../../includes/sscrescent-md.md)].  
+  En esta sección se describen los atributos de las extensiones de CSDL para la creación de modelos tabulares que afectan al diseño de consultas de [!INCLUDE[ssCrescent](../../includes/sscrescent-md.md)].  
   
 ## <a name="model-attributes"></a>Model Attributes  
  Estos atributos se definen en un subelemento de un elemento [EntityContainer](http://msdn.microsoft.com/library/bb399169.aspx) de CSDL.  
@@ -48,7 +47,7 @@ En esta sección se describen los atributos de las extensiones de CSDL para la c
 |**Oculto**|Boolean|Indica si se debe mostrar la entidad. El valor predeterminado es **false**.|  
 |**CollectionCaption**|Texto|Nombre plural para hacer referencia a un conjunto de instancias de la entidad. Si se omite, se usa el atributo Caption.|  
 |**DisplayKey**|MemberRef[]|Lista ordenada de campos que se usa para identificar una instancia de la entidad para un usuario empresarial. Las referencias pueden incluir propiedades de instancia y de navegación. Cuando se hace referencia a una propiedad de navegación, se muestra el atributo **DisplayKey** de la entidad de destino. Si se omite el valor del atributo **DisplayKey** , se usa el campo Key.|  
-|**DefaultImage**|MemberRef|Referencia al campo que contiene una imagen usada para identificar visualmente una instancia de la entidad a un usuario empresarial. Si se omite, se usa el primer campo de imagen en la entidad, si existe alguno.|  
+|**Elemento DefaultImage**|MemberRef|Referencia al campo que contiene una imagen usada para identificar visualmente una instancia de la entidad a un usuario empresarial. Si se omite, se usa el primer campo de imagen en la entidad, si existe alguno.|  
 |**DefaultDetails**|MemberRef[]|Lista ordenada de campos que representan el conjunto predeterminado de información detallada que se muestra a un usuario empresarial sobre una instancia de la entidad. Si se omite, se usan los cinco (5) primeros campos de la entidad, exceptuando aquellos a los que ya se ha hecho referencia mediante **Key**, **DisplayKey**o **DefaultImage**.|  
 |**SortProperties**|MemberRef[]|Lista ordenada de campos por los cuales se suele ordenar la instancia de la entidad. Al ordenar según estos campos, se usa el atributo **SortDirection** especificado en cada campo. Si se omite, se usan los campos **DisplayKey** .|  
 |**DefaultMeasure**|MemberRef|Referencia a una medida definida en el modelo, o a un campo numérico con una función de agregado predeterminada, para indicar que la medida o el campo se debe usar como la representación predeterminada para varias instancias de la entidad. Si se omite, se usa un recuento de las instancias de la entidad.|  

@@ -21,12 +21,11 @@ caps.latest.revision: 9
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.workload: On Demand
-ms.openlocfilehash: 1c729d5ba18dea1f400e31f312e8dbb340ca5ff3
-ms.sourcegitcommit: bb044a48a6af9b9d8edb178dc8c8bd5658b9ff68
-ms.translationtype: MT
+ms.openlocfilehash: 63d3687449f5487c2bdac5d72027112a61839ec9
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/18/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="ado-code-examples-in-visual-basic"></a>Ejemplos de código ADO en Visual Basic
 Utilice los siguientes ejemplos de código para obtener información sobre cómo utilizar los métodos, propiedades y eventos cuando se escribe en Visual Basic de ADO.  

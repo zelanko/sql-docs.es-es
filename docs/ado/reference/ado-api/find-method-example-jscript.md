@@ -21,12 +21,11 @@ caps.latest.revision: 10
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: c4355a60ff964b33868ed883940e0e1d20ddfc3b
-ms.sourcegitcommit: bb044a48a6af9b9d8edb178dc8c8bd5658b9ff68
-ms.translationtype: MT
+ms.openlocfilehash: 5155074fbfc1b7adc612f69a270359ca29087521
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/18/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="find-method-example-jscript"></a>Buscar el ejemplo del método (JScript)
 Este ejemplo se utiliza la [Recordset](../../../ado/reference/ado-api/recordset-object-ado.md) del objeto [buscar](../../../ado/reference/ado-api/find-method-ado.md) método para buscar y mostrar las compañías en el ***Northwind*** base de datos cuyo nombre empieza con la letra G. cortar y pegar el siguiente código en el Bloc de notas u otro editor de texto y guárdelo como **FindJS.asp**.  

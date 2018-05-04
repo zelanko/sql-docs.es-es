@@ -30,15 +30,15 @@ caps.latest.revision: 21
 author: Minewiskan
 ms.author: owend
 manager: kfile
-ms.workload: Inactive
-ms.openlocfilehash: d8e1f992cd7cf9a6aceb1490d78aa0fba49b7758
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
-ms.translationtype: MT
+ms.openlocfilehash: c12c3d3e4f64ee0be203d676753a00cc002cf11b
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="axes-element-xmla"></a>Elemento Axes (XMLA)
-[!INCLUDE[ssas-appliesto-sqlas-aas](../../../includes/ssas-appliesto-sqlas-aas.md)]Contiene una colección de [eje](../../../analysis-services/xmla/xml-elements-properties/axis-element-xmla.md) elementos que representan datos de eje contenidos por un [raíz](../../../analysis-services/xmla/xml-elements-properties/root-element-xmla.md) elemento que usa el [MDDataSet](../../../analysis-services/xmla/xml-data-types/mddataset-data-type-xmla.md) tipo de datos.  
+[!INCLUDE[ssas-appliesto-sqlas-aas](../../../includes/ssas-appliesto-sqlas-aas.md)]
+  Contiene una colección de [eje](../../../analysis-services/xmla/xml-elements-properties/axis-element-xmla.md) elementos que representan datos de eje contenidos por un [raíz](../../../analysis-services/xmla/xml-elements-properties/root-element-xmla.md) elemento que usa el [MDDataSet](../../../analysis-services/xmla/xml-data-types/mddataset-data-type-xmla.md) tipo de datos.  
   
 ## <a name="syntax"></a>Sintaxis  
   
@@ -53,12 +53,12 @@ ms.lasthandoff: 01/08/2018
 </root>  
 ```  
   
-## <a name="element-characteristics"></a>Características del elemento  
+## <a name="element-characteristics"></a>Características de los elementos  
   
-|Característica|Description|  
+|Característica|Descripción|  
 |--------------------|-----------------|  
 |Tipo y longitud de los datos|Cualquiera|  
-|Valor predeterminado|None|  
+|Valor predeterminado|Ninguno|  
 |Cardinalidad|1-1: Elemento necesario que se produce una vez y solo una vez.|  
   
 ## <a name="element-relationships"></a>Relaciones del elemento  
@@ -66,10 +66,10 @@ ms.lasthandoff: 01/08/2018
 |Relación|Elemento|  
 |------------------|-------------|  
 |Elementos primarios|[raíz](../../../analysis-services/xmla/xml-elements-properties/root-element-xmla.md)|  
-|Elementos secundarios|[Axis](../../../analysis-services/xmla/xml-elements-properties/axis-element-xmla.md)|  
+|Elementos secundarios|[Eje](../../../analysis-services/xmla/xml-elements-properties/axis-element-xmla.md)|  
   
 ## <a name="remarks"></a>Comentarios  
- En el **ejes** elemento, el **eje** elementos se muestran en el orden en que aparecen en el conjunto de datos, empezando por cero. El **AxisFormat** configuración de la propiedad XMLA determina cómo **eje** se da formato a los elementos. Para obtener más información sobre la **AxisFormat** propiedad, vea [admite propiedades XMLA &#40; XMLA &#41; ](../../../analysis-services/xmla/xml-elements-properties/propertylist-element-supported-xmla-properties.md).  
+ En el **ejes** elemento, el **eje** elementos se muestran en el orden en que aparecen en el conjunto de datos, empezando por cero. El **AxisFormat** configuración de la propiedad XMLA determina cómo **eje** se da formato a los elementos. Para obtener más información sobre la **AxisFormat** propiedad, vea [admite propiedades XMLA &#40;XMLA&#41;](../../../analysis-services/xmla/xml-elements-properties/propertylist-element-supported-xmla-properties.md).  
   
  Un eje representa un conjunto de tuplas, en las que todas las tuplas del conjunto tienen la misma dimensionalidad. Un conjunto se puede representar de maneras diferentes con ventajas diferentes. Por ejemplo, el conjunto siguiente de cuatro tuplas se puede representar como una colección de tuplas bidimensionales o un producto cartesiano de dos conjuntos unidimensionales.  
   
@@ -125,7 +125,7 @@ CrossProduct (
  Un cliente puede utilizar el **AxisFormat** propiedad para solicitar una representación concreta.  
   
 ## <a name="see-also"></a>Vea también  
- [Tipo de datos MDDataSet &#40; XMLA &#41;](../../../analysis-services/xmla/xml-data-types/mddataset-data-type-xmla.md)   
- [Propiedades &#40; XMLA &#41;](../../../analysis-services/xmla/xml-elements-properties/xml-elements-properties.md)  
+ [Tipo de datos MDDataSet & #40; XMLA & #41;](../../../analysis-services/xmla/xml-data-types/mddataset-data-type-xmla.md)   
+ [Propiedades & #40; XMLA & #41;](../../../analysis-services/xmla/xml-elements-properties/xml-elements-properties.md)  
   
   

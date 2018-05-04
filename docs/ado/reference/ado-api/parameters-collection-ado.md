@@ -24,12 +24,11 @@ caps.latest.revision: 20
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.workload: On Demand
-ms.openlocfilehash: e6557489b5051a7d92864b662b1822b9e6d0dff4
-ms.sourcegitcommit: bb044a48a6af9b9d8edb178dc8c8bd5658b9ff68
-ms.translationtype: MT
+ms.openlocfilehash: e9fc523670e3f736448332cb4d33ae85a6970098
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/18/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="parameters-collection-ado"></a>Colección de parámetros (ADO)
 Contiene todos los [parámetro](../../../ado/reference/ado-api/parameter-object.md) objetos de un [comando](../../../ado/reference/ado-api/command-object-ado.md) objeto.  

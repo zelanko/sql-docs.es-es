@@ -23,15 +23,15 @@ caps.latest.revision: 30
 author: Minewiskan
 ms.author: owend
 manager: kfile
-ms.workload: Inactive
-ms.openlocfilehash: 5cf0198759485452fc3fd6d82cdd2642df92b440
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
-ms.translationtype: MT
+ms.openlocfilehash: c2561c27de11ad00541e7b0f3d582c84eb89ec1a
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="mdschemadimensions-rowset"></a>Conjunto de filas MDSCHEMA_DIMENSIONS
-[!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]Describe las dimensiones compartidas y privadas dentro de una base de datos.  
+[!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]
+  Describe las dimensiones compartidas y privadas dentro de una base de datos.  
   
 ## <a name="rowset-columns"></a>Columnas del conjunto de filas  
  El **MDSCHEMA_DIMENSIONS** filas contiene las columnas siguientes:  
@@ -72,6 +72,6 @@ ms.lasthandoff: 01/08/2018
 |**DIMENSION_VISIBILITY**|**DBTYPE_UI2**|(Opcional) La restricción predeterminada es un valor de 1. Un mapa de bits con uno de los siguientes valores válidos:<br /><br /> 1 Visible<br /><br /> 2 no visible|  
   
 ## <a name="see-also"></a>Vea también  
- [OLE DB para los conjuntos de filas de esquema OLAP](../../../analysis-services/schema-rowsets/ole-db-olap/ole-db-for-olap-schema-rowsets.md)  
+ [OLE DB para OLAP Schema Rowsets](../../../analysis-services/schema-rowsets/ole-db-olap/ole-db-for-olap-schema-rowsets.md)  
   
   

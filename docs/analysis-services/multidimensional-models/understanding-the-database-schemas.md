@@ -1,38 +1,23 @@
 ---
-title: "Descripción de los esquemas de base de datos | Documentos de Microsoft"
-ms.custom: 
-ms.date: 03/14/2017
-ms.prod: analysis-services
-ms.prod_service: analysis-services
-ms.service: 
-ms.component: data-mining
-ms.reviewer: 
-ms.suite: pro-bi
-ms.technology: 
-ms.tgt_pltfrm: 
+title: Descripción de los esquemas de base de datos | Documentos de Microsoft
+ms.date: 05/02/2018
+ms.prod: sql
+ms.technology: analysis-services
+ms.component: multidimensional-models
 ms.topic: article
-helpviewer_keywords:
-- Schema Generation Wizard, database schema
-- database schema [Analysis Services]
-- relational schema [Analysis Services], database schema
-- subject area schema options [Analysis Services]
-- staging area schema options [Analysis Services]
-- denormalized schemas
-ms.assetid: 51e411f9-ee3f-4b92-9833-c2bce8c6b752
-caps.latest.revision: 
-author: Minewiskan
 ms.author: owend
+ms.reviewer: owend
+author: minewiskan
 manager: kfile
-ms.workload: Inactive
-ms.openlocfilehash: 05f62f6beb2e248fc2e0c3ae405f8893c33c10e9
-ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
+ms.openlocfilehash: aff2fa15822aa4a6b38d46bc6a8cd8497be5fa6c
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/15/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="understanding-the-database-schemas"></a>Descripción de esquemas de base de datos
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
-El Asistente para generar esquemas genera un esquema relacional sin normalizar para la base de datos del área de asunto basado en las dimensiones y grupos de medida de [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]. El asistente genera una tabla relacional por dimensión para almacenar los datos de dimensión que se denomina tabla de dimensión y una tabla relacional por grupo de medida para almacenar los datos de hechos que se denomina tabla de hechos. Al generar las tablas relacionales, el asistente omite las dimensiones vinculadas, los grupos de medida vinculados y las dimensiones de tiempo de servidor.  
+  El Asistente para generar esquemas genera un esquema relacional sin normalizar para la base de datos del área de asunto basado en las dimensiones y grupos de medida de [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]. El asistente genera una tabla relacional por dimensión para almacenar los datos de dimensión que se denomina tabla de dimensión y una tabla relacional por grupo de medida para almacenar los datos de hechos que se denomina tabla de hechos. Al generar las tablas relacionales, el asistente omite las dimensiones vinculadas, los grupos de medida vinculados y las dimensiones de tiempo de servidor.  
   
 ## <a name="validation"></a>Validación  
  Antes de comenzar a generar el esquema relacional subyacente, el Asistente para generar esquemas valida los cubos y dimensiones de [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] . Si el asistente detecta errores, se interrumpe e informa de los errores en la ventana Lista de tareas de [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]. Entre los ejemplos de errores que evitan la generación se incluyen los siguientes:  

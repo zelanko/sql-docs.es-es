@@ -11,7 +11,7 @@ ms.suite: sql
 ms.technology:
 - drivers
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 apiname:
 - SQLFetch
 apilocation:
@@ -26,12 +26,11 @@ caps.latest.revision: 27
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.workload: On Demand
-ms.openlocfilehash: f1d87bc952852df3301d095203f6c94794de795d
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
-ms.translationtype: MT
+ms.openlocfilehash: f386bd758a9b8c247197418448914904560cd1b6
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="sqlfetch-function"></a>SQLFetch, función
 **Conformidad**  
@@ -64,10 +63,10 @@ SQLRETURN SQLFetch(
 |--------------|-----------|-----------------|  
 |01000|Advertencia general|Mensaje informativo de específicas del controlador. (La función devuelve SQL_SUCCESS_WITH_INFO).|  
 |01004|Datos de cadena, delimitado truncados|Cadena o datos binarios devueltos para una columna generó el truncamiento de carácter que no esté vacía o datos binarios no NULL. Si ha realizado un valor de cadena, era truncado a la derecha.|  
-|01S01|Error en la fila|Se produjo un error al capturar una o varias filas.<br /><br /> (Si este SQLSTATE se devuelve cuando una aplicación ODBC 3*.x* aplicación está trabajando con una API ODBC 2*.x* controlador, puede hacer caso omiso.)|  
+|01S01|Error en la fila|Se produjo un error al capturar una o varias filas.<br /><br /> (Si este SQLSTATE se devuelve cuando una aplicación ODBC 3 *.x* aplicación está trabajando con una API ODBC 2 *.x* controlador, puede hacer caso omiso.)|  
 |01S07|Truncamiento fraccionario|Se truncaron los datos devueltos para una columna. Para los tipos de datos numéricos, se trunca la parte fraccionaria del número. De hora, marca de tiempo y los tipos de datos interval que contienen un componente de tiempo, se trunca la parte fraccionaria del tiempo.<br /><br /> (La función devuelve SQL_SUCCESS_WITH_INFO).|  
 |07006|Infracción del atributo de tipo de datos restringido|No se pudo convertir el valor de datos de una columna del conjunto de resultados para el tipo de datos especificado por *TargetType* en **SQLBindCol**.<br /><br /> La columna 0 se enlazó con un tipo de datos de SQL_C_BOOKMARK y el atributo de instrucción SQL_ATTR_USE_BOOKMARKS se estableció en SQL_UB_VARIABLE.<br /><br /> La columna 0 se enlazó con un tipo de datos de SQL_C_VARBOOKMARK y no se estableció el atributo de instrucción de SQL_ATTR_USE_BOOKMARKS en SQL_UB_VARIABLE.|  
-|07009|Índice de descriptor no válido|El controlador fue un ODBC 2*.x* controlador que no es compatible con **SQLExtendedFetch**, y un número de columna especificado en el enlace para una columna es 0.<br /><br /> Se ha enlazado la columna 0, y el atributo de instrucción SQL_ATTR_USE_BOOKMARKS estaba establecido como SQL_UB_OFF.|  
+|07009|Índice de descriptor no válido|El controlador fue un ODBC 2 *.x* controlador que no es compatible con **SQLExtendedFetch**, y un número de columna especificado en el enlace para una columna es 0.<br /><br /> Se ha enlazado la columna 0, y el atributo de instrucción SQL_ATTR_USE_BOOKMARKS estaba establecido como SQL_UB_OFF.|  
 |08S01|Error de vínculo de comunicación|El vínculo de comunicación entre el controlador y el origen de datos al que se conectó el controlador no pudo antes del procesamiento de la función se ha completado.|  
 |22001|Datos de cadena, delimitado truncados|Se ha truncado un marcador de longitud variable devuelto para una columna.|  
 |22002|Variable de indicador necesaria, pero no se ha suministrado|Datos nulos se capturan en una columna cuyo *StrLen_or_IndPtr* establecido por **SQLBindCol** (o SQL_DESC_INDICATOR_PTR establecido por **SQLSetDescField** o  **SQLSetDescRec**) era un puntero nulo.|  
@@ -97,7 +96,7 @@ SQLRETURN SQLFetch(
 ## <a name="comments"></a>Comentarios  
  **SQLFetch** devuelve el siguiente conjunto de filas del conjunto de resultados. Se puede llamar solo mientras existe un conjunto de resultados: es decir, después de una llamada que crea un conjunto de resultados y antes del cursor se cierra el disco que conjunto de resultados. Si no se enlaza ninguna columna, devuelve los datos en esas columnas. Si la aplicación especifica un puntero a una matriz de estado de fila o un búfer en el que se va a devolver el número de filas recuperadas, **SQLFetch** también devuelve esta información. Las llamadas a **SQLFetch** se puede combinar con llamadas a **SQLFetchScroll** pero no se pueden mezclar con las llamadas a **SQLExtendedFetch**. Para obtener más información, consulte [capturar una fila de datos](../../../odbc/reference/develop-app/fetching-a-row-of-data.md).  
   
- Si una aplicación ODBC 3*.x* aplicación funciona con una API ODBC 2*.x* controlador, el Administrador de controladores asigna **SQLFetch** llama a **SQLExtendedFetch** para un ODBC 2*.x* controlador que admita **SQLExtendedFetch**. Si la API ODBC 2*.x* controlador no admite **SQLExtendedFetch**, se asigna el Administrador de controladores **SQLFetch** llama a **SQLFetch** en la API ODBC 2 *.x* controlador, que se puede recuperar una única fila.  
+ Si una aplicación ODBC 3 *.x* aplicación funciona con una API ODBC 2 *.x* controlador, el Administrador de controladores asigna **SQLFetch** llama a **SQLExtendedFetch** para un ODBC 2 *.x* controlador que admita **SQLExtendedFetch**. Si la API ODBC 2 *.x* controlador no admite **SQLExtendedFetch**, se asigna el Administrador de controladores **SQLFetch** llama a **SQLFetch** en la API ODBC 2 *.x* controlador, que se puede recuperar una única fila.  
   
  Para obtener más información, consulte [compatibilidad con versiones anteriores, los cursores desplazables y cursores de bloque](../../../odbc/reference/appendixes/block-cursors-scrollable-cursors-and-backward-compatibility.md) en Apéndice G: controlador directrices para la compatibilidad con versiones anteriores.  
   

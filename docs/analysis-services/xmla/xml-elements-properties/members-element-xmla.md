@@ -29,15 +29,15 @@ caps.latest.revision: 11
 author: Minewiskan
 ms.author: owend
 manager: kfile
-ms.workload: Inactive
-ms.openlocfilehash: 478115a00c7e0f97fcad6e25fc74c1e205bb0a75
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
-ms.translationtype: MT
+ms.openlocfilehash: 20da0d8bcd7a651047b10736d829074265203fa0
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="members-element-xmla"></a>Elemento Members (XMLA)
-[!INCLUDE[ssas-appliesto-sqlas-aas](../../../includes/ssas-appliesto-sqlas-aas.md)]Contiene una colección de [miembro](../../../analysis-services/xmla/xml-elements-properties/member-element-xmla.md) elementos contenidos por el elemento primario [CrossProduct](../../../analysis-services/xmla/xml-elements-properties/crossproduct-element-xmla.md) elemento.  
+[!INCLUDE[ssas-appliesto-sqlas-aas](../../../includes/ssas-appliesto-sqlas-aas.md)]
+  Contiene una colección de [miembro](../../../analysis-services/xmla/xml-elements-properties/member-element-xmla.md) elementos contenidos por el elemento primario [CrossProduct](../../../analysis-services/xmla/xml-elements-properties/crossproduct-element-xmla.md) elemento.  
   
 ## <a name="syntax"></a>Sintaxis  
   
@@ -51,12 +51,12 @@ ms.lasthandoff: 01/08/2018
 </CrossProduct>  
 ```  
   
-## <a name="element-characteristics"></a>Características del elemento  
+## <a name="element-characteristics"></a>Características de los elementos  
   
-|Característica|Description|  
+|Característica|Descripción|  
 |--------------------|-----------------|  
-|Tipo y longitud de los datos|None|  
-|Valor predeterminado|None|  
+|Tipo y longitud de los datos|Ninguno|  
+|Valor predeterminado|Ninguno|  
 |Cardinalidad|0-n: elemento opcional que puede aparecer más de una vez.|  
   
 ## <a name="element-relationships"></a>Relaciones del elemento  
@@ -68,11 +68,11 @@ ms.lasthandoff: 01/08/2018
   
 ## <a name="attributes"></a>Atributos  
   
-|Attribute|Description|  
+|Atributo|Descripción|  
 |---------------|-----------------|  
-|Hierarchy|Atributo **String** requerido. El nombre de la jerarquía a la que los miembros incluidos en el **miembros** el elemento pertenece.|  
+|Jerarquía|Atributo **String** requerido. El nombre de la jerarquía a la que los miembros incluidos en el **miembros** el elemento pertenece.|  
   
-## <a name="remarks"></a>Notas  
+## <a name="remarks"></a>Comentarios  
  Cuando una aplicación cliente establece el **AxisFormat** propiedad *ClusterFormat*, los miembros en cada eje se dividen en clústeres en el que cada uno representa un producto cruzado entre los conjuntos ordenados de miembros de cada jerarquía. Cada **eje** elemento consta de uno o varios **CrossProduct** elementos. Cada **CrossProduct** elemento contiene un **miembros** (elemento) para cada jerarquía del eje. El **miembros** elemento, a su vez, contiene un **miembro** elemento por cada miembro de la jerarquía especificada que se incluyen en el producto cruzado.  
   
 ## <a name="example"></a>Ejemplo  
@@ -128,7 +128,7 @@ ms.lasthandoff: 01/08/2018
 </Axes>  
 ```  
   
-## <a name="see-also"></a>Ver también  
- [Propiedades &#40; XMLA &#41;](../../../analysis-services/xmla/xml-elements-properties/xml-elements-properties.md)  
+## <a name="see-also"></a>Vea también  
+ [Propiedades & #40; XMLA & #41;](../../../analysis-services/xmla/xml-elements-properties/xml-elements-properties.md)  
   
   

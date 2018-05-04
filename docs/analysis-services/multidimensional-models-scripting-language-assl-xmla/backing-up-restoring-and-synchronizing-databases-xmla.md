@@ -1,35 +1,19 @@
 ---
 title: Copia de seguridad, restaurar y sincronizar las bases de datos (XMLA) | Documentos de Microsoft
-ms.custom: 
-ms.date: 02/14/2018
-ms.prod: analysis-services
-ms.prod_service: analysis-services
-ms.service: 
-ms.component: 
-ms.reviewer: 
-ms.suite: pro-bi
-ms.technology: 
-ms.tgt_pltfrm: 
-ms.topic: reference
-applies_to:
-- SQL Server 2016 Preview
-helpviewer_keywords:
-- restoring databases [XML for Analysis]
-- backing up databases [XML for Analysis]
-- database backups [XML for Analysis]
-- synchronization [XML for Analysis]
-- database restores [XML for Analysis]
-ms.assetid: 6c021b2e-6ad0-444e-b23f-4b5f72ce084b
-caps.latest.revision: 
-author: Minewiskan
+ms.date: 05/02/2018
+ms.prod: sql
+ms.technology: analysis-services
+ms.component: xmla
+ms.topic: article
 ms.author: owend
+ms.reviewer: owend
+author: minewiskan
 manager: kfile
-ms.workload: Inactive
-ms.openlocfilehash: 33fc95e7b34b28c4233ede68927e60eada8bf5df
-ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
+ms.openlocfilehash: 6a7b9d3c850052cf1d6a4548764482a287bf671c
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/15/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="backing-up-restoring-and-synchronizing-databases-xmla"></a>Restaurar, sincronizar y realizar copias de seguridad de bases de datos (XMLA)
   En XML for Analysis, hay tres comandos que sirven para restaurar, sincronizar y realizar copias de seguridad de las bases de datos:  
@@ -69,7 +53,7 @@ ms.lasthandoff: 02/15/2018
   
 |Value|Description|  
 |-----------|-----------------|  
-|*SkipMembership*|Incluye las definiciones de seguridad en el archivo de copia de seguridad, pero excluye la información de pertenencia.|  
+|*skipMembership*|Incluye las definiciones de seguridad en el archivo de copia de seguridad, pero excluye la información de pertenencia.|  
 |*CopyAll*|Incluye las definiciones de seguridad y la información de pertenencia en el archivo de copia de seguridad.|  
 |*IgnoreSecurity*|Excluye las definiciones de seguridad del archivo de copia de seguridad.|  
   
@@ -99,7 +83,7 @@ ms.lasthandoff: 02/15/2018
   
 |Valor|Description|  
 |-----------|-----------------|  
-|*SkipMembership*|Incluye las definiciones de seguridad en la base de datos, pero excluye la información de suscripción.|  
+|*skipMembership*|Incluye las definiciones de seguridad en la base de datos, pero excluye la información de suscripción.|  
 |*CopyAll*|Incluye las definiciones de seguridad y la información de pertenencia en la base de datos.|  
 |*IgnoreSecurity*|Excluye las definiciones de seguridad de la base de datos.|  
   
@@ -137,7 +121,7 @@ ms.lasthandoff: 02/15/2018
   
 |Valor|Description|  
 |-----------|-----------------|  
-|*SkipMembership*|Incluye las definiciones de seguridad en la base de datos de destino, pero excluye la información de suscripción.|  
+|*skipMembership*|Incluye las definiciones de seguridad en la base de datos de destino, pero excluye la información de suscripción.|  
 |*CopyAll*|Incluye las definiciones de seguridad y la información de pertenencia en la base de datos de destino.|  
 |*IgnoreSecurity*|Excluye las definiciones de seguridad de la base de datos de destino.|  
   
@@ -154,9 +138,9 @@ ms.lasthandoff: 02/15/2018
  Puede usar el **ubicación** elemento en un comando Synchronize para sincronizar objetos ROLAP. Para cada **ubicación** elemento utilizado para reubicar un origen de datos, el **DataSourceType** propiedad debe establecerse explícitamente en *Local*. . También tendrá que configurar el **ConnectionString** propiedad de la **ubicación** elemento a la cadena de conexión de la nueva ubicación. Durante la sincronización, el **sincronizar** comando reemplazará la cadena de conexión para el origen de datos identificado por la **DataSourceID** propiedad de la **ubicación** elemento con el valor de la **ConnectionString** propiedad de la **ubicación** elemento.  
   
 ## <a name="see-also"></a>Vea también  
- [Elemento backup &#40; XMLA &#41;](../../analysis-services/xmla/xml-elements-commands/backup-element-xmla.md)   
- [Restaurar elemento &#40; XMLA &#41;](../../analysis-services/xmla/xml-elements-commands/restore-element-xmla.md)   
- [Sincronizar el elemento &#40; XMLA &#41;](../../analysis-services/xmla/xml-elements-commands/synchronize-element-xmla.md)   
+ [Elemento backup & #40; XMLA & #41;](../../analysis-services/xmla/xml-elements-commands/backup-element-xmla.md)   
+ [Restaurar elemento & #40; XMLA & #41;](../../analysis-services/xmla/xml-elements-commands/restore-element-xmla.md)   
+ [Sincronizar el elemento & #40; XMLA & #41;](../../analysis-services/xmla/xml-elements-commands/synchronize-element-xmla.md)   
  [Realizar una copia de seguridad y restaurar las bases de datos de Analysis Services](../../analysis-services/multidimensional-models/backup-and-restore-of-analysis-services-databases.md)  
   
   

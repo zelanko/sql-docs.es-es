@@ -27,15 +27,15 @@ caps.latest.revision: 33
 author: Minewiskan
 ms.author: owend
 manager: kfile
-ms.workload: Inactive
-ms.openlocfilehash: b516ab5286366ad9b339dd13ab798ce0c2b897c1
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
-ms.translationtype: MT
+ms.openlocfilehash: 965b3eb97b183eda4426c6233752a46df032bfa3
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="currenttimemember-element-assl"></a>Elemento CurrentTimeMember (ASSL)
-[!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]Define el miembro actual de una hora de dimensión asociada con un [Kpi](../../../analysis-services/scripting/objects/kpi-element-assl.md) elemento.  
+[!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]
+  Define el miembro actual de una hora de dimensión asociada con un [Kpi](../../../analysis-services/scripting/objects/kpi-element-assl.md) elemento.  
   
 ## <a name="syntax"></a>Sintaxis  
   
@@ -48,20 +48,20 @@ ms.lasthandoff: 01/08/2018
 </AggregationDimension>  
 ```  
   
-## <a name="element-characteristics"></a>Características del elemento  
+## <a name="element-characteristics"></a>Características de los elementos  
   
-|Característica|Description|  
+|Característica|Descripción|  
 |--------------------|-----------------|  
-|Tipo y longitud de los datos|String|  
-|Valor predeterminado|None|  
-|Cardinalidad|0-1: Elemento opcional que puede aparecer una y solo una vez.|  
+|Tipo y longitud de los datos|Cadena|  
+|Valor predeterminado|Ninguno|  
+|Cardinalidad|0-1: Elemento opcional que puede aparecer solo una vez.|  
   
 ## <a name="element-relationships"></a>Relaciones del elemento  
   
 |Relación|Elemento|  
 |------------------|-------------|  
 |Elemento primario|[KPI](../../../analysis-services/scripting/objects/kpi-element-assl.md)|  
-|Elementos secundarios|None|  
+|Elementos secundarios|Ninguno|  
   
 ## <a name="remarks"></a>Comentarios  
  El valor de este elemento es una instrucción MDX (Expresiones multidimensionales) que se evalúa en un miembro único en una dimensión de tiempo que se usa para recuperar el período de tiempo cuando se evalúa el indicador clave de rendimiento (KPI).  
@@ -69,6 +69,6 @@ ms.lasthandoff: 01/08/2018
  El elemento que corresponde al elemento primario de **CurrentTimeMember** en el objeto de Analysis Management Objects (AMO) es el modelo <xref:Microsoft.AnalysisServices.Kpi>.  
   
 ## <a name="see-also"></a>Vea también  
- [Propiedades &#40; ASSL &#41;](../../../analysis-services/scripting/properties/properties-assl.md)  
+ [Propiedades & #40; ASSL & #41;](../../../analysis-services/scripting/properties/properties-assl.md)  
   
   

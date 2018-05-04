@@ -1,31 +1,23 @@
 ---
-title: "No se puede actualizar los datos de una conexión de datos en el libro | Documentos de Microsoft"
-ms.custom: 
-ms.date: 03/14/2017
-ms.prod: analysis-services
-ms.prod_service: analysis-services
-ms.service: 
-ms.component: 
-ms.reviewer: 
-ms.suite: pro-bi
-ms.technology: 
-ms.tgt_pltfrm: 
-ms.topic: reference
-ms.assetid: 0f6fd52d-ac72-43e3-aa08-05a2d2bb873d
-caps.latest.revision: 
-author: Minewiskan
+title: No se puede actualizar los datos de una conexión de datos en el libro | Documentos de Microsoft
+ms.date: 05/02/2018
+ms.prod: sql
+ms.technology: analysis-services
+ms.component: ppvt-sharepoint
+ms.topic: article
 ms.author: owend
+ms.reviewer: owend
+author: minewiskan
 manager: kfile
-ms.workload: On Demand
-ms.openlocfilehash: aa07f99e3c4d5a16c0b30ace530d889f5c784a9c
-ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
+ms.openlocfilehash: c1961c883a5e38c56acf65def83272aa1e5adb8d
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/15/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="unable-to-refresh-data-for-a-data-connection-in-the-workbook"></a>No se pueden actualizar los datos para la conexión de datos del libro
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
-Para libros de Excel que contienen datos de [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] , Excel Services devuelve este error si envía una solicitud de conexión a un servidor de [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] y se produce un error en la solicitud.  
+  Para libros de Excel que contienen datos de [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] , Excel Services devuelve este error si envía una solicitud de conexión a un servidor de [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] y se produce un error en la solicitud.  
   
 ## <a name="details"></a>Detalles  
   
@@ -67,7 +59,7 @@ Para libros de Excel que contienen datos de [!INCLUDE[ssGemini](../../includes/s
   
  Para evitar este problema, una el equipo al mismo dominio del servidor de [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] o instale un controlador de dominio en el equipo local. La segunda solución, instalar el controlador de dominio, le exigirá que cree cuentas de dominio locales para todos los servicios y usuarios. Tendrá que configurar cuentas de servicio y permisos de SharePoint para las cuentas que defina.  
   
- La instalación de un controlador de dominio en el equipo resulta útil si desea utilizar [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] para SharePoint en un estado sin conexión. Para obtener instrucciones detalladas sobre cómo usar [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] sin conexión, vea la entrada de blog sobre cómo desconectar el servidor de [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] de la red en [http://www.powerpivotgeek.com](http://go.microsoft.com/fwlink/?LinkId=184241).  
+ La instalación de un controlador de dominio en el equipo resulta útil si desea utilizar [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] para SharePoint en un estado sin conexión. Para obtener instrucciones detalladas sobre cómo usar [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] sin conexión, vea la entrada del blog "toma la [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] servidor fuera de la red" en [ http://www.powerpivotgeek.com ](http://go.microsoft.com/fwlink/?LinkId=184241).  
   
  **Escenario 4: servidor inestable**  
   

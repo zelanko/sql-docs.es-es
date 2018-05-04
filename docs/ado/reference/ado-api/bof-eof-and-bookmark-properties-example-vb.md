@@ -23,12 +23,11 @@ caps.latest.revision: 10
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: d396c5d6d7811c6c6557a67325d8bfd481ae1bf0
-ms.sourcegitcommit: bb044a48a6af9b9d8edb178dc8c8bd5658b9ff68
-ms.translationtype: MT
+ms.openlocfilehash: ad0ed1a0187a07667e754d3bb043bdeea2de062e
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/18/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="bof-eof-and-bookmark-properties-example-vb"></a>BOF, EOF y ejemplo de propiedades de marcador (VB)
 Este ejemplo se utiliza la [BOF](../../../ado/reference/ado-api/bof-eof-properties-ado.md) y [EOF](../../../ado/reference/ado-api/bof-eof-properties-ado.md) propiedades para mostrar un mensaje si un usuario intenta moverse más allá del primer o último registro de un [conjunto de registros](../../../ado/reference/ado-api/recordset-object-ado.md). Usa el [marcador](../../../ado/reference/ado-api/bookmark-property-ado.md) propiedad para permitir que el usuario marca un registro en un **Recordset** y volver a él más adelante.  

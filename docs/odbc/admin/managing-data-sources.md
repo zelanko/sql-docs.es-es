@@ -11,7 +11,7 @@ ms.suite: sql
 ms.technology:
 - drivers
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - deleting data sources [ODBC], ODBC data source administrator
 - data sources [ODBC], ODBC data source administrator
@@ -23,12 +23,11 @@ caps.latest.revision: 11
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.workload: On Demand
-ms.openlocfilehash: 679edbfc02628e9a78b209961b22f576f627f057
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
-ms.translationtype: MT
+ms.openlocfilehash: 222bbc143fee7aa89d8414a05510fa01a35873cd
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="managing-data-sources"></a>Administrar orígenes de datos
 Después de instalar a un controlador ODBC de programa de instalación del controlador, puede definir uno o varios orígenes de datos para él. El nombre de origen de datos (DSN) debe proporcionar una descripción única de los datos; Por ejemplo, *nómina* o *cuentas por pagar*. Se muestran los orígenes de datos de usuario y del sistema que se definen para todos los controladores instalados actualmente en el **DSN de usuario** o **DSN de sistema** pestañas de la **Administrador de orígenes de datos ODBC**cuadro de diálogo. Los orígenes de datos de archivo en un directorio determinado se muestran en la **DSN de archivo** pestaña; se especifica el directorio que se mostrará en el **buscar en** cuadro el **DSN de archivo** ficha.  

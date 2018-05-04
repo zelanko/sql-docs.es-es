@@ -20,15 +20,15 @@ caps.latest.revision: 21
 author: Minewiskan
 ms.author: owend
 manager: kfile
-ms.workload: Inactive
-ms.openlocfilehash: 7f97592e50485bdd26c55eb62fb9b4649acb545b
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
-ms.translationtype: MT
+ms.openlocfilehash: 47ae34ea04d85eab94bb9231c0ec1efc75853e7b
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="discovercommandobjects-rowset"></a>DISCOVER_COMMAND_OBJECTS, conjunto de filas
-[!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]Proporciona información de actividad y el uso de recursos acerca de los objetos en uso por el comando que se hace referencia.  
+[!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]
+  Proporciona información sobre el uso de los recursos y la actividad en los objetos que utiliza el comando al que se hace referencia.  
   
  **Se aplica a:** modelos tabulares, modelos multidimensionales  
   
@@ -68,6 +68,6 @@ ms.lasthandoff: 01/08/2018
 |ADOMDNAME|CommandObjects|  
   
 ## <a name="see-also"></a>Vea también  
- [Conjuntos de filas de esquema de XML for Analysis](../../../analysis-services/schema-rowsets/xml/xml-for-analysis-schema-rowsets.md)  
+ [XML para conjuntos de filas de esquema de análisis](../../../analysis-services/schema-rowsets/xml/xml-for-analysis-schema-rowsets.md)  
   
   

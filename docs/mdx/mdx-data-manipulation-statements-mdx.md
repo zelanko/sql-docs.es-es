@@ -22,12 +22,11 @@ caps.latest.revision: 29
 author: Minewiskan
 ms.author: owend
 manager: erikre
-ms.workload: Inactive
-ms.openlocfilehash: 91ef03b9b43dba3e76d921abf3a32fdbb456f49b
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
-ms.translationtype: MT
+ms.openlocfilehash: da070d23c0a01886cc63632ccd269502d1dc33a3
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="mdx-data-manipulation-statements-mdx"></a>Instrucciones de manipulación de datos de MDX (MDX)
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
@@ -38,15 +37,15 @@ ms.lasthandoff: 01/08/2018
   
 |Tema|Description|  
 |-----------|-----------------|  
-|[Instrucción CALL &#40; MDX &#41;](../mdx/mdx-data-manipulation-call.md)|Ejecuta un procedimiento almacenado que no devuelve ningún valor en el ámbito actual u, opcionalmente, en un cubo especificado.|  
-|[Instrucción CLEAR CALCULATIONS &#40; MDX &#41;](../mdx/mdx-data-manipulation-clear-calculations.md)|Quita todos los cálculos del cubo y devuelve el cubo al paso de cálculo 0.|  
-|[Instrucción de obtención de detalles &#40; MDX &#41;](../mdx/mdx-data-manipulation-drillthrough.md)|Recupera los conjuntos de filas que se han utilizado para crear una celda específica en un cubo.|  
-|[Instrucción SELECT &#40; MDX &#41;](../mdx/mdx-data-manipulation-select.md)|Recupera datos de un cubo especificado.|  
-|[Instrucción UPDATE CUBE &#40; MDX &#41;](../mdx/mdx-data-manipulation-update-cube.md)|Actualiza el valor de una celda hoja o de una celda no hoja especificada en un cubo, asignando opcionalmente el valor de una celda no hoja especificada a través de las celdas hoja dependientes.|  
+|[Instrucción CALL &#40;MDX&#41;](../mdx/mdx-data-manipulation-call.md)|Ejecuta un procedimiento almacenado que no devuelve ningún valor en el ámbito actual u, opcionalmente, en un cubo especificado.|  
+|[Instrucción CLEAR CALCULATIONS &#40;MDX&#41;](../mdx/mdx-data-manipulation-clear-calculations.md)|Quita todos los cálculos del cubo y devuelve el cubo al paso de cálculo 0.|  
+|[Instrucción de obtención de detalles &#40;MDX&#41;](../mdx/mdx-data-manipulation-drillthrough.md)|Recupera los conjuntos de filas que se han utilizado para crear una celda específica en un cubo.|  
+|[Instrucción SELECT & #40; MDX & #41;](../mdx/mdx-data-manipulation-select.md)|Recupera datos de un cubo especificado.|  
+|[Instrucción UPDATE CUBE &#40;MDX&#41;](../mdx/mdx-data-manipulation-update-cube.md)|Actualiza el valor de una celda hoja o de una celda no hoja especificada en un cubo, asignando opcionalmente el valor de una celda no hoja especificada a través de las celdas hoja dependientes.|  
   
 ## <a name="see-also"></a>Vea también  
- [Referencia de instrucciones MDX &#40; MDX &#41;](../mdx/mdx-statement-reference-mdx.md)   
- [Instrucciones de definición de datos MDX &#40; MDX &#41;](../mdx/mdx-data-definition-statements-mdx.md)   
- [Instrucciones de Scripting de MDX &#40; MDX &#41;](../mdx/mdx-scripting-statements-mdx.md)  
+ [Referencia de instrucciones MDX &#40;MDX&#41;](../mdx/mdx-statement-reference-mdx.md)   
+ [Instrucciones de definición de datos MDX &#40;MDX&#41;](../mdx/mdx-data-definition-statements-mdx.md)   
+ [Instrucciones de Scripting de MDX & #40; MDX & #41;](../mdx/mdx-scripting-statements-mdx.md)  
   
   

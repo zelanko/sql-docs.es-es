@@ -11,7 +11,7 @@ ms.suite: sql
 ms.technology:
 - drivers
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - SQLSetDescField function [ODBC], Cursor Library
 - SQLSetDescRec function [ODBC], Cursor Library
@@ -20,12 +20,11 @@ caps.latest.revision: 9
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: 2129b4dffc162eb342bf18de345943146a34c633
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
-ms.translationtype: MT
+ms.openlocfilehash: 822e6c0e2d71c24261372224d3832e3c001e616f
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="sqlsetdescfield-and-sqlsetdescrec-cursor-library"></a>SQLSetDescField y SQLSetDescRec (biblioteca de cursores)
 > [!IMPORTANT]  
@@ -61,7 +60,7 @@ ms.lasthandoff: 04/16/2018
   
  La biblioteca de cursores ejecuta llamadas a **SQLSetDescRec** para una columna de marcador.  
   
- Cuando se trabaja con una API ODBC 2. *x* controlador, la biblioteca de cursores devuelve SQLSTATE HY090 (longitud de búfer o cadena no válida) al **SQLSetDescField** o **SQLSetDescRec** se llama para establecer el SQL_DESC_OCTET_ Campo de longitud para el registro de marcador de un descartar en un valor no es igual a 4. Cuando se trabaja con una aplicación ODBC 3*.x* controlador, la biblioteca de cursores permite que el búfer de cualquier tamaño.  
+ Cuando se trabaja con una API ODBC 2. *x* controlador, la biblioteca de cursores devuelve SQLSTATE HY090 (longitud de búfer o cadena no válida) al **SQLSetDescField** o **SQLSetDescRec** se llama para establecer el SQL_DESC_OCTET_ Campo de longitud para el registro de marcador de un descartar en un valor no es igual a 4. Cuando se trabaja con una aplicación ODBC 3 *.x* controlador, la biblioteca de cursores permite que el búfer de cualquier tamaño.  
   
  La biblioteca de cursores ejecuta **SQLSetDescField** cuando se llama para devolver el valor del campo SQL_DESC_BIND_OFFSET_PTR, SQL_DESC_BIND_TYPE, SQL_DESC_ROW_ARRAY_SIZE o SQL_DESC_ROW_STATUS_PTR. Estos campos se pueden devolver las filas, no solo la fila de marcador.  
   

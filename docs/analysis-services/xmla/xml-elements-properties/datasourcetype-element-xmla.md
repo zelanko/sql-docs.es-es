@@ -29,15 +29,15 @@ caps.latest.revision: 13
 author: Minewiskan
 ms.author: owend
 manager: kfile
-ms.workload: Inactive
-ms.openlocfilehash: 6542870aac6490512340d029355855c069d29d4e
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
-ms.translationtype: MT
+ms.openlocfilehash: f7d184a025efd5878a0808a2b422f5e5df0464aa
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="datasourcetype-element-xmla"></a>Elemento DataSourceType (XMLA)
-[!INCLUDE[ssas-appliesto-sqlas-aas](../../../includes/ssas-appliesto-sqlas-aas.md)]Indica si un [ubicación](../../../analysis-services/xmla/xml-elements-properties/location-element-xmla.md) elemento especificado para una [restaurar](../../../analysis-services/xmla/xml-elements-commands/restore-element-xmla.md) o [sincronizar](../../../analysis-services/xmla/xml-elements-commands/synchronize-element-xmla.md) comando es local o remoto.  
+[!INCLUDE[ssas-appliesto-sqlas-aas](../../../includes/ssas-appliesto-sqlas-aas.md)]
+  Indica si un [ubicación](../../../analysis-services/xmla/xml-elements-properties/location-element-xmla.md) elemento especificado para una [restaurar](../../../analysis-services/xmla/xml-elements-commands/restore-element-xmla.md) o [sincronizar](../../../analysis-services/xmla/xml-elements-commands/synchronize-element-xmla.md) comando es local o remoto.  
   
 ## <a name="syntax"></a>Sintaxis  
   
@@ -50,34 +50,34 @@ ms.lasthandoff: 01/08/2018
 </Location>  
 ```  
   
-## <a name="element-characteristics"></a>Características del elemento  
+## <a name="element-characteristics"></a>Características de los elementos  
   
-|Característica|Description|  
+|Característica|Descripción|  
 |--------------------|-----------------|  
 |Tipo y longitud de los datos|String (enumeración)|  
-|Valor predeterminado|*Remoto*|  
-|Cardinalidad|0-1: Elemento opcional que puede aparecer una y solo una vez.|  
+|Valor predeterminado|*remoto*|  
+|Cardinalidad|0-1: Elemento opcional que puede aparecer solo una vez.|  
   
 ## <a name="element-relationships"></a>Relaciones del elemento  
   
 |Relación|Elemento|  
 |------------------|-------------|  
 |Elementos primarios|[Ubicación](../../../analysis-services/xmla/xml-elements-properties/location-element-xmla.md)|  
-|Elementos secundarios|None|  
+|Elementos secundarios|Ninguno|  
   
-## <a name="remarks"></a>Notas  
- El elemento **DataSourceType** determina si el origen de datos definido por el elemento **Location** contiene un origen de datos local o un origen de datos remoto. Para obtener más información acerca de la copia de seguridad y restaurar las particiones remotas, consulte [realizar copias de seguridad, restauración y sincronizar bases de datos &#40; XMLA &#41; ](../../../analysis-services/multidimensional-models-scripting-language-assl-xmla/backing-up-restoring-and-synchronizing-databases-xmla.md).  
+## <a name="remarks"></a>Comentarios  
+ El elemento **DataSourceType** determina si el origen de datos definido por el elemento **Location** contiene un origen de datos local o un origen de datos remoto. Para obtener más información acerca de la copia de seguridad y restaurar las particiones remotas, consulte [realizar copias de seguridad, restauración y sincronizar bases de datos & #40; XMLA & #41; ](../../../analysis-services/multidimensional-models-scripting-language-assl-xmla/backing-up-restoring-and-synchronizing-databases-xmla.md).  
   
  El valor de este elemento se limita a una de las cadenas enumeradas en la tabla siguiente.  
   
 |Valor|Description|  
 |-----------|-----------------|  
 |*Local*|El elemento **Location** define un origen de datos local. Si se utiliza este valor, los comandos **Restore** y **Synchronize** utilizan la información definida en el elemento **Location** para actualizar el origen de datos, recuperada del archivo de copia de seguridad especificado en el elemento **File** para el comando **Backup** o de la base de datos especificada en el elemento **Source** para el comando **Synchronize** , identificado en el elemento **DataSourceID** del elemento **Location** .<br /><br /> Este valor permite a objetos que utilizan el almacenamiento de OLAP (ROLAP) relacional, después de ser restaurados o sincronizados, utilizar una base de datos diferente para sus datos y metadatos.<br /><br /> Nota: Datos ROLAP, como datos de tablas de dimensiones o tablas de reescritura, no se restaura o sincronizados. Solo se restauran o sincronizan los metadatos para los objetos ROLAP.|  
-|*Remoto*|El elemento **Location** define un origen de datos remoto. Si se utiliza este valor, los comandos **Restore** y **Synchronize** utilizan la información definida en el elemento **Location** para restaurar o sincronizar particiones remotas, recuperadas del archivo de copia de seguridad especificado en el elemento **File** del comando **Backup** o de la base de datos especificada en el elemento **Source** para el comando **Synchronize** , a la instancia remota definida en el **DataSourceID** del elemento **Location** .|  
+|*remoto*|El elemento **Location** define un origen de datos remoto. Si se utiliza este valor, los comandos **Restore** y **Synchronize** utilizan la información definida en el elemento **Location** para restaurar o sincronizar particiones remotas, recuperadas del archivo de copia de seguridad especificado en el elemento **File** del comando **Backup** o de la base de datos especificada en el elemento **Source** para el comando **Synchronize** , a la instancia remota definida en el **DataSourceID** del elemento **Location** .|  
   
-## <a name="see-also"></a>Ver también  
- [Elemento ConnectionString &#40; XMLA &#41;](../../../analysis-services/xmla/xml-elements-properties/connectionstring-element-xmla.md)   
- [DataSourceID, elemento &#40; XMLA &#41;](../../../analysis-services/xmla/xml-elements-properties/datasourceid-element-xmla.md)   
- [Propiedades &#40; XMLA &#41;](../../../analysis-services/xmla/xml-elements-properties/xml-elements-properties.md)  
+## <a name="see-also"></a>Vea también  
+ [Elemento ConnectionString &#40;XMLA&#41;](../../../analysis-services/xmla/xml-elements-properties/connectionstring-element-xmla.md)   
+ [Elemento DataSourceID &#40;XMLA&#41;](../../../analysis-services/xmla/xml-elements-properties/datasourceid-element-xmla.md)   
+ [Propiedades & #40; XMLA & #41;](../../../analysis-services/xmla/xml-elements-properties/xml-elements-properties.md)  
   
   

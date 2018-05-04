@@ -11,7 +11,7 @@ ms.suite: sql
 ms.technology:
 - drivers
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - result sets [ODBC], binding columns
 - binding columns [ODBC]
@@ -20,12 +20,11 @@ caps.latest.revision: 5
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: 107a89aeca70d7b28958c475994e3c41f417fa26
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
-ms.translationtype: MT
+ms.openlocfilehash: e56b3a9757089bae9da3341ba3649d8579f8d663
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="binding-result-set-columns"></a>Columnas del conjunto de resultados de enlace
 Las aplicaciones pueden enlazar como muchos o pocos como columnas del conjunto de resultados como que elijan, incluidos no enlace ninguna columna en absoluto. Cuando se captura una fila de datos, el controlador devuelve los datos de las columnas enlazadas a la aplicación. Si la aplicación enlaza todas las columnas del conjunto de resultados depende de la aplicación. Por ejemplo, las aplicaciones que generan informes suelen tengan un formato fijo; dichas aplicaciones crear un conjunto de resultados que contiene todas las columnas utilizadas en el informe y, a continuación, enlazar y recuperarán los datos de todas estas columnas. Aplicaciones que se muestran a veces pantallas llena de datos permiten al usuario decidir qué columnas desea mostrar; dichas aplicaciones crean un conjunto que contiene todas las columnas, el usuario podría desee, pero enlazar y recuperar los datos solo para las columnas seleccionadas por el usuario de resultados.  

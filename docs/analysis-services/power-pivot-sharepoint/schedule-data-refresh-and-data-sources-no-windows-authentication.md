@@ -1,31 +1,23 @@
 ---
-title: "Programación de actualización de datos y orígenes de datos, sin autenticación de Windows | Documentos de Microsoft"
-ms.custom: 
-ms.date: 03/07/2017
-ms.prod: analysis-services
-ms.prod_service: analysis-services
-ms.service: 
-ms.component: data-mining
-ms.reviewer: 
-ms.suite: pro-bi
-ms.technology: 
-ms.tgt_pltfrm: 
+title: Programación de actualización de datos y orígenes de datos, sin autenticación de Windows | Documentos de Microsoft
+ms.date: 05/02/2018
+ms.prod: sql
+ms.technology: analysis-services
+ms.component: ppvt-sharepoint
 ms.topic: article
-ms.assetid: d8d875bc-7823-46b7-a939-867cefd4de12
-caps.latest.revision: 
-author: Minewiskan
 ms.author: owend
+ms.reviewer: owend
+author: minewiskan
 manager: kfile
-ms.workload: Inactive
-ms.openlocfilehash: 9dadc46f53cff296a0332069165a9faa876e6180
-ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
+ms.openlocfilehash: 176195215c71de1f51fbf6665742e3b71689fc12
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/15/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="schedule-data-refresh-and-data-sources---no-windows-authentication"></a>Programación de actualización de datos y orígenes de datos, sin autenticación de Windows
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
-En este tema se describe un flujo de trabajo de nuevos datos de programación de [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] para SharePoint que pueden usar orígenes de datos que **NO** admiten la autenticación de Windows. Por ejemplo, orígenes de datos Oracle o IBM DB2. Las ilustraciones y los pasos de este tema hacen referencia a orígenes de datos Oracle, pero se aplica el mismo flujo de trabajo a otros orígenes de datos.  
+  En este tema se describe un flujo de trabajo de nuevos datos de programación de [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] para SharePoint que pueden usar orígenes de datos que **NO** admiten la autenticación de Windows. Por ejemplo, orígenes de datos Oracle o IBM DB2. Las ilustraciones y los pasos de este tema hacen referencia a orígenes de datos Oracle, pero se aplica el mismo flujo de trabajo a otros orígenes de datos.  
   
 ||  
 |-|  
@@ -121,7 +113,7 @@ En este tema se describe un flujo de trabajo de nuevos datos de programación de
   
 11. Escriba el identificador de usuario Oracle y la contraseña de Oracle y, a continuación, haga clic en **Aceptar**.  
   
- Para más información, vea la sección sobre cómo crear una aplicación de destino para la autenticación de SQL Server en [Usar almacenamiento seguro con la autenticación de SQL Server (SharePoint Server 2013)](http://technet.microsoft.com/library/gg298949.aspx) (http://technet.microsoft.com/library/gg298949.aspx).  
+ Para obtener más información, vea la sección "Para crear una aplicación de destino para la autenticación de SQL Server" en [usar almacenamiento seguro con autenticación de SQL Server (SharePoint Server 2013)](http://technet.microsoft.com/library/gg298949.aspx) (http://technet.microsoft.com/library/gg298949.aspx).  
   
 ## <a name="to-configure-the-power-pivot-service-application"></a>Para configurar la aplicación de servicio Power Pivot  
   

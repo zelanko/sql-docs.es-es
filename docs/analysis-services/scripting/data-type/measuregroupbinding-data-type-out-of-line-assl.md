@@ -27,15 +27,15 @@ caps.latest.revision: 31
 author: Minewiskan
 ms.author: owend
 manager: kfile
-ms.workload: Inactive
-ms.openlocfilehash: 5511e21456f1ba879a153c5eaf2b696618396446
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
-ms.translationtype: MT
+ms.openlocfilehash: 0758271125e406a5bced7b0cfe5c6357126a034e
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="measuregroupbinding-data-type-out-of-line-assl"></a>Tipo de datos MeasureGroupBinding (fuera de línea) (ASSL)
-[!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]Define un tipo de datos primitivo que representa un enlace a un grupo de medida.  
+[!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]
+  Define un tipo de datos primitivo que representa a un enlace con un grupo de medida.  
   
 ## <a name="syntax"></a>Sintaxis  
   
@@ -53,23 +53,23 @@ ms.lasthandoff: 01/08/2018
   
 ## <a name="data-type-characteristics"></a>Características del tipo de datos  
   
-|Característica|Description|  
+|Característica|Descripción|  
 |--------------------|-----------------|  
-|Tipos de datos básicos|None|  
-|Tipos de datos derivados|None|  
+|Tipos de datos base|Ninguno|  
+|Tipos de datos derivados|Ninguno|  
   
 ## <a name="data-type-relationships"></a>Relaciones entre tipos de datos  
   
 |Relación|Elemento|  
 |------------------|-------------|  
-|Elementos primarios|None|  
-|Elementos secundarios|[Dimensiones](../../../analysis-services/scripting/collections/dimensions-element-assl.md), [EstimatedRows](../../../analysis-services/scripting/properties/estimatedrows-element-assl.md), [identificador](../../../analysis-services/scripting/properties/id-element-assl.md), [medidas](../../../analysis-services/scripting/collections/measures-element-assl.md), [particiones](../../../analysis-services/scripting/collections/partitions-element-assl.md), [origen](../../../analysis-services/scripting/properties/source-element-binding-assl.md)|  
-|Elementos derivados|Vea [enlace](../../../analysis-services/scripting/data-type/binding-data-type-assl.md)|  
+|Elementos primarios|Ninguno|  
+|Elementos secundarios|[Dimensions](../../../analysis-services/scripting/collections/dimensions-element-assl.md), [EstimatedRows](../../../analysis-services/scripting/properties/estimatedrows-element-assl.md), [ID](../../../analysis-services/scripting/properties/id-element-assl.md), [Measures](../../../analysis-services/scripting/collections/measures-element-assl.md), [Partitions](../../../analysis-services/scripting/collections/partitions-element-assl.md), [Source](../../../analysis-services/scripting/properties/source-element-binding-assl.md)|  
+|Elementos derivados|Vea [Binding](../../../analysis-services/scripting/data-type/binding-data-type-assl.md)|  
   
 ## <a name="remarks"></a>Comentarios  
- Para obtener más información, vea la sección, los enlaces fuera de línea, en [orígenes de datos y enlaces &#40; SSAS Multidimensional &#41; ](../../../analysis-services/multidimensional-models/data-sources-and-bindings-ssas-multidimensional.md).  
+ Para obtener más información, vea la sección, los enlaces fuera de línea, en [orígenes de datos y enlaces & #40; SSAS Multidimensional & #41; ](../../../analysis-services/multidimensional-models/data-sources-and-bindings-ssas-multidimensional.md).  
   
 ## <a name="see-also"></a>Vea también  
- [Analysis Services Scripting Language tipos de datos XML &#40; ASSL &#41;](../../../analysis-services/scripting/data-type/analysis-services-scripting-language-xml-data-types-assl.md)  
+ [Analysis Services Scripting Language tipos de datos XML & #40; ASSL & #41;](../../../analysis-services/scripting/data-type/analysis-services-scripting-language-xml-data-types-assl.md)  
   
   

@@ -29,15 +29,15 @@ caps.latest.revision: 11
 author: Minewiskan
 ms.author: owend
 manager: kfile
-ms.workload: Inactive
-ms.openlocfilehash: 400517a4e4fcf09816542cbf47e7e2128ad0da49
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
-ms.translationtype: MT
+ms.openlocfilehash: 3e1a647fd3b0ece1058187f73224933f5b44ab65
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="bindings-element-xmla"></a>Elemento Bindings (XMLA)
-[!INCLUDE[ssas-appliesto-sqlas-aas](../../../includes/ssas-appliesto-sqlas-aas.md)]Contiene una colección de [enlace](../../../analysis-services/xmla/xml-elements-properties/binding-element-xmla.md) elementos para el elemento primario [lote](../../../analysis-services/xmla/xml-elements-commands/batch-element-xmla.md) o [proceso](../../../analysis-services/xmla/xml-elements-commands/process-element-xmla.md) elemento.  
+[!INCLUDE[ssas-appliesto-sqlas-aas](../../../includes/ssas-appliesto-sqlas-aas.md)]
+  Contiene una colección de elementos [Binding](../../../analysis-services/xmla/xml-elements-properties/binding-element-xmla.md) para los elementos primarios [Batch](../../../analysis-services/xmla/xml-elements-commands/batch-element-xmla.md) o [Process](../../../analysis-services/xmla/xml-elements-commands/process-element-xmla.md) .  
   
 ## <a name="syntax"></a>Sintaxis  
   
@@ -52,13 +52,13 @@ ms.lasthandoff: 01/08/2018
 </Alter>  
 ```  
   
-## <a name="element-characteristics"></a>Características del elemento  
+## <a name="element-characteristics"></a>Características de los elementos  
   
-|Característica|Description|  
+|Característica|Descripción|  
 |--------------------|-----------------|  
-|Tipo y longitud de los datos|None|  
-|Valor predeterminado|None|  
-|Cardinalidad|0-1: Elemento opcional que puede aparecer una y solo una vez.|  
+|Tipo y longitud de los datos|Ninguno|  
+|Valor predeterminado|Ninguno|  
+|Cardinalidad|0-1: Elemento opcional que puede aparecer solo una vez.|  
   
 ## <a name="element-relationships"></a>Relaciones del elemento  
   
@@ -70,6 +70,6 @@ ms.lasthandoff: 01/08/2018
 ## <a name="remarks"></a>Comentarios  
   
 ## <a name="see-also"></a>Vea también  
- [Propiedades &#40; XMLA &#41;](../../../analysis-services/xmla/xml-elements-properties/xml-elements-properties.md)  
+ [Propiedades & #40; XMLA & #41;](../../../analysis-services/xmla/xml-elements-properties/xml-elements-properties.md)  
   
   

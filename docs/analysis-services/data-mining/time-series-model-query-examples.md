@@ -1,16 +1,16 @@
 ---
 title: Ejemplos de consultas de modelo de serie temporal | Documentos de Microsoft
-ms.custom: 
+ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: analysis-services
 ms.prod_service: analysis-services
-ms.service: 
+ms.service: ''
 ms.component: data-mining
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: pro-bi
-ms.technology: 
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.technology: ''
+ms.tgt_pltfrm: ''
+ms.topic: conceptual
 helpviewer_keywords:
 - time series algorithms [Analysis Services]
 - MISSING_VALUE_SUBSTITUTION
@@ -22,20 +22,19 @@ helpviewer_keywords:
 - PREDICTION_SMOOTHING
 - content queries [DMX]
 ms.assetid: 9a1c527e-2997-493b-ad6a-aaa71260b018
-caps.latest.revision: 
+caps.latest.revision: 35
 author: Minewiskan
 ms.author: owend
 manager: kfile
-ms.workload: Inactive
-ms.openlocfilehash: 4467fa9fcf4b695b77d533e358019b020545861c
-ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
-ms.translationtype: MT
+ms.openlocfilehash: f3f0d8fd5480ab0407143ff42048036797050bae
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/15/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="time-series-model-query-examples"></a>Ejemplos de consultas de modelos de serie temporal
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
-Cuando se crea una consulta en un modelo de minería de datos, puede tratarse de una consulta de contenido, que proporciona detalles sobre las reglas y los conjuntos de elementos detectados durante el análisis, o una consulta de predicción, que usa las asociaciones detectadas en los datos para realizar predicciones. Por ejemplo, una consulta de contenido para un modelo de serie temporal podría proporcionar detalles adicionales sobre las estructuras periódicas que se detectaron, mientras que una consulta de predicción podría ofrecer predicciones para los intervalos de tiempo 5 a 10 siguientes. También se pueden recuperar metadatos sobre el modelo mediante una consulta.  
+  Cuando se crea una consulta en un modelo de minería de datos, puede tratarse de una consulta de contenido, que proporciona detalles sobre las reglas y los conjuntos de elementos detectados durante el análisis, o una consulta de predicción, que usa las asociaciones detectadas en los datos para realizar predicciones. Por ejemplo, una consulta de contenido para un modelo de serie temporal podría proporcionar detalles adicionales sobre las estructuras periódicas que se detectaron, mientras que una consulta de predicción podría ofrecer predicciones para los intervalos de tiempo 5 a 10 siguientes. También se pueden recuperar metadatos sobre el modelo mediante una consulta.  
   
  En esta sección se explica cómo crear ambos tipos de consultas en modelos basados en el algoritmo de serie temporal de Microsoft.  
   
@@ -73,9 +72,9 @@ WHERE MODEL_NAME = '<model name>'
   
 |MINING_PARAMETERS|  
 |------------------------|  
-|COMPLEXITY_PENALTY=0.1,MINIMUM_SUPPORT=10,PERIODICITY_HINT={1,3},….|  
+|COMPLEXITY_PENALTY = 0,1, MINIMUM_SUPPORT = 10, PERIODICITY_HINT ={1,3},...|  
   
- La sugerencia de periodicidad predeterminada es \{1\} y aparece en todos los modelos. Este modelo de ejemplo se creó con una sugerencia adicional que podría no estar presente en el modelo final.  
+ La sugerencia de periodicidad predeterminada es {1} y aparece en todos los modelos; este modelo de ejemplo se creó con una sugerencia adicional que podría no estar presente en el modelo final.  
   
 > [!NOTE]  
 >  Los resultados se han truncado aquí para facilitar la lectura.  
@@ -222,11 +221,11 @@ AND NODE_TYPE = 15
 |||  
 |-|-|  
 |función de predicción|Uso|  
-|[Lag &#40; DMX &#41;](../../dmx/lag-dmx.md)|Devuelve un número de intervalos de tiempo entre la fecha del caso actual y la última fecha del conjunto de entrenamiento.<br /><br /> Un uso típico de esta función consiste en identificar los recientes escenarios de aprendizaje con el fin de poder recuperar datos detallados sobre los escenarios.|  
-|[PredictNodeId &#40; DMX &#41;](../../dmx/predictnodeid-dmx.md)|Devuelve el ID del nodo para la columna predecible especificada.<br /><br /> Un uso típico de esta función consiste en identificar el nodo que generó un determinado valor predicho de forma que se puedan revisar los escenarios asociados al nodo o recuperar la ecuación y otros detalles.|  
-|[PredictStdev &#40; DMX &#41;](../../dmx/predictstdev-dmx.md)|Devuelve la desviación estándar de las predicciones de la columna predecible especificada.<br /><br /> Esta función reemplaza el argumento INCLUDE_STATISTICS, que no se admite para los modelos de serie temporal.|  
-|[PredictVariance &#40; DMX &#41;](../../dmx/predictvariance-dmx.md)|Devuelve la varianza de las predicciones para la columna predecible especificada.<br /><br /> Esta función reemplaza el argumento INCLUDE_STATISTICS, que no se admite para los modelos de serie temporal.|  
-|[PredictTimeSeries &#40; DMX &#41;](../../dmx/predicttimeseries-dmx.md)|Devuelve valores históricos o futuros predichos en una serie temporal.<br /><br /> También puede consultar los modelos de serie temporal usando la función de predicción general, [Predict &#40;DMX&#41;](../../dmx/predict-dmx.md).|  
+|[Lag & #40; DMX & #41;](../../dmx/lag-dmx.md)|Devuelve un número de intervalos de tiempo entre la fecha del caso actual y la última fecha del conjunto de entrenamiento.<br /><br /> Un uso típico de esta función consiste en identificar los recientes escenarios de aprendizaje con el fin de poder recuperar datos detallados sobre los escenarios.|  
+|[PredictNodeId & #40; DMX & #41;](../../dmx/predictnodeid-dmx.md)|Devuelve el ID del nodo para la columna predecible especificada.<br /><br /> Un uso típico de esta función consiste en identificar el nodo que generó un determinado valor predicho de forma que se puedan revisar los escenarios asociados al nodo o recuperar la ecuación y otros detalles.|  
+|[PredictStdev & #40; DMX & #41;](../../dmx/predictstdev-dmx.md)|Devuelve la desviación estándar de las predicciones de la columna predecible especificada.<br /><br /> Esta función reemplaza el argumento INCLUDE_STATISTICS, que no se admite para los modelos de serie temporal.|  
+|[PredictVariance & #40; DMX & #41;](../../dmx/predictvariance-dmx.md)|Devuelve la varianza de las predicciones para la columna predecible especificada.<br /><br /> Esta función reemplaza el argumento INCLUDE_STATISTICS, que no se admite para los modelos de serie temporal.|  
+|[PredictTimeSeries & #40; DMX & #41;](../../dmx/predicttimeseries-dmx.md)|Devuelve valores históricos o futuros predichos en una serie temporal.<br /><br /> También puede consultar los modelos de serie temporal usando la función de predicción general, [Predict &#40;DMX&#41;](../../dmx/predict-dmx.md).|  
   
  Para consultar una lista de las funciones comunes a todos los algoritmos de [!INCLUDE[msCoName](../../includes/msconame-md.md)], vea [Funciones de predicción generales &#40;DMX&#41;](../../dmx/general-prediction-functions-dmx.md). Para más información sobre la sintaxis de funciones específicas, vea [Referencia de funciones de Extensiones de minería de datos &#40;DMX&#41;](../../dmx/data-mining-extensions-dmx-function-reference.md).  
   
@@ -235,6 +234,6 @@ AND NODE_TYPE = 15
  [Consultas de minería de datos](../../analysis-services/data-mining/data-mining-queries.md)   
  [Algoritmo de serie temporal de Microsoft](../../analysis-services/data-mining/microsoft-time-series-algorithm.md)   
  [Referencia técnica del algoritmo de serie temporal de Microsoft](../../analysis-services/data-mining/microsoft-time-series-algorithm-technical-reference.md)   
- [Contenido del modelo de minería de datos para modelos de serie temporal &#40; Analysis Services: minería de datos &#41;](../../analysis-services/data-mining/mining-model-content-for-time-series-models-analysis-services-data-mining.md)  
+ [Contenido del modelo de minería de datos para modelos de serie temporal & #40; Analysis Services: minería de datos & #41;](../../analysis-services/data-mining/mining-model-content-for-time-series-models-analysis-services-data-mining.md)  
   
   

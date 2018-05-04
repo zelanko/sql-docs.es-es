@@ -1,31 +1,23 @@
 ---
 title: Crear un cubo con una vista del origen de datos | Documentos de Microsoft
-ms.custom: 
-ms.date: 03/01/2017
-ms.prod: analysis-services
-ms.prod_service: analysis-services
-ms.service: 
-ms.component: data-mining
-ms.reviewer: 
-ms.suite: pro-bi
-ms.technology: 
-ms.tgt_pltfrm: 
+ms.date: 05/02/2018
+ms.prod: sql
+ms.technology: analysis-services
+ms.component: multidimensional-models
 ms.topic: article
-ms.assetid: bec845a1-d10c-4d45-9acf-0a302adfee47
-caps.latest.revision: 
-author: Minewiskan
 ms.author: owend
+ms.reviewer: owend
+author: minewiskan
 manager: kfile
-ms.workload: Inactive
-ms.openlocfilehash: 1a78f2353c7d6afa88adc0bd76c4031b9224363b
-ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
+ms.openlocfilehash: 2ec11a7d770d87f157d191a791b31545d42fb146
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/15/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="create-a-cube-using-a-data-source-view"></a>Crear un cubo usando una vista del origen de datos
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
-Emplee este método para generar un nuevo cubo si piensa usar una vista del origen de datos existente. Este método le permite especificar la vista del origen de datos y seleccionar las tablas de hechos y de dimensiones que desea usar en dicha vista. A continuación, podrá elegir las dimensiones y las medidas que desea incluir en el cubo.  
+  Emplee este método para generar un nuevo cubo si piensa usar una vista del origen de datos existente. Este método le permite especificar la vista del origen de datos y seleccionar las tablas de hechos y de dimensiones que desea usar en dicha vista. A continuación, podrá elegir las dimensiones y las medidas que desea incluir en el cubo.  
   
  Para crear un cubo con un origen de datos, en el Explorador de soluciones, haga clic con el botón derecho en **Cubos** y seleccione **Nuevo cubo**. Se abrirá el Asistente para cubos.  
   

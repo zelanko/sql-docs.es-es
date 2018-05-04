@@ -32,12 +32,11 @@ caps.latest.revision: 43
 author: Minewiskan
 ms.author: owend
 manager: erikre
-ms.workload: Inactive
-ms.openlocfilehash: 77afa48b63dd145406cdead7e7b0b0bf675aedb5
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
-ms.translationtype: MT
+ms.openlocfilehash: 315ab1f6f066cad8a0a6652bac5fb24617ac29c9
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="select-from-ltmodelgt-prediction-join-dmx"></a>SELECT FROM &lt;modelo&gt; PREDICTION JOIN (DMX)
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
@@ -74,7 +73,7 @@ FROM <model> | <sub select> [NATURAL] PREDICTION JOIN
  *lista de asignación de combinación*  
  Opcional. Expresión lógica que compara columnas del modelo con columnas de la consulta de origen.  
   
- *expresión de condición*  
+ *Expresión de condición*  
  Opcional. Condición para restringir los valores que devuelve la lista de columnas.  
   
  *expression*  
@@ -112,7 +111,7 @@ FROM <model> | <sub select> [NATURAL] PREDICTION JOIN
   
 -   Tiene dos hijos que viven en casa  
   
- Con el modelo de minería de datos TM Decision Tree y las características conocidas del sujeto, la consulta devuelve un valor booleano que describe si la persona compró la bicicleta y un conjunto de valores de tabla, devuelto por la [PredictHistogram &#40; DMX &#41;](../dmx/predicthistogram-dmx.md) función, que describen cómo se realizó la predicción.  
+ Con el modelo de minería de datos TM Decision Tree y las características conocidas del sujeto, la consulta devuelve un valor booleano que describe si la persona compró la bicicleta y un conjunto de valores de tabla, devuelto por la [PredictHistogram &#40;DMX &#41; ](../dmx/predicthistogram-dmx.md) función, que describen cómo se realizó la predicción.  
   
 ```  
 SELECT  
@@ -186,7 +185,7 @@ ORDER BY [LastName] ASC
   
 -   Mountain-200  
   
- El [Predict &#40; DMX &#41;](../dmx/predict-dmx.md) función es polimórfica y puede utilizarse con todos los tipos de modelo. El valor de value3 se usa como argumento para la función con el fin de limitar el número de elementos que devuelve la consulta. El **seleccione** lista que sigue a la cláusula NATURAL PREDICTION JOIN proporciona los valores que se usará como entrada para la predicción.  
+ El [Predict &#40;DMX&#41; ](../dmx/predict-dmx.md) función es polimórfica y puede utilizarse con todos los tipos de modelo. El valor de value3 se usa como argumento para la función con el fin de limitar el número de elementos que devuelve la consulta. El **seleccione** lista que sigue a la cláusula NATURAL PREDICTION JOIN proporciona los valores que se usará como entrada para la predicción.  
   
 ```  
 SELECT FLATTENED  
@@ -210,9 +209,9 @@ NATURAL PREDICTION JOIN
  Dado que la columna que contiene el atributo de predicción, `[v Assoc Seq Line Items]`, es una columna de la tabla, la consulta devuelve una única columna que contiene una tabla anidada. De forma predeterminada, la columna de tabla anidada se denomina `Expression`. Si el proveedor no admite conjuntos de filas jerárquicos, puede usar el **FLATTENED** palabra clave tal y como se muestra en este ejemplo para que sea más fácil ver los resultados.  
   
 ## <a name="see-also"></a>Vea también  
- [SELECT &#40; DMX &#41;](../dmx/select-dmx.md)   
- [Extensiones de minería de datos &#40; DMX &#41; Instrucciones de definición de datos](../dmx/dmx-statements-data-definition.md)   
- [Extensiones de minería de datos &#40; DMX &#41; Instrucciones de manipulación de datos](../dmx/dmx-statements-data-manipulation.md)   
- [Referencia de instrucciones de Extensiones de minería de datos &#40;DMX&#41;](../dmx/data-mining-extensions-dmx-statements.md)  
+ [SELECCIONE &AMP;#40;DMX&AMP;#41;](../dmx/select-dmx.md)   
+ [Extensiones de minería de datos &#40;DMX&#41; las instrucciones de definición de datos](../dmx/dmx-statements-data-definition.md)   
+ [Extensiones de minería de datos &#40;DMX&#41; instrucciones de manipulación de datos](../dmx/dmx-statements-data-manipulation.md)   
+ [Extensiones de minería de datos & #40; DMX & #41; Referencia de instrucciones](../dmx/data-mining-extensions-dmx-statements.md)  
   
   

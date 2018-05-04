@@ -11,7 +11,7 @@ ms.suite: sql
 ms.technology:
 - drivers
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - statement handles [ODBC]
 - handles [ODBC], statement
@@ -20,12 +20,11 @@ caps.latest.revision: 5
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: 1691020070667876d56414b3d93dee384538ae8f
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
-ms.translationtype: MT
+ms.openlocfilehash: 1bd4d07e87af049ac59bc63faf119e84872bbc45
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="statement-handles"></a>Identificadores de instrucciones
 A *instrucción* es más fácil pensar de como una instrucción SQL, como **seleccione \* de empleados**. Sin embargo, una instrucción es algo más que una instrucción SQL, consta de toda la información asociada a esa instrucción SQL, como los conjuntos de resultados creados por la instrucción y los parámetros utilizados en la ejecución de la instrucción. Una instrucción no es necesario tener una instrucción SQL definida por la aplicación. Por ejemplo, cuando una función de catálogo como **SQLTables** se ejecuta en una instrucción, se ejecuta una instrucción SQL predefinida que devuelve una lista de nombres de tabla.  

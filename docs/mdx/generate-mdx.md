@@ -22,12 +22,11 @@ caps.latest.revision: 32
 author: Minewiskan
 ms.author: owend
 manager: erikre
-ms.workload: Inactive
-ms.openlocfilehash: e78dec45044cc29e375b9116886b183013c74ef1
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
-ms.translationtype: MT
+ms.openlocfilehash: b352fe818402cbad25af99a4ca336704b331a4f9
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="generate-mdx"></a>Generate (MDX)
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
@@ -58,10 +57,10 @@ Generate( Set_Expression1 ,  String_Expression [ ,Delimiter ]  )
  *Delimitador*  
  Delimitador válido expresado como expresión de cadena.  
   
-## <a name="remarks"></a>Notas  
- Si se especifica un segundo conjunto, la **generar** función devuelve un conjunto generado al aplicar las tuplas del segundo conjunto a cada tupla del primer conjunto*,* y, a continuación, combinar los conjuntos resultantes mediante unión. Si **todos los** se especifica, la función conserva los duplicados en el conjunto resultante.  
+## <a name="remarks"></a>Comentarios  
+ Si se especifica un segundo conjunto, la **generar** función devuelve un conjunto generado al aplicar las tuplas del segundo conjunto a cada tupla del primer conjunto *,* y, a continuación, combinar los conjuntos resultantes mediante unión. Si **todos los** se especifica, la función conserva los duplicados en el conjunto resultante.  
   
- Si se especifica una expresión de cadena, la **generar** función devuelve una cadena generada al evaluar la expresión de cadena especificada con cada tupla del primer conjunto*,* y, a continuación, concatenar los resultados. De forma opcional, la cadena se puede delimitar al separar cada resultado de la cadena concatenada resultante.  
+ Si se especifica una expresión de cadena, la **generar** función devuelve una cadena generada al evaluar la expresión de cadena especificada con cada tupla del primer conjunto *,* y, a continuación, concatenar los resultados. De forma opcional, la cadena se puede delimitar al separar cada resultado de la cadena concatenada resultante.  
   
 ## <a name="examples"></a>Ejemplos  
   
@@ -138,9 +137,9 @@ FROM [Adventure Works]
 ```  
   
 > [!NOTE]  
->  Esta forma de la **generar** función puede resultar útil al depurar cálculos, puesto que permite devolver una cadena que muestra los nombres de todos los miembros de un conjunto. Esto puede resultar más fácil de leer que la representación MDX estricta de un conjunto que el [SetToStr &#40; MDX &#41; ](../mdx/settostr-mdx.md) función devuelve.  
+>  Esta forma de la **generar** función puede resultar útil al depurar cálculos, puesto que permite devolver una cadena que muestra los nombres de todos los miembros de un conjunto. Esto puede resultar más fácil de leer que la representación MDX estricta de un conjunto que el [SetToStr &#40;MDX&#41; ](../mdx/settostr-mdx.md) función devuelve.  
   
-## <a name="see-also"></a>Ver también  
- [Referencia de funciones MDX &#40; MDX &#41;](../mdx/mdx-function-reference-mdx.md)  
+## <a name="see-also"></a>Vea también  
+ [Referencia de funciones MDX & #40; MDX & #41;](../mdx/mdx-function-reference-mdx.md)  
   
   

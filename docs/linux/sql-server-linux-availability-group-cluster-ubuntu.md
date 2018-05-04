@@ -4,7 +4,7 @@ description: ''
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.date: 01/30/2018
+ms.date: 04/30/2018
 ms.topic: article
 ms.prod: sql
 ms.prod_service: database-engine
@@ -14,12 +14,11 @@ ms.suite: sql
 ms.custom: sql-linux
 ms.technology: database-engine
 ms.assetid: dd0d6fb9-df0a-41b9-9f22-9b558b2b2233
-ms.workload: Inactive
-ms.openlocfilehash: 842e09ffd1a9d219f3d39362f51f18187446a9b2
-ms.sourcegitcommit: a85a46312acf8b5a59a8a900310cf088369c4150
-ms.translationtype: MT
+ms.openlocfilehash: 37008fbf209bbdc8a610e5a21bbd599e9783c423
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/26/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="configure-ubuntu-cluster-and-availability-group-resource"></a>Configurar clúster Ubuntu y grupo de disponibilidad de recursos
 
@@ -148,19 +147,30 @@ sudo pcs property set stonith-enabled=false
 >[!IMPORTANT]
 >Deshabilitar STONITH es solo para fines de prueba. Si tiene previsto usar marcapasos en un entorno de producción, debe planear una implementación de STONITH dependiendo de su entorno y manténgala habilitada. Tenga en cuenta que en este momento no hay ningún agente de barrera para Hyper-V ni entornos de nube (incluido Azure). Por consiguiente, el proveedor de clúster no ofrece compatibilidad con la ejecución de clústeres de producción en estos entornos. 
 
-## <a name="set-cluster-property-start-failure-is-fatal-to-false"></a>Establecer propiedades de clúster inicio error-es-grave en false
+## <a name="set-cluster-property-cluster-recheck-interval"></a>Establecer propiedad de clúster clúster-volver a comprobar-intervalo
 
-`start-failure-is-fatal` indica si un error al iniciar un recurso en un nodo impide más intentos de inicio en ese nodo. Cuando se establece en `false`, el clúster decide si debe intentar iniciar en el mismo nodo nuevo, en función actual error recuento y migración el umbral del recurso. Por lo tanto, después de producirse la conmutación por error, a partir de la disponibilidad de reintentos de marcapasos recurso de grupo en la primera estructura principal una vez que la instancia de SQL está disponible. Marcapasos degrada la réplica de base de datos secundaria y vuelve a unirse automáticamente el grupo de disponibilidad. 
+`cluster-recheck-interval` indica el intervalo de sondeo en el que el clúster comprueba si hay cambios en los parámetros de recursos, las restricciones u otras opciones de clúster. Si una réplica deja de funcionar, el clúster intenta reiniciar la réplica en un intervalo que está limitado por la `failure-timeout` valor y el `cluster-recheck-interval` valor. Por ejemplo, si `failure-timeout` se establece en 60 segundos y `cluster-recheck-interval` está establecido en 120 segundos, se intentará realizar el reinicio en un intervalo que es mayor que 60 segundos, pero menos de 120 segundos. Recomendamos que establezca el tiempo de espera de error a 60 s y volver a comprobar-clúster-interval en un valor que es mayor que 60 segundos. No se recomienda establecer intervalo de volver a comprobar de clúster en un valor pequeño.
 
-Para actualizar el valor de propiedad para `false` ejecute el siguiente script:
+Para actualizar el valor de propiedad para `2 minutes` ejecutar:
 
 ```bash
-sudo pcs property set start-failure-is-fatal=false
+sudo pcs property set cluster-recheck-interval=2min
 ```
 
-
->[!WARNING]
->Después de una conmutación por error automática, cuando `start-failure-is-fatal = true` el Administrador de recursos intenta iniciar el recurso. Si se produce un error en el primer intento tendrá que ejecutar manualmente `pcs resource cleanup <resourceName>` para limpiar el recuento de errores de recursos y restablecer la configuración.
+> [!IMPORTANT] 
+> Si ya tiene un recurso de grupo de disponibilidad administrado por un clúster marcapasos, tenga en cuenta que todas las distribuciones que utilizan la última 1.1.18-11.el7 disponible del paquete marcapasos introducen un cambio de comportamiento para el clúster inicio error-es-grave valor cuando su el valor es false. Este cambio afecta al flujo de trabajo de conmutación por error. Si una réplica principal experimenta una interrupción inesperada, se espera el clúster de conmutación por error a una de las réplicas secundarias disponibles. En su lugar, los usuarios observarán que el clúster mantiene al intentar iniciar la réplica principal. Si ese principal nunca se pone en línea (debido a una interrupción permanente), el clúster nunca conmuta por error a otra réplica secundaria disponible. Debido a este cambio, ya no es válida la configuración recomendada anteriormente para establecer inicio error-es-grave y debe puede revertir a su valor predeterminado de la configuración `true`. Además, el recurso de AG debe actualizarse para incluir la `failover-timeout` propiedad. 
+>
+>Para actualizar el valor de propiedad para `true` ejecutar:
+>
+>```bash
+>sudo pcs property set start-failure-is-fatal=true
+>```
+>
+>Actualizar la propiedad de recurso existente AG `failure-timeout` a `60s` ejecutar (reemplace `ag1` con el nombre de su recurso de grupo de disponibilidad):
+>
+>```bash
+>pcs resource update ag1 meta failure-timeout=60s
+>```
 
 ## <a name="install-sql-server-resource-agent-for-integration-with-pacemaker"></a>Instalar a agente de recursos de SQL Server para la integración con marcapasos
 
@@ -179,7 +189,7 @@ sudo apt-get install mssql-server-ha
 Para crear el recurso de grupo de disponibilidad, utilice `pcs resource create` comando y establezca las propiedades del recurso. Comando siguiente crea un `ocf:mssql:ag` maestro/subordinado el recurso de tipo para el grupo de disponibilidad con el nombre `ag1`. 
 
 ```bash
-sudo pcs resource create ag_cluster ocf:mssql:ag ag_name=ag1 --master meta notify=true
+sudo pcs resource create ag_cluster ocf:mssql:ag ag_name=ag1 meta failure-timeout=30s --master meta notify=true
 
 ```
 

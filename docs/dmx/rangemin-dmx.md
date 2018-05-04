@@ -22,12 +22,11 @@ caps.latest.revision: 30
 author: Minewiskan
 ms.author: owend
 manager: erikre
-ms.workload: Inactive
-ms.openlocfilehash: 16d56170a3b4c995a7c93c3f9acf699e3f4e3071
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
-ms.translationtype: MT
+ms.openlocfilehash: fe0fbee1bb6bcb3ad9633bbb6699cb8368f9bcea
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="rangemin-dmx"></a>RangeMin (DMX)
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
@@ -48,9 +47,9 @@ RangeMin(<scalar column reference>)
  Un valor escalar.  
   
 ## <a name="remarks"></a>Comentarios  
- El **RangeMin** función puede utilizarse en [SELECT DISTINCT FROM &#60; modelo de &#62; &#40; DMX &#41;](../dmx/select-distinct-from-model-dmx.md) consultas. Cuando se usa con este tipo de consulta, la referencia de columna escalar puede contener columnas continuas o discretas que son de predicción o de entrada.  
+ El **RangeMin** función puede utilizarse en [SELECT DISTINCT FROM &#60;modelo &#62; &#40;DMX&#41; ](../dmx/select-distinct-from-model-dmx.md) consultas. Cuando se usa con este tipo de consulta, la referencia de columna escalar puede contener columnas continuas o discretas que son de predicción o de entrada.  
   
- Cuando se usa con [SELECT FROM &#60; modelo &#62; COMBINACIÓN de PREDICCIÓN &#40; DMX &#41; ](../dmx/select-from-model-prediction-join-dmx.md), **RangeMin**, **RangeMid**, y **RangeMax** funciones devuelven los valores de límite reales del depósito especificado. Por ejemplo, si realiza una predicción en una columna de datos discretos, la consulta devuelve el número de depósito predicho de la columna de datos discretos. El **RangeMin**, **RangeMid**, y **RangeMax** funciones describen el depósito que especifica la predicción. Cuando el **RangeMin** función se utiliza con una instrucción PREDICTION JOIN, la referencia de columna escalar solo puede contener columnas discretas y predecibles.  
+ Cuando se usa con [SELECT FROM &#60;modelo&#62; PREDICTION JOIN &#40;DMX&#41;](../dmx/select-from-model-prediction-join-dmx.md), **RangeMin**, **RangeMid**, y **RangeMax**  funciones devuelven los valores de límite reales del depósito especificado. Por ejemplo, si realiza una predicción en una columna de datos discretos, la consulta devuelve el número de depósito predicho de la columna de datos discretos. El **RangeMin**, **RangeMid**, y **RangeMax** funciones describen el depósito que especifica la predicción. Cuando el **RangeMin** función se utiliza con una instrucción PREDICTION JOIN, la referencia de columna escalar solo puede contener columnas discretas y predecibles.  
   
 ## <a name="examples"></a>Ejemplos  
  El ejemplo siguiente devuelve los valores mínimo, máximo y promedio para la columna continua Yearly Income en el modelo de minería de datos Decision Tree.  
@@ -64,10 +63,10 @@ FROM [TM Decision Tree]
 ```  
   
 ## <a name="see-also"></a>Vea también  
- [Extensiones de minería de datos &#40; DMX &#41; Referencia de funciones](../dmx/data-mining-extensions-dmx-function-reference.md)   
- [Funciones &#40; DMX &#41;](../dmx/functions-dmx.md)   
- [Funciones de predicción generales &#40; DMX &#41;](../dmx/general-prediction-functions-dmx.md)   
- [RangeMax &#40; DMX &#41;](../dmx/rangemax-dmx.md)   
- [RangeMid &#40; DMX &#41;](../dmx/rangemid-dmx.md)  
+ [Extensiones de minería de datos &#40;DMX&#41; Referencia de funciones](../dmx/data-mining-extensions-dmx-function-reference.md)   
+ [Funciones &#40;DMX&#41;](../dmx/functions-dmx.md)   
+ [Funciones de predicción generales &#40;DMX&#41;](../dmx/general-prediction-functions-dmx.md)   
+ [RangeMax &#40;DMX&#41;](../dmx/rangemax-dmx.md)   
+ [RangeMid &#40;DMX&#41;](../dmx/rangemid-dmx.md)  
   
   

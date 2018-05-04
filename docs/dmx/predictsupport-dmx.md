@@ -22,12 +22,11 @@ caps.latest.revision: 35
 author: Minewiskan
 ms.author: owend
 manager: erikre
-ms.workload: Inactive
-ms.openlocfilehash: 51f5e9d8c479944b59bc93bd0f97af1a7c2cd1ac
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
-ms.translationtype: MT
+ms.openlocfilehash: bd626493ce217fed886e699519e207bbb7df66c1
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="predictsupport-dmx"></a>PredictSupport (DMX)
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
@@ -45,7 +44,7 @@ PredictSupport(<scalar column reference>, [<predicted state>])
  Una columna escalar.  
   
 ## <a name="return-type"></a>Tipo devuelto  
- Un valor escalar del tipo especificado por  *\<* referencia de columna escalar*>*.  
+ Un valor escalar del tipo especificado por *\<* referencia de columna escalar*>*.  
   
 ## <a name="remarks"></a>Comentarios  
  Si se omite el estado predicho, se usa el estado que tiene la mayor probabilidad de predicción, sin incluir el depósito de estados que falta. Para incluir el depósito de Estados que faltan, establezca el \<estado de predicción > a **INCLUDE_NULL**.  
@@ -53,7 +52,7 @@ PredictSupport(<scalar column reference>, [<predicted state>])
  Para devolver la compatibilidad con los Estados que faltan, establezca el \<estado de predicción > en NULL.  
   
 > [!NOTE]  
->  Los valores de compatibilidad se calculan de manera diferente o pueden tener una interpretación distinta en función del tipo de modelo que se está consultando. Para obtener más información sobre cómo se calcula el soporte técnico para cualquier tipo de modelo determinado, vea el algoritmo individual escriba [contenido del modelo de minería de datos &#40; Analysis Services: minería de datos &#41; ](../analysis-services/data-mining/mining-model-content-analysis-services-data-mining.md).  
+>  Los valores de compatibilidad se calculan de manera diferente o pueden tener una interpretación distinta en función del tipo de modelo que se está consultando. Para obtener más información sobre cómo se calcula el soporte técnico para cualquier tipo de modelo determinado, vea el algoritmo individual escriba [contenido del modelo de minería de datos &#40;Analysis Services: minería de datos&#41;](../analysis-services/data-mining/mining-model-content-analysis-services-data-mining.md).  
   
 ## <a name="examples"></a>Ejemplos  
  En el ejemplo siguiente se utiliza una consulta singleton para predecir si un individuo comprará una bicicleta, y también determina el soporte para la predicción en función del modelo de minería de datos TM Decision Tree.  
@@ -73,8 +72,8 @@ NATURAL PREDICTION JOIN
 ```  
   
 ## <a name="see-also"></a>Vea también  
- [Extensiones de minería de datos &#40; DMX &#41; Referencia de funciones](../dmx/data-mining-extensions-dmx-function-reference.md)   
- [Funciones &#40; DMX &#41;](../dmx/functions-dmx.md)   
- [Funciones de predicción generales &#40; DMX &#41;](../dmx/general-prediction-functions-dmx.md)  
+ [Extensiones de minería de datos &#40;DMX&#41; Referencia de funciones](../dmx/data-mining-extensions-dmx-function-reference.md)   
+ [Funciones &#40;DMX&#41;](../dmx/functions-dmx.md)   
+ [Funciones de predicción generales &#40;DMX&#41;](../dmx/general-prediction-functions-dmx.md)  
   
   

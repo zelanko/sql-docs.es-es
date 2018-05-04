@@ -1,31 +1,23 @@
 ---
 title: Implementar soluciones de Power Pivot para SharePoint | Documentos de Microsoft
-ms.custom: 
-ms.date: 03/14/2017
-ms.prod: analysis-services
-ms.prod_service: analysis-services
-ms.service: 
-ms.component: 
-ms.reviewer: 
-ms.suite: pro-bi
-ms.technology: 
-ms.tgt_pltfrm: 
+ms.date: 05/02/2018
+ms.prod: sql
+ms.technology: analysis-services
+ms.component: ppvt-sharepoint
 ms.topic: article
-ms.assetid: f202a2b7-34e0-43aa-90d5-c9a085a37c32
-caps.latest.revision: 
-author: Minewiskan
 ms.author: owend
+ms.reviewer: owend
+author: minewiskan
 manager: kfile
-ms.workload: Inactive
-ms.openlocfilehash: fac07e924fb94ce9901f1aca771b1954b474aaff
-ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
+ms.openlocfilehash: 7fec467c0823d7c2b4649dab307169f0d41de80b
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/15/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="deploy-power-pivot-solutions-to-sharepoint"></a>Implementar las soluciones de Power Pivot en SharePoint
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
-Use las instrucciones siguientes para implementar manualmente dos paquetes de soluciones que agregan características de [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] a un entorno de SharePoint Server 2010. La implementación de soluciones es un paso necesario para configurar [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] para SharePoint en un servidor de SharePoint 2010. Para consultar la lista completa de pasos necesarios, vea [Administración y configuración del servidor de Power Pivot en Administración central](../../analysis-services/power-pivot-sharepoint/power-pivot-server-administration-and-configuration-in-central-administration.md).  
+  Use las instrucciones siguientes para implementar manualmente dos paquetes de soluciones que agregan características de [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] a un entorno de SharePoint Server 2010. La implementación de soluciones es un paso necesario para configurar [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] para SharePoint en un servidor de SharePoint 2010. Para consultar la lista completa de pasos necesarios, vea [Administración y configuración del servidor de Power Pivot en Administración central](../../analysis-services/power-pivot-sharepoint/power-pivot-server-administration-and-configuration-in-central-administration.md).  
   
  También puede usar la Herramienta de configuración de [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] para implementar las soluciones. Usar la herramienta de configuración es más fácil y más eficiente para una única instalación de servidor, pero podría ser conveniente usar Administración central y PowerShell si prefiere usar una herramienta conocida o si va a configurar varias características al mismo tiempo. Para más información sobre el uso de la herramienta de configuración, vea [Herramientas de configuración de Power Pivot](../../analysis-services/power-pivot-sharepoint/power-pivot-configuration-tools.md).  
   

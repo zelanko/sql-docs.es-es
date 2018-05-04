@@ -11,7 +11,7 @@ ms.suite: sql
 ms.technology:
 - drivers
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 apiname:
 - SQLGetDiagField
 apilocation:
@@ -26,12 +26,11 @@ caps.latest.revision: 26
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: f337b8455ba860caaf5e4a5b1bd4be1d0ee86c37
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
-ms.translationtype: MT
+ms.openlocfilehash: 7a05aebcf49e5abbaea244010ad8608a18126e4c
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="sqlgetdiagfield-function"></a>Función SQLGetDiagField
 **Conformidad**  
@@ -161,7 +160,7 @@ SQLRETURN SQLGetDiagField(
   
  Controladores pueden definir encabezado específico del controlador y los campos de registro en la estructura de datos de diagnóstico.  
   
- Una aplicación ODBC 3*.x* aplicación trabajar con una API ODBC 2*.x* controlador podrá llamar a **SQLGetDiagField** sólo con una *DiagIdentifier* argumento de SQL_DIAG_CLASS_ORIGIN, SQL_DIAG_CLASS_SUBCLASS_ORIGIN, SQL_DIAG_CONNECTION_NAME, SQL_DIAG_MESSAGE_TEXT, SQL_DIAG_NATIVE, SQL_DIAG_NUMBER, SQL_DIAG_RETURNCODE, SQL_DIAG_SERVER_NAME o SQL_DIAG_SQLSTATE. Todos los demás campos de diagnóstico devolverá SQL_ERROR.  
+ Una aplicación ODBC 3 *.x* aplicación trabajar con una API ODBC 2 *.x* controlador podrá llamar a **SQLGetDiagField** sólo con una *DiagIdentifier* argumento de SQL_DIAG_CLASS_ORIGIN, SQL_DIAG_CLASS_SUBCLASS_ORIGIN, SQL_DIAG_CONNECTION_NAME, SQL_DIAG_MESSAGE_TEXT, SQL_DIAG_NATIVE, SQL_DIAG_NUMBER, SQL_DIAG_RETURNCODE, SQL_DIAG_SERVER_NAME o SQL_DIAG_SQLSTATE. Todos los demás campos de diagnóstico devolverá SQL_ERROR.  
   
 ## <a name="header-fields"></a>Campos de encabezado  
  Los campos de encabezado enumerados en la tabla siguiente pueden incluirse en la *DiagIdentifier* argumento.  
@@ -240,7 +239,7 @@ n-definición *|"CREAR EL DOMINIO"|SQL_DIAG_CREATE_DOMAIN|
 -   Para todos los registros que pertenecen a filas específicas, los registros se ordenan por el valor del campo SQL_DIAG_ROW_NUMBER. Se muestran todos los errores y advertencias de la primera fila afectada y, a continuación, todos los errores y advertencias de la siguiente fila afectada y así sucesivamente.  
   
 > [!NOTE]  
->  ODBC 3*.x* el Administrador de controladores no ordena los registros de estado en la cola de diagnóstico si SQLSTATE 01S01 (Error en la fila) devuelto por una API ODBC 2*.x* controlador o si SQLSTATE 01S01 (Error en la fila) se devuelve un ODBC 3*.x* controlador cuando **SQLExtendedFetch** se llama o **SQLSetPos** se llama en un cursor que se ha colocado con **SQLExtendedFetch** .  
+>  ODBC 3 *.x* el Administrador de controladores no ordena los registros de estado en la cola de diagnóstico si SQLSTATE 01S01 (Error en la fila) devuelto por una API ODBC 2 *.x* controlador o si SQLSTATE 01S01 (Error en la fila) se devuelve un ODBC 3 *.x* controlador cuando **SQLExtendedFetch** se llama o **SQLSetPos** se llama en un cursor que se ha colocado con **SQLExtendedFetch** .  
   
  Dentro de cada fila, o para todos los registros que no corresponden a una fila o para que se desconoce el número de fila o de todos los registros con un número de filas igual a SQL_NO_ROW_NUMBER, el primer registro enumerado se determina mediante el uso de un conjunto de reglas de ordenación. Después del primer registro, el orden de los demás registros que afectan a una fila es indefinido. Una aplicación no puede suponer que los errores preceden advertencias después del primer registro. Las aplicaciones deben examinar la estructura de datos de diagnóstico completo para obtener información completa sobre una llamada a una función incorrecta.  
   

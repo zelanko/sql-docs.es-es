@@ -7,14 +7,16 @@ ms.author: genemi
 ms.topic: article
 ms.custom: UpdArt.exe
 ms.suite: sql
-ms.prod_service: sql
-ms.component: ssas
-ms.date: 02/03/2018
-ms.openlocfilehash: 44fd26e0c450cf032f2a663b2cff7ea35dac012a
-ms.sourcegitcommit: a85a46312acf8b5a59a8a900310cf088369c4150
+ms.technology: release-landing
+ms.prod: sql
+ms.prod_service: sql-non-specified
+ms.component: analysis-services
+ms.date: 04/28/2018
+ms.openlocfilehash: 1d76f2a9f60e5bb69b2586a9b9fee10210c87c81
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/26/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="new-and-recently-updated-analysis-services-for-sql-server"></a>Nuevos y actualizados recientemente: Analysis Services para SQL Server
 
@@ -28,7 +30,7 @@ Actualizaciones recientes se notifican para el siguiente intervalo de fechas y e
 
 
 
-- *Intervalo de fechas de las actualizaciones:* &nbsp; del **03-12-2017** &nbsp; al &nbsp; **03-02-2018**
+- *Intervalo de fechas de las actualizaciones:* &nbsp; **2018-02-03** &nbsp; - a - &nbsp; **2018-04-28**
 - *Área de asunto:* &nbsp; **Analysis Services para SQL Server**.
 
 
@@ -41,7 +43,24 @@ Actualizaciones recientes se notifican para el siguiente intervalo de fechas y e
 Los siguientes vínculos llevan a nuevos artículos que se han agregado recientemente.
 
 
-***En este momento no hay ningún artículo nuevo en la lista.***
+1. [Orígenes de datos admiten en SQL Server Analysis Services 1400 los modelos tabulares](tabular-models/data-sources-supported-ssas-tabular-1400.md)
+2. [Modelado tabular (nivel de compatibilidad 1400)](tutorial-tabular-1400/as-adventure-works-tutorial.md)
+3. [Crear particiones](tutorial-tabular-1400/as-lesson-10-create-partitions.md)
+4. [Crear roles](tutorial-tabular-1400/as-lesson-11-create-roles.md)
+5. [Analizar en Excel](tutorial-tabular-1400/as-lesson-12-analyze-in-excel.md)
+6. [Implementación](tutorial-tabular-1400/as-lesson-13-deploy.md)
+7. [Crear un proyecto de modelo tabular](tutorial-tabular-1400/as-lesson-1-create-a-new-tabular-model-project.md)
+8. [Obtener datos](tutorial-tabular-1400/as-lesson-2-Get-data.md)
+9. [Marcar como tabla de fechas](tutorial-tabular-1400/as-lesson-3-mark-as-date-table.md)
+10. [Crear relaciones](tutorial-tabular-1400/as-lesson-4-create-relationships.md)
+11. [Crear columnas calculadas](tutorial-tabular-1400/as-lesson-5-create-calculated-columns.md)
+12. [Crear medidas](tutorial-tabular-1400/as-lesson-6-create-measures.md)
+13. [Crear indicadores clave de rendimiento](tutorial-tabular-1400/as-lesson-7-create-key-performance-indicators.md)
+14. [Crear perspectivas](tutorial-tabular-1400/as-lesson-8-create-perspectives.md)
+15. [Crear jerarquías](tutorial-tabular-1400/as-lesson-9-create-hierarchies.md)
+16. [Lección complementaria: Filas de detalles](tutorial-tabular-1400/as-supplemental-lesson-detail-rows.md)
+17. [Lección complementaria: Seguridad dinámica](tutorial-tabular-1400/as-supplemental-lesson-dynamic-security.md)
+18. [Lección complementaria: Jerarquías desiguales](tutorial-tabular-1400/as-supplemental-lesson-ragged-hierarchies.md)
 
 
 
@@ -85,40 +104,36 @@ En esta lista compacta se proporcionan vínculos a todos los artículos actualiz
 En esta sección se enumeran artículos muy similares a los artículos actualizados recientemente en otras áreas temáticas, dentro de nuestro repositorio público de GitHub.com: [MicrosoftDocs/sql-docs](https://github.com/MicrosoftDocs/sql-docs/).
 
 
+
 #### <a name="subject-areas-that-do-have-new-or-recently-updated-articles"></a>Áreas temáticas *con* artículos nuevos o actualizados recientemente
 
-
-- [Nuevos + actualizados (1+3): &nbsp;documentos de **Análisis avanzado para SQL**](../advanced-analytics/new-updated-advanced-analytics.md)
-- [Nuevos + actualizados (0+1): &nbsp;documentos de **Analytics Platform System para SQL**](../analytics-platform-system/new-updated-analytics-platform-system.md)
-- [Nuevos + actualizados (0+1): &nbsp;documentos de **Conexión a SQL**](../connect/new-updated-connect.md)
-- [Nuevos + actualizados (0+1): &nbsp;documentos del **Motor de base de datos de SQL**](../database-engine/new-updated-database-engine.md)
-- [Nuevos + actualizados (12+1): **documentos de** Integration Services para SQL](../integration-services/new-updated-integration-services.md)
-- [Nuevos + actualizados (6+2): &nbsp;documentos de **Linux para SQL**](../linux/new-updated-linux.md)
-- [Nuevos + actualizados (15+0): **documentos de** PowerShell para SQL](../powershell/new-updated-powershell.md)
-- [Nuevos + actualizados (2+9): &nbsp;documentos de **Bases de datos relacionales para SQL**](../relational-databases/new-updated-relational-databases.md)
-- [Nuevos + actualizados (1+0): &nbsp;documentos de **Reporting Services para SQL**](../reporting-services/new-updated-reporting-services.md)
-- [Nuevos + actualizados (1+1): &nbsp;documentos de **SQL Operations Studio**](../sql-operations-studio/new-updated-sql-operations-studio.md)
-- [Nuevos + actualizados (1+1): &nbsp;documentos de **Microsoft SQL Server**](../sql-server/new-updated-sql-server.md)
-- [Nuevos + actualizados (0+1): &nbsp;documentos de **SQL Server Data Tools (SSDT)**](../ssdt/new-updated-ssdt.md)
-- [Nuevos + actualizados (1+2): &nbsp;documentos de **SQL Server Management Studio (SSMS)**](../ssms/new-updated-ssms.md)
-- [Nuevos + actualizados (0+2): &nbsp;documentos de **Transact-SQL**](../t-sql/new-updated-t-sql.md)
+- [Nuevos y actualizados (11 + 6): &nbsp; &nbsp; **Advanced Analytics para SQL** documentos](../advanced-analytics/new-updated-advanced-analytics.md)
+- [Nuevos y actualizados (18 + 0): &nbsp; &nbsp; **Analysis Services para SQL** documentos](../analysis-services/new-updated-analysis-services.md)
+- [Nuevos y actualizados (218 + 14): **conectar con SQL Server** documentos](../connect/new-updated-connect.md)
+- [Nuevos y actualizados (14 + 0): &nbsp; &nbsp; **motor de base de datos de SQL** documentos](../database-engine/new-updated-database-engine.md)
+- [Nuevos y actualizados (3 + 2): &nbsp; &nbsp; **Integration Services para SQL** documentos](../integration-services/new-updated-integration-services.md)
+- [Nuevos y actualizados (3 + 3): &nbsp; &nbsp; **Linux para SQL** documentos](../linux/new-updated-linux.md)
+- [Nuevos y actualizados (10 + 7): &nbsp; &nbsp; **bases de datos relacionales de SQL** documentos](../relational-databases/new-updated-relational-databases.md)
+- [Nuevos y actualizados (0 + 2): &nbsp; &nbsp; **Reporting Services para SQL** documentos](../reporting-services/new-updated-reporting-services.md)
+- [Nuevos y actualizados (1 + 3): &nbsp; &nbsp; **Studio de operaciones SQL** documentos](../sql-operations-studio/new-updated-sql-operations-studio.md)
+- [Nuevos y actualizados (2 + 3): &nbsp; &nbsp; **Microsoft SQL Server** documentos](../sql-server/new-updated-sql-server.md)
+- [Nuevos y actualizados (1 + 1): &nbsp; &nbsp; **SQL Server Data Tools (SSDT)** documentos](../ssdt/new-updated-ssdt.md)
+- [Nuevos y actualizados (5 + 2): &nbsp; &nbsp; **SQL Server Management Studio (SSMS)** documentos](../ssms/new-updated-ssms.md)
+- [Nuevos y actualizados (0 + 2): &nbsp; &nbsp; **Transact-SQL** documentos](../t-sql/new-updated-t-sql.md)
+- [Nuevos y actualizados (1 + 1): &nbsp; &nbsp; **Tools para SQL** documentos](../tools/new-updated-tools.md)
 
 
 
 #### <a name="subject-areas-that-do-not-have-any-new-or-recently-updated-articles"></a>Áreas temáticas que *no* tienen artículos nuevos o actualizados recientemente
 
-
-- [Nuevos + Actualizados (0+0): documentos de **Data Migration Assistant (DMA) para SQL**](../dma/new-updated-dma.md)
-- [Nuevos y actualizados (0 + 0): **ActiveX Data Objects (ADO) para SQL** documentos](../ado/new-updated-ado.md)
-- [Nuevos + actualizados (0+0): documentos de **Analysis Services para SQL**](../analysis-services/new-updated-analysis-services.md)
+- [Nuevos y actualizados (0 + 0): **Analytics Platform System para SQL** documentos](../analytics-platform-system/new-updated-analytics-platform-system.md)
 - [Nuevos y actualizados (0 + 0): **Data Quality Services para SQL** documentos](../data-quality-services/new-updated-data-quality-services.md)
 - [Nuevos y actualizados (0 + 0): **extensiones de minería de datos (DMX) para SQL** documentos](../dmx/new-updated-dmx.md)
 - [Nuevos + actualizados (0+0): documentos de **Master Data Services (MDS) para SQL**](../master-data-services/new-updated-master-data-services.md)
 - [Nuevos y actualizados (0 + 0): **expresiones multidimensionales (MDX) para SQL** documentos](../mdx/new-updated-mdx.md)
 - [Nuevos y actualizados (0 + 0): **ODBC (conectividad abierta de base de datos) para SQL** documentos](../odbc/new-updated-odbc.md)
+- [Nuevos y actualizados (0 + 0): **PowerShell para SQL** documentos](../powershell/new-updated-powershell.md)
 - [Nuevos y actualizados (0 + 0): **ejemplos para SQL** documentos](../samples/new-updated-samples.md)
 - [Nuevos y actualizados (0 + 0): **SQL Server Migration Assistant (SSMA)** documentos](../ssma/new-updated-ssma.md)
-- [Nuevos + actualizados (0+0): documentos de **Herramientas para SQL**](../tools/new-updated-tools.md)
 - [Nuevos y actualizados (0 + 0): **XQuery para SQL** documentos](../xquery/new-updated-xquery.md)
-
 

@@ -19,12 +19,11 @@ caps.latest.revision: 14
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: b333875afe103eb0438b567666e54c9985c51997
-ms.sourcegitcommit: bb044a48a6af9b9d8edb178dc8c8bd5658b9ff68
-ms.translationtype: MT
+ms.openlocfilehash: 43ec9c0f933c33b9e8b5e99cd68b3fbf23d80d0e
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/18/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="minimizing-log-file-space-usage"></a>Minimizar el uso de espacio de archivo de registro
 Un archivo de registro podrían llenar rápidamente (por lo tanto la detención del servidor) si hay un gran volumen de actividad en una base de datos de SQL Server. Puede establecer el archivo de registro en **truncar en punto de comprobación** ampliar significativamente la vida del archivo de registro para una base de datos.  

@@ -1,21 +1,26 @@
 ---
 title: 'Actualizado: Advanced Analytics para documentos de SQL Server | Documentos de Microsoft'
 description: Mostrar fragmentos de contenido actualizado para recientemente modificadas en documentación, Advanced Analytics para Microsoft SQL Server.
+manager: craigg
+author: MightyPen
+ms.author: genemi
+ms.topic: article
+ms.custom: UpdArt.exe
+ms.suite: sql
+ms.technology: release-landing
 ms.prod: sql
-ms.technology: machine-learning
-ms.date: 04/15/2018
-ms.topic: conceptual
-author: HeidiSteen
-ms.author: heidist
-manager: cgronlun
-ms.openlocfilehash: 058278df1ee54a6440f8225ea15f727857df76f2
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
+ms.prod_service: sql-non-specified
+ms.component: advanced-analytics
+ms.date: 04/28/2018
+ms.openlocfilehash: bbce32579b54647e167c25d2708a80027ae0e678
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="new-and-recently-updated-advanced-analytics-for-sql-server"></a>Nuevos y actualizados recientemente: análisis avanzados para SQL Server
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
+
+
 
 Casi todos los días, Microsoft actualiza algunos de los artículos existentes en su [Docs.Microsoft.com](http://docs.microsoft.com/) sitio Web de documentación. Este artículo muestra extractos de los artículos actualizados recientemente. También pueden aparecer vínculos a artículos nuevos.
 
@@ -25,7 +30,7 @@ Actualizaciones recientes se notifican para el siguiente intervalo de fechas y e
 
 
 
-- *Intervalo de fechas de las actualizaciones:* &nbsp; del **03-12-2017** &nbsp; al &nbsp; **03-02-2018**
+- *Intervalo de fechas de las actualizaciones:* &nbsp; **2018-02-03** &nbsp; - a - &nbsp; **2018-04-28**
 - *Área de asunto:* &nbsp; **Advanced Analytics para SQL Server**.
 
 <!-- Repo = 'MicrosoftDocs/sql-docs'.   Branch = 'live'. -->
@@ -39,7 +44,17 @@ Actualizaciones recientes se notifican para el siguiente intervalo de fechas y e
 Los siguientes vínculos llevan a nuevos artículos que se han agregado recientemente.
 
 
-1. [Instalación de paquetes de Python adicionales en SQL Server](python/install-additional-python-packages-on-sql-server.md)
+1. [Instalar equipo con SQL Server de 2017 aprendizaje Services (en bases de datos) en Windows](install/sql-machine-learning-services-windows-install.md)
+2. [Instalar Server (independiente) en Windows de aprendizaje de máquina SQL Server de 2017](install/sql-machine-learning-standalone-windows-install.md)
+3. [Instalar componentes de aprendizaje de máquina de SQL Server desde la línea de comandos](install/sql-ml-component-commandline-install.md)
+4. [Instalar componentes sin acceso a internet de aprendizaje de automático de SQL Server](install/sql-ml-component-install-without-internet-access.md)
+5. [Instalar SQL Server 2016 R Services (en bases de datos)](install/sql-r-services-windows-install.md)
+6. [Instalar a SQL Server 2016 R Server (independiente)](install/sql-r-standalone-windows-install.md)
+7. [Configurar Python herramientas de cliente para su uso con aprendizaje automático de SQL Server](python/setup-python-client-tools-sql.md)
+8. [Utilizar el modelo de Python en SQL para el entrenamiento y de puntuación](tutorials/train-score-using-python-in-tsql.md)
+9. [Incluir código Python en un procedimiento almacenado](tutorials/wrap-python-in-tsql-stored-procedure.md)
+10. [¿Qué es SQL Server Machine Learning Services?](what-is-sql-server-machine-learning.md)
+11. [Eventos extendidos para la supervisión de instrucciones PREDICT](xe-event-predict-tsql.md)
 
 
 
@@ -65,9 +80,12 @@ Por estas y otras razones, no se copie el código de estos fragmentos y no toma 
 
 En esta lista compacta se proporcionan vínculos a todos los artículos actualizados que aparecen en la sección de extractos.
 
-1. [Problemas conocidos en servicios de aprendizaje de máquina](#TitleNum_1)
-2. [Convertir código de R para ejecución en bases de datos](#TitleNum_2)
-3. [Determinar qué paquetes de R están instalados en SQL Server](#TitleNum_3)
+1. [Visualización de R o paquetes de Python instalados en SQL Server](#TitleNum_1)
+2. [Instalar previamente entrenado máquina aprendizaje de los modelos en SQL Server](#TitleNum_2)
+3. [Configurar un cliente de ciencia de datos para el desarrollo de R en SQL Server](#TitleNum_3)
+4. [SQL Server del equipo aprendizaje y R Services (en bases de datos)](#TitleNum_4)
+5. [Ejecución de Python mediante T-SQL](#TitleNum_5)
+6. [Usar Python con revoscalepy para crear un modelo](#TitleNum_6)
 
 
 
@@ -78,42 +96,46 @@ En esta lista compacta se proporcionan vínculos a todos los artículos actualiz
 
 <a name="TitleNum_1"/>
 
-### <a name="1-nbsp-known-issues-in-machine-learning-servicesknown-issues-for-sql-server-machine-learning-servicesmd"></a>1. &nbsp; [Problemas conocidos en servicios de aprendizaje de máquina](known-issues-for-sql-server-machine-learning-services.md)
+### <a name="1-nbsp-viewing-r-or-python-packages-installed-on-sql-serverrdetermine-which-packages-are-installed-on-sql-servermd"></a>1. &nbsp; [Visualización de R o paquetes de Python instalados en SQL Server](r/determine-which-packages-are-installed-on-sql-server.md)
 
-*Actualizado: 2018-02-02* &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; ([siguiente](#TitleNum_2))
+*Actualizado: 2018-04-19* &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; ([siguiente](#TitleNum_2))
 
-<!-- Source markdown line 163.  ms.author= "jeannt".  -->
+<!-- Source markdown line 208.  ms.author= heidist.  -->
 
 &nbsp;
 
 
-<!-- git diff --ignore-all-space --unified=0 c6f46adcf795c43f818120b88407a3a89304cb27 c781562605f5cd77f6c43bfe5e89810cb72ceae0  (PR=4789  ,  Filename=known-issues-for-sql-server-machine-learning-services.md  ,  Dirpath=docs\advanced-analytics\  ,  MergeCommitSha40=386bfb688843bac7fa4d83dc1cfef94dd19db110) -->
+<!-- git diff --ignore-all-space --unified=0 7a1df11f57e7bbf0abc37d3aa240dedd2b88c45f ec6859ac91b27539dc36f21aec82c99937c0187a  (PR=5610  ,  Filename=determine-which-packages-are-installed-on-sql-server.md  ,  Dirpath=docs\advanced-analytics\r\  ,  MergeCommitSha40=f1f96a990644c0d6cfa5a1d88ccee959cab6c2b2) -->
 
 
 
-Para otros problemas conocidos que podrían afectar a las soluciones de R, consulte el [Machine Learning Server](https://docs.microsoft.com/machine-learning-server/resources-known-issues) sitio.
-
-**Acceso denegado advertencia al ejecutar scripts de R en SQL Server en una ubicación no predeterminada**
+**Python**
 
 
-Si la instancia de SQL Server se ha instalado en una ubicación no predeterminados, como fuera de la `Program Files` carpeta, la advertencia ACCESS_DENIED se produce al intentar ejecutar scripts que instalan un paquete. Por ejemplo:
+Este ejemplo devuelve la lista de carpetas incluidas en la versión de Python `sys.path` variable. La lista incluye el directorio actual y la ruta de acceso de la biblioteca estándar.
 
-> *En normalizePath(path.expand(path), winslash, mustWork): ruta de acceso [2] = "~ExternalLibraries/R/8/1": se denegó el acceso*
+```
+EXEC sp_execute_external_script
+  @language =N'Python',
+  @script=N'import sys; print("\n".join(sys.path))'
+```
 
-La razón es que una función de R intenta leer la ruta de acceso y se produce un error si el grupo de usuarios integrado **SQLRUserGroup**, no tiene acceso de lectura. La advertencia que se inicia no bloquea la ejecución del script de R actual, pero la advertencia puede repetirse varias veces siempre que el usuario ejecuta cualquier otro script de R.
+**Resultado**
 
-Si ha instalado SQL Server en la ubicación predeterminada, este error no se produce, porque todos los usuarios de Windows tener permisos de lectura en el `Program Files` carpeta.
+```
+C:\Program Files\Microsoft SQL Server\MSSQL14.MSSQLSERVER\PYTHON_SERVICES\python35.zip
+C:\Program Files\Microsoft SQL Server\MSSQL14.MSSQLSERVER\PYTHON_SERVICES\DLLs
+C:\Program Files\Microsoft SQL Server\MSSQL14.MSSQLSERVER\PYTHON_SERVICES\lib
+C:\Program Files\Microsoft SQL Server\MSSQL14.MSSQLSERVER\PYTHON_SERVICES
+C:\Program Files\Microsoft SQL Server\MSSQL14.MSSQLSERVER\PYTHON_SERVICES\lib\site-packages
+C:\Program Files\Microsoft SQL Server\MSSQL14.MSSQLSERVER\PYTHON_SERVICES\lib\site-packages\Sphinx-1.5.4-py3.5.egg
+C:\Program Files\Microsoft SQL Server\MSSQL14.MSSQLSERVER\PYTHON_SERVICES\lib\site-packages\win32
+C:\Program Files\Microsoft SQL Server\MSSQL14.MSSQLSERVER\PYTHON_SERVICES\lib\site-packages\win32\lib
+C:\Program Files\Microsoft SQL Server\MSSQL14.MSSQLSERVER\PYTHON_SERVICES\lib\site-packages\Pythonwin
+C:\Program Files\Microsoft SQL Server\MSSQL14.MSSQLSERVER\PYTHON_SERVICES\lib\site-packages\setuptools-27.2.0-py3.5.egg
+```
 
-Este problema se corregirá en una versión de próximos servicios. Como alternativa, proporcione el grupo, **SQLRUserGroup**, con acceso de lectura para todas las carpetas primarias de `ExternalLibraries`.
-
-**Error de serialización entre las versiones anteriores y nuevas de RevoScaleR**
-
-
-Al pasar un modelo con un formato serializado a una instancia de SQL Server remota, podría aparecer el error:
-
-> *Error en memDecompress (datos, tipo = descomprimir) error interno -3 en memDecompress(2).*
-
-Este error se produce si ha guardado el modelo utilizando una versión reciente de la función de serialización, [rxSerializeModel](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/rxserializemodel), pero la instancia de SQL Server donde se deserializa el modelo tiene una versión antigua de las APIs de RevoScaleR, de SQL Servidor de 2017 CU2 o una versión anterior.
+Para obtener más información acerca de la variable `sys.path` y cómo se utiliza para establecer la ruta de búsqueda del intérprete de módulos, vea el [documentación de Python](https://docs.python.org/2/tutorial/modules.html#the-module-search-path)
 
 
 
@@ -125,45 +147,43 @@ Este error se produce si ha guardado el modelo utilizando una versión reciente 
 
 <a name="TitleNum_2"/>
 
-### <a name="2-nbsp-converting-r-code-for-execution-in-databaserconverting-r-code-for-use-in-sql-servermd"></a>2. &nbsp; [Convertir código de R para ejecución en bases de datos](r/converting-r-code-for-use-in-sql-server.md)
+### <a name="2-nbsp-install-pre-trained-machine-learning-models-on-sql-serverrinstall-pretrained-models-sql-servermd"></a>2. &nbsp; [Instalar previamente entrenado máquina aprendizaje de los modelos en SQL Server](r/install-pretrained-models-sql-server.md)
 
-*Actualizado: 2018-01-08* &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; ([anterior](#TitleNum_1) | [siguiente](#TitleNum_3))
+*Actualizado: 2018-04-12* &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; ([anterior](#TitleNum_1) | [siguiente](#TitleNum_3))
 
-<!-- Source markdown line 136.  ms.author= "jeannt".  -->
+<!-- Source markdown line 140.  ms.author= heidist.  -->
 
 &nbsp;
 
 
-<!-- git diff --ignore-all-space --unified=0 a1d156fac1af5813ef75965071686b177e2aede7 fc8beff0aa0d7ea298e493b90984875e81e9143e  (PR=4493  ,  Filename=converting-r-code-for-use-in-sql-server.md  ,  Dirpath=docs\advanced-analytics\r\  ,  MergeCommitSha40=f486d12078a45c87b0fcf52270b904ca7b0c7fc8) -->
+<!-- git diff --ignore-all-space --unified=0 aa03623d819750d4919feb7910b07ec1875bb509 7382228fa68b04b500a5fde73c29995e12aa20ac  (PR=5504  ,  Filename=install-pretrained-models-sql-server.md  ,  Dirpath=docs\advanced-analytics\r\  ,  MergeCommitSha40=f34765240b79a44167ca2af90f97a0fdd47c41d2) -->
 
 
 
-**Empaquetar el código de R en un procedimiento almacenado**
+1. Inicie el instalador independiente basado en Windows para cada uno [R Server](https://docs.microsoft.com/machine-learning-server/rebranding-microsoft-r-server) o [servidor de aprendizaje de máquina](https://docs.microsoft.com/machine-learning-server/install/machine-learning-server-windows-install).
 
-+ Si el código es relativamente simple, puede incrustar en una función definida por el usuario de T-SQL sin modificaciones, como se describe en estos ejemplos:
+2. Seleccione los idiomas que desea actualizar y seleccione el **Pre-trained modelos** opción.
 
-    + [Crear una función de R que se ejecuta en rxExec](r/../tutorials/deepdive-create-a-simple-simulation.md)
-    + [Ingeniería de característica con T-SQL y R](r/../tutorials/sqldev-create-data-features-using-t-sql.md)
+    > [!TIP]
+    > Si ya ha ejecutado el programa de instalación para actualizar el servidor de R (independiente) y sólo desea agregar los modelos previamente entrenados, deje todas las selecciones anteriores **sea**y seleccione solo la anterior **-entrenar modelos** opción . **No** anule la selección de las opciones seleccionadas previamente; si lo hace, el programa de instalación quita los componentes.
 
-+ Si el código es más complejo, use el paquete de R **sqlrutils** para convertir el código. Este paquete está diseñado para ayudar a los usuarios experimentados de R a escribir código de procedimiento almacenado buena.
+    Se recomienda que acepte la configuración predeterminada para las ubicaciones de modelo.
 
-    El primer paso es escribir el código de R como una sola función con claramente definidas entradas y salidas.
+3. Haga clic en **Continuar**.
 
-    A continuación, utilice la **sqlrutils** paquete para generar la entrada y las salidas en el formato correcto. El **sqlrutils** paquete genera el código de todo el procedimiento almacenado para usted y también se puede registrar el procedimiento almacenado en la base de datos.
+4. Acepte todos los demás mensajes, incluidos los contratos de licencia.
 
-    Para obtener más información y ejemplos, vea [SqlRUtils](r/../r/generating-an-r-stored-procedure-for-r-code-using-the-sqlrutils-package.md).
+Una vez completada la instalación, debe realizar algunos pasos adicionales para registrar los modelos entrenados previamente.
 
-**Integrar con otros flujos de trabajo**
+1. Abra un símbolo del sistema de Windows **como administrador**.
 
-+ Aprovechar las herramientas de T-SQL y procesos ETL. Realizar ingeniería de característica, extracción de características y la limpieza de datos de antemano como parte de los flujos de trabajo de datos.
+2. Navegue hasta la carpeta de instalación de arranque para R Server (independiente), que también contiene el programa de instalación de Microsoft R.
 
-    Cuando está trabajando en un entorno de desarrollo de R dedicado como R Tools para Visual Studio o RStudio, puede extraer los datos en el equipo, analizar los datos de forma iterativa y, a continuación, escribir o mostrar los resultados.
+3. Ejecutar `RSetup.exe` e indicar el componente para instalar, la versión y la carpeta que contiene los archivos de origen del modelo, con esta sintaxis:
 
-    Sin embargo, cuando se migra código independiente para SQL Server, gran parte de este proceso puede simplificado o delegar a otras herramientas de SQL Server.
+    `RSetup.exe /install /component MLM /version <version> /language 1033 /destdir "~\R_SERVER\library\MicrosoftML\mxLibs\x64"`
 
-+ Use las estrategias de visualización segura, asincrónica.
-
-    Los usuarios de SQL Server a menudo no pueden tener acceso a archivos en el servidor y herramientas de cliente SQL normalmente no admiten el dispositivo de gráficos de R. Si los gráficos u otros gráficos se generan como parte de la solución, considere la posibilidad de exportar los gráficos como datos binarios y guardar en una tabla o escribir.
+    Se admiten los siguientes valores para el parámetro de versión:
 
 
 
@@ -175,52 +195,215 @@ Este error se produce si ha guardado el modelo utilizando una versión reciente 
 
 <a name="TitleNum_3"/>
 
-### <a name="3-nbsp-determine-which-r-packages-are-installed-on-sql-serverrdetermine-which-packages-are-installed-on-sql-servermd"></a>3. &nbsp; [Determinar qué paquetes de R están instalados en SQL Server](r/determine-which-packages-are-installed-on-sql-server.md)
+### <a name="3-nbsp-set-up-a-data-science-client-for-r-development-on-sql-serverrset-up-a-data-science-clientmd"></a>3. &nbsp; [Configurar un cliente de ciencia de datos para el desarrollo de R en SQL Server](r/set-up-a-data-science-client.md)
 
-*Actualizado: 2018-01-24* &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; ([anterior](#TitleNum_2))
+*Actualizado: 2018-04-12* &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; ([anterior](#TitleNum_2) | [siguiente](#TitleNum_4))
 
-<!-- Source markdown line 78.  ms.author= "jeannt".  -->
+<!-- Source markdown line 39.  ms.author= heidist.  -->
 
 &nbsp;
 
 
-<!-- git diff --ignore-all-space --unified=0 9a065066398843a4bed318fa46d4982d712915a9 7a1df11f57e7bbf0abc37d3aa240dedd2b88c45f  (PR=4715  ,  Filename=determine-which-packages-are-installed-on-sql-server.md  ,  Dirpath=docs\advanced-analytics\r\  ,  MergeCommitSha40=9e6a029456f4a8daddb396bc45d7874a43a47b45) -->
+<!-- git diff --ignore-all-space --unified=0 0583f8febcedc5dc2e14ca1a8073ca204ca37987 3d50ad8f35f2985944741a9b2211a461df2c13e4  (PR=5504  ,  Filename=set-up-a-data-science-client.md  ,  Dirpath=docs\advanced-analytics\r\  ,  MergeCommitSha40=f34765240b79a44167ca2af90f97a0fdd47c41d2) -->
+
+
+
+**Herramientas de R**
+
+
+Cuando se instala R con SQL Server, obtendrá las mismas herramientas de R que se instalan con cualquier **base** instalación de R, como RGui, Rterm y así sucesivamente. Por lo tanto, técnicamente, tiene todas las herramientas que necesarias para desarrollar y probar código R.
+
+Se incluyen las siguientes herramientas estándares de R en un *base instalación* de R y por lo tanto, se instalan de forma predeterminada.
+
++ **RTerm**: un terminal de línea de comandos para ejecutar scripts de R
+
++ **RGui.exe**: sencillo editor interactivo de R. Los argumentos de la línea de comandos son los mismos en RGui.exe y en RTerm.
+
++ **RScript**: herramienta de línea de comandos para ejecutar scripts de R en el modo por lotes.
+
+Para encontrar estas herramientas, determine la biblioteca de R que se instala al configurar SQL Server o la característica de aprendizaje de automático de independiente. Por ejemplo, en una instalación predeterminada, las herramientas de R se encuentran en estas carpetas:
+
++ SQL Server 2016 R Services: `~\Program Files\Microsoft SQL Server\MSSQL13.<instancename>\R_SERVICES\bin\x64`
++ Microsoft R Server independiente: `~\Program Files\Microsoft R\R_SERVER\bin\x64`
++ Equipo con SQL Server de 2017 servicios de aprendizaje: `~\Program Files\Microsoft SQL Server\MSSQL14.<instancename>\R_SERVICES\bin\x64`
++ Server (independiente) de aprendizaje automático: `~\Program Files\Microsoft\ML Server\R_SERVER\bin\x64`
+
+Si necesita ayuda con las herramientas de R, simplemente abra **RGui**, haga clic en **ayuda**y seleccione una de las opciones
+
+**Cliente de Microsoft R**
+
+
+Cliente de Microsoft R es una descarga gratuita que proporciona acceso a los paquetes de RevoScaleR para fines de desarrollo. Al instalar el cliente de R, puede crear soluciones de R que se pueden ejecutar en todos los contextos de proceso admitidos, incluidos el análisis de en bases de datos de SQL Server y computación distribuida R en Hadoop, Spark o Linux con el servidor de aprendizaje de máquina.
+
+Si ya ha instalado un entorno de desarrollo de R diferente, como RStudio, asegúrese de volver a configurar el entorno para usar las bibliotecas y ejecutables proporcionados por Microsoft R cliente. Por lo que puede usar todas las características del paquete RevoScaleR, aunque el rendimiento será limitada.
+
+
+
+&nbsp;
+
+&nbsp;
+
+---
+
+<a name="TitleNum_4"/>
+
+### <a name="4-nbsp-sql-server-machine-learning-and-r-services-in-databasersql-server-r-servicesmd"></a>4. &nbsp; [SQL Server del equipo aprendizaje y R Services (en bases de datos)](r/sql-server-r-services.md)
+
+*Actualizado: 2018-04-12* &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; ([anterior](#TitleNum_3) | [siguiente](#TitleNum_5))
+
+<!-- Source markdown line 83.  ms.author= heidist.  -->
+
+&nbsp;
+
+
+<!-- git diff --ignore-all-space --unified=0 b1a95a7f6d391a518762eb271e8ea7e0d684d403 7fbfabf62917e03e2bcb99d297e1c9d0f0604440  (PR=5504  ,  Filename=sql-server-r-services.md  ,  Dirpath=docs\advanced-analytics\r\  ,  MergeCommitSha40=f34765240b79a44167ca2af90f97a0fdd47c41d2) -->
+
+
+
+Elegir el mejor lenguaje para la tarea. R es más adecuado para realizar cálculos estadísticos que son difíciles de implementar mediante SQL. Para las operaciones basadas en conjunto sobre datos, aprovechan la eficacia del *{incluidos contenido-va aquí}* para lograr un rendimiento máximo. Usar el motor de base de datos en memoria para realizar cálculos muy rápidos a través de las columnas.
+
+**Paso 4: Optimizar la solución**
+
+
+Cuando el modelo está listo para escalar de datos empresariales, los científicos de datos a menudo funciona con el programador de DBA o SQL para optimizar los procesos, como:
+
++ Ingeniería de características
++ Recopilación de datos y transformación de datos
++ Puntuaciones
+
+Tradicionalmente científicos de datos con R han tenido problemas con el rendimiento y la escalabilidad, especialmente cuando se usa el conjunto de datos grande. Eso es porque la implementación en tiempo de ejecución común es de subproceso único y puede dar cabida a los conjuntos de datos que caben en la memoria disponible en el equipo local. Integración con servicios de aprendizaje de máquina de SQl Server proporciona varias características para mejorar el rendimiento, con más datos:
+
++ **RevoScaleR**: paquete de R esta contiene implementaciones de algunas de las funciones de R más populares, rediseñadas para ofrecer paralelismo y escalabilidad. El paquete también incluye funciones que aumentan aún más el rendimiento y la escalabilidad mediante la inserción de cálculos a la *{incluidos contenido-va aquí}* equipo, que normalmente tiene mayor memoria y potencia de cálculo.
+
++ **revoscalepy**. Esta biblioteca de Python, disponible en SQL Server 2017, implementa las funciones más populares en RevoScaleR, por ejemplo, los contextos de proceso remoto y el procesamiento distribuyen de muchos algoritmos que admiten.
+
+**Recursos**
+
++ [Caso práctico de rendimiento]
++ [R y la optimización de datos]
+
+**Paso 5: Implementar y consumir**
 
 
 
 
-**Obtener la versión y la ubicación de biblioteca**
+&nbsp;
+
+&nbsp;
+
+---
+
+<a name="TitleNum_5"/>
+
+### <a name="5-nbsp-run-python-using-t-sqltutorialsrun-python-using-t-sqlmd"></a>5. &nbsp; [Ejecución de Python mediante T-SQL](tutorials/run-python-using-t-sql.md)
+
+*Actualizado: 2018-04-11* &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; ([anterior](#TitleNum_4) | [siguiente](#TitleNum_6))
+
+<!-- Source markdown line 306.  ms.author= heidist.  -->
+
+&nbsp;
 
 
-En el ejemplo siguiente se obtiene la ubicación de la biblioteca de RevoScaleR en el contexto de proceso local y la versión del paquete.
+<!-- git diff --ignore-all-space --unified=0 bde8c6476df259d225847c08224cefd02f3529d5 cad56997abe7928b588ac4a0302384c5edc1ede5  (PR=5497  ,  Filename=run-python-using-t-sql.md  ,  Dirpath=docs\advanced-analytics\tutorials\  ,  MergeCommitSha40=86c4e1879c5914676b9da384ab101b50b4a63bf1) -->
+
+
+
+2. Tenga en cuenta que los valores de índice no son de salida, incluso si utiliza el índice para obtener valores específicos de la data.frame.
+
+    **Resultado**
+
+    |ResultValue|
+    |------|
+    |0.5|
+    |2|
+
+**Valores de salida en data.frame mediante un índice**
+
+
+Veamos cómo funciona la conversión a un data.frame con nuestras dos series que contiene los resultados de las operaciones matemáticas simple. La primera tiene un índice de valores secuenciales generados por Python. El segundo usa un índice arbitrario de valores de cadena.
+
+1. En este ejemplo se obtiene un valor de la serie que utiliza un índice de entero.
 
 ```
-rxFindPackage(RevoScaleR, "local")
-packageVersion("RevoScaleR")
+    EXECUTE sp_execute_external_script
+    @language = N'Python',
+    @script = N'
+    import pandas as pd
+    a = 1
+    b = 2
+    c = a/b
+    d = a*b
+    s = pandas.Series([c,d])
+    print(s)
+    df = pd.DataFrame(s, index=[1])
+    OutputDataSet = df
+    '
+    WITH RESULT SETS (( ResultValue float ))
 ```
 
-**Determinar la ruta de acceso de biblioteca utilizado por SQL Server**
+Recuerde que el índice generado automáticamente comienza en 0. Pruebe a usar un valor fuera del intervalo índice y vea Qué sucede.
 
-
-Si ha actualizado los componentes mediante el enlace de aprendizaje automático, puede cambiar la ruta de acceso a la biblioteca de R. Cuando esto sucede, anteriores accesos directos a herramientas de R podrían hacer referencia a una versión anterior. Para asegurarse de la versión de paquete y la ruta de acceso utilizada por SQL Server, puede ejecutar un comando como el siguiente:
+2. Ahora vamos a obtener un valor único de la trama de datos que tiene un índice de cadena.
 
 ```
-EXEC sp_execute_external_script
-    @language =N'R',
-    @script=N'
-    sql_r_path <- rxSqlLibPaths("local")
-      print(sql_r_path)
-    version_info <-packageVersion("RevoScaleR")
-      print(version_info)'
+    EXECUTE sp_execute_external_script
+    @language = N'Python',
+    @script = N'
+    import pandas as pd
+    a = 1
+    b = 2
+    c = a/b
+    s = pandas.Series(c, index =["simple math example 1", "simple math example 2"])
+    print(s)
+    df = pd.DataFrame(s, index=["simple math example 1"])
+    OutputDataSet = df
+    '
+    WITH RESULT SETS (( ResultValue float ))
 ```
 
 **Resultado**
 
-```
-STDOUT message(s) from external script:
-[1] "C:/Program Files/Microsoft SQL Server/MSSQL14.MSSQLSERVER1000/R_SERVICES/library"
-[1] '9.2.1'
-```
+|ResultValue|
+|------|
+|0.5|
+
+Si intenta usar un índice numérico para obtener un valor de esta serie, obtendrá un error.
+
+
+
+&nbsp;
+
+&nbsp;
+
+---
+
+<a name="TitleNum_6"/>
+
+### <a name="6-nbsp-use-python-with-revoscalepy-to-create-a-modeltutorialsuse-python-revoscalepy-to-create-modelmd"></a>6. &nbsp; [Usar Python con revoscalepy para crear un modelo](tutorials/use-python-revoscalepy-to-create-model.md)
+
+*Actualizado: 2018-04-11* &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; ([anterior](#TitleNum_5))
+
+<!-- Source markdown line 22.  ms.author= heidist.  -->
+
+&nbsp;
+
+
+<!-- git diff --ignore-all-space --unified=0 5b642b391ca571412c30c8470875d3d4d3c57246 bd83387eb8a1076a1396bbd48dca12872843aa2f  (PR=5497  ,  Filename=use-python-revoscalepy-to-create-model.md  ,  Dirpath=docs\advanced-analytics\tutorials\  ,  MergeCommitSha40=86c4e1879c5914676b9da384ab101b50b4a63bf1) -->
+
+
+
+Si instaló una versión preliminar de SQL Server 2017, debe actualizar al menos la versión RTM. Las versiones posteriores de servicio han continuado expandir y mejorar la funcionalidad de Python. Algunas características de este tutorial podrían no funcionar en las primeras versiones preliminares.
+
++ Este ejemplo usa un entorno de Python predefinido, denominado `PYTEST_SQL_SERVER`. Se ha configurado el entorno para contener **revoscalepy** y otras bibliotecas necesarias.
+
+    Si no tiene un entorno configurado para ejecutarse Python, debe hacerlo por separado. La explicación de cómo crear o modificar entornos de Python queda fuera del ámbito de este tutorial. Para obtener más información acerca de cómo configurar un cliente de Python que contenga las bibliotecas correctas, consulte [cliente instalar Python](https://docs.microsoft.com/machine-learning-server/install/python-libraries-interpreter) y [vínculo Python herramientas](https://docs.microsoft.com/machine-learning-server/python/quickstart-python-tools).
+
+**Revoscalepy y contextos de proceso remoto**
+
+
+En este ejemplo se muestra el proceso de creación de un modelo de Python en un equipo remoto _contexto de proceso_, que permite trabajar desde un cliente, pero elija un entorno remoto, como SQL Server, Spark o servidor de aprendizaje de máquina, donde el las operaciones se realizan en realidad. Uso contextos de proceso hace que sea más fácil escribir el código una vez e implementarla en cualquier entorno compatible con.
+
+Para ejecutar el código de Python en SQL Server requiere la **revoscalepy** paquete. Se trata de un paquete de Python especial suministrado por Microsoft, similar a la **RevoScaleR** paquete para el lenguaje R. El **revoscalepy** paquete es compatible con la creación de contextos de proceso y proporciona la infraestructura para pasar los datos y modelos entre una estación de trabajo local y un servidor remoto. El **revoscalepy** función compatible con la ejecución de código de base de datos está [RxInSqlServer](https://docs.microsoft.com/machine-learning-server/python-reference/revoscalepy/rxinsqlserver).
 
 
 
@@ -233,40 +416,36 @@ STDOUT message(s) from external script:
 En esta sección se enumeran artículos muy similares a los artículos actualizados recientemente en otras áreas temáticas, dentro de nuestro repositorio público de GitHub.com: [MicrosoftDocs/sql-docs](https://github.com/MicrosoftDocs/sql-docs/).
 
 
+
 #### <a name="subject-areas-that-do-have-new-or-recently-updated-articles"></a>Áreas temáticas *con* artículos nuevos o actualizados recientemente
 
-
-- [Nuevos + actualizados (1+3): &nbsp;documentos de **Análisis avanzado para SQL**](../advanced-analytics/new-updated-advanced-analytics.md)
-- [Nuevos + actualizados (0+1): &nbsp;documentos de **Analytics Platform System para SQL**](../analytics-platform-system/new-updated-analytics-platform-system.md)
-- [Nuevos + actualizados (0+1): &nbsp;documentos de **Conexión a SQL**](../connect/new-updated-connect.md)
-- [Nuevos + actualizados (0+1): &nbsp;documentos del **Motor de base de datos de SQL**](../database-engine/new-updated-database-engine.md)
-- [Nuevos + actualizados (12+1): **documentos de** Integration Services para SQL](../integration-services/new-updated-integration-services.md)
-- [Nuevos + actualizados (6+2): &nbsp;documentos de **Linux para SQL**](../linux/new-updated-linux.md)
-- [Nuevos + actualizados (15+0): **documentos de** PowerShell para SQL](../powershell/new-updated-powershell.md)
-- [Nuevos + actualizados (2+9): &nbsp;documentos de **Bases de datos relacionales para SQL**](../relational-databases/new-updated-relational-databases.md)
-- [Nuevos + actualizados (1+0): &nbsp;documentos de **Reporting Services para SQL**](../reporting-services/new-updated-reporting-services.md)
-- [Nuevos + actualizados (1+1): &nbsp;documentos de **SQL Operations Studio**](../sql-operations-studio/new-updated-sql-operations-studio.md)
-- [Nuevos + actualizados (1+1): &nbsp;documentos de **Microsoft SQL Server**](../sql-server/new-updated-sql-server.md)
-- [Nuevos + actualizados (0+1): &nbsp;documentos de **SQL Server Data Tools (SSDT)**](../ssdt/new-updated-ssdt.md)
-- [Nuevos + actualizados (1+2): &nbsp;documentos de **SQL Server Management Studio (SSMS)**](../ssms/new-updated-ssms.md)
-- [Nuevos + actualizados (0+2): &nbsp;documentos de **Transact-SQL**](../t-sql/new-updated-t-sql.md)
+- [Nuevos y actualizados (11 + 6): &nbsp; &nbsp; **Advanced Analytics para SQL** documentos](../advanced-analytics/new-updated-advanced-analytics.md)
+- [Nuevos y actualizados (18 + 0): &nbsp; &nbsp; **Analysis Services para SQL** documentos](../analysis-services/new-updated-analysis-services.md)
+- [Nuevos y actualizados (218 + 14): **conectar con SQL Server** documentos](../connect/new-updated-connect.md)
+- [Nuevos y actualizados (14 + 0): &nbsp; &nbsp; **motor de base de datos de SQL** documentos](../database-engine/new-updated-database-engine.md)
+- [Nuevos y actualizados (3 + 2): &nbsp; &nbsp; **Integration Services para SQL** documentos](../integration-services/new-updated-integration-services.md)
+- [Nuevos y actualizados (3 + 3): &nbsp; &nbsp; **Linux para SQL** documentos](../linux/new-updated-linux.md)
+- [Nuevos y actualizados (10 + 7): &nbsp; &nbsp; **bases de datos relacionales de SQL** documentos](../relational-databases/new-updated-relational-databases.md)
+- [Nuevos y actualizados (0 + 2): &nbsp; &nbsp; **Reporting Services para SQL** documentos](../reporting-services/new-updated-reporting-services.md)
+- [Nuevos y actualizados (1 + 3): &nbsp; &nbsp; **Studio de operaciones SQL** documentos](../sql-operations-studio/new-updated-sql-operations-studio.md)
+- [Nuevos y actualizados (2 + 3): &nbsp; &nbsp; **Microsoft SQL Server** documentos](../sql-server/new-updated-sql-server.md)
+- [Nuevos y actualizados (1 + 1): &nbsp; &nbsp; **SQL Server Data Tools (SSDT)** documentos](../ssdt/new-updated-ssdt.md)
+- [Nuevos y actualizados (5 + 2): &nbsp; &nbsp; **SQL Server Management Studio (SSMS)** documentos](../ssms/new-updated-ssms.md)
+- [Nuevos y actualizados (0 + 2): &nbsp; &nbsp; **Transact-SQL** documentos](../t-sql/new-updated-t-sql.md)
+- [Nuevos y actualizados (1 + 1): &nbsp; &nbsp; **Tools para SQL** documentos](../tools/new-updated-tools.md)
 
 
 
 #### <a name="subject-areas-that-do-not-have-any-new-or-recently-updated-articles"></a>Áreas temáticas que *no* tienen artículos nuevos o actualizados recientemente
 
-
-- [Nuevos + Actualizados (0+0): documentos de **Data Migration Assistant (DMA) para SQL**](../dma/new-updated-dma.md)
-- [Nuevos y actualizados (0 + 0): **ActiveX Data Objects (ADO) para SQL** documentos](../ado/new-updated-ado.md)
-- [Nuevos + actualizados (0+0): documentos de **Analysis Services para SQL**](../analysis-services/new-updated-analysis-services.md)
+- [Nuevos y actualizados (0 + 0): **Analytics Platform System para SQL** documentos](../analytics-platform-system/new-updated-analytics-platform-system.md)
 - [Nuevos y actualizados (0 + 0): **Data Quality Services para SQL** documentos](../data-quality-services/new-updated-data-quality-services.md)
 - [Nuevos y actualizados (0 + 0): **extensiones de minería de datos (DMX) para SQL** documentos](../dmx/new-updated-dmx.md)
 - [Nuevos + actualizados (0+0): documentos de **Master Data Services (MDS) para SQL**](../master-data-services/new-updated-master-data-services.md)
 - [Nuevos y actualizados (0 + 0): **expresiones multidimensionales (MDX) para SQL** documentos](../mdx/new-updated-mdx.md)
 - [Nuevos y actualizados (0 + 0): **ODBC (conectividad abierta de base de datos) para SQL** documentos](../odbc/new-updated-odbc.md)
+- [Nuevos y actualizados (0 + 0): **PowerShell para SQL** documentos](../powershell/new-updated-powershell.md)
 - [Nuevos y actualizados (0 + 0): **ejemplos para SQL** documentos](../samples/new-updated-samples.md)
 - [Nuevos y actualizados (0 + 0): **SQL Server Migration Assistant (SSMA)** documentos](../ssma/new-updated-ssma.md)
-- [Nuevos + actualizados (0+0): documentos de **Herramientas para SQL**](../tools/new-updated-tools.md)
 - [Nuevos y actualizados (0 + 0): **XQuery para SQL** documentos](../xquery/new-updated-xquery.md)
-
 

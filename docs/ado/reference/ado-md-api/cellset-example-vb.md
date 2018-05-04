@@ -21,12 +21,11 @@ caps.latest.revision: 9
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: 4f8938832eb3cd08e55fd0b5d2a5dc639d863fc8
-ms.sourcegitcommit: bb044a48a6af9b9d8edb178dc8c8bd5658b9ff68
-ms.translationtype: MT
+ms.openlocfilehash: 52efd386f69733f2fb349f753a3324c121a46734
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/18/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="cellset-example-vb"></a>Ejemplo de conjunto de celdas (VB)
 Este proyecto de Visual Basic muestra los conceptos básicos del uso de ADO MD para acceder a los datos de cubo. Muestra títulos para los encabezados de fila y columna, a continuación, muestra los valores de celdas específicas en el conjunto de celdas con formato.  

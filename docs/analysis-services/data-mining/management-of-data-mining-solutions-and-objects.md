@@ -1,30 +1,29 @@
 ---
-title: "Administración de soluciones de minería de datos y objetos | Documentos de Microsoft"
-ms.custom: 
+title: Administración de soluciones de minería de datos y objetos | Documentos de Microsoft
+ms.custom: ''
 ms.date: 03/03/2017
 ms.prod: analysis-services
 ms.prod_service: analysis-services
-ms.service: 
+ms.service: ''
 ms.component: data-mining
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: pro-bi
-ms.technology: 
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.technology: ''
+ms.tgt_pltfrm: ''
+ms.topic: conceptual
 helpviewer_keywords:
 - data mining [Analysis Services], managing
 - managing mining models
 ms.assetid: 06fc61dd-925c-4347-8677-7046ee5d2f6f
-caps.latest.revision: 
+caps.latest.revision: 26
 author: Minewiskan
 ms.author: owend
 manager: kfile
-ms.workload: Inactive
-ms.openlocfilehash: 486ba5cb40f30921374a4f66040f2a080e4a1152
-ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
-ms.translationtype: MT
+ms.openlocfilehash: 81f4e92269ae21f345c42bc9d01901b366a69cc7
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/15/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="management-of-data-mining-solutions-and-objects"></a>Administración de las soluciones y los objetos de minería de datos
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
@@ -58,7 +57,7 @@ ms.lasthandoff: 02/15/2018
   
 -   [Cambiar las propiedades de un modelo de minería de datos](../../analysis-services/data-mining/change-the-properties-of-a-mining-model.md)  
   
--   [Ver o cambiar modelado marcas &#40; minería de datos &#41;](../../analysis-services/data-mining/view-or-change-modeling-flags-data-mining.md)  
+-   [Ver o cambiar modelado marcas & #40; minería de datos & #41;](../../analysis-services/data-mining/view-or-change-modeling-flags-data-mining.md)  
   
 -   [Ver o cambiar parámetros del algoritmo](../../analysis-services/data-mining/view-or-change-algorithm-parameters.md)  
   

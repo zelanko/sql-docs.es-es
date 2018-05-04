@@ -21,12 +21,11 @@ caps.latest.revision: 11
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: 0dbcb1ed8bf9b22309ade18efe4ad2e8c9dcbd6e
-ms.sourcegitcommit: bb044a48a6af9b9d8edb178dc8c8bd5658b9ff68
-ms.translationtype: MT
+ms.openlocfilehash: f6a6a684dd7ea0d0be9df4fdd75a56048db6e908
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/18/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="views-refresh-method-example-vb"></a>Vistas de actualización de ejemplo del método (VB)
 El código siguiente muestra cómo actualizar la [vistas](../../../ado/reference/adox-api/views-collection-adox.md) colección de un [catálogo](../../../ado/reference/adox-api/catalog-object-adox.md). Esto es necesario antes de [vista](../../../ado/reference/adox-api/view-object-adox.md) objetos desde la **catálogo** son accesibles.  

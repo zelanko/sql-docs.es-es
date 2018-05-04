@@ -1,37 +1,19 @@
 ---
 title: Crear y modificar objetos (XMLA) | Documentos de Microsoft
-ms.custom: 
-ms.date: 02/14/2018
-ms.prod: analysis-services
-ms.prod_service: analysis-services
-ms.service: 
-ms.component: 
-ms.reviewer: 
-ms.suite: pro-bi
-ms.technology: 
-ms.tgt_pltfrm: 
-ms.topic: reference
-applies_to:
-- SQL Server 2016 Preview
-helpviewer_keywords:
-- objects [XML for Analysis]
-- subordinate objects [XML for Analysis]
-- XML for Analysis, objects
-- modifying objects
-- removing objects
-- deleting objects
-- XMLA, objects
-ms.assetid: a2080867-e130-440c-92eb-f768869f34a8
-caps.latest.revision: 
-author: Minewiskan
+ms.date: 05/02/2018
+ms.prod: sql
+ms.technology: analysis-services
+ms.component: xmla
+ms.topic: article
 ms.author: owend
+ms.reviewer: owend
+author: minewiskan
 manager: kfile
-ms.workload: Inactive
-ms.openlocfilehash: 3a57805854f7a7dfa51546425090f9e323511112
-ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
+ms.openlocfilehash: 0089b086d6e2da0ce171ad517e9e558dd06d8f72
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/15/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="creating-and-altering-objects-xmla"></a>Crear y modificar objetos (XMLA)
   Los objetos principales se pueden crear, modificar y eliminar de forma independiente. Entre los objetos principales se incluyen los siguientes:  
@@ -61,15 +43,15 @@ ms.lasthandoff: 02/15/2018
  Usa el [crear](../../analysis-services/xmla/xml-elements-commands/create-element-xmla.md) comando para crear un objeto principal en una instancia de [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]y el [Alter](../../analysis-services/xmla/xml-elements-commands/alter-element-xmla.md) comando para modificar un objeto principal existente en una instancia. Ambos comandos se ejecutan utilizando el [Execute](../../analysis-services/xmla/xml-elements-methods-execute.md) método.  
   
 ## <a name="creating-objects"></a>Creación de objetos  
- Al crear objetos mediante el uso de la **crear** método, primero debe identificar el objeto primario que contiene el [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] objeto que se va a crear. Para identificar el objeto primario, proporcione una referencia de objeto en el [ParentObject](../../analysis-services/xmla/xml-elements-properties/parentobject-element-xmla.md) propiedad de la **crear** comando. Cada referencia de objeto contiene los identificadores de objeto necesarios para identificar de forma única el objeto primario para el **crear** comando. Para obtener más información acerca de las referencias de objeto, vea [definir y la identificación de objetos &#40; XMLA &#41; ](../../analysis-services/multidimensional-models-scripting-language-assl-xmla/defining-and-identifying-objects-xmla.md).  
+ Al crear objetos mediante el uso de la **crear** método, primero debe identificar el objeto primario que contiene el [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] objeto que se va a crear. Para identificar el objeto primario, proporcione una referencia de objeto en el [ParentObject](../../analysis-services/xmla/xml-elements-properties/parentobject-element-xmla.md) propiedad de la **crear** comando. Cada referencia de objeto contiene los identificadores de objeto necesarios para identificar de forma única el objeto primario para el **crear** comando. Para obtener más información acerca de las referencias de objeto, vea [definir e identificar objetos &#40;XMLA&#41;](../../analysis-services/multidimensional-models-scripting-language-assl-xmla/defining-and-identifying-objects-xmla.md).  
   
  Por ejemplo, debe proporcionar una referencia de objeto a un cubo para crear un nuevo grupo de medida para el cubo. La referencia de objeto para el cubo en el **ParentObject** propiedad contiene un identificador de base de datos y un identificador de cubo, como el mismo identificador de cubo podría utilizarse en otra base de datos.  
   
- El [ObjectDefinition](../../analysis-services/xmla/xml-elements-properties/objectdefinition-element-xmla.md) elemento contiene elementos de Analysis Services Scripting Language (ASSL) que definen el objeto principal que se va a crear. Para obtener más información acerca de ASSL, vea [desarrollar con Analysis Services Scripting Language &#40; ASSL &#41; ](../../analysis-services/multidimensional-models/scripting-language-assl/developing-with-analysis-services-scripting-language-assl.md).  
+ El [ObjectDefinition](../../analysis-services/xmla/xml-elements-properties/objectdefinition-element-xmla.md) elemento contiene elementos de Analysis Services Scripting Language (ASSL) que definen el objeto principal que se va a crear. Para obtener más información acerca de ASSL, vea [desarrollar con Analysis Services Scripting Language &#40;ASSL&#41;](../../analysis-services/multidimensional-models/scripting-language-assl/developing-with-analysis-services-scripting-language-assl.md).  
   
  Si establece la **AllowOverwrite** atributo de la **crear** comando en true, se puede sobrescribir un objeto principal existente que tiene el identificador especificado. De lo contrario, si ya existe un objeto principal con el identificador especificado en el objeto primario, se produce un error.  
   
- Para obtener más información sobre la **crear** command, consulte [crear elemento &#40; XMLA &#41; ](../../analysis-services/xmla/xml-elements-commands/create-element-xmla.md).  
+ Para obtener más información sobre la **crear** command, consulte [crear elemento &#40;XMLA&#41;](../../analysis-services/xmla/xml-elements-commands/create-element-xmla.md).  
   
 ### <a name="creating-session-objects"></a>Crear objetos de sesión  
  Los objetos de sesión son objetos temporales que solo están disponibles para la sesión explícita o implícita utilizada por una aplicación cliente y que se eliminan cuando finaliza la sesión. Puede crear objetos de sesión estableciendo la **ámbito** atributo de la **crear** comando *sesión*.  
@@ -78,11 +60,11 @@ ms.lasthandoff: 02/15/2018
 >  Cuando se usa el *sesión* establecer, el **ObjectDefinition** solo puede contener el elemento [dimensión](../../analysis-services/scripting/objects/dimension-element-assl.md), [cubo](../../analysis-services/scripting/objects/cube-element-assl.md), o [ MiningModel](../../analysis-services/scripting/objects/miningmodel-element-assl.md) elementos ASSL.  
   
 ## <a name="altering-objects"></a>Modificar objetos  
- Cuando se modifican objetos mediante el uso de la **Alter** método, primero debe identificar el objeto que se va a modificarse proporcionando una referencia de objeto en el [objeto](../../analysis-services/xmla/xml-elements-properties/object-element-xmla.md) propiedad de la **Alter**comando. Cada referencia de objeto contiene los identificadores de objeto necesarios para identificar de forma única el objeto para el **Alter** comando. Para obtener más información acerca de las referencias de objeto, vea [definir y la identificación de objetos &#40; XMLA &#41; ](../../analysis-services/multidimensional-models-scripting-language-assl-xmla/defining-and-identifying-objects-xmla.md).  
+ Cuando se modifican objetos mediante el uso de la **Alter** método, primero debe identificar el objeto que se va a modificarse proporcionando una referencia de objeto en el [objeto](../../analysis-services/xmla/xml-elements-properties/object-element-xmla.md) propiedad de la **Alter**comando. Cada referencia de objeto contiene los identificadores de objeto necesarios para identificar de forma única el objeto para el **Alter** comando. Para obtener más información acerca de las referencias de objeto, vea [definir e identificar objetos &#40;XMLA&#41;](../../analysis-services/multidimensional-models-scripting-language-assl-xmla/defining-and-identifying-objects-xmla.md).  
   
  Por ejemplo, debe proporcionar una referencia de objeto a un cubo para modificar la estructura de un cubo. La referencia de objeto para el cubo en el **objeto** propiedad contiene un identificador de base de datos y un identificador de cubo, como el mismo identificador de cubo podría utilizarse en otra base de datos.  
   
- El **ObjectDefinition** elemento contiene elementos ASSL que definen el objeto principal que se va a modificarse. Para obtener más información acerca de ASSL, vea [desarrollar con Analysis Services Scripting Language &#40; ASSL &#41; ](../../analysis-services/multidimensional-models/scripting-language-assl/developing-with-analysis-services-scripting-language-assl.md).  
+ El **ObjectDefinition** elemento contiene elementos ASSL que definen el objeto principal que se va a modificarse. Para obtener más información acerca de ASSL, vea [desarrollar con Analysis Services Scripting Language &#40;ASSL&#41;](../../analysis-services/multidimensional-models/scripting-language-assl/developing-with-analysis-services-scripting-language-assl.md).  
   
  Si establece la **AllowCreate** atributo de la **Alter** comando en true, puede crear el objeto principal especificado si el objeto no existe. De lo contrario, si un objeto principal especificado no existe aún, se produce un error.  
   
@@ -98,7 +80,7 @@ ms.lasthandoff: 02/15/2018
 >  Cuando se usa el *sesión* establecer, el **ObjectDefinition** solo puede contener el elemento [dimensión](../../analysis-services/scripting/objects/dimension-element-assl.md), [cubo](../../analysis-services/scripting/objects/cube-element-assl.md), o [ MiningModel](../../analysis-services/scripting/objects/miningmodel-element-assl.md) elementos ASSL.  
   
 ## <a name="creating-or-altering-subordinate-objects"></a>Crear o modificar objetos subordinados  
- Aunque un **crear** o **Alter** comando crea o modifica solo un objeto principal de nivel superior, el objeto principal se crea o modifica puede contener definiciones en la envolvente  **ObjectDefinition** propiedad para otros objetos principales y secundarias que pertenecen a ella. Por ejemplo, si define un cubo, especifique la base de datos primaria en **ParentObject**y en la definición de cubo en **ObjectDefinition** puede definir grupos de medida para el cubo y, en la medida grupos, puede definir particiones para cada grupo de medida. Un objeto secundario solamente se puede definir bajo el objeto principal que lo contiene. Para obtener más información acerca de los objetos principales y secundarios, vea [objetos de base de datos &#40; Analysis Services - datos multidimensionales &#41; ](../../analysis-services/multidimensional-models/olap-logical/database-objects-analysis-services-multidimensional-data.md).  
+ Aunque un **crear** o **Alter** comando crea o modifica solo un objeto principal de nivel superior, el objeto principal se crea o modifica puede contener definiciones en la envolvente  **ObjectDefinition** propiedad para otros objetos principales y secundarias que pertenecen a ella. Por ejemplo, si define un cubo, especifique la base de datos primaria en **ParentObject**y en la definición de cubo en **ObjectDefinition** puede definir grupos de medida para el cubo y, en la medida grupos, puede definir particiones para cada grupo de medida. Un objeto secundario solamente se puede definir bajo el objeto principal que lo contiene. Para obtener más información acerca de los objetos principales y secundarios, vea [objetos de base de datos &#40;Analysis Services - datos multidimensionales&#41;](../../analysis-services/multidimensional-models/olap-logical/database-objects-analysis-services-multidimensional-data.md).  
   
 ## <a name="examples"></a>Ejemplos  
   
@@ -154,8 +136,8 @@ ms.lasthandoff: 02/15/2018
  El **ObjectExpansion** atributo de la **Alter** comandos se estableció en *ObjectProperties*. Esta configuración permite la [ImpersonationInfo](../../analysis-services/scripting/properties/impersonationinfo-element-assl.md) elemento, un objeto secundario, que se excluirán del origen de datos definido en **ObjectDefinition**. Por lo tanto, la información de suplantación de ese origen de datos permanece activa en la cuenta de servicio, como se especifica en el primer ejemplo.  
   
 ## <a name="see-also"></a>Vea también  
- [Ejecutar método &#40; XMLA &#41;](../../analysis-services/xmla/xml-elements-methods-execute.md)   
- [Desarrollar con Analysis Services Scripting Language &#40; ASSL &#41;](../../analysis-services/multidimensional-models/scripting-language-assl/developing-with-analysis-services-scripting-language-assl.md)   
+ [Ejecutar el método &#40;XMLA&#41;](../../analysis-services/xmla/xml-elements-methods-execute.md)   
+ [Desarrollar aplicaciones con Analysis Services Scripting Language &#40;ASSL&#41;](../../analysis-services/multidimensional-models/scripting-language-assl/developing-with-analysis-services-scripting-language-assl.md)   
  [Desarrollar con XMLA en Analysis Services](../../analysis-services/multidimensional-models-scripting-language-assl-xmla/developing-with-xmla-in-analysis-services.md)  
   
   

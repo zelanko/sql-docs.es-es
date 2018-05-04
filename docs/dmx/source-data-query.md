@@ -26,22 +26,21 @@ caps.latest.revision: 41
 author: Minewiskan
 ms.author: owend
 manager: erikre
-ms.workload: Inactive
-ms.openlocfilehash: be1fd45bfd852174169f004cb165f6b760c07abc
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
-ms.translationtype: MT
+ms.openlocfilehash: 8406a5a47ee56d30941433531332d639a20e40fc
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="ltsource-data-querygt"></a>&lt;consulta de origen de datos&gt;
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
 
-  Para entrenar un modelo de minería de datos y crear predicciones a partir de un modelo de minería de datos, debe tener acceso a datos externos a la [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] base de datos. Usa el \<consulta de origen de datos > cláusula minería de datos extensiones (DMX) para definir esos datos externos. El [INSERT INTO &#40; DMX &#41;](../dmx/insert-into-dmx.md), [SELECT FROM &#60; modelo &#62; COMBINACIÓN de PREDICCIÓN &#40; DMX &#41; ](../dmx/select-from-model-prediction-join-dmx.md), y [SELECT FROM NATURAL PREDICTION JOIN](../dmx/select-from-model-prediction-join-dmx.md) todas las instrucciones usan  **\<consulta de origen de datos >**.  
+  Para entrenar un modelo de minería de datos y crear predicciones a partir de un modelo de minería de datos, debe tener acceso a datos externos a la [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] base de datos. Usa el \<consulta de origen de datos > cláusula minería de datos extensiones (DMX) para definir esos datos externos. El [INSERT INTO &#40;DMX&#41;](../dmx/insert-into-dmx.md), [SELECT FROM &#60;modelo&#62; PREDICTION JOIN &#40;DMX&#41;](../dmx/select-from-model-prediction-join-dmx.md), y [SELECT FROM NATURAL PREDICTION JOIN](../dmx/select-from-model-prediction-join-dmx.md) todas las instrucciones usan  **\<consulta de origen de datos >**.  
   
 ## <a name="query-types"></a>Tipos de consulta  
  Las tres formas más habituales de especificar datos de origen son:  
   
- [OPENQUERY &#40; DMX &#41;](../dmx/source-data-query-openquery.md)  
+ [OPENQUERY &AMP;#40;DMX&AMP;#41;](../dmx/source-data-query-openquery.md)  
  Esta instrucción consulta datos externos a una instancia de [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] usando un origen de datos existente.  
   
  Mientras **OPENQUERY** es una función similar a **OPENROWSET**, **OPENQUERY** tiene las siguientes ventajas:  
@@ -50,10 +49,10 @@ ms.lasthandoff: 01/08/2018
   
 -   El administrador dispone de más control sobre el modo de acceso a los datos del servidor. Por ejemplo, el administrador puede administrar los proveedores que se cargan en el servidor y los datos externos a los que se puede obtener acceso.  
   
- [OPENROWSET &#40; DMX &#41;](../dmx/source-data-query-openrowset.md)  
+ [OPENROWSET &AMP;#40;DMX&AMP;#41;](../dmx/source-data-query-openrowset.md)  
  Esta instrucción consulta datos externos a una instancia de [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] usando un origen de datos existente.  
   
- [FORMA &#40; DMX &#41;](../dmx/source-data-query-shape.md)  
+ [FORMA &AMP;#40;DMX&AMP;#41;](../dmx/source-data-query-shape.md)  
  Esta instrucción consulta varios orígenes de datos para crear una tabla anidada. Mediante el uso de **forma**, puede combinar datos de varios orígenes en una única tabla jerárquica. Esto le permite aprovechar la capacidad de [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] de anidar tablas incrustando una tabla dentro de otra tabla.  
   
  Para especificar los datos de origen, también puede usar las siguientes opciones:  
@@ -69,8 +68,8 @@ ms.lasthandoff: 01/08/2018
 -   Un parámetro de conjunto de filas  
   
 ## <a name="see-also"></a>Vea también  
- [Extensiones de minería de datos &#40; DMX &#41; Instrucciones de manipulación de datos](../dmx/dmx-statements-data-manipulation.md)   
- [Extensiones de minería de datos &#40; DMX &#41; Referencia de instrucciones](../dmx/data-mining-extensions-dmx-statements.md)   
- [Tablas anidadas &#40; Analysis Services: minería de datos &#41;](../analysis-services/data-mining/nested-tables-analysis-services-data-mining.md)  
+ [Extensiones de minería de datos &#40;DMX&#41; instrucciones de manipulación de datos](../dmx/dmx-statements-data-manipulation.md)   
+ [Extensiones de minería de datos &#40;DMX&#41; Referencia de instrucciones](../dmx/data-mining-extensions-dmx-statements.md)   
+ [Tablas anidadas &#40;Analysis Services: minería de datos&#41;](../analysis-services/data-mining/nested-tables-analysis-services-data-mining.md)  
   
   

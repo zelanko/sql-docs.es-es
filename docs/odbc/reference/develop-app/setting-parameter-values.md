@@ -11,7 +11,7 @@ ms.suite: sql
 ms.technology:
 - drivers
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - parameter values [ODBC]
 ms.assetid: 13e5da79-b60c-48d0-b467-773f481ef2a4
@@ -19,12 +19,11 @@ caps.latest.revision: 6
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: 88b8ea3a21f7b2d0bd5790aad934e784b4ca3e87
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
-ms.translationtype: MT
+ms.openlocfilehash: b0e41f775ef6640f4f82aa16cea038becc305bf5
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="setting-parameter-values"></a>Establecer valores de parámetro
 Para establecer el valor de un parámetro, la aplicación simplemente establece el valor de la variable enlazado al parámetro. No es importante cuando se establece este valor, siempre y cuando se establece antes de que se ejecuta la instrucción. La aplicación puede establecer el valor antes o después de enlazar la variable y puede cambiar el valor tantas veces como desee. Cuando se ejecuta la instrucción, el controlador simplemente recupera el valor actual de la variable. Esto es especialmente útil cuando se ejecuta una instrucción preparada varias veces; la aplicación establece nuevos valores para algunas o todas las variables de cada vez que se ejecuta la instrucción. Para obtener un ejemplo de esto, consulte [ejecución preparada](../../../odbc/reference/develop-app/prepared-execution-odbc.md), anteriormente en esta sección.  

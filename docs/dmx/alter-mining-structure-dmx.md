@@ -27,17 +27,16 @@ caps.latest.revision: 41
 author: Minewiskan
 ms.author: owend
 manager: erikre
-ms.workload: Inactive
-ms.openlocfilehash: e52b312871dd76ee1e72f515ce83a2e7269d5ab3
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
-ms.translationtype: MT
+ms.openlocfilehash: b269d7e574e27de90ff4854cde1233312d444dd9
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="alter-mining-structure-dmx"></a>ALTER MINING STRUCTURE (DMX)
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
 
-  Crea un nuevo modelo de minería de datos basado en una estructura de minería de datos existente.  Cuando se usa el **ALTER MINING STRUCTURE** instrucción para crear un nuevo modelo de minería de datos, la estructura ya debe existir. En cambio, cuando se utiliza la instrucción, [crear el modelo de minería de datos &#40; DMX &#41;](../dmx/create-mining-model-dmx.md), crea un modelo y generar automáticamente su estructura de minería de datos subyacente al mismo tiempo.  
+  Crea un nuevo modelo de minería de datos basado en una estructura de minería de datos existente.  Cuando se usa el **ALTER MINING STRUCTURE** instrucción para crear un nuevo modelo de minería de datos, la estructura ya debe existir. En cambio, cuando se utiliza la instrucción, [CREATE MINING MODEL &#40;DMX&#41;](../dmx/create-mining-model-dmx.md), crea un modelo y generar automáticamente su estructura de minería de datos subyacente al mismo tiempo.  
   
 ## <a name="syntax"></a>Sintaxis  
   
@@ -70,13 +69,13 @@ USING <algorithm> [(<parameter list>)]
  *criterios de filtro anidados*  
  Expresión de filtro que se aplica a las columnas de una tabla anidada.  
   
- *algoritmo*  
+ *Algoritmo*  
  Nombre de un algoritmo de minería de datos definido por el proveedor.  
   
 > [!NOTE]  
 >  Se puede recuperar una lista de los algoritmos admitidos por el proveedor actual mediante [filas DMSCHEMA_MINING_SERVICES](../analysis-services/schema-rowsets/data-mining/dmschema-mining-services-rowset.md). Para ver los algoritmos admitidos en la instancia actual de [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)], consulte [Data Mining Properties](../analysis-services/server-properties/data-mining-properties.md).  
   
- *lista de parámetros*  
+ *Lista de parámetros*  
  Opcional. Lista delimitada por comas de parámetros definidos por el proveedor para el algoritmo.  
   
  *criterios de filtro*  
@@ -133,7 +132,7 @@ USING <algorithm> [(<parameter list>)]
 |**REGRESSOR**|Indica que el algoritmo puede usar la columna especificada en la fórmula de regresión de algoritmos de regresión.|  
 |**MODEL_EXISTENCE_ONLY**|Indica que los valores de la columna de atributos no son tan importantes como la presencia del atributo.|  
   
- Puede definir varias marcas de modelado para una columna. Para obtener más información sobre cómo usar marcas de modelado, vea [marcas de modelado &#40; DMX &#41;](../dmx/modeling-flags-dmx.md).  
+ Puede definir varias marcas de modelado para una columna. Para obtener más información sobre cómo usar marcas de modelado, vea [marcas de modelado &#40;DMX&#41;](../dmx/modeling-flags-dmx.md).  
   
 ### <a name="prediction-clause"></a>Cláusula de predicción  
  La cláusula de predicción describe cómo se usa la columna de predicción. En la tabla siguiente se enumeran las cláusulas posibles.  
@@ -148,7 +147,7 @@ USING <algorithm> [(<parameter list>)]
   
  Las expresiones de criterios de filtro son predicados DMX simplificados, similares a una cláusula WHERE. Las expresiones de filtro se reducen a fórmulas que utilizan operadores matemáticos básicos, escalares y nombres de columna. La excepción la constituye el operador EXISTS; se evalúa como TRUE si la subconsulta devuelve al menos una fila. Los predicados se pueden combinar mediante los operadores lógicos comunes: AND, OR y NOT.  
   
- Para obtener más información acerca de los filtros utilizados con los modelos de minería de datos, vea [filtros para modelos de minería de datos &#40; Analysis Services: minería de datos &#41; ](../analysis-services/data-mining/filters-for-mining-models-analysis-services-data-mining.md).  
+ Para obtener más información acerca de los filtros utilizados con los modelos de minería de datos, vea [filtros para modelos de minería de datos de &#40;Analysis Services: minería de datos&#41;](../analysis-services/data-mining/filters-for-mining-models-analysis-services-data-mining.md).  
   
 > [!NOTE]  
 >  Las columnas de un filtro deben ser columnas de estructura de minería de datos. No se puede crear un filtro para una columna del modelo ni para una columna con alias.  
@@ -156,7 +155,7 @@ USING <algorithm> [(<parameter list>)]
  Para obtener más información sobre los operadores DMX y la sintaxis, vea [columnas del modelo de minería de datos](../analysis-services/data-mining/mining-model-columns.md).  
   
 ## <a name="parameter-definition-list"></a>Lista de definiciones de parámetros  
- Para ajustar el rendimiento y la funcionalidad de un modelo, se pueden agregar parámetros del algoritmo a la lista de parámetros. Los parámetros que se pueden utilizar dependen del algoritmo que se especifique en la cláusula USING. Para obtener una lista de parámetros que están asociados a cada algoritmo, vea [algoritmos de minería de datos &#40; Analysis Services: minería de datos &#41; ](../analysis-services/data-mining/data-mining-algorithms-analysis-services-data-mining.md).  
+ Para ajustar el rendimiento y la funcionalidad de un modelo, se pueden agregar parámetros del algoritmo a la lista de parámetros. Los parámetros que se pueden utilizar dependen del algoritmo que se especifique en la cláusula USING. Para obtener una lista de parámetros que están asociados a cada algoritmo, vea [algoritmos de minería de datos &#40;Analysis Services: minería de datos&#41;](../analysis-services/data-mining/data-mining-algorithms-analysis-services-data-mining.md).  
   
  La sintaxis de la lista de parámetros es:  
   
@@ -220,8 +219,8 @@ USING Microsoft_Decision Trees
 ```  
   
 ## <a name="see-also"></a>Vea también  
- [Extensiones de minería de datos &#40; DMX &#41; Instrucciones de definición de datos](../dmx/dmx-statements-data-definition.md)   
- [Extensiones de minería de datos &#40; DMX &#41; Instrucciones de manipulación de datos](../dmx/dmx-statements-data-manipulation.md)   
- [Referencia de instrucciones de Extensiones de minería de datos &#40;DMX&#41;](../dmx/data-mining-extensions-dmx-statements.md)  
+ [Extensiones de minería de datos &#40;DMX&#41; las instrucciones de definición de datos](../dmx/dmx-statements-data-definition.md)   
+ [Extensiones de minería de datos &#40;DMX&#41; instrucciones de manipulación de datos](../dmx/dmx-statements-data-manipulation.md)   
+ [Extensiones de minería de datos & #40; DMX & #41; Referencia de instrucciones](../dmx/data-mining-extensions-dmx-statements.md)  
   
   

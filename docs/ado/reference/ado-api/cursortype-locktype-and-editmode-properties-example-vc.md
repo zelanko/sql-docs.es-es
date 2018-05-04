@@ -23,12 +23,11 @@ caps.latest.revision: 11
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: 3b5308a04e71a29e6544419ddbe28d1eb8f117e2
-ms.sourcegitcommit: bb044a48a6af9b9d8edb178dc8c8bd5658b9ff68
-ms.translationtype: MT
+ms.openlocfilehash: d489e174b525412cf446e7f357d4d8ef98b38773
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/18/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="cursortype-locktype-and-editmode-properties-example-vc"></a>CursorType, LockType y ejemplo de las propiedades EditMode (VC ++)
 En este ejemplo se muestra cómo establecer el [CursorType](../../../ado/reference/ado-api/cursortype-property-ado.md) y [LockType](../../../ado/reference/ado-api/locktype-property-ado.md) propiedades antes de abrir un [conjunto de registros](../../../ado/reference/ado-api/recordset-object-ado.md). También muestra el valor de la [EditMode](../../../ado/reference/ado-api/editmode-property.md) propiedad bajo varias condiciones. La función EditModeOutput es necesaria ejecutar este procedimiento.  

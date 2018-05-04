@@ -22,12 +22,11 @@ caps.latest.revision: 14
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: febf4b165cef77e26ec79de08b14ce97e944526b
-ms.sourcegitcommit: bb044a48a6af9b9d8edb178dc8c8bd5658b9ff68
-ms.translationtype: MT
+ms.openlocfilehash: 11bceb2bdeeced8ddbe98e7ddc1164e216644264
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/18/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="more-about-recordset-persistence"></a>Más información acerca de la persistencia de conjunto de registros
 El objeto de conjunto de registros ADO admite almacenar el contenido de un **Recordset** objeto en un archivo mediante su [guardar](../../../ado/reference/ado-api/save-method.md) método. El archivo almacenado persistentemente exista en una variable local de unidad, server, o como una dirección URL en un servidor Web del sitio. Más adelante, se puede restaurar el archivo con cualquiera el [abiertos](../../../ado/reference/ado-api/open-method-ado-recordset.md) método de la **Recordset** objeto o la [Execute](../../../ado/reference/ado-api/execute-method-ado-connection.md) método de la [conexión](../../../ado/reference/ado-api/connection-object-ado.md) objeto.  

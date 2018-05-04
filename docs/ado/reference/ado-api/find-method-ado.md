@@ -23,12 +23,11 @@ caps.latest.revision: 12
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.workload: On Demand
-ms.openlocfilehash: d1e46954ec7a0983927b1d375615fe6e6cbf10ee
-ms.sourcegitcommit: bb044a48a6af9b9d8edb178dc8c8bd5658b9ff68
-ms.translationtype: MT
+ms.openlocfilehash: 32da5045e7cd588c555c6e9fed7d5d3371fded2b
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/18/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="find-method-ado"></a>Find (método) (ADO)
 Busca un [conjunto de registros](../../../ado/reference/ado-api/recordset-object-ado.md) para la fila que cumple los criterios especificados. Si lo desea, se puede especificar la dirección de la búsqueda, la fila inicial y el desplazamiento desde la fila inicial. Si se cumplen los criterios, la posición de fila actual se establece en el registro encontrado; en caso contrario, se establece la posición al final (o inicio) de la **conjunto de registros**.  
@@ -45,10 +44,10 @@ Find (Criteria, SkipRows, SearchDirection, Start)
  A **cadena** valor que contiene una instrucción que especifica el nombre de columna, el operador de comparación y el valor para usar en la búsqueda.  
   
  *SkipRows*  
- Opcional*.* A **largo** valor, cuyo valor predeterminado es cero, que especifica el desplazamiento de fila de la fila actual o *iniciar* marcador que se va a comenzar la búsqueda. De forma predeterminada, se iniciará la búsqueda en la fila actual.  
+ Opcional *.* A **largo** valor, cuyo valor predeterminado es cero, que especifica el desplazamiento de fila de la fila actual o *iniciar* marcador que se va a comenzar la búsqueda. De forma predeterminada, se iniciará la búsqueda en la fila actual.  
   
  *SearchDirection*  
- Opcional*.* A [SearchDirectionEnum](../../../ado/reference/ado-api/searchdirectionenum.md) valor que especifica si la búsqueda debe iniciar en la fila actual o la siguiente fila disponible en la dirección de la búsqueda. Detiene una búsqueda al final de la **Recordset** si el valor es **adSearchForward**. Se detiene una búsqueda en el inicio de la **Recordset** si el valor es **adSearchBackward**.  
+ Opcional *.* A [SearchDirectionEnum](../../../ado/reference/ado-api/searchdirectionenum.md) valor que especifica si la búsqueda debe iniciar en la fila actual o la siguiente fila disponible en la dirección de la búsqueda. Detiene una búsqueda al final de la **Recordset** si el valor es **adSearchForward**. Se detiene una búsqueda en el inicio de la **Recordset** si el valor es **adSearchBackward**.  
   
  *Iniciar*  
  Opcional. A **Variant** marcador que funciona como la posición inicial de la búsqueda.  

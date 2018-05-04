@@ -23,12 +23,11 @@ caps.latest.revision: 13
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: bc4f312a8c8f9db4322539a61a532ac0803c4c66
-ms.sourcegitcommit: bb044a48a6af9b9d8edb178dc8c8bd5658b9ff68
-ms.translationtype: MT
+ms.openlocfilehash: 620b1a926de9039ec3c9edc8c479d69f0b3c3eef
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/18/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="connectionstring-connectiontimeout-and-state-properties-example-vc"></a>ConnectionString, ConnectionTimeout y ejemplo de las propiedades de estado (VC ++)
 Este ejemplo muestra maneras diferentes de utilizar la [ConnectionString](../../../ado/reference/ado-api/connectionstring-property-ado.md) propiedad para abrir un [conexión](../../../ado/reference/ado-api/connection-object-ado.md) objeto. También usa el [ConnectionTimeout](../../../ado/reference/ado-api/connectiontimeout-property-ado.md) propiedad para establecer un período de tiempo de espera de conexión y el [estado](../../../ado/reference/ado-api/state-property-ado.md) propiedad que se va a comprobar el estado de las conexiones. La función GetState es necesaria ejecutar este procedimiento.  

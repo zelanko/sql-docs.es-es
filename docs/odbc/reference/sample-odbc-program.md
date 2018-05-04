@@ -11,18 +11,17 @@ ms.suite: sql
 ms.technology:
 - drivers
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 38ae6b7f-f53b-48a7-8fe5-4bbd6e0e414b
 caps.latest.revision: 3
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.workload: On Demand
-ms.openlocfilehash: 63e908021e48ca56772fa599cb8624384ba6108f
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
-ms.translationtype: MT
+ms.openlocfilehash: c20e0e483d23353eb0218f85a816a9b8de843322
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="sample-odbc-program"></a>Programa de ejemplo de ODBC
 El [ejemplo de código ODBC](http://go.microsoft.com/fwlink/?LinkId=244831) le pide un nombre de origen de datos ODBC.  A continuación, se le pedirá que escriba una consulta y el ejemplo muestra los resultados de la consulta.

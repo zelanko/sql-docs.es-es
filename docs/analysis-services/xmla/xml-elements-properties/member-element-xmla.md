@@ -29,15 +29,15 @@ caps.latest.revision: 11
 author: Minewiskan
 ms.author: owend
 manager: kfile
-ms.workload: Inactive
-ms.openlocfilehash: 82690ec66dfcb96787ea592a8d32c3826ee8776f
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
-ms.translationtype: MT
+ms.openlocfilehash: 13e83f71155ed71c29f51b14109ca055badf1721
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="member-element-xmla"></a>Elemento Member (XMLA)
-[!INCLUDE[ssas-appliesto-sqlas-aas](../../../includes/ssas-appliesto-sqlas-aas.md)]Representa un único miembro de un elemento primario [miembros](../../../analysis-services/xmla/xml-elements-properties/members-element-xmla.md) o [tupla](../../../analysis-services/xmla/xml-elements-properties/tuple-element-xmla.md) elemento.  
+[!INCLUDE[ssas-appliesto-sqlas-aas](../../../includes/ssas-appliesto-sqlas-aas.md)]
+  Representa un único miembro de un elemento primario [Members](../../../analysis-services/xmla/xml-elements-properties/members-element-xmla.md) o [Tuple](../../../analysis-services/xmla/xml-elements-properties/tuple-element-xmla.md) .  
   
 ## <a name="syntax"></a>Sintaxis  
   
@@ -68,12 +68,12 @@ ms.lasthandoff: 01/08/2018
 </Tuple>  
 ```  
   
-## <a name="element-characteristics"></a>Características del elemento  
+## <a name="element-characteristics"></a>Características de los elementos  
   
-|Característica|Description|  
+|Característica|Descripción|  
 |--------------------|-----------------|  
-|Tipo y longitud de los datos|None|  
-|Valor predeterminado|None|  
+|Tipo y longitud de los datos|Ninguno|  
+|Valor predeterminado|Ninguno|  
 |Cardinalidad|0-n: elemento opcional que puede aparecer más de una vez.|  
   
 ## <a name="element-relationships"></a>Relaciones del elemento  
@@ -85,7 +85,7 @@ ms.lasthandoff: 01/08/2018
   
 ## <a name="attributes"></a>Atributos  
   
-|Attribute|Description|  
+|Atributo|Descripción|  
 |---------------|-----------------|  
 |Jerarquía|Atributo **String** necesario (solo para elementos primarios **Tuple** ). El nombre de la jerarquía a la que pertenece el miembro representado por el elemento **Member** .|  
   
@@ -93,6 +93,6 @@ ms.lasthandoff: 01/08/2018
  El elemento **Member** contiene la información necesaria para identificar y mostrar un miembro dentro de una jerarquía determinada. La jerarquía de los elementos primarios **Members** ya está especificada por el atributo **Hierarchy** del elemento primario. La jerarquía de los elementos primarios **Tuple** se especifica en el atributo **Hierarchy** del elemento **Member** .  
   
 ## <a name="see-also"></a>Vea también  
- [Propiedades &#40; XMLA &#41;](../../../analysis-services/xmla/xml-elements-properties/xml-elements-properties.md)  
+ [Propiedades & #40; XMLA & #41;](../../../analysis-services/xmla/xml-elements-properties/xml-elements-properties.md)  
   
   

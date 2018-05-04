@@ -23,15 +23,15 @@ caps.latest.revision: 33
 author: Minewiskan
 ms.author: owend
 manager: kfile
-ms.workload: Inactive
-ms.openlocfilehash: 214fb372b021e7cee9f11bb82cccdc65575a7929
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
-ms.translationtype: MT
+ms.openlocfilehash: 19423a6d4b8ffe345309032559e733f629358594
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="mdschemaactions-rowset"></a>Conjunto de filas MDSCHEMA_ACTIONS
-[!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]Describe las acciones que pueden estar disponibles para la aplicación cliente.  
+[!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]
+  Describe las acciones que pueden estar disponibles para la aplicación cliente.  
   
 ## <a name="rowset-columns"></a>Columnas del conjunto de filas  
  El **MDSCHEMA_ACTIONS** filas contiene las columnas siguientes.  
@@ -47,7 +47,7 @@ ms.lasthandoff: 01/08/2018
 |**COORDINATE_TYPE**|**DBTYPE_I4**||Un mapa de bits que especifica cómo la **COORDINAR** interpreta la columna de restricción. El archivo Msmd.h define las constantes de valor de bit siguientes para este mapa de bits:<br /><br /> **MDACTION_COORDINATE_CUBE** (**1**)<br /><br /> **MDACTION_COORDINATE_DIMENSION** (**2**): se refiere a las jerarquías de dimensiones.<br /><br /> **MDACTION_COORDINATE_LEVEL** (**3**)<br /><br /> **MDACTION_COORDINATE_MEMBER** (**4**)<br /><br /> **MDACTION_COORDINATE_SET** (**5**)<br /><br /> **MDACTION_COORDINATE_CELL** (**6**)|  
 |**ACTION_CAPTION**|**DBTYPE_WSTR**||El nombre de acción si no se ha especificado ningún título y no se ha especificado ninguna traducción en la DDL.<br /><br /> Si se especificaron un título o traducciones, y **CaptionIsMDX** es false, una de las siguientes cadenas:<br /><br /> -La traducción del idioma correspondiente.<br /><br /> -El título especificado si se ha encontrado ninguna traducción para el idioma especificado.<br /><br /> -El nombre de la acción, si se ha encontrado ninguna traducción y el título no se ha especificado en DDL.<br /><br /> Si se especificaron un título o traducciones, y **CaptionIsMDX** es true, la cadena resultante de buscar la traducción adecuada para el idioma especificado o la traslación especificada en el título DDL y calcular el fórmula para crear la cadena.<br /><br /> Si la acción se especifica en un script de MDX, no hay ninguna traducción y el título siempre se trata como expresión MDX.|  
 |**DESCRIPTION**|**DBTYPE_WSTR**||Descripción fácil de comprender de la acción.|  
-|**CONTENIDO**|**DBTYPE_WSTR**||La expresión o contenido de la acción que se va a ejecutar.|  
+|**CONTENT**|**DBTYPE_WSTR**||La expresión o contenido de la acción que se va a ejecutar.|  
 |**APLICACIÓN**|**DBTYPE_WSTR**||Nombre de la aplicación que se utilizará para ejecutar la acción.|  
 |**INVOCACIÓN**|**DBTYPE_I4**||Información sobre cómo se debería invocar la acción:<br /><br /> **MDACTION_INVOCATION_INTERACTIVE** (**1**) indica una acción normal utilizada durante las operaciones normales. Este el valor predeterminado de esta columna.<br /><br /> **MDACTION_INVOCATION_ON_OPEN** (**2**) indica que la acción debe realizarse cuando se abre por primera vez el cubo.<br /><br /> **MDACTION_INVOCATION_BATCH** (**4**) indica que la acción se realiza como parte de una operación por lotes o [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] tarea.<br /><br /> <br /><br /> Tenga en cuenta que estos valores de enumeración se definen en el archivo Msmd.h.|  
   
@@ -82,14 +82,14 @@ ms.lasthandoff: 01/08/2018
 |Tipo de objeto COORDINATE|COORDINATE_TYPE|  
 |----------------------------|----------------------|  
 |**Cubo**|**MDACTION_COORDINATE_CUBE**|  
-|**Dimension**|**MDACTION_COORDINATE_DIMENSION**<br /><br /> **MDACTION_COORDINATE_LEVEL**<br /><br /> **MDACTION_COORDINATE_MEMBER**<br /><br /> **MDACTION_COORDINATE_SET**<br /><br /> **MDACTION_COORDINATE_CELL**|  
-|**Hierarchy**|**MDACTION_COORDINATE_DIMENSION**|  
-|**Level**|**MDACTION_COORDINATE_LEVEL**|  
+|**Dimensión**|**MDACTION_COORDINATE_DIMENSION**<br /><br /> **MDACTION_COORDINATE_LEVEL**<br /><br /> **MDACTION_COORDINATE_MEMBER**<br /><br /> **MDACTION_COORDINATE_SET**<br /><br /> **MDACTION_COORDINATE_CELL**|  
+|**Jerarquía de**|**MDACTION_COORDINATE_DIMENSION**|  
+|**Nivel**|**MDACTION_COORDINATE_LEVEL**|  
 |**Miembro**|**MDACTION_COORDINATE_MEMBER**|  
 |**Conjunto**|**MDACTION_COORDINATE_SET**|  
-|**celda**|**MDACTION_COORDINATE_CELL**|  
+|**Celda**|**MDACTION_COORDINATE_CELL**|  
   
 ## <a name="see-also"></a>Vea también  
- [OLE DB para los conjuntos de filas de esquema OLAP](../../../analysis-services/schema-rowsets/ole-db-olap/ole-db-for-olap-schema-rowsets.md)  
+ [OLE DB para OLAP Schema Rowsets](../../../analysis-services/schema-rowsets/ole-db-olap/ole-db-for-olap-schema-rowsets.md)  
   
   

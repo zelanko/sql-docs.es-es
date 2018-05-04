@@ -21,12 +21,11 @@ caps.latest.revision: 13
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: c8277c4fb811be2d0ae61ded434643aeda835a6a
-ms.sourcegitcommit: bb044a48a6af9b9d8edb178dc8c8bd5658b9ff68
-ms.translationtype: MT
+ms.openlocfilehash: 8a3bb833b2e496b14f16e293c0a015f9dc94f513
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/18/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="find-method-example-vc"></a>Buscar el ejemplo del método (VC ++)
 Este ejemplo se utiliza la [Recordset](../../../ado/reference/ado-api/recordset-object-ado.md) del objeto [buscar](../../../ado/reference/ado-api/find-method-ado.md) método para localizar y contar el número de títulos de empresa en el **Pubs** base de datos. En el ejemplo se da por supuesto que el proveedor subyacente no admite una funcionalidad similar.  

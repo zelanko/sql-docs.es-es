@@ -24,12 +24,11 @@ caps.latest.revision: 33
 author: edmacauley
 ms.author: edmaca
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: db5dad55a4dfb5cef1c1e98c0e5209cff92a724d
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
-ms.translationtype: MT
+ms.openlocfilehash: 2ad7d7746c1bd436a6473d7d25921c7a3437e75a
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="sptableprivilegesex-transact-sql"></a>sp_table_privileges_ex (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -72,13 +71,13 @@ sp_table_privileges_ex [ @table_server = ] 'table_server'
   
 |Nombre de columna|Tipo de datos|Description|  
 |-----------------|---------------|-----------------|  
-|**TABLE_CAT**|**sysname**|Nombre del calificador de tabla. Varios productos DBMS admiten nombres de tres partes para tablas (*calificador***.*** propietario***.*** nombre*). En [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], esta columna representa el nombre de la base de datos. En algunos productos, representa el nombre del servidor del entorno de base de datos de la tabla. Este campo puede ser NULL.|  
+|**TABLE_CAT**|**sysname**|Nombre del calificador de tabla. Varios productos DBMS admiten nombres de tres partes para tablas (*calificador ***.*** propietario ***.*** nombre*). En [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], esta columna representa el nombre de la base de datos. En algunos productos, representa el nombre del servidor del entorno de base de datos de la tabla. Este campo puede ser NULL.|  
 |**SEGÚN TABLE_SCHEM**|**sysname**|Nombre de propietario de la tabla. En [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], esta columna representa el nombre de usuario de base de datos que creó la tabla. Este campo siempre devuelve un valor.|  
 |**TABLE_NAME**|**sysname**|Nombre de la tabla. Este campo siempre devuelve un valor.|  
 |**OTORGANTE DE PERMISOS**|**sysname**|Nombre de usuario de base de datos que ha concedido permisos en el objeto **TABLE_NAME** a la lista **receptor**. En [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], esta columna siempre es el mismo que el **TABLE_OWNER**. Este campo siempre devuelve un valor. Además, la columna GRANTOR puede ser el propietario de la base de datos (**TABLE_OWNER**) o un usuario a los que el propietario de la base de datos haya concedido permiso mediante la cláusula WITH GRANT OPTION en la instrucción GRANT.|  
 |**RECEPTOR**|**sysname**|Nombre de usuario de base de datos que se ha concedido permisos en el objeto **TABLE_NAME** la **otorgante de permisos**. Este campo siempre devuelve un valor.|  
-|**CON PRIVILEGIOS**|**varchar (**32**)**|Uno de los permisos de tabla disponibles. Los permisos de tabla pueden ser uno de los valores siguientes u otros valores que el origen de datos admita al definirse la implementación.<br /><br /> Seleccione = **receptor** puede recuperar datos para una o varias de las columnas.<br /><br /> INSERT = **receptor** puede proporcionar datos para nuevas filas de una o varias de las columnas.<br /><br /> UPDATE = **receptor** puede modificar datos existentes para uno o más de las columnas.<br /><br /> ELIMINAR = **receptor** puede quitar filas de la tabla.<br /><br /> REFERENCIAS = **receptor** puede hacer referencia a una columna de una tabla externa en una relación de clave principal/clave externa. En [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], las relaciones entre clave principal y clave externa se definen mediante restricciones de tabla.<br /><br /> El ámbito de acción dado a la **receptor** por una tabla específica con privilegios son depende del origen de datos. Por ejemplo, el permiso de UPDATE podría permitir la **receptor** para actualizar todas las columnas de una tabla en un origen de datos y solo aquellas columnas para que la **otorgante de permisos** tiene permiso UPDATE en otro origen de datos.|  
-|**IS_GRANTABLE**|**varchar (**3**)**|Indica si la **receptor** permiten conceder permisos a otros usuarios. A esto se le suele denominar permiso "conceder por concesión". Puede ser YES, NO o NULL. Un valor desconocido, o NULL, hace referencia a un origen de datos en el que “conceder por concesión” no es aplicable.|  
+|**CON PRIVILEGIOS**|**varchar (** 32 **)**|Uno de los permisos de tabla disponibles. Los permisos de tabla pueden ser uno de los valores siguientes u otros valores que el origen de datos admita al definirse la implementación.<br /><br /> Seleccione = **receptor** puede recuperar datos para una o varias de las columnas.<br /><br /> INSERT = **receptor** puede proporcionar datos para nuevas filas de una o varias de las columnas.<br /><br /> UPDATE = **receptor** puede modificar datos existentes para uno o más de las columnas.<br /><br /> ELIMINAR = **receptor** puede quitar filas de la tabla.<br /><br /> REFERENCIAS = **receptor** puede hacer referencia a una columna de una tabla externa en una relación de clave principal/clave externa. En [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], las relaciones entre clave principal y clave externa se definen mediante restricciones de tabla.<br /><br /> El ámbito de acción dado a la **receptor** por una tabla específica con privilegios son depende del origen de datos. Por ejemplo, el permiso de UPDATE podría permitir la **receptor** para actualizar todas las columnas de una tabla en un origen de datos y solo aquellas columnas para que la **otorgante de permisos** tiene permiso UPDATE en otro origen de datos.|  
+|**IS_GRANTABLE**|**varchar (** 3 **)**|Indica si la **receptor** permiten conceder permisos a otros usuarios. A esto se le suele denominar permiso "conceder por concesión". Puede ser YES, NO o NULL. Un valor desconocido, o NULL, hace referencia a un origen de datos en el que “conceder por concesión” no es aplicable.|  
   
 ## <a name="remarks"></a>Comentarios  
  Los resultados devueltos se ordenan por **TABLE_QUALIFIER**, **TABLE_OWNER**, **TABLE_NAME**, y **privilegios**.  

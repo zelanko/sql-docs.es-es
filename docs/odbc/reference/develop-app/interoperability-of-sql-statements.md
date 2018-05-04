@@ -11,7 +11,7 @@ ms.suite: sql
 ms.technology:
 - drivers
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - SQL statements [ODBC], interoperability
 - interoperability of SQL statements [ODBC]
@@ -21,12 +21,11 @@ caps.latest.revision: 5
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: 1ba90a54159f126e49148de8a8425e74d02e148d
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
-ms.translationtype: MT
+ms.openlocfilehash: bb9f4ec6fbc2e6aecff8d78ff562f35f9a546405
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="interoperability-of-sql-statements"></a>Interoperabilidad de instrucciones SQL
 Al igual que el resto de una aplicación, las instrucciones SQL pueden ser interoperable o específicos del DBMS. Y como el resto de la aplicación, tiene la opción de forma interoperables instrucciones SQL que depende del tipo de aplicación. Las aplicaciones personalizadas están menos probables que utiliza instrucciones SQL que interoperable porque normalmente están diseñadas para aprovechar las capacidades del DBMS de uno o dos posiblemente. Aplicaciones genéricas usar instrucciones SQL interoperables porque están diseñados para trabajar con una variedad de DBMS. Y las aplicaciones verticales suelen clasificarse en algún lugar entre, exigir un cierto nivel de funcionalidad, pero en caso contrario, use interoperables instrucciones SQL.  

@@ -1,6 +1,6 @@
 ---
 title: Compatibilidad con versiones anteriores de Analysis Services de SQL Server de 2017 | Documentos de Microsoft
-ms.date: 07/11/2017
+ms.date: 04/27/2018
 ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: ''
@@ -23,13 +23,12 @@ ms.assetid: ''
 author: Minewiskan
 ms.author: owend
 manager: kfile
-ms.workload: Inactive
 monikerRange: '>= sql-analysis-services-2017 || = sqlallproducts-allversions'
-ms.openlocfilehash: c353b84213516227980763b2a3c7e68d83e78a68
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
-ms.translationtype: MT
+ms.openlocfilehash: f066956748da5390afa7ea0df1e66099838f00bd
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="analysis-services-backward-compatibility-sql-2017"></a>Compatibilidad con versiones anteriores de Analysis Services (SQL 2017)
 [!INCLUDE[ssas-appliesto-sql2017](../includes/ssas-appliesto-sql2017.md)]
@@ -48,6 +47,9 @@ Las siguientes características están en desuso en esta versión:
 |Multidimensional|Grupos de medida vinculados remotos|
 |Tabular|Modelos en el nivel de compatibilidad 1100 y 1103|
 |Tabular|Propiedades del modelo de objetos tabulares: Column.TableDetailPosition, Column.IsDefaultLabel, Column.IsDefaultImage|
+|Herramientas|SQL Server Profiler para captura de seguimiento<br /><br /> La sustitución es usar el Generador de perfiles de eventos extendidos integrado en SQL Server Management Studio.  <br /> Consulte [Supervisar Analysis Services con SQL Server Extended Events](../analysis-services/instances/monitor-analysis-services-with-sql-server-extended-events.md).|  
+|Herramientas|Server Profiler para reproducción de seguimiento <br />Sustitución. No hay ninguna sustitución.|  
+|Objetos de administración de seguimiento y API de seguimiento|Objetos de Microsoft.AnalysisServices.Trace (contiene las API para los objetos Trace y Replay de Analysis Services). La sustitución abarca varias partes:<br /><br /> -Configuración de seguimiento: Microsoft.SqlServer.Management.XEvent<br />: Hacer seguimiento de lectura: Microsoft.SqlServer.XEvent.Linq<br />- Reproducción de seguimiento: ninguna|  
 
 
 ## <a name="discontinued-features"></a>Características no incluidas
@@ -63,9 +65,7 @@ Las siguientes características están en desuso en la versión anterior y ya no
 |Multidimensional|Grupos de medida vinculados remotos|  
 |Multidimensional|Reescritura de dimensiones|  
 |Multidimensional|Dimensiones vinculadas|
-|Herramientas|SQL Server Profiler para captura de seguimiento<br /><br /> La sustitución es usar el Generador de perfiles de eventos extendidos integrado en SQL Server Management Studio.  <br /> Consulte [Supervisar Analysis Services con SQL Server Extended Events](../analysis-services/instances/monitor-analysis-services-with-sql-server-extended-events.md).|  
-|Herramientas|Server Profiler para reproducción de seguimiento <br />Sustitución. No hay ninguna sustitución.|  
-|Objetos de administración de seguimiento y API de seguimiento|Objetos de Microsoft.AnalysisServices.Trace (contiene las API para los objetos Trace y Replay de Analysis Services). La sustitución abarca varias partes:<br /><br /> -Configuración de seguimiento: Microsoft.SqlServer.Management.XEvent<br />: Hacer seguimiento de lectura: Microsoft.SqlServer.XEvent.Linq<br />- Reproducción de seguimiento: ninguna|  
+
 
 ## <a name="breaking-changes"></a>Cambios importantes
 A *cambio problemático* hace una característica, el modelo de datos, el código de aplicación o el script ya no funcione después de actualizar a la versión actual.

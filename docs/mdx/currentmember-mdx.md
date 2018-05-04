@@ -22,12 +22,11 @@ caps.latest.revision: 38
 author: Minewiskan
 ms.author: owend
 manager: erikre
-ms.workload: On Demand
-ms.openlocfilehash: 2c8ff1f7343017b3c7870f963fe2006699f88e9d
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
-ms.translationtype: MT
+ms.openlocfilehash: dc8b2cf387c9a094a0615b6e7a7ef7e2f4da381b
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="currentmember-mdx"></a>CurrentMember (MDX)
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
@@ -88,7 +87,7 @@ Hierarchy_Expression.CurrentMember
   
  `WHERE([Customer].[Customer Geography].[Country].&[Australia])`  
   
- El miembro actual cambia en una jerarquía que se utiliza en un eje en una consulta. Por lo tanto, también puede cambiar el miembro actual en otras jerarquías de la misma dimensión que no se utilizan en un eje; Este comportamiento se denomina 'Autoexist' y pueden encontrar más detalles en [conceptos clave de MDX &#40; Analysis Services &#41; ](../analysis-services/multidimensional-models/mdx/key-concepts-in-mdx-analysis-services.md). Por ejemplo, la consulta siguiente muestra cómo el miembro actual en la jerarquía Calendar Year de la dimensión Date cambia con el miembro actual en la jerarquía Calendar, cuando el último se muestra en el eje de filas:  
+ El miembro actual cambia en una jerarquía que se utiliza en un eje en una consulta. Por lo tanto, también puede cambiar el miembro actual en otras jerarquías de la misma dimensión que no se utilizan en un eje; Este comportamiento se denomina 'Autoexist' y pueden encontrar más detalles en [conceptos clave de MDX &#40;Analysis Services&#41;](../analysis-services/multidimensional-models/mdx/key-concepts-in-mdx-analysis-services.md). Por ejemplo, la consulta siguiente muestra cómo el miembro actual en la jerarquía Calendar Year de la dimensión Date cambia con el miembro actual en la jerarquía Calendar, cuando el último se muestra en el eje de filas:  
   
  `WITH MEMBER MEASURES.CURRENTYEAR AS`  
   
@@ -131,6 +130,6 @@ WHERE {[Date].[Calendar Year].[Calendar Year].&[2003]}
 ```  
   
 ## <a name="see-also"></a>Vea también  
- [Referencia de funciones MDX &#40; MDX &#41;](../mdx/mdx-function-reference-mdx.md)  
+ [Referencia de funciones MDX & #40; MDX & #41;](../mdx/mdx-function-reference-mdx.md)  
   
   

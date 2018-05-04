@@ -20,12 +20,11 @@ caps.latest.revision: 24
 author: Minewiskan
 ms.author: owend
 manager: erikre
-ms.workload: Inactive
-ms.openlocfilehash: 5b260cc6523f0e9938eaff8e98207fe7dbe739c3
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
-ms.translationtype: MT
+ms.openlocfilehash: bf114f9b706497512f10e3629e871ba64ecaaee9
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="using-string-functions"></a>Usar funciones de cadena
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
@@ -113,12 +112,12 @@ ms.lasthandoff: 01/08/2018
 >  El **StrToMember** y **StrToSet** funciones deben usarse con precaución. Pueden dar lugar a un bajo rendimiento de las consultas si se utilizan dentro de definiciones de cálculo.  
   
 ## <a name="see-also"></a>Vea también  
- [Generar &#40; MDX &#41;](../mdx/generate-mdx.md)   
- [Nombre de &#40; MDX &#41;](../mdx/name-mdx.md)   
- [UniqueName &#40; MDX &#41;](../mdx/uniquename-mdx.md)   
- [Funciones &#40; La sintaxis de MDX &#41;](../mdx/functions-mdx-syntax.md)   
- [Mediante los procedimientos almacenados &#40; MDX &#41;](../mdx/using-stored-procedures-mdx.md)   
- [StrToMember &#40; MDX &#41;](../mdx/strtomember-mdx.md)   
- [StrToSet &#40; MDX &#41;](../mdx/strtoset-mdx.md)  
+ [Generar &#40;MDX&#41;](../mdx/generate-mdx.md)   
+ [Nombre &#40;MDX&#41;](../mdx/name-mdx.md)   
+ [UniqueName &#40;MDX&#41;](../mdx/uniquename-mdx.md)   
+ [Funciones &#40;sintaxis MDX&#41;](../mdx/functions-mdx-syntax.md)   
+ [Uso de procedimientos almacenados &#40;MDX&#41;](../mdx/using-stored-procedures-mdx.md)   
+ [StrToMember &#40;MDX&#41;](../mdx/strtomember-mdx.md)   
+ [StrToSet &#40;MDX&#41;](../mdx/strtoset-mdx.md)  
   
   

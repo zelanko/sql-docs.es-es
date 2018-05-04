@@ -4,7 +4,7 @@ description: ''
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.date: 05/17/2017
+ms.date: 04/30/2018
 ms.topic: article
 ms.prod: sql
 ms.prod_service: database-engine
@@ -14,12 +14,11 @@ ms.suite: sql
 ms.custom: sql-linux
 ms.technology: database-engine
 ms.assetid: 85180155-6726-4f42-ba57-200bf1e15f4d
-ms.workload: Inactive
-ms.openlocfilehash: 4fa3cd388fc1f4d22ee781721145d0fc4c465682
-ms.sourcegitcommit: a85a46312acf8b5a59a8a900310cf088369c4150
-ms.translationtype: MT
+ms.openlocfilehash: a32854d6619cc053d9dc9cfc28a9f17cba479f34
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/26/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="configure-sles-cluster-for-sql-server-availability-group"></a>Configuración de clúster SLES para grupo de disponibilidad de SQL Server
 
@@ -189,16 +188,31 @@ Si ha configurado los nodos del clúster existente con el `YaST` módulo de clú
 
 Después de agregar todos los nodos, compruebe si necesita ajustar la directiva de quórum de ninguna de las opciones de clúster global. Esto es especialmente importante para los clústeres de dos nodos. Para obtener más información, vea la sección 4.1.2, opción no-quórum-policy. 
 
-## <a name="set-cluster-property-start-failure-is-fatal-to-false"></a>Establecer propiedades de clúster inicio error-es-grave en false
+## <a name="set-cluster-property-cluster-recheck-interval"></a>Establecer propiedad de clúster clúster-volver a comprobar-intervalo
 
-`Start-failure-is-fatal` indica si un error al iniciar un recurso en un nodo impide más intentos de inicio en ese nodo. Cuando se establece en `false`, el clúster decide si debe intentar iniciar en el mismo nodo nuevo, en función actual error recuento y migración el umbral del recurso. Por lo tanto, después de producirse la conmutación por error, a partir de la disponibilidad de reintentos de marcapasos recurso de grupo en la primera estructura principal una vez que la instancia de SQL está disponible. Marcapasos se encarga de disminuir de nivel de la réplica secundaria y vuelve a unirse automáticamente el grupo de disponibilidad. Además, si `start-failure-is-fatal` se establece en `false`, el clúster vuelve a los límites configurados failcount configurados con el umbral de migración. Asegúrese de que el valor predeterminado de umbral de migración se actualiza en consecuencia.
+`cluster-recheck-interval` indica el intervalo de sondeo en el que el clúster comprueba si hay cambios en los parámetros de recursos, las restricciones u otras opciones de clúster. Si una réplica deja de funcionar, el clúster intenta reiniciar la réplica en un intervalo que está limitado por la `failure-timeout` valor y el `cluster-recheck-interval` valor. Por ejemplo, si `failure-timeout` se establece en 60 segundos y `cluster-recheck-interval` está establecido en 120 segundos, se intentará realizar el reinicio en un intervalo que es mayor que 60 segundos, pero menos de 120 segundos. Recomendamos que establezca el tiempo de espera de error a 60 s y volver a comprobar-clúster-interval en un valor que es mayor que 60 segundos. No se recomienda establecer intervalo de volver a comprobar de clúster en un valor pequeño.
 
-Para actualizar el valor de propiedad para ejecución false:
+Para actualizar el valor de propiedad para `2 minutes` ejecutar:
+
 ```bash
-sudo crm configure property start-failure-is-fatal=false
-sudo crm configure rsc_defaults migration-threshold=5000
+crm configure property cluster-recheck-interval=2min
 ```
-Si la propiedad tiene el valor predeterminado de `true`, si el primer intento de iniciar el recurso se produce un error, la intervención del usuario es necesario después de una conmutación por error automática para limpiar el recuento de errores de recursos y restablecer la configuración mediante: `sudo crm resource cleanup <resourceName>` comando.
+
+> [!IMPORTANT] 
+> Si ya tiene un recurso de grupo de disponibilidad administrado por un clúster marcapasos, tenga en cuenta que todas las distribuciones que utilizan la última 1.1.18-11.el7 disponible del paquete marcapasos introducen un cambio de comportamiento para el clúster inicio error-es-grave valor cuando su el valor es false. Este cambio afecta al flujo de trabajo de conmutación por error. Si una réplica principal experimenta una interrupción inesperada, se espera el clúster de conmutación por error a una de las réplicas secundarias disponibles. En su lugar, los usuarios observarán que el clúster mantiene al intentar iniciar la réplica principal. Si ese principal nunca se pone en línea (debido a una interrupción permanente), el clúster nunca conmuta por error a otra réplica secundaria disponible. Debido a este cambio, ya no es válida la configuración recomendada anteriormente para establecer inicio error-es-grave y debe puede revertir a su valor predeterminado de la configuración `true`. Además, el recurso de AG debe actualizarse para incluir la `failover-timeout` propiedad. 
+>
+>Para actualizar el valor de propiedad para `true` ejecutar:
+>
+>```bash
+>crm configure property start-failure-is-fatal=true
+>```
+>
+>Actualizar la propiedad de recurso existente AG `failure-timeout` a `60s` ejecutar (reemplace `ag1` con el nombre de su recurso de grupo de disponibilidad): 
+>
+>```bash
+>crm configure edit ag1
+># In the text editor, add `meta failure-timeout=60s` after any `param`s and before any `op`s
+>```
 
 Para obtener más información sobre propiedades de clúster marcapasos, consulte [configurar recursos de clúster](https://www.suse.com/documentation/sle_ha/book_sleha/data/sec_ha_config_crm_resources.html).
 
@@ -239,22 +253,23 @@ Ejecute el comando en uno de los nodos del clúster:
 1. En el símbolo del sistema de crm, ejecute el comando siguiente para configurar las propiedades del recurso.
 
    ```bash
-primitive ag_cluster \
-   ocf:mssql:ag \
-   params ag_name="ag1" \
-   op start timeout=60s \
-   op stop timeout=60s \
-   op promote timeout=60s \
-   op demote timeout=10s \
-   op monitor timeout=60s interval=10s \
-   op monitor timeout=60s interval=11s role="Master" \
-   op monitor timeout=60s interval=12s role="Slave" \
-   op notify timeout=60s
-ms ms-ag_cluster ag_cluster \
-   meta master-max="1" master-node-max="1" clone-max="3" \
-  clone-node-max="1" notify="true" \
-commit
-   ```
+   primitive ag_cluster \
+      ocf:mssql:ag \
+      params ag_name="ag1" \
+      meta failure-timeout=60s \
+      op start timeout=60s \
+      op stop timeout=60s \
+      op promote timeout=60s \
+      op demote timeout=10s \
+      op monitor timeout=60s interval=10s \
+      op monitor timeout=60s interval=11s role="Master" \
+      op monitor timeout=60s interval=12s role="Slave" \
+      op notify timeout=60s
+   ms ms-ag_cluster ag_cluster \
+      meta master-max="1" master-node-max="1" clone-max="3" \
+     clone-node-max="1" notify="true" \
+   commit
+      ```
 
 [!INCLUDE [required-synchronized-secondaries-default](../includes/ss-linux-cluster-required-synchronized-secondaries-default.md)]
 

@@ -1,31 +1,23 @@
 ---
 title: Agregar MSOLAP.5 como proveedor de datos de confianza en Excel Services | Documentos de Microsoft
-ms.custom: 
-ms.date: 03/01/2017
-ms.prod: analysis-services
-ms.prod_service: analysis-services
-ms.service: 
-ms.component: data-mining
-ms.reviewer: 
-ms.suite: pro-bi
-ms.technology: 
-ms.tgt_pltfrm: 
+ms.date: 05/02/2018
+ms.prod: sql
+ms.technology: analysis-services
+ms.component: ppvt-sharepoint
 ms.topic: article
-ms.assetid: c1f40fa4-de6d-41ee-8124-14b4d65988f5
-caps.latest.revision: 
-author: Minewiskan
 ms.author: owend
+ms.reviewer: owend
+author: minewiskan
 manager: kfile
-ms.workload: Inactive
-ms.openlocfilehash: bbf52055cb77be6a740fc5186c69d55c352d5cc7
-ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
+ms.openlocfilehash: 55727f3452d2bf406ab78fa7982a0c65e48f6052
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/15/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="add-msolap5-as-a-trusted-data-provider-in-excel-services"></a>Agregar MSOLAP.5 como proveedor de datos de confianza en Excel Services
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
-MSOLAP.5 hace referencia al proveedor OLE DB de Analysis Services para SQL Server 2012. Excel Services debe confiar en este proveedor para que pueda realizar la solicitud de conexión que tiene como resultado la disponibilidad de los datos de [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] en un servidor.  
+  MSOLAP.5 hace referencia al proveedor OLE DB de Analysis Services para SQL Server 2012. Excel Services debe confiar en este proveedor para que pueda realizar la solicitud de conexión que tiene como resultado la disponibilidad de los datos de [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] en un servidor.  
   
  Si configuró [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] para SharePoint mediante la herramienta de configuración de [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] , MSOLAP.5 ya puede ser proveedor de confianza porque la herramienta incluye una acción que cumple este requisito. Sin embargo, si usa PowerShell, Administración central, o si se excluyó la acción de proveedor de confianza en la herramienta de configuración, es posible que no se encuentre el proveedor. En ese caso, debe agregarlo como parte de la configuración de la granja de servidores para el acceso a datos de [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] .  
   

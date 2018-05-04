@@ -24,12 +24,11 @@ caps.latest.revision: 34
 author: edmacauley
 ms.author: edmaca
 manager: craigg
-ms.workload: On Demand
-ms.openlocfilehash: fb9ddbb55213fa83a746d73a26e88c9c010f9ba6
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
-ms.translationtype: MT
+ms.openlocfilehash: 3efbb8829890dda1895237dde5bb65b5a4b3ab40
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="spstoredprocedures-transact-sql"></a>sp_stored_procedures (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -64,7 +63,7 @@ sp_stored_procedures [ [ @sp_name = ] 'name' ]
 -   El esquema **dbo** de la base de datos actual.  
   
  [  **@qualifier =** ] **'***calificador***'**  
- Es el nombre del calificador del procedimiento. *calificador de* es **sysname**, su valor predeterminado es null. Varios productos DBMS admiten nombres de tres partes para tablas en el formulario (*calificador***.*** esquema***.*** nombre*. En [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], *calificador* representa el nombre de la base de datos. En algunos productos, representa el nombre del servidor del entorno de base de datos de la tabla.  
+ Es el nombre del calificador del procedimiento. *calificador de* es **sysname**, su valor predeterminado es null. Varios productos DBMS admiten nombres de tres partes para tablas en el formulario (*calificador ***.*** esquema ***.*** nombre*. En [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], *calificador* representa el nombre de la base de datos. En algunos productos, representa el nombre del servidor del entorno de base de datos de la tabla.  
   
  [  **@fUsePattern =** ] **'***fUsePattern***'**  
  Determina si los caracteres de subrayado (_), porcentaje (%) y corchete ([ ]) se interpretan como caracteres comodín. *fUsePattern* es **bits**, su valor predeterminado es 1.  

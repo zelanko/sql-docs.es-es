@@ -25,12 +25,11 @@ caps.latest.revision: 35
 author: Minewiskan
 ms.author: owend
 manager: erikre
-ms.workload: Inactive
-ms.openlocfilehash: c5726b7550b0c7a9b1dab63344631502b2fa06b7
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
-ms.translationtype: MT
+ms.openlocfilehash: 73201cc7d431cec2626b5cfb127da92445eede99
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="identifiers-dmx"></a>Identificadores (DMX)
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
@@ -45,7 +44,7 @@ ms.lasthandoff: 01/08/2018
   
  El identificador de un objeto se crea cuando se define el objeto. Así puede utilizar el identificador para hacer referencia al objeto. Los identificadores pueden tener 100 caracteres como máximo.  
   
-##  <a name="RegularIdentifiers"></a>Identificadores normales  
+##  <a name="RegularIdentifiers"></a> Identificadores normales  
  Los identificadores normales de DMX siguen las reglas de [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] respecto al formato de identificadores. Los identificadores normales de DMX no requieren delimitadores. Aquí te mostramos un ejemplo de una instrucción DMX que utiliza un identificador normal no delimitado:  
   
 ```  
@@ -69,13 +68,13 @@ SELECT * FROM Clustering.CONTENT;
   
     -   Un carácter de subrayado (_).  
   
-3.  El identificador no debe ser una palabra reservada de DMX. En las palabras reservadas de DMX, no se distinguen mayúsculas de minúsculas. Para obtener más información, consulte [palabras clave reservadas &#40; DMX &#41;](../dmx/reserved-keywords-dmx.md).  
+3.  El identificador no debe ser una palabra reservada de DMX. En las palabras reservadas de DMX, no se distinguen mayúsculas de minúsculas. Para obtener más información, consulte [palabras clave reservadas &#40;DMX&#41;](../dmx/reserved-keywords-dmx.md).  
   
 4.  El identificador no puede contener espacios o caracteres especiales incrustados.  
   
  Deberá escribir entre corchetes los identificadores que no sigan estas reglas cuando los emplee en instrucciones DMX.  
   
-##  <a name="DelimitedIdentifiers"></a>Identificadores delimitados  
+##  <a name="DelimitedIdentifiers"></a> Identificadores delimitados  
  Los identificadores delimitados se escriben entre corchetes ([ ]).  A continuación, figura un ejemplo de una instrucción DMX que utiliza un identificador delimitado que sigue las reglas.  
   
 ```  
@@ -113,13 +112,13 @@ SELECT * FROM [Targeted Mailing].CONTENT;
  Cuando se utilizan nombres de objetos completos, podría ser necesario delimitar varios de los identificadores que componen el nombre de objeto. Deberá delimitar cada uno de ellos por separado.  
   
 ## <a name="see-also"></a>Vea también  
- [Extensiones de minería de datos &#40; DMX &#41; Referencia](../dmx/data-mining-extensions-dmx-reference.md)   
- [Extensiones de minería de datos &#40; DMX &#41; Elementos de sintaxis](../dmx/data-mining-extensions-dmx-syntax-elements.md)   
- [Extensiones de minería de datos &#40; DMX &#41; Referencia de funciones](../dmx/data-mining-extensions-dmx-function-reference.md)   
- [Extensiones de minería de datos &#40; DMX &#41; Referencia de operadores](../dmx/data-mining-extensions-dmx-operator-reference.md)   
- [Extensiones de minería de datos &#40; DMX &#41; Referencia de instrucciones](../dmx/data-mining-extensions-dmx-statements.md)   
- [Extensiones de minería de datos &#40; DMX &#41; Convenciones de sintaxis](../dmx/data-mining-extensions-dmx-syntax-conventions.md)   
- [Funciones de predicción generales &#40; DMX &#41;](../dmx/general-prediction-functions-dmx.md)   
+ [Extensiones de minería de datos &#40;DMX&#41; Referencia](../dmx/data-mining-extensions-dmx-reference.md)   
+ [Extensiones de minería de datos &#40;DMX&#41; Elementos de sintaxis](../dmx/data-mining-extensions-dmx-syntax-elements.md)   
+ [Extensiones de minería de datos &#40;DMX&#41; Referencia de funciones](../dmx/data-mining-extensions-dmx-function-reference.md)   
+ [Extensiones de minería de datos &#40;DMX&#41; Referencia de operadores](../dmx/data-mining-extensions-dmx-operator-reference.md)   
+ [Extensiones de minería de datos &#40;DMX&#41; Referencia de instrucciones](../dmx/data-mining-extensions-dmx-statements.md)   
+ [Extensiones de minería de datos &#40;DMX&#41; Convenciones de sintaxis](../dmx/data-mining-extensions-dmx-syntax-conventions.md)   
+ [Funciones de predicción generales &#40;DMX&#41;](../dmx/general-prediction-functions-dmx.md)   
  [Estructura y el uso de consultas de predicción DMX](../dmx/structure-and-usage-of-dmx-prediction-queries.md)   
  [Descripción de la instrucción Select de DMX](../dmx/understanding-the-dmx-select-statement.md)  
   

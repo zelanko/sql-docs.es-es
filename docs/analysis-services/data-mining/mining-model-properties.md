@@ -1,16 +1,16 @@
 ---
-title: "Propiedades del modelo de minería de datos | Documentos de Microsoft"
-ms.custom: 
+title: Propiedades del modelo de minería de datos | Documentos de Microsoft
+ms.custom: ''
 ms.date: 03/13/2017
 ms.prod: analysis-services
 ms.prod_service: analysis-services
-ms.service: 
+ms.service: ''
 ms.component: data-mining
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: pro-bi
-ms.technology: 
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.technology: ''
+ms.tgt_pltfrm: ''
+ms.topic: conceptual
 helpviewer_keywords:
 - mining models [Analysis Services], properties
 - data mining [Analysis Services], properties
@@ -18,20 +18,19 @@ helpviewer_keywords:
 - Data Mining Designer
 - properties [data mining]
 ms.assetid: c5194619-8b31-42be-a95f-585711462945
-caps.latest.revision: 
+caps.latest.revision: 32
 author: Minewiskan
 ms.author: owend
 manager: kfile
-ms.workload: Inactive
-ms.openlocfilehash: fcc84bc6effb3e4a831ce58b81fcbe9e7eda3437
-ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
-ms.translationtype: MT
+ms.openlocfilehash: b29794e3c41f218f1bd117fd68ad5a978066b150
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/15/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="mining-model-properties"></a>Propiedades del modelo de minería de datos
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
-Los modelos de minería de datos tienen las siguientes clases de propiedades:  
+  Los modelos de minería de datos tienen las siguientes clases de propiedades:  
   
 -   Las propiedades que se heredan de la estructura de minería de datos que define el tipo de datos y el tipo de contenido de los datos que usa el modelo;  
   
@@ -67,7 +66,7 @@ Los modelos de minería de datos tienen las siguientes clases de propiedades:
   
 ## <a name="see-also"></a>Vea también  
  [Columnas del modelo de minería de datos](../../analysis-services/data-mining/mining-model-columns.md)   
- [Estructuras de minería de datos &#40; Analysis Services: minería de datos &#41;](../../analysis-services/data-mining/mining-structures-analysis-services-data-mining.md)   
+ [Estructuras de minería de datos & #40; Analysis Services: minería de datos & #41;](../../analysis-services/data-mining/mining-structures-analysis-services-data-mining.md)   
  [Tareas y tareas de modelo de minería de datos](../../analysis-services/data-mining/mining-model-tasks-and-how-tos.md)   
  [Cambiar las propiedades de un modelo de minería de datos](../../analysis-services/data-mining/change-the-properties-of-a-mining-model.md)   
  [Herramientas de minería de datos](../../analysis-services/data-mining/data-mining-tools.md)   

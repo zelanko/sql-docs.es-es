@@ -25,13 +25,12 @@ caps.latest.revision: 28
 author: edmacauley
 ms.author: edmaca
 manager: craigg
-ms.workload: Inactive
 monikerRange: = azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: bbfeb2ec7f2517f34d0d0c204aeab7c33e8209f7
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
-ms.translationtype: MT
+ms.openlocfilehash: 44b2ec56a6d5ac8bddd56dd0f86bf887ae21e87b
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="domainconstraints-transact-sql"></a>DOMAIN_CONSTRAINTS (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -42,14 +41,14 @@ ms.lasthandoff: 04/16/2018
   
 |Nombre de columna|Tipo de datos|Description|  
 |-----------------|---------------|-----------------|  
-|**CONSTRAINT_CATALOG**|**nvarchar (**128**)**|Base de datos en la que existe la regla.|  
-|**CONSTRAINT_SCHEMA**|**nvarchar (**128**)**|Nombre del esquema que contiene la restricción.<br /><br /> **\*\* Importante \* \***  no utilice las vistas INFORMATION_SCHEMA para determinar el esquema de un objeto. La única manera confiable de localizar el esquema de un objeto consiste en consultar la vista de catálogo sys.objects.|  
+|**CONSTRAINT_CATALOG**|**nvarchar (** 128 **)**|Base de datos en la que existe la regla.|  
+|**CONSTRAINT_SCHEMA**|**nvarchar (** 128 **)**|Nombre del esquema que contiene la restricción.<br /><br /> **\*\* Importante \* \***  no utilice las vistas INFORMATION_SCHEMA para determinar el esquema de un objeto. La única manera confiable de localizar el esquema de un objeto consiste en consultar la vista de catálogo sys.objects.|  
 |**CONSTRAINT_NAME**|**sysname**|Nombre de la regla.|  
-|**DOMAIN_CATALOG**|**nvarchar (**128**)**|Base de datos donde existe el tipo de datos de alias.|  
-|**DOMAIN_SCHEMA**|**nvarchar (**128**)**|Nombre del esquema que contiene el tipo de datos de alias.<br /><br /> **\*\* Importante \* \***  no utilice las vistas INFORMATION_SCHEMA para determinar el esquema de un tipo de datos. La única manera confiable de localizar el esquema de un tipo consiste en utilizar la función TYPEPROPERTY.|  
+|**DOMAIN_CATALOG**|**nvarchar (** 128 **)**|Base de datos donde existe el tipo de datos de alias.|  
+|**DOMAIN_SCHEMA**|**nvarchar (** 128 **)**|Nombre del esquema que contiene el tipo de datos de alias.<br /><br /> **\*\* Importante \* \***  no utilice las vistas INFORMATION_SCHEMA para determinar el esquema de un tipo de datos. La única manera confiable de localizar el esquema de un tipo consiste en utilizar la función TYPEPROPERTY.|  
 |**NOMBRE_DOMINIO**|**sysname**|Tipo de datos de alias.|  
-|**IS_DEFERRABLE**|**varchar (**2**)**|Especifica si la comprobación de la restricción se puede aplazar. Siempre devuelve NO.|  
-|**INITIALLY_DEFERRED**|**varchar (**2**)**|Especifica si la comprobación de la restricción se aplaza inicialmente. Siempre devuelve NO.|  
+|**IS_DEFERRABLE**|**varchar (** 2 **)**|Especifica si la comprobación de la restricción se puede aplazar. Siempre devuelve NO.|  
+|**INITIALLY_DEFERRED**|**varchar (** 2 **)**|Especifica si la comprobación de la restricción se aplaza inicialmente. Siempre devuelve NO.|  
   
 ## <a name="see-also"></a>Vea también  
  [Vistas del sistema &#40;Transact-SQL&#41;](http://msdn.microsoft.com/library/35a6161d-7f43-4e00-bcd3-3091f2015e90)   

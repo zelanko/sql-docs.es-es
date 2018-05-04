@@ -11,7 +11,7 @@ ms.suite: sql
 ms.technology:
 - drivers
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - compatibility [ODBC], SQLSTATE
 - backward compatibility [ODBC], SQLSTATE
@@ -21,12 +21,11 @@ caps.latest.revision: 6
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.workload: On Demand
-ms.openlocfilehash: 402d5b6c01142334ed38a73b96da9f0eb635f1c3
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
-ms.translationtype: MT
+ms.openlocfilehash: 2e3f1dc1e8f0e8cf67ac97c33a7ab6b7137cdd7e
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="sqlstate-mappings"></a>Asignaciones SQLSTATE
 En este tema se trata los valores de SQLSTATE para ODBC 2. *x* y ODBC 3. *x*. Para obtener más información sobre ODBC 3. *x* valores de SQLSTATE, consulte [Apéndice A: códigos de Error de ODBC](../../../odbc/reference/appendixes/appendix-a-odbc-error-codes.md).  
@@ -35,7 +34,7 @@ En este tema se trata los valores de SQLSTATE para ODBC 2. *x* y ODBC 3. *x*. Pa
   
  Cuando un ODBC 2. *x* aplicación se actualiza a una aplicación ODBC 3. *x* aplicación, la aplicación tiene que cambiar para esperar que ODBC 3. *x* SQLSTATEs en lugar de ODBC 2. *x* SQLSTATEs. En la tabla siguiente se enumera ODBC 3. *x* SQLSTATE que cada ODBC 2. *x* SQLSTATE se asigna a.  
   
- Cuando se establece el atributo de entorno SQL_ATTR_ODBC_VERSION en SQL_OV_ODBC2, el controlador envía ODBC 2. *x* SQLSTATEs en lugar de ODBC 3. *x* SQLSTATEs cuando **SQLGetDiagField** o **SQLGetDiagRec** se llama. Una asignación determinada se puede determinar mediante la anotación de la API ODBC 2*.x* SQLSTATE en la columna 1 de la siguiente tabla que corresponde a ODBC 3. *x* SQLSTATE en la columna 2.  
+ Cuando se establece el atributo de entorno SQL_ATTR_ODBC_VERSION en SQL_OV_ODBC2, el controlador envía ODBC 2. *x* SQLSTATEs en lugar de ODBC 3. *x* SQLSTATEs cuando **SQLGetDiagField** o **SQLGetDiagRec** se llama. Una asignación determinada se puede determinar mediante la anotación de la API ODBC 2 *.x* SQLSTATE en la columna 1 de la siguiente tabla que corresponde a ODBC 3. *x* SQLSTATE en la columna 2.  
   
 |ODBC 2. *x* SQLSTATE|ODBC 3. *x* SQLSTATE|Comentarios|  
 |-------------------------|-------------------------|--------------|  

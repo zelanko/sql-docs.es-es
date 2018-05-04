@@ -22,12 +22,11 @@ caps.latest.revision: 40
 author: Minewiskan
 ms.author: owend
 manager: erikre
-ms.workload: Inactive
-ms.openlocfilehash: 448507936bab886a8d081ee487ab323a3a4a2ef4
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
-ms.translationtype: MT
+ms.openlocfilehash: 6bd1841fa5f4f64e05a6ba4e82464c83d89596f5
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="predict-dmx"></a>Predict (DMX)
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
@@ -48,7 +47,7 @@ Predict(<table column reference>, [option1], [option2], [option n], [INCLUDE_NOD
 ## <a name="return-type"></a>Tipo devuelto  
  \<referencia de columna escalar >  
   
- o Administrador de configuración de  
+ o bien  
   
  \<referencia de columna de la tabla >  
   
@@ -65,7 +64,7 @@ Predict(<table column reference>, [option1], [option2], [option n], [INCLUDE_NOD
   
  El parámetro INCLUDE_NODE_ID devuelve la columna $NODEID en el resultado. NODE_ID es el nodo de contenido en el que se ejecuta la predicción para un caso concreto. Este parámetro es opcional cuando se usa Predict en columnas de la tabla.  
   
- El  *n*  parámetro se aplica a columnas de la tabla. Define el número de filas que se devuelve en función del tipo de predicción. Si la columna subyacente es secuencia, llama a la **PredictSequence** función. Si la columna subyacente es una serie temporal, llama a la **PredictTimeSeries** función. Para el caso de los tipos de predicción, llama a la **PredictAssociation** (función).  
+ El *n* parámetro se aplica a columnas de la tabla. Define el número de filas que se devuelve en función del tipo de predicción. Si la columna subyacente es secuencia, llama a la **PredictSequence** función. Si la columna subyacente es una serie temporal, llama a la **PredictTimeSeries** función. Para el caso de los tipos de predicción, llama a la **PredictAssociation** (función).  
   
  El **Predict** función admite el polimorfismo.  
   
@@ -101,8 +100,8 @@ FROM     [Association]
 |Mountain Tire Tube|1992|0.133879965051415|0.125304947722259|  
   
 ## <a name="see-also"></a>Vea también  
- [Extensiones de minería de datos &#40; DMX &#41; Referencia de funciones](../dmx/data-mining-extensions-dmx-function-reference.md)   
- [Funciones &#40; DMX &#41;](../dmx/functions-dmx.md)   
- [Funciones de predicción generales &#40; DMX &#41;](../dmx/general-prediction-functions-dmx.md)  
+ [Extensiones de minería de datos &#40;DMX&#41; Referencia de funciones](../dmx/data-mining-extensions-dmx-function-reference.md)   
+ [Funciones &#40;DMX&#41;](../dmx/functions-dmx.md)   
+ [Funciones de predicción generales &#40;DMX&#41;](../dmx/general-prediction-functions-dmx.md)  
   
   

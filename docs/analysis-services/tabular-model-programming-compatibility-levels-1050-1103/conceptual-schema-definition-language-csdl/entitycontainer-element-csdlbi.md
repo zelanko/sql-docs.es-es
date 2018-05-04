@@ -1,33 +1,32 @@
 ---
 title: EntityContainer, elemento (CSDLBI) | Documentos de Microsoft
-ms.custom: 
+ms.custom: ''
 ms.date: 03/16/2017
 ms.prod: analysis-services
 ms.prod_service: analysis-services
-ms.service: 
-ms.component: 
-ms.reviewer: 
+ms.service: ''
+ms.component: ''
+ms.reviewer: ''
 ms.suite: pro-bi
-ms.technology: 
-ms.tgt_pltfrm: 
+ms.technology: ''
+ms.tgt_pltfrm: ''
 ms.topic: reference
 applies_to:
 - SQL Server 2016 Preview
 ms.assetid: e328558e-16b0-4d4a-a79a-fdd3c9493595
-caps.latest.revision: 
+caps.latest.revision: 17
 author: Minewiskan
 ms.author: owend
 manager: kfile
-ms.workload: Inactive
-ms.openlocfilehash: 30b24a87a5d1915b16c18557b93abfabfe99ab12
-ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
-ms.translationtype: MT
+ms.openlocfilehash: 89d12841c0ef56f7818b9b53b292fb672ba6d51b
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/15/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="entitycontainer-element-csdlbi"></a>EntityContainer, elemento (CSDLBI)
 [!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]
-El elemento EntityContainer es un tipo complejo, basado en el tipo EntityContainer de CSDL, que define una colección de entidades en un único modelo de datos. En una aplicación de Business Intelligence, un EntityContainer representa un modelo de datos que puede contener varias tablas con columnas vinculadas mediante relaciones, así como cálculos, medidas y KPI. Conceptualmente, es similar a una base de datos o un origen de datos.  
+  El elemento EntityContainer es un tipo complejo, basado en el tipo EntityContainer de CSDL, que define una colección de entidades en un único modelo de datos. En una aplicación de Business Intelligence, un EntityContainer representa un modelo de datos que puede contener varias tablas con columnas vinculadas mediante relaciones, así como cálculos, medidas y KPI. Conceptualmente, es similar a una base de datos o un origen de datos.  
   
  El elemento EntityContainer debe especificar cada uno de los tipos de entidad que se incluyen en el modelo de datos, incluidas las tablas y las relaciones. La información sobre estas entidades del modelo se especifica enumerando las entidades secundarias del tipo, elemento Entity. Para más información, vea [EntityType, elemento &#40;CSDLBI&#41;](../../../analysis-services/tabular-model-programming-compatibility-levels-1050-1103/conceptual-schema-definition-language-csdl/entitytype-element-csdlbi.md).  
   
@@ -43,8 +42,8 @@ El elemento EntityContainer es un tipo complejo, basado en el tipo EntityContain
 |Culture|Sí|Cadena que contiene el LCID de la solicitud.|  
 |CompareOptions|Sí|Opciones de comparación de cadenas y de ordenación para el modelo específicas del idioma.|  
 |DirectQueryMode|No|Enumeración que indica el modo de consulta cuando el modelo utiliza el modo DirectQuery.|  
-|Elemento EntitySet|Sí|[EntitySet, elemento &#40; CSDLBI &#41;](../../../analysis-services/tabular-model-programming-compatibility-levels-1050-1103/conceptual-schema-definition-language-csdl/entityset-element-csdlbi.md)|  
-|Elemento AssociationSet|No|[AssociationSet, elemento &#40; CSDLBI &#41;](../../../analysis-services/tabular-model-programming-compatibility-levels-1050-1103/conceptual-schema-definition-language-csdl/associationset-element-csdlbi.md)|  
+|Elemento EntitySet|Sí|[EntitySet, elemento & #40; CSDLBI & #41;](../../../analysis-services/tabular-model-programming-compatibility-levels-1050-1103/conceptual-schema-definition-language-csdl/entityset-element-csdlbi.md)|  
+|Elemento AssociationSet|No|[AssociationSet, elemento & #40; CSDLBI & #41;](../../../analysis-services/tabular-model-programming-compatibility-levels-1050-1103/conceptual-schema-definition-language-csdl/associationset-element-csdlbi.md)|  
   
 ## <a name="compareoptions-element"></a>Elemento CompareOptions  
  El atributo CompareOptions define las propiedades de intercalación que se aplican al modelo de datos. Las propiedades definidas por este atributo se derivan de la configuración del criterio de ordenación, de la distinción de kana y de la distinción entre mayúsculas y minúsculas establecida en la base de datos de Analysis Services en tiempo de diseño del modelo. En la tabla siguiente se describen los valores que se incluyen como parte del atributo CompareOptions.  
@@ -119,6 +118,6 @@ El elemento EntityContainer es un tipo complejo, basado en el tipo EntityContain
 ```  
   
 ## <a name="see-also"></a>Vea también  
- [EntitySet, elemento &#40; CSDLBI &#41;](../../../analysis-services/tabular-model-programming-compatibility-levels-1050-1103/conceptual-schema-definition-language-csdl/entityset-element-csdlbi.md)  
+ [EntitySet, elemento & #40; CSDLBI & #41;](../../../analysis-services/tabular-model-programming-compatibility-levels-1050-1103/conceptual-schema-definition-language-csdl/entityset-element-csdlbi.md)  
   
   

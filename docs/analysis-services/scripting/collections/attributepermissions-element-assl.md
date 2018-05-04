@@ -27,15 +27,15 @@ caps.latest.revision: 37
 author: Minewiskan
 ms.author: owend
 manager: kfile
-ms.workload: Inactive
-ms.openlocfilehash: e64e934d1664ccbdc08755db1eb4721d863c8e0c
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
-ms.translationtype: MT
+ms.openlocfilehash: d34c0f7e3f3f4a5207bc59872e5f4b7cb6406300
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="attributepermissions-element-assl"></a>Elemento AttributePermissions (ASSL)
-[!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]Contiene la colección de permisos de atributo para las personas [rol](../../../analysis-services/scripting/objects/role-element-assl.md) elemento en una dimensión concreta de un [cubo](../../../analysis-services/scripting/objects/cube-element-assl.md) elemento.  
+[!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]
+  Contiene la colección de permisos de atributo para las personas [rol](../../../analysis-services/scripting/objects/role-element-assl.md) elemento en una dimensión concreta de un [cubo](../../../analysis-services/scripting/objects/cube-element-assl.md) elemento.  
   
 ## <a name="syntax"></a>Sintaxis  
   
@@ -48,13 +48,13 @@ ms.lasthandoff: 01/08/2018
 </CubeDimensionPermission>  
 ```  
   
-## <a name="element-characteristics"></a>Características del elemento  
+## <a name="element-characteristics"></a>Características de los elementos  
   
-|Característica|Description|  
+|Característica|Descripción|  
 |--------------------|-----------------|  
-|Tipo y longitud de los datos|None|  
-|Valor predeterminado|None|  
-|Cardinalidad|0-1: Elemento opcional que puede aparecer una y solo una vez.|  
+|Tipo y longitud de los datos|Ninguno|  
+|Valor predeterminado|Ninguno|  
+|Cardinalidad|0-1: Elemento opcional que puede aparecer solo una vez.|  
   
 ## <a name="element-relationships"></a>Relaciones del elemento  
   
@@ -63,13 +63,13 @@ ms.lasthandoff: 01/08/2018
 |Elementos primarios|[CubeDimensionPermission](../../../analysis-services/scripting/data-type/cubedimensionpermission-data-type-assl.md), [DimensionPermission](../../../analysis-services/scripting/objects/dimensionpermission-element-assl.md)|  
 |Elementos secundarios|[Attributepermissions](../../../analysis-services/scripting/objects/attributepermission-element-assl.md)|  
   
-## <a name="remarks"></a>Notas  
+## <a name="remarks"></a>Comentarios  
  Para **DimensionPermission**, esta colección puede contener solo un elemento **AttributePermission** por atributo.  
   
  El elemento correspondiente en el modelo de objetos de Analysis Management Objects (AMO) es <xref:Microsoft.AnalysisServices.AttributePermissionCollection>.  
   
-## <a name="see-also"></a>Ver también  
- [Tipo de datos Permission &#40; ASSL &#41;](../../../analysis-services/scripting/data-type/permission-data-type-assl.md)   
- [Colecciones de &#40; ASSL &#41;](../../../analysis-services/scripting/collections/collections-assl.md)  
+## <a name="see-also"></a>Vea también  
+ [Tipo de datos Permission & #40; ASSL & #41;](../../../analysis-services/scripting/data-type/permission-data-type-assl.md)   
+ [Colecciones de & #40; ASSL & #41;](../../../analysis-services/scripting/collections/collections-assl.md)  
   
   

@@ -1,34 +1,33 @@
 ---
-title: "Tareas y procedimientos modelos de minería de datos | Documentos de Microsoft"
-ms.custom: 
+title: Tareas y procedimientos modelos de minería de datos | Documentos de Microsoft
+ms.custom: ''
 ms.date: 03/20/2017
 ms.prod: analysis-services
 ms.prod_service: analysis-services
-ms.service: 
+ms.service: ''
 ms.component: data-mining
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: pro-bi
-ms.technology: 
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.technology: ''
+ms.tgt_pltfrm: ''
+ms.topic: conceptual
 helpviewer_keywords:
 - data mining [Analysis Services], models
 - mining models [Analysis Services], how-to topics
 ms.assetid: 7c2073e5-b40f-4bf8-aa51-021adb08e072
-caps.latest.revision: 
+caps.latest.revision: 34
 author: Minewiskan
 ms.author: owend
 manager: kfile
-ms.workload: Inactive
-ms.openlocfilehash: 8c1eef41d84a8bdbd758c02f4830467b14cd9ebb
-ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
-ms.translationtype: MT
+ms.openlocfilehash: 61a15e06649aa3d90e808968443a931ca52fb203
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/15/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="mining-model-tasks-and-how-tos"></a>Tareas y procedimientos de los modelos de minería de datos
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
-Utilice la pestaña **Modelos de minería de datos** del Diseñador de minería de datos de [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] para administrar y procesar los modelos en una estructura de minería de datos.  
+  Utilice la pestaña **Modelos de minería de datos** del Diseñador de minería de datos de [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] para administrar y procesar los modelos en una estructura de minería de datos.  
   
 ## <a name="in-this-section"></a>En esta sección  
   
@@ -42,7 +41,7 @@ Utilice la pestaña **Modelos de minería de datos** del Diseñador de minería 
   
 -   [Cambiar la discretización de una columna en un modelo de minería de datos](../../analysis-services/data-mining/change-the-discretization-of-a-column-in-a-mining-model.md)  
   
--   [Ver o cambiar modelado marcas &#40; minería de datos &#41;](../../analysis-services/data-mining/view-or-change-modeling-flags-data-mining.md)  
+-   [Ver o cambiar modelado marcas & #40; minería de datos & #41;](../../analysis-services/data-mining/view-or-change-modeling-flags-data-mining.md)  
   
 -   [Especificar una columna para utilizar como regresor en un modelo](../../analysis-services/data-mining/specify-a-column-to-use-as-regressor-in-a-model.md)  
   
@@ -64,7 +63,7 @@ Utilice la pestaña **Modelos de minería de datos** del Diseñador de minería 
   
 ## <a name="see-also"></a>Vea también  
  [Tareas de estructura de minería de datos y procedimientos](../../analysis-services/data-mining/mining-structure-tasks-and-how-tos.md)   
- [Modelos de minería de datos &#40; Analysis Services: minería de datos &#41;](../../analysis-services/data-mining/mining-models-analysis-services-data-mining.md)   
+ [Modelos de minería de datos & #40; Analysis Services: minería de datos & #41;](../../analysis-services/data-mining/mining-models-analysis-services-data-mining.md)   
  [Conceptos de minería de datos](../../analysis-services/data-mining/data-mining-concepts.md)  
   
   

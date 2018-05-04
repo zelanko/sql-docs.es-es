@@ -22,12 +22,11 @@ caps.latest.revision: 32
 author: Minewiskan
 ms.author: owend
 manager: erikre
-ms.workload: Inactive
-ms.openlocfilehash: e8038145cf8587c6c0d5a86461302fd7075bcee9
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
-ms.translationtype: MT
+ms.openlocfilehash: c9ac580c71d1c82876a41953d6f8b5411dc7dd55
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="leaves-mdx"></a>Leaves (MDX)
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
@@ -45,7 +44,7 @@ Leaves( [ Dimension_expression ] )
  *Dimension_Expression*  
  Expresión MDX válida que devuelve una dimensión.  
   
-## <a name="remarks"></a>Notas  
+## <a name="remarks"></a>Comentarios  
  Los miembros hoja son tuplas formadas por la combinación cruzada del nivel inferior de todas las jerarquías de atributo. Se excluyen los miembros calculados.  
   
 -   Si se especifica un nombre de dimensión, el **deja** función devuelve un conjunto que contiene los miembros hoja del atributo clave de la dimensión especificada.  
@@ -60,7 +59,7 @@ Leaves( [ Dimension_expression ] )
     > [!IMPORTANT]  
     >  Se genera un error si no todos los atributos tienen la misma granularidad en los grupos de medida del ámbito actual.  
   
-## <a name="see-also"></a>Ver también  
- [Referencia de funciones MDX &#40; MDX &#41;](../mdx/mdx-function-reference-mdx.md)  
+## <a name="see-also"></a>Vea también  
+ [Referencia de funciones MDX & #40; MDX & #41;](../mdx/mdx-function-reference-mdx.md)  
   
   

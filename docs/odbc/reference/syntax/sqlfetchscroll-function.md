@@ -11,7 +11,7 @@ ms.suite: sql
 ms.technology:
 - drivers
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 apiname:
 - SQLFetchScroll
 apilocation:
@@ -26,12 +26,11 @@ caps.latest.revision: 30
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: e8b244a9b4e6923c6455ea84175ed1557ec4100a
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
-ms.translationtype: MT
+ms.openlocfilehash: 49c258efc97554210dc454dbd01314b5bc4a508e
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="sqlfetchscroll-function"></a>Función SQLFetchScroll
 **Conformidad**  
@@ -94,11 +93,11 @@ SQLRETURN SQLFetchScroll(
 |--------------|-----------|-----------------|  
 |01000|Advertencia general|Mensaje informativo de específicas del controlador. (La función devuelve SQL_SUCCESS_WITH_INFO).|  
 |01004|Datos de cadena, delimitado truncados|Cadena o datos binarios devueltos para una columna generó el truncamiento de carácter que no esté vacía o datos binarios no NULL. Si ha realizado un valor de cadena, era truncado a la derecha.|  
-|01S01|Error en la fila|Se produjo un error al capturar una o varias filas.<br /><br /> (Si este SQLSTATE se devuelve cuando una aplicación ODBC 3*.x* aplicación está trabajando con una API ODBC 2*.x* controlador, puede hacer caso omiso.)|  
+|01S01|Error en la fila|Se produjo un error al capturar una o varias filas.<br /><br /> (Si este SQLSTATE se devuelve cuando una aplicación ODBC 3 *.x* aplicación está trabajando con una API ODBC 2 *.x* controlador, puede hacer caso omiso.)|  
 |01S06|Intento de recuperación antes el conjunto de resultados devolviera el primer conjunto de filas|El conjunto de filas solicitado superpuesta el inicio del conjunto cuando FetchOrientation era SQL_FETCH_PRIOR, la posición actual estaba más allá de la primera fila y el número de la fila actual es menor o igual que el tamaño del conjunto de filas de resultados.<br /><br /> El conjunto de filas solicitado superpuesta el inicio del conjunto cuando FetchOrientation estaba SQL_FETCH_PRIOR, la posición actual fue más allá del final del conjunto de resultados y el tamaño del conjunto de filas es mayor que el conjunto de resultados tamaño de resultados.<br /><br /> El conjunto de filas solicitado superpuesta el inicio del conjunto cuando FetchOrientation era SQL_FETCH_RELATIVE, FetchOffset era negativo y el valor absoluto de FetchOffset era menor o igual que el tamaño del conjunto de filas de resultados.<br /><br /> El conjunto de filas solicitado superpuesta el inicio del conjunto de resultados cuando FetchOrientation era SQL_FETCH_ABSOLUTE, FetchOffset era negativo y el valor absoluto de FetchOffset era mayor que el conjunto de resultados tamaño menor o igual que el tamaño del conjunto de filas.<br /><br /> (La función devuelve SQL_SUCCESS_WITH_INFO).|  
 |01S07|Truncamiento fraccionario|Se truncaron los datos devueltos para una columna. Para los tipos de datos numéricos, se trunca la parte fraccionaria del número. De hora, marca de tiempo y los tipos de datos interval que contiene un componente de tiempo, se trunca la parte fraccionaria del tiempo.<br /><br /> (La función devuelve SQL_SUCCESS_WITH_INFO).|  
 |07006|Infracción del atributo de tipo de datos restringido|No se pudo convertir el valor de datos de una columna del conjunto de resultados para el tipo de datos especificado por *TargetType* en **SQLBindCol**.<br /><br /> La columna 0 se enlazó con un tipo de datos de SQL_C_BOOKMARK y el atributo de instrucción SQL_ATTR_USE_BOOKMARKS se estableció en SQL_UB_VARIABLE.<br /><br /> La columna 0 se enlazó con un tipo de datos de SQL_C_VARBOOKMARK y no se estableció el atributo de instrucción de SQL_ATTR_USE_BOOKMARKS en SQL_UB_VARIABLE.|  
-|07009|Índice de descriptor no válido|El controlador fue un ODBC 2*.x* controlador que no es compatible con **SQLExtendedFetch**, y un número de columna especificado en el enlace para una columna es 0.<br /><br /> Se ha enlazado la columna 0, y el atributo de instrucción SQL_ATTR_USE_BOOKMARKS estaba establecido como SQL_UB_OFF.|  
+|07009|Índice de descriptor no válido|El controlador fue un ODBC 2 *.x* controlador que no es compatible con **SQLExtendedFetch**, y un número de columna especificado en el enlace para una columna es 0.<br /><br /> Se ha enlazado la columna 0, y el atributo de instrucción SQL_ATTR_USE_BOOKMARKS estaba establecido como SQL_UB_OFF.|  
 |08S01|Error de vínculo de comunicación|El vínculo de comunicación entre el controlador y el origen de datos al que se conectó el controlador no pudo antes del procesamiento de la función se ha completado.|  
 |22001|Datos de cadena, delimitado truncados|Se ha truncado un marcador de longitud variable devuelto para una columna.|  
 |22002|Variable de indicador necesaria, pero no se ha suministrado|Datos nulos se capturan en una columna cuyo *StrLen_or_IndPtr* establecido por **SQLBindCol** (o SQL_DESC_INDICATOR_PTR establecido por **SQLSetDescField** o  **SQLSetDescRec**) era un puntero nulo.|  

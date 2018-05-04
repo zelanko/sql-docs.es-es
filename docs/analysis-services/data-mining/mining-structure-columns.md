@@ -1,36 +1,35 @@
 ---
-title: "Columnas de la estructura de minería de datos | Documentos de Microsoft"
-ms.custom: 
+title: Columnas de la estructura de minería de datos | Documentos de Microsoft
+ms.custom: ''
 ms.date: 03/13/2017
 ms.prod: analysis-services
 ms.prod_service: analysis-services
-ms.service: 
+ms.service: ''
 ms.component: data-mining
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: pro-bi
-ms.technology: 
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.technology: ''
+ms.tgt_pltfrm: ''
+ms.topic: conceptual
 helpviewer_keywords:
 - data mining [Analysis Services], structure
 - mining structures [Analysis Services], columns
 - data sources [Analysis Services], mining structure columns
 - columns [data mining], mining structure columns
 ms.assetid: 20cbf433-70d1-4b61-a462-41a8435b27b4
-caps.latest.revision: 
+caps.latest.revision: 41
 author: Minewiskan
 ms.author: owend
 manager: kfile
-ms.workload: Inactive
-ms.openlocfilehash: f87ea88579145b0220be7a047d230d2f3d8d9a1e
-ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
-ms.translationtype: MT
+ms.openlocfilehash: 37372901fd070f61564333b86803bcdf833929a6
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/15/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="mining-structure-columns"></a>Columnas de la estructura de minería de datos
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
-Define las columnas de una estructura de minería de datos al crear dicha estructura eligiendo columnas de datos externos y especificando a continuación cómo se van a usar los datos para el modelado. Por tanto, las columnas de la estructura de minería de datos son más que copias de los datos de un origen de datos: definen cómo se van a usar los datos del origen en el modelo de minería de datos. Puede asignar propiedades que determinen cómo se discretizan los datos, las propiedades que describen cómo se distribuyen los valores de datos  
+  Define las columnas de una estructura de minería de datos al crear dicha estructura eligiendo columnas de datos externos y especificando a continuación cómo se van a usar los datos para el modelado. Por tanto, las columnas de la estructura de minería de datos son más que copias de los datos de un origen de datos: definen cómo se van a usar los datos del origen en el modelo de minería de datos. Puede asignar propiedades que determinen cómo se discretizan los datos, las propiedades que describen cómo se distribuyen los valores de datos  
   
  Las columnas de la estructura de minería de datos se diseñan para ser flexibles y extensibles, porque cada algoritmo que se utilice para generar un modelo de minería de datos puede utilizar diferentes columnas de la estructura para interpretar los datos. En lugar de un conjunto de datos para cada modelo, puede utilizar una sola estructura de minería de datos y utilizar las columnas en ella para personalizar los datos de cada modelo.  
   
@@ -72,7 +71,7 @@ Define las columnas de una estructura de minería de datos al crear dicha estruc
 |Aprenda a agregar y modificar columnas de la estructura de minería de datos.|[Tareas y procedimientos de las estructuras de minería de datos](../../analysis-services/data-mining/mining-structure-tasks-and-how-tos.md)|  
   
 ## <a name="see-also"></a>Vea también  
- [Estructuras de minería de datos &#40; Analysis Services: minería de datos &#41;](../../analysis-services/data-mining/mining-structures-analysis-services-data-mining.md)   
+ [Estructuras de minería de datos & #40; Analysis Services: minería de datos & #41;](../../analysis-services/data-mining/mining-structures-analysis-services-data-mining.md)   
  [Columnas del modelo de minería de datos](../../analysis-services/data-mining/mining-model-columns.md)  
   
   

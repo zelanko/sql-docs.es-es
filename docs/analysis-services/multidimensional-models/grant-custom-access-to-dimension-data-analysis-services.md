@@ -1,43 +1,23 @@
 ---
 title: Conceder acceso personalizado a los datos de la dimensión (Analysis Services) | Documentos de Microsoft
-ms.custom: ''
-ms.date: 03/01/2017
-ms.prod: analysis-services
-ms.prod_service: analysis-services
-ms.service: ''
-ms.component: data-mining
-ms.reviewer: ''
-ms.suite: pro-bi
-ms.technology: ''
-ms.tgt_pltfrm: ''
+ms.date: 05/02/2018
+ms.prod: sql
+ms.technology: analysis-services
+ms.component: multidimensional-models
 ms.topic: article
-f1_keywords:
-- sql13.asvs.roledesignerdialog.dimensiondata.f1
-helpviewer_keywords:
-- dimensions [Analysis Services], security
-- AllowedSet property
-- IsAllowed property
-- DeniedSet property
-- user access rights [Analysis Services], dimensions
-- custom dimension data access [Analysis Services]
-- permissions [Analysis Services], dimensions
-- DefaultMember property
-- VisualTotals property
-- ApplyDenied property
-ms.assetid: b028720d-3785-4381-9572-157d13ec4291
-caps.latest.revision: 40
-author: Minewiskan
 ms.author: owend
+ms.reviewer: owend
+author: minewiskan
 manager: kfile
-ms.workload: On Demand
-ms.openlocfilehash: 95cd49cfac7e318e427a4944182bf21cb16f8c3b
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+ms.openlocfilehash: f6a10ec3bab74c2bd5c540b1816d77c2dcbd104c
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="grant-custom-access-to-dimension-data-analysis-services"></a>Conceder acceso personalizado a datos de dimensión (Analysis Services)
-[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]Después de habilitar el acceso de lectura a un cubo, puede establecer permisos adicionales que permitan o denieguen el acceso a los miembros de dimensión (incluidas las medidas contenidas en la dimensión Measures que contiene todas las medidas utilizadas en un cubo) explícitamente. Por ejemplo, si hay varias categorías de distribuidores, conviene establecer permisos para excluir datos de un tipo de negocio específico. La ilustración siguiente representa el antes y el después a la denegación de acceso al tipo de negocio Warehouse en la dimensión Reseller.  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
+  Después de permitir el acceso de lectura a un cubo, puede establecer permisos adicionales que permitan o denieguen explícitamente el acceso a miembros de la dimensión (incluidas las medidas que contiene la Dimensión de Medidas que contengan todas las medidas utilizadas en un cubo). Por ejemplo, si hay varias categorías de distribuidores, conviene establecer permisos para excluir datos de un tipo de negocio específico. La ilustración siguiente representa el antes y el después a la denegación de acceso al tipo de negocio Warehouse en la dimensión Reseller.  
   
  ![Las tablas dinámicas con y sin un miembro de dimensión](../../analysis-services/multidimensional-models/media/ssas-permsdimdenied.png "tablas dinámicas con y sin un miembro de dimensión")  
   
@@ -50,7 +30,7 @@ ms.lasthandoff: 01/08/2018
 > [!NOTE]  
 >  Las siguientes instrucciones presuponen que existe una conexión de cliente que emite consultas en MDX. Si el cliente usa DAX, como Power View en Power BI, la seguridad de dimensión no es evidente en los resultados de la consulta. Vea [Descripción de Power View para modelos multidimensionales](understanding-power-view-for-multidimensional-models.md) para obtener más información.
       
-## <a name="prerequisites"></a>Prerequisites  
+## <a name="prerequisites"></a>Requisitos previos  
  No todas las medidas o miembros de dimensión se pueden usar en escenarios de acceso personalizados. Si hay un rol que restringe el acceso a una medida o miembro predeterminado o a medidas que forman parte de expresiones de medida, se producirá un error en la conexión.  
   
  **Busque obstrucciones en la seguridad de dimensiones: medidas predeterminadas, miembros predeterminados y medidas usadas en expresiones de medida**  
@@ -106,7 +86,7 @@ ms.lasthandoff: 01/08/2018
  Si se crea un elemento AllowedSet, tendrá un efecto dominó cuando el atributo participe en una jerarquía de varios niveles. Por ejemplo, un caso en el que el rol permite el acceso al estado de Washington (una situación en la que el rol otorga permisos a la división comercial de Washington de una empresa). Para las personas que se conecten a través de este rol, las consultas que incluyan antecesores (Estados Unidos) o descendentes (Seattle y Redmond) solamente verán miembros en una cadena que incluye el estado de Washington. Dado que no se han permitido de forma explícita otros estados, el efecto será el mismo que si se hubieran denegado.  
   
 > [!NOTE]  
->  Si define un conjunto vacío ({}) de miembros del atributo, ningún miembro del atributo estará visible para el rol de base de datos. La ausencia de un conjunto permitido no se interpreta como un conjunto vacío.  
+>  Si define un conjunto vacío ({}) de los miembros de atributo, ningún miembro del atributo estará visible para el rol de base de datos. La ausencia de un conjunto permitido no se interpreta como un conjunto vacío.  
   
  **Conjunto de miembros denegado**  
  La propiedad DeniedSet puede dar como resultado ningún miembro, todos los miembros (predeterminado) o algunos miembros del atributo. Cuando el conjunto que se ha denegado contiene únicamente un conjunto específico de miembros de atributo, el rol de base datos deniega el acceso solo a los miembros específicos, así como a los descendentes si el atributo es una jerarquía de múltiples niveles. Sigamos con el ejemplo de la división comercial en el estado de Washington. Si Washington se coloca en DeniedSet, las personas que se conecten a través de este rol verán el resto de estados salvo Washington y sus atributos descendentes.  
@@ -136,8 +116,8 @@ ms.lasthandoff: 01/08/2018
   
 ## <a name="see-also"></a>Vea también  
  [Otorgar permisos para cubos o modelos &#40;Analysis Services&#41;](../../analysis-services/multidimensional-models/grant-cube-or-model-permissions-analysis-services.md)   
- [Conceder acceso personalizado a una celda de datos &#40; Analysis Services &#41;](../../analysis-services/multidimensional-models/grant-custom-access-to-cell-data-analysis-services.md)   
- [Conceder permisos en las estructuras de minería de datos y modelos de &#40; Analysis Services &#41;](../../analysis-services/multidimensional-models/grant-permissions-on-data-mining-structures-and-models-analysis-services.md)   
- [Otorgar permisos para un objeto de origen de datos &#40;Analysis Services&#41;](../../analysis-services/multidimensional-models/grant-permissions-on-a-data-source-object-analysis-services.md)  
+ [Conceder acceso personalizado a los datos de las celdas &#40;Analysis Services&#41;](../../analysis-services/multidimensional-models/grant-custom-access-to-cell-data-analysis-services.md)   
+ [Conceder permisos en las estructuras de minería de datos y modelos &#40;Analysis Services&#41;](../../analysis-services/multidimensional-models/grant-permissions-on-data-mining-structures-and-models-analysis-services.md)   
+ [Conceder permisos en un objeto de origen de datos & #40; Analysis Services & #41;](../../analysis-services/multidimensional-models/grant-permissions-on-a-data-source-object-analysis-services.md)  
   
   

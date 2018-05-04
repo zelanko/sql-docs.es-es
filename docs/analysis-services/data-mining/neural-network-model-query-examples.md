@@ -1,35 +1,34 @@
 ---
 title: Ejemplos de consultas de modelo de red neuronal | Documentos de Microsoft
-ms.custom: 
+ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: analysis-services
 ms.prod_service: analysis-services
-ms.service: 
+ms.service: ''
 ms.component: data-mining
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: pro-bi
-ms.technology: 
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.technology: ''
+ms.tgt_pltfrm: ''
+ms.topic: conceptual
 helpviewer_keywords:
 - neural network algorithms [Analysis Services]
 - content queries [DMX]
 - neural network model [Analysis Services]
 ms.assetid: 81b06183-620f-4e0c-bc10-532e6a1f0829
-caps.latest.revision: 
+caps.latest.revision: 29
 author: Minewiskan
 ms.author: owend
 manager: kfile
-ms.workload: Inactive
-ms.openlocfilehash: 531380e732ea9e2f390328fe22310ba844a8bc57
-ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
-ms.translationtype: MT
+ms.openlocfilehash: b900cf7799baf78234127d52ab064e31f3699f86
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/15/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="neural-network-model-query-examples"></a>Ejemplos de consultas de modelos de red neuronal
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
-Cuando se crea una consulta en un modelo de minería de datos, puede tratarse de una consulta de contenido, que proporciona detalles de los patrones detectados durante el análisis, o de una consulta de predicción, que utiliza los patrones del modelo para realizar predicciones de los nuevos datos. Por ejemplo, una consulta de contenido para un modelo de red neuronal podría recuperar metadatos del modelo, por ejemplo, el número de niveles ocultos. O bien, una consulta de predicción podría sugerir las clasificaciones según una entrada y proporcionar, si se desea, las probabilidades para cada clasificación.  
+  Cuando se crea una consulta en un modelo de minería de datos, puede tratarse de una consulta de contenido, que proporciona detalles de los patrones detectados durante el análisis, o de una consulta de predicción, que utiliza los patrones del modelo para realizar predicciones de los nuevos datos. Por ejemplo, una consulta de contenido para un modelo de red neuronal podría recuperar metadatos del modelo, por ejemplo, el número de niveles ocultos. O bien, una consulta de predicción podría sugerir las clasificaciones según una entrada y proporcionar, si se desea, las probabilidades para cada clasificación.  
   
  En esta sección se explica cómo crear consultas para los modelos que se basan en el algoritmo de red neuronal de [!INCLUDE[msCoName](../../includes/msconame-md.md)] .  
   
@@ -218,20 +217,20 @@ NATURAL PREDICTION JOIN
 |||  
 |-|-|  
 |Función de predicción|Uso|  
-|[IsDescendant &#40; DMX &#41;](../../dmx/isdescendant-dmx.md)|Determina si un nodo es un elemento secundario de otro nodo en el gráfico de red neuronal.|  
-|[PredictAdjustedProbability &#40; DMX &#41;](../../dmx/predictadjustedprobability-dmx.md)|Devuelve la probabilidad ponderada.|  
-|[PredictHistogram &#40; DMX &#41;](../../dmx/predicthistogram-dmx.md)|Devuelve una tabla de valores relacionados con el valor de predicción actual.|  
+|[IsDescendant & #40; DMX & #41;](../../dmx/isdescendant-dmx.md)|Determina si un nodo es un elemento secundario de otro nodo en el gráfico de red neuronal.|  
+|[PredictAdjustedProbability & #40; DMX & #41;](../../dmx/predictadjustedprobability-dmx.md)|Devuelve la probabilidad ponderada.|  
+|[PredictHistogram & #40; DMX & #41;](../../dmx/predicthistogram-dmx.md)|Devuelve una tabla de valores relacionados con el valor de predicción actual.|  
 |[PredictVariance &#40;DMX&#41;](../../dmx/predictvariance-dmx.md)|Devuelve la varianza del valor de predicción.|  
-|[PredictProbability &#40; DMX &#41;](../../dmx/predictprobability-dmx.md)|Devuelve la probabilidad del valor de predicción.|  
-|[PredictStdev &#40; DMX &#41;](../../dmx/predictstdev-dmx.md)|Devuelve la desviación estándar del valor predicho.|  
-|[PredictSupport &#40; DMX &#41;](../../dmx/predictsupport-dmx.md)|En los modelos de regresión logística y de red neuronal, devuelve un valor único que representa el tamaño del conjunto de entrenamiento para todo el modelo.|  
+|[PredictProbability & #40; DMX & #41;](../../dmx/predictprobability-dmx.md)|Devuelve la probabilidad del valor de predicción.|  
+|[PredictStdev & #40; DMX & #41;](../../dmx/predictstdev-dmx.md)|Devuelve la desviación estándar del valor predicho.|  
+|[PredictSupport & #40; DMX & #41;](../../dmx/predictsupport-dmx.md)|En los modelos de regresión logística y de red neuronal, devuelve un valor único que representa el tamaño del conjunto de entrenamiento para todo el modelo.|  
   
  Para obtener una lista de las funciones que son comunes a todos los algoritmos de [!INCLUDE[msCoName](../../includes/msconame-md.md)], vea [Referencia de algoritmo (Analysis Services - Minería de datos)](https://technet.microsoft.com/library/bb895228\(v=sql.105\).aspx). Para más información sobre la sintaxis de funciones específicas, vea [Referencia de funciones de Extensiones de minería de datos &#40;DMX&#41;](../../dmx/data-mining-extensions-dmx-function-reference.md).  
   
 ## <a name="see-also"></a>Vea también  
  [Algoritmo de red neuronal de Microsoft](../../analysis-services/data-mining/microsoft-neural-network-algorithm.md)   
  [Referencia técnica del algoritmo de red neuronal de Microsoft](../../analysis-services/data-mining/microsoft-neural-network-algorithm-technical-reference.md)   
- [Contenido del modelo de minería de datos para los modelos de red neuronal &#40; Analysis Services: minería de datos &#41;](../../analysis-services/data-mining/mining-model-content-for-neural-network-models-analysis-services-data-mining.md)   
- [Lección 5: Generar neuronal red y los modelos de regresión logística &#40; Tutorial de minería de datos intermedios &#41;](http://msdn.microsoft.com/library/42c3701a-1fd2-44ff-b7de-377345bbbd6b)  
+ [Contenido del modelo de minería de datos para los modelos de red neuronal & #40; Analysis Services: minería de datos & #41;](../../analysis-services/data-mining/mining-model-content-for-neural-network-models-analysis-services-data-mining.md)   
+ [Lección 5: Generar neuronal red y los modelos de regresión logística & #40; Tutorial de minería de datos intermedios & #41;](http://msdn.microsoft.com/library/42c3701a-1fd2-44ff-b7de-377345bbbd6b)  
   
   

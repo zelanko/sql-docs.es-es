@@ -23,15 +23,15 @@ caps.latest.revision: 41
 author: Minewiskan
 ms.author: owend
 manager: kfile
-ms.workload: Inactive
-ms.openlocfilehash: 838f17f1e9725738686635b3000f28929084c122
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
-ms.translationtype: MT
+ms.openlocfilehash: 07f3e7e80b36f2739bf5d4df23404e5ab396ec72
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="dmschemaminingmodels-rowset"></a>Conjunto de filas DMSCHEMA_MINING_MODELS
-[!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]Enumera los modelos de minería de datos en el catálogo actual. El **DMSCHEMA_MINING_MODELS** conjunto de filas incluye información como nombres de modelo y fecha de procesamiento, el algoritmo de minería de datos asociados a cada modelo de minería de datos.  
+[!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]
+  Enumera los modelos de minería de datos del catálogo actual. El **DMSCHEMA_MINING_MODELS** conjunto de filas incluye información como nombres de modelo y fecha de procesamiento, el algoritmo de minería de datos asociados a cada modelo de minería de datos.  
   
  . El **DMSCHEMA_MINING_MODELS** de filas de esquema es muy similar a la [DBSCHEMA_TABLES](../../../analysis-services/schema-rowsets/ole-db/dbschema-tables-rowset.md) de filas de esquema y se puede usar la misma manera.  
   

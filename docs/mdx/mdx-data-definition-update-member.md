@@ -1,15 +1,15 @@
 ---
-title: "Instrucción UPDATE MEMBER (MDX) | Documentos de Microsoft"
-ms.custom: 
+title: Instrucción UPDATE MEMBER (MDX) | Documentos de Microsoft
+ms.custom: ''
 ms.date: 03/02/2016
 ms.prod: analysis-services
 ms.prod_service: analysis-services
-ms.service: 
-ms.component: 
-ms.reviewer: 
+ms.service: ''
+ms.component: ''
+ms.reviewer: ''
 ms.suite: pro-bi
-ms.technology: 
-ms.tgt_pltfrm: 
+ms.technology: ''
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - UPDATE_MEMBER
@@ -20,16 +20,15 @@ helpviewer_keywords:
 - calculated members [MDX]
 - UPDATE MEMBER statement
 ms.assetid: 07ab708d-d165-4fb1-a9f9-fb8197ff0dab
-caps.latest.revision: "12"
+caps.latest.revision: 12
 author: Minewiskan
 ms.author: owend
 manager: erikre
-ms.workload: Inactive
-ms.openlocfilehash: e126f34be1f1cecd1a793b71ff4b64069c1802c3
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
-ms.translationtype: MT
+ms.openlocfilehash: 6f5591eeaaa2afd346e8038426f72e9b0c21520c
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="mdx-data-definition---update-member"></a>Definición de datos MDX - UPDATE MEMBER
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
@@ -84,8 +83,8 @@ UPDATE MEMBER Cube_Name.Member_Name
 |ASSOCIATED_MEASURE_GROUP|Nombre del grupo de medida al que se asocia el miembro.|  
   
 ## <a name="see-also"></a>Vea también  
- [DROP MEMBER, instrucción &#40; MDX &#41;](../mdx/mdx-data-definition-drop-member.md)   
- [CREATE MEMBER, instrucción &#40; MDX &#41;](../mdx/mdx-data-definition-create-member.md)   
- [Instrucciones de definición de datos MDX &#40; MDX &#41;](../mdx/mdx-data-definition-statements-mdx.md)  
+ [DROP MEMBER, instrucción &#40;MDX&#41;](../mdx/mdx-data-definition-drop-member.md)   
+ [CREATE MEMBER, instrucción & #40; MDX & #41;](../mdx/mdx-data-definition-create-member.md)   
+ [Instrucciones de definición de datos MDX &#40;MDX&#41;](../mdx/mdx-data-definition-statements-mdx.md)  
   
   

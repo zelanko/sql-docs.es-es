@@ -11,7 +11,7 @@ ms.suite: sql
 ms.technology:
 - drivers
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - long data [ODBC]
 - sending long data [ODBC]
@@ -20,12 +20,11 @@ caps.latest.revision: 5
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: e3dd5ec4edf58bb29772ca565109e5d9c79a3304
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
-ms.translationtype: MT
+ms.openlocfilehash: 260c62d849f1b771b6d9fc40245fd1b0bfd2c5ae
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="sending-long-data"></a>Enviar datos de tipo Long
 Definen DBMS *datos long* como cualquier carácter o datos binarios a través de un determinado tamaño, como 254 caracteres. No sería posible almacenar un elemento de datos largos en memoria, como cuando el elemento representa un mapa de bits o un documento de texto largo. Porque no se puede almacenar estos datos en un único búfer, el origen de datos lo envía al controlador en partes con **SQLPutData** cuando se ejecuta la instrucción. Parámetros para la que se envían los datos en tiempo de ejecución se conocen como *parámetros de datos en ejecución*.  

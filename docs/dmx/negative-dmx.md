@@ -21,12 +21,11 @@ caps.latest.revision: 11
 author: Minewiskan
 ms.author: owend
 manager: erikre
-ms.workload: Inactive
-ms.openlocfilehash: a2109ad0957e2ef847d0953148c0903e67f68dab
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
-ms.translationtype: MT
+ms.openlocfilehash: d2a2f4fb32566e14bb760eb84a2fde389fd34d7c
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="--negative-dmx"></a>- (Negativo) (DMX)
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
@@ -47,9 +46,9 @@ ms.lasthandoff: 01/08/2018
 ## <a name="return-value"></a>Valor devuelto  
  Valor cuyo tipo de datos es el del parámetro especificado.  
   
-## <a name="see-also"></a>Ver también  
- [Extensiones de minería de datos &#40; DMX &#41; Referencia de operadores](../dmx/data-mining-extensions-dmx-operator-reference.md)   
- [Operadores &#40; DMX &#41;](../dmx/operators-dmx.md)   
- [Operadores unarios &#40; DMX &#41;](../dmx/operators-unary.md)  
+## <a name="see-also"></a>Vea también  
+ [Extensiones de minería de datos &#40;DMX&#41; Referencia de operadores](../dmx/data-mining-extensions-dmx-operator-reference.md)   
+ [Operadores &#40;DMX&#41;](../dmx/operators-dmx.md)   
+ [Operadores unarios &#40;DMX&#41;](../dmx/operators-unary.md)  
   
   

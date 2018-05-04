@@ -26,12 +26,11 @@ caps.latest.revision: 42
 author: Minewiskan
 ms.author: owend
 manager: erikre
-ms.workload: Inactive
-ms.openlocfilehash: c709890d1c9e9ff3b1e6351fc4b62e067e12a864
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
-ms.translationtype: MT
+ms.openlocfilehash: 0b7c9464085c99ff9d04be0c7c6a27d6f216c22b
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="mdx-data-definition---create-set"></a>Definición de datos MDX - crear establecido
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
@@ -67,9 +66,9 @@ CREATE [SESSION] [ STATIC | DYNAMIC ] [HIDDEN] SET
 ## <a name="remarks"></a>Comentarios  
  Un conjunto con nombre es un conjunto de miembros de dimensión (o una expresión que define un conjunto) que se crea para utilizarse varias veces. Por ejemplo, un conjunto con nombre posibilita la definición de un conjunto de miembros de dimensión compuesto por el conjunto de los diez establecimientos con más ventas. Este conjunto puede definirse de forma estática o mediante una función como [TopCount](../mdx/topcount-mdx.md). Este conjunto con nombre puede usarse cuando se necesite el conjunto de los diez mejores establecimientos.  
   
- La instrucción CREATE SET crea un conjunto con nombre que permanece disponible durante toda la sesión, y por lo tanto, puede usarse en diversas consultas durante una sesión. Para obtener más información, vea [miembros calculados de Creating Session-Scoped &#40; MDX &#41; ](../analysis-services/multidimensional-models/mdx/mdx-calculated-members-session-scoped-calculated-members.md).  
+ La instrucción CREATE SET crea un conjunto con nombre que permanece disponible durante toda la sesión, y por lo tanto, puede usarse en diversas consultas durante una sesión. Para obtener más información, consulte [miembros calculados de Creating Session-Scoped &#40;MDX&#41;](../analysis-services/multidimensional-models/mdx/mdx-calculated-members-session-scoped-calculated-members.md).  
   
- También puede definir un conjunto con nombre para que lo use una sola consulta. Para definir un conjunto de este tipo, utilice la cláusula WITH en la instrucción SELECT. Para obtener más información acerca de la cláusula WITH, consulte [conjuntos con nombre de Creating Query-Scoped &#40; MDX &#41; ](../analysis-services/multidimensional-models/mdx/mdx-named-sets-creating-query-scoped-named-sets.md).  
+ También puede definir un conjunto con nombre para que lo use una sola consulta. Para definir un conjunto de este tipo, utilice la cláusula WITH en la instrucción SELECT. Para obtener más información acerca de la cláusula WITH, consulte [conjuntos con nombre de Creating Query-Scoped &#40;MDX&#41;](../analysis-services/multidimensional-models/mdx/mdx-named-sets-creating-query-scoped-named-sets.md).  
   
  El *función* cláusula puede contener cualquier función que admite la sintaxis MDX. Los conjuntos creados con la instrucción CREATE SET que no especifiquen la cláusula SESSION tienen ámbito de sesión. Utilice la cláusula WITH para crear un conjunto con ámbito de consulta.  
   
@@ -79,7 +78,7 @@ CREATE [SESSION] [ STATIC | DYNAMIC ] [HIDDEN] SET
  Un conjunto definido pro el usuario puede producirse en uno de los ámbitos enumerados en la tabla siguiente.  
   
  Ámbito de consulta  
- La visibilidad y duración del conjunto se limita a la consulta. El conjunto se define en una consulta individual. El ámbito de consulta prevalece sobre el ámbito de sesión. Para obtener más información, vea [conjuntos con nombre de Creating Query-Scoped &#40; MDX &#41; ](../analysis-services/multidimensional-models/mdx/mdx-named-sets-creating-query-scoped-named-sets.md).  
+ La visibilidad y duración del conjunto se limita a la consulta. El conjunto se define en una consulta individual. El ámbito de consulta prevalece sobre el ámbito de sesión. Para obtener más información, consulte [conjuntos con nombre de Creating Query-Scoped &#40;MDX&#41;](../analysis-services/multidimensional-models/mdx/mdx-named-sets-creating-query-scoped-named-sets.md).  
   
  Ámbito de sesión  
  La visibilidad y duración del conjunto se limita a la sesión en la que se creó. (La duración es menor que la duración de la sesión si se emite una instrucción DROP SET en el conjunto.) La instrucción CREATE SET crea un conjunto con ámbito de sesión. Utilice la cláusula WITH para crear un conjunto con ámbito de consulta.  
@@ -118,7 +117,7 @@ SELECT [Core Products] ON 0
 |DISPLAY_FOLDER|Cadena que identifica la ruta de la carpeta que usa la aplicación cliente para mostrar el conjunto. La aplicación cliente define el separador de niveles de carpetas. Para las herramientas y clientes proporcionados por [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)], la barra diagonal inversa (\\) es el separador de niveles. Si va a asignar varias carpetas para mostrar a un conjunto definido, utilice un punto y coma (;) para separar las carpetas.|  
   
 ## <a name="see-also"></a>Vea también  
- [QUITE la instrucción SET &#40; MDX &#41;](../mdx/mdx-data-definition-drop-set.md)   
- [Instrucciones de definición de datos MDX &#40; MDX &#41;](../mdx/mdx-data-definition-statements-mdx.md)  
+ [Instrucción de conjunto de DROP &#40;MDX&#41;](../mdx/mdx-data-definition-drop-set.md)   
+ [Instrucciones de definición de datos MDX &#40;MDX&#41;](../mdx/mdx-data-definition-statements-mdx.md)  
   
   

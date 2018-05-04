@@ -19,12 +19,11 @@ caps.latest.revision: 14
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: 25baa1ee860ac1f36cdf2f6e1e7541d970976594
-ms.sourcegitcommit: bb044a48a6af9b9d8edb178dc8c8bd5658b9ff68
-ms.translationtype: MT
+ms.openlocfilehash: e304952f12102d415a9ba4722b10b654058693aa
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/18/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="using-rds-with-odbc-connection-pooling"></a>Utilizar RDS con conexión ODBC agrupación
 Si usa un origen de datos ODBC, puede usar la opción en Internet Information Services (IIS) de agrupación de conexiones para conseguir un procesamiento de alto rendimiento de carga de clientes. Agrupación de conexiones es un administrador de recursos para las conexiones, mantiene el estado abierto en conexiones utilizadas con frecuencia.  

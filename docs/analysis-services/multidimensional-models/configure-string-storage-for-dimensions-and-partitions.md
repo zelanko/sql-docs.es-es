@@ -1,31 +1,23 @@
 ---
 title: Configurar el almacenamiento de cadenas para dimensiones y particiones | Documentos de Microsoft
-ms.custom: 
-ms.date: 03/06/2017
-ms.prod: analysis-services
-ms.prod_service: analysis-services
-ms.service: 
-ms.component: data-mining
-ms.reviewer: 
-ms.suite: pro-bi
-ms.technology: 
-ms.tgt_pltfrm: 
+ms.date: 05/02/2018
+ms.prod: sql
+ms.technology: analysis-services
+ms.component: multidimensional-models
 ms.topic: article
-ms.assetid: 987f6cfc-da82-4b2e-96ef-a8af88339e5f
-caps.latest.revision: 
-author: Minewiskan
 ms.author: owend
+ms.reviewer: owend
+author: minewiskan
 manager: kfile
-ms.workload: Inactive
-ms.openlocfilehash: c10be134f541434543c43c186181b122188a379f
-ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
+ms.openlocfilehash: 9585c5a2535148cc7e1984c3d911794a4dbe0bdc
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/15/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="configure-string-storage-for-dimensions-and-partitions"></a>Configurar el almacenamiento de cadenas para dimensiones y particiones
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
-Puede volver a configurar el almacenamiento de cadenas para dar cabida a cadenas muy grandes en los atributos de dimensión o en las particiones que superan el límite de tamaño de archivo de 4 GB para los almacenes de cadenas. Si las dimensiones o las particiones incluyen almacenes de cadenas de este tamaño, puede evitar la restricción del tamaño del archivo si cambia la propiedad **StringStoresCompatibilityLevel** en el nivel de la dimensión o de la partición, tanto en objetos locales como vinculados (locales o remotos).  
+  Puede volver a configurar el almacenamiento de cadenas para dar cabida a cadenas muy grandes en los atributos de dimensión o en las particiones que superan el límite de tamaño de archivo de 4 GB para los almacenes de cadenas. Si las dimensiones o las particiones incluyen almacenes de cadenas de este tamaño, puede evitar la restricción del tamaño del archivo si cambia la propiedad **StringStoresCompatibilityLevel** en el nivel de la dimensión o de la partición, tanto en objetos locales como vinculados (locales o remotos).  
   
  Tenga en cuenta que puede aumentar el almacenamiento de cadenas de aquellos objetos que requieren una capacidad adicional. En la mayoría de los modelos multidimensionales, los datos de cadena se asocian con dimensiones. Sin embargo, las particiones que contengan medidas de recuento distintivas encima de las cadenas también pueden beneficiarse de esta configuración. Dado que la configuración es para las cadenas, los datos numéricos no se ven afectados.  
   
@@ -95,7 +87,7 @@ Puede volver a configurar el almacenamiento de cadenas para dar cabida a cadenas
   
 ## <a name="see-also"></a>Vea también  
  [Herramientas y enfoques de procesamiento &#40;Analysis Services&#41;](../../analysis-services/multidimensional-models/tools-and-approaches-for-processing-analysis-services.md)   
- [Opciones de procesamiento y configuración de &#40; Analysis Services &#41;](../../analysis-services/multidimensional-models/processing-options-and-settings-analysis-services.md)   
+ [Opciones de procesamiento y configuración de & #40; Analysis Services & #41;](../../analysis-services/multidimensional-models/processing-options-and-settings-analysis-services.md)   
  [Procesamiento y modos de almacenamiento de particiones](../../analysis-services/multidimensional-models-olap-logical-cube-objects/partitions-partition-storage-modes-and-processing.md)   
  [Almacenamiento de dimensiones](../../analysis-services/multidimensional-models-olap-logical-dimension-objects/dimensions-storage.md)  
   

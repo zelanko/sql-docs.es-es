@@ -1,36 +1,23 @@
 ---
 title: Elegir y asignar datos de prueba de modelo | Documentos de Microsoft
-ms.custom: 
-ms.date: 03/01/2017
-ms.prod: analysis-services
-ms.prod_service: analysis-services
-ms.service: 
+ms.date: 05/01/2018
+ms.prod: sql
+ms.technology: analysis-services
 ms.component: data-mining
-ms.reviewer: 
-ms.suite: pro-bi
-ms.technology: 
-ms.tgt_pltfrm: 
 ms.topic: article
-helpviewer_keywords:
-- columns [data mining], mining accuracy charts
-- Mining Accuracy Chart [Analysis Services], column mappings
-- input column mapping [Analysis Services]
-- mapping input columns [Analysis Services]
-ms.assetid: be0d9f20-40c3-4dac-81da-281cfe724126
-caps.latest.revision: 
-author: Minewiskan
 ms.author: owend
+ms.reviewer: owend
+author: minewiskan
 manager: kfile
-ms.workload: Inactive
-ms.openlocfilehash: 82d6368aa699b537c2fee81c3d054e6c3546797b
-ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
+ms.openlocfilehash: d74352fcb3564eda40257430ff442f622fcec89e
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/15/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="choose-and-map-model-testing-data"></a>Elegir y asignar datos de prueba para el modelo
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
-Para crear un gráfico de precisión en [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)], debe elegir los datos que se utilizarán para probar el modelo y asignar dichos datos al modelo.  
+  Para crear un gráfico de precisión en [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)], debe elegir los datos que se utilizarán para probar el modelo y asignar dichos datos al modelo.  
   
  De forma predeterminada, [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] utilizará los datos de prueba del modelo de minería de datos, siempre que se haya creado un conjunto de datos de exclusión al generar la estructura. La manera más fácil de probar los modelos basados en la misma estructura de minería de datos consiste en crear un conjunto de pruebas de exclusión, ya que los nombres de las columnas y los tipos de datos siempre coincidirán con el modelo y podrá estar casi seguro de que la distribución de los datos es similar. Además, el diseñador creará automáticamente las relaciones entre la columnas de entrada y las del modelo.  
   
@@ -127,6 +114,6 @@ Para crear un gráfico de precisión en [!INCLUDE[ssASnoversion](../../includes/
      Las nuevas asignaciones de columna se muestran en el cuadro de diálogo **Especificar asignación de columnas** . Puede quitar una asignación seleccionando la línea entre las columnas y presionando la tecla Supr. Para crear una conexión, seleccione una columna de la tabla **Estructura de minería de datos** y arrástrela hasta la columna correspondiente de la tabla **Seleccionar tabla(s) de entrada** .  
   
 ## <a name="see-also"></a>Vea también  
- [Pruebas y las tareas de validación y procedimientos &#40; minería de datos &#41;](../../analysis-services/data-mining/testing-and-validation-tasks-and-how-tos-data-mining.md)  
+ [Pruebas y las tareas de validación y procedimientos & #40; minería de datos & #41;](../../analysis-services/data-mining/testing-and-validation-tasks-and-how-tos-data-mining.md)  
   
   

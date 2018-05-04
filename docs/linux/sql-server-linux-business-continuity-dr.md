@@ -15,13 +15,12 @@ ms.suite: sql
 ms.custom: sql-linux
 ms.technology: database-engine
 ms.assetid: c75717c8-c677-4033-8ca6-d0ac93aee04d
-ms.workload: Inactive
 monikerRange: '>= sql-server-2016 || = sqlallproducts-allversions'
-ms.openlocfilehash: 8a2680876e7e5cfced388868035705eabb248c35
-ms.sourcegitcommit: a85a46312acf8b5a59a8a900310cf088369c4150
-ms.translationtype: MT
+ms.openlocfilehash: d4df344b9062eec02ec83322747bc61dfcd67d52
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/26/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="business-continuity-and-database-recovery---sql-server-on-linux"></a>Continuidad empresarial y base de datos de recuperación: SQL Server en Linux
 

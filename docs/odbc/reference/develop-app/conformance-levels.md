@@ -11,7 +11,7 @@ ms.suite: sql
 ms.technology:
 - drivers
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - data sources [ODBC], conformance levels
 - ODBC drivers [ODBC], conformance levels
@@ -22,12 +22,11 @@ caps.latest.revision: 5
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: 17e11f8dd61de45f7ce046241695f3dcc901e254
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
-ms.translationtype: MT
+ms.openlocfilehash: 4eaed0a59daf6a2e9abeb08e5be60ef953733c69
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="conformance-levels"></a>Niveles de compatibilidad
 Controladores ODBC otorga acceso a la aplicación a diversos orígenes de datos. Cada controlador permite que la aplicación determinar en tiempo de ejecución qué capacidades ODBC y qué gramática SQL el controlador y es compatible con cada origen de datos. Esto no es un requisito de las aplicaciones diseñadas para trabajar con un controlador único o un conjunto pequeño, que se conoce de controladores, porque estas aplicaciones simplemente se pueden escribir en las funciones de ese controlador o controladores. Para ayudar a las aplicaciones detectar controlador y capacidades de origen de datos, existen dos áreas de conformidad: la interfaz ODBC y la gramática SQL.  

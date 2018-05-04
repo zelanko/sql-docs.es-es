@@ -1,31 +1,23 @@
 ---
-title: "Creación de medidas en MDX | Documentos de Microsoft"
-ms.custom: 
-ms.date: 03/06/2017
-ms.prod: analysis-services
-ms.prod_service: analysis-services
-ms.service: 
-ms.component: data-mining
-ms.reviewer: 
-ms.suite: pro-bi
-ms.technology: 
-ms.tgt_pltfrm: 
+title: Creación de medidas en MDX | Documentos de Microsoft
+ms.date: 05/02/2018
+ms.prod: sql
+ms.technology: analysis-services
+ms.component: mdx
 ms.topic: article
-ms.assetid: f0347835-4983-4d26-acbb-6c8fae7992bd
-caps.latest.revision: 
-author: Minewiskan
 ms.author: owend
+ms.reviewer: owend
+author: minewiskan
 manager: kfile
-ms.workload: Inactive
-ms.openlocfilehash: d7c10b66d6ba27d406c2682b2aea3b8858c8fd12
-ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
+ms.openlocfilehash: d06bd5f67ae36434a2ce09e3cfd324bcbf20bdc2
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/15/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="mdx-building-measures"></a>Medidas de creación de MDX
 [!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]
-En las expresiones multidimensionales (MDX), una medida es una expresión DAX con nombre que se resuelve calculando la expresión para devolver un valor en un modelo tabular. Esta definición tan genérica tiene un alcance notable. La capacidad de construir y utilizar medias en una consulta MDX proporciona una gran solución para manipular datos tabulares.  
+  En las expresiones multidimensionales (MDX), una medida es una expresión DAX con nombre que se resuelve calculando la expresión para devolver un valor en un modelo tabular. Esta definición tan genérica tiene un alcance notable. La capacidad de construir y utilizar medias en una consulta MDX proporciona una gran solución para manipular datos tabulares.  
   
 > [!WARNING]  
 >  Las medidas solo pueden definirse en modelos tabulares; si la base de datos se establece en modo multidimensional, al crear una medida se generará un error.  
@@ -50,8 +42,8 @@ from [Model]
 |2004|25808962.34||  
   
 ## <a name="see-also"></a>Vea también  
- [CREATE MEMBER, instrucción &#40; MDX &#41;](../../../mdx/mdx-data-definition-create-member.md)   
- [Referencia de funciones MDX &#40; MDX &#41;](../../../mdx/mdx-function-reference-mdx.md)   
- [Instrucción SELECT &#40; MDX &#41;](../../../mdx/mdx-data-manipulation-select.md)  
+ [CREATE MEMBER, instrucción & #40; MDX & #41;](../../../mdx/mdx-data-definition-create-member.md)   
+ [Referencia de funciones MDX & #40; MDX & #41;](../../../mdx/mdx-function-reference-mdx.md)   
+ [Instrucción SELECT & #40; MDX & #41;](../../../mdx/mdx-data-manipulation-select.md)  
   
   

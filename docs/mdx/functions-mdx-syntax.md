@@ -22,12 +22,11 @@ caps.latest.revision: 25
 author: Minewiskan
 ms.author: owend
 manager: erikre
-ms.workload: Inactive
-ms.openlocfilehash: 00259604fe891a21f6f52835b1844762a751f09a
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
-ms.translationtype: MT
+ms.openlocfilehash: 4321a81e2b823ca6ce38f11a0a04cfef2e745f8c
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="functions-mdx-syntax"></a>Funciones (sintaxis de MDX)
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
@@ -35,11 +34,11 @@ ms.lasthandoff: 01/08/2018
   Las expresiones multidimensionales (MDX) incluyen varias categorías de funciones intrínsecas para realizar determinadas operaciones. En la siguiente tabla se incluyen las categorías de funciones disponibles en MDX.  
   
 > [!NOTE]  
->  Para obtener más información acerca de las funciones individuales, consulte [referencia de funciones MDX &#40; MDX &#41; ](../mdx/mdx-function-reference-mdx.md).  
+>  Para obtener más información acerca de las funciones individuales, consulte [referencia de funciones MDX &#40;MDX&#41;](../mdx/mdx-function-reference-mdx.md).  
   
 |Categoría de función|Description|  
 |-----------------------|-----------------|  
-|Funciones de matriz|Proporcionan matrices para su uso en procedimientos almacenados.<br /><br /> Para obtener más información, vea [Using Stored Procedures &#40; MDX &#41; ](../mdx/using-stored-procedures-mdx.md).|  
+|Funciones de matriz|Proporcionan matrices para su uso en procedimientos almacenados.<br /><br /> Para obtener más información, consulte [utilizando procedimientos almacenados &#40;MDX&#41;](../mdx/using-stored-procedures-mdx.md).|  
 |Funciones de dimensión|Devuelven una referencia a una dimensión de una jerarquía, un nivel o un miembro.<br /><br /> Para obtener más información, consulte [utilizando funciones de dimensión, jerarquía y nivel](../mdx/using-dimension-hierarchy-and-level-functions.md).|  
 |Funciones de jerarquía|Devuelven una referencia a una jerarquía de un nivel o un miembro.<br /><br /> Para obtener más información, consulte [utilizando funciones de dimensión, jerarquía y nivel](../mdx/using-dimension-hierarchy-and-level-functions.md).|  
 |Funciones de nivel|Devuelven una referencia a un nivel de un miembro, una dimensión, una jerarquía o una expresión de cadena.<br /><br /> Para obtener más información, consulte [utilizando funciones de dimensión, jerarquía y nivel](../mdx/using-dimension-hierarchy-and-level-functions.md).|  
@@ -54,6 +53,6 @@ ms.lasthandoff: 01/08/2018
  Las funciones se pueden usar o incluir en cualquier expresión MDX. También se pueden anidar (usar una función dentro de otra).  
   
 ## <a name="see-also"></a>Vea también  
- [Elementos de sintaxis MDX &#40; MDX &#41;](../mdx/mdx-syntax-elements-mdx.md)  
+ [Elementos de sintaxis MDX &#40;MDX&#41;](../mdx/mdx-syntax-elements-mdx.md)  
   
   

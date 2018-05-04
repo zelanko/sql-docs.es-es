@@ -1,36 +1,23 @@
 ---
 title: Usar DRILLTHROUGH para recuperar datos de origen (MDX) | Documentos de Microsoft
-ms.custom: 
-ms.date: 03/04/2017
-ms.prod: analysis-services
-ms.prod_service: analysis-services
-ms.service: 
-ms.component: data-mining
-ms.reviewer: 
-ms.suite: pro-bi
-ms.technology: 
-ms.tgt_pltfrm: 
+ms.date: 05/02/2018
+ms.prod: sql
+ms.technology: analysis-services
+ms.component: mdx
 ms.topic: article
-helpviewer_keywords:
-- DRILLTHROUGH statement
-- retrieving data
-- queries [MDX], DRILLTHROUGH statement
-- data retrieval [MDX]
-ms.assetid: fe0ab170-25a9-45a8-a377-f71a67f77018
-caps.latest.revision: 
-author: Minewiskan
 ms.author: owend
+ms.reviewer: owend
+author: minewiskan
 manager: kfile
-ms.workload: Inactive
-ms.openlocfilehash: 1749970e49904d8788c08f8be29cd20d189ebca3
-ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
+ms.openlocfilehash: af0ab4491a2ba57521e77723480a8e18850f56ee
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/15/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="mdx-data-manipulation---retrieve-source-data-using-drillthrough"></a>Manipulación de datos MDX - recuperan los datos de origen mediante la obtención de detalles
 [!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]
-Las expresiones multidimensionales (MDX) usan la instrucción [DRILLTHROUGH](../../../mdx/mdx-data-manipulation-drillthrough.md)para recuperar un conjunto de filas de los datos de origen de una celda de cubo.  
+  Las expresiones multidimensionales (MDX) usan la instrucción [DRILLTHROUGH](../../../mdx/mdx-data-manipulation-drillthrough.md)para recuperar un conjunto de filas de los datos de origen de una celda de cubo.  
   
  Para ejecutar una instrucción **DRILLTHROUGH** en un cubo, es preciso definir una acción de obtención de detalles para el cubo en cuestión. Para definir una acción de obtención de detalles, en [!INCLUDE[ssBIDevStudioFull](../../../includes/ssbidevstudiofull-md.md)], en el Diseñador de cubos, en el panel de **Acciones** , en la barra de herramientas, haga clic en **Nueva acción de obtención de detalles**. En la nueva acción de obtención de detalles, especifique el nombre de la acción, el destino, la condición y las columnas que devolverá la instrucción **DRILLTHROUGH** .  
   
@@ -63,6 +50,6 @@ RETURN [Department MeasureGroup].[Department Id], [Employee].[First Name]
 ```  
   
 ## <a name="see-also"></a>Vea también  
- [Manipulación de datos &#40; MDX &#41;](../../../analysis-services/multidimensional-models/mdx/mdx-data-manipulation-manipulating-data.md)  
+ [Manipulación de datos & #40; MDX & #41;](../../../analysis-services/multidimensional-models/mdx/mdx-data-manipulation-manipulating-data.md)  
   
   

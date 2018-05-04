@@ -22,12 +22,11 @@ caps.latest.revision: 34
 author: Minewiskan
 ms.author: owend
 manager: erikre
-ms.workload: Inactive
-ms.openlocfilehash: cec73e5b3c182073cfad14c3605183fe72732d72
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
-ms.translationtype: MT
+ms.openlocfilehash: fed486ce6ec5ad2a2b0edf1f470734ae40e8c2e3
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="cluster-dmx"></a>Cluster (DMX)
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
@@ -53,7 +52,7 @@ Cluster()
  **Clúster** también puede usarse como un `<`referencia a una columna de clúster`>` para un **PredictHistogram** función.  
   
 ## <a name="examples"></a>Ejemplos  
- En el ejemplo siguiente se utiliza una consulta singleton con el [PredictHistogram &#40; DMX &#41;](../dmx/predicthistogram-dmx.md) y funciones para devolver la distancia del caso individual de cada clúster del modelo de minería de datos TM Clustering y la probabilidad de que dicho caso exista en cada clúster del clúster.  
+ En el ejemplo siguiente se utiliza una consulta singleton con el [PredictHistogram &#40;DMX&#41; ](../dmx/predicthistogram-dmx.md) y funciones para devolver la distancia del caso individual de cada clúster del modelo de minería de datos TM Clustering del clúster y la probabilidad de que dicho caso exista en cada clúster.  
   
 ```  
 SELECT  
@@ -69,9 +68,9 @@ FROM
 ```  
   
 ## <a name="see-also"></a>Vea también  
- [ClusterProbability &#40; DMX &#41;](../dmx/clusterprobability-dmx.md)   
- [Extensiones de minería de datos &#40; DMX &#41; Referencia de funciones](../dmx/data-mining-extensions-dmx-function-reference.md)   
- [Funciones &#40; DMX &#41;](../dmx/functions-dmx.md)   
- [Funciones de predicción generales &#40; DMX &#41;](../dmx/general-prediction-functions-dmx.md)  
+ [ClusterProbability &#40;DMX&#41;](../dmx/clusterprobability-dmx.md)   
+ [Extensiones de minería de datos &#40;DMX&#41; Referencia de funciones](../dmx/data-mining-extensions-dmx-function-reference.md)   
+ [Funciones &#40;DMX&#41;](../dmx/functions-dmx.md)   
+ [Funciones de predicción generales &#40;DMX&#41;](../dmx/general-prediction-functions-dmx.md)  
   
   

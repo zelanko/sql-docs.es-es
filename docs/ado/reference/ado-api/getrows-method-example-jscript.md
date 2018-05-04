@@ -21,12 +21,11 @@ caps.latest.revision: 10
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: eba9296e18e8a25613c73b23bf4b0858eb341cb6
-ms.sourcegitcommit: bb044a48a6af9b9d8edb178dc8c8bd5658b9ff68
-ms.translationtype: MT
+ms.openlocfilehash: 9fe2b9d9eb662504dccf53a702f8d249b71d674f
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/18/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="getrows-method-example-jscript"></a>Ejemplo del método GetRows (JScript)
 Este ejemplo se utiliza la [GetRows](../../../ado/reference/ado-api/getrows-method-ado.md) método para recuperar todas las filas de la *Customers* tabla desde una [Recordset](../../../ado/reference/ado-api/recordset-object-ado.md) y rellenar una matriz con los datos resultantes. El **GetRows** método devolverá un menor que el número deseado de filas en dos casos: cualquier if [EOF](../../../ado/reference/ado-api/bof-eof-properties-ado.md) se ha alcanzado, o si **GetRows** intentó recuperar un registro que era eliminada por otro usuario. La función devuelve **False** sólo si se produce el segundo caso. Corte y pegue el código siguiente en el Bloc de notas u otro editor de texto y guárdelo como **GetRowsJS.asp**.  

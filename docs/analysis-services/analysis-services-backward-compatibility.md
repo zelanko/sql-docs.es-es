@@ -1,15 +1,15 @@
 ---
 title: Compatibilidad con versiones anteriores de SQL Server 2016 Analysis Services | Documentos de Microsoft
-ms.custom: 
+ms.custom: ''
 ms.date: 07/11/2017
 ms.prod: analysis-services
 ms.prod_service: analysis-services
-ms.service: 
-ms.component: 
-ms.reviewer: 
+ms.service: ''
+ms.component: ''
+ms.reviewer: ''
 ms.suite: pro-bi
-ms.technology: 
-ms.tgt_pltfrm: 
+ms.technology: ''
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - installing Analysis Services, backward compatibility
@@ -20,16 +20,15 @@ helpviewer_keywords:
 - SSAS, backward compatibility
 - SQL Server Analysis Services, backward compatibility
 ms.assetid: 618b6c3a-e20d-47a9-b2c6-6d848dfba05a
-caps.latest.revision: "38"
+caps.latest.revision: 38
 author: Minewiskan
 ms.author: owend
 manager: kfile
-ms.workload: Inactive
-ms.openlocfilehash: dbefbaac019a9e7b4193162384469524336cb430
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
-ms.translationtype: MT
+ms.openlocfilehash: b2937fa0d0f5d096d2d415c22cd6353ad55187a6
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="analysis-services-backward-compatibility-sql-server-2016"></a>Compatibilidad con versiones anteriores de Analysis Services (SQL Server 2016)
 [!INCLUDE[ssas-appliesto-sql2016](../includes/ssas-appliesto-sql2016.md)]
@@ -52,7 +51,7 @@ Las siguientes características están en desuso en esta versión:
 |Multidimensional|Cubos de sesión. No hay ninguna sustitución.|  
 |Multidimensional|Cubos locales. No hay ninguna sustitución.|  
 |Tabular|Los niveles de compatibilidad 1100 y 1103 del modelo tabular no se admitirán en futuras versiones. La sustitución es establecer los modelos en el nivel de compatibilidad 1200 o superior, convertir las definiciones de modelo en metadatos tabulares. Consulte [Nivel de compatibilidad para modelos tabulares de Analysis Services](../analysis-services/tabular-models/compatibility-level-for-tabular-models-in-analysis-services.md).|  
-|Herramientas|SQL Server Profiler para captura de seguimiento<br /><br /> La sustitución es usar el Generador de perfiles de eventos extendidos integrado en SQL Server Management Studio.  <br /> Consulte [Monitor Analysis Services with SQL Server Extended Events](../analysis-services/instances/monitor-analysis-services-with-sql-server-extended-events.md).|  
+|Herramientas|SQL Server Profiler para captura de seguimiento<br /><br /> La sustitución es usar el Generador de perfiles de eventos extendidos integrado en SQL Server Management Studio.  <br /> Consulte [Supervisar Analysis Services con SQL Server Extended Events](../analysis-services/instances/monitor-analysis-services-with-sql-server-extended-events.md).|  
 |Herramientas|Server Profiler para reproducción de seguimiento <br />Sustitución. No hay ninguna sustitución.|  
 |Objetos de administración de seguimiento y API de seguimiento|Objetos de Microsoft.AnalysisServices.Trace (contiene las API para los objetos Trace y Replay de Analysis Services). La sustitución abarca varias partes:<br /><br /> -Configuración de seguimiento: Microsoft.SqlServer.Management.XEvent<br />: Hacer seguimiento de lectura: Microsoft.SqlServer.XEvent.Linq<br />- Reproducción de seguimiento: ninguna|  
   
@@ -83,7 +82,7 @@ Un *cambio brusco* hace que un modelo de datos, el código de aplicación o el s
  Las bibliotecas de cliente de Analysis Services Management Objects (AMO), ADOMD.NET y el modelo de objeto Tabular (TOM) ahora orientados al runtime de .NET 4.0. Esto puede ser un cambio importante para las aplicaciones que tienen como destino .NET 3.5. Las aplicaciones que usan versiones más recientes de estos ensamblados ahora deben tener como destino .NET 4.0 o versiones posteriores.  
   
 ### <a name="amo-version-upgrade"></a>Actualización de la versión de AMO  
- Esta versión es una actualización de versión para [objetos de administración de Analysis Services &#40; AMO &#41; ](https://msdn.microsoft.com/library/mt436122.aspx) y es una novedad en determinadas circunstancias.  Los scripts y el código existentes que llaman a AMO seguirán ejecutándose como antes si actualiza desde una versión anterior. Sin embargo, si necesita *recompilar* la aplicación y se dirige a una instancia de SQL Server 2016 Analysis Services, debe agregar el siguiente espacio de nombres para que el código o el script operativa:  
+ Esta versión es una actualización de versión para [objetos de administración de Analysis Services &#40;AMO&#41; ](https://msdn.microsoft.com/library/mt436122.aspx) y es una novedad en determinadas circunstancias.  Los scripts y el código existentes que llaman a AMO seguirán ejecutándose como antes si actualiza desde una versión anterior. Sin embargo, si necesita *recompilar* la aplicación y se dirige a una instancia de SQL Server 2016 Analysis Services, debe agregar el siguiente espacio de nombres para que el código o el script operativa:  
   
 ```  
   

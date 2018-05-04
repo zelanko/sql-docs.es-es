@@ -1,31 +1,23 @@
 ---
 title: Subselecciones en las consultas | Documentos de Microsoft
-ms.custom: 
-ms.date: 03/16/2017
-ms.prod: analysis-services
-ms.prod_service: analysis-services
-ms.service: 
-ms.component: data-mining
-ms.reviewer: 
-ms.suite: pro-bi
-ms.technology: 
-ms.tgt_pltfrm: 
+ms.date: 05/02/2018
+ms.prod: sql
+ms.technology: analysis-services
+ms.component: mdx
 ms.topic: article
-ms.assetid: 9e361798-688e-4b11-9eef-31fc793e8ba4
-caps.latest.revision: 
-author: Minewiskan
 ms.author: owend
+ms.reviewer: owend
+author: minewiskan
 manager: kfile
-ms.workload: On Demand
-ms.openlocfilehash: 32dfe1b5c7367121bd36dae57d0175304fc2fe14
-ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
+ms.openlocfilehash: 66511a7fb1306f5168bb3476a58017c16e9762ed
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/15/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="subselects-in-queries"></a>Subselecciones en las consultas
 [!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]
-Las expresiones de subselección son expresiones SELECT anidadas que se utilizan para restringir el espacio del cubo donde se evalúa la instrucción SELECT externa exterior. Las subselecciones permiten definir un nuevo espacio en el que se evalúan todos los cálculos.  
+  Las expresiones de subselección son expresiones SELECT anidadas que se utilizan para restringir el espacio del cubo donde se evalúa la instrucción SELECT externa exterior. Las subselecciones permiten definir un nuevo espacio en el que se evalúan todos los cálculos.  
   
 ## <a name="subselects-by-example"></a>Ejemplo de subselecciones  
  Comencemos con un ejemplo de cómo pueden ayudar las subselecciones a generar los resultados que deseamos mostrar. Suponga que le solicitan que genere una tabla que muestra el comportamiento de las ventas, a través de varios años, de los diez productos más vendidos.  
@@ -356,6 +348,6 @@ SELECT [Sales Territory].[Sales Territory Region].MEMBERS on 0
   
 -   La cláusula HAVING no se permite en una cláusula de eje; use una expresión de la función [Filter &#40;MDX&#41;](../../../mdx/filter-mdx.md) en su lugar.  
   
--   De forma predeterminada, los miembros calculados no se permiten en subselecciones; Sin embargo, esta restricción se puede cambiar, en una base por cada sesión, asignando un valor a la **subconsultas** propiedad de cadena de conexión en <xref:Microsoft.AnalysisServices.AdomdClient.AdomdConnection.ConnectionString%2A> o **DBPROP_MSMD_SUBQUERIES** propiedad en [ Propiedades XMLA compatibles &#40; XMLA &#41; ](../../../analysis-services/xmla/xml-elements-properties/propertylist-element-supported-xmla-properties.md). Vea [Miembros calculados en subselecciones y subcubos](../../../analysis-services/multidimensional-models/mdx/calculated-members-in-subselects-and-subcubes.md) para obtener una explicación detallada del comportamiento de los miembros calculados según los valores de **SubQueries** o **DBPROP_MSMD_SUBQUERIES**.  
+-   De forma predeterminada, los miembros calculados no se permiten en subselecciones; Sin embargo, esta restricción se puede cambiar, en una base por cada sesión, asignando un valor a la **subconsultas** propiedad de cadena de conexión en <xref:Microsoft.AnalysisServices.AdomdClient.AdomdConnection.ConnectionString%2A> o **DBPROP_MSMD_SUBQUERIES** propiedad en [ Propiedades XMLA compatibles &#40;XMLA&#41;](../../../analysis-services/xmla/xml-elements-properties/propertylist-element-supported-xmla-properties.md). Vea [Miembros calculados en subselecciones y subcubos](../../../analysis-services/multidimensional-models/mdx/calculated-members-in-subselects-and-subcubes.md) para obtener una explicación detallada del comportamiento de los miembros calculados según los valores de **SubQueries** o **DBPROP_MSMD_SUBQUERIES**.  
   
   

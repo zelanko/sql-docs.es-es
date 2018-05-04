@@ -19,12 +19,11 @@ caps.latest.revision: 14
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: 585d16d19f26bca19acb62b16cf6c48f52515677
-ms.sourcegitcommit: bb044a48a6af9b9d8edb178dc8c8bd5658b9ff68
-ms.translationtype: MT
+ms.openlocfilehash: 6be2159907d58f6799a2ca7b4ffb685f524baacc
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/18/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="step-6-changes-are-sent-to-the-server-rds-tutorial"></a>Paso 6: Los cambios se envían al servidor (Tutorial de RDS)
 Si el **Recordset** se edita el objeto, cualquier cambio (es decir, las filas que se agregan, cambian o eliminan) puede enviarse al servidor.  

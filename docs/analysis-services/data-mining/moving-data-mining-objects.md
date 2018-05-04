@@ -1,16 +1,16 @@
 ---
-title: "Mover objetos de minería de datos | Documentos de Microsoft"
-ms.custom: 
+title: Mover objetos de minería de datos | Documentos de Microsoft
+ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: analysis-services
 ms.prod_service: analysis-services
-ms.service: 
+ms.service: ''
 ms.component: data-mining
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: pro-bi
-ms.technology: 
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.technology: ''
+ms.tgt_pltfrm: ''
+ms.topic: conceptual
 helpviewer_keywords:
 - data mining [Analysis Services], models
 - data mining editor [Analysis Services]
@@ -18,20 +18,19 @@ helpviewer_keywords:
 - Data Mining Designer
 - mining models [Analysis Services], modifying
 ms.assetid: bc108407-2603-4387-b930-b5bb9df78069
-caps.latest.revision: 
+caps.latest.revision: 45
 author: Minewiskan
 ms.author: owend
 manager: kfile
-ms.workload: Inactive
-ms.openlocfilehash: c43da2044b4f3231d947c88626cb43081fb29f6a
-ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
-ms.translationtype: MT
+ms.openlocfilehash: 9d542908c4690e1f5fdf756ce5d3e030f914b3f8
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/15/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="moving-data-mining-objects"></a>Mover objetos de minería de datos
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
-Los escenarios más frecuentes para mover objetos de minería de datos son implementar un modelo de un entorno de prueba o de análisis en un entorno de producción, o compartir modelos con otros usuarios.  
+  Los escenarios más frecuentes para mover objetos de minería de datos son implementar un modelo de un entorno de prueba o de análisis en un entorno de producción, o compartir modelos con otros usuarios.  
   
  En este tema se describe cómo usar las herramientas y los lenguajes de scripting que proporciona [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)], para mover objetos de minería de datos.  
   
@@ -54,7 +53,7 @@ Los escenarios más frecuentes para mover objetos de minería de datos son imple
  Para más información sobre cómo implementar soluciones de Analysis Services, vea [Implementar proyectos de Analysis Services &#40;SSDT&#41;](../../analysis-services/multidimensional-models/deploy-analysis-services-projects-ssdt.md).  
   
 ### <a name="scripting"></a>Scripting  
- [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] proporciona varios lenguajes que puede utilizar para crear scripts de objetos.  
+ [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]proporciona varios lenguajes que puede usar para crear scripts de objetos.  
   
 -   **XMLA**: puede incluir objetos con XMLA si hace clic con el botón derecho en objetos de [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]. Para ejecutar el script, ábralo en una ventana de **Consulta XMLA** en el servidor de destino.  
   
@@ -80,9 +79,9 @@ Los escenarios más frecuentes para mover objetos de minería de datos son imple
 ### <a name="exporting-and-importing"></a>Exportación e importación  
  Exportar y volver a importar después modelos y estructuras de minería de datos utilizando instrucciones DMX es la forma más fácil de mover o hacer copias de seguridad de objetos de minería de datos relacionales individuales. Para obtener más información sobre la sintaxis DMX para estas operaciones, vea los temas siguientes:  
   
--   [EXPORTAR &#40; DMX &#41;](../../dmx/export-dmx.md)  
+-   [EXPORTAR & #40; DMX & #41;](../../dmx/export-dmx.md)  
   
--   [IMPORTAR &#40; DMX &#41;](../../dmx/import-dmx.md)  
+-   [IMPORTAR & #40; DMX & #41;](../../dmx/import-dmx.md)  
   
  Si especifica la opción INCLUDE DEPENDENCIES, [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] también exportará la definición de las vistas del origen de datos necesarias y, al importar el modelo o la estructura, volverá a crear la vista del origen de datos en el servidor de destino. Cuando termine de importar el modelo, asegúrese de establecer los permisos de minería de datos necesarios en el objeto.  
   

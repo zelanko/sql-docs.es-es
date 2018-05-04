@@ -11,7 +11,7 @@ ms.suite: sql
 ms.technology:
 - drivers
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - ODBC [ODBC], database access
 - SQL [ODBC], database access
@@ -23,12 +23,11 @@ caps.latest.revision: 5
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: c91448833c6dacecaadfa4b0c11892e1a0c5e439
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
-ms.translationtype: MT
+ms.openlocfilehash: f9f86769510e7f9bd83cbab27ae99643b15b34e9
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="standard-programming-interface"></a>Interfaz de programación estándar
 La interfaz de programación es quizás la más obvio candidato para la estandarización. De hecho, cuando se estaba desarrollando ODBC, ANSI e ISO ya proporcionan estándares para embedded SQL y SQL módulos. Aunque no estándares existían para una base de datos CLI, el grupo de acceso de SQL: un consorcio de la industria de proveedores de base de datos, se considere la posibilidad de crear uno; partes de ODBC más adelante se convirtió en la base de su trabajo.  

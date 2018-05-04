@@ -1,41 +1,23 @@
 ---
-title: "Clasifica columnas (minería de datos) | Documentos de Microsoft"
-ms.custom: 
-ms.date: 03/13/2017
-ms.prod: analysis-services
-ms.prod_service: analysis-services
-ms.service: 
+title: Clasifica columnas (minería de datos) | Documentos de Microsoft
+ms.date: 05/01/2018
+ms.prod: sql
+ms.technology: analysis-services
 ms.component: data-mining
-ms.reviewer: 
-ms.suite: pro-bi
-ms.technology: 
-ms.tgt_pltfrm: 
 ms.topic: article
-helpviewer_keywords:
-- content types [data mining]
-- STDEV column
-- VARIANCE column
-- PROBABLILITY column
-- PROBABILITY_STDEV column
-- columns [data mining], classified
-- classified columns [data mining]
-- PROBABILITY_VARIANCE column
-- SUPPORT column
-ms.assetid: 68bf3b78-dc12-497c-898f-b43a45646123
-caps.latest.revision: 
-author: Minewiskan
 ms.author: owend
+ms.reviewer: owend
+author: minewiskan
 manager: kfile
-ms.workload: Inactive
-ms.openlocfilehash: 02792608fce3f2cca0c1bf78e5215b1a0b607a1e
-ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
+ms.openlocfilehash: 9fcd5aac5f5384f62b4fe4cd53f480ac70f69a63
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/15/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="classified-columns-data-mining"></a>Columnas clasificadas (Minería de datos)
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
-Cuando se define una columna clasificada, se crea una relación entre la columna actual y otra columna de la estructura de minería de datos. La columna de la estructura de minería de datos que se designa como columna clasificada contiene información sobre categorías que describe los valores de otra columna de la estructura de minería de datos.  
+  Cuando se define una columna clasificada, se crea una relación entre la columna actual y otra columna de la estructura de minería de datos. La columna de la estructura de minería de datos que se designa como columna clasificada contiene información sobre categorías que describe los valores de otra columna de la estructura de minería de datos.  
   
  Por ejemplo, imagine que tiene dos columnas con datos numéricos: una columna, [Compras anuales], contiene las compras totales que realiza cada cliente durante un año natural determinado, mientras que la otra columna, [Desviaciones estándar], contiene las desviaciones estándar para esos valores. En este caso, podría designar la columna [Compras anuales] como columna clasificada y el modelo podría usar esta relación en el análisis.  
   
@@ -66,8 +48,8 @@ Cuando se define una columna clasificada, se crea una relación entre la columna
  El valor de la columna es el peso, o factor de replicación del caso, del valor asociado.  
   
 ## <a name="see-also"></a>Vea también  
- [Contenido tipos &#40; minería de datos &#41;](../../analysis-services/data-mining/content-types-data-mining.md)   
- [Estructuras de minería de datos &#40; Analysis Services: minería de datos &#41;](../../analysis-services/data-mining/mining-structures-analysis-services-data-mining.md)   
- [Tipos de datos &#40; minería de datos &#41;](../../analysis-services/data-mining/data-types-data-mining.md)  
+ [Contenido tipos & #40; minería de datos & #41;](../../analysis-services/data-mining/content-types-data-mining.md)   
+ [Estructuras de minería de datos & #40; Analysis Services: minería de datos & #41;](../../analysis-services/data-mining/mining-structures-analysis-services-data-mining.md)   
+ [Tipos de datos & #40; minería de datos & #41;](../../analysis-services/data-mining/data-types-data-mining.md)  
   
   

@@ -26,13 +26,12 @@ caps.latest.revision: 46
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.workload: On Demand
 monikerRange: = azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: a1ca935166f5d7f955594aafc2e8ff96ee566d8d
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
-ms.translationtype: MT
+ms.openlocfilehash: d6d384e280defcef14dd93b64ae47b604ecc6466
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="sysdmsqlreferencedentities-transact-sql"></a>sys.dm_sql_referenced_entities (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -103,7 +102,7 @@ sys.dm_sql_referenced_entities (
 |is_select_all|**bit**|**Se aplica a**: desde [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] hasta [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].<br /><br /> 1= El objeto se usa en la cláusula SELECT * (solo en el nivel de objeto).|  
 |is_all_columns_found|**bit**|**Se aplica a**: desde [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] hasta [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].<br /><br /> 1 = Se pueden encontrar todas las dependencias de columna del objeto.<br /><br /> 0 = No se pueden encontrar las dependencias de columna del objeto.|
 |is_insert_all|**bit**|**Se aplica a**: desde [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] hasta [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].<br /><br /> 1 = el objeto se usa en una instrucción INSERT sin una lista de columnas (solo nivel de objeto).|  
-|is_incomplete|**bit**|**Se aplica a**: [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] SP2 a través de [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].<br /><br /> 1 = el objeto o columna tiene un error de enlace y está incompleta.|
+|is_incomplete|**bit**|**Se aplica a**: de [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] SP2 a [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].<br /><br /> 1 = el objeto o columna tiene un error de enlace y está incompleta.|
   
 ## <a name="exceptions"></a>Excepciones  
  Devuelve un conjunto de resultados vacío si se da alguna de las condiciones siguientes:  

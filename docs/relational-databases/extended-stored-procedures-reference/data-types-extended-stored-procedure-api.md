@@ -20,12 +20,11 @@ caps.latest.revision: 29
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: 7c7fd67d6b49aef0c3977b544a114d42c22751af
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
+ms.openlocfilehash: 9f983be0f313026f054c14e99b80751a9dc140da
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="data-types-extended-stored-procedure-api"></a>Tipos de datos (API de procedimiento almacenado extendido)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -52,7 +51,7 @@ ms.lasthandoff: 04/16/2018
 |SRVDECIMALN|**decimal null**|Tipo de datos **decimal**, permite valores NULL.|  
 |SRVFLT4|**real**|Tipo de datos **real** de 4 bytes.|  
 |SRVFLT8|**float**|Tipo de datos **float** de 8 bytes.|  
-|SRVFLTN|**real** &#124; **float es null**|Tipo de datos **real** o **float**, permite valores NULL.|  
+|SRVFLTN|**real** &#124; **float null**|Tipo de datos **real** o **float**, permite valores NULL.|  
 |SRVIMAGE|**imagen**|Tipo de datos **image**.|  
 |SRVINT1|**tinyint**|Tipo de datos **tinyint** de 1 byte.|  
 |SRVINT2|**smallint**|Tipo de datos **smallint** de 2 bytes.|  
@@ -60,7 +59,7 @@ ms.lasthandoff: 04/16/2018
 |SRVINTN|**tinyint** &#124; **smallint** &#124; **int null**|Tipo de datos **tinyint**, **smallint** o **int**, permite valores NULL.|  
 |SRVMONEY4|**smallmoney**|Tipo de datos **smallmoney** de 4 bytes.|  
 |SRVMONEY|**money**|Tipo de datos **money** de 8 bytes.|  
-|SRVMONEYN|**Money** &#124; **smallmoney null**|Tipo de datos **smallmoney** o **money**, permite valores NULL.|  
+|SRVMONEYN|**money** &#124; **smallmoney null**|Tipo de datos **smallmoney** o **money**, permite valores NULL.|  
 |SRVNCHAR|**nchar**|Tipo de datos **character** Unicode.|  
 |SRVNTEXT|**ntext**|Tipo de datos **text** Unicode.|  
 |SRVNUMERIC|**numeric**|Tipo de datos **numeric**.|  

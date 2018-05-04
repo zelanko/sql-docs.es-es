@@ -11,7 +11,7 @@ ms.suite: sql
 ms.technology:
 - drivers
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - data types [ODBC], C data types
 - C data types [ODBC], about C data types
@@ -21,19 +21,18 @@ caps.latest.revision: 26
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: 05a8ce31caf23a29a51cd9329c2c85950e15580e
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
-ms.translationtype: MT
+ms.openlocfilehash: 815dcb47a34d2e0729111b2a34693f1e6f4de557
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="c-data-types-in-odbc"></a>Tipos de datos C en ODBC
 ODBC define los tipos de datos de C que usan variables de aplicación y sus identificadores de tipo correspondiente. Se utilizan por los búferes que están enlazados a columnas del conjunto de resultados y parámetros de la instrucción. Por ejemplo, supongamos que desea que una aplicación recuperar datos de una columna de conjunto de resultados en formato de caracteres. Declara una variable con el SQLCHAR * tipo de datos y enlaza esta variable a la columna del conjunto de resultados con un identificador de tipo de SQL_C_CHAR. Para obtener una lista completa de tipos de datos de C y los identificadores de tipo, consulte [tipos de datos de apéndice D:](../../../odbc/reference/appendixes/appendix-d-data-types.md).  
   
  ODBC también define una asignación predeterminada de cada tipo de datos SQL a un tipo de datos de C. Por ejemplo, un entero de 2 bytes en el origen de datos se asigna a un entero de 2 bytes en la aplicación. Para usar la asignación predeterminada, una aplicación especifica el identificador de tipo SQL_C_DEFAULT. Sin embargo, el uso de este identificador se desaconseja por motivos de interoperabilidad.  
   
- Todos los tipos de datos entero C definidos en ODBC 1*.x* han sido firmadas. Se han agregado los tipos de datos de C sin signo y sus identificadores de tipo correspondiente en ODBC 2.0. Por este motivo, las aplicaciones y controladores necesitan tener especial cuidado cuando se trabaja con 1*.x* versiones.  
+ Todos los tipos de datos entero C definidos en ODBC 1 *.x* han sido firmadas. Se han agregado los tipos de datos de C sin signo y sus identificadores de tipo correspondiente en ODBC 2.0. Por este motivo, las aplicaciones y controladores necesitan tener especial cuidado cuando se trabaja con 1 *.x* versiones.  
   
 ## <a name="c-data-type-extensibility"></a>Extensibilidad del tipo de datos c.  
  En ODBC 3.8, puede especificar tipos de datos C específicos del controlador. Esto le permite enlazar un tipo SQL como un tipo de C específicos del controlador en las aplicaciones ODBC cuando se llama a [SQLBindCol](../../../odbc/reference/syntax/sqlbindcol-function.md), [SQLGetData](../../../odbc/reference/syntax/sqlgetdata-function.md), o [SQLBindParameter](../../../odbc/reference/syntax/sqlbindparameter-function.md). Esto puede ser útil para admitir nuevos tipos de servidor, porque los tipos de datos C existentes podrían no representar correctamente los nuevos tipos de datos de servidor. Uso de tipos de C específicos del controlador puede aumentar el número de conversiones que pueden realizar los controladores.  

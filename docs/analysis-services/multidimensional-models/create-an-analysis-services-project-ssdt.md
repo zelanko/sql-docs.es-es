@@ -1,38 +1,23 @@
 ---
 title: Crear un proyecto de Analysis Services (SSDT) | Documentos de Microsoft
-ms.custom: 
-ms.date: 03/14/2017
-ms.prod: analysis-services
-ms.prod_service: analysis-services
-ms.service: 
-ms.component: data-mining
-ms.reviewer: 
-ms.suite: pro-bi
-ms.technology: 
-ms.tgt_pltfrm: 
+ms.date: 05/02/2018
+ms.prod: sql
+ms.technology: analysis-services
+ms.component: multidimensional-models
 ms.topic: article
-helpviewer_keywords:
-- templates [Analysis Services]
-- templates [Analysis Services], projects
-- projects [Analysis Services], creating
-- projects [Analysis Services], Business Intelligence Development Studio
-- Business Intelligence Development Studio, defining projects [Analysis Services]
-- items [Analysis Services]
-ms.assetid: d00913b0-cd6d-4de0-a1e7-4ce86fcc078d
-caps.latest.revision: 
-author: Minewiskan
 ms.author: owend
+ms.reviewer: owend
+author: minewiskan
 manager: kfile
-ms.workload: On Demand
-ms.openlocfilehash: 366c0e4f2a3238ac9e2552553f1492b9a41b46e7
-ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
+ms.openlocfilehash: 6824b479cddc6dba7011e2343572c7fd7f64760f
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/15/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="create-an-analysis-services-project-ssdt"></a>Crear un proyecto de Analysis Services (SSDT)
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
-Puede definir un proyecto de [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] en [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] usando la plantilla de proyecto de [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] o el Asistente para importar bases de datos de [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] a fin de leer el contenido de una base de datos de [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] . Si no hay ninguna solución cargada en [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)], la creación de un nuevo proyecto de [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] crea automáticamente una nueva solución. De lo contrario, el nuevo proyecto de [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] se agregará a la solución existente. Las prácticas recomendadas para el desarrollo de soluciones pasan por crear proyectos distintos para diferentes tipos de datos de aplicación, usando una única solución si los proyectos están relacionados. Por ejemplo, puede tener una solución que contiene proyectos distintos para los paquetes de Integration Services, las bases de datos de Analysis Services y los informes de Reporting Services que usa la misma aplicación empresarial.  
+  Puede definir un proyecto de [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] en [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] usando la plantilla de proyecto de [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] o el Asistente para importar bases de datos de [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] a fin de leer el contenido de una base de datos de [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] . Si no hay ninguna solución cargada en [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)], la creación de un nuevo proyecto de [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] crea automáticamente una nueva solución. De lo contrario, el nuevo proyecto de [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] se agregará a la solución existente. Las prácticas recomendadas para el desarrollo de soluciones pasan por crear proyectos distintos para diferentes tipos de datos de aplicación, usando una única solución si los proyectos están relacionados. Por ejemplo, puede tener una solución que contiene proyectos distintos para los paquetes de Integration Services, las bases de datos de Analysis Services y los informes de Reporting Services que usa la misma aplicación empresarial.  
   
  Un proyecto de Analysis Services contiene objetos que se usan en una única base de datos de Analysis Services. Las propiedades de implementación del proyecto especifican el nombre del servidor y de la base de datos mediante los que se implementarán los metadatos del proyecto como objetos con instancias.  
   
@@ -141,8 +126,8 @@ Puede definir un proyecto de [!INCLUDE[ssASnoversion](../../includes/ssasnoversi
   
 |Tipo de archivo|Description|  
 |---------------|-----------------|  
-|[!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] archivo de definición de proyecto (.dwproj)|Contiene metadatos sobre los elementos, las configuraciones y las referencias de ensamblado definidos e incluidos en el proyecto de [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] .|  
-|[!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] configuración de usuario de proyecto (.dwproj.user)|Contiene información de configuración del proyecto de [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] para un usuario específico.|  
+|[!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]archivo de definición de proyecto (.dwproj)|Contiene metadatos sobre los elementos, las configuraciones y las referencias de ensamblado definidos e incluidos en el proyecto de [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] .|  
+|Configuración de usuario de proyecto de [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] (.dwproj.user)|Contiene información de configuración del proyecto de [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] para un usuario específico.|  
 |Archivo de origen de datos (.ds)|Contiene elementos ASSL (Lenguaje de scripting de [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] ) que definen los metadatos de un origen de datos.|  
 |Archivo de vista del origen de datos (.dsv)|Contiene elementos ASSL que definen los metadatos de una vista del origen de datos.|  
 |Archivo de cubo (.cube)|Contiene elementos ASSL que definen los metadatos de un cubo, incluyendo grupos de medida, medidas y dimensiones de cubo.|  
@@ -159,7 +144,7 @@ Puede definir un proyecto de [!INCLUDE[ssASnoversion](../../includes/ssasnoversi
   
 |Categoría|Plantilla de elementos|Description|  
 |--------------|-------------------|-----------------|  
-|[!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] Elementos de un proyecto|Cube|Inicia el Asistente para cubos para agregar un nuevo cubo al proyecto de [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] .|  
+|[!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]Elementos de proyecto|Cube|Inicia el Asistente para cubos para agregar un nuevo cubo al proyecto de [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] .|  
 ||Origen de datos|Inicia el Asistente para orígenes de datos para agregar un nuevo origen de datos al proyecto de [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] .|  
 ||Vista del origen de datos|Inicia el Asistente para vistas del origen de datos para agregar una nueva vista del origen de datos al proyecto de [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] .|  
 ||Rol de base de datos|Agrega un nuevo rol de base de datos al proyecto de [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] y, a continuación, muestra el Diseñador de roles para el nuevo rol de base de datos.|  
@@ -167,8 +152,8 @@ Puede definir un proyecto de [!INCLUDE[ssASnoversion](../../includes/ssasnoversi
 ||Estructura de minería de datos|Inicia el Asistente para minería de datos para agregar una nueva estructura de minería de datos y el modelo de minería de datos asociado al proyecto de [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] .|  
   
 ## <a name="see-also"></a>Vea también  
- [Configurar propiedades de proyecto de Analysis Services &#40; SSDT &#41;](../../analysis-services/multidimensional-models/configure-analysis-services-project-properties-ssdt.md)   
- [Compilar proyectos de Analysis Services &#40; SSDT &#41;](../../analysis-services/multidimensional-models/build-analysis-services-projects-ssdt.md)   
- [Implementar proyectos de Analysis Services &#40; SSDT &#41;](../../analysis-services/multidimensional-models/deploy-analysis-services-projects-ssdt.md)  
+ [Configurar propiedades de proyecto de Analysis Services & #40; SSDT & #41;](../../analysis-services/multidimensional-models/configure-analysis-services-project-properties-ssdt.md)   
+ [Compilar proyectos de Analysis Services & #40; SSDT & #41;](../../analysis-services/multidimensional-models/build-analysis-services-projects-ssdt.md)   
+ [Implementar proyectos de Analysis Services & #40; SSDT & #41;](../../analysis-services/multidimensional-models/deploy-analysis-services-projects-ssdt.md)  
   
   

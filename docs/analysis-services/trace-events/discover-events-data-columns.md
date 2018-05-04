@@ -18,15 +18,15 @@ caps.latest.revision: 29
 author: Minewiskan
 ms.author: owend
 manager: kfile
-ms.workload: Inactive
-ms.openlocfilehash: eee3ed0e00d25e255d1cf8de5cc08f0645cdd0dd
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
-ms.translationtype: MT
+ms.openlocfilehash: 6fd8bc663f3d302e7d0c00975c863b40c335946b
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="discover-events-data-columns"></a>Columnas de datos de eventos de detección
-[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]La categoría de eventos de detección tiene las siguientes clases de evento:  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
+  La categoría Eventos de detección tiene las siguientes clases de eventos:  
   
 -   Clase Discover Begin  
   
@@ -66,7 +66,7 @@ ms.lasthandoff: 01/08/2018
 |CurrentTime|2|5|Contiene la hora actual del evento de detección, si está disponible. Para filtrar, los formatos esperados son "AAAA-MM-DD" y "AAAA-MM-DD HH:MM:SS".|  
 |StartTime|3|5|Contiene la hora (si está disponible) a la que se ha iniciado el evento final de detección. Para filtrar, los formatos esperados son "AAAA-MM-DD" y "AAAA-MM-DD HH:MM:SS".|  
 |EndTime|4|5|Contiene la hora a la que finalizó el evento. Esta columna no se llena para las clases de eventos de inicio, como SQL:BatchStarting o SP:Starting. Para filtrar, los formatos esperados son "AAAA-MM-DD" y "AAAA-MM-DD HH:MM:SS".|  
-|Duration|5|2|Contiene el tiempo aproximado (en milisegundos) usado por el evento de detección.|  
+|Duración|5|2|Contiene el tiempo aproximado (en milisegundos) usado por el evento de detección.|  
 |CPUTime|6|2|Contiene la cantidad de tiempo de CPU (en milisegundos) usada por el evento.|  
 |Severity|22|1|Contiene el nivel de gravedad de una excepción.|  
 |Correcto|23|1|Contiene el éxito o el fracaso de un evento de detección. Los valores son:<br /><br /> 0 = Error<br /><br /> 1 = Correcto|  
@@ -84,7 +84,7 @@ ms.lasthandoff: 01/08/2018
 |ServerName|43|8|Contiene el nombre de la instancia de [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] en la que se ha producido el evento de detección.|  
 |RequestProperties|45|9|Contiene las propiedades de la solicitud de XMLA.|  
   
-## <a name="see-also"></a>Ver también  
- [Discover Events Event Category](../../analysis-services/trace-events/discover-events-event-category.md)  
+## <a name="see-also"></a>Vea también  
+ [Detectar la categoría de eventos](../../analysis-services/trace-events/discover-events-event-category.md)  
   
   

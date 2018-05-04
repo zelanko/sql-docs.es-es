@@ -1,30 +1,30 @@
 ---
 title: Eliminar comando (TMSL) | Documentos de Microsoft
-ms.custom: 
+ms.custom: ''
 ms.date: 05/30/2017
 ms.prod: analysis-services
 ms.prod_service: analysis-services, azure-analysis-services
-ms.service: 
-ms.component: 
-ms.reviewer: 
+ms.service: ''
+ms.component: ''
+ms.reviewer: ''
 ms.suite: pro-bi
-ms.technology: 
-ms.tgt_pltfrm: 
+ms.technology: ''
+ms.tgt_pltfrm: ''
 ms.topic: reference
 ms.assetid: 05d3fb14-ea03-4596-ac2e-9ae5bab27b4d
-caps.latest.revision: "9"
+caps.latest.revision: 9
 author: Minewiskan
 ms.author: owend
 manager: kfile
-ms.workload: Inactive
-ms.openlocfilehash: edb54bdecdabdfccac8664d3bb8a5e98633f8ddb
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
-ms.translationtype: MT
+ms.openlocfilehash: addd101df8e9b589620d3460f4003d4eaef10dd2
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="delete-command-tmsl"></a>Eliminar comando (TMSL)
-[!INCLUDE[ssas-appliesto-sqlas-aas](../../includes/ssas-appliesto-sqlas-aas.md)]Elimina una base de datos o un objeto en la base de datos actual.   
+[!INCLUDE[ssas-appliesto-sqlas-aas](../../includes/ssas-appliesto-sqlas-aas.md)]
+  Elimina una base de datos o un objeto en la base de datos actual.   
 Elimina el objeto especificado y todas las colecciones y los objetos secundarios. Si el objeto no existe, el comando genera un error.  
   
 ## <a name="request"></a>Solicitud  
@@ -44,7 +44,7 @@ Elimina el objeto especificado y todas las colecciones y los objetos secundarios
   
  Puede eliminar los siguientes objetos:  
   
- [Objeto de base de datos &#40; TMSL &#41;](../../analysis-services/tabular-models-scripting-language-objects/database-object-tmsl.md)  
+ [Objeto de base de datos &#40;TMSL&#41;](../../analysis-services/tabular-models-scripting-language-objects/database-object-tmsl.md)  
   
 ```  
 {   
@@ -56,7 +56,7 @@ Elimina el objeto especificado y todas las colecciones y los objetos secundarios
 }   
 ```  
   
- [Objeto de orígenes de datos &#40; TMSL &#41;](../../analysis-services/tabular-models-scripting-language-objects/datasources-object-tmsl.md)  
+ [Objeto de orígenes de datos &#40;TMSL&#41;](../../analysis-services/tabular-models-scripting-language-objects/datasources-object-tmsl.md)  
   
 ```  
 {  
@@ -69,7 +69,7 @@ Elimina el objeto especificado y todas las colecciones y los objetos secundarios
 }  
 ```  
   
- [Objeto de tablas &#40; TMSL &#41;](../../analysis-services/tabular-models-scripting-language-objects/tables-object-tmsl.md)  
+ [Tables, objeto &#40;TMSL&#41;](../../analysis-services/tabular-models-scripting-language-objects/tables-object-tmsl.md)  
   
 ```  
 {   
@@ -82,7 +82,7 @@ Elimina el objeto especificado y todas las colecciones y los objetos secundarios
 }   
 ```  
   
- [Objeto de particiones &#40; TMSL &#41;](../../analysis-services/tabular-models-scripting-language-objects/partitions-object-tmsl.md)  
+ [Objeto de particiones &#40;TMSL&#41;](../../analysis-services/tabular-models-scripting-language-objects/partitions-object-tmsl.md)  
   
 ```  
 {   
@@ -96,7 +96,7 @@ Elimina el objeto especificado y todas las colecciones y los objetos secundarios
 }   
 ```  
   
- [Objeto de roles &#40; TMSL &#41;](../../analysis-services/tabular-models-scripting-language-objects/roles-object-tmsl.md)  
+ [Objeto de los roles &#40;TMSL&#41;](../../analysis-services/tabular-models-scripting-language-objects/roles-object-tmsl.md)  
   
 ```  
 {   
@@ -139,7 +139,7 @@ Elimina el objeto especificado y todas las colecciones y los objetos secundarios
 ```  
   
 ## <a name="usage-endpoints"></a>Uso (extremos)  
- Este elemento de comando se utiliza en una instrucción de la [Execute Method &#40; XMLA &#41; ](../../analysis-services/xmla/xml-elements-methods-execute.md) llamada a través de un punto de conexión XMLA, expuesto de las maneras siguientes:  
+ Este elemento de comando se utiliza en una instrucción de la [Execute Method &#40;XMLA&#41; ](../../analysis-services/xmla/xml-elements-methods-execute.md) llamada a través de un punto de conexión XMLA, expuesto de las maneras siguientes:  
   
 -   Como una ventana XMLA en SQL Server Management Studio (SSMS)  
   
@@ -149,7 +149,7 @@ Elimina el objeto especificado y todas las colecciones y los objetos secundarios
   
  Puede generar un script listos para su uso para este comando de SSMS.  Por ejemplo, haga clic en una base de datos > **Script** > **base de datos de secuencia de comandos como** > **DELETE To**.  
   
- El [ \[MS-SSAS-T\]: QL Server Tabular de Analysis Services (protocolo técnica de SQL Server)](http://go.microsoft.com/fwlink/p/?LinkId=784855) documento incluye sección 3.1.5.2.2 que describe la estructura de comandos de metadatos tabulares de JSON y objetos. Actualmente, dicho documento tratan comandos y las funciones que aún no implementados en el script de TMSL. Consulte el tema [Tabular Model Scripting Language &#40; TMSL &#41; Referencia](../../analysis-services/tabular-model-scripting-language-tmsl-reference.md) para aclarar lo que es compatible.  
+ El [ \[MS-SSAS-T\]: QL Server Tabular de Analysis Services (protocolo técnica de SQL Server)](http://go.microsoft.com/fwlink/p/?LinkId=784855) documento incluye sección 3.1.5.2.2 que describe la estructura de comandos de metadatos tabulares de JSON y objetos. Actualmente, dicho documento tratan comandos y las funciones que aún no implementados en el script de TMSL. Consulte el tema [Tabular Model Scripting Language &#40;TMSL&#41; referencia](../../analysis-services/tabular-model-scripting-language-tmsl-reference.md) para obtener información sobre lo que es compatible.  
 
 ## <a name="see-also"></a>Vea también  
  [Tabular Model Scripting Language &#40;TMSL&#41; Reference (Referencia de Tabular Model Scripting Language [TMSL])](../../analysis-services/tabular-model-scripting-language-tmsl-reference.md)  

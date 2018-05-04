@@ -1,31 +1,23 @@
 ---
-title: "Actualización de datos de PowerPivot con SharePoint 2013 de energía | Documentos de Microsoft"
-ms.custom: 
-ms.date: 03/14/2017
-ms.prod: analysis-services
-ms.prod_service: analysis-services
-ms.service: 
-ms.component: data-mining
-ms.reviewer: 
-ms.suite: pro-bi
-ms.technology: 
-ms.tgt_pltfrm: 
+title: Actualización de datos de PowerPivot con SharePoint 2013 de energía | Documentos de Microsoft
+ms.date: 05/02/2018
+ms.prod: sql
+ms.technology: analysis-services
+ms.component: ppvt-sharepoint
 ms.topic: article
-ms.assetid: 34f03407-2ec4-4554-b16b-bc9a6c161815
-caps.latest.revision: 
-author: Minewiskan
 ms.author: owend
+ms.reviewer: owend
+author: minewiskan
 manager: kfile
-ms.workload: On Demand
-ms.openlocfilehash: 59648b6a3f3dc221fa1e80be1e737606b5fede04
-ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
+ms.openlocfilehash: f56a426c24607fd8adb64d87b6ff22172c6e0a3f
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/15/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="power-pivot-data-refresh-with-sharepoint-2013"></a>Actualización de datos Power Pivot con SharePoint 2013
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
-El diseño de la actualización de modelos de datos de [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] de SharePoint 2013 emplea Excel Services como componente principal para cargar y actualizar modelos de datos en una instancia de [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] que se ejecuta en modo de SharePoint. El servidor de [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] ejecuta fuera de la granja de servidores de SharePoint. La arquitectura de SharePoint 2013 Excel Services admite tanto la **actualización de datos interactiva** como la **actualización de datos programada**.  
+  El diseño de la actualización de modelos de datos de [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] de SharePoint 2013 emplea Excel Services como componente principal para cargar y actualizar modelos de datos en una instancia de [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] que se ejecuta en modo de SharePoint. El servidor de [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] ejecuta fuera de la granja de servidores de SharePoint. La arquitectura de SharePoint 2013 Excel Services admite tanto la **actualización de datos interactiva** como la **actualización de datos programada**.  
   
  **[!INCLUDE[applies](../../includes/applies-md.md)]**  SharePoint 2013  
   
@@ -49,7 +41,7 @@ El diseño de la actualización de modelos de datos de [!INCLUDE[ssGemini](../..
 ||||  
 |-|-|-|  
 ||Libros de Excel 2013|Libros de Excel 2010|  
-|Desencadenar la actualización de datos|**Interactivo:** Usuario autenticado<br /><br /> **Programada:** [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] |[!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] Servicio de sistema|  
+|Desencadenar la actualización de datos|**Interactivo:** Usuario autenticado<br /><br /> **Programada:** [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] Servicio de sistema|[!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] Servicio de sistema|  
 |Cargar el libro desde las bases de datos de contenido|SharePoint 2013 Excel Services|SharePoint 2013 Excel Services|  
 |Cargar modelo de datos en la instancia de Analysis Services|SharePoint 2013 Excel Services|SharePoint 2013 Excel Services|  
 |Enviar comandos de procesamiento a la instancia de Analysis Services|SharePoint 2013 Excel Services|[!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] Servicio de sistema|  
@@ -67,7 +59,7 @@ El diseño de la actualización de modelos de datos de [!INCLUDE[ssGemini](../..
  **(\*)** Para obtener más información sobre actualizaciones de libros, vea [Actualizar libros y actualización de datos programada &#40;SharePoint 2013&#41;](../../analysis-services/instances/install-windows/upgrade-workbooks-and-scheduled-data-refresh-sharepoint-2013.md).  
   
 ##  <a name="bkmk_interactive_refresh"></a> Interactive Data Refresh  
- La actualización de datos interactiva, o manual, de SharePoint Server 2013 Excel Services puede actualizar modelos de datos con datos del origen de datos original. La actualización de datos interactiva está disponible después de configurar una aplicación de Excel Services registrando un servidor de [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] que se ejecuta en modo de SharePoint. Para obtener más información, vea [Administrar la configuración del modelo de datos de Excel Services (SharePoint Server 2013)](http://technet.microsoft.com/library/jj219780.aspx) (http://technet.microsoft.com/library/jj219780.aspx).  
+ La actualización de datos interactiva, o manual, de SharePoint Server 2013 Excel Services puede actualizar modelos de datos con datos del origen de datos original. La actualización de datos interactiva está disponible después de configurar una aplicación de Excel Services registrando un servidor de [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] que se ejecuta en modo de SharePoint. Para obtener más información, consulte [(SharePoint Server 2013) de la configuración del modelo de datos de administrar servicios de Excel](http://technet.microsoft.com/library/jj219780.aspx) (http://technet.microsoft.com/library/jj219780.aspx).  
   
 > [!NOTE]  
 >  La actualización de datos interactiva solo está disponible para los libros creados en Excel 2013. Si intenta actualizar un libro de Excel 2010, Excel Services mostrará un mensaje de error similar a "Operación de[!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] con errores: el libro se creó con una versión anterior de Excel y [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] no se puede actualizar hasta que el archivo se actualice". Para obtener más información sobre actualizaciones de libros, vea [Actualizar libros y actualización de datos programada &#40;SharePoint 2013&#41;](../../analysis-services/instances/install-windows/upgrade-workbooks-and-scheduled-data-refresh-sharepoint-2013.md).  
@@ -131,7 +123,7 @@ El diseño de la actualización de modelos de datos de [!INCLUDE[ssGemini](../..
   
  ![as_interactive_data_refresh2012SP1_windowsauth](../../analysis-services/power-pivot-sharepoint/media/as-interactive-data-refresh2012sp1-windowsauth.gif "as_interactive_data_refresh2012SP1_windowsauth")  
   
- Para obtener más información, vea [Actuar como parte del sistema operativo](http://technet.microsoft.com/library/cc784323\(WS.10\).aspx) (http://technet.microsoft.com/library/cc784323(WS.10).aspx).  
+ Para obtener más información, consulte [actuar como parte del sistema operativo](http://technet.microsoft.com/library/cc784323\(WS.10\).aspx) (http://technet.microsoft.com/library/cc784323(WS.10).aspx).  
   
 ##  <a name="bkmk_scheduled_refresh"></a> Scheduled Data Refresh  
  **Puntos clave de interés de la actualización de datos programada:**  
@@ -171,7 +163,7 @@ El diseño de la actualización de modelos de datos de [!INCLUDE[ssGemini](../..
  ![administrar el menú contextual de la actualización de datos](../../analysis-services/power-pivot-sharepoint/media/as-manage-datarefresh-sharepoint2013.gif "administrar menú contextual de la actualización de datos")  
   
 > [!TIP]  
->  Para obtener información sobre cómo actualizar libros desde SharePoint Online, vea [Actualizar libros de Excel con modelos de Power Pivot incrustados de SharePoint Online (notas del producto)](http://technet.microsoft.com/library/jj992650.aspx) (http://technet.microsoft.com/library/jj992650.aspx).  
+>  Para obtener información sobre cómo actualizar libros desde SharePoint online, consulte [actualizar libros de Excel con modelos de PowerPivot incrustados desde SharePoint Online (notas del producto)](http://technet.microsoft.com/library/jj992650.aspx) (http://technet.microsoft.com/library/jj992650.aspx).  
   
 ##  <a name="bkmk_refresh_architecture"></a> Arquitectura de actualización de datos programada de SharePoint 2013  
  En la ilustración siguiente se resume la arquitectura de actualización de datos de SharePoint 2013 y SQL Server 2012 SP1.  
@@ -221,7 +213,7 @@ El diseño de la actualización de modelos de datos de [!INCLUDE[ssGemini](../..
   
 -   **Use la cuenta de usuario autenticado**: Excel Services realiza la actualización de datos con la identidad del usuario que ha iniciado la sesión.  
   
--   **Usar una cuenta almacenada:**presupone un identificador de aplicación de Servicio de almacenamiento seguro de SharePoint, que Excel Services usa para recuperar el nombre de usuario y la contraseña para autenticar la actualización de datos.  
+-   **Usar una cuenta almacenada:** presupone un identificador de aplicación de Servicio de almacenamiento seguro de SharePoint, que Excel Services usa para recuperar el nombre de usuario y la contraseña para autenticar la actualización de datos.  
   
 -   **Ninguna**: se usa la **Cuenta de servicio desatendida** de Excel Services. La cuenta de servicio se asocia a un proxy de almacenamiento seguro. Configure los valores de la página **Configuración de la aplicación de Excel Services** , en la sección **Datos externos** .  
   
@@ -242,7 +234,7 @@ El diseño de la actualización de modelos de datos de [!INCLUDE[ssGemini](../..
 ##  <a name="bkmk_moreinformation"></a> Más información  
  [Solución de problemas de actualización de datos Power Pivot](http://social.technet.microsoft.com/wiki/contents/articles/3870.troubleshooting-powerpivot-data-refresh.aspx).  
   
- [Excel Services en SharePoint 2013](http://msdn.microsoft.com/library/sharepoint/jj164076\(v=office.15\)) (http://msdn.microsoft.com/library/sharepoint/jj164076 (v=office.15).  
+ [Excel Services en SharePoint 2013](http://msdn.microsoft.com/library/sharepoint/jj164076\(v=office.15\)) (http://msdn.microsoft.com/library/sharepoint/jj164076(v=office.15).  
   
 ## <a name="see-also"></a>Vea también  
  [Instalación de Analysis Services en el modo PowerPivot](../../analysis-services/instances/install-windows/install-analysis-services-in-power-pivot-mode.md)  

@@ -23,22 +23,22 @@ caps.latest.revision: 32
 author: Minewiskan
 ms.author: owend
 manager: kfile
-ms.workload: Inactive
-ms.openlocfilehash: 23410bac137e67e81e6e7b302f81c5cfd5db8b71
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
-ms.translationtype: MT
+ms.openlocfilehash: d1ca8915889fbc7edb9e31c2e0adbb2154980f5f
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="dmschemaminingmodelcontent-rowset"></a>Conjunto de filas DMSCHEMA_MINING_MODEL_CONTENT
-[!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]Permite que la aplicación cliente examinar el contenido de un modelo de minería de datos. Las aplicaciones cliente pueden utilizar las restricciones de las operaciones de árbol especiales descritas al final de este tema para navegar por el contenido del modelo de minería de datos.  
+[!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]
+  Permite a la aplicación cliente examinar el contenido de un modelo de minería de datos. Las aplicaciones cliente pueden utilizar las restricciones de las operaciones de árbol especiales descritas al final de este tema para navegar por el contenido del modelo de minería de datos.  
   
 ## <a name="rowset-columns"></a>Columnas del conjunto de filas  
  El **DMSCHEMA_MINING_MODEL_CONTENT** filas contiene las columnas siguientes.  
   
 |Nombre de columna|Indicador de tipo|Longitud|Description|  
 |-----------------|--------------------|------------|-----------------|  
-|**MODEL_CATALOG**|**DBTYPE_WSTR**||Nombre del catálogo. [!INCLUDE[msCoName](../../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] rellena esta columna con el nombre de la base de datos de los cuales es miembro el modelo.|  
+|**MODEL_CATALOG**|**DBTYPE_WSTR**||Nombre del catálogo. [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] rellena esta columna con el nombre de la base de datos de los cuales es miembro el modelo.|  
 |**MODEL_SCHEMA**|**DBTYPE_WSTR**||Nombre del esquema sin certificar. Esta columna no es compatible con [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)]; siempre contiene **VT_NULL**.|  
 |**MODEL_NAME**|**DBTYPE_WSTR**||Nombre del modelo con el que se asocia el contenido descrito por esta fila.|  
 |**ATTRIBUTE_NAME**|**DBTYPE_WSTR**||Nombres de los atributos que corresponden a este nodo.|  
@@ -78,7 +78,7 @@ ms.lasthandoff: 01/08/2018
   
  La restricción, **TREE_OPERATION**, no está en una columna en particular de la **DMSCHEMA_MINING_MODEL_CONTENT** conjunto de filas; en su lugar, especifica un operador de árbol. El consumidor puede especificar un **NODE_UNIQUE_NAME** restricción y el operador de árbol (**ANTECESORES**, **elementos secundarios**, **elementos del mismo nivel**,  **PRIMARIO**, **DESCENDIENTES**, **SELF**) para obtener el conjunto de miembros solicitado. El **SELF** operador incluye la fila para el nodo en Sí en la lista de filas devueltas. La tabla siguiente describen las constantes que componen la definición de mapa de bits para la **TREE_OPERATION** restricción. Se pueden combinar mediante la operación lógica **o** operador.  
   
-|Constante|Valor|  
+|Constante|Value|  
 |--------------|-----------|  
 |**DMTREEOP_ANCESTORS**|**0 x 00000020**|  
 |**DMTREEOP_CHILDREN**|**0 x 00000001**|  

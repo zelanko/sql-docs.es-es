@@ -10,22 +10,21 @@ ms.suite: sql
 ms.technology:
 - drivers
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 9e78bbf3-9e9a-426d-99d3-6fa2cb33ff6b
 caps.latest.revision: 22
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.workload: Active
-ms.openlocfilehash: f66227c67a4cd84fbd1fdaafbbdcf457df7b3b2e
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
+ms.openlocfilehash: e57c57acf704a2b9f6e9366733b88e15216ae89d
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="microsoft-drivers-for-php-for-sql-server"></a>Controladores de Microsoft para PHP para SQL Server
 
-![Descarga-CTRL+MAYÚS+TAB-dentro de un círculo](../../ssdt/media/download.png)[descargar controladores de PHP para SQL](../sql-connection-libraries.md#anchor-20-drivers-relational-access)
+[!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]
 
 Drivers de Microsoft para PHP para SQL Server habilitar la integración con SQL Server para las aplicaciones PHP. Los controladores son extensiones PHP que permiten leer y escribir datos de SQL Server desde scripts PHP. Los controladores proporcionan interfaces para acceder a datos en bases de datos de SQL Azure y en todas las ediciones de SQL Server 2005 y versiones posteriores (incluidas las ediciones Express). Los controladores se suele usar características de PHP, incluidas las secuencias PHP, para leer y escribir objetos grandes.  
   
@@ -45,7 +44,7 @@ Drivers de Microsoft para PHP para SQL Server habilitar la integración con SQL 
 * [Recursos de soporte técnico para los controladores de Microsoft para PHP para SQL Server](support-resources-for-the-php-sql-driver.md)
   
 ## <a name="download"></a>Descargar  
-* ![Descarga-CTRL+MAYÚS+TAB-dentro de un círculo](../../ssdt/media/download.png)[para descargar los controladores de PHP para SQL](../sql-connection-libraries.md#anchor-20-drivers-relational-access)
+* ![Descarga-CTRL+MAYÚS+TAB-dentro de un círculo](../../ssdt/media/download.png)[para descargar los controladores de PHP para SQL](download-drivers-php-sql-server.md)
   
 ## <a name="samples"></a>Ejemplos  
 * [Ejemplos de código para los controladores de Microsoft para PHP para SQL Server](code-samples-for-php-sql-driver.md)

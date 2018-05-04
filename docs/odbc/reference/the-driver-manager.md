@@ -11,7 +11,7 @@ ms.suite: sql
 ms.technology:
 - drivers
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - driver manager [ODBC]
 - ODBC architecture [ODBC], driver manager
@@ -22,12 +22,11 @@ caps.latest.revision: 7
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: 1f33e9b5ebd9ae699240170990b7daeeaefbea8e
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
-ms.translationtype: MT
+ms.openlocfilehash: 4d9a9c70743ee59ef347426fdac54e1e8667b33a
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="the-driver-manager"></a>El Administrador de controladores
 El *el Administrador de controladores* es una biblioteca que administra la comunicación entre las aplicaciones y controladores. Por ejemplo, en plataformas de Microsoft® Windows®, el Administrador de controladores es una biblioteca de vínculos dinámicos (DLL) que está escrita por Microsoft y puede distribuirse por los usuarios de MDAC 2.8 SP1 SDK redistribuible.  

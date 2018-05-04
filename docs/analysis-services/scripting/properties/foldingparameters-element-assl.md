@@ -27,15 +27,15 @@ caps.latest.revision: 16
 author: Minewiskan
 ms.author: owend
 manager: kfile
-ms.workload: Inactive
-ms.openlocfilehash: 8f6fa2a178bc1d8f9722a101d7305cedfa248663
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
-ms.translationtype: MT
+ms.openlocfilehash: 8d536d67738872ba070217d934a1b47be7857398
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="foldingparameters-element-assl"></a>Elemento FoldingParameters (ASSL)
-[!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]Especifica los parámetros utilizados por la [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] servidor mientras se realiza la validación cruzada de modelos de minería de datos.  
+[!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]
+  Especifica los parámetros que usa el servidor de [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] cuando realiza la validación cruzada de los modelos de minería de datos.  
   
 > [!NOTE]  
 >  Estos parámetros solo son para uso interno. La información proporcionada aquí solo sirve de referencia.  
@@ -55,7 +55,7 @@ ms.lasthandoff: 01/08/2018
 </MiningStructure>  
 ```  
   
-## <a name="element-characteristics"></a>Características del elemento  
+## <a name="element-characteristics"></a>Características de los elementos  
   
 |Característica|Description|  
 |--------------------|-----------------|  
@@ -76,9 +76,9 @@ ms.lasthandoff: 01/08/2018
   
  Para obtener información sobre cómo usar la validación cruzada en [!INCLUDE[ssBIDevStudioFull](../../../includes/ssbidevstudiofull-md.md)], consulte [medidas en el informe de validación cruzada](../../../analysis-services/data-mining/measures-in-the-cross-validation-report.md).  
   
- Para obtener información acerca de cómo realizar la validación cruzada mediante [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] los procedimientos almacenados, vea [procedimientos almacenados minería de datos &#40; Analysis Services: minería de datos &#41; ](../../../analysis-services/data-mining/data-mining-stored-procedures-analysis-services-data-mining.md).  
+ Para obtener información acerca de cómo realizar la validación cruzada mediante [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] los procedimientos almacenados, vea [procedimientos almacenados minería de datos &#40;Analysis Services: minería de datos&#41;](../../../analysis-services/data-mining/data-mining-stored-procedures-analysis-services-data-mining.md).  
   
 ## <a name="see-also"></a>Vea también  
- [Propiedades &#40; ASSL &#41;](../../../analysis-services/scripting/properties/properties-assl.md)  
+ [Propiedades & #40; ASSL & #41;](../../../analysis-services/scripting/properties/properties-assl.md)  
   
   

@@ -1,39 +1,23 @@
 ---
-title: "Introducción a las dimensiones (Analysis Services - datos multidimensionales) | Documentos de Microsoft"
-ms.custom: 
-ms.date: 03/14/2017
-ms.prod: analysis-services
-ms.prod_service: analysis-services
-ms.service: 
-ms.component: 
-ms.reviewer: 
-ms.suite: pro-bi
-ms.technology: 
-ms.tgt_pltfrm: 
-ms.topic: reference
-applies_to:
-- SQL Server 2016 Preview
-helpviewer_keywords:
-- dimensions [Analysis Services], about dimensions
-- storage [Analysis Services], dimensions
-- dimensions [Analysis Services], examples
-- storing data [Analysis Services], dimensions
-- storage [Analysis Services]
-ms.assetid: ab170fdd-4144-42db-9497-690b9189fc25
-caps.latest.revision: 
-author: Minewiskan
+title: Introducción a las dimensiones (Analysis Services - datos multidimensionales) | Documentos de Microsoft
+ms.date: 05/02/2018
+ms.prod: sql
+ms.technology: analysis-services
+ms.component: olap
+ms.topic: article
 ms.author: owend
+ms.reviewer: owend
+author: minewiskan
 manager: kfile
-ms.workload: On Demand
-ms.openlocfilehash: 8e6b39e6f8e91217dbc2de28575571e3043c7358
-ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
+ms.openlocfilehash: b3ac3975b486de2cfe57bf920cf0ecf2ac9f9caf
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/15/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="dimensions---introduction"></a>Dimensiones: Introducción
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
-Todos los Microsoft [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] dimensiones son grupos de atributos basados en columnas de tablas o vistas en una vista del origen de datos. Las dimensiones son independientes de un cubo, se pueden utilizar en varios cubos, se pueden emplear varias veces en un único cubo y pueden vincularse entre instancias de [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]. Una dimensión independiente de un cubo se denomina dimensión de base de datos, mientras que una instancia de una dimensión de base de datos de un cubo se denomina dimensión de cubo.  
+  Todos los Microsoft [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] dimensiones son grupos de atributos basados en columnas de tablas o vistas en una vista del origen de datos. Las dimensiones son independientes de un cubo, se pueden utilizar en varios cubos, se pueden emplear varias veces en un único cubo y pueden vincularse entre instancias de [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]. Una dimensión independiente de un cubo se denomina dimensión de base de datos, mientras que una instancia de una dimensión de base de datos de un cubo se denomina dimensión de cubo.  
   
 ## <a name="dimension-based-on-a-star-schema-design"></a>Dimensión basada en un diseño de esquema en estrella  
  La estructura de una dimensión depende en gran medida de la estructura de la tabla o tablas de dimensiones subyacentes. La estructura más sencilla se denomina esquema en estrella, en la que cada dimensión se basa en una única tabla de dimensiones que se vincula directamente a la tabla de hechos mediante una relación de clave principal a clave externa.  
@@ -62,7 +46,7 @@ Todos los Microsoft [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!
  Tras crear una dimensión, debe procesarla antes de poder ver los miembros de sus atributos y sus jerarquías. Tras modificar la estructura de una dimensión o actualizar la información de sus tablas subyacentes, tiene que volver a procesar la dimensión antes de poder ver los cambios. Cuando se procesa una dimensión después de realizar cambios estructurales, se deben procesar también los cubos que incluyen la dimensión, ya que de lo contrario el cubo no se podrá ver.  
   
 ## <a name="security"></a>Seguridad  
- La seguridad de todos los objetos subordinados de una dimensión, incluidos las jerarquías, niveles y miembros, se establece utilizando roles en [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]. La seguridad de las dimensiones se puede aplicar a todos los cubos de la base de datos que utilizan la dimensión o solo a determinado cubo. Para obtener más información acerca de la seguridad de dimensión, vea [conceder permisos en una dimensión &#40; Analysis Services &#41; ](../../analysis-services/multidimensional-models/grant-permissions-on-a-dimension-analysis-services.md).  
+ La seguridad de todos los objetos subordinados de una dimensión, incluidos las jerarquías, niveles y miembros, se establece utilizando roles en [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]. La seguridad de las dimensiones se puede aplicar a todos los cubos de la base de datos que utilizan la dimensión o solo a determinado cubo. Para obtener más información acerca de la seguridad de dimensión, vea [conceder permisos para una dimensión &#40;Analysis Services&#41;](../../analysis-services/multidimensional-models/grant-permissions-on-a-dimension-analysis-services.md).  
   
 ## <a name="see-also"></a>Vea también  
  [Almacenamiento de dimensiones](../../analysis-services/multidimensional-models-olap-logical-dimension-objects/dimensions-storage.md)   

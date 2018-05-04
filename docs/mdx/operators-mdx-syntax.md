@@ -23,12 +23,11 @@ caps.latest.revision: 29
 author: Minewiskan
 ms.author: owend
 manager: erikre
-ms.workload: Inactive
-ms.openlocfilehash: 87304b4a33daa7d9460983a403136974c46c1f81
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
-ms.translationtype: MT
+ms.openlocfilehash: 8b849cf1a9c87e91c2104217d8b435adfeef6efc
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="operators-mdx-syntax"></a>Operadores (sintaxis de MDX)
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
@@ -92,12 +91,12 @@ ms.lasthandoff: 01/08/2018
   
 -   O BIEN  
   
- Para obtener más información acerca de los operadores en MDX, vea [referencia de operadores de MDX &#40; MDX &#41; ](../mdx/mdx-operator-reference-mdx.md).  
+ Para obtener más información acerca de los operadores en MDX, vea [referencia de operadores de MDX &#40;MDX&#41;](../mdx/mdx-operator-reference-mdx.md).  
   
 ### <a name="determining-results"></a>Determinar los resultados  
  Cuando se combinan expresiones simples para crear una más compleja, el tipo de datos del valor resultante viene determinado por la combinación de las reglas de los operadores con las reglas de precedencia para los tipos de datos.  
   
- Si el resultado es un carácter o un valor de Unicode, la intercalación del resultado viene determinada por la combinación de las reglas de los operadores con las reglas de precedencia de intercalación. Para obtener más información acerca de las intercalaciones, vea [idiomas e intercalaciones &#40; Analysis Services &#41; ](../analysis-services/languages-and-collations-analysis-services.md).  
+ Si el resultado es un carácter o un valor de Unicode, la intercalación del resultado viene determinada por la combinación de las reglas de los operadores con las reglas de precedencia de intercalación. Para obtener más información acerca de las intercalaciones, vea [idiomas e intercalaciones &#40;Analysis Services&#41;](../analysis-services/languages-and-collations-analysis-services.md).  
   
  También hay reglas que determinan la precisión, escala y longitud del resultado basándose en la precisión, escala y longitud de las expresiones sencillas.  
   
@@ -107,13 +106,13 @@ ms.lasthandoff: 01/08/2018
 |Tipo original|Tipo necesario|Conversión|  
 |-------------------|-----------------|----------------|  
 |Nivel|Establecer|\<nivel > .members|  
-|Hierarchy|Miembro|\<jerarquía > .defaultmember|  
+|Jerarquía|Miembro|\<jerarquía > .defaultmember|  
 |Miembro|Tuple|(\<Miembro >)|  
 |Tuple|Miembro|\<tupla > .item(0)|  
 |Tuple|Escalar|\<tupla > .value|  
   
-## <a name="see-also"></a>Ver también  
- [Referencia de operadores MDX &#40; MDX &#41;](../mdx/mdx-operator-reference-mdx.md)   
- [Elementos de sintaxis MDX &#40; MDX &#41;](../mdx/mdx-syntax-elements-mdx.md)  
+## <a name="see-also"></a>Vea también  
+ [Referencia de operadores MDX &#40;MDX&#41;](../mdx/mdx-operator-reference-mdx.md)   
+ [Elementos de sintaxis MDX &#40;MDX&#41;](../mdx/mdx-syntax-elements-mdx.md)  
   
   

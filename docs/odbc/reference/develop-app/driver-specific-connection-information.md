@@ -11,7 +11,7 @@ ms.suite: sql
 ms.technology:
 - drivers
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - SQLConnect function [ODBC], driver-specific connection information
 - connecting to driver [ODBC], SQLConnect
@@ -25,12 +25,11 @@ caps.latest.revision: 8
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: 8d7ba512382963e45a10ba360df29626dd81f2aa
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
-ms.translationtype: MT
+ms.openlocfilehash: 21b67f1fdbf609aa8564a6b95a0e60382a0b97a5
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="driver-specific-connection-information"></a>Información de conexión específicos del controlador
 **SQLConnect** se da por supuesto que un nombre de origen de datos, el Id. de usuario y la contraseña son suficientes para conectarse a un origen de datos y que todos los demás información de conexión se puede almacenar en el sistema. Esto sucede con frecuencia no. Por ejemplo, un controlador que tenga un identificador de usuario y contraseña para iniciar sesión en un servidor y un identificador de usuario diferente y una contraseña para iniciar sesión en un DBMS. Dado que **SQLConnect** acepta un Id. de usuario único y una contraseña, esto significa que el otro Id. de usuario y la contraseña deben almacenarse con la información de origen de datos en el sistema si **SQLConnect** va a usar. Esto es una posible infracción de seguridad y debe evitarse, a menos que la contraseña se cifra.  
@@ -46,6 +45,6 @@ DSN={MyDataSourceName};UID={MyUserID};PWD={MyServerPassword};UIDDBMS={MyDBMSUser
   
  El **DSN** palabra clave (nombre de origen de datos) nombre al origen de datos, el **UID** y **PWD** palabras clave que especifican el Id. de usuario y la contraseña para el servidor y el **UIDDBMS**  y **PWDDBMS** palabras clave especifica el Id. de usuario y la contraseña del DBMS. Tenga en cuenta que el punto y coma final es opcional. **SQLDriverConnect** analiza esta cadena; utiliza el nombre del origen de datos XYX Corp para recuperar la información de conexión adicionales del sistema, como la dirección del servidor; e inicia una sesión en el servidor y el DBMS con los identificadores de usuario especificado y las contraseñas.  
   
- Pares de palabra clave y valor en **SQLDriverConnect** deben seguir ciertas reglas de sintaxis. ¿Las palabras clave y sus valores no deben contener el **[] {} (),? \*=! @** caracteres. El valor de la **DSN** palabra clave no puede constar únicamente de espacios en blanco y no debe contener espacios en blanco iniciales. Debido a la gramática del registro, los nombres de origen de datos y palabras clave no pueden contener la barra diagonal inversa (\\) caracteres. No se permiten espacios alrededor del signo igual en el par de palabra clave y valor.  
+ Pares de palabra clave y valor en **SQLDriverConnect** deben seguir ciertas reglas de sintaxis. ¿Las palabras clave y sus valores no deben contener el **[]{}(),? \*=! @** caracteres. El valor de la **DSN** palabra clave no puede constar únicamente de espacios en blanco y no debe contener espacios en blanco iniciales. Debido a la gramática del registro, los nombres de origen de datos y palabras clave no pueden contener la barra diagonal inversa (\\) caracteres. No se permiten espacios alrededor del signo igual en el par de palabra clave y valor.  
   
  El **FILEDSN** palabra clave puede utilizarse en una llamada a **SQLDriverConnect** para especificar el nombre de un archivo que contiene información de origen de datos (vea [conectarse utilizando archivo orígenes de datos](../../../odbc/reference/develop-app/connecting-using-file-data-sources.md), más adelante en esta sección). El **SAVEFILE** palabra clave puede utilizarse para especificar el nombre de un archivo .dsn en los que los pares de palabra clave y valor de una conexión correcta realizan por la llamada a **SQLDriverConnect** se guardarán. Para obtener más información acerca de los orígenes de datos de archivo, consulte la [SQLDriverConnect](../../../odbc/reference/syntax/sqldriverconnect-function.md) descripción de la función.

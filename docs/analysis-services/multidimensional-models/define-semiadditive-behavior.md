@@ -1,35 +1,23 @@
 ---
 title: Definir el comportamiento de suma parcial | Documentos de Microsoft
-ms.custom: 
-ms.date: 03/01/2017
-ms.prod: analysis-services
-ms.prod_service: analysis-services
-ms.service: 
-ms.component: data-mining
-ms.reviewer: 
-ms.suite: pro-bi
-ms.technology: 
-ms.tgt_pltfrm: 
+ms.date: 05/02/2018
+ms.prod: sql
+ms.technology: analysis-services
+ms.component: multidimensional-models
 ms.topic: article
-helpviewer_keywords:
-- semiadditive
-- Business Intelligence enhancements [Analysis Services], semiadditive behavior
-- measures [Analysis Services], semiadditive
-ms.assetid: b25726bc-728b-4601-ad87-9015c39dc615
-caps.latest.revision: 
-author: Minewiskan
 ms.author: owend
+ms.reviewer: owend
+author: minewiskan
 manager: kfile
-ms.workload: Inactive
-ms.openlocfilehash: f78bd8b53f358b63393b374594ce76d31791c606
-ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
+ms.openlocfilehash: 39b3b95f825fba91064a29b051d875a6a2f71ba3
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/15/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="define-semiadditive-behavior"></a>Definir el comportamiento de suma parcial
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
-Las medidas semiaditivas, que no agregan uniformemente en todas las dimensiones, son muy comunes en muchas situaciones empresariales. Todos los cubos que se basan en instantáneas de saldos a lo largo del tiempo presentan este problema. Se pueden encontrar estas instantáneas en las aplicaciones que manejan títulos y valores, saldos de cuentas bancarias, presupuestos, recursos humanos, pólizas y siniestros de seguros y muchos otros ámbitos comerciales.  
+  Las medidas semiaditivas, que no agregan uniformemente en todas las dimensiones, son muy comunes en muchas situaciones empresariales. Todos los cubos que se basan en instantáneas de saldos a lo largo del tiempo presentan este problema. Se pueden encontrar estas instantáneas en las aplicaciones que manejan títulos y valores, saldos de cuentas bancarias, presupuestos, recursos humanos, pólizas y siniestros de seguros y muchos otros ámbitos comerciales.  
   
  Se agrega comportamiento de suma parcial a un cubo para definir un método de agregación para medidas o miembros individuales del atributo de tipo de cuenta. Si el cubo contiene una dimensión de cuenta, puede establecer automáticamente un comportamiento de suma parcial basado en el tipo de cuenta.  
   

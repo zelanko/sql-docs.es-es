@@ -22,12 +22,11 @@ caps.latest.revision: 34
 author: Minewiskan
 ms.author: owend
 manager: erikre
-ms.workload: Inactive
-ms.openlocfilehash: 2a3a7f8e9cbfcb6791cee28bb412be0ff51fc5df
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
-ms.translationtype: MT
+ms.openlocfilehash: 362d3ec30f8ec8eb2d5b9f21994454421f8ce816
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="ltsource-data-querygt---openrowset"></a>&lt;consulta de origen de datos&gt; -OPENROWSET
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
@@ -42,7 +41,7 @@ OPENROWSET(provider_name,provider_string,query_syntax)
 ```  
   
 ## <a name="arguments"></a>Argumentos  
- *NombreProveedor*  
+ *provider_name*  
  Nombre de proveedor OLE DB.  
   
  *provider_string*  
@@ -51,7 +50,7 @@ OPENROWSET(provider_name,provider_string,query_syntax)
  *query_syntax*  
  Sintaxis de consulta que devuelve un conjunto de filas.  
   
-## <a name="remarks"></a>Notas  
+## <a name="remarks"></a>Comentarios  
  El proveedor de minería de datos, establecerá una conexión con el objeto de origen de datos mediante el uso de *NombreProveedor* y *provider_string,* y se ejecutará la consulta especificada en *query_syntax* para recuperar el conjunto de filas del origen de datos.  
   
 ## <a name="examples"></a>Ejemplos  
@@ -66,9 +65,9 @@ OPENROWSET
 )  
 ```  
   
-## <a name="see-also"></a>Ver también  
- [&#60; consulta de origen de datos &#62;](../dmx/source-data-query.md)   
- [Extensiones de minería de datos &#40; DMX &#41; Instrucciones de manipulación de datos](../dmx/dmx-statements-data-manipulation.md)   
- [Referencia de instrucciones de Extensiones de minería de datos &#40;DMX&#41;](../dmx/data-mining-extensions-dmx-statements.md)  
+## <a name="see-also"></a>Vea también  
+ [&#60;consulta de origen de datos&#62;](../dmx/source-data-query.md)   
+ [Extensiones de minería de datos &#40;DMX&#41; instrucciones de manipulación de datos](../dmx/dmx-statements-data-manipulation.md)   
+ [Extensiones de minería de datos & #40; DMX & #41; Referencia de instrucciones](../dmx/data-mining-extensions-dmx-statements.md)  
   
   

@@ -21,12 +21,11 @@ caps.latest.revision: 11
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: 0cbc7bfed55a1afe376261bb585f28c981fa5a10
-ms.sourcegitcommit: bb044a48a6af9b9d8edb178dc8c8bd5658b9ff68
-ms.translationtype: MT
+ms.openlocfilehash: 85042c58807bf57f6e6bdd6ee3bc804bcdc4c95b
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/18/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="stayinsync-property-example-vc"></a>Ejemplo de la propiedad StayInSync (VC ++)
 Este ejemplo se muestra cómo el [StayInSync](../../../ado/reference/ado-api/stayinsync-property.md) propiedad facilita el acceso a las filas en una jerárquica [conjunto de registros](../../../ado/reference/ado-api/recordset-object-ado.md).  

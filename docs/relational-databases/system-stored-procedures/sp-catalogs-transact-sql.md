@@ -24,12 +24,11 @@ caps.latest.revision: 18
 author: edmacauley
 ms.author: edmaca
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: 362241b1b54415cbda61915cc94f31a0011f172b
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
-ms.translationtype: MT
+ms.openlocfilehash: 425721e698396fc687425ecfd452dd61bd554575
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="spcatalogs-transact-sql"></a>sp_catalogs (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -53,8 +52,8 @@ sp_catalogs [ @server_name = ] 'linked_svr'
   
 |Nombre de columna|Tipo de datos|Description|  
 |-----------------|---------------|-----------------|  
-|**Catalog_Name**|**nvarchar (**128**)**|Nombre del catálogo|  
-|**Description**|**nvarchar (**4000**)**|Descripción del catálogo.|  
+|**Catalog_Name**|**nvarchar (** 128 **)**|Nombre del catálogo|  
+|**Description**|**nvarchar (** 4000 **)**|Descripción del catálogo.|  
   
 ## <a name="permissions"></a>Permissions  
  Es necesario contar con un permiso de tipo SELECT sobre el esquema.  

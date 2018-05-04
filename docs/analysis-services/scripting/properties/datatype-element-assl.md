@@ -27,15 +27,15 @@ caps.latest.revision: 38
 author: Minewiskan
 ms.author: owend
 manager: kfile
-ms.workload: Inactive
-ms.openlocfilehash: 34e1e88cef7b608bef7995849a170d8ce6ec8e70
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
-ms.translationtype: MT
+ms.openlocfilehash: c9a45fa75f92d38ab707e31c792cd7e388e1fab2
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="datatype-element-assl"></a>Elemento DataType (ASSL)
-[!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]Define el tipo de datos del elemento asociado.  
+[!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]
+  Define el tipo de datos del elemento asociado.  
   
 ## <a name="syntax"></a>Sintaxis  
   
@@ -48,25 +48,25 @@ ms.lasthandoff: 01/08/2018
 </DataItem>  
 ```  
   
-## <a name="element-characteristics"></a>Características del elemento  
+## <a name="element-characteristics"></a>Características de los elementos  
   
-|Característica|Description|  
+|Característica|Descripción|  
 |--------------------|-----------------|  
 |Tipo y longitud de los datos|String (enumeración)|  
-|Valor predeterminado|None|  
-|Cardinalidad|0-1: Elemento opcional que puede aparecer una y solo una vez.|  
+|Valor predeterminado|Ninguno|  
+|Cardinalidad|0-1: Elemento opcional que puede aparecer solo una vez.|  
   
 ## <a name="element-relationships"></a>Relaciones del elemento  
   
 |Relación|Elemento|  
 |------------------|-------------|  
 |Elemento primario|[DataItem](../../../analysis-services/scripting/data-type/dataitem-data-type-assl.md), [medida](../../../analysis-services/scripting/objects/measure-element-assl.md)|  
-|Elementos secundarios|None|  
+|Elementos secundarios|Ninguno|  
   
 ## <a name="remarks"></a>Comentarios  
  Los valores de **DataType** se definen en el **System.Data.OleDb.OleDbType** enumeración. Sin embargo, solo los valores de enumeración en la tabla siguiente son válidos en el **DataType** elemento.  
   
-|Valor|Description|  
+|Value|Description|  
 |-----------|-----------------|  
 |*BigInt*|Entero de 64 bits con signo. Este tipo de datos se asigna a la **Int64** tipo de datos en [!INCLUDE[msCoName](../../../includes/msconame-md.md)] tipo de .NET Framework y los datos DBTYPE_I8 en OLE DB.|  
 |*BOOL*|Valor booleano. Este tipo de datos se asigna a la **booleano** tipo de datos de .NET Framework y el tipo de datos DBTYPE_BOOL en OLE DB.|  
@@ -84,6 +84,6 @@ ms.lasthandoff: 01/08/2018
 |*Heredado*|Tipo de datos de la **DataItem** contenidos en el [origen](../../../analysis-services/scripting/properties/source-element-measure-assl.md) elemento de la **medida** elemento.<br /><br /> Nota: Solo es aplicable a **medida** elementos.|  
   
 ## <a name="see-also"></a>Vea también  
- [Propiedades &#40; ASSL &#41;](../../../analysis-services/scripting/properties/properties-assl.md)  
+ [Propiedades & #40; ASSL & #41;](../../../analysis-services/scripting/properties/properties-assl.md)  
   
   

@@ -23,12 +23,11 @@ caps.latest.revision: 12
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: 267dbd8bc1eb05a1d0f56c9078c5f5518d1e38d7
-ms.sourcegitcommit: bb044a48a6af9b9d8edb178dc8c8bd5658b9ff68
-ms.translationtype: MT
+ms.openlocfilehash: 6207801767721861a7e7b0ff4623cfeca89044a3
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/18/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="append-method-adox-users"></a>Append (método) (usuarios ADOX)
 Agrega un nuevo [usuario](../../../ado/reference/adox-api/user-object-adox.md) el objeto a la [usuarios](../../../ado/reference/adox-api/users-collection-adox.md) colección.  

@@ -21,12 +21,11 @@ caps.latest.revision: 14
 author: Minewiskan
 ms.author: owend
 manager: erikre
-ms.workload: Inactive
-ms.openlocfilehash: a972760985e93f61ffa813043ad6c4e58f7d1a28
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
-ms.translationtype: MT
+ms.openlocfilehash: 9b24f49594003f453f3258c431881bd0ddda0f70
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="divide-dmx"></a>(División) (DMX)
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
@@ -41,10 +40,10 @@ Dividend / Divisor
 ```  
   
 #### <a name="parameters"></a>Parámetros  
- *Dividendo*  
+ *dividendo*  
  Expresión DMX (Extensiones de minería de datos) válida que devuelve un valor numérico.  
   
- *Divisor*  
+ *divisor*  
  Expresión DMX válida que devuelve un valor numérico.  
   
 ## <a name="return-value"></a>Valor devuelto  
@@ -56,10 +55,10 @@ Dividend / Divisor
  Ambas expresiones deben ser del mismo tipo de datos o una se debe poder convertir implícitamente en el tipo de datos de la otra. Si el divisor se evalúa como un valor NULL, el operador genera un error. Si tanto el divisor como el dividendo se evalúan como un valor NULL, el operador devuelve un valor NULL.  
   
 ## <a name="see-also"></a>Vea también  
- [Aritmética operadores &#40; DMX &#41;](../dmx/operators-arithmetic.md)   
- [Extensiones de minería de datos &#40; DMX &#41; Referencia de operadores](../dmx/data-mining-extensions-dmx-operator-reference.md)   
- [Operadores &#40; DMX &#41;](../dmx/operators-dmx.md)   
- [División &#40; Expresión de SSIS &#41;](../integration-services/expressions/divide-ssis-expression.md)   
- [&#40; división &#41; &#40; Transact-SQL &#41;](../t-sql/language-elements/divide-transact-sql.md)  
+ [Operadores aritméticos &#40;DMX&#41;](../dmx/operators-arithmetic.md)   
+ [Extensiones de minería de datos &#40;DMX&#41; Referencia de operadores](../dmx/data-mining-extensions-dmx-operator-reference.md)   
+ [Operadores &#40;DMX&#41;](../dmx/operators-dmx.md)   
+ [Dividir &#40;expresión de SSIS&#41;](../integration-services/expressions/divide-ssis-expression.md)   
+ [&#40;Dividir&#41; &#40;Transact-SQL&#41;](../t-sql/language-elements/divide-transact-sql.md)  
   
   

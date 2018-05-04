@@ -1,37 +1,29 @@
 ---
-title: "Implementar PowerPivot y Power View - granja de SharePoint 2016 de niveles múltiples | Documentos de Microsoft"
-ms.custom: 
-ms.date: 03/07/2017
-ms.prod: analysis-services
-ms.prod_service: analysis-services
-ms.service: 
-ms.component: 
-ms.reviewer: 
-ms.suite: pro-bi
-ms.technology: 
-ms.tgt_pltfrm: 
+title: Implementar PowerPivot y Power View - granja de SharePoint 2016 de niveles múltiples | Documentos de Microsoft
+ms.date: 05/02/2018
+ms.prod: sql
+ms.technology: analysis-services
+ms.component: ppvt-sharepoint
 ms.topic: article
-ms.assetid: 0e36a632-0750-4247-92b6-1fe38c7a4ce2
-caps.latest.revision: 
-author: Minewiskan
 ms.author: owend
+ms.reviewer: owend
+author: minewiskan
 manager: kfile
-ms.workload: Inactive
-ms.openlocfilehash: da59f6eddb113c8af70e3ddcf3bcb3f35d6a6123
-ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
+ms.openlocfilehash: c014d51f6f19efae02b07c9b6ea20ebd2ae7265a
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/15/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="deploy-powerpivot-and-power-view---multi-tier-sharepoint-2016-farm"></a>Implementar PowerPivot y Power View - granja de SharePoint 2016 de niveles múltiples
 [!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]
   **Resumen:** este documento va dirigido a administradores y arquitectos de SharePoint, e incluye instrucciones detalladas para la implementación y la configuración de un entorno de demostración de Microsoft BI en una granja de SharePoint con varios servidores. Esta información se basa en las versiones preliminares de SharePoint Server 2016, Office Online Server y la pila SQL Server 2016 BI para SharePoint 2016. Tras una breve presentación de los cambios importantes en la arquitectura y las correspondientes dependencias del sistema, se describen los requisitos de software y de configuración y el camino de implementación recomendado para habilitar y comprobar las funcionalidades de BI en tres fases principales. En este documento también se analizan los problemas conocidos que existen en las versiones SharePoint Server 2016 Beta 2, Office Online Server Preview y SQL Server 2016 CTP 3.1 y se sugieren las soluciones más adecuadas. Estas soluciones ya no será necesarias en las versiones finales de los productos. Cuando vaya a implementar versiones de RTM, busque una versión actualizada de este documento.  
   
- **Escritor:**Kay Unkroth, Jason Haak  
+ **Escritor:** Kay Unkroth, Jason Haak  
   
  **Revisores técnicos:** Adam Saxton, Anne Zorner, Craig Guyer, Frank Weigel, Gregory Appel, Heidi Steen, Kasper de Jonge, Kirk Stark, Klaus Sobel, Mike Plumley, Mike Taghizadeh, Patrick Wheeler, Riccardo Muti, Steve Hord  
   
- **Fecha de publicación:**enero de 2016  
+ **Fecha de publicación:** enero de 2016  
   
  **Se aplica a:** SQL Server 2016 CTP3.1, SharePoint 2016 Preview, Office Online Server Preview  
   

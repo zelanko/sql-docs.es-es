@@ -21,12 +21,11 @@ caps.latest.revision: 13
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: 0b84e3d1320ae15500fd23f8f1b2d66d9225934d
-ms.sourcegitcommit: bb044a48a6af9b9d8edb178dc8c8bd5658b9ff68
-ms.translationtype: MT
+ms.openlocfilehash: b75bd355b699b87096f1e15e7d04d00f220d724b
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/18/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="delete-method-example-vc"></a>Eliminar el ejemplo del método (VC ++)
 Este ejemplo se utiliza la [eliminar](../../../ado/reference/ado-api/delete-method-ado-recordset.md) método para quitar un registro especificado de un [conjunto de registros](../../../ado/reference/ado-api/recordset-object-ado.md).  

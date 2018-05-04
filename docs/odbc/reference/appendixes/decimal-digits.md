@@ -11,7 +11,7 @@ ms.suite: sql
 ms.technology:
 - drivers
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - size of data types [ODBC]
 - decimal digits of data types [ODBC]
@@ -22,12 +22,11 @@ caps.latest.revision: 5
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: ded2bda56c0fee5012e451dbee55a89cfa32e16a
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
-ms.translationtype: MT
+ms.openlocfilehash: 3b4aaf614ac165d7ca867b3bf394ea942a992e19
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="decimal-digits"></a>Dígitos decimales
 El *dígitos decimales* de datos decimal y numeric tipos se define como el número máximo de dígitos a la derecha del separador decimal o la escala de los datos. Para columnas de número de punto flotante aproximadas o los parámetros, la escala no está definida porque el número de dígitos a la derecha del separador decimal no es fijo. Para los datos de fecha y hora o intervalo que contiene un componente de segundos, los dígitos decimales se define como el número de dígitos a la derecha del separador decimal en el componente de segundos de los datos.  

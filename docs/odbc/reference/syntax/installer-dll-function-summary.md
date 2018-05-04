@@ -11,7 +11,7 @@ ms.suite: sql
 ms.technology:
 - drivers
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - functions [ODBC], installer DLL functions
 - installer DLL [ODBC]
@@ -20,12 +20,11 @@ caps.latest.revision: 5
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: 7b6507803b92f20b8f9d58e8d822196d1219325e
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
-ms.translationtype: MT
+ms.openlocfilehash: 22affac7219620f0f7caaf2ea8d4affdb91666ce
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="installer-dll-function-summary"></a>Resumen de funciones DLL de instalador
 En la tabla siguiente describe las funciones en el archivo DLL del instalador. Para obtener más información sobre la sintaxis y semántica para cada función, consulte [referencia API DLL del instalador](../../../odbc/reference/syntax/installer-dll-api-reference-function.md).  

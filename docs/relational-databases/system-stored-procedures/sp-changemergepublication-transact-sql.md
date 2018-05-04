@@ -24,12 +24,11 @@ caps.latest.revision: 44
 author: edmacauley
 ms.author: edmaca
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: d6182a83fce79b3940b4137345d24d14d259c7db
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
-ms.translationtype: MT
+ms.openlocfilehash: e17a010a96c669e7f8363634a135bdaa9e7be892
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="spchangemergepublication-transact-sql"></a>sp_changemergepublication (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -87,7 +86,7 @@ sp_changemergepublication [ @publication= ] 'publication'
 |**compress_snapshot**|**true**|La instantánea de una carpeta de instantáneas alternativa se comprime en formato CAB. La instantánea de la carpeta de instantáneas predeterminada no se puede comprimir. Para cambiar esta propiedad, se requiere una instantánea nueva.|  
 ||**False**|De forma predeterminada, no se comprime la instantánea. Para cambiar esta propiedad, se requiere una instantánea nueva.|  
 |**conflict_logging**|**publicador**|Los registros de conflictos se almacenan en el publicador.|  
-||**suscriptor**|Los registros de conflictos se almacenan en el suscriptor que causó el conflicto. No se admite para [!INCLUDE[ssEW](../../includes/ssew-md.md)] suscriptores*.*|  
+||**suscriptor**|Los registros de conflictos se almacenan en el suscriptor que causó el conflicto. No se admite para [!INCLUDE[ssEW](../../includes/ssew-md.md)] suscriptores *.*|  
 ||**ambos**|Los registros de conflictos se almacenan tanto en el publicador como en el suscriptor.|  
 |**conflict_retention**||Un **int** que especifica el período de retención, expresado en días, para el que se conservan los conflictos. Establecer *conflict_retention* a **0** significa que no se necesita ninguna limpieza de conflictos.|  
 |**Descripción**||Descripción de la publicación.|  

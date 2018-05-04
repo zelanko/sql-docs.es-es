@@ -27,15 +27,15 @@ caps.latest.revision: 38
 author: Minewiskan
 ms.author: owend
 manager: kfile
-ms.workload: Inactive
-ms.openlocfilehash: 83a958417136ca921714653492ffe118b1ff027c
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
-ms.translationtype: MT
+ms.openlocfilehash: 1a7c7e1bddadf3373a2b8fa35fd9ac931f46a6c2
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="currentstoragemode-element-assl"></a>Elemento CurrentStorageMode (ASSL)
-[!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]Determina el modo de almacenamiento actual para el elemento primario.  
+[!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]
+  Determina el modo de almacenamiento actual para el elemento primario.  
   
 ## <a name="syntax"></a>Sintaxis  
   
@@ -46,9 +46,9 @@ ms.lasthandoff: 01/08/2018
 </Dimension>  
 ```  
   
-## <a name="element-characteristics"></a>Características del elemento  
+## <a name="element-characteristics"></a>Características de los elementos  
   
-|Característica|Description|  
+|Característica|Descripción|  
 |--------------------|-----------------|  
 |Tipo y longitud de los datos|String (enumeración)|  
 |Valor predeterminado|*ROLAP*|  
@@ -59,9 +59,9 @@ ms.lasthandoff: 01/08/2018
 |Relación|Elemento|  
 |------------------|-------------|  
 |Elemento primario|[Dimensión](../../../analysis-services/scripting/objects/dimension-element-assl.md), [partición](../../../analysis-services/scripting/objects/partition-element-assl.md)|  
-|Elementos secundarios|None|  
+|Elementos secundarios|Ninguno|  
   
-## <a name="remarks"></a>Notas  
+## <a name="remarks"></a>Comentarios  
  El **CurrentStorageMode** elemento indica el modo de almacenamiento actualmente en uso para fines de almacenamiento en caché automático y se aplica a todos los atributos del elemento primario.  
   
  El valor de este elemento se limita a una de las cadenas enumeradas en la tabla siguiente.  
@@ -74,7 +74,7 @@ ms.lasthandoff: 01/08/2018
   
  La enumeración que corresponde a los valores permitidos **CurrentStorageMode** en el objeto de Analysis Management Objects (AMO) es el modelo <xref:Microsoft.AnalysisServices.StorageMode>.  
   
-## <a name="see-also"></a>Ver también  
- [Propiedades &#40; ASSL &#41;](../../../analysis-services/scripting/properties/properties-assl.md)  
+## <a name="see-also"></a>Vea también  
+ [Propiedades & #40; ASSL & #41;](../../../analysis-services/scripting/properties/properties-assl.md)  
   
   

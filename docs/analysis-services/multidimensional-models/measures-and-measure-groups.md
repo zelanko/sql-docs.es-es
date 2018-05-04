@@ -1,41 +1,23 @@
 ---
 title: Las medidas y grupos de medida | Documentos de Microsoft
-ms.custom: 
-ms.date: 03/01/2017
-ms.prod: analysis-services
-ms.prod_service: analysis-services
-ms.service: 
-ms.component: data-mining
-ms.reviewer: 
-ms.suite: pro-bi
-ms.technology: 
-ms.tgt_pltfrm: 
+ms.date: 05/02/2018
+ms.prod: sql
+ms.technology: analysis-services
+ms.component: multidimensional-models
 ms.topic: article
-helpviewer_keywords:
-- measure groups [Analysis Services]
-- measures [Analysis Services], about measures
-- OLAP objects [Analysis Services], measures
-- aggregate functions [Analysis Services]
-- granularity
-- measure groups [Analysis Services], about measure groups
-- measures [Analysis Services]
-- aggregations [Analysis Services], measures
-- fact tables [Analysis Services]
-ms.assetid: 4f0122f9-c3a5-4172-ada3-5bc5f7b1cc9a
-caps.latest.revision: 
-author: Minewiskan
 ms.author: owend
+ms.reviewer: owend
+author: minewiskan
 manager: kfile
-ms.workload: On Demand
-ms.openlocfilehash: c8775c33a50d25379f1de53f00b7e66830cbf971
-ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
+ms.openlocfilehash: 171ee494ad3d4b89ab923b4b2f0a769da0d7012c
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/15/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="measures-and-measure-groups"></a>Medidas y grupos de medida
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
-Un cubo incluye *medidas* en *grupos de medida*, lógica de negocios y una colección de dimensiones que proporcionan contexto para evaluar los datos numéricos que proporciona una medida. Las medidas y los grupos de medida son componentes esenciales de un cubo. Un cubo no puede existir sin, al menos, uno de cada uno de estos componentes.  
+  Un cubo incluye *medidas* en *grupos de medida*, lógica de negocios y una colección de dimensiones que proporcionan contexto para evaluar los datos numéricos que proporciona una medida. Las medidas y los grupos de medida son componentes esenciales de un cubo. Un cubo no puede existir sin, al menos, uno de cada uno de estos componentes.  
   
  En este tema se describen [Measures](#bkmk_measure) y [Measure Groups](#bkmk_mg). También contiene la siguiente tabla, con vínculos a procedimientos para crear y configurar grupos de medida y medidas.  
   

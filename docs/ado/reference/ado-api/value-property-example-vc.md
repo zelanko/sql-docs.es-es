@@ -21,12 +21,11 @@ caps.latest.revision: 11
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: 8802aac5f12a5bc1e5010f6cf13877b759371cac
-ms.sourcegitcommit: bb044a48a6af9b9d8edb178dc8c8bd5658b9ff68
-ms.translationtype: MT
+ms.openlocfilehash: 340fc0395c244de54b59f80e6001460e72462a23
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/18/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="value-property-example-vc"></a>Ejemplo de la propiedad de valor (VC ++)
 Este ejemplo se muestra la [valor](../../../ado/reference/ado-api/value-property-ado.md) propiedad con [campo](../../../ado/reference/ado-api/field-object.md) y [propiedad](../../../ado/reference/ado-api/property-object-ado.md) objetos y mostrar valores de campo y propiedad para el ***empleados*** tabla.  

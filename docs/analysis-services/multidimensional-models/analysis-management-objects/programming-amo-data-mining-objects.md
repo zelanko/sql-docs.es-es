@@ -1,34 +1,19 @@
 ---
-title: "Programar objetos de minería de datos AMO | Documentos de Microsoft"
-ms.custom: 
-ms.date: 02/14/2018
-ms.prod: analysis-services
-ms.prod_service: analysis-services
-ms.service: 
-ms.component: 
-ms.reviewer: 
-ms.suite: pro-bi
-ms.technology: 
-ms.tgt_pltfrm: 
-ms.topic: reference
-applies_to:
-- SQL Server 2016 Preview
-helpviewer_keywords:
-- programming [AMO]
-- data mining [AMO]
-- AMO, data mining
-- Analysis Management Objects, data mining
-ms.assetid: d27f58b9-91be-449c-8403-439aa6dd1ff9
-caps.latest.revision: 
-author: Minewiskan
+title: Programar objetos de minería de datos AMO | Documentos de Microsoft
+ms.date: 05/02/2018
+ms.prod: sql
+ms.technology: analysis-services
+ms.component: amo
+ms.topic: article
 ms.author: owend
+ms.reviewer: owend
+author: minewiskan
 manager: kfile
-ms.workload: Inactive
-ms.openlocfilehash: be27072d93bb9cee3d787732e57fc591452c2191
-ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
+ms.openlocfilehash: 9ba64d48fe93ea047210c00717d84cde0e4dcae9
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/15/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="programming-amo-data-mining-objects"></a>Programar objetos de minería de datos con AMO
   La programación de objetos de minería de datos mediante AMO es un proceso sencillo y directo. El primer paso consiste en crear un modelo de estructura de datos que admita el proyecto de minería de datos. A continuación, se crea el modelo de minería de datos que admite el algoritmo de minería de datos que desea utilizar para predecir o buscar las relaciones ocultas subyacentes a los datos. Una vez creado el proyecto de minería de datos (incluidos la estructura y los algoritmos), puede procesar los modelos de minería de datos para obtener los modelos entrenados que utilizará más adelante al realizar consultas y predicciones desde la aplicación cliente.  
@@ -41,7 +26,7 @@ ms.lasthandoff: 02/15/2018
   
 -   [Objetos MiningModel](#MiningModel)  
   
-##  <a name="MiningStructure">Objetos MiningStructure</a>  
+##  <a name="MiningStructure"></a> Objetos MiningStructure  
  Una estructura de minería de datos es la definición de la estructura de datos que se utiliza para crear todos los modelos de minería de datos. Una estructura de minería de datos contiene un enlace a una vista del origen de datos definida en la base de datos y contiene definiciones de todas las columnas que participan en los modelos de minería de datos. Una estructura de minería de datos puede tener más de un modelo.  
   
  La creación de un objeto <xref:Microsoft.AnalysisServices.MiningStructure> requiere los pasos siguientes:  
@@ -94,7 +79,7 @@ public static MiningStructure CreateSalesForecastingMiningStructure(Database db)
 }  
 ```  
   
-##  <a name="MiningModel">Objetos MiningModel</a>  
+##  <a name="MiningModel"></a> Objetos MiningModel  
  Un modelo de minería de datos es un repositorio de todas las columnas y definiciones de columna que se utilizarán en un algoritmo de minería de datos.  
   
  La creación de un objeto <xref:Microsoft.AnalysisServices.MiningModel> requiere los pasos siguientes:  
@@ -149,7 +134,7 @@ public static MiningModel CreateSalesForecastingMiningModel(MiningStructure ms)
  [Clases fundamentales de AMO](../../../analysis-services/multidimensional-models/analysis-management-objects/amo-fundamental-classes.md)   
  [Introducción a las clases AMO](../../../analysis-services/multidimensional-models/analysis-management-objects/amo-classes-introduction.md)   
  [Clases de minería de datos AMO](../../../analysis-services/multidimensional-models/analysis-management-objects/amo-data-mining-classes.md)   
- [Arquitectura lógica &#40; Analysis Services - datos multidimensionales &#41;](../../../analysis-services/multidimensional-models/olap-logical/understanding-microsoft-olap-logical-architecture.md)   
- [Objetos de base de datos &#40; Analysis Services - datos multidimensionales &#41;](../../../analysis-services/multidimensional-models/olap-logical/database-objects-analysis-services-multidimensional-data.md)  
+ [Arquitectura lógica & #40; Analysis Services - datos multidimensionales & #41;](../../../analysis-services/multidimensional-models/olap-logical/understanding-microsoft-olap-logical-architecture.md)   
+ [Objetos de base de datos & #40; Analysis Services - datos multidimensionales & #41;](../../../analysis-services/multidimensional-models/olap-logical/database-objects-analysis-services-multidimensional-data.md)  
   
   

@@ -22,12 +22,11 @@ caps.latest.revision: 18
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.workload: On Demand
-ms.openlocfilehash: c7007b09de937c013f7da1605ea78093d7a4ce51
-ms.sourcegitcommit: bb044a48a6af9b9d8edb178dc8c8bd5658b9ff68
-ms.translationtype: MT
+ms.openlocfilehash: ff92549b842fbc180d63e52e9576b857c476ecd3
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/18/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="append-method-ado"></a>Append (método) (ADO)
 Anexa un objeto a una colección. Si la colección es [campos](../../../ado/reference/ado-api/fields-collection-ado.md), un nuevo [campo](../../../ado/reference/ado-api/field-object.md) se puede crear el objeto antes de que se anexa a la colección.  

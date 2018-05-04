@@ -1,7 +1,7 @@
 ---
 title: Reservado limitaciones de Word | Documentos de Microsoft
 ms.custom: ''
-ms.date: 01/19/2017
+ms.date: 05/01/2018
 ms.prod: sql
 ms.prod_service: drivers
 ms.service: ''
@@ -11,7 +11,7 @@ ms.suite: sql
 ms.technology:
 - drivers
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - ODBC desktop database drivers [ODBC]
 - desktop database drivers [ODBC]
@@ -20,12 +20,21 @@ caps.latest.revision: 5
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: 14229cd0487b8beb663be255ce54f76f4fb6b5b2
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
-ms.translationtype: MT
+ms.openlocfilehash: ac61a7aa818ef3593fddc630d5027fbf7e4aa211
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/03/2018
 ---
-# <a name="reserved-word-limitations"></a>Limitaciones de la palabra reservada
-No utilice palabras reservadas que se enumeran en la gramática SQL en el apéndice C de la *referencia del programador de ODBC* (o la forma abreviada de estas palabras reservadas) como identificadores (es decir, tabla o columna de nombres), a menos que rodean la palabra en la parte posterior comillas (').
+# <a name="reserved-keyword-limitations"></a>Limitaciones de la palabra clave reservada
+
+Evite el uso de todas las palabras clave reservada de ODBC como identificadores en las tablas SQL o los objetos relacionados. Si un caso inusual surge donde debe usar una palabra clave reservada como un identificador, se debe encerrar el identificador con un par de *acentos graves* ('). Otro nombre para *acento grave* es *comilla inversa*.
+
+La limitación de la palabra clave reservada también se aplica a cualquier forma abreviada de las palabras clave reservadas.
+
+Una lista de las palabras clave reservada de ODBC está disponible en:
+
+- [Palabras clave reservadas de ODBC](https://docs.microsoft.com/sql/odbc/reference/appendixes/reserved-keywords).
+
+- En el *Guía de referencia del programador de ODBC*, consulte [Apéndice C: SQL gramática](https://docs.microsoft.com/sql/odbc/reference/appendixes/appendix-c-sql-grammar).
+

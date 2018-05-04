@@ -1,38 +1,37 @@
 ---
-title: "Objeto de orígenes de datos (TMSL) | Documentos de Microsoft"
-ms.custom: 
+title: Objeto de orígenes de datos (TMSL) | Documentos de Microsoft
+ms.custom: ''
 ms.date: 05/30/2017
 ms.prod: analysis-services
 ms.prod_service: analysis-services, azure-analysis-services
-ms.service: 
-ms.component: 
-ms.reviewer: 
+ms.service: ''
+ms.component: ''
+ms.reviewer: ''
 ms.suite: pro-bi
-ms.technology: 
-ms.tgt_pltfrm: 
+ms.technology: ''
+ms.tgt_pltfrm: ''
 ms.topic: reference
 ms.assetid: 1357ae7e-30a4-481a-831c-7b046fe15aa4
-caps.latest.revision: 
+caps.latest.revision: 9
 author: Minewiskan
 ms.author: owend
 manager: kfile
-ms.workload: Inactive
-ms.openlocfilehash: 13f647affa03844562f479223df57e1f8a2102f8
-ms.sourcegitcommit: d8ab09ad99e9ec30875076acee2ed303d61049b7
-ms.translationtype: MT
+ms.openlocfilehash: 2c68188cef82e36c931b299cbd9c68cf18b659de
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/23/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="datasources-object-tmsl"></a>Objeto de orígenes de datos (TMSL)
 [!INCLUDE[ssas-appliesto-sqlas-aas](../../includes/ssas-appliesto-sqlas-aas.md)]
-Define una conexión a un origen de datos utilizado por el modelo durante la importación para agregar datos al modelo o de paso a través de las consultas mediante el modo DirectQuery.  Los modelos en el modo DirectQuery sólo pueden tener una **DataSource** objeto.  
+  Define una conexión a un origen de datos utilizado por el modelo durante la importación para agregar datos al modelo o de paso a través de las consultas mediante el modo DirectQuery.  Los modelos en el modo DirectQuery sólo pueden tener una **DataSource** objeto.  
   
  A menos que se va a crear, reemplazar, o modificar el propio objeto de origen de datos, cualquier origen de datos al que hace referencia en la secuencia de comandos (como en la secuencia de comandos de partición) debe ser una existente **DataSource** objeto en el modelo.  
   
 ## <a name="object-definition"></a>Definición del objeto  
  Todos los objetos tienen un conjunto común de propiedades, incluidos el nombre, tipo, descripción, una colección de propiedades y las anotaciones. **Origen de datos** objetos también tienen las siguientes propiedades.  
   
- tipo  
+ Tipo  
  El tipo de objeto DataSource. En la actualidad, el único valor válido es proveedor (1) - cadena de conexión Normal.  
   
  connectionString  
@@ -75,7 +74,7 @@ Define una conexión a un origen de datos utilizado por el modelo durante la imp
  Una cadena opcional que identifica el nombre del proveedor de datos administrado utilizado en la conexión a la base de datos relacional, si no se especifica lo contrario en la cadena de conexión.  
   
 ## <a name="usage"></a>Uso  
- **Origen de datos** objetos se utilizan en [Alter comando &#40; TMSL &#41; ](../../analysis-services/tabular-models-scripting-language-commands/alter-command-tmsl.md), [Crear comando &#40; TMSL &#41; ](../../analysis-services/tabular-models-scripting-language-commands/create-command-tmsl.md), [CreateOrReplace comando &#40; TMSL &#41; ](../../analysis-services/tabular-models-scripting-language-commands/createorreplace-command-tmsl.md), [Eliminar comando &#40; TMSL &#41; ](../../analysis-services/tabular-models-scripting-language-commands/delete-command-tmsl.md), [Actualizar comando &#40; TMSL &#41; ](../../analysis-services/tabular-models-scripting-language-commands/refresh-command-tmsl.md), y [MergePartitions comando &#40; TMSL &#41; ](../../analysis-services/tabular-models-scripting-language-commands/mergepartitions-command-tmsl.md).  
+ **Origen de datos** objetos se utilizan en [Alter, comando &#40;TMSL&#41;](../../analysis-services/tabular-models-scripting-language-commands/alter-command-tmsl.md), [crear comando &#40;TMSL&#41;](../../analysis-services/tabular-models-scripting-language-commands/create-command-tmsl.md), [comando CreateOrReplace &#40; TMSL&#41;](../../analysis-services/tabular-models-scripting-language-commands/createorreplace-command-tmsl.md), [comando Delete &#40;TMSL&#41;](../../analysis-services/tabular-models-scripting-language-commands/delete-command-tmsl.md), [comando Refresh &#40;TMSL&#41;](../../analysis-services/tabular-models-scripting-language-commands/refresh-command-tmsl.md), y [MergePartitions, comando &#40;TMSL&#41;](../../analysis-services/tabular-models-scripting-language-commands/mergepartitions-command-tmsl.md).  
   
  A **DataSource** es una propiedad de un modelo de objeto, pero también se puede especificar como una propiedad de un objeto de base de datos según la asignación uno a uno entre el modelo y la base de datos.  Las particiones basadas en consultas SQL también especifican un **DataSource**, solo con un conjunto reducido de propiedades.  
   
@@ -189,6 +188,6 @@ Define una conexión a un origen de datos utilizado por el modelo durante la imp
 ## <a name="see-also"></a>Vea también  
  [Tabular Model Scripting Language &#40;TMSL&#41; Reference (Referencia de Tabular Model Scripting Language [TMSL])](../../analysis-services/tabular-model-scripting-language-tmsl-reference.md)   
  [Modo DirectQuery](../../analysis-services/tabular-models/directquery-mode-ssas-tabular.md)   
- [Configurar el acceso HTTP a Analysis Services de servicios de Internet Information Server &#40; IIS &#41; 8.0](../../analysis-services/instances/configure-http-access-to-analysis-services-on-iis-8-0.md)  
+ [Configurar el acceso HTTP a Analysis Services de servicios de Internet Information Server & #40; IIS & #41; 8.0](../../analysis-services/instances/configure-http-access-to-analysis-services-on-iis-8-0.md)  
   
   

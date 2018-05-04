@@ -22,12 +22,11 @@ caps.latest.revision: 10
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: b9bea2f6635c32495cecbfcdadd24708b797f998
-ms.sourcegitcommit: bb044a48a6af9b9d8edb178dc8c8bd5658b9ff68
-ms.translationtype: MT
+ms.openlocfilehash: 4671f439c3cc5590a9f85f2eee3531bb2682ac15
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/18/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="datecreated-and-datemodified-properties-example-vc"></a>Ejemplo DateCreated y DateModified propiedades (VC ++)
 Este ejemplo se muestra la [DateCreated](../../../ado/reference/adox-api/datecreated-property-adox.md) y [DateModified](../../../ado/reference/adox-api/datemodified-property-adox.md) propiedades mediante la adición de un nuevo [columna](../../../ado/reference/adox-api/column-object-adox.md) en una existente [tabla](../../../ado/reference/adox-api/table-object-adox.md) y crear un nuevo **tabla**. El procedimiento DateOutput es necesario para poder ejecutar este ejemplo.  

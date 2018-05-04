@@ -1,31 +1,23 @@
 ---
 title: Configurar el uso de espacio en disco (PowerPivot para SharePoint) | Documentos de Microsoft
-ms.custom: 
-ms.date: 03/14/2017
-ms.prod: analysis-services
-ms.prod_service: analysis-services
-ms.service: 
-ms.component: data-mining
-ms.reviewer: 
-ms.suite: pro-bi
-ms.technology: 
-ms.tgt_pltfrm: 
+ms.date: 05/02/2018
+ms.prod: sql
+ms.technology: analysis-services
+ms.component: ppvt-sharepoint
 ms.topic: article
-ms.assetid: 201a3fda-f162-45d7-bf39-74dcb92fd0e6
-caps.latest.revision: 
-author: Minewiskan
 ms.author: owend
+ms.reviewer: owend
+author: minewiskan
 manager: kfile
-ms.workload: Inactive
-ms.openlocfilehash: cfac3c1160e6889fe51f1b93a4df87a0ed92a302
-ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
+ms.openlocfilehash: 7388a8f44b3dc60729674a6cd14014d4bbfa15f4
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/15/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="configure-disk-space-usage-power-pivot-for-sharepoint"></a>Configurar el uso del espacio en disco (Power Pivot para SharePoint)
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
-Una implementación de [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] para SharePoint usa el espacio en disco del equipo host para almacenar en memoria caché las bases de datos [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] para obtener recargas más rápidas. Cada base de datos [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] que se carga en la memoria primero se almacena en la memoria caché del disco para que se pueda volver a cargar rápidamente más tarde para atender las nuevas solicitudes. De forma predeterminada, [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] para SharePoint usa todo el espacio en disco disponible para almacenar en memoria caché las bases de datos, pero puede modificar este comportamiento estableciendo las propiedades que restringen cuánto espacio en disco se usa.  
+  Una implementación de [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] para SharePoint usa el espacio en disco del equipo host para almacenar en memoria caché las bases de datos [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] para obtener recargas más rápidas. Cada base de datos [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] que se carga en la memoria primero se almacena en la memoria caché del disco para que se pueda volver a cargar rápidamente más tarde para atender las nuevas solicitudes. De forma predeterminada, [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] para SharePoint usa todo el espacio en disco disponible para almacenar en memoria caché las bases de datos, pero puede modificar este comportamiento estableciendo las propiedades que restringen cuánto espacio en disco se usa.  
   
  En este tema se explica cómo establecer los límites de espacio en disco.  
   
@@ -57,11 +49,11 @@ Una implementación de [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] para 
   
  En el nivel de sistema, puede crear alertas de correo electrónico que notifiquen que hay poco espacio en disco. Microsoft System Center incluye una característica de alerta por correo electrónico. Para configurar las alertas, también puede utilizar un script de PowerShell, el Administrador de recursos del servidor de archivos o el Programador de tareas. Los vínculos siguientes proporcionan información útil para configurar notificaciones sobre la existencia de poco espacio en disco:  
   
--   [Novedades del Administrador de recursos del servidor de archivos](http://technet.microsoft.com/library/hh831746.aspx) (http://technet.microsoft.com/es-es/library/hh831746.aspx).  
+-   [Novedades en el Administrador de recursos del servidor de archivos](http://technet.microsoft.com/library/hh831746.aspx) (http://technet.microsoft.com/library/hh831746.aspx).  
   
--   [Guía paso a paso del Administrador de recursos del servidor de archivos de Windows Server 2008 R2](http://go.microsoft.com/fwlink/?LinkID=204875) (http://go.microsoft.com/fwlink/?LinkID=204875).  
+-   [Guía paso a paso del Administrador de recursos del servidor de archivos para Windows Server 2008 R2](http://go.microsoft.com/fwlink/?LinkID=204875) (http://go.microsoft.com/fwlink/?LinkID=204875).  
   
--   [Setting low disk space alerts on Windows Server 2008](http://go.microsoft.com/fwlink/?LinkID=204870) (http://go.microsoft.com/fwlink/?LinkID=204870) (Establecer alertas de espacio en disco insuficiente en Windows Server 2008).  
+-   [Establecer alertas de espacio en disco insuficiente en Windows Server 2008](http://go.microsoft.com/fwlink/?LinkID=204870) ( http://go.microsoft.com/fwlink/?LinkID=204870).  
   
 ## <a name="how-to-limit-the-amount-of-disk-space-used-for-storing-cached-files"></a>Limitar el espacio en disco utilizado para almacenar archivos en memoria caché  
   

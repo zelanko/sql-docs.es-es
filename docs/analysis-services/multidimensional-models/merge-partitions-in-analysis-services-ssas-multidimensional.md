@@ -1,34 +1,23 @@
 ---
 title: Mezclar particiones en Analysis Services (SSAS - Multidimensional) | Documentos de Microsoft
-ms.custom: 
-ms.date: 03/14/2017
-ms.prod: analysis-services
-ms.prod_service: analysis-services
-ms.service: 
-ms.component: data-mining
-ms.reviewer: 
-ms.suite: pro-bi
-ms.technology: 
-ms.tgt_pltfrm: 
+ms.date: 05/02/2018
+ms.prod: sql
+ms.technology: analysis-services
+ms.component: multidimensional-models
 ms.topic: article
-helpviewer_keywords:
-- partitions [Analysis Services], merging
-- merging partitions [Analysis Services]
-ms.assetid: b3857b9b-de43-4911-989d-d14da0196f89
-caps.latest.revision: 
-author: Minewiskan
 ms.author: owend
+ms.reviewer: owend
+author: minewiskan
 manager: kfile
-ms.workload: Inactive
-ms.openlocfilehash: 519136d681c257d27f93894db6a7c2652d273f87
-ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
+ms.openlocfilehash: 5048828c306adbd803a822601150f8cca4e82f4f
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/15/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="merge-partitions-in-analysis-services-ssas---multidimensional"></a>Mezclar particiones en Analysis Services (SSAS - Multidimensional)
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
-Puede mezclar particiones de una base de datos de [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] existente para consolidar datos de hechos de varias particiones del mismo grupo de medida.  
+  Puede mezclar particiones de una base de datos de [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] existente para consolidar datos de hechos de varias particiones del mismo grupo de medida.  
   
  [Escenarios frecuentes](#bkmk_Scenario)  
   
@@ -140,9 +129,9 @@ Puede mezclar particiones de una base de datos de [!INCLUDE[ssASnoversion](../..
   
 ## <a name="see-also"></a>Vea también  
  [Objetos de procesamiento de Analysis Services](../../analysis-services/multidimensional-models/processing-analysis-services-objects.md)   
- [Particiones &#40; Analysis Services - datos multidimensionales &#41;](../../analysis-services/multidimensional-models-olap-logical-cube-objects/partitions-analysis-services-multidimensional-data.md)   
- [Crear y administrar una partición Local &#40; Analysis Services &#41;](../../analysis-services/multidimensional-models/create-and-manage-a-local-partition-analysis-services.md)   
- [Crear y administrar una partición remota &#40; Analysis Services &#41;](../../analysis-services/multidimensional-models/create-and-manage-a-remote-partition-analysis-services.md)   
+ [Particiones & #40; Analysis Services - datos multidimensionales & #41;](../../analysis-services/multidimensional-models-olap-logical-cube-objects/partitions-analysis-services-multidimensional-data.md)   
+ [Crear y administrar una partición Local & #40; Analysis Services & #41;](../../analysis-services/multidimensional-models/create-and-manage-a-local-partition-analysis-services.md)   
+ [Crear y administrar una partición remota & #40; Analysis Services & #41;](../../analysis-services/multidimensional-models/create-and-manage-a-remote-partition-analysis-services.md)   
  [Establecer la reescritura de particiones](../../analysis-services/multidimensional-models/set-partition-writeback.md)   
  [Particiones habilitadas para escritura](../../analysis-services/multidimensional-models-olap-logical-cube-objects/partitions-write-enabled-partitions.md)   
  [Configurar el almacenamiento de cadenas para dimensiones y particiones](../../analysis-services/multidimensional-models/configure-string-storage-for-dimensions-and-partitions.md)  

@@ -28,13 +28,12 @@ caps.latest.revision: 51
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.workload: On Demand
 monikerRange: = azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: ac0e6dbd345b1f173924e2bdc8a4826c23992730
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
-ms.translationtype: MT
+ms.openlocfilehash: 0ab5e67e03ff192dc9bc45eeb81b3c1dff60f64c
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="freetexttable-transact-sql"></a>FREETEXTTABLE (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -169,7 +168,7 @@ GO
 ```  
   
 > [!NOTE]  
->  El LENGUAJE *language_term* parámet*r* no es necesaria para usar el *top_n_by_rank* parámetro*.*  
+>  El LENGUAJE *language_term* parámet*r* no es necesaria para usar el *top_n_by_rank* parámetro *.*  
   
 ## <a name="see-also"></a>Vea también  
  [Introducción a la búsqueda de texto completo](../../relational-databases/search/get-started-with-full-text-search.md)   

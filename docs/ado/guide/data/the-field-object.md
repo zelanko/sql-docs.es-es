@@ -19,12 +19,11 @@ caps.latest.revision: 11
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: 3b0fc2840f9cd1b9dde3e5a9a883f3f37ce816b8
-ms.sourcegitcommit: bb044a48a6af9b9d8edb178dc8c8bd5658b9ff68
-ms.translationtype: MT
+ms.openlocfilehash: 8b2fc3f1716f39d5c45aab95c504fef4d9e7437f
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/18/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="the-field-object"></a>El objeto de campo
 Cada **campo** objeto suele corresponder a una columna de una tabla de base de datos. Sin embargo, un **campo** también se puede representar un puntero a otro **Recordset**, que se denomina capítulo. Excepciones, como columnas de capítulo, se explicará más adelante en esta guía.  

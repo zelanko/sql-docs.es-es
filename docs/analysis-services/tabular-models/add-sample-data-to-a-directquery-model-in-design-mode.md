@@ -1,31 +1,30 @@
 ---
-title: "Agregar datos de ejemplo con un modelo de DirectQuery en modo de diseño | Documentos de Microsoft"
-ms.custom: 
+title: Agregar datos de ejemplo con un modelo de DirectQuery en modo de diseño | Documentos de Microsoft
+ms.custom: ''
 ms.date: 02/21/2018
 ms.prod: analysis-services
 ms.prod_service: analysis-services, azure-analysis-services
-ms.service: 
-ms.component: 
-ms.reviewer: 
+ms.service: ''
+ms.component: ''
+ms.reviewer: ''
 ms.suite: pro-bi
-ms.technology: 
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.technology: ''
+ms.tgt_pltfrm: ''
+ms.topic: conceptual
 ms.assetid: 1af1e823-85aa-4319-a93f-98b35f7c7322
-caps.latest.revision: 
+caps.latest.revision: 9
 author: Minewiskan
 ms.author: owend
 manager: kfile
-ms.workload: Inactive
-ms.openlocfilehash: 068366df63bbe37d658345c1157a9d02eb7e5187
-ms.sourcegitcommit: d8ab09ad99e9ec30875076acee2ed303d61049b7
-ms.translationtype: MT
+ms.openlocfilehash: aefdfc67d36ddbd2868872165b008a489e3ef619
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/23/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="add-sample-data-to-a-directquery-model-in-design-mode"></a>Agregar datos de ejemplo a un modelo DirectQuery en el modo de diseño
 [!INCLUDE[ssas-appliesto-sqlas-aas](../../includes/ssas-appliesto-sqlas-aas.md)]
-En el modo DirectQuery, las particiones de tablas se usan para crear subconjuntos de datos de ejemplo usados durante el diseño de modelos, o bien para crear alternativas de una vista de datos completa.
+ En el modo DirectQuery, las particiones de tablas se usan para crear subconjuntos de datos de ejemplo usados durante el diseño de modelos, o bien para crear alternativas de una vista de datos completa.
  
  Al implementar un modelo tabular de DirectQuery, solo se permite una partición por tabla y, de forma obligatoria, esa partición tiene que ser de vista de datos completa. El resto de las particiones son sustituciones de la vista de datos completa o son datos de ejemplo. En este tema, vamos a describir cómo se crea una partición de ejemplo con un subconjunto de datos.
  

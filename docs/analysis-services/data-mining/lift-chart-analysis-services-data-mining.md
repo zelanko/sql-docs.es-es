@@ -1,16 +1,16 @@
 ---
-title: "Gráfico de elevación (Analysis Services: minería de datos) | Documentos de Microsoft"
-ms.custom: 
+title: 'Gráfico de elevación (Analysis Services: minería de datos) | Documentos de Microsoft'
+ms.custom: ''
 ms.date: 03/02/2016
 ms.prod: analysis-services
 ms.prod_service: analysis-services
-ms.service: 
+ms.service: ''
 ms.component: data-mining
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: pro-bi
-ms.technology: 
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.technology: ''
+ms.tgt_pltfrm: ''
+ms.topic: conceptual
 helpviewer_keywords:
 - testing data mining models
 - accuracy, charting
@@ -19,20 +19,19 @@ helpviewer_keywords:
 - profit charts [Analysis Services]
 - accuracy testing [data mining]
 ms.assetid: ab77eca1-bd48-4fef-b27f-ff5b648e0501
-caps.latest.revision: 
+caps.latest.revision: 55
 author: Minewiskan
 ms.author: owend
 manager: kfile
-ms.workload: On Demand
-ms.openlocfilehash: 5effa132a9ccb440ccf3b8a7c004e6692a4aef57
-ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
-ms.translationtype: MT
+ms.openlocfilehash: e48a0c54ba3c771faf31f71d4e3d9ea3653071c4
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/15/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="lift-chart-analysis-services---data-mining"></a>Gráfico de mejora respecto al modelo predictivo (Analysis Services - Minería de datos)
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
-A *mejora respecto al modelo predictivo chart* representa gráficamente la mejora que proporciona un modelo de minería de datos en comparación con una estimación aleatoria, y mide el cambio en términos de puntuación de la *mejora respecto al modelo predictivo* . Si compara las puntuaciones de mejora de los distintos modelos, puede determinar qué modelo es mejor. También puede determinar el punto en el que las predicciones del modelo pasan a ser menos útiles. Por ejemplo, revisando el gráfico de elevación, podría observar que es probable que una campaña de promoción solo sea eficaz para un 30 % de los clientes y usar esa cifra para limitar el ámbito de la campaña.  
+  A *mejora respecto al modelo predictivo chart* representa gráficamente la mejora que proporciona un modelo de minería de datos en comparación con una estimación aleatoria, y mide el cambio en términos de puntuación de la *mejora respecto al modelo predictivo* . Si compara las puntuaciones de mejora de los distintos modelos, puede determinar qué modelo es mejor. También puede determinar el punto en el que las predicciones del modelo pasan a ser menos útiles. Por ejemplo, revisando el gráfico de elevación, podría observar que es probable que una campaña de promoción solo sea eficaz para un 30 % de los clientes y usar esa cifra para limitar el ámbito de la campaña.  
   
  En la minería de datos de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , el gráfico de elevación puede comparar la precisión de varios modelos que tienen el mismo atributo de predicción. También puede evaluar la exactitud de la predicción para un único resultado (un único valor del atributo de predicción) o para todos los resultados (todos los valores del atributo especificado).  
   

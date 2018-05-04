@@ -11,7 +11,7 @@ ms.suite: sql
 ms.technology:
 - drivers
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - Unicode [ODBC], data
 - data types [ODBC], Unicode
@@ -22,12 +22,11 @@ caps.latest.revision: 5
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: 70b5a27c4c034cbb9c2d7ee1cfd10808f3aa323f
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
-ms.translationtype: MT
+ms.openlocfilehash: 7871576f95ebb49708036d531c4f2d8eebbac863
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="unicode-data"></a>Datos Unicode
 Tipos de datos Unicode de SQL se proporcionan para describir los datos que se encuentra en formato Unicode de forma nativa en el DBMS. Un tipo de datos Unicode C se proporciona para permitir que una aplicación enlazar datos a un búfer de Unicode. El Administrador de controladores puede convertir los datos de un tipo de Unicode C (SQL_C_WCHAR) para que sea la función con un controlador de ANSI.  

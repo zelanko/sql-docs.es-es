@@ -1,16 +1,16 @@
 ---
-title: "Referencia técnica del algoritmo de agrupación en clústeres de secuencia de Microsoft | Documentos de Microsoft"
-ms.custom: 
+title: Referencia técnica del algoritmo de agrupación en clústeres de secuencia de Microsoft | Documentos de Microsoft
+ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: analysis-services
 ms.prod_service: analysis-services
-ms.service: 
+ms.service: ''
 ms.component: data-mining
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: pro-bi
-ms.technology: 
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.technology: ''
+ms.tgt_pltfrm: ''
+ms.topic: conceptual
 helpviewer_keywords:
 - MAXIMUM_SEQUENCE_STATES parameter
 - MINIMUM_SUPPORT parameter
@@ -18,20 +18,19 @@ helpviewer_keywords:
 - sequence clustering algorithms [Analysis Services]
 - CLUSTER_COUNT parameter
 ms.assetid: 251c369d-6b02-4687-964e-39bf55c9b009
-caps.latest.revision: 
+caps.latest.revision: 20
 author: Minewiskan
 ms.author: owend
 manager: kfile
-ms.workload: Inactive
-ms.openlocfilehash: e0a53d359debe447cc4e1cc94197516c75f53f8d
-ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
-ms.translationtype: MT
+ms.openlocfilehash: 9c91e236e79b9476020077d9c6f59f747d099554
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/15/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="microsoft-sequence-clustering-algorithm-technical-reference"></a>Referencia técnica del algoritmo de clústeres de secuencia de Microsoft
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
-El algoritmo de clústeres de secuencia de Microsoft es un algoritmo híbrido que usa el análisis de cadenas de Markov para identificar secuencias ordenadas, y combina los resultados de este análisis con técnicas de agrupación en clústeres para generar clústeres basados en las secuencias y otros atributos del modelo. En este tema se describe la implementación del algoritmo y cómo personalizarlo, y se detallan los requisitos especiales para los modelos de agrupación en clústeres de secuencia.  
+  El algoritmo de clústeres de secuencia de Microsoft es un algoritmo híbrido que usa el análisis de cadenas de Markov para identificar secuencias ordenadas, y combina los resultados de este análisis con técnicas de agrupación en clústeres para generar clústeres basados en las secuencias y otros atributos del modelo. En este tema se describe la implementación del algoritmo y cómo personalizarlo, y se detallan los requisitos especiales para los modelos de agrupación en clústeres de secuencia.  
   
  Para obtener más información general sobre el algoritmo, incluyendo cómo examinar y consultar los modelos de agrupación en clústeres de secuencia, vea [Microsoft Sequence Clustering Algorithm](../../analysis-services/data-mining/microsoft-sequence-clustering-algorithm.md).  
   
@@ -143,7 +142,7 @@ El algoritmo de clústeres de secuencia de Microsoft es un algoritmo híbrido qu
   
 ## <a name="remarks"></a>Comentarios  
   
--   Use la función [PredictSequence &#40;DMX&#41;](../../dmx/predictsequence-dmx.md) para la predicción de secuencias. Para obtener más información sobre las ediciones de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] que admiten la predicción de secuencias, vea [Características compatibles con las ediciones de SQL Server 2012](http://go.microsoft.com/fwlink/?linkid=232473) (http://go.microsoft.com/fwlink/?linkid=232473).  
+-   Use la función [PredictSequence &#40;DMX&#41;](../../dmx/predictsequence-dmx.md) para la predicción de secuencias. Para obtener más información sobre las ediciones de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] que admiten la predicción de secuencias, vea [características compatibles con las ediciones de SQL Server 2012](http://go.microsoft.com/fwlink/?linkid=232473) (http://go.microsoft.com/fwlink/?linkid=232473).  
   
 -   El algoritmo de clústeres de secuencia de [!INCLUDE[msCoName](../../includes/msconame-md.md)] no admite el uso del lenguaje de marcado de modelos de predicción (PMML) para crear modelos de minería de datos.  
   
@@ -152,6 +151,6 @@ El algoritmo de clústeres de secuencia de Microsoft es un algoritmo híbrido qu
 ## <a name="see-also"></a>Vea también  
  [Algoritmo de clústeres de secuencia de Microsoft](../../analysis-services/data-mining/microsoft-sequence-clustering-algorithm.md)   
  [Ejemplos de consultas de modelo de clústeres de secuencia](../../analysis-services/data-mining/sequence-clustering-model-query-examples.md)   
- [Contenido del modelo de minería de datos para modelos de agrupación en clústeres de secuencia &#40; Analysis Services: minería de datos &#41;](../../analysis-services/data-mining/mining-model-content-for-sequence-clustering-models.md)  
+ [Contenido del modelo de minería de datos para modelos de agrupación en clústeres de secuencia & #40; Analysis Services: minería de datos & #41;](../../analysis-services/data-mining/mining-model-content-for-sequence-clustering-models.md)  
   
   

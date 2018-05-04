@@ -11,7 +11,7 @@ ms.suite: sql
 ms.technology:
 - drivers
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - catalog functions [ODBC], executing
 - functions [ODBC], catalog functions
@@ -20,12 +20,11 @@ caps.latest.revision: 5
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: 9c50bbb813c0aad7ae8d9a531458b2999dcae86f
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
-ms.translationtype: MT
+ms.openlocfilehash: 854a7e7fe347bb02c59fe1608afd74bf87be6b7b
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="executing-catalog-functions"></a>Ejecutar funciones de catálogo
 Dado que una función de catálogo, crea un conjunto de resultados, equivale a ejecutar cualquier instrucción de SQL: Generar conjunto de resultados. De hecho, las funciones de catálogo se implementan a menudo ejecutando instrucciones SQL predefinidas o llamar a procedimientos predefinidos que se suministran con el controlador o el DBMS. Casi todo lo que se aplica a instrucciones SQL que crean conjuntos de resultados también se aplica a funciones de catálogo. Por ejemplo, el atributo de instrucción SQL_ATTR_MAX_ROWS limita el número de filas devueltas por la función de catálogo, tal y como limita el número de filas devueltas por una **seleccione** instrucción.  

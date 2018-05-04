@@ -24,12 +24,11 @@ caps.latest.revision: 35
 author: Minewiskan
 ms.author: owend
 manager: erikre
-ms.workload: Inactive
-ms.openlocfilehash: 6b3e7d095a7957c8d5af8dc497bb7a9d884005b8
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
-ms.translationtype: MT
+ms.openlocfilehash: 2f2614b552fe5b5f96dcb50dcd0bc85c857540b1
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="mdx-data-manipulation---call"></a>Manipulación de datos MDX - llamada
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
@@ -66,7 +65,7 @@ CALL SP_Name
 >  Si el procedimiento almacenado no está registrado en el cliente, el **llamar a** instrucción intenta llamar al procedimiento almacenado desde una instancia de [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)].  
   
 ## <a name="see-also"></a>Vea también  
- [Instrucciones de manipulación de datos MDX &#40; MDX &#41;](../mdx/mdx-data-manipulation-statements-mdx.md)   
- [Mediante los procedimientos almacenados &#40; MDX &#41;](../mdx/using-stored-procedures-mdx.md)  
+ [Instrucciones de manipulación de datos MDX &#40;MDX&#41;](../mdx/mdx-data-manipulation-statements-mdx.md)   
+ [Using Stored Procedures &#40;MDX&#41;](../mdx/using-stored-procedures-mdx.md) (Usar procedimientos almacenados [MDX])  
   
   

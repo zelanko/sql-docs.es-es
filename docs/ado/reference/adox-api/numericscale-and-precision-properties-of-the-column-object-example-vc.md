@@ -22,12 +22,11 @@ caps.latest.revision: 10
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: e863b4241b67118234fa1ffc8777af001e929df4
-ms.sourcegitcommit: bb044a48a6af9b9d8edb178dc8c8bd5658b9ff68
-ms.translationtype: MT
+ms.openlocfilehash: 9e36e343285edbaaba3ca553ece7085fa246db75
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/18/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="numericscale-and-precision-properties-of-the-column-object-example-vc"></a>NumericScale y propiedades de precisión del ejemplo de objeto de columna (VC ++)
 Este ejemplo se muestra la [NumericScale](../../../ado/reference/adox-api/numericscale-property-adox.md) y [precisión](../../../ado/reference/adox-api/precision-property-adox.md) propiedades de la [columna](../../../ado/reference/adox-api/column-object-adox.md) objeto. Este código muestra su valor para el **Order Details** tabla de la *Northwind* base de datos.  

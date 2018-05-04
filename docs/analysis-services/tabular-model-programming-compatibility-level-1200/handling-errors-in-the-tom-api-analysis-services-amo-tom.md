@@ -1,30 +1,30 @@
 ---
 title: Control de errores en la API de TOM (Analysis Services AMO-TOM) | Documentos de Microsoft
-ms.custom: 
+ms.custom: ''
 ms.date: 03/04/2017
 ms.prod: analysis-services
 ms.prod_service: analysis-services, azure-analysis-services
-ms.service: 
-ms.component: 
-ms.reviewer: 
+ms.service: ''
+ms.component: ''
+ms.reviewer: ''
 ms.suite: pro-bi
-ms.technology: 
-ms.tgt_pltfrm: 
+ms.technology: ''
+ms.tgt_pltfrm: ''
 ms.topic: reference
 ms.assetid: ec44daa0-a90e-42ad-b70d-6a7a7a4e4b7b
-caps.latest.revision: "4"
+caps.latest.revision: 4
 author: Minewiskan
 ms.author: owend
 manager: kfile
-ms.workload: Inactive
-ms.openlocfilehash: fe73f11bb44968e7091fe522f4905e3640c95282
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
-ms.translationtype: MT
+ms.openlocfilehash: a81032f741553717327548b1dbcf812506ce5914
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="handling-errors-in-the-tom-api-analysis-services-amo-tom"></a>Control de errores en la API de TOM (Analysis Services AMO-TOM)
-[!INCLUDE[ssas-appliesto-sqlas-aas](../../includes/ssas-appliesto-sqlas-aas.md)]Una práctica común para las bibliotecas administradas del modelo de objeto Tabular (TOM) como objetos de administración de servicios de análisis (AMO) consiste en usar excepciones como un mecanismo para informar sobre las condiciones de error al usuario.  
+[!INCLUDE[ssas-appliesto-sqlas-aas](../../includes/ssas-appliesto-sqlas-aas.md)]
+Una práctica común para las bibliotecas administradas del modelo de objeto Tabular (TOM) como objetos de administración de servicios de análisis (AMO) consiste en usar excepciones como un mecanismo para informar sobre las condiciones de error al usuario.  
 
 Cuando se detecta un error en AMO TOM, además de producir algunas excepciones de .NET estándares como puede ser **ArgumentException** y **InvalidOperationException**, TOM también puede producir varias excepciones de TOM específica.  
 

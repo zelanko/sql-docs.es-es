@@ -1,31 +1,23 @@
 ---
 title: Alta disponibilidad y escalabilidad en Analysis Services | Documentos de Microsoft
-ms.custom: 
-ms.date: 03/01/2017
-ms.prod: analysis-services
-ms.prod_service: analysis-services
-ms.service: 
-ms.component: 
-ms.reviewer: 
-ms.suite: pro-bi
-ms.technology: 
-ms.tgt_pltfrm: 
+ms.date: 05/02/2018
+ms.prod: sql
+ms.technology: analysis-services
+ms.component: ''
 ms.topic: article
-ms.assetid: d7040a55-1e4d-4c24-9333-689c1b9e2db8
-caps.latest.revision: 
-author: Minewiskan
 ms.author: owend
+ms.reviewer: owend
+author: minewiskan
 manager: kfile
-ms.workload: On Demand
-ms.openlocfilehash: ac8292e9319bef3d535ff6f3977b50ac22805e27
-ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
+ms.openlocfilehash: 3eb3d358f22c22472185c61baebc4197792f6353
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/15/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="high-availability-and-scalability-in-analysis-services"></a>Alta disponibilidad y escalabilidad en Analysis Services
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
-En este artículo se describen las técnicas empleadas con más frecuencia para lograr una alta disponibilidad y escalabilidad de las bases de datos de Analysis Services. Aunque ambos aspectos podrían abordarse por separado, la realidad es que van frecuentemente de la mano. Así, una implementación escalable para grandes cargas de trabajo de procesamiento o de consulta normalmente conlleva una disponibilidad elevada.  
+  En este artículo se describen las técnicas empleadas con más frecuencia para lograr una alta disponibilidad y escalabilidad de las bases de datos de Analysis Services. Aunque ambos aspectos podrían abordarse por separado, la realidad es que van frecuentemente de la mano. Así, una implementación escalable para grandes cargas de trabajo de procesamiento o de consulta normalmente conlleva una disponibilidad elevada.  
   
  Pero esto no sucede a la inversa. Una alta disponibilidad, sin escala, puede ser perfectamente el único objetivo cuando existen contratos de nivel de servicio muy estrictos para cargas de trabajo de consulta de tamaño moderado, pero críticos.  
   

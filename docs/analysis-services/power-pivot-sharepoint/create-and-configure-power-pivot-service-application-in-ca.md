@@ -1,31 +1,23 @@
 ---
-title: "Crear y configurar la aplicación de servicio PowerPivot en la entidad emisora de certificados | Documentos de Microsoft"
-ms.custom: 
-ms.date: 03/14/2017
-ms.prod: analysis-services
-ms.prod_service: analysis-services
-ms.service: 
-ms.component: data-mining
-ms.reviewer: 
-ms.suite: pro-bi
-ms.technology: 
-ms.tgt_pltfrm: 
+title: Crear y configurar la aplicación de servicio PowerPivot en la entidad emisora de certificados | Documentos de Microsoft
+ms.date: 05/02/2018
+ms.prod: sql
+ms.technology: analysis-services
+ms.component: ppvt-sharepoint
 ms.topic: article
-ms.assetid: b2e5693e-4af3-453f-83f3-07481ab1ac6a
-caps.latest.revision: 
-author: Minewiskan
 ms.author: owend
+ms.reviewer: owend
+author: minewiskan
 manager: kfile
-ms.workload: Inactive
-ms.openlocfilehash: 625844e5cc54882fadd7707de4b7548caa820ea3
-ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
+ms.openlocfilehash: 5748a659aad37878869135c6a3d8358880979fe7
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/15/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="create-and-configure-power-pivot-service-application-in-ca"></a>Crear y configurar la aplicación de servicio PowerPivot en la entidad emisora de certificados
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
-Una aplicación de servicio [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] es una instancia de servicio compartida del servicio de sistema [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] . Cada aplicación de servicio tiene su propia identidad de aplicación, configuración, propiedades y almacenamiento de datos interno.  
+  Una aplicación de servicio [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] es una instancia de servicio compartida del servicio de sistema [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] . Cada aplicación de servicio tiene su propia identidad de aplicación, configuración, propiedades y almacenamiento de datos interno.  
   
  Este tema contiene las siguientes secciones:  
   

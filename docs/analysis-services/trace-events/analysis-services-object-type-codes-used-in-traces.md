@@ -1,31 +1,30 @@
 ---
-title: "Códigos de tipo que se utilizan en los seguimientos de objeto de Analysis Services | Documentos de Microsoft"
-ms.custom: 
+title: Códigos de tipo que se utilizan en los seguimientos de objeto de Analysis Services | Documentos de Microsoft
+ms.custom: ''
 ms.date: 03/01/2017
 ms.prod: analysis-services
 ms.prod_service: analysis-services
-ms.service: 
-ms.component: 
-ms.reviewer: 
+ms.service: ''
+ms.component: ''
+ms.reviewer: ''
 ms.suite: pro-bi
-ms.technology: 
-ms.tgt_pltfrm: 
+ms.technology: ''
+ms.tgt_pltfrm: ''
 ms.topic: reference
 ms.assetid: e4119db1-4a41-4335-9b33-f1ea95564300
-caps.latest.revision: 
+caps.latest.revision: 5
 author: Minewiskan
 ms.author: owend
 manager: kfile
-ms.workload: Inactive
-ms.openlocfilehash: cd17ad086169a53673d7c9ba48f79058dd87769d
-ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
-ms.translationtype: MT
+ms.openlocfilehash: 78a0ca43a89f728a9db0f7adfcf1e3c7de139d10
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/15/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="analysis-services-object-type-codes-used-in-traces"></a>Códigos de tipo de objeto de Analysis Services usados en seguimientos
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
-En esta página se indica el tipo de objeto (un número de seis dígitos) de cada objeto en un modelo de datos de Analysis Services.  Estos códigos aparecen en registros de seguimiento y se usan para identificar el tipo de objeto asociado con un bloqueo concreto. Por ejemplo, un tiempo de espera de bloqueo en una base de datos indicará el tipo de objeto 100002, que es el tipo de objeto Database.  
+  En esta página se indica el tipo de objeto (un número de seis dígitos) de cada objeto en un modelo de datos de Analysis Services.  Estos códigos aparecen en registros de seguimiento y se usan para identificar el tipo de objeto asociado con un bloqueo concreto. Por ejemplo, un tiempo de espera de bloqueo en una base de datos indicará el tipo de objeto 100002, que es el tipo de objeto Database.  
   
 > [!NOTE]  
 >  Aquí se enumeran más códigos de los que realmente aparecerán en un registro de seguimiento. La lista que aparece a continuación es una lista exhaustiva de los códigos de tipo para cada objeto, pero solo los objetos que llevan bloqueo presentarán un código de tipo de objeto en un registro de seguimiento.  
@@ -35,7 +34,7 @@ En esta página se indica el tipo de objeto (un número de seis dígitos) de cad
 |Tipo de objeto|Nombre del objeto|  
 |-----------------|-----------------|  
 |100000|Server|  
-|100001|Command|  
+|100001|Comando|  
 |100002|Base de datos|  
 |100003|DataSource|  
 |100004|DatabasePermission|  
@@ -77,7 +76,7 @@ En esta página se indica el tipo de objeto (un número de seis dígitos) de cad
 |100050|Seguimiento|  
 |100051|ServerAssembly|  
 |100052|CubeAssembly|  
-|100053|Command|  
+|100053|Comando|  
 |100054|KPI|  
 |100055|DataSourceView|  
 |100056|Perspective|  

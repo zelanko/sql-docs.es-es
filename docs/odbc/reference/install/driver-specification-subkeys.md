@@ -11,7 +11,7 @@ ms.suite: sql
 ms.technology:
 - drivers
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - subkeys [ODBC], driver specification subkeys
 - driver specification subkeys [ODBC]
@@ -22,12 +22,11 @@ caps.latest.revision: 9
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: 52899dd2d473ac083d2d0effaca5b3b1726322c5
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
-ms.translationtype: MT
+ms.openlocfilehash: a10a3036e049a85e44c59ad8c8fa5a09bff538be
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="driver-specification-subkeys"></a>Subclaves de la especificación de controlador
 Cada controlador mostrado en la subclave de controladores ODBC tiene una subclave de su propio. Esta subclave tiene el mismo nombre que el valor correspondiente en la subclave de controladores ODBC. Las rutas de acceso completas del controlador y el controlador de archivos DLL, los valores de las palabras clave de controlador devueltos por la instalación de la lista de los valores bajo esta subclave **SQLDrivers**y el recuento de uso. Los formatos de los valores son como se muestra en la tabla siguiente.  

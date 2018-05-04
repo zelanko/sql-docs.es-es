@@ -11,7 +11,7 @@ ms.suite: sql
 ms.technology:
 - drivers
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 apiname:
 - SQLGetFunctions
 apilocation:
@@ -26,12 +26,11 @@ caps.latest.revision: 23
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: 10304d56755f77a616862d97cea43bba8b4a5cad
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
-ms.translationtype: MT
+ms.openlocfilehash: 698e78ca1cbb0d6396c6319ef8618d813191c67e
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="sqlgetfunctions-function"></a>Función SQLGetFunctions
 **Conformidad**  
@@ -55,16 +54,16 @@ SQLRETURN SQLGetFunctions(
  [Entrada] Identificador de conexión.  
   
  *FunctionId*  
- [Entrada] A **#define** valor que identifica la función ODBC de interés; **SQL_API_ODBC3_ALL_FUNCTIONS orSQL_API_ALL_FUNCTIONS**. **SQL_API_ODBC3_ALL_FUNCTIONS** utilizado por una aplicación ODBC 3*.x* aplicación para determinar la compatibilidad con ODBC 3*.x* y funciones anteriores. **SQL_API_ALL_FUNCTIONS** utiliza una API ODBC 2*.x* aplicación para determinar la compatibilidad de ODBC 2*.x* y funciones anteriores.  
+ [Entrada] A **#define** valor que identifica la función ODBC de interés; **SQL_API_ODBC3_ALL_FUNCTIONS orSQL_API_ALL_FUNCTIONS**. **SQL_API_ODBC3_ALL_FUNCTIONS** utilizado por una aplicación ODBC 3 *.x* aplicación para determinar la compatibilidad con ODBC 3 *.x* y funciones anteriores. **SQL_API_ALL_FUNCTIONS** utiliza una API ODBC 2 *.x* aplicación para determinar la compatibilidad de ODBC 2 *.x* y funciones anteriores.  
   
  Para obtener una lista de **#define** valores que identifican las funciones ODBC, consulte las tablas en "Comentarios".  
   
  *SupportedPtr*  
  [Salida]  Si *FunctionId* identifica una única función ODBC, *SupportedPtr* señala a una sola SQLUSMALLINT valor que es SQL_TRUE si se admite la función especificada por el controlador y SQL_FALSE si no lo es admite.  
   
- Si *FunctionId* es SQL_API_ODBC3_ALL_FUNCTIONS, *SupportedPtr* apunta a una matriz SQLSMALLINT con un número de elementos iguales a SQL_API_ODBC3_ALL_FUNCTIONS_SIZE. Esta matriz se trata por el Administrador de controladores como un mapa de bits de 4.000 bits que puede utilizarse para determinar si una aplicación ODBC 3*.x* o se admite la función anterior. La macro SQL_FUNC_EXISTS se invoca para determinar la compatibilidad con la función. (Vea "Comentarios".) Una aplicación ODBC 3*.x* aplicación puede llamar a **SQLGetFunctions** con SQL_API_ODBC3_ALL_FUNCTIONS contra un ODBC 3*.x* o 2 de ODBC*.x* controlador.  
+ Si *FunctionId* es SQL_API_ODBC3_ALL_FUNCTIONS, *SupportedPtr* apunta a una matriz SQLSMALLINT con un número de elementos iguales a SQL_API_ODBC3_ALL_FUNCTIONS_SIZE. Esta matriz se trata por el Administrador de controladores como un mapa de bits de 4.000 bits que puede utilizarse para determinar si una aplicación ODBC 3 *.x* o se admite la función anterior. La macro SQL_FUNC_EXISTS se invoca para determinar la compatibilidad con la función. (Vea "Comentarios".) Una aplicación ODBC 3 *.x* aplicación puede llamar a **SQLGetFunctions** con SQL_API_ODBC3_ALL_FUNCTIONS contra un ODBC 3 *.x* o 2 de ODBC *.x* controlador.  
   
- Si *FunctionId* es SQL_API_ALL_FUNCTIONS, *SupportedPtr* señala a una matriz SQLUSMALLINT de 100 elementos. La matriz se indiza por **#define** valores utilizados por *FunctionId* para identificar cada función ODBC; algunos de los elementos de la matriz se reserva para uso futuro y no utilizados. Un elemento es SQL_TRUE si se identifica un ODBC 2*.x* o función earlier compatibles con el controlador. Si se identifica una función ODBC no admitida el controlador o no identifica una función ODBC es SQL_FALSE.  
+ Si *FunctionId* es SQL_API_ALL_FUNCTIONS, *SupportedPtr* señala a una matriz SQLUSMALLINT de 100 elementos. La matriz se indiza por **#define** valores utilizados por *FunctionId* para identificar cada función ODBC; algunos de los elementos de la matriz se reserva para uso futuro y no utilizados. Un elemento es SQL_TRUE si se identifica un ODBC 2 *.x* o función earlier compatibles con el controlador. Si se identifica una función ODBC no admitida el controlador o no identifica una función ODBC es SQL_FALSE.  
   
  Las matrices devueltas en **SupportedPtr* usar indización de base cero.  
   
@@ -135,7 +134,7 @@ SQLRETURN SQLGetFunctions(
 |SQL_API_SQLFOREIGNKEYS|SQL_API_SQLTABLEPRIVILEGES|  
 |SQL_API_SQLMORERESULTS| |  
   
- [1] cuando se trabaja con una API ODBC 2*.x* controlador, **SQLBulkOperations** se devolverá como solo se admite si las dos opciones siguientes son verdaderas: la API ODBC 2*.x* controlador es compatible con  **SQLSetPos**, y el tipo de información SQL_POS_OPERATIONS devuelve el bit SQL_POS_ADD como conjunto.  
+ [1] cuando se trabaja con una API ODBC 2 *.x* controlador, **SQLBulkOperations** se devolverá como solo se admite si las dos opciones siguientes son verdaderas: la API ODBC 2 *.x* controlador es compatible con  **SQLSetPos**, y el tipo de información SQL_POS_OPERATIONS devuelve el bit SQL_POS_ADD como conjunto.  
   
  La siguiente es una lista de valores válidos para *FunctionId* para funciones que se introdujeron en ODBC 3.8 o posterior:  
   
@@ -146,10 +145,10 @@ SQLRETURN SQLGetFunctions(
  [2] **SQLCancelHandle** se devolverá como solo se admite si el controlador admite tanto **SQLCancel** y **SQLCancelHandle**. Si **SQLCancel** se admite pero **SQLCancelHandle** no lo es, la aplicación puede seguir llamando a **SQLCancelHandle** en un identificador de instrucción, ya que se va a asignar a  **SQLCancel**.  
   
 ## <a name="sqlfuncexists-macro"></a>SQL_FUNC_EXISTS (macro)  
- El SQL_FUNC_EXISTS (*SupportedPtr*, *FunctionID*) macro se usa para determinar la compatibilidad con ODBC 3*.x* o funciones anteriores después **SQLGetFunctions**  se ha llamado con un *FunctionId* argumento de SQL_API_ODBC3_ALL_FUNCTIONS. La aplicación llama a SQL_FUNC_EXISTS con el *SupportedPtr* establecido en el *SupportedPtr* pasa *SQLGetFunctions*y con el  *FunctionID* establecido en el **#define** para la función. SQL_FUNC_EXISTS devuelve SQL_TRUE si se admite la función y SQL_FALSE en caso contrario.  
+ El SQL_FUNC_EXISTS (*SupportedPtr*, *FunctionID*) macro se usa para determinar la compatibilidad con ODBC 3 *.x* o funciones anteriores después **SQLGetFunctions**  se ha llamado con un *FunctionId* argumento de SQL_API_ODBC3_ALL_FUNCTIONS. La aplicación llama a SQL_FUNC_EXISTS con el *SupportedPtr* establecido en el *SupportedPtr* pasa *SQLGetFunctions*y con el  *FunctionID* establecido en el **#define** para la función. SQL_FUNC_EXISTS devuelve SQL_TRUE si se admite la función y SQL_FALSE en caso contrario.  
   
 > [!NOTE]  
->  Cuando se trabaja con una API ODBC 2*.x* controlador ODBC 3*.x* el Administrador de controladores devuelve SQL_TRUE para **SQLAllocHandle** y **SQLFreeHandle**porque **SQLAllocHandle** se asigna a **SQLAllocEnv**, **SQLAllocConnect**, o **SQLAllocStmt**, y Dado que **SQLFreeHandle** se asigna a **SQLFreeEnv**, **SQLFreeConnect**, o **SQLFreeStmt**. **SQLAllocHandle** o **SQLFreeHandle** con un *HandleType* de SQL_HANDLE_DESC no se admite, sin embargo, incluso si se devuelve SQL_TRUE para las funciones, porque no hay ninguna ODBC 2*.x* función que asigna a en este caso.  
+>  Cuando se trabaja con una API ODBC 2 *.x* controlador ODBC 3 *.x* el Administrador de controladores devuelve SQL_TRUE para **SQLAllocHandle** y **SQLFreeHandle**porque **SQLAllocHandle** se asigna a **SQLAllocEnv**, **SQLAllocConnect**, o **SQLAllocStmt**, y Dado que **SQLFreeHandle** se asigna a **SQLFreeEnv**, **SQLFreeConnect**, o **SQLFreeStmt**. **SQLAllocHandle** o **SQLFreeHandle** con un *HandleType* de SQL_HANDLE_DESC no se admite, sin embargo, incluso si se devuelve SQL_TRUE para las funciones, porque no hay ninguna ODBC 2 *.x* función que asigna a en este caso.  
   
 ## <a name="code-example"></a>Ejemplo de código  
  Los tres ejemplos siguientes muestran cómo una aplicación usa **SQLGetFunctions** para determinar si un controlador es compatible con **SQLTables**, **SQLColumns**, y  **SQLStatistics**. Si el controlador no admite estas funciones, la aplicación desconecta el controlador. El primer ejemplo se llama **SQLGetFunctions** una vez para cada función.  

@@ -11,18 +11,17 @@ ms.suite: sql
 ms.technology:
 - drivers
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: e93027ab-9e60-47b7-ba96-8289dae32a22
 caps.latest.revision: 8
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: 77717667d5be9365a42d0006f47725027b9eb2dd
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
-ms.translationtype: MT
+ms.openlocfilehash: 7c5d117687236ceb932d5d11a63d05b29c2f5cf8
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="connecting-to-a-data-source-or-driver"></a>Conectarse a datos de un origen o el controlador
 Una aplicación puede estar conectada a cualquier número de controladores y orígenes de datos. Puede tratarse de una variedad de orígenes de datos y los controladores, el mismo controlador y una variedad de orígenes de datos o incluso varias conexiones con el mismo controlador y el origen de datos.  

@@ -20,12 +20,11 @@ caps.latest.revision: 13
 author: Minewiskan
 ms.author: owend
 manager: erikre
-ms.workload: Inactive
-ms.openlocfilehash: 67376067c26a3eae41d0c090a141367fcf5cc396
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
-ms.translationtype: MT
+ms.openlocfilehash: 0a46aa0480b83727aeb0a9882745ff9221b992c7
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="mdx-scripting---if"></a>Scripting de MDX - IF
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
@@ -43,11 +42,11 @@ IF expression THEN assignment END IF
  *expression*  
  Expresión MDX que se evalúa como un valor booleano que puede ser verdadero o falso.  
   
- *asignación*  
+ *Asignación*  
  Expresión MDX que asigna un valor a un subcubo o a una propiedad calculada.  
   
 ## <a name="remarks"></a>Comentarios  
- Utilice la instrucción IF para el flujo de control, que es diferente a la [IIf &#40; MDX &#41; ](../mdx/iif-mdx.md) función y el [instrucción CASE &#40; MDX &#41; ](../mdx/case-statement-mdx.md) que solo se puede utilizar para devolver valores u objetos.  
+ Utilice la instrucción IF para el flujo de control, que es diferente a la [IIf &#40;MDX&#41; ](../mdx/iif-mdx.md) función y la [instrucción CASE &#40;MDX&#41; ](../mdx/case-statement-mdx.md) que solo se puede utilizar para devolver valores u objetos.  
   
 ## <a name="examples"></a>Ejemplos  
  En el siguiente ejemplo, el ámbito se restringe al nivel Country de la jerarquía Customers Geography de la dimensión Customers. Si la medida actual es Internet Sales Amount, entonces Internet Sales Amount se establece en 10:  
@@ -59,6 +58,6 @@ IF expression THEN assignment END IF
  `END SCOPE`;  
   
 ## <a name="see-also"></a>Vea también  
- [Referencia de funciones MDX &#40; MDX &#41;](../mdx/mdx-function-reference-mdx.md)  
+ [Referencia de funciones MDX & #40; MDX & #41;](../mdx/mdx-function-reference-mdx.md)  
   
   

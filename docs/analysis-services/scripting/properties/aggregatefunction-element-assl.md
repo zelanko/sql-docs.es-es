@@ -27,15 +27,15 @@ caps.latest.revision: 33
 author: Minewiskan
 ms.author: owend
 manager: kfile
-ms.workload: Inactive
-ms.openlocfilehash: 2eb41e7a281d3ee343b8b96c339fb8baa1a5283e
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
-ms.translationtype: MT
+ms.openlocfilehash: c7e713cb8ac1a6bc27bca0cc23f7f4e191850f40
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="aggregatefunction-element-assl"></a>Elemento AggregateFunction (ASSL)
-[!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]Define el tipo de función de agregado usada por un [medida](../../../analysis-services/scripting/objects/measure-element-assl.md) elemento.  
+[!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]
+  Define el tipo de función de agregado usada por un [medida](../../../analysis-services/scripting/objects/measure-element-assl.md) elemento.  
   
 ## <a name="syntax"></a>Sintaxis  
   
@@ -48,28 +48,28 @@ ms.lasthandoff: 01/08/2018
 </Measure>  
 ```  
   
-## <a name="element-characteristics"></a>Características del elemento  
+## <a name="element-characteristics"></a>Características de los elementos  
   
-|Característica|Description|  
+|Característica|Descripción|  
 |--------------------|-----------------|  
 |Tipo y longitud de los datos|String (enumeración)|  
 |Valor predeterminado|*Sum*|  
-|Cardinalidad|0-1: Elemento opcional que puede aparecer una y solo una vez.|  
+|Cardinalidad|0-1: Elemento opcional que puede aparecer solo una vez.|  
   
 ## <a name="element-relationships"></a>Relaciones del elemento  
   
 |Relación|Elemento|  
 |------------------|-------------|  
 |Elementos primarios|[Medida](../../../analysis-services/scripting/objects/measure-element-assl.md)|  
-|Elementos secundarios|None|  
+|Elementos secundarios|Ninguno|  
   
-## <a name="remarks"></a>Notas  
+## <a name="remarks"></a>Comentarios  
  El valor de este elemento se limita a una de las cadenas enumeradas en la tabla siguiente.  
   
 |Valor|Description|  
 |-----------|-----------------|  
 |*Sum*|La medida se agrega utilizando la función **Sum** .|  
-|*Recuento*|La medida se agrega utilizando la función **Count** .|  
+|*Count*|La medida se agrega utilizando la función **Count** .|  
 |*Min*|La medida se agrega utilizando la función **Min** .|  
 |*Max*|La medida se agrega utilizando la función **Max** .|  
 |*DistinctCount*|La medida se agrega utilizando la función **DistinctCount** .|  
@@ -83,7 +83,7 @@ ms.lasthandoff: 01/08/2018
   
  La enumeración que corresponde a los valores permitidos para **AggregateFunction** en el objeto de Analysis Management Objects (AMO) es el modelo <xref:Microsoft.AnalysisServices.AggregationFunction>.  
   
-## <a name="see-also"></a>Ver también  
- [Propiedades &#40; ASSL &#41;](../../../analysis-services/scripting/properties/properties-assl.md)  
+## <a name="see-also"></a>Vea también  
+ [Propiedades & #40; ASSL & #41;](../../../analysis-services/scripting/properties/properties-assl.md)  
   
   

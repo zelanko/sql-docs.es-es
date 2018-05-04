@@ -23,15 +23,15 @@ caps.latest.revision: 33
 author: Minewiskan
 ms.author: owend
 manager: kfile
-ms.workload: Inactive
-ms.openlocfilehash: 73fe1580fb43a090a7df04a43432e5b213e86369
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
-ms.translationtype: MT
+ms.openlocfilehash: fafe6ed5d5a81cb73ddc53a68408e4548ac92699
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="discoverschemarowsets-rowset"></a>Conjunto de filas DISCOVER_SCHEMA_ROWSETS
-[!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]Devuelve los nombres, restricciones, descripción y otra información para todos los valores de enumeración y cualquier valor de enumeración específico del proveedor adicional admitidos por el [!INCLUDE[msCoName](../../../includes/msconame-md.md)] XML para el proveedor de Analysis (XMLA).  
+[!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]
+  Devuelve los nombres, restricciones, descripción y otra información para todos los valores de enumeración y cualquier valor de enumeración específico del proveedor adicional admitidos por el proveedor [!INCLUDE[msCoName](../../../includes/msconame-md.md)] XML for Analysis (XMLA).  
   
  Si se llama a la [Discover](../../../analysis-services/xmla/xml-elements-methods-discover.md) método con el **DISCOVER_SCHEMA_ROWSETS** valor de enumeración en el [RequestType](../../../analysis-services/xmla/xml-elements-properties/requesttype-element-xmla.md) elemento, el **Discover**método devuelve el **DISCOVER_SCHEMA_ROWSETS** conjunto de filas.  
   
@@ -40,10 +40,10 @@ ms.lasthandoff: 01/08/2018
   
 |Nombre de columna|Indicador de tipo|Longitud|Description|  
 |-----------------|--------------------|------------|-----------------|  
-|**SchemaName**|**DBTYPE_WSTR**||El nombre del esquema o solicitud. Esta solicitud devuelve valores de la enumeración *RequestTypes* .|  
+|**schemaName**|**DBTYPE_WSTR**||El nombre del esquema o solicitud. Esta solicitud devuelve valores de la enumeración *RequestTypes* .|  
 |**SchemaGuid**|**DBTYPE_GUID**||GUID del esquema.|  
 |**Restricciones**|**DBTYPE_HCHAPTER**||Una matriz de las restricciones admitidas por el proveedor.|  
-|**Descripción**|**DBTYPE_WSTR**||Una descripción traducible del esquema.|  
+|**Description**|**DBTYPE_WSTR**||Una descripción traducible del esquema.|  
 |**RestrictionsMask**|**DBTYPE_UI8**|||  
   
  Este conjunto de filas de esquema no está ordenado.  
@@ -63,9 +63,9 @@ ms.lasthandoff: 01/08/2018
   
 |Nombre de columna|Indicador de tipo|Estado de restricción|  
 |-----------------|--------------------|-----------------------|  
-|**SchemaName**|**DBTYPE_WSTR**||  
+|**schemaName**|**DBTYPE_WSTR**||  
   
 ## <a name="see-also"></a>Vea también  
- [Conjuntos de filas de esquema de XML for Analysis](../../../analysis-services/schema-rowsets/xml/xml-for-analysis-schema-rowsets.md)  
+ [XML para conjuntos de filas de esquema de análisis](../../../analysis-services/schema-rowsets/xml/xml-for-analysis-schema-rowsets.md)  
   
   

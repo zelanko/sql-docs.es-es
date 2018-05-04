@@ -21,12 +21,11 @@ caps.latest.revision: 10
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.workload: On Demand
-ms.openlocfilehash: 59a7efc09b2883889195ffeaa98bcd0dcab50948
-ms.sourcegitcommit: bb044a48a6af9b9d8edb178dc8c8bd5658b9ff68
-ms.translationtype: MT
+ms.openlocfilehash: 83cb0fe562ef652e8d237b78314feb85c236e4e5
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/18/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="getrows-method-example-vb"></a>Ejemplo del método GetRows (VB)
 Este ejemplo se utiliza la [GetRows](../../../ado/reference/ado-api/getrows-method-ado.md) método para recuperar un número especificado de filas de un [Recordset](../../../ado/reference/ado-api/recordset-object-ado.md) y rellenar una matriz con los datos resultantes. El **GetRows** método devolverá un menor que el número deseado de filas en dos casos: cualquier if [EOF](../../../ado/reference/ado-api/bof-eof-properties-ado.md) se ha alcanzado, o si **GetRows** intentó recuperar un registro que era eliminada por otro usuario. La función devuelve **False** sólo si se produce el segundo caso. La función GetRowsOK es necesaria ejecutar este procedimiento.  

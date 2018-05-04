@@ -11,7 +11,7 @@ ms.suite: sql
 ms.technology:
 - drivers
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - data buffers [ODBC], length
 - data buffers [ODBC], character data
@@ -27,12 +27,11 @@ caps.latest.revision: 5
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: ef94062373af41fe662194b707dbdde1d85b438d
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
-ms.translationtype: MT
+ms.openlocfilehash: d8bdba6134e53a7e3913c0255fe709a8a891eeae
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="character-data-and-c-strings"></a>Datos de caracteres y cadenas de c.
 Parámetros de entrada que hacen referencia a datos de caracteres de longitud variable (como nombres de columna, los parámetros dinámicos y los valores de atributo de cadena) tienen un parámetro de longitud asociada. Si la aplicación termina cadenas con el carácter null, tal y como es habitual en C, proporciona como argumento a la longitud en bytes de la cadena (sin incluir el terminador null) o SQL_NTS (String Null-Terminated). Un argumento de longitud no negativo especifica la longitud real de la cadena asociada. El argumento de longitud puede ser 0 para especificar una cadena de longitud cero, que es distinta de un valor NULL. El valor negativo SQL_NTS indica al controlador para determinar la longitud de la cadena, localizando el carácter de terminación null.  

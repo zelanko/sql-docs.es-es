@@ -27,15 +27,15 @@ caps.latest.revision: 33
 author: Minewiskan
 ms.author: owend
 manager: kfile
-ms.workload: Inactive
-ms.openlocfilehash: 2df3bde25177d272c7b267af60670bdace41af95
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
-ms.translationtype: MT
+ms.openlocfilehash: 902b4e834da88b9ed89ed09915cda952d20a6edb
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="kpi-element-assl"></a>Elemento Kpi (ASSL)
-[!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]Define un indicador clave de rendimiento (KPI) dentro de un [cubo](../../../analysis-services/scripting/objects/cube-element-assl.md) elemento o un [perspectiva](../../../analysis-services/scripting/objects/perspective-element-assl.md) elemento.  
+[!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]
+  Define un indicador de rendimiento clave (KPI) dentro de un elemento [Cube](../../../analysis-services/scripting/objects/cube-element-assl.md) o un elemento [Perspective](../../../analysis-services/scripting/objects/perspective-element-assl.md) .  
   
 ## <a name="syntax"></a>Sintaxis  
   
@@ -64,17 +64,17 @@ ms.lasthandoff: 01/08/2018
 </Kpis>  
 ```  
   
-## <a name="element-characteristics"></a>Características del elemento  
+## <a name="element-characteristics"></a>Características de los elementos  
   
-|Característica|Description|  
+|Característica|Descripción|  
 |--------------------|-----------------|  
-|Tipo y longitud de los datos|Vea la siguiente tabla.|  
-|Valor predeterminado|None|  
+|Tipo y longitud de los datos|Vea la tabla siguiente.|  
+|Valor predeterminado|Ninguno|  
 |Cardinalidad|0-n: elemento opcional que puede aparecer más de una vez.|  
   
 |Antecesor o elemento primario|Tipo de datos|  
 |------------------------|---------------|  
-|[Cubo](../../../analysis-services/scripting/objects/cube-element-assl.md)|None|  
+|[Cubo](../../../analysis-services/scripting/objects/cube-element-assl.md)|Ninguno|  
 |[Perspectiva](../../../analysis-services/scripting/objects/perspective-element-assl.md)|[PerspectiveKpi](../../../analysis-services/scripting/data-type/perspectivekpi-data-type-assl.md)|  
   
 ## <a name="element-relationships"></a>Relaciones del elemento  
@@ -82,17 +82,17 @@ ms.lasthandoff: 01/08/2018
 |Relación|Elemento|  
 |------------------|-------------|  
 |Elementos primarios|[KPI](../../../analysis-services/scripting/collections/kpis-element-assl.md)|  
-|Elementos secundarios|Vea la siguiente tabla.|  
+|Elementos secundarios|Vea la tabla siguiente.|  
   
 |Antecesor o elemento primario|Elementos secundarios|  
 |------------------------|--------------------|  
-|[Cubo](../../../analysis-services/scripting/objects/cube-element-assl.md)|[Anotaciones](../../../analysis-services/scripting/collections/annotations-element-assl.md), [AssociatedMeasureGroupID](../../../analysis-services/scripting/properties/associatedmeasuregroupid-element-assl.md), [CurrentTimeMember](../../../analysis-services/scripting/properties/currenttimemember-element-assl.md), [descripción](../../../analysis-services/scripting/properties/description-element-assl.md), [DisplayFolder](../../../analysis-services/scripting/properties/displayfolder-element-assl.md), [Objetivo](../../../analysis-services/scripting/properties/goal-element-assl.md), [identificador](../../../analysis-services/scripting/properties/id-element-assl.md), [nombre](../../../analysis-services/scripting/properties/name-element-assl.md), [estado](../../../analysis-services/scripting/properties/status-element-assl.md), [StatusGraphic](../../../analysis-services/scripting/properties/statusgraphic-element-assl.md), [ Traducciones](../../../analysis-services/scripting/collections/translations-element-assl.md), [tendencia](../../../analysis-services/scripting/properties/trend-element-assl.md), [TrendGraphic](../../../analysis-services/scripting/properties/trendgraphic-element-assl.md), [valor](../../../analysis-services/scripting/properties/value-element-assl.md)|  
-|[Perspectiva](../../../analysis-services/scripting/objects/perspective-element-assl.md)|None|  
+|[Cubo](../../../analysis-services/scripting/objects/cube-element-assl.md)|[Annotations](../../../analysis-services/scripting/collections/annotations-element-assl.md), [AssociatedMeasureGroupID](../../../analysis-services/scripting/properties/associatedmeasuregroupid-element-assl.md), [CurrentTimeMember](../../../analysis-services/scripting/properties/currenttimemember-element-assl.md), [Description](../../../analysis-services/scripting/properties/description-element-assl.md), [DisplayFolder](../../../analysis-services/scripting/properties/displayfolder-element-assl.md), [Goal](../../../analysis-services/scripting/properties/goal-element-assl.md), [ID](../../../analysis-services/scripting/properties/id-element-assl.md), [Name](../../../analysis-services/scripting/properties/name-element-assl.md), [Status](../../../analysis-services/scripting/properties/status-element-assl.md), [StatusGraphic](../../../analysis-services/scripting/properties/statusgraphic-element-assl.md), [Translations](../../../analysis-services/scripting/collections/translations-element-assl.md), [Trend](../../../analysis-services/scripting/properties/trend-element-assl.md), [TrendGraphic](../../../analysis-services/scripting/properties/trendgraphic-element-assl.md), [Value](../../../analysis-services/scripting/properties/value-element-assl.md)|  
+|[Perspectiva](../../../analysis-services/scripting/objects/perspective-element-assl.md)|Ninguno|  
   
 ## <a name="remarks"></a>Comentarios  
  Los elementos correspondientes en el modelo de objetos Objetos de administración de análisis (AMO) son <xref:Microsoft.AnalysisServices.Kpi> y <xref:Microsoft.AnalysisServices.PerspectiveKpi>.  
   
 ## <a name="see-also"></a>Vea también  
- [Objetos de &#40; ASSL &#41;](../../../analysis-services/scripting/objects/objects-assl.md)  
+ [Objetos de & #40; ASSL & #41;](../../../analysis-services/scripting/objects/objects-assl.md)  
   
   

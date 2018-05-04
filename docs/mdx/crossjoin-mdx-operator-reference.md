@@ -23,12 +23,11 @@ caps.latest.revision: 41
 author: Minewiskan
 ms.author: owend
 manager: erikre
-ms.workload: Inactive
-ms.openlocfilehash: e192e0eacd926cde2c6548392b1523cfc3d0af12
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
-ms.translationtype: MT
+ms.openlocfilehash: a510ca656d7a17bc80878c49bab20fb3254c81e0
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="crossjoin----mdx-operator-reference"></a>Combinación cruzada - referencia de operadores MDX
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
@@ -49,7 +48,7 @@ Set_Expression * Set_Expression
 ## <a name="return-value"></a>Valor devuelto  
  Conjunto que contiene el producto cruzado de ambos parámetros especificados.  
   
-## <a name="remarks"></a>Notas  
+## <a name="remarks"></a>Comentarios  
  El  **\* (combinaciones cruzadas)** operador es funcionalmente equivalente a la [Crossjoin](../mdx/crossjoin-mdx.md) función.  
   
 ## <a name="examples"></a>Ejemplos  
@@ -68,7 +67,7 @@ WHERE
     ([Measures].[Gross Profit Margin])  
 ```  
   
-## <a name="see-also"></a>Ver también  
- [Referencia de operadores MDX &#40; MDX &#41;](../mdx/mdx-operator-reference-mdx.md)  
+## <a name="see-also"></a>Vea también  
+ [Referencia de operadores MDX &#40;MDX&#41;](../mdx/mdx-operator-reference-mdx.md)  
   
   

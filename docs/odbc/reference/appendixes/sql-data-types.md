@@ -11,7 +11,7 @@ ms.suite: sql
 ms.technology:
 - drivers
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - SQL data types [ODBC]
 - SQL data types [ODBC], about SQL data types
@@ -21,12 +21,11 @@ caps.latest.revision: 7
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.workload: On Demand
-ms.openlocfilehash: 2c1bb7ad5ce2523f4ee4e5404608e1359b216178
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
-ms.translationtype: MT
+ms.openlocfilehash: 3c2022f1a0e034741a7259cef2613ce69361285a
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="sql-data-types"></a>Tipos de datos SQL
 Cada DBMS define sus propios tipos SQL. Cada controlador ODBC expone solo esos tipos de datos SQL que define el DBMS asociado. Obtener información acerca de cómo se asigna un controlador de DBMS SQL tipos a los identificadores de tipo SQL definidas por ODBC y cómo asigna un controlador de tipos de DBMS SQL a sus propios identificadores de tipo específicos del controlador SQL se devuelve a través de una llamada a **SQLGetTypeInfo**. Un controlador también devuelve los tipos de datos SQL para describir los tipos de datos de columnas y parámetros a través de llamadas a **SQLColAttribute**, **SQLColumns**, **SQLDescribeCol**, **SQLDescribeParam**, **SQLProcedureColumns**, y **SQLSpecialColumns**.  
@@ -92,7 +91,7 @@ _INTERVAL_MINUTE_TO_SECOND [7]|MINUTO de intervalo (*p*) al segundo (*preguntas*
   
  [5] en función de la implementación, puede ser la precisión de SQL_FLOAT 24 o 53: si es 24, el tipo de datos SQL_FLOAT es el mismo que SQL_REAL; Si es 53, el tipo de datos SQL_FLOAT es el mismo que SQL_DOUBLE.  
   
- [6] en ODBC 3*.x*, los tipos de datos de fecha, hora y marca de tiempo SQL son SQL_TYPE_DATE, SQL_TYPE_TIME y SQL_TYPE_TIMESTAMP, respectivamente; en ODBC 2. *x*, los tipos de datos son SQL_DATE, SQL_TIME y SQL_TIMESTAMP.  
+ [6] en ODBC 3 *.x*, los tipos de datos de fecha, hora y marca de tiempo SQL son SQL_TYPE_DATE, SQL_TYPE_TIME y SQL_TYPE_TIMESTAMP, respectivamente; en ODBC 2. *x*, los tipos de datos son SQL_DATE, SQL_TIME y SQL_TIMESTAMP.  
   
  [7] para obtener más información acerca de los tipos de datos SQL de intervalo, consulte el [tipos de datos Interval](../../../odbc/reference/appendixes/interval-data-types.md) sección, más adelante en este apéndice.  
   

@@ -20,12 +20,11 @@ caps.latest.revision: 14
 author: Minewiskan
 ms.author: owend
 manager: erikre
-ms.workload: Inactive
-ms.openlocfilehash: 09d51ab41f3c228952a606183a3207db467e8af9
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
-ms.translationtype: MT
+ms.openlocfilehash: f3da957d4b2ed72a26cbc0adf77d5727e9386dd4
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="operators---logical"></a>Operadores - lógicos
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
@@ -36,20 +35,20 @@ ms.lasthandoff: 01/08/2018
   
 |Operador|Description|  
 |--------------|-----------------|  
-|[Y &#40; DMX &#41;](../dmx/and-dmx.md)|Realiza una conjunción lógica de dos expresiones numéricas.|  
-|[NO &#40; DMX &#41;](../dmx/not-dmx.md)|Realiza una negación lógica de una expresión numérica.|  
-|[O &#40; DMX &#41;](../dmx/or-dmx.md)|Realiza una disyunción lógica de dos expresiones numéricas.|  
+|[Y &AMP;#40;DMX&AMP;#41;](../dmx/and-dmx.md)|Realiza una conjunción lógica de dos expresiones numéricas.|  
+|[NO &AMP;#40;DMX&AMP;#41;](../dmx/not-dmx.md)|Realiza una negación lógica de una expresión numérica.|  
+|[O &AMP;#40;DMX&AMP;#41;](../dmx/or-dmx.md)|Realiza una disyunción lógica de dos expresiones numéricas.|  
   
 ## <a name="see-also"></a>Vea también  
- [Extensiones de minería de datos &#40; DMX &#41; Referencia](../dmx/data-mining-extensions-dmx-reference.md)   
- [Extensiones de minería de datos &#40; DMX &#41; Referencia de funciones](../dmx/data-mining-extensions-dmx-function-reference.md)   
- [Extensiones de minería de datos &#40; DMX &#41; Referencia de operadores](../dmx/data-mining-extensions-dmx-operator-reference.md)   
- [Extensiones de minería de datos &#40; DMX &#41; Referencia de instrucciones](../dmx/data-mining-extensions-dmx-statements.md)   
- [Extensiones de minería de datos &#40; DMX &#41; Convenciones de sintaxis](../dmx/data-mining-extensions-dmx-syntax-conventions.md)   
- [Extensiones de minería de datos &#40; DMX &#41; Elementos de sintaxis](../dmx/data-mining-extensions-dmx-syntax-elements.md)   
- [Expresiones &#40; DMX &#41;](../dmx/expressions-dmx.md)   
- [Funciones de predicción generales &#40; DMX &#41;](../dmx/general-prediction-functions-dmx.md)   
- [Operadores &#40; DMX &#41;](../dmx/operators-dmx.md)   
+ [Extensiones de minería de datos &#40;DMX&#41; Referencia](../dmx/data-mining-extensions-dmx-reference.md)   
+ [Extensiones de minería de datos &#40;DMX&#41; Referencia de funciones](../dmx/data-mining-extensions-dmx-function-reference.md)   
+ [Extensiones de minería de datos &#40;DMX&#41; Referencia de operadores](../dmx/data-mining-extensions-dmx-operator-reference.md)   
+ [Extensiones de minería de datos &#40;DMX&#41; Referencia de instrucciones](../dmx/data-mining-extensions-dmx-statements.md)   
+ [Extensiones de minería de datos &#40;DMX&#41; Convenciones de sintaxis](../dmx/data-mining-extensions-dmx-syntax-conventions.md)   
+ [Extensiones de minería de datos &#40;DMX&#41; Elementos de sintaxis](../dmx/data-mining-extensions-dmx-syntax-elements.md)   
+ [Expresiones &#40;DMX&#41;](../dmx/expressions-dmx.md)   
+ [Funciones de predicción generales &#40;DMX&#41;](../dmx/general-prediction-functions-dmx.md)   
+ [Operadores &#40;DMX&#41;](../dmx/operators-dmx.md)   
  [Estructura y el uso de consultas de predicción DMX](../dmx/structure-and-usage-of-dmx-prediction-queries.md)   
  [Descripción de la instrucción Select de DMX](../dmx/understanding-the-dmx-select-statement.md)  
   

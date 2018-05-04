@@ -25,13 +25,12 @@ caps.latest.revision: 30
 author: edmacauley
 ms.author: edmaca
 manager: craigg
-ms.workload: Inactive
 monikerRange: = azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: 4b3a75f550772704ef29fbc7e99e9013d416a723
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
-ms.translationtype: MT
+ms.openlocfilehash: efefb3b57ad124afe2af77be8d5eb81b434d3f2c
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="tableprivileges-transact-sql"></a>TABLE_PRIVILEGES (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -42,13 +41,13 @@ ms.lasthandoff: 04/16/2018
   
 |Nombre de columna|Tipo de datos|Description|  
 |-----------------|---------------|-----------------|  
-|**OTORGANTE DE PERMISOS**|**nvarchar (**128**)**|La persona que concede el privilegio.|  
-|**RECEPTOR**|**nvarchar (**128**)**|La persona que recibe el privilegio.|  
-|**TABLE_CATALOG**|**nvarchar (**128**)**|Calificador de tabla.|  
-|**TABLE_SCHEMA**|**nvarchar (**128**)**|Nombre de esquema que contiene la tabla.<br /><br /> **\*\* Importante \* \***  no utilice las vistas INFORMATION_SCHEMA para determinar el esquema de un objeto. La única manera confiable de localizar el esquema de un objeto consiste en consultar la vista de catálogo sys.objects.|  
+|**OTORGANTE DE PERMISOS**|**nvarchar (** 128 **)**|La persona que concede el privilegio.|  
+|**RECEPTOR**|**nvarchar (** 128 **)**|La persona que recibe el privilegio.|  
+|**TABLE_CATALOG**|**nvarchar (** 128 **)**|Calificador de tabla.|  
+|**TABLE_SCHEMA**|**nvarchar (** 128 **)**|Nombre de esquema que contiene la tabla.<br /><br /> **\*\* Importante \* \***  no utilice las vistas INFORMATION_SCHEMA para determinar el esquema de un objeto. La única manera confiable de localizar el esquema de un objeto consiste en consultar la vista de catálogo sys.objects.|  
 |**TABLE_NAME**|**sysname**|Nombre de la tabla.|  
-|**PRIVILEGE_TYPE**|**varchar (**10**)**|Tipo de privilegio.|  
-|**IS_GRANTABLE**|**varchar (**3**)**|Especifica si la persona que recibe el privilegio puede conceder permisos a otros.|  
+|**PRIVILEGE_TYPE**|**varchar (** 10 **)**|Tipo de privilegio.|  
+|**IS_GRANTABLE**|**varchar (** 3 **)**|Especifica si la persona que recibe el privilegio puede conceder permisos a otros.|  
   
 ## <a name="see-also"></a>Vea también  
  [Vistas del sistema &#40;Transact-SQL&#41;](http://msdn.microsoft.com/library/35a6161d-7f43-4e00-bcd3-3091f2015e90)   

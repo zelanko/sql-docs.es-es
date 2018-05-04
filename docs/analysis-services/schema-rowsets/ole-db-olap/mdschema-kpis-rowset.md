@@ -23,15 +23,15 @@ caps.latest.revision: 36
 author: Minewiskan
 ms.author: owend
 manager: kfile
-ms.workload: Inactive
-ms.openlocfilehash: 3a787f90243bed3fa62cb16281df182a97bfd3ef
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
-ms.translationtype: MT
+ms.openlocfilehash: 68c927acad41794a61892d638fe3423dacb3948d
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="mdschemakpis-rowset"></a>Conjunto de filas MDSCHEMA_KPIS
-[!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]Describe los indicadores clave de rendimiento (KPI) dentro de una base de datos.  
+[!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]
+  Describe los indicadores clave de rendimiento (KPI) incluidos en una base de datos.  
   
 ## <a name="rowset-columns"></a>Columnas del conjunto de filas  
  El **MDSCHEMA_KPIS** filas contiene las columnas siguientes.  
@@ -72,6 +72,6 @@ ms.lasthandoff: 01/08/2018
 |**CUBE_SOURCE**|**DBTYPE_UI2**|(Opcional) La restricción predeterminada es un valor de **1**. Un mapa de bits con uno de los siguientes valores válidos:<br /><br /> **1** CUBO<br /><br /> **2** DIMENSIÓN|  
   
 ## <a name="see-also"></a>Vea también  
- [OLE DB para los conjuntos de filas de esquema OLAP](../../../analysis-services/schema-rowsets/ole-db-olap/ole-db-for-olap-schema-rowsets.md)  
+ [OLE DB para OLAP Schema Rowsets](../../../analysis-services/schema-rowsets/ole-db-olap/ole-db-for-olap-schema-rowsets.md)  
   
   

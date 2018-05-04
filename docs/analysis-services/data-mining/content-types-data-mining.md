@@ -1,47 +1,23 @@
 ---
-title: "Tipos (minería de datos) de contenido | Documentos de Microsoft"
-ms.custom: 
-ms.date: 03/14/2017
-ms.prod: analysis-services
-ms.prod_service: analysis-services
-ms.service: 
+title: Tipos (minería de datos) de contenido | Documentos de Microsoft
+ms.date: 05/01/2018
+ms.prod: sql
+ms.technology: analysis-services
 ms.component: data-mining
-ms.reviewer: 
-ms.suite: pro-bi
-ms.technology: 
-ms.tgt_pltfrm: 
 ms.topic: article
-helpviewer_keywords:
-- columns [data mining], content types
-- KEY SEQUENCE column
-- content types [data mining]
-- attributes [data mining]
-- DISCRETIZED column
-- CONTINUOUS column
-- CYCLICAL column
-- ORDERED column
-- discretized columns [data mining]
-- discrete columns [Analysis Services]
-- DISCRETE column
-- KEY column
-- KEY TIME column
-- continuous columns
-- coding [Data Mining]
-ms.assetid: 2dacd968-70e8-4993-88b6-a6d36024a4e4
-caps.latest.revision: 
-author: Minewiskan
 ms.author: owend
+ms.reviewer: owend
+author: minewiskan
 manager: kfile
-ms.workload: Inactive
-ms.openlocfilehash: c159c5fa111a4c1e04c6ad0871aea5ec13c2191c
-ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
+ms.openlocfilehash: 96e31d399527ffa81cd1a9d47bcb117ac7cfa170
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/15/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="content-types-data-mining"></a>Tipos de contenido (minería de datos)
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
-En [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)], puede definir tanto el tipo de datos físico de una columna en una estructura de minería como un tipo de datos lógico de la columna cuando se utilice en un modelo.  
+  En [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)], puede definir tanto el tipo de datos físico de una columna en una estructura de minería como un tipo de datos lógico de la columna cuando se utilice en un modelo.  
   
  El *tipo de datos* determina el modo en que los algoritmos procesan los datos de esas columnas cuando se crean modelos de minería. La definición del tipo de datos de una columna proporciona al algoritmo información sobre el tipo de datos de las columnas y el modo de procesar los datos. Cada tipo de datos de [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] admite uno o varios tipos de contenido para la minería de datos.  
   
@@ -119,9 +95,9 @@ En [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](..
  Además de los tipos de contenido anteriores cuyo uso es común en todos los modelos, para algunos tipos de datos puede utilizar columnas clasificadas para definir tipos de contenido. Para más información sobre las columnas clasificadas, vea [Columnas clasificadas &#40;Minería de datos&#41;](../../analysis-services/data-mining/classified-columns-data-mining.md).  
   
 ## <a name="see-also"></a>Vea también  
- [Contenido tipos &#40; DMX &#41;](../../dmx/content-types-dmx.md)   
- [Tipos de datos &#40; minería de datos &#41;](../../analysis-services/data-mining/data-types-data-mining.md)   
- [Tipos de datos &#40; DMX &#41;](../../dmx/data-types-dmx.md)   
+ [Contenido tipos & #40; DMX & #41;](../../dmx/content-types-dmx.md)   
+ [Tipos de datos & #40; minería de datos & #41;](../../analysis-services/data-mining/data-types-data-mining.md)   
+ [Tipos de datos & #40; DMX & #41;](../../dmx/data-types-dmx.md)   
  [Cambiar las propiedades de una estructura de minería de datos](../../analysis-services/data-mining/change-the-properties-of-a-mining-structure.md)   
  [Columnas de estructura de minería de datos](../../analysis-services/data-mining/mining-structure-columns.md)  
   

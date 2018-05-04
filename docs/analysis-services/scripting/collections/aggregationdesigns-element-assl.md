@@ -27,15 +27,15 @@ caps.latest.revision: 38
 author: Minewiskan
 ms.author: owend
 manager: kfile
-ms.workload: Inactive
-ms.openlocfilehash: a265c23b614c257b81e045f201de8a93ce850ed5
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
-ms.translationtype: MT
+ms.openlocfilehash: f92ebde6349d67b4be7d9604be0a40ec144e57a6
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="aggregationdesigns-element-assl"></a>Elemento AggregationDesigns (ASSL)
-[!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]Contiene la colección de diseños de agregaciones que se pueden compartir entre varias particiones en una base de datos.  
+[!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]
+  Contiene la colección de diseños de agregaciones que se pueden compartir en varias particiones de una base de datos.  
   
 ## <a name="syntax"></a>Sintaxis  
   
@@ -50,13 +50,13 @@ ms.lasthandoff: 01/08/2018
 </MeasureGroup>  
 ```  
   
-## <a name="element-characteristics"></a>Características del elemento  
+## <a name="element-characteristics"></a>Características de los elementos  
   
-|Característica|Description|  
+|Característica|Descripción|  
 |--------------------|-----------------|  
 |Tipo y longitud de los datos|Ninguno (colección)|  
 |Valor predeterminado|Ninguno (colección)|  
-|Cardinalidad|0-1: Elemento opcional que puede aparecer una y solo una vez.|  
+|Cardinalidad|0-1: Elemento opcional que puede aparecer solo una vez.|  
   
 ## <a name="element-relationships"></a>Relaciones del elemento  
   
@@ -65,11 +65,11 @@ ms.lasthandoff: 01/08/2018
 |Elementos primarios|[MeasureGroup](../../../analysis-services/scripting/objects/measuregroup-element-assl.md)|  
 |Elementos secundarios|[AggregationDesign](../../../analysis-services/scripting/objects/aggregationdesign-element-assl.md)|  
   
-## <a name="remarks"></a>Notas  
+## <a name="remarks"></a>Comentarios  
  El elemento correspondiente en el modelo de objetos de Analysis Management Objects (AMO) es <xref:Microsoft.AnalysisServices.AggregationDesignCollection>.  
   
-## <a name="see-also"></a>Ver también  
- [Partition, elemento &#40; ASSL &#41;](../../../analysis-services/scripting/objects/partition-element-assl.md)   
- [Colecciones de &#40; ASSL &#41;](../../../analysis-services/scripting/collections/collections-assl.md)  
+## <a name="see-also"></a>Vea también  
+ [Elemento de la partición &#40;ASSL&#41;](../../../analysis-services/scripting/objects/partition-element-assl.md)   
+ [Colecciones de & #40; ASSL & #41;](../../../analysis-services/scripting/collections/collections-assl.md)  
   
   

@@ -8,8 +8,7 @@ ms.service: ''
 ms.component: sqlxml
 ms.reviewer: ''
 ms.suite: sql
-ms.technology:
-- dbe-xml
+ms.technology: xml
 ms.tgt_pltfrm: ''
 ms.topic: reference
 helpviewer_keywords:
@@ -26,13 +25,12 @@ caps.latest.revision: 27
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.workload: Inactive
 monikerRange: = azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: 9b420ec48a7bc78a55e50dc549c6e06be7e34cb0
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
-ms.translationtype: MT
+ms.openlocfilehash: f66bb00ee4b1a40bdcbba3bf97dad1a0e1f8595f
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="specifying-a-target-namespace-using-the-targetnamespace-attribute-sqlxml-40"></a>Especificar un espacio de nombres de destino mediante el atributo targetNamespace (SQLXML 4.0)
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -109,7 +107,7 @@ ms.lasthandoff: 04/16/2018
   
  Este documento de instancia define el espacio de nombres urn: MyNamespace y asocia un prefijo (y0) a él. El prefijo se aplica solo a la  **\<cliente >** elemento global. (El elemento es global porque se declara como un elemento secundario de  **\<xsd: schema >** elemento en el esquema.)  
   
- El prefijo no se aplica a los elementos y atributos locales porque el valor de **elementFormDefault** y **attributeFormDefault** atributos se establece en **"unqualified"**en el esquema. Tenga en cuenta que la  **\<orden >** elemento es local porque su declaración aparece como un elemento secundario de la  **\<complexType >** elemento que define la  **\< CustomerType >** elemento. Asimismo, los atributos (**CustomerID**, **OrderID**, y **ContactName**) son locales y no globales.  
+ El prefijo no se aplica a los elementos y atributos locales porque el valor de **elementFormDefault** y **attributeFormDefault** atributos se establece en **"unqualified"** en el esquema. Tenga en cuenta que la  **\<orden >** elemento es local porque su declaración aparece como un elemento secundario de la  **\<complexType >** elemento que define la  **\< CustomerType >** elemento. Asimismo, los atributos (**CustomerID**, **OrderID**, y **ContactName**) son locales y no globales.  
   
 ##### <a name="to-create-a-working-sample-of-this-schema"></a>Para crear un ejemplo funcional de este esquema  
   

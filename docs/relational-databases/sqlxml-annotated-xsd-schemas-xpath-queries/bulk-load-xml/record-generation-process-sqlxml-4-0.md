@@ -8,8 +8,7 @@ ms.service: ''
 ms.component: sqlxml
 ms.reviewer: ''
 ms.suite: sql
-ms.technology:
-- dbe-xml
+ms.technology: xml
 ms.tgt_pltfrm: ''
 ms.topic: reference
 helpviewer_keywords:
@@ -28,13 +27,12 @@ caps.latest.revision: 24
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.workload: Inactive
 monikerRange: = azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: e72388a753b1003c259f20371b34ffb3c269a2e1
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
-ms.translationtype: MT
+ms.openlocfilehash: 75d372bcd162fda196333d62acaf68c3d5cd5d1f
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="record-generation-process-sqlxml-40"></a>Proceso de generación de registros (SQLXML 4.0)
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -155,7 +153,7 @@ ms.lasthandoff: 04/16/2018
   
  Los datos XML de ejemplo y los pasos para crear un ejemplo funcional se proporcionan a continuación.  
   
--   Cuando un  **\<cliente >** nodo de elemento en el archivo de datos XML entra en el ámbito, la carga masiva XML genera un registro de la tabla Cust. Carga masiva XML, a continuación, copia los valores de columna necesarios (CustomerID, CompanyName y City) de la  **\<CustomerID >**,  **\<CompanyName >**y el  **\<Ciudad >** los elementos secundarios como estos elementos entran en el ámbito.  
+-   Cuando un  **\<cliente >** nodo de elemento en el archivo de datos XML entra en el ámbito, la carga masiva XML genera un registro de la tabla Cust. Carga masiva XML, a continuación, copia los valores de columna necesarios (CustomerID, CompanyName y City) de la  **\<CustomerID >**,  **\<CompanyName >** y el  **\<Ciudad >** los elementos secundarios como estos elementos entran en el ámbito.  
   
 -   Cuando un  **\<orden >** nodo de elemento entra en el ámbito, la carga masiva XML genera un registro para la tabla CustOrder. Carga masiva XML copia el valor de la **OrderID** atributo para este registro. El valor necesario para la columna CustomerID se obtiene de la  **\<CustomerID >** elemento secundario de la  **\<cliente >** elemento. Carga masiva XML utiliza la información que se especifica en  **\<SQL: Relationship >** para obtener el valor de clave externa CustomerID para este registro, a menos que la **CustomerID** atributo era se especifica en el  **\<orden >** elemento. La regla general es que si el elemento secundario especifica explícitamente un valor para el atributo de clave externo, la carga masiva XML usa ese valor y no obtiene el valor del elemento primario utilizando los **\<SQL: Relationship >**. Como esto  **\<orden >** nodo de elemento sale del ámbito, la carga masiva XML envía el registro a [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] y, a continuación, procesa todas las posteriores  **\<orden >** nodos de elemento de la misma manera.  
   

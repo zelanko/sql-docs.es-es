@@ -21,12 +21,11 @@ caps.latest.revision: 10
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: 4dfd5e5dc612813bd97722a3ce9f7ca49c5044bd
-ms.sourcegitcommit: bb044a48a6af9b9d8edb178dc8c8bd5658b9ff68
-ms.translationtype: MT
+ms.openlocfilehash: 63e9dde8ff2e26b3a9167e4da71279a9177b2213
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/18/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="sortorder-property-example-vb"></a>Ejemplo de propiedad SortOrder (VB)
 Este ejemplo se muestra la [SortOrder](../../../ado/reference/adox-api/sortorder-property-adox.md) propiedad de un [columna](../../../ado/reference/adox-api/column-object-adox.md) que se ha anexado a la [columnas](../../../ado/reference/adox-api/columns-collection-adox.md) colección de un [índice](../../../ado/reference/adox-api/index-object-adox.md). El código anexa un índice ascendente a la columna Country de la **empleados** , a continuación, la tabla muestra los registros. A continuación, el código anexa un índice descendente a la columna Country de la **empleados** de tabla y muestra los registros de nuevo. Se muestra la diferencia entre los índices ascendentes y descendentes.  

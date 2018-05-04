@@ -21,19 +21,18 @@ caps.latest.revision: 28
 author: Minewiskan
 ms.author: owend
 manager: erikre
-ms.workload: Inactive
-ms.openlocfilehash: 1417fd747df92c84fe66e2c69996f57ab51875e1
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
-ms.translationtype: MT
+ms.openlocfilehash: bf316e56eeb7ad3b463ea73609d215364ae5a371
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="using-dimension-expressions"></a>Usar expresiones de dimensiones
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
 
   Las expresiones de dimensiones y jerarquía se usan normalmente al pasar parámetros a funciones MDX (Expresiones multidimensionales) para devolver miembros, conjuntos o tuplas de una jerarquía.  
   
- Las expresiones de dimensiones solo pueden ser expresiones simples porque son identificadores de objetos. Vea [expresiones &#40; MDX &#41; ](../mdx/expressions-mdx.md) para obtener una explicación de las expresiones simples y complejas.  
+ Las expresiones de dimensiones solo pueden ser expresiones simples porque son identificadores de objetos. Vea [expresiones &#40;MDX&#41; ](../mdx/expressions-mdx.md) para obtener una explicación de las expresiones simples y complejas.  
   
 ## <a name="dimension-expressions"></a>Expresiones de dimensiones  
  Una expresión de dimensión contiene un identificador de dimensión o una función de dimensión.  
@@ -71,9 +70,9 @@ ms.lasthandoff: 01/08/2018
   
  `FROM [Adventure Works]`  
   
- Un identificador de jerarquía aparece como *Dimension_Name**.* *Hierarchy_Name* en la notación de BNF que se utiliza para describir las instrucciones MDX.  
+ Un identificador de jerarquía aparece como *Dimension_Name **.** Hierarchy_Name* en la notación de BNF que se utiliza para describir las instrucciones MDX.  
   
 ## <a name="see-also"></a>Vea también  
- [Expresiones &#40; MDX &#41;](../mdx/expressions-mdx.md)  
+ [Expresiones &#40;MDX&#41;](../mdx/expressions-mdx.md)  
   
   

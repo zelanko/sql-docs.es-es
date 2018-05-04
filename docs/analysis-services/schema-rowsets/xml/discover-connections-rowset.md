@@ -20,22 +20,22 @@ caps.latest.revision: 16
 author: Minewiskan
 ms.author: owend
 manager: kfile
-ms.workload: Inactive
-ms.openlocfilehash: d9d56f64f0b4cb1912e9eaaa7e644c6cbc29ad44
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
-ms.translationtype: MT
+ms.openlocfilehash: 303f013df8180f1a6849de19b2367cbfba5d4a53
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="discoverconnections-rowset"></a>DISCOVER_CONNECTIONS, conjunto de filas
-[!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]Proporciona información de actividad y el uso de recursos acerca de las conexiones abiertas actualmente en el servidor.  
+[!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]
+  Proporciona información sobre el uso de los recursos y la actividad en las conexiones abiertas actualmente en el servidor.  
   
  **Se aplica a:** modelos tabulares, modelos multidimensionales  
   
 ## <a name="rowset-columns"></a>Columnas del conjunto de filas  
  El conjunto de filas **DISCOVER_CONNECTIONS** contiene las siguientes columnas.  
   
-|Nombre de columna|Indicador de tipo|Restrictions|Description|  
+|Nombre de columna|Indicador de tipo|Restricciones|Description|  
 |-----------------|--------------------|------------------|-----------------|  
 |**CONNECTION_ID**|**DBTYPE_I4**|Sí|Número único que identifica la conexión.|  
 |**CONNECTION_USER_NAME**|**DBTYPE_WSTR**|Sí|Nombre de usuario de conexión.|  
@@ -66,6 +66,6 @@ ms.lasthandoff: 01/08/2018
 |ADOMDNAME|Conexiones|  
   
 ## <a name="see-also"></a>Vea también  
- [Conjuntos de filas de esquema de XML for Analysis](../../../analysis-services/schema-rowsets/xml/xml-for-analysis-schema-rowsets.md)  
+ [XML para conjuntos de filas de esquema de análisis](../../../analysis-services/schema-rowsets/xml/xml-for-analysis-schema-rowsets.md)  
   
   

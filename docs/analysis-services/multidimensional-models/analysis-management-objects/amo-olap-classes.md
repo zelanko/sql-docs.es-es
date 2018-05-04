@@ -1,33 +1,19 @@
 ---
 title: Clases de OLAP en AMO | Documentos de Microsoft
-ms.custom: 
-ms.date: 02/14/2018
-ms.prod: analysis-services
-ms.prod_service: analysis-services
-ms.service: 
-ms.component: 
-ms.reviewer: 
-ms.suite: pro-bi
-ms.technology: 
-ms.tgt_pltfrm: 
-ms.topic: reference
-applies_to:
-- SQL Server 2016 Preview
-helpviewer_keywords:
-- Analysis Management Objects, OLAP
-- OLAP [AMO]
-- AMO, OLAP
-ms.assetid: 397509b7-a4fb-40de-aa30-c66dc9ed2105
-caps.latest.revision: 
-author: Minewiskan
+ms.date: 05/02/2018
+ms.prod: sql
+ms.technology: analysis-services
+ms.component: amo
+ms.topic: article
 ms.author: owend
+ms.reviewer: owend
+author: minewiskan
 manager: kfile
-ms.workload: Inactive
-ms.openlocfilehash: 609958fd81ee7c703d7608f9a353c15658c1528b
-ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
+ms.openlocfilehash: f4544efdf6a569bcb89f7c8236b69bf0d7916912
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/15/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="amo-olap-classes"></a>Clases de OLAP en AMO
   Las clases de OLAP en AMO (Objetos de administración de análisis) sirven de ayuda para crear, modificar, eliminar y procesar cubos, dimensiones y objetos relacionados como indicadores de clave de rendimiento (KPI), acciones y almacenamiento en caché automático.  
@@ -82,24 +68,24 @@ ms.lasthandoff: 02/15/2018
   
  Para obtener más información acerca de los métodos y propiedades disponibles, vea <xref:Microsoft.AnalysisServices.Cube> en <xref:Microsoft.AnalysisServices>.  
   
-###  <a name="MeasureGroups">Objetos MeasureGroup</a>  
+###  <a name="MeasureGroups"></a> Objetos MeasureGroup  
  Para crear un grupo de medida, éste se agrega a la colección de grupo de medida del cubo y el objeto <xref:Microsoft.AnalysisServices.MeasureGroup> se actualiza en el servidor mediante su propio método Update. Para quitar un objeto <xref:Microsoft.AnalysisServices.MeasureGroup>, se usa su propio método Drop.  
   
  Se puede procesar un objeto <xref:Microsoft.AnalysisServices.MeasureGroup> una vez que se ha creado. <xref:Microsoft.AnalysisServices.MeasureGroup> se puede procesar mediante su propio método Process o bien cuando un objeto primario se procese con su propio método Process.  
   
  Para obtener más información acerca de los métodos y propiedades disponibles, vea <xref:Microsoft.AnalysisServices.MeasureGroup> en <xref:Microsoft.AnalysisServices>.  
   
-###  <a name="Partition">Objetos de partición</a>  
+###  <a name="Partition"></a> Objetos de partición  
  Para crear un objeto <xref:Microsoft.AnalysisServices.Partition>, éste se agrega a la colección de particiones del grupo de medida primario y el objeto <xref:Microsoft.AnalysisServices.Partition> se actualiza en el servidor mediante el método Update. Para quitar un objeto <xref:Microsoft.AnalysisServices.Partition>, se usa el método Drop.  
   
  Para obtener más información acerca de los métodos y propiedades disponibles, vea <xref:Microsoft.AnalysisServices.Partition> en <xref:Microsoft.AnalysisServices>.  
   
-###  <a name="AggregationDesign">Objetos AggregationDesign</a>  
+###  <a name="AggregationDesign"></a> Objetos AggregationDesign  
  Los diseños de agregaciones se construyen mediante el método AggregationDesign de un objeto <xref:Microsoft.AnalysisServices.AggregationDesign>.  
   
  Para obtener más información acerca de los métodos y propiedades disponibles, vea <xref:Microsoft.AnalysisServices.AggregationDesign> en <xref:Microsoft.AnalysisServices>.  
   
-###  <a name="Aggregation">Objetos Aggregation</a>  
+###  <a name="Aggregation"></a> Objetos Aggregation  
  Para crear un objeto <xref:Microsoft.AnalysisServices.Aggregation>, éste se agrega a la colección de diseños de agregaciones del grupo de medida primario y el objeto de grupo de medida primario se actualiza en el servidor mediante el método Update. Una agregación se quita de <xref:Microsoft.AnalysisServices.AggregationCollection> mediante el método Remove o el método RemoveAt.  
   
  Para obtener más información acerca de los métodos y propiedades disponibles, vea <xref:Microsoft.AnalysisServices.Aggregation> en <xref:Microsoft.AnalysisServices>.  
@@ -119,7 +105,7 @@ ms.lasthandoff: 02/15/2018
   
  AMO se usa para establecer las definiciones de este comportamiento mejorado, pero la experiencia real la define el cliente de exploración que implementa todas estas mejoras.  
   
-###  <a name="Action">Objetos Action</a>  
+###  <a name="Action"></a> Objetos Action  
  Para crear un objeto <xref:Microsoft.AnalysisServices.Action>, éste se agrega a la colección de acciones del cubo y el objeto <xref:Microsoft.AnalysisServices.Cube> se actualiza en el servidor mediante el método Update. El método Update del cubo puede incluir el parámetro UpdateOptions.ExpandFull, que garantiza que todos los objetos del cubo que se han modificado se actualizarán en el servidor con esta acción de actualización.  
   
  Para quitar un <xref:Microsoft.AnalysisServices.Action> objeto, éste se debe quitar de la colección y se debe actualizar el cubo primario.  
@@ -137,7 +123,7 @@ ms.lasthandoff: 02/15/2018
   
  Para obtener más información acerca de los métodos y propiedades disponibles, vea <xref:Microsoft.AnalysisServices.Kpi> en <xref:Microsoft.AnalysisServices>.  
   
-###  <a name="Perspective">Objetos de perspectiva</a>  
+###  <a name="Perspective"></a> Objetos de perspectiva  
  Para crear un objeto <xref:Microsoft.AnalysisServices.Perspective>, éste se debe agregar a la colección de perspectivas del cubo y el objeto <xref:Microsoft.AnalysisServices.Cube> se debe actualizar en el servidor mediante el método Update. El método Update del cubo puede incluir el parámetro UpdateOptions.ExpandFull, que garantiza que todos los objetos del cubo que se han modificado se actualizarán en el servidor con esta acción de actualización.  
   
  Para quitar un objeto <xref:Microsoft.AnalysisServices.Perspective>, éste se debe quitar de la colección y se debe actualizar el cubo primario  
@@ -146,14 +132,14 @@ ms.lasthandoff: 02/15/2018
   
  Para obtener más información acerca de los métodos y propiedades disponibles, vea <xref:Microsoft.AnalysisServices.Perspective> en <xref:Microsoft.AnalysisServices>.  
   
-###  <a name="Translation">Objetos Translation</a>  
+###  <a name="Translation"></a> Objetos Translation  
  Para crear un objeto <xref:Microsoft.AnalysisServices.Translation>, éste se debe agregar a la colección de traducción del objeto deseado y el objeto principal primario más próximo se debe actualizar en el servidor mediante el método Update. El método Update del objeto primario más próximo puede incluir el parámetro UpdateOptions.ExpandFull, que garantiza que todos los objetos secundarios que se han modificado se actualizarán en el servidor con esta acción de actualización.  
   
  Para quitar un objeto <xref:Microsoft.AnalysisServices.Translation>, éste se debe quitar de la colección y se debe actualizar el objeto primario más próximo.  
   
  Para obtener más información acerca de los métodos y propiedades disponibles, vea <xref:Microsoft.AnalysisServices.Translation> en <xref:Microsoft.AnalysisServices>.  
   
-###  <a name="ProactiveCaching">Objetos ProactiveCaching</a>  
+###  <a name="ProactiveCaching"></a> Objetos ProactiveCaching  
  Para crear un objeto <xref:Microsoft.AnalysisServices.ProactiveCaching>, éste se agrega a la colección de objetos de almacenamiento en caché automático de la dimensión o partición, y el objeto de dimensión o partición se debe actualizar en el servidor mediante el método Update.  
   
  Para quitar un objeto <xref:Microsoft.AnalysisServices.ProactiveCaching>, éste se debe quitar de la colección y se debe actualizar el objeto primario  
@@ -167,7 +153,7 @@ ms.lasthandoff: 02/15/2018
  [Introducción a las clases AMO](../../../analysis-services/multidimensional-models/analysis-management-objects/amo-classes-introduction.md)   
  [Programar objetos básicos OLAP de AMO](../../../analysis-services/multidimensional-models/analysis-management-objects/programming-amo-olap-basic-objects.md)   
  [Objetos avanzados OLAP en AMO programación](../../../analysis-services/multidimensional-models/analysis-management-objects/programming-amo-olap-advanced-objects.md)   
- [Arquitectura lógica &#40; Analysis Services - datos multidimensionales &#41;](../../../analysis-services/multidimensional-models/olap-logical/understanding-microsoft-olap-logical-architecture.md)   
- [Objetos de base de datos &#40; Analysis Services - datos multidimensionales &#41;](../../../analysis-services/multidimensional-models/olap-logical/database-objects-analysis-services-multidimensional-data.md)  
+ [Arquitectura lógica & #40; Analysis Services - datos multidimensionales & #41;](../../../analysis-services/multidimensional-models/olap-logical/understanding-microsoft-olap-logical-architecture.md)   
+ [Objetos de base de datos & #40; Analysis Services - datos multidimensionales & #41;](../../../analysis-services/multidimensional-models/olap-logical/database-objects-analysis-services-multidimensional-data.md)  
   
   

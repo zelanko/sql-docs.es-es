@@ -11,7 +11,7 @@ ms.suite: sql
 ms.technology:
 - drivers
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - arrays of parameter values [ODBC]
 - parameter arrays [ODBC]
@@ -20,12 +20,11 @@ caps.latest.revision: 5
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: acdcf9e1c21773240c03204608f73a4d2174fba5
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
-ms.translationtype: MT
+ms.openlocfilehash: fe2d85bd347477c0acc775a4f071968d6d8b15d6
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="using-arrays-of-parameters"></a>Utilizar matrices de parámetros
 Usar matrices de parámetros, la aplicación llama **SQLSetStmtAttr** con una *atributo* argumento de SQL_ATTR_PARAMSET_SIZE para especificar el número de conjuntos de parámetros. Llama **SQLSetStmtAttr** con una *atributo* argumento de SQL_ATTR_PARAMS_PROCESSED_PTR para especificar la dirección de una variable en el que el controlador puede devolver el número de conjuntos de parámetros procesados, establece el error incluida. Llama **SQLSetStmtAttr** con una *atributo* argumento de SQL_ATTR_PARAM_STATUS_PTR para que apunte a una matriz en la que se va a devolver información de estado para cada fila de valores de parámetro. El controlador almacena estas direcciones en la estructura que se mantiene para la instrucción.  

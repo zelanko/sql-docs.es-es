@@ -1,34 +1,23 @@
 ---
 title: Herramientas y enfoques de procesamiento (Analysis Services) | Documentos de Microsoft
-ms.custom: 
-ms.date: 03/04/2017
-ms.prod: analysis-services
-ms.prod_service: analysis-services
-ms.service: 
-ms.component: data-mining
-ms.reviewer: 
-ms.suite: pro-bi
-ms.technology: 
-ms.tgt_pltfrm: 
+ms.date: 05/02/2018
+ms.prod: sql
+ms.technology: analysis-services
+ms.component: multidimensional-models
 ms.topic: article
-helpviewer_keywords:
-- process [Analysis Services]
-- processing [Analysis Services]
-ms.assetid: 82347a16-4145-4655-8adf-2a300f1fdf99
-caps.latest.revision: 
-author: Minewiskan
 ms.author: owend
+ms.reviewer: owend
+author: minewiskan
 manager: kfile
-ms.workload: Inactive
-ms.openlocfilehash: 2cf9e507347a28aa36f96b1d2499ec0ff0ee741f
-ms.sourcegitcommit: d8ab09ad99e9ec30875076acee2ed303d61049b7
+ms.openlocfilehash: 57600dd49938217fa3bf65cff86f64e03bb16b52
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/23/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="tools-and-approaches-for-processing-analysis-services"></a>Herramientas y enfoques de procesamiento (Analysis Services)
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
-El procesamiento es una operación en la que Analysis Services consulta un origen de datos relacional y rellena objetos de Analysis Services utilizando esos datos.  
+  El procesamiento es una operación en la que Analysis Services consulta un origen de datos relacional y rellena objetos de Analysis Services utilizando esos datos.  
   
  Como administrador del sistema de Analysis Services, puede ejecutar y supervisar el procesamiento de objetos de [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] utilizando estos enfoques:  
   
@@ -53,7 +42,7 @@ El procesamiento es una operación en la que Analysis Services consulta un orige
  El procesamiento es una operación altamente configurable, controlada por un conjunto de opciones de procesamiento que determinan si se produce un procesamiento completo o incremental en el nivel de objeto. Para más información sobre las opciones de procesamiento, vea [Opciones y valores de procesamiento &#40;Analysis Services&#41;](../../analysis-services/multidimensional-models/processing-options-and-settings-analysis-services.md) y [Procesar objetos de Analysis Services](../../analysis-services/multidimensional-models/processing-analysis-services-objects.md).  
   
 > [!NOTE]  
->  En este tema se describen las herramientas y los enfoques para procesar modelos multidimensionales. Para obtener más información acerca de cómo procesar los modelos tabulares, vea [procesar base de datos, tabla, o partición &#40; Analysis Services &#41; ](../../analysis-services/tabular-models/process-database-table-or-partition-analysis-services.md) y [procesar datos](../../analysis-services/tabular-models/process-data-ssas-tabular.md).  
+>  En este tema se describen las herramientas y los enfoques para procesar modelos multidimensionales. Para obtener más información acerca de cómo procesar los modelos tabulares, vea [procesar base de datos, tabla o partición &#40;Analysis Services&#41; ](../../analysis-services/tabular-models/process-database-table-or-partition-analysis-services.md) y [procesar datos](../../analysis-services/tabular-models/process-data-ssas-tabular.md).  
   
 ### <a name="processing-objects-in-sql-server-management-studio"></a>Procesar objetos en SQL Server Management Studio  
   

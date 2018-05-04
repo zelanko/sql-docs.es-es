@@ -1,36 +1,35 @@
 ---
-title: "Propiedades de la estructura de minería de datos y columnas de la estructura | Documentos de Microsoft"
-ms.custom: 
+title: Propiedades de la estructura de minería de datos y columnas de la estructura | Documentos de Microsoft
+ms.custom: ''
 ms.date: 03/13/2017
 ms.prod: analysis-services
 ms.prod_service: analysis-services
-ms.service: 
+ms.service: ''
 ms.component: data-mining
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: pro-bi
-ms.technology: 
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.technology: ''
+ms.tgt_pltfrm: ''
+ms.topic: conceptual
 helpviewer_keywords:
 - mining structures [Analysis Services], column properties
 - data mining [Analysis Services], properties
 - columns [data mining], properties
 - properties [data mining]
 ms.assetid: ce90f684-bb8c-4eca-b9e6-000794dbee16
-caps.latest.revision: 
+caps.latest.revision: 23
 author: Minewiskan
 ms.author: owend
 manager: kfile
-ms.workload: Inactive
-ms.openlocfilehash: 0bc682b950c696f801bef26f3b258b55ba7d93bb
-ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
-ms.translationtype: MT
+ms.openlocfilehash: de1c95d94fbcafc2503b9d9772a0881d7e96d794
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/15/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="properties-for-mining-structure-and-structure-columns"></a>Propiedades de estructuras de minería de datos y columnas de estructuras
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
-Puede establecer o cambiar las propiedades de una estructura de minería de datos, y de sus columnas y tablas anidadas asociadas, mediante la pestaña **Estructura de minería de datos** del Diseñador de minería de datos. Las propiedades que se configuran en esta pestaña se propagan a todos los modelos de minería de datos asociados con la estructura.  
+  Puede establecer o cambiar las propiedades de una estructura de minería de datos, y de sus columnas y tablas anidadas asociadas, mediante la pestaña **Estructura de minería de datos** del Diseñador de minería de datos. Las propiedades que se configuran en esta pestaña se propagan a todos los modelos de minería de datos asociados con la estructura.  
   
 > [!NOTE]  
 >  Si cambia el valor de cualquier propiedad de la estructura de minería de datos, incluso los metadatos como un nombre o una descripción, es necesario volver a procesar la estructura de minería de datos y sus modelos para ver o consultar el modelo.  

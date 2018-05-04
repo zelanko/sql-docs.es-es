@@ -11,7 +11,7 @@ ms.suite: sql
 ms.technology:
 - drivers
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - data types [ODBC], numeric data types
 - numeric data type [ODBC], literals
@@ -22,12 +22,11 @@ caps.latest.revision: 5
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: 33b180e63bf3f0c38c930f46e3b4a74a7ab66754
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
-ms.translationtype: MT
+ms.openlocfilehash: b4b5a40b9cda29b528280b6bb873a8fda747d9ed
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="numeric-literals"></a>Literales numéricos
 Literales numéricos se utilizan cuando se almacenan valores de datos numéricos en cadenas de caracteres. Para la conversión de datos numéricos de SQL en una cadena SQL_C_CHAR o de conversión de datos numéricos de C en una cadena SQL_CHAR o SQL_VARCHAR, sintaxis de literal numérico se usan para especificar lo que se almacena en el destino. Para la conversión de un valor numérico almacenado como una cadena SQL_C_CHAR a datos numéricos de SQL o numérico almacenado como una cadena SQL_CHAR a datos numéricos de C, esta sintaxis se utiliza para validar el contenido almacenado en el origen.  

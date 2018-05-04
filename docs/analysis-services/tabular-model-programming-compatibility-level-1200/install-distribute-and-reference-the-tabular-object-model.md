@@ -1,30 +1,30 @@
 ---
 title: Instalar, distribuir y hacer referencia al modelo de objeto Tabular | Documentos de Microsoft
-ms.custom: 
+ms.custom: ''
 ms.date: 03/15/2017
 ms.prod: analysis-services
 ms.prod_service: analysis-services, azure-analysis-services
-ms.service: 
-ms.component: 
-ms.reviewer: 
+ms.service: ''
+ms.component: ''
+ms.reviewer: ''
 ms.suite: pro-bi
-ms.technology: 
-ms.tgt_pltfrm: 
+ms.technology: ''
+ms.tgt_pltfrm: ''
 ms.topic: reference
 ms.assetid: e51769f7-aac7-4835-a5ae-91aac04aa476
-caps.latest.revision: "22"
+caps.latest.revision: 22
 author: Minewiskan
 ms.author: owend
 manager: kfile
-ms.workload: Inactive
-ms.openlocfilehash: 4992c9a621964f8125178f114a930b1f4e007179
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
-ms.translationtype: MT
+ms.openlocfilehash: 7b5c94a69387db9761519ce3e1443fb26cf647d7
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="install-distribute-and-reference-the-tabular-object-model"></a>Instalar, distribuir y hacer referencia al modelo de objeto Tabular
-[!INCLUDE[ssas-appliesto-sqlas-aas](../../includes/ssas-appliesto-sqlas-aas.md)]En este artículo se explica cómo descargar, hacer referencia y redistribuir Analysis Services Tabular objeto modelo (TOM), una biblioteca de C# para crear y administrar los modelos tabulares y las bases de datos en código administrado.  
+[!INCLUDE[ssas-appliesto-sqlas-aas](../../includes/ssas-appliesto-sqlas-aas.md)]
+En este artículo se explica cómo descargar, hacer referencia y redistribuir Analysis Services Tabular objeto modelo (TOM), una biblioteca de C# para crear y administrar los modelos tabulares y las bases de datos en código administrado.  
   
 TOM es una extensión de la biblioteca de cliente AMO (Microsoft.AnalysisServices.dll) que se incluye con SQL Server 2016. Funciona con los modelos tabulares que se elige como destino el motor de metadatos tabulares en la versión de SQL Server 2016. Para usar TOM, el modelo y la base de datos deben estar en el nivel de compatibilidad 1200 o superior.  
 
@@ -37,7 +37,7 @@ En la tabla siguiente describe cada ensamblado.
 Ensamblado  |Funcionalidad  |Clases importantes |
 ---------|---------|--------------  |
 Core <br/>Microsoft.AnalysisServices.Core.dll | Comunes a las bases de datos tabulares y multidimensionales. <br/><br/>Proporciona control de excepciones, genéricas conexiones a una instancia de Analysis Services y la base de datos y el acceso a propiedades y métodos comunes para objetos de servidor y base de datos. <br/><br/>Se requiere para cualquier solución AMO como destino SQL Server 2016. | Core&nbsp;Server<br/>Core&nbsp;base de datos<br/>AmoException
-TOM<br/> Microsoft.AnalysisServices.Tabular.dll, versión 13.0.1601.5 o posterior.| Crear y administrar objetos de metadatos tabulares. | TOM&nbsp;Server <br/>TOM&nbsp;base de datos<br /> Modelo<br /> Table<br /> columna<br /> Relación
+TOM<br/> Microsoft.AnalysisServices.Tabular.dll, versión 13.0.1601.5 o posterior.| Crear y administrar objetos de metadatos tabulares. | TOM&nbsp;Server <br/>TOM&nbsp;base de datos<br /> Modelo<br /> Table<br /> Columna<br /> Relación
   AMO<br /> Microsoft.AnalysisServices.dll| Crear y administrar objetos de metadatos multidimensionales, incluidas bases de datos Tabular 1050-1103. | AMO&nbsp;Server <br />AMO&nbsp;base de datos <br /> Cube <br /> Dimensión <br /> MeasureGroup 
 JSON<br/>Microsoft.AnalysisServices.Tabular.Json.dll | Una aplicación auxiliar de DLL que encapsula el NewtonSoftJson.dll (JSON.NET) para controlar las actualizaciones, se evita el riesgo de introducir cambios funcionales para la serialización de JSON en las cargas de trabajo de Analysis Services. <br /> <br />Este archivo DLL existe como una dependencia en TOM y no está diseñada para utilizarse directamente en el código. | Ninguno.  
   

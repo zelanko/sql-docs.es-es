@@ -11,7 +11,7 @@ ms.suite: sql
 ms.technology:
 - drivers
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - mapping deprecated functions [ODBC], SQLSetStmtOption
 - SQLSetStmtOption function [ODBC], mapping
@@ -20,15 +20,14 @@ caps.latest.revision: 5
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: 34316cba593d433d240dc67360d802e3deaddd2f
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
-ms.translationtype: MT
+ms.openlocfilehash: b5b1fd1295586e69f9db0f4084f74540163f45ed
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="sqlsetstmtoption-mapping"></a>Asignación de SQLSetStmtOption
-Cuando una aplicación llama **SQLSetStmtOption** a través de una aplicación ODBC 3*.x* controlador, la llamada a  
+Cuando una aplicación llama **SQLSetStmtOption** a través de una aplicación ODBC 3 *.x* controlador, la llamada a  
   
 ```  
 SQLSetStmtOption(StatementHandle, fOption, vParam)  
@@ -58,8 +57,8 @@ SQLSetStmtOption(StatementHandle, fOption, vParam)
   
  Dado que el Administrador de controladores no sabe si el atributo de instrucción definidos por el controlador necesita una cadena o un valor entero de 32 bits, debe pasar un valor válido para el *StringLength* argumento de **SQLSetStmtAttr**. Si el controlador que ha definido una semántica especial para los atributos de instrucción definidos por el controlador y debe llamarse mediante **SQLSetStmtOption**, debe admitir **SQLSetStmtOption**.  
   
- Si una aplicación llama **SQLSetStmtOption** para establecer una opción de instrucción específicos del controlador en una aplicación ODBC 3*.x* controlador y la opción se ha definido en una API ODBC 2. *x* versión del controlador, una nueva constante de manifiesto debe definirse de la opción de ODBC 3*.x* controlador. Si la constante de manifiesto anterior se utiliza en la llamada a **SQLSetStmtOption**, el Administrador de controladores llamará **SQLSetStmtAttr** con el *StringLength* establecido en 0.  
+ Si una aplicación llama **SQLSetStmtOption** para establecer una opción de instrucción específicos del controlador en una aplicación ODBC 3 *.x* controlador y la opción se ha definido en una API ODBC 2. *x* versión del controlador, una nueva constante de manifiesto debe definirse de la opción de ODBC 3 *.x* controlador. Si la constante de manifiesto anterior se utiliza en la llamada a **SQLSetStmtOption**, el Administrador de controladores llamará **SQLSetStmtAttr** con el *StringLength* establecido en 0.  
   
- Cuando una aplicación llama **SQLSetStmtAttr** para establecer SQL_ATTR_USE_BOOKMARKS en SQL_UB_ON en una aplicación ODBC 3*.x* controlador, se establece el atributo de instrucción de SQL_ATTR_USE_BOOKMARKS en SQL_UB_FIXED. SQL_UB_ON es la misma constante como SQL_UB_FIXED. El Administrador de controladores pasa SQL_UB_FIXED a través del controlador. SQL_UB_FIXED está en desuso en ODBC 3*.x*, pero una aplicación ODBC 3*.x* controlador debe implementar para que funcione con ODBC 2. *x* las aplicaciones que usan los marcadores de longitud fija.  
+ Cuando una aplicación llama **SQLSetStmtAttr** para establecer SQL_ATTR_USE_BOOKMARKS en SQL_UB_ON en una aplicación ODBC 3 *.x* controlador, se establece el atributo de instrucción de SQL_ATTR_USE_BOOKMARKS en SQL_UB_FIXED. SQL_UB_ON es la misma constante como SQL_UB_FIXED. El Administrador de controladores pasa SQL_UB_FIXED a través del controlador. SQL_UB_FIXED está en desuso en ODBC 3 *.x*, pero una aplicación ODBC 3 *.x* controlador debe implementar para que funcione con ODBC 2. *x* las aplicaciones que usan los marcadores de longitud fija.  
   
- Para una aplicación ODBC 3*.x* controlador, el Administrador de controladores ya no se comprueba para ver si *opción* es entre SQL_STMT_OPT_MIN y SQL_STMT_OPT_MAX o es mayor que SQL_CONNECT_OPT_DRVR_START.
+ Para una aplicación ODBC 3 *.x* controlador, el Administrador de controladores ya no se comprueba para ver si *opción* es entre SQL_STMT_OPT_MIN y SQL_STMT_OPT_MAX o es mayor que SQL_CONNECT_OPT_DRVR_START.

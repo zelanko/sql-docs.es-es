@@ -11,7 +11,7 @@ ms.suite: sql
 ms.technology:
 - drivers
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - ODBC cursor library [ODBC], about cursor library
 - ODBC cursor library [ODBC]
@@ -22,12 +22,11 @@ caps.latest.revision: 8
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: b7152428dc38f2310cbda7cc70a8a2e4435c5182
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
-ms.translationtype: MT
+ms.openlocfilehash: ab6ea0ba91b8d62c094a965faaa522b033e05336
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="appendix-f-odbc-cursor-library"></a>Apéndice F: biblioteca de cursores ODBC
 > [!IMPORTANT]  
@@ -37,7 +36,7 @@ ms.lasthandoff: 04/16/2018
   
  La biblioteca de cursores es una biblioteca de vínculos dinámicos (DLL) que se encuentra entre el Administrador de controladores y el controlador. Cuando una aplicación llama a una función, el Administrador de controladores llama a la función en la biblioteca de cursores, que se ejecuta la función o que lo llama en el controlador especificado. Para una conexión determinada, una aplicación especifica si la biblioteca de cursores se utiliza siempre, usa si el controlador no es compatible con los cursores desplazables o nunca se utiliza.  
   
- La biblioteca de cursores aparece como un controlador para el Administrador de controladores. Si la biblioteca de cursores que se encuentra entre el Administrador de controladores y un 2 de ODBC. *x* controlador, la biblioteca de cursores aparece como una API ODBC 2. *x* controlador. Si la biblioteca de cursores se encuentra entre el Administrador de controladores y una aplicación ODBC 3*.x* controlador, la biblioteca de cursores aparece como una aplicación ODBC 3*.x* controlador. El comportamiento que muestran la biblioteca de cursores depende de la versión del controlador se está trabajando, con la excepción de desplazamientos de enlace, que es compatible con ambos 2 de ODBC. *x* y ODBC 3. *x* controladores.  
+ La biblioteca de cursores aparece como un controlador para el Administrador de controladores. Si la biblioteca de cursores que se encuentra entre el Administrador de controladores y un 2 de ODBC. *x* controlador, la biblioteca de cursores aparece como una API ODBC 2. *x* controlador. Si la biblioteca de cursores se encuentra entre el Administrador de controladores y una aplicación ODBC 3 *.x* controlador, la biblioteca de cursores aparece como una aplicación ODBC 3 *.x* controlador. El comportamiento que muestran la biblioteca de cursores depende de la versión del controlador se está trabajando, con la excepción de desplazamientos de enlace, que es compatible con ambos 2 de ODBC. *x* y ODBC 3. *x* controladores.  
   
  Para implementar cursores de bloque de **SQLFetch** y **SQLFetchScroll**, la biblioteca de cursores llama repetidamente **SQLFetch** en el controlador. Para implementar el desplazamiento, almacena en caché los datos que se recuperó en memoria y en archivos de disco. Cuando una aplicación solicita un nuevo conjunto de filas, la biblioteca de cursores recupera según sea necesario desde el controlador o la memoria caché.  
   

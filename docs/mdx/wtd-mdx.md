@@ -22,12 +22,11 @@ caps.latest.revision: 29
 author: Minewiskan
 ms.author: owend
 manager: erikre
-ms.workload: Inactive
-ms.openlocfilehash: dd738d665a8dd94758d665828174b244622a3190
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
-ms.translationtype: MT
+ms.openlocfilehash: 83fc733e36f6e68674d3f32b47087090499cf7cd
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="wtd-mdx"></a>Wtd (MDX)
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
@@ -45,15 +44,15 @@ Wtd( [ Member_Expression ] )
  *Expresión_miembro*  
  Expresión MDX válida que devuelve un miembro.  
   
-## <a name="remarks"></a>Notas  
+## <a name="remarks"></a>Comentarios  
  Si no se especifica una expresión de miembro, el valor predeterminado es el miembro actual de la primera jerarquía con un nivel de tipo semanas en la primera dimensión de tipo Time (**Time.CurrentMember**) en el grupo de medida.  
   
  El **Wtd** función es una función abreviada para la [PeriodsToDate](../mdx/periodstodate-mdx.md) función donde se establece el nivel en *semanas*. Es decir, `Wtd(Member_Expression)` es equivalente a `PeriodsToDate(Week_Level_Expression,Member_Expression)`.  
   
-## <a name="see-also"></a>Ver también  
- [QTD &#40; MDX &#41;](../mdx/qtd-mdx.md)   
- [MTd &#40; MDX &#41;](../mdx/mtd-mdx.md)   
- [YTD &#40; MDX &#41;](../mdx/ytd-mdx.md)   
- [Referencia de funciones MDX &#40; MDX &#41;](../mdx/mdx-function-reference-mdx.md)  
+## <a name="see-also"></a>Vea también  
+ [QTD &#40;MDX&#41;](../mdx/qtd-mdx.md)   
+ [MTd &#40;MDX&#41;](../mdx/mtd-mdx.md)   
+ [YTD &#40;MDX&#41;](../mdx/ytd-mdx.md)   
+ [Referencia de funciones MDX & #40; MDX & #41;](../mdx/mdx-function-reference-mdx.md)  
   
   

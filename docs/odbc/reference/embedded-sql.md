@@ -11,7 +11,7 @@ ms.suite: sql
 ms.technology:
 - drivers
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - SQL [ODBC], embedded SQL
 - sending SQL statements to DBMS [ODBC]
@@ -23,12 +23,11 @@ caps.latest.revision: 5
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: 1e7d51d8ae632f30528510448e52fc6c363d066d
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
-ms.translationtype: MT
+ms.openlocfilehash: dd31890b353d335872e857f8b0e4daf581783cd8
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="embedded-sql"></a>SQL incrustado
 La primera técnica para enviar instrucciones SQL en el DBMS se incrusta SQL. Dado que SQL no usa las variables y las instrucciones de control de flujo, se usa a menudo como una variante de idioma de la base de datos que se puede agregar a un programa escrito en un lenguaje de programación convencional, como C o COBOL. Se trata de una idea central de SQL incrustado: colocar instrucciones SQL en un programa escrito en un host del lenguaje de programación. En pocas palabras, las técnicas siguientes se utilizan para incrustar instrucciones SQL en un lenguaje host:  

@@ -1,35 +1,23 @@
 ---
-title: "Definir cálculos con nombre en una vista del origen de datos (Analysis Services) | Documentos de Microsoft"
-ms.custom: 
-ms.date: 03/01/2017
-ms.prod: analysis-services
-ms.prod_service: analysis-services
-ms.service: 
-ms.component: data-mining
-ms.reviewer: 
-ms.suite: pro-bi
-ms.technology: 
-ms.tgt_pltfrm: 
+title: Definir cálculos con nombre en una vista del origen de datos (Analysis Services) | Documentos de Microsoft
+ms.date: 05/02/2018
+ms.prod: sql
+ms.technology: analysis-services
+ms.component: multidimensional-models
 ms.topic: article
-helpviewer_keywords:
-- modifying named calculations
-- data source views [Analysis Services], named calculations
-- named calculations [Analysis Services]
-ms.assetid: 729e7b12-6185-4b73-8bcb-cfe459b15355
-caps.latest.revision: 
-author: Minewiskan
 ms.author: owend
+ms.reviewer: owend
+author: minewiskan
 manager: kfile
-ms.workload: On Demand
-ms.openlocfilehash: 62d9d96f3d0fc373ba83149789487706fe8354c7
-ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
+ms.openlocfilehash: 958cbd16ed777f77b9829eb0b99071a64b65bd06
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/15/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="define-named-calculations-in-a-data-source-view-analysis-services"></a>Definir cálculos con nombre en una vista del origen de datos (Analysis Services)
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
-Un cálculo con nombre es una expresión SQL representada como una columna calculada. Esta expresión aparece y se comporta como una columna en la tabla. Un cálculo con nombre permite ampliar el esquema relacional de las tablas o vistas existentes en una vista del origen de datos sin modificar las tablas o vistas en el origen de datos subyacente. Considere los ejemplos siguientes:  
+  Un cálculo con nombre es una expresión SQL representada como una columna calculada. Esta expresión aparece y se comporta como una columna en la tabla. Un cálculo con nombre permite ampliar el esquema relacional de las tablas o vistas existentes en una vista del origen de datos sin modificar las tablas o vistas en el origen de datos subyacente. Considere los ejemplos siguientes:  
   
 -   Cree un cálculo con nombre derivado de varias columnas en una tabla de hechos (por ejemplo, cree Tax Amount multiplicando un tipo impositivo por un precio de venta).  
   
@@ -91,6 +79,6 @@ FROM
  Si trata de eliminar un cálculo con nombre, se le presenta una lista de los objetos definidos en el proyecto o la base de datos que no serán válidos tras la eliminación. Revise la lista cuidadosamente antes de eliminar el cálculo.  
   
 ## <a name="see-also"></a>Vea también  
- [Definir consultas con nombre en una vista del origen de datos &#40; Analysis Services &#41;](../../analysis-services/multidimensional-models/define-named-queries-in-a-data-source-view-analysis-services.md)  
+ [Definir consultas con nombre en una vista del origen de datos & #40; Analysis Services & #41;](../../analysis-services/multidimensional-models/define-named-queries-in-a-data-source-view-analysis-services.md)  
   
   

@@ -1,29 +1,28 @@
 ---
-title: "Lección 1: Crear un nuevo proyecto de modelo Tabular | Documentos de Microsoft"
-ms.custom: 
+title: 'Lección 1: Crear un nuevo proyecto de modelo Tabular | Documentos de Microsoft'
+ms.custom: ''
 ms.date: 03/27/2017
 ms.prod: analysis-services
 ms.prod_service: analysis-services, azure-analysis-services
-ms.service: 
-ms.component: 
-ms.reviewer: 
+ms.service: ''
+ms.component: ''
+ms.reviewer: ''
 ms.suite: pro-bi
-ms.technology: 
-ms.tgt_pltfrm: 
+ms.technology: ''
+ms.tgt_pltfrm: ''
 ms.topic: get-started-article
 applies_to:
 - SQL Server 2016
 ms.assetid: 0d2eb34d-78c8-41ff-b92d-49b62c16b2ac
-caps.latest.revision: 
+caps.latest.revision: 33
 author: Minewiskan
 ms.author: owend
 manager: kfile
-ms.workload: Active
-ms.openlocfilehash: fe1c808d84bac0c14e1cf46c4613464e04bbea0c
-ms.sourcegitcommit: d8ab09ad99e9ec30875076acee2ed303d61049b7
-ms.translationtype: MT
+ms.openlocfilehash: e2803d1fa5be03957ad7a200eaa3f4c151d28494
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/23/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="lesson-1-create-a-new-tabular-model-project"></a>Lección 1: Crear un nuevo proyecto de modelo tabular
 [!INCLUDE[ssas-appliesto-sql2016-later-aas](../includes/ssas-appliesto-sql2016-later-aas.md)]
@@ -33,7 +32,7 @@ En esta lección, creará un nuevo proyecto de modelo tabular en blanco en [!INC
 Tiempo estimado para completar esta lección: **10 minutos**  
   
 ## <a name="prerequisites"></a>Requisitos previos  
-Este tema es la primera lección de un tutorial de creación de modelos tabulares. Para completar esta lección, debe tener la base de datos de ejemplo AdventureWorksDW instalada en una instancia de SQL Server. Para obtener más información, consulte [creación de modelos tabulares &#40; Tutorial de Adventure Works &#41; ](../analysis-services/tabular-modeling-adventure-works-tutorial.md).  
+Este tema es la primera lección de un tutorial de creación de modelos tabulares. Para completar esta lección, debe tener la base de datos de ejemplo AdventureWorksDW instalada en una instancia de SQL Server. Para obtener más información, consulte [modelado Tabular &#40;Tutorial de Adventure Works&#41;](../analysis-services/tabular-modeling-adventure-works-tutorial.md).  
   
 ## <a name="create-a-new-tabular-model-project"></a>Crear un nuevo proyecto de modelo tabular  
   
@@ -55,7 +54,7 @@ Este tema es la primera lección de un tutorial de creación de modelos tabulare
       
 6.  En **Nivel de compatibilidad**, compruebe que está seleccionado **SQL Server 2016 (1200)** y haga clic en **Aceptar**.   
  
-    ![as-tabular-lesson1-tmd](../analysis-services/media/as-tabular-lesson1-tmd.png)
+    ![como-tabular-lesson1-tmd](../analysis-services/media/as-tabular-lesson1-tmd.png)
       
     Si no ve el SQL Server 2016 RTM (1200) en el cuadro de lista de nivel de compatibilidad, que no está utilizando la versión más reciente de SQL Server Data Tools. Para obtener la versión más reciente, vea [Instalar SQL Server Data Tools](https://docs.microsoft.com/sql/ssdt/download-sql-server-data-tools-ssdt).  
 
@@ -72,11 +71,11 @@ Una vez creado el proyecto, se abre en SSDT. En el lado derecho, en **Explorador
 
 Haga clic en el **el Explorador de soluciones** ficha. En este caso, verá la **Model.bim** archivo. Si no ve la ventana del diseñador a la izquierda (la ventana vacía con la pestaña Model.bim), en **el Explorador de soluciones**, en **AW Internet Sales proyecto**, haga doble clic en el **Model.bim** archivo. El archivo Model.bim contiene todos los metadatos para el proyecto de modelos. 
 
-![as-tabular-lesson1-se](../analysis-services/media/as-tabular-lesson1-se.png)
+![como-tabular-lesson1-se](../analysis-services/media/as-tabular-lesson1-se.png)
   
 Echemos un vistazo a las propiedades del modelo. Haga clic en **Model.bim**. En el **propiedades** ventana, verá el [propiedades de los modelos](../analysis-services/tabular-models/model-properties-ssas-tabular.md), más importante que es el **Directquerymode** propiedad. Esta propiedad especifica si el modelo se va a implementar en modo de almacenamiento en memoria (desactivada) o en modo DirectQuery (activada). En este tutorial, creará e implementará el modelo en modo de almacenamiento en memoria.
 
-![as-tabular-lesson1-properties](../analysis-services/media/as-tabular-lesson1-properties.png)
+![como-tabular-lesson1-properties](../analysis-services/media/as-tabular-lesson1-properties.png)
   
 Cuando se crea un nuevo modelo, algunas propiedades del modelo se establecen automáticamente según la configuración de modelado de datos que se pueden especificar en el **herramientas** > **opciones** cuadro de diálogo. Las propiedades Copia de seguridad de datos, Retención de área de trabajo y Servidor del área de trabajo especifican cómo y dónde se realiza una copia de seguridad, se conserva en memoria y se crea la base de datos del área de trabajo (la base de datos de creación del modelo). Puede cambiar esta configuración más adelante si es necesario, pero de momento deje estas propiedades tal como están.  
 

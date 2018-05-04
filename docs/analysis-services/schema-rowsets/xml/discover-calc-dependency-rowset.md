@@ -20,15 +20,15 @@ caps.latest.revision: 22
 author: Minewiskan
 ms.author: owend
 manager: kfile
-ms.workload: Inactive
-ms.openlocfilehash: 39e8c2f6aa89e83de104862a22d8b8fefcab5fd0
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
-ms.translationtype: MT
+ms.openlocfilehash: b4651aa538ed9eec11a98a06884f7b037342ae22
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="discovercalcdependency-rowset"></a>DISCOVER_CALC_DEPENDENCY, conjunto de filas
-[!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]Informa sobre las dependencias entre los cálculos y sobre los objetos que se hace referencia en dichos cálculos. Puede utilizar esta información en una aplicación cliente para informar sobre los problemas con fórmulas complejas o para avisar cuándo se eliminan o modifican objetos relacionados. También puede utilizar el conjunto de filas para extraer las expresiones de DAX que se utilizan en medidas o columnas calculadas.  
+[!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]
+  Informa sobre las dependencias entre los cálculos y sobre los objetos a los que se hace referencia en dichos cálculos. Puede utilizar esta información en una aplicación cliente para informar sobre los problemas con fórmulas complejas o para avisar cuándo se eliminan o modifican objetos relacionados. También puede utilizar el conjunto de filas para extraer las expresiones de DAX que se utilizan en medidas o columnas calculadas.  
   
  **Se aplica a:** modelos tabulares  
   
@@ -133,6 +133,6 @@ SELECT * from $system.DISCOVER_CALC_DEPENDENCY WHERE QUERY = 'EVALUATE CALCULATE
   
 ## <a name="see-also"></a>Vea también  
  [Conjuntos de filas de esquema de Analysis Services](../../../analysis-services/schema-rowsets/analysis-services-schema-rowsets.md)   
- [Usar dinámica vistas de administración &#40; DMV &#41; para supervisar Analysis Services](../../../analysis-services/instances/use-dynamic-management-views-dmvs-to-monitor-analysis-services.md)  
+ [Usar dinámica vistas de administración & #40; DMV & #41; para supervisar Analysis Services](../../../analysis-services/instances/use-dynamic-management-views-dmvs-to-monitor-analysis-services.md)  
   
   

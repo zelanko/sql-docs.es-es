@@ -22,12 +22,11 @@ caps.latest.revision: 15
 author: Minewiskan
 ms.author: owend
 manager: erikre
-ms.workload: Inactive
-ms.openlocfilehash: 24b7869462815e6d636572a093a332ecce6dc02c
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
-ms.translationtype: MT
+ms.openlocfilehash: 21bb3a47c11a5377114a1333383669598b633df6
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="structurecolumn-dmx"></a>StructureColumn (DMX)
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
@@ -50,14 +49,14 @@ StructureColumn('structure column name')
   
  Si es una tabla anidada, la función devuelve un valor de tabla. El valor de tabla devuelto se puede utilizar en la cláusula FROM de una instrucción sub-SELECT.  
   
-## <a name="remarks"></a>Notas  
+## <a name="remarks"></a>Comentarios  
  Esta función es polimórfica y se puede utilizar en cualquier parte de una instrucción que permita expresiones, por ejemplo en una lista de expresiones SELECT, una expresión de condición WHERE y una expresión ORDER BY.  
   
  El nombre de la columna en la estructura de minería de datos es un valor de cadena y por lo tanto, deben incluirse entre comillas simples: por ejemplo, `StructureColumn('` **columna 1**`')`. Si hay varias columnas que tienen el mismo nombre, el nombre se resuelve en el contexto de la instrucción SELECT contenedora.  
   
  Los resultados devueltos por una consulta mediante el **StructureColumn** función se ve afectada por la presencia de los filtros en el modelo. Es decir, el filtro del modelo controla los casos que se incluyen en el modelo de minería de datos. Por consiguiente, una consulta en la columna de estructura puede devolver solo los casos que se utilizaron en el modelo de minería de datos. Consulte la sección Ejemplos de este tema para obtener un ejemplo de código que muestre el efecto de los filtros de un modelo de minería de datos tanto en las tablas de casos como en una tabla anidada.  
   
- Para obtener más información sobre cómo usar esta función en una instrucción SELECT de DMX, vea [SELECT FROM &#60; modelo &#62;. CASOS &#40; DMX &#41; ](../dmx/select-from-model-cases-dmx.md) o [SELECT FROM &#60; estructura &#62;. CASOS](../dmx/select-from-structure-cases.md).  
+ Para obtener más información sobre cómo usar esta función en una instrucción SELECT de DMX, vea [SELECT FROM &#60;modelo&#62;. CASOS &#40;DMX&#41; ](../dmx/select-from-model-cases-dmx.md) o [SELECT FROM &#60;estructura&#62;. CASOS](../dmx/select-from-structure-cases.md).  
   
 ## <a name="error-messages"></a>mensajes de error  
  Se produce el error de seguridad siguiente si el usuario no tiene el permiso de obtención de detalles en la estructura de minería de datos primaria:  
@@ -149,9 +148,9 @@ FROM MyModel.CASES
 WHERE EXISTS (SELECT * FROM Products WHERE StructureColumn('Quantity')>1)  
 ```  
   
-## <a name="see-also"></a>Ver también  
- [Extensiones de minería de datos &#40; DMX &#41; Referencia de funciones](../dmx/data-mining-extensions-dmx-function-reference.md)   
- [Funciones &#40; DMX &#41;](../dmx/functions-dmx.md)   
- [Funciones de predicción generales &#40; DMX &#41;](../dmx/general-prediction-functions-dmx.md)  
+## <a name="see-also"></a>Vea también  
+ [Extensiones de minería de datos &#40;DMX&#41; Referencia de funciones](../dmx/data-mining-extensions-dmx-function-reference.md)   
+ [Funciones &#40;DMX&#41;](../dmx/functions-dmx.md)   
+ [Funciones de predicción generales &#40;DMX&#41;](../dmx/general-prediction-functions-dmx.md)  
   
   

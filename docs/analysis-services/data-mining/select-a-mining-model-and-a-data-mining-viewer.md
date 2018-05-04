@@ -10,7 +10,7 @@ ms.reviewer: ''
 ms.suite: pro-bi
 ms.technology: ''
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - Mining Model Viewer [Analysis Services], types
 ms.assetid: 3e5fb89d-3ab8-4d2e-9926-feeb38c02d3f
@@ -18,15 +18,15 @@ caps.latest.revision: 33
 author: Minewiskan
 ms.author: owend
 manager: kfile
-ms.workload: Inactive
-ms.openlocfilehash: 66c80a12bb03635d48078f5be284e6718dc33e9e
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
-ms.translationtype: MT
+ms.openlocfilehash: 6cd2af96ff8c9b2f9ed07cff8407ab4c0730bcad
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="select-a-mining-model-and-a-data-mining-viewer"></a>Seleccionar un modelo de minería de datos y un visor de minería de datos
-[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]Puede explorar un modelo de minería de datos mediante uno de los visores de la **Visor de modelos de minería de datos** pestaña del Diseñador de minería de datos. Puede cambiar fácilmente entre modelos o cambiar el visor que se utiliza.  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
+  Para explorar un modelo de minería de datos puede utilizar uno de los visores de la pestaña **Visor de modelos de minería de datos** en el Diseñador de minería de datos. Puede cambiar fácilmente entre modelos o cambiar el visor que se utiliza.  
   
 -   El cuadro de lista desplegable **Modelo de minería de datos** en la pestaña **Visor de modelos de minería de datos** del Diseñador de minería de datos en [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] contiene una lista de todos los modelos de minería de datos que se encuentran en la estructura de minería de datos actual.  
   
@@ -47,6 +47,6 @@ ms.lasthandoff: 01/08/2018
  El modelo de minería de datos seleccionado se abre en el visor proporcionado para ese tipo de modelo.  
   
 ## <a name="see-also"></a>Vea también  
- [Tareas y procedimientos del Visor de modelos de minería de datos](../../analysis-services/data-mining/mining-model-viewer-tasks-and-how-tos.md)  
+ [Tareas y tareas del Visor de modelo de minería de datos](../../analysis-services/data-mining/mining-model-viewer-tasks-and-how-tos.md)  
   
   

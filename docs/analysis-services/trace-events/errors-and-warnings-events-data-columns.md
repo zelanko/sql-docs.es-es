@@ -18,15 +18,15 @@ caps.latest.revision: 24
 author: Minewiskan
 ms.author: owend
 manager: kfile
-ms.workload: Inactive
-ms.openlocfilehash: 7c3e94c56f836301b853902751c2fb4085e2df7e
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
-ms.translationtype: MT
+ms.openlocfilehash: e6e01c84e97f0acb2ffc54e647b9309c076483bf
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="errors-and-warnings-events-data-columns"></a>Columnas de datos de eventos de Errores y advertencias
-[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]La categoría de eventos de auditoría de seguridad tiene la siguiente clase de evento:  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
+  La categoría de eventos Auditoría de seguridad tiene las siguientes clases de eventos:  
   
 -   Clase de error  
   
@@ -54,7 +54,7 @@ ms.lasthandoff: 01/08/2018
 |TextData|42|9|Contiene los datos de texto asociados al evento de error.|  
 |ServerName|43|8|Contiene el nombre del servidor que ejecuta la instancia de [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] en la que se ha producido el evento de error.|  
   
-## <a name="see-also"></a>Ver también  
+## <a name="see-also"></a>Vea también  
  [Auditoría de seguridad (categoría de eventos)](../../analysis-services/trace-events/security-audit-event-category.md)  
   
   

@@ -1,27 +1,26 @@
 ---
 title: Comparar soluciones tabulares y multidimensionales (SSAS) | Documentos de Microsoft
-ms.custom: 
+ms.custom: ''
 ms.date: 06/15/2017
 ms.prod: analysis-services
 ms.prod_service: analysis-services
-ms.service: 
+ms.service: ''
 ms.component: multidimensional-tabular
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: pro-bi
-ms.technology: 
-ms.tgt_pltfrm: 
+ms.technology: ''
+ms.tgt_pltfrm: ''
 ms.topic: get-started-article
 ms.assetid: 76ee5e96-6a04-49af-a88e-cb5fe29f2e9a
-caps.latest.revision: 
+caps.latest.revision: 49
 author: Minewiskan
 ms.author: owend
 manager: kfile
-ms.workload: Active
-ms.openlocfilehash: 9212a5452469d59240d825524afa9747e12386b6
-ms.sourcegitcommit: d8ab09ad99e9ec30875076acee2ed303d61049b7
-ms.translationtype: MT
+ms.openlocfilehash: 4f7e75c9a5f31d37b32bade54dd9bd108de21e9a
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/23/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="comparing-tabular-and-multidimensional-solutions"></a>Comparar soluciones tabulares y multidimensionales
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
@@ -151,9 +150,9 @@ ms.lasthandoff: 02/23/2018
   
 -   Dimensión y la seguridad de nivel de celda, con permisos basados en rol, pueden utilizar las bases de datos de modelo multidimensional.  
 
--   [!INCLUDE[ssGemini](../includes/ssgemini-md.md)] se protegen en el nivel de archivo, con los permisos de SharePoint.  
+-   Los libros de[!INCLUDE[ssGemini](../includes/ssgemini-md.md)] se protegen en el nivel de archivo, con los permisos de SharePoint.  
   
- [!INCLUDE[ssGemini](../includes/ssgemini-md.md)] pueden restaurarse en un servidor de modo tabular. Una vez restaurado el archivo, se separa de SharePoint, lo que le permite usar todas las características de modelado tabular, incluida la seguridad de nivel de fila.  
+ Los libros de[!INCLUDE[ssGemini](../includes/ssgemini-md.md)] pueden restaurarse en un servidor de modo tabular. Una vez restaurado el archivo, se separa de SharePoint, lo que le permite usar todas las características de modelado tabular, incluida la seguridad de nivel de fila.  
   
 ##  <a name="bkmk_designer"></a> Herramientas de diseño  
  Los conocimientos sobre el modelado de datos y la capacidad técnica pueden variar enormemente según los usuarios encargados de generar modelos analíticos. Si debe tener en cuenta el conocimiento de la herramienta o la experiencia del usuario en su solución, compare las experiencias siguientes para la creación del modelo.  
@@ -168,7 +167,7 @@ ms.lasthandoff: 02/23/2018
  
  Si utiliza Reporting Services, la disponibilidad de las características de informe varía según las ediciones y los modos de servidor. Por esta razón, el tipo de informe que desea generar puede influir en el modo de servidor que elige instalar.  
   
- [!INCLUDE[ssCrescent](../includes/sscrescent-md.md)], una nueva herramienta de creación de Reporting Services que se ejecuta en SharePoint, está disponible en un servidor de informes que se implementa en una granja de SharePoint 2010. El único tipo de origen de datos que se puede usar con este informe es una base de datos modelo tabular de Analysis Services o un libro [!INCLUDE[ssGemini](../includes/ssgemini-md.md)] . Esto significa que debe tener un servidor en modo tabular o un servidor [!INCLUDE[ssGemini](../includes/ssgemini-md.md)] para SharePoint para hospedar el origen de datos que usa este tipo de informe. No puede utilizar un modelo multidimensional como origen de datos para un informe de [!INCLUDE[ssCrescent](../includes/sscrescent-md.md)] . Debe crear una conexión de modelo semántico de BI [!INCLUDE[ssGemini](../includes/ssgemini-md.md)] o un origen de datos compartido de Reporting Services para usarlo como origen de datos en un informe de [!INCLUDE[ssCrescent](../includes/sscrescent-md.md)] .  
+ [!INCLUDE[ssCrescent](../includes/sscrescent-md.md)], una herramienta de creación de Reporting Services que se ejecuta en SharePoint, está disponible en un servidor de informes implementado en una granja de servidores de SharePoint 2010. El único tipo de origen de datos que se puede usar con este informe es una base de datos modelo tabular de Analysis Services o un libro [!INCLUDE[ssGemini](../includes/ssgemini-md.md)] . Esto significa que debe tener un servidor en modo tabular o un servidor [!INCLUDE[ssGemini](../includes/ssgemini-md.md)] para SharePoint para hospedar el origen de datos que usa este tipo de informe. No puede utilizar un modelo multidimensional como origen de datos para un informe de [!INCLUDE[ssCrescent](../includes/sscrescent-md.md)] . Debe crear una conexión de modelo semántico de BI [!INCLUDE[ssGemini](../includes/ssgemini-md.md)] o un origen de datos compartido de Reporting Services para usarlo como origen de datos en un informe de [!INCLUDE[ssCrescent](../includes/sscrescent-md.md)] .  
   
  El Generador de informes y el Diseñador de informes pueden usar cualquier base de datos de Analysis Services, incluidos los libros [!INCLUDE[ssGemini](../includes/ssgemini-md.md)] que se hospedan en [!INCLUDE[ssGemini](../includes/ssgemini-md.md)] para SharePoint.  
   

@@ -22,12 +22,11 @@ caps.latest.revision: 16
 author: Minewiskan
 ms.author: owend
 manager: erikre
-ms.workload: Inactive
-ms.openlocfilehash: 488c6dd83f34623a6f2a4fb026ff45a39f806c40
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
-ms.translationtype: MT
+ms.openlocfilehash: 5b833a7a5f6b6d1329a1dc7a738a163efde2c0ae
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="data-mining-extensions-dmx-operator-reference"></a>Referencia de operadores de Extensiones de minería de datos (DMX)
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
@@ -36,31 +35,31 @@ ms.lasthandoff: 01/08/2018
   
 |Operador|Description|  
 |--------------|-----------------|  
-|[+ &#40; Agregar &#41; &#40; DMX &#41;](../dmx/add-dmx.md)|Operador aritmético que suma dos números.|  
-|[-&#40; Restar &#41; &#40; DMX &#41;](../dmx/subtract-dmx.md)|Operador aritmético que resta un número de otro número.|  
-|[&#42; &#40; Multiplicar &#41; &#40; DMX &#41;](../dmx/multiply-dmx.md)|Operador aritmético que multiplica un número por otro número.|  
-|[&#40; división &#41; &#40; DMX &#41;](../dmx/divide-dmx.md)|Operador aritmético que divide un número entre otro número.|  
-|[&#60; &#40; Menor &#41; &#40; DMX &#41;](../dmx/less-than-dmx.md)|Operador de comparación. En el caso de argumentos que se evalúan como valores no NULL, devuelve TRUE si el valor del argumento de la izquierda es menor que el valor del argumento de la derecha; de lo contrario, devuelve FALSE. Si un argumento o ambos argumentos se evalúan como un valor NULL, el operador devuelve un valor NULL.|  
-|[&#62; &#40; Mayor &#41; &#40; DMX &#41;](../dmx/greater-than-dmx.md)|Operador de comparación. En el caso de argumentos que se evalúan como valores no NULL, devuelve TRUE si el valor del argumento de la izquierda es mayor que el valor del argumento de la derecha; de lo contrario, devuelve FALSE. Si un argumento o ambos argumentos se evalúan como un valor NULL, el operador devuelve un valor NULL.|  
-|[= &#40; Igual a &#41; &#40; DMX &#41;](../dmx/equal-to-dmx.md)|Operador de comparación. En el caso de argumentos que se evalúan como valores no NULL, devuelve TRUE si el valor del argumento de la izquierda es igual que el valor del argumento de la derecha; de lo contrario, devuelve FALSE. Si un argumento o ambos argumentos se evalúan como un valor NULL, el operador devuelve un valor NULL.|  
-|[&#60; &#62; &#40; No igual a &#41; &#40; DMX &#41;](../dmx/not-equal-to-dmx.md)|Operador de comparación. En el caso de argumentos que se evalúan como valores no NULL, devuelve TRUE si el valor del argumento de la izquierda es distinto del valor del argumento de la derecha; de lo contrario, devuelve FALSE. Si un argumento o ambos argumentos se evalúan como un valor NULL, el operador devuelve un valor NULL.|  
-|[&#60; = &#40; Menor o igual a &#41; &#40; DMX &#41;](../dmx/less-than-or-equal-to-dmx.md)|Operador de comparación. En el caso de argumentos que se evalúan como valores no NULL, devuelve TRUE si el valor del argumento de la izquierda es menor o igual que el valor del argumento de la derecha; de lo contrario, devuelve FALSE. Si un argumento o ambos argumentos se evalúan como un valor NULL, el operador devuelve un valor NULL.|  
-|[&#62; = &#40; Mayor que o igual a &#41; &#40; DMX &#41;](../dmx/greater-than-or-equal-to-dmx.md)|Operador de comparación. En el caso de argumentos que se evalúan como valores no NULL, devuelve TRUE si el valor del argumento de la izquierda es mayor o igual que el valor del argumento de la derecha; de lo contrario, devuelve FALSE. Si un argumento o ambos argumentos se evalúan como un valor NULL, el operador devuelve un valor NULL.|  
-|[Y &#40; DMX &#41;](../dmx/and-dmx.md)|Operador lógico que realiza una conjunción de dos expresiones numéricas.|  
-|[NO &#40; DMX &#41;](../dmx/not-dmx.md)|Operador lógico que realiza una negación de una expresión numérica.|  
-|[O &#40; DMX &#41;](../dmx/or-dmx.md)|Operador lógico que realiza una disyunción de dos expresiones numéricas.|  
-|[+ &#40; Positivo &#41; &#40; DMX &#41;](../dmx/positive-dmx.md)|Operador unario que devuelve el valor positivo de una expresión numérica.|  
-|[-&#40; Negativo &#41; &#40; DMX &#41;](../dmx/negative-dmx.md)|Operador unario que devuelve el valor negativo de una expresión numérica.|  
-|[Doble barra diagonal &#40; Comentario &#41; &#40; DMX &#41;](../dmx/double-slash-comment-dmx.md)|Indica una cadena de texto que no debe ejecutar [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]. Puede anidar comentarios dentro de una instrucción DMX, incluirlos al final de una línea de código o insertarlos en una línea independiente.|  
-|[--&#40; Comentario &#41; &#40; DMX &#41; Resumen](../dmx/comment-dmx-summary.md)|Indica una cadena de texto que no debe ejecutar [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]. Puede anidar comentarios dentro de una instrucción DMX, incluirlos al final de una línea de código o insertarlos en una línea independiente.|  
-|[Estrella de barra diagonal &#40; Comentario &#41; &#40; DMX &#41;](../dmx/slash-star-comment-dmx.md)|Indica una cadena de texto que no debe ejecutar [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]. Puede anidar comentarios dentro de una instrucción DMX, incluirlos al final de una línea de código o insertarlos en una línea independiente.|  
+|[+ &#40;Agregar&#41; &#40;DMX&#41;](../dmx/add-dmx.md)|Operador aritmético que suma dos números.|  
+|[- &#40;Restar&#41; &#40;DMX&#41;](../dmx/subtract-dmx.md)|Operador aritmético que resta un número de otro número.|  
+|[&#42;&#40;Multiplicar&#41; &#40;DMX&#41;](../dmx/multiply-dmx.md)|Operador aritmético que multiplica un número por otro número.|  
+|[&#40;Dividir&#41; &#40;DMX&#41;](../dmx/divide-dmx.md)|Operador aritmético que divide un número entre otro número.|  
+|[&#60; &#40;Menor&#41; &#40;DMX&#41;](../dmx/less-than-dmx.md)|Operador de comparación. En el caso de argumentos que se evalúan como valores no NULL, devuelve TRUE si el valor del argumento de la izquierda es menor que el valor del argumento de la derecha; de lo contrario, devuelve FALSE. Si un argumento o ambos argumentos se evalúan como un valor NULL, el operador devuelve un valor NULL.|  
+|[&#62; &#40;Mayor&#41; &#40;DMX&#41;](../dmx/greater-than-dmx.md)|Operador de comparación. En el caso de argumentos que se evalúan como valores no NULL, devuelve TRUE si el valor del argumento de la izquierda es mayor que el valor del argumento de la derecha; de lo contrario, devuelve FALSE. Si un argumento o ambos argumentos se evalúan como un valor NULL, el operador devuelve un valor NULL.|  
+|[= &#40;Igual a&#41; &#40;DMX&#41;](../dmx/equal-to-dmx.md)|Operador de comparación. En el caso de argumentos que se evalúan como valores no NULL, devuelve TRUE si el valor del argumento de la izquierda es igual que el valor del argumento de la derecha; de lo contrario, devuelve FALSE. Si un argumento o ambos argumentos se evalúan como un valor NULL, el operador devuelve un valor NULL.|  
+|[&#60; &#62; &#40;No igual a&#41; &#40;DMX&#41;](../dmx/not-equal-to-dmx.md)|Operador de comparación. En el caso de argumentos que se evalúan como valores no NULL, devuelve TRUE si el valor del argumento de la izquierda es distinto del valor del argumento de la derecha; de lo contrario, devuelve FALSE. Si un argumento o ambos argumentos se evalúan como un valor NULL, el operador devuelve un valor NULL.|  
+|[&#60;= &#40;Menor o igual a&#41; &#40;DMX&#41;](../dmx/less-than-or-equal-to-dmx.md)|Operador de comparación. En el caso de argumentos que se evalúan como valores no NULL, devuelve TRUE si el valor del argumento de la izquierda es menor o igual que el valor del argumento de la derecha; de lo contrario, devuelve FALSE. Si un argumento o ambos argumentos se evalúan como un valor NULL, el operador devuelve un valor NULL.|  
+|[&#62;= &#40;Mayor que o igual a&#41; &#40;DMX&#41;](../dmx/greater-than-or-equal-to-dmx.md)|Operador de comparación. En el caso de argumentos que se evalúan como valores no NULL, devuelve TRUE si el valor del argumento de la izquierda es mayor o igual que el valor del argumento de la derecha; de lo contrario, devuelve FALSE. Si un argumento o ambos argumentos se evalúan como un valor NULL, el operador devuelve un valor NULL.|  
+|[Y &AMP;#40;DMX&AMP;#41;](../dmx/and-dmx.md)|Operador lógico que realiza una conjunción de dos expresiones numéricas.|  
+|[NO &AMP;#40;DMX&AMP;#41;](../dmx/not-dmx.md)|Operador lógico que realiza una negación de una expresión numérica.|  
+|[O &AMP;#40;DMX&AMP;#41;](../dmx/or-dmx.md)|Operador lógico que realiza una disyunción de dos expresiones numéricas.|  
+|[+ &#40;Positivo&#41; &#40;DMX&#41;](../dmx/positive-dmx.md)|Operador unario que devuelve el valor positivo de una expresión numérica.|  
+|[- &#40;Negativo&#41; &#40;DMX&#41;](../dmx/negative-dmx.md)|Operador unario que devuelve el valor negativo de una expresión numérica.|  
+|[Doble barra diagonal &#40;comentario&#41; &#40;DMX&#41;](../dmx/double-slash-comment-dmx.md)|Indica una cadena de texto que no debe ejecutar [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]. Puede anidar comentarios dentro de una instrucción DMX, incluirlos al final de una línea de código o insertarlos en una línea independiente.|  
+|[-- &#40;Comentario&#41; &#40;DMX&#41; resumen](../dmx/comment-dmx-summary.md)|Indica una cadena de texto que no debe ejecutar [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]. Puede anidar comentarios dentro de una instrucción DMX, incluirlos al final de una línea de código o insertarlos en una línea independiente.|  
+|[Barra diagonal estrella &#40;comentario&#41; &#40;DMX&#41;](../dmx/slash-star-comment-dmx.md)|Indica una cadena de texto que no debe ejecutar [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]. Puede anidar comentarios dentro de una instrucción DMX, incluirlos al final de una línea de código o insertarlos en una línea independiente.|  
   
 ## <a name="see-also"></a>Vea también  
- [Extensiones de minería de datos &#40; DMX &#41; Referencia de funciones](../dmx/data-mining-extensions-dmx-function-reference.md)   
- [Extensiones de minería de datos &#40; DMX &#41; Referencia](../dmx/data-mining-extensions-dmx-reference.md)   
- [Extensiones de minería de datos &#40; DMX &#41; Referencia de instrucciones](../dmx/data-mining-extensions-dmx-statements.md)   
- [Extensiones de minería de datos &#40; DMX &#41; Convenciones de sintaxis](../dmx/data-mining-extensions-dmx-syntax-conventions.md)   
- [Extensiones de minería de datos &#40; DMX &#41; Elementos de sintaxis](../dmx/data-mining-extensions-dmx-syntax-elements.md)   
- [Operadores &#40; DMX &#41;](../dmx/operators-dmx.md)  
+ [Extensiones de minería de datos &#40;DMX&#41; Referencia de funciones](../dmx/data-mining-extensions-dmx-function-reference.md)   
+ [Extensiones de minería de datos &#40;DMX&#41; Referencia](../dmx/data-mining-extensions-dmx-reference.md)   
+ [Extensiones de minería de datos &#40;DMX&#41; Referencia de instrucciones](../dmx/data-mining-extensions-dmx-statements.md)   
+ [Extensiones de minería de datos &#40;DMX&#41; Convenciones de sintaxis](../dmx/data-mining-extensions-dmx-syntax-conventions.md)   
+ [Extensiones de minería de datos &#40;DMX&#41; Elementos de sintaxis](../dmx/data-mining-extensions-dmx-syntax-elements.md)   
+ [Operadores &#40;DMX&#41;](../dmx/operators-dmx.md)  
   
   

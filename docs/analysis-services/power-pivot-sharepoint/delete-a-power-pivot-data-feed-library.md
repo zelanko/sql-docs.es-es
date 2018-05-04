@@ -1,31 +1,23 @@
 ---
 title: Eliminar una biblioteca de fuentes de datos de Power Pivot | Documentos de Microsoft
-ms.custom: 
-ms.date: 03/01/2017
-ms.prod: analysis-services
-ms.prod_service: analysis-services
-ms.service: 
-ms.component: data-mining
-ms.reviewer: 
-ms.suite: pro-bi
-ms.technology: 
-ms.tgt_pltfrm: 
+ms.date: 05/02/2018
+ms.prod: sql
+ms.technology: analysis-services
+ms.component: ppvt-sharepoint
 ms.topic: article
-ms.assetid: 5dbfc67e-7260-445a-8210-a9d33827db7f
-caps.latest.revision: 
-author: Minewiskan
 ms.author: owend
+ms.reviewer: owend
+author: minewiskan
 manager: kfile
-ms.workload: Inactive
-ms.openlocfilehash: e1f2ed93aa09903f34ba5d6e1e177920157ea4dd
-ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
+ms.openlocfilehash: e299d55af93cecdf7efdc142cc5939ec6631e716
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/15/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="delete-a-power-pivot-data-feed-library"></a>Eliminar una biblioteca de fuente de distribución de datos Power Pivot
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
-Debe ser el propietario del sitio para eliminar una biblioteca de fuentes de distribución de datos. Si la biblioteca contiene elementos, se eliminarán junto con ella.  
+  Debe ser el propietario del sitio para eliminar una biblioteca de fuentes de distribución de datos. Si la biblioteca contiene elementos, se eliminarán junto con ella.  
   
  Debe conocer el nombre de la biblioteca de fuentes de distribución de datos que desea eliminar.  
   

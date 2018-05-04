@@ -1,35 +1,23 @@
 ---
-title: "Agregar modelos de minería de datos a una estructura (Analysis Services: minería de datos) | Documentos de Microsoft"
-ms.custom: 
-ms.date: 03/14/2017
-ms.prod: analysis-services
-ms.prod_service: analysis-services
-ms.service: 
+title: 'Agregar modelos de minería de datos a una estructura (Analysis Services: minería de datos) | Documentos de Microsoft'
+ms.date: 05/01/2018
+ms.prod: sql
+ms.technology: analysis-services
 ms.component: data-mining
-ms.reviewer: 
-ms.suite: pro-bi
-ms.technology: 
-ms.tgt_pltfrm: 
 ms.topic: article
-helpviewer_keywords:
-- mining structures [Analysis Services], creating
-- mining models [Analysis Services], creating
-- mining models [Analysis Services], modifying
-ms.assetid: a175daa5-58ea-474c-a82f-9648c5155dc8
-caps.latest.revision: 
-author: Minewiskan
 ms.author: owend
+ms.reviewer: owend
+author: minewiskan
 manager: kfile
-ms.workload: Inactive
-ms.openlocfilehash: 42ae87b14d6ddff90b78bb3c23a7d536750d8317
-ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
+ms.openlocfilehash: 46207c91d6bfbbb122f42213b779841c91ac996a
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/15/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="add-mining-models-to-a-structure-analysis-services---data-mining"></a>Agregar modelos de minería de datos a una estructura (Analysis Services - Minería de datos)
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
-Una estructura de minería de datos se ha diseñado para admitir varios modelos de minería de datos. Por tanto, cuando el asistente finalice, puede abrir la estructura y agregar nuevos modelos de minería de datos. Cada vez que cree un modelo, puede utilizar un algoritmo diferente, cambiar los parámetros o aplicar filtros para utilizar un subconjunto distinto de datos.  
+  Una estructura de minería de datos se ha diseñado para admitir varios modelos de minería de datos. Por tanto, cuando el asistente finalice, puede abrir la estructura y agregar nuevos modelos de minería de datos. Cada vez que cree un modelo, puede utilizar un algoritmo diferente, cambiar los parámetros o aplicar filtros para utilizar un subconjunto distinto de datos.  
   
 ## <a name="adding-new-mining-models"></a>Agregar nuevos modelos de minería de datos  
  Si utiliza el Asistente para minería de datos para crear un nuevo modelo de minería de datos, de forma predeterminada, primero siempre debe crear una estructura de minería de datos. El asistente le ofrece la posibilidad de agregar un modelo de minería de datos inicial a la estructura. Sin embargo, no es necesario crear un modelo de manera inmediata. Si solo crea la estructura, no necesita tomar una decisión sobre qué columna debe utilizar como atributo de predicción, o sobre cómo utilizar los datos en un modelo determinado. En su lugar, solo tiene que establecer la estructura de datos general que desea utilizar en el futuro; más adelante puede utilizar [Data Mining Designer](../../analysis-services/data-mining/data-mining-designer.md) para agregar nuevos modelos de minería de datos basados en dicha estructura.  
@@ -65,7 +53,7 @@ Una estructura de minería de datos se ha diseñado para admitir varios modelos 
  Para algunas columnas, también puede ser necesario especificar el *contenido de la columna*. En la minería de datos de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , la propiedad Tipo de contenido de cada columna de datos indica al algoritmo cómo debe procesar los datos de esa columna. Por ejemplo, si los datos tienen una columna Ingresos , debe especificar que la columna contiene números continuos estableciendo el tipo de contenido en Continuous. Sin embargo, también puede especificar que los números de la columna Ingresos se agrupen en cubos estableciendo el tipo de contenido en Discretized y, opcionalmente, especificando el número exacto de cubos. Puede crear distintos modelos que procesen las columnas de manera diferente: por ejemplo, puede probar un modelo que agrupe clientes en tres cubos en función de la edad, y otro modelo que los agrupe en 10 cubos en función de la edad.  
   
 ## <a name="see-also"></a>Vea también  
- [Estructuras de minería de datos &#40; Analysis Services: minería de datos &#41;](../../analysis-services/data-mining/mining-structures-analysis-services-data-mining.md)   
+ [Estructuras de minería de datos & #40; Analysis Services: minería de datos & #41;](../../analysis-services/data-mining/mining-structures-analysis-services-data-mining.md)   
  [Crear una estructura de minería de datos relacional](../../analysis-services/data-mining/create-a-relational-mining-structure.md)   
  [Propiedades del modelo de minería de datos](../../analysis-services/data-mining/mining-model-properties.md)   
  [Columnas del modelo de minería de datos](../../analysis-services/data-mining/mining-model-columns.md)  

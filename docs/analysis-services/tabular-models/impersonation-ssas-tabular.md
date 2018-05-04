@@ -1,31 +1,30 @@
 ---
-title: "Suplantación en los modelos tabulares de Analysis Services | Documentos de Microsoft"
-ms.custom: 
+title: Suplantación en los modelos tabulares de Analysis Services | Documentos de Microsoft
+ms.custom: ''
 ms.date: 10/16/2017
 ms.prod: analysis-services
 ms.prod_service: analysis-services, azure-analysis-services
-ms.service: 
+ms.service: ''
 ms.component: data-mining
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: pro-bi
-ms.technology: 
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.technology: ''
+ms.tgt_pltfrm: ''
+ms.topic: conceptual
 ms.assetid: fcc79e96-182a-45e9-8ae2-aeb440e9bedd
-caps.latest.revision: 
+caps.latest.revision: 20
 author: Minewiskan
 ms.author: owend
 manager: kfile
-ms.workload: On Demand
-ms.openlocfilehash: 24d32bd54651eb173ca6de920d9e457c6331c8ca
-ms.sourcegitcommit: d8ab09ad99e9ec30875076acee2ed303d61049b7
-ms.translationtype: MT
+ms.openlocfilehash: 20728b8ff7ecc4a4124f5fc292366d565781186f
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/23/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="impersonation"></a>Suplantación 
 [!INCLUDE[ssas-appliesto-sqlas-aas](../../includes/ssas-appliesto-sqlas-aas.md)]
-Este artículo proporciona a los autores de modelos tabulares una descripción de cómo las credenciales de inicio de sesión se usa Analysis Services cuando se conecta a un origen de datos para importar y procesar (actualizar) los datos.  
+  Este artículo proporciona a los autores de modelos tabulares una descripción de cómo las credenciales de inicio de sesión se usa Analysis Services cuando se conecta a un origen de datos para importar y procesar (actualizar) los datos.  
 
 ##  <a name="bkmk_conf_imp_info"></a> Configurar la suplantación  
  El lugar y en qué contexto existe un modelo determina cómo se configura la información de suplantación. Al crear un nuevo proyecto de modelo, la suplantación se configura en SQL Server Data Tools (SSDT) cuando se conecta a un origen de datos para importar datos. Una vez implementado un modelo, suplantación puede configurarse en la propiedad de cadena de conexión de base de datos de modelo mediante el uso de SQL Server Management Studio (SSMS). Para los modelos tabulares en Analysis Services de Azure, puede usar SSMS o **ver como: Script** modo en el diseñador basado en navegador para editar el archivo Model.bim en JSON.
@@ -90,6 +89,6 @@ Cuando se importan o procesan datos, las credenciales de suplantación se usan p
 ## <a name="see-also"></a>Vea también  
  [Modo DirectQuery](../../analysis-services/tabular-models/directquery-mode-ssas-tabular.md)   
  [Orígenes de datos](../../analysis-services/tabular-models/data-sources-ssas-tabular.md)   
- [Implementación de la solución de modelo tabular](../../analysis-services/tabular-models/tabular-model-solution-deployment-ssas-tabular.md)  
+ [Implementación de soluciones de modelos tabulares](../../analysis-services/tabular-models/tabular-model-solution-deployment-ssas-tabular.md)  
   
   

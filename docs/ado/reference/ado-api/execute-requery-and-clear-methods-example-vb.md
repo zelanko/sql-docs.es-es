@@ -23,12 +23,11 @@ caps.latest.revision: 10
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.workload: On Demand
-ms.openlocfilehash: b35a5d1428876c92472908218be87f2e03b7ad02
-ms.sourcegitcommit: bb044a48a6af9b9d8edb178dc8c8bd5658b9ff68
-ms.translationtype: MT
+ms.openlocfilehash: 1a22504ba72fdebb0d806530122e09a79dbfcd14
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/18/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="execute-requery-and-clear-methods-example-vb"></a>Execute, Requery y Clear ejemplo de los métodos (VB)
 Este ejemplo se muestra la **Execute** método cuando se ejecuta desde una [comando](../../../ado/reference/ado-api/command-object-ado.md) objeto y un [conexión](../../../ado/reference/ado-api/connection-object-ado.md) objeto. También usa el [Requery](../../../ado/reference/ado-api/requery-method.md) método para recuperar los datos actuales en un [Recordset](../../../ado/reference/ado-api/recordset-object-ado.md)y el [borrar](../../../ado/reference/ado-api/clear-method-ado.md) método para borrar el contenido de la [errores](../../../ado/reference/ado-api/errors-collection-ado.md)colección. (El **errores** es acceso a la colección a través de la **conexión** objeto de la [ActiveConnection](../../../ado/reference/ado-api/activeconnection-property-ado.md) propiedad de la [Recordset](../../../ado/reference/ado-api/recordset-object-ado.md).) Los procedimientos de ExecuteCommand y PrintOutput son necesarios ejecutar este procedimiento.  

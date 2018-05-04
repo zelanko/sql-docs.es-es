@@ -20,12 +20,11 @@ caps.latest.revision: 27
 author: Minewiskan
 ms.author: owend
 manager: erikre
-ms.workload: Inactive
-ms.openlocfilehash: 9c729af732238916a2cb88795fb94d0729ce9f85
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
-ms.translationtype: MT
+ms.openlocfilehash: 1486ab5907a9c3b738bc9ab23e8154e696766f16
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="unary-operators"></a>Operadores unarios
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
@@ -55,6 +54,6 @@ WHERE [Product].[Category].[Bikes]
  Además, MDX utiliza operadores unarios especiales para determinar la operación de agregación realizada por el [RollupChildren](../mdx/rollupchildren-mdx.md) función. Para obtener más información sobre estos operadores unarios especiales, consulte [agregar una agregación personalizada a una dimensión](../analysis-services/multidimensional-models/bi-wizard-add-a-custom-aggregation-to-a-dimension.md).  
   
 ## <a name="see-also"></a>Vea también  
- [Operadores &#40; La sintaxis de MDX &#41;](../mdx/operators-mdx-syntax.md)  
+ [Operadores &#40;sintaxis MDX&#41;](../mdx/operators-mdx-syntax.md)  
   
   

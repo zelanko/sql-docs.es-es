@@ -23,12 +23,11 @@ caps.latest.revision: 10
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: f8377a1fc877856de2ee9fcb97f1cd2e3e23ff14
-ms.sourcegitcommit: bb044a48a6af9b9d8edb178dc8c8bd5658b9ff68
-ms.translationtype: MT
+ms.openlocfilehash: 91216e314108febc7231c16235c02bb723b875b8
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/18/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="eos-and-lineseparator-properties-and-skipline-method-example-vb"></a>Sobrecargas eléctricas y en Propiedades de separador de línea de ejemplo del método SkipLine (VB)
 Este ejemplo muestra cómo manipular una línea de secuencias de texto a la vez. El efecto de cambiar el separador de línea desde el valor predeterminado de carro o salto de línea (**adCRLF**) a simplemente avance de línea (**adLF**) o un retorno de carro (**adCR**) se muestra.  

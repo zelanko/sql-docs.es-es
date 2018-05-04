@@ -21,12 +21,11 @@ caps.latest.revision: 11
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: 66fea01b5eb89fcfce0f1a5bb8daff233d423ca7
-ms.sourcegitcommit: bb044a48a6af9b9d8edb178dc8c8bd5658b9ff68
-ms.translationtype: MT
+ms.openlocfilehash: 75e740d923c061352afb4f3456f1080930c2b46d
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/18/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="sort-property-example-vc"></a>Ejemplo de la propiedad de ordenación (VC ++)
 Este ejemplo se utiliza el [Recordset](../../../ado/reference/ado-api/recordset-object-ado.md) del objeto [ordenación](../../../ado/reference/ado-api/sort-property.md) propiedad para volver a ordenar las filas de un **Recordset** derivado de la ***autores*** tabla de el **Pubs** base de datos. Una rutina de la utilidad secundaria imprime cada fila.  

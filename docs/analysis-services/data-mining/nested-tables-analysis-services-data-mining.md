@@ -1,35 +1,34 @@
 ---
-title: "Tablas anidadas (Analysis Services: minería de datos) | Documentos de Microsoft"
-ms.custom: 
+title: 'Tablas anidadas (Analysis Services: minería de datos) | Documentos de Microsoft'
+ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: analysis-services
 ms.prod_service: analysis-services
-ms.service: 
+ms.service: ''
 ms.component: data-mining
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: pro-bi
-ms.technology: 
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.technology: ''
+ms.tgt_pltfrm: ''
+ms.topic: conceptual
 helpviewer_keywords:
 - data mining [Analysis Services], nested tables
 - tables [Analysis Services], nested
 - nested tables
 ms.assetid: cb192aa2-597e-4d4f-ac34-3556d037fed4
-caps.latest.revision: 
+caps.latest.revision: 52
 author: Minewiskan
 ms.author: owend
 manager: kfile
-ms.workload: Inactive
-ms.openlocfilehash: 945ded7d4323d509f20fec89574fcfff98654a1b
-ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
-ms.translationtype: MT
+ms.openlocfilehash: 77fcd3ecc7060863791875cc0e75c007f5829b81
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/15/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="nested-tables-analysis-services---data-mining"></a>Tablas anidadas (Analysis Services - Minería de datos)
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
-En [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)], los datos se deben incluir en un algoritmo de minería de datos como una serie de casos contenidos dentro de una tabla de casos. Sin embargo, no todos los casos pueden describirse mediante una sola fila de datos. Por ejemplo, un caso puede derivarse de dos tablas: una que contenga la información del cliente y otra que contenga las compras de ese cliente. Un solo cliente de la tabla de información de clientes podría tener varios elementos en la tabla de compras del cliente, lo que dificulta describir los datos mediante una sola fila. [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]Proporciona un método único para tratar estos casos, mediante *tablas anidadas*. El concepto de una tabla anidada se muestra en la siguiente ilustración.  
+  En [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)], los datos se deben incluir en un algoritmo de minería de datos como una serie de casos contenidos dentro de una tabla de casos. Sin embargo, no todos los casos pueden describirse mediante una sola fila de datos. Por ejemplo, un caso puede derivarse de dos tablas: una que contenga la información del cliente y otra que contenga las compras de ese cliente. Un solo cliente de la tabla de información de clientes podría tener varios elementos en la tabla de compras del cliente, lo que dificulta describir los datos mediante una sola fila. [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]Proporciona un método único para tratar estos casos, mediante *tablas anidadas*. El concepto de una tabla anidada se muestra en la siguiente ilustración.  
   
  ![Dos tablas se combinan mediante una tabla anidada](../../analysis-services/data-mining/media/nested-tables.gif "dos tablas se combinan mediante una tabla anidada")  
   
@@ -73,7 +72,7 @@ En [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnover
  Para obtener más información sobre cómo crear y usar filtros de modelos, vea [Filtros para modelos de minería &#40;Analysis Services - Minería de datos&#41;](../../analysis-services/data-mining/filters-for-mining-models-analysis-services-data-mining.md).  
   
 ## <a name="see-also"></a>Vea también  
- [Algoritmos de minería de datos &#40; Analysis Services: minería de datos &#41;](../../analysis-services/data-mining/data-mining-algorithms-analysis-services-data-mining.md)   
- [Estructuras de minería de datos &#40; Analysis Services: minería de datos &#41;](../../analysis-services/data-mining/mining-structures-analysis-services-data-mining.md)  
+ [Algoritmos de minería de datos & #40; Analysis Services: minería de datos & #41;](../../analysis-services/data-mining/data-mining-algorithms-analysis-services-data-mining.md)   
+ [Estructuras de minería de datos & #40; Analysis Services: minería de datos & #41;](../../analysis-services/data-mining/mining-structures-analysis-services-data-mining.md)  
   
   

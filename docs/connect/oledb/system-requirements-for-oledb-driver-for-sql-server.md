@@ -21,12 +21,11 @@ helpviewer_keywords:
 author: pmasl
 ms.author: Pedro.Lopes
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: 6c465001d1e09ac229b0dc8cfd16124df3143e3d
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
+ms.openlocfilehash: 346e5d331e9d96f23d1dd0ff2b93722b145bf3d2
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="system-requirements-for-ole-db-driver-for-sql-server"></a>Requisitos del sistema para el controlador OLE DB para SQL Server
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -73,16 +72,16 @@ ms.lasthandoff: 04/16/2018
 
 |Tipo de datos|SQL Server Native Client<br /><br />SQL Server 2005|SQL Server Native Client 11.0<br /><br /> [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)]|Controlador OLE DB para SQL Server|Windows Data Access Components, MDAC y<br /><br /> Controlador de OLE DB para las aplicaciones de OLE DB de SQL Server con DataTypeCompatibility = 80|  
 |---------------|--------------------------------------------------|-------------------------------------------------------------|-------------------------------------------------------------|-------------------------------------------------------------------------------------------------------------------------------|  
-|UDT de CLR (\<= 8 Kb)|udt|Udt|Udt|Varbinary|  
+|UDT de CLR (\<= 8 Kb)|udt|udt|udt|Varbinary|  
 |varbinary(max)|varbinary|varbinary|varbinary|imagen|  
 |ntext|varchar|varchar|varchar|Texto|  
 |nvarchar(max)|nvarchar|nvarchar|nvarchar|Ntext|  
 |xml|xml|xml|xml|Ntext|  
-|CLR UDT (> 8Kb)|udt|varbinary|varbinary|imagen|  
-|date|date|varchar|varchar|Varchar|  
-|datetime2|datetime2|varchar|varchar|Varchar|  
-|datetimeoffset|datetimeoffset|varchar|varchar|Varchar|  
-|time|time|varchar|varchar|Varchar|  
+|CLR UDT (> 8Kb)|varbinary|udt|udt|imagen|  
+|date|varchar|date|date|Varchar|  
+|datetime2|varchar|datetime2|datetime2|Varchar|  
+|datetimeoffset|varchar|datetimeoffset|datetimeoffset|Varchar|  
+|time|varchar|time|time|Varchar|  
 
 ## <a name="see-also"></a>Vea también  
  [Controlador OLE DB para SQL Server](../oledb/oledb-driver-for-sql-server.md)   

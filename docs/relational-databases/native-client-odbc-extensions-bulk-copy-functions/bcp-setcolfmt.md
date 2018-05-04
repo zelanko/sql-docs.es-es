@@ -24,13 +24,12 @@ caps.latest.revision: 36
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.workload: Inactive
 monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
-ms.openlocfilehash: 874c1231997c04069c2f508f5a7529a8950eb261
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
-ms.translationtype: MT
+ms.openlocfilehash: 05f4dd6bdc14ba12c57420fbd3b689f644123178
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="bcpsetcolfmt"></a>bcp_setcolfmt
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -105,7 +104,7 @@ RETCODE bcp_setcolfmt (
   
 -   La longitud de la secuencia de bytes de terminación opcional.  
   
- Cada llamada a **bcp_setcolfmt** especifica el formato de una columna de archivo de usuario. Por ejemplo, para cambiar la configuración predeterminada de tres columnas en un archivo de datos de usuario de cinco columnas, primero llame a [bcp_columns](../../relational-databases/native-client-odbc-extensions-bulk-copy-functions/bcp-columns.md)**(5)**y, a continuación, llame a **bcp_setcolfmt** cinco veces, con tres de esas llamadas establezca el formato personalizado. Para las dos llamadas restantes, establezca BCP_FMT_TYPE en 0 y establezca respectivamente BCP_FMT_INDICATOR_LENGTH, BCP_FMT_DATA_LEN y *cbValue* en 0, SQL_VARLEN_DATA y 0. Este procedimiento copia las cinco columnas, tres con el formato personalizado y dos con el formato predeterminado.  
+ Cada llamada a **bcp_setcolfmt** especifica el formato de una columna de archivo de usuario. Por ejemplo, para cambiar la configuración predeterminada de tres columnas en un archivo de datos de usuario de cinco columnas, primero llame a [bcp_columns](../../relational-databases/native-client-odbc-extensions-bulk-copy-functions/bcp-columns.md)**(5)** y, a continuación, llame a **bcp_setcolfmt** cinco veces, con tres de esas llamadas establezca el formato personalizado. Para las dos llamadas restantes, establezca BCP_FMT_TYPE en 0 y establezca respectivamente BCP_FMT_INDICATOR_LENGTH, BCP_FMT_DATA_LEN y *cbValue* en 0, SQL_VARLEN_DATA y 0. Este procedimiento copia las cinco columnas, tres con el formato personalizado y dos con el formato predeterminado.  
   
  Se debe llamar a la función **bcp_columns** antes de llamar a **bcp_setcolfmt**.  
   

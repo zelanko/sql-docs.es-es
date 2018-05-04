@@ -11,7 +11,7 @@ ms.suite: sql
 ms.technology:
 - drivers
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - CREATE TABLE [ODBC]
 ms.assetid: be2143ba-fc16-42c9-84f7-8985cd924860
@@ -19,12 +19,11 @@ caps.latest.revision: 5
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: b0e3fa9e8bfd3385988435670e9714f48ef44164
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
-ms.translationtype: MT
+ms.openlocfilehash: d9a5156a3de623b34976fbc0422bb82f67692c1e
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="create-table---sql-command"></a>Crear tabla - comando SQL
 Crea una tabla que tiene los campos especificados.  
@@ -127,7 +126,7 @@ CREATE TABLE mytable (char1 C(10), char2 C(10) NOCPTRANS,;
  Una tabla puede tener varios índices candidatos.  
   
  CLAVE externa *eExpression4*etiqueta *TagName4*[NODUP]  
- Crea un índice (no principal) externo y establece una relación a una tabla primaria. *eExpression4* especifica la expresión de clave de índice externa, y *TagName4* especifica el nombre de la etiqueta de clave de índice externa que se crea*.* Los nombres de etiqueta de índice pueden contener hasta 10 caracteres. Incluir NODUP para crear un índice externa del candidato.  
+ Crea un índice (no principal) externo y establece una relación a una tabla primaria. *eExpression4* especifica la expresión de clave de índice externa, y *TagName4* especifica el nombre de la etiqueta de clave de índice externa que se crea *.* Los nombres de etiqueta de índice pueden contener hasta 10 caracteres. Incluir NODUP para crear un índice externa del candidato.  
   
  Puede crear varios índices externos para la tabla, pero las expresiones de índice externa deben especificar distintos campos en la tabla.  
   

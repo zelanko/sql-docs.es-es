@@ -24,12 +24,11 @@ caps.latest.revision: 9
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: 8461d1d883bde3315a11861b9951c477c797ce93
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
-ms.translationtype: MT
+ms.openlocfilehash: e56a51063d97ae2f5ac2c528f594c11938b18310
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="spsyspolicyupdatepolicycategorysubscription-transact-sql"></a>sp_syspolicy_update_policy_category_subscription (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -52,15 +51,15 @@ sp_syspolicy_update_policy_category_subscription [ @policy_category_subscription
  [  **@policy_category_subscription_id=** ] *policy_category_subscription_id*  
  Es el identificador de la suscripción de categoría de directiva que desea actualizar. *policy_category_subscription_id* es **int**y es necesario.  
   
- [  **@target_type=** ] **'**tipo_de_destino**'**  
+ [  **@target_type=** ] **'** tipo_de_destino **'**  
  Es el tipo de destino de la suscripción de categoría. *target_type* es **sysname**, su valor predeterminado es null.  
   
  Si especifica *tipo_de_destino*, el valor debe establecerse en 'DATABASE'.  
   
- [  **@target_object=** ] **'**objeto_de_destino**'**  
+ [  **@target_object=** ] **'** objeto_de_destino **'**  
  Es el nombre de la base de datos que se suscribirá a la categoría de directiva. *objeto_de_destino* es **sysname**, su valor predeterminado es null.  
   
- [  **@policy_category=** ] **'**categoría_de_directiva**'**  
+ [  **@policy_category=** ] **'** categoría_de_directiva **'**  
  Es el nombre de la categoría de directiva a la que desea que la base de datos se suscriba. *categoría_de_directiva* es **sysname**, su valor predeterminado es null.  
   
 ## <a name="return-code-values"></a>Valores de código de retorno  

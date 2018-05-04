@@ -11,7 +11,7 @@ ms.suite: sql
 ms.technology:
 - drivers
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - keyset-driven cursors [ODBC]
 - cursors [ODBC], key-set driven
@@ -20,12 +20,11 @@ caps.latest.revision: 5
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: acc3a757493c935d5b37c278eb77b9b849f85873
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
-ms.translationtype: MT
+ms.openlocfilehash: 7cee7f0ef9f0956c72287e3ed6e4e51d4ef6e739
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="keyset-driven-cursors"></a>Cursores controlados por conjunto de claves
 Un cursor controlado por conjunto de claves está comprendida entre una variable static y un cursor dinámico en su capacidad para detectar los cambios. Al igual que un cursor estático, no siempre detecta cambios en la pertenencia y el orden del conjunto de resultados. Al igual que un cursor dinámico, que detectar cambios en los valores de filas del conjunto de resultados (de acuerdo con el nivel de aislamiento de la transacción, según lo establecido por el atributo de conexión SQL_ATTR_TXN_ISOLATION).  

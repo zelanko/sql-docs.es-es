@@ -24,12 +24,11 @@ caps.latest.revision: 44
 author: edmacauley
 ms.author: edmaca
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: 094b4cb386292ab6f0c42623d8e350a8e80f1344
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
-ms.translationtype: MT
+ms.openlocfilehash: 5395526f13a4f9b36e9a57404c2c2c03a04c766e
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="spaddmergepullsubscription-transact-sql"></a>sp_addmergepullsubscription (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -62,7 +61,7 @@ sp_addmergepullsubscription [ @publication= ] 'publication'
  Es el nombre de la base de datos del publicador. *publisher_db* es **sysname**, su valor predeterminado es null.  
   
  [  **@subscriber_type=**] **'***subscriber_type***'**  
- Es el tipo de suscriptor. *propiedad subscriber_type* es **nvarchar (15)**y puede ser **global**, **local** o **anónimo**. En [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] y versiones posteriores, las suscripciones locales se conocen como las suscripciones de cliente y suscripciones globales se conocen como suscripciones de servidor.  
+ Es el tipo de suscriptor. *propiedad subscriber_type* es **nvarchar (15)** y puede ser **global**, **local** o **anónimo**. En [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] y versiones posteriores, las suscripciones locales se conocen como las suscripciones de cliente y suscripciones globales se conocen como suscripciones de servidor.  
   
  [  **@subscription_priority=**] *subscription_priority*  
  Es la prioridad de la suscripción. *subscription_priority*es **real**, su valor predeterminado es null. Para las suscripciones locales y anónimas, la prioridad es **0,0**. La prioridad la utiliza el solucionador predeterminado para elegir un ganador cuando se detectan conflictos. Para los suscriptores globales, la prioridad de la suscripción debe ser menor que 100, que es la prioridad del publicador.  

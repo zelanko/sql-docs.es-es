@@ -1,31 +1,30 @@
 ---
 title: Tablas y columnas | Documentos de Microsoft
-ms.custom: 
+ms.custom: ''
 ms.date: 03/01/2017
 ms.prod: analysis-services
 ms.prod_service: analysis-services, azure-analysis-services
-ms.service: 
+ms.service: ''
 ms.component: data-mining
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: pro-bi
-ms.technology: 
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.technology: ''
+ms.tgt_pltfrm: ''
+ms.topic: conceptual
 ms.assetid: c428d717-05de-436c-b9dc-e8c1925a60ca
-caps.latest.revision: 
+caps.latest.revision: 13
 author: Minewiskan
 ms.author: owend
 manager: kfile
-ms.workload: Inactive
-ms.openlocfilehash: 19f955231a5a68cc52ae9c867d0ea64f9c3daddf
-ms.sourcegitcommit: d8ab09ad99e9ec30875076acee2ed303d61049b7
-ms.translationtype: MT
+ms.openlocfilehash: b2e0343a01974610ad09a3868bea5a1a20a75bd6
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/23/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="tables-and-columns"></a>Tablas y columnas 
 [!INCLUDE[ssas-appliesto-sqlas-aas](../../includes/ssas-appliesto-sqlas-aas.md)]
-Después de haber agregado tablas y datos a un modelo mediante el Asistente para la importación de tablas, puede empezar a trabajar con las tablas agregando nuevas columnas de datos, creando relaciones entre las tablas, definiendo cálculos que amplían los datos y filtrando y ordenando datos en las tablas para facilitar su visualización.  
+  Después de haber agregado tablas y datos a un modelo mediante el Asistente para la importación de tablas, puede empezar a trabajar con las tablas agregando nuevas columnas de datos, creando relaciones entre las tablas, definiendo cálculos que amplían los datos y filtrando y ordenando datos en las tablas para facilitar su visualización.  
   
  Secciones de este tema:  
   
@@ -69,12 +68,12 @@ Después de haber agregado tablas y datos a un modelo mediante el Asistente para
 |[Agregar columnas a una tabla](../../analysis-services/tabular-models/add-columns-to-a-table-ssas-tabular.md)|Describe cómo agregar una columna de origen a una definición de tabla.|  
 |[Eliminar una columna](../../analysis-services/tabular-models/delete-a-column-ssas-tabular.md)|Describe cómo eliminar una columna de la tabla modelo mediante el diseñador de modelos o mediante el cuadro de diálogo Propiedades de la tabla.|  
 |[Cambiar las asignaciones de filtros de tabla, columna o fila](../../analysis-services/tabular-models/change-table-column-or-row-filter-mappings-ssas-tabular.md)|Describe cómo cambiar las asignaciones de filtros de tabla, columna o fila mediante la vista previa de tabla o el Editor de consultas de SQL en el cuadro de diálogo Editar propiedades de tabla.|  
-|[Especificar marcar como tabla de fechas para su uso con inteligencia de tiempo](../../analysis-services/tabular-models/specify-mark-as-date-table-for-use-with-time-intelligence-ssas-tabular.md)|Describe cómo se usa el cuadro de diálogo Marcar como tabla de fechas para especificar una tabla de fechas y una columna de identificador único. Es necesario especificar una tabla de fechas y un identificador único de fecha cuando se utilizan funciones de inteligencia de tiempo en fórmulas DAX.|  
+|[Especificar Marcar como tabla de fechas con inteligencia de tiempo](../../analysis-services/tabular-models/specify-mark-as-date-table-for-use-with-time-intelligence-ssas-tabular.md)|Describe cómo se usa el cuadro de diálogo Marcar como tabla de fechas para especificar una tabla de fechas y una columna de identificador único. Es necesario especificar una tabla de fechas y un identificador único de fecha cuando se utilizan funciones de inteligencia de tiempo en fórmulas DAX.|  
 |[Agregar una tabla](../../analysis-services/tabular-models/add-a-table-ssas-tabular.md)|Describe cómo se agrega una tabla desde un origen de datos utilizando una conexión de origen de datos existente.|  
 |[Eliminar una tabla](../../analysis-services/tabular-models/delete-a-table-ssas-tabular.md)|Describe cómo eliminar tablas que ya no necesita de la base de datos del área de trabajo del modelo.|  
 |[Cambiar el nombre de una tabla o una columna](../../analysis-services/tabular-models/rename-a-table-or-column-ssas-tabular.md)|Describe cómo cambiar el nombre de una tabla o una columna para que sea más identificable en el modelo.|  
 |[Establecer el tipo de datos de una columna](../../analysis-services/tabular-models/set-the-data-type-of-a-column-ssas-tabular.md)|Describe cómo modificar el tipo de datos de una columna. El tipo de datos define cómo se almacenan y presentan los datos de la columna.|  
-|[Ocultar o Inmovilizar columnas](../../analysis-services/tabular-models/hide-or-freeze-columns-ssas-tabular.md)|Describe cómo ocultar columnas que no desea mostrar y cómo mantener visible un área de un modelo mientras se desplaza a otra área del modelo inmovilizando (bloqueando) columnas específicas en un área.|  
+|[Ocultar o inmovilizar columnas](../../analysis-services/tabular-models/hide-or-freeze-columns-ssas-tabular.md)|Describe cómo ocultar columnas que no desea mostrar y cómo mantener visible un área de un modelo mientras se desplaza a otra área del modelo inmovilizando (bloqueando) columnas específicas en un área.|  
 |[Columnas calculadas](../../analysis-services/tabular-models/ssas-calculated-columns.md)|En los temas de esta sección se describe cómo usar las columnas calculadas para incorporar datos agregados al modelo.|  
 |[Filtrar y ordenar datos](http://msdn.microsoft.com/library/55ebd7a6-2458-4398-911f-fcfeb2413f1b)|En los temas de esta sección se describe cómo filtrar u ordenar los datos usando los controles del diseñador de modelos.|  
   

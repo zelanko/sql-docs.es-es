@@ -20,12 +20,11 @@ caps.latest.revision: 10
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: f8049c588ff230a5f9339bb932af10e9f9fe65eb
-ms.sourcegitcommit: bb044a48a6af9b9d8edb178dc8c8bd5658b9ff68
-ms.translationtype: MT
+ms.openlocfilehash: 1be33acf3bc63fdf355e794c416843386041b397
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/18/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="internet-information-services-error-codes-for-remote-data-service"></a>Códigos de Error de Internet Information Services para el servicio de datos remotos
 En la tabla siguiente se enumera los códigos de error de Microsoft® Internet Information Services (IIS) relacionados con el uso del servicio de datos remoto. La conversión decimal positiva de los dos bytes bajos, la traducción decimal negativa del código de error completo y los valores hexadecimales se muestran.

@@ -17,12 +17,11 @@ caps.latest.revision: 10
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: afa2d41ee415797942cc47a4bda8f402b38b5938
-ms.sourcegitcommit: bb044a48a6af9b9d8edb178dc8c8bd5658b9ff68
-ms.translationtype: MT
+ms.openlocfilehash: aa42dfa27b906526c608077cf5cc1807943355f6
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/18/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="ado-extensions-for-data-definition-language-and-security-adox"></a>Extensiones de ADO para lenguaje de definición de datos y seguridad (ADOX)
 Esta sección contiene los temas siguientes.  

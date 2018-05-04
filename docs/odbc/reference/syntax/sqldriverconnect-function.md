@@ -11,7 +11,7 @@ ms.suite: sql
 ms.technology:
 - drivers
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 apiname:
 - SQLDriverConnect
 apilocation:
@@ -26,12 +26,11 @@ caps.latest.revision: 50
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.workload: On Demand
-ms.openlocfilehash: ab13d8ad4f2bf16cd7b7c0dc8d352363bb89a5b7
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
-ms.translationtype: MT
+ms.openlocfilehash: 367a265c33f3c4520b4885524627fca4261829a4
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="sqldriverconnect-function"></a>Función SQLDriverConnect
 **Conformidad**  
@@ -163,11 +162,11 @@ SQLRETURN SQLDriverConnect(
   
  donde *cadena de caracteres* tiene cero o más caracteres; *identificador* tiene uno o más caracteres; *palabra clave de atributo* no distingue mayúsculas de minúsculas; *atributo-valor* puede distinguir mayúsculas de minúsculas; y el valor de la **DSN** palabra clave no contener solamente espacios en blanco.  
   
- ¿Debido a la cadena e inicialización archivo gramática, palabras clave y atributo de valores de conexión que contienen los caracteres **[] {} (),? \*=! @** no se incluye con llaves deberían evitarse. El valor de la **DSN** palabra clave no puede constar únicamente de espacios en blanco y no debe contener espacios en blanco iniciales. Debido a la gramática de la información del sistema, los nombres de origen de datos y palabras clave no pueden contener la barra diagonal inversa (\\) caracteres.  
+ ¿Debido a la cadena e inicialización archivo gramática, palabras clave y atributo de valores de conexión que contienen los caracteres **[]{}(),? \*=! @** no se incluye con llaves deberían evitarse. El valor de la **DSN** palabra clave no puede constar únicamente de espacios en blanco y no debe contener espacios en blanco iniciales. Debido a la gramática de la información del sistema, los nombres de origen de datos y palabras clave no pueden contener la barra diagonal inversa (\\) caracteres.  
   
  Las aplicaciones no tienen que agregar llaves alrededor del valor de atributo después de la **controlador** palabra clave a menos que el atributo contiene un punto y coma (;), en cuyo caso las llaves son obligatorias. Si el valor del atributo que recibe el controlador incluye llaves, el controlador no debe quitarlos, pero deben ser parte de la cadena de conexión devuelta.  
   
- ¿Un valor de cadena de conexión o DSN entre llaves ({}) que contiene los caracteres **[] {} (),? \*=! @** se pasa intacto al controlador. Sin embargo, al utilizar estos caracteres en una palabra clave, el Administrador de controladores devuelve un error cuando se trabaja con DSN de archivo, pero pasa la cadena de conexión para el controlador para las cadenas de conexión normal. Evite el uso de llaves incrustadas en un valor de palabra clave.  
+ ¿Un valor de cadena de conexión o DSN entre llaves ({}) que contiene los caracteres **[]{}(),? \*=! @** se pasa intacto al controlador. Sin embargo, al utilizar estos caracteres en una palabra clave, el Administrador de controladores devuelve un error cuando se trabaja con DSN de archivo, pero pasa la cadena de conexión para el controlador para las cadenas de conexión normal. Evite el uso de llaves incrustadas en un valor de palabra clave.  
   
  La cadena de conexión puede incluir cualquier número de palabras clave definidas por el controlador. Dado que la **controlador** palabra clave no utiliza información de la información del sistema, el controlador debe definir suficientes palabras clave para que un controlador puede conectarse a un origen de datos utilizando únicamente la información de la cadena de conexión. (Para obtener más información, vea "Instrucciones de controlador", más adelante en esta sección). El controlador define qué palabras clave se necesitan para conectarse al origen de datos.  
   

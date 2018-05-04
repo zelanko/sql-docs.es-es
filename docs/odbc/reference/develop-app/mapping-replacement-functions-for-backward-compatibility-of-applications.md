@@ -11,7 +11,7 @@ ms.suite: sql
 ms.technology:
 - drivers
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - mapping replacement functions [ODBC]
 - upgrading applications [ODBC], mapping replacement functions
@@ -25,15 +25,14 @@ caps.latest.revision: 7
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: 400f1fd18788f361b3eada813a414077e62de1e1
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
-ms.translationtype: MT
+ms.openlocfilehash: 0283ca10e19e1a75e5a3d497c33ab57866b3b27e
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="mapping-replacement-functions-for-backward-compatibility-of-applications"></a>Asignación de funciones de reemplazo para mantener la compatibilidad de aplicaciones
-Una aplicación ODBC 3*.x* aplicación funcione a través de ODBC 3*.x* el Administrador de controladores funcionará con una API ODBC 2. *x* controlador siempre y cuando no se utilizan características nuevas. Ambos duplican la funcionalidad y cambios de comportamiento, sin embargo, ser afectan al modo en que ODBC 3. *x* aplicación funciona en una API ODBC 2. *x* controlador. Cuando se trabaja con una API ODBC 2. *x* controlador, el Administrador de controladores asigna el siguiente ODBC 3. *x* funciones, que se reemplazaron uno o más ODBC 2. *x* funciones, en la correspondiente API ODBC 2. *x* funciones.  
+Una aplicación ODBC 3 *.x* aplicación funcione a través de ODBC 3 *.x* el Administrador de controladores funcionará con una API ODBC 2. *x* controlador siempre y cuando no se utilizan características nuevas. Ambos duplican la funcionalidad y cambios de comportamiento, sin embargo, ser afectan al modo en que ODBC 3. *x* aplicación funciona en una API ODBC 2. *x* controlador. Cuando se trabaja con una API ODBC 2. *x* controlador, el Administrador de controladores asigna el siguiente ODBC 3. *x* funciones, que se reemplazaron uno o más ODBC 2. *x* funciones, en la correspondiente API ODBC 2. *x* funciones.  
   
 |ODBC 3. *x* (función)|ODBC 2. *x* (función)|  
 |-------------------------|-------------------------|  
@@ -108,7 +107,7 @@ SQLColAttribute(StatementHandle, ColumnNumber, FieldIdentifier, CharacterAttribu
   
      el Administrador de controladores devuelve SQL_ERROR con SQLSTATE HY091 (identificador de campo descriptor no válido). Ninguna otra regla de esta sección se aplica.  
   
-2.  El Administrador de controladores asigna SQL_COLUMN_COUNT, SQL_COLUMN_NAME o SQL_COLUMN_NULLABLE SQL_DESC_COUNT, SQL_DESC_NAME o SQL_DESC_NULLABLE, respectivamente. (Un ODBC 2*.x* controlador sólo necesita admitir SQL_COLUMN_COUNT, SQL_COLUMN_NAME, SQL_COLUMN_NULLABLE, SQL_DESC_COUNT, SQL_DESC_NAME y no SQL_DESC_NULLABLE.) La llamada a SQLColAttribute se asigna a:  
+2.  El Administrador de controladores asigna SQL_COLUMN_COUNT, SQL_COLUMN_NAME o SQL_COLUMN_NULLABLE SQL_DESC_COUNT, SQL_DESC_NAME o SQL_DESC_NULLABLE, respectivamente. (Un ODBC 2 *.x* controlador sólo necesita admitir SQL_COLUMN_COUNT, SQL_COLUMN_NAME, SQL_COLUMN_NULLABLE, SQL_DESC_COUNT, SQL_DESC_NAME y no SQL_DESC_NULLABLE.) La llamada a SQLColAttribute se asigna a:  
   
     ```  
     SQLColAttributes(StatementHandle, ColumnNumber, FieldIdentifier, CharacterAttributePtr, BufferLength, StringLengthPtr, NumericAttributePtr);  
@@ -240,7 +239,7 @@ SQLGetConnectAttr(ConnectionHandle, Attribute, ValuePtr, BufferLength, StringLen
      Tenga en cuenta que la *BufferLength* y *StringLengthPtr* se omiten.  
   
 ## <a name="sqlgetdata"></a>SQLGetData  
- Cuando un ODBC 3. *x* aplicación trabajar con una API ODBC 2*.x* controlador llama **SQLGetData** con el *ColumnNumber* argumento igual a 0, el 3 de ODBC*.x* el Administrador de controladores se asigna a una llamada a **SQLGetStmtOption** con el *opción* atributo establecido en SQL_GET_BOOKMARK.  
+ Cuando un ODBC 3. *x* aplicación trabajar con una API ODBC 2 *.x* controlador llama **SQLGetData** con el *ColumnNumber* argumento igual a 0, el 3 de ODBC *.x* el Administrador de controladores se asigna a una llamada a **SQLGetStmtOption** con el *opción* atributo establecido en SQL_GET_BOOKMARK.  
   
 ## <a name="sqlgetstmtattr"></a>SQLGetStmtAttr  
  El Administrador de controladores se asigna a **SQLGetStmtOption**. La siguiente llamada a **SQLGetStmtAttr**:  
@@ -410,15 +409,15 @@ SQLParamOptions (StatementHandle, Size, &RowCount);
 ## <a name="error-handling"></a>Tratamiento de errores  
  En ODBC 3. *x*, si se llama **SQLFetch** o **SQLFetchScroll** rellena el SQL_DESC_ARRAY_STATUS_PTR en IRD y el campo SQL_DIAG_ROW_NUMBER de un determinado registro de diagnóstico contiene el número de la fila del conjunto de filas que pertenece este registro a. Con esto, la aplicación puede correlacionar un mensaje de error con una posición de fila determinada.  
   
- Un ODBC 2. *x* controlador no podrá proporcionar esta funcionalidad. Sin embargo, proporcionará demarcación de error con SQLSTATE 01S01 (Error en la fila). Un ODBC 3. *x* aplicación que esté utilizando **SQLFetch** o **SQLFetchScroll** al ir en una API ODBC 2. *x* controlador debe tener en cuenta este hecho. Tenga en cuenta también que este tipo de aplicación se podrá llamar a **SQLGetDiagField** realmente obtener el campo SQL_DIAG_ROW_NUMBER de todos modos. Un ODBC 3. *x* aplicación trabajar con una API ODBC 2. *x* controlador podrá llamar a **SQLGetDiagField** sólo con una *DiagIdentifier* argumento de SQL_DIAG_MESSAGE_TEXT, SQL_DIAG_NATIVE, SQL_DIAG_RETURNCODE o SQL_DIAG_ SQLSTATE. ODBC 3*.x* el Administrador de controladores mantiene la estructura de datos de diagnóstico cuando se trabaja con una API ODBC 2. *x* controlador, pero la API ODBC 2. *x* controlador devuelve solo estos cuatro campos.  
+ Un ODBC 2. *x* controlador no podrá proporcionar esta funcionalidad. Sin embargo, proporcionará demarcación de error con SQLSTATE 01S01 (Error en la fila). Un ODBC 3. *x* aplicación que esté utilizando **SQLFetch** o **SQLFetchScroll** al ir en una API ODBC 2. *x* controlador debe tener en cuenta este hecho. Tenga en cuenta también que este tipo de aplicación se podrá llamar a **SQLGetDiagField** realmente obtener el campo SQL_DIAG_ROW_NUMBER de todos modos. Un ODBC 3. *x* aplicación trabajar con una API ODBC 2. *x* controlador podrá llamar a **SQLGetDiagField** sólo con una *DiagIdentifier* argumento de SQL_DIAG_MESSAGE_TEXT, SQL_DIAG_NATIVE, SQL_DIAG_RETURNCODE o SQL_DIAG_ SQLSTATE. ODBC 3 *.x* el Administrador de controladores mantiene la estructura de datos de diagnóstico cuando se trabaja con una API ODBC 2. *x* controlador, pero la API ODBC 2. *x* controlador devuelve solo estos cuatro campos.  
   
- Cuando un ODBC 2. *x* aplicación está trabajando con una API ODBC 2. *x* controlador, si una operación puede producir varios errores devolverá por el Administrador de controladores, errores diferentes pueden devolver ODBC 3*.x* Administrador de controladores que mediante la API ODBC 2. *x* el Administrador de controladores.  
+ Cuando un ODBC 2. *x* aplicación está trabajando con una API ODBC 2. *x* controlador, si una operación puede producir varios errores devolverá por el Administrador de controladores, errores diferentes pueden devolver ODBC 3 *.x* Administrador de controladores que mediante la API ODBC 2. *x* el Administrador de controladores.  
   
 ## <a name="mappings-for-bookmark-operations"></a>Asignaciones para las operaciones de marcador  
- ODBC 3*.x* el Administrador de controladores realiza las siguientes asignaciones cuando una aplicación ODBC 3. *x* aplicación trabajar con una API ODBC 2. *x* controlador realiza operaciones de marcador.  
+ ODBC 3 *.x* el Administrador de controladores realiza las siguientes asignaciones cuando una aplicación ODBC 3. *x* aplicación trabajar con una API ODBC 2. *x* controlador realiza operaciones de marcador.  
   
 ### <a name="sqlbindcol"></a>SQLBindCol  
- Cuando un ODBC 3. *x* aplicación trabajar con una API ODBC 2. *x* controlador llama **SQLBindCol** para enlazar a la columna 0 con *fCType* igual a SQL_C_VARBOOKMARK, ODBC 3*.x* comprueba el Administrador de controladores Si el *BufferLength* argumento es menor que 4 o mayor que 4 y si es así, devuelve SQLSTATE HY090 (longitud de búfer o cadena no válida). Si el *BufferLength* argumento es igual a 4, el Administrador de controladores llama **SQLBindCol** en el controlador, después de reemplazar *fCType* con SQL_C_BOOKMARK.  
+ Cuando un ODBC 3. *x* aplicación trabajar con una API ODBC 2. *x* controlador llama **SQLBindCol** para enlazar a la columna 0 con *fCType* igual a SQL_C_VARBOOKMARK, ODBC 3 *.x* comprueba el Administrador de controladores Si el *BufferLength* argumento es menor que 4 o mayor que 4 y si es así, devuelve SQLSTATE HY090 (longitud de búfer o cadena no válida). Si el *BufferLength* argumento es igual a 4, el Administrador de controladores llama **SQLBindCol** en el controlador, después de reemplazar *fCType* con SQL_C_BOOKMARK.  
   
 ### <a name="sqlcolattribute"></a>SQLColAttribute  
  Cuando un ODBC 3. *x* aplicación trabajar con una API ODBC 2. *x* controlador llama **SQLColAttribute** con el *ColumnNumber* argumento se establece en 0, el Administrador de controladores devuelve el *FieldIdentifier* valores se muestran en la tabla siguiente.  

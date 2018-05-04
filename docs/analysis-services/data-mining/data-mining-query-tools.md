@@ -1,39 +1,23 @@
 ---
-title: "Herramientas de consulta de minería de datos | Documentos de Microsoft"
-ms.custom: 
-ms.date: 03/02/2016
-ms.prod: analysis-services
-ms.prod_service: analysis-services
-ms.service: 
+title: Herramientas de consulta de minería de datos | Documentos de Microsoft
+ms.date: 05/01/2018
+ms.prod: sql
+ms.technology: analysis-services
 ms.component: data-mining
-ms.reviewer: 
-ms.suite: pro-bi
-ms.technology: 
-ms.tgt_pltfrm: 
 ms.topic: article
-helpviewer_keywords:
-- predictions [Analysis Services], DMX prediction queries
-- predictions [DMX]
-- DMX [Analysis Services], prediction queries
-- prediction queries [DMX]
-- predictions [Analysis Services]
-- queries [DMX], prediction queries
-- mining models [Analysis Services], DMX
-ms.assetid: a8952427-fd8c-4300-8f62-25f57ac1be0c
-caps.latest.revision: 
-author: Minewiskan
 ms.author: owend
+ms.reviewer: owend
+author: minewiskan
 manager: kfile
-ms.workload: Inactive
-ms.openlocfilehash: 71337bc66abab8e91fd997cd2cde635945b0ef82
-ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
+ms.openlocfilehash: 23aba314c819afa8eac6f62f2db70012967f842a
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/15/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="data-mining-query-tools"></a>Herramientas de consulta de minería de datos
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
-Todas las consultas de minería de datos usan el lenguaje DMX (Extensiones de minería de datos). DMX se puede usar para crear modelos para todos los tipos de tareas de aprendizaje automático, como clasificación, análisis de riesgos, generación de recomendaciones y regresión lineal. También se pueden escribir consultas DMX para obtener información sobre los patrones y estadísticas que se generen al procesar el modelo.  
+  Todas las consultas de minería de datos usan el lenguaje DMX (Extensiones de minería de datos). DMX se puede usar para crear modelos para todos los tipos de tareas de aprendizaje automático, como clasificación, análisis de riesgos, generación de recomendaciones y regresión lineal. También se pueden escribir consultas DMX para obtener información sobre los patrones y estadísticas que se generen al procesar el modelo.  
   
  Puede escribir su propia consulta DMX, o bien puede crear una consulta DMX básica con una herramienta como el **Generador de consultas de predicción** y, después, modificarla. [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] y [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] proporcionan herramientas que le ayudarán a generar las consultas de predicción DMX. En este tema se describe cómo crear y ejecutar consultas de minería de datos con estas herramientas.  
   
@@ -56,7 +40,7 @@ Todas las consultas de minería de datos usan el lenguaje DMX (Extensiones de mi
  El Editor de consultas de [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] también le permite crear y ejecutar consultas DMX. Puede conectarse a una instancia de [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]y, después, seleccionar una base de datos, columnas de estructura de minería de datos y un modelo de minería de datos. El **Explorador de metadatos** contiene una lista de funciones de predicción que puede examinar.  
   
 ##  <a name="bkmk_Templates"></a> Plantillas DMX  
- [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] proporciona plantillas de consulta DMX interactivas que puede usar para compilar consultas DMX. Si no ve la lista de plantillas, haga clic en **Ver** en la barra de herramientas y seleccione **Explorador de plantillas**. Para ver todas las plantillas de [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] , incluidas las plantillas para DMX, MDX y XMLA, haga clic en el icono de cubo.  
+ [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]proporciona plantillas de consulta DMX interactivas que puede usar para compilar consultas DMX. Si no ve la lista de plantillas, haga clic en **Ver** en la barra de herramientas y seleccione **Explorador de plantillas**. Para ver todas las plantillas de [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] , incluidas las plantillas para DMX, MDX y XMLA, haga clic en el icono de cubo.  
   
  Para compilar una consulta mediante una plantilla, puede arrastrar la plantilla a una ventana de consulta abierta, o puede hacer doble clic en la plantilla para abrir una nueva conexión y un nuevo panel de consulta.  
   
@@ -83,7 +67,7 @@ Todas las consultas de minería de datos usan el lenguaje DMX (Extensiones de mi
 -   Para recuperar el **contenido del modelo** y los **metadatos del modelo**, como el número de clústeres, los atributos usados en los árboles de decisión, la fecha en que se procesó el modelo por última vez y los parámetros del algoritmo que se usaron al crear el modelo, puede usar el método [Discover &#40;XMLA&#41;](../../analysis-services/xmla/xml-elements-methods-discover.md) y especificar uno de los conjuntos de filas del esquema de minería de datos en el encabezado del [elemento RequestType &#40;XMLA&#41;](../../analysis-services/xmla/xml-elements-properties/requesttype-element-xmla.md). Para restringir el ámbito de la consulta, escriba los criterios como restricciones en el [elemento RestrictionList &#40;XMLA&#41;](../../analysis-services/xmla/xml-elements-properties/restrictionlist-element-xmla.md).  
   
 ## <a name="see-also"></a>Vea también  
- [Extensiones de minería de datos &#40; DMX &#41; Referencia](../../dmx/data-mining-extensions-dmx-reference.md)   
+ [Extensiones de minería de datos & #40; DMX & #41; Referencia](../../dmx/data-mining-extensions-dmx-reference.md)   
  [Soluciones de minería de datos](../../analysis-services/data-mining/data-mining-solutions.md)   
  [Descripción de la instrucción Select de DMX](../../dmx/understanding-the-dmx-select-statement.md)   
  [Estructura y el uso de consultas de predicción DMX](../../dmx/structure-and-usage-of-dmx-prediction-queries.md)   

@@ -24,12 +24,11 @@ caps.latest.revision: 21
 author: edmacauley
 ms.author: edmaca
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: 3972f0bee0e172d19ddc205fc9d8aa6a314d89cf
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
-ms.translationtype: MT
+ms.openlocfilehash: d4f659af9b6ba2ea785d344311c9d7471dc25a26
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="sphelpmergeconflictrows-transact-sql"></a>sp_helpmergeconflictrows (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -54,7 +53,7 @@ sp_helpmergeconflictrows [ [ @publication = ] 'publication' ]
  Es el nombre de la publicación. *publicación* es **sysname**, su valor predeterminado es **%**. Si se especifica la publicación, se devuelven todos los conflictos calificados por la publicación. Por ejemplo, si la **MSmerge_conflict_Customers** tabla tiene filas de conflicto para el **WA** y **CA** publicaciones, pasando un nombre de publicación **entidad emisora de certificados**  recupera los conflictos que pertenecen a la **CA** publicación.  
   
  [  **@conflict_table=**] **'***conflict_table***'**  
- Es el nombre de la tabla de conflictos. *conflict_table* es **sysname**, no tiene ningún valor predeterminado. En [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] y versiones posteriores, las tablas de conflictos se denominan con los nombres de formato con **MSmerge_conflict_*publicación*_*artículo ***, con una tabla para cada alerta de publicada artículo.  
+ Es el nombre de la tabla de conflictos. *conflict_table* es **sysname**, no tiene ningún valor predeterminado. En [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] y versiones posteriores, las tablas de conflictos se denominan con los nombres de formato con **MSmerge_conflict_* publicación *_* artículo ***, con una tabla para cada alerta de publicada artículo.  
   
  [  **@publisher=**] **'***publisher***'**  
  Es el nombre del publicador. *Publisher* es **sysname**, su valor predeterminado es null.  

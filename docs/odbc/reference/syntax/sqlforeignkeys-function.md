@@ -11,7 +11,7 @@ ms.suite: sql
 ms.technology:
 - drivers
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 apiname:
 - SQLForeignKeys
 apilocation:
@@ -26,12 +26,11 @@ caps.latest.revision: 24
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: 935c3236085794ef0d9cb4acb18568c4309fd191
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
-ms.translationtype: MT
+ms.openlocfilehash: 02608a02190062b3530d27466d6ec319cf71b8f1
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="sqlforeignkeys-function"></a>Función SQLForeignKeys
 **Conformidad**  
@@ -164,9 +163,9 @@ SQLRETURN SQLForeignKeys(
   
  Las longitudes de las columnas VARCHAR no se muestran en la tabla. las longitudes reales dependen del origen de datos. Para determinar la longitud real de la PKTABLE_CAT o FKTABLE_CAT, PKTABLE_SCHEM o FKTABLE_SCHEM, PKTABLE_NAME o FKTABLE_NAME y PKCOLUMN_NAME o FKCOLUMN_NAME columnas, una aplicación puede llamar a **SQLGetInfo** con el SQL_MAX_ Opciones de CATALOG_NAME_LEN, SQL_MAX_SCHEMA_NAME_LEN, SQL_MAX_TABLE_NAME_LEN y SQL_MAX_COLUMN_NAME_LEN.  
   
- Las columnas siguientes se cambió para ODBC 3*. x.* Los cambios de nombre de columna no afectan a la compatibilidad con versiones anteriores porque las aplicaciones enlazar por número de columna.  
+ Las columnas siguientes se cambió para ODBC 3 *. x.* Los cambios de nombre de columna no afectan a la compatibilidad con versiones anteriores porque las aplicaciones enlazar por número de columna.  
   
-|Columna de ODBC 2.0|ODBC 3*.x* columna|  
+|Columna de ODBC 2.0|ODBC 3 *.x* columna|  
 |---------------------|-----------------------|  
 |PKTABLE_QUALIFIER|PKTABLE_CAT|  
 |PKTABLE_OWNER|PKTABLE_SCHEM|  
@@ -186,8 +185,8 @@ SQLRETURN SQLForeignKeys(
 |FKTABLE_NAME (ODBC 1.0)|7|Varchar no NULL|Nombre de tabla de clave externa.|  
 |FKCOLUMN_NAME (ODBC 1.0)|8|Varchar no NULL|Nombre de columna de clave externa. El controlador devuelve una cadena vacía para una columna que no tiene un nombre.|  
 |KEY_SEQ (ODBC 1.0)|9|Smallint no NULL|Número de secuencia de la columna de clave (a partir de 1).|  
-|UPDATE_RULE (ODBC 1.0)|10|Smallint|Acción que se aplicará a la clave externa cuando la operación de SQL es **actualización**. Puede tener uno de los siguientes valores. (La tabla que se hace referencia es la tabla que contiene la clave principal; la tabla de referencia es la tabla que contiene la clave externa).<br /><br /> SQL_CASCADE: Cuando se actualiza la clave principal de la tabla de referencia, también se actualiza la clave externa de la tabla de referencia.<br /><br /> SQL_NO_ACTION: Si una actualización de la clave principal de la tabla de referencia provocaría una "referencia pendiente" en la tabla de referencia (es decir, filas de la tabla de referencia no tendría ningún homólogos en la tabla de referencia), se rechaza la actualización. Si una actualización de la clave externa de la tabla de referencia introduce un valor que no existe como un valor de la clave principal de la tabla de referencia, se rechaza la actualización. (Esta acción es igual que la acción SQL_RESTRICT en ODBC 2*.x*.)<br /><br /> SQL_SET_NULL: Cuando se actualizan una o varias filas en la tabla de referencia de tal manera que se modifican uno o más componentes de la clave principal, se establecen los componentes de la clave externa en la tabla de referencia que corresponden a los componentes modificados de la clave principal en NULL en todas las filas coincidentes de la tabla de referencia.<br /><br /> SQL_SET_DEFAULT: Son los componentes de la clave externa en la tabla de referencia que corresponden a los componentes modificados de la clave principal cuando se actualizan una o varias filas en la tabla de referencia de tal manera que se modifican uno o más componentes de la clave principal, establecer valores predeterminados es aplicable en todas las filas coincidentes de la tabla de referencia.<br /><br /> Es NULL si no es aplicable al origen de datos.|  
-|DELETE_RULE (ODBC 1.0)|11|Smallint|Acción que se aplicará a la clave externa cuando la operación de SQL es **eliminar**. Puede tener uno de los siguientes valores. (La tabla que se hace referencia es la tabla que contiene la clave principal; la tabla de referencia es la tabla que contiene la clave externa).<br /><br /> SQL_CASCADE: Cuando se elimina una fila en la tabla de referencia, también se eliminan todas las filas coincidentes en las tablas de referencia.<br /><br /> SQL_NO_ACTION: Si una eliminación de una fila en la tabla de referencia provocaría una "referencia pendiente" en la tabla de referencia (es decir, filas de la tabla de referencia no tendría ningún homólogos en la tabla de referencia), se rechaza la actualización. (Esta acción es igual que la acción SQL_RESTRICT en ODBC 2*.x*.)<br /><br /> SQL_SET_NULL: Cuando se eliminan una o varias filas en la tabla de referencia, cada componente de la clave externa de la tabla de referencia se establece en NULL en todas las filas coincidentes de la tabla de referencia.<br /><br /> SQL_SET_DEFAULT: Cuando se eliminan una o varias filas en la tabla de referencia, cada componente de la clave externa de la tabla de referencia se establece en el valor predeterminado es aplicable en todas las filas coincidentes de la tabla de referencia.<br /><br /> Es NULL si no es aplicable al origen de datos.|  
+|UPDATE_RULE (ODBC 1.0)|10|Smallint|Acción que se aplicará a la clave externa cuando la operación de SQL es **actualización**. Puede tener uno de los siguientes valores. (La tabla que se hace referencia es la tabla que contiene la clave principal; la tabla de referencia es la tabla que contiene la clave externa).<br /><br /> SQL_CASCADE: Cuando se actualiza la clave principal de la tabla de referencia, también se actualiza la clave externa de la tabla de referencia.<br /><br /> SQL_NO_ACTION: Si una actualización de la clave principal de la tabla de referencia provocaría una "referencia pendiente" en la tabla de referencia (es decir, filas de la tabla de referencia no tendría ningún homólogos en la tabla de referencia), se rechaza la actualización. Si una actualización de la clave externa de la tabla de referencia introduce un valor que no existe como un valor de la clave principal de la tabla de referencia, se rechaza la actualización. (Esta acción es igual que la acción SQL_RESTRICT en ODBC 2 *.x*.)<br /><br /> SQL_SET_NULL: Cuando se actualizan una o varias filas en la tabla de referencia de tal manera que se modifican uno o más componentes de la clave principal, se establecen los componentes de la clave externa en la tabla de referencia que corresponden a los componentes modificados de la clave principal en NULL en todas las filas coincidentes de la tabla de referencia.<br /><br /> SQL_SET_DEFAULT: Son los componentes de la clave externa en la tabla de referencia que corresponden a los componentes modificados de la clave principal cuando se actualizan una o varias filas en la tabla de referencia de tal manera que se modifican uno o más componentes de la clave principal, establecer valores predeterminados es aplicable en todas las filas coincidentes de la tabla de referencia.<br /><br /> Es NULL si no es aplicable al origen de datos.|  
+|DELETE_RULE (ODBC 1.0)|11|Smallint|Acción que se aplicará a la clave externa cuando la operación de SQL es **eliminar**. Puede tener uno de los siguientes valores. (La tabla que se hace referencia es la tabla que contiene la clave principal; la tabla de referencia es la tabla que contiene la clave externa).<br /><br /> SQL_CASCADE: Cuando se elimina una fila en la tabla de referencia, también se eliminan todas las filas coincidentes en las tablas de referencia.<br /><br /> SQL_NO_ACTION: Si una eliminación de una fila en la tabla de referencia provocaría una "referencia pendiente" en la tabla de referencia (es decir, filas de la tabla de referencia no tendría ningún homólogos en la tabla de referencia), se rechaza la actualización. (Esta acción es igual que la acción SQL_RESTRICT en ODBC 2 *.x*.)<br /><br /> SQL_SET_NULL: Cuando se eliminan una o varias filas en la tabla de referencia, cada componente de la clave externa de la tabla de referencia se establece en NULL en todas las filas coincidentes de la tabla de referencia.<br /><br /> SQL_SET_DEFAULT: Cuando se eliminan una o varias filas en la tabla de referencia, cada componente de la clave externa de la tabla de referencia se establece en el valor predeterminado es aplicable en todas las filas coincidentes de la tabla de referencia.<br /><br /> Es NULL si no es aplicable al origen de datos.|  
 |COLUMNAS FK_NAME (ODBC 2.0)|12|Varchar|Nombre de clave externa. Es NULL si no es aplicable al origen de datos.|  
 |PK_NAME (ODBC 2.0)|13|Varchar|Nombre de clave principal. Es NULL si no es aplicable al origen de datos.|  
 |APLAZAMIENTO DE NO (ODBC 3.0)|14|Smallint|SQL_INITIALLY_DEFERRED, SQL_INITIALLY_IMMEDIATE, SQL_NOT_DEFERRABLE.|  

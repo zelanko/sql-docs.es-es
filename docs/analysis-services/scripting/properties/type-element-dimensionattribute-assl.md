@@ -27,15 +27,15 @@ caps.latest.revision: 35
 author: Minewiskan
 ms.author: owend
 manager: kfile
-ms.workload: Inactive
-ms.openlocfilehash: 9cd0db2e914ffba09e7e2e3831b5815be8288e10
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
-ms.translationtype: MT
+ms.openlocfilehash: 652e0ca8726ba1e5b6ddfec11225929ea6416675
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="type-element-dimensionattribute-assl"></a>Elemento Type (DimensionAttribute) (ASSL)
-[!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]Contiene el tipo del atributo.  
+[!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]
+  Contiene el tipo del atributo.  
   
 ## <a name="syntax"></a>Sintaxis  
   
@@ -48,22 +48,22 @@ ms.lasthandoff: 01/08/2018
 </DimensionAttribute>  
 ```  
   
-## <a name="element-characteristics"></a>Características del elemento  
+## <a name="element-characteristics"></a>Características de los elementos  
   
-|Característica|Description|  
+|Característica|Descripción|  
 |--------------------|-----------------|  
 |Tipo y longitud de los datos|String (enumeración)|  
 |Valor predeterminado|*Regular*|  
-|Cardinalidad|0-1: Elemento opcional que puede aparecer una y solo una vez.|  
+|Cardinalidad|0-1: Elemento opcional que puede aparecer solo una vez.|  
   
 ## <a name="element-relationships"></a>Relaciones del elemento  
   
 |Relación|Elemento|  
 |------------------|-------------|  
 |Elemento primario|[DimensionAttribute](../../../analysis-services/scripting/data-type/dimensionattribute-data-type-assl.md)|  
-|Elementos secundarios|None|  
+|Elementos secundarios|Ninguno|  
   
-## <a name="remarks"></a>Notas  
+## <a name="remarks"></a>Comentarios  
  El valor de este elemento se limita a una de las cadenas enumeradas en la tabla siguiente.  
   
 |Valor|Description|  
@@ -85,7 +85,7 @@ ms.lasthandoff: 01/08/2018
 |*AddressStreet*|El atributo representa una calle para una dirección.|  
 |*AddressZip*|El atributo representa un código postal para una dirección.|  
 |*BOMResource*|El atributo representa un recurso para una lista de materiales (BOM).|  
-|*Título*|El atributo representa un título.|  
+|*Caption*|El atributo representa un título.|  
 |*CaptionAbbreviation*|El atributo representa una abreviatura.|  
 |*CaptionDescription*|El atributo representa una descripción.|  
 |*Canal*|El atributo representa un canal.|  
@@ -202,7 +202,7 @@ ms.lasthandoff: 01/08/2018
 |*MonthOfTrimester*|El atributo representa el ordinal del mes de un cuatrimestre.|  
 |*MonthOfYear*|El atributo representa el ordinal del mes de un año.|  
 |*Meses*|El atributo representa los meses.|  
-|*OrganizationalUnit*|El atributo representa una unidad organizativa.|  
+|*organizationalUnit*|El atributo representa una unidad organizativa.|  
 |*OrgTitle*|El atributo representa un título organizativo.|  
 |*PercentOwnership*|El atributo representa un porcentaje de propiedad.|  
 |*PercentVoteRight*|El atributo representa un porcentaje de derechos de voto.|  
@@ -222,7 +222,7 @@ ms.lasthandoff: 01/08/2018
 |*PhysicalWeight*|El atributo representa el peso.|  
 |*PhysicalWidth*|El atributo representa el ancho.|  
 |*Point*|El atributo representa un punto.|  
-|*Código postal*|El atributo representa un código postal.|  
+|*PostalCode*|El atributo representa un código postal.|  
 |*Product*|El atributo representa un producto.|  
 |*ProductBrand*|El atributo representa una marca de producto.|  
 |*ProductCategory*|El atributo representa una categoría de producto.|  
@@ -236,7 +236,7 @@ ms.lasthandoff: 01/08/2018
 |*Promoción*|El atributo representa una promoción.|  
 |*QtyRangeHigh*|El atributo representa el valor más alto de un intervalo de cantidades.|  
 |*QtyRangeLow*|El atributo representa el valor más bajo de un intervalo de cantidades.|  
-|*Cuantitativa*|El atributo representa un atributo cuantitativo.|  
+|*Cuantitativo*|El atributo representa un atributo cuantitativo.|  
 |*QuarterOfHalfYear*|El atributo representa el ordinal del trimestre de un semestre.|  
 |*QuarterOfYear*|El atributo representa el ordinal del trimestre de un año.|  
 |*Trimestres*|El atributo representa los trimestres.|  
@@ -304,9 +304,9 @@ ms.lasthandoff: 01/08/2018
   
  El elemento que corresponde al elemento primario de **tipo** en el objeto de Analysis Management Objects (AMO) es el modelo <xref:Microsoft.AnalysisServices.DimensionAttribute>.  
   
-## <a name="see-also"></a>Ver también  
- [Elemento Attributes &#40; ASSL &#41;](../../../analysis-services/scripting/collections/attributes-element-assl.md)   
- [Dimension, elemento &#40; ASSL &#41;](../../../analysis-services/scripting/objects/dimension-element-assl.md)   
- [Propiedades &#40; ASSL &#41;](../../../analysis-services/scripting/properties/properties-assl.md)  
+## <a name="see-also"></a>Vea también  
+ [Atributos de elemento &#40;ASSL&#41;](../../../analysis-services/scripting/collections/attributes-element-assl.md)   
+ [Dimension, elemento & #40; ASSL & #41;](../../../analysis-services/scripting/objects/dimension-element-assl.md)   
+ [Propiedades & #40; ASSL & #41;](../../../analysis-services/scripting/properties/properties-assl.md)  
   
   

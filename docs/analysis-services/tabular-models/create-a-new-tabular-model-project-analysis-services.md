@@ -1,31 +1,30 @@
 ---
 title: Cree un nuevo proyecto de modelo tabular (Analysis Services) | Documentos de Microsoft
-ms.custom: 
+ms.custom: ''
 ms.date: 02/22/2018
 ms.prod: analysis-services
 ms.prod_service: analysis-services, azure-analysis-services
-ms.service: 
+ms.service: ''
 ms.component: data-mining
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: pro-bi
-ms.technology: 
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.technology: ''
+ms.tgt_pltfrm: ''
+ms.topic: conceptual
 ms.assetid: 001bed84-f50f-4961-bc25-9906728d99ec
-caps.latest.revision: 
+caps.latest.revision: 19
 author: Minewiskan
 ms.author: owend
 manager: kfile
-ms.workload: Inactive
-ms.openlocfilehash: 65a4f062cb8ddc70c62853a448393e21607ec0ca
-ms.sourcegitcommit: d8ab09ad99e9ec30875076acee2ed303d61049b7
-ms.translationtype: MT
+ms.openlocfilehash: 5c80b7e743177b5e06106e47fa930b729d341e03
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/23/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="create-a-new-tabular-model-project"></a>Crear un nuevo proyecto de modelo tabular
 [!INCLUDE[ssas-appliesto-sqlas-aas](../../includes/ssas-appliesto-sqlas-aas.md)]
-Este artículo describe cómo crear un proyecto de modelos tabulares en blanco en [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]. Después de crear un nuevo proyecto de modelos, puede empezar importando datos de orígenes de datos.  
+  Este artículo describe cómo crear un proyecto de modelos tabulares en blanco en [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]. Después de crear un nuevo proyecto de modelos, puede empezar importando datos de orígenes de datos.  
   
 #### <a name="to-create-a-new-blank-tabular-model-project"></a>Para crear un proyecto de modelos tabulares en blanco  
   
@@ -39,6 +38,6 @@ Este artículo describe cómo crear un proyecto de modelos tabulares en blanco e
   
 ## <a name="see-also"></a>Vea también  
  [Propiedades del proyecto](../../analysis-services/tabular-models/project-properties-ssas-tabular.md)   
- [Propiedades del modelo](../../analysis-services/tabular-models/model-properties-ssas-tabular.md)  
+ [Propiedades de modelo](../../analysis-services/tabular-models/model-properties-ssas-tabular.md)  
   
   

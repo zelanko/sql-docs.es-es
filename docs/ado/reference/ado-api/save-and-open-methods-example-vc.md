@@ -22,12 +22,11 @@ caps.latest.revision: 12
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: 369ba2c466e54283e91639c50e9923cd4a0178cf
-ms.sourcegitcommit: bb044a48a6af9b9d8edb178dc8c8bd5658b9ff68
-ms.translationtype: MT
+ms.openlocfilehash: 3d4f32bf893f4a6e6e11ddd9ca42eec0a82b864c
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/18/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="save-and-open-methods-example-vc"></a>Guardar y abrir un ejemplo de los métodos (VC ++)
 Estos tres ejemplos se muestra cómo el [guardar](../../../ado/reference/ado-api/save-method.md) y **abiertos** métodos se pueden usar conjuntamente.  

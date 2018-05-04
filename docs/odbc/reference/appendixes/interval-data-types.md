@@ -11,7 +11,7 @@ ms.suite: sql
 ms.technology:
 - drivers
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - second intervals [ODBC]
 - data types [ODBC], interval data types
@@ -32,12 +32,11 @@ caps.latest.revision: 6
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: ce8aff0605f1fc8baa772e5e22409baf1240c556
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
-ms.translationtype: MT
+ms.openlocfilehash: d332950fa3c1f5f9e81dfb3a60009380440d6fb5
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="interval-data-types"></a>Tipos de datos Interval
 Un intervalo se define como la diferencia entre dos fechas y horas. Intervalos se expresan en uno de dos maneras diferentes. Uno es un *-mes y año* intervalo que expresa intervalos en años y un número entero de meses. El otro es un *hora diurna* intervalo que expresa intervalos en días, minutos y segundos. Estos dos tipos de intervalos son distintos y no se pueden mezclar, porque meses pueden tener un número variable de días.  

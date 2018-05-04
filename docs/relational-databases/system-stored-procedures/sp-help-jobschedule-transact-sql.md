@@ -24,12 +24,11 @@ caps.latest.revision: 34
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: 731857bc70bcda1c7817db6e2cdc7eed3ad68236
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
-ms.translationtype: MT
+ms.openlocfilehash: 9e3f0c96d3b0921a7843e83d2b174ace160caf66
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="sphelpjobschedule-transact-sql"></a>sp_help_jobschedule (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -94,7 +93,7 @@ sp_help_jobschedule { [ @job_id = ] job_id | [ @job_name = ] 'job_name' }
 |**schedule_uid**|**uniqueidentifier**|Identificador de la programación.|  
 |**job_count**|**int**|Recuento de trabajos devueltos.|  
   
-> **Nota:****sp_help_jobschedule** devuelve valores de la **dbo.sysjobschedules** y **dbo.sysschedules** tablas del sistema en **msdb** .   **sysjobschedules** actualiza cada 20 minutos. Esto puede afectar a los valores devueltos por este procedimiento almacenado.  
+> **Nota:****sp_help_jobschedule** devuelve valores de la **dbo.sysjobschedules** y **dbo.sysschedules** tablas del sistema en **msdb** . **sysjobschedules** actualiza cada 20 minutos. Esto puede afectar a los valores devueltos por este procedimiento almacenado.  
   
 ## <a name="remarks"></a>Comentarios  
  Los parámetros de **sp_help_jobschedule** puede utilizarse únicamente en ciertas combinaciones. Si *schedule_id* se especifica, ninguno *job_id* ni *job_name* puede especificarse. En caso contrario, el *job_id* o *job_name* parámetros se pueden usar con *schedule_name*.  

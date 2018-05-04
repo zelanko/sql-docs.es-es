@@ -1,35 +1,23 @@
 ---
 title: Conectarse desde aplicaciones cliente (Analysis Services) | Documentos de Microsoft
-ms.custom: 
-ms.date: 03/07/2017
-ms.prod: analysis-services
-ms.prod_service: analysis-services
-ms.service: 
-ms.component: data-mining
-ms.reviewer: 
-ms.suite: pro-bi
-ms.technology: 
-ms.tgt_pltfrm: 
+ms.date: 05/02/2018
+ms.prod: sql
+ms.technology: analysis-services
+ms.component: ''
 ms.topic: article
-f1_keywords:
-- sql13.swb.connection.login.analysisserver.f1
-- sql13.swb.connecttoas.connectionproperties.f1
-- sql13.swb.connecttoas.login.f1
-ms.assetid: b1e0f1d4-0b87-4ad3-8172-f746fe2f16a2
-caps.latest.revision: 
-author: Minewiskan
 ms.author: owend
+ms.reviewer: owend
+author: minewiskan
 manager: kfile
-ms.workload: On Demand
-ms.openlocfilehash: 3aaccfe1f58568bde946c9ddf112b3e83bf8b9e1
-ms.sourcegitcommit: d8ab09ad99e9ec30875076acee2ed303d61049b7
+ms.openlocfilehash: 772d01c114f0eb276d063fb96e8bdd2a2fb54a05
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/23/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="connect-from-client-applications-analysis-services"></a>Conectarse desde aplicaciones cliente (Analysis Services)
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
-Si no está familiarizado con Analysis Services, use la información de este tema para conectarse a una instancia existente de [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] mediante herramientas y aplicaciones comunes. En este tema también explica cómo conectarse bajo distintas identidades de usuario para realizar pruebas.  
+  Si no está familiarizado con Analysis Services, use la información de este tema para conectarse a una instancia existente de [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] mediante herramientas y aplicaciones comunes. En este tema también explica cómo conectarse bajo distintas identidades de usuario para realizar pruebas.  
   
 -   [Conectarse con SQL Server Management Studio (SSMS)](#bkmk_SSMS)  
   
@@ -45,7 +33,7 @@ Si no está familiarizado con Analysis Services, use la información de este tem
   
 -   [Configurar Firewall de Windows para permitir el acceso a Analysis Services](../../analysis-services/instances/configure-the-windows-firewall-to-allow-analysis-services-access.md)  
   
--   [Autorización de acceso a objetos y operaciones &#40; Analysis Services &#41;](../../analysis-services/multidimensional-models/authorizing-access-to-objects-and-operations-analysis-services.md)  
+-   [Autorización de acceso a objetos y operaciones & #40; Analysis Services & #41;](../../analysis-services/multidimensional-models/authorizing-access-to-objects-and-operations-analysis-services.md)  
   
 ##  <a name="bkmk_SSMS"></a> Conectarse con SQL Server Management Studio (SSMS)  
  Conéctese a Analysis Services en SSMS para administrar las instancias de servidor y las bases de datos de forma interactiva. También puede ejecutar consultas XMLA o MDX para realizar tareas administrativas o recuperar datos. A diferencia de otras herramientas y aplicaciones que solo cargan bases de datos cuando se envía una consulta, SSMS carga todas las bases de datos cuando se conecta al servidor, siempre y cuando tenga permiso para ver la base de datos. Esto significa que si tiene numerosas bases de datos tabulares en el servidor, todas ellas se cargan en la memoria del sistema cuando se conecta mediante SSMS.  
@@ -142,6 +130,6 @@ Si no está familiarizado con Analysis Services, use la información de este tem
  [Conectar a Analysis Services](../../analysis-services/instances/connect-to-analysis-services.md)   
  [Metodologías de autenticación admitidas por Analysis Services](../../analysis-services/instances/authentication-methodologies-supported-by-analysis-services.md)   
  [Suplantación](../../analysis-services/tabular-models/impersonation-ssas-tabular.md)   
- [Crear un origen de datos &#40; SSAS Multidimensional &#41;](../../analysis-services/multidimensional-models/create-a-data-source-ssas-multidimensional.md)  
+ [Crear un origen de datos & #40; SSAS Multidimensional & #41;](../../analysis-services/multidimensional-models/create-a-data-source-ssas-multidimensional.md)  
   
   

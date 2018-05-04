@@ -23,12 +23,11 @@ caps.latest.revision: 13
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: bcbecb5a787c6ae37d6858c1371b335c2e25911a
-ms.sourcegitcommit: bb044a48a6af9b9d8edb178dc8c8bd5658b9ff68
-ms.translationtype: MT
+ms.openlocfilehash: 4342e5f2b77b88b2c0050152306b660ea7d5cacf
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/18/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="parent-property-ado-md"></a>Propiedad primaria (ADO MD)
 Indica el miembro que es el elemento primario del elemento actual [miembro](../../../ado/reference/ado-md-api/member-object-ado-md.md) en una jerarquía.  

@@ -11,7 +11,7 @@ ms.suite: sql
 ms.technology:
 - drivers
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - functions [ODBC], ODBC driver for Oracle
 - ODBC driver for Oracle [ODBC], functions
@@ -22,12 +22,11 @@ caps.latest.revision: 9
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: 3b04102f149c96792f769a84535783c235832e2b
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
-ms.translationtype: MT
+ms.openlocfilehash: a13402af87e10475f988523f26a0012ff3f1936a
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="core-level-api-functions-odbc-driver-for-oracle"></a>Funciones de API de nivel de núcleo (controlador ODBC para Oracle)
 > [!IMPORTANT]  
@@ -44,7 +43,7 @@ ms.lasthandoff: 04/16/2018
 |**SQLCancel**|Cancela el procesamiento en un identificador de instrucción, hstmt. En algunos casos, Oracle no admite la cancelación de una instrucción de ejecución. Esto significa que una instrucción de ejecución continuará hasta que Oracle completa el proceso, momento en el que se cancelan los resultados de las instrucciones por el controlador ODBC para Oracle.|  
 |**SQLColAttributes**|Devuelve información del descriptor para una columna de un conjunto de resultados. Información del descriptor se devuelve como una cadena de caracteres, un valor de dependiente de descriptor de 32 bits o un valor entero.|  
 |**SQLConnect**|Se conecta a un origen de datos. Para usar la autenticación de sistema operativo de Oracle, especifique "/" como el *szUID* parámetro y "" como el *szAuthStr* parámetro.|  
-|**SQLDescribeCol**|Devuelve el nombre, el tipo, la precisión, la escala y la nulabilidad de la columna de resultados determinado. **Nota:****SQLDescribeCol** informa de las columnas calculadas como SQL_VARCHAR.  |  
+|**SQLDescribeCol**|Devuelve el nombre, el tipo, la precisión, la escala y la nulabilidad de la columna de resultados determinado. **Nota:****SQLDescribeCol** informa de las columnas calculadas como SQL_VARCHAR.|  
 |**SQLDisconnect**|Cierra una conexión. Si la agrupación de conexiones está habilitada para un entorno compartido y llama a una aplicación **SQLDisconnect** en una conexión en el entorno, la conexión se devuelve al grupo de conexiones y sigue estando disponible para otros componentes por medio el mismo entorno compartido.|  
 |**SQLError**|Devuelve información de estado o de error sobre el último error. El controlador mantiene una pila o una lista de errores que se pueden devolver para la *hstmt*, *hdbc*, y *henv* argumentos, dependiendo de cómo la llamada a **SQLError**  se realiza. La cola de errores se vacía después de cada instrucción. Normalmente recupera un mensaje de error de Oracle y en caso contrario, está vacío.|  
 |**SQLExecDirect**|Ejecuta una instrucción SQL nueva, no preparada. El controlador utiliza los valores actuales de las variables de marcador de parámetro, si existe algún parámetro en la instrucción. Si la tabla, vista o nombres de campo contienen espacios, encierre los nombres en la parte posterior oferta marcas. Por ejemplo, si la base de datos contiene una tabla denominada *mi tabla* y el campo *mi campo*, incluya cada elemento del identificador de este modo:<br /><br /> Seleccione \`mi tabla\`. \`Mi Field1\`, \`Mi tabla\`.\` Mi Field2\` FROM \`la tabla '|  

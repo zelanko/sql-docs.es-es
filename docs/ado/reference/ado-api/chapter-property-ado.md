@@ -24,12 +24,11 @@ caps.latest.revision: 13
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: f7cfa863254391760a45f8857f002ac92f25dd07
-ms.sourcegitcommit: bb044a48a6af9b9d8edb178dc8c8bd5658b9ff68
-ms.translationtype: MT
+ms.openlocfilehash: 5293bc810457420caa1b81177310e49ecf7e9975
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/18/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="chapter-property-ado"></a>Capítulo (propiedad, ADO)
 Obtiene o establece OLE DB **capítulo** objeto de/en un [interfaz ADORecordsetConstruction](../../../ado/reference/ado-api/adorecordsetconstruction-interface.md) objeto. Cuando usas **put_Chapter** para establecer el **capítulo** objeto, un subconjunto de filas se convierte en ADO [objeto Recordset](../../../ado/reference/ado-api/recordset-object-ado.md) objeto. Esto establece el capítulo actual de la **conjunto de filas**objeto. Esta propiedad es de lectura y escritura.  

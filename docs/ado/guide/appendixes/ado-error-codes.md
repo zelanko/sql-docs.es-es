@@ -19,12 +19,11 @@ caps.latest.revision: 11
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: 55b434f3106e8c4847aeabcec90694bd9d89a7c6
-ms.sourcegitcommit: bb044a48a6af9b9d8edb178dc8c8bd5658b9ff68
-ms.translationtype: MT
+ms.openlocfilehash: 613f80ff440674e1170059d825983f2f1e5b07f4
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/18/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="capture-ado-error-codes"></a>Captura de códigos de Error de ADO
 Además de los errores de proveedor devueltos en la [Error](../../../ado/reference/ado-api/error-object.md) objetos de la [errores](../../../ado/reference/ado-api/errors-collection-ado.md) colección, el propio ADO puede devolver errores al mecanismo de control de excepciones del entorno de tiempo de ejecución. Utilice el mecanismo de interceptación de errores en el lenguaje de programación, como la **On Error** instrucción en Microsoft® Visual Basic, o la **try-catch** bloquear en Microsoft Visual C++®, para capturar errores de ADO.

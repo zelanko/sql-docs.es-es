@@ -22,17 +22,16 @@ caps.latest.revision: 26
 author: Minewiskan
 ms.author: owend
 manager: erikre
-ms.workload: Inactive
-ms.openlocfilehash: 0fed4b46d2ed14a45073d7c25ace252c427fba3d
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
-ms.translationtype: MT
+ms.openlocfilehash: 28b75d9b7bb728eb5794892917a3075095adde15
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="reserved-keywords-mdx-syntax"></a>Palabras clave reservadas (sintaxis de MDX)
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
 
-  [!INCLUDE[msCoName](../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] reserva ciertas palabras clave para su uso exclusivo. Para obtener una lista de palabras clave reservadas, consulte [palabras reservadas de MDX](../mdx/mdx-reserved-words.md).  
+  [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] reserva ciertas palabras clave para su uso exclusivo. Para obtener una lista de palabras clave reservadas, consulte [palabras reservadas de MDX](../mdx/mdx-reserved-words.md).  
   
  Las palabras clave reservadas deben seguir las siguientes directrices:  
   
@@ -43,6 +42,6 @@ ms.lasthandoff: 01/08/2018
 -   Use una convención de nomenclatura que evite la utilización de palabras clave reservadas. Si el nombre de un objeto debe parecerse a una palabra clave reservada, se pueden quitar las consonantes o vocales.  
   
 ## <a name="see-also"></a>Vea también  
- [Elementos de sintaxis MDX &#40; MDX &#41;](../mdx/mdx-syntax-elements-mdx.md)  
+ [Elementos de sintaxis MDX &#40;MDX&#41;](../mdx/mdx-syntax-elements-mdx.md)  
   
   

@@ -1,36 +1,23 @@
 ---
-title: "Crear una dimensión mediante el uso de una tabla existente | Documentos de Microsoft"
-ms.custom: 
-ms.date: 03/14/2017
-ms.prod: analysis-services
-ms.prod_service: analysis-services
-ms.service: 
-ms.component: data-mining
-ms.reviewer: 
-ms.suite: pro-bi
-ms.technology: 
-ms.tgt_pltfrm: 
+title: Crear una dimensión mediante el uso de una tabla existente | Documentos de Microsoft
+ms.date: 05/02/2018
+ms.prod: sql
+ms.technology: analysis-services
+ms.component: multidimensional-models
 ms.topic: article
-helpviewer_keywords:
-- hierarchies [Analysis Services], dimensions
-- main dimension tables
-- dimensions [Analysis Services], standard
-- standard dimensions [Analysis Services]
-ms.assetid: edd96fbe-1b1c-445a-95d6-7a025e0ee868
-caps.latest.revision: 
-author: Minewiskan
 ms.author: owend
+ms.reviewer: owend
+author: minewiskan
 manager: kfile
-ms.workload: Inactive
-ms.openlocfilehash: b748f139d4eed14ea9d00d275aedcc8ef8fc9fec
-ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
+ms.openlocfilehash: ebf7fb99def766b3635743a31fa2cfa37fcbc228
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/15/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="create-a-dimension-by-using-an-existing-table"></a>Crear una dimensión usando una tabla existente
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
-En [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)], puede usar el Asistente para dimensiones de [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] para crear una dimensión a partir de una tabla existente. Para hacerlo, debe seleccionar la opción **Usar una tabla existente** en la página **Seleccionar método de creación** del asistente. Con esta opción, el asistente basa la estructura de la dimensión en las tablas de dimensiones, sus columnas y las posibles relaciones entre esas columnas en una vista del origen de datos existente. El asistente prueba los datos en la tabla de origen y las tablas relacionadas. Usa estos datos para definir columnas de atributos que se basan en las columnas de las tablas de dimensiones, así como para definir jerarquías de atributos (denominadas jerarquías *definidas por el usuario* ). Tras utilizar el Asistente para dimensiones para crear su dimensión, puede usar el Diseñador de dimensiones para agregar, quitar o configurar atributos y jerarquías de la dimensión.  
+  En [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)], puede usar el Asistente para dimensiones de [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] para crear una dimensión a partir de una tabla existente. Para hacerlo, debe seleccionar la opción **Usar una tabla existente** en la página **Seleccionar método de creación** del asistente. Con esta opción, el asistente basa la estructura de la dimensión en las tablas de dimensiones, sus columnas y las posibles relaciones entre esas columnas en una vista del origen de datos existente. El asistente prueba los datos en la tabla de origen y las tablas relacionadas. Usa estos datos para definir columnas de atributos que se basan en las columnas de las tablas de dimensiones, así como para definir jerarquías de atributos (denominadas jerarquías *definidas por el usuario* ). Tras utilizar el Asistente para dimensiones para crear su dimensión, puede usar el Diseñador de dimensiones para agregar, quitar o configurar atributos y jerarquías de la dimensión.  
   
  Si está utilizando una tabla existente para crear una dimensión, el Asistente para dimensiones lo guía a través de los siguientes pasos:  
   

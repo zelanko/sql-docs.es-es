@@ -1,16 +1,16 @@
 ---
-title: "Referencia técnica del algoritmo de clústeres de Microsoft | Documentos de Microsoft"
-ms.custom: 
+title: Referencia técnica del algoritmo de clústeres de Microsoft | Documentos de Microsoft
+ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: analysis-services
 ms.prod_service: analysis-services
-ms.service: 
+ms.service: ''
 ms.component: data-mining
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: pro-bi
-ms.technology: 
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.technology: ''
+ms.tgt_pltfrm: ''
+ms.topic: conceptual
 helpviewer_keywords:
 - clustering [Data Mining]
 - MAXIMUM_INPUT_ATTRIBUTES parameter
@@ -25,24 +25,23 @@ helpviewer_keywords:
 - clustering algorithms [Analysis Services]
 - CLUSTER_COUNT parameter
 ms.assetid: ec40868a-6dc7-4dfa-aadc-dedf69e555eb
-caps.latest.revision: 
+caps.latest.revision: 21
 author: Minewiskan
 ms.author: owend
 manager: kfile
-ms.workload: Inactive
-ms.openlocfilehash: 187eea9af56b4da074f374923c29d7ebcea0aca2
-ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
-ms.translationtype: MT
+ms.openlocfilehash: 16d3dae2010f43a15cf11d83891bdf30b5b5b518
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/15/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="microsoft-clustering-algorithm-technical-reference"></a>Referencia técnica del algoritmo de clústeres de Microsoft
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
-En esta sección se explica la implementación del algoritmo de clústeres de [!INCLUDE[msCoName](../../includes/msconame-md.md)] , incluidos los parámetros que se pueden usar para controlar el comportamiento de los modelos de agrupación en clústeres. Además, incluye instrucciones sobre cómo mejorar el rendimiento durante la creación y el procesamiento de modelos de agrupación en clústeres.  
+  En esta sección se explica la implementación del algoritmo de clústeres de [!INCLUDE[msCoName](../../includes/msconame-md.md)] , incluidos los parámetros que se pueden usar para controlar el comportamiento de los modelos de agrupación en clústeres. Además, incluye instrucciones sobre cómo mejorar el rendimiento durante la creación y el procesamiento de modelos de agrupación en clústeres.  
   
  Para obtener información adicional sobre cómo usar los modelos de agrupación en clústeres, vea los temas siguientes:  
   
--   [Contenido del modelo de minería de datos de agrupación en clústeres modelos &#40; Analysis Services: minería de datos &#41;](../../analysis-services/data-mining/mining-model-content-for-clustering-models-analysis-services-data-mining.md)  
+-   [Contenido del modelo de minería de datos de agrupación en clústeres modelos & #40; Analysis Services: minería de datos & #41;](../../analysis-services/data-mining/mining-model-content-for-clustering-models-analysis-services-data-mining.md)  
   
 -   [Ejemplos de consultas de modelos de clústeres](../../analysis-services/data-mining/clustering-model-query-examples.md)  
   
@@ -188,6 +187,6 @@ En esta sección se explica la implementación del algoritmo de clústeres de [!
 ## <a name="see-also"></a>Vea también  
  [Algoritmo de clústeres de Microsoft](../../analysis-services/data-mining/microsoft-clustering-algorithm.md)   
  [Ejemplos de consultas de modelos de clústeres](../../analysis-services/data-mining/clustering-model-query-examples.md)   
- [Contenido del modelo de minería de datos de agrupación en clústeres modelos &#40; Analysis Services: minería de datos &#41;](../../analysis-services/data-mining/mining-model-content-for-clustering-models-analysis-services-data-mining.md)  
+ [Contenido del modelo de minería de datos de agrupación en clústeres modelos & #40; Analysis Services: minería de datos & #41;](../../analysis-services/data-mining/mining-model-content-for-clustering-models-analysis-services-data-mining.md)  
   
   

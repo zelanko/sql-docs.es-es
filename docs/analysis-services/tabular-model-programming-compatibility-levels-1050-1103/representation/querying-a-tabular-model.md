@@ -1,33 +1,32 @@
 ---
 title: Consultar un modelo Tabular | Documentos de Microsoft
-ms.custom: 
+ms.custom: ''
 ms.date: 03/04/2017
 ms.prod: analysis-services
 ms.prod_service: analysis-services
-ms.service: 
-ms.component: 
-ms.reviewer: 
+ms.service: ''
+ms.component: ''
+ms.reviewer: ''
 ms.suite: pro-bi
-ms.technology: 
-ms.tgt_pltfrm: 
+ms.technology: ''
+ms.tgt_pltfrm: ''
 ms.topic: reference
 applies_to:
 - SQL Server 2016 Preview
 ms.assetid: b01d45d9-4598-4ded-9a9e-e3419cc3df8e
-caps.latest.revision: 
+caps.latest.revision: 7
 author: Minewiskan
 ms.author: owend
 manager: kfile
-ms.workload: Inactive
-ms.openlocfilehash: 024fd5fb264f4fce86d0c2f28f2558ccfa9e800a
-ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
-ms.translationtype: MT
+ms.openlocfilehash: 0f9fd950d33859b0bfaf0b68e7c9e263286ce87f
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/15/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="querying-a-tabular-model"></a>Consultar un modelo tabular
 [!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]
-Cuando un programador consulta un modelo tabular, implica la recuperación de datos de la base de datos tabular (TDS); para lograr este objetivo tiene dos opciones: usar consultas de tabla de uso en DAX o usar MDX y recuperar los datos como si provinieran de un cubo. Sin embargo, según el modo subyacente del modelo tabular, podría tener que limitarse a usar solo consultas de tabla DAX; el modo DirectQuery requiere el uso de consultas de tabla DAX.  
+  Cuando un programador consulta un modelo tabular, implica la recuperación de datos de la base de datos tabular (TDS); para lograr este objetivo tiene dos opciones: usar consultas de tabla de uso en DAX o usar MDX y recuperar los datos como si provinieran de un cubo. Sin embargo, según el modo subyacente del modelo tabular, podría tener que limitarse a usar solo consultas de tabla DAX; el modo DirectQuery requiere el uso de consultas de tabla DAX.  
   
 ## <a name="querying-with-adomdnet"></a>Consultar con ADOMD.Net  
  El uso de ADOMD.Net para consultar un modelo tabular es simple y flexible; puede enviar instrucciones MDX o expresiones de consulta tabulares desde DAX al servidor para obtener los resultados.  

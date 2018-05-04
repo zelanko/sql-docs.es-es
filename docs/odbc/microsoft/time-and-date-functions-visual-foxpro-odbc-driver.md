@@ -11,7 +11,7 @@ ms.suite: sql
 ms.technology:
 - drivers
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - ODBC date functions [ODBC]
 - Visual FoxPro ODBC driver [ODBC], time and date functions
@@ -24,30 +24,29 @@ caps.latest.revision: 6
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.workload: On Demand
-ms.openlocfilehash: 5ba661df5c57c9611164889126eab9572743c8e4
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
-ms.translationtype: MT
+ms.openlocfilehash: b47cd46b93878b6b394d302ff4493a6ec5bbd032
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="time-and-date-functions-visual-foxpro-odbc-driver"></a>Hora y funciones de fecha (el controlador ODBC de Visual FoxPro)
 En la tabla siguiente se enumera funciones de fecha y hora ODBC compatibles con el controlador ODBC de Visual FoxPro; Cuando la gramática de Visual FoxPro para la misma función difiere de la sintaxis ODBC, se muestra el equivalente de Visual FoxPro.  
   
 |Gramática ODBC|Gramática Visual FoxPro|  
 |------------------|---------------------------|  
-|CURDATE*)*|FECHA*)*|  
-|CURTIME*)*|TIEMPO*)*|  
-|DAYNAME*(date_exp)*|CDOW*(date_exp)*|  
-|DAYOFMONTH (*date_exp)*|DÍA*)*|  
-|HORA*(time_exp)*||  
-|MINUTO*(time_exp)*||  
-|MES*(time_exp)*||  
-|MONTHNAME*(date_exp)*|CMONTH*(date_exp)*|  
-|AHORA*)*|FECHA Y HORA*)*|  
-|SEGUNDO*(time_exp)*|S*(time_exp)*|  
-|SEMANA*(date_exp)*||  
-|AÑO*(date_exp)*||  
+|CURDATE *)*|FECHA *)*|  
+|CURTIME *)*|TIEMPO *)*|  
+|DAYNAME *(date_exp)*|CDOW *(date_exp)*|  
+|DAYOFMONTH (*date_exp)*|DÍA *)*|  
+|HORA *(time_exp)*||  
+|MINUTO *(time_exp)*||  
+|MES *(time_exp)*||  
+|MONTHNAME *(date_exp)*|CMONTH *(date_exp)*|  
+|AHORA *)*|FECHA Y HORA *)*|  
+|SEGUNDO *(time_exp)*|S *(time_exp)*|  
+|SEMANA *(date_exp)*||  
+|AÑO *(date_exp)*||  
   
  No se admiten las siguientes funciones de fecha y hora:  
   

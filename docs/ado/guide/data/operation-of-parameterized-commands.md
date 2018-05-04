@@ -20,12 +20,11 @@ caps.latest.revision: 11
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: 70049127949ecc4f0e5931339b951620b58784ce
-ms.sourcegitcommit: bb044a48a6af9b9d8edb178dc8c8bd5658b9ff68
-ms.translationtype: MT
+ms.openlocfilehash: bf0914ef04e43e440425f55456b2608bf917c36a
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/18/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="operation-of-parameterized-commands"></a>Funcionamiento de los comandos con parámetros
 Si está trabajando con un elemento secundario grande **Recordset**, especialmente si se compara con el tamaño del elemento primario **conjunto de registros**, pero la necesidad de tener acceso a solo unos pocos capítulos secundarios, le resultará más eficaz usar un comando con parámetros.  
@@ -42,7 +41,7 @@ SHAPE {SELECT * FROM customer}
    RELATE cust_id TO PARAMETER 0)  
 ```  
   
- Las tablas primarias y secundarias tienen un nombre de columna en común, cust_id*.* El *comando secundario* tiene un "?" marcador de posición, al que hace referencia la cláusula RELATE (es decir, "... PARÁMETRO 0").  
+ Las tablas primarias y secundarias tienen un nombre de columna en común, cust_id *.* El *comando secundario* tiene un "?" marcador de posición, al que hace referencia la cláusula RELATE (es decir, "... PARÁMETRO 0").  
   
 > [!NOTE]
 >  La cláusula del parámetro pertenece únicamente a la sintaxis del comando shape. No está asociado a cualquier ADO [parámetro](../../../ado/reference/ado-api/parameter-object.md) objeto o la [parámetros](../../../ado/reference/ado-api/parameters-collection-ado.md) colección.  

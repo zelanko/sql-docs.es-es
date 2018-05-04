@@ -1,32 +1,23 @@
 ---
 title: Asistente para la generación de esquemas (Analysis Services) | Documentos de Microsoft
-ms.custom: ''
-ms.date: 03/01/2017
-ms.prod: analysis-services
-ms.prod_service: analysis-services
-ms.service: ''
-ms.component: data-mining
-ms.reviewer: ''
-ms.suite: pro-bi
-ms.technology: ''
-ms.tgt_pltfrm: ''
+ms.date: 05/02/2018
+ms.prod: sql
+ms.technology: analysis-services
+ms.component: multidimensional-models
 ms.topic: article
-helpviewer_keywords:
-- relational schema [Analysis Services]
-ms.assetid: 68bf7ba3-d0cb-437f-9a3e-9edc0999af19
-caps.latest.revision: 16
-author: Minewiskan
 ms.author: owend
+ms.reviewer: owend
+author: minewiskan
 manager: kfile
-ms.workload: Inactive
-ms.openlocfilehash: 92996e941d5ac3a96bf684ef499f9de663df0a24
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+ms.openlocfilehash: 653e28218cf7a89a7a8b4fae7735b16d3b875f61
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="schema-generation-wizard-analysis-services"></a>Asistente para generar esquemas (Analysis Services)
-[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)][!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] admite dos métodos para trabajar con esquemas relacionales al definir objetos OLAP en un [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] proyecto o base de datos. Normalmente, los objetos OLAP se definen en función de un modelo de datos lógico creado en una vista de origen de datos de un proyecto o base de datos de [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] . Esta vista del origen de datos se define en función de elementos de esquema de uno o varios orígenes de datos relacionales, personalizados en la vista del origen de datos.  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
+  [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] admite dos métodos para trabajar con esquemas relacionales al definir objetos OLAP en un proyecto o base de datos de [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] . Normalmente, los objetos OLAP se definen en función de un modelo de datos lógico creado en una vista de origen de datos de un proyecto o base de datos de [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] . Esta vista del origen de datos se define en función de elementos de esquema de uno o varios orígenes de datos relacionales, personalizados en la vista del origen de datos.  
   
  Como alternativa, puede definir los objetos OLAP en primer lugar, y después generar una vista del origen de datos, un origen de datos y el esquema de la base de datos relacional subyacente que admite estos objetos OLAP. Esta base de datos relacional se conoce como base de datos del área de asunto.  
   

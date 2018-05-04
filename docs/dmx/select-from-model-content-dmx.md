@@ -25,12 +25,11 @@ caps.latest.revision: 43
 author: Minewiskan
 ms.author: owend
 manager: erikre
-ms.workload: Inactive
-ms.openlocfilehash: 24b5a1884994050874cbfd24afbae84b773620d1
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
-ms.translationtype: MT
+ms.openlocfilehash: d0421998c359dbf40eb2afa36d2487b200bca52f
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="select-from-ltmodelgtcontent-dmx"></a>SELECT FROM &lt;modelo&gt;. CONTENIDO (DMX)
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
@@ -56,19 +55,19 @@ SELECT [FLATTENED] [TOP <n>] <expression list> FROM <model>.CONTENT
  *model*  
  Identificador de modelo.  
   
- *expresión de condición*  
+ *Expresión de condición*  
  Opcional. Condición para restringir los valores que devuelve la lista de columnas.  
   
  *expression*  
  Opcional. Expresión que devuelve un valor escalar.  
   
 ## <a name="remarks"></a>Comentarios  
- The **SELECT FROM** *\<model>***. CONTENIDO** instrucción devuelve contenido específico para cada algoritmo. Por ejemplo, podría desear usar las descripciones de todas las reglas de un modelo de reglas de asociación en una aplicación personalizada. Puede usar un **SELECT FROM \<modelo >. CONTENIDO** instrucción para devolver valores de la columna NODE_RULE del modelo.  
+ El **SELECT FROM**  *\<modelo > ***. CONTENIDO** instrucción devuelve contenido específico para cada algoritmo. Por ejemplo, podría desear usar las descripciones de todas las reglas de un modelo de reglas de asociación en una aplicación personalizada. Puede usar un **SELECT FROM \<modelo >. CONTENIDO** instrucción para devolver valores de la columna NODE_RULE del modelo.  
   
  En la tabla siguiente se enumeran las columnas que están incluidas en el contenido del modelo de minería de datos.  
   
 > [!NOTE]  
->  Los algoritmos podrían interpretar las columnas de forma distinta para poder representar el contenido correctamente. Para obtener una descripción del modelo de minería de datos contenido para cada algoritmo y sugerencias sobre cómo interpretar y consultar el contenido de cada tipo de modelo del modelo de minería de datos, vea [contenido del modelo de minería de datos &#40; Analysis Services: minería de datos &#41; ](../analysis-services/data-mining/mining-model-content-analysis-services-data-mining.md).  
+>  Los algoritmos podrían interpretar las columnas de forma distinta para poder representar el contenido correctamente. Para obtener una descripción del modelo de minería de datos contenido para cada algoritmo y sugerencias sobre cómo interpretar y consultar el contenido de cada tipo de modelo del modelo de minería de datos, vea [contenido del modelo de minería de datos &#40;Analysis Services: minería de datos&#41;](../analysis-services/data-mining/mining-model-content-analysis-services-data-mining.md).  
   
 |Columna de conjunto de filas CONTENT|Description|  
 |---------------------------|-----------------|  
@@ -160,8 +159,8 @@ WHERE NODE_TYPE = 26
 |TM_NaiveBayes|Bike Buyer|1|6383|  
   
 ## <a name="see-also"></a>Vea también  
- [SELECT &#40; DMX &#41;](../dmx/select-dmx.md)   
- [Extensiones de minería de datos &#40; DMX &#41; Instrucciones de manipulación de datos](../dmx/dmx-statements-data-manipulation.md)   
- [Referencia de instrucciones de Extensiones de minería de datos &#40;DMX&#41;](../dmx/data-mining-extensions-dmx-statements.md)  
+ [SELECCIONE &AMP;#40;DMX&AMP;#41;](../dmx/select-dmx.md)   
+ [Extensiones de minería de datos &#40;DMX&#41; instrucciones de manipulación de datos](../dmx/dmx-statements-data-manipulation.md)   
+ [Extensiones de minería de datos & #40; DMX & #41; Referencia de instrucciones](../dmx/data-mining-extensions-dmx-statements.md)  
   
   

@@ -22,12 +22,11 @@ caps.latest.revision: 12
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: 20044ab8bc57f8c943a26457cd165d95afcd077f
-ms.sourcegitcommit: bb044a48a6af9b9d8edb178dc8c8bd5658b9ff68
-ms.translationtype: MT
+ms.openlocfilehash: 745e305dc6b513a22bce48b40f511a850386e1b4
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/18/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="referencing-the-ado-libraries-in-a-visual-basic-6-application"></a>Hacer referencia a las bibliotecas de ADO en una aplicación de Visual Basic 6
 Para importar las bibliotecas de ADO en una aplicación de Microsoft Visual Basic 6, debe establecer una referencia en el proyecto de Visual Basic.  
@@ -36,7 +35,7 @@ Para importar las bibliotecas de ADO en una aplicación de Microsoft Visual Basi
   
 1.  Cree un nuevo o abra un proyecto existente de Visual Basic.  
   
-2.  Haga clic en el **proyecto** elemento de menú y, a continuación, seleccione **referencias... ** desde el panel de menú desplegable.  
+2.  Haga clic en el **proyecto** elemento de menú y, a continuación, seleccione **referencias...**  desde el panel de menú desplegable.  
   
 3.  De **referencias disponibles**, active la casilla de **Microsoft ActiveX Data Objects *Observe* biblioteca**, donde ***Observe*** representa la versión más reciente número de versión. El **ubicación** campo siguiente debería identificar su elección como *$installDir\msado15.dll*, donde *$installDir* representa la ruta de acceso del directorio en el que la biblioteca de ADO se ha instalado.  
   

@@ -19,12 +19,11 @@ caps.latest.revision: 13
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: e6e91a7596f2ad9e0e7e9cae31f28304809411f1
-ms.sourcegitcommit: bb044a48a6af9b9d8edb178dc8c8bd5658b9ff68
-ms.translationtype: MT
+ms.openlocfilehash: cc7b4230144836d2d01f95b60bd730e3a942e1ad
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/18/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="working-with-recordsets"></a>Trabajar con conjuntos de registros
 El **Recordset** objeto tiene características integradas que permiten reorganizar el orden de los datos en el conjunto de resultados, para buscar un registro específico en función de criterios que suministre e incluso a optimizar las operaciones de búsqueda con índices. Si estas características están disponibles para su uso depende del proveedor y en algunos casos, como el de la [índice](../../../ado/reference/ado-api/index-property.md) propiedad: la estructura del propio origen de datos.  

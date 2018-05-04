@@ -27,15 +27,15 @@ caps.latest.revision: 35
 author: Minewiskan
 ms.author: owend
 manager: kfile
-ms.workload: Inactive
-ms.openlocfilehash: 6ede10e4bdb4053050dbd299c49a40359450737c
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
-ms.translationtype: MT
+ms.openlocfilehash: 50df01ee77621b52f256ad14b55bc0ec9621d942
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="columns-element-assl"></a>Elemento Columns (ASSL)
-[!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]Contiene la colección de columnas asociadas con el elemento primario.  
+[!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]
+  Contiene la colección de columnas asociada al elemento primario.  
   
 ## <a name="syntax"></a>Sintaxis  
   
@@ -56,25 +56,25 @@ ms.lasthandoff: 01/08/2018
 </DrillThroughAction>  
 ```  
   
-## <a name="element-characteristics"></a>Características del elemento  
+## <a name="element-characteristics"></a>Características de los elementos  
   
-|Característica|Description|  
+|Característica|Descripción|  
 |--------------------|-----------------|  
-|Tipo y longitud de los datos|None|  
-|Valor predeterminado|None|  
-|Cardinalidad|Vea la siguiente tabla.|  
+|Tipo y longitud de los datos|Ninguno|  
+|Valor predeterminado|Ninguno|  
+|Cardinalidad|Vea la tabla siguiente.|  
   
 |Antecesor o elemento primario|Cardinalidad|  
 |------------------------|-----------------|  
 |[Evento](../../../analysis-services/scripting/objects/event-element-assl.md)|1-1: Elemento necesario que se produce una vez y solo una vez.|  
-|Todos las demás|0-1: Elemento opcional que puede aparecer una y solo una vez.|  
+|Todos los demás|0-1: Elemento opcional que puede aparecer una y solo una vez.|  
   
 ## <a name="element-relationships"></a>Relaciones del elemento  
   
 |Relación|Elemento|  
 |------------------|-------------|  
 |Elementos primarios|[Acción](../../../analysis-services/scripting/objects/action-element-assl.md) de tipo [DrillThroughAction](../../../analysis-services/scripting/data-type/drillthroughaction-data-type-assl.md), [eventos](../../../analysis-services/scripting/objects/event-element-assl.md), [MiningModel](../../../analysis-services/scripting/objects/miningmodel-element-assl.md), [MiningModelColumn](../../../analysis-services/scripting/data-type/miningmodelcolumn-data-type-assl.md), [MiningStructure](../../../analysis-services/scripting/objects/miningstructure-element-assl.md), [TableMiningStructureColumn](../../../analysis-services/scripting/data-type/tableminingstructurecolumn-data-type-assl.md)|  
-|Elementos secundarios|Vea la siguiente tabla.|  
+|Elementos secundarios|Vea la tabla siguiente.|  
   
 |Antecesor o elemento primario|Elementos secundarios|  
 |------------------------|--------------------|  
@@ -91,6 +91,6 @@ ms.lasthandoff: 01/08/2018
  Algunos de los elementos correspondientes en el modelo de objetos de Objetos de administración de análisis (AMO) son <xref:Microsoft.AnalysisServices.TraceColumnCollection>, <xref:Microsoft.AnalysisServices.MiningModelColumnCollection> y <xref:Microsoft.AnalysisServices.MiningStructureColumnCollection>.  
   
 ## <a name="see-also"></a>Vea también  
- [Colecciones de &#40; ASSL &#41;](../../../analysis-services/scripting/collections/collections-assl.md)  
+ [Colecciones de & #40; ASSL & #41;](../../../analysis-services/scripting/collections/collections-assl.md)  
   
   

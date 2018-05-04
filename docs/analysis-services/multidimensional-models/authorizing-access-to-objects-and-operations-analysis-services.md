@@ -1,40 +1,23 @@
 ---
 title: Autorizar el acceso a objetos y operaciones (Analysis Services) | Documentos de Microsoft
-ms.custom: 
-ms.date: 03/14/2017
-ms.prod: analysis-services
-ms.prod_service: analysis-services
-ms.service: 
-ms.component: data-mining
-ms.reviewer: 
-ms.suite: pro-bi
-ms.technology: 
-ms.tgt_pltfrm: 
+ms.date: 05/02/2018
+ms.prod: sql
+ms.technology: analysis-services
+ms.component: multidimensional-models
 ms.topic: article
-f1_keywords:
-- sql13.asvs.roledesignerdialog.general.f1
-- sql13.asvs.roledesignerdialog.membership.f1
-helpviewer_keywords:
-- access rights [Analysis Services], users
-- permissions [Analysis Services], users
-- security [Analysis Services], user access
-- user access rights [Analysis Services]
-- granting permissions [Analysis Services], users
-ms.assetid: af28524e-5eca-4dce-a050-da4f406ee1c7
-caps.latest.revision: 
-author: Minewiskan
 ms.author: owend
+ms.reviewer: owend
+author: minewiskan
 manager: kfile
-ms.workload: On Demand
-ms.openlocfilehash: 956638a01fc1280d16bb6fd7a7ddade1978ceb2f
-ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
+ms.openlocfilehash: 5a8dc16e1f2885141f20395cbe5e150996919e06
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/15/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="authorizing-access-to-objects-and-operations-analysis-services"></a>Cómo autorizar el acceso a objetos y operaciones (Analysis Services)
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
-El acceso de los usuarios que no sean administradores a los cubos, dimensiones y modelos de minería de datos de una base de datos de [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] se obtiene mediante la pertenencia a uno o varios roles de base de datos. [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] Los administradores crean estos roles de base de datos, conceden permisos de Lectura o de Lectura y escritura en objetos de [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] y luego asignan usuarios y grupos de [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows a cada rol.  
+  El acceso de los usuarios que no sean administradores a los cubos, dimensiones y modelos de minería de datos de una base de datos de [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] se obtiene mediante la pertenencia a uno o varios roles de base de datos. [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] Los administradores crean estos roles de base de datos, conceden permisos de Lectura o de Lectura y escritura en objetos de [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] y luego asignan usuarios y grupos de [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows a cada rol.  
   
  [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] establece los permisos efectivos para un usuario o grupo específico de Windows al combinar los permisos que están asociados con cada rol de base de datos al que el usuario o grupo pertenece. En consecuencia, si un rol de base de datos no concede a un usuario o grupo permiso para ver una dimensión, medida o atributo y otro rol diferente sí lo hace, el usuario o grupo tendrá permiso para ver el objeto.  
   

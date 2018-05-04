@@ -1,30 +1,30 @@
 ---
 title: Objeto de roles (TMSL) | Documentos de Microsoft
-ms.custom: 
+ms.custom: ''
 ms.date: 05/30/2017
 ms.prod: analysis-services
 ms.prod_service: analysis-services, azure-analysis-services
-ms.service: 
-ms.component: 
-ms.reviewer: 
+ms.service: ''
+ms.component: ''
+ms.reviewer: ''
 ms.suite: pro-bi
-ms.technology: 
-ms.tgt_pltfrm: 
+ms.technology: ''
+ms.tgt_pltfrm: ''
 ms.topic: reference
 ms.assetid: 1812f60b-bd5f-417c-96bc-3d834bdb4d3c
-caps.latest.revision: "6"
+caps.latest.revision: 6
 author: Minewiskan
 ms.author: owend
 manager: kfile
-ms.workload: Inactive
-ms.openlocfilehash: 257ead3072f8b359bff275709ee372483989fccf
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
-ms.translationtype: MT
+ms.openlocfilehash: 4ea2b5fee79973b2e449c966a7a53be58fcae4a7
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="roles-object-tmsl"></a>Objeto de roles (TMSL)
-[!INCLUDE[ssas-appliesto-sqlas-aas](../../includes/ssas-appliesto-sqlas-aas.md)]Define un rol en el modelo que se especifica una colección de permisos. Pertenencia a una función consta de los principios de seguridad de Windows. Puede establecer filtros en un rol para restringir el acceso a objetos específicos.  
+[!INCLUDE[ssas-appliesto-sqlas-aas](../../includes/ssas-appliesto-sqlas-aas.md)]
+  Define un rol en el modelo que se especifica una colección de permisos. Pertenencia a una función consta de los principios de seguridad de Windows. Puede establecer filtros en un rol para restringir el acceso a objetos específicos.  
   
 ## <a name="object-definition"></a>Definición del objeto  
  Todos los objetos tienen un conjunto común de propiedades, incluidos el nombre, tipo, descripción, una colección de propiedades y las anotaciones. **Rol** objetos también tienen las siguientes propiedades.  
@@ -34,7 +34,7 @@ ms.lasthandoff: 01/08/2018
                   lectura,  
                   readRefresh,  
                   actualización de  
-                  y administrador. Vea [Roles y permisos &#40; Analysis Services &#41; ](../../analysis-services/multidimensional-models/roles-and-permissions-analysis-services.md) para obtener información acerca de los permisos de base de datos.  
+                  y administrador. Vea [Roles y permisos &#40;Analysis Services&#41; ](../../analysis-services/multidimensional-models/roles-and-permissions-analysis-services.md) para obtener información acerca de los permisos de base de datos.  
   
  miembros  
  Miembros que se componen de un nombre de miembro y el Id., donde el nombre del miembro es el alias o el nombre descriptivo de un principio de seguridad de Windows, y el identificador es el identificador de seguridad. Se especifican en la definición de roles. Vea [componentes SID](https://msdn.microsoft.com/en-us/library/windows/desktop/aa379597\(v=vs.85\).aspx) para obtener más información acerca de los identificadores.  
@@ -43,7 +43,7 @@ ms.lasthandoff: 01/08/2018
  Un permiso de tabla es un objeto con nombre con los permisos definidos a través de una expresión de DAX. Esta propiedad es opcional, usa para aplicar un filtro de seguridad.  
   
 ## <a name="usage"></a>Uso  
- **Rol** objetos se utilizan en [Alter comando &#40; TMSL &#41; ](../../analysis-services/tabular-models-scripting-language-commands/alter-command-tmsl.md), [Crear comando &#40; TMSL &#41; ](../../analysis-services/tabular-models-scripting-language-commands/create-command-tmsl.md), [CreateOrReplace comando &#40; TMSL &#41; ](../../analysis-services/tabular-models-scripting-language-commands/createorreplace-command-tmsl.md), y [eliminar comando &#40; TMSL &#41; ](../../analysis-services/tabular-models-scripting-language-commands/delete-command-tmsl.md).  
+ **Rol** objetos se utilizan en [Alter, comando &#40;TMSL&#41;](../../analysis-services/tabular-models-scripting-language-commands/alter-command-tmsl.md), [crear comando &#40;TMSL&#41;](../../analysis-services/tabular-models-scripting-language-commands/create-command-tmsl.md), [comando CreateOrReplace &#40;TMSL &#41; ](../../analysis-services/tabular-models-scripting-language-commands/createorreplace-command-tmsl.md), y [comando Delete &#40;TMSL&#41;](../../analysis-services/tabular-models-scripting-language-commands/delete-command-tmsl.md).  
   
  A **rol** es una propiedad de un modelo de objeto, pero también se puede especificar como una propiedad de un objeto de base de datos según la asignación uno a uno entre el modelo y la base de datos.  
   
@@ -265,6 +265,6 @@ ms.lasthandoff: 01/08/2018
   
 ## <a name="see-also"></a>Vea también  
  [Tabular Model Scripting Language &#40;TMSL&#41; Reference (Referencia de Tabular Model Scripting Language [TMSL])](../../analysis-services/tabular-model-scripting-language-tmsl-reference.md)   
- [Roles y permisos &#40;Analysis Services&#41;](../../analysis-services/multidimensional-models/roles-and-permissions-analysis-services.md)  
+ [Roles y permisos & #40; Analysis Services & #41;](../../analysis-services/multidimensional-models/roles-and-permissions-analysis-services.md)  
   
   

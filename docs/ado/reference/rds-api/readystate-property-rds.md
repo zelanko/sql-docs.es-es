@@ -19,12 +19,11 @@ caps.latest.revision: 15
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: 78a5b98cdf0eff5cb84165e8fd38b58c2b87e58a
-ms.sourcegitcommit: bb044a48a6af9b9d8edb178dc8c8bd5658b9ff68
-ms.translationtype: MT
+ms.openlocfilehash: 0d3ee96351ee6b09c259d4dc70e11c590c222962
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/18/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="readystate-property-rds"></a>Propiedad ReadyState (RDS)
 Indica el progreso de un [DataControl](../../../ado/reference/rds-api/datacontrol-object-rds.md) objeto tal y como recupera datos en su [Recordset](../../../ado/reference/ado-api/recordset-object-ado.md) objeto.  

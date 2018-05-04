@@ -20,15 +20,15 @@ caps.latest.revision: 13
 author: Minewiskan
 ms.author: owend
 manager: kfile
-ms.workload: Inactive
-ms.openlocfilehash: 05a5397987761530d783097ec76914b01fe5356c
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
-ms.translationtype: MT
+ms.openlocfilehash: 13c64a8c30b3be6a6c31ad9856299a1f3b80ecb2
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="readwritemode-element"></a>Elemento ReadWriteMode
-[!INCLUDE[ssas-appliesto-sqlas-aas](../../../includes/ssas-appliesto-sqlas-aas.md)]El **ReadWriteMode** propiedad de base de datos especifica si la base de datos está en **ReadWrite** modo o en **ReadOnly** modo. Éstos son los dos únicos valores posibles de la propiedad.  
+[!INCLUDE[ssas-appliesto-sqlas-aas](../../../includes/ssas-appliesto-sqlas-aas.md)]
+  La propiedad de base de datos **ReadWriteMode** especifica si la base de datos está en modo **ReadWrite** o en modo **ReadOnly** . Éstos son los dos únicos valores posibles de la propiedad.  
   
 ## <a name="syntax"></a>Sintaxis  
   
@@ -41,9 +41,9 @@ ms.lasthandoff: 01/08/2018
 </Database>  
 ```  
   
-## <a name="element-characteristics"></a>Características del elemento  
+## <a name="element-characteristics"></a>Características de los elementos  
   
-|Característica|Description|  
+|Característica|Descripción|  
 |--------------------|-----------------|  
 |Tipo y longitud de los datos|String (enumeración)|  
 |Valor predeterminado|ReadWrite|  
@@ -54,14 +54,14 @@ ms.lasthandoff: 01/08/2018
 |Relación|Elemento|  
 |------------------|-------------|  
 |Elementos primarios|[Base de datos](../../../analysis-services/xmla/xml-elements-properties/database-element-xmla.md)|  
-|Elementos secundarios|None|  
+|Elementos secundarios|Ninguno|  
   
 ## <a name="remarks"></a>Comentarios  
  Las bases de datos se crean únicamente en el modo **ReadWrite** . Las bases de datos no se pueden crear en el modo **ReadOnly** .  
   
  El valor del elemento **ReadWriteMode** se limita a las cadenas listadas en la tabla siguiente.  
   
-|Valor|Description|  
+|Value|Description|  
 |-----------|-----------------|  
 |*Solo lectura*|No se pueden aplicar cambios o actualizaciones a la base de datos.|  
 |*Lectura y escritura*|Se pueden aplicar cambios o actualizaciones a la base de datos.|  

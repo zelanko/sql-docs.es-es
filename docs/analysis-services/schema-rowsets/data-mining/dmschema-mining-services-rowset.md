@@ -23,15 +23,15 @@ caps.latest.revision: 35
 author: Minewiskan
 ms.author: owend
 manager: kfile
-ms.workload: Inactive
-ms.openlocfilehash: 87fdcfb688d6e6b7305ef3a46b0de7800e6c4668
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
-ms.translationtype: MT
+ms.openlocfilehash: 71c95b5f3f1f2f8475659bf75c3f146e1cfdcdb0
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="dmschemaminingservices-rowset"></a>Conjunto de filas DMSCHEMA_MINING_SERVICES
-[!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]Proporciona una descripción de cada algoritmo de minería de datos que admite el proveedor.  
+[!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]
+  Proporciona una descripción de cada algoritmo de minería de datos admitido por el proveedor.  
   
 ## <a name="rowset-columns"></a>Columnas del conjunto de filas  
  El **DMSCHEMA_MINING_SERVICES** filas contiene las columnas siguientes.  
@@ -39,7 +39,7 @@ ms.lasthandoff: 01/08/2018
 |Nombre de columna|Indicador de tipo|Description|  
 |-----------------|--------------------|-----------------|  
 |**SERVICE_NAME**|**DBTYPE_WSTR**|Nombre del algoritmo. Esta columna es específica del proveedor.|  
-|**SERVICE_TYPE_ID**|**DBTYPE_UI4**|Esta columna contiene un mapa de bits que describe el servicio de minería de datos. [!INCLUDE[msCoName](../../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] rellena esta columna con uno de los siguientes valores:<br /><br /> **DM_SERVICETYPE_CLASSIFICATION** (**1**)<br /><br /> **DM_SERVICETYPE_CLUSTERING** (**2**)|  
+|**SERVICE_TYPE_ID**|**DBTYPE_UI4**|Esta columna contiene un mapa de bits que describe el servicio de minería de datos. [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] rellena esta columna con uno de los siguientes valores:<br /><br /> **DM_SERVICETYPE_CLASSIFICATION** (**1**)<br /><br /> **DM_SERVICETYPE_CLUSTERING** (**2**)|  
 |**SERVICE_DISPLAY_NAME**|**DBTYPE_WSTR**|Nombre para mostrar localizable para el algoritmo.|  
 |**SERVICE_GUID**|**DBTYPE_GUID**|GUID para el algoritmo.|  
 |**DESCRIPTION**|**DBTYPE_WSTR**|Descripción del algoritmo fácil de comprender.|  
@@ -73,7 +73,7 @@ ms.lasthandoff: 01/08/2018
 |**SERVICE_NAME**|**DBTYPE_WSTR**|Opcional.|  
 |**SERVICE_TYPE_ID**|**DBTYPE_UI4**|Opcional.|  
   
-## <a name="see-also"></a>Ver también  
+## <a name="see-also"></a>Vea también  
  [Conjuntos de filas de esquema de minería de datos](../../../analysis-services/schema-rowsets/data-mining/data-mining-schema-rowsets.md)  
   
   

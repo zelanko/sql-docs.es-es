@@ -23,12 +23,11 @@ caps.latest.revision: 37
 author: Minewiskan
 ms.author: owend
 manager: erikre
-ms.workload: Inactive
-ms.openlocfilehash: 3156c9110567763d1566de58b6d08304b464e094
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
-ms.translationtype: MT
+ms.openlocfilehash: 8b79237879b2e23682bfdd89dcf1d2ba59824aa1
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="ltsource-data-querygt---shape"></a>&lt;consulta de origen de datos&gt; -forma
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
@@ -69,11 +68,11 @@ APPEND ({ <child table query> }
  *nombre de columna de tabla*  
  Nombre de columna que se acaba de anexar en la tabla primaria para la tabla anidada.  
   
-## <a name="remarks"></a>Notas  
+## <a name="remarks"></a>Comentarios  
  Debe ordenar las consultas por la columna que relaciona la tabla primaria con la tabla secundaria.  
   
 ## <a name="examples"></a>Ejemplos  
- Puede usar el siguiente ejemplo en un [INSERT INTO &#40; DMX &#41;](../dmx/insert-into-dmx.md) instrucción para entrenar un modelo que contiene una tabla anidada. Las dos tablas de la **forma** instrucción se relacionan a través de la **OrderNumber** columna.  
+ Puede usar el siguiente ejemplo en un [INSERT INTO &#40;DMX&#41; ](../dmx/insert-into-dmx.md) instrucción para entrenar un modelo que contiene una tabla anidada. Las dos tablas de la **forma** instrucción se relacionan a través de la **OrderNumber** columna.  
   
 ```  
 SHAPE {  
@@ -85,10 +84,10 @@ SHAPE {
   RELATE OrderNumber to OrderNumber)   
 ```  
   
-## <a name="see-also"></a>Ver también  
- [&#60; consulta de origen de datos &#62;](../dmx/source-data-query.md)   
- [Extensiones de minería de datos &#40; DMX &#41; Instrucciones de definición de datos](../dmx/dmx-statements-data-definition.md)   
- [Extensiones de minería de datos &#40; DMX &#41; Instrucciones de manipulación de datos](../dmx/dmx-statements-data-manipulation.md)   
- [Referencia de instrucciones de Extensiones de minería de datos &#40;DMX&#41;](../dmx/data-mining-extensions-dmx-statements.md)  
+## <a name="see-also"></a>Vea también  
+ [&#60;consulta de origen de datos&#62;](../dmx/source-data-query.md)   
+ [Extensiones de minería de datos &#40;DMX&#41; las instrucciones de definición de datos](../dmx/dmx-statements-data-definition.md)   
+ [Extensiones de minería de datos &#40;DMX&#41; instrucciones de manipulación de datos](../dmx/dmx-statements-data-manipulation.md)   
+ [Extensiones de minería de datos & #40; DMX & #41; Referencia de instrucciones](../dmx/data-mining-extensions-dmx-statements.md)  
   
   

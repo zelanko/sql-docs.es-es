@@ -24,12 +24,11 @@ caps.latest.revision: 37
 author: edmacauley
 ms.author: edmaca
 manager: craigg
-ms.workload: On Demand
-ms.openlocfilehash: 492c67ad4e5580e7ecccaa4580afe024ebae8ec4
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
-ms.translationtype: MT
+ms.openlocfilehash: 5426d05f577016a2a93f131a7eaca85abe6e4f21
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="spchangeobjectowner-transact-sql"></a>sp_changeobjectowner (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -53,7 +52,7 @@ sp_changeobjectowner [ @objname = ] 'object' , [ @newowner = ] 'owner'
   
 ## <a name="arguments"></a>Argumentos  
  [  **@objname =** ] **'***objeto***'**  
- Es el nombre de una tabla, una vista, una función definida por el usuario o un procedimiento almacenado existentes en la base de datos actual. *objeto* es un **nvarchar(776)**, no tiene ningún valor predeterminado. *objeto* se puede calificar con el propietario del objeto existente, en el formulario *existing_owner.Object***.*** objeto* si el esquema y su propietario tienen el mismo nombre.  
+ Es el nombre de una tabla, una vista, una función definida por el usuario o un procedimiento almacenado existentes en la base de datos actual. *objeto* es un **nvarchar(776)**, no tiene ningún valor predeterminado. *objeto* se puede calificar con el propietario del objeto existente, en el formulario *existing_owner.Object ***.*** objeto* si el esquema y su propietario tienen el mismo nombre.  
   
  [  **@newowner=**] **' *** propietario* **'**  
  Es el nombre de la cuenta de seguridad que corresponde al nuevo propietario del objeto. *propietario* es **sysname**, no tiene ningún valor predeterminado. *propietario* debe ser un usuario de base de datos válido, el rol de servidor [!INCLUDE[msCoName](../../includes/msconame-md.md)] inicio de sesión de Windows o grupo de Windows con acceso a la base de datos actual. Si el nuevo propietario es un usuario o grupo de Windows que no tiene una entidad de seguridad de base de datos correspondiente, se creará un usuario de base de datos.  

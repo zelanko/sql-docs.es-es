@@ -1,31 +1,23 @@
 ---
-title: "Servicios de minería de datos y orígenes de datos | Documentos de Microsoft"
-ms.custom: 
-ms.date: 03/14/2017
-ms.prod: analysis-services
-ms.prod_service: analysis-services
-ms.service: 
+title: Servicios de minería de datos y orígenes de datos | Documentos de Microsoft
+ms.date: 05/01/2018
+ms.prod: sql
+ms.technology: analysis-services
 ms.component: data-mining
-ms.reviewer: 
-ms.suite: pro-bi
-ms.technology: 
-ms.tgt_pltfrm: 
 ms.topic: article
-ms.assetid: b26fd6e3-7d87-4f66-ab47-5303b51b87da
-caps.latest.revision: 
-author: Minewiskan
 ms.author: owend
+ms.reviewer: owend
+author: minewiskan
 manager: kfile
-ms.workload: Inactive
-ms.openlocfilehash: 78e67d346c451c258e806e6f888aef096e7d4256
-ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
+ms.openlocfilehash: ad48f9f2f3a769dad964fb47cae33618f3b4ecb4
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/15/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="data-mining-services-and-data-sources"></a>Servicios de minería de datos y orígenes de datos
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
-La minería de datos requiere una conexión a una instancia de SQL Server Analysis Services. Los datos de un cubo no son necesarios para la minería de datos y se recomienda el uso de orígenes relacionales; sin embargo, la minería de datos usa los componentes proporcionados por el motor de [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] .  
+  La minería de datos requiere una conexión a una instancia de SQL Server Analysis Services. Los datos de un cubo no son necesarios para la minería de datos y se recomienda el uso de orígenes relacionales; sin embargo, la minería de datos usa los componentes proporcionados por el motor de [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] .  
   
  En este tema se proporciona información que es necesario conocer al conectarse a una instancia de SQL Server [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] para crear, procesar, implementar o consultar modelos de minería de datos.  
   
@@ -95,7 +87,7 @@ La minería de datos requiere una conexión a una instancia de SQL Server Analys
  También puede establecer propiedades que permitan ajustar el servidor y controlar la seguridad para uso del cliente. Para más información, consulte [Feature Properties](../../analysis-services/server-properties/feature-properties.md).  
   
 > [!NOTE]  
->  Para más información sobre la compatibilidad de los algoritmos de complemento en las ediciones de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]que admiten la predicción de secuencias, vea [Características compatibles con las ediciones de SQL Server 2012](http://go.microsoft.com/fwlink/?linkid=232473) (http://go.microsoft.com/fwlink/?linkid=232473).  
+>  Para obtener más información sobre la compatibilidad con algoritmos de complemento en las ediciones de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], consulte [características compatibles con las ediciones de SQL Server 2012](http://go.microsoft.com/fwlink/?linkid=232473) (http://go.microsoft.com/fwlink/?linkid=232473).  
   
 ## <a name="programmatic-access-to-data-mining-objects"></a>Acceso a objetos de minería de datos mediante programación  
  Puede utilizar los modelos de objetos siguientes para crear una conexión a una base de datos de Analysis Services y trabajar con objetos de minería de datos:  
@@ -131,7 +123,7 @@ La minería de datos requiere una conexión a una instancia de SQL Server Analys
   
 ## <a name="see-also"></a>Vea también  
  [Arquitectura física &#40;Analysis Services - Datos multidimensionales&#41;](../../analysis-services/multidimensional-models/olap-physical/understanding-microsoft-olap-physical-architecture.md)   
- [Arquitectura física &#40; Analysis Services: minería de datos &#41;](../../analysis-services/data-mining/physical-architecture-analysis-services-data-mining.md)   
+ [Arquitectura física & #40; Analysis Services: minería de datos & #41;](../../analysis-services/data-mining/physical-architecture-analysis-services-data-mining.md)   
  [Administración de soluciones de minería de datos y objetos](../../analysis-services/data-mining/management-of-data-mining-solutions-and-objects.md)  
   
   

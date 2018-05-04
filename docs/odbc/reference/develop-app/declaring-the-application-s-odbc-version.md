@@ -11,7 +11,7 @@ ms.suite: sql
 ms.technology:
 - drivers
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - declaring ODBC version [ODBC]
 - data sources [ODBC], declaring ODBC version
@@ -24,12 +24,11 @@ caps.latest.revision: 6
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: 2753c4b75f92c2ca48e3e87b25f8c92124ddd4c4
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
-ms.translationtype: MT
+ms.openlocfilehash: 89e3363eeefaf85aa81c29266bdf565066c626a3
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="declaring-the-application39s-odbc-version"></a>Declarar la aplicación&#39;s versión de ODBC
 Antes de que una aplicación asigna una conexión, se debe establecer el atributo de entorno SQL_ATTR_ODBC_VERSION. Este atributo indica que la aplicación sigue la API ODBC 2. *x* u ODBC 3. *x* especificación al usar los siguientes elementos:  
@@ -49,9 +48,9 @@ Antes de que una aplicación asigna una conexión, se debe establecer el atribut
     |SQL_C_TIME|SQL_C_TYPE_TIME|  
     |SQL_C_TIMESTAMP|SQL_C_TYPE_TIMESTAMP|  
   
--   *CatalogName***argumento en SQLTables**.   En ODBC 2. *x*, los caracteres comodín ("%" y "_") en el *CatalogName* argumento se tratan de forma literal. En ODBC 3. *x*, se tratan como caracteres comodín. Por lo tanto, una aplicación que sigue a la API ODBC 2. *x* especificación no puede utilizar como comodín caracteres y no de escape ellos cuando se usen como literales. Una aplicación que sigue a ODBC 3. *x* especificación puede usarlas como caracteres comodín o convertirlos y usarlos como literales. Para obtener más información, consulte [argumentos de las funciones de catálogo](../../../odbc/reference/develop-app/arguments-in-catalog-functions.md).  
+-   *CatalogName***argumento en SQLTables**. En ODBC 2. *x*, los caracteres comodín ("%" y "_") en el *CatalogName* argumento se tratan de forma literal. En ODBC 3. *x*, se tratan como caracteres comodín. Por lo tanto, una aplicación que sigue a la API ODBC 2. *x* especificación no puede utilizar como comodín caracteres y no de escape ellos cuando se usen como literales. Una aplicación que sigue a ODBC 3. *x* especificación puede usarlas como caracteres comodín o convertirlos y usarlos como literales. Para obtener más información, consulte [argumentos de las funciones de catálogo](../../../odbc/reference/develop-app/arguments-in-catalog-functions.md).  
   
- ODBC 3*.x* el Administrador de controladores mientras que ODBC 3*.x* controladores comprobar la versión de la especificación de ODBC en el que se escribe una aplicación y responder según corresponda. Por ejemplo, si la aplicación sigue a la API ODBC 2. *x* especificación y llamadas **SQLExecute** antes de llamar a **SQLPrepare**, ODBC 3*.x* Administrador de controladores devuelve SQLSTATE S1010 ( Error de secuencia de función). Si la aplicación sigue ODBC 3*.x* especificación, el Administrador de controladores devuelve SQLSTATE HY010 (error de secuencia de función). Para obtener más información, consulte [compatibilidad con versiones anteriores y el cumplimiento de estándares](../../../odbc/reference/develop-app/backward-compatibility-and-standards-compliance.md).  
+ ODBC 3 *.x* el Administrador de controladores mientras que ODBC 3 *.x* controladores comprobar la versión de la especificación de ODBC en el que se escribe una aplicación y responder según corresponda. Por ejemplo, si la aplicación sigue a la API ODBC 2. *x* especificación y llamadas **SQLExecute** antes de llamar a **SQLPrepare**, ODBC 3 *.x* Administrador de controladores devuelve SQLSTATE S1010 ( Error de secuencia de función). Si la aplicación sigue ODBC 3 *.x* especificación, el Administrador de controladores devuelve SQLSTATE HY010 (error de secuencia de función). Para obtener más información, consulte [compatibilidad con versiones anteriores y el cumplimiento de estándares](../../../odbc/reference/develop-app/backward-compatibility-and-standards-compliance.md).  
   
 > [!IMPORTANT]  
 >  Aplicaciones que siguen ODBC 3. *x* especificación debe utilizar código condicional para evitar usar la funcionalidad nueva para ODBC 3. *x* al trabajar con ODBC 2. *x* controladores. ODBC 2. *x* controladores no admiten la funcionalidad nueva para ODBC 3. *x* solo porque la aplicación declara que sigue a ODBC 3. *x* especificación. Además, ODBC 3. *x* no dejan de controladores admitir la funcionalidad nueva para ODBC 3. *x* solo porque la aplicación declara que sigue a la API ODBC 2. *x* especificación.

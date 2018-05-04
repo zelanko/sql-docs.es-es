@@ -1,32 +1,23 @@
 ---
 title: Usar funciones de agregado | Documentos de Microsoft
-ms.custom: ''
-ms.date: 03/06/2017
-ms.prod: analysis-services
-ms.prod_service: analysis-services
-ms.service: ''
-ms.component: data-mining
-ms.reviewer: ''
-ms.suite: pro-bi
-ms.technology: ''
-ms.tgt_pltfrm: ''
+ms.date: 05/02/2018
+ms.prod: sql
+ms.technology: analysis-services
+ms.component: multidimensional-models
 ms.topic: article
-helpviewer_keywords:
-- aggregate functions [Analysis Services]
-ms.assetid: c42166ef-b75c-45f4-859c-09a3e9617664
-caps.latest.revision: 28
-author: Minewiskan
 ms.author: owend
+ms.reviewer: owend
+author: minewiskan
 manager: kfile
-ms.workload: On Demand
-ms.openlocfilehash: b22f964bbc9659187cf67320951b75d93cb89331
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+ms.openlocfilehash: 2f882fb21fddd829be4cdc13793c4ca8b7f3cd02
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="use-aggregate-functions"></a>Usar funciones de agregado
-[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]Cuando se utiliza una dimensión para segmentar una medida, la medida se resume en las jerarquías contenidas en esa dimensión. El comportamiento de suma depende de la función de agregado especificada en la medida. Para la mayoría de las medidas que contienen datos numéricos, la función de agregado es **Sum**. El valor de la medida se suma a cantidades diferentes dependiendo del nivel de la jerarquía que esté activo.  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
+  Al usar una dimensión para segmentar una medida, la medida se resume en las jerarquías contenidas en la dimensión. El comportamiento de suma depende de la función de agregado especificada en la medida. Para la mayoría de las medidas que contienen datos numéricos, la función de agregado es **Sum**. El valor de la medida se suma a cantidades diferentes dependiendo del nivel de la jerarquía que esté activo.  
   
  En Analysis Services, todas las medidas que se crean están respaldadas por una función de agregación que determina la operación de la medida. Entre los tipos predefinidos de agregación, se encuentran **Sum**, **Min**, **Max**, **Count**, **Distinct Count**y muchas otras más funciones especializadas. O bien, si necesita agregaciones basadas en fórmulas complejas o personalizadas, puede crear un cálculo MDX en vez de usar una función de agregación creada previamente. Por ejemplo, si quiere definir una medida para un valor de porcentaje, lo haría en MDX con una medida calculada. Vea, [CREATE MEMBER &#40;instrucción MDX&#41;](../../mdx/mdx-data-definition-create-member.md).  
   
@@ -73,8 +64,8 @@ ms.lasthandoff: 01/08/2018
  Una medida de recuento distintiva que cuenta miembros se basa en una columna de clave externa de la tabla de hechos. (Es decir, la propiedad **Source Column** de la medida identifica esta columna). Esta columna se combina con la columna de la tabla de dimensiones que identifica a los miembros que cuenta la medida de recuento distintiva.  
   
 ## <a name="see-also"></a>Vea también  
- [Medidas y grupos de medida](../../analysis-services/multidimensional-models/measures-and-measure-groups.md)   
- [Referencia de funciones MDX &#40; MDX &#41;](../../mdx/mdx-function-reference-mdx.md)   
+ [Las medidas y grupos de medida](../../analysis-services/multidimensional-models/measures-and-measure-groups.md)   
+ [Referencia de funciones MDX & #40; MDX & #41;](../../mdx/mdx-function-reference-mdx.md)   
  [Definir el comportamiento de suma parcial](../../analysis-services/multidimensional-models/define-semiadditive-behavior.md)  
   
   

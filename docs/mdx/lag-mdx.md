@@ -22,12 +22,11 @@ caps.latest.revision: 34
 author: Minewiskan
 ms.author: owend
 manager: erikre
-ms.workload: Inactive
-ms.openlocfilehash: a219e0b8455ff3a66d20a8c670bb8675481498e4
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
-ms.translationtype: MT
+ms.openlocfilehash: 7dce14ac4d98d3fd75da42ace8327115eefafd1e
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="lag-mdx"></a>Lag (MDX)
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
@@ -55,7 +54,7 @@ Member_Expression.Lag(Index)
   
  Si el retraso especificado es negativo, el **Lag** función devuelve un miembro subsiguiente.  
   
- `Lag(1)`es equivalente a la [PrevMember](../mdx/prevmember-mdx.md) función. `Lag(-1)`es equivalente a la [NextMember](../mdx/nextmember-mdx.md) función.  
+ `Lag(1)` es equivalente a la [PrevMember](../mdx/prevmember-mdx.md) función. `Lag(-1)` es equivalente a la [NextMember](../mdx/nextmember-mdx.md) función.  
   
  El **Lag** función es similar a la [provocar](../mdx/lead-mdx.md) funcione, salvo que la **provocar** función busca en la dirección opuesta a la **Lag** función. Es decir, `Lag(n)` es equivalente a `Lead(-n)`.  
   
@@ -77,6 +76,6 @@ FROM [Adventure Works]
 ```  
   
 ## <a name="see-also"></a>Vea también  
- [Referencia de funciones MDX &#40; MDX &#41;](../mdx/mdx-function-reference-mdx.md)  
+ [Referencia de funciones MDX & #40; MDX & #41;](../mdx/mdx-function-reference-mdx.md)  
   
   

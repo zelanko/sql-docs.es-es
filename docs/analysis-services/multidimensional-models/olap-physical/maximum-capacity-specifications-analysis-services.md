@@ -1,36 +1,23 @@
 ---
-title: "Especificaciones de capacidad máxima (Analysis Services) | Documentos de Microsoft"
-ms.custom: 
-ms.date: 07/27/2017
-ms.prod: analysis-services
-ms.prod_service: analysis-services
-ms.service: 
-ms.component: 
-ms.reviewer: 
-ms.suite: pro-bi
-ms.technology: 
-ms.tgt_pltfrm: 
-ms.topic: reference
-applies_to:
-- SQL Server 2016 Preview
-helpviewer_keywords:
-- objects [Analysis Services], maximum number
-- objects [Analysis Services], maximum size
-ms.assetid: 49fe1673-b908-4c7a-88ff-415efd294d27
-caps.latest.revision: 
-author: Minewiskan
+title: Especificaciones de capacidad máxima (Analysis Services) | Documentos de Microsoft
+ms.date: 05/02/2018
+ms.prod: sql
+ms.technology: analysis-services
+ms.component: olap
+ms.topic: article
 ms.author: owend
+ms.reviewer: owend
+author: minewiskan
 manager: kfile
-ms.workload: On Demand
-ms.openlocfilehash: 8e60e818b40d2aa7c266903a23d0fec908039b44
-ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
+ms.openlocfilehash: 42cd2e4809ab91fbd672a20b8213dc9fb6d9727c
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/15/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="maximum-capacity-specifications-analysis-services"></a>Especificaciones de capacidad máxima (Analysis Services)
 [!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]
-En las siguientes tablas se especifican el tamaño y la cantidad máximos de diversos objetos definidos en los componentes de [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] en distintos modos de implementación de servidor.  
+  En las siguientes tablas se especifican el tamaño y la cantidad máximos de diversos objetos definidos en los componentes de [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] en distintos modos de implementación de servidor.  
   
  Este tema contiene las siguientes secciones:  
   
@@ -40,7 +27,7 @@ En las siguientes tablas se especifican el tamaño y la cantidad máximos de div
   
  [Tabulares (DeploymentMode = 2)](#bkmk_vertipaq)  
   
-##  <a name="bkmk_OLAP">Multidimensional y minería de datos (DeploymentMode = 0)</a>  
+##  <a name="bkmk_OLAP"></a> Multidimensional y minería de datos (DeploymentMode = 0)  
  El modo de almacenamiento MOLAP, que almacena datos y metadatos, tiene límites físicos adicionales en el tamaño de los archivos. Los archivos de cadenas tienen un tamaño máximo de 4 GB de forma predeterminada. Si necesita archivos mayores para los almacenes de cadenas, puede especificar otro arquitectura de almacenamiento de cadenas. Para obtener más información, consulte [configurar el almacenamiento de cadenas para dimensiones y particiones](../../../analysis-services/multidimensional-models/configure-string-storage-for-dimensions-and-partitions.md).  
   
 |Object|Tamaños/números máximos|  
@@ -68,9 +55,9 @@ En las siguientes tablas se especifican el tamaño y la cantidad máximos de div
   
  Para obtener más información acerca de las directrices de nomenclatura de objetos, consulte [ASSL y características de objetos](../../../analysis-services/multidimensional-models/scripting-language-assl/assl-objects-and-object-characteristics.md).  
   
- Para obtener más información acerca de las limitaciones de origen de datos de procesamiento analítico en línea (OLAP) y minería de datos, vea [admite orígenes de datos &#40; SSAS - Multidimensional &#41; ](../../../analysis-services/multidimensional-models/supported-data-sources-ssas-multidimensional.md), [Admite orígenes de datos &#40; SSAS - Multidimensional &#41; ](../../../analysis-services/multidimensional-models/supported-data-sources-ssas-multidimensional.md), y [ASSL y características de objetos](../../../analysis-services/multidimensional-models/scripting-language-assl/assl-objects-and-object-characteristics.md).  
+ Para obtener más información acerca de las limitaciones de origen de datos de procesamiento analítico en línea (OLAP) y minería de datos, vea [admite orígenes de datos &#40;SSAS - multidimensionales&#41;](../../../analysis-services/multidimensional-models/supported-data-sources-ssas-multidimensional.md), [admite orígenes de datos &#40;SSAS - multidimensionales&#41;](../../../analysis-services/multidimensional-models/supported-data-sources-ssas-multidimensional.md), y [ASSL y características de objetos](../../../analysis-services/multidimensional-models/scripting-language-assl/assl-objects-and-object-characteristics.md).  
   
-##  <a name="bkmk_sharepoint">SharePoint (DeploymentMode = 1)</a>  
+##  <a name="bkmk_sharepoint"></a> SharePoint (DeploymentMode = 1)  
   
 |Object|Tamaños/números máximos|  
 |------------|----------------------------|  
@@ -88,7 +75,7 @@ En las siguientes tablas se especifican el tamaño y la cantidad máximos de div
 |Tamaño del registro de la consulta de origen|64K|  
 |Longitud de nombres de objeto|100 caracteres|  
   
-##  <a name="bkmk_vertipaq">Tabulares (DeploymentMode = 2)</a>  
+##  <a name="bkmk_vertipaq"></a> Tabulares (DeploymentMode = 2)  
 Los siguientes son límites teóricos. Rendimiento se verá reducido en los números más bajos.   
 
 |Object|Tamaños/números máximos|  

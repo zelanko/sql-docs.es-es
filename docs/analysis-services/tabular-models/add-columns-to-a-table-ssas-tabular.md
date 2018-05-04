@@ -1,31 +1,30 @@
 ---
 title: Agregar columnas a una tabla | Documentos de Microsoft
-ms.custom: 
+ms.custom: ''
 ms.date: 02/21/2018
 ms.prod: analysis-services
 ms.prod_service: analysis-services, azure-analysis-services
-ms.service: 
+ms.service: ''
 ms.component: data-mining
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: pro-bi
-ms.technology: 
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.technology: ''
+ms.tgt_pltfrm: ''
+ms.topic: conceptual
 ms.assetid: 5974a3cc-caf8-4558-8836-6e3c24b1ee23
-caps.latest.revision: 
+caps.latest.revision: 11
 author: Minewiskan
 ms.author: owend
 manager: kfile
-ms.workload: On Demand
-ms.openlocfilehash: 5b5d09c35fcdfa2def6ec78422c1f4d40caa3ef3
-ms.sourcegitcommit: d8ab09ad99e9ec30875076acee2ed303d61049b7
-ms.translationtype: MT
+ms.openlocfilehash: 7f45d62d071760238ceb9b864a2c3b5fb9d0afbf
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/23/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="add-columns-to-a-table"></a>Agregar columnas a una tabla
 [!INCLUDE[ssas-appliesto-sqlas-aas](../../includes/ssas-appliesto-sqlas-aas.md)]
-Este artículo describe cómo agregar columnas a una tabla existente.  
+  Este artículo describe cómo agregar columnas a una tabla existente.  
   
 ## <a name="add-columns-from-the-datasource"></a>Agregar columnas del origen de datos  
  Cuando use el Asistente para la importación de tablas para importar datos de una tabla de origen, se creará una nueva tabla en el modelo que incluirá todas las columnas de la tabla de origen, o, si decide filtrar ciertas columnas mediante la característica Vista previa y filtro, solo incluirá las columnas y los datos filtrados que seleccione. También puede escribir una consulta SQL que especifique solo las columnas que desea importar. No obstante, puede determinar posteriormente si una tabla de origen tiene columnas adicionales que desea agregar a la tabla del modelo, o si debe agregar una columna calculada con valores procedentes de una fórmula DAX.  

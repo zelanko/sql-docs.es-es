@@ -21,12 +21,11 @@ caps.latest.revision: 10
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: 8dcc7c3e73b1a863588dec7c53f9133ff6dc67a7
-ms.sourcegitcommit: bb044a48a6af9b9d8edb178dc8c8bd5658b9ff68
-ms.translationtype: MT
+ms.openlocfilehash: e4bb55fedb096d25167af56f2d6a53ff9127939f
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/18/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="comparebookmarks-method-example-vb"></a>Ejemplo del método CompareBookmarks (VB)
 Este ejemplo se muestra la [CompareBookmarks](../../../ado/reference/ado-api/comparebookmarks-method-ado.md) método. El valor relativo de los marcadores rara vez es necesario a menos que un marcador determinado es de algún modo especial.  

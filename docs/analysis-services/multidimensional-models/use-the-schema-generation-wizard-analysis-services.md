@@ -1,34 +1,23 @@
 ---
-title: "Usar el Asistente para generación de esquemas (Analysis Services) | Documentos de Microsoft"
-ms.custom: 
-ms.date: 03/01/2017
-ms.prod: analysis-services
-ms.prod_service: analysis-services
-ms.service: 
-ms.component: data-mining
-ms.reviewer: 
-ms.suite: pro-bi
-ms.technology: 
-ms.tgt_pltfrm: 
+title: Usar el Asistente para generación de esquemas (Analysis Services) | Documentos de Microsoft
+ms.date: 05/02/2018
+ms.prod: sql
+ms.technology: analysis-services
+ms.component: multidimensional-models
 ms.topic: article
-helpviewer_keywords:
-- Schema Generation Wizard, steps
-- relational schema [Analysis Services], Schema Generation Wizard
-ms.assetid: 8c710745-d41d-4c31-b6a2-2956229df75a
-caps.latest.revision: 
-author: Minewiskan
 ms.author: owend
+ms.reviewer: owend
+author: minewiskan
 manager: kfile
-ms.workload: Inactive
-ms.openlocfilehash: d8cae9fd297d0ae2946cccab69a9a273a2cf85b4
-ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
+ms.openlocfilehash: 4b80fef5f104590c6c4c4c71341979dfa451aa81
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/15/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="use-the-schema-generation-wizard-analysis-services"></a>Usar el Asistente para generar esquemas (Analysis Services)
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
-El Asistente para generar esquemas requiere una cantidad limitada de información durante la fase de generación. La mayoría de la información que el Asistente para generar esquemas requiere para generar esquemas relacionales se extrae de los cubos y las dimensiones de [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] que se han creado previamente en el proyecto. Además, puede personalizar el modo en que se genera el esquema de la base de datos del área de asunto y cómo se asignan nombres a los objetos del esquema.  
+  El Asistente para generar esquemas requiere una cantidad limitada de información durante la fase de generación. La mayoría de la información que el Asistente para generar esquemas requiere para generar esquemas relacionales se extrae de los cubos y las dimensiones de [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] que se han creado previamente en el proyecto. Además, puede personalizar el modo en que se genera el esquema de la base de datos del área de asunto y cómo se asignan nombres a los objetos del esquema.  
   
 ## <a name="start-the-wizard"></a>Iniciar el asistente  
  Puede abrir el Asistente para generar esquemas desde [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] de varias formas:  

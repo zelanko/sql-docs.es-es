@@ -24,12 +24,11 @@ caps.latest.revision: 34
 author: edmacauley
 ms.author: edmaca
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: 0c31ae66112acc5cf1831573e436995c68c5d7ff
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
-ms.translationtype: MT
+ms.openlocfilehash: 574f0e4e829bfbe92761992e51fd3c3ffd5ef852
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="spcolumnprivilegesex-transact-sql"></a>sp_column_privileges_ex (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -70,14 +69,14 @@ sp_column_privileges_ex [ @table_server = ] 'table_server'
   
 |Nombre de columna|Tipo de datos|Description|  
 |-----------------|---------------|-----------------|  
-|**TABLE_CAT**|**sysname**|Nombre del calificador de tabla. Varios productos DBMS admiten nombres de tres partes para tablas (*calificador***.*** propietario***.*** nombre*). En [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], esta columna representa el nombre de la base de datos. En algunos productos, representa el nombre del servidor del entorno de base de datos de la tabla. Este campo puede ser NULL.|  
+|**TABLE_CAT**|**sysname**|Nombre del calificador de tabla. Varios productos DBMS admiten nombres de tres partes para tablas (*calificador ***.*** propietario ***.*** nombre*). En [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], esta columna representa el nombre de la base de datos. En algunos productos, representa el nombre del servidor del entorno de base de datos de la tabla. Este campo puede ser NULL.|  
 |**SEGÚN TABLE_SCHEM**|**sysname**|Nombre de propietario de la tabla. En [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], esta columna representa el nombre de usuario de base de datos que creó la tabla. Este campo siempre devuelve un valor.|  
 |**TABLE_NAME**|**sysname**|Nombre de la tabla. Este campo siempre devuelve un valor.|  
 |**COLUMN_NAME**|**sysname**|Nombre de columna para cada columna de la **TABLE_NAME** devuelto. Este campo siempre devuelve un valor.|  
 |**OTORGANTE DE PERMISOS**|**sysname**|Nombre de usuario de base de datos que ha concedido permisos en el objeto **COLUMN_NAME** a la lista **receptor**. En [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], esta columna siempre es el mismo que el **TABLE_OWNER**. Este campo siempre devuelve un valor.<br /><br /> El **otorgante de permisos** columna puede ser el propietario de base de datos (**TABLE_OWNER**) o un usuario a los que el propietario de la base de datos concedido permisos mediante la cláusula WITH GRANT OPTION en la instrucción GRANT.|  
 |**RECEPTOR**|**sysname**|Nombre de usuario de base de datos que se ha concedido permisos en el objeto **COLUMN_NAME** la **otorgante de permisos**. Este campo siempre devuelve un valor.|  
-|**CON PRIVILEGIOS**|**varchar (**32**)**|Uno de los permisos de columna disponibles. Los permisos de columna pueden ser uno de los valores siguientes (u otros valores compatibles con el origen de datos cuando se define la implementación):<br /><br /> Seleccione = **receptor** puede recuperar datos de las columnas.<br /><br /> INSERT = **receptor** puede proporcionar datos para esta columna cuando se inserten nuevas filas (por la **receptor**) en la tabla.<br /><br /> UPDATE = **receptor** puede modificar datos existentes en la columna.<br /><br /> REFERENCIAS = **receptor** puede hacer referencia a una columna de una tabla externa en una relación de clave principal/clave externa. Las relaciones entre clave principal y clave externa se definen con restricciones de tabla.|  
-|**IS_GRANTABLE**|**varchar (**3**)**|Indica si la **receptor** permiten conceder permisos a otros usuarios (a menudo se conoce como el permiso "conceder por concesión"). Puede ser YES, NO o NULL. Un valor desconocido, o NULL, hace referencia a un origen de datos en el que no se aplica “conceder por concesión”.|  
+|**CON PRIVILEGIOS**|**varchar (** 32 **)**|Uno de los permisos de columna disponibles. Los permisos de columna pueden ser uno de los valores siguientes (u otros valores compatibles con el origen de datos cuando se define la implementación):<br /><br /> Seleccione = **receptor** puede recuperar datos de las columnas.<br /><br /> INSERT = **receptor** puede proporcionar datos para esta columna cuando se inserten nuevas filas (por la **receptor**) en la tabla.<br /><br /> UPDATE = **receptor** puede modificar datos existentes en la columna.<br /><br /> REFERENCIAS = **receptor** puede hacer referencia a una columna de una tabla externa en una relación de clave principal/clave externa. Las relaciones entre clave principal y clave externa se definen con restricciones de tabla.|  
+|**IS_GRANTABLE**|**varchar (** 3 **)**|Indica si la **receptor** permiten conceder permisos a otros usuarios (a menudo se conoce como el permiso "conceder por concesión"). Puede ser YES, NO o NULL. Un valor desconocido, o NULL, hace referencia a un origen de datos en el que no se aplica “conceder por concesión”.|  
   
 ## <a name="permissions"></a>Permissions  
  Es necesario contar con un permiso de tipo SELECT sobre el esquema.  

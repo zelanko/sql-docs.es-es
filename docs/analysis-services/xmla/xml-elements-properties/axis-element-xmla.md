@@ -28,15 +28,15 @@ caps.latest.revision: 11
 author: Minewiskan
 ms.author: owend
 manager: kfile
-ms.workload: Inactive
-ms.openlocfilehash: bb0538869453af24bd432a1d7f995e0007e79ec7
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
-ms.translationtype: MT
+ms.openlocfilehash: d04a9d7def676122ea3ae64aa5e170b36b4ae5aa
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="axis-element-xmla"></a>Elemento Axis (XMLA)
-[!INCLUDE[ssas-appliesto-sqlas-aas](../../../includes/ssas-appliesto-sqlas-aas.md)]Contiene un conjunto de tuplas utilizado para representar un eje único en un conjunto de datos multidimensional que contiene un [ejes](../../../analysis-services/xmla/xml-elements-properties/axes-element-xmla.md) elemento que usa el [MDDataSet](../../../analysis-services/xmla/xml-data-types/mddataset-data-type-xmla.md) tipo de datos, devuelto por la [Execute](../../../analysis-services/xmla/xml-elements-methods-execute.md) método.  
+[!INCLUDE[ssas-appliesto-sqlas-aas](../../../includes/ssas-appliesto-sqlas-aas.md)]
+  Contiene un conjunto de tuplas utilizado para representar un eje único en un conjunto de datos multidimensional que contiene un [ejes](../../../analysis-services/xmla/xml-elements-properties/axes-element-xmla.md) elemento que usa el [MDDataSet](../../../analysis-services/xmla/xml-data-types/mddataset-data-type-xmla.md) tipo de datos, devuelto por la [Execute](../../../analysis-services/xmla/xml-elements-methods-execute.md) método.  
   
 ## <a name="syntax"></a>Sintaxis  
   
@@ -54,12 +54,12 @@ ms.lasthandoff: 01/08/2018
 </Axes>  
 ```  
   
-## <a name="element-characteristics"></a>Características del elemento  
+## <a name="element-characteristics"></a>Características de los elementos  
   
-|Característica|Description|  
+|Característica|Descripción|  
 |--------------------|-----------------|  
-|Tipo y longitud de los datos|None|  
-|Valor predeterminado|None|  
+|Tipo y longitud de los datos|Ninguno|  
+|Valor predeterminado|Ninguno|  
 |Cardinalidad|0-n: elemento opcional que puede aparecer más de una vez.|  
   
 ## <a name="element-relationships"></a>Relaciones del elemento  
@@ -69,7 +69,7 @@ ms.lasthandoff: 01/08/2018
 |Elementos primarios|[Ejes](../../../analysis-services/xmla/xml-elements-properties/axes-element-xmla.md)|  
 |Elementos secundarios|[CrossProduct](../../../analysis-services/xmla/xml-elements-properties/crossproduct-element-xmla.md) o [tuplas](../../../analysis-services/xmla/xml-elements-properties/tuples-element-xmla.md)|  
   
-## <a name="remarks"></a>Notas  
+## <a name="remarks"></a>Comentarios  
  El contenido de la **eje** elemento varía dependiendo del valor de la **AxisFormat** propiedad XMLA utilizada por el **Execute** método.  
   
 ## <a name="tupleformat"></a>TupleFormat  
@@ -188,7 +188,7 @@ ms.lasthandoff: 01/08/2018
 </Axes>  
 ```  
   
-## <a name="see-also"></a>Ver también  
- [Propiedades &#40; XMLA &#41;](../../../analysis-services/xmla/xml-elements-properties/xml-elements-properties.md)  
+## <a name="see-also"></a>Vea también  
+ [Propiedades & #40; XMLA & #41;](../../../analysis-services/xmla/xml-elements-properties/xml-elements-properties.md)  
   
   

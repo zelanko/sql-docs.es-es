@@ -18,15 +18,15 @@ caps.latest.revision: 36
 author: Minewiskan
 ms.author: owend
 manager: kfile
-ms.workload: Inactive
-ms.openlocfilehash: d827295c68028d54d64bbb91447aa7ab22eaaa77
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
-ms.translationtype: MT
+ms.openlocfilehash: 8ede9e764419a4722f4364654ae5c28680c9218a
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="security-audit-data-columns"></a>Columnas de datos de Auditoría de seguridad
-[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]La categoría de eventos de auditoría de seguridad tiene las siguientes clases de evento:  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
+  La categoría de eventos Auditoría de seguridad tiene las siguientes clases de eventos:  
   
 ||||  
 |-|-|-|  
@@ -66,7 +66,7 @@ ms.lasthandoff: 01/08/2018
 |EventClass|0|1|EventClass se usa para clasificar los eventos.|  
 |CurrentTime|2|5|Hora a la que se inició el evento, si está disponible. Para filtrar, los formatos esperados son "AAAA-MM-DD" y "AAAA-MM-DD HH:MM:SS".|  
 |EndTime|4|5|Hora a la que finalizó el evento. Esta columna no se llena para las clases de eventos de inicio, como SQL:BatchStarting o SP:Starting. Para filtrar, los formatos esperados son "AAAA-MM-DD" y "AAAA-MM-DD HH:MM:SS".|  
-|Duration|5|2|Tiempo (en milisegundos) de duración del evento.|  
+|Duración|5|2|Tiempo (en milisegundos) de duración del evento.|  
 |CPUTime|6|2|Cantidad de tiempo de CPU (en milisegundos) que utiliza el evento.|  
 |Correcto|23|1|1 = correcto. 0 = error (por ejemplo, 1 significa que se ha comprobado un permiso correctamente y 0 significa que se ha producido un error en la comprobación).|  
 |ConnectionID|25|1|Identificador único de la conexión.|  

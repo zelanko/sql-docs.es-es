@@ -11,7 +11,7 @@ ms.suite: sql
 ms.technology:
 - drivers
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 apiname:
 - SQLBrowseConnect
 apilocation:
@@ -26,12 +26,11 @@ caps.latest.revision: 36
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: 3bbe32ab3098b0e3e7b6ea5ec284a2a86d4f7752
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
-ms.translationtype: MT
+ms.openlocfilehash: 34fbd05bcdec421ee9a00474f939d54219f7b321
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="sqlbrowseconnect-function"></a>Función SQLBrowseConnect
 **Conformidad**  
@@ -124,7 +123,7 @@ SQLRETURN SQLBrowseConnect(
  *valor del atributo* :: = *cadena de caracteres*<br>
  *driver-defined-attribute-keyword* ::= *identifier*<br>
   
- donde *cadena de caracteres* tiene cero o más caracteres; *identificador* tiene uno o más caracteres; *palabra clave de atributo* no distingue mayúsculas de minúsculas; *atributo-valor* puede distinguir mayúsculas de minúsculas; y el valor de la **DSN** palabra clave no contener solamente espacios en blanco. ¿Debido a la cadena e inicialización archivo gramática, palabras clave y atributo de valores de conexión que contienen los caracteres **[] {} (),? \*=! @** debería evitarse. Debido a la gramática de la información del sistema, los nombres de origen de datos y palabras clave no pueden contener la barra diagonal inversa (\\) caracteres. Para un ODBC 2. *x* controlador, las llaves son necesarias alrededor del valor de atributo para la palabra clave DRIVER.  
+ donde *cadena de caracteres* tiene cero o más caracteres; *identificador* tiene uno o más caracteres; *palabra clave de atributo* no distingue mayúsculas de minúsculas; *atributo-valor* puede distinguir mayúsculas de minúsculas; y el valor de la **DSN** palabra clave no contener solamente espacios en blanco. ¿Debido a la cadena e inicialización archivo gramática, palabras clave y atributo de valores de conexión que contienen los caracteres **[]{}(),? \*=! @** debería evitarse. Debido a la gramática de la información del sistema, los nombres de origen de datos y palabras clave no pueden contener la barra diagonal inversa (\\) caracteres. Para un ODBC 2. *x* controlador, las llaves son necesarias alrededor del valor de atributo para la palabra clave DRIVER.  
   
  Si todas las palabras clave se repite en la cadena de conexión de la solicitud de examen, el controlador utiliza el valor asociado a la primera aparición de la palabra clave. Si el **DSN** y **controlador** palabras clave se incluye en la misma cadena de conexión de la solicitud de exploración, el Administrador de controladores y el controlador usan la palabra clave aparece en primer lugar.  
   
@@ -139,7 +138,7 @@ SQLRETURN SQLBrowseConnect(
  *ODBC-attribute-keyword* = {`UID` &#124; `PWD`}[`:`*localized-identifier*] *driver-defined-attribute-keyword* ::= *identifier*[`:`*localized-identifier*] *attribute-value* ::= `{` *attribute-value-list* `}` &#124; `?` (The braces are literal; they are returned by the driver.)<br>
  *lista de valores de atributo* :: = *cadena de caracteres* [`:`*cadena de caracteres localizados*] &#124; *cadena de caracteres* [`:` *cadena de caracteres localizados*] `,` *lista de valores de atributo*<br>
   
- donde *cadena de caracteres* y *cadena de caracteres localizados* tiene cero o más caracteres; *identificador* y *identificador adaptado* tiene uno o más caracteres; *palabra clave de atributo* no distingue mayúsculas de minúsculas; y *atributo-valor* puede distinguir mayúsculas de minúsculas. ¿Debido a la conexión de cadena e inicialización gramática, palabras clave, localizados identificadores de archivos y valores de atributo que contienen los caracteres **[] {} (),? \*=! @** debería evitarse. Debido a la gramática de la información del sistema, los nombres de origen de datos y palabras clave no pueden contener la barra diagonal inversa (\\) caracteres.  
+ donde *cadena de caracteres* y *cadena de caracteres localizados* tiene cero o más caracteres; *identificador* y *identificador adaptado* tiene uno o más caracteres; *palabra clave de atributo* no distingue mayúsculas de minúsculas; y *atributo-valor* puede distinguir mayúsculas de minúsculas. ¿Debido a la conexión de cadena e inicialización gramática, palabras clave, localizados identificadores de archivos y valores de atributo que contienen los caracteres **[]{}(),? \*=! @** debería evitarse. Debido a la gramática de la información del sistema, los nombres de origen de datos y palabras clave no pueden contener la barra diagonal inversa (\\) caracteres.  
   
  Se utiliza la sintaxis de cadena de conexión de resultados de exploración según las siguientes reglas semánticas:  
   

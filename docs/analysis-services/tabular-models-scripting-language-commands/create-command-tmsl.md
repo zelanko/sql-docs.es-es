@@ -1,35 +1,35 @@
 ---
 title: Crear un comando (TMSL) | Documentos de Microsoft
-ms.custom: 
+ms.custom: ''
 ms.date: 05/30/2017
 ms.prod: analysis-services
 ms.prod_service: analysis-services, azure-analysis-services
-ms.service: 
-ms.component: 
-ms.reviewer: 
+ms.service: ''
+ms.component: ''
+ms.reviewer: ''
 ms.suite: pro-bi
-ms.technology: 
-ms.tgt_pltfrm: 
+ms.technology: ''
+ms.tgt_pltfrm: ''
 ms.topic: reference
 ms.assetid: e3024f89-ebfa-47e4-9893-708f379fd9b8
-caps.latest.revision: "11"
+caps.latest.revision: 11
 author: Minewiskan
 ms.author: owend
 manager: kfile
-ms.workload: Inactive
-ms.openlocfilehash: 98af912235d950e787a925ce751fc1df5d1fa6bf
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
-ms.translationtype: MT
+ms.openlocfilehash: 09e7b9665aa2b441a4863ae96f6c2f9a135393eb
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="create-command-tmsl"></a>Crear un comando (TMSL)
-[!INCLUDE[ssas-appliesto-sqlas-aas](../../includes/ssas-appliesto-sqlas-aas.md)]Crea el objeto especificado y todos los objetos descendientes que se especifican. Si el objeto ya existe, el comando genera un error.  
+[!INCLUDE[ssas-appliesto-sqlas-aas](../../includes/ssas-appliesto-sqlas-aas.md)]
+  Crea el objeto especificado y todos los objetos descendientes que se especifican. Si el objeto ya existe, el comando genera un error.  
   
 ## <a name="request"></a>Solicitud  
  La estructura de la solicitud varía según el objeto. Un objeto que es un elemento primario debe incluir todos sus elementos secundarios, aunque no se requieren las definiciones de objeto completo de elementos del mismo nivel y elementos primarios.  
   
- [Objeto de base de datos &#40; TMSL &#41; ](../../analysis-services/tabular-models-scripting-language-objects/database-object-tmsl.md) Agregar una base de datos a un servidor.  
+ [Objeto de base de datos &#40;TMSL&#41; ](../../analysis-services/tabular-models-scripting-language-objects/database-object-tmsl.md) agregar una base de datos a un servidor.  
   
 ```  
 {   
@@ -51,7 +51,7 @@ ms.lasthandoff: 01/08/2018
 }  
 ```  
   
- [Objeto de orígenes de datos &#40; TMSL &#41;](../../analysis-services/tabular-models-scripting-language-objects/datasources-object-tmsl.md)  
+ [Objeto de orígenes de datos &#40;TMSL&#41;](../../analysis-services/tabular-models-scripting-language-objects/datasources-object-tmsl.md)  
   
 ```  
 {  
@@ -75,7 +75,7 @@ ms.lasthandoff: 01/08/2018
 }  
 ```  
   
- [Objeto de tablas &#40; TMSL &#41; ](../../analysis-services/tabular-models-scripting-language-objects/tables-object-tmsl.md) Agregar columnas a una tabla.  
+ [Tables, objeto &#40;TMSL&#41; ](../../analysis-services/tabular-models-scripting-language-objects/tables-object-tmsl.md) agregar columnas a una tabla.  
   
 ```  
 {   
@@ -93,7 +93,7 @@ ms.lasthandoff: 01/08/2018
 }   
 ```  
   
- [Objeto de particiones &#40; TMSL &#41; ](../../analysis-services/tabular-models-scripting-language-objects/partitions-object-tmsl.md) Agregar una partición a un objeto de la tabla primaria.  
+ [Objeto de particiones &#40;TMSL&#41; ](../../analysis-services/tabular-models-scripting-language-objects/partitions-object-tmsl.md) agregar una partición a un objeto de la tabla primaria.  
   
 ```  
 {  
@@ -113,7 +113,7 @@ ms.lasthandoff: 01/08/2018
 }  
 ```  
   
- [Objeto de roles &#40; TMSL &#41; ](../../analysis-services/tabular-models-scripting-language-objects/roles-object-tmsl.md) Agregar como mínimo un rol a una base de datos, pero sin pertenencia o filtros.  
+ [Objeto de los roles &#40;TMSL&#41; ](../../analysis-services/tabular-models-scripting-language-objects/roles-object-tmsl.md) agregar como mínimo un rol a una base de datos, pero sin pertenencia o filtros.  
   
 ```  
 {  
@@ -170,7 +170,7 @@ ms.lasthandoff: 01/08/2018
 ```  
   
 ## <a name="usage-endpoints"></a>Uso (extremos)  
- Este elemento de comando se utiliza en una instrucción de la [Execute Method &#40; XMLA &#41; ](../../analysis-services/xmla/xml-elements-methods-execute.md) llamada a través de un punto de conexión XMLA, expuesto de las maneras siguientes:  
+ Este elemento de comando se utiliza en una instrucción de la [Execute Method &#40;XMLA&#41; ](../../analysis-services/xmla/xml-elements-methods-execute.md) llamada a través de un punto de conexión XMLA, expuesto de las maneras siguientes:  
   
 -   Como una ventana XMLA en SQL Server Management Studio (SSMS)  
   
@@ -180,7 +180,7 @@ ms.lasthandoff: 01/08/2018
   
  Puede generar un script listos para su uso para este comando de SSMS.  Por ejemplo, haga clic en una base de datos > **Script** > **base de datos de secuencia de comandos como** > **CREATE To**.  
   
- El [ \[MS-SSAS-T\]: QL Server Tabular de Analysis Services (protocolo técnica de SQL Server)](http://go.microsoft.com/fwlink/p/?LinkId=784855) documento incluye sección 3.1.5.2.2 que describe la estructura de comandos de metadatos tabulares de JSON y objetos. Actualmente, dicho documento tratan comandos y las funciones que aún no implementados en el script de TMSL. Consulte el tema ([Tabular Model Scripting Language &#40; TMSL &#41; Hacer referencia a](../../analysis-services/tabular-model-scripting-language-tmsl-reference.md)) para obtener información sobre lo que es compatible.  
+ El [ \[MS-SSAS-T\]: QL Server Tabular de Analysis Services (protocolo técnica de SQL Server)](http://go.microsoft.com/fwlink/p/?LinkId=784855) documento incluye sección 3.1.5.2.2 que describe la estructura de comandos de metadatos tabulares de JSON y objetos. Actualmente, dicho documento tratan comandos y las funciones que aún no implementados en el script de TMSL. Consulte el tema ([Tabular Model Scripting Language &#40;TMSL&#41; referencia](../../analysis-services/tabular-model-scripting-language-tmsl-reference.md)) para obtener información sobre lo que es compatible.  
 
 ## <a name="see-also"></a>Vea también  
  [Tabular Model Scripting Language &#40;TMSL&#41; Reference (Referencia de Tabular Model Scripting Language [TMSL])](../../analysis-services/tabular-model-scripting-language-tmsl-reference.md)  

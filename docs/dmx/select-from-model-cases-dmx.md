@@ -25,12 +25,11 @@ caps.latest.revision: 55
 author: Minewiskan
 ms.author: owend
 manager: erikre
-ms.workload: Inactive
-ms.openlocfilehash: b40b75f21b77e6dd17cf426be3ea70fe05ac0757
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
-ms.translationtype: MT
+ms.openlocfilehash: 3210dbcbd8453769d4edb675a04c775e72784dd1
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="select-from-ltmodelgtcases-dmx"></a>SELECT FROM &lt;modelo&gt;. CASOS (DMX)
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
@@ -42,7 +41,7 @@ ms.lasthandoff: 01/08/2018
 > [!NOTE]  
 >  En Extensiones de minería de datos (DMX), solo se puede habilitar la obtención de detalles al crear el modelo de minería de datos. Puede agregar la obtención de detalles a un modelo existente utilizando [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)], pero se debe volver a procesar el modelo antes de poder ver o consultar los casos.  
   
- Para obtener más información acerca de cómo habilitar la obtención de detalles, vea [CREATE MINING MODEL &#40; DMX &#41;](../dmx/create-mining-model-dmx.md), [SELECT INTO &#40; DMX &#41;](../dmx/select-into-dmx.md), y [ALTER MINING STRUCTURE &#40; DMX &#41;](../dmx/alter-mining-structure-dmx.md).  
+ Para obtener más información acerca de cómo habilitar la obtención de detalles, vea [CREATE MINING MODEL &#40;DMX&#41;](../dmx/create-mining-model-dmx.md), [SELECT INTO &#40;DMX&#41;](../dmx/select-into-dmx.md), y [ALTER MINING STRUCTURE &#40;DMX&#41;](../dmx/alter-mining-structure-dmx.md).  
   
 ## <a name="syntax"></a>Sintaxis  
   
@@ -64,7 +63,7 @@ SELECT [FLATTENED] [TOP <n>] <expression list> FROM <model>.CASES
  *model*  
  Identificador de modelo.  
   
- *expresión de condición*  
+ *Expresión de condición*  
  Condición para restringir los valores que devuelve la lista de columnas.  
   
  *expression*  
@@ -73,9 +72,9 @@ SELECT [FLATTENED] [TOP <n>] <expression list> FROM <model>.CASES
 ## <a name="remarks"></a>Comentarios  
  Si la obtención de detalles está habilitada en la estructura y en el modelo de minería de datos, los usuarios que sean miembros de un rol que tenga los permisos de obtención de detalles en la estructura y en el modelo podrán tener acceso a las columnas de la estructura de minería de datos que no están incluidas en el modelo de minería de datos. Por lo tanto, para proteger datos confidenciales o personales, debería crear la vista del origen de datos para enmascarar la información personal y conceder **AllowDrillthrough** permiso en una estructura de minería de datos solo cuando sea necesario.  
   
- El [Lag &#40; DMX &#41;](../dmx/lag-dmx.md) función puede utilizarse con modelos de serie temporal para devolver o filtrar en el intervalo de tiempo entre cada caso y la hora de inicio.  
+ El [Lag &#40;DMX&#41; ](../dmx/lag-dmx.md) función puede utilizarse con modelos de serie temporal para devolver o filtrar en el intervalo de tiempo entre cada caso y la hora de inicio.  
   
- Mediante el [IsInNode &#40; DMX &#41;](../dmx/isinnode-dmx.md) funcionando en el **donde** cláusula solo devuelve casos que están asociados con el nodo que se especifica mediante la columna NODE_UNIQUE_NAME del conjunto de filas de esquema.  
+ Mediante el [IsInNode &#40;DMX&#41; ](../dmx/isinnode-dmx.md) funcionando en el **donde** cláusula solo devuelve casos que están asociados con el nodo que se especifica mediante la columna NODE_UNIQUE_NAME del conjunto de filas de esquema.  
   
 ## <a name="examples"></a>Ejemplos  
  Los ejemplos siguientes se basan en la estructura de minería de datos Targeted Mailing, que se basa en el [!INCLUDE[ssSampleDBDWobject](../includes/sssampledbdwobject-md.md)]base de datos y sus modelos de minería de datos asociados. Para obtener más información, consulte [Tutorial básico de minería de datos](http://msdn.microsoft.com/library/6602edb6-d160-43fb-83c8-9df5dddfeb9c).  
@@ -101,12 +100,12 @@ AND IsInNode('002')
  Para devolver una columna de estructura, los permisos de obtención de detalles deben estar habilitados en el modelo de minería de datos y en la estructura de minería de datos.  
   
 > [!NOTE]  
->  No todos los tipos de modelos de minería de datos admiten la obtención de detalles. Para obtener información acerca de los modelos que admiten la obtención de detalles, vea [consultas de obtención de detalles &#40; minería de datos &#41;](../analysis-services/data-mining/drillthrough-queries-data-mining.md).  
+>  No todos los tipos de modelos de minería de datos admiten la obtención de detalles. Para obtener información acerca de los modelos que admiten la obtención de detalles, vea [consultas de obtención de detalles &#40;minería de datos&#41;](../analysis-services/data-mining/drillthrough-queries-data-mining.md).  
   
 ## <a name="see-also"></a>Vea también  
- [SELECT &#40; DMX &#41;](../dmx/select-dmx.md)   
- [Extensiones de minería de datos &#40; DMX &#41; Instrucciones de definición de datos](../dmx/dmx-statements-data-definition.md)   
- [Extensiones de minería de datos &#40; DMX &#41; Instrucciones de manipulación de datos](../dmx/dmx-statements-data-manipulation.md)   
- [Referencia de instrucciones de Extensiones de minería de datos &#40;DMX&#41;](../dmx/data-mining-extensions-dmx-statements.md)  
+ [SELECCIONE &AMP;#40;DMX&AMP;#41;](../dmx/select-dmx.md)   
+ [Extensiones de minería de datos &#40;DMX&#41; las instrucciones de definición de datos](../dmx/dmx-statements-data-definition.md)   
+ [Extensiones de minería de datos &#40;DMX&#41; instrucciones de manipulación de datos](../dmx/dmx-statements-data-manipulation.md)   
+ [Extensiones de minería de datos & #40; DMX & #41; Referencia de instrucciones](../dmx/data-mining-extensions-dmx-statements.md)  
   
   

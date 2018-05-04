@@ -11,7 +11,7 @@ ms.suite: sql
 ms.technology:
 - drivers
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - interoperability [ODBC], feature support and variability
 - interoperability [ODBC], writing interoperable applications
@@ -22,12 +22,11 @@ caps.latest.revision: 5
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: 8a0b70251acdfebbe05bb0900af8be7ea25b6fa6
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
-ms.translationtype: MT
+ms.openlocfilehash: 7623f9e2674564a13061d144f599f974a3020a95
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="writing-an-interoperable-application"></a>Escribir una aplicación Interoperable
 Cada vez que una aplicación usa el mismo código con más de un controlador, que el código debe ser interoperable entre los controladores. En la mayoría de los casos, esto es una tarea sencilla. Por ejemplo, el código para capturar las filas con un cursor de sólo avance es el mismo para todos los controladores. En algunos casos, esto puede ser más difícil. Por ejemplo, el código para crear identificadores para su uso en instrucciones SQL debe tener en cuenta el caso del identificador, comillas y las convenciones de nomenclatura de tres partes, dos partes y una parte.  

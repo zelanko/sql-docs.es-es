@@ -18,15 +18,15 @@ caps.latest.revision: 30
 author: Minewiskan
 ms.author: owend
 manager: kfile
-ms.workload: Inactive
-ms.openlocfilehash: 901c9935629b584a0eb9c1fa4320fe590efa5e3d
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
-ms.translationtype: MT
+ms.openlocfilehash: 7dd96ebdaea1b927c790797f214861805f052601
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="notification-events-data-columns"></a>Columnas de datos de eventos de notificación
-[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]Eventos de notificación son aquéllos no provocados directamente por los usuarios de [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]. Por ejemplo, las notificaciones tienen lugar porque los usuarios actualizan tablas subyacentes para el almacenamiento automático en la caché.  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
+  Los eventos de notificación son aquéllos no provocados directamente por los usuarios de [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]. Por ejemplo, las notificaciones tienen lugar porque los usuarios actualizan tablas subyacentes para el almacenamiento automático en la caché.  
   
  La categoría de eventos Eventos de notificación tiene la siguiente clase de eventos:  
   
@@ -46,7 +46,7 @@ ms.lasthandoff: 01/08/2018
 |CurrentTime|2|5|Contiene la hora actual del evento de notificación, si está disponible. Para filtrar, los formatos esperados son "AAAA-MM-DD" y "AAAA-MM-DD HH:MM:SS".|  
 |StartTime|3|5|Contiene la hora a la que se inició el evento, si está disponible. Para filtrar, los formatos esperados son "AAAA-MM-DD" y "AAAA-MM-DD HH:MM:SS".|  
 |EndTime|4|5|Contiene la hora a la que finalizó el evento. Esta columna no se llena para las clases de eventos de inicio, como SQL:BatchStarting o SP:Starting. Para filtrar, los formatos esperados son "AAAA-MM-DD" y "AAAA-MM-DD HH:MM:SS".|  
-|Duration|5|2|Contiene el tiempo (en milisegundos) que duró el evento.|  
+|Duración|5|2|Contiene el tiempo (en milisegundos) que duró el evento.|  
 |IntegerData|10|1|Contiene los datos enteros asociados al evento de notificación. Cuando la columna EventSubclass es 8, los valores son:<br /><br /> 1 = Creado<br /><br /> 2 = Eliminado<br /><br /> 3 = Propiedades del objeto cambiadas<br /><br /> 4 = Propiedades cambiadas de los elementos secundarios del objeto<br /><br /> 6 = Elementos secundarios agregados<br /><br /> 7 = Elementos secundarios eliminados<br /><br /> 8 = Objeto totalmente procesado<br /><br /> 9 = Objeto parcialmente procesado<br /><br /> 10 = Objeto no procesado<br /><br /> 11 = Objeto totalmente optimizado<br /><br /> 12 = Objeto parcialmente optimizado<br /><br /> 13 = Objeto no optimizado|  
 |ObjectID|11|8|Contiene el identificador de objeto (valor de cadena) para el cual se ha emitido esta notificación.|  
 |ObjectType|12|1|Contiene el tipo de objeto asociado al evento de notificación.|  
@@ -83,6 +83,6 @@ ms.lasthandoff: 01/08/2018
 |ServerName|43|8|Contiene el nombre de la instancia de [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] en la que se ha producido el evento de notificación.|  
   
 ## <a name="see-also"></a>Vea también  
- [Notification Events Event Category](../../analysis-services/trace-events/notification-events-event-category.md)  
+ [Categoría de eventos de eventos de notificación](../../analysis-services/trace-events/notification-events-event-category.md)  
   
   

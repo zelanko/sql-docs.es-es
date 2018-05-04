@@ -21,12 +21,11 @@ caps.latest.revision: 14
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: 51cd8fc601b8ecb14f680ee7af8d4f3879647985
-ms.sourcegitcommit: bb044a48a6af9b9d8edb178dc8c8bd5658b9ff68
-ms.translationtype: MT
+ms.openlocfilehash: 8511d6a6f5ab625e78d1c86c79cce87122a4ed13
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/18/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="ado-events-model-example-vc"></a>Ejemplo de modelo de eventos de ADO (VC ++)
 La sección de Visual C++ de [creación de instancias de eventos de ADO según el lenguaje](../../../ado/guide/data/ado-event-instantiation-by-language.md) ofrece una descripción general de cómo crear una instancia del modelo de eventos de ADO. Éste es un ejemplo concreto de una instancia del modelo de eventos dentro del entorno creado por el **#import** directiva.  

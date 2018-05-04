@@ -11,7 +11,7 @@ ms.suite: sql
 ms.technology:
 - drivers
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - ODBC [ODBC], database access
 - SQL [ODBC], database access
@@ -24,12 +24,11 @@ caps.latest.revision: 5
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: ef59162739835fa2e6bdd0cba6bb4f4c648901cb
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
-ms.translationtype: MT
+ms.openlocfilehash: e1e75f97ded8f999d5fa945e0aafb04322d51540
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="standard-gateway"></a>Puerta de enlace estándar
 A *puerta de enlace* es un fragmento de software que hace que un DBMS que se parezca a otro. Es decir, la puerta de enlace acepta la interfaz de programación, la gramática SQL y protocolo de un DBMS único de flujo de datos y lo convierte a la interfaz de programación, gramática SQL, y protocolo del DBMS oculto de flujo de datos. Por ejemplo, las aplicaciones escritas para usar Microsoft® SQL Server™ pueden también tener acceso a datos de DB2 a través de la puerta de enlace de Micro Decisionware DB2; Este producto hace DB2 que se parezca a SQL Server. Si se usan las puertas de enlace, se debe escribir una puerta de enlace diferente para cada base de datos de destino.  

@@ -11,7 +11,7 @@ ms.suite: sql
 ms.technology:
 - drivers
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 apiname:
 - SQLFreeEnv
 apilocation:
@@ -26,22 +26,21 @@ caps.latest.revision: 10
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: 802dfd5b5f95a615cca743299b264dd93afe4798
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
-ms.translationtype: MT
+ms.openlocfilehash: b2b7a037fee8f70704eb33c8eb4be5c1c5293270
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="sqlfreeenv-function"></a>SQLFreeEnv (función)
 **Conformidad**  
  Versión introdujo: Cumplimiento de estándares 1.0 de ODBC: en desuso  
   
  **Resumen**  
- En ODBC 3*.x*, la función de ODBC 2.0 **SQLFreeEnv** se ha reemplazado por **SQLFreeHandle**. Para obtener más información, consulte [SQLFreeHandle](../../../odbc/reference/syntax/sqlfreehandle-function.md).  
+ En ODBC 3 *.x*, la función de ODBC 2.0 **SQLFreeEnv** se ha reemplazado por **SQLFreeHandle**. Para obtener más información, consulte [SQLFreeHandle](../../../odbc/reference/syntax/sqlfreehandle-function.md).  
   
 > [!NOTE]  
->  Para obtener más información sobre lo que el Administrador de controladores se asigna esta función cuando una API ODBC 2*.x* aplicación está trabajando con una aplicación ODBC 3*.x* controladores, consulte [asignación de funciones en desuso](../../../odbc/reference/appendixes/mapping-deprecated-functions.md)en Apéndice G: controlador directrices para la compatibilidad con versiones anteriores.  
+>  Para obtener más información sobre lo que el Administrador de controladores se asigna esta función cuando una API ODBC 2 *.x* aplicación está trabajando con una aplicación ODBC 3 *.x* controladores, consulte [asignación de funciones en desuso](../../../odbc/reference/appendixes/mapping-deprecated-functions.md)en Apéndice G: controlador directrices para la compatibilidad con versiones anteriores.  
   
 ## <a name="see-also"></a>Vea también  
  [Referencia de la API de ODBC](../../../odbc/reference/syntax/odbc-api-reference.md)   

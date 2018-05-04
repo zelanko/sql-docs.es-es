@@ -26,12 +26,11 @@ caps.latest.revision: 11
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: e7063e8dd77058ea4cbe05b925a1de29cfe63f00
-ms.sourcegitcommit: bb044a48a6af9b9d8edb178dc8c8bd5658b9ff68
-ms.translationtype: MT
+ms.openlocfilehash: da4bdd6e13cea805ef4889b57955e6dee199ed9e
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/18/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="willmove-and-movecomplete-events-ado"></a>Eventos WillMove y MoveComplete (ADO)
 El **WillMove** evento se le llama antes de que una operación pendiente cambie la posición actual en el [conjunto de registros](../../../ado/reference/ado-api/recordset-object-ado.md). El **MoveComplete** eventos se llama después de la posición actual en el **Recordset** cambios.  

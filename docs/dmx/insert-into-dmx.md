@@ -32,17 +32,16 @@ caps.latest.revision: 49
 author: Minewiskan
 ms.author: owend
 manager: erikre
-ms.workload: Inactive
-ms.openlocfilehash: 70b2acdd5370be93f4fca9a5270a5b9951305248
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
-ms.translationtype: MT
+ms.openlocfilehash: 9ee2a89f60504719b74eb340f9399b8622d06500
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="insert-into-dmx"></a>INSERT INTO (DMX)
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
 
-  Procesa el objeto de minería de datos especificado. Para obtener más información acerca del procesamiento de modelos de minería de datos y estructuras de minería de datos, vea [procesamiento requisitos y consideraciones &#40; minería de datos &#41;](../analysis-services/data-mining/processing-requirements-and-considerations-data-mining.md).  
+  Procesa el objeto de minería de datos especificado. Para obtener más información acerca del procesamiento de modelos de minería de datos y estructuras de minería de datos, vea [consideraciones y requisitos de procesamiento &#40;minería de datos&#41;](../analysis-services/data-mining/processing-requirements-and-considerations-data-mining.md).  
   
  Si se especifica una estructura de minería de datos, la instrucción procesa la estructura de minería de datos y todos sus modelos de minería de datos asociados. Si se especifica un modelo de minería de datos, la instrucción procesa solamente el modelo de minería de datos.  
   
@@ -72,7 +71,7 @@ INSERT INTO [MINING MODEL]|[MINING STRUCTURE] <model>|<structure>.COLUMN_VALUES 
   
  Mediante el uso de la segunda forma de sintaxis, INSERT INTO*\<objeto >*. COLUMN_VALUES, puede insertar datos directamente en las columnas del modelo sin entrenar el modelo. Este método proporciona datos de columna al modelo de forma concisa y ordenada que resultan útiles a la hora de trabajar con conjuntos de datos que contienen jerarquías o columnas ordenadas.  
   
- Si usa **INSERT INTO** con un modelo de minería de datos o una estructura de minería de datos y deje desactivada la \<asignar columnas del modelo > y \<consulta de origen de datos > argumentos, la instrucción se comporta como **ProcessDefault**, con enlaces que ya existen. La instrucción devuelve un error cuando no existen enlaces. Para obtener más información acerca de **ProcessDefault**, consulte [opciones de procesamiento y configuración de &#40; Analysis Services &#41; ](../analysis-services/multidimensional-models/processing-options-and-settings-analysis-services.md). En el siguiente ejemplo se muestra la sintaxis:  
+ Si usa **INSERT INTO** con un modelo de minería de datos o una estructura de minería de datos y deje desactivada la \<asignar columnas del modelo > y \<consulta de origen de datos > argumentos, la instrucción se comporta como **ProcessDefault**, con enlaces que ya existen. La instrucción devuelve un error cuando no existen enlaces. Para obtener más información acerca de **ProcessDefault**, consulte [opciones de procesamiento y la configuración &#40;Analysis Services&#41;](../analysis-services/multidimensional-models/processing-options-and-settings-analysis-services.md). En el siguiente ejemplo se muestra la sintaxis:  
   
 ```  
 INSERT INTO [MINING MODEL] <model>  
@@ -88,7 +87,7 @@ INSERT INTO [MINING MODEL] <model>
 ||La estructura de minería de datos no está procesada.|Se procesan el modelo y la estructura de minería de datos.|  
 ||La estructura de minería de datos contiene modelos de minería de datos adicionales.|Se produce un error en el proceso. Deberá volver a procesar la estructura y los modelos de minería de datos asociados.|  
 |INSERT INTO MINING STRUCTURE*\<estructura >*|La estructura de minería de datos está procesada o sin procesar.|Se procesan la estructura de minería de datos y los modelos de minería de datos asociados.|  
-|INSERT INTO MINING MODEL*\<modelo >* que contiene una consulta de origen<br /><br /> o Administrador de configuración de<br /><br /> INSERT INTO MINING STRUCTURE*\<estructura >* que contiene una consulta de origen|La estructura o el modelo ya tienen contenido.|Se produce un error en el proceso. Debe borrar los objetos antes de realizar esta operación, mediante el uso de [DELETE &#40; DMX &#41;](../dmx/delete-dmx.md).|  
+|INSERT INTO MINING MODEL*\<modelo >* que contiene una consulta de origen<br /><br /> o bien<br /><br /> INSERT INTO MINING STRUCTURE*\<estructura >* que contiene una consulta de origen|La estructura o el modelo ya tienen contenido.|Se produce un error en el proceso. Debe borrar los objetos antes de realizar esta operación, mediante el uso de [eliminar &#40;DMX&#41;](../dmx/delete-dmx.md).|  
   
 ## <a name="mapped-model-columns"></a>Columnas de modelo asignadas  
  Mediante el uso de la \<asignar columnas del modelo > elemento, puede asignar las columnas del origen de datos a las columnas en el modelo de minería de datos. El \<asignar columnas del modelo > elemento tiene el formato siguiente:  
@@ -114,7 +113,7 @@ INSERT INTO [MINING MODEL] <model>
   
 -   Cualquier consulta de [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] que devuelva un conjunto de filas  
   
- Para obtener más información acerca de los tipos de origen de datos, vea [&#60; consulta de origen de datos &#62;](../dmx/source-data-query.md).  
+ Para obtener más información acerca de los tipos de origen de datos, vea [ &#60;consulta de origen de datos&#62;](../dmx/source-data-query.md).  
   
 ## <a name="basic-example"></a>Ejemplo básico  
  En el ejemplo siguiente se utiliza **OPENQUERY** para entrenar un modelo Bayes Naive en función de los datos de correo directo en el [!INCLUDE[ssSampleDBDWobject](../includes/sssampledbdwobject-md.md)] base de datos.  
@@ -144,8 +143,8 @@ AS [Models]
 ```  
   
 ## <a name="see-also"></a>Vea también  
- [Extensiones de minería de datos &#40; DMX &#41; Instrucciones de definición de datos](../dmx/dmx-statements-data-definition.md)   
- [Extensiones de minería de datos &#40; DMX &#41; Instrucciones de manipulación de datos](../dmx/dmx-statements-data-manipulation.md)   
- [Referencia de instrucciones de Extensiones de minería de datos &#40;DMX&#41;](../dmx/data-mining-extensions-dmx-statements.md)  
+ [Extensiones de minería de datos &#40;DMX&#41; las instrucciones de definición de datos](../dmx/dmx-statements-data-definition.md)   
+ [Extensiones de minería de datos &#40;DMX&#41; instrucciones de manipulación de datos](../dmx/dmx-statements-data-manipulation.md)   
+ [Extensiones de minería de datos & #40; DMX & #41; Referencia de instrucciones](../dmx/data-mining-extensions-dmx-statements.md)  
   
   

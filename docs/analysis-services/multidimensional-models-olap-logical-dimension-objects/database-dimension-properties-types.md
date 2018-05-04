@@ -1,50 +1,23 @@
 ---
-title: "Tipos de dimensión | Documentos de Microsoft"
-ms.custom: 
-ms.date: 03/14/2017
-ms.prod: analysis-services
-ms.prod_service: analysis-services
-ms.service: 
-ms.component: 
-ms.reviewer: 
-ms.suite: pro-bi
-ms.technology: 
-ms.tgt_pltfrm: 
-ms.topic: reference
-applies_to:
-- SQL Server 2016 Preview
-helpviewer_keywords:
-- time dimensions [Analysis Services]
-- quantitative dimensions [Analysis Services]
-- BillOfMaterials dimension [Analysis Services]
-- geography dimensions
-- utility dimensions [Analysis Services]
-- channel dimensions
-- dimensions [Analysis Services], types
-- products dimensions [Analysis Services]
-- account dimensions [Analysis Services]
-- organization dimensions
-- currency dimensions [Analysis Services]
-- rates dimensions
-- promotion dimensions
-- scenario dimensions [Analysis Services]
-- customers dimensions [Analysis Services]
-- Type property
-ms.assetid: bd3195da-e762-4c98-b643-34c76e842343
-caps.latest.revision: 
-author: Minewiskan
+title: Tipos de dimensión | Documentos de Microsoft
+ms.date: 05/02/2018
+ms.prod: sql
+ms.technology: analysis-services
+ms.component: olap
+ms.topic: article
 ms.author: owend
+ms.reviewer: owend
+author: minewiskan
 manager: kfile
-ms.workload: Inactive
-ms.openlocfilehash: 7e870e18ae05b3daddf9e8230079bec87bb29e2d
-ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
+ms.openlocfilehash: c36b8c16acb2521c2472b1f4398cb68ea89952d2
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/15/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="database-dimension-properties---types"></a>Propiedades de dimensión de base de datos: tipos
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
-El **tipo** configuración de la propiedad proporciona información sobre el contenido de una dimensión a las aplicaciones cliente y servidor. En algunos casos, el **tipo** configuración solo se proporcionan instrucciones para las aplicaciones cliente y es opcional. En otros casos, como **cuentas** o **tiempo** dimensiones, el **tipo** la configuración de propiedad de la dimensión y sus atributos determina comportamientos específicos basados en servidor y puede ser necesario implementar ciertos comportamientos en el cubo. Por ejemplo, el **tipo** propiedad de una dimensión se puede establecer en **cuentas** para indicar a las aplicaciones cliente que la dimensión estándar contiene atributos de cuenta. Para obtener más información sobre el tiempo, cuenta y las dimensiones de moneda, vea [crear una dimensión de tipo de fecha](../../analysis-services/multidimensional-models/database-dimensions-create-a-date-type-dimension.md), [crear una cuenta financiera de dimensión de tipo de elementos primarios y secundarios](../../analysis-services/multidimensional-models/database-dimensions-finance-account-of-parent-child-type.md), y [crear una divisa tipo de dimensión](../../analysis-services/multidimensional-models/database-dimensions-create-a-currency-type-dimension.md).  
+  El **tipo** configuración de la propiedad proporciona información sobre el contenido de una dimensión a las aplicaciones cliente y servidor. En algunos casos, el **tipo** configuración solo se proporcionan instrucciones para las aplicaciones cliente y es opcional. En otros casos, como **cuentas** o **tiempo** dimensiones, el **tipo** la configuración de propiedad de la dimensión y sus atributos determina comportamientos específicos basados en servidor y puede ser necesario implementar ciertos comportamientos en el cubo. Por ejemplo, el **tipo** propiedad de una dimensión se puede establecer en **cuentas** para indicar a las aplicaciones cliente que la dimensión estándar contiene atributos de cuenta. Para obtener más información sobre el tiempo, cuenta y las dimensiones de moneda, vea [crear una dimensión de tipo de fecha](../../analysis-services/multidimensional-models/database-dimensions-create-a-date-type-dimension.md), [crear una cuenta financiera de dimensión de tipo de elementos primarios y secundarios](../../analysis-services/multidimensional-models/database-dimensions-finance-account-of-parent-child-type.md), y [crear una divisa tipo de dimensión](../../analysis-services/multidimensional-models/database-dimensions-create-a-currency-type-dimension.md).  
   
  La configuración predeterminada para el tipo de dimensión es **Regular**, que no hace suposiciones sobre el contenido de la dimensión. Esta es la configuración predeterminada para todas las dimensiones al definir inicialmente una dimensión a menos que especifique **tiempo** al definir la dimensión mediante el Asistente para dimensiones. También se debe dejar **Regular** como el tipo de dimensión si el Asistente para dimensiones no muestra un tipo adecuado para el tipo de dimensión.  
   
@@ -71,6 +44,6 @@ El **tipo** configuración de la propiedad proporciona información sobre el con
   
 ## <a name="see-also"></a>Vea también  
  [Crear una dimensión mediante el uso de una tabla existente](../../analysis-services/multidimensional-models/create-a-dimension-by-using-an-existing-table.md)   
- [Dimensiones &#40; Analysis Services - datos multidimensionales &#41;](../../analysis-services/multidimensional-models-olap-logical-dimension-objects/dimensions-analysis-services-multidimensional-data.md)  
+ [Dimensiones & #40; Analysis Services - datos multidimensionales & #41;](../../analysis-services/multidimensional-models-olap-logical-dimension-objects/dimensions-analysis-services-multidimensional-data.md)  
   
   

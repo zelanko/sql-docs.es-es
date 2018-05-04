@@ -11,7 +11,7 @@ ms.suite: sql
 ms.technology:
 - drivers
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - interoperability [ODBC], multiple active statements and connections
 - multiple active statements and connections [ODBC]
@@ -20,12 +20,11 @@ caps.latest.revision: 5
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: ccd501bb5ed41d1b8a841fd8e49a236fde69c586
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
-ms.translationtype: MT
+ms.openlocfilehash: 0853c5f691adceb3c8bdb9a7579dc5cbdc7345c3
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="multiple-active-statements-and-connections"></a>Varias instrucciones activas y las conexiones
 Algunos controladores y DBMS limitan el número de instrucciones y las conexiones que pueden estar activas al mismo tiempo. Estos números pueden ser tan pequeños como uno. Para obtener más información, vea las opciones SQL_MAX_CONCURRENT_ACTIVITIES y SQL_MAX_DRIVER_CONNECTIONS en el [SQLGetInfo](../../../odbc/reference/syntax/sqlgetinfo-function.md) descripción, de la función y [controla la instrucción](../../../odbc/reference/develop-app/statement-handles.md) y [ Identificadores de conexión](../../../odbc/reference/develop-app/connection-handles.md).

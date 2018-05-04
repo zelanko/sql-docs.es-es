@@ -29,15 +29,15 @@ caps.latest.revision: 16
 author: Minewiskan
 ms.author: owend
 manager: kfile
-ms.workload: Inactive
-ms.openlocfilehash: cf077a2eba1e1d37a52536e77815839795ac7849
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
-ms.translationtype: MT
+ms.openlocfilehash: 506f0333085f7eff46029d8f960e21d0fea13f7c
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="object-element-xmla"></a>Elemento Object (XMLA)
-[!INCLUDE[ssas-appliesto-sqlas-aas](../../../includes/ssas-appliesto-sqlas-aas.md)]Contiene una referencia de objeto utilizada por el elemento primario.  
+[!INCLUDE[ssas-appliesto-sqlas-aas](../../../includes/ssas-appliesto-sqlas-aas.md)]
+  Contiene una referencia de objeto usada por el elemento primario.  
   
 ## <a name="syntax"></a>Sintaxis  
   
@@ -52,18 +52,18 @@ ms.lasthandoff: 01/08/2018
 </Alter>  
 ```  
   
-## <a name="element-characteristics"></a>Características del elemento  
+## <a name="element-characteristics"></a>Características de los elementos  
   
-|Característica|Description|  
+|Característica|Descripción|  
 |--------------------|-----------------|  
-|Tipo y longitud de los datos|None|  
-|Valor predeterminado|None|  
-|Cardinalidad|Vea la siguiente tabla.|  
+|Tipo y longitud de los datos|Ninguno|  
+|Valor predeterminado|Ninguno|  
+|Cardinalidad|Vea la tabla siguiente.|  
   
 |Antecesor o elemento primario|Cardinalidad|  
 |------------------------|-----------------|  
-|[ALTER](../../../analysis-services/xmla/xml-elements-commands/create-element-xmla.md)|0-1: Elemento opcional que puede aparecer una y solo una vez.|  
-|Todos las demás|1-1: Elemento necesario que se produce una vez y solo una vez.|  
+|[ALTER](../../../analysis-services/xmla/xml-elements-commands/create-element-xmla.md)|0-1: Elemento opcional que puede aparecer solo una vez.|  
+|Todos los demás|1-1: Elemento necesario que se produce una vez y solo una vez.|  
   
 ## <a name="element-relationships"></a>Relaciones del elemento  
   
@@ -78,6 +78,6 @@ ms.lasthandoff: 01/08/2018
  Para **Alter** elementos, la instancia de [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] se usa como el objeto predeterminado si el **objeto** no se especifica el elemento.  
   
 ## <a name="see-also"></a>Vea también  
- [Propiedades &#40; XMLA &#41;](../../../analysis-services/xmla/xml-elements-properties/xml-elements-properties.md)  
+ [Propiedades & #40; XMLA & #41;](../../../analysis-services/xmla/xml-elements-properties/xml-elements-properties.md)  
   
   

@@ -18,15 +18,15 @@ caps.latest.revision: 21
 author: Minewiskan
 ms.author: owend
 manager: kfile
-ms.workload: Inactive
-ms.openlocfilehash: 2a11895ad8a966a95b9ea4b78fa78236bc3d88d9
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
-ms.translationtype: MT
+ms.openlocfilehash: 86340313bb0a2d490a3feff56ff778f044bee22e
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="session-events-data-columns"></a>Columnas de datos de Eventos de sesión
-[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]La categoría de eventos de eventos de sesión tiene la siguiente clase de evento:  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
+  La categoría de eventos Eventos de sesión tiene la siguiente clase de eventos:  
   
 |**Identificador del evento**|**Nombre del evento**|**Descripción del evento**|  
 |------------------|--------------------|---------------------------|  
@@ -57,7 +57,7 @@ ms.lasthandoff: 01/08/2018
 |---------------------|-------------------|---------------------|----------------------------|  
 |CurrentTime|2|5|Hora a la que se inició el evento, si está disponible. Para filtrar, los formatos esperados son "AAAA-MM-DD" y "AAAA-MM-DD HH:MM:SS".|  
 |StartTime|3|5|Hora a la que se inició el evento, si está disponible. Para filtrar, los formatos esperados son "AAAA-MM-DD" y "AAAA-MM-DD HH:MM:SS".|  
-|Duration|5|2|Tiempo (en milisegundos) de duración del evento.|  
+|Duración|5|2|Tiempo (en milisegundos) de duración del evento.|  
 |CPUTime|6|2|Cantidad de tiempo de CPU (en milisegundos) que utiliza el evento.|  
 |ConnectionID|25|1|Identificador único de la conexión.|  
 |DatabaseName|28|8|Nombre de la base de datos en la que se ejecuta la instrucción del usuario.|  

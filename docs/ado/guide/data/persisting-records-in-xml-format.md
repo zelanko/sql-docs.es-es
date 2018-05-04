@@ -23,12 +23,11 @@ caps.latest.revision: 17
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: ea27e9718ca2fd2814e950e0242625e8c78bb72d
-ms.sourcegitcommit: bb044a48a6af9b9d8edb178dc8c8bd5658b9ff68
-ms.translationtype: MT
+ms.openlocfilehash: 6b3e1c64a384fbf536eb0b3b80c030fb18549d6b
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/18/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="persisting-records-in-xml-format"></a>Almacenar registros en formato XML
 Al igual que con formato ADTG, **Recordset** persistencia en formato XML se implementa con el proveedor de persistencia de Microsoft OLE DB. Este proveedor genera un conjunto de filas de solo avance y solo lectura desde un archivo XML o una secuencia que contiene la información de esquema generada por ADO guardado. De forma similar, puede tardar un ADO **Recordset**, generar XML y guardarlo en un archivo o cualquier objeto que implementa el modelo COM **IStream** interfaz. (De hecho, un archivo es otro ejemplo de un objeto que admite **IStream**.) En las versiones 2.5 y versiones posteriores, ADO se basa en Microsoft XML Parser (MSXML) para cargar el XML en el **Recordset**; por lo tanto, MSXML se requiere.  

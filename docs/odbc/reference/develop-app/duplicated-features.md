@@ -11,7 +11,7 @@ ms.suite: sql
 ms.technology:
 - drivers
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - duplicated functions [ODBC]
 - compatibility [ODBC], duplicated functions
@@ -23,12 +23,11 @@ caps.latest.revision: 6
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: e834e0733e3f388658cf41e3a620b17f843e0c14
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
-ms.translationtype: MT
+ms.openlocfilehash: 55faa01b16331870c4539e290e218838e4d9e381
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="duplicated-features"></a>Características duplicados
 Las siguientes 2 de ODBC. *x* funciones se han duplicado por ODBC 3. *x* funciones. Como resultado, la API ODBC 2. *x* funciones están desusadas en ODBC 3. *x*. ODBC 3. *x* funciones se conocen como funciones de reemplazo.  
@@ -58,4 +57,4 @@ Las siguientes 2 de ODBC. *x* funciones se han duplicado por ODBC 3. *x* funcion
  [1] en la función **SQLExtendedFetch** funcionalidad duplicados; **SQLFetchScroll** proporciona la misma funcionalidad en ODBC 3. *x*. Sin embargo, el Administrador de controladores que no se asigna **SQLExtendedFetch** a **SQLFetchScroll** al ir en una aplicación ODBC 3. *x* controlador. Para obtener más información, consulte [lo que el Administrador de controladores hace](../../../odbc/reference/appendixes/what-the-driver-manager-does.md) en Apéndice G: controlador directrices para la compatibilidad con versiones anteriores. Asigna el Administrador de controladores **SQLFetchScroll** a **SQLExtendedFetch** al ir en una API ODBC 2. *x* controlador.  
   
 > [!NOTE]  
->  La función **SQLBindParam** es un caso especial. **SQLBindParam** funcionalidad duplicada. Esto no es una API ODBC 2*.x* función, pero las funciones que se encuentra en los estándares Open Group e ISO. La funcionalidad proporcionada por esta función es incluir completamente de **SQLBindParameter**. Como resultado, el Administrador de controladores se asigna una llamada a **SQLBindParam** a **SQLBindParameter** cuando el controlador subyacente es una aplicación ODBC 3. *x* controlador. Sin embargo, cuando el controlador subyacente es una API ODBC 2*.x* controlador, el Administrador de controladores no realiza esta asignación.
+>  La función **SQLBindParam** es un caso especial. **SQLBindParam** funcionalidad duplicada. Esto no es una API ODBC 2 *.x* función, pero las funciones que se encuentra en los estándares Open Group e ISO. La funcionalidad proporcionada por esta función es incluir completamente de **SQLBindParameter**. Como resultado, el Administrador de controladores se asigna una llamada a **SQLBindParam** a **SQLBindParameter** cuando el controlador subyacente es una aplicación ODBC 3. *x* controlador. Sin embargo, cuando el controlador subyacente es una API ODBC 2 *.x* controlador, el Administrador de controladores no realiza esta asignación.

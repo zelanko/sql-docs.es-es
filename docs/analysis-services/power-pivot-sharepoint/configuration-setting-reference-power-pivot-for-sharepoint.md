@@ -1,31 +1,23 @@
 ---
-title: "Configuración de referencia (PowerPivot para SharePoint) | Documentos de Microsoft"
-ms.custom: 
-ms.date: 03/14/2017
-ms.prod: analysis-services
-ms.prod_service: analysis-services
-ms.service: 
-ms.component: data-mining
-ms.reviewer: 
-ms.suite: pro-bi
-ms.technology: 
-ms.tgt_pltfrm: 
+title: Configuración de referencia (PowerPivot para SharePoint) | Documentos de Microsoft
+ms.date: 05/02/2018
+ms.prod: sql
+ms.technology: analysis-services
+ms.component: ppvt-sharepoint
 ms.topic: article
-ms.assetid: 3b57dd3f-7820-4ba8-b233-01dc68908273
-caps.latest.revision: 
-author: Minewiskan
 ms.author: owend
+ms.reviewer: owend
+author: minewiskan
 manager: kfile
-ms.workload: Inactive
-ms.openlocfilehash: b66f1bb71a185be8663e1fab732a208a0ca99d87
-ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
+ms.openlocfilehash: 4c3c7b19acab1757f8f691c6a32afdb96445b83a
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/15/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="configuration-setting-reference-power-pivot-for-sharepoint"></a>Referencia de las opciones de configuración (Power Pivot para SharePoint)
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
-En este tema se proporciona documentación de referencia para las opciones de configuración que usan las aplicaciones de servicio [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] en una granja de servidores de SharePoint. Si está utilizando un script de PowerShell para configurar un servidor, o si desea buscar información de un valor concreto, la información de este tema proporciona descripciones detalladas.  
+  En este tema se proporciona documentación de referencia para las opciones de configuración que usan las aplicaciones de servicio [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] en una granja de servidores de SharePoint. Si está utilizando un script de PowerShell para configurar un servidor, o si desea buscar información de un valor concreto, la información de este tema proporciona descripciones detalladas.  
   
  Los valores de configuración se establecen para cada aplicación de servicio [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] . Dentro de una granja de servidores, puede crear varias aplicaciones de servicios como medio de configurar instancias lógicas independientes de la misma instancia de servicio física. Los valores de configuración se almacenan en la base de datos de aplicación de [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] que se crea para cada aplicación de servicio que configure.  
   

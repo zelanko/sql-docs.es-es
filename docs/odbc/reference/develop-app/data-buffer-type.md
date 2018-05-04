@@ -11,7 +11,7 @@ ms.suite: sql
 ms.technology:
 - drivers
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - data types [ODBC], buffers
 - data buffers [ODBC], types
@@ -22,12 +22,11 @@ caps.latest.revision: 7
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: 815fcb78b64930cf911cfbb8c775cd5b13fc0966
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
-ms.translationtype: MT
+ms.openlocfilehash: b7f2f6e48c4fd01106b1ccf4a371d4e522587db1
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="data-buffer-type"></a>Tipo de búfer de datos
 El tipo de datos C de un búfer especificado por la aplicación. Con una variable simple, esto se produce cuando la aplicación asigna la variable. Con genéricos de memoria, es decir, memoria indicada por un puntero de tipo void, esto se produce cuando la aplicación convierte la memoria a un tipo determinado. El controlador detecta este tipo de dos maneras:  

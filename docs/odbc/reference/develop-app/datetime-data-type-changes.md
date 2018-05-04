@@ -11,7 +11,7 @@ ms.suite: sql
 ms.technology:
 - drivers
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - time data type [ODBC]
 - datetime data types [ODBC]
@@ -24,12 +24,11 @@ caps.latest.revision: 5
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: a2033cd5931278c9a05c62d907d7da73473902e8
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
-ms.translationtype: MT
+ms.openlocfilehash: 1fefa994f1902411e18419d8595a314f29ad0f58
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="datetime-data-type-changes"></a>Cambia el tipo de datos de fecha y hora
 En ODBC 3. *x*, los identificadores de fecha, hora y tipos de datos SQL de marca de tiempo han cambiado desde SQL_DATE, SQL_TIME y SQL_TIMESTAMP (con instancias de **#define** en el archivo de encabezado de 9, 10 y 11) a SQL_TYPE_DATE, SQL_TYPE_TIME y SQL_TYPE_TIMESTAMP (con instancias de **#define** en el archivo de encabezado de 91, 92 y 93), respectivamente. Los identificadores de tipo C correspondientes han cambiado desde SQL_C_DATE, SQL_C_TIME y SQL_C_TIMESTAMP SQL_C_TYPE_DATE, SQL_C_TYPE_TIME y SQL_C_TYPE_TIMESTAMP, respectivamente.  
@@ -38,7 +37,7 @@ En ODBC 3. *x*, los identificadores de fecha, hora y tipos de datos SQL de marca
   
  Estos cambios afectan a **SQLDescribeCol**, **SQLDescribeParam**, y **SQLColAttribute**; **SQLBindCol**, **SQLBindParameter**, y **SQLGetData**; y **SQLColumns**, **SQLGetTypeInfo** , **SQLProcedureColumns**, **SQLStatistics**, y **SQLSpecialColumns**.  
   
- La tabla siguiente muestra cómo ODBC 3*.x* el Administrador de controladores realiza la asignación de los tipos de datos de C de fecha, hora y marca de tiempo que se especificó en el *TargetType* argumentos de **SQLBindCol**y **SQLGetData** o en la *ValueType* argumento de **SQLBindParameter**.  
+ La tabla siguiente muestra cómo ODBC 3 *.x* el Administrador de controladores realiza la asignación de los tipos de datos de C de fecha, hora y marca de tiempo que se especificó en el *TargetType* argumentos de **SQLBindCol**y **SQLGetData** o en la *ValueType* argumento de **SQLBindParameter**.  
   
 |Tipo de datos<br /><br /> código escrito|2.*x* aplicación<br /><br /> 2.*x* controlador|2.*x* aplicación<br /><br /> 3.*x* controlador|3.*x* aplicación<br /><br /> 2.*x* controlador|3.*x* aplicación<br /><br /> 3.*x* controlador|  
 |--------------------------------|-----------------------------------|-----------------------------------|-----------------------------------|-----------------------------------|  
@@ -53,7 +52,7 @@ En ODBC 3. *x*, los identificadores de fecha, hora y tipos de datos SQL de marca
   
  [2] como resultado de esto, una aplicación ODBC 3. *x* aplicación trabajar con una aplicación ODBC 3. *x* controlador puede usar los códigos de fecha, hora o marca de tiempo devueltos en los conjuntos de resultados devueltos por las funciones de catálogo.  
   
- La tabla siguiente muestra cómo ODBC 3*.x* el Administrador de controladores realiza la asignación de los tipos de datos SQL de fecha, hora y marca de tiempo que se escribió en el *ParameterType* argumento de **SQLBindParameter**  o en la *DataType* argumento de **SQLGetTypeInfo**.  
+ La tabla siguiente muestra cómo ODBC 3 *.x* el Administrador de controladores realiza la asignación de los tipos de datos SQL de fecha, hora y marca de tiempo que se escribió en el *ParameterType* argumento de **SQLBindParameter**  o en la *DataType* argumento de **SQLGetTypeInfo**.  
   
 |Tipo de datos<br /><br /> código escrito|2.*x* aplicación<br /><br /> 2.*x* controlador|2.*x* aplicación<br /><br /> 3.*x* controlador|3.*x* aplicación<br /><br /> 2.*x* controlador|3.*x* aplicación<br /><br /> 3.*x* controlador|  
 |--------------------------------|-----------------------------------|-----------------------------------|-----------------------------------|-----------------------------------|  

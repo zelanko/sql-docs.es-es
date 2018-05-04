@@ -1,34 +1,23 @@
 ---
-title: "Crear y administrar una partición remota (Analysis Services) | Documentos de Microsoft"
-ms.custom: 
-ms.date: 03/14/2017
-ms.prod: analysis-services
-ms.prod_service: analysis-services
-ms.service: 
-ms.component: data-mining
-ms.reviewer: 
-ms.suite: pro-bi
-ms.technology: 
-ms.tgt_pltfrm: 
+title: Crear y administrar una partición remota (Analysis Services) | Documentos de Microsoft
+ms.date: 05/02/2018
+ms.prod: sql
+ms.technology: analysis-services
+ms.component: multidimensional-models
 ms.topic: article
-helpviewer_keywords:
-- partitions [Analysis Services], remote
-- remote partitions [Analysis Services]
-ms.assetid: 4322b5cb-af07-4e79-8ecb-59e1121a9eb8
-caps.latest.revision: 
-author: Minewiskan
 ms.author: owend
+ms.reviewer: owend
+author: minewiskan
 manager: kfile
-ms.workload: Inactive
-ms.openlocfilehash: d5793220e57962f801573e8201688dd1c03b9c0e
-ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
+ms.openlocfilehash: fb19c147010f0492122e88b21bd12efb43c05376
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/15/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="create-and-manage-a-remote-partition-analysis-services"></a>Crear y administrar una partición remota (Analysis Services)
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
-Al crear particiones en un grupo de medida, puede configurar una base de datos secundaria en una instancia remota de [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] como almacenamiento de partición.  
+  Al crear particiones en un grupo de medida, puede configurar una base de datos secundaria en una instancia remota de [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] como almacenamiento de partición.  
   
  Las particiones remotas para un cubo (denominado base de datos maestra) se almacenan en una base de datos dedicada de [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] en la instancia remota de [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] (denominada base de datos secundaria).  
   
@@ -131,7 +120,7 @@ Al crear particiones en un grupo de medida, puede configurar una base de datos s
 5.  En el servidor maestro: haga clic con el botón derecho en el nombre del cubo en el Explorador de soluciones, seleccione **Procesar** y procese totalmente el cubo.  
   
 ## <a name="administering-remote-partitions"></a>Administrar particiones remotas  
- [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] admite tanto el procesamiento paralelo como el procesamiento secuencial de las particiones remotas. La base de datos maestra, en la que se definieron las particiones, coordina las transacciones entre todas las instancias que participan en el procesamiento de las particiones de un cubo. A continuación se envían informes de procesamiento a todas las instancias que procesaron una partición.  
+ [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]admite el procesamiento de particiones remotas paralelo y secuencial. La base de datos maestra, en la que se definieron las particiones, coordina las transacciones entre todas las instancias que participan en el procesamiento de las particiones de un cubo. A continuación se envían informes de procesamiento a todas las instancias que procesaron una partición.  
   
  Un cubo que contenga particiones remotas puede administrarse junto con sus particiones en una sola instancia de [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]. Sin embargo, los metadatos de la partición remota solo se pueden ver y actualizar en la instancia de [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] en que se definieron la partición y su cubo primario. La partición remota no se puede ver ni actualizar en la instancia remota de [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)].  
   
@@ -139,6 +128,6 @@ Al crear particiones en un grupo de medida, puede configurar una base de datos s
 >  Aunque las bases de datos dedicadas al almacenamiento de particiones remotas no se exponen a los conjuntos de filas de esquema, las aplicaciones que usan Objetos de administración de análisis (AMO) pueden seguir detectando una base de datos dedicada mediante el uso del comando Discover de XML for Analysis. Cualquier comando CREATE o DELETE que se envíe directamente a una base de datos dedicada mediante un cliente TCP o HTTP se ejecutará correctamente, pero el servidor devolverá una advertencia que indica que la acción puede dañar la base de datos estrechamente administrada.  
   
 ## <a name="see-also"></a>Vea también  
- [Particiones &#40; Analysis Services - datos multidimensionales &#41;](../../analysis-services/multidimensional-models-olap-logical-cube-objects/partitions-analysis-services-multidimensional-data.md)  
+ [Particiones & #40; Analysis Services - datos multidimensionales & #41;](../../analysis-services/multidimensional-models-olap-logical-cube-objects/partitions-analysis-services-multidimensional-data.md)  
   
   

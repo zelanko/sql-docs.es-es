@@ -24,12 +24,11 @@ caps.latest.revision: 15
 author: Minewiskan
 ms.author: owend
 manager: erikre
-ms.workload: Inactive
-ms.openlocfilehash: 877f35988bceb86425b4517eb331ce526b9168f8
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
-ms.translationtype: MT
+ms.openlocfilehash: 792f2d89dc1f0cecc7aba0b001266b2308a14c9f
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="select-from-ltstructuregtcases"></a>SELECT FROM &lt;estructura&gt;. CASOS
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
@@ -65,7 +64,7 @@ SELECT [TOP n] <expression list> FROM <structure>.CASES
  *estructura*  
  Nombre de la estructura.  
   
- *expresión de condición*  
+ *Expresión de condición*  
  Condición para restringir los valores que devuelve la lista de columnas.  
   
  *expression*  
@@ -105,9 +104,9 @@ WHERE IsTestCase();
  Para devolver los casos de aprendizaje, utilice la función `IsTrainingCase()`.  
   
 ## <a name="see-also"></a>Vea también  
- [SELECT &#40; DMX &#41;](../dmx/select-dmx.md)   
- [Extensiones de minería de datos &#40; DMX &#41; Instrucciones de definición de datos](../dmx/dmx-statements-data-definition.md)   
- [Extensiones de minería de datos &#40; DMX &#41; Instrucciones de manipulación de datos](../dmx/dmx-statements-data-manipulation.md)   
- [Referencia de instrucciones de Extensiones de minería de datos &#40;DMX&#41;](../dmx/data-mining-extensions-dmx-statements.md)  
+ [SELECCIONE &AMP;#40;DMX&AMP;#41;](../dmx/select-dmx.md)   
+ [Extensiones de minería de datos &#40;DMX&#41; las instrucciones de definición de datos](../dmx/dmx-statements-data-definition.md)   
+ [Extensiones de minería de datos &#40;DMX&#41; instrucciones de manipulación de datos](../dmx/dmx-statements-data-manipulation.md)   
+ [Extensiones de minería de datos & #40; DMX & #41; Referencia de instrucciones](../dmx/data-mining-extensions-dmx-statements.md)  
   
   

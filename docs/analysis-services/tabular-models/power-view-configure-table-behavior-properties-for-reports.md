@@ -1,35 +1,34 @@
 ---
 title: Configurar las propiedades de comportamiento de tablas para informes de Power View | Documentos de Microsoft
-ms.custom: 
+ms.custom: ''
 ms.date: 03/01/2017
 ms.prod: analysis-services
 ms.prod_service: analysis-services, azure-analysis-services
-ms.service: 
+ms.service: ''
 ms.component: data-mining
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: pro-bi
-ms.technology: 
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.technology: ''
+ms.tgt_pltfrm: ''
+ms.topic: conceptual
 f1_keywords:
 - sql13.asvs.bidtoolset.tablebehavior.f1
 ms.assetid: 1386aae0-1d73-4a50-9c69-ae12405d855c
-caps.latest.revision: 
+caps.latest.revision: 8
 author: Minewiskan
 ms.author: owend
 manager: kfile
-ms.workload: Inactive
-ms.openlocfilehash: 23fcfac88cb0ab2a1ba390d003039b11bdf8bfc3
-ms.sourcegitcommit: d8ab09ad99e9ec30875076acee2ed303d61049b7
-ms.translationtype: MT
+ms.openlocfilehash: 5a524b19b9cb10e3eac2110b4d9e279ceccebfc9
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/23/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="power-view---configure-table-behavior-properties-for-reports"></a>Power View: configurar las propiedades de comportamiento de tablas para informes
 [!INCLUDE[ssas-appliesto-sqlas-aas](../../includes/ssas-appliesto-sqlas-aas.md)]
-Si va a utilizar un modelo tabular como modelo de datos para [!INCLUDE[ssCrescent](../../includes/sscrescent-md.md)], puede establecer las propiedades del comportamiento de las tablas que exponen filas de detalles en un nivel más específico. El establecimiento de las propiedades del comportamiento de las tablas cambia el comportamiento de agrupación de las filas de detalle y genera una mejor colocación predeterminada de la información de identificación (como nombres, carnets con fotografía o imágenes de logotipo) en diseños de mosaicos, tarjetas y gráficos.  
+  Si va a utilizar un modelo tabular como modelo de datos para [!INCLUDE[ssCrescent](../../includes/sscrescent-md.md)], puede establecer las propiedades del comportamiento de las tablas que exponen filas de detalles en un nivel más específico. El establecimiento de las propiedades del comportamiento de las tablas cambia el comportamiento de agrupación de las filas de detalle y genera una mejor colocación predeterminada de la información de identificación (como nombres, carnets con fotografía o imágenes de logotipo) en diseños de mosaicos, tarjetas y gráficos.  
   
- [!INCLUDE[ssCrescent](../../includes/sscrescent-md.md)] se diferencia de otras aplicaciones de informes en que agrupará automáticamente los elementos durante el diseño de informe, evaluando las columnas que se han colocado en la lista de campos del informe con el formato de presentación que se está utilizando. En la mayoría de los casos, la agrupación predeterminada genera un resultado óptimo. Pero en algunas tablas, normalmente aquellas que contienen datos detallados, el comportamiento de agrupación predeterminada agrupará a veces filas que no deberían estarlo. Para estas tablas, puede establecer propiedades que cambien la forma de evaluar los grupos.  
+ [!INCLUDE[ssCrescent](../../includes/sscrescent-md.md)]diferencia de otras aplicaciones de informes en que agrupará los elementos automáticamente durante el diseño del informe, evaluando las columnas que se han colocado en la lista de campos de informe con el formato de presentación que se están utilizando. En la mayoría de los casos, la agrupación predeterminada genera un resultado óptimo. Pero en algunas tablas, normalmente aquellas que contienen datos detallados, el comportamiento de agrupación predeterminada agrupará a veces filas que no deberían estarlo. Para estas tablas, puede establecer propiedades que cambien la forma de evaluar los grupos.  
   
  El establecimiento de las propiedades de comportamiento de las tablas se recomienda para las tablas donde las filas individuales tengan un interés primordial, como los registros de empleado o de cliente. En cambio, entre las tablas que no se benefician de estas propiedades están aquellas que actúan como tabla de búsqueda (por ejemplo, las tablas de fechas, las de categorías de producto o las de departamentos, donde la tabla consta de un número relativamente reducido de filas y de columnas), o las tablas de resumen que contienen filas que solo ofrecen interés cuando se resumen (por ejemplo, los datos del censo que se acumulan por sexo, edad o ubicación geográfica). En las tablas de resumen y de búsqueda, el comportamiento de agrupación predeterminada genera el mejor resultado.  
   

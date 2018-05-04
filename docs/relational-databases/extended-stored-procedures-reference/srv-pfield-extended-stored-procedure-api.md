@@ -26,12 +26,11 @@ caps.latest.revision: 32
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: c593cab9b3de64c0b2442c7c8be1390553b01497
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
+ms.openlocfilehash: 70e5a797f44167d079f9ef3375b591016055eb0e
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="srvpfield-extended-stored-procedure-api"></a>srv_pfield (API de procedimiento almacenado extendido)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -64,7 +63,7 @@ len
  *field*  
  Especifica los datos que se van a devolver en la conexión.  
   
-|Value|Devuelve|  
+|Valor|Devuelve|  
 |-----------|-------------|  
 |SRV_APPLNAME|El nombre de aplicación proporcionado por el cliente cuando estableció la conexión.|  
 |SRV_BCPFLAG|Una marca que es TRUE si el cliente está preparando una operación de copia masiva; de lo contrario, FALSE.|  

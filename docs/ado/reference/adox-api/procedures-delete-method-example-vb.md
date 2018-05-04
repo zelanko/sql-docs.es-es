@@ -21,12 +21,11 @@ caps.latest.revision: 11
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: 8698054698acc9617986bb909551472b5cb2548c
-ms.sourcegitcommit: bb044a48a6af9b9d8edb178dc8c8bd5658b9ff68
-ms.translationtype: MT
+ms.openlocfilehash: d4bf17efacbcc9c0523e402a870bf5c430fe013e
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/18/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="procedures-delete-method-example-vb"></a>Eliminar de procedimientos de ejemplo del método (VB)
 El código siguiente muestra cómo eliminar un procedimiento utilizando la [eliminar](../../../ado/reference/adox-api/delete-method-adox-collections.md) método de la [procedimientos](../../../ado/reference/adox-api/procedures-collection-adox.md) colección.  

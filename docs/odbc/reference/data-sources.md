@@ -11,7 +11,7 @@ ms.suite: sql
 ms.technology:
 - drivers
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - data sources [ODBC]
 - data sources [ODBC], about data sources
@@ -20,11 +20,11 @@ caps.latest.revision: 5
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: b16699f67a74232730b2b96a2fdeeb4545d1fe46
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
-ms.translationtype: MT
+ms.openlocfilehash: 13f39771ed48501e4ab90494bdff9d3253219bba
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="data-sources"></a>Orígenes de datos
 A *origen de datos* es simplemente el origen de los datos. Puede ser un archivo, una base de datos determinada en un DBMS, o incluso una fuente de datos en directo. Los datos podrían ser ubicados en el mismo equipo que el programa o en otro equipo en algún punto de una red. Por ejemplo, un origen de datos podría ser un DBMS de Oracle que se ejecuta en un sistema de operativo OS/2®, acceso Novell® Netware; un DBMS de DB2 de IBM que tiene acceso a través de una puerta de enlace; una colección de archivos de Xbase en un directorio del servidor; o un archivo de base de datos local de Microsoft® Access.  

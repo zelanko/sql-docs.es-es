@@ -29,15 +29,15 @@ caps.latest.revision: 11
 author: Minewiskan
 ms.author: owend
 manager: kfile
-ms.workload: Inactive
-ms.openlocfilehash: 1d0fbcea8ac8e919da27a1fb129037f7ca2bfa0a
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
-ms.translationtype: MT
+ms.openlocfilehash: 46f4baef73a563b8f2af5af97d750ce91ca76ba1
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="parameter-element-xmla"></a>Elemento Parameter (XMLA)
-[!INCLUDE[ssas-appliesto-sqlas-aas](../../../includes/ssas-appliesto-sqlas-aas.md)]Contiene el nombre y el valor de un parámetro utilizado por el [Execute](../../../analysis-services/xmla/xml-elements-methods-execute.md) método.  
+[!INCLUDE[ssas-appliesto-sqlas-aas](../../../includes/ssas-appliesto-sqlas-aas.md)]
+  Contiene el nombre y valor de un parámetro utilizados por el método [Execute](../../../analysis-services/xmla/xml-elements-methods-execute.md) .  
   
 ## <a name="syntax"></a>Sintaxis  
   
@@ -53,13 +53,13 @@ ms.lasthandoff: 01/08/2018
 </Parameters>  
 ```  
   
-## <a name="element-characteristics"></a>Características del elemento  
+## <a name="element-characteristics"></a>Características de los elementos  
   
-|Característica|Description|  
+|Característica|Descripción|  
 |--------------------|-----------------|  
-|Tipo y longitud de los datos|None|  
-|Valor predeterminado|None|  
-|Cardinalidad|0-1: Elemento opcional que puede aparecer una y solo una vez.|  
+|Tipo y longitud de los datos|Ninguno|  
+|Valor predeterminado|Ninguno|  
+|Cardinalidad|0-1: Elemento opcional que puede aparecer solo una vez.|  
   
 ## <a name="element-relationships"></a>Relaciones del elemento  
   
@@ -68,10 +68,10 @@ ms.lasthandoff: 01/08/2018
 |Elementos primarios|[Parámetros](../../../analysis-services/xmla/xml-elements-properties/parameters-element-xmla.md)|  
 |Elementos secundarios|[Name](../../../analysis-services/xmla/xml-elements-properties/name-element-parameter-xmla.md), [Value](../../../analysis-services/xmla/xml-elements-properties/value-element-parameter-xmla.md)|  
   
-## <a name="remarks"></a>Notas  
+## <a name="remarks"></a>Comentarios  
  Alguna parte del código XML para los comandos de Analysis (XMLA), como el comando [Process](../../../analysis-services/xmla/xml-elements-commands/process-element-xmla.md) , puede requerir información adicional. El elemento **Parameter** proporciona un mecanismo para ofrecer información adicional, incluso información en lotes, para un comando XMLA.  
   
-## <a name="see-also"></a>Ver también  
- [Propiedades &#40; XMLA &#41;](../../../analysis-services/xmla/xml-elements-properties/xml-elements-properties.md)  
+## <a name="see-also"></a>Vea también  
+ [Propiedades & #40; XMLA & #41;](../../../analysis-services/xmla/xml-elements-properties/xml-elements-properties.md)  
   
   

@@ -11,7 +11,7 @@ ms.suite: sql
 ms.technology:
 - drivers
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - data buffers [ODBC], about data buffers
 - buffers [ODBC], data
@@ -21,12 +21,11 @@ caps.latest.revision: 5
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: 459f5ca4bbc29c146f9ddf3b6c92e4df6ec7e9b0
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
-ms.translationtype: MT
+ms.openlocfilehash: bc190d2b34f2c5379a619bf6459cb6238a7447b0
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="using-data-buffers"></a>Utilizar los búferes de datos
 Se describen los búferes de datos por tres partes de información: su longitud en bytes, la dirección y el tipo. Cada vez que una función necesita uno de estos fragmentos de información y aún no la conoce, tiene un argumento con el que la aplicación pasa.  

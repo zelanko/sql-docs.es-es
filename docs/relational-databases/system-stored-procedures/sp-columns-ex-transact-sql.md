@@ -24,12 +24,11 @@ caps.latest.revision: 38
 author: edmacauley
 ms.author: edmaca
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: 034955aad1d0ad90f78b36704c6d202a23176ad2
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
-ms.translationtype: MT
+ms.openlocfilehash: 765426f766bbccc92fa1e0558163ed724af4dd0c
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="spcolumnsex-transact-sql"></a>sp_columns_ex (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -76,24 +75,24 @@ sp_columns_ex [ @table_server = ] 'table_server'
   
 |Nombre de columna|Tipo de datos|Description|  
 |-----------------|---------------|-----------------|  
-|**TABLE_CAT**|**sysname**|Nombre del calificador de la tabla o vista. Varios productos DBMS admiten nombres de tres partes para tablas (*calificador***.*** propietario***.*** nombre*). En [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] esta columna representa el nombre de base de datos. En algunos productos, representa el nombre del servidor del entorno de base de datos de la tabla. Este campo puede ser NULL.|  
+|**TABLE_CAT**|**sysname**|Nombre del calificador de la tabla o vista. Varios productos DBMS admiten nombres de tres partes para tablas (*calificador ***.*** propietario ***.*** nombre*). En [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] esta columna representa el nombre de base de datos. En algunos productos, representa el nombre del servidor del entorno de base de datos de la tabla. Este campo puede ser NULL.|  
 |**SEGÚN TABLE_SCHEM**|**sysname**|Nombre del propietario de la tabla o vista. En [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], esta columna representa el nombre del usuario de la base de datos que creó la tabla. Este campo siempre devuelve un valor.|  
 |**TABLE_NAME**|**sysname**|Nombre de la tabla o vista. Este campo siempre devuelve un valor.|  
 |**COLUMN_NAME**|**sysname**|Nombre de columna para cada columna de la **TABLE_NAME** devuelto. Este campo siempre devuelve un valor.|  
 |**DATA_TYPE**|**smallint**|Valor de tipo entero correspondiente a indicadores de tipo ODBC. Si se trata de un tipo de datos que no se puede asignar a un tipo de ODBC, el valor es NULL. El nombre de tipo de datos nativo se devuelve en el **TYPE_NAME** columna.|  
-|**TYPE_NAME**|**varchar (**13**)**|Cadena que representa un tipo de datos. El DBMS subyacente presenta este nombre del tipo de datos.|  
+|**TYPE_NAME**|**varchar (** 13 **)**|Cadena que representa un tipo de datos. El DBMS subyacente presenta este nombre del tipo de datos.|  
 |**COLUMN_SIZE**|**int**|Número de dígitos significativos. El valor devuelto para la **precisión** columna está expresado en base 10.|  
 |**BUFFER_LENGTH**|**int**|Tamaño de transferencia de los datos.1|  
 |**DECIMAL_DIGITS**|**smallint**|Número de dígitos a la derecha del separador decimal.|  
 |**NUM_PREC_RADIX**|**smallint**|Base para los tipos de datos numéricos.|  
 |**QUE ACEPTAN VALORES NULL**|**smallint**|Especifica la nulabilidad.<br /><br /> 1 = Se admiten valores NULL.<br /><br /> 0 = No se admiten valores NULL.|  
-|**COMENTARIOS**|**varchar (**254**)**|Este campo siempre devuelve NULL.|  
-|**COLUMN_DEF**|**varchar (**254**)**|Valor predeterminado de la columna.|  
+|**COMENTARIOS**|**varchar (** 254 **)**|Este campo siempre devuelve NULL.|  
+|**COLUMN_DEF**|**varchar (** 254 **)**|Valor predeterminado de la columna.|  
 |**SQL_DATA_TYPE**|**smallint**|Valor del tipo de datos SQL tal como aparece en el campo TYPE del descriptor. Esta columna es el mismo que el **DATA_TYPE** columna, excepto para la **datetime** y SQL-92 **intervalo** tipos de datos. Esta columna siempre devuelve un valor.|  
 |**SQL_DATETIME_SUB**|**smallint**|Código de subtipo para **datetime** y SQL-92 **intervalo** tipos de datos. Para otros tipos de datos, esta columna devuelve NULL.|  
 |**CHAR_OCTET_LENGTH**|**int**|Longitud máxima en bytes de una columna de tipos de datos de caracteres o enteros. Para los demás tipos de datos, esta columna devuelve NULL.|  
 |**ORDINAL_POSITION**|**int**|Posición ordinal de la columna en la tabla. La primera columna de la tabla es 1. Esta columna siempre devuelve un valor.|  
-|**IS_NULLABLE**|**varchar (**254**)**|Nulabilidad de la columna de la tabla. Se siguen las normas ISO para determinar la nulabilidad. Un DBMS que cumpla la norma ISO SQL no puede devolver una cadena vacía.<br /><br /> YES = La columna puede incluir valores NULL.<br /><br /> NO = La columna no puede incluir valores NULL.<br /><br /> Esta columna devuelve una cadena de longitud cero si no se conoce la nulabilidad.<br /><br /> Devuelve el valor de esta columna es diferente del valor devuelto para la **NULLABLE** columna.|  
+|**IS_NULLABLE**|**varchar (** 254 **)**|Nulabilidad de la columna de la tabla. Se siguen las normas ISO para determinar la nulabilidad. Un DBMS que cumpla la norma ISO SQL no puede devolver una cadena vacía.<br /><br /> YES = La columna puede incluir valores NULL.<br /><br /> NO = La columna no puede incluir valores NULL.<br /><br /> Esta columna devuelve una cadena de longitud cero si no se conoce la nulabilidad.<br /><br /> Devuelve el valor de esta columna es diferente del valor devuelto para la **NULLABLE** columna.|  
 |**SS_DATA_TYPE**|**tinyint**|Tipo de datos de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] utilizado por los procedimientos almacenados extendidos.|  
   
  Para obtener más información, vea la documentación de Microsoft ODBC.  

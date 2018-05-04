@@ -21,12 +21,11 @@ caps.latest.revision: 11
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: f06b4b5d22f3e55b2f7296f44691cd922e487808
-ms.sourcegitcommit: bb044a48a6af9b9d8edb178dc8c8bd5658b9ff68
-ms.translationtype: MT
+ms.openlocfilehash: f27120714327fa6901c8ae2f6875a0526c086c12
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/18/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="createrecordset-method-example-vb"></a>Ejemplo del método CreateRecordset (VB)
 Puede crear un [Recordset](../../../ado/reference/ado-api/recordset-object-ado.md) objeto y especifique la información de columna. A continuación, puede insertar datos en el **Recordset** objeto; los búferes de conjunto de filas subyacente las inserciones.  

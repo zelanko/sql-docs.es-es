@@ -3,13 +3,10 @@ title: Método updateBoolean (int, boolean) | Documentos de Microsoft
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
-ms.prod_service: drivers
-ms.service: ''
-ms.component: jdbc
+ms.prod_service: connectivity
 ms.reviewer: ''
 ms.suite: sql
-ms.technology:
-- drivers
+ms.technology: connectivity
 ms.tgt_pltfrm: ''
 ms.topic: conceptual
 apiname:
@@ -22,9 +19,9 @@ caps.latest.revision: 8
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: f3b3707c82e0a510e700df616cf6f703fb437282
-ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
-ms.translationtype: HT
+ms.openlocfilehash: 1cad83e9927fb305e52c2f57156b9cf21ab0db02
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.translationtype: MT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/03/2018
 ---
@@ -58,7 +55,7 @@ public void updateBoolean(int index,
   
 ## <a name="see-also"></a>Vea también  
  [Método updateBoolean &#40;SQLServerResultSet&#41;](../../../connect/jdbc/reference/updateboolean-method-sqlserverresultset.md)   
- [Miembros de SQLServerResultSet](../../../connect/jdbc/reference/sqlserverresultset-members.md)   
+ [Miembros SQLServerResultSet](../../../connect/jdbc/reference/sqlserverresultset-members.md)   
  [Clase SQLServerResultSet](../../../connect/jdbc/reference/sqlserverresultset-class.md)  
   
   

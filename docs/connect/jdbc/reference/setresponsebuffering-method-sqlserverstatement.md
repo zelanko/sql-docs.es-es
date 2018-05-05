@@ -3,13 +3,10 @@ title: Método setResponseBuffering (SQLServerStatement) | Documentos de Microso
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
-ms.prod_service: drivers
-ms.service: ''
-ms.component: jdbc
+ms.prod_service: connectivity
 ms.reviewer: ''
 ms.suite: sql
-ms.technology:
-- drivers
+ms.technology: connectivity
 ms.tgt_pltfrm: ''
 ms.topic: conceptual
 apiname:
@@ -22,9 +19,9 @@ caps.latest.revision: 24
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 5abd900d5ba91939eb055b732a4710c4b89f0822
-ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
-ms.translationtype: HT
+ms.openlocfilehash: 114bba1ad782a3cc14585267407386d30f4ac0b6
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.translationtype: MT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/03/2018
 ---
@@ -60,7 +57,7 @@ public final void setResponseBuffering(java.lang.String value)
  Si la aplicación especifica un valor de parámetro no válido para la [setResponseBuffering](../../../connect/jdbc/reference/setresponsebuffering-method-sqlserverstatement.md) método, un [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md) se produce.  
   
 ## <a name="see-also"></a>Vea también  
- [Miembros de SQLServerStatement](../../../connect/jdbc/reference/sqlserverstatement-members.md)   
+ [Miembros SQLServerStatement](../../../connect/jdbc/reference/sqlserverstatement-members.md)   
  [Clase SQLServerStatement](../../../connect/jdbc/reference/sqlserverstatement-class.md)   
  [Usar el almacenamiento en búfer adaptable](../../../connect/jdbc/using-adaptive-buffering.md)  
   

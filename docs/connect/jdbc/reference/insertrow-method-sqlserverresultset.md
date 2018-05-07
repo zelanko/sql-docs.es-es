@@ -3,13 +3,10 @@ title: insertRow (método) (SQLServerResultSet) | Documentos de Microsoft
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
-ms.prod_service: drivers
-ms.service: ''
-ms.component: jdbc
+ms.prod_service: connectivity
 ms.reviewer: ''
 ms.suite: sql
-ms.technology:
-- drivers
+ms.technology: connectivity
 ms.tgt_pltfrm: ''
 ms.topic: conceptual
 apiname:
@@ -22,9 +19,9 @@ caps.latest.revision: 8
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: eafc73e9a5a5179992cec3d042f82ac460ee2bd3
-ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
-ms.translationtype: HT
+ms.openlocfilehash: 106743625ef17e733836ec9430f2f171af2b0d72
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.translationtype: MT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/03/2018
 ---
@@ -49,7 +46,7 @@ public void insertRow()
  Cuando se llama a este método, el cursor debe estar en la fila de inserción. Una vez se llame a este método, el cursor permanece en la fila de inserción y el conjunto de resultados permanece en modo de inserción.  
   
 ## <a name="see-also"></a>Vea también  
- [Miembros de SQLServerResultSet](../../../connect/jdbc/reference/sqlserverresultset-members.md)   
+ [Miembros SQLServerResultSet](../../../connect/jdbc/reference/sqlserverresultset-members.md)   
  [Clase SQLServerResultSet](../../../connect/jdbc/reference/sqlserverresultset-class.md)  
   
   

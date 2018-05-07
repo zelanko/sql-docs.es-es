@@ -25,13 +25,12 @@ caps.latest.revision: 34
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.workload: On Demand
 monikerRange: = azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: 16aa30d9074e2cd1508f896c1076538ff7371738
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
-ms.translationtype: MT
+ms.openlocfilehash: 5023989a36f6118532dad0b110d03aaabf381242
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="changetable-transact-sql"></a>CHANGETABLE (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -85,7 +84,7 @@ CHANGETABLE (
  *Valor*  
  Es el valor de la clave principal. Si hay varias columnas de clave principales, deben especificarse los valores en el mismo orden que las columnas aparecen en la *column_name* lista.  
   
- [COMO] *aliasTabla* [(*column_alias* [,... *n* ])]  
+ [COMO] *aliasTabla* [(*column_alias* [,...] *n* ])]  
  Proporciona los nombres de los resultados devueltos por CHANGETABLE.  
   
  *table_alias*  

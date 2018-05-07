@@ -4,7 +4,6 @@ ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
-ms.service: ''
 ms.component: native-client-ole-db
 ms.reviewer: ''
 ms.suite: sql
@@ -23,13 +22,12 @@ caps.latest.revision: 29
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.workload: Inactive
 monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
-ms.openlocfilehash: e767c918ea477a64d3dc548126a7c953315ebfb9
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
+ms.openlocfilehash: b1e80551ebf4213569681a96374a597733bcfa8f
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="schema-rowsets---distributed-query-support"></a>Conjuntos de filas de esquema - compatibilidad con consultas distribuidas
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -37,7 +35,7 @@ ms.lasthandoff: 04/16/2018
 
   Para admitir [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] distribuida de las consultas, el [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] proveedor Native Client OLE DB **IDBSchemaRowset** interfaz devuelve los metadatos de servidores vinculados.  
   
- Si la propiedad SSPROP_QUOTEDCATALOGNAMES de DBPROPSET_SQLSERVERSESSION es VARIANT_TRUE, puede especificarse un identificador entrecomillado para el nombre del catálogo (por ejemplo, "my.catalog"). Al restringir los resultados de conjunto de filas de esquema por catálogo, el [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] proveedor OLE DB de Native Client reconoce un nombre de dos partes que contiene el nombre de catálogo y de servidor vinculado. Para los conjuntos de filas de esquema en la tabla siguiente, especificando un nombre de catálogo de dos partes como *servidor_vinculado***.*** catálogo* restringe la salida al catálogo aplicable del servidor vinculado con nombre.  
+ Si la propiedad SSPROP_QUOTEDCATALOGNAMES de DBPROPSET_SQLSERVERSESSION es VARIANT_TRUE, puede especificarse un identificador entrecomillado para el nombre del catálogo (por ejemplo, "my.catalog"). Al restringir los resultados de conjunto de filas de esquema por catálogo, el [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] proveedor OLE DB de Native Client reconoce un nombre de dos partes que contiene el nombre de catálogo y de servidor vinculado. Para los conjuntos de filas de esquema en la tabla siguiente, especificando un nombre de catálogo de dos partes como *servidor_vinculado ***.*** catálogo* restringe la salida al catálogo aplicable del servidor vinculado con nombre.  
   
 |Conjunto de filas de esquema|Restricción de catálogo|  
 |-------------------|-------------------------|  

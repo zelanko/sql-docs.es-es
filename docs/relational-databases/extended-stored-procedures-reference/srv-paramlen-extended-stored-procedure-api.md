@@ -26,12 +26,11 @@ caps.latest.revision: 32
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: ee85bd0792b31ea3d1dd759ad9effc96b0b2195b
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
+ms.openlocfilehash: a52b2f8381422f2f0800684b566efb8e5471f50b
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="srvparamlen-extended-stored-procedure-api"></a>srv_paramlen (API de procedimiento almacenado extendido)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -62,7 +61,7 @@ n
  Indica el número del parámetro. El primer parámetro es 1.  
   
 ## <a name="returns"></a>Devuelve  
- La longitud real, en bytes, de los datos del parámetro. Si no hay ningún *n*parámetro o no hay ningún procedimiento almacenado remoto, devuelve -1. Si el *n*parámetro es NULL, devuelve 0.  
+ La longitud real, en bytes, de los datos del parámetro. Si no existe ningún parámetro *n*, o no hay ningún procedimiento almacenado remoto, devuelve -1. Si el parámetro *n* es NULL, devuelve 0.  
   
  Esta función devuelve los valores siguientes, si el parámetro es uno de los siguientes tipos de datos de sistema de [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)].  
   
@@ -79,7 +78,7 @@ n
   
  \* *len* real = longitud de cadena de caracteres multibyte (cch)  
   
-## <a name="remarks"></a>Comentarios  
+## <a name="remarks"></a>Notas  
  Cada parámetro de procedimiento almacenado remoto tiene una longitud de datos real y una longitud máxima. En los tipos de datos de longitud fija estándar que no permiten valores NULL, las longitudes real y máxima son las mismas. En los tipos de datos de longitud variable, las longitudes pueden variar. Por ejemplo, un parámetro declarado como **varchar(30)** puede tener datos con una longitud de solo 10 bytes. La longitud real del parámetro es 10 y su longitud máxima es 30. La función **srv_paramlen** obtiene la longitud de datos real en bytes de un procedimiento almacenado remoto. Para obtener la longitud de datos máxima de un parámetro, use **srv_parammaxlen**.  
   
  Cuando se usan parámetros en una llamada a un procedimiento almacenado remoto, estos pueden pasarse por nombre o por posición (sin nombre). Se produce un error si la llamada al procedimiento almacenado remoto se realiza con algunos parámetros pasados por nombre y otros pasados por posición. Sigue llamándose al controlador SRV_RPC, pero parece como si no hubiera ningún parámetro y **srv_rpcparams** devuelve 0.  
@@ -87,7 +86,7 @@ n
 > [!IMPORTANT]  
 >  Debe revisar minuciosamente el código fuente de los procedimientos almacenados extendidos y debe probar las DLL compiladas antes de instalarlas en el servidor de producción. Para obtener información acerca de la revisión y pruebas de seguridad, vea este [sitio web de Microsoft](http://go.microsoft.com/fwlink/?LinkID=54761&amp;clcid=0x409http://msdn.microsoft.com/security/).  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Ver también  
  [srv_paraminfo &#40;API de procedimiento almacenado extendido&#41;](../../relational-databases/extended-stored-procedures-reference/srv-paraminfo-extended-stored-procedure-api.md)   
  [srv_rpcparams &#40;API de procedimiento almacenado extendido&#41;](../../relational-databases/extended-stored-procedures-reference/srv-rpcparams-extended-stored-procedure-api.md)  
   

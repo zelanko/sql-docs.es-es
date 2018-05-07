@@ -3,13 +3,10 @@ title: Método getSQLXML (SQLServerResultSet) | Documentos de Microsoft
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
-ms.prod_service: drivers
-ms.service: ''
-ms.component: jdbc
+ms.prod_service: connectivity
 ms.reviewer: ''
 ms.suite: sql
-ms.technology:
-- drivers
+ms.technology: connectivity
 ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: a07e0f30-cbc6-4ad7-b931-c30cad382e64
@@ -17,9 +14,9 @@ caps.latest.revision: 6
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 372735e149655584754086339ca932872a26cef4
-ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
-ms.translationtype: HT
+ms.openlocfilehash: 5dabcf704310451ece914cc421986ef5edad59e1
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.translationtype: MT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/03/2018
 ---
@@ -36,7 +33,7 @@ ms.lasthandoff: 05/03/2018
 |[Método getSQLXML &#40;java.lang.String&#41;](../../../connect/jdbc/reference/getsqlxml-method-java-lang-string.md)|Recupera el valor de una columna designada en la fila actual de la [SQLServerResultSet](../../../connect/jdbc/reference/sqlserverresultset-class.md) objeto como un objeto SQLXML.|  
   
 ## <a name="see-also"></a>Vea también  
- [Miembros de SQLServerResultSet](../../../connect/jdbc/reference/sqlserverresultset-members.md)   
+ [Miembros SQLServerResultSet](../../../connect/jdbc/reference/sqlserverresultset-members.md)   
  [Clase SQLServerResultSet](../../../connect/jdbc/reference/sqlserverresultset-class.md)  
   
   

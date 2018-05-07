@@ -4,12 +4,10 @@ ms.custom: ''
 ms.date: 03/17/2017
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
-ms.service: ''
 ms.component: sqlxml
 ms.reviewer: ''
 ms.suite: sql
-ms.technology:
-- dbe-xml
+ms.technology: xml
 ms.tgt_pltfrm: ''
 ms.topic: reference
 helpviewer_keywords:
@@ -29,13 +27,12 @@ caps.latest.revision: 12
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.workload: Inactive
 monikerRange: = azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: 387646968ef4e44a43ec9ee2c50a06d4ba4b6e6c
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
+ms.openlocfilehash: 6c3d51e64669f2410ca6e99926734b767dba1f45
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="introduction-to-updategrams-sqlxml-40"></a>Introducción a los diagramas de actualización (SQLXML 4.0)
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -117,7 +114,7 @@ ms.lasthandoff: 04/16/2018
  Con la asignación predeterminada (cuando el esquema de asignación no se especifica en el diagrama de actualización), los elementos del diagrama de actualización se asignan a tablas y los elementos secundarios (en el caso de la asignación centrada en elementos) y los atributos (en el caso de asignación centrada en atributos) se asignan a columnas.  
   
 ### <a name="element-centric-mapping"></a>Asignación centrada en elementos  
- En un diagrama de actualización centrado en elementos, un elemento contiene elementos secundarios que denotan las propiedades del elemento. Como ejemplo, consulte el diagrama de actualización siguiente. El  **\<Person.Contact >** elemento contiene el  **\<FirstName >**y  **\<LastName >** los elementos secundarios. Estos elementos secundarios son propiedades de la  **\<Person.Contact >** elemento.  
+ En un diagrama de actualización centrado en elementos, un elemento contiene elementos secundarios que denotan las propiedades del elemento. Como ejemplo, consulte el diagrama de actualización siguiente. El  **\<Person.Contact >** elemento contiene el  **\<FirstName >** y  **\<LastName >** los elementos secundarios. Estos elementos secundarios son propiedades de la  **\<Person.Contact >** elemento.  
   
  Dado que este diagrama de actualización no especifica un esquema de asignación, el diagrama de actualización usa una asignación implícita, donde el  **\<Person.Contact >** elemento se asigna a la tabla Person.Contact y sus elementos secundarios se asignan a la FirstName y Columnas LastName.  
   

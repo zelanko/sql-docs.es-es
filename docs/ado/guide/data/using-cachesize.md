@@ -1,11 +1,9 @@
 ---
 title: Utilizar CacheSize | Documentos de Microsoft
 ms.prod: sql
-ms.prod_service: drivers
-ms.service: ''
+ms.prod_service: connectivity
 ms.component: ado
-ms.technology:
-- drivers
+ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
@@ -20,12 +18,11 @@ caps.latest.revision: 10
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: 701fd5ff1c5f9fd09eb9827b92c20770cd18612c
-ms.sourcegitcommit: bb044a48a6af9b9d8edb178dc8c8bd5658b9ff68
+ms.openlocfilehash: 043634736f9ad5f26ced4707349405793ff6e556
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/18/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="using-cachesize"></a>Utilizar CacheSize
 Use la **CacheSize** propiedad para controlar cuántos registros para recuperar en una vez en la memoria local desde el proveedor. Por ejemplo, si la **CacheSize** es 10, tras abrir primero la **Recordset** de objeto, el proveedor recupera los 10 primeros registros en la memoria local. Conforme se desplaza por la **Recordset** de objeto, el proveedor devuelve los datos desde el búfer de memoria local. En cuanto mueva más allá del último registro en la memoria caché, el proveedor recupera los 10 siguientes registros del origen de datos en la memoria caché.  

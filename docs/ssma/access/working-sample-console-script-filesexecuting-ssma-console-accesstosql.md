@@ -2,7 +2,6 @@
 title: Trabajar con FilesExecuting de secuencia de comandos de consola de ejemplo de la consola SSMA | Documentos de Microsoft
 ms.prod: sql
 ms.prod_service: sql-tools
-ms.service: ''
 ms.component: ssma-access
 ms.custom: ''
 ms.date: 01/19/2017
@@ -19,9 +18,9 @@ caps.latest.revision: 10
 author: Shamikg
 ms.author: Shamikg
 manager: craigg
-ms.openlocfilehash: 738577f16beeaf7545b55f894f04649279dc3122
-ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
-ms.translationtype: HT
+ms.openlocfilehash: a581236e29da44646eee8fa55f432ad92e9d586c
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.translationtype: MT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/03/2018
 ---

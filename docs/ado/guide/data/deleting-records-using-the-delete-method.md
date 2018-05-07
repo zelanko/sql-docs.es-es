@@ -1,11 +1,9 @@
 ---
 title: Eliminar registros mediante el método Delete | Documentos de Microsoft
 ms.prod: sql
-ms.prod_service: drivers
-ms.service: ''
+ms.prod_service: connectivity
 ms.component: ado
-ms.technology:
-- drivers
+ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
@@ -22,12 +20,11 @@ caps.latest.revision: 11
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: f73534da8e2b99e410413673481d1a317e0e730e
-ms.sourcegitcommit: bb044a48a6af9b9d8edb178dc8c8bd5658b9ff68
+ms.openlocfilehash: 36a6a7e7f2ecd6deb3b25a2d2ed6dc65c8b6f98d
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/18/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="deleting-records-using-the-delete-method"></a>Eliminar registros mediante el método Delete
 Mediante el **eliminar** método marca el registro actual o un grupo de registros en un **Recordset** objeto para su eliminación. Si el **Recordset** objeto no permitir eliminación de registros, se produce un error. Si está en modo de actualización inmediata, las eliminaciones se producen en la base de datos inmediatamente. Si un registro no puede eliminarse correctamente (debido a infracciones de la integridad de la base de datos, por ejemplo), el registro permanecerá en modo de edición después de llamar a **Update.** Esto significa que se debe cancelar la actualización mediante [CancelUpdate](../../../ado/reference/ado-api/cancelupdate-method-ado.md) antes de trasladarse fuera del registro actual (por ejemplo, si se usa [cerrar](../../../ado/reference/ado-api/close-method-ado.md), [mover](../../../ado/reference/ado-api/move-method-ado.md), o [ NextRecordset](../../../ado/reference/ado-api/nextrecordset-method-ado.md)).  

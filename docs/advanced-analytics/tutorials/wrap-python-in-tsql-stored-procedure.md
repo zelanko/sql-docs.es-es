@@ -7,11 +7,11 @@ ms.topic: tutorial
 author: HeidiSteen
 ms.author: heidist
 manager: cgronlun
-ms.openlocfilehash: b0c32ba91698345adea542ed5929a494b00059e5
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
+ms.openlocfilehash: 3b7ffeac0dfe1e441f188aae67e28004e294fc3e
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="wrap-python-code-in-a-stored-procedure"></a>Incluir código Python en un procedimiento almacenado
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
@@ -31,10 +31,10 @@ Aunque es posible configurar un cliente remoto y ejecutar código de Python medi
 2. Crear una nueva base de datos para este proyecto y cambiar el contexto de su **consulta** ventana para usar la nueva base de datos.
 
     ```sql
-    CREATE DATABASE sqlpy;
-    GO;
-    USE sqlpy;
-    GO;
+    CREATE DATABASE sqlpy
+    GO
+    USE sqlpy
+    GO
     ```
 
     > [!TIP] 

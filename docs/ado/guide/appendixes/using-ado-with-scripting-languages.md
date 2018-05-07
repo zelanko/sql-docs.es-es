@@ -1,11 +1,9 @@
 ---
 title: Usar ADO con lenguajes de Scripting | Documentos de Microsoft
 ms.prod: sql
-ms.prod_service: drivers
-ms.service: ''
+ms.prod_service: connectivity
 ms.component: ado
-ms.technology:
-- drivers
+ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
@@ -20,12 +18,11 @@ caps.latest.revision: 12
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: d3187ca8ddc47f4a48e982a5061d429a7f7a5738
-ms.sourcegitcommit: bb044a48a6af9b9d8edb178dc8c8bd5658b9ff68
+ms.openlocfilehash: 070cfacfad680fbf0664ad5dc6bc3a01aed99520
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/18/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="using-ado-with-scripting-languages"></a>Usar ADO con lenguajes de Scripting
 Dentro de un entorno de scripting, ADO permite exponer datos mediante secuencias de comandos de servidor. En este escenario, ADO, el proveedor OLE DB subyacente que utiliza y cualquier otro componente necesario para hacer referencia a un almacén de datos determinado está instalado en un servidor que ejecuta Internet Information Services (IIS). Utilizando páginas Active Server (ASP), ADO es un componente al que hace referencia en una secuencia de comandos que puede generar código HTML, por ejemplo. Este contenido HTML se puede pasar a través de HTTP en un explorador Web del cliente. Mediante el uso de secuencias de comandos, la página Web puede enviar acciones a la secuencia de comandos de servidor, lo que le permite actualizar, recorrer o ver datos específicos.  

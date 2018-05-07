@@ -8,10 +8,9 @@ ms.reviewer: ''
 ms.service: sql-database
 ms.component: system-stored-procedures
 ms.suite: sql
-ms.technology:
-- database-engine
+ms.technology: system-objects
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sp_execute_remote
 - sp_execute_remote_TSQL
@@ -23,13 +22,12 @@ caps.latest.revision: 17
 author: CarlRabeler
 ms.author: carlrab
 manager: craigg
-ms.workload: Inactive
 monikerRange: = azuresqldb-current || = sqlallproducts-allversions
-ms.openlocfilehash: 198a2593ae4f8d8ff923f52e0e6f34bf0b798330
-ms.sourcegitcommit: bb044a48a6af9b9d8edb178dc8c8bd5658b9ff68
-ms.translationtype: HT
+ms.openlocfilehash: 4e80528b6a8ce0e6f470a0fc5fbc0152ee8f8007
+ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
+ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/18/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="spexecuteremote-azure-sql-database"></a>sp_execute_remote (base de datos de SQL Azure)
 [!INCLUDE[tsql-appliesto-xxxxxx-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-xxxxxx-asdb-xxxx-xxx-md.md)]

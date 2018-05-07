@@ -3,13 +3,10 @@ title: Método setMaxRows (SQLServerStatement) | Documentos de Microsoft
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
-ms.prod_service: drivers
-ms.service: ''
-ms.component: jdbc
+ms.prod_service: connectivity
 ms.reviewer: ''
 ms.suite: sql
-ms.technology:
-- drivers
+ms.technology: connectivity
 ms.tgt_pltfrm: ''
 ms.topic: conceptual
 apiname:
@@ -22,9 +19,9 @@ caps.latest.revision: 24
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: a9b0a3c75d6da7805a462df3cd7ff8be8c9c9448
-ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
-ms.translationtype: HT
+ms.openlocfilehash: 949c7a7d0b9d28c2ba14b4130db657ba357be2de
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.translationtype: MT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/03/2018
 ---
@@ -58,7 +55,7 @@ public final void setMaxRows(int max)
  Para obtener más información acerca de la instrucción SQL SET ROWCOUNT, vea el "[SET ROWCOUNT (Transact-SQL)](http://go.microsoft.com/fwlink/?LinkId=139522)" tema en [!INCLUDE[ssNoVersion](../../../includes/ssnoversion_md.md)] libros en pantalla.  
   
 ## <a name="see-also"></a>Vea también  
- [Miembros de SQLServerStatement](../../../connect/jdbc/reference/sqlserverstatement-members.md)   
+ [Miembros SQLServerStatement](../../../connect/jdbc/reference/sqlserverstatement-members.md)   
  [Clase SQLServerStatement](../../../connect/jdbc/reference/sqlserverstatement-class.md)  
   
   

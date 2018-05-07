@@ -1,11 +1,9 @@
 ---
 title: Funcionamiento de los comandos sin parámetros | Documentos de Microsoft
 ms.prod: sql
-ms.prod_service: drivers
-ms.service: ''
+ms.prod_service: connectivity
 ms.component: ado
-ms.technology:
-- drivers
+ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
@@ -20,12 +18,11 @@ caps.latest.revision: 11
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: 3d09a577f464c5fd2e9725fcc3d475ca0360b2bf
-ms.sourcegitcommit: bb044a48a6af9b9d8edb178dc8c8bd5658b9ff68
+ms.openlocfilehash: b468d55f9085c5201c1720887087b3ace94a6069
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/18/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="operation-of-non-parameterized-commands"></a>Funcionamiento de los comandos sin parámetros
 Para los comandos sin parámetros, se ejecutan todos los comandos de proveedor y el **conjuntos de registros** se crean durante la ejecución del comando. Si el comando se ejecuta sincrónicamente, todos los **conjuntos de registros** se llenará totalmente. Si se ha seleccionado un modo de llenado asincrónico, el estado relleno de la **conjuntos de registros** dependerá del modo de llenado y el tamaño de la **conjuntos de registros**.  

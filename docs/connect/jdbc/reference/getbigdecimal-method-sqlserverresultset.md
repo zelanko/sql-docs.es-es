@@ -3,13 +3,10 @@ title: getBigDecimal (método) (SQLServerResultSet) | Documentos de Microsoft
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
-ms.prod_service: drivers
-ms.service: ''
-ms.component: jdbc
+ms.prod_service: connectivity
 ms.reviewer: ''
 ms.suite: sql
-ms.technology:
-- drivers
+ms.technology: connectivity
 ms.tgt_pltfrm: ''
 ms.topic: conceptual
 apiname:
@@ -22,9 +19,9 @@ caps.latest.revision: 8
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: bad169449c0763b3f15e1f38bdcf636d59b77886
-ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
-ms.translationtype: HT
+ms.openlocfilehash: 1093ea73d9a485e0f5f17b446f7f5fca529ac046
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.translationtype: MT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/03/2018
 ---
@@ -43,7 +40,7 @@ ms.lasthandoff: 05/03/2018
 |[Método getBigDecimal &#40;java.lang.String, int&#41; &#40;SQLServerResultSet&#41;](../../../connect/jdbc/reference/getbigdecimal-method-java-lang-string-int-sqlserverresultset.md)|(Desusado) Recupera el valor del nombre de columna designado en la fila actual de este [SQLServerResultSet](../../../connect/jdbc/reference/sqlserverresultset-class.md) objeto mediante la escala especificada.|  
   
 ## <a name="see-also"></a>Vea también  
- [Miembros de SQLServerResultSet](../../../connect/jdbc/reference/sqlserverresultset-members.md)   
+ [Miembros SQLServerResultSet](../../../connect/jdbc/reference/sqlserverresultset-members.md)   
  [Clase SQLServerResultSet](../../../connect/jdbc/reference/sqlserverresultset-class.md)  
   
   

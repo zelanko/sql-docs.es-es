@@ -26,12 +26,11 @@ caps.latest.revision: 29
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: f091544fe79d09664350a312973e9d26a1a90cab
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
+ms.openlocfilehash: d24024156d54b6db4b74331861fa316618dc74fe
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="srvparamstatus-extended-stored-procedure-api"></a>srv_paramstatus (API de procedimiento almacenado extendido)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -62,9 +61,9 @@ n
  Indica el número del parámetro. El primer parámetro es número 1.  
   
 ## <a name="returns"></a>Devuelve  
- **int** que contiene marcas de estado para el parámetro. Actualmente solo hay una marca: si el bit 0 está establecido en 1, el parámetro es un parámetro de retorno. Si no hay ningún *n*parámetro o si no hay ningún procedimiento almacenado remoto, devuelve -1.  
+ **int** que contiene marcas de estado para el parámetro. Actualmente solo hay una marca: si el bit 0 está establecido en 1, el parámetro es un parámetro de retorno. Si no existe ningún parámetro *n* o no hay ningún procedimiento almacenado remoto, devuelve -1.  
   
-## <a name="remarks"></a>Comentarios  
+## <a name="remarks"></a>Notas  
  Esta rutina devuelve las marcas de estado de un parámetro de llamada a un procedimiento almacenado remoto.  
   
  Los parámetros contienen datos que se pasan entre los clientes y la aplicación con procedimientos almacenados remotos. El cliente puede especificar ciertos parámetros como parámetros de retorno. Estos parámetros de retorno pueden contener valores que la aplicación devuelve al cliente.  
@@ -76,7 +75,7 @@ n
 > [!IMPORTANT]  
 >  Debe revisar minuciosamente el código fuente de los procedimientos almacenados extendidos y debe probar las DLL compiladas antes de instalarlas en el servidor de producción. Para obtener información acerca de la revisión y pruebas de seguridad, vea este [sitio web de Microsoft](http://go.microsoft.com/fwlink/?LinkID=54761&amp;clcid=0x409http://msdn.microsoft.com/security/).  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Ver también  
  [srv_rpcparams &#40;API de procedimiento almacenado extendido&#41;](../../relational-databases/extended-stored-procedures-reference/srv-rpcparams-extended-stored-procedure-api.md)  
   
   

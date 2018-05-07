@@ -4,7 +4,6 @@ ms.custom: ''
 ms.date: 03/03/2017
 ms.prod: sql
 ms.prod_service: database-engine
-ms.service: ''
 ms.component: extended-stored-procedures
 ms.reviewer: ''
 ms.suite: sql
@@ -26,12 +25,11 @@ caps.latest.revision: 30
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: 50af5fe7e6c40a1133ee585b416189e61ed461e2
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
+ms.openlocfilehash: 71da765cd6ad0de2b17462f55eb653e6c832d755
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="srvparamname-extended-stored-procedure-api"></a>srv_paramname (API de procedimiento almacenado extendido)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -60,15 +58,15 @@ SRV_PROC * srvproc,intn, int *len );
  Proporciona un puntero a una variable **int** que contiene la longitud en bytes del nombre de parámetro. Si *len* es NULL, no se devuelve la longitud del nombre de parámetro del procedimiento almacenado remoto.  
   
 ## <a name="returns"></a>Devuelve  
- Un puntero a una cadena de caracteres terminada en NULL que contiene el nombre del parámetro. La longitud del nombre de parámetro se almacena en *len*. Si no hay ningún *n*parámetro ni ningún procedimiento almacenado remoto, devuelve NULL, *len* se establece en -1, y se envía un mensaje de error informativo. Si el nombre de parámetro es NULL, *len* se establece en 0 y se devuelve una cadena vacía terminada en NULL.  
+ Un puntero a una cadena de caracteres terminada en NULL que contiene el nombre del parámetro. La longitud del nombre de parámetro se almacena en *len*. Si no hay ningún parámetro *n* ni ningún procedimiento almacenado remoto, devuelve NULL, *len* se establece en -1 y se envía un mensaje de error informativo. Si el nombre de parámetro es NULL, *len* se establece en 0 y se devuelve una cadena vacía terminada en NULL.  
   
-## <a name="remarks"></a>Comentarios  
+## <a name="remarks"></a>Notas  
  Esta función obtiene el nombre de un parámetro de llamada a un procedimiento almacenado remoto. Cuando se usan parámetros en una llamada a un procedimiento almacenado remoto, estos pueden pasarse por nombre o por posición (sin nombre). Se produce un error si la llamada al procedimiento almacenado remoto se realiza con algunos parámetros pasados por nombre y otros pasados por posición. Sigue llamándose al controlador SRV_RPC, pero parece como si no hubiera ningún parámetro y **srv_rpcparams** devuelve 0.  
   
 > [!IMPORTANT]  
 >  Debe revisar minuciosamente el código fuente de los procedimientos almacenados extendidos y debe probar las DLL compiladas antes de instalarlas en el servidor de producción. Para obtener información acerca de la revisión y pruebas de seguridad, vea este [sitio web de Microsoft](http://go.microsoft.com/fwlink/?LinkID=54761&amp;clcid=0x409http://msdn.microsoft.com/security/).  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Ver también  
  [srv_rpcparams &#40;API de procedimiento almacenado extendido&#41;](../../relational-databases/extended-stored-procedures-reference/srv-rpcparams-extended-stored-procedure-api.md)  
   
   

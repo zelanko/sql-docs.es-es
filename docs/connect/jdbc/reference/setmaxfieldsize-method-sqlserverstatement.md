@@ -3,13 +3,10 @@ title: Método (SQLServerStatement) setMaxFieldSize | Documentos de Microsoft
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
-ms.prod_service: drivers
-ms.service: ''
-ms.component: jdbc
+ms.prod_service: connectivity
 ms.reviewer: ''
 ms.suite: sql
-ms.technology:
-- drivers
+ms.technology: connectivity
 ms.tgt_pltfrm: ''
 ms.topic: conceptual
 apiname:
@@ -22,9 +19,9 @@ caps.latest.revision: 8
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 8cfec844209ad200335cb07b475e3eb1070a7643
-ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
-ms.translationtype: HT
+ms.openlocfilehash: 1e44e19c42a9ac0ec5629362dff4d33116c64090
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.translationtype: MT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/03/2018
 ---
@@ -52,7 +49,7 @@ public final void setMaxFieldSize(int max)
  Este método setMaxFieldSize especificado por el método setMaxFieldSize en la interfaz java.sql.Statement.  
   
 ## <a name="see-also"></a>Vea también  
- [Miembros de SQLServerStatement](../../../connect/jdbc/reference/sqlserverstatement-members.md)   
+ [Miembros SQLServerStatement](../../../connect/jdbc/reference/sqlserverstatement-members.md)   
  [Clase SQLServerStatement](../../../connect/jdbc/reference/sqlserverstatement-class.md)  
   
   

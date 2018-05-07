@@ -1,27 +1,27 @@
 ---
 title: Instalar SQL Server 2016 en Server Core | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 09/05/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine
-ms.service: 
+ms.service: ''
 ms.component: install-windows
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - setup-install
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: 1dd294cc-5b69-4d0c-9005-3e307b75678b
-caps.latest.revision: 
+caps.latest.revision: 43
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 7de58227a8da5f90921b1e973a63949f71a25b52
-ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
+ms.openlocfilehash: ac142899ecabd2e3d322be70de5f0ff14fd8913c
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/09/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="install-sql-server-on-server-core"></a>Instalar SQL Server en Server Core
 
@@ -47,15 +47,15 @@ La opción de instalación Server Core proporciona un entorno mínimo para ejecu
   
 |Característica|Admitida|Información adicional|  
 |-------------|---------------|----------------------------|  
-|[!INCLUDE[ssDE](../../includes/ssde-md.md)] Services|Sí||  
-|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] REPLICATION|Sí||  
+|[!INCLUDE[ssDE](../../includes/ssde-md.md)] Servicios|Sí||  
+|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Replicación|Sí||  
 |Búsqueda de texto completo|Sí||  
 |[!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]|Sí||  
 |[!INCLUDE[rsql_productname_md](../../includes/rsql-productname-md.md)]|Sí||  
 |[!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]|no||  
 |[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Data Tools (SSDT)|no||  
 |Conectividad con las herramientas de cliente|Sí||  
-|Servidor Integration Services|Sí|Para más información sobre el nuevo servidor de Integration Services y sus características en [!INCLUDE[ssCurrent](../../integration-services/what-s-new-in-integration-services-in-sql-server-2016.md).|  
+|Servidor Integration Services|Sí||  
 |Compatibilidad con las versiones anteriores de las herramientas de cliente|no||  
 |SDK de las herramientas de cliente|no||  
 |[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Libros en pantalla|no||  
@@ -73,9 +73,9 @@ La opción de instalación Server Core proporciona un entorno mínimo para ejecu
   
 |||  
 |-|-|  
-|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ediciones|Todas las ediciones de [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] de 64 bits*|  
-|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] language|Todos los idiomas|  
-|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Idioma en el idioma o configuración regional (combinación) del sistema operativo|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] en inglés en Windows en japonés<br /><br /> [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] en inglés en Windows en alemán<br /><br /> [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] en inglés en Windows en chino<br /><br /> [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] en inglés en Windows en árabe<br /><br /> [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] en inglés en Windows en tailandés<br /><br /> [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] en inglés en Windows en turco<br /><br /> [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] en inglés en Windows en portugués de Portugal<br /><br /> [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] en inglés en Windows en inglés|  
+|Ediciones de[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] |Todas las ediciones de [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] de 64 bits |  
+|Idioma de[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] |Todos los idiomas|  
+|Idioma de[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] en el idioma o configuración regional (combinación) del sistema operativo|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] en inglés en Windows en japonés<br /><br /> [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] en inglés en Windows en alemán<br /><br /> [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] en inglés en Windows en chino<br /><br /> [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] en inglés en Windows en árabe<br /><br /> [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] en inglés en Windows en tailandés<br /><br /> [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] en inglés en Windows en turco<br /><br /> [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] en inglés en Windows en portugués de Portugal<br /><br /> [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] en inglés en Windows en inglés|  
 |Edición de Windows|[!INCLUDE[winserver2016_datacenter_md](../../includes/winserver2016-datacenter-md.md)]<br/><br/>[!INCLUDE[winserver2016_standard_md](../../includes/winserver2016-standard-md.md)]<br/><br/>[!INCLUDE[win8srv](../../includes/win8srv-md.md)] R2 Datacenter<br/><br/>[!INCLUDE[win8srv](../../includes/win8srv-md.md)] R2 Standard<br/><br/>[!INCLUDE[win8srv](../../includes/win8srv-md.md)] R2 Essentials<br/><br/>[!INCLUDE[win8srv](../../includes/win8srv-md.md)] R2 Foundation<br/><br/>[!INCLUDE[win8srv](../../includes/win8srv-md.md)] Datacenter<br/><br/>[!INCLUDE[win8srv](../../includes/win8srv-md.md)] Standard<br/><br/>[!INCLUDE[win8srv](../../includes/win8srv-md.md)] Essentials<br/><br/>[!INCLUDE[win8srv](../../includes/win8srv-md.md)] Foundation|  
   
 ## <a name="upgrade"></a>UPGRADE 

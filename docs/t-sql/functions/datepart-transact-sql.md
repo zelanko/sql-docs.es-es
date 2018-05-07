@@ -1,16 +1,16 @@
 ---
 title: DATEPART (Transact-SQL) | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 07/29/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
-ms.service: 
+ms.service: ''
 ms.component: t-sql|functions
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - DATEPART_TSQL
@@ -29,23 +29,24 @@ helpviewer_keywords:
 - DATEPART function [SQL Server]
 - dates [SQL Server], dateparts
 ms.assetid: 15f1a5bc-4c0c-4c48-848d-8ec03473e6c1
-caps.latest.revision: 
+caps.latest.revision: 57
 author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: Active
-ms.openlocfilehash: a972e0646d68620b915fe441e35ebfb617d06859
-ms.sourcegitcommit: 45e4efb7aa828578fe9eb7743a1a3526da719555
+monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
+ms.openlocfilehash: af3b28322a1d0080202cfc42c3381f8d82d0f535
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="datepart-transact-sql"></a>DATEPART (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
 
 Devuelve un entero que representa el parámetro *datepart* especificado del parámetro *date* especificada.
   
-Para ver información general sobre todos los tipos de datos y funciones de fecha y hora de [!INCLUDE[tsql](../../includes/tsql-md.md)], vea [Date and Time Data Types and Functions &#40;Transact-SQL&#41;](../../t-sql/functions/date-and-time-data-types-and-functions-transact-sql.md) (Tipos de datos y funciones de fecha y hora [Transact-SQL]).
+Para ver información general sobre todos los tipos de datos y funciones de fecha y hora de [!INCLUDE[tsql](../../includes/tsql-md.md)], vea [Tipos de datos y funciones de fecha y hora &#40;Transact-SQL&#41;](../../t-sql/functions/date-and-time-data-types-and-functions-transact-sql.md).
   
 ![Icono de vínculo de tema](../../database-engine/configure-windows/media/topic-link.gif "Icono de vínculo de tema") [Convenciones de sintaxis de Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)
   
@@ -79,7 +80,7 @@ Es la parte de *date* (una fecha u hora) para la que se devolverá un valor **in
   
 *date*  
 Es una expresión que se puede resolver en un valor **time**, **date**, **smalldatetime**, **datetime**, **datetime2** o **datetimeoffset**. *date* puede ser una expresión, una expresión de columna, una variable definida por el usuario o un literal de cadena.  
-Para evitar ambigüedades, use años de cuatro dígitos. Para obtener más información, vea [Establecer la opción de configuración del servidor Fecha límite de año de dos dígitos](../../database-engine/configure-windows/configure-the-two-digit-year-cutoff-server-configuration-option.md).
+Para evitar ambigüedades, use años de cuatro dígitos. Para más información, vea [Establecer la opción de configuración del servidor Fecha límite de año de dos dígitos](../../database-engine/configure-windows/configure-the-two-digit-year-cutoff-server-configuration-option.md).
   
 ## <a name="return-type"></a>Tipo devuelto  
  **int**  
@@ -111,9 +112,9 @@ En la siguiente tabla se enumeran todos los argumentos *datepart* con los corres
 ## <a name="week-and-weekday-datepart-arguments"></a>Argumentos de la parte de fecha semana y día de la semana
 Si *datepart* es **week** (**wk**, **ww**) o **weekday** (**dw**), el valor devuelto depende del valor que se ha definido mediante [SET DATEFIRST](../../t-sql/statements/set-datefirst-transact-sql.md).
   
-El 1 de enero de cualquier año define el número inicial de **week***datepart*; por ejemplo: DATEPART (**wk**, 'Jan 1, *xxx*x') = 1, donde *xxxx* es cualquier año.
+El 1 de enero de cualquier año define el número inicial de **week***datepart*; por ejemplo: DATEPART (** wk, 'Jan 1, *xxx*x') = 1, donde *xxxx* es cualquier año.
   
-En la tabla siguiente se enumeran los valores devueltos para **week** y **weekday***datepart* para '2007-04-21 ' para cada argumento SET DATEFIRST. El 1 de enero es un lunes del año 2007. El 21 de abril es sábado en el año 2007. El valor predeterminado para inglés de EE.UU. es SET DATEFIRST 7, Sunday Inglés.
+En la tabla siguiente se enumeran los valores devueltos para **week** y *weekdaydatepart* para '2007-04-21 ' para cada argumento SET DATEFIRST. El 1 de enero es un lunes del año 2007. El 21 de abril es sábado en el año 2007. El valor predeterminado para inglés de EE.UU. es SET DATEFIRST 7, Sunday Inglés.
   
 |SET DATEFIRST<br /><br /> argumento|week<br /><br /> devuelto|weekday<br /><br /> devuelto|  
 |---|---|---|

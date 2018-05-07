@@ -1,23 +1,26 @@
 ---
-title: SET XACT_ABORT (Transact-SQL) | Documentos de Microsoft
-ms.custom: 
+title: SET XACT_ABORT (Transact-SQL) | Microsoft Docs
+ms.custom: ''
 ms.date: 07/07/2016
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
-ms.service: 
+ms.service: ''
 ms.component: t-sql|statements
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: database-engine
-ms.tgt_pltfrm: 
+ms.technology:
+- database-engine
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
-applies_to: SQL Server 2016 Preview
+applies_to:
+- SQL Server 2016 Preview
 f1_keywords:
 - XACT_ABORT_TSQL
 - XACT_ABORT
 - SET XACT_ABORT
 - SET_XACT_ABORT_TSQL
-dev_langs: TSQL
+dev_langs:
+- TSQL
 helpviewer_keywords:
 - transaction rollbacks [SQL Server]
 - XACT_ABORT option
@@ -27,23 +30,24 @@ helpviewer_keywords:
 - roll back transactions [SQL Server]
 - SET XACT_ABORT statement
 ms.assetid: cbcaa433-58f2-4dc3-a077-27273bef65b5
-caps.latest.revision: "50"
+caps.latest.revision: 50
 author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: Active
-ms.openlocfilehash: c12ab84986210f559fe5d3b1a8842b70a885108e
-ms.sourcegitcommit: 45e4efb7aa828578fe9eb7743a1a3526da719555
-ms.translationtype: MT
+monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
+ms.openlocfilehash: 38e51f72122f4c20c566398fca8dc5d5e58f3fa1
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
+ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="set-xactabort-transact-sql"></a>SET XACT_ABORT (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
 
     
 > [!NOTE]  
->  El **THROW** instrucción respeta **establecer XACT_ABORT RAISERROR** no lo hace. Las aplicaciones nuevas deben utilizar **THROW** en lugar de **RAISERROR**.  
+>  La instrucción **THROW** respeta **SET XACT_ABORT**. **RAISERROR** no lo hace. Las nuevas aplicaciones deben usar **THROW** en vez de **RAISERROR**.  
   
  Especifica si [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] revierte automáticamente la transacción actual cuando una instrucción [!INCLUDE[tsql](../../includes/tsql-md.md)] genera un error en tiempo de ejecución.  
   
@@ -63,7 +67,7 @@ SET XACT_ABORT { ON | OFF }
 SET XACT_ABORT ON   
 ```  
   
-## <a name="remarks"></a>Comentarios  
+## <a name="remarks"></a>Notas  
  Cuando SET XACT_ABORT es ON, si una instrucción [!INCLUDE[tsql](../../includes/tsql-md.md)] genera un error en tiempo de ejecución, se termina toda la transacción y se revierte.  
   
  Cuando SET XACT_ABORT es OFF, en algunos casos solo se revierte la instrucción [!INCLUDE[tsql](../../includes/tsql-md.md)] que generó el error y la transacción continúa procesándose. Dependiendo de la gravedad del error, se puede revertir toda la transacción aun cuando SET XACT_ABORT sea OFF. OFF es el valor predeterminado.  
@@ -134,8 +138,8 @@ SELECT *
 GO  
 ```  
   
-## <a name="see-also"></a>Vea también  
- [THROW &#40; Transact-SQL &#41;](../../t-sql/language-elements/throw-transact-sql.md)   
+## <a name="see-also"></a>Ver también  
+ [THROW &#40;Transact-SQL&#41;](../../t-sql/language-elements/throw-transact-sql.md)   
  [BEGIN TRANSACTION &#40;Transact-SQL&#41;](../../t-sql/language-elements/begin-transaction-transact-sql.md)   
  [COMMIT TRANSACTION &#40;Transact-SQL&#41;](../../t-sql/language-elements/commit-transaction-transact-sql.md)   
  [ROLLBACK TRANSACTION &#40;Transact-SQL&#41;](../../t-sql/language-elements/rollback-transaction-transact-sql.md)   

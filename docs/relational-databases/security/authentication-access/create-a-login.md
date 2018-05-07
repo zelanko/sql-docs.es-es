@@ -2,7 +2,7 @@
 title: Creación de un inicio de sesión | Microsoft Docs
 ms.custom: ''
 ms.date: 08/01/2016
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
 ms.service: ''
 ms.component: security
@@ -30,11 +30,12 @@ author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: Active
-ms.openlocfilehash: 1cfca2d37697e8c9942ac042857784e68dca7088
-ms.sourcegitcommit: d6b1695c8cbc70279b7d85ec4dfb66a4271cdb10
-ms.translationtype: MT
+monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
+ms.openlocfilehash: 03a4f993deace5c4714e17667b00eee99b4811a3
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
+ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/10/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="create-a-login"></a>Crear un inicio de sesión
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -160,7 +161,7 @@ ms.lasthandoff: 04/10/2018
  **Miembros del rol de base de datos para:**  *nombre_baseDeDatos*  
  Selecciona los roles para el usuario en la base de datos especificada. Todos los usuarios son miembros del rol **public** de todas las bases de datos, y no pueden eliminarse. Para obtener más información sobre los roles de base de datos, vea [Roles de nivel de base de datos](../../../relational-databases/security/authentication-access/database-level-roles.md).  
   
-### <a name="securables"></a>Securables  
+### <a name="securables"></a>Elementos protegibles  
  La página **Elementos protegibles** muestra todos los elementos protegibles posibles y los permisos en esos elementos protegibles que se pueden conceder al inicio de sesión. En esta página están disponibles las opciones siguientes:  
   
  **Cuadrícula superior**  
@@ -170,9 +171,9 @@ ms.lasthandoff: 04/10/2018
   
 1.  Haga clic en **Buscar**.  
   
-2.  En el **agregar objetos** cuadro de diálogo, seleccione una de las siguientes opciones: **objetos específicos...** , **Todos los objetos de los tipos...** , o **el servidor *** nombre_servidor*. [!INCLUDE[clickOK](../../../includes/clickok-md.md)]  
+2.  En el cuadro de diálogo **Agregar objetos**, seleccione una de las opciones siguientes: **Objetos específicos…**, **Todos los objetos de los tipos…**o **El servidor***nombre_servidor*. [!INCLUDE[clickOK](../../../includes/clickok-md.md)]  
   
-    > **Nota:** si selecciona **el servidor *** nombre_servidor* rellena automáticamente la cuadrícula superior con todos los objetos protegibles de ese servidor.  
+    > **NOTA:** Cuando se selecciona **El servidor***nombre_servidor*, se rellena automáticamente la cuadrícula superior con todos los objetos que se pueden proteger de ese servidor.  
   
 3.  Si selecciona **Objetos específicos**:  
   
@@ -278,7 +279,7 @@ ms.lasthandoff: 04/10/2018
   
 -   Para conceder un permiso a un inicio de sesión, vea [Conceder un permiso a una entidad de seguridad](../../../relational-databases/security/authentication-access/grant-a-permission-to-a-principal.md).  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Ver también  
  [Centro de seguridad para el motor de base de datos SQL Server y la base de datos SQL Azure](../../../relational-databases/security/security-center-for-sql-server-database-engine-and-azure-sql-database.md)  
   
   

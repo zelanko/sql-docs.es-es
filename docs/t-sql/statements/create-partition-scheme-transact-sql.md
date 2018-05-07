@@ -1,16 +1,16 @@
 ---
 title: CREATE PARTITION SCHEME (Transact-SQL) | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 04/10/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine, sql-database
-ms.service: 
+ms.service: ''
 ms.component: t-sql|statements
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - CREATE PARTITION SCHEME
@@ -31,16 +31,16 @@ helpviewer_keywords:
 - partitioned tables [SQL Server], filegroups
 - mapping partitions [SQL Server]
 ms.assetid: 5b21c53a-b4f4-4988-89a2-801f512126e4
-caps.latest.revision: 
+caps.latest.revision: 39
 author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 98abb06746c88d7876505033f5b209c30812fc5d
-ms.sourcegitcommit: 721ad1cbc10e8147c087ae36b36296d72cbb0de8
+ms.openlocfilehash: e3f3c52b3fca1326d9cc73203ff46285a2da2b76
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/07/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="create-partition-scheme-transact-sql"></a>CREATE PARTITION SCHEME (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -69,16 +69,16 @@ AS PARTITION partition_function_name
  Es el nombre de la función de partición que utiliza el esquema de partición. Las particiones creadas por la función de partición se asignan a los grupos de archivos especificados en el esquema de partición. *partition_function_name* ya debe existir en la base de datos. Una única partición no puede contener grupos de archivos FILESTREAM y no FILESTREAM a la vez.  
   
  ALL  
- Especifica que todas las particiones se asignan al grupo de archivos suministrado en *file_group_name* o al grupo de archivos principal si se especifica **[**PRIMARY**]**. Si se especifica ALL, solo se puede especificar un valor de *file_group_name*.  
+ Especifica que todas las particiones se asignan al grupo de archivos suministrado en *file_group_name* o al grupo de archivos principal si se especifica **[** PRIMARY **]**. Si se especifica ALL, solo se puede especificar un valor de *file_group_name*.  
   
  *file_group_name* | **[** PRIMARY **]** [ **,***...n*]  
  Especifica los nombres de los grupos de archivos que almacenarán las particiones especificadas por *partition_function_name*. *file_group_name* ya debe existir en la base de datos.  
   
- Si se especifica **[**PRIMARY**]**, la partición se almacena en el grupo de archivos principal. Si se especifica ALL, solo se puede especificar un valor de *file_group_name*. A partir de la partición 1, las particiones se asignan a los grupos de archivos en el orden en que éstos aparecen en [**,***...n*]. Se puede especificar el mismo valor de *file_group_name* más de una vez en [**,***...n*]. Si *n* no es suficiente para contener el número de particiones especificadas en *partition_function_name*, CREATE PARTITION SCHEME generará un error.  
+ Si se especifica **[** PRIMARY **]**, la partición se almacena en el grupo de archivos principal. Si se especifica ALL, solo se puede especificar un valor de *file_group_name*. A partir de la partición 1, las particiones se asignan a los grupos de archivos en el orden en que estos aparecen en [**,***...n*]. Se puede especificar el mismo valor de *file_group_name* más de una vez en [**,***...n*]. Si *n* no es suficiente para contener el número de particiones especificadas en *partition_function_name*, CREATE PARTITION SCHEME generará un error.  
   
  Si *partition_function_name* genera menos particiones que grupos de archivos, el primer grupo de archivos sin asignar se marca como NEXT USED y se muestra un mensaje informativo donde se indica el grupo de archivos NEXT USED. Si se especifica ALL, solo *file_group_name* mantiene su propiedad NEXT USED para este *partition_function_name*. El grupo de archivos NEXT USED recibirá una partición adicional si se crea una en una instrucción ALTER PARTITION FUNCTION. Si desea crear más grupos de archivos sin asignar para almacenar las nuevas particiones, utilice ALTER PARTITION SCHEME.  
   
- Al especificar el grupo de archivos principal en *file_group_name* [ 1**,***...n*], PRIMARY debe estar delimitado, como en **[**PRIMARY**]**, porque es una palabra clave.  
+ Al especificar el grupo de archivos principal en *file_group_name* [ 1 **,***...n*], PRIMARY debe estar delimitado, como en **[** PRIMARY**]**, porque es una palabra clave.  
   
  Solo se admite PRIMARY para [!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)]. Vea el ejemplo E de abajo. 
   

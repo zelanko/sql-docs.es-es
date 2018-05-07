@@ -1,16 +1,16 @@
 ---
 title: Consultas de PolyBase | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 12/08/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine
-ms.service: 
+ms.service: ''
 ms.component: polybase
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine-polybase
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 keywords:
 - PolyBase
@@ -21,21 +21,21 @@ helpviewer_keywords:
 - Azure blob storage, import with PolyBase
 - Azure blob storage, export with PolyBase
 ms.assetid: 2c5aa2bd-af7d-4f57-9a28-9673c2a4c07e
-caps.latest.revision: 
+caps.latest.revision: 18
 author: barbkess
 ms.author: barbkess
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 332661e69cde4a1ca8ec55c4082e1b3a23077571
-ms.sourcegitcommit: 4edac878b4751efa57601fe263c6b787b391bc7c
+ms.openlocfilehash: b6544e06a8b0d07e4a2eda1f8371cd0440c172f9
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/19/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="polybase-queries"></a>PolyBase Queries
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
 
-  En este artículo se proporcionan ejemplos de consultas mediante el uso de la característica [PolyBase](../../relational-databases/polybase/polybase-guide.md) de SQL Server 2016. Antes de usar estos ejemplos, también debe comprender cuáles son las instrucciones T-SQL necesarias para configurar PolyBase (consulte [Objetos T-SQL de PolyBase](../../relational-databases/polybase/polybase-t-sql-objects.md)).
+  En este artículo se proporcionan ejemplos de consultas mediante el uso de la característica [PolyBase](../../relational-databases/polybase/polybase-guide.md) de SQL Server (a partir de la versión de 2016). Antes de usar estos ejemplos, también debe comprender cuáles son las instrucciones T-SQL necesarias para configurar PolyBase (consulte [Objetos T-SQL de PolyBase](../../relational-databases/polybase/polybase-t-sql-objects.md)).
   
 ## <a name="queries"></a>Consultas  
  Ejecute instrucciones de Transact-SQL en tablas externas o use herramientas de BI para consultar tablas externas.
@@ -156,9 +156,10 @@ CREATE CLUSTERED COLUMNSTORE INDEX CCI_FastCustomers ON Fast_Customers;
 
 Exporte datos de SQL Server a Hadoop o Azure Storage. 
 
-En primer lugar, habilite la funcionalidad de exportación; para ello, establezca el valor `sp_configure` de "Permitir exportación de PolyBase" en 1. Luego, cree una tabla externa que apunte al directorio de destino. A continuación, utilice INSERT INTO para exportar datos de una tabla de SQL Server local a un origen de datos externo. 
+En primer lugar, habilite la funcionalidad de exportación; para ello, establezca el valor `sp_configure` de "Permitir exportación de PolyBase" en 1. Luego, cree una tabla externa que apunte al directorio de destino. La instrucción CREATE EXTERNAL TABLE crea el directorio de destino, si aún no existe. Después, use INSERT INTO para exportar datos de una tabla de SQL Server local al origen de datos externo. 
 
-La instrucción INSERT INTO crea el directorio de destino, si no existe, y los resultados de la instrucción SELECT se exportan a la ubicación especificada en el formato de archivo especificado. Los archivos externos se denominan *QueryID_date_time_ID.format*, donde *ID* es un identificador incremental y *format* es el formato de los datos exportados. Por ejemplo, un nombre de archivo podría ser QID776_20160130_182739_0.orc.
+Los resultados de la instrucción SELECT se exportan a la ubicación especificada en el formato de archivo especificado. Los archivos externos se denominan *QueryID_date_time_ID.format*, donde *ID* es un identificador incremental y *format* es el formato de los datos exportados. Por ejemplo, un nombre de archivo podría ser QID776_20160130_182739_0.orc.
+
 
 > [!NOTE]
 > Al exportar datos a Hadoop o Azure Blob Storage mediante PolyBase, solo se exportan los datos, y no los nombres de columna (metadatos), tal y como se define en el comando CREATE EXTERNAL TABLE.

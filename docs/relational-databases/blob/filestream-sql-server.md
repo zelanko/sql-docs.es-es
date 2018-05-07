@@ -1,32 +1,32 @@
 ---
 title: FILESTREAM (SQL Server) | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 01/11/2018
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine
-ms.service: 
+ms.service: ''
 ms.component: blob
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - dbe-blob
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - FILESTREAM [SQL Server]
 - FILESTREAM [SQL Server], about
 - FILESTREAM [SQL Server], overview
 ms.assetid: 9a5a8166-bcbe-4680-916c-26276253eafa
-caps.latest.revision: 
+caps.latest.revision: 13
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 2e0a757bb7582d3bc9690d804ab34d47aeaedf03
-ms.sourcegitcommit: 37f0b59e648251be673389fa486b0a984ce22c81
+ms.openlocfilehash: 54cc9bd8f9c209fa07fcbb920dcd22abd5c3dbb1
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/12/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="filestream-sql-server"></a>FILESTREAM (SQL Server)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
@@ -90,7 +90,7 @@ Después de almacenar los datos en una columna FILESTREAM, puede tener acceso a 
 Usando [!INCLUDE[tsql](../../includes/tsql-md.md)], puede insertar, actualizar y eliminar los datos de FILESTREAM:  
 
 - Puede usar una operación de inserción para rellenar previamente un campo FILESTREAM con un valor nulo, un valor vacío o un dato insertado relativamente corto. Sin embargo, se envía una gran cantidad de datos de manera más eficaz en un archivo que usa interfaces de Win32.  
-- Al actualizar un campo FILESTREAM, modifica los datos de BLOB subyacentes en el sistema de archivos. Cuando un campo FILESTREAM está establecido en NULL, se eliminan los datos de BLOB asociados al campo. No puede usar ninguna actualización fragmentada de [!INCLUDE[tsql](../../includes/tsql-md.md)] , implementada como UPDATE**.**Write(), para realizar actualizaciones parciales en los datos. 
+- Al actualizar un campo FILESTREAM, modifica los datos de BLOB subyacentes en el sistema de archivos. Cuando un campo FILESTREAM está establecido en NULL, se eliminan los datos de BLOB asociados al campo. No puede usar ninguna actualización fragmentada de [!INCLUDE[tsql](../../includes/tsql-md.md)] , implementada como UPDATE **.** Write(), para realizar actualizaciones parciales en los datos. 
 - Al eliminar una fila, o eliminar o truncar una tabla que contiene datos FILESTREAM, elimina los datos de BLOB subyacentes del sistema de archivos.
 
 ### <a name="file-system-streaming-access"></a>Acceso a la transmisión por secuencias del sistema de archivos
@@ -170,3 +170,7 @@ No se admite la creación de vistas asignadas de memoria (E/S asignada de memori
 ## <a name="related-content"></a>Contenido relacionado
 
 [Compatibilidad de FILESTREAM con otras características de SQL Server](../../relational-databases/blob/filestream-compatibility-with-other-sql-server-features.md)
+<br>[Vistas de administración dinámica de secuencia de archivo y FileTable (Transact-SQL)](../system-dynamic-management-views/filestream-and-filetable-dynamic-management-views-transact-sql.md)
+<br>[Vistas de catálogo de secuencia de archivo y FileTable (Transact-SQL)](../system-catalog-views/filestream-and-filetable-catalog-views-transact-sql.md)
+<br>[Procedimientos almacenados del sistema de Filestream y FileTable (Transact-SQL)](../system-stored-procedures/filestream-and-filetable-system-stored-procedures.md)
+

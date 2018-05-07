@@ -1,25 +1,25 @@
 ---
 title: Implementar el elemento web Visor de informes de SQL Server Reporting Services en un sitio de SharePoint | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 10/05/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-sharepoint, reporting-services-native
-ms.service: 
+ms.service: ''
 ms.component: report-server-sharepoint
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: pro-bi
-ms.technology: 
-ms.tgt_pltfrm: 
+ms.technology: ''
+ms.tgt_pltfrm: ''
 ms.topic: article
 author: markingmyname
 ms.author: maghan
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: f5fd405e91f9ca16caf9345a4a3e8f7852a3ad37
-ms.sourcegitcommit: 7e117bca721d008ab106bbfede72f649d3634993
+ms.openlocfilehash: df39b0b38363f7990609214abddeda8b5b6e54a9
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/09/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="deploy-the-sql-server-reporting-services-report-viewer-web-part-on-a-sharepoint-site"></a>Implementar el elemento web Visor de informes de SQL Server Reporting Services en un sitio de SharePoint
 
@@ -33,7 +33,11 @@ Use las instrucciones siguientes para implementar manualmente el paquete de solu
 
 ## <a name="requirements"></a>Requisitos
 
-**Compatibilidad con versiones de SharePoint Server:**  
+> [!IMPORTANT]
+> Actualmente no se puede instalar este elemento web si ya ha configurado el modo integrado de SharePoint de Reporting Services.
+>
+
+**Compatibilidad con versiones de SharePoint Server:**
 * SharePoint Server 2016
 * SharePoint Server 2013
 
@@ -148,6 +152,26 @@ Los siguientes idiomas son compatibles con el elemento web:
 * Ruso (ru)
 * Chino (simplificado - zh-HANS y zh-CHS)
 * Chino (tradicional - zh-HANS y zh-CHS)
+
+## <a name="troubleshoot"></a>Solucionar problemas
+
+* Error al desinstalar SSRS si ha configurado el modo integrado de SharePoint:
+
+    Install-SPRSService: [A] No se puede convertir Microsoft.ReportingServices.SharePoint.SharedService.Service.ReportingWebService en [B]Microsoft.ReportingServices.SharePoint.SharedService.Service.ReportingWebService. El tipo A se origina a partir de"Microsoft.ReportingServices.SharePoint.SharedService,Version=14.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91" en el contexto "Default" en la ubicación "C:\Windows\assembly\GAC_MSIL\Microsoft.Reporting Services.SharePoint.SharedService.dll". El tipo B se origina a partir de"Microsoft.ReportingServices.SharePoint.SharedService,Version=12.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91" en el contexto "Default" en la ubicación "C:\Windows\assembly\GAC_MSIL\Microsoft.Reporting Services.SharePoint.SharedService.dll".
+    
+    Solución:
+    1. Eliminar el elemento web Visor de informes
+    2. Desinstalar SSRS
+    3. Volver a instalar el elemento web Visor de informes
+
+* Error al intentar actualizar SharePointsi ha configurado el modo integrado de SharePoint:
+
+    "No se puede cargar el archivo o ensamblado "Microsoft.ReportingServices.Alerting.ServiceContract, Version=14.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91" o una de sus dependencias. El sistema no encuentra el archivo especificado. 00000000-0000-0000-0000-000000000000
+    
+    Solución:
+    1. Eliminar el elemento web Visor de informes
+    2. Desinstalar SSRS
+    3. Volver a instalar el elemento web Visor de informes
 
 ## <a name="next-steps"></a>Pasos siguientes
 

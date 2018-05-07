@@ -1,6 +1,6 @@
 ---
 title: Migrar cargas de trabajo de SQL Server Integration Services a la nube mediante lift-and-shift | Microsoft Docs
-ms.date: 10/31/2017
+ms.date: 04/13/2018
 ms.topic: article
 ms.prod: sql-non-specified
 ms.prod_service: integration-services
@@ -14,11 +14,11 @@ author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 82a6ab09504edd0a5df17a05de62ae5fd44a1c18
-ms.sourcegitcommit: 8f1d1363e18e0c32ff250617ab6cb2da2147bf8e
+ms.openlocfilehash: 8fb064a5efe77b9b273234f8ccd4f9760a128d92
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/03/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="lift-and-shift-sql-server-integration-services-workloads-to-the-cloud"></a>Migrar cargas de trabajo de SQL Server Integration Services a la nube mediante lift-and-shift
 Los paquetes y las cargas de trabajo de SQL Server Integration Services (SSIS) se pueden mover ahora a la nube de Azure.
@@ -85,7 +85,7 @@ Para obtener información sobre cómo conectarse a los archivos y recursos compa
 
 Al aprovisionar una instancia de SQL Database para hospedar SSISDB, también se instalan Azure Feature Pack para SSIS y el componente redistribuible de Access. Estos componentes proporcionan conectividad a varios orígenes de datos de **Azure** y a archivos de **Excel y Access**, así como a los orígenes de datos compatibles con los componentes integrados.
 
-No puede instalar ni usar **componentes de terceros** para SSIS en este momento (incluidos los componentes de terceros de Microsoft, como los componentes Oracle y Teradata de Attunity, y los componentes BI de SAP).
+También puede instalar otros componentes. Para obtener más información, consulte [Custom setup for the Azure-SSIS integration runtime](/azure/articles/data-factory/how-to-configure-azure-ssis-ir-custom-setup.md) (Configuración personalizada de Integration Runtime de SSIS de Azure).
 
 ## <a name="deploy-and-run-packages"></a>Implementar y ejecutar paquetes
 Tiene que usar el **modelo de implementación de proyectos**, y no el modelo de implementación de paquetes, al implementar proyectos en SSISDB en Azure.

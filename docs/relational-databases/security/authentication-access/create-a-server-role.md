@@ -1,16 +1,16 @@
 ---
-title: "Creación de un rol de servidor | Microsoft Docs"
-ms.custom: 
+title: Creación de un rol de servidor | Microsoft Docs
+ms.custom: ''
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine, pdw
-ms.service: 
+ms.service: ''
 ms.component: security
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 f1_keywords:
 - SQL13.SWB.SERVERROLE.GENERAL.F1
@@ -19,19 +19,21 @@ f1_keywords:
 helpviewer_keywords:
 - SERVER ROLE, creating
 ms.assetid: 74f19992-8082-4ed7-92a1-04fe676ee82d
-caps.latest.revision: 
+caps.latest.revision: 13
 author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: ca312c8c2d5d83b7e8fb233f9d9dfac3c37fcaab
-ms.sourcegitcommit: 45e4efb7aa828578fe9eb7743a1a3526da719555
+monikerRange: '>= aps-pdw-2016 || >= sql-server-2016 || = sqlallproducts-allversions'
+ms.openlocfilehash: 8e74d591eff94f3a4f4fb9b58944573d976e4342
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="create-a-server-role"></a>Crear un rol de servidor
-[!INCLUDE[appliesto-ss-xxxx-xxxx-pdw-md](../../../includes/appliesto-ss-xxxx-xxxx-pdw-md.md)] En este tema se describe cómo crear un nuevo rol de servidor en [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] mediante [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)] o [!INCLUDE[tsql](../../../includes/tsql-md.md)].  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-pdw-md](../../../includes/appliesto-ss-xxxx-xxxx-pdw-md.md)]
+  En este tema se describe cómo crear un nuevo rol de servidor en [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] mediante [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)] o [!INCLUDE[tsql](../../../includes/tsql-md.md)].  
   
  **En este tema**  
   
@@ -47,14 +49,14 @@ ms.lasthandoff: 11/21/2017
   
      [Transact-SQL](#TsqlProcedure)  
   
-##  <a name="BeforeYouBegin"></a> Antes de comenzar  
+##  <a name="BeforeYouBegin"></a> Antes de empezar  
   
 ###  <a name="Restrictions"></a> Limitaciones y restricciones  
  No se puede conceder permisos a los roles de servidor en elementos protegibles de nivel de base de datos. Para crear roles de base de datos, vea [CREATE ROLE &#40;Transact-SQL&#41;](../../../t-sql/statements/create-role-transact-sql.md).  
   
 ###  <a name="Security"></a> Seguridad  
   
-####  <a name="Permissions"></a> Permisos  
+####  <a name="Permissions"></a> Permissions  
   
 -   Se debe disponer del permiso CREATE SERVER CONTROL o pertenecer al rol fijo de servidor sysadmin.  
   
@@ -76,7 +78,7 @@ ms.lasthandoff: 11/21/2017
   
 3.  Haga clic con el botón derecho en la carpeta **Roles del servidor** y seleccione **Nuevo rol de servidor…**.  
   
-4.  En el cuadro de diálogo **Nuevo rol de servidor -***server_role_name* , en la página **General** , escriba un nombre para el nuevo rol de servidor en el cuadro **Nombre del rol de servidor** .  
+4.  En el cuadro de diálogo **Nuevo rol de servidor –***nombre_rol_servidor*, en la página **General**, escriba un nombre para el nuevo rol de servidor en el cuadro **Nombre del rol de servidor**.  
   
 5.  En el cuadro **Propietario** , escriba el nombre de la entidad de seguridad del servidor que poseerá el nuevo rol. Como alternativa, haga clic en los puntos suspensivos **(…)** para abrir el cuadro de diálogo **Seleccionar inicio de sesión o rol de servidor** .  
   

@@ -25,11 +25,11 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.workload: Active
-ms.openlocfilehash: 20cd2f3d0b8a034a1f7f1d689f106216b161ec38
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
+ms.openlocfilehash: 9b7cccf79efb654ddb9c49a6ed43751f00654908
+ms.sourcegitcommit: a85a46312acf8b5a59a8a900310cf088369c4150
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="failover-clustering-and-always-on-availability-groups-sql-server"></a>Clústeres de conmutación por error y grupos de disponibilidad AlwaysOn (SQL Server)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -60,11 +60,6 @@ ms.lasthandoff: 04/16/2018
 >  [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] son subclaves del clúster de WSFC. Si elimina y vuelve a crear un clúster de WSFC, debe deshabilitar y volver a habilitar la característica de [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] en cada instancia de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] que hospedaba una réplica de disponibilidad en el clúster de WSFC original.  
   
  Para obtener información sobre cómo ejecutar [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] en nodos de clústeres de conmutación por error de Windows Server (WSFC) y sobre el cuórum de WSFC, vea [Clústeres de conmutación por error de Windows Server &#40;WSFC&#41; con SQL Server](../../../sql-server/failover-clusters/windows/windows-server-failover-clustering-wsfc-with-sql-server.md).  
-  
-### <a name="cross-cluster-migration-of-always-on-availability-groups-for-os-upgrade"></a>Migración entre clústeres de grupos de disponibilidad AlwaysOn para la actualización del sistema operativo  
- A partir de [!INCLUDE[ssSQL11SP1](../../../includes/sssql11sp1-md.md)], [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] admite la migración entre clústeres de grupos de disponibilidad para las implementaciones en un nuevo clúster de Clústeres de conmutación por error de Windows Server (WSFC). Una migración entre clústeres mueve un grupo de disponibilidad o un lote de grupos de disponibilidad al nuevo clúster de WSFC de destino con un tiempo de inactividad mínimo. El proceso de migración entre clústeres le permite mantener los contratos de nivel de servicio (SLA) al actualizar a un clúster de [!INCLUDE[win8srv](../../../includes/win8srv-md.md)] . [!INCLUDE[ssSQL11SP1](../../../includes/sssql11sp1-md.md)] (o una versión posterior) debe estar instalado y habilitado para AlwaysOn en el clúster de WSFC de destino. El éxito de una migración entre clústeres depende de un planeamiento y una preparación exhaustivos del clúster de WSFC de destino.  
-  
- Para obtener más información, vea [Migración entre clústeres de grupos de disponibilidad AlwaysOn para la actualización del sistema operativo](http://msdn.microsoft.com/library/jj873730.aspx).  
   
 ##  <a name="SQLServerFC"></a> [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Instancias de clúster de conmutación por error (FCI) y grupos de disponibilidad  
  Puede configurar un segundo nivel de conmutación por error en el nivel de instancia de servidor si implementa los clústeres de conmutación por error de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] junto con el clúster de WSFC. Una réplica de disponibilidad se puede hospedar en una instancia independiente de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] o una instancia de FCI. Solo un asociado de FCI puede hospedar una réplica para un grupo de disponibilidad dado. Cuando una réplica de disponibilidad se ejecuta en una instancia de clúster de conmutación por error (FCI), la lista de posibles propietarios del grupo de disponibilidad contendrá solo el nodo de FCI activo.  

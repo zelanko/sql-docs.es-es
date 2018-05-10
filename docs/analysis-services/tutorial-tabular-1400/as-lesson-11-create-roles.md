@@ -14,15 +14,14 @@ ms.service: analysis-services
 ms.devlang: NA
 ms.topic: get-started-article
 ms.tgt_pltfrm: NA
-ms.workload: na
 ms.date: 02/20/2018
 ms.author: owend
 monikerRange: '>= sql-analysis-services-2017 || = sqlallproducts-allversions'
-ms.openlocfilehash: 15994491230e1952d699b028c96df5a972698e39
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
-ms.translationtype: MT
+ms.openlocfilehash: 3319550ebe39c08d0926eb30d8c8f07ee24df897
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="create-roles"></a>Crear roles
 
@@ -69,7 +68,7 @@ Este artículo forma parte de un tutorial de modelado tabular, que se debe compl
   
 1.  En el Administrador de roles, haga clic en **nuevo**.    
   
-2.  Cambiar el nombre de la función para **analista de ventas EE. UU**.  
+2.  Cambiar el nombre de la función para **analista de ventas EE. UU.**.  
   
 3.  Asignar este rol **lectura** permiso.  
   

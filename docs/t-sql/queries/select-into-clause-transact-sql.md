@@ -4,12 +4,10 @@ ms.custom: ''
 ms.date: 05/23/2017
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
-ms.service: ''
 ms.component: t-sql|queries
 ms.reviewer: ''
 ms.suite: sql
-ms.technology:
-- database-engine
+ms.technology: t-sql
 ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
@@ -35,41 +33,41 @@ caps.latest.revision: 63
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.workload: Active
 monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
-ms.openlocfilehash: da1f46475be001737512dc3a0da074d2f97c403c
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
+ms.openlocfilehash: 23b48b3246509d62459daee8ecf50dd9f54ab8c4
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="select---into-clause-transact-sql"></a>SELECT: cláusula INTO (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
 
-  SELECT...INTO crea una nueva tabla en el grupo de archivos predeterminado e inserta las filas resultantes de la consulta en ella. Para conocer la sintaxis completa de SELECT, vea [SELECT &#40;Transact-SQL&#41;](../../t-sql/queries/select-transact-sql.md).  
+SELECT...INTO crea una nueva tabla en el grupo de archivos predeterminado e inserta las filas resultantes de la consulta en ella. Para conocer la sintaxis completa de SELECT, vea [SELECT &#40;Transact-SQL&#41;](../../t-sql/queries/select-transact-sql.md).  
   
- ![Icono de vínculo de tema](../../database-engine/configure-windows/media/topic-link.gif "Icono de vínculo de tema") [Convenciones de sintaxis de Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+![Icono de vínculo de tema](../../database-engine/configure-windows/media/topic-link.gif "Icono de vínculo de tema") [Convenciones de sintaxis de Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>Sintaxis  
   
 ```  
 [ INTO new_table ]
-[ ON filegroup]
+[ ON filegroup ]
 ```  
   
 ## <a name="arguments"></a>Argumentos  
- *new_table*  
+ *tabla_nueva*   
  Especifica el nombre de una nueva tabla que se va a crear en función de las columnas de la lista de selección y de las filas elegidas desde el origen de datos.  
- 
-  *filegroup*
- 
- Especifica el nombre del grupo de archivos en el que se creará la tabla. El grupo de archivos especificado debe existir en la base de datos; de lo contrario, se mostrará un error en el motor de SQL Server. Esta opción solo se admite a partir de [!INCLUDE[sssqlv14-md](../../includes/sssqlv14-md.md)].
  
  El formato de *new_table* se determina mediante la evaluación de las expresiones de la lista de selección. Las columnas de *new_table* se crean en el orden que especifica la lista de selección. Cada columna de *new_table* tiene el mismo nombre, tipo de datos, nulabilidad y valor que la expresión correspondiente de la lista de selección. La propiedad IDENTITY de una columna se transfiere excepto bajo las condiciones definidas en "Trabajar con columnas de identidad" en la sección Comentarios.  
   
  Para crear la tabla en otra base de datos en la misma instancia de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], especifique *new_table* como un nombre completo con formato *database.schema.table_name*.  
   
  No se puede crear *new_table* en un servidor remoto, pero se puede rellenar *new_table* desde un origen de datos remoto. Para crear *new_table* a partir de una tabla de origen remota, especifique la tabla de origen mediante un nombre con cuatro partes con el formato *linked_server*.*catalog*.*schema*.*object* en la cláusula FROM de la instrucción SELECT. También puede usar la función [OPENQUERY](../../t-sql/functions/openquery-transact-sql.md) o la función [OPENDATASOURCE](../../t-sql/functions/opendatasource-transact-sql.md) en la cláusula FROM para especificar el origen de datos remoto.  
+ 
+ *grupo_de_archivos*    
+ Especifica el nombre del grupo de archivos en el que se creará la tabla. El grupo de archivos especificado debe existir en la base de datos; de lo contrario, se mostrará un error en el motor de SQL Server.   
+ 
+ **Se aplica a:** de [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] SP2 a [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].
   
 ## <a name="data-types"></a>Tipos de datos  
  El atributo FILESTREAM no transfiere a la nueva tabla. Los BLOB FILESTREAM se copian y se almacenan en la nueva tabla como BLOB **varbinary(max)**. Sin el atributo FILESTREAM, el tipo de datos **varbinary(max)** tiene una limitación de 2 GB. Si un FILESTREAM BLOB supera este valor, se produce el error 7119 y se detiene la instrucción.  
@@ -91,18 +89,18 @@ Si se cumple alguna de estas condiciones, la columna se crea como NOT NULL en lu
 ## <a name="limitations-and-restrictions"></a>Limitaciones y restricciones  
  No puede especificar una variable de tabla o parámetro con valores de tabla como la nueva tabla.  
   
- No puede utilizar SELECT…INTO para crear una tabla con particiones, incluso si la partición se realiza sobre la tabla de origen. SELECT...INTO no usa el esquema de partición de la tabla de origen; en su lugar, la nueva tabla se crea en el grupo de archivos predeterminado. Para insertar filas en una tabla con particiones, primero debe crearse la tabla con particiones y, a continuación, utilizar la instrucción INSERT INTO...SELECT FROM.  
+ No puede se usar `SELECT…INTO` para crear una tabla con particiones, incluso si la partición se realiza sobre la tabla de origen. En `SELECT...INTO` no se usa el esquema de partición de la tabla de origen; en su lugar, la tabla nueva se crea en el grupo de archivos predeterminado. Para insertar filas en una tabla con particiones, primero se debe crear la tabla con particiones y, después, usar la instrucción `INSERT INTO...SELECT...FROM`.  
   
- Los índices, restricciones y desencadenadores definidos en la tabla de origen no se transfieren a la nueva tabla, ni se pueden especificar en la instrucción SELECT...INTO. Si se requieren estos objetos, puede crearlos después de ejecutar la instrucción SELECT...INTO.  
+ Los índices, restricciones y desencadenadores definidos en la tabla de origen no se transfieren a la tabla nueva, ni se pueden especificar en la instrucción `SELECT...INTO`. Si se requieren estos objetos, se pueden crear después de ejecutar la instrucción `SELECT...INTO`.  
   
- Especificar una cláusula ORDER BY no garantiza que las filas se inserten en el orden especificado.  
+ Especificar una cláusula `ORDER BY` no garantiza que las filas se inserten en el orden especificado.  
   
  Cuando se incluye una columna dispersa en la lista de selección, la propiedad de la columna dispersa no se transfiere a la columna de la nueva tabla. Si esta propiedad es necesaria en la nueva tabla, modifique la definición de columna después de ejecutar la instrucción SELECT...INTO para que incluya esta propiedad.  
   
- Cuando se incluye una columna calculada en la lista de selección, la columna correspondiente de la nueva tabla no es una columna calculada. Los valores de la nueva columna son los que se calcularon en el momento en que se ejecutó SELECT...INTO.  
+ Cuando se incluye una columna calculada en la lista de selección, la columna correspondiente de la nueva tabla no es una columna calculada. Los valores de la columna nueva son los que se calcularon en el momento en que se ejecutó `SELECT...INTO`.  
   
 ## <a name="logging-behavior"></a>Comportamiento del registro  
- La cantidad de registro para SELECT...INTO depende del modelo de recuperación en vigor para la base de datos. En el modelo de recuperación simple o en el optimizado para cargas masivas de registros, las operaciones masivas se registran mínimamente. Con registro mínimo, el uso de la instrucción SELECT… INTO puede ser más eficaz que crear una tabla y rellenarla con una instrucción INSERT. Para más información, consulte [El registro de transacciones &#40;SQL Server&#41;](../../relational-databases/logs/the-transaction-log-sql-server.md).  
+ La cantidad de registro para `SELECT...INTO` depende del modelo de recuperación en vigor para la base de datos. En el modelo de recuperación simple o en el optimizado para cargas masivas de registros, las operaciones masivas se registran mínimamente. Con registro mínimo, el uso de la instrucción `SELECT...INTO` puede ser más eficaz que crear una tabla y rellenarla después con una instrucción INSERT. Para más información, consulte [El registro de transacciones &#40;SQL Server&#41;](../../relational-databases/logs/the-transaction-log-sql-server.md).  
   
 ## <a name="permissions"></a>Permisos  
  Requiere el permiso CREATE TABLE en la base de datos de destino.  
@@ -214,7 +212,7 @@ FROM OPENDATASOURCE('SQLNCLI',
 GO  
 ```  
   
-### <a name="e-import-from-an-external-table-created-with--polybase"></a>E. Importar desde una tabla externa creada con PolyBase  
+### <a name="e-import-from-an-external-table-created-with-polybase"></a>E. Importar desde una tabla externa creada con PolyBase  
  Importe datos desde Almacenamiento de Azure o Hadoop en SQL Server para obtener un almacenamiento persistente. Use `SELECT INTO` para importar datos a los que se hace referencia en una tabla externa para el almacenamiento persistente en SQL Server. Cree una tabla relacional sobre la marcha y luego cree un índice de almacén de columnas sobre la tabla en un segundo paso.  
   
  **Se aplica a:** [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].  
@@ -229,13 +227,12 @@ INTO Fast_Customers from Insured_Customers INNER JOIN
         SELECT * FROM CarSensor_Data where Speed > 35   
 ) AS SensorD  
 ON Insured_Customers.CustomerKey = SensorD.CustomerKey  
-ORDER BY YearlyIncome  
-  
+ORDER BY YearlyIncome;  
 ```  
 ### <a name="f-creating-a-new-table-as-a-copy-of-another-table-and-loading-it-a-specified-filegroup"></a>F. Crear una tabla como una copia de otra tabla y cargarla en un grupo de archivos especificado
 En el ejemplo siguiente se muestra cómo crear una tabla como una copia de otra tabla y cargarla en un grupo de archivos especificado diferente del grupo de archivos predeterminado del usuario.
 
- **Se aplica a:** [!INCLUDE[sssqlv14-md](../../includes/sssqlv14-md.md)]
+ **Se aplica a:** de [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] SP2 a [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].
 
 ```sql
 ALTER DATABASE [AdventureWorksDW2016] ADD FILEGROUP FG2;
@@ -247,7 +244,7 @@ FILENAME = '/var/opt/mssql/data/AdventureWorksDW2016_Data1.mdf'
 )
 TO FILEGROUP FG2;
 GO
-SELECT *  INTO [dbo].[FactResellerSalesXL] ON FG2 from [dbo].[FactResellerSales]
+SELECT * INTO [dbo].[FactResellerSalesXL] ON FG2 FROM [dbo].[FactResellerSales];
 ```
   
 ## <a name="see-also"></a>Ver también  

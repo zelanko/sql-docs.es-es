@@ -1,17 +1,14 @@
 ---
 title: Replicación, seguimiento de cambios y captura de datos modificados - Grupos de disponibilidad AlwaysOn | Microsoft Docs
 ms.custom: ''
-ms.date: 05/02/2017
+ms.date: 04/25/2018
 ms.prod: sql
-ms.prod_service: database-engine
-ms.service: ''
-ms.component: availability-groups
+ms.prod_service: high-availability
 ms.reviewer: ''
 ms.suite: sql
-ms.technology:
-- dbe-high-availability
+ms.technology: high-availability
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - change tracking [SQL Server], AlwaysOn Availability Groups
 - change data capture [SQL Server], AlwaysOn Availability Groups
@@ -22,12 +19,11 @@ caps.latest.revision: 37
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.workload: On Demand
-ms.openlocfilehash: 39f67dedc8724fdff327229fc39d0985e4843cb7
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
+ms.openlocfilehash: 60f20c48befbd5dcb24db4e1c7e247cf9b8346c0
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="replication-change-tracking--change-data-capture---always-on-availability-groups"></a>Replicación, seguimiento de cambios y captura de datos modificados - Grupos de disponibilidad AlwaysOn
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -99,7 +95,7 @@ ms.lasthandoff: 04/16/2018
   
      En el ejemplo siguiente se crea el trabajo de captura.  
   
-    ```  
+    ```sql  
     EXEC sys.sp_cdc_add_job @job_type = 'capture';  
     ```  
   
@@ -111,7 +107,7 @@ ms.lasthandoff: 04/16/2018
   
      Para garantizar que se produce la limpieza apropiada en la nueva base de datos principal, siempre debe crearse un trabajo de limpieza local. En el ejemplo siguiente se crea el trabajo de limpieza.  
   
-    ```  
+    ```sql  
     EXEC sys.sp_cdc_add_job @job_type = 'cleanup';  
     ```  
   
@@ -137,7 +133,7 @@ ms.lasthandoff: 04/16/2018
   
      Utilice la consulta siguiente para determinar si se ha definido un nombre de agente de escucha del grupo de disponibilidad para el grupo de disponibilidad que hospeda una base de datos CDC. La consulta devolverá el nombre de agente de escucha del grupo de disponibilidad si se ha creado uno.  
   
-    ```  
+    ```sql  
     SELECT dns_name   
     FROM sys.availability_group_listeners AS l  
     INNER JOIN sys.availability_databases_cluster AS d  
@@ -153,7 +149,7 @@ ms.lasthandoff: 04/16/2018
   
      Se puede usar la siguiente consulta para determinar si se necesita la intención de solo lectura para conectarse a una réplica secundaria legible.  
   
-    ```  
+    ```sql  
     SELECT g.name AS AG, replica_server_name, secondary_role_allow_connections_desc  
     FROM sys.availability_replicas AS r  
     JOIN sys.availability_groups AS g  
@@ -165,7 +161,7 @@ ms.lasthandoff: 04/16/2018
   
      Cuando se utiliza **sp_addlinkedserver** para crear un servidor vinculado con el fin de acceder al elemento secundario, el parámetro *@datasrc* se usa para el nombre de agente de escucha de grupo de disponibilidad o el nombre del servidor explícito. Por su parte, el parámetro *@provstr* se usa para especificar la intención de solo lectura.  
   
-    ```  
+    ```sql  
     EXEC sp_addlinkedserver   
     @server = N'linked_svr',   
     @srvproduct=N'SqlServer',  
@@ -207,8 +203,6 @@ Si la captura de datos modificados debe deshabilitarse en una base de datos que 
   
     -   Suscripción de extracción: las bases de datos del publicador, el distribuidor y el suscriptor deben ser al menos de [!INCLUDE[ssSQL11](../../../includes/sssql11-md.md)]. Esto se debe a que el agente de mezcla el suscriptor debe entender cómo un grupo de disponibilidad puede realizar la conmutación por error a su réplica secundaria.  
   
--   No se admite poner la base de datos de distribución en un grupo de disponibilidad.  
-  
 -   Las instancias del publicador cumplen todos los requisitos previos necesarios para participar en un grupo de disponibilidad AlwaysOn. Para obtener más información, vea [Requisitos previos, restricciones y recomendaciones para Grupos de disponibilidad AlwaysOn &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/prereqs-restrictions-recommendations-always-on-availability.md)se admiten la replicación, la captura de datos modificados (CDC) y el seguimiento de cambios (CT).  
   
 ### <a name="restrictions"></a>Restrictions  
@@ -224,7 +218,7 @@ Si la captura de datos modificados debe deshabilitarse en una base de datos que 
   
  *La conmutación por error a la base de datos de réplica es un procedimiento manual. No se proporciona la conmutación por error automática.  
   
- **La base de datos de distribución no se puede usar con [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] o con la creación de reflejo de la base de datos.  
+ **La base de datos de distribución no se puede usar con la creación de reflejo de la base de datos.  
   
 ### <a name="considerations"></a>Consideraciones  
   

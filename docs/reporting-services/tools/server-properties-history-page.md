@@ -4,13 +4,12 @@ ms.custom: ''
 ms.date: 06/10/2016
 ms.prod: reporting-services
 ms.prod_service: reporting-services-sharepoint, reporting-services-native
-ms.service: ''
 ms.component: tools
 ms.reviewer: ''
 ms.suite: pro-bi
 ms.technology: ''
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql13.swb.reportserver.serverproperties.history.f1
 ms.assetid: be9d8018-a46f-4625-9ae1-138ebe6b38ba
@@ -18,12 +17,11 @@ caps.latest.revision: 30
 author: markingmyname
 ms.author: maghan
 manager: kfile
-ms.workload: Inactive
-ms.openlocfilehash: c3a35614725f7e3e9c4ed7ca4c9ab57624970776
-ms.sourcegitcommit: 7e117bca721d008ab106bbfede72f649d3634993
+ms.openlocfilehash: e0c9f8065d9d66f52a86554bcb219eb4e4406cd9
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/09/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="server-properties-history-page"></a>Propiedades del servidor (página Historial)
   Use esta página de [!INCLUDE[ssRSnoversion_md](../../includes/ssrsnoversion-md.md)] en [!INCLUDE[ssManStudioFull_md](../../includes/ssmanstudiofull-md.md)] para establecer un valor predeterminado para el número de copias del historial de informes que es necesario conservar. El valor predeterminado proporciona un valor inicial que establece los límites del historial de informes para todos los informes. Existe la posibilidad de modificar esta configuración para informes individuales.  
@@ -38,7 +36,7 @@ ms.lasthandoff: 01/09/2018
  3) Haga clic con el botón derecho en el nombre del servidor de informes y seleccione **Propiedades**.
  4) Haga clic en **Historial** para abrir esta página.  
   
-## <a name="options"></a>.  
+## <a name="options"></a>Opciones  
  **Conservar un número ilimitado de instantáneas en el historial de informe**  
  Conserve todas las instantáneas del historial de informes. Para reducir el tamaño del historial de informe, debe eliminar las instantáneas manualmente.  
   

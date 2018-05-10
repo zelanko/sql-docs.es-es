@@ -1,10 +1,9 @@
 ---
 title: Implementar un proyecto de SSIS con Transact-SQL (VSCode) | Microsoft Docs
 ms.date: 09/25/2017
-ms.topic: article
+ms.topic: conceptual
 ms.prod: sql
 ms.prod_service: integration-services
-ms.service: ''
 ms.component: quick-start
 ms.suite: sql
 ms.custom: ''
@@ -13,12 +12,11 @@ ms.technology:
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: f55f50ce68e2401da09794863b4d02f30b45c3df
-ms.sourcegitcommit: a85a46312acf8b5a59a8a900310cf088369c4150
+ms.openlocfilehash: 6c32302d499f1c8dc450d6e10451f080b30249d6
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/26/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="deploy-an-ssis-project-from-visual-studio-code-with-transact-sql"></a>Implementar un proyecto de SSIS desde Visual Studio Code con Transact-SQL
 En esta guía de inicio rápido se muestra cómo usar Visual Studio Code para conectarse a la base de datos del catálogo de SSIS y, a continuación, usar instrucciones Transact-SQL para implementar un proyecto de SSIS almacenado en el catálogo de SSIS.

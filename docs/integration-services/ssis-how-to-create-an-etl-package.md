@@ -2,7 +2,7 @@
 title: 'Tutorial de SSIS: Crear un paquete ETL sencillo | Microsoft Docs'
 ms.custom: ''
 ms.date: 04/17/2018
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: integration-services
 ms.service: ''
 ms.component: non-specific
@@ -27,11 +27,11 @@ author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ms.workload: Active
-ms.openlocfilehash: 83e51e583e0c83d8d0cbc8dbd213a78baa766ffb
-ms.sourcegitcommit: bb044a48a6af9b9d8edb178dc8c8bd5658b9ff68
+ms.openlocfilehash: b35b1f9ac19d76f9c78165a973044c67c4aab7d4
+ms.sourcegitcommit: 31df356f89c4cd91ba90dac609a7eb50b13836de
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/18/2018
+ms.lasthandoff: 04/27/2018
 ---
 # <a name="ssis-how-to-create-an-etl-package"></a>Tutorial de SSIS: Crear un paquete ETL sencillo
 
@@ -40,9 +40,6 @@ ms.lasthandoff: 04/18/2018
 En este tutorial, aprenderá a usar el Diseñador de [!INCLUDE[ssIS](../includes/ssis-md.md)] para crear un paquete de [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] sencillo. El paquete que cree toma los datos de un archivo plano, formatea de nuevo lo datos y luego inserta dichos datos en una tabla de hechos. En las lecciones siguientes, el paquete se expande para mostrar la creación de bucles, configuraciones de paquete, registro y flujo de errores.  
   
 Al instalar los datos de ejemplo usados en el tutorial, también se instalan las versiones completadas de los paquetes que cree en cada lección del tutorial. Si utiliza los paquetes completados, puede saltarse lecciones y empezar el tutorial en una lección posterior si lo desea. Si este tutorial constituye la primera vez que trabaja con paquetes o el nuevo entorno de desarrollo, se recomienda empezar por la lección 1.  
-
-> [!IMPORTANT]
-> Hace poco que los archivos de ejemplo necesarios para ejecutar este tutorial ya no están disponibles en línea en su ubicación anterior. Lamentamos las molestias. Hemos puesto los archivos a su disposición en una ubicación nueva y hemos actualizado los vínculos de este artículo.
 
 ## <a name="what-is-sql-server-integration-services-ssis"></a>¿Qué es SQL Server Integration Services (SSIS)?
 
@@ -53,12 +50,15 @@ La mejor forma de familiarizarse con las nuevas herramientas, los controles y la
   
 ## <a name="requirements"></a>Requisitos  
 Este tutorial está concebido para los usuarios familiarizados con las operaciones básicas de una base de datos, pero que no conocen con detalle las nuevas características disponibles en [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)].  
-  
+
+> [!IMPORTANT]
+> Hace poco que los archivos de ejemplo necesarios para ejecutar este tutorial ya no están disponibles en línea en su ubicación anterior. Lamentamos las molestias. Hemos puesto los archivos a su disposición en una ubicación nueva y hemos actualizado los vínculos de descarga de este artículo.
+
 Para utilizar este tutorial, el sistema debe tener instalados los siguientes componentes:  
   
 -   [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] con la base de datos **AdventureWorksDW2012** . Para descargar la base de datos **AdventureWorksDW2012**, descargue `AdventureWorksDW2012.bak` de las [bases de datos de ejemplo de AdventureWorks](https://github.com/Microsoft/sql-server-samples/releases/tag/adventureworks) y restaure la copia de seguridad.  
 
--   Datos de ejemplo. Los datos de ejemplo se incluyen con los paquetes de lecciones de [!INCLUDE[ssIS](../includes/ssis-md.md)] . Para descargar los datos de ejemplo y los paquetes de lecciones como archivo ZIP, [haga clic aquí](http://download.microsoft.com/download/3/1/4/314A4169-D540-4E9E-9776-585BFBFC2CC5/Creating a Simple ETL Package.zip).  
+-   Datos de ejemplo. Los datos de ejemplo se incluyen con los paquetes de lecciones de [!INCLUDE[ssIS](../includes/ssis-md.md)] . Para descargar los datos de ejemplo y los paquetes de lecciones como un archivo Zip, vea [Tutorial de SSIS: Crear un paquete ETL sencillo](https://www.microsoft.com/download/details.aspx?id=56827).  
 
 ## <a name="lessons-in-this-tutorial"></a>Lecciones de este tutorial  
 [Lección 1: Crear un proyecto y un paquete básico con SSIS](../integration-services/lesson-1-create-a-project-and-basic-package-with-ssis.md)  

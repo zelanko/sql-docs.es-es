@@ -1,27 +1,25 @@
 ---
-title: "Tipo de conexión ODBC (SSRS) | Microsoft Docs"
-ms.custom: 
+title: Tipo de conexión ODBC (SSRS) | Microsoft Docs
+ms.custom: ''
 ms.date: 03/17/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-sharepoint, reporting-services-native
-ms.service: 
 ms.component: report-data
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: pro-bi
-ms.technology: 
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.technology: ''
+ms.tgt_pltfrm: ''
+ms.topic: conceptual
 ms.assetid: 24163866-f37a-4c38-982e-c3d79bf64d4c
-caps.latest.revision: "8"
+caps.latest.revision: 8
 author: markingmyname
 ms.author: maghan
 manager: kfile
-ms.workload: Inactive
-ms.openlocfilehash: 102ad01b7e4246ce01c635ffe6e54a0bfdd0f78c
-ms.sourcegitcommit: 7e117bca721d008ab106bbfede72f649d3634993
+ms.openlocfilehash: d725b999d59f4afe8e7081e5697554d19bbe2e81
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/09/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="odbc-connection-type-ssrs"></a>Tipo de conexión ODBC (SSRS)
   Para incluir los datos de un proveedor de datos ODBC, debe tener un conjunto de datos basado en un origen de datos de informe de tipo ODBC. Este tipo de origen de datos integrado se basa en la extensión de procesamiento de datos ODBC de [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] .  

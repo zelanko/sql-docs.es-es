@@ -1,28 +1,27 @@
 ---
-title: "Lección 2: Modificar las propiedades del origen de datos de informe | Microsoft Docs"
-ms.custom: 
+title: 'Lección 2: Modificar las propiedades del origen de datos de informe | Microsoft Docs'
+ms.custom: ''
 ms.date: 05/23/2016
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
-ms.service: 
 ms.component: reporting-services
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: pro-bi
-ms.technology: 
-ms.tgt_pltfrm: 
+ms.technology: ''
+ms.tgt_pltfrm: ''
 ms.topic: article
-applies_to: SQL Server 2016
+applies_to:
+- SQL Server 2016
 ms.assetid: c962b0ff-ce8a-4742-8262-dc730901afcf
-caps.latest.revision: "43"
+caps.latest.revision: 43
 author: markingmyname
 ms.author: maghan
 manager: kfile
-ms.workload: On Demand
-ms.openlocfilehash: 52547af895d362214e6a33c69c29fe2cd2c3cb8a
-ms.sourcegitcommit: 7e117bca721d008ab106bbfede72f649d3634993
+ms.openlocfilehash: 7ec0c1cc3ce7e2be9b058fc881d0971922f5994f
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/09/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="lesson-2-modifying-the-report-data-source-properties"></a>Lesson 2: Modifying the Report Data Source Properties
 En esta lección de [!INCLUDE[ssRSnoversion_md](../includes/ssrsnoversion-md.md)] , usará el portal web para seleccionar un informe que se entregará a los destinatarios. La suscripción controlada por datos que va a definir distribuirá el informe **Sales Order** creado en el tutorial [Crear un informe de tabla básico &#40;Tutorial de SSRS&#41;](../reporting-services/create-a-basic-table-report-ssrs-tutorial.md).  En los pasos siguientes, modificará la información de conexión del origen de datos que el informe utiliza para obtener los datos. Solo los informes que usan **credenciales almacenadas** para obtener acceso a un origen de datos del informe se pueden distribuir a través de una suscripción controlada por datos. Las credenciales almacenadas son necesarias para el procesamiento desatendido de informes.  

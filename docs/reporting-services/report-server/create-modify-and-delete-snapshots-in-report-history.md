@@ -1,30 +1,28 @@
 ---
-title: "Crear, modificar y eliminar instantáneas del historial de informes | Microsoft Docs"
-ms.custom: 
+title: Crear, modificar y eliminar instantáneas del historial de informes | Microsoft Docs
+ms.custom: ''
 ms.date: 03/01/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-sharepoint, reporting-services-native
-ms.service: 
 ms.component: report-server
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: pro-bi
-ms.technology: 
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.technology: ''
+ms.tgt_pltfrm: ''
+ms.topic: conceptual
 helpviewer_keywords:
 - snapshots [Reporting Services]
 - report snapshots [Reporting Services]
 ms.assetid: 5aebbbfa-a8db-462d-8ab9-746fad9525f0
-caps.latest.revision: "40"
+caps.latest.revision: 40
 author: markingmyname
 ms.author: maghan
 manager: kfile
-ms.workload: Inactive
-ms.openlocfilehash: d3f31eeab1cd9bf01b3d0525a1599678c7912ac7
-ms.sourcegitcommit: 7e117bca721d008ab106bbfede72f649d3634993
+ms.openlocfilehash: 2fe2a810926fba6a2dc13ab13151e528d3701b8d
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/09/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="create-modify-and-delete-snapshots-in-report-history"></a>Crear, modificar y eliminar instantáneas del historial de informes
   El historial de informe es un conjunto de instantáneas de informe. Puede mantener el historial del informe agregando y eliminando instantáneas, o bien modificando las propiedades correspondientes al almacenamiento del historial. Es posible crear el historial del informe de manera manual o programada.  

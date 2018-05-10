@@ -1,25 +1,23 @@
 ---
-title: "Administrar una aplicación de servicio de SharePoint de Reporting Services | Microsoft Docs"
-ms.custom: 
+title: Administrar una aplicación de servicio de SharePoint de Reporting Services | Microsoft Docs
+ms.custom: ''
 ms.date: 10/05/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-sharepoint, reporting-services-native
-ms.service: 
 ms.component: report-server-sharepoint
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: pro-bi
-ms.technology: 
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.technology: ''
+ms.tgt_pltfrm: ''
+ms.topic: conceptual
 author: markingmyname
 ms.author: maghan
 manager: kfile
-ms.workload: Inactive
-ms.openlocfilehash: 9c73f9685bd5f340376d95191730fecaf7e54dbf
-ms.sourcegitcommit: 7e117bca721d008ab106bbfede72f649d3634993
+ms.openlocfilehash: 1414b6cbf166c136dd942d974d6cb1aea866bc8d
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/09/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="manage-a-reporting-services-sharepoint-service-application"></a>Administrar una aplicación de servicio de SharePoint de Reporting Services
 
@@ -146,7 +144,7 @@ Get-SPRSServiceApplication | select typename, name, service, ueaccountname
 
  Para más información, vea [Cmdlets de PowerShell para el modo de SharePoint de Reporting Services](../../reporting-services/report-server-sharepoint/powershell-cmdlets-for-reporting-services-sharepoint-mode.md).  
 
-### <a name="options"></a>.
+### <a name="options"></a>Opciones
 
  **Especificar una cuenta de ejecución**  
  Seleccione para especificar una cuenta.  
@@ -164,7 +162,7 @@ Get-SPRSServiceApplication | select typename, name, service, ueaccountname
 
  Utilice esta página para especificar la configuración del Protocolo simple de transferencia de correo (SMTP) que habilita la entrega de correo electrónico del servidor de informes desde este. Puede utilizar la extensión de entrega por correo electrónico del servidor de informes para distribuir informes o notificaciones de procesamiento de informes a través de suscripciones por correo electrónico. La extensión de entrega por correo electrónico del servidor de informes requiere un servidor SMTP y una dirección de correo electrónico para el campo De:.  
 
-### <a name="options"></a>.
+### <a name="options"></a>Opciones
 
  **Utilizar servidor SMTP**  
  Especifica que el correo electrónico del servidor de informes se enruta a través de un servidor SMTP.  

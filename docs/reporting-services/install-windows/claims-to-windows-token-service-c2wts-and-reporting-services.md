@@ -1,25 +1,23 @@
 ---
 title: Notificaciones del servicio de token de Windows (C2WTS) y Reporting Services | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 09/15/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-sharepoint
-ms.service: 
 ms.component: install-windows
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: pro-bi
-ms.technology: 
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.technology: ''
+ms.tgt_pltfrm: ''
+ms.topic: conceptual
 author: markingmyname
 ms.author: maghan
 manager: kfile
-ms.workload: On Demand
-ms.openlocfilehash: fcc2707cb5febc11d033e745a41fd15dbdbddb7c
-ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
+ms.openlocfilehash: 82145ec54fc4a619bc5b399d44b9d34f858b3fa4
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/15/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="claims-to-windows-token-service-c2wts-and-reporting-services"></a>Notificaciones del servicio de token de Windows (C2WTS) y Reporting Services
 

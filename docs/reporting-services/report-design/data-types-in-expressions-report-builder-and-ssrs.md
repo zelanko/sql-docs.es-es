@@ -1,27 +1,25 @@
 ---
 title: Tipos de datos en expresiones (Generador de informes y SSRS) | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-sharepoint, reporting-services-native
-ms.service: 
 ms.component: report-design
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: pro-bi
-ms.technology: 
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.technology: ''
+ms.tgt_pltfrm: ''
+ms.topic: conceptual
 ms.assetid: 94fdf921-270c-4c12-87b3-46b1cc98fae5
-caps.latest.revision: "9"
+caps.latest.revision: 9
 author: maggiesMSFT
 ms.author: maggies
 manager: kfile
-ms.workload: On Demand
-ms.openlocfilehash: e8f9aac801e823f364070fc2b3ce2e6b4b015f78
-ms.sourcegitcommit: 7e117bca721d008ab106bbfede72f649d3634993
+ms.openlocfilehash: 61d9e125f12d9c642408316ccb936e54f2a29372
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/09/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="data-types-in-expressions-report-builder-and-ssrs"></a>Tipos de datos en expresiones (Generador de informes y SSRS)
   La finalidad de los tipos de datos es permitir el almacenamiento y el procesamiento de los datos de manera eficaz. Los tipos de datos más comunes incluyen texto (también conocido como cadenas), números (con y sin decimales), fechas y horas, e imágenes. Los valores de un informe deben ser del tipo de datos de lenguaje RDL (Report Definition Language). Puede dar formato a un valor según sus preferencias al mostrarlo en un informe. Por ejemplo, un campo que representa valores de moneda se almacena en la definición del como un número de punto flotante y mostrarse en uno y otro formato en función de la propiedad de formato elegida.  

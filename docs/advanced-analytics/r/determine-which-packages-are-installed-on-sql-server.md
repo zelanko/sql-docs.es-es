@@ -1,25 +1,24 @@
 ---
-title: Visualización de R o paquetes de Python instalados en SQL Server | Documentos de Microsoft
+title: Obtener información de paquete de R y Python en aprendizaje automático de SQL Server | Documentos de Microsoft
+description: Determinar la versión de paquete de R y Python, comprobar la instalación y obtener una lista de paquetes instalados en SQL Server R Services o servicios de aprendizaje de máquina.
 ms.custom: ''
 ms.prod: sql
 ms.technology: machine-learning
-ms.date: 04/15/2018
+ms.date: 05/08/2018
 ms.topic: conceptual
 author: HeidiSteen
 ms.author: heidist
 manager: cgronlun
-ms.openlocfilehash: 7cea8b82337ca7d5b4cd17b1038a1eccc99370be
-ms.sourcegitcommit: beaad940c348ab22d4b4a279ced3137ad30c658a
-ms.translationtype: MT
+ms.openlocfilehash: 3295bbdbb00c73c9aaa37dcb15d35121b82454bb
+ms.sourcegitcommit: 1aedef909f91dc88dc741748f36eabce3a04b2b1
+ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/20/2018
+ms.lasthandoff: 05/08/2018
 ---
-# <a name="viewing-r-or-python-packages-installed-on-sql-server"></a>Visualización de R o paquetes de Python instalados en SQL Server
+#  <a name="get-r-and-python-package-information-on-sql-server-machine-learning"></a>Obtener información de paquete de R y Python en aprendizaje automático de SQL Server
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
 
-Si ha instalado varios entornos de Python, o usar varias herramientas de R, es fácil de instalar un paquete a la biblioteca incorrecta o el entorno y, a continuación, no pueda encontrarla más adelante. 
-
-Este artículo proporciona algunas consultas que puede usar para determinar la versión actual y para enumerar los paquetes que están instalados en el entorno de SQL Server actual.
+Si ha instalado varios entornos de Python, o usar varias herramientas de R, es fácil de instalar un paquete a la biblioteca incorrecta o el entorno y, a continuación, no pueda encontrarla más adelante. Este artículo proporciona consultas e instrucciones útiles para la versión del paquete determininga y enumerar los paquetes que están instalados en el entorno actual de SQL Server.
 
 ## <a name="verify-the-current-default-library"></a>Compruebe la biblioteca predeterminada actual
 

@@ -1,30 +1,28 @@
 ---
 title: Enlazar un informe o un modelo con un origen de datos compartido (SSRS) | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 03/17/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-sharepoint, reporting-services-native
-ms.service: 
 ms.component: report-data
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: pro-bi
-ms.technology: 
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.technology: ''
+ms.tgt_pltfrm: ''
+ms.topic: conceptual
 helpviewer_keywords:
 - shared data sources [Reporting Services]
 - data sources [Reporting Services], shared
 ms.assetid: 23cc15f2-2883-48e2-bc6c-fa0ab61a2e21
-caps.latest.revision: "11"
+caps.latest.revision: 11
 author: markingmyname
 ms.author: maghan
 manager: kfile
-ms.workload: Inactive
-ms.openlocfilehash: 44809cf12df1fac42a99882672fa945800a9f5f4
-ms.sourcegitcommit: 7e117bca721d008ab106bbfede72f649d3634993
+ms.openlocfilehash: 708cfa2d2a587ab9990f1b5a1c4a28691229fa88
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/09/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="bind-a-report-or-model-to-a-shared-data-source-ssrs"></a>Enlazar un informe o un modelo con un origen de datos compartido (SSRS)
   En algunos casos (por ejemplo, al mover un informe o un modelo de un servidor de prueba a un servidor de producción), puede que desee guardar el archivo en el equipo local y, a continuación, cargarlo en otro servidor de informes. Al cargar el informe o el modelo en el servidor nuevo, debe volver a enlazarlo con un origen de datos compartido almacenado en el servidor de informes nuevo. Si no vuelve a enlazar el informe o el modelo, no funcionará correctamente cuando se obtenga acceso a él desde el servidor de informes nuevo.  

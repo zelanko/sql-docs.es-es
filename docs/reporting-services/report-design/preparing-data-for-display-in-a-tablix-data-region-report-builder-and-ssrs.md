@@ -1,27 +1,25 @@
 ---
-title: "Preparar datos para su presentación en una región de datos Tablix (Generador de informes y SSRS) | Microsoft Docs"
-ms.custom: 
+title: Preparar datos para su presentación en una región de datos Tablix (Generador de informes y SSRS) | Microsoft Docs
+ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-sharepoint, reporting-services-native
-ms.service: 
 ms.component: report-design
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: pro-bi
-ms.technology: 
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.technology: ''
+ms.tgt_pltfrm: ''
+ms.topic: conceptual
 ms.assetid: fbb00dc6-7887-480c-b771-cab6fecb8dcc
-caps.latest.revision: "5"
+caps.latest.revision: 5
 author: maggiesMSFT
 ms.author: maggies
 manager: kfile
-ms.workload: Inactive
-ms.openlocfilehash: 097b9e93906ecb166ae2b13aa5c3f6892241c4c2
-ms.sourcegitcommit: 7e117bca721d008ab106bbfede72f649d3634993
+ms.openlocfilehash: e6b8f3672b21a43c87eb1dec7008593a93f3b850
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/09/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="preparing-data-for-display-in-a-tablix-data-region-report-builder-and-ssrs"></a>Preparar datos para su presentación en una región de datos Tablix (Generador de informes y SSRS)
   Una región de datos Tablix muestra los datos de un conjunto de datos. Puede ver todos los datos recuperados para el conjunto de datos o puede crear filtros para ver solo un subconjunto de los datos. También puede agregar expresiones condicionales para rellenar los valores NULL o modificar la consulta para que un conjunto de datos incluya columnas que definan el criterio de ordenación para una columna existente.  

@@ -1,27 +1,25 @@
 ---
 title: Representar en HTML (Generador de informes y SSRS) | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 03/15/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-sharepoint, reporting-services-native
-ms.service: 
 ms.component: report-builder
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: pro-bi
-ms.technology: 
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.technology: ''
+ms.tgt_pltfrm: ''
+ms.topic: conceptual
 ms.assetid: cf559b0a-499a-4d74-b520-b382b87e0b17
-caps.latest.revision: "10"
+caps.latest.revision: 10
 author: maggiesMSFT
 ms.author: maggies
 manager: kfile
-ms.workload: On Demand
-ms.openlocfilehash: 165a0ad6a70b3141ec3b1ce0fa22b953d287abf4
-ms.sourcegitcommit: 7e117bca721d008ab106bbfede72f649d3634993
+ms.openlocfilehash: 63f7f18921d856753162a22e8fbf079834105164
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/09/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="rendering-to-html-report-builder-and-ssrs"></a>Representar en HTML (Generador de informes y SSRS)
   La extensión de representación en HTML representa un informe paginado en formato HTML. La extensión de representación también puede generar páginas HTML completas o fragmentos de HTML para incrustarlos en otras páginas HTML. Todos los HTML se generan con la codificación UTF-8.  

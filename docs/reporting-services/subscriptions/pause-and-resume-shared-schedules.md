@@ -1,16 +1,15 @@
 ---
 title: Pausar y reanudar las programaciones compartidas| Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-sharepoint, reporting-services-native
-ms.service: 
 ms.component: subscriptions
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: pro-bi
-ms.technology: 
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.technology: ''
+ms.tgt_pltfrm: ''
+ms.topic: conceptual
 helpviewer_keywords:
 - pausing schedules
 - report-specific schedules [Reporting Services]
@@ -20,16 +19,15 @@ helpviewer_keywords:
 - schedules [Reporting Services], resuming
 - schedules [Reporting Services], pausing
 ms.assetid: e416be75-5234-4aa6-a3de-77f60f25169a
-caps.latest.revision: "36"
+caps.latest.revision: 36
 author: markingmyname
 ms.author: maghan
 manager: kfile
-ms.workload: Inactive
-ms.openlocfilehash: aff3fe5efdee7db2dfb0ac17f8d797badec97da9
-ms.sourcegitcommit: 7e117bca721d008ab106bbfede72f649d3634993
+ms.openlocfilehash: ecaa6780e3b3f10809f11d3aa329cb69e645123a
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/09/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="pause-and-resume-shared-schedules"></a>Pausar y reanudar las programaciones compartidas
   Existe la posibilidad de pausar y reanudar las programaciones compartidas en uso. Pausar una programación compartida es un modo de congelar temporalmente una programación que se emplea para desencadenar el procesamiento de los informes y las suscripciones. Solo es posible pausar y reanudar las programaciones compartidas. Las programaciones específicas del informe no admiten la operación de pausa.  

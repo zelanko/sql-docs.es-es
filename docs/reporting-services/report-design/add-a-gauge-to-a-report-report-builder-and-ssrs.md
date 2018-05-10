@@ -1,27 +1,25 @@
 ---
 title: Agregar un medidor a un informe (Generador de informes y SSRS) | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 03/01/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-sharepoint, reporting-services-native
-ms.service: 
 ms.component: report-design
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: pro-bi
-ms.technology: 
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.technology: ''
+ms.tgt_pltfrm: ''
+ms.topic: conceptual
 ms.assetid: 45da4fef-2b02-40e1-977c-f8f80d87155e
-caps.latest.revision: "7"
+caps.latest.revision: 7
 author: maggiesMSFT
 ms.author: maggies
 manager: kfile
-ms.workload: Inactive
-ms.openlocfilehash: 115b8f60a66378458b05234386dade8df290ec7e
-ms.sourcegitcommit: 7e117bca721d008ab106bbfede72f649d3634993
+ms.openlocfilehash: 5f9c8467cb8ea31ef490cd21ff51e675abe1fd17
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/09/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="add-a-gauge-to-a-report-report-builder-and-ssrs"></a>Agregar un medidor a un informe (Generador de informes y SSRS)
   En un informe paginado de [!INCLUDE[ssRSnoversion_md](../../includes/ssrsnoversion-md.md)] , cuando quiera resumir datos y presentarlos con un formato visual, puede usar una región de datos del medidor. Después de agregar una región de datos del medidor a la superficie de diseño, puede arrastrar los campos de conjunto de datos de informe a un panel de datos del medidor.  

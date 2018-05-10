@@ -1,27 +1,25 @@
 ---
-title: "Agregar o quitar un encabezado o un pie de página (Generador de informes y SSRS) | Microsoft Docs"
-ms.custom: 
+title: Agregar o quitar un encabezado o un pie de página (Generador de informes y SSRS) | Microsoft Docs
+ms.custom: ''
 ms.date: 03/01/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-sharepoint, reporting-services-native
-ms.service: 
 ms.component: report-design
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: pro-bi
-ms.technology: 
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.technology: ''
+ms.tgt_pltfrm: ''
+ms.topic: conceptual
 ms.assetid: 72988623-fee8-4a05-9f72-8fcb8e668576
-caps.latest.revision: "6"
+caps.latest.revision: 6
 author: maggiesMSFT
 ms.author: maggies
 manager: kfile
-ms.workload: On Demand
-ms.openlocfilehash: e10b015647d513494b6a13d7f690953ca3728533
-ms.sourcegitcommit: 7e117bca721d008ab106bbfede72f649d3634993
+ms.openlocfilehash: 39bd8b96ddbb294fe98acd313a5c1bf542e0fd6e
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/09/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="add-or-remove-a-page-header-or-footer-report-builder-and-ssrs"></a>Agregar o quitar un encabezado o un pie de página (Generador de informes y SSRS)
   Puede agregar texto estático, imágenes, líneas, rectángulos y bordes a encabezados y pies de página. Puede colocar expresiones e imágenes enlazadas a datos en un cuadro de texto si desea incluir datos variables o calculados en un encabezado o pie de página.  

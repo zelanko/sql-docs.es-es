@@ -1,31 +1,29 @@
 ---
 title: Roles predefinidos | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 10/22/2015
 ms.prod: reporting-services
 ms.prod_service: reporting-services-sharepoint, reporting-services-native
-ms.service: 
 ms.component: security
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: pro-bi
-ms.technology: 
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.technology: ''
+ms.tgt_pltfrm: ''
+ms.topic: conceptual
 helpviewer_keywords:
 - security [Reporting Services], defaults
 - default security
 - role-based security [Reporting Services], defaults
 ms.assetid: 6b46db51-7c30-467d-a251-50f50647fe21
-caps.latest.revision: "42"
+caps.latest.revision: 42
 author: markingmyname
 ms.author: maghan
 manager: kfile
-ms.workload: On Demand
-ms.openlocfilehash: 492f85664f3a1068d32fca9910717d794fb6dc6e
-ms.sourcegitcommit: 7e117bca721d008ab106bbfede72f649d3634993
+ms.openlocfilehash: 59deac2a0b2e20d94fad6dc46f6d70a76ee884ef
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/09/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="role-definitions---predefined-roles"></a>Definiciones de roles: roles predefinidos
   [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] se instala junto con roles predefinidos que puede usar para conceder acceso a operaciones del servidor de informes. Cada rol predefinido describe una recopilación de tareas relacionadas. Puede asignar grupos y cuentas de usuario a los roles predefinidos para proporcionar acceso inmediato a las operaciones del servidor de informes.  

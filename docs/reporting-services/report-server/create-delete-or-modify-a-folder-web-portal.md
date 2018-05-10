@@ -1,27 +1,25 @@
 ---
 title: Crear, eliminar o modificar una carpeta (portal web) | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 03/01/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
-ms.service: 
 ms.component: report-server
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: pro-bi
-ms.technology: 
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.technology: ''
+ms.tgt_pltfrm: ''
+ms.topic: conceptual
 ms.assetid: 70a38879-856c-414b-8479-5f9dead38f15
-caps.latest.revision: "6"
+caps.latest.revision: 6
 author: markingmyname
 ms.author: maghan
 manager: kfile
-ms.workload: Inactive
-ms.openlocfilehash: a569bbb511fda6089ba8d3e14bad5858ab1bbf4b
-ms.sourcegitcommit: 7e117bca721d008ab106bbfede72f649d3634993
+ms.openlocfilehash: e74001a999a6a401c6c221ce4839e32b344f3bba
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/09/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="create-delete-or-modify-a-folder-web-portal"></a>Crear, eliminar o modificar una carpeta (portal web)
   Puede crear carpetas para organizar y administrar los elementos que publica en un servidor de informes. La creación de carpetas puede ayudar a los usuarios a buscar informes de su interés. Para administradores de contenido, las carpetas proporcionan un marco para aplicar permisos. Puede crear asignaciones de roles en carpetas concretas para restringir el acceso a los informes que se están desarrollando o que no se deberían distribuir de manera amplia.  

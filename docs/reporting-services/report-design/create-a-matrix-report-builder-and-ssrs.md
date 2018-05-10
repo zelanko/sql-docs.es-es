@@ -1,27 +1,25 @@
 ---
 title: Crear una matriz (Generador de informes y SSRS) | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 03/07/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-sharepoint, reporting-services-native
-ms.service: 
 ms.component: report-design
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: pro-bi
-ms.technology: 
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.technology: ''
+ms.tgt_pltfrm: ''
+ms.topic: conceptual
 ms.assetid: 493e63b9-ecd0-4054-97ec-92d84e9b8182
-caps.latest.revision: "12"
+caps.latest.revision: 12
 author: maggiesMSFT
 ms.author: maggies
 manager: kfile
-ms.workload: On Demand
-ms.openlocfilehash: a608539635d00b07ba001e37172f3f71b6fc3465
-ms.sourcegitcommit: 7e117bca721d008ab106bbfede72f649d3634993
+ms.openlocfilehash: 8d28d9071a245185e9801d1b1c482a058752e6da
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/09/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="create-a-matrix-report-builder-and-ssrs"></a>Crear una matriz (Generador de informes y SSRS)
   Use una matriz para mostrar datos agrupados e información de resumen. Puede agrupar datos por varios campos o expresiones en grupos de filas y de columnas. Las matrices ofrecen funcionalidad similar a la de las tablas de referencias cruzadas (crosstab) y las tablas dinámicas. En tiempo de ejecución, a medida que se combinan los datos del informe y las regiones de datos, la matriz aumenta de tamaño horizontal y verticalmente en la página. Los valores de las celdas de la matriz muestran valores agregados cuyo ámbito es la intersección de los grupos de filas y de columnas a los que pertenece la celda. Puede dar formato a las filas y columnas para resaltar los datos a los que desea dar énfasis. También puede incluir controles de alternancia de obtención de detalles que ocultan inicialmente los datos detallados; de esta forma, el usuario podrá hacer clic en dichos controles para mostrar más o menos detalles, según sea necesario.  

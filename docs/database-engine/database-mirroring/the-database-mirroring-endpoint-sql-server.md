@@ -3,15 +3,13 @@ title: El punto de conexión de creación de reflejo de la base de datos (SQL Se
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
-ms.prod_service: database-engine
-ms.service: ''
+ms.prod_service: high-availability
 ms.component: database-mirroring
 ms.reviewer: ''
 ms.suite: sql
-ms.technology:
-- dbe-high-availability
+ms.technology: high-availability
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - database mirroring [SQL Server], deployment
 - database mirroring [SQL Server], endpoint
@@ -23,15 +21,17 @@ caps.latest.revision: 47
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.workload: On Demand
-ms.openlocfilehash: 74bf6671aec23583b03ea255cfdf5bcd7e0ae3be
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
+monikerRange: '>= sql-server-2016 || = sqlallproducts-allversions'
+ms.openlocfilehash: 16d23cf23aba77a37346fdbe8bd8ffe6d29a2c8b
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="the-database-mirroring-endpoint-sql-server"></a>El extremo de creación de reflejo de la base de datos (SQL Server)
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
+
   Para participar en la creación de reflejo de la base de datos o [!INCLUDE[ssHADR](../../includes/sshadr-md.md)] , una instancia de servidor requiere su propio *extremo de creación de reflejo de la base de datos*dedicado. Se trata de un extremo especial que se utiliza exclusivamente para recibir conexiones procedentes de otras instancias de servidor. En una instancia de servidor determinada, todas las conexiones de creación de reflejo de la base de datos o [!INCLUDE[ssHADR](../../includes/sshadr-md.md)] a cualquier otra instancia de servidor utilizan un único extremo de creación de reflejo de la base de datos.  
   
  Los extremos de creación de reflejo de la base de datos utilizan el Protocolo de control de transporte (TCP) para enviar y recibir mensajes entre las instancias del servidor que participan en sesiones de creación de reflejo de la base de datos u hospedan réplicas de disponibilidad. El extremo de creación de reflejo de la base de datos escucha en un número de puerto TCP exclusivo.  

@@ -1,16 +1,15 @@
 ---
 title: Aprovisionar suscripciones y alertas para aplicaciones de servicio SSRS | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 06/03/2016
 ms.prod: reporting-services
 ms.prod_service: reporting-services-sharepoint
-ms.service: 
 ms.component: install-windows
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: pro-bi
-ms.technology: 
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.technology: ''
+ms.tgt_pltfrm: ''
+ms.topic: conceptual
 helpviewer_keywords:
 - Reporting Services Shared Service
 - SharePoint Mode [Reporting Services]
@@ -18,16 +17,15 @@ helpviewer_keywords:
 - Reporting Services Service Application
 - SSRS service application
 ms.assetid: d0de3f1f-4887-47fb-bacf-46aaad74c4be
-caps.latest.revision: "20"
+caps.latest.revision: 20
 author: markingmyname
 ms.author: maghan
 manager: kfile
-ms.workload: Inactive
-ms.openlocfilehash: 9fe31f06921df5ef0c1f3272f2064c0464551a2e
-ms.sourcegitcommit: 7e117bca721d008ab106bbfede72f649d3634993
+ms.openlocfilehash: a4de22aefed2d4602e5ca331355ae7588394672e
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/09/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="provision-subscriptions-and-alerts-for-ssrs-service-applications"></a>Aprovisionar Subscripciones y alertas para aplicaciones de servicio SSRS
   [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] requieren el Agente SQL Server y la configuración de permisos del mismo. Si ve mensajes de error que indican que se requiere el Agente SQL Server y ha comprobado que se está ejecutando, actualice o compruebe los permisos. El ámbito de este tema es [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] en modo de SharePoint y en él se describen tres formas de actualizar los permisos del Agente SQL Server con suscripciones de [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] . Las credenciales que use para los pasos de este tema deben disponer de los permisos adecuados para conceder permisos de ejecución a RSExecRole para los objetos de la aplicación de servicio, msdb y las bases de datos maestras.  

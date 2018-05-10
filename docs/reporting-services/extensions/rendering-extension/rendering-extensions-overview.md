@@ -1,31 +1,30 @@
 ---
-title: "Información general de las extensiones de representación | Microsoft Docs"
-ms.custom: 
+title: Información general de las extensiones de representación | Microsoft Docs
+ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
-ms.service: 
 ms.component: extensions
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: pro-bi
-ms.technology: 
-ms.tgt_pltfrm: 
+ms.technology: ''
+ms.tgt_pltfrm: ''
 ms.topic: reference
-applies_to: SQL Server 2016 Preview
+applies_to:
+- SQL Server 2016 Preview
 helpviewer_keywords:
 - formats [Reporting Services], rendering extensions
 - rendering extensions [Reporting Services], about extensions
 ms.assetid: 909356a0-4709-43e5-b597-33bd9bb22882
-caps.latest.revision: "41"
+caps.latest.revision: 41
 author: markingmyname
 ms.author: maghan
 manager: kfile
-ms.workload: On Demand
-ms.openlocfilehash: bc07df4510aff77e5bb0fa5ef5ca6fff3ad23beb
-ms.sourcegitcommit: 7e117bca721d008ab106bbfede72f649d3634993
+ms.openlocfilehash: e8ba9ec6f9e6e629a7f6019c362824363e546583
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/09/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="rendering-extensions-overview"></a>Información general de las extensiones de representación
   Una extensión de representación es un componente o módulo de un servidor de informes que transforma los datos de informes y la información de diseño en un formato específico del dispositivo. [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] incluye siete extensiones de representación: HTML, Excel, Word, CSV o texto, XML, imagen y PDF. Puede crear extensiones de representación adicionales para generar informes en otros formatos.  

@@ -1,27 +1,25 @@
 ---
-title: "Agregar medidores a informes para dispositivos móviles | Reporting Services | Microsoft Docs"
-ms.custom: 
+title: Agregar medidores a informes para dispositivos móviles | Reporting Services | Microsoft Docs
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
-ms.service: 
 ms.component: mobile-reports
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: pro-bi
-ms.technology: 
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.technology: ''
+ms.tgt_pltfrm: ''
+ms.topic: conceptual
 ms.assetid: 76d8fc8f-c37f-44d3-ab44-45fbeed4e064
-caps.latest.revision: "5"
+caps.latest.revision: 5
 author: maggiesMSFT
 ms.author: maggies
 manager: kfile
-ms.workload: Inactive
-ms.openlocfilehash: 1e06346c3562f438e962eda3ff01a4068bafa750
-ms.sourcegitcommit: 7e117bca721d008ab106bbfede72f649d3634993
+ms.openlocfilehash: 985bde62deff88231ff889e1f403ad82edc55a0d
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/09/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="add-gauges-to-mobile-reports--reporting-services"></a>Agregar medidores a informes para dispositivos móviles | Reporting Services
 Los medidores son los elementos visuales más básicos y más ampliamente usados en los informes para dispositivos móviles. Muestran un valor único de un conjunto de datos: solo el valor, o bien el valor comparado con un objetivo.
@@ -50,7 +48,7 @@ Los valores de medidor se pueden filtrar conectándolos a navegadores en el info
 
 4. [Opcional] Para cambiar la agregación, seleccione **Opciones** y, luego, seleccione otra agregación.
    
-   >**Nota:**si cambia la agregación del valor principal, probablemente también quiera hacer lo propio con el valor de comparación, aunque en algunos casos se pueden combinar diferentes métodos de agregación.  
+   >**Nota:** si cambia la agregación del valor principal, probablemente también quiera hacer lo propio con el valor de comparación, aunque en algunos casos se pueden combinar diferentes métodos de agregación.  
 
 ## <a name="filter-a-gauge"></a>Filtrar un medidor
   

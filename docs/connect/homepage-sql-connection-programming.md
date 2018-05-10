@@ -4,22 +4,19 @@ description: Página de concentrador con vínculos anotado a descargas y documen
 author: MightyPen
 ms.date: 04/16/2018
 ms.prod: sql
-ms.prod_service: drivers
-ms.service: ''
+ms.prod_service: connectivity
 ms.component: connect
 ms.suite: sql
 ms.custom: ''
-ms.technology:
-- drivers
-ms.topic: article
+ms.technology: connectivity
+ms.topic: conceptual
 ms.reviewer: meetb
 ms.author: genemi
-ms.workload: Inactive
-ms.openlocfilehash: 886cf05cf5d52d4f4619047f43f1f78449441a9d
-ms.sourcegitcommit: bb044a48a6af9b9d8edb178dc8c8bd5658b9ff68
-ms.translationtype: HT
+ms.openlocfilehash: f281fff6085048bb5918901a9e12af702b71b3e1
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/18/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="homepage-for-client-programming-to-microsoft-sql-server"></a>Página principal de programación para Microsoft SQL Server del cliente
 

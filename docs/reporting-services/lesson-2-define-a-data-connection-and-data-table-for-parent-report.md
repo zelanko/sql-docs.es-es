@@ -1,28 +1,27 @@
 ---
-title: "Lección 2: Definir una conexión de datos y una tabla de datos para el informe primario | Microsoft Docs"
-ms.custom: 
+title: 'Lección 2: Definir una conexión de datos y una tabla de datos para el informe primario | Microsoft Docs'
+ms.custom: ''
 ms.date: 05/18/2016
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
-ms.service: 
 ms.component: reporting-services
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: pro-bi
-ms.technology: 
-ms.tgt_pltfrm: 
+ms.technology: ''
+ms.tgt_pltfrm: ''
 ms.topic: article
-applies_to: SQL Server 2016
+applies_to:
+- SQL Server 2016
 ms.assetid: f02dee0c-85ad-45d4-b707-10e9e8541db9
-caps.latest.revision: "8"
+caps.latest.revision: 8
 author: markingmyname
 ms.author: maghan
 manager: kfile
-ms.workload: Inactive
-ms.openlocfilehash: aaa0c4a8bccf85ddb3e3d58322cd2617db715f03
-ms.sourcegitcommit: 7e117bca721d008ab106bbfede72f649d3634993
+ms.openlocfilehash: 0d77703f5f0982a424a849c8a6411b2a95ce4e38
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/09/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="lesson-2-define-a-data-connection-and-data-table-for-parent-report"></a>Lección 2: Definir una conexión de datos y una tabla de datos para el informe primario
 Después de crear un proyecto de sitio Web nuevo con la plantilla de sitio Web ASP.NET para Visual C#, el paso siguiente consiste en crear una conexión de datos y una tabla de datos para el informe primario. En este tutorial, la conexión de datos se produce con la base de datos AdventureWorks2014.  
@@ -67,7 +66,7 @@ Después de crear un proyecto de sitio Web nuevo con la plantilla de sitio Web A
   
     También puede crear la consulta si hace clic en **Generador de consultas**y, después, compruebe la consulta al hacer clic en **Ejecutar consulta**. Si la consulta no devuelve los datos esperados, puede utilizar una versión anterior de AdventureWorks. Para más información sobre cómo obtener la base de datos de ejemplo **AdventureWorks2014**, vea [Bases de datos de ejemplo AdventureWorks](https://github.com/Microsoft/sql-server-samples/releases).  
   
-11. En la página **Elegir los métodos que se van a generar** , asegúrese de desactivar **Crear métodos para enviar actualizaciones directamente a la base de datos (GenerateDBDirectMethods)**y seleccione **Finalizar**.  
+11. En la página **Elegir los métodos que se van a generar** , asegúrese de desactivar **Crear métodos para enviar actualizaciones directamente a la base de datos (GenerateDBDirectMethods)** y seleccione **Finalizar**.  
   
     > [!WARNING]  
     > Asegúrese de desactivar **Crear métodos para enviar actualizaciones directamente a la base de datos (GenerateDBDirectMethods)**  

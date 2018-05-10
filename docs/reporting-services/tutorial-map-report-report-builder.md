@@ -1,28 +1,27 @@
 ---
 title: 'Tutorial: Informe de asignaciones (Generador de informes) | Microsoft Docs'
-ms.custom: 
+ms.custom: ''
 ms.date: 08/31/2016
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
-ms.service: 
 ms.component: reporting-services
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: pro-bi
-ms.technology: 
-ms.tgt_pltfrm: 
+ms.technology: ''
+ms.tgt_pltfrm: ''
 ms.topic: get-started-article
-applies_to: SQL Server 2016
+applies_to:
+- SQL Server 2016
 ms.assetid: 8d831356-7efa-40cc-ae95-383b3eecf833
-caps.latest.revision: "18"
+caps.latest.revision: 18
 author: maggiesMSFT
 ms.author: maggies
 manager: kfile
-ms.workload: On Demand
-ms.openlocfilehash: 5e5cbb6a1ac4cb9edf2baff1eb68c341c8187872
-ms.sourcegitcommit: 7e117bca721d008ab106bbfede72f649d3634993
+ms.openlocfilehash: 85c22b39e27a6e7f00773a6fcee0b5ac900cbb42
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/09/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="tutorial-map-report-report-builder"></a>Tutorial: Informe de asignaciones (Generador de informes)
 En este tutorial de [!INCLUDE[ssRBnoversion_md](../includes/ssrbnoversion-md.md)] , obtendrá información sobre las características de mapa que puede usar para mostrar datos en un fondo geográfico de un informe paginado de [!INCLUDE[ssRSnoversion_md](../includes/ssrsnoversion-md.md)] . 
@@ -62,7 +61,7 @@ En esta sección, agregará un mapa al informe desde la galería de mapas. El ma
   
 4.  En la página **Elegir un origen de datos espaciales** , compruebe que está seleccionado **Galería de mapas** .  
   
-6.  En el cuadro Galería de mapas, expanda **Estados por condado** en **EE.UU.**y haga clic en **Nueva York**.  
+6.  En el cuadro Galería de mapas, expanda **Estados por condado** en **EE.UU.** y haga clic en **Nueva York**.  
   
     El panel Vista previa del mapa muestra el mapa del condado de Nueva York.  
     

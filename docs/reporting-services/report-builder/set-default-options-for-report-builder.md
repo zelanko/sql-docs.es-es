@@ -4,13 +4,12 @@ ms.custom: ''
 ms.date: 03/01/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-sharepoint, reporting-services-native
-ms.service: ''
 ms.component: report-builder
 ms.reviewer: ''
 ms.suite: pro-bi
 ms.technology: ''
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - "10427"
 ms.assetid: 423360de-9bed-462e-921f-60a5abab004f
@@ -18,12 +17,11 @@ caps.latest.revision: 15
 author: maggiesMSFT
 ms.author: maggies
 manager: kfile
-ms.workload: On Demand
-ms.openlocfilehash: f50138fa4045822456105962aec3c8a6c2305fbe
-ms.sourcegitcommit: 7e117bca721d008ab106bbfede72f649d3634993
+ms.openlocfilehash: a60776397119840d9042b872160c33f2228605d1
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/09/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="set-default-options-for-report-builder"></a>Establecimiento de opciones predeterminadas para el Generador de informes
   En Generador de informes, puede establecer un número de valores predeterminados útiles para que la creación de informes resulte más sencilla y más rápida.  Por ejemplo, si puede establecer o cambiar el servidor de informes predeterminado, Generador de informes guarda los informes en el mismo servidor de informes automáticamente, a menos que se especifique lo contrario.  

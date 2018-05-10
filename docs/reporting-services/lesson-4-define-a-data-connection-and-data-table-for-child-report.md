@@ -1,28 +1,27 @@
 ---
-title: "Lección 4: Definir una conexión de datos y una tabla de datos para el informe secundario | Microsoft Docs"
-ms.custom: 
+title: 'Lección 4: Definir una conexión de datos y una tabla de datos para el informe secundario | Microsoft Docs'
+ms.custom: ''
 ms.date: 05/18/2016
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
-ms.service: 
 ms.component: reporting-services
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: pro-bi
-ms.technology: 
-ms.tgt_pltfrm: 
+ms.technology: ''
+ms.tgt_pltfrm: ''
 ms.topic: article
-applies_to: SQL Server 2016
+applies_to:
+- SQL Server 2016
 ms.assetid: a6aa2c56-227c-43c5-a28e-c7104131ac5e
-caps.latest.revision: "7"
+caps.latest.revision: 7
 author: markingmyname
 ms.author: maghan
 manager: kfile
-ms.workload: Inactive
-ms.openlocfilehash: 5a9893a646617d3f3bca68c7c22de1a7a10d7455
-ms.sourcegitcommit: 7e117bca721d008ab106bbfede72f649d3634993
+ms.openlocfilehash: d7aa269db14390739e0d9a161819b78793fd8474
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/09/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="lesson-4-define-a-data-connection-and-data-table-for-child-report"></a>Lección 4: Definir una conexión de datos y una tabla de datos para el informe secundario
 Después de diseñar el informe primario, el paso siguiente es crear una conexión de datos y una tabla de datos para el informe secundario. En este tutorial, la conexión de datos se produce con la base de datos AdventureWorks2014.  
@@ -65,7 +64,7 @@ Después de diseñar el informe primario, el paso siguiente es crear una conexi�
   
     También puede crear la consulta si hace clic en **Generador de consultas**y, después, comprobar la consulta al hacer clic en **Ejecutar consulta** . Si la consulta no devuelve los datos esperados, puede utilizar una versión anterior de AdventureWorks. Para más información sobre cómo obtener la base de datos de ejemplo **AdventureWorks2014**, vea [Bases de datos de ejemplo AdventureWorks](https://github.com/Microsoft/sql-server-samples/releases).  
   
-10. En la página **Elegir los métodos que se van a generar** , desactive **Crear métodos para enviar actualizaciones directamente a la base de datos (GenerateDBDirectMethods)**y seleccione **Finalizar**.  
+10. En la página **Elegir los métodos que se van a generar** , desactive **Crear métodos para enviar actualizaciones directamente a la base de datos (GenerateDBDirectMethods)** y seleccione **Finalizar**.  
   
     > [!WARNING]  
     > Asegúrese de desactivar **Crear métodos para enviar actualizaciones directamente a la base de datos (GenerateDBDirectMethods)**  

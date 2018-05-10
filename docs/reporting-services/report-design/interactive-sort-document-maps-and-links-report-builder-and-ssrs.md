@@ -1,27 +1,25 @@
 ---
-title: "Ordenación interactiva, mapas de documento y vínculos (Generador de informes y SSRS) | Microsoft Docs"
-ms.custom: 
+title: Ordenación interactiva, mapas de documento y vínculos (Generador de informes y SSRS) | Microsoft Docs
+ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-sharepoint, reporting-services-native
-ms.service: 
 ms.component: report-design
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: pro-bi
-ms.technology: 
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.technology: ''
+ms.tgt_pltfrm: ''
+ms.topic: conceptual
 ms.assetid: cc6ef408-4a76-408a-9d3f-033481fe21cf
-caps.latest.revision: "7"
+caps.latest.revision: 7
 author: maggiesMSFT
 ms.author: maggies
 manager: kfile
-ms.workload: Inactive
-ms.openlocfilehash: 31065c6544f6c93e913ceb9f55a5bc8a804db983
-ms.sourcegitcommit: 7e117bca721d008ab106bbfede72f649d3634993
+ms.openlocfilehash: 1f1e305dbb657fcb675767e2489cc12bc30fdd50
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/09/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="interactive-sort-document-maps-and-links-report-builder-and-ssrs"></a>Ordenación interactiva, mapas de documento y vínculos (Generador de informes y SSRS)
   En entornos basados en web, puede agregar varias características que permitan a los usuarios interactuar con los informes. Los usuarios pueden cambiar el criterio de ordenación de los valores del informe, mostrar u ocultar elementos del informe o hacer clic en vínculos que llevan a otros informes con páginas web. También puede agregar una tabla de contenido o mapa de documento. Los usuarios de los informes pueden hacer clic en los elementos de la tabla de contenido o el mapa de documento para desplazarse a las distintas áreas de un informe.  

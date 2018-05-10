@@ -1,27 +1,25 @@
 ---
-title: "Configuración de información de dispositivos para las extensiones de representación (Reporting Services) | Microsoft Docs"
-ms.custom: 
+title: Configuración de información de dispositivos para las extensiones de representación (Reporting Services) | Microsoft Docs
+ms.custom: ''
 ms.date: 09/15/2015
 ms.prod: reporting-services
 ms.prod_service: reporting-services-sharepoint, reporting-services-native
-ms.service: 
 ms.component: reporting-services
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: pro-bi
-ms.technology: 
-ms.tgt_pltfrm: 
+ms.technology: ''
+ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: 947b0ee1-bb35-4b4e-9527-dc501566e7d1
-caps.latest.revision: "6"
+caps.latest.revision: 6
 author: markingmyname
 ms.author: maghan
 manager: kfile
-ms.workload: Inactive
-ms.openlocfilehash: 6ad004b9e6c01b1bddc61019f64ae9bd1999850f
-ms.sourcegitcommit: 7e117bca721d008ab106bbfede72f649d3634993
+ms.openlocfilehash: ea4aec909a5d65582ae59b507c3948e4484b3e49
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/09/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="device-information-settings-for-rendering-extensions-reporting-services"></a>Configuración de información de dispositivos para las extensiones de representación (Reporting Services)
   En [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)], la configuración de información de dispositivos se utiliza para pasar los parámetros de representación a una extensión de representación. Cada extensión de representación acepta un conjunto de valores específico.  

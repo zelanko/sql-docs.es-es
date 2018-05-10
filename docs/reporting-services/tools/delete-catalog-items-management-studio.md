@@ -4,13 +4,12 @@ ms.custom: ''
 ms.date: 03/01/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-sharepoint, reporting-services-native
-ms.service: ''
 ms.component: tools
 ms.reviewer: ''
 ms.suite: pro-bi
 ms.technology: ''
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql13.swb.reportserver.deleteitems.f1
 ms.assetid: b0599e01-6dc3-4484-80d4-022a412e0ebd
@@ -18,12 +17,11 @@ caps.latest.revision: 16
 author: markingmyname
 ms.author: maghan
 manager: kfile
-ms.workload: Inactive
-ms.openlocfilehash: b0816a50ed99684848ddb3cc890080cf305440e8
-ms.sourcegitcommit: 7e117bca721d008ab106bbfede72f649d3634993
+ms.openlocfilehash: d3d92d7345862149380565911def8eb3a52454fa
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/09/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="delete-catalog-items-management-studio"></a>Eliminar elementos del catálogo (Management Studio)
   Utilice esta página para eliminar programaciones compartidas y definiciones de roles.  
@@ -34,7 +32,7 @@ ms.lasthandoff: 01/09/2018
   
  No puede deshacer una operación de eliminación. Si desea recuperar un elemento eliminado, debe volver a crearlo o restaurar una copia de seguridad de la base de datos de servidor de informes.  
   
-## <a name="options"></a>.  
+## <a name="options"></a>Opciones  
  **Nombre**  
  Especifica el nombre del elemento que va a eliminar.  
   

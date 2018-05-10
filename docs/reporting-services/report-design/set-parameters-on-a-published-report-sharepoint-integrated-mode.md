@@ -1,30 +1,28 @@
 ---
-title: "Establecer parámetros en un informe publicado - Modo integrado de SharePoint | Microsoft Docs"
-ms.custom: 
+title: Establecer parámetros en un informe publicado - Modo integrado de SharePoint | Microsoft Docs
+ms.custom: ''
 ms.date: 03/07/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-sharepoint, reporting-services-native
-ms.service: 
 ms.component: report-design
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: pro-bi
-ms.technology: 
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.technology: ''
+ms.tgt_pltfrm: ''
+ms.topic: conceptual
 helpviewer_keywords:
 - SharePoint integration [Reporting Services], content management
 - report parameters [Reporting Services]
 ms.assetid: dec5d985-a6c1-4dd8-8a66-a848e89a2e18
-caps.latest.revision: "9"
+caps.latest.revision: 9
 author: maggiesMSFT
 ms.author: maggies
 manager: kfile
-ms.workload: Inactive
-ms.openlocfilehash: eb7d195139e3fd34ad6ac749bf0e09e7b13e0d3d
-ms.sourcegitcommit: 7e117bca721d008ab106bbfede72f649d3634993
+ms.openlocfilehash: 537dfe4f3ef8f6f73cf7bcdeda5c26a0b91265a8
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/09/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="set-parameters-on-a-published-report---sharepoint-integrated-mode"></a>Establecer parámetros en un informe publicado - Modo integrado de SharePoint
   Un informe con parámetros es un informe que acepta valores de entrada usados para filtrar datos al ejecutar el informe. Los parámetros se definen al crear el informe. En función de cómo se defina un parámetro del informe en la definición del informe, puede aceptar un solo valor, varios valores o valores dinámicos, que cambian en respuesta a una selección previa (por ejemplo, si selecciona una categoría del producto, la siguiente selección podría ser un producto concreto de esa categoría). Un parámetro puede tener un valor predeterminado, que se puede usar para ejecutar una versión filtrada del informe de manera automática o posiblemente sustituirlo por otro valor.  

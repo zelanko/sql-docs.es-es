@@ -4,26 +4,25 @@ ms.custom: ''
 ms.date: 08/26/2016
 ms.prod: reporting-services
 ms.prod_service: reporting-services-sharepoint, reporting-services-native
-ms.service: ''
 ms.component: security
 ms.reviewer: ''
 ms.suite: pro-bi
 ms.technology: ''
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - Windows authentication [Reporting Services]
 - Reporting Services, configuration
 ms.assetid: 4de9c3dd-0ee7-49b3-88bb-209465ca9d86
-caps.latest.revision: ''
+caps.latest.revision: 25
 author: markingmyname
 ms.author: maghan
 manager: kfile
-ms.openlocfilehash: e5ea30da8f6267bd864509ad48940b0a80f3d8c8
-ms.sourcegitcommit: 6bd21109abedf64445bdb3478eea5aaa7553fa46
+ms.openlocfilehash: dac2d8d4500fd6180e8285b3be28cfc36b5801a6
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/20/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="configure-windows-authentication-on-the-report-server"></a>Configurar la autenticación de Windows en el servidor de informes
   De forma predeterminada, [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] acepta solicitudes que especifican la autenticación NTLM o Negotiate. Si la implementación incluye aplicaciones cliente y exploradores que utilizan estos proveedores de seguridad, puede utilizar los valores predeterminados sin necesidad de ninguna configuración adicional. Si desea utilizar un proveedor de seguridad diferente para la seguridad integrada de Windows (por ejemplo, si desea utilizar directamente Kerberos) o si modificó los valores predeterminados y prefiere restaurar los originales, puede utilizar la información de este tema para especificar los valores de autenticación en el servidor de informes.  
@@ -153,7 +152,7 @@ ms.lasthandoff: 03/20/2018
     appdomainmanager!DefaultDomain!8f8!01/14/2010-14:42:28:: i INFO: The UserAccountControl value for the service account is 590336  
     ```  
   
--   Una opción para convertir el valor decimal al formato hexadecimal es usar la Calculadora de [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows. La Calculadora de Windows admite varios modos que muestran las opciones 'Dec' y 'Hexadecimal'. Seleccione la opción 'Dec', pegue o escriba en ella el valor decimal que encuentre en el archivo de registro y, a continuación, seleccione la opción "Hex".  
+-   Una opción para convertir el valor decimal al formato hexadecimal es usar la Calculadora de [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows. La Calculadora de Windows admite varios modos que muestran las opciones 'Dec' y 'Hexadecimal'. Seleccione la opción 'Dec', pegue o escriba en ella el valor decimal que encuentre en el archivo de registro y, a continuación, seleccione la opción  'Hex'.  
   
 -   Después, vea el tema [User-Account-Control attribute](http://go.microsoft.com/fwlink/?LinkId=183366) (Atributo User-Account-Control) para derivar el atributo para la cuenta de servicio.  
   

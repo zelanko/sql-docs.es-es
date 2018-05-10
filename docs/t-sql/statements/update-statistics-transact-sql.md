@@ -4,12 +4,10 @@ ms.custom: ''
 ms.date: 01/04/2018
 ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
-ms.service: ''
 ms.component: t-sql|statements
 ms.reviewer: ''
 ms.suite: sql
-ms.technology:
-- database-engine
+ms.technology: t-sql
 ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
@@ -27,13 +25,12 @@ caps.latest.revision: 74
 author: edmacauley
 ms.author: edmaca
 manager: craigg
-ms.workload: Active
 monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
-ms.openlocfilehash: 99794bf5f9adc7da4106ebffa7ffc27e6b469cb7
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
+ms.openlocfilehash: d662031dec5912311d252b3c5a44e2abc5059eba
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="update-statistics-transact-sql"></a>UPDATE STATISTICS (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -150,7 +147,7 @@ Cuando es **ON**, las estadísticas conservan el porcentaje de muestreo definido
  Para rehabilitar el comportamiento de la opción AUTO_UPDATE_STATISTICS, ejecute de nuevo UPDATE STATISTICS sin la opción NORECOMPUTE o ejecute **sp_autostats**.  
   
 > [!WARNING]  
->  Utilizar esta opción puede producir planes de consulta poco óptimos. Se recomienda usar esta opción con moderación y que lo haga únicamente un administrador de sistemas cualificado.  
+> Utilizar esta opción puede producir planes de consulta poco óptimos. Se recomienda usar esta opción con moderación y que lo haga únicamente un administrador de sistemas cualificado.  
   
  Para obtener más información sobre la opción AUTO_STATISTICS_UPDATE, vea [Opciones de ALTER DATABASE SET &#40;Transact-SQL&#41;](../../t-sql/statements/alter-database-transact-sql-set-options.md).  
   
@@ -170,7 +167,7 @@ Cuando es **ON**, las estadísticas conservan el porcentaje de muestreo definido
 **Se aplica a**: de [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] a [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]
 
 MAXDOP = *max_degree_of_parallelism*  
-**Se aplica a**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (a partir de [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)] CU3).  
+**Se aplica a**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (desde [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] SP2 y [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)] CU3).  
   
  Reemplaza la opción de configuración **max degree of parallelism** durante la operación estadística. Para obtener más información, vea [Configure the max degree of parallelism Server Configuration Option](../../database-engine/configure-windows/configure-the-max-degree-of-parallelism-server-configuration-option.md). Utilice MAXDOP para establecer un límite para el número de procesadores utilizados en la ejecución de un plan paralelo. El máximo es 64 procesadores.  
   

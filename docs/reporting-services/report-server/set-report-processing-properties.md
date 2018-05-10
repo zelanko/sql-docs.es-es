@@ -1,16 +1,15 @@
 ---
 title: Establecer las propiedades del procesamiento de informes | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-sharepoint, reporting-services-native
-ms.service: 
 ms.component: report-server
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: pro-bi
-ms.technology: 
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.technology: ''
+ms.tgt_pltfrm: ''
+ms.topic: conceptual
 helpviewer_keywords:
 - on-demand reports
 - report processing [Reporting Services], execution properties
@@ -19,16 +18,15 @@ helpviewer_keywords:
 - report snapshots [Reporting Services], running reports from
 - report execution snapshots [Reporting Services]
 ms.assetid: b5cbc453-5986-423e-af44-1f243ef3edb1
-caps.latest.revision: "43"
+caps.latest.revision: 43
 author: markingmyname
 ms.author: maghan
 manager: kfile
-ms.workload: On Demand
-ms.openlocfilehash: d7d276a8cd67bf9917386d8cbd68b91c07777f01
-ms.sourcegitcommit: 7e117bca721d008ab106bbfede72f649d3634993
+ms.openlocfilehash: a5a6b0f44d25f0c6b732bf7fecf61ed59922c337
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/09/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="set-report-processing-properties"></a>Establecer las propiedades del procesamiento de informes
   Las propiedades de ejecución del informe controlan el modo en que se procesa un informe. Estas propiedades deben establecerse de forma individual para cada uno de los informes.  

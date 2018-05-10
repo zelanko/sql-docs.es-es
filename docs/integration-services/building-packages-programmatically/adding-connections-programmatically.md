@@ -4,7 +4,6 @@ ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: integration-services
-ms.service: ''
 ms.component: building-packages-programmatically
 ms.reviewer: ''
 ms.suite: sql
@@ -32,12 +31,11 @@ caps.latest.revision: 59
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.workload: On Demand
-ms.openlocfilehash: 1908071386fccc88b94d9dc44ab239271a1c09ca
-ms.sourcegitcommit: a85a46312acf8b5a59a8a900310cf088369c4150
+ms.openlocfilehash: f8c12b35b36c1d540e7a7d1b532e36d020af17ac
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/26/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="adding-connections-programmatically"></a>Agregar conexiones mediante programación
   La clase <xref:Microsoft.SqlServer.Dts.Runtime.ConnectionManager> representa las conexiones físicas con los orígenes de datos externos. La clase <xref:Microsoft.SqlServer.Dts.Runtime.ConnectionManager> aísla los detalles de la implementación de la conexión del tiempo de ejecución. Esto habilita al tiempo de ejecución para que interactúe con cada administrador de conexiones de una manera coherente y de predicción. Los administradores de conexiones contienen un conjunto de propiedades estándar que todas las conexiones tienen en el común, como <xref:Microsoft.SqlServer.Dts.Runtime.ConnectionManager.Name%2A>, <xref:Microsoft.SqlServer.Dts.Runtime.ConnectionManager.ID%2A>, <xref:Microsoft.SqlServer.Dts.Runtime.ConnectionManager.Description%2A> y <xref:Microsoft.SqlServer.Dts.Runtime.ConnectionManager.ConnectionString%2A>. Sin embargo, las propiedades <xref:Microsoft.SqlServer.Dts.Runtime.ConnectionManager.ConnectionString%2A> y <xref:Microsoft.SqlServer.Dts.Runtime.ConnectionManager.Name%2A> son normalmente las únicas propiedades que se requieren para configurar un administrador de conexiones. A diferencia de otros paradigmas de programación, donde las clases de conexión exponen métodos como **Open** o **Connect** para establecer físicamente una conexión al origen de datos, el motor en tiempo de ejecución administra todas las conexiones para el paquete mientras se ejecuta.  

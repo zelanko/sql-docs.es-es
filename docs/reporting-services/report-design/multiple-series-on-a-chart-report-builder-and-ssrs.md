@@ -1,27 +1,25 @@
 ---
-title: "Mostrar varias series en un gráfico (Generador de informes y SSRS) | Microsoft Docs"
-ms.custom: 
+title: Mostrar varias series en un gráfico (Generador de informes y SSRS) | Microsoft Docs
+ms.custom: ''
 ms.date: 03/07/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-sharepoint, reporting-services-native
-ms.service: 
 ms.component: report-design
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: pro-bi
-ms.technology: 
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.technology: ''
+ms.tgt_pltfrm: ''
+ms.topic: conceptual
 ms.assetid: b99e4398-1fba-4824-958f-5c75d10485ea
-caps.latest.revision: "6"
+caps.latest.revision: 6
 author: maggiesMSFT
 ms.author: maggies
 manager: kfile
-ms.workload: On Demand
-ms.openlocfilehash: cb205dc96ea7279ce4fc9048ab09b738fc38051d
-ms.sourcegitcommit: 7e117bca721d008ab106bbfede72f649d3634993
+ms.openlocfilehash: 0c599349386352fdbf48390476f8014eaca34192
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/09/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="multiple-series-on-a-chart-report-builder-and-ssrs"></a>Mostrar varias series en un gráfico (Generador de informes y SSRS)
   Cuando hay varias series en un gráfico, es necesario determinar la mejor manera de compararlas. Puede usar un gráfico apilado para mostrar las proporciones relativas de cada serie. Si está comparando únicamente dos series que comparten un eje de categoría común (X), use el eje secundario. Esto es útil cuando se muestran dos series de datos relacionadas, por ejemplo, el precio y el volumen, o los ingresos y los impuestos. Si el gráfico se vuelve ilegible, considere la posibilidad de usar varias áreas de gráfico para crear una mayor separación visual entre una serie y otra.  

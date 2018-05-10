@@ -1,32 +1,30 @@
 ---
 title: Conceder permisos sobre elementos del servidor de informes en un sitio de SharePoint | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-sharepoint, reporting-services-native
-ms.service: 
 ms.component: security
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: pro-bi
-ms.technology: 
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.technology: ''
+ms.tgt_pltfrm: ''
+ms.topic: conceptual
 helpviewer_keywords:
 - permissions [Reporting Services], SharePoint integrated mode
 - SharePoint integration [Reporting Services], permissions
 - permissions [Reporting Services], native mode
 - security [Reporting Services], SharePoint integrated mode
 ms.assetid: 0eb2f34a-3643-4b03-81c2-5741ba7ebefd
-caps.latest.revision: "13"
+caps.latest.revision: 13
 author: markingmyname
 ms.author: maghan
 manager: kfile
-ms.workload: Inactive
-ms.openlocfilehash: 106fb25d4fd8f58d34881e692a3bf508d6571d8c
-ms.sourcegitcommit: 7e117bca721d008ab106bbfede72f649d3634993
+ms.openlocfilehash: 5afd2bd25aa33ce35b719f1b32000342e47d3f20
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/09/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="granting-permissions-on-report-server-items-on-a-sharepoint-site"></a>Conceder permisos sobre elementos del servidor de informes en un sitio de SharePoint
   [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[SPF2010](../../includes/spf2010-md.md)] ofrece características de seguridad integradas que puede usar para conceder acceso a los elementos del servidor de informes a los que accede desde sitios y bibliotecas de SharePoint. Si ya asignó permisos a los usuarios, dichos usuarios tendrán acceso a los elementos y las operaciones del servidor de informes inmediatamente después de configurarse la integración entre [!INCLUDE[SPF2010](../../includes/spf2010-md.md)] y un servidor de informes. Puede usar los permisos existentes para cargar definiciones de informe y otros documentos, ver informes, crear suscripciones y administrar elementos.  

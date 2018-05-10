@@ -1,16 +1,15 @@
 ---
-title: "Parámetros de informe (Generador de informes y Diseñador de informes) | Microsoft Docs"
-ms.custom: 
+title: Parámetros de informe (Generador de informes y Diseñador de informes) | Microsoft Docs
+ms.custom: ''
 ms.date: 10/17/2016
 ms.prod: reporting-services
 ms.prod_service: reporting-services-sharepoint, reporting-services-native
-ms.service: 
 ms.component: report-design
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: pro-bi
-ms.technology: 
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.technology: ''
+ms.tgt_pltfrm: ''
+ms.topic: conceptual
 f1_keywords:
 - sql13.rtp.rptdesigner.reportparameters.general.f1
 - sql13.rtp.rptdesigner.subreportproperties.parameters.f1
@@ -19,16 +18,15 @@ f1_keywords:
 - "10073"
 - "10070"
 ms.assetid: 58b96555-d876-4f61-bff8-db5764b9f5f9
-caps.latest.revision: "41"
+caps.latest.revision: 41
 author: maggiesMSFT
 ms.author: maggies
 manager: kfile
-ms.workload: Active
-ms.openlocfilehash: 3d6f3f09da04a449f074b02375f5b95a396d359e
-ms.sourcegitcommit: 7e117bca721d008ab106bbfede72f649d3634993
+ms.openlocfilehash: 327a55b70180141ea932d560e48bb1fe572b3a3a
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/09/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="report-parameters-report-builder-and-report-designer"></a>Parámetros de informe (Generador de informes y Diseñador de informes)
   En este tema se describen los usos habituales de los parámetros de informe de [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] , las propiedades que puede establecer y otros muchos aspectos. Los parámetros de informe le permiten controlar datos de informe, conectar informes relacionados y cambiar la presentación de los informes. Puede utilizar parámetros de informe en informes paginados creados en el [!INCLUDE[ssRBnoversion](../../includes/ssrbnoversion-md.md)] y en el Diseñador de informes y también en informes móviles creados en el [!INCLUDE[SS_MobileReptPub_Long](../../includes/ss-mobilereptpub-long-md.md)]. Obtenga más información sobre [Conceptos de parámetros de informe](../../reporting-services/report-design/report-parameters-concepts-report-builder-and-ssrs.md).  

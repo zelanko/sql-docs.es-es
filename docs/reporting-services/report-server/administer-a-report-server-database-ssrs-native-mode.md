@@ -1,16 +1,15 @@
 ---
 title: Administrar una base de datos del servidor de informes (Modo nativo de SSRS) | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-sharepoint, reporting-services-native
-ms.service: 
 ms.component: report-server
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: pro-bi
-ms.technology: 
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.technology: ''
+ms.tgt_pltfrm: ''
+ms.topic: conceptual
 helpviewer_keywords:
 - report servers [Reporting Services], databases
 - renaming databases
@@ -19,16 +18,15 @@ helpviewer_keywords:
 - reportservertempdb
 - reportserver database
 ms.assetid: 97b2e1b5-3869-4766-97b9-9bf206b52262
-caps.latest.revision: "63"
+caps.latest.revision: 63
 author: markingmyname
 ms.author: maghan
 manager: kfile
-ms.workload: On Demand
-ms.openlocfilehash: 988a22337e01882fec658bec1e18c3114eca7f03
-ms.sourcegitcommit: 7e117bca721d008ab106bbfede72f649d3634993
+ms.openlocfilehash: ae7cd7716186c0bf6e03623f4c8a8f5665c2d4a7
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/09/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="administer-a-report-server-database-ssrs-native-mode"></a>Administrar una base de datos del servidor de informes (Modo nativo de SSRS)
   Una implementación de [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] usa dos bases de datos relacionales de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] para almacenamiento interno. De manera predeterminada, las bases de datos tienen los nombres ReportServer y ReportServerTempdb. ReportServerTempdb se crea con la base de datos principal del servidor de informes y se usa para almacenar datos temporales, información de sesión e informes almacenados en caché.  

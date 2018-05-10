@@ -1,31 +1,30 @@
 ---
 title: Uso de los bloques Try y Catch | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
-ms.service: 
 ms.component: report-server-web-service-net-framework-exception-handling
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: pro-bi
-ms.technology: 
-ms.tgt_pltfrm: 
+ms.technology: ''
+ms.tgt_pltfrm: ''
 ms.topic: reference
-applies_to: SQL Server 2016 Preview
+applies_to:
+- SQL Server 2016 Preview
 helpviewer_keywords:
 - exceptions [Reporting Services], try/catch blocks
 - try/catch blocks [Reporting Services]
 ms.assetid: a7a9ef53-e3b6-4bf7-81f3-d85615954e6f
-caps.latest.revision: "29"
+caps.latest.revision: 29
 author: markingmyname
 ms.author: maghan
 manager: kfile
-ms.workload: Inactive
-ms.openlocfilehash: 23077f7767dc9051067bb4e0d0e9fa714751387d
-ms.sourcegitcommit: 7e117bca721d008ab106bbfede72f649d3634993
+ms.openlocfilehash: 30276eb82355c5b36d5e4d0bbfa9e5a5a8e899df
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/09/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="using-try-and-catch-blocks"></a>Uso de los bloques Try y Catch
   Después de limitar las solicitudes no válidas al servidor de informes agregando instrucciones condicionales al código, debería proporcionar un sistema de administración de excepciones adecuado a través del uso de bloques try/catch. Esta técnica proporciona otro nivel de protección con las solicitudes que no son válidas. Si una solicitud al servidor de informes se incluye en un bloque try y esa solicitud hace que el servidor de informes inicie una excepción, esta se detecta en el bloque catch, evitando así que la aplicación finalice inesperadamente. Una vez detectada la excepción, puede utilizarla para indicar al usuario que haga algo de manera diferente o simplemente le permita saber, de una manera descriptiva, que se ha producido un error. A continuación, puede utilizar un bloque finally para limpiar los recursos. Lo mejor sería generar un plan de administración de excepciones general para evitar la duplicación innecesaria de bloques try/catch.  

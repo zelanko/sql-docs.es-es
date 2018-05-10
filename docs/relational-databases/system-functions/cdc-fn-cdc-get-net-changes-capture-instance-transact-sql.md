@@ -21,11 +21,11 @@ caps.latest.revision: 29
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.openlocfilehash: 27ad3ba5560be3fa547975d0d86099b3f4ab1450
-ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
-ms.translationtype: HT
+ms.openlocfilehash: d4f66b0608afcfa883f4e12d0e3dfe39e8bf7512
+ms.sourcegitcommit: d2573a8dec2d4102ce8882ee232cdba080d39628
+ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 05/07/2018
 ---
 # <a name="cdcfncdcgetnetchangesltcaptureinstancegt-transact-sql"></a>cdc.fn_cdc_get_net_changes_&lt;capture_instance&gt; (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -93,7 +93,9 @@ cdc.fn_cdc_get_net_changes_capture_instance ( from_lsn , to_lsn , '<row_filter_o
  Debe pertenecer al rol fijo de servidor sysadmin o al rol fijo de base de datos db_owner. Para el resto de usuarios, requiere el permiso SELECT en todas las columnas capturadas en la tabla de origen y, si se ha definido un rol de acceso para la instancia de captura, la pertenencia a ese rol de base de datos. Cuando el autor de la llamada no tiene permiso para ver los datos de origen, la función devuelve el error 208 (Nombre de objeto no válido).  
   
 ## <a name="remarks"></a>Comentarios  
- Si el intervalo del LSN especificado no se encuentra dentro de la escala temporal del seguimiento de cambios de la instancia de captura, la función devuelve el error 208 (Nombre de objeto no válido).  
+ Si el intervalo del LSN especificado no se encuentra dentro de la escala temporal del seguimiento de cambios de la instancia de captura, la función devuelve el error 208 (Nombre de objeto no válido).
+
+ Las modificaciones en el identificador único de una fila hará que fn_cdc_get_net_changes mostrar el comando de actualización inicial con una eliminación y, a continuación, insertar comando en su lugar.  Este comportamiento es necesario realizar un seguimiento de la clave antes y después del cambio.
   
 ## <a name="examples"></a>Ejemplos  
  En el ejemplo siguiente se utiliza la función `cdc.fn_cdc_get_net_changes_HR_Department` para notificar los cambios netos realizados en la tabla de origen `HumanResources.Department` durante un intervalo de tiempo específico.  

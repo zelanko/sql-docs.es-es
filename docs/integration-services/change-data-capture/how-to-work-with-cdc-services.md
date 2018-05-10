@@ -4,25 +4,23 @@ ms.custom: ''
 ms.date: 03/20/2017
 ms.prod: sql
 ms.prod_service: integration-services
-ms.service: ''
 ms.component: change-data-capture
 ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - integration-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: db5c718a-6e7f-48ec-82a3-9d5b131716e5
 caps.latest.revision: 6
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: a1ad2d49ca33b4f4903a13b4d4ff217f4baa0bbb
-ms.sourcegitcommit: a85a46312acf8b5a59a8a900310cf088369c4150
+ms.openlocfilehash: 0a8bf44c84b25c1633914fb2516446e4136b7133
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/26/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="how-to-work-with-cdc-services"></a>Cómo trabajar con servicios CDC
   En este procedimiento se describe cómo usar la Consola de configuración del servicio CDC para preparar una instancia de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] de manera que funcione con servicios CDC de Oracle y para crear un nuevo servicio CDC.  

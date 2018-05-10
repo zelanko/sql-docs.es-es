@@ -4,13 +4,12 @@ ms.custom: ''
 ms.date: 05/30/2016
 ms.prod: reporting-services
 ms.prod_service: reporting-services-sharepoint, reporting-services-native
-ms.service: ''
 ms.component: tools
 ms.reviewer: ''
 ms.suite: pro-bi
 ms.technology: ''
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql13.rtp.rptdesigner.previewview.f1
 helpviewer_keywords:
@@ -20,18 +19,17 @@ caps.latest.revision: 36
 author: markingmyname
 ms.author: maghan
 manager: kfile
-ms.workload: Inactive
-ms.openlocfilehash: 6ff72cb8ca44709cabd38f122c87150f901bb476
-ms.sourcegitcommit: 7e117bca721d008ab106bbfede72f649d3634993
+ms.openlocfilehash: a74f2e15acc9d2ab6a9660ee294dff1cb7c30aac
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/09/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="preview-view"></a>Vista previa, vista
 En el Diseñador de informes de [!INCLUDE[ssRSnoversion_md](../../includes/ssrsnoversion-md.md)] , use la vista **Vista previa** para mostrar el informe representado. Antes de abrir un informe en Vista previa, el Diseñador de informes lo ejecuta localmente. En el modo de vista previa, el informe se procesa por completo. Si el informe tiene una consulta compleja o una gran cantidad de datos, es posible que se necesiten algunos minutos para que se complete la vista previa la primera vez que la muestre. Para los cambios posteriores que solo afectan al formato del informe, la vista previa utiliza datos en caché.
 
   ![ssrs_ssdt_preview](../../reporting-services/media/ssrs-ssdt-preview.png)  
-## <a name="options"></a>.  
+## <a name="options"></a>Opciones  
  Use la barra de herramientas para administrar las funciones de vista previa.  
 
 ![ssrs_ssdt_viewer_toolbar](../../reporting-services/tools/media/ssrs-ssdt-viewer-toolbar.png)

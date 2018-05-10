@@ -1,27 +1,25 @@
 ---
-title: "Rectángulos y líneas (Generador de informes y SSRS) | Microsoft Docs"
-ms.custom: 
+title: Rectángulos y líneas (Generador de informes y SSRS) | Microsoft Docs
+ms.custom: ''
 ms.date: 03/01/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-sharepoint, reporting-services-native
-ms.service: 
 ms.component: report-design
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: pro-bi
-ms.technology: 
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.technology: ''
+ms.tgt_pltfrm: ''
+ms.topic: conceptual
 ms.assetid: d6226b0c-0398-4185-8565-96099876fc21
-caps.latest.revision: "9"
+caps.latest.revision: 9
 author: maggiesMSFT
 ms.author: maggies
 manager: kfile
-ms.workload: On Demand
-ms.openlocfilehash: e1709624844a456439a5c5c2b9824c545a6c9d4a
-ms.sourcegitcommit: 7e117bca721d008ab106bbfede72f649d3634993
+ms.openlocfilehash: 05fb8fc7b21ce2274c113582f7bf3f1cb1c61e4a
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/09/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="rectangles-and-lines-report-builder-and-ssrs"></a>Rectángulos y líneas (Generador de informes y SSRS)
   Los rectángulos y las líneas pueden crear efectos visuales en un informe paginado de [!INCLUDE[ssRSnoversion_md](../../includes/ssrsnoversion-md.md)] . Puede configurar las propiedades de presentación de estos elementos de informe desde la sección Borde de la pestaña Inicio, así como configurar otras propiedades en el panel Propiedades. Puede agregar a un rectángulo características como un color o una imagen de fondo, una información sobre herramientas o un marcador.  

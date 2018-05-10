@@ -1,16 +1,15 @@
 ---
 title: Indicadores (Generador de informes y SSRS) | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 03/07/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-sharepoint, reporting-services-native
-ms.service: 
 ms.component: report-design
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: pro-bi
-ms.technology: 
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.technology: ''
+ms.tgt_pltfrm: ''
+ms.topic: conceptual
 f1_keywords:
 - "10545"
 - "10547"
@@ -19,16 +18,15 @@ f1_keywords:
 - sql13.rtp.rptdesigner.indicatorproperties.validateandstates.f1
 - sql13.rtp.rptdesigner.indicatorproperties.general.f1
 ms.assetid: 2edbd279-be39-4d97-b1b6-ddbc5b17c422
-caps.latest.revision: "11"
+caps.latest.revision: 11
 author: maggiesMSFT
 ms.author: maggies
 manager: kfile
-ms.workload: On Demand
-ms.openlocfilehash: 314cee09dcbd20bef860ad8ca2e3c84809f878de
-ms.sourcegitcommit: 7e117bca721d008ab106bbfede72f649d3634993
+ms.openlocfilehash: 76f749eb41503046fcea5495af2267c5bb5046ff
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/09/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="indicators-report-builder-and-ssrs"></a>Indicadores (Generador de informes y SSRS)
   En los informes paginados de [!INCLUDE[ssRSnoversion_md](../../includes/ssrsnoversion-md.md)] , los indicadores son medidores mínimos que comunican el estado del valor de un dato de un vistazo. Los iconos que representan a los indicadores y sus estados son simples y visualmente efectivos incluso cuando su tamaño es pequeño.  
@@ -95,7 +93,7 @@ ms.lasthandoff: 01/09/2018
 ##  <a name="UsingIndicatorsInTablesMatrices"></a> Usar indicadores en tablas y matrices  
  Las formas simples de los indicadores hacen que sean idóneos para su uso en tablas y matrices. Los indicadores son efectivos incluso si su tamaño es pequeño. Esto les confiere su utilidad en las filas de detalle o de grupo de los informes.  
   
- El siguiente diagrama muestra un informe con una tabla que usa el conjunto de indicadores direccionales **Four Arrows (Colored)**para indicar las ventas. Los iconos de indicador del informe se configuran de forma que usen tonos de azul en lugar de los colores predeterminados: rojo, amarillo y verde.  
+ El siguiente diagrama muestra un informe con una tabla que usa el conjunto de indicadores direccionales **Four Arrows (Colored)** para indicar las ventas. Los iconos de indicador del informe se configuran de forma que usen tonos de azul en lugar de los colores predeterminados: rojo, amarillo y verde.  
   
  ![rs_IndicatorReportBlueArrows](../../reporting-services/report-design/media/rs-indicatorreportbluearrows.gif "rs_IndicatorReportBlueArrows")  
   

@@ -1,32 +1,30 @@
 ---
-title: "Ejemplos de expresión de grupo (Generador de informes y SSRS) | Microsoft Docs"
-ms.custom: 
+title: Ejemplos de expresión de grupo (Generador de informes y SSRS) | Microsoft Docs
+ms.custom: ''
 ms.date: 03/01/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-sharepoint, reporting-services-native
-ms.service: 
 ms.component: report-design
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: pro-bi
-ms.technology: 
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.technology: ''
+ms.tgt_pltfrm: ''
+ms.topic: conceptual
 helpviewer_keywords:
 - data [Reporting Services], grouping
 - grouping data
 - expressions [Reporting Services], adding
 - groups [Reporting Services], expressions
 ms.assetid: 34cd0249-fc74-4cf2-ba11-7b072992bfd2
-caps.latest.revision: "24"
+caps.latest.revision: 24
 author: maggiesMSFT
 ms.author: maggies
 manager: kfile
-ms.workload: On Demand
-ms.openlocfilehash: 73fdc770af41d60a5dd8cb1882340ecd04a90fac
-ms.sourcegitcommit: 7e117bca721d008ab106bbfede72f649d3634993
+ms.openlocfilehash: 60639da2f409f6468c909cc341c0880150ba144c
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/09/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="group-expression-examples-report-builder-and-ssrs"></a>Ejemplos de expresión de grupo (Generador de informes y SSRS)
   En una región de datos, puede agrupar los datos por un solo campo o crear expresiones más complejas que identifiquen los datos por los que se debe realizar la agrupación. Las expresiones complejas incluyen referencias a varios campos o parámetros, instrucciones condicionales o código personalizado. Al definir un grupo para una región de datos, debe agregar estas expresiones a las propiedades del **Grupo** . Para más información, vea [Agregar o eliminar un grupo en una región de datos &#40;Generador de informes y SSRS&#41;](../../reporting-services/report-design/add-or-delete-a-group-in-a-data-region-report-builder-and-ssrs.md).  

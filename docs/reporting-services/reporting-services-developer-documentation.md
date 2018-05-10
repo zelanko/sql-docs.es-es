@@ -1,32 +1,31 @@
 ---
-title: "Documentación para desarrolladores de Reporting Services | Microsoft Docs"
-ms.custom: 
+title: Documentación para desarrolladores de Reporting Services | Microsoft Docs
+ms.custom: ''
 ms.date: 03/17/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
-ms.service: 
 ms.component: reporting-services
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: pro-bi
-ms.technology: 
-ms.tgt_pltfrm: 
+ms.technology: ''
+ms.tgt_pltfrm: ''
 ms.topic: reference
-applies_to: SQL Server 2016 Preview
+applies_to:
+- SQL Server 2016 Preview
 helpviewer_keywords:
 - developer's guide [Reporting Services]
 - Reporting Services, programming
 - programming [Reporting Services]
 ms.assetid: d8afa405-1012-4349-a72d-e10d94f8453d
-caps.latest.revision: "21"
+caps.latest.revision: 21
 author: markingmyname
 ms.author: maghan
 manager: kfile
-ms.workload: On Demand
-ms.openlocfilehash: 508253c11026074dc19ce93f173c036ae2751786
-ms.sourcegitcommit: 7e117bca721d008ab106bbfede72f649d3634993
+ms.openlocfilehash: d11e62a8a0a1f90d894c32c82aef938f89a61851
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/09/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="reporting-services-developer-documentation"></a>Documentación para desarrolladores de Reporting Services
   [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] proporciona varias interfaces de programación que puede aprovechar en sus propias aplicaciones. Puede utilizar las características y capacidades existentes de [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] para generar herramientas personalizadas de administración y elaboración de informes en los sitios web y en las aplicaciones Windows, o para ampliar la plataforma de [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)].  
@@ -40,9 +39,12 @@ ms.lasthandoff: 01/09/2018
  [Integración de Reporting Services en las aplicaciones](../reporting-services/application-integration/integrating-reporting-services-into-applications.md)  
  Proporciona información general sobre cómo utilizar [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] para integrar los informes de errores en las aplicaciones personalizadas. Describe cuándo utilizar el acceso URL directo y el servicio web para tener acceso al servidor de informes.  
   
- [Servicio web del servidor de informes](../reporting-services/report-server-web-service/report-server-web-service.md)  
+ [Servicio web del servidor de informes para aplicaciones ASP.NET y tradicionales](../reporting-services/report-server-web-service/report-server-web-service.md)  
  El servicio web del servidor de informes proporciona acceso a la funcionalidad completa del servidor de informes. El servicio web utiliza SOAP sobre HTTP y está diseñado para actuar como una interfaz de comunicaciones entre los programas clientes y el servidor de informes. El servicio web y sus métodos exponen la funcionalidad del servidor de informes y le permiten crear las herramientas personalizadas para cualquier parte del ciclo de vida del informe, desde la administración a la ejecución.  
-  
+ 
+ [Desarrollo con las API de REST para Reporting Services](developer/rest-api.md)</br>
+ Las API de REST para Reporting Services proporcionan acceso mediante programación a los objetos de un catálogo del servidor de informes de Reporting Services. Cuando se usan las API de REST, se puede navegar a una jerarquía de carpetas, detectar el contenido de una carpeta o descargar una definición de informe. También puede crear, actualizar y eliminar objetos.
+
  [Acceso URL &#40;SSRS&#41;](../reporting-services/url-access-ssrs.md)  
  [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] admite un conjunto completo de solicitudes basadas en direcciones URL que se pueden usar como punto de acceso rápido y sencillo para la navegación y visualización de informes. Puede utilizar esta tecnología junto con el servicio web del servidor de informes para integrar una solución de informes completa en aplicaciones empresariales personalizadas. El acceso URL es particularmente útil al integrar informes como parte de un portal web o al ver los informes desde un explorador web.  
   

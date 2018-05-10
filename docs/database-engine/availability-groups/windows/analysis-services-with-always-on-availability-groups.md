@@ -3,29 +3,27 @@ title: Analysis Services con Grupos de disponibilidad AlwaysOn | Microsoft Docs
 ms.custom: ''
 ms.date: 05/17/2016
 ms.prod: sql
-ms.prod_service: database-engine
-ms.service: ''
-ms.component: availability-groups
+ms.prod_service: high-availability
 ms.reviewer: ''
 ms.suite: sql
-ms.technology:
-- dbe-high-availability
+ms.technology: high-availability
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 14d16bfd-228c-4870-b463-a283facda965
 caps.latest.revision: 12
 author: MikeRayMSFT
 ms.author: mikeray
 manager: erikre
-ms.workload: Inactive
-ms.openlocfilehash: 4340ed907ffac7f4f0e53540061907a391362ed2
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
+monikerRange: '>= sql-server-2016 || = sqlallproducts-allversions'
+ms.openlocfilehash: 4a5bb795ae4d5c772e34f3ef4483934994799cb0
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="analysis-services-with-always-on-availability-groups"></a>Analysis Services con grupos de disponibilidad AlwaysOn
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
 
   El grupo de disponibilidad AlwaysOn es una colección predefinida de bases de datos relacionales de SQL Server que conmutan por error conjuntamente cuando las condiciones desencadenan una conmutación por error en una base de datos, redirigiendo las solicitudes a una base de datos reflejada en otra instancia del mismo grupo de disponibilidad. Si utiliza grupos de disponibilidad como solución de alta disponibilidad, puede usar una base de datos de ese grupo como origen de datos en una solución tabular o multidimensional de Analysis Services. Todas las operaciones de Analysis Services siguientes funcionan de la manera esperada cuando se utiliza una base de datos de disponibilidad: procesando o importando datos, consultando datos relacionales directamente (utilizando el modo DirectQuery o almacenamiento ROLAP) y con reescritura.  
   

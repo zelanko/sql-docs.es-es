@@ -4,12 +4,10 @@ ms.custom: ''
 ms.date: 07/24/2017
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
-ms.service: ''
 ms.component: t-sql|functions
 ms.reviewer: ''
 ms.suite: sql
-ms.technology:
-- database-engine
+ms.technology: t-sql
 ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
@@ -27,17 +25,16 @@ caps.latest.revision: 20
 author: edmacauley
 ms.author: edmaca
 manager: craigg
-ms.workload: On Demand
-ms.openlocfilehash: d0342940a8fb5155439d7ea58640666aa1c5bf85
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
+ms.openlocfilehash: 8fc0dda131ae6dc0b2d38b712e654e83d2f7b0a4
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="collength-transact-sql"></a>COL_LENGTH (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
-Devuelve la longitud definida, en bytes, de una columna.
+Esta función devuelve la longitud definida de una columna, en bytes.
   
 ![Icono de vínculo de tema](../../database-engine/configure-windows/media/topic-link.gif "Icono de vínculo de tema") [Convenciones de sintaxis de Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)
   
@@ -49,24 +46,24 @@ COL_LENGTH ( 'table' , 'column' )
   
 ## <a name="arguments"></a>Argumentos  
 **'** *table* **'**  
-Es el nombre de la tabla para la que hay que determinar la información de longitud de columna. *table* es una expresión de tipo **nvarchar**.
+El nombre de la tabla para la que se quiere determinar la información de longitud de columna. *table* es una expresión de tipo **nvarchar**.
   
 **'** *column* **'**  
-Es el nombre de la columna cuya longitud se desea determinar. *column* es una expresión de tipo **nvarchar**.
+El nombre de la columna cuya longitud se quiere determinar. *column* es una expresión de tipo **nvarchar**.
   
 ## <a name="return-type"></a>Tipo de valor devuelto
 **smallint**
   
 ## <a name="exceptions"></a>Excepciones  
-Devuelve NULL si se produce un error o si el autor de la llamada no tiene permiso para ver el objeto.
+Devuelve NULL si se produce un error o si el autor de la llamada no tiene el permiso correcto para ver el objeto.
   
-En [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], un usuario solo puede ver los metadatos de elementos protegibles que posea o para los que se le haya concedido permiso. Esto significa que las funciones integradas de emisión de metadatos, como COL_LENGTH, pueden devolver NULL si el usuario no tiene ningún permiso para el objeto. Para obtener más información, consulte [Metadata Visibility Configuration](../../relational-databases/security/metadata-visibility-configuration.md).
+En [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], un usuario solo puede ver los metadatos de los elementos protegibles que posea o para los que se le haya concedido permiso. Esto significa que las funciones integradas de emisión de metadatos como COL_LENGTH es posible que devuelvan NULL, si el usuario no tiene el permiso correcto para el objeto. Vea [Configuración de visibilidad de los metadatos](../../relational-databases/security/metadata-visibility-configuration.md) para obtener más información.
   
 ## <a name="remarks"></a>Notas  
-En las columnas de tipo **varchar** declaradas con el especificador **max** (**varchar(max)**), COL_LENGTH devuelve el valor –1.
+Para las columnas de tipo **varchar** declaradas con el especificador **max** (**varchar(max)**), COL_LENGTH devuelve el valor -1.
   
 ## <a name="examples"></a>Ejemplos  
-El siguiente ejemplo muestra los valores devueltos de una columna de tipo `varchar(40)` y una columna de tipo `nvarchar(40)`.
+En este ejemplo se muestran los valores devueltos para una columna de tipo `varchar(40)` y una columna de tipo `nvarchar(40)`:
   
 ```sql
 USE AdventureWorks2012;  

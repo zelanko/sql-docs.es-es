@@ -1,29 +1,27 @@
 ---
-title: "Tutorial: Introducción a las expresiones | Microsoft Docs"
-ms.custom: 
+title: 'Tutorial: Introducción a las expresiones | Microsoft Docs'
+ms.custom: ''
 ms.date: 09/16/2016
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
-ms.service: 
 ms.component: reporting-services
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: pro-bi
-ms.technology: 
-ms.tgt_pltfrm: 
+ms.technology: ''
+ms.tgt_pltfrm: ''
 ms.topic: get-started-article
 applies_to:
 - SQL Server 2016
 ms.assetid: 2d05ef4c-5f91-48b2-8795-f0a201a0b3cc
-caps.latest.revision: 
+caps.latest.revision: 14
 author: maggiesMSFT
 ms.author: maggies
 manager: kfile
-ms.workload: Inactive
-ms.openlocfilehash: a75e3eb0532359a4528af38270820126e14f4b36
-ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
+ms.openlocfilehash: e2b42df295abda51349793a4db8697ab03cb3cd4
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/15/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="tutorial-introducing-expressions"></a>Tutorial: Introducción a las expresiones
 En este tutorial de [!INCLUDE[ssRBnoversion_md](../includes/ssrbnoversion-md.md)] , se usan expresiones con operadores y funciones comunes para crear informes paginados eficaces y flexibles de [!INCLUDE[ssRSnoversion_md](../includes/ssrsnoversion-md.md)] . 
@@ -285,7 +283,7 @@ Para mantener el color que ha aplicado en la celda de la tabla cuando crea un in
 
 9. Escriba una coma al final. 
   
-5.  En la lista **Categoría** , haga clic en **Campos (expresiones)**y, en la lista **Valores** , haga doble clic en **Género** de nuevo.  
+5.  En la lista **Categoría** , haga clic en **Campos (expresiones)** y, en la lista **Valores** , haga doble clic en **Género** de nuevo.  
   
 7.  Escriba **="Mujer",** (incluida la coma). 
 
@@ -377,7 +375,7 @@ En esta sección, creará el conjunto de datos CountryRegion y usará la funció
   
 4.  En el cuadro de diálogo **Expresión** , expanda **Funciones comunes** y, después, haga clic en **Varios**. En la lista **Elemento** , haga doble clic en **Lookup**.  
   
-6.  En la lista **Categoría** , haga clic en **Campos (expresiones)**y, en la lista **Valores** , haga doble clic en **CountryRegionID**.  
+6.  En la lista **Categoría** , haga clic en **Campos (expresiones)** y, en la lista **Valores** , haga doble clic en **CountryRegionID**.  
   
 8.  Coloque el cursor inmediatamente después de `CountryRegionID.Value`y escriba **,Fields!ID.value, Fields!CountryRegion.value, "CountryRegion")**.  
   
@@ -410,7 +408,7 @@ En esta sección, agregará una columna y, después, usará la función **Now** 
   
 7.  Inmediatamente después de `DateDiff(`, escriba **"d",** (incluidas las comillas "" y la coma). 
   
-9. En la lista **Categoría** , haga clic en **Campos (expresiones)**y, en la lista **Valores** , haga doble clic en **LastPurchase**.  
+9. En la lista **Categoría** , haga clic en **Campos (expresiones)** y, en la lista **Valores** , haga doble clic en **LastPurchase**.  
   
 11. Inmediatamente después de `Fields!LastPurchase.Value`, escriba **,** (una coma). 
   
@@ -464,13 +462,13 @@ Configurar el indicador y sus estados tiene muchos pasos. Si quiere, puede salta
   
 4.  En la lista **Elemento** , haga doble clic en **Redondear**.  
   
-5.  En la lista **Categoría** , haga clic en **Campos (expresiones)**y, en la lista **Valores** , haga doble clic en **YTDPurchase**.  
+5.  En la lista **Categoría** , haga clic en **Campos (expresiones)** y, en la lista **Valores** , haga doble clic en **YTDPurchase**.  
   
 7.  Inmediatamente después de `Fields!YTDPurchase.Value`, escriba  **-** (un signo menos). 
   
 9. Expanda **Funciones comunes** de nuevo, haga clic en **Agregado**y, en la lista **Elemento** , haga doble clic en **Promedio**.  
   
-11. En la lista **Categoría** , haga clic en **Campos (expresiones)**y, en la lista **Valores** , haga doble clic en **YTDPurchase**.  
+11. En la lista **Categoría** , haga clic en **Campos (expresiones)** y, en la lista **Valores** , haga doble clic en **YTDPurchase**.  
   
 13. Inmediatamente después de `Fields!YTDPurchase.Value`, escriba **, "Expresiones"))**  
   
@@ -488,13 +486,13 @@ Configurar el indicador y sus estados tiene muchos pasos. Si quiere, puede salta
   
 19. En la lista **Elemento** , haga doble clic en **Redondear**.  
   
-20. En la lista **Categoría** , haga clic en **Campos (expresiones)**y, en la lista **Valores** , haga doble clic en **YTDPurchase**.  
+20. En la lista **Categoría** , haga clic en **Campos (expresiones)** y, en la lista **Valores** , haga doble clic en **YTDPurchase**.  
   
 22. Inmediatamente después de `Fields!YTDPurchase.Value`, escriba  **-** (un signo menos). 
   
 24. Expanda **Funciones comunes** de nuevo, haga clic en **Agregado**y, en la lista **Elemento** , haga doble clic en **Promedio**.  
   
-26. En la lista **Categoría** , haga clic en **Campos (expresiones)**y, en la lista **Valores** , haga doble clic en **YTDPurchase**.  
+26. En la lista **Categoría** , haga clic en **Campos (expresiones)** y, en la lista **Valores** , haga doble clic en **YTDPurchase**.  
   
 28. Inmediatamente después de `Fields!YTDPurchase.Value`, escriba **, "Expresiones")) < 0**  
   

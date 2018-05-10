@@ -4,13 +4,12 @@ ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-sharepoint, reporting-services-native
-ms.service: ''
 ms.component: report-data
 ms.reviewer: ''
 ms.suite: pro-bi
 ms.technology: ''
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - "10012"
 helpviewer_keywords:
@@ -22,12 +21,11 @@ caps.latest.revision: 23
 author: markingmyname
 ms.author: maghan
 manager: kfile
-ms.workload: Inactive
-ms.openlocfilehash: e563d196486a20a9d7df43d807f8a1726df3c7cc
-ms.sourcegitcommit: 7e117bca721d008ab106bbfede72f649d3634993
+ms.openlocfilehash: 23924ef7630d41ea1d60d34a4a131d004b2d8aa7
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/09/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="relational-query-designer-user-interface-report-builder"></a>Interfaz de usuario del Diseñador de consultas relacionales (Generador de informes)
   El Generador de informes y el Diseñador de informes de [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]proporciona tanto un diseñador gráfico de consultas como un diseñador de consultas basado en texto para ayudarle a crear una consulta que especifique los datos que deben recuperarse de bases de datos relacionales de [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] y de [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssSDS](../../includes/sssds-md.md)] relational databases y de [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssDWCurrentFull](../../includes/ssdwcurrentfull-md.md)] para un conjunto de datos de informe. Use el diseñador gráfico de consultas para explorar los metadatos, crear una consulta de forma interactiva y ver los resultados de la consulta. Use el diseñador de consultas basado en texto para ver la consulta creada por el diseñador gráfico de consultas o para modificar una consulta. También puede importar una consulta existente de un archivo o informe.  
@@ -86,7 +84,7 @@ ms.lasthandoff: 01/09/2018
   
      Utilice el panel Datos de informe para mostrar la colección de campos para un conjunto de datos de informe. Estos campos representan los datos que pueden mostrarse en tablas, gráficos y otros elementos de informe al visualizar un informe.  
   
--   **Grupo y agregado** : alterna el uso de la agrupación y los agregados en la consulta. Si desactiva la característica de agrupación y agregados después de agregar agrupaciones y agregados, estos se quitan. El texto **(ninguno)**indica que no se usa ninguna agrupación ni agregados. Si activa de nuevo la característica de agrupación y agregados, se restauran las agrupaciones y agregados anteriores.  
+-   **Grupo y agregado** : alterna el uso de la agrupación y los agregados en la consulta. Si desactiva la característica de agrupación y agregados después de agregar agrupaciones y agregados, estos se quitan. El texto **(ninguno)** indica que no se usa ninguna agrupación ni agregados. Si activa de nuevo la característica de agrupación y agregados, se restauran las agrupaciones y agregados anteriores.  
   
 -   **Eliminar campo** : elimina el campo seleccionado.  
   
@@ -153,7 +151,7 @@ ms.lasthandoff: 01/09/2018
   
 -   **Campos de edición** : abre cuadro de diálogo **Editar campos relacionados** en el que puede agregar y modificar las relaciones entre las tablas. Los campos se eligen en las tablas derecha e izquierda que se combinan. Puede combinar varios campos de la tabla izquierda y de la tabla derecha para especificar varias condiciones de combinación en una relación. No es necesario que los dos campos que combinan la tabla izquierda y la tabla derecha tengan el mismo nombre. Los campos combinados deben tener tipos de datos compatibles.  
   
--   **Eliminar relación**  : elimina la relación seleccionada**.**  
+-   **Eliminar relación**  : elimina la relación seleccionada **.**  
   
 -   **Subir** y **Bajar** : mueve las relaciones arriba o abajo en la lista **Relación** . La secuencia en la que las relaciones se colocan en la consulta puede afectar a sus resultados. Las relaciones se agregan a la consulta en el orden en que aparecen en la lista **Relación** .  
   

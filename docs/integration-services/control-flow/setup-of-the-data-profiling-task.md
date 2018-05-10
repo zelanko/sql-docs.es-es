@@ -1,30 +1,28 @@
 ---
-title: "Configuración de la tarea de generación de perfiles de datos | Microsoft Docs"
-ms.custom: 
+title: Configuración de la tarea de generación de perfiles de datos | Microsoft Docs
+ms.custom: ''
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: integration-services
-ms.service: 
 ms.component: control-flow
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - integration-services
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.tgt_pltfrm: ''
+ms.topic: conceptual
 helpviewer_keywords:
 - Data Profiling task [Integration Services], configuring
 ms.assetid: fe050ca4-fe45-43d7-afa9-99478041f9a8
-caps.latest.revision: 
+caps.latest.revision: 34
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: c32f01f1da74bf83f2c38b889934a37ea85d5817
-ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
+ms.openlocfilehash: d60d99a6bbe09da6f05d77675606e8478e004a13
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/25/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="setup-of-the-data-profiling-task"></a>Configuración de la Tarea de generación de perfiles de datos
   El primer paso previo a la revisión de un perfil de los datos de origen consiste en configurar y ejecutar la tarea de generación de perfiles de datos. Esta tarea se crea dentro de un paquete de [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] . Para configurar la tarea de generación de perfiles de datos, utilice el Editor de tareas de generación de perfiles de datos. Este editor le permite seleccionar dónde deben generarse los perfiles y qué perfiles deben calcularse. Una vez configurada la tarea, se ejecuta el paquete para calcular los perfiles de datos.  
@@ -61,7 +59,7 @@ ms.lasthandoff: 01/25/2018
 |Para calcular|Que ayudan a identificar|Utilice este perfil|  
 |----------------|-------------------------|----------------------|  
 |Todas las longitudes de valores de cadena distintas existentes en la columna seleccionada y el porcentaje de filas de la tabla que representa cada longitud.|**Valores de cadena que no son válidos**: por ejemplo, si genera perfiles de una columna que se supone que utiliza dos caracteres para los códigos de estados de los Estados Unidos, pero detecta valores que tienen más de dos caracteres.|**Distribución de longitud de columnas**; válido para columnas con uno de los siguientes tipos de datos de caracteres:<br /><br /> **char**<br /><br /> **nchar**<br /><br /> **varchar**<br /><br /> **nvarchar**|  
-|Un conjunto de expresiones regulares que cubren el porcentaje especificado de valores de una columna de cadenas.<br /><br /> También, para buscar expresiones regulares que se pueden utilizar en el futuro para validar los nuevos valores|**Valores de cadena no válidos o que no tienen el formato correcto**; por ejemplo, un perfil del patrón de una columna de códigos postales podría generar las expresiones regulares \d{5}-\d{4}, \d{5} y \d{9}. Si la salida contiene otras expresiones regulares, los datos contienen valores que no son válidos o cuyo formato no es correcto.|**Perfil de patrón de columnas**; válido para una columna con uno de los siguientes tipos de datos de caracteres:<br /><br /> **char**<br /><br /> **nchar**<br /><br /> **varchar**<br /><br /> **nvarchar**|  
+|Un conjunto de expresiones regulares que cubren el porcentaje especificado de valores de una columna de cadenas.<br /><br /> También, para buscar expresiones regulares que se pueden utilizar en el futuro para validar los nuevos valores|**Valores de cadena no válidos o que no tienen el formato correcto**: por ejemplo, un perfil del patrón de una columna de códigos postales de Estados Unidos podría generar las expresiones regulares \d{5}-\d{4}, \d{5} y \d{9}. Si la salida contiene otras expresiones regulares, los datos contienen valores que no son válidos o cuyo formato no es correcto.|**Perfil de patrón de columnas**; válido para una columna con uno de los siguientes tipos de datos de caracteres:<br /><br /> **char**<br /><br /> **nchar**<br /><br /> **varchar**<br /><br /> **nvarchar**|  
 |El porcentaje de valores NULL existentes en la columna seleccionada.|**Una proporción inesperadamente alta de valores NULL en una columna**: por ejemplo, si se genera el perfil de una columna que se supone que contiene códigos postales de Estados Unidos, pero se detecta un porcentaje inaceptablemente alto de códigos postales que faltan.|**Proporción de columnas nulas**; válido para una columna con uno de los siguientes tipos de datos:<br /><br /> **imagen**<br /><br /> **texto**<br /><br /> **xml**<br /><br /> Tipos definidos por el usuario<br /><br /> tipos Variant|  
 |Estadísticas, como los valores mínimo, máximo, medio y la desviación estándar para las columnas numéricas, y los valores mínimo y máximo para las columnas **datetime** .|**Valores numéricos y fechas no válidas**: por ejemplo, si genera el perfil de una columna de fechas históricas, pero detecta una fecha máxima que está en el futuro.|**Perfil de estadísticas de columnas**, válido para una columna con uno de estos tipos de datos.<br /><br /> Tipos de datos numéricos:<br /><br /> tipos enteros (excepto **bit**<br /><br /> **money**<br /><br /> **smallmoney**<br /><br /> **decimal**<br /><br /> **float**<br /><br /> **real**<br /><br /> **numeric**<br /><br /> Tipos de datos de fecha y hora:<br /><br /> **datetime**<br /><br /> **smalldatetime**<br /><br /> **timestamp**<br /><br /> **date**<br /><br /> **time**<br /><br /> **datetime2**<br /><br /> **datetimeoffset**<br /><br /> Nota: Para una columna que tiene un tipo de datos de fecha y hora, el perfil calcula solo los valores mínimo y máximo.|  
 |Todos los valores distintos existentes en la columna seleccionada y el porcentaje de filas de la tabla que representa cada valor. O bien, los valores de la tabla cuya frecuencia es superior a un cierto porcentaje.|**Un número incorrecto de valores distintos en una columna**: por ejemplo, si genera el perfil de una columna que contiene estados de Estados Unidos, pero detecta más de 50 valores distintos.|**Distribución de valores de columna**; válido para una columna con uno de los siguientes tipos de datos.<br /><br /> Tipos de datos numéricos:<br /><br /> tipos enteros (excepto **bit**<br /><br /> **money**<br /><br /> **smallmoney**<br /><br /> **decimal**<br /><br /> **float**<br /><br /> **real**<br /><br /> **numeric**<br /><br /> Tipos de datos de caracteres:<br /><br /> **char**<br /><br /> **nchar**<br /><br /> **varchar**<br /><br /> **nvarchar**<br /><br /> Tipos de datos de fecha y hora:<br /><br /> **datetime**<br /><br /> **smalldatetime**<br /><br /> **timestamp**<br /><br /> **date**<br /><br /> **time**<br /><br /> **datetime2**<br /><br /> **datetimeoffset**|  

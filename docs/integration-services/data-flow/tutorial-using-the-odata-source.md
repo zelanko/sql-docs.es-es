@@ -1,31 +1,29 @@
 ---
 title: 'Tutorial: Usar el origen OData | Microsoft Docs'
-ms.custom: 
+ms.custom: ''
 ms.date: 03/01/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: integration-services
-ms.service: 
 ms.component: data-flow
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - integration-services
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.tgt_pltfrm: ''
+ms.topic: conceptual
 ms.assetid: 2c64cf8b-5edb-48df-8ffe-697096258f71
-caps.latest.revision: 
+caps.latest.revision: 6
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: 4721c9e3854aba63a2d38209212435e2b0f5f4e1
-ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
+ms.openlocfilehash: fefca580838b5331bb1dea488082c1b6cd080131
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/25/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="tutorial-using-the-odata-source"></a>Tutorial: Usar el origen OData
-  En este tutorial se indican los pasos del proceso para extraer la colección **Employees** del servicio OData del ejemplo **Northwind** (http://services.odata.org/V3/Northwind/Northwind.svc/) y, después, cargarlo en un archivo plano.  
+  En este tutorial se describe el proceso para extraer la colección **Employees** del servicio OData del ejemplo **Northwind** (http://services.odata.org/V3/Northwind/Northwind.svc/)) y, después, cargarlo en un archivo plano.  
   
 ## <a name="1-create-an-integration-services-project"></a>1. Crear un proyecto de Integration Services  
   
@@ -51,7 +49,7 @@ ms.lasthandoff: 01/25/2018
   
 5.  Haga clic en **Nuevo...** para agregar un nuevo Administrador de conexiones OData.  
   
-6.  Escriba la dirección URL del servicio OData en **Ubicación de documento de servicio**. Esta URL puede ser la dirección URL del documento de servicio, o de una fuente o entidad específica. Para este tutorial, escriba la dirección URL del documento de servicio: [http://services.odata.org/V3/Northwind/Northwind.svc/](http://services.odata.org/V3/Northwind/Northwind.svc/).  
+6.  Escriba la dirección URL del servicio OData en **Ubicación de documento de servicio**. Esta URL puede ser la dirección URL del documento de servicio, o de una fuente o entidad específica. Para este tutorial, escriba la dirección URL en el documento de servicio: [http://services.odata.org/V3/Northwind/Northwind.svc/](http://services.odata.org/V3/Northwind/Northwind.svc/).  
   
 7.  Confirme que se ha seleccionado **Autenticación de Windows** como la **autenticación** que se usará para tener acceso al servicio OData. **Autenticación de Windows** está seleccionada de forma predeterminada.  
   

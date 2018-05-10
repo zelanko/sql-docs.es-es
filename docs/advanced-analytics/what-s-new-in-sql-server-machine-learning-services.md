@@ -7,11 +7,11 @@ ms.topic: conceptual
 author: HeidiSteen
 ms.author: heidist
 manager: cgronlun
-ms.openlocfilehash: 405e4636525898268c54f1a3d603c9e5da3dc14d
-ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.openlocfilehash: 45cfb2f67cbd575913739b118e21626448b80866
+ms.sourcegitcommit: 1aedef909f91dc88dc741748f36eabce3a04b2b1
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 05/08/2018
 ---
 # <a name="whats-new-in-sql-server-machine-learning-services"></a>Novedades en servicios de aprendizaje de máquina de SQL Server 
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
@@ -47,7 +47,7 @@ Además, **R Server (independiente) de SQL Server 2016** se publicó como una ma
 
 | Versión |Actualización de la función |
 |---------|----------------|
-| CU | [**En tiempo real de puntuación** ](real-time-scoring.md) se basa en las bibliotecas de C++ nativo para leer un modelo que se almacenan en un formato binario optimizado y, a continuación, generar predicciones sin tener que llamar al runtime de R. Esto hace que las operaciones de puntuación mucho más rápidas. Con la puntuación en tiempo real, puede ejecutar un procedimiento almacenado o realizar en tiempo real desde el código de R de puntuación. En tiempo real de puntuación también está disponible para SQL Server 2016, si la instancia se actualiza a la versión más reciente de [!INCLUDE[rsql-platform-md](../includes/rsql-platform-md.md)]. |
+| Adiciones CU | [**En tiempo real de puntuación** ](real-time-scoring.md) se basa en las bibliotecas de C++ nativo para leer un modelo que se almacenan en un formato binario optimizado y, a continuación, generar predicciones sin tener que llamar al runtime de R. Esto hace que las operaciones de puntuación mucho más rápidas. Con la puntuación en tiempo real, puede ejecutar un procedimiento almacenado o realizar en tiempo real desde el código de R de puntuación. En tiempo real de puntuación también está disponible para SQL Server 2016, si la instancia se actualiza a la versión más reciente de [!INCLUDE[rsql-platform-md](../includes/rsql-platform-md.md)]. |
 | Versión inicial | [**Integración de R para el análisis en bases de datos**](r/sql-server-r-services.md). <br/><br/> Paquetes de R para R llamada funciona en T-SQL y viceversa. Funciones de RevoScaleR proporcionan análisis de R a escala por fragmentación de datos en componentes, coordinar y administrar el procesamiento distribuido y agregar los resultados. En SQL Server 2016 R Services (In-Database), el motor de RevoScaleR se integra con una instancia del motor de base de datos, ella datos y análisis juntos en el mismo contexto de procesamiento. <br/><br/>Integración de T-SQL y R a través de [sp_execute_external_script](https://docs.microsoft.com/sql/relational-databases/system-stored-procedures/sp-execute-external-script-transact-sql). Puede llamar a cualquier código de R mediante este procedimiento almacenado. Esta infraestructura segura permite la implementación de nivel empresarial de los modelos de Rn y secuencias de comandos que se pueda llamar desde una aplicación mediante un procedimiento almacenado simple. Se obtienen mejoras de rendimiento adicionales mediante transmisión por secuencias de datos de SQL a procesos de R y la paralelización de anillo MPI. <br/><br/>Puede usar el código T-SQL [PREDICT](../t-sql/queries/predict-transact-sql.md) función para realizar [puntuación nativo](sql-native-scoring.md) en un modelo previamente entrenado que se ha guardado previamente en el formato binario requerido.|
 
 ## <a name="linux-support-roadmap"></a>Guía básica de compatibilidad con Linux
@@ -55,6 +55,12 @@ Además, **R Server (independiente) de SQL Server 2016** se publicó como una ma
 Aprendizaje automático que usan R o Python en bases de datos no se admite actualmente en SQL Server en Linux. Busque anuncios en una versión posterior.
 
 Sin embargo, en Linux puede realizar [puntuación nativo](sql-native-scoring.md) mediante la función de PREDICCIÓN de T-SQL. Puntuación nativo permite puntuar desde un modelo previamente entrenado muy rápido, sin llamar a, o incluso un tiempo de ejecución de R. Esto significa que puede usar SQL Server en Linux para generar predicciones muy rápidas, para atender a las aplicaciones cliente.
+
+<a name="azure-sql-database-roadmap"></a>
+
+## <a name="azure-sql-database-roadmap"></a>Guía básica de base de datos de SQL Azure
+
+No hay compatibilidad limitada para R en la base de datos de SQL Azure: disponible únicamente en oeste Ee.uu. Central, en los servicios creados en el nivel Premium. Cobertura ampliada, incluida la compatibilidad de Python, es probable que siga en una versión futura. Sin embargo, no hay ninguna fecha de lanzamiento prevista en este momento.  
 
 ## <a name="next-steps"></a>Pasos siguientes
 

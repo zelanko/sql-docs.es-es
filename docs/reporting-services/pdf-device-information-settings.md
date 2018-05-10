@@ -4,7 +4,6 @@ ms.custom: ''
 ms.date: 03/16/2018
 ms.prod: reporting-services
 ms.prod_service: reporting-services-sharepoint, reporting-services-native
-ms.service: ''
 ms.component: reporting-services
 ms.reviewer: ''
 ms.suite: pro-bi
@@ -15,16 +14,15 @@ helpviewer_keywords:
 - device information settings [Reporting Services], PDF rendering
 - PDF [Reporting Services]
 ms.assetid: 9a4aabe5-dbdc-4884-b999-1200983fee47
-caps.latest.revision: ''
+caps.latest.revision: 41
 author: markingmyname
 ms.author: maghan
 manager: kfile
-ms.workload: Inactive
-ms.openlocfilehash: 0bd2635a54003fd663dadcf6d3bc5991c1841988
-ms.sourcegitcommit: ccb05cb5a4cccaf7ffa9e85a4684fa583bab914e
+ms.openlocfilehash: 0f0ec8d6bfe88182f84078aa8155afed9f149828
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/22/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="pdf-device-information-settings"></a>Configuración de la información del dispositivo PDF
   En la tabla siguiente se muestra la configuración de la información de los dispositivos para representar informes en formato PDF.  
@@ -32,7 +30,7 @@ ms.lasthandoff: 03/22/2018
 |Configuración|Valor|  
 |-------------|-----------|  
 | **AccessiblePDF** | Indica si se debe representar un PDF accesible o etiquetado, que tiene un mayor tamaño, pero que resulta más sencillo de leer y explorar para los lectores de pantalla y otras tecnologías de asistencia. El valor predeterminado es **false**. [Disponible en Power BI Report Server (marzo de 2018) y versiones posteriores] |
-|**Columns**|Número de columnas que se van a establecer para el informe. Este valor invalida la configuración original del informe.|  
+|**Columnas**|Número de columnas que se van a establecer para el informe. Este valor invalida la configuración original del informe.|  
 |**ColumnSpacing**|Espacio entre las columnas que se va a establecer para el informe. Este valor invalida la configuración original del informe.|  
 |**DpiX**|La resolución del dispositivo de salida en la dirección de x.|  
 |**DpiY**|La resolución del dispositivo de salida en la dirección de y.|  

@@ -1,17 +1,16 @@
 ---
-title: "Tarea de generación de perfiles de datos | Microsoft Docs"
-ms.custom: 
+title: Tarea de generación de perfiles de datos | Microsoft Docs
+ms.custom: ''
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: integration-services
-ms.service: 
 ms.component: control-flow
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - integration-services
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.tgt_pltfrm: ''
+ms.topic: conceptual
 f1_keywords:
 - sql13.dts.designer.dataprofilingtask.f1
 helpviewer_keywords:
@@ -19,16 +18,15 @@ helpviewer_keywords:
 - data profiling
 - profiling data
 ms.assetid: 248ce233-4342-42c5-bf26-f4387ea152cf
-caps.latest.revision: 
+caps.latest.revision: 32
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.workload: On Demand
-ms.openlocfilehash: 62c240d11e15eea39fb7246d147680b39370c7a6
-ms.sourcegitcommit: 6bd21109abedf64445bdb3478eea5aaa7553fa46
-ms.translationtype: MT
+ms.openlocfilehash: a59e91ef39974021474d90bb65885b80831307da
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/20/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="data-profiling-task"></a>Tarea de generación de perfiles de datos
   La tarea de generación de perfiles de datos calcula diversos perfiles que le ayudan a familiarizarse con un origen de datos y a identificar en los datos problemas que deban corregirse.  
@@ -60,7 +58,7 @@ ms.lasthandoff: 03/20/2018
 |----------------------------------------------|-----------------|  
 |Perfil de distribución de longitud de columnas|Notifica las diferentes longitudes de valores de cadena existentes en la columna seleccionada y el porcentaje de filas de la tabla que representa cada longitud.<br /><br /> Este perfil le ayuda a identificar problemas en los datos, como los valores no válidos. Por ejemplo, genera un perfil de una columna de códigos de estados de Estados Unidos que deberían ser de dos caracteres y detecta valores con más de dos caracteres.|  
 |Perfil de proporción de columnas nulas|Notifica el porcentaje de valores nulos en la columna seleccionada.<br /><br /> Este perfil permite identificar problemas con los datos, como una proporción inesperadamente alta de valores nulos en una columna. Por ejemplo, genera un perfil de una columna de códigos postales y detecta un porcentaje inaceptablemente alto de códigos que faltan.|  
-|Perfil de patrón de columnas|Notifica un conjunto de expresiones regulares que cubren el porcentaje de valores especificado en una columna de cadenas.<br /><br /> Este perfil le ayuda a identificar problemas con los datos, como las cadenas no válidas. Este perfil también puede sugerir expresiones regulares que se pueden usar en el futuro para validar los valores nuevos. Por ejemplo, un perfil de patrón de una columna de códigos postales de los Estados Unidos podría generar las expresiones regulares: \d{5}-\d{4}, \d{5} y \d{9}. Si ve otras expresiones regulares, es posible que los datos contengan valores no válidos o tengan un formato incorrecto.|  
+|Perfil de patrón de columnas|Notifica un conjunto de expresiones regulares que cubren el porcentaje de valores especificado en una columna de cadenas.<br /><br /> Este perfil le ayuda a identificar problemas con los datos, como las cadenas no válidas. Este perfil también puede sugerir expresiones regulares que se pueden usar en el futuro para validar los valores nuevos. Por ejemplo, un perfil del patrón de una columna de códigos postales de Estados Unidos podría generar las expresiones regulares: \d{5}-\d{4}, \d{5} y \d{9}. Si ve otras expresiones regulares, es posible que los datos contengan valores no válidos o tengan un formato incorrecto.|  
 |Perfil de estadísticas de columnas|Notifica estadísticas, como los valores mínimo, máximo, medio y la desviación estándar para las columnas numéricas, y los valores mínimo y máximo para las columnas **datetime** .<br /><br /> Este perfil le ayuda a identificar problemas existentes en los datos, como las fechas no válidas. Por ejemplo, genera un perfil de una columna de fechas históricas y detecta una fecha máxima futura.|  
 |Perfil de distribución de valores de columna|Notifica todos los valores distintos existentes en la columna seleccionada y el porcentaje de filas de la tabla que representa cada valor. También puede notificar los valores existentes en un número de filas de la tabla que supera cierto porcentaje.<br /><br /> Este perfil le ayuda a identificar problemas con los datos, como un número incorrecto de valores distintos en una columna. Por ejemplo, si al generar un perfil de una columna que se supone que contiene los estados de Estados Unidos detecta más de 50 valores distintos.|  
   
@@ -123,7 +121,7 @@ ms.lasthandoff: 03/20/2018
 |**DataProfilingTaskTrace**|Proporciona información descriptiva sobre el estado de la tarea. Los mensajes incluyen la información siguiente:<br /><br /> Inicio de las solicitudes de procesamiento<br /><br /> Inicio de la consulta<br /><br /> Query End<br /><br /> Finalización de la solicitud de cálculo|  
   
 ## <a name="output-and-its-schema"></a>Salida y su esquema  
- La tarea de generación de perfiles de datos genera los perfiles seleccionados en XML y se estructura según el esquema DataProfile.xsd. Puede especificar si este XML generado se guarda en un archivo o en una variable de paquete. Puede ver este esquema en línea en [ http://schemas.microsoft.com/sqlserver/2008/DataDebugger/ ](http://schemas.microsoft.com/sqlserver/2008/DataDebugger/). Desde la página web puede guardar una copia local del esquema. A continuación, puede ver la copia local del esquema en Microsoft [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)] u otro editor de esquemas, en un editor XML o en un editor de texto, como el Bloc de notas.  
+ La tarea de generación de perfiles de datos genera los perfiles seleccionados en XML y se estructura según el esquema DataProfile.xsd. Puede especificar si este XML generado se guarda en un archivo o en una variable de paquete. Puede ver este esquema en línea en [http://schemas.microsoft.com/sqlserver/2008/DataDebugger/](http://schemas.microsoft.com/sqlserver/2008/DataDebugger/). Desde la página web puede guardar una copia local del esquema. A continuación, puede ver la copia local del esquema en Microsoft [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)] u otro editor de esquemas, en un editor XML o en un editor de texto, como el Bloc de notas.  
   
  Este esquema de información sobre la calidad de los datos podría ser útil para:  
   
@@ -131,7 +129,7 @@ ms.lasthandoff: 03/20/2018
   
 -   Generar herramientas personalizadas para trabajar con información sobre la calidad de los datos.  
   
- El espacio de nombres de destino se identifica en el esquema como [ http://schemas.microsoft.com/sqlserver/2008/DataDebugger/ ](http://schemas.microsoft.com/sqlserver/2008/DataDebugger/).  
+ El espacio de nombres de destino se identifica en el esquema como [http://schemas.microsoft.com/sqlserver/2008/DataDebugger/](http://schemas.microsoft.com/sqlserver/2008/DataDebugger/).  
   
 ## <a name="output-in-the-conditional-workflow-of-a-package"></a>Salida en el flujo de trabajo condicional de un paquete  
  Los componentes que generan perfiles de datos no incluyen funcionalidad integrada para implementar la lógica condicional en el flujo de trabajo del paquete de [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] basándose en el resultado de la tarea de generación de perfiles de datos. Sin embargo, puede agregar fácilmente esta lógica en una tarea Script con una cantidad de programación mínima. Este código realizaría una consulta XPath en el XML generado y, a continuación, guardaría el resultado en una variable de paquete. Las restricciones de precedencia que conectan la tarea Script con las tareas subsiguientes pueden utilizar una expresión para determinar el flujo de trabajo. Por ejemplo, la tarea Script detecta que el porcentaje de valores NULL de una columna supera un cierto umbral. Cuando esta condición sea True, quizá desee interrumpir el paquete y resolver el problema antes de continuar.  
@@ -145,7 +143,7 @@ ms.lasthandoff: 03/20/2018
  [Página Solicitudes de perfil](../../integration-services/control-flow/data-profiling-task-editor-profile-requests-page.md)  
  En la página **Solicitudes de perfil** , especifique el origen de datos y seleccione y configure los perfiles de los datos que quiere calcular. Para obtener más información sobre los diversos perfiles que puede configurar, vea los temas siguientes:  
   
--   [Opciones de solicitud de perfil de claves candidatas &#40; los datos de generación de perfiles de tarea &#41;](../../integration-services/control-flow/candidate-key-profile-request-options-data-profiling-task.md)  
+-   [Opciones de Solicitud de perfil de claves candidatas &#40;tarea de generación de perfiles de datos&#41;](../../integration-services/control-flow/candidate-key-profile-request-options-data-profiling-task.md)  
   
 -   [Opciones de Solicitud de perfil de distribución de longitud de columna &#40;tarea de generación de perfiles de datos&#41;](../../integration-services/control-flow/column-length-distribution-profile-request-options-data-profiling-task.md)  
   

@@ -1,5 +1,5 @@
 ---
-title: Referencia de funciones MDX (MDX) | Documentos de Microsoft
+title: MDX Function Reference (MDX) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/02/2016
 ms.prod: analysis-services
@@ -32,218 +32,217 @@ caps.latest.revision: 36
 author: Minewiskan
 ms.author: owend
 manager: erikre
-ms.workload: On Demand
-ms.openlocfilehash: d6a0eecf1084cc17b1a2a08b7ef1c43c81d2e346
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
-ms.translationtype: MT
+ms.openlocfilehash: 3a669981b24bc24711d662102116318a8d109737
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 05/03/2018
 ---
-# <a name="mdx-function-reference-mdx"></a>Referencia de funciones MDX (MDX)
+# <a name="mdx-function-reference-mdx"></a>MDX Function Reference (MDX)
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
 
-  [!INCLUDE[msCoName](../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] proporciona para el uso de funciones en la sintaxis de expresiones multidimensionales (MDX). Las funciones se pueden utilizar en cualquier instrucción de MDX válida y se utilizan a menudo en consultas, definiciones de resumen personalizadas y otros cálculos. Esta sección proporciona información sobre las funciones de MDX incluidas en [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)].  
+  [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] provides for the use of functions in Multidimensional Expressions (MDX) syntax. Functions can be used in any valid MDX statement, and are frequently used in queries, custom rollup definitions, and other calculations. This section provides information about the MDX functions included with [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)].  
   
- Puede utilizar las siguientes tablas para buscar funciones por la categoría del valor devuelto, o bien puede seleccionar una función por el nombre en la lista alfabética de la tabla de contenidos.  
+ You can use the following tables to find functions by their category of return value, or you can select a function by name from the alphabetical list in the table of contents.  
   
-## <a name="array-functions"></a>Funciones de matriz  
+## <a name="array-functions"></a>Array Functions  
   
-|Función|Description|  
+|Function|Description|  
 |--------------|-----------------|  
-|[SetToArray &#40; MDX &#41;](../mdx/settoarray-mdx.md)|Convierte uno o más conjuntos en una matriz, para usarla en funciones definidas por el usuario.|  
+|[SetToArray &#40;MDX&#41;](../mdx/settoarray-mdx.md)|Converts one or more sets to an array for use in a user-defined function.|  
   
-## <a name="hierarchy-functions"></a>Funciones de jerarquía  
+## <a name="hierarchy-functions"></a>Hierarchy Functions  
   
-|Función|Description|  
+|Function|Description|  
 |--------------|-----------------|  
-|[Jerarquía de &#40; MDX &#41;](../mdx/hierarchy-mdx.md)|Devuelve la jerarquía que contiene un miembro o nivel especificado.|  
-|[Dimensión &#40; MDX &#41;](../mdx/dimension-mdx.md)|Devuelve la dimensión que contiene un miembro, nivel o jerarquía especificado.|  
-|[Dimensiones &#40; MDX &#41;](../mdx/dimensions-mdx.md)|Devuelve una jerarquía especificada mediante una expresión numérica o de cadena.|  
+|[Hierarchy &#40;MDX&#41;](../mdx/hierarchy-mdx.md)|Returns the hierarchy that contains a specified member or level.|  
+|[Dimension &#40;MDX&#41;](../mdx/dimension-mdx.md)|Returns the dimension that contains a specified member, level, or hierarchy.|  
+|[Dimensions &#40;MDX&#41;](../mdx/dimensions-mdx.md)|Returns a hierarchy specified by a numeric or string expression.|  
   
-## <a name="level-functions"></a>Funciones de nivel  
+## <a name="level-functions"></a>Level Functions  
   
-|Función|Description|  
+|Function|Description|  
 |--------------|-----------------|  
-|[Nivel &#40; MDX &#41;](../mdx/level-mdx.md)|Devuelve el nivel de un miembro.|  
-|[Niveles de &#40; MDX &#41;](../mdx/levels-mdx.md)|Devuelve el nivel cuya posición en una dimensión o jerarquía se especifica mediante una expresión numérica, o cuyo nombre se especifica mediante una expresión de cadena.|  
+|[Level &#40;MDX&#41;](../mdx/level-mdx.md)|Returns the level of a member.|  
+|[Levels &#40;MDX&#41;](../mdx/levels-mdx.md)|Returns the level whose position in a dimension or hierarchy is specified by a numeric expression or whose name is specified by a string expression.|  
   
-## <a name="logical-functions"></a>Funciones lógicas  
+## <a name="logical-functions"></a>Logical Functions  
   
-|Función|Description|  
+|Function|Description|  
 |--------------|-----------------|  
-|[IsAncestor &#40; MDX &#41;](../mdx/isancestor-mdx.md)|Informa de si un miembro especificado es un antecesor de otro miembro especificado.|  
-|[IsEmpty &#40; MDX &#41;](../mdx/isempty-mdx.md)|Informa de si la expresión evaluada es el valor de celda vacía.|  
-|[IsGeneration &#40; MDX &#41;](../mdx/isgeneration-mdx.md)|Informa de si un miembro especificado es una generación especificada.|  
-|[IsLeaf &#40; MDX &#41;](../mdx/isleaf-mdx.md)|Informa de si un miembro especificado es un miembro hoja.|  
-|[IsSibling &#40; MDX &#41;](../mdx/issibling-mdx.md)|Informa de si un miembro especificado está en el mismo nivel que otro miembro especificado.|  
+|[IsAncestor &#40;MDX&#41;](../mdx/isancestor-mdx.md)|Returns whether a specified member is an ancestor of another specified member.|  
+|[IsEmpty &#40;MDX&#41;](../mdx/isempty-mdx.md)|Returns whether the evaluated expression is the empty cell value.|  
+|[IsGeneration &#40;MDX&#41;](../mdx/isgeneration-mdx.md)|Returns whether a specified member is in a specified generation.|  
+|[IsLeaf &#40;MDX&#41;](../mdx/isleaf-mdx.md)|Returns whether a specified member is a leaf member.|  
+|[IsSibling &#40;MDX&#41;](../mdx/issibling-mdx.md)|Returns whether a specified member is a sibling of another specified member.|  
   
-## <a name="member-functions"></a>Funciones de miembro  
+## <a name="member-functions"></a>Member Functions  
   
-|Función|Description|  
+|Function|Description|  
 |--------------|-----------------|  
-|[Antecesor &#40; MDX &#41;](../mdx/ancestor-mdx.md)|Devuelve el antecesor de un miembro en un nivel o distancia especificados.|  
-|[ClosingPeriod &#40; MDX &#41;](../mdx/closingperiod-mdx.md)|Devuelve el último elemento del mismo nivel entre los descendientes de un miembro en un nivel especificado.|  
-|[Elemento Cousin &#40; MDX &#41;](../mdx/cousin-mdx.md)|Devuelve el miembro secundario con la misma posición relativa bajo un miembro primario que el miembro secundario especificado.|  
-|[CurrentMember &#40; MDX &#41;](../mdx/currentmember-mdx.md)|Devuelve el miembro actual de una dimensión o jerarquía especificada durante la iteración.|  
-|[DataMember &#40; MDX &#41;](../mdx/datamember-mdx.md)|Devuelve el miembro de datos generados por el sistema asociado a un miembro no hoja de una dimensión.|  
-|[DefaultMember &#40; MDX &#41;](../mdx/defaultmember-mdx.md)|Devuelve el miembro predeterminado de una dimensión o jerarquía.|  
-|[FirstChild &#40; MDX &#41;](../mdx/firstchild-mdx.md)|Devuelve el primer elemento secundario de un miembro.|  
-|[FirstSibling &#40; MDX &#41;](../mdx/firstsibling-mdx.md)|Devuelve el primer elemento secundario del elemento primario de un miembro.|  
-|[Elemento &#40; Miembro &#41; &#40; MDX &#41;](../mdx/item-member-mdx.md)|Devuelve un miembro de una tupla especificada.|  
-|[Lag &#40; MDX &#41;](../mdx/lag-mdx.md)|Devuelve el miembro que se encuentra un número especificado de posiciones antes de un miembro especificado en la dimensión del miembro.|  
-|[LastChild &#40; MDX &#41;](../mdx/lastchild-mdx.md)|Devuelve el último elemento secundario de un miembro especificado.|  
-|[LastSibling &#40; MDX &#41;](../mdx/lastsibling-mdx.md)|Devuelve el último elemento secundario del elemento primario de un miembro especificado.|  
-|[Responsable de &#40; MDX &#41;](../mdx/lead-mdx.md)|Devuelve el miembro que se encuentra un número especificado de posiciones que siguen a un miembro especificado en la dimensión del miembro.|  
-|[LinkMember &#40; MDX &#41;](../mdx/linkmember-mdx.md)|Devuelve el miembro equivalente a un miembro especificado de una jerarquía especificada.|  
-|[Los miembros &#40; Cadena &#41; &#40; MDX &#41;](../mdx/members-string-mdx.md)|Devuelve un miembro especificado por una expresión de cadena.|  
-|[NextMember &#40; MDX &#41;](../mdx/nextmember-mdx.md)|Devuelve el siguiente miembro del nivel que contiene un miembro especificado|  
-|[OpeningPeriod &#40; MDX &#41;](../mdx/openingperiod-mdx.md)|Devuelve el primer miembro del mismo nivel entre los descendientes de un nivel especificado (opcionalmente, en un miembro especificado).|  
-|[ParallelPeriod &#40; MDX &#41;](../mdx/parallelperiod-mdx.md)|Devuelve un miembro de un periodo anterior en la misma posición relativa que el indicado.|  
-|[Elemento primario &#40; MDX &#41;](../mdx/parent-mdx.md)|Devuelve el elemento primario de un miembro.|  
-|[PrevMember &#40; MDX &#41;](../mdx/prevmember-mdx.md)|Devuelve el miembro anterior en el nivel que contiene un miembro especificado.|  
-|[StrToMember &#40; MDX &#41;](../mdx/strtomember-mdx.md)|Devuelve el miembro especificado por una cadena con formato de MDX.|  
-|[UnknownMember &#40; MDX &#41;](../mdx/unknownmember-mdx.md)|Devuelve el miembro desconocido asociado con un nivel o miembro.|  
-|[ValidMeasure &#40; MDX &#41;](../mdx/validmeasure-mdx.md)|Devuelve una medida válida de un cubo virtual, al forzar dimensiones no aplicables al nivel superior.|  
+|[Ancestor &#40;MDX&#41;](../mdx/ancestor-mdx.md)|Returns the ancestor of a member at a specified level or distance.|  
+|[ClosingPeriod &#40;MDX&#41;](../mdx/closingperiod-mdx.md)|Returns the last sibling among the descendants of a member at a specified level.|  
+|[Cousin &#40;MDX&#41;](../mdx/cousin-mdx.md)|Returns the child member with the same relative position under a parent member as the specified child member.|  
+|[CurrentMember &#40;MDX&#41;](../mdx/currentmember-mdx.md)|Returns the current member along a specified dimension or hierarchy during iteration.|  
+|[DataMember &#40;MDX&#41;](../mdx/datamember-mdx.md)|Returns the system-generated data member that is associated with a nonleaf member of a dimension.|  
+|[DefaultMember &#40;MDX&#41;](../mdx/defaultmember-mdx.md)|Returns the default member of a dimension or hierarchy.|  
+|[FirstChild &#40;MDX&#41;](../mdx/firstchild-mdx.md)|Returns the first child of a member.|  
+|[FirstSibling &#40;MDX&#41;](../mdx/firstsibling-mdx.md)|Returns the first child of the parent of a member.|  
+|[Item &#40;Member&#41; &#40;MDX&#41;](../mdx/item-member-mdx.md)|Returns a member from a specified tuple.|  
+|[Lag &#40;MDX&#41;](../mdx/lag-mdx.md)|Returns the member that is a specified number of positions before a specified member along the member's dimension.|  
+|[LastChild &#40;MDX&#41;](../mdx/lastchild-mdx.md)|Returns the last child of a specified member.|  
+|[LastSibling &#40;MDX&#41;](../mdx/lastsibling-mdx.md)|Returns the last child of the parent of a specified member.|  
+|[Lead &#40;MDX&#41;](../mdx/lead-mdx.md)|Returns the member that is a specified number of positions following a specified member along the member's dimension.|  
+|[LinkMember &#40;MDX&#41;](../mdx/linkmember-mdx.md)|Returns the member equivalent to a specified member in a specified hierarchy.|  
+|[Members &#40;String&#41; &#40;MDX&#41;](../mdx/members-string-mdx.md)|Returns a member specified by a string expression.|  
+|[NextMember &#40;MDX&#41;](../mdx/nextmember-mdx.md)|Returns the next member in the level that contains a specified member.|  
+|[OpeningPeriod &#40;MDX&#41;](../mdx/openingperiod-mdx.md)|Returns the first sibling among the descendants of a specified level, optionally at a specified member.|  
+|[ParallelPeriod &#40;MDX&#41;](../mdx/parallelperiod-mdx.md)|Returns a member from a prior period in the same relative position as a specified member.|  
+|[Parent &#40;MDX&#41;](../mdx/parent-mdx.md)|Returns the parent of a member.|  
+|[PrevMember &#40;MDX&#41;](../mdx/prevmember-mdx.md)|Returns the previous member in the level that contains a specified member.|  
+|[StrToMember &#40;MDX&#41;](../mdx/strtomember-mdx.md)|Returns the member specified by an MDX–formatted string.|  
+|[UnknownMember &#40;MDX&#41;](../mdx/unknownmember-mdx.md)|Returns the unknown member associated with a level or member.|  
+|[ValidMeasure &#40;MDX&#41;](../mdx/validmeasure-mdx.md)|Returns a valid measure in a virtual cube by forcing inapplicable dimensions to their top level.|  
   
-## <a name="numeric-functions"></a>Funciones numéricas  
+## <a name="numeric-functions"></a>Numeric Functions  
   
-|Función|Description|  
+|Function|Description|  
 |--------------|-----------------|  
-|[Agregado &#40; MDX &#41;](../mdx/aggregate-mdx.md)|Devuelve un valor escalar calculado al agregar medidas o bien una expresión numérica especificada de forma opcional sobre las tuplas de un conjunto especificado.|  
-|[AVG &#40; MDX &#41;](../mdx/avg-mdx.md)|Devuelve el valor medio de las medidas o el valor medio de una expresión numérica opcional, evaluado sobre un conjunto especificado.|  
-|[CalculationCurrentPass &#40;MDX&#41;](../mdx/calculationcurrentpass-mdx.md)|Devuelve el paso de cálculo actual de un cubo para el contexto de consulta especificado.|  
-|[CalculationPassValue &#40;MDX&#41;](../mdx/calculationpassvalue-mdx.md)|Devuelve el valor de una expresión MDX evaluada sobre el paso de cálculo especificado de un cubo.|  
-|[CoalesceEmpty &#40; MDX &#41;](../mdx/coalesceempty-mdx.md)|Fusiona en un número o en una cadena un valor de celda vacía, y devuelve el valor fusionado.|  
-|[Correlación &#40; MDX &#41;](../mdx/correlation-mdx.md)|Devuelve el coeficiente de correlación de dos series evaluadas en un conjunto.|  
-|[Número de &#40; dimensión &#41; &#40; MDX &#41;](../mdx/count-dimension-mdx.md)|Devuelve el número de dimensiones de un cubo.|  
-|[Número de &#40; Niveles de jerarquía &#41; &#40; MDX &#41;](../mdx/count-hierarchy-levels-mdx.md)|Devuelve el número de niveles de una dimensión o jerarquía.|  
-|[Número de &#40; Conjunto de &#41; &#40; MDX &#41;](../mdx/count-set-mdx.md)|Devuelve el número de celdas de un conjunto.|  
-|[Número de &#40; Tupla &#41; &#40; MDX &#41;](../mdx/count-tuple-mdx.md)|Devuelve el número de dimensiones de una tupla.|  
-|[Covarianza &#40; MDX &#41;](../mdx/covariance-mdx.md)|Devuelve la covarianza de población de dos series evaluadas en un conjunto utilizando la fórmula de llenado sesgada.|  
-|[CovarianceN &#40; MDX &#41;](../mdx/covariancen-mdx.md)|Devuelve la covarianza de muestra de dos series evaluadas en un conjunto utilizando la fórmula de población no sesgada.|  
-|[DistinctCount &#40; MDX &#41;](../mdx/distinctcount-mdx.md)|Devuelve el número de tuplas distintas y no vacías de un conjunto.|  
-|[IIf &#40; MDX &#41;](../mdx/iif-mdx.md)|Devuelve uno de los dos valores determinados por una prueba lógica.|  
-|[LinRegIntercept &#40; MDX &#41;](../mdx/linregintercept-mdx.md)|Calcula la regresión lineal de un conjunto y devuelve el valor de la intersección de la recta de regresión y = ax + b.|  
-|[LinRegPoint &#40; MDX &#41;](../mdx/linregpoint-mdx.md)|Calcula la regresión lineal de un conjunto y devuelve el valor de *y* en la recta de regresión y = ax + b.|  
-|[LinRegR2 &#40; MDX &#41;](../mdx/linregr2-mdx.md)|Calcula la regresión lineal de un conjunto y devuelve el coeficiente de determinación, R2.|  
-|[LinRegSlope &#40; MDX &#41;](../mdx/linregslope-mdx.md)|Calcula la regresión lineal de un conjunto y devuelve el valor de la pendiente de la recta de regresión y = ax + b.|  
-|[LinRegVariance &#40; MDX &#41;](../mdx/linregvariance-mdx.md)|Calcula la regresión lineal de un conjunto y devuelve la varianza asociada a la recta de regresión y = ax + b.|  
-|[LookupCube &#40; MDX &#41;](../mdx/lookupcube-mdx.md)|Devuelve el valor de una expresión MDX evaluada sobre otro cubo especificado en la misma base de datos.|  
-|[Max &#40; MDX &#41;](../mdx/max-mdx.md)|Devuelve el valor máximo de una expresión numérica evaluada sobre un conjunto.|  
-|[Mediana &#40; MDX &#41;](../mdx/median-mdx.md)|Devuelve el valor medio de una expresión numérica evaluada sobre un conjunto.|  
-|[Min &#40; MDX &#41;](../mdx/min-mdx.md)|Devuelve el valor mínimo de una expresión numérica evaluada sobre un conjunto.|  
-|[Ordinal &#40; MDX &#41;](../mdx/ordinal-mdx.md)|Devuelve el valor ordinal (con base cero) asociado a un nivel.|  
-|[Predecir &#40; MDX &#41;](../mdx/predict-mdx.md)|Devuelve un valor de una expresión numérica evaluada sobre un modelo de minería de datos.|  
-|[Rango &#40; MDX &#41;](../mdx/rank-mdx.md)|Devuelve el intervalo con base uno de una tupla especificada en un conjunto especificado.|  
-|[RollupChildren &#40; MDX &#41;](../mdx/rollupchildren-mdx.md)|Devuelve un valor generado mediante la acumulación de los valores de los elementos secundarios de un miembro especificado, utilizando el operador unario especificado.|  
-|[StdDev &#40; MDX &#41;](../mdx/stddev-mdx.md)|Alias de [Stdev &#40; MDX &#41; ](../mdx/stdev-mdx.md).|  
-|[StddevP &#40; MDX &#41;](../mdx/stddevp-mdx.md)|Alias de [StdevP &#40; MDX &#41; ](../mdx/stdevp-mdx.md).|  
-|[STDEV &#40; MDX &#41;](../mdx/stdev-mdx.md)|Devuelve la desviación de muestra estándar de una expresión numérica evaluada sobre un conjunto, mediante la fórmula de población no sesgada.|  
-|[StdevP &#40; MDX &#41;](../mdx/stdevp-mdx.md)|Devuelve la desviación estándar de población de una expresión numérica evaluada sobre un conjunto, mediante la fórmula de población sesgada.|  
-|[StrToValue &#40; MDX &#41;](../mdx/strtovalue-mdx.md)|Devuelve el valor especificado por una cadena con formato de MDX.|  
-|[Suma &#40; MDX &#41;](../mdx/sum-mdx.md)|Devuelve la suma de una expresión numérica evaluada sobre un conjunto.|  
-|[Valor &#40; MDX &#41;](../mdx/value-mdx.md)|Devuelve el valor de una medida.|  
-|[Var &#40; MDX &#41;](../mdx/var-mdx.md)|Devuelve la varianza de muestra de una expresión numérica evaluada en un conjunto, mediante la fórmula de población no sesgada.|  
-|[Varianza &#40; MDX &#41;](../mdx/variance-mdx.md)|Alias de [Var &#40; MDX &#41; ](../mdx/var-mdx.md).|  
-|[VarianceP &#40; MDX &#41;](../mdx/variancep-mdx.md)|Alias de [VarP &#40; MDX &#41; ](../mdx/varp-mdx.md).|  
-|[VarP &#40; MDX &#41;](../mdx/varp-mdx.md)|Devuelve la varianza de población de una expresión numérica evaluada en un conjunto, mediante la fórmula de población sesgada.|  
+|[Aggregate &#40;MDX&#41;](../mdx/aggregate-mdx.md)|Returns a scalar value calculated by aggregating either measures or an optionally specified numeric expression over the tuples of a specified set.|  
+|[Avg &#40;MDX&#41;](../mdx/avg-mdx.md)|Returns the average value of measures or the average value of an optional numeric expression, evaluated over a specified set.|  
+|[CalculationCurrentPass &#40;MDX&#41;](../mdx/calculationcurrentpass-mdx.md)|Returns the current calculation pass of a cube for the specified query context.|  
+|[CalculationPassValue &#40;MDX&#41;](../mdx/calculationpassvalue-mdx.md)|Returns the value of a MDX expression evaluated over the specified calculation pass of a cube.|  
+|[CoalesceEmpty &#40;MDX&#41;](../mdx/coalesceempty-mdx.md)|Coalesces an empty cell value to a number or string and returns the coalesced value.|  
+|[Correlation &#40;MDX&#41;](../mdx/correlation-mdx.md)|Returns the correlation coefficient of two series evaluated over a set.|  
+|[Count &#40;Dimension&#41; &#40;MDX&#41;](../mdx/count-dimension-mdx.md)|Returns the number of dimensions in a cube.|  
+|[Count &#40;Hierarchy Levels&#41; &#40;MDX&#41;](../mdx/count-hierarchy-levels-mdx.md)|Returns the number of levels in a dimension or hierarchy.|  
+|[Count &#40;Set&#41; &#40;MDX&#41;](../mdx/count-set-mdx.md)|Returns the number of cells in a set.|  
+|[Count &#40;Tuple&#41; &#40;MDX&#41;](../mdx/count-tuple-mdx.md)|Returns the number of dimensions in a tuple.|  
+|[Covariance &#40;MDX&#41;](../mdx/covariance-mdx.md)|Returns the population covariance of two series evaluated over a set, using the biased population formula.|  
+|[CovarianceN &#40;MDX&#41;](../mdx/covariancen-mdx.md)|Returns the sample covariance of two series evaluated over a set, using the unbiased population formula.|  
+|[DistinctCount &#40;MDX&#41;](../mdx/distinctcount-mdx.md)|Returns the number of distinct, nonempty tuples in a set.|  
+|[IIf &#40;MDX&#41;](../mdx/iif-mdx.md)|Returns one of two values determined by a logical test.|  
+|[LinRegIntercept &#40;MDX&#41;](../mdx/linregintercept-mdx.md)|Calculates the linear regression of a set and returns the value of the intercept in the regression line, y = ax + b.|  
+|[LinRegPoint &#40;MDX&#41;](../mdx/linregpoint-mdx.md)|Calculates the linear regression of a set and returns the value of *y* in the regression line, y = ax + b.|  
+|[LinRegR2 &#40;MDX&#41;](../mdx/linregr2-mdx.md)|Calculates the linear regression of a set and returns the coefficient of determination, R2.|  
+|[LinRegSlope &#40;MDX&#41;](../mdx/linregslope-mdx.md)|Calculates the linear regression of a set, and returns the value of the slope in the regression line, y = ax + b.|  
+|[LinRegVariance &#40;MDX&#41;](../mdx/linregvariance-mdx.md)|Calculates the linear regression of a set, and returns the variance associated with the regression line, y = ax + b.|  
+|[LookupCube &#40;MDX&#41;](../mdx/lookupcube-mdx.md)|Returns the value of an MDX expression evaluated over another specified cube in the same database.|  
+|[Max &#40;MDX&#41;](../mdx/max-mdx.md)|Returns the maximum value of a numeric expression that is evaluated over a set.|  
+|[Median &#40;MDX&#41;](../mdx/median-mdx.md)|Returns the median value of a numeric expression that is evaluated over a set.|  
+|[Min &#40;MDX&#41;](../mdx/min-mdx.md)|Returns the minimum value of a numeric expression that is evaluated over a set.|  
+|[Ordinal &#40;MDX&#41;](../mdx/ordinal-mdx.md)|Returns the zero-based ordinal value associated with a level.|  
+|[Predict &#40;MDX&#41;](../mdx/predict-mdx.md)|Returns a value of a numeric expression evaluated over a data mining model.|  
+|[Rank &#40;MDX&#41;](../mdx/rank-mdx.md)|Returns the one-based rank of a specified tuple in a specified set.|  
+|[RollupChildren &#40;MDX&#41;](../mdx/rollupchildren-mdx.md)|Returns a value generated by rolling up the values of the children of a specified member using the specified unary operator.|  
+|[Stddev &#40;MDX&#41;](../mdx/stddev-mdx.md)|Alias for [Stdev &#40;MDX&#41;](../mdx/stdev-mdx.md).|  
+|[StddevP &#40;MDX&#41;](../mdx/stddevp-mdx.md)|Alias for [StdevP &#40;MDX&#41;](../mdx/stdevp-mdx.md).|  
+|[Stdev &#40;MDX&#41;](../mdx/stdev-mdx.md)|Returns the sample standard deviation of a numeric expression evaluated over a set, using the unbiased population formula.|  
+|[StdevP &#40;MDX&#41;](../mdx/stdevp-mdx.md)|Returns the population standard deviation of a numeric expression evaluated over a set, using the biased population formula.|  
+|[StrToValue &#40;MDX&#41;](../mdx/strtovalue-mdx.md)|Returns the value specified by an MDX–formatted string.|  
+|[Sum &#40;MDX&#41;](../mdx/sum-mdx.md)|Returns the sum of a numeric expression evaluated over a set.|  
+|[Value &#40;MDX&#41;](../mdx/value-mdx.md)|Returns the value of a measure.|  
+|[Var &#40;MDX&#41;](../mdx/var-mdx.md)|Returns the sample variance of a numeric expression evaluated over a set, using the unbiased population formula.|  
+|[Variance &#40;MDX&#41;](../mdx/variance-mdx.md)|Alias for [Var &#40;MDX&#41;](../mdx/var-mdx.md).|  
+|[VarianceP &#40;MDX&#41;](../mdx/variancep-mdx.md)|Alias for [VarP &#40;MDX&#41;](../mdx/varp-mdx.md).|  
+|[VarP &#40;MDX&#41;](../mdx/varp-mdx.md)|Returns the population variance of a numeric expression evaluated over a set, using the biased population formula.|  
   
-## <a name="set-functions"></a>Funciones de conjunto  
+## <a name="set-functions"></a>Set Functions  
   
-|Función|Description|  
+|Function|Description|  
 |--------------|-----------------|  
-|[AddCalculatedMembers &#40; MDX &#41;](../mdx/addcalculatedmembers-mdx.md)|Devuelve un conjunto generado al agregar miembros calculados a un conjunto especificado.|  
-|[AllMembers &#40; MDX &#41;](../mdx/allmembers-mdx.md)|Devuelve un conjunto que contiene todos los miembros de la dimensión, jerarquía o nivel especificados, incluyendo los miembros calculados.|  
-|[Antecesores &#40; MDX &#41;](../mdx/ancestors-mdx.md)|Devuelve un conjunto de todos los antecesores de un miembro en un nivel o distancia especificados.|  
-|[Ascendants &#40; MDX &#41;](../mdx/ascendants-mdx.md)|Devuelve el conjunto de antecesores de un miembro especificado, incluyendo el propio miembro.|  
-|[Eje &#40; MDX &#41;](../mdx/axis-mdx.md)|Devuelve un conjunto definido en un eje.|  
-|[BottomCount &#40; MDX &#41;](../mdx/bottomcount-mdx.md)|Ordena un conjunto de forma ascendente y devuelve el número de tuplas especificado con los valores más bajos.|  
-|[BottomPercent &#40; MDX &#41;](../mdx/bottompercent-mdx.md)|Ordena un conjunto de forma ascendente y devuelve un conjunto de tuplas con los valores más bajos con un total acumulado igual o inferior a un porcentaje especificado.|  
-|[BottomSum &#40; MDX &#41;](../mdx/bottomsum-mdx.md)|Ordena un conjunto de forma ascendente y devuelve un conjunto de tuplas con los valores más bajos con un total igual o inferior a un valor especificado.|  
-|[Elementos secundarios &#40; MDX &#41;](../mdx/children-mdx.md)|Devuelve el elemento secundario de un miembro especificado.|  
-|[Combinación cruzada &#40; MDX &#41;](../mdx/crossjoin-mdx.md)|Devuelve el producto cruzado de uno o más conjuntos.|  
-|[CurrentOrdinal &#40; MDX &#41;](../mdx/currentordinal-mdx.md)|Devuelve el número de iteración actual dentro de un conjunto durante la iteración.|  
-|[Descendientes &#40; MDX &#41;](../mdx/descendants-mdx.md)|Devuelve el conjunto de descendientes de un miembro en el nivel o distancia especificados; opcionalmente puede incluir o excluir los descendientes de otros niveles.|  
-|[DISTINCT &#40; MDX &#41;](../mdx/distinct-mdx.md)|Devuelve un conjunto, eliminando tuplas duplicadas de un conjunto especificado.|  
-|[DrilldownLevel &#40; MDX &#41;](../mdx/drilldownlevel-mdx.md)|Aumenta los detalles de los miembros de un conjunto a un nivel por debajo del nivel más bajo representado en el conjunto o un nivel por debajo del nivel especificado opcionalmente de un miembro representado en el conjunto.|  
-|[DrilldownLevelBottom &#40; MDX &#41;](../mdx/drilldownlevelbottom-mdx.md)|Aumenta el detalle de los miembros inferiores de un conjunto, de un nivel especificado a otro inferior.|  
-|[DrilldownLevelTop &#40; MDX &#41;](../mdx/drilldownleveltop-mdx.md)|Aumenta el detalle de los miembros superiores de un conjunto, de un nivel especificado a otro inferior.|  
-|[DrilldownMember &#40; MDX &#41;](../mdx/drilldownmember-mdx.md)|Aumenta el detalle de los miembros de un conjunto especificado presentes en un segundo conjunto especificado. Alternativamente, esta función aumenta el detalle de un conjunto de tuplas.|  
-|[DrilldownMemberBottom &#40; MDX &#41;](../mdx/drilldownmemberbottom-mdx.md)|Aumenta el nivel de detalle de miembros de un conjunto especificado que están presentes en otro conjunto especificado, lo que limita el conjunto de resultados a un número específico de miembros. Alternativamente, esta función también aumenta el detalle de un conjunto de tuplas.|  
-|[DrilldownMemberTop &#40; MDX &#41;](../mdx/drilldownmembertop-mdx.md)|Aumenta el nivel de detalle de miembros de un conjunto especificado que están presentes en otro conjunto especificado, lo que limita el conjunto de resultados a un número específico de miembros. Como alternativa, esta función aumenta el detalle de un conjunto de tuplas.|  
-|[DrillupLevel &#40; MDX &#41;](../mdx/drilluplevel-mdx.md)|Reduce el detalle de los miembros de un conjunto por debajo de un nivel especificado.|  
-|[DrillupMember &#40; MDX &#41;](../mdx/drillupmember-mdx.md)|Reduce el detalle de los miembros de un conjunto especificado presentes en un segundo conjunto especificado.|  
-|[Excepto &#40; MDX &#41;](../mdx/except-mdx-function.md)|Encuentra la diferencia entre dos conjuntos, reteniendo opcionalmente los duplicados.|  
-|[Existe &#40; MDX &#41;](../mdx/exists-mdx.md)|Devuelve el conjunto de miembros de un conjunto que existen con una o más tuplas de otros conjuntos.|  
-|[Extracción &#40; MDX &#41;](../mdx/extract-mdx.md)|Devuelve un conjunto de tuplas a partir de elementos de dimensión extraídos.|  
-|[Filtro &#40; MDX &#41;](../mdx/filter-mdx.md)|Devuelve el conjunto resultante de filtrar un determinado conjunto con una condición de búsqueda.|  
-|[Generar &#40; MDX &#41;](../mdx/generate-mdx.md)|Aplica un conjunto a cada miembro de otro conjunto y a continuación combina los conjuntos resultantes mediante unión. Alternativamente, esta función devuelve una cadena concatenada que se creó evaluando una expresión de cadena en un conjunto.|  
-|[Encabezado &#40; MDX &#41;](../mdx/head-mdx.md)|Devuelve el primer número de elementos especificado en un conjunto y retiene los duplicados.|  
-|[Hierarchize &#40; MDX &#41;](../mdx/hierarchize-mdx.md)|Ordena los miembros de un conjunto en una jerarquía.|  
-|[Intersect &#40; MDX &#41;](../mdx/intersect-mdx.md)|Devuelve la intersección de dos conjuntos de entrada; conservando opcionalmente los duplicados.|  
-|[LastPeriods &#40; MDX &#41;](../mdx/lastperiods-mdx.md)|Devuelve un conjunto de miembros hasta un miembro determinado, éste inclusive.|  
-|[Los miembros &#40; Conjunto de &#41; &#40; MDX &#41;](../mdx/members-set-mdx.md)|Devuelve el conjunto de miembros en una dimensión, nivel o jerarquía.|  
-|[MTd &#40; MDX &#41;](../mdx/mtd-mdx.md)|Devuelve un conjunto de miembros del mismo nivel que un miembro determinado, empezando por el primer miembro del mismo nivel y acabando con el miembro en cuestión, de acuerdo con la restricción del nivel de año en la dimensión de tiempo.|  
-|[NameToSet &#40; MDX &#41;](../mdx/nametoset-mdx.md)|Devuelve un conjunto que contiene el miembro especificado por una cadena con formato de MDX.|  
-|[NonEmptyCrossjoin &#40; MDX &#41;](../mdx/nonemptycrossjoin-mdx.md)|Devuelve el producto cruzado de uno o más conjuntos de un conjunto, excluidas las tuplas vacías o sin datos de tabla de hechos asociada.|  
-|[Orden &#40; MDX &#41;](../mdx/order-mdx.md)|Organiza los miembros de un conjunto especificado; opcionalmente preservando o rompiendo la jerarquía.|  
-|[PeriodsToDate &#40; MDX &#41;](../mdx/periodstodate-mdx.md)|Devuelve un conjunto de miembros del mismo nivel que un miembro determinado, empezando por el primer miembro del mismo nivel y acabando con el miembro en cuestión, de acuerdo con la restricción del nivel especificado en la dimensión de tiempo.|  
-|[QTD &#40; MDX &#41;](../mdx/qtd-mdx.md)|Devuelve un conjunto de miembros del mismo nivel que un miembro determinado, empezando por el primer miembro del mismo nivel y terminando con el miembro en cuestión, como restringida por la *trimestre* nivel en la dimensión de tiempo.|  
-|[Elementos del mismo nivel &#40; MDX &#41;](../mdx/siblings-mdx.md)|Devuelve los miembros del mismo nivel que un miembro especificado, incluyendo el propio miembro.|  
-|[StripCalculatedMembers &#40; MDX &#41;](../mdx/stripcalculatedmembers-mdx.md)|Devuelve un conjunto generado al eliminar miembros calculados de un conjunto especificado.|  
-|[StrToSet &#40; MDX &#41;](../mdx/strtoset-mdx.md)|Devuelve el conjunto especificado por una cadena con formato de MDX.|  
-|[Subconjunto &#40; MDX &#41;](../mdx/subset-mdx.md)|Devuelve un subconjunto de tuplas a partir de un conjunto especificado.|  
-|[Final &#40; MDX &#41;](../mdx/tail-mdx.md)|Devuelve un subconjunto del final de un conjunto.|  
-|[ToggleDrillState &#40; MDX &#41;](../mdx/toggledrillstate-mdx.md)|Alterna el estado de detalle de los miembros.|  
-|[TopCount &#40; MDX &#41;](../mdx/topcount-mdx.md)|Ordena un conjunto de forma descendente y devuelve el número de elementos especificado con los valores más altos.|  
-|[TopPercent &#40; MDX &#41;](../mdx/toppercent-mdx.md)|Ordena un conjunto de forma descendente y devuelve un conjunto de tuplas con los valores más altos con un total acumulado igual o inferior a un porcentaje especificado.|  
-|[TopSum &#40; MDX &#41;](../mdx/topsum-mdx.md)|Ordena un conjunto y devuelve los elementos de nivel superior cuyo total acumulado sea igual o superior a un valor especificado.|  
-|[Unión &#40; MDX &#41;](../mdx/union-mdx.md)|Devuelve la unión de dos conjuntos; opcionalmente conserva los duplicados.|  
-|[Unorder, &#40; MDX &#41;](../mdx/unorder-mdx.md)|Quita cualquier orden impuesto sobre un conjunto especificado.|  
-|[VisualTotals &#40; MDX &#41;](../mdx/visualtotals-mdx.md)|Devuelve un conjunto que se genera calculando de forma dinámica el total de miembros secundarios de un conjunto especificado; opcionalmente puede utilizar un patrón para el nombre del miembro primario en el conjunto de celdas resultante.|  
-|[WTD &#40; MDX &#41;](../mdx/wtd-mdx.md)|Devuelve un conjunto de miembros del mismo nivel que un miembro determinado, empezando por el primer miembro del mismo nivel y acabando con el miembro en cuestión, de acuerdo con la restricción del nivel de semana en la dimensión de tiempo.|  
-|[YTD &#40; MDX &#41;](../mdx/ytd-mdx.md)|Devuelve un conjunto de miembros del mismo nivel que un miembro determinado, empezando por el primer miembro del mismo nivel y terminando con el miembro en cuestión, como restringida por la *año* nivel en la dimensión de tiempo.|  
+|[AddCalculatedMembers &#40;MDX&#41;](../mdx/addcalculatedmembers-mdx.md)|Returns a set generated by adding calculated members to a specified set.|  
+|[AllMembers &#40;MDX&#41;](../mdx/allmembers-mdx.md)|Returns a set that contains all members, including calculated members, of the specified dimension, hierarchy, or level.|  
+|[Ancestors &#40;MDX&#41;](../mdx/ancestors-mdx.md)|Returns a set of all ancestors of a member at a specified level or distance.|  
+|[Ascendants &#40;MDX&#41;](../mdx/ascendants-mdx.md)|Returns the set of the ascendants of a specified member, including the member itself.|  
+|[Axis &#40;MDX&#41;](../mdx/axis-mdx.md)|Returns a set defined in an axis.|  
+|[BottomCount &#40;MDX&#41;](../mdx/bottomcount-mdx.md)|Sorts a set in ascending order, and returns the specified number of tuples with the lowest values.|  
+|[BottomPercent &#40;MDX&#41;](../mdx/bottompercent-mdx.md)|Sorts a set in ascending order, and returns a set of tuples with the lowest values whose cumulative total is equal to or less than a specified percentage.|  
+|[BottomSum &#40;MDX&#41;](../mdx/bottomsum-mdx.md)|Sorts a set in ascending order, and returns a set of tuples with the lowest values whose total is equal to or less than a specified value.|  
+|[Children &#40;MDX&#41;](../mdx/children-mdx.md)|Returns the children of a specified member.|  
+|[Crossjoin &#40;MDX&#41;](../mdx/crossjoin-mdx.md)|Returns the cross product of one or more sets.|  
+|[CurrentOrdinal &#40;MDX&#41;](../mdx/currentordinal-mdx.md)|Returns the current iteration number within a set during iteration.|  
+|[Descendants &#40;MDX&#41;](../mdx/descendants-mdx.md)|Returns the set of descendants of a member at a specified level or distance, optionally including or excluding descendants in other levels.|  
+|[Distinct &#40;MDX&#41;](../mdx/distinct-mdx.md)|Returns a set, removing duplicate tuples from a specified set.|  
+|[DrilldownLevel &#40;MDX&#41;](../mdx/drilldownlevel-mdx.md)|Drills down the members of a set to one level below the lowest level represented in the set, or to one level below an optionally specified level of a member represented in the set.|  
+|[DrilldownLevelBottom &#40;MDX&#41;](../mdx/drilldownlevelbottom-mdx.md)|Drills down the bottommost members of a set, at a specified level, to one level below.|  
+|[DrilldownLevelTop &#40;MDX&#41;](../mdx/drilldownleveltop-mdx.md)|Drills down the topmost members of a set, at a specified level, to one level below.|  
+|[DrilldownMember &#40;MDX&#41;](../mdx/drilldownmember-mdx.md)|Drills down the members in a specified set that are present in a second specified set. Alternatively, the function drills down on a set of tuples.|  
+|[DrilldownMemberBottom &#40;MDX&#41;](../mdx/drilldownmemberbottom-mdx.md)|Drills down the members in a specified set that are present in a second specified set, limiting the result set to a specified number of members. Alternatively, this function also drills down on a set of tuples.|  
+|[DrilldownMemberTop &#40;MDX&#41;](../mdx/drilldownmembertop-mdx.md)|Drills down the members in a specified set that are present in a second specified set, limiting the result set to a specified number of members. Alternatively, this function drills down on a set of tuples.|  
+|[DrillupLevel &#40;MDX&#41;](../mdx/drilluplevel-mdx.md)|Drills up the members of a set that are below a specified level.|  
+|[DrillupMember &#40;MDX&#41;](../mdx/drillupmember-mdx.md)|Drills up the members in a specified set that are present in a second specified set.|  
+|[Except &#40;MDX&#41;](../mdx/except-mdx-function.md)|Finds the difference between two sets, optionally retaining duplicates.|  
+|[Exists &#40;MDX&#41;](../mdx/exists-mdx.md)|Returns the set of members of one set that exist with one or more tuples of one or more other sets.|  
+|[Extract &#40;MDX&#41;](../mdx/extract-mdx.md)|Returns a set of tuples from extracted dimension elements.|  
+|[Filter &#40;MDX&#41;](../mdx/filter-mdx.md)|Returns the set that results from filtering a specified set based on a search condition.|  
+|[Generate &#40;MDX&#41;](../mdx/generate-mdx.md)|Applies a set to each member of another set, and then joins the resulting sets by union. Alternatively, this function returns a concatenated string created by evaluating a string expression over a set.|  
+|[Head &#40;MDX&#41;](../mdx/head-mdx.md)|Returns the first specified number of elements in a set, while retaining duplicates.|  
+|[Hierarchize &#40;MDX&#41;](../mdx/hierarchize-mdx.md)|Orders the members of a set in a hierarchy.|  
+|[Intersect &#40;MDX&#41;](../mdx/intersect-mdx.md)|Returns the intersection of two input sets, optionally retaining duplicates.|  
+|[LastPeriods &#40;MDX&#41;](../mdx/lastperiods-mdx.md)|Returns a set of members up to and including a specified member.|  
+|[Members &#40;Set&#41; &#40;MDX&#41;](../mdx/members-set-mdx.md)|Returns the set of members in a dimension, level, or hierarchy.|  
+|[Mtd &#40;MDX&#41;](../mdx/mtd-mdx.md)|Returns a set of sibling members from the same level as a given member, starting with the first sibling and ending with the given member, as constrained by the Year level in the Time dimension.|  
+|[NameToSet &#40;MDX&#41;](../mdx/nametoset-mdx.md)|Returns a set that contains the member specified by an MDX–formatted string.|  
+|[NonEmptyCrossjoin &#40;MDX&#41;](../mdx/nonemptycrossjoin-mdx.md)|Returns the cross product of one or more sets as a set, excluding empty tuples and tuples without associated fact table data.|  
+|[Order &#40;MDX&#41;](../mdx/order-mdx.md)|Arranges members of a specified set, optionally preserving or breaking the hierarchy.|  
+|[PeriodsToDate &#40;MDX&#41;](../mdx/periodstodate-mdx.md)|Returns a set of sibling members from the same level as a given member, starting with the first sibling and ending with the given member, as constrained by a specified level in the Time dimension.|  
+|[Qtd &#40;MDX&#41;](../mdx/qtd-mdx.md)|Returns a set of sibling members from the same level as a given member, starting with the first sibling and ending with the given member, as constrained by the *Quarter* level in the Time dimension.|  
+|[Siblings &#40;MDX&#41;](../mdx/siblings-mdx.md)|Returns the siblings of a specified member, including the member itself.|  
+|[StripCalculatedMembers &#40;MDX&#41;](../mdx/stripcalculatedmembers-mdx.md)|Returns a set generated by removing calculated members from a specified set.|  
+|[StrToSet &#40;MDX&#41;](../mdx/strtoset-mdx.md)|Returns the set specified by an MDX–formatted string.|  
+|[Subset &#40;MDX&#41;](../mdx/subset-mdx.md)|Returns a subset of tuples from a specified set.|  
+|[Tail &#40;MDX&#41;](../mdx/tail-mdx.md)|Returns a subset from the end of a set.|  
+|[ToggleDrillState &#40;MDX&#41;](../mdx/toggledrillstate-mdx.md)|Toggles the drill state of members.|  
+|[TopCount &#40;MDX&#41;](../mdx/topcount-mdx.md)|Sorts a set in descending order and returns the specified number of elements with the highest values.|  
+|[TopPercent &#40;MDX&#41;](../mdx/toppercent-mdx.md)|Sorts a set in descending order, and returns a set of tuples with the highest values whose cumulative total is equal to or less than a specified percentage.|  
+|[TopSum &#40;MDX&#41;](../mdx/topsum-mdx.md)|Sorts a set and returns the topmost elements whose cumulative total is at least a specified value.|  
+|[Union  &#40;MDX&#41;](../mdx/union-mdx.md)|Returns the union of two sets, optionally retaining duplicates.|  
+|[Unorder &#40;MDX&#41;](../mdx/unorder-mdx.md)|Removes any enforced ordering from a specified set.|  
+|[VisualTotals &#40;MDX&#41;](../mdx/visualtotals-mdx.md)|Returns a set generated by dynamically totaling child members in a specified set, optionally using a pattern for the name of the parent member in the resulting cellset.|  
+|[Wtd &#40;MDX&#41;](../mdx/wtd-mdx.md)|Returns a set of sibling members from the same level as a given member, starting with the first sibling and ending with the given member, as constrained by the Week level in the Time dimension.|  
+|[Ytd &#40;MDX&#41;](../mdx/ytd-mdx.md)|Returns a set of sibling members from the same level as a given member, starting with the first sibling and ending with the given member, as constrained by the *Year* level in the Time dimension.|  
   
-## <a name="string-functions"></a>Funciones de cadena  
+## <a name="string-functions"></a>String Functions  
   
-|Función|Description|  
+|Function|Description|  
 |--------------|-----------------|  
-|[CalculationPassValue &#40;MDX&#41;](../mdx/calculationpassvalue-mdx.md)|Devuelve el valor de una expresión MDX evaluada sobre el paso de cálculo especificado de un cubo.|  
-|[CoalesceEmpty &#40; MDX &#41;](../mdx/coalesceempty-mdx.md)|Fusiona en un número o en una cadena un valor de celda vacía, y devuelve el valor fusionado.|  
-|[Generar &#40; MDX &#41;](../mdx/generate-mdx.md)|Aplica un conjunto a cada miembro de otro conjunto y a continuación combina los conjuntos resultantes mediante unión. Alternativamente, esta función devuelve una cadena concatenada que se creó evaluando una expresión de cadena en un conjunto.|  
-|[IIf &#40; MDX &#41;](../mdx/iif-mdx.md)|Devuelve uno de los dos valores determinados por una prueba lógica.|  
-|[LookupCube &#40; MDX &#41;](../mdx/lookupcube-mdx.md)|Devuelve el valor de una expresión MDX evaluada sobre otro cubo especificado en la misma base de datos.|  
-|[MemberToStr &#40; MDX &#41;](../mdx/membertostr-mdx.md)|Devuelve una cadena con formato de MDX que corresponde a un miembro especificado.|  
-|[Nombre de &#40; MDX &#41;](../mdx/name-mdx.md)|Devuelve el nombre de una dimensión, jerarquía, nivel o miembro.|  
-|[Propiedades &#40; MDX &#41;](../mdx/properties-mdx.md)|Devuelve una cadena, o un valor con tipos muy marcados, que contiene un valor de propiedad de miembro.|  
-|[SetToStr &#40; MDX &#41;](../mdx/settostr-mdx.md)|Devuelve una cadena con formato de MDX que corresponde a un conjunto especificado.|  
-|[TupleToStr &#40; MDX &#41;](../mdx/tupletostr-mdx.md)|Devuelve una cadena con formato de MDX que corresponde a una tupla especificada.|  
-|[UniqueName &#40; MDX &#41;](../mdx/uniquename-mdx.md)|Devuelve el nombre único de una dimensión, jerarquía, nivel o miembro especificado.|  
-|[Nombre de usuario &#40; MDX &#41;](../mdx/username-mdx.md)|Devuelve el nombre de dominio y el nombre de usuario de la conexión actual.|  
+|[CalculationPassValue &#40;MDX&#41;](../mdx/calculationpassvalue-mdx.md)|Returns the value of an MDX expression evaluated over the specified calculation pass of a cube.|  
+|[CoalesceEmpty &#40;MDX&#41;](../mdx/coalesceempty-mdx.md)|Coalesces an empty cell value to a number or string and returns the coalesced value.|  
+|[Generate &#40;MDX&#41;](../mdx/generate-mdx.md)|Applies a set to each member of another set, and then joins the resulting sets by union. Alternatively, this function returns a concatenated string created by evaluating a string expression over a set.|  
+|[IIf &#40;MDX&#41;](../mdx/iif-mdx.md)|Returns one of two values determined by a logical test.|  
+|[LookupCube &#40;MDX&#41;](../mdx/lookupcube-mdx.md)|Returns the value of an MDX expression evaluated over another specified cube in the same database.|  
+|[MemberToStr &#40;MDX&#41;](../mdx/membertostr-mdx.md)|Returns an MDX–formatted string that corresponds to a specified member.|  
+|[Name &#40;MDX&#41;](../mdx/name-mdx.md)|Returns the name of a dimension, hierarchy, level, or member.|  
+|[Properties &#40;MDX&#41;](../mdx/properties-mdx.md)|Returns a string, or a strongly-typed value, that contains a member property value.|  
+|[SetToStr &#40;MDX&#41;](../mdx/settostr-mdx.md)|Returns an MDX-formatted string of that corresponds to a specified set.|  
+|[TupleToStr &#40;MDX&#41;](../mdx/tupletostr-mdx.md)|Returns an MDX–formatted string that corresponds to specified tuple.|  
+|[UniqueName &#40;MDX&#41;](../mdx/uniquename-mdx.md)|Returns the unique name of a specified dimension, hierarchy, level, or member.|  
+|[UserName &#40;MDX&#41;](../mdx/username-mdx.md)|Returns the domain name and user name of the current connection.|  
   
-## <a name="subcube-functions"></a>Funciones de subcubo  
+## <a name="subcube-functions"></a>Subcube Functions  
   
-|Función|Description|  
+|Function|Description|  
 |--------------|-----------------|  
-|[Esto &#40; MDX &#41;](../mdx/this-mdx.md)|Devuelve el subcubo actual.|  
-|[Deja &#40; MDX &#41;](../mdx/leaves-mdx.md)|Devuelve el conjunto de miembros hoja en la dimensión, miembro o tupla especificada.|  
+|[This &#40;MDX&#41;](../mdx/this-mdx.md)|Returns the current subcube.|  
+|[Leaves &#40;MDX&#41;](../mdx/leaves-mdx.md)|Returns the set of leaf members in the specified dimension, member, or tuple.|  
   
-## <a name="tuple-functions"></a>funciones de tupla  
+## <a name="tuple-functions"></a>Tuple Functions  
   
-|Función|Description|  
+|Function|Description|  
 |--------------|-----------------|  
-|[Actual &#40; MDX &#41;](../mdx/current-mdx.md)|Devuelve la tupla actual de un conjunto durante la iteración.|  
-|[Elemento &#40; Tupla &#41; &#40; MDX &#41;](../mdx/item-tuple-mdx.md)|Devuelve una tupla desde un conjunto.|  
-|[Raíz &#40; MDX &#41;](../mdx/root-mdx.md)|Devuelve una tupla que consta de la **todos los** miembros de cada jerarquía de atributo en un cubo, dimensión o tupla.|  
-|[StrToTuple &#40; MDX &#41;](../mdx/strtotuple-mdx.md)|Devuelve la tupla especificada por una cadena con formato de MDX.|  
+|[Current &#40;MDX&#41;](../mdx/current-mdx.md)|Returns the current tuple from a set during iteration.|  
+|[Item &#40;Tuple&#41; &#40;MDX&#41;](../mdx/item-tuple-mdx.md)|Returns a tuple from a set.|  
+|[Root &#40;MDX&#41;](../mdx/root-mdx.md)|Returns a tuple that consists of the **All** members from each attribute hierarchy in a cube, dimension, or tuple.|  
+|[StrToTuple &#40;MDX&#41;](../mdx/strtotuple-mdx.md)|Returns the tuple specified by an MDX–formatted string.|  
   
-## <a name="other-functions"></a>Otras funciones  
+## <a name="other-functions"></a>Other Functions  
   
-|Función|Description|  
+|Function|Description|  
 |--------------|-----------------|  
-|[Error &#40; MDX &#41;](../mdx/error-mdx.md)|Genera un error y puede, opcionalmente, proporcionar un mensaje de error especificado.|  
+|[Error &#40;MDX&#41;](../mdx/error-mdx.md)|Raises an error, optionally providing a specified error message.|  
   
-## <a name="see-also"></a>Vea también  
- [Referencia del lenguaje MDX &#40; MDX &#41;](../mdx/mdx-language-reference-mdx.md)  
+## <a name="see-also"></a>See Also  
+ [MDX Language Reference &#40;MDX&#41;](../mdx/mdx-language-reference-mdx.md)  
   
   

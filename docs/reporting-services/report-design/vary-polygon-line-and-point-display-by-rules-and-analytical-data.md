@@ -121,7 +121,7 @@ ms.lasthandoff: 05/03/2018
   
  Para controlar dónde aparece una leyenda, utilice el cuadro de diálogo Propiedades de la leyenda a fin de especificar una posición en relación a la ventanilla del mapa. Para más información, vea [Cambiar leyendas de mapa, escala de colores y reglas asociadas &#40;Generador de informes y SSRS&#41;](../../reporting-services/report-design/change-map-legends-color-scale-and-associated-rules-report-builder-and-ssrs.md).  
   
- Las leyendas se expanden automáticamente para mostrar el título o el texto. Para dar formato al texto de los elementos de leyenda, use palabras clave y formatos personalizados de leyenda de mapa. Para más información, consulte [To change the format of content in a legend](../../reporting-services/report-design/change-map-legends-color-scale-and-associated-rules-report-builder-and-ssrs.md#ChangeFormatItems).  
+ Las leyendas se expanden automáticamente para mostrar el título o el texto. Para dar formato al texto de los elementos de leyenda, use palabras clave y formatos personalizados de leyenda de mapa. Para más información, consulte [Cambiar el formato del contenido de una leyenda](../../reporting-services/report-design/change-map-legends-color-scale-and-associated-rules-report-builder-and-ssrs.md#ChangeFormatItems).  
   
  En las tablas siguientes se muestran ejemplos de distintos formatos que puede usar.  
   

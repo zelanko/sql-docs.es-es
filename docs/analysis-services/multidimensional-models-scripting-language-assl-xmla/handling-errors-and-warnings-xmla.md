@@ -4,16 +4,16 @@ ms.date: 05/02/2018
 ms.prod: sql
 ms.technology: analysis-services
 ms.component: xmla
-ms.topic: article
+ms.topic: conceptual
 ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: de925e6bb83f7219ec1bd453f47d63a3fb3624a1
-ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
-ms.translationtype: MT
+ms.openlocfilehash: e86596352228e28aebcd2dd52b7942ed76f89d72
+ms.sourcegitcommit: 38f8824abb6760a9dc6953f10a6c91f97fa48432
+ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 05/10/2018
 ---
 # <a name="handling-errors-and-warnings-xmla"></a>Controlar errores y advertencias (XMLA)
   Control de errores es necesario cuando un documento de XML for Analysis (XMLA) [Discover](../../analysis-services/xmla/xml-elements-methods-discover.md) o [Execute](../../analysis-services/xmla/xml-elements-methods-execute.md) llamada al método no se ejecuta, se ejecuta correctamente, pero genera errores o advertencias, o se ejecuta correctamente pero devuelve resultados que contienen errores.  

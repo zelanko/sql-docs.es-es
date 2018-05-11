@@ -4,16 +4,16 @@ ms.date: 05/02/2018
 ms.prod: sql
 ms.technology: analysis-services
 ms.component: olap
-ms.topic: article
+ms.topic: conceptual
 ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: 71bc0c4663cb33b57408e6f79ddd35dfa1c71438
-ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
-ms.translationtype: MT
+ms.openlocfilehash: 5ba8e337ea864dcd8e2a556cc44b985e2286b857
+ms.sourcegitcommit: 38f8824abb6760a9dc6953f10a6c91f97fa48432
+ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 05/10/2018
 ---
 # <a name="partitions---write-enabled-partitions"></a>Particiones: particiones habilitadas para escritura
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
@@ -32,7 +32,7 @@ ms.lasthandoff: 05/03/2018
  Los cambios realizados en celdas hoja y no hoja se controlan de manera diferente. Una celda hoja representa una intersección de una medida y un miembro hoja de cada dimensión a la que hace referencia el grupo de medida. El valor de una celda hoja se toma directamente de la tabla de hechos y no puede dividirse mediante la obtención de detalles. Si un cubo o alguna partición están habilitados para escritura, se pueden realizar cambios en una celda hoja. En una celda no hoja solo pueden realizarse cambios si la aplicación cliente proporciona una forma de distribuir los cambios entre las celdas hoja que forman la celda no hoja. Este proceso, denominado asignación, se administra mediante la instrucción UPDATE CUBE en expresiones multidimensionales (MDX). Los desarrolladores de Business Intelligence pueden utilizar la instrucción UPDATE CUBE para incluir la funcionalidad de asignación. Para obtener más información, consulte [instrucción UPDATE CUBE &#40;MDX&#41;](../../mdx/mdx-data-manipulation-update-cube.md).  
   
 > [!IMPORTANT]  
->  Si las celdas actualizadas no se superponen, se puede utilizar la propiedad de la cadena de conexión **Update Isolation Level** para mejorar el rendimiento de UPDATE CUBE. Para más información, vea <xref:Microsoft.AnalysisServices.AdomdClient.AdomdConnection.ConnectionString%2A>.  
+>  Si las celdas actualizadas no se superponen, se puede utilizar la propiedad de la cadena de conexión **Update Isolation Level** para mejorar el rendimiento de UPDATE CUBE. Para obtener más información, consulta <xref:Microsoft.AnalysisServices.AdomdClient.AdomdConnection.ConnectionString%2A>.  
   
  Independientemente de que la aplicación cliente distribuya los cambios realizados en las celdas no hoja, siempre que se evalúen consultas, los cambios de la tabla de reescritura se aplican tanto a las celdas hoja como no hoja, de manera que los usuarios corporativos puedan ver los efectos de los cambios en todo el cubo.  
   

@@ -4,16 +4,16 @@ ms.date: 05/02/2018
 ms.prod: sql
 ms.technology: analysis-services
 ms.component: adomd
-ms.topic: article
+ms.topic: conceptual
 ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: 482de22cc72820d90d9e1cb0fa96028d2ea1c702
-ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
-ms.translationtype: MT
+ms.openlocfilehash: bf3cc03d9f3b1fba2a88e7bdf3468bc0314dd9fd
+ms.sourcegitcommit: 38f8824abb6760a9dc6953f10a6c91f97fa48432
+ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 05/10/2018
 ---
 # <a name="retrieving-metadata---working-with-schema-rowsets"></a>Recuperar metadatos: trabajar con conjuntos de filas de esquema
   Si necesita más metadatos de los que hay disponibles en el modelo de objetos ADOMD.NET, ADOMD.NET proporciona la capacidad de recuperar toda la variedad disponible de conjuntos de filas de esquema de XML for Analysis (XMLA), OLE DB, OLE DB para OLAP y OLE DB para minería de datos:  

@@ -1,6 +1,6 @@
 ---
-title: Introducción al modelo de objetos tabulares (TOM) de Analysis Services AMO | Documentos de Microsoft
-ms.date: 05/07/2018
+title: Descripción de modelo de objetos Tabular (TOM) de Analysis Services AMO | Documentos de Microsoft
+ms.date: 05/08/2018
 ms.prod: sql
 ms.technology: analysis-services
 ms.component: tabular-models
@@ -9,13 +9,13 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: 03171e57bc57e3caa3d6cc475fd1fee4910cdf4d
-ms.sourcegitcommit: 1aedef909f91dc88dc741748f36eabce3a04b2b1
+ms.openlocfilehash: 6c5f4a9e8c7190801bc6f0ef7b19833f1921ade5
+ms.sourcegitcommit: 38f8824abb6760a9dc6953f10a6c91f97fa48432
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/08/2018
+ms.lasthandoff: 05/10/2018
 ---
-# <a name="introduction-to-the-tabular-object-model-tom-in-analysis-services-amo"></a>Introducción al modelo de objetos Tabular (TOM) en Analysis Services AMO
+# <a name="understanding-tabular-object-model-tom-in-analysis-services-amo"></a>Comprender el modelo de objetos Tabular (TOM) en Analysis Services AMO
 [!INCLUDE[ssas-appliesto-sqlas-aas](../../includes/ssas-appliesto-sqlas-aas.md)]
   El modelo de objetos tabulares (TOM) es una extensión de la biblioteca de cliente de objeto de administración de servicios de análisis (AMO), creada para admitir escenarios de programación para los modelos tabulares que se integró en el nivel de compatibilidad 1200 y versiones posterior. Al igual que con AMO, TOM ofrece un mecanismo de programación para controlar funciones administrativas como la creación de modelos, importar y actualizar los datos y asignación de roles y permisos.  
   

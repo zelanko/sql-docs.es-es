@@ -4,16 +4,16 @@ ms.date: 05/02/2018
 ms.prod: sql
 ms.technology: analysis-services
 ms.component: adomd
-ms.topic: article
+ms.topic: conceptual
 ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: c754b19a1cce0e3fb68a852c2cfdb3fb98617a65
-ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
-ms.translationtype: MT
+ms.openlocfilehash: 792017600f15ebbfab4c0ee0e4af78c0404340d7
+ms.sourcegitcommit: 38f8824abb6760a9dc6953f10a6c91f97fa48432
+ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 05/10/2018
 ---
 # <a name="adomdnet-client-functionality"></a>Funcionalidad de cliente de ADOMD.NET
   ADOMD.NET actúa como un puente entre una aplicación y un origen de datos, como ocurre con otros proveedores de datos de .NET Framework [!INCLUDE[msCoName](../../includes/msconame-md.md)]. Sin embargo, ADOMD.NET, a diferencia de otros proveedores de datos de .NET Framework en ese ADOMD.NET, funciona con datos analíticos. Para funcionar con datos analíticos, ADOMD.NET admite una funcionalidad muy distinta de la funcionalidad de otros proveedores de datos de .NET Framework. ADOMD.NET no solo permite recuperar datos, sino también metadatos y cambiar la estructura del almacén de datos analíticos:  

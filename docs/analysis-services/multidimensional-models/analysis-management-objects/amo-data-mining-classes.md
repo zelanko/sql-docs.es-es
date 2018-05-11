@@ -4,16 +4,16 @@ ms.date: 05/02/2018
 ms.prod: sql
 ms.technology: analysis-services
 ms.component: amo
-ms.topic: article
+ms.topic: conceptual
 ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: ac98a1bb199a01cff155157031535722c262ed59
-ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
-ms.translationtype: MT
+ms.openlocfilehash: 23ab7f4e460834ba0fbf0cadd374c963a3a9306d
+ms.sourcegitcommit: 38f8824abb6760a9dc6953f10a6c91f97fa48432
+ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 05/10/2018
 ---
 # <a name="amo-data-mining-classes"></a>Clases de minería de datos de AMO
   Las clases de minería de datos ayudan a crear, modificar, eliminar y procesar objetos de minería de datos. Trabajar con objetos de minería de datos incluye crear estructuras y modelos de minería de datos y procesar los modelos.  

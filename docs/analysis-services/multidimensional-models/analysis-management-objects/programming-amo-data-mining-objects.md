@@ -4,16 +4,16 @@ ms.date: 05/02/2018
 ms.prod: sql
 ms.technology: analysis-services
 ms.component: amo
-ms.topic: article
+ms.topic: conceptual
 ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: 9ba64d48fe93ea047210c00717d84cde0e4dcae9
-ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
-ms.translationtype: MT
+ms.openlocfilehash: 2c0cd9ff11f2d2bc12a823c4696690ce9a7a8c44
+ms.sourcegitcommit: 38f8824abb6760a9dc6953f10a6c91f97fa48432
+ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 05/10/2018
 ---
 # <a name="programming-amo-data-mining-objects"></a>Programar objetos de minería de datos con AMO
   La programación de objetos de minería de datos mediante AMO es un proceso sencillo y directo. El primer paso consiste en crear un modelo de estructura de datos que admita el proyecto de minería de datos. A continuación, se crea el modelo de minería de datos que admite el algoritmo de minería de datos que desea utilizar para predecir o buscar las relaciones ocultas subyacentes a los datos. Una vez creado el proyecto de minería de datos (incluidos la estructura y los algoritmos), puede procesar los modelos de minería de datos para obtener los modelos entrenados que utilizará más adelante al realizar consultas y predicciones desde la aplicación cliente.  

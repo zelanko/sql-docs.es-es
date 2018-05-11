@@ -25,11 +25,11 @@ caps.latest.revision: 14
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: b1bc7964fafb35a4da03f8d5414f93835b49ed17
-ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
+ms.openlocfilehash: 5c4e752c1d8c88a4b0f9dadc129213a6f2ac8951
+ms.sourcegitcommit: 38f8824abb6760a9dc6953f10a6c91f97fa48432
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 05/10/2018
 ---
 # <a name="managedbackupfnbackupdbconfig-transact-sql"></a>managed_backup.fn_backup_db_config (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md.md)]
@@ -60,7 +60,7 @@ managed_backup.fn_backup_db_config (‘database_name’ | ‘’ | NULL)
 |is_dropped|BIT|El valor 1 indica que se trata de una base de datos quitada.|  
 |credential_name|SYSNAME|Nombre de la credencial SQL que se usa para autenticarse en la cuenta de almacenamiento. El valor NULL indica que no se ha establecido ninguna credencial de SQL.|  
 |retention_days|INT|Período de retención actual, en días. El valor NULL indica que [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)] nunca se configuró para esta base de datos.|  
-|is_smart_backup_enabled|INT|Indica si [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)] está habilitada actualmente para esta base de datos. El valor 1 indica que [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)] está habilitada y el valor 0 indica que [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)] está deshabilitada para esta base de datos.|  
+|is_managed_backup_enabled|INT|Indica si [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)] está habilitada actualmente para esta base de datos. El valor 1 indica que [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)] está habilitada y el valor 0 indica que [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)] está deshabilitada para esta base de datos.|  
 |storage_url|NVARCHAR (1024)|Dirección URL de la cuenta de almacenamiento.|  
 |Encryption_algorithm|NCHAR (20)|Devuelve el algoritmo de cifrado actual que usar cuando se cifra la copia de seguridad.|  
 |Encryptor_type|NCHAR(15)|Devuelve el valor del sistema de cifrado: certificado o clave asimétrica.|  

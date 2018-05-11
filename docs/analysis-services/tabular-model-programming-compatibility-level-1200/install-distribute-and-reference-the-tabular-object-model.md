@@ -1,6 +1,5 @@
 ---
 title: Instalar, distribuir y hacer referencia al modelo de objeto Tabular | Documentos de Microsoft
-ms.custom: ''
 ms.date: 05/07/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -10,11 +9,11 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: 6d920f5d2691b3d3dd3ce3926e1194a4bb8e37d2
-ms.sourcegitcommit: 1aedef909f91dc88dc741748f36eabce3a04b2b1
+ms.openlocfilehash: 81f3b12aeb7cb6a185c0ee9b1152d75f3451c4b0
+ms.sourcegitcommit: 38f8824abb6760a9dc6953f10a6c91f97fa48432
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/08/2018
+ms.lasthandoff: 05/10/2018
 ---
 # <a name="install-distribute-and-reference-the-tabular-object-model"></a>Instalar, distribuir y hacer referencia al modelo de objeto Tabular
 [!INCLUDE[ssas-appliesto-sqlas-aas](../../includes/ssas-appliesto-sqlas-aas.md)]

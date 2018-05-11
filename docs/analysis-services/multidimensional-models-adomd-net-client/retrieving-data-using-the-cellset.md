@@ -4,16 +4,16 @@ ms.date: 05/02/2018
 ms.prod: sql
 ms.technology: analysis-services
 ms.component: adomd
-ms.topic: article
+ms.topic: conceptual
 ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: 01fee3784b60b6b36c8e1ad5b187fb6786c168dc
-ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
-ms.translationtype: MT
+ms.openlocfilehash: 9954141f2f4c69d42be879960ea183fc11d4e162
+ms.sourcegitcommit: 38f8824abb6760a9dc6953f10a6c91f97fa48432
+ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 05/10/2018
 ---
 # <a name="retrieving-data-using-the-cellset"></a>Recuperar datos mediante el objeto CellSet
   Al recuperar datos analíticos, el objeto <xref:Microsoft.AnalysisServices.AdomdClient.CellSet> proporciona la máxima interactividad y flexibilidad. El objeto <xref:Microsoft.AnalysisServices.AdomdClient.CellSet> es una caché de datos y metadatos jerárquicos en memoria que conserva las dimensiones originales de los datos. El objeto <xref:Microsoft.AnalysisServices.AdomdClient.CellSet> también se puede recorrer en estado conectado o desconectado. Debido a la posibilidad de utilizarlo sin conexión, el objeto <xref:Microsoft.AnalysisServices.AdomdClient.CellSet> se puede usar para ver datos y metadatos en un orden cualquiera y proporciona el modelo de objetos más completo para la recuperación de datos. Dicha capacidad de uso sin conexión también hace que el objeto <xref:Microsoft.AnalysisServices.AdomdClient.CellSet> tenga la máxima sobrecarga y sea el modelo de objetos de recuperación de datos de ADOMD.NET más lento de rellenar.  
@@ -46,7 +46,7 @@ ms.lasthandoff: 05/03/2018
  Al cargar XML devuelto por una consulta anterior, puede utilizar el objeto <xref:Microsoft.AnalysisServices.AdomdClient.CellSet> para proporcionar un completo método de exploración de datos analíticos sin necesidad de utilizar una conexión activa.  
   
 > [!NOTE]  
->  En estado desconectado, no están disponibles todas las propiedades de los objetos disponibles en el objeto <xref:Microsoft.AnalysisServices.AdomdClient.CellSet>. Para obtener más información, consulte <xref:Microsoft.AnalysisServices.AdomdClient.CellSet.LoadXml%2A>.  
+>  En estado desconectado, no están disponibles todas las propiedades de los objetos disponibles en el objeto <xref:Microsoft.AnalysisServices.AdomdClient.CellSet>. Para obtener más información, consulta <xref:Microsoft.AnalysisServices.AdomdClient.CellSet.LoadXml%2A>.  
   
 ### <a name="example-of-retrieving-data-in-a-disconnected-state"></a>Ejemplo de recuperación de datos en estado desconectado  
  El ejemplo siguiente es similar al ejemplo de metadatos y datos que se muestra anteriormente en este tema. Sin embargo, el comando en el siguiente ejemplo se ejecuta con una llamada a <xref:Microsoft.AnalysisServices.AdomdClient.AdomdCommand.ExecuteXmlReader%2A>, y el resultado se devuelve como un **System.Xml.XmlReader**. En el ejemplo, a continuación, rellena la <xref:Microsoft.AnalysisServices.AdomdClient.CellSet> objeto mediante esta **System.Xml.XmlReader** con el <xref:Microsoft.AnalysisServices.AdomdClient.CellSet.LoadXml%2A> método. Aunque este ejemplo se carga el **System.Xml.XmlReader** inmediatamente, puede almacenar en caché el XML que está incluido en el lector en un disco duro o transportar dichos datos a otra aplicación a través de cualquier medio antes de cargar los datos en un conjunto de celdas.  

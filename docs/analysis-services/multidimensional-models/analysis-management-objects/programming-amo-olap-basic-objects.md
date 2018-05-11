@@ -4,16 +4,16 @@ ms.date: 05/02/2018
 ms.prod: sql
 ms.technology: analysis-services
 ms.component: amo
-ms.topic: article
+ms.topic: conceptual
 ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: 6df874fb1819f2360991d19557090aa30dec1a42
-ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
-ms.translationtype: MT
+ms.openlocfilehash: b75256253cc9b40c73705fbbb6d74fd92374bd66
+ms.sourcegitcommit: 38f8824abb6760a9dc6953f10a6c91f97fa48432
+ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 05/10/2018
 ---
 # <a name="programming-amo-olap-basic-objects"></a>Programar objetos básicos OLAP en AMO
   La creación de objetos de [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] es un proceso sencillo y directo, pero requiere prestar atención a los detalles. En este tema se explican los detalles de la programación de objetos básicos OLAP. Este tema contiene las siguientes secciones:  

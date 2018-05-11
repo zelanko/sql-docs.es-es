@@ -7,18 +7,13 @@ ms.topic: conceptual
 author: HeidiSteen
 ms.author: heidist
 manager: cgronlun
-ms.openlocfilehash: bafe2d757a4469cd2c294da96b427b7be80060b2
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
+ms.openlocfilehash: f46706968d09d41aaca7f28a64a1f004152237ce
+ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/10/2018
 ---
 # <a name="how-to-create-a-resource-pool-for-python"></a>Cómo crear un grupo de recursos para Python
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
 
 Esta sección está en desarrollo.
-
-> [!NOTE]
-> Compatibilidad con Python es una característica nueva de SQL Server 2017 y está en versión preliminar. Busque información más pronto.
-
-En general, puede supervisar los scripts externos, incluida una que se ejecutase Python, utilizando el mismo marco de trabajo que se proporcionó para la regulación de recursos de scripts de R en SQL Server 2016. Para obtener más información, consulte [regulador de recursos para R](../r/resource-governance-for-r-services.md).

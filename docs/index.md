@@ -8,11 +8,11 @@ ms.author: craigg
 ms.topic: hub-page
 ms.prod: sql
 ms.technology: install
-ms.openlocfilehash: dcb91e3b5e4f59da44bf76d618dc17bb93abb6bf
-ms.sourcegitcommit: 9f61aa4d556bb5726b1e49d619ae2bbccf1590e3
+ms.openlocfilehash: a9e466cc1e88300164036aa831e8cbe2e2c45e6e
+ms.sourcegitcommit: 1aedef909f91dc88dc741748f36eabce3a04b2b1
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/29/2018
+ms.lasthandoff: 05/08/2018
 ---
 <div id="main" class="v2">
     <div class="container">
@@ -74,6 +74,7 @@ ms.lasthandoff: 04/29/2018
                                                 <ul class="noBullet">
                                                     <li><a class="barLink" href="/sql/connect/homepage-sql-connection-programming">Conexión con aplicaciones cliente</a></li>
                                                     <li><a class="barLink" href="/sql/relational-databases/database-features">Conceptos sobre las bases de datos relacionales</a></li>
+                                                    <li><a class="barLink" href="/sql/relational-databases/security">Seguridad SQL</a></li>
                                                 </ul>
                                                 <h4>Herramientas</h4>
                                                 <ul class="noBullet">
@@ -88,11 +89,11 @@ ms.lasthandoff: 04/29/2018
                                                     <li><a class="barLink" href="/sql/powershell/sql-server-powershell">PowerShell</a></li>
                                                     <li><a class="barLink" href="/sql/xquery/xquery-language-reference-sql-server">XQuery</a></li>
                                                 </ul>
-                                                <h4>Ejemplos en GitHub</h4>
+                                                <h4>Ejemplos</h4>
                                                 <ul class="noBullet">
-                                                    <li><a class="barLink" href="https://github.com/Microsoft/sql-server-samples/tree/master/samples">Ejemplos de código</a></li>
-                                                    <li><a class="barLink" href="https://github.com/Microsoft/sql-server-samples/releases/tag/wide-world-importers-v1.0">Wide World Importers</a></li>
-                                                    <li><a class="barLink" href="https://github.com/Microsoft/sql-server-samples/releases/tag/adventureworks">AdventureWorks</a></li>
+                                                    <li><a class="barLink" href="https://github.com/Microsoft/sql-server-samples/tree/master/samples">Ejemplos de código en GitHub</a></li>
+                                                    <li><a class="barLink" href="https://docs.microsoft.com/en-us/sql/samples/wide-world-importers-what-is?view=sql-server-2017">Base de datos de Wide World Importers</a></li>
+                                                    <li><a class="barLink" href="https://docs.microsoft.com/sql/samples/sql-samples-where-are?view=sql-server-2017">Base de datos de AdventureWorks</a></li>
                                                 </ul>
                                             </div>
                                         </div>
@@ -113,10 +114,6 @@ ms.lasthandoff: 04/29/2018
                                                     <li><a class="barLink" href="/azure/analysis-services/">Azure Analysis Services</a></li> 
                                                     <li><a class="barLink" href="/azure/stream-analytics/">Azure Stream Analytics</a></li>
                                                     <li><a class="barLink" href="/azure/data-lake-analytics/">Azure Data Lake Analytics</a></li>
-                                                    <li><a class="barLink" href="https://azuremarketplace.microsoft.com/en-us/marketplace/apps/microsoft-ads.standard-data-science-vm">Data Science Virtual Machine</a></li>
-                                                </ul>
-                                                <h4>Aprendizaje automático</h4>
-                                                <ul class="noBullet">
                                                     <li><a class="barLink" href="https://docs.microsoft.com/azure/machine-learning/">Azure Machine Learning</a></li> 
                                                     <li><a class="barLink" href="https://docs.microsoft.com/sql/advanced-analytics/r/r-services">Servicios de aprendizaje de máquina SQL Server</a></li>
                                                     <li><a class="barLink" href="https://docs.microsoft.com/sql/advanced-analytics/r/r-server-standalone">Machine Learning Server (independiente)</a></li>

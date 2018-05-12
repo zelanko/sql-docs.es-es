@@ -8,8 +8,8 @@ ms.topic: conceptual
 author: HeidiSteen
 ms.author: heidist
 manager: cgronlun
-ms.openlocfilehash: 716fbd8a105164d40bfa6b3e67d126067174dc5a
-ms.sourcegitcommit: 38f8824abb6760a9dc6953f10a6c91f97fa48432
+ms.openlocfilehash: f58eb498843c259c4bc9ac9a5d453456dac21b54
+ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
 ms.translationtype: HT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/10/2018
@@ -98,13 +98,23 @@ En cuanto a la experiencia del usuario, la tecnología y cómo trabajar con la s
 
 Configuración de aprendizaje del equipo de Microsoft detecta las características existentes y la versión de SQL Server y se invoca una utilidad denominada SqlBindR.exe para cambiar el enlace. Internamente, SqlBindR está enlazado con el programa de instalación y utilizar indirectamente. Más adelante, puede llamar a SqlBindR directamente desde la línea de comandos para ejecutar opciones específicas.
 
-1. Compruebe que el servidor cumple los requisitos de versión mínima. Para SQL Server 2016 R Services, el valor mínimo es [Service Pack 1](https://www.microsoft.com/download/details.aspx?id=54276) y [CU3](https://support.microsoft.com/help/4019916/cumulative-update-3-for-sql-server-2016-sp1). En SSMS, ejecute `SELECT @@version` para devolver información de versión del servidor. 
+1. En SSMS, ejecute `SELECT @@version` para comprobar que el servidor cumple los requisitos de versión mínima. 
 
-1. Comprobar la versión de R y RevoScaleR para confirmar que son inferiores a los que planea sustituirlas por las versiones existentes. Para SQL Server 2016 R Services, paquete de la Base de R es 3.2.2 y RevoScaleR es 8.0.3.
+   Para SQL Server 2016 R Services, el valor mínimo es [Service Pack 1](https://www.microsoft.com/download/details.aspx?id=54276) y [CU3](https://support.microsoft.com/help/4019916/cumulative-update-3-for-sql-server-2016-sp1).
 
-    + Vaya a \Program SQL Server\MSSQL13. MSSQLSERVER\R_SERVICES\bin
-    + Haga doble clic en **R** para abrir la consola.
-    + Para obtener las versiones del paquete, use `library(help="base")` y `library(help="RevoScaleR")`. 
+1. Comprobar la versión de base de R y son inferiores a los que planea reemplácelas con paquetes de RevoScaleR para confirmar las versiones existentes. Para SQL Server 2016 R Services, paquete de la Base de R es 3.2.2 y RevoScaleR es 8.0.3.
+
+    ```SQL
+    EXECUTE sp_execute_external_script
+    @language=N'R'
+    ,@script = N'str(OutputDataSet);
+    packagematrix <- installed.packages();
+    Name <- packagematrix[,1];
+    Version <- packagematrix[,3];
+    OutputDataSet <- data.frame(Name, Version);'
+    , @input_data_1 = N''
+    WITH RESULT SETS ((PackageName nvarchar(250), PackageVersion nvarchar(max) ))
+    ```
 
 1. Descargue Microsoft Server de aprendizaje de máquina en el equipo que tiene la instancia que desea actualizar. Se recomienda la [última versión](https://docs.microsoft.com/machine-learning-server/install/machine-learning-server-windows-install#download-machine-learning-server-installer).
 
@@ -138,15 +148,23 @@ Si se produce un error en la actualización, compruebe [códigos de error SqlBin
 
 Volver a comprobar la versión de R y RevoScaleR para confirmar que tiene las versiones más recientes. Use la consola de R que se distribuye con los paquetes de R en la instancia del motor de base de datos para obtener información de paquete:
 
-+ Vaya a \Program SQL Server\MSSQL13. MSSQLSERVER\R_SERVICES\bin
-+ Haga doble clic en **R** para abrir la consola.
-+ Para obtener las versiones del paquete, use `library(help="base")` y `library(help="RevoScaleR")`. 
+```SQL
+EXECUTE sp_execute_external_script
+@language=N'R'
+,@script = N'str(OutputDataSet);
+packagematrix <- installed.packages();
+Name <- packagematrix[,1];
+Version <- packagematrix[,3];
+OutputDataSet <- data.frame(Name, Version);'
+, @input_data_1 = N''
+WITH RESULT SETS ((PackageName nvarchar(250), PackageVersion nvarchar(max) ))
+```
 
 Para SQL Server 2016 R Services enlazado a 9.3 de servidor de aprendizaje de máquina, el paquete de R Base debe estar 3.4.1, RevoScaleR debe ser 9.3 y también debe tener MicrosoftML 9.3. 
 
 Si ha agregado los modelos previamente entrenados, los modelos se incrustan en la biblioteca de MicrosoftML y se puede llamar a través de funciones de MicrosoftML. Para obtener más información, consulte [ejemplos de R para MicrosoftML](https://docs.microsoft.com/machine-learning-server/r/sample-microsoftml).
 
-## <a name="offline-no-internet-access"></a>Sin conexión (sin acceso a internet)
+## <a name="offline-binding-no-internet-access"></a>Enlace sin conexión (sin acceso a internet)
 
 Para los sistemas sin conectividad a internet, puede descargar los archivos .cab y de instalador en un equipo conectado a internet y, a continuación, transferir archivos al servidor aislado. 
 
@@ -168,7 +186,7 @@ Las instrucciones siguientes explican cómo colocar los archivos de una instalac
 
 1. En el servidor, escriba `%temp%` en el comando de ejecución para obtener la ubicación física del directorio temporal. La ruta de acceso física varía según el equipo, pero suele ser `C:\Users\<your-user-name>\AppData\Local\Temp`.
 
-1. Place.cab archivos en la carpeta % temp %.
+1. Coloque los archivos .cab en la carpeta % temp %.
 
 1. Descomprima al instalador.
 
@@ -285,7 +303,7 @@ Si encuentra carpetas con un nombre parecido a esto, puede quitar una vez comple
 |*bind*| Actualiza la instancia de SQL Database especificada a la versión más reciente de R Server y garantiza que la instancia obtenga automáticamente las actualizaciones futuras de R Server.|
 |*unbind*|Desinstala la versión más reciente de R Server de la instancia de SQL Database especificada e impide que las actualizaciones futuras de R Server afecten a la instancia.|
 
-< un name = "códigos de error sqlbinder"<a/>
+<a name="sqlbinder-error-codes"><a/>
 
 ### <a name="errors"></a>Errores
 
@@ -299,10 +317,10 @@ La herramienta devuelve los siguientes mensajes de error:
 |Enlazar error 3 | Instancia no válida | Una instancia existe, pero no es válida para el enlace. |
 |Enlazar error 4 | No se puede enlazar | |
 |Enlazar error 5 | Ya está enlazada | Ha ejecutado el comando *bind* , pero la instancia especificada ya está enlazada. |
-|Enlazar error 6 | Error de enlace | Se produjo un error al deshacer el enlace de la instancia. |
+|Enlazar error 6 | Error de enlace | Se produjo un error al deshacer el enlace de la instancia. Este error puede producirse si se ejecuta al instalador MLS sin seleccionar ninguna característica.|
 |Enlace de error 7 | No está enlazado | La instancia del motor de base de datos tiene R Services o servicios de aprendizaje de máquina de SQL Server. La instancia no está enlazada al servidor de aprendizaje de máquina de Microsoft. |
 |Enlazar error 8 | Deshacer el enlace de error | Se produjo un error al deshacer el enlace de la instancia. |
-|Enlazar error 9 | No se encontraron instancias | No se encontraron instancias en este equipo. |
+|Enlazar error 9 | No se encontraron instancias | No se encontró ninguna instancia del motor de base de datos en este equipo. |
 
 
 ## <a name="see-also"></a>Vea también

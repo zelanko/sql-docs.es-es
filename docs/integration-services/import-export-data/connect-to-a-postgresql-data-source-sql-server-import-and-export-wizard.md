@@ -1,28 +1,26 @@
 ---
-title: "Conectarse a un origen de datos PostgreSQL (Asistente para importación y exportación de SQL Server) | Microsoft Docs"
-ms.custom: 
+title: Conectarse a un origen de datos PostgreSQL (Asistente para importación y exportación de SQL Server) | Microsoft Docs
+ms.custom: ''
 ms.date: 03/16/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: integration-services
-ms.service: 
 ms.component: import-export-data
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - integration-services
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.tgt_pltfrm: ''
+ms.topic: conceptual
 ms.assetid: b7a75a72-b267-444f-9eb8-d23eb333fc35
-caps.latest.revision: 
+caps.latest.revision: 11
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.workload: On Demand
-ms.openlocfilehash: 5f57bd2510c80e676a979c691b1e3d43707c6885
-ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
+ms.openlocfilehash: bc6221ec311e5836f94ef5fd2d865f1fc91e0588
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/25/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="connect-to-a-postgresql-data-source-sql-server-import-and-export-wizard"></a>Conectarse a un origen de datos PostgreSQL (Asistente para importación y exportación de SQL Server)
 En este tema se muestra cómo conectarse a un origen de datos **PostgreSQL** desde la página **Elegir un origen de datos** o **Elegir un destino** del asistente para importación y exportación de SQL Server. 
@@ -38,7 +36,7 @@ Ejecute Stack Builder para agregar el controlador de ODBC de PostgreSQL (psqlODB
 ![Instalar ODBC de PostgreSQL con Stack Builder](../../integration-services/import-export-data/media/install-postgresql-odbc-with-stack-builder.png)
 
 ### <a name="or-download-the-latest-odbc-driver"></a>O bien, descargar el controlador más reciente de ODBC
-También tiene la posibilidad de descargar el instalador de Windows para la versión más reciente del controlador ODBC de PostgreSQL (psqlODBC) directamente desde este sitio FTP: [https://www.postgresql.org/ftp/odbc/versions/msi/](https://www.postgresql.org/ftp/odbc/versions/msi/). Extraiga los archivos del archivo .zip y ejecute el archivo .msi.
+También puede descargar el instalador de Windows para la versión más reciente del controlador ODBC de PostgreSQL (psqlODBC) directamente desde este sitio FTP: [https://www.postgresql.org/ftp/odbc/versions/msi/](https://www.postgresql.org/ftp/odbc/versions/msi/). Extraiga los archivos del archivo .zip y ejecute el archivo .msi.
 
 ## <a name="connect-to-postgresql-with-the-postgresql-odbc-driver-psqlodbc"></a>Conectarse a PostgreSQL con el controlador ODBC de PostgreSQL (psqlODBC)
 Los controladores ODBC no aparecen en la lista desplegable de los orígenes de datos. Para conectarse con un controlador ODBC, empiece seleccionando el **proveedor de datos de .NET Framework para ODBC** como origen de datos en la página **Elegir un origen de datos** o **Elegir un destino**. Este proveedor actúa como un contenedor para el controlador ODBC.

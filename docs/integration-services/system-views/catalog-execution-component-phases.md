@@ -4,7 +4,6 @@ ms.custom: ''
 ms.date: 03/04/2017
 ms.prod: sql
 ms.prod_service: integration-services
-ms.service: ''
 ms.component: system-views
 ms.reviewer: ''
 ms.suite: sql
@@ -17,12 +16,11 @@ caps.latest.revision: 8
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: f0d2adcbca51ab471f3c9b488adea2e4d82aa1dc
-ms.sourcegitcommit: a85a46312acf8b5a59a8a900310cf088369c4150
+ms.openlocfilehash: ec2754c1a9ced1ada44d4d461e8f3e76c4bc6c66
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/26/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="catalogexecutioncomponentphases"></a>catalog.execution_component_phases
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
@@ -48,7 +46,7 @@ ms.lasthandoff: 04/26/2018
  En el ejemplo siguiente se usa la vista catalog.execution_component_phases para averiguar la cantidad total de tiempo que invierte un paquete concreto para su ejecución en todas las fases (**active_time**) y el tiempo transcurrido total para el paquete (**total_time**).  
   
 > [!WARNING]  
->  La vista catalog.execution_component_phases proporciona esta información cuando el nivel de registro de la ejecución del paquete se establece en Performance (Rendimiento) o Verbose (Detallado). Para más información, vea [Enable Logging for Package Execution on the SSIS Server](../../integration-services/performance/integration-services-ssis-logging.md#server_logging).  
+>  La vista catalog.execution_component_phases proporciona esta información cuando el nivel de registro de la ejecución del paquete se establece en Performance (Rendimiento) o Verbose (Detallado). Para más información, vea [Habilitar el registro para la ejecución de paquetes en el servidor SSIS](../../integration-services/performance/integration-services-ssis-logging.md#server_logging).  
   
 ```sql
 use SSISDB  

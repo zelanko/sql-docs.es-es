@@ -3,17 +3,17 @@ title: Programación de modelo tabular de nivel de compatibilidad 1200 | Documen
 ms.date: 05/07/2018
 ms.prod: sql
 ms.technology: analysis-services
-ms.component: tabular-models
+ms.custom: tabular-models
 ms.topic: reference
 ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: 336906c81096a6c204b99816b2ede0536a46f68d
-ms.sourcegitcommit: 1aedef909f91dc88dc741748f36eabce3a04b2b1
-ms.translationtype: HT
+ms.openlocfilehash: 8e0bfc84806e44ef05312da9d15d1afaa7dd9754
+ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/08/2018
+ms.lasthandoff: 05/10/2018
 ---
 # <a name="tabular-model-programming-for-compatibility-level-1200-and-higher"></a>Programación de modelo tabulares de 1200 de nivel de compatibilidad y versiones posteriores
 [!INCLUDE[ssas-appliesto-sqlas-aas](../../includes/ssas-appliesto-sqlas-aas.md)]

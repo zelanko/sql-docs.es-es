@@ -1,27 +1,19 @@
 ---
 title: 'Lección tutorial de Analysis Services 11: crear roles | Documentos de Microsoft'
-description: Describe cómo crear roles en el proyecto de tutorial de Analysis Services.
-ms.prod_service: analysis-services, azure-analysis-services
-services: analysis-services
-ms.suite: pro-bi
-documentationcenter: ''
-author: Minewiskan
-manager: kfile
-editor: ''
-tags: ''
-ms.assetid: ''
-ms.service: analysis-services
-ms.devlang: NA
-ms.topic: get-started-article
-ms.tgt_pltfrm: NA
-ms.date: 02/20/2018
+ms.date: 05/08/2018
+ms.prod: sql
+ms.technology: analysis-services
+ms.component: tabular-models
+ms.topic: tutorial
 ms.author: owend
-monikerRange: '>= sql-analysis-services-2017 || = sqlallproducts-allversions'
-ms.openlocfilehash: 3319550ebe39c08d0926eb30d8c8f07ee24df897
-ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.reviewer: owend
+author: minewiskan
+manager: kfiles"
+ms.openlocfilehash: 3a41b55afcbc5ac3c8bb3e87a64708f6806615df
+ms.sourcegitcommit: 38f8824abb6760a9dc6953f10a6c91f97fa48432
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 05/10/2018
 ---
 # <a name="create-roles"></a>Crear roles
 
@@ -68,7 +60,7 @@ Este artículo forma parte de un tutorial de modelado tabular, que se debe compl
   
 1.  En el Administrador de roles, haga clic en **nuevo**.    
   
-2.  Cambiar el nombre de la función para **analista de ventas EE. UU.**.  
+2.  Cambiar el nombre de la función para **analista de ventas EE. UU.**  
   
 3.  Asignar este rol **lectura** permiso.  
   

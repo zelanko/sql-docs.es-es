@@ -1,15 +1,13 @@
 ---
 title: ALTER WORKLOAD GROUP (Transact-SQL) | Microsoft Docs
 ms.custom: ''
-ms.date: 01/04/2018
+ms.date: 04/23/2018
 ms.prod: sql
 ms.prod_service: sql-database
-ms.service: ''
 ms.component: t-sql|statements
 ms.reviewer: ''
 ms.suite: sql
-ms.technology:
-- database-engine
+ms.technology: t-sql
 ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
@@ -21,15 +19,14 @@ helpviewer_keywords:
 - ALTER WORKLOAD GROUP statement
 ms.assetid: 957addce-feb0-4e54-893e-5faca3cd184c
 caps.latest.revision: 56
-author: barbkess
-ms.author: barbkess
+author: edmacauley
+ms.author: edmaca
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: 4bdc49a57b8b864284fa4411ddb0b970bed1c704
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
+ms.openlocfilehash: 32863fbfbc8849cc0561d4aecc4144800b67d523
+ms.sourcegitcommit: d2573a8dec2d4102ce8882ee232cdba080d39628
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/07/2018
 ---
 # <a name="alter-workload-group-transact-sql"></a>ALTER WORKLOAD GROUP (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -108,13 +105,13 @@ ALTER WORKLOAD GROUP { group_name | "default" }
 > De forma predeterminada, Resource Governor no evita que una solicitud continúe si se supera el tiempo máximo. Sin embargo, se generará un evento. Para obtener más información, vea [Clase de eventos Umbral de la CPU superado](../../relational-databases/event-classes/cpu-threshold-exceeded-event-class.md). 
 
 > [!IMPORTANT]
-> A partir de [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)] CU3 y si se usa la [marca de seguimiento 2422](../../t-sql/database-console-commands/dbcc-traceon-trace-flags-transact-sql.md), Resource Governor anula una solicitud cuando se supera el tiempo máximo.
+> A partir de [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] SP2 y [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)] CU3, y si se usa la [marca de seguimiento 2422](../../t-sql/database-console-commands/dbcc-traceon-trace-flags-transact-sql.md), Resource Governor anula una solicitud cuando se supera el tiempo máximo.
   
  REQUEST_MEMORY_GRANT_TIMEOUT_SEC =*value*  
  Especifica el tiempo máximo, en segundos, que una consulta puede esperar hasta que esté disponible la concesión de memoria (memoria de búfer de trabajo).  
   
 > [!NOTE]  
->  Una consulta no tiene por qué generar un error cuando se agota el tiempo de espera para la concesión de memoria. Solo se producirá un error si se ejecutan demasiadas consultas simultáneamente. De lo contrario, es posible que la consulta obtenga la concesión de memoria mínima, lo que reducirá su rendimiento.  
+> Una consulta no tiene por qué generar un error cuando se agota el tiempo de espera para la concesión de memoria. Solo se producirá un error si se ejecutan demasiadas consultas simultáneamente. De lo contrario, es posible que la consulta obtenga la concesión de memoria mínima, lo que reducirá su rendimiento.  
   
  *value* debe ser un entero positivo. El valor predeterminado de *value*, 0, usa un cálculo interno basado en el costo de la consulta para determinar el tiempo máximo.  
   
@@ -122,10 +119,10 @@ ALTER WORKLOAD GROUP { group_name | "default" }
  Especifica el grado máximo de paralelismo (DOP) para las solicitudes paralelas. *value* debe ser 0 o un entero positivo entre 1 y 255. Cuando *value* es 0, el servidor elige el grado máximo de paralelismo. Esta es la configuración predeterminada y recomendada.  
   
 > [!NOTE]  
->  El valor real que [!INCLUDE[ssDE](../../includes/ssde-md.md)] establece para MAX_DOP puede ser menor que el valor especificado. El valor final se determinada mediante la fórmula min(255, *número de CPU)*.  
+> El valor real que [!INCLUDE[ssDE](../../includes/ssde-md.md)] establece para MAX_DOP puede ser menor que el valor especificado. El valor final se determinada mediante la fórmula min(255, *número de CPU)*.  
   
 > [!CAUTION]  
->  El cambio de MAX_DOP puede afectar negativamente al rendimiento de un servidor. Si debe cambiar MAX_DOP, se recomienda que se establezca en un valor menor o igual que el número máximo de programadores de hardware que hay en un solo nodo NUMA. Se recomienda no establecer MAX_DOP en un valor mayor que 8.  
+> El cambio de MAX_DOP puede afectar negativamente al rendimiento de un servidor. Si debe cambiar MAX_DOP, se recomienda que se establezca en un valor menor o igual que el número máximo de programadores de hardware que hay en un solo nodo NUMA. Se recomienda no establecer MAX_DOP en un valor mayor que 8.  
   
  MAX_DOP se trata de la siguiente manera:  
   
@@ -148,7 +145,7 @@ ALTER WORKLOAD GROUP { group_name | "default" }
  La opción "default" debe estar incluida entre comillas ("") o corchetes ([]) si se utiliza con ALTER WORKLOAD GROUP para evitar el conflicto con DEFAULT, que es una palabra reservada del sistema. Para obtener más información, vea [Database Identifiers](../../relational-databases/databases/database-identifiers.md).  
   
 > [!NOTE]  
->  La opción "default" distingue entre mayúsculas y minúsculas.  
+> La opción "default" distingue entre mayúsculas y minúsculas.  
   
 ## <a name="remarks"></a>Notas  
  ALTER WORKLOAD GROUP está permitido en el grupo predeterminado.  
@@ -160,7 +157,7 @@ ALTER WORKLOAD GROUP { group_name | "default" }
 -   Si va a cambiar MAX_DOP de 1 a 0 o a un valor mayor que 1, no es necesario ejecutar DBCC FREEPROCCACHE. Pero los planes en serie no se pueden ejecutar en paralelo, así que el borrado de la memoria caché respectiva permite compilar potencialmente nuevos planes mediante paralelismo.  
   
 > [!CAUTION]  
->  El borrado de los planes almacenados en caché de un grupo de recursos asociado a más de un grupo de cargas de trabajo afecta a todos los grupos de cargas de trabajo con el grupo de recursos definido por el usuario identificado por *pool_name*.  
+> El borrado de los planes almacenados en caché de un grupo de recursos asociado a más de un grupo de cargas de trabajo afecta a todos los grupos de cargas de trabajo con el grupo de recursos definido por el usuario identificado por *pool_name*.  
   
  Si va a ejecutar instrucciones de DDL, se recomienda familiarizarse primero con los estados del regulador de recursos. Para obtener más información, vea [Resource Governor](../../relational-databases/resource-governor/resource-governor.md).  
   
@@ -176,7 +173,7 @@ ALTER WORKLOAD GROUP { group_name | "default" }
 ## <a name="examples"></a>Ejemplos  
  En el ejemplo siguiente se cambia la importancia de las solicitudes en el grupo predeterminado de `MEDIUM` a `LOW`.  
   
-```  
+```sql  
 ALTER WORKLOAD GROUP "default"  
 WITH (IMPORTANCE = LOW);  
 GO  
@@ -186,7 +183,7 @@ GO
   
  En el ejemplo siguiente se mueve un grupo de cargas de trabajo desde el grupo de recursos actual al grupo de recursos predeterminado.  
   
-```  
+```sql  
 ALTER WORKLOAD GROUP adHoc  
 USING [default];  
 GO  

@@ -1,6 +1,6 @@
 ---
 title: Documentación de SQL Server | Microsoft Docs
-ms.date: 04/26/2018
+ms.date: 05/03/2018
 ms.prod: sql
 ms.prod_service: sql
 ms.reviewer: ''
@@ -8,7 +8,7 @@ ms.suite: sql
 ms.custom: ''
 ms.technology: ''
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql13.portal.f1
 helpviewer_keywords:
@@ -23,13 +23,12 @@ ms.assetid: 674933a8-e423-4d44-a39b-2a997e2c2333
 author: craigg-msft
 ms.author: craigg
 manager: jhubbard
-ms.workload: Active
 monikerRange: '>= sql-server-linux-2017  || >= sql-server-2016 || = sqlallproducts-allversions'
-ms.openlocfilehash: d375db4cbc060dbd5245446e2e3de4ee3f8fe146
-ms.sourcegitcommit: 9f61aa4d556bb5726b1e49d619ae2bbccf1590e3
+ms.openlocfilehash: fe7bb29dbea7d45687cc0a1395b93e8b54fbc142
+ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/29/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="sql-server-documentation"></a>Documentación de SQL Server
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -42,10 +41,6 @@ SQL Server es una pieza fundamental de la plataforma de datos de Microsoft. SQL 
 SQL Server es una pieza fundamental de la plataforma de datos de Microsoft. SQL Server es líder del sector de sistemas de administración de bases de datos operativas (ODBMS). Esta documentación ayuda a instalar, configurar y usar SQL Server en Windows. El contenido incluye ejemplos descentralizados, ejemplos de código y vídeos. Para temas sobre el lenguaje de SQL Server, consulte [Referencia del lenguaje](../t-sql/language-reference.md).
 ::: moniker-end
 
-
-
-
-
 <!-- Moniker assignments nicely designed so that exactly 1 of these next 3 little WhatsNew tables will be displayed
  at any one time, regardless of user's moniker choice.
 -->
@@ -55,6 +50,12 @@ SQL Server es una pieza fundamental de la plataforma de datos de Microsoft. SQL 
 |---------|---------|
 |[Novedades de SQL Server 2017](../sql-server/what-s-new-in-sql-server-2017.md)     | [Notas de la versión de SQL Server 2017](../sql-server/sql-server-2017-release-notes.md)        |
 |[Novedades de SQL Server 2016](../sql-server/what-s-new-in-sql-server-2016.md)     | [Notas de la versión de SQL Server 2016](../sql-server/sql-server-2016-release-notes.md)        |
+
+![info_tip](../sql-server/media/info-tip.png) El contenido de SQL Server 2014 pronto se combinará con el del sitio .docs.  Por ahora, vea:
+- [Libros en pantalla de SQL Server 2014](https://msdn.microsoft.com/en-us/library/ms130214(v=sql.120).aspx)
+- [Novedades de SQL Server 2014](https://msdn.microsoft.com/library/bb500435(v=sql.120).aspx)
+- [SQL Server 2014 Release Notes](../sql-server/sql-server-2014-release-notes.md)
+- [Versiones anteriores](https://docs.microsoft.com/en-us/previous-versions/sql/)
 ::: moniker-end
 
 ::: moniker range="= sql-server-linux-2017 || = sql-server-2017"
@@ -68,16 +69,6 @@ SQL Server es una pieza fundamental de la plataforma de datos de Microsoft. SQL 
 |---------|---------|
 |[Novedades de SQL Server 2016](../sql-server/what-s-new-in-sql-server-2016.md)     | [Notas de la versión de SQL Server 2016](../sql-server/sql-server-2016-release-notes.md)        |
 ::: moniker-end
-
-
-
-
-
-![info_tip](../sql-server/media/info-tip.png) El contenido de SQL Server 2014 pronto se combinará con el del sitio .docs.  Por ahora, vea:
-- [Libros en pantalla de SQL Server 2014](https://msdn.microsoft.com/en-us/library/ms130214(v=sql.120).aspx)
-- [Novedades de SQL Server 2014](https://msdn.microsoft.com/library/bb500435(v=sql.120).aspx)
-- [SQL Server 2014 Release Notes](../sql-server/sql-server-2014-release-notes.md)
-- [Versiones anteriores](https://docs.microsoft.com/en-us/previous-versions/sql/)
 
 ::: moniker range="= sql-server-2016"
 **Probar SQL Server**
@@ -96,7 +87,6 @@ SQL Server es una pieza fundamental de la plataforma de datos de Microsoft. SQL 
 - [![Creación de una máquina virtual](../includes/media/azure-vm.png)](https://azure.microsoft.com/services/virtual-machines/sql-server/?wt.mc_id=sqL16_vm) [Obtener una máquina virtual con SQL Server](https://azure.microsoft.com/services/virtual-machines/sql-server/?wt.mc_id=sqL16_vm)
 ::: moniker-end
 
-::: moniker range=">= sql-server-linux-2017 || >=sql-server-2016 || = sqlallproducts-allversions"
 ## <a name="sql-server-technologies"></a>Tecnologías de SQL Server
 
 |||
@@ -109,7 +99,6 @@ SQL Server es una pieza fundamental de la plataforma de datos de Microsoft. SQL 
 |![Servicios de replicación](../sql-server/media/replication-services.png "Servicios de replicación")|**[Replicación](../relational-databases/replication/sql-server-replication.md)**<br /><br /> La replicación es un conjunto de tecnologías destinadas a la copia y distribución de datos y objetos de base de datos de una base de datos a otra, para luego sincronizar ambas bases de datos con el fin de mantener su coherencia. La replicación permite distribuir datos a diferentes ubicaciones y a usuarios remotos o móviles mediante redes de área local y de área extensa, conexiones de acceso telefónico, conexiones inalámbricas e Internet.|
 |![Data Quality Services](../sql-server/media/data-quality-services.png "Data Quality Services")|**[Data Quality Services](../data-quality-services/data-quality-services.md)**<br /><br /> SQL Server Data Quality Services (DQS) proporciona una solución de limpieza de datos controlada por conocimiento. DQS permite generar una base de conocimiento y usarla para realizar tareas de corrección de datos y eliminación de datos duplicados, usando medios asistidos por ordenador e interactivos. Puede usar servicios de consulta de datos basados en la nube y puede generar una solución de administración de datos que integra DQS con SQL Server Integration Services y Master Data Services.|
 |![Master Data Services](../sql-server/media/master-data-services.png)|**[Master Data Services](../master-data-services/master-data-services-installation-and-configuration.md)**<br /><br /> [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] es la solución de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] para la administración de datos maestros. Una solución basada en [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] ayuda a asegurarse de que los informes y los análisis se basan en la información correcta. Con [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)], se crea un repositorio central de los datos maestros y se mantiene un registro auditable y protegible de los mismos a medida que van cambiando con el tiempo.|
-::: moniker-end
 
 ::: moniker range="= sql-server-2016"
 ## <a name="migrate-and-move-data"></a>Migrar y mover los datos

@@ -8,11 +8,11 @@ ms.topic: conceptual
 author: HeidiSteen
 ms.author: heidist
 manager: cgronlun
-ms.openlocfilehash: f58eb498843c259c4bc9ac9a5d453456dac21b54
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
-ms.translationtype: HT
+ms.openlocfilehash: aa67fbf2480de093ffe2f919e9c50ee2d5082b83
+ms.sourcegitcommit: df382099ef1562b5f2d1cd506c1170d1db64de41
+ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/10/2018
+ms.lasthandoff: 05/12/2018
 ---
 # <a name="upgrade-machine-learning-r-and-python-components-in-sql-server-instances"></a>Actualizar los componentes de aprendizaje (R y Python) de máquina en instancias de SQL Server
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
@@ -305,9 +305,9 @@ Si encuentra carpetas con un nombre parecido a esto, puede quitar una vez comple
 
 <a name="sqlbinder-error-codes"><a/>
 
-### <a name="errors"></a>Errores
+## <a name="binding-errors"></a>Errores de enlace
 
-La herramienta devuelve los siguientes mensajes de error:
+Instalador de MLS y SqlBindR devuelven los siguientes códigos de error y mensajes.
 
 |Código de error  | de mensaje           | Detalles               |
 |------------|-------------------|-----------------------|
@@ -317,7 +317,7 @@ La herramienta devuelve los siguientes mensajes de error:
 |Enlazar error 3 | Instancia no válida | Una instancia existe, pero no es válida para el enlace. |
 |Enlazar error 4 | No se puede enlazar | |
 |Enlazar error 5 | Ya está enlazada | Ha ejecutado el comando *bind* , pero la instancia especificada ya está enlazada. |
-|Enlazar error 6 | Error de enlace | Se produjo un error al deshacer el enlace de la instancia. Este error puede producirse si se ejecuta al instalador MLS sin seleccionar ninguna característica.|
+|Enlazar error 6 | Error de enlace | Se produjo un error al deshacer el enlace de la instancia. Este error puede producirse si se ejecuta al instalador MLS sin seleccionar ninguna característica. El enlace requiere que seleccione una instancia MSSQL y R y Python, suponiendo que la instancia es SQL Server 2017.|
 |Enlace de error 7 | No está enlazado | La instancia del motor de base de datos tiene R Services o servicios de aprendizaje de máquina de SQL Server. La instancia no está enlazada al servidor de aprendizaje de máquina de Microsoft. |
 |Enlazar error 8 | Deshacer el enlace de error | Se produjo un error al deshacer el enlace de la instancia. |
 |Enlazar error 9 | No se encontraron instancias | No se encontró ninguna instancia del motor de base de datos en este equipo. |

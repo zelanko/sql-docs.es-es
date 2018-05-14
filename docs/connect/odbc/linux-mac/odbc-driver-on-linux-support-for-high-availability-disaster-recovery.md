@@ -14,11 +14,11 @@ caps.latest.revision: 16
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 38d39d96a32223e9ebe90315dc01c0cd7ab82c31
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: d416abb8076e4728724ff971845a9efd970cccc2
+ms.sourcegitcommit: feff98b3094a42f345a0dc8a31598b578c312b38
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 05/11/2018
 ---
 # <a name="odbc-driver-on-linux-and-macos-support-for-high-availability-and-disaster-recovery"></a>Controlador ODBC en Linux y macOS compatibilidad con alta disponibilidad y recuperación ante desastres
 [!INCLUDE[Driver_ODBC_Download](../../../includes/driver_odbc_download.md)]
@@ -44,7 +44,7 @@ Si la primera dirección IP devuelta del servidor DNS no es conectable, estas it
 
 ## <a name="connecting-with-multisubnetfailover"></a>Conectarse a MultiSubnetFailover
 
-Especifique siempre **MultiSubnetFailover = Yes** (o **= True**) cuando se conecta a un [!INCLUDE[ssSQL11](../../../includes/sssql11_md.md)] agente de escucha del grupo de disponibilidad o [!INCLUDE[ssSQL11](../../../includes/sssql11_md.md)] instancia de clúster de conmutación por error. **MultiSubnetFailover** permite más rápida conmutación por error para todos los grupos de disponibilidad y una instancia de clúster de conmutación por error en [!INCLUDE[ssSQL11](../../../includes/sssql11_md.md)]. **MultiSubnetFailover** también reduce considerablemente el tiempo de conmutación por error para las topologías de AlwaysOn y de varias subredes. Durante una conmutación por error de varias subredes, el cliente intentará establecer conexiones en paralelo. Durante una conmutación por error de subred, el controlador reintentará agresivamente la conexión de TCP.
+Especifique siempre **MultiSubnetFailover = Yes** al conectarse a un [!INCLUDE[ssSQL11](../../../includes/sssql11_md.md)] agente de escucha del grupo de disponibilidad o [!INCLUDE[ssSQL11](../../../includes/sssql11_md.md)] instancia de clúster de conmutación por error. **MultiSubnetFailover** permite más rápida conmutación por error para todos los grupos de disponibilidad y una instancia de clúster de conmutación por error en [!INCLUDE[ssSQL11](../../../includes/sssql11_md.md)]. **MultiSubnetFailover** también reduce considerablemente el tiempo de conmutación por error para las topologías de AlwaysOn y de varias subredes. Durante una conmutación por error de varias subredes, el cliente intentará establecer conexiones en paralelo. Durante una conmutación por error de subred, el controlador reintentará agresivamente la conexión de TCP.
 
 La propiedad de conexión **MultiSubnetFailover** indica que la aplicación se implementa en un grupo de disponibilidad o una instancia de clúster de conmutación por error. El controlador intenta conectarse a la base de datos en el servidor principal [!INCLUDE[ssNoVersion](../../../includes/ssnoversion_md.md)] direcciones de la instancia intenta conectarse a todas las direcciones IP. Cuando se conecta con **MultiSubnetFailover = Yes**, el cliente lo reintenta intentos de conexión TCP más rápidamente que los intervalos de retransmisión TCP del sistema operativo de forma predeterminada. **MultiSubnetFailover=Yes** permite una reconexión más rápida después de la conmutación por error de un grupo de disponibilidad o una instancia de clúster de conmutación por error de AlwaysOn. **MultiSubnetFailover = Yes** se aplica tanto único y múltiples subredes grupos de disponibilidad como instancias de clúster de conmutación por error.  
 
@@ -58,7 +58,7 @@ Cuando se conecta a un servidor en un grupo de disponibilidad o una instancia de
   
 -   No se puede conectar a un [!INCLUDE[ssNoVersion](../../../includes/ssnoversion_md.md)] una instancia configurada con más de 64 direcciones IP.
 
--   Ambos [!INCLUDE[ssNoVersion](../../../includes/ssnoversion_md.md)] autenticación o la autenticación Kerberos puede usarse con **MultiSubnetFailover = Yes** sin que ello afecte al comportamiento de la aplicación.
+-   Ambos [!INCLUDE[ssNoVersion](../../../includes/ssnoversion_md.md)] autenticación o la autenticación Kerberos puede usarse con **MultiSubnetFailover = Yes** sin afectar al comportamiento de la aplicación.
 
 -   Puede aumentar el valor de **loginTimeout** para tener en cuenta el tiempo de conmutación por error y reducir los reintentos de conexión de la aplicación.
 

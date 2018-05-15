@@ -58,12 +58,12 @@ ms.lasthandoff: 05/03/2018
   
 -   [Usar PowerShell para crear una máquina virtual de Azure con un servidor de informes en modo nativo](http://msdn.microsoft.com/library/azure/dn449661.aspx).  
   
--   Vea la sección "Obtener acceso a las clases WMI mediante PowerShell" en [Access the Reporting Services WMI Provider](../../reporting-services/tools/access-the-reporting-services-wmi-provider.md).  
+-   Vea la sección "Obtener acceso a las clases WMI mediante PowerShell" en [Obtener acceso al proveedor WMI de Reporting Services](../../reporting-services/tools/access-the-reporting-services-wmi-provider.md).  
   
 
 ## <a name="rsexe-scripting-samples"></a>Ejemplos de secuencias de comandos de RS.exe  
   
--   [Sample Reporting Services rs.exe Script to Copy Content between Report Servers](../../reporting-services/tools/sample-reporting-services-rs-exe-script-to-copy-content-between-report-servers.md).  
+-   [Script rs.exe para copiar contenido entre servidores de informes de servicios de informes de ejemplo](../../reporting-services/tools/sample-reporting-services-rs-exe-script-to-copy-content-between-report-servers.md).  
   
 -   Consulte [Muestras de producto de SQL Server Reporting Services](http://go.microsoft.com/fwlink/?LinkId=177889)para obtener más ejemplos de secuencias de comandos, aplicaciones y extensiones.  
   

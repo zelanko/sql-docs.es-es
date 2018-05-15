@@ -50,7 +50,7 @@ ms.lasthandoff: 05/03/2018
 ## <a name="tasks"></a>Tareas  
  Entre las tareas que habilitan la configuración del servidor de informes remoto figuran las siguientes:  
   
--   Habilitar los puertos en Firewall de Windows para permitir solicitudes en los puertos que usa el servidor de informes y la instancia del Motor de base de datos de SQL Server.  Vea [Configure a Firewall for Report Server Access](../../reporting-services/report-server/configure-a-firewall-for-report-server-access.md) y [Configure a Windows Firewall for Database Engine Access](../../database-engine/configure-windows/configure-a-windows-firewall-for-database-engine-access.md).  
+-   Habilitar los puertos en Firewall de Windows para permitir solicitudes en los puertos que usa el servidor de informes y la instancia del Motor de base de datos de SQL Server.  Vea [Configurar un firewall para el acceso al servidor de informes](../../reporting-services/report-server/configure-a-firewall-for-report-server-access.md) y [Configurar Firewall de Windows para el acceso al motor de base de datos](../../database-engine/configure-windows/configure-a-windows-firewall-for-database-engine-access.md).  
   
 -   Habilitar las conexiones remotas a la instancia del Motor de base de datos que hospeda la base de datos del servidor de informes. La conexión remota es necesaria para configurar la conexión de la base de datos del servidor de informes y administrar las claves de cifrado.  
   

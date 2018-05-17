@@ -26,28 +26,16 @@ author: edmacauley
 ms.author: edmaca
 manager: craigg
 monikerRange: '>= aps-pdw-2016 || = azure-sqldw-latest || = sqlallproducts-allversions'
-ms.openlocfilehash: e727b05f4b57e00694c2bf12aa60a972838a9af2
-ms.sourcegitcommit: d2573a8dec2d4102ce8882ee232cdba080d39628
+ms.openlocfilehash: 3d61d87f1e19088d7f667029bdaaf935d150dc88
+ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/07/2018
+ms.lasthandoff: 05/10/2018
 ---
 # <a name="create-external-table-as-select-transact-sql"></a>CREATE EXTERNAL TABLE AS SELECT (Transact-SQL)
 [!INCLUDE[tsql-appliesto-xxxxxx-xxxx-asdw-pdw-md](../../includes/tsql-appliesto-xxxxxx-xxxx-asdw-pdw-md.md)]
 
   Crea una tabla externa y, después, exporta en paralelo los resultados de una instrucción SELECT de [!INCLUDE[tsql](../../includes/tsql-md.md)] a Hadoop o a Azure Storage Blob.  
-  
- Use la instrucción CREATE EXTERNAL TABLE AS SELECT para:  
-  
--   Exportar una tabla de base de datos a Hadoop o a Azure Blob Storage.  
-  
--   Importar datos desde Hadoop o Azure Blob Storage y almacenarlos en la base de datos.  
-  
--   Consultar datos en Hadoop o Azure Blob Storage, combinarlos con tablas relacionales de base de datos y volver a escribir los resultados en Hadoop o Azure Blob Storage.  
-  
--   Consultar datos en Hadoop o Azure Blob Storage, transformarlos con las funciones de procesamiento de gran velocidad de la base de datos y volver a escribirlos en Hadoop o Azure Blob Storage.  
-  
- Para obtener más información, vea [Introducción a PolyBase](../../relational-databases/polybase/get-started-with-polybase.md).  
   
  ![Icono de vínculo a temas](../../database-engine/configure-windows/media/topic-link.gif "Topic link icon") [Convenciones de sintaxis de Transact-SQL &#40;Transact-SQL&#41;](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   

@@ -1,16 +1,15 @@
 ---
-title: "Archivos de registro y orígenes de Reporting Services | Microsoft Docs"
-ms.custom: 
+title: Archivos de registro y orígenes de Reporting Services | Microsoft Docs
+ms.custom: ''
 ms.date: 03/16/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-sharepoint, reporting-services-native
-ms.service: 
 ms.component: report-server
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: pro-bi
-ms.technology: 
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.technology: ''
+ms.tgt_pltfrm: ''
+ms.topic: conceptual
 helpviewer_keywords:
 - troubleshooting [Reporting Services], log files
 - logs [Reporting Services]
@@ -19,16 +18,15 @@ helpviewer_keywords:
 - report server log files
 - files [Reporting Services], logs
 ms.assetid: 80ef0acc-cbef-49d0-87e7-844e3ce19604
-caps.latest.revision: "49"
+caps.latest.revision: 49
 author: markingmyname
 ms.author: maghan
 manager: kfile
-ms.workload: On Demand
-ms.openlocfilehash: 7b36566dce410fff0122e66c735a3058061e2af8
-ms.sourcegitcommit: 7e117bca721d008ab106bbfede72f649d3634993
+ms.openlocfilehash: 8d2bbaf2046f8cf62264005e787938a8d61fee6a
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/09/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="reporting-services-log-files-and-sources"></a>Archivos de registro y orígenes de Reporting Services
   Los servidores de informes y los entornos de servidor de informes utilizan diversos destinos de archivos registro para registrar información sobre las operaciones y el estado del servidor. Hay dos categorías básicas de registro: registro de ejecución y registro de seguimiento. El registro de ejecución incluye información sobre las estadísticas de ejecución de informes, auditoría, diagnóstico de rendimiento y optimización. El registro de seguimiento es información sobre los mensajes de error y diagnósticos generales.  
@@ -46,7 +44,7 @@ ms.lasthandoff: 01/09/2018
 |[Registro de aplicación Windows](../../reporting-services/report-server/windows-application-log.md)|El registro de aplicación de Microsoft Windows contiene información sobre los eventos del servidor de informes.|  
 |Registros de rendimiento de Windows|Los registros de rendimiento de Windows contienen datos sobre el rendimiento del servidor de informes. Puede crear registros de rendimiento y después elegir contadores que establezcan los datos que se recopilarán. Para más información, consulte [Monitoring Report Server Performance](../../reporting-services/report-server/monitoring-report-server-performance.md).|  
 |Archivos de registro de instalación de SQL Server|Los archivos de registros se crean también durante la instalación. Si el programa de instalación no se completa o lo hace con advertencias u otros mensajes, puede consultar los archivos de registro para solucionar el problema. Para obtener más información, vea [View and Read SQL Server Setup Log Files](../../database-engine/install-windows/view-and-read-sql-server-setup-log-files.md).|  
-|Registros IIS|Archivos de registro creados por Microsoft Internet Information Services (IIS). Para más información, vea [Cómo habilitar el registro en los servicios de Internet Information Server (IIS)](http://support.microsoft.com/kb/313437) (http://support.microsoft.com/kb/313437).|  
+|Registros IIS|Archivos de registro creados por Microsoft Internet Information Services (IIS). Para más información, consulte [Cómo habilitar el registro en Internet Information Services (IIS)](http://support.microsoft.com/kb/313437) (http://support.microsoft.com/kb/313437).|  
   
 ## <a name="see-also"></a>Ver también  
  [Servidor de informes de Reporting Services &#40;modo nativo&#41;](../../reporting-services/report-server/reporting-services-report-server-native-mode.md)   

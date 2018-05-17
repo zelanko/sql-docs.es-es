@@ -1,32 +1,30 @@
 ---
-title: "Establecer propiedades de implementación (Reporting Services) | Microsoft Docs"
-ms.custom: 
+title: Establecer propiedades de implementación (Reporting Services) | Microsoft Docs
+ms.custom: ''
 ms.date: 03/07/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-sharepoint, reporting-services-native
-ms.service: 
 ms.component: tools
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: pro-bi
-ms.technology: 
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.technology: ''
+ms.tgt_pltfrm: ''
+ms.topic: conceptual
 helpviewer_keywords:
 - reports [Reporting Services], deploying
 - publishing reports [Reporting Services]
 - properties [Reporting Services], deployment
 - deploying reports [Reporting Services]
 ms.assetid: 18201ca0-bf4a-484f-b3a2-95d1046a6a9b
-caps.latest.revision: "44"
+caps.latest.revision: 44
 author: markingmyname
 ms.author: maghan
 manager: kfile
-ms.workload: On Demand
-ms.openlocfilehash: 618bdebcd05306a94a661ef4001d446b509e18dd
-ms.sourcegitcommit: 7e117bca721d008ab106bbfede72f649d3634993
+ms.openlocfilehash: 3646d424b9f2f66546369c74a4bb310d0fb6a4cd
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/09/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="set-deployment-properties-reporting-services"></a>Establecer propiedades de implementación (Reporting Services)
   En[!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)], debe especificar el servidor de informes y, si lo desea, las carpetas de los informes y orígenes de datos compartidos para poder publicar los elementos de un proyecto de Servidor de informes en un servidor de informes. Las propiedades y valores que [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] necesita para generar los informes, obtener una vista previa de los mismos e implementarlos están almacenados en las configuraciones de proyecto correspondiente al proyecto del servidor de informes. Puede crear varios conjuntos con nombre para estas propiedades de proyecto; de esta forma, podrá cambiar de un conjunto de propiedades a otro según sea necesario. Cada conjunto de propiedades es una configuración. Por ejemplo, puede tener una configuración para publicar los informes en un servidor de pruebas y otra configuración diferente para publicar los informes en un servidor de producción.  

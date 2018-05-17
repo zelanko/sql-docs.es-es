@@ -1,31 +1,29 @@
 ---
 title: Publicar un origen de datos compartido en una biblioteca de SharePoint | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 03/07/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-sharepoint, reporting-services-native
-ms.service: 
 ms.component: reports
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: pro-bi
-ms.technology: 
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.technology: ''
+ms.tgt_pltfrm: ''
+ms.topic: conceptual
 helpviewer_keywords:
 - data sources [Reporting Services], publishing to a SharePoint library
 - SharePoint integration [Reporting Services], publishing to a library
 - publishing reports [Reporting Services], to a SharePoint library
 ms.assetid: 966ed425-3ce2-4e76-8237-3c1c977954ae
-caps.latest.revision: "14"
+caps.latest.revision: 14
 author: markingmyname
 ms.author: maghan
 manager: kfile
-ms.workload: Inactive
-ms.openlocfilehash: acace7c17244042fcf3c1d04e2da372b8e3e6e83
-ms.sourcegitcommit: 7e117bca721d008ab106bbfede72f649d3634993
+ms.openlocfilehash: 8f94ccc9e0d38aaf9c4d5e5c23991fc8dc833abf
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/09/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="publish-a-shared-data-source-to-a-sharepoint-library"></a>Publicar un origen de datos compartido en una biblioteca de SharePoint
   Para publicar un origen de datos compartido en un servidor de informes que se ejecuta en el modo integrado de SharePoint, debe establecer las propiedades de proyecto de informe en el Diseñador de informes. En las propiedades de proyecto, todas las referencias a servidores, informes y orígenes de datos compartidos deben ser direcciones URL completas.  
@@ -36,7 +34,7 @@ ms.lasthandoff: 01/09/2018
   
 1.  En [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)], abra un proyecto de servidor de informes nuevo o uno existente.  
   
-2.  En el menú **Proyecto** , haga clic en **Propiedades**. Se abre el cuadro de diálogo **Páginas de propiedades** de *\<proyecto>*.  
+2.  En el menú **Proyecto** , haga clic en **Propiedades**. Se abre el cuadro de diálogo ***Páginas de propiedades de *\<proyecto>**.  
   
 3.  Elija la **Configuración** que utilice para publicar en un sitio de SharePoint.  
   

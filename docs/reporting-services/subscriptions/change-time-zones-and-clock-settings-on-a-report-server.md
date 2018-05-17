@@ -1,32 +1,30 @@
 ---
-title: "Cambiar las zonas horarias y la configuración del reloj en un servidor de informes | Microsoft Docs"
-ms.custom: 
+title: Cambiar las zonas horarias y la configuración del reloj en un servidor de informes | Microsoft Docs
+ms.custom: ''
 ms.date: 03/01/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-sharepoint, reporting-services-native
-ms.service: 
 ms.component: subscriptions
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: pro-bi
-ms.technology: 
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.technology: ''
+ms.tgt_pltfrm: ''
+ms.topic: conceptual
 helpviewer_keywords:
 - time zones [Reporting Services]
 - clocks [Reporting Services]
 - schedules [Reporting Services], clock settings
 - schedules [Reporting Services], time zones
 ms.assetid: 69a19468-baa1-40f6-b158-8afdab0f8968
-caps.latest.revision: 
+caps.latest.revision: 22
 author: markingmyname
 ms.author: maghan
 manager: kfile
-ms.workload: Inactive
-ms.openlocfilehash: 91f37c8df4a278fef841b12ff727e8e11c04a808
-ms.sourcegitcommit: 7e117bca721d008ab106bbfede72f649d3634993
+ms.openlocfilehash: f9e613a2212a852f386343de6463d06b9b57b3ea
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/09/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="change-time-zones-and-clock-settings-on-a-report-server"></a>Cambiar las zonas horarias y la configuración del reloj en un servidor de informes
   Un servidor de informes siempre utiliza la hora local del equipo donde esté instalado. No puede configurarlo para que use una zona horaria diferente. Si una aplicación cliente señala a un servidor de informes en una zona horaria diferente, para ejecutar una operación programada se utilizará la zona horaria del servidor de informes. En el Administrador de informes y en las páginas de administración de SharePoint, la zona horaria se indica en cada página de programación para que sepa exactamente cuándo se realizará una operación programada. Por ejemplo, la página para crear programaciones personalizadas indicará “Las horas están expresadas en (UTC-08:00) Hora del Pacífico (EE. UU. y Canadá)”.  
@@ -41,7 +39,7 @@ ms.lasthandoff: 01/09/2018
  Los valores de marca de tiempo de propiedades (por ejemplo, la hora a la que se creó una carpeta o un elemento de informe vinculado) no se sincronizan con la nueva configuración horaria. Si crea un elemento el 25 de junio a las 9:00 a.m. y después restablece la zona horaria o el reloj, la marca de tiempo sigue siendo 25 de junio a las 9:00 a.m.  
   
 ## <a name="changing-the-time-zone-sharepoint-mode"></a>Cambiar la zona horaria (modo de SharePoint)  
- La configuración de zona horaria para el modo de SharePoint de [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] se administra como parte de la configuración regional de SharePoint. Para obtener más información, vea [Regional settings (SharePoint Server 2010) (Configuración regional [SharePoint Server 2010])](http://technet.microsoft.com/library/cc824907.aspx).  
+ La configuración de zona horaria para el modo de SharePoint de [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] se administra como parte de la configuración regional de SharePoint. Para más información, consulte [Regional settings (SharePoint Server 2010)http://technet.microsoft.com/library/cc824907.aspx)](http://technet.microsoft.com/library/cc824907.aspx) (Configuración regional [SharePoint Server 2010)].  
   
 ## <a name="changing-the-clock-settings"></a>Cambiar la configuración del reloj  
  El cambio del reloj del equipo no afecta a los valores de marca de tiempo existentes (por ejemplo, si adelanta el reloj una hora, las marcas de tiempo de las instantáneas de historial del informe no cambian). Es posible que se produzca una demora de 10 segundos antes de que el Procesador de entrega y programación utilice la nueva configuración. La demora real puede variar si ha modificado la configuración de intervalo de sondeo en los archivos de configuración.  

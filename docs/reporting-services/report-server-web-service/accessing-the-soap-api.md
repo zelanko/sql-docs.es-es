@@ -1,17 +1,17 @@
 ---
 title: Acceso a la API de SOAP | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
-ms.service: 
 ms.component: report-server-web-service
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: pro-bi
-ms.technology: 
-ms.tgt_pltfrm: 
+ms.technology: ''
+ms.tgt_pltfrm: ''
 ms.topic: reference
-applies_to: SQL Server 2016 Preview
+applies_to:
+- SQL Server 2016 Preview
 helpviewer_keywords:
 - XML Web service [Reporting Services], WSDL
 - Web service [Reporting Services], SOAP
@@ -24,16 +24,15 @@ helpviewer_keywords:
 - Report Server Web service, WSDL
 - referencing WSDL
 ms.assetid: 63bb870a-4dbf-46bd-8921-78f8ebe5fd75
-caps.latest.revision: "38"
+caps.latest.revision: 38
 author: markingmyname
 ms.author: maghan
 manager: kfile
-ms.workload: On Demand
-ms.openlocfilehash: ea6fb5b31ac0a95eb287d52d865b718a45aaf652
-ms.sourcegitcommit: 7e117bca721d008ab106bbfede72f649d3634993
+ms.openlocfilehash: c7c892b8953edfe61c555d1988c3aa73aae8383d
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/09/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="accessing-the-soap-api"></a>Acceso a la API SOAP
   El servicio web del servidor de informes utiliza el Protocolo simple de acceso a objetos (SOAP) sobre HTTP y actúa como interfaz de comunicaciones entre los programas clientes y el servidor de informes. El servicio web proporciona dos extremos, uno para la ejecución y otro para la administración de informes, y está compuesto de métodos y de un conjunto de objetos de tipo complejo que puede utilizar para tener acceso a la funcionalidad completa de [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]. Para llamar al servicio, debe hacer referencia al Lenguaje de descripción de servicios web (WSDL) de Reporting Services.  
@@ -64,7 +63,7 @@ http://server/reportserver/ReportService2010.asmx?wsdl
 |*servidorDeInformes*|Nombre de la carpeta que contiene el servicio web XML. Se configura durante la instalación.|  
 |*\<nombreDelPuntoDeConexión>.asmx*|Nombre del extremo de servicios web.|  
   
- Para obtener más información acerca del formato de WSDL, vea la especificación de WSDL del World Wide Web Consortium (W3C) en http://www.w3.org/TR/wsdl.  
+ Para más información acerca del formato de WSDL, consulte la especificación de WSDL del World Wide Web Consortium (W3C) en http://www.w3.org/TR/wsdl.  
   
 ## <a name="see-also"></a>Ver también  
  [Creación de aplicaciones con el servicio web y .NET Framework](../../reporting-services/report-server-web-service/net-framework/building-applications-using-the-web-service-and-the-net-framework.md)   

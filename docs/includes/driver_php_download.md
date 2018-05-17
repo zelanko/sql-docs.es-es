@@ -1,1 +1,1 @@
-![Descargar](../ssdt/media/download.png)[Descargar controlador para PHP](https://go.microsoft.com/fwlink/?linkid=871846)
+![Descargar](../ssdt/media/download.png)[Descargar controlador para PHP](../connect/php/download-drivers-php-sql-server.md)

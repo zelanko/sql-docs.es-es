@@ -30,11 +30,11 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
-ms.openlocfilehash: bb4fb973ed9311fd6b2ad6a89022b55208971ebd
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: a44bb869e9954c0bd080f23bc6b09913ea011617
+ms.sourcegitcommit: bac61a04d11fdf61deeb03060e66621c0606c074
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 05/14/2018
 ---
 # <a name="statistics"></a>Estadísticas
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -275,6 +275,10 @@ Solo [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] puede crear y act
  
 > [!TIP]
 > A partir de [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] SP1 CU4, utilice la opción PERSIST_SAMPLE_PERCENT de [CREATE STATISTICS &#40;Transact-SQL&#41;](../../t-sql/statements/create-statistics-transact-sql.md) o [UPDATE STATISTICS &#40;Transact-SQL&#41;](../../t-sql/statements/update-statistics-transact-sql.md) para establecer y mantener un porcentaje de muestreo específico para las actualizaciones de estadísticas posteriores en las que no se especifica explícitamente un porcentaje de muestreo.
+
+### <a name="automatic-index-and-statistics-management"></a>Administración automática de índice y estadísticas
+
+Aproveche soluciones como la [desfragmentación de índice adaptable](http://github.com/Microsoft/tigertoolbox/tree/master/AdaptiveIndexDefrag) para administrar automáticamente las actualizaciones de estadísticas y la desfragmentación de índices para una o varias bases de datos. Este procedimiento elige automáticamente si se debe volver a generar o reorganizar un índice según su nivel de fragmentación, entre otros parámetros y actualiza las estadísticas con un umbral lineal.
   
 ##  <a name="DesignStatistics"></a> Consultas que usan eficazmente las estadísticas  
  Algunas implementaciones de consulta, como las variables locales y las expresiones complejas en el predicado de consulta, pueden conducir a planes de consulta que no son óptimos. Las siguientes instrucciones de diseño de consulta para el uso eficaz de las estadísticas pueden evitarlo. Para obtener más información sobre los predicados de consulta, vea [Condición de búsqueda &#40;Transact-SQL&#41;](../../t-sql/queries/search-condition-transact-sql.md).  
@@ -389,4 +393,5 @@ GO
  [sys.dm_db_stats_properties &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-db-stats-properties-transact-sql.md)   
  [sys.dm_db_stats_histogram &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-db-stats-histogram-transact-sql.md)  
  [sys.stats](../../relational-databases/system-catalog-views/sys-stats-transact-sql.md)  
- [sys.stats_columns &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-stats-columns-transact-sql.md)
+ [sys.stats_columns &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-stats-columns-transact-sql.md)    
+ [Desfragmentación de índice adaptable](http://github.com/Microsoft/tigertoolbox/tree/master/AdaptiveIndexDefrag)   

@@ -4,12 +4,10 @@ ms.custom: ''
 ms.date: 07/24/2017
 ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
-ms.service: ''
 ms.component: t-sql|functions
 ms.reviewer: ''
 ms.suite: sql
-ms.technology:
-- database-engine
+ms.technology: t-sql
 ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
@@ -28,18 +26,17 @@ caps.latest.revision: 44
 author: edmacauley
 ms.author: edmaca
 manager: craigg
-ms.workload: On Demand
 monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
-ms.openlocfilehash: 0701b86454205e9b83733f034b708bb18f45feff
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
+ms.openlocfilehash: a76766659a771d1ab88d0fa33a9ef62f986a8a06
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="countbig--sql"></a>COUNT_BIG (-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
 
-Devuelve el número de elementos de un grupo. COUNT_BIG funciona como COUNT. La única diferencia entre ambas funciones está en los valores devueltos. COUNT_BIG siempre devuelve un valor de tipo de datos **bigint**. COUNT siempre devuelve un valor de tipo de datos **int**.
+Esta función devuelve el número de elementos encontrados en un grupo. `COUNT_BIG` funciona como la función [COUNT](../../t-sql/functions/count-transact-sql.md). Estas funciones difieren solo en los tipos de datos de sus valores devueltos. `COUNT_BIG` siempre devuelve un valor de tipo de datos **bigint**. `COUNT` siempre devuelve un valor de tipo de datos **int**.
   
 ![Icono de vínculo de tema](../../database-engine/configure-windows/media/topic-link.gif "Icono de vínculo de tema") [Convenciones de sintaxis de Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)
   
@@ -64,43 +61,34 @@ COUNT_BIG ( { expression | * } ) OVER ( [ <partition_by_clause> ] )
   
 ## <a name="arguments"></a>Argumentos  
 ALL  
-Aplica la función de agregado a todos los valores. ALL es el valor predeterminado.
+Aplica la función de agregado a todos los valores. ALL sirve como valor predeterminado.
   
 DISTINCT  
-Especifica que COUNT_BIG devuelva el número de valores únicos no NULL.
+Especifica que `COUNT_BIG` devuelva el número de valores únicos no NULL.
   
 *expression*  
-Es una [expresión](../../t-sql/language-elements/expressions-transact-sql.md) de cualquier tipo. No se permiten funciones de agregado ni subconsultas.
+Una [expresión](../../t-sql/language-elements/expressions-transact-sql.md) de cualquier tipo. Tenga en cuenta que `COUNT_BIG` no admite funciones de agregado ni subconsultas en una expresión.
   
 *\**  
-Especifica que se deben contar todas las filas para devolver el número total de filas de una tabla. COUNT_BIG(*\**) no usa parámetros y no se puede usar con DISTINCT. COUNT_BIG(*\**) no requiere el parámetro *expression* porque, por definición, no usa información sobre ninguna columna concreta. COUNT_BIG(*\**) devuelve el número de filas de una tabla especificada sin eliminar las duplicadas. Cuenta cada fila por separado. Esto incluye las filas que contienen valores NULL.
-  
-ALL  
-Aplica la función de agregado a todos los valores. ALL es el valor predeterminado.
-  
-DISTINCT  
-Especifica que AVG se ejecute solo en cada instancia única de un valor, sin importar el número de veces que aparezca el valor.
-  
-*expression*  
-Es una [expresión](../../t-sql/language-elements/expressions-transact-sql.md) de la categoría de tipos de datos numérico exacto o numérico aproximado, excepto para el tipo de datos **bit**. No se permiten funciones de agregado ni subconsultas.
+Especifica que `COUNT_BIG` debe contar todas las filas para determinar el total de filas de la tabla a devolver. `COUNT_BIG(*)` no toma ningún parámetro y no admite el uso de DISTINCT. `COUNT_BIG(*)` no requiere el parámetro *expression* porque, por definición, no usa información sobre ninguna columna concreta. `COUNT_BIG(*)` devuelve el número de filas de una tabla especificada y conserva las filas duplicadas. Cuenta cada fila por separado. Esto incluye las filas que contienen valores NULL.
   
 OVER **(** [ *partition_by_clause* ] [ *order_by_clause* ] **)**  
-*partition_by_clause* divide el conjunto de resultados generado por la cláusula FROM en particiones a las que se aplica la función. Si no se especifica, la función trata todas las filas del conjunto de resultados de la consulta como un único grupo. *order_by_clause* determina el orden lógico en el que se realiza la operación. Para más información, vea [Cláusula OVER &#40;Transact-SQL&#41;](../../t-sql/queries/select-over-clause-transact-sql.md).
+*partition_by_clause* divide el conjunto de resultados generado por la cláusula `FROM` en particiones a las que se aplica la función `COUNT_BIG`. Si no se especifica, la función trata todas las filas del conjunto de resultados de la consulta como un único grupo. *order_by_clause* determina el orden lógico de la operación. Para más información, consulte [Cláusula OVER &#40;Transact-SQL&#41;](../../t-sql/queries/select-over-clause-transact-sql.md).
   
 ## <a name="return-types"></a>Tipos de valores devueltos
 **bigint**
   
 ## <a name="remarks"></a>Notas  
-COUNT_BIG(*) devuelve el número de elementos de un grupo. Esto incluye los valores NULL y los duplicados
+COUNT_BIG(\*) devuelve el número de elementos de un grupo. Esto incluye los valores NULL y los duplicados
   
-COUNT_BIG (ALL *expression*) evalúa *expression* en todas las filas del grupo y devuelve el número de valores no NULL.
+COUNT_BIG (ALL *expresión*) evalúa *expresión* en todas las filas del grupo y devuelve el número de valores no NULL.
   
-COUNT_BIG (DISTINCT *expression*) evalúa *expression* en todas las filas del grupo y devuelve el número de valores únicos no NULL.
+COUNT_BIG (DISTINCT *expresión*) evalúa *expresión* en todas las filas del grupo y devuelve el número de valores únicos no NULL.
   
-COUNT_BIG es una función determinista cuando no se utiliza con las cláusulas OVER y ORDER BY. Es no determinista si se especifica con las cláusulas OVER y ORDER BY. Para obtener más información, consulte [Deterministic and Nondeterministic Functions](../../relational-databases/user-defined-functions/deterministic-and-nondeterministic-functions.md).
+COUNT_BIG es una función determinista cuando se utiliza ***sin*** las cláusulas OVER y ORDER BY. Es no determinista si se especifica ***con*** las cláusulas OVER y ORDER BY. Para más información, consulte [Funciones deterministas y no deterministas](../../relational-databases/user-defined-functions/deterministic-and-nondeterministic-functions.md).
   
 ## <a name="examples"></a>Ejemplos  
-Para obtener ejemplos, vea [COUNT &#40;Transact-SQL&#41;](../../t-sql/functions/count-transact-sql.md).
+Para ver algunos ejemplos, consulte [COUNT &#40;Transact-SQL&#41;](../../t-sql/functions/count-transact-sql.md).
   
 ## <a name="see-also"></a>Vea también
 [Funciones de agregado &#40;Transact-SQL&#41;](../../t-sql/functions/aggregate-functions-transact-sql.md)  

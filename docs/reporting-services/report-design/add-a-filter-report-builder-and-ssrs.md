@@ -1,27 +1,25 @@
 ---
 title: Agregar un filtro (Generador de informes y SSRS) | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 03/07/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-sharepoint, reporting-services-native
-ms.service: 
 ms.component: report-design
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: pro-bi
-ms.technology: 
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.technology: ''
+ms.tgt_pltfrm: ''
+ms.topic: conceptual
 ms.assetid: 10ae54e7-0e8a-4dff-995d-05516c51d076
-caps.latest.revision: "8"
+caps.latest.revision: 8
 author: maggiesMSFT
 ms.author: maggies
 manager: kfile
-ms.workload: On Demand
-ms.openlocfilehash: 9802327aa4eedb46086927e67c4b6673963157c4
-ms.sourcegitcommit: 7e117bca721d008ab106bbfede72f649d3634993
+ms.openlocfilehash: c7138aa01512abe74931e7e0fd3510a597baaa0e
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/09/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="add-a-filter-report-builder-and-ssrs"></a>Agregar un filtro (Generador de informes y SSRS)
   Agregue un filtro a un conjunto de datos, una región de datos o un grupo cuando desee incluir o excluir valores específicos para la realización de cálculos o la visualización. Los filtros se aplican en tiempo de ejecución y en este orden: primero en el conjunto de datos, a continuación, en la región de datos y, por último, en el grupo; en las jerarquías de grupo, se aplican en orden descendente. En una tabla, matriz o lista, los filtros de los grupos de filas, los grupos de columnas y los grupos adyacentes se aplican de forma independiente. En un gráfico, también se aplican de forma independiente los filtros de los grupos de categorías y los grupos de series.  
@@ -39,7 +37,7 @@ ms.lasthandoff: 01/09/2018
   
 1.  Abra un informe en la vista **Diseño** .  
   
-2.  En la superficie de diseño, seleccione la región de datos y, después, haga clic con el botón derecho en *\<Propiedades de* **<región de datos>**. Si se trata de un medidor, seleccione **Propiedades del panel de medidores**. Se abre el cuadro de diálogo *\<Propiedades de* **región de datos>**.  
+2.  En la superficie de diseño, seleccione la región de datos y, después, haga clic con el botón derecho en *\<Propiedades de **<región de datos>**. Si se trata de un medidor, seleccione **Propiedades del panel de medidores**. Se abre el cuadro de diálogo *\<***Propiedades de región de datos**.  
   
     > [!NOTE]  
     >  En una región de datos Tablix, haga clic con el botón derecho en la celda de la esquina o en un identificador de fila o columna y, después, haga clic en **Propiedades de Tablix**.  

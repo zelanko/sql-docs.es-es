@@ -4,12 +4,10 @@ ms.custom: ''
 ms.date: 07/24/2017
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
-ms.service: ''
 ms.component: t-sql|functions
 ms.reviewer: ''
 ms.suite: sql
-ms.technology:
-- database-engine
+ms.technology: t-sql
 ms.tgt_pltfrm: ''
 ms.topic: language-reference
 dev_langs:
@@ -26,17 +24,16 @@ caps.latest.revision: 16
 author: edmacauley
 ms.author: edmaca
 manager: craigg
-ms.workload: On Demand
-ms.openlocfilehash: 823f6fd583be606672905acf3908e1854a873e75
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
+ms.openlocfilehash: bd25f4a498c11bc3eec36f21877f5a0204b7617f
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="cryptographic-functions-transact-sql"></a>Funciones criptográficas (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
-Las siguientes funciones admiten el cifrado, descifrado, firma digital y la validación de firmas digitales.
+Estas funciones admiten la firma digital, la validación de firma digital, el cifrado y el descifrado.
   
 ## <a name="symmetric-encryption-and-decryption"></a>Cifrado y descifrado simétricos
   
@@ -76,7 +73,7 @@ Las siguientes funciones admiten el cifrado, descifrado, firma digital y la vali
 |-|-|  
 |[HASHBYTES](../../t-sql/functions/hashbytes-transact-sql.md)||  
   
-## <a name="copying-certificates"></a>Copia de certificados
+## <a name="certificate-copying"></a>Copia de certificados
   
 |||  
 |-|-|  

@@ -175,7 +175,7 @@ ms.lasthandoff: 05/03/2018
   
 -   [Usar el regulador de recursos para limitar el uso de CPU mediante compresión de copia de seguridad &#40;Transact-SQL&#41;](../../relational-databases/backup-restore/use-resource-governor-to-limit-cpu-usage-by-backup-compression-transact-sql.md)  
   
--   [Tutorial: SQL Server Backup and Restore to Windows Azure Blob Storage Service](~/relational-databases/tutorial-sql-server-backup-and-restore-to-azure-blob-storage-service.md) (Copias de seguridad y restauración de SQL Server en el servicio Microsoft Azure Blob Storage)  
+-   [Tutorial: copias de seguridad y restauración de SQL Server en el servicio de almacenamiento Blob de Windows Azure](~/relational-databases/tutorial-sql-server-backup-and-restore-to-azure-blob-storage-service.md) (Copias de seguridad y restauración de SQL Server en el servicio Microsoft Azure Blob Storage)  
   
 ## <a name="and-more"></a>Y más. 
  [Realizar copias de seguridad y restaurar bases de datos de SQL Server](../../relational-databases/backup-restore/back-up-and-restore-of-sql-server-databases.md)   

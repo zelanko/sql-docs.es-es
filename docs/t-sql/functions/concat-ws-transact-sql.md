@@ -4,14 +4,12 @@ ms.custom: ''
 ms.date: 07/24/2017
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
-ms.service: ''
 ms.component: t-sql|functions
 ms.reviewer: ''
 ms.suite: sql
-ms.technology:
-- database-engine
+ms.technology: t-sql
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - CONCAT_WS
 - CONCAT_WS_TSQL
@@ -24,18 +22,17 @@ caps.latest.revision: 5
 author: edmacauley
 ms.author: edmaca
 manager: craigg
-ms.workload: Active
 monikerRange: = azuresqldb-current || >= sql-server-2017 || = sqlallproducts-allversions
-ms.openlocfilehash: 171d063e746393709629720dae40eb207d45d584
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
+ms.openlocfilehash: e1a3d184ccdd0a1716fdace286b2bb8ed6a6cae6
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="concatws-transact-sql"></a>CONCAT_WS (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2017-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2017-asdb-xxxx-xxx-md.md)]
 
-Concatena un número variable de argumentos con un delimitador especificado en el primer argumento. (`CONCAT_WS` indica *concatenar con separador*).
+Esta función devuelve una cadena resultante de la concatenación, o la combinación, de dos o más valores de cadena de una manera integral. Separa esos valores de cadena concatenados con el delimitador especificado en el primer argumento de función. (`CONCAT_WS` indica *concatenar con separador*).
 
 ##  <a name="syntax"></a>Sintaxis   
 ```sql
@@ -44,16 +41,16 @@ CONCAT_WS ( separator, argument1, argument1 [, argumentN]… )
 
 ## <a name="arguments"></a>Argumentos   
 separador  
-Es una expresión de cualquier tipo de carácter (`nvarchar`, `varchar`, `nchar` o `char`).
+Una expresión de cualquier tipo de carácter (`char`', `nchar`', `nvarchar` o `varchar`).
 
 argument1, argument2, argument*N*  
-Es una expresión de cualquier tipo.
+Una expresión de cualquier tipo.
 
 ## <a name="return-types"></a>Tipos de valores devueltos
-: cadena. El tipo y longitud dependen de la entrada.
+Un valor de cadena cuya longitud y tipo dependen de la entrada.
 
 ## <a name="remarks"></a>Notas   
-`CONCAT_WS` toma un número variable de argumentos y los concatena en una sola cadena utilizando el primer argumento como separador. Necesita un separador y un mínimo de dos argumentos; de lo contrario, se produce un error. Todos los argumentos se convierten implícitamente a tipos de cadena y después se concatenan. 
+`CONCAT_WS` toma un número variable de argumentos de cadena y los concatena (o combina) en una sola cadena. Separa esos valores de cadena concatenados con el delimitador especificado en el primer argumento de función. `CONCAT_WS` requiere un argumento separador y un mínimo de otros dos argumentos de valor de cadena; de lo contrario, `CONCAT_WS` producirá un error. `CONCAT_WS` convierte implícitamente todos los argumentos en tipos de cadena antes de la concatenación. 
 
 La conversión implícita de cadenas sigue las reglas existentes para las conversiones de tipos de datos. Para obtener más información sobre las conversiones de tipo de datos y comportamiento, consulte [CONCAT (Transact-SQL)](../../t-sql/functions/concat-transact-sql.md).
 
@@ -61,16 +58,16 @@ La conversión implícita de cadenas sigue las reglas existentes para las conver
 
 `CONCAT_WS` omite el valor `SET CONCAT_NULL_YIELDS_NULL {ON|OFF}`.
 
-Si todos los argumentos son NULL, se devuelve una cadena vacía de tipo `varchar(1)`. 
+Si `CONCAT_WS` recibe argumentos en los que todos los valores son NULL, devolverá una cadena vacía de tipo varchar(1).
 
-Los valores NULL se omiten durante la concatenación y no se agrega el separador. Esto facilita el escenario común de cadenas concatenadas que a menudo tienen valores en blanco, como un segundo campo de dirección. Vea el ejemplo B.
+`CONCAT_WS` omite los valores NULL durante la concatenación y no se agrega el separador entre ellos. Por lo tanto, `CONCAT_WS` puede tratar limpiamente la concatenación de cadenas que podrían tener valores "en blanco"; por ejemplo, un segundo campo de dirección. Para obtener más información, vea el ejemplo B.
 
-Si su escenario requiere que se incluyan valores NULL con un separador, vea el ejemplo C utilizando la función `ISNULL`.
+Si un escenario implica valores nulos separados por un delimitador, considere la función `ISNULL`. Para obtener más información, vea el ejemplo C.
 
 ## <a name="examples"></a>Ejemplos   
 
 ### <a name="a--concatenating-values-with-separator"></a>A.  Concatenación de valores con separador
-En el ejemplo siguiente se concatenan tres columnas de la tabla sys.databases separando los valores con `- `.   
+En este ejemplo se concatenan tres columnas de la tabla sys.databases separando los valores con `- `.   
 
 ```sql
 SELECT CONCAT_WS( ' - ', database_id, recovery_model_desc, containment_desc) AS DatabaseInfo
@@ -88,7 +85,7 @@ FROM sys.databases;
 
 
 ### <a name="b--skipping-null-values"></a>B.  Omitir valores NULL
-En el ejemplo siguiente se pasan por alto valores `NULL` de la lista de argumentos.
+En este ejemplo se ignoran valores `NULL` de la lista de argumentos.
 
 ```sql
 SELECT CONCAT_WS(',','1 Microsoft Way', NULL, NULL, 'Redmond', 'WA', 98052) AS Address;
@@ -103,7 +100,7 @@ Address
 ```
 
 ### <a name="c--generating-csv-file-from-table"></a>C.  Generar el archivo CSV a partir de la tabla
-En el ejemplo siguiente se utiliza una coma como separador y se agrega el carácter de retorno de carro que resulta en el formato de valores separados de la columna.
+En este ejemplo se utiliza una coma `,` como separador y se agrega el carácter de retorno de carro `char(13)` en el formato de valores separados de la columna del conjunto de resultados.
 
 ```sql
 SELECT 
@@ -122,7 +119,7 @@ DatabaseInfo
 4,SIMPLE,NONE 
 ```
 
-CONCAT_WS pasará por alto los valores NULL en las columnas. Si alguna de las columnas acepta valores NULL, incluya la función `ISNULL` y proporcione el valor predeterminado como en el ejemplo siguiente:
+CONCAT_WS pasará por alto los valores NULL en las columnas. Encapsule una columna con valores NULL con la función `ISNULL` y proporcione un valor predeterminado. Para más información, vea este ejemplo:
 
 ```sql
 SELECT 

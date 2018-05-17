@@ -7,14 +7,16 @@ ms.author: genemi
 ms.topic: article
 ms.custom: UpdArt.exe
 ms.suite: sql
-ms.prod_service: sql
+ms.technology: release-landing
+ms.prod: sql
+ms.prod_service: sql-non-specified
 ms.component: t-sql
-ms.date: 02/03/2018
-ms.openlocfilehash: a3a64bb1daf2dc38aabaf723bdf6794801c6218d
-ms.sourcegitcommit: a85a46312acf8b5a59a8a900310cf088369c4150
+ms.date: 04/28/2018
+ms.openlocfilehash: b1bc891bf7edc4cd82c38c8d647c279828190298
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/26/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="new-and-recently-updated-transact-sql-docs"></a>Nuevos y actualizados recientemente: documentos de Transact-SQL
 
@@ -28,7 +30,7 @@ Se informa de las actualizaciones recientes del siguiente intervalo de fechas y 
 
 
 
-- *Intervalo de fechas de las actualizaciones:* &nbsp; del **03-12-2017** &nbsp; al &nbsp; **03-02-2018**
+- *Intervalo de fechas de las actualizaciones:* &nbsp; del **03-02-2018** &nbsp; al &nbsp; **28-04-2018**
 - *Tema:* &nbsp; **T-SQL**.
 
 
@@ -67,8 +69,8 @@ Por estas y otras razones, no copie código de estos fragmentos y no tome como v
 
 En esta lista compacta se proporcionan vínculos a todos los artículos actualizados que aparecen en la sección de extractos.
 
-1. [CREATE STATISTICS (Transact-SQL)](#TitleNum_1)
-2. [UPDATE STATISTICS (Transact-SQL)](#TitleNum_2)
+1. [ALTER DATABASE SCOPED CONFIGURATION (Transact-SQL)](#TitleNum_1)
+2. [Instrucciones RESTORE (Transact-SQL)](#TitleNum_2)
 
 
 
@@ -79,34 +81,36 @@ En esta lista compacta se proporcionan vínculos a todos los artículos actualiz
 
 <a name="TitleNum_1"/>
 
-### <a name="1-nbsp-create-statistics-transact-sqlstatementscreate-statistics-transact-sqlmd"></a>1. &nbsp; [CREATE STATISTICS (Transact-SQL)](statements/create-statistics-transact-sql.md)
+### <a name="1-nbsp-alter-database-scoped-configuration-transact-sqlstatementsalter-database-scoped-configuration-transact-sqlmd"></a>1. &nbsp; [ALTER DATABASE SCOPED CONFIGURATION (Transact-SQL)](statements/alter-database-scoped-configuration-transact-sql.md)
 
-*Actualizado: 04-01-2018* &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; ([Siguiente](#TitleNum_2))
+*Actualizado: 13-04-2018* &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; ([Siguiente](#TitleNum_2))
 
-<!-- Source markdown line 200.  ms.author= "edmaca".  -->
+<!-- Source markdown line 150.  ms.author= "carlrab".  -->
 
 &nbsp;
 
 
-<!-- git diff --ignore-all-space --unified=0 384e68493597bcc36876a3c7bada2630106256e2 c22168ea59b6020e8ebe1ccac5fa6a6049e6db4d  (PR=4460  ,  Filename=create-statistics-transact-sql.md  ,  Dirpath=docs\t-sql\statements\  ,  MergeCommitSha40=4aeedbb88c60a4b035a49754eff48128714ad290) -->
+<!-- git diff --ignore-all-space --unified=0 f6833910b664d0059a9073589807b195052325b3 bf969f123b22e6ebc650380a6905156f26ed6ca6  (PR=0  ,  Filename=alter-database-scoped-configuration-transact-sql.md  ,  Dirpath=docs\t-sql\statements\  ,  MergeCommitSha40=f70f24bff1677b33c661abd13726f491ce32b305) -->
 
 
 
-MAXDOP = *max_degree_of_parallelism*
-**Se aplica a**: SQL Server (a partir de SQL Server 2017 CU3).
+XTP_PROCEDURE_EXECUTION_STATISTICS **=** { ON | **OFF** }
 
- Reemplaza la opción de configuración **max degree of parallelism** durante la operación estadística. Para obtener más información, vea [Configure the max degree of parallelism Server Configuration Option](statements/../../database-engine/configure-windows/configure-the-max-degree-of-parallelism-server-configuration-option.md). Utilice MAXDOP para establecer un límite para el número de procesadores utilizados en la ejecución de un plan paralelo. El máximo es 64 procesadores.
+**Se aplica a**: *{Included-Content-Goes-Here}*
 
- *max_degree_of_parallelism* puede tener estos valores:
+Habilita o deshabilita la recopilación de estadísticas de ejecución a nivel de módulo para los módulos de T-SQL compilados de forma nativa en la base de datos actual. El valor predeterminado es OFF. Las estadísticas de ejecución se reflejan en [sys.dm_exec_procedure_stats].
 
- 1 Suprime la generación de planes paralelos.
+Las estadísticas de ejecución a nivel de módulo de los módulos de T-SQL compilados de forma nativa se recopilan si esta opción está activada o si se habilita la recopilación de estadísticas mediante [sp_xtp_control_proc_exec_stats].
 
- \>1 Restringe el número máximo de procesadores usados en una operación estadística paralela al número especificado o a un número inferior, en función de la carga de trabajo actual del sistema.
+XTP_QUERY_EXECUTION_STATISTICS **=** { ON | **OFF** }
 
- 0 (valor predeterminado) Usa el número real de procesadores o menos, según la carga de trabajo actual del sistema.
+**Se aplica a**: *{Included-Content-Goes-Here}*
 
- \<update_stats_stream_option> Solamente se identifica con fines informativos. No compatible. La compatibilidad con versiones posteriores no está garantizada.
+Habilita o deshabilita la recopilación de estadísticas de ejecución a nivel de instrucción para los módulos de T-SQL compilados de forma nativa en la base de datos actual. El valor predeterminado es OFF. Las estadísticas de ejecución se reflejan en [sys.dm_exec_query_stats] y en el [Almacén de consultas].
 
+Las estadísticas de ejecución a nivel de instrucción de los módulos de T-SQL compilados de forma nativa se recopilan si esta opción está activada o si se habilita la recopilación de estadísticas mediante [sp_xtp_control_query_exec_stats].
+
+Para obtener información más detallada sobre la supervisión del rendimiento de los módulos de T-SQL compilados de forma nativa, consulte [Supervisar el rendimiento de los procedimientos almacenados compilados de forma nativa].
 
 
 
@@ -118,33 +122,45 @@ MAXDOP = *max_degree_of_parallelism*
 
 <a name="TitleNum_2"/>
 
-### <a name="2-nbsp-update-statistics-transact-sqlstatementsupdate-statistics-transact-sqlmd"></a>2. &nbsp; [UPDATE STATISTICS (Transact-SQL)](statements/update-statistics-transact-sql.md)
+### <a name="2-nbsp-restore-statements-transact-sqlstatementsrestore-statements-transact-sqlmd"></a>2. &nbsp; [Instrucciones RESTORE (Transact-SQL)](statements/restore-statements-transact-sql.md)
 
-*Actualizado: 04-01-2018* &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; ([Anterior](#TitleNum_1))
+*Actualizado: 13-04-2018* &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; ([Anterior](#TitleNum_1))
 
-<!-- Source markdown line 167.  ms.author= "edmaca".  -->
+<!-- Source markdown line 339.  ms.author= "barbkess".  -->
 
 &nbsp;
 
 
-<!-- git diff --ignore-all-space --unified=0 5721e21a9f43fa784fe9357c47cb2a814385e63d 24ae47c553635f389a182e5e643bf9bd6bf59e78  (PR=4460  ,  Filename=update-statistics-transact-sql.md  ,  Dirpath=docs\t-sql\statements\  ,  MergeCommitSha40=4aeedbb88c60a4b035a49754eff48128714ad290) -->
+<!-- git diff --ignore-all-space --unified=0 2902efb58bb964d3e9a0660956690d37f0397c00 36186a7cffd26ffa54a83e383ffd752dbc568a4d  (PR=0  ,  Filename=restore-statements-transact-sql.md  ,  Dirpath=docs\t-sql\statements\  ,  MergeCommitSha40=f70f24bff1677b33c661abd13726f491ce32b305) -->
 
 
 
-MAXDOP = *max_degree_of_parallelism*
+**Notas generales: Instancia administrada de SQL Database**
 
-**Se aplica a:** SQL Server (a partir de SQL Server 2017 CU3).
 
- Reemplaza la opción de configuración **max degree of parallelism** durante la operación estadística. Para obtener más información, vea [Configure the max degree of parallelism Server Configuration Option](statements/../../database-engine/configure-windows/configure-the-max-degree-of-parallelism-server-configuration-option.md). Utilice MAXDOP para establecer un límite para el número de procesadores utilizados en la ejecución de un plan paralelo. El máximo es 64 procesadores.
+En el caso de una restauración asincrónica, la restauración continúa incluso si se interrumpe la conexión del cliente. Si la conexión se interrumpe, puede comprobar la vista [sys.dm_operation_status] del estado de una operación de restauración (así como para las bases de datos CREATE y DROP).
 
- *max_degree_of_parallelism* puede tener estos valores:
+Las siguientes opciones de base de datos se establecen/invalidan y no se pueden cambiar más adelante:
 
- 1 Suprime la generación de planes paralelos.
+- NEW_BROKER (si el agente no está habilitado en el archivo .bak)
+- ENABLE_BROKER (si el agente no está habilitado en el archivo .bak)
+- AUTO_CLOSE=OFF (si una base de datos del archivo .bak tiene AUTO_CLOSE=ON)
+- RECOVERY FULL (si una base de datos del archivo .bak tiene el modo de recuperación SIMPLE o BULK_LOGGED)
+- Se agrega un grupo de archivos optimizado para memoria, al que se asigna el nombre XTP si no estaba en el archivo .bak de origen. Se cambia el nombre de todos los grupos de archivos optimizados para memoria existentes a XTP
+- Las opciones SINGLE_USER y RESTRICTED_USER se convierten en MULTI_USER
 
- \>1 Restringe el número máximo de procesadores usados en una operación estadística paralela al número especificado o a un número inferior, en función de la carga de trabajo actual del sistema.
+**Limitaciones: Instancia administrada de SQL Database**
 
- 0 (valor predeterminado) Usa el número real de procesadores o menos, según la carga de trabajo actual del sistema.
+Se aplican las siguientes limitaciones:
 
+- Los archivos .BAK que contienen varios conjuntos de copia de seguridad no se pueden restaurar.
+- Los archivos .BAK que contienen varios archivos de registro no se pueden restaurar.
+- Se producirá un error en la restauración si el archivo .bak contiene datos FILESTREAM.
+- Las copias de seguridad que contienen bases de datos que tienen objetos en memoria activos no se pueden restaurar en estos momentos.
+- Las copias de seguridad que contienen bases de datos en las que en algún momento ha habido objetos en memoria no se pueden restaurar en estos momentos.
+- Las copias de seguridad que contienen bases de datos en modo de solo lectura no se pueden restaurar en estos momentos. Esta limitación se quitará próximamente.
+
+Para más información, consulte [Instancia administrada].
 
 
 
@@ -157,40 +173,36 @@ MAXDOP = *max_degree_of_parallelism*
 En esta sección se enumeran artículos muy similares a los artículos actualizados recientemente en otras áreas temáticas, dentro de nuestro repositorio público de GitHub.com: [MicrosoftDocs/sql-docs](https://github.com/MicrosoftDocs/sql-docs/).
 
 
+
 #### <a name="subject-areas-that-do-have-new-or-recently-updated-articles"></a>Áreas temáticas *con* artículos nuevos o actualizados recientemente
 
-
-- [Nuevos + actualizados (1+3): &nbsp;documentos de **Análisis avanzado para SQL**](../advanced-analytics/new-updated-advanced-analytics.md)
-- [Nuevos + actualizados (0+1): &nbsp;documentos de **Analytics Platform System para SQL**](../analytics-platform-system/new-updated-analytics-platform-system.md)
-- [Nuevos + actualizados (0+1): &nbsp;documentos de **Conexión a SQL**](../connect/new-updated-connect.md)
-- [Nuevos + actualizados (0+1): &nbsp;documentos del **Motor de base de datos de SQL**](../database-engine/new-updated-database-engine.md)
-- [Nuevos + actualizados (12+1): **documentos de** Integration Services para SQL](../integration-services/new-updated-integration-services.md)
-- [Nuevos + actualizados (6+2): &nbsp;documentos de **Linux para SQL**](../linux/new-updated-linux.md)
-- [Nuevos + actualizados (15+0): **documentos de** PowerShell para SQL](../powershell/new-updated-powershell.md)
-- [Nuevos + actualizados (2+9): &nbsp;documentos de **Bases de datos relacionales para SQL**](../relational-databases/new-updated-relational-databases.md)
-- [Nuevos + actualizados (1+0): &nbsp;documentos de **Reporting Services para SQL**](../reporting-services/new-updated-reporting-services.md)
-- [Nuevos + actualizados (1+1): &nbsp;documentos de **SQL Operations Studio**](../sql-operations-studio/new-updated-sql-operations-studio.md)
-- [Nuevos + actualizados (1+1): &nbsp;documentos de **Microsoft SQL Server**](../sql-server/new-updated-sql-server.md)
-- [Nuevos + actualizados (0+1): &nbsp;documentos de **SQL Server Data Tools (SSDT)**](../ssdt/new-updated-ssdt.md)
-- [Nuevos + actualizados (1+2): &nbsp;documentos de **SQL Server Management Studio (SSMS)**](../ssms/new-updated-ssms.md)
-- [Nuevos + actualizados (0+2): &nbsp;documentos de **Transact-SQL**](../t-sql/new-updated-t-sql.md)
+- [Nuevos + actualizados (11+6): documentos de &nbsp;&nbsp;**Análisis avanzado para SQL**](../advanced-analytics/new-updated-advanced-analytics.md)
+- [Nuevos + actualizados (18+0): documentos de &nbsp;&nbsp;**Analysis Services para SQL**](../analysis-services/new-updated-analysis-services.md)
+- [Nuevos + actualizados (218+14): documentos de **Conexión a SQL**](../connect/new-updated-connect.md)
+- [Nuevos + actualizados (14+0): documentos del &nbsp;&nbsp;**Motor de base de datos de SQL**](../database-engine/new-updated-database-engine.md)
+- [Nuevos + actualizados (3+2): documentos de &nbsp;&nbsp;**Integration Services para SQL**](../integration-services/new-updated-integration-services.md)
+- [Nuevos + actualizados (3+3): documentos de &nbsp;&nbsp;**Linux para SQL**](../linux/new-updated-linux.md)
+- [Nuevos + actualizados (7+10): documentos de&nbsp;&nbsp;**Bases de datos relacionales para SQL**](../relational-databases/new-updated-relational-databases.md)
+- [Nuevos + actualizados (0+2): documentos de &nbsp;&nbsp;**Reporting Services para SQL**](../reporting-services/new-updated-reporting-services.md)
+- [Nuevos + actualizados (1+3): documentos de &nbsp;&nbsp;**SQL Operations Studio**](../sql-operations-studio/new-updated-sql-operations-studio.md)
+- [Nuevos + actualizados (2+3): documentos de &nbsp;&nbsp;**Microsoft SQL Server**](../sql-server/new-updated-sql-server.md)
+- [Nuevos + actualizados (1+1): documentos de &nbsp;&nbsp;**SQL Server Data Tools (SSDT)**](../ssdt/new-updated-ssdt.md)
+- [Nuevos + actualizados (5+2): documentos de &nbsp;&nbsp;**SQL Server Management Studio (SSMS)**](../ssms/new-updated-ssms.md)
+- [Nuevos + actualizados (0+2): documentos de &nbsp;&nbsp;**Transact-SQL**](../t-sql/new-updated-t-sql.md)
+- [Nuevos + actualizados (1+1): documentos de &nbsp;&nbsp;**Herramientas para SQL**](../tools/new-updated-tools.md)
 
 
 
 #### <a name="subject-areas-that-do-not-have-any-new-or-recently-updated-articles"></a>Áreas temáticas que *no* tienen artículos nuevos o actualizados recientemente
 
-
-- [Nuevos + Actualizados (0+0): documentos de **Data Migration Assistant (DMA) para SQL**](../dma/new-updated-dma.md)
-- [Nuevos + Actualizados (0+0): documentos de **Objetos de datos ActiveX (ADO) para SQL**](../ado/new-updated-ado.md)
-- [Nuevos + actualizados (0+0): documentos de **Analysis Services para SQL**](../analysis-services/new-updated-analysis-services.md)
+- [Nuevos + actualizados (0+0): documentos de **Analytics Platform System para SQL**](../analytics-platform-system/new-updated-analytics-platform-system.md)
 - [Nuevos + Actualizados (0+0): documentos de **Data Quality Services para SQL**](../data-quality-services/new-updated-data-quality-services.md)
 - [Nuevos + Actualizados (0+0): documentos de **Extensiones de minería de datos (DMX) para SQL**](../dmx/new-updated-dmx.md)
 - [Nuevos + actualizados (0+0): documentos de **Master Data Services (MDS) para SQL**](../master-data-services/new-updated-master-data-services.md)
 - [Nuevos + Actualizados (0+0): documentos de **Expresiones multidimensionales (MDX) para SQL**](../mdx/new-updated-mdx.md)
 - [Nuevos + Actualizados (0+0): documentos de **ODBC (conectividad abierta de bases de datos) para SQL**](../odbc/new-updated-odbc.md)
+- [Nuevos + Actualizados (0+0): documentos de **PowerShell para SQL**](../powershell/new-updated-powershell.md)
 - [Nuevos + Actualizados (0+0): documentos de **Ejemplos para SQL**](../samples/new-updated-samples.md)
 - [Nuevos + Actualizados (0+0): documentos de **SQL Server Migration Assistant (SSMA)**](../ssma/new-updated-ssma.md)
-- [Nuevos + actualizados (0+0): documentos de **Herramientas para SQL**](../tools/new-updated-tools.md)
 - [Nuevos + Actualizados (0+0): documentos de **XQuery para SQL**](../xquery/new-updated-xquery.md)
-
 

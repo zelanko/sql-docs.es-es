@@ -4,12 +4,10 @@ ms.custom: ''
 ms.date: 08/03/2017
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
-ms.service: ''
 ms.component: t-sql|spatial-geography
 ms.reviewer: ''
 ms.suite: sql
-ms.technology:
-- database-engine
+ms.technology: t-sql
 ms.tgt_pltfrm: ''
 ms.topic: language-reference
 dev_langs:
@@ -21,12 +19,11 @@ caps.latest.revision: 7
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: 285833fd707c524f3912fa68ca7e44878417f788
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
+ms.openlocfilehash: 484b47de33df0f278c082831130bad233a501cf4
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="isvaliddetailed-geometry-datatype"></a>IsValidDetailed (tipo de datos geometry)
 [!INCLUDE[tsql-appliesto-ss2012-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-asdb-xxxx-xxx-md.md)]
@@ -61,7 +58,7 @@ Devuelve un mensaje que puede ayudar a identificar problemas con un objeto espac
 |24408|No es válido porque el anillo del polígono {0} no se cierra.|  
 |24409|No es válido porque alguna parte del anillo del polígono {0} está en el interior de un polígono.|  
 |24410|No es válido porque el anillo {0} es el primero de un polígono que no es el anillo exterior.|  
-|24411|No es válido porque el anillo {0} queda fuera del anillo exterior {1} de su polígono.|  
+|24411|No es válido porque el anillo {0} cae fuera del anillo exterior {1} de su polígono.|  
 |24412|No es válido porque el interior de un polígono con los anillos {0} y {1} no está conectado.|  
 |24413|No es válido debido a dos bordes que se solapan en la curva {0}.|  
 |24414|No es válido porque un borde de la curva {0} se superpone con un borde de la curva {1}.|  

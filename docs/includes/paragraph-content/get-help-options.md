@@ -1,9 +1,11 @@
-##  <a name="infotipmediainfo-tippng-get-help"></a>![info_tip](../media/info-tip.png) Obtener ayuda 
-- [¿UserVoice - sugerencia a mejorar SQL Server?](https://feedback.azure.com/forums/908035-sql-server)
-- [DBA pila Exchange (etiqueta sql server) - formular preguntas de SQL Server](https://dba.stackexchange.com/questions/tagged/sql-server)
-    - [La pila de desbordamiento (etiqueta sql server), también cuenta con algunas respuestas acerca del desarrollo de SQL](http://stackoverflow.com/questions/tagged/sql-server) 
-- [El programa de instalación y actualización: foro de MSDN](https://social.msdn.microsoft.com/Forums/en-US/home?forum=sqlsetupandupgrade&filter=alltypes&sort=lastpostdesc)
-- [Herramientas de datos SQL Server: foro de MSDN](https://social.msdn.microsoft.com/Forums/en-US/home?forum=ssdt&filter=alltypes&sort=lastpostdesc)
+##  <a name="infotipmediainfo-tippng-get-help"></a>![info_tip](../media/info-tip.png) Obtener ayuda
+
+- [UserVoice - ¿Alguna sugerencia para mejorar SQL Server?](https://feedback.azure.com/forums/908035-sql-server)
+- [Instalación y actualización - Foro de MSDN](https://social.msdn.microsoft.com/Forums/en-US/home?forum=sqlsetupandupgrade&filter=alltypes&sort=lastpostdesc)
+- [SQL Server Data Tools - Foro de MSDN](https://social.msdn.microsoft.com/Forums/en-US/home?forum=ssdt&filter=alltypes&sort=lastpostdesc)
+- [Transaqt-SQL - Foro de MSDN](http://social.msdn.microsoft.com/Forums/en-US/home?forum=transactsql)
+- [DBA Stack Exchange (etiqueta sql-server): formule preguntas sobre SQL Server](https://dba.stackexchange.com/questions/tagged/sql-server)
+- [stack Overflow (etiqueta sql-server) también cuenta con algunas respuestas sobre el desarrollo de SQL](http://stackoverflow.com/questions/tagged/sql-server) 
 - [Reddit: debate general sobre SQL Server](https://www.reddit.com/r/SQLServer/)
 - [Información y términos de licencia de Microsoft SQL Server](https://www.microsoft.com/download/details.aspx?id=39299)
 - [Opciones de soporte técnico para usuarios profesionales](https://support.microsoft.com/gp/support-options-for-business)

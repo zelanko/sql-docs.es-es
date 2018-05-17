@@ -4,12 +4,10 @@ ms.custom: ''
 ms.date: 08/08/2016
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
-ms.service: ''
 ms.component: system-functions
 ms.reviewer: ''
 ms.suite: sql
-ms.technology:
-- database-engine
+ms.technology: system-objects
 ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
@@ -26,11 +24,11 @@ author: rothja
 ms.author: jroth
 manager: craigg
 monikerRange: = azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: 5023989a36f6118532dad0b110d03aaabf381242
-ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
-ms.translationtype: HT
+ms.openlocfilehash: 8b0062a473b403a62f2805f28f84d5e0d9651dcb
+ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
+ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="changetable-transact-sql"></a>CHANGETABLE (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -84,7 +82,7 @@ CHANGETABLE (
  *Valor*  
  Es el valor de la clave principal. Si hay varias columnas de clave principales, deben especificarse los valores en el mismo orden que las columnas aparecen en la *column_name* lista.  
   
- [COMO] *aliasTabla* [(*column_alias* [,...] *n* ])]  
+ [COMO] *aliasTabla* [(*column_alias* [,... *n* ])]  
  Proporciona los nombres de los resultados devueltos por CHANGETABLE.  
   
  *table_alias*  

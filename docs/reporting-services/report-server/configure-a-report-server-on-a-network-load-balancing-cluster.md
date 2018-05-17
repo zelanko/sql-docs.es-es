@@ -1,29 +1,27 @@
 ---
-title: "Configurar un servidor de informes en un clúster con equilibrio de carga de red | Microsoft Docs"
-ms.custom: 
+title: Configurar un servidor de informes en un clúster con equilibrio de carga de red | Microsoft Docs
+ms.custom: ''
 ms.date: 03/20/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-sharepoint, reporting-services-native
-ms.service: 
 ms.component: report-server
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: pro-bi
-ms.technology: 
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.technology: ''
+ms.tgt_pltfrm: ''
+ms.topic: conceptual
 helpviewer_keywords:
 - report servers [Reporting Services], network load balancing
 ms.assetid: 6bfa5698-de65-43c3-b940-044f41c162d3
-caps.latest.revision: 
+caps.latest.revision: 10
 author: markingmyname
 ms.author: maghan
 manager: kfile
-ms.workload: On Demand
-ms.openlocfilehash: 0512371abbf0f958b065363c7b145da0bd915489
-ms.sourcegitcommit: 9d0467265e052b925547aafaca51e5a5e93b7e38
+ms.openlocfilehash: ecf545bf56a9886fa2409b570673ba36ad698eff
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/02/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="configure-a-report-server-on-a-network-load-balancing-cluster"></a>Configurar un servidor de informes en un clúster con equilibrio de carga de red
   Si va a configurar una ampliación escalada de un servidor de informes para ejecutarse en un clúster con equilibrio de carga de red (NLB), debe hacer lo siguiente:  

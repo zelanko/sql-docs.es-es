@@ -4,12 +4,10 @@ ms.custom: ''
 ms.date: 07/24/2017
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
-ms.service: ''
 ms.component: t-sql|functions
 ms.reviewer: ''
 ms.suite: sql
-ms.technology:
-- database-engine
+ms.technology: t-sql
 ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
@@ -24,17 +22,16 @@ caps.latest.revision: 25
 author: edmacauley
 ms.author: edmaca
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: 95c95ad472c5b5d4cb5420fa3b0da8f88053c0c5
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
+ms.openlocfilehash: 51685541435f4ab0192792341d2a29210dc9f504
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="connectionproperty-transact-sql"></a>CONNECTIONPROPERTY (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
-Devuelve información acerca de las propiedades de conexión de la única conexión encontrada por una solicitud.
+Para una solicitud que llega al servidor, esta función devuelve información sobre las propiedades de conexión de la conexión única que admite esa solicitud.
   
 ![Icono de vínculo de tema](../../database-engine/configure-windows/media/topic-link.gif "Icono de vínculo de tema") [Convenciones de sintaxis de Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)
   
@@ -46,23 +43,23 @@ CONNECTIONPROPERTY ( property )
   
 ## <a name="arguments"></a>Argumentos  
 *property*  
-Es la propiedad de la conexión. *property* puede tener uno de estos valores.
+La propiedad de la conexión. *property* puede ser uno de estos valores:
   
 |Valor|Tipo de datos|Description|  
 |---|---|---|
-|net_transport|**nvarchar(40)**|Devuelve el protocolo de transporte físico utilizado por esta conexión. No admite valores NULL.<br /><br /> Los valores devueltos son: **HTTP**, **Named pipe**, **Session**, **Shared memory**, **SSL**, **TCP** y **VIA**.<br /><br /> Nota: Siempre se devuelve **Session** cuando una conexión tiene habilitado Multiple Active Result Sets (MARS) y la agrupación de conexiones está habilitada.|  
+|net_transport|**nvarchar(40)**|Devuelve el protocolo de transporte físico utilizado por esta conexión. Este valor no admite valores NULL. Posibles valores devueltos:<br /><br /> **HTTP**<br /> **Canalización con nombre**<br /> **Session**<br /> **Memoria compartida**<br /> **SSL**<br /> **TCP**<br /><br /> y<br /><br /> **VIA**<br /><br /> Nota: Siempre se devuelve **Session** cuando una conexión tiene habilitado tanto el conjunto de resultados activo múltiple (MARS) como la agrupación de conexiones.|  
 |protocol_type|**nvarchar(40)**|Devuelve el tipo de protocolo de la carga. Actualmente, distingue entre TDS (TSQL) y SOAP. Acepta valores NULL.|  
-|auth_scheme|**nvarchar(40)**|Devuelve el esquema de autenticación de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] de una conexión. El esquema de autenticación puede utilizar la autenticación de Windows (NTLM, KERBEROS, DIGEST, BASIC, NEGOTIATE) o la autenticación de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. No admite valores NULL.|  
-|local_net_address|**varchar(48)**|Devuelve la dirección IP del servidor que es el destino de esta conexión. Solo está disponible para las conexiones que utilicen el proveedor de transporte TCP. Acepta valores NULL.|  
+|auth_scheme|**nvarchar(40)**|Devuelve el esquema de autenticación de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] de la conexión. El esquema de autenticación puede utilizar la autenticación de Windows (NTLM, KERBEROS, DIGEST, BASIC, NEGOTIATE) o la autenticación de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. No admite valores NULL.|  
+|local_net_address|**varchar(48)**|Devuelve la dirección IP del servidor que es el destino de esta conexión específico. Solo está disponible para las conexiones que utilicen el proveedor de transporte TCP. Acepta valores NULL.|  
 |local_tcp_port|**int**|Devuelve el puerto TCP del servidor de destino de esta conexión, si se trata de una conexión que utiliza el transporte TCP. Acepta valores NULL.|  
 |client_net_address|**varchar(48)**|Solicita la dirección del cliente que se está conectando a este servidor. Acepta valores NULL.|  
 |physical_net_transport|**nvarchar(40)**|Devuelve el protocolo de transporte físico utilizado por esta conexión. Preciso cuando una conexión tiene habilitado Multiple Active Result Sets (MARS).|  
-|\<Cualquier otra cadena>||Devuelve NULL si la entrada no es válida.|  
+|\<Cualquier otra cadena>||Devuelve NULL en una entrada no válida.|  
   
 ## <a name="remarks"></a>Notas  
 **local_net_address** y **local_tcp_port** devuelven NULL en [!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)].
   
-Los valores devueltos son iguales que las opciones mostradas en las columnas correspondientes de la vista de administración dinámica [sys.dm_exec_connections](../../relational-databases/system-dynamic-management-views/sys-dm-exec-connections-transact-sql.md). Por ejemplo:
+Los valores devueltos coinciden con las opciones mostradas en las columnas correspondientes de la vista de administración dinámica [sys.dm_exec_connections](../../relational-databases/system-dynamic-management-views/sys-dm-exec-connections-transact-sql.md). Por ejemplo:
   
 ```sql
 SELECT   

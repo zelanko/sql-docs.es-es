@@ -1,16 +1,15 @@
 ---
 title: Servicio web de MSRS 2011 de contadores de rendimiento, objetos de rendimiento | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-sharepoint, reporting-services-native
-ms.service: 
 ms.component: report-server
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: pro-bi
-ms.technology: 
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.technology: ''
+ms.tgt_pltfrm: ''
+ms.topic: conceptual
 helpviewer_keywords:
 - performance counters [Reporting Services]
 - Report Server Web service, performance counters
@@ -19,16 +18,15 @@ helpviewer_keywords:
 - counters [Reporting Services]
 - performance [Reporting Services]
 ms.assetid: c642fc4f-8734-4626-a194-42ac9cd8e2ef
-caps.latest.revision: "50"
+caps.latest.revision: 50
 author: markingmyname
 ms.author: maghan
 manager: kfile
-ms.workload: Inactive
-ms.openlocfilehash: 4e159f7c4fa846e30fbd1ca8f43b5c18df44d4c5
-ms.sourcegitcommit: 7e117bca721d008ab106bbfede72f649d3634993
+ms.openlocfilehash: 8851d1c5deac3b759452ec23115cb70dd3cf31f4
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/09/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="performance-counters-msrs-2011-web-service-performance-objects"></a>Servicio web de MSRS 2011 de contadores de rendimiento, objetos de rendimiento
   En este tema se describen los contadores de rendimiento para los objetos de rendimiento **MSRS 2011 Web Service** y **MSRS 2011 Windows Service** . Estos objetos son parte de una implementación de modo nativo de [!INCLUDE[ssRSCurrent](../../includes/ssrscurrent-md.md)] .  
@@ -36,7 +34,7 @@ ms.lasthandoff: 01/09/2018
 > [!NOTE]  
 >  Estos objetos de rendimiento supervisan los eventos en el servidor de informes local. Si ejecuta un servidor de informes en una implementación escalada, los recuentos se aplican al servidor actual y no a la implementación escalada.  
   
- Los objetos de rendimiento están disponibles en el Monitor de rendimiento de Windows (**Perfmon.exe**). Para obtener más información, vea la documentación de Windows [Generar perfiles en tiempo de ejecución](http://msdn.microsoft.com/library/w4bz2147.aspx) (http://msdn.microsoft.com/library/w4bz2147.aspx).  
+ Los objetos de rendimiento están disponibles en el Monitor de rendimiento de Windows (**Perfmon.exe**). Para más información, consulte la documentación de Windows, [Generar perfiles en tiempo de ejecución](http://msdn.microsoft.com/library/w4bz2147.aspx) (http://msdn.microsoft.com/library/w4bz2147.aspx).  
   
  Para obtener información relacionada con los contadores de rendimiento en modo de SharePoint, vea [Contadores de rendimiento para los objetos de rendimiento en modo SharePoint de MSRS 2011 Web Service y SharePoint de MSRS 2011 Windows Service &#40;modo SharePoint&#41;](../../reporting-services/report-server/performance-counters-msrs-2011-sharepoint-mode-performance-objects.md).  
   

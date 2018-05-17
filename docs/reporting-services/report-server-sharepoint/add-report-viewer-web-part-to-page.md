@@ -1,25 +1,23 @@
 ---
-title: "Agregar el elemento web Visor de informes de SQL Server Reporting Services a una página de SharePoint | Microsoft Docs"
-ms.custom: 
+title: Agregar el elemento web Visor de informes de SQL Server Reporting Services a una página de SharePoint | Microsoft Docs
+ms.custom: ''
 ms.date: 09/26/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-sharepoint, reporting-services-native
-ms.service: 
 ms.component: report-server-sharepoint
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: pro-bi
-ms.technology: 
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.technology: ''
+ms.tgt_pltfrm: ''
+ms.topic: conceptual
 author: markingmyname
 ms.author: maghan
 manager: kfile
-ms.workload: Inactive
-ms.openlocfilehash: 93137662ea40589495e692ca021c693920786185
-ms.sourcegitcommit: 7e117bca721d008ab106bbfede72f649d3634993
+ms.openlocfilehash: 3d63f40c62c1997be2d4944c8b67f328d2b64c2d
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/09/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="add-sql-server-reporting-services-report-viewer-web-part-to-a-sharepoint-page"></a>Agregar el elemento web Visor de informes de SQL Server Reporting Services a una página de SharePoint
 
@@ -63,7 +61,7 @@ Para configurar el elemento web para que señale a un informe específico, haga 
 
     ![Edite la página web desde el desplegable del elemento web.](media/sharepoint-edit-web-part.png)
 
-2. Escriba la **dirección URL del servidor de informes** que hospeda el informe. Debe parecerse a *http://miServidorRS/reportserver*.
+2. Escriba la **dirección URL del servidor de informes** que hospeda el informe. Esto debe tener un aspecto parecido a *http://myrsserver/reportserver*.
 
 3. Escriba la ruta de acceso y el nombre del informe que quiere mostrar en el elemento web. Será algo similar a */AdventureWorks Sample Reports/Company Sales*. En este ejemplo, el informe *Company Sales* (Ventas de la empresa) se encuentra en una carpeta denominada *AdventureWorks Sample Reports* (Informes de muestra de AdventureWorks).
 

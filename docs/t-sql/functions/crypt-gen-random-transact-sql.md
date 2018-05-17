@@ -4,12 +4,10 @@ ms.custom: ''
 ms.date: 07/24/2017
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
-ms.service: ''
 ms.component: t-sql|functions
 ms.reviewer: ''
 ms.suite: sql
-ms.technology:
-- database-engine
+ms.technology: t-sql
 ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
@@ -24,17 +22,16 @@ caps.latest.revision: 11
 author: edmacauley
 ms.author: edmaca
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: 1742e0d609372fcb2ad17859b503185ba04075ad
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
+ms.openlocfilehash: 2971701764238c0517558c1daf64296e4727d5ea
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="cryptgenrandom-transact-sql"></a>CRYPT_GEN_RANDOM (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
-Devuelve un número aleatorio criptográfico generado por la API de criptografía (CAPI). La salida es un número hexadecimal del número especificado de bytes.
+Esta función devuelve un número criptográfico y aleatorio, generado por Crypto API (CAPI). `CRYPT_GEN_RANDOM` devuelve un número hexadecimal con una longitud de un número especificado de bytes.
   
 ![Icono de vínculo de tema](../../database-engine/configure-windows/media/topic-link.gif "Icono de vínculo de tema") [Convenciones de sintaxis de Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)
   
@@ -46,10 +43,10 @@ CRYPT_GEN_RANDOM ( length [ , seed ] )
   
 ## <a name="arguments"></a>Argumentos  
 *length*  
-Longitud del número que se va a crear. El valor máximo es 8000. *length* es del tipo **int**.
+La longitud, en bytes, del número que `CRYPT_GEN_RANDOM` va a crear. El argumento *length*  tiene un tipo de datos **int** y un rango de valores entre 1 y 8000. `CRYPT_GEN_RANDOM` devuelve NULL para un valor **int** fuera de este rango. 
   
 *seed*  
-Datos opcionales que se van a utilizar como valor de inicialización aleatorio.  Debe haber al menos el número de bytes de datos especificado en *length*. *seed* es **varbinary(8000)**.
+Un número hexadecimal opcional, para su uso como un valor de inicialización aleatorio. La longitud de *seed* debe coincidir con el valor del argumento *length*. El argumento *seed* tiene un tipo de datos **varbinario(8000)**.
   
 ## <a name="returned-types"></a>Tipos devueltos  
 **varbinary(8000)**
@@ -60,13 +57,13 @@ Esta función es pública y no requiere permisos especiales.
 ## <a name="examples"></a>Ejemplos  
   
 ### <a name="a-generating-a-random-number"></a>A. Generar un número aleatorio  
-En el ejemplo siguiente se genera un número aleatorio con una longitud de 50 bytes.
+En este ejemplo se genera un número aleatorio con una longitud de 50 bytes:
   
 ```sql
 SELECT CRYPT_GEN_RANDOM(50) ;  
 ```  
   
-En el ejemplo siguiente se genera un número aleatorio con una longitud de 4 bytes utilizando un valor de inicialización de 4 bytes.
+En este ejemplo se genera un número aleatorio con una longitud de 4 bytes utilizando un valor de inicialización de 4 bytes:
   
 ```sql
 SELECT CRYPT_GEN_RANDOM(4, 0x25F18060) ;  

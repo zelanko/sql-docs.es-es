@@ -31,7 +31,7 @@ ms.lasthandoff: 05/03/2018
 > [!IMPORTANT]  
 > En [Instancia administrada de Azure SQL Database](https://docs.microsoft.com/azure/sql-database/sql-database-managed-instance), la mayoría de las características de agente SQL Server son compatibles actualmente, aunque no todas. Vea [Diferencias de T-SQL en Instancia administrada de Azure SQL Database](https://docs.microsoft.com/azure/sql-database/sql-database-managed-instance-transact-sql-information#sql-server-agent) para obtener más información.
 
-[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] es un servicio de Microsoft Wendows que ejecuta tareas admenistrativas programadas, denomenadas *trabajos* en [!INCLUDE[ssCurrent](../../includes/sscurrent_md.md)].  
+[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] es un servicio de Microsoft Windows que ejecuta tareas administrativas programadas, denominadas *trabajos* en [!INCLUDE[ssCurrent](../../includes/sscurrent_md.md)].  
   
 **En este tema**  
   

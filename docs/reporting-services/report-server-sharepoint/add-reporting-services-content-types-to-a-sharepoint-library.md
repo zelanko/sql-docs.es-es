@@ -1,27 +1,25 @@
 ---
 title: Agregar tipos de contenido de Reporting Services a una biblioteca de SharePoint | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 09/25/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-sharepoint, reporting-services-native
-ms.service: 
 ms.component: report-server-sharepoint
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: pro-bi
-ms.technology: 
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.technology: ''
+ms.tgt_pltfrm: ''
+ms.topic: conceptual
 ms.assetid: ac9136c8-9ef4-484c-8e9d-05008a186db5
-caps.latest.revision: "7"
+caps.latest.revision: 7
 author: markingmyname
 ms.author: maghan
 manager: kfile
-ms.workload: On Demand
-ms.openlocfilehash: 2fe50a939544eb7f3d58bbd38ad98e9ffcc82733
-ms.sourcegitcommit: 7e117bca721d008ab106bbfede72f649d3634993
+ms.openlocfilehash: 26f53f76d18900158ff0e9d439839c376a991d73
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/09/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="add-reporting-services-content-types-to-a-sharepoint-library"></a>Agregar tipos de contenido de Reporting Services a una biblioteca de SharePoint
 
@@ -45,7 +43,7 @@ ms.lasthandoff: 01/09/2018
 > [!TIP]  
 >  Si **no** ha configurado previamente los tipos de contenido de una biblioteca, habilite primero la administración de tipos de contenido y, a continuación, habilite los tipos de contenido de [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] . Vea los procedimientos para habilitar la administración de tipos de contenido en una única biblioteca de documentos.  
   
- **Vídeo corto:** [(SSRS) Enabling Content Types in SharePoint2010.wmv](http://www.youtube.com/watch?v=yqhm3DrtT1w) (Habilitar tipos de contenido en SharePoint 2010) (http://www.youtube.com/watch?v=yqhm3DrtT1w).  
+ **Vídeo corto:** [(SSRS) Enabling Content Types in SharePoint2010.wmv](http://www.youtube.com/watch?v=yqhm3DrtT1w) (http://www.youtube.com/watch?v=yqhm3DrtT1w) (Habilitación de tipos de contenido en SharePoint2010.wmv).  
   
  **En este tema:**  
   

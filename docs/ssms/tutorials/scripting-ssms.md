@@ -1,12 +1,14 @@
 ---
-Title: 'Tutorial: Script Objects in SQL Server Management Studio'
-description: Tutorial para crear scripts de objetos en SSMS.
+Title: 'Tutorial: Script objects in SQL Server Management Studio'
+description: Tutorial para la creación de scripts de objetos en SSMS
 keywords: SQL Server, SSMS, SQL Server Management Studio, scripts, scripting
 author: MashaMSFT
 ms.author: mathoma
 ms.date: 03/13/2018
 ms.topic: Tutorial
 ms.suite: sql
+ms.prod: sql
+ms.technology: ssms
 ms.prod_service: sql-tools
 ms.reviewer: sstein
 manager: craigg
@@ -19,180 +21,181 @@ helpviewer_keywords:
 - solutions [SQL Server Management Studio], tutorials
 - SQL Server Management Studio [SQL Server], tutorials
 - scripts [SQL Server], SQL Server Management Studio
-ms.openlocfilehash: a931ddb3cf3229970de4b301e18002484acbaf53
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
+ms.openlocfilehash: 961c9f7e093f61db909360f0dd7f8ac30f2d13e1
+ms.sourcegitcommit: 38f8824abb6760a9dc6953f10a6c91f97fa48432
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/10/2018
 ---
-# <a name="tutorial-script-objects-in-sql-server-management-studio"></a>Tutorial: Crear scripts de objetos en SQL Server Management Studio
-En este tutorial aprenderá a generar scripts de Transact-SQL (T-SQL) para distintos objetos de SQL Server Management Studio.  En este tutorial encontrará ejemplos de cómo crear scripts de los siguientes objetos: 
+# <a name="tutorial-script-objects-in-sql-server-management-studio"></a>Tutorial: Creación de scripts de objetos en SQL Server Management Studio
+En este tutorial aprenderá a crear scripts de Transact-SQL (T-SQL) para distintos objetos de SQL Server Management Studio (SSMS). En este tutorial encontrará ejemplos de cómo crear scripts de los siguientes objetos:
 
 > [!div class="checklist"]
-> * Consultas al llevar a cabo acciones en la GUI
-> * Bases de datos de dos formas diferentes ("Script As" [Generar script como] y "Generar script")
+> * Consultas, al llevar a cabo acciones en la GUI
+> * Bases de datos de dos formas diferentes (Script como y Generar script)
 > * Tablas
 > * Procedimientos almacenados
 > * Eventos extendidos
 
-El resumen de este tutorial es que se pueden crear scripts de todos los objetos del **Explorador de objetos**. Para ello, se debe hacer clic con el botón derecho en un objeto y seleccionar la opción **Generar script de objeto como**. 
+Para crear un script de cualquier objeto en el **Explorador de objetos**, haga clic con el botón derecho en él y seleccione la opción correspondiente para **crear un script de un objeto como**. En este tutorial se muestra el proceso.
 
 
 ## <a name="prerequisites"></a>Prerequisites
-Para llevar a cabo este tutorial necesita tener SQL Server Management Studio, acceso a un servidor SQL Server y una base de datos de AdventureWorks. 
+Para llevar a cabo este tutorial necesita tener SQL Server Management Studio, acceso a un servidor que ejecute SQL Server y una base de datos de AdventureWorks.
 
-- Instale [SQL Server Management Studio](https://docs.microsoft.com/en-us/sql/ssms/download-sql-server-management-studio-ssms).
-- Instale [SQL Server 2017 Developer Edition](https://www.microsoft.com/en-us/sql-server/sql-server-downloads).
-- Descargue [bases de datos de ejemplo de AdventureWorks2016](https://github.com/Microsoft/sql-server-samples/releases). Aquí encontrará instrucciones para restaurar bases de datos en SSMS: [Restaurar una base de datos](https://docs.microsoft.com/en-us/sql/relational-databases/backup-restore/restore-a-database-backup-using-ssms). 
+- Instale [SQL Server Management Studio](https://docs.microsoft.com/sql/ssms/download-sql-server-management-studio-ssms).
+- Instale [SQL Server 2017 Developer Edition](https://www.microsoft.com/sql-server/sql-server-downloads).
+- Descargue las [bases de datos de ejemplo de AdventureWorks2016](https://github.com/Microsoft/sql-server-samples/releases).
+
+Aquí encontrará instrucciones para restaurar bases de datos en SSMS: [Restaurar una base de datos](https://docs.microsoft.com/sql/relational-databases/backup-restore/restore-a-database-backup-using-ssms). 
 
 
-## <a name="script-queries-from-gui"></a>Crear scripts de consultas desde la interfaz gráfica de usuario
-Siempre que lleve a cabo una tarea con la interfaz gráfica de usuario (GUI) en SSMS, también puede generar el código de T-SQL asociado a esa tarea. En los siguientes ejemplos se muestra cómo hacerlo al hacer una copia de seguridad de una base de datos y al reducir el registro de transacciones.  Estos mismos pasos se pueden aplicar a cualquier acción que se lleve a cabo con la GUI. 
+## <a name="script-queries-from-the-gui"></a>Creación de scripts de consultas desde la interfaz gráfica de usuario
+Puede generar el código T-SQL asociado para una tarea siempre que utilice la GUI en SSMS para completarla. En los siguientes ejemplos se muestra cómo hacerlo al hacer una copia de seguridad de una base de datos y al reducir el registro de transacciones. Estos mismos pasos se pueden aplicar a cualquier acción que se lleve a cabo con la GUI.
 
-### <a name="script-t-sql-when-backing-up-a-database"></a>Creación de un script de T-SQL al hacer una copia de seguridad de una base de datos
-1. Conéctese a su servidor SQL Server.
+### <a name="script-t-sql-when-you-back-up-a-database"></a>Creación de un script de T-SQL al hacer una copia de seguridad de una base de datos
+1. Conéctese a un servidor que ejecuta SQL Server.
 2. Expanda el nodo **Bases de datos** .
 3. Haga clic con el botón derecho en la base de datos **Adventureworks2016** > **Tareas** > **Hacer una copia de seguridad**:
 
-    ![Hacer una copia de seguridad de una base de datos](media/scripting-ssms/backupdb.png)
+    ![Realizar una copia de seguridad de una base de datos](media/scripting-ssms/backupdb.png)
 
-4. Configure la copia de seguridad del modo que quiera. Para este tutorial, se ha dejado todo en los valores predeterminados, aunque todos los cambios efectuados en la ventana también se verán reflejados en el script. 
-5. Seleccione la opción **Generar script** > **Generar script de acción en la ventana de consulta**:
+4. Configure la copia de seguridad del modo que quiera. Para este tutorial, se ha dejado todo en los valores predeterminados, aunque todos los cambios efectuados en la ventana también se van a ver reflejados en el script. 
+5. Seleccione **Script** > **Generar script de acción en ventana Nueva consulta**:
  
-    ![Crear un script de la copia de seguridad de la base de datos](media/scripting-ssms/scriptdbbackup.PNG)
-6. Revise el código T-SQL rellenado en la ventana de consulta: 
+    ![Creación de un script de la copia de seguridad de base de datos: acción de script](media/scripting-ssms/scriptdbbackup.PNG)
+6. Revise el código T-SQL rellenado en la ventana de consulta.
 
-    ![Script para la copia de seguridad de la base de datos](media/scripting-ssms/dbbackupscript.PNG)
+    ![Creación de un script de la copia de seguridad de base de datos: revisión de T-SQL](media/scripting-ssms/dbbackupscript.PNG)
 7. Seleccione **Ejecutar** para ejecutar la consulta para hacer una copia de seguridad de la base de datos mediante T-SQL. 
 
 
-### <a name="script-t-sql-when-shrinking-the-transaction-log"></a>Crear un script de T-SQL al reducir el registro de transacciones
-1. Haga clic con el botón derecho en la base de datos **AdventureWorks2016** > **Tareas** > **Reducir** > **Archivos**:
+### <a name="script-t-sql-when-you-shrink-the-transaction-log"></a>Creación de un script de T-SQL al reducir el registro de transacciones
+1. Haga clic con el botón derecho en la base de datos **Adventureworks2016** > **Tareas** > **Reducir** > **Archivos**:
 
-     ![Reducir archivos](media/scripting-ssms/shrinkfiles.png)
+     ![Reducción de archivos](media/scripting-ssms/shrinkfiles.png)
 
-2. Seleccione **Registro** en la lista desplegable **Tipo de archivo**:
+2. Seleccione **Registro**  en el cuadro de lista desplegable **Tipo de archivo**:
 
-    ![Reducir el registro de transacciones](media/scripting-ssms/shrinktlog.png)
+    ![Reducción del registro de transacciones](media/scripting-ssms/shrinktlog.png)
 
-3. Seleccione las opciones **Generar script** y **Generar script de acción en Portapapeles**:
+3. Seleccione **Generar script** y **Generar script de acción en Portapapeles**:
 
-    ![Generar script en Portapapeles](media/scripting-ssms/scriptactiontoclipboard.png)
+    ![Generación de script en Portapapeles](media/scripting-ssms/scriptactiontoclipboard.png)
 
-4. Abra una ventana de **nueva consulta** y seleccione Pegar (haga clic con el botón derecho en la ventana > **Pegar**):
+4. Abra una ventana de **Nueva consulta** y péguelo. (Haga clic con el botón derecho en la ventana. Después, seleccione **Pegar**).
 
-    ![Pegar el script](media/scripting-ssms/paste.png)
+    ![Pegado de script](media/scripting-ssms/paste.png)
 5. Seleccione **Ejecutar** para ejecutar la consulta y reducir el registro de transacciones. 
 
 
-## <a name="script-databases"></a>Creación un script de bases de datos
-En la siguiente sección se describe cómo crear un script de la base de datos con la opción **Script As** (Generar script como) y con la opción **Generar scripts**.  Con la opción **Script As** (Generar script como) se volverán a crear las opciones de base de datos y de configuración para este. La opción **Generar scripts** le permitirá generar un script para el esquema y los datos. En esta sección, creará dos bases de datos: *AdventureWorks2016a*, que se creará usando la opción **Generar script como**, y *AdventureWorks2016b*, que se creará usando la opción **Generar scripts**. 
+## <a name="script-databases"></a>Crear un script de bases de datos
+En la siguiente sección se explica cómo crear un script de la base de datos con las opciones **Script como** y **Generar scripts**. La opción **Script como** permite volver a crear la base de datos y sus opciones de configuración. Puede crear un script para el esquema y los datos con la opción **Generar scripts**. En esta sección, va a crear dos nuevas bases de datos. Puede usar la opción **Script como** para crear *AdventureWorks2016a*. Puede usar la opción **Generar scripts** para crear *AdventureWorks2016b*.
 
 
-### <a name="script-database-using-script-option"></a>Crear un script de base de datos con la opción Script
-1. Conéctese a su servidor SQL Server.
+### <a name="script-a-database-by-using-the-script-option"></a>Creación de un script de base de datos con la opción Script
+1. Conéctese a un servidor que ejecuta SQL Server.
 2. Expanda el nodo **Bases de datos** .
-3. Haga clic con el botón derecho en la base de datos **AdventureWorks2016** > **Generar script de base de datos como** > **Crear en** > **Nueva ventana de consulta**:
+3. Haga clic con el botón derecho en la base de datos **AdventureWorks2016Script** > **Generar script de base de datos como** > **Crear en** > **Nueva ventana del Editor de consultas**:
 
-    ![Crear un script de base de datos](media/scripting-ssms/scriptdb.png)
+    ![Creación de script de la base de datos](media/scripting-ssms/scriptdb.png)
 
 4. Revise la consulta de creación de la base de datos en la ventana: 
 
-    ![Base de datos con script generado](media/scripting-ssms/scriptedoutdb.png)
-    - Esta opción solo creará un script de las opciones de configuración de la base de datos.
-5. En el teclado, presione **Ctrl+F** para abrir el cuadro de diálogo **Buscar** y seleccione la flecha abajo para abrir la opción **Reemplazar**. En la línea superior de **Buscar**, escriba *AdventureWorks2016*; en la línea inferior de **Reemplazar**, escriba *AdventureWorks2016a*. 
+    ![Eliminación de scripts de la base de datos](media/scripting-ssms/scriptedoutdb.png) Esta opción solo elimina los scripts de las opciones de configuración de la base de datos.
+5. En el teclado, seleccione Ctrl + F para abrir el cuadro de diálogo **Buscar**. Seleccione la flecha hacia abajo para abrir la opción **Reemplazar**. En la línea superior de **Buscar**, escriba AdventureWorks2016; en la línea inferior de **Reemplazar**, escriba AdventureWorks2016a.
 6. Seleccione **Reemplazar todo** para reemplazar todas las instancias de *AdventureWorks2016* por *AdventureWorks2016a*. 
 
-    ![Buscar y reemplazar](media/scripting-ssms/findandreplace.png)
+    ![Búsqueda y reemplazo](media/scripting-ssms/findandreplace.png)
 
-1. Seleccione **Ejecutar** para ejecutar la consulta y crear la nueva base de datos *AdventureWorks2016a*. 
+1. Seleccione **Ejecutar** para ejecutar la consulta y crear la nueva base de datos AdventureWorks2016a. 
 
-### <a name="script-database-using-generate-scripts-option"></a>Crear un script de base de datos con la opción Generar scripts
-1. Conéctese a su servidor SQL Server.
+### <a name="script-a-database-by-using-the-generate-scripts-option"></a>Creación de un script de base de datos con la opción Generar script
+1. Conéctese a un servidor que ejecuta SQL Server.
 2. Expanda el nodo **Bases de datos** .
-3. Haga clic con el botón derecho en la base de datos **AdventureWorks2016** > **Tareas** > **Generar scripts**:
+3. Haga clic con el botón derecho en **AdventureWorks2016** > **Tareas** > **Generar script**:
 
-    ![Generar scripts para una base de datos](media/scripting-ssms/generatescriptsfordb.png)
+    ![Generación de scripts para bases de datos](media/scripting-ssms/generatescriptsfordb.png)
 
-4. Se abrirá la página **Introducción**. Seleccione **Siguiente** para abrir la página **Elegir objetos**. Puede seleccionar toda la base de datos o determinados objetos. Seleccione la opción **Generar script de toda la base de datos y todos sus objetos** 
+4. Se abre la página **Introducción**. Seleccione **Siguiente** para abrir la página **Elegir objetos**. Puede seleccionar toda la base de datos o determinados objetos de la base de datos. Seleccione **Crear un script a partir de toda la base de datos y todos los objetos de esta**. 
  
-    ![Generar scripts para objetos](media/scripting-ssms/scriptobjects.png)
+    ![Generación de scripts para objetos](media/scripting-ssms/scriptobjects.png)
  
-5. Seleccione **Siguiente** para abrir la página **Establecer opciones de scripting**, que le permitirá configurar la ubicación de guardado del script, así como otras opciones avanzadas adicionales. 
+5. Seleccione **Siguiente** para abrir la página **Establecer opciones de scripting**. Aquí puede configurar dónde guardar el script y algunas opciones avanzadas adicionales. 
 
-    A. Seleccione la opción **Guardar en nueva ventana de consulta**. 
+    A. Seleccione **Guardar en nueva ventana de consulta**. 
 
-    B. Seleccione **Opciones avanzadas** y compruebe que estas opciones estén establecidas de la siguiente manera: 
+    B. Seleccione **Opciones avanzadas** y compruebe que estas opciones estén establecidas:
 
-      - **Generar script de estadísticas** en *Generar script de estadísticas*
-      - **Tipos de datos que se deben incluir en el script** en *Solo esquema*
-      - **Generar script de índices** en *true*
+      - **Generar script de estadísticas** establecido en *Generar script de estadísticas*.
+      - **Tipos de datos que se deben incluir en el script** establecido en *Solo esquema*.
+      - **Generar script de índices** establecido en *true*.
 
-   ![Generar script de objetos](media/scripting-ssms/advancedscripts.png)
+   ![Generación de script de objetos](media/scripting-ssms/advancedscripts.png)
 
    > [!NOTE]
-   > Puede generar un script de los datos para la base de datos seleccionando *Esquema y datos* para la opción **Tipos de datos que se deben incluir en el script**. Sin embargo, esta opción no es la recomendada para bases de datos grandes, ya que puede ocupar más memoria de la que SSMS es capaz de asignar. Esta opción es válida para bases de datos pequeñas. Sim embargo, si quiere mover datos para una base de datos de mayor tamaño, le recomendamos que use el [Asistente para importación y exportación](https://docs.microsoft.com/en-us/sql/integration-services/import-export-data/import-and-export-data-with-the-sql-server-import-and-export-wizard).
+   > Para crear un script de los datos para la base de datos, seleccione *Esquema y datos* para la opción **Tipos de datos que se deben incluir en el script**. Sin embargo, esto no es ideal con bases de datos grandes. Puede requerir más memoria de la que el SSMS puede asignar. Esta limitación está correcta para bases de datos pequeñas. Si desea mover datos para una base de datos más grande, utilice el [Asistente para importar y exportar](https://docs.microsoft.com/sql/integration-services/import-export-data/import-and-export-data-with-the-sql-server-import-and-export-wizard).
 
 
-
-1. Seleccione **Aceptar** y **Siguiente**. 
-2. Seleccione **Siguiente** en **Resumen** y, después, vuelva a seleccionar **Siguiente** para generar el script en una ventana de **consulta nueva**.  
-3. En el teclado, presione **Ctrl+F** para abrir el cuadro de diálogo **Buscar** y seleccione la flecha abajo para abrir la opción **Reemplazar**. En la línea superior de **Buscar**, escriba *AdventureWorks2016*; en la línea inferior de **Reemplazar**, escriba *AdventureWorks2016b*. 
-    A. Seleccione **Reemplazar todo** para reemplazar todas las instancias de *AdventureWorks2016* por *AdventureWorks2016b*. 
+1. Seleccione **Aceptar**y luego seleccione **Siguiente**.
+2. Seleccione **Siguiente** en el **resumen**. Después, vuelva a seleccionar **Siguiente** para generar el script en una ventana **Nueva consulta**. 
+3. En el teclado, abra el cuadro de diálogo **Buscar**  (Ctrl+F). Seleccione la flecha hacia abajo para abrir la opción **Reemplazar**. En la línea **Buscar** superior, escriba *AdventureWorks2016*. En la línea **Reemplazar** inferior, escriba *AdventureWorks2016b*. 
+4. Seleccione **Reemplazar todo** para reemplazar todas las instancias de *AdventureWorks2016* por *AdventureWorks2016b*. 
 
     ![AdventureWorks2016b](media/scripting-ssms/adventureworks2016b.png)
-7. Seleccione **Ejecutar** para ejecutar la consulta y crear la nueva base de datos *AdventureWorks2016b*. 
- 
-## <a name="script-tables"></a>Crear scripts de tablas
-En esta sección se explica cómo crear scripts de tablas de la base de datos. Esta opción le permite crear la tabla, o bien anularla y volver a crearla. También puede usar esta opción para generar un script T-SQL asociado a la modificación de la tabla para, por ejemplo, insertar o actualizar contenido en esta. En esta sección, anulará una tabla y volverá a crearla. 
+7. Seleccione **Ejecutar** para ejecutar la consulta y crear la nueva base de datos AdventureWorks2016b. 
 
-1. Conéctese a su servidor SQL Server.
+## <a name="script-tables"></a>Creación de scripts de tablas
+En esta sección se explica cómo crear scripts de tablas de la base de datos. Utilice esta opción para crear la tabla, o bien para anularla y volver a crearla. También puede usar esta opción para crear un script de T-SQL asociado a la modificación de la tabla. Un ejemplo es insertarlo en ella o actualizarla. En esta sección, va a anular una tabla y volver a crearla. 
+
+1. Conéctese a un servidor que ejecuta SQL Server.
 2. Expanda el nodo **Bases de datos**.
-3. Expanda el nodo de la base de datos **AdventureWorks**. 
+3. Expanda el nodo de la base de datos **AdventureWorks2016**. 
 4. Expanda el nodo **Tablas**.
-5. Haga clic con el botón derecho en **dbo.ErrorLog** >  **Generar script de la tabla como** > **Anular y crear en** > **Nueva ventana del Editor de consultas**:
+5. Haga clic con el botón derecho en **dbo.ErrorLog** > **Incluir tabla como** > **DROP y CREATE To** > **Nueva ventana del Editor de consultas**:
     
-    ![Incluir tabla](media/scripting-ssms/scripttable.png)
+    ![Creación de script de tabla](media/scripting-ssms/scripttable.png)
 
-6. Seleccione **Ejecutar** para ejecutar una consulta; se anulará la tabla *Errorlog* y se volverá a crear. 
+6. Seleccione **Ejecutar** para ejecutar la consulta. Esta acción elimina la tabla *Errorlog* y la vuelve a crear. 
 
     >[!NOTE]
-    > De forma predeterminada, la tabla *Errorlog* está vacía en la base de datos AdventureWorks2016, de modo que no perderá ningún dato al anularla. Sin embargo, seguir estos pasos para una tabla que contenga datos provocará la pérdida de estos. 
+    > De forma predeterminada, la tabla *Errorlog*  está vacía en la base de datos de AdventureWorks2016. Así que no pierde ningún dato al eliminar la tabla. Sin embargo, seguir estos pasos para una tabla que contenga datos provocará la pérdida de estos. 
  
-## <a name="script-stored-procedures"></a>Crear scripts de procedimientos almacenados
-En esta sección, obtendrá información sobre cómo anular y crear un procedimiento almacenado.  
+## <a name="script-stored-procedures"></a>Creación de script de procedimientos almacenados
+En esta sección, obtiene información sobre cómo anular y crear un procedimiento almacenado.  
 
-1. Conéctese a su servidor SQL Server.
+1. Conéctese a un servidor que ejecuta SQL Server.
 2. Expanda el nodo **Bases de datos**.
 3. Expanda el nodo **Programación**. 
 4. Expanda el nodo **Procedimiento almacenado**.
-5. Haga clic con el botón derecho en el procedimiento almacenado **dbo.uspGetBillOfMaterials**> **Generar script de procedimiento almacenado como** > **Anular y crear en** > **Nueva ventana de consulta**:
+5. Haga clic con el botón derecho en el procedimiento almacenado **dbo.uspGetBillOfMaterials** > **Incluir procedimiento almacenado como** > **DROP y CREATE To** > **Nueva ventana del Editor de consultas**:
     
-    ![Crear scripts de procedimientos almacenados](media/scripting-ssms/scriptstoredprocedure.PNG)
+    ![Creación de script de procedimientos almacenados](media/scripting-ssms/scriptstoredprocedure.PNG)
 
-## <a name="script-extended-events"></a>Crear scripts de eventos extendidos
-En esta sección se explica cómo crear scripts de [eventos extendidos](https://docs.microsoft.com/en-us/sql/relational-databases/extended-events/extended-events). 
+## <a name="script-extended-events"></a>Creación de script de eventos extendidos
+En esta sección se explica cómo crear scripts de [eventos extendidos](https://docs.microsoft.com/sql/relational-databases/extended-events/extended-events).
 
-1. Conéctese a su servidor SQL Server.
+1. Conéctese a un servidor que ejecuta SQL Server.
 2. Expanda el nodo **Administración**.
 3. Expanda el nodo **Eventos extendidos**.
 4. Expanda el nodo **Sesiones**.
 5. Haga clic con el botón derecho en la sesión extendida que le interese > **Generar script de sesión como** > **Nueva ventana del Editor de consultas**:
 
-    ![Crear scripts de XEvents](media/scripting-ssms/scriptxevents.png) 
-6. En la **nueva ventana de consulta**, cambie el nuevo nombre de la sesión (*system_health*) por *system_health2* y seleccione **Ejecutar** para ejecutar la consulta. 
+    ![Sesión ampliada de Nueva ventana del Editor de consultas](media/scripting-ssms/scriptxevents.png)
 
-    A. Haga clic con el botón derecho en **Sesiones** en el **Explorador de objetos** y seleccione **Actualizar** para ver la nueva sesión de eventos extendidos. El icono verde situado junto a la sesión indica que la sesión se está ejecutando, mientras que el icono rojo indica que se ha detenido. 
+6. En **Nueva ventana del Editor de consultas**, cambie el nuevo nombre de la sesión *system_health* por *system_health2*. Seleccione **Ejecutar** para ejecutar la consulta.
 
-    ![Nuevo valor xEvent](media/scripting-ssms/newxevent.png)
+7. Haga clic con el botón derecho en **Sesiones** en el **Explorador de objetos**. Seleccione **Actualizar** para ver la nueva sesión de eventos extendidos. El icono verde junto a la sesión indica que se está ejecutando. El icono rojo indica que la sesión se ha detenido. 
+
+    ![Nueva sesión de eventos extendidos](media/scripting-ssms/newxevent.png)
 
     >[!NOTE]
-    > Puede iniciar sesión haciendo clic en la sesión y seleccionando **Iniciar**. Sin embargo, puesto que se trata de una copia de la sesión *system_health* en ejecución, puede omitir este paso. Puede eliminar la copia de la sesión de eventos extendidos haciendo clic en esta y seleccionando **Eliminar**. 
+    > Puede iniciar sesión haciendo clic en la sesión y seleccionando **Iniciar**. Sin embargo, esta es una copia de la sesión **system_health** en ejecución, por tanto puede omitir este paso. Puede eliminar la copia de la sesión de eventos extendidos haciendo clic con el botón derecho en esta y seleccionando **Eliminar**. 
 
 ## <a name="next-steps"></a>Pasos siguientes
 En el siguiente artículo se presentan las plantillas T-SQL predefinidas de SSMS. 
 
-Vaya al siguiente artículo para obtener más información:
+Vaya al siguiente artículo para más información:
 > [!div class="nextstepaction"]
 > [Pasos siguientes](templates-ssms.md)
 

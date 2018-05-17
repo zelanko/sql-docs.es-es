@@ -4,12 +4,10 @@ ms.custom: ''
 ms.date: 07/24/2017
 ms.prod: sql
 ms.prod_service: sql-data-warehouse, database-engine, sql-database
-ms.service: ''
 ms.component: t-sql|functions
 ms.reviewer: ''
 ms.suite: sql
-ms.technology:
-- database-engine
+ms.technology: t-sql
 ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
@@ -25,18 +23,17 @@ caps.latest.revision: 19
 author: edmacauley
 ms.author: edmaca
 manager: craigg
-ms.workload: On Demand
 monikerRange: = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: cc8aa5d921d0d72dc32453143c42a29c28a553b3
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
+ms.openlocfilehash: 08d38d1d876ee5b39498e6a28247b20c6cb6cab9
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="cumedist-transact-sql"></a>CUME_DIST (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2012-asdb-asdw-xxx-md](../../includes/tsql-appliesto-ss2012-asdb-asdw-xxx-md.md)]
 
-Calcula la distribución acumulativa de un valor en un grupo de valores de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Es decir, CUME_DIST calcula la posición relativa de un valor especificado en un grupo de valores. En una fila *r*, suponiendo un orden ascendente, la CUME_DIST de *r* es el número de filas con valores menores o iguales que el valor de *r*, dividido entre el número de filas evaluadas en la partición o el conjunto de resultados de la consulta. CUME_DIST es similar a la función PERCENT_RANK.
+Para [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], esta función calcula la distribución acumulativa de un valor en un grupo de valores. Es decir, `CUME_DIST` calcula la posición relativa de un valor especificado en un grupo de valores. Suponiendo un orden ascendente, el `CUME_DIST` de un valor en la fila *r* se define como el número de filas con valores menores o iguales que el valor de la fila *r*, dividido entre el número de filas evaluadas en la partición o el conjunto de resultados de la consulta. `CUME_DIST` es similar a la función `PERCENT_RANK`.
   
 ![Icono de vínculo de tema](../../database-engine/configure-windows/media/topic-link.gif "Icono de vínculo de tema") [Convenciones de sintaxis de Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)
   
@@ -49,19 +46,20 @@ CUME_DIST( )
 ```  
   
 ## <a name="arguments"></a>Argumentos  
-OVER **(** [ *partition_by_clause* ] *order_by_clause***)**  
-*partition_by_clause* divide el conjunto de resultados generado por la cláusula FROM en particiones a las que se aplica la función. Si no se especifica, la función trata todas las filas del conjunto de resultados de la consulta como un único grupo. *order_by_clause* determina el orden lógico en el que se realiza la operación. *order_by_clause* es obligatorio. La \<cláusula rows o range> de la sintaxis OVER no se puede especificar en una función CUME_DIST. Para más información, vea [Cláusula OVER &#40;Transact-SQL&#41;](../../t-sql/queries/select-over-clause-transact-sql.md).
+OVER **(** [ *partition_by_clause* ] *order_by_clause*)  
+
+El argumento *partition_by_clause* divide el conjunto de resultados de la cláusula FROM en particiones, a las que se aplica la función. Si no se especifica el argumento *partition_by_clause*, `CUME_DIST` trata todas las filas del conjunto de resultados de la consulta como un único grupo. *order_by_clause* determina el orden lógico en el que tiene lugar la operación. `CUME_DIST` requiere *order_by_clause*. `CUME_DIST` no aceptará las \<filas o cláusula de rango> de la sintaxis OVER. Para más información, consulte [Cláusula OVER &#40;Transact-SQL&#41;](../../t-sql/queries/select-over-clause-transact-sql.md).
   
 ## <a name="return-types"></a>Tipos de valores devueltos
 **float(53)**
   
 ## <a name="remarks"></a>Notas  
-El intervalo de valores devueltos por CUME_DIST es mayor que 0 y menor o igual que 1. Los valores equivalentes siempre se evalúan como el mismo valor de distribución acumulativa. Se incluyen valores NULL de forma predeterminada y se tratan como los posibles valores más bajos.
+`CUME_DIST` devuelve un intervalo de valores mayor que 0 y menor o igual que 1. Los valores equivalentes siempre se evalúan como el mismo valor de distribución acumulativa. `CUME_DIST` incluye valores NULL de forma predeterminada y los trata como los posibles valores más bajos.
   
-CUME_DIST es no determinista. Para obtener más información, consulte [Deterministic and Nondeterministic Functions](../../relational-databases/user-defined-functions/deterministic-and-nondeterministic-functions.md).
+`CUME_DIST` sea no determinista. Para más información, consulte [Funciones deterministas y no deterministas](../../relational-databases/user-defined-functions/deterministic-and-nondeterministic-functions.md).
   
 ## <a name="examples"></a>Ejemplos  
-En el ejemplo siguiente se usa la función CUME_DIST para calcular el percentil de salario de cada empleado dentro de un departamento determinado. El valor devuelto por la función CUME_DIST representa el porcentaje de empleados que tienen un salario menor o igual que el empleado actual del mismo departamento. La función PERCENT_RANK calcula el intervalo de porcentaje de salario del empleado dentro de un departamento. La cláusula PARTITION BY se especifica para crear particiones de las filas del conjunto de resultados por departamento. La cláusula ORDER BY de la cláusula OVER ordena lógicamente las filas de cada partición. La cláusula ORDER BY de la instrucción SELECT determina el orden de presentación del conjunto de resultados.
+En este ejemplo se usa la función `CUME_DIST` para calcular el percentil de salario de cada empleado dentro de un departamento determinado. `CUME_DIST` devuelve un valor que representa el porcentaje de empleados que tienen un salario menor o igual que el empleado actual del mismo departamento. La función `PERCENT_RANK` calcula el intervalo de porcentaje de salario del empleado dentro de un departamento. Para crear particiones de las filas del conjunto de resultados por departamento, el ejemplo especifica el valor de *partition_by_clause*. La cláusula ORDER BY de la cláusula OVER ordena lógicamente las filas de cada partición. La cláusula ORDER BY de la instrucción SELECT determina el orden de presentación del conjunto de resultados.
   
 ```sql
 USE AdventureWorks2012;  

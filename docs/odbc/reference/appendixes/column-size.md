@@ -3,13 +3,10 @@ title: Tamaño de la columna | Documentos de Microsoft
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
-ms.prod_service: drivers
-ms.service: ''
-ms.component: odbc
+ms.prod_service: connectivity
 ms.reviewer: ''
 ms.suite: sql
-ms.technology:
-- drivers
+ms.technology: connectivity
 ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
@@ -22,9 +19,9 @@ caps.latest.revision: 6
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 5c0f4111b758421dd03be3489e7da82d78e8f181
-ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
-ms.translationtype: HT
+ms.openlocfilehash: 1ce38cfd836aa9328838096763ba9191c4a9ec30
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.translationtype: MT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/03/2018
 ---
@@ -47,14 +44,14 @@ El tamaño de columna (o parámetro) de los tipos de datos numéricos se define 
 |SQL_TYPE_DATE [c]|10 (el número de caracteres en el *aaaa-mm-dd* formato).|  
 |SQL_TYPE_TIME [c]|8 (el número de caracteres en el *hh-mm-ss* formato), o 9 + *s* (el número de caracteres en el *hh*formato [.fff...], donde *s*es la precisión de segundos).|  
 |SQL_TYPE_TIMESTAMP|16 (el número de caracteres en el *aaaa-mm-dd hh: mm* formato)<br /><br /> 19 (el número de caracteres en el *aaaa-mm-dd* *hh* formato)<br /><br /> o bien<br /><br /> 20 + *s* (el número de caracteres en el *aaaa-mm-dd hh*formato [.fff...], donde *s* es la precisión de segundos).|  
-|SQL_INTERVAL_SECOND|Donde *p* es el intervalo de precisión del principio y *s* es la precisión de segundos, *p* (si *s*= 0) o *p* + *s*+ 1 (si *s*> 0). [ [[d]|  
-|SQL_INTERVAL_DAY_TO_SECOND|Donde *p* es el intervalo de precisión del principio y *s* es la precisión de segundos, 9 +*p* (si *s*= 0) o 10 +*p* + *s* (si *s*> 0). [ [[d]|  
-|SQL_INTERVAL_HOUR_TO_SECOND|Donde *p* es el intervalo de precisión del principio y *s* es la precisión de segundos, 6 +*p* (si *s*= 0) o 7 +*p* + *s* (si *s*> 0). [ [[d]|  
-|SQL_INTERVAL_MINUTE_TO_SECOND|Donde *p* es el intervalo de precisión del principio y *s* es la precisión de segundos, 3 +*p* (si *s*= 0) o 4 +*p* + *s* (si *s*> 0). [ [[d]|  
-|SQL_INTERVAL_YEAR SQL_INTERVAL_MONTH SQL_INTERVAL_DAY SQL_INTERVAL_HOUR SQL_INTERVAL_MINUTE|*p*, donde *p* es el intervalo de precisión del principio. [ [[d]|  
-|SQL_INTERVAL_YEAR_TO_MONTH SQL_INTERVAL_DAY_TO_HOUR|3 +*p*, donde *p* es el intervalo de precisión del principio. [ [[d]|  
-|SQL_INTERVAL_DAY_TO_MINUTE|6 +*p*, donde *p* es el intervalo de precisión del principio. [ [[d]|  
-|SQL_INTERVAL_HOUR_TO_MINUTE|3 +*p*, donde *p* es el intervalo de precisión del principio. [ [[d]|  
+|SQL_INTERVAL_SECOND|Donde *p* es el intervalo de precisión del principio y *s* es la precisión de segundos, *p* (si *s*= 0) o *p* + *s*+ 1 (si *s*> 0). [d]|  
+|SQL_INTERVAL_DAY_TO_SECOND|Donde *p* es el intervalo de precisión del principio y *s* es la precisión de segundos, 9 +*p* (si *s*= 0) o 10 +*p* + *s* (si *s*> 0). [d]|  
+|SQL_INTERVAL_HOUR_TO_SECOND|Donde *p* es el intervalo de precisión del principio y *s* es la precisión de segundos, 6 +*p* (si *s*= 0) o 7 +*p* + *s* (si *s*> 0). [d]|  
+|SQL_INTERVAL_MINUTE_TO_SECOND|Donde *p* es el intervalo de precisión del principio y *s* es la precisión de segundos, 3 +*p* (si *s*= 0) o 4 +*p* + *s* (si *s*> 0). [d]|  
+|SQL_INTERVAL_YEAR SQL_INTERVAL_MONTH SQL_INTERVAL_DAY SQL_INTERVAL_HOUR SQL_INTERVAL_MINUTE|*p*, donde *p* es el intervalo de precisión del principio. [d]|  
+|SQL_INTERVAL_YEAR_TO_MONTH SQL_INTERVAL_DAY_TO_HOUR|3 +*p*, donde *p* es el intervalo de precisión del principio. [d]|  
+|SQL_INTERVAL_DAY_TO_MINUTE|6 +*p*, donde *p* es el intervalo de precisión del principio. [d]|  
+|SQL_INTERVAL_HOUR_TO_MINUTE|3 +*p*, donde *p* es el intervalo de precisión del principio. [d]|  
 |SQL_GUID|36 (el número de caracteres en el *aaaaaaaa-bbbb-cccc-dddd-eeeeeeeeeeee* formato)|  
   
  [a] aplicación para un ODBC 1.0, que llama a **SQLSetParam** en un controlador de ODBC 2.0 y, para una aplicación ODBC 2.0, que llama a **SQLBindParameter** en un controlador ODBC 1.0, cuando \*  *StrLen_or_IndPtr* es SQL_DATA_AT_EXEC para un tipo SQL_LONGVARCHAR o SQL_LONGVARBINARY, *ColumnSize* debe establecerse en la longitud total de los datos para su envío, no la precisión tal como se define en esta tabla.  

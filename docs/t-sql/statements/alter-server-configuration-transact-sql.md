@@ -4,12 +4,10 @@ ms.custom: ''
 ms.date: 05/01/2017
 ms.prod: sql
 ms.prod_service: sql-database
-ms.service: ''
 ms.component: t-sql|statements
 ms.reviewer: ''
 ms.suite: sql
-ms.technology:
-- database-engine
+ms.technology: t-sql
 ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
@@ -27,12 +25,11 @@ caps.latest.revision: 72
 author: edmacauley
 ms.author: edmaca
 manager: craigg
-ms.workload: On Demand
-ms.openlocfilehash: e21a2e591b9bd5c38d4abf458c938b17563cc89c
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
+ms.openlocfilehash: fb2dd1c54653b825d135e9ca3fb1b478212f70f3
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="alter-server-configuration-transact-sql"></a>ALTER SERVER CONFIGURATION (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -193,19 +190,22 @@ SQLDUMPEREDUMPFLAGS
 **Se aplica a**: desde [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] hasta [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].  
   
  HADR CLUSTER CONTEXT **=** { **'***remote_windows_cluster***'** | LOCAL }  
- Cambia el contexto de clúster de HADR de la instancia de servidor al clúster especificado de Clústeres de conmutación por error de Windows Server (WSFC). El *contexto de clúster de HADR* determina qué clúster de Clústeres de conmutación por error de Windows Server (WSFC) administra los metadatos para las réplicas de disponibilidad hospedadas por la instancia de servidor. Use la opción SET HADR CLUSTER CONTEXT solo durante una migración entre clústeres de [!INCLUDE[ssHADR](../../includes/sshadr-md.md)] a una instancia de [!INCLUDE[ssSQL11SP1](../../includes/sssql11sp1-md.md)] o una versión posterior en un nuevo clúster de WSFC.  
+ Cambia el contexto de clúster de HADR de la instancia de servidor al clúster de conmutación por error de Windows Server (WSFC) especificado. El *contexto de clúster de HADR* determina qué clúster de conmutación por error de Windows Server administra los metadatos para las réplicas de disponibilidad hospedadas por la instancia de servidor. Use la opción SET HADR CLUSTER CONTEXT solo durante una migración entre clústeres de [!INCLUDE[ssHADR](../../includes/sshadr-md.md)] a una instancia de [!INCLUDE[ssSQL11SP1](../../includes/sssql11sp1-md.md)] o una versión posterior en un nuevo WSFC.  
   
- Solo puede cambiar el contexto de clúster de HADR desde el clúster local de WSFC a un clúster remoto y viceversa. El contexto de clúster de HADR se puede cambiar a un clúster remoto solo cuando la instancia de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] no hospeda ninguna réplica de disponibilidad.  
+ Solo puede cambiar el contexto de clúster de HADR desde el WSFC local a uno remoto y viceversa. El contexto de clúster de HADR se puede cambiar a un clúster remoto solo cuando la instancia de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] no hospeda ninguna réplica de disponibilidad.  
   
  Un contexto de clúster de HADR remoto se puede volver a cambiar al clúster local en cualquier momento. Sin embargo, el contexto no se puede cambiar de nuevo si la instancia de servidor hospeda réplicas de disponibilidad.  
   
  Para identificar el clúster de destino, especifique uno de los valores siguientes:  
   
  *windows_cluster*  
- Nombre de objeto de clúster (CON) de un clúster de WSFC. Puede especificar el nombre corto o el nombre de dominio completo. Para buscar la dirección IP de destino de un nombre corto, ALTER SERVER CONFIGURATION usa la resolución de DNS. En algunos casos, un nombre corto puede producir confusiones y DNS podría devolver la dirección IP errónea. Por tanto, se recomienda especificar el nombre de dominio completo.  
+ El nombre de netwirj de un WSFC. Puede especificar el nombre corto o el nombre de dominio completo. Para buscar la dirección IP de destino de un nombre corto, ALTER SERVER CONFIGURATION usa la resolución de DNS. En algunos casos, un nombre corto puede producir confusiones y DNS podría devolver la dirección IP errónea. Por tanto, se recomienda especificar el nombre de dominio completo.  
+  
+  > [!NOTE] 
+  > Ya no se admite una migración entre clústeres utilizando esta configuración. Para realizar una migración entre clústeres, utilice un grupo de disponibilidad distribuida o algún otro método como el trasvase de registros. 
   
  LOCAL  
- Clúster local de WSFC.  
+ WSFC local.  
   
  Para obtener más información, consulte [Cambiar el contexto de clúster de HADR de la instancia de servidor &#40;SQL Server&#41;](../../database-engine/availability-groups/windows/change-the-hadr-cluster-context-of-server-instance-sql-server.md).  
   

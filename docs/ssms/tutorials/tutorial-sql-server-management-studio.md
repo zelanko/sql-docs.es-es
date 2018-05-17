@@ -26,11 +26,11 @@ caps.latest.revision: 22
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 8bc9af7ef49cfcb86b286e8ce090cad1be57e49e
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: fa41bd4f5cbae85af4ad7cf93fa0690b5cca9421
+ms.sourcegitcommit: 38f8824abb6760a9dc6953f10a6c91f97fa48432
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 05/10/2018
 ---
 # <a name="tutorials-for-sql-server-management-studio-ssms"></a>Tutoriales de SQL Server Management Studio (SSMS)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -80,7 +80,7 @@ Para usar este tutorial, debe tener el software siguiente instalado:
 
   -   Instale la última versión de [SQL Server Management Studio (SSMS)](../download-sql-server-management-studio-ssms.md).  
 
-En la primera sección se explica cómo crear una base de datos, aunque aquí encontrará otras bases de datos de ejemplo: [Bases de datos de ejemplo AdventureWorks](https://github.com/Microsoft/sql-server-samples/releases). Aquí encontrará instrucciones para restaurar bases de datos en SSMS: [Restaurar una base de datos](https://docs.microsoft.com/en-us/sql/relational-databases/backup-restore/restore-a-database-backup-using-ssms). 
+En la primera sección se explica cómo crear una base de datos, aunque aquí encontrará otras bases de datos de ejemplo: [Bases de datos de ejemplo AdventureWorks](https://github.com/Microsoft/sql-server-samples/releases). Aquí encontrará instrucciones para restaurar bases de datos en SSMS: [Restaurar una base de datos](https://docs.microsoft.com/sql/relational-databases/backup-restore/restore-a-database-backup-using-ssms). 
 
 
   

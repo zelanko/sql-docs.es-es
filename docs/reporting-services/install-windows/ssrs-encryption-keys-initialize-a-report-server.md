@@ -1,16 +1,15 @@
 ---
-title: "Inicializar un servidor de informes (Administrador de configuración de SSRS) | Microsoft Docs"
-ms.custom: 
+title: Inicializar un servidor de informes (Administrador de configuración de SSRS) | Microsoft Docs
+ms.custom: ''
 ms.date: 05/31/2016
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
-ms.service: 
 ms.component: install-windows
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: pro-bi
-ms.technology: 
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.technology: ''
+ms.tgt_pltfrm: ''
+ms.topic: conceptual
 helpviewer_keywords:
 - report servers [Reporting Services], initializing
 - initialization process [Reporting Services]
@@ -19,23 +18,22 @@ helpviewer_keywords:
 - initializing report servers [Reporting Services]
 - verifying report server initializations
 ms.assetid: 861d4ec4-1085-412c-9a82-68869a77bd55
-caps.latest.revision: "10"
+caps.latest.revision: 10
 author: markingmyname
 ms.author: maghan
 manager: kfile
-ms.workload: On Demand
-ms.openlocfilehash: 2b5b5a5142b8712196484e3cca32aeae7373639b
-ms.sourcegitcommit: 7e117bca721d008ab106bbfede72f649d3634993
+ms.openlocfilehash: f51884df3e202153f3da1b75b63cd2155270eedc
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/09/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="ssrs-encryption-keys---initialize-a-report-server"></a>Claves de cifrado de SSRS: inicializar un servidor de informes
   En [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)], un servidor inicializado es el que puede cifrar y descifrar los datos de una base de datos del servidor de informes. La inicialización es un requisito para la operación del servidor de informes. La inicialización se produce cuando el servicio Servidor de informes se inicia por primera vez. También ocurre cuando se une el servidor de informes a la implementación existente o se vuelven a crear manualmente las claves como parte del proceso de recuperación. Para más información sobre cómo y por qué se usan claves de cifrado, vea [Claves de cifrado de SSRS: administrar claves de cifrado](../../reporting-services/install-windows/ssrs-encryption-keys-manage-encryption-keys.md) y [Claves de cifrado de SSRS: almacenar datos del servidor de informes cifrados](../../reporting-services/install-windows/ssrs-encryption-keys-store-encrypted-report-server-data.md).  
   
  Las claves de cifrado se basan en parte en la información de perfil del servicio Servidor de informes. Si cambia la identidad del usuario que se utiliza para ejecutar el servicio Servidor de informes, debe actualizar las claves en consecuencia. Si utiliza la herramienta de configuración de Reporting Services para cambiar la identidad, el sistema controla automáticamente este paso.  
   
- Si por algún motivo se produce un error en la inicialización, el servidor de informes devuelve un error **RSReportServerNotActivated** en respuesta a las solicitudes del usuario y del servicio. En este caso, es posible que deba solucionar el problema de la configuración del sistema o del servidor. Para obtener más información, vea [SSRS: Solucionar problemas y errores con Reporting Services](http://social.technet.microsoft.com/wiki/contents/articles/1633.aspx) (http://social.technet.microsoft.com/wiki/contents/articles/1633.aspx) en la wiki de TechNet.  
+ Si por algún motivo se produce un error en la inicialización, el servidor de informes devuelve un error **RSReportServerNotActivated** en respuesta a las solicitudes del usuario y del servicio. En este caso, es posible que deba solucionar el problema de la configuración del sistema o del servidor. Para más información, consulte [SSRS: Solucionar problemas y errores con Reporting Services](http://social.technet.microsoft.com/wiki/contents/articles/1633.aspx) (http://social.technet.microsoft.com/wiki/contents/articles/1633.aspx) en el wiki de TechNet.  
   
 ## <a name="overview-of-the-initialization-process"></a>Información general sobre el proceso de inicialización  
  El proceso de inicialización crea y almacena una clave simétrica que se utiliza para el cifrado. Los Servicios de cifrado de [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows crean la clave simétrica que el servicio Servidor de informes utiliza para cifrar y descifrar los datos. La clave simétrica se cifra con una clave asimétrica.  

@@ -1,25 +1,23 @@
 ---
 title: Informes en modo local frente a modo conectado en el Visor de informes | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 09/25/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-sharepoint, reporting-services-native
-ms.service: 
 ms.component: report-server-sharepoint
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: pro-bi
-ms.technology: 
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.technology: ''
+ms.tgt_pltfrm: ''
+ms.topic: conceptual
 author: markingmyname
 ms.author: maghan
 manager: kfile
-ms.workload: Inactive
-ms.openlocfilehash: e637d9494252548081a0cfe7aa8aabd2e61646d4
-ms.sourcegitcommit: 7e117bca721d008ab106bbfede72f649d3634993
+ms.openlocfilehash: 380e039f6ac832108c23913d984869b4d4c75602
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/09/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="local-mode-vs-connected-mode-reports-in-the-report-viewer"></a>Informes en modo local frente a modo conectado en el Visor de informes
 
@@ -61,9 +59,9 @@ ms.lasthandoff: 01/09/2018
   
  Para obtener más información, vea lo siguiente.  
   
--   [Novedades de Access 2013](http://office.microsoft.com/access-help/what-s-new-in-access-2013-HA102809500.aspx) (http://office.microsoft.com/es-es/access-help/what-s-new-in-access-2013-HA102809500.aspx).  
+-   [Novedades de Access 2013](http://office.microsoft.com/access-help/what-s-new-in-access-2013-HA102809500.aspx) (http://office.microsoft.com/access-help/what-s-new-in-access-2013-HA102809500.aspx).  
   
--   [Tareas básicas para una aplicación de Access](http://office.microsoft.com/access-help/basic-tasks-for-an-access-app-HA102840210.aspx?CTT=5&origin=HA102809500) (http://office.microsoft.com/es-es/access-help/basic-tasks-for-an-access-app-HA102840210.aspx?CTT=5&origin=HA102809500).  
+-   [Tareas básicas para una aplicación de Access](http://office.microsoft.com/access-help/basic-tasks-for-an-access-app-HA102840210.aspx?CTT=5&origin=HA102809500) (http://office.microsoft.com/access-help/basic-tasks-for-an-access-app-HA102840210.aspx?CTT=5&origin=HA102809500).  
   
 ## <a name="configure-local-mode-reporting-with-sharepoint-2010"></a>Configurar informes en modo local con SharePoint 2010
 

@@ -1,16 +1,15 @@
 ---
 title: Mapas (Generador de informes y SSRS) | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-sharepoint, reporting-services-native
-ms.service: 
 ms.component: report-design
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: pro-bi
-ms.technology: 
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.technology: ''
+ms.tgt_pltfrm: ''
+ms.topic: conceptual
 f1_keywords:
 - "10508"
 - MICROSOFT.REPORTDESIGNER.MAPBINDINGFIELDPAIR.FIELDNAME
@@ -19,16 +18,15 @@ f1_keywords:
 - "10500"
 - sql13.rtp.rptdesigner.maptitleproperties.general.f1
 ms.assetid: b5e9ef21-11b7-4ed2-838e-d8eecdb5c5f0
-caps.latest.revision: "30"
+caps.latest.revision: 30
 author: maggiesMSFT
 ms.author: maggies
 manager: kfile
-ms.workload: On Demand
-ms.openlocfilehash: 1ac5c7b4af5efb160b311e7c13cd6dda0cb327f2
-ms.sourcegitcommit: 7e117bca721d008ab106bbfede72f649d3634993
+ms.openlocfilehash: 0e26ea4a4fc338cdb86e881d545436d00083c015
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/09/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="maps-report-builder-and-ssrs"></a>Mapas (Generador de informes y SSRS)
   Para visualizar datos comerciales con un fondo geográfico, puede agregar un mapa a un informe paginado de [!INCLUDE[ssRSnoversion_md](../../includes/ssrsnoversion-md.md)] . El tipo de mapa que seleccione dependerá de qué información desee comunicar en el informe. Puede agregar un mapa que solo muestre las ubicaciones, un mapa de burbujas que varíe el tamaño de la burbuja en función del número de casas de un área, un mapa de marcadores que varíe el estilo de marcador según el producto más rentable de cada almacén o un mapa de líneas que muestre las rutas entre los almacenes.  
@@ -81,7 +79,7 @@ ms.lasthandoff: 01/09/2018
 -   **Informes de la Galería de mapas.** Los datos espaciales se incrustan en los informes que se encuentran en la galería de mapas. De forma predeterminada, la Galería de mapas se instala en *\<unidad>*:\Archivos de programa\Microsoft SQL Server\Report Builder\MapGallery.  
   
     > [!NOTE]  
-    >  Esta característica de mapas de [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] usa los datos de archivos de forma TIGER/Line que se proporcionan por cortesía de la Oficina del censo estadounidense ([http://www.census.gov/](http://www.census.gov/)). Los archivos de forma TIGER/Line son un extracto de información geográfica y cartográfica seleccionada de la base de datos MAF/TIGRE del Censo. Los archivos de forma TIGER/Line están disponibles sin cargo en la Oficina del censo estadounidense. Para obtener más información sobre los archivos de forma TIGER/Line, vaya a [http://www.census.gov/geo/www/tiger](http://www.census.gov/geo/www/tiger). La información de fronteras de los archivos de forma TIGER/Line está destinada únicamente para la recopilación de datos estadísticos y tabulación; su representación y designación para fines estadísticos no constituye ninguna determinación de autoridad jurisdiccional ni derechos de propiedad ni de titularidad, y no son descripciones legales de territorios. Census TIGER and TIGER/Line son marcas registradas de la Oficina del censo estadounidense.  
+    >  Esta característica de mapas de [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] usa los datos de archivos de forma TIGER/Line que se proporcionan por cortesía de la Oficina del censo estadounidense ([http://www.census.gov/](http://www.census.gov/)). Los archivos de forma TIGER/Line son un extracto de información geográfica y cartográfica seleccionada de la base de datos MAF/TIGRE del Censo. Los archivos de forma TIGER/Line están disponibles sin cargo en la Oficina del censo estadounidense. Para obtener más información acerca de los archivos de forma TIGER/Line, visite [http://www.census.gov/geo/www/tiger](http://www.census.gov/geo/www/tiger). La información de fronteras de los archivos de forma TIGER/Line está destinada únicamente para la recopilación de datos estadísticos y tabulación; su representación y designación para fines estadísticos no constituye ninguna determinación de autoridad jurisdiccional ni derechos de propiedad ni de titularidad, y no son descripciones legales de territorios. Census TIGER and TIGER/Line son marcas registradas de la Oficina del censo estadounidense.  
   
 -   **Archivos de forma ESRI.** Los archivos de forma ESRI contienen datos que cumplen con el formato de datos espaciales de los archivos de forma del Environmental Systems Research Institute, Inc. (ESRI). Hacen referencia a un conjunto de archivos. Los datos del archivo .shp especifican las formas geográficas o geométricas. Los datos del archivo .dbf proporcionan los atributos para las formas. Para ver un mapa en la vista de diseño o ejecutar un mapa desde el servidor de informes, ambos archivos deben estar en la misma carpeta. Al agregar los datos espaciales de un archivo .shp al sistema de archivos local, los datos espaciales se incrustan en el informe. Para recuperar los datos espaciales de forma dinámica en tiempo de ejecución, cargue los archivos de forma en el servidor de informes y especifíquelos como el origen de los datos espaciales. Para obtener más información, vea [Buscar archivos de forma ESRI para un mapa](http://go.microsoft.com/fwlink/?linkid=178814).  
   

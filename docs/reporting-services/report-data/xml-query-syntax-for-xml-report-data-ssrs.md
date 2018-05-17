@@ -1,32 +1,30 @@
 ---
 title: Sintaxis de consulta XML para los datos de informe XML (SSRS) | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 03/01/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-sharepoint, reporting-services-native
-ms.service: 
 ms.component: report-data
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: pro-bi
-ms.technology: 
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.technology: ''
+ms.tgt_pltfrm: ''
+ms.topic: conceptual
 helpviewer_keywords:
 - namespaces [Reporting Services]
 - data processing extensions [Reporting Services], data sources
 - xmldp [Reporting Services]
 - XML [Reporting Services], data retrieval
 ms.assetid: d203886f-faa1-4a02-88f5-dd4c217181ef
-caps.latest.revision: "49"
+caps.latest.revision: 49
 author: markingmyname
 ms.author: maghan
 manager: kfile
-ms.workload: On Demand
-ms.openlocfilehash: 0a76ff48f3c6f98f426ee5805898a0a1a9caf716
-ms.sourcegitcommit: 7e117bca721d008ab106bbfede72f649d3634993
+ms.openlocfilehash: 24dd0f5497d89f49234dc53e0ad71a7cf2e9ab47
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/09/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="xml-query-syntax-for-xml-report-data-ssrs"></a>Sintaxis de consulta XML para los datos de informe XML (SSRS)
   En [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)], se pueden crear conjuntos de datos para orígenes de datos XML. Después de definir un origen de datos, se crea una consulta para el conjunto de datos. En función del tipo de datos XML a los que señala el origen de datos, la consulta del conjunto de datos se crea incluyendo un elemento XML **Query** o una ruta de acceso de elemento. Un elemento XML **Query** empieza con una etiqueta **\<Consulta>** e incluye espacios de nombres y elementos XML que varían en función del origen de datos. Una ruta de acceso de elemento es independiente del espacio de nombres y especifica qué nodos y atributos de nodo se utilizan de los datos XML subyacentes con una sintaxis del tipo de XPath. Para más información sobre las rutas de acceso de elemento, vea [Sintaxis de ruta de acceso de elemento para datos de informe XML &#40;SSRS&#41;](../../reporting-services/report-data/element-path-syntax-for-xml-report-data-ssrs.md).  
@@ -97,7 +95,7 @@ ms.lasthandoff: 01/09/2018
 |`<xmldp:Query xmlns:xmldp="http://schemas.microsoft.com/sqlserver/2005/02/reporting/XmlDPQuery" xmlns:ns="http://schemas.microsoft.com/...">`<br /><br /> `<xmldp:ElementPath>Root {}/ns:Element2/Node</xmldp:ElementPath>`<br /><br /> `</xmldp:Query>`|Valor D<br /><br /> Valor E<br /><br /> Valor F|  
   
 #### <a name="xml-document-dpnamespacexml"></a>Documento XML: DPNamespace.xml  
- Puede copiar este documento XML y guardarlo en una dirección URL disponible para el Diseñador de informes con objeto de poder usarlo como origen de datos XML (por ejemplo, http://localhost/DPNamespace.xml).  
+ Puede copiar este documento XML y guardarlo en una dirección URL disponible para el Diseñador de informes con objeto de poder usarlo como origen de datos XML, por ejemplo, http://localhost/DPNamespace.xml.  
   
 ```  
 <Root xmlns:ns="http://schemas.microsoft.com/...">  

@@ -40,11 +40,11 @@ caps.latest.revision: 50
 author: uc-msft
 ms.author: umajay
 manager: craigg
-ms.openlocfilehash: a244e1e6a1f0c32f56e183f389ac4940b25cb00f
-ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
+ms.openlocfilehash: 6dbf227ec42614e77cb4129c273ec55609781b2f
+ms.sourcegitcommit: 38f8824abb6760a9dc6953f10a6c91f97fa48432
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 05/10/2018
 ---
 # <a name="dbcc-transact-sql"></a>DBCC (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -99,7 +99,7 @@ La vista de catálogo **sys.dm_exec_requests** contiene información sobre el pr
   
 La definición de una unidad de progreso depende de la fase actual de ejecución del comando DBCC. En ocasiones, se informa del progreso con la granularidad de una página de base de datos; en otras fases, se informa del mismo con la granularidad de una sola base de datos o reparación de asignaciones. En la siguiente tabla se describe cada una de las fases de ejecución y la granularidad con la que el comando informa del progreso.
   
-|Fase de ejecución|Description|Granularidad de informe de progreso|  
+|Fase de ejecución|Descripción|Granularidad de informe de progreso|  
 |---------------------|-----------------|------------------------------------|  
 |DBCC TABLE CHECK|Durante esta fase se comprueba la coherencia lógica y física de los objetos de la base de datos.|Informe de progreso en el nivel de página de la base de datos.<br /><br /> El valor del informe de progreso se actualiza para cada 1.000 páginas de base de datos comprobadas.|  
 |DBCC TABLE REPAIR|Durante esta fase de realizan reparaciones de base de datos si se especifican REPAIR_FAST, REPAIR_REBUILD o REPAIR_ALLOW_DATA_LOSS y existen errores de objeto que necesiten ser reparados.|Informe de progreso para cada reparación individual.<br /><br /> El contador se actualiza para cada reparación finalizada.|  
@@ -146,6 +146,6 @@ La definición de una unidad de progreso depende de la fase actual de ejecución
 |[DBCC dllname (FREE)](../../t-sql/database-console-commands/dbcc-dllname-free-transact-sql.md)|[DBCC HELP](../../t-sql/database-console-commands/dbcc-help-transact-sql.md)|  
 |[DBCC FLUSHAUTHCACHE](../../t-sql/database-console-commands/dbcc-flushauthcache-transact-sql.md)|[DBCC TRACEOFF](../../t-sql/database-console-commands/dbcc-traceoff-transact-sql.md)|  
 |[DBCC FREESESSIONCACHE](../../t-sql/database-console-commands/dbcc-freesessioncache-transact-sql.md)|[DBCC TRACEON](../../t-sql/database-console-commands/dbcc-traceon-transact-sql.md)|  
-|[DBCC FREESYSTEMCACHE](../../t-sql/database-console-commands/dbcc-freesystemcache-transact-sql.md)|[DBCC CLONEDATABASE](https://support.microsoft.com/en-us/kb/3177838) <br /><br /> **Se aplica a**: [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] Service Pack 2.|  
+|[DBCC FREESYSTEMCACHE](../../t-sql/database-console-commands/dbcc-freesystemcache-transact-sql.md)|[DBCC CLONEDATABASE](../../t-sql/database-console-commands/dbcc-clonedatabase-transact-sql.md) <br /><br /> **Se aplica a**: de [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] SP2 a [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].|  
   
   

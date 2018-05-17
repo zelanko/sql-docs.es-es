@@ -1,29 +1,23 @@
 ---
 title: Enmascaramiento de datos dinámicos | Microsoft Docs
-ms.custom: ''
-ms.date: 09/26/2016
+ms.date: 04/23/2018
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
-ms.service: ''
-ms.component: security
 ms.reviewer: ''
 ms.suite: sql
-ms.technology:
-- database-engine
+ms.technology: security
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: a62f4ff9-2953-42ca-b7d8-1f8f527c4d66
-caps.latest.revision: 41
 author: edmacauley
 ms.author: edmaca
 manager: craigg
-ms.workload: On Demand
 monikerRange: = azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: 1a261930d257f4c787a5f28af59d82ee75a7af7c
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
+ms.openlocfilehash: 0aa8b9f31337bbbe2b4a545574c3a9cfc0e03116
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="dynamic-data-masking"></a>Enmascaramiento de datos dinámicos
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -41,9 +35,9 @@ El enmascaramiento dinámico de datos evita el acceso no autorizado a informaci�
 
 Por ejemplo, un técnico de soporte técnico de un centro de llamadas puede identificar al autor de la llamada mediante varios dígitos de su número del seguro social o de una tarjeta de crédito, pero esos elementos no deben mostrarse por completo a dicho técnico. Puede definir una regla de enmascaramiento enmascare todos los dígitos, excepto los cuatro últimos, de cualquier número del seguro social o de una tarjeta de crédito en el conjunto de resultados de cualquier consulta. Por poner otro ejemplo, si utiliza la máscara de datos adecuada para proteger la información de identificación personal, un desarrollador puede realizar consultas en los entornos de producción para resolver problemas sin que ello suponga una infracción de las normativas de cumplimiento.
 
- La finalidad del enmascaramiento dinámico de datos consiste en limitar la exposición de la información confidencial, con lo que se impide que los usuarios vean datos a los que no deberían poder acceder. El enmascaramiento dinámico de datos no pretende evitar que los usuarios de la base de datos se conecten directamente a ella y ejecuten consultas exhaustivas que expongan información confidencial. El enmascaramiento dinámico de datos se complementa con otras características de seguridad de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (auditoría, cifrado, seguridad de nivel de fila…), y resulta muy recomendable usarla con esas características para proteger de mejor forma la información confidencial en la base de datos.  
+La finalidad del enmascaramiento dinámico de datos consiste en limitar la exposición de la información confidencial, con lo que se impide que los usuarios vean datos a los que no deberían poder acceder. El enmascaramiento dinámico de datos no pretende evitar que los usuarios de la base de datos se conecten directamente a ella y ejecuten consultas exhaustivas que expongan información confidencial. El enmascaramiento dinámico de datos se complementa con otras características de seguridad de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (auditoría, cifrado, seguridad de nivel de fila…), y resulta muy recomendable usarla con esas características para proteger de mejor forma la información confidencial en la base de datos.  
   
- El enmascaramiento dinámico de datos está disponible en [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] y en [!INCLUDE[ssSDSFull](../../includes/sssdsfull-md.md)], y se configura con comandos [!INCLUDE[tsql](../../includes/tsql-md.md)] . Para obtener más información sobre cómo configurar el enmascaramiento dinámico de datos con el Portal de Azure, vea [Introducción al enmascaramiento dinámico de datos de bases de datos SQL (Portal de Azure)](http://azure.microsoft.com/documentation/articles/sql-database-dynamic-data-masking-get-started/).  
+El enmascaramiento dinámico de datos está disponible en [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] y en [!INCLUDE[ssSDSFull](../../includes/sssdsfull-md.md)], y se configura con comandos [!INCLUDE[tsql](../../includes/tsql-md.md)] . Para obtener más información sobre cómo configurar el enmascaramiento dinámico de datos con el Portal de Azure, vea [Introducción al enmascaramiento dinámico de datos de bases de datos SQL (Portal de Azure)](http://azure.microsoft.com/documentation/articles/sql-database-dynamic-data-masking-get-started/).  
   
 ## <a name="defining-a-dynamic-data-mask"></a>Definición de una máscara dinámica de datos  
  Es posible definir una regla de enmascaramiento en una columna de una tabla, con el objetivo de ofuscar los datos de esa columna. Existen cuatro tipos de máscaras.  
@@ -70,12 +64,12 @@ Por ejemplo, un técnico de soporte técnico de un centro de llamadas puede iden
   
 -   Si se utiliza `SELECT INTO` o `INSERT INTO` para copiar datos de una columna enmascarada en otra tabla, se generarán datos enmascarados en la tabla de destino.  
   
--   Se aplica el enmascaramiento dinámico de datos al ejecutar la importación y exportación de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Una base de datos que contenga columnas enmascaradas dará como resultado un archivo de copia de seguridad con los datos enmascarados (suponiendo que la exporte un usuario sin privilegios **UNMASK** ), y la base de datos importada contendrá datos enmascarados de forma estática.  
+-   Se aplica el enmascaramiento dinámico de datos al ejecutar la importación y exportación de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Una base de datos que contenga columnas enmascaradas dará como resultado un archivo de datos exportado con los datos enmascarados (suponiendo que lo exporte un usuario sin privilegios **UNMASK**), y la base de datos importada contendrá datos enmascarados de forma estática.  
   
 ## <a name="querying-for-masked-columns"></a>Realización de consultas en columnas enmascaradas  
  Use la vista **sys.masked_columns** para realizar una consulta en columnas y tablas que tengan aplicada la función de enmascaramiento. Esta vista se hereda de la vista **sys.columns** . Devuelve todas las columnas de la vista **sys.columns** , junto con las columnas **is_masked** y **masking_function** . Además, indica si estas están enmascaradas y, en caso afirmativo, qué función de enmascaramiento se ha definido. Esta vista solo muestra las columnas en las que se ha aplicado la función de enmascaramiento.  
   
-```  
+```sql 
 SELECT c.name, tbl.name as table_name, c.is_masked, c.masking_function  
 FROM sys.masked_columns AS c  
 JOIN sys.tables AS tbl   
@@ -108,7 +102,7 @@ El enmascaramiento dinámico de datos está diseñado para simplificar el desarr
 Por ejemplo, considere una entidad de seguridad de base de datos con los privilegios suficientes para ejecutar consultas ad hoc en la base de datos y que intenta "adivinar" los datos subyacentes y, en última instancia, inferir los valores reales. Suponga que tenemos una máscara definida en la columna `[Employee].[Salary]` , este usuario se conecta directamente a la base de datos, comienza a adivinar los valores y, a la larga, infiere el valor `[Salary]` de un conjunto de empleados:
  
 
-```
+```sql
 SELECT ID, Name, Salary FROM Employees
 WHERE Salary > 99999 and Salary < 100001;
 ```
@@ -128,7 +122,7 @@ Es importante administrar adecuadamente los permisos en la base de datos y segui
 ### <a name="creating-a-dynamic-data-mask"></a>Creación de una máscara dinámica de datos  
  En el siguiente ejemplo se crea una tabla con tres tipos distintos de máscaras dinámicas de datos. En el ejemplo se rellena la tabla y se selecciona que se muestre el resultado.  
   
-```  
+```sql
 CREATE TABLE Membership  
   (MemberID int IDENTITY PRIMARY KEY,  
    FirstName varchar(100) MASKED WITH (FUNCTION = 'partial(1,"XXXXXXX",0)') NULL,  
@@ -145,7 +139,7 @@ SELECT * FROM Membership;
   
  Se crea un nuevo usuario, a quien se le otorga el permiso **SELECT** en la tabla. En las consultas ejecutadas como el usuario `TestUser` , los datos se mostrarán enmascarados.  
   
-```  
+```sql 
 CREATE USER TestUser WITHOUT LOGIN;  
 GRANT SELECT ON Membership TO TestUser;  
   
@@ -166,14 +160,14 @@ REVERT;
  Utilice la instrucción **ALTER TABLE** para agregar una máscara a una columna existente de la tabla o a fin de editarla en dicha columna.  
 En el siguiente ejemplo se agrega la función de enmascaramiento a la columna `LastName` :  
   
-```  
+```sql  
 ALTER TABLE Membership  
 ALTER COLUMN LastName ADD MASKED WITH (FUNCTION = 'partial(2,"XXX",0)');  
 ```  
   
  En el siguiente ejemplo se cambia la función de enmascaramiento en la columna `LastName` :  
-  
-```  
+
+```sql  
 ALTER TABLE Membership  
 ALTER COLUMN LastName varchar(100) MASKED WITH (FUNCTION = 'default()');  
 ```  
@@ -181,7 +175,7 @@ ALTER COLUMN LastName varchar(100) MASKED WITH (FUNCTION = 'default()');
 ### <a name="granting-permissions-to-view-unmasked-data"></a>Concesión de permisos para ver datos sin enmascarar  
  Si se otorga el permiso **UNMASK** , `TestUser` podrá ver los datos sin enmascarar.  
   
-```  
+```sql
 GRANT UNMASK TO TestUser;  
 EXECUTE AS USER = 'TestUser';  
 SELECT * FROM Membership;  
@@ -194,7 +188,7 @@ REVOKE UNMASK TO TestUser;
 ### <a name="dropping-a-dynamic-data-mask"></a>Anulación de una máscara dinámica de datos  
  La siguiente instrucción anula la máscara de la columna `LastName` creada en el ejemplo anterior:  
   
-```  
+```sql  
 ALTER TABLE Membership   
 ALTER COLUMN LastName DROP MASKED;  
 ```  
@@ -205,5 +199,3 @@ ALTER COLUMN LastName DROP MASKED;
  [column_definition &#40;Transact-SQL&#41;](../../t-sql/statements/alter-table-column-definition-transact-sql.md)   
  [sys.masked_columns &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-masked-columns-transact-sql.md)   
  [Introducción al enmascaramiento dinámico de datos de bases de datos SQL (Portal de Azure)](http://azure.microsoft.com/documentation/articles/sql-database-dynamic-data-masking-get-started/)  
-  
-  

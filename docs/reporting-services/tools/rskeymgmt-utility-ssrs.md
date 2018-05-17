@@ -1,16 +1,15 @@
 ---
 title: Utilidad rskeymgmt (SSRS) | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 03/20/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-sharepoint, reporting-services-native
-ms.service: 
 ms.component: tools
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: pro-bi
-ms.technology: 
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.technology: ''
+ms.tgt_pltfrm: ''
+ms.topic: conceptual
 helpviewer_keywords:
 - report servers [Reporting Services], encryption
 - joining report server instances [SQL Server]
@@ -23,16 +22,15 @@ helpviewer_keywords:
 - rskeymgmt utility
 - scale-out deployments [Reporting Services]
 ms.assetid: 53f1318d-bd2d-4c08-b19f-c8b698b5b3d3
-caps.latest.revision: "56"
+caps.latest.revision: 56
 author: markingmyname
 ms.author: maghan
 manager: kfile
-ms.workload: Inactive
-ms.openlocfilehash: 3e78a5b9e393dc24c1bfdb1ccc72cd05a0675bfd
-ms.sourcegitcommit: 7e117bca721d008ab106bbfede72f649d3634993
+ms.openlocfilehash: c2bdcd2610eb4a4c6d351868a8fbb7aac9a44bf7
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/09/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="rskeymgmt-utility-ssrs"></a>rskeymgmt (utilidad) (SSRS)
   Extrae, restaura, crea y elimina la clave simétrica usada para proteger contra el acceso no autorizado los datos importantes del servidor de informes. Esta utilidad también se usa para unir instancias del servidor de informes en una implementación de ampliación horizontal. Una *implementación escalada del servidor de informes* se refiere a varias instancias del servidor de informes que comparten una sola base de datos de servidor de informes.  
@@ -65,12 +63,12 @@ rskeymgmt {-?}
  **-e**  
  Extrae la clave simétrica que se usa para cifrar y descifrar datos para la instancia del servidor de informes con el fin de copiarlos en un archivo.  
   
- Este argumento no toma ningún valor. Sin embargo, para completar la extracción, es necesario incluir argumentos adicionales en la línea de comandos. Los argumentos que debe especificar son **-f** y**-p**.  
+ Este argumento no toma ningún valor. Sin embargo, para completar la extracción, es necesario incluir argumentos adicionales en la línea de comandos. Los argumentos que debe especificar son **-f** y **-p**.  
   
  **-a**  
  Reemplaza una clave simétrica existente con una copia proporcionada en un archivo de copia de seguridad protegido mediante contraseña. Todas las instancias de la clave simétrica se actualizan.  
   
- Este argumento no toma ningún valor. Sin embargo, es necesario incluir argumentos adicionales en la línea de comandos para seleccionar el archivo que contiene la clave que va a aplicarse. Los argumentos que puede especificar son **-f** y**-p**.  
+ Este argumento no toma ningún valor. Sin embargo, es necesario incluir argumentos adicionales en la línea de comandos para seleccionar el archivo que contiene la clave que va a aplicarse. Los argumentos que puede especificar son **-f** y **-p**.  
   
  **-d**  
  Elimina todas las instancias de la clave simétrica y todos los datos cifrados de una base de datos del servidor de informes. Este argumento no toma ningún valor.  

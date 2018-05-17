@@ -20,11 +20,11 @@ helpviewer_keywords:
 - Transact-SQL tutorials
 - SQL Server Management Studio [SQL Server], tutorials
 - scripts [SQL Server], SQL Server Management Studio
-ms.openlocfilehash: f981d8455f82db44979a04611e861bb4d13d20d4
-ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.openlocfilehash: c4ddbf149048b7cb7f89be24369c60afc47bdb4a
+ms.sourcegitcommit: 38f8824abb6760a9dc6953f10a6c91f97fa48432
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 05/10/2018
 ---
 # <a name="tutorial-using-templates-within-sql-server-management-studio"></a>Tutorial: Usar plantillas en SQL Server Management Studio
 En este tutorial se presentan las plantillas predefinidas de Transact-SQL (T-SQL) que están disponibles en SQL Server Management Studio (SSMS). En este artículo aprenderá a:
@@ -39,8 +39,8 @@ En este tutorial se presentan las plantillas predefinidas de Transact-SQL (T-SQL
 ## <a name="prerequisites"></a>Prerequisites
 Para llevar a cabo este tutorial necesita tener SQL Server Management Studio, así como acceso a un servidor SQL Server. 
 
-- Instale [SQL Server Management Studio](https://docs.microsoft.com/en-us/sql/ssms/download-sql-server-management-studio-ssms).
-- Instale [SQL Server 2017 Developer Edition](https://www.microsoft.com/en-us/sql-server/sql-server-downloads).
+- Instale [SQL Server Management Studio](https://docs.microsoft.com/sql/ssms/download-sql-server-management-studio-ssms).
+- Instale [SQL Server 2017 Developer Edition](https://www.microsoft.com/sql-server/sql-server-downloads).
 
  
 

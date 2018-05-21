@@ -62,7 +62,7 @@ ms.lasthandoff: 05/03/2018
  Para obtener más información acerca del administrador de conexiones MSMQ, vea [MSMQ Connection Manager](../../integration-services/connection-manager/msmq-connection-manager.md).  
   
 > [!NOTE]  
->  El administrador de conexiones MSMQ admite colas públicas y privadas locales, además de colas públicas remotas. No admite colas privadas remotas. Para obtener una solución que utilice la tarea Script, vea [Sending to a Remote Private Message Queue with the Script Task](../../integration-services/extending-packages-scripting-task-examples/sending-to-a-remote-private-message-queue-with-the-script-task.md).  
+>  El administrador de conexiones MSMQ admite colas públicas y privadas locales, además de colas públicas remotas. No admite colas privadas remotas. Para obtener una solución que utilice la tarea Script, vea [Enviar a una cola de mensajes privada remota con la tarea Script](../../integration-services/extending-packages-scripting-task-examples/sending-to-a-remote-private-message-queue-with-the-script-task.md).  
   
 ### <a name="options"></a>Opciones  
  **Nombre**  

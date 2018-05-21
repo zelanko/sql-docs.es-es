@@ -70,7 +70,7 @@ ms.lasthandoff: 05/03/2018
   
      De este modo se inicia el Asistente para el [!INCLUDE[ssRBnoversion](../../includes/ssrbnoversion-md.md)] de SQL Server.  
   
-3.  Complete el resto de los pasos de [To install Report Builder from the download site](#download).  
+3.  Complete el resto de los pasos de [Instalar Generador de informes desde el sitio de descarga](#download).  
   
 ## <a name="to-install-includessrbnoversionincludesssrbnoversion-mdmd-from-the-command-line"></a>Para instalar el [!INCLUDE[ssRBnoversion](../../includes/ssrbnoversion-md.md)] desde la línea de comandos 
 

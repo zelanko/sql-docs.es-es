@@ -1,10 +1,9 @@
 ---
 title: Programar la ejecución de paquetes SSIS en Azure | Microsoft Docs
-ms.date: 04/17/2018
-ms.topic: article
+ms.date: 05/07/2018
+ms.topic: conceptual
 ms.prod: sql
 ms.prod_service: integration-services
-ms.service: ''
 ms.component: lift-shift
 ms.suite: sql
 ms.custom: ''
@@ -13,19 +12,79 @@ ms.technology:
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: c946055e7579478d65de31f737b1c265b2a38eba
-ms.sourcegitcommit: a85a46312acf8b5a59a8a900310cf088369c4150
+ms.openlocfilehash: 946fb9c302057844eed3c1e14aed1243e0d4c7f7
+ms.sourcegitcommit: 1aedef909f91dc88dc741748f36eabce3a04b2b1
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/26/2018
+ms.lasthandoff: 05/08/2018
 ---
 # <a name="schedule-the-execution-of-an-ssis-package-on-azure"></a>Programar la ejecución de un paquete SSIS en Azure
 Puede programar la ejecución de paquetes almacenados en la base de datos del catálogo de SSISDB en un servidor de Azure SQL Database. Para ello, elija una de las opciones de programación siguientes:
--   [Agente SQL Server](#agent)
+-   [La opción Programar en SQL Server Management Studio (SSMS)](#ssms)
+-   [Actividad de ejecución de un paquete SSIS en Azure Data Factory](#execute)
+-   [Actividad de procedimiento almacenado de SQL Server de Azure Data Factory](#stored proc)
 -   [Trabajos elásticos de SQL Database](#elastic)
--   [Actividad de ejecución de un paquete SSIS en Azure Data Factory](#activities)
--   [Actividad de procedimiento almacenado de SQL Server de Azure Data Factory](#activities)
+-   [Agente SQL Server](#agent)
+
+## <a name="ssms"></a> Programar un paquete con SSMS
+
+En SQL Server Management Studio (SSMS), puede hacer clic con el botón derecho en un paquete implementado en la base de datos del catálogo de SSIS, SSISDB, y seleccionar **Programación** para abrir el cuadro de diálogo **Nueva programación**.
+
+## <a name="execute"></a> Programar un paquete con la actividad Ejecutar paquete de SSIS
+
+Para más información sobre cómo programar un paquete de SSIS mediante el uso de la actividad Ejecutar paquete de SSIS en Azure Data Factory, vea [Ejecución de un paquete de SSIS mediante una actividad de SSIS en Azure Data Factory](https://docs.microsoft.com/azure/data-factory/how-to-invoke-ssis-package-ssis-activity).
+
+## <a name="storedproc"></a> Programar un paquete con la actividad de procedimiento almacenado
+
+Para más información sobre cómo programar un paquete de SSIS mediante el uso de la actividad de procedimiento almacenado de Azure Data Factory, vea [Invocación de un paquete de SSIS mediante una actividad de procedimiento almacenado de Azure Data Factory](https://docs.microsoft.com/azure/data-factory/how-to-invoke-ssis-package-stored-procedure-activity).
+
+Para Data Factory versión 1, vea [Invocación de un paquete de SSIS mediante una actividad de procedimiento almacenado de Azure Data Factory](https://docs.microsoft.com/azure/data-factory/v1/how-to-invoke-ssis-package-stored-procedure-activity).
+
+## <a name="elastic"></a> Programar un paquete con trabajos elásticos de SQL Database
+
+Para obtener más información acerca de los trabajos elásticos en SQL Database, consulte [Administración de bases de datos escaladas horizontalmente en la nube](https://docs.microsoft.com/azure/sql-database/sql-database-elastic-jobs-overview).
+
+### <a name="prerequisites"></a>Prerequisites
+
+Para poder usar trabajos elásticos para programar paquetes SSIS almacenados en la base de datos del catálogo de SSISDB en un servidor Azure SQL Database, debe realizar las acciones siguientes:
+
+1.  Instale y configure los componentes de trabajos de Elastic Database. Para obtener más información, consulte [Información general sobre la instalación de trabajos de Elastic Database](https://docs.microsoft.com/azure/sql-database/sql-database-elastic-jobs-service-installation).
+
+2. Cree credenciales de ámbito de base de datos que los trabajos puedan usar para enviar comandos a la base de datos del catálogo de SSIS. Para obtener más información, vea [CREATE DATABASE SCOPED CREDENTIAL (Transact-SQL)](../../t-sql/statements/create-database-scoped-credential-transact-sql.md) [CREAR CREDENCIAL DE ÁMBITO DE BASE DE DATOS (Transact-SQL)].
+
+### <a name="create-an-elastic-job"></a>Crear un trabajo elástico
+
+Cree un trabajo mediante un script Transact-SQL similar al que se muestra en el ejemplo siguiente:
+
+```sql
+-- Create Elastic Jobs target group 
+EXEC jobs.sp_add_target_group 'TargetGroup' 
+
+-- Add Elastic Jobs target group member 
+EXEC jobs.sp_add_target_group_member @target_group_name='TargetGroup', 
+    @target_type='SqlDatabase', @server_name='YourSQLDBServer.database.windows.net',
+    @database_name='SSISDB' 
+
+-- Add a job to schedule SSIS package execution
+EXEC jobs.sp_add_job @job_name='ExecutePackageJob', @description='Description', 
+    @schedule_interval_type='Minutes', @schedule_interval_count=60
+
+-- Add a job step to create/start SSIS package execution using SSISDB catalog stored procedures
+EXEC jobs.sp_add_jobstep @job_name='ExecutePackageJob', 
+    @command=N'DECLARE @exe_id bigint 
+        EXEC [SSISDB].[catalog].[create_execution]
+            @folder_name=N''folderName'', @project_name=N''projectName'',
+            @package_name=N''packageName'', @use32bitruntime=0,
+            @runinscaleout=1, @useanyworker=1, 
+            @execution_id=@exe_id OUTPUT         
+        EXEC [SSISDB].[catalog].[start_execution] @exe_id, @retry_count=0', 
+    @credential_name='YourDBScopedCredentials', 
+    @target_group_name='TargetGroup' 
+
+-- Enable the job schedule 
+EXEC jobs.sp_update_job @job_name='ExecutePackageJob', @enabled=1, 
+    @schedule_interval_type='Minutes', @schedule_interval_count=60 
+```
 
 ## <a name="agent"></a> Programar un paquete mediante el Agente SQL Server
 
@@ -96,62 +155,6 @@ Para programar un paquete con el Agente SQL Server de forma local, cree un traba
     ```
 
 6.  Termine de configurar y programar el trabajo.
-
-## <a name="elastic"></a> Programar un paquete con trabajos elásticos de SQL Database
-
-Para obtener más información acerca de los trabajos elásticos en SQL Database, consulte [Administración de bases de datos escaladas horizontalmente en la nube](https://docs.microsoft.com/azure/sql-database/sql-database-elastic-jobs-overview).
-
-### <a name="prerequisites"></a>Prerequisites
-
-Para poder usar trabajos elásticos para programar paquetes SSIS almacenados en la base de datos del catálogo de SSISDB en un servidor Azure SQL Database, debe realizar las acciones siguientes:
-
-1.  Instale y configure los componentes de trabajos de Elastic Database. Para obtener más información, consulte [Información general sobre la instalación de trabajos de Elastic Database](https://docs.microsoft.com/azure/sql-database/sql-database-elastic-jobs-service-installation).
-
-2. Cree credenciales de ámbito de base de datos que los trabajos puedan usar para enviar comandos a la base de datos del catálogo de SSIS. Para obtener más información, vea [CREATE DATABASE SCOPED CREDENTIAL (Transact-SQL)](../../t-sql/statements/create-database-scoped-credential-transact-sql.md) [CREAR CREDENCIAL DE ÁMBITO DE BASE DE DATOS (Transact-SQL)].
-
-### <a name="create-an-elastic-job"></a>Crear un trabajo elástico
-
-Cree un trabajo mediante un script Transact-SQL similar al que se muestra en el ejemplo siguiente:
-
-```sql
--- Create Elastic Jobs target group 
-EXEC jobs.sp_add_target_group 'TargetGroup' 
-
--- Add Elastic Jobs target group member 
-EXEC jobs.sp_add_target_group_member @target_group_name='TargetGroup', 
-    @target_type='SqlDatabase', @server_name='YourSQLDBServer.database.windows.net',
-    @database_name='SSISDB' 
-
--- Add a job to schedule SSIS package execution
-EXEC jobs.sp_add_job @job_name='ExecutePackageJob', @description='Description', 
-    @schedule_interval_type='Minutes', @schedule_interval_count=60
-
--- Add a job step to create/start SSIS package execution using SSISDB catalog stored procedures
-EXEC jobs.sp_add_jobstep @job_name='ExecutePackageJob', 
-    @command=N'DECLARE @exe_id bigint 
-        EXEC [SSISDB].[catalog].[create_execution]
-            @folder_name=N''folderName'', @project_name=N''projectName'',
-            @package_name=N''packageName'', @use32bitruntime=0,
-            @runinscaleout=1, @useanyworker=1, 
-            @execution_id=@exe_id OUTPUT         
-        EXEC [SSISDB].[catalog].[start_execution] @exe_id, @retry_count=0', 
-    @credential_name='YourDBScopedCredentials', 
-    @target_group_name='TargetGroup' 
-
--- Enable the job schedule 
-EXEC jobs.sp_update_job @job_name='ExecutePackageJob', @enabled=1, 
-    @schedule_interval_type='Minutes', @schedule_interval_count=60 
-```
-
-## <a name="activities"></a> Programar un paquete con Azure Data Factory
-
-Para obtener información sobre cómo programar un paquete SSIS usando actividades de Azure Data Factory, consulte los siguientes artículos:
-
--   Para Data Factory, versión 2: [Run an SSIS package using SSIS activity in Azure Data Factory](https://docs.microsoft.com/azure/data-factory/how-to-invoke-ssis-package-ssis-activity) (Ejecutar un paquete SSIS mediante una actividad SSIS en Azure Data Factory)
-
--   Para Data Factory, versión 2: [Invocación de un paquete de SSIS mediante una actividad de procedimiento almacenado de Azure Data Factory](https://docs.microsoft.com/azure/data-factory/how-to-invoke-ssis-package-stored-procedure-activity)
-
--   Para Data Factory, versión 1: [Invocación de un paquete de SSIS mediante una actividad de procedimiento almacenado de Azure Data Factory](https://docs.microsoft.com/azure/data-factory/v1/how-to-invoke-ssis-package-stored-procedure-activity)
 
 ## <a name="next-steps"></a>Pasos siguientes
 Para obtener más información, sobre el Agente SQL Server, consulte [Trabajos del Agente SQL Server para paquetes](../packages/sql-server-agent-jobs-for-packages.md).

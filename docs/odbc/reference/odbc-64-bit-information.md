@@ -14,11 +14,11 @@ caps.latest.revision: 21
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 3c891393018f69c47e93e56cd49ddf318756256d
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 10f225602ed302aa8573b09e0b0a852f50a1971f
+ms.sourcegitcommit: b3bb41424249de198f22d9c6d40df4996f083aa6
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 05/17/2018
 ---
 # <a name="odbc-64-bit-information"></a>Información de 64 bits ODBC
 A partir de Windows Server 2003, los sistemas operativos de Microsoft han admitido las bibliotecas ODBC de 64 bits. Los encabezados ODBC y bibliotecas que se incluyó por primera vez con el SDK de MDAC 2.7 contienen los cambios para permitir que los programadores a escribir fácilmente código para las nuevas plataformas de 64 bits. Al asegurarse de que su código utiliza los tipos ODBC definida enumerados a continuación, puede compilar el código fuente mismo tanto para plataformas de 64 bits y 32 bits basados en el **_WIN64** o **WIN32** macros.  
@@ -397,7 +397,7 @@ typedef SQLULEN BOOKMARK;
   
  **SQLSetDescField**  
   
- Cuando el *FieldIdentifier* parámetro puede tener uno de los valores siguientes, se pasa un valor de 64 bits **ValuePtr*:  
+ Cuando el *FieldIdentifier* parámetro puede tener uno de los valores siguientes, se pasa un valor de 64 bits en *ValuePtr*:  
   
  SQL_DESC_ARRAY_SIZE  
   
@@ -421,7 +421,7 @@ typedef SQLULEN BOOKMARK;
   
  **SQLSetStmtAttr**  
   
- Cuando el *atributo* parámetro puede tener uno de los valores siguientes, se pasa un valor de 64 bits **ValuePtr*:  
+ Cuando el *atributo* parámetro puede tener uno de los valores siguientes, se pasa un valor de 64 bits en *ValuePtr*:  
   
  SQL_ATTR_APP_PARAM_DESC  
   
@@ -489,7 +489,7 @@ typedef SQLULEN BOOKMARK;
   
  **SQLSetStmtOption**  
   
- Cuando el *opción* parámetro puede tener uno de los valores siguientes, se pasa un valor de 64 bits **valor*:  
+ Cuando el *opción* parámetro puede tener uno de los valores siguientes, se pasa un valor de 64 bits en *valor*:  
   
  SQL_KEYSET_SIZE  
   

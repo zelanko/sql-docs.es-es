@@ -53,7 +53,7 @@ ms.lasthandoff: 05/03/2018
   
          Se abrirá el cuadro de diálogo Nuevo servicio CDC de Oracle.  
   
-         Para obtener información acerca de cómo usar este cuadro de diálogo, vea [Create and Edit an Oracle CDC Service](../../integration-services/change-data-capture/create-and-edit-an-oracle-cdc-service.md). Para obtener información acerca de cómo crear o editar un servicio CDC, vea [How to Create and Edit a CDC Service](../../integration-services/change-data-capture/how-to-create-and-edit-a-cdc-service.md).  
+         Para obtener información acerca de cómo usar este cuadro de diálogo, vea [Create and Edit an Oracle CDC Service](../../integration-services/change-data-capture/create-and-edit-an-oracle-cdc-service.md). Para obtener información acerca de cómo crear o editar un servicio CDC, vea [Cómo crear y editar un servicio CDC](../../integration-services/change-data-capture/how-to-create-and-edit-a-cdc-service.md).  
   
          El inicio de sesión de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] usado por el servicio CDC de Oracle solo necesita ser miembro del rol fijo de servidor `public` ; no se necesita ningún otro privilegio. Pero, para crear el servicio CDC de Oracle, el inicio de sesión necesita tener permiso de escritura en la base de datos MSXDBCDC (por ejemplo, es necesario asignar el rol de base de datos **db_owner** al inicio de sesión). Cuando un inicio de sesión sin permiso de escritura para la base de datos MSXDBDCDC intenta crear una nueva instancia CDC de Oracle, se muestra un mensaje de error. Haga clic en **Aceptar** en ese cuadro de diálogo para mostrar el cuadro de diálogo Conectar con SQL Server.  
   

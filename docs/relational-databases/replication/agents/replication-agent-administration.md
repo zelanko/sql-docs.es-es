@@ -4,14 +4,13 @@ ms.custom: ''
 ms.date: 08/24/2016
 ms.prod: sql
 ms.prod_service: database-engine
-ms.service: ''
 ms.component: replication
 ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - replication
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - Snapshot Agent, administering
 - Log Reader Agent, administering
@@ -29,12 +28,11 @@ caps.latest.revision: 48
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: c3cccb42d089124c5d57eaad656ff00676b385f9
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
+ms.openlocfilehash: b2607af48ae1f542ce314a0aebca1ec3463921fe
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="replication-agent-administration"></a>Administración del Agente de replicación
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -96,8 +94,8 @@ ms.lasthandoff: 04/16/2018
 |Trabajo de limpieza|Description|Programación predeterminada|  
 |------------------|-----------------|----------------------|  
 |Limpieza de historial del agente: distribución|Quita de la base de datos de distribución el historial del agente de replicación.|Se ejecuta cada diez minutos.|  
-|Limpieza de la distribución: distribución|Quita las transacciones replicadas de la base de datos de distribución. Desactiva las suscripciones que no se han sincronizado dentro del período de retención máximo de la distribución.|Se ejecuta cada diez minutos.|  
-|Limpieza de suscripciones expiradas|Detecta y quita las suscripciones expiradas de las bases de datos de publicaciones.|Se ejecuta cada día a las 01:00 a.m.|  
+|Limpieza de la distribución: distribución|Quita las transacciones replicadas de la base de datos de distribución. |Se ejecuta cada diez minutos.|  
+|Limpieza de suscripciones expiradas|Detecta y quita las suscripciones expiradas de las bases de datos de publicaciones. En el distribuidor, desactiva las suscripciones que no se han sincronizado dentro del período de retención máximo de la distribución.|Se ejecuta cada día a las 01:00 a.m.| 
 |Reinicializar suscripciones con errores de validación de datos|Detecta todas las suscripciones con errores de validación de datos y las marca para reinicializarse. La próxima vez que se ejecute el Agente de mezcla o el Agente de distribución, se aplicará una nueva instantánea a los suscriptores.|No existe programación predeterminada (no se habilita de forma predeterminada).|  
 |Comprobación de agentes de replicación|Detecta los agentes de replicación que no registran activamente un historial. Escribe en el registro de eventos de [!INCLUDE[msCoName](../../../includes/msconame-md.md)] Windows si se produce un error en un trabajo.|Se ejecuta cada diez minutos.|  
 |Actualizador de supervisión de replicación para distribución|Actualiza las consultas almacenadas en la caché que utiliza el Monitor de replicación.|Se ejecuta continuamente.|  

@@ -4,12 +4,9 @@ ms.custom: ''
 ms.date: 01/08/2018
 ms.prod: sql
 ms.prod_service: sql-database
-ms.service: ''
-ms.component: t-sql|database-console-commands
 ms.reviewer: ''
 ms.suite: sql
-ms.technology:
-- database-engine
+ms.technology: t-sql
 ms.tgt_pltfrm: ''
 ms.topic: language-reference
 dev_langs:
@@ -27,12 +24,11 @@ caps.latest.revision: 171
 author: pmasl
 ms.author: pelopes
 manager: craigg
-ms.workload: Active
-ms.openlocfilehash: 64ec9fcd7b4a8411d665a96614ee99f2dacddcd6
-ms.sourcegitcommit: a85a46312acf8b5a59a8a900310cf088369c4150
+ms.openlocfilehash: 52ad63dc661cce6950b5d0939d4a6d508fb6a137
+ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/26/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="dbcc-traceon---trace-flags-transact-sql"></a>DBCC TRACEON: marcas de seguimiento (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
@@ -99,6 +95,7 @@ En la siguiente tabla se enumeran y se describen las marcas de seguimiento dispo
 |**3226**|De forma predeterminada, cada operación de copia de seguridad correcta agrega una entrada en el registro de errores de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] y en el registro de eventos del sistema. Si crea copias de seguridad de registros con mucha frecuencia, estos mensajes de operaciones correctas se acumulan rápidamente, lo que hace que los registros de errores sean muy grandes y se dificulte mucho la búsqueda de mensajes en ellos.<br /><br />Con esta marca de seguimiento puede suprimir estas entradas de registro. Esto resulta útil si ejecuta frecuentemente copias de seguridad de registros y ninguno de los scripts depende de esas entradas.<br /><br />**Ámbito**: solo global|   
 |**3427**|Permite corregir el problema que se produce cuando muchas transacciones consecutivas que insertan datos en la tabla temporal [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] o [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)] consumen más CPU que en [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)]. Para más información, vea este [artículo de Soporte técnico de Microsoft](http://support.microsoft.com/help/3216543)<br /><br />**Nota:** Esta marca de seguimiento se aplica a [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] SP1 CU2 y a compilaciones posteriores. A partir de [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)] CU4, esta marca de seguimiento no tiene ningún efecto.<br /><br />**Ámbito**: solo global|  
 |**3459**|Deshabilita la operación de rehacer en paralelo. Para más información, vea este [artículo de Soporte técnico de Microsoft](http://support.microsoft.com/help/3200975) y este [artículo de Soporte técnico de Microsoft](http://support.microsoft.com/help/4101554).<br /><br />**Nota:** Esta marca de seguimiento se aplica a [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] y [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)].<br /><br />**Ámbito**: solo global| 
+|**3468**|Deshabilita [puntos de control indirectos](https://docs.microsoft.com/en-us/sql/relational-databases/logs/database-checkpoints-sql-server?view=sql-server-2017#IndirectChkpt) en TempDB.<br /><br />**Nota:** Esta marca de seguimiento se aplica a [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] SP1 CU5, [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)] CU1 y a compilaciones posteriores.<br /><br />**Ámbito**: solo global|  
 |**3608**|Evita que [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] se inicie automáticamente y recupere bases de datos excepto la base de datos **maestra**. Si se inician actividades que exigen **tempdb**, se recupera **model** y se crea **tempdb**. Las bases de datos se iniciarán y se recuperarán cuando se tenga acceso a ellas. Algunas características, como el aislamiento SNAPSHOT y la instantánea READ COMMITED, puede que no funcionen. Se debe usar para [Mover bases de datos del sistema](../../relational-databases/databases/move-system-databases.md) y [Mover bases de datos de usuario](../../relational-databases/databases/move-user-databases.md).<br /><br />**Nota:** No se debe usar durante el funcionamiento normal.<br /><br />**Ámbito**: solo global|   
 |**3625**|Limita la cantidad de información devuelta a los usuarios que no son miembros del rol fijo de servidor sysadmin mediante el enmascaramiento de los parámetros de algunos mensajes de error con "\*\*\*\*\*\*". Esto puede ayudar a evitar la divulgación de información confidencial.<br /><br />**Ámbito**: solo global|  
 |**4136**|Deshabilita el examen de parámetros, a menos que se use OPTION(RECOMPILE), WITH RECOMPILE u OPTIMIZE FOR \<value>. Para más información, vea este [artículo de Soporte técnico de Microsoft](http://support.microsoft.com/kb/980653). Para realizar esta acción en el nivel de base de datos, vea la opción PARAMETER_SNIFFING en [ALTER DATABASE SCOPED CONFIGURATION &#40;Transact-SQL&#41;](../../t-sql/statements/alter-database-scoped-configuration-transact-sql.md). Para realizar esta acción en el nivel de consulta, agregue la [sugerencia de consulta](../../t-sql/queries/hints-transact-sql-query.md) OPTIMIZE FOR UNKNOWN. A partir de [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] SP1, una segunda opción para realizar esta acción en el nivel de consulta consiste en agregar la [sugerencia de consulta](../../t-sql/queries/hints-transact-sql-query.md) USE HINT 'PARAMETER_SNIFFING' en lugar de usar esta marca de seguimiento.<br /><br />**Nota:** Asegúrese de probar exhaustivamente esta opción antes de aplicarla en un entorno de producción.<br /><br />**Ámbito**: global o sesión|  

@@ -86,7 +86,7 @@ ms.lasthandoff: 05/03/2018
  **Fecha límite de año de dos dígitos**  
  Indica el número de año más alto que se puede escribir como un año de dos dígitos. El año que se muestra y los 99 anteriores se pueden escribir con formato de dos dígitos. Todos los demás años se deben escribir con formato de cuatro dígitos.  
   
- Por ejemplo, el valor predeterminado 2049 indica que la fecha escrita como "14/3/49" se interpretará como 14 de marzo de 2049 y la fecha escrita como "14/3/50", como 14 de marzo de 1950. Para más información, consulte [Configure the two digit year cutoff Server Configuration Option](../../database-engine/configure-windows/configure-the-two-digit-year-cutoff-server-configuration-option.md).  
+ Por ejemplo, el valor predeterminado 2049 indica que la fecha escrita como "14/3/49" se interpretará como 14 de marzo de 2049 y la fecha escrita como "14/3/50", como 14 de marzo de 1950. Para más información, consulte [Establecer la opción de configuración del servidor Fecha límite de año de dos dígitos](../../database-engine/configure-windows/configure-the-two-digit-year-cutoff-server-configuration-option.md).  
   
 ## <a name="cursor"></a>Cursor  
  **Cierre de cursor al confirmar habilitado**  

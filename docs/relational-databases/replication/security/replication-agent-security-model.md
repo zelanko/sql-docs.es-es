@@ -1,17 +1,16 @@
 ---
 title: Modelo de seguridad del Agente de replicación | Microsoft Docs
 ms.custom: ''
-ms.date: 10/07/2015
+ms.date: 04/26/2018
 ms.prod: sql
 ms.prod_service: database-engine
-ms.service: ''
 ms.component: replication
 ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - replication
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - Snapshot Agent, security
 - agents [SQL Server replication], security
@@ -27,12 +26,11 @@ caps.latest.revision: 72
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.workload: On Demand
-ms.openlocfilehash: 30e8b72f0715f8e194fdabfab89f23444eb3df25
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
+ms.openlocfilehash: 162d6cb864228db80a8d7b7e7fdf0d14acd44799
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="replication-agent-security-model"></a>Modelo de seguridad del Agente de replicación
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -66,8 +64,8 @@ ms.lasthandoff: 04/16/2018
 |Agente de registro del LOG|La cuenta de Windows con la que se ejecuta el agente se utiliza al realizar conexiones al distribuidor. Esta cuenta debe ser, como mínimo, miembro del rol fijo de base de datos **db_owner** en la base de datos de distribución.<br /><br /> La cuenta utilizada para conectarse al publicador debe ser miembro, como mínimo, del rol fijo de base de datos **db_owner** en la base de datos de publicaciones.<br /><br /> Al seleccionar las opciones **replication support only** , *initialize with backup*o *initialize from lsn*de *sync_type*, el agente de registro del LOG se debe ejecutar después de ejecutar **sp_addsubscription**, de modo que los scripts de instalación se escriban en la base de datos de distribución. El agente de registro del LOG se debe ejecutar con una cuenta que sea miembro del rol fijo de servidor **sysadmin** . Cuando la opción **sync_type** se establece en *Automatic*, no se requiere ninguna acción especial del agente de registro del LOG.|  
 |Agente de distribución para una suscripción de inserción|La cuenta de Windows con la que se ejecuta el agente se utiliza al realizar conexiones al distribuidor. Esta cuenta debe:<br /><br /> − Ser como mínimo miembro del rol fijo de base de datos **db_owner** en la base de datos de distribución.<br /><br /> − Ser miembro de la PAL.<br /><br /> − Tener permisos de lectura en el recurso compartido de instantáneas.<br /><br /> − Tener permisos de lectura en el directorio de instalación del proveedor OLE DB para el suscriptor si la suscripción es para un suscriptor que no sea de SQL Server.<br /><br /> − Cuando se replican datos de LOB, el agente de distribución debe tener permisos de escritura en la replicación **C:\Archivos de programa\Microsoft SQL Server\XX\COMfolder** , donde XX representa el instanceID.<br /><br /> <br /><br /> Observe que la cuenta usada para *conectarse* al suscriptor debe ser, como mínimo, miembro del rol fijo de base de datos **db_owner** en la base de datos de suscripciones, o tener permisos equivalentes si la suscripción es para un suscriptor que no sea de SQL Server.<br /><br /> Tenga en cuenta también que, cuando se usa `-subscriptionstreams >= 2` en el agente de distribución, también se debe conceder el permiso **View Server State** en los suscriptores para detectar interbloqueos.|  
 |Agente de distribución para una suscripción de extracción|La cuenta de Windows con la que se ejecuta el agente se utiliza al realizar conexiones al suscriptor. Esta cuenta debe ser, como mínimo, miembro del rol fijo de base de datos **db_owner** en la base de datos de suscripciones. La cuenta utilizada para conectarse al distribuidor debe:<br /><br /> − Ser miembro de la PAL.<br /><br /> − Tener permisos de lectura en el recurso compartido de instantáneas.<br /><br /> − Cuando se replican datos de LOB, el agente de distribución debe tener permisos de escritura en la replicación **C:\Archivos de programa\Microsoft SQL Server\XX\COMfolder** , donde XX representa el instanceID.<br /><br /> <br /><br /> Tenga en cuenta que, cuando se usa `-subscriptionstreams >= 2` en el agente de distribución, también se debe conceder el permiso **View Server State** en los suscriptores para detectar interbloqueos.|  
-|Agente de mezcla para una suscripción de inserción|La cuenta de Windows con la que se ejecuta el agente se utiliza al realizar conexiones al publicador y al distribuidor. Esta cuenta debe:<br /><br /> − Ser como mínimo miembro del rol fijo de base de datos **db_owner** en la base de datos de distribución.<br /><br /> − Ser miembro de la PAL.<br /><br /> − Ser un inicio de sesión asociado a un usuario en la base de datos de publicaciones.<br /><br /> − Tener permisos de lectura en el recurso compartido de instantáneas.<br /><br /> <br /><br /> Observe que la cuenta utilizada para *conectarse* al suscriptor debe ser miembro, como mínimo, del rol fijo de base de datos **db_owner** en la base de datos de suscripciones.|  
-|Agente de mezcla para una suscripción de extracción|La cuenta de Windows con la que se ejecuta el agente se utiliza al realizar conexiones al suscriptor. Esta cuenta debe ser, como mínimo, miembro del rol fijo de base de datos **db_owner** en la base de datos de suscripciones. La cuenta utilizada para conectarse al publicador y al distribuidor debe:<br /><br /> − Ser miembro de la PAL.<br /><br /> − Ser un inicio de sesión asociado a un usuario en la base de datos de publicaciones.<br /><br /> − Ser un inicio de sesión asociado a un usuario en la base de datos de distribución. El usuario puede ser el usuario **Guest** .<br /><br /> − Tener permisos de lectura en el recurso compartido de instantáneas.|  
+|Agente de mezcla para una suscripción de inserción|La cuenta de Windows con la que se ejecuta el agente se utiliza al realizar conexiones al publicador y al distribuidor. Esta cuenta debe:<br /><br /> − Ser como mínimo miembro del rol fijo de base de datos **db_owner** en la base de datos de distribución.<br /><br /> − Ser miembro de la PAL.<br /><br /> − Ser un inicio de sesión asociado a un usuario con permisos de lectura/escritura en la base de datos de publicaciones.<br /><br /> − Tener permisos de lectura en el recurso compartido de instantáneas.<br /><br /> <br /><br /> Observe que la cuenta utilizada para *conectarse* al suscriptor debe ser miembro, como mínimo, del rol fijo de base de datos **db_owner** en la base de datos de suscripciones.|  
+|Agente de mezcla para una suscripción de extracción|La cuenta de Windows con la que se ejecuta el agente se utiliza al realizar conexiones al suscriptor. Esta cuenta debe ser, como mínimo, miembro del rol fijo de base de datos **db_owner** en la base de datos de suscripciones. La cuenta utilizada para conectarse al publicador y al distribuidor debe:<br /><br /> − Ser miembro de la PAL.<br /><br /> − Ser un inicio de sesión asociado a un usuario con permisos de lectura/escritura en la base de datos de publicaciones.<br /><br /> − Ser un inicio de sesión asociado a un usuario en la base de datos de distribución. El usuario puede ser el usuario **Guest** .<br /><br /> − Tener permisos de lectura en el recurso compartido de instantáneas.|  
 |Agente de lectura de cola|La cuenta de Windows con la que se ejecuta el agente se utiliza al realizar conexiones al distribuidor. Esta cuenta debe ser, como mínimo, miembro del rol fijo de base de datos **db_owner** en la base de datos de distribución.<br /><br /> La cuenta utilizada para conectarse al publicador debe ser miembro, como mínimo, del rol fijo de base de datos **db_owner** en la base de datos de publicaciones.<br /><br /> La cuenta utilizada para conectarse al suscriptor debe ser miembro, como mínimo, del rol fijo de base de datos **db_owner** en la base de datos de suscripciones.|  
   
 ## <a name="agent-security-under-sql-server-agent"></a>Seguridad de agentes con el Agente SQL Server  

@@ -9,11 +9,11 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: bb1428f577c1a6094d1fe58cfdcd7cd8f62f8036
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.openlocfilehash: 899569bffcb0e521d6bcb36e0172498fa0da340c
+ms.sourcegitcommit: b3bb41424249de198f22d9c6d40df4996f083aa6
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/10/2018
+ms.lasthandoff: 05/17/2018
 ---
 # <a name="understanding-power-view-for-multidimensional-models"></a>Descripción de Power View para modelos multidimensionales
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
@@ -93,7 +93,7 @@ ms.lasthandoff: 05/10/2018
  ![Jerarquía no agregable de Power View](../../analysis-services/multidimensional-models/media/daxmd-nonaggrattrib.gif "Jerarquía no agregable de Power View")  
   
 ### <a name="implicit-measures"></a>Medidas implícitas  
- Los modelos tabulares proporcionan a los usuarios la posibilidad de crear medidas *implícitas* como recuento, suma o promedio en los campos. En los modelos multidimensionales, dado que los datos de los atributos de dimensión se almacenan de forma diferente, la consulta de medidas implícitas puede tardar mucho. Por ello, las medidas implícitas no están disponibles en Power View.  
+ Los modelos tabulares proporcionan a los usuarios la posibilidad de crear medidas *implícitas* como recuento, suma o promedio en los campos. En los modelos multidimensionales, dado que los datos de atributos de dimensión se almacenan de forma diferente, consulta las medidas implícitas puede tardar mucho tiempo. Por ello, las medidas implícitas no están disponibles en Power View.  
   
 ## <a name="dimensions-attributes-and-hierarchies"></a>Dimensiones, atributos y jerarquías  
  Las dimensiones de cubo se exponen como tablas en los metadatos tabulares. En la lista de campos de Power View, los atributos de dimensión se muestran como columnas dentro de carpetas para mostrar.  Estos atributos tienen establecida en false la propiedad AttributeHierarchyEnabled; por ejemplo, el atributo Birth Date de la dimensión Customer o la propiedad AttributeHierarchyVisible establecida en false no aparecerá en la lista de campos de Power View. Las jerarquías de varios niveles o las jerarquías de usuario, por ejemplo Customer Geography en la dimensión Customer, se exponen como jerarquías en la lista de campos de Power View. Los miembros desconocidos ocultos de un atributo de dimensión se exponen en consultas DAX en Power View.  

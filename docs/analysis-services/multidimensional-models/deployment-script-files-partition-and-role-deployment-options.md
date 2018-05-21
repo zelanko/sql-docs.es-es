@@ -9,11 +9,11 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: 9efff5dc4a12638b1a894352511d747690da58f1
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.openlocfilehash: 64a8eeff0447b6a62e7e1f8e21bf48ae3a6b99a3
+ms.sourcegitcommit: b3bb41424249de198f22d9c6d40df4996f083aa6
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/10/2018
+ms.lasthandoff: 05/17/2018
 ---
 # <a name="deployment-script-files---partition-and-role-deployment-options"></a>Archivos de Script de implementación - opciones de implementación de roles y particiones
 [!INCLUDE[ssas-appliesto-sqlas-all-aas](../../includes/ssas-appliesto-sqlas-all-aas.md)]
@@ -55,7 +55,7 @@ ms.lasthandoff: 05/10/2018
   
      O bien  
   
--   Abra la \< *nombre del proyecto*> .deploymentoptions en cualquier editor de texto y manualmente cambiar las opciones.  
+-   Abra la \< *nombre del proyecto*> .deploymentoptions en cualquier editor de texto y manualmente cambiar las opciones. Las opciones de PartitionDeployment son DeployPartitions, RetainPartitions. Las opciones de RoleDeployment son DeployRolesAndMembers, DeployRolesRetainMembers, RetainRoles.
   
 ## <a name="see-also"></a>Vea también  
  [Especificar el destino de la instalación](../../analysis-services/multidimensional-models/deployment-script-files-specifying-the-installation-target.md)   

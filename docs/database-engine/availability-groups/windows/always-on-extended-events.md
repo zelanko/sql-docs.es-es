@@ -99,11 +99,9 @@ Para obtener información sobre algunos de los eventos cubiertos por alwayson_he
   
 |Nombre|Type_name|Description|  
 |----------|----------------|-----------------|  
-|availability_group_id|
-          guid|Identificador del grupo de disponibilidad.|  
+|availability_group_id|guid|Identificador del grupo de disponibilidad.|  
 |availability_group_name|unicode_string|Nombre del grupo de disponibilidad.|  
-|availability_replica_id|
-          guid|Identificador de la réplica de disponibilidad.|  
+|availability_replica_id|guid|Identificador de la réplica de disponibilidad.|  
 |previous_state|availability_replica_state|Rol de la réplica antes del cambio.<br /><br /> **Los valores posibles son:**<br /><br /> Primary_Normal<br /><br /> Secondary_Normal<br /><br /> Resolving_Pending_Failover<br /><br /> Resolving_Normal<br /><br /> Primary_Pending<br /><br /> Not_Available|  
 |current_state|availability_replica_state|Rol de la réplica después del cambio.<br /><br /> **Los valores posibles son:**<br /><br /> Primary_Normal<br /><br /> Secondary_Normal<br /><br /> Resolving_Pending_Failover<br /><br /> Resolving_Normal<br /><br /> Primary_Pending<br /><br /> Not_Available|  
   
@@ -132,8 +130,7 @@ GO
   
 |Nombre|Type_name|Description|  
 |----------|----------------|-----------------|  
-|availability_group_id|
-          guid|Identificador del grupo de disponibilidad.|  
+|availability_group_id|guid|Identificador del grupo de disponibilidad.|  
 |availability_group_name|unicode_string|Nombre del grupo de disponibilidad.|  
   
 #### <a name="alwaysonhealth-session-definition"></a>Definición de sesión alwayson_health  
@@ -161,11 +158,9 @@ GO
   
 |Nombre|Type_name|Description|  
 |----------|----------------|-----------------|  
-|availability_group_id|
-          guid|Identificador del grupo de disponibilidad.|  
+|availability_group_id|guid|Identificador del grupo de disponibilidad.|  
 |availability_group_name|unicode_string|El nombre del grupo de disponibilidad.|  
-|availability_replica_id|
-          guid|Identificador de la réplica de disponibilidad.|  
+|availability_replica_id|guid|Identificador de la réplica de disponibilidad.|  
 |forced_quorum|validation_result_type|Si el valor es TRUE, la conmutación automática por error se invalida en esta réplica de disponibilidad.<br /><br /> TRUE<br /><br /> FALSE|  
 |joined_and_synchronized|validation_result_type|Si el valor es FALSE, la conmutación automática por error se invalida en esta réplica de disponibilidad.<br /><br /> TRUE<br /><br /> FALSE|  
 |previous_primary_or_automatic_failover_target|validation_result_type|Si el valor es FALSE, la conmutación automática por error se invalida en esta réplica de disponibilidad.<br /><br /> TRUE<br /><br /> FALSE|  
@@ -264,13 +259,10 @@ GO
 ||||  
 |-|-|-|  
 |Nombre|Type_name|Description|  
-|availability_group_id|
-          guid|Identificador del grupo de disponibilidad.|  
+|availability_group_id|guid|Identificador del grupo de disponibilidad.|  
 |availability_group_name|unicode_string|Nombre del grupo de disponibilidad, si estuviera disponible.|  
-|availability_replica_id|
-          guid|Identificador de la réplica de disponibilidad.|  
-|database_replica_id|
-          guid|Identificador de la base de datos de disponibilidad.|  
+|availability_replica_id|guid|Identificador de la réplica de disponibilidad.|  
+|database_replica_id|guid|Identificador de la base de datos de disponibilidad.|  
 |database_replica_name|unicode_string|El nombre de la base de datos de disponibilidad.|  
 |database_id|uint32|Identificador de la base de datos de disponibilidad.|  
 |suspend_status|suspend_status_type|Valores de estado de suspensión.<br /><br /> SUSPEND_NULL<br /><br /> RESUMED<br /><br /> SUSPENDED<br /><br /> SUSPENDED_INVALID|  

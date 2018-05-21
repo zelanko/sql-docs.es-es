@@ -51,7 +51,7 @@ ms.lasthandoff: 05/03/2018
   
 -   Vea [Instalación de SQL Server 2016 desde el Asistente para la instalación &#40;programa de instalación&#41;](../../database-engine/install-windows/install-sql-server-from-the-installation-wizard-setup.md) en los Libros en pantalla de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] para obtener instrucciones sobre cómo instalar instancias del servidor de informes.  
   
--   Si tiene previsto hospedar la implementación escalada en un clúster con equilibrio de carga de red (NLB), deberá configurar el clúster NLB antes de configurar la implementación escalada. Para más información, consulte [Configure a Report Server on a Network Load Balancing Cluster](../../reporting-services/report-server/configure-a-report-server-on-a-network-load-balancing-cluster.md).  
+-   Si tiene previsto hospedar la implementación escalada en un clúster con equilibrio de carga de red (NLB), deberá configurar el clúster NLB antes de configurar la implementación escalada. Para más información, consulte [Configurar un servidor de informes en un clúster con equilibrio de carga de red](../../reporting-services/report-server/configure-a-report-server-on-a-network-load-balancing-cluster.md).  
   
 -   Revise los procedimientos de este tema para saber cómo se comparte una base de datos del servidor de informes y cómo se unen servidores de informes a una implementación escalada.  
   
@@ -142,7 +142,7 @@ El problema será intermitente; es decir, solo el servidor que creó la tarea de
   
 4.  Ahora debería poder para comprobar que ambas instancias del servidor de informes están operativas. Para comprobar la segunda instancia, puede usar la herramienta Configuración de Reporting Services con el fin de conectarse al servidor de informes y hacer clic en **Dirección URL del servicio web** o en **Dirección URL del Portal web**.  
   
- Si tiene previsto ejecutar los servidores de informes en un clúster de servidores con equilibrio de carga, son necesarios algunos pasos de configuración adicionales. Para más información, consulte [Configure a Report Server on a Network Load Balancing Cluster](../../reporting-services/report-server/configure-a-report-server-on-a-network-load-balancing-cluster.md).  
+ Si tiene previsto ejecutar los servidores de informes en un clúster de servidores con equilibrio de carga, son necesarios algunos pasos de configuración adicionales. Para más información, consulte [Configurar un servidor de informes en un clúster con equilibrio de carga de red](../../reporting-services/report-server/configure-a-report-server-on-a-network-load-balancing-cluster.md).  
 
 ## <a name="next-steps"></a>Pasos siguientes
 

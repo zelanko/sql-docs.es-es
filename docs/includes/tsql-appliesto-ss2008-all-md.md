@@ -1,1 +1,1 @@
-<Token>**En este tema se aplica a:** ![Sí](media/yes.png)SQL Server (a partir de 2008)![Sí](media/yes.png)base de datos de SQL Azure![Sí](media/yes.png)almacenamiento de datos de SQL Azure ![Sí](media/yes.png) Almacenamiento de datos paralelos </Token> 
+<Token>**Este tema se aplica a:** ![Sí](media/yes.png)SQL Server (a partir de 2008)![Sí](media/yes.png)base de datos de SQL Azure![Sí](media/yes.png)almacenamiento de datos de SQL Azure ![Sí](media/yes.png) Almacenamiento de datos paralelos </Token> 

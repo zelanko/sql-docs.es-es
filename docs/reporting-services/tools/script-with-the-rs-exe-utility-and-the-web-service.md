@@ -34,7 +34,7 @@ ms.lasthandoff: 05/03/2018
   
  Para obtener ejemplos de script, vea lo siguiente:  
   
- [Sample Reporting Services rs.exe Script to Copy Content between Report Servers](../../reporting-services/tools/sample-reporting-services-rs-exe-script-to-copy-content-between-report-servers.md).  
+ [Script rs.exe para copiar contenido entre servidores de informes de servicios de informes de ejemplo](../../reporting-services/tools/sample-reporting-services-rs-exe-script-to-copy-content-between-report-servers.md).  
   
  [Ejemplos del producto SQL Server Reporting Services](http://go.microsoft.com/fwlink/?LinkId=177889).  
   

@@ -33,7 +33,7 @@ ms.lasthandoff: 05/03/2018
   
 2.  Seleccione el servicio CDC con el que desea trabajar.  
   
-     También puede hacer clic con el botón secundario en el servicio CDC con el que desea trabajar y seleccionar la acción deseada. Consulte [What can you do with a CDC Service](../../integration-services/change-data-capture/manage-an-oracle-cdc-service.md#BKMK_WhatcandowithCDCService).  
+     También puede hacer clic con el botón secundario en el servicio CDC con el que desea trabajar y seleccionar la acción deseada. Consulte [Lo que puede hacer con un servicio CDC](../../integration-services/change-data-capture/manage-an-oracle-cdc-service.md#BKMK_WhatcandowithCDCService).  
   
  **OR**  
   
@@ -41,9 +41,9 @@ ms.lasthandoff: 05/03/2018
   
 2.  En la sección central de la Consola de configuración del servicio CDC, seleccione el servicio con el que desea trabajar.  
   
-     También puede hacer clic con el botón secundario en el servicio CDC con el que desea trabajar y seleccionar la acción deseada. Consulte [What can you do with a CDC Service](../../integration-services/change-data-capture/manage-an-oracle-cdc-service.md#BKMK_WhatcandowithCDCService).  
+     También puede hacer clic con el botón secundario en el servicio CDC con el que desea trabajar y seleccionar la acción deseada. Consulte [Lo que puede hacer con un servicio CDC](../../integration-services/change-data-capture/manage-an-oracle-cdc-service.md#BKMK_WhatcandowithCDCService).  
   
-##  <a name="BKMK_WhatcandowithCDCService"></a> What can you do with a CDC Service  
+##  <a name="BKMK_WhatcandowithCDCService"></a> Lo que puede hacer con un servicio CDC  
  Puede realizar las acciones siguientes al trabajar con un servicio CDC.  
   
 ### <a name="delete-the-service"></a>Eliminar el servicio  

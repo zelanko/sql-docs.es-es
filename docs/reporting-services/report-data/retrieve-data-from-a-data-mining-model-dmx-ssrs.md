@@ -31,7 +31,7 @@ ms.lasthandoff: 05/03/2018
   
  Puede crear una definición de origen de datos incrustada para su uso en un solo informe o una definición de origen de datos compartida que se pueda usar en varios informes. Los procedimientos de este tema explican cómo crear un origen de datos incrustado. Para más información sobre los orígenes de datos compartidos, vea [Conexiones de datos u orígenes de datos compartidos e incrustados &#40;Generador de informes y SSRS&#41;](http://msdn.microsoft.com/library/f417782c-b85a-4c4d-8a40-839176daba56) y [Crear, modificar y eliminar orígenes de datos compartidos &#40;SSRS&#41;](../../reporting-services/report-data/create-modify-and-delete-shared-data-sources-ssrs.md).  
   
- Después de crear un origen de datos de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] , puede crear uno o más conjuntos de datos. Para cada conjunto de datos, use un diseñador de consultas de predicción de minería de datos (DMX) para crear una consulta DMX que especifique la colección de campos. Para más información, consulte [Analysis Services DMX Query Designer User Interface](../../reporting-services/report-data/analysis-services-dmx-query-designer-user-interface.md).  
+ Después de crear un origen de datos de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] , puede crear uno o más conjuntos de datos. Para cada conjunto de datos, use un diseñador de consultas de predicción de minería de datos (DMX) para crear una consulta DMX que especifique la colección de campos. Para más información, consulte [Interfaz de usuario del Diseñador de consultas DMX de Analysis Services](../../reporting-services/report-data/analysis-services-dmx-query-designer-user-interface.md).  
   
  Después de crear un conjunto de datos, el nombre de éste aparece en el panel Datos de informe como un nodo bajo su origen de datos.  
   
@@ -57,7 +57,7 @@ ms.lasthandoff: 05/03/2018
   
 6.  Haga clic en **Credenciales**.  
   
-     Establezca las credenciales que se deben usar para conectar con el origen de datos. Para más información, consulte [Specify Credential and Connection Information for Report Data Sources](../../reporting-services/report-data/specify-credential-and-connection-information-for-report-data-sources.md).  
+     Establezca las credenciales que se deben usar para conectar con el origen de datos. Para más información, consulte [Especificar información de credenciales y conexión para los orígenes de datos de informes](../../reporting-services/report-data/specify-credential-and-connection-information-for-report-data-sources.md).  
   
     > [!NOTE]  
     >  Para probar la conexión del origen de datos, haga clic en **Editar**. En el cuadro de diálogo **Propiedades de conexión** , haga clic en **Probar conexión**. Si la prueba es correcta, aparecerá un mensaje de información que indica que se estableció correctamente la conexión de prueba. Si la prueba no es correcta, aparecerá un mensaje de advertencia con más información acerca de las razones por las que la prueba no se ha realizado correctamente.  
@@ -74,7 +74,7 @@ ms.lasthandoff: 05/03/2018
   
 3.  En el cuadro **Origen de datos**, compruebe que el nombre es el nombre de un origen de datos que se conecta con un origen de datos de [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] .  
   
-4.  Haga clic en **Diseñador de consultas** para abrir el diseñador gráfico de consultas y generar interactivamente una consulta. Si el diseñador de consultas se abre en modo MDX, haga clic en **Tipo de comando DMX** (![Cambiar a la vista del lenguaje de consultas DMX](../../reporting-services/report-data/media/rsqdicon-commandtypedmx.gif "Cambiar a la vista del lenguaje de consultas DMX")) en la barra de herramientas para cambiar al diseñador de consultas de minería de datos. Para más información, consulte [Analysis Services DMX Query Designer User Interface](../../reporting-services/report-data/analysis-services-dmx-query-designer-user-interface.md).  
+4.  Haga clic en **Diseñador de consultas** para abrir el diseñador gráfico de consultas y generar interactivamente una consulta. Si el diseñador de consultas se abre en modo MDX, haga clic en **Tipo de comando DMX** (![Cambiar a la vista del lenguaje de consultas DMX](../../reporting-services/report-data/media/rsqdicon-commandtypedmx.gif "Cambiar a la vista del lenguaje de consultas DMX")) en la barra de herramientas para cambiar al diseñador de consultas de minería de datos. Para más información, consulte [Interfaz de usuario del Diseñador de consultas DMX de Analysis Services](../../reporting-services/report-data/analysis-services-dmx-query-designer-user-interface.md).  
   
      O bien, para importar una consulta DMX existente desde otro informe, haga clic en **Importar**y, a continuación, navegue hasta el archivo .rdl que contiene la consulta DMX. No se admite la importación de una consulta desde un archivo .dmx.  
   

@@ -74,14 +74,14 @@ Para utilizar este tutorial, debe tener el software siguiente instalado en el eq
   
 -   La base de datos de ejemplo **AdventureWorks2014** , que proporciona datos para el informe de ejemplo.  
   
--   Una asignación de roles de [!INCLUDE[ssRSnoversion_md](../includes/ssrsnoversion-md.md)] que incluye la tarea Administrar todas las suscripciones en el informe de ejemplo. Esta tarea es necesaria para definir una suscripción controlada por datos. Si es administrador del equipo, la asignación de roles predeterminada para los administradores locales le proporciona los permisos necesarios para crear suscripciones controladas por datos. Para obtener más información, consulte [Granting Permissions on a Native Mode Report Server](../reporting-services/security/granting-permissions-on-a-native-mode-report-server.md).  
+-   Una asignación de roles de [!INCLUDE[ssRSnoversion_md](../includes/ssrsnoversion-md.md)] que incluye la tarea Administrar todas las suscripciones en el informe de ejemplo. Esta tarea es necesaria para definir una suscripción controlada por datos. Si es administrador del equipo, la asignación de roles predeterminada para los administradores locales le proporciona los permisos necesarios para crear suscripciones controladas por datos. Para obtener más información, consulte [Conceder permisos en un servidor de informes en modo nativo](../reporting-services/security/granting-permissions-on-a-native-mode-report-server.md).  
   
 -   Una carpeta compartida para la que tenga permisos de escritura. La carpeta compartida debe estar accesible a través de una conexión de red.  
   
 **Tiempo estimado para completar este tutorial:** 30 minutos. Otros 30 minutos si no ha completado el tutorial de informe básico.  
   
 ## <a name="see-also"></a>Ver también  
-[Data-Driven Subscriptions](../reporting-services/subscriptions/data-driven-subscriptions.md)  
+[Suscripciones controladas por datos](../reporting-services/subscriptions/data-driven-subscriptions.md)  
 [Crear un informe de tabla básico &#40;Tutorial de SSRS&#41;](../reporting-services/create-a-basic-table-report-ssrs-tutorial.md)
  
 

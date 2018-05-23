@@ -1,6 +1,6 @@
 ---
-title: Programar la ejecución de paquetes SSIS en Azure | Microsoft Docs
-ms.date: 05/07/2018
+title: Programar paquetes SSIS en Azure | Microsoft Docs
+ms.date: 05/09/2018
 ms.topic: conceptual
 ms.prod: sql
 ms.prod_service: integration-services
@@ -12,23 +12,25 @@ ms.technology:
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 946fb9c302057844eed3c1e14aed1243e0d4c7f7
-ms.sourcegitcommit: 1aedef909f91dc88dc741748f36eabce3a04b2b1
+ms.openlocfilehash: 4bfad00425848189d88bd780296db00ec810b37c
+ms.sourcegitcommit: 0cc2cb281e467a13a76174e0d9afbdcf4ccddc29
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/08/2018
+ms.lasthandoff: 05/15/2018
 ---
-# <a name="schedule-the-execution-of-an-ssis-package-on-azure"></a>Programar la ejecución de un paquete SSIS en Azure
+# <a name="schedule-the-execution-of-an-ssis-package-in-azure"></a>Schedule the execution of an SSIS package in Azure (Programar la ejecución de un paquete SSIS en Azure)
 Puede programar la ejecución de paquetes almacenados en la base de datos del catálogo de SSISDB en un servidor de Azure SQL Database. Para ello, elija una de las opciones de programación siguientes:
 -   [La opción Programar en SQL Server Management Studio (SSMS)](#ssms)
 -   [Actividad de ejecución de un paquete SSIS en Azure Data Factory](#execute)
--   [Actividad de procedimiento almacenado de SQL Server de Azure Data Factory](#stored proc)
+-   [Actividad de procedimiento almacenado de SQL Server de Azure Data Factory](#storedproc)
 -   [Trabajos elásticos de SQL Database](#elastic)
 -   [Agente SQL Server](#agent)
 
 ## <a name="ssms"></a> Programar un paquete con SSMS
 
-En SQL Server Management Studio (SSMS), puede hacer clic con el botón derecho en un paquete implementado en la base de datos del catálogo de SSIS, SSISDB, y seleccionar **Programación** para abrir el cuadro de diálogo **Nueva programación**.
+En SQL Server Management Studio (SSMS), puede hacer clic con el botón derecho en un paquete implementado en la base de datos del catálogo de SSIS, SSISDB, y seleccionar **Programación** para abrir el cuadro de diálogo **Nueva programación**. Para más información, vea [Schedule the execution of an SSIS package on Azure with SSMS](ssis-azure-schedule-packages-ssms.md) (Programar la ejecución de un paquete SSIS en Azure con SSMS).
+
+Esta característica require SQL Server Management Studio versión 17.7 o superior. Para obtener la versión más reciente de SSMS, vea [Download SQL Server Management Studio (SSMS)](../../ssms/download-sql-server-management-studio-ssms.md) [Descargar SQL Server Management Studio (SSMS)].
 
 ## <a name="execute"></a> Programar un paquete con la actividad Ejecutar paquete de SSIS
 

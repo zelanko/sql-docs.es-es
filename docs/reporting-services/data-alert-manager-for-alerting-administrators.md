@@ -51,7 +51,7 @@ SQL Server Reporting Services proporciona el Administrador de alertas de datos p
   
  ![Sección Reporting Services de la página Configuración del sitio](../reporting-services/media/rs-sitesettings.gif "Sección Reporting Services de la página Configuración del sitio")  
   
- El Administrador de alertas de datos incluye una tabla con el nombre de la alerta, el nombre del informe, el nombre del propietario de la alerta, el número de veces que se envió la alerta, la última vez que se ejecutó la alerta, la última vez que se modificó la definición de la alerta y el estado del mensaje de alerta. Si la alerta no se puede generar o enviar, la columna de estado contiene información sobre el error que le ayudará a solucionar los problemas relacionados con la alerta. Para más información, consulte [Manage All Data Alerts on a SharePoint Site in Data Alert Manager](../reporting-services/manage-all-data-alerts-on-a-sharepoint-site-in-data-alert-manager.md).  
+ El Administrador de alertas de datos incluye una tabla con el nombre de la alerta, el nombre del informe, el nombre del propietario de la alerta, el número de veces que se envió la alerta, la última vez que se ejecutó la alerta, la última vez que se modificó la definición de la alerta y el estado del mensaje de alerta. Si la alerta no se puede generar o enviar, la columna de estado contiene información sobre el error que le ayudará a solucionar los problemas relacionados con la alerta. Para más información, consulte [Administrar todas las alertas de datos de un sitio de SharePoint en el Administrador de alertas de datos](../reporting-services/manage-all-data-alerts-on-a-sharepoint-site-in-data-alert-manager.md).  
   
  En la tabla siguiente se muestran datos de ejemplo de una tabla del Administrador de alertas de datos. Cuando se produce un error, el mensaje de error y el identificador de la entrada del registro (un GUID) se incluyen en el campo **Estado** de la tabla.  
   
@@ -78,7 +78,7 @@ SQL Server Reporting Services proporciona el Administrador de alertas de datos p
 ##  <a name="HowTo"></a> Tareas relacionadas  
  En esta sección se enumera un procedimiento que muestra cómo administrar las alertas.  
   
--   [Manage All Data Alerts on a SharePoint Site in Data Alert Manager](../reporting-services/manage-all-data-alerts-on-a-sharepoint-site-in-data-alert-manager.md)  
+-   [Administrar todas las alertas de datos de un sitio de SharePoint en el Administrador de alertas de datos](../reporting-services/manage-all-data-alerts-on-a-sharepoint-site-in-data-alert-manager.md)  
 
 ## <a name="see-also"></a>Ver también
 

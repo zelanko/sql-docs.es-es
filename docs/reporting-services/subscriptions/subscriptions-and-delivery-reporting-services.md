@@ -61,7 +61,7 @@ ms.lasthandoff: 05/03/2018
   
 -   [Entrega por correo electrónico en Reporting Services](../../reporting-services/subscriptions/e-mail-delivery-in-reporting-services.md) Describe la configuración y el funcionamiento de la entrega de correo electrónico al servidor de informes.  
   
--   [Create and Manage Subscriptions for Native Mode Report Servers](../../reporting-services/subscriptions/create-and-manage-subscriptions-for-native-mode-report-servers.md) Pasos detallados para crear suscripciones con un servidor de informes en modo nativo.  
+-   [Crear y administrar suscripciones para servidores de informes en modo nativo](../../reporting-services/subscriptions/create-and-manage-subscriptions-for-native-mode-report-servers.md) Pasos detallados para crear suscripciones con un servidor de informes en modo nativo.  
   
 -   [Create and Manage Subscriptions for SharePoint Mode Report Servers](../../reporting-services/subscriptions/create-and-manage-subscriptions-for-sharepoint-mode-report-servers.md) Pasos detallados para crear suscripciones con un servidor de informes de modo de SharePoint.  
   

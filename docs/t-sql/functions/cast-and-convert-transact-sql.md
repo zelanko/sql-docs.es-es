@@ -106,7 +106,7 @@ Para una *expression* que tenga el tipo de datos de fecha u hora, *style* puede 
 >  [!NOTE]  
 >  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] admite el formato de fecha, en estilo árabe, con el algoritmo kuwaití.
   
-|Sin el siglo (aa) (<sup>1</sup>)|Con el siglo (aaaa)|Standard|Entrada/salida (<sup>3</sup>)|  
+|Sin el siglo (aa) (<sup>1</sup>)|Con el siglo (aaaa)|Estándar|Entrada/salida (<sup>3</sup>)|  
 |---|---|--|---|
 |-|**0** o **100** (<sup>1,</sup><sup>2</sup>)|Valor predeterminado para datetime y smalldatetime|mes dd aaaa hh:mia.m. (o p.m.)|  
 |**1**|**101**|EE. UU.|  1 = mm/dd/aa<br /> 101 = mm/dd/aaaa|  

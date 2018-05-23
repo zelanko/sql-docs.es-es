@@ -65,7 +65,7 @@ ms.lasthandoff: 05/03/2018
  Especifica cuánto puede durar (en segundos) una operación remota antes de que [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] supere el tiempo de espera. El valor predeterminado es 600 segundos o una espera de 10 minutos.  
   
  **Exigir transacciones distribuidas para comunicación entre servidores**  
- Protege las acciones de un procedimiento entre servidores a través de un Coordinador de transacciones distribuidas de [!INCLUDE[msCoName](../../includes/msconame-md.md)] (MS DTC). Para más información, consulte [Configure the remote proc trans Server Configuration Option](../../database-engine/configure-windows/configure-the-remote-proc-trans-server-configuration-option.md).  
+ Protege las acciones de un procedimiento entre servidores a través de un Coordinador de transacciones distribuidas de [!INCLUDE[msCoName](../../includes/msconame-md.md)] (MS DTC). Para más información, consulte [Establecer la opción de configuración del servidor Transacciones de procedimientos remotos](../../database-engine/configure-windows/configure-the-remote-proc-trans-server-configuration-option.md).  
   
 ## <a name="property-page-display-options"></a>Opciones de visualización de la página de propiedades  
  **Valores configurados**  

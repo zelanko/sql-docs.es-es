@@ -22,11 +22,11 @@ caps.latest.revision: 21
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 50569b63d34534472e4db8d0afc9dd48e1160f96
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 0f67623539244916e430976d46f07f4a1e73baf4
+ms.sourcegitcommit: b5ab9f3a55800b0ccd7e16997f4cd6184b4995f9
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 05/23/2018
 ---
 # <a name="tutorial-configure-replication-between-two-fully-connected-servers-transactional"></a>Tutorial: Configurar la replicación entre dos servidores conectados completamente (transaccional)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -141,7 +141,7 @@ Si el Agente SQL Server no se estaba ejecutando cuando creó la publicación, ve
 
 ![Botón "Iniciar" y cambio en el mensaje de estado para indicar que se ha ejecutado el Agente de instantáneas](media/tutorial-replicating-data-between-continuously-connected-servers/startsnapshotagent.png)
      
-Si ve un error aquí, vea la sección [Troubleshooting Snapshot Agent errors](../../troubleshooters/replication/troubleshoot-tran-repl-errors.md#troubleshoot-errors-with-snapshot-agent) (Solucionar errores con el Agente de instantáneas). 
+Si ve un error aquí, vea la sección [Troubleshooting Snapshot Agent errors](../../troubleshooters/replication/troubleshoot-tran-repl-errors.md#find-errors-with-snapshot-agent) (Solucionar errores con el Agente de instantáneas). 
 
   
 ### <a name="add-the-distribution-agent-login-to-the-pal"></a>Agregar el inicio de sesión del Agente de distribución a la lista de acceso de la publicación (PAL)  

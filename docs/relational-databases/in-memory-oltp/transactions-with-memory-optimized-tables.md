@@ -7,8 +7,7 @@ ms.prod_service: database-engine, sql-database
 ms.reviewer: ''
 ms.component: in-memory-oltp
 ms.suite: sql
-ms.technology:
-- database-engine-imoltp
+ms.technology: in-memory-oltp
 ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: ba6f1a15-8b69-4ca6-9f44-f5e3f2962bc5
@@ -17,11 +16,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 monikerRange: = azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: f258adcc432f932dcc88a816eff17d9f89124199
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 647bf6e7d60b30fb3a698232552f0b3760c6a8e3
+ms.sourcegitcommit: ee661730fb695774b9c483c3dd0a6c314e17ddf8
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 05/19/2018
 ---
 # <a name="transactions-with-memory-optimized-tables"></a>Transactions with Memory-Optimized Tables
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -116,7 +115,7 @@ Las tablas basadas en disco tienen indirectamente un sistema básico de versione
   
 En la tabla siguiente se muestran los posibles niveles de aislamiento de transacción, ordenados de menor a mayor aislamiento. Para obtener más información sobre los conflictos que se pueden producir y la lógica de reintento para abordarlos, vea [Detección de conflictos y lógica de reintento](#confdetretry34ni). 
   
-| Nivel de aislamiento | Description |   
+| Nivel de aislamiento | Descripción |   
 | :-- | :-- |   
 | READ UNCOMMITTED | No disponible: no se puede tener acceso a las tablas optimizadas para memoria con un aislamiento READ UNCOMMITTED. Sí se puede tener acceso a estas tablas en el aislamiento SNAPSHOT cuando el nivel de sesión TRANSACTION ISOLATION LEVEL está establecido en READ UNCOMMITTED, cuando se usa la sugerencia de tabla WITH (SNAPSHOT) o cuando la opción de base de datos MEMORY_OPTIMIZED_ELEVATE_TO_SNAPSHOT está establecida en ON. | 
 | READ COMMITTED | Solo se admite para tablas optimizadas para memoria cuando el modo de confirmación automática está en vigor. Sí se puede tener acceso a estas tablas en el aislamiento SNAPSHOT cuando el nivel de sesión TRANSACTION ISOLATION LEVEL está establecido en READ COMMITTED, cuando se usa la sugerencia de tabla WITH (SNAPSHOT) o cuando la opción de base de datos MEMORY_OPTIMIZED_ELEVATE_TO_SNAPSHOT está establecida en ON.<br/><br/>Si la opción de base de datos READ_COMMITTED_SNAPSHOT está establecida en ON, no se podrá acceder a una tabla optimizada para memoria y a una tabla basada en disco en el aislamiento READ COMMITTED en la misma instrucción. |  
@@ -164,7 +163,7 @@ Hay dos tipos de condiciones de error relacionadas con una transacción que hace
 
 A continuación, se indican las condiciones de error que pueden provocar errores en las transacciones cuando acceden a tablas optimizadas para memoria.
 
-| Código de error | Description | Causa |
+| Código de error | Descripción | Causa |
 | :-- | :-- | :-- |
 | **41302** | Ha intentado actualizar una fila que se ha actualizado en una transacción diferente desde el inicio de la transacción actual. | Esta condición de error se produce si dos transacciones simultáneas intentan actualizar o eliminar la misma fila al mismo tiempo. Una de las dos transacciones recibe este mensaje de error y será necesario reintentarla. <br/><br/>  | 
 | **41305**| Error de validación de lectura repetible La lectura de una fila de una tabla optimizada para memoria por parte de esta transacción se ha actualizado por otra transacción que se ha confirmado antes que esta transacción. | Este error puede producirse al usar los aislamientos REPEATABLE READ o SERIALIZABLE y, también, si las acciones de una transacción simultánea suponen una infracción de una restricción FOREIGN KEY. <br/><br/>Esa infracción simultánea de restricciones de clave externa es muy poco habitual y normalmente es indicativa de un problema con la lógica de aplicación o con la entrada de datos. Pero el error también puede producirse si no hay ningún índice en las columnas relacionadas con la restricción FOREIGN KEY. Por lo tanto, lo más conveniente es crear siempre un índice de las columnas de clave externa en una tabla optimizada para memoria. <br/><br/> Para ver consideraciones más exhaustivas sobre los errores de validación provocados por las infracciones de clave externas, vea [este blog](https://blogs.msdn.microsoft.com/sqlcat/2016/03/24/considerations-around-validation-errors-41305-and-41325-on-memory-optimized-tables-with-foreign-keys/) elaborado por el equipo de asesoramiento al cliente de SQL Server. |  

@@ -7,19 +7,19 @@ ms.prod_service: database-engine
 ms.component: polybase
 ms.reviewer: ''
 ms.suite: sql
-ms.technology: database
+ms.technology: polybase
 ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - PolyBase, installation
-author: MashaMSFT
-ms.author: mathoma
+author: rothja
+ms.author: jroth
 manager: craigg
-ms.openlocfilehash: ebb1794c1fcefcab24c5c60f4fcceff42dacc6e0
-ms.sourcegitcommit: d2573a8dec2d4102ce8882ee232cdba080d39628
+ms.openlocfilehash: 7a897b2a3a74900763cb6de6eb398e14b5d1bdb1
+ms.sourcegitcommit: ee661730fb695774b9c483c3dd0a6c314e17ddf8
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/07/2018
+ms.lasthandoff: 05/19/2018
 ---
 # <a name="polybase-installation"></a>Instalación de PolyBase
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -87,7 +87,7 @@ Una vez haya instalado PolyBase como un grupo de escalado horizontal o de forma 
 ##  <a name="installing"></a> Instalación mediante un símbolo del sistema  
  Use los valores de esta tabla para crear scripts de instalación. Los dos servicios, el de **motor de SQL Server PolyBase** y el de **movimiento de datos de SQL Server PolyBase** , deben ejecutarse en la misma cuenta. En un grupo de escalado horizontal de PolyBase, se deben ejecutar con la misma cuenta de dominio los servicios de PolyBase en todos los nodos.  
   
-|Componente de SQL Server|Parámetro y valores|Description|  
+|Componente de SQL Server|Parámetro y valores|Descripción|  
 |--------------------------|--------------------------|-----------------|  
 |Control del programa de instalación de SQL Server|**Necesario**<br /><br /> /FEATURES=PolyBase|Selecciona la característica PolyBase.|  
 |motor de SQL Server PolyBase|**Opcional**<br /><br /> /PBENGSVCACCOUNT|Especifica la cuenta del servicio de motor. El valor predeterminado es **NT Authority\NETWORK SERVICE**.|  

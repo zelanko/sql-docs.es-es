@@ -3,12 +3,9 @@ title: Audit Broker Login (clase de eventos) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
-ms.prod_service: database-engine, sql-database
-ms.component: event-classes
 ms.reviewer: ''
 ms.suite: sql
-ms.technology:
-- database-engine
+ms.technology: supportability
 ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
@@ -19,11 +16,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 monikerRange: = azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: 73220c28a2a5399247ff7c7aab96adbab9cd3b8d
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: e1064f0902369f81cff96f94ee68520ded419d39
+ms.sourcegitcommit: ee661730fb695774b9c483c3dd0a6c314e17ddf8
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 05/19/2018
 ---
 # <a name="audit-broker-login-event-class"></a>Audit Broker Login, clase de eventos
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -31,7 +28,7 @@ ms.lasthandoff: 05/03/2018
   
 ## <a name="audit-broker-login-event-class-data-columns"></a>Columnas de datos de la clase de evento Audit Broker Login  
   
-|Columna de datos|Tipo|Description|Número de columna|Filtrable|  
+|Columna de datos|Tipo|Descripción|Número de columna|Filtrable|  
 |-----------------|----------|-----------------|-------------------|----------------|  
 |**ApplicationName**|**nvarchar**|No se utiliza en esta clase de evento.|10|Sí|  
 |**ClientProcessID**|**int**|No se utiliza en esta clase de evento.|9|Sí|  
@@ -58,7 +55,7 @@ ms.lasthandoff: 05/03/2018
   
  En la tabla siguiente se presentan los valores de subclase de esta clase de evento.  
   
-|ID|Subclase|Description|  
+|ID|Subclase|Descripción|  
 |--------|--------------|-----------------|  
 |1|Login Success|Un evento Inicio de sesión correcto indica que el proceso de inicio de sesión del agente adyacente ha finalizado correctamente.|  
 |2|Login Protocol Error|Un evento Error de protocolo de inicio de sesión indica que el agente recibe un mensaje con formato correcto pero no válido para el estado actual del proceso de inicio de sesión. Es posible que el mensaje se haya perdido o se haya enviado fuera de secuencia.|  

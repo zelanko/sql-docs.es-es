@@ -3,9 +3,7 @@ title: Buscar texto mediante expresiones regulares | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
-ms.prod_service: sql-tools
-ms.technology:
-- database-engine
+ms.technology: scripting
 ms.reviewer: ''
 ms.suite: sql
 ms.tgt_pltfrm: ''
@@ -24,11 +22,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
-ms.openlocfilehash: 1ca12a4b1a5ddcd7d08fb4cd1badb7daa3b88c4e
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 2bdf5092dc19a5a96121db99ef0da7c9192da1bb
+ms.sourcegitcommit: ee661730fb695774b9c483c3dd0a6c314e17ddf8
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 05/19/2018
 ---
 # <a name="search-text-with-regular-expressions"></a>Buscar texto mediante expresiones regulares
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -45,7 +43,7 @@ ms.lasthandoff: 05/03/2018
   
  En la tabla siguiente se describen las expresiones regulares disponibles en la **Lista de referencias**.  
   
-|Expresión|Sintaxis|Description|  
+|Expresión|Sintaxis|Descripción|  
 |----------------|------------|-----------------|  
 |Un carácter cualquiera|.|Devuelve cualquier carácter único excepto un salto de línea.|  
 |Cero o más|*|Devuelve cero o más repeticiones de la expresión anterior, realizando todas las correspondencias posibles.|  
@@ -67,7 +65,7 @@ ms.lasthandoff: 05/03/2018
   
  La lista de todas las expresiones regulares válidas en las operaciones de **Buscar y reemplazar** es más amplia que lo que se puede mostrar en este **Generador de expresiones**. En una cadena **Buscar** también puede insertar las expresiones regulares siguientes:  
   
-|Expresión|Sintaxis|Description|  
+|Expresión|Sintaxis|Descripción|  
 |----------------|------------|-----------------|  
 |Cero o más como mínimo|@|Devuelve cero o más repeticiones de la expresión anterior, devolviendo la menor cantidad de caracteres posible.|  
 |Uno o más como mínimo|#|Devuelve una o más repeticiones de la expresión anterior, devolviendo la menor cantidad de caracteres posible.|  
@@ -91,7 +89,7 @@ ms.lasthandoff: 05/03/2018
   
  En la tabla siguiente se muestra la sintaxis de coincidencias para propiedades estándar de caracteres Unicode. La abreviatura de dos letras es la misma que la que aparece en la base de datos de propiedades de caracteres Unicode. Éstas se pueden especificar como parte de un juego de caracteres. Por ejemplo, la expresión [:Nd:Nl:No] devuelve cualquier tipo de dígito.  
   
-|Expresión|Sintaxis|Description|  
+|Expresión|Sintaxis|Descripción|  
 |----------------|------------|-----------------|  
 |Letra en mayúscula|:Lu|Devuelve cualquier letra en mayúscula. Por ejemplo, :Luhe devuelve "The" pero no "the".|  
 |Letra en minúscula|:Ll|Devuelve cualquier letra en minúscula. Por ejemplo, :Llhe devuelve "the" pero no "The".|  
@@ -126,7 +124,7 @@ ms.lasthandoff: 05/03/2018
   
  Además de las propiedades de caracteres Unicode, es posible especificar las siguientes propiedades adicionales como parte de un juego de caracteres.  
   
-|Expresión|Sintaxis|Description|  
+|Expresión|Sintaxis|Descripción|  
 |----------------|------------|-----------------|  
 |Alpha|:Al|Devuelve cualquier carácter. Por ejemplo, :Alhe devuelve palabras como "The", "then" y "reached".|  
 |Numérico|:Nu|Devuelve cualquier número o dígito.|  

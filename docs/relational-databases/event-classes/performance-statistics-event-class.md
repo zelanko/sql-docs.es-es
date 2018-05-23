@@ -3,12 +3,9 @@ title: Performance Statistics, clase de eventos | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
-ms.prod_service: database-engine, sql-database
-ms.component: event-classes
 ms.reviewer: ''
 ms.suite: sql
-ms.technology:
-- database-engine
+ms.technology: supportability
 ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
@@ -19,11 +16,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 monikerRange: = azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: aef48d5ad774acfc01f127400863272b8c9d3c3c
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 54ba7634152d355f16d73a48f0a430e83b861fc5
+ms.sourcegitcommit: ee661730fb695774b9c483c3dd0a6c314e17ddf8
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 05/19/2018
 ---
 # <a name="performance-statistics-event-class"></a>Performance Statistics, clase de eventos
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -34,7 +31,7 @@ ms.lasthandoff: 05/03/2018
   
 ### <a name="eventsubclass-0"></a>EventSubClass 0  
   
-|Nombre de columna de datos|Tipo de datos|Description|Identificador de columna|Filtrable|  
+|Nombre de columna de datos|Tipo de datos|Descripción|Identificador de columna|Filtrable|  
 |----------------------|---------------|-----------------|---------------|----------------|  
 |BigintData1|**bigint**|NULL|52|Sí|  
 |BinaryData|**imagen**|NULL|2|Sí|  
@@ -53,7 +50,7 @@ ms.lasthandoff: 05/03/2018
   
 ### <a name="eventsubclass-1"></a>EventSubClass 1  
   
-|Nombre de columna de datos|Tipo de datos|Description|Identificador de columna|Filtrable|  
+|Nombre de columna de datos|Tipo de datos|Descripción|Identificador de columna|Filtrable|  
 |----------------------|---------------|-----------------|---------------|----------------|  
 |BigintData1|**bigint**|Número acumulado de veces que este plan se ha vuelto a compilar.|52|Sí|  
 |BinaryData|**imagen**|XML binario del plan compilado.|2|Sí|  
@@ -77,7 +74,7 @@ ms.lasthandoff: 05/03/2018
   
 ### <a name="eventsubclass-2"></a>EventSubClass 2  
   
-|Nombre de columna de datos|Tipo de datos|Description|Identificador de columna|Filtrable|  
+|Nombre de columna de datos|Tipo de datos|Descripción|Identificador de columna|Filtrable|  
 |----------------------|---------------|-----------------|---------------|----------------|  
 |BigintData1|**bigint**|Número acumulado de veces que este plan se ha vuelto a compilar.|52|Sí|  
 |BinaryData|**imagen**|XML binario del plan compilado.|2|Sí|  
@@ -100,7 +97,7 @@ ms.lasthandoff: 05/03/2018
   
 ### <a name="eventsubclass-3"></a>EventSubClass 3  
   
-|Nombre de columna de datos|Tipo de datos|Description|Identificador de columna|Filtrable|  
+|Nombre de columna de datos|Tipo de datos|Descripción|Identificador de columna|Filtrable|  
 |----------------------|---------------|-----------------|---------------|----------------|  
 |BigintData1|**bigint**|Número acumulado de veces que este plan se ha vuelto a compilar.|52|Sí|  
 |BinaryData|**imagen**|NULL|2|Sí|  
@@ -120,7 +117,7 @@ ms.lasthandoff: 05/03/2018
   
 ### <a name="eventsubclass-4"></a>EventSubClass 4  
   
-|Nombre de columna de datos|Tipo de datos|Description|Identificador de columna|Filtrable|  
+|Nombre de columna de datos|Tipo de datos|Descripción|Identificador de columna|Filtrable|  
 |----------------------|---------------|-----------------|---------------|----------------|  
 |BigintData1|**bigint**|NULL|52|Sí|  
 |BinaryData|**imagen**|NULL|2|Sí|  
@@ -140,7 +137,7 @@ ms.lasthandoff: 05/03/2018
   
 ### <a name="eventsubclass-5"></a>EventSubClass 5  
   
-|Nombre de columna de datos|Tipo de datos|Description|Identificador de columna|Filtrable|  
+|Nombre de columna de datos|Tipo de datos|Descripción|Identificador de columna|Filtrable|  
 |----------------------|---------------|-----------------|---------------|----------------|  
 |BigintData1|**bigint**|NULL|52|Sí|  
 |BinaryData|**imagen**|NULL|2|Sí|  

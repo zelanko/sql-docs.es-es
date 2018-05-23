@@ -3,12 +3,9 @@ title: Audit Database Mirroring Login (clase de eventos) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
-ms.prod_service: database-engine, sql-database
-ms.component: event-classes
 ms.reviewer: ''
 ms.suite: sql
-ms.technology:
-- database-engine
+ms.technology: supportability
 ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
@@ -21,11 +18,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 monikerRange: = azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: 3bc56d4598d39d31d26c43357c76fc6889c5e53c
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: ac0ba1d2748dbb6d4e30c62af36ce2dd823a63c3
+ms.sourcegitcommit: ee661730fb695774b9c483c3dd0a6c314e17ddf8
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 05/19/2018
 ---
 # <a name="audit-database-mirroring-login-event-class"></a>Audit Database Mirroring Login, clase de eventos
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -33,7 +30,7 @@ ms.lasthandoff: 05/03/2018
   
 ## <a name="audit-database-mirroring-login-event-class-data-columns"></a>Columnas de datos de la clase de evento Audit Database Mirroring Login  
   
-|Columna de datos|Tipo|Description|Número de columna|Filtrable|  
+|Columna de datos|Tipo|Descripción|Número de columna|Filtrable|  
 |-----------------|----------|-----------------|-------------------|----------------|  
 |**ApplicationName**|**nvarchar**|No se utiliza en esta clase de evento.|10|Sí|  
 |**ClientProcessID**|**int**|No se utiliza en esta clase de evento.|9|Sí|  
@@ -60,7 +57,7 @@ ms.lasthandoff: 05/03/2018
   
  En la tabla siguiente se presentan los valores de subclase de esta clase de evento.  
   
-|ID|Subclase|Description|  
+|ID|Subclase|Descripción|  
 |--------|--------------|-----------------|  
 |1|Login Success|Un evento Login Success informa de que el proceso de inicio de sesión de creación de reflejo de bases de datos adyacente ha finalizado correctamente.|  
 |2|Login Protocol Error|Un evento Login Protocol Error informa de que el inicio de sesión de creación de reflejo de bases de datos recibe un mensaje que está bien estructurado pero que no es válido para el estado actual del proceso de inicio de sesión. Es posible que el mensaje se haya perdido o se haya enviado fuera de secuencia.|  

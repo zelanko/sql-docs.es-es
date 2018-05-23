@@ -7,8 +7,7 @@ ms.prod_service: database-engine, sql-database
 ms.component: in-memory-oltp
 ms.reviewer: ''
 ms.suite: sql
-ms.technology:
-- database-engine-imoltp
+ms.technology: in-memory-oltp
 ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: c39f03a7-e223-4fd7-bd30-142e28f51654
@@ -17,11 +16,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 monikerRange: = azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: 43e6e1de5ffbafa9d17a3696ce556185aec80290
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 3a7393dfd780eb62aa6dff5ca70d89f297dc6952
+ms.sourcegitcommit: ee661730fb695774b9c483c3dd0a6c314e17ddf8
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 05/19/2018
 ---
 # <a name="unsupported-sql-server-features-for-in-memory-oltp"></a>Características de SQL Server no admitidas para OLTP en memoria
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -46,7 +45,7 @@ Las características siguientes de [!INCLUDE[ssNoVersion](../../includes/ssnover
 |seguimiento de cambios|El seguimiento de cambios se puede habilitar en una base de datos con objetos de OLTP en memoria. Sin embargo, no se hace el seguimiento de los cambios en las tablas optimizadas para memoria.|  
 | DDL, desencadenadores | No se admiten ni los desencadenadores DDL de nivel de base de datos ni de nivel de servidor con las tablas OLTP en memoria ni con módulos compilados de forma nativa. |  
 | Captura de datos modificados (CDC) | CDC no se puede usar con una base de datos que tenga tablas optimizadas para memoria, debido a que CDC internamente usa un desencadenador DDL para DROP TABLE. |  
-| Modo de fibra | El modo de fibra no se admite con tablas optimizadas para memoria:<br /><br />Si el modo de fibra está activo, no puede crear bases de datos con grupos de archivos optimizados para memoria ni agregar grupos de archivos optimizados para memoria a bases de datos existentes.<br /><br />Puede habilitar el modo de fibra si hay bases de datos con grupos de archivos optimizados para memoria. Sin embargo, para habilitar el modo de fibra hay que reiniciar el servidor. En esa situación, las bases de datos con grupos de archivos optimizados para memoria no se podrían recuperar. Luego vería un mensaje de error que recomendaría deshabilitar el modo de fibra para usar las bases de datos con grupos de archivos optimizados para memoria.<br /><br />Si el modo de fibra está activo, se produce un error al adjuntar y restaurar una base de datos con un grupo de archivos optimizados para memoria. Las bases de datos quedarían marcadas como sospechosas.<br /><br />Para obtener más información, consulte [lightweight pooling Server Configuration Option](../../database-engine/configure-windows/lightweight-pooling-server-configuration-option.md). |  
+| Modo de fibra | El modo de fibra no se admite con tablas optimizadas para memoria:<br /><br />Si el modo de fibra está activo, no puede crear bases de datos con grupos de archivos optimizados para memoria ni agregar grupos de archivos optimizados para memoria a bases de datos existentes.<br /><br />Puede habilitar el modo de fibra si hay bases de datos con grupos de archivos optimizados para memoria. Sin embargo, para habilitar el modo de fibra hay que reiniciar el servidor. En esa situación, las bases de datos con grupos de archivos optimizados para memoria no se podrían recuperar. Luego vería un mensaje de error que recomendaría deshabilitar el modo de fibra para usar las bases de datos con grupos de archivos optimizados para memoria.<br /><br />Si el modo de fibra está activo, se produce un error al adjuntar y restaurar una base de datos con un grupo de archivos optimizados para memoria. Las bases de datos quedarían marcadas como sospechosas.<br /><br />Para obtener más información, consulte [lightweight pooling (opción de configuración del servidor)](../../database-engine/configure-windows/lightweight-pooling-server-configuration-option.md). |  
 |Limitación de Service Broker|No puede tener acceso a una cola desde un procedimiento almacenado compilado de forma nativa.<br /><br /> No puede tener acceso a una cola en una base de datos remota en una transacción que tiene acceso a tablas optimizadas para memoria.|  
 |Replicación en los suscriptores|La replicación transaccional en tablas optimizadas para memoria en suscriptores se admite pero con algunas restricciones. Para obtener más información, vea [Replicación en suscriptores de tablas con optimización para memoria](../../relational-databases/replication/replication-to-memory-optimized-table-subscribers.md).|  
 
@@ -56,7 +55,7 @@ Las características siguientes de [!INCLUDE[ssNoVersion](../../includes/ssnover
 Con algunas excepciones, las transacciones entre bases de datos no se admiten. En la tabla siguiente se describen qué casos se admiten y las restricciones correspondientes. (Vea también [Consultas entre bases de datos](../../relational-databases/in-memory-oltp/cross-database-queries.md)).  
 
 
-|Bases de datos|Permitido|Description|  
+|Bases de datos|Permitido|Descripción|  
 |---------------|-------------|-----------------|  
 | Bases de datos de usuario, **modelo** y **msdb**. | no | En la mayoría de los casos, las consultas y transacciones entre bases de datos *no* se admiten.<br /><br />Una consulta no puede acceder a otras bases de datos si usa una tabla optimizada para memoria o un procedimiento almacenado compilado de forma nativa. Esta restricción se aplica tanto a transacciones como a consultas.<br /><br />Las excepciones son las bases de datos del sistema **tempdb** y **master**. Aquí, la base de datos **master** está disponible para acceso de solo lectura. |
 | Base de datos de **recursos**, **tempdb** | Sí | En una transacción que toca los objetos OLTP en memoria, las bases de datos de **recursos** y **tempdb** del sistema se pueden usar sin una restricción agregada.

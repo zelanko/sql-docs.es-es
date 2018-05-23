@@ -3,12 +3,9 @@ title: Herramientas de supervisión y optimización del rendimiento | Microsoft 
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
-ms.prod_service: database-engine
-ms.component: performance
 ms.reviewer: ''
 ms.suite: sql
-ms.technology:
-- database-engine
+ms.technology: performance
 ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
@@ -25,11 +22,11 @@ caps.latest.revision: 37
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 4c0cc4e5b9264c3259305027ad8ee54869c914f7
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 185096f5e4d9a2722d720fe37549f22cd5e608e7
+ms.sourcegitcommit: ee661730fb695774b9c483c3dd0a6c314e17ddf8
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 05/19/2018
 ---
 # <a name="performance-monitoring-and-tuning-tools"></a>Herramientas de supervisión y optimización del rendimiento
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -37,7 +34,7 @@ ms.lasthandoff: 05/03/2018
   
  A continuación se describen las herramientas de supervisión y optimización de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] :  
   
-|Herramienta|Description|  
+|Herramienta|Descripción|  
 |----------|-----------------|  
 |[sp_trace_setfilter &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-trace-setfilter-transact-sql.md)|[!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] realiza un seguimiento de los eventos de procesos del motor, como el inicio de un lote o una transacción, lo que permite supervisar la actividad del servidor y de la base de datos (por ejemplo, interbloqueos, errores irrecuperables o actividad de inicio de sesión). Puede capturar datos de [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] en un archivo o una tabla de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] para su análisis posterior y también puede reproducir paso a paso los eventos capturados en [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] para ver qué sucedió exactamente.|  
 |[SQL Server Distributed Replay](../../tools/distributed-replay/sql-server-distributed-replay.md)|[!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Distributed Replay puede usar varios equipos para reproducir los datos de seguimiento, simulando una carga de trabajo crítica.|  
@@ -69,7 +66,7 @@ ms.lasthandoff: 05/03/2018
 ## <a name="windows-monitoring-tools"></a>Herramientas de supervisión de Windows  
  Los sistemas operativos Windows y Windows Server 2003 proporcionan además estas herramientas de supervisión.  
   
-|Herramienta|Description|  
+|Herramienta|Descripción|  
 |----------|-----------------|  
 |Administrador de tareas|Muestra una sinopsis de los procesos y las aplicaciones que se ejecutan en el sistema.|  
 |Agente de supervisión de red|Supervisa el tráfico de red.|  

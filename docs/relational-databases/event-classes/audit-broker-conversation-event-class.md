@@ -3,12 +3,9 @@ title: Audit Broker Conversation (clase de eventos) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
-ms.prod_service: database-engine, sql-database
-ms.component: event-classes
 ms.reviewer: ''
 ms.suite: sql
-ms.technology:
-- database-engine
+ms.technology: supportability
 ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
@@ -19,11 +16,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 monikerRange: = azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: ae99656a8afb60ef958612fb1e63bb46e4570820
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 6ba8cd56b49c78810ebef16925073d0fedddade3
+ms.sourcegitcommit: ee661730fb695774b9c483c3dd0a6c314e17ddf8
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 05/19/2018
 ---
 # <a name="audit-broker-conversation-event-class"></a>Audit Broker Conversation, clase de eventos
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -31,7 +28,7 @@ ms.lasthandoff: 05/03/2018
   
 ## <a name="audit-broker-conversation-event-class-data-columns"></a>Columnas de datos de la clase de evento Audit Broker Conversation  
   
-|Columna de datos|Tipo|Description|Número de columna|Filtrable|  
+|Columna de datos|Tipo|Descripción|Número de columna|Filtrable|  
 |-----------------|----------|-----------------|-------------------|----------------|  
 |**ApplicationName**|**nvarchar**|Nombre de la aplicación cliente que ha creado la conexión a una instancia de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Esta columna se rellena con los valores que pasa la aplicación, en lugar de con el nombre que se muestra para el programa.|10|Sí|  
 |**BigintData1**|**bigint**|Número de secuencia del mensaje.|52|no|  
@@ -57,7 +54,7 @@ ms.lasthandoff: 05/03/2018
   
  En la tabla siguiente se presentan los valores de subclase de esta clase de evento.  
   
-|ID|Subclase|Description|  
+|ID|Subclase|Descripción|  
 |--------|--------------|-----------------|  
 |1|No hay encabezado de seguridad|Durante una conversación segura, Service Broker recibió un mensaje sin clave de sesión. Una vez establecida una conversación segura, el protocolo de diálogo requiere que todos los mensajes de la conversación incluyan una clave de sesión.|  
 |2|No hay certificado|Service Broker no encontró un certificado utilizable para uno de los participantes en la conversación. Para poder proteger una conversación, la base de datos debe incluir un certificado tanto para el remitente como para el destinatario de la conversación.|  

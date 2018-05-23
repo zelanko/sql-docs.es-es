@@ -33,11 +33,11 @@ caps.latest.revision: 98
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 3c7254b34f1664953d92723371f26c3c58fdd168
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: d77629ddd1ebd711d9ec026c0b1a7a4ae9001f1b
+ms.sourcegitcommit: 38f8824abb6760a9dc6953f10a6c91f97fa48432
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 05/10/2018
 ---
 # <a name="database-detach-and-attach-sql-server"></a>Adjuntar y separar bases de datos (SQL Server)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -109,7 +109,10 @@ ms.lasthandoff: 05/03/2018
 ###  <a name="Metadata"></a> Cambios en los metadatos al adjuntar una base de datos  
  Cuando se separa y se vuelve a adjuntar una base de datos de solo lectura, se pierde la información de copia de seguridad acerca de la base diferencial. La *base diferencial* es la copia de seguridad más reciente de todos los datos de una base de datos o de un subconjunto de archivos o grupos de archivos de la misma. Sin la información de la copia de seguridad básica, la base de datos **maestra** deja de estar sincronizada con la base de datos de solo lectura, de modo que las copias de seguridad diferenciales tomadas después pueden proporcionar resultados inesperados. Por lo tanto, si utiliza copias de seguridad diferenciales con una base de datos de solo lectura, deberá establecer una nueva base diferencial actual realizando una copia de seguridad completa después de volver a adjuntar la base de datos. Para obtener más información sobre las copias de seguridad diferenciales, vea [Copias de seguridad diferenciales &#40;SQL Server&#41;](../../relational-databases/backup-restore/differential-backups-sql-server.md).  
   
- Al adjuntar, la base de datos se inicia. Normalmente, al adjuntar una base de datos, esta vuelve al mismo estado en el que estaba cuando fue separada o copiada. Sin embargo, las operaciones de adjuntar y separar deshabilitan el encadenamiento de propiedades entre bases de datos para la base de datos. Para obtener más información sobre cómo habilitar el encadenamiento, vea [cross db ownership chaining (opción de configuración del servidor)](../../database-engine/configure-windows/cross-db-ownership-chaining-server-configuration-option.md). Asimismo, TRUSTWORTHY se establece en OFF siempre que la base de datos se adjunta. Para obtener más información sobre cómo establecer TRUSTWORTHY en ON, vea [ALTER DATABASE &#40;Transact-SQL&#41;](../../t-sql/statements/alter-database-transact-sql.md).  
+ Al adjuntar, la base de datos se inicia. Normalmente, al adjuntar una base de datos, esta vuelve al mismo estado en el que estaba cuando fue separada o copiada. Sin embargo, las operaciones de adjuntar y separar deshabilitan el encadenamiento de propiedades entre bases de datos para la base de datos. Para obtener más información sobre cómo habilitar el encadenamiento, vea [cross db ownership chaining (opción de configuración del servidor)](../../database-engine/configure-windows/cross-db-ownership-chaining-server-configuration-option.md). 
+
+ >[!IMPORTANT]
+ > De forma predeterminada y por motivos de seguridad, las opciones de *is_broker_enabled*, *is_honor_broker_priority_on* e *is_trustworthy_on* se establecen en OFF siempre que se adjunta la base de datos. Para información sobre cómo activar estas opciones, vea [ALTER DATABASE &#40;Transact-SQL&#41;](../../t-sql/statements/alter-database-transact-sql.md).  Para más información sobre los metadatos, vea [Administración de los metadatos cuando una base de datos pasa a estar disponible en otro servidor](../../relational-databases/databases/manage-metadata-when-making-a-database-available-on-another-server.md).
   
 ### <a name="backup-and-restore-and-attach"></a>Hacer copias de seguridad y restauración, y adjuntar  
  Al igual que cualquier base de datos que esté total o parcialmente sin conexión, no es posible adjuntar una base de datos con archivos que se estén restaurando. Puede adjuntar la base de datos si detiene la secuencia de restauración. Posteriormente, puede reiniciar la secuencia de restauración.  

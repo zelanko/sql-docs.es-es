@@ -21,11 +21,11 @@ caps.latest.revision: 52
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 9536b898df7a0f232d81dc85be3f3d6526f0741d
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 331d5dc6a7f570e626edb541e14da57b3370858e
+ms.sourcegitcommit: 38f8824abb6760a9dc6953f10a6c91f97fa48432
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 05/10/2018
 ---
 # <a name="attach-a-database"></a>Adjuntar una base de datos
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -91,7 +91,7 @@ No se recomienda usar separar y adjuntar para el proceso de copia de seguridad y
      **Estado**  
      Muestra el estado de la base de datos de acuerdo con la tabla siguiente.  
   
-    |Icono|Texto de estado|Description|  
+    |Icono|Texto de estado|Descripción|  
     |----------|-----------------|-----------------|  
     |(Sin icono)|(Sin texto)|La operación de adjuntar no se ha iniciado o puede estar pendiente para este objeto. Es la opción predeterminada al abrir el diálogo.|  
     |Triángulo verde hacia la derecha|En curso|La operación de adjuntar se ha iniciado, pero no ha finalizado.|  
@@ -163,7 +163,8 @@ No se recomienda usar separar y adjuntar para el proceso de copia de seguridad y
   ``` 
   
 ## <a name="see-also"></a>Ver también  
- [CREATE DATABASE &#40;Transact-SQL de SQL Server&#41;](../../t-sql/statements/create-database-sql-server-transact-sql.md)   
+ [CREATE DATABASE &#40;SQL Server Transact-SQL&#41;](../../t-sql/statements/create-database-sql-server-transact-sql.md) 
+ <br>[Administración de los metadatos cuando una base de datos pasa a estar disponible en otro servidor](/manage-metadata-when-making-a-database-available-on-another-server.md)  
  [Separar una base de datos](../../relational-databases/databases/detach-a-database.md)  
   
   

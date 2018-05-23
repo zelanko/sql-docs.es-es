@@ -21,16 +21,16 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
-ms.openlocfilehash: b11a725ce3deb7e7984f3b636b9529b886d8ea5a
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: f516accaa507a1bb4f1bcce42e42f20c21a85fc3
+ms.sourcegitcommit: 38f8824abb6760a9dc6953f10a6c91f97fa48432
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 05/10/2018
 ---
 # <a name="disable-foreign-key-constraints-with-insert-and-update-statements"></a>Deshabilitar restricciones FOREIGN KEY con instrucciones INSERT y UPDATE
 [!INCLUDE[tsql-appliesto-ss2016-all-md](../../includes/tsql-appliesto-ss2016-all-md.md)]
 
-  Puede deshabilitar una restricción de clave externa durante las transacciones INSERT y UPDATE en [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] mediante [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] o [!INCLUDE[tsql](../../includes/tsql-md.md)]. Use esta opción si sabe que los nuevos datos infringirán la restricción existente o si la restricción solo se aplica a los datos que ya están en la base de datos.  
+  Puede deshabilitar una restricción de clave externa durante las transacciones INSERT y UPDATE en [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] mediante [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] o [!INCLUDE[tsql](../../includes/tsql-md.md)]. Use esta opción si sabe que los nuevos datos no infringirán la restricción existente o si la restricción solo se aplica a los datos que ya están en la base de datos.  
   
  **En este tema**  
   

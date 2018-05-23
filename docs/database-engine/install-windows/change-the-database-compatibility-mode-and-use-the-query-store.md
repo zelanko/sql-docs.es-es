@@ -1,9 +1,8 @@
 ---
-title: Cambiar el modo de compatibilidad de la base de datos y usar el almacén de consultas | Microsoft Docs
+title: Cambiar el nivel de compatibilidad de la base de datos y usar el almacén de consultas | Microsoft Docs
 ms.custom: ''
 ms.date: 07/21/2017
 ms.prod: sql
-ms.prod_service: install
 ms.reviewer: ''
 ms.suite: sql
 ms.technology: install
@@ -18,13 +17,13 @@ caps.latest.revision: 19
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: d3a297d2a6de7527fbd756d3bfc51e650875ad37
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: f1a7ba5b39513cd39226e8b671a6634c547d95c9
+ms.sourcegitcommit: ee661730fb695774b9c483c3dd0a6c314e17ddf8
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 05/19/2018
 ---
-# <a name="change-the-database-compatibility-mode-and-use-the-query-store"></a>Cambiar el modo de compatibilidad de la base de datos y usar el almacén de consultas
+# <a name="change-the-database-compatibility-level-and-use-the-query-store"></a>Cambiar el nivel de compatibilidad de la base de datos y usar el almacén de consultas
 
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
 
@@ -35,10 +34,11 @@ En [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] a través de [!INCLUDE[ssCu
 - Los cambios en el procesador de consultas pueden tener efectos complejos. Aun cuando un cambio "bueno" en el sistema puede ser positivo para la mayoría de las cargas de trabajo, para otras podría causar una regresión inaceptable en una consulta importante. Separar esta lógica del proceso de actualización permite que las características, como el Almacén de consultas, mitiguen las regresiones de elección del plan rápidamente o incluso las eviten completamente en servidores de producción.  
   
 > [!IMPORTANT]  
-> Si el nivel de compatibilidad de una base de datos de usuario era 100 o superior antes de la actualización, permanece igual después de la misma.    
-> Si el nivel de compatibilidad de una base de datos de usuario era 90 antes de la actualización, en la base de datos actualizada el nivel de compatibilidad se establece en 100, que es el nivel de compatibilidad mínimo admitido en [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].    
-> Los niveles de compatibilidad de las bases de datos tempdb, model, msdb y Resource quedan establecidos en el nivel de compatibilidad actual después de la actualización.   
-> La base de datos del sistema maestra conserva el nivel de compatibilidad que tenía antes de la actualización.    
+> Se prevén los siguientes comportamientos para [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)] cuando se adjunta o se restaura una base de datos, así como después de una actualización local:
+> - Si el nivel de compatibilidad de una base de datos de usuario era 100 o superior antes de la actualización, permanece igual después de la misma.    
+> - Si el nivel de compatibilidad de una base de datos de usuario era 90 antes de la actualización, en la base de datos actualizada el nivel de compatibilidad se establece en 100, que es el nivel de compatibilidad mínimo admitido en [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)].    
+> - Los niveles de compatibilidad de las bases de datos tempdb, model, msdb y Resource quedan establecidos en el nivel de compatibilidad actual después de la actualización.   
+> - La base de datos del sistema maestra conserva el nivel de compatibilidad que tenía antes de la actualización.    
   
 El proceso de actualización para habilitar la nueva funcionalidad del procesador de consultas está relacionado con el modelo de servicio posterior a la versión del producto.  Algunas de esas correcciones se publican bajo la [marca de seguimiento 4199](../../t-sql/database-console-commands/dbcc-traceon-trace-flags-transact-sql.md#4199).  Los clientes que necesitan correcciones pueden participar en esas correcciones sin causar regresiones inesperadas para otros clientes. El modelo de mantenimiento posterior a la versión para las revisiones del procesador de consultas se documenta [aquí](http://support.microsoft.com/kb/974006). A partir de [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)], moverse a un nuevo nivel de compatibilidad implica que ya no se necesita la marca de seguimiento 4199, puesto que esas correcciones ya están habilitadas de forma predeterminada en el nivel de compatibilidad más reciente. Por lo tanto, como parte del proceso de actualización, es importante validar que 4199 no está habilitado una vez que se completa el proceso de actualización.  
 
@@ -50,6 +50,8 @@ El flujo de trabajo recomendado para actualizar el procesador de consultas a la 
 ![consultaDeAlmacénDeUso5](../../relational-databases/performance/media/query-store-usage-5.png "consultaDeAlmacénDeUso5") 
  
 ## <a name="see-also"></a>Ver también  
- [Ver o cambiar el nivel de compatibilidad de una base de datos](../../relational-databases/databases/view-or-change-the-compatibility-level-of-a-database.md)  
- [Escenarios de uso del Almacén de consultas](../../relational-databases/performance/query-store-usage-scenarios.md) 
+[Ver o cambiar el nivel de compatibilidad de una base de datos](../../relational-databases/databases/view-or-change-the-compatibility-level-of-a-database.md)     
+[Escenarios de uso del Almacén de consultas](../../relational-databases/performance/query-store-usage-scenarios.md)     
+[ALTER DATABASE &#40;Transact-SQL&#41; nivel de compatibilidad](../../t-sql/statements/alter-database-transact-sql-compatibility-level.md)
+    
   

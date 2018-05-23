@@ -12,13 +12,13 @@ ms.technology:
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: a07cd66ebc67b5885ce535425ce8984f0181dc04
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 0a0f1b6936644f2cae9cee469cb763696786a628
+ms.sourcegitcommit: 0cc2cb281e467a13a76174e0d9afbdcf4ccddc29
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 05/15/2018
 ---
-# <a name="connect-to-on-premises-data-sources-and-azure-file-shares-with-windows-authentication"></a>Conectarse a orígenes de datos locales y a recursos compartidos de archivos de Azure con la autenticación de Windows
+# <a name="connect-to-on-premises-data-sources-and-azure-file-shares-with-windows-authentication-in-ssis"></a>Conectarse a orígenes de datos locales y a recursos compartidos de archivos de Azure con la autenticación de Windows en SSIS
 En este artículo se describe cómo configurar el catálogo de SSIS en Azure SQL Database para ejecutar paquetes que usan la autenticación de Windows para conectarse a orígenes de datos locales y a recursos compartidos de archivos de Azure. Puede usar la autenticación de Windows para conectarse a orígenes de datos que están en la misma red virtual que Azure SSIS Integration Runtime, tanto de manera local como en las máquinas virtuales de Azure y en Azure Files.
 
 > [!WARNING]

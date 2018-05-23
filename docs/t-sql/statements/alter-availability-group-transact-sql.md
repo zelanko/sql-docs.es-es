@@ -27,11 +27,11 @@ caps.latest.revision: 152
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: b00b6e36b24dbe000a3651841ca347b8539e690c
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 0791b05bdb2526da5d744c067b2f221f6cf4e1be
+ms.sourcegitcommit: 38f8824abb6760a9dc6953f10a6c91f97fa48432
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 05/10/2018
 ---
 # <a name="alter-availability-group-transact-sql"></a>ALTER AVAILABILITY GROUP (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
@@ -429,7 +429,7 @@ ALTER AVAILABILITY GROUP group_name
  Para obtener más información, vea [Combinar una réplica secundaria con un grupo de disponibilidad &#40;SQL Server&#41;](../../database-engine/availability-groups/windows/join-a-secondary-replica-to-an-availability-group-sql-server.md).  
   
  FAILOVER  
- Inicia una conmutación por error manual del grupo de disponibilidad sin pérdida de datos a la réplica secundaria a la que está conectado. La réplica en la que se escribe un comando de destino de conmutación por error se denomina .  El destino de la conmutación por error asumirá el rol principal y recuperará su copia de cada base de datos y las pondrá en línea como las nuevas bases de datos principales. La réplica principal anterior realiza la transición de forma simultánea al rol secundario y sus bases de datos se convierten en bases de datos secundarias, además quedan suspendidas inmediatamente. Potencialmente, estos roles se pueden alternar mediante una serie de errores.  
+Inicia una conmutación por error manual del grupo de disponibilidad sin pérdida de datos a la réplica secundaria a la que está conectado. La réplica que hospedará la réplica principal es el *destino de conmutación por error*.  El destino de la conmutación por error asumirá el rol principal y recuperará su copia de cada base de datos y las pondrá en línea como las nuevas bases de datos principales. La réplica principal anterior realiza la transición de forma simultánea al rol secundario y sus bases de datos se convierten en bases de datos secundarias, además quedan suspendidas inmediatamente. Potencialmente, estos roles se pueden alternar mediante una serie de errores.  
   
  Solo se admite en una réplica secundaria de confirmación sincrónica que se sincronice actualmente con la réplica primaria. Tenga en cuenta que para sincronizar réplicas secundarias, la réplica principal también debe ejecutarse en modo de confirmación sincrónica.  
   
@@ -574,7 +574,7 @@ ALTER AVAILABILITY GROUP group_name
  \<modify_listener_option>  
  MODIFY LISTENER toma una de las siguientes opciones:  
   
- ADD IP { **(‘***four_part_ipv4_address***’,‘***four_part_ipv4_mask***’)** | **(‘**dns_name*ipv6_address***’)** }  
+ ADD IP { **(‘***four_part_ipv4_address***’,‘***four_part_ipv4_mask***’)** | **(‘** dns_name*ipv6_address***’)** }  
  Agrega la dirección IP especificada al agente de escucha del grupo de disponibilidad especificado por *dns_name*.  
   
  PORT **=** *listener_port*  

@@ -13,19 +13,19 @@ ms.service: sql-database
 ms.component: security
 ms.tgt_pltfrm: ''
 ms.topic: conceptual
-ms.date: 04/10/2018
+ms.date: 05/08/2018
 ms.author: rebeccaz
 monikerRange: = azuresqldb-current || = sqlallproducts-allversions
-ms.openlocfilehash: bc007f1021c68c782d8a3e2e426cad3c43f3047a
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: b88dfeac58ef9c00307b2cfee35aca3ea0549f02
+ms.sourcegitcommit: feff98b3094a42f345a0dc8a31598b578c312b38
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 05/11/2018
 ---
 # <a name="transparent-data-encryption-for-sql-database-and-data-warehouse"></a>Cifrado de datos transparente para SQL Database y Data Warehouse
-[!INCLUDE[appliesto-xx-asdb-xxxx-xxx-md](../../../includes/appliesto-xx-asdb-xxxx-xxx-md.md)]
+[!INCLUDE[appliesto-xx-asdb-asdw-xxx-md](../../../includes/appliesto-xx-asdb-asdw-xxx-md.md)]
 
-El cifrado de datos transparente ayuda a proteger Azure SQL Database y Azure Data Warehouse ante la amenaza de actividad maliciosa. Permite cifrar y descifrar la base de datos en tiempo real, las copias de seguridad asociadas y los archivos de registro de transacciones en reposo sin necesidad de efectuar cambios en la aplicación.
+El cifrado de datos transparente (TDE) ayuda a proteger Azure SQL Database y Azure Data Warehouse ante la amenaza de actividad maliciosa. Permite cifrar y descifrar la base de datos en tiempo real, las copias de seguridad asociadas y los archivos de registro de transacciones en reposo sin necesidad de efectuar cambios en la aplicación. De forma predeterminada, TDE está habilitado para todas las bases de datos de Azure SQL Database recién implementadas, pero es posible que se tenga que habilitar manualmente para las bases de datos más antiguas.  
 
 El cifrado de datos transparente cifra el almacenamiento de una base de datos completa usando una clave simétrica denominada clave de cifrado de base de datos. El protector del cifrado de datos transparente es el encargado de proteger la clave de cifrado de la base de datos. El protector puede ser tanto un certificado administrado por un servicio (cifrado de datos transparente administrado por un servicio) o una clave asimétrica almacenada en Azure Key Vault (Bring Your Own Key). Puede establecer el protector del cifrado de datos transparente en el nivel de servidor. 
 
@@ -84,7 +84,7 @@ El usuario establece la clave maestra de cifrado de datos transparente, también
 
 Para configurar el cifrado de datos transparente mediante PowerShell, debe estar conectado como propietario de Azure, colaborador o administrador de seguridad de SQL. 
 
-| Cmdlet | Description |
+| Cmdlet | Descripción |
 | --- | --- |
 | [Set-AzureRmSqlDatabaseTransparentDataEncryption](/powershell/module/azurerm.sql/set-azurermsqldatabasetransparentdataencryption) |Habilita o deshabilita el cifrado de datos transparente para una base de datos.|
 | [Get-Azure-Rm-Sql-Database-Transparent-Data-Encryption](/powershell/module/azurerm.sql/get-azurermsqldatabasetransparentdataencryption) |Obtiene el estado de cifrado de datos transparente para una base de datos. |
@@ -100,7 +100,7 @@ Para configurar el cifrado de datos transparente mediante PowerShell, debe estar
 
 Conéctese a la base de datos mediante un inicio de sesión de administrador o de miembro del rol **dbmanager** de la base de datos maestra.
 
-| Comando | Description |
+| Comando | Descripción |
 | --- | --- |
 | [ALTER DATABASE (Azure SQL Database)](/sql/t-sql/statements/alter-database-azure-sql-database) | SET ENCRYPTION ON/OFF cifra o descifra una base de datos. |
 | [sys.dm_database_encryption_keys](/sql/relational-databases/system-dynamic-management-views/sys-dm-database-encryption-keys-transact-sql) |Devuelve información sobre el estado de cifrado de una base de datos y sus claves de cifrado de la base de datos asociadas. |
@@ -113,7 +113,7 @@ No se puede cambiar el protector de cifrado de datos transparente a una clave de
  
 Para configurar el cifrado de datos transparente mediante la API de REST, debe estar conectado como propietario de Azure, colaborador o administrador de seguridad de SQL. 
 
-| Comando | Description |
+| Comando | Descripción |
 | --- | --- |
 |[Crear o actualizar el servidor](/rest/api/sql/servers/createorupdate)|Agrega una identidad de Azure Active Directory a una instancia de SQL Server que se usa para conceder acceso a Key Vault.|
 |[Crear o actualizar la clave del servidor](/rest/api/sql/serverkeys/createorupdate)|Agrega una clave de Key Vault a una instancia de SQL Server.|

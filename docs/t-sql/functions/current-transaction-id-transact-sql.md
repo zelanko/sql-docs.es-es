@@ -22,16 +22,16 @@ caps.latest.revision: 6
 author: edmacauley
 ms.author: edmaca
 manager: craigg
-ms.openlocfilehash: b5170c6a3b96710ea42d1acdb88256c33be0eb6d
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 73a9583e40d73a48b7e8ddfdf8eddf8d38b743c7
+ms.sourcegitcommit: 38f8824abb6760a9dc6953f10a6c91f97fa48432
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 05/10/2018
 ---
 # <a name="currenttransactionid-transact-sql"></a>CURRENT_TRANSACTION_ID (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]
 
-Devuelve el identificador de transacción de la transacción actual en la sesión actual.
+Esta función devuelve el identificador de transacción de la transacción actual en la sesión actual.
   
 ![Icono de vínculo de tema](../../database-engine/configure-windows/media/topic-link.gif "Icono de vínculo de tema") [Convenciones de sintaxis de Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)
   
@@ -46,13 +46,13 @@ CURRENT_TRANSACTION_ID( )
 **bigint**
   
 ## <a name="return-value"></a>Valor devuelto  
-Identificador de transacción de la transacción actual en la sesión actual tomado de [sys.dm_tran_current_transaction &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-tran-current-transaction-transact-sql.md).
+El identificador de transacción de la transacción actual en la sesión actual tomado de [sys.dm_tran_current_transaction &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-tran-current-transaction-transact-sql.md).
   
 ## <a name="permissions"></a>Permisos  
 Cualquier usuario puede devolver el identificador de transacción de la sesión actual.
   
 ## <a name="examples"></a>Ejemplos  
-En el siguiente ejemplo se devuelve el identificador de transacción de la sesión actual:
+En este ejemplo se devuelve el identificador de transacción de la sesión actual:
   
 ```sql
 SELECT CURRENT_TRANSACTION_ID();  

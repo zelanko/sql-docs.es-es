@@ -24,16 +24,16 @@ caps.latest.revision: 37
 author: edmacauley
 ms.author: edmaca
 manager: craigg
-ms.openlocfilehash: 4d04041eee085a4fc29d899ad1245ee5ae43743c
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 2bc5eff629bc16e655094c08c71b3cef195420bc
+ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 05/10/2018
 ---
 # <a name="cursorstatus-transact-sql"></a>CURSOR_STATUS (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
-Una función escalar que permite a quien llama en un procedimiento almacenado determinar si el procedimiento ha devuelto un cursor y un conjunto de resultados para un parámetro dado.
+Para un parámetro en concreto, `CURSOR_STATUS` muestra si una declaración de cursor ha devuelto un cursor y un conjunto de resultados.
   
 ![Icono de vínculo de tema](../../database-engine/configure-windows/media/topic-link.gif "Icono de vínculo de tema") [Convenciones de sintaxis de Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)
   
@@ -53,7 +53,7 @@ CURSOR_STATUS
 Especifica una constante que indica que el origen del cursor es un nombre de cursor local.
   
 '*cursor_name*'  
-Es el nombre del cursor. Un nombre de cursor debe ajustarse a las reglas para los identificadores.
+El nombre del cursor. Un nombre de cursor debe ajustarse a las [reglas de los identificadores de base de datos](../../relational-databases/databases/database-identifiers.md).
   
 'global'  
 Especifica una constante que indica que el origen del cursor es un nombre de cursor global.
@@ -62,7 +62,7 @@ Especifica una constante que indica que el origen del cursor es un nombre de cur
 Especifica una constante que indica que el origen del cursor es una variable local.
   
 '*cursor_variable*'  
-Es el nombre de la variable de cursor. Una variable de cursor debe definirse mediante el tipo de datos **cursor**.
+El nombre de la variable de cursor. Una variable de cursor debe definirse mediante el tipo de datos **cursor**.
   
 ## <a name="return-types"></a>Tipos de valores devueltos
 **smallint**
@@ -72,13 +72,13 @@ Es el nombre de la variable de cursor. Una variable de cursor debe definirse med
 |1|El conjunto de resultados del cursor tiene al menos una fila.<br /><br /> Para los cursores INSENSITIVE y de conjunto de claves, el conjunto de resultados tiene al menos una fila.<br /><br /> Para los cursores dinámicos, el conjunto de resultados puede tener cero, una o más filas.|El cursor asignado a esta variable está abierto.<br /><br /> Para los cursores INSENSITIVE y de conjunto de claves, el conjunto de resultados tiene al menos una fila.<br /><br /> Para los cursores dinámicos, el conjunto de resultados puede tener cero, una o más filas.|  
 |0|El conjunto de resultados del cursor está vacío.*|El cursor asignado a esta variable está abierto, pero el conjunto de resultados está definitivamente vacío.*|  
 |-1|El cursor está cerrado.|El cursor asignado a esta variable está cerrado.|  
-|-2|No aplicable.|Puede ser:<br /><br /> El procedimiento llamado anteriormente no ha asignado ningún cursor a esta variable OUTPUT.<br /><br /> El procedimiento llamado anteriormente asignó un cursor a esta variable OUTPUT, pero se encontraba en un estado cerrado al terminar el procedimiento. Por tanto, se cancela la asignación del cursor y no se devuelve al procedimiento que hace la llamada.<br /><br /> No hay ningún cursor asignado a una variable declarada de cursor.|  
-|-3|No existe ningún cursor con el nombre indicado.|No existe una variable de cursor con el nombre indicado o, si existe, no tiene todavía ningún cursor asignado.|  
+|-2|No aplicable.|Tiene una de estas posibilidades:<br /><br /> El procedimiento llamado anteriormente no asignó ningún cursor a esta variable OUTPUT.<br /><br /> El procedimiento asignado anteriormente asignó un cursor a esta variable OUTPUT, pero el cursor se encontraba en un estado cerrado al concluir el procedimiento. Por tanto, se cancela la asignación del cursor y no se devuelve al procedimiento que hace la llamada.<br /><br /> No se asigna ningún cursor a la variable declarada de cursor.|  
+|-3|No existe ningún cursor con el nombre indicado.|No existe ninguna variable de cursor con el nombre indicado o, si existe, aún no tiene ningún cursor asignado.|  
   
 *Los cursores dinámicos no devuelven nunca este resultado.
   
 ## <a name="examples"></a>Ejemplos  
-En el ejemplo siguiente, se usa la función `CURSOR_STATUS` para mostrar el estado de un cursor antes y después de abrirlo y cerrarlo.
+Este ejemplo usa la función `CURSOR_STATUS` para mostrar el estado de un cursor después de su declaración, una vez abierto y una vez cerrado.
   
 ```sql
 CREATE TABLE #TMP  

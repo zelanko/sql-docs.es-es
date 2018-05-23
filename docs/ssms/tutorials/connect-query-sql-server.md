@@ -12,11 +12,11 @@ ms.reviewer: sstein
 manager: craigg
 ms.prod: sql
 ms.technology: ssms
-ms.openlocfilehash: e663bf07fb724e5b65a47573f26702a6b1ccae14
-ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.openlocfilehash: 5ccc024b8589efa95af2503a8ea5bdba0c47147b
+ms.sourcegitcommit: 38f8824abb6760a9dc6953f10a6c91f97fa48432
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 05/10/2018
 ---
 # <a name="tutorial-connect-to-and-query-a-sql-server-instance-by-using-sql-server-management-studio"></a>Tutorial: Conectarse a una instancia de SQL Server y efectuar consultas con SQL Server Management Studio
 En este tutorial aprenderá a usar SQL Server Management Studio (SSMS) para conectarse a su instancia de SQL Server y a ejecutar algunos comandos básicos de Transact-SQL (T-SQL). En el artículo se muestra cómo hacer lo siguiente:
@@ -33,17 +33,16 @@ En este tutorial aprenderá a usar SQL Server Management Studio (SSMS) para cone
 ## <a name="prerequisites"></a>Prerequisites
 Para llevar a cabo este tutorial necesita tener SQL Server Management Studio, así como acceso a una instancia de SQL Server. 
 
-- Instale [SQL Server Management Studio](https://docs.microsoft.com/en-us/sql/ssms/download-sql-server-management-studio-ssms).
+- Instale [SQL Server Management Studio](https://docs.microsoft.com/sql/ssms/download-sql-server-management-studio-ssms).
 
 Si no tiene acceso a ninguna instancia de SQL Server, seleccione su plataforma en uno de los vínculos siguientes. Si elige la autenticación de SQL, use sus credenciales de inicio de sesión de SQL Server.
-- **Windows**: [Descargar SQL Server 2017 Developer Edition](https://www.microsoft.com/en-us/sql-server/sql-server-downloads).
-- **macOS**: [Descargar SQL Server 2017 en Docker](https://docs.microsoft.com/en-us/sql/linux/quickstart-install-connect-docker).
+- **Windows**: [Descargar SQL Server 2017 Developer Edition](https://www.microsoft.com/sql-server/sql-server-downloads).
+- **macOS**: [Descargar SQL Server 2017 en Docker](https://docs.microsoft.com/sql/linux/quickstart-install-connect-docker).
 
 
 ## <a name="connect-to-a-sql-server-instance"></a>Conectarse a una instancia de SQL Server
 
-1. Inicie SQL Server Management Studio.  
-    La primera vez que ejecute SSMS se abrirá la ventana **Conectarse al servidor**. Si no se abre, puede abrirla manualmente seleccionando **Explorador de objetos** > **Conectar** > **Motor de base de datos**.
+1. Inicie SQL Server Management Studio. La primera vez que ejecute SSMS se abrirá la ventana **Conectarse al servidor**. Si no se abre, puede abrirla manualmente seleccionando **Explorador de objetos** > **Conectar** > **Motor de base de datos**.
 
     ![Vínculo Conectar en el Explorador de objetos](media/connect-query-sql-server/connectobjexp.png)
 
@@ -54,15 +53,21 @@ Si no tiene acceso a ninguna instancia de SQL Server, seleccione su plataforma e
 
     ![Campo "Nombre del servidor" con la opción para usar la instancia de SQL Server](media/connect-query-sql-server/connection2.png)
 
-    - En **Autenticación**, seleccione **Autenticación de Windows**. En este artículo se usa la autenticación de Windows, aunque también se admite el inicio de sesión de SQL Server. Si selecciona **Inicio de sesión SQL**, se le pedirá un nombre de usuario y una contraseña. Para más información sobre los tipos de autenticación, vea [Conectar al servidor (motor de base de datos)](https://docs.microsoft.com/en-us/sql/ssms/f1-help/connect-to-server-database-engine).
+    - En **Autenticación**, seleccione **Autenticación de Windows**. En este artículo se usa la autenticación de Windows, aunque también se admite el inicio de sesión de SQL Server. Si selecciona **Inicio de sesión SQL**, se le pedirá un nombre de usuario y una contraseña. Para más información sobre los tipos de autenticación, vea [Conectar al servidor (motor de base de datos)](https://docs.microsoft.com/sql/ssms/f1-help/connect-to-server-database-engine).
 
     También puede modificar otras opciones de conexión seleccionando **Opciones**. Como ejemplos de las opciones de conexión tiene la base de datos a la que se está conectando, el valor de tiempo de espera de conexión y el protocolo de red. En este artículo se usan los valores predeterminados para todas las opciones. 
 
 3. Una vez cumplimentados todos los campos, seleccione **Conectar**. 
 
-4. Para comprobar que la conexión a la instancia de SQL Server es correcta, explore los objetos en el Explorador de objetos, como se muestra aquí: 
+### <a name="examples-of-successful-connections"></a>Ejemplos de conexiones correctas
+Para comprobar que la conexión a SQL Server se ha establecido correctamente, expanda y explore los objetos del **Explorador de objetos**. Estos objetos serán diferentes en función del tipo de servidor al que se haya conectado. 
 
-   ![Conexión correcta](media/connect-query-sql-server/successfulconnection.png)
+- Conexión a un servidor local de SQL Server (en este caso, NODE5\SQL2016ST): ![Conexión a un servidor local](media/connect-query-sql-server/connect-on-prem.png)
+
+- Conexión a SQL Azure DB (en este caso, msftestserver.database.windows.net): ![Conexión a SQL Azure DB](media/connect-query-sql-server/connect-sql-azure.png)
+
+  >[!NOTE]
+  > En este tutorial ha usado la *autenticación de Windows* para conectarse al servidor local de SQL Server, pero este método no es compatible con SQL Azure DB. Por lo tanto, en esta imagen se muestra el uso de la autenticación de SQL para conectarse a SQL Azure DB. Para más información, vea [Autenticación de SQL local](../../relational-databases/security/choose-an-authentication-mode.md) y [Autenticación de SQL Azure](https://docs.microsoft.com/azure/sql-database/sql-database-security-overview#control-access). 
 
 ## <a name="create-a-database"></a>Crear una base de datos
 Cree una base de datos denominada TutorialDB siguiendo estos pasos: 
@@ -170,8 +175,7 @@ Puede buscar información sobre las propiedades de la conexión en los resultado
 ## <a name="change-the-server-that-the-query-window-is-connected-to"></a>Cambiar el servidor al que está conectada la ventana de consulta
 Siga estos pasos para cambiar el servidor al que está conectada la ventana de consulta actual:
 
-1. Haga clic con el botón derecho en la ventana de consulta y, después, seleccione **Conexión** > **Cambiar conexión**.  
-    Se volverá a abrir la ventana **Conectar al servidor**.
+1. Haga clic con el botón derecho en la ventana de consulta y, después, seleccione **Conexión** > **Cambiar conexión**. Se volverá a abrir la ventana **Conectar al servidor**.
 2. Cambie el servidor al que está conectada la consulta. 
  
    ![Comando Cambiar conexión](media/connect-query-sql-server/changeconnection.png)

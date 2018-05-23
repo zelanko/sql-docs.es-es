@@ -18,11 +18,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
-ms.openlocfilehash: 2fad2e2a85608e6e621e019648880e3ba7f274c2
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: b654697ff5304440e8616c0f5cebdf45ac4c0847
+ms.sourcegitcommit: 38f8824abb6760a9dc6953f10a6c91f97fa48432
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 05/10/2018
 ---
 # <a name="download-sql-server-data-tools-ssdt"></a>Descargar SQL Server Data Tools (SSDT)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md.md](../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -41,7 +41,7 @@ SSDT 15.x es una experiencia de instalación web independiente para los proyecto
 > Las versiones que no están en inglés de SSDT para Visual Studio 2017 15.6.x no admiten la actualización desde la versión preliminar 15.4.0 en inglés, por lo que debe desinstalarla antes de instalar la versión 15.6.x en otros idiomas. 
 
 
-Tanto SSDT para Visual Studio 2015 como SSDT para Visual Studio 2017 usan DacFx 17.4: [Descargar Data-Tier Application Framework (DacFx) 17.4](https://www.microsoft.com/download/details.aspx?id=56356)
+Tanto SSDT para Visual Studio 2015 como SSDT para Visual Studio 2017 usan DacFx 17.4.1: [Descargar Data-Tier Application Framework (DacFx) 17.4.1](https://www.microsoft.com/en-us/download/details.aspx?id=56508)
 
 
 

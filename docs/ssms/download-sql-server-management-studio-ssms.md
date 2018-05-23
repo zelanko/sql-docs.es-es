@@ -1,7 +1,7 @@
 ---
 title: Descargar SQL Server Management Studio (SSMS) | Microsoft Docs
 ms.custom: ''
-ms.date: 04/17/2018
+ms.date: 05/09/2018
 ms.prod: sql
 ms.prod_service: sql-tools
 ms.component: ssms
@@ -28,11 +28,11 @@ caps.latest.revision: 145
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: e8a10829deda74850da86bfb066ad95a6effac83
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 83dfecad826aea459a842b1eb908801bb469c5e8
+ms.sourcegitcommit: 38f8824abb6760a9dc6953f10a6c91f97fa48432
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 05/10/2018
 ---
 # <a name="download-sql-server-management-studio-ssms"></a>Descarga de SQL Server Management Studio (SSMS)
 [!INCLUDE[appliesto-ss-asdb-asdw-xxx-md](../includes/appliesto-ss-asdb-asdw-xxx-md.md)]
@@ -44,18 +44,16 @@ Use SQL Server Management Studio (SSMS) para consultar, diseñar y administrar b
 
 SSMS 17.x es la generación más reciente de *SQL Server Management Studio* y proporciona compatibilidad con SQL Server 2017.
 
-**[![descargar](../ssdt/media/download.png) Descargar SQL Server Management Studio 17.6](https://go.microsoft.com/fwlink/?linkid=870039)**
+**[![descargar](../ssdt/media/download.png) Descargar SQL Server Management Studio 17.7](https://go.microsoft.com/fwlink/?linkid=873126)**
 
-**[![descargar](../ssdt/media/download.png) Descargar el paquete de actualización de SQL Server Management Studio 17.6 (actualización de la versión 17.x a la 17.6)](https://go.microsoft.com/fwlink/?linkid=870041)**
+**[![descargar](../ssdt/media/download.png) Descargar el paquete de actualización de SQL Server Management Studio 17.7 (actualización de la versión 17.x a la 17.7)](https://go.microsoft.com/fwlink/?linkid=873128)**
 
-> [!WARNING]
-> Hay un problema conocido por el que SSMS 17.6 tiene un comportamiento inestable y se bloquea al usar [planes de mantenimiento](../relational-databases/maintenance-plans/maintenance-plans.md). Si usa planes de mantenimiento, no instale SSMS 17.6. Si ya ha instalado la versión 17.6 y experimenta este problema, cambie a la versión 17.5 de SSMS. 
 
 **Información de versión**
 
-Número de versión: 17.6<br>
-Número de compilación: 14.0.17230.0<br>
-Fecha de lanzamiento: 20 de marzo de 2018
+Número de versión: 17.7<br>
+Número de compilación: 14.0.17254.0<br>
+Fecha de lanzamiento: 9 de mayo de 2018
 
 La instalación de SSMS 17.x no actualiza ni reemplaza las versiones 16.x de SSMS ni las anteriores. SSMS 17.x se instala en paralelo con versiones anteriores de modo que ambas versiones estén disponibles para su uso.
 Si un equipo contiene instalaciones en paralelo de SSMS, compruebe que inicia la versión correcta para sus necesidades específicas. La versión más reciente tiene la etiqueta *Microsoft SQL Server Management Studio 17* y tiene un nuevo icono: 
@@ -71,11 +69,11 @@ Si un equipo contiene instalaciones en paralelo de SSMS, compruebe que inicia la
 
 Esta versión de SSMS puede instalarse en los idiomas siguientes:
 
-SQL Server Management Studio 17.6:<br>
-[Chino (República Popular China)](https://go.microsoft.com/fwlink/?linkid=870039&clcid=0x804) | [Chino (Taiwán)](https://go.microsoft.com/fwlink/?linkid=870039&clcid=0x404) | [Inglés (Estados Unidos)](https://go.microsoft.com/fwlink/?linkid=870039&clcid=0x409) | [Francés](https://go.microsoft.com/fwlink/?linkid=870039&clcid=0x40c) | [Alemán](https://go.microsoft.com/fwlink/?linkid=870039&clcid=0x407) | [Italiano](https://go.microsoft.com/fwlink/?linkid=870039&clcid=0x410) | [Japonés](https://go.microsoft.com/fwlink/?linkid=870039&clcid=0x411) | [Coreano](https://go.microsoft.com/fwlink/?linkid=870039&clcid=0x412) | [Portugués (Brasil)](https://go.microsoft.com/fwlink/?linkid=870039&clcid=0x416) | [Ruso](https://go.microsoft.com/fwlink/?linkid=870039&clcid=0x419) | [Español](https://go.microsoft.com/fwlink/?linkid=870039&clcid=0x40a)
+SQL Server Management Studio 17.7:<br>
+[Chino (República Popular China)](https://go.microsoft.com/fwlink/?linkid=873126&clcid=0x804) | [Chino (Taiwán)](https://go.microsoft.com/fwlink/?linkid=873126&clcid=0x404) | [Inglés (Estados Unidos)](https://go.microsoft.com/fwlink/?linkid=873126&clcid=0x409) | [Francés](https://go.microsoft.com/fwlink/?linkid=873126&clcid=0x40c) | [Alemán](https://go.microsoft.com/fwlink/?linkid=873126&clcid=0x407) | [Italiano](https://go.microsoft.com/fwlink/?linkid=873126&clcid=0x410) | [Japonés](https://go.microsoft.com/fwlink/?linkid=873126&clcid=0x411) | [Coreano](https://go.microsoft.com/fwlink/?linkid=873126&clcid=0x412) | [Portugués (Brasil)](https://go.microsoft.com/fwlink/?linkid=873126&clcid=0x416) | [Ruso](https://go.microsoft.com/fwlink/?linkid=873126&clcid=0x419) | [Español](https://go.microsoft.com/fwlink/?linkid=873126&clcid=0x40a)
 
-Paquete de actualización de SQL Server Management Studio 17.6 (actualización de la versión 17.x a la 17.6):<br>
-[Chino (República Popular China)](https://go.microsoft.com/fwlink/?linkid=870041&clcid=0x804) | [Chino (Taiwán)](https://go.microsoft.com/fwlink/?linkid=870041&clcid=0x404) | [Inglés (Estados Unidos)](https://go.microsoft.com/fwlink/?linkid=870041&clcid=0x409) | [Francés](https://go.microsoft.com/fwlink/?linkid=870041&clcid=0x40c) | [Alemán](https://go.microsoft.com/fwlink/?linkid=870041&clcid=0x407) | [Italiano](https://go.microsoft.com/fwlink/?linkid=870041&clcid=0x410) | [Japonés](https://go.microsoft.com/fwlink/?linkid=870041&clcid=0x411) | [Coreano](https://go.microsoft.com/fwlink/?linkid=870041&clcid=0x412) | [Portugués (Brasil)](https://go.microsoft.com/fwlink/?linkid=870041&clcid=0x416) | [Ruso](https://go.microsoft.com/fwlink/?linkid=870041&clcid=0x419) | [Español](https://go.microsoft.com/fwlink/?linkid=870041&clcid=0x40a)
+Paquete de actualización de SQL Server Management Studio 17.7 (actualización de la versión 17.x a la 17.7):<br>
+[Chino (República Popular China)](https://go.microsoft.com/fwlink/?linkid=873128&clcid=0x804) | [Chino (Taiwán)](https://go.microsoft.com/fwlink/?linkid=873128&clcid=0x404) | [Inglés (Estados Unidos)](https://go.microsoft.com/fwlink/?linkid=873128&clcid=0x409) | [Francés](https://go.microsoft.com/fwlink/?linkid=873128&clcid=0x40c) | [Alemán](https://go.microsoft.com/fwlink/?linkid=873128&clcid=0x407) | [Italiano](https://go.microsoft.com/fwlink/?linkid=873128&clcid=0x410) | [Japonés](https://go.microsoft.com/fwlink/?linkid=873128&clcid=0x411) | [Coreano](https://go.microsoft.com/fwlink/?linkid=873128&clcid=0x412) | [Portugués (Brasil)](https://go.microsoft.com/fwlink/?linkid=873128&clcid=0x416) | [Ruso](https://go.microsoft.com/fwlink/?linkid=873128&clcid=0x419) | [Español](https://go.microsoft.com/fwlink/?linkid=873128&clcid=0x40a)
 
 > [!NOTE]
 > El módulo SQL Server PowerShell se instala ahora de forma independiente a través de la Galería de PowerShell. Para más información, vea [Descarga del módulo de PowerShell de SQL Server](download-sql-server-ps-module.md).
@@ -84,36 +82,23 @@ Paquete de actualización de SQL Server Management Studio 17.6 (actualización d
 
 ## <a name="new-in-this-release"></a>Nuevo en esta versión
 
-SSMS 17.6 es la versión más reciente de SQL Server Management Studio. La generación 17.x de SSMS proporciona compatibilidad con casi todas las áreas de características de SQL Server 2008 a SQL Server 2017. La versión 17.x también es compatible con PaaS de SQL Analysis Services.
+SSMS 17.7 es la versión más reciente de SQL Server Management Studio. La generación 17.x de SSMS proporciona compatibilidad con casi todas las áreas de características de SQL Server 2008 a SQL Server 2017. La versión 17.x también es compatible con PaaS de SQL Analysis Services.
 
-La versión 17.6 incluye:
+La versión 17.7 incluye:
 
 **SSMS general**
 
-Instancia administrada de SQL Database:
-
-- Se ha agregado compatibilidad para [Instancia administrada de Azure SQL Database](https://docs.microsoft.com/azure/sql-database/sql-database-managed-instance). Instancia administrada de Azure SQL Database (versión preliminar) es una nueva opción de Azure SQL Database, que proporciona una compatibilidad cercana al 100% con SQL Server local, una implementación nativa de [red virtual (VNet)](https://docs.microsoft.com/azure/virtual-network/virtual-networks-overview) que aborda cuestiones de seguridad comunes y un [modelo empresarial](https://azure.microsoft.com/pricing/details/sql-database/) favorable para los clientes de SQL Server local.
-- Compatibilidad con escenarios de administración habituales como los siguientes:
-   - Creación y modificación de bases de datos.
-   - Copias de seguridad y restauración de bases de datos.
-   - Importación, exportación, extracción y publicación de aplicaciones de capa de datos.
-   - Consulta y modificación de propiedades del servidor.
-   - Compatibilidad total con el Explorador de objetos.
-   - Creación de scripts de objetos de base de datos.
-   - Compatibilidad con Trabajos del Agente SQL.
-   - Compatibilidad con los servidores vinculados.
-- Obtenga más información sobre Instancias administradas [aquí](https://azure.microsoft.com/blog/migrate-your-databases-to-a-fully-managed-service-with-azure-sql-database-managed-instance/).
-
-
-Explorador de objetos:
-- Se han incorporado opciones para no forzar los corchetes de los nombres al efectuar una acción de arrastrar y soltar del Explorador de objetos a la ventana de consulta (sugerencias de usuario [32911933](https://feedback.azure.com/forums/908035-sql-server/suggestions/32911933) y [32671051](https://feedback.azure.com/forums/908035-sql-server/suggestions/32671051)).
-
-Clasificación de datos:
-- Mejoras y correcciones de errores generales.
+Monitor de replicación:   
+- El monitor de replicación ahora admite el registro de un agente de escucha para escenarios en los que la base de datos del publicador o del distribuidor forma parte del grupo de disponibilidad. Ahora puede supervisar los entornos de replicación en los que la base de datos del publicador o de distribución forma parte de Always On. 
+ 
+Azure SQL Data Warehouse: 
+- Se ha agregado compatibilidad con la ubicación de la fila rechazada para las tablas externas en Azure SQL Data Warehouse. 
 
 **Integration Services (IS)**
 
-- Se ha agregado compatibilidad para implementar paquetes en una [Instancia administrada de SQL Database](https://docs.microsoft.com/azure/sql-database/sql-database-managed-instance).
+- Se ha agregado una característica de programación para los paquetes SSIS implementados en Azure SQL Database. A diferencia de SQL Server local y de Instancia administrada de SQL Database (versión preliminar), que tienen el Agente SQL Server como programador de trabajos de primera clase, SQL Database no tiene ningún programador integrado. Esta nueva característica de SSMS proporciona una interfaz de usuario conocida que se parece al Agente SQL Server para programar paquetes implementados en SQL Database. Si usa SQL Database para hospedar la base de datos del catálogo SSIS, SSISDB, puede usar esta característica de SSMS para generar las canalizaciones, las actividades y los desencadenadores de Data Factory necesarios para programar los paquetes SSIS. Luego puede editar y extender estos objetos en Data Factory. Para más información, vea [Schedule SSIS package execution on Azure SQL Database with SSMS](../integration-services/lift-shift/ssis-azure-schedule-packages-ssms.md) (Programar la ejecución de un paquete SSIS en Azure SQL Database con SSMS). Para obtener más información sobre las canalizaciones, las actividades y los desencadenadores de Azure Data Factory, vea [Canalizaciones y actividades de Azure Data Factory](https://docs.microsoft.com/azure/data-factory/concepts-pipelines-activities) y [Ejecución y desencadenadores de la canalización en Azure Data Factory](https://docs.microsoft.com/azure/data-factory/concepts-pipeline-execution-triggers).
+- Compatibilidad con la programación de paquetes SSIS en el Agente SQL en Instancia administrada de SQL. Ahora se pueden crear trabajos del Agente SQL para ejecutar paquetes SSIS en la instancia administrada. 
+
 
 ## <a name="supported-sql-offerings"></a>Ofertas de SQL admitidas
 
@@ -150,9 +135,9 @@ Esta versión de SSMS admite las siguientes plataformas de 64 bits cuando se usa
 
 ## <a name="release-notes"></a>Notas de la versión
 
-A continuación se indican problemas y limitaciones relativos a la versión 17.6:
+A continuación se indican problemas y limitaciones relativos a la versión 17.7:
 
-Actualmente existe un problema conocido que provoca que SSMS 17.6 se bloquee al configurar la programación en un plan de mantenimiento.
+Algunos cuadros de diálogo muestran un error de edición no válida cuando se trabaja con nuevas ediciones de Azure SQL Database *de uso general* o *crítico para la empresa*.
 
 
 ## <a name="previous-releases"></a>Versiones anteriores

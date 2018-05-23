@@ -25,16 +25,16 @@ caps.latest.revision: 28
 author: edmacauley
 ms.author: edmaca
 manager: craigg
-ms.openlocfilehash: e0583570ce9a4d11b2e4aa6c019c8f4ccc753239
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: e297fd93c5e91eac02008fab13d7c66c71ce0e90
+ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 05/10/2018
 ---
 # <a name="databaseprincipalid-transact-sql"></a>DATABASE_PRINCIPAL_ID (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
-Devuelve el número de Id. de una entidad de seguridad de la base de datos actual. Para más información sobre entidades de seguridad, vea [Entidades de seguridad &#40;motor de base de datos&#41;](../../relational-databases/security/authentication-access/principals-database-engine.md).
+Esta función devuelve el número de Id. de una entidad de seguridad de la base de datos actual. Vea [Entidades de seguridad &#40;motor de base de datos&#41;](../../relational-databases/security/authentication-access/principals-database-engine.md) para obtener más información sobre las entidades de seguridad.
   
 ![Icono de vínculo de tema](../../database-engine/configure-windows/media/topic-link.gif "Icono de vínculo de tema") [Convenciones de sintaxis de Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)
   
@@ -46,20 +46,19 @@ DATABASE_PRINCIPAL_ID ( 'principal_name' )
   
 ## <a name="arguments"></a>Argumentos  
 *principal_name*  
-Es una expresión de tipo **sysname** que representa la entidad de seguridad.  
-Si se omite *principal_name*, se devuelve el identificador del usuario actual. Es obligatorio utilizar paréntesis.
+Una expresión de tipo **sysname** que representa la entidad de seguridad. Si se omite *principal_name*, `DATABASE_PRINCIPAL_ID` devuelve el identificador del usuario actual. `DATABASE_PRINCIPAL_ID` requiere los paréntesis.
   
 ## <a name="return-types"></a>Tipos de valores devueltos
 **int**  
-NULL cuando la entidad de base de datos no existe
+NULL si la entidad de seguridad de base de datos no existe.
   
 ## <a name="remarks"></a>Notas  
-DATABASE_PRINCIPAL_ID se puede utilizar en una lista de selección, en una cláusula WHERE o en cualquier lugar en el que se permita una expresión. Para obtener más información, vea [Expresiones &#40;Transact-SQL&#41;](../../t-sql/language-elements/expressions-transact-sql.md).
+Use `DATABASE_PRINCIPAL_ID` en una lista de selección, en una cláusula WHERE o en cualquier lugar que permita una expresión. Para más información, vea [Expresiones &#40;Transact-SQL&#41;](../../t-sql/language-elements/expressions-transact-sql.md).
   
 ## <a name="examples"></a>Ejemplos  
   
 ### <a name="a-retrieving-the-id-of-the-current-user"></a>A. Recuperar el Id. del usuario actual  
-En el siguiente ejemplo se devuelve el Id. de la entidad de seguridad de base de datos del usuario actual.
+En este ejemplo se devuelve el identificador de la entidad de seguridad de base de datos del usuario actual.
   
 ```sql
 SELECT DATABASE_PRINCIPAL_ID();  
@@ -67,7 +66,7 @@ GO
 ```  
   
 ### <a name="b-retrieving-the-id-of-a-specified-database-principal"></a>B. Recuperar el Id. de la entidad de seguridad de base de datos especificada  
-En el siguiente ejemplo se devuelve el Id. de la entidad de seguridad de base de datos del rol de base de datos `db_owner`.
+En este ejemplo se devuelve el identificador de la entidad de seguridad de base de datos del rol de base de datos `db_owner`.
   
 ```sql
 SELECT DATABASE_PRINCIPAL_ID('db_owner');  

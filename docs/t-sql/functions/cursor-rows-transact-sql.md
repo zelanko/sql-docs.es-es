@@ -25,16 +25,16 @@ caps.latest.revision: 36
 author: edmacauley
 ms.author: edmaca
 manager: craigg
-ms.openlocfilehash: 481c4205bec9032b31b4405830827405050abb8b
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: a608d12c790b9b9808ef0f1d84264f1423ba472b
+ms.sourcegitcommit: 38f8824abb6760a9dc6953f10a6c91f97fa48432
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 05/10/2018
 ---
 # <a name="x40x40cursorrows-transact-sql"></a>&#x40;&#x40;CURSOR_ROWS (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
-Devuelve el número de filas certificadas que se encuentran en el último cursor abierto en la conexión. Para mejorar el rendimiento, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] puede rellenar asincrónicamente los cursores estáticos y de conjunto de claves de gran tamaño. Puede llamar a @@CURSOR_ROWS para determinar que el número de filas que cumplan las condiciones del cursor se recuperen en el momento en que se llama a @@CURSOR_ROWS.
+Devuelve el número de filas certificadas que se encuentran en el último cursor abierto en la conexión. Para mejorar el rendimiento, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] puede rellenar asincrónicamente los cursores estáticos y de conjunto de claves de gran tamaño. Se puede llamar a `@@CURSOR_ROWS` para determinar que el número de filas que cumplan las condiciones del cursor se recuperen en el momento en que se llama a @@CURSOR_ROWS.
   
 ![Icono de vínculo de tema](../../database-engine/configure-windows/media/topic-link.gif "Icono de vínculo de tema") [Convenciones de sintaxis de Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)
   
@@ -49,18 +49,18 @@ Devuelve el número de filas certificadas que se encuentran en el último cursor
   
 ## <a name="return-value"></a>Valor devuelto  
   
-|Valor devuelto|Description|  
+|Valor devuelto|Descripción|  
 |---|---|
 |-*m*|El cursor se rellena de forma asincrónica. El valor devuelto (-*m*) es el número de filas que el conjunto de claves contiene actualmente.|  
-|-1|El cursor es dinámico. Como los cursores dinámicos reflejan todos los cambios, el número de filas correspondientes al cursor cambia constantemente. Nunca se puede afirmar que se han recuperado todas las filas que correspondan.|  
+|-1|El cursor es dinámico. Como los cursores dinámicos reflejan todos los cambios, el número de filas correspondientes al cursor cambia constantemente. El cursor no necesariamente recupera todas las filas calificadas.|  
 |0|No se han abierto cursores, no hay filas calificadas para el último cursor abierto, o éste se ha cerrado o su asignación se ha cancelado.|  
 |*n*|El cursor está completamente relleno. El valor devuelto (*n*) es el número total de filas del cursor.|  
   
 ## <a name="remarks"></a>Notas  
-El número que devuelve @@CURSOR_ROWS es negativo cuando el último cursor se ha abierto de forma asincrónica. Los cursores controlados por conjunto de claves y los estáticos se abren de forma asincrónica cuando el valor de umbral de cursor de sp_configure es mayor que cero y el número de filas del conjunto de resultados del cursor es mayor que su umbral.
+`@@CURSOR_ROWS` devuelve un número negativo si el último cursor se ha abierto de forma asincrónica. Los cursores controlados por conjunto de claves o cursores estáticos se abren de forma asincrónica si el valor umbral del cursor de sp_configure es mayor que 0 y el número de filas del conjunto de resultados del cursor es mayor que su valor umbral.
   
 ## <a name="examples"></a>Ejemplos  
-El ejemplo siguiente declara un cursor y utiliza `SELECT` para mostrar el valor de `@@CURSOR_ROWS`. La opción tiene el valor `0` antes de abrir el cursor y el valor `-1` para indicar que el conjunto de claves del cursor se está rellenando de forma asincrónica.
+Este ejemplo declara primero un cursor y luego usa `SELECT` para mostrar el valor de `@@CURSOR_ROWS`. La opción tiene el valor `0` antes de que se abra el cursor y luego tiene el valor `-1` para indicar que el conjunto de claves del cursor se rellena de forma asincrónica.
   
 ```sql
 USE AdventureWorks2012;  

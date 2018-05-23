@@ -1,7 +1,7 @@
 ---
 title: Sugerencias de consulta (Transact-SQL) | Microsoft Docs
 ms.custom: ''
-ms.date: 03/11/2018
+ms.date: 05/14/2018
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
 ms.component: t-sql|queries
@@ -59,11 +59,11 @@ caps.latest.revision: 136
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 6b7db0c558788f168324b121237181237dcb98e6
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 1a5246b1d7d6a00e4500c95bae20fb2975bbebc9
+ms.sourcegitcommit: bac61a04d11fdf61deeb03060e66621c0606c074
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 05/14/2018
 ---
 # <a name="hints-transact-sql---query"></a>Sugerencias (Transact-SQL): consulta
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -279,6 +279,9 @@ ms.lasthandoff: 05/03/2018
  Hace que SQL Server genere un plan de consulta mediante la suposición de contención simple en lugar de la suposición de contención de base predeterminada para las combinaciones en el modelo de [estimación de la cardinalidad](../../relational-databases/performance/cardinality-estimation-sql-server.md) del optimizador de consultas de [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] o versiones más recientes. Es equivalente a la [marca de seguimiento](../../t-sql/database-console-commands/dbcc-traceon-trace-flags-transact-sql.md) 9476. 
 *  "FORCE_DEFAULT_CARDINALITY_ESTIMATION"  
  Fuerza al optimizador de consultas a usar el modelo de [estimación de la cardinalidad](../../relational-databases/performance/cardinality-estimation-sql-server.md) que se corresponde con el nivel de compatibilidad de la base de datos actual. Use esta sugerencia para invalidar la opción de [configuración con ámbito de base de datos](../../t-sql/statements/alter-database-scoped-configuration-transact-sql.md) LEGACY_CARDINALITY_ESTIMATION=ON o la [marca de seguimiento](../../t-sql/database-console-commands/dbcc-traceon-trace-flags-transact-sql.md) 9481.
+* "DISABLE_INTERLEAVED_EXECUTION_TVF" Deshabilita la ejecución intercalada de funciones con valores de tabla de múltiples instrucciones.
+* "DISABLE_BATCH_MODE_MEMORY_GRANT_FEEDBACK" Deshabilita los comentarios de concesión de memoria de modo de proceso por lotes.
+* "DISABLE_BATCH_MODE_ADAPTIVE_JOINS" Deshabilita las combinaciones adaptables de modo de proceso por lotes.
  
 > [!TIP]
 > Los nombres de sugerencia no distinguen mayúsculas de minúsculas.

@@ -17,16 +17,16 @@ caps.latest.revision: 4
 author: edmacauley
 ms.author: edmaca
 manager: craigg
-ms.openlocfilehash: b438d57114336d0728870fec9358a6cc1502fdc7
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 0411ff1a9725e5ccdaa49aa63cf7467bc4ef49bb
+ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 05/10/2018
 ---
 # <a name="data-type-functions-transact-sql"></a>Funciones de tipos de datos (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
 
-Las siguientes funciones escalares devuelven información sobre distintos valores de tipo de datos.
+Estas funciones escalares devuelven información sobre distintos valores de tipo de datos.
   
 ## <a name="in-this-section"></a>En esta sección
   

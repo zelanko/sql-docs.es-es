@@ -40,15 +40,15 @@ caps.latest.revision: 84
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 0eb4e0cb4da6395d0c48da787b0e21b6f27dcae4
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: a0b300bc3f204af062eac1e151933659216dd921
+ms.sourcegitcommit: 38f8824abb6760a9dc6953f10a6c91f97fa48432
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 05/10/2018
 ---
 # <a name="manage-metadata-when-making-a-database-available-on-another-server"></a>Administración de los metadatos cuando una base de datos pasa a estar disponible en otro servidor
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
-  Este tema es pertinente en las siguientes situaciones:  
+  Este artículo es pertinente en las siguientes situaciones:  
   
 -   Configurar las réplicas de disponibilidad en un grupo de disponibilidad de [!INCLUDE[ssHADR](../../includes/sshadr-md.md)] .  
   
@@ -65,7 +65,7 @@ ms.lasthandoff: 05/03/2018
  Si mueve la base de datos de una aplicación a otra instancia del servidor, debe volver a crear todos los metadatos de las entidades y objetos dependientes de las bases de datos **maestra** y **msdb** en la instancia de servidor de destino. Por ejemplo, si una aplicación de la base de datos usa desencadenadores de servidor, no basta con adjuntar o restaurar la base de datos en el nuevo sistema. La base de datos no funcionará según lo previsto a menos que se vuelvan a crear manualmente los metadatos para dichos desencadenadores en la base de datos **maestra** .  
   
 ##  <a name="information_entities_and_objects"></a> Información, entidades y objetos almacenados fuera de las bases de datos de usuario  
- En lo que queda de este tema se resumen los posibles problemas que podrían afectar a una base de datos que se pone a disposición de otra instancia de servidor. Podría tener que volver a crear uno o varios de los tipos de información, entidades u objetos de la lista siguiente. Para ver un resumen, haga clic en el vínculo del elemento.  
+ En lo que queda de este artículo se resumen los posibles problemas que podrían afectar a una base de datos que se pone a disposición de otra instancia de servidor. Podría tener que volver a crear uno o varios de los tipos de información, entidades u objetos de la lista siguiente. Para ver un resumen, haga clic en el vínculo del elemento.  
   
 -   [Valores de configuración del servidor](#server_configuration_settings)  
   
@@ -155,7 +155,7 @@ ms.lasthandoff: 05/03/2018
 ##  <a name="event_notif_and_wmi_events"></a> Event Notifications and Windows Management Instrumentation (WMI) Events (at Server Level)  
   
 ### <a name="server-level-event-notifications"></a>Notificaciones de eventos del servidor  
- Las notificaciones de eventos del servidor se almacenan en la base de datos **msdb**. Por lo tanto, si una aplicación de la base de datos depende de las notificaciones de eventos del servidor, la notificación de un evento debe volver a crearse en la instancia de servidor de destino. Para ver las notificaciones de eventos de una instancia del servidor, use la vista de catálogo [sys.server_event_notifications](../../relational-databases/system-catalog-views/sys-server-event-notifications-transact-sql.md) . Para más información, consulte [Event Notifications](../../relational-databases/service-broker/event-notifications.md).  
+ Las notificaciones de eventos del servidor se almacenan en la base de datos **msdb**. Por lo tanto, si una aplicación de la base de datos depende de una notificación de eventos del servidor, la notificación de un evento debe volver a crearse en la instancia de servidor de destino. Para ver las notificaciones de eventos de una instancia del servidor, use la vista de catálogo [sys.server_event_notifications](../../relational-databases/system-catalog-views/sys-server-event-notifications-transact-sql.md) . Para más información, consulte [Event Notifications](../../relational-databases/service-broker/event-notifications.md).  
   
  Además, las notificaciones de eventos se pueden entregar mediante [!INCLUDE[ssSB](../../includes/sssb-md.md)]. Las rutas de los mensajes entrantes no están incluidas en la base de datos que contiene un servicio. En lugar de ello, las rutas explícitas se almacenan en la base de datos **msdb**. Si el servicio usa una ruta explicita de la base de datos **msdb** para enrutar los mensajes entrantes al servicio, cuando adjunte una base de datos en una instancia diferente debe volver a crear esta ruta.  
   
@@ -188,7 +188,8 @@ ms.lasthandoff: 05/03/2018
   
  Los procedimientos almacenados extendidos se ejecutan directamente en el espacio de direcciones de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]y pueden producir fugas de memoria y otros problemas que reducen el rendimiento y la confiabilidad del servidor. Debe considerarse la posibilidad de almacenar procedimientos almacenados extendidos en una instancia de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] independiente de la instancia que contiene los datos a los que hace referencia. También se debe considerar la posibilidad de utilizar consultas distribuidas para tener acceso a la base de datos.  
   
-> **IMPORTANTE:** Antes de agregar procedimientos almacenados extendidos al servidor y otorgar permisos EXECUTE a otros usuarios, el administrador del sistema debe revisar por completo cada procedimiento almacenado extendido para asegurarse de que no contiene código perjudicial o malintencionado.  
+  > [!IMPORTANT]
+  > Antes de agregar procedimientos almacenados extendidos al servidor y otorgar permisos EXECUTE a otros usuarios, el administrador del sistema debe revisar por completo cada procedimiento almacenado extendido para asegurarse de que no contiene código perjudicial o malintencionado.  
   
  Para obtener más información, vea [GRANT &#40;permisos de objeto de Transact-SQL&#41;](../../t-sql/statements/grant-object-permissions-transact-sql.md), [DENY &#40;permisos de objeto de Transact-SQL&#41;](../../t-sql/statements/deny-object-permissions-transact-sql.md) y [REVOKE &#40;permisos de objeto de Transact-SQL&#41;](../../t-sql/statements/revoke-object-permissions-transact-sql.md).  
   
@@ -258,7 +259,7 @@ ms.lasthandoff: 05/03/2018
 -   [Crear un trabajo](http://msdn.microsoft.com/library/b35af2b6-6594-40d1-9861-4d5dd906048c)  
   
 #### <a name="best-practices-for-using-a-script-to-re-create-a-job"></a>Prácticas recomendadas para usar un script para volver a crear un trabajo  
- Se recomienda empezar por la generación de un script para un trabajo simple; volver a crear el trabajo en el otro servicio del Agente [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] y ejecutarlo para ver si funciona como se espera. Esto permitirá identificar las incompatibilidades e intentar resolverlas. Si el trabajo generado con el script no funciona como se espera en este nuevo entorno, se recomienda crear un trabajo equivalente que funcione de forma correcta en ese entorno.  
+ Se recomienda empezar por la generación de un script para un trabajo simple; volver a crear el trabajo en el otro servicio del Agente [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] y ejecutarlo para ver si funciona como se espera. Esto le permitirá identificar las incompatibilidades e intentar resolverlas. Si el trabajo generado con el script no funciona como se espera en este nuevo entorno, se recomienda crear un trabajo equivalente que funcione de forma correcta en ese entorno.  
   
 
 ##  <a name="logins"></a> Inicios de sesión  
@@ -279,9 +280,10 @@ ms.lasthandoff: 05/03/2018
 ### <a name="grant-revoke-and-deny-permissions-on-system-objects"></a>Permisos GRANT, REVOKE o DENY sobre los objetos del sistema  
  Los permisos de los objetos del sistema como procedimientos almacenados, procedimientos almacenados extendidos, funciones y vistas, se almacenan en la base de datos **maestra** y se deben configurar en la instancia de servidor de destino.  
   
- Para generar un script de algunos o todos los objetos de la copia original de la base de datos, se puede usar el asistente Generar scripts y, en el cuadro de diálogo **Elegir opciones de script**, configurar la opción **Incluir permisos de objeto en el script** en **True**.  
+ Para generar un script de algunos o todos los objetos de la copia original de la base de datos, se puede usar el asistente Generar scripts y, en el cuadro de diálogo **Elegir opciones de script** , configurar la opción **Incluir permisos de objeto en el script** en **True**.  
   
-> **IMPORTANTE:** Si incluye inicios de sesión en el script, no se incluirán las contraseñas. Si tiene inicios de sesión que usan la Autenticación de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , deberá modificar el script en el destino.  
+   > [!IMPORTANT]
+   > Si incluye inicios de sesión en el script, no se incluirán las contraseñas. Si tiene inicios de sesión que usan la Autenticación de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , deberá modificar el script en el destino.  
   
  Puede ver los objetos del sistema en la vista de catálogo [sys.system_objects](../../relational-databases/system-catalog-views/sys-system-objects-transact-sql.md) . Puede ver los permisos de objetos del sistema en la vista de catálogo [sys.database_permissions](../../relational-databases/system-catalog-views/sys-database-permissions-transact-sql.md) de la base de datos **maestra**. Para obtener información sobre las consultas de estas vistas de catálogo y la concesión de permisos de objetos del sistema, vea [GRANT &#40;permisos de objeto de sistema de Transact-SQL&#41;](../../t-sql/statements/grant-system-object-permissions-transact-sql.md). Para obtener más información, vea [REVOKE &#40;permisos de objeto de sistema de Transact-SQL&#41;](../../t-sql/statements/revoke-system-object-permissions-transact-sql.md) y [DENY &#40;permisos de objeto de sistema de Transact-SQL&#41;](../../t-sql/statements/deny-system-object-permissions-transact-sql.md).  
   
@@ -313,7 +315,10 @@ ms.lasthandoff: 05/03/2018
   
  Para obtener más información acerca de los certificados y las claves asimétricas, vea [Encryption Hierarchy](../../relational-databases/security/encryption/encryption-hierarchy.md).  
   
-  
+## <a name="trustworthy-property"></a>Propiedad Trustworthy
+La propiedad de base de datos TRUSTWORTHY sirve para indicar si esta instancia de SQL Server confía en la base de datos y en su contenido. Cuando se adjunta una base de datos, de forma predeterminada y por motivos de seguridad, esta opción se establece en OFF, incluso si se ha establecido en ON en el servidor original. Para más información sobre esta propiedad, vea [TRUSTWORTHY database property](../security/trustworthy-database-property.md) (Propiedad de base de datos TRUSTWORTHY). Para información sobre la activación de esta opción, vea [ALTER DATABASE &#40;Transact-SQL&#41;](../../t-sql/statements/alter-database-transact-sql.md).  
+
+
 ##  <a name="replication_settings"></a> Replication Settings  
  Si restaura una copia de seguridad de una base de datos replicada en otro servidor o base de datos, no se conservará la configuración de la replicación. En este caso, deberá volver a crear todas las publicaciones y suscripciones después de restaurar las copias de seguridad. Para facilitar este proceso, cree scripts para la configuración actual de la replicación y también para habilitar y deshabilitar la replicación. Para volver a crear los parámetros de la replicación, copie estos scripts y cambie las referencias del nombre de servidor para que funcionen con la instancia de servidor de destino.  
   
@@ -321,7 +326,7 @@ ms.lasthandoff: 05/03/2018
   
   
 ##  <a name="sb_applications"></a> Service Broker Applications  
- Muchos aspectos de una aplicación de [!INCLUDE[ssSB](../../includes/sssb-md.md)] se mueven con la base de datos. No obstante, algunos aspectos deben volver a crearse o configurarse en la nueva ubicación.  
+ Muchos aspectos de una aplicación de [!INCLUDE[ssSB](../../includes/sssb-md.md)] se mueven con la base de datos. No obstante, algunos aspectos deben volver a crearse o configurarse en la nueva ubicación.  De forma predeterminada, así como por motivos de seguridad, cuando se adjunta una base de datos desde otro servidor, las opciones de *is_broker_enabled* e *is_honoor_broker_priority_on* se establecen en OFF. Para información sobre cómo activar estas opciones, vea [ALTER DATABASE &#40;Transact-SQL&#41;](../../t-sql/statements/alter-database-transact-sql.md).  
   
   
 ##  <a name="startup_procedures"></a> Startup Procedures  

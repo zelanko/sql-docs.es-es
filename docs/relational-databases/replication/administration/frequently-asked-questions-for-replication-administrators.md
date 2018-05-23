@@ -19,11 +19,11 @@ caps.latest.revision: 59
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: ce21bef20a2fa73ca0a9acee22e2eeddefd5fce1
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: fd85694c8b2678d85b66db6c84b89a409fa0fc4a
+ms.sourcegitcommit: df382099ef1562b5f2d1cd506c1170d1db64de41
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 05/12/2018
 ---
 # <a name="frequently-asked-questions-for-replication-administrators"></a>Preguntas más frecuentes para administradores de replicación
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -164,7 +164,7 @@ ms.lasthandoff: 05/03/2018
 ## <a name="database-maintenance"></a>Mantenimiento de bases de datos  
   
 ### <a name="why-cant-i-run-truncate-table-on-a-published-table"></a>¿Por qué no se puede ejecutar TRUNCATE TABLE en una tabla publicada?  
- TRUNCATE TABLE es una operación no registrada que no activa desencadenadores. No está permitida porque la replicación no puede realizar el seguimiento de los cambios causados por la operación: la replicación transaccional realiza un seguimiento de los cambios a través del registro de transacciones; la replicación de mezcla realiza el seguimiento de los cambios mediante los desencadenadores de las tablas publicadas.  
+ TRUNCATE TABLE es una instrucción DDL que no registra eliminaciones de filas individuales ni activa desencadenadores DML. No está permitida porque la replicación no puede realizar el seguimiento de los cambios causados por la operación: la replicación transaccional realiza un seguimiento de los cambios a través del registro de transacciones; la replicación de mezcla realiza el seguimiento de los cambios mediante los desencadenadores DML de las tablas publicadas.  
   
 ### <a name="what-is-the-effect-of-running-a-bulk-insert-command-on-a-replicated-database"></a>¿Cuál es el efecto de ejecutar un comando de inserción masiva en una base de datos replicada?  
  Para la replicación transaccional se realiza el seguimiento de las inserciones masivas y se replican de la misma manera que otras inserciones. Para la replicación de mezcla, debe asegurarse de que los metadatos de seguimiento de cambios se actualizan adecuadamente.  

@@ -1,7 +1,7 @@
 ---
 title: CREATE EXTERNAL TABLE (Transact-SQL) | Microsoft Docs
 ms.custom: ''
-ms.date: 11/27/2017
+ms.date: 5/14/2018
 ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
 ms.component: t-sql|statements
@@ -26,11 +26,11 @@ author: edmacauley
 ms.author: edmaca
 manager: craigg
 monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
-ms.openlocfilehash: fc04195092a1371be93410cc77d8d06460c957da
-ms.sourcegitcommit: d2573a8dec2d4102ce8882ee232cdba080d39628
+ms.openlocfilehash: 0ea81621b94490c267b6d7c9f3e010bd22279610
+ms.sourcegitcommit: 0cc2cb281e467a13a76174e0d9afbdcf4ccddc29
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/07/2018
+ms.lasthandoff: 05/15/2018
 ---
 # <a name="create-external-table-transact-sql"></a>CREATE EXTERNAL TABLE (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2016-all-md](../../includes/tsql-appliesto-ss2016-all-md.md)]
@@ -133,9 +133,10 @@ CREATE EXTERNAL TABLE [ database_name . [ schema_name ] . | schema_name. ] table
   
 <reject_options> ::=  
 {  
-    | REJECT_TYPE = value | percentage  
-    | REJECT_VALUE = reject_value  
-    | REJECT_SAMPLE_VALUE = reject_sample_value  
+    | REJECT_TYPE = value | percentage,  
+    | REJECT_VALUE = reject_value,  
+    | REJECT_SAMPLE_VALUE = reject_sample_value,
+    | REJECTED_ROW_LOCATION = '\REJECT_Directory'
   
 }  
 ```  
@@ -234,7 +235,8 @@ En SQL Data Warehouse y Analytics Platform System, la instrucción [CREATE EXTER
 > [!NOTE]  
 >  Puesto que PolyBase calcula el porcentaje de filas con errores a intervalos, el porcentaje real de filas con errores puede superar el valor de *reject_value*.  
   
- Ejemplo:  
+
+Ejemplo:  
   
  En este ejemplo se muestra cómo interactúan entre sí las tres opciones REJECT. Por ejemplo, si REJECT_TYPE = percentage, REJECT_VALUE = 30 y REJECT_SAMPLE_VALUE = 100, sucederá lo siguiente:  
   
@@ -247,6 +249,13 @@ En SQL Data Warehouse y Analytics Platform System, la instrucción [CREATE EXTER
 -   El porcentaje de filas con errores se recalcula en un 50 %. El porcentaje de filas con errores ha superado el valor de rechazo de 30 %.  
   
 -   Se produce un error en la consulta de PolyBase con un 50 % de filas rechazadas después de intentar devolver las 200 primeras filas. Tenga en cuenta que se han devuelto filas coincidentes antes de que la consulta de PolyBase detecte que se ha superado el umbral de rechazo.  
+  
+REJECTED_ROW_LOCATION = *Ubicación del directorio*
+  
+  Especifica el directorio del origen de datos externo en el que se deben escribir las filas rechazadas y el archivo de errores correspondiente.
+Si la ruta de acceso especificada no existe, PolyBase creará una en su nombre. Se crea un directorio secundario con el nombre "_rejectedrows". El carácter "_" garantiza que el directorio tenga un escape para otro procesamiento de datos a menos que se mencione explícitamente en el parámetro de ubicación. En este directorio hay una carpeta que se crea según la hora de envío de la carga con el formato AñoMesDía-HoraMinutoSegundo (por ejemplo, 20180330-173205). En esta carpeta se escriben dos tipos de archivos: el archivo _reason y el archivo de datos. 
+
+Los archivos reason y los archivos de datos tienen el identificador de consulta asociado a la instrucción CTAS. Dado que los datos y reason están en archivos independientes, los archivos correspondientes tienen un sufijo coincidente. 
   
  Sharded external table options  
  Especifica el origen de datos externo (un origen de datos no SQL Server) y un método de distribución para las [consultas de Elastic Database](https://azure.microsoft.com/documentation/articles/sql-database-elastic-query-overview/).  

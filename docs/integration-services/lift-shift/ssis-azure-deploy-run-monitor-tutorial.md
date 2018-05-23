@@ -1,5 +1,5 @@
 ---
-title: Implementar, ejecutar y supervisar un paquete SSIS en Azure | Microsoft Docs
+title: Implementar y ejecutar un paquete SSIS en Azure | Microsoft Docs
 ms.date: 02/05/2018
 ms.topic: conceptual
 ms.prod: sql
@@ -12,13 +12,13 @@ ms.technology:
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: a15194b18efb21c7a7947e23b8bc673021606b31
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 27c7e77b5143bca56b7ded2233c01e11ad088d5f
+ms.sourcegitcommit: 0cc2cb281e467a13a76174e0d9afbdcf4ccddc29
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 05/15/2018
 ---
-# <a name="deploy-run-and-monitor-an-ssis-package-on-azure"></a>Implementar, ejecutar y supervisar un paquete SSIS en Azure
+# <a name="deploy-and-run-an-ssis-package-in-azure"></a>Implementar y ejecutar un paquete SSIS en Azure
 Este tutorial muestra cómo implementar un proyecto de SQL Server Integration Services para la base de datos del catálogo de SSISDB en Azure SQL Database, ejecutar un paquete en Azure-SSIS Integration Runtime y supervisar el paquete en ejecución.
 
 ## <a name="prerequisites"></a>Prerequisites
@@ -45,7 +45,7 @@ Estas son las dos consideraciones más importantes que debe recordar. Estos paso
 
 2. **Conéctese al servidor**. En el cuadro de diálogo **Conectar con el servidor**, escriba la información siguiente:
 
-   | Configuración       | Valor sugerido | Description | 
+   | Configuración       | Valor sugerido | Descripción | 
    | ------------ | ------------------ | ------------------------------------------------- | 
    | **Tipo de servidor** | Motor de base de datos | Este valor es necesario. |
    | **Nombre del servidor** | Nombre completo del servidor | El nombre debe tener este formato: **mysqldbserver.database.windows.net**. Para obtener más información, consulte [Connect to the SSISDB Catalog database on Azure](ssis-azure-connect-to-catalog-database.md) (Conectarse a la base de datos del catálogo de SSISDB en Azure). |

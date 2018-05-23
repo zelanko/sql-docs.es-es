@@ -5,19 +5,18 @@ author: annashres
 ms.author: anshrest
 manager: craigg
 ms.date: 07/12/2017
-ms.topic: article
+ms.topic: conceptual
 ms.prod: sql
 ms.prod_service: sql
 ms.component: sql-non-specified
 ms.suite: sql
 ms.custom: ''
-ms.technology: database-engine
-ms.assetid: ''
-ms.openlocfilehash: 8941a2e2e542a33f08a1c30f71a7745072a9c495
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.technology: configuration
+ms.openlocfilehash: 6684d58710b8be2cf96e06029792836cab9c69a3
+ms.sourcegitcommit: df382099ef1562b5f2d1cd506c1170d1db64de41
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 05/12/2018
 ---
 # <a name="configure-sql-server-to-send-feedback-to-microsoft"></a>Configuración de SQL Server para enviar comentarios a Microsoft
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -52,7 +51,7 @@ Tenga en cuenta que este proceso se centra en los mecanismos necesarios para ent
 - Mediante el uso de la aplicación Informes de uso y errores
 - Mediante el establecimiento de subclaves del Registro en el servidor
 
-Para SQL Server en Linux, consulte [Customer Feedback for SQL Server on Linux](https://docs.microsoft.com/en-us/sql/linux/sql-server-linux-customer-feedback.md) (Comentarios del usuario para SQL Server en Linux)
+Para SQL Server en Linux, consulte [Customer Feedback for SQL Server on Linux](https://docs.microsoft.com/sql/linux/sql-server-linux-customer-feedback) (Comentarios del usuario para SQL Server en Linux)
 
 > [!NOTE]
 > Puede deshabilitar el envío de información a Microsoft solo en versiones de pago de SQL Server.
@@ -107,15 +106,15 @@ Los clientes empresariales pueden establecer la configuración de directiva de g
 
     Tipo de entrada DWORD: 0 para no utilizar el CEIP; 1 para utilizarlo
 
-Además, para desactivar lnformes de uso y errores en el nivel de Visual Studio, establezca las siguientes subclave del Registro y configuración:
+    Además, SSMS 17.x se basa en el shell de Visual Studio 2015 y la instalación de Visual Studio admite los comentarios de los clientes de forma predeterminada.  
 
--    Subclave = HKEY_CURRENT_USER\Software\Microsoft\VisualStudio\Telemetry
+    Para configurar Visual Studio para deshabilitar los comentarios de los clientes en equipos específicos, cambie el valor de la siguiente subclave del registro por la cadena "0":  
+    HKEY_LOCAL_MACHINE\Software\Policies\Microsoft\VisualStudio\SQM OptIn
 
--    Nombre EntradaRegistro = TurnOffSwitch
+    Por ejemplo, modifique la subclave así:  
+    HKEY_LOCAL_MACHINE\Software\Policies\Microsoft\VisualStudio\SQM OptIn="0")
 
--    Tipo de entrada DWORD: 0 para no utilizar el CEIP; 1 para utilizarlo
- 
-La recopilación de datos de uso de SQL Server 2017 respeta la directiva de grupo basada en el Registro sobre estas subclaves del Registro.
+    La recopilación de datos de uso de SQL Server 2017 respeta la directiva de grupo basada en el Registro sobre estas subclaves del Registro.
 
 ## <a name="set-registry-subkeys-for-crash-dump-collection"></a>Establecer subclaves del Registro para la recopilación de volcados de memoria
 

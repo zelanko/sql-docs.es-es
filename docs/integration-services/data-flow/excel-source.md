@@ -1,7 +1,7 @@
 ---
 title: Origen de Excel | Microsoft Docs
 ms.custom: ''
-ms.date: 04/02/2018
+ms.date: 05/15/2018
 ms.prod: sql
 ms.prod_service: integration-services
 ms.component: data-flow
@@ -24,11 +24,11 @@ caps.latest.revision: 60
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 301af18d2052027f4f5a112fdcdd4d7dcf3e95ae
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 34a6c0953afad881e80138dd3306f386e98702f1
+ms.sourcegitcommit: b3bb41424249de198f22d9c6d40df4996f083aa6
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 05/17/2018
 ---
 # <a name="excel-source"></a>Origen de Excel
   El origen de Excel extrae datos de hojas de cálculo o de rangos de libros de [!INCLUDE[msCoName](../../includes/msconame-md.md)] Excel.  
@@ -36,7 +36,7 @@ ms.lasthandoff: 05/03/2018
 > [!IMPORTANT]
 > Para obtener información detallada sobre cómo conectarse a archivos de Excel y sobre las limitaciones y problemas conocidos a la hora de cargar datos de o a archivos de Excel, vea [Cargar datos de o a Excel con SQL Server Integration Services (SSIS)](../load-data-to-from-excel-with-ssis.md).
 
-## <a name="access-mode"></a>Modo de acceso
+## <a name="access-modes"></a>Modos de acceso
  El origen de Excel ofrece cuatro modos de acceso a datos distintos para extraer datos:  
   
 -   Una tabla o vista.  
@@ -51,41 +51,6 @@ ms.lasthandoff: 05/03/2018
   
  El origen de Excel tiene una salida normal y una salida de error.  
   
-## <a name="usage-considerations"></a>Consideraciones de uso  
- El Administrador de conexiones con Excel usa el Proveedor OLE DB de [!INCLUDE[msCoName](../../includes/msconame-md.md)] para Jet 4.0 y el controlador ISAM (Método de acceso secuencial indexado) de Excel asociado para conectar con orígenes Excel de datos y leer y escribir datos en ellos.  
-  
- Muchos artículos de [!INCLUDE[msCoName](../../includes/msconame-md.md)] Knowledge Base documentan el comportamiento de este proveedor y el controlador. Aunque estos artículos no son específicos de [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] ni de Servicios de transformación de datos (su predecesor), posiblemente le interese conocer determinados comportamientos que pueden provocar resultados inesperados. Para obtener información general sobre el uso y el comportamiento del controlador de Excel, vea [Cómo usar ADO con datos de Excel procedentes de Visual Basic o VBA](http://support.microsoft.com/kb/257819).  
-  
- Los siguientes comportamientos del proveedor Jet con el controlador de Excel pueden provocar resultados inesperados al leer datos de un origen de datos de Excel.  
-  
--   **Orígenes de datos**. El origen de datos de un libro de Excel puede ser una hoja de cálculo, a cuyo nombre debe agregarse el signo $ (por ejemplo, Hoja1$), un rango con nombre (por ejemplo, MiRango). En una instrucción SQL, el nombre de la hoja debe estar delimitado (por ejemplo [Hoja1$]) para evitar un error de sintaxis producido por el signo $. El Generador de consultas agrega automáticamente estos delimitadores. Al especificar una hoja de cálculo o un rango, el controlador lee los bloques contiguos de celdas, comenzando con la primera celda no vacía en la esquina superior izquierda de la hoja de cálculo o rango. Por tanto, no deben dejarse filas vacías en los datos de origen, ni una fila vacía entre las filas de título o de cabecera y las filas de datos.  
-  
--   **Valores que faltan**. Este controlador lee un cierto número de filas (de forma predeterminada, 8) en el origen especificado para elegir el tipo de datos de cada columna. Cuando una columna parece contener varios tipos de datos, especialmente numéricos y de texto, el controlador elige el tipo más usado y devuelve valores NULL en las celdas que contienen datos de los demás tipos. (En caso de empate, el tipo numérico tiene prioridad.) La mayoría de las opciones de formato en las hojas Excel parecen no afectar a esta determinación de tipos de datos. Para modificar este comportamiento del controlador de Excel, especifique el modo de importación. Para especificar el modo de importación, agregue **IMEX=1** al valor de Propiedades extendidas en la cadena de conexión del Administrador de conexiones con Excel en la ventana **Propiedades** . Para obtener más información, vea [PRB: valores de Excel devueltos como NULL usando DAO OpenRecordset](http://support.microsoft.com/kb/194124).  
-  
--   **Texto truncado**. Cuando el controlador determina que una columna de Excel contiene datos de texto, el controlador selecciona el tipo de datos (cadena o memorando) en función del valor más largo que muestrea. Si el controlador no descubre valores de más de 255 caracteres en las filas que muestrea, trata a la columna como una columna de cadena de 255 caracteres en lugar de una columna memorando. Así, es posible que se trunquen las cadenas con más de 255 caracteres. Para importar datos de una columna memorando sin que se trunquen, debe asegurarse de que la columna memo contenga, en al menos una de las filas muestreadas, un valor superior a los 255 caracteres, o tendrá que incrementar el número de filas muestreadas por el controlador para que se incluya dicha fila. Puede aumentar el número de filas muestreadas al incrementar el valor de **TypeGuessRows** en la clave del registro **HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Jet\4.0\Engines\Excel** . Para más información, vea [PRB: transferencia de datos del origen de OLEDB de Jet 4.0 con error](http://support.microsoft.com/kb/281517).  
-  
--   **Tipos de datos**. El controlador de Excel reconoce solo un conjunto limitado de tipos de datos. Por ejemplo, todas las columnas numéricas se interpretan como dobles (DT_R8) y todas las columnas de cadena (a excepción de las columnas memorando) se interpretan como cadenas Unicode de 255 caracteres (DT_WSTR). [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] asigna los tipos de datos de Excel de la siguiente manera:  
-  
-    -   Numérico: flotante de doble precisión (DT_R8)  
-  
-    -   Moneda: moneda (DT_CY)  
-  
-    -   Booleano: booleano (DT_BOOL)  
-  
-    -   Fecha y hora: **datetime** (DT_DATE)  
-  
-    -   Cadena: cadena Unicode, longitud de 255 caracteres (DT_WSTR)  
-  
-    -   Memorando: flujo de texto Unicode (DT_NTEXT)  
-  
--   **Conversiones de tipo de datos y de longitud**. [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] no convierte tipos de datos de forma implícita. Como resultado, probablemente necesite utilizar las transformaciones Columna derivada o Conversión de datos para convertir datos de Excel de forma explícita antes de cargarlos en un destino diferente de Excel, o para convertir datos que no son de Excel antes de cargarlos en un destino de Excel. En este caso, puede resultar útil crear el paquete inicial a través del Asistente para importación y exportación, que le configura las conversiones necesarias. Entre algunos ejemplos de las conversiones que se pueden requerir, figuran:  
-  
-    -   Conversión entre columnas de cadena de Excel Unicode y columnas de cadena no Unicode con páginas de códigos específicas  
-  
-    -   Conversión entre columnas de cadena de Excel de 255 caracteres y columnas de cadena de diferentes longitudes  
-  
-    -   Conversión entre columnas numéricas de Excel de doble precisión y columnas numéricas de otros tipos  
-  
 ## <a name="excel-source-configuration"></a>Configuración del origen de Excel  
  Puede establecer propiedades a través del Diseñador de [!INCLUDE[ssIS](../../includes/ssis-md.md)] o mediante programación.  
   
@@ -96,16 +61,6 @@ ms.lasthandoff: 05/03/2018
 -   [Propiedades personalizadas de Excel](../../integration-services/data-flow/excel-custom-properties.md)  
   
  Para más información sobre cómo crear bucles entre un grupo de archivos de Excel, vea [Crear bucles entre archivos y tablas de Excel usando un contenedor de bucles Foreach](../../integration-services/control-flow/loop-through-excel-files-and-tables-by-using-a-foreach-loop-container.md).  
-  
-## <a name="related-tasks"></a>Related Tasks  
-  
--   [Asignar parámetros de consulta a variables en un componente de flujo de datos](../../integration-services/data-flow/map-query-parameters-to-variables-in-a-data-flow-component.md)  
-  
--   [Establecer las propiedades de un componente de flujo de datos](../../integration-services/data-flow/set-the-properties-of-a-data-flow-component.md)  
-  
--   [Ordenar datos para las transformaciones Mezclar y Combinación de mezcla](../../integration-services/data-flow/transformations/sort-data-for-the-merge-and-merge-join-transformations.md)  
-  
--   [Crear bucles entre archivos y tablas de Excel mediante un contenedor de bucles ForEach](../../integration-services/control-flow/loop-through-excel-files-and-tables-by-using-a-foreach-loop-container.md)  
   
 ## <a name="excel-source-editor-connection-manager-page"></a>Editor de origen de Excel (página Administrador de conexiones)
   Utilice el nodo **Administrador de conexiones** del cuadro de diálogo **Editor de origen de Excel** para seleccionar el libro de [!INCLUDE[ofprexcel](../../includes/ofprexcel-md.md)] que utilizará el origen. El origen de Excel lee los datos de una hoja de cálculo o un rango con nombre de un libro existente.  
@@ -123,7 +78,7 @@ ms.lasthandoff: 05/03/2018
  **Modo de acceso a datos**  
  Especifique el método para seleccionar datos del origen.  
   
-|Valor|Description|  
+|Valor|Descripción|  
 |-----------|-----------------|  
 |Tabla o vista|Recupera los datos de una hoja de cálculo o un rango con nombre del archivo Excel.|  
 |Variable de nombre de tabla o nombre de vista|Especifique la hoja de calculo o el rango con nombre de una variable.<br /><br /> **Información relacionada** [Usar variables en paquetes](http://msdn.microsoft.com/library/7742e92d-46c5-4cc4-b9a3-45b688ddb787)|  
@@ -204,6 +159,6 @@ ms.lasthandoff: 05/03/2018
  Aplica la opción de control de errores a las celdas seleccionadas.  
   
 ## <a name="related-content"></a>Contenido relacionado  
-[Cargar datos de o a Excel con SQL Server Integration Services (SSIS)](../load-data-to-from-excel-with-ssis.md)
+[Cargar datos de o a Excel con SQL Server Integration Services (SSIS)](../load-data-to-from-excel-with-ssis.md)  
 [Destino de Excel](excel-destination.md)  
 [Administrador de conexiones de Excel](../connection-manager/excel-connection-manager.md)

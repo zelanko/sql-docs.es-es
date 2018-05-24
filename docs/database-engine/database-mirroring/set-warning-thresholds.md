@@ -35,7 +35,7 @@ ms.lasthandoff: 05/03/2018
   
 ## <a name="options"></a>Opciones  
  *Instancia del servidor y su estado de conexión*  
- Nombre de una instancia del servidor asociado con el formato *SISTEMA***\\*** NOMBRE_DE_INSTANCIA*. En el caso de una instancia de servidor predeterminada, solo se muestra el nombre del sistema.  
+ Nombre de una instancia del servidor asociado con el formato *SISTEMA***\\***NOMBRE_DE_INSTANCIA*. En el caso de una instancia de servidor predeterminada, solo se muestra el nombre del sistema.  
   
  Este campo también indica si el monitor está conectado actualmente a esta instancia del servidor. Los estados de conexión posibles son:  
   

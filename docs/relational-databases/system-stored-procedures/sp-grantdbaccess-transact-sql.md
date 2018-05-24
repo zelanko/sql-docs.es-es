@@ -47,7 +47,7 @@ sp_grantdbaccess [ @loginame = ] 'login'
 ```  
   
 ## <a name="arguments"></a>Argumentos  
- [  **@loginame =** ]  **' *** inicio de sesión* **'** es el nombre del grupo de Windows, el inicio de sesión de Windows o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] inicio de sesión que debe asignarse a la nueva base de datos usuario. Nombres de grupos de Windows e inicios de sesión de Windows deben calificarse con un nombre de dominio de Windows en el formulario *dominio*\\* inicio de sesión *; por ejemplo, **LONDON\Joeb**. El inicio de sesión ya no se puede asignar a un usuario de la base de datos. *inicio de sesión* es un **sysname**, no tiene ningún valor predeterminado.  
+ [  **@loginame =** ]  **' *** inicio de sesión* **'** es el nombre del grupo de Windows, el inicio de sesión de Windows o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] inicio de sesión que debe asignarse a la nueva base de datos usuario. Nombres de grupos de Windows e inicios de sesión de Windows deben calificarse con un nombre de dominio de Windows en el formulario *dominio*\\*inicio de sesión *; por ejemplo, **LONDON\Joeb**. El inicio de sesión ya no se puede asignar a un usuario de la base de datos. *inicio de sesión* es un **sysname**, no tiene ningún valor predeterminado.  
   
  [  **@name_in_db=**] **'***name_in_db***'** [ **salida**]  
  Es el nombre del nuevo usuario de la base de datos. *name_in_db* es una variable OUTPUT con un tipo de datos de **sysname**y su valor predeterminado es null. Si no se especifica, *inicio de sesión* se utiliza. Si se especifica como variable OUTPUT con un valor NULL, **@name_in_db** está establecido en *inicio de sesión*. *name_in_db* no debe existir en la base de datos actual.  

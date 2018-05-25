@@ -2,9 +2,10 @@
 # [Centro de rendimiento para el motor de base de datos SQL Server y Azure SQL Database](performance-center-for-sql-server-database-engine-and-azure-sql-database.md)  
 # [Configuración de espacios de almacenamiento con una caché con reescritura de NVDIMM-N](configuring-storage-spaces-with-a-nvdimm-n-write-back-cache.md)  
 
-# [Procesamiento de consultas adaptable](adaptive-query-processing.md)
 # [Ajuste automático](../automatic-tuning/automatic-tuning.md)
 # [Estimación de cardinalidad](cardinality-estimation-sql-server.md)  
+# [Procesamiento de consultas inteligentes](intelligent-query-processing.md)
+## [Procesamiento de consultas adaptable](adaptive-query-processing.md)
 
 # [Supervisión y optimización del rendimiento](monitor-and-tune-for-performance.md)  
 ## [Supervisar los componentes de SQL Server](monitor-sql-server-components.md)  

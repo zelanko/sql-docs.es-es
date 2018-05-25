@@ -97,13 +97,14 @@
 ## [Administración de paquetes](r/r-package-management-for-sql-server-r-services.md)
 ### [Paquetes predeterminados](r/installing-and-managing-r-packages.md)
 ### [Obtención de información del paquete](r/determine-which-packages-are-installed-on-sql-server.md)
-### [Instalación de paquetes de R adicionales](r/install-additional-r-packages-on-sql-server.md)
 ### [Instalación de paquetes de Python adicionales](python/install-additional-python-packages-on-sql-server.md)
-### Solo R
+### [Instalación de paquetes de R adicionales](r/install-additional-r-packages-on-sql-server.md)
+#### [Uso de administradores de paquetes de R](r/install-additional-r-packages-on-sql-server.md)
+#### [Uso de RevoScaleR](r/use-revoscaler-to-manage-r-packages.md)
+#### [Uso de T-SQL](r/install-r-packages-tsql.md)
+#### [Uso de un repositorio de miniCRAN](r/create-a-local-package-repository-using-minicran.md)
 #### [Habilitación de la administración de paquetes de R remota](r/r-package-how-to-enable-or-disable.md)
-#### [Funciones de RevoScaleR para administración de paquetes de R](r/use-revoscaler-to-manage-r-packages.md)
 #### [Sincronización de paquetes de R](r/package-install-uninstall-and-sync.md)
-#### [miniCRAN para el repositorio local de paquetes de R](r/create-a-local-package-repository-using-minicran.md)
 #### [Soluciones alternativas para "bibliotecas de usuario" de R](r/packages-installed-in-user-libraries.md)
 
 ## Modelado y exploración de datos

@@ -7,21 +7,21 @@ ms.topic: conceptual
 author: HeidiSteen
 ms.author: heidist
 manager: cgronlun
-ms.openlocfilehash: 921bdddf6ae1638ae637df58a0a7e8301fd91dc0
-ms.sourcegitcommit: 1aedef909f91dc88dc741748f36eabce3a04b2b1
+ms.openlocfilehash: 7211eda2caaf579267e4c6089be13750022f0ef8
+ms.sourcegitcommit: b5ab9f3a55800b0ccd7e16997f4cd6184b4995f9
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/08/2018
+ms.lasthandoff: 05/23/2018
 ---
 # <a name="install-sql-server-machine-learning-components-from-the-command-line"></a>Instalar componentes de aprendizaje de máquina de SQL Server desde la línea de comandos
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
 
 Este artículo proporciona instrucciones para los componentes desde una línea de comandos de aprendizaje automático de SQL Server de instalar:
 
-+ [Instancia de base de datos](#indb)
++ [Instancia de nuevo en bases de datos](#indb)
 + [Agregar a una instancia del motor de base de datos existente](#add-existing)
 + [Instalación silenciosa](#silent)
-+ [Servidor independiente](#shared-feature)
++ [Nuevo servidor independiente](#shared-feature)
 
 Puede especificar la interacción silenciosa, básica o completa con la interfaz de usuario del programa de instalación. En este artículo complementa [instalar SQL Server desde la línea de comandos](../../database-engine/install-windows/install-sql-server-from-the-command-prompt.md), que abarcan los parámetros únicos a los componentes de aprendizaje de máquina de R y Python.
 

@@ -7,17 +7,16 @@ manager: craigg
 ms.date: 10/02/2017
 ms.topic: article
 ms.prod: sql
-ms.prod_service: database-engine
 ms.component: ''
 ms.suite: sql
-ms.technology: database-engine
+ms.technology: linux
 ms.assetid: 2210cfc3-c23a-4025-a551-625890d6845f
 ms.custom: sql-linux
-ms.openlocfilehash: 0087d33c0eabcff4ebc81de80fc69999e3017828
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 7a7c1c73ca70e0d42104e74c868d6acd32cc01b1
+ms.sourcegitcommit: b5ab9f3a55800b0ccd7e16997f4cd6184b4995f9
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 05/23/2018
 ---
 # <a name="export-and-import-a-database-on-linux-with-ssms-or-sqlpackageexe-on-windows"></a>Exportar e importar una base de datos en Linux con SSMS o SqlPackage.exe en Windows
 
@@ -25,7 +24,7 @@ ms.lasthandoff: 05/03/2018
 
 Este artículo muestra cómo usar [SQL Server Management Studio (SSMS)](../ssms/download-sql-server-management-studio-ssms.md) y [SqlPackage.exe](https://msdn.microsoft.com/library/hh550080.aspx) para exportar e importar una base de datos en SQL Server 2017 en Linux. SSMS y SqlPackage.exe son aplicaciones de Windows, por lo que use esta técnica si tiene una máquina de Windows que se puede conectar a una instancia remota de SQL Server en Linux.
 
-Siempre debe instalar y usar la versión más reciente de SQL Server Management Studio (SSMS) como se describe en [usar SSMS en Windows para conectarse a SQL Server en Linux](sql-server-linux-develop-use-ssms.md)
+Siempre debe instalar y usar la versión más reciente de SQL Server Management Studio (SSMS) como se describe en [usar SSMS en Windows para conectarse a SQL Server en Linux](sql-server-linux-manage-ssms.md)
 
 > [!NOTE]
 > Si va a migrar una base de datos desde una instancia de SQL Server a otro, la recomendación es utilizar [copias de seguridad y restauración](sql-server-linux-migrate-restore-database.md).
@@ -34,7 +33,7 @@ Siempre debe instalar y usar la versión más reciente de SQL Server Management 
 
 1. Inicie SSMS escribiendo **Microsoft SQL Server Management Studio** en las ventanas del cuadro de búsqueda y, a continuación, haga clic en la aplicación de escritorio.
 
-    ![SQL Server Management Studio](./media/sql-server-linux-develop-use-ssms/ssms.png) 
+    ![SQL Server Management Studio](./media/sql-server-linux-manage-ssms/ssms.png) 
 
 2. Conectarse a la base de datos de origen en el Explorador de objetos. La base de datos de origen puede estar en Microsoft SQL Server que se ejecutan de forma local o en la nube, en Linux, Windows o Docker y base de datos de SQL Azure o almacenamiento de datos de SQL Azure.
 
@@ -52,7 +51,7 @@ El *. Archivo BACPAC se creó correctamente en la ubicación que elija y esté l
 
 1. Inicie SSMS escribiendo **Microsoft SQL Server Management Studio** en las ventanas del cuadro de búsqueda y, a continuación, haga clic en la aplicación de escritorio.
 
-    ![SQL Server Management Studio](./media/sql-server-linux-develop-use-ssms/ssms.png) 
+    ![SQL Server Management Studio](./media/sql-server-linux-manage-ssms/ssms.png) 
 
 2. Conectarse a su servidor de destino en el Explorador de objetos. El servidor de destino puede ser Microsoft SQL Server que se ejecutan de forma local o en la nube, en Linux, Windows o Docker y base de datos de SQL Azure o almacenamiento de datos de SQL Azure.
 

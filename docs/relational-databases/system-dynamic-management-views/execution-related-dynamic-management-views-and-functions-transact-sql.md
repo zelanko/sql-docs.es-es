@@ -3,8 +3,6 @@ title: Vistas de administración dinámica y funciones (Transact-SQL) relacionad
 ms.custom: ''
 ms.date: 04/24/2017
 ms.prod: sql
-ms.prod_service: database-engine
-ms.component: dmv's
 ms.reviewer: ''
 ms.suite: sql
 ms.technology: system-objects
@@ -20,11 +18,11 @@ caps.latest.revision: 36
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: c859abfec74459071902666ba2f3c2495b0afdbc
-ms.sourcegitcommit: d2573a8dec2d4102ce8882ee232cdba080d39628
+ms.openlocfilehash: f435d835e62ef5e129bba5bc33a9ec91cf1470b3
+ms.sourcegitcommit: 7019ac41524bdf783ea2c129c17b54581951b515
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/07/2018
+ms.lasthandoff: 05/23/2018
 ---
 # <a name="execution-related-dynamic-management-views-and-functions-transact-sql"></a>Funciones y vistas de administración dinámica relacionadas con ejecuciones (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]

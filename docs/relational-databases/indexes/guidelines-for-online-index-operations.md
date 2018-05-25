@@ -22,11 +22,11 @@ manager: craigg
 ms.suite: sql
 ms.prod_service: table-view-index, sql-database
 monikerRange: = azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: 97a125f6de05f5a17a5b1015c247f6d84cf8d434
-ms.sourcegitcommit: 0cc2cb281e467a13a76174e0d9afbdcf4ccddc29
+ms.openlocfilehash: 7762c5e00dde9e317cc1a1521385faad4c7d1d49
+ms.sourcegitcommit: 6fd8a193728abc0a00075f3e4766a7e2e2859139
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/15/2018
+ms.lasthandoff: 05/17/2018
 ---
 # <a name="guidelines-for-online-index-operations"></a>Directrices para operaciones de índices en línea
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -114,8 +114,11 @@ Por lo general, no hay ninguna diferencia en la calidad de desfragmentación ent
 
 ## <a name="online-default-options"></a>Opciones predeterminadas de ONLINE 
 
-Para establecer opciones predeterminadas para ONLINE o RESUMABLE en un nivel de base de datos, establezca las opciones de configuración de ámbito de base de datos ELEVATE_ONLINE o ELEVATE_RESUMABLE. Con estas opciones predeterminadas puede evitar que se lleve a cabo accidentalmente una operación que desactive la base de datos. Ambas opciones harán que el motor eleve automáticamente determinadas operaciones a la ejecución ONLINE o RESUMABLE.  
-Puede establecer cualquiera de las opciones como FAIL_UNSUPPORTED, WHEN_SUPPORTED o NEVER. Puede establecer valores diferentes para ONLINE y RESUMABLE. 
+> [!IMPORTANT]
+> Estas opciones están en fase de versión preliminar pública.
+
+Para establecer opciones predeterminadas para ONLINE o RESUMABLE en un nivel de base de datos, establezca las opciones de configuración de ámbito de base de datos ELEVATE_ONLINE o ELEVATE_RESUMABLE. Con estas opciones predeterminadas puede evitar que se lleve a cabo por error una operación que desactive la tabla de base de datos. Ambas opciones harán que el motor eleve automáticamente determinadas operaciones a la ejecución ONLINE o RESUMABLE.  
+Puede establecer estas opciones en FAIL_UNSUPPORTED, WHEN_SUPPORTED u OFF con el comando [ALTER DATABASE SCOPED CONFIGURATION](../../t-sql/statements/alter-database-scoped-configuration-transact-sql.md). Puede establecer valores diferentes para ONLINE y RESUMABLE. 
 
 ELEVATE_ONLINE y ELEVATE_RESUMABLE solo se aplican a las instrucciones de DDL que admiten la sintaxis de ONLINE y RESUMABLE, respectivamente. Por ejemplo, si intenta crear un índice XML con ELEVATE_ONLINE=FAIL_UNSUPORTED, la operación se ejecutará sin conexión, ya que los índices XML no admiten la sintaxis ONLINE=. Las opciones solo afectan a las instrucciones de DDL que se envían sin especificar una opción ONLINE o RESUMABLE. Por ejemplo, si se envía una instrucción con ONLINE=OFF o RESUMABLE=OFF, el usuario puede reemplazar un valor de configuración FAIL_UNSUPPORTED y ejecutar una instrucción sin conexión o no reanudable. 
  

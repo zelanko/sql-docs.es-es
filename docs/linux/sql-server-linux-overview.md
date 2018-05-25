@@ -4,20 +4,19 @@ description: Este artículo describe cómo SQL Server se ejecuta en Linux y prop
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.date: 04/17/2018
+ms.date: 05/24/2018
 ms.topic: article
 ms.prod: sql
-ms.prod_service: database-engine
 ms.component: ''
 ms.suite: sql
 ms.custom: sql-linux
-ms.technology: database-engine
+ms.technology: linux
 ms.assetid: 9dcc6a90-0add-42c2-815b-862e4e2a21ac
-ms.openlocfilehash: 9b7be087286d02d2aafa66846e4f1a4c66537f64
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 2c67e5d1563ef2420f45ec4b1d0093de888dd157
+ms.sourcegitcommit: a9da0abd3e17fbcd6339980d7331d0418cdada53
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 05/24/2018
 ---
 # <a name="sql-server-on-linux"></a>SQL Server en Linux
 
@@ -45,7 +44,7 @@ Después de la instalación, conéctese a la instancia de SQL Server en su equip
 | Herramienta | Tutorial |
 |-----|-----|
 | Código de Visual Studio (frente a código) | [Usar código de VS con SQL Server en Linux](sql-server-linux-develop-use-vscode.md) |
-| SQL Server Management Studio (SSMS) | [Usar SSMS en Windows para conectarse a SQL Server en Linux](sql-server-linux-develop-use-ssms.md) |
+| SQL Server Management Studio (SSMS) | [Usar SSMS en Windows para conectarse a SQL Server en Linux](sql-server-linux-manage-ssms.md) |
 | SQL Server Data Tools (SSDT) | [Usar SSDT con SQL Server en Linux](sql-server-linux-develop-use-ssdt.md) |
 
 ## <a name="explore"></a>Explorar

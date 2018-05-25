@@ -8,16 +8,23 @@ ms.topic: conceptual
 author: HeidiSteen
 ms.author: heidist
 manager: cgronlun
-ms.openlocfilehash: 1106d0f1505f29a3b54f9fc036fcaf28b8715b75
-ms.sourcegitcommit: feff98b3094a42f345a0dc8a31598b578c312b38
+ms.openlocfilehash: 20ef7181c5ab8c0494f73b205dddcdf1ac0a620e
+ms.sourcegitcommit: b5ab9f3a55800b0ccd7e16997f4cd6184b4995f9
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/11/2018
+ms.lasthandoff: 05/23/2018
 ---
 # <a name="install-new-r-packages-on-sql-server"></a>Instalar nuevos paquetes de R en SQL Server
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
 
-En este artículo se describe cómo instalar nuevos paquetes de R a una instancia de SQL Server donde está habilitado el aprendizaje automático. Existen varios métodos para instalar nuevos paquetes de R, dependiendo de qué versión de SQL Server tiene, y si el servidor tiene una conexión a internet.
+En este artículo se describe cómo instalar nuevos paquetes de R a una instancia de SQL Server donde está habilitado el aprendizaje automático. Existen varios métodos para instalar nuevos paquetes de R, dependiendo de qué versión de SQL Server tiene, y si el servidor tiene una conexión a internet. Los métodos siguientes para la nueva instalación de paquete son posibles.
+
+| Método                           | Permissions  | Remota o Local |
+|------------------------------------|---------------------------|-------|
+| [Utilizar administradores de paquetes de R convencionales](#bkmk_rInstall)  | Administración | Local |
+| [Uso de RevoScaleR](use-revoscaler-to-manage-r-packages.md) | Administración | Local |
+| [Usar T-SQL (crear biblioteca externa)](install-r-packages-tsql.md) | Administrador para que el programa de instalación, después los roles de base de datos | both 
+| [Use una miniCRAN para crear un repositorio local](create-a-local-package-repository-using-minicran.md) | Administrador para que el programa de instalación, después los roles de base de datos | both |
 
 ## <a name="bkmk_rInstall"></a> Instalar paquetes de R a través de una conexión a Internet
 
@@ -75,51 +82,6 @@ Este procedimiento se supone que ha preparado todos los paquetes que necesita, e
     Este comando extrae el paquete de R `mynewpackage` de su archivo comprimido local, siempre que haya guardado la copia en el directorio `C:\Temp\Downloaded packages`e instala el paquete en el equipo local. Si el paquete tiene dependencias, el instalador comprueba si los paquetes existentes en la biblioteca. Si ha creado un repositorio que incluye las dependencias, el programa de instalación instala también los paquetes necesarios.
 
     Si los paquetes necesarios no están presentes en la biblioteca de la instancia y no se encuentra en los archivos comprimidos, se produce un error en la instalación del paquete de destino.
-
-## <a name="bkmk_createlibrary"></a> CREAR una biblioteca externa de uso
-
-**Se aplica a:**  [!INCLUDE[sssql17-md](../../includes/sssql17-md.md)] [!INCLUDE[rsql-productnamenew-md](../../includes/rsql-productnamenew-md.md)]
-
-El [crear biblioteca externa](https://docs.microsoft.com/sql/t-sql/statements/create-external-library-transact-sql) instrucción hace posible agregar un paquete o un conjunto de paquetes a una instancia o una base de datos sin ejecutar código R o directamente el código Python. Sin embargo, este método requiere la preparación del paquete y los permisos de base de datos adicional.
-
-+ Todos los paquetes deben estar disponibles como un archivo comprimido local, en lugar de se descargan a petición desde internet.
-
-    Si no tiene acceso al sistema de archivos en el servidor, también puede pasar un paquete completo como una variable, usando un formato binario. Para obtener más información, consulte [crear biblioteca externa](../../t-sql/statements/create-external-library-transact-sql.md).
-
-+ Todas las dependencias deben ser identificadas por el nombre y la versión e incluidas en el archivo zip. La instrucción produce un error si los paquetes necesarios no están disponibles, incluidas las dependencias de paquete de nivel inferior. Se recomienda usar **miniCRAN** o **igraph** para analizar las dependencias de paquetes. Instalar una versión incorrecta del paquete o dependencia del paquete, también puede producir un error en la instrucción. 
-
-+ Debe tener los permisos necesarios en la base de datos. Para obtener más información, consulte [crear biblioteca externa](https://docs.microsoft.com/sql/t-sql/statements/create-external-library-transact-sql).
-
-### <a name="prepare-the-packages-in-archive-format"></a>Preparar los paquetes en formato de archivo
-
-1. Si va a instalar un único paquete, descargue el paquete en formato comprimido. 
-
-2. Si el paquete requiere otros paquetes, debe comprobar que los paquetes necesarios están disponibles. Puede usar miniCRAN para analizar el paquete de destino e identificar todas sus dependencias. 
-
-3. Copie los archivos comprimidos o en el repositorio de miniCRAN que contiene todos los paquetes en una carpeta local en el servidor.
-
-4. Abra un **consulta** ventana, con una cuenta con privilegios administrativos.
-
-5. Ejecute la instrucción de T-SQL `CREATE EXTERNAL LIBRARY` para cargar la recopilación del paquete comprimido en la base de datos.
-
-    Por ejemplo, la siguiente instrucción nombres como el origen del paquete un repositorio de miniCRAN que contiene el **randomForest** paquete, junto con sus dependencias. 
-
-    ```R
-    CREATE EXTERNAL LIBRARY randomForest
-    FROM (CONTENT = 'C:\Temp\Rpackages\randomForest_4.6-12.zip')
-    WITH (LANGUAGE = 'R');
-    ```
-
-    No se puede usar un nombre arbitrario; el nombre de biblioteca externa debe tener el mismo nombre que se espera que se utilizará al cargar o el paquete de la llamada.
-
-6. Si la biblioteca se haya creado correctamente, puede ejecutar el paquete en SQL Server, si lo llaman dentro de un procedimiento almacenado.
-    
-    ```SQL
-    EXEC sp_execute_external_script
-    @language =N'R',
-    @script=N'
-    library(randomForest)'
-    ```
 
 ## <a name="tips-for-package-installation"></a>Sugerencias para la instalación del paquete
 

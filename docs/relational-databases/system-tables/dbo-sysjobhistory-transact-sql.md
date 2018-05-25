@@ -24,11 +24,11 @@ caps.latest.revision: 21
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 7db9c0029f64697665ca06c932c54c169f57660e
-ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
+ms.openlocfilehash: 3ab9fbfb6a574f8f6c91ee15789c67cac204d5f3
+ms.sourcegitcommit: ee661730fb695774b9c483c3dd0a6c314e17ddf8
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 05/19/2018
 ---
 # <a name="dbosysjobhistory-transact-sql"></a>dbo.sysjobhistory (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -46,7 +46,7 @@ ms.lasthandoff: 05/04/2018
 |**sql_message_id**|**int**|Id. de los mensajes de error de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] devueltos si el trabajo genera algún error.|  
 |**sql_severity**|**int**|Gravedad de cualquier error de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].|  
 |**message**|**nvarchar(4000)**|Texto de un error de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], si existe.|  
-|**run_status**|**int**|Estado de la ejecución del trabajo:<br /><br /> **0** = error<br /><br /> **1** = se ha realizado correctamente<br /><br /> **2** = reintento<br /><br /> **3** = cancelado|  
+|**run_status**|**int**|Estado de la ejecución del trabajo:<br /><br /> **0** = error<br /><br /> **1** = se ha realizado correctamente<br /><br /> **2** = reintento<br /><br /> **3** = cancelado<br /><br /> **4** = en curso|  
 |**run_date**|**int**|Fecha en que se empezó a ejecutar el trabajo o paso. En el caso de un historial En curso, es la fecha y hora en que fue escrito.|  
 |**run_time**|**int**|Hora a la que comenzó el trabajo o paso.|  
 |**run_duration**|**int**|Tiempo transcurrido en la ejecución del trabajo o paso en **HHMMSS** formato.|  

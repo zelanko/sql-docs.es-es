@@ -1,1 +1,1 @@
-SQL Database
+Base de datos SQL

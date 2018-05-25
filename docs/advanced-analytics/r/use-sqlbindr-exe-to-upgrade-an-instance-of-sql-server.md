@@ -8,11 +8,11 @@ ms.topic: conceptual
 author: HeidiSteen
 ms.author: heidist
 manager: cgronlun
-ms.openlocfilehash: aa67fbf2480de093ffe2f919e9c50ee2d5082b83
-ms.sourcegitcommit: df382099ef1562b5f2d1cd506c1170d1db64de41
+ms.openlocfilehash: 694cbb2a6addc89f40dd6d9670768ad13a84ef3f
+ms.sourcegitcommit: b5ab9f3a55800b0ccd7e16997f4cd6184b4995f9
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/12/2018
+ms.lasthandoff: 05/23/2018
 ---
 # <a name="upgrade-machine-learning-r-and-python-components-in-sql-server-instances"></a>Actualizar los componentes de aprendizaje (R y Python) de máquina en instancias de SQL Server
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
@@ -258,37 +258,6 @@ Como alternativa, se trata más trabajo, pero podría también totalmente desins
 
 Puede que haya agregado otros paquetes de terceros o de código abierto a la biblioteca del paquete. Puesto que invertir el enlace, cambia la ubicación de la biblioteca de paquetes de forma predeterminada, debe volver a instalar los paquetes a la biblioteca que está usando ahora R y Python. Para obtener más información, consulte [predeterminado paquetes](installing-and-managing-r-packages.md), [instalar nuevos paquetes de R](install-additional-r-packages-on-sql-server.md), y [instalar nuevos paquetes de Python](../python/install-additional-python-packages-on-sql-server.md).
 
-## <a name="known-issues"></a>Problemas conocidos
-
-Esta sección enumeran problemas conocidos específicos para usar de la utilidad SqlBindR.exe o a las actualizaciones del servidor de aprendizaje de máquina que podrían afectar a instancias de SQL Server.
-
-### <a name="restoring-packages-that-were-previously-installed"></a>Restaurando los paquetes que estaban previamente instalados
-
-Si ha actualizado a Microsoft R Server 9.0.1, la versión de SqlBindR.exe para esa versión no se pudo restaurar los paquetes originales o componentes de R por completo, que requieren que el usuario ejecute la reparación de SQL Server en la instancia, aplican todas las versiones de servicio y, a continuación, reiniciar la instancia.
-
-Una versión posterior de SqlBindR automáticamente restaurar las características de R originales, lo que elimina la necesidad de volver a instalar componentes de R o volver a aplicar la revisión del servidor. Sin embargo, debe instalar las actualizaciones de paquete de R que pueden haber agregado tras la instalación inicial.
-
-Si ha usado las funciones de administración de paquetes para instalar y compartir el paquete, esta tarea es mucho más fácil: puede usar comandos de R para sincronizar los paquetes instalados en el sistema de archivos con registros de la base de datos y viceversa. Para obtener más información, consulte [administración de paquetes de R para SQL Server](r-package-management-for-sql-server-r-services.md).
-
-### <a name="problems-with-multiple-upgrades-from-sql-server"></a>Problemas con varias actualizaciones de SQL Server
-
-Si previamente ha actualizado una instancia de SQL Server 2016 R Services a 9.0.1, al ejecutar el nuevo instalador de Microsoft R Server 9.1.0, muestra una lista de todas las instancias válidas y, a continuación, de forma predeterminada, selecciona instancias enlazadas previamente. Si continúa, las instancias enlazadas previamente son independientes. Como resultado, el 9.0.1 anteriores se quita la instalación, los incluidos relacionados con los paquetes, pero no se instala la nueva versión de Microsoft R Server (9.1.0).
-
-Como alternativa, puede modificar la instalación del servidor de R existente como se indica a continuación:
-1. En el Panel de Control, abra **agregar o quitar programas**.
-2. Busque Microsoft R Server y haga clic en **cambiar o modificar**.
-3. Cuando se inicia el programa de instalación, seleccione las instancias que desea enlazar a 9.1.0.
-
-Aprendizaje de máquina Microsoft Server 9.2.1 y 9.3 no tiene este problema.
-
-### <a name="binding-or-unbinding-leaves-multiple-temporary-folders"></a>Enlazar o desenlazar deja varias carpetas temporales
-
-A veces, el enlace y operaciones Desenlazando producirá un error limpiar las carpetas temporales.
-Si encuentra carpetas con un nombre parecido a esto, puede quitar una vez completada la instalación: R_SERVICES_<guid>
-
-> [!NOTE]
-> Asegúrese de esperar hasta que finalice la instalación. Puede tardar mucho tiempo para quitar las bibliotecas de R asociadas con una versión y, a continuación, agregar las nuevas bibliotecas de R. Cuando se complete la operación, se quitan las carpetas temporales.
-
 ## <a name="sqlbindrexe-command-syntax"></a>Sintaxis del comando SqlBindR.exe
 
 ### <a name="usage"></a>Uso
@@ -322,6 +291,36 @@ Instalador de MLS y SqlBindR devuelven los siguientes códigos de error y mensaj
 |Enlazar error 8 | Deshacer el enlace de error | Se produjo un error al deshacer el enlace de la instancia. |
 |Enlazar error 9 | No se encontraron instancias | No se encontró ninguna instancia del motor de base de datos en este equipo. |
 
+## <a name="known-issues"></a>Problemas conocidos
+
+Esta sección enumeran problemas conocidos específicos para usar de la utilidad SqlBindR.exe o a las actualizaciones del servidor de aprendizaje de máquina que podrían afectar a instancias de SQL Server.
+
+### <a name="restoring-packages-that-were-previously-installed"></a>Restaurando los paquetes que estaban previamente instalados
+
+Si ha actualizado a Microsoft R Server 9.0.1, la versión de SqlBindR.exe para esa versión no se pudo restaurar los paquetes originales o componentes de R por completo, que requieren que el usuario ejecute la reparación de SQL Server en la instancia, aplican todas las versiones de servicio y, a continuación, reiniciar la instancia.
+
+Una versión posterior de SqlBindR automáticamente restaurar las características de R originales, lo que elimina la necesidad de volver a instalar componentes de R o volver a aplicar la revisión del servidor. Sin embargo, debe instalar las actualizaciones de paquete de R que pueden haber agregado tras la instalación inicial.
+
+Si ha usado las funciones de administración de paquetes para instalar y compartir el paquete, esta tarea es mucho más fácil: puede usar comandos de R para sincronizar los paquetes instalados en el sistema de archivos con registros de la base de datos y viceversa. Para obtener más información, consulte [administración de paquetes de R para SQL Server](r-package-management-for-sql-server-r-services.md).
+
+### <a name="problems-with-multiple-upgrades-from-sql-server"></a>Problemas con varias actualizaciones de SQL Server
+
+Si previamente ha actualizado una instancia de SQL Server 2016 R Services a 9.0.1, al ejecutar el nuevo instalador de Microsoft R Server 9.1.0, muestra una lista de todas las instancias válidas y, a continuación, de forma predeterminada, selecciona instancias enlazadas previamente. Si continúa, las instancias enlazadas previamente son independientes. Como resultado, el 9.0.1 anteriores se quita la instalación, los incluidos relacionados con los paquetes, pero no se instala la nueva versión de Microsoft R Server (9.1.0).
+
+Como alternativa, puede modificar la instalación del servidor de R existente como se indica a continuación:
+1. En el Panel de Control, abra **agregar o quitar programas**.
+2. Busque Microsoft R Server y haga clic en **cambiar o modificar**.
+3. Cuando se inicia el programa de instalación, seleccione las instancias que desea enlazar a 9.1.0.
+
+Aprendizaje de máquina Microsoft Server 9.2.1 y 9.3 no tiene este problema.
+
+### <a name="binding-or-unbinding-leaves-multiple-temporary-folders"></a>Enlazar o desenlazar deja varias carpetas temporales
+
+A veces, el enlace y operaciones Desenlazando producirá un error limpiar las carpetas temporales.
+Si encuentra carpetas con un nombre parecido a esto, puede quitar una vez completada la instalación: R_SERVICES_<guid>
+
+> [!NOTE]
+> Asegúrese de esperar hasta que finalice la instalación. Puede tardar mucho tiempo para quitar las bibliotecas de R asociadas con una versión y, a continuación, agregar las nuevas bibliotecas de R. Cuando se complete la operación, se quitan las carpetas temporales.
 
 ## <a name="see-also"></a>Vea también
 

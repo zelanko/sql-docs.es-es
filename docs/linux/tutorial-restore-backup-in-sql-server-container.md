@@ -7,16 +7,15 @@ manager: craigg
 ms.date: 10/02/2017
 ms.topic: article
 ms.prod: sql
-ms.prod_service: database-engine
 ms.component: ''
 ms.suite: sql
 ms.custom: sql-linux
-ms.technology: database-engine
-ms.openlocfilehash: 0e86081f681c87e09b5cfde1fec85f20967de1a1
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.technology: linux
+ms.openlocfilehash: dbab0dd07db4859c83a827285e810ee818c3aeb8
+ms.sourcegitcommit: b5ab9f3a55800b0ccd7e16997f4cd6184b4995f9
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 05/23/2018
 ---
 # <a name="restore-a-sql-server-database-in-a-linux-docker-container"></a>Restaurar una base de datos de SQL Server en un contenedor Linux Docker
 
@@ -139,7 +138,7 @@ Este tutorial se usa el [base de datos de ejemplo Wide World Importers](../sampl
 El archivo de copia de seguridad se encuentra dentro del contenedor. Antes de restaurar la copia de seguridad, es importante conocer los nombres de archivo lógico y tipos de archivo dentro de la copia de seguridad. Los siguientes comandos de Transact-SQL inspeccionar la copia de seguridad y realizar la restauración con **sqlcmd** en el contenedor.
 
 > [!TIP]
-> Este tutorial usa **sqlcmd** dentro del contenedor, dado que el contenedor viene con esta herramienta previamente instalada. Sin embargo, también puede ejecutar instrucciones Transact-SQL con otro cliente herramientas fuera del contenedor, como [código de Visual Studio](sql-server-linux-develop-use-vscode.md) o [SQL Server Management Studio](sql-server-linux-develop-use-ssms.md). Para conectarse, use el puerto de host que se ha asignado al puerto 1433 en el contenedor. En este ejemplo, que es **localhost, 1401** en el equipo host y **Host_IP_Address, 1401** remotamente.
+> Este tutorial usa **sqlcmd** dentro del contenedor, dado que el contenedor viene con esta herramienta previamente instalada. Sin embargo, también puede ejecutar instrucciones Transact-SQL con otro cliente herramientas fuera del contenedor, como [código de Visual Studio](sql-server-linux-develop-use-vscode.md) o [SQL Server Management Studio](sql-server-linux-manage-ssms.md). Para conectarse, use el puerto de host que se ha asignado al puerto 1433 en el contenedor. En este ejemplo, que es **localhost, 1401** en el equipo host y **Host_IP_Address, 1401** remotamente.
 
 1. Ejecutar **sqlcmd** dentro del contenedor de lista de nombres de archivo lógicos y las rutas de acceso dentro de la copia de seguridad. Esto se realiza con el **RESTORE FILELISTONLY** instrucción Transact-SQL.
 

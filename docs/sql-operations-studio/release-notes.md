@@ -13,11 +13,11 @@ ms.topic: conceptual
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 47c5e129ca6c77f9116b6be928f202341d457041
-ms.sourcegitcommit: 38f8824abb6760a9dc6953f10a6c91f97fa48432
+ms.openlocfilehash: 3f461b78c3d76f7e6b848b83d8a2333dffe5de3c
+ms.sourcegitcommit: a9da0abd3e17fbcd6339980d7331d0418cdada53
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/10/2018
+ms.lasthandoff: 05/24/2018
 ---
 # <a name="sql-operations-studio-preview-release-notes"></a>Notas de la versión de SQL Operations Studio (versión preliminar)
 
@@ -33,7 +33,7 @@ El *puede Public Preview* se centra en la estabilización y correcciones de erro
 
 - Informe sobre la ampliación de la búsqueda de SQL Redgate disponible en el Administrador de extensiones.
 - Localización de la Comunidad disponible en 10 idiomas: alemán, español, francés, italiano, japonés, coreano, portugués, ruso, chino simplificado y chino tradicional.
-- Compilación conforme a GDPR ha reducido recopilación de telemetría, una mejor experiencia de desactivación y vínculos del producto a la declaración de privacidad.
+- Recopilación de telemetría reducida, una mejor experiencia de desactivación y vínculos del producto a la declaración de privacidad.
 - Administrador de extensiones tiene Marketplace mejor experiencia para descubrir fácilmente las extensiones de la Comunidad.
 - Extensión trabajos del Agente SQL y el historial de trabajos para la mejora de vista.
 - Actualizaciones de whoisactive y extensiones de informes del servidor.

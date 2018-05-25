@@ -7,17 +7,16 @@ manager: craigg
 ms.date: 02/22/2018
 ms.topic: article
 ms.prod: sql
-ms.prod_service: database-engine
 ms.component: ''
 ms.suite: sql
 ms.custom: sql-linux
-ms.technology: database-engine
+ms.technology: linux
 ms.assetid: 31c8c92e-12fe-4728-9b95-4bc028250d85
-ms.openlocfilehash: 140aa9d888eb2e58963dda50e3ff7a6fb68d37fe
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: ebe7da1e1024cefc14c52d0a02e0517b764c8d07
+ms.sourcegitcommit: b5ab9f3a55800b0ccd7e16997f4cd6184b4995f9
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 05/23/2018
 ---
 # <a name="quickstart-install-sql-server-and-create-a-database-on-ubuntu"></a>Inicio rápido: Instalar SQL Server y crear una base de datos en Ubuntu
 
@@ -141,7 +140,7 @@ Siga estos pasos para instalar el **mssql herramientas** en Ubuntu.
 > **Sqlcmd** es simplemente una herramienta para conectarse a SQL Server para ejecutar consultas y realizar tareas de administración y desarrollo. Otras herramientas incluyen:
 >
 > * [SQL Server Operations Studio (versión preliminar)](../sql-operations-studio/what-is.md)
-> * [SQL Server Management Studio](sql-server-linux-develop-use-ssms.md)
+> * [SQL Server Management Studio](sql-server-linux-manage-ssms.md)
 > * [Código de Visual Studio](sql-server-linux-develop-use-vscode.md).
 > * [mssql-cli (versión preliminar)](https://blogs.technet.microsoft.com/dataplatforminsider/2017/12/12/try-mssql-cli-a-new-interactive-command-line-tool-for-sql-server/)
 

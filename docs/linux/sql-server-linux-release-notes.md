@@ -4,20 +4,19 @@ description: Este artículo contiene las notas de la versión y características
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.date: 04/20/2018
+ms.date: 05/24/2018
 ms.topic: article
 ms.prod: sql
-ms.prod_service: database-engine
 ms.component: ''
 ms.suite: sql
 ms.custom: sql-linux
-ms.technology: database-engine
+ms.technology: linux
 ms.assetid: 1314744f-fcaf-46db-800e-2918fa7e1b6c
-ms.openlocfilehash: b89daab4515e3017aa6e80f462e54020caf4ff91
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 07782a5b8290b41a5a11557c503fcbfd0736790b
+ms.sourcegitcommit: a9da0abd3e17fbcd6339980d7331d0418cdada53
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 05/24/2018
 ---
 # <a name="release-notes-for-sql-server-2017-on-linux"></a>Notas de la versión de SQL Server 2017 en Linux
 
@@ -47,6 +46,7 @@ En la tabla siguiente se enumera el historial de versiones de SQL Server 2017.
 
 | Versión | Versión | Fecha de lanzamiento |
 |-----|-----|-----|
+| [CU7](#CU7) | 14.0.3026.27 | 2018 5 |
 | [CU6](#CU6) | 14.0.3025.34 | 4-2018 |
 | [CU5](#CU5) | 14.0.3023.8 | 3-2018 |
 | [CU4](#CU4) | 14.0.3022.28 | 2-2018 |
@@ -65,6 +65,20 @@ Si va a actualizar los paquetes existentes de SQL Server, ejecute el comando de 
 - [Instalar el paquete de la búsqueda de texto completo](sql-server-linux-setup-full-text-search.md)
 - [Instalar SQL Server Integration Services](sql-server-linux-setup-ssis.md)
 - [Habilitar el Agente SQL Server](sql-server-linux-setup-sql-agent.md)
+
+## <a id="CU7"></a> CU7 (mayo de 2018)
+
+Se trata de la versión de la actualización acumulativa 7 (CU7) de SQL Server 2017. La versión del motor de SQL Server para esta versión es 14.0.3026.27. Para obtener información acerca de las correcciones y mejoras en esta versión, consulte [ https://support.microsoft.com/en-us/help/4229789 ](https://support.microsoft.com/en-us/help/4229789).
+
+### <a name="package-details"></a>Detalles del paquete
+
+Para las instalaciones de paquete manual o sin conexión, puede descargar los paquetes RPM y Debian con la información en la tabla siguiente:
+
+| Paquete | versión del paquete | Descargas |
+|-----|-----|-----|
+| Paquete de Red Hat RPM | 14.0.3026.27-2 | [Paquete RPM del motor](https://packages.microsoft.com/rhel/7/mssql-server-2017/mssql-server-14.0.3026.27-2.x86_64.rpm)</br>[Paquete alta disponibilidad RPM](https://packages.microsoft.com/rhel/7/mssql-server-2017/mssql-server-ha-14.0.3026.27-2.x86_64.rpm)</br>[Paquete de RPM de búsqueda de texto completo](https://packages.microsoft.com/rhel/7/mssql-server-2017/mssql-server-fts-14.0.3026.27-2.x86_64.rpm)</br>[Paquete SSIS](https://packages.microsoft.com/rhel/7/mssql-server-2017/mssql-server-is-14.0.1000.169-1.x86_64.rpm) | 
+| Paquete de SLES RPM | 14.0.3026.27-2 | [paquete de RPM del motor de servidor MSSQL](https://packages.microsoft.com/sles/12/mssql-server-2017/mssql-server-14.0.3026.27-2.x86_64.rpm)</br>[Paquete alta disponibilidad RPM](https://packages.microsoft.com/sles/12/mssql-server-2017/mssql-server-ha-14.0.3026.27-2.x86_64.rpm)</br>[Paquete de RPM de búsqueda de texto completo](https://packages.microsoft.com/sles/12/mssql-server-2017/mssql-server-fts-14.0.3026.27-2.x86_64.rpm) | 
+| Paquete de Debian Ubuntu 16.04 | 14.0.3026.27-2 | [Motor de paquete Debian](https://packages.microsoft.com/ubuntu/16.04/mssql-server-2017/pool/main/m/mssql-server/mssql-server_14.0.3026.27-2_amd64.deb)</br>[Paquete de Debian de alta disponibilidad](https://packages.microsoft.com/ubuntu/16.04/mssql-server-2017/pool/main/m/mssql-server-ha/mssql-server-ha_14.0.3026.27-2_amd64.deb)</br>[Paquete de Debian de búsqueda de texto completo](https://packages.microsoft.com/ubuntu/16.04/mssql-server-2017/pool/main/m/mssql-server-fts/mssql-server-fts_14.0.3026.27-2_amd64.deb)<br/>[Paquete SSIS](https://packages.microsoft.com/ubuntu/16.04/mssql-server-2017/pool/main/m/mssql-server-is/mssql-server-is_14.0.1000.169-1_amd64.deb) |
 
 ## <a id="CU6"></a> CU6 (abril de 2018)
 
@@ -353,7 +367,7 @@ Para obtener más información sobre SSIS en Linux, consulte los artículos sigu
 -   [Instalar SQL Server Integration Services (SSIS) en Linux](sql-server-linux-setup-ssis.md)
 -   [Extraer, transformar y cargar datos en Linux con SSIS](sql-server-linux-migrate-ssis.md)
 
-#### <a name="sql-server-management-studio-ssms"></a>SQL Server Management Studio (SSMS)
+#### <a name="-a-idssmsa-sql-server-management-studio-ssms"></a>< un Id. = "ssms" ></a> SQL Server Management Studio (SSMS)
 
 Las siguientes limitaciones se aplican a SSMS en Windows conectados a SQL Server en Linux.
 

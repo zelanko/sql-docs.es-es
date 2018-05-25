@@ -1,7 +1,7 @@
 ---
 title: Descargar SQL Server Management Studio (SSMS) | Microsoft Docs
 ms.custom: ''
-ms.date: 05/09/2018
+ms.date: 05/14/2018
 ms.prod: sql
 ms.prod_service: sql-tools
 ms.component: ssms
@@ -28,11 +28,11 @@ caps.latest.revision: 145
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 83dfecad826aea459a842b1eb908801bb469c5e8
-ms.sourcegitcommit: 38f8824abb6760a9dc6953f10a6c91f97fa48432
+ms.openlocfilehash: 8075a2ac4eaeb7b37d828eeee255f2a4e141968e
+ms.sourcegitcommit: ee661730fb695774b9c483c3dd0a6c314e17ddf8
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/10/2018
+ms.lasthandoff: 05/19/2018
 ---
 # <a name="download-sql-server-management-studio-ssms"></a>Descarga de SQL Server Management Studio (SSMS)
 [!INCLUDE[appliesto-ss-asdb-asdw-xxx-md](../includes/appliesto-ss-asdb-asdw-xxx-md.md)]
@@ -138,6 +138,33 @@ Esta versión de SSMS admite las siguientes plataformas de 64 bits cuando se usa
 A continuación se indican problemas y limitaciones relativos a la versión 17.7:
 
 Algunos cuadros de diálogo muestran un error de edición no válida cuando se trabaja con nuevas ediciones de Azure SQL Database *de uso general* o *crítico para la empresa*.
+
+
+## <a name="uninstall-and-reinstall-ssms"></a>Desinstalar y volver a instalar SSMS
+
+Si tiene algún problema con la instalación de SSMS que no se resuelve al instalarlo y volverlo a instalar, primero puede probar a [reparar](https://support.microsoft.com/help/4028054/windows-10-repair-or-remove-programs) Visual Studio 2015 IsoShell. Si el problema tampoco se resuelve al reparar Visual Studio 2015 IsoShell, pruebe los pasos que se indican a continuación, con los que se han podido resolver muchos problemas aleatorios:
+
+1.  Desinstale SSMS de la misma forma en que desinstalaría cualquier aplicación. Por ejemplo, con las opciones *Aplicaciones y características* o *Programas y características* en función de su versión de Windows.
+
+2.  Desinstale Visual Studio 2015 IsoShell **desde un símbolo del sistema con privilegios elevados**:
+   
+    ```PUSHD "C:\ProgramData\Package Cache\FE948F0DAB52EB8CB5A740A77D8934B9E1A8E301\redist"```
+
+    ```vs_isoshell.exe /Uninstall /Force /PromptRestart```
+
+3.  Desinstale Microsoft Visual C++ 2015 Redistributable de la misma forma en que desinstalaría cualquier aplicación. Si están en el equipo, desinstale x86 y x64.
+
+4.  Vuelva a instalar Visual Studio 2015 IsoShell **desde un símbolo del sistema con privilegios elevados**:  
+
+    ```PUSHD "C:\ProgramData\Package Cache\FE948F0DAB52EB8CB5A740A77D8934B9E1A8E301\redist"```  
+ 
+    ```vs_isoshell.exe /PromptRestart```
+
+5.  Vuelva a instalar SSMS.
+
+6.  Actualice a la [versión más reciente de Visual C++ 2015 Redistributable](https://support.microsoft.com/help/2977003/the-latest-supported-visual-c-downloads) si todavía no lo ha hecho.
+
+
 
 
 ## <a name="previous-releases"></a>Versiones anteriores

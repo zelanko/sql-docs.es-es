@@ -3,8 +3,6 @@ title: Vistas de administración dinámica (Transact-SQL) relacionadas con la ba
 ms.custom: ''
 ms.date: 05/18/2017
 ms.prod: sql
-ms.prod_service: database-engine
-ms.component: dmv's
 ms.reviewer: ''
 ms.suite: sql
 ms.technology: system-objects
@@ -20,11 +18,11 @@ caps.latest.revision: 20
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 73f728b784900c4f040fa00c453e739361204eaa
-ms.sourcegitcommit: d2573a8dec2d4102ce8882ee232cdba080d39628
+ms.openlocfilehash: a512ae98eb219b8614100fabb2d376841e9ce216
+ms.sourcegitcommit: 7019ac41524bdf783ea2c129c17b54581951b515
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/07/2018
+ms.lasthandoff: 05/23/2018
 ---
 # <a name="database-related-dynamic-management-views-transact-sql"></a>Vistas de administración dinámica relacionadas con la base de datos (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]

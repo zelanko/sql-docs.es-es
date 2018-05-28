@@ -7,17 +7,16 @@ manager: craigg
 ms.date: 03/17/2017
 ms.topic: article
 ms.prod: sql
-ms.prod_service: database-engine
 ms.component: ''
 ms.suite: sql
 ms.technology: linux
 ms.assetid: 9766ee75-32d3-4045-82a6-4c7968bdbaa6
 ms.custom: sql-linux
-ms.openlocfilehash: ccbd45cb28a4c1cea48b832fbe77dc662ab7eeb4
-ms.sourcegitcommit: 6fd8a193728abc0a00075f3e4766a7e2e2859139
-ms.translationtype: HT
+ms.openlocfilehash: 3291767b4fa1f7b18e751661f9beeb0e061f8146
+ms.sourcegitcommit: ee661730fb695774b9c483c3dd0a6c314e17ddf8
+ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/17/2018
+ms.lasthandoff: 05/19/2018
 ---
 # <a name="use-visual-studio-code-to-create-and-run-transact-sql-scripts-for-sql-server"></a>Usar código de Visual Studio para crear y ejecutar secuencias de comandos de Transact-SQL para SQL Server
 
@@ -28,7 +27,7 @@ Este artículo muestra cómo utilizar el **mssql** extensión para Visual Studio
 Código de Visual Studio es un editor de código gráfica para Linux, Mac OS y Windows que admita extensiones. El [**mssql** extensión de VS Code] le permite conectarse a SQL Server, consulta con Transact-SQL (T-SQL) y ver los resultados.
 
 ## <a name="install-vs-code"></a>Instalar el código de VS
-1. Si todavía no ha instalado VS Code, [descargar e instalar VS Code] en su equipo.
+1. Si todavía no ha instalado VS Code, [Descargar e instalar el código de VS] en su equipo.
 
 2. Iniciar frente a código.
 
@@ -50,7 +49,7 @@ Los siguientes pasos explican cómo instalar la extensión mssql.
    <img src="./media/sql-server-linux-develop-use-vscode/vscode-install-success-notification.png" alt="Installation success notification" style="width: 600px;"/>
 
    > [!NOTE]
-   > Para macOS, debe instalar OpenSSL. Se trata de un requisito previo para .net Core usa la extensión mssql. Siga el **instalar requisitos previos** los pasos de la [.Net Core instrucciones]. O bien, puede ejecutar los siguientes comandos en el Terminal de Mac OS.
+   > Para macOS, debe instalar OpenSSL. Se trata de un requisito previo para .net Core usa la extensión mssql. Siga el **instalar requisitos previos** los pasos de la [Instrucciones de núcleo de .net]. O bien, puede ejecutar los siguientes comandos en el Terminal de Mac OS.
    >
    >   ```bash
    >   brew update
@@ -60,7 +59,7 @@ Los siguientes pasos explican cómo instalar la extensión mssql.
    >   ```
    
    > [!NOTE]
-   > Para Windows 8.1, Windows Server 2012 o versiones inferiores, debe descargar e instalar la [tiempo de ejecución de C Universal de Windows 10]. Descargue y abra el archivo zip. A continuación, ejecute al instalador (archivo .msu) que se dirige a la configuración del sistema operativo actual.
+   > Para Windows 8.1, Windows Server 2012 o versiones inferiores, debe descargar e instalar la [En tiempo de ejecución de C Universal de Windows 10]. Descargue y abra el archivo zip. A continuación, ejecute al instalador (archivo .msu) que se dirige a la configuración del sistema operativo actual.
 
 ## <a name="create-or-open-a-sql-file"></a>Crear o abrir un archivo SQL
 
@@ -141,7 +140,7 @@ Los pasos siguientes muestran cómo conectarse a SQL Server con el código de VS
    <img src="./media/sql-server-linux-develop-use-vscode/vscode-create-database-messages.png" alt="create database messages" style="width: 500px;" />
 
    > [!TIP]
-   > Puede personalizar los enlaces de teclado de método abreviado para los comandos de extensión mssql. Vea [personalizar métodos abreviados de].
+   > Puede personalizar los enlaces de teclado de método abreviado para los comandos de extensión mssql. Vea [Personalizar métodos abreviados].
 
 ## <a name="create-a-table"></a>Creación de una tabla
 
@@ -252,21 +251,21 @@ Los pasos siguientes muestran cómo conectarse a SQL Server con el código de VS
 
 En un escenario real, puede crear una secuencia de comandos que necesita para guardar y ejecutar una versión posterior (para la administración o como parte de un proyecto de desarrollo más grande). En este caso, puede guardar la secuencia de comandos con un **.sql** extensión.
 
-Si está familiarizado con T-SQL, vea [Tutorial: escribir instrucciones de Transact-SQL] y [referencia de Transact-SQL (motor de base de datos)].
+Si está familiarizado con T-SQL, vea [Tutorial: Escribir instrucciones Transact-SQL] y [referencia de Transact-SQL (motor de base de datos)].
 
 Para obtener más información sobre el uso o que han contribuido a la extensión mssql, consulte [el wiki de proyecto de extensión mssql].
 
 Para obtener más información sobre el uso de código de VS, consulte el [documentación de código de Visual Studio](https://code.visualstudio.com/docs).
 
 [**mssql** extensión de VS Code]:https://aka.ms/mssql-marketplace
-[descargar e instalar VS Code]:https://code.visualstudio.com/Download
-[.Net Core instrucciones]:https://www.microsoft.com/net/core
-[administrar perfiles de conexión]:https://github.com/Microsoft/vscode-mssql/wiki/manage-connection-profiles
+[Descargar e instalar el código de VS]:https://code.visualstudio.com/Download
+[Instrucciones de núcleo de .net]:https://www.microsoft.com/net/core
+[Administrar perfiles de conexión]:https://github.com/Microsoft/vscode-mssql/wiki/manage-connection-profiles
 [recomendaciones para solucionar problemas de conexión]:./sql-server-linux-troubleshooting-guide.md#connection
-[personalizar métodos abreviados de]:https://github.com/Microsoft/vscode-mssql/wiki/customize-shortcuts
-[Tutorial: escribir instrucciones de Transact-SQL]:https://msdn.microsoft.com/library/ms365303.aspx
-[referencia de Transact-SQL (motor de base de datos)]:https://msdn.microsoft.com/library/bb510741.aspx
+[Personalizar métodos abreviados]:https://github.com/Microsoft/vscode-mssql/wiki/customize-shortcuts
+[Tutorial: Escribir instrucciones Transact-SQL]:https://msdn.microsoft.com/library/ms365303.aspx
+[Referencia de Transact-SQL (motor de base de datos)]:https://msdn.microsoft.com/library/bb510741.aspx
 [Visual Studio Code documentation]:https://code.visualstudio.com/docs
-[tiempo de ejecución de C Universal de Windows 10]:https://github.com/Microsoft/vscode-mssql/wiki/windows10-universal-c-runtime-requirement
+[En tiempo de ejecución de C Universal de Windows 10]:https://github.com/Microsoft/vscode-mssql/wiki/windows10-universal-c-runtime-requirement
 [personalizar las opciones de extensión]: https://github.com/Microsoft/vscode-mssql/wiki/customize-options
 [el wiki de proyecto de extensión mssql]: https://github.com/Microsoft/vscode-mssql/wiki

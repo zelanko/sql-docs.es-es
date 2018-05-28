@@ -17,7 +17,8 @@
 ## [Hoja de cálculo de planeamiento de capacidad del servidor de copia de seguridad](backup-capacity-planning-worksheet.md)
 ## [Configuración de adaptadores de red InfiniBand](configure-infiniband-network-adapters.md)
 
-# Query
+# Consulta
+## [Configurar estadísticas automáticas](configure-auto-statistics.md)
 ## [Supervisión de consultas activas](monitoring-active-queries.md)
 
 # Cargar
@@ -69,6 +70,7 @@
 ### [Configuración de la red del dispositivo](appliance-network-configuration.md)
 ### [Topología de PDW](pdw-topology.md)
 ### [Aprovisionamiento del certificado de PDW](pdw-certificate-provisioning.md)
+### [Modificador de características de PDW](appliance-feature-switch.md)
 ### [Configuración de firewall de PDW](pdw-firewall-configuration.md)
 ### [Estado de los servicios de PDW](pdw-services-status.md)
 ### [Configuración de la inicialización instantánea de archivos](instant-file-initialization-configuration.md)

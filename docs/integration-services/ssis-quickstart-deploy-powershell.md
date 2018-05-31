@@ -1,6 +1,6 @@
 ---
 title: Implementar un proyecto de SSIS con PowerShell | Microsoft Docs
-ms.date: 09/25/2017
+ms.date: 05/21/2018
 ms.topic: conceptual
 ms.prod: sql
 ms.prod_service: integration-services
@@ -12,20 +12,46 @@ ms.technology:
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 3f19d2fc8324f87c6792fa568cc736a7cd7aafec
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: f245553e318ccdba4f8f5d212e5c4c92ec5564ca
+ms.sourcegitcommit: b5ab9f3a55800b0ccd7e16997f4cd6184b4995f9
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 05/23/2018
+ms.locfileid: "34455128"
 ---
 # <a name="deploy-an-ssis-project-with-powershell"></a>Implementar un proyecto de SSIS con PowerShell
-Este tutorial de inicio rápido muestra cómo usar un script de PowerShell para conectarse a un servidor de bases de datos e implementar un proyecto de SSIS en el catálogo de SSIS.
+En este inicio rápido se muestra cómo usar un script de PowerShell para conectarse a un servidor de bases de datos e implementar un proyecto de SSIS en el catálogo de SSIS.
+
+## <a name="prerequisites"></a>Prerequisites
+
+Un servidor Azure SQL Database escucha en el puerto 1433. Si está intentando conectarse a un servidor de Azure SQL Database desde un firewall corporativo, este puerto debe estar abierto en el firewall corporativo para poder conectarse correctamente.
+
+## <a name="supported-platforms"></a>Plataformas compatibles
+
+Puede usar la información que aparece en este inicio rápido para implementar un proyecto de SSIS en las siguientes plataformas:
+
+-   SQL Server en Windows.
+
+-   Azure SQL Database. Para más información sobre cómo implementar y ejecutar paquetes en Azure, vea [Migrar cargas de trabajo de SQL Server Integration Services a la nube mediante lift-and-shift](lift-shift/ssis-azure-lift-shift-ssis-packages-overview.md).
+
+No puede usar la información que aparece en este inicio rápido para implementar un paquete de SSIS en SQL Server en Linux. Para más información sobre cómo ejecutar paquetes en Linux, vea [Extract, transform, and load data on Linux with SSIS](../linux/sql-server-linux-migrate-ssis.md) (Extraer, transformar y cargar datos en Linux con SSIS).
+
+## <a name="for-azure-sql-database-get-the-connection-info"></a>Para Azure SQL Database, obtener la información de conexión
+
+Para implementar el proyecto en Azure SQL Database, debe obtener la información de conexión necesaria para conectarse a la base de datos del catálogo de SSIS (SSISDB). Necesita el nombre completo y la información de inicio de sesión del servidor en los procedimientos siguientes.
+
+1. Inicie sesión en el [Portal de Azure](https://portal.azure.com/).
+2. Seleccione **Bases de datos SQL** en el menú izquierdo y, después, seleccione la base de datos SSISDB en la página **Bases de datos SQL**. 
+3. En la página **Introducción** de la base de datos, compruebe el nombre completo del servidor. Mantenga el puntero del ratón sobre el nombre del servidor para ver la opción **Haga clic para copiar**. 
+4. Si olvida la información de inicio de sesión del servidor de Azure SQL Database, navegue a la página del servidor de SQL Database para ver el nombre del administrador del servidor. Si es necesario, puede restablecer la contraseña.
+5. Haga clic en **Mostrar las cadenas de conexión de la base de datos**.
+6. Revise la cadena de conexión **ADO.NET** completa.
 
 ## <a name="powershell-script"></a>Script de PowerShell
 Proporcione los valores adecuados para las variables en la parte superior del script siguiente y, a continuación, ejecute el script para implementar el proyecto de SSIS.
 
 > [!NOTE]
-> En el ejemplo siguiente se usa la autenticación de Windows. Para usar la autenticación de SQL Server, reemplace el argumento `Integrated Security=SSPI;` por `User ID=<user name>;Password=<password>;`.
+> En el ejemplo siguiente se usa la autenticación de Windows para efectuar una implementación en un servidor de SQL Server local. Para usar la autenticación de SQL Server, reemplace el argumento `Integrated Security=SSPI;` por `User ID=<user name>;Password=<password>;`. Si se va a conectar a un servidor de Azure SQL Database, no puede usar la autenticación de Windows.
 
 ```powershell
 # Variables

@@ -1,6 +1,6 @@
 ---
 title: Implementar un proyecto de SSIS desde el símbolo del sistema | Microsoft Docs
-ms.date: 09/25/2017
+ms.date: 05/21/2018
 ms.topic: conceptual
 ms.prod: sql
 ms.prod_service: integration-services
@@ -12,16 +12,48 @@ ms.technology:
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: b7497837e9785a1e256921e354477bd345bcf49d
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 5f1bd8e0279da97974a4a1b420c7eea592931c6a
+ms.sourcegitcommit: b5ab9f3a55800b0ccd7e16997f4cd6184b4995f9
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 05/23/2018
+ms.locfileid: "34455310"
 ---
 # <a name="deploy-an-ssis-project-from-the-command-prompt-with-isdeploymentwizardexe"></a>Implementar un proyecto de SSIS desde el símbolo del sistema con ISDeploymentWizard.exe
-En este tutorial de inicio rápido se muestra cómo implementar un proyecto de SSIS desde el símbolo del sistema mediante la ejecución del asistente para la implementación de Integration Services, `ISDeploymentWizard.exe`.
+En este inicio rápido se muestra cómo implementar un proyecto de SSIS desde el símbolo del sistema mediante la ejecución del asistente para la implementación de Integration Services, `ISDeploymentWizard.exe`.
 
 Para obtener más información sobre el asistente para la implementación de Integration Services, consulte [Integration Services Deployment Wizard (Asistente para la implementación de Integration Services)](packages/deploy-integration-services-ssis-projects-and-packages.md#integration-services-deployment-wizard).
+
+## <a name="prerequisites"></a>Prerequisites
+
+La validación que de describe en este artículo para la implementación en Azure SQL Database requiere SQL Server Data Tools (SSDT), versión 17.4 o posterior. Para obtener la versión más reciente de SSDT, consulte [Descargar SQL Server Data Tools (SSDT)](../ssdt/download-sql-server-data-tools-ssdt.md).
+
+Un servidor Azure SQL Database escucha en el puerto 1433. Si está intentando conectarse a un servidor de Azure SQL Database desde un firewall corporativo, este puerto debe estar abierto en el firewall corporativo para poder conectarse correctamente.
+
+## <a name="supported-platforms"></a>Plataformas compatibles
+
+Puede usar la información que aparece en este inicio rápido para implementar un proyecto de SSIS en las siguientes plataformas:
+
+-   SQL Server en Windows.
+
+-   Azure SQL Database. Para más información sobre cómo implementar y ejecutar paquetes en Azure, vea [Migrar cargas de trabajo de SQL Server Integration Services a la nube mediante lift-and-shift](lift-shift/ssis-azure-lift-shift-ssis-packages-overview.md).
+
+No puede usar la información que aparece en este inicio rápido para implementar un paquete de SSIS en SQL Server en Linux. Para más información sobre cómo ejecutar paquetes en Linux, vea [Extract, transform, and load data on Linux with SSIS](../linux/sql-server-linux-migrate-ssis.md) (Extraer, transformar y cargar datos en Linux con SSIS).
+
+## <a name="for-azure-sql-database-get-the-connection-info"></a>Para Azure SQL Database, obtener la información de conexión
+
+Para implementar el proyecto en Azure SQL Database, debe obtener la información de conexión necesaria para conectarse a la base de datos del catálogo de SSIS (SSISDB). Necesita el nombre completo y la información de inicio de sesión del servidor en los procedimientos siguientes.
+
+1. Inicie sesión en el [Portal de Azure](https://portal.azure.com/).
+2. Seleccione **Bases de datos SQL** en el menú izquierdo y, después, seleccione la base de datos SSISDB en la página **Bases de datos SQL**. 
+3. En la página **Introducción** de la base de datos, compruebe el nombre completo del servidor. Mantenga el puntero del ratón sobre el nombre del servidor para ver la opción **Haga clic para copiar**. 
+4. Si olvida la información de inicio de sesión del servidor de Azure SQL Database, navegue a la página del servidor de SQL Database para ver el nombre del administrador del servidor. Si es necesario, puede restablecer la contraseña.
+
+## <a name="authentication-methods-in-the-deployment-wizard"></a>Métodos de autenticación en el Asistente para implementación
+
+Si va a efectuar una implementación en un servidor de SQL Server con el Asistente para implementación, deberá usar la autenticación de Windows, puesto que no se puede usar la autenticación de SQL Server.
+
+Si va a efectuar una implementación en un servidor de Azure SQL Database, deberá usar la autenticación de SQL Server o de Azure Active Directory, puesto que no se puede usar la autenticación de Windows.
 
 ## <a name="start-the-integration-services-deployment-wizard"></a>Iniciar el Asistente para implementación de Integration Services
 1. Abra una ventana de símbolo del sistema.
@@ -34,20 +66,23 @@ Para obtener más información sobre el asistente para la implementación de Int
 1. En la página **Introducción** del asistente, revise la introducción. Haga clic en **Siguiente** para abrir la página **Seleccionar origen**.
 
 2. En la página **Seleccionar origen**, seleccione el proyecto SSIS existente que hay que implementar.
-    -   Para implementar un archivo de implementación de proyectos que haya creado, seleccione **Archivo de implementación de proyecto** y especifique la ruta de acceso del archivo .ispac.
-    -   Para implementar un proyecto que resida en un catálogo de SSIS, seleccione **Catálogo de Integration Services** y especifique el nombre del servidor y la ruta de acceso al proyecto en el catálogo.
+    -   Para implementar un archivo de implementación de proyecto que haya creado compilando un proyecto en el entorno de desarrollo, seleccione **Archivo de implementación de proyecto** y especifique la ruta de acceso al archivo .ispac.
+    -   Para implementar un proyecto que ya se ha implementado en una base de datos del catálogo de SSIS, seleccione **Catálogo de Integration Services** y especifique el nombre del servidor y la ruta de acceso al proyecto del catálogo.
     Haga clic en **Siguiente** para ver la página **Seleccionar destino** .
   
 3.  En la página **Seleccionar destino**, seleccione el destino del proyecto.
-    -   Escriba el nombre completo del servidor. Si el servidor de destino es un servidor de Azure SQL Database, el nombre tendrá este formato: `<server_name>.database.windows.net`.
-    -   A continuación, haga clic en **Examinar** para seleccionar la carpeta de destino en SSISDB.
-    Haga clic en **Siguiente** para abrir la página **Revisión**.  
-  
+    -   Escriba el nombre completo del servidor. Si el servidor de destino es un servidor de Azure SQL Database, el nombre tendrá el formato `<server_name>.database.windows.net`.
+    -   Proporcione la información de autenticación y, después, seleccione **Conectar**. Vea [Métodos de autenticación en el Asistente para implementación](#wizard_auth) en este artículo.
+    -   A continuación, haga clic en **Examinar** para seleccionar la carpeta de destino de SSISDB.
+    -   Después, seleccione **Siguiente** para abrir la página **Revisión** (el botón **Siguiente** solo se habilitará después de que haya seleccionado **Conectar**).
+
 4.  En la página **Revisión**, revise la configuración seleccionada.
     -   Puede cambiar las selecciones si hace clic en **Anterior**o si hace clic en cualquiera de los pasos del panel izquierdo.
     -   Haga clic en **Implementar** para iniciar el proceso de implementación.
-  
-5.  Una vez completado el proceso de implementación, se abrirá la página **Resultados**. Esta página muestra si cada acción si se completó correctamente o no.
+
+5.  Si va a efectuar una implementación en un servidor de Azure SQL Database, se abrirá la página **Validar** y se comprobará si hay errores conocidos en los paquetes del proyecto que puedan evitar que se ejecuten según lo esperado en Azure SSIS Integration Runtime. Para obtener más información, vea [Validación de paquetes de SSIS implementados en Azure](lift-shift/ssis-azure-validate-packages.md).
+
+6.  Una vez completado el proceso de implementación, se abrirá la página **Resultados**. Esta página muestra si cada acción si se completó correctamente o no.
     -   Si se produce un error en la acción, haga clic en **Error** en la columna **Resultado** para que aparezca una explicación del error.
     -   De forma opcional, puede hacer clic en **Guardar informe** para guardar los resultados en un archivo XML.
     -   Haga clic en **Cerrar** para salir del asistente.

@@ -1,7 +1,7 @@
 ---
 title: Importación de datos de Excel a SQL | Microsoft Docs
 ms.custom: ''
-ms.date: 04/02/2018
+ms.date: 05/15/2018
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
 ms.component: import-export
@@ -15,36 +15,42 @@ author: douglaslMS
 ms.author: douglasl
 manager: craigg
 monikerRange: = azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: f65476db62b4d7eb617ca17cb0a400a8721fb75e
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: ebd7a83bb1decc8c75dfdd11255f2b09b4ba7d49
+ms.sourcegitcommit: ee661730fb695774b9c483c3dd0a6c314e17ddf8
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 05/19/2018
+ms.locfileid: "34329786"
 ---
 # <a name="import-data-from-excel-to-sql-server-or-azure-sql-database"></a>Importación de datos de Excel a SQL Server o Azure SQL Database
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
 Hay varias formas de importar datos de archivos de Excel a SQL Server o a Azure SQL Database. En este artículo, se resume cada una de estas opciones y se proporcionan vínculos a instrucciones más detalladas.
--   Puede importar datos en un solo paso desde Excel a SQL mediante una de las siguientes herramientas:
+
+La descripción completa de herramientas complejas y servicios como SSIS o Azure Data Factory queda fuera del ámbito de esta lista. Para obtener más información sobre la solución de su interés, siga los vínculos proporcionados.
+
+-   Puede importar datos en un solo paso, directamente desde Excel a SQL, usando una de las siguientes herramientas:
     -   El Asistente para importación y exportación de SQL Server
     -   SQL Server Integration Services (SSIS)
     -   La función OPENROWSET
--   Puede importar datos en dos pasos si guarda los datos como texto y, después, usa una de las siguientes herramientas:
+-   Puede importar datos en dos pasos exportando los datos de Excel como texto y, después, usando una de las siguientes herramientas para importar el archivo de texto:
     -   La instrucción BULK INSERT
     -   BCP
     -   Azure Data Factory
 
-La descripción completa de herramientas complejas y servicios como SSIS o Azure Data Factory queda fuera del ámbito de esta información general. Para obtener más información sobre la solución de su interés, siga los vínculos proporcionados.
+Si quiere importar varias hojas de cálculo de un libro de Excel, normalmente se tiene que ejecutar cada una de estas herramientas una vez para cada hoja.
 
 > [!IMPORTANT]
 > Para obtener información detallada sobre cómo conectarse a archivos de Excel y sobre las limitaciones y problemas conocidos a la hora de cargar datos de o a archivos de Excel, vea [Cargar datos de o a Excel con SQL Server Integration Services (SSIS)](../../integration-services/load-data-to-from-excel-with-ssis.md).
 
 ## <a name="sql-server-import-and-export-wizard"></a>Asistente para importación y exportación de SQL Server
 
-Importe datos directamente desde archivos de Excel siguiendo las páginas del Asistente para importación y exportación de SQL Server. Si lo desea, guarde la configuración de importación y exportación como un paquete de SQL Server Integration Services (SSIS) que puede personalizar y reutilizar.
+Importe datos directamente desde archivos de Excel siguiendo las páginas del Asistente para importación y exportación de SQL Server. Si lo desea, guarde la configuración como un paquete de SQL Server Integration Services (SSIS) que puede personalizar y reutilizar.
 
 ![Conexión a un origen de datos de Excel](media/excel-connection.png)
 
 Para obtener un ejemplo de uso del Asistente para importación de Excel a SQL Server, vea [Get started with this simple example of the Import and Export Wizard](../../integration-services/import-export-data/get-started-with-this-simple-example-of-the-import-and-export-wizard.md) (Comenzar con este sencillo ejemplo del Asistente para importar y exportar).
+
+Para obtener información sobre cómo iniciar el asistente, vea [Iniciar el Asistente para importación y exportación de SQL Server](../../integration-services/import-export-data/start-the-sql-server-import-and-export-wizard.md).
 
 ## <a name="sql-server-integration-services-ssis"></a>SQL Server Integration Services (SSIS)
 
@@ -59,6 +65,10 @@ Para obtener más información sobre estos componentes de SSIS, vea los siguient
 Para empezar a obtener información sobre cómo compilar paquetes de SSIS, vea el tutorial [How to Create an ETL Package](../../integration-services/ssis-how-to-create-an-etl-package.md) (Creación de un paquete de ETL).
 
 ## <a name="openrowset-and-linked-servers"></a>OPENROWSET y servidores vinculados
+
+> [!NOTE]
+> En Azure, las funciones OPENROWSET y OPENDATASOURCE solo están disponibles en Instancia administrada de SQL Database (versión preliminar).
+
 > [!NOTE]
 > El proveedor de ACE (anteriormente, el proveedor de Jet) que se conecta a los orígenes de datos de Excel está diseñado para un uso interactivo del lado cliente. Si utiliza el proveedor de ACE en el servidor, especialmente en procesos automatizados o en procesos que se ejecutan en paralelo, puede obtener resultados inesperados.
 
@@ -151,10 +161,12 @@ Para obtener más ejemplos e información sobre los servidores vinculados y las 
 -   [Uso de Excel con consultas distribuidas y servidores vinculados de SQL Server](https://support.microsoft.com/help/306397/how-to-use-excel-with-sql-server-linked-servers-and-distributed-queries)
 -   [Cómo importar datos de Excel en SQL Server](https://support.microsoft.com/help/321686/how-to-import-data-from-excel-to-sql-server)
 
-## <a name="prerequisite---save-excel-data-as-text"></a>Requisito previo: guardar datos de Excel como texto
+## <a name="prereq"></a> Requisito previo: guardar datos de Excel como texto
 Para usar el resto de los métodos descritos en esta página, es decir, la instrucción BULK INSERT, la herramienta BCP o Azure Data Factory, primero tiene que exportar los datos de Excel a un archivo de texto.
 
 En Excel, seleccione **Archivo | Guardar como** y, después, seleccione **Texto (delimitado por tabulaciones) (\*.txt)** o **CSV (delimitado por comas) (\*.csv)** como el tipo de archivo de destino.
+
+Si quiere exportar varias hojas de cálculo del libro, seleccione cada hoja y repita este procedimiento. El comando **Guardar como** solo exporta la hoja activa.
 
 > [!TIP]
 > Para obtener mejores resultados con las herramientas de importación de datos, guarde hojas que contienen solo los encabezados de columna y las filas de datos. Si los datos guardados contienen títulos de página, líneas en blanco, notas, etc., puede obtener resultados inesperados después al importar los datos.
@@ -162,6 +174,8 @@ En Excel, seleccione **Archivo | Guardar como** y, después, seleccione **Texto 
 ## <a name="bulk-insert-command"></a>Comando BULK INSERT
 
 `BULK INSERT` es un comando de Transact-SQL que se puede ejecutar desde SQL Server Management Studio. En el ejemplo siguiente, se cargan los datos del archivo delimitado por comas `Data.csv` en una tabla de base de datos existente.
+
+Como se ha descrito anteriormente en la sección [Requisitos previos](#prereq), debe exportar los datos de Excel como texto para poder usar BULK INSERT para importarlos. BULK INSERT no puede leer los archivos de Excel directamente.
 
 ```sql
 USE ImportFromExcel;
@@ -182,6 +196,8 @@ Para obtener más información, vea los temas siguientes:
 
 BCP es un programa que se ejecuta desde el símbolo del sistema. En el ejemplo siguiente, se cargan los datos del archivo delimitado por comas `Data.csv` en la tabla de base de datos `Data_bcp` existente.
 
+Como se ha descrito anteriormente en la sección [Requisitos previos](#prereq), debe exportar los datos de Excel como texto para poder usar BCP para importarlos. BCP no puede leer los archivos de Excel directamente.
+
 ```sql
 bcp.exe ImportFromExcel..Data_bcp in "D:\Desktop\data.csv" -T -c -t ,
 ```
@@ -194,12 +210,16 @@ Para obtener más información sobre BCP, vea los temas siguientes:
 ## <a name="copy-wizard-azure-data-factory"></a>Asistente para copia (Azure Data Factory)
 Importe datos guardados como archivos de texto siguiendo las páginas del Asistente para copia.
 
+Como se ha descrito anteriormente en la sección [Requisitos previos](#prereq), debe exportar los datos de Excel como texto para poder usar Azure Data Factory para importarlos. Data Factory no puede leer los archivos de Excel directamente.
+
 Para obtener más información sobre el Asistente para copia, vea los temas siguientes:
 -   [Asistente para copia de Azure Data Factory](https://docs.microsoft.com/azure/data-factory/data-factory-azure-copy-wizard)
 -   [Tutorial: crear una canalización con la actividad de copia mediante el Asistente para copia de Data Factory](https://docs.microsoft.com/azure/data-factory/data-factory-copy-data-wizard-tutorial)
 
 ## <a name="azure-data-factory"></a>Azure Data Factory
 Si está familiarizado con Azure Data Factory y no quiere ejecutar al Asistente para copia, cree una canalización con una actividad de copia que copie el archivo de texto en SQL Server o en Azure SQL Database.
+
+Como se ha descrito anteriormente en la sección [Requisitos previos](#prereq), debe exportar los datos de Excel como texto para poder usar Azure Data Factory para importarlos. Data Factory no puede leer los archivos de Excel directamente.
 
 Para obtener más información sobre el uso de estos orígenes y receptores de Data Factory, vea los temas siguientes:
 -   [Sistema de archivos](https://docs.microsoft.com/azure/data-factory/data-factory-onprem-file-system-connector)
@@ -211,4 +231,4 @@ Para empezar a obtener información sobre cómo copiar los datos con Azure Data 
 -   [Tutorial: Crear una canalización con la actividad de copia mediante Azure Portal](https://docs.microsoft.com/azure/data-factory/data-factory-copy-data-from-azure-blob-storage-to-sql-database)
 
 ## <a name="see-also"></a>Ver también
-[Cargar datos de o a Excel con SQL Server Integration Services (SSIS)](../../integration-services/load-data-to-from-excel-with-ssis.md)
+[Importación de datos desde Excel o exportación de datos a Excel con SQL Server Integration Services (SSIS)](../../integration-services/load-data-to-from-excel-with-ssis.md)

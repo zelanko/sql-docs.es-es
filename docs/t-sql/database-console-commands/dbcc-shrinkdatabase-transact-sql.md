@@ -31,11 +31,12 @@ caps.latest.revision: 62
 author: uc-msft
 ms.author: umajay
 manager: craigg
-ms.openlocfilehash: b6fe7fcf315849e6779b66087e8a87d2953d96d0
-ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
+ms.openlocfilehash: e6022b5609c2d4b4d362f90088bee4e84ad874c7
+ms.sourcegitcommit: 6fd8a193728abc0a00075f3e4766a7e2e2859139
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 05/17/2018
+ms.locfileid: "34236416"
 ---
 # <a name="dbcc-shrinkdatabase-transact-sql"></a>DBCC SHRINKDATABASE (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -80,7 +81,7 @@ DBCC SHRINKDATABASE
 ## <a name="result-sets"></a>Conjuntos de resultados  
 En la tabla siguiente se describen las columnas del conjunto de resultados.
   
-|Nombre de columna|Description|  
+|Nombre de columna|Descripción|  
 |-----------------|-----------------|  
 |**DbId**|Número de identificación de la base de datos del archivo que el [!INCLUDE[ssDE](../../includes/ssde-md.md)] intentó reducir.|  
 |**FileId**|Número de identificación del archivo que el [!INCLUDE[ssDE](../../includes/ssde-md.md)] intentó reducir.|  
@@ -93,6 +94,10 @@ En la tabla siguiente se describen las columnas del conjunto de resultados.
 > El [!INCLUDE[ssDE](../../includes/ssde-md.md)] no presenta filas para los archivos que no se reducen.  
   
 ## <a name="remarks"></a>Notas  
+
+>[!NOTE]
+> Actualmente, Azure SQL Data Warehouse no admite DBCC SHRINKDATABASE. No se recomienda ejecutar este comando, ya que se trata de una operación de uso intensivo de E/S y puede dejar el almacén de datos sin conexión. Además, después de ejecutar este comando habrá implicaciones económicas para sus instantáneas del almacén de datos. 
+
 Para reducir todos los archivos de datos y de registro de una base de datos específica, ejecute el comando DBCC SHRINKDATABASE. Para reducir un archivo de datos o de registro de cada vez para una base de datos específica, ejecute el comando [DBCC SHRINKFILE](../../t-sql/database-console-commands/dbcc-shrinkfile-transact-sql.md).
   
 Para ver la cantidad actual de espacio disponible (sin asignar) en la base de datos, ejecute [sp_spaceused](../../relational-databases/system-stored-procedures/sp-spaceused-transact-sql.md).
@@ -106,9 +111,6 @@ Ejecutar DBCC SHRINKDATABASE sin especificar la opción NOTRUNCATE o la opción 
 La base de datos que se comprime no tiene que estar en modo de usuario único; otros usuarios pueden estar trabajando en la base de datos cuando ésta se está reduciendo. Esto incluye las bases de datos del sistema.
   
 No se puede reducir una base de datos mientras se está realizando una copia de seguridad de la misma. Asimismo, no se puede realizar una copia de seguridad de una base de datos mientras se está realizando una operación de reducción de ésta.
-
->[!NOTE]
-> Actualmente, Azure SQL Data Warehouse no admite DBCC SHRINKDATABASE con TDE habilitado.
   
 ## <a name="how-dbcc-shrinkdatabase-works"></a>Cómo funciona DBCC SHRINKDATABASE  
 DBCC SHRINKDATABASE reduce los archivos de datos de uno en uno, pero reduce los archivos de registro como si todos estuvieran en una agrupación de registros contiguos.  Los archivos se reducen siempre desde el final.

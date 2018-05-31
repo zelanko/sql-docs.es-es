@@ -1,5 +1,5 @@
 ---
-title: Cargar datos de o a Excel con SSIS | Microsoft Docs
+title: Importación desde Excel o exportación a Excel con SSIS | Microsoft Docs
 ms.description: Describes how to import data from Excel or export data to Excel with SQL Server Integration Services (SSIS). Also describes prerequisites, known issues, and limitations.
 ms.date: 04/10/2018
 ms.prod: sql
@@ -14,27 +14,28 @@ ms.topic: conceptual
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: fd5a4863f2f94a693ae7216f39fbe0472a94a68b
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 075cb9c74fa551a6d6053c70ebfe77255b56a7a8
+ms.sourcegitcommit: 6fd8a193728abc0a00075f3e4766a7e2e2859139
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 05/17/2018
+ms.locfileid: "34236136"
 ---
-# <a name="load-data-from-or-to-excel-with-sql-server-integration-services-ssis"></a>Cargar datos de o a Excel con SQL Server Integration Services (SSIS)
+# <a name="import-data-from-excel-or-export-data-to-excel-with-sql-server-integration-services-ssis"></a>Importación de datos desde Excel o exportación de datos a Excel con SQL Server Integration Services (SSIS)
 
 En este artículo se describe cómo importar datos desde Excel o exportarlos a Excel con SQL Server Integration Services (SSIS). En el artículo también se describen los requisitos previos, limitaciones y problemas conocidos.
 
 Puede importar datos desde Excel o exportarlos a Excel creando un paquete de SSIS y usando el administrador de conexiones de Excel y el archivo de origen o de destino de Excel. También puede usar el Asistente para importación o exportación de SQL Server, que está integrado en SSIS.
 
 Este artículo contiene los tres conjuntos de información que necesita para usar Excel correctamente desde SSIS o para comprender y solucionar problemas comunes:
--   [Los archivos que necesita](#files-you-need).
--   La información que debe proporcionar al cargar datos desde o a Excel.
+1.  [Los archivos que necesita](#files-you-need).
+2.  La información que debe proporcionar al cargar datos desde o a Excel.
     -   [Especifique Excel](#specify-excel) como origen de los datos.
     -   Proporcione el [nombre de archivo y ruta de acceso de Excel](#excel-file).
     -   Seleccione la [versión de Excel](#excel-version).
     -   Especifique si la [primera fila de datos contiene nombres de columna](#first-row).
     -   Proporcione la [hoja de cálculo o rango que contiene los datos](#sheets-ranges).
--   Limitaciones y problemas conocidos.
+3.  Limitaciones y problemas conocidos.
     -   Problemas con los [tipos de datos](#issues-types).
     -   Problemas de [importación](#issues-importing).
     -   Problemas de [exportación](#issues-exporting).
@@ -57,7 +58,7 @@ Si tiene una suscripción de Office 365, puede que vea un mensaje de error al ej
 
 Si tiene problemas para instalar la versión 2016 Redistributable, instale la versión 2010 Redistributable desde aquí: [Microsoft Access Database Engine 2010 Redistributable](https://www.microsoft.com/download/details.aspx?id=13255) (no hay ninguna versión redistribuible para Excel 2013).
 
-## <a name="specify-excel"></a> Introducción
+## <a name="specify-excel"></a> Especificar Excel
 
 El primer paso consiste en indicar que desea conectarse a Excel.
 

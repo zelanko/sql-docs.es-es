@@ -1,6 +1,6 @@
 ---
 title: Implementar un proyecto de SSIS con Transact-SQL (SSMS) | Microsoft Docs
-ms.date: 09/25/2017
+ms.date: 05/21/2018
 ms.topic: conceptual
 ms.prod: sql
 ms.prod_service: integration-services
@@ -12,18 +12,16 @@ ms.technology:
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 975bf68b5d3255ff965e9092e84b2dabf982b90b
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 6bbcae0e5aea6521ad75401002d0a1488b5dbdf6
+ms.sourcegitcommit: b5ab9f3a55800b0ccd7e16997f4cd6184b4995f9
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 05/23/2018
+ms.locfileid: "34455168"
 ---
 # <a name="deploy-an-ssis-project-from-ssms-with-transact-sql"></a>Implementar un proyecto de SSIS desde SSMS con Transact-SQL
 
-En esta guía de inicio rápido se muestra cómo usar SQL Server Management Studio (SSMS) para conectarse a la base de datos del catálogo de SSIS, y cómo usar las instrucciones Transact-SQL para implementar un proyecto de SSIS en el catálogo de SSIS. 
-
-> [!NOTE]
-> El método que se describe en este artículo no está disponible cuando se conecta a un servidor de Azure SQL Database con SSMS. El procedimiento almacenado `catalog.deploy_project` espera la ruta de acceso al archivo `.ispac` en el sistema de archivos local.
+En esta guía de inicio rápido se muestra cómo usar SQL Server Management Studio (SSMS) para conectarse a la base de datos del catálogo de SSIS y cómo usar las instrucciones Transact-SQL para implementar un proyecto de SSIS en el catálogo de SSIS. 
 
 SQL Server Management Studio es un entorno integrado para administrar cualquier infraestructura de SQL, desde SQL Server a SQL Database. Para obtener más información acerca de SSMS, consulte [SQL Server Management Studio (SSMS)](../ssms/sql-server-management-studio-ssms.md).
 
@@ -31,12 +29,19 @@ SQL Server Management Studio es un entorno integrado para administrar cualquier 
 
 Antes de comenzar, asegúrese de que tiene instalada la última versión de SQL Server Management Studio. Para descargar SSMS, consulte [Download SQL Server Management Studio (SSMS)](https://docs.microsoft.com/sql/ssms/download-sql-server-management-studio-ssms) [Descargar SQL Server Management Studio (SSMS)].
 
+## <a name="supported-platforms"></a>Plataformas compatibles
+
+Puede usar la información que aparece en este inicio rápido para implementar un proyecto de SSIS en las siguientes plataformas:
+
+-   SQL Server en Windows.
+
+No puede usar la información que aparece en este inicio rápido para implementar un paquete de SSIS en Azure SQL Database. El procedimiento almacenado `catalog.deploy_project` espera la ruta de acceso al archivo `.ispac` en el sistema de archivos local. Para más información sobre cómo implementar y ejecutar paquetes en Azure, vea [Migrar cargas de trabajo de SQL Server Integration Services a la nube mediante lift-and-shift](lift-shift/ssis-azure-lift-shift-ssis-packages-overview.md).
+
+No puede usar la información que aparece en este inicio rápido para implementar un paquete de SSIS en SQL Server en Linux. Para más información sobre cómo ejecutar paquetes en Linux, vea [Extract, transform, and load data on Linux with SSIS](../linux/sql-server-linux-migrate-ssis.md) (Extraer, transformar y cargar datos en Linux con SSIS).
+
 ## <a name="connect-to-the-ssis-catalog-database"></a>Conectar con la base de datos del catálogo de SSIS
 
 Use SQL Server Management Studio para establecer una conexión con el catálogo de SSIS. 
-
-> [!NOTE]
-> Un servidor Azure SQL Database escucha en el puerto 1433. Si está intentando conectarse a un servidor de Azure SQL Database desde un firewall corporativo, este puerto debe estar abierto en el firewall corporativo para poder conectarse correctamente.
 
 1. Abra SQL Server Management Studio.
 
@@ -46,9 +51,9 @@ Use SQL Server Management Studio para establecer una conexión con el catálogo 
    | ------------ | ------------------ | ------------------------------------------------- | 
    | **Tipo de servidor** | Motor de base de datos | Este valor es necesario. |
    | **Nombre del servidor** | Nombre completo del servidor |  |
-   | **Autenticación** | Autenticación de SQL Server | Esta guía de inicio rápido usa la autenticación SQL. |
-   | **Inicio de sesión** | Cuenta de administrador del servidor | Se trata de la cuenta que especificó cuando creó el servidor. |
-   | **Contraseña** | Contraseña de la cuenta de administrador del servidor | Se trata de la contraseña que especificó cuando creó el servidor. |
+   | **Autenticación** | Autenticación de SQL Server | |
+   | **Inicio de sesión** | Cuenta de administrador del servidor | Esta es la cuenta que especificó cuando creó el servidor. |
+   | **Contraseña** | Contraseña de la cuenta de administrador del servidor | Esta es la contraseña que especificó cuando creó el servidor. |
 
 3. Haga clic en **Conectar**. La ventana Explorador de objetos se abre en SSMS. 
 
@@ -61,7 +66,7 @@ Ejecute el siguiente código Transact-SQL para implementar un proyecto de SSIS.
 
 2.  Actualice los valores de parámetro del procedimiento almacenado `catalog.deploy_project` del sistema.
 
-3.  Asegúrese de que SSISDB es la base de datos actual.
+3.  Asegúrese de que **SSISDB** es la base de datos actual.
 
 4.  Ejecute el script.
 

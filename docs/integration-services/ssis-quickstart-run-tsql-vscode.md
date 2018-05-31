@@ -1,6 +1,6 @@
 ---
 title: Ejecutar un paquete SSIS con Transact-SQL (VSCode) | Microsoft Docs
-ms.date: 09/25/2017
+ms.date: 05/21/2018
 ms.topic: conceptual
 ms.prod: sql
 ms.prod_service: integration-services
@@ -12,14 +12,15 @@ ms.technology:
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 51905916c70b07b40aea5f8f025ac0b09527d468
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 33c48b9438d141fac721d246ff2218cb0ccde542
+ms.sourcegitcommit: b5ab9f3a55800b0ccd7e16997f4cd6184b4995f9
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 05/23/2018
+ms.locfileid: "34455158"
 ---
 # <a name="run-an-ssis-package-from-visual-studio-code-with-transact-sql"></a>Ejecutar un paquete SSIS desde Visual Studio Code con Transact-SQL
-En esta guía de inicio rápido se muestra cómo usar Visual Studio Code para conectarse a la base de datos del catálogo de SSIS y, a continuación, usar instrucciones Transact-SQL para ejecutar un paquete SSIS almacenado en el catálogo de SSIS.
+En esta guía de inicio rápido se muestra cómo usar Visual Studio Code para conectarse a la base de datos del catálogo de SSIS y cómo usar instrucciones Transact-SQL para ejecutar un paquete SSIS almacenado en el catálogo de SSIS.
 
 Visual Studio Code es un editor de código para Windows, macOS y Linux que admite extensiones, incluida la extensión `mssql` para conectarse a Microsoft SQL Server, Azure SQL Database o Azure SQL Data Warehouse. Para obtener más información sobre VSCode, consulte [Visual Studio Code](https://code.visualstudio.com/).
 
@@ -28,6 +29,16 @@ Visual Studio Code es un editor de código para Windows, macOS y Linux que admit
 Antes de empezar, asegúrese de haber instalado la versión más reciente de Visual Studio Code y cargado la extensión `mssql`. Para descargar estas herramientas, consulte las páginas siguientes:
 -   [Descargar Visual Studio Code](https://code.visualstudio.com/Download)
 -   [Extensión mssql](https://marketplace.visualstudio.com/items?itemName=ms-mssql.mssql)
+
+## <a name="supported-platforms"></a>Plataformas compatibles
+
+Puede usar la información que aparece en este inicio rápido para ejecutar un paquete de SSIS en las siguientes plataformas:
+
+-   SQL Server en Windows.
+
+-   Azure SQL Database. Para más información sobre cómo implementar y ejecutar paquetes en Azure, vea [Migrar cargas de trabajo de SQL Server Integration Services a la nube mediante lift-and-shift](lift-shift/ssis-azure-lift-shift-ssis-packages-overview.md).
+
+No puede usar la información que aparece en este inicio rápido para ejecutar un paquete de SSIS en Linux. Para más información sobre cómo ejecutar paquetes en Linux, vea [Extract, transform, and load data on Linux with SSIS](../linux/sql-server-linux-migrate-ssis.md) (Extraer, transformar y cargar datos en Linux con SSIS).
 
 ## <a name="set-language-mode-to-sql-in-vs-code"></a>Establecer el modo de lenguaje en SQL en VSCode
 
@@ -38,6 +49,15 @@ Para habilitar los comandos `mssql` y T-SQL IntelliSense, ajuste el modo de leng
 2. Haga clic en **Texto sin formato** en la esquina inferior derecha de la barra de estado.
 
 3. En el menú desplegable **Seleccionar modo de lenguaje** que aparece, seleccione o escriba **SQL** y, a continuación, presione **ENTRAR** para establecer el modo de lenguaje en SQL. 
+
+## <a name="for-azure-sql-database-get-the-connection-info"></a>Para Azure SQL Database, obtener la información de conexión
+
+Para ejecutar el paquete en Azure SQL Database, debe obtener la información de conexión necesaria para conectarse a la base de datos del catálogo de SSIS (SSISDB). Necesita el nombre completo y la información de inicio de sesión del servidor en los procedimientos siguientes.
+
+1. Inicie sesión en el [Portal de Azure](https://portal.azure.com/).
+2. Seleccione **Bases de datos SQL** en el menú izquierdo y, después, seleccione la base de datos SSISDB en la página **Bases de datos SQL**. 
+3. En la página **Introducción** de la base de datos, compruebe el nombre completo del servidor. Mantenga el puntero del ratón sobre el nombre del servidor para ver la opción **Haga clic para copiar**. 
+4. Si olvida la información de inicio de sesión del servidor de Azure SQL Database, navegue a la página del servidor de SQL Database para ver el nombre del administrador del servidor. Si es necesario, puede restablecer la contraseña.
 
 ## <a name="connect-to-the-ssis-catalog-database"></a>Conectar con la base de datos del catálogo de SSIS
 
@@ -58,9 +78,9 @@ Use Visual Studio Code para establecer una conexión con el catálogo de SSIS.
    | ------------ | ------------------ | ------------------------------------------------- | 
    | **Nombre del servidor** | Nombre completo del servidor | Si se está conectando a un servidor de Azure SQL Database, el nombre tendrá este formato: `<server_name>.database.windows.net`. |
    | **Nombre de la base de datos** | **SSISDB** | Nombre de la base de datos a la que se va a conectar. |
-   | **Autenticación** | Inicio de sesión de SQL| Esta guía de inicio rápido usa la autenticación SQL. |
-   | **User name** | Cuenta de administrador del servidor | Se trata de la cuenta que especificó cuando creó el servidor. |
-   | **Contraseña (inicio de sesión de SQL)** | Contraseña de la cuenta de administrador del servidor | Se trata de la contraseña que especificó cuando creó el servidor. |
+   | **Autenticación** | Inicio de sesión de SQL | Con la autenticación de SQL Server puede conectarse a SQL Server o a Azure SQL Database. Si se va a conectar a un servidor de Azure SQL Database, no puede usar la autenticación de Windows. |
+   | **User name** | Cuenta de administrador del servidor | Esta es la cuenta que especificó cuando creó el servidor. |
+   | **Contraseña (inicio de sesión de SQL)** | Contraseña de la cuenta de administrador del servidor | Esta es la contraseña que especificó cuando creó el servidor. |
    | **¿Desea guardar la contraseña?** | Sí o no | Si no quiere escribir la contraseña cada vez, seleccione Sí. |
    | **Enter a name for this profile** (Escriba un nombre para el perfil) | Nombre de perfil, como **mySSISServer** | Un nombre de perfil guardado acelera la conexión en inicios de sesión posteriores. | 
 

@@ -15,11 +15,12 @@ author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 monikerRange: = azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: f7415cfbe4343f9f50de42c26db5444b6582a572
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 03077d7ede10d42b4d4812ce6ef93a35dd295a22
+ms.sourcegitcommit: b5ab9f3a55800b0ccd7e16997f4cd6184b4995f9
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 05/23/2018
+ms.locfileid: "34455558"
 ---
 # <a name="creating-a-system-versioned-temporal-table"></a>Creación de una tabla temporal con control de versiones del sistema
 [!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]
@@ -184,7 +185,7 @@ ALTER TABLE InsurancePolicy
   
 -   Si se agrega un período, se realizará una comprobación de coherencia de datos en la tabla actual para garantizar la validez de los valores predeterminados de las columnas de período.  
   
--   Cuando se especifica una tabla de historial existente al habilitar **SYSTEM_VERSIONING**, se realizará una comprobación de coherencia de datos en la tabla actual y en la de historial. Puede omitirse si se especifica **DATA_CONISTENCY_CHECK = OFF** como parámetro adicional.  
+-   Cuando se especifica una tabla de historial existente al habilitar **SYSTEM_VERSIONING**, se realizará una comprobación de coherencia de datos en la tabla actual y en la de historial. Puede omitirse si se especifica **DATA_CONSISTENCY_CHECK = OFF** como parámetro adicional.  
   
 ### <a name="migrate-existing-tables-to-built-in-support"></a>Migración de tablas existentes a la compatibilidad integrada  
  En este ejemplo se muestra cómo migrar una solución existente basada en desencadenadores a una compatibilidad temporal integrada. En este ejemplo, se supone que la solución personalizada actual divide los datos actuales e históricos en dos tablas de usuario independientes (**ProjectTaskCurrent** y **ProjectTaskHistory**). Si su solución existente usa una sola tabla para almacenar las filas reales e históricas, debe dividir los datos en dos tablas antes de realizar los pasos de migración descritos en este ejemplo:  

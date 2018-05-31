@@ -1,5 +1,4 @@
-title: "Clase de eventos Auto Stats | Microsoft Docs" ms.custom: "" ms.date: "03/14/2017" ms.prod: sql ms.prod_service: "database-engine, sql-database" ms.component: "event-classes" ms.reviewer: "" ms.suite: "sql" ms.technology: 
-  - "database-engine" ms.tgt_pltfrm: "" ms.topic: conceptual helpviewer_keywords: 
+title: "Clase de eventos Auto Stats | Microsoft Docs" ms.custom: "" ms.date: "03/14/2017" ms.prod: sql ms.reviewer: "" ms.suite: "sql" ms.technology: supportability ms.tgt_pltfrm: "" ms.topic: conceptual helpviewer_keywords: 
   - "Clase de eventos Auto Stats" ms.assetid: cd613fce-01e1-4d8f-86cc-7ffbf0759f9e caps.latest.revision: 34 author: "stevestein" ms.author: "sstein" manager: craigg
 ---
 # <a name="auto-stats-event-class"></a>Auto Stats [clase de eventos]
@@ -8,7 +7,7 @@ title: "Clase de eventos Auto Stats | Microsoft Docs" ms.custom: "" ms.date: "03
   
 ## <a name="auto-stats-event-class-data-columns"></a>Columnas de datos de la clase de evento Auto Stats  
   
-|Nombre de columna de datos|Tipo de datos|Description|Identificador de columna|Filtrable|  
+|Nombre de columna de datos|Tipo de datos|Descripción|Identificador de columna|Filtrable|  
 |----------------------|---------------|-----------------|---------------|----------------|  
 |**ApplicationName**|**nvarchar**|Nombre de la aplicación cliente que ha creado la conexión a una instancia de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Esta columna se rellena con los valores que pasa la aplicación, en lugar de con el nombre que se muestra para el programa.|10|Sí|  
 |**ClientProcessID**|**int**|Identificador que el equipo host asigna al proceso en el que se ejecuta la aplicación cliente. Esta columna de datos se rellena si el cliente proporciona el identificador de proceso del cliente.|9|Sí|  

@@ -1,6 +1,6 @@
 ---
 title: Implementar un proyecto de SSIS con Transact-SQL (VSCode) | Microsoft Docs
-ms.date: 09/25/2017
+ms.date: 05/21/2018
 ms.topic: conceptual
 ms.prod: sql
 ms.prod_service: integration-services
@@ -12,17 +12,15 @@ ms.technology:
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 6c32302d499f1c8dc450d6e10451f080b30249d6
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: b4611b711b9f220af26a7f629480fa9f7b4c071c
+ms.sourcegitcommit: b5ab9f3a55800b0ccd7e16997f4cd6184b4995f9
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 05/23/2018
+ms.locfileid: "34455448"
 ---
 # <a name="deploy-an-ssis-project-from-visual-studio-code-with-transact-sql"></a>Implementar un proyecto de SSIS desde Visual Studio Code con Transact-SQL
-En esta guía de inicio rápido se muestra cómo usar Visual Studio Code para conectarse a la base de datos del catálogo de SSIS y, a continuación, usar instrucciones Transact-SQL para implementar un proyecto de SSIS almacenado en el catálogo de SSIS.
-
-> [!NOTE]
-> El método que se describe en este artículo no está disponible cuando se conecta a un servidor de Azure SQL Database con VSCode. El procedimiento almacenado `catalog.deploy_project` espera la ruta de acceso al archivo `.ispac` en el sistema de archivos local.
+En esta guía de inicio rápido se muestra cómo usar Visual Studio Code para conectarse a la base de datos del catálogo de SSIS y cómo usar instrucciones Transact-SQL para implementar un proyecto de SSIS almacenado en el catálogo de SSIS.
 
 Visual Studio Code es un editor de código para Windows, macOS y Linux que admite extensiones, incluida la extensión `mssql` para conectarse a Microsoft SQL Server, Azure SQL Database o Azure SQL Data Warehouse. Para obtener más información sobre VSCode, consulte [Visual Studio Code](https://code.visualstudio.com/).
 
@@ -31,6 +29,16 @@ Visual Studio Code es un editor de código para Windows, macOS y Linux que admit
 Antes de empezar, asegúrese de haber instalado la versión más reciente de Visual Studio Code y cargado la extensión `mssql`. Para descargar estas herramientas, consulte las páginas siguientes:
 -   [Descargar Visual Studio Code](https://code.visualstudio.com/Download)
 -   [Extensión mssql](https://marketplace.visualstudio.com/items?itemName=ms-mssql.mssql)
+
+## <a name="supported-platforms"></a>Plataformas compatibles
+
+Puede usar la información que aparece en este inicio rápido para implementar un proyecto de SSIS en las siguientes plataformas:
+
+-   SQL Server en Windows.
+
+No puede usar la información que aparece en este inicio rápido para implementar un paquete de SSIS en Azure SQL Database. El procedimiento almacenado `catalog.deploy_project` espera la ruta de acceso al archivo `.ispac` en el sistema de archivos local. Para más información sobre cómo implementar y ejecutar paquetes en Azure, vea [Migrar cargas de trabajo de SQL Server Integration Services a la nube mediante lift-and-shift](lift-shift/ssis-azure-lift-shift-ssis-packages-overview.md).
+
+No puede usar la información que aparece en este inicio rápido para implementar un paquete de SSIS en SQL Server en Linux. Para más información sobre cómo ejecutar paquetes en Linux, vea [Extract, transform, and load data on Linux with SSIS](../linux/sql-server-linux-migrate-ssis.md) (Extraer, transformar y cargar datos en Linux con SSIS).
 
 ## <a name="set-language-mode-to-sql-in-vs-code"></a>Establecer el modo de lenguaje en SQL en VSCode
 
@@ -46,9 +54,6 @@ Para habilitar los comandos `mssql` y T-SQL IntelliSense, ajuste el modo de leng
 
 Use Visual Studio Code para establecer una conexión con el catálogo de SSIS.
 
-> [!IMPORTANT]
-> Antes de continuar, asegúrese de que tiene el servidor, la base de datos y la información de inicio de sesión a punto. Si cambia el foco de Visual Studio Code después de comenzar a escribir la información de perfil de conexión, tendrá que volver a iniciar la creación del perfil de conexión.
-
 1. En VSCode, presione **CTRL+MAYÚS+P** (o **F1**) para abrir la paleta de comandos.
 
 2. Escriba **sqlcon** y presione **ENTRAR**.
@@ -61,9 +66,9 @@ Use Visual Studio Code para establecer una conexión con el catálogo de SSIS.
    | ------------ | ------------------ | ------------------------------------------------- | 
    | **Nombre del servidor** | Nombre completo del servidor |  |
    | **Nombre de la base de datos** | **SSISDB** | Nombre de la base de datos a la que se va a conectar. |
-   | **Autenticación** | Inicio de sesión de SQL| Esta guía de inicio rápido usa la autenticación SQL. |
-   | **User name** | Cuenta de administrador del servidor | Se trata de la cuenta que especificó cuando creó el servidor. |
-   | **Contraseña (inicio de sesión de SQL)** | Contraseña de la cuenta de administrador del servidor | Se trata de la contraseña que especificó cuando creó el servidor. |
+   | **Autenticación** | Inicio de sesión de SQL | |
+   | **User name** | Cuenta de administrador del servidor | Esta es la cuenta que especificó cuando creó el servidor. |
+   | **Contraseña (inicio de sesión de SQL)** | Contraseña de la cuenta de administrador del servidor | Esta es la contraseña que especificó cuando creó el servidor. |
    | **¿Desea guardar la contraseña?** | Sí o no | Si no quiere escribir la contraseña cada vez, seleccione Sí. |
    | **Enter a name for this profile** (Escriba un nombre para el perfil) | Nombre de perfil, como **mySSISServer** | Un nombre de perfil guardado acelera la conexión en inicios de sesión posteriores. | 
 

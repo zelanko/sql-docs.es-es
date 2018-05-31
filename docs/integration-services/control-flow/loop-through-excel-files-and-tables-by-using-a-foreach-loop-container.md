@@ -1,7 +1,7 @@
 ---
 title: Crear bucles entre archivos y tablas de Excel mediante un contenedor de bucles Para cada uno | Microsoft Docs
 ms.custom: ''
-ms.date: 04/02/2018
+ms.date: 05/15/2018
 ms.prod: sql
 ms.prod_service: integration-services
 ms.component: control-flow
@@ -20,11 +20,12 @@ caps.latest.revision: 35
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 6d151fd801483bd39188ad3474f95ae9ce0036af
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 52daa47d99e6b9dab35f12280a7c89c710e1aa17
+ms.sourcegitcommit: 6fd8a193728abc0a00075f3e4766a7e2e2859139
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 05/17/2018
+ms.locfileid: "34235669"
 ---
 # <a name="loop-through-excel-files-and-tables-by-using-a-foreach-loop-container"></a>Crear bucles entre archivos y tablas de Excel usando un contenedor de bucles Foreach
   Los procedimientos de este tema explican cómo crear bucles entre libros de Excel en una carpeta o entre tablas en un libro de Excel, mediante el contenedor de bucles Foreach con el enumerador correspondiente.  
@@ -36,13 +37,13 @@ ms.lasthandoff: 05/03/2018
   
 1.  Cree una variable de cadena que recibirá la ruta de acceso y nombre de archivo de Excel actuales en cada iteración del bucle. Para evitar problemas de validación, asigne una ruta de acceso y un nombre de archivo de Excel válidos como valor inicial de la variable (la expresión de ejemplo que se muestra más adelante en este procedimiento utiliza el nombre de variable `ExcelFile`).  
   
-2.  También puede crear otra variable de cadena que mantendrá el valor del argumento Propiedades extendidas de la cadena de conexión de Excel. Este argumento contiene una serie de valores que especifican la versión de Excel y determinan si la primera fila contiene nombres de columna, y si se utiliza un modo de importación (la expresión de ejemplo que se muestra más adelante en este procedimiento utiliza el nombre de variable `ExtProperties`, con un valor inicial de "`Excel 8.0;HDR=Yes`").  
+2.  También puede crear otra variable de cadena que mantendrá el valor del argumento Propiedades extendidas de la cadena de conexión de Excel. Este argumento contiene una serie de valores que especifican la versión de Excel y determinan si la primera fila contiene nombres de columna, y si se utiliza un modo de importación (la expresión de ejemplo que se muestra más adelante en este procedimiento utiliza el nombre de variable `ExtProperties`, con un valor inicial de "`Excel 12.0;HDR=Yes`").  
   
      Si no usa una variable para el argumento Propiedades extendidas, debe agregarlo manualmente a la expresión que contiene la cadena de conexión.  
   
 3.  Agregue un contenedor de bucles Foreach a la pestaña **Flujo de control** . Para obtener más información sobre cómo configurar el contenedor de bucles Foreach, vea [Configurar un contenedor de bucles Foreach](http://msdn.microsoft.com/library/519c6f96-5e1f-47d2-b96a-d49946948c25).  
   
-4.  En la página **Colección** del **Editor de bucles Foreach**, seleccione el enumerador de archivos para Foreach, especifique la carpeta en la que se encuentran los libros de Excel e indique el filtro de archivos (generalmente *.xls).  
+4.  En la página **Colección** del **Editor de bucles Foreach**, seleccione el enumerador de archivos para Foreach, especifique la carpeta en la que se encuentran los libros de Excel e indique el filtro de archivos (generalmente *.xlsx).  
   
 5.  En la página **Asignaciones de variables** , asigne Índice 0 a una variable de cadena definida por el usuario que recibirá la ruta de acceso y el nombre de archivo de Excel actuales en cada iteración del bucle. (La expresión de ejemplo que se muestra más adelante en este procedimiento utiliza el nombre de variable `ExcelFile`.)  
   
@@ -62,22 +63,22 @@ ms.lasthandoff: 05/03/2018
 10. En el Generador de expresiones, escriba la siguiente expresión:  
   
     ```  
-    "Provider=Microsoft.Jet.OLEDB.4.0;Data Source=" +  @[User::ExcelFile] + ";Extended Properties=\"" + @[User::ExtProperties] + "\""  
+    "Provider=Microsoft.ACE.OLEDB.12.0;Data Source=" +  @[User::ExcelFile] + ";Extended Properties=\"" + @[User::ExtProperties] + "\""  
     ```  
   
      Observe el uso del carácter de escape "\\" para las comillas internas necesarias en el valor del argumento Propiedades extendidas.  
   
-     El argumento Propiedades extendidas no es opcional. Si no usa una variable para contener su valor, debe agregarlo manualmente a la expresión, como en el ejemplo siguiente correspondiente a un archivo de Excel 2003:  
+     El argumento Propiedades extendidas no es opcional. Si no usa una variable para contener su valor, debe agregarlo manualmente a la expresión, como en el ejemplo siguiente:  
   
     ```  
-    "Provider=Microsoft.Jet.OLEDB.4.0;Data Source=" +  @[User::ExcelFile] + ";Extended Properties=Excel 8.0"  
+    "Provider=Microsoft.ACE.OLEDB.12.0;Data Source=" +  @[User::ExcelFile] + ";Extended Properties=Excel 12.0"  
     ```  
   
 11. Cree tareas en el contenedor de bucles Foreach que utilicen el administrador de conexiones con Excel para realizar las mismas operaciones en cada libro de Excel que coincida con la ubicación y el patrón del archivo especificados.  
   
 ## <a name="to-loop-through-excel-tables-by-using-the-foreach-adonet-schema-rowset-enumerator"></a>Para crear un bucle entre tablas de Excel con el enumerador de conjunto de filas del esquema para Foreach de ADO.NET  
   
-1.  Cree un administrador de conexiones de ADO.NET que utilice el proveedor OLE DB para Microsoft Jet para conectarse al libro de Excel. En la página Todas del cuadro de diálogo **Administrador de conexiones** , asegúrese de especificar Excel 8.0 como valor para la propiedad Propiedades extendidas. Para más información, consulte [Add, Delete, or Share a Connection Manager in a Package](http://msdn.microsoft.com/library/6f2ba4ea-10be-4c40-9e80-7efcf6ee9655).  
+1.  Cree un administrador de conexiones de ADO.NET que use el proveedor OLE DB para Microsoft ACE para conectarse al libro de Excel. En la página Todos del cuadro de diálogo **Administrador de conexiones**, asegúrese de especificar la versión de Excel (en este caso, Excel 12.0) como valor de la propiedad Propiedades extendidas. Para más información, consulte [Add, Delete, or Share a Connection Manager in a Package](http://msdn.microsoft.com/library/6f2ba4ea-10be-4c40-9e80-7efcf6ee9655).  
   
 2.  Cree una variable de cadena que recibirá el nombre de la tabla actual en cada iteración del bucle.  
   

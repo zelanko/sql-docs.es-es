@@ -28,10 +28,11 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 5b0c0cd91b58c4e59cba2440d8f02cd01a93c870
-ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
+ms.sourcegitcommit: 2d93cd115f52bf3eff3069f28ea866232b4f9f9e
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 06/01/2018
+ms.locfileid: "33179191"
 ---
 # <a name="sysavailabilitydatabasescluster-transact-sql"></a>sys.availability_databases_cluster (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
@@ -41,13 +42,13 @@ ms.lasthandoff: 05/04/2018
 > [!NOTE]  
 >  Cuando una base de datos se agrega a un grupo de disponibilidad, la base de datos principal se une automáticamente al grupo. Las bases de datos secundarias se deben preparar en cada réplica secundaria para poder unirse al grupo de disponibilidad.   
   
-|Nombre de columna|Tipo de datos|Description|  
+|Nombre de columna|Tipo de datos|Descripción|  
 |-----------------|---------------|-----------------|  
 |**group_id**|**uniqueidentifier**|Identificador único del grupo de disponibilidad dentro del grupo de disponibilidad en que la base de datos participa, si hay alguno.<br /><br /> NULL = la base de datos no forma parte de una réplica de disponibilidad en el grupo de disponibilidad.|  
 |**group_database_id**|**uniqueidentifier**|Identificador único de la base de datos dentro del grupo de disponibilidad en que la base de datos participa, si hay alguno. **group_database_id** es el mismo para esta base de datos en la réplica principal y en cada réplica secundaria en el que la base de datos se ha unido al grupo de disponibilidad.<br /><br /> NULL = la base de datos no forma parte de una réplica de disponibilidad en ningún grupo de disponibilidad.|  
 |**database_name**|**sysname**|Nombre de la base de datos que se agregó al grupo de disponibilidad.|  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>Permisos  
  Si el autor de llamada de **sys.availability_databases_cluster** no es el propietario de la base de datos, los permisos mínimos necesarios para ver la fila correspondiente son ALTER ANY DATABASE o permiso de nivel de servidor VIEW ANY DATABASE o CREATE Permiso de base de datos en el **maestro** base de datos.  
   
 ## <a name="see-also"></a>Vea también  

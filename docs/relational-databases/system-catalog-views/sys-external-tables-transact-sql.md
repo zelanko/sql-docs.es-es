@@ -19,17 +19,18 @@ ms.author: sstein
 manager: craigg
 monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
 ms.openlocfilehash: 06f71aedda72735652da9ee353dcd62e5c24b48c
-ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
+ms.sourcegitcommit: 2d93cd115f52bf3eff3069f28ea866232b4f9f9e
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 06/01/2018
+ms.locfileid: "33181321"
 ---
 # <a name="sysexternaltables-transact-sql"></a>Sys.external_tables (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2016-all-md](../../includes/tsql-appliesto-ss2016-all-md.md)]
 
   Contiene una fila por cada tabla externa en la base de datos actual.  
   
-|Nombre de la columna|Tipo de datos|Description|Intervalo|  
+|Nombre de la columna|Tipo de datos|Descripción|Intervalo|  
 |-----------------|---------------|-----------------|-----------|  
 |\<hereda columnas >||Para obtener una lista de columnas que hereda esta vista, consulte [sys.objects &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-objects-transact-sql.md).||  
 |max_column_id_used|**int**|Id. de columna máximo utilizado alguna vez para esta tabla.||  
@@ -46,7 +47,7 @@ ms.lasthandoff: 05/04/2018
 |remote_schema_name|**sysname**|Para las tablas externas a través de un origen de datos externo SHARD_MAP_MANAGER, éste es el esquema donde se encuentra la tabla base en las bases de datos remotos (si difiere del esquema donde se define la tabla externa).||  
 |remote_object_name|**sysname**|Para las tablas externas a través de un origen de datos externo SHARD_MAP_MANAGER, este es el nombre de la tabla base en las bases de datos remotos (si es diferente del nombre de la tabla externa).||  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>Permisos  
  La visibilidad de los metadatos en las vistas de catálogo se limita a los elementos protegibles y que son propiedad de un usuario o sobre los que el usuario tiene algún permiso. Para obtener más información, consulte [Metadata Visibility Configuration](../../relational-databases/security/metadata-visibility-configuration.md).  
   
 ## <a name="see-also"></a>Vea también  

@@ -26,24 +26,25 @@ ms.author: edmaca
 manager: craigg
 monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
 ms.openlocfilehash: 35e2b56ec8338a45defd87b136db91712ef29e5d
-ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
+ms.sourcegitcommit: 2d93cd115f52bf3eff3069f28ea866232b4f9f9e
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 06/01/2018
+ms.locfileid: "33179571"
 ---
 # <a name="syspartitionrangevalues-transact-sql"></a>sys.partition_range_values (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-asdw-pdw-md](../../includes/tsql-appliesto-ss2008-asdb-asdw-pdw-md.md)]
 
   Contiene una fila por cada valor de límite de intervalo de una función de partición de tipo R.  
   
-|Nombre de columna|Tipo de datos|Description|  
+|Nombre de columna|Tipo de datos|Descripción|  
 |-----------------|---------------|-----------------|  
 |**function_id**|**int**|Id. de la función de partición de este valor de límite de intervalo.|  
 |**boundary_id**|**int**|Id. (ordinal de base 1) de la tupla del valor de límite. El límite situado más a la izquierda se inicia con un Id. de 1.|  
 |**parameter_id**|**int**|Id. del parámetro de la función a la que corresponde este valor. Los valores de esta columna se corresponden con los de la **parameter_id** columna de la **sys.partition_parameters** vista para un determinado de catálogo **function_id**.|  
-|**value**|**sql_variant**|El valor de límite en sí.|  
+|**Valor**|**sql_variant**|El valor de límite en sí.|  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>Permisos  
  Debe pertenecer al rol **public** . Para obtener más información, consulte [Metadata Visibility Configuration](../../relational-databases/security/metadata-visibility-configuration.md).  
   
 ## <a name="see-also"></a>Vea también  

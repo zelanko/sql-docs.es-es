@@ -24,10 +24,11 @@ ms.author: edmaca
 manager: craigg
 monikerRange: = azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions
 ms.openlocfilehash: bef1fdf427c6bc510e77f8df55f3281d5b5db6cd
-ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
+ms.sourcegitcommit: 2d93cd115f52bf3eff3069f28ea866232b4f9f9e
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 06/01/2018
+ms.locfileid: "33263566"
 ---
 # <a name="spsettriggerorder-transact-sql"></a>sp_settriggerorder (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -56,7 +57,7 @@ sp_settriggerorder [ @triggername = ] '[ triggerschema. ] triggername'
 > [!IMPORTANT]  
 >  El **primer** y **última** desencadenadores deben ser dos desencadenadores diferentes.  
   
-|Value|Description|  
+|Valor|Descripción|  
 |-----------|-----------------|  
 |**Primero**|El desencadenador se activa primero.|  
 |**Último**|El desencadenador se activa el último.|  
@@ -77,7 +78,7 @@ sp_settriggerorder [ @triggername = ] '[ triggerschema. ] triggername'
 ## <a name="return-code-values"></a>Valores de código de retorno  
  0 (correcto) y 1 (error)  
   
-## <a name="remarks"></a>Comentarios  
+## <a name="remarks"></a>Notas  
   
 ## <a name="dml-triggers"></a>Desencadenadores DML  
  Puede haber solo un **primer** y uno **última** desencadenador para cada instrucción en una sola tabla.  
@@ -106,7 +107,7 @@ sp_settriggerorder [ @triggername = ] '[ triggerschema. ] triggername'
   
  Si el mismo desencadenador debe designarse como el orden primero o último para más de un tipo de instrucción, **sp_settriggerorder** se debe ejecutar para cada tipo de instrucción. Además, el desencadenador deberá definirse primero para un tipo de instrucción antes de que pueden designarse como el **primer** o **última** activación del desencadenador para ese tipo de instrucción.  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>Permisos  
  Para establecer el orden de un desencadenador DDL con ámbito de servidor (ON ALL SERVER) o de un desencadenador de inicio de sesión se requiere el permiso CONTROL SERVER.  
   
  Para establecer el orden de un desencadenador DDL con ámbito de base de datos (ON DATABASE), se necesita el permiso ALTER ANY DATABASE DDL TRIGGER.  

@@ -30,19 +30,20 @@ ms.author: edmaca
 manager: craigg
 monikerRange: = azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions
 ms.openlocfilehash: dae89c39aa55f8139ce76942f0bdda660b645241
-ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
+ms.sourcegitcommit: 2d93cd115f52bf3eff3069f28ea866232b4f9f9e
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 06/01/2018
+ms.locfileid: "33221136"
 ---
 # <a name="syssecuritypolicies-transact-sql"></a>Sys.security_policies (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]
 
   Devuelve una fila para cada directiva de seguridad de la base de datos.  
   
-|Nombre de columna|Tipo de datos|Description|  
+|Nombre de columna|Tipo de datos|Descripción|  
 |-----------------|---------------|-----------------|  
-|name|**sysname**|Nombre de la directiva de seguridad, único dentro de la base de datos.|  
+|NAME|**sysname**|Nombre de la directiva de seguridad, único dentro de la base de datos.|  
 |object_id|**int**|Identificador de la directiva de seguridad.|  
 |principal_id|**int**|Identificador del propietario de la directiva de seguridad, tal y como se registró en la base de datos. Es NULL si el propietario se determina con el esquema.|  
 |schema_id|**int**|Identificador del esquema en el que reside el objeto.|  
@@ -57,7 +58,7 @@ ms.lasthandoff: 05/04/2018
 |uses_database_collation|**bit**|Utiliza la misma intercalación que la base de datos.|  
 |is_schemabinding_enabled|**bit**|Estado de SCHEMABINDING para la directiva de seguridad:<br /><br /> 0 o NULL = habilitado<br /><br /> 1 = deshabilitado|  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>Permisos  
  Entidades de seguridad con la **ALTER ANY SECURITY POLICY** permiso tiene acceso a todos los objetos en esta vista de catálogo, así como cualquier persona con **VIEW DEFINITION** en el objeto.  
   
 ## <a name="see-also"></a>Vea también  

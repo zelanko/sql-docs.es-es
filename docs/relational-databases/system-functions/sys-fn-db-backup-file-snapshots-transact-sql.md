@@ -18,10 +18,11 @@ author: rothja
 ms.author: jroth
 manager: craigg
 ms.openlocfilehash: 085bf32115bfe84b00471de27e1fd9c11b3a1ab9
-ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
+ms.sourcegitcommit: 2d93cd115f52bf3eff3069f28ea866232b4f9f9e
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 06/01/2018
+ms.locfileid: "33231354"
 ---
 # <a name="sysfndbbackupfilesnapshots-transact-sql"></a>Sys.fn_db_backup_file_snapshots (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md.md)]
@@ -44,13 +45,13 @@ sys.fn_db_backup_file_snapshots
   
 ## <a name="table-returned"></a>Tabla devuelta  
   
-|Nombre de columna|Tipo de datos|Description|  
+|Nombre de columna|Tipo de datos|Descripción|  
 |-----------------|---------------|-----------------|  
 |file_id|**int**|El identificador de archivo para la base de datos. No admite valores NULL.|  
 |snapshot_time|**nvarchar(260)**|La marca de tiempo de la instantánea porque es devuelto por la API de REST. Devuelve NULL si no existe ninguna instantánea.|  
 |snapshot_url|**nvarchar(360)**|La dirección URL completa a la instantánea de archivo. Devuelve un valor NULL si no hay instantáneas existe.|  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>Permisos  
  Requiere el permiso VIEW DATABASE STATE en la base de datos.  
   
 ## <a name="see-also"></a>Vea también  

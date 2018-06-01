@@ -25,17 +25,18 @@ ms.author: AndrejsAnt
 manager: craigg
 monikerRange: = azuresqldb-current || >= sql-server-2017 || = sqlallproducts-allversions
 ms.openlocfilehash: d4a7afdca88de97188577e726d203040e33c8c71
-ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
+ms.sourcegitcommit: 2d93cd115f52bf3eff3069f28ea866232b4f9f9e
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 06/01/2018
+ms.locfileid: "33182021"
 ---
 # <a name="sysquerystorewaitstats-transact-sql"></a>Sys.query_store_wait_stats (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2017-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2017-asdb-xxxx-xxx-md.md)]
 
   Contiene información sobre la información de espera para la consulta.  
   
-|Nombre de columna|Tipo de datos|Description|  
+|Nombre de columna|Tipo de datos|Descripción|  
 |-----------------|---------------|-----------------|  
 |**wait_stats_id**|**bigint**|Identificador de la fila que representa las estadísticas de esperas de plan_id, runtime_stats_interval_id, execution_type y wait_category. Es único solo para los intervalos de estadísticas en tiempo de ejecución anteriores. Puede haber varias filas que representa las estadísticas de esperas para el plan al que hace referencia plan_id, con el tipo de ejecución representado por execution_type y la categoría de espera representado por wait_category de intervalo activo actualmente. Normalmente, una fila representa las estadísticas de esperas que se vacían en el disco, mientras que otras (s) representan el estado en memoria. Por tanto, para obtener el estado real de cada intervalo deberá métricas agregadas, agrupando plan_id, runtime_stats_interval_id, execution_type y wait_category. |  
 |**plan_id**|**bigint**|Clave externa. Se combina con [sys.query_store_plan &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-query-store-plan-transact-sql.md).|  
@@ -84,7 +85,7 @@ ms.lasthandoff: 05/04/2018
 ***Compilación** categoría de espera no se admite actualmente. 
 
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>Permisos  
  Requiere la **VIEW DATABASE STATE** permiso.  
   
 ## <a name="see-also"></a>Vea también  

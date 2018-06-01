@@ -25,17 +25,18 @@ author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ms.openlocfilehash: 90fbd2b92ccfcf01da2c2742a3b5a083f30f1e03
-ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
+ms.sourcegitcommit: 2d93cd115f52bf3eff3069f28ea866232b4f9f9e
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 06/01/2018
+ms.locfileid: "33221956"
 ---
 # <a name="sysxmlschemacomponents-transact-sql"></a>sys.xml_schema_components (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
   Devuelve una fila por componente de un esquema XML. El par (**collection_id**, **namespace_id**) es una clave externa compuesta para el espacio de nombres contenedor. Para los componentes con nombre, los valores de **symbol_space**, **nombre**, **scoping_xml_component_id**, **is_qualified**,  **xml_namespace_id**, **xml_collection_id** son únicos.  
   
-|Nombre de columna|Tipo de datos|Description|  
+|Nombre de columna|Tipo de datos|Descripción|  
 |-----------------|---------------|-----------------|  
 |**xml_component_id**|**int**|Id. único del componente del esquema XML en la base de datos.|  
 |**xml_collection_id**|**int**|Id. de la colección de esquemas XML que contiene el espacio de nombres de este componente.|  
@@ -51,7 +52,7 @@ ms.lasthandoff: 05/04/2018
 |**base_xml_component_id**|**int**|Id. del componente del que se deriva este componente. Es NULL si no hay ninguno.|  
 |**scoping_xml_component_id**|**int**|Id. único del componente de alcance. Es NULL si no hay ninguno (espacio global).|  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>Permisos  
  [!INCLUDE[ssCatViewPerm](../../includes/sscatviewperm-md.md)] Para obtener más información, consulte [Metadata Visibility Configuration](../../relational-databases/security/metadata-visibility-configuration.md).  
   
 ## <a name="see-also"></a>Vea también  

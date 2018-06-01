@@ -23,11 +23,12 @@ caps.latest.revision: 12
 author: edmacauley
 ms.author: edmaca
 manager: craigg
-ms.openlocfilehash: 7256efe9d5d9a978e57be5e6038db399cdde868d
-ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
+ms.openlocfilehash: 4e8f84f3539ea192a132282eee280f26ba80da5d
+ms.sourcegitcommit: e37f017cbebb22ad9d12e4daf863190933a4d8a1
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 06/01/2018
+ms.locfileid: "34689263"
 ---
 # <a name="spcleandbfreespace-transact-sql"></a>sp_clean_db_free_space (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -55,7 +56,7 @@ sp_clean_db_free_space
 ## <a name="return-code-values"></a>Valores de código de retorno  
  0 (correcto) o 1 (error)  
   
-## <a name="remarks"></a>Comentarios  
+## <a name="remarks"></a>Notas  
  Operaciones de eliminación de una tabla o las operaciones de actualización que hacen que una fila que se va a mover puede liberar inmediatamente espacio en una página quitando las referencias a la fila. Sin embargo, en determinadas circunstancias, la fila puede permanecer físicamente en la página de datos como un registro fantasma. Los registros fantasma se quitan periódicamente mediante un proceso en segundo plano. No devuelve estos datos residuales el [!INCLUDE[ssDE](../../includes/ssde-md.md)] en respuesta a consultas. Sin embargo, en entornos en los que la seguridad física de los datos o de los archivos de copia de seguridad corre un riesgo, puede utilizar sp_clean_db_free_space para limpiar estos registros fantasma.  
   
  El período de tiempo necesario para ejecutar sp_clean_db_free_space depende del tamaño del archivo, del espacio disponible y de la capacidad del disco. Dado que la ejecución de sp_clean_db_free_space puede afectar significativamente a la actividad de E/S, se recomienda ejecutar este procedimiento fuera del horario de funcionamiento habitual.  
@@ -64,7 +65,7 @@ sp_clean_db_free_space
   
  Relacionado [sp_clean_db_file_free_space](../../relational-databases/system-stored-procedures/sp-clean-db-file-free-space-transact-sql.md) procedimiento almacenado puede limpiar un único archivo.  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>Permisos  
  Debe pertenecer al rol de la base de datos db_owner.  
   
 ## <a name="examples"></a>Ejemplos  
@@ -78,6 +79,7 @@ EXEC sp_clean_db_free_space
 ```  
   
 ## <a name="see-also"></a>Vea también  
- [Procedimientos almacenados del motor de base de datos &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/database-engine-stored-procedures-transact-sql.md)  
+ [Procedimientos almacenados del motor de base de datos &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/database-engine-stored-procedures-transact-sql.md)
+ <br>[Guía de proceso de limpieza de fantasma](../ghost-record-cleanup-process-guide.md) 
   
   

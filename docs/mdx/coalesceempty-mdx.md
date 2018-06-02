@@ -1,31 +1,20 @@
 ---
 title: CoalesceEmpty (MDX) | Documentos de Microsoft
-ms.custom: ''
-ms.date: 03/02/2016
-ms.prod: analysis-services
-ms.prod_service: analysis-services
-ms.component: ''
-ms.reviewer: ''
-ms.suite: pro-bi
-ms.technology: ''
-ms.tgt_pltfrm: ''
-ms.topic: language-reference
-f1_keywords:
-- COALESCEEMPTY
-dev_langs:
-- kbMDX
-helpviewer_keywords:
-- CoalesceEmpty function
-ms.assetid: c00dd739-44bc-4af6-9871-c7e1e3f3e5ba
-caps.latest.revision: 39
-author: Minewiskan
+ms.date: 05/30/2018
+ms.prod: sql
+ms.technology: analysis-services
+ms.custom: mdx
+ms.topic: reference
 ms.author: owend
-manager: erikre
-ms.openlocfilehash: 14a972a7f79039e46ded92f62c748c6cd9577a6e
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.reviewer: owend
+author: minewiskan
+manager: kfile
+ms.openlocfilehash: cbd5928e859436b90b986e9e0ea0d09e91ccd664
+ms.sourcegitcommit: 808d23a654ef03ea16db1aa23edab496b73e5072
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/02/2018
+ms.locfileid: "34577317"
 ---
 # <a name="coalesceempty-mdx"></a>CoalesceEmpty (MDX)
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
@@ -56,7 +45,7 @@ CoalesceEmpty(String_Expression1 [ ,String_Expression2,...n] )
  *Expression2*  
  Expresión de cadena válida que suele ser un valor de cadena especificado sustituido por un valor NULL devuelto por la primera expresión de cadena.  
   
-## <a name="remarks"></a>Comentarios  
+## <a name="remarks"></a>Notas  
  Si se especifican uno o más expresiones numéricas, la **CoalesceEmpty** función devuelve el valor numérico de la primera expresión numérica (de izquierda a derecha) que se pueda resolver como un valor no vacío. Si ninguna de las expresiones numéricas especificadas puede resolverse en un valor no vacío, la función devuelve el valor de la celda vacía. Normalmente, el valor de la segunda expresión numérica es el valor numérico sustituido por un valor NULL devuelto por la primera expresión numérica.  
   
  Si se especifican una o más expresiones de cadena, la función devuelve el valor de cadena de la primera expresión de cadena (de izquierda a derecha) que puede resolverse en un valor no vacío. Si ninguna de las expresiones de cadena especificadas puede resolverse en un valor no vacío, la función devuelve el valor de la celda vacía. Normalmente, el valor de la segunda expresión de cadena es el valor de cadena sustituido por un valor NULL devuelto por la primera expresión de cadena.  
@@ -90,6 +79,6 @@ WHERE {[Date].[Calendar Year].[Calendar Year].&[2003]}
 ```  
   
 ## <a name="see-also"></a>Vea también  
- [Referencia de funciones MDX & #40; MDX & #41;](../mdx/mdx-function-reference-mdx.md)  
+ [Referencia de funciones MDX &#40;MDX&#41;](../mdx/mdx-function-reference-mdx.md)  
   
   

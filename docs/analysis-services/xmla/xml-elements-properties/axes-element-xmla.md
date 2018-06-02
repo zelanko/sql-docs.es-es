@@ -9,11 +9,12 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: 02b9c91f30c45e59d0f5eba00a5b76262070d711
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.openlocfilehash: 3a8dfff1c8a551157661bcb1de5700bf51a7f914
+ms.sourcegitcommit: 808d23a654ef03ea16db1aa23edab496b73e5072
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/10/2018
+ms.lasthandoff: 06/02/2018
+ms.locfileid: "34574917"
 ---
 # <a name="axes-element-xmla"></a>Elemento Axes (XMLA)
 [!INCLUDE[ssas-appliesto-sqlas-aas](../../../includes/ssas-appliesto-sqlas-aas.md)]
@@ -37,17 +38,17 @@ ms.lasthandoff: 05/10/2018
 |Característica|Descripción|  
 |--------------------|-----------------|  
 |Tipo y longitud de los datos|Cualquiera|  
-|Valor predeterminado|Ninguno|  
+|Valor predeterminado|None|  
 |Cardinalidad|1-1: Elemento necesario que se produce una vez y solo una vez.|  
   
 ## <a name="element-relationships"></a>Relaciones del elemento  
   
 |Relación|Elemento|  
 |------------------|-------------|  
-|Elementos primarios|[raíz](../../../analysis-services/xmla/xml-elements-properties/root-element-xmla.md)|  
-|Elementos secundarios|[Eje](../../../analysis-services/xmla/xml-elements-properties/axis-element-xmla.md)|  
+|Elementos primarios|[Raíz](../../../analysis-services/xmla/xml-elements-properties/root-element-xmla.md)|  
+|Elementos secundarios|[Axis](../../../analysis-services/xmla/xml-elements-properties/axis-element-xmla.md)|  
   
-## <a name="remarks"></a>Comentarios  
+## <a name="remarks"></a>Notas  
  En el **ejes** elemento, el **eje** elementos se muestran en el orden en que aparecen en el conjunto de datos, empezando por cero. El **AxisFormat** configuración de la propiedad XMLA determina cómo **eje** se da formato a los elementos. Para obtener más información sobre la **AxisFormat** propiedad, vea [admite propiedades XMLA &#40;XMLA&#41;](../../../analysis-services/xmla/xml-elements-properties/propertylist-element-supported-xmla-properties.md).  
   
  Un eje representa un conjunto de tuplas, en las que todas las tuplas del conjunto tienen la misma dimensionalidad. Un conjunto se puede representar de maneras diferentes con ventajas diferentes. Por ejemplo, el conjunto siguiente de cuatro tuplas se puede representar como una colección de tuplas bidimensionales o un producto cartesiano de dos conjuntos unidimensionales.  
@@ -72,7 +73,7 @@ ms.lasthandoff: 05/10/2018
   
  La tabla siguiente enumera las operaciones que se pueden usar para definir y caracterizar la estructura y los miembros de un eje.  
   
-|Operación|Description|  
+|Operación|Descripción|  
 |---------------|-----------------|  
 |Miembro|La unidad más pequeña de un eje que representa el miembro de una jerarquía de la dimensión.|  
 |Miembros|Una colección de **miembro** objetos de la misma jerarquía de la dimensión.|  
@@ -103,8 +104,8 @@ CrossProduct (
   
  Un cliente puede utilizar el **AxisFormat** propiedad para solicitar una representación concreta.  
   
-## <a name="see-also"></a>Vea también  
- [Tipo de datos MDDataSet & #40; XMLA & #41;](../../../analysis-services/xmla/xml-data-types/mddataset-data-type-xmla.md)   
- [Propiedades & #40; XMLA & #41;](../../../analysis-services/xmla/xml-elements-properties/xml-elements-properties.md)  
+## <a name="see-also"></a>Vea también
+ [Tipo de datos MDDataSet &#40;XMLA&#41;](../../../analysis-services/xmla/xml-data-types/mddataset-data-type-xmla.md)   
+ [Propiedades &#40;XMLA&#41;](../../../analysis-services/xmla/xml-elements-properties/xml-elements-properties.md)  
   
   

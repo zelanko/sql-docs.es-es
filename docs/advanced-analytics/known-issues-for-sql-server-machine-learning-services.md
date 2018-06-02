@@ -7,11 +7,12 @@ ms.topic: conceptual
 author: HeidiSteen
 ms.author: heidist
 manager: cgronlun
-ms.openlocfilehash: f9ea766dc0ada056d85398e6ce2079df6b24b34a
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
+ms.openlocfilehash: 20a3742c9dfc956accd902539524724cac3f9b8c
+ms.sourcegitcommit: 808d23a654ef03ea16db1aa23edab496b73e5072
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 06/02/2018
+ms.locfileid: "34563863"
 ---
 # <a name="known-issues-in-machine-learning-services"></a>Problemas conocidos en servicios de aprendizaje de máquina
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
@@ -96,7 +97,7 @@ Este mensaje aparece si se da alguna de las dos instrucciones siguientes es true
 + Instaló R Server (independiente) en un equipo cliente mediante el Asistente para instalación [!INCLUDE[ssSQLv14_md](../includes/sssqlv14-md.md)].
 + Ha instalado Microsoft R Server usando el [separar Windows installer](https://docs.microsoft.com/machine-learning-server/install/r-server-install-windows).
 
-Para asegurarse de que el servidor y el cliente utilizan la misma versión que quizás necesite utilizar _enlace_, compatible con Microsoft R Server 9.0 y versiones posteriores actualizar los componentes de R en instancias de SQL Server 2016. Para determinar si son compatibles con las actualizaciones para su versión de servicios de R, consulte [actualizar una instancia de servicios de R mediante SqlBindR.exe](/r/use-sqlbindr-exe-to-upgrade-an-instance-of-sql-server.md).
+Para asegurarse de que el servidor y el cliente utilizan la misma versión que quizás necesite utilizar _enlace_, compatible con Microsoft R Server 9.0 y versiones posteriores actualizar los componentes de R en instancias de SQL Server 2016. Para determinar si son compatibles con las actualizaciones para su versión de servicios de R, consulte [actualizar una instancia de servicios de R mediante SqlBindR.exe](r/use-sqlbindr-exe-to-upgrade-an-instance-of-sql-server.md).
 
 **Se aplica a:** SQL Server 2016 R Services, con R Server versión 9.0.0 o versiones anteriores
 

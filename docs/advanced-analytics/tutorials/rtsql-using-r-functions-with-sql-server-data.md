@@ -7,11 +7,12 @@ ms.topic: tutorial
 author: HeidiSteen
 ms.author: heidist
 manager: cgronlun
-ms.openlocfilehash: 226712010118a54ac1c5350e128bf50cc261a128
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
+ms.openlocfilehash: 52b03b16c55b4ae8a772c2c12861fcc4b184d1f4
+ms.sourcegitcommit: 808d23a654ef03ea16db1aa23edab496b73e5072
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 06/02/2018
+ms.locfileid: "34585747"
 ---
 # <a name="using-r-functions-with-sql-server-data-r-in-sql-quickstart"></a>Uso de funciones de R con datos de SQL Server (R en Inicio rápido de SQL)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
@@ -71,12 +72,6 @@ Ahora que ha ajustado la función de R en un procedimiento almacenado, puede lla
 ```sql
 EXEC MyRNorm @param1 = 100,@param2 = 50, @param3 = 3
 ```
-
-## <a name="related-resources"></a>Recursos relacionados
-
-+ ¿Desea instalar varios paquetes de R obtener más funciones estadísticas avanzadas? Vea [instalar y administrar paquetes de R](../r/installing-and-managing-r-packages.md).
-
-+ Para ayudarle a convertir el código de R independiente a un formato que se puede parametrizar fácilmente utilizando procedimientos almacenados de SQL Server, el equipo de Microsoft R ha proporcionado un nuevo paquete de R, **sqlrutils**. Para obtener más información, consulte [cómo crear un procedimiento almacenado mediante sqlrutils](../r/how-to-create-a-stored-procedure-using-sqlrutils.md).
 
 ## <a name="use-r-utility-functions-for-troubleshooting"></a>Usar funciones de utilidad de R para solucionar problemas
 

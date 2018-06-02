@@ -1,31 +1,20 @@
 ---
 title: DrilldownLevel (MDX) | Documentos de Microsoft
-ms.custom: ''
-ms.date: 03/02/2016
-ms.prod: analysis-services
-ms.prod_service: analysis-services
-ms.component: ''
-ms.reviewer: ''
-ms.suite: pro-bi
-ms.technology: ''
-ms.tgt_pltfrm: ''
-ms.topic: language-reference
-f1_keywords:
-- DRILLDOWNLEVEL
-dev_langs:
-- kbMDX
-helpviewer_keywords:
-- DrilldownLevel function
-ms.assetid: 47531ce5-1ac0-4aa9-a85c-824fb5d21e7c
-caps.latest.revision: 43
-author: Minewiskan
+ms.date: 05/30/2018
+ms.prod: sql
+ms.technology: analysis-services
+ms.custom: mdx
+ms.topic: reference
 ms.author: owend
-manager: erikre
-ms.openlocfilehash: 11346a0157824dc97f7f64acc447a44de2fc581c
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.reviewer: owend
+author: minewiskan
+manager: kfile
+ms.openlocfilehash: 99e8c47164d920ec531bf6ab51e35979b060c35d
+ms.sourcegitcommit: 808d23a654ef03ea16db1aa23edab496b73e5072
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/02/2018
+ms.locfileid: "34578007"
 ---
 # <a name="drilldownlevel-mdx"></a>DrilldownLevel (MDX)
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
@@ -53,7 +42,7 @@ DrilldownLevel(Set_Expression [,[Level_Expression] ,[Index]] [,INCLUDE_CALC_MEMB
  *Include_Calc_Members*  
  (Opcional). Marca que indica si se deben incluir en el nivel de detalle los miembros calculados, si existen.  
   
-## <a name="remarks"></a>Comentarios  
+## <a name="remarks"></a>Notas  
  El **DrilldownLevel** función devuelve un conjunto de secundarios miembros en un orden jerárquico, basado en los miembros incluidos en el conjunto especificado. El orden se mantiene entre los miembros originales del conjunto especificado, aunque todos los miembros secundarios incluidos en el conjunto de resultados de la función se incluyen inmediatamente bajo su miembro primario.  
   
  Si hay una estructura de datos jerárquica de varios niveles, puede elegir de forma explícita un nivel en el que aumentar los detalles. Hay dos métodos, que se excluyen mutuamente, de especificar el nivel. El primer enfoque consiste en establecer el **level_expression** argumento utilizando una expresión MDX que devuelve el nivel, una solución alternativa consiste en especificar el **índice** argumento, utilizando una expresión numérica que especifica el nivel por número.  
@@ -129,6 +118,6 @@ FROM [Adventure Works]
  Si se quita la marca y se vuelva a ejecutar la consulta, se obtienen los mismos resultados, menos el miembro calculado, [West Coast].  
   
 ## <a name="see-also"></a>Vea también  
- [Referencia de funciones MDX & #40; MDX & #41;](../mdx/mdx-function-reference-mdx.md)  
+ [Referencia de funciones MDX &#40;MDX&#41;](../mdx/mdx-function-reference-mdx.md)  
   
   

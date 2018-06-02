@@ -9,11 +9,12 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: 403074f1189bafc098f3fb9d76a19552407f0024
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.openlocfilehash: 3ada531d33baf7007d08ac8a719fca2bf8f1b2e4
+ms.sourcegitcommit: 808d23a654ef03ea16db1aa23edab496b73e5072
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/10/2018
+ms.lasthandoff: 06/02/2018
+ms.locfileid: "34574257"
 ---
 # <a name="cellinfo-element-xmla"></a>Elemento CellInfo (XMLA)
 [!INCLUDE[ssas-appliesto-sqlas-aas](../../../includes/ssas-appliesto-sqlas-aas.md)]
@@ -36,8 +37,8 @@ ms.lasthandoff: 05/10/2018
   
 |Característica|Descripción|  
 |--------------------|-----------------|  
-|Tipo y longitud de los datos|Ninguno|  
-|Valor predeterminado|Ninguno|  
+|Tipo y longitud de los datos|None|  
+|Valor predeterminado|None|  
 |Cardinalidad|1-1: Elemento necesario que se produce una vez y solo una vez.|  
   
 ## <a name="element-relationships"></a>Relaciones del elemento  
@@ -47,7 +48,7 @@ ms.lasthandoff: 05/10/2018
 |Elementos primarios|[OlapInfo](../../../analysis-services/xmla/xml-elements-properties/olapinfo-element-xmla.md)|  
 |Elementos secundarios|Una o más definiciones de propiedades de la celda|  
   
-## <a name="remarks"></a>Comentarios  
+## <a name="remarks"></a>Notas  
  El **CellInfo** elemento contiene una colección de propiedades de celda de las celdas incluidas en el conjunto de datos multidimensional devuelto por un **raíz** elemento utilizando el **MDDataSet**tipo de datos. Cada propiedad de celda en el **CellInfo** está definida por un elemento XML diferente, cada uno con un **nombre** atributo y un **tipo** atributo. El **nombre** atributo de la propiedad de celda se corresponde con el nombre de OLE DB para la propiedad de celda OLAP representada por el elemento XML y el **tipo** atributo representa el tipo de datos XML de la celda propiedad. El nombre del elemento XML se usa para identificar el valor de la propiedad de celda para aquellas celdas contenidas en el **CellData** elemento de la **raíz** elemento.  
   
  La sintaxis siguiente describe la definición de una propiedad de celda:  
@@ -74,7 +75,7 @@ ms.lasthandoff: 05/10/2018
 </OlapInfo>  
 ```  
   
-## <a name="see-also"></a>Vea también  
- [Propiedades & #40; XMLA & #41;](../../../analysis-services/xmla/xml-elements-properties/xml-elements-properties.md)  
+## <a name="see-also"></a>Vea también
+ [Propiedades &#40;XMLA&#41;](../../../analysis-services/xmla/xml-elements-properties/xml-elements-properties.md)  
   
   

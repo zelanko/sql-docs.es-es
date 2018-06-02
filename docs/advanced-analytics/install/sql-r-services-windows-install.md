@@ -7,11 +7,12 @@ ms.topic: conceptual
 author: HeidiSteen
 ms.author: heidist
 manager: cgronlun
-ms.openlocfilehash: 86263158581b92af42a7ad1ce9b538b2c1cdbfa7
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
+ms.openlocfilehash: 5d8cf1c6bb2ac59a2745aceb979c5f566917548a
+ms.sourcegitcommit: 808d23a654ef03ea16db1aa23edab496b73e5072
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 06/02/2018
+ms.locfileid: "34585597"
 ---
 # <a name="install-sql-server-2016-r-services-in-database"></a>Instalar SQL Server 2016 R Services (en bases de datos) 
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
@@ -257,7 +258,7 @@ Las soluciones de R que se crean para SQL Server pueden llamar a funciones bási
 
 Los paquetes que quiera usar de SQL Server deben estar instalados en la biblioteca predeterminada que la instancia usa. Si tiene una instalación independiente de R en el equipo, o si ha instalado los paquetes a las bibliotecas de usuario, no podrá usar esos paquetes de T-SQL.
 
-El proceso para instalar y administrar paquetes de R es diferente de SQL Server 2016 y 2017 de SQL Server. En SQL Server 2016, un administrador de base de datos debe instalar paquetes de R que necesitan los usuarios. En SQL Server 2017, puede configurar grupos de usuarios para compartir los paquetes en un nivel de cada base de datos o configurar los roles de base de datos para permitir a los usuarios instalar sus propios paquetes. Para obtener más información, consulte [administración del paquete](../r/r-package-management-for-sql-server-r-services.md).
+El proceso para instalar y administrar paquetes de R es diferente de SQL Server 2016 y 2017 de SQL Server. En SQL Server 2016, un administrador de base de datos debe instalar paquetes de R que necesitan los usuarios. En SQL Server 2017, puede configurar grupos de usuarios para compartir los paquetes en un nivel de cada base de datos o configurar los roles de base de datos para permitir a los usuarios instalar sus propios paquetes. Para obtener más información, consulte [instalar nuevos paquetes de R](../r/install-additional-r-packages-on-sql-server.md).
 
 
 ## <a name="get-help"></a>Obtener ayuda

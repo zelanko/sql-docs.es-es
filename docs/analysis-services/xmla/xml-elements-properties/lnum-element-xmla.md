@@ -9,11 +9,12 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: b9442621246fb688cd5c265c8c35e473c632c3b5
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.openlocfilehash: 49ab7672d51a90e30701666fbf391ffec6060f29
+ms.sourcegitcommit: 808d23a654ef03ea16db1aa23edab496b73e5072
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/10/2018
+ms.lasthandoff: 06/02/2018
+ms.locfileid: "34575477"
 ---
 # <a name="lnum-element-xmla"></a>Elemento LNum (XMLA)
 [!INCLUDE[ssas-appliesto-sqlas-aas](../../../includes/ssas-appliesto-sqlas-aas.md)]
@@ -34,8 +35,8 @@ ms.lasthandoff: 05/10/2018
   
 |Característica|Descripción|  
 |--------------------|-----------------|  
-|Tipo y longitud de los datos|int|  
-|Valor predeterminado|Ninguno|  
+|Tipo y longitud de los datos|INT|  
+|Valor predeterminado|None|  
 |Cardinalidad|1-1: Elemento necesario que se produce una vez y solo una vez.|  
   
 ## <a name="element-relationships"></a>Relaciones del elemento  
@@ -43,14 +44,14 @@ ms.lasthandoff: 05/10/2018
 |Relación|Elemento|  
 |------------------|-------------|  
 |Elementos primarios|[HierarchyInfo](../../../analysis-services/xmla/xml-elements-properties/hierarchyinfo-element-xmla.md), [Member](../../../analysis-services/xmla/xml-elements-properties/member-element-xmla.md)|  
-|Elementos secundarios|Ninguno|  
+|Elementos secundarios|None|  
   
-## <a name="remarks"></a>Comentarios  
+## <a name="remarks"></a>Notas  
  Para **HierarchyInfo** elementos, el **LNum** elemento contiene el nombre de la propiedad que proporciona las posiciones ordinales de nivel de la jerarquía. El valor es equivalente a la propiedad LEVEL_NUMBER definida para conjuntos de filas de ejes en OLE DB para la especificación de OLAP.  
   
  Para **miembro** elementos, el **LNum** elemento contiene la posición ordinal basado en cero, desde el nivel raíz de la jerarquía del miembro representado por el elemento primario [miembro](../../../analysis-services/xmla/xml-elements-properties/member-element-xmla.md)elemento. Un valor de cero representa el nivel de raíz de la jerarquía.  
   
-## <a name="see-also"></a>Vea también  
- [Propiedades & #40; XMLA & #41;](../../../analysis-services/xmla/xml-elements-properties/xml-elements-properties.md)  
+## <a name="see-also"></a>Vea también
+ [Propiedades &#40;XMLA&#41;](../../../analysis-services/xmla/xml-elements-properties/xml-elements-properties.md)  
   
   

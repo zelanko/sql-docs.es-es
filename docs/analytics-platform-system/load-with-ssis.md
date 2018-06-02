@@ -9,11 +9,12 @@ ms.topic: conceptual
 ms.date: 04/17/2018
 ms.author: murshedz
 ms.reviewer: martinle
-ms.openlocfilehash: efc077bda6d05642107a6e8694d53418401ff12c
-ms.sourcegitcommit: 056ce753c2d6b85cd78be4fc6a29c2b4daaaf26c
+ms.openlocfilehash: 718a076822a4304e0ba951f3ca1903bb7c009e17
+ms.sourcegitcommit: 808d23a654ef03ea16db1aa23edab496b73e5072
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/19/2018
+ms.lasthandoff: 06/02/2018
+ms.locfileid: "34586067"
 ---
 # <a name="load-data-with-integration-services-to-parallel-data-warehouse"></a>Carga los datos con Integration Services para almacenamiento de datos paralelos
 Proporciona información de referencia e implementación para cargar datos en almacenamiento de datos paralelos de SQL Server mediante el uso de paquetes de SQL Server Integration Services (SSIS).  
@@ -28,7 +29,7 @@ Before you can start loading data, use the following topics to install the Integ
   
 -   [Connect With Integration Services for loading](connect-with-ssis-for-loading.md)  
   
-For general information about developing Integration Services packages, see [Designing and Implementing Packages (Integration Services)](http://msdn.microsoft.com/library/ms141091&#40;v=sql11&#40;.aspx) on MSDN.  
+For general information about developing Integration Services packages, see [Designing and Implementing Packages (Integration Services)](http://msdn.microsoft.com/library/ms141091\(v=sql11\).aspx) on MSDN.  
 
 -->
   
@@ -60,7 +61,7 @@ Por ejemplo, `dtexec /FILE "C:\Users\User1\Desktop\Package.dtsx"`
 ### <a name="run-from-a-windows-command-prompt"></a>Ejecución de Windows un símbolo del sistema 
 Para ejecutar el paquete desde un símbolo del sistema de Windows, con el **dtexec** utilidad: `dtexec /FILE <packagePath>`  
   
-Por ejemplo: `dtexec /FILE "C:\Users\User1\Desktop\Package.dtsx"`  
+Por ejemplo, `dtexec /FILE "C:\Users\User1\Desktop\Package.dtsx"`  
   
 ## <a name="DataTypes"></a>Tipos de datos  
 Al utilizar Integration Services para cargar datos desde un origen de datos a una base de datos de SQL Server PDW, se asignan primero los datos del origen de datos a tipos de datos de Integration Services. Esto permite que los datos de varios orígenes de datos se asignen a un conjunto común de tipos de datos.  
@@ -83,7 +84,7 @@ A continuación, se asignan los datos de Integration Services a tipos de datos d
 |NCHAR|DT_WSTR|  
 |NUMERIC|DT_DECIMAL, DT_I1, DT_I2, DT_I4, DT_I8, DT_NUMERIC, DT_UI1, DT_UI2, DT_UI4, DT_UI8|  
 |NVARCHAR|DT_WSTR, DT_STR|  
-|REAL|DT_R4|  
+|real|DT_R4|  
 |SMALLDATETIME|DT_DBTIMESTAMP2|  
 |SMALLINT|DT_I1, DT_I2, DT_UI1|  
 |SMALLMONEY|DT_R4|  
@@ -114,7 +115,7 @@ PDW de SQL Server no admite los siguientes tipos de datos de Integration Service
   
 Para cargar las columnas que contienen datos de estos tipos en PDW de SQL Server, debe agregar una transformación de conversión de datos de nivel superior en el flujo de datos para convertir los datos a un tipo de datos compatible.  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>Permisos  
 Para ejecutar un paquete de carga de Integration Services, necesita:  
   
 -   Permiso de carga en la base de datos.  
@@ -247,16 +248,16 @@ Ejecute el paquete en el equipo de servicios de integración.
   
 ## <a name="see-also"></a>Vea también  
 [Crear una tarea de secuencia de comandos que usa el adaptador de destino de SSIS PDW](create-ssis-script-task-using-pdw-destination-adapter.md)  
-[SQL Server Integration Services](http://msdn.microsoft.com/library/ms141026&#40;v=sql11&#40;.aspx)  
-[Diseñar e implementar paquetes (Integration Services)](http://msdn.microsoft.com/library/ms141091&#40;v=sql11&#40;.aspx)  
-[Tutorial: Crear un paquete básico mediante un asistente](http://technet.microsoft.com/library/ms365330&#40;v=sql11&#40;.aspx)  
+[SQL Server Integration Services](http://msdn.microsoft.com/library/ms141026\(v=sql11\).aspx)  
+[Diseñar e implementar paquetes (Integration Services)](http://msdn.microsoft.com/library/ms141091\(v=sql11\).aspx)  
+[Tutorial: Crear un paquete básico mediante un asistente](http://technet.microsoft.com/library/ms365330\(v=sql11\).aspx)  
 [Introducción (Integration Services)](http://go.microsoft.com/fwlink/?LinkId=202412)  
 [Ejemplo para generar el paquete dinámico](http://go.microsoft.com/fwlink/?LinkId=202413)  
 [Diseñar paquetes SSIS para el paralelismo (vídeo de SQL Server)](http://msdn.microsoft.com/library/dd795221.aspx)  
 [Microsoft SQL Server Community ejemplos: Servicios de integración](http://go.microsoft.com/fwlink/?LinkId=202415)  
-[Mejorar las cargas incrementales con la captura de datos modificados](http://msdn.microsoft.com/library/bb895315&#40;v=sql11&#40;.aspx)  
-[Transformación Dimensión de variación lenta](http://msdn.microsoft.com/library/ms141715&#40;v=sql11&#40;.aspx)  
-[Tarea Inserción masiva](http://msdn.microsoft.com/library/ms141239&#40;v=sql11&#40;.aspx)  
+[Mejorar las cargas incrementales con la captura de datos modificados](http://msdn.microsoft.com/library/bb895315\(v=sql11\).aspx)  
+[Transformación Dimensión de variación lenta](http://msdn.microsoft.com/library/ms141715\(v=sql11\).aspx)  
+[Tarea Inserción masiva](http://msdn.microsoft.com/library/ms141239\(v=sql11\).aspx)  
   
 <!-- MISSING LINKS
 [Grant permissions to load data](grant-permissions-to-load-data.md)  

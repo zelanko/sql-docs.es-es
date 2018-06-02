@@ -9,11 +9,12 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: 6af1143891fff7bc5ddc8fd25d4908fae5246bba
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.openlocfilehash: 1ba73a6ea5926de6f445c5ca5cec8142b3e196bd
+ms.sourcegitcommit: 808d23a654ef03ea16db1aa23edab496b73e5072
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/10/2018
+ms.lasthandoff: 06/02/2018
+ms.locfileid: "34576277"
 ---
 # <a name="cell-element-mddataset-xmla"></a>Elemento Cell (MDDataSet) (XMLA)
 [!INCLUDE[ssas-appliesto-sqlas-aas](../../../includes/ssas-appliesto-sqlas-aas.md)]
@@ -36,8 +37,8 @@ ms.lasthandoff: 05/10/2018
   
 |Característica|Descripción|  
 |--------------------|-----------------|  
-|Tipo y longitud de los datos|Ninguno|  
-|Valor predeterminado|Ninguno|  
+|Tipo y longitud de los datos|None|  
+|Valor predeterminado|None|  
 |Cardinalidad|0-n: elemento opcional que puede aparecer más de una vez.|  
   
 ## <a name="element-relationships"></a>Relaciones del elemento  
@@ -49,11 +50,11 @@ ms.lasthandoff: 05/10/2018
   
 ## <a name="attributes"></a>Atributos  
   
-|Atributo|Descripción|  
+|Attribute|Descripción|  
 |---------------|-----------------|  
 |CellOrdinal|Requiere **unsignedInt** atributo. Posición ordinal de la celda dentro del conjunto de datos multidimensional.|  
   
-## <a name="remarks"></a>Comentarios  
+## <a name="remarks"></a>Notas  
  En el elemento primario **raíz** elemento, el **ejes** elemento va seguido del **CellData** elemento, una colección de **celda** elementos que contienen los valores de propiedad para cada celda devuelta en el conjunto de datos multidimensional. El **celda** elemento contiene el **CellOrdinal** atributo, que indica la posición ordinal de base cero de la celda dentro del conjunto de datos multidimensional y un elemento para cada valor de propiedad de celda asociado a la celda. Cada valor de propiedad de celda en el **celda** está definida por un elemento XML independiente. El valor de la propiedad de celda es los datos contenidos en el elemento XML y el nombre de la propiedad de celda, como se define en el **CellInfo** elemento del elemento raíz primario, corresponde al nombre del elemento XML.  
   
  La sintaxis siguiente describe un valor de propiedad de la celda:  
@@ -65,7 +66,7 @@ ms.lasthandoff: 05/10/2018
  El tipo de datos de un valor de propiedad de celda solamente se especifica para la propiedad de celda VALUE. Los tipos de datos de otras propiedades de celda se determinan mediante la definición de propiedad de celda incluida en la **CellInfo** elemento. Puede excluir un elemento de valor de propiedad de celda si se ha especificado un valor predeterminado (mediante la inclusión de un **predeterminado** , elemento de una definición de propiedad de celda contenida en el **CellInfo** elemento) para una propiedad de celda o si no se ha especificado ningún valor predeterminado y el valor de la propiedad de celda es null.  
   
 ## <a name="cell-property-errors"></a>Errores de propiedades de celda  
- Si no se puede devolver una propiedad de celda debido a un error que se produce en la instancia de [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)], por ejemplo, un error de cálculo que impide que el valor que se devuelve para una celda determinada, un **Error** elemento reemplaza el contenido de la propiedad de celda en cuestión. El ejemplo de XML siguiente describe un error de propiedad de celda:  
+ Si no se puede devolver una propiedad de celda debido a un error que se produce en la instancia de Analysis Services, como un error de cálculo que impide que el valor que se devuelve para una celda determinada, un **Error** elemento reemplaza el contenido de la propiedad de celda en cuestión. El ejemplo de XML siguiente describe un error de propiedad de celda:  
   
 ```  
 <Cell CellOrdinal="0">  
@@ -125,8 +126,8 @@ ms.lasthandoff: 05/10/2018
 </CellData>  
 ```  
   
-## <a name="see-also"></a>Vea también  
- [Tipo de datos MDDataSet & #40; XMLA & #41;](../../../analysis-services/xmla/xml-data-types/mddataset-data-type-xmla.md)   
- [Propiedades & #40; XMLA & #41;](../../../analysis-services/xmla/xml-elements-properties/xml-elements-properties.md)  
+## <a name="see-also"></a>Vea también
+ [Tipo de datos MDDataSet &#40;XMLA&#41;](../../../analysis-services/xmla/xml-data-types/mddataset-data-type-xmla.md)   
+ [Propiedades &#40;XMLA&#41;](../../../analysis-services/xmla/xml-elements-properties/xml-elements-properties.md)  
   
   

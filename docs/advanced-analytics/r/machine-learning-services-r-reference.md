@@ -7,11 +7,12 @@ ms.topic: conceptual
 author: HeidiSteen
 ms.author: heidist
 manager: cgronlun
-ms.openlocfilehash: e8995dbf106db2d9b067e6c26c4277d561d68902
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
+ms.openlocfilehash: 8f0714f223145acd65a0dd57d02b105e5ec2aa0e
+ms.sourcegitcommit: 808d23a654ef03ea16db1aa23edab496b73e5072
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 06/02/2018
+ms.locfileid: "34563654"
 ---
 # <a name="api-reference-for-sql-server-machine-learning-services"></a>Referencia de API de servicios de aprendizaje de máquina de SQL Server
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
@@ -25,13 +26,13 @@ En su mayor parte, SQL Server utiliza las mismas bibliotecas de R y Python que s
 > [!NOTE]
 > Documentación para todas las API se deriva de código fuente y no se hayan editado. Si ve errores, agregue un comentario en la documentación de referencia de API. 
 
-## <a name="r"></a>L
+## <a name="r"></a>R
 
 + [RevoScaleR](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/revoscaler)
 
     Algoritmos escalables que admiten varios orígenes de datos y contextos de proceso remoto.
 
-+ [MicrosoftML](https://docs.microsoft.com/machine-learning-serverr-reference/microsoftml/microsoftml-package)
++ [MicrosoftML](https://docs.microsoft.com/machine-learning-server/r-reference/microsoftml/microsoftml-package)
 
     Las transformaciones y los algoritmos de aprendizaje para R. requiere RevoScaleR máquina rápida y escalable.
 
@@ -67,7 +68,7 @@ En su mayor parte, SQL Server utiliza las mismas bibliotecas de R y Python que s
 
     Funciones de utilidad para su uso con entornos de RevoScaleR
 
-## <a name="other"></a>Otro
+## <a name="other"></a>Otros
 
 Temas "Cómo" y resúmenes específicas para el uso de estas R o las API de Python en SQL Server pueden encontrarse aquí:
 

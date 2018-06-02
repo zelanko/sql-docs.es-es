@@ -9,11 +9,12 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: beb58b21c88bf5500ba7c15c336b866df59b0c7e
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.openlocfilehash: 4b2c49f32029078bbe67e70066845f5b8f7d4f3c
+ms.sourcegitcommit: 808d23a654ef03ea16db1aa23edab496b73e5072
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/10/2018
+ms.lasthandoff: 06/02/2018
+ms.locfileid: "34573517"
 ---
 # <a name="contextualnamerule-element-xml"></a>Elemento ContextualNameRule (XML)
 [!INCLUDE[ssas-appliesto-sqlas-aas](../../../includes/ssas-appliesto-sqlas-aas.md)]
@@ -43,14 +44,14 @@ ms.lasthandoff: 05/10/2018
 |Relación|Elemento|  
 |------------------|-------------|  
 |Elementos primarios|[RelationshipEndVisualizationProperties](../../../analysis-services/scripting/data-type/relationshipendvisualizationproperties-data-type-assl.md)|  
-|Elementos secundarios|Ninguno|  
+|Elementos secundarios|None|  
   
-## <a name="remarks"></a>Comentarios  
+## <a name="remarks"></a>Notas  
  Proporciona una sugerencia a las aplicaciones cliente sobre cómo crear nombres inequívocos para este atributo.  
   
  El valor de la **ContextualNameRule** elemento se limita a una de las cadenas enumeradas en la tabla siguiente.  
   
-|Value|Description|  
+|Valor|Descripción|  
 |-----------|-----------------|  
 |*Ninguno*|Usar el nombre del atributo.|  
 |*Contexto*|Usar el nombre de la relación entrante.|  

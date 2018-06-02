@@ -1,29 +1,20 @@
 ---
 title: CASE (instrucción) (MDX) | Documentos de Microsoft
-ms.custom: ''
-ms.date: 03/02/2016
-ms.prod: analysis-services
-ms.prod_service: analysis-services
-ms.component: ''
-ms.reviewer: ''
-ms.suite: pro-bi
-ms.technology: ''
-ms.tgt_pltfrm: ''
-ms.topic: language-reference
-dev_langs:
-- kbMDX
-helpviewer_keywords:
-- statements [MDX], CASE
-ms.assetid: 0aee3b4a-d5f7-4c9a-87b8-e5efc2da6b6d
-caps.latest.revision: 22
-author: Minewiskan
+ms.date: 05/30/2018
+ms.prod: sql
+ms.technology: analysis-services
+ms.custom: mdx
+ms.topic: reference
 ms.author: owend
-manager: erikre
-ms.openlocfilehash: 9e43188839e18290232de0d1ce6849c328580ec4
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.reviewer: owend
+author: minewiskan
+manager: kfile
+ms.openlocfilehash: c57276a75e8dd25f13a51c7bd0ea6c75a119a861
+ms.sourcegitcommit: 808d23a654ef03ea16db1aa23edab496b73e5072
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/02/2018
+ms.locfileid: "34577257"
 ---
 # <a name="case-statement-mdx"></a>Instrucción CASE  (MDX)
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
@@ -69,7 +60,7 @@ END
  *Boolean_expression*  
  Expresión MDX que se evalúa como un valor escalar.  
   
-## <a name="remarks"></a>Comentarios  
+## <a name="remarks"></a>Notas  
  Si no existe ninguna cláusula ELSE y todas las cláusulas WHEN son falsas, el resultado será una celda vacía.  
   
 ## <a name="simple-case-expression"></a>Expresión CASE sencilla  
@@ -116,6 +107,6 @@ WHERE [Measures].x
 ```  
   
 ## <a name="see-also"></a>Vea también  
- [Instrucciones de Scripting de MDX & #40; MDX & #41;](../mdx/mdx-scripting-statements-mdx.md)  
+ [Instrucciones de Scripting MDX &#40;MDX&#41;](../mdx/mdx-scripting-statements-mdx.md)  
   
   

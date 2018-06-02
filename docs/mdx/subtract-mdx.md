@@ -1,32 +1,20 @@
 ---
 title: '- (Restar) (MDX) | Documentos de Microsoft'
-ms.custom: ''
-ms.date: 03/02/2016
-ms.prod: analysis-services
-ms.prod_service: analysis-services
-ms.component: ''
-ms.reviewer: ''
-ms.suite: pro-bi
-ms.technology: ''
-ms.tgt_pltfrm: ''
-ms.topic: language-reference
-f1_keywords:
-- '-'
-dev_langs:
-- kbMDX
-helpviewer_keywords:
-- '- (subtract)'
-- subtract operator (-)
-ms.assetid: 56e610a1-efbd-4c11-bd7c-bf20a6553e57
-caps.latest.revision: 35
-author: Minewiskan
+ms.date: 05/30/2018
+ms.prod: sql
+ms.technology: analysis-services
+ms.custom: mdx
+ms.topic: reference
 ms.author: owend
-manager: erikre
-ms.openlocfilehash: 4cf3b463887f6b5a7b2f801ee2cbd702624929f6
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.reviewer: owend
+author: minewiskan
+manager: kfile
+ms.openlocfilehash: e28163ebdec4945665bebd794ece8e09f1ba3812
+ms.sourcegitcommit: 808d23a654ef03ea16db1aa23edab496b73e5072
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/02/2018
+ms.locfileid: "34582357"
 ---
 # <a name="--subtract-mdx"></a>- (Restar) (MDX)
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
@@ -47,7 +35,7 @@ Numeric_Expression - Numeric_Expression
 ## <a name="return-value"></a>Valor devuelto  
  Un valor con el tipo de datos del parámetro que tiene mayor precedencia.  
   
-## <a name="remarks"></a>Comentarios  
+## <a name="remarks"></a>Notas  
  Ambas expresiones deben ser del mismo tipo de datos o una se debe poder convertir implícitamente en el tipo de datos de la otra. Si una expresión se evalúa en un valor NULL, el operador devuelve el resultado de la expresión no NULL.  
   
 ## <a name="examples"></a>Ejemplos  

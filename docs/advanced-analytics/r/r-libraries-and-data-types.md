@@ -7,11 +7,12 @@ ms.topic: conceptual
 author: HeidiSteen
 ms.author: heidist
 manager: cgronlun
-ms.openlocfilehash: 56a3bc495fa6541208a094f82ede9a43b4021c23
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
+ms.openlocfilehash: d06f34210f5ec4aee741d3f3a70a01f60f10fb98
+ms.sourcegitcommit: 808d23a654ef03ea16db1aa23edab496b73e5072
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 06/02/2018
+ms.locfileid: "34586047"
 ---
 # <a name="r-libraries-and-r-data-types"></a>Bibliotecas de R y tipos de datos de R
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
@@ -34,7 +35,7 @@ Para ver la versión de R asociada con una instancia concreta de SQL Server, abr
 
 Para obtener la versión de R incluido en una versión concreta de Microsoft R Server, consulte [R Server - What's New](https://msdn.microsoft.com/microsoft-r/rserver-whats-new#new-and-updated-packages).
 
-Tenga en cuenta que el sistema de administración de paquetes en SQL Server, significa que se pueden instalar varias versiones de un paquete de R en el mismo equipo, con varios usuarios compartir el mismo paquete o con versiones diferentes del mismo paquete. Para obtener más información, consulte [administración de paquetes de R en SQL Server](../r/r-package-management-for-sql-server-r-services.md).
+Tenga en cuenta que el sistema de administración de paquetes en SQL Server, significa que se pueden instalar varias versiones de un paquete de R en el mismo equipo, con varios usuarios compartir el mismo paquete o con versiones diferentes del mismo paquete. Para obtener más información, consulte [administración de paquetes de R en SQL Server](../r/install-additional-r-packages-on-sql-server.md).
 
 ## <a name="r-and-sql-data-types"></a>Tipos de datos SQL y R
 

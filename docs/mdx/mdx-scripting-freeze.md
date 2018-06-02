@@ -1,32 +1,20 @@
 ---
 title: FREEZE (instrucción, MDX) | Documentos de Microsoft
-ms.custom: ''
-ms.date: 03/02/2016
-ms.prod: analysis-services
-ms.prod_service: analysis-services
-ms.component: ''
-ms.reviewer: ''
-ms.suite: pro-bi
-ms.technology: ''
-ms.tgt_pltfrm: ''
-ms.topic: language-reference
-f1_keywords:
-- FREEZE
-dev_langs:
-- kbMDX
-helpviewer_keywords:
-- FREEZE statement
-- locking cell values [MDX]
-ms.assetid: 59f1e860-6f37-41af-97d6-7708bdaac933
-caps.latest.revision: 32
-author: Minewiskan
+ms.date: 05/30/2018
+ms.prod: sql
+ms.technology: analysis-services
+ms.custom: mdx
+ms.topic: reference
 ms.author: owend
-manager: erikre
-ms.openlocfilehash: bf02f73b4c1de617a0c66e34882cc63c32cd0517
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.reviewer: owend
+author: minewiskan
+manager: kfile
+ms.openlocfilehash: 9b7eb3a3939ce8525dc57d27a24ac005ecb2cf2d
+ms.sourcegitcommit: 808d23a654ef03ea16db1aa23edab496b73e5072
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/02/2018
+ms.locfileid: "34579907"
 ---
 # <a name="mdx-scripting---freeze"></a>Scripting de MDX - INMOVILIZAR
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
@@ -44,7 +32,7 @@ FREEZE Subcube_Expression
  *Subcube_Expression*  
  Expresión MDX (Expresiones multidimensionales) válida que devuelve un subcubo.  
   
-## <a name="remarks"></a>Comentarios  
+## <a name="remarks"></a>Notas  
  El **INMOVILIZAR** instrucción bloquea los valores de las celdas de un subcubo especificado, impidiendo que instrucciones posteriores en un MDX pasa de script de cambio de sus valores de cálculo posteriores.  
   
  En el siguiente ejemplo, A y B representan subcubos en un script de cálculo MDX:  
@@ -69,6 +57,6 @@ B = 3
  Ahora, A es igual a 2 y B es igual a 3.  
   
 ## <a name="see-also"></a>Vea también  
- [Instrucciones de Scripting de MDX & #40; MDX & #41;](../mdx/mdx-scripting-statements-mdx.md)  
+ [Instrucciones de Scripting MDX &#40;MDX&#41;](../mdx/mdx-scripting-statements-mdx.md)  
   
   

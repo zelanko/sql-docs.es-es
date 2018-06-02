@@ -1,32 +1,20 @@
 ---
 title: (División) (MDX) | Documentos de Microsoft
-ms.custom: ''
-ms.date: 03/02/2016
-ms.prod: analysis-services
-ms.prod_service: analysis-services
-ms.component: ''
-ms.reviewer: ''
-ms.suite: pro-bi
-ms.technology: ''
-ms.tgt_pltfrm: ''
-ms.topic: language-reference
-f1_keywords:
-- /
-dev_langs:
-- kbMDX
-helpviewer_keywords:
-- / (divide)
-- divide operator (/)
-ms.assetid: 42b7d3ea-234d-41b3-a849-f457be6d7972
-caps.latest.revision: 34
-author: Minewiskan
+ms.date: 05/30/2018
+ms.prod: sql
+ms.technology: analysis-services
+ms.custom: mdx
+ms.topic: reference
 ms.author: owend
-manager: erikre
-ms.openlocfilehash: cb7a96ef190f1b0af20a9816b1f245e50dbaec74
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.reviewer: owend
+author: minewiskan
+manager: kfile
+ms.openlocfilehash: fbf7e28d9e33d2eccbc3d51b8ff61c0cabd75270
+ms.sourcegitcommit: 808d23a654ef03ea16db1aa23edab496b73e5072
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/02/2018
+ms.locfileid: "34577977"
 ---
 # <a name="divide---mdx-operator-reference"></a>División - referencia de operadores MDX
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
@@ -50,7 +38,7 @@ Dividend / Divisor
 ## <a name="return-value"></a>Valor devuelto  
  Un valor con el tipo de datos del parámetro que tiene mayor precedencia.  
   
-## <a name="remarks"></a>Comentarios  
+## <a name="remarks"></a>Notas  
  El valor real devuelto por la **/ (dividir)** operador representa el cociente de la primera expresión, dividida por la segunda expresión.  
   
  Ambas expresiones deben ser del mismo tipo de datos o una se debe poder convertir implícitamente en el tipo de datos de la otra. Si *Divisor* se evalúa como un valor null, el operador genera un error. Si ambos *Divisor* y *dividendo* evaluar en un valor null, el operador devuelve un valor null.  

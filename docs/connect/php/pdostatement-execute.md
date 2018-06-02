@@ -1,7 +1,7 @@
 ---
 title: 'Pdostatement:: Execute | Documentos de Microsoft'
 ms.custom: ''
-ms.date: 01/19/2017
+ms.date: 05/22/2018
 ms.prod: sql
 ms.prod_service: connectivity
 ms.component: php
@@ -15,11 +15,12 @@ caps.latest.revision: 12
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 764bc5639876b2f0392174dd0f893ea28356b05d
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: dabdabb4b3a4d20884004909dfaab0272f2e9c43
+ms.sourcegitcommit: 808d23a654ef03ea16db1aa23edab496b73e5072
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/02/2018
+ms.locfileid: "34563873"
 ---
 # <a name="pdostatementexecute"></a>PDOStatement::execute
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]
@@ -39,7 +40,7 @@ bool PDOStatement::execute ([ $input ] );
 ## <a name="return-value"></a>Valor devuelto  
 Se devuelve True si se ejecuta correctamente; de lo contrario, se devuelve False.  
   
-## <a name="remarks"></a>Comentarios  
+## <a name="remarks"></a>Notas  
 Las instrucciones ejecutadas con PDOStatement::execute deben prepararse primero con [PDO::prepare](../../connect/php/pdo-prepare.md). Vea [Direct Statement Execution and Prepared Statement Execution in the PDO_SQLSRV Driver (Ejecución de la instrucción preparada o directa en el controlador PDO_SQLSRV)](../../connect/php/direct-statement-execution-prepared-statement-execution-pdo-sqlsrv-driver.md) para obtener información sobre cómo especificar la ejecución de la instrucción preparada o directa.  
   
 Todos los valores de la matriz de parámetros de entrada se tratan como valores de PDO::PARAM_STR.  
@@ -76,6 +77,9 @@ while ( $row = $stmt->fetch( PDO::FETCH_ASSOC ) ){
 ?>  
 ```  
   
+> [!NOTE]
+> Se recomienda usar cadenas como entradas al enlazar los valores para un [columna decimal o numeric](../../t-sql/data-types/decimal-and-numeric-transact-sql.md) para garantizar la precisión y la exactitud PHP limitó precisión para [números de punto flotante](http://php.net/manual/en/language.types.float.php). Lo mismo se aplica a columnas bigint, especialmente cuando los valores que están fuera del intervalo de un [entero](../../t-sql/data-types/int-bigint-smallint-and-tinyint-transact-sql.md).
+
 ## <a name="see-also"></a>Vea también  
 [Clase PDOStatement](../../connect/php/pdostatement-class.md)
 

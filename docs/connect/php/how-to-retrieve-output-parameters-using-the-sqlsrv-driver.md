@@ -3,8 +3,6 @@ title: 'Cómo: recuperar parámetros de salida con el controlador SQLSRV | Docum
 ms.custom: ''
 ms.date: 04/11/2018
 ms.prod: sql
-ms.prod_service: connectivity
-ms.component: php
 ms.reviewer: ''
 ms.suite: sql
 ms.technology: connectivity
@@ -17,11 +15,12 @@ caps.latest.revision: 14
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 8699d76ace19555c57ff3bcd8992f60a5cef526a
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 81a94f68d7198285125236337a0025e41f1bf8ef
+ms.sourcegitcommit: 808d23a654ef03ea16db1aa23edab496b73e5072
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/02/2018
+ms.locfileid: "34563893"
 ---
 # <a name="how-to-retrieve-output-parameters-using-the-sqlsrv-driver"></a>Cómo recuperar parámetros de salida con el controlador SQLSRV
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]
@@ -33,7 +32,7 @@ En este tema se muestra cómo llamar a un procedimiento almacenado en el que se 
   
 Puede producirse un truncamiento de datos cuando se utilizan tipos de secuencia, por ejemplo, SQLSRV_SQLTYPE_VARCHAR('max'), como parámetros de salida. No se permiten tipos de secuencia como parámetros de salida. En cuanto a los tipos que no son de secuencia, puede producirse un truncamiento de datos si no se especifica la longitud del parámetro de salida o si la longitud especificada no es suficientemente grande para el parámetro de salida.  
   
-## <a name="example"></a>Ejemplo  
+## <a name="example-1"></a>Ejemplo 1
 En el ejemplo siguiente se llama a un procedimiento almacenado que devuelve las ventas hasta la fecha que ha realizado un determinado empleado. La variable PHP *$lastName* es un parámetro de entrada y *$salesYTD* es un parámetro de salida.  
   
 > [!NOTE]  
@@ -125,9 +124,9 @@ sqlsrv_close( $conn);
 ```  
 
 > [!NOTE]
-> Al enlazar un parámetro de salida con un valor bigint, si el valor puede acabar fuera del intervalo de un [entero](../../t-sql/data-types/int-bigint-smallint-and-tinyint-transact-sql.md), debe especificar su tipo de campo SQL como SQLSRV_SQLTYPE_BIGINT. En caso contrario, se podrían producir una excepción de "valor fuera del intervalo".
+> Al enlazar un parámetro de salida a un tipo bigint, si el valor puede acabar fuera del intervalo de un [entero](../../t-sql/data-types/int-bigint-smallint-and-tinyint-transact-sql.md), debe especificar su tipo de campo SQL como SQLSRV_SQLTYPE_BIGINT. En caso contrario, se podrían producir una excepción de "valor fuera del intervalo".
 
-## <a name="example"></a>Ejemplo  
+## <a name="example-2"></a>Ejemplo 2
 Este ejemplo de código muestra cómo enlazar un valor bigint grandes como un parámetro de salida.  
 
 ```

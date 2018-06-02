@@ -22,10 +22,11 @@ ms.author: douglasl
 manager: craigg
 monikerRange: = azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions
 ms.openlocfilehash: 9318904e6cf1509118711db228e30a7266647610
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.sourcegitcommit: 2d93cd115f52bf3eff3069f28ea866232b4f9f9e
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/01/2018
+ms.locfileid: "34708723"
 ---
 # <a name="requirements-for-running-sqlxml-examples"></a>Requisitos para ejecutar los ejemplos de SQLXML
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -39,6 +40,6 @@ ms.lasthandoff: 05/03/2018
   
 -   Versión 2.6 de MDAC o posterior  
   
- En muchos ejemplos, las plantillas se utilizan para especificar las consultas XPath en el esquema XSD de asignación. Para obtener más información, vea [mediante esquemas XSD anotados en consultas & #40; SQLXML 4.0 & #41; ](../../relational-databases/sqlxml/annotated-xsd-schemas/using-annotated-xsd-schemas-in-queries-sqlxml-4-0.md).  
+ En muchos ejemplos, las plantillas se utilizan para especificar las consultas XPath en el esquema XSD de asignación. Para obtener más información, consulte [mediante esquemas XSD anotados en consultas &#40;SQLXML 4.0&#41;](../../relational-databases/sqlxml/annotated-xsd-schemas/using-annotated-xsd-schemas-in-queries-sqlxml-4-0.md).  
   
   

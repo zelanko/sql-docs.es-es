@@ -23,10 +23,11 @@ ms.author: genemi
 manager: craigg
 monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
 ms.openlocfilehash: 1c722a870a5ac6d9715f874b3135d4ed0058ac63
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.sourcegitcommit: 2d93cd115f52bf3eff3069f28ea866232b4f9f9e
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/01/2018
+ms.locfileid: "34707313"
 ---
 # <a name="errors"></a>Errores
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -46,11 +47,11 @@ ms.lasthandoff: 05/03/2018
   
 -   [Códigos de retorno](../../relational-databases/native-client-ole-db-errors/return-codes.md)  
   
--   [Información de Interfaces de Error](../../relational-databases/native-client-ole-db-errors/information-in-error-interfaces.md)  
+-   [Información en interfaces de error](../../relational-databases/native-client-ole-db-errors/information-in-error-interfaces.md)  
   
--   [Detalles del Error SQL Server](../../relational-databases/native-client-ole-db-errors/sql-server-error-detail.md)  
+-   [Detalle del error de SQL Server](../../relational-databases/native-client-ole-db-errors/sql-server-error-detail.md)  
   
--   [Error al recuperar la información](../../relational-databases/native-client-ole-db-errors/retrieving-error-information.md)  
+-   [Recuperar información sobre errores](../../relational-databases/native-client-ole-db-errors/retrieving-error-information.md)  
   
 -   [Resultados del mensaje de SQL Server](../../relational-databases/native-client-ole-db-errors/sql-server-message-results.md)  
   

@@ -4,27 +4,28 @@ description: Determinar la versión de paquete de R y Python, comprobar la insta
 ms.custom: ''
 ms.prod: sql
 ms.technology: machine-learning
-ms.date: 05/08/2018
+ms.date: 05/29/2018
 ms.topic: conceptual
 author: HeidiSteen
 ms.author: heidist
 manager: cgronlun
-ms.openlocfilehash: 21975b4a59cbfaf1e3a203bc732543144856633f
-ms.sourcegitcommit: df382099ef1562b5f2d1cd506c1170d1db64de41
+ms.openlocfilehash: 85ea4658ca8b60fc24d7e4f7849de1655eab6082
+ms.sourcegitcommit: 2d93cd115f52bf3eff3069f28ea866232b4f9f9e
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/12/2018
+ms.lasthandoff: 06/01/2018
+ms.locfileid: "34707893"
 ---
-#  <a name="get-r-and-python-package-information-on-sql-server"></a>Obtener información de paquete de R y Python en SQL Server
+#  <a name="get-r-and-python-package-information"></a>Obtener información de paquete de R y Python
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
 
-Cuando se trabaja con varios entornos o las instalaciones de R o Python, en ocasiones necesitará comprobar que el código que se está ejecutando está utilizando el entorno esperado para Python o el área de trabajo correcta para R. Por ejemplo, si ha actualizado los componentes mediante el enlace de aprendizaje automático, la ruta de acceso a la biblioteca de R podría estar en una carpeta diferente a la predeterminada. Además, si instala el cliente de R o una instancia del servidor independiente, podría tener varias bibliotecas de R en el equipo.
+Cuando se trabaja con varios entornos o las instalaciones de R o Python, en ocasiones necesitará comprobar que el código que se está ejecutando está utilizando el entorno esperado para el área de trabajo correcto o Python para R. Por ejemplo, si ha actualizado los componentes a través de aprendizaje automático [enlace](use-sqlbindr-exe-to-upgrade-an-instance-of-sql-server.md), podría ser la ruta de acceso a la biblioteca de R en una carpeta diferente que el valor predeterminado. Además, si instala el cliente de R o una instancia del servidor independiente, podría tener varias bibliotecas de R en el equipo.
 
-Ejemplos de este artículo muestran cómo obtener la ruta de acceso y la versión de la biblioteca que se está usando SQL Server.
+Ejemplos de scripts de R y Python en este artículo muestran cómo obtener la ruta de acceso y la versión de los paquetes utilizados por SQL Server.
 
-## <a name="get-the-current-r-library"></a>Obtener la biblioteca actual de R
+## <a name="get-the-r-library-location"></a>Obtener la ubicación de la biblioteca de R
 
-Para **R** en cualquier versión de SQL Server, ejecute la siguiente instrucción para comprobar que la biblioteca predeterminada para la instancia actual:
+Para cualquier versión de SQL Server, ejecute la siguiente instrucción para comprobar la [biblioteca de paquete predeterminado R](installing-and-managing-r-packages.md) de la instancia actual:
 
 ```sql
 EXECUTE sp_execute_external_script  
@@ -34,7 +35,7 @@ WITH RESULT SETS (([DefaultLibraryName] VARCHAR(MAX) NOT NULL));
 GO
 ```
 
-Si lo desea, puede usar rxSqlLibPaths en las versiones más recientes de RevoScaleR en servicios de aprendizaje de SQL Server de 2017 máquinas o [R Services ugpraded R para al menos RevoScaleR 9.0.1](use-sqlbindr-exe-to-upgrade-an-instance-of-sql-server.md). Este procedimiento almacenado devuelve la ruta de acceso de la biblioteca de la instancia y la versión de RevoScaleR utilizado por SQL Server:
+Si lo desea, puede usar [rxSqlLibPaths](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/rxsqllibpaths) en versiones más recientes de RevoScaleR en servicios de aprendizaje de SQL Server de 2017 máquinas o [R Services ugpraded R para al menos RevoScaleR 9.0.1](use-sqlbindr-exe-to-upgrade-an-instance-of-sql-server.md). Este procedimiento almacenado devuelve la ruta de acceso de la biblioteca de la instancia y la versión de RevoScaleR utilizado por SQL Server:
 
 ```sql
 EXECUTE sp_execute_external_script
@@ -57,7 +58,7 @@ STDOUT message(s) from external script:
 [1] '9.3.0'
 ```
 
-## <a name="get-the-current-python-library"></a>Obtener la biblioteca de Python actual
+## <a name="get-the-python-library-location"></a>Obtener la ubicación de la biblioteca de Python
 
 Para **Python** en SQL Server 2017, ejecute la siguiente instrucción para comprobar que la biblioteca predeterminada para la instancia actual. Este ejemplo devuelve la lista de carpetas incluidas en la versión de Python `sys.path` variable. La lista incluye el directorio actual y la ruta de acceso de la biblioteca estándar.
 
@@ -88,7 +89,7 @@ Para obtener más información acerca de la variable `sys.path` y cómo se utili
 
 Hay varias maneras en que puede obtener una lista completa de los paquetes instalados actualmente. Una de las ventajas de ejecutar comandos de la lista de paquetes de sp_execute_external_script es que se garantiza para obtener los paquetes instalados en la biblioteca de la instancia.
 
-### <a name="r"></a>L
+### <a name="r"></a>R
 
 En el ejemplo siguiente se utiliza la función de R `installed.packages()` en un [!INCLUDE [tsql](..\..\includes\tsql-md.md)] procedimiento almacenado para obtener una matriz de los paquetes que se han instalado en la biblioteca R_SERVICES para la instancia actual. Esta secuencia de comandos devuelve los campos de nombre y la versión de paquete en el archivo de descripción, se devuelve solo el nombre.
 
@@ -130,7 +131,7 @@ Cuando se ejecuta `pip` desde la línea de comandos, hay muchas otras funciones 
 
 Si ha instalado un paquete y para asegurarse de que está disponible para una determinada instancia de SQL Server, puede ejecutar la siguiente llamada de procedimiento almacenado para cargar el paquete y devolver solo los mensajes.
 
-### <a name="r"></a>L
+### <a name="r"></a>R
 
 Este ejemplo busca y carga la biblioteca RevoScaleR, si está disponible.
 

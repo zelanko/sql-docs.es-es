@@ -9,11 +9,12 @@ ms.topic: conceptual
 ms.date: 04/17/2018
 ms.author: murshedz
 ms.reviewer: martinle
-ms.openlocfilehash: 6fba7a7e5dfded26d617ac905449a4799c19249b
-ms.sourcegitcommit: 056ce753c2d6b85cd78be4fc6a29c2b4daaaf26c
+ms.openlocfilehash: a4f748ed39705f865a303f1b59ae352068f93431
+ms.sourcegitcommit: 2d93cd115f52bf3eff3069f28ea866232b4f9f9e
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/19/2018
+ms.lasthandoff: 06/01/2018
+ms.locfileid: "34707103"
 ---
 # <a name="workload-management-in-analytics-platform-system"></a>Administración de cargas de trabajo en el sistema de la plataforma de análisis
 
@@ -36,7 +37,7 @@ Administración de cargas de trabajo
 Clase de recursos  
 En SQL Server PDW, un *clase de recursos* es un rol de servidor integrado que tiene asignados previamente límites de memoria y la simultaneidad. PDW de SQL Server asigna recursos a las solicitudes de acuerdo con la pertenencia al rol de recurso clase servidor de inicio de sesión que envía las solicitudes.  
   
-En los nodos de proceso, la implementación de clases de recursos usa la característica de regulador de recursos en SQL Server. Para obtener más información acerca del regulador de recursos, consulte [regulador de recursos](http://msdn.microsoft.com/en-us/library/bb933866(v=sql.11).aspx) en MSDN.  
+En los nodos de proceso, la implementación de clases de recursos usa la característica de regulador de recursos en SQL Server. Para obtener más información acerca del regulador de recursos, consulte [regulador de recursos](http://msdn.microsoft.com/library/bb933866(v=sql.11).aspx) en MSDN.  
   
 ### <a name="understand-current-resource-utilization"></a>Comprender el uso de recursos actual  
 Para entender el uso de recursos del sistema para las solicitudes que se están ejecutando, use las vistas de administración dinámica de SQL Server PDW. Por ejemplo, puede utilizar DMV para saber si una combinación hash grandes de ejecución lenta puede beneficiarse de tener más memoria.  
@@ -57,7 +58,7 @@ ALTER SERVER ROLE largerc ADD MEMBER Anna;
 ## <a name="RC"></a>Descripciones de la clase de recurso  
 En la tabla siguiente describe las clases de recursos y sus asignaciones de recursos del sistema.  
   
-|Clase de recursos|Importancia de la solicitud|Uso de memoria máxima *|Las ranuras de simultaneidad (máxima = 32)|Description|  
+|Clase de recursos|Importancia de la solicitud|Uso de memoria máxima *|Las ranuras de simultaneidad (máxima = 32)|Descripción|  
 |------------------|----------------------|--------------------------|---------------------------------------|---------------|  
 |predeterminados|Media|400 MB|1|De forma predeterminada, cada inicio de sesión se permite una pequeña cantidad de memoria y recursos de simultaneidad para sus solicitudes.<br /><br />Cuando se agrega un inicio de sesión a una clase de recursos, la nueva clase tiene prioridad. Cuando se quita un inicio de sesión de todas las clases de recursos, el inicio de sesión se vuelve a la asignación de recursos predeterminada.|  
 |MediumRC|Media|1200 MB|3|Ejemplos de solicitudes que podrían necesitar la clase de recurso intermedio:<br /><br />Las operaciones de CTAS que tienen grandes combinaciones hash.<br /><br />Seleccione las operaciones que necesitan más memoria para evitar el almacenamiento en caché en el disco.<br /><br />Para cargar datos en índices de almacén de columnas agrupado.<br /><br />Compilar, volver a generar y reorganizar índices de almacén de columnas agrupado para tablas más pequeñas que tienen columnas de 10 a 15.|  
@@ -130,7 +131,7 @@ Las instrucciones SQL y las operaciones que se rige por las clases de recursos:
   
 -   UPDATE  
   
--   DELETE  
+-   Delete  
   
 -   Restaurar base de datos cuando se restaura en un dispositivo con varios nodos de cálculo.  
   

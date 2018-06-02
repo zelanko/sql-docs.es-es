@@ -8,25 +8,26 @@ ms.topic: conceptual
 author: HeidiSteen
 ms.author: heidist
 manager: cgronlun
-ms.openlocfilehash: 88604b48f93a7ec322e5e7f9a9bdba6b9eb2cc3c
-ms.sourcegitcommit: 1aedef909f91dc88dc741748f36eabce3a04b2b1
+ms.openlocfilehash: 997db094cb5e69e0cbf82d9a7e247cb13ec1d452
+ms.sourcegitcommit: 2d93cd115f52bf3eff3069f28ea866232b4f9f9e
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/08/2018
+ms.lasthandoff: 06/01/2018
+ms.locfileid: "34707663"
 ---
 # <a name="enable-or-disable-remote-package-management-for-sql-server"></a>Habilitar o deshabilitar la administración remota de paquetes de SQL Server
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
 
-En este artículo se describe cómo habilitar la administración de paquetes de R desde una instancia remota del servidor de aprendizaje de máquina. Cuando se ha habilitado la característica de administración de paquetes, puede usar los comandos de RevoScaleR para instalar paquetes en una base de datos desde un cliente remoto.
+En este artículo se describe cómo habilitar la administración remota de paquetes de R desde una estación de trabajo cliente o en otro servidor de aprendizaje de máquina. Cuando se ha habilitado la característica de administración de paquetes en SQL Server, puede usar los comandos de RevoScaleR en un cliente para instalar paquetes en SQL Server.
 
 > [!NOTE]
 > Actualmente se admite la administración de bibliotecas de R; compatibilidad con Python está dentro del plan.
 
-De forma predeterminada, está deshabilitada la característica de administración de paquetes externos para SQL Server, incluso si se instalaron características de aprendizaje de la máquina. Debe ejecutar un script independiente para habilitar la característica como se describe en la sección siguiente.
+De forma predeterminada, está deshabilitada la característica de administración de paquetes externos para SQL Server. Debe ejecutar un script independiente para habilitar la característica como se describe en la sección siguiente.
 
 ## <a name="overview-of-process-and-tools"></a>Información general del proceso y las herramientas
 
-Para habilitar o deshabilitar la administración de paquetes, use la utilidad de línea de comandos **RegisterRExt.exe**, que se incluye con la **RevoScaleR** paquete.
+Para habilitar o deshabilitar la administración de paquetes en SQL Server, use la utilidad de línea de comandos **RegisterRExt.exe**, que se incluye con la **RevoScaleR** paquete.
 
 [Habilitar](#bkmk_enable) esta característica es un proceso de dos pasos, que requieren un administrador de base de datos: habilitar la administración de paquetes en la instancia de SQL Server (una por cada instancia de SQL Server) y, a continuación, habilitar la administración de paquetes en la base de datos SQL (una por cada SQL Server base de datos).
 
@@ -34,7 +35,7 @@ Para habilitar o deshabilitar la administración de paquetes, use la utilidad de
 
 ## <a name="bkmk_enable"></a> Habilitar la administración de paquetes
 
-1. Abra un símbolo del sistema con privilegios elevados y vaya a la carpeta que contiene la utilidad, RegisterRExt.exe. La ubicación predeterminada es `<SQLInstancePath>\R_SERVICES\library\RevoScaleR\rxLibs\x64\RegisterRExe.exe`.
+1. En SQL Server, abra un símbolo del sistema con privilegios elevados y vaya a la carpeta que contiene la utilidad, RegisterRExt.exe. La ubicación predeterminada es `<SQLInstancePath>\R_SERVICES\library\RevoScaleR\rxLibs\x64\RegisterRExe.exe`.
 
 2. Ejecute el siguiente comando, que proporciona los argumentos apropiados para su entorno:
 
@@ -93,3 +94,8 @@ Después de haber habilitado esta característica, puede usar la función RevoSc
 
     Este comando quita la característica de administración de paquetes de la instancia. Tendrá que reiniciar manualmente el servicio Launchpad una vez más para ver los cambios.
 
+## <a name="next-steps"></a>Pasos siguientes
+
++ [Utilice RevoScaleR para instalar nuevos paquetes de R](use-revoscaler-to-manage-r-packages.md)
++ [Sugerencias para la instalación de paquetes de R](packages-installed-in-user-libraries.md)
++ [Paquetes predeterminados](installing-and-managing-r-packages.md)

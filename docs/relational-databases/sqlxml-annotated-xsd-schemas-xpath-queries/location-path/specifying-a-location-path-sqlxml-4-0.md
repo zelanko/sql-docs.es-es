@@ -23,10 +23,11 @@ ms.author: douglasl
 manager: craigg
 monikerRange: = azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions
 ms.openlocfilehash: 2c2cad3730cd0948f94adc8ad5b877fd2e921bc3
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.sourcegitcommit: 2d93cd115f52bf3eff3069f28ea866232b4f9f9e
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/01/2018
+ms.locfileid: "34708743"
 ---
 # <a name="specifying-a-location-path-sqlxml-40"></a>Especificar una ruta de acceso de ubicación (SQLXML 4.0)
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -49,7 +50,7 @@ ms.lasthandoff: 05/03/2018
 ## <a name="location-steps"></a>Pasos de ubicación  
  Una ruta de acceso de ubicación (absoluta o relativa) está compuesta por pasos de ubicación que contienen tres partes:  
   
--   **Eje**  
+-   **Axis**  
   
      El eje especifica la relación jerárquica entre los nodos seleccionados por el paso de ubicación y el nodo de contexto. El **primario**, **secundarios**, **atributo**, y **en sí mismo** se admiten los ejes. Si un **secundarios** eje se especifica en la ruta de acceso de ubicación, todos los nodos seleccionados por la consulta son los elementos secundarios del nodo de contexto. Si un **primario** eje se especifica, el nodo seleccionado es el nodo primario del nodo de contexto. Si un **atributo** eje se especifica, los nodos seleccionados son los atributos del nodo de contexto.  
   

@@ -7,11 +7,12 @@ ms.topic: conceptual
 author: HeidiSteen
 ms.author: heidist
 manager: cgronlun
-ms.openlocfilehash: 1c56d3cb9420d8d0e48ec936008d0351d5d32eb4
-ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.openlocfilehash: cb906a8a05221204ec10310d652f6891861d35e2
+ms.sourcegitcommit: 2d93cd115f52bf3eff3069f28ea866232b4f9f9e
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/01/2018
+ms.locfileid: "34708273"
 ---
 # <a name="install-sql-server-2017-machine-learning-server-standalone-on-windows"></a>Instalar Server (independiente) en Windows de aprendizaje de máquina SQL Server de 2017
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
@@ -89,7 +90,7 @@ En la tabla siguiente se enumera las rutas de acceso para cada instalación.
 
 IDE de desarrollo no se instala como parte del programa de instalación. No se requieren herramientas adicionales, tal y como se incluyen todas las herramientas estándares que se proporcionan con una distribución de R o Python.
 
-Se recomienda que pruebe la nueva versión de [!INCLUDE[rsql_rtvs](../../includes/rsql-rtvs-md.md)] o [Python para Visual Studio](https://docs.microsoft.com/en-us/visualstudio/python/installing-python-support-in-visual-studio). Visual Studio admite tanto R y Python, así como herramientas de desarrollo de base de datos, conectividad con SQL Server y herramientas de BI. Sin embargo, puede usar cualquier entorno de desarrollo preferido, incluido RStudio.
+Se recomienda que pruebe la nueva versión de [!INCLUDE[rsql_rtvs](../../includes/rsql-rtvs-md.md)] o [Python para Visual Studio](https://docs.microsoft.com/visualstudio/python/installing-python-support-in-visual-studio). Visual Studio admite tanto R y Python, así como herramientas de desarrollo de base de datos, conectividad con SQL Server y herramientas de BI. Sin embargo, puede usar cualquier entorno de desarrollo preferido, incluido RStudio.
 
 ## <a name="get-help"></a>Obtener ayuda
 

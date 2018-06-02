@@ -9,11 +9,12 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: 3dfb750024706470f28a6c93ea93b5cb9fb4d9c1
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.openlocfilehash: 0904dc53e17ed140310df38d1f63dc9fe3fc45cb
+ms.sourcegitcommit: 2d93cd115f52bf3eff3069f28ea866232b4f9f9e
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/10/2018
+ms.lasthandoff: 06/01/2018
+ms.locfileid: "34708083"
 ---
 # <a name="install-sql-server-analysis-services"></a>Instalar SQL Server Analysis Services
 [!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]
@@ -65,11 +66,11 @@ Setup.exe /q /IAcceptSQLServerLicenseTerms /ACTION=install /FEATURES=AS /ASSERVE
   
  **ASSERVERMODE** distingue entre mayúsculas y minúsculas.  Todos los valores se deben expresar en mayúsculas. En la tabla siguiente se describen los valores válidos de **ASSERVERMODE**.  
   
-|Value|Description|  
+|Valor|Descripción|  
 |-----------|-----------------|  
-|TABULAR|Es el valor predeterminado. Si no establece **ASSERVERMODE**, el servidor está instalado en modo Tabular.|
+|TABULAR|Este es el valor predeterminado. Si no establece **ASSERVERMODE**, el servidor está instalado en modo Tabular.|
 |MULTIDIMENSIONAL|Este valor es opcional.|  
-|POWERPIVOT|Este valor es opcional. En ejercicio, si establece el parámetro **ROLE** , el modo de servidor se establece automáticamente en 1, haciendo que **ASSERVERMODE** sea opcional en una instalación de [!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)] para SharePoint. Para obtener más información, consulte [Instalar Power Pivot desde el símbolo del sistema](http://msdn.microsoft.com/en-us/7f1f2b28-c9f5-49ad-934b-02f2fa6b9328).|  
+|POWERPIVOT|Este valor es opcional. En ejercicio, si establece el parámetro **ROLE** , el modo de servidor se establece automáticamente en 1, haciendo que **ASSERVERMODE** sea opcional en una instalación de [!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)] para SharePoint. Para obtener más información, consulte [Instalar Power Pivot desde el símbolo del sistema](http://msdn.microsoft.com/7f1f2b28-c9f5-49ad-934b-02f2fa6b9328).|  
   
   
 ## <a name="see-also"></a>Vea también  

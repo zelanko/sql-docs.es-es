@@ -22,11 +22,12 @@ author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 monikerRange: = azuresqldb-current || = azure-sqldw-latest || = sqlallproducts-allversions
-ms.openlocfilehash: a63c3142cdc5ca670117ef7d14c4d6079b575972
-ms.sourcegitcommit: ee661730fb695774b9c483c3dd0a6c314e17ddf8
+ms.openlocfilehash: 0dd29dbfe5e71f3dbae8d0330c1413dda2d3cc26
+ms.sourcegitcommit: 2d93cd115f52bf3eff3069f28ea866232b4f9f9e
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/19/2018
+ms.lasthandoff: 06/01/2018
+ms.locfileid: "34708603"
 ---
 # <a name="sysdatabaseserviceobjectives-azure-sql-database"></a>Sys.database_service_objectives (base de datos de SQL Azure)
 [!INCLUDE[tsql-appliesto-xxxxxx-asdb-asdw-xxx-md](../../includes/tsql-appliesto-xxxxxx-asdb-asdw-xxx-md.md)]
@@ -34,20 +35,20 @@ ms.lasthandoff: 05/19/2018
 Devuelve la edición (nivel de servicio), el objetivo de servicio (nivel de precios) y el nombre de grupo elástico, si existe, para una base de datos de SQL Azure o un almacén de datos de SQL Azure. Si ha iniciado sesión la base de datos maestra en un servidor de base de datos de SQL Azure, devuelve información sobre todas las bases de datos. Para almacenamiento de datos de SQL Azure, debe estar conectado a la base de datos maestra.  
   
   
- Para obtener información sobre los precios, consulte [opciones de base de datos SQL y el rendimiento: precios de base de datos de SQL](https://azure.microsoft.com/en-us/pricing/details/sql-database/) y [precios de almacenamiento de datos de SQL](https://azure.microsoft.com/pricing/details/sql-data-warehouse/).  
+ Para obtener información sobre los precios, consulte [opciones de base de datos SQL y el rendimiento: precios de base de datos de SQL](https://azure.microsoft.com/pricing/details/sql-database/) y [precios de almacenamiento de datos de SQL](https://azure.microsoft.com/pricing/details/sql-data-warehouse/).  
   
  Para cambiar la configuración del servicio, consulte [ALTER DATABASE (base de datos de SQL Azure)](../../t-sql/statements/alter-database-azure-sql-database.md) y [ALTER DATABASE (almacenamiento de datos de SQL Azure)](../../t-sql/statements/alter-database-azure-sql-data-warehouse.md).  
   
  La vista sys.database_service_objectives contiene las columnas siguientes.  
   
-|Nombre de la columna|Tipo de datos|Description|  
+|Nombre de la columna|Tipo de datos|Descripción|  
 |-----------------|---------------|-----------------|  
-|database_id|int|El identificador de la base de datos, único en una instancia del servidor de base de datos de SQL Azure. Puede unir con [sys.databases &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-databases-transact-sql.md).|  
+|database_id|INT|El identificador de la base de datos, único en una instancia del servidor de base de datos de SQL Azure. Puede unir con [sys.databases &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-databases-transact-sql.md).|  
 |edición|sysname|El nivel de servicio para el almacenamiento de datos o base de datos: **básica**, **estándar**, **Premium** o **almacenamiento de datos**.|  
 |service_objective|sysname|El nivel de precios de la base de datos. Devuelve si la base de datos está en un grupo elástico, **ElasticPool**.<br /><br /> En el **básica** capa, devuelve **básica**.<br /><br /> **Base de datos único en un nivel de servicio estándar** devuelve uno de los siguientes: S0, S1, S2 o S3.<br /><br /> **Base de datos único en un nivel premium** devuelve de las siguientes acciones: P1, P2, P4, P3/P6 o P11.<br /><br /> **Almacenamiento de datos SQL** devuelve DW100 a través de DW10000c.|  
 |elastic_pool_name|sysname|El nombre de la [grupo elástico](https://azure.microsoft.com/documentation/articles/sql-database-elastic-pool/) que pertenece la base de datos. Devuelve **NULL** si la base de datos es una base de datos o un warehoue de datos.|  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>Permisos  
  Requiere **dbManager** permiso en la base de datos maestra.  En el nivel de base de datos, el usuario debe ser el creador o propietario.  
   
 ## <a name="examples"></a>Ejemplos  

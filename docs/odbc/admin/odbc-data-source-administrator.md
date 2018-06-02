@@ -17,16 +17,17 @@ caps.latest.revision: 10
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 61b31061c3a8c75e5d96d3ac6993ce8d90dd6199
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 1e529ab5d321625f8e6bf795a70d0e0143499df7
+ms.sourcegitcommit: 2d93cd115f52bf3eff3069f28ea866232b4f9f9e
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/01/2018
+ms.locfileid: "34706953"
 ---
 # <a name="odbc-data-source-administrator"></a>Administrador de orígenes de datos ODBC
 Administrador de orígenes de datos ODBC de Microsoft® administra los orígenes de datos y controladores de base de datos. Esta aplicación se encuentra en el Panel de Control de Windows en **herramientas administrativas**. A partir de Windows 8, el icono se denomina **orígenes de datos ODBC**, y en sistemas operativos de 64 bits, hay una versión de 32 bits y 64 bits.  
   
- Para obtener información sobre procedimientos detallados de administrador de ODBC, abra el [Administrador de orígenes de datos ODBC](http://msdn.microsoft.com/en-us/eea94d94-f53b-4289-ae75-9ccccde15333) cuadro de diálogo y haga clic en **ayuda**.  
+ Para obtener información sobre procedimientos detallados de administrador de ODBC, abra el [Administrador de orígenes de datos ODBC](http://msdn.microsoft.com/eea94d94-f53b-4289-ae75-9ccccde15333) cuadro de diálogo y haga clic en **ayuda**.  
   
  Puede usar comandos de PowerShell para administrar controladores y orígenes de datos. Para obtener más información acerca de estos comandos de PowerShell, consulte [comandos de Windows PowerShell de componentes de acceso de datos](https://msdn.microsoft.com/library/windows/desktop/jj134064.aspx).  
   

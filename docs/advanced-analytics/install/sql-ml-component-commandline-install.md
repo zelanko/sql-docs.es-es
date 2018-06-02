@@ -7,11 +7,12 @@ ms.topic: conceptual
 author: HeidiSteen
 ms.author: heidist
 manager: cgronlun
-ms.openlocfilehash: 7211eda2caaf579267e4c6089be13750022f0ef8
-ms.sourcegitcommit: b5ab9f3a55800b0ccd7e16997f4cd6184b4995f9
+ms.openlocfilehash: 814e0f8172e02d9b02be95888c8dab286429e533
+ms.sourcegitcommit: 2d93cd115f52bf3eff3069f28ea866232b4f9f9e
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/23/2018
+ms.lasthandoff: 06/01/2018
+ms.locfileid: "34707963"
 ---
 # <a name="install-sql-server-machine-learning-components-from-the-command-line"></a>Instalar componentes de aprendizaje de máquina de SQL Server desde la línea de comandos
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
@@ -44,7 +45,7 @@ El argumento de características se requiere, como son contratos de términos de
 
 Al realizar la instalación a través del símbolo del sistema, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] admite el modo totalmente silencioso mediante el uso del parámetro /Q o el modo silencioso sencillo mediante el parámetro /QS. El modificador /QS solamente muestra el progreso, pero no acepta ninguna entrada ni muestra mensajes de error si los encuentra. El parámetro /QS solamente se admite cuando se ha especificado /Action=install.
 
-| Argumentos | Description |
+| Argumentos | Descripción |
 |-----------|-------------|
 | / CARACTERÍSTICAS = AdvancedAnalytics | Instala la versión de base de datos: SQL Server 2017 Machine Learning Services (In-Database) o SQL Server 2016 R Services (In-Database).  |
 | / CARACTERÍSTICAS = SQL_INST_MR | Se aplica a SQL Server de 2017 únicamente. Asociarla a AdvancedAnalytics. Instala la característica (In-Database) R, incluidos Microsoft R Open y los paquetes de R propietarios. La característica de SQL Server 2016 R Services es R solo, así que no hay ningún parámetro de la versión.|
@@ -159,7 +160,7 @@ Setup.exe /q /ACTION=Install /FEATURES=SQL_SHARED_MR
 
 Cuando finaliza el programa de instalación, tiene un servidor, los paquetes de Microsoft, distribuciones de código abierto de R y Python, herramientas, ejemplos y scripts que forman parte de la distribución. 
 
-Para abrir una ventana de la consola de R, vaya a \Program Server\140 SQL (o 130) \R_SERVER\bin\x64 y haga doble clic en **RGui.exe**. ¿No está familiarizado con R? Pruebe este tutorial: [comandos de R básicos y funciones de RevoScaleR: 25 ejemplos comunes](https://docs.microsoft.com/en-us/machine-learning-server/r/tutorial-r-to-revoscaler).
+Para abrir una ventana de la consola de R, vaya a \Program Server\140 SQL (o 130) \R_SERVER\bin\x64 y haga doble clic en **RGui.exe**. ¿No está familiarizado con R? Pruebe este tutorial: [comandos de R básicos y funciones de RevoScaleR: 25 ejemplos comunes](https://docs.microsoft.com/machine-learning-server/r/tutorial-r-to-revoscaler).
 
 Para abrir un comando de Python, vaya a \Program Server\140\PYTHON_SERVER\bin\x64 de SQL y haga doble clic en **python.exe**.
 

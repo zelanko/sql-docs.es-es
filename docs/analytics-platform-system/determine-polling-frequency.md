@@ -9,11 +9,12 @@ ms.topic: conceptual
 ms.date: 04/17/2018
 ms.author: murshedz
 ms.reviewer: martinle
-ms.openlocfilehash: e8e2a1ccf469e6c587870c0d5921014d797f87d1
-ms.sourcegitcommit: 056ce753c2d6b85cd78be4fc6a29c2b4daaaf26c
+ms.openlocfilehash: 39597e0e4623a3006709acde7fe54f97545c362f
+ms.sourcegitcommit: 2d93cd115f52bf3eff3069f28ea866232b4f9f9e
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/19/2018
+ms.lasthandoff: 06/01/2018
+ms.locfileid: "34707623"
 ---
 # <a name="determine-polling-frequency"></a>Determinar la frecuencia de sondeo
 En este artículo se explica cómo determinar la frecuencia de sondeo para las alertas de dispositivo de sistema de la plataforma de análisis.  
@@ -31,7 +32,7 @@ Puesto que PDW no admite actualmente notificaciones de automático cuando se pro
   
 Es un intervalo común a sondear en busca de alertas, que también se usa System Center, **cada 15 minutos**.  Naturalmente, podría consultar mayor o menor frecuencia, pero no se recomienda para sondear inferior a cada seis horas.  
   
-Con más frecuencia de sondeo es aceptable, pero con demasiada frecuencia de sondeo puede desordenar la [sys.dm_pdw_nodes_exec_requests](http://msdn.microsoft.com/en-us/library/ms177648(v=sql11).aspx) DMV.  Con demasiada frecuencia de sondeo puede ser difícil para que los usuarios diagnosticar el rendimiento de las consultas problemas cuando sus rápidamente pone fuera de la vista.  
+Con más frecuencia de sondeo es aceptable, pero con demasiada frecuencia de sondeo puede desordenar la [sys.dm_pdw_nodes_exec_requests](http://msdn.microsoft.com/library/ms177648(v=sql11).aspx) DMV.  Con demasiada frecuencia de sondeo puede ser difícil para que los usuarios diagnosticar el rendimiento de las consultas problemas cuando sus rápidamente pone fuera de la vista.  
   
 ## <a name="see-also"></a>Vea también  
 <!-- MISSING LINKS [Common Metadata Query Examples &#40;SQL Server PDW&#41;](../sqlpdw/common-metadata-query-examples-sql-server-pdw.md)  -->  

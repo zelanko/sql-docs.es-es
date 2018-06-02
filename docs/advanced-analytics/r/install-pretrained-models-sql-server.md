@@ -2,23 +2,24 @@
 title: Instalar modelos de aprendizaje automático previamente entrenado en SQL Server | Documentos de Microsoft
 ms.prod: sql
 ms.technology: machine-learning
-ms.date: 04/15/2018
+ms.date: 05/31/2018
 ms.topic: conceptual
 author: HeidiSteen
 ms.author: heidist
 manager: cgronlun
-ms.openlocfilehash: b21245bd74f59f4ad7fe2370ad3587053e756a03
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
+ms.openlocfilehash: e3abc1b1581216bb0207fbba2d857993b947afae
+ms.sourcegitcommit: 2d93cd115f52bf3eff3069f28ea866232b4f9f9e
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 06/01/2018
+ms.locfileid: "34707583"
 ---
 # <a name="install-pre-trained-machine-learning-models-on-sql-server"></a>Instalar previamente entrenado máquina aprendizaje de los modelos en SQL Server
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
 
-Este artículo describe cómo agregar modelos previamente entrenados a una instancia de (en bases de datos) de SQL Server que ya tiene R Services o servicios de aprendizaje de máquina de SQL Server instalado. 
+Este artículo describe cómo agregar una máquina previamente entrenada aprendizaje de los modelos para las características de análisis y la imagen de opiniones a una instancia de (en bases de datos) de SQL Server que ya tiene R Services o servicios de aprendizaje de máquina de SQL Server instalados. 
 
-Existen modelos de previamente entrenados para ayudar a los clientes que necesitan realizar tareas como las características de análisis o imagen de opinión, pero no disponen de los recursos para obtener los conjuntos de datos grandes o entrenar un modelo complejo. El equipo de servidor de aprendizaje de máquina crea y entrena estos modelos para ayudarle a empezar a trabajar en text e image procesar eficazmente. Para obtener más información, consulte el [recursos](#bkmk_resources) sección de este artículo.
+Existen modelos de previamente entrenados para ayudar a los clientes que necesitan realizar análisis de opiniones o características de la imagen, pero no dispone de recursos para obtener los conjuntos de datos grandes o entrenar un modelo complejo. El equipo de servidor de aprendizaje de máquina crea y entrena estos modelos para ayudarle a empezar a trabajar en text e image procesar eficazmente. Para obtener más información, consulte el [recursos](#bkmk_resources) sección de este artículo.
 
 Para obtener un ejemplo de cómo usar los modelos previamente entrenados con datos de SQL Server, consulte este blog del equipo de aprendizaje automático de SQL Server: [análisis de opiniones con Python en servicios de aprendizaje de máquina de SQL Server](https://blogs.msdn.microsoft.com/sqlserverstorageengine/2017/11/01/sentiment-analysis-with-python-in-sql-server-machine-learning-services/)
 
@@ -30,8 +31,8 @@ Modelos previamente entrenados trabajar con los siguientes productos e idiomas. 
 
 + SQL Server 2016 R Services (In-Database) - R, con el [MicrosoftML biblioteca](https://docs.microsoft.com/machine-learning-server/r-reference/microsoftml/microsoftml-package)
 + SQL Server 2016 R Server (independiente) - R, con el [MicrosoftML biblioteca](https://docs.microsoft.com/machine-learning-server/r-reference/microsoftml/microsoftml-package)
-+ SQL Server de 2017 máquina aprendizaje Services (In-Database) - R con la [biblioteca MicrosoftML] (https://docs.microsoft.com/machine-learning-server/r-reference/microsoftml/microsoftml-package), Python con el [microsoftml biblioteca](https://docs.microsoft.com/machine-learning-server/python-reference/microsoftml/microsoftml-package)
-+ Servidor SQL Server 2017 Machine Learning (independiente) - R con la [biblioteca MicrosoftML] (https://docs.microsoft.com/machine-learning-server/r-reference/microsoftml/microsoftml-package), Python con el [microsoftml biblioteca](https://docs.microsoft.com/machine-learning-server/python-reference/microsoftml/microsoftml-package)
++ SQL Server de 2017 Machine Learning Services (In-Database) - R con el [MicrosoftML biblioteca](https://docs.microsoft.com/machine-learning-server/r-reference/microsoftml/microsoftml-package), Python con el [microsoftml biblioteca](https://docs.microsoft.com/machine-learning-server/python-reference/microsoftml/microsoftml-package)
++ Servidor SQL Server de 2017 Machine Learning (independiente) - R con el [MicrosoftML biblioteca](https://docs.microsoft.com/machine-learning-server/r-reference/microsoftml/microsoftml-package), Python con el [microsoftml biblioteca](https://docs.microsoft.com/machine-learning-server/python-reference/microsoftml/microsoftml-package)
 
 El proceso de instalación puede variar ligeramente según la versión de SQL Server. Vea las secciones siguientes para obtener instrucciones para cada versión.
 
@@ -106,12 +107,30 @@ Con SQL Server 2016, debe realizar algunos pasos adicionales para registrar los 
     + ResNet\_18\_Updated.model
     + ResNet\_50\_Updated.model
 
-## <a name="install-pre-trained-models-on-sql-server-machine-learning-services-in-database"></a>Instalar modelos previamente entrenados en servicios de aprendizaje de máquina de SQL Server (In-Database)
+## <a name="install-pre-trained-models-on-sql-server-2017-machine-learning-services-in-database"></a>Instalar modelos previamente entrenados en SQL Server de 2017 Machine Learning Services (In-Database)
 
 Si ya ha instalado SQL Server 2017, puede obtener los modelos previamente entrenados de dos maneras:
 
-+ Actualizar los componentes de Python y R mediante un enlace e instalar los modelos previamente entrenados al mismo tiempo
 + Instalar solo los modelos previamente entrenados
++ Actualizar los componentes de Python y R mediante un enlace e instalar los modelos previamente entrenados al mismo tiempo
+
+### <a name="add-pre-trained-models-only"></a>Agregar modelos previamente entrenados solo
+
+Para agregar los modelos entrenados previamente, puede ejecutar RSetup.exe desde la línea de comandos.
+
+Para la versión de R de los modelos, instalar el componente MLM a R_SERVICES:
+
+```
+RSetup.exe /install /component MLM /version 9.2.0.24 /language 1033 /destdir "C:\Program Files\Microsoft SQL Server\MSSQL14.MSSQLSERVER\R_SERVICES"
+```
+
+Para la versión de Python de los modelos, instalar el componente MLM a PYTHON_SERVICES:
+
+```
+RSetup.exe /install /component MLM /version 9.2.0.24 /language 1033 /destdir "C:\Program Files\Microsoft SQL Server\MSSQL14.MSSQLSERVER\PYTHON_SERVICES"
+```
+
+### <a name="bind-and-install-pre-trained-models"></a>Enlazar e instalar modelos previamente entrenados
 
 Las instrucciones siguientes describen el proceso para actualizar los componentes de aprendizaje de máquina y la obtención de los modelos previamente entrenados al mismo tiempo.
 
@@ -146,7 +165,7 @@ Las instrucciones siguientes describen cómo actualizar los componentes de R y, 
 2. Seleccione los idiomas que desea actualizar y seleccione el **Pre-trained modelos** opción.
 
     > [!TIP]
-    > Si ya ha ejecutado el programa de instalación para actualizar el servidor de R (independiente) y sólo desea agregar los modelos previamente entrenados, deje todas las selecciones anteriores **sea**y seleccione solo la anterior**-entrenar modelos** opción . **No** anule la selección de las opciones seleccionadas previamente; si lo hace, el programa de instalación quita los componentes.
+    > Si ya ha ejecutado el programa de instalación para actualizar el servidor de R (independiente) y sólo desea agregar los modelos previamente entrenados, deje todas las selecciones anteriores **sea**y seleccione solo la anterior **-entrenar modelos** opción . **No** anule la selección de las opciones seleccionadas previamente; si lo hace, el programa de instalación quita los componentes.
 
     Se recomienda que acepte la configuración predeterminada para las ubicaciones de modelo.
 

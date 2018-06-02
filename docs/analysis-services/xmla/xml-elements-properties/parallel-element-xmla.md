@@ -9,11 +9,12 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: 9bdc2cbe9d5dbcec93fa84503715de4d28ce761d
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.openlocfilehash: 88e7cf2387c8ee45936b5de21f529e142142d02c
+ms.sourcegitcommit: 808d23a654ef03ea16db1aa23edab496b73e5072
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/10/2018
+ms.lasthandoff: 06/02/2018
+ms.locfileid: "34575967"
 ---
 # <a name="parallel-element-xmla"></a>Parallel Element (XMLA)
 [!INCLUDE[ssas-appliesto-sqlas-aas](../../../includes/ssas-appliesto-sqlas-aas.md)]
@@ -36,8 +37,8 @@ ms.lasthandoff: 05/10/2018
   
 |Característica|Descripción|  
 |--------------------|-----------------|  
-|Tipo y longitud de los datos|Ninguno|  
-|Valor predeterminado|Ninguno|  
+|Tipo y longitud de los datos|None|  
+|Valor predeterminado|None|  
 |Cardinalidad|0-n: elemento opcional que puede aparecer más de una vez.|  
   
 ## <a name="element-relationships"></a>Relaciones del elemento  
@@ -49,13 +50,13 @@ ms.lasthandoff: 05/10/2018
   
 ## <a name="attributes"></a>Atributos  
   
-|Atributo|Description|  
+|Attribute|Descripción|  
 |---------------|-----------------|  
-|maxParallel|Atributo **Integer** opcional. Indica el número máximo de subprocesos en los que se ejecutan comandos en paralelo. Si no se especifica o se establece en 0, la instancia de [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] determina el número óptimo de subprocesos en función del número de procesadores disponibles en el equipo.|  
+|maxParallel|Atributo **Integer** opcional. Indica el número máximo de subprocesos en los que se ejecutan comandos en paralelo. Si no se especifica o se establece en 0, la instancia de Analysis Services determina el número óptimo de subprocesos en función del número de procesadores disponibles en el equipo.|  
   
-## <a name="remarks"></a>Comentarios  
+## <a name="remarks"></a>Notas  
   
-## <a name="see-also"></a>Vea también  
- [Propiedades & #40; XMLA & #41;](../../../analysis-services/xmla/xml-elements-properties/xml-elements-properties.md)  
+## <a name="see-also"></a>Vea también
+ [Propiedades &#40;XMLA&#41;](../../../analysis-services/xmla/xml-elements-properties/xml-elements-properties.md)  
   
   

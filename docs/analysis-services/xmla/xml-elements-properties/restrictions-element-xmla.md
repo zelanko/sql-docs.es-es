@@ -9,11 +9,12 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: 78c69d2e3a53e2e0ad3561e09feffdf9dfabdcfb
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.openlocfilehash: 902f3086b28d17b11d1c1c44b130e2dcf224eb30
+ms.sourcegitcommit: 808d23a654ef03ea16db1aa23edab496b73e5072
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/10/2018
+ms.lasthandoff: 06/02/2018
+ms.locfileid: "34578747"
 ---
 # <a name="restrictions-element-xmla"></a>Elemento Restrictions (XMLA)
 [!INCLUDE[ssas-appliesto-sqlas-aas](../../../includes/ssas-appliesto-sqlas-aas.md)]
@@ -36,8 +37,8 @@ ms.lasthandoff: 05/10/2018
   
 |Característica|Descripción|  
 |--------------------|-----------------|  
-|Tipo y longitud de los datos|Ninguno|  
-|Valor predeterminado|Ninguno|  
+|Tipo y longitud de los datos|None|  
+|Valor predeterminado|None|  
 |Cardinalidad|1-1: Elemento necesario que se produce una vez y solo una vez.|  
   
 ## <a name="element-relationships"></a>Relaciones del elemento  
@@ -47,7 +48,7 @@ ms.lasthandoff: 05/10/2018
 |Elementos primarios|[Detectar](../../../analysis-services/xmla/xml-elements-methods-discover.md)|  
 |Elementos secundarios|[Lista de restricciones](../../../analysis-services/xmla/xml-elements-properties/restrictionlist-element-xmla.md)|  
   
-## <a name="remarks"></a>Comentarios  
+## <a name="remarks"></a>Notas  
  El **restricciones** elemento representa las columnas de restricción y los datos que se usa para restringir la información recuperada por la **Discover** método.  
   
 ## <a name="example"></a>Ejemplo  
@@ -64,7 +65,7 @@ ms.lasthandoff: 05/10/2018
 </Discover>  
 ```  
   
-## <a name="see-also"></a>Vea también  
- [Propiedades & #40; XMLA & #41;](../../../analysis-services/xmla/xml-elements-properties/xml-elements-properties.md)  
+## <a name="see-also"></a>Vea también
+ [Propiedades &#40;XMLA&#41;](../../../analysis-services/xmla/xml-elements-properties/xml-elements-properties.md)  
   
   

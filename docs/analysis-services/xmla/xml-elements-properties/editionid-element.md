@@ -9,11 +9,12 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: 41a3b23a95940d5ca74d50ce090d841b7b5d657a
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.openlocfilehash: e9402541be96be9e529dcd56a168e8ab17dc21ae
+ms.sourcegitcommit: 808d23a654ef03ea16db1aa23edab496b73e5072
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/10/2018
+ms.lasthandoff: 06/02/2018
+ms.locfileid: "34576547"
 ---
 # <a name="editionid-element"></a>Elemento EditionId
 [!INCLUDE[ssas-appliesto-sqlas-aas](../../../includes/ssas-appliesto-sqlas-aas.md)]
@@ -35,7 +36,7 @@ ms.lasthandoff: 05/10/2018
 |Característica|Descripción|  
 |--------------------|-----------------|  
 |Tipo y longitud de los datos|Long|  
-|Valor predeterminado|Ninguno|  
+|Valor predeterminado|None|  
 |Cardinalidad|1-1: Elemento necesario que se produce una vez y solo una vez.|  
   
 ## <a name="element-relationships"></a>Relaciones del elemento  
@@ -43,11 +44,11 @@ ms.lasthandoff: 05/10/2018
 |Relación|Elemento|  
 |------------------|-------------|  
 |Elementos primarios|[Elemento Server (ASSL)](../../../analysis-services/scripting/objects/server-element-assl.md)|  
-|Elementos secundarios|Ninguno|  
+|Elementos secundarios|None|  
   
-## <a name="remarks"></a>Comentarios  
+## <a name="remarks"></a>Notas  
   
-## <a name="see-also"></a>Vea también  
- [Propiedades & #40; XMLA & #41;](../../../analysis-services/xmla/xml-elements-properties/xml-elements-properties.md)  
+## <a name="see-also"></a>Vea también
+ [Propiedades &#40;XMLA&#41;](../../../analysis-services/xmla/xml-elements-properties/xml-elements-properties.md)  
   
   

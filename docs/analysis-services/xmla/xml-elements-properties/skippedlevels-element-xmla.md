@@ -9,11 +9,12 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: 1c5923c50f4dfd8d44ba5045794342223f0a05f4
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.openlocfilehash: 3813ea7fd0d4936c458487ade9a3d81ad87ce09d
+ms.sourcegitcommit: 808d23a654ef03ea16db1aa23edab496b73e5072
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/10/2018
+ms.lasthandoff: 06/02/2018
+ms.locfileid: "34576307"
 ---
 # <a name="skippedlevels-element-xmla"></a>Elemento SkippedLevels (XMLA)
 [!INCLUDE[ssas-appliesto-sqlas-aas](../../../includes/ssas-appliesto-sqlas-aas.md)]
@@ -36,21 +37,21 @@ ms.lasthandoff: 05/10/2018
 |--------------------|-----------------|  
 |Tipo y longitud de los datos|Integer|  
 |Valor predeterminado|0|  
-|Cardinalidad|0-1: Elemento opcional que puede aparecer solo una vez.|  
+|Cardinalidad|0-1: Elemento opcional que puede aparecer una y solo una vez.|  
   
 ## <a name="element-relationships"></a>Relaciones del elemento  
   
 |Relación|Elemento|  
 |------------------|-------------|  
 |Elementos primarios|[Atributo](../../../analysis-services/xmla/xml-elements-properties/attribute-element-xmla.md)|  
-|Elementos secundarios|Ninguno|  
+|Elementos secundarios|None|  
   
-## <a name="remarks"></a>Comentarios  
+## <a name="remarks"></a>Notas  
  El elemento **SkippedLevels** determina el número de niveles omitidos por un miembro de atributo definido por el elemento primario **Attribute** .  
   
-## <a name="see-also"></a>Vea también  
- [Insertar elemento & #40; XMLA & #41;](../../../analysis-services/xmla/xml-elements-commands/insert-element-xmla.md)   
- [Actualizar elemento & #40; XMLA & #41;](../../../analysis-services/xmla/xml-elements-commands/update-element-xmla.md)   
- [Propiedades & #40; XMLA & #41;](../../../analysis-services/xmla/xml-elements-properties/xml-elements-properties.md)  
+## <a name="see-also"></a>Vea también
+ [Insertar elemento &#40;XMLA&#41;](../../../analysis-services/xmla/xml-elements-commands/insert-element-xmla.md)   
+ [Actualizar elemento &#40;XMLA&#41;](../../../analysis-services/xmla/xml-elements-commands/update-element-xmla.md)   
+ [Propiedades &#40;XMLA&#41;](../../../analysis-services/xmla/xml-elements-properties/xml-elements-properties.md)  
   
   

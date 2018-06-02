@@ -1,32 +1,20 @@
 ---
 title: '* (Combinaciones cruzadas) (MDX) | Documentos de Microsoft'
-ms.custom: ''
-ms.date: 03/02/2016
-ms.prod: analysis-services
-ms.prod_service: analysis-services
-ms.component: ''
-ms.reviewer: ''
-ms.suite: pro-bi
-ms.technology: ''
-ms.tgt_pltfrm: ''
-ms.topic: language-reference
-f1_keywords:
-- '*'
-dev_langs:
-- kbMDX
-helpviewer_keywords:
-- '* (crossjoin operator)'
-- crossjoin operator (*)
-ms.assetid: e00cb260-0189-4c4e-b3d2-088f4421337b
-caps.latest.revision: 41
-author: Minewiskan
+ms.date: 05/30/2018
+ms.prod: sql
+ms.technology: analysis-services
+ms.custom: mdx
+ms.topic: reference
 ms.author: owend
-manager: erikre
-ms.openlocfilehash: f11df29dbccb0fb892366022f07b7157a661ba8c
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.reviewer: owend
+author: minewiskan
+manager: kfile
+ms.openlocfilehash: 03a229dd7ab766a858967eb8c4891edadaaa6b92
+ms.sourcegitcommit: 808d23a654ef03ea16db1aa23edab496b73e5072
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/02/2018
+ms.locfileid: "34577637"
 ---
 # <a name="crossjoin----mdx-operator-reference"></a>Combinación cruzada - referencia de operadores MDX
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
@@ -47,7 +35,7 @@ Set_Expression * Set_Expression
 ## <a name="return-value"></a>Valor devuelto  
  Conjunto que contiene el producto cruzado de ambos parámetros especificados.  
   
-## <a name="remarks"></a>Comentarios  
+## <a name="remarks"></a>Notas  
  El  **\* (combinaciones cruzadas)** operador es funcionalmente equivalente a la [Crossjoin](../mdx/crossjoin-mdx.md) función.  
   
 ## <a name="examples"></a>Ejemplos  

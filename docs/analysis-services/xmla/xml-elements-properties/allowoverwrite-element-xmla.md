@@ -9,11 +9,12 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: 1350d7fba1800f2ec0ea38a6ed57b776e163919a
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.openlocfilehash: 76ba7c6b3046e5298a346cb84472de3ba090e2bc
+ms.sourcegitcommit: 808d23a654ef03ea16db1aa23edab496b73e5072
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/10/2018
+ms.lasthandoff: 06/02/2018
+ms.locfileid: "34577527"
 ---
 # <a name="allowoverwrite-element-xmla"></a>Elemento AllowOverwrite (XMLA)
 [!INCLUDE[ssas-appliesto-sqlas-aas](../../../includes/ssas-appliesto-sqlas-aas.md)]
@@ -34,25 +35,25 @@ ms.lasthandoff: 05/10/2018
   
 |Característica|Descripción|  
 |--------------------|-----------------|  
-|Tipo y longitud de los datos|Booleano|  
+|Tipo y longitud de los datos|Boolean|  
 |Valor predeterminado|False|  
-|Cardinalidad|0-1: Elemento opcional que puede aparecer solo una vez.|  
+|Cardinalidad|0-1: Elemento opcional que puede aparecer una y solo una vez.|  
   
 ## <a name="element-relationships"></a>Relaciones del elemento  
   
 |Relación|Elemento|  
 |------------------|-------------|  
 |Elementos primarios|[Copia de seguridad](../../../analysis-services/xmla/xml-elements-commands/backup-element-xmla.md), [restaurar](../../../analysis-services/xmla/xml-elements-commands/restore-element-xmla.md)|  
-|Elementos secundarios|Ninguno|  
+|Elementos secundarios|None|  
   
-## <a name="remarks"></a>Comentarios  
+## <a name="remarks"></a>Notas  
  Para los comandos **Backup** , el elemento **AllowOverwrite** determina si el comando puede sobrescribir el archivo de copia de seguridad especificado en el elemento **File** .  
   
- Para **restaurar** elementos, el **AllowOverwrite** elemento determina si el comando puede sobrescribir el [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] base de datos especificada en el **DatabaseName** elemento.  
+ Para **restaurar** elementos, el **AllowOverwrite** elemento determina si el comando puede sobrescribir la base de datos de Analysis Services especificada en el **DatabaseName** elemento.  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Vea también
  [Elemento DatabaseName &#40;XMLA&#41;](../../../analysis-services/xmla/xml-elements-properties/databasename-element-xmla.md)   
  [Elemento file &#40;XMLA&#41;](../../../analysis-services/xmla/xml-elements-properties/file-element-xmla.md)   
- [Propiedades & #40; XMLA & #41;](../../../analysis-services/xmla/xml-elements-properties/xml-elements-properties.md)  
+ [Propiedades &#40;XMLA&#41;](../../../analysis-services/xmla/xml-elements-properties/xml-elements-properties.md)  
   
   

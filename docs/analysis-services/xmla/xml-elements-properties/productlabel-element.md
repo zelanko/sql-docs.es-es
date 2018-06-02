@@ -9,11 +9,12 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: 075f2ee24a7893758d99d6b7dcae266953d2805c
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.openlocfilehash: f8add6457eaf01e863b0752dd9a1e2c51ee5ec9a
+ms.sourcegitcommit: 808d23a654ef03ea16db1aa23edab496b73e5072
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/10/2018
+ms.lasthandoff: 06/02/2018
+ms.locfileid: "34576107"
 ---
 # <a name="productlabel-element"></a>Elemento ProductLabel
 [!INCLUDE[ssas-appliesto-sqlas-aas](../../../includes/ssas-appliesto-sqlas-aas.md)]
@@ -34,20 +35,20 @@ ms.lasthandoff: 05/10/2018
   
 |Característica|Descripción|  
 |--------------------|-----------------|  
-|Tipo y longitud de los datos|Cadena|  
-|Valor predeterminado|Ninguno|  
-|Cardinalidad|0-1: Elemento opcional que puede aparecer solo una vez.|  
+|Tipo y longitud de los datos|String|  
+|Valor predeterminado|None|  
+|Cardinalidad|0-1: Elemento opcional que puede aparecer una y solo una vez.|  
   
 ## <a name="element-relationships"></a>Relaciones del elemento  
   
 |Relación|Elemento|  
 |------------------|-------------|  
 |Elementos primarios|[Server](../../../analysis-services/scripting/objects/server-element-assl.md)|  
-|Elementos secundarios|Ninguno|  
+|Elementos secundarios|None|  
   
-## <a name="remarks"></a>Comentarios  
+## <a name="remarks"></a>Notas  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Vea también
  [Server](../../../analysis-services/scripting/objects/server-element-assl.md)  
   
   

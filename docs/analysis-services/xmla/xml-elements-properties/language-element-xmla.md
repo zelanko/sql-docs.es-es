@@ -9,11 +9,12 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: 84c62a6d1368c66c96e379ed583da3587023aa42
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.openlocfilehash: 4b2e3a188a9681508473394a6323457cc4fa1726
+ms.sourcegitcommit: 808d23a654ef03ea16db1aa23edab496b73e5072
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/10/2018
+ms.lasthandoff: 06/02/2018
+ms.locfileid: "34575437"
 ---
 # <a name="language-element-xmla"></a>Elemento Language (XMLA)
 [!INCLUDE[ssas-appliesto-sqlas-aas](../../../includes/ssas-appliesto-sqlas-aas.md)]
@@ -35,7 +36,7 @@ ms.lasthandoff: 05/10/2018
 |Característica|Descripción|  
 |--------------------|-----------------|  
 |Tipo y longitud de los datos|Integer|  
-|Valor predeterminado|Ninguno|  
+|Valor predeterminado|None|  
 |Cardinalidad|1-1: Elemento necesario que se produce una vez y solo una vez.|  
   
 ## <a name="element-relationships"></a>Relaciones del elemento  
@@ -43,15 +44,15 @@ ms.lasthandoff: 05/10/2018
 |Relación|Elemento|  
 |------------------|-------------|  
 |Elementos primarios|[Traducción](../../../analysis-services/xmla/xml-elements-properties/translation-element-xmla.md)|  
-|Elementos secundarios|Ninguno|  
+|Elementos secundarios|None|  
   
-## <a name="remarks"></a>Comentarios  
+## <a name="remarks"></a>Notas  
  El **lenguaje** elemento especifica el LCID utilizado por el elemento primario **traducción** elemento que se va a asignar la **nombre** elemento del elemento primario **traducción** elemento a un miembro de atributo para el idioma especificado, durante un **insertar** o **actualización** comando.  
   
-## <a name="see-also"></a>Vea también  
- [Insertar elemento & #40; XMLA & #41;](../../../analysis-services/xmla/xml-elements-commands/insert-element-xmla.md)   
+## <a name="see-also"></a>Vea también
+ [Insertar elemento &#40;XMLA&#41;](../../../analysis-services/xmla/xml-elements-commands/insert-element-xmla.md)   
  [Nombre de elemento &#40;XMLA&#41;](../../../analysis-services/xmla/xml-elements-properties/name-element-xmla.md)   
- [Actualizar elemento & #40; XMLA & #41;](../../../analysis-services/xmla/xml-elements-commands/update-element-xmla.md)   
- [Propiedades & #40; XMLA & #41;](../../../analysis-services/xmla/xml-elements-properties/xml-elements-properties.md)  
+ [Actualizar elemento &#40;XMLA&#41;](../../../analysis-services/xmla/xml-elements-commands/update-element-xmla.md)   
+ [Propiedades &#40;XMLA&#41;](../../../analysis-services/xmla/xml-elements-properties/xml-elements-properties.md)  
   
   

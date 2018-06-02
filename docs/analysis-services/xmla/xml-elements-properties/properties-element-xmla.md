@@ -9,11 +9,12 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: b5b46a730eba14e1b4d45fcedae3235408b4fac0
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.openlocfilehash: 2c72d367944a79e86d9bfa251121e8589cbc0e86
+ms.sourcegitcommit: 808d23a654ef03ea16db1aa23edab496b73e5072
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/10/2018
+ms.lasthandoff: 06/02/2018
+ms.locfileid: "34576127"
 ---
 # <a name="properties-element-xmla"></a>Elemento Properties (XMLA)
 [!INCLUDE[ssas-appliesto-sqlas-aas](../../../includes/ssas-appliesto-sqlas-aas.md)]
@@ -36,8 +37,8 @@ ms.lasthandoff: 05/10/2018
   
 |Característica|Descripción|  
 |--------------------|-----------------|  
-|Tipo y longitud de los datos|Ninguno|  
-|Valor predeterminado|Ninguno|  
+|Tipo y longitud de los datos|None|  
+|Valor predeterminado|None|  
 |Cardinalidad|1-1: Elemento necesario que se produce una vez y solo una vez.|  
   
 ## <a name="element-relationships"></a>Relaciones del elemento  
@@ -47,7 +48,7 @@ ms.lasthandoff: 05/10/2018
 |Elementos primarios|[Detectar](../../../analysis-services/xmla/xml-elements-methods-discover.md), [ejecutar](../../../analysis-services/xmla/xml-elements-methods-execute.md)|  
 |Elementos secundarios|[PropertyList](../../../analysis-services/xmla/xml-elements-properties/propertylist-element-xmla.md)|  
   
-## <a name="remarks"></a>Comentarios  
+## <a name="remarks"></a>Notas  
  El **propiedades** elemento representa propiedades XMLA usadas para controlar aspectos de la **Discover** y **Execute** métodos, como definir la información necesaria para conectarse al origen de datos, especificando el formato de devolución del conjunto de resultados o especificando la configuración regional en la que se deben dar formato a los datos.  
   
  Las propiedades disponibles y sus valores se pueden obtener utilizando el tipo de solicitud DISCOVER_PROPERTIES con el método **Discover** .  
@@ -70,7 +71,7 @@ ms.lasthandoff: 05/10/2018
 </Properties>  
 ```  
   
-## <a name="see-also"></a>Vea también  
- [Propiedades & #40; XMLA & #41;](../../../analysis-services/xmla/xml-elements-properties/xml-elements-properties.md)  
+## <a name="see-also"></a>Vea también
+ [Propiedades &#40;XMLA&#41;](../../../analysis-services/xmla/xml-elements-properties/xml-elements-properties.md)  
   
   

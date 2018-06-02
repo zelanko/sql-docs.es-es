@@ -9,11 +9,12 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: 69d17f1de161f2c9fc47e2308be20501d9b6be8b
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.openlocfilehash: e361215425c1e7b0e54b2e8a92b2987d30b00790
+ms.sourcegitcommit: 808d23a654ef03ea16db1aa23edab496b73e5072
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/10/2018
+ms.lasthandoff: 06/02/2018
+ms.locfileid: "34575957"
 ---
 # <a name="parameter-element-xmla"></a>Elemento Parameter (XMLA)
 [!INCLUDE[ssas-appliesto-sqlas-aas](../../../includes/ssas-appliesto-sqlas-aas.md)]
@@ -37,9 +38,9 @@ ms.lasthandoff: 05/10/2018
   
 |Característica|Descripción|  
 |--------------------|-----------------|  
-|Tipo y longitud de los datos|Ninguno|  
-|Valor predeterminado|Ninguno|  
-|Cardinalidad|0-1: Elemento opcional que puede aparecer solo una vez.|  
+|Tipo y longitud de los datos|None|  
+|Valor predeterminado|None|  
+|Cardinalidad|0-1: Elemento opcional que puede aparecer una y solo una vez.|  
   
 ## <a name="element-relationships"></a>Relaciones del elemento  
   
@@ -48,10 +49,10 @@ ms.lasthandoff: 05/10/2018
 |Elementos primarios|[Parámetros](../../../analysis-services/xmla/xml-elements-properties/parameters-element-xmla.md)|  
 |Elementos secundarios|[Name](../../../analysis-services/xmla/xml-elements-properties/name-element-parameter-xmla.md), [Value](../../../analysis-services/xmla/xml-elements-properties/value-element-parameter-xmla.md)|  
   
-## <a name="remarks"></a>Comentarios  
+## <a name="remarks"></a>Notas  
  Alguna parte del código XML para los comandos de Analysis (XMLA), como el comando [Process](../../../analysis-services/xmla/xml-elements-commands/process-element-xmla.md) , puede requerir información adicional. El elemento **Parameter** proporciona un mecanismo para ofrecer información adicional, incluso información en lotes, para un comando XMLA.  
   
-## <a name="see-also"></a>Vea también  
- [Propiedades & #40; XMLA & #41;](../../../analysis-services/xmla/xml-elements-properties/xml-elements-properties.md)  
+## <a name="see-also"></a>Vea también
+ [Propiedades &#40;XMLA&#41;](../../../analysis-services/xmla/xml-elements-properties/xml-elements-properties.md)  
   
   

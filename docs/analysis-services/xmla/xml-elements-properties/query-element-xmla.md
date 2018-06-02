@@ -9,11 +9,12 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: 9670f46123a80c4cb14b4439a7a296adc0973353
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.openlocfilehash: 861f216ac263de32b9f2afc3e0fcd4e43b3dfb4a
+ms.sourcegitcommit: 808d23a654ef03ea16db1aa23edab496b73e5072
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/10/2018
+ms.lasthandoff: 06/02/2018
+ms.locfileid: "34576177"
 ---
 # <a name="query-element-xmla"></a>Elemento Query (XMLA)
 [!INCLUDE[ssas-appliesto-sqlas-aas](../../../includes/ssas-appliesto-sqlas-aas.md)]
@@ -34,19 +35,19 @@ ms.lasthandoff: 05/10/2018
   
 |Característica|Descripción|  
 |--------------------|-----------------|  
-|Tipo y longitud de los datos|Cadena|  
-|Valor predeterminado|Ninguno|  
-|Cardinalidad|0-1: Elemento opcional que puede aparecer solo una vez.|  
+|Tipo y longitud de los datos|String|  
+|Valor predeterminado|None|  
+|Cardinalidad|0-1: Elemento opcional que puede aparecer una y solo una vez.|  
   
 ## <a name="element-relationships"></a>Relaciones del elemento  
   
 |Relación|Elemento|  
 |------------------|-------------|  
 |Elementos primarios|[Consultas](../../../analysis-services/xmla/xml-elements-properties/queries-element-xmla.md)|  
-|Elementos secundarios|Ninguno|  
+|Elementos secundarios|None|  
   
-## <a name="remarks"></a>Comentarios  
- El comando **DesignAggregations** admite la optimización basada en el uso incluyendo uno o más elementos **Query** en la colección **Queries** del comando. Cada elemento **Query** representa una consulta de objetivo que utiliza el proceso de diseño para definir agregaciones dirigidas a las consultas utilizadas con más frecuencia. Puede especificar sus propias consultas de objetivo, o puede usar la información almacenada en una instancia de [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] en el registro de consultas para recuperar información sobre con más frecuencia utiliza las consultas.  
+## <a name="remarks"></a>Notas  
+ El comando **DesignAggregations** admite la optimización basada en el uso incluyendo uno o más elementos **Query** en la colección **Queries** del comando. Cada elemento **Query** representa una consulta de objetivo que utiliza el proceso de diseño para definir agregaciones dirigidas a las consultas utilizadas con más frecuencia. Puede especificar sus propias consultas de objetivo, o puede usar la información almacenada en una instancia de Analysis Services en el registro de consultas para recuperar información acerca de las consultas usadas con más frecuencia.  
   
  Si diseña agregaciones de forma iterativa, solo tiene que pasar las consultas del objetivo de la primera **DesignAggregations** el comando porque el [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] instancia almacena estas consultas de objetivo y usa estas consultas durante posteriores **DesignAggregations** comandos. Después de incluir las consultas del objetivo en el primer comando **DesignAggregations** de un proceso iterativo, cualquier comando **DesignAggregations** posterior que contenga las consultas de objetivo en la propiedad **Queries** generará un error.  
   
@@ -63,12 +64,12 @@ ms.lasthandoff: 05/10/2018
  Por ejemplo, la cadena "011" haría referencia a una consulta que implicaría una dimensión con tres atributos, de los que el segundo y el tercero estarían incluidos en la consulta.  
   
 > [!NOTE]  
->  Algunos atributos no se tienen en cuenta en el conjunto de datos. Para obtener más información sobre los atributos excluidos, vea [Properties (XMLA)](../../../analysis-services/xmla/xml-elements-properties/query-element-xmla.md).  
+>  Algunos atributos no se tienen en cuenta en el conjunto de datos. Para obtener más información sobre los atributos excluidos, consulte [propiedades (XMLA)](../../../analysis-services/xmla/xml-elements-properties/query-element-xmla.md).  
   
  Cada dimensión del grupo de medida que contiene el diseño de agregaciones está representada por un valor *Dataset* en el elemento **Query** . El orden de los valores de *Dataset* debe coincidir con el orden de las dimensiones incluidas en el grupo de medidas.  
   
-## <a name="see-also"></a>Vea también  
- [Diseñar agregaciones & #40; XMLA & #41;](../../../analysis-services/multidimensional-models-scripting-language-assl-xmla/designing-aggregations-xmla.md)   
- [Propiedades & #40; XMLA & #41;](../../../analysis-services/xmla/xml-elements-properties/xml-elements-properties.md)  
+## <a name="see-also"></a>Vea también
+ [Diseñar agregaciones &#40;XMLA&#41;](../../../analysis-services/multidimensional-models-scripting-language-assl-xmla/designing-aggregations-xmla.md)   
+ [Propiedades &#40;XMLA&#41;](../../../analysis-services/xmla/xml-elements-properties/xml-elements-properties.md)  
   
   

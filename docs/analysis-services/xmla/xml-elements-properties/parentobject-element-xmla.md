@@ -9,11 +9,12 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: c5ad08e36625073701996333e5e0a9d886ecfa92
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.openlocfilehash: ff9ebc460691d9f97e5cfe64783574b00eab6915
+ms.sourcegitcommit: 808d23a654ef03ea16db1aa23edab496b73e5072
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/10/2018
+ms.lasthandoff: 06/02/2018
+ms.locfileid: "34576007"
 ---
 # <a name="parentobject-element-xmla"></a>Elemento ParentObject (XMLA)
 [!INCLUDE[ssas-appliesto-sqlas-aas](../../../includes/ssas-appliesto-sqlas-aas.md)]
@@ -36,9 +37,9 @@ ms.lasthandoff: 05/10/2018
   
 |Característica|Descripción|  
 |--------------------|-----------------|  
-|Tipo y longitud de los datos|Ninguno|  
-|Valor predeterminado|Ninguno|  
-|Cardinalidad|0-1: Elemento opcional que puede aparecer solo una vez.|  
+|Tipo y longitud de los datos|None|  
+|Valor predeterminado|None|  
+|Cardinalidad|0-1: Elemento opcional que puede aparecer una y solo una vez.|  
   
 ## <a name="element-relationships"></a>Relaciones del elemento  
   
@@ -47,11 +48,11 @@ ms.lasthandoff: 05/10/2018
 |Elementos primarios|[Crear](../../../analysis-services/xmla/xml-elements-commands/create-element-xmla.md)|  
 |Elementos secundarios|Elementos requeridos de Analysis Services Scripting Language (ASSL). Especifica enumerando los elementos de Id. del objeto y sus antecesores (excepto la **Server** objeto.) Por ejemplo, la siguiente **ParentObject** elemento identifica una partición:<br /><br /> `<ParentObject>`<br /><br /> `<DatabaseID>Adventure Works DW Multidimensional 2012</DatabaseID>`<br /><br /> `<CubeID>Adventure Works</CubeID>`<br /><br /> `<MeasureGroupID>Internet Sales</MeasureGroupID>`<br /><br /> `<PartitionID>Inernet_Sales_2001</PartitionID>`<br /><br /> `</ParentObject>`|  
   
-## <a name="remarks"></a>Comentarios  
+## <a name="remarks"></a>Notas  
  El orden en el que los identificadores aparecen no es importante.  
   
 ## <a name="example"></a>Ejemplo  
- En el ejemplo siguiente se crea el **cesta** estructura de minería de datos, incluido en el [!INCLUDE[ssAWDWsp](../../../includes/ssawdwsp-md.md)] ejemplo [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] base de datos.  
+ En el ejemplo siguiente se crea el **cesta** estructura de minería de datos, incluido en el [!INCLUDE[ssAWDWsp](../../../includes/ssawdwsp-md.md)] base de datos de Analysis Services de ejemplo.  
   
 ```  
 <Create xmlns="http://schemas.microsoft.com/analysisservices/2003/engine">  
@@ -173,7 +174,7 @@ ms.lasthandoff: 05/10/2018
 </Create>  
 ```  
   
-## <a name="see-also"></a>Vea también  
- [Propiedades & #40; XMLA & #41;](../../../analysis-services/xmla/xml-elements-properties/xml-elements-properties.md)  
+## <a name="see-also"></a>Vea también
+ [Propiedades &#40;XMLA&#41;](../../../analysis-services/xmla/xml-elements-properties/xml-elements-properties.md)  
   
   

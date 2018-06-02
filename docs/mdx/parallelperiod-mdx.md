@@ -1,31 +1,20 @@
 ---
 title: ParallelPeriod (MDX) | Documentos de Microsoft
-ms.custom: ''
-ms.date: 03/02/2016
-ms.prod: analysis-services
-ms.prod_service: analysis-services
-ms.component: ''
-ms.reviewer: ''
-ms.suite: pro-bi
-ms.technology: ''
-ms.tgt_pltfrm: ''
-ms.topic: language-reference
-f1_keywords:
-- PARALLELPERIOD
-dev_langs:
-- kbMDX
-helpviewer_keywords:
-- ParallelPeriod function
-ms.assetid: 9c87f5a6-5694-46f1-9890-bd9705190ea7
-caps.latest.revision: 31
-author: Minewiskan
+ms.date: 05/30/2018
+ms.prod: sql
+ms.technology: analysis-services
+ms.custom: mdx
+ms.topic: reference
 ms.author: owend
-manager: erikre
-ms.openlocfilehash: 646095493ba9777b2a07b09bf3b02f3f360cf64b
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.reviewer: owend
+author: minewiskan
+manager: kfile
+ms.openlocfilehash: 8cde031af19fff309520cd72e145b6c04dc19d9c
+ms.sourcegitcommit: 808d23a654ef03ea16db1aa23edab496b73e5072
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/02/2018
+ms.locfileid: "34580827"
 ---
 # <a name="parallelperiod-mdx"></a>ParallelPeriod (MDX)
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
@@ -49,7 +38,7 @@ ParallelPeriod( [ Level_Expression [ ,Index [ , Member_Expression ] ] ] )
  *Expresión_miembro*  
  Expresión MDX válida que devuelve un miembro.  
   
-## <a name="remarks"></a>Comentarios  
+## <a name="remarks"></a>Notas  
  Aunque es similar a la [Cousin](../mdx/cousin-mdx.md) función, el **ParallelPeriod** función está más estrechamente relacionado con serie temporal. El **ParallelPeriod** función toma el antecesor del miembro especificado en el nivel especificado, busca el elemento del mismo nivel del antecesor con el intervalo especificado y por último, devuelve el período paralelo del miembro especificado entre los descendientes del nodo relacionado.  
   
  El **ParallelPeriod** función tiene los siguientes valores predeterminados:  
@@ -88,6 +77,6 @@ SELECT ParallelPeriod ([Date].[Calendar].[Calendar Semester]
 ```  
   
 ## <a name="see-also"></a>Vea también  
- [Referencia de funciones MDX & #40; MDX & #41;](../mdx/mdx-function-reference-mdx.md)  
+ [Referencia de funciones MDX &#40;MDX&#41;](../mdx/mdx-function-reference-mdx.md)  
   
   

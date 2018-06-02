@@ -9,11 +9,12 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: f4fc4072c7b19cff327463dd8df8af7d136e6c1e
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.openlocfilehash: 794e33d6270ef9540396fd7d2f38a08ccab4c8d2
+ms.sourcegitcommit: 808d23a654ef03ea16db1aa23edab496b73e5072
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/10/2018
+ms.lasthandoff: 06/02/2018
+ms.locfileid: "34578137"
 ---
 # <a name="root-element-xmla"></a>Elemento root (XMLA)
 [!INCLUDE[ssas-appliesto-sqlas-aas](../../../includes/ssas-appliesto-sqlas-aas.md)]
@@ -39,7 +40,7 @@ ms.lasthandoff: 05/10/2018
 |Característica|Descripción|  
 |--------------------|-----------------|  
 |Tipo y longitud de los datos|Vea la tabla siguiente.|  
-|Valor predeterminado|Ninguno|  
+|Valor predeterminado|None|  
 |Cardinalidad|1-n: Elemento necesario que puede aparecer más de una vez.|  
   
 |Ancestor|Tipo de datos|  
@@ -52,12 +53,12 @@ ms.lasthandoff: 05/10/2018
 |Relación|Elemento|  
 |------------------|-------------|  
 |Elementos primarios|[resultados](../../../analysis-services/xmla/xml-elements-properties/results-element-xmla.md), [devolver](../../../analysis-services/xmla/xml-elements-properties/return-element-xmla.md)|  
-|Elementos secundarios|Ninguno|  
+|Elementos secundarios|None|  
   
-## <a name="remarks"></a>Comentarios  
+## <a name="remarks"></a>Notas  
  El **raíz** elemento contiene la información devuelta en el [DiscoverResponse](../../../analysis-services/xmla/xml-elements-objects-discoverresponse.md) elemento devuelto por una sola **Discover** llamada al método, o en la [ExecuteResponse](../../../analysis-services/xmla/xml-elements-objects-executeresponse.md) elemento devuelto por un comando XMLA único ejecutado por un único **Execute** llamada al método.  
   
-## <a name="see-also"></a>Vea también  
- [Propiedades & #40; XMLA & #41;](../../../analysis-services/xmla/xml-elements-properties/xml-elements-properties.md)  
+## <a name="see-also"></a>Vea también
+ [Propiedades &#40;XMLA&#41;](../../../analysis-services/xmla/xml-elements-properties/xml-elements-properties.md)  
   
   

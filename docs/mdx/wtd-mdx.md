@@ -1,31 +1,20 @@
 ---
 title: WTD (MDX) | Documentos de Microsoft
-ms.custom: ''
-ms.date: 03/02/2016
-ms.prod: analysis-services
-ms.prod_service: analysis-services
-ms.component: ''
-ms.reviewer: ''
-ms.suite: pro-bi
-ms.technology: ''
-ms.tgt_pltfrm: ''
-ms.topic: language-reference
-f1_keywords:
-- WTD
-dev_langs:
-- kbMDX
-helpviewer_keywords:
-- Wtd function
-ms.assetid: 41066e1b-e802-4582-be4b-3ed7807b033e
-caps.latest.revision: 29
-author: Minewiskan
+ms.date: 05/30/2018
+ms.prod: sql
+ms.technology: analysis-services
+ms.custom: mdx
+ms.topic: reference
 ms.author: owend
-manager: erikre
-ms.openlocfilehash: d37e1c1e7eb210a9486decc57d232c9ed719eaea
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.reviewer: owend
+author: minewiskan
+manager: kfile
+ms.openlocfilehash: c572b517d82c5cd1d91492be8f9fe299000ec19c
+ms.sourcegitcommit: 808d23a654ef03ea16db1aa23edab496b73e5072
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/02/2018
+ms.locfileid: "34582537"
 ---
 # <a name="wtd-mdx"></a>Wtd (MDX)
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
@@ -43,7 +32,7 @@ Wtd( [ Member_Expression ] )
  *Expresión_miembro*  
  Expresión MDX válida que devuelve un miembro.  
   
-## <a name="remarks"></a>Comentarios  
+## <a name="remarks"></a>Notas  
  Si no se especifica una expresión de miembro, el valor predeterminado es el miembro actual de la primera jerarquía con un nivel de tipo semanas en la primera dimensión de tipo Time (**Time.CurrentMember**) en el grupo de medida.  
   
  El **Wtd** función es una función abreviada para la [PeriodsToDate](../mdx/periodstodate-mdx.md) función donde se establece el nivel en *semanas*. Es decir, `Wtd(Member_Expression)` es equivalente a `PeriodsToDate(Week_Level_Expression,Member_Expression)`.  
@@ -52,6 +41,6 @@ Wtd( [ Member_Expression ] )
  [QTD &#40;MDX&#41;](../mdx/qtd-mdx.md)   
  [MTd &#40;MDX&#41;](../mdx/mtd-mdx.md)   
  [YTD &#40;MDX&#41;](../mdx/ytd-mdx.md)   
- [Referencia de funciones MDX & #40; MDX & #41;](../mdx/mdx-function-reference-mdx.md)  
+ [Referencia de funciones MDX &#40;MDX&#41;](../mdx/mdx-function-reference-mdx.md)  
   
   

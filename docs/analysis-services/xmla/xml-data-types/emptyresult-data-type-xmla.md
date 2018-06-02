@@ -9,11 +9,12 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: d9dd3cf815ee616c3519883a59ddcbb8fbd61eb8
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.openlocfilehash: 7155c03203ad852573318056ab4e194fe19e7113
+ms.sourcegitcommit: 808d23a654ef03ea16db1aa23edab496b73e5072
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/10/2018
+ms.lasthandoff: 06/02/2018
+ms.locfileid: "34573907"
 ---
 # <a name="emptyresult-data-type-xmla"></a>Tipo de datos EmptyResult (XMLA)
 [!INCLUDE[ssas-appliesto-sqlas-aas](../../../includes/ssas-appliesto-sqlas-aas.md)]
@@ -35,17 +36,17 @@ ms.lasthandoff: 05/10/2018
 |Característica|Descripción|  
 |--------------------|-----------------|  
 |Tipos de datos base|[Conjunto de resultados](../../../analysis-services/xmla/xml-data-types/resultset-data-type-xmla.md)|  
-|Tipos de datos derivados|Ninguno|  
+|Tipos de datos derivados|None|  
   
-## <a name="data-type-relationships"></a>Relaciones entre tipos de datos  
+## <a name="data-type-relationships"></a>Relaciones de tipo de datos  
   
 |Relación|Elemento|  
 |------------------|-------------|  
-|Elementos primarios|Ninguno|  
-|Elementos secundarios|Ninguno|  
-|Elementos derivados|[raíz](../../../analysis-services/xmla/xml-elements-properties/root-element-xmla.md)|  
+|Elementos primarios|None|  
+|Elementos secundarios|None|  
+|Elementos derivados|[Raíz](../../../analysis-services/xmla/xml-elements-properties/root-element-xmla.md)|  
   
-## <a name="remarks"></a>Comentarios  
+## <a name="remarks"></a>Notas  
  Hay ciertos comandos de MXL for Analysis (MXLA) de los que no se espera que devuelvan un resultado, o puede que no lo devuelvan a causa de un error. Los comandos XMLA que no devuelven un resultado devuelven el tipo de datos **EmptyResult** , un espacio de nombres en el elemento **root** .  
   
 ## <a name="example"></a>Ejemplo  
@@ -57,7 +58,7 @@ ms.lasthandoff: 05/10/2018
 </return>  
 ```  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Vea también
  [Tipos de datos XML &#40;XMLA&#41;](../../../analysis-services/xmla/xml-data-types/xml-data-types-xmla.md)  
   
   

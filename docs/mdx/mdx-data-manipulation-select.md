@@ -1,32 +1,20 @@
 ---
 title: Instrucción SELECT (MDX) | Documentos de Microsoft
-ms.custom: ''
-ms.date: 03/02/2016
-ms.prod: analysis-services
-ms.prod_service: analysis-services
-ms.component: ''
-ms.reviewer: ''
-ms.suite: pro-bi
-ms.technology: ''
-ms.tgt_pltfrm: ''
-ms.topic: language-reference
-f1_keywords:
-- SELECT
-dev_langs:
-- kbMDX
-helpviewer_keywords:
-- SELECT statement [MDX]
-- cubes [Analysis Services], SELECT statement
-ms.assetid: c0a57214-aa3f-44ce-a369-660c69746f34
-caps.latest.revision: 43
-author: Minewiskan
+ms.date: 05/30/2018
+ms.prod: sql
+ms.technology: analysis-services
+ms.custom: mdx
+ms.topic: reference
 ms.author: owend
-manager: erikre
-ms.openlocfilehash: 93a58d6453300d79f07fa19874cc2db8c21cfb11
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.reviewer: owend
+author: minewiskan
+manager: kfile
+ms.openlocfilehash: 787bd07976f7472ae5f86c347c5ba06493414d7a
+ms.sourcegitcommit: 808d23a654ef03ea16db1aa23edab496b73e5072
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/02/2018
+ms.locfileid: "34579987"
 ---
 # <a name="mdx-data-manipulation---select"></a>Manipulación de datos MDX - SELECT
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
@@ -122,7 +110,7 @@ FROM
  *MemberProperty_Name*  
  Cadena válida que representa una propiedad de miembro.  
   
-## <a name="remarks"></a>Comentarios  
+## <a name="remarks"></a>Notas  
  La expresión `<SELECT slicer axis clause>` debe contener miembros en dimensiones y jerarquías distintas a las referidas en las expresiones `<SELECT query axis clause>` especificadas.  
   
  Si se omite un atributo del cubo de las expresiones `<SELECT query axis clause>` y del valor `<SELECT slicer axis clause>` especificados, el miembro predeterminado del atributo se agrega implícitamente al eje segmentador.  
@@ -131,7 +119,7 @@ FROM
   
  Los miembros calculados pueden incluirse en \<cláusula de eje de consulta SELECT > cada vez que se abrió la conexión con el parámetro de cadena de conexión *subconsultas = 1*; vea [admite propiedades XMLA &#40; XMLA&#41; ](../analysis-services/xmla/xml-elements-properties/propertylist-element-supported-xmla-properties.md) y <xref:Microsoft.AnalysisServices.AdomdClient.AdomdConnection.ConnectionString%2A> para el uso de parámetros. Se proporciona un ejemplo de miembros calculados en subselecciones.  
   
-## <a name="autoexists"></a>Autoexists  
+## <a name="autoexists"></a>autoexist  
  Cuando dos o más atributos de la dimensión se utilizan en una instrucción SELECT, Analysis Services evalúa las expresiones de los atributos para asegurarse de que los miembros de dichos atributos están correctamente delimitados a fin de cumplir los criterios de todos los demás atributos. Por ejemplo, supongamos que está trabajando con atributos de la dimensión Geography. Si tiene una expresión que devuelve a todos los miembros del atributo City y otra expresión que delimita los miembros del atributo Country a todos los países de Europa, esto provocará en los miembros de City quedarán delimitados a solo aquellas ciudades que pertenezcan a países de Europa. Esta característica de Analysis Services se denomina Autoexists y solamente se aplica a atributos de una misma dimensión. Autoexists solamente se aplica a atributos de una misma dimensión porque intenta impedir que los registros de la dimensión excluidos de una expresión de atributos se incluyan en las demás expresiones de atributos. Autoexists también puede entenderse como la intersección resultante de las distintas expresiones de atributos sobre los registros de la dimensión. Vea los ejemplos que se muestran a continuación:  
   
  `//Obtain the Top 10 best reseller selling products by Name`  
@@ -476,9 +464,9 @@ WHERE
 |$80,450,596.98|$79,980,114.38|$470,482.60|0.58%|  
   
 ## <a name="see-also"></a>Vea también  
- [Conceptos clave de MDX & #40; Analysis Services & #41;](../analysis-services/multidimensional-models/mdx/key-concepts-in-mdx-analysis-services.md)   
+ [Conceptos clave para MDX &#40;Analysis Services&#41;](../analysis-services/multidimensional-models/mdx/key-concepts-in-mdx-analysis-services.md)   
  [Instrucciones de manipulación de datos MDX &#40;MDX&#41;](../mdx/mdx-data-manipulation-statements-mdx.md)   
- [Restringir la consulta con ejes de segmentación de datos y de consultas & #40; MDX & #41;](~/analysis-services/multidimensional-models/mdx/mdx-query-and-slicer-axes-restricting-the-query.md)  
+ [Restringir la consulta con ejes de consulta y segmentador &#40;MDX&#41;](~/analysis-services/multidimensional-models/mdx/mdx-query-and-slicer-axes-restricting-the-query.md)  
   
   
 

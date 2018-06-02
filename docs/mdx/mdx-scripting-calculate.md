@@ -1,31 +1,20 @@
 ---
 title: CALCULATE (instrucción MDX) | Documentos de Microsoft
-ms.custom: ''
-ms.date: 03/02/2016
-ms.prod: analysis-services
-ms.prod_service: analysis-services
-ms.component: ''
-ms.reviewer: ''
-ms.suite: pro-bi
-ms.technology: ''
-ms.tgt_pltfrm: ''
-ms.topic: language-reference
-f1_keywords:
-- CALCULATE
-dev_langs:
-- kbMDX
-helpviewer_keywords:
-- CALCULATE statement
-ms.assetid: 41e196a1-d49e-487b-a42a-73e5d441ed1b
-caps.latest.revision: 42
-author: Minewiskan
+ms.date: 05/30/2018
+ms.prod: sql
+ms.technology: analysis-services
+ms.custom: mdx
+ms.topic: reference
 ms.author: owend
-manager: erikre
-ms.openlocfilehash: 855ba79dcfdd54bcd44353d0f851d0151926307a
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.reviewer: owend
+author: minewiskan
+manager: kfile
+ms.openlocfilehash: 603d36e9c099ab6148e2e7c485f9c40ad99f63a8
+ms.sourcegitcommit: 808d23a654ef03ea16db1aa23edab496b73e5072
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/02/2018
+ms.locfileid: "34579947"
 ---
 # <a name="mdx-scripting---calculate"></a>Scripting de MDX - calcular
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
@@ -42,7 +31,7 @@ CALCULATE
 ## <a name="arguments"></a>Argumentos  
  None  
   
-## <a name="remarks"></a>Comentarios  
+## <a name="remarks"></a>Notas  
  La instrucción CALCULATE se incluye automáticamente como la primera instrucción de un script MDX de un cubo al crearlo mediante [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)]. La instrucción CALCULATE indica que se agregue cada celda del cubo comenzando por las celdas de menor granularidad. Después de agregar una celda, si se llenan celdas de menor granularidad mediante expresiones, eso repercute en el valor agregado de las celdas de mayor granularidad. Casi siempre se prefiere realizar esta agregación, pero se puede eliminar o hacer que otras instrucciones se ejecuten antes que esta instrucción.  
   
  La instrucción CALCULATE no se puede incluir en un subcubo anidado del script MDX. Un subcubo anidado se define mediante la instrucción SCOPE. Para obtener más información acerca de la instrucción SCOPE, vea [instrucción SCOPE &#40;MDX&#41;](../mdx/mdx-scripting-scope.md).  
@@ -52,7 +41,7 @@ CALCULATE
   
 ## <a name="see-also"></a>Vea también  
  [Instrucciones de Scripting MDX &#40;MDX&#41;](../mdx/mdx-scripting-statements-mdx.md)   
- [Aspectos básicos de Scripting de MDX & #40; Analysis Services & #41;](../analysis-services/multidimensional-models/mdx/mdx-scripting-fundamentals-analysis-services.md)   
+ [Aspectos básicos de Scripting de MDX &#40;Analysis Services&#41;](../analysis-services/multidimensional-models/mdx/mdx-scripting-fundamentals-analysis-services.md)   
  [Definir asignaciones y otros comandos de script](../analysis-services/multidimensional-models/define-assignments-and-other-script-commands.md)  
   
   

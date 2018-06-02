@@ -1,31 +1,20 @@
 ---
 title: Palabras reservadas de MDX | Documentos de Microsoft
-ms.custom: ''
-ms.date: 03/02/2016
-ms.prod: analysis-services
-ms.prod_service: analysis-services
-ms.component: ''
-ms.reviewer: ''
-ms.suite: pro-bi
-ms.technology: ''
-ms.tgt_pltfrm: ''
-ms.topic: language-reference
-dev_langs:
-- kbMDX
-helpviewer_keywords:
-- reserved words [MDX]
-- Multidimensional Expressions [Analysis Services], reserved words
-- MDX [Analysis Services], reserved words
-ms.assetid: 8d059a8c-d578-4713-a615-2404d94ce32d
-caps.latest.revision: 26
-author: Minewiskan
+ms.date: 05/30/2018
+ms.prod: sql
+ms.technology: analysis-services
+ms.custom: mdx
+ms.topic: reference
 ms.author: owend
-manager: erikre
-ms.openlocfilehash: 6146638812b42553aceee2819d9ceb6d86cd898f
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.reviewer: owend
+author: minewiskan
+manager: kfile
+ms.openlocfilehash: 18ca96f8788d8ecb9b8567af30ec67570e2b4dae
+ms.sourcegitcommit: 808d23a654ef03ea16db1aa23edab496b73e5072
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/02/2018
+ms.locfileid: "34579807"
 ---
 # <a name="mdx-reserved-words"></a>Palabras reservadas de MDX
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
@@ -52,7 +41,7 @@ ms.lasthandoff: 05/03/2018
 |BASC|DROP|MEMBERTOSTR|STRTOVAL|  
 |BDESC|EMPTY|MIN|STRTOVALUE|  
 |BEFORE|END|MTD|SUBSET|  
-|BEFORE_AND_AFTER|ERROR|NAME|SUM|  
+|BEFORE_AND_AFTER|error|NAME|SUM|  
 |BOTTOMCOUNT|EXCEPT|NAMETOSET|TAIL|  
 |BOTTOMPERCENT|EXCLUDEEMPTY|NEST|THIS|  
 |BOTTOMSUM|EXTRACT|NEXTMEMBER|TOGGLEDRILLSTATE|  
@@ -74,9 +63,9 @@ ms.lasthandoff: 05/03/2018
 |COLUMN|IGNORE|PREDICT|USE_WEIGHTED_INCREMENT|  
 |COLUMNS|IIF|PREVMEMBER|USERNAME|  
 |CORRELATION|INCLUDEEMPTY|PROPERTIES|VALIDMEASURE|  
-|COUNT|INDEX|PROPERTY|VALUE|  
+|COUNT|INDEX|PROPERTY|Value|  
 |COUSIN|INTERSECT|QTD|VAR|  
-|COVARIANCE|IS|RANK|VARIANCE|  
+|COVARIANCE|IS|RANK|varianza|  
 |COVARIANCEN|ISANCESTOR|RECURSIVE|VARIANCEP|  
 |CREATE|ISEMPTY|RELATIVE|VARP|  
 |CREATEPROPERTYSET|ISGENERATION|ROLLUPCHILDREN|VISUAL|  
@@ -91,6 +80,6 @@ ms.lasthandoff: 05/03/2018
   
 ## <a name="see-also"></a>Vea también  
  [Palabras clave reservadas &#40;sintaxis MDX&#41;](../mdx/reserved-keywords-mdx-syntax.md)   
- [Referencia del lenguaje MDX & #40; MDX & #41;](../mdx/mdx-language-reference-mdx.md)  
+ [Referencia del lenguaje MDX &#40;MDX&#41;](../mdx/mdx-language-reference-mdx.md)  
   
   

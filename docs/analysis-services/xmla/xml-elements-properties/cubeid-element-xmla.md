@@ -9,11 +9,12 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: cf4e9b2446689039e70e1b74fcf7e9462fae1670
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.openlocfilehash: 57c8075b87fbd71bdafcb6f8116dd067e62e722d
+ms.sourcegitcommit: 808d23a654ef03ea16db1aa23edab496b73e5072
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/10/2018
+ms.lasthandoff: 06/02/2018
+ms.locfileid: "34579097"
 ---
 # <a name="cubeid-element-xmla"></a>Elemento CubeID (XMLA)
 [!INCLUDE[ssas-appliesto-sqlas-aas](../../../includes/ssas-appliesto-sqlas-aas.md)]
@@ -23,7 +24,7 @@ ms.lasthandoff: 05/10/2018
   
 ```xml  
   
-<Object> <!-- or one of the elements listed below in the Element Relationships table -->  
+<Object> <!-- or one of the elements listed below in the Element relationships table -->  
    ...  
    <CubeID>...</CubeID>  
    ...  
@@ -34,26 +35,26 @@ ms.lasthandoff: 05/10/2018
   
 |Característica|Descripción|  
 |--------------------|-----------------|  
-|Tipo y longitud de los datos|Cadena|  
-|Valor predeterminado|Ninguno|  
+|Tipo y longitud de los datos|String|  
+|Valor predeterminado|None|  
 |Cardinalidad|Vea la tabla siguiente.|  
   
 |Antecesor o elemento primario|Cardinalidad|  
 |------------------------|-----------------|  
 |[Source](../../../analysis-services/xmla/xml-elements-properties/source-element-xmla.md)|1-1: Elemento necesario que se produce una vez y solo una vez.|  
 |[Destino](../../../analysis-services/xmla/xml-elements-properties/target-element-xmla.md)|1-1: Elemento necesario que se produce una vez y solo una vez.|  
-|Todos los demás|0-1: Elemento opcional que puede aparecer una y solo una vez.|  
+|Todos las demás|0-1: Elemento opcional que puede aparecer una y solo una vez.|  
   
 ## <a name="element-relationships"></a>Relaciones del elemento  
   
 |Relación|Elemento|  
 |------------------|-------------|  
 |Elementos primarios|[Object](../../../analysis-services/xmla/xml-elements-properties/object-element-xmla.md), [ParentObject](../../../analysis-services/xmla/xml-elements-properties/parentobject-element-xmla.md), [Source](../../../analysis-services/xmla/xml-elements-properties/source-element-xmla.md), [Target](../../../analysis-services/xmla/xml-elements-properties/target-element-xmla.md)|  
-|Elementos secundarios|Ninguno|  
+|Elementos secundarios|None|  
   
-## <a name="remarks"></a>Comentarios  
+## <a name="remarks"></a>Notas  
   
-## <a name="see-also"></a>Vea también  
- [Propiedades & #40; XMLA & #41;](../../../analysis-services/xmla/xml-elements-properties/xml-elements-properties.md)  
+## <a name="see-also"></a>Vea también
+ [Propiedades &#40;XMLA&#41;](../../../analysis-services/xmla/xml-elements-properties/xml-elements-properties.md)  
   
   

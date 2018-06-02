@@ -9,11 +9,12 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: fe6310da2b2869770e0dca99ad6c1ae6630133db
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.openlocfilehash: 63c1a838d74745b5ef51f73b51e34c95e08a81ff
+ms.sourcegitcommit: 808d23a654ef03ea16db1aa23edab496b73e5072
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/10/2018
+ms.lasthandoff: 06/02/2018
+ms.locfileid: "34577627"
 ---
 # <a name="requesttype-element-xmla"></a>Elemento RequestType (XMLA)
 [!INCLUDE[ssas-appliesto-sqlas-aas](../../../includes/ssas-appliesto-sqlas-aas.md)]
@@ -35,7 +36,7 @@ ms.lasthandoff: 05/10/2018
 |Característica|Descripción|  
 |--------------------|-----------------|  
 |Tipo y longitud de los datos|String (enumeración)|  
-|Valor predeterminado|Ninguno|  
+|Valor predeterminado|None|  
 |Cardinalidad|1-1: Elemento necesario que se produce una vez y solo una vez.|  
   
 ## <a name="element-relationships"></a>Relaciones del elemento  
@@ -43,15 +44,15 @@ ms.lasthandoff: 05/10/2018
 |Relación|Elemento|  
 |------------------|-------------|  
 |Elementos primarios|[Detectar](../../../analysis-services/xmla/xml-elements-methods-discover.md)|  
-|Elementos secundarios|Ninguno|  
+|Elementos secundarios|None|  
   
-## <a name="remarks"></a>Comentarios  
- El **RequestType** elemento determina el conjunto de filas de esquema desde el que el **Discover** método devuelve los datos. Esta enumeración se limita a los nombres de los conjuntos de filas de esquema admitidos por [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)]. Para obtener más información sobre conjuntos de filas de esquema, consulte [conjuntos de filas de esquema de Analysis Services](../../../analysis-services/schema-rowsets/analysis-services-schema-rowsets.md).  
+## <a name="remarks"></a>Notas  
+ El **RequestType** elemento determina el conjunto de filas de esquema desde el que el **Discover** método devuelve los datos. Esta enumeración se limita a los nombres de los conjuntos de filas de esquema admitidos por Analysis Services. Para obtener más información sobre conjuntos de filas de esquema, consulte [conjuntos de filas de esquema de Analysis Services](../../../analysis-services/schema-rowsets/analysis-services-schema-rowsets.md).  
   
 > [!NOTE]  
 >  El **RequestType** elemento enumera solo los nombres de conjunto de filas de esquema. Si se utiliza el GUID de conjunto de filas de esquema, se produce un error.  
   
-## <a name="see-also"></a>Vea también  
- [Propiedades & #40; XMLA & #41;](../../../analysis-services/xmla/xml-elements-properties/xml-elements-properties.md)  
+## <a name="see-also"></a>Vea también
+ [Propiedades &#40;XMLA&#41;](../../../analysis-services/xmla/xml-elements-properties/xml-elements-properties.md)  
   
   

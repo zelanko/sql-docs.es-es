@@ -1,35 +1,20 @@
 ---
 title: Instrucción CREATE SET (MDX) | Documentos de Microsoft
-ms.custom: ''
-ms.date: 03/02/2016
-ms.prod: analysis-services
-ms.prod_service: analysis-services
-ms.component: ''
-ms.reviewer: ''
-ms.suite: pro-bi
-ms.technology: ''
-ms.tgt_pltfrm: ''
-ms.topic: language-reference
-f1_keywords:
-- SET
-- CREATE SET
-- CREATE_SET
-- CREATE
-dev_langs:
-- kbMDX
-helpviewer_keywords:
-- named sets [MDX]
-- CREATE SET statement
-ms.assetid: eff51eeb-5e7e-4706-b861-c57b6f3f89f0
-caps.latest.revision: 42
-author: Minewiskan
+ms.date: 05/30/2018
+ms.prod: sql
+ms.technology: analysis-services
+ms.custom: mdx
+ms.topic: reference
 ms.author: owend
-manager: erikre
-ms.openlocfilehash: 4155067b6415ea8d2113bcf9f75cbb026dd117d3
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.reviewer: owend
+author: minewiskan
+manager: kfile
+ms.openlocfilehash: 999f62b3d43c48169eb0607c406bd7bdc12bee62
+ms.sourcegitcommit: 808d23a654ef03ea16db1aa23edab496b73e5072
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/02/2018
+ms.locfileid: "34579347"
 ---
 # <a name="mdx-data-definition---create-set"></a>Definición de datos MDX - crear establecido
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
@@ -62,7 +47,7 @@ CREATE [SESSION] [ STATIC | DYNAMIC ] [HIDDEN] SET
  *Property_Value*  
  Expresión escalar válida que define el valor de la propiedad del conjunto.  
   
-## <a name="remarks"></a>Comentarios  
+## <a name="remarks"></a>Notas  
  Un conjunto con nombre es un conjunto de miembros de dimensión (o una expresión que define un conjunto) que se crea para utilizarse varias veces. Por ejemplo, un conjunto con nombre posibilita la definición de un conjunto de miembros de dimensión compuesto por el conjunto de los diez establecimientos con más ventas. Este conjunto puede definirse de forma estática o mediante una función como [TopCount](../mdx/topcount-mdx.md). Este conjunto con nombre puede usarse cuando se necesite el conjunto de los diez mejores establecimientos.  
   
  La instrucción CREATE SET crea un conjunto con nombre que permanece disponible durante toda la sesión, y por lo tanto, puede usarse en diversas consultas durante una sesión. Para obtener más información, consulte [miembros calculados de Creating Session-Scoped &#40;MDX&#41;](../analysis-services/multidimensional-models/mdx/mdx-calculated-members-session-scoped-calculated-members.md).  

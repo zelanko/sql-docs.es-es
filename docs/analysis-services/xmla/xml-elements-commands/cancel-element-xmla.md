@@ -9,15 +9,16 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: e8c4f015d5a606d67cb4c6b5f0519875db58b416
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.openlocfilehash: 7bc3cd9330261d0ec4e13a715612d73e6ecb44eb
+ms.sourcegitcommit: 808d23a654ef03ea16db1aa23edab496b73e5072
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/10/2018
+ms.lasthandoff: 06/02/2018
+ms.locfileid: "34574877"
 ---
 # <a name="cancel-element-xmla"></a>Elemento Cancel (XMLA)
 [!INCLUDE[ssas-appliesto-sqlas-aas](../../../includes/ssas-appliesto-sqlas-aas.md)]
-  Cancela un comando que se está ejecutando un [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] instancia.  
+  Cancela un comando que se está ejecutando una instancia de Analysis Services.  
   
 ## <a name="syntax"></a>Sintaxis  
   
@@ -37,8 +38,8 @@ ms.lasthandoff: 05/10/2018
   
 |Característica|Descripción|  
 |--------------------|-----------------|  
-|Tipo y longitud de los datos|Ninguno|  
-|Valor predeterminado|Ninguno|  
+|Tipo y longitud de los datos|None|  
+|Valor predeterminado|None|  
 |Cardinalidad|0-n: elemento opcional que puede aparecer más de una vez.|  
   
 ## <a name="element-relationships"></a>Relaciones del elemento  
@@ -48,7 +49,7 @@ ms.lasthandoff: 05/10/2018
 |Elementos primarios|[Command](../../../analysis-services/xmla/xml-elements-properties/command-element-xmla.md)|  
 |Elementos secundarios|[CancelAssociated](../../../analysis-services/xmla/xml-elements-properties/cancelassociated-element-xmla.md), [ConnectionID](../../../analysis-services/xmla/xml-elements-properties/connectionid-element-xmla.md), [SessionID](../../../analysis-services/xmla/xml-elements-properties/sessionid-element-xmla.md), [SPID](../../../analysis-services/xmla/xml-elements-properties/spid-element-xmla.md)|  
   
-## <a name="remarks"></a>Comentarios  
+## <a name="remarks"></a>Notas  
  El comando **Cancel** cancela los comandos que actualmente están en ejecución en el contexto de una sesión. Si la aplicación cliente no ha solicitado una sesión, no se puede cancelar un comando.  
   
  Si el comando **Cancel** se ejecuta durante la ejecución de un comando **Batch** , se cancela el comando **Batch** completo. Si el comando **Batch** es transaccional, todos los comandos contenidos por el comando **Batch** se revierten. Si el comando **Batch** no es transaccional, solo se revierten los comandos contenidos por el comando **Batch** que se estaban ejecutando en el momento en que se ejecutó el comando **Cancel** . Los comandos de un comando **Batch** no transaccional que ya se ha ejecutado no se revertirán.  
@@ -57,8 +58,8 @@ ms.lasthandoff: 05/10/2018
   
  Para recuperar información sobre las conexiones actuales y las sesiones para un [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] instancia, el **Discover** el método puede ejecutarse para solicitar, respectivamente, los conjuntos de filas de esquema DISCOVER_CONNECTIONS y DISCOVER_SESSIONS. Los miembros de un rol que tienen permisos de administración para una base de datos determinada solo pueden devolver sesiones de una base de datos determinada especificando esa base de datos en la columna de restricción de SESSION_CURRENT_DATABASE para el conjunto de filas de esquema de DISCOVER_SESSIONS. Para obtener más información sobre la **Discover** método, consulte [método detectar &#40;XMLA&#41;](../../../analysis-services/xmla/xml-elements-methods-discover.md).  
   
-## <a name="see-also"></a>Vea también  
- [Elemento de lote & #40; XMLA & #41;](../../../analysis-services/xmla/xml-elements-commands/batch-element-xmla.md)   
- [Comandos & #40; XMLA & #41;](../../../analysis-services/xmla/xml-elements-commands/xml-elements-commands.md)  
+## <a name="see-also"></a>Vea también
+ [Elemento de lote &#40;XMLA&#41;](../../../analysis-services/xmla/xml-elements-commands/batch-element-xmla.md)   
+ [Comandos &#40;XMLA&#41;](../../../analysis-services/xmla/xml-elements-commands/xml-elements-commands.md)  
   
   

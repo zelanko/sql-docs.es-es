@@ -9,11 +9,12 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: bcbd6e0315fc8a418ccff20fe5c2a69eebe4490b
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.openlocfilehash: 21e9344ef945311b3af07398e6e927482718f5ff
+ms.sourcegitcommit: 808d23a654ef03ea16db1aa23edab496b73e5072
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/10/2018
+ms.lasthandoff: 06/02/2018
+ms.locfileid: "34576267"
 ---
 # <a name="servermode-element"></a>Elemento ServerMode
 [!INCLUDE[ssas-appliesto-sqlas-aas](../../../includes/ssas-appliesto-sqlas-aas.md)]
@@ -43,18 +44,18 @@ ms.lasthandoff: 05/10/2018
 |Relación|Elemento|  
 |------------------|-------------|  
 |Elementos primarios|[Server](../../../analysis-services/scripting/objects/server-element-assl.md)|  
-|Elementos secundarios|Ninguno|  
+|Elementos secundarios|None|  
   
-## <a name="remarks"></a>Comentarios  
+## <a name="remarks"></a>Notas  
  El servidor opera en cualquiera de los siguientes modos:  
   
-|Value|Description|  
+|Valor|Descripción|  
 |-----------|-----------------|  
 |*Multidimensionales*|Modo multidimensional y de minería de datos|  
 |*Tabular*|Modo tabular|  
 |*SharePoint*|Modo de SharePoint|  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Vea también
  [Server](../../../analysis-services/scripting/objects/server-element-assl.md)  
   
   

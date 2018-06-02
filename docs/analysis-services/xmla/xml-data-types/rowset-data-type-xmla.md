@@ -9,11 +9,12 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: fe96b343afe9cdf5f8f2f301c9c0c8eade9dd67f
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.openlocfilehash: d3275114e1442634a462470487bc4c5f40d8dac6
+ms.sourcegitcommit: 808d23a654ef03ea16db1aa23edab496b73e5072
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/10/2018
+ms.lasthandoff: 06/02/2018
+ms.locfileid: "34574797"
 ---
 # <a name="rowset-data-type-xmla"></a>Tipo de datos Rowset (XMLA)
 [!INCLUDE[ssas-appliesto-sqlas-aas](../../../includes/ssas-appliesto-sqlas-aas.md)]
@@ -37,17 +38,17 @@ ms.lasthandoff: 05/10/2018
 |Característica|Descripción|  
 |--------------------|-----------------|  
 |Tipos de datos base|[Conjunto de resultados](../../../analysis-services/xmla/xml-data-types/resultset-data-type-xmla.md)|  
-|Tipos de datos derivados|Ninguno|  
+|Tipos de datos derivados|None|  
   
-## <a name="data-type-relationships"></a>Relaciones entre tipos de datos  
+## <a name="data-type-relationships"></a>Relaciones de tipo de datos  
   
 |Relación|Elemento|  
 |------------------|-------------|  
-|Elementos primarios|Ninguno|  
+|Elementos primarios|None|  
 |Elementos secundarios|[Fila](../../../analysis-services/xmla/xml-elements-properties/row-element-xmla.md)|  
-|Elementos derivados|[raíz](../../../analysis-services/xmla/xml-elements-properties/root-element-xmla.md)|  
+|Elementos derivados|[Raíz](../../../analysis-services/xmla/xml-elements-properties/root-element-xmla.md)|  
   
-## <a name="remarks"></a>Comentarios  
+## <a name="remarks"></a>Notas  
  XML no admite ciertos caracteres como nombres de elemento y de atributo. Para solucionar esta restricción de nomenclatura, XML for Analysis (XMLA) admite la codificación tal como se define por [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]. Para los nombres de columna que contienen caracteres de nombre XML que no son válidos según la especificación XML 1.0, XMLA utiliza los valores hexadecimales correspondientes para codificar los caracteres Unicode que no son válidos. Los valores hexadecimales son los caracteres de escape _x*HHHH*\_, donde *HHHH* representa el código UCS-2 hexadecimal de cuatro dígitos para el carácter con el bit más significativo en primer lugar. Por ejemplo, XMLA codifica el nombre "Order Details" como Order_x0020_Details, reemplazando el carácter de espacio en blanco con el código hexadecimal correspondiente.  
   
  La codificación puede hacer que las transformaciones del Leguaje de estilos extensible (XSL) resulten difíciles. Para admitir una búsqueda rápida de los datos reales, sin codificar los nombres de columna, agregue el **SQL: Field**de atributo en el esquema de conjunto de filas XML para cada columna, tal como se muestra en el ejemplo siguiente:  
@@ -212,7 +213,7 @@ ms.lasthandoff: 05/10/2018
 </root>  
 ```  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Vea también
  [Tipos de datos XML &#40;XMLA&#41;](../../../analysis-services/xmla/xml-data-types/xml-data-types-xmla.md)  
   
   

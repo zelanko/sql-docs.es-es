@@ -3,8 +3,6 @@ title: 'Cómo: recuperar parámetros de E/S con el controlador SQLSRV | Document
 ms.custom: ''
 ms.date: 04/12/2018
 ms.prod: sql
-ms.prod_service: connectivity
-ms.component: php
 ms.reviewer: ''
 ms.suite: sql
 ms.technology: connectivity
@@ -17,11 +15,12 @@ caps.latest.revision: 15
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 5ef60cf4ef6710690d0ba63b5e159400f724268b
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 57143ae8694bba2bdeae3ff552b2ebb089ce6536
+ms.sourcegitcommit: 808d23a654ef03ea16db1aa23edab496b73e5072
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/02/2018
+ms.locfileid: "34563933"
 ---
 # <a name="how-to-retrieve-input-and-output-parameters-using-the-sqlsrv-driver"></a>How to: Retrieve Input and Output Parameters Using the SQLSRV Driver
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]
@@ -31,7 +30,7 @@ En este tema se muestra cómo usar el controlador SQLSRV para llamar a un proced
 > [!NOTE]  
 > Las variables que se inicializan o actualizan a **Null**, **DateTime**o tipos de secuencia no se pueden usar como parámetros de salida.  
   
-## <a name="example"></a>Ejemplo  
+## <a name="example-1"></a>Ejemplo 1
 En el ejemplo siguiente se llama un procedimiento almacenado que resta las horas de vacaciones utilizadas de las horas de vacaciones disponibles de un empleado determinado. La variable que representa las horas de vacaciones utilizadas, *$vacationHrs*, se transmite al procedimiento almacenado como un parámetro de entrada. Después de actualizar las horas de vacaciones disponibles, el procedimiento almacenado usa el mismo parámetro para devolver el número de horas de vacaciones restantes.  
   
 > [!NOTE]  
@@ -129,7 +128,7 @@ sqlsrv_close( $conn);
 > [!NOTE]
 > Al enlazar un parámetro de entrada/salida para un tipo bigint, si el valor puede acabar fuera del intervalo de un [entero](../../t-sql/data-types/int-bigint-smallint-and-tinyint-transact-sql.md), debe especificar su tipo de campo SQL como SQLSRV_SQLTYPE_BIGINT. En caso contrario, se podrían producir una excepción de "valor fuera del intervalo".
 
-## <a name="example"></a>Ejemplo  
+## <a name="example-2"></a>Ejemplo 2
 Este ejemplo de código muestra cómo enlazar un valor bigint grandes como un parámetro de entrada/salida.  
 
 ```

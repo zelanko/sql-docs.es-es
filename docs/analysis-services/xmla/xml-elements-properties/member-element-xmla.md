@@ -9,11 +9,12 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: 3ef62ab60f54f8bb9f4590ca6bbe2d1a7893399e
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.openlocfilehash: 1c962452675a0c1c91a3573546f0763060dfb44e
+ms.sourcegitcommit: 808d23a654ef03ea16db1aa23edab496b73e5072
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/10/2018
+ms.lasthandoff: 06/02/2018
+ms.locfileid: "34575657"
 ---
 # <a name="member-element-xmla"></a>Elemento Member (XMLA)
 [!INCLUDE[ssas-appliesto-sqlas-aas](../../../includes/ssas-appliesto-sqlas-aas.md)]
@@ -52,8 +53,8 @@ ms.lasthandoff: 05/10/2018
   
 |Característica|Descripción|  
 |--------------------|-----------------|  
-|Tipo y longitud de los datos|Ninguno|  
-|Valor predeterminado|Ninguno|  
+|Tipo y longitud de los datos|None|  
+|Valor predeterminado|None|  
 |Cardinalidad|0-n: elemento opcional que puede aparecer más de una vez.|  
   
 ## <a name="element-relationships"></a>Relaciones del elemento  
@@ -65,14 +66,14 @@ ms.lasthandoff: 05/10/2018
   
 ## <a name="attributes"></a>Atributos  
   
-|Atributo|Descripción|  
+|Attribute|Descripción|  
 |---------------|-----------------|  
 |Jerarquía|Atributo **String** necesario (solo para elementos primarios **Tuple** ). El nombre de la jerarquía a la que pertenece el miembro representado por el elemento **Member** .|  
   
-## <a name="remarks"></a>Comentarios  
+## <a name="remarks"></a>Notas  
  El elemento **Member** contiene la información necesaria para identificar y mostrar un miembro dentro de una jerarquía determinada. La jerarquía de los elementos primarios **Members** ya está especificada por el atributo **Hierarchy** del elemento primario. La jerarquía de los elementos primarios **Tuple** se especifica en el atributo **Hierarchy** del elemento **Member** .  
   
-## <a name="see-also"></a>Vea también  
- [Propiedades & #40; XMLA & #41;](../../../analysis-services/xmla/xml-elements-properties/xml-elements-properties.md)  
+## <a name="see-also"></a>Vea también
+ [Propiedades &#40;XMLA&#41;](../../../analysis-services/xmla/xml-elements-properties/xml-elements-properties.md)  
   
   

@@ -9,11 +9,12 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: fde6410ac0f6932fe11e5486342e1d836dcc8000
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.openlocfilehash: 0d528567e22c3ba19b49eefff10d886703a0d29a
+ms.sourcegitcommit: 808d23a654ef03ea16db1aa23edab496b73e5072
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/10/2018
+ms.lasthandoff: 06/02/2018
+ms.locfileid: "34576497"
 ---
 # <a name="readwritemode-element"></a>Elemento ReadWriteMode
 [!INCLUDE[ssas-appliesto-sqlas-aas](../../../includes/ssas-appliesto-sqlas-aas.md)]
@@ -43,19 +44,19 @@ ms.lasthandoff: 05/10/2018
 |Relación|Elemento|  
 |------------------|-------------|  
 |Elementos primarios|[Base de datos](../../../analysis-services/xmla/xml-elements-properties/database-element-xmla.md)|  
-|Elementos secundarios|Ninguno|  
+|Elementos secundarios|None|  
   
-## <a name="remarks"></a>Comentarios  
+## <a name="remarks"></a>Notas  
  Las bases de datos se crean únicamente en el modo **ReadWrite** . Las bases de datos no se pueden crear en el modo **ReadOnly** .  
   
  El valor del elemento **ReadWriteMode** se limita a las cadenas listadas en la tabla siguiente.  
   
-|Value|Description|  
+|Valor|Descripción|  
 |-----------|-----------------|  
 |*Solo lectura*|No se pueden aplicar cambios o actualizaciones a la base de datos.|  
 |*Lectura y escritura*|Se pueden aplicar cambios o actualizaciones a la base de datos.|  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Vea también
  [Elemento Attach](../../../analysis-services/xmla/xml-elements-commands/attach-element.md)   
  [Adjuntar y separar bases de datos de Analysis Services](../../../analysis-services/multidimensional-models/attach-and-detach-analysis-services-databases.md)   
  [Mover una base de datos de Analysis Services](../../../analysis-services/multidimensional-models/move-an-analysis-services-database.md)   

@@ -1,31 +1,20 @@
 ---
 title: AllMembers (MDX) | Documentos de Microsoft
-ms.custom: ''
-ms.date: 03/02/2016
-ms.prod: analysis-services
-ms.prod_service: analysis-services
-ms.component: ''
-ms.reviewer: ''
-ms.suite: pro-bi
-ms.technology: ''
-ms.tgt_pltfrm: ''
-ms.topic: language-reference
-f1_keywords:
-- ALLMEMBERS
-dev_langs:
-- kbMDX
-helpviewer_keywords:
-- AllMembers function
-ms.assetid: 202e81d4-d2ee-4ec1-a019-4835eb19f446
-caps.latest.revision: 44
-author: Minewiskan
+ms.date: 05/30/2018
+ms.prod: sql
+ms.technology: analysis-services
+ms.custom: mdx
+ms.topic: reference
 ms.author: owend
-manager: erikre
-ms.openlocfilehash: 8bd432037435ed2659587e0aeefdb939f0911989
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.reviewer: owend
+author: minewiskan
+manager: kfile
+ms.openlocfilehash: a5720c3e82fdb341635c23d13a9c6bf4346a1cc0
+ms.sourcegitcommit: 808d23a654ef03ea16db1aa23edab496b73e5072
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/02/2018
+ms.locfileid: "34577177"
 ---
 # <a name="allmembers-mdx"></a>AllMembers (MDX)
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
@@ -50,7 +39,7 @@ Level_Expression.AllMembers
  *Level_Expression*  
  Expresión MDX válida que devuelve un nivel.  
   
-## <a name="remarks"></a>Comentarios  
+## <a name="remarks"></a>Notas  
  El **AllMembers** función devuelve un conjunto que contiene todos los miembros, incluidos los miembros calculados, en el nivel o jerarquía especificada. El **AllMembers** función devuelve los miembros calculados incluso si la jerarquía o nivel especificados no contiene miembros visibles.  
   
 > [!IMPORTANT]  
@@ -81,8 +70,8 @@ FROM
 ```  
   
 ## <a name="see-also"></a>Vea también  
- [AddCalculatedMembers & #40; MDX & #41;](../mdx/addcalculatedmembers-mdx.md)   
+ [AddCalculatedMembers &#40;MDX&#41;](../mdx/addcalculatedmembers-mdx.md)   
  [Elementos secundarios &#40;MDX&#41;](../mdx/children-mdx.md)   
- [Referencia de funciones MDX & #40; MDX & #41;](../mdx/mdx-function-reference-mdx.md)  
+ [Referencia de funciones MDX &#40;MDX&#41;](../mdx/mdx-function-reference-mdx.md)  
   
   

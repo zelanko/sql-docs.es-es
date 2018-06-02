@@ -12,11 +12,12 @@ ms.suite: sql
 ms.custom: sql-linux
 ms.technology: linux
 ms.assetid: tbd
-ms.openlocfilehash: b09362bd4c274e975f116b8e143b6a7b5a01f97d
-ms.sourcegitcommit: ee661730fb695774b9c483c3dd0a6c314e17ddf8
+ms.openlocfilehash: f9ce71d799414171019143912bde19330742ec27
+ms.sourcegitcommit: 808d23a654ef03ea16db1aa23edab496b73e5072
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/19/2018
+ms.lasthandoff: 06/02/2018
+ms.locfileid: "34585197"
 ---
 # <a name="db-mail-and-email-alerts-with-sql-agent-on-linux"></a>Correo electrónico de base de datos y las alertas de correo electrónico con el Agente SQL en Linux
 
@@ -98,7 +99,7 @@ Puede usar la utilidad mssql-conf o variables de entorno para registrar su perfi
 
 ```bash
 # via mssql-conf
-sudo /opt/mssq/bin/mssql-conf set sqlagent.databasemailprofile default
+sudo /opt/mssql/bin/mssql-conf set sqlagent.databasemailprofile default
 # via environment variable
 MSSQL_AGENT_EMAIL_PROFILE=default
 ```

@@ -9,11 +9,12 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: 07e34958589bd9366cda6b42207c289bfda72453
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.openlocfilehash: 2b2c5b195e2bc95d95a555557accd481aa9836f7
+ms.sourcegitcommit: 808d23a654ef03ea16db1aa23edab496b73e5072
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/10/2018
+ms.lasthandoff: 06/02/2018
+ms.locfileid: "34574767"
 ---
 # <a name="crossproduct-element-xmla"></a>Elemento CrossProduct (XMLA)
 [!INCLUDE[ssas-appliesto-sqlas-aas](../../../includes/ssas-appliesto-sqlas-aas.md)]
@@ -36,24 +37,24 @@ ms.lasthandoff: 05/10/2018
   
 |Característica|Descripción|  
 |--------------------|-----------------|  
-|Tipo y longitud de los datos|Ninguno|  
-|Valor predeterminado|Ninguno|  
+|Tipo y longitud de los datos|None|  
+|Valor predeterminado|None|  
 |Cardinalidad|0-n: elemento opcional que puede aparecer más de una vez.|  
   
 ## <a name="element-relationships"></a>Relaciones del elemento  
   
 |Relación|Elemento|  
 |------------------|-------------|  
-|Elementos primarios|[Eje](../../../analysis-services/xmla/xml-elements-properties/axis-element-xmla.md)|  
+|Elementos primarios|[Axis](../../../analysis-services/xmla/xml-elements-properties/axis-element-xmla.md)|  
 |Elementos secundarios|[Miembros](../../../analysis-services/xmla/xml-elements-properties/members-element-xmla.md)|  
   
 ## <a name="attributes"></a>Atributos  
   
-|Atributo|Description|  
+|Attribute|Descripción|  
 |---------------|-----------------|  
 |Tamaño|Requiere **entero** atributo. Indica el número de tuplas contenidas en el producto cruzado representado por la **CrossProduct** elemento.|  
   
-## <a name="remarks"></a>Comentarios  
+## <a name="remarks"></a>Notas  
  Cuando una aplicación cliente establece el **AxisFormat** propiedad *ClusterFormat*, los miembros en cada eje se dividen en clústeres en el que cada uno representa un producto cruzado entre los conjuntos ordenados de miembros de cada jerarquía. Cada clúster se representa mediante un **CrossProduct** elemento. Cada **CrossProduct** elemento contiene un **miembros** (elemento) para cada jerarquía del eje. A **CrossProduct** elemento puede contener miembros de una sola jerarquía.  
   
 ## <a name="example"></a>Ejemplo  
@@ -109,7 +110,7 @@ ms.lasthandoff: 05/10/2018
 </Axes>  
 ```  
   
-## <a name="see-also"></a>Vea también  
- [Propiedades & #40; XMLA & #41;](../../../analysis-services/xmla/xml-elements-properties/xml-elements-properties.md)  
+## <a name="see-also"></a>Vea también
+ [Propiedades &#40;XMLA&#41;](../../../analysis-services/xmla/xml-elements-properties/xml-elements-properties.md)  
   
   

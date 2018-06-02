@@ -7,11 +7,12 @@ ms.topic: tutorial
 author: HeidiSteen
 ms.author: heidist
 manager: cgronlun
-ms.openlocfilehash: af8c03d33fe0e0b42fe09fbe1b900166d50e25cd
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
+ms.openlocfilehash: ccdccaf4a3624bef365cec85e452a88526b9fd6b
+ms.sourcegitcommit: 808d23a654ef03ea16db1aa23edab496b73e5072
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 06/02/2018
+ms.locfileid: "34585937"
 ---
 # <a name="prepare-the-data-using-powershell-walkthrough"></a>Preparar los datos de uso de PowerShell (tutorial)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
@@ -83,7 +84,7 @@ El script de R que descargó incluye los comandos para descargar e instalar esto
 
 ### <a name="install-required-packages-on-the-server"></a>Instalar los paquetes necesarios en el servidor
 
-Hay muchas maneras diferentes que puede instalar paquetes en SQL Server. Por ejemplo, SQL Server proporciona un [administración del paquete](../r/installing-and-managing-r-packages.md) característica que permite a los administradores de base de datos crea un repositorio de paquetes y asigna los derechos para instalar sus propios paquetes de usuario. Sin embargo, si es administrador en el equipo, puede instalar nuevos paquetes con R, siempre y cuando se instala en la biblioteca correcta.
+Hay muchas maneras diferentes que puede instalar paquetes en SQL Server. Por ejemplo, SQL Server proporciona [administración de paquetes de R](../r/install-additional-r-packages-on-sql-server.md) característica que permite a los administradores de base de datos crea un repositorio de paquetes y asigna los derechos para instalar sus propios paquetes de usuario. Sin embargo, si es administrador en el equipo, puede instalar nuevos paquetes con R, siempre y cuando se instala en la biblioteca correcta.
 
 > [!NOTE]
 > En el servidor, **no** instalar en una biblioteca de usuario incluso si se le solicita. Si instala en una biblioteca de usuario, la instancia de SQL Server no se puede encontrar o ejecutar los paquetes. Para más información, consulte [Installing New R Packages on SQL Server](../r/install-additional-r-packages-on-sql-server.md)(Instalación de paquetes nuevos de R en SQL Server).
@@ -162,7 +163,7 @@ Plug in the database server name, database name, user name and password into the
 This step (plugging in database information) takes 0.48 seconds.
 ```
 
-Haga clic en este vínculo para saltar a la siguiente lección: [ver y explorar los datos mediante SQL](/walkthrough-view-and-explore-the-data.md)
+Haga clic en este vínculo para saltar a la siguiente lección: [ver y explorar los datos mediante SQL](walkthrough-view-and-explore-the-data.md)
 
 ## <a name="bkmk_Troubleshooting"></a>Solucionar problemas
 
@@ -280,7 +281,7 @@ Los datos son una muestra representativa del conjunto de datos de taxis de Nueva
 
 El script de PowerShell ejecuta varias [!INCLUDE[tsql](../../includes/tsql-md.md)] secuencias de comandos en la instancia de SQL Server. La siguiente tabla se recogen los [!INCLUDE[tsql](../../includes/tsql-md.md)] secuencias de comandos y lo que hacen.
 
-|Nombre de archivo del script de SQL|Description|
+|Nombre de archivo del script de SQL|Descripción|
 |------------------------|----------------|
 |create-db-tb-upload-data.sql|Crea la base de datos y dos tablas:<br /><br /> *nyctaxi_sample*: la tabla que almacena los datos de entrenamiento, la muestra de un 1 % del conjunto de datos NYC Taxi. Un índice de almacén de columnas agrupado se agrega a la tabla para mejorar el rendimiento de almacenamiento y de consulta.<br /><br /> *nyc_taxi_models*: una tabla que se utiliza para almacenar modelos entrenados en formato binario.|
 |PredictTipBatchMode.sql|Crea un procedimiento almacenado que llama a un modelo entrenado para predecir las etiquetas para las nuevas observaciones. Acepta una consulta como su parámetro de entrada.|
@@ -296,10 +297,10 @@ Las consultas de T-SQL que se utilizan en este tutorial se han comprobado y se p
 
 ## <a name="next-lesson"></a>Lección siguiente
 
-[Ver y explorar los datos mediante R y SQL](/walkthrough-view-and-explore-the-data.md)
+[Ver y explorar los datos mediante R y SQL](walkthrough-view-and-explore-the-data.md)
 
 ## <a name="previous-lesson"></a>Lección anterior
 
-[Tutorial de ciencia de datos to-end para R y SQL Server](/walkthrough-data-science-end-to-end-walkthrough.md)
+[Tutorial de ciencia de datos to-end para R y SQL Server](walkthrough-data-science-end-to-end-walkthrough.md)
 
 [Requisitos previos del tutorial de ciencia de datos](walkthrough-prerequisites-for-data-science-walkthroughs.md)

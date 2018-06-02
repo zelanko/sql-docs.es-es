@@ -1,32 +1,20 @@
 ---
 title: Instrucciones de definición de datos MDX (MDX) | Documentos de Microsoft
-ms.custom: ''
-ms.date: 03/02/2016
-ms.prod: analysis-services
-ms.prod_service: analysis-services
-ms.component: ''
-ms.reviewer: ''
-ms.suite: pro-bi
-ms.technology: ''
-ms.tgt_pltfrm: ''
-ms.topic: language-reference
-dev_langs:
-- kbMDX
-helpviewer_keywords:
-- MDX [Analysis Services], data manipulation
-- data manipulation [MDX]
-- data definition statements [MDX]
-- Multidimensional Expressions [Analysis Services], data manipulation
-ms.assetid: 1f975d7f-8875-43b6-a571-9d5cd7c70217
-caps.latest.revision: 33
-author: Minewiskan
+ms.date: 05/30/2018
+ms.prod: sql
+ms.technology: analysis-services
+ms.custom: mdx
+ms.topic: reference
 ms.author: owend
-manager: erikre
-ms.openlocfilehash: 84a173a4e3496d61f8f1b1fc837908d2706af5b4
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.reviewer: owend
+author: minewiskan
+manager: kfile
+ms.openlocfilehash: abd819871af876d15354af4258c3cd76e0e52197
+ms.sourcegitcommit: 808d23a654ef03ea16db1aa23edab496b73e5072
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/02/2018
+ms.locfileid: "34579677"
 ---
 # <a name="mdx-data-definition-statements-mdx"></a>Instrucciones de definición de datos de MDX (MDX)
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
@@ -35,15 +23,15 @@ ms.lasthandoff: 05/03/2018
   
 ## <a name="in-this-section"></a>En esta sección  
   
-|Tema|Description|  
+|Tema|Descripción|  
 |-----------|-----------------|  
-|[Instrucción ALTER CUBE & #40; MDX & #41;](../mdx/mdx-data-definition-alter-cube.md)|Altera la estructura de un cubo especificado.|  
+|[Instrucción ALTER CUBE &#40;MDX&#41;](../mdx/mdx-data-definition-alter-cube.md)|Altera la estructura de un cubo especificado.|  
 |[Instrucción CREATE ACTION &#40;MDX&#41;](../mdx/mdx-data-definition-create-action.md)|Crea una acción que puede asociarse con un objeto subordinado, cubo, dimensión, o jerarquía.|  
-|[CREATE CELL CALCULATION instrucción & #40; MDX & #41;](../mdx/mdx-data-definition-create-cell-calculation.md)|Crea un cálculo que evalúa una expresión multidimensional (MDX) para un conjunto especificado de tuplas en un cubo.|  
+|[Instrucción CREATE CELL CALCULATION &#40;MDX&#41;](../mdx/mdx-data-definition-create-cell-calculation.md)|Crea un cálculo que evalúa una expresión multidimensional (MDX) para un conjunto especificado de tuplas en un cubo.|  
 |[Instrucción CREATE GLOBAL CUBE &#40;MDX&#41;](../mdx/mdx-data-definition-create-global-cube.md)|Crea y rellena un cubo guardado de forma local basado en un subcubo de un cubo del servidor. No es necesaria una conexión al servidor para conectarse al cubo almacenado de forma local.|  
-|[CREATE MEMBER, instrucción & #40; MDX & #41;](../mdx/mdx-data-definition-create-member.md)|Crea un miembro calculado.|  
+|[Instrucción CREATE MEMBER &#40;MDX&#41;](../mdx/mdx-data-definition-create-member.md)|Crea un miembro calculado.|  
 |[Instrucción CREATE SESSION CUBE &#40;MDX&#41;](../mdx/mdx-data-definition-create-session-cube.md)|Crea y rellena un cubo disponible para todas las consultas de la misma sesión basado en cubos del servidor.|  
-|[CREAR la instrucción SET & #40; MDX & #41;](../mdx/mdx-data-definition-create-set.md)|Crea un conjunto con nombre para un cubo específico.|  
+|[Instrucción CREATE SET &#40;MDX&#41;](../mdx/mdx-data-definition-create-set.md)|Crea un conjunto con nombre para un cubo específico.|  
 |[Instrucción CREATE SUBCUBE &#40;MDX&#41;](../mdx/mdx-data-definition-create-subcube.md)|Redefine el espacio del cubo de un cubo o subcubo especificado a un subcubo especificado.|  
 |[Instrucción de acción DROP &#40;MDX&#41;](../mdx/mdx-data-definition-drop-action.md)|Elimina una acción específica de un cubo especificado.|  
 |[DROP CELL CALCULATION instrucción &#40;MDX&#41;](../mdx/mdx-data-definition-drop-cell-calculation.md)|Quita el cálculo de celda especificado.|  
@@ -55,6 +43,6 @@ ms.lasthandoff: 05/03/2018
 ## <a name="see-also"></a>Vea también  
  [Referencia de instrucciones MDX &#40;MDX&#41;](../mdx/mdx-statement-reference-mdx.md)   
  [Instrucciones de manipulación de datos MDX &#40;MDX&#41;](../mdx/mdx-data-manipulation-statements-mdx.md)   
- [Instrucciones de Scripting de MDX & #40; MDX & #41;](../mdx/mdx-scripting-statements-mdx.md)  
+ [Instrucciones de Scripting MDX &#40;MDX&#41;](../mdx/mdx-scripting-statements-mdx.md)  
   
   

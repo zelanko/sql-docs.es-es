@@ -1,32 +1,20 @@
 ---
 title: + (Unión) (MDX) | Documentos de Microsoft
-ms.custom: ''
-ms.date: 03/02/2016
-ms.prod: analysis-services
-ms.prod_service: analysis-services
-ms.component: ''
-ms.reviewer: ''
-ms.suite: pro-bi
-ms.technology: ''
-ms.tgt_pltfrm: ''
-ms.topic: language-reference
-f1_keywords:
-- +
-dev_langs:
-- kbMDX
-helpviewer_keywords:
-- union operator (+)
-- + (union operator)
-ms.assetid: 6c6dfca2-7413-452a-98a2-3d8c58a8a3e6
-caps.latest.revision: 43
-author: Minewiskan
+ms.date: 05/30/2018
+ms.prod: sql
+ms.technology: analysis-services
+ms.custom: mdx
+ms.topic: reference
 ms.author: owend
-manager: erikre
-ms.openlocfilehash: e0bfeee09033647386c3a835d6971e513253ec4f
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.reviewer: owend
+author: minewiskan
+manager: kfile
+ms.openlocfilehash: bebcf04c248251e2272d4135c129c519f48f7405
+ms.sourcegitcommit: 808d23a654ef03ea16db1aa23edab496b73e5072
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/02/2018
+ms.locfileid: "34582447"
 ---
 # <a name="union---mdx-operator-reference"></a>Unión - referencia de operadores MDX
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
@@ -47,7 +35,7 @@ Set_Expression + Set_Expression
 ## <a name="return-value"></a>Valor devuelto  
  Un conjunto que contiene los miembros de ambos conjuntos especificados.  
   
-## <a name="remarks"></a>Comentarios  
+## <a name="remarks"></a>Notas  
  El **+ (unión)** operador es funcionalmente equivalente a la [unión &#40;MDX&#41; ](../mdx/union-mdx.md) (función).  
   
 ## <a name="examples"></a>Ejemplos  

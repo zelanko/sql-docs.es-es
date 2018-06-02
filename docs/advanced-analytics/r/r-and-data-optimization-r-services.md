@@ -7,11 +7,12 @@ ms.topic: conceptual
 author: HeidiSteen
 ms.author: heidist
 manager: cgronlun
-ms.openlocfilehash: 98605a5eb5291444e0bd46d64bd3b84ab7c1b008
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
+ms.openlocfilehash: 5a30ff30651bacde42c60a1e0b265105e3c932e3
+ms.sourcegitcommit: 808d23a654ef03ea16db1aa23edab496b73e5072
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 06/02/2018
+ms.locfileid: "34563763"
 ---
 # <a name="performance-for-r-services---data-optimization"></a>Rendimiento de R Services: optimización de datos
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
@@ -30,7 +31,7 @@ Cuando se trabaja con grandes conjuntos de datos, se debe usar siempre el contex
 
 ## <a name="factors"></a>Factores
 
-El lenguaje R tiene el concepto de "factores", que son variables especiales para datos de categorías. Los científicos de datos a menudo usar variables de factor en su fórmula, porque las variables de categorías que los factores de control garantiza que los datos se procesa correctamente las funciones de aprendizaje de máquina. Para obtener más información, consulte [R guía básica sobre: Factor Variables] (http://www.dummies.com/programming/r/how-to-look-at-the-structure-of-a-factor-in-r/).
+El lenguaje R tiene el concepto de "factores", que son variables especiales para datos de categorías. Los científicos de datos a menudo usar variables de factor en su fórmula, porque las variables de categorías que los factores de control garantiza que los datos se procesa correctamente las funciones de aprendizaje de máquina. Para obtener más información, consulte [R guía básica sobre: Factor Variables](http://www.dummies.com/programming/r/how-to-look-at-the-structure-of-a-factor-in-r/).
 
 De forma predeterminada, se pueden convertir las variables de factor de cadenas en enteros y viceversa nuevo para el almacenamiento o procesamiento. El objeto R `data.frame` función controla todas las cadenas como variables de fases, a menos que el argumento *stringsAsFactors* está establecido en **False**. Esto significa que las cadenas son automáticamente es convertirse a un entero para el procesamiento y, a continuación, se asignan a la cadena original.
 

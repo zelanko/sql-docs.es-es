@@ -7,11 +7,12 @@ ms.topic: tutorial
 author: HeidiSteen
 ms.author: heidist
 manager: cgronlun
-ms.openlocfilehash: 23ff23c009a002f13a58340af8fc7f85ec1720b3
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
+ms.openlocfilehash: 4d4b573bc2aa0cc48e7c158edafa0dd604e6fc87
+ms.sourcegitcommit: 808d23a654ef03ea16db1aa23edab496b73e5072
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 06/02/2018
+ms.locfileid: "34585477"
 ---
 # <a name="create-graphs-and-plots-using-sql-and-r-walkthrough"></a>Crear gráficos y los gráficos con SQL y R (tutorial)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
@@ -97,8 +98,8 @@ Normalmente, los servidores de base de datos bloquean el acceso a Internet. Esto
 
 ## <a name="next-lesson"></a>Lección siguiente
 
-[Crear características de datos mediante R y SQL](/walkthrough-create-data-features.md)
+[Crear características de datos mediante R y SQL](walkthrough-create-data-features.md)
 
 ## <a name="previous-lesson"></a>Lección anterior
 
-[Resumir datos mediante R](/walkthrough-view-and-summarize-data-using-r.md)
+[Resumir datos mediante R](walkthrough-view-and-summarize-data-using-r.md)

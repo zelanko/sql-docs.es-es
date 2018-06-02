@@ -1,31 +1,20 @@
 ---
 title: Descendientes (MDX) | Documentos de Microsoft
-ms.custom: ''
-ms.date: 03/02/2016
-ms.prod: analysis-services
-ms.prod_service: analysis-services
-ms.component: ''
-ms.reviewer: ''
-ms.suite: pro-bi
-ms.technology: ''
-ms.tgt_pltfrm: ''
-ms.topic: language-reference
-f1_keywords:
-- DESCENDANTS
-dev_langs:
-- kbMDX
-helpviewer_keywords:
-- Descendants function
-ms.assetid: d103b0f5-e794-4828-aa57-43f6918a0749
-caps.latest.revision: 38
-author: Minewiskan
+ms.date: 05/30/2018
+ms.prod: sql
+ms.technology: analysis-services
+ms.custom: mdx
+ms.topic: reference
 ms.author: owend
-manager: erikre
-ms.openlocfilehash: f5f38c620972906ec17820ffa1bb4a7c865dba16
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.reviewer: owend
+author: minewiskan
+manager: kfile
+ms.openlocfilehash: 047c9e0edc8120003cdd8a38953e33e779ab0994
+ms.sourcegitcommit: 808d23a654ef03ea16db1aa23edab496b73e5072
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/02/2018
+ms.locfileid: "34580417"
 ---
 # <a name="descendants-mdx"></a>Descendants (MDX)
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
@@ -66,7 +55,7 @@ Descendants(Set_Expression [ , Distance [ ,Desc_Flag ] ] )
  *Desc_Flag*  
  Expresión de cadena válida que especifica una marca de descripción que distingue entre posibles conjuntos de descendientes.  
   
-## <a name="remarks"></a>Comentarios  
+## <a name="remarks"></a>Notas  
  Si se especifica un nivel, el **descendientes** función devuelve un conjunto que contiene los descendientes del miembro especificado o los miembros del conjunto especificado, en un nivel especificado, modificado opcionalmente mediante una marca especificada en *Desc_Flag*.  
   
  Si *distancia* se especifica, el **descendientes** función devuelve un conjunto que contiene los descendientes del miembro especificado o los miembros del conjunto especificado que son el número especificado de niveles fuera de la jerarquía del miembro especificado, modificado opcionalmente mediante una marca especificada en *Desc_Flag*. Esta función se suele utilizar con el argumento Distance para tratar con jerarquías desiguales. Si la distancia especificada es cero (0), la función devuelve un conjunto que consta solamente del miembro especificado o el conjunto especificado.  
@@ -103,7 +92,7 @@ Descendants(Set_Expression [ , Distance [ ,Desc_Flag ] ] )
   
  Mediante la modificación del valor de la marca de descripción, puede incluir o excluir descendientes en el nivel o distancia especificados, el elemento secundario anterior o posterior al nivel o distancia especificados (hasta el nodo hoja), así como los elementos secundarios hoja, independientemente del nivel o distancia especificados. La tabla siguiente describe las marcas permitidas en el *Desc_Flag* argumento.  
   
-|Marca|Description|  
+|Marca|Descripción|  
 |----------|-----------------|  
 |SELF|Devuelve solo los miembros descendientes desde el nivel especificado o a la distancia especificada. La función incluye el miembro especificado si el nivel especificado es el del miembro especificado.|  
 |AFTER|Devuelve los miembros descendientes de todos los niveles subordinados al nivel o distancia especificados.|  
@@ -174,6 +163,6 @@ FROM [Adventure Works]
 ```  
   
 ## <a name="see-also"></a>Vea también  
- [Referencia de funciones MDX & #40; MDX & #41;](../mdx/mdx-function-reference-mdx.md)  
+ [Referencia de funciones MDX &#40;MDX&#41;](../mdx/mdx-function-reference-mdx.md)  
   
   

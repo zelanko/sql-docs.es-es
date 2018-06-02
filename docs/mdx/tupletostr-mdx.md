@@ -1,31 +1,20 @@
 ---
 title: TupleToStr (MDX) | Documentos de Microsoft
-ms.custom: ''
-ms.date: 03/02/2016
-ms.prod: analysis-services
-ms.prod_service: analysis-services
-ms.component: ''
-ms.reviewer: ''
-ms.suite: pro-bi
-ms.technology: ''
-ms.tgt_pltfrm: ''
-ms.topic: language-reference
-f1_keywords:
-- TUPLETOSTR
-dev_langs:
-- kbMDX
-helpviewer_keywords:
-- TupletoStr function
-ms.assetid: ad12347c-d1c4-4d8b-a910-3116bd6b68e0
-caps.latest.revision: 32
-author: Minewiskan
+ms.date: 05/30/2018
+ms.prod: sql
+ms.technology: analysis-services
+ms.custom: mdx
+ms.topic: reference
 ms.author: owend
-manager: erikre
-ms.openlocfilehash: 6a49e2ffcaca8ae68b2c88f0877bab867746f1da
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.reviewer: owend
+author: minewiskan
+manager: kfile
+ms.openlocfilehash: 7fb89e3529117ce83f37b83b15c3e32f9c085088
+ms.sourcegitcommit: 808d23a654ef03ea16db1aa23edab496b73e5072
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/02/2018
+ms.locfileid: "34581347"
 ---
 # <a name="tupletostr-mdx"></a>TupleToStr (MDX)
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
@@ -43,7 +32,7 @@ TupleToStr(Tuple_Expression)
  *Tuple_Expression*  
  Expresión MDX válida que devuelve una tupla.  
   
-## <a name="remarks"></a>Comentarios  
+## <a name="remarks"></a>Notas  
  Esta función se utiliza para transferir una representación de cadena de una tupla a una función externa para su análisis. La cadena devuelta aparece encerrada entre llaves {} y cada miembro, si más de uno expresamente definido en la tupla, está separado por una coma.  
   
 ## <a name="examples"></a>Ejemplos  
@@ -75,6 +64,6 @@ FROM [Adventure Works]
 ```  
   
 ## <a name="see-also"></a>Vea también  
- [Referencia de funciones MDX & #40; MDX & #41;](../mdx/mdx-function-reference-mdx.md)  
+ [Referencia de funciones MDX &#40;MDX&#41;](../mdx/mdx-function-reference-mdx.md)  
   
   

@@ -13,11 +13,12 @@ ms.topic: tutorial
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: df4eca076f18ce5b75a36d05c8ee26965d6a3bae
-ms.sourcegitcommit: b3bb41424249de198f22d9c6d40df4996f083aa6
+ms.openlocfilehash: 22a453caa9d29432381da6861a0f0c4e3e61d77e
+ms.sourcegitcommit: 808d23a654ef03ea16db1aa23edab496b73e5072
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/18/2018
+ms.lasthandoff: 06/02/2018
+ms.locfileid: "34582457"
 ---
 # <a name="backup-and-restore-using-includename-sosincludesname-sos-shortmd"></a>Copia de seguridad y restauración con [!INCLUDE[name-sos](../includes/name-sos-short.md)]
 
@@ -76,7 +77,7 @@ Después de hacer clic **copia de seguridad**, **base de datos de copia de segur
 
 4. Haga clic en **restaurar**
 
-5. Para ver el estado de la operación de restauración, haga clic en **CTRL+T** para abrir el **historial de tareas** sidebar.
+5. Para ver el estado de la operación de restauración, presione **CTRL+T** para abrir el **historial de tareas** sidebar.
 
    ![restaurar](./media/tutorial-backup-restore-sql-server/task-history-restore.png)
 

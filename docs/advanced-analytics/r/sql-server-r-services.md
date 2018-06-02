@@ -7,11 +7,12 @@ ms.topic: conceptual
 author: HeidiSteen
 ms.author: heidist
 manager: cgronlun
-ms.openlocfilehash: 24ef28cd5bfb8e09e3f0ac7dbfe46b5838ce029c
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
+ms.openlocfilehash: 559309a29944f20f8c006ccc92769f0b2824e3b3
+ms.sourcegitcommit: 808d23a654ef03ea16db1aa23edab496b73e5072
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 06/02/2018
+ms.locfileid: "34585967"
 ---
 # <a name="sql-server-machine-learning-and-r-services-in-database"></a>SQL Server del equipo aprendizaje y R Services (en bases de datos)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
@@ -34,7 +35,7 @@ Tanto en bases de datos y servidores independientes pueden aliviar las restricci
 
 SQL Server 2016 solo es R. SQL Server 2017 admite R y Python. La tabla siguiente describen las características de cada versión. Salvo el servicio Launchpad de SQL Server, esta tabla es idéntica al proporcionado en el [artículo de servidor independiente](r-server-standalone.md).
 
-| Componente | Description |
+| Componente | Descripción |
 |-----------|-------------|
 | Servicio SQL Server Launchpad | Un servicio que administra las comunicaciones entre los tiempos de ejecución de R y Python externos y el [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] instancia. |
 | Paquetes de R | [RevoScaleR](revoscaler-overview.md) es la biblioteca principal para R escalable con funciones de manipulación de datos, transformación, visualzation y análisis.  <br/>[MicrosoftML (R)](https://docs.microsoft.com/machine-learning-server/r-reference/microsoftml/microsoftml-package) agrega algoritmos de aprendizaje automático para crear modelos personalizados para el análisis de texto, análisis de imágenes y análisis de opiniones. <br/>[mrsdeploy](operationalization-with-mrsdeploy.md) web de ofertas de implementación de servicio (en SQL Server 2017). <br/>[olapR](how-to-create-mdx-queries-using-olapr.md) es para especificar las consultas MDX en R.|
@@ -124,7 +125,7 @@ Para aprovechar las ventajas de las características de seguridad y administraci
 **Recursos**
 
 + [Regulador de recursos para R](resource-governance-for-r-services.md)
-+ [Administración de paquetes de R para SQL Server](r-package-management-for-sql-server-r-services.md)
++ [Administración de paquetes de R para SQL Server](install-additional-r-packages-on-sql-server.md)
 
 ## <a name="see-also"></a>Vea también
 

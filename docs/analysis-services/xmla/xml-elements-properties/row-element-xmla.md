@@ -9,15 +9,16 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: 78539bfa16bfca56cbac10a4d1d9a793f685a333
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.openlocfilehash: 84cf252303832ed157981103ffaede9718949e16
+ms.sourcegitcommit: 808d23a654ef03ea16db1aa23edab496b73e5072
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/10/2018
+ms.lasthandoff: 06/02/2018
+ms.locfileid: "34576217"
 ---
 # <a name="row-element-xmla"></a>Elemento row (XMLA)
 [!INCLUDE[ssas-appliesto-sqlas-aas](../../../includes/ssas-appliesto-sqlas-aas.md)]
-  Contiene una fila única de datos para un elemento [root](../../../analysis-services/xmla/xml-elements-properties/root-element-xmla.md) que contiene datos tabulares devueltos por una llamada al método [Discover](../../../analysis-services/xmla/xml-elements-methods-discover.md) o [Execute](../../../analysis-services/xmla/xml-elements-methods-execute.md) .  
+  Contiene una sola fila de datos para un [raíz](../../../analysis-services/xmla/xml-elements-properties/root-element-xmla.md) elemento que contiene datos tabulares devueltos por un [Discover](../../../analysis-services/xmla/xml-elements-methods-discover.md) o [Execute](../../../analysis-services/xmla/xml-elements-methods-execute.md) llamada al método.  
   
 ## <a name="syntax"></a>Sintaxis  
   
@@ -34,18 +35,18 @@ ms.lasthandoff: 05/10/2018
   
 |Característica|Descripción|  
 |--------------------|-----------------|  
-|Tipo y longitud de los datos|Ninguno|  
-|Valor predeterminado|Ninguno|  
+|Tipo y longitud de los datos|None|  
+|Valor predeterminado|None|  
 |Cardinalidad|0-n: elemento opcional que puede aparecer más de una vez.|  
   
 ## <a name="element-relationships"></a>Relaciones del elemento  
   
 |Relación|Elemento|  
 |------------------|-------------|  
-|Elementos primarios|[root](../../../analysis-services/xmla/xml-elements-properties/root-element-xmla.md) (con el tipo de datos [Rowset](../../../analysis-services/xmla/xml-data-types/rowset-data-type-xmla.md) )|  
+|Elementos primarios|[raíz](../../../analysis-services/xmla/xml-elements-properties/root-element-xmla.md) (mediante el [conjunto de filas](../../../analysis-services/xmla/xml-data-types/rowset-data-type-xmla.md) tipo de datos)|  
 |Elementos secundarios|Uno o más elementos de columna.|  
   
-## <a name="remarks"></a>Comentarios  
+## <a name="remarks"></a>Notas  
  Cada fila devuelta por un elemento **root** que contiene datos tabulares tiene un elemento **row** correspondiente. Cada columna del elemento **root** está representada por un elemento XML diferente. El valor de la columna del elemento **row** es el dato que contiene el elemento XML y el nombre de la columna corresponde al nombre del elemento XML.  
   
  Hay dos maneras de expresar un valor nulo para una columna dentro de una fila:  
@@ -81,9 +82,9 @@ ms.lasthandoff: 05/10/2018
 </row>  
 ```  
   
- Para obtener más información sobre la nomenclatura de columna e información de esquema para los datos tabulares, vea [tipo de conjunto de filas de datos & #40; XMLA & #41; ](../../../analysis-services/xmla/xml-data-types/rowset-data-type-xmla.md).  
+ Para obtener más información sobre la nomenclatura de columna e información de esquema para los datos tabulares, vea [tipo de datos del conjunto de filas &#40;XMLA&#41;](../../../analysis-services/xmla/xml-data-types/rowset-data-type-xmla.md).  
   
-## <a name="see-also"></a>Vea también  
- [Propiedades & #40; XMLA & #41;](../../../analysis-services/xmla/xml-elements-properties/xml-elements-properties.md)  
+## <a name="see-also"></a>Vea también
+ [Propiedades &#40;XMLA&#41;](../../../analysis-services/xmla/xml-elements-properties/xml-elements-properties.md)  
   
   

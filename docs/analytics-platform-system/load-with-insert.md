@@ -9,15 +9,16 @@ ms.topic: conceptual
 ms.date: 04/17/2018
 ms.author: murshedz
 ms.reviewer: martinle
-ms.openlocfilehash: a505a099e239049aab40c616c9e98e44e328537c
-ms.sourcegitcommit: 056ce753c2d6b85cd78be4fc6a29c2b4daaaf26c
+ms.openlocfilehash: b7a05e5381c2ad687c37926ad449cd6765403ceb
+ms.sourcegitcommit: 808d23a654ef03ea16db1aa23edab496b73e5072
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/19/2018
+ms.lasthandoff: 06/02/2018
+ms.locfileid: "34585787"
 ---
 # <a name="load-data-with-insert-into-parallel-data-warehouse"></a>Cargar datos con INSERT en almacenamiento de datos paralelos
 
-Puede usar la instrucción INSERT de tsql para cargar datos en un servidor SQL Server (PDW) de almacenamiento de datos paralelos distribuidas o tabla replicada. Para obtener más información acerca de la INSERCIÓN, vea [insertar](../t-sql/statements/insert-transact-sql.md). Para las tablas replicadas y todas las columnas de distribución no en una tabla distribuida, PDW usa SQL Server para convertir implícitamente los valores de datos especificados en la instrucción para el tipo de datos de la columna de destino. Para obtener más información acerca de las reglas de conversión de datos de SQL Server, vea [datos de conversión de tipos para SQL](http://msdn.microsoft.com/library/ms191530&#40;v=sql11&#40;.aspx). Sin embargo, para las columnas de distribución, PDW sólo admite un subconjunto de las conversiones implícitas que admite SQL Server. Por lo tanto, cuando utiliza la instrucción INSERT para cargar datos en una columna de distribución, los datos de origen deben especificarse en uno de los formatos definidos en las tablas siguientes.  
+Puede usar la instrucción INSERT de tsql para cargar datos en un servidor SQL Server (PDW) de almacenamiento de datos paralelos distribuidas o tabla replicada. Para obtener más información acerca de la INSERCIÓN, vea [insertar](../t-sql/statements/insert-transact-sql.md). Para las tablas replicadas y todas las columnas de distribución no en una tabla distribuida, PDW usa SQL Server para convertir implícitamente los valores de datos especificados en la instrucción para el tipo de datos de la columna de destino. Para obtener más información acerca de las reglas de conversión de datos de SQL Server, vea [datos de conversión de tipos para SQL](http://msdn.microsoft.com/library/ms191530\(v=sql11\).aspx). Sin embargo, para las columnas de distribución, PDW sólo admite un subconjunto de las conversiones implícitas que admite SQL Server. Por lo tanto, cuando utiliza la instrucción INSERT para cargar datos en una columna de distribución, los datos de origen deben especificarse en uno de los formatos definidos en las tablas siguientes.  
   
   
 ## <a name="InsertingLiteralsBinary"></a>Insertar literales en tipos binarios  

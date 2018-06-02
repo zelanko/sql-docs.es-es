@@ -7,11 +7,12 @@ ms.topic: overview
 author: HeidiSteen
 ms.author: heidist
 manager: cgronlun
-ms.openlocfilehash: d52196007b5a1de4753e9846e4057295113baa7b
-ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.openlocfilehash: ecd58ee9670724a2732ce8aabc5d9f2c62042995
+ms.sourcegitcommit: 808d23a654ef03ea16db1aa23edab496b73e5072
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/02/2018
+ms.locfileid: "34585457"
 ---
 # <a name="what-is-sql-server-machine-learning-services"></a>¿Qué es SQL Server Machine Learning Services?
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
@@ -31,7 +32,7 @@ Soporte para cada idioma es a través de la propiedad paquetes de Microsoft usad
 
 Como los paquetes propietarios se basan en distribuciones de código abierto R y Python, un script o código que se ejecutan en SQL Server también puede llamar a funciones de base y usar paquetes de terceros compatibles con la versión de idioma incluida en SQL Server (3.5 de Python y versiones recientes de R, 3.3.3 actualmente).
 
-| L  | Python | Description |
+| R  | Python | Descripción |
 |-----------|----------------|-------------|
 | [RevoScaleR](r/revoscaler-overview.md) | [revoscalepy](python/what-is-revoscalepy.md)   | Las funciones de estas bibliotecas se encuentran entre las más usadas. Transformaciones de datos y manipulación, resumen estadístico, visualización y muchos tipos de modelado y análisis se encuentran en estas bibliotecas. Además, las funciones de estas bibliotecas distribuyen automáticamente las cargas de trabajo a través de núcleos disponibles para el procesamiento en paralelo, con la posibilidad de trabajar con los fragmentos de datos que se coordina y administra el motor de cálculo. |
 | [MicrosoftML](using-the-microsoftml-package.md) | [microsoftml](https://docs.microsoft.com/machine-learning-server/python-reference/microsoftml/microsoftml-package) | Algoritmos de características de la imagen, problemas de clasificación y mucho más de aprendizaje automático de líderes en la industria. |
@@ -101,4 +102,4 @@ Las versiones recientes de documentación de SQL Server son independientes de la
 
 **Paso 3:** agregar los paquetes de R y Python favoritos y usarlas junto con los paquetes suministrados por Microsoft
 
-+ [Administración de paquetes de R para SQL Server](r/r-package-management-for-sql-server-r-services.md)
++ [Administración de paquetes de R para SQL Server](r/install-additional-r-packages-on-sql-server.md)

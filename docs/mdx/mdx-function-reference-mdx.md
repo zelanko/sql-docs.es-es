@@ -1,41 +1,20 @@
 ---
 title: Referencia de funciones MDX (MDX) | Documentos de Microsoft
-ms.custom: ''
-ms.date: 03/02/2016
-ms.prod: analysis-services
-ms.prod_service: analysis-services
-ms.component: ''
-ms.reviewer: ''
-ms.suite: pro-bi
-ms.technology: ''
-ms.tgt_pltfrm: ''
-ms.topic: language-reference
-dev_langs:
-- kbMDX
-helpviewer_keywords:
-- member functions [MDX]
-- level functions [MDX]
-- MDX [Analysis Services], functions
-- array functions
-- string functions
-- Multidimensional Expressions [Analysis Services], functions
-- hierarchy functions [MDX]
-- numeric functions [MDX]
-- tuple functions
-- subcube functions [MDX]
-- functions [MDX]
-- logical functions [MDX]
-- set functions [MDX]
-ms.assetid: e363722a-3e5b-40a9-a0b5-399dd2d93f6d
-caps.latest.revision: 36
-author: Minewiskan
+ms.date: 05/30/2018
+ms.prod: sql
+ms.technology: analysis-services
+ms.custom: mdx
+ms.topic: reference
 ms.author: owend
-manager: erikre
-ms.openlocfilehash: 8f0be993df9a930e175de9d33aaff92271cda329
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.reviewer: owend
+author: minewiskan
+manager: kfile
+ms.openlocfilehash: 7fd5b9ee4a70ac58ab44a056f0abfb1086d24b76
+ms.sourcegitcommit: 808d23a654ef03ea16db1aa23edab496b73e5072
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/02/2018
+ms.locfileid: "34580037"
 ---
 # <a name="mdx-function-reference-mdx"></a>Referencia de funciones MDX (MDX)
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
@@ -46,13 +25,13 @@ ms.lasthandoff: 05/03/2018
   
 ## <a name="array-functions"></a>Funciones de matriz  
   
-|Función|Description|  
+|Función|Descripción|  
 |--------------|-----------------|  
 |[SetToArray &#40;MDX&#41;](../mdx/settoarray-mdx.md)|Convierte uno o más conjuntos en una matriz, para usarla en funciones definidas por el usuario.|  
   
 ## <a name="hierarchy-functions"></a>Funciones de jerarquía  
   
-|Función|Description|  
+|Función|Descripción|  
 |--------------|-----------------|  
 |[Jerarquía &#40;MDX&#41;](../mdx/hierarchy-mdx.md)|Devuelve la jerarquía que contiene un miembro o nivel especificado.|  
 |[Dimensión &#40;MDX&#41;](../mdx/dimension-mdx.md)|Devuelve la dimensión que contiene un miembro, nivel o jerarquía especificado.|  
@@ -60,14 +39,14 @@ ms.lasthandoff: 05/03/2018
   
 ## <a name="level-functions"></a>Funciones de nivel  
   
-|Función|Description|  
+|Función|Descripción|  
 |--------------|-----------------|  
 |[Nivel &#40;MDX&#41;](../mdx/level-mdx.md)|Devuelve el nivel de un miembro.|  
 |[Niveles &#40;MDX&#41;](../mdx/levels-mdx.md)|Devuelve el nivel cuya posición en una dimensión o jerarquía se especifica mediante una expresión numérica, o cuyo nombre se especifica mediante una expresión de cadena.|  
   
 ## <a name="logical-functions"></a>Funciones lógicas  
   
-|Función|Description|  
+|Función|Descripción|  
 |--------------|-----------------|  
 |[IsAncestor &#40;MDX&#41;](../mdx/isancestor-mdx.md)|Informa de si un miembro especificado es un antecesor de otro miembro especificado.|  
 |[IsEmpty &#40;MDX&#41;](../mdx/isempty-mdx.md)|Informa de si la expresión evaluada es el valor de celda vacía.|  
@@ -77,7 +56,7 @@ ms.lasthandoff: 05/03/2018
   
 ## <a name="member-functions"></a>Funciones de miembro  
   
-|Función|Description|  
+|Función|Descripción|  
 |--------------|-----------------|  
 |[Antecesor &#40;MDX&#41;](../mdx/ancestor-mdx.md)|Devuelve el antecesor de un miembro en un nivel o distancia especificados.|  
 |[ClosingPeriod &#40;MDX&#41;](../mdx/closingperiod-mdx.md)|Devuelve el último elemento del mismo nivel entre los descendientes de un miembro en un nivel especificado.|  
@@ -105,7 +84,7 @@ ms.lasthandoff: 05/03/2018
   
 ## <a name="numeric-functions"></a>Funciones numéricas  
   
-|Función|Description|  
+|Función|Descripción|  
 |--------------|-----------------|  
 |[Agregado &#40;MDX&#41;](../mdx/aggregate-mdx.md)|Devuelve un valor escalar calculado al agregar medidas o bien una expresión numérica especificada de forma opcional sobre las tuplas de un conjunto especificado.|  
 |[AVG &#40;MDX&#41;](../mdx/avg-mdx.md)|Devuelve el valor medio de las medidas o el valor medio de una expresión numérica opcional, evaluado sobre un conjunto especificado.|  
@@ -148,7 +127,7 @@ ms.lasthandoff: 05/03/2018
   
 ## <a name="set-functions"></a>Funciones de conjunto  
   
-|Función|Description|  
+|Función|Descripción|  
 |--------------|-----------------|  
 |[AddCalculatedMembers &#40;MDX&#41;](../mdx/addcalculatedmembers-mdx.md)|Devuelve un conjunto generado al agregar miembros calculados a un conjunto especificado.|  
 |[AllMembers &#40;MDX&#41;](../mdx/allmembers-mdx.md)|Devuelve un conjunto que contiene todos los miembros de la dimensión, jerarquía o nivel especificados, incluyendo los miembros calculados.|  
@@ -204,7 +183,7 @@ ms.lasthandoff: 05/03/2018
   
 ## <a name="string-functions"></a>Funciones de cadena  
   
-|Función|Description|  
+|Función|Descripción|  
 |--------------|-----------------|  
 |[CalculationPassValue &#40;MDX&#41;](../mdx/calculationpassvalue-mdx.md)|Devuelve el valor de una expresión MDX evaluada sobre el paso de cálculo especificado de un cubo.|  
 |[CoalesceEmpty &#40;MDX&#41;](../mdx/coalesceempty-mdx.md)|Fusiona en un número o en una cadena un valor de celda vacía, y devuelve el valor fusionado.|  
@@ -213,7 +192,7 @@ ms.lasthandoff: 05/03/2018
 |[LookupCube &#40;MDX&#41;](../mdx/lookupcube-mdx.md)|Devuelve el valor de una expresión MDX evaluada sobre otro cubo especificado en la misma base de datos.|  
 |[MemberToStr &#40;MDX&#41;](../mdx/membertostr-mdx.md)|Devuelve una cadena con formato de MDX que corresponde a un miembro especificado.|  
 |[Nombre &#40;MDX&#41;](../mdx/name-mdx.md)|Devuelve el nombre de una dimensión, jerarquía, nivel o miembro.|  
-|[Propiedades & #40; MDX & #41;](../mdx/properties-mdx.md)|Devuelve una cadena, o un valor con tipos muy marcados, que contiene un valor de propiedad de miembro.|  
+|[Propiedades &#40;MDX&#41;](../mdx/properties-mdx.md)|Devuelve una cadena, o un valor con tipos muy marcados, que contiene un valor de propiedad de miembro.|  
 |[SetToStr &#40;MDX&#41;](../mdx/settostr-mdx.md)|Devuelve una cadena con formato de MDX que corresponde a un conjunto especificado.|  
 |[TupleToStr &#40;MDX&#41;](../mdx/tupletostr-mdx.md)|Devuelve una cadena con formato de MDX que corresponde a una tupla especificada.|  
 |[UniqueName &#40;MDX&#41;](../mdx/uniquename-mdx.md)|Devuelve el nombre único de una dimensión, jerarquía, nivel o miembro especificado.|  
@@ -221,14 +200,14 @@ ms.lasthandoff: 05/03/2018
   
 ## <a name="subcube-functions"></a>Funciones de subcubo  
   
-|Función|Description|  
+|Función|Descripción|  
 |--------------|-----------------|  
-|[Esto & #40; MDX & #41;](../mdx/this-mdx.md)|Devuelve el subcubo actual.|  
+|[Esto &#40;MDX&#41;](../mdx/this-mdx.md)|Devuelve el subcubo actual.|  
 |[Deja &#40;MDX&#41;](../mdx/leaves-mdx.md)|Devuelve el conjunto de miembros hoja en la dimensión, miembro o tupla especificada.|  
   
 ## <a name="tuple-functions"></a>funciones de tupla  
   
-|Función|Description|  
+|Función|Descripción|  
 |--------------|-----------------|  
 |[Actual &#40;MDX&#41;](../mdx/current-mdx.md)|Devuelve la tupla actual de un conjunto durante la iteración.|  
 |[Elemento &#40;tupla&#41; &#40;MDX&#41;](../mdx/item-tuple-mdx.md)|Devuelve una tupla desde un conjunto.|  
@@ -237,11 +216,11 @@ ms.lasthandoff: 05/03/2018
   
 ## <a name="other-functions"></a>Otras funciones  
   
-|Función|Description|  
+|Función|Descripción|  
 |--------------|-----------------|  
 |[Error &#40;MDX&#41;](../mdx/error-mdx.md)|Genera un error y puede, opcionalmente, proporcionar un mensaje de error especificado.|  
   
 ## <a name="see-also"></a>Vea también  
- [Referencia del lenguaje MDX & #40; MDX & #41;](../mdx/mdx-language-reference-mdx.md)  
+ [Referencia del lenguaje MDX &#40;MDX&#41;](../mdx/mdx-language-reference-mdx.md)  
   
   

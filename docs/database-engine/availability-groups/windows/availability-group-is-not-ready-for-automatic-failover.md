@@ -3,7 +3,6 @@ title: Grupo de disponibilidad no preparado para conmutación automática por er
 ms.custom: ''
 ms.date: 05/17/2016
 ms.prod: sql
-ms.prod_service: high-availability
 ms.reviewer: ''
 ms.suite: sql
 ms.technology: high-availability
@@ -15,14 +14,15 @@ helpviewer_keywords:
 - Availability Groups [SQL Server], policies
 ms.assetid: 28261014-342c-442a-bd89-6d04b8d4e8b7
 caps.latest.revision: 12
-author: MikeRayMSFT
-ms.author: mikeray
+author: MashaMSFT
+ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: d7424ab7a9108924ebe6ac7932fe209740d21538
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 0c99a7d813b190823c28b50daa4b50f1d6b2c6b1
+ms.sourcegitcommit: 8aa151e3280eb6372bf95fab63ecbab9dd3f2e5e
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/05/2018
+ms.locfileid: "34771331"
 ---
 # <a name="availability-group-is-not-ready-for-automatic-failover"></a>Grupo de disponibilidad no preparado para conmutación automática por error
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -36,7 +36,7 @@ ms.lasthandoff: 05/03/2018
 |**Categoría**|**Crítico**|  
 |**Faceta**|grupo de disponibilidad|  
   
-## <a name="description"></a>Description  
+## <a name="description"></a>Descripción  
  Esta directiva realiza comprobaciones para asegurarse de que el grupo de disponibilidad tenga al menos una réplica secundaria que esté preparada para la conmutación por error. La directiva está en mal estado y se genera una alerta cuando el modo de conmutación por error de la réplica principal es automático, pero ninguna de las réplicas secundarias del grupo de disponibilidad están listas para la conmutación por error.  
   
  La directiva está en un estado correcto cuando al menos una réplica secundaria está lista para la conmutación automática por error.  

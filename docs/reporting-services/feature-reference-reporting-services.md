@@ -1,7 +1,7 @@
 ---
 title: Referencia de características (Reporting Services) | Microsoft Docs
 ms.custom: ''
-ms.date: 03/14/2017
+ms.date: 05/24/2018
 ms.prod: reporting-services
 ms.prod_service: reporting-services-sharepoint, reporting-services-native
 ms.component: reporting-services
@@ -20,11 +20,12 @@ caps.latest.revision: 28
 author: markingmyname
 ms.author: maghan
 manager: kfile
-ms.openlocfilehash: 7feb24933727c6d107404888f5c3fa5ca58a6a74
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: e6eace09048fd6ba2399e5314d6868efd9e7baf7
+ms.sourcegitcommit: 808d23a654ef03ea16db1aa23edab496b73e5072
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/04/2018
+ms.locfileid: "34550086"
 ---
 # <a name="feature-reference-reporting-services"></a>Referencia de características (Reporting Services)
   [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] incluye varias herramientas y aplicaciones que se pueden usar para crear, administrar y ver informes. En esta sección, se proporcionan temas específicos en los que se describen los cuadros de diálogo, las páginas web y los asistentes de estas herramientas y aplicaciones.  
@@ -34,9 +35,6 @@ ms.lasthandoff: 05/03/2018
 ## <a name="in-this-section"></a>En esta sección  
  [Diseñador de informes (Ayuda F1)](../reporting-services/tools/report-designer-f1-help.md)  
  Proporciona ayuda para el Diseñador de informes y los cuadros de diálogo relacionados, el Asistente para informes y el Asistente para imágenes.  
-  
- [Administrador de informes (Ayuda F1)](http://msdn.microsoft.com/library/e0137273-85b8-45f0-83e5-38a50481768f)  
- Proporciona ayuda para el Administrador de informes, una aplicación web que se utiliza para administrar una única instancia del servidor de informes.  
   
  [Temas de Ayuda del Administrador de configuración de Reporting Services](http://msdn.microsoft.com/library/7b6fb18e-ec39-4661-88e3-977ed64e2c82)  
  Proporciona ayuda para la herramienta de configuración de [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] que se usa para implementar y administrar las instancias del servidor de informes.  

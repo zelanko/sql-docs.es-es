@@ -18,10 +18,11 @@ ms.author: mikeray
 manager: craigg
 monikerRange: = azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions
 ms.openlocfilehash: 6532283a3315ad60587ce6fd126f91859f42f29f
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.sourcegitcommit: 808d23a654ef03ea16db1aa23edab496b73e5072
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/04/2018
+ms.locfileid: "34708383"
 ---
 # <a name="indexes"></a>Índices
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -29,7 +30,7 @@ ms.lasthandoff: 05/03/2018
 ## <a name="available-index-types"></a>Tipos de índices disponibles
 En la tabla siguiente se indican los tipos de índice disponibles en [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] y se proporcionan vínculos a información adicional.  
   
-|Tipo de índice|Description|Información adicional|  
+|Tipo de índice|Descripción|Información adicional|  
 |----------------|-----------------|----------------------------|  
 |Hash|Con un índice hash, se accede a los datos a través de una tabla hash en memoria. Los índices hash utilizan una cantidad fija de memoria, que es una función del número de cubos.|[Directrices para usar índices en las tablas con optimización para memoria](../../relational-databases/in-memory-oltp/indexes-for-memory-optimized-tables.md)<br /><br /> [Directrices para diseñar índices de hash](../../relational-databases/sql-server-index-design-guide.md#hash_index)|  
 |Índice no agrupado optimizado para memoria|Para los índices no clúster optimizados para memoria, el consumo de memoria depende del número de filas y del tamaño de las columnas de clave de índice.|[Directrices para usar índices en las tablas con optimización para memoria](../../relational-databases/in-memory-oltp/indexes-for-memory-optimized-tables.md)<br /><br /> [Directrices para diseñar índices no agrupados optimizados para memoria](../../relational-databases/sql-server-index-design-guide.md#inmem_nonclustered_index)|  

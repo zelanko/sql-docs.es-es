@@ -3,7 +3,6 @@ title: Información general de los grupos de disponibilidad AlwaysOn (SQL Server
 ms.custom: ''
 ms.date: 05/17/2016
 ms.prod: sql
-ms.prod_service: high-availability
 ms.reviewer: ''
 ms.suite: sql
 ms.technology: high-availability
@@ -17,15 +16,15 @@ helpviewer_keywords:
 - Availability Groups [SQL Server]
 ms.assetid: 04fd9d95-4624-420f-a3be-1794309b3a47
 caps.latest.revision: 121
-author: MikeRayMSFT
-ms.author: mikeray
+author: MashaMSFT
+ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 43a7535395f42349e08d2d04d8b76def1a64306c
-ms.sourcegitcommit: b3bb41424249de198f22d9c6d40df4996f083aa6
+ms.openlocfilehash: 849eeaa4b46712ba789f60f43e9c77c02eee6558
+ms.sourcegitcommit: 8aa151e3280eb6372bf95fab63ecbab9dd3f2e5e
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/17/2018
-ms.locfileid: "34300243"
+ms.lasthandoff: 06/05/2018
+ms.locfileid: "34769751"
 ---
 # <a name="overview-of-always-on-availability-groups-sql-server"></a>Información general de los grupos de disponibilidad AlwaysOn (SQL Server)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]

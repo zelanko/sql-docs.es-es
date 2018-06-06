@@ -19,10 +19,11 @@ ms.author: genemi
 manager: craigg
 monikerRange: = azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions
 ms.openlocfilehash: e5dfdc3c08bd548530e4ba2deb50871808efc00f
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.sourcegitcommit: 808d23a654ef03ea16db1aa23edab496b73e5072
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/04/2018
+ms.locfileid: "34706863"
 ---
 # <a name="extended-events"></a>Eventos extendidos
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -43,7 +44,7 @@ Encontrará más información sobre los eventos extendidos en:
   
  En la tabla siguiente se describen los conceptos de Extended Events.  
   
-|Tema|Description|  
+|Tema|Descripción|  
 |-----------|-----------------|  
 |[Paquetes de SQL Server Extended Events](../../relational-databases/extended-events/sql-server-extended-events-packages.md)|Describe los paquetes de Extended Events que contienen objetos usados para obtener y procesar datos cuando se ejecuta una sesión de Extended Events.|  
 |[Destinos de SQL Server Extended Events](http://msdn.microsoft.com/library/e281684c-40d1-4cf9-a0d4-7ea1ecffa384)|Describe los consumidores de eventos que pueden recibir datos durante una sesión de eventos.|  

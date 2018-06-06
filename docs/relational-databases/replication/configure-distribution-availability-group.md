@@ -1,7 +1,7 @@
 ---
 title: Configurar la base de datos de distribución de SQL Server en un grupo de disponibilidad | Microsoft Docs
 ms.custom: ''
-ms.date: 04/19/2018
+ms.date: 05/23/2018
 ms.prod: sql
 ms.reviewer: ''
 ms.suite: sql
@@ -23,11 +23,12 @@ caps.latest.revision: 44
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: a7253c3cc263d653c9e2d86e03da49ead9731e31
-ms.sourcegitcommit: 6fd8a193728abc0a00075f3e4766a7e2e2859139
+ms.openlocfilehash: 11574b8454c425c3f022ed1daf415e71ea317535
+ms.sourcegitcommit: 808d23a654ef03ea16db1aa23edab496b73e5072
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/17/2018
+ms.lasthandoff: 06/04/2018
+ms.locfileid: "34473889"
 ---
 # <a name="set-up-replication-distribution-database-in-always-on-availability-group"></a>Configurar la base de datos de distribución de replicación en un grupo de disponibilidad AlwaysOn
 
@@ -76,7 +77,6 @@ Después de configurar una base de datos de distribución en el AG según los pa
 - Efectúe cambios en las propiedades de base de datos del distribuidor o de la distribución en todas las réplicas que participan en un AG de base de datos de distribución.
 - Efectúe cambios en los trabajos de replicación mediante los procedimientos almacenado msdb o con SQL Server Management Studio en todas las réplicas que participan en un AG de base de datos de distribución.
 - La configuración del distribuidor en el publicador se debe efectuar con scripts. No se puede usar el asistente de replicación. Se admiten los asistentes de replicación y las hojas de propiedades para otros fines.
-- A partir de SQL Server 2017 CU 6 no se admite el monitor de replicación ni otras IU de replicación que se conectan con el nombre del agente de escucha del AG. Para administrar agentes de replicación asociados a la base de datos de distribución de un AG, use la propiedad del trabajo y el historial de trabajos.
 - La configuración del AG para las bases de datos de distribución solo se puede efectuar con scripts.
 - La configuración de bases de datos de distribución en un AG debe ser una nueva configuración de replicación. No se admite el cambio de una base de datos de distribución existente en un AG. Además, una vez que se elimina un AG a una base de datos de distribución, ya no puede funcionar como una base de datos de distribución válida, por lo que se debe quitar.
 

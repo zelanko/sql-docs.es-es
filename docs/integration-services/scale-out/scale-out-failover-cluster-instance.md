@@ -16,11 +16,12 @@ caps.latest.revision: 1
 author: haoqian
 ms.author: haoqian
 manager: craigg
-ms.openlocfilehash: bd9c61743812b386d4bcf420debfce6e83fb0778
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: d11bd76d4bc8f811cbaa4ea34258b56aaf6d6763
+ms.sourcegitcommit: 808d23a654ef03ea16db1aa23edab496b73e5072
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/04/2018
+ms.locfileid: "34470247"
 ---
 # <a name="scale-out-support-for-high-availability-via-sql-server-failover-cluster-instance"></a>Scale Out support for high availability via SQL Server failover cluster instance (Compatibilidad con la escalabilidad horizontal para una alta disponibilidad mediante Instancia de clústeres de conmutación por error de SQL Server).
 
@@ -62,7 +63,7 @@ Conectar el Servicio principal de escalabilidad horizontal.
 ![Conectar](media/bring-online.PNG)
 
 > [!NOTE]
-> Si quiere conmutar por error SSISDB y el Servicio principal de escalabilidad horizontal por separado, siga [7. Configuración del rol del Servicio principal de escalabilidad horizontal del clúster de conmutación por error de Windows](scale-out-support-for-high-availability.md#7-configure-the-scale-out-master-service-role-of-the-windows-failover-cluster)
+> Si quiere conmutar por error SSISDB y el Servicio principal de escalabilidad horizontal por separado, siga [7. Configuración del rol del Servicio principal de escalabilidad horizontal del clúster de conmutación por error de Windows](scale-out-support-for-high-availability.md#7-configure-the-scale-out-master-service-role-of-the-windows-server-failover-cluster)
 
 ## <a name="7-install-scale-out-workers"></a>7. Instalar los trabajadores de escalabilidad horizontal
 Instalar los trabajadores de escalabilidad horizontal en los nodos de trabajo. Durante la instalación, especifique https://[nombre de red de SQL Server]:[puerto maestro] para el punto de conexión principal. 

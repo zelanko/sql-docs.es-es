@@ -3,7 +3,6 @@ title: Optimizar la compresión en los grupos de disponibilidad | Microsoft Docs
 ms.custom: ''
 ms.date: 06/22/2016
 ms.prod: sql
-ms.prod_service: high-availability
 ms.reviewer: ''
 ms.suite: sql
 ms.technology: high-availability
@@ -11,14 +10,15 @@ ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: 7632769c-b246-4766-886f-7c60ec540be8
 caps.latest.revision: 12
-author: MikeRayMSFT
+author: MashaMSFT
 ms.author: v-saume
 manager: craigg
-ms.openlocfilehash: 9576b598e4bbdbab86708691540c1bae2b238b24
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 4ab713b7089f4c76214fe5e290196757cce43317
+ms.sourcegitcommit: 8aa151e3280eb6372bf95fab63ecbab9dd3f2e5e
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/05/2018
+ms.locfileid: "34770941"
 ---
 # <a name="tune-compression-for-availability-group"></a>Tune compression for availability group (Optimizar la compresión para los grupos de disponibilidad)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -36,7 +36,7 @@ Para la mayoría de los escenarios, Microsoft no recomienda cambiar esta configu
 
 En la siguiente tabla se muestran las marcas de seguimiento que modificarán el comportamiento de compresión predeterminado para SQL Server. 
 
-marca de seguimiento | Description
+marca de seguimiento | Descripción
 ------------- | -------------
 1462          | Deshabilita la compresión de secuencias de registro para los grupos de disponibilidad con réplicas asincrónicas. Esta característica está habilitada de forma predeterminada en las réplicas asincrónicas para optimizar el ancho de banda de red.
 9567          | Habilita la compresión del flujo de datos para los grupos de disponibilidad durante la propagación automática. Durante la propagación automática, la compresión puede reducir significativamente el tiempo de transferencia y aumentará la carga del procesador.

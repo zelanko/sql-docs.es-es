@@ -21,11 +21,12 @@ caps.latest.revision: 34
 author: markingmyname
 ms.author: maghan
 manager: kfile
-ms.openlocfilehash: 44f4992239c15b7382ede007b5da47ef13b03566
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: b417d30db2ed5ecd85ba154ab304be7181c2dc71
+ms.sourcegitcommit: 8aa151e3280eb6372bf95fab63ecbab9dd3f2e5e
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/05/2018
+ms.locfileid: "34550536"
 ---
 # <a name="authentication-with-the-report-server"></a>Autenticación con el servidor de informes
 
@@ -36,7 +37,7 @@ ms.lasthandoff: 05/03/2018
 ## <a name="authentication-types"></a>Tipos de autenticación  
  Todos los usuarios o aplicaciones que soliciten el acceso al contenido y las operaciones del servidor de informes deben autenticarse mediante el tipo de autenticación configurado en el servidor de informes para que se permita el acceso. En la tabla siguiente se describen los tipos de autenticación que admite [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)].  
   
-|Nombre del tipo de autenticación|Valor del nivel de autenticación HTTP|Se usa de forma predeterminada|Description|  
+|Nombre del tipo de autenticación|Valor del nivel de autenticación HTTP|Se usa de forma predeterminada|Descripción|  
 |-----------------------------|-------------------------------------|---------------------|-----------------|  
 |RSWindowsNegotiate|Negotiate|Sí|Intenta usar primero la autenticación integrada Kerberos para Windows, pero vuelve a NTLM si Active Directory no puede conceder un vale para la solicitud de cliente al servidor de informes. Negotiate solamente volverá a NTLM si el vale no está disponible. Si el primer intento provoca un error en lugar de indicar que no se encuentra un vale, el servidor de informes no hace un segundo intento.|  
 |RSWindowsNTLM|NTLM|Sí|Usa la autenticación integrada NTLM para Windows.<br /><br /> Las credenciales no se delegarán ni suplantarán en otras solicitudes. Las solicitudes subsiguientes seguirán una nueva secuencia de desafío-respuesta. Según la configuración de seguridad de la red, podría pedirse a un usuario las credenciales o la solicitud de autenticación se administrará de forma transparente.|  
@@ -89,7 +90,6 @@ ms.lasthandoff: 05/03/2018
 [Especificar información de credenciales y conexión para los orígenes de datos de informes](../../reporting-services/report-data/specify-credential-and-connection-information-for-report-data-sources.md)   
 [Implementar una extensión de seguridad](../../reporting-services/extensions/security-extension/implementing-a-security-extension.md)   
 [Configurar conexiones SSL en un servidor de informes en modo nativo](../../reporting-services/security/configure-ssl-connections-on-a-native-mode-report-server.md)   
-[Configurar el acceso al Generador de informes](../../reporting-services/report-server/configure-report-builder-access.md)   
 [Información general de extensiones de seguridad](../../reporting-services/extensions/security-extension/security-extensions-overview.md)   
 [Autenticación de Windows en Reporting Services](../../reporting-services/extensions/security-extension/authentication-in-reporting-services.md)   
 [Autorización en Reporting Services](../../reporting-services/extensions/security-extension/authorization-in-reporting-services.md)  

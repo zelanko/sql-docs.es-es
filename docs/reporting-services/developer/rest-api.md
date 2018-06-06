@@ -1,7 +1,7 @@
 ---
 title: Desarrollo con las API de REST para Reporting Services| Microsoft Docs
 ms.description: The REST API provides programmatic access to the objects in a SQL Server 2017 Reporting Services report server catalog.
-ms.date: 10/19/2017
+ms.date: 05/25/2018
 ms.prod: reporting-services
 ms.prod_service: reporting-services-sharepoint, reporting-services-native
 ms.component: developer
@@ -14,11 +14,12 @@ ms.topic: conceptual
 author: markingmyname
 ms.author: maghan
 manager: kfile
-ms.openlocfilehash: 5a180e19628ad832b970026422e9b03e7373ecfb
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 8f2f0959639736379bc28c6add71d09769352fed
+ms.sourcegitcommit: 808d23a654ef03ea16db1aa23edab496b73e5072
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/04/2018
+ms.locfileid: "34553836"
 ---
 # <a name="develop-with-the-rest-apis-for-reporting-services"></a>Desarrollo con las API de REST para Reporting Services
 
@@ -27,6 +28,8 @@ ms.lasthandoff: 05/03/2018
 Microsoft SQL Server 2017 Reporting Services admite las API de transferencia de estado representacional (REST). Las API de REST son puntos de conexión de servicio que admiten una serie de operaciones HTTP (métodos), que proporcionan acceso de creación, recuperación, actualización o eliminación para los recursos de un servidor de informes.
 
 La API de REST proporciona acceso mediante programación a los objetos de un catálogo del servidor de informes de SQL Server 2017 Reporting Services. Como ejemplos de objetos tenemos las carpetas, los informes, los KPI, los orígenes de datos, los conjuntos de datos, los planes de actualización, las suscripciones, etc. Con la API de REST puede, por ejemplo, navegar por la jerarquía de carpetas, detectar el contenido de una carpeta o descargar una definición de informe. También puede crear, actualizar y eliminar objetos. Como ejemplos de acciones de trabajo con los objetos tenemos la carga de un informe, la ejecución de un plan de actualización, la eliminación de una carpeta, etc.
+
+[!INCLUDE [GDPR-related guidance](../../includes/gdpr-hybrid-note.md)]
 
 ## <a name="components-of-a-rest-api-requestresponse"></a>Componentes de una solicitud/respuesta de la API de REST
 

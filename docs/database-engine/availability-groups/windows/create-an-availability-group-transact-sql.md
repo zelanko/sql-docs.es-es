@@ -3,7 +3,6 @@ title: Crear un grupo de disponibilidad (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 05/17/2016
 ms.prod: sql
-ms.prod_service: high-availability
 ms.reviewer: ''
 ms.suite: sql
 ms.technology: high-availability
@@ -13,14 +12,15 @@ helpviewer_keywords:
 - Availability Groups [SQL Server], creating
 ms.assetid: 8b0a6301-8b79-4415-b608-b40876f30066
 caps.latest.revision: 52
-author: MikeRayMSFT
-ms.author: mikeray
+author: MashaMSFT
+ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: c495e1162e852224bbd911b1e775a9d10c5b3405
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 46c652e4dd13d48121fc76eda7743840892aef00
+ms.sourcegitcommit: 8aa151e3280eb6372bf95fab63ecbab9dd3f2e5e
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/05/2018
+ms.locfileid: "34769771"
 ---
 # <a name="create-an-availability-group-transact-sql"></a>Crear un grupo de disponibilidad (Transact-SQL)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -314,7 +314,7 @@ ms.lasthandoff: 05/03/2018
 ###  <a name="CompleteCodeExample"></a> Ejemplo completo de código del procedimiento de configuración de ejemplo  
  En el ejemplo siguiente se unen los ejemplos de código de todos los pasos del procedimiento de configuración de ejemplo. En la tabla siguiente se resumen los valores de marcador de posición utilizados en este ejemplo de código. Para obtener más información acerca de los pasos de este ejemplo de código, vea [Requisitos previos para usar el procedimiento de configuración de ejemplo](#PrerequisitesForExample) y [Procedimiento de configuración de ejemplo](#SampleProcedure), anteriormente en este tema.  
   
-|Marcador de posición|Description|  
+|Marcador de posición|Descripción|  
 |-----------------|-----------------|  
 |\\\\*FILESERVER*\\*SQLbackups*|Recurso compartido de copia de seguridad ficticio.|  
 |\\\\*FILESERVER*\\*SQLbackups\MyDb1.bak*|Archivo de copia de seguridad de MyDb1.|  

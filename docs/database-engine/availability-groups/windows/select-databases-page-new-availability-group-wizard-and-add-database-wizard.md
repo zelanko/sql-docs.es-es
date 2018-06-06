@@ -3,7 +3,6 @@ title: Página Seleccionar bases de datos (Asistente para nuevo grupo de disponi
 ms.custom: ''
 ms.date: 05/17/2016
 ms.prod: sql
-ms.prod_service: high-availability
 ms.reviewer: ''
 ms.suite: sql
 ms.technology: high-availability
@@ -14,14 +13,15 @@ f1_keywords:
 - sql13.swb.newagwizard.selectdatabases.f1
 ms.assetid: 929c5e15-d087-438d-b1f2-aa97c5f8bff8
 caps.latest.revision: 16
-author: MikeRayMSFT
-ms.author: mikeray
+author: MashaMSFT
+ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 3a28e436eaaa514b620487900331dcb725aee03a
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 7235f453c1476cea469aedaeca2cafa794dc483a
+ms.sourcegitcommit: 8aa151e3280eb6372bf95fab63ecbab9dd3f2e5e
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/05/2018
+ms.locfileid: "34769061"
 ---
 # <a name="select-databases-page-new-availability-group-wizard-and-add-database-wizard"></a>Select Databases Page (New Availability Group Wizard and Add Database Wizard)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]

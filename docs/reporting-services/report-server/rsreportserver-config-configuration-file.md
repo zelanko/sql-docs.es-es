@@ -15,11 +15,12 @@ caps.latest.revision: 20
 author: markingmyname
 ms.author: maghan
 manager: kfile
-ms.openlocfilehash: 1be44e3e1f30aab2be4c446e6efd23610b9ae68b
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: a0bc8e10c310ed490ae64022a5c002b66e104a9c
+ms.sourcegitcommit: 808d23a654ef03ea16db1aa23edab496b73e5072
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/04/2018
+ms.locfileid: "34550866"
 ---
 # <a name="rsreportserverconfig-configuration-file"></a>Archivo de configuración RSReportServer.config
 El archivo [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]**RsReportServer.config** almacena valores que utiliza el servicio web del servidor de informes y los procesamientos en segundo plano. Todas las aplicaciones de [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] se ejecutan dentro de un proceso único que lee la configuración almacenada en el archivo RSReportServer.config. Los servidores de informes de modo nativo y SharePoint usan el archivo RSReportServer.config, pero los dos modos no usan los mismos valores en el archivo de configuración. La versión del modo de SharePoint del archivo es más pequeña porque muchas de las configuraciones del modo de SharePoint se almacenan en las bases de datos de configuración de SharePoint y no en el archivo. En este tema se describe el archivo de configuración predeterminado que se instala en el modo nativo y en el modo de SharePoint, y algunos de los valores y comportamientos importantes que se controlan mediante el archivo de configuración.  
@@ -65,7 +66,7 @@ Para obtener más información sobre cómo editar el archivo, vea [Modificar un 
 > [!NOTE]  
 >  En este tema, "entero máximo" hace referencia al valor INT_MAX de 2147483647.  Para más información, consulte [Límites de enteros](http://msdn.microsoft.com/library/296az74e\(v=vs.110\).aspx) (http://msdn.microsoft.com/library/296az74e(v=vs.110).aspx).  
   
-|Configuración|Description|Mode|  
+|Configuración|Descripción|Mode|  
 |-------------|-----------------|----------|  
 |**Dsn**|Especifica la cadena de conexión al servidor de base de datos que hospeda la base de datos del servidor de informes. Este valor está cifrado y se agrega al archivo de configuración al crear la base de datos del servidor de informes. Para SharePoint, la información de conexión de la base de datos se toma de la base de datos de configuración de SharePoint.|N,S|  
 |**ConnectionType**|Especifica el tipo de credenciales que el servidor de informes utiliza para conectarse a la base de datos del servidor de informes. Los valores válidos son **Default** e **Impersonate**. Se especifica**Default** si el servidor de informes se configura para utilizar un inicio de sesión de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] o la cuenta de servicio para conectarse con la base de datos del servidor de informes. Se especifica**Impersonate** si el servidor de informes usa una cuenta de Windows para conectarse con la base de datos del servidor de informes.|N|  
@@ -104,7 +105,7 @@ Para obtener más información sobre cómo editar el archivo, vea [Modificar un 
   
  La última columna de la tabla indica si el valor se aplica a un servidor de informes de modo nativo (N), un servidor de modo de SharePoint (S) o ambos.  
   
-|Configuración|Description|Mode|  
+|Configuración|Descripción|Mode|  
 |-------------|-----------------|----------|  
 |**Aplicación**|Contiene la configuración para las aplicaciones de [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] .|N|  
 |**Nombre**|Especifica las aplicaciones de [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] . Los valores válidos son ReportServerWebService o ReportManager.|N|  
@@ -133,7 +134,7 @@ Para obtener más información sobre cómo editar el archivo, vea [Modificar un 
   
  La última columna de la tabla siguiente indica si el valor se aplica a un servidor de informes de modo nativo (N), un servidor de modo de SharePoint (S) o ambos.  
   
-|Configuración|Description|Mode|  
+|Configuración|Descripción|Mode|  
 |-------------|-----------------|----------|  
 |**AuthenticationTypes**|Especifica uno o más tipos de autenticación. Los valores válidos son: **RSWindowsNegotiate**, **RSWindowsKerberos**, **RSWindowsNTLM**, **RSWindowsBasic**y **Custom**.<br /><br /> Los tipos**RSWindows** y **Custom** se excluyen mutuamente.<br /><br /> **RSWindowsNegotiate**, **RSWindowsKerberos**, **RSWindowsNTLM**y **RSWindowsBasic** son acumulativos y se pueden utilizar juntos, como se muestra en el ejemplo de valor predeterminado anteriormente en esta sección.<br /><br /> Es necesario especificar varios tipos de autenticación si espera las solicitudes de una variedad de exploradores o aplicaciones cliente que utilizan diferentes tipos de autenticación.<br /><br /> No quite **RSWindowsNTLM**, de lo contrario limitará la compatibilidad del explorador a una parte de los tipos de explorador compatibles. Para obtener más información, vea [Compatibilidad del explorador de Reporting Services y Power View](../../reporting-services/browser-support-for-reporting-services-and-power-view.md).|N|  
 |**RSWindowsNegotiate**|El servidor de informes acepta tokens de seguridad de Kerberos o NTLM. Esta es la configuración predeterminada cuando el servidor de informes se ejecuta en modo nativo y la cuenta de servicio es de tipo Servicio de red. Dicha configuración se omite cuando el servidor de informes se ejecuta en modo nativo y la cuenta de servicio está configurada como cuenta de usuario de dominio.<br /><br /> Si se ha configurado una cuenta de dominio para la cuenta de servicio del servidor de informes y no se ha configurado un Nombre principal de servicio (SPN) para el servidor de informes, puede que esta configuración impida a los usuarios iniciar sesión en el servidor.|N|  
@@ -153,7 +154,7 @@ Para obtener más información sobre cómo editar el archivo, vea [Modificar un 
   
  La última columna de la tabla siguiente indica si el valor se aplica a un servidor de informes de modo nativo (N), un servidor de modo de SharePoint (S) o ambos.  
   
-|Configuración|Description|Mode|  
+|Configuración|Descripción|Mode|  
 |-------------|-----------------|----------|  
 |**IsSchedulingService**|Especifica si el servidor de informes mantiene un conjunto de trabajos del Agente [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] correspondientes a las programaciones y las suscripciones creadas por usuarios de [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] . Los valores válidos son **True** (predeterminado) y **False**.<br /><br /> Este valor se ve afectado si se habilitan o deshabilitan características de [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] usando la faceta Configuración de área expuesta para Reporting Services de Administración basada en directivas. Para obtener más información, vea [Iniciar y detener el servicio del servidor de informes](../../reporting-services/report-server/start-and-stop-the-report-server-service.md).|N,S|  
 |**IsNotificationService**|Especifica si el servidor de informes procesa notificaciones y entregas. Los valores válidos son **True** (predeterminado) y **False**. Cuando el valor es **False**, no se entregan suscripciones.<br /><br /> Este valor se ve afectado si se habilitan o deshabilitan características de [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] usando la faceta Configuración de área expuesta para Reporting Services de Administración basada en directivas. Para obtener más información, vea [Iniciar y detener el servicio del servidor de informes](../../reporting-services/report-server/start-and-stop-the-report-server-service.md).|N,S|  
@@ -179,10 +180,10 @@ Para obtener más información sobre cómo editar el archivo, vea [Modificar un 
   
  La última columna de la tabla siguiente indica si el valor se aplica a un servidor de informes de modo nativo (N), un servidor de modo de SharePoint (S) o ambos.  
   
-|Configuración|Description|Mode|  
+|Configuración|Descripción|Mode|  
 |-------------|-----------------|----------|  
 |**ReportServerUrl**|Especifica la URL del servidor de informes a la que se conecta el portal web. Solo modifique este valor si configura el portal web para conectarse a un servidor de informes en otra instancia o en un equipo remoto.|N,S|  
-|**ReportBuilderTrustLevel**|No modifique este valor; no es configurable. En [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] y versiones posteriores, el Generador de informes solo se ejecuta en **FullTrust**. Para obtener más información, vea [Configurar el acceso al Generador de informes](../../reporting-services/report-server/configure-report-builder-access.md) . Para obtener más información sobre cómo interrumpir el modo de confianza parcial, vea [Funcionalidad de SQL Server Reporting Services no incluida en SQL Server 2016](../../reporting-services/discontinued-functionality-to-sql-server-reporting-services-in-sql-server.md).|N,S|  
+|**ReportBuilderTrustLevel**|No modifique este valor; no es configurable. En [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] y versiones posteriores, el Generador de informes solo se ejecuta en **FullTrust**. Para obtener más información sobre cómo interrumpir el modo de confianza parcial, vea [Funcionalidad de SQL Server Reporting Services no incluida en SQL Server 2016](../../reporting-services/discontinued-functionality-to-sql-server-reporting-services-in-sql-server.md).|N,S|  
 |**PageCountMode**|Solo para el portal web, este valor especifica si el servidor calcula un valor de recuento de páginas antes de que se represente el informe o en el momento de verse. Los valores válidos son **Estimate** (predeterminado) y **Actual**. Utilice **Estimate** para calcular la información del recuento de páginas tal y como el usuario ve el informe. Inicialmente, el recuento de páginas está establecido en 2 (para la página actual más una página adicional), pero ajusta hacia arriba conforme el usuario se desplaza por las páginas del informe. Use **Actual** si desea calcular el recuento de páginas antes de mostrar el informe. **Actual** se proporciona para mantener la compatibilidad con versiones anteriores. Tenga en cuenta que si establece **PageCountMode** en **Actual**, debe procesarse todo el informe para obtener un recuento de páginas válido, aumentando el tiempo de espera previo a que se muestre el informe.|N,S|  
   
 ##  <a name="bkmk_extensions"></a> Extensions (archivo RSReportServer.config) de modo nativo  
@@ -227,7 +228,7 @@ Para obtener más información sobre cómo editar el archivo, vea [Modificar un 
   
  Todas las extensiones de entrega contienen **Extension Name**, **MaxRetries**, **SecondsBeforeRetry**y **Configuration**. Primero se documentan estos valores de configuración compartidos. Las descripciones de los valores específicos de cada extensión se muestran en una segunda tabla.  
   
-|Configuración|Description|  
+|Configuración|Descripción|  
 |-------------|-----------------|  
 |**Extension Name**|Especifica un ensamblado y un nombre descriptivo de la extensión de entrega. No modifique este valor.|  
 |**MaxRetries**|Especifica el número de veces que un servidor de informes reintentará una entrega si se produce un error en el primer intento. El valor predeterminado es 3.|  
@@ -237,14 +238,14 @@ Para obtener más información sobre cómo editar el archivo, vea [Modificar un 
 ####  <a name="bkmk_fileshare_extension"></a> Opciones de configuración para de la extensión de entrega a recursos compartidos de archivos  
  La entrega a recursos compartidos de archivos envía un informe exportado a un formato de archivo de aplicación a una carpeta compartida de la red. Para obtener más información, vea [File Share Delivery in Reporting Services](../../reporting-services/subscriptions/file-share-delivery-in-reporting-services.md).  
   
-|Configuración|Description|  
+|Configuración|Descripción|  
 |-------------|-----------------|  
 |**ExcludedRenderFormats**, **RenderingExtension**|Esta configuración se utiliza para excluir de forma intencionada los formatos de exportación que no funcionan correctamente con la entrega a recursos compartidos de archivos. Estos formatos se utilizan normalmente para informes interactivos, vistas previas o la carga previa de la caché de informes. No generan archivos de aplicación que puedan verse fácilmente desde una aplicación de escritorio.<br /><br /> HTMLOWC<br /><br /> RGDI<br /><br /> NULL|  
   
 ####  <a name="bkmk_email_extension"></a> Opciones de configuración de la extensión de correo electrónico del servidor de informes  
  El correo electrónico del servidor de informes utiliza un dispositivo de red SMTP para enviar los informes a las direcciones de correo electrónico. Esta extensión de entrega se debe configurar antes de poderse utilizar. Para obtener más información, vea [Configurar un servidor de informes para la entrega de correo electrónico (Administrador de configuración de SSRS)](http://msdn.microsoft.com/en-us/b838f970-d11a-4239-b164-8d11f4581d83) y [Entrega por correo electrónico en Reporting Services](../../reporting-services/subscriptions/e-mail-delivery-in-reporting-services.md).  
   
-|Configuración|Description|  
+|Configuración|Descripción|  
 |-------------|-----------------|  
 |**SMTPServer**|Especifica un valor de cadena que indica la dirección de un servidor SMTP remoto o un reenviador. Este valor se requiere para un servicio SMTP remoto. Puede ser una dirección IP, un nombre UNC de un equipo de la intranet corporativa o un nombre de dominio completo.|  
 |**SMTPServerPort**|Especifica un valor entero que indica el puerto que utiliza el servicio SMTP para enviar el correo saliente. El puerto 25 se suele utilizar para enviar correo electrónico.|  
@@ -265,7 +266,7 @@ Para obtener más información sobre cómo editar el archivo, vea [Modificar un 
 ####  <a name="bkmk_documentlibrary_extension"></a> Configuración de la extensión de la biblioteca de documentos de SharePoint del servidor de informes  
  La biblioteca de documentos del servidor de informes envía un informe exportado a un formato de archivo de aplicación a una biblioteca de documentos. Esta extensión de entrega solo puede utilizarla un servidor de informes que esté configurado para ejecutarse en modo integrado de SharePoint. Para obtener más información, vea [SharePoint Library Delivery in Reporting Services](../../reporting-services/subscriptions/sharepoint-library-delivery-in-reporting-services.md).  
   
-|Configuración|Description|  
+|Configuración|Descripción|  
 |-------------|-----------------|  
 |**ExcludedRenderFormats, RenderingExtension**|Esta configuración se utiliza para excluir de forma intencionada los formatos de exportación que no funcionan correctamente con la entrega a la biblioteca de documentos. Se excluyen las extensiones de entrega HTMLOWC, RGDI y NULL. Estos formatos se utilizan normalmente para informes interactivos, vistas previas o la carga previa de la caché de informes. No generan archivos de aplicación que puedan verse fácilmente desde una aplicación de escritorio.|  
   
@@ -275,7 +276,7 @@ Para obtener más información sobre cómo editar el archivo, vea [Modificar un 
 ###  <a name="bkmk_ui"></a> Configuración general de las extensiones de la interfaz de usuario de entrega  
  Especifica las extensiones de entrega que contienen un componente de la interfaz de usuario que aparece en las páginas de definición de suscripciones utilizadas al definir cada suscripción en el portal web. Si crea e implementa una extensión de entrega personalizada que tenga opciones definidas por el usuario y desea utilizar el portal web, debe registrar la extensión de entrega en esta sección. De forma predeterminada, hay valores de configuración para el correo electrónico del servidor de informes y el recurso compartido de archivos del servidor de informes. Esta sección no incluye los valores para las extensiones de entrega utilizadas únicamente en suscripciones controladas por datos o en páginas de la aplicación de SharePoint.  
   
-|Configuración|Description|  
+|Configuración|Descripción|  
 |-------------|-----------------|  
 |**DefaultDeliveryExtension**|Esta configuración determina qué extensión de entrega aparece en primer lugar en la lista de tipos de entrega de la página de definición de suscripciones. Esta configuración solo puede contenerla una extensión de entrega. Los valores válidos son **True** o **False**. Cuando este valor se establece en **True**, dicha extensión es la selección predeterminada.|  
 |**Configuration**|Especifica las opciones de configuración de una extensión de entrega. Puede establecer un formato de representación predeterminado para cada extensión de entrega. Los valores válidos son los nombres de extensión de representación incluidos en la sección correspondiente del archivo rsreportserver.config.|  
@@ -383,7 +384,7 @@ Para obtener más información sobre cómo editar el archivo, vea [Modificar un 
 ##  <a name="bkmk_MapTileServer"></a> MapTileServerConfiguration (archivo RSReportServer.config)  
  **MapTileServerConfiguration** define las opciones de configuración de los servicios web de [!INCLUDE[msCoName](../../includes/msconame-md.md)] Bing Maps, que proporcionan un fondo en mosaico para los elementos del informe de mapa de un informe publicado en un servidor de informes. Se requieren todos los elementos secundarios.  
   
-|Configuración|Description|  
+|Configuración|Descripción|  
 |-------------|-----------------|  
 |**MaxConnections**|Especifica el número máximo de conexiones a los servicios web de Bing Maps.|  
 |**Timeout**|Especifica el timeout en segundos que debe transcurrir para obtener una respuesta de los servicios web de Bing Maps.|  

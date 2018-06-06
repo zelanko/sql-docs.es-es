@@ -35,10 +35,11 @@ ms.author: sstein
 manager: craigg
 monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
 ms.openlocfilehash: 25b36b25efbb7c99d3595da26587007f784bfc25
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.sourcegitcommit: 808d23a654ef03ea16db1aa23edab496b73e5072
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/04/2018
+ms.locfileid: "34708043"
 ---
 # <a name="collation-and-unicode-support"></a>Collation and Unicode Support
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -65,7 +66,7 @@ ms.lasthandoff: 05/03/2018
     
  Las opciones asociadas con una intercalación son la distinción de mayúsculas y minúsculas, la distinción de acentos, la distinción de tipos de kana, la distinción de ancho y la distinción de selector de variación. Estas opciones se especifican anexándolas al nombre de intercalación. Por ejemplo, la intercalación `Japanese_Bushu_Kakusu_100_CS_AS_KS_WS` es una intercalación con distinción de mayúsculas y minúsculas, distinción de acentos, distinción de tipos de kana y distinción de ancho. Otro ejemplo: la intercalación `Japanese_Bushu_Kakusu_140_CI_AI_KS_WS_VSS` distingue mayúsculas y minúsculas, los acentos, los tipos de kana, el ancho y el selector de variación.  En la tabla siguiente se describe el comportamiento asociado a estas diversas opciones.    
     
-|Opción|Description|    
+|Opción|Descripción|    
 |------------|-----------------|    
 |Distinguir mayúsculas de minúsculas (_CS)|Distingue entre letras mayúsculas y minúsculas. Si se selecciona, las letras minúsculas se ordenan por delante de sus versiones en mayúsculas. Si esta opción no está seleccionada, la intercalación no distinguirá mayúsculas de minúsculas. Es decir, que SQL Server considera las versiones mayúscula y minúscula de las letras como letras idénticas para fines de ordenación. Puede seleccionar explícitamente no distinguir entre mayúsculas y minúsculas especificando _CI.|    
 |Distinguir acentos (_AS)|Distingue entre caracteres acentuados y no acentuados. Por ejemplo, 'a' no es igual a 'ấ'. Si esta opción no está seleccionada, la intercalación no distinguirá acentos. Es decir, que SQL Server considera las versiones acentuadas y no acentuadas de las letras como letras idénticas para fines de ordenación. Puede seleccionar explícitamente no distinguir acentos especificando _AI.|    

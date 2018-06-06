@@ -3,7 +3,6 @@ title: El estado de sincronización de datos de bases de datos de disponibilidad
 ms.custom: ''
 ms.date: 05/17/2016
 ms.prod: sql
-ms.prod_service: high-availability
 ms.reviewer: ''
 ms.suite: sql
 ms.technology: high-availability
@@ -15,14 +14,15 @@ helpviewer_keywords:
 - Availability Groups [SQL Server], policies
 ms.assetid: 4fd003e7-808e-4b0e-b28a-47d9f2616f06
 caps.latest.revision: 15
-author: MikeRayMSFT
-ms.author: mikeray
+author: MashaMSFT
+ms.author: mathoma
 manager: erikre
-ms.openlocfilehash: fec52227f571a804f914c9d2278276519ebab35e
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: d8c98abcd48d9e1e703bd4e5ca73d62239727671
+ms.sourcegitcommit: 8aa151e3280eb6372bf95fab63ecbab9dd3f2e5e
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/05/2018
+ms.locfileid: "34770181"
 ---
 # <a name="data-synchronization-state-of-availability-database-is-not-healthy"></a>El estado de sincronización de datos de bases de datos de disponibilidad no está en buen estado
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -36,7 +36,7 @@ ms.lasthandoff: 05/03/2018
 |**Categoría**|**Advertencia**|  
 |**Faceta**|Base de datos de disponibilidad|  
   
-## <a name="description"></a>Description  
+## <a name="description"></a>Descripción  
  Esta directiva acumula el estado de sincronización de datos de todas las bases de datos de disponibilidad (también conocidas como "réplicas de base de datos") en la réplica de disponibilidad. La directiva está en mal estado cuando alguna réplica de la base de datos no está en el estado esperado de sincronización de datos. De lo contrario, la directiva está en un estado correcto.  
   
 > [!NOTE]  

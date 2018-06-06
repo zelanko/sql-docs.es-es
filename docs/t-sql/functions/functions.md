@@ -26,10 +26,11 @@ ms.author: edmaca
 manager: craigg
 monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
 ms.openlocfilehash: 707cb1e75bff3d28136e53ddeaf17a63396f8078
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.sourcegitcommit: 808d23a654ef03ea16db1aa23edab496b73e5072
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/04/2018
+ms.locfileid: "34708973"
 ---
 # <a name="what-are-the-sql-database-functions"></a>¿Cuáles son las funciones de base de datos SQL?
 [!INCLUDE[tsql-appliesto-ss2008-asdb-asdw-pdw-md](../../includes/tsql-appliesto-ss2008-asdb-asdw-pdw-md.md)]
@@ -56,7 +57,7 @@ Operan sobre un valor y después devuelven otro valor. Las funciones escalares s
 
 ### <a name="categories-of-scalar-functions"></a>Categorías de las funciones escalares
   
-|Categoría de la función|Description|  
+|Categoría de la función|Descripción|  
 |-----------------------|-----------------|  
 |[Funciones de configuración](configuration-functions-transact-sql.md)|Devuelven información acerca de la configuración actual.|  
 |[Funciones de conversión](conversion-functions-transact-sql.md)|Admiten conversión y conversión de tipos de datos.|  

@@ -14,17 +14,17 @@ helpviewer_keywords:
 - Report Server Windows service, virtual directories
 - report servers [Reporting Services], virtual directories
 - virtual directories [Reporting Services]
-- Report Manager [Reporting Services], virtual directories
 ms.assetid: a0134ef0-086c-443e-93b9-7213a3d76393
 caps.latest.revision: 10
 author: markingmyname
 ms.author: maghan
 manager: kfile
-ms.openlocfilehash: 4421895de0ba4bddc3d6905a142bee7907888033
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 8fadb6163b7ad9e52f02834a3982feb30cd9a3c8
+ms.sourcegitcommit: 8aa151e3280eb6372bf95fab63ecbab9dd3f2e5e
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/05/2018
+ms.locfileid: "34550566"
 ---
 # <a name="configure-report-server-urls--ssrs-configuration-manager"></a>Configurar las direcciones URL del servidor de informes (Administrador de configuración de SSRS)
   En [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)], las direcciones URL se usan para obtener acceso al servicio web del servidor de informes y al [!INCLUDE[ssRSWebPortal](../../includes/ssrswebportal.md)]. Para poder usar cualquier aplicación, debe configurar al menos una dirección URL para el servicio web y otra para el [!INCLUDE[ssRSWebPortal](../../includes/ssrswebportal.md)]. [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] indica valores predeterminados para ambas direcciones URL de la aplicación que mejor funcionan en la mayoría de los escenarios de implementación, incluso en las implementaciones en paralelo con otros servicios web y aplicaciones.  
@@ -36,7 +36,7 @@ ms.lasthandoff: 05/03/2018
 ## <a name="defining-a-report-server-url"></a>Definir una dirección URL del servidor de informes  
  La dirección URL identifica con precisión la ubicación de una instancia de una aplicación del servidor de informes en la red. Al crear una dirección URL del servidor de informes, debe especificar las partes siguientes.  
   
-|Parte|Description|  
+|Parte|Descripción|  
 |----------|-----------------|  
 |Nombre de host|Una red TCP/IP utiliza una dirección IP para identificar de forma única un dispositivo en la red. Hay una dirección IP física para cada tarjeta adaptadora de red que esté instalada en un equipo. Si la dirección IP se resuelve como un encabezado de host, puede especificar el encabezado de host. Si está implementando el servidor de informes en una red corporativa, puede utilizar el nombre de red del equipo.|  
 |Puerto|Un puerto TCP es un extremo en el dispositivo. El servidor de informes escuchará las solicitudes en un puerto designado.|  

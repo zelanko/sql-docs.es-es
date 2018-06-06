@@ -3,7 +3,6 @@ title: Instrucciones Transact-SQL para grupos de disponibilidad AlwaysOn | Micro
 ms.custom: ''
 ms.date: 05/17/2016
 ms.prod: sql
-ms.prod_service: high-availability
 ms.reviewer: ''
 ms.suite: sql
 ms.technology: high-availability
@@ -14,14 +13,15 @@ helpviewer_keywords:
 - Availability Groups [SQL Server], Transact-SQL statements
 ms.assetid: 184d0a81-2259-4db9-9d0d-01aac0b502c8
 caps.latest.revision: 23
-author: MikeRayMSFT
-ms.author: mikeray
+author: MashaMSFT
+ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: a5ef4a3f3c578041c5c1595048e82a981a0435e9
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 1a483026bde8d7b70ab380ac9426370c4fff98db
+ms.sourcegitcommit: 8aa151e3280eb6372bf95fab63ecbab9dd3f2e5e
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/05/2018
+ms.locfileid: "34771201"
 ---
 # <a name="transact-sql-statements-for-always-on-availability-groups"></a>Instrucciones Transact-SQL para grupos de disponibilidad AlwaysOn
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -63,7 +63,7 @@ ms.lasthandoff: 05/03/2018
 ##  <a name="DropAG"></a> DROP AVAILABILITY GROUP  
  [DROP AVAILABILITY GROUP](../../../t-sql/statements/drop-availability-group-transact-sql.md) quita un grupo de disponibilidad especificado y todas sus réplicas. DROP AVAILABILITY GROUP se puede ejecutar desde cualquier nodo de [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] del clúster de conmutación por error de WSFC.  
   
-##  <a name="Restrictions"></a> Restricciones de las instrucciones AVAILABILITY GROUP de Transact-SQL  
+##  <a name="Restrictions"></a> Restrictions on the AVAILABILITY GROUP Transact-SQL Statements  
  Las instrucciones CREATE AVAILABILITY GROUP, ALTER AVAILABILITY GROUP y DROP AVAILABILITY GROUP de [!INCLUDE[tsql](../../../includes/tsql-md.md)] tienen las siguientes restricciones:  
   
 -   Excepto en DROP AVAILABILITY GROUP, la ejecución de estas instrucciones requiere que el servicio HADR esté habilitado en la instancia de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]. Para obtener más información, vea [Habilitar y deshabilitar grupos de disponibilidad AlwaysOn &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/enable-and-disable-always-on-availability-groups-sql-server.md).  

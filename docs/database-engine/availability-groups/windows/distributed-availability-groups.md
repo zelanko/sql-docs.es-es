@@ -3,7 +3,6 @@ title: Grupos de disponibilidad distribuidos (SQL Server) | Microsoft Docs
 ms.custom: ''
 ms.date: 01/12/2018
 ms.prod: sql
-ms.prod_service: high-availability
 ms.reviewer: ''
 ms.suite: sql
 ms.technology: high-availability
@@ -14,17 +13,18 @@ helpviewer_keywords:
 ms.assetid: ''
 caps.latest.revision: ''
 author: allanhirt
-ms.author: mikeray
+ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 4ce87751cb0f279b74a19159ceb966d8cadaec52
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 0b2f8ba15720726e177884aa4481fb43dae6084f
+ms.sourcegitcommit: 8aa151e3280eb6372bf95fab63ecbab9dd3f2e5e
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/05/2018
+ms.locfileid: "34769341"
 ---
 # <a name="distributed-availability-groups"></a>Grupos de disponibilidad distribuidos
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
-Los grupos de disponibilidad distribuidos son una característica nueva que se incluyó en SQL Server 2016 como variante de la característica Grupos de disponibilidad AlwaysOn existente. En este artículo se aclaran algunos aspectos de los grupos de disponibilidad distribuidos y se complementa la [documentación de SQL Server](https://docs.microsoft.com/en-us/sql/sql-server/sql-server-technical-documentation) existente.
+Los grupos de disponibilidad distribuidos son una característica nueva que se incluyó en SQL Server 2016 como variante de la característica Grupos de disponibilidad AlwaysOn existente. En este artículo se aclaran algunos aspectos de los grupos de disponibilidad distribuidos y se complementa la [documentación de SQL Server](https://docs.microsoft.com/sql/sql-server/sql-server-technical-documentation) existente.
 
 > [!NOTE]
 > "DAG" no es la abreviatura oficial de *grupo de disponibilidad distribuido*, porque esa abreviatura ya se usa para hacer referencia a la característica de grupo de disponibilidad de base de datos de Exchange. Esta característica de Exchange no tiene relación alguna con los grupos de disponibilidad de SQL Server ni con los grupos de disponibilidad distribuidos.
@@ -48,7 +48,7 @@ El movimiento de datos en los grupos de disponibilidad distribuidos se puede con
 
 ![Grupo de disponibilidad distribuido y movimiento de datos][2]
 
-La única manera de que la réplica principal de AG 2 acepte inserciones, actualizaciones y eliminaciones es conmutar por error el grupo de disponibilidad distribuido de AG 1 manualmente. En la imagen anterior, como AG 1 contiene la copia de la base de datos de escritura, cuando se realiza una conmutación por error, AG 2 se convierte en el grupo de disponibilidad que puede controlar las inserciones, actualizaciones y eliminaciones. Para más información sobre cómo realizar una conmutación por error de un grupo de disponibilidad distribuido a otro, vea [Conmutación por error a un grupo de disponibilidad secundario]( https://docs.microsoft.com/en-us/sql/database-engine/availability-groups/windows/distributed-availability-groups-always-on-availability-groups).
+La única manera de que la réplica principal de AG 2 acepte inserciones, actualizaciones y eliminaciones es conmutar por error el grupo de disponibilidad distribuido de AG 1 manualmente. En la imagen anterior, como AG 1 contiene la copia de la base de datos de escritura, cuando se realiza una conmutación por error, AG 2 se convierte en el grupo de disponibilidad que puede controlar las inserciones, actualizaciones y eliminaciones. Para más información sobre cómo realizar una conmutación por error de un grupo de disponibilidad distribuido a otro, vea [Conmutación por error a un grupo de disponibilidad secundario]( https://docs.microsoft.com/sql/database-engine/availability-groups/windows/distributed-availability-groups-always-on-availability-groups).
 
 > [!NOTE]
 > En los grupos de disponibilidad distribuidos de SQL Server 2016, la conmutación por error de un grupo de disponibilidad a otro solo puede realizarse a través de la opción FORCE_FAILOVER_ALLOW_DATA_LOSS.
@@ -90,7 +90,7 @@ Los clústeres WSFC individuales y sus correspondientes grupos de disponibilidad
 
 Cuando ambos clústeres WSFC están unidos al mismo dominio (dominios que no son de confianza), no es necesario hacer nada especial al crear el grupo de disponibilidad distribuido. En el caso de los grupos de disponibilidad y clústeres WSFC que no están unidos al mismo dominio, use certificados para que el grupo de disponibilidad distribuido funcione, como haría en gran medida al crear un grupo de disponibilidad para un grupo de disponibilidad independiente del dominio. Para saber cómo configurar certificados para un grupo de disponibilidad distribuido, siga los pasos 3-13 de [Create a domain-independent availability group](domain-independent-availability-groups.md#create-a-domain-independent-availability-group) (Crear un grupo de disponibilidad independiente del dominio).
 
-En un grupo de disponibilidad distribuido, las réplicas principales de cada grupo de disponibilidad subyacente deben tener los certificados de todas las demás. Si ya tiene puntos de conexión que no usan certificados, reconfigure esos puntos de conexión con [ALTER ENDPOINT](https://docs.microsoft.com/en-us/sql/t-sql/statements/alter-endpoint-transact-sql) para reflejar el uso de certificados.
+En un grupo de disponibilidad distribuido, las réplicas principales de cada grupo de disponibilidad subyacente deben tener los certificados de todas las demás. Si ya tiene puntos de conexión que no usan certificados, reconfigure esos puntos de conexión con [ALTER ENDPOINT](https://docs.microsoft.com/sql/t-sql/statements/alter-endpoint-transact-sql) para reflejar el uso de certificados.
 
 ## <a name="distributed-availability-group-usage-scenarios"></a>Escenarios de uso de grupos de disponibilidad distribuidos
 
@@ -106,7 +106,7 @@ Un grupo de disponibilidad tradicional requiere que todos los servidores formen 
 
 ![Grupo de disponibilidad tradicional de varios sitios][4]
 
-Los grupos de disponibilidad distribuidos ofrecen un escenario de implementación más flexible para los grupos de disponibilidad que abarcan varios centros de datos. Se pueden usar grupos de disponibilidad distribuidos donde antes se usaban características como el [trasvase de registros]( https://docs.microsoft.com/en-us/sql/database-engine/log-shipping/about-log-shipping-sql-server). Pero, a diferencia de los grupos de disponibilidad tradicionales, en los grupos de disponibilidad distribuidos no se puede retrasar la aplicación de transacciones. Esto significa que estos grupos no son de ayuda en caso de que se cometa un error humano por el cual se actualizan o eliminan datos incorrectamente.
+Los grupos de disponibilidad distribuidos ofrecen un escenario de implementación más flexible para los grupos de disponibilidad que abarcan varios centros de datos. Se pueden usar grupos de disponibilidad distribuidos donde antes se usaban características como el [trasvase de registros]( https://docs.microsoft.com/sql/database-engine/log-shipping/about-log-shipping-sql-server). Pero, a diferencia de los grupos de disponibilidad tradicionales, en los grupos de disponibilidad distribuidos no se puede retrasar la aplicación de transacciones. Esto significa que estos grupos no son de ayuda en caso de que se cometa un error humano por el cual se actualizan o eliminan datos incorrectamente.
 
 El emparejamiento de los grupos de disponibilidad distribuidos no es muy fuerte, lo que se traduce en que no necesitan un único clúster WSFC. Se mantienen en SQL Server. Dado que los clústeres WSFC se mantienen individualmente y la sincronización es básicamente asincrónica entre los dos grupos de disponibilidad, es más fácil configurar la recuperación ante desastres en otro sitio. Las réplicas principales de cada grupo de disponibilidad sincronizan sus propias réplicas secundarias.
 
@@ -149,7 +149,7 @@ En la siguiente imagen, AG 1 es la réplica principal de dos grupos de disponibi
 
 En los dos ejemplos anteriores, puede haber hasta 27 réplicas en total entre los tres grupos de disponibilidad, y todas ellas se pueden usar para consultas de solo lectura. 
 
-El [enrutamiento de solo lectura]( https://docs.microsoft.com/en-us/sql/database-engine/availability-groups/windows/configure-read-only-routing-for-an-availability-group-sql-server) no funciona completamente con los grupos de disponibilidad distribuidos. Más específicamente:
+El [enrutamiento de solo lectura]( https://docs.microsoft.com/sql/database-engine/availability-groups/windows/configure-read-only-routing-for-an-availability-group-sql-server) no funciona completamente con los grupos de disponibilidad distribuidos. Más específicamente:
 
 1. El enrutamiento de solo lectura se puede configurar, y funcionará con el grupo de disponibilidad principal del grupo de disponibilidad distribuido. 
 2. El enrutamiento de solo lectura se puede configurar, pero no funcionará con el grupo de disponibilidad secundario del grupo de disponibilidad distribuido. Todas las consultas, si usan el agente de escucha para conectarse al grupo de disponibilidad secundario, irán a la réplica principal del grupo de disponibilidad secundario. Si no, tendrá que configurar cada réplica para permitir todas las conexiones como una réplica secundaria y tener acceso a ellas directamente. A pesar de ello, el enrutamiento de solo lectura funcionará si el grupo de disponibilidad secundario se convierte en principal tras una conmutación por error. Este comportamiento podría cambiar en una actualización de SQL Server 2016 o en una versión futura de SQL Server.
@@ -157,7 +157,7 @@ El [enrutamiento de solo lectura]( https://docs.microsoft.com/en-us/sql/database
 
 ## <a name="initialize-secondary-availability-groups-in-a-distributed-availability-group"></a>Inicializar grupos de disponibilidad secundarios en un grupo de disponibilidad distribuido
 
-Los grupos de disponibilidad distribuidos están diseñados con la [propagación automática]( https://docs.microsoft.com/en-us/sql/database-engine/availability-groups/windows/automatically-initialize-always-on-availability-group) como método principal para inicializar la réplica principal en el segundo grupo de disponibilidad. Si hace lo siguiente, realizará una restauración de base de datos completa en la réplica principal del segundo grupo de disponibilidad:
+Los grupos de disponibilidad distribuidos están diseñados con la [propagación automática]( https://docs.microsoft.com/sql/database-engine/availability-groups/windows/automatically-initialize-always-on-availability-group) como método principal para inicializar la réplica principal en el segundo grupo de disponibilidad. Si hace lo siguiente, realizará una restauración de base de datos completa en la réplica principal del segundo grupo de disponibilidad:
 
 1. Restaure las copias de seguridad de las bases de datos con WITH NORECOVERY.
 2. Si procede, restaure las copias de seguridad de registro de transacciones apropiadas con WITH NORECOVERY.
@@ -168,7 +168,7 @@ Cuando la réplica principal del segundo grupo de disponibilidad se agrega al gr
 
 * El resultado que consta en `sys.dm_hadr_automatic_seeding` en la réplica principal del segundo grupo de disponibilidad mostrará `current_state` como FAILED con el motivo "Seeding Check Message Timeout" (se agotó el tiempo de espera del mensaje de comprobación de propagación).
 
-* El registro de SQL Server actual de la réplica principal del segundo grupo de disponibilidad reflejará que la propagación ha funcionado y que los [LSN]( https://docs.microsoft.com/en-us/sql/relational-databases/sql-server-transaction-log-architecture-and-management-guide) se sincronizaron.
+* El registro de SQL Server actual de la réplica principal del segundo grupo de disponibilidad reflejará que la propagación ha funcionado y que los [LSN]( https://docs.microsoft.com/sql/relational-databases/sql-server-transaction-log-architecture-and-management-guide) se sincronizaron.
 
 * El resultado que consta en `sys.dm_hadr_automatic_seeding` en la réplica principal del primer grupo de disponibilidad mostrará current_state como COMPLETED. 
 

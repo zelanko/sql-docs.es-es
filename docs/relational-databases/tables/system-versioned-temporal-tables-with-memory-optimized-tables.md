@@ -15,11 +15,12 @@ author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 monikerRange: = azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: 4454cfd34cf23c1fb22417acf275d7172c16063b
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: b8f6870e0e7881f9ce31a7b9d120b4fb4906a926
+ms.sourcegitcommit: 808d23a654ef03ea16db1aa23edab496b73e5072
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/04/2018
+ms.locfileid: "34563723"
 ---
 # <a name="system-versioned-temporal-tables-with-memory-optimized-tables"></a>Tablas temporales con control de versiones del sistema con tablas con optimización para memoria
 [!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]
@@ -42,7 +43,7 @@ ms.lasthandoff: 05/03/2018
   
 -   La tabla de historial para la tabla con control de versiones del sistema optimizado para memoria debe ser basada en disco, al margen de si la creó el usuario final o el sistema.  
   
--   Las consultas que afectan solo a la tabla actual (en memoria) pueden usarse en [módulos T-SQL compilados de forma nativa](https://msdnstage.redmond.corp.microsoft.com/en-us/library/dn133184.aspx). No se admiten consultas temporales con la cláusula FOR SYSTEM TIME en módulos compilados de forma nativa. Se admite el uso de la cláusula FOR SYSTEM TIME con tablas optimizadas para memoria en consultas ad hoc y módulos no nativos.  
+-   Las consultas que afectan solo a la tabla actual (en memoria) pueden usarse en [módulos T-SQL compilados de forma nativa](https://msdn.microsoft.com/en-us/library/dn133184.aspx). No se admiten consultas temporales con la cláusula FOR SYSTEM TIME en módulos compilados de forma nativa. Se admite el uso de la cláusula FOR SYSTEM TIME con tablas optimizadas para memoria en consultas ad hoc y módulos no nativos.  
   
 -   Cuando **SYSTEM_VERSIONING = ON**, se crea automáticamente una tabla de almacenamiento provisional interna optimizada para memoria a fin de aceptar los cambios con control de versiones del sistema más recientes, que son consecuencia de operaciones de actualización y eliminación en la tabla actual optimizada para memoria.  
   

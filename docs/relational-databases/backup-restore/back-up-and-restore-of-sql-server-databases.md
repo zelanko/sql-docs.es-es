@@ -27,11 +27,11 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: f5a985cffb4aa982e598cbaaeb5c8ddb57133fd7
-ms.sourcegitcommit: b5ab9f3a55800b0ccd7e16997f4cd6184b4995f9
+ms.sourcegitcommit: 808d23a654ef03ea16db1aa23edab496b73e5072
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/23/2018
-ms.locfileid: "34455678"
+ms.lasthandoff: 06/04/2018
+ms.locfileid: "34708033"
 ---
 # <a name="back-up-and-restore-of-sql-server-databases"></a>Realizar copias de seguridad y restaurar bases de datos de SQL Server
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]

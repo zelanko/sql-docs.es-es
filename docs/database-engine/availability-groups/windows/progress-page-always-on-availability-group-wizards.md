@@ -3,7 +3,6 @@ title: Página Progreso (asistentes para grupos de disponibilidad AlwaysOn) | Mi
 ms.custom: ''
 ms.date: 05/17/2016
 ms.prod: sql
-ms.prod_service: high-availability
 ms.reviewer: ''
 ms.suite: sql
 ms.technology: high-availability
@@ -16,14 +15,15 @@ f1_keywords:
 - sql13.swb.newagwizard.progress.f1
 ms.assetid: bd3b0306-8384-4120-a1c9-03825f0ae26a
 caps.latest.revision: 13
-author: MikeRayMSFT
-ms.author: mikeray
+author: MashaMSFT
+ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: ce00100c03dd841b55a168aefce42be3aabae603
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 1fe9313834f9e6cc4f3af9364c9e1aecebe6cbdc
+ms.sourcegitcommit: 8aa151e3280eb6372bf95fab63ecbab9dd3f2e5e
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/05/2018
+ms.locfileid: "34768571"
 ---
 # <a name="progress-page-always-on-availability-group-wizards"></a>Página Progreso (asistentes para grupos de disponibilidad AlwaysOn)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -40,7 +40,7 @@ ms.lasthandoff: 05/03/2018
  **Estado**  
  Indica el resultado de los pasos completados y el porcentaje de finalización del paso actual, del siguiente modo:  
   
-|Resultado|Description|  
+|Resultado|Descripción|  
 |------------|-----------------|  
 |**Error**|Indica que la operación para este paso ha experimentado un error. Haga clic en el vínculo para mostrar un cuadro de diálogo de mensaje que describe el error.|  
 |**En curso (** *porcentaje completado* **)**|Indica que la operación se está produciendo ahora y calcula el porcentaje completado de este paso.|  

@@ -23,11 +23,12 @@ caps.latest.revision: 51
 author: markingmyname
 ms.author: maghan
 manager: kfile
-ms.openlocfilehash: 00aaeca626ac2e2c8982d972bd64b01cc5574a99
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: ca2bbc7549a2616195061a5079918f236e963e28
+ms.sourcegitcommit: 808d23a654ef03ea16db1aa23edab496b73e5072
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/04/2018
+ms.locfileid: "34550036"
 ---
 # <a name="configure-and-administer-a-report-server-ssrs-native-mode"></a>Configurar y administrar un servidor de informes (modo nativo de SSRS)
   En este tema se resumen los métodos que se pueden usar para configurar [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]. También se incluye una lista de temas en los que se explica cómo configurar determinados componentes, características o funciones del servidor. Para configurar [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)], puede:  
@@ -60,7 +61,6 @@ ms.lasthandoff: 05/03/2018
  Describe cómo configurar una cuenta de usuario para procesar informes en modo desatendido.  
   
 ## <a name="see-also"></a>Ver también  
- [Configurar el acceso al Generador de informes](../../reporting-services/report-server/configure-report-builder-access.md)   
  [Archivos de configuración de Reporting Services](../../reporting-services/report-server/reporting-services-configuration-files.md)   
  [Administrador de configuración de Reporting Services &#40;modo nativo&#41;](../../reporting-services/install-windows/reporting-services-configuration-manager-native-mode.md)   
  [Seguridad y protección de Reporting Services](../../reporting-services/security/reporting-services-security-and-protection.md)   

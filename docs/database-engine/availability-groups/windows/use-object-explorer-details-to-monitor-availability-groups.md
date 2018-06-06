@@ -3,7 +3,6 @@ title: Usar los detalles del Explorador de objetos para supervisar los grupos de
 ms.custom: ''
 ms.date: 05/17/2016
 ms.prod: sql
-ms.prod_service: high-availability
 ms.reviewer: ''
 ms.suite: sql
 ms.technology: high-availability
@@ -17,14 +16,15 @@ helpviewer_keywords:
 - Availability Groups [SQL Server]
 ms.assetid: 84affc47-40e0-43d9-855e-468967068c35
 caps.latest.revision: 28
-author: MikeRayMSFT
-ms.author: mikeray
+author: MashaMSFT
+ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: d5525a27e67c6096713f4487ee3e5f4aae898190
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: f955e14d91bd62208d9e03e7c8b0aa6705a879b1
+ms.sourcegitcommit: 8aa151e3280eb6372bf95fab63ecbab9dd3f2e5e
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/05/2018
+ms.locfileid: "34770191"
 ---
 # <a name="use-object-explorer-details-to-monitor-availability-groups"></a>Usar los detalles del Explorador de objetos para supervisar los grupos de disponibilidad
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -91,7 +91,7 @@ ms.lasthandoff: 05/03/2018
   
  Los valores posibles son los siguientes:  
   
-|Valor|Description|  
+|Valor|Descripción|  
 |-----------|-----------------|  
 |**No permitir conexiones**|No se permiten conexiones directas a las bases de datos de disponibilidad cuando esta réplica de disponibilidad está actuando como réplica secundaria. Las bases de datos secundarias no están disponibles para acceso de lectura.|  
 |**Permitir solo conexiones de lectura**|Solo se permiten conexiones de solo lectura directas cuando esta réplica actúa como réplica secundaria. Todas las bases de datos de la réplica están disponibles para acceso de lectura.|  
@@ -100,7 +100,7 @@ ms.lasthandoff: 05/03/2018
  **Estado de conexión**  
  Indica si la réplica secundaria está conectada actualmente a la réplica principal. Los valores posibles son los siguientes:  
   
-|Valor|Description|  
+|Valor|Descripción|  
 |-----------|-----------------|  
 |**Desconectado**|En el caso de una réplica de disponibilidad remota, indica que está desconectada de la réplica de disponibilidad local. La respuesta de la réplica local al estado Desconectado depende de su rol, del siguiente modo:<br /><br /> En la réplica principal, si una réplica secundaria está desconectada, las bases de datos secundarias se marcan como **No sincronizadas** en la réplica principal y la réplica principal espera a que la réplica secundaria vuelva a conectarse.<br /><br /> En la réplica secundaria, cuando detecta que está desconectada, intenta volver a conectarse a la réplica principal.|  
 |**Conectado**|Una réplica de disponibilidad remota que está conectada actualmente a la réplica local.|  
@@ -109,7 +109,7 @@ ms.lasthandoff: 05/03/2018
  **Estado de sincronización**  
  Indica si una réplica secundaria está sincronizada actualmente con la réplica principal. Los valores posibles son los siguientes:  
   
-|Valor|Description|  
+|Valor|Descripción|  
 |-----------|-----------------|  
 |**No sincronizadas**|La base de datos no está sincronizada o no se ha unido todavía al grupo de disponibilidad.|  
 |**Sincronizado**|La base de datos está sincronizada con la base de datos principal en la réplica principal actual, si existe, o en la última réplica principal.<br /><br /> Nota: En modo de rendimiento, la base de datos nunca está en estado Sincronizado.|  
@@ -129,7 +129,7 @@ ms.lasthandoff: 05/03/2018
   
  Los estados posibles de sincronización son los siguientes:  
   
-|Valor|Description|  
+|Valor|Descripción|  
 |-----------|-----------------|  
 |Sincronizando|La base de datos secundaria ha recibido las entradas del registro de transacciones de la base de datos principal no escritas todavía en el disco (protegido).<br /><br /> Nota: En el modo de confirmación asincrónica, el estado de sincronización siempre es **Sincronizando**.|  
 |||  
@@ -137,7 +137,7 @@ ms.lasthandoff: 05/03/2018
  **Suspendida**  
  Indica si la base de datos de disponibilidad está actualmente en línea. Los valores posibles son los siguientes:  
   
-|Valor|Description|  
+|Valor|Descripción|  
 |-----------|-----------------|  
 |**Suspendida**|Este estado indica que la base de datos está suspendida localmente y necesita ser reanudada manualmente.<br /><br /> En la réplica principal, el valor no es confiable para una base de datos secundaria. Para determinar de forma confiable si una base de datos secundaria está suspendida, consúltela en la réplica secundaria que hospeda la base de datos.|  
 |**Sin unir**|Indica que la base de datos secundaria no se ha unido al grupo de disponibilidad o se ha quitado del grupo.|  

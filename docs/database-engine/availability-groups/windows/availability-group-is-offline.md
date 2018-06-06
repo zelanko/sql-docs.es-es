@@ -3,7 +3,6 @@ title: Grupo de disponibilidad sin conexión | Microsoft Docs
 ms.custom: ''
 ms.date: 05/17/2016
 ms.prod: sql
-ms.prod_service: high-availability
 ms.reviewer: ''
 ms.suite: sql
 ms.technology: high-availability
@@ -15,14 +14,15 @@ helpviewer_keywords:
 - Availability Groups [SQL Server], policies
 ms.assetid: 093c5208-bf7a-49f4-a546-72b48197cadf
 caps.latest.revision: 14
-author: MikeRayMSFT
-ms.author: mikeray
+author: MashaMSFT
+ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 50b4993866aecea060c756176e9f160522ed19ab
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 7dc3b221631d07291a4965f5bb37dca54f406703
+ms.sourcegitcommit: 8aa151e3280eb6372bf95fab63ecbab9dd3f2e5e
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/05/2018
+ms.locfileid: "34768601"
 ---
 # <a name="availability-group-is-offline"></a>Grupo de disponibilidad sin conexión
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -36,7 +36,7 @@ ms.lasthandoff: 05/03/2018
 |**Categoría**|**Crítico**|  
 |**Faceta**|grupo de disponibilidad|  
   
-## <a name="description"></a>Description  
+## <a name="description"></a>Descripción  
  Esta directiva comprueba el estado en línea o sin conexión del grupo de disponibilidad. La directiva está en mal estado y se genera una alerta cuando el recurso de clúster del grupo de disponibilidad está sin conexión o no tiene una réplica principal.  
   
  El estado de la directiva es correcto cuando el recurso de clúster del grupo de disponibilidad está en línea y el grupo de disponibilidad tiene una réplica principal.  

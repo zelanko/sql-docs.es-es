@@ -29,11 +29,12 @@ author: edmacauley
 ms.author: edmaca
 manager: craigg
 monikerRange: = azuresqldb-mi-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: b02629d9e51740907fdb1698e50bc9e8c241d26c
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: d1dbc4b6f4cf3dcb464f8e402bfd9d2579e63078
+ms.sourcegitcommit: 808d23a654ef03ea16db1aa23edab496b73e5072
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/04/2018
+ms.locfileid: "34582027"
 ---
 # <a name="create-credential-transact-sql"></a>CREATE CREDENTIAL (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdbmi-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdbmi-xxxx-xxx-md.md)]
@@ -148,7 +149,7 @@ EXEC ('CREATE CREDENTIAL Azure_EKM_TDE_cred
 ### <a name="d-creating-a-credential-using-a-sas-token"></a>D. Crear una credencial con un token de SAS  
  **Se aplica a**: de [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] a la [versión actual](http://go.microsoft.com/fwlink/p/?LinkId=299658).  
   
- En el siguiente ejemplo se crea una credencial de firma de acceso compartido con un token de SAS.  Para obtener un tutorial sobre cómo crear una directiva de acceso almacenada y una firma de acceso compartido en un contenedor de Azure y, luego, crear una credencial usando la firma de acceso compartido, vea [Tutorial: Usar el servicio Microsoft Azure Blob Storage con bases de datos de SQL Server 2016](Tutorial:%20Using%20the%20Microsoft%20Azure%20Blob%20storage%20service%20with%20SQL%20Server%202016%20databases.md).  
+ En el siguiente ejemplo se crea una credencial de firma de acceso compartido con un token de SAS.  Para obtener un tutorial sobre cómo crear una directiva de acceso almacenada y una firma de acceso compartido en un contenedor de Azure y, luego, crear una credencial usando la firma de acceso compartido, vea [Tutorial: Usar el servicio Microsoft Azure Blob Storage con bases de datos de SQL Server 2016](../../relational-databases/tutorial-use-azure-blob-storage-service-with-sql-server-2016.md).  
   
 > [!IMPORTANT]  
 >  El argumento **CREDENCIAL NAME** requiere que el nombre coincida con la ruta de acceso del contenedor, comience por https y no contenga una barra diagonal. El argumento **IDENTITY** requiere el nombre, *SHARED ACCESS SIGNATURE*. El argumento **SECRET** requiere el token de firma de acceso compartido.  

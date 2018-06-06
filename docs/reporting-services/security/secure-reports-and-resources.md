@@ -21,11 +21,12 @@ caps.latest.revision: 47
 author: markingmyname
 ms.author: maghan
 manager: kfile
-ms.openlocfilehash: 82533018e021d38612b7cb73f5cfaa6788f23e60
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: f4a41d9238315719bc6e47fb3bc9c598222673a6
+ms.sourcegitcommit: 8aa151e3280eb6372bf95fab63ecbab9dd3f2e5e
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/05/2018
+ms.locfileid: "34550776"
 ---
 # <a name="secure-reports-and-resources"></a>Proteger informes y recursos
   Puede establecer la seguridad para informes y recursos individuales a fin de controlar el grado de acceso de los usuarios a estos elementos. De manera predeterminada, solo los usuarios que pertenezcan al grupo integrado **Administradores** pueden ejecutar informes, ver recursos, modificar propiedades y eliminar elementos. Para los demás usuarios se deben crear asignaciones de roles que concedan acceso a un informe o recurso.  
@@ -79,7 +80,6 @@ ms.lasthandoff: 05/03/2018
   
 ## <a name="see-also"></a>Ver también  
  [Crear y administrar asignaciones de roles](../../reporting-services/security/create-and-manage-role-assignments.md)   
- [Configurar el acceso al Generador de informes](../../reporting-services/report-server/configure-report-builder-access.md)   
  [Conceder permisos en un servidor de informes en modo nativo](../../reporting-services/security/granting-permissions-on-a-native-mode-report-server.md)   
  [Protección de elementos de orígenes de datos compartidos](../../reporting-services/security/secure-shared-data-source-items.md)   
  [Almacenamiento de las credenciales en un origen de datos de Reporting Services](../../reporting-services/report-data/store-credentials-in-a-reporting-services-data-source.md)  

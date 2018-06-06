@@ -15,11 +15,12 @@ caps.latest.revision: 21
 author: markingmyname
 ms.author: maghan
 manager: kfile
-ms.openlocfilehash: 26a9bbcc0b3e80dc8368c59af8c4922bdcd1a546
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 149c5e9142dc87cc538b0ae6521d0754b5d03d42
+ms.sourcegitcommit: 808d23a654ef03ea16db1aa23edab496b73e5072
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/04/2018
+ms.locfileid: "34585527"
 ---
 # <a name="manage-subscription-owners-and-run-subscription---powershell"></a>Administrar propietarios de suscripciones y ejecutar suscripciones (PowerShell)
 [!INCLUDE[feedback_stackoverflow_msdn_connect_md](../../includes/feedback-stackoverflow-msdn-connect-md.md)]
@@ -139,7 +140,7 @@ $subscriptions | select Path, report, Description, Owner, SubscriptionID, lastex
 ```  
   
 > [!TIP]  
->  Para comprobar las direcciones URL de los sitios en modo de SharePoint, use el cmdlet de SharePoint **Get-SPSite**. Para obtener más información, vea [Get-SPSite](http://msdn.microsoft.com/library/ff607950&#40;v=office.15&#41;.aspx).  
+>  Para comprobar las direcciones URL de los sitios en modo de SharePoint, use el cmdlet de SharePoint **Get-SPSite**. Para obtener más información, vea [Get-SPSite](http://msdn.microsoft.com/library/ff607950\(v=office.15\).aspx).  
   
 ##  <a name="bkmk_list_all_one_user"></a> Script: mostrar todas las suscripciones propiedad de un usuario específico  
  Este script presenta todas las suscripciones poseídas por un usuario específico. Puede utilizarlo para probar su conexión o para comprobar la ruta de acceso del informe y el identificador de la suscripción para su uso en los demás scripts. Este script es útil si desea comprobar qué suscripciones poseía una persona que abandona su organización, para cambiar el propietario o eliminar la suscripción.  

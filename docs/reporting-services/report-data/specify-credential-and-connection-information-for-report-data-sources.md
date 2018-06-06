@@ -1,7 +1,7 @@
 ---
 title: Especificar información de credenciales y conexión para los orígenes de datos de informes | Microsoft Docs
 ms.custom: ''
-ms.date: 03/17/2017
+ms.date: 05/28/2018
 ms.prod: reporting-services
 ms.prod_service: reporting-services-sharepoint, reporting-services-native
 ms.component: report-data
@@ -33,11 +33,12 @@ caps.latest.revision: 61
 author: markingmyname
 ms.author: maghan
 manager: kfile
-ms.openlocfilehash: 444cfe13b05a60b3b2a7017f98100f6ecf093140
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 30e9d5668ada3bbe6d231147b9930f6d079c6f29
+ms.sourcegitcommit: 808d23a654ef03ea16db1aa23edab496b73e5072
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/04/2018
+ms.locfileid: "34550736"
 ---
 # <a name="specify-credential-and-connection-information-for-report-data-sources"></a>Especificar información de credenciales y conexión para los orígenes de datos de informes
   Un servidor de informes utiliza credenciales para conectarse a orígenes de datos externos que proporcionan contenido a informes o información de destinatarios a una suscripción controlada por datos. Puede especificar credenciales que utilicen la autenticación de Windows, la autenticación de la base de datos, la autenticación personalizada o que no utilicen autenticación. Al enviar una solicitud de conexión a través de la red, el servidor de informes suplantará una cuenta de usuario o una cuenta de ejecución desatendida. Para obtener más información acerca del contexto de seguridad en el que se realiza una solicitud de conexión, vea [Configuración de orígenes de datos y conexiones de red](#DataSourceConfigurationConnections) más adelante en este tema.  
@@ -169,8 +170,6 @@ ms.lasthandoff: 05/03/2018
  [Orígenes de datos admitidos por Reporting Services &#40;SSRS&#41;](../../reporting-services/report-data/data-sources-supported-by-reporting-services-ssrs.md)   
  [Conexiones de datos, orígenes de datos y cadenas de conexión &#40;Generador de informes y SSRS&#41;](../../reporting-services/report-data/data-connections-data-sources-and-connection-strings-report-builder-and-ssrs.md)   
  [Administrar orígenes de datos de informe](../../reporting-services/report-data/manage-report-data-sources.md)   
- [Administrador de informes &#40;Modo nativo de SSRS&#41;](http://msdn.microsoft.com/library/80949f9d-58f5-48e3-9342-9e9bf4e57896)   
- [Crear, eliminar o modificar un origen de datos compartido &#40;Administrador de informes&#41;](http://msdn.microsoft.com/library/cd7bace3-f8ec-4ee3-8a9f-2f217cdca9f2)   
- [Configurar propiedades de origen de datos para un informe &#40;Administrador de informes&#41;](../../reporting-services/report-data/configure-data-source-properties-for-a-report-report-manager.md)  
+ [Configuración de propiedades de origen de datos para un informe](../../reporting-services/report-data/configure-data-source-properties-for-a-report-report-manager.md)  
   
   

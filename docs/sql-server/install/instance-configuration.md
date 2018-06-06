@@ -3,12 +3,9 @@ title: Ayuda del Asistente para instalación | Microsoft Docs
 ms.custom: ''
 ms.date: 2017-04-21
 ms.prod: sql
-ms.prod_service: database-engine
-ms.component: install
 ms.reviewer: ''
 ms.suite: sql
-ms.technology:
-- setup-install
+ms.technology: install
 ms.tgt_pltfrm: ''
 ms.topic: conceptual
 f1_keywords:
@@ -17,15 +14,16 @@ helpviewer_keywords:
 - Instance Name page [SQL Server Installation Wizard]
 - SQL Server Installation Wizard, Instance Name page
 ms.assetid: 5bf822fc-6dec-4806-a153-e200af28e9a5
-caps.latest.revision: 62
-ms.author: mikeray
+author: MashaMSFT
+ms.author: mathoma
 manager: craigg
 robots: noindex,nofollow
-ms.openlocfilehash: 0366b0613623960afd56a2877ad9462fded60bf5
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: b2224040e62b1c9f75cf93e4231cef1443edfbac
+ms.sourcegitcommit: 8aa151e3280eb6372bf95fab63ecbab9dd3f2e5e
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/05/2018
+ms.locfileid: "34772771"
 ---
 # <a name="installation-wizard-help"></a>Ayuda del Asistente para instalación
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -135,7 +133,7 @@ Cada instancia de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] cons
   
 ### <a name="uielement-list"></a>Lista de UIElement  
   
-|Description|Directorio predeterminado|Recomendaciones|  
+|Descripción|Directorio predeterminado|Recomendaciones|  
 |-----------------|-----------------------|---------------------|  
 |Directorio raíz de datos|C:\Archivos de programa\Microsoft SQL Server\MSAS*nn*.\<IdDeInstancia>\OLAP\Data |Asegúrese de que la carpeta \Archivos de programa\Microsoft SQL Server\ está protegida con permisos limitados. El rendimiento de [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] depende, en muchas configuraciones, del rendimiento del espacio de almacenamiento en el que se ubica el directorio de datos. Coloque este directorio en el almacenamiento asociado al sistema cuyo rendimiento sea máximo. En las instalaciones del clúster de conmutación por error, asegúrese de que los directorios de datos están ubicados en el disco compartido.|  
 |Directorio de archivos de registro|C:\Archivos de programa\Microsoft SQL Server\MSAS*nn*.\<IdDeInstancia>\OLAP\Log |Este es el directorio para los archivos de registro de [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] e incluye el registro FlightRecorder. Si incrementa la duración de la Caja negra SQL, asegúrese de que el directorio del registro tenga espacio suficiente.|  
@@ -173,7 +171,7 @@ Cada instancia de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] cons
   
 ### <a name="uielement-list"></a>Lista de UIElement  
   
-|Description|Tipo de almacenamiento compatible|Directorio predeterminado|Recomendaciones|  
+|Descripción|Tipo de almacenamiento compatible|Directorio predeterminado|Recomendaciones|  
 |-----------------|----------------------------|-----------------------|---------------------|  
 |Directorio raíz de datos|Disco local, servidor de archivos SMB, almacenamiento compartido* |C:\Archivos de programa\\[!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]\ |El programa de instalación de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] configurará las ACL para los directorios de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] y anulará la herencia como parte de la configuración.|  
 |Directorio de base de datos de usuario|Disco local, servidor de archivos SMB, almacenamiento compartido*|C:\Archivos de programa\\[!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]\MSSQL*nn*.\<IdDeInstancia>\MSSQL\Data |Las prácticas recomendadas para los directorios de datos del usuario dependen de los requisitos de carga de trabajo y rendimiento.|  
@@ -185,7 +183,7 @@ Cada instancia de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] cons
 ### <a name="failover-cluster-instance-of-includessnoversionincludesssnoversion-mdmd"></a>Instancia de clúster de conmutación por error de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]  
  En la tabla siguiente se indican los tipos de almacenamiento admitidos y los directorios predeterminados para una instancia de clúster de conmutación por error de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] que el usuario puede configurar durante la instalación de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
-|Description|Tipo de almacenamiento compatible|Directorio predeterminado|Recomendaciones|  
+|Descripción|Tipo de almacenamiento compatible|Directorio predeterminado|Recomendaciones|  
 |-----------------|----------------------------|-----------------------|---------------------|  
 |Directorio raíz de datos|Almacenamiento compartido, servidor de archivos SMB|\<Unidad:>\Archivos de programa\\[!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]\\<br /><br /> Sugerencia: Si se seleccionó un disco compartido en la página **Selección de disco de clúster** , el valor predeterminado es el primer disco compartido. El valor predeterminado de este campo será en blanco si no se realizó ninguna selección en la página **Selección de disco de clúster** .|El programa de instalación de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] configurará las ACL para los directorios de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] y anulará la herencia como parte de la configuración.|  
 |Directorio de base de datos de usuario|Almacenamiento compartido, servidor de archivos SMB|\<Unidad:>\Archivos de programa\\[!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]\MSSQL*nn*.\<IdDeInstancia>\MSSQL\Data<br /><br /> Sugerencia: Si se seleccionó un disco compartido en la página **Selección de disco de clúster** , el valor predeterminado es el primer disco compartido. El valor predeterminado de este campo será en blanco si no se realizó ninguna selección en la página **Selección de disco de clúster** .|Las prácticas recomendadas para los directorios de datos del usuario dependen de los requisitos de carga de trabajo y rendimiento.|  
@@ -225,7 +223,7 @@ Cada instancia de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] cons
   
 #### <a name="uielement-list"></a>Lista de UIElement  
   
-|Description|Directorio predeterminado|Recomendaciones|  
+|Descripción|Directorio predeterminado|Recomendaciones|  
 |-----------------|-----------------------|---------------------|  
 |Directorio raíz de datos |C:\Archivos de programa\Microsoft SQL Server\MSAS*nn*.\<IdDeInstancia>\OLAP\Data |Asegúrese de que la carpeta \Archivos de programa\Microsoft SQL Server\ está protegida con permisos limitados. El rendimiento de [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] depende, en muchas configuraciones, del rendimiento del espacio de almacenamiento en el que se ubica el directorio de datos. Coloque este directorio en el almacenamiento asociado al sistema cuyo rendimiento sea máximo. En las instalaciones del clúster de conmutación por error, asegúrese de que los directorios de datos están ubicados en el disco compartido.|  
 |Directorio de archivos de registro|C:\Archivos de programa\Microsoft SQL Server\MSAS*nn*.\<IdDeInstancia>\OLAP\Log |Este es el directorio para los archivos de registro de [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] e incluye el registro FlightRecorder. Si incrementa la duración de la Caja negra SQL, asegúrese de que el directorio del registro tenga espacio suficiente.|  
@@ -369,7 +367,7 @@ Cada instancia de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] cons
 ### <a name="data-and-log-directories-for--a-stand-alone-instance-of--includessnoversionincludesssnoversion-mdmd"></a>Directorios de datos y de registro para una instancia independiente de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]  
  En la tabla siguiente se indican los tipos de almacenamiento admitidos y los directorios predeterminados para instancias independientes de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] que puede configurar durante la instalación.  
   
-|Description|Tipo de almacenamiento compatible|Directorio predeterminado|Recomendaciones|  
+|Descripción|Tipo de almacenamiento compatible|Directorio predeterminado|Recomendaciones|  
 |-----------------|----------------------------|-----------------------|---------------------|  
 |**Directorios de datos**|Disco local, servidor de archivos SMB y almacenamiento compartido* |C:\Archivos de programa\\[!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]\MSSQL*nn*.\<IdDeInstancia>\MSSQL\Data|El programa de instalación de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] configurará las ACL para los directorios de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] y anulará la herencia como parte de la configuración.<br /><br /> Las prácticas recomendadas para los directorios **tempdb** dependen de los requisitos de carga de trabajo y rendimiento. Especifique varias carpetas y unidades para distribuir los archivos de datos entre diversos volúmenes.|  
 |**Directorio de registro**|Disco local, servidor de archivos SMB y almacenamiento compartido*|C:\Archivos de programa\\[!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]\MSSQL*nn*.\<IdDeInstancia>\MSSQL\Data|Asegúrese de que el directorio de registro tenga espacio suficiente.|  
@@ -379,7 +377,7 @@ Cada instancia de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] cons
 ### <a name="data-and-log-directories-for-a-failover-cluster-instance-of-includessnoversionincludesssnoversion-mdmd"></a>Directorios de datos y registro para una instancia de clúster de conmutación por error de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]  
  En la tabla siguiente se indican los tipos de almacenamiento admitidos y los directorios predeterminados para una instancia de clúster de conmutación por error de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] que el usuario puede configurar durante la instalación de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
-|Description|Tipo de almacenamiento compatible|Directorio predeterminado|Recomendaciones|  
+|Descripción|Tipo de almacenamiento compatible|Directorio predeterminado|Recomendaciones|  
 |-----------------|----------------------------|-----------------------|---------------------|  
 |Directorio de datos de**tempdb** |Disco local, almacenamiento compartido y servidor de archivos SMB|\<Unidad:>Archivos de programa\\[!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]\MSSQL*nn*.\<IdDeInstancia>\Data<br /><br /> Sugerencia: Si se seleccionó un disco compartido en la página **Selección de disco de clúster** , el valor predeterminado es el primer disco compartido. El valor predeterminado de este campo será en blanco si no se realizó ninguna selección en la página **Selección de disco de clúster** .|El programa de instalación de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] configurará las ACL para los directorios de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] y anulará la herencia como parte de la configuración.<br /><br /> Asegúrese de que el directorio o los directorios (en caso de indicarse varios archivos) especificados son válidos para todos los nodos de clúster. Durante la conmutación por error, si los directorios **tempdb** no están disponibles en el nodo de destino de la conmutación por error, el recurso de SQL Server no podrá ponerse en línea.|  
 |Directorio del registro de**tempdb** |Disco local, almacenamiento compartido y servidor de archivos SMB|\<Unidad:>\Archivos de programa\\[!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]\MSSQL*nn*.\<IdDeInstancia>\MSSQL\Data<br /><br /> Sugerencia: Si se seleccionó un disco compartido en la página **Selección de disco de clúster** , el valor predeterminado es el primer disco compartido. El valor predeterminado de este campo será en blanco si no se realizó ninguna selección en la página **Selección de disco de clúster** .|Las prácticas recomendadas para los directorios de datos del usuario dependen de los requisitos de carga de trabajo y rendimiento.<br /><br /> Asegúrese de que el directorio especificado sea válido para todos los nodos de clúster. Durante la conmutación por error, si los directorios **tempdb** no están disponibles en el nodo de destino de la conmutación por error, el recurso de SQL Server no podrá ponerse en línea.<br /><br /> Asegúrese de que el directorio de registro tenga espacio suficiente.|  

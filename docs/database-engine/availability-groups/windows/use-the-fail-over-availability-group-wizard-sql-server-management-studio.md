@@ -3,7 +3,6 @@ title: Usar el Asistente para grupo de disponibilidad de conmutación por error 
 ms.custom: ''
 ms.date: 05/17/2016
 ms.prod: sql
-ms.prod_service: high-availability
 ms.reviewer: ''
 ms.suite: sql
 ms.technology: high-availability
@@ -21,14 +20,15 @@ helpviewer_keywords:
 - Availability Groups [SQL Server], configuring
 ms.assetid: 4a602584-63e4-4322-aafc-5d715b82b834
 caps.latest.revision: 26
-author: MikeRayMSFT
-ms.author: mikeray
+author: MashaMSFT
+ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 60787866e1f26cb577c210c2c8b1a67e996ca871
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 756f260b8e2b3459f2ac2bf4368a3e4bdafa74e7
+ms.sourcegitcommit: 8aa151e3280eb6372bf95fab63ecbab9dd3f2e5e
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/05/2018
+ms.locfileid: "34771141"
 ---
 # <a name="use-the-fail-over-availability-group-wizard-sql-server-management-studio"></a>Usar el Asistente para grupo de disponibilidad de conmutación por error (SQL Server Management Studio)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -109,7 +109,7 @@ ms.lasthandoff: 05/03/2018
  **Estado de quórum**  
  Para el tipo de clúster WSFC, muestra uno de los siguientes estados de cuórum de la réplica de disponibilidad:  
   
-   |Valor|Description|  
+   |Valor|Descripción|  
    |-----------|-----------------|  
    |**Quórum normal**|El clúster se ha iniciado con quórum normal.|  
    |**Quórum forzado**|El clúster se ha iniciado con quórum forzado.|  
@@ -131,7 +131,7 @@ ms.lasthandoff: 05/03/2018
  **Modo de disponibilidad**  
  Muestra el modo de disponibilidad de la instancia del servidor, que será uno de los siguientes:  
   
-|Valor|Description|  
+|Valor|Descripción|  
 |-----------|-----------------|  
 |**Confirmación sincrónica**|En modo de confirmación sincrónica, antes de la confirmación de transacciones, una réplica principal de confirmación sincrónica espera a que una réplica secundaria de confirmación sincrónica notifique que ha terminado de proteger el registro. El modo de confirmación sincrónica asegura que, una vez que una base de datos secundaria se sincroniza con la base de datos principal, las transacciones confirmadas queden totalmente protegidas.|  
 |**Confirmación asincrónica**|En modo de confirmación asincrónica, la réplica principal confirma las transacciones sin esperar la notificación de que una réplica secundaria de confirmación asincrónica ha protegido el registro. El modo de confirmación asincrónica minimiza la latencia de las transacciones en las bases de datos secundarias pero permite que se retrasen detrás de las bases de datos principales, haciendo posible alguna pérdida de datos.|  
@@ -141,7 +141,7 @@ ms.lasthandoff: 05/03/2018
  **Modo de conmutación por error**  
  Muestra el modo de conmutación por error de la instancia del servidor, que será uno de los siguientes:  
   
-|Valor|Description|  
+|Valor|Descripción|  
 |-----------|-----------------|  
 |**Automática**|Una réplica secundaria que está configurada para la conmutación automática por error también admite la conmutación por error manual planeada, siempre que la réplica secundaria esté sincronizada con la réplica principal.|  
 |**Manual**|Existen dos tipos de conmutación por error manual: planeada (sin pérdida de datos) y forzada (con posible pérdida de datos). Para una réplica secundaria determinada, solo se admite una de ellas, dependiendo del modo de disponibilidad y, para el modo de confirmación sincrónica, el estado de sincronización de la réplica secundaria. Para determinar qué forma de conmutación por error manual admite actualmente una réplica secundaria determinada, vea la columna **Preparación para la conmutación por error** de esta cuadrícula.|  
@@ -151,7 +151,7 @@ ms.lasthandoff: 05/03/2018
  **Preparación para la conmutación por error**  
  Muestra la preparación para la conmutación por error de la réplica secundaria, una de las siguientes:  
   
-|Valor|Description|  
+|Valor|Descripción|  
 |-----------|-----------------|  
 |**No se produce pérdida de datos**|Esta réplica secundaria actualmente admite la conmutación por error planeada. Este valor solo aparece cuando una réplica secundaria en modo de confirmación sincrónica está sincronizada con la réplica principal.|  
 |**Pérdida de datos, Advertencias(** *#* **)**|Esta réplica secundaria admite actualmente conmutación por error forzada (con posible pérdida de datos). Este valor tiene lugar siempre que la réplica secundaria no esté sincronizada con la réplica principal. Haga clic en el vínculo de advertencias de la pérdida de datos para obtener información sobre la posible pérdida de datos.|  

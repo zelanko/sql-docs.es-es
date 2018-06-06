@@ -15,11 +15,12 @@ caps.latest.revision: 13
 author: maggiesMSFT
 ms.author: maggies
 manager: kfile
-ms.openlocfilehash: 9a8daf190f0fbd77bc36e2be7d079a2c7176db6f
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 343372d210fa960ca85ca672e96b0e1aaedf6277
+ms.sourcegitcommit: 808d23a654ef03ea16db1aa23edab496b73e5072
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/04/2018
+ms.locfileid: "34550076"
 ---
 # <a name="report-builder-authoring-environment-ssrs"></a>entorno de creación del Generador de informes (SSRS)
   El Generador de informes [!INCLUDE[ssRBnoversion](../../includes/ssrbnoversion-md.md)] es un entorno de creación independiente para crear informes paginados de [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] fuera de Visual Studio. Al diseñar un informe, especifica dónde obtener los datos, qué datos obtener y cómo mostrar los datos. Al ejecutar el informe, el procesador de informes toma toda la información especificada, recupera los datos y los combina con el diseño del informe para generar el informe. Puede instalarlo desde el portal web de [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] o desde el Centro de descarga de Microsoft.  
@@ -51,7 +52,6 @@ ms.lasthandoff: 05/03/2018
   
 ## <a name="see-also"></a>Ver también  
  [Install Report Builder](../../reporting-services/install-windows/install-report-builder.md)   
- [Configurar el acceso al Generador de informes](../../reporting-services/report-server/configure-report-builder-access.md)   
  [Herramientas de Reporting Services](../../reporting-services/tools/reporting-services-tools.md)   
  [Diseñar informes con el Diseñador de informes &#40;SSRS&#41;](../../reporting-services/tools/design-reporting-services-paginated-reports-with-report-designer-ssrs.md)  
   

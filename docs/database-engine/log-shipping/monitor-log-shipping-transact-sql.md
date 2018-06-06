@@ -3,8 +3,6 @@ title: Supervisar el trasvase de registros (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql
-ms.prod_service: high-availability
-ms.component: log-shipping
 ms.reviewer: ''
 ms.suite: sql
 ms.technology: high-availability
@@ -20,14 +18,15 @@ helpviewer_keywords:
 - monitoring log shipping [SQL Server]
 ms.assetid: acf3cd99-55f7-4287-8414-0892f830f423
 caps.latest.revision: 29
-author: MikeRayMSFT
-ms.author: mikeray
+author: MashaMSFT
+ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 04c9988606f8729ae0e49c825ed6b40a431889ea
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 1d805bc8bdb62f5aad87afa19fd12e4d134a6ed8
+ms.sourcegitcommit: 8aa151e3280eb6372bf95fab63ecbab9dd3f2e5e
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/05/2018
+ms.locfileid: "34771701"
 ---
 # <a name="monitor-log-shipping-transact-sql"></a>Supervisar el trasvase de registros (Transact-SQL)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -43,7 +42,7 @@ ms.lasthandoff: 05/03/2018
   
  Estas tablas se pueden consultar para supervisar el estado de una sesión de trasvase de registros. Por ejemplo, para conocer el estado del trasvase de registros, compruebe el estado y el historial del trabajo de copia de seguridad, trabajo de copia y trabajo de restauración. Puede ver el historial y los detalles de errores específicos del trasvase de registros mediante la consulta de las siguientes tablas de supervisión.  
   
-|Table|Description|  
+|Table|Descripción|  
 |-----------|-----------------|  
 |[log_shipping_monitor_alert](../../relational-databases/system-tables/log-shipping-monitor-alert-transact-sql.md)|Almacena el Id. del trabajo de alerta.|  
 |[log_shipping_monitor_error_detail](../../relational-databases/system-tables/log-shipping-monitor-error-detail-transact-sql.md)|Almacena los detalles de errores de los trabajos de trasvase de registros. Puede consultar esta tabla para ver los errores de una sesión de agente. Opcionalmente, puede ordenar los errores por la fecha y la hora en que se registraron. Cada error se registra como una secuencia de excepciones y se pueden registrar varios errores (secuencias) por sesión de agente.|  
@@ -54,7 +53,7 @@ ms.lasthandoff: 05/03/2018
 ## <a name="stored-procedures-for-monitoring-log-shipping"></a>Procedimientos almacenados para supervisar el trasvase de registros  
  La información de supervisión e historial se almacena en tablas de **msdb**, a las que se puede tener acceso mediante procedimientos almacenados de trasvase de registros. Ejecute estos procedimientos almacenados en los servidores indicados en la siguiente tabla.  
   
-|Procedimiento almacenado|Description|Ejecute este procedimiento en|  
+|Procedimiento almacenado|Descripción|Ejecute este procedimiento en|  
 |----------------------|-----------------|---------------------------|  
 |[sp_help_log_shipping_monitor_primary](../../relational-databases/system-stored-procedures/sp-help-log-shipping-monitor-primary-transact-sql.md)|Devuelve registros de supervisión para la base de datos principal especificada desde la tabla **log_shipping_monitor_primary** .|Servidor de supervisión o servidor principal|  
 |[sp_help_log_shipping_monitor_secondary](../../relational-databases/system-stored-procedures/sp-help-log-shipping-monitor-secondary-transact-sql.md)|Devuelve registros de supervisión para la base de datos secundaria especificada desde la tabla **log_shipping_monitor_secondary** .|Servidor de supervisión o servidor secundario|  

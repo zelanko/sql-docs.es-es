@@ -24,12 +24,12 @@ author: craigg-msft
 ms.author: craigg
 manager: jhubbard
 monikerRange: '>= sql-server-linux-2017  || >= sql-server-2016 || = sqlallproducts-allversions'
-ms.openlocfilehash: b2fc97c10ee40d90704459dd820882c5b97d22d2
-ms.sourcegitcommit: 02c889a1544b0859c8049827878d66b2301315f8
+ms.openlocfilehash: 2d71913e69d5b4a7f10239f8afe24e65ef15fe27
+ms.sourcegitcommit: 808d23a654ef03ea16db1aa23edab496b73e5072
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/17/2018
-ms.locfileid: "34225443"
+ms.lasthandoff: 06/04/2018
+ms.locfileid: "34709073"
 ---
 # <a name="sql-server-documentation"></a>Documentación de SQL Server
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -53,10 +53,10 @@ SQL Server es una pieza fundamental de la plataforma de datos de Microsoft. SQL 
 |[Novedades de SQL Server 2016](../sql-server/what-s-new-in-sql-server-2016.md)     | [Notas de la versión de SQL Server 2016](../sql-server/sql-server-2016-release-notes.md)        |
 
 ![info_tip](../sql-server/media/info-tip.png) El contenido de SQL Server 2014 pronto se combinará con el del sitio .docs.  Por ahora, vea:
-- [Libros en pantalla de SQL Server 2014](https://msdn.microsoft.com/en-us/library/ms130214(v=sql.120).aspx)
+- [Libros en pantalla de SQL Server 2014](https://msdn.microsoft.com/library/ms130214(v=sql.120).aspx)
 - [Novedades de SQL Server 2014](https://msdn.microsoft.com/library/bb500435(v=sql.120).aspx)
 - [SQL Server 2014 Release Notes](../sql-server/sql-server-2014-release-notes.md)
-- [Versiones anteriores](https://docs.microsoft.com/en-us/previous-versions/sql/)
+- [Versiones anteriores](https://docs.microsoft.com/previous-versions/sql/)
 ::: moniker-end
 
 ::: moniker range="= sql-server-linux-2017 || = sql-server-2017"
@@ -107,7 +107,7 @@ SQL Server es una pieza fundamental de la plataforma de datos de Microsoft. SQL 
 - [Importar y exportar datos con el Asistente para importación y exportación de SQL Server](../integration-services/import-export-data/import-and-export-data-with-the-sql-server-import-and-export-wizard.md)
 - [Migración de su base de datos SQL Server a Azure SQL Database](https://docs.microsoft.com/azure/sql-database/sql-database-migrate-your-sql-server-database)
 - [Microsoft Data Migration Assistant](https://www.microsoft.com/download/details.aspx?id=53595)
-- [Migración a Azure: evaluación, migración y optimización](https://azure.microsoft.com/en-us/migration/)
+- [Migración a Azure: evaluación, migración y optimización](https://azure.microsoft.com/migration/)
 ::: moniker-end
 
 ::: moniker range=">= sql-server-2017 || >= sql-server-linux-2017 || = sqlallproducts-allversions"
@@ -126,8 +126,8 @@ SQL Server es una pieza fundamental de la plataforma de datos de Microsoft. SQL 
 
 ## <a name="samples"></a>Ejemplos
 
-- [Base de datos de ejemplo de Wide World Importers](https://docs.microsoft.com/en-us/sql/samples/wide-world-importers-what-is)
-- [Bases de datos de ejemplo y scripts de AdventureWorks para SQL Server 2016](https://docs.microsoft.com/en-us/sql/samples/sql-samples-where-are) 
+- [Base de datos de ejemplo de Wide World Importers](https://docs.microsoft.com/sql/samples/wide-world-importers-what-is)
+- [Bases de datos de ejemplo y scripts de AdventureWorks para SQL Server 2016](https://docs.microsoft.com/sql/samples/sql-samples-where-are) 
 - [Ejemplos de SQL Server en GitHub](https://github.com/Microsoft/sql-server-samples)
 
 [!INCLUDE[get-help-options](../includes/paragraph-content/get-help-options.md)]

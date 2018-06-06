@@ -21,6 +21,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32873150"
 ---
 # <a name="how-to-work-with-cdc-services"></a>Cómo trabajar con servicios CDC
   En este procedimiento se describe cómo usar la Consola de configuración del servicio CDC para preparar una instancia de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] de manera que funcione con servicios CDC de Oracle y para crear un nuevo servicio CDC.  

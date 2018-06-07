@@ -3,8 +3,7 @@
 # [Conversión](data-type-conversion-database-engine.md)  
 # [Prioridad](data-type-precedence-transact-sql.md)  
 # [Sinónimos](data-type-synonyms-transact-sql.md)  
-# [Precisión, escala y longitud](precision-scale-and-length-transact-sql.md)  
-# [bit](bit-transact-sql.md)  
+# [Precisión, escala y longitud](precision-scale-and-length-transact-sql.md)    
 # [cursor](cursor-transact-sql.md)  
 # [Fecha y hora](date-and-time-types.md)  
 ## [date](date-transact-sql.md)  
@@ -27,6 +26,7 @@
 ## [Write (motor de base de datos)](write-database-engine.md)  
 
 # [Numéricos](numeric-types.md)  
+## [bit](bit-transact-sql.md)
 ## [decimal y numeric](decimal-and-numeric-transact-sql.md)  
 ## [float y real](float-and-real-transact-sql.md)  
 ## [int, bigint, smallint y tinyint](int-bigint-smallint-and-tinyint-transact-sql.md)  

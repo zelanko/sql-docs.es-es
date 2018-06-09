@@ -1,8 +1,6 @@
 ---
 title: Solución de problemas (DB2ToSQL) | Documentos de Microsoft
 ms.prod: sql
-ms.prod_service: sql-tools
-ms.component: ssma-db2
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
@@ -18,11 +16,12 @@ caps.latest.revision: 3
 author: Shamikg
 ms.author: Shamikg
 manager: craigg
-ms.openlocfilehash: e6e268922297db9e01a7b77818090a78d2caa289
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: e7e905e94be98c1a6f3dc6069170c5d51cab01f6
+ms.sourcegitcommit: 8aa151e3280eb6372bf95fab63ecbab9dd3f2e5e
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/05/2018
+ms.locfileid: "34775521"
 ---
 # <a name="troubleshooting-db2tosql"></a>Solución de problemas (DB2ToSQL)
 No es raro en mitad de problemas de migración ejecutando los comandos o scripts de la consola.  

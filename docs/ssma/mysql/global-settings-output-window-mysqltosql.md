@@ -1,8 +1,6 @@
 ---
 title: Configuración global (ventana de salida) (MySQLToSQL) | Documentos de Microsoft
 ms.prod: sql
-ms.prod_service: sql-tools
-ms.component: ssma-mysql
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
@@ -18,11 +16,12 @@ caps.latest.revision: 3
 author: Shamikg
 ms.author: Shamikg
 manager: craigg
-ms.openlocfilehash: 0da4b9703ba3810222f9a860a426e3117f4883c5
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: ad3295ae82cec64e2c6432f8d984d4e2cace35db
+ms.sourcegitcommit: 8aa151e3280eb6372bf95fab63ecbab9dd3f2e5e
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/05/2018
+ms.locfileid: "34776311"
 ---
 # <a name="global-settings-output-window-mysqltosql"></a>Configuración global (ventana de salida) (MySQLToSQL)
 Use la **configuración Global** cuadro de diálogo para especificar la configuración de SSMA.  

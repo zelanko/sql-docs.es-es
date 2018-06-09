@@ -1,8 +1,6 @@
 ---
 title: Referencia de la interfaz de usuario (AccessToSQL) | Documentos de Microsoft
 ms.prod: sql
-ms.prod_service: sql-tools
-ms.component: ssma-access
 ms.custom: ''
 ms.date: 08/17/2017
 ms.reviewer: ''
@@ -21,18 +19,19 @@ caps.latest.revision: 21
 author: Shamikg
 ms.author: Shamikg
 manager: murato
-ms.openlocfilehash: 42a81d87eb391621f837a04025ec093fac6f3b73
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: dd67eb89a9efb22c38d7b9318e8ac562fa6d7264
+ms.sourcegitcommit: 8aa151e3280eb6372bf95fab63ecbab9dd3f2e5e
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/05/2018
+ms.locfileid: "34774221"
 ---
 # <a name="user-interface-reference-accesstosql"></a>Referencia de la interfaz de usuario (AccessToSQL)
 Esta sección incluye temas de Ayuda [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] Migration Assistant (SSMA) para el acceso.  
   
 ## <a name="in-this-section"></a>En esta sección  
   
-|Tema|Description|  
+|Tema|Descripción|  
 |---------|---------------|  
 |[Objeto selección avanzada de &#40;AccessToSQL&#41;](../../ssma/access/advanced-object-selection-accesstosql.md)|Use la **avanzadas seleccione objeto** cuadro de diálogo para buscar objetos de base de datos mediante el uso de criterios de filtro y, a continuación, active o desactive los objetos.|  
 |[Informe de evaluación &#40;AccessToSQL&#41;](../../ssma/access/assessment-report-accesstosql.md)|Use la **informe de evaluación** cuadro de diálogo para analizar la conversión de objetos de base de datos de Access y para calcular cuánto tiempo tardará la migración.|  

@@ -13,7 +13,7 @@ ms.openlocfilehash: 4b2c49f32029078bbe67e70066845f5b8f7d4f3c
 ms.sourcegitcommit: 808d23a654ef03ea16db1aa23edab496b73e5072
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/02/2018
+ms.lasthandoff: 06/04/2018
 ms.locfileid: "34573517"
 ---
 # <a name="contextualnamerule-element-xml"></a>Elemento ContextualNameRule (XML)

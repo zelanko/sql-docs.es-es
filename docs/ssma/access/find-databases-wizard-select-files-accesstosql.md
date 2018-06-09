@@ -1,8 +1,6 @@
 ---
 title: Buscar el Asistente de bases de datos (seleccionados archivos) (AccessToSQL) | Documentos de Microsoft
 ms.prod: sql
-ms.prod_service: sql-tools
-ms.component: ssma-access
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
@@ -20,11 +18,12 @@ caps.latest.revision: 13
 author: Shamikg
 ms.author: Shamikg
 manager: craigg
-ms.openlocfilehash: 8bd5b106fbd45311606e0802c51997ad576c8475
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: da8c4f3dbdfb374defe0144ef3accb004ee70b77
+ms.sourcegitcommit: 8aa151e3280eb6372bf95fab63ecbab9dd3f2e5e
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/05/2018
+ms.locfileid: "34773521"
 ---
 # <a name="find-databases-wizard-select-files-accesstosql"></a>Buscar el Asistente de bases de datos (seleccionados archivos) (AccessToSQL)
 La página Seleccionar archivos del Asistente para buscar las bases de datos incluyen los archivos que se encontraron durante la búsqueda. Para seleccionar un archivo que desea agregar a SSMA, seleccione la fila que contiene el nombre de archivo. Una vez haya terminado, haga clic en **siguiente** para ver la página de selección comprobar.  

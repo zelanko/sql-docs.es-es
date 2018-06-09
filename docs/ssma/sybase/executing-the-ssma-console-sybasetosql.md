@@ -3,8 +3,6 @@ title: Ejecutar la consola SSMA (SybaseToSQL) | Documentos de Microsoft
 ms.custom: ''
 ms.date: 09/27/2017
 ms.prod: sql
-ms.prod_service: sql-tools
-ms.component: ssma-sybase
 ms.reviewer: ''
 ms.suite: sql
 ms.technology: ssma
@@ -27,11 +25,12 @@ caps.latest.revision: 22
 author: Shamikg
 ms.author: Shamikg
 manager: craigg
-ms.openlocfilehash: bbad5207581a713327112b9d319c69f706ad2f61
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: c208784d3399b0ab37a046b1452320544f143163
+ms.sourcegitcommit: 8aa151e3280eb6372bf95fab63ecbab9dd3f2e5e
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/05/2018
+ms.locfileid: "34778571"
 ---
 # <a name="executing-the-ssma-console-sybasetosql"></a>Ejecutar la consola SSMA (SybaseToSQL)
 Microsoft proporciona un conjunto robusto de script de comandos del archivo para ejecutar y controlar las actividades SSMA. Las secciones posteriores detallan los mismos.  
@@ -238,7 +237,7 @@ No se pudo conectar al servidor de base de datos de origen durante la ejecución
   
 />  
 ```  
-o bien  
+o Administrador de configuración de  
   
 ```xml  
 <generate-assessment-report  
@@ -303,7 +302,7 @@ Si no se realiza la conexión de base de datos de origen o de destino antes de e
   
 />  
 ```  
-o bien  
+o Administrador de configuración de  
   
 ```xml  
 <convert-schema  
@@ -359,7 +358,7 @@ Este comando migra los datos de origen al destino.
   
 </migrate-data>  
 ```  
-o bien  
+o Administrador de configuración de  
   
 ```xml  
 <migrate-data  
@@ -438,7 +437,7 @@ fail-script>" (optional)
   
 />  
 ```  
-o bien  
+o Administrador de configuración de  
   
 ```xml  
 <synchronize-target  
@@ -447,7 +446,7 @@ o bien
   
   object-type="<object-category>"/>  
 ```  
-o bien  
+o Administrador de configuración de  
   
 ```xml  
 <synchronize-target>  
@@ -499,7 +498,7 @@ Este comando requiere uno o varios nodos de la metabase como parámetro de líne
   
 />  
 ```  
-o bien  
+o Administrador de configuración de  
   
 ```xml  
 <refresh-from-database  
@@ -508,7 +507,7 @@ o bien
   
   object-type="<object-category>" />  
 ```  
-o bien  
+o Administrador de configuración de  
   
 ```xml  
 <refresh-from-database>  
@@ -553,7 +552,7 @@ Este comando requiere uno o varios nodos de la metabase como parámetro de líne
   
 />  
 ```  
-o bien  
+o Administrador de configuración de  
   
 ```xml  
 <save-as-script  
@@ -627,7 +626,7 @@ Este comando requiere uno o varios nodos de la metabase como parámetro de líne
   
 </convert-sql-statement>  
 ```  
-o bien  
+o Administrador de configuración de  
   
 ```  
 <convert-sql-statement  
@@ -652,7 +651,7 @@ o bien
   
 />  
 ```  
-o bien  
+o Administrador de configuración de  
   
 ```  
 <convert-sql-statement  

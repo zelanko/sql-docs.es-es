@@ -1,8 +1,6 @@
 ---
 title: Configuración (conversión) (OracleToSQL) del proyecto | Documentos de Microsoft
 ms.prod: sql
-ms.prod_service: sql-tools
-ms.component: ssma-oracle
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
@@ -17,11 +15,12 @@ caps.latest.revision: 15
 author: Shamikg
 ms.author: Shamikg
 manager: v-thobro
-ms.openlocfilehash: a8397d5a1c4123dba7b8fe7b56b511affe1da7b2
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: bf3dcaf0868fe21bc7d909bd3e840f3ce1e88247
+ms.sourcegitcommit: 8aa151e3280eb6372bf95fab63ecbab9dd3f2e5e
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/05/2018
+ms.locfileid: "34777861"
 ---
 # <a name="project-settings-conversion-oracletosql"></a>Configuración del proyecto (conversión) (OracleToSQL)
 La página de conversión de la **configuración del proyecto** cuadro de diálogo contiene la configuración que permiten personalizar cómo SSMA convierte la sintaxis de Oracle para [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] sintaxis.  

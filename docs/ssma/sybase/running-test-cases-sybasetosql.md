@@ -3,8 +3,6 @@ title: Ejecutar casos de prueba (SybaseToSQL) | Documentos de Microsoft
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
-ms.prod_service: sql-tools
-ms.component: ssma-sybase
 ms.reviewer: ''
 ms.suite: sql
 ms.technology: ssma
@@ -20,11 +18,12 @@ caps.latest.revision: 6
 author: Shamikg
 ms.author: Shamikg
 manager: craigg
-ms.openlocfilehash: 5a6f403bd7f4d3168ceeea447c541f311e5eab6f
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 5751a704fdea6e7c87aa43e1b4fedc1107d89f8c
+ms.sourcegitcommit: 8aa151e3280eb6372bf95fab63ecbab9dd3f2e5e
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/05/2018
+ms.locfileid: "34779361"
 ---
 # <a name="running-test-cases-sybasetosql"></a>Ejecutar casos de prueba (SybaseToSQL)
 Cuando el evaluador de SSMA se ejecuta un caso de prueba, ejecuta los objetos seleccionados para las pruebas y crea un informe sobre los resultados de la comprobación. Si los resultados son idénticos en ambas plataformas, la prueba fue correcta. La correspondencia de objetos entre Sybase y [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] se determina según la configuración de la asignación de esquema para el proyecto SSMA actual.  
@@ -52,7 +51,7 @@ Se supone que la tabla comprobada se denomina USER_TABLE. Para este tipo de tabl
   
 Los siguientes objetos se crean en Sybase en la base de datos SSMATESTER2005db o SSMATESTER2008db y en [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] en la base de datos de ssmatesterdb_syb.  
   
-|Nombre|Tipo|Description|  
+|Nombre|Tipo|Descripción|  
 |--------|--------|---------------|  
 |USER_TABLE$ Trg|Desencadenador|Auditoría de los cambios en la tabla comprobado el desencadenador.|  
 |USER_TABLE$ Aud|Table|Tabla donde se guardan las filas se eliminan y se sobrescriben.|  
@@ -64,7 +63,7 @@ Los siguientes objetos se crean en Sybase en la base de datos SSMATESTER2005db o
   
 El siguiente objeto se crea en la base de datos de tabla comprobado en Sybase y [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)].  
   
-|Nombre|Tipo|Description|  
+|Nombre|Tipo|Descripción|  
 |--------|--------|---------------|  
 |USER_TABLE$ Trg|Desencadenador|Auditoría de los cambios en la tabla comprobado el desencadenador.|  
   

@@ -1,41 +1,30 @@
 ---
 title: Funciones (sintaxis de MDX) | Documentos de Microsoft
-ms.custom: ''
-ms.date: 03/02/2016
-ms.prod: analysis-services
-ms.prod_service: analysis-services
-ms.component: ''
-ms.reviewer: ''
-ms.suite: pro-bi
-ms.technology: ''
-ms.tgt_pltfrm: ''
-ms.topic: language-reference
-dev_langs:
-- kbMDX
-helpviewer_keywords:
-- MDX [Analysis Services], functions
-- Multidimensional Expressions [Analysis Services], functions
-- functions [MDX]
-ms.assetid: 74ca5e79-1f33-4795-9d68-98eff9c190c1
-caps.latest.revision: 25
-author: Minewiskan
+ms.date: 06/04/2018
+ms.prod: sql
+ms.technology: analysis-services
+ms.custom: mdx
+ms.topic: reference
 ms.author: owend
-manager: erikre
-ms.openlocfilehash: cf28303c1ffedf36354fd0fb1489666ad68d519c
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.reviewer: owend
+author: minewiskan
+manager: kfile
+ms.openlocfilehash: ed7e1770323a9691c2fe63c0df88df77198153ab
+ms.sourcegitcommit: 97bef3f248abce57422f15530c1685f91392b494
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/04/2018
+ms.locfileid: "34740734"
 ---
 # <a name="functions-mdx-syntax"></a>Funciones (sintaxis de MDX)
-[!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
+
 
   Las expresiones multidimensionales (MDX) incluyen varias categorías de funciones intrínsecas para realizar determinadas operaciones. En la siguiente tabla se incluyen las categorías de funciones disponibles en MDX.  
   
 > [!NOTE]  
 >  Para obtener más información acerca de las funciones individuales, consulte [referencia de funciones MDX &#40;MDX&#41;](../mdx/mdx-function-reference-mdx.md).  
   
-|Categoría de función|Description|  
+|Categoría de función|Descripción|  
 |-----------------------|-----------------|  
 |Funciones de matriz|Proporcionan matrices para su uso en procedimientos almacenados.<br /><br /> Para obtener más información, consulte [utilizando procedimientos almacenados &#40;MDX&#41;](../mdx/using-stored-procedures-mdx.md).|  
 |Funciones de dimensión|Devuelven una referencia a una dimensión de una jerarquía, un nivel o un miembro.<br /><br /> Para obtener más información, consulte [utilizando funciones de dimensión, jerarquía y nivel](../mdx/using-dimension-hierarchy-and-level-functions.md).|  

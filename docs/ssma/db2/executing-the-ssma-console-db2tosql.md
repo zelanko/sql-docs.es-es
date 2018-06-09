@@ -1,8 +1,6 @@
 ---
 title: Ejecutar la consola SSMA (DB2ToSQL) | Documentos de Microsoft
 ms.prod: sql
-ms.prod_service: sql-tools
-ms.component: ssma-db2
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
@@ -18,11 +16,12 @@ caps.latest.revision: 7
 author: Shamikg
 ms.author: Shamikg
 manager: craigg
-ms.openlocfilehash: 6d9625334272ee1e5addd8838055ff57f56635d7
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: abfd3a12482d71f808887b1f3f987d0bd1582c76
+ms.sourcegitcommit: 8aa151e3280eb6372bf95fab63ecbab9dd3f2e5e
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/05/2018
+ms.locfileid: "34774811"
 ---
 # <a name="executing-the-ssma-console-db2tosql"></a>Ejecutar la consola SSMA (DB2ToSQL)
 Microsoft proporciona un conjunto robusto de script de comandos del archivo para ejecutar y controlar las actividades SSMA. Las secciones posteriores detallan los mismos. La aplicación de consola utiliza ciertos comandos del archivo de secuencia de comandos estándar como enumerados en esta sección.  
@@ -166,7 +165,7 @@ Requiere uno o varios nodos de la metabase como parámetro de línea de comandos
   
   metabase="<source/target>"/>  
 ```  
-o bien  
+o Administrador de configuración de  
   
 ```xml  
 <force-load>  
@@ -279,7 +278,7 @@ informe de evaluación generar
   
 />  
 ```  
-o bien  
+o Administrador de configuración de  
   
 ```xml  
 <generate-assessment-report  
@@ -351,7 +350,7 @@ convertir esquema
   
 />  
 ```  
-o bien  
+o Administrador de configuración de  
   
 ```xml  
 <convert-schema  
@@ -417,7 +416,7 @@ migrar datos: migra los datos de origen al destino.
   
 </migrate-data>  
 ```  
-o bien  
+o Administrador de configuración de  
   
 ```xml  
 <migrate-data  
@@ -527,7 +526,7 @@ destino sincronizar
   
 />  
 ```  
-o bien  
+o Administrador de configuración de  
   
 ```xml  
 <synchronize-target  
@@ -536,7 +535,7 @@ o bien
   
    object-type="<object-category>"/>  
 ```  
-o bien  
+o Administrador de configuración de  
   
 ```xml  
 <synchronize-target>  
@@ -592,7 +591,7 @@ Requiere uno o varios nodos de la metabase como parámetro de línea de comandos
   
 />  
 ```  
-o bien  
+o Administrador de configuración de  
   
 ```xml  
 <refresh-from-database  
@@ -601,7 +600,7 @@ o bien
   
    object-type="<object-category>"/>  
 ```  
-o bien  
+o Administrador de configuración de  
   
 ```xml  
 <refresh-from-database>  
@@ -651,7 +650,7 @@ Requiere uno o varios nodos de la metabase como parámetro de línea de comandos
   
 />  
 ```  
-o bien  
+o Administrador de configuración de  
   
 ```xml  
 <save-as-script  
@@ -727,7 +726,7 @@ Requiere uno o varios nodos de la metabase como parámetro de línea de comandos
   
 </convert-sql-statement>  
 ```  
-o bien  
+o Administrador de configuración de  
   
 ```  
 <convert-sql-statement  
@@ -750,7 +749,7 @@ o bien
   
    sql-files="<folder-name>\*.sql" />  
 ```  
-o bien  
+o Administrador de configuración de  
   
 ```  
 <convert-sql-statement  

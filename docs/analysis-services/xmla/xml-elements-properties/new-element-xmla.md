@@ -13,7 +13,7 @@ ms.openlocfilehash: 1ed98ed9c42d8cecddb07941855403925b1de6b8
 ms.sourcegitcommit: 808d23a654ef03ea16db1aa23edab496b73e5072
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/02/2018
+ms.lasthandoff: 06/04/2018
 ms.locfileid: "34575927"
 ---
 # <a name="new-element-xmla"></a>Elemento New (XMLA)
@@ -36,7 +36,7 @@ ms.locfileid: "34575927"
 |Característica|Descripción|  
 |--------------------|-----------------|  
 |Tipo y longitud de los datos|String|  
-|Valor predeterminado|None|  
+|Valor predeterminado|Ninguno|  
 |Cardinalidad|1-1: Elemento necesario que se produce una vez y solo una vez.|  
   
 ## <a name="element-relationships"></a>Relaciones del elemento  
@@ -44,9 +44,9 @@ ms.locfileid: "34575927"
 |Relación|Elemento|  
 |------------------|-------------|  
 |Elementos primarios|[Carpeta](../../../analysis-services/xmla/xml-elements-properties/folder-element-xmla.md)|  
-|Elementos secundarios|None|  
+|Elementos secundarios|Ninguno|  
   
-## <a name="remarks"></a>Notas  
+## <a name="remarks"></a>Comentarios  
  El **New** elemento contiene una ruta de acceso UNC que reemplaza el valor de la **Original** elemento incluido en el elemento primario **carpeta** (elemento) para todos los objetos restaurados o sincronizados, respectivamente, durante un **restaurar** o **sincronizar** comando. El valor de la **Original** elemento se compara con el valor de la **StorageLocation** (elemento) para cada cubo, grupo de medida o partición y, si se encuentra una coincidencia, el valor de este elemento se utiliza para actualizar el **StorageLocation** del objeto durante la restauración o sincronización.  
   
  Para obtener más información acerca de la copia de seguridad y restauración de objetos, consulte [realizar copias de seguridad y restauración de objetos (XMLA)](../../../analysis-services/multidimensional-models-scripting-language-assl-xmla/backing-up-restoring-and-synchronizing-databases-xmla.md).  

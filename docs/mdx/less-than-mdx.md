@@ -1,6 +1,6 @@
 ---
 title: '&lt; (Menor que) (MDX) | Documentos de Microsoft'
-ms.date: 05/30/2018
+ms.date: 06/04/2018
 ms.prod: sql
 ms.technology: analysis-services
 ms.custom: mdx
@@ -9,15 +9,15 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: db93fdcba49829decaee14927cf84ec92bce5f80
-ms.sourcegitcommit: 808d23a654ef03ea16db1aa23edab496b73e5072
+ms.openlocfilehash: 111c3aae92839ff9f1574da6420d096d31517c80
+ms.sourcegitcommit: 97bef3f248abce57422f15530c1685f91392b494
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/02/2018
-ms.locfileid: "34578957"
+ms.lasthandoff: 06/04/2018
+ms.locfileid: "34741014"
 ---
 # <a name="lt-less-than-mdx"></a>&lt; (Menor que) (MDX)
-[!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
+
 
   Realiza una operación de comparación que determina si el valor de una expresión multidimensional (MDX) es menor que el valor de otra expresión MDX.  
   

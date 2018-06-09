@@ -1,8 +1,6 @@
 ---
 title: Trabajar con los archivos de comandos de consola de ejemplo (DB2ToSQL) | Documentos de Microsoft
 ms.prod: sql
-ms.prod_service: sql-tools
-ms.component: ssma-db2
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
@@ -18,11 +16,12 @@ caps.latest.revision: 6
 author: Shamikg
 ms.author: Shamikg
 manager: craigg
-ms.openlocfilehash: a756a39a82a607eadd26601006f70dba36391c0e
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: ff200ae57ecbfe426b0ccdf7e9ed71af4cfc8bc2
+ms.sourcegitcommit: 8aa151e3280eb6372bf95fab63ecbab9dd3f2e5e
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/05/2018
+ms.locfileid: "34775471"
 ---
 # <a name="working-with-the-sample-console-script-files-db2tosql"></a>Trabajar con los archivos de comandos de consola de ejemplo (DB2ToSQL)
 Algunos de los archivos de ejemplo se han proporcionado junto con el producto para la referencia de usuario y el uso. Esta sección describe la forma de personalizar fácilmente estos scripts para ajustarse a las necesidades del usuario final.  
@@ -60,7 +59,7 @@ Se han proporcionado los archivos de comandos de consola de ejemplo siguientes q
   
     Para obtener más información sobre la generación de informes, consulte [generar informes &#40;DB2ToSQL&#41;](../../ssma/db2/generating-reports-db2tosql.md).  
   
-    **Comentarios:**  
+    **Notas:**  
   
     Asegúrese de que el argumento de línea de comandos del archivo de valor de la variable se pasa a la aplicación de consola y VariableValueFileSample.xml se actualiza con el usuario especificado valores.  
   
@@ -77,7 +76,7 @@ Se han proporcionado los archivos de comandos de consola de ejemplo siguientes q
   
 5.  **ConversionAndDataMigrationSample.xml:** este ejemplo permite al usuario realizar una migración de extremo a extremo de la conversión a la migración de datos. La lista de valores de atributo obligatorio que será necesario cambiar se menciona a continuación:  
   
-    |Nombre de comando|Description|Atributo|  
+    |Nombre de comando|Descripción|Attribute|  
     |----------------|---------------|-------------|  
     |`map-schema`|Asignación de esquema de base de datos de origen al esquema de destino.|`source-schema:` Especifica la base de datos de origen que requiere que para se va a convertir.<br /><br />`sql-server-schema`: Especifica la base de datos de destino que se pueden migrar a|  
     |`convert-schema`|Realiza la conversión de esquema de origen al esquema de destino.<br /><br />Si el usuario tiene que evaluar varios objetos / bases de datos puede especificar varios `metabase-object` nodos como se muestra en el `convert-schema` de ejemplo 4 del comando del archivo de comandos de consola de ejemplo.|`object-name`: Especifique la base de datos de origen / objeto nombre que requiere que para se va a convertir. Asegúrese de que la correspondiente `object-type` se cambia en función del tipo de objeto que se especifica en el `object-name`|  

@@ -1,6 +1,6 @@
 ---
 title: Operadores (sintaxis de MDX) | Documentos de Microsoft
-ms.date: 05/30/2018
+ms.date: 06/04/2018
 ms.prod: sql
 ms.technology: analysis-services
 ms.custom: mdx
@@ -9,15 +9,15 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: 309311bfcef0ada531e391e99091a788715c8e2d
-ms.sourcegitcommit: 808d23a654ef03ea16db1aa23edab496b73e5072
+ms.openlocfilehash: c4af3d6a65f6104240c5c9a32d1761e4be69a41f
+ms.sourcegitcommit: 97bef3f248abce57422f15530c1685f91392b494
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/02/2018
-ms.locfileid: "34580667"
+ms.lasthandoff: 06/04/2018
+ms.locfileid: "34742754"
 ---
 # <a name="operators-mdx-syntax"></a>Operadores (sintaxis de MDX)
-[!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
+
 
   En las expresiones multidimensionales (MDX), los operadores permiten llevar a cabo las siguientes acciones:  
   
@@ -47,7 +47,7 @@ ms.locfileid: "34580667"
  Cuando se utilizan varios operadores, el orden en que MDX los evalúa es importante. Del mismo modo, es posible que el usuario de los operadores tenga que convertir un tipo de datos en otro para poder evaluar los operadores.  
   
 ## <a name="evaluating-complex-expressions"></a>Evaluar expresiones complejas  
- Puede generar una expresión mediante el uso de operadores que combinen varias expresiones más pequeñas. En estas expresiones complejas, MDX evalúa los operadores en orden basado en la definición de la precedencia de operadores utilizados por [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]. MDX ejecuta los operadores con mayor precedencia antes que los operadores con menor precedencia.  
+ Puede generar una expresión mediante el uso de operadores que combinen varias expresiones más pequeñas. En estas expresiones complejas, MDX evalúa los operadores en orden basado en la definición de la precedencia de operadores utilizados por [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]. MDX ejecuta los operadores con mayor precedencia antes que los operadores con menor precedencia.  
   
 ### <a name="understanding-operator-precedence"></a>Descripción de la precedencia de los operadores  
  En la siguiente lista se muestra la precedencia de los operadores, de mayor a menor. Los operadores situados en la misma línea tienen el mismo nivel de precedencia y se evalúan de izquierda a derecha, salvo que el uso de un paréntesis obligue a hacerlo de otro modo:  

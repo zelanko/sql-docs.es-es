@@ -1,6 +1,6 @@
 ---
 title: CALCULATE (instrucción MDX) | Documentos de Microsoft
-ms.date: 05/30/2018
+ms.date: 06/04/2018
 ms.prod: sql
 ms.technology: analysis-services
 ms.custom: mdx
@@ -9,15 +9,15 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: 603d36e9c099ab6148e2e7c485f9c40ad99f63a8
-ms.sourcegitcommit: 808d23a654ef03ea16db1aa23edab496b73e5072
+ms.openlocfilehash: 389c5f470cb3bf00cfe668a9405e36cd4ac8950e
+ms.sourcegitcommit: 97bef3f248abce57422f15530c1685f91392b494
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/02/2018
-ms.locfileid: "34579947"
+ms.lasthandoff: 06/04/2018
+ms.locfileid: "34741944"
 ---
 # <a name="mdx-scripting---calculate"></a>Scripting de MDX - calcular
-[!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
+
 
   Llena cada celda de un cubo con un valor agregado.  
   

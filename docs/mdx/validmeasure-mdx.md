@@ -1,6 +1,6 @@
 ---
 title: ValidMeasure (MDX) | Documentos de Microsoft
-ms.date: 05/30/2018
+ms.date: 06/04/2018
 ms.prod: sql
 ms.technology: analysis-services
 ms.custom: mdx
@@ -9,15 +9,15 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: 254f52064b04f8d56d3218dae32949445d2e50c3
-ms.sourcegitcommit: 808d23a654ef03ea16db1aa23edab496b73e5072
+ms.openlocfilehash: ddcc65d93ebd9d1ea1e9465b40fe1e6027834e37
+ms.sourcegitcommit: 97bef3f248abce57422f15530c1685f91392b494
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/02/2018
-ms.locfileid: "34581807"
+ms.lasthandoff: 06/04/2018
+ms.locfileid: "34743705"
 ---
 # <a name="validmeasure-mdx"></a>ValidMeasure (MDX)
-[!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
+
 
   Devuelve el valor de una medida de un cubo al forzar dimensiones no aplicables al nivel All (o el miembro predeterminado si no es agregable) cuando se devuelve el resultado de una tupla especificada.  
   

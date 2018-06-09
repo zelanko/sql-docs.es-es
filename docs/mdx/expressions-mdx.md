@@ -1,6 +1,6 @@
 ---
 title: Expresiones (MDX) | Documentos de Microsoft
-ms.date: 05/30/2018
+ms.date: 06/04/2018
 ms.prod: sql
 ms.technology: analysis-services
 ms.custom: mdx
@@ -9,17 +9,17 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: 79909f574d818a599f30ad051be9cf6a980430a9
-ms.sourcegitcommit: 808d23a654ef03ea16db1aa23edab496b73e5072
+ms.openlocfilehash: 77ef7250c7af3918509e38c9aa1f5350f3ac5610
+ms.sourcegitcommit: 97bef3f248abce57422f15530c1685f91392b494
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/02/2018
-ms.locfileid: "34579487"
+ms.lasthandoff: 06/04/2018
+ms.locfileid: "34740844"
 ---
 # <a name="expressions-mdx"></a>Expresiones (MDX)
-[!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
 
-  Una expresión es una combinación de identificadores, valores y operadores que [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] puede evaluar para obtener un resultado. Los datos se pueden usar en varios sitios distintos cuando se cambian o se tiene acceso a ellos. Por ejemplo, las expresiones se pueden usar como parte de los datos que se van a recuperar (mediante una consulta) o como una condición de búsqueda de los datos que cumplan un conjunto de criterios.  
+
+  Una expresión es una combinación de identificadores, valores y operadores que se pueden evaluar para obtener un resultado. Los datos se pueden usar en varios sitios distintos cuando se cambian o se tiene acceso a ellos. Por ejemplo, las expresiones se pueden usar como parte de los datos que se van a recuperar (mediante una consulta) o como una condición de búsqueda de los datos que cumplan un conjunto de criterios.  
   
 ## <a name="simple-and-complex-expressions"></a>Expresiones simples y complejas  
  En MDX, las expresiones pueden ser simples o complejas:  

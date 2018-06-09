@@ -1,8 +1,6 @@
 ---
 title: Configuración global (registro) (DB2ToSQL) | Documentos de Microsoft
 ms.prod: sql
-ms.prod_service: sql-tools
-ms.component: ssma-db2
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
@@ -18,11 +16,12 @@ caps.latest.revision: 4
 author: Shamikg
 ms.author: Shamikg
 manager: craigg
-ms.openlocfilehash: f59680d39e8972436e6eeac1299c6892da114623
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 73382b71388879133ac88a4f0544c63e247b644a
+ms.sourcegitcommit: 8aa151e3280eb6372bf95fab63ecbab9dd3f2e5e
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/05/2018
+ms.locfileid: "34775001"
 ---
 # <a name="global-settings-logging-db2tosql"></a>Configuración global (registro) (DB2ToSQL)
 Use la **configuración Global** cuadro de diálogo para especificar la configuración del registro para SSMA. Por lo general, debería cambiar esta configuración solo cuando se trabaja con servicios de soporte técnico.  
@@ -33,7 +32,7 @@ Para tener acceso a este cuadro de diálogo, en la **herramientas** menú, selec
 **Nivel de mensajes**  
 Las siguientes opciones están disponibles en **nivel de mensajes**:  
   
-|Opción|Description|  
+|Opción|Descripción|  
 |----------|---------------|  
 |**[todas las categorías]**|Se usa para establecer el nivel de registro para todas las opciones siguientes.|  
 |**Recopilador**|Recopila los metadatos sobre el esquema de origen y lo guarda en el proyecto.|  

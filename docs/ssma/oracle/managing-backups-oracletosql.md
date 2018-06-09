@@ -1,8 +1,6 @@
 ---
 title: Administrar copias de seguridad (OracleToSQL) | Documentos de Microsoft
 ms.prod: sql
-ms.prod_service: sql-tools
-ms.component: ssma-oracle
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
@@ -18,11 +16,12 @@ caps.latest.revision: 6
 author: Shamikg
 ms.author: Shamikg
 manager: v-thobro
-ms.openlocfilehash: 76fe6ed52f7d321db361d5d13b718ac61a07cdec
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: a17cbc5aef7874555520db18464c79698ee41c30
+ms.sourcegitcommit: 8aa151e3280eb6372bf95fab63ecbab9dd3f2e5e
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/05/2018
+ms.locfileid: "34777331"
 ---
 # <a name="managing-backups-oracletosql"></a>Administrar copias de seguridad (OracleToSQL)
 Administración de copia de seguridad de Oracle permite copias de seguridad y restauración de datos de la tabla antes o después de ejecutar una prueba. También puede administrar el contenido de copia de seguridad con el cuadro de diálogo Administrar contenido de copia de seguridad.  
@@ -40,7 +39,7 @@ Los siguientes botones están disponibles en el cuadro de diálogo:
   
 -   Haga clic en el **cancelar** botón para cerrar el cuadro de diálogo.  
   
-### <a name="restore"></a>Restore  
+### <a name="restore"></a>Restaurar  
 Para abrir el cuadro de diálogo de restauración, en el menú de la herramienta de comprobación, seleccione Administración de copia de seguridad de Oracle, a continuación, haga clic en restaurar... Allí encontrará un árbol que contiene las tablas disponibles en la copia de seguridad. Seleccione una o más tablas para restaurar sus datos.  
   
 Los siguientes botones están disponibles en el cuadro de diálogo:  
@@ -76,7 +75,7 @@ Los siguientes botones están disponibles en el cuadro de diálogo:
   
 -   Haga clic en el **cancelar** botón para cerrar el cuadro de diálogo.  
   
-### <a name="restore"></a>Restore  
+### <a name="restore"></a>Restaurar  
 Para abrir el cuadro de diálogo de restauración, en el menú de evaluador seleccione Administración de copia de seguridad de SQL Server, haga clic en restauración... Allí encontrará un árbol que contiene las tablas disponibles en la copia de seguridad. Seleccione uno o más tabla para restaurar sus datos.  
   
 Los siguientes botones están disponibles en el cuadro de diálogo:  

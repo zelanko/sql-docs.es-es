@@ -1,42 +1,23 @@
 ---
 title: Instrucción CREATE ACTION (MDX) | Documentos de Microsoft
-ms.custom: ''
-ms.date: 03/02/2016
-ms.prod: analysis-services
-ms.prod_service: analysis-services
-ms.component: ''
-ms.reviewer: ''
-ms.suite: pro-bi
-ms.technology: ''
-ms.tgt_pltfrm: ''
-ms.topic: language-reference
-f1_keywords:
-- CREATE ACTION
-- Action
-- CREATE
-- CREATE_ACTION
-dev_langs:
-- kbMDX
-helpviewer_keywords:
-- invocation types [MDX]
-- dimensions [Analysis Services], actions
-- CREATE ACTION statement
-- cubes [Analysis Services], actions
-- actions [MDX]
-- hierarchies [Analysis Services], actions
-ms.assetid: 0419f349-ece2-42ba-8552-a1023f268a41
-caps.latest.revision: 36
-author: Minewiskan
+ms.date: 06/04/2018
+ms.prod: sql
+ms.technology: analysis-services
+ms.custom: mdx
+ms.topic: reference
 ms.author: owend
-manager: erikre
-ms.openlocfilehash: dbb6e815e1cc9c66706641c16a9e169bb217ad6f
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.reviewer: owend
+author: minewiskan
+manager: kfile
+ms.openlocfilehash: 762c2c1cc18d67ccafb05b0f61d213e5215de8b2
+ms.sourcegitcommit: 97bef3f248abce57422f15530c1685f91392b494
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/04/2018
+ms.locfileid: "34741294"
 ---
 # <a name="mdx-data-definition---create-action"></a>Definición de datos MDX - Crear acción
-[!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
+
 
   Crea una acción que puede asociarse con un objeto subordinado, cubo, dimensión, o jerarquía.  
   
@@ -91,16 +72,16 @@ FOR
  *String_Expression*  
  Expresión de cadena válida.  
   
-## <a name="remarks"></a>Comentarios  
+## <a name="remarks"></a>Notas  
  Es posible que las aplicaciones cliente creen y ejecuten acciones que no son seguras; también es posible que las aplicaciones cliente utilicen funciones no seguras. Para evitar estas situaciones, utilice la **Safety Options** propiedad. Para obtener más información, vea el tema sobre la propiedad de opciones de seguridad.  
   
 > [!NOTE]  
->  Esta instrucción se incluye por compatibilidad con versiones anteriores. Las acciones nuevas para [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)], como acciones de obtención de detalles o un informe, no se admiten.  
+>  Esta instrucción se incluye por compatibilidad con versiones anteriores. Las acciones nuevas para [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)], como acciones de obtención de detalles o un informe, no se admiten.  
   
 ## <a name="action-types"></a>Tipos de acción  
- La tabla siguiente describen los diferentes tipos de acciones disponibles en [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)].  
+ La tabla siguiente describen los diferentes tipos de acciones disponibles en [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)].  
   
-|Tipo de acción|Description|  
+|Tipo de acción|Descripción|  
 |-----------------|-----------------|  
 |**Dirección URL**|La cadena de acción que se devuelve es una dirección URL que debe abrirse mediante un explorador de Internet.<br /><br /> Nota: Si esta acción no se inicia con `http://` o `https://`, la acción estará disponible para el explorador a menos que **SafetyOptions** está establecido en **DBPROPVAL_MSMD_SAFETY_OPTIONS_ALLOW_ALL**.|  
 |**HTML**|La cadena de acción que se devuelve es un script HTML. La cadena debe guardarse en un archivo y ese archivo debe representarse mediante un explorador de Internet. En este caso, un script completo debe ejecutarse como parte del HTML generado.|  
@@ -113,7 +94,7 @@ FOR
 ## <a name="invocation-types"></a>Tipos de invocación  
  En la tabla siguiente se describen los distintos tipos de invocaciones disponibles en [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]. La aplicación cliente solamente utiliza el tipo de invocación para ayudar a determinar cuando invocar la acción. El tipo de invocación no determina de hecho el comportamiento de invocación de la acción.  
   
-|Tipo de invocación|Description|  
+|Tipo de invocación|Descripción|  
 |---------------------|-----------------|  
 |**INTERACTIVO**|La aplicación cliente debe invocar la acción mediante la interacción del usuario.|  
 |**ON_OPEN**|La aplicación cliente debe invocar la acción cuando se abre el objeto de destino. Este tipo de invocación no está implementada actualmente.|  

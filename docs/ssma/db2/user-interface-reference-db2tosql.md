@@ -1,8 +1,6 @@
 ---
 title: Referencia de la interfaz de usuario (DB2ToSQL) | Documentos de Microsoft
 ms.prod: sql
-ms.prod_service: sql-tools
-ms.component: ssma-db2
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
@@ -18,11 +16,12 @@ caps.latest.revision: 5
 author: Shamikg
 ms.author: Shamikg
 manager: craigg
-ms.openlocfilehash: 7b2f512f062909cbb92611bac1e34ad13d508d34
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: bf70c785021f352d000acd0c6237b1aa70e69756
+ms.sourcegitcommit: 8aa151e3280eb6372bf95fab63ecbab9dd3f2e5e
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/05/2018
+ms.locfileid: "34775941"
 ---
 # <a name="user-interface-reference-db2tosql"></a>Referencia de la interfaz de usuario (DB2ToSQL)
 Esta sección incluye temas de Ayuda [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] Migration Assistant (SSMA) para DB2.  
@@ -32,7 +31,7 @@ La tabla siguiente enumera los cuadros de diálogo SSMA:
   
 |||  
 |-|-|  
-|Tema|Description|  
+|Tema|Descripción|  
 |[Objeto selección avanzada de &#40;DB2ToSQL&#41;](../../ssma/db2/advanced-object-selection-db2tosql.md)|Use la **avanzadas seleccione objeto** cuadro de diálogo para buscar objetos de base de datos mediante el uso de criterios de filtro y, a continuación, active o desactive los objetos.|  
 |[Informe de evaluación &#40;DB2ToSQL&#41;](../../ssma/db2/assessment-report-db2tosql.md)|Utilice el informe de evaluación para ver los resultados de la conversión de objetos de DB2 a [!INCLUDE[tsql](../../includes/tsql_md.md)] sintaxis y para calcular el tiempo y la complejidad de una migración a [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)].|  
 |[Conectarse a la base de datos DB2 &#40;DB2ToSQL&#41;](../../ssma/db2/connecting-to-db2-database-db2tosql.md)|Use la **conectar a DB2** cuadro de diálogo para conectarse a la base de datos de DB2 que se va a migrar.|  

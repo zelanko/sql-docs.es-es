@@ -1,8 +1,6 @@
 ---
 title: Configuración global (registro) (OracleToSQL) | Documentos de Microsoft
 ms.prod: sql
-ms.prod_service: sql-tools
-ms.component: ssma-oracle
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
@@ -15,11 +13,12 @@ caps.latest.revision: 4
 author: Shamikg
 ms.author: Shamikg
 manager: v-thobro
-ms.openlocfilehash: 072beda7133350d0061d9bf921fd23b034fe8a70
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: fb59fd7a35ec14639c8c74b28a5d6660b6a00e95
+ms.sourcegitcommit: 8aa151e3280eb6372bf95fab63ecbab9dd3f2e5e
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/05/2018
+ms.locfileid: "34777270"
 ---
 # <a name="global-settings-logging-oracletosql"></a>Configuración global (registro) (OracleToSQL)
 Use la **configuración Global** cuadro de diálogo para especificar la configuración del registro para SSMA. Por lo general, debería cambiar esta configuración solo cuando se trabaja con servicios de soporte técnico.  
@@ -30,7 +29,7 @@ Para tener acceso a este cuadro de diálogo, en la **herramientas** menú, selec
 **Nivel de mensajes**  
 Las siguientes opciones están disponibles en **nivel de mensajes**:  
   
-|Opción|Description|  
+|Opción|Descripción|  
 |----------|---------------|  
 |**[todas las categorías]**|Se usa para establecer el nivel de registro para todas las opciones siguientes.|  
 |**Recopilador**|Recopila los metadatos sobre el esquema de origen y lo guarda en el proyecto.|  

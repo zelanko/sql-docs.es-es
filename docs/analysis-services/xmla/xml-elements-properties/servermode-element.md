@@ -13,7 +13,7 @@ ms.openlocfilehash: 21e9344ef945311b3af07398e6e927482718f5ff
 ms.sourcegitcommit: 808d23a654ef03ea16db1aa23edab496b73e5072
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/02/2018
+ms.lasthandoff: 06/04/2018
 ms.locfileid: "34576267"
 ---
 # <a name="servermode-element"></a>Elemento ServerMode
@@ -44,16 +44,16 @@ ms.locfileid: "34576267"
 |Relación|Elemento|  
 |------------------|-------------|  
 |Elementos primarios|[Server](../../../analysis-services/scripting/objects/server-element-assl.md)|  
-|Elementos secundarios|None|  
+|Elementos secundarios|Ninguno|  
   
-## <a name="remarks"></a>Notas  
+## <a name="remarks"></a>Comentarios  
  El servidor opera en cualquiera de los siguientes modos:  
   
 |Valor|Descripción|  
 |-----------|-----------------|  
 |*Multidimensionales*|Modo multidimensional y de minería de datos|  
 |*Tabular*|Modo tabular|  
-|*SharePoint*|Modo de SharePoint|  
+|*SharePoint*|en modo SharePoint|  
   
 ## <a name="see-also"></a>Vea también
  [Server](../../../analysis-services/scripting/objects/server-element-assl.md)  

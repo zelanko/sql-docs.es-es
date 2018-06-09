@@ -13,7 +13,7 @@ ms.openlocfilehash: e9402541be96be9e529dcd56a168e8ab17dc21ae
 ms.sourcegitcommit: 808d23a654ef03ea16db1aa23edab496b73e5072
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/02/2018
+ms.lasthandoff: 06/04/2018
 ms.locfileid: "34576547"
 ---
 # <a name="editionid-element"></a>Elemento EditionId
@@ -36,7 +36,7 @@ ms.locfileid: "34576547"
 |Característica|Descripción|  
 |--------------------|-----------------|  
 |Tipo y longitud de los datos|Long|  
-|Valor predeterminado|None|  
+|Valor predeterminado|Ninguno|  
 |Cardinalidad|1-1: Elemento necesario que se produce una vez y solo una vez.|  
   
 ## <a name="element-relationships"></a>Relaciones del elemento  
@@ -44,9 +44,9 @@ ms.locfileid: "34576547"
 |Relación|Elemento|  
 |------------------|-------------|  
 |Elementos primarios|[Elemento Server (ASSL)](../../../analysis-services/scripting/objects/server-element-assl.md)|  
-|Elementos secundarios|None|  
+|Elementos secundarios|Ninguno|  
   
-## <a name="remarks"></a>Notas  
+## <a name="remarks"></a>Comentarios  
   
 ## <a name="see-also"></a>Vea también
  [Propiedades &#40;XMLA&#41;](../../../analysis-services/xmla/xml-elements-properties/xml-elements-properties.md)  

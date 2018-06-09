@@ -3,8 +3,6 @@ title: SQL Server Migration Assistant | Documentos de Microsoft
 ms.custom: ''
 ms.date: 09/30/2017
 ms.prod: sql
-ms.prod_service: sql-tools
-ms.component: ssma-access
 ms.reviewer: ''
 ms.suite: sql
 ms.technology: ssma
@@ -18,11 +16,12 @@ caps.latest.revision: 18
 author: Shamikg
 ms.author: Shamikg
 manager: craigg
-ms.openlocfilehash: 1a49b3e1d9516d0276c689b7c61defc80bd2cb9c
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: a76b6092cfc092c44b6ec023e97b4914520c4ed6
+ms.sourcegitcommit: 8aa151e3280eb6372bf95fab63ecbab9dd3f2e5e
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/05/2018
+ms.locfileid: "34778111"
 ---
 # <a name="sql-server-migration-assistant"></a>Asistente para migración de SQL Server
 Microsoft SQL Server Migration Assistant (SSMA) es una herramienta diseñada para automatizar la migración de base de datos a SQL Server desde Microsoft Access, DB2, MySQL, Oracle y SAP ASE.  
@@ -49,7 +48,7 @@ Se admiten las siguientes versiones de destino de SSMA.
 - SQL Server 2012
 - SQL Server 2014
 - SQL Server 2016
-- Azure SQL Database
+- Se aplica a: Base de datos SQL de Azure
 - SQL Server de 2017 en Windows y Linux (versión preliminar)
 - ** Almacenamiento de datos azure SQL
 
@@ -104,4 +103,3 @@ En varios casos, es posible que una determinada característica no esté documen
 Asimismo, los clientes no deberán usar las siguientes API sin documentar, entre otras: procedimientos almacenados, procedimientos almacenados extendidos, funciones, vistas, tablas, columnas, propiedades o metadatos. Soporte técnico de Microsoft no es compatible con las bases de datos o aplicaciones que aprovechen o usen puntos de entrada no documentados.  
   
 Es posible que las actualizaciones de servidor y de base de datos a versiones futuras de SQL Server no funcionen como es debido en aplicaciones y bases de datos que se aprovechan de o usan puntos de entrada no documentados. Debe limitar el uso de las características y funcionalidades de SQL Server a aquellas que se incluyen en la documentación de Microsoft SQL Server. Si una característica no está documentada en la documentación de Microsoft SQL Server, no será un elemento compatible de SQL Server.  
-  

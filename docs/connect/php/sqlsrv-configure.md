@@ -21,11 +21,12 @@ caps.latest.revision: 20
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 449c20bcbe3ff21675c51f483519607d5c37b034
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: f8ae03b541a28330045793e427b4c4aed76e4199
+ms.sourcegitcommit: 6e55a0a7b7eb6d455006916bc63f93ed2218eae1
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/08/2018
+ms.locfileid: "35239275"
 ---
 # <a name="sqlsrvconfigure"></a>sqlsrv_configure
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]
@@ -46,7 +47,7 @@ sqlsrv_configure( string $setting, mixed $value )
   
 |Configuración|Posibles valores para el parámetro $value (equivalente entero entre paréntesis)|Valor predeterminado|  
 |-----------|------------------------------------------------------------------------------|-----------------|  
-|ClientBufferMaxKBSize<sup>1</sup>|Un número no negativo hasta el límite de memoria PHP.<br /><br />Cero (0) significa que no hay límite en el tamaño de búfer.|10240|  
+|ClientBufferMaxKBSize<sup>1</sup>|Un número no negativo hasta el límite de memoria PHP.<br /><br />No se permiten números negativos y cero.|10240 KB|  
 |LogSeverity<sup>2</sup>|SQLSRV_LOG_SEVERITY_ALL (-1)<br /><br />SQLSRV_LOG_SEVERITY_ERROR (1)<br /><br />SQLSRV_LOG_SEVERITY_NOTICE (4)<br /><br />SQLSRV_LOG_SEVERITY_WARNING (2)|SQLSRV_LOG_SEVERITY_ERROR (1)|  
 |LogSubsystems<sup>2</sup>|SQLSRV_LOG_SYSTEM_ALL (-1)<br /><br />SQLSRV_LOG_SYSTEM_CONN (2)<br /><br />SQLSRV_LOG_SYSTEM_INIT (1)<br /><br />SQLSRV_LOG_SYSTEM_OFF (0)<br /><br />SQLSRV_LOG_SYSTEM_STMT (4)<br /><br />SQLSRV_LOG_SYSTEM_UTIL (8)|SQLSRV_LOG_SYSTEM_OFF (0)|  
 |WarningsReturnAsErrors<sup>3</sup>|**True** (1) o **false** (0)|**True** (1)|  
@@ -54,7 +55,7 @@ sqlsrv_configure( string $setting, mixed $value )
 ## <a name="return-value"></a>Valor devuelto  
 Si se llama a **sqlsrv_configure** con un valor o una configuración no compatibles, la función devuelve el valor **False**. De lo contrario, devuelve **True**.  
   
-## <a name="remarks"></a>Comentarios  
+## <a name="remarks"></a>Notas  
 (1) para obtener más información acerca de las consultas de cliente, consulte [tipos de Cursor &#40;controlador SQLSRV&#41;](../../connect/php/cursor-types-sqlsrv-driver.md).  
   
 (2) para obtener más información acerca de la actividad de registro, consulte [Logging Activity](../../connect/php/logging-activity.md).  

@@ -24,11 +24,12 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 monikerRange: = azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: 6ad96038b59e283053b944f4bb88a7b0fdd0406f
-ms.sourcegitcommit: 7019ac41524bdf783ea2c129c17b54581951b515
+ms.openlocfilehash: f783df6df249f5ce045454070771566b59ba0bba
+ms.sourcegitcommit: 155f053fc17ce0c2a8e18694d9dd257ef18ac77d
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/23/2018
+ms.lasthandoff: 06/06/2018
+ms.locfileid: "34812059"
 ---
 # <a name="sysdmexecquerymemorygrants-transact-sql"></a>sys.dm_exec_query_memory_grants (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -38,9 +39,9 @@ ms.lasthandoff: 05/23/2018
  En [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)], las vistas de administración dinámica no pueden exponer información que impactaría a la contención de la base de datos ni acerca de otras bases de datos a las que el usuario tenga acceso. Para evitar exponer esta información, cada fila que contiene datos que no pertenecen al inquilino conectado se filtra. Además, los valores de las columnas **scheduler_id**, **wait_order**, **pool_id**, **group_id** se filtran; se establece el valor de columna en NULL.  
   
 > [!NOTE]  
->  Para llamar a esta desde [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] o [!INCLUDE[ssPDW](../../includes/sspdw-md.md)], use el nombre **sys.dm_pdw_nodes_exec_query_memory_grants**.  
+> Para llamar a esta desde [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] o [!INCLUDE[ssPDW](../../includes/sspdw-md.md)], use el nombre **sys.dm_pdw_nodes_exec_query_memory_grants**.  
   
-|Nombre de columna|Tipo de datos|Description|  
+|Nombre de columna|Tipo de datos|Descripción|  
 |-----------------|---------------|-----------------|  
 |**session_id**|**smallint**|Id. (SPID) de la sesión en la que se está ejecutando esta consulta.|  
 |**request_id**|**int**|Identificador de la solicitud. Es único en el contexto de la sesión.|  
@@ -68,59 +69,58 @@ ms.lasthandoff: 05/23/2018
 |**ideal_memory_kb**|**bigint**|Tamaño, en kilobytes (KB), de la concesión de memoria para ajustar todo en la memoria física. Está basado en la estimación de la cardinalidad.|  
 |**pdw_node_id**|**int**|**Se aplica a**: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)], [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]<br /><br /> El identificador para el nodo que se encuentra en esta distribución.|  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>Permisos  
 
 En [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)], requiere `VIEW SERVER STATE` permiso.   
-En [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)], requiere el `VIEW DATABASE STATE` permiso en la base de datos.   
+En [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)], requiere el `VIEW DATABASE STATE` permiso en la base de datos.   
    
-## <a name="remarks"></a>Comentarios  
+## <a name="remarks"></a>Notas  
  Un escenario de depuración típico para un tiempo de espera de consulta puede tener el siguiente aspecto:  
   
 -   Compruebe el uso de estado de memoria de sistema general [sys.dm_os_memory_clerks](../../relational-databases/system-dynamic-management-views/sys-dm-os-memory-clerks-transact-sql.md), [sys.dm_os_sys_info](../../relational-databases/system-dynamic-management-views/sys-dm-os-sys-info-transact-sql.md)y diversos contadores de rendimiento.  
   
 -   Busque las reservas de memoria de ejecución de las consultas en **sys.dm_os_memory_clerks** donde `type = 'MEMORYCLERK_SQLQERESERVATIONS'`.  
   
--   Compruebe las consultas que se espera de concesiones con **sys.dm_exec_query_memory_grants**.  
+-   Comprobar consultas a la espera<sup>1</sup> de concesiones con **sys.dm_exec_query_memory_grants**.  
   
-    ```  
+    ```sql  
     --Find all queries waiting in the memory queue  
     SELECT * FROM sys.dm_exec_query_memory_grants where grant_time is null  
     ```  
+    
+    <sup>1</sup> en este escenario, el tipo de espera es normalmente RESOURCE_SEMAPHORE. Para obtener más información, vea [sys.dm_os_wait_stats &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-os-wait-stats-transact-sql.md). 
   
--   Búsquedas en caché para las consultas con concesiones de memoria con[sys.dm_exec_cached_plans &#40;Transact-SQL&#41; ](../../relational-databases/system-dynamic-management-views/sys-dm-exec-cached-plans-transact-sql.md) y [sys.dm_exec_query_plan &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-exec-query-plan-transact-sql.md)  
+-   Búsquedas en caché para las consultas con concesiones de memoria con [sys.dm_exec_cached_plans &#40;Transact-SQL&#41; ](../../relational-databases/system-dynamic-management-views/sys-dm-exec-cached-plans-transact-sql.md) y [sys.dm_exec_query_plan &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-exec-query-plan-transact-sql.md)  
   
-    ```  
+    ```sql  
     -- retrieve every query plan from the plan cache  
     USE master;  
     GO  
     SELECT * FROM sys.dm_exec_cached_plans cp CROSS APPLY sys.dm_exec_query_plan(cp.plan_handle);  
     GO  
-  
     ```  
   
 -   Examine más consultas que utilizan mucha memoria mediante [sys.dm_exec_requests](../../relational-databases/system-dynamic-management-views/sys-dm-exec-requests-transact-sql.md).  
   
-    ```  
+    ```sql  
     --Find top 5 queries by average CPU time  
     SELECT TOP 5 total_worker_time/execution_count AS [Avg CPU Time],  
-    Plan_handle, query_plan   
+      plan_handle, query_plan   
     FROM sys.dm_exec_query_stats AS qs  
     CROSS APPLY sys.dm_exec_query_plan(qs.plan_handle)  
     ORDER BY total_worker_time/execution_count DESC;  
     GO  
-  
     ```  
   
 -   Si sospecha que hay una consulta descontrolada, examine el plan de presentación de [sys.dm_exec_query_plan](../../relational-databases/system-dynamic-management-views/sys-dm-exec-query-plan-transact-sql.md) y el texto del lote [sys.dm_exec_sql_text](../../relational-databases/system-dynamic-management-views/sys-dm-exec-sql-text-transact-sql.md).  
   
- Las consultas que utilizan vistas de administración dinámica que incluyen ORDER BY o agregados pueden aumentar el consumo de memoria y, de esta forma, contribuir al problema que están solucionando.  
+ Las consultas que utilizan vistas de administración dinámica que incluyen `ORDER BY` o agregados pueden aumentar el consumo de memoria y, por tanto, contribuir al problema que están solucionando.  
   
  La característica del regulador de recursos permite que un administrador de bases de datos distribuya los recursos del servidor entre los grupos de recursos de servidor, hasta un máximo de 64 fondos. A partir de [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)], cada grupo se comporta como una instancia independiente del servidor pequeño y requiere 2 semáforos. El número de filas que se devuelven desde **sys.dm_exec_query_resource_semaphores** puede ser hasta 20 veces mayor que las filas que se devuelven en [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)].  
   
 ## <a name="see-also"></a>Vea también  
- [sys.dm_exec_query_resource_semaphores &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-exec-query-resource-semaphores-transact-sql.md)   
+ [sys.dm_exec_query_resource_semaphores &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-exec-query-resource-semaphores-transact-sql.md)     
+ [sys.dm_os_wait_stats &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-os-wait-stats-transact-sql.md)     
  [Vistas de administración dinámica y funciones relacionadas con ejecuciones &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/execution-related-dynamic-management-views-and-functions-transact-sql.md)  
   
   
-
-

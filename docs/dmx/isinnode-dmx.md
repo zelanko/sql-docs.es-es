@@ -1,31 +1,20 @@
 ---
 title: IsInNode (DMX) | Documentos de Microsoft
-ms.custom: ''
-ms.date: 03/02/2016
-ms.prod: analysis-services
-ms.prod_service: analysis-services
-ms.component: data-mining
-ms.reviewer: ''
-ms.suite: pro-bi
-ms.technology: ''
-ms.tgt_pltfrm: ''
-ms.topic: language-reference
-f1_keywords:
-- IsInNode
-dev_langs:
-- DMX
-helpviewer_keywords:
-- IsInNode function
-ms.assetid: 47b2114f-9ad6-45cc-9498-193ad6fa5288
-caps.latest.revision: 29
-author: Minewiskan
+ms.date: 06/07/2018
+ms.prod: sql
+ms.technology: analysis-services
+ms.custom: dmx
+ms.topic: conceptual
 ms.author: owend
-manager: erikre
-ms.openlocfilehash: e32d63a25264f0aeee1480c07d8a7973518f074a
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.reviewer: owend
+author: minewiskan
+manager: kfile
+ms.openlocfilehash: 21c90bea43972f1c9088c228d6810b18308f93f4
+ms.sourcegitcommit: 8f0faa342df0476884c3238e36ae3d9634151f87
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/07/2018
+ms.locfileid: "34841708"
 ---
 # <a name="isinnode-dmx"></a>IsInNode (DMX)
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
@@ -42,7 +31,7 @@ IsInNode(<NodeID>)
 ## <a name="return-type"></a>Tipo devuelto  
  Un tipo booleano.  
   
-## <a name="remarks"></a>Comentarios  
+## <a name="remarks"></a>Notas  
  **IsInNode** solo se usa en [SELECT FROM &#60;modelo&#62;. CASOS &#40;DMX&#41; ](../dmx/select-from-model-cases-dmx.md) y [SELECT FROM &#60;modelo&#62;. SAMPLE_CASES &#40;DMX&#41; ](../dmx/select-from-model-sample-cases-dmx.md) consultas.  
   
 ## <a name="examples"></a>Ejemplos  
@@ -54,7 +43,7 @@ WHERE IsInNode('0')
 ```  
   
 ## <a name="see-also"></a>Vea también  
- [Extensiones de minería de datos &#40;DMX&#41; Referencia de funciones](../dmx/data-mining-extensions-dmx-function-reference.md)   
+ [Extensiones de minería de datos &#40;DMX&#41; función referencia](../dmx/data-mining-extensions-dmx-function-reference.md)   
  [Funciones &#40;DMX&#41;](../dmx/functions-dmx.md)   
  [Funciones de predicción generales &#40;DMX&#41;](../dmx/general-prediction-functions-dmx.md)  
   

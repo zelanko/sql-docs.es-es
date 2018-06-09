@@ -1,30 +1,20 @@
 ---
 title: = (Igual a) (DMX) | Documentos de Microsoft
-ms.custom: ''
-ms.date: 03/02/2016
-ms.prod: analysis-services
-ms.prod_service: analysis-services
-ms.component: data-mining
-ms.reviewer: ''
-ms.suite: pro-bi
-ms.technology: ''
-ms.tgt_pltfrm: ''
-ms.topic: language-reference
-dev_langs:
-- DMX
-helpviewer_keywords:
-- equal operator (=)
-- = (equals operator)
-ms.assetid: 6ac019b1-6373-4e2c-a1ad-fe2dc6188ac3
-caps.latest.revision: 13
-author: Minewiskan
+ms.date: 06/07/2018
+ms.prod: sql
+ms.technology: analysis-services
+ms.custom: dmx
+ms.topic: conceptual
 ms.author: owend
-manager: erikre
-ms.openlocfilehash: c4f962dbda2fbd1c13725d64ddc9519d14cb9275
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.reviewer: owend
+author: minewiskan
+manager: kfile
+ms.openlocfilehash: d67db384747ff0ea57fea1604282d55a6709fec0
+ms.sourcegitcommit: 8f0faa342df0476884c3238e36ae3d9634151f87
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/07/2018
+ms.locfileid: "34841718"
 ---
 # <a name="-equal-to-dmx"></a>= (Igual a) (DMX)
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
@@ -47,7 +37,7 @@ DMX_Expression = DMX_Expression
   
 ## <a name="see-also"></a>Vea también  
  [Operadores de comparación &#40;DMX&#41;](../dmx/operators-comparison.md)   
- [Extensiones de minería de datos &#40;DMX&#41; Referencia de operadores](../dmx/data-mining-extensions-dmx-operator-reference.md)   
+ [Extensiones de minería de datos &#40;DMX&#41; referencia de operadores](../dmx/data-mining-extensions-dmx-operator-reference.md)   
  [Operadores &#40;DMX&#41;](../dmx/operators-dmx.md)  
   
   

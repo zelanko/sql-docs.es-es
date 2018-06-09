@@ -1,34 +1,20 @@
 ---
 title: CREAR ESTRUCTURA DE MINERÍA DE DATOS (DMX) | Documentos de Microsoft
-ms.custom: ''
-ms.date: 03/02/2016
-ms.prod: analysis-services
-ms.prod_service: analysis-services
-ms.component: data-mining
-ms.reviewer: ''
-ms.suite: pro-bi
-ms.technology: ''
-ms.tgt_pltfrm: ''
-ms.topic: language-reference
-f1_keywords:
-- CREATE_MINING_STRUCTURE
-- CREATE MINING STRUCTURE
-dev_langs:
-- DMX
-helpviewer_keywords:
-- CREATE MINING STRUCTURE statement
-- mining structures [DMX], creating
-- RELATED TO column
-ms.assetid: c0dec39c-e90f-4afd-aeaf-a9c3e1d1a5e0
-caps.latest.revision: 45
-author: Minewiskan
+ms.date: 06/07/2018
+ms.prod: sql
+ms.technology: analysis-services
+ms.custom: dmx
+ms.topic: conceptual
 ms.author: owend
-manager: erikre
-ms.openlocfilehash: be83f470de9f72c74d5dc00403684a9ca6aa66f1
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.reviewer: owend
+author: minewiskan
+manager: kfile
+ms.openlocfilehash: ea04b08f98385755f006c1a67125a87dc71e41f1
+ms.sourcegitcommit: 8f0faa342df0476884c3238e36ae3d9634151f87
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/07/2018
+ms.locfileid: "34842758"
 ---
 # <a name="create-mining-structure-dmx"></a>CREAR ESTRUCTURA DE MINERÍA DE DATOS (DMX)
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
@@ -76,7 +62,7 @@ CREATE [SESSION] MINING STRUCTURE <structure>
   
  Valor predeterminado: REPEATABLE(0)  
   
-## <a name="remarks"></a>Comentarios  
+## <a name="remarks"></a>Notas  
  Para definir una estructura de minería de datos hay que especificar una lista de columnas y, opcionalmente, las relaciones jerárquicas entre las columnas; también existe la opción de crear particiones de la estructura de minería de datos en conjuntos de datos de aprendizaje y de pruebas.  
   
  La palabra clave opcional SESSION indica que la estructura es una estructura temporal que solamente puede usarse durante el transcurso de la sesión actual. Cuando finalice la sesión, se eliminará la estructura, así como cualquier modelo basado en la estructura. Para crear modelos y estructuras de minería de datos temporales, primero debe establecer la propiedad de base de datos, AllowSessionMiningModels. Para más información, consulte [Data Mining Properties](../analysis-services/server-properties/data-mining-properties.md).  
@@ -110,13 +96,13 @@ CREATE [SESSION] MINING STRUCTURE <structure>
   
  Para obtener una lista de los tipos de datos, tipos de contenido, distribuciones de columnas y marcadores de modelado que pueden usarse en la definición de una columna de estructura, vea los siguientes temas:  
   
--   [Tipos de datos & #40; minería de datos & #41;](../analysis-services/data-mining/data-types-data-mining.md)  
+-   [Tipos de datos &#40;minería de datos&#41;](../analysis-services/data-mining/data-types-data-mining.md)  
   
--   [Contenido tipos & #40; minería de datos & #41;](../analysis-services/data-mining/content-types-data-mining.md)  
+-   [Tipos de contenido &#40;minería de datos&#41;](../analysis-services/data-mining/content-types-data-mining.md)  
   
 -   [Distribuciones de columnas &#40;minería de datos&#41;](../analysis-services/data-mining/column-distributions-data-mining.md)  
   
--   [Modelado marcas & #40; minería de datos & #41;](../analysis-services/data-mining/modeling-flags-data-mining.md)  
+-   [Las marcas de modelado &#40;minería de datos&#41;](../analysis-services/data-mining/modeling-flags-data-mining.md)  
   
  Puede definir varios valores de marcas de modelado para una columna. Sin embargo, solo puede haber un tipo de contenido y un tipo de datos para cada columna.  
   
@@ -195,6 +181,6 @@ WITH HOLDOUT(25 PERCENT OR 2000 CASES) REPEATABLE(0)
 ## <a name="see-also"></a>Vea también  
  [Extensiones de minería de datos &#40;DMX&#41; las instrucciones de definición de datos](../dmx/dmx-statements-data-definition.md)   
  [Extensiones de minería de datos &#40;DMX&#41; instrucciones de manipulación de datos](../dmx/dmx-statements-data-manipulation.md)   
- [Extensiones de minería de datos & #40; DMX & #41; Referencia de instrucciones](../dmx/data-mining-extensions-dmx-statements.md)  
+ [Referencia de instrucciones de Extensiones de minería de datos &#40;DMX&#41;](../dmx/data-mining-extensions-dmx-statements.md)  
   
   

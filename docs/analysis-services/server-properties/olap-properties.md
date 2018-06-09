@@ -1,6 +1,6 @@
 ---
 title: Propiedades OLAP | Documentos de Microsoft
-ms.date: 05/03/2018
+ms.date: 06/07/2018
 ms.prod: sql
 ms.technology: analysis-services
 ms.custom: ''
@@ -9,14 +9,16 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: 5739c93f7a3c20960f5470c3fd2cdb24c72cf09d
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.openlocfilehash: 0e98fb016ff43ff34456fd02e43fa710c9156334
+ms.sourcegitcommit: 6e55a0a7b7eb6d455006916bc63f93ed2218eae1
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/10/2018
+ms.lasthandoff: 06/08/2018
+ms.locfileid: "35239295"
 ---
 # <a name="olap-properties"></a>Propiedades OLAP
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
+
   [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] admite las propiedades de servidor OLAP enumeradas en las tablas siguientes. Para más información sobre otras propiedades de servidor y cómo establecerlas, vea [Configurar las propiedades de servidor en Analysis Services](../../analysis-services/server-properties/server-properties-in-analysis-services.md).  
   
  **Se aplica a:** modo de servidor multidimensional únicamente  
@@ -44,7 +46,7 @@ ms.lasthandoff: 05/10/2018
  Una propiedad avanzada que no debería cambiar, salvo a petición de expertos en soporte técnico de [!INCLUDE[msCoName](../../includes/msconame-md.md)] .  
   
 ## <a name="lazyprocessing"></a>LazyProcessing  
- **Habilitado**  
+ **Enabled**  
  Una propiedad booleana que especifica si está habilitado el procesamiento de agregaciones diferidas.  
   
  **SleepIntervalSecs**  
@@ -243,12 +245,13 @@ ms.lasthandoff: 05/10/2018
   
 -   Afecta a todas las bases de datos del servidor. **DimensionPropertyCachesize** es una propiedad de todo el servidor. El cambio de esta propiedad afecta a todas las bases de datos que se ejecutan en la instancia actual.  
   
- Enfoque para calcular los requisitos de memoria caché de dimensión:  
+Enfoque para calcular los requisitos de memoria caché de dimensión:  
   
 1.  Empiece aumentando mucho el tamaño para determinar si hay alguna ventaja en aumentar el tamaño de memoria caché de dimensión. Por ejemplo, puede duplicar el valor predeterminado como paso inicial.  
   
 2.  Si hay una mejora del rendimiento evidente, reduzca incrementalmente el valor hasta que se alcance un equilibrio entre el rendimiento y la utilización de memoria.  
-  
+
+
  **ExpressNonEmptyUseEnabled**  
  Una propiedad avanzada que no debería cambiar, salvo a petición de expertos en soporte técnico de [!INCLUDE[msCoName](../../includes/msconame-md.md)] .  
   
@@ -345,7 +348,7 @@ ms.lasthandoff: 05/10/2018
  **DataCache\MemoryModel\Tax**  
  Una propiedad avanzada que no debería cambiar, salvo a petición de expertos en soporte técnico de [!INCLUDE[msCoName](../../includes/msconame-md.md)] .  
   
-## <a name="jobs"></a>Jobs  
+## <a name="jobs"></a>trabajos  
  **ProcessAggregation\MemoryModel\Income**  
  Una propiedad avanzada que no debería cambiar, salvo a petición de expertos en soporte técnico de [!INCLUDE[msCoName](../../includes/msconame-md.md)] .  
   

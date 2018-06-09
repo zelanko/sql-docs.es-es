@@ -1,8 +1,6 @@
 ---
 title: Asignación de esquemas de Oracle a esquemas SQL Server (OracleToSQL) | Documentos de Microsoft
 ms.prod: sql
-ms.prod_service: sql-tools
-ms.component: ssma-oracle
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
@@ -15,11 +13,12 @@ caps.latest.revision: 8
 author: Shamikg
 ms.author: Shamikg
 manager: v-thobro
-ms.openlocfilehash: 030f43c1d44a10b3fb299083fd1c84c71558450f
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: c1df8413ce7fce639d53942b5c3157823c114ddb
+ms.sourcegitcommit: 8aa151e3280eb6372bf95fab63ecbab9dd3f2e5e
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/05/2018
+ms.locfileid: "34777541"
 ---
 # <a name="mapping-oracle-schemas-to-sql-server-schemas-oracletosql"></a>Asignación de esquemas de Oracle a esquemas SQL Server (OracleToSQL)
 En Oracle, cada base de datos tiene uno o más esquemas. De forma predeterminada, SSMA migra todos los objetos en un esquema de Oracle para un [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] con el nombre para el esquema de la base de datos. Sin embargo, puede personalizar la asignación entre esquemas de Oracle y [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] las bases de datos.  

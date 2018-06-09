@@ -1,6 +1,6 @@
 ---
 title: Propiedades del Administrador de bloqueos | Documentos de Microsoft
-ms.date: 05/03/2018
+ms.date: 06/07/2018
 ms.prod: sql
 ms.technology: analysis-services
 ms.custom: ''
@@ -9,14 +9,16 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: 8d228c006c3bb27dbdd3227abeae2882234a6042
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.openlocfilehash: 146bfef500424b7a587c3fb28616a3727086f265
+ms.sourcegitcommit: 6e55a0a7b7eb6d455006916bc63f93ed2218eae1
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/10/2018
+ms.lasthandoff: 06/08/2018
+ms.locfileid: "35239025"
 ---
 # <a name="lock-manager-properties"></a>Propiedades del administrador de bloqueos
-[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
+[!INCLUDE[ssas-appliesto-sqlas-all-aas](../../includes/ssas-appliesto-sqlas-all-aas.md)]
+
   [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] admite las propiedades de servidor del administrador de bloqueos que aparecen en la siguiente tabla. Para obtener más información sobre otras propiedades de servidor y cómo establecerlas, vea [Configurar las propiedades de servidor en Analysis Services](../../analysis-services/server-properties/server-properties-in-analysis-services.md).  
   
  **Se aplica a:** modo de servidor multidimensional y tabular  

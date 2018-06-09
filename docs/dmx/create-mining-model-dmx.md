@@ -1,38 +1,20 @@
 ---
 title: CREAR EL MODELO DE MINERÍA DE DATOS (DMX) | Documentos de Microsoft
-ms.custom: ''
-ms.date: 03/02/2016
-ms.prod: analysis-services
-ms.prod_service: analysis-services
-ms.component: data-mining
-ms.reviewer: ''
-ms.suite: pro-bi
-ms.technology: ''
-ms.tgt_pltfrm: ''
-ms.topic: language-reference
-f1_keywords:
-- CREATE MINING MODEL
-- CREATE
-- CREATE_MINING_MODEL
-dev_langs:
-- DMX
-helpviewer_keywords:
-- RELATED TO column
-- mining models [Analysis Services], creating
-- column definition lists [DMX]
-- parameter lists [DMX]
-- SESSION clause
-- CREATE MINING MODEL statement
-ms.assetid: 43e4b591-7b34-494c-9b2d-7f0fe69af788
-caps.latest.revision: 57
-author: Minewiskan
+ms.date: 06/07/2018
+ms.prod: sql
+ms.technology: analysis-services
+ms.custom: dmx
+ms.topic: conceptual
 ms.author: owend
-manager: erikre
-ms.openlocfilehash: b496ad8ea528345fed110c388c1ffa632c6b0cb3
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.reviewer: owend
+author: minewiskan
+manager: kfile
+ms.openlocfilehash: b1bf442083845359affea6237a7c994ae1229fa9
+ms.sourcegitcommit: 8f0faa342df0476884c3238e36ae3d9634151f87
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/07/2018
+ms.locfileid: "34842638"
 ---
 # <a name="create-mining-model-dmx"></a>CREATE MINING MODEL (DMX)
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
@@ -113,13 +95,13 @@ CREATE MINING MODEL <model> FROM PMML <xml string>
   
  Para obtener una lista de los tipos de datos, tipos de contenido, distribuciones de columnas y marcas de modelado que puede usar en la definición de una columna, vea los siguientes temas:  
   
--   [Tipos de datos & #40; minería de datos & #41;](../analysis-services/data-mining/data-types-data-mining.md)  
+-   [Tipos de datos &#40;minería de datos&#41;](../analysis-services/data-mining/data-types-data-mining.md)  
   
--   [Contenido tipos & #40; minería de datos & #41;](../analysis-services/data-mining/content-types-data-mining.md)  
+-   [Tipos de contenido &#40;minería de datos&#41;](../analysis-services/data-mining/content-types-data-mining.md)  
   
 -   [Distribuciones de columnas &#40;minería de datos&#41;](../analysis-services/data-mining/column-distributions-data-mining.md)  
   
--   [Modelado marcas & #40; minería de datos & #41;](../analysis-services/data-mining/modeling-flags-data-mining.md)  
+-   [Las marcas de modelado &#40;minería de datos&#41;](../analysis-services/data-mining/modeling-flags-data-mining.md)  
   
  Puede agregar una cláusula a la instrucción para describir la relación existente entre dos columnas. [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] admite el uso de las siguientes acciones \<relación de columna > cláusula.  
   
@@ -128,7 +110,7 @@ CREATE MINING MODEL <model> FROM PMML <xml string>
   
  Use una cláusula de predicción para describir el uso de la columna de predicción. La siguiente tabla describe las dos cláusulas posibles.  
   
-|\<predicción > cláusula|Description|  
+|\<predicción > cláusula|Descripción|  
 |---------------------------|-----------------|  
 |**PREDICT**|Esta columna puede predecirla el modelo y puede proporcionarse en casos de entrada para predecir el valor de otras columnas de predicción.|  
 |**PREDICT_ONLY**|Esta columna puede predecirla el modelo, pero sus valores no se pueden utilizar en escenarios de entrada para predecir el valor de otras columnas de predicción.|  
@@ -142,7 +124,7 @@ CREATE MINING MODEL <model> FROM PMML <xml string>
   
  Para obtener una lista de los parámetros que están asociados a cada algoritmo, vea [algoritmos de minería de datos &#40;Analysis Services: minería de datos&#41;](../analysis-services/data-mining/data-mining-algorithms-analysis-services-data-mining.md).  
   
-## <a name="remarks"></a>Comentarios  
+## <a name="remarks"></a>Notas  
  Si desea crear un modelo que tenga un conjunto de datos de pruebas integrado, debe utilizar la instrucción CREATE MINING STRUCTURE seguida de ALTER MINING STRUCTURE. Sin embargo, no todos los tipos de modelo admiten un conjunto de datos de exclusiones. Para obtener más información, consulte [CREATE MINING STRUCTURE &#40;DMX&#41;](../dmx/create-mining-structure-dmx.md).  
   
  Para ver un tutorial sobre cómo crear un modelo de minería de datos mediante la instrucción CREATEMODEL, vea [Tutorial de DMX de predicción de Series temporales](http://msdn.microsoft.com/library/38ea7c03-4754-4e71-896a-f68cc2c98ce2).  
@@ -208,6 +190,6 @@ USING Microsoft_Time_Series (PERIODICITY_HINT = '{12}', FORECAST_METHOD = 'ARTXP
 ## <a name="see-also"></a>Vea también  
  [Extensiones de minería de datos &#40;DMX&#41; las instrucciones de definición de datos](../dmx/dmx-statements-data-definition.md)   
  [Extensiones de minería de datos &#40;DMX&#41; instrucciones de manipulación de datos](../dmx/dmx-statements-data-manipulation.md)   
- [Extensiones de minería de datos & #40; DMX & #41; Referencia de instrucciones](../dmx/data-mining-extensions-dmx-statements.md)  
+ [Referencia de instrucciones de Extensiones de minería de datos &#40;DMX&#41;](../dmx/data-mining-extensions-dmx-statements.md)  
   
   

@@ -3,8 +3,6 @@ title: Seleccionar y configurar los objetos a prueba (SybaseToSQL) | Documentos 
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
-ms.prod_service: sql-tools
-ms.component: ssma-sybase
 ms.reviewer: ''
 ms.suite: sql
 ms.technology: ssma
@@ -21,11 +19,12 @@ caps.latest.revision: 7
 author: Shamikg
 ms.author: Shamikg
 manager: craigg
-ms.openlocfilehash: 2f1833ea7a0c2d2be970c5f13c365aa13f504540
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 0f3302787cedc18565e60251f4ae24e08640a88e
+ms.sourcegitcommit: 8aa151e3280eb6372bf95fab63ecbab9dd3f2e5e
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/05/2018
+ms.locfileid: "34779391"
 ---
 # <a name="selecting-and-configuring-objects-to-test-sybasetosql"></a>Seleccionar y configurar los objetos a prueba (SybaseToSQL)
 En este paso se seleccionan objetos para probar y configurar las opciones de comparación de funciones y procedimientos parámetros de salida, así como los valores devueltos de funciones.  

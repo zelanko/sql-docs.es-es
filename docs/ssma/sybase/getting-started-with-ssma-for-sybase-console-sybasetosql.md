@@ -3,8 +3,6 @@ title: Introducción a SSMA para Sybase consola (SybaseToSQL) | Documentos de Mi
 ms.custom: ''
 ms.date: 09/30/2017
 ms.prod: sql
-ms.prod_service: sql-tools
-ms.component: ssma-sybase
 ms.reviewer: ''
 ms.suite: sql
 ms.technology: ssma
@@ -22,11 +20,12 @@ caps.latest.revision: 22
 author: Shamikg
 ms.author: Shamikg
 manager: craigg
-ms.openlocfilehash: d9b401ea1efdfcececbb35a16d7d10b29915e1fc
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 0ae06be98a30b6c293ef3625f31ff2ac272c1d8e
+ms.sourcegitcommit: 8aa151e3280eb6372bf95fab63ecbab9dd3f2e5e
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/05/2018
+ms.locfileid: "34778551"
 ---
 # <a name="getting-started-with-the-ssma-for-sybase-console-sybasetosql"></a>Introducción a SSMA para Sybase consola (SybaseToSQL)
 En esta sección se describe el procedimiento para iniciar y comenzar a trabajar con SSMA para Sybase aplicación de consola. También se muestran en los ejemplos se utilizan las convenciones en una ventana de salida de consola SSMA típica.  
@@ -64,7 +63,7 @@ Al ejecutar los comandos de script SSMA y opciones, el programa de consola muest
   
 Interpretación de color de la salida de la consola aparece en la tabla siguiente:  
   
-|Color|Description|  
+|Color|Descripción|  
 |---------|---------------|  
 |Rojo|Error irrecuperable durante la ejecución|  
 |Gris|Marca de fecha y hora, el mensaje al usuario|  

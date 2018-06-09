@@ -1,34 +1,23 @@
 ---
 title: LookupCube (MDX) | Documentos de Microsoft
-ms.custom: ''
-ms.date: 03/02/2016
-ms.prod: analysis-services
-ms.prod_service: analysis-services
-ms.component: ''
-ms.reviewer: ''
-ms.suite: pro-bi
-ms.technology: ''
-ms.tgt_pltfrm: ''
-ms.topic: language-reference
-f1_keywords:
-- LOOKUPCUBE
-dev_langs:
-- kbMDX
-helpviewer_keywords:
-- LookupCube function
-ms.assetid: 243fa101-328a-4016-86e0-d8b5977e15a9
-caps.latest.revision: 32
-author: Minewiskan
+ms.date: 06/04/2018
+ms.prod: sql
+ms.technology: analysis-services
+ms.custom: mdx
+ms.topic: reference
 ms.author: owend
-manager: erikre
-ms.openlocfilehash: b21de8eae8df0d591ab99038065a24ed85453ed1
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.reviewer: owend
+author: minewiskan
+manager: kfile
+ms.openlocfilehash: 8f8338a542bf9e15816205930704c45a536a5629
+ms.sourcegitcommit: 97bef3f248abce57422f15530c1685f91392b494
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/04/2018
+ms.locfileid: "34741724"
 ---
 # <a name="lookupcube-mdx"></a>LookupCube (MDX)
-[!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
+
 
   Devuelve el valor de una expresión multidimensional (MDX) evaluada sobre otro cubo especificado en la misma base de datos.  
   
@@ -53,7 +42,7 @@ LookupCube(Cube_Name, String_Expression )
  *String_Expression*  
  Expresión de cadena válida que suele ser una expresión MDX (Expresiones multidimensionales) válida de las coordenadas de celdas que devuelven una cadena.  
   
-## <a name="remarks"></a>Comentarios  
+## <a name="remarks"></a>Notas  
  Si se especifica una expresión numérica, la **LookupCube** función evalúa la expresión numérica especificada en el cubo especificado y devuelve el valor numérico resultante.  
   
  Si se especifica una expresión de cadena, la **LookupCube** función evalúa la expresión de cadena especificada en el cubo especificado y devuelve el valor de cadena resultante.  
@@ -77,6 +66,6 @@ LookupCube(Cube_Name, String_Expression )
  `FROM [Adventure Works]`  
   
 ## <a name="see-also"></a>Vea también  
- [Referencia de funciones MDX & #40; MDX & #41;](../mdx/mdx-function-reference-mdx.md)  
+ [Referencia de funciones MDX &#40;MDX&#41;](../mdx/mdx-function-reference-mdx.md)  
   
   

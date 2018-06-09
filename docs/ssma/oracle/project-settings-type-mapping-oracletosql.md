@@ -1,8 +1,6 @@
 ---
 title: (Asignación de tipos) de la configuración del proyecto (OracleToSQL) | Documentos de Microsoft
 ms.prod: sql
-ms.prod_service: sql-tools
-ms.component: ssma-oracle
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
@@ -15,11 +13,12 @@ caps.latest.revision: 8
 author: Shamikg
 ms.author: Shamikg
 manager: v-thobro
-ms.openlocfilehash: 18d49c123b42a41db33fd6eb37f580eba34f786e
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: e4b0e239c2dfe345ff17b82fa002550e44fb5b09
+ms.sourcegitcommit: 8aa151e3280eb6372bf95fab63ecbab9dd3f2e5e
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/05/2018
+ms.locfileid: "34778151"
 ---
 # <a name="project-settings-type-mapping-oracletosql"></a>(Asignación de tipos) de la configuración del proyecto (OracleToSQL)
 La página de asignación de tipo de la **configuración del proyecto** cuadro de diálogo contiene la configuración que permiten personalizar cómo SSMA convierte tipos de datos de Oracle en [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] tipos de datos.  
@@ -66,7 +65,7 @@ En la tabla siguiente contiene la asignación de tipo de datos predeterminada pa
 |BFILE|varbinary(max)|  
 |binary_double|float [53]|  
 |binary_float|float [53]|  
-|binary_integer|int|  
+|binary_integer|INT|  
 |blob|varbinary(max)|  
 |boolean|bit|  
 |char|ntext|  
@@ -74,13 +73,13 @@ En la tabla siguiente contiene la asignación de tipo de datos predeterminada pa
 |character|ntext|  
 |character varying|ntext|  
 |CLOB|ntext|  
-|date|datetime2 [0]|  
+|Date|datetime2 [0]|  
 |dec|DEC [38] [0]|  
-|decimal|float [53]|  
+|Decimal|float [53]|  
 |precisión doble|float [53]|  
-|float|float [53]|  
-|int|int|  
-|integer|int|  
+|FLOAT|float [53]|  
+|INT|INT|  
+|integer|INT|  
 |long|ntext|  
 |long raw|varbinary(max)|  
 |long raw [\*... 8000]<sup>*</sup>|varbinary [*]|  
@@ -93,19 +92,19 @@ En la tabla siguiente contiene la asignación de tipo de datos predeterminada pa
 |NCHAR|nvarchar(max)|  
 |NCLOB|nvarchar(max)|  
 |number|float [53]|  
-|numeric|float [53]|  
+|NUMERIC|float [53]|  
 |NVARCHAR2|nvarchar(max)|  
-|pls_integer|int|  
+|pls_integer|INT|  
 |raw|varbinary(max)|  
-|real|float [53]|  
-|ROWID|uniqueidentifier|  
-|Signtype|smallint|  
-|smallint|smallint|  
+|REAL|float [53]|  
+|ROWID|UNIQUEIDENTIFIER|  
+|Signtype|SMALLINT|  
+|SMALLINT|SMALLINT|  
 |string|ntext|  
 |TIMESTAMP|datetime2|  
 |marca de tiempo con la zona horaria local|datetimeoffset|  
 |marca de tiempo con la zona horaria|datetimeoffset|  
-|Urowid|uniqueidentifier|  
+|Urowid|UNIQUEIDENTIFIER|  
 |varchar|ntext|  
 |VARCHAR2|ntext|  
 |Tipo XML|xml|  
@@ -130,19 +129,19 @@ En la tabla siguiente contiene la asignación de tipo de valor predeterminado pa
 |carácter variable [*.. \*]|varchar [*]|  
 |caracteres [*.. \*]|Char [*]|  
 |CLOB|ntext|  
-|date|datetime2 [0]|  
+|Date|datetime2 [0]|  
 |dec|DEC [38] [0]|  
 |DEC [*.. \*]|DEC [*] [0]|  
 |DEC [*.. \*][\*.. \*]|dec[*][\*]|  
-|decimal|decimal[38][0]|  
+|Decimal|decimal[38][0]|  
 |decimal[*..\*]|decimal[*][0]|  
 |decimal [*.. \*][\*.. \*]|decimal [*] [\*]|  
 |precisión doble|float [53]|  
-|float|float [53]|  
+|FLOAT|float [53]|  
 |float [*.. 53]|float [*]|  
 |float [54.. *]|float [53]|  
-|int|int|  
-|integer|int|  
+|INT|INT|  
+|integer|INT|  
 |long|ntext|  
 |long raw|varbinary(max)|  
 |long raw [*.. 8000]|varbinary [*]|  
@@ -162,22 +161,22 @@ En la tabla siguiente contiene la asignación de tipo de valor predeterminado pa
 |number|float [53]|  
 |número [*.. \*]|numérico [*]|  
 |número [*.. \*][\*.. \*]|numérico [*] [\*]|  
-|numeric|numeric|  
+|NUMERIC|NUMERIC|  
 |numérico [*.. \*]|numérico [*]|  
 |numérico [*.. \*][\*.. \*]|numérico [*] [\*]|  
 |NVARCHAR2 [*.. \*]|nvarchar [*]|  
 |sin formato [*.. \*]|varbinary [*]|  
-|real|float [53]|  
-|ROWID|uniqueidentifier|  
-|smallint|smallint|  
+|REAL|float [53]|  
+|ROWID|UNIQUEIDENTIFIER|  
+|SMALLINT|SMALLINT|  
 |TIMESTAMP|datetime2|  
 |marca de tiempo con la zona horaria local|datetimeoffset|  
 |marca de tiempo con la zona horaria local [*.. \*]|DateTimeOffset [*]|  
 |marca de tiempo con la zona horaria|datetimeoffset|  
 |marca de tiempo con la zona horaria [*.. \*]|DateTimeOffset [*]|  
 |timestamp[*..\*]|datetime2 [*]|  
-|Urowid|uniqueidentifier|  
-|urowid [*.. \*]|uniqueidentifier|  
+|Urowid|UNIQUEIDENTIFIER|  
+|urowid [*.. \*]|UNIQUEIDENTIFIER|  
 |varchar [*.. \*]|varchar [*]|  
 |VARCHAR2 [*.. \*]|varchar [*]|  
 |Tipo XML|xml|  
@@ -190,7 +189,7 @@ En la tabla siguiente contiene la asignación de tipo de valor predeterminado pa
 |BFILE|varbinary(max)|  
 |binary_double|float [53]|  
 |binary_float|float [53]|  
-|binary_interger|int|  
+|binary_interger|INT|  
 |BLOB|varbinary(max)|  
 |Boolean|bit|  
 |Char|char|  
@@ -204,19 +203,19 @@ En la tabla siguiente contiene la asignación de tipo de valor predeterminado pa
 |character[*..8000]|Char [*]|  
 |caracteres [8001.. *]|ntext|  
 |CLOB|ntext|  
-|date|datetime2 [0]|  
+|Date|datetime2 [0]|  
 |dec|DEC [38] [0]|  
 |DEC [*.. \*]|DEC [*] [0]|  
 |DEC [*.. \*][\*.. \*]|dec[*][\*]|  
-|decimal|decimal[38][0]|  
+|Decimal|decimal[38][0]|  
 |decimal[*..\*]|decimal[*][0]|  
 |decimal [*.. \*][\*.. \*]|decimal [*] [\*]|  
 |precisión doble|float [53]|  
-|Float|float [53]|  
+|float|float [53]|  
 |float [*.. 53]|float [*]|  
 |float [54.. *]|float [53]|  
-|int|int|  
-|Integer|int|  
+|int|INT|  
+|Integer|INT|  
 |entero [*.. \*]|numérico [*] [0]|  
 |Long|ntext|  
 |long raw|varbinary(max)|  
@@ -246,13 +245,13 @@ En la tabla siguiente contiene la asignación de tipo de valor predeterminado pa
 |numérico [*.. \*][\*.. \*]|numérico [*] [\*]|  
 |nvarchar2[*..4000]|nvarchar [*]|  
 |nvarchar2[4001..*]|nvarchar(max)|  
-|pls_integer|int|  
+|pls_integer|INT|  
 |raw[*..8000]|varbinary [*]|  
 |sin formato [8001.. *]|varbinary(max)|  
 |Real|float [53]|  
-|ROWID|uniqueidentifier|  
-|Signtype|smallint|  
-|Smallint|smallint|  
+|ROWID|UNIQUEIDENTIFIER|  
+|Signtype|SMALLINT|  
+|Smallint|SMALLINT|  
 |string[*..8000]|varchar [*]|  
 |string[8001..*]|ntext|  
 |TIMESTAMP|datetime2|  
@@ -261,8 +260,8 @@ En la tabla siguiente contiene la asignación de tipo de valor predeterminado pa
 |marca de tiempo con la zona horaria local [*.. \*]|DateTimeOffset [*]|  
 |marca de tiempo con la zona horaria [*.. \*]|DateTimeOffset [*]|  
 |timestamp[*..\*]|datetime2 [*]|  
-|Urowid|uniqueidentifier|  
-|urowid [*.. \*]|uniqueidentifier|  
+|Urowid|UNIQUEIDENTIFIER|  
+|urowid [*.. \*]|UNIQUEIDENTIFIER|  
 |varchar[*..8000]|varchar [*]|  
 |varchar [8001.. *]|ntext|  
 |varchar2[*..8000]|varchar [*]|  

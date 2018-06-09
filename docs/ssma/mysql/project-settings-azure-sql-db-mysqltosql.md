@@ -1,8 +1,6 @@
 ---
 title: Configuración (base de datos de SQL Azure) del proyecto (MySQLToSQL) | Documentos de Microsoft
 ms.prod: sql
-ms.prod_service: sql-tools
-ms.component: ssma-mysql
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
@@ -18,11 +16,12 @@ caps.latest.revision: 10
 author: Shamikg
 ms.author: Shamikg
 manager: craigg
-ms.openlocfilehash: a01c8f7f7c8d58747d0d818140bed7593c82192a
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 9aafaa73bcbbede50fc2aa274b0fca6b655b61dd
+ms.sourcegitcommit: 8aa151e3280eb6372bf95fab63ecbab9dd3f2e5e
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/05/2018
+ms.locfileid: "34776551"
 ---
 # <a name="project-settings-azure-sql-db-mysqltosql"></a>Configuración (base de datos de SQL Azure) del proyecto (MySQLToSQL)
 La configuración del proyecto de SQL Azure le permite configurar el sufijo de la base de datos de SQL Azure para agregar en el cuadro de diálogo de conexión y también permite implementar el mecanismo de latidos de conexión de SQL Azure.  

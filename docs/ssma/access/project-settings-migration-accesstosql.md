@@ -1,8 +1,6 @@
 ---
 title: Configuración (migración) (AccessToSQL) del proyecto | Documentos de Microsoft
 ms.prod: sql
-ms.prod_service: sql-tools
-ms.component: ssma-access
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
@@ -21,11 +19,12 @@ caps.latest.revision: 14
 author: Shamikg
 ms.author: Shamikg
 manager: craigg
-ms.openlocfilehash: 3fe26ecc9d250982206121d33b35ee5c975e376f
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 8ee97b6e47a51a8ed2e8b69c0f4044d8e583e949
+ms.sourcegitcommit: 8aa151e3280eb6372bf95fab63ecbab9dd3f2e5e
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/05/2018
+ms.locfileid: "34774481"
 ---
 # <a name="project-settings-migration-accesstosql"></a>Configuración del proyecto (migración) (AccessToSQL)
 La configuración del proyecto de migración le permite configurar la forma en que se migren los datos a [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] o SQL Azure.  

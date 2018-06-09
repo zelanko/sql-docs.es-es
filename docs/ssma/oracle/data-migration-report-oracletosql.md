@@ -1,8 +1,6 @@
 ---
 title: Informe de migración de datos (OracleToSQL) | Documentos de Microsoft
 ms.prod: sql
-ms.prod_service: sql-tools
-ms.component: ssma-oracle
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
@@ -15,11 +13,12 @@ caps.latest.revision: 4
 author: Shamikg
 ms.author: Shamikg
 manager: v-pelars
-ms.openlocfilehash: 67131d3dd05c48f9e7dfa4600e6172d3354db9ae
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: b9001e61cb409be635f99780085a47656ab53b8d
+ms.sourcegitcommit: 8aa151e3280eb6372bf95fab63ecbab9dd3f2e5e
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/05/2018
+ms.locfileid: "34777041"
 ---
 # <a name="data-migration-report--oracletosql"></a>Informe de migración de datos (OracleToSQL)
 El **informe de migración de datos** aparece el cuadro de diálogo después de migrar datos a [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)].  

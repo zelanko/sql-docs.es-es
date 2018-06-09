@@ -1,31 +1,20 @@
 ---
 title: TopCount (DMX) | Documentos de Microsoft
-ms.custom: ''
-ms.date: 03/02/2016
-ms.prod: analysis-services
-ms.prod_service: analysis-services
-ms.component: data-mining
-ms.reviewer: ''
-ms.suite: pro-bi
-ms.technology: ''
-ms.tgt_pltfrm: ''
-ms.topic: language-reference
-f1_keywords:
-- TOPCOUNT
-dev_langs:
-- DMX
-helpviewer_keywords:
-- TopCount function
-ms.assetid: cbe031c9-4ff0-45df-9810-ebaebacf161d
-caps.latest.revision: 40
-author: Minewiskan
+ms.date: 06/07/2018
+ms.prod: sql
+ms.technology: analysis-services
+ms.custom: dmx
+ms.topic: conceptual
 ms.author: owend
-manager: erikre
-ms.openlocfilehash: 48a53d01219290dd50bd192a6ee2adf5b51ad7b6
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.reviewer: owend
+author: minewiskan
+manager: kfile
+ms.openlocfilehash: 182c83cf6b2850941c2f21924395c0ebe160db01
+ms.sourcegitcommit: 8f0faa342df0476884c3238e36ae3d9634151f87
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/07/2018
+ms.locfileid: "34842778"
 ---
 # <a name="topcount-dmx"></a>TopCount (DMX)
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
@@ -45,7 +34,7 @@ TopCount(<table expression>, <rank expression>, <count>)
 ## <a name="return-type"></a>Tipo devuelto  
  \<expresión de tabla >  
   
-## <a name="remarks"></a>Comentarios  
+## <a name="remarks"></a>Notas  
  El valor proporcionado por el \<rank expression > argumento determina el orden decreciente de rango para las filas que se proporcionan en el \<expresión de tabla > argumento y el número de filas de nivel superior que se especifica en el \<recuento > se devuelve el argumento.  
   
  La función TopCount se presentó originalmente para habilitar las predicciones asociativas y por lo general, genera los mismos resultados que una instrucción que incluya **SELECT TOP** y **ORDER BY** cláusulas. Obtendrá un mejor rendimiento para las predicciones asociativas si usa el **predecir (DMX)** función, que admite la especificación de un número de predicciones que devolver.  

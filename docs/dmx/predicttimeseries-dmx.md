@@ -1,35 +1,20 @@
 ---
 title: PredictTimeSeries (DMX) | Documentos de Microsoft
-ms.custom: ''
-ms.date: 03/02/2016
-ms.prod: analysis-services
-ms.prod_service: analysis-services
-ms.component: data-mining
-ms.reviewer: ''
-ms.suite: pro-bi
-ms.technology: ''
-ms.tgt_pltfrm: ''
-ms.topic: language-reference
-f1_keywords:
-- PredictTimeSeries
-dev_langs:
-- DMX
-helpviewer_keywords:
-- time series algorithms [Analysis Services]
-- time series [Analysis Services]
-- EXTEND_MODEL_CASES parameter
-- REPLACE_MODEL_CASES parameter
-- PredictTimeSeries function
-ms.assetid: 85c596be-a7f4-499b-8d36-7e67c2647b6c
-caps.latest.revision: 56
-author: Minewiskan
+ms.date: 06/07/2018
+ms.prod: sql
+ms.technology: analysis-services
+ms.custom: dmx
+ms.topic: conceptual
 ms.author: owend
-manager: erikre
-ms.openlocfilehash: 97094e9f59e9e4e505ad1aa16592871500b35eef
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.reviewer: owend
+author: minewiskan
+manager: kfile
+ms.openlocfilehash: f7b4f9303a96e6197cc6580a5c799404f48e5c4a
+ms.sourcegitcommit: 8f0faa342df0476884c3238e36ae3d9634151f87
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/07/2018
+ms.locfileid: "34842748"
 ---
 # <a name="predicttimeseries-dmx"></a>PredictTimeSeries (DMX)
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
@@ -83,7 +68,7 @@ PredictTimeSeries(<scalar column reference>, n-start, n-end, REPLACE_MODEL_CASES
 ## <a name="return-type"></a>Tipo devuelto  
  A \< *expresión de tabla*>.  
   
-## <a name="remarks"></a>Comentarios  
+## <a name="remarks"></a>Notas  
  El algoritmo de serie temporal [!INCLUDE[msCoName](../includes/msconame-md.md)] no admite la predicción histórica cuando se utiliza la instrucción PREDICTION JOIN para agregar datos.  
   
  En una instrucción PREDICTION JOIN, el proceso de predicción siempre se inicia en el estadio temporal inmediatamente posterior a la finalización de la serie de entrenamiento original. Esto es cierto incluso si se agregan datos nuevos. Por lo tanto, la *n* parámetro y *n-start* valores de parámetro deben ser un entero mayor que 0.  
@@ -268,8 +253,8 @@ OR [Model Region] = 'M200 North America'
 >  La palabra clave FLATTENED se usó en este ejemplo para hacer que los resultados sean más fáciles de presentar en una tabla; sin embargo, si su proveedor admite conjuntos de filas jerárquicos, puede omitirla. Si omite la palabra clave FLATTENED, la consulta devuelve dos columnas: la primera contiene el valor que identifica la serie de datos `[Model Region]` y la segunda contiene la tabla anidada de estadísticas.  
   
 ## <a name="see-also"></a>Vea también  
- [Extensiones de minería de datos &#40;DMX&#41; Referencia de funciones](../dmx/data-mining-extensions-dmx-function-reference.md)   
+ [Extensiones de minería de datos &#40;DMX&#41; función referencia](../dmx/data-mining-extensions-dmx-function-reference.md)   
  [Ejemplos de consultas de modelo de serie temporal](../analysis-services/data-mining/time-series-model-query-examples.md)   
- [Predecir & #40; DMX & #41;](../dmx/predict-dmx.md)  
+ [Predecir &#40;DMX&#41;](../dmx/predict-dmx.md)  
   
   

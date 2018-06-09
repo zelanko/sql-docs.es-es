@@ -1,31 +1,20 @@
 ---
 title: Convenciones de sintaxis de extensiones (DMX) de minería de datos | Documentos de Microsoft
-ms.custom: ''
-ms.date: 03/02/2016
-ms.prod: analysis-services
-ms.prod_service: analysis-services
-ms.component: data-mining
-ms.reviewer: ''
-ms.suite: pro-bi
-ms.technology: ''
-ms.tgt_pltfrm: ''
-ms.topic: language-reference
-dev_langs:
-- DMX
-helpviewer_keywords:
-- Data Mining Extensions [Analysis Services], syntax conventions
-- syntax [DMX]
-- DMX [Analysis Services], syntax conventions
-ms.assetid: 7a885df3-9500-4793-9307-90a7d617f486
-caps.latest.revision: 13
-author: Minewiskan
+ms.date: 06/07/2018
+ms.prod: sql
+ms.technology: analysis-services
+ms.custom: dmx
+ms.topic: conceptual
 ms.author: owend
-manager: erikre
-ms.openlocfilehash: 88e745a3d4ccb35d5076b7998f9d6a5813e76772
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.reviewer: owend
+author: minewiskan
+manager: kfile
+ms.openlocfilehash: cf80ef73ae3f55f58978d95b0d12b8c69b81dfff
+ms.sourcegitcommit: 8f0faa342df0476884c3238e36ae3d9634151f87
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/07/2018
+ms.locfileid: "34843048"
 ---
 # <a name="data-mining-extensions-dmx-syntax-conventions"></a>Convenciones de sintaxis de Extensiones de minería de datos (DMX)
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
@@ -43,7 +32,7 @@ ms.lasthandoff: 05/03/2018
 |\<label> ::=|Nombre de un bloque de sintaxis. Esta convención sirve para agrupar y etiquetar secciones de sintaxis extensas o una unidad de sintaxis que se puede usar en varias ubicaciones dentro de una instrucción. Cada ubicación en la que se puede utilizar el bloque de sintaxis se indica con la etiqueta incluida entre comillas angulares, como \<etiqueta >.|  
   
 ## <a name="see-also"></a>Vea también  
- [Extensiones de minería de datos & #40; DMX & #41; Referencia](../dmx/data-mining-extensions-dmx-reference.md)  
+ [Extensiones de minería de datos &#40;DMX&#41; referencia](../dmx/data-mining-extensions-dmx-reference.md)  
   
   
 

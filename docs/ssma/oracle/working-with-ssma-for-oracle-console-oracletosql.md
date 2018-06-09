@@ -1,8 +1,6 @@
 ---
 title: Trabajar con SSMA para la consola de Oracle (OracleToSQL) | Documentos de Microsoft
 ms.prod: sql
-ms.prod_service: sql-tools
-ms.component: ssma-oracle
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
@@ -15,11 +13,12 @@ caps.latest.revision: 19
 author: Shamikg
 ms.author: Shamikg
 manager: v-thobro
-ms.openlocfilehash: 04701daad7fd077a0ab29c8d1a9ade3629dc2f8d
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: d80ae0d5124b5845292ceca2ff8de7659925e77f
+ms.sourcegitcommit: 8aa151e3280eb6372bf95fab63ecbab9dd3f2e5e
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/05/2018
+ms.locfileid: "34778261"
 ---
 # <a name="working-with-ssma-for-oracle-console-oracletosql"></a>Trabajar con SSMA para la consola de Oracle (OracleToSQL)
 [!INCLUDE[msCoName](../../includes/msconame_md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] Versión de migración Assistant (SSMA) para Oracle ahora es accesible a través de una aplicación de consola en línea de comandos. Los archivos de script forman la entrada a la aplicación para ejecutar los comandos. Como una aplicación de consola, SSMA permite crear una interfaz de nivel de script, reduce el ciclo de migración y pasa el esfuerzo de migración.  
@@ -30,7 +29,7 @@ Entre los temas tratados en esta sección se incluyen:
   
 |||  
 |-|-|  
-|**Temas**|**Description**|  
+|**Temas**|**Descripción**|  
 |[Introducción a SSMA para la consola de Oracle &#40;OracleToSQL&#41;](../../ssma/oracle/getting-started-with-ssma-for-oracle-console-oracletosql.md)|Explica el procedimiento para ejecutar la aplicación de consola.|  
 |[Opciones de línea de comandos en la consola SSMA &#40;OracleToSQL&#41;](../../ssma/oracle/command-line-options-in-ssma-console-oracletosql.md)|Describe las opciones de línea de comandos y parámetros para que funcione la aplicación de consola SSMA.|  
 |[Crear archivos de Script &#40;OracleToSQL&#41;](../../ssma/oracle/creating-script-files-oracletosql.md)|Explica cómo crear un archivo de script.|  

@@ -1,34 +1,20 @@
 ---
 title: SELECT FROM &lt;modelo&gt;. CONTENIDO (DMX) | Documentos de Microsoft
-ms.custom: ''
-ms.date: 03/02/2016
-ms.prod: analysis-services
-ms.prod_service: analysis-services
-ms.component: data-mining
-ms.reviewer: ''
-ms.suite: pro-bi
-ms.technology: ''
-ms.tgt_pltfrm: ''
-ms.topic: language-reference
-f1_keywords:
-- SELECT
-- FROM
-- Content
-dev_langs:
-- DMX
-helpviewer_keywords:
-- schema rowsets [Analysis Services], data mining
-- SELECT FROM <model>.CONTENT statement
-ms.assetid: a270b33f-77be-41fa-9340-2f6cb0dd75e5
-caps.latest.revision: 43
-author: Minewiskan
+ms.date: 06/07/2018
+ms.prod: sql
+ms.technology: analysis-services
+ms.custom: dmx
+ms.topic: conceptual
 ms.author: owend
-manager: erikre
-ms.openlocfilehash: c68fe4831c0fcbae281eae4ca3ed823d737267cd
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.reviewer: owend
+author: minewiskan
+manager: kfile
+ms.openlocfilehash: e00a7f272362a103e94d8cac686201ce79c06322
+ms.sourcegitcommit: 8f0faa342df0476884c3238e36ae3d9634151f87
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/07/2018
+ms.locfileid: "34842668"
 ---
 # <a name="select-from-ltmodelgtcontent-dmx"></a>SELECT FROM &lt;modelo&gt;. CONTENIDO (DMX)
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
@@ -60,7 +46,7 @@ SELECT [FLATTENED] [TOP <n>] <expression list> FROM <model>.CONTENT
  *expression*  
  Opcional. Expresión que devuelve un valor escalar.  
   
-## <a name="remarks"></a>Comentarios  
+## <a name="remarks"></a>Notas  
  El **SELECT FROM**  *\<modelo > ***. CONTENIDO** instrucción devuelve contenido específico para cada algoritmo. Por ejemplo, podría desear usar las descripciones de todas las reglas de un modelo de reglas de asociación en una aplicación personalizada. Puede usar un **SELECT FROM \<modelo >. CONTENIDO** instrucción para devolver valores de la columna NODE_RULE del modelo.  
   
  En la tabla siguiente se enumeran las columnas que están incluidas en el contenido del modelo de minería de datos.  
@@ -68,7 +54,7 @@ SELECT [FLATTENED] [TOP <n>] <expression list> FROM <model>.CONTENT
 > [!NOTE]  
 >  Los algoritmos podrían interpretar las columnas de forma distinta para poder representar el contenido correctamente. Para obtener una descripción del modelo de minería de datos contenido para cada algoritmo y sugerencias sobre cómo interpretar y consultar el contenido de cada tipo de modelo del modelo de minería de datos, vea [contenido del modelo de minería de datos &#40;Analysis Services: minería de datos&#41;](../analysis-services/data-mining/mining-model-content-analysis-services-data-mining.md).  
   
-|Columna de conjunto de filas CONTENT|Description|  
+|Columna de conjunto de filas CONTENT|Descripción|  
 |---------------------------|-----------------|  
 |MODEL_CATALOG|Un nombre de catálogo. Su valor es NULL si el proveedor no admite catálogos.|  
 |MODEL_SCHEMA|Nombre del esquema no completo. Su valor es NULL si el proveedor no admite esquemas.|  
@@ -160,6 +146,6 @@ WHERE NODE_TYPE = 26
 ## <a name="see-also"></a>Vea también  
  [SELECCIONE &AMP;#40;DMX&AMP;#41;](../dmx/select-dmx.md)   
  [Extensiones de minería de datos &#40;DMX&#41; instrucciones de manipulación de datos](../dmx/dmx-statements-data-manipulation.md)   
- [Extensiones de minería de datos & #40; DMX & #41; Referencia de instrucciones](../dmx/data-mining-extensions-dmx-statements.md)  
+ [Referencia de instrucciones de Extensiones de minería de datos &#40;DMX&#41;](../dmx/data-mining-extensions-dmx-statements.md)  
   
   

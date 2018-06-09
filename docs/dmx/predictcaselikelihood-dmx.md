@@ -1,31 +1,20 @@
 ---
 title: PredictCaseLikelihood (DMX) | Documentos de Microsoft
-ms.custom: ''
-ms.date: 03/02/2016
-ms.prod: analysis-services
-ms.prod_service: analysis-services
-ms.component: data-mining
-ms.reviewer: ''
-ms.suite: pro-bi
-ms.technology: ''
-ms.tgt_pltfrm: ''
-ms.topic: language-reference
-f1_keywords:
-- PredictCaseLikelihood
-dev_langs:
-- DMX
-helpviewer_keywords:
-- PredictCaseLikelihood function
-ms.assetid: b00180e5-b2eb-49e2-891d-e39fb378f50a
-caps.latest.revision: 39
-author: Minewiskan
+ms.date: 06/07/2018
+ms.prod: sql
+ms.technology: analysis-services
+ms.custom: dmx
+ms.topic: conceptual
 ms.author: owend
-manager: erikre
-ms.openlocfilehash: 3d9cbe8c92be301fa56c2d5a9f78e741ef5765f9
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.reviewer: owend
+author: minewiskan
+manager: kfile
+ms.openlocfilehash: d8159af8ac4b3c9bf21dcdc68a0cfb30c46e33e5
+ms.sourcegitcommit: 8f0faa342df0476884c3238e36ae3d9634151f87
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/07/2018
+ms.locfileid: "34841786"
 ---
 # <a name="predictcaselikelihood-dmx"></a>PredictCaseLikelihood (DMX)
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
@@ -52,7 +41,7 @@ PredictCaseLikelihood([NORMALIZED|NONNORMALIZED])
 ## <a name="return-type"></a>Tipo devuelto  
  Número de punto flotante de doble precisión entre 0 y 1. Un número más cercano a 1 indica que el caso tiene mayor probabilidad de producirse en este modelo. Un número más cercano a 0 indica que es menos probable que se produzca el caso en este modelo.  
   
-## <a name="remarks"></a>Comentarios  
+## <a name="remarks"></a>Notas  
  De forma predeterminada, el resultado de la **PredictCaseLikelihood** se normaliza la función. Los valores normalizados son generalmente más útiles cuando aumenta el número de atributos de un caso y las diferencias entre las probabilidades sin procesar de dos casos cualesquiera se hacen mucho menores.  
   
  La ecuación siguiente se utiliza para calcular los valores normalizados a partir de los valores de x e y dados:  
@@ -92,8 +81,8 @@ NATURAL PREDICTION JOIN
  La diferencia entre estos resultados demuestra el efecto de la normalización. El valor sin formato de **CaseLikelihood** sugiere que la probabilidad del caso es aproximadamente un 20 por ciento; sin embargo, al normalizar los resultados, es evidente que la probabilidad del caso es muy baja.  
   
 ## <a name="see-also"></a>Vea también  
- [Algoritmos de minería de datos & #40; Analysis Services: minería de datos & #41;](../analysis-services/data-mining/data-mining-algorithms-analysis-services-data-mining.md)   
- [Extensiones de minería de datos &#40;DMX&#41; Referencia de funciones](../dmx/data-mining-extensions-dmx-function-reference.md)   
+ [Algoritmos de minería de datos &#40;Analysis Services: minería de datos&#41;](../analysis-services/data-mining/data-mining-algorithms-analysis-services-data-mining.md)   
+ [Extensiones de minería de datos &#40;DMX&#41; función referencia](../dmx/data-mining-extensions-dmx-function-reference.md)   
  [Funciones &#40;DMX&#41;](../dmx/functions-dmx.md)   
  [Funciones de predicción generales &#40;DMX&#41;](../dmx/general-prediction-functions-dmx.md)  
   

@@ -1,40 +1,20 @@
 ---
 title: Comentarios (DMX) | Documentos de Microsoft
-ms.custom: ''
-ms.date: 03/02/2016
-ms.prod: analysis-services
-ms.prod_service: analysis-services
-ms.component: data-mining
-ms.reviewer: ''
-ms.suite: pro-bi
-ms.technology: ''
-ms.tgt_pltfrm: ''
-ms.topic: language-reference
-dev_langs:
-- DMX
-helpviewer_keywords:
-- comments [DMX]
-- Data Mining Extensions [Analysis Services], comments
-- double forward slashes
-- commenting characters
-- text strings [SQL Server]
-- remarks [DMX]
-- forward slash-asterisk character pairs
-- DMX [Analysis Services], comments
-- /*...*/ (comment)
-- double hyphens
-- // (comment)
-- -- (comment character)
-ms.assetid: 64d10eb5-4fe8-42c6-b387-eff336315e56
-caps.latest.revision: 30
-author: Minewiskan
+ms.date: 06/07/2018
+ms.prod: sql
+ms.technology: analysis-services
+ms.custom: dmx
+ms.topic: conceptual
 ms.author: owend
-manager: erikre
-ms.openlocfilehash: eb8bb33e09514117ec2b7f8f8ea8f96f4de3be63
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.reviewer: owend
+author: minewiskan
+manager: kfile
+ms.openlocfilehash: f319457da85378000ef974c3ace1ddbba87d18e1
+ms.sourcegitcommit: 8f0faa342df0476884c3238e36ae3d9634151f87
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/07/2018
+ms.locfileid: "34842958"
 ---
 # <a name="comments-dmx"></a>Comentarios (DMX)
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
@@ -58,12 +38,12 @@ ms.lasthandoff: 05/03/2018
 -   **/\* ... \*/ (barra diagonal y asterisco pares de caracteres).** Estos caracteres de comentario sirven para escribir un comentario en la misma línea que el código que se va a ejecutar, en una línea independiente o en medio de código ejecutable. [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] se evalúa como todo, desde el par de apertura de comentario (/ *) para el par de cierre de comentario (\*/) como parte del comentario. Para crear un comentario ocupe varias líneas, inicie el comentario con el par de caracteres de apertura de comentario (/\*) y finalice el comentario con el par de caracteres de cierre de comentario (\*/). Ningún otro carácter de comentario debe aparecer en ninguna línea del comentario. Para obtener más información sobre este carácter de comentario, vea [barra diagonal estrella &#40;comentario&#41; &#40;DMX&#41;](../dmx/slash-star-comment-dmx.md).  
   
 ## <a name="see-also"></a>Vea también  
- [Extensiones de minería de datos &#40;DMX&#41; Referencia](../dmx/data-mining-extensions-dmx-reference.md)   
- [Extensiones de minería de datos &#40;DMX&#41; Referencia de funciones](../dmx/data-mining-extensions-dmx-function-reference.md)   
- [Extensiones de minería de datos &#40;DMX&#41; Referencia de operadores](../dmx/data-mining-extensions-dmx-operator-reference.md)   
- [Extensiones de minería de datos &#40;DMX&#41; Referencia de instrucciones](../dmx/data-mining-extensions-dmx-statements.md)   
- [Extensiones de minería de datos &#40;DMX&#41; Convenciones de sintaxis](../dmx/data-mining-extensions-dmx-syntax-conventions.md)   
- [Extensiones de minería de datos &#40;DMX&#41; Elementos de sintaxis](../dmx/data-mining-extensions-dmx-syntax-elements.md)   
+ [Extensiones de minería de datos &#40;DMX&#41; referencia](../dmx/data-mining-extensions-dmx-reference.md)   
+ [Extensiones de minería de datos &#40;DMX&#41; función referencia](../dmx/data-mining-extensions-dmx-function-reference.md)   
+ [Extensiones de minería de datos &#40;DMX&#41; referencia de operadores](../dmx/data-mining-extensions-dmx-operator-reference.md)   
+ [Extensiones de minería de datos &#40;DMX&#41; referencia de instrucciones](../dmx/data-mining-extensions-dmx-statements.md)   
+ [Extensiones de minería de datos &#40;DMX&#41; convenciones de sintaxis](../dmx/data-mining-extensions-dmx-syntax-conventions.md)   
+ [Extensiones de minería de datos &#40;DMX&#41; elementos de sintaxis](../dmx/data-mining-extensions-dmx-syntax-elements.md)   
  [Funciones de predicción generales &#40;DMX&#41;](../dmx/general-prediction-functions-dmx.md)   
  [Estructura y el uso de consultas de predicción DMX](../dmx/structure-and-usage-of-dmx-prediction-queries.md)   
  [Descripción de la instrucción Select de DMX](../dmx/understanding-the-dmx-select-statement.md)  

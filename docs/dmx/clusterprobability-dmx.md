@@ -1,31 +1,20 @@
 ---
 title: ClusterProbability (DMX) | Documentos de Microsoft
-ms.custom: ''
-ms.date: 03/02/2016
-ms.prod: analysis-services
-ms.prod_service: analysis-services
-ms.component: data-mining
-ms.reviewer: ''
-ms.suite: pro-bi
-ms.technology: ''
-ms.tgt_pltfrm: ''
-ms.topic: language-reference
-f1_keywords:
-- ClusterProbability
-dev_langs:
-- DMX
-helpviewer_keywords:
-- ClusterProbability function
-ms.assetid: a6447b3c-94ce-4122-a3eb-6f3827598d8f
-caps.latest.revision: 35
-author: Minewiskan
+ms.date: 06/07/2018
+ms.prod: sql
+ms.technology: analysis-services
+ms.custom: dmx
+ms.topic: conceptual
 ms.author: owend
-manager: erikre
-ms.openlocfilehash: 4d7f107aec9748cab6a702851c645af1a665067b
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.reviewer: owend
+author: minewiskan
+manager: kfile
+ms.openlocfilehash: d4d8ce16bb07af07bd2bfd651cf5fc1ae15b7e08
+ms.sourcegitcommit: 8f0faa342df0476884c3238e36ae3d9634151f87
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/07/2018
+ms.locfileid: "34841688"
 ---
 # <a name="clusterprobability-dmx"></a>ClusterProbability (DMX)
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
@@ -45,7 +34,7 @@ ClusterProbability([<Node_Caption>])
 ## <a name="return-type"></a>Tipo devuelto  
  Un valor escalar.  
   
-## <a name="remarks"></a>Comentarios  
+## <a name="remarks"></a>Notas  
  La siguiente sintaxis usa el conjunto de filas de esquema CONTENT del modelo de minería de datos para devolver los títulos de nodo que existen en el modelo de minería de datos.  
   
 ```  
@@ -74,7 +63,7 @@ NATURAL PREDICTION JOIN
   
 ## <a name="see-also"></a>Vea también  
  [Clúster &#40;DMX&#41;](../dmx/cluster-dmx.md)   
- [Extensiones de minería de datos &#40;DMX&#41; Referencia de funciones](../dmx/data-mining-extensions-dmx-function-reference.md)   
+ [Extensiones de minería de datos &#40;DMX&#41; función referencia](../dmx/data-mining-extensions-dmx-function-reference.md)   
  [Funciones &#40;DMX&#41;](../dmx/functions-dmx.md)   
  [Funciones de predicción generales &#40;DMX&#41;](../dmx/general-prediction-functions-dmx.md)  
   

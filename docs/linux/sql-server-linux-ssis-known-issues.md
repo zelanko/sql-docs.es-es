@@ -5,24 +5,25 @@ author: leolimsft
 ms.author: lle
 ms.reviewer: douglasl
 manager: craigg
-ms.date: 10/02/2017
+ms.date: 06/06/2018
 ms.topic: article
 ms.prod: sql
 ms.component: ''
 ms.suite: sql
 ms.custom: sql-linux
 ms.technology: linux
-ms.openlocfilehash: 8e666a50f90a390307f00e8fd310f965fb7a50b7
-ms.sourcegitcommit: ee661730fb695774b9c483c3dd0a6c314e17ddf8
+ms.openlocfilehash: 33f798fd3b7816cae61137292392cb9cca729ec7
+ms.sourcegitcommit: cfe5b2af733e7801558b441b4b9427cfe4c26435
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/19/2018
+ms.lasthandoff: 06/06/2018
+ms.locfileid: "34822208"
 ---
 # <a name="limitations-and-known-issues-for-ssis-on-linux"></a>Limitaciones y problemas conocidos de SSIS en Linux
 
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-linuxonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-linuxonly.md)]
 
-Este artículo describen problemas conocidos y las limitaciones actuales de SQL Server Integration Services (SSIS) en Linux.
+Este artículo describen las limitaciones y problemas conocidos de SQL Server Integration Services (SSIS) en Linux.
 
 ## <a name="general-limitations-and-known-issues"></a>Tiene las limitaciones y problemas conocidos
 
@@ -41,11 +42,9 @@ Para conocer otras limitaciones y problemas conocidos de SSIS en Linux, consulte
 
 ## <a name="components"></a> Componentes admitidos y no admitidos
 
-Se admiten los siguientes componentes de Integration Services integrados en Linux. Algunos de ellos tienen limitaciones en la plataforma de Linux, tal como se describe en las tablas siguientes.
+Se admiten los siguientes componentes de Integration Services integrados en Linux. Algunos de ellos tienen limitaciones en la plataforma Linux. Componentes integrados que no se muestran aquí no se admiten en Linux.
 
-Componentes integrados que no se muestran aquí no se admiten en Linux.
-
-### <a name="supported-control-flow-tasks"></a>Admite tareas de flujo de control
+## <a name="supported-control-flow-tasks"></a>Admite tareas de flujo de control
 - Inserción masiva, tarea
 - tarea Flujo de datos
 - Tarea de generación de perfiles de datos
@@ -54,9 +53,9 @@ Componentes integrados que no se muestran aquí no se admiten en Linux.
 - Texto Expresión
 - Tarea FTP
 - Tarea Servicio web
-- XML Task
+- Tarea XML
 
-### <a name="control-flow-tasks-supported-with-limitations"></a>Tareas de flujo de control compatibles con limitaciones
+## <a name="control-flow-tasks-supported-with-limitations"></a>Tareas de flujo de control compatibles con limitaciones
 
 | Tarea | Limitaciones |
 |------------|---|
@@ -67,16 +66,34 @@ Componentes integrados que no se muestran aquí no se admiten en Linux.
 | Tarea de transferencia de base de datos | No se admiten las rutas de acceso UNC. |
 | | |
 
-### <a name="supported-control-flow-containers"></a>Admite contenedores de flujo de control
+## <a name="supported-and-unsupported-maintenance-plan-tasks"></a>Tareas del plan de mantenimiento compatibles y no compatibles
+
+En un plan de mantenimiento de SQL Server, normalmente puede utilizar una variedad de tareas SSIS.
+
+No se admiten las siguientes tareas del plan de mantenimiento en Linux:
+- Notificar al operador
+- Ejecutar trabajo del Agente SQL Server
+
+Se admiten las siguientes tareas del plan de mantenimiento en Linux:
+- Comprobar la integridad de la base de datos
+- Reducir base de datos
+- Reorganizar índice
+- Volver a generar índice
+- Actualizar estadísticas
+- Limpiar historial
+- Hacer copia de seguridad de base de datos
+- Instrucción T-SQL
+
+## <a name="supported-control-flow-containers"></a>Admite contenedores de flujo de control
 - contenedor de secuencias
 - Contenedor de bucles For
 - Contenedor Foreach Loop
 
-### <a name="supported-data-flow-sources-and-destinations"></a>Orígenes de flujo de datos admitidos y los destinos
+## <a name="supported-data-flow-sources-and-destinations"></a>Orígenes de flujo de datos admitidos y los destinos
 - Destino y origen de archivo sin formato
 - Origen XML
 
-### <a name="data-flow-sources-and-destinations-supported-with-limitations"></a>Orígenes de flujo de datos y destinos compatibles con limitaciones
+## <a name="data-flow-sources-and-destinations-supported-with-limitations"></a>Orígenes de flujo de datos y destinos compatibles con limitaciones
 
 | Componente | Limitaciones |
 |------------|---|
@@ -87,7 +104,7 @@ Componentes integrados que no se muestran aquí no se admiten en Linux.
 | Destino y origen de OLE DB | Solo se admiten SQL Server Native Client 11.0 y proveedor Microsoft OLE DB para SQL Server. |
 | | |
 
-### <a name="supported-data-flow-transformations"></a>Admite las transformaciones de flujo de datos
+## <a name="supported-data-flow-transformations"></a>Admite las transformaciones de flujo de datos
 - Agregado
 - Auditar
 - Balanced Data Distributor
@@ -107,12 +124,12 @@ Componentes integrados que no se muestran aquí no se admiten en Linux.
 - Dinamización
 - Recuento de filas
 - Dimensión de variación lenta
-- Ordenar
+- Sort
 - Búsqueda de términos
 - Unión de todo
 - Anulación de dinamización
 
-### <a name="data-flow-transformations-supported-with-limitations"></a>Transformaciones de flujo de datos compatibles con limitaciones
+## <a name="data-flow-transformations-supported-with-limitations"></a>Transformaciones de flujo de datos compatibles con limitaciones
 
 | Componente | Limitaciones |
 |------------|---|
@@ -120,7 +137,7 @@ Componentes integrados que no se muestran aquí no se admiten en Linux.
 | componente de script | Solo es compatible con API estándar de .NET Framework. |
 | | |
 
-### <a name="supported-and-unsupported-log-providers"></a>Proveedores de registro compatibles y no compatibles
+## <a name="supported-and-unsupported-log-providers"></a>Proveedores de registro compatibles y no compatibles
 Todos los proveedores de registro SSIS integrados se admiten en Linux excepto el proveedor de registro de eventos de Windows.
 
 El proveedor de registro de SQL Server admite únicamente la autenticación de SQL; no admite la autenticación de Windows.

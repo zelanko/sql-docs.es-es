@@ -3,8 +3,6 @@ title: Configuración (GUI) (SybaseToSQL) del proyecto | Documentos de Microsoft
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
-ms.prod_service: sql-tools
-ms.component: ssma-sybase
 ms.reviewer: ''
 ms.suite: sql
 ms.technology: ssma
@@ -18,11 +16,12 @@ caps.latest.revision: 3
 author: Shamikg
 ms.author: Shamikg
 manager: craigg
-ms.openlocfilehash: b5e657af12ee7bbb27c3b67994d7f2a199f4d67d
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 295ed3cc30cce20ed04427ca7149c7f4e1374f8a
+ms.sourcegitcommit: 8aa151e3280eb6372bf95fab63ecbab9dd3f2e5e
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/05/2018
+ms.locfileid: "34779101"
 ---
 # <a name="project-settings-gui-sybasetosql"></a>Configuración del proyecto (GUI) (SybaseToSQL)
 La configuración del proyecto de interfaz gráfica de usuario le permite configurar la aparecen de los datos en el **datos** ficha y si se debe mostrar el informe de evaluación después de la conversión o no.  

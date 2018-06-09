@@ -1,31 +1,20 @@
 ---
 title: Predecir (DMX) | Documentos de Microsoft
-ms.custom: ''
-ms.date: 03/02/2016
-ms.prod: analysis-services
-ms.prod_service: analysis-services
-ms.component: data-mining
-ms.reviewer: ''
-ms.suite: pro-bi
-ms.technology: ''
-ms.tgt_pltfrm: ''
-ms.topic: language-reference
-f1_keywords:
-- PREDICT
-dev_langs:
-- DMX
-helpviewer_keywords:
-- Predict function
-ms.assetid: f02ff4b3-9bd7-409d-ad14-ead67b3206c4
-caps.latest.revision: 40
-author: Minewiskan
+ms.date: 06/07/2018
+ms.prod: sql
+ms.technology: analysis-services
+ms.custom: dmx
+ms.topic: conceptual
 ms.author: owend
-manager: erikre
-ms.openlocfilehash: 6f2aa8ba77b19aab0821777d669866409dbf01df
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.reviewer: owend
+author: minewiskan
+manager: kfile
+ms.openlocfilehash: 733e3272bf67347f1e3459a0df5f13225488f677
+ms.sourcegitcommit: 8f0faa342df0476884c3238e36ae3d9634151f87
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/07/2018
+ms.locfileid: "34842838"
 ---
 # <a name="predict-dmx"></a>Predict (DMX)
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
@@ -46,7 +35,7 @@ Predict(<table column reference>, [option1], [option2], [option n], [INCLUDE_NOD
 ## <a name="return-type"></a>Tipo devuelto  
  \<referencia de columna escalar >  
   
- o bien  
+ o Administrador de configuración de  
   
  \<referencia de columna de la tabla >  
   
@@ -55,7 +44,7 @@ Predict(<table column reference>, [option1], [option2], [option n], [INCLUDE_NOD
 > [!NOTE]  
 >  INCLUSIVE, EXCLUSIVE, INPUT_ONLY e INCLUDE_STATISTICS solo se aplican a una referencia de columna de tabla, mientras que EXCLUDE_NULL e INCLUDE_NULL se aplican exclusivamente a una referencia de columna escalar.  
   
-## <a name="remarks"></a>Comentarios  
+## <a name="remarks"></a>Notas  
  Entre las opciones de la función, figuran EXCLUDE_NULL (predeterminada), INCLUDE_NULL, INCLUSIVE, EXCLUSIVE (predeterminada), INPUT_ONLY e INCLUDE_STATISTICS.  
   
 > [!NOTE]  
@@ -99,7 +88,7 @@ FROM     [Association]
 |Mountain Tire Tube|1992|0.133879965051415|0.125304947722259|  
   
 ## <a name="see-also"></a>Vea también  
- [Extensiones de minería de datos &#40;DMX&#41; Referencia de funciones](../dmx/data-mining-extensions-dmx-function-reference.md)   
+ [Extensiones de minería de datos &#40;DMX&#41; función referencia](../dmx/data-mining-extensions-dmx-function-reference.md)   
  [Funciones &#40;DMX&#41;](../dmx/functions-dmx.md)   
  [Funciones de predicción generales &#40;DMX&#41;](../dmx/general-prediction-functions-dmx.md)  
   

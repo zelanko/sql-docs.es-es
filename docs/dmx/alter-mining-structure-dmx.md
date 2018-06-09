@@ -1,36 +1,20 @@
 ---
 title: MODIFICAR LA ESTRUCTURA DE MINERÍA DE DATOS (DMX) | Documentos de Microsoft
-ms.custom: ''
-ms.date: 03/02/2016
-ms.prod: analysis-services
-ms.prod_service: analysis-services
-ms.component: data-mining
-ms.reviewer: ''
-ms.suite: pro-bi
-ms.technology: ''
-ms.tgt_pltfrm: ''
-ms.topic: language-reference
-f1_keywords:
-- ALTER_MINING_STRUCTURE
-- ALTER MINING STRUCTURE
-dev_langs:
-- DMX
-helpviewer_keywords:
-- mining structures [DMX], creating
-- WITH DRILLTHROUGH clause
-- column definition lists [DMX]
-- parameter lists [DMX]
-- ALTER MINING STRUCTURE statement
-ms.assetid: d1efd2a8-1a4d-47bc-ba7f-73a7c61e2fde
-caps.latest.revision: 41
-author: Minewiskan
+ms.date: 06/07/2018
+ms.prod: sql
+ms.technology: analysis-services
+ms.custom: dmx
+ms.topic: conceptual
 ms.author: owend
-manager: erikre
-ms.openlocfilehash: 05d1a7c0d1e28ae380be05058661221a4952228c
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.reviewer: owend
+author: minewiskan
+manager: kfile
+ms.openlocfilehash: ca56d141e7a010119dfd9d218398c9e165ed65d8
+ms.sourcegitcommit: 8f0faa342df0476884c3238e36ae3d9634151f87
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/07/2018
+ms.locfileid: "34842698"
 ---
 # <a name="alter-mining-structure-dmx"></a>ALTER MINING STRUCTURE (DMX)
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
@@ -80,7 +64,7 @@ USING <algorithm> [(<parameter list>)]
  *criterios de filtro*  
  Expresión de filtro que se aplica a las columnas de la tabla de casos.  
   
-## <a name="remarks"></a>Comentarios  
+## <a name="remarks"></a>Notas  
  Si la estructura de minería de datos contiene claves compuestas, el modelo de minería debe incluir todas las columnas de clave que están definidas en la estructura.  
   
  Si el modelo no requiere una columna de predicción, como ocurre con los modelos que se generan mediante los algoritmos de clústeres de [!INCLUDE[msCoName](../includes/msconame-md.md)] y de agrupación en clústeres de secuencia de [!INCLUDE[msCoName](../includes/msconame-md.md)], no es necesario incluir una definición de columna en la instrucción. Todos los atributos del modelo resultante se tratarán como entradas.  
@@ -220,6 +204,6 @@ USING Microsoft_Decision Trees
 ## <a name="see-also"></a>Vea también  
  [Extensiones de minería de datos &#40;DMX&#41; las instrucciones de definición de datos](../dmx/dmx-statements-data-definition.md)   
  [Extensiones de minería de datos &#40;DMX&#41; instrucciones de manipulación de datos](../dmx/dmx-statements-data-manipulation.md)   
- [Extensiones de minería de datos & #40; DMX & #41; Referencia de instrucciones](../dmx/data-mining-extensions-dmx-statements.md)  
+ [Referencia de instrucciones de Extensiones de minería de datos &#40;DMX&#41;](../dmx/data-mining-extensions-dmx-statements.md)  
   
   

@@ -3,8 +3,6 @@ title: Trabajar con los archivos de comandos de consola de ejemplo (SybaseToSQL)
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
-ms.prod_service: sql-tools
-ms.component: ssma-sybase
 ms.reviewer: ''
 ms.suite: sql
 ms.technology: ssma
@@ -20,11 +18,12 @@ caps.latest.revision: 9
 author: Shamikg
 ms.author: Shamikg
 manager: craigg
-ms.openlocfilehash: 04f24032be49973a03ffd8d79b9c642b244c0ef2
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 31de0d04238c414b5380bbaa939fe664c7d1c025
+ms.sourcegitcommit: 8aa151e3280eb6372bf95fab63ecbab9dd3f2e5e
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/05/2018
+ms.locfileid: "34779631"
 ---
 # <a name="working-with-the-sample-console-script-files-sybasetosql"></a>Trabajar con los archivos de comandos de consola de ejemplo (SybaseToSQL)
 Algunos de los archivos de ejemplo se han proporcionado junto con el producto para la referencia de usuario y el uso. Esta sección describe la forma de personalizar fácilmente estos scripts para ajustarse a las necesidades del usuario final.  

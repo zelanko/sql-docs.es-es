@@ -1,8 +1,6 @@
 ---
 title: Migrar datos de Oracle en SQL Server (OracleToSQL) | Documentos de Microsoft
 ms.prod: sql
-ms.prod_service: sql-tools
-ms.component: ssma-oracle
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
@@ -18,11 +16,12 @@ caps.latest.revision: 13
 author: Shamikg
 ms.author: Shamikg
 manager: v-thobro
-ms.openlocfilehash: da5375ad57a2852159c8a71e08be3082f0b3f860
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 7fac4317ec3679e0d6588af63f8f26187c1da446
+ms.sourcegitcommit: 8aa151e3280eb6372bf95fab63ecbab9dd3f2e5e
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/05/2018
+ms.locfileid: "34777881"
 ---
 # <a name="migrating-oracle-data-into-sql-server-oracletosql"></a>Migrar datos de Oracle en SQL Server (OracleToSQL)
 Después de haber sincronizado correctamente los objetos convertidos con [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)], puede migrar datos de Oracle en [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)].  

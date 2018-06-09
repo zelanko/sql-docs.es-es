@@ -1,8 +1,6 @@
 ---
 title: Introducción a SSMA para la consola de Oracle (OracleToSQL) | Documentos de Microsoft
 ms.prod: sql
-ms.prod_service: sql-tools
-ms.component: ssma-oracle
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
@@ -18,11 +16,12 @@ caps.latest.revision: 31
 author: Shamikg
 ms.author: Shamikg
 manager: v-thobro
-ms.openlocfilehash: 95da4265bcaf56f7abbd5e445d93760790752b22
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: f80a1d1dde407c2269a29c4c18c0ad583dc39b93
+ms.sourcegitcommit: 8aa151e3280eb6372bf95fab63ecbab9dd3f2e5e
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/05/2018
+ms.locfileid: "34777321"
 ---
 # <a name="getting-started-with-ssma--for-oracle-console-oracletosql"></a>Introducción a SSMA para la consola de Oracle (OracleToSQL)
 Esta sección describe el procedimiento para iniciar y empezar a trabajar con la aplicación de consola de Oracle. También se muestran en este documento, se utilizan las convenciones en una ventana de salida de consola SSMA típica.  
@@ -60,7 +59,7 @@ Al ejecutar los comandos de script SSMA y opciones, el programa de consola muest
   
 Interpretación de color de la salida de la consola en la tabla siguiente:  
   
-|Color|Description|  
+|Color|Descripción|  
 |---------|---------------|  
 |Rojo|Error irrecuperable durante la ejecución|  
 |Gris|Marca de fecha y hora, el mensaje al usuario|  

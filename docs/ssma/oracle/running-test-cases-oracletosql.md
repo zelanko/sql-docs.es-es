@@ -1,8 +1,6 @@
 ---
 title: Ejecutar casos de prueba (OracleToSQL) | Documentos de Microsoft
 ms.prod: sql
-ms.prod_service: sql-tools
-ms.component: ssma-oracle
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
@@ -15,11 +13,12 @@ caps.latest.revision: 6
 author: Shamikg
 ms.author: Shamikg
 manager: v-thobro
-ms.openlocfilehash: a0affe85a5c823fdeecf530cd2c661011076c18f
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 283dac366a8cfdf7e6fba39037a7c728945e0f67
+ms.sourcegitcommit: 8aa151e3280eb6372bf95fab63ecbab9dd3f2e5e
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/05/2018
+ms.locfileid: "34777911"
 ---
 # <a name="running-test-cases-oracletosql"></a>Ejecutar casos de prueba (OracleToSQL)
 Cuando el evaluador de SSMA se ejecuta un caso de prueba, ejecuta los objetos seleccionados para las pruebas y crea un informe sobre los resultados de la comprobación. Si los resultados son idénticos en ambas plataformas, la prueba fue correcta. La correspondencia de objetos entre Oracle y [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] se determina según la configuración de la asignación de esquema para el proyecto SSMA actual.  
@@ -47,7 +46,7 @@ Se supone que la tabla comprobada se denomina USER_TABLE. Para este tipo de tabl
   
 ||||  
 |-|-|-|  
-|Nombre|Tipo|Description|  
+|Nombre|Tipo|Descripción|  
 |USER_TABLE$ Trg|desencadenador|Auditoría de los cambios en la tabla comprobado el desencadenador.|  
 |USER_TABLE$ AUD|table|Tabla donde se guardan las filas se eliminan y se sobrescriben.|  
 |USER_TABLE$ AUDID|table|Tabla donde se guardan las filas nuevas y modificadas.|  
@@ -60,14 +59,14 @@ Se crea el siguiente objeto en el esquema de tabla comprobado en [!INCLUDE[ssNoV
   
 ||||  
 |-|-|-|  
-|Nombre|Tipo|Description|  
+|Nombre|Tipo|Descripción|  
 |USER_TABLE$ Trg|desencadenador|Auditoría de los cambios en la tabla comprobado el desencadenador.|  
   
 Y se crean los siguientes objetos en [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]en la base de datos de ssmatesterdb.  
   
 ||||  
 |-|-|-|  
-|Nombre|Tipo|Description|  
+|Nombre|Tipo|Descripción|  
 |USER_TABLE$ Aud|table|Tabla donde se guardan las filas se eliminan y se sobrescriben.|  
 |USER_TABLE$ AudID|table|Tabla donde se guardan las filas nuevas y modificadas.|  
 |USER_TABLE|ver|Representación simplificada de las modificaciones de tablas.|  

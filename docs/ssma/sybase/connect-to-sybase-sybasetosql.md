@@ -3,8 +3,6 @@ title: Conectarse a Sybase (SybaseToSQL) | Documentos de Microsoft
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
-ms.prod_service: sql-tools
-ms.component: ssma-sybase
 ms.reviewer: ''
 ms.suite: sql
 ms.technology: ssma
@@ -18,11 +16,12 @@ caps.latest.revision: 4
 author: Shamikg
 ms.author: Shamikg
 manager: craigg
-ms.openlocfilehash: 2152c6a02a7c02d7aea5fb5ab01c2aa5b74dfad4
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: e1302d7e57d7ef2559d107039648e813e1292efa
+ms.sourcegitcommit: 8aa151e3280eb6372bf95fab63ecbab9dd3f2e5e
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/05/2018
+ms.locfileid: "34778409"
 ---
 # <a name="connect-to-sybase-sybasetosql"></a>Conectarse a Sybase (SybaseToSQL)
 Use la **conectar para Sybase** cuadro de diálogo para conectarse a la instancia de Sybase Adaptive Server Enterprise (ASE) que se va a migrar.  
@@ -59,7 +58,7 @@ Las cadenas de conexión se componen de pares de nombre y valor de parámetro. L
   
     |Configuración|Parámetro de Sybase 12,5|Parámetro de Sybase 15|  
     |-----------|-------------------------|-----------------------|  
-    |Nombre del servidor|Nombre de servidor|Server|  
+    |Nombre del servidor|Nombre del servidor|Servidor|  
     |Puerto|Dirección de puerto del servidor|Puerto|  
     |Nombre de usuario|Id. de usuario|Id. de usuario|  
     |Contraseña|Contraseña|Contraseña|  
@@ -78,7 +77,7 @@ Las cadenas de conexión se componen de pares de nombre y valor de parámetro. L
     |Configuración|Parámetro de Sybase 12,5/15|  
     |-----------|-----------------------------|  
     |Nombre del controlador|controlador|  
-    |Nombre de servidor|Server|  
+    |Nombre del servidor|Servidor|  
     |Nombre de usuario|UID|  
     |Contraseña|PWD|  
     |Número de puerto|Puerto|  
@@ -91,7 +90,7 @@ Las cadenas de conexión se componen de pares de nombre y valor de parámetro. L
   
     |Configuración|Parámetro de Sybase 12,5/15|  
     |-----------|-----------------------------|  
-    |Nombre de servidor|Server|  
+    |Nombre del servidor|Servidor|  
     |Nombre de usuario|UID|  
     |Contraseña|PWD|  
     |Número de puerto|Puerto|  

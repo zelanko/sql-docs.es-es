@@ -3,8 +3,6 @@ title: Establecer las opciones de proyecto (SybaseToSQL) | Documentos de Microso
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
-ms.prod_service: sql-tools
-ms.component: ssma-sybase
 ms.reviewer: ''
 ms.suite: sql
 ms.technology: ssma
@@ -20,11 +18,12 @@ caps.latest.revision: 9
 author: Shamikg
 ms.author: Shamikg
 manager: craigg
-ms.openlocfilehash: bd7f7c08b6fbf74b11a99cf9ae662e304ec62869
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: af0584a64be3ec5454517a8b00349b1261835026
+ms.sourcegitcommit: 8aa151e3280eb6372bf95fab63ecbab9dd3f2e5e
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/05/2018
+ms.locfileid: "34779401"
 ---
 # <a name="setting-project-options-sybasetosql"></a>Establecer las opciones del proyecto (SybaseToSQL)
 Para cada proyecto SSMA, puede establecer opciones de nivel de proyecto. Estas opciones especifican la conversión de objetos, la carga del objeto, SQL azure, interfaz de usuario y configuración de la migración de datos. Antes de convertir objetos a [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] o SQL Azure o migrar datos en [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] o SQL Azure, compruebe que las opciones de configuración son adecuadas para el proyecto.  
@@ -46,11 +45,11 @@ SSMA tiene cinco conjuntos de configuración del proyecto:
   
 También tiene cuatro modos para configurar estas opciones:  
   
-1.  Predeterminado  
+1.  Valor predeterminado  
   
 2.  Optimistic  
   
-3.  Completa  
+3.  Completo  
   
 4.  Personalizado  
   

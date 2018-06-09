@@ -1,6 +1,6 @@
 ---
 title: Propiedades de características | Documentos de Microsoft
-ms.date: 05/03/2018
+ms.date: 06/07/2018
 ms.prod: sql
 ms.technology: analysis-services
 ms.custom: ''
@@ -9,14 +9,16 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: bec4d89fd1135ecc7bfdbc563547b9d3dbbdfa47
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.openlocfilehash: 8ee5a58d5c04cbfbb1f47f0d073ba6614490970c
+ms.sourcegitcommit: 6e55a0a7b7eb6d455006916bc63f93ed2218eae1
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/10/2018
+ms.lasthandoff: 06/08/2018
+ms.locfileid: "35238925"
 ---
 # <a name="feature-properties"></a>Propiedades de características
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
+
   Las propiedades de características corresponden a las características del producto, la mayor parte de ellas avanzadas, incluidas las propiedades que controlan los vínculos entre las instancias de servidor.  
   
  [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] admite las propiedades de servidor enumeradas en la tabla siguiente. Para obtener más información sobre otras propiedades de servidor y cómo establecerlas, vea [Configurar las propiedades de servidor en Analysis Services](../../analysis-services/server-properties/server-properties-in-analysis-services.md).  
@@ -25,7 +27,7 @@ ms.lasthandoff: 05/10/2018
   
 ## <a name="properties"></a>Propiedades  
   
-|Propiedad|Predeterminado|Description|  
+|Property|Valor predeterminado|Descripción|  
 |--------------|-------------|-----------------|  
 |**ManagedCodeEnabled**|1|Una propiedad booleana que indica si los procedimientos de almacenamiento CLR están habilitados.|  
 |**LinkInsideInstanceEnabled**|1|Una propiedad booleana que indica si se puede crear un objeto vinculado dentro de la misma instancia del servidor.|  
@@ -40,6 +42,6 @@ ms.lasthandoff: 05/10/2018
 ## <a name="see-also"></a>Vea también  
  [Configurar las propiedades de servidor en Analysis Services](../../analysis-services/server-properties/server-properties-in-analysis-services.md)   
  [Determinar el modo de servidor de una instancia de Analysis Services](../../analysis-services/instances/determine-the-server-mode-of-an-analysis-services-instance.md)   
- [Usar dinámica vistas de administración & #40; DMV & #41; para supervisar Analysis Services](../../analysis-services/instances/use-dynamic-management-views-dmvs-to-monitor-analysis-services.md)  
+ [Usar vistas de administración dinámica &#40;DMV&#41; para supervisar Analysis Services](../../analysis-services/instances/use-dynamic-management-views-dmvs-to-monitor-analysis-services.md)  
   
   

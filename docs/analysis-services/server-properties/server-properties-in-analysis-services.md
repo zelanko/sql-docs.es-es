@@ -1,6 +1,6 @@
 ---
 title: Propiedades del servidor de Analysis Services | Documentos de Microsoft
-ms.date: 05/03/2018
+ms.date: 06/07/2018
 ms.prod: sql
 ms.technology: analysis-services
 ms.custom: ''
@@ -9,22 +9,24 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: dd37fd44c7bfaff5b338602eb18b0d779ee9e777
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.openlocfilehash: d70f58bfb5dba352d154f18b4c3db675b69147ad
+ms.sourcegitcommit: 6e55a0a7b7eb6d455006916bc63f93ed2218eae1
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/10/2018
+ms.lasthandoff: 06/08/2018
+ms.locfileid: "35238825"
 ---
 # <a name="server-properties-in-analysis-services"></a>Configurar las propiedades de servidor en Analysis Services
-[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
+[!INCLUDE[ssas-appliesto-sqlas-all-aas](../../includes/ssas-appliesto-sqlas-all-aas.md)]
+
   Un administrador de [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] puede modificar las propiedades de configuración predeterminadas del servidor de una instancia de [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] . Cada instancia tiene sus propias propiedades de configuración, que se establecen independientemente de las demás instancias en el mismo servidor.  
   
- Para configurar el servidor, use SQL Server Management Studio o modifique el archivo msmdsrv.ini de una instancia específica.  
+ Para configurar el servidor, use SQL Server Management Studio o modifique el archivo msmdsrv.ini de una instancia específica de SQL Server Analysis Services.  
  
 Las páginas de propiedades de SQL Server Management Studio muestran un subconjunto de las propiedades con más probabilidad de ser modificadas. La lista completa de propiedades se encuentra en el archivo msmdsrv.ini.   
   
 > [!NOTE]  
->  En una instalación predeterminada, msmdsrv.ini se encuentra en la carpeta \Archivos de programa\Microsoft SQL Server\MSAS13.MSSQLSERVER\OLAP \Config.
+>  En una instalación de SQL Server Analysis Services de forma predeterminada, msmdsrv.ini puede encontrarse en el \Program Server\MSAS13 de SQL. Carpeta MSSQLSERVER\OLAP\Config.
 > 
 > Otras propiedades que afectan a la configuración del servidor incluyen las propiedades de configuración de implementación de [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]. Para más información sobre estas propiedades, vea [Especificar la configuración para la implementación de soluciones](../../analysis-services/multidimensional-models/deployment-script-files-solution-deployment-config-settings.md).
  
@@ -61,24 +63,24 @@ Las páginas de propiedades de SQL Server Management Studio muestran un subconju
   
  En los siguientes temas se explican las diversas propiedades de configuración de [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] :  
   
-|Tema|Description|  
+|Tema|Descripción|  
 |-----------|-----------------|  
 |[Propiedades generales](../../analysis-services/server-properties/general-properties.md)|Las propiedades generales son las básicas y las avanzadas, e incluyen propiedades que definen el directorio de datos, el directorio de copia de seguridad y otros comportamientos del servidor.|  
 |[Propiedades de minería de datos](../../analysis-services/server-properties/data-mining-properties.md)|Las propiedades de minería de datos controlan qué algoritmos de minería de datos están habilitados y cuáles no. De manera predeterminada, todos los algoritmos están habilitados.| 
 |[Propiedades de DAX](../../analysis-services/server-properties/dax-properties.md)|Define las propiedades relacionadas con las consultas DAX.|
 |DSO|DSO ya no es compatible. Se omiten las propiedades de DSO.|  
 |[Propiedades de características](../../analysis-services/server-properties/feature-properties.md)|Las propiedades de características corresponden a las características del producto, la mayor parte de ellas avanzadas, incluidas las propiedades que controlan los vínculos entre las instancias de servidor.|  
-|[FILESTORE, propiedades](../../analysis-services/server-properties/filestore-properties.md)|Las propiedades de almacén de archivos solamente sirven para uso avanzado. Incluyen valores de configuración avanzada de la administración de memoria.|  
-|[Propiedades del Administrador de bloqueos](../../analysis-services/server-properties/lock-manager-properties.md)|Las propiedades del administrador de bloqueos definen los comportamientos del servidor relativos a bloqueos y tiempos de espera. La mayoría de estas propiedades solo sirven para uso avanzado.|  
+|[Propiedades de Filestore](../../analysis-services/server-properties/filestore-properties.md)|Las propiedades de almacén de archivos solamente sirven para uso avanzado. Incluyen valores de configuración avanzada de la administración de memoria.|  
+|[Propiedades del administrador de bloqueos](../../analysis-services/server-properties/lock-manager-properties.md)|Las propiedades del administrador de bloqueos definen los comportamientos del servidor relativos a bloqueos y tiempos de espera. La mayoría de estas propiedades solo sirven para uso avanzado.|  
 |[Propiedades de registro](../../analysis-services/server-properties/log-properties.md)|Las propiedades del registro controlan si los eventos inician la sesión en el servidor, dónde y cómo. Esto incluye el registro de errores, el registro de excepciones, la caja negra SQL, el registro de consultas y los seguimientos.|  
 |[Propiedades de memoria](../../analysis-services/server-properties/memory-properties.md)|Las propiedades de memoria controlan la forma en la que el servidor utiliza la memoria. Son fundamentalmente para uso avanzado.|  
 |[Propiedades de red](../../analysis-services/server-properties/network-properties.md)|Las propiedades de red controlan el comportamiento del servidor relativo a redes, incluidas las propiedades que controlan la compresión y los elementos XML binarios. La mayoría de estas propiedades solo sirven para uso avanzado.|  
 |[Propiedades OLAP](../../analysis-services/server-properties/olap-properties.md)|Las propiedades OLAP controlan el procesamiento de cubos y dimensiones, el procesamiento diferido, el almacenamiento de datos en caché y el comportamiento de las consultas. Incluyen propiedades básicas y avanzadas.|  
 |[Propiedades de seguridad](../../analysis-services/server-properties/security-properties.md)|La sección de seguridad contiene propiedades básicas y avanzadas que definen permisos de acceso. Esto incluye valores de configuración relacionados con administradores y usuarios.|  
-|[Propiedades del grupo de subprocesos](../../analysis-services/server-properties/thread-pool-properties.md)|Las propiedades de grupo de subprocesos controlan cuántos subprocesos crea el servidor. Se trata fundamentalmente de propiedades avanzadas.|  
+|[Propiedades de grupos de subprocesos](../../analysis-services/server-properties/thread-pool-properties.md)|Las propiedades de grupo de subprocesos controlan cuántos subprocesos crea el servidor. Se trata fundamentalmente de propiedades avanzadas.|  
   
 ## <a name="see-also"></a>Vea también  
  [Administración de una instancia de Analysis Services](../../analysis-services/instances/analysis-services-instance-management.md)   
- [Especificar la configuración de implementación de soluciones](../../analysis-services/multidimensional-models/deployment-script-files-solution-deployment-config-settings.md)  
+ [Especificar la configuración para la implementación de soluciones](../../analysis-services/multidimensional-models/deployment-script-files-solution-deployment-config-settings.md)  
   
   

@@ -1,31 +1,20 @@
 ---
 title: PredictVariance (DMX) | Documentos de Microsoft
-ms.custom: ''
-ms.date: 03/02/2016
-ms.prod: analysis-services
-ms.prod_service: analysis-services
-ms.component: data-mining
-ms.reviewer: ''
-ms.suite: pro-bi
-ms.technology: ''
-ms.tgt_pltfrm: ''
-ms.topic: language-reference
-f1_keywords:
-- PredictVariance
-dev_langs:
-- DMX
-helpviewer_keywords:
-- PredictVariance function
-ms.assetid: 3c535237-083a-4102-bdfe-9f3c929e7b2c
-caps.latest.revision: 34
-author: Minewiskan
+ms.date: 06/07/2018
+ms.prod: sql
+ms.technology: analysis-services
+ms.custom: dmx
+ms.topic: conceptual
 ms.author: owend
-manager: erikre
-ms.openlocfilehash: 6f8aff8d02e787aa598290a040552a3d2e8e1af5
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.reviewer: owend
+author: minewiskan
+manager: kfile
+ms.openlocfilehash: 876923763d6aad1319b0409143dd5fca6e23e92a
+ms.sourcegitcommit: 8f0faa342df0476884c3238e36ae3d9634151f87
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/07/2018
+ms.locfileid: "34841808"
 ---
 # <a name="predictvariance-dmx"></a>PredictVariance (DMX)
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
@@ -45,7 +34,7 @@ PredictVariance(<scalar column reference>)
 ## <a name="return-type"></a>Tipo devuelto  
  Un valor escalar del tipo especificado por  *\<referencia de columna escalar >*.  
   
-## <a name="remarks"></a>Comentarios  
+## <a name="remarks"></a>Notas  
  Si la referencia de columna es discreta, **PredictVariance** devuelve 0 porque la varianza no se puede calcular a partir de valores discretos.  
   
 ## <a name="examples"></a>Ejemplos  
@@ -66,7 +55,7 @@ NATURAL PREDICTION JOIN
 ```  
   
 ## <a name="see-also"></a>Vea también  
- [Extensiones de minería de datos &#40;DMX&#41; Referencia de funciones](../dmx/data-mining-extensions-dmx-function-reference.md)   
+ [Extensiones de minería de datos &#40;DMX&#41; función referencia](../dmx/data-mining-extensions-dmx-function-reference.md)   
  [Funciones &#40;DMX&#41;](../dmx/functions-dmx.md)   
  [Funciones de predicción generales &#40;DMX&#41;](../dmx/general-prediction-functions-dmx.md)  
   

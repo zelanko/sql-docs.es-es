@@ -12,11 +12,12 @@ ms.suite: sql
 ms.custom: sql-linux
 ms.technology: linux
 ms.assetid: ''
-ms.openlocfilehash: 26868cfd136f3d06366a47ec7d52fa17e3c8fe39
-ms.sourcegitcommit: ee661730fb695774b9c483c3dd0a6c314e17ddf8
+ms.openlocfilehash: ddbe5f25cf3153b3354425fd426798e7061bdf36
+ms.sourcegitcommit: 99e355b71ff2554782f6bc8e0da86e6d9e3e0bef
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/19/2018
+ms.lasthandoff: 06/05/2018
+ms.locfileid: "34799815"
 ---
 # <a name="always-on-availability-group-failover-on-linux"></a>Conmutación por error del grupo de disponibilidad AlwaysOn en Linux
 
@@ -71,7 +72,7 @@ Durante una conmutación por error manual, la `pcs` comando `move` o `crm` coman
 - **Ejemplo RHEL/Ubuntu**
 
    ```bash
-   sudo pcs constraint --full
+   sudo pcs constraint list --full
    ```
 
 - **Ejemplo SLES**
@@ -80,35 +81,17 @@ Durante una conmutación por error manual, la `pcs` comando `move` o `crm` coman
    crm config show
    ```
 
-Quite la restricción de ubicación, por lo que las conmutaciones por error futuras (incluidos la conmutación automática por error) correcta. 
-
-Para quitar la restricción, ejecute el siguiente comando: 
-
-- **Ejemplo RHEL/Ubuntu**
-
-   En este ejemplo `ag_cluster-master` es el nombre del recurso que conmutar por error. 
-
-   ```bash
-   sudo pcs resource clear ag_cluster-master 
-   ```
-
-- **Ejemplo SLES**
-
-   En este ejemplo `ag_cluster` es el nombre del recurso que conmutar por error. 
-
-   ```bash
-   crm resource clear ag_cluster
-   ```
-
-Como alternativa, puede ejecutar el comando siguiente para quitar la restricción de ubicación.  
+Un ejemplo de la restricción que se crea debido a una conmutación por error manual. 
+ `Enabled on: Node1 (score:INFINITY) (role: Master) (id:cli-prefer-ag_cluster-master)`
 
 - **Ejemplo RHEL/Ubuntu**
 
-   En el comando siguiente, `cli-prefer-ag_cluster-master` es el identificador de la restricción que se debe quitar. `sudo pcs constraint --full` devuelve este identificador. 
-
+   En el comando siguiente, `cli-prefer-ag_cluster-master` es el identificador de la restricción que se debe quitar. `sudo pcs constraint list --full` devuelve este identificador. 
+   
    ```bash
    sudo pcs constraint remove cli-prefer-ag_cluster-master  
    ```
+   
 - **Ejemplo SLES**
 
    En el siguiente comando `cli-prefer-ms-ag_cluster` es el identificador de la restricción. `crm config show` devuelve este identificador. 

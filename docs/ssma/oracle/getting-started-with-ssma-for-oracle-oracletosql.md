@@ -1,8 +1,6 @@
 ---
 title: Introducción a SSMA para Oracle (OracleToSQL) | Documentos de Microsoft
 ms.prod: sql
-ms.prod_service: sql-tools
-ms.component: ssma-oracle
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
@@ -18,11 +16,12 @@ caps.latest.revision: 9
 author: Shamikg
 ms.author: Shamikg
 manager: v-thobro
-ms.openlocfilehash: 7979226878df0f30983d262c69b74dfc439eaab3
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 8cb4d61015eb680c4841a88de174548d56ab8f4e
+ms.sourcegitcommit: 8aa151e3280eb6372bf95fab63ecbab9dd3f2e5e
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/05/2018
+ms.locfileid: "34777271"
 ---
 # <a name="getting-started-with-ssma-for-oracle-oracletosql"></a>Introducción a SSMA para Oracle (OracleToSQL)
 [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] Migration Assistant (SSMA) para Oracle permite rápidamente convertir esquemas de base de datos de Oracle para [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] esquemas, cargar los esquemas resultantes a [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] y migrar datos de Oracle en [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)].  
@@ -98,7 +97,7 @@ La siguiente tabla muestra los comandos de barra de herramientas de la migració
 ### <a name="menus"></a>Menús  
 La siguiente tabla muestra los menús SSMA.  
   
-|Menú|Description|  
+|Menú|Descripción|  
 |----|-----------|  
 |**Archivo**|Contiene comandos para trabajar con proyectos, conectarse a Oracle y conectarse a [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)].|  
 |**Editar**|Contiene comandos para buscar y trabajar con texto en las páginas de detalles, como copiar [!INCLUDE[tsql](../../includes/tsql_md.md)] desde el panel de detalles SQL. También contiene el **administrar marcadores** opción, donde podrá ver una lista de los marcadores existentes. Puede usar los botones en el lado derecho del cuadro de diálogo para administrar los marcadores.|  

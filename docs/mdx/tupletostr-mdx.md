@@ -1,6 +1,6 @@
 ---
 title: TupleToStr (MDX) | Documentos de Microsoft
-ms.date: 05/30/2018
+ms.date: 06/04/2018
 ms.prod: sql
 ms.technology: analysis-services
 ms.custom: mdx
@@ -9,15 +9,15 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: 7fb89e3529117ce83f37b83b15c3e32f9c085088
-ms.sourcegitcommit: 808d23a654ef03ea16db1aa23edab496b73e5072
+ms.openlocfilehash: b31c84cf028141943d4d726d96c48d926792814e
+ms.sourcegitcommit: 97bef3f248abce57422f15530c1685f91392b494
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/02/2018
-ms.locfileid: "34581347"
+ms.lasthandoff: 06/04/2018
+ms.locfileid: "34743264"
 ---
 # <a name="tupletostr-mdx"></a>TupleToStr (MDX)
-[!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
+
 
   Devuelve una cadena con formato MDX (Expresiones multidimensionales) que corresponde a una tupla especificada.  
   

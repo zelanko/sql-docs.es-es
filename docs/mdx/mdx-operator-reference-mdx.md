@@ -1,6 +1,6 @@
 ---
 title: Referencia de operadores MDX (MDX) | Documentos de Microsoft
-ms.date: 05/30/2018
+ms.date: 06/04/2018
 ms.prod: sql
 ms.technology: analysis-services
 ms.custom: mdx
@@ -9,15 +9,15 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: 0b0750732af43f1d19922b0259b35d472be57b47
-ms.sourcegitcommit: 808d23a654ef03ea16db1aa23edab496b73e5072
+ms.openlocfilehash: aded187be089b3c1af004bd6f7e88d75780b9f22
+ms.sourcegitcommit: 97bef3f248abce57422f15530c1685f91392b494
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/02/2018
-ms.locfileid: "34580607"
+ms.lasthandoff: 06/04/2018
+ms.locfileid: "34742484"
 ---
 # <a name="mdx-operator-reference-mdx"></a>Referencia de operadores de MDX (MDX)
-[!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
+
 
   El lenguaje de Expresiones multidimensionales (MDX) admite operadores aritméticos, lógicos, de comparación, de conjunto, de cadena y unarios. En la tabla siguiente se enumeran los operadores admitidos y sus descripciones.  
   

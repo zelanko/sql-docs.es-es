@@ -1,43 +1,20 @@
 ---
 title: Referencia (DMX) de extensiones de minería de datos | Documentos de Microsoft
-ms.custom: ''
-ms.date: 03/02/2016
-ms.prod: analysis-services
-ms.prod_service: analysis-services
-ms.component: data-mining
-ms.reviewer: ''
-ms.suite: pro-bi
-ms.technology: ''
-ms.tgt_pltfrm: ''
-ms.topic: language-reference
-dev_langs:
-- DMX
-helpviewer_keywords:
-- DMX [Analysis Services]
-- statements [DMX]
-- Data Mining Extensions [Analysis Services], statements
-- DMX [Analysis Services], about Data Mining Extensions
-- DMX [Analysis Services], statements
-- data definition statements [DMX]
-- predictions [DMX]
-- Data Mining Extensions [Analysis Services]
-- SSAS, DMX
-- queries [DMX], extensions reference
-- SQL Server Analysis Services, DMX
-- OLE DB for Data Mining
-- data manipulation statements [DMX]
-- Data Mining Extensions [Analysis Services], about Data Mining Extensions
-- mining models [Analysis Services], DMX
-ms.assetid: 6d85ca20-de67-4e20-b3b5-b734c6cfcece
-caps.latest.revision: 40
-author: Minewiskan
+ms.date: 06/07/2018
+ms.prod: sql
+ms.technology: analysis-services
+ms.custom: dmx
+ms.topic: conceptual
 ms.author: owend
-manager: erikre
-ms.openlocfilehash: 2a9338c6db570ae14e78b0aa7b8c6e891b648385
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.reviewer: owend
+author: minewiskan
+manager: kfile
+ms.openlocfilehash: dcf3231fbff0ec4c3ea32e94f7b974a62faf05e6
+ms.sourcegitcommit: 8f0faa342df0476884c3238e36ae3d9634151f87
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/07/2018
+ms.locfileid: "34842828"
 ---
 # <a name="data-mining-extensions-dmx-reference"></a>Referencia de Extensiones de minería de datos (DMX)
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
@@ -119,16 +96,16 @@ ms.lasthandoff: 05/03/2018
   
  Puede usar funciones DMX para obtener información descubierta durante el entrenamiento de los modelos y para calcular información nueva. Estas funciones pueden utilizarse con muchos fines, por ejemplo, para devolver estadísticas que describan los datos subyacentes o la precisión de una predicción. O bien, para devolver una explicación ampliada de una predicción.  
   
- **Para obtener más información****información:** [descripción DMX Select (instrucción)](../dmx/understanding-the-dmx-select-statement.md), [funciones de predicción generales &#40;DMX&#41;](../dmx/general-prediction-functions-dmx.md), [Estructura y el uso de consultas de predicción DMX](../dmx/structure-and-usage-of-dmx-prediction-queries.md), [extensiones de minería de datos &#40;DMX&#41; función referencia  ](../dmx/data-mining-extensions-dmx-function-reference.md)  
+ **Para obtener más información****información:** [descripción DMX Select (instrucción)](../dmx/understanding-the-dmx-select-statement.md), [funciones de predicción generales &#40;DMX&#41;](../dmx/general-prediction-functions-dmx.md), [Estructura y el uso de consultas de predicción DMX](../dmx/structure-and-usage-of-dmx-prediction-queries.md), [extensiones de minería de datos &#40;DMX&#41; función referencia](../dmx/data-mining-extensions-dmx-function-reference.md)  
   
  [Volver a instrucciones DMX](#BKMK_DMXStatements)  
   
 ## <a name="see-also"></a>Vea también  
- [Extensiones de minería de datos &#40;DMX&#41; Referencia de funciones](../dmx/data-mining-extensions-dmx-function-reference.md)   
- [Extensiones de minería de datos &#40;DMX&#41; Referencia de operadores](../dmx/data-mining-extensions-dmx-operator-reference.md)   
- [Extensiones de minería de datos &#40;DMX&#41; Referencia de instrucciones](../dmx/data-mining-extensions-dmx-statements.md)   
- [Extensiones de minería de datos &#40;DMX&#41; Convenciones de sintaxis](../dmx/data-mining-extensions-dmx-syntax-conventions.md)   
- [Extensiones de minería de datos &#40;DMX&#41; Elementos de sintaxis](../dmx/data-mining-extensions-dmx-syntax-elements.md)   
+ [Extensiones de minería de datos &#40;DMX&#41; función referencia](../dmx/data-mining-extensions-dmx-function-reference.md)   
+ [Extensiones de minería de datos &#40;DMX&#41; referencia de operadores](../dmx/data-mining-extensions-dmx-operator-reference.md)   
+ [Extensiones de minería de datos &#40;DMX&#41; referencia de instrucciones](../dmx/data-mining-extensions-dmx-statements.md)   
+ [Extensiones de minería de datos &#40;DMX&#41; convenciones de sintaxis](../dmx/data-mining-extensions-dmx-syntax-conventions.md)   
+ [Extensiones de minería de datos &#40;DMX&#41; elementos de sintaxis](../dmx/data-mining-extensions-dmx-syntax-elements.md)   
  [Funciones de predicción generales &#40;DMX&#41;](../dmx/general-prediction-functions-dmx.md)   
  [Estructura y el uso de consultas de predicción DMX](../dmx/structure-and-usage-of-dmx-prediction-queries.md)   
  [Descripción de la instrucción Select de DMX](../dmx/understanding-the-dmx-select-statement.md)  

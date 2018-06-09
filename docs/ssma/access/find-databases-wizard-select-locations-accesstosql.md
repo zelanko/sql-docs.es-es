@@ -1,8 +1,6 @@
 ---
 title: Buscar el Asistente de bases de datos (seleccionados ubicaciones) (AccessToSQL) | Documentos de Microsoft
 ms.prod: sql
-ms.prod_service: sql-tools
-ms.component: ssma-access
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
@@ -20,11 +18,12 @@ caps.latest.revision: 13
 author: Shamikg
 ms.author: Shamikg
 manager: craigg
-ms.openlocfilehash: 22ebef73d62b315ebdbdc2a7fd4bb5755454d12e
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 146979dbbd54d0d79c357dc02e432ba535d6accc
+ms.sourcegitcommit: 8aa151e3280eb6372bf95fab63ecbab9dd3f2e5e
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/05/2018
+ms.locfileid: "34773661"
 ---
 # <a name="find-databases-wizard-select-locations-accesstosql"></a>Buscar el Asistente de bases de datos (seleccionados ubicaciones) (AccessToSQL)
 En la página Seleccionar ubicaciones del Asistente para buscar las bases de datos, escriba los parámetros búsqueda para buscar las bases de datos de Access.  

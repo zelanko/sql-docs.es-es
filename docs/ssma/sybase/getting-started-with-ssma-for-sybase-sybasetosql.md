@@ -3,8 +3,6 @@ title: Introducción a SSMA para SAP ASE (SybaseToSQL) | Documentos de Microsoft
 ms.custom: ''
 ms.date: 09/30/2017
 ms.prod: sql
-ms.prod_service: sql-tools
-ms.component: ssma-sybase
 ms.reviewer: ''
 ms.suite: sql
 ms.technology: ssma
@@ -18,11 +16,12 @@ caps.latest.revision: 10
 author: Shamikg
 ms.author: Shamikg
 manager: craigg
-ms.openlocfilehash: 2ca14c9049a2f29b8997b59103c4025fea4fd23a
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: eb7ace0b83cdb4277a742c9932430fedf7b3e532
+ms.sourcegitcommit: 8aa151e3280eb6372bf95fab63ecbab9dd3f2e5e
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/05/2018
+ms.locfileid: "34779281"
 ---
 # <a name="getting-started-with-ssma-for-sap-ase-sybasetosql"></a>Introducción a SSMA para SAP ASE (SybaseToSQL)
 [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] Migration Assistant (SSMA) para SAP ASE le permite rápidamente convertir esquemas de base de datos de SAP Adaptive Server Enterprise (ASE) a [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] o esquemas de base de datos de SQL Azure, cargue los esquemas resultantes a [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] o base de datos de SQL Azure, y migrar datos desde SAP ASE a [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] o base de datos SQL Azure.  
@@ -100,7 +99,7 @@ La barra de herramientas de migración contiene los siguientes comandos:
 ### <a name="menus"></a>Menús  
 SSMA contiene los siguientes menús:  
   
-|Menú|Description|  
+|Menú|Descripción|  
 |--------|---------------|  
 |**Archivo**|Contiene comandos para trabajar con proyectos, conéctese a SAP ASE y conéctese a [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] o base de datos de SQL Azure.|  
 |**Editar**|Contiene comandos para buscar y trabajar con texto en las páginas de detalles, como copiar [!INCLUDE[tsql](../../includes/tsql_md.md)] desde el panel de detalles SQL. También contiene el **administrar marcadores** opción, donde puede ver una lista de los marcadores existentes. Puede usar los botones en el lado derecho del cuadro de diálogo para administrar los marcadores.|  

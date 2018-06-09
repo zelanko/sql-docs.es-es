@@ -1,8 +1,6 @@
 ---
 title: Trabajar con los archivos de comandos de consola de ejemplo (MySQLToSQL) | Documentos de Microsoft
 ms.prod: sql
-ms.prod_service: sql-tools
-ms.component: ssma-mysql
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
@@ -20,11 +18,12 @@ caps.latest.revision: 10
 author: Shamikg
 ms.author: Shamikg
 manager: craigg
-ms.openlocfilehash: f683e6a1be376b63c5cf95f1e7535b686bc8321a
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 68d24dd530c6e987c26d3fecca6c0fd732cb9df0
+ms.sourcegitcommit: 8aa151e3280eb6372bf95fab63ecbab9dd3f2e5e
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/05/2018
+ms.locfileid: "34776841"
 ---
 # <a name="working-with-the-sample-console-script-files-mysqltosql"></a>Trabajar con los archivos de comandos de consola de ejemplo (MySQLToSQL)
 Algunos de los archivos de ejemplo se han proporcionado junto con el producto para la referencia de usuario y el uso. Esta sección describe la forma de personalizar fácilmente estos scripts para ajustarse a las necesidades del usuario final.  
@@ -62,7 +61,7 @@ Se han proporcionado los archivos de comandos de consola de ejemplo siguientes q
   
     Para obtener más información sobre la generación de informes, consulte [generar informes &#40;MySQLToSQL&#41;](../../ssma/mysql/generating-reports-mysqltosql.md).  
   
-    **Comentarios:**  
+    **Notas:**  
   
     -   Asegúrese de que el argumento de línea de comandos del archivo de valor de la variable se pasa a la aplicación de consola y VariableValueFileSample.xml se actualiza con el usuario especificado valores.  
   

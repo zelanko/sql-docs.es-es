@@ -1,8 +1,6 @@
 ---
 title: Obtener acceso a los esquemas de inventario (AccessToSQL) | Documentos de Microsoft
 ms.prod: sql
-ms.prod_service: sql-tools
-ms.component: ssma-access
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
@@ -41,15 +39,15 @@ helpviewer_keywords:
 - SSMA_Access_InventoryTables
 - tables, inventory
 ms.assetid: fdd3cff2-4d62-4395-8acf-71ea8f17f524
-caps.latest.revision: 17
 author: Shamikg
 ms.author: Shamikg
 manager: craigg
-ms.openlocfilehash: db3476f35a5388d127d34ebb183364e0f63184f3
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: c9614227b73058459fee7c902823bdb032ef2bc3
+ms.sourcegitcommit: 8aa151e3280eb6372bf95fab63ecbab9dd3f2e5e
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/05/2018
+ms.locfileid: "34773311"
 ---
 # <a name="access-inventory-schemas-accesstosql"></a>Esquemas de inventario de acceso (AccessToSQL)
 En las siguientes secciones se describen las tablas que se crean de SSMA al exportar esquemas de acceso a [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)].  
@@ -57,12 +55,12 @@ En las siguientes secciones se describen las tablas que se crean de SSMA al expo
 ## <a name="databases"></a>Bases de datos  
 Metadatos de la base de datos se exportan a la **SSMA_Access_InventoryDatabases** tabla. Esta tabla contiene las columnas siguientes:  
   
-|Nombre de la columna|Tipo de datos|Description|  
+|Nombre de la columna|Tipo de datos|Descripción|  
 |---------------|-------------|---------------|  
 |**DatabaseId**|**uniqueidentifier**|Un GUID que identifica de forma única cada base de datos. Esta columna también es la clave principal de la tabla.|  
 |**DatabaseName**|**nvarchar(4000)**|El nombre de la base de datos de Access.|  
 |**ExportTime**|**datetime**|La fecha y hora de que creación de estos metadatos por SSMA.|  
-|**FilePath**|**nvarchar(4000)**|El nombre completo de ruta de acceso y de la base de datos de Access.|  
+|**filePath**|**nvarchar(4000)**|El nombre completo de ruta de acceso y de la base de datos de Access.|  
 |**Tamaño de archivo**|**bigint**|El tamaño de la base de datos de Access en KB.|  
 |**FileOwner**|**nvarchar(4000)**|La cuenta de Windows que se especifica como el propietario de la base de datos de Access.|  
 |**DateCreated**|**datetime**|La fecha y hora de que creación de la base de datos de Access.|  
@@ -82,7 +80,7 @@ Metadatos de la base de datos se exportan a la **SSMA_Access_InventoryDatabases*
 ## <a name="tables"></a>Tablas  
 Metadatos de las tablas se exportan a la **SSMA_Access_InventoryTables** tabla. Esta tabla contiene las columnas siguientes:  
   
-|Nombre de la columna|Tipo de datos|Description|  
+|Nombre de la columna|Tipo de datos|Descripción|  
 |---------------|-------------|---------------|  
 |**DatabaseId**|**uniqueidentifier**|Identifica la base de datos que contiene esta tabla.|  
 |**TableId**|**uniqueidentifier**|Un GUID que identifica de forma única la tabla. Esta columna también es la clave principal de la tabla.|  
@@ -95,7 +93,7 @@ Metadatos de las tablas se exportan a la **SSMA_Access_InventoryTables** tabla. 
 ## <a name="columns"></a>Columnas  
 Metadatos de columna se exportan a la **SSMA_Access_InventoryColumns** tabla. Esta tabla contiene las columnas siguientes:  
   
-|Nombre de la columna|Tipo de datos|Description|  
+|Nombre de la columna|Tipo de datos|Descripción|  
 |---------------|-------------|---------------|  
 |**DatabaseId**|**uniqueidentifier**|Identifica la base de datos que contiene esta columna.|  
 |**TableId**|**uniqueidentifier**|Identifica la tabla que contiene esta columna.|  
@@ -111,7 +109,7 @@ Metadatos de columna se exportan a la **SSMA_Access_InventoryColumns** tabla. Es
 ## <a name="indexes"></a>Índices  
 Metadatos de índice se exportan a la **SSMA_Access_InventoryIndexes** tabla. Esta tabla contiene las columnas siguientes:  
   
-|Nombre de la columna|Tipo de datos|Description|  
+|Nombre de la columna|Tipo de datos|Descripción|  
 |---------------|-------------|---------------|  
 |**DatabaseId**|**uniqueidentifier**|Identifica la base de datos que contiene este índice.|  
 |**TableId**|**uniqueidentifier**|Identifica la tabla que contiene este índice.|  
@@ -125,7 +123,7 @@ Metadatos de índice se exportan a la **SSMA_Access_InventoryIndexes** tabla. Es
 ## <a name="foreign-keys"></a>Claves externas  
 Los metadatos de clave externo se exportan a la **SSMA_Access_InventoryForeignKeys** tabla. Esta tabla contiene las columnas siguientes:  
   
-|Nombre de la columna|Tipo de datos|Description|  
+|Nombre de la columna|Tipo de datos|Descripción|  
 |---------------|-------------|---------------|  
 |**DatabaseId**|**uniqueidentifier**|Identifica la base de datos que contiene esta clave externa.|  
 |**TableId**|**uniqueidentifier**|Identifica la tabla que contiene esta clave externa.|  
@@ -141,7 +139,7 @@ Los metadatos de clave externo se exportan a la **SSMA_Access_InventoryForeignKe
 ## <a name="queries"></a>Consultas  
 Metadatos de la consulta se exportan a la **SSMA_Access_InventoryQueries** tabla. Esta tabla contiene las columnas siguientes:  
   
-|Nombre de la columna|Tipo de datos|Description|  
+|Nombre de la columna|Tipo de datos|Descripción|  
 |---------------|-------------|---------------|  
 |**DatabaseId**|**uniqueidentifier**|Identifica la base de datos que contiene esta consulta.|  
 |**QueryId**|**int**|Incremento entero que identifica la consulta. Esta columna es la clave principal de la tabla.|  
@@ -154,7 +152,7 @@ Metadatos de la consulta se exportan a la **SSMA_Access_InventoryQueries** tabla
 ## <a name="forms"></a>formularios  
 Metadatos de formulario se exportan a la **SSMA_Access_InventoryForms** tabla. Esta tabla contiene las columnas siguientes:  
   
-|Nombre de la columna|Tipo de datos|Description|  
+|Nombre de la columna|Tipo de datos|Descripción|  
 |---------------|-------------|---------------|  
 |**DatabaseId**|**uniqueidentifier**|Identifica la base de datos que contiene este formulario.|  
 |**Idform**|**int**|Incremento entero que identifica el formulario. Esta columna es la clave principal de la tabla.|  
@@ -163,7 +161,7 @@ Metadatos de formulario se exportan a la **SSMA_Access_InventoryForms** tabla. E
 ## <a name="macros"></a>Macros  
 Macro metadatos se exportan a la **SSMA_Access_InventoryMacros** tabla. Esta tabla contiene las columnas siguientes:  
   
-|Nombre de la columna|Tipo de datos|Description|  
+|Nombre de la columna|Tipo de datos|Descripción|  
 |---------------|-------------|---------------|  
 |**DatabaseId**|**uniqueidentifier**|Identifica la base de datos que contiene la macro.|  
 |**MacroId**|**int**|Incremento entero que identifica la macro. Esta columna es la clave principal de la tabla.|  
@@ -172,7 +170,7 @@ Macro metadatos se exportan a la **SSMA_Access_InventoryMacros** tabla. Esta tab
 ## <a name="reports"></a>Informes  
 Metadatos del informe se exportan a la **SSMA_Access_InventoryReports** tabla. Esta tabla contiene las columnas siguientes:  
   
-|Nombre de la columna|Tipo de datos|Description|  
+|Nombre de la columna|Tipo de datos|Descripción|  
 |---------------|-------------|---------------|  
 |**DatabaseId**|**uniqueidentifier**|Identifica la base de datos que contiene el informe.|  
 |**Identificador informe que**|**int**|Incremento entero que identifica el informe. Esta columna es la clave principal de la tabla.|  
@@ -181,7 +179,7 @@ Metadatos del informe se exportan a la **SSMA_Access_InventoryReports** tabla. E
 ## <a name="modules"></a>Módulos  
 Los metadatos del módulo se exportan a la **SSMA_Access_InventoryModules** tabla. Esta tabla contiene las columnas siguientes:  
   
-|Nombre de la columna|Tipo de datos|Description|  
+|Nombre de la columna|Tipo de datos|Descripción|  
 |---------------|-------------|---------------|  
 |**DatabaseId**|**uniqueidentifier**|Identifica la base de datos que contiene el módulo.|  
 |**Identificador de módulo**|**int**|Incremento entero que identifica el módulo. Esta columna es la clave principal de la tabla.|  

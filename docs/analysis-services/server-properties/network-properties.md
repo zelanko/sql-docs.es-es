@@ -1,6 +1,6 @@
 ---
 title: Propiedades de red | Documentos de Microsoft
-ms.date: 05/03/2018
+ms.date: 06/07/2018
 ms.prod: sql
 ms.technology: analysis-services
 ms.custom: ''
@@ -9,14 +9,16 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: 40399d8e40a3bf44a914c3f9783885a25db94384
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.openlocfilehash: a7fdeb553473c3a7ef560cce914e0c3e5612f287
+ms.sourcegitcommit: 6e55a0a7b7eb6d455006916bc63f93ed2218eae1
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/10/2018
+ms.lasthandoff: 06/08/2018
+ms.locfileid: "35238855"
 ---
 # <a name="network-properties"></a>Propiedades de red
-[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
+[!INCLUDE[ssas-appliesto-sqlas-all-aas](../../includes/ssas-appliesto-sqlas-all-aas.md)]
+
   [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] admite las propiedades de servidor descritas en las siguientes tablas. Para obtener más información sobre otras propiedades de servidor y cómo establecerlas, vea [Configurar las propiedades de servidor en Analysis Services](../../analysis-services/server-properties/server-properties-in-analysis-services.md).  
   
  **Se aplica a:** modo de servidor multidimensional y tabular  
@@ -29,7 +31,7 @@ ms.lasthandoff: 05/10/2018
  **IPV4Support**  
  Una propiedad de entero de 32 bits con signo que define la compatibilidad con el protocolo IPv4. Esta propiedad tiene uno de los valores descritos en la tabla siguiente:  
   
-|Value|Descripción|  
+|Valor|Descripción|  
 |-----------|-----------------|  
 |*0*|IPv4 deshabilitado; los clientes no pueden conectarse.|  
 |*1*|(Predeterminado) IPv4 es obligatorio; el servidor no se iniciará si no puede escuchar a IPv4.|  
@@ -38,7 +40,7 @@ ms.lasthandoff: 05/10/2018
  **IPV6Support**  
  Una propiedad de entero de 32 bits con signo que define la compatibilidad con el protocolo IPv6. Esta propiedad tiene uno de los valores descritos en la tabla siguiente:  
   
-|Value|Descripción|  
+|Valor|Descripción|  
 |-----------|-----------------|  
 |*0*|IPv6 deshabilitado; los clientes no pueden conectarse.|  
 |*1*|(Predeterminado) IPv6 es obligatorio; el servidor no se iniciará si no puede escuchar a IPv6.|  

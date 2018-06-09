@@ -1,31 +1,20 @@
 ---
 title: Existe (DMX) | Documentos de Microsoft
-ms.custom: ''
-ms.date: 03/02/2016
-ms.prod: analysis-services
-ms.prod_service: analysis-services
-ms.component: data-mining
-ms.reviewer: ''
-ms.suite: pro-bi
-ms.technology: ''
-ms.tgt_pltfrm: ''
-ms.topic: language-reference
-f1_keywords:
-- Exists
-dev_langs:
-- DMX
-helpviewer_keywords:
-- Exists function
-ms.assetid: 3b54dd93-f0a8-4f9a-96ae-a38bf977dda1
-caps.latest.revision: 14
-author: Minewiskan
+ms.date: 06/07/2018
+ms.prod: sql
+ms.technology: analysis-services
+ms.custom: dmx
+ms.topic: conceptual
 ms.author: owend
-manager: erikre
-ms.openlocfilehash: c42102653cb2da9ec85e4714bba3bedb7a99cd52
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.reviewer: owend
+author: minewiskan
+manager: kfile
+ms.openlocfilehash: 936612dba4f466c5bc78f20f5a3ea07954a20a1c
+ms.sourcegitcommit: 8f0faa342df0476884c3238e36ae3d9634151f87
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/07/2018
+ms.locfileid: "34843028"
 ---
 # <a name="exists-dmx"></a>Exists (DMX)
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
@@ -46,7 +35,7 @@ EXISTS(<subquery>)
 ## <a name="result-type"></a>Tipo de resultado  
  Devuelve **true** si el conjunto de resultados devuelto por la subconsulta contiene al menos una fila; en caso contrario, devuelve **false**.  
   
-## <a name="remarks"></a>Comentarios  
+## <a name="remarks"></a>Notas  
  Puede utilizar la palabra clave NOT delante de EXISTS; por ejemplo, `WHERE NOT EXISTS (<subquery>)`.  
   
  La lista de columnas que se agrega al argumento de la subconsulta de EXISTS es irrelevante; la función solo comprueba la existencia de una fila que cumpla la condición.  

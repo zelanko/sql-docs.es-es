@@ -1,31 +1,20 @@
 ---
 title: NO (DMX) | Documentos de Microsoft
-ms.custom: ''
-ms.date: 03/02/2016
-ms.prod: analysis-services
-ms.prod_service: analysis-services
-ms.component: data-mining
-ms.reviewer: ''
-ms.suite: pro-bi
-ms.technology: ''
-ms.tgt_pltfrm: ''
-ms.topic: language-reference
-f1_keywords:
-- NOT
-dev_langs:
-- DMX
-helpviewer_keywords:
-- NOT operator [DMX]
-ms.assetid: 6d91b3d9-270c-4a68-b41f-169cff5faa0e
-caps.latest.revision: 13
-author: Minewiskan
+ms.date: 06/07/2018
+ms.prod: sql
+ms.technology: analysis-services
+ms.custom: dmx
+ms.topic: conceptual
 ms.author: owend
-manager: erikre
-ms.openlocfilehash: 155dbc89f38ad39a87bbf2e69171e741735ec8a0
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.reviewer: owend
+author: minewiskan
+manager: kfile
+ms.openlocfilehash: 053eb905edb1379bfdc40ec010dc6d4efadcba26
+ms.sourcegitcommit: 8f0faa342df0476884c3238e36ae3d9634151f87
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/07/2018
+ms.locfileid: "34842848"
 ---
 # <a name="not-dmx"></a>NOT (DMX)
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
@@ -46,7 +35,7 @@ NOT Expression1
 ## <a name="return-value"></a>Valor devuelto  
  Un valor booleano que devuelve FALSE si el argumento se evalúa como TRUE; de lo contrario, devuelve TRUE.  
   
-## <a name="remarks"></a>Comentarios  
+## <a name="remarks"></a>Notas  
  El argumento se trata como valor booleano (0 como FALSE; de lo contrario, TRUE) antes de que el operador realice la negación lógica. Si *Expression1* es TRUE, el operador devuelve FALSE. Si *Expression1* es FALSE, el operador devuelve TRUE. En la siguiente tabla se muestra cómo se realiza la conjunción lógica.  
   
 |Si Expression1 es|El valor devuelto es|  
@@ -55,7 +44,7 @@ NOT Expression1
 |FALSE|TRUE|  
   
 ## <a name="see-also"></a>Vea también  
- [Extensiones de minería de datos &#40;DMX&#41; Referencia de operadores](../dmx/data-mining-extensions-dmx-operator-reference.md)   
+ [Extensiones de minería de datos &#40;DMX&#41; referencia de operadores](../dmx/data-mining-extensions-dmx-operator-reference.md)   
  [Operadores lógicos &#40;DMX&#41;](../dmx/operators-logical.md)   
  [Operadores &#40;DMX&#41;](../dmx/operators-dmx.md)  
   

@@ -3,8 +3,6 @@ title: Instalación de SSMA para SAP ASE (SybaseToSQL) | Documentos de Microsoft
 ms.custom: ''
 ms.date: 11/29/2017
 ms.prod: sql
-ms.prod_service: sql-tools
-ms.component: ssma-sybase
 ms.reviewer: ''
 ms.suite: sql
 ms.technology: ssma
@@ -18,11 +16,12 @@ caps.latest.revision: 6
 author: Shamikg
 ms.author: Shamikg
 manager: craigg
-ms.openlocfilehash: 336012819c23b02ac0527a70da930c5b74686e7a
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: a904a7f17d90449406bef18f7f74022cf2fe049a
+ms.sourcegitcommit: 8aa151e3280eb6372bf95fab63ecbab9dd3f2e5e
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/05/2018
+ms.locfileid: "34779001"
 ---
 # <a name="installing-ssma-for-sap-ase-sybasetosql"></a>Instalación de SSMA para SAP ASE (SybaseToSQL)
 [!INCLUDE[msCoName](../../includes/msconame_md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] Migration Assistant (SSMA) para SAP Adaptive Server Enterprise (ASE) consta de una aplicación de cliente que usa para realizar una migración de SAP ASE a [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] o base de datos de SQL Azure. También contiene un módulo de extensión que admite la migración de datos y el uso de funciones del sistema ASE en las bases de datos migrados.  
@@ -36,7 +35,7 @@ Si abre un proyecto desde una versión anterior de SSMA para SAP ASE, SSMA le pr
   
 ## <a name="contents"></a>Contenido  
   
-|Artículo|Description|  
+|Artículo|Descripción|  
 |---------|---------------|  
 |[Instalación de SSMA para SAP ASE cliente &#40;SybaseToSQL&#41;](../../ssma/sybase/installing-ssma-for-sybase-client-sybasetosql.md)|Proporciona información sobre e instrucciones para la instalación de SSMA para cliente de SAP ASE.|  
 |[Instalar componentes SSMA en SQL Server &#40;SybaseToSQL&#41;](../../ssma/sybase/installing-ssma-components-on-sql-server-sybasetosql.md)|Proporciona información sobre e instrucciones para instalar el módulo de extensión en las instancias de [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)].|  

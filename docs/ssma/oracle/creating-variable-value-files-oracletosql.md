@@ -1,8 +1,6 @@
 ---
 title: Crear archivos de valor de la Variable (OracleToSQL) | Documentos de Microsoft
 ms.prod: sql
-ms.prod_service: sql-tools
-ms.component: ssma-oracle
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
@@ -18,11 +16,12 @@ caps.latest.revision: 26
 author: Shamikg
 ms.author: Shamikg
 manager: v-thobro
-ms.openlocfilehash: 7218f998025b3c54dd8232aa61a3c2614a6cb00c
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: fa6a3dc1b89b11b2231980b38f0cdd7ab5c9a1e1
+ms.sourcegitcommit: 8aa151e3280eb6372bf95fab63ecbab9dd3f2e5e
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/05/2018
+ms.locfileid: "34777051"
 ---
 # <a name="creating-variable-value-files-oracletosql"></a>Crear archivos de valor de la Variable (OracleToSQL)
 Archivo de valores de variable es un archivo XML que contiene los valores de parámetro de comandos como el nombre del servidor de origen o de destino que cambian con frecuencia de la migración de un servidor a otro. Cuando se produce un gran número de migraciones de base de datos, varios archivos de variable para almacenar el valor de cada servidor de origen se creará y se hace referencia en un archivo de script maestra con la **– v** cambiar en la línea de comandos. Esto ayuda a mantener los valores estáticos en unos pocos archivos de script con los valores de variables en varios archivos de variable.  

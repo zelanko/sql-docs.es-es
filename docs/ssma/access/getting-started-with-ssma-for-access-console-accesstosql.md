@@ -1,8 +1,6 @@
 ---
 title: Introducción a SSMA para la consola de acceso (AccessToSQL) | Documentos de Microsoft
 ms.prod: sql
-ms.prod_service: sql-tools
-ms.component: ssma-access
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
@@ -18,11 +16,12 @@ caps.latest.revision: 21
 author: Shamikg
 ms.author: Shamikg
 manager: craigg
-ms.openlocfilehash: 60c9a1775c1d5acf9f3c4b26d061d991941d07d6
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: c37a486c560a5dc0cb6298f93b4486accc18354b
+ms.sourcegitcommit: 8aa151e3280eb6372bf95fab63ecbab9dd3f2e5e
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/05/2018
+ms.locfileid: "34773921"
 ---
 # <a name="getting-started-with-ssma-for-access-console-accesstosql"></a>Introducción a SSMA para la consola de acceso (AccessToSQL)
 Esta sección describe el procedimiento para iniciar y empezar a trabajar con la aplicación de consola de acceso. También se muestran en este documento, se utilizan las convenciones en una ventana de salida de consola SSMA típica.  
@@ -60,7 +59,7 @@ Al ejecutar los comandos de script SSMA y opciones, el programa de consola muest
   
 Interpretación de color de la salida de la consola en la tabla siguiente:  
   
-|Color|Description|  
+|Color|Descripción|  
 |---------|---------------|  
 |Rojo|Error irrecuperable durante la ejecución|  
 |Gris|Marca de fecha y hora, el mensaje al usuario|  

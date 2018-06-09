@@ -1,31 +1,20 @@
 ---
 title: TopPercent (DMX) | Documentos de Microsoft
-ms.custom: ''
-ms.date: 03/02/2016
-ms.prod: analysis-services
-ms.prod_service: analysis-services
-ms.component: data-mining
-ms.reviewer: ''
-ms.suite: pro-bi
-ms.technology: ''
-ms.tgt_pltfrm: ''
-ms.topic: language-reference
-f1_keywords:
-- TOPPERCENT
-dev_langs:
-- DMX
-helpviewer_keywords:
-- TopPercent function
-ms.assetid: 0b407ab2-2a69-4cbd-ae13-bdd29654fa86
-caps.latest.revision: 37
-author: Minewiskan
+ms.date: 06/07/2018
+ms.prod: sql
+ms.technology: analysis-services
+ms.custom: dmx
+ms.topic: conceptual
 ms.author: owend
-manager: erikre
-ms.openlocfilehash: bccca2b1a3411b8c5ee36d6dbf7a972fd67a9e83
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.reviewer: owend
+author: minewiskan
+manager: kfile
+ms.openlocfilehash: 781b5c660826ff963497a5b89b7bc01a16eeb265
+ms.sourcegitcommit: 8f0faa342df0476884c3238e36ae3d9634151f87
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/07/2018
+ms.locfileid: "34842428"
 ---
 # <a name="toppercent-dmx"></a>TopPercent (DMX)
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
@@ -45,7 +34,7 @@ TopPercent(<table expression>, <rank expression>, <percent>)
 ## <a name="return-type"></a>Tipo devuelto  
  \<expresión de tabla >  
   
-## <a name="remarks"></a>Comentarios  
+## <a name="remarks"></a>Notas  
  El **TopPercent** función devuelve las filas superiores en orden decreciente de rango en función del valor evaluado de la \<clasificar expresión > argumento para cada fila, tal que la suma de la \<clasificar expresión > valores sea al menos el porcentaje especificado por el \<por ciento > argumento. **TopPercent** devuelve el número de elementos más pequeño posible que siga cumpliendo el valor de porcentaje especificado.  
   
 ## <a name="examples"></a>Ejemplos  
@@ -115,7 +104,7 @@ NATURAL PREDICTION JOIN
 >  Las funciones MDX de TOPPERCENT y BOTTOMPERCENT pueden generar resultados inesperados cuando los valores utilizados para calcular el porcentaje contienen números negativos. Este comportamiento no afecta a las funciones DMX. Para obtener más información, consulte [BottomPercent &#40;MDX&#41;](../mdx/bottompercent-mdx.md).  
   
 ## <a name="see-also"></a>Vea también  
- [Extensiones de minería de datos &#40;DMX&#41; Referencia de funciones](../dmx/data-mining-extensions-dmx-function-reference.md)   
+ [Extensiones de minería de datos &#40;DMX&#41; función referencia](../dmx/data-mining-extensions-dmx-function-reference.md)   
  [Funciones &#40;DMX&#41;](../dmx/functions-dmx.md)   
  [Funciones de predicción generales &#40;DMX&#41;](../dmx/general-prediction-functions-dmx.md)  
   

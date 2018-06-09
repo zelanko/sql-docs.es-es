@@ -1,6 +1,6 @@
 ---
 title: Instrucción DROP SUBCUBE (MDX) | Documentos de Microsoft
-ms.date: 05/30/2018
+ms.date: 06/04/2018
 ms.prod: sql
 ms.technology: analysis-services
 ms.custom: mdx
@@ -9,15 +9,15 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: ef926408d3768723d8fe45d271927d57d47d39b9
-ms.sourcegitcommit: 808d23a654ef03ea16db1aa23edab496b73e5072
+ms.openlocfilehash: 437018bc1cc83e1ea8a2a52a8ed9f37aa2a9121e
+ms.sourcegitcommit: 97bef3f248abce57422f15530c1685f91392b494
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/02/2018
-ms.locfileid: "34579737"
+ms.lasthandoff: 06/04/2018
+ms.locfileid: "34741794"
 ---
 # <a name="mdx-data-definition---drop-subcube"></a>Definición de datos MDX - SUBCUBO de COLOCACIÓN
-[!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
+
 
   Quita un subcubo especificado y revierte la definición del cubo o subcubo definido previamente con el nombre especificado.  
   

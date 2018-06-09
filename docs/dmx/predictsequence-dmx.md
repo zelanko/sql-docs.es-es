@@ -1,31 +1,20 @@
 ---
 title: PredictSequence (DMX) | Documentos de Microsoft
-ms.custom: ''
-ms.date: 03/02/2016
-ms.prod: analysis-services
-ms.prod_service: analysis-services
-ms.component: data-mining
-ms.reviewer: ''
-ms.suite: pro-bi
-ms.technology: ''
-ms.tgt_pltfrm: ''
-ms.topic: language-reference
-f1_keywords:
-- PredictSequence
-dev_langs:
-- DMX
-helpviewer_keywords:
-- PredictSequence function
-ms.assetid: c2992dfc-b99d-4430-8dcd-21ad3ffd4590
-caps.latest.revision: 34
-author: Minewiskan
+ms.date: 06/07/2018
+ms.prod: sql
+ms.technology: analysis-services
+ms.custom: dmx
+ms.topic: conceptual
 ms.author: owend
-manager: erikre
-ms.openlocfilehash: 57085d5459855afbe39db3e3b6af836ad8c8aaeb
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.reviewer: owend
+author: minewiskan
+manager: kfile
+ms.openlocfilehash: 813641b7fa72405a0ba5a026e255f03feb94bd05
+ms.sourcegitcommit: 8f0faa342df0476884c3238e36ae3d9634151f87
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/07/2018
+ms.locfileid: "34841558"
 ---
 # <a name="predictsequence-dmx"></a>PredictSequence (DMX)
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
@@ -44,7 +33,7 @@ PredictSequence(\<table column reference, n-start, n-end>)
 ## <a name="return-type"></a>Tipo devuelto  
  Un \<expresión de tabla >.  
   
-## <a name="remarks"></a>Comentarios  
+## <a name="remarks"></a>Notas  
  Si el *n* se especifica el parámetro, devuelve los siguientes valores:  
   
 -   Si *n* es mayor que cero, los valores de secuencia más probables en las próximas *n* pasos.  
@@ -62,7 +51,7 @@ From
 ```  
   
 ## <a name="see-also"></a>Vea también  
- [Extensiones de minería de datos &#40;DMX&#41; Referencia de funciones](../dmx/data-mining-extensions-dmx-function-reference.md)   
+ [Extensiones de minería de datos &#40;DMX&#41; función referencia](../dmx/data-mining-extensions-dmx-function-reference.md)   
  [Funciones &#40;DMX&#41;](../dmx/functions-dmx.md)   
  [Funciones de predicción generales &#40;DMX&#41;](../dmx/general-prediction-functions-dmx.md)  
   

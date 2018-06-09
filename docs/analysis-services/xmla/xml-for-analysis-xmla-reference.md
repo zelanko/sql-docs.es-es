@@ -13,7 +13,7 @@ ms.openlocfilehash: 4e8c3645175d8d1f3251fd621825f5a542669cbb
 ms.sourcegitcommit: 808d23a654ef03ea16db1aa23edab496b73e5072
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/02/2018
+ms.lasthandoff: 06/04/2018
 ms.locfileid: "34576767"
 ---
 # <a name="xml-for-analysis--xmla-reference"></a>Referencia XML for Analysis (XMLA)

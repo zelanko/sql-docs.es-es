@@ -1,24 +1,26 @@
 ---
-title: Lección 5 entrenar y guardar un modelo mediante T-SQL | Documentos de Microsoft
+title: Lección 5 entrenar y guardar un modelo mediante R y T-SQL (aprendizaje automático de SQL Server) | Documentos de Microsoft
+description: Tutorial que muestra cómo incrustar R en SQL Server los procedimientos almacenados y funciones de T-SQL
 ms.prod: sql
 ms.technology: machine-learning
-ms.date: 04/15/2018
+ms.date: 06/07/2018
 ms.topic: tutorial
 author: HeidiSteen
 ms.author: heidist
 manager: cgronlun
-ms.openlocfilehash: 4d8bedd65e150d94c6030ea6c9c9fc6483bdaafd
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
+ms.openlocfilehash: bd5bdc7d256a22dbab6662a74dc39073892dbb4d
+ms.sourcegitcommit: b52b5d972b1a180e575dccfc4abce49af1a6b230
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 06/08/2018
+ms.locfileid: "35250068"
 ---
 # <a name="lesson-5-train-and-save-a-model-using-t-sql"></a>Lección 5: Entrenar y guardar un modelo mediante T-SQL
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
 
 Este artículo forma parte de un tutorial para desarrolladores de SQL sobre cómo usar R en SQL Server.
 
-En esta lección, aprenderá a entrenar un modelo de aprendizaje automático mediante el uso de R. Podrá entrenar el modelo mediante las características de datos que acaba de crear y, a continuación, guarde el modelo entrenado en un [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] tabla. En este caso, los paquetes de R ya están instalados con [!INCLUDE[rsql_productname](../../includes/rsql-productname-md.md)], por lo que todo lo que puede realizarse desde SQL.
+En esta lección, aprenderá a entrenar un modelo de aprendizaje automático mediante el uso de R. Podrá entrenar el modelo mediante las características de datos que creó en la lección anterior y, a continuación, guarde el modelo entrenado en un [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] tabla. En este caso, los paquetes de R ya están instalados con [!INCLUDE[rsql_productname](../../includes/rsql-productname-md.md)], por lo que todo lo que puede realizarse desde SQL.
 
 ## <a name="create-the-stored-procedure"></a>Crear el procedimiento almacenado
 
@@ -80,7 +82,7 @@ Dado que el procedimiento almacenado ya incluye una definición de los datos de 
     EXEC TrainTipPredictionModel
     ```
 
-2. Inspección del **mensajes** ventana de [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] para los mensajes que se canalizan a de R **stdout** flujo, al igual que este tiene: 
+2. Inspección del **mensajes** ventana de [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] para los mensajes que se canalizan a de R **stdout** flujo, al igual que este mensaje: 
 
     "STDOUT mensajes desde un script externo: filas leídas: 1193025, de filas totales procesados: 1193025, tiempo Total de fragmentos: 0.093 segundos"
 
@@ -104,5 +106,5 @@ En el siguiente paso usará el modelo entrenado para crear predicciones.
 
 ## <a name="previous-lesson"></a>Lección anterior
 
-[Lección 4: Crear características de datos mediante T-SQL](..//tutorials/sqldev-create-data-features-using-t-sql.md)
+[Lección 4: Crear características de datos mediante las funciones de R y T-SQL](..//tutorials/sqldev-create-data-features-using-t-sql.md)
 

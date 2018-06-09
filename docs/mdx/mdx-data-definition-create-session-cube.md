@@ -1,6 +1,6 @@
 ---
 title: Instrucción CREATE SESSION CUBE (MDX) | Documentos de Microsoft
-ms.date: 05/30/2018
+ms.date: 06/04/2018
 ms.prod: sql
 ms.technology: analysis-services
 ms.custom: mdx
@@ -9,15 +9,15 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: 12a450b8184f7a1d6ef8b6068d73f99e17063c5d
-ms.sourcegitcommit: 808d23a654ef03ea16db1aa23edab496b73e5072
+ms.openlocfilehash: 09e093b46127090d232f023a7c7277c398ec349c
+ms.sourcegitcommit: 97bef3f248abce57422f15530c1685f91392b494
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/02/2018
-ms.locfileid: "34579427"
+ms.lasthandoff: 06/04/2018
+ms.locfileid: "34742474"
 ---
 # <a name="mdx-data-definition---create-session-cube"></a>Definición de datos MDX - crear el cubo de sesión
-[!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
+
 
   Crea y llena un cubo de sesión a partir de un cubo de servidor existente. El cubo de sesión solamente es visible en la sesión actual; no puede examinarse ni consultarse desde otras sesiones. El cubo de sesión se elimina implícitamente al cerrar la sesión.  
   

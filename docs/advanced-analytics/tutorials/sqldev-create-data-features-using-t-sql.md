@@ -1,19 +1,21 @@
 ---
-title: Lección 4 características cree datos mediante T-SQL | Documentos de Microsoft
+title: Lección 4 características de datos cree mediante funciones de T-SQL (aprendizaje automático de SQL Server) | Documentos de Microsoft
+description: Tutorial que muestra cómo incrustar R en SQL Server los procedimientos almacenados y funciones de T-SQL
 ms.prod: sql
 ms.technology: machine-learning
-ms.date: 04/15/2018
+ms.date: 06/07/2018
 ms.topic: tutorial
 author: HeidiSteen
 ms.author: heidist
 manager: cgronlun
-ms.openlocfilehash: 7007d418b14e2c965252ca2a4f7bc3c529e63173
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
+ms.openlocfilehash: 98182e8e602b8bba8ca7d7fd58cf23f3fcaaa435
+ms.sourcegitcommit: b52b5d972b1a180e575dccfc4abce49af1a6b230
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 06/08/2018
+ms.locfileid: "35249548"
 ---
-# <a name="lesson-4-create-data-features-using-t-sql"></a>Lección 4: Crear características de datos mediante T-SQL
+# <a name="lesson-4-create-data-features-using-r-and-t-sql"></a>Lección 4: Crear características de datos mediante R y T-SQL
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
 
 Este artículo forma parte de un tutorial para desarrolladores de SQL sobre cómo usar R en SQL Server.
@@ -125,4 +127,4 @@ Para agregar los valores calculados para una tabla que se puede usar para entren
 
 ## <a name="previous-lesson"></a>Lección anterior
 
-[Lección 3: Explorar y visualizar los datos](../tutorials/sqldev-explore-and-visualize-the-data.md)
+[Lección 3: Explorar y visualizar los datos mediante R y los procedimientos almacenados](../tutorials/sqldev-explore-and-visualize-the-data.md)

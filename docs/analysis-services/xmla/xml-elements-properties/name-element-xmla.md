@@ -13,7 +13,7 @@ ms.openlocfilehash: c0686dfbb5949c9b2fe3a20e34824e731369b266
 ms.sourcegitcommit: 808d23a654ef03ea16db1aa23edab496b73e5072
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/02/2018
+ms.lasthandoff: 06/04/2018
 ms.locfileid: "34575817"
 ---
 # <a name="name-element-xmla"></a>Elemento Name (XMLA)
@@ -36,7 +36,7 @@ ms.locfileid: "34575817"
 |Característica|Descripción|  
 |--------------------|-----------------|  
 |Tipo y longitud de los datos|String|  
-|Valor predeterminado|None|  
+|Valor predeterminado|Ninguno|  
 |Cardinalidad|Vea la tabla siguiente.|  
   
 |Antecesor o elemento primario|Cardinalidad|  
@@ -49,9 +49,9 @@ ms.locfileid: "34575817"
 |Relación|Elemento|  
 |------------------|-------------|  
 |Elementos primarios|[Atributo](../../../analysis-services/xmla/xml-elements-properties/attribute-element-xmla.md), [traducción](../../../analysis-services/xmla/xml-elements-properties/translation-element-xmla.md)|  
-|Elementos secundarios|None|  
+|Elementos secundarios|Ninguno|  
   
-## <a name="remarks"></a>Notas  
+## <a name="remarks"></a>Comentarios  
  Para **atributo** elementos, el **nombre** elemento contiene el nombre del miembro de atributo que se pueden insertar ni actualizar durante, respectivamente, la **insertar** o **Actualización** comando.  
   
  Para **traducción** elementos, el **nombre** elemento contiene el título del miembro de atributo, en el idioma especificado por el **lenguaje** elemento del elemento primario  **Traducción** objeto. Si el **nombre** elemento no se especifica o contiene una cadena vacía, el valor de la **nombre** (elemento) para la **atributo** elemento que contiene el  **Traducción** elemento se utiliza.  

@@ -23,10 +23,10 @@ author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.openlocfilehash: c22415c34f0e25dc1117b6a5f86839c66f0ba53b
-ms.sourcegitcommit: 2d93cd115f52bf3eff3069f28ea866232b4f9f9e
+ms.sourcegitcommit: 808d23a654ef03ea16db1aa23edab496b73e5072
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/01/2018
+ms.lasthandoff: 06/04/2018
 ms.locfileid: "33238006"
 ---
 # <a name="spdatabases-transact-sql"></a>sp_databases (Transact-SQL)
@@ -44,7 +44,7 @@ sp_databases
 ```  
   
 ## <a name="return-code-values"></a>Valores de código de retorno  
- None  
+ Ninguno  
   
 ## <a name="result-sets"></a>Conjuntos de resultados  
   
@@ -54,7 +54,7 @@ sp_databases
 |**DATABASE_SIZE**|**int**|Tamaño de la base de datos, en kilobytes.|  
 |**COMENTARIOS**|**varchar(254)**|Para el [!INCLUDE[ssDE](../../includes/ssde-md.md)], este campo siempre devuelve NULL.|  
   
-## <a name="remarks"></a>Notas  
+## <a name="remarks"></a>Comentarios  
  Los nombres de bases de datos devueltos pueden utilizarse como parámetros en la instrucción USE para cambiar el contexto de la base de datos actual.  
   
  **sp_databases** no tiene ningún equivalente en Open Database Connectivity (ODBC).  

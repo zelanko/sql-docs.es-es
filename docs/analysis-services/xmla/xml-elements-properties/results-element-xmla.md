@@ -13,7 +13,7 @@ ms.openlocfilehash: 7fc64d6b31f1b05d8bf5b4d1c80d75dff0583e86
 ms.sourcegitcommit: 808d23a654ef03ea16db1aa23edab496b73e5072
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/02/2018
+ms.lasthandoff: 06/04/2018
 ms.locfileid: "34576167"
 ---
 # <a name="results-element-xmla"></a>Elemento results (XMLA)
@@ -37,8 +37,8 @@ ms.locfileid: "34576167"
   
 |Característica|Descripción|  
 |--------------------|-----------------|  
-|Tipo y longitud de los datos|None|  
-|Valor predeterminado|None|  
+|Tipo y longitud de los datos|Ninguno|  
+|Valor predeterminado|Ninguno|  
 |Cardinalidad|0-1: Elemento opcional que puede aparecer una y solo una vez.|  
   
 ## <a name="element-relationships"></a>Relaciones del elemento  
@@ -48,7 +48,7 @@ ms.locfileid: "34576167"
 |Elementos primarios|[valor devuelto](../../../analysis-services/xmla/xml-elements-properties/return-element-xmla.md)|  
 |Elementos secundarios|[Raíz](../../../analysis-services/xmla/xml-elements-properties/root-element-xmla.md)|  
   
-## <a name="remarks"></a>Notas  
+## <a name="remarks"></a>Comentarios  
  Si el método **Batch** ejecuta un comando **Execute** , el elemento **return** contiene un elemento **results** único en lugar de un elemento **root** único. El contenido del elemento **results** depende de los valores usados para ejecutar el comando **Batch** .  
   
  Para los comandos **Batch** no transaccionales, el elemento **results** contiene un elemento **root** para cada comando ejecutado por el comando **Batch** , independientemente de si el comando se completa correctamente o sin éxito. Para los comandos **Batch** transaccionales, el elemento **results** contiene solamente un elemento **root** , que contiene la información de error del comando que no se ha ejecutado correctamente dentro del comando **Batch** .  

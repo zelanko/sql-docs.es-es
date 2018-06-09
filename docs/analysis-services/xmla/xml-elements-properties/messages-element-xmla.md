@@ -13,7 +13,7 @@ ms.openlocfilehash: 21bb83be0940b806c071f305d75826ab65330c15
 ms.sourcegitcommit: 808d23a654ef03ea16db1aa23edab496b73e5072
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/02/2018
+ms.lasthandoff: 06/04/2018
 ms.locfileid: "34575597"
 ---
 # <a name="messages-element-xmla"></a>Elemento Messages (XMLA)
@@ -35,8 +35,8 @@ ms.locfileid: "34575597"
   
 |Característica|Descripción|  
 |--------------------|-----------------|  
-|Tipo y longitud de los datos|None|  
-|Valor predeterminado|None|  
+|Tipo y longitud de los datos|Ninguno|  
+|Valor predeterminado|Ninguno|  
 |Cardinalidad|0-1: Elemento opcional que puede aparecer una y solo una vez.|  
   
 ## <a name="element-relationships"></a>Relaciones del elemento  
@@ -46,7 +46,7 @@ ms.locfileid: "34575597"
 |Elementos primarios|[Conjunto de resultados](../../../analysis-services/xmla/xml-data-types/resultset-data-type-xmla.md)|  
 |Elementos secundarios|[de mensaje](../../../analysis-services/xmla/xml-elements-properties/message-element-xmla.md)|  
   
-## <a name="remarks"></a>Notas  
+## <a name="remarks"></a>Comentarios  
  Este elemento se utiliza en casos en los que una llamada al método **Discover** o un comando XMLA único dentro de una llamada al método **Execute** se completa correctamente, pero con errores o advertencias. En tales casos se agrega un elemento **Messages** al elemento [root](../../../analysis-services/xmla/xml-elements-properties/root-element-xmla.md) después de todos los otros elementos, que a su vez contiene uno o más elementos **Message** . Cada elemento **Message** representa un mensaje único, un error o una advertencia, devuelta por la instancia [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] .  
   
 ## <a name="see-also"></a>Vea también

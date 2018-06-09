@@ -19,7 +19,7 @@ ms.openlocfilehash: 81a94f68d7198285125236337a0025e41f1bf8ef
 ms.sourcegitcommit: 808d23a654ef03ea16db1aa23edab496b73e5072
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/02/2018
+ms.lasthandoff: 06/04/2018
 ms.locfileid: "34563893"
 ---
 # <a name="how-to-retrieve-output-parameters-using-the-sqlsrv-driver"></a>Cómo recuperar parámetros de salida con el controlador SQLSRV

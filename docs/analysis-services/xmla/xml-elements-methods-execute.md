@@ -13,7 +13,7 @@ ms.openlocfilehash: 6c47a3c1a297bd636c64e52fcb83fda6a2b7bad5
 ms.sourcegitcommit: 808d23a654ef03ea16db1aa23edab496b73e5072
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/02/2018
+ms.lasthandoff: 06/04/2018
 ms.locfileid: "34574937"
 ---
 # <a name="xml-elements---methods---execute"></a>Ejecutan elementos XML - métodos:
@@ -39,18 +39,18 @@ ms.locfileid: "34574937"
   
 |Característica|Descripción|  
 |--------------------|-----------------|  
-|Tipo y longitud de los datos|None|  
-|Valor predeterminado|None|  
+|Tipo y longitud de los datos|Ninguno|  
+|Valor predeterminado|Ninguno|  
 |Cardinalidad|0-1: elemento opcional que aparece una y solo una.|  
   
 ## <a name="element-relationships"></a>Relaciones del elemento  
   
 |Relación|Elemento|  
 |------------------|-------------|  
-|Elemento primario|None|  
+|Elemento primario|Ninguno|  
 |Elementos secundarios|[Comando](../../analysis-services/xmla/xml-elements-properties/command-element-xmla.md), [parámetros](../../analysis-services/xmla/xml-elements-properties/parameters-element-xmla.md), [propiedades](../../analysis-services/xmla/xml-elements-properties/properties-element-xmla.md)|  
   
-## <a name="remarks"></a>Notas  
+## <a name="remarks"></a>Comentarios  
  El **Execute** método ejecuta comandos XMLA proporcionados en el **comando** elemento y devuelve cualquier dato resultante mediante XMLA [conjunto de filas](../../analysis-services/xmla/xml-data-types/rowset-data-type-xmla.md) tipo de datos (de resultados tabulares establece) o el XMLA [MDDataSet](../../analysis-services/xmla/xml-data-types/mddataset-data-type-xmla.md) tipo de datos (para conjuntos de resultados multidimensionales.)  
   
 ## <a name="example"></a>Ejemplo  

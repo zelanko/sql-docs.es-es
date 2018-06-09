@@ -1,34 +1,23 @@
 ---
 title: StrToMember (MDX) | Documentos de Microsoft
-ms.custom: ''
-ms.date: 03/02/2016
-ms.prod: analysis-services
-ms.prod_service: analysis-services
-ms.component: ''
-ms.reviewer: ''
-ms.suite: pro-bi
-ms.technology: ''
-ms.tgt_pltfrm: ''
-ms.topic: language-reference
-f1_keywords:
-- STRTOMEMBER
-dev_langs:
-- kbMDX
-helpviewer_keywords:
-- StrToMember function
-ms.assetid: eb8a3dc0-5ae4-434e-b321-680a81a59e67
-caps.latest.revision: 31
-author: Minewiskan
+ms.date: 06/04/2018
+ms.prod: sql
+ms.technology: analysis-services
+ms.custom: mdx
+ms.topic: reference
 ms.author: owend
-manager: erikre
-ms.openlocfilehash: ad91aba4d30a5926aecfb18caae856bde0f55c3e
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.reviewer: owend
+author: minewiskan
+manager: kfile
+ms.openlocfilehash: 37c76d6e1e7ffe9bc40d785952b5c456ab1fc6fa
+ms.sourcegitcommit: 97bef3f248abce57422f15530c1685f91392b494
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/04/2018
+ms.locfileid: "34743054"
 ---
 # <a name="strtomember-mdx"></a>StrToMember (MDX)
-[!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
+
 
   Devuelve el miembro especificado por una cadena con formato de Expresiones multidimensionales (MDX).  
   
@@ -43,7 +32,7 @@ StrToMember(Member_Name [,CONSTRAINED] )
  *Member_Name*  
  Expresión de cadena válida que especifica, directa o indirectamente, un miembro.  
   
-## <a name="remarks"></a>Comentarios  
+## <a name="remarks"></a>Notas  
  El **StrToMember** función devuelve el miembro especificado en la expresión de cadena. El **StrToMember** función normalmente se utiliza con funciones definidas por el usuario para devolver una especificación de miembro de una función externa a una instrucción MDX, o cuando se parametriza una consulta MDX.  
   
 -   Cuando se utiliza la marca CONSTRAINED, el nombre del miembro debe resolverse directamente en un nombre de miembro calificado o no calificado. Esta marca se utiliza para reducir el riesgo de ataques por inyección de código a través de la cadena especificada. Si se proporciona una cadena que no se resuelve directamente en un nombre de miembro calificado o no calificado, aparece el siguiente error: "Se han infringido las restricciones impuestas por la marca CONSTRAINED en la función STRTOMEMBER."  
@@ -92,6 +81,6 @@ FROM [Adventure Works]
 ```  
   
 ## <a name="see-also"></a>Vea también  
- [Referencia de funciones MDX & #40; MDX & #41;](../mdx/mdx-function-reference-mdx.md)  
+ [Referencia de funciones MDX &#40;MDX&#41;](../mdx/mdx-function-reference-mdx.md)  
   
   

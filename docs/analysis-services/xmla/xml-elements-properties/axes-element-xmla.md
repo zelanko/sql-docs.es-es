@@ -13,7 +13,7 @@ ms.openlocfilehash: 3a8dfff1c8a551157661bcb1de5700bf51a7f914
 ms.sourcegitcommit: 808d23a654ef03ea16db1aa23edab496b73e5072
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/02/2018
+ms.lasthandoff: 06/04/2018
 ms.locfileid: "34574917"
 ---
 # <a name="axes-element-xmla"></a>Elemento Axes (XMLA)
@@ -38,7 +38,7 @@ ms.locfileid: "34574917"
 |Característica|Descripción|  
 |--------------------|-----------------|  
 |Tipo y longitud de los datos|Cualquiera|  
-|Valor predeterminado|None|  
+|Valor predeterminado|Ninguno|  
 |Cardinalidad|1-1: Elemento necesario que se produce una vez y solo una vez.|  
   
 ## <a name="element-relationships"></a>Relaciones del elemento  
@@ -48,7 +48,7 @@ ms.locfileid: "34574917"
 |Elementos primarios|[Raíz](../../../analysis-services/xmla/xml-elements-properties/root-element-xmla.md)|  
 |Elementos secundarios|[Axis](../../../analysis-services/xmla/xml-elements-properties/axis-element-xmla.md)|  
   
-## <a name="remarks"></a>Notas  
+## <a name="remarks"></a>Comentarios  
  En el **ejes** elemento, el **eje** elementos se muestran en el orden en que aparecen en el conjunto de datos, empezando por cero. El **AxisFormat** configuración de la propiedad XMLA determina cómo **eje** se da formato a los elementos. Para obtener más información sobre la **AxisFormat** propiedad, vea [admite propiedades XMLA &#40;XMLA&#41;](../../../analysis-services/xmla/xml-elements-properties/propertylist-element-supported-xmla-properties.md).  
   
  Un eje representa un conjunto de tuplas, en las que todas las tuplas del conjunto tienen la misma dimensionalidad. Un conjunto se puede representar de maneras diferentes con ventajas diferentes. Por ejemplo, el conjunto siguiente de cuatro tuplas se puede representar como una colección de tuplas bidimensionales o un producto cartesiano de dos conjuntos unidimensionales.  

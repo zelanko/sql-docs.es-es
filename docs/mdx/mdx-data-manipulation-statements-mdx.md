@@ -1,6 +1,6 @@
 ---
 title: Instrucciones de manipulación de datos MDX (MDX) | Documentos de Microsoft
-ms.date: 05/30/2018
+ms.date: 06/04/2018
 ms.prod: sql
 ms.technology: analysis-services
 ms.custom: mdx
@@ -9,15 +9,15 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: 06bb35dfa41fc9a1984e33e7c1a636ffafe25979
-ms.sourcegitcommit: 808d23a654ef03ea16db1aa23edab496b73e5072
+ms.openlocfilehash: 27db322b7031b7040c3d78536552db257d41cff3
+ms.sourcegitcommit: 97bef3f248abce57422f15530c1685f91392b494
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/02/2018
-ms.locfileid: "34579707"
+ms.lasthandoff: 06/04/2018
+ms.locfileid: "34742494"
 ---
 # <a name="mdx-data-manipulation-statements-mdx"></a>Instrucciones de manipulación de datos de MDX (MDX)
-[!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
+
 
   En las Expresiones multidimensionales (MDX), las instrucciones de manipulación de datos recuperan y manipulan datos de objetos multidimensionales. En la siguiente tabla se enumeran las instrucciones de manipulación de datos de MDX.  
   

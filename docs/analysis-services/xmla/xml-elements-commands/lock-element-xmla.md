@@ -13,7 +13,7 @@ ms.openlocfilehash: a6524c4454eca42a771b2c3c87c2a6513804f720
 ms.sourcegitcommit: 808d23a654ef03ea16db1aa23edab496b73e5072
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/02/2018
+ms.lasthandoff: 06/04/2018
 ms.locfileid: "34575247"
 ---
 # <a name="lock-element-xmla"></a>Elemento Lock (XMLA)
@@ -37,9 +37,9 @@ ms.locfileid: "34575247"
   
 |Característica|Descripción|  
 |--------------------|-----------------|  
-|Tipo y longitud de los datos|None|  
-|Valor predeterminado|None|  
-|Cardinalidad|0-n: elemento opcional que puede aparecer más de una vez.|  
+|Tipo y longitud de los datos|Ninguno|  
+|Valor predeterminado|Ninguno|  
+|Cardinalidad|0-n: Elemento opcional que puede aparecer más de una vez.|  
   
 ## <a name="element-relationships"></a>Relaciones del elemento  
   
@@ -48,7 +48,7 @@ ms.locfileid: "34575247"
 |Elementos primarios|[Command](../../../analysis-services/xmla/xml-elements-properties/command-element-xmla.md)|  
 |Elementos secundarios|[Id. de](../../../analysis-services/xmla/xml-elements-properties/id-element-xmla.md), [modo](../../../analysis-services/xmla/xml-elements-properties/mode-element-xmla.md), [objeto](../../../analysis-services/xmla/xml-elements-properties/object-element-xmla.md)|  
   
-## <a name="remarks"></a>Notas  
+## <a name="remarks"></a>Comentarios  
  El comando **Lock** bloquea un objeto, para uso compartido o exclusivo, dentro del contexto de la transacción actualmente activa. Solo los administradores de bases de datos o de servidores pueden ejecutar explícitamente un comando **Lock** . Un bloqueo en un objeto impide que se confirmen las transacciones hasta que se quita el bloqueo. [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] admite dos tipos de bloqueos, bloqueos compartidos y bloqueos exclusivos. Para obtener más información acerca de los tipos de bloqueo compatibles con [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)], consulte [elemento Mode &#40;XMLA&#41;](../../../analysis-services/xmla/xml-elements-properties/mode-element-xmla.md).  
   
  [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] solamente permite bloquear las bases de datos. El **objeto** elemento debe contener una referencia de objeto a una [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] base de datos. Si no se especifica el elemento **Object** o el elemento **Object** hace referencia a un objeto que no es una base de datos, se produce un error.  

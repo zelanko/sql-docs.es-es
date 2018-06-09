@@ -13,7 +13,7 @@ ms.openlocfilehash: 33e81bd76e7f900a396b1f9bfbae808092a2877e
 ms.sourcegitcommit: 808d23a654ef03ea16db1aa23edab496b73e5072
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/02/2018
+ms.lasthandoff: 06/04/2018
 ms.locfileid: "34575087"
 ---
 # <a name="backupremotepartitions-element-xmla"></a>Elemento BackupRemotePartitions (XMLA)
@@ -44,9 +44,9 @@ ms.locfileid: "34575087"
 |Relación|Elemento|  
 |------------------|-------------|  
 |Elementos primarios|[Copia de seguridad](../../../analysis-services/xmla/xml-elements-commands/backup-element-xmla.md)|  
-|Elementos secundarios|None|  
+|Elementos secundarios|Ninguno|  
   
-## <a name="remarks"></a>Notas  
+## <a name="remarks"></a>Comentarios  
  Si **BackupRemotePartitions** se establece en **True**, se debe incluir un elemento **Locations** con uno o más elementos **Location** en el comando **Backup** , o se produce un error. Para obtener más información acerca de la copia de seguridad y restaurar las particiones remotas, consulte [realizar copias de seguridad, restaurar y sincronizar bases de datos &#40;XMLA&#41;](../../../analysis-services/multidimensional-models-scripting-language-assl-xmla/backing-up-restoring-and-synchronizing-databases-xmla.md).  
   
 ## <a name="see-also"></a>Vea también

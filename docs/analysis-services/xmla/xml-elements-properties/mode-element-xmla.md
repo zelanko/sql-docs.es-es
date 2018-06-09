@@ -13,7 +13,7 @@ ms.openlocfilehash: 12e792c51b2f6feb3edb4e01c12dcf4809e2d4d4
 ms.sourcegitcommit: 808d23a654ef03ea16db1aa23edab496b73e5072
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/02/2018
+ms.lasthandoff: 06/04/2018
 ms.locfileid: "34575757"
 ---
 # <a name="mode-element-xmla"></a>Elemento Mode (XMLA)
@@ -36,7 +36,7 @@ ms.locfileid: "34575757"
 |Característica|Descripción|  
 |--------------------|-----------------|  
 |Tipo y longitud de los datos|String (enumeración)|  
-|Valor predeterminado|None|  
+|Valor predeterminado|Ninguno|  
 |Cardinalidad|1-1: Elemento necesario que se produce una vez y solo una vez.|  
   
 ## <a name="element-relationships"></a>Relaciones del elemento  
@@ -44,9 +44,9 @@ ms.locfileid: "34575757"
 |Relación|Elemento|  
 |------------------|-------------|  
 |Elementos primarios|[Bloqueo](../../../analysis-services/xmla/xml-elements-commands/lock-element-xmla.md), [desbloquear](../../../analysis-services/xmla/xml-elements-commands/unlock-element-xmla.md)|  
-|Elementos secundarios|None|  
+|Elementos secundarios|Ninguno|  
   
-## <a name="remarks"></a>Notas  
+## <a name="remarks"></a>Comentarios  
  El elemento primario **bloqueo** elemento utiliza el **modo** elemento para determinar el tipo de bloqueo que cree en un objeto. El valor de este elemento se limita a una de las cadenas enumeradas en la tabla siguiente.  
   
 |Valor|Descripción|  

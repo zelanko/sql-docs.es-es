@@ -1,8 +1,6 @@
 ---
 title: Administración de contraseñas (DB2ToSQL) | Documentos de Microsoft
 ms.prod: sql
-ms.prod_service: sql-tools
-ms.component: ssma-db2
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
@@ -18,11 +16,12 @@ caps.latest.revision: 5
 author: Shamikg
 ms.author: Shamikg
 manager: craigg
-ms.openlocfilehash: b45905d666e7ccd5c5379ea18cede72cd6941ae6
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: df108bc5fb4989c8e26de9be9926819af12e19a0
+ms.sourcegitcommit: 8aa151e3280eb6372bf95fab63ecbab9dd3f2e5e
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/05/2018
+ms.locfileid: "34775091"
 ---
 # <a name="managing-passwords-db2tosql"></a>Administración de contraseñas (DB2ToSQL)
 Esta sección es acerca de cómo proteger las contraseñas de la base de datos y el procedimiento para importar o exportar entre servidores:  

@@ -13,7 +13,7 @@ ms.openlocfilehash: 17e4604293f7ad57b51bfbfdb127e322f9df4eb4
 ms.sourcegitcommit: 808d23a654ef03ea16db1aa23edab496b73e5072
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/02/2018
+ms.lasthandoff: 06/04/2018
 ms.locfileid: "34574387"
 ---
 # <a name="dbtablename-element-xmla"></a>Elemento DbTableName (XMLA)
@@ -36,7 +36,7 @@ ms.locfileid: "34574387"
 |Característica|Descripción|  
 |--------------------|-----------------|  
 |Tipo y longitud de los datos|String|  
-|Valor predeterminado|None|  
+|Valor predeterminado|Ninguno|  
 |Cardinalidad|0-1: Elemento opcional que puede aparecer una y solo una vez.|  
   
 ## <a name="element-relationships"></a>Relaciones del elemento  
@@ -44,9 +44,9 @@ ms.locfileid: "34574387"
 |Relación|Elemento|  
 |------------------|-------------|  
 |Elementos primarios|[TableNotification](../../../analysis-services/xmla/xml-elements-properties/tablenotification-element-xmla.md)|  
-|Elementos secundarios|None|  
+|Elementos secundarios|Ninguno|  
   
-## <a name="remarks"></a>Notas  
+## <a name="remarks"></a>Comentarios  
   
 ## <a name="see-also"></a>Vea también
  [Elemento DbSchemaName &#40;XMLA&#41;](../../../analysis-services/xmla/xml-elements-properties/dbschemaname-element-xmla.md)   

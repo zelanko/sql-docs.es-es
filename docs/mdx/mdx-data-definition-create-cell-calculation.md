@@ -1,42 +1,23 @@
 ---
 title: Instrucción CREATE CELL CALCULATION (MDX) | Documentos de Microsoft
-ms.custom: ''
-ms.date: 03/02/2016
-ms.prod: analysis-services
-ms.prod_service: analysis-services
-ms.component: ''
-ms.reviewer: ''
-ms.suite: pro-bi
-ms.technology: ''
-ms.tgt_pltfrm: ''
-ms.topic: language-reference
-f1_keywords:
-- CELL CALCULATION
-- CREATE
-- CALCULATION
-- CELL
-- CREATE_CELL_CALCULATION
-- CREATE CELL
-- CREATE CELL CALCULATION
-dev_langs:
-- kbMDX
-helpviewer_keywords:
-- calculations [Analysis Services], creating
-- CREATE CELL CALCULATION statement
-- cubes [Analysis Services], calculations
-ms.assetid: 01ced1b3-ada1-4b55-b350-e4255c3cc679
-caps.latest.revision: 34
-author: Minewiskan
+ms.date: 06/04/2018
+ms.prod: sql
+ms.technology: analysis-services
+ms.custom: mdx
+ms.topic: reference
 ms.author: owend
-manager: erikre
-ms.openlocfilehash: ca01b454906ddb5c51a6cd96e8c49190bfda9998
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.reviewer: owend
+author: minewiskan
+manager: kfile
+ms.openlocfilehash: 7e69aa9e3da29abe054aaf272c5fe3ed12172a4d
+ms.sourcegitcommit: 97bef3f248abce57422f15530c1685f91392b494
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/04/2018
+ms.locfileid: "34741304"
 ---
 # <a name="mdx-data-definition---create-cell-calculation"></a>Definición de datos MDX - crear el cálculo de celda
-[!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
+
 
   Crea un cálculo que evalúa una expresión multidimensional (MDX) en un conjunto especificado de tuplas en un cubo.  
   
@@ -87,7 +68,7 @@ CREATE CELL CALCULATION CURRENTCUBE | Cube_Name.Calculation_Name
  *Scalar_Expression*  
  Una expresión escalar de MDX válida.  
   
-## <a name="remarks"></a>Comentarios  
+## <a name="remarks"></a>Notas  
  Mediante el uso de celdas calculadas, la aplicación cliente puede especificar un valor de resumen para un conjunto concreto de celdas, en lugar de hacerlo para un conjunto completo de celdas en el caso de una fórmula de resumen personalizada o un miembro calculado. Por ejemplo, es posible especificar que cualquier celda del conjunto definida por `{[Canada],[Time].[2000]}` pueda contener un valor definido por una fórmula. El resto de celdas no contenidas en este conjunto se calculan normalmente.  
   
 > [!NOTE]  
@@ -95,10 +76,10 @@ CREATE CELL CALCULATION CURRENTCUBE | Cube_Name.Calculation_Name
   
 ## <a name="see-also"></a>Vea también  
  [Crear celdas calculadas de ámbito de sesión](../analysis-services/multidimensional-models/mdx/mdx-cell-calculations-session-scoped-calculated-cells.md)   
- [Creación de cálculos de celdas del ámbito de consulta & #40; MDX & #41;](../analysis-services/multidimensional-models/mdx/mdx-cell-calculations-query-scoped-cell-calculations.md)   
+ [Creación de cálculos de celdas del ámbito de consulta &#40;MDX&#41;](../analysis-services/multidimensional-models/mdx/mdx-cell-calculations-query-scoped-cell-calculations.md)   
  [Creación de cálculos de celdas en MDX &#40;MDX&#41;](../analysis-services/multidimensional-models/mdx/mdx-cell-calculations-build-cell-calculations.md)   
- [Mediante las propiedades de celda & #40; MDX & #41;](../analysis-services/multidimensional-models/mdx/mdx-cell-properties-using-cell-properties.md)   
- [FORMAT_STRING, contenido & #40; MDX & #41;](../analysis-services/multidimensional-models/mdx/mdx-cell-properties-format-string-contents.md)   
+ [Uso de propiedades de celda &#40;MDX&#41;](../analysis-services/multidimensional-models/mdx/mdx-cell-properties-using-cell-properties.md)   
+ [FORMAT_STRING, contenido &#40;MDX&#41;](../analysis-services/multidimensional-models/mdx/mdx-cell-properties-format-string-contents.md)   
  [Contenido de FORE_COLOR y BACK_COLOR &#40;MDX&#41;](../analysis-services/multidimensional-models/mdx/mdx-cell-properties-fore-color-and-back-color-contents.md)   
  [Instrucciones de definición de datos MDX &#40;MDX&#41;](../mdx/mdx-data-definition-statements-mdx.md)  
   

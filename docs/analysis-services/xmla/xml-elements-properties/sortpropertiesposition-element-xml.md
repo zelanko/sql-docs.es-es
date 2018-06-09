@@ -13,7 +13,7 @@ ms.openlocfilehash: 855857e0c4b1a9cb554fcbaa61935809ad9c71e0
 ms.sourcegitcommit: 808d23a654ef03ea16db1aa23edab496b73e5072
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/02/2018
+ms.lasthandoff: 06/04/2018
 ms.locfileid: "34576347"
 ---
 # <a name="sortpropertiesposition-element-xml"></a>Elemento SortPropertiesPosition (XML)
@@ -44,9 +44,9 @@ ms.locfileid: "34576347"
 |Relación|Elemento|  
 |------------------|-------------|  
 |Elementos primarios|[RelationshipEndVisualizationProperties](../../../analysis-services/scripting/data-type/relationshipendvisualizationproperties-data-type-assl.md)|  
-|Elementos secundarios|None|  
+|Elementos secundarios|Ninguno|  
   
-## <a name="remarks"></a>Notas  
+## <a name="remarks"></a>Comentarios  
  Para **RelationshipEndVisualizationProperties** elementos, el **SortPropertiesPosition** elemento contiene la posición del elemento de propiedades de ordenación de una colección de detalles. El valor predeterminado indica que no hay propiedades de ordenación que se deban usar.  
   
   

@@ -1,26 +1,28 @@
 ---
-title: Lección 1 descargar los datos de ejemplo | Documentos de Microsoft
+title: Datos de ejemplo de descarga de la lección 1 y scripts de R (aprendizaje automático de SQL Server) que incruste | Documentos de Microsoft
+description: Tutorial que muestra cómo incrustar R en SQL Server los procedimientos almacenados y funciones de T-SQL
 ms.prod: sql
 ms.technology: machine-learning
-ms.date: 04/15/2018
+ms.date: 06/07/2018
 ms.topic: tutorial
 author: HeidiSteen
 ms.author: heidist
 manager: cgronlun
-ms.openlocfilehash: a87d307dafa733e449c6ec893ece21645fe65640
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
+ms.openlocfilehash: 74a60a95da4fb701f3862c36e35a4bada6ef933b
+ms.sourcegitcommit: b52b5d972b1a180e575dccfc4abce49af1a6b230
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 06/08/2018
+ms.locfileid: "35249838"
 ---
-# <a name="lesson-1-download-the-sample-data"></a>Lección 1: Descargar los datos de ejemplo
+# <a name="lesson-1-download-data-and-scripts"></a>Lección 1: Descargar los datos y las secuencias de comandos
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
 
 Este artículo forma parte de un tutorial para desarrolladores de SQL sobre cómo usar R en SQL Server.
 
 En este paso, se descargará el conjunto de datos de ejemplo y los [!INCLUDE[tsql](../../includes/tsql-md.md)] archivos que se utilizan en este tutorial de script. Los datos y los archivos de script se comparten en GitHub, pero la secuencia de comandos de PowerShell descargará los archivos de datos y la secuencia de comandos en un directorio local de su elección.
 
-## <a name="download-the-data-and-scripts"></a>Descargar los datos y las secuencias de comandos
+## <a name="download-tutorial-files-from-github"></a>Descargar archivos del tutorial desde Github
 
 1.  Abra una consola de comandos de Windows PowerShell.
   
@@ -64,4 +66,4 @@ En este paso, se descargará el conjunto de datos de ejemplo y los [!INCLUDE[tsq
 
 ## <a name="previous-lesson"></a>Lección anterior
 
-[Análisis de R en bases de datos para desarrolladores de SQL](../tutorials/sqldev-in-database-r-for-sql-developers.md)
+[Análisis de R incrustado para desarrolladores de SQL](../tutorials/sqldev-in-database-r-for-sql-developers.md)

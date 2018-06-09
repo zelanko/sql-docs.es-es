@@ -13,7 +13,7 @@ ms.openlocfilehash: bc4a30e8c2886c97157e121fb3f70f892457e1ca
 ms.sourcegitcommit: 808d23a654ef03ea16db1aa23edab496b73e5072
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/02/2018
+ms.lasthandoff: 06/04/2018
 ms.locfileid: "34574107"
 ---
 # <a name="commonidentifierposition-element-xml"></a>Elemento CommonIdentifierPosition (XML)
@@ -44,9 +44,9 @@ ms.locfileid: "34574107"
 |Relación|Elemento|  
 |------------------|-------------|  
 |Elementos primarios|[RelationshipEndVisualizationProperties](../../../analysis-services/scripting/data-type/relationshipendvisualizationproperties-data-type-assl.md)|  
-|Elementos secundarios|None|  
+|Elementos secundarios|Ninguno|  
   
-## <a name="remarks"></a>Notas  
+## <a name="remarks"></a>Comentarios  
  Para **RelationshipEndVisualizationProperties** elementos, el **CommonIdentifierPosition** elemento contiene la posición del elemento identificador común en una colección de detalles. El valor predeterminado de **false** indica que no hay ningún identificador común que se usará.  
   
   

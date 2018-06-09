@@ -13,7 +13,7 @@ ms.openlocfilehash: c286aa928195181d5d1b344f71b648510ccceda1
 ms.sourcegitcommit: 808d23a654ef03ea16db1aa23edab496b73e5072
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/02/2018
+ms.lasthandoff: 06/04/2018
 ms.locfileid: "34575847"
 ---
 # <a name="connectionstring-element-xmla"></a>Elemento ConnectionString (XMLA)
@@ -36,7 +36,7 @@ ms.locfileid: "34575847"
 |Característica|Descripción|  
 |--------------------|-----------------|  
 |Tipo y longitud de los datos|String|  
-|Valor predeterminado|None|  
+|Valor predeterminado|Ninguno|  
 |Cardinalidad|Vea la tabla siguiente.|  
   
 |Antecesor o elemento primario|Cardinalidad|  
@@ -49,9 +49,9 @@ ms.locfileid: "34575847"
 |Relación|Elemento|  
 |------------------|-------------|  
 |Elementos primarios|[Ubicación](../../../analysis-services/xmla/xml-elements-properties/location-element-xmla.md), [origen](../../../analysis-services/xmla/xml-elements-properties/source-element-xmla.md)|  
-|Elementos secundarios|None|  
+|Elementos secundarios|Ninguno|  
   
-## <a name="remarks"></a>Notas  
+## <a name="remarks"></a>Comentarios  
  Para **ubicación** elementos, el **ConnectionString** elemento contiene la cadena de conexión utilizada por el **restaurar** o **sincronizar** comando para actualizar un origen de datos local o para conectarse a una instancia remota.  
   
  Para **origen** elementos, el **ConnectionString** elemento contiene la cadena de conexión utilizada por el **sincronizar** comando para conectarse a la instancia de origen.  

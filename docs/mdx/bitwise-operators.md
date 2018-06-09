@@ -1,43 +1,34 @@
 ---
 title: Operadores bit a bit | Documentos de Microsoft
-ms.custom: ''
-ms.date: 03/02/2016
-ms.prod: analysis-services
-ms.prod_service: analysis-services
-ms.component: ''
-ms.reviewer: ''
-ms.suite: pro-bi
-ms.technology: ''
-ms.tgt_pltfrm: ''
-ms.topic: language-reference
-dev_langs:
-- kbMDX
-helpviewer_keywords:
-- bitwise operators
-ms.assetid: 7349167b-f4b3-4344-bd01-b8f5fee4a509
-caps.latest.revision: 24
-author: Minewiskan
+ms.date: 06/04/2018
+ms.prod: sql
+ms.technology: analysis-services
+ms.custom: mdx
+ms.topic: reference
 ms.author: owend
-manager: erikre
-ms.openlocfilehash: 2d28555db8a175cc7b131cab7ab75a0bca135f7a
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.reviewer: owend
+author: minewiskan
+manager: kfile
+ms.openlocfilehash: 1d82ab7eb58b9c7aa76683e09b8017fb21799eef
+ms.sourcegitcommit: 97bef3f248abce57422f15530c1685f91392b494
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/04/2018
+ms.locfileid: "34739424"
 ---
 # <a name="bitwise-operators"></a>Operadores bit a bit
-[!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
+
 
   Operadores lógicos que evalúan valores y devuelven un valor booleano. En las expresiones multidimensionales (MDX), los operadores lógicos no llevan a cabo operaciones bit a bit.  
   
  MDX es compatible con los operadores que se indican en la siguiente tabla.  
   
-|Operador|Description|  
+|Operador|Descripción|  
 |--------------|-----------------|  
 |[AND](../mdx/and-mdx.md)|Realiza una conjunción lógica de dos expresiones numéricas.|  
-|[ES](../mdx/is-mdx.md)|Realiza una comparación lógica entre dos expresiones de objeto.|  
+|[IS](../mdx/is-mdx.md)|Realiza una comparación lógica entre dos expresiones de objeto.|  
 |[NOT](../mdx/not-mdx.md)|Realiza una negación lógica de una expresión numérica.|  
-|[O BIEN](../mdx/or-mdx.md)|Realiza una disyunción lógica de dos expresiones numéricas.|  
+|[OR](../mdx/or-mdx.md)|Realiza una disyunción lógica de dos expresiones numéricas.|  
 |[XOR](../mdx/xor-mdx.md)|Realiza una exclusión lógica de dos expresiones numéricas.|  
   
 ## <a name="see-also"></a>Vea también  

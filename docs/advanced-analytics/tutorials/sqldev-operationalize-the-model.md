@@ -1,24 +1,26 @@
 ---
-title: Lección 6 poner el modelo R | Documentos de Microsoft
+title: Lección 6 resultados posibles de predicción con modelos de R (aprendizaje automático de SQL Server) | Documentos de Microsoft
+description: Tutorial que muestra cómo incrustar R en SQL Server los procedimientos almacenados y funciones de T-SQL
 ms.prod: sql
 ms.technology: machine-learning
-ms.date: 04/15/2018
+ms.date: 06/08/2018
 ms.topic: tutorial
 author: HeidiSteen
 ms.author: heidist
 manager: cgronlun
-ms.openlocfilehash: 1503467f1979e2e123f12227cc92ea975b6cd6a3
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
+ms.openlocfilehash: 32984626dfac11bd2465cb783c583f6b210f6b68
+ms.sourcegitcommit: b52b5d972b1a180e575dccfc4abce49af1a6b230
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 06/08/2018
+ms.locfileid: "35249858"
 ---
-# <a name="lesson-6-operationalize-the-r-model"></a>Lección 6: Poner el modelo R
+# <a name="lesson-6-predict-potential-outcomes-using-an-r-model-in-a-stored-procedure"></a>Lección 6: Predecir los resultados posibles con un modelo de R en un procedimiento almacenado
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
 
 Este artículo forma parte de un tutorial para desarrolladores de SQL sobre cómo usar R en SQL Server.
 
-En este paso, aprenderá a *poner* del modelo mediante un procedimiento almacenado. Este procedimiento almacenado se puede llamar directamente por otras aplicaciones, para realizar predicciones en nuevas observaciones. El tutorial muestran dos maneras de realizar puntuaciones con un modelo de R en un procedimiento almacenado:
+En este paso, aprenderá a utilizar el modelo con nuevos observaciones para predecir los resultados posibles. El modelo se ajusta en un procedimiento almacenado que se puede llamar directamente por otras aplicaciones. El tutorial muestran varias maneras de realizar la puntuación:
 
 - **Modo de puntuación de lotes**: utilizar una consulta de selección como una entrada para el procedimiento almacenado. El procedimiento almacenado devuelve una tabla de observaciones correspondientes a los casos de entrada.
 
@@ -28,7 +30,7 @@ En primer lugar, veremos cómo funcionan las puntuaciones en general.
 
 ## <a name="basic-scoring"></a>La puntuación básica
 
-El procedimiento almacenado _PredictTip_ muestra la sintaxis básica para ajustar una llamada de predicción en un procedimiento almacenado.
+El procedimiento almacenado **PredictTip** muestra la sintaxis básica para ajustar una llamada de predicción en un procedimiento almacenado.
 
 ```SQL
 CREATE PROCEDURE [dbo].[PredictTip] @inquery nvarchar(max) 
@@ -54,7 +56,7 @@ GO
 
 + La instrucción SELECT Obtiene el modelo serializado de la base de datos y almacena el modelo en la variable de R `mod` para su posterior procesamiento mediante R.
 
-+ Se obtienen los nuevos casos de la puntuación de la [!INCLUDE[tsql](../../includes/tsql-md.md)] consulta especificada en `@inquery`, el primer parámetro del procedimiento almacenado. Cuando se leen los datos de la consulta, las filas se guardan en la trama de datos predeterminada, `InputDataSet`. Esta trama de datos se pasa a la función `rxPredict` de R, que genera las puntuaciones.
++ Se obtienen los nuevos casos de la puntuación de la [!INCLUDE[tsql](../../includes/tsql-md.md)] consulta especificada en `@inquery`, el primer parámetro del procedimiento almacenado. Cuando se leen los datos de la consulta, las filas se guardan en la trama de datos predeterminada, `InputDataSet`. Este marco de datos se pasa a la [rxPredict](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/rxpredict) funcionando en [RevoScaleR](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/revoscaler), lo cual genera las puntuaciones.
   
     `OutputDataSet<-rxPredict(modelObject = mod, data = InputDataSet, outData = NULL, predVarNames = "Score", type = "response", writeModelVars = FALSE, overwrite = TRUE);`
   
@@ -91,13 +93,13 @@ Ahora veamos cómo funciona la puntuación por lotes.
     1  214 0.7 2013-06-26 13:28:10.000   0.6970098661
     ```
 
-    Esta consulta se puede usar como entrada para el procedimiento almacenado, _PredictTipBatchMode_, se proporciona como parte de la descarga.
+    Esta consulta se puede usar como entrada para el procedimiento almacenado, **PredictTipMode**, se proporciona como parte de la descarga.
 
-2. Dedique un minuto a revisar el código del procedimiento almacenado _PredictTipBatchMode_ en [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)].
+2. Dedique un minuto a revisar el código del procedimiento almacenado **PredictTipMode** en [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)].
 
     ```SQL
-    /****** Object:  StoredProcedure [dbo].[PredictTipBatchMode]  ******/
-    CREATE PROCEDURE [dbo].[PredictTipBatchMode] @inquery nvarchar(max)
+    /****** Object:  StoredProcedure [dbo].[PredictTipMode]  ******/
+    CREATE PROCEDURE [dbo].[PredictTipMode] @inquery nvarchar(max)
     AS
     BEGIN
     DECLARE @lmodel2 varbinary(max) = (SELECT TOP 1 model FROM nyc_taxi_models);
@@ -141,7 +143,7 @@ A veces querrá pasar valores individuales de una aplicación y obtener un resul
 
 En esta sección, aprenderá a crear predicciones únicas mediante un procedimiento almacenado.
 
-1. Tómese un minuto para revisar el código del procedimiento almacenado _PredictTipSingleMode_, que se incluye como parte de la descarga.
+1. Dedique un minuto a revisar el código del procedimiento almacenado **PredictTipSingleMode**, que se incluye como parte de la descarga.
   
     ```SQL
     CREATE PROCEDURE [dbo].[PredictTipSingleMode] @passenger_count int = 0, @trip_distance float = 0, @trip_time_in_secs int = 0, @pickup_latitude float = 0, @pickup_longitude float = 0, @dropoff_latitude float = 0, @dropoff_longitude float = 0

@@ -13,7 +13,7 @@ ms.openlocfilehash: 4e00a4991226779a91e16806dbe15973d946ec69
 ms.sourcegitcommit: 808d23a654ef03ea16db1aa23edab496b73e5072
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/02/2018
+ms.lasthandoff: 06/04/2018
 ms.locfileid: "34574217"
 ---
 # <a name="backup-element-xmla"></a>Elemento Backup (XMLA)
@@ -42,9 +42,9 @@ ms.locfileid: "34574217"
   
 |Característica|Descripción|  
 |--------------------|-----------------|  
-|Tipo y longitud de los datos|None|  
-|Valor predeterminado|None|  
-|Cardinalidad|0-n: elemento opcional que puede aparecer más de una vez.|  
+|Tipo y longitud de los datos|Ninguno|  
+|Valor predeterminado|Ninguno|  
+|Cardinalidad|0-n: Elemento opcional que puede aparecer más de una vez.|  
   
 ## <a name="element-relationships"></a>Relaciones del elemento  
   
@@ -53,7 +53,7 @@ ms.locfileid: "34574217"
 |Elementos primarios|[Command](../../../analysis-services/xmla/xml-elements-properties/command-element-xmla.md)|  
 |Elementos secundarios|[AllowOverwrite](../../../analysis-services/xmla/xml-elements-properties/allowoverwrite-element-xmla.md), [ApplyCompression](../../../analysis-services/xmla/xml-elements-properties/applycompression-element-xmla.md), [BackupRemotePartitions](../../../analysis-services/xmla/xml-elements-properties/backupremotepartitions-element-xmla.md), [archivo](../../../analysis-services/xmla/xml-elements-properties/file-element-xmla.md), [ubicaciones](../../../analysis-services/xmla/xml-elements-properties/locations-element-xmla.md), [ Objeto](../../../analysis-services/xmla/xml-elements-properties/object-element-xmla.md), [contraseña](../../../analysis-services/xmla/xml-elements-properties/password-element-xmla.md), [seguridad](../../../analysis-services/xmla/xml-elements-properties/security-element-xmla.md)|  
   
-## <a name="remarks"></a>Notas  
+## <a name="remarks"></a>Comentarios  
  El **copia de seguridad** comando realiza una copia de la [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] base de datos especificada en el [objeto](../../../analysis-services/xmla/xml-elements-properties/object-element-xmla.md) elemento a un archivo de copia de seguridad y, opcionalmente, copias de seguridad de las particiones remotas en los archivos de copia de seguridad remotos. Si el **objeto** elemento hace referencia a un objeto distinto de un [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] la base de datos, se produce un error.  
   
  La información de la que hace copia de seguridad el comando **Backup** depende del modo del almacenamiento que utilicen los objetos de la base de datos. La tabla siguiente identifica la información de la que se hace copia de seguridad en función del modo de almacenamiento utilizado.  

@@ -1,6 +1,6 @@
 ---
 title: Usar expresiones escalares | Documentos de Microsoft
-ms.date: 05/30/2018
+ms.date: 06/04/2018
 ms.prod: sql
 ms.technology: analysis-services
 ms.custom: mdx
@@ -9,15 +9,15 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: 1d7b33042ad26fbf8dbf98bf2ea19e00ea0f4562
-ms.sourcegitcommit: 808d23a654ef03ea16db1aa23edab496b73e5072
+ms.openlocfilehash: a80933b1a9845ec2676fba470ed39e06ee7f4ad8
+ms.sourcegitcommit: 97bef3f248abce57422f15530c1685f91392b494
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/02/2018
-ms.locfileid: "34582367"
+ms.lasthandoff: 06/04/2018
+ms.locfileid: "34743904"
 ---
 # <a name="using-scalar-expressions"></a>Usar expresiones escalares
-[!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
+
 
   En las expresiones multidimensionales (MDX), una expresión escalar es un elemento de la sintaxis MDX que, al ser evaluado, devuelve un solo valor en el contexto de la evaluación.  
   

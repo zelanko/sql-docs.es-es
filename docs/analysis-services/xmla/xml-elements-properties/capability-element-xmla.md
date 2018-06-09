@@ -13,7 +13,7 @@ ms.openlocfilehash: dca8f668f64ab8ced157cf817be1f9f8f6390133
 ms.sourcegitcommit: 808d23a654ef03ea16db1aa23edab496b73e5072
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/02/2018
+ms.lasthandoff: 06/04/2018
 ms.locfileid: "34574987"
 ---
 # <a name="capability-element-xmla"></a>Elemento Capability (XMLA)
@@ -36,17 +36,17 @@ ms.locfileid: "34574987"
 |Característica|Descripción|  
 |--------------------|-----------------|  
 |Tipo y longitud de los datos|String|  
-|Valor predeterminado|None|  
-|Cardinalidad|0-n: elemento opcional que puede aparecer más de una vez.|  
+|Valor predeterminado|Ninguno|  
+|Cardinalidad|0-n: Elemento opcional que puede aparecer más de una vez.|  
   
 ## <a name="element-relationships"></a>Relaciones del elemento  
   
 |Relación|Elemento|  
 |------------------|-------------|  
 |Elementos primarios|[ProtocolCapabilities](../../../analysis-services/xmla/xml-elements-headers/protocolcapabilities-element-xmla.md)|  
-|Elementos secundarios|None|  
+|Elementos secundarios|Ninguno|  
   
-## <a name="remarks"></a>Notas  
+## <a name="remarks"></a>Comentarios  
  El **capacidad** elemento indica que cierta prestación específica, como binario o compresión, es compatible con la aplicación que incluyen la **ProtocolCapabilities** elemento de encabezado en el Encabezado SOAP de la solicitud SOAP o la instancia de Analysis Services que incluyen la **ProtocolCapabilities** elemento de encabezado en el encabezado SOAP de la respuesta SOAP. El valor del elemento **Capability** es el nombre de la función que se va a admitir.  
   
  [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] admite las prestaciones descritas en la siguiente tabla.  

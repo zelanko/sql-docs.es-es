@@ -1,82 +1,90 @@
 ---
-title: Lección 2 importar datos a SQL Server mediante PowerShell | Documentos de Microsoft
+title: Uso de PowerShell (aprendizaje automático de SQL Server) el entorno de la lección 2 preparar R tutorial | Documentos de Microsoft
+description: Tutorial que muestra cómo incrustar R en SQL Server los procedimientos almacenados y funciones de T-SQL
 ms.prod: sql
 ms.technology: machine-learning
-ms.date: 04/15/2018
+ms.date: 06/07/2018
 ms.topic: tutorial
 author: HeidiSteen
 ms.author: heidist
 manager: cgronlun
-ms.openlocfilehash: 6dbd1af581865d44c1636a6bac5acc02ae68532b
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
+ms.openlocfilehash: 1280d7c82d48c8ed596271cd7a73fa13ec1664c7
+ms.sourcegitcommit: b52b5d972b1a180e575dccfc4abce49af1a6b230
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 06/08/2018
+ms.locfileid: "35249748"
 ---
-# <a name="lesson-2-import-data-to-sql-server-using-powershell"></a>Lección 2: Importar datos a SQL Server usando PowerShell
+# <a name="lesson-2-set-up-the-tutorial-environment-using-powershell"></a>Lección 2: Configurar el entorno de tutorial con PowerShell
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
 
 Este artículo forma parte de un tutorial para desarrolladores de SQL sobre cómo usar R en SQL Server.
 
-En este paso, ejecutará uno de los scripts descargados para crear los objetos de base de datos necesarios para el tutorial. El script también crea la mayoría de los procedimientos almacenados que va a usar y carga los datos de ejemplo en una tabla de la base de datos especificada.
+En este paso, va a ejecutar un script de PowerShell para crear los objetos de base de datos necesarios para el tutorial. El script se crea y carga una base de datos con datos de ejemplo obtenidos en el paso anterior. También crea funciones y procedimientos almacenados que se utilizan a lo largo del tutorial.
 
-## <a name="run-the-scripts-to-create-sql-objects"></a>Ejecutar las secuencias de comandos para crear objetos SQL
+## <a name="create-and-load-database-objects"></a>Crear y cargar los objetos de base de datos
 
-Entre los archivos descargados, debería ver un script de PowerShell que se pueden ejecutar para preparar el entorno para el tutorial. Las acciones realizadas por el script son las siguientes:
+Entre los archivos descargados, debería ver un script de PowerShell (`RunSQL_SQL_Walkthrough.ps1`) que prepara el entorno para el tutorial. Las acciones realizadas por el script son las siguientes:
 
-- Instalación del cliente nativo de SQL y las utilidades de línea de comandos de SQL, si todavía no están instalados. Estas utilidades son necesarias para la carga masiva de los datos en la mediante **bcp**.
+- Instale el cliente nativo de SQL y utilidades de línea de comandos de SQL, si aún no está instalado. Estas utilidades son necesarias para la carga masiva de los datos en la mediante **bcp**.
 
-- Creación de una base de datos y una tabla en la instancia de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] e inserción masiva de los datos en la tabla.
+- Crear una base de datos y tablas en el [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] de instancia y los datos obtenidos de un archivo .csv de inserción masiva.
 
-- Creación de varios procedimientos almacenados y funciones de SQL.
+- Crear varios procedimientos almacenados y funciones SQL.
 
-### <a name="run-the-script"></a>Ejecute la secuencia de comandos
+### <a name="modify-the-script-to-use-a-trusted-windows-identity"></a>Modifique el script para usar una identidad de Windows de confianza
 
-1.  Abra un símbolo del sistema de PowerShell como administrador y ejecute el siguiente comando.
+De forma predeterminada, el script asume que un inicio de sesión de usuario de base de datos de SQL Server y una contraseña. Si estás db_owner en su cuenta de usuario de Windows, puede usar la identidad de Windows para crear los objetos. Para ello, abra `RunSQL_SQL_Walkthrough.ps1` en un editor de código y anexar **`-T`** a bcp bulk insert, comando (línea 238):
+
+```text
+bcp $db_tb in $csvfilepath -t ',' -S $server -f taxiimportfmt.xml -F 2 -C "RAW" -b 200000 -U $u -P $p -T
+```
+
+### <a name="run-the-script-to-create-objects"></a>Ejecute el script para crear objetos
+
+Abra un símbolo del sistema de PowerShell como administrador y ejecute el siguiente comando.
   
-    ```ps
-    .\RunSQL_SQL_Walkthrough.ps1
-    ```
+```ps
+.\RunSQL_SQL_Walkthrough.ps1
+```
+Deberá introducir la información siguiente:
+
+- Instancia de servidor donde [!INCLUDE[rsql_productname](../../includes/rsql-productname-md.md)] se ha instalado. En una instancia predeterminada, esto puede ser tan simple como el nombre del equipo.
+
+- Nombre de base de datos. Para este tutorial, secuencias de comandos asumen `TaxiNYC_Sample`.
+
+- Nombre de usuario y la contraseña de usuario. Escriba un inicio de sesión de base de datos de SQL Server para estos valores. O bien, si ha modificado la secuencia de comandos para que acepte una identidad de Windows de confianza, presione ENTRAR para dejar estos valores en blanco. La identidad de Windows se utiliza en la conexión.
+
+- Nombre de archivo completo para los datos de ejemplo que descargó en la lección anterior. Por ejemplo, `C:\tempRSQL\nyctaxi1pct.csv`
+
+Después de proporcionar estos valores, el script se ejecuta inmediatamente. Durante la ejecución de secuencias de comandos, todos los nombres de marcador de posición en el [!INCLUDE[tsql](../../includes/tsql-md.md)] se actualizan las secuencias de comandos para usar las entradas que proporcione.
+
+## <a name="review-database-objects"></a>Revise los objetos de base de datos
+   
+Cuando haya finalizado la ejecución del script, asegúrese de que los objetos de base de datos se encuentran en el [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] instancia mediante [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]. Debería ver la base de datos, tablas, funciones y procedimientos almacenados.
   
-    Se le pedirá que escriba la siguiente información:
-  
-    - El nombre o la dirección de una instancia de [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] donde se haya instalado [!INCLUDE[rsql_productname](../../includes/rsql-productname-md.md)]
-  
-    - El nombre de usuario y la contraseña de una cuenta en la instancia. La cuenta debe tener permisos para crear bases de datos, crear tablas y procedimientos almacenados y cargar datos en tablas. Si no se proporciona el nombre de usuario y la contraseña, la identidad de Windows se utiliza para iniciar sesión en SQL Server.
-  
-    - La ruta de acceso y el nombre de archivo del archivo de datos de ejemplo que acaba de descargar. Por ejemplo:
-  
-        `C:\tempRSQL\nyctaxi1pct.csv`
-  
-2.  Como parte de este paso, todos los scripts de [!INCLUDE[tsql](../../includes/tsql-md.md)] también se modifican para reemplazar los marcadores de posición con el nombre de la base de datos y el nombre de usuario que proporcionó como entradas de script.
-  
-    Tómese un minuto para revisar los procedimientos almacenados y las funciones creadas por el script.
-  
-    |**Nombre de archivo del script de SQL**|**Función**|
-    |-|-|
-    |create-db-tb-upload-data.sql|Crea una base de datos y dos tablas:<br /><br />nyctaxi_sample: contiene el conjunto de datos NYC Taxi principal. Un índice de almacén de columnas agrupado se agrega a la tabla para mejorar el rendimiento de almacenamiento y de consulta. La muestra del 1 % del conjunto de datos NYC Taxi se insertará en esta tabla.<br /><br />nyc_taxi_models: se usa para conservar el modelo de análisis avanzado entrenado.|
-    |fnCalculateDistance.sql|Crea una función con valores escalares que calcula la distancia directa entre las ubicaciones de origen y destino.|
-    |fnEngineerFeatures.sql|Crea una función con valores de tabla que crea nuevas características de datos para el entrenamiento del modelo.|
-    |PersistModel.sql|Crea un procedimiento almacenado que se puede llamar para guardar un modelo. El procedimiento almacenado toma un modelo que se ha serializado en un tipo de datos varbinary y lo escribe en la tabla especificada.|
-    |PredictTipBatchMode.sql|Crea un procedimiento almacenado que llama al modelo entrenado para crear predicciones usando el modelo. El procedimiento almacenado acepta una consulta como su parámetro de entrada y devuelve una columna de valores numéricos que contiene los resultados para las filas de entrada.|
-    |PredictTipSingleMode.sql|Crea un procedimiento almacenado que llama al modelo entrenado para crear predicciones usando el modelo. Este procedimiento almacenado acepta una observación nueva como entrada, con valores de características individuales pasados como parámetros en línea, y devuelve un valor que predice el resultado de la nueva observación.|
-  
-    En la última parte de este tutorial, creará algunos procedimientos almacenados adicionales:
-  
-    |**Nombre de archivo del script de SQL**|**Función**|
-    |------|------|
-    |PlotHistogram.sql|Crea un procedimiento almacenado para la exploración de datos. Este procedimiento almacenado llama a una función de R para trazar el histograma de una variable y, después, devuelve el gráfico como un objeto binario.|
-    |PlotInOutputFiles.sql|Crea un procedimiento almacenado para la exploración de datos. Este procedimiento almacenado crea un gráfico mediante una función de R y, después, guarda el resultado como un archivo PDF local.|
-    |TrainTipPredictionModel.sql|Crea un procedimiento almacenado que entrena un modelo de regresión logística mediante una llamada a un paquete de R. El modelo predice el valor de la columna tipped y se entrena usando un 70 % de los datos seleccionados aleatoriamente. El resultado del procedimiento almacenado es el modelo entrenado, que se guarda en la tabla nyc_taxi_models.|
-  
-3.  Inicie sesión en la instancia de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] mediante [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] y el inicio de sesión especificado, para comprobar que puede ver la base de datos, las tablas, funciones y procedimientos almacenados que se crearon.
-  
-    ![rsql_devtut_BrowseTables](media/rsql-devtut-browsetables.png "rsql_devtut_BrowseTables")
-  
-    > [!NOTE]
-    > Si los objetos de base de datos ya existen, no se pueden crear de nuevo.
-    >   
-    > Si la tabla ya existe, los datos se anexarán, no se sobrescriben. Por tanto, asegúrese de quitar todos los objetos existentes antes de ejecutar el script.
+   ![rsql_devtut_BrowseTables](media/rsql-devtut-browsetables.png "rsql_devtut_BrowseTables")
+
+> [!NOTE]
+> Si los objetos de base de datos ya existen, no se pueden crear de nuevo.
+>   
+> Si la tabla ya existe, los datos se anexarán, no se sobrescriben. Por tanto, asegúrese de quitar todos los objetos existentes antes de ejecutar el script.
+
+## <a name="objects-used-in-this-tutorial"></a>Objetos que se utilizan en este tutorial
+
+En la tabla siguiente se resume los objetos creados en esta lección. Aunque solo es posible ejecutar un script de PowerShell (`RunSQL_SQL_Walkthrough.ps1`), ese script llama a otras secuencias de comandos SQL a su vez para crear los objetos en la base de datos. Las secuencias de comandos que se utiliza para crear cada objeto se mencionan en la descripción.
+
+|**Nombre de objeto**|**Tipo de objeto**|**Descripción**|
+|----------|------------------------|---------------|
+|**TaxiNYC_Sample** | Base de datos |Creado por el script de creación db tb carga data.sql. Crea una base de datos y dos tablas:<br /><br />tabla dbo.nyctaxi_sample: contiene el conjunto de datos principal de Nueva York Taxi. Un índice de almacén de columnas agrupado se agrega a la tabla para mejorar el rendimiento de almacenamiento y de consulta. En esta tabla se inserta en el ejemplo de 1% del conjunto de datos de Nueva York Taxi.<br /><br />tabla dbo.nyc_taxi_models: utiliza para conservar el modelo entrenado análisis avanzados.|
+|**fnCalculateDistance** |función escalar | Crea el script fnCalculateDistance.sql. Calcula la distancia entre las ubicaciones de recogida y caída directa. Esta función se utiliza en [crear características de datos](../tutorials/sqldev-create-data-features-using-t-sql.md), [entrenar y guardar un modelo](sqldev-train-and-save-a-model-using-t-sql.md) y [poner el modelo R](../tutorials/sqldev-operationalize-the-model.md).|
+|**fnEngineerFeatures** |función con valores de tabla | Crea el script fnEngineerFeatures.sql. Crea nuevas características de datos de entrenamiento del modelo. Esta función se utiliza en [crear características de datos](../tutorials/sqldev-create-data-features-using-t-sql.md) y [poner el modelo R](../tutorials/sqldev-operationalize-the-model.md).|
+|**PlotHistogram** |procedimiento almacenado | Crea el script PlotHistogram.sql. Llama a una función de R para trazar el histograma de una variable y, a continuación, devuelve el gráfico como un objeto binario. Este procedimiento almacenado se utiliza en [explorar y visualizar datos](../tutorials/sqldev-explore-and-visualize-the-data.md).|
+|**PlotInOutputFiles** |procedimiento almacenado| Crea el script PlotInOutputFiles.sql. Crea un gráfico utilizando una función de R y, a continuación, guarde el resultado como un archivo PDF local. Este procedimiento almacenado se utiliza en [explorar y visualizar datos](../tutorials/sqldev-explore-and-visualize-the-data.md).|
+|**PersistModel** |procedimiento almacenado | Crea el script PersistModel.sql. Toma un modelo que se ha serializado en un tipo de datos varbinary y lo escribe en la tabla especificada. |
+|**PredictTip**  |procedimiento almacenado |Crea el script PredictTip.sql. Llama al modelo entrenado para crear predicciones utilizando el modelo. El procedimiento almacenado acepta una consulta como su parámetro de entrada y devuelve una columna de valores numéricos que contiene los resultados para las filas de entrada. Este procedimiento almacenado se utiliza en [poner el modelo R](../tutorials/sqldev-operationalize-the-model.md).|
+|**PredictTipSingleMode**  |procedimiento almacenado| Crea el script PredictTipSingleMode.sql. Llama al modelo entrenado para crear predicciones utilizando el modelo. Este procedimiento almacenado acepta una observación nueva como entrada, con valores de características individuales pasados como parámetros en línea, y devuelve un valor que predice el resultado de la nueva observación. Este procedimiento almacenado se utiliza en [poner el modelo R](../tutorials/sqldev-operationalize-the-model.md).|
+|**TrainTipPredictionModel**  |procedimiento almacenado|Crea el script TrainTipPredictionModel.sql. Entrena un modelo de regresión logística mediante una llamada a un paquete de R. El modelo predice el valor de la columna tipped y se entrena usando un 70 % de los datos seleccionados aleatoriamente. El resultado del procedimiento almacenado es el modelo entrenado, que se guarda en la tabla nyc_taxi_models. Este procedimiento almacenado se utiliza en [entrenar y guardar un modelo](sqldev-train-and-save-a-model-using-t-sql.md).|
 
 ## <a name="next-lesson"></a>Lección siguiente
 

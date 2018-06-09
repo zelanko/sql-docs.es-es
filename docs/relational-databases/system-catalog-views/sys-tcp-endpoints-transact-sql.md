@@ -25,10 +25,10 @@ author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.openlocfilehash: 1c04be5f76337422601486d08ff41316c7c98192
-ms.sourcegitcommit: 2d93cd115f52bf3eff3069f28ea866232b4f9f9e
+ms.sourcegitcommit: 808d23a654ef03ea16db1aa23edab496b73e5072
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/01/2018
+ms.lasthandoff: 06/04/2018
 ms.locfileid: "33221296"
 ---
 # <a name="systcpendpoints-transact-sql"></a>sys.tcp_endpoints (Transact-SQL)
@@ -40,11 +40,11 @@ ms.locfileid: "33221296"
 |Nombre de columna|Tipo de datos|Descripción|  
 |-----------------|---------------|-----------------|  
 |**< columnas heredadas >**||Hereda columnas de [sys.endpoints](../../relational-databases/system-catalog-views/sys-endpoints-transact-sql.md).|  
-|**port**|INT|Número de puerto en el que escucha el extremo. No admite valores NULL.|  
+|**port**|int|Número de puerto en el que escucha el extremo. No admite valores NULL.|  
 |**is_dynamic_port**|bit|1 = El número de puerto se asignó dinámicamente.<br /><br /> No admite valores NULL.|  
 |**ip_address**|**nvarchar(45)**|Dirección IP de escucha según se especifica en la cláusula LISTENER_IP. Acepta valores NULL.|  
   
-## <a name="remarks"></a>Notas  
+## <a name="remarks"></a>Comentarios  
  Ejecute la siguiente consulta para reunir información sobre los extremos y las conexiones. Los extremos sin conexiones actuales o sin conexiones TCP aparecerán con valores NULL. Agregar el **donde** cláusula `WHERE des.session_id = @@SPID` para devolver información acerca de la conexión actual.  
   
 ```  

@@ -1,6 +1,6 @@
 ---
 title: Instrucción de obtención de detalles (MDX) | Documentos de Microsoft
-ms.date: 05/30/2018
+ms.date: 06/04/2018
 ms.prod: sql
 ms.technology: analysis-services
 ms.custom: mdx
@@ -9,15 +9,15 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: 4f5b56c03ec6e575b647ed7eecaf26d35bfae047
-ms.sourcegitcommit: 808d23a654ef03ea16db1aa23edab496b73e5072
+ms.openlocfilehash: 82dd8a9527b85350cae31396ad4d238ef1c8c850
+ms.sourcegitcommit: 97bef3f248abce57422f15530c1685f91392b494
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/02/2018
-ms.locfileid: "34580067"
+ms.lasthandoff: 06/04/2018
+ms.locfileid: "34742284"
 ---
 # <a name="mdx-data-manipulation---drillthrough"></a>Manipulación de datos MDX - obtención de detalles
-[!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
+
 
   Recupera filas de la tabla subyacente que se han utilizado para crear una celda especificada de un cubo.  
   
@@ -43,7 +43,7 @@ DRILLTHROUGH[MAXROWSUnsigned_Integer]
  Lista separada por comas de atributos de dimensión y medidas.  
   
 ## <a name="remarks"></a>Notas  
- La obtención de detalles es una operación en la que un usuario final selecciona una única celda de un cubo y recupera un conjunto de resultados de los datos de origen de esa celda para obtener información más detallada. De forma predeterminada, un conjunto de resultados de obtención de detalles proviene de las filas de la tabla evaluadas para calcular el valor de la celda del cubo seleccionada. Para que los usuarios finales puedan obtener detalles, las aplicaciones cliente deben admitir esta función. En [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)], los resultados se recuperan directamente desde el almacenamiento MOLAP, a menos que se consultan las particiones ROLAP o dimensiones.  
+ La obtención de detalles es una operación en la que un usuario final selecciona una única celda de un cubo y recupera un conjunto de resultados de los datos de origen de esa celda para obtener información más detallada. De forma predeterminada, un conjunto de resultados de obtención de detalles proviene de las filas de la tabla evaluadas para calcular el valor de la celda del cubo seleccionada. Para que los usuarios finales puedan obtener detalles, las aplicaciones cliente deben admitir esta función. En [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)], los resultados se recuperan directamente desde el almacenamiento MOLAP, a menos que se consultan las particiones ROLAP o dimensiones.  
   
 > [!IMPORTANT]  
 >  La seguridad de obtención de detalles se basa en las opciones de seguridad generales definidas en el cubo. Si un usuario no puede obtener algunos detalles mediante MDX, la obtención de detalles también limitará al usuario exactamente de la misma manera.  

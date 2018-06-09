@@ -23,10 +23,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 0598d778953e96e8247c8011c5e41cbc03380bba
-ms.sourcegitcommit: 2d93cd115f52bf3eff3069f28ea866232b4f9f9e
+ms.sourcegitcommit: 808d23a654ef03ea16db1aa23edab496b73e5072
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/01/2018
+ms.lasthandoff: 06/04/2018
 ms.locfileid: "33240705"
 ---
 # <a name="spaddlogshippingprimarysecondary-transact-sql"></a>sp_add_log_shipping_primary_secondary (Transact-SQL)
@@ -60,9 +60,9 @@ sp_add_log_shipping_primary_secondary
  0 (correcto) o 1 (error)  
   
 ## <a name="result-sets"></a>Conjuntos de resultados  
- None  
+ Ninguno  
   
-## <a name="remarks"></a>Notas  
+## <a name="remarks"></a>Comentarios  
  **sp_add_log_shipping_primary_secondary** se debe ejecutar desde la **maestro** base de datos en el servidor principal.  
   
 ## <a name="permissions"></a>Permisos  

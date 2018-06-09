@@ -1,6 +1,6 @@
 ---
 title: PrevMember (MDX) | Documentos de Microsoft
-ms.date: 05/30/2018
+ms.date: 06/04/2018
 ms.prod: sql
 ms.technology: analysis-services
 ms.custom: mdx
@@ -9,15 +9,15 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: 1c71a64e9fc336c308e32968dc702c926a9f7731
-ms.sourcegitcommit: 808d23a654ef03ea16db1aa23edab496b73e5072
+ms.openlocfilehash: 19aecc4dc642e9aee636c860f63b9b39e0471fa4
+ms.sourcegitcommit: 97bef3f248abce57422f15530c1685f91392b494
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/02/2018
-ms.locfileid: "34582257"
+ms.lasthandoff: 06/04/2018
+ms.locfileid: "34742584"
 ---
 # <a name="prevmember-mdx"></a>PrevMember (MDX)
-[!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
+
 
   Devuelve el miembro anterior en el nivel que contiene un miembro especificado.  
   

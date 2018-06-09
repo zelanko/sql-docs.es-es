@@ -13,7 +13,7 @@ ms.openlocfilehash: 883fa5df355874516ffd6f0cac01ff50d727d737
 ms.sourcegitcommit: 808d23a654ef03ea16db1aa23edab496b73e5072
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/02/2018
+ms.lasthandoff: 06/04/2018
 ms.locfileid: "34573767"
 ---
 # <a name="datasourceid-element-xmla"></a>Elemento DataSourceID (XMLA)
@@ -36,7 +36,7 @@ ms.locfileid: "34573767"
 |Característica|Descripción|  
 |--------------------|-----------------|  
 |Tipo y longitud de los datos|String|  
-|Valor predeterminado|None|  
+|Valor predeterminado|Ninguno|  
 |Cardinalidad|1-1: Elemento necesario que se produce una vez y solo una vez.|  
   
 ## <a name="element-relationships"></a>Relaciones del elemento  
@@ -44,9 +44,9 @@ ms.locfileid: "34573767"
 |Relación|Elemento|  
 |------------------|-------------|  
 |Elementos primarios|[Ubicación](../../../analysis-services/xmla/xml-elements-properties/location-element-xmla.md)|  
-|Elementos secundarios|None|  
+|Elementos secundarios|Ninguno|  
   
-## <a name="remarks"></a>Notas  
+## <a name="remarks"></a>Comentarios  
  El **DataSourceID** elemento contiene el nombre del origen de datos en la instancia de origen que identifica la instancia remota en el que es copia de seguridad, restauración o sincronizar información de la partición remota.  
   
  Para obtener más información acerca de la copia de seguridad y restaurar las particiones remotas, consulte [realizar copias de seguridad, restaurar y sincronizar bases de datos &#40;XMLA&#41;](../../../analysis-services/multidimensional-models-scripting-language-assl-xmla/backing-up-restoring-and-synchronizing-databases-xmla.md).  

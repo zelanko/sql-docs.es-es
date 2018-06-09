@@ -1,34 +1,23 @@
 ---
 title: AVG (MDX) | Documentos de Microsoft
-ms.custom: ''
-ms.date: 03/02/2016
-ms.prod: analysis-services
-ms.prod_service: analysis-services
-ms.component: ''
-ms.reviewer: ''
-ms.suite: pro-bi
-ms.technology: ''
-ms.tgt_pltfrm: ''
-ms.topic: language-reference
-f1_keywords:
-- AVG
-dev_langs:
-- kbMDX
-helpviewer_keywords:
-- Avg function [MDX]
-ms.assetid: efe61272-c3eb-4a33-b231-e00c30be16aa
-caps.latest.revision: 42
-author: Minewiskan
+ms.date: 06/04/2018
+ms.prod: sql
+ms.technology: analysis-services
+ms.custom: mdx
+ms.topic: reference
 ms.author: owend
-manager: erikre
-ms.openlocfilehash: dd508fcef5ecd378dea8ec4afe86dfd35e45d1a5
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.reviewer: owend
+author: minewiskan
+manager: kfile
+ms.openlocfilehash: 7d6b2e91504c2c9ba796d2c0a55ba19fb3f6493e
+ms.sourcegitcommit: 97bef3f248abce57422f15530c1685f91392b494
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/04/2018
+ms.locfileid: "34740544"
 ---
 # <a name="avg-mdx"></a>Avg (MDX)
-[!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
+
 
   Evalúa un conjunto y devuelve el promedio de los valores no vacíos de las celdas del conjunto promediados con las medidas del conjunto o una medida especificada.  
   
@@ -46,7 +35,7 @@ Avg( Set_Expression [ , Numeric_Expression ] )
  *Numeric_expression*  
  Expresión numérica válida que suele ser una expresión MDX de las coordenadas de celdas que devuelven un número.  
   
-## <a name="remarks"></a>Comentarios  
+## <a name="remarks"></a>Notas  
  Si se especifica un conjunto de tuplas vacías o un conjunto vacío, la **Avg** función devuelve un valor vacío.  
   
  El **Avg** función calcula el promedio de los valores no vacíos de las celdas del conjunto especificado al calcular la suma de valores en las celdas del conjunto especificado en primer lugar y, a continuación, dividir la suma calculada por el número de celdas no vacías en el conjunto especificado.  
@@ -157,6 +146,6 @@ FROM
 ```  
   
 ## <a name="see-also"></a>Vea también  
- [Referencia de funciones MDX & #40; MDX & #41;](../mdx/mdx-function-reference-mdx.md)  
+ [Referencia de funciones MDX &#40;MDX&#41;](../mdx/mdx-function-reference-mdx.md)  
   
   

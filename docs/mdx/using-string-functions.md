@@ -1,6 +1,6 @@
 ---
 title: Usar funciones de cadena | Documentos de Microsoft
-ms.date: 05/30/2018
+ms.date: 06/04/2018
 ms.prod: sql
 ms.technology: analysis-services
 ms.custom: mdx
@@ -9,15 +9,15 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: 464bbe4ad20085571103a64f48716773c8352dea
-ms.sourcegitcommit: 808d23a654ef03ea16db1aa23edab496b73e5072
+ms.openlocfilehash: 6e151d06d086569b16fcdf1dc3570f9b220dfcd6
+ms.sourcegitcommit: 97bef3f248abce57422f15530c1685f91392b494
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/02/2018
-ms.locfileid: "34581757"
+ms.lasthandoff: 06/04/2018
+ms.locfileid: "34743834"
 ---
 # <a name="using-string-functions"></a>Usar funciones de cadena
-[!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
+
 
   Las funciones de cadena se pueden usar en casi todos los objetos de las expresiones multidimensionales (MDX). En los procedimientos almacenados, las funciones de cadena se usan principalmente para convertir el objeto en una representación de cadena. También sirven para evaluar una expresión de cadena con relación a un objeto para devolver un valor.  
   

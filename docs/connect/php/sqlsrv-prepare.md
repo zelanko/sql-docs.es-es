@@ -26,7 +26,7 @@ ms.openlocfilehash: d05dadf16e96589c2f16b7d31580cab61650b9e6
 ms.sourcegitcommit: 808d23a654ef03ea16db1aa23edab496b73e5072
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/02/2018
+ms.lasthandoff: 06/04/2018
 ms.locfileid: "34563923"
 ---
 # <a name="sqlsrvprepare"></a>sqlsrv_prepare
@@ -81,7 +81,7 @@ sqlsrv_prepare(resource $conn, string $tsql [, array $params [, array $options]]
 ## <a name="return-value"></a>Valor devuelto  
 Un recurso de instrucción. Si no se puede crear el recurso de instrucción, se devuelve el valor **False** .  
   
-## <a name="remarks"></a>Notas  
+## <a name="remarks"></a>Comentarios  
 Al preparar una instrucción que usa variables como parámetros, estas se enlazan a la instrucción. Esto significa que si actualiza los valores de las variables, la próxima vez que se ejecute la instrucción, lo hará con los valores de parámetro actualizados.  
   
 La combinación de **sqlsrv_prepare** y **sqlsrv_execute** separa la preparación y la ejecución de la instrucción en dos llamadas de función y se puede usar para ejecutar consultas con parámetros. Esta función resulta ideal para ejecutar una instrucción varias veces con distintos valores de parámetros para cada ejecución.  

@@ -26,7 +26,7 @@ ms.openlocfilehash: e0c1c14aaeff26111ebb66ce8aa77f9a25b599ba
 ms.sourcegitcommit: 808d23a654ef03ea16db1aa23edab496b73e5072
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/02/2018
+ms.lasthandoff: 06/04/2018
 ms.locfileid: "34563903"
 ---
 # <a name="sqlsrvquery"></a>sqlsrv_query
@@ -78,7 +78,7 @@ sqlsrv_query(resource $conn, string $tsql [, array $params [, array $options]])
 ## <a name="return-value"></a>Valor devuelto  
 Un recurso de instrucción. Si la instrucción no se puede crear o ejecutar, **false** se devuelve.  
   
-## <a name="remarks"></a>Notas  
+## <a name="remarks"></a>Comentarios  
 El **sqlsrv_query** función es ideal para consultas únicas y debe ser la opción predeterminada para ejecutar consultas, a menos que se apliquen circunstancias especiales. Esta función proporciona un método simplificado para ejecutar una consulta con una cantidad mínima de código. La función **sqlsrv_query** realiza los procesos de preparación y ejecución de la instrucción, y se puede usar para ejecutar consultas con parámetros.  
   
 Para obtener más información, consulte [How to: Retrieve Output Parameters Using the SQLSRV Driver](../../connect/php/how-to-retrieve-output-parameters-using-the-sqlsrv-driver.md).  

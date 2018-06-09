@@ -1,34 +1,23 @@
 ---
 title: SUM (MDX) | Documentos de Microsoft
-ms.custom: ''
-ms.date: 03/02/2016
-ms.prod: analysis-services
-ms.prod_service: analysis-services
-ms.component: ''
-ms.reviewer: ''
-ms.suite: pro-bi
-ms.technology: ''
-ms.tgt_pltfrm: ''
-ms.topic: language-reference
-f1_keywords:
-- SUM
-dev_langs:
-- kbMDX
-helpviewer_keywords:
-- Sum function [MDX]
-ms.assetid: 6c3db1e3-2c02-49f2-a0bf-cab0fb78c622
-caps.latest.revision: 31
-author: Minewiskan
+ms.date: 06/04/2018
+ms.prod: sql
+ms.technology: analysis-services
+ms.custom: mdx
+ms.topic: reference
 ms.author: owend
-manager: erikre
-ms.openlocfilehash: 21b9c43749abc81180edc009f908a8b4b4f2febd
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.reviewer: owend
+author: minewiskan
+manager: kfile
+ms.openlocfilehash: bdf003a65e6923acf2bbf5c17e93d412e2d194fa
+ms.sourcegitcommit: 97bef3f248abce57422f15530c1685f91392b494
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/04/2018
+ms.locfileid: "34743274"
 ---
 # <a name="sum-mdx"></a>Sum (MDX)
-[!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
+
 
   Devuelve la suma de una expresión numérica evaluada sobre un conjunto especificado.  
   
@@ -46,7 +35,7 @@ Sum( Set_Expression [ , Numeric_Expression ] )
  *Numeric_expression*  
  Expresión numérica válida que suele ser una expresión MDX de las coordenadas de celdas que devuelven un número.  
   
-## <a name="remarks"></a>Comentarios  
+## <a name="remarks"></a>Notas  
  Si se especifica una expresión numérica, ésta se evalúa en el conjunto y, a continuación, se suma. Si no se especifica una expresión numérica, el conjunto especificado se evalúa en el contexto actual de los miembros del conjunto y, a continuación, se suma. Si la función SUM se aplica a una expresión no numérica, los resultados quedarán sin definir.  
   
 > [!NOTE]  
@@ -105,6 +94,6 @@ FROM [Adventure Works]
  `FROM [Adventure Works]`  
   
 ## <a name="see-also"></a>Vea también  
- [Referencia de funciones MDX & #40; MDX & #41;](../mdx/mdx-function-reference-mdx.md)  
+ [Referencia de funciones MDX &#40;MDX&#41;](../mdx/mdx-function-reference-mdx.md)  
   
   

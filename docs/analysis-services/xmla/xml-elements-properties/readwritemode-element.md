@@ -13,7 +13,7 @@ ms.openlocfilehash: 0d528567e22c3ba19b49eefff10d886703a0d29a
 ms.sourcegitcommit: 808d23a654ef03ea16db1aa23edab496b73e5072
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/02/2018
+ms.lasthandoff: 06/04/2018
 ms.locfileid: "34576497"
 ---
 # <a name="readwritemode-element"></a>Elemento ReadWriteMode
@@ -44,9 +44,9 @@ ms.locfileid: "34576497"
 |Relación|Elemento|  
 |------------------|-------------|  
 |Elementos primarios|[Base de datos](../../../analysis-services/xmla/xml-elements-properties/database-element-xmla.md)|  
-|Elementos secundarios|None|  
+|Elementos secundarios|Ninguno|  
   
-## <a name="remarks"></a>Notas  
+## <a name="remarks"></a>Comentarios  
  Las bases de datos se crean únicamente en el modo **ReadWrite** . Las bases de datos no se pueden crear en el modo **ReadOnly** .  
   
  El valor del elemento **ReadWriteMode** se limita a las cadenas listadas en la tabla siguiente.  

@@ -13,7 +13,7 @@ ms.openlocfilehash: 50d2694db85b1391602c6f8d9d9307da4e79b65b
 ms.sourcegitcommit: 808d23a654ef03ea16db1aa23edab496b73e5072
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/02/2018
+ms.lasthandoff: 06/04/2018
 ms.locfileid: "34574427"
 ---
 # <a name="axis-element-xmla"></a>Elemento Axis (XMLA)
@@ -40,9 +40,9 @@ ms.locfileid: "34574427"
   
 |Característica|Descripción|  
 |--------------------|-----------------|  
-|Tipo y longitud de los datos|None|  
-|Valor predeterminado|None|  
-|Cardinalidad|0-n: elemento opcional que puede aparecer más de una vez.|  
+|Tipo y longitud de los datos|Ninguno|  
+|Valor predeterminado|Ninguno|  
+|Cardinalidad|0-n: Elemento opcional que puede aparecer más de una vez.|  
   
 ## <a name="element-relationships"></a>Relaciones del elemento  
   
@@ -51,7 +51,7 @@ ms.locfileid: "34574427"
 |Elementos primarios|[Ejes](../../../analysis-services/xmla/xml-elements-properties/axes-element-xmla.md)|  
 |Elementos secundarios|[CrossProduct](../../../analysis-services/xmla/xml-elements-properties/crossproduct-element-xmla.md) o [tuplas](../../../analysis-services/xmla/xml-elements-properties/tuples-element-xmla.md)|  
   
-## <a name="remarks"></a>Notas  
+## <a name="remarks"></a>Comentarios  
  El contenido de la **eje** elemento varía dependiendo del valor de la **AxisFormat** propiedad XMLA utilizada por el **Execute** método.  
   
 ## <a name="tupleformat"></a>TupleFormat  

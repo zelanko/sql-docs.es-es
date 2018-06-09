@@ -1,8 +1,6 @@
 ---
 title: Configuración global (ventana de salida) (DB2ToSQL) | Documentos de Microsoft
 ms.prod: sql
-ms.prod_service: sql-tools
-ms.component: ssma-db2
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
@@ -18,11 +16,12 @@ caps.latest.revision: 3
 author: Shamikg
 ms.author: Shamikg
 manager: craigg
-ms.openlocfilehash: c646be9bcb766e8a17f7838a2d932d96b93d8623
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 00d4eca40654fe5cd6ade31a8088ee8abbc64653
+ms.sourcegitcommit: 8aa151e3280eb6372bf95fab63ecbab9dd3f2e5e
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/05/2018
+ms.locfileid: "34774761"
 ---
 # <a name="global-settings-output-window-db2tosql"></a>Configuración global (ventana de salida) (DB2ToSQL)
 Use la **configuración Global** cuadro de diálogo para especificar la configuración de SSMA.  

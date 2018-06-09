@@ -13,7 +13,7 @@ ms.openlocfilehash: 4b2e3a188a9681508473394a6323457cc4fa1726
 ms.sourcegitcommit: 808d23a654ef03ea16db1aa23edab496b73e5072
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/02/2018
+ms.lasthandoff: 06/04/2018
 ms.locfileid: "34575437"
 ---
 # <a name="language-element-xmla"></a>Elemento Language (XMLA)
@@ -36,7 +36,7 @@ ms.locfileid: "34575437"
 |Característica|Descripción|  
 |--------------------|-----------------|  
 |Tipo y longitud de los datos|Integer|  
-|Valor predeterminado|None|  
+|Valor predeterminado|Ninguno|  
 |Cardinalidad|1-1: Elemento necesario que se produce una vez y solo una vez.|  
   
 ## <a name="element-relationships"></a>Relaciones del elemento  
@@ -44,9 +44,9 @@ ms.locfileid: "34575437"
 |Relación|Elemento|  
 |------------------|-------------|  
 |Elementos primarios|[Traducción](../../../analysis-services/xmla/xml-elements-properties/translation-element-xmla.md)|  
-|Elementos secundarios|None|  
+|Elementos secundarios|Ninguno|  
   
-## <a name="remarks"></a>Notas  
+## <a name="remarks"></a>Comentarios  
  El **lenguaje** elemento especifica el LCID utilizado por el elemento primario **traducción** elemento que se va a asignar la **nombre** elemento del elemento primario **traducción** elemento a un miembro de atributo para el idioma especificado, durante un **insertar** o **actualización** comando.  
   
 ## <a name="see-also"></a>Vea también

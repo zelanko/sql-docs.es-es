@@ -1,34 +1,23 @@
 ---
 title: Y (MDX) | Documentos de Microsoft
-ms.custom: ''
-ms.date: 03/02/2016
-ms.prod: analysis-services
-ms.prod_service: analysis-services
-ms.component: ''
-ms.reviewer: ''
-ms.suite: pro-bi
-ms.technology: ''
-ms.tgt_pltfrm: ''
-ms.topic: language-reference
-f1_keywords:
-- AND
-dev_langs:
-- kbMDX
-helpviewer_keywords:
-- AND, MDX
-ms.assetid: 398fd483-d010-4524-b115-0becad66f25c
-caps.latest.revision: 33
-author: Minewiskan
+ms.date: 06/04/2018
+ms.prod: sql
+ms.technology: analysis-services
+ms.custom: mdx
+ms.topic: reference
 ms.author: owend
-manager: erikre
-ms.openlocfilehash: 870aac2a9eb1c799cf6d83ddbe119d91c1f11f8e
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.reviewer: owend
+author: minewiskan
+manager: kfile
+ms.openlocfilehash: 30cb8be449c58e10da5c2e91ebec936b3547581d
+ms.sourcegitcommit: 97bef3f248abce57422f15530c1685f91392b494
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/04/2018
+ms.locfileid: "34739684"
 ---
 # <a name="and-mdx"></a>AND (MDX)
-[!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
+
 
   Realiza una conjunción lógica de dos expresiones numéricas.  
   
@@ -49,7 +38,7 @@ Expression1 AND Expression2
 ## <a name="return-value"></a>Valor devuelto  
  Un valor booleano que devuelve true si ambos parámetros se evalúan como **true**; en caso contrario, **false**.  
   
-## <a name="remarks"></a>Comentarios  
+## <a name="remarks"></a>Notas  
  El **AND** operador trata a ambas expresiones como valores booleanos (cero, 0, como **false**; en caso contrario, **true**) antes de que el operador realice la conjunción lógica. La tabla siguiente se muestra cómo el **AND** operador realiza la conjunción lógica.  
   
 |*Expression1*|*Expression2*|Valor devuelto|  

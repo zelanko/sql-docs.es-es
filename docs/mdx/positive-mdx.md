@@ -1,6 +1,6 @@
 ---
 title: + (Positivo) (MDX) | Documentos de Microsoft
-ms.date: 05/30/2018
+ms.date: 06/04/2018
 ms.prod: sql
 ms.technology: analysis-services
 ms.custom: mdx
@@ -9,15 +9,15 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: 44aacba7f0595f5506ab40698563edccc5e9577d
-ms.sourcegitcommit: 808d23a654ef03ea16db1aa23edab496b73e5072
+ms.openlocfilehash: 30162cbc63d64f9c5224fd2d030e1dbc50f5dae1
+ms.sourcegitcommit: 97bef3f248abce57422f15530c1685f91392b494
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/02/2018
-ms.locfileid: "34580727"
+ms.lasthandoff: 06/04/2018
+ms.locfileid: "34742514"
 ---
 # <a name="-positive-mdx"></a>+ (Positivo) (MDX)
-[!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
+
 
   Realiza una operación unaria que devuelve el valor positivo de una expresión numérica.  
   

@@ -1,6 +1,6 @@
 ---
 title: CovarianceN (MDX) | Documentos de Microsoft
-ms.date: 05/30/2018
+ms.date: 06/04/2018
 ms.prod: sql
 ms.technology: analysis-services
 ms.custom: mdx
@@ -9,15 +9,15 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: 061a444fbc08406ac7b4d1f300d9238141afcb89
-ms.sourcegitcommit: 808d23a654ef03ea16db1aa23edab496b73e5072
+ms.openlocfilehash: 054acaaca417ca7d3fa5303fb31b5ea027bfcd72
+ms.sourcegitcommit: 97bef3f248abce57422f15530c1685f91392b494
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/02/2018
-ms.locfileid: "34578767"
+ms.lasthandoff: 06/04/2018
+ms.locfileid: "34740184"
 ---
 # <a name="covariancen-mdx"></a>CovarianceN (MDX)
-[!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
+
 
   Devuelve la covarianza de ejemplo de los pares de valores X-Y evaluados sobre un conjunto mediante la fórmula de población no sesgada (al dividir por el número de pares X-Y).  
   

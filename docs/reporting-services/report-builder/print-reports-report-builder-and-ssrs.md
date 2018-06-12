@@ -1,7 +1,7 @@
 ---
-title: Imprimir informes (Generador de informes y SSRS) | Microsoft Docs
+title: Imprimir informes (SSRS) | Microsoft Docs
 ms.custom: ''
-ms.date: 03/01/2017
+ms.date: 05/24/2018
 ms.prod: reporting-services
 ms.prod_service: reporting-services-sharepoint, reporting-services-native
 ms.component: report-builder
@@ -15,14 +15,15 @@ caps.latest.revision: 8
 author: maggiesMSFT
 ms.author: maggies
 manager: kfile
-ms.openlocfilehash: f5e5e9cd47e550db2e4c68739832c6815d4ec660
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: e5973ae6180a138a56c6c130755c699a7b23c918
+ms.sourcegitcommit: 808d23a654ef03ea16db1aa23edab496b73e5072
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/04/2018
+ms.locfileid: "34709053"
 ---
-# <a name="print-reports-report-builder-and-ssrs"></a>Imprimir informes (Generador de informes y SSRS)
-  Después de guardar un informe en un servidor de informes, puede ver e imprimir el informe desde un explorador, el Administrador de informes o cualquier aplicación que use para ver un informe exportado. Antes de guardar un informe, puede imprimirlo desde su vista previa.  
+# <a name="print-reports---reporting-services-ssrs"></a>Imprimir informes: Reporting Services (SSRS)
+  Después de guardar un informe en un servidor de informes, puede verlo e imprimirlo desde el portal web o cualquier aplicación que use para ver un informe exportado. Antes de guardar un informe, puede imprimirlo desde su vista previa.  
   
  Topo el procesamiento de impresión se realiza a petición y en el equipo cliente. No existe ninguna funcionalidad de impresión del servidor que le permita enrutar un trabajo de impresión directamente desde un servidor de informes a una impresora conectada al servidor web. Los usuarios de cada uno de los informes se encargan de seleccionar las impresoras y las opciones de impresión con la ayuda del cuadro de diálogo estándar **Imprimir** .  
   
@@ -44,7 +45,7 @@ ms.lasthandoff: 05/03/2018
   
 ## <a name="in-this-section"></a>En esta sección  
  [Imprimir informes desde un explorador usando el control de impresión &#40;Generador de informes y SSRS&#41;](../../reporting-services/report-builder/print-reports-from-a-browser-with-the-print-control-report-builder-and-ssrs.md)  
- Describe cómo utilizar la impresión del lado cliente para imprimir informes desde el explorador web o el Administrador de informes.  
+ Describe cómo usar la impresión del lado cliente para imprimir informes desde el portal web.  
   
  [Imprimir informes desde otras aplicaciones &#40;Generador de informes y SSRS&#41;](../../reporting-services/report-builder/print-reports-from-other-applications-report-builder-and-ssrs.md)  
  Describe cómo imprimir informes exportados a otra aplicación.  

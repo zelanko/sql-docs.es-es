@@ -1,7 +1,7 @@
 ---
 title: Propiedades del servidor (página de opciones avanzadas) - Reporting Services | Microsoft Docs
 ms.custom: ''
-ms.date: 08/09/2017
+ms.date: 05/24/2018
 ms.prod: reporting-services
 ms.prod_service: reporting-services-sharepoint, reporting-services-native
 ms.component: tools
@@ -17,11 +17,12 @@ caps.latest.revision: 18
 author: markingmyname
 ms.author: maghan
 manager: kfile
-ms.openlocfilehash: dfbfe74439ecbf3db24f1a2a32bd5ab5d528fb72
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 336a201dde0a1afba761e135d561079ce5c95d75
+ms.sourcegitcommit: 808d23a654ef03ea16db1aa23edab496b73e5072
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/04/2018
+ms.locfileid: "34550406"
 ---
 # <a name="server-properties-advanced-page---reporting-services"></a>Propiedades del servidor (página de opciones avanzadas) - Reporting Services
 
@@ -46,16 +47,16 @@ Determina si el control ActiveX RSClientPrint está disponible para descargarlo 
 Indica si el registro de ejecución de informes está habilitado. El valor predeterminado es **true**. Para más información sobre el registro de ejecución del servidor de informes, vea [Registro de ejecución del servidor de informes y la vista ExecutionLog3](../../reporting-services/report-server/report-server-executionlog-and-the-executionlog3-view.md).  
 
 **ExecutionLogDaysKept**  
-Número de días que mantener la información de ejecución de informes en el registro de ejecución. Entre los valores válidos de esta propiedad están el rango **-1** - **2**,**147**,**483**y**647**. Si el valor es **1** , no se eliminan las entradas de la tabla del registro de ejecución. El valor predeterminado es **60**.  
+Número de días que mantener la información de ejecución de informes en el registro de ejecución. Entre los valores válidos de esta propiedad están el rango **-1** - **2**,**147**,**483**y**647**. Si el valor es **-1**, no se eliminan las entradas de la tabla del registro de ejecución. El valor predeterminado es **60**.  
 
 > [!NOTE] 
-> Si establece un valor de **0**, se *eliminarán* todas las entradas del registro de ejecución. Un valor de **-1** conservará las entradas del registro de ejecución y no se eliminarán.
+> Si establece un valor de **0**, se *eliminan* todas las entradas del registro de ejecución. Un valor de **-1** mantiene las entradas del registro de ejecución y no las elimina.
 
 **SessionTimeout**  
 El período, en segundos, que una sesión permanece activa. El valor predeterminado es **600**.  
 
 **SharePointIntegratedMode**  
-Ésta es una propiedad de solo lectura que indica el modo de servidor. Si este valor es False, el servidor de informes se ejecuta en modo nativo.  
+Esta propiedad de solo lectura indica el modo de servidor. Si este valor es False, el servidor de informes se ejecuta en modo nativo.  
 
 **SiteName**  
 El nombre del sitio del servidor de informes mostrado en el título de la página del portal web. El valor predeterminado es [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]. Esta propiedad puede ser una cadena vacía. La longitud máxima es de 8000 caracteres.  
@@ -75,9 +76,9 @@ Determina el período de tiempo dentro del cual se debe recuperar un archivo de 
 **SnapshotCompression**  
 Define la manera en la que se comprimen las instantáneas. El valor predeterminado es **SQL**. Los valores válidos son los siguientes:
 
-|Valores|Description|
+|Valores|Descripción|
 |---------|---------|
-|**SQL**|Las instantáneas se comprimen cuando se almacenan en la base de datos del servidor de informes. Éste es el comportamiento actual.|
+|**SQL**|Las instantáneas se comprimen cuando se almacenan en la base de datos del servidor de informes. Esta compresión es el comportamiento actual.|
 |**Ninguno**|Las instantáneas no se comprimen.|
 |**Todos**|Las instantáneas se comprimen para todas las opciones de almacenamiento, lo que incluye la base de datos del servidor de informes o el sistema de archivos.|
 
@@ -90,7 +91,7 @@ Número máximo de instantáneas almacenadas para un informe. Los valores válid
 **EnableIntegratedSecurity**  
 Determina si se admite la seguridad integrada de Windows para las conexiones de origen de datos del informe. El valor predeterminado es **True**. Los valores válidos son los siguientes:
 
-|Valores|Description|
+|Valores|Descripción|
 |---------|---------|
 |**True**|La seguridad integrada de Windows está habilitada.|
 |**False**|La seguridad integrada de Windows no está habilitada. No se ejecutarán los orígenes de datos de informes que se configuran para usar la seguridad integrada de Windows.|
@@ -98,7 +99,7 @@ Determina si se admite la seguridad integrada de Windows para las conexiones de 
 **EnableLoadReportDefinition**  
 Seleccione esta opción para especificar si los usuarios pueden realizar la ejecución de notificaciones ad hoc desde un informe del Generador de informes. Al establecer esta opción, se determina el valor de la propiedad **EnableLoadReportDefinition** en el servidor de informes.  
 
-Si desactiva esta opción, la propiedad se establecerá en False y el servidor de informes no generará informes click-through para los informes que usan un modelo de informe como origen de datos. Se bloquearán las llamadas al método LoadReportDefinition.  
+Si se desactiva esta opción, la propiedad se establece en False. El servidor de informes no generará informes click-through para los informes en los que se use un modelo de informe como origen de datos. Se bloquean todas las llamadas al método LoadReportDefinition.  
 
 Al desactivar esta opción, se mitiga una amenaza en la que un usuario malintencionado inicia un ataque por denegación de servicio sobrecargando el servidor de informes con solicitudes LoadReportDefinition.  
 
@@ -106,13 +107,13 @@ Al desactivar esta opción, se mitiga una amenaza en la que un usuario malintenc
 Incluye información de errores externa (por ejemplo, sobre los orígenes de datos de informe) con los mensajes de error que se devuelven para los usuarios que solicitan informes de los equipos remotos. Los valores válidos son **true** y **false**. El valor predeterminado es **false**. Para más información, vea [Habilitar errores remotos &#40;Reporting Services&#41;](../../reporting-services/report-server/enable-remote-errors-reporting-services.md).  
 
 **EnableReportDesignClientDownload**  
-Especifica si el paquete de instalación del Generador de informes se puede descargar del servidor de informes. Si borra este valor, la dirección URL al Generador de informes no funcionará. Para más información, vea [Configurar el acceso al Generador de informes](../../reporting-services/report-server/configure-report-builder-access.md).  
+Especifica si el paquete de instalación del Generador de informes se puede descargar del servidor de informes. Si se borra este valor, la dirección URL al Generador de informes no funcionará. 
 
 **EditSessionCacheLimit**  
 Especifica el número de entradas de datos en memoria caché que pueden estar activas en una sesión de edición de informes. El número predeterminado es 5.  
 
 **EditSessionTimeout**  
-Especifica el número de segundos tras los cuales se agotará el tiempo de espera para una sesión de edición de informes. El valor predeterminado es de 7200 segundos (2 horas).  
+Especifica el número de segundos tras los cuales se agotará el tiempo de espera para una sesión de edición de informes. El valor predeterminado es 7200 segundos (dos horas).  
 
 **EnableCustomVisuals** ***(solo Power BI Report Server)***  
 Si Power BI Report Server debe habilitar la visualización de objetos visuales personalizados de Power BI. Los valores son True o False.  El valor predeterminado es True.  
@@ -124,16 +125,16 @@ Si Power BI Report Server debe habilitar la exportación de datos desde objetos 
 Tiempo de espera de actualización de datos en minutos para la actualización programada en informes de Power BI con modelos de AS incrustados. El valor predeterminado es 120 minutos.
 
 **EnableTestConnectionDetailedErrors**  
-Indica si se han enviado al equipo cliente los mensajes de error detallados cuando los usuarios prueban las conexiones a orígenes de datos mediante el servidor de informes. El valor predeterminado es **true**. Si la opción se establece en **false**, solo se enviarán mensajes de error genéricos.
+Indica si se envían mensajes de error detallados al equipo cliente cuando los usuarios prueban las conexiones a orígenes de datos mediante el servidor de informes. El valor predeterminado es **true**. Si la opción se establece en **false**, solo se enviarán mensajes de error genéricos.
 
 **AccessControlAllowCredentials**  
 Indica si la respuesta a la solicitud del cliente puede exponerse cuando la marca 'credentials' está establecida en true. El valor predeterminado es **false**.
 
-**AccessControlAllowHeaders** Lista separada por comas de encabezados que el servidor permite cuando un cliente realiza una solicitud. Esta propiedad puede ser una cadena vacía; si se especifica *, se permiten todos los encabezados.
+**AccessControlAllowHeaders** Lista separada por comas de encabezados que el servidor permitirá cuando un cliente realice una solicitud. Esta propiedad puede ser una cadena vacía; si se especifica *, se permiten todos los encabezados.
 
-**AccessControlAllowMethods** Lista separada por comas de métodos HTTP que el servidor permite cuando un cliente realiza una solicitud. Los valores predeterminados son (GET, PUT, POST, PATCH, DELETE); si se especifica *, se permiten todos los métodos.
+**AccessControlAllowMethods** Lista separada por comas de métodos HTTP que el servidor permitirá cuando un cliente realice una solicitud. Los valores predeterminados son (GET, PUT, POST, PATCH, DELETE); si se especifica *, se permiten todos los métodos.
 
-**AccessControlAllowOrigin** Lista separada por comas de orígenes que el servidor permite cuando un cliente realiza una solicitud. El valor predeterminado es en blanco, lo que evita todas las solicitudes; si se especifica *, se permiten todos los orígenes siempre que no haya credenciales establecidas; si hay credenciales especificadas, se debe especificar una lista explícita de orígenes.
+**AccessControlAllowOrigin** Lista separada por comas de los orígenes que el servidor permitirá cuando un cliente realice una solicitud. El valor predeterminado es en blanco, lo que evita todas las solicitudes; si se especifica *, se permiten todos los orígenes siempre que no haya credenciales establecidas; si hay credenciales especificadas, se debe especificar una lista explícita de orígenes.
 
 **AccessControlExposeHeaders** Lista separada por comas de encabezados que el servidor va a exponer a los clientes. Está en blanco de forma predeterminada.
 

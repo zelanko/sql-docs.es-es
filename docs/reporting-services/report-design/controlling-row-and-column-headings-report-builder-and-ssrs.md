@@ -1,7 +1,7 @@
 ---
 title: Controlar los encabezados de fila y de columna (Generador de informes y SSRS) | Microsoft Docs
 ms.custom: ''
-ms.date: 03/01/2017
+ms.date: 05/24/2018
 ms.prod: reporting-services
 ms.prod_service: reporting-services-sharepoint, reporting-services-native
 ms.component: report-design
@@ -15,14 +15,15 @@ caps.latest.revision: 8
 author: maggiesMSFT
 ms.author: maggies
 manager: kfile
-ms.openlocfilehash: dd1680801406071d501a299ed687453deb115935
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 696cb735a8ec9c596cc67f6b4c130f77e832e694
+ms.sourcegitcommit: 8aa151e3280eb6372bf95fab63ecbab9dd3f2e5e
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/05/2018
+ms.locfileid: "34550446"
 ---
 # <a name="controlling-row-and-column-headings-report-builder-and-ssrs"></a>Controlar los encabezados de fila y de columna (Generador de informes y SSRS)
-  Una región de datos de tabla, de matriz o de lista puede abarcar varias páginas en horizontal o vertical. Puede especificar si los encabezados de fila o de columna se repiten en cada página. En un representador interactivo como el Administrador de informes o la vista previa del informe también puede especificar si inmovilizar o no los encabezados de filas o de columnas para mantenerlos a la vista al desplazarse por un informe. En una tabla o matriz, la primera fila suele contener los encabezados de columna que etiquetan los datos de cada columna; la primera columna suele contener los encabezados de fila que etiquetan los datos de cada fila. En los grupos anidados, es posible que desee repetir el conjunto inicial de encabezados de fila y columna que contienen etiquetas de grupo. De forma predeterminada, una región de datos de lista no incluye encabezados.  
+  Una región de datos de tabla, de matriz o de lista puede abarcar varias páginas en horizontal o vertical. Puede especificar si los encabezados de fila o de columna se repiten en cada página. En un representador interactivo como el portal web o la vista previa del informe, también se puede especificar si se inmovilizan o no los encabezados de fila o columna para mantenerlos a la vista al desplazarse por un informe. En una tabla o matriz, la primera fila suele contener los encabezados de columna que etiquetan los datos de cada columna; la primera columna suele contener los encabezados de fila que etiquetan los datos de cada fila. En los grupos anidados, es posible que desee repetir el conjunto inicial de encabezados de fila y columna que contienen etiquetas de grupo. De forma predeterminada, una región de datos de lista no incluye encabezados.  
   
  El modo de controlar si los encabezados se repiten o se inmovilizan depende de:  
   
@@ -156,7 +157,7 @@ ms.lasthandoff: 05/03/2018
   
 -   Repetir los encabezados de columna cuando una región de datos Tablix se expande en vertical hacia abajo en varias páginas.  
   
- Además, los representadores que usan saltos de página no forzados (Administrador de informes, vista previa de informe o el control del visor de informes) admiten las características siguientes:  
+ Además, los representadores que usan saltos de página no forzados (el portal web, la vista previa del informe o el control del visor de informes) admiten las características siguientes:  
   
 -   Mantener los encabezados de fila a la vista al desplazarse horizontalmente a través de un informe.  
   

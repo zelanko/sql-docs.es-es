@@ -1,7 +1,7 @@
 ---
 title: Catálogo de SSIS | Microsoft Docs
 ms.custom: ''
-ms.date: 04/30/2018
+ms.date: 06/04/2018
 ms.prod: sql
 ms.prod_service: integration-services
 ms.component: service
@@ -20,15 +20,21 @@ caps.latest.revision: 28
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 0285d3dbaf5bd1ed5def180029a75c32fe4fcb83
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 711bc7d70060cc3e5b1ac9f6fa38187bc82a48de
+ms.sourcegitcommit: 8aa151e3280eb6372bf95fab63ecbab9dd3f2e5e
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/05/2018
+ms.locfileid: "34772671"
 ---
 # <a name="ssis-catalog"></a>Catálogo de SSIS
   El catálogo de **SSISDB** es el eje central cuando se trabaja con proyectos de [!INCLUDE[ssISnoversion_md](../../includes/ssisnoversion-md.md)] (SSIS) que ha implementado en el servidor [!INCLUDE[ssISnoversion_md](../../includes/ssisnoversion-md.md)]. Por ejemplo, establece los parámetros del proyecto y del paquete, configura entornos para especificar los valores en tiempo de ejecución para los paquetes, ejecuta paquetes y soluciona los problemas de los mismos, y administra las operaciones del servidor de [!INCLUDE[ssISnoversion_md](../../includes/ssisnoversion-md.md)] .  
-  
+ 
+> [!NOTE]
+> En este artículo se describe el catálogo de SSIS en general y el catálogo de SSIS ejecutado de forma local. El catálogo de SSIS también se puede crear en Azure SQL Database, y los paquetes SSIS se pueden implementar y ejecutar en Azure. Para obtener más información, consulte [Lift and shift SQL Server Integration Services workloads to the cloud](../lift-shift/ssis-azure-lift-shift-ssis-packages-overview.md) (Migrar cargas de trabajo de SQL Server Integration Services a la nube mediante lift-and-shift).
+>
+> Aunque los paquetes SSIS también se pueden ejecutar en Linux, no se admite el catálogo de SSIS. Para obtener más información, consulte [Extract, transform, and load data on Linux with SSIS](../../linux/sql-server-linux-migrate-ssis.md) (Extracción, transformación y carga de datos en Linux con SSIS).
+ 
  Entre los objetos que se almacenan en el catálogo **SSISDB** se incluyen proyectos, paquetes, parámetros, entornos y el historial de operaciones.  
   
  Inspecciona objetos, valores y los datos operativos que se almacenan en el catálogo de **SSISDB** , consultando las vistas de la base de datos de **SSISDB** . Administra los objetos al llamar a los procedimientos almacenados en la base de datos de **SSISDB** o mediante la interfaz de usuario del catálogo de **SSISDB** . En muchos casos, la misma tarea se puede realizar en la interfaz de usuario o al llamar a un procedimiento almacenado.  
@@ -381,7 +387,7 @@ Para ejecutar el **trabajo de mantenimiento del servidor SSIS**, SSIS crea el in
 #### <a name="options"></a>Opciones  
  En la tabla siguiente se describen algunas propiedades del cuadro de diálogo y las propiedades correspondientes de la vista catalog.catalog_property.  
   
-|Nombre de la propiedad (cuadro de diálogo Propiedades del catálogo)|Nombre de la propiedad (vista catalog.catalog_property).|Description|  
+|Nombre de la propiedad (cuadro de diálogo Propiedades del catálogo)|Nombre de la propiedad (vista catalog.catalog_property).|Descripción|  
 |-----------------------------------------------------|------------------------------------------------------|-----------------|  
 |Nombre del algoritmo de cifrado|ENCRYPTION_CLEANUP_ENABLED|Especifica el tipo de cifrado que se utiliza para cifrar los valores de los parámetros confidenciales del catálogo. Los posibles valores son los siguientes:<br /><br /> DES<br /><br /> TRIPLE_DES<br /><br /> TRIPLE_DES_3KEY<br /><br /> DESPX<br /><br /> AES_128<br /><br /> AES_192<br /><br /> AES_256 (predeterminado)|  
 |Tiempo de espera de validación (segundos)|VALIDATION_TIMEOUT|Especifica el número de máximo de segundos que puede ejecutarse la validación de un proyecto o de un paquete antes de que se detenga. El valor predeterminado es 300 segundos.<br /><br /> La validación es una operación asincrónica. Cuanto mayor sea el proyecto o el paquete, más se tardará en validar.<br /><br /> Para obtener información sobre la validación de proyectos y paquetes, vea [Integration Services Data Types in Expressions](../../integration-services/expressions/integration-services-data-types-in-expressions.md).|  

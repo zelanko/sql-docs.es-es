@@ -19,11 +19,12 @@ caps.latest.revision: 29
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 89b69f14e131453519bbaae77f16d629444eb169
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: bcd7a5a51aa9f7a3e4e2dfc84dd76e05a950e897
+ms.sourcegitcommit: 808d23a654ef03ea16db1aa23edab496b73e5072
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/04/2018
+ms.locfileid: "34473909"
 ---
 # <a name="sql-server-memory-manager-object"></a>Memory Manager (objeto de SQL Server)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -36,11 +37,11 @@ ms.lasthandoff: 05/03/2018
 ## <a name="memory-manager-counters"></a>Contadores de Memory Manager  
  En esta tabla se describen los contadores de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] **Memory Manager** .  
   
-|Contadores de Memory Manager de SQL Server|Description|  
+|Contadores de Memory Manager de SQL Server|Descripción|  
 |----------------------------------------|-----------------|  
 |**Memoria de conexión (KB)**|Especifica la cantidad total de memoria dinámica que utiliza el servidor para mantener las conexiones.|  
 |**Memoria caché de base de datos (KB)**|Especifica la cantidad de memoria que el servidor está utilizando actualmente para la memoria caché de páginas de base de datos.|  
-|**Beneficio externo de memoria**|Valor de memoria externo, en ms por página por ms, multiplicado por 10 000 millones y truncado en un entero.| 
+|**Beneficio externo de memoria**| Una estimación interna de la ventaja de rendimiento de agregar memoria a una caché específica. El motor la usa para equilibrar el uso de memoria entre la caché y es útil admitirla cuando se solucionan problemas de casos de crecimiento inesperado de la caché. El valor se muestra como un entero basado en un cálculo interno. | 
 |**Memoria disponible (KB)**|Especifica la cantidad de memoria asignada no utilizada por el servidor actualmente.|  
 |**Memoria de área de trabajo concedida (KB)**|Especifica la cantidad total de memoria concedida actualmente para la ejecución de procesos, como operaciones de hash, ordenación, copia masiva y creación de índices.|  
 |**Bloqueos de cierre**|Especificación del número actual de bloqueos de cierre en uso en el servidor (se actualiza periódicamente). Un bloqueo de cierre representa un recurso individual bloqueado, como una tabla, página o fila.|  

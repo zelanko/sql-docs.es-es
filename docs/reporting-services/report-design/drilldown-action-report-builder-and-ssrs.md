@@ -1,7 +1,7 @@
 ---
 title: Acción de obtención de detalles (Generador de informes y SSRS) | Microsoft Docs
 ms.custom: ''
-ms.date: 03/07/2017
+ms.date: 05/24/2018
 ms.prod: reporting-services
 ms.prod_service: reporting-services-sharepoint, reporting-services-native
 ms.component: report-design
@@ -45,14 +45,15 @@ caps.latest.revision: 9
 author: maggiesMSFT
 ms.author: maggies
 manager: kfile
-ms.openlocfilehash: db793e5608aca874a98f6125136429244eb5ffff
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 1250e47366e8beab3cdee5f07e6d17e76827a597
+ms.sourcegitcommit: 8aa151e3280eb6372bf95fab63ecbab9dd3f2e5e
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/05/2018
+ms.locfileid: "34550716"
 ---
 # <a name="drilldown-action-report-builder-and-ssrs"></a>Acción de obtención de detalles (generador de informes y SSRS)
-  Si desea que los usuarios puedan ocultar y mostrar elementos de forma interactiva, incluya iconos más y menos en un cuadro de texto. Esto se denomina acción *de obtención de detalles* . En una tabla o matriz, puede mostrar u ocultar filas y columnas estáticas, o filas y columnas que están asociadas a grupos.  
+Si quiere que los usuarios puedan ocultar y mostrar los elementos de forma interactiva, proporcione iconos más y menos en un cuadro de texto. Esto se denomina acción *de obtención de detalles* . En una tabla o matriz, puede mostrar u ocultar filas y columnas estáticas, o filas y columnas que están asociadas a grupos.  
   
  ![rs_drilldown](../../reporting-services/report-design/media/rs-drilldown.gif "rs_drilldown")  
   
@@ -78,7 +79,7 @@ ms.lasthandoff: 05/03/2018
  En un informe de obtención de detalles, un usuario hace clic en un botón de más o menos para expandir o contraer una sección de un informe para mostrar los datos detallados. En un informe detallado, el usuario hace clic en un vínculo para obtener un valor de resumen y este abre un informe relacionado independiente con los datos detallados. Estos datos solo se recuperan al ejecutar el informe de detalles. Generalmente, los informes detallados requieren menos recursos que los informes de obtención de detalles. Para obtener más información, vea [Obtención de detalles, informes detallados, subinformes y regiones de datos anidadas &#40;Generador de informes y SSRS&#41;](../../reporting-services/report-design/drillthrough-drilldown-subreports-and-nested-data-regions.md).  
   
 ## <a name="rendering-extension-support-for-hidden-report-items"></a>Compatibilidad con extensiones de representación para elementos de informe ocultos  
- La alternancia mostrar u ocultar en los elementos de informe solo es compatible con las extensiones de representación que admiten la interactividad del usuario como, por ejemplo, la extensión de representación en HTML que se utiliza cuando se ejecuta un informe en el Generador de informes o en el Administrador de informes. Otras extensiones de representación muestran elementos ocultos. En la lista siguiente se describe la compatibilidad para los elementos de informe con visibilidad condicional:  
+ La alternancia de mostrar y ocultar en los elementos de informe solo es compatible con las extensiones de representación que admiten la interactividad del usuario como, por ejemplo, la extensión de representación de HTML que se usa cuando se ejecuta un informe en el Generador de informes o el portal web. Otras extensiones de representación muestran elementos ocultos. En la lista siguiente se describe la compatibilidad para los elementos de informe con visibilidad condicional:  
   
 -   En HTML, si los elementos están ocultos, no estarán visibles en el código fuente HTML.  
   

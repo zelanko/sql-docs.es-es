@@ -1,7 +1,7 @@
 ---
 title: Registrar un proveedor de datos estándar de .NET Framework (SSRS) | Microsoft Docs
 ms.custom: ''
-ms.date: 03/18/2017
+ms.date: 05/24/2018
 ms.prod: reporting-services
 ms.prod_service: reporting-services-sharepoint, reporting-services-native
 ms.component: report-data
@@ -22,11 +22,12 @@ caps.latest.revision: 18
 author: markingmyname
 ms.author: maghan
 manager: kfile
-ms.openlocfilehash: 68c34c7ce77c3986d4df390c3512617e27de23b9
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 7cfd6cbea6bfefca9b695af4071727ba3d2550a1
+ms.sourcegitcommit: 808d23a654ef03ea16db1aa23edab496b73e5072
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/04/2018
+ms.locfileid: "34550436"
 ---
 # <a name="register-a-standard-net-framework-data-provider-ssrs"></a>Registrar un proveedor de datos estándar de .NET Framework (SSRS)
   Para usar un proveedor de datos de [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] de terceros para recuperar datos de un conjunto de datos de informe de [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] , es necesario implementar y registrar el ensamblado del proveedor de datos de [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] en dos ubicaciones: en el cliente de creación de informes y en el servidor de informes. En el cliente de creación de informes, debe registrar el proveedor de datos como un tipo de origen de datos y asociarlo a un diseñador de consultas. A continuación, puede seleccionar este proveedor de datos como un tipo de origen de datos al crear un conjunto de datos de informe. El diseñador de consultas asociado se abre para ayudarle a crear consultas para este tipo de origen de datos. En el servidor de informes, debe registrar el proveedor de datos como un tipo de origen de datos. A continuación, puede procesar los informes publicados que recuperan datos de un origen de datos con este proveedor de datos.  
@@ -62,7 +63,7 @@ ms.lasthandoff: 05/03/2018
   
 4.  Agregue una entrada para el proveedor de datos de [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] .  
   
-    |Attribute|Description|  
+    |Attribute|Descripción|  
     |---------------|-----------------|  
     |**Nombre**|Proporcione un nombre único para el proveedor de datos (por ejemplo, **miProveedorDeDatosDeNET**). La longitud máxima para el atributo **Name** es de 255 caracteres. El nombre debe ser único entre todas las entradas en el elemento **Extension** del archivo de configuración. El valor incluido aquí aparece en la lista desplegable de tipos de orígenes de datos al crear un origen de datos.|  
     |**Tipo**|Escriba una lista separada por comas donde se incluya el espacio de nombres completo de la clase que implementa la interfaz <xref:System.Data.IDbConnection> , seguido del nombre del ensamblado del proveedor de datos de [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] (sin incluir la extensión de nombre de archivo .dll).|  
@@ -106,7 +107,7 @@ ms.lasthandoff: 05/03/2018
  La pertenencia de dirección URL es solo una de las muchas condiciones de pertenencia que puede seleccionar para el proveedor de datos.  
   
 ### <a name="verifying-the-deployment-and-registration"></a>Comprobar la implementación y el registro  
- Puede comprobar si el proveedor de datos se implementó correctamente para el servidor de informes si abre el Administrador de informes y comprueba si el proveedor de datos está incluido en la lista de orígenes de datos disponibles. Para más información sobre el Administrador de informes y los orígenes de datos, vea [Crear, modificar y eliminar orígenes de datos compartidos &#40;SSRS&#41;](../../reporting-services/report-data/create-modify-and-delete-shared-data-sources-ssrs.md).  
+ Para comprobar si el proveedor de datos se implementó correctamente para el servidor de informes, abra el portal web y compruebe si el proveedor de datos está incluido en la lista de orígenes de datos disponibles. Para obtener más información sobre el portal web y los orígenes de datos, vea [Crear, modificar y eliminar orígenes de datos compartidos &#40;SSRS&#41;](../../reporting-services/report-data/create-modify-and-delete-shared-data-sources-ssrs.md).  
   
 ## <a name="registering-a-net-framework-data-provider-on-the-report-designer-client"></a>Registrar un proveedor de datos de .NET Framework en el cliente del Diseñador de informes  
  Para crear informes que usen este proveedor de datos de [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] para un origen de datos, debe instalar el ensamblado en el equipo cliente que ejecuta el Diseñador de informes. Debe modificar dos archivos de configuración. Modifique RSReportDesigner.config para registrar el proveedor de datos como un origen de datos y para usar el diseñador de consultas genérico. Modifique RSPreviewPolicy.config para conceder permisos de seguridad de acceso del código para el ensamblado del proveedor de datos.  
@@ -135,7 +136,7 @@ ms.lasthandoff: 05/03/2018
   
 4.  Agregue una entrada para el proveedor de datos.  
   
-    |Attribute|Description|  
+    |Attribute|Descripción|  
     |---------------|-----------------|  
     |**Nombre**|Proporcione un nombre único para el proveedor de datos (por ejemplo, **miProveedorDeDatosDeNET**). La longitud máxima para el atributo **Name** es de 255 caracteres. El nombre debe ser único entre todas las entradas en el elemento **Extension** del archivo de configuración. El valor incluido aquí aparece en la lista desplegable de tipos de orígenes de datos al crear un origen de datos nuevo.|  
     |**Tipo**|Escriba una lista separada por comas donde se incluya el espacio de nombres completo de la clase que implementa la interfaz <xref:System.Data.IDbConnection> , seguido del nombre del ensamblado del proveedor de datos de [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] (sin incluir la extensión de nombre de archivo .dll).|  
@@ -198,7 +199,7 @@ ms.lasthandoff: 05/03/2018
  Para poder comprobar la implementación, debe cerrar todas las instancias de [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)] en el equipo local. Una vez que haya finalizado todas las sesiones actuales, puede comprobar si el proveedor de datos se implementó correctamente para el Diseñador de informes si crea un proyecto de informe nuevo en [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)]. El proveedor de datos se debe incluir en la lista de tipos de orígenes de datos disponibles al crear un conjunto de datos nuevo para el informe.  
   
 ## <a name="platform-considerations"></a>Consideraciones sobre las plataformas  
- En una plataforma de 64 bits (x64), [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] se ejecuta en el modo WOW de 32 bits. Si crea informes en una plataforma x64, necesita tener proveedores de datos de 32 bits instalados en el cliente de creación de informes para obtener vistas previas de los informes. Si publica el informe en el mismo sistema, necesita proveedores de datos x64 para ver el informe con el Administrador de informes.  
+ En una plataforma de 64 bits (x64), [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] se ejecuta en el modo WOW de 32 bits. Si crea informes en una plataforma x64, necesita tener proveedores de datos de 32 bits instalados en el cliente de creación de informes para obtener vistas previas de los informes. Si publica el informe en el mismo sistema, necesita proveedores de datos x64 para ver el informe en el portal web.  
   
  [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] no se admite para las plataformas basadas en [!INCLUDE[vcpritanium](../../includes/vcpritanium-md.md)].  
   

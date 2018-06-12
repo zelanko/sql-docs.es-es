@@ -1,7 +1,7 @@
 ---
 title: ALTER TABLE (Transact-SQL) | Microsoft Docs
 ms.custom: ''
-ms.date: 08/07/2017
+ms.date: 06/01/2018
 ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
 ms.component: t-sql|statements
@@ -64,11 +64,12 @@ author: edmacauley
 ms.author: edmaca
 manager: craigg
 monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
-ms.openlocfilehash: b6b4aca07714a7153cc0b6920daca92667e0dff6
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: d6828307311790e4b6d0fc92a398a27fb3462add
+ms.sourcegitcommit: 97bef3f248abce57422f15530c1685f91392b494
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/04/2018
+ms.locfileid: "34744134"
 ---
 # <a name="alter-table-transact-sql"></a>ALTER TABLE (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -260,7 +261,7 @@ ALTER TABLE [ database_name . [schema_name ] . | schema_name. ] source_table_nam
       } 
     | { SPLIT | MERGE } RANGE (boundary_value)  
     | SWITCH [ PARTITION source_partition_number  
-        TO target_table_name [ PARTITION target_partition_number ]  
+        TO target_table_name [ PARTITION target_partition_number ] [ WITH ( TRUNCATE_TARGET_PARTITION = ON | OFF )
 }  
 [;]  
   
@@ -318,7 +319,7 @@ ALTER TABLE [ database_name . [schema_name ] . | schema_name. ] source_table_nam
   
 -   Una columna asociada a la definición predeterminada. No obstante, la longitud, precisión o escala de una columna puede cambiarse si el tipo de datos no se cambia.  
   
-El tipo de datos de las columnas **text**, **ntext** e **image** solo se puede cambiar de las formas siguientes:  
+El tipo de datos de las columnas **text**, **ntext e **image** solo se puede cambiar de las formas siguientes:  
   
 -   **text** por **varchar(max)**, **nvarchar(max)** o **xml**  
   
@@ -326,7 +327,7 @@ El tipo de datos de las columnas **text**, **ntext** e **image** solo se puede c
   
 -   **image** por **varbinary(max)**  
   
-Algunos cambios del tipo de datos podrían suponer un cambio en los datos. Por ejemplo, cambiar una columna **nchar** o **nvarchar** por **char** o **varchar** puede suponer la conversión de caracteres extendidos. Para obtener más información, vea [CAST y CONVERT &#40;Transact-SQL&#41;](../../t-sql/functions/cast-and-convert-transact-sql.md). Reducir la precisión o escala de una columna puede dar como resultado que se trunquen los datos.  
+Algunos cambios del tipo de datos podrían suponer un cambio en los datos. Por ejemplo, cambiar una columna nchar** o **nvarchar** por **char** o **varchar** puede provocar la conversión de caracteres extendidos. Para obtener más información, vea [CAST y CONVERT &#40;Transact-SQL&#41;](../../t-sql/functions/cast-and-convert-transact-sql.md). Reducir la precisión o escala de una columna puede dar como resultado que se trunquen los datos.  
   
 > [!NOTE]
 > El tipo de datos de una columna de una tabla con particiones no puede cambiarse.  
@@ -533,7 +534,7 @@ WITH CHECK | WITH NOCHECK
  MAXDOP = *max_degree_of_parallelism*  
  **Se aplica a**: desde [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] hasta [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] y [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)].  
   
- Invalida la opción de configuración **grado máximo de paralelismo** solo durante la operación. Para obtener más información, vea [Configure the max degree of parallelism Server Configuration Option](../../database-engine/configure-windows/configure-the-max-degree-of-parallelism-server-configuration-option.md).  
+ Invalida la opción de configuración **grado máximo de paralelismo** solo durante la operación. Para obtener más información, vea [Establecer la opción de configuración del servidor Grado máximo de paralelismo](../../database-engine/configure-windows/configure-the-max-degree-of-parallelism-server-configuration-option.md).  
   
  Utilice la opción MAXDOP para limitar el número de procesadores utilizados en la ejecución de planes paralelos. El máximo es 64 procesadores.  
   
@@ -864,7 +865,7 @@ IF EXISTS
  Las columnas de tipo **varchar(max)**, **nvarchar(max)**, **varbinary(max)**, **xml**, **text**, **ntext**, **image**, **hierarchyid**, **geometry**, **geography** o CLR UDTS no se pueden agregar en una operación en línea. Una columna no se puede agregar en línea si al hacerlo provoca que el tamaño máximo posible de fila supere el límite de 8.060 bytes. En este caso, la columna se agrega como una operación sin conexión.  
   
 ## <a name="parallel-plan-execution"></a>Ejecutar planes paralelos  
- En [!INCLUDE[ssEnterpriseEd11](../../includes/ssenterpriseed11-md.md)] y versiones posteriores, el número de procesadores utilizados para ejecutar una sola instrucción ALTER TABLE ADD (basada en índices) CONSTRAINT o DROP (índice agrupado) CONSTRAINT viene determinado por la opción de configuración **grado máximo de paralelismo** y la carga de trabajo actual. Si el [!INCLUDE[ssDE](../../includes/ssde-md.md)] detecta que el sistema está ocupado, el grado de paralelismo de la operación se reduce automáticamente antes de comenzar la ejecución de la instrucción. Puede configurar manualmente el número de procesadores que se utilizan para ejecutar la instrucción si especifica la opción MAXDOP. Para obtener más información, vea [Configure the max degree of parallelism Server Configuration Option](../../database-engine/configure-windows/configure-the-max-degree-of-parallelism-server-configuration-option.md).  
+ En [!INCLUDE[ssEnterpriseEd11](../../includes/ssenterpriseed11-md.md)] y versiones posteriores, el número de procesadores utilizados para ejecutar una sola instrucción ALTER TABLE ADD (basada en índices) CONSTRAINT o DROP (índice agrupado) CONSTRAINT viene determinado por la opción de configuración **grado máximo de paralelismo** y la carga de trabajo actual. Si el [!INCLUDE[ssDE](../../includes/ssde-md.md)] detecta que el sistema está ocupado, el grado de paralelismo de la operación se reduce automáticamente antes de comenzar la ejecución de la instrucción. Puede configurar manualmente el número de procesadores que se utilizan para ejecutar la instrucción si especifica la opción MAXDOP. Para obtener más información, vea [Establecer la opción de configuración del servidor Grado máximo de paralelismo](../../database-engine/configure-windows/configure-the-max-degree-of-parallelism-server-configuration-option.md).  
   
 ## <a name="partitioned-tables"></a>Tablas con particiones  
  Además de realizar operaciones SWITCH que implican a tablas con particiones, ALTER TABLE puede utilizarse para cambiar el estado de las columnas, restricciones y desencadenadores de una tabla con particiones, de la misma forma que se utiliza para las tablas sin particiones. Sin embargo, esta sentencia no puede utilizarse para cambiar la forma en que se realizan las particiones de la tabla misma. Para volver a realizar las particiones de una tabla con particiones, utilice [ALTER PARTITION SCHEME](../../t-sql/statements/alter-partition-scheme-transact-sql.md) y [ALTER PARTITION FUNCTION](../../t-sql/statements/alter-partition-function-transact-sql.md). Además, no puede cambiar el tipo de datos de una columna de una tabla con particiones.  

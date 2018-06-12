@@ -1,7 +1,7 @@
 ---
 title: Monitor de ejecución de paquetes y otras operaciones | Microsoft Docs
 ms.custom: ''
-ms.date: 03/06/2017
+ms.date: 06/04/2018
 ms.prod: sql
 ms.prod_service: integration-services
 ms.component: performance
@@ -19,11 +19,12 @@ caps.latest.revision: 14
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: ed3dff81ab07e210b9b239987fc2a7c9c2c52b2a
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: e2b5a991661e3aa53de611a0cf78e04b2a6d23b5
+ms.sourcegitcommit: 8aa151e3280eb6372bf95fab63ecbab9dd3f2e5e
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/05/2018
+ms.locfileid: "34772153"
 ---
 # <a name="monitor-running-packages-and-other-operations"></a>Monitor de ejecución de paquetes y otras operaciones
   Puede supervisar las ejecuciones de paquetes [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] , validaciones de proyectos y otras operaciones mediante una o varias de las herramientas siguientes. Algunas herramientas como las derivaciones de datos solo están disponibles para los proyectos que se implementan en el servidor [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] .  
@@ -45,7 +46,12 @@ ms.lasthandoff: 05/03/2018
      Para más información, consulte [Performance Counters](../../integration-services/performance/performance-counters.md).  
   
 -   Derivaciones de datos  
-  
+
+> [!NOTE]
+> En este artículo se describe cómo supervisar la ejecución de los paquetes SSIS en general y la de los paquetes de forma local. Los paquetes SSIS también se pueden ejecutar y supervisar en Azure SQL Database. Para obtener más información, consulte [Lift and shift SQL Server Integration Services workloads to the cloud](../lift-shift/ssis-azure-lift-shift-ssis-packages-overview.md) (Migrar cargas de trabajo de SQL Server Integration Services a la nube mediante lift-and-shift).
+>
+> Aunque los paquetes SSIS también se pueden ejecutar en Linux, no se proporcionan herramientas de supervisión. Para obtener más información, consulte [Extract, transform, and load data on Linux with SSIS](../../linux/sql-server-linux-migrate-ssis.md) (Extracción, transformación y carga de datos en Linux con SSIS).
+
 ## <a name="operation-types"></a>Tipos de operación  
  En el catálogo de **SSISDB** se supervisan varios tipos diferentes de operaciones, en el servidor [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] . Cada operación puede tener varios mensajes asociados. Cada mensaje se puede clasificar en uno de varios tipos. Por ejemplo, un mensaje puede ser de información, de advertencia o de error. Para obtener la lista completa de tipos de mensaje, vea la documentación de la vista [catalog.operation_messages &#40;base de datos de SSISDB&#41;](../../integration-services/system-views/catalog-operation-messages-ssisdb-database.md) de Transact-SQL. Para obtener una lista completa de los tipos de operaciones, vea [catalog.operations &#40;base de datos de SSISDB&#41;](../../integration-services/system-views/catalog-operations-ssisdb-database.md).  
   
@@ -135,7 +141,7 @@ ms.lasthandoff: 05/03/2018
   
  El informe muestra las siguientes secciones de información.  
   
-|Sección|Description|  
+|Sección|Descripción|  
 |-------------|-----------------|  
 |**Información de ejecución**|Muestra el número de ejecuciones en distintos estados (error, en ejecución, correcto, otros) en las últimas 24 horas.|  
 |**Información del paquete**|Muestra el número total de paquetes que se han ejecutado en las últimas 24 horas.|  
@@ -149,7 +155,7 @@ ms.lasthandoff: 05/03/2018
   
  El informe muestra las siguientes secciones de información.  
   
-|Sección|Description|  
+|Sección|Descripción|  
 |-------------|-----------------|  
 |Filtro|Muestra el filtro actual que se aplica al informe, como el Intervalo de tiempo de inicio.|  
 |Información de ejecución|Muestra la hora de inicio, la hora de finalización y la duración de cada ejecución del paquete. Puede ver una lista de los valores de parámetro usados con una ejecución de paquete, como los valores que se pasaron a un paquete secundario mediante la tarea Ejecutar paquete. Para ver la lista de parámetros, haga clic en Información general.|  
@@ -163,7 +169,7 @@ ms.lasthandoff: 05/03/2018
   
  El informe muestra las siguientes secciones de información.  
   
-|Sección|Description|  
+|Sección|Descripción|  
 |-------------|-----------------|  
 |Filter|Muestra el filtro actual que se aplica al informe, como conexiones con una cadena especificada y el intervalo de **Hora del último error** .<br /><br /> Establezca el intervalo de **Hora del último error** para que se muestren solo los errores de conexión que se produjeron durante un intervalo de fechas. El intervalo puede abarcar varios días, meses o años.|  
 |Detalles|Muestra la cadena de conexión, el número de ejecuciones en las que se produjo un error de conexión y la fecha en la que hubo un error de conexión por última vez.|  

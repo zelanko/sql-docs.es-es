@@ -3,7 +3,6 @@ title: Usar el Asistente para grupo de disponibilidad (SQL Server Management Stu
 ms.custom: ''
 ms.date: 05/17/2016
 ms.prod: sql
-ms.prod_service: high-availability
 ms.reviewer: ''
 ms.suite: sql
 ms.technology: high-availability
@@ -18,14 +17,15 @@ helpviewer_keywords:
 - Availability Groups [SQL Server], creating
 ms.assetid: e1f1dccc-9e65-471d-8fd1-b45085c9484a
 caps.latest.revision: 46
-author: MikeRayMSFT
-ms.author: mikeray
+author: MashaMSFT
+ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 1ea8ef37daa8d723fab8fdf60f8b980e23c5cd63
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 9bd200483a8d778fd0f6f35d3ff12aea9f90fca7
+ms.sourcegitcommit: 8aa151e3280eb6372bf95fab63ecbab9dd3f2e5e
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/05/2018
+ms.locfileid: "34770751"
 ---
 # <a name="use-the-availability-group-wizard-sql-server-management-studio"></a>Usar el Asistente para grupo de disponibilidad (SQL Server Management Studio)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -116,7 +116,7 @@ En la mayoría de los casos, puede usar el Asistente para nuevo grupo de disponi
   
          Si selecciona **Completa**, después de crear el grupo de disponibilidad, el asistente realizará una copia de seguridad de cada base de datos principal y su registro de transacciones a un recurso compartido de red y restaurará las copias de seguridad en cada instancia de servidor que hospeda una réplica secundaria. El asistente unirá entonces cada base de datos secundaria al grupo de disponibilidad.  
   
-         En el campo **Especificar una ubicación de red compartida accesible por todas las réplicas:** , especifique un recurso compartido de copia de seguridad al que todas las instancias del servidor que hospedan réplicas tengan acceso de lectura/escritura. Para obtener más información, vea [Requisitos previos](#Prerequisites), anteriormente en este tema.  
+         En el campo **Especificar una ubicación de red compartida accesible por todas las réplicas:** , especifique un recurso compartido de copia de seguridad al que todas las instancias del servidor que hospedan réplicas tengan acceso de lectura/escritura. Para obtener más información, vea [Requisitos previos](#Prerequisites), anteriormente en este tema.  En el paso de validación, el asistente realizará una prueba para asegurarse de que la ubicación de red proporcionada es válida, la prueba creará una base de datos en la réplica principal, denominada "BackupLocDb_" seguido de un GUID, realizará una copia de seguridad en la ubicación de red proporcionada y después la restaurará en las réplicas secundarias. Se puede eliminar esta base de datos junto con su historial de copias de seguridad y el archivo de copia de seguridad en caso de que el asistente no pueda eliminarlos.
   
     -   **Solo unión**  
   

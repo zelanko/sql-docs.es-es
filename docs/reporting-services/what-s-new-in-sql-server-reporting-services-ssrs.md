@@ -1,6 +1,6 @@
 ---
 title: Novedades de Reporting Services (SSRS) | Microsoft Docs
-ms.date: 03/16/2018
+ms.date: 05/24/2018
 ms.prod: reporting-services
 ms.prod_service: reporting-services-sharepoint, reporting-services-native
 ms.component: reporting-services
@@ -13,11 +13,12 @@ ms.topic: get-started-article
 author: maggiesMSFT
 ms.author: maggies
 manager: kfile
-ms.openlocfilehash: a279a399575f6272b3cefc22a2a319637de6c7b5
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 25acdc921c925d3882fb8282a3f78a7ed04a757f
+ms.sourcegitcommit: 8aa151e3280eb6372bf95fab63ecbab9dd3f2e5e
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/05/2018
+ms.locfileid: "34550826"
 ---
 # <a name="whats-new-in-sql-server-reporting-services-ssrs"></a>Novedades de SQL Server Reporting Services (SSRS)
 
@@ -33,7 +34,7 @@ Obtenga información sobre las novedades de SQL Server [!INCLUDE[ssRSnoversion](
 
 Para ver las notas de la versión actual, consulte [Notas de la versión de SQL Server 2017](../sql-server/sql-server-2017-release-notes.md). 
 
-Para obtener información sobre Power BI Report Server, vea [Introducción a Power BI Report Server](https://powerbi.microsoft.com/documentation/reportserver-get-started/).
+Para obtener información sobre Power BI Report Server, vea [¿Qué es Power BI Report Server?](https://docs.microsoft.com/power-bi/report-server/get-started).
 
 ## <a name="whats-new-in-sql-server-2017"></a>Novedades de SQL Server 2017
 

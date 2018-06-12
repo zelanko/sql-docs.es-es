@@ -1,7 +1,7 @@
 ---
 title: Configurar una implementación escalada horizontalmente del servidor de informes en modo nativo | Microsoft Docs
 ms.custom: ''
-ms.date: 05/30/2017
+ms.date: 05/24/2018
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
 ms.component: install-windows
@@ -19,17 +19,22 @@ caps.latest.revision: 13
 author: markingmyname
 ms.author: maghan
 manager: kfile
-ms.openlocfilehash: 5c832e283da1b853cf135e7f6d9dba8af042effb
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 8a03b53bdb5a53574524a3cabce0adedbe23bac2
+ms.sourcegitcommit: 8aa151e3280eb6372bf95fab63ecbab9dd3f2e5e
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/05/2018
+ms.locfileid: "34550576"
 ---
 # <a name="configure-a-native-mode-report-server-scale-out-deployment"></a>Configurar una implementación escalada horizontalmente del servidor de informes en modo nativo
 
-  Reporting Services en modo nativo admite un modelo de implementación de ampliación horizontal que permite ejecutar varias instancias del servidor de informes que comparten una única base de datos del servidor de informes. Las implementaciones escaladas se utilizan para aumentar la escalabilidad de los servidores de informes para administrar más usuarios con acceso simultáneo y mayores cargas de ejecución de informes. También se pueden utilizar para dedicar servidores concretos en el procesamiento de informes interactivos o programados.  
+[!INCLUDE [ssrs-appliesto](../../includes/ssrs-appliesto.md)] [!INCLUDE [ssrs-appliesto-2016-and-later](../../includes/ssrs-appliesto-2016-and-later.md)] [!INCLUDE [ssrs-appliesto-not-pbirs](../../includes/ssrs-appliesto-not-pbirs.md)]
+
+Reporting Services en modo nativo admite un modelo de implementación de ampliación horizontal que permite ejecutar varias instancias del servidor de informes que comparten una única base de datos del servidor de informes. Las implementaciones escaladas se utilizan para aumentar la escalabilidad de los servidores de informes para administrar más usuarios con acceso simultáneo y mayores cargas de ejecución de informes. También se pueden utilizar para dedicar servidores concretos en el procesamiento de informes interactivos o programados.
+
+Para Power BI Report Server, necesita configurar la afinidad del cliente (a veces denominada sesiones temporales) en el equilibrador de carga para cualquier entorno de escalabilidad horizontal, para garantizar un rendimiento adecuado.  
   
- Los servidores de informes en modo de SharePoint utilizan la infraestructura de los Productos de SharePoint para la implementación escalada. La ampliación del modo de SharePoint se logra al agregar más servidores de informes en modo de SharePoint a la granja de servidores de SharePoint. Para más información sobre la implementación escalada en el modo de SharePoint, vea [Agregar un servidor de informes adicional a una granja de servidores &#40;escalado horizontal de SSRS&#41;](../../reporting-services/install-windows/add-an-additional-report-server-to-a-farm-ssrs-scale-out.md).  
+Para SQL Server 2016 Reporting Services, los servidores de informes en modo de SharePoint usan la infraestructura de los productos de SharePoint para la escalabilidad horizontal. La ampliación del modo de SharePoint se logra al agregar más servidores de informes en modo de SharePoint a la granja de servidores de SharePoint. Para más información sobre la implementación escalada en el modo de SharePoint, vea [Agregar un servidor de informes adicional a una granja de servidores &#40;escalado horizontal de SSRS&#41;](../../reporting-services/install-windows/add-an-additional-report-server-to-a-farm-ssrs-scale-out.md).  
  
   Una *implementación escalada* se usa en los escenarios siguientes:  
   

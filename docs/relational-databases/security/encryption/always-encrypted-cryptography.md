@@ -19,11 +19,12 @@ author: edmacauley
 ms.author: edmaca
 manager: craigg
 monikerRange: = azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: ead5689c2edb47f4ce2699e6b94bff53957ce9fd
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: a9471302da92abb2b4fef27a6d321a8ec41b01af
+ms.sourcegitcommit: 808d23a654ef03ea16db1aa23edab496b73e5072
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/04/2018
+ms.locfileid: "34550706"
 ---
 # <a name="always-encrypted-cryptography"></a>Criptografía de Always Encrypted
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -37,7 +38,7 @@ ms.lasthandoff: 05/03/2018
   
  Una clave de cifrado de columna (CEK) es una clave de cifrado de contenido (es decir, se utiliza para proteger los datos) que está protegida por una CMK.  
   
- Todos los proveedores de almacenes CMK de [!INCLUDE[msCoName](../../../includes/msconame-md.md)] cifran las CEK por medio de RSA con relleno óptimo de cifrado asimétrico (RSA OAEP) con los parámetros predeterminados especificados por RFC 3447 en la sección A.2.1. Estos parámetros predeterminados utilizan una función hash de SHA-1 y una función de generación de máscara de MGF1 con SHA-1.  
+ Todos los proveedores de almacenes CMK de [!INCLUDE[msCoName](../../../includes/msconame-md.md)] cifran las CEK por medio de RSA con relleno óptimo de cifrado asimétrico (RSA OAEP) con los parámetros predeterminados especificados por RFC 8017 en la sección A.2.1. Estos parámetros predeterminados utilizan una función hash de SHA-1 y una función de generación de máscara de MGF1 con SHA-1.  
   
 ## <a name="data-encryption-algorithm"></a>Algoritmo de cifrado de datos  
  Always Encrypted usa el algoritmo **AEAD_AES_256_CBC_HMAC_SHA_256** para cifrar los datos de la base de datos.  

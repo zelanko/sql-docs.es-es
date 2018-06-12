@@ -1,6 +1,6 @@
 ---
 title: Programar paquetes SSIS en Azure | Microsoft Docs
-ms.date: 05/09/2018
+ms.date: 05/29/2018
 ms.topic: conceptual
 ms.prod: sql
 ms.prod_service: integration-services
@@ -12,35 +12,32 @@ ms.technology:
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 4bfad00425848189d88bd780296db00ec810b37c
-ms.sourcegitcommit: 0cc2cb281e467a13a76174e0d9afbdcf4ccddc29
+ms.openlocfilehash: 62980562b7f89293177307cd4c3ad02f54e977f0
+ms.sourcegitcommit: 808d23a654ef03ea16db1aa23edab496b73e5072
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/15/2018
+ms.lasthandoff: 06/04/2018
+ms.locfileid: "34585847"
 ---
 # <a name="schedule-the-execution-of-an-ssis-package-in-azure"></a>Schedule the execution of an SSIS package in Azure (Programar la ejecución de un paquete SSIS en Azure)
-Puede programar la ejecución de paquetes almacenados en la base de datos del catálogo de SSISDB en un servidor de Azure SQL Database. Para ello, elija una de las opciones de programación siguientes:
--   [La opción Programar en SQL Server Management Studio (SSMS)](#ssms)
--   [Actividad de ejecución de un paquete SSIS en Azure Data Factory](#execute)
--   [Actividad de procedimiento almacenado de SQL Server de Azure Data Factory](#storedproc)
--   [Trabajos elásticos de SQL Database](#elastic)
--   [Agente SQL Server](#agent)
+Puede programar la ejecución de los paquetes de SSIS implementados en la base de datos del catálogo de SSISDB en un servidor de Azure SQL Database si selecciona una de las opciones que se describen en este artículo. Puede programar un paquete directamente, o bien programarlo de manera indirecta como parte de una canalización de Azure Data Factory. Para obtener información general sobre SSIS en Azure, vea [Migrar cargas de trabajo de SQL Server Integration Services a la nube mediante lift-and-shift](ssis-azure-lift-shift-ssis-packages-overview.md).
+
+- Programar un paquete directamente
+
+  - [Programar con la opción Programar en SQL Server Management Studio (SSMS)](#ssms)
+
+  - [Trabajos elásticos de SQL Database](#elastic)
+
+  - [Agente SQL Server](#agent)
+
+- [Programar un paquete indirectamente como parte de una canalización de Azure Data Factory](#activity)
+
 
 ## <a name="ssms"></a> Programar un paquete con SSMS
 
 En SQL Server Management Studio (SSMS), puede hacer clic con el botón derecho en un paquete implementado en la base de datos del catálogo de SSIS, SSISDB, y seleccionar **Programación** para abrir el cuadro de diálogo **Nueva programación**. Para más información, vea [Schedule the execution of an SSIS package on Azure with SSMS](ssis-azure-schedule-packages-ssms.md) (Programar la ejecución de un paquete SSIS en Azure con SSMS).
 
 Esta característica require SQL Server Management Studio versión 17.7 o superior. Para obtener la versión más reciente de SSMS, vea [Download SQL Server Management Studio (SSMS)](../../ssms/download-sql-server-management-studio-ssms.md) [Descargar SQL Server Management Studio (SSMS)].
-
-## <a name="execute"></a> Programar un paquete con la actividad Ejecutar paquete de SSIS
-
-Para más información sobre cómo programar un paquete de SSIS mediante el uso de la actividad Ejecutar paquete de SSIS en Azure Data Factory, vea [Ejecución de un paquete de SSIS mediante una actividad de SSIS en Azure Data Factory](https://docs.microsoft.com/azure/data-factory/how-to-invoke-ssis-package-ssis-activity).
-
-## <a name="storedproc"></a> Programar un paquete con la actividad de procedimiento almacenado
-
-Para más información sobre cómo programar un paquete de SSIS mediante el uso de la actividad de procedimiento almacenado de Azure Data Factory, vea [Invocación de un paquete de SSIS mediante una actividad de procedimiento almacenado de Azure Data Factory](https://docs.microsoft.com/azure/data-factory/how-to-invoke-ssis-package-stored-procedure-activity).
-
-Para Data Factory versión 1, vea [Invocación de un paquete de SSIS mediante una actividad de procedimiento almacenado de Azure Data Factory](https://docs.microsoft.com/azure/data-factory/v1/how-to-invoke-ssis-package-stored-procedure-activity).
 
 ## <a name="elastic"></a> Programar un paquete con trabajos elásticos de SQL Database
 
@@ -88,7 +85,9 @@ EXEC jobs.sp_update_job @job_name='ExecutePackageJob', @enabled=1,
     @schedule_interval_type='Minutes', @schedule_interval_count=60 
 ```
 
-## <a name="agent"></a> Programar un paquete mediante el Agente SQL Server
+## <a name="agent"></a> Programar un paquete con el Agente SQL Server local
+
+Para obtener más información, sobre el Agente SQL Server, consulte [Trabajos del Agente SQL Server para paquetes](../packages/sql-server-agent-jobs-for-packages.md).
 
 ### <a name="prerequisite---create-a-linked-server"></a>Requisitos previos: creación de un servidor vinculado
 
@@ -158,7 +157,24 @@ Para programar un paquete con el Agente SQL Server de forma local, cree un traba
 
 6.  Termine de configurar y programar el trabajo.
 
-## <a name="next-steps"></a>Pasos siguientes
-Para obtener más información, sobre el Agente SQL Server, consulte [Trabajos del Agente SQL Server para paquetes](../packages/sql-server-agent-jobs-for-packages.md).
+## <a name="activity"></a> Programar un paquete como parte de una canalización de Azure Data Factory
 
-Para obtener más información acerca de los trabajos elásticos en SQL Database, consulte [Administración de bases de datos escaladas horizontalmente en la nube](https://docs.microsoft.com/azure/sql-database/sql-database-elastic-jobs-overview).
+Puede programar un paquete de manera indirecta mediante un desencadenador para ejecutar una canalización de Azure Data Factory en la que se ejecute un paquete SSIS.
+
+Para programar una canalización de Azure Data Factory, use uno de los desencadenadores siguientes:
+
+- [Desencadenador de programación](https://docs.microsoft.com/azure/data-factory/how-to-create-schedule-trigger)
+
+- [Desencadenador de ventana de saltos de tamaño constante](https://docs.microsoft.com/azure/data-factory/how-to-create-tumbling-window-trigger)
+
+- [Desencadenador basado en eventos](https://docs.microsoft.com/azure/data-factory/how-to-create-event-trigger)
+
+Para ejecutar un paquete SSIS como parte de una canalización Azure Data Factory, use una de las siguientes actividades:
+
+- [Ejecutar una actividad de paquete SSIS](https://docs.microsoft.com/azure/data-factory/how-to-invoke-ssis-package-ssis-activity).
+
+- [Actividad de procedimiento almacenado](https://docs.microsoft.com/azure/data-factory/how-to-invoke-ssis-package-stored-procedure-activity).
+
+## <a name="next-steps"></a>Pasos siguientes
+
+Revise las opciones para ejecutar paquetes SSIS que se implementen en Azure. Para obtener más información, vea [Ejecutar un paquete SSIS en Azure](ssis-azure-run-packages.md).

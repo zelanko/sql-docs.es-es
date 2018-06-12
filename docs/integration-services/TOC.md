@@ -29,6 +29,7 @@
 ## [Conectarse a archivos y recursos compartidos de archivos](lift-shift/ssis-azure-files-file-shares.md)
 ## [Conexión a SSISDB en Azure](lift-shift/ssis-azure-connect-to-catalog-database.md)
 ## [Validación de paquetes implementados en Azure](lift-shift/ssis-azure-validate-packages.md)
+## [Ejecutar paquetes en Azure](lift-shift/ssis-azure-run-packages.md)
 ## [Programación de paquetes en Azure](lift-shift/ssis-azure-schedule-packages.md)
 ## [Programación de paquetes en Azure con SSMS](lift-shift/ssis-azure-schedule-packages-ssms.md)
 
@@ -72,6 +73,7 @@
 # [Consultas](integration-services-ssis-queries.md)
 # [Transacciones](integration-services-transactions.md)
 # [Implementar paquetes](packages/deploy-integration-services-ssis-projects-and-packages.md)
+# [Ejecutar paquetes](packages/run-integration-services-ssis-packages.md)
 # [Escalar horizontalmente](scale-out/integration-services-ssis-scale-out.md)
 
 # [Catálogo y servidor](catalog/integration-services-ssis-server-and-catalog.md)

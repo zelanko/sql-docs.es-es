@@ -39,11 +39,12 @@ author: douglaslMS
 ms.author: douglasl
 manager: craigg
 monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
-ms.openlocfilehash: 1f9df0c2da8892d380635f8949f10625baf9fda3
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: fdc629623e8de28a0aaf18d384ba2e9db3a63269
+ms.sourcegitcommit: 808d23a654ef03ea16db1aa23edab496b73e5072
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/04/2018
+ms.locfileid: "34585957"
 ---
 # <a name="from-transact-sql"></a>FROM (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -367,7 +368,7 @@ ON (p.ProductID = v.ProductID);
  *table_alias*  
  Es el nombre de alias de la tabla de salida. Se debe especificar *pivot_table_alias*.  
   
- UNPIVOT \< unpivot_clause >  
+ UNPIVOT \<unpivot_clause>  
  Especifica que la tabla de entrada se restrinja a partir de varias columnas de *column_list* en una sola columna denominada *pivot_column*. Para obtener más información sobre PIVOT y UNPIVOT, vea [Usar PIVOT y UNPIVOT](../../t-sql/queries/from-using-pivot-and-unpivot.md).  
   
  AS OF \<date_time>  

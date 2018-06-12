@@ -61,6 +61,7 @@
 ### [Configurar la copia de seguridad en las réplicas](configure-backup-on-availability-replicas-sql-server.md)  
 ### [Configurar grupos de disponibilidad distribuidos](configure-distributed-availability-groups.md)
 ### [Configurar para transacciones distribuidas](configure-availability-group-for-distributed-transactions.md)
+### [Configuración de un grupo de disponibilidad de escalado de lectura](configure-read-scale-availability-groups.md)
 ### [Configurar la réplica de acceso de solo lectura](configure-read-only-access-on-an-availability-replica-sql-server.md)  
 ### [Configurar el enrutamiento de solo lectura](configure-read-only-routing-for-an-availability-group-sql-server.md)  
 ### [Quitar el agente de escucha](remove-an-availability-group-listener-sql-server.md)  

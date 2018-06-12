@@ -2,7 +2,7 @@
 title: Compatibilidad con la escalabilidad horizontal de SQL Server Integration Services (SSIS) para una alta disponibilidad | Microsoft Docs
 ms.description: This article describes how to configure SSIS Scale Out for high availability
 ms.custom: ''
-ms.date: 12/19/2017
+ms.date: 05/23/2018
 ms.prod: sql
 ms.prod_service: integration-services
 ms.component: scale-out
@@ -16,11 +16,12 @@ caps.latest.revision: 1
 author: haoqian
 ms.author: haoqian
 manager: craigg
-ms.openlocfilehash: 8cd79327b3733de9f7463f1d5f9d8f924b58a46b
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 25660b9e6b4edbdd8a2654d092990fef94313bed
+ms.sourcegitcommit: 808d23a654ef03ea16db1aa23edab496b73e5072
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/04/2018
+ms.locfileid: "34476047"
 ---
 # <a name="scale-out-support-for-high-availability"></a>Compatibilidad con la escalabilidad horizontal para una alta disponibilidad
 
@@ -47,7 +48,7 @@ Esta cuenta debe ser capaz de acceder a SSISDB en el nodo secundario del clúste
 
 ### <a name="22-include-the-dns-host-name-for-the-scale-out-master-service-in-the-cns-of-the-scale-out-master-certificate"></a>2.2. Incluir el nombre de host DNS del servicio del Servicio principal de escalabilidad horizontal en los nombres comunes del certificado del servicio
 
-Este nombre de host se utilizará en el punto de conexión del Servicio principal de escalabilidad horizontal. 
+Este nombre de host se utilizará en el punto de conexión del Servicio principal de escalabilidad horizontal. (Asegúrese de proporcionar un nombre de host DNS y no un nombre de servidor).
 
 ![Configuración del patrón HA](media/ha-master-config.PNG)
 
@@ -61,9 +62,9 @@ Use el mismo certificado del Servicio principal de escalabilidad horizontal que 
 > [!NOTE]
 > Puede configurar varios patrones del Servicio principal de escalabilidad horizontal de copia de seguridad mediante la repetición de las operaciones del servicio en los nodos secundarios.
 
-## <a name="4-set-up-ssisdb-always-on"></a>4. Configuración de Always On de SSISDB
+## <a name="4-set-up-and-configure-ssisdb-support-for-always-on"></a>4. Configuración de la compatibilidad con SSISDB para AlwaysOn
 
-Siga las instrucciones para configurar Always On para SSISDB que encontrará en [Always On para el catálogo de SSIS (SSISDB)](../catalog/ssis-catalog.md#always-on-for-ssis-catalog-ssisdb).
+Siga las instrucciones para configurar la compatibilidad con SSISDB para AlwaysOn que encontrará en [Always On para el catálogo de SSIS (SSISDB)](../catalog/ssis-catalog.md#always-on-for-ssis-catalog-ssisdb).
 
 Además, tendrá que crear un agente de escucha de grupo de disponibilidad para el grupo de disponibilidad en el que agregue SSISDB. Consulte [Create or Configure an Availability Group Listener](../../database-engine/availability-groups/windows/create-or-configure-an-availability-group-listener-sql-server.md) (Crear o configurar un agente de escucha de grupo de disponibilidad).
 
@@ -85,7 +86,7 @@ Llame al procedimiento almacenado `[catalog].[update_logdb_info]` con los siguie
 
 -   `@connection_string = 'Data Source=[Availability Group Listener DNS name],[Port];Initial Catalog=SSISDB;User Id=##MS_SSISLogDBWorkerAgentLogin##;Password=[Password]];'`
 
-## <a name="7-configure-the-scale-out-master-service-role-of-the-windows-failover-cluster"></a>7. Configuración del rol del Servicio principal de escalabilidad horizontal del clúster de conmutación por error de Windows
+## <a name="7-configure-the-scale-out-master-service-role-of-the-windows-server-failover-cluster"></a>7. Configuración del rol del Servicio principal de escalabilidad horizontal del clúster de conmutación por error de Windows Server
 
 1.  En el Administrador de clústeres de conmutación por error, conéctese al clúster de escalabilidad horizontal. Seleccione el clúster. Seleccione **Acción** en el menú y, a continuación, **Configurar rol**.
 
@@ -96,6 +97,12 @@ Llame al procedimiento almacenado `[catalog].[update_logdb_info]` con los siguie
     ![Asistente HA 1](media/ha-wizard1.PNG)
 
 4.  Finalice al asistente.
+
+En máquinas virtuales de Azure, este paso de configuración requiere pasos adicionales. Una explicación completa de estos conceptos y pasos queda fuera del ámbito de este artículo.
+
+1.  Tendrá que configurar un dominio de Azure. Los clústeres de conmutación por error de Windows Server requieren que todos los equipos del clúster sean miembros del mismo dominio. Para obtener más información, vea [Habilitación de Azure Active Directory Domain Services mediante Azure Portal](https://docs.microsoft.com/azure/active-directory-domain-services/active-directory-ds-getting-started).
+
+2. Tendrá que configurar un equilibrador de carga de Azure. Es un requisito para la escucha de grupo de disponibilidad. Para obtener más información, vea [Tutorial: equilibrar la carga de tráfico interno de las máquinas virtuales con Load Balancer Básico mediante Azure Portal](https://docs.microsoft.com/azure/load-balancer/tutorial-load-balancer-basic-internal-portal).
 
 ## <a name="8-update-the-scale-out-master-address-in-ssisdb"></a>8. Actualización de la dirección del Servicio principal de escalabilidad horizontal en SSISDB
 

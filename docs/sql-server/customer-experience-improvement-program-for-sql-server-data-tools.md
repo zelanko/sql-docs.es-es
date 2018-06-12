@@ -16,11 +16,12 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
-ms.openlocfilehash: 84313f1bedd406c39a862c57bdc94436eb0c7cbe
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 523e42b868bc6f461579bed208d82cfb55ebc697
+ms.sourcegitcommit: 808d23a654ef03ea16db1aa23edab496b73e5072
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/04/2018
+ms.locfileid: "34563803"
 ---
 # <a name="customer-experience-improvement-program-for-sql-server-data-tools"></a>Programa para la mejora de la experiencia del usuario de SQL Server Data Tools
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -59,23 +60,25 @@ ms.lasthandoff: 05/03/2018
   
  La clave del Registro y la configuración necesarias son:  
   
- Clave = HKEY_CURRENT_USER\Software\Microsoft\VSCommon\15.0\SQM  
-  
- Nombre EntradaRegistro = OptIn  
-  
- Tipo de entrada DWORD:  
-  
--   0 para no utilizar el CEIP  
-  
--   1 para utilizarlo  
+- SO de 64 bits, clave = HKEY_LOCAL_MACHINE\SOFTWARE\Wow6432Node\Microsoft\VSCommon\15.0\SQM
+- SO de 32 bits, clave = HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\VSCommon\15.0\SQM
+
+Cuando se habilita la directiva de grupo, clave = HKEY_LOCAL_MACHINE\Software\Policies\Microsoft\VisualStudio\SQM 
+
+Entrada = OptIn
+
+Valor = (DWORD)
+- 0 es no participar (desactivar el VSCEIP)
+- 1 es participar (activar el VSCEIP)
+
   
 > [!CAUTION]  
 >  Una modificación incorrecta del Registro puede provocar daños graves en el sistema. Antes de efectuar cambios en el Registro, debe realizar una copia de seguridad de los datos importantes del equipo. También puede utilizar la opción de inicio La última configuración válida conocida si detecta problemas una vez aplicados los cambios manuales.  
   
  Para obtener más información sobre la información recopilada, procesada o transmitida por el CEIP, consulte la [Declaración de privacidad para el Programa para la mejora de la experiencia del usuario de Microsoft](http://go.microsoft.com/fwlink/?LinkId=52143).  
  
-### <a name="choice-and-control-over--ceip-and-sql-server-data-tools-for-visual-studio-2015"></a>Elección y control sobre el CEIP y SQL Server Data Tools para Visual Studio 2015  
- SSDT para Visual Studio 2015 es la herramienta de modelado de datos incluida en SQL Server 2016. Usa las opciones del CEIP integradas en Visual Studio 2015. Puede obtener más información sobre cómo enviar comentarios a través del CEIP de Visual Studio 2015 en este [documento de ayuda de Visual Studio](http://go.microsoft.com/fwlink/?LinkId=517102).  
+### <a name="choice-and-control-over-ceip-and-sql-server-data-tools-for-visual-studio-2015"></a>Elección y control sobre el CEIP y SQL Server Data Tools para Visual Studio 2015  
+ SSDT para Visual Studio 2015 es la herramienta de modelado de datos incluida en SQL Server 2016. Usa las opciones del CEIP integradas en Visual Studio 2015. Puede obtener más información sobre cómo enviar comentarios a través del CEIP de Visual Studio 2015 en este [documento de ayuda de Visual Studio](https://docs.microsoft.com/visualstudio/ide/how-to-report-a-problem-with-visual-studio-2017).  
   
  En las versiones preliminares de SQL Server 2016, el CEIP está activado de forma predeterminada. Puede desactivarlo o volver a activarlo con las instrucciones siguientes.  
   

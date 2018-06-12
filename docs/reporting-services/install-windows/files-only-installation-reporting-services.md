@@ -1,7 +1,7 @@
 ---
 title: Instalación de solo archivos (Reporting Services) | Microsoft Docs
 ms.custom: ''
-ms.date: 03/30/2016
+ms.date: 05/24/2018
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
 ms.component: install-windows
@@ -18,16 +18,17 @@ caps.latest.revision: 22
 author: markingmyname
 ms.author: maghan
 manager: kfile
-ms.openlocfilehash: bc565586474384f09f2f8ea0df40abfd545c3078
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: f91b55021b3e270a76c5772aa0819830f3519daa
+ms.sourcegitcommit: 8aa151e3280eb6372bf95fab63ecbab9dd3f2e5e
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/05/2018
+ms.locfileid: "34550666"
 ---
 # <a name="files-only-installation-reporting-services"></a>Instalación de solo archivos (Reporting Services)
   *Instalación de solo archivos* hace referencia a una instalación de [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] en la que el programa de instalación crea la estructura de carpetas para los archivos de programa de [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] , copia los archivos en el disco, registra el servicio Servidor de informes en el equipo local, configura la cuenta de servicio, concede permisos de archivos a la cuenta de servicio y registra el proveedor WMI de [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] .  
   
- Una instalación de solo archivos incluye las características de [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] siguientes: el servicio Servidor de informes (que hospeda el servicio web del servidor de informes, la aplicación de procesamiento en segundo plano y el Administrador de informes), el Generador de informes, la herramienta Configuración de [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] y las utilidades de línea de comandos de [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] (rsconfig.exe, rskeymgmt.exe y rs.exe). No se aplica a las características compartidas como [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] o [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)], que se deben especificar como elementos independientes si desea instalarlos.  
+ Una instalación de solo archivos incluye las características de [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] siguientes: el servicio Servidor de informes (que hospeda el servicio web del servidor de informes y la aplicación de procesamiento en segundo plano), el Generador de informes, la herramienta Configuración de [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] y las utilidades de línea de comandos de [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] (rsconfig.exe, rskeymgmt.exe y rs.exe). No se aplica a las características compartidas como [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] o [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)], que se deben especificar como elementos independientes si desea instalarlos.  
   
  A diferencia de lo que ocurre en otros modos de instalación, un servidor de informes que se instale en modo de solo archivos no es operativo en cuanto el programa de instalación finaliza. Es necesario configurar más valores para poner en línea el servidor de informes por medio del [Administrador de configuración de Reporting Services &#40;modo nativo&#41;](../../reporting-services/install-windows/reporting-services-configuration-manager-native-mode.md).  
   

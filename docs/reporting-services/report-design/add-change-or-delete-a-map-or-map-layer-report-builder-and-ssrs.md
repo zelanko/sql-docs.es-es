@@ -1,7 +1,7 @@
 ---
 title: Agregar, cambiar o eliminar un mapa o una capa de mapa (Generador de informes y SSRS) | Microsoft Docs
 ms.custom: ''
-ms.date: 03/01/2017
+ms.date: 05/24/2018
 ms.prod: reporting-services
 ms.prod_service: reporting-services-sharepoint, reporting-services-native
 ms.component: report-design
@@ -32,11 +32,12 @@ caps.latest.revision: 15
 author: maggiesMSFT
 ms.author: maggies
 manager: kfile
-ms.openlocfilehash: 8e627e570e310239c1973b8b24a44499b0bd47e3
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 459aa9dde1f5c148257323d80e9d26841ecb9a53
+ms.sourcegitcommit: 8aa151e3280eb6372bf95fab63ecbab9dd3f2e5e
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/05/2018
+ms.locfileid: "34550676"
 ---
 # <a name="add-change-or-delete-a-map-or-map-layer-report-builder-and-ssrs"></a>Agregar, cambiar o eliminar un mapa o una capa de mapa (Generador de informes y SSRS)
   Un mapa es una colección de capas. Al agregar un mapa a un informe paginado de [!INCLUDE[ssRSnoversion_md](../../includes/ssrsnoversion-md.md)] , define la primera capa. Puede crear capas adicionales con el Asistente para capas de mapa.  
@@ -49,7 +50,7 @@ ms.lasthandoff: 05/03/2018
   
  En la tabla siguiente se muestran los iconos de la barra de herramientas del panel **Mapa** .  
   
-|Símbolo|Description|Cuándo se usa|  
+|Símbolo|Descripción|Cuándo se usa|  
 |------------|-----------------|-----------------|  
 |![rs_IconMapLayerWizard](../../reporting-services/media/rs-iconmaplayerwizard.gif "rs_IconMapLayerWizard")|Asistente para capas de mapa|Para agregar una capa con un asistente, haga clic en **Asistente para nueva capa**.|  
 |![rs_IconMapAddLayer](../../reporting-services/media/rs-iconmapaddlayer.gif "rs_IconMapAddLayer")|Agregar capa|Para agregar una capa manualmente, haga clic en **Agregar capa**y, a continuación, haga clic en el tipo de capa de mapa que desea agregar.|  
@@ -152,7 +153,7 @@ ms.lasthandoff: 05/03/2018
 4.  En **Nombre de archivo**, escriba la ubicación del archivo de forma ESRI o haga clic en **Examinar** para seleccionar un archivo de forma ESRI.  
   
     > [!NOTE]  
-    >  Si el archivo de forma está en el equipo local, los datos espaciales se incrustan en la definición de informe. Para recuperar los datos dinámicamente cuando se procesa el informe, debe cargar el archivo de forma ESRI .shp y su archivo auxiliar .dbf en el servidor de informes. Para obtener más información, vea cómo cargar un archivo o informe (Administrador de informes) en la [documentación de Reporting Services](http://go.microsoft.com/fwlink/?linkid=121312) , en los Libros en pantalla de SQL Server.  
+    >  Si el archivo de forma está en el equipo local, los datos espaciales se incrustan en la definición de informe. Para recuperar los datos dinámicamente cuando se procesa el informe, debe cargar el archivo de forma ESRI .shp y su archivo auxiliar .dbf en el servidor de informes. Para obtener más información, vea [Cargar un archivo o un informe](../reports/upload-a-file-or-report-report-manager.md).  
   
 5.  [!INCLUDE[clickOK](../../includes/clickok-md.md)]  
   

@@ -27,11 +27,12 @@ author: rothja
 ms.author: jroth
 manager: craigg
 monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
-ms.openlocfilehash: 23119e2fafd68797b15a9baf525d52906f311178
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: c6cd03ce43fd2b0a2fd454681e64edbd49e5f87a
+ms.sourcegitcommit: 808d23a654ef03ea16db1aa23edab496b73e5072
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/04/2018
+ms.locfileid: "34467981"
 ---
 # <a name="sql-server-transaction-log-architecture-and-management-guide"></a>Guía de arquitectura y administración de registros de transacciones de SQL Server
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -138,7 +139,7 @@ Para obtener más información sobre los argumentos `FILEGROWTH` y `SIZE` de `AL
   
  Para entender cómo funciona el registro de escritura anticipada, es importante saber cómo se escriben los datos modificados en el disco. [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] mantiene una caché del búfer que lee las páginas de datos cuando estos deben recuperarse. Cuando se modifica una página en la caché del búfer, no se vuelve a escribir inmediatamente en el disco; en su lugar, la página se marca como *desfasada*. Una página de datos puede tener más de una escritura lógica antes de que se escriba físicamente en el disco. Para cada escritura lógica, se inserta una entrada del registro de transacciones en la caché del registro que registra la modificación. Las entradas del registro se tienen que escribir en el disco antes de que la página desfasada asociada se quite de la caché del búfer y se escriba en el disco. El proceso de punto de comprobación examina periódicamente la caché del búfer en busca de búferes con páginas de una base de datos especificada y escribe todas las páginas desfasadas en el disco. Los puntos de comprobación permiten ahorrar tiempo en una recuperación posterior al crear un punto en el que se garantiza que todas las páginas desfasadas se hayan escrito en el disco.  
   
- A la escritura en el disco de una página de datos modificada desde la caché del búfer se le llama vaciar la página. [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] tiene una lógica que evita que una página desfasada se vacíe antes de que se escriba la entrada del registro asociada. Las entradas de registro se escriben en el disco cuando las transacciones se confirman.  
+ A la escritura en el disco de una página de datos modificada desde la caché del búfer se le llama vaciar la página. [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] tiene una lógica que evita que una página desfasada se vacíe antes de que se escriba la entrada del registro asociada. Las entradas de registro se escriben en el disco cuando se vacían los búferes de registro.  Esto ocurre siempre que se confirma una transacción o se llenan los búferes de registro.  
   
 ##  <a name="Backups"></a> Copias de seguridad de registros de transacciones  
  En esta sección se presentan conceptos acerca de cómo realizar copias de seguridad y restaurar (aplicar) registros de transacciones. En los modelos de recuperación completa y de recuperación optimizada para cargas masivas de registros, es necesario realizar copias de seguridad periódicas de los registros de transacciones (*copias de seguridad de registros*) para recuperar datos. Puede realizar una copia de seguridad del registro mientras se está ejecutando cualquier copia de seguridad completa. Para obtener más información sobre modelos de recuperación, consulte [Realizar copias de seguridad y restaurar bases de datos de SQL Server](../relational-databases/backup-restore/back-up-and-restore-of-sql-server-databases.md).  

@@ -24,16 +24,17 @@ caps.latest.revision: 34
 author: edmacauley
 ms.author: edmaca
 manager: craigg
-ms.openlocfilehash: 98b08c914c0eb74e55d2d3c8a9e032432391a054
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: d0ac0821494677a42766c340f4d1e75ff9661711
+ms.sourcegitcommit: 8aa151e3280eb6372bf95fab63ecbab9dd3f2e5e
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/05/2018
+ms.locfileid: "34779491"
 ---
 # <a name="decryptbyasymkey-transact-sql"></a>DECRYPTBYASYMKEY (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
-  Descifra datos con una clave asimétrica.  
+En esta función se usa una clave asimétrica para descifrar los datos cifrados.  
   
  ![Icono de vínculo de tema](../../database-engine/configure-windows/media/topic-link.gif "Icono de vínculo de tema") [Convenciones de sintaxis de Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -47,28 +48,28 @@ DecryptByAsymKey (Asym_Key_ID , { 'ciphertext' | @ciphertext }
   
 ## <a name="arguments"></a>Argumentos  
  *Asym_Key_ID*  
- Id. de una clave asimétrica en la base de datos. *Asym_Key_ID* es **int**.  
+Id. de una clave asimétrica en la base de datos. *Asym_Key_ID* tiene un tipo de datos **int**.  
   
  *ciphertext*  
- Cadena de datos cifrados con la clave asimétrica.  
+La cadena de datos cifrados con la clave asimétrica.  
   
  @ciphertext  
- Es una variable de tipo **varbinary** que contiene los datos que se han cifrado con la clave asimétrica.  
+Una variable de tipo **varbinary** que contiene los datos cifrados con la clave asimétrica.  
   
  *Asym_Key_Password*  
- Contraseña utilizada para cifrar la clave asimétrica en la base de datos.  
+La contraseña que se usa para cifrar la clave asimétrica en la base de datos.  
   
 ## <a name="return-types"></a>Tipos devueltos  
- **varbinary** con un tamaño máximo de 8000 bytes.  
+**varbinary**, con un tamaño máximo de 8 000 bytes.  
   
 ## <a name="remarks"></a>Notas  
- EL cifrado/descifrado con una clave asimétrica es muy costoso si lo comparamos con el cifrado/descifrado con una clave simétrica. No es recomendable el uso de una clave asimétrica cuando trabaje con grandes conjuntos de datos, por ejemplo, datos de usuario en las tablas.  
+En comparación con el cifrado y descifrado simétricos, el cifrado y descifrado de claves asimétricas tiene un coste más elevado. Cuando se trabaja con grandes conjuntos de datos (por ejemplo, datos de usuario almacenados en tablas), se recomienda que los desarrolladores eviten el cifrado y descifrado de claves asimétricas.  
   
 ## <a name="permissions"></a>Permisos  
- Requiere permiso CONTROL en la clave asimétrica.  
+`DECRYPTBYASYMKEY` requiere el permiso CONTROL en la clave asimétrica.  
   
 ## <a name="examples"></a>Ejemplos  
- En el ejemplo siguiente se descifra texto cifrado con la clave asimétrica `JanainaAsymKey02`, almacenada en `AdventureWorks2012.ProtectedData04`. Los datos devueltos se descifran con la clave asimétrica `JanainaAsymKey02`, que se ha descifrado con la contraseña `pGFD4bb925DGvbd2439587y`. El texto simple se convierte al tipo **nvarchar**.  
+En este ejemplo se descifra texto que originalmente se cifró con la clave asimétrica `JanainaAsymKey02`. Esta clave asimétrica se almacenó en `AdventureWorks2012.ProtectedData04`. En el ejemplo se descifran los datos devueltos con la clave asimétrica `JanainaAsymKey02`. En el ejemplo se usa la contraseña `pGFD4bb925DGvbd2439587y` para descifrar esta clave asimétrica. En el ejemplo se convierte el texto sin formato devuelto al tipo **nvarchar**.  
   
 ```  
 SELECT CONVERT(nvarchar(max),  

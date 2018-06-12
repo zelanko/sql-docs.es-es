@@ -1,7 +1,7 @@
 ---
-title: Configurar propiedades de origen de datos para un informe (Administrador de informes) | Microsoft Docs
+title: Configuración de propiedades de origen de datos para un informe paginado (SSRS) | Microsoft Docs
 ms.custom: ''
-ms.date: 03/14/2017
+ms.date: 05/24/2018
 ms.prod: reporting-services
 ms.prod_service: reporting-services-sharepoint, reporting-services-native
 ms.component: report-data
@@ -17,24 +17,23 @@ caps.latest.revision: 44
 author: markingmyname
 ms.author: maghan
 manager: kfile
-ms.openlocfilehash: 07c218a9117b4c8a8adb9985299ac6d08992dd6a
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 7016de178bce501982e9c5bfa1eff030834c5d03
+ms.sourcegitcommit: 808d23a654ef03ea16db1aa23edab496b73e5072
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/04/2018
+ms.locfileid: "34550006"
 ---
-# <a name="configure-data-source-properties-for-a-report--report-manager"></a>Configurar propiedades de origen de datos para un informe (Administrador de informes)
-  Al ejecutar un informe, el servidor de informes recupera información de propiedad para determinar la manera de conectarse a un origen de datos. El tipo de origen de datos, la cadena de conexión y la información de credenciales se especifican en las páginas de propiedades Origen de datos del informe publicado. Puede establecer las propiedades para variar la información de conexión a un origen de datos de los valores originales que se especificaron cuando se creó el informe.  
+# <a name="configure-data-source-properties-for-a-paginated-report"></a>Configuración de propiedades de origen de datos para un informe paginado
+  Al ejecutar un informe paginado, el servidor de informes recupera la información de las propiedades para determinar la manera de conectarse a un origen de datos. El tipo de origen de datos, la cadena de conexión y la información de credenciales se especifican en las páginas de propiedades Origen de datos del informe publicado. Puede establecer las propiedades para variar la información de conexión a un origen de datos de los valores originales que se especificaron cuando se creó el informe.  
   
  Como alternativa, si tiene un origen de datos compartido predefinido que ya especifica la información de conexión que desear usar, puede especificar un origen de datos compartido en su lugar. Para usar un origen de datos compartido, haga clic en **Un origen de datos compartido** en la página de propiedades Origen de datos del informe.  
   
-### <a name="to-configure-an-embedded-data-source"></a>Para configurar un origen de datos incrustado  
+## <a name="to-configure-an-embedded-data-source"></a>Para configurar un origen de datos incrustado  
   
-1.  Inicie el [Administrador de informes &#40;Modo nativo de SSRS&#41;](http://msdn.microsoft.com/library/80949f9d-58f5-48e3-9342-9e9bf4e57896).  
+1.  En el portal web, navegue al informe para el que quiera configurar un origen de datos específico del informe.  
   
-2.  En el Administrador de informes, navegue hasta la página **Contenido** . Navegue al informe para el que desee configurar un origen de datos específico y abra el informe.  
-  
-3.  Haga clic en la pestaña **Propiedades** . Se abre la página de propiedades **General**.  
+3.  Haga clic en los puntos suspensivos (**...**) de la esquina superior derecha > **Administrar**.  
   
 4.  Haga clic en la pestaña **Orígenes de datos** . Esto abre la página de propiedades Origen de datos del informe.  
   
@@ -63,11 +62,6 @@ ms.lasthandoff: 05/03/2018
  Para obtener más información sobre cómo configurar credenciales, vea [Especificar información de credenciales y conexión para los orígenes de datos de informes](../../reporting-services/report-data/specify-credential-and-connection-information-for-report-data-sources.md). Para más información sobre la cuenta de ejecución desatendida, vea [Configurar la cuenta de ejecución desatendida &#40;Administrador de configuración de SSRS&#41;](../../reporting-services/install-windows/configure-the-unattended-execution-account-ssrs-configuration-manager.md).  
   
 ## <a name="see-also"></a>Ver también  
- [Contenido &#40;página del Administrador de informes&#41;](http://msdn.microsoft.com/library/6b16869b-158a-4934-9c85-bee934b35378)   
- [Nuevo origen de datos &#40;página del Administrador de informes&#41;](http://msdn.microsoft.com/library/35563d4c-a3d5-4f95-bf46-605da9dfcbb8)   
- [Crear, modificar y eliminar orígenes de datos compartidos &#40;SSRS&#41;](../../reporting-services/report-data/create-modify-and-delete-shared-data-sources-ssrs.md)   
- [Administrar orígenes de datos de informe](../../reporting-services/report-data/manage-report-data-sources.md)   
- [Crear, eliminar o modificar un origen de datos compartido &#40;Administrador de informes&#41;](http://msdn.microsoft.com/library/cd7bace3-f8ec-4ee3-8a9f-2f217cdca9f2)   
- [Orígenes de datos &#40;página de propiedades del Administrador de informes&#41;](http://msdn.microsoft.com/library/f37edda0-19e6-489e-b544-8751fa6b6cfb)  
-  
+[Crear, modificar y eliminar orígenes de datos compartidos &#40;SSRS&#41;](../../reporting-services/report-data/create-modify-and-delete-shared-data-sources-ssrs.md)   
+[Administrar orígenes de datos de informe](../../reporting-services/report-data/manage-report-data-sources.md)
   

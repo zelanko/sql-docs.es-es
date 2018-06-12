@@ -19,11 +19,12 @@ caps.latest.revision: 58
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 8a6bdd055cc32d6f01ec017f72c7caa8f503754f
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 3fdedcbb66bbf9c62a7001750c1dc149c4427cbb
+ms.sourcegitcommit: 99e355b71ff2554782f6bc8e0da86e6d9e3e0bef
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/05/2018
+ms.locfileid: "34799835"
 ---
 # <a name="revert-a-database-to-a-database-snapshot"></a>Revertir una base de datos a una instantánea de base de datos
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -44,7 +45,7 @@ ms.lasthandoff: 05/03/2018
 ###  <a name="Restrictions"></a> Limitaciones y restricciones  
  La reversión no se admite en las siguientes condiciones:  
   
--   La base de datos debe tener en ese momento solo una instantánea de base de datos, a la que se va a revertir.  
+-   Hay varias instantáneas para la base de datos. Para la reversión, solo debe haber una instantánea para la base de datos a la que se va a revertir.  
   
 -   La base de datos contiene grupos de archivos de solo lectura o comprimidos.  
   
@@ -52,7 +53,7 @@ ms.lasthandoff: 05/03/2018
   
  Antes de revertir a una base de datos, debe tener en cuenta los siguientes limitaciones:  
   
--   La reversión no se utiliza para la recuperación de medios. . Una instantánea de base de datos es una copia incompleta de los archivos de base de datos, de modo que si se daña la base de datos o la instantánea de base de datos, es probable que no se pueda revertir a partir de una instantánea. Además, aunque sea posible, no es probable que la reversión corrija el problema si se produjesen daños. Por lo tanto, para proteger una base de datos es esencial hacer copias de seguridad con regularidad y probar el plan de restauración. Para obtener más información, consulte [Back Up and Restore of SQL Server Databases](../../relational-databases/backup-restore/back-up-and-restore-of-sql-server-databases.md).  
+-   La reversión no se utiliza para la recuperación de medios. Una instantánea de base de datos es una copia incompleta de los archivos de base de datos, de modo que si se daña la base de datos o la instantánea de base de datos, es probable que no se pueda revertir a partir de una instantánea. Además, aunque sea posible, no es probable que la reversión corrija el problema si se produjesen daños. Por lo tanto, para proteger una base de datos es esencial hacer copias de seguridad con regularidad y probar el plan de restauración. Para obtener más información, consulte [Back Up and Restore of SQL Server Databases](../../relational-databases/backup-restore/back-up-and-restore-of-sql-server-databases.md).  
   
     > [!NOTE]  
     >  Si tiene que restaurar la base de datos de origen al momento en que creó una instantánea de base de datos, use el modelo de recuperación completa e implemente una directiva de copia de seguridad que le habilite para ello.  

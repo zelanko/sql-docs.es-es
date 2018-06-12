@@ -26,19 +26,20 @@ caps.latest.revision: 35
 author: edmacauley
 ms.author: edmaca
 manager: craigg
-ms.openlocfilehash: 9d9652c25875fb1edb5d09e4e283fd7393b523a6
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: b7bace7aa0f07dd42230c7d626aa9b34adb5dfb1
+ms.sourcegitcommit: 6fe7b5e8818bd0d94fce693c560d63cc6883d76f
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/04/2018
+ms.locfileid: "34758095"
 ---
 # <a name="appname-transact-sql"></a>APP_NAME (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
-Una función que devuelve el nombre de aplicación de la sesión actual si la aplicación establece ese valor de nombre.
+Esta función devuelve el nombre de aplicación de la sesión actual, si la aplicación establece ese valor de nombre.
   
 > [!IMPORTANT]  
->  El cliente proporciona el nombre de la aplicación y el valor del nombre de la aplicación no se verifica de ninguna manera. No use **APP_NAME** como parte de una comprobación de seguridad.  
+>  El cliente proporciona el nombre de la aplicación y `APP_NAME` no verifica de ninguna manera el valor del nombre de la aplicación. No utilice `APP_NAME` como parte de una comprobación de seguridad.  
   
 ![Icono de vínculo de tema](../../database-engine/configure-windows/media/topic-link.gif "Icono de vínculo de tema") [Convenciones de sintaxis de Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)
   
@@ -53,12 +54,12 @@ APP_NAME  ( )
 **nvarchar(128)**
   
 ## <a name="remarks"></a>Notas  
-Use **APP_NAME** para distinguir entre diferentes aplicaciones, como una manera de realizar acciones diferentes para esas aplicaciones. Por ejemplo, **APP_NAME** puede distinguir entre diferentes aplicaciones para permitir un formato de fecha diferente para cada aplicación. También puede permitir el envío de un mensaje informativo a ciertas aplicaciones.
+Use `APP_NAME` para distinguir entre otras aplicaciones, como una manera de realizar otras acciones para esas aplicaciones. Por ejemplo, `APP_NAME` puede distinguir entre aplicaciones diferentes, lo que permite otro formato de fecha para cada aplicación. También puede permitir el envío de un mensaje informativo a ciertas aplicaciones.
   
 Para establecer el nombre de una aplicación en [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)], haga clic en **Opciones** en el cuadro de diálogo **Conectar al motor de base de datos**. En la pestaña **Parámetros de conexión adicionales**, indique un atributo **app** con el formato `;app='application_name'`.
   
 ## <a name="example"></a>Ejemplo  
-En este ejemplo se comprueba si la aplicación del cliente que ha iniciado este proceso es una sesión `SQL Server Management Studio` y proporciona una fecha en formato estadounidense o ANSI.
+En este ejemplo se comprueba si la aplicación cliente que inició este proceso es una sesión de `SQL Server Management Studio`. Después, proporciona un valor de fecha en formato de EE. UU. o ANSI.
   
 ```sql
 USE AdventureWorks2012;  

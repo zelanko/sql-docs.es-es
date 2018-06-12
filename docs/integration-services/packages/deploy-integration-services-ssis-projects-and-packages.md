@@ -1,7 +1,7 @@
 ---
 title: Implementación de proyectos y paquetes de Integration Services (SSIS) | Microsoft Docs
 ms.custom: ''
-ms.date: 03/01/2017
+ms.date: 06/04/2018
 ms.prod: sql
 ms.prod_service: integration-services
 ms.component: packages
@@ -24,11 +24,12 @@ caps.latest.revision: 21
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 16a9dda229e7f5c99dbc97fa7d827df74d79649f
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 9cdefcfcec0c273cfb662966895fc49b09c4460e
+ms.sourcegitcommit: 8aa151e3280eb6372bf95fab63ecbab9dd3f2e5e
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/05/2018
+ms.locfileid: "34772149"
 ---
 # <a name="deploy-integration-services-ssis-projects-and-packages"></a>Implementación de proyectos y paquetes de Integration Services (SSIS)
   [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] admite dos modelos de implementación, el modelo de implementación del proyecto y el modelo de implementación de paquetes heredados. El modelo de implementación del proyecto le permite implementar sus proyectos en el servidor de [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] .  
@@ -36,8 +37,13 @@ ms.lasthandoff: 05/03/2018
 Para más información sobre el modelo de implementación de paquetes heredada, vea [Implementación de paquetes heredada &#40;SSIS&#41;](../../integration-services/packages/legacy-package-deployment-ssis.md).  
   
 > [!NOTE]  
->  El modelo de implementación de proyectos se introdujo en [!INCLUDE[ssISversion11](../../includes/ssisversion11-md.md)]. Si utilizó este modelo, no pudo implementar uno o varios paquetes sin implementar todo el proyecto. [!INCLUDE[ssISversion13](../../includes/ssisversion13-md.md)] introdujo la característica Implementación incremental de paquetes que permite implementar uno o varios paquetes sin implementar todo el proyecto.  
-  
+>  El modelo de implementación de proyectos se introdujo en [!INCLUDE[ssISversion11](../../includes/ssisversion11-md.md)]. Con este modelo de implementación, no pudo implementar uno o varios paquetes sin implementar todo el proyecto. En [!INCLUDE[ssISversion13](../../includes/ssisversion13-md.md)] se presentó el modelo de implementación de paquetes, que permite implementar uno o varios paquetes sin implementar todo el proyecto.  
+
+> [!NOTE]
+> En este artículo se describe cómo implementar paquetes SSIS en general y cómo implementar los paquetes de forma local. Los paquetes SSIS también se pueden implementar en las plataformas siguientes:
+> - **La nube de Microsoft Azure**. Para obtener más información, consulte [Lift and shift SQL Server Integration Services workloads to the cloud](../lift-shift/ssis-azure-lift-shift-ssis-packages-overview.md) (Migrar cargas de trabajo de SQL Server Integration Services a la nube mediante lift-and-shift).
+> - **Linux**. Para obtener más información, consulte [Extract, transform, and load data on Linux with SSIS](../../linux/sql-server-linux-migrate-ssis.md) (Extracción, transformación y carga de datos en Linux con SSIS).
+
 ## <a name="compare-project-deployment-model-and-legacy-package-deployment-model"></a>Comparación del modelo de implementación de proyectos y el modelo de implementación de paquetes heredados  
  El tipo de modelo de implementación que elija para un proyecto determina qué opciones de desarrollo y administrativas están disponibles para ese proyecto. En la tabla siguiente se muestran las diferencias y similitudes entre utilizar el modelo de implementación del proyecto y utilizar el modelo de implementación de paquetes.  
   
@@ -60,7 +66,7 @@ Para más información sobre el modelo de implementación de paquetes heredada, 
 ## <a name="features-of-project-deployment-model"></a>Características del modelo de implementación del proyecto  
  En la tabla siguiente se enumeran las características disponibles en los proyectos desarrollados solo para el modelo de implementación del proyecto.  
   
-|Característica|Description|  
+|Característica|Descripción|  
 |-------------|-----------------|  
 |Parámetros|Un parámetro especifica los datos que usará un paquete. Puede establecer el ámbito de los parámetros en el nivel de paquete o en el nivel de proyecto con parámetros de paquete y parámetros de proyecto, respectivamente. Los parámetros se pueden usar en expresiones o tareas. Cuando el proyecto se implementa en el catálogo, se puede asignar un valor literal para cada parámetro o utilizar el valor predeterminado que se asignó en tiempo de diseño. En lugar de un valor literal, se puede hacer referencia a una variable de entorno. Los valores de variables de entorno se resuelven en el momento de la ejecución del paquete.|  
 |Entornos|Un entorno es un contenedor de variables a las que pueden hacer referencia los proyectos de [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] . Cada proyecto puede tener varias referencias de entorno, pero una instancia de ejecución del paquete solo puede hacer referencia a variables de un único entorno. Los entornos permiten organizar los valores que se asignan a un paquete. Por ejemplo, se pueden tener entornos denominados "Dev", "test" y "Production".|  

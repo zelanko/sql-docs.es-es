@@ -25,11 +25,12 @@ author: edmacauley
 ms.author: edmaca
 manager: craigg
 monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
-ms.openlocfilehash: 3cb0ea7d3443e338190e9bc63c7132aa554aa843
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.openlocfilehash: aed0b8b2aa36b215f894ee4c032ff38e8a23f43f
+ms.sourcegitcommit: 8aa151e3280eb6372bf95fab63ecbab9dd3f2e5e
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/10/2018
+ms.lasthandoff: 06/05/2018
+ms.locfileid: "34550816"
 ---
 # <a name="databasepropertyex-transact-sql"></a>DATABASEPROPERTYEX (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -60,7 +61,7 @@ Una expresión que especifica el nombre de la propiedad de base de datos que se 
 |---|---|---|
 |Intercalación|Nombre de intercalación predeterminado para la base de datos.|Nombre de intercalación<br /><br /> NULL: La base de datos no se ha iniciado.<br /><br /> Tipo de datos base: **nvarchar(128)**|  
 |ComparisonStyle|El estilo de comparación de Windows de la intercalación. Use los siguientes valores de estilo para generar un mapa de bits para el valor ComparisonStyle terminado:<br /><br /> Omitir mayúsculas y minúsculas: 1<br /><br /> Omitir acento: 2<br /><br /> Omitir Kana: 65536<br /><br /> Omitir ancho: 131072<br /><br /> <br /><br /> Por ejemplo, el valor predeterminado 196609 es el resultado de combinar las opciones de omitir mayúsculas y minúsculas, omitir Kana y omitir ancho.|Devuelve el estilo de comparación.<br /><br /> Devuelve 0 para todas las intercalaciones binarias.<br /><br /> Tipo de datos base: **int**|  
-|Edición|El nivel de servicio o edición de la base de datos.|**Se aplica a**: [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)], [!INCLUDE[ssSDW](../../includes/sssdw-md.md)].<br /><br /> <br /><br /> Uso general<br /><br /> Crucial para la empresa<br /><br /> Básico<br /><br /> Standard<br /><br /> Premium<br /><br /> System (de la base de datos maestra)<br /><br /> NULL: La base de datos no se ha iniciado.<br /><br /> Tipo de datos base: **nvarchar**(64)|  
+|Edición|El nivel de servicio o edición de la base de datos.|**Se aplica a**: [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)], [!INCLUDE[ssSDW](../../includes/sssdw-md.md)].<br /><br /> <br /><br /> Uso general<br /><br /> Crucial para la empresa<br /><br /> Básico<br /><br /> Estándar<br /><br /> Premium<br /><br /> System (de la base de datos maestra)<br /><br /> NULL: La base de datos no se ha iniciado.<br /><br /> Tipo de datos base: **nvarchar**(64)|  
 |IsAnsiNullDefault|La base de datos sigue las reglas ISO para permitir los valores NULL.|1: TRUE<br /><br /> 0: FALSE<br /><br /> NULL: entrada no válida<br /><br /> Tipo de datos base: **int**|  
 |IsAnsiNullsEnabled|Todas las comparaciones con un valor NULL tienen un resultado desconocido.|1: TRUE<br /><br /> 0: FALSE<br /><br /> NULL: entrada no válida<br /><br /> Tipo de datos base: **int**|  
 |IsAnsiPaddingEnabled|Las cadenas se rellenan a la misma longitud antes de comparar o insertar.|1: TRUE<br /><br /> 0: FALSE<br /><br /> NULL: entrada no válida<br /><br /> Tipo de datos base: **int**|  
@@ -89,7 +90,7 @@ Una expresión que especifica el nombre de la propiedad de base de datos que se 
 |IsTornPageDetectionEnabled|[!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] detecta operaciones de E/S incompletas debido a problemas con el suministro eléctrico u otros errores del sistema.|1: TRUE<br /><br /> 0: FALSE<br /><br /> NULL: entrada no válida<br /><br /> Tipo de datos base: **int**| 
 |IsVerifiedClone|La base de datos es una copia de solo estadísticas y esquema de una base de datos de usuario, creada con la opción WITH VERIFY_CLONEDB de DBCC CLONEDATABASE. Vea este [artículo de Soporte técnico de Microsoft](http://support.microsoft.com/help/3177838) para más información.|**Se aplica a**: a partir de [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] SP2.<br /><br /> <br /><br /> 1: TRUE<br /><br /> 0: FALSE<br /><br /> NULL: entrada no válida<br /><br /> Tipo de datos base: **int**| 
 |IsXTPSupported|Indica si la base de datos es compatible con OLTP en memoria; es decir, si permite crear y usar tablas optimizadas para memoria y módulos compilados de forma nativa.<br /><br /> Específica de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]:<br /><br /> IsXTPSupported es independiente de la existencia de algún grupo de archivos MEMORY_OPTIMIZED_DATA, necesario para crear objetos de OLTP en memoria.|**Se aplica a**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (de [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] a [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]) y a [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)].<br /><br /> 1: TRUE<br /><br /> 0: FALSE<br /><br /> NULL: Entrada no válida, error o no aplicable<br /><br /> Tipo de datos base: **int**|  
-|LastGoodCheckDbTime|La fecha y hora de la última operación DBCC CHECKDB correcta que se ejecutó en la base de datos especificada.|**Se aplica a**: a partir de [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] SP2.<br /><br /> Un valor de fecha y hora<br /><br /> NULL: entrada no válida<br /><br /> Tipo de datos base: **datetime**| 
+|LastGoodCheckDbTime|La fecha y hora de la última operación DBCC CHECKDB que se ejecutó correctamente en la base de datos especificada. <sup>1</sup> Si DBCC CHECKDB no se ha ejecutado en una base de datos, se devuelve 01-01-1900 00:00:00.000.|**Se aplica a**: a partir de [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] SP2.<br /><br /> Un valor de fecha y hora<br /><br /> NULL: entrada no válida<br /><br /> Tipo de datos base: **datetime**| 
 |LCID|El identificador de configuración regional (LCID) de Windows para la intercalación.|Valor de LCID (en formato decimal).<br /><br /> Tipo de datos base: **int**|  
 |MaxSizeInBytes|Tamaño máximo de la base de datos (en bytes).|**Se aplica a**: [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)], [!INCLUDE[ssSDW](../../includes/sssdw-md.md)].<br /><br /> <br /><br /> 1073741824<br /><br /> 5368709120<br /><br /> 10737418240<br /><br /> 21474836480<br /><br /> 32212254720<br /><br /> 42949672960<br /><br /> 53687091200<br /><br /> NULL: La base de datos no se ha iniciado<br /><br /> Tipo de base de datos: **bigint**|  
 |Recuperación|Modelo de recuperación de base de datos|FULL: Modelo de recuperación completa<br /><br /> BULK_LOGGED: Modelo de registro masivo<br /><br /> SIMPLE: Modelo de recuperación simple<br /><br /> Tipo de datos base: **nvarchar(128)**|  
@@ -99,8 +100,12 @@ Una expresión que especifica el nombre de la propiedad de base de datos que se 
 |Estado|Estado de la base de datos.|ONLINE: La base de datos está disponible para consultas.<br /><br /> **Nota:** El estado ONLINE se puede devolver mientras se abre la base de datos y aún no se haya recuperado. Para saber cuándo puede aceptar conexiones una base de datos, consulte la propiedad Collation de **DATABASEPROPERTYEX**. La base de datos puede aceptar conexiones cuando la intercalación de base de datos devuelve un valor distinto de NULL. En el caso de las bases de datos Always On, consulte las columnas database_state o database_state_desc de `sys.dm_hadr_database_replica_states`.<br /><br /> OFFLINE: La base de datos está explícitamente sin conexión.<br /><br /> RESTORING: Se ha iniciado la restauración de la base de datos.<br /><br /> RECOVERING: Se ha iniciado la recuperación de la base de datos, que aún no está lista para las consultas.<br /><br /> SUSPECT: La base de datos no se recuperó.<br /><br /> EMERGENCY: La base de datos está en un estado de emergencia de solo lectura. El acceso se restringe a los miembros del rol sysadmin<br /><br /> Tipo de datos base: **nvarchar(128)**|  
 |Updateability|Indica si los datos se pueden modificar.|READ_ONLY: La base de datos admite las lecturas de datos, pero no las modificaciones de datos.<br /><br /> READ_WRITE: La base de datos admite las lecturas y modificaciones de datos.<br /><br /> Tipo de datos base: **nvarchar(128)**|  
 |UserAccess|Indica qué usuarios pueden tener acceso a la base de datos.|SINGLE_USER: Solo un usuario db_owner, dbcreator o sysadmin a la vez<br /><br /> RESTRICTED_USER: Solo los miembros de los roles db_owner, dbcreator O sysadmin<br /><br /> MULTI_USER: Todos los usuarios<br /><br /> Tipo de datos base: **nvarchar(128)**|  
-|Versión|Número interno de versión del código de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] con el que se creó la base de datos. [!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]|Número de versión: La base de datos está abierta.<br /><br /> NULL: La base de datos no se ha iniciado.<br /><br /> Tipo de datos base: **int**|  
-  
+|Versión|Número interno de versión del código de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] con el que se creó la base de datos. [!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]|Número de versión: La base de datos está abierta.<br /><br /> NULL: La base de datos no se ha iniciado.<br /><br /> Tipo de datos base: **int**| 
+<br/>   
+
+> [!NOTE]  
+> <sup>1</sup> Para las bases de datos que forman parte de un grupo de disponibilidad, `LastGoodCheckDbTime` devolverá la fecha y hora de la última operación DBCC CHECKDB que se ejecutó correctamente en la réplica principal, con independencia de la réplica desde la que se ejecute el comando. 
+
 ## <a name="return-types"></a>Tipos de valores devueltos
 **sql_variant**
   

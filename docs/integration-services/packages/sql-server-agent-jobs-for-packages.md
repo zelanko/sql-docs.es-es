@@ -1,7 +1,7 @@
 ---
 title: Trabajos del Agente SQL Server para paquetes | Microsoft Docs
 ms.custom: ''
-ms.date: 03/14/2017
+ms.date: 06/04/2018
 ms.prod: sql
 ms.prod_service: integration-services
 ms.component: packages
@@ -21,15 +21,21 @@ caps.latest.revision: 54
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 9cb26adf331696cb98901c6c9db387dc4d47f052
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: d262b623566f84b1ce5f8595560d4db6b646de97
+ms.sourcegitcommit: 8aa151e3280eb6372bf95fab63ecbab9dd3f2e5e
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/05/2018
+ms.locfileid: "34772501"
 ---
 # <a name="sql-server-agent-jobs-for-packages"></a>Trabajos del Agente SQL Server para paquetes
   Puede automatizar y programar la ejecución de paquetes de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] mediante el Agente [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Puede programar paquetes que se implementan en el servidor de [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] y se almacena en [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], el almacén de paquetes de [!INCLUDE[ssIS](../../includes/ssis-md.md)] y el sistema de archivos.  
-  
+ 
+> [!NOTE]
+> En este artículo se describe cómo programar paquetes SSIS en general y cómo programar paquetes de forma local. Los paquetes SSIS también se pueden ejecutar y programar en las plataformas siguientes:
+> - **La nube de Microsoft Azure**. Para obtener más información, vea [Migrar cargas de trabajo de SQL Server Integration Services a la nube mediante lift-and-shift](../lift-shift/ssis-azure-lift-shift-ssis-packages-overview.md) y [Schedule the execution of an SSIS package in Azure (Programar la ejecución de un paquete SSIS en Azure)](../lift-shift/ssis-azure-schedule-packages.md).
+> - **Linux**. Para obtener más información, vea [Extraer, transformar y cargar datos en Linux con SSIS](../../linux/sql-server-linux-migrate-ssis.md) y [Schedule SQL Server Integration Services package execution on Linux with cron](../../linux/sql-server-linux-schedule-ssis-packages.md) (Programar la ejecución de paquetes de SQL Server Integration Services en Linux con cron).
+
 ## <a name="sections-in-this-topic"></a>Secciones de este tema  
  Este tema contiene las siguientes secciones:  
   
@@ -129,7 +135,7 @@ ms.lasthandoff: 05/03/2018
   
      **En la tabla siguiente se describen los orígenes de paquete posibles.**  
   
-    |Origen del paquete|Description|  
+    |Origen del paquete|Descripción|  
     |--------------------|-----------------|  
     |**Catálogo de SSIS**|Paquetes almacenados en la base de datos de SSISDB. Los paquetes se encuentran en proyectos de [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] implementados en el servidor de [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] .|  
     |**SQL Server**|Paquetes almacenados en la base de datos MSDB. Use el servicio [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] para administrar estos paquetes.|  

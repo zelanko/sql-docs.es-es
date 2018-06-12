@@ -59,11 +59,12 @@ caps.latest.revision: 136
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 1a5246b1d7d6a00e4500c95bae20fb2975bbebc9
-ms.sourcegitcommit: bac61a04d11fdf61deeb03060e66621c0606c074
+ms.openlocfilehash: 484d0e3c9fccd0e65041665eef523dbf92311399
+ms.sourcegitcommit: 808d23a654ef03ea16db1aa23edab496b73e5072
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/14/2018
+ms.lasthandoff: 06/04/2018
+ms.locfileid: "34470296"
 ---
 # <a name="hints-transact-sql---query"></a>Sugerencias (Transact-SQL): consulta
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -197,7 +198,7 @@ ms.lasthandoff: 05/14/2018
  MAXDOP *number*  
  **Se aplica a**: desde [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] hasta [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].  
   
- Invalida la opción de configuración **Grado máximo de paralelismo** de **sp_configure** y Resource Governor para la consulta que especifica esta opción. La sugerencia de consulta MAXDOP puede superar el valor configurado con sp_configure. Si MAXDOP supera el valor configurado con Resource Governor, el [!INCLUDE[ssDE](../../includes/ssde-md.md)] usa el valor MAXDOP de Resource Governor, descrito en [ALTER WORKLOAD GROUP &#40;Transact-SQL&#41;](../../t-sql/statements/alter-workload-group-transact-sql.md). Se pueden aplicar todas las reglas semánticas usadas con la opción de configuración **Grado máximo de paralelismo** cuando se usa la sugerencia de consulta MAXDOP. Para obtener más información, vea [Configure the max degree of parallelism Server Configuration Option](../../database-engine/configure-windows/configure-the-max-degree-of-parallelism-server-configuration-option.md).  
+ Invalida la opción de configuración **Grado máximo de paralelismo** de **sp_configure** y Resource Governor para la consulta que especifica esta opción. La sugerencia de consulta MAXDOP puede superar el valor configurado con sp_configure. Si MAXDOP supera el valor configurado con Resource Governor, el [!INCLUDE[ssDE](../../includes/ssde-md.md)] usa el valor MAXDOP de Resource Governor, descrito en [ALTER WORKLOAD GROUP &#40;Transact-SQL&#41;](../../t-sql/statements/alter-workload-group-transact-sql.md). Se pueden aplicar todas las reglas semánticas usadas con la opción de configuración **Grado máximo de paralelismo** cuando se usa la sugerencia de consulta MAXDOP. Para obtener más información, vea [Establecer la opción de configuración del servidor Grado máximo de paralelismo](../../database-engine/configure-windows/configure-the-max-degree-of-parallelism-server-configuration-option.md).  
   
 > [!WARNING]     
 > Si MAXDOP se establece en cero, el servidor elige el grado máximo de paralelismo.  
@@ -276,12 +277,15 @@ ms.lasthandoff: 05/14/2018
 *  "ENABLE_HIST_AMENDMENT_FOR_ASC_KEYS"  
  Habilita las estadísticas rápidas generadas automáticamente (modificación de histograma) para las columnas de índice iniciales para las que se necesite la estimación de cardinalidad. El histograma usado para calcular la cardinalidad se ajustará en tiempo de compilación de la consulta para tener en cuenta el valor máximo o mínimo real de esta columna. Es equivalente a la [marca de seguimiento](../../t-sql/database-console-commands/dbcc-traceon-trace-flags-transact-sql.md) 4139. 
 *  "ASSUME_JOIN_PREDICATE_DEPENDS_ON_FILTERS"  
- Hace que SQL Server genere un plan de consulta mediante la suposición de contención simple en lugar de la suposición de contención de base predeterminada para las combinaciones en el modelo de [estimación de la cardinalidad](../../relational-databases/performance/cardinality-estimation-sql-server.md) del optimizador de consultas de [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] o versiones más recientes. Es equivalente a la [marca de seguimiento](../../t-sql/database-console-commands/dbcc-traceon-trace-flags-transact-sql.md) 9476. 
-*  "FORCE_DEFAULT_CARDINALITY_ESTIMATION"  
+ Hace que [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] genere un plan de consulta mediante la suposición de contención simple en lugar de la suposición de contención de base predeterminada para las combinaciones en el modelo de [estimación de la cardinalidad](../../relational-databases/performance/cardinality-estimation-sql-server.md) del [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] o versiones más recientes. Es equivalente a la [marca de seguimiento](../../t-sql/database-console-commands/dbcc-traceon-trace-flags-transact-sql.md) 9476. 
+*  "FORCE_DEFAULT_CARDINALITY_ESTIMATION"    
  Fuerza al optimizador de consultas a usar el modelo de [estimación de la cardinalidad](../../relational-databases/performance/cardinality-estimation-sql-server.md) que se corresponde con el nivel de compatibilidad de la base de datos actual. Use esta sugerencia para invalidar la opción de [configuración con ámbito de base de datos](../../t-sql/statements/alter-database-scoped-configuration-transact-sql.md) LEGACY_CARDINALITY_ESTIMATION=ON o la [marca de seguimiento](../../t-sql/database-console-commands/dbcc-traceon-trace-flags-transact-sql.md) 9481.
-* "DISABLE_INTERLEAVED_EXECUTION_TVF" Deshabilita la ejecución intercalada de funciones con valores de tabla de múltiples instrucciones.
-* "DISABLE_BATCH_MODE_MEMORY_GRANT_FEEDBACK" Deshabilita los comentarios de concesión de memoria de modo de proceso por lotes.
-* "DISABLE_BATCH_MODE_ADAPTIVE_JOINS" Deshabilita las combinaciones adaptables de modo de proceso por lotes.
+*  "DISABLE_INTERLEAVED_EXECUTION_TVF"   
+ Deshabilita la ejecución intercalada de las funciones con valores de tabla de múltiples instrucciones. Para obtener más información, vea [Ejecución intercalada de funciones con valores de tabla de múltiples instrucciones](../../relational-databases/performance/adaptive-query-processing.md#interleaved-execution-for-multi-statement-table-valued-functions).
+*  "DISABLE_BATCH_MODE_MEMORY_GRANT_FEEDBACK"     
+ Deshabilita los comentarios de concesión de memoria en modo por lotes. Para obtener más información, vea [Comentarios de concesión de memoria de modo de proceso por lotes](../../relational-databases/performance/adaptive-query-processing.md#batch-mode-memory-grant-feedback).
+*  "DISABLE_BATCH_MODE_ADAPTIVE_JOINS"     
+ Deshabilita las combinaciones adaptables del modo por lotes. Para obtener más información, vea [Combinaciones adaptables del modo por lotes](../../relational-databases/performance/adaptive-query-processing.md#batch-mode-adaptive-joins).
  
 > [!TIP]
 > Los nombres de sugerencia no distinguen mayúsculas de minúsculas.
@@ -328,7 +332,7 @@ TABLE HINT **(***exposed_object_name* [ **,** \<table_hint> [ [**,** ]...*n* ] ]
 -   Vistas de administración dinámica  
 -   Subconsultas con nombre  
   
- Se pueden especificar las sugerencias de tabla INDEX, FORCESCAN y FORCESEEK como sugerencias de consulta para una consulta que no tenga ninguna sugerencia de tabla existente, o bien se pueden usar para reemplazar en la consulta las respectivas sugerencias INDEX, FORCESCAN o FORCESEEK existentes. Las sugerencias de tabla distintas de INDEX, FORCESCAN y FORCESEEK no están permitidas como sugerencias de consulta, a menos que la consulta ya tenga una cláusula WITH que especifique la sugerencia de tabla. En este caso, también se debe especificar una consulta coincidente como sugerencia de consulta mediante el uso de TABLE HINT en la cláusula OPTION para conservar la semántica de la consulta. Por ejemplo, si la consulta contiene la sugerencia de tabla NOLOCK, la cláusula OPTION del parámetro **@hints** de la guía de plan también debe contener la sugerencia NOLOCK. Vea el ejemplo K. Cuando se especifica una sugerencia de tabla distinta de INDEX, FORCESCAN o FORCESEEK mediante TABLE HINT en la cláusula OPTION sin una sugerencia de consulta coincidente, o viceversa, se genera el error 8702 (que indica que la cláusula OPTION puede hacer que la semántica de la consulte cambie) y se produce un error en la consulta.  
+Se pueden especificar las sugerencias de tabla INDEX, FORCESCAN y FORCESEEK como sugerencias de consulta para una consulta que no tenga ninguna sugerencia de tabla existente, o bien se pueden usar para reemplazar en la consulta las respectivas sugerencias INDEX, FORCESCAN o FORCESEEK existentes. Las sugerencias de tabla distintas de INDEX, FORCESCAN y FORCESEEK no están permitidas como sugerencias de consulta, a menos que la consulta ya tenga una cláusula WITH que especifique la sugerencia de tabla. En este caso, también se debe especificar una consulta coincidente como sugerencia de consulta mediante el uso de TABLE HINT en la cláusula OPTION para conservar la semántica de la consulta. Por ejemplo, si la consulta contiene la sugerencia de tabla NOLOCK, la cláusula OPTION del parámetro **@hints** de la guía de plan también debe contener la sugerencia NOLOCK. Vea el ejemplo K. Cuando se especifica una sugerencia de tabla distinta de INDEX, FORCESCAN o FORCESEEK mediante TABLE HINT en la cláusula OPTION sin una sugerencia de consulta coincidente, o viceversa, se genera el error 8702 (que indica que la cláusula OPTION puede hacer que la semántica de la consulte cambie) y se produce un error en la consulta.  
   
 ## <a name="examples"></a>Ejemplos  
   

@@ -3,7 +3,6 @@ title: Clústeres de conmutación por error de Windows Server con SQL Server | M
 ms.custom: ''
 ms.date: 01/18/2017
 ms.prod: sql
-ms.prod_service: high-availability
 ms.reviewer: ''
 ms.suite: sql
 ms.technology: high-availability
@@ -17,14 +16,15 @@ helpviewer_keywords:
 - failover clustering [SQL Server], Always On Availability Groups
 ms.assetid: 79d2ea5a-edd8-4b3b-9502-96202057b01a
 caps.latest.revision: 35
-author: MikeRayMSFT
-ms.author: mikeray
+author: MashaMSFT
+ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 31c8079053cc729a5ca5445dc1aebd7ccf32e738
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 43117124b43bf234f8d72c9e2974d6e42631d06c
+ms.sourcegitcommit: 8aa151e3280eb6372bf95fab63ecbab9dd3f2e5e
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/05/2018
+ms.locfileid: "34772471"
 ---
 # <a name="windows-server-failover-clustering-with-sql-server"></a>Clústeres de conmutación por error de Windows Server con SQL Server
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -41,7 +41,7 @@ ms.lasthandoff: 05/03/2018
  Una entidad física o lógica que puede ser propiedad de un nodo, ser puesta en línea y sin conexión, ser movida entre nodos y ser administrada como un objeto de clúster. Un recurso de clúster puede ser propiedad de un único nodo en cualquier momento.  
   
  Rol  
- Una colección de recursos de clúster administrados como un único objeto de clúster para proporcionar una funcionalidad específica. Para SQL Server, un rol debe ser un grupo de disponibilidad Always On (AG) o una instancia de clúster de conmutación por error Always On (FCI). Un rol contiene todos los recursos de clúster necesarios para un AG o una FCI. La conmutación por error y la conmutación por recuperación siempre actúan en contexto de roles. Para una FCI, un rol contendrá un recurso de dirección IP, un recurso de nombre de red y los recursos de SQL Server. Un rol de AG contendrá el recurso de AG y, si hay un agente de escucha configurado, un nombre de gusano de red y un recurso de IP. 
+ Una colección de recursos de clúster administrados como un único objeto de clúster para proporcionar una funcionalidad específica. Para SQL Server, un rol debe ser un grupo de disponibilidad Always On (AG) o una instancia de clúster de conmutación por error Always On (FCI). Un rol contiene todos los recursos de clúster necesarios para un AG o una FCI. La conmutación por error y la conmutación por recuperación siempre actúan en contexto de roles. Para una FCI, un rol contendrá un recurso de dirección IP, un recurso de nombre de red y los recursos de SQL Server. Un rol de AG contendrá el recurso de AG y, si hay un agente de escucha configurado, un nombre de red y un recurso de IP. 
 
  Recurso de nombre de red  
  Un nombre de servidor lógico que se administra como un recurso de clúster. Un recurso de nombre de red debe utilizarse con un recurso de dirección IP. Estas entradas pueden requerir objetos en Active Directory Domain Services y DNS. 

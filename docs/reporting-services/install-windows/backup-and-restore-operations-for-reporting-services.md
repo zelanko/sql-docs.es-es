@@ -1,7 +1,7 @@
 ---
 title: Operaciones de copia de seguridad y restauración de Reporting Services | Microsoft Docs
 ms.custom: ''
-ms.date: 05/30/2017
+ms.date: 05/24/2018
 ms.prod: reporting-services
 ms.prod_service: reporting-services-sharepoint, reporting-services-native
 ms.component: install-windows
@@ -24,15 +24,16 @@ caps.latest.revision: 43
 author: markingmyname
 ms.author: maghan
 manager: kfile
-ms.openlocfilehash: 1882b8d07d7288082ad4963cd0a735d072f19404
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 1e6c08911263e73e308392573dc90128351e275d
+ms.sourcegitcommit: 808d23a654ef03ea16db1aa23edab496b73e5072
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/04/2018
+ms.locfileid: "34550066"
 ---
 # <a name="backup-and-restore-operations-for-reporting-services"></a>Operaciones de copia de seguridad y restauración de Reporting Services
 
-  En este tema se ofrece información general acerca de todos los archivos de datos que se usan en una instalación de [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] y se describe cuándo y cómo se debe realizar una copia de seguridad de los mismos. La parte más importante de una estrategia de recuperación es desarrollar un plan de copias de seguridad y restauración de los archivos de base de datos del servidor de informes. Sin embargo, una estrategia de recuperación más completa incluiría copias de seguridad de las claves de cifrado, extensiones o ensamblados personalizados, archivos de configuración y archivos de origen para informes y modelos.  
+  En este artículo se ofrece información general sobre todos los archivos de datos que se usan en una instalación de [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] y se describe cuándo y cómo se debe realizar una copia de seguridad de los archivos. La parte más importante de una estrategia de recuperación es desarrollar un plan de copias de seguridad y restauración de los archivos de base de datos del servidor de informes. Pero una estrategia de recuperación más completa incluiría copias de seguridad de las claves de cifrado, extensiones o ensamblados personalizados, archivos de configuración y archivos de origen para informes.  
   
  **[!INCLUDE[applies](../../includes/applies-md.md)]**  Modo nativo de [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] | Modo de SharePoint de [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]  
   
@@ -40,7 +41,7 @@ ms.lasthandoff: 05/03/2018
   
 -   Si se van a mover únicamente las bases de datos del servidor de informes, se pueden usar las operaciones de copias de seguridad y restauración, o de adjuntar y separar, para reubicar las bases de datos en una instancia de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] diferente. Para más información, vea [Mover las bases de datos del servidor de informes a otro equipo &#40;Modo nativo de SSRS&#41;](../../reporting-services/report-server/moving-the-report-server-databases-to-another-computer-ssrs-native-mode.md).  
   
--   El traspaso de una instalación de [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] a otro equipo se conoce como migración. Cuando se migra una instalación, se ejecuta el programa de instalación para instalar una nueva instancia del servidor de informes y luego copiar datos de instancia al nuevo equipo. Para obtener más información sobre la migración de una instalación de [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] , vea los temas siguientes:  
+-   El traspaso de una instalación de [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] a otro equipo se conoce como migración. Cuando se migra una instalación, se ejecuta el programa de instalación para instalar una nueva instancia del servidor de informes y luego copiar datos de instancia al nuevo equipo. Para obtener más información sobre la migración de una instalación de [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)], vea los artículos siguientes:  
   
     -   [Actualizar y migrar Reporting Services](../../reporting-services/install-windows/upgrade-and-migrate-reporting-services.md)  
   
@@ -49,13 +50,13 @@ ms.lasthandoff: 05/03/2018
     -   [Migrar una instalación de Reporting Services &#40;modo nativo&#41;](../../reporting-services/install-windows/migrate-a-reporting-services-installation-native-mode.md)  
   
 ## <a name="backing-up-the-report-server-databases"></a>Realizar copias de seguridad de bases de datos del servidor de informes  
- Puesto que un servidor de informes es un servidor sin estado, todos los datos de aplicación se almacenan en las bases de datos **reportserver** y **reportservertempdb** que se ejecutan en una instancia del [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] . Para realizar una copia de seguridad de las bases de datos **reportserver** y **reportservertempdb** , use uno de los métodos admitidos para copias de seguridad de bases de datos [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Éstas son algunas de las recomendaciones específicas de las bases de datos del servidor de informes:  
+ Puesto que un servidor de informes es un servidor sin estado, todos los datos de aplicación se almacenan en las bases de datos **reportserver** y **reportservertempdb** que se ejecutan en una instancia del [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] . Se puede realizar una copia de seguridad de las bases de datos **reportserver** y **reportservertempdb** mediante uno de los métodos admitidos para copias de seguridad de bases de datos [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Estas son algunas recomendaciones específicas de las bases de datos del servidor de informes:  
   
--   Utilice el modelo de recuperación completa para realizar la copia de seguridad de la base de datos **reportserver** .  
+-   Use el modelo de recuperación completa para realizar la copia de seguridad de la base de datos **reportserver**.  
   
--   Utilice el modelo de recuperación simple para la copia de seguridad de la base de datos **reportservertempdb** .  
+-   Use el modelo de recuperación simple para realizar la copia de seguridad de la base de datos **reportservertempdb**.  
   
--   Puede utilizar distintas programaciones de copia de seguridad para cada base de datos. La copia de seguridad de **reportservertempdb** se realiza únicamente para evitar tener que volver a crearla en caso de un error de hardware. Si se produce un error de hardware, no es necesario recuperar los datos de **reportservertempdb**, pero sí se requiere la estructura de la tabla. Si se pierde **reportservertempdb**, la única forma de recuperarla es volver a crear la base de datos del servidor de informes. Si se vuelve a crear **reportservertempdb**, es importante que su nombre sea el mismo que el de la base de datos primaria del servidor de informes.  
+-   Puede utilizar distintas programaciones de copia de seguridad para cada base de datos. La copia de seguridad de **reportservertempdb** solo se realiza para evitar tener que volver a crearla en caso de un error de hardware. Si se produce un error de hardware, no es necesario recuperar los datos de **reportservertempdb**, pero sí se requiere la estructura de la tabla. Si se pierde **reportservertempdb**, la única forma de recuperarla es volver a crear la base de datos del servidor de informes. Si se vuelve a crear **reportservertempdb**, es importante que su nombre sea el mismo que el de la base de datos primaria del servidor de informes.  
   
  Para obtener más información sobre la copia de seguridad y la recuperación de bases de datos relacionales de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , vea [Realizar copias de seguridad y restaurar bases de datos de SQL Server](../../relational-databases/backup-restore/back-up-and-restore-of-sql-server-databases.md).  
   
@@ -63,10 +64,10 @@ ms.lasthandoff: 05/03/2018
 >  Si el servidor de informes está en modo de SharePoint, hay que tener en cuenta otras bases de datos adicionales, incluidas las bases de datos de configuración de SharePoint y la base de datos de alertas de [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]. En el modo de SharePoint, se crean tres bases de datos para cada aplicación de servicio de [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] . Las bases de datos **reportserver**, **reportservertempdb**y **dataalerting** . Para obtener más información, vea [Copias de seguridad y restauración de aplicaciones de servicio de SharePoint para Reporting Services](../../reporting-services/report-server-sharepoint/backup-and-restore-reporting-services-sharepoint-service-applications.md).  
   
 ## <a name="backing-up-the-encryption-keys"></a>Realizar copias de seguridad de claves de cifrado  
- La primera vez que se configura una instalación de [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] , se recomienda realizar una copia de seguridad de las claves de cifrado. Asimismo, se debería realizar una copia de seguridad de las claves siempre que se cambie la identidad de las cuentas de servicio o se cambie el nombre del equipo. Para obtener más información, vea [Hacer copia de seguridad y restaurar claves de cifrado de Reporting Services](../../reporting-services/install-windows/ssrs-encryption-keys-back-up-and-restore-encryption-keys.md). Para servidores de informes en modo de SharePoint, vea la sección "Administración de claves" de [Administrar una aplicación de servicio de SharePoint para Reporting Services](../../reporting-services/report-server-sharepoint/manage-a-reporting-services-sharepoint-service-application.md).  
+ La primera vez que se configura una instalación de [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)], se recomienda realizar una copia de seguridad de las claves de cifrado. También se debería realizar una copia de seguridad de las claves siempre que se cambie la identidad de las cuentas de servicio o el nombre del equipo. Para obtener más información, vea [Hacer copia de seguridad y restaurar claves de cifrado de Reporting Services](../../reporting-services/install-windows/ssrs-encryption-keys-back-up-and-restore-encryption-keys.md). Para servidores de informes en modo de SharePoint, vea la sección "Administración de claves" de [Administrar una aplicación de servicio de SharePoint para Reporting Services](../../reporting-services/report-server-sharepoint/manage-a-reporting-services-sharepoint-service-application.md).  
   
 ## <a name="backing-up-the-configuration-files"></a>Realizar copias de seguridad de archivos de configuración  
- [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] usa archivos de configuración para almacenar la configuración de aplicación. Debe realizarse una copia de seguridad de estos archivos la primera vez que se configura el servidor y después de que se implementen extensiones personalizadas. Debe realizar una copia de seguridad de los siguientes archivos:  
+ [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] usa archivos de configuración para almacenar la configuración de aplicación. Se debe realizar una copia de seguridad de estos archivos la primera vez que se configura el servidor y después de implementar extensiones personalizadas. Debe realizar una copia de seguridad de los siguientes archivos:  
   
 -   Rsreportserver.config  
   
@@ -76,12 +77,12 @@ ms.lasthandoff: 05/03/2018
   
 -   Reportingservicesservice.exe.config  
   
--   Web.config para aplicaciones [!INCLUDE[vstecasp](../../includes/vstecasp-md.md)] del Servidor de informes y del Administrador de informes.  
+-   Web.config para la aplicación [!INCLUDE[vstecasp](../../includes/vstecasp-md.md)] del servidor de informes.
   
 -   Machine.config de [!INCLUDE[vstecasp](../../includes/vstecasp-md.md)]  
   
 ## <a name="backing-up-data-files"></a>Realizar una copia de seguridad de archivos de datos  
- Realice una copia de seguridad de los archivos que cree y mantenga en el Diseñador de informes y en el Diseñador de modelos. Estos archivos incluyen archivos de definición de informe (.rdl), de modelo de informe (.smdl), de orígenes de datos compartidos (.rds), de vista de datos (.dv), de origen de datos (.ds), de proyecto de servidor de informes (.rptproj) y de solución de informes (.sln).  
+ Realice una copia de seguridad de los archivos que cree y mantenga en el Diseñador de informes. Estos archivos incluyen archivos de definición de informe (.rdl), de orígenes de datos compartidos (.rds), de vista de datos (.dv), de origen de datos (.ds), de proyecto de servidor de informes (.rptproj) y de solución de informes (.sln).  
   
  No olvide realizar una copia de seguridad de los archivos de script (.rss) que haya creado para las tareas de administración o implementación.  
   

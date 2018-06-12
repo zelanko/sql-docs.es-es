@@ -1,7 +1,7 @@
 ---
 title: Almacenamiento de las credenciales en un origen de datos de Reporting Services | Microsoft Docs
 ms.custom: ''
-ms.date: 09/23/2015
+ms.date: 05/24/2018
 ms.prod: reporting-services
 ms.prod_service: reporting-services-sharepoint, reporting-services-native
 ms.component: report-data
@@ -20,26 +20,19 @@ caps.latest.revision: 42
 author: markingmyname
 ms.author: maghan
 manager: kfile
-ms.openlocfilehash: fa7bc5471455e428fb680dbe0369bc1fd4888dbe
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 8511d948e0e942451e4c304e6a381686c0023a08
+ms.sourcegitcommit: 8aa151e3280eb6372bf95fab63ecbab9dd3f2e5e
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/05/2018
+ms.locfileid: "34550686"
 ---
 # <a name="store-credentials-in-a-reporting-services-data-source"></a>Almacenamiento de las credenciales en un origen de datos de Reporting Services
   Es posible configurar credenciales almacenadas que un servidor de informes de [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] use para obtener acceso a los datos externos de un informe. Las credenciales almacenadas se utilizan si un informe se ejecuta de forma desatendida, por ejemplo, una suscripción [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] que publica un informe como correo electrónico. El servidor de informes recupera y usa las credenciales cuando se programa o desencadena el procesamiento de informes. En este tema se explica cómo configurar credenciales almacenadas para los servidores de informes en modo Nativo y en modo de SharePoint.  
   
-||  
-|-|  
+|| |
+|-|-|
 |**[!INCLUDE[applies](../../includes/applies-md.md)]**  Modo nativo de [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] &#124; Modo de SharePoint de [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]|  
-  
--   [Configurar credenciales almacenadas para un origen de datos específico de informe (modo Nativo)](#bkmk_stored_credentials_data_source_native)  
-  
--   [Configurar credenciales almacenadas para un origen de datos específico de informe (modo de SharePoint)](#bkmk_stored_credentials_data_source_sharepoint)  
-  
--   [Configurar credenciales almacenadas para un origen de datos compartido (modo Nativo)](#bkmk_stored_credentials_shared_data_source_native)  
-  
--   [Configurar credenciales almacenadas para un origen de datos compartido (modo de SharePoint)](#bkmk_stored_credentials_shared_data_source_sharepoint)  
   
 ##  <a name="bkmk_top"></a> Requisitos de directiva de seguridad para credenciales almacenadas  
  ![as_powerpivot_refresh_sss_set_key](../../analysis-services/power-pivot-sharepoint/media/as-powerpivot-refresh-sss-set-key.gif "as_powerpivot_refresh_sss_set_key") Es necesario que la cuenta que usa para las credenciales almacenadas se configure para una de las siguientes directivas de seguridad en el servidor de informes. Se recomienda seleccionar la directiva con el nivel mínimo de permisos necesario para el entorno.  
@@ -52,7 +45,7 @@ ms.lasthandoff: 05/03/2018
   
 ##  <a name="bkmk_stored_credentials_data_source_native"></a> Configurar credenciales almacenadas para un origen de datos específico de informe (modo Nativo)  
   
-1.  En el modo Nativo del Administrador de informes, vaya a la carpeta que contiene el informe. Haga clic en el menú contextual del elemento ![menú contextual en el Administrador de informes para elementos de ssrs](../../reporting-services/report-data/media/ssrs-report-manager-item-context-menu.png "menú contextual en el Administrador de informes para elementos de ssrs").  
+1.  En el portal web, vaya a la carpeta que contiene el informe. Haga clic en el botón de puntos suspensivos (...) en la esquina superior derecha del icono de informe.  
   
 2.  Haga clic en **Administrar** y luego en **Orígenes de datos**.  
   
@@ -108,11 +101,11 @@ ms.lasthandoff: 05/03/2018
   
 ##  <a name="bkmk_stored_credentials_shared_data_source_native"></a> Configurar credenciales almacenadas para un origen de datos compartido (modo Nativo)  
   
-1.  En el modo Nativo del Administrador de informes, vaya al elemento del origen de datos compartido. ![Icono de origen de datos compartido](../../reporting-services/report-data/media/hlp-16datasource.png "Icono de origen de datos compartido")  
+1.  En el portal web, vaya al elemento del origen de datos compartido. 
   
-2.  Haga clic en el menú contextual ![menú contextual en el Administrador de informes para elementos de ssrs](../../reporting-services/report-data/media/ssrs-report-manager-item-context-menu.png "menú contextual en el Administrador de informes para elementos de ssrs") y, luego, haga clic en **Administrar**.  
+2.  Haga clic en el botón de puntos suspensivos (...) en la esquina superior derecha del icono de informe > **Administrar**. 
   
-3.  En la lista **Tipo de origen de datos** , especifique la extensión de procesamiento de datos que se usa para procesar los datos del origen de datos.  
+3.  En la lista **Tipo**, especifique la extensión de procesamiento de datos que se usa para procesar datos desde el origen de datos.  
   
 4.  En **Cadena de conexión**, especifique la cadena de conexión que usa el servidor de informes para conectarse al origen de datos. [!INCLUDE[msCoName](../../includes/msconame-md.md)] recomienda que no especifique credenciales en la cadena de conexión.  
   
@@ -161,10 +154,5 @@ ms.lasthandoff: 05/03/2018
      ![Icono de flecha usado con el vínculo Volver al principio](../../analysis-services/instances/media/uparrow16x16.gif "Icono de flecha usado con el vínculo Volver al principio") [Requisitos de directiva de seguridad para credenciales almacenadas](#bkmk_top)  
   
 ## <a name="see-also"></a>Ver también  
- [Especificar información de credenciales y conexión para los orígenes de datos de informes](../../reporting-services/report-data/specify-credential-and-connection-information-for-report-data-sources.md)   
- [Configurar propiedades de origen de datos para un informe &#40;Administrador de informes&#41;](../../reporting-services/report-data/configure-data-source-properties-for-a-report-report-manager.md)   
- [Crear, eliminar o modificar un origen de datos compartido &#40;Administrador de informes&#41;](http://msdn.microsoft.com/library/cd7bace3-f8ec-4ee3-8a9f-2f217cdca9f2)   
- [Orígenes de datos &#40;página de propiedades del Administrador de informes&#41;](http://msdn.microsoft.com/library/f37edda0-19e6-489e-b544-8751fa6b6cfb)   
- [Nuevo origen de datos &#40;página del Administrador de informes&#41;](http://msdn.microsoft.com/library/35563d4c-a3d5-4f95-bf46-605da9dfcbb8)  
-  
+ [Especificación de información de credenciales y conexión para los orígenes de datos de informes](../../reporting-services/report-data/specify-credential-and-connection-information-for-report-data-sources.md)   
   

@@ -12,11 +12,12 @@ ms.technology:
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 42041134b027d9a9f274a31d0b6a7276dcc23ef8
-ms.sourcegitcommit: b5ab9f3a55800b0ccd7e16997f4cd6184b4995f9
+ms.openlocfilehash: d482a7e8c3cf75be0cb87b35323c5fbc472a3f7b
+ms.sourcegitcommit: 808d23a654ef03ea16db1aa23edab496b73e5072
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/23/2018
+ms.lasthandoff: 06/04/2018
+ms.locfileid: "34585637"
 ---
 # <a name="deploy-and-run-an-ssis-package-in-azure"></a>Implementar y ejecutar un paquete SSIS en Azure
 Este tutorial muestra cómo implementar un proyecto de SQL Server Integration Services para la base de datos del catálogo de SSISDB en Azure SQL Database, ejecutar un paquete en Azure-SSIS Integration Runtime y supervisar el paquete en ejecución.
@@ -29,10 +30,10 @@ Asegúrese también de que la base de datos SSISDB esté configurada en Azure y 
 
 ## <a name="for-azure-sql-database-get-the-connection-info"></a>En el caso de Azure SQL Database, obtenga la información de conexión.
 
-Para ejecutar el paquete en Azure SQL Database, obtenga la información de conexión necesaria para conectarse a la base de datos del catálogo de SSIS (SSISDB). Necesita el nombre completo y la información de inicio de sesión del servidor en los procedimientos siguientes.
+Para ejecutar el paquete en Azure SQL Database, debe obtener la información de conexión necesaria para conectarse a la base de datos del catálogo de SSIS (SSISDB). Necesita el nombre completo y la información de inicio de sesión del servidor en los procedimientos siguientes.
 
 1. Inicie sesión en el [Portal de Azure](https://portal.azure.com/).
-2. Seleccione **Bases de datos SQL** en el menú izquierdo y seleccione la base de datos SSISDB en la página **Bases de datos SQL**. 
+2. Seleccione **Bases de datos SQL** en el menú izquierdo y, después, seleccione la base de datos SSISDB en la página **Bases de datos SQL**. 
 3. En la página **Introducción** de la base de datos, compruebe el nombre completo del servidor. Mantenga el puntero del ratón sobre el nombre del servidor para ver la opción **Haga clic para copiar**. 
 4. Si olvida la información de inicio de sesión del servidor de Azure SQL Database, navegue a la página del servidor de SQL Database para ver el nombre del administrador del servidor. Si es necesario, puede restablecer la contraseña.
 
@@ -93,15 +94,16 @@ Para más información sobre cómo implementar los paquetes y respecto del Asist
   
 3.  En la página **Seleccionar destino**, seleccione el destino del proyecto.
     -   Escriba el nombre completo del servidor con el formato `<server_name>.database.windows.net`.
-    -   Proporcione la información de autenticación y seleccione **Conectar**.
+    -   Proporcione la información de autenticación y, después, seleccione **Conectar**.
     -   A continuación, haga clic en **Examinar** para seleccionar la carpeta de destino de SSISDB.
-    -   Después, seleccione **Siguiente** para abrir la página **Revisión**. El botón **Siguiente** solo se habilitará después una vez que haya seleccionado **Conectar**.
+    -   Después, seleccione **Siguiente** para abrir la página **Revisión** (el botón **Siguiente** solo se habilitará después de que haya seleccionado **Conectar**).
   
 4.  En la página **Revisión**, revise la configuración seleccionada.
     -   Puede cambiar las selecciones si hace clic en **Anterior** o en cualquiera de los pasos del panel izquierdo.
     -   Seleccione **Implementar** para iniciar el proceso de implementación.
 
-    > ![NOTA] Si recibe el mensaje de error **No hay ningún agente de trabajo activo (proveedor de datos .NetSqlClient)**, asegúrese de que se está ejecutando Azure-SSIS IR. Este error se produce si intenta implementar mientras Azure-SSIS IR está en estado detenido.
+    > [!NOTE]
+    > Si recibe el mensaje de error **No hay ningún agente de trabajo activo (proveedor de datos SqlClient de .NET)**, asegúrese de que se está ejecutando Azure-SSIS Integration Runtime. Este error se produce si intenta implementar mientras Azure-SSIS IR está en estado detenido.
 
 5.  Una vez completado el proceso de implementación, se abrirá la página **Resultados**. Esta página muestra si cada acción si se completó correctamente o no.
     -   Si la acción no se realiza correctamente, seleccione **Error** en la columna **Resultado** para que aparezca una explicación del error.
@@ -190,9 +192,17 @@ También puede seleccionar un paquete en el Explorador de objetos, hacer clic co
 
 Para obtener más información sobre cómo supervisar paquetes en ejecución en SSMS, vea [Monitor Running Packages and Other Operations](https://docs.microsoft.com/sql/integration-services/performance/monitor-running-packages-and-other-operations) (Supervisar paquetes en ejecución y otras operaciones).
 
+## <a name="monitor-the-execute-ssis-package-activity"></a>Supervisar la actividad Ejecutar paquete SSIS
+
+Si un paquete se ejecuta como parte de una canalización de Azure Data Factory con la actividad Ejecutar paquete SSIS, se pueden supervisar las ejecuciones de canalización en la interfaz de usuario de Data Factory. Después, se puede obtener el identificador de ejecución de SSISDB de la salida de la ejecución de la actividad y usarlo para comprobar registros de ejecución más completos y mensajes de error en SSMS.
+
+![Obtener el identificador de ejecución del paquete en Data Factory](media/ssis-azure-deploy-run-monitor-tutorial/get-execution-id.png)
+
 ## <a name="monitor-the-azure-ssis-integration-runtime"></a>Supervisar Azure-SSIS Integration Runtime
 
-Para obtener información sobre el estado de la instancia de Azure-SSIS Integration Runtime en la que se están ejecutando los paquetes, use los comandos de PowerShell que encontrará a continuación. Para cada uno de ellos, proporcione el nombre de Data Factory, Azure-SSIS IR y el grupo de recursos. Para obtener más información, vea [Monitor Azure-SSIS integration runtime](https://docs.microsoft.com/azure/data-factory/monitor-integration-runtime#azure-ssis-integration-runtime) (Supervisión de Integration Runtime de Azure-SSIS).
+Para obtener información sobre el estado de la instancia de Azure-SSIS Integration Runtime en la que se están ejecutando los paquetes, use los comandos de PowerShell que encontrará a continuación. Para cada uno de ellos, proporcione el nombre de Data Factory, Azure-SSIS IR y el grupo de recursos.
+
+Para obtener más información, vea [Monitor Azure-SSIS integration runtime](https://docs.microsoft.com/azure/data-factory/monitor-integration-runtime#azure-ssis-integration-runtime) (Supervisión de Integration Runtime de Azure-SSIS).
 
 ### <a name="get-metadata-about-the-azure-ssis-integration-runtime"></a>Obtener los metadatos de Azure-SSIS Integration Runtime
 

@@ -1,7 +1,7 @@
 ---
-title: Información general de extensiones de seguridad | Microsoft Docs
+title: Información general de extensiones de seguridad (SSRS) | Microsoft Docs
 ms.custom: ''
-ms.date: 03/15/2017
+ms.date: 05/24/2018
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
 ms.component: extensions
@@ -19,13 +19,14 @@ caps.latest.revision: 22
 author: markingmyname
 ms.author: maghan
 manager: kfile
-ms.openlocfilehash: 0aa92c8538efae252aa205a38aa6f5eb2c542c90
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 4cd80296e13af18902d48b934bf26144d153c039
+ms.sourcegitcommit: 8aa151e3280eb6372bf95fab63ecbab9dd3f2e5e
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/05/2018
+ms.locfileid: "34550466"
 ---
-# <a name="security-extensions-overview"></a>Información general de extensiones de seguridad
+# <a name="security-extensions-overview---reporting-services-ssrs"></a>Información general de extensiones de seguridad: Reporting Services (SSRS)
   Una extensión de seguridad [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] permite la autenticación y autorización de usuarios o grupos; es decir, les permite a usuarios diferentes iniciar sesión en un servidor de informes y, en función de sus identidades, realizar tareas u operaciones diferentes. De forma predeterminada, [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] utiliza una extensión de autenticación basada en Windows que utiliza los protocolos de cuenta de Windows para comprobar las identidades de los usuarios que indican que tienen cuentas en el sistema. [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] utiliza un sistema de seguridad basada en roles para autorizar a los usuarios. El modelo de seguridad basado en roles [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] es similar a los modelos de seguridad basados en roles de otras tecnologías.  
   
  Dado que las extensiones de seguridad están basadas en una API abierta y extensible, puede crear nuevas extensiones de autenticación y de autorización en [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)]. El siguiente es un ejemplo de una implementación de extensión de seguridad típica que utiliza la autenticación y autorización basadas en formularios:  
@@ -34,7 +35,7 @@ ms.lasthandoff: 05/03/2018
   
  Como se muestra en la ilustración, la autenticación y autorización se producen como sigue:  
   
-1.  Un usuario intenta tener acceso al Administrador de informes utilizando una URL y se le redirige a un formulario que recopila las credenciales del usuario para la aplicación cliente.  
+1.  Un usuario intenta acceder al portal web mediante una dirección URL y se le redirige a un formulario que recopila las credenciales del usuario para la aplicación cliente.  
   
 2.  El usuario envía las credenciales al formulario.  
   
@@ -42,11 +43,11 @@ ms.lasthandoff: 05/03/2018
   
 4.  El servicio web llama la extensión de seguridad proporcionada por el cliente y comprueba que el nombre de usuario y la contraseña existen en la entidad de seguridad personalizada.  
   
-5.  Después de la autenticación, el servicio web crea un vale de autenticación (conocido como una "cookie"), administra el vale y comprueba el rol del usuario para la página Inicio de Administrador de informes.  
+5.  Después de la autenticación, el servicio web crea un vale de autenticación (conocido como una "cookie"), lo administra y comprueba el rol del usuario para la página Inicio del portal web.  
   
-6.  El servicio web devuelve la cookie al explorador y muestra la interfaz de usuario adecuada en Administrador de informes.  
+6.  El servicio web devuelve la cookie al explorador y muestra la interfaz de usuario adecuada en el portal web.  
   
-7.  Una vez autenticado el usuario, el explorador realiza las solicitudes a Administrador de informes a la vez que transmite la cookie en el encabezado HTTP. Estas solicitudes son una respuesta a las acciones del usuario dentro de la aplicación Administrador de informes.  
+7.  Una vez autenticado el usuario, el explorador realiza las solicitudes al portal web a la vez que transmite la cookie en el encabezado HTTP. Estas solicitudes son una respuesta a las acciones del usuario dentro del portal web.  
   
 8.  La cookie se transmite en el encabezado HTTP al servicio web junto con la operación del usuario solicitada.  
   
@@ -69,6 +70,5 @@ ms.lasthandoff: 05/03/2018
   
 ## <a name="see-also"></a>Ver también  
  [Implementación de una extensión de seguridad](../../../reporting-services/extensions/security-extension/implementing-a-security-extension.md)   
- [Configurar el Administrador de informes para pasar cookies de autenticación personalizadas](https://msdn.microsoft.com/library/ms345241(v=sql.110).aspx)  
   
   

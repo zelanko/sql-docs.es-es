@@ -17,11 +17,12 @@ caps.latest.revision: 56
 author: maggiesMSFT
 ms.author: maggies
 manager: kfile
-ms.openlocfilehash: f069b1f4303566aed0bcb486717b7f254691553d
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: a6da904a6bcc7f70ca5185c0e59a6075b651ce1b
+ms.sourcegitcommit: 808d23a654ef03ea16db1aa23edab496b73e5072
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/04/2018
+ms.locfileid: "34550806"
 ---
 # <a name="lesson-6-adding-grouping-and-totals-reporting-services"></a>Lesson 6: Adding Grouping and Totals (Reporting Services)
 En esta lección del tutorial, agregará grupos y totales al informe de [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] para organizar y resumir los datos.  
@@ -116,7 +117,7 @@ En esta lección del tutorial, agregará grupos y totales al informe de [!INCLUD
   
 ## <a name="bkmk_publishreport"></a>Para publicar el informe en el servidor de informes (opcional)  
   
-1.  Un paso opcional es publicar el informe completado en el servidor de informes en modo nativo de modo que pueda ver el informe en el Administrador de informes.  
+1.  Un paso opcional consiste en publicar el informe completado en el servidor de informes en modo nativo para poder verlo en el portal web.  
   
 2.  Haga clic en **Proyecto** y, después, haga clic en **Propiedades del tutorial...**  
   

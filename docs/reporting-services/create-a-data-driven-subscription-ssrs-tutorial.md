@@ -21,11 +21,12 @@ caps.latest.revision: 50
 author: markingmyname
 ms.author: maghan
 manager: kfile
-ms.openlocfilehash: da6c81701af24b495e84cb26dc3a6581d00ba1f6
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 76498c4abdc226194f71648cae49640bdae2dfcc
+ms.sourcegitcommit: 808d23a654ef03ea16db1aa23edab496b73e5072
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/04/2018
+ms.locfileid: "34689223"
 ---
 # <a name="create-a-data-driven-subscription-ssrs-tutorial"></a>Crear una suscripción controlada por datos (Tutorial de SSRS)
 En este tutorial de [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] se explican los conceptos relacionados con las suscripciones controladas por datos mediante un ejemplo sencillo en el que se crea una suscripción controlada por datos para generar y guardar la salida de informe filtrado en un recurso compartido de archivos. 
@@ -46,7 +47,7 @@ En este tutorial de [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] s
 
  En el siguiente diagrama se muestra el flujo de trabajo básico del tutorial.
 
-Paso  |Description 
+Paso  |Descripción 
 ---------|---------
 (1)     |  La configuración de la suscripción toma nota del informe de origen, la programación y la asignación de campos en la base de datos de suscriptor.        
 (2)     | La tabla OrderInfo contiene cuatro números de pedido que se usan para el filtrado, uno por archivo. La tabla también contiene los formatos de archivo de los informes generados.

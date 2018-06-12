@@ -1,7 +1,7 @@
 ---
 title: Crear una base de datos del servidor de informes de modo nativo (Administrador de configuración de SSRS) | Microsoft Docs
 ms.custom: ''
-ms.date: 05/24/2017
+ms.date: 05/24/2018
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
 ms.component: install-windows
@@ -18,11 +18,12 @@ caps.latest.revision: 12
 author: markingmyname
 ms.author: maghan
 manager: kfile
-ms.openlocfilehash: 20b53dc4af07f18f4bcb9161e786b3542b162e37
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 507308300934270e9008f775b4da6221278c2d18
+ms.sourcegitcommit: 8aa151e3280eb6372bf95fab63ecbab9dd3f2e5e
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/05/2018
+ms.locfileid: "34550516"
 ---
 # <a name="create-a-native-mode-report-server-database"></a>Crear una base de datos del servidor de informes de modo nativo
 
@@ -118,7 +119,7 @@ Para crear una base de datos del servidor de informes o cambiar la cadena de con
   
 7.  Revise la información de la página Resumen para comprobar que la configuración es correcta y, después, seleccione **Siguiente**.  
   
-8.  Compruebe la conexión al seleccionar una dirección URL en las páginas Dirección URL del servidor de informes o Dirección URL del Administrador de informes. Las direcciones URL deben estar definidas para que esta prueba funcione. Si la conexión de base de datos del servidor de informes es válida, verá la jerarquía de carpetas del servidor de informes o el Administrador de informes en una ventana del explorador. Para obtener más información, vea [Comprobar una instalación de Reporting Services](../../reporting-services/install-windows/verify-a-reporting-services-installation.md) en los Libros en pantalla de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
+8.  Compruebe la conexión mediante la selección de una dirección URL en la página Dirección URL del servidor de informes. Las direcciones URL deben estar definidas para que esta prueba funcione. Si la conexión de base de datos del servidor de informes es válida, verá la jerarquía de carpetas del servidor de informes. Para obtener más información, vea [Comprobar una instalación de Reporting Services](../../reporting-services/install-windows/verify-a-reporting-services-installation.md) en los Libros en pantalla de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
 
 ## <a name="change-database-credentials"></a>Modificar las credenciales de base de datos
 

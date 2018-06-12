@@ -19,11 +19,12 @@ caps.latest.revision: 19
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 270c8dafa42e45ecac226edda71237edc44c27f8
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: d7fa5a31e0ffaafdff982fdfb64fd6f260624f70
+ms.sourcegitcommit: 99e355b71ff2554782f6bc8e0da86e6d9e3e0bef
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/05/2018
+ms.locfileid: "34799825"
 ---
 # <a name="remote-blob-store-rbs-sql-server"></a>Remote Blob Store (RBS) (SQL Server)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -42,7 +43,7 @@ ms.lasthandoff: 05/03/2018
 ### <a name="efficient-blob-management"></a>Administración eficaz de blobs  
  Varias características de RBS permiten la administración de blobs almacenados:  
   
--   Los blobs se administran con transacciones duraderas de aislamiento atómico de coherencia (ACID).  
+-   Los blobs se administran con transacciones ACID (atomicidad, coherencia, aislamiento, durabilidad).  
   
 -   Los blobs se organizan en colecciones.  
   

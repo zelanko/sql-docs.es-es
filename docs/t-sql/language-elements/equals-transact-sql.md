@@ -26,11 +26,12 @@ author: douglaslMS
 ms.author: douglasl
 manager: craigg
 monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
-ms.openlocfilehash: 77947f8263b66f1b7f26e8ee5a5d52a4d019aeb2
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 97d24445d506a41675822f13d0a23d4e03edac3d
+ms.sourcegitcommit: 808d23a654ef03ea16db1aa23edab496b73e5072
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/04/2018
+ms.locfileid: "34563753"
 ---
 # <a name="-equals-transact-sql"></a>= (Igual a) (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -53,15 +54,15 @@ expression = expression
  Boolean  
   
 ## <a name="remarks"></a>Notas  
- Si se comparan dos expresiones NULL, el resultado depende de la configuración de `ANSI_NULLS`:  
+ Al comparar mediante una expresión NULL, el resultado depende de la configuración de `ANSI_NULLS`:  
   
--   Si `ANSI_NULLS` se establece en ON, el resultado es NULL de acuerdo con la convención ANSI según la cual un valor NULL (o desconocido) no es igual a otro valor NULL o desconocido.  
+-   Si `ANSI_NULLS` se establece en ON, el resultado de las comparaciones con NULL es UNKNOWN, según la convención ANSI de que NULL es un valor desconocido y no se puede comparar con ningún otro, incluidos otros valores NULL.  
   
--   Si `ANSI_NULLS` se establece en OFF, el resultado de NULL comparado con NULL es TRUE.  
+-   Si `ANSI_NULLS` se establece en OFF, el resultado de la comparación de NULL con NULL es TRUE, y el resultado de la comparación de NULL con cualquier otro valor es FALSE.  
 
 Para obtener más información, vea [SET ANSI_NULLS &#40;Transact-SQL&#41;](../../t-sql/statements/set-ansi-nulls-transact-sql.md).
   
- Cualquier tipo de comparación de un valor NULL (un estado desconocido) con un valor distinto de NULL siempre da lugar a FALSE.  
+ Una expresión booleana que da como resultado UNKNOWN se comporta de forma similar en FALSE en la mayoría de los casos, aunque no en todos. Vea [NULL and UNKNOWN &#40;Transact-SQL&#41;](../../t-sql/language-elements/null-and-unknown-transact-sql.md) y [NOT &#40;Transact-SQL&#41;](../../t-sql/language-elements/not-transact-sql.md) para obtener más información.  
   
   
 ## <a name="examples"></a>Ejemplos  

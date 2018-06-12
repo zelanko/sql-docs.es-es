@@ -16,11 +16,12 @@ ms.topic: conceptual
 ms.date: 05/08/2018
 ms.author: rebeccaz
 monikerRange: = azuresqldb-current || = sqlallproducts-allversions
-ms.openlocfilehash: b88dfeac58ef9c00307b2cfee35aca3ea0549f02
-ms.sourcegitcommit: feff98b3094a42f345a0dc8a31598b578c312b38
+ms.openlocfilehash: c6d5134ac7760ce9156124ad8c7efd864da81878
+ms.sourcegitcommit: 808d23a654ef03ea16db1aa23edab496b73e5072
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/11/2018
+ms.lasthandoff: 06/04/2018
+ms.locfileid: "34462373"
 ---
 # <a name="transparent-data-encryption-for-sql-database-and-data-warehouse"></a>Cifrado de datos transparente para SQL Database y Data Warehouse
 [!INCLUDE[appliesto-xx-asdb-asdw-xxx-md](../../../includes/appliesto-xx-asdb-asdw-xxx-md.md)]
@@ -66,7 +67,7 @@ Al exportar una base de datos protegida por cifrado de datos transparente, el co
 
 Por ejemplo, si el archivo BACPAC se exporta desde una instancia local de SQL Server, el contenido importado de la base de datos nueva no se cifrará automáticamente. Del mismo modo, si el archivo BACPAC se exporta a una instancia local de SQL Server, la base de datos nueva tampoco se cifrará automáticamente.
 
-La única excepción es cuando realiza la exportación a y de una base de datos SQL. El cifrado de datos transparente se habilita en la nueva base de datos, pero el propio archivo PACPAC sigue sin estar cifrado.
+La única excepción es cuando realiza la exportación a y de una base de datos SQL. El cifrado de datos transparente se habilita en la base de datos nueva, pero el propio archivo BACPAC sigue sin estar cifrado.
 
 ## <a name="manage-transparent-data-encryption-in-the-azure-portal"></a>Administración del cifrado de datos transparente en Azure Portal
 

@@ -1,7 +1,7 @@
 ---
-title: Actualizar informes | Microsoft Docs
+title: Actualizar informes (SSRS) | Microsoft Docs
 ms.custom: ''
-ms.date: 05/30/2017
+ms.date: 06/04/2018
 ms.prod: reporting-services
 ms.prod_service: reporting-services-sharepoint, reporting-services-native
 ms.component: install-windows
@@ -24,27 +24,26 @@ caps.latest.revision: 70
 author: markingmyname
 ms.author: maghan
 manager: kfile
-ms.openlocfilehash: 3ae563ddf9c21fc0add692493504dd7ccbdd09fb
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 569a67511ecf28a4e9800182f823719d47e61120
+ms.sourcegitcommit: 8aa151e3280eb6372bf95fab63ecbab9dd3f2e5e
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/05/2018
+ms.locfileid: "34771831"
 ---
-# <a name="upgrade-reports"></a>Upgrade Reports
+# <a name="upgrade-reports-ssrs"></a>Actualizar informes (SSRS)
 
 [!INCLUDE[ssrs-appliesto-sql2016-preview](../../includes/ssrs-appliesto-sql2016-preview.md)]
 
-  Los archivos de definición de informe (.rdl) se actualizan automáticamente de las maneras siguientes:  
+Los archivos de definición de informe (.rdl) se actualizan automáticamente de las maneras siguientes:  
   
--   Al abrir un informe en el Diseñador de informes de [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)], la definición de informe se actualiza al esquema RDL admitido actualmente. Al especificar un servidor de informes de [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)], [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)], [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]o [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] en las propiedades del proyecto, la definición de informe se guarda en un esquema compatible con el servidor de destino.  
+-   Al abrir un informe paginado en el Diseñador de informes de [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)], la definición de informe se actualiza al esquema RDL que se admita actualmente. Al especificar un servidor de informes de [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)], [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)], [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]o [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] en las propiedades del proyecto, la definición de informe se guarda en un esquema compatible con el servidor de destino.  
   
 -   Al actualizar una instalación de [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] a una instalación de [!INCLUDE[ssRSCurrent](../../includes/ssrscurrent-md.md)] , los informes e instantáneas existentes que se han publicado en un servidor de informes se compilan y actualizan automáticamente al nuevo esquema la primera vez que se procesan. Si no se puede actualizar automáticamente un informe, se procesa utilizando el modo de compatibilidad con versiones anteriores. La definición de informe se conserva en el esquema original.  
   
- Los informes no se actualizan al cargar un archivo de definición de informe directamente en el servidor de informes o sitio de SharePoint. La actualización de una definición de informe en [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)] es la única manera de actualizar el archivo .rdl.  
-  
  Cuando un informe se actualiza localmente o en el servidor de informes, puede observar errores, advertencias y mensajes adicionales. Este es el resultado de los cambios en el modelo de objetos de informe interno y en los componentes de procesamiento, que hacen que estos mensajes se muestren cuando se detectan problemas subyacentes en el informe. Para obtener más información, vea [Compatibilidad con versiones anteriores de Reporting Services](../../reporting-services/reporting-services-backward-compatibility.md).  
   
- Para más información sobre las nuevas características de [!INCLUDE[ssRSCurrent](../what-s-new-in-sql-server-reporting-services-ssrs.md).  
+ Para obtener más información sobre las características nuevas de [!INCLUDE[ssRSCurrent](../../includes/ssrscurrent-md.md)], vea [Novedades de SQL Server Reporting Services (SSRS)](../what-s-new-in-sql-server-reporting-services-ssrs.md).  
 
 ##  <a name="bkmk_versionsupported"></a> Versiones admitidas por la actualización  
  Se pueden actualizar los informes que se crearon en cualquier versión anterior de [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] . Se incluyen las versiones siguientes:  
@@ -109,7 +108,7 @@ ms.lasthandoff: 05/03/2018
  Para más información sobre cómo identificar el espacio de nombres RDL actual para un servidor de informes, [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)] o un informe, vea [Buscar la versión del esquema de definición de informe &#40;SSRS&#41;](../../reporting-services/reports/find-the-report-definition-schema-version-ssrs.md).  
   
 ### <a name="upgrading-reports-on-a-report-server"></a>Actualizar los informes en un servidor de informes  
- La primera vez que un informe de [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)], [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)], [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]o [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] se ejecuta en un servidor de informes actualizado a un servidor de informes de [!INCLUDE[ssRSCurrent](../../includes/ssrscurrent-md.md)] , el informe se actualiza automáticamente al espacio de nombres de la definición de informe actual que admite el servidor de informes. El informe podría haber existido en el servidor de informes antes de la actualización, podría haberse cargado a través del Administrador de informes o haberse publicado en el servidor de informes desde el Diseñador de informes en [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)], [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)], [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]o [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)].  
+ La primera vez que un informe de [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)], [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)], [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]o [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] se ejecuta en un servidor de informes actualizado a un servidor de informes de [!INCLUDE[ssRSCurrent](../../includes/ssrscurrent-md.md)] , el informe se actualiza automáticamente al espacio de nombres de la definición de informe actual que admite el servidor de informes. El informe podría haber existido en el servidor de informes antes de la actualización, o bien se podría haber cargado a través del portal web o haberse publicado en el servidor de informes desde el Diseñador de informes en [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)], [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)], [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] o [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)].  
   
  En la tabla siguiente se muestra la acción de actualización que realiza el servidor de informes para los tipos específicos de CRI de un informe.  
   

@@ -13,20 +13,20 @@ ms.tgt_pltfrm: na
 ms.topic: article
 ms.date: 02/13/2018
 ms.author: giladm
-ms.openlocfilehash: 8900faccfda82e759ee6f31009682eb632df7509
-ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.openlocfilehash: a797824724677745d33936ef570abe12f5b15b8d
+ms.sourcegitcommit: 97bef3f248abce57422f15530c1685f91392b494
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/04/2018
+ms.locfileid: "34743974"
 ---
 # <a name="sql-data-discovery-and-classification"></a>Clasificación y detección de datos de SQL
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
 
 La clasificación y detección de datos cuenta con una nueva herramienta integrada en SQL Server Management Studio (SSMS) para **detectar**, **clasificar**, **etiquetar** & **notificar** los datos confidenciales de las bases de datos.
-La detección y la clasificación de la información más confidencial (empresarial, financiera, sanitaria, personal, etc.) pueden desempeñar un papel fundamental en el estado de protección de la información de la organización. Puede servir como infraestructura para lo siguiente:
-* Ayudar a cumplir los estándares de privacidad de datos y los requisitos de cumplimiento de normas, como RGPD.
+La detección y clasificación de la información más confidencial (empresarial, financiera, sanitaria, etc.) pueden desempeñar un papel fundamental en el estado de protección de la información de la organización. Puede servir como infraestructura para lo siguiente:
+* Ayudar a cumplir los estándares de privacidad de datos.
 * Controlar el acceso a bases de datos o columnas que contienen datos altamente confidenciales y aumentar su seguridad.
-
 
 > [!NOTE]
 > La clasificación y detección de datos es **compatible con SQL Server 2008 y versiones posteriores**. Para Azure SQL Database, vea [Clasificación y detección de datos de Azure SQL Database](https://go.microsoft.com/fwlink/?linkid=866265).
@@ -94,7 +94,57 @@ La clasificación incluye dos atributos de metadatos:
     ![Panel de navegación][10]
 
 
-## <a id="subheading-3"></a>Pasos siguientes
+## <a id="subheading-3"></a>Acceso a los metadatos de clasificación
+
+Los metadatos de clasificación para *Tipos de información* y *Etiquetas de confidencialidad* se almacenan en las propiedades extendidas siguientes: 
+* sys_information_type_name
+* sys_sensitivity_label_name
+
+Se puede acceder a los metadatos mediante la vista de catálogo de propiedades extendidas [sys.extended_properties](https://docs.microsoft.com/en-us/sql/relational-databases/system-catalog-views/extended-properties-catalog-views-sys-extended-properties).
+
+En el ejemplo de código siguiente se devuelven todas las columnas clasificadas con sus clasificaciones correspondientes:
+
+```sql
+SELECT
+    schema_name(O.schema_id) AS schema_name,
+    O.NAME AS table_name,
+    C.NAME AS column_name,
+    information_type,
+    sensitivity_label 
+FROM
+    (
+        SELECT
+            IT.major_id,
+            IT.minor_id,
+            IT.information_type,
+            L.sensitivity_label 
+        FROM
+        (
+            SELECT
+                major_id,
+                minor_id,
+                value AS information_type 
+            FROM sys.extended_properties 
+            WHERE NAME = 'sys_information_type_name'
+        ) IT 
+        FULL OUTER JOIN
+        (
+            SELECT
+                major_id,
+                minor_id,
+                value AS sensitivity_label 
+            FROM sys.extended_properties 
+            WHERE NAME = 'sys_sensitivity_label_name'
+        ) L 
+        ON IT.major_id = L.major_id AND IT.minor_id = L.minor_id
+    ) EP
+    JOIN sys.objects O
+    ON  EP.major_id = O.object_id 
+    JOIN sys.columns C 
+    ON  EP.major_id = C.object_id AND EP.minor_id = C.column_id
+```
+
+## <a id="subheading-4"></a>Pasos siguientes
 
 Para Azure SQL Database, vea [Clasificación y detección de datos de Azure SQL Database](https://go.microsoft.com/fwlink/?linkid=866265).
 
@@ -106,7 +156,8 @@ Considere la posibilidad de proteger sus columnas confidenciales mediante la apl
 <!--Anchors-->
 [SQL Data Discovery & Classification overview]: #subheading-1
 [Discovering, classifying & labeling sensitive columns]: #subheading-2
-[Next Steps]: #subheading-3
+[Accessing the classification metadata]: #subheading-3
+[Next Steps]: #subheading-4
 
 <!--Image references-->
 [1]: ./media/sql-data-discovery-and-classification/1_data_classification_explorer_menu.png

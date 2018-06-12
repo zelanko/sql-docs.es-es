@@ -1,7 +1,7 @@
 ---
 title: Informes, elementos de informe y definiciones de informe (Generador de informes y SSRS) | Microsoft Docs
 ms.custom: ''
-ms.date: 03/01/2017
+ms.date: 05/24/2018
 ms.prod: reporting-services
 ms.prod_service: reporting-services-sharepoint, reporting-services-native
 ms.component: report-design
@@ -18,11 +18,12 @@ caps.latest.revision: 26
 author: maggiesMSFT
 ms.author: maggies
 manager: kfile
-ms.openlocfilehash: cd2c743dbff40d700bf50533028994bf78fb40fa
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 918cf42c76038411777628c200f0ed71fe3e8788
+ms.sourcegitcommit: 8aa151e3280eb6372bf95fab63ecbab9dd3f2e5e
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/05/2018
+ms.locfileid: "34550476"
 ---
 # <a name="reports-report-parts-and-report-definitions-report-builder-and-ssrs"></a>Informes, elementos de informe y definiciones de informe (Generador de informes y SSRS)
   [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] usa diversos términos para describir un informe paginado en distintos estados, incluida la definición inicial, el informe publicado y el informe visualizado como lo ve el usuario.  
@@ -53,7 +54,7 @@ ms.lasthandoff: 05/03/2018
  Un informe publicado se protege mediante asignaciones de roles utilizando el modelo de seguridad basada en roles de [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] . Se tiene acceso a los informes publicados a través de direcciones URL, elementos web de SharePoint o el portal web de [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] . También se puede navegar hasta los informes y abrirlos en el Generador de informes.  
   
 ### <a name="report-snapshots"></a>Instantáneas de informe  
- Un informe también se puede publicar como una instantánea que contiene la información de presentación y los datos tal como estaban cuando se ejecutó inicialmente el informe. Las instantáneas de informe no se guardan con un formato de representación concreto. En su lugar, las instantáneas de informe se representan en un formato de visualización final (como HTML) solo cuando un usuario o una aplicación lo solicita. Para más información, vea [Buscar y ver informes en el Administrador de informes &#40;Generador de informes y SSRS&#41;](../report-builder/finding-and-viewing-reports-with-a-browser-report-builder-and-ssrs.md).  
+ Un informe también se puede publicar como una instantánea que contiene la información de presentación y los datos tal como estaban cuando se ejecutó inicialmente el informe. Las instantáneas de informe no se guardan con un formato de representación concreto. En su lugar, las instantáneas de informe se representan en un formato de visualización final (como HTML) solo cuando un usuario o una aplicación lo solicita. Para obtener más información, vea [Buscar y ver informes en el portal web](../report-builder/finding-and-viewing-reports-with-a-browser-report-builder-and-ssrs.md).  
   
 ## <a name="rendered-reports"></a>Informes representados  
  Un informe representado es un informe totalmente procesado que contiene datos e información de diseño en un formato que permite su visualización (por ejemplo, HTML). Un informe no puede visualizarse hasta que no se haya representado en un formato de salida. Puede representar un informe realizando una de las siguientes acciones:  

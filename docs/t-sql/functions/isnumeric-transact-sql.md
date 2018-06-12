@@ -28,11 +28,12 @@ author: edmacauley
 ms.author: edmaca
 manager: craigg
 monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
-ms.openlocfilehash: e28633c4c373d37c4ba1d8cf18e4e1e9d0a385fe
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 20567e713ac7a53cd506fb2447be51cd525877f3
+ms.sourcegitcommit: 808d23a654ef03ea16db1aa23edab496b73e5072
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/04/2018
+ms.locfileid: "34582077"
 ---
 # <a name="isnumeric-transact-sql"></a>ISNUMERIC (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -55,15 +56,15 @@ ISNUMERIC ( expression )
  **int**  
   
 ## <a name="remarks"></a>Notas  
- ISNUMERIC devuelve 1 cuando la expresión de entrada se evalúa para un tipo de datos numérico válido; de lo contrario, devuelve 0. Entre los tipos de datos numéricos válidos se encuentran los siguientes:  
-  
-|||  
-|-|-|  
-|**int**|**numeric**|  
-|**bigint**|**money**|  
-|**smallint**|**smallmoney**|  
-|**tinyint**|**float**|  
-|**decimal**|**real**|  
+ ISNUMERIC devuelve 1 cuando la expresión de entrada se evalúa para un tipo de datos numérico válido; de lo contrario, devuelve 0. Entre los [tipos de datos numéricos](../../t-sql/data-types/numeric-types.md) válidos se encuentran los siguientes:  
+
+|||
+|-|-|
+| [Valores numéricos exactos](../../t-sql/data-types/int-bigint-smallint-and-tinyint-transact-sql.md) | **bigint**, **int**, **smallint**, **tinyint**, **bit** |
+| [Precisión fija](../../t-sql/data-types/decimal-and-numeric-transact-sql.md) | **decimal**, **numeric** |
+| [Aproximado](../../t-sql/data-types/float-and-real-transact-sql.md) | **float**, **real** |
+| [Valores monetarios](../../t-sql/data-types/money-and-smallmoney-transact-sql.md) | **money**, **smallmoney** |
+
   
 > [!NOTE]  
 >  ISNUMERIC devuelve 1 para algunos caracteres que no son números, como el signo más (+), menos (-) y símbolos de moneda válidos, como el signo de dólar ($). Para obtener una lista completa de los símbolos de moneda, vea [money y smallmoney &#40;Transact-SQL&#41;](../../t-sql/data-types/money-and-smallmoney-transact-sql.md).  

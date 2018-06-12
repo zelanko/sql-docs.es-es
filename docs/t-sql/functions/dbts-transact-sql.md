@@ -23,16 +23,17 @@ caps.latest.revision: 35
 author: edmacauley
 ms.author: edmaca
 manager: craigg
-ms.openlocfilehash: d221859035c02156005bdbf36d0a39ff79297f6c
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 52bd6f1e2c6b0e6163325e6e3c83a4cbc7d2ac2f
+ms.sourcegitcommit: 8aa151e3280eb6372bf95fab63ecbab9dd3f2e5e
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/05/2018
+ms.locfileid: "34779371"
 ---
 # <a name="x40x40dbts-transact-sql"></a>&#x40;&#x40;DBTS (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
-Devuelve el valor del tipo de datos **timestamp** actual de la base de datos actual. Se garantiza que la marca de tiempo es única en la base de datos.
+Esta función devuelve el valor del tipo de datos **timestamp** actual de la base de datos actual. La base de datos actual tendrá un valor de marca de tiempo único garantizado.
   
 ![Icono de vínculo de tema](../../database-engine/configure-windows/media/topic-link.gif "Icono de vínculo de tema") [Convenciones de sintaxis de Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)
   
@@ -46,12 +47,12 @@ Devuelve el valor del tipo de datos **timestamp** actual de la base de datos act
 **varbinary**
   
 ## <a name="remarks"></a>Notas  
-@@DBTS devuelve el último valor de marca de tiempo de la base de datos actual que se ha usado. Se genera un nuevo valor de marca de tiempo cuando se inserta o actualiza una fila con una columna de tipo **timestamp** .
+@@DBTS devuelve el último valor de marca de tiempo de la base de datos actual que se ha usado. Cuando se inserta o actualiza una fila con una columna de tipo **timestamp** se genera un valor de marca de tiempo nuevo.
   
-La función @@DBTS no se ve afectada por los cambios en los niveles de aislamiento de transacciones.
+Los cambios en los niveles de aislamiento de transacción no afectan a la función @@DBTS.
   
 ## <a name="examples"></a>Ejemplos  
-En el siguiente ejemplo se devuelve el valor actual de **timestamp** de la base de datos [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)].
+En este ejemplo se devuelve el valor actual de **timestamp** de la base de datos [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)].
   
 ```sql
 USE AdventureWorks2012;  

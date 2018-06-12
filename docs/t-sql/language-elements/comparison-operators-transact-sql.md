@@ -25,11 +25,12 @@ caps.latest.revision: 35
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 5e0e5538d69caf96e7eb8864de177d14e99ce642
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 46cf351f2a85523737988b93a57fce51924c4ae7
+ms.sourcegitcommit: 808d23a654ef03ea16db1aa23edab496b73e5072
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/04/2018
+ms.locfileid: "34563703"
 ---
 # <a name="comparison-operators-transact-sql"></a>Operadores de comparación (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
@@ -53,7 +54,7 @@ ms.lasthandoff: 05/03/2018
   
  A diferencia de los otros tipos de datos de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], el tipo de datos **Boolean** no se puede especificar como tipo de datos de una columna o variable de una tabla y no se puede devolver en un conjunto de resultados.  
   
- Cuando SET ANSI_NULLS es ON, un operador con una o dos expresiones NULL devuelve UNKNOWN. Cuando SET ANSI_NULLS es OFF, se aplica la misma regla, excepto que el operador de igualdad (=) devuelve TRUE si ambas expresiones son NULL. Por ejemplo, NULL = NULL devuelve TRUE si SET ANSI_NULLS es OFF.  
+ Cuando SET ANSI_NULLS es ON, un operador con una o dos expresiones NULL devuelve UNKNOWN. Cuando SET ANSI_NULLS es OFF, se aplican las mismas reglas, excepto para los operadores es igual a (=) y no es igual a (<>). Cuando SET ANSI_NULLS es OFF, estos operadores tratan NULL como un valor conocido, equivalente a cualquier otro valor NULL, y solo devuelven TRUE o FALSE (nunca UNKNOWN).  
   
  Las expresiones con tipos de datos **Boolean** se usan en la cláusula WHERE para filtrar las filas que cumplen las condiciones de búsqueda y en las instrucciones de lenguaje de control de flujo tales como IF y WHILE, por ejemplo:  
   

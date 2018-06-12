@@ -59,11 +59,12 @@ author: edmacauley
 ms.author: edmaca
 manager: craigg
 monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
-ms.openlocfilehash: 63e1b86c52c6236d4b956f93910e9adb40abef10
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 9b3e9f873046646b3c247cd2930c458da810d203
+ms.sourcegitcommit: 808d23a654ef03ea16db1aa23edab496b73e5072
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/04/2018
+ms.locfileid: "34582307"
 ---
 # <a name="create-index-transact-sql"></a>CREATE INDEX (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -108,10 +109,10 @@ CREATE UNIQUE INDEX i1 ON t1 (col1 DESC, col2 ASC, col3 DESC);
 ![Icono de vínculo de tema](../../database-engine/configure-windows/media/topic-link.gif "Icono de vínculo de tema") [Convenciones de sintaxis de Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>Sintaxis  
-  
+
+### <a name="syntax-for-sql-server-and-azure-sql-database"></a>Sintaxis de SQL Server y Azure SQL Database
+
 ```  
--- Syntax for SQL Server and Azure SQL Database
-  
 CREATE [ UNIQUE ] [ CLUSTERED | NONCLUSTERED ] INDEX index_name   
     ON <object> ( column [ ASC | DESC ] [ ,...n ] )   
     [ INCLUDE ( column_name [ ,...n ] ) ]  
@@ -167,14 +168,14 @@ CREATE [ UNIQUE ] [ CLUSTERED | NONCLUSTERED ] INDEX index_name
   
 <range> ::=   
 <partition_number_expression> TO <partition_number_expression>  
-  
-Backward Compatible Relational Index
+```
+
+### <a name="backward-compatible-relational-index"></a>Índice relacional compatible con versiones anteriores
 
 > [!IMPORTANT]
-> The backward compatible relational index syntax structure will be removed in a future version of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. 
-> Avoid using this syntax structure in new development work, and plan to modify applications that currently use the feature. 
-> Use the syntax structure specified in <relational_index_option> instead.  
-  
+> La estructura de sintaxis de índice relacional compatible con versiones anteriores se quitará en una versión futura de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Evite usar esta estructura de sintaxis en los nuevos trabajos de desarrollo y piense en modificar las aplicaciones que la usan actualmente. En su lugar, use la estructura de sintaxis especificada en <relational_index_option>.  
+
+```  
 CREATE [ UNIQUE ] [ CLUSTERED | NONCLUSTERED ] INDEX index_name   
     ON <object> ( column_name [ ASC | DESC ] [ ,...n ] )   
     [ WITH <backward_compatible_index_option> [ ,...n ] ]  
@@ -196,10 +197,9 @@ CREATE [ UNIQUE ] [ CLUSTERED | NONCLUSTERED ] INDEX index_name
   | DROP_EXISTING   
 }  
 ```  
-
+### <a name="syntax-for-azure-sql-data-warehouse-and-parallel-data-warehouse"></a>Sintaxis para Azure SQL Data Warehouse y Almacenamiento de datos paralelos  
   
 ```  
--- Syntax for Azure SQL Data Warehouse and Parallel Data Warehouse  
   
 CREATE [ CLUSTERED | NONCLUSTERED ] INDEX index_name   
     ON [ database_name . [ schema ] . | schema . ] table_name   
@@ -498,7 +498,7 @@ ALLOW_PAGE_LOCKS = { **ON** | OFF }
 MAXDOP = *max_degree_of_parallelism*  
 **Se aplica a**: desde [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] hasta [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] y [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)].  
   
- Reemplaza la opción de configuración de **max_degree_of_parallelism** mientras dure la operación de índice. Para obtener más información, vea [Configure the max degree of parallelism Server Configuration Option](../../database-engine/configure-windows/configure-the-max-degree-of-parallelism-server-configuration-option.md). Utilice MAXDOP para establecer un límite para el número de procesadores utilizados en la ejecución de un plan paralelo. El máximo es 64 procesadores.  
+ Reemplaza la opción de configuración de **max_degree_of_parallelism** mientras dure la operación de índice. Para obtener más información, vea [Establecer la opción de configuración del servidor Grado máximo de paralelismo](../../database-engine/configure-windows/configure-the-max-degree-of-parallelism-server-configuration-option.md). Utilice MAXDOP para establecer un límite para el número de procesadores utilizados en la ejecución de un plan paralelo. El máximo es 64 procesadores.  
   
  *max_degree_of_parallelism* puede tener estos valores:  
   
@@ -1032,4 +1032,3 @@ CREATE CLUSTERED INDEX IX_ProductVendor_VendorID
  [sys.xml_indexes &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-xml-indexes-transact-sql.md)   
  [EVENTDATA &#40;Transact-SQL&#41;](../../t-sql/functions/eventdata-transact-sql.md)  
  
-

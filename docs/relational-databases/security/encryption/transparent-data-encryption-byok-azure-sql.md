@@ -18,11 +18,12 @@ ms.topic: conceptual
 ms.date: 04/19/2018
 ms.author: aliceku
 monikerRange: = azuresqldb-current || = azure-sqldw-latest || = sqlallproducts-allversions
-ms.openlocfilehash: 2265778ca41dd82a1e55fe01749bd2d5057f5f1c
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: bffd6ec43cb298c652e8154ec28064bd9c891799
+ms.sourcegitcommit: 808d23a654ef03ea16db1aa23edab496b73e5072
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/04/2018
+ms.locfileid: "34476087"
 ---
 # <a name="transparent-data-encryption-with-bring-your-own-key-support-for-azure-sql-database-and-data-warehouse"></a>Cifrado de datos transparente compatible con Bring Your Own Key para Azure SQL Database y SQL Data Warehouse
 [!INCLUDE[appliesto-xx-asdb-asdw-xxx-md](../../../includes/appliesto-xx-asdb-asdw-xxx-md.md)]
@@ -140,7 +141,7 @@ Pasos para crear una implementación:
 - Seleccione el panel de TDE del servidor lógico y siga estos pasos para cada servidor lógico de SQL:  
    - Seleccione el almacén de Azure Key Vault de la misma región. 
    - Seleccione la clave que se va a usar como protector del TDE: cada servidor usará la copia local del protector del TDE. 
-   - Si se hace en el portal, se creará un [identificador de aplicación](https://docs.microsoft.com/en-us/azure/active-directory/managed-service-identity/overview) para el servidor lógico de SQL, que se usa para asignar los permisos lógicos de SQL Server para acceder al almacén de claves (no debe eliminar esta identidad).  El acceso se puede revocar eliminando los permisos de Azure Key Vault. para el servidor lógico de SQL, que se usa para asignar los permisos lógicos de SQL Server para acceder al almacén de claves.
+   - Si se hace en el portal, se creará un [identificador de aplicación](https://docs.microsoft.com/en-us/azure/active-directory/managed-service-identity/overview) para el servidor lógico de SQL, que se usa para asignar los permisos lógicos de SQL Server para acceder al almacén de claves (no debe eliminar esta identidad). El acceso se puede revocar si, en su lugar, se eliminan los permisos en Azure Key Vault para el servidor lógico de SQL, que se usa para asignar los permisos lógicos de SQL Server para acceder al almacén de claves.
 - Cree la base de datos principal. 
 - Siga la [guía de replicación geográfica activa](https://docs.microsoft.com/en-us/azure/sql-database/sql-database-geo-replication-overview) para llevar a cabo el escenario. Este paso creará la base de datos secundaria.
 

@@ -24,6 +24,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "33029652"
 ---
 # <a name="preview-view"></a>Vista previa, vista
 En el Diseñador de informes de [!INCLUDE[ssRSnoversion_md](../../includes/ssrsnoversion-md.md)] , use la vista **Vista previa** para mostrar el informe representado. Antes de abrir un informe en Vista previa, el Diseñador de informes lo ejecuta localmente. En el modo de vista previa, el informe se procesa por completo. Si el informe tiene una consulta compleja o una gran cantidad de datos, es posible que se necesiten algunos minutos para que se complete la vista previa la primera vez que la muestre. Para los cambios posteriores que solo afectan al formato del informe, la vista previa utiliza datos en caché.

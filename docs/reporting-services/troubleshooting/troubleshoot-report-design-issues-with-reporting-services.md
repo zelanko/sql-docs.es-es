@@ -20,6 +20,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "33032382"
 ---
 # <a name="troubleshoot-report-design-issues-with-reporting-services"></a>Solución de problemas de diseño de informes con Reporting Services
 Los problemas de diseño se pueden producir al crear un diseño de un informe en la vista Diseño en una aplicación de creación de informes. Utilice este tema como ayuda para solucionar estos problemas.   

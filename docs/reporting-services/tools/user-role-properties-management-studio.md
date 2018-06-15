@@ -22,6 +22,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "33030732"
 ---
 # <a name="user-role-properties-management-studio"></a>Propiedades de rol de usuario (Management Studio)
   Use esta página para ver qué tareas se incluyen en una definición de roles de nivel de elemento. También puede usar esta página para cambiar la lista de tareas o modificar una descripción de roles.  

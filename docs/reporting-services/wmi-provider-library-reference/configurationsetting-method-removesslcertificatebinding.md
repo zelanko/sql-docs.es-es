@@ -22,6 +22,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "33030812"
 ---
 # <a name="configurationsetting-method---removesslcertificatebinding"></a>Método ConfigurationSetting - RemoveSSLCertificateBinding
   Quita un enlace de certificado SSL.  

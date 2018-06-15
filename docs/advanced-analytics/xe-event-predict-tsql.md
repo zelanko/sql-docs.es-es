@@ -12,6 +12,7 @@ ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: es-ES
 ms.lasthandoff: 04/16/2018
+ms.locfileid: "31201877"
 ---
 # <a name="extended-events-for-monitoring-predict-statements"></a>Eventos extendidos para la supervisión de las instrucciones de PREDICCIÓN
 

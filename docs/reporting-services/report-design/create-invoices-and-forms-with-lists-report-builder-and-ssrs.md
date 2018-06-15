@@ -20,6 +20,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "33021312"
 ---
 # <a name="create-invoices-and-forms-with-lists-report-builder-and-ssrs"></a>Crear facturas y formularios con listas (Generador de informes y SSRS)
   Una región de datos de lista se repite con cada grupo o fila del conjunto de datos de informe paginado de [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] . Las listas se pueden utilizar para crear informes o formularios de forma libre, por ejemplo facturas, o conjuntamente con otras regiones de datos. Puede definir listas que contengan cualquier número de elementos de informe. Una lista se puede anidar  

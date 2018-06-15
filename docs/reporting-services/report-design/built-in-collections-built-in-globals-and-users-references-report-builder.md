@@ -20,6 +20,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "33022072"
 ---
 # <a name="built-in-collections---built-in-globals-and-users-references-report-builder"></a>Colecciones integradas: referencias a campos globales y de usuario integrados (Generador de informes)
   La colección de campos integrados, que incluye las colecciones **Globals** y **User** , representa valores globales proporcionados por Reporting Services al procesar un informe. La colección **Globals** proporciona valores como el nombre del informe, la hora a la que comenzó el procesamiento del informe y el número de la página actual para el encabezado o el pie de página del informe. La colección **User** proporciona el identificador de usuario y la configuración de idioma. Estos valores se pueden usar en expresiones para filtrar los resultados de un informe.  

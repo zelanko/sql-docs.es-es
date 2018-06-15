@@ -25,6 +25,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "33059642"
 ---
 # <a name="lesson-2-4---granting-access-to-a-database-object"></a>Lección 2-4: Concesión de acceso a un objeto de base de datos
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../includes/tsql-appliesto-ss2008-all-md.md)]

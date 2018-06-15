@@ -20,6 +20,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "33019352"
 ---
 # <a name="change-a-chart-type-report-builder-and-ssrs"></a>Cambiar un tipo de gráfico (Generador de informes y SSRS)
 Cuando se inserta un gráfico en un informe paginado de [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] por primera vez, aparece el cuadro de diálogo **Seleccionar tipo de gráfico** . Si cancela este cuadro de diálogo, se agrega un gráfico de columnas de forma predeterminada.  

@@ -20,6 +20,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "33022642"
 ---
 # <a name="sql-server-parallel-data-warehouse-connection-type-ssrs"></a>Tipo de conexión Almacenamiento de datos paralelo de SQL Server (SSRS)
 

@@ -20,6 +20,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "33022682"
 ---
 # <a name="create-a-shared-dataset-or-embedded-dataset-report-builder-and-ssrs"></a>Crear un conjunto de datos compartido o un conjunto de datos incrustado (Generador de informes y SSRS)
 Los conjuntos de datos incrustados se usan en un único informe de [!INCLUDE[ssRSnoversion_md](../../includes/ssrsnoversion-md.md)] . Los conjuntos de datos compartidos en un servidor de informes se pueden usar en varios informes, tanto móviles como paginados. Para crear un conjunto de datos, necesita un origen de datos incrustado o compartido.  

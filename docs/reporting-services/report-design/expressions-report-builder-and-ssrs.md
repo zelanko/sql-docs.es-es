@@ -20,6 +20,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "33024352"
 ---
 # <a name="expressions-report-builder-and-ssrs"></a>Expresiones (Generador de informes y SSRS)
   Las expresiones se utilizan ampliamente a lo largo de un informe paginado de [!INCLUDE[ssRSnoversion_md](../../includes/ssrsnoversion-md.md)] para recuperar, calcular, mostrar, agrupar, ordenar, filtrar y parametrizar datos y darles formato. 

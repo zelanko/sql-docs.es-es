@@ -20,6 +20,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "33019002"
 ---
 # <a name="print-reports-from-a-browser-with-the-print-control-report-builder-and-ssrs"></a>Imprimir informes desde un explorador usando el control de impresión (Generador de informes y SSRS)
   Aunque los exploradores son las aplicaciones cliente habitualmente más usadas para ver un informe, la funcionalidad de impresión que incluyen no es la ideal para imprimir informes. La funcionalidad de impresión de un explorador está diseñada para imprimir páginas web. Normalmente, las páginas que imprime desde un explorador incluyen todos los elementos visuales de una página web, además de la información del encabezado y del pie de página que identifica la página o el sitio web. Al imprimir desde un explorador, se imprime el contenido de la ventana actual. En el caso de un informe compuesto por varias páginas, el explorador imprime como máximo la primera página y posiblemente incluso menos si la página del informe tiene unas dimensiones superiores a las de una página impresa.  

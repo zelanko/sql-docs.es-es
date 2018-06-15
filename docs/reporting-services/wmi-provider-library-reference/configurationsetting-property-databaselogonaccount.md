@@ -27,6 +27,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "33030902"
 ---
 # <a name="configurationsetting-property---databaselogonaccount"></a>Propiedad ConfigurationSetting - DatabaseLogonAccount
   Especifica la cuenta de inicio de sesión que el servidor de informes utiliza al conectarse a la base de datos del servidor de informes. Solo lectura.  

@@ -22,6 +22,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "33027812"
 ---
 # <a name="configure-a-report-server-on-a-network-load-balancing-cluster"></a>Configurar un servidor de informes en un clúster con equilibrio de carga de red
   Si va a configurar una ampliación escalada de un servidor de informes para ejecutarse en un clúster con equilibrio de carga de red (NLB), debe hacer lo siguiente:  

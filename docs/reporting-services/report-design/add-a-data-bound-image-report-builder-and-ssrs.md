@@ -20,6 +20,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "33019642"
 ---
 # <a name="add-a-data-bound-image-report-builder-and-ssrs"></a>Agregar una imagen enlazada a datos (Generador de informes y SSRS)
   Un informe puede incluir una referencia a una imagen que está almacenada en una base de datos. Este tipo de imagen se conoce como *imagen enlazada a datos*. Las imágenes que aparecen junto a los nombres de producto de una lista de productos son ejemplos de imágenes enlazadas a datos.  

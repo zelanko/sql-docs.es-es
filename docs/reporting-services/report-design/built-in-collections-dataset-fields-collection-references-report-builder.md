@@ -20,6 +20,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "33021042"
 ---
 # <a name="built-in-collections---dataset-fields-collection-references-report-builder"></a>Colecciones integradas: referencias a la colección de campos de conjunto de datos (Generador de informes)
   Cada conjunto de datos de un informe contiene una colección Fields. La colección Fields es el conjunto de campos especificados por la consulta de conjunto de datos, más los campos calculados adicionales que se hayan creado. Una vez creado el conjunto de datos, la colección de campos aparece en el panel **Datos de informe** .  

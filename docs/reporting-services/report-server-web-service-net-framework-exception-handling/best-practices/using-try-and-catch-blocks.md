@@ -25,6 +25,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "33023792"
 ---
 # <a name="using-try-and-catch-blocks"></a>Uso de los bloques Try y Catch
   Después de limitar las solicitudes no válidas al servidor de informes agregando instrucciones condicionales al código, debería proporcionar un sistema de administración de excepciones adecuado a través del uso de bloques try/catch. Esta técnica proporciona otro nivel de protección con las solicitudes que no son válidas. Si una solicitud al servidor de informes se incluye en un bloque try y esa solicitud hace que el servidor de informes inicie una excepción, esta se detecta en el bloque catch, evitando así que la aplicación finalice inesperadamente. Una vez detectada la excepción, puede utilizarla para indicar al usuario que haga algo de manera diferente o simplemente le permita saber, de una manera descriptiva, que se ha producido un error. A continuación, puede utilizar un bloque finally para limpiar los recursos. Lo mejor sería generar un plan de administración de excepciones general para evitar la duplicación innecesaria de bloques try/catch.  

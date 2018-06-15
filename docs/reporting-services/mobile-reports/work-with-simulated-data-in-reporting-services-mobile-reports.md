@@ -20,6 +20,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "33018482"
 ---
 # <a name="work-with-simulated-data-in-reporting-services-mobile-reports"></a>Trabajar con datos simulados en los informes móviles de Reporting Services
 Cuando se coloca un elemento de galería en la superficie de diseño, el [!INCLUDE[PRODUCT_NAME](../../includes/ss-mobilereptpub-short.md)] genera de inmediato datos simulados para ese elemento. Estos datos sirven para una serie de propósitos útiles al crear informes móviles.   

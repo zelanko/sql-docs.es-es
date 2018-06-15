@@ -28,6 +28,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "33030332"
 ---
 # <a name="msreportserverinstance-class"></a>MSReportServer_Instance, clase
   La clase MSReportServer_Instance proporciona la información básica necesaria para que un cliente se conecte a un servidor de informes instalado.  

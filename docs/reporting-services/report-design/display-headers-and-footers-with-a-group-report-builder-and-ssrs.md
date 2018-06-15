@@ -20,6 +20,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "33021022"
 ---
 # <a name="display-headers-and-footers-with-a-group-report-builder-and-ssrs"></a>Mostrar encabezados y pies de página con un grupo (Generador de informes y SSRS)
   Puede ayudar a controlar si una fila estática, como un encabezado o un pie de grupo, se representa en filas dinámicas asociadas a un grupo en una región de datos Tablix.  

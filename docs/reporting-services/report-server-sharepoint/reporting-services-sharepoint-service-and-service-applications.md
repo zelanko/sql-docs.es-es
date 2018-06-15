@@ -18,6 +18,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "33025142"
 ---
 # <a name="reporting-services-sharepoint-service-and-service-applications"></a>Aplicaciones de servicio y servicio de SharePoint de Reporting Services
 

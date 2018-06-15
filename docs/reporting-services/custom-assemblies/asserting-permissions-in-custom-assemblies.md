@@ -30,6 +30,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "33015552"
 ---
 # <a name="asserting-permissions-in-custom-assemblies"></a>Validar los permisos en ensamblados personalizados
   De forma predeterminada, el código de ensamblado personalizado se ejecuta con el conjunto de permisos de **Ejecución** limitado. En algunos casos, puede desear implementar un ensamblado personalizado que realice llamadas protegidas a los recursos protegidos dentro del sistema de seguridad (como un archivo o el Registro). Para ello, debe hacer lo siguiente:  

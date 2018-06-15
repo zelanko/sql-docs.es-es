@@ -24,6 +24,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "33019452"
 ---
 # <a name="dataset-properties-dialog-box-filters"></a>Propiedades del conjunto de datos (cuadro de diálogo), Filtros
   Seleccione **Filtros** en el cuadro de diálogo **Propiedades del conjunto de datos** para crear filtros para el conjunto de datos.  

@@ -20,6 +20,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "33019472"
 ---
 # <a name="controlling-page-breaks-headings-columns-and-rows-report-builder-and-ssrs"></a>Controlar saltos de página, encabezados, columnas y filas (Generador de informes y SSRS)
   Un salto de página divide un informe en páginas independientes que se pueden ver e imprimir. Los saltos de página determinan cómo se ajusta el contenido a una página del informe para su vista óptima al ofrecer una vista previa de un informe o exportarlo a un formato de archivo diferente.  

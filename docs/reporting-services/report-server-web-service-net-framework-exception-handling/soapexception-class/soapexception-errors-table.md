@@ -24,6 +24,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "33028452"
 ---
 # <a name="soapexception-errors-table"></a>Tabla de errores de SoapException
   El servidor de informes genera errores y mensajes de error en la excepción SOAP según los errores que se producen en [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)]. En la tabla siguiente se muestran los errores que son accesibles desde métodos a través de un elemento **SoapException** en el servicio web del servidor de informes. Se organiza según el método o métodos que inician la excepción.  

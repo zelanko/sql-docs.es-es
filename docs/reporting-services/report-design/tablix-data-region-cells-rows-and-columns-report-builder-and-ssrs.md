@@ -25,6 +25,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "33028672"
 ---
 # <a name="tablix-data-region-cells-rows-and-columns-report-builder-and-ssrs"></a>Celdas, filas y columnas de la región de datos Tablix (Generador de informes y SSRS)
   Para controlar el modo en que las filas y columnas de una región de datos Tablix muestran los datos en un informe paginado de [!INCLUDE[ssRSnoversion_md](../../includes/ssrsnoversion-md.md)] , debe entender cómo especificar las filas y columnas para los datos de detalle, los datos de grupo, las etiquetas y los totales. En muchos casos, puede usar las estructuras predeterminadas de una tabla, matriz o lista para mostrar los datos. Para más información, vea [Tablas &#40;Generador de informes y SSRS&#41;](../../reporting-services/report-design/tables-report-builder-and-ssrs.md), [Matrices](../../reporting-services/report-design/create-a-matrix-report-builder-and-ssrs.md) o [Listas](../../reporting-services/report-design/create-invoices-and-forms-with-lists-report-builder-and-ssrs.md).  

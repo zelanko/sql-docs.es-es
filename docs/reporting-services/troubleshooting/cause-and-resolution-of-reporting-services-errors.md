@@ -24,6 +24,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "33030773"
 ---
 # <a name="cause-and-resolution-of-reporting-services-errors"></a>Causa y resolución de errores de Reporting Services
   Este tema incluye información sobre la causa y la resolución de una serie de errores relacionados con [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]. Los temas sobre mensajes de error de esta sección proporcionan una explicación del mensaje de error, las posibles causas y las medidas que se pueden tomar para solucionar el problema.  

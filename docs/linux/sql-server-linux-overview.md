@@ -17,6 +17,7 @@ ms.sourcegitcommit: a9da0abd3e17fbcd6339980d7331d0418cdada53
 ms.translationtype: MT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/24/2018
+ms.locfileid: "34473855"
 ---
 # <a name="sql-server-on-linux"></a>SQL Server en Linux
 

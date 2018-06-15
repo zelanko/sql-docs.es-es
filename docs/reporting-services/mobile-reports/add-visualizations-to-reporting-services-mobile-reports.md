@@ -20,6 +20,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "33021692"
 ---
 # <a name="add-visualizations-to-reporting-services-mobile-reports"></a>Agregar visualizaciones a informes móviles de Reporting Services
 Los gráficos son una parte esencial de la visualización de datos. Obtenga más información sobre los gráficos que puede utilizar en los informes móviles de [!INCLUDE[ssRSnoversion_md](../../includes/ssrsnoversion-md.md)] para cubrir una variedad de escenarios. 

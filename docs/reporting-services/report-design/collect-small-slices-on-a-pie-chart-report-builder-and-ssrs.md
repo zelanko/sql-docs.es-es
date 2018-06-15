@@ -20,6 +20,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "33021842"
 ---
 # <a name="collect-small-slices-on-a-pie-chart-report-builder-and-ssrs"></a>Recopilar segmentos pequeños en un gráfico circular (Generador de informes y SSRS)
 Los gráficos circulares con demasiados segmentos pueden parecer abarrotados. Aprenda a combinar muchos segmentos pequeños de un gráfico circular en un único segmento en informes paginados de [!INCLUDE[ssRSnoversion_md](../../includes/ssrsnoversion-md.md)].

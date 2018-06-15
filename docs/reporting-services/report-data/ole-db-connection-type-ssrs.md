@@ -20,6 +20,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "33022942"
 ---
 # <a name="ole-db-connection-type-ssrs"></a>Tipo de conexión OLE DB (SSRS)
   Para incluir los datos de un proveedor de datos OLE DB, debe tener un conjunto de datos basado en un origen de datos de informe de tipo OLE DB. Este tipo de origen de datos integrado se basa en la extensión de procesamiento de datos de OLE DB de [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] .  

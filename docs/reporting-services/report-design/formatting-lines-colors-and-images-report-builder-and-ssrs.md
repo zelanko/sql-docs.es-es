@@ -33,6 +33,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "33023362"
 ---
 # <a name="formatting-lines-colors-and-images-report-builder-and-ssrs"></a>Aplicar formato a líneas, colores e imágenes (Generador de informes y SSRS)
   [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] le permite dar formato a las líneas, los colores, las regiones de datos, las imágenes y otros elementos de informe.  

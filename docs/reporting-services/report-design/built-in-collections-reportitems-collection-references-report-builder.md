@@ -20,6 +20,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "33020172"
 ---
 # <a name="built-in-collections---reportitems-collection-references-report-builder"></a>Colecciones integradas: referencias a la colección ReportItems (Generador de informes)
   La colección integrada **ReportItems** es el conjunto de los cuadros de texto de los elementos de informe, como las filas de una región de datos o los cuadros de texto de la superficie de diseño del informe. La colección **ReportItems** incluye los cuadros de texto que están en el ámbito actual de un encabezado de página, un pie de página o el cuerpo del informe. Esta colección la determinan en tiempo de ejecución el procesador de informes y el representador de informes. El ámbito actual va cambiando mientras el procesador de informes va combinando consecutivamente los datos del informe y los elementos de diseño de los elementos del informe a medida que el usuario visualiza las páginas de un informe. Puede usar la colección integrada **ReportItems** para generar encabezados de página de estilo diccionario que muestren el primer y el último elemento de cada página.  

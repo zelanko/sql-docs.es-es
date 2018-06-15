@@ -20,6 +20,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "33019432"
 ---
 # <a name="work-around-the-excel-2003-row-limitation"></a>Work Around the Excel 2003 Row Limitation
   En este tema se explica cómo resolver la limitación de filas de Excel 2003 al exportar informes paginados a Excel. La solución alternativa es para un informe que solo contiene una tabla.  

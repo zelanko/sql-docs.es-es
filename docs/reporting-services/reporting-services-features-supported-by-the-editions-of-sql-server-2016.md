@@ -20,6 +20,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "33028958"
 ---
 # <a name="reporting-services-features-supported-by-the-editions-of-sql-server-2016"></a>Características de Reporting Services compatibles con las ediciones de SQL Server 2016
 

@@ -20,6 +20,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "33022692"
 ---
 # <a name="sql-server-mobile-reports-end-to-end-walk-through"></a>Informes móviles de SQL Server: tutorial completo
 Recorra la creación de informes móviles para cualquier tamaño de pantalla con [!INCLUDE[PRODUCT_NAME](../../includes/ss-mobilereptpub-long.md)] en el portal web de [!INCLUDE[ssRSnoversion_md](../../includes/ssrsnoversion-md.md)] y véalos en las aplicaciones móviles de Power BI.

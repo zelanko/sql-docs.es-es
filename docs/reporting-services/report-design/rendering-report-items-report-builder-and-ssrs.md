@@ -20,6 +20,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "33026562"
 ---
 # <a name="rendering-report-items-report-builder-and-ssrs"></a>Representar elementos de informe (Generador de informes y SSRS)
   El número, tamaño y ubicación de los elementos de informe afectan a la manera en que los representadores paginan el cuerpo del informe. A continuación se incluye una descripción de cómo se representan los distintos elementos de informe.  

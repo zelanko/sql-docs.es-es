@@ -30,6 +30,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "33016742"
 ---
 # <a name="using-reporting-services-security-policy-files"></a>Usar los archivos de directivas de seguridad de Reporting Services
   [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] almacena la información de los componentes de directiva de seguridad en tres archivos de configuración que se copian en el sistema de archivos durante la instalación. Estos archivos de configuración pueden contener una combinación de uso interno y las directivas de seguridad definidas por el usuario para los ensamblados de código en [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)]. Los tres archivos de configuración corresponden a tres componentes protegibles de [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)]: el servidor de informes y el servicio de Windows, la aplicación web del Administrador de informes y la ventana de vista previa del Diseñador de Informes.  

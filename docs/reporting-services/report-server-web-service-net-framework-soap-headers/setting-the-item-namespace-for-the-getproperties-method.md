@@ -26,6 +26,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "33024282"
 ---
 # <a name="setting-the-item-namespace-for-the-getproperties-method"></a>Establecer el espacio de nombres de elemento para el método GetProperties
   Puede utilizar el encabezado SOAP <xref:ReportService2010.ItemNamespaceHeader> en [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] para recuperar propiedades de elementos basadas en dos identificadores de elemento diferentes: la ruta de acceso completa o el id. del elemento.  

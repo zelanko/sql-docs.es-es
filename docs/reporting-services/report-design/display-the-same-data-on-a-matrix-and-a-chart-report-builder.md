@@ -20,6 +20,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "33022092"
 ---
 # <a name="display-the-same-data-on-a-matrix-and-a-chart-report-builder"></a>Mostrar los mismos datos en una matriz y en un gráfico (Generador de informes y SSRS)
   Cuando se desea mostrar los mismos datos en una matriz y en un gráfico, se deben establecer propiedades en ambas regiones de datos para especificar el mismo conjunto de datos, y también las mismas expresiones para los filtros, los grupos, las ordenaciones y los datos.  

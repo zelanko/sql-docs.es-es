@@ -24,6 +24,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "33028182"
 ---
 # <a name="configure-report-builder-access"></a>Configurar el acceso al Generador de informes
   El Generador de informes es una herramienta de notificación ad hoc que se instala con un servidor de informes de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] configurado para modo nativo o para modo de integración con SharePoint.  

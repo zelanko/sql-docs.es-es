@@ -25,6 +25,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "33016422"
 ---
 # <a name="preparing-to-implement-a-data-processing-extension"></a>Prepararse para implementar una extensión de procesamiento de datos
   Antes de implementar la extensión de procesamiento de datos de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)], debería definir las interfaces que se van a implementar. Puede que quiera proporcionar implementaciones específicas de la extensión del conjunto completo de interfaces o simplemente centrar la implementación en un subconjunto, como las interfaces <xref:Microsoft.ReportingServices.DataProcessing.IDataReader> y <xref:Microsoft.ReportingServices.DataProcessing.IDbCommand> en las que los clientes interactuarían principalmente con un conjunto de resultados como un objeto **DataReader** y usarían la extensión de procesamiento de datos de [!INCLUDE[ssRS](../../../includes/ssrs-md.md)] como un puente entre el conjunto de resultados y el origen de datos.  

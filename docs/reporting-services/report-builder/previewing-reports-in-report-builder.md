@@ -20,6 +20,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "33022352"
 ---
 # <a name="previewing-reports-in-report-builder"></a>Mostrar la vista previa de informes en el Generador de informes
   Durante la creación de un informe paginado de [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] , resulta útil obtener una vista previa del mismo a menudo para comprobar que muestra lo que se pretende. Para obtener una vista previa de un informe, haga clic en **Ejecutar**. El informe se representa en el modo de vista previa.  

@@ -20,6 +20,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "33036422"
 ---
 # <a name="troubleshoot-server-and-database-connection-problems-with-reporting-services"></a>Solución de problemas de conexión de base de datos y servidor con Reporting Services
 Utilice este tema para solucionar los problemas que surjan durante la conexión a un servidor de informes. Este tema también proporciona información sobre los mensajes de "Error inesperado". Para obtener más información sobre la configuración del origen de datos y cómo configurar la información de conexión del servidor de informes, consulte [Especificar información de credenciales y conexión para los orígenes de datos de informes](../../reporting-services/report-data/specify-credential-and-connection-information-for-report-data-sources.md) y [Configurar una conexión a la base de datos del servidor de informes (Administrador de configuración de SSRS)](../../reporting-services/install-windows/configure-a-report-server-database-connection-ssrs-configuration-manager.md).  

@@ -24,6 +24,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "33025732"
 ---
 # <a name="open-and-close-a-report-report-manager"></a>Abrir y cerrar un informe (Administrador de informes)
   Puede usar el Administrador de informes para ver informes publicados en un servidor de informes. De forma predeterminada, todos los informes se abren en HTML. Después de abrirse un informe, puede exportarlo para verlo en otros formatos de aplicación. Si el informe contiene características interactivas o si es un informe del Generador de informes que contiene datos interactivos, puede hacer clic en los vínculos para ver datos o informes adicionales.  

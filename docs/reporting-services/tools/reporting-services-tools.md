@@ -31,6 +31,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "33034972"
 ---
 # <a name="reporting-services-tools"></a>Herramientas de Reporting Services
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] contiene un conjunto de herramientas gráficas y de scripting que admiten el desarrollo y la utilización de informes completos en un entorno administrado. El conjunto de herramientas incluye herramientas de desarrollo, herramientas de configuración y administración, y herramientas de visualización de informes. Este tema proporciona una breve información general de cada herramienta de [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] y cómo se puede obtener acceso a ella.  

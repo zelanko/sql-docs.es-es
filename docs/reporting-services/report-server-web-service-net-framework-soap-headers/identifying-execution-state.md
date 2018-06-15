@@ -27,6 +27,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "33025682"
 ---
 # <a name="identifying-execution-state"></a>Identificar el estado de ejecución
   El Protocolo de transferencia de hipertexto (HTTP) es un protocolo sin estado y sin conexión, lo que significa que no indica de manera automática si las diferentes solicitudes provienen del mismo cliente o si una instancia del explorador todavía está viendo una página o un sitio. Las sesiones crean una conexión lógica para mantener el estado entre el servidor y el cliente sobre HTTP. La información específica del usuario pertinente para una sesión determinada se conoce como estado de sesión.  

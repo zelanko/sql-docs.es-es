@@ -25,6 +25,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "33023522"
 ---
 # <a name="formatting-series-colors-on-a-chart-report-builder-and-ssrs"></a>Aplicar formato a los colores de serie de un gráfico (Generador de informes y SSRS)
   Reporting Services proporciona varias paletas integradas para los gráficos, pero también se puede definir una paleta personalizada. De forma predeterminada, los gráficos usan la paleta de colores integrada **Pacific** para rellenar las series. Estos colores también aparecen en la leyenda. Cuando se agregan varias series al gráfico, este asigna un color a cada serie siguiendo el orden en el que se han definido los colores en la paleta.  

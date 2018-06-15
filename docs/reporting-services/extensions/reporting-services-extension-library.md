@@ -27,6 +27,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "33015112"
 ---
 # <a name="reporting-services-extension-library"></a>Biblioteca de extensiones de Reporting Services
   La biblioteca de extensiones de Reporting Services es un conjunto de clases, interfaces y tipos de valores que se incluyen en [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]. Esta biblioteca proporciona acceso a la funcionalidad del sistema y es la base sobre la que las aplicaciones de [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] se pueden usar para extender los componentes de [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)].  

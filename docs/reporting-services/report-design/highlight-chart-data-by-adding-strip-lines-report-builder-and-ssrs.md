@@ -20,6 +20,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "33023462"
 ---
 # <a name="highlight-chart-data-by-adding-strip-lines-report-builder-and-ssrs"></a>Resaltar datos en el gráfico agregando franjas (Generador de informes y SSRS)
   Las franjas son intervalos horizontales o verticales que sombrean el fondo del gráfico a intervalos regulares o personalizados. Puede usar las franjas para:  

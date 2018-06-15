@@ -27,6 +27,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "33031132"
 ---
 # <a name="windowsserviceidentityconfigured-property"></a>WindowsServiceIdentityConfigured, propiedad
   Devuelve la última identidad en la que se configuró el servicio Servidor de informes de Windows para ejecutarse. Solo lectura.  

@@ -22,6 +22,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "33036172"
 ---
 # <a name="tutorial-creating-a-basic-table-report-report-builder"></a>Tutorial: Crear un informe de tabla básico (Generador de informes)
 Este tutorial muestra cómo crear un informe de tabla básico basado en datos de ventas de ejemplo. En la siguiente ilustración se muestra el informe que va a crear.  

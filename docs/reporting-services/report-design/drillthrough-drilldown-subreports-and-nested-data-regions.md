@@ -20,6 +20,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "33022822"
 ---
 # <a name="drillthrough-drilldown-subreports-and-nested-data-regions"></a>Obtención de detalles, informes detallados, subinformes y regiones de datos anidadas
   Puede organizar los datos de distintas formas para mostrar la relación entre lo general y lo detallado.  Puede incluir todos los datos en el informe, pero establecer que permanezcan ocultos hasta que un usuario haga clic para mostrar los detalles; esta es una acción *de obtención de detalles* . Puede mostrar los datos en una región de datos, como una tabla o un gráfico, que *está anidada* en otra, como una tabla o matriz. Puede mostrar los datos en un *subinforme* que esté completamente incluido dentro de un informe principal. O también, puede colocar los datos detallados en informes *detallados* , informes independientes que se muestran cuando un usuario hace clic en un vínculo.  

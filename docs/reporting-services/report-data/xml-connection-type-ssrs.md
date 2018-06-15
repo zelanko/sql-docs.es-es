@@ -20,6 +20,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "33023132"
 ---
 # <a name="xml-connection-type-ssrs"></a>Tipo de conexión XML (SSRS)
   Para incluir los datos de un origen de datos XML en el informe, deberá tener un conjunto de datos basado en un origen de datos de informe de tipo XML. Este tipo de origen de datos integrado se basa en la extensión de datos XML. Utilice este tipo de origen de datos para conectarse y recuperar datos de documentos XML, servicios web o XML incrustado en la consulta.  

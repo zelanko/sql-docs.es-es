@@ -20,6 +20,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "33036852"
 ---
 # <a name="sample-reporting-services-rsexe-script-to-copy-content-between-report-servers"></a>Script rs.exe de ejemplo de Reporting Services para copiar contenido entre servidores de informes
 

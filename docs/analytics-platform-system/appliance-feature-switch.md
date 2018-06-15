@@ -14,6 +14,7 @@ ms.sourcegitcommit: fc3cd23685c6b9b6972d6a7bab2cc2fc5ebab5f2
 ms.translationtype: MT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/25/2018
+ms.locfileid: "34550918"
 ---
 #<a name="appliance-feature-switch"></a>Modificador de características del dispositivo
 El **característica conmutador** página muestra información acerca de los modificadores de dos características que se introducen en AU7 de sistema de plataforma de análisis. Utilice esta página para actualizar o habilitar o deshabilitar características y configuración de sistema de la plataforma de análisis. Cambiar valores de modificador de características, requiere un reinicio del servicio.

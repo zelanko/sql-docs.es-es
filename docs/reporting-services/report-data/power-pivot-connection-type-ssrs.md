@@ -20,6 +20,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "33021662"
 ---
 # <a name="power-pivot-connection-type-ssrs"></a>Tipo de conexión de PowerPivot (SSRS)
   Puede utilizar la extensión de procesamiento de datos de SQL Server Analysis Services para recuperar datos de un libro [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] publicado en una galería de [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] de SharePoint.  

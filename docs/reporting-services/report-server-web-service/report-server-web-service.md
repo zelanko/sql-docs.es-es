@@ -30,6 +30,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "33028782"
 ---
 # <a name="report-server-web-service"></a>servicio web del servidor de informes
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] proporciona acceso a la funcionalidad completa del servidor de informes a través del servicio web del servidor de informes. El servicio web del servidor de informes es un servicio web XML con una API SOAP. Utiliza SOAP sobre HTTP y actúa como interfaz de comunicaciones entre los programas clientes y el servidor de informes. El servicio web proporciona dos extremos, uno para la ejecución y otro para la administración de informes, con métodos que exponen la funcionalidad del servidor de informes y le permiten crear herramientas personalizadas para cualquier parte del ciclo de vida del informe.  

@@ -20,6 +20,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "33033322"
 ---
 # <a name="troubleshoot-reporting-services-report-rendering-issues"></a>Solución de problemas de representación de informes de Reporting Services
 Una vez combinados los datos y la información de diseño, el informe compilado se envía a un representador de informes. Por ejemplo, al obtener una vista previa de un informe localmente, se utiliza el representador de HTML para ver el informe compilado. Utilice este tema para ayudar a solucionar problemas concretos de la representación de informes.   

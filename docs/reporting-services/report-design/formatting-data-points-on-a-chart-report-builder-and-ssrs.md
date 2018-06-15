@@ -23,6 +23,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "33028152"
 ---
 # <a name="formatting-data-points-on-a-chart-report-builder-and-ssrs"></a>Aplicar formato a los puntos de datos de un gráfico (Generador de informes y SSRS)
 En el informe paginado de [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] , un punto de datos es la entidad individual más pequeña del gráfico. En los gráficos que no son de formas, los puntos de datos se representan en función del tipo de gráfico. Por ejemplo, una serie de líneas está formada por uno o más puntos de datos conectados. En los gráficos de formas, los puntos de datos se representan por sectores o segmentos individuales que se agregan al gráfico. Por ejemplo, en un gráfico circular, cada sector es un punto de datos. Para más información, vea [Tipos de gráficos &#40;Generador de informes y SSRS&#41;](../../reporting-services/report-design/chart-types-report-builder-and-ssrs.md).  

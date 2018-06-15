@@ -27,6 +27,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "33028172"
 ---
 # <a name="performance-counters-msrs-2011-web-service-performance-objects"></a>Servicio web de MSRS 2011 de contadores de rendimiento, objetos de rendimiento
   En este tema se describen los contadores de rendimiento para los objetos de rendimiento **MSRS 2011 Web Service** y **MSRS 2011 Windows Service** . Estos objetos son parte de una implementación de modo nativo de [!INCLUDE[ssRSCurrent](../../includes/ssrscurrent-md.md)] .  

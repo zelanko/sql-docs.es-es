@@ -22,6 +22,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "33015992"
 ---
 # <a name="lesson-2-specifying-connection-information-reporting-services"></a>Lección 2: Especificar información de conexión (Reporting Services)
 Después de haber agregado un informe paginado de [!INCLUDE[ssRSnoversion_md](../includes/ssrsnoversion-md.md)] al proyecto Tutorial en la lección 1, ahora debe definir un *origen de datos*, que es la información de conexión que el informe usa para obtener acceso a los datos procedentes de una base de datos relacional, una base de datos multidimensional u otro origen.  

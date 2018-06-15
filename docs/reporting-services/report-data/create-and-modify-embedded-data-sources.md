@@ -20,6 +20,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "33020392"
 ---
 # <a name="create-and-modify-embedded-data-sources"></a>Creación y modificación de orígenes de datos incrustados
   Un origen de datos incrustado se define en una definición de informe y se usa solamente en ese informe.  

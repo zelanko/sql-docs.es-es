@@ -43,6 +43,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "33021894"
 ---
 # <a name="change-map-legends-color-scale-and-associated-rules-report-builder-and-ssrs"></a>Cambiar leyendas de mapa, escala de colores y reglas asociadas (Generador de informes y SSRS)
   En un informe paginado de [!INCLUDE[ssRSnoversion_md](../../includes/ssrsnoversion-md.md)] , un mapa puede contener leyendas de mapa, una escala de colores y una escala de distancia. Estas partes de un mapa ayudan a los usuarios a interpretar la visualización de los datos del mapa.  

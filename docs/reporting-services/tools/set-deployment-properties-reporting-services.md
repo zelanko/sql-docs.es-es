@@ -25,6 +25,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "33034132"
 ---
 # <a name="set-deployment-properties-reporting-services"></a>Establecer propiedades de implementación (Reporting Services)
   En[!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)], debe especificar el servidor de informes y, si lo desea, las carpetas de los informes y orígenes de datos compartidos para poder publicar los elementos de un proyecto de Servidor de informes en un servidor de informes. Las propiedades y valores que [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] necesita para generar los informes, obtener una vista previa de los mismos e implementarlos están almacenados en las configuraciones de proyecto correspondiente al proyecto del servidor de informes. Puede crear varios conjuntos con nombre para estas propiedades de proyecto; de esta forma, podrá cambiar de un conjunto de propiedades a otro según sea necesario. Cada conjunto de propiedades es una configuración. Por ejemplo, puede tener una configuración para publicar los informes en un servidor de pruebas y otra configuración diferente para publicar los informes en un servidor de producción.  

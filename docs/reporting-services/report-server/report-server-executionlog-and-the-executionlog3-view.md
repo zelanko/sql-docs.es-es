@@ -23,6 +23,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "33028902"
 ---
 # <a name="report-server-executionlog-and-the-executionlog3-view"></a>Registro de ejecución del servidor de informes y la vista ExecutionLog3
   El registro de la ejecución del servidor de informes de [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]contiene información sobre los informes que se ejecutan en el servidor o en varios servidores de una implementación escalada en modo nativo o de una granja de servidores de SharePoint. Puede usar el registro de la ejecución de informes para averiguar con qué frecuencia se solicita el informe, qué formatos de salida se usan más y cuántos milisegundos del tiempo de procesamiento se dedica a cada fase del procesamiento. El registro contiene información sobre el tiempo de ejecución de la consulta de conjunto de datos de un informe y el tiempo empleado en el procesamiento de los datos. Si es administrador del servidor de informes, puede revisar la información del registro e identificar las tareas de ejecución prolongada, y realizar sugerencias a los autores de informes en las áreas del informe (conjunto de datos o procesamiento) que se puedan mejorar.  

@@ -31,6 +31,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "33024992"
 ---
 # <a name="batching-methods"></a>Métodos de procesamiento por lotes
   El uso de encabezados SOAP en [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] le permite incluir varios métodos de servicio web en una única operación. Los métodos se ejecutan dentro del ámbito de una única transacción de base de datos, en el orden en el que se llaman.  

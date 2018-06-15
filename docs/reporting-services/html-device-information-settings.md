@@ -23,6 +23,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "33017092"
 ---
 # <a name="html-device-information-settings"></a>Configuración de la información del dispositivo HTML
 En la tabla siguiente se muestra la configuración de la información de los dispositivos para la representación en formato HTML.  

@@ -27,6 +27,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "33025752"
 ---
 # <a name="subscription-and-delivery-methods"></a>Métodos de suscripción y entrega
   Puede utilizar estos métodos para crear y administrar las suscripciones y la entrega de elementos del catálogo.  

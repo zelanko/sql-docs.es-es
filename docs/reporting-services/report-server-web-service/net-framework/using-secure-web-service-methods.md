@@ -27,6 +27,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "33025212"
 ---
 # <a name="using-secure-web-service-methods"></a>Usar métodos de servicio web seguros
   Ciertos métodos de servicio web del servidor de informes pueden requerir una conexión segura al invocarlos. La opción **SecureConnectionLevel** determina los métodos que requieren una conexión segura en el archivo RSReportServer.config. El valor de esta opción es un número entero comprendido entre 0 y superior. Estos valores se describen en la siguiente tabla.  

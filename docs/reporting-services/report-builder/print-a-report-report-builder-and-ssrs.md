@@ -20,6 +20,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "33021322"
 ---
 # <a name="print-a-report-report-builder-and-ssrs"></a>Imprimir un informe (Generador de informes y SSRS)
   Después de guardar un informe en un servidor de informes, puede ver e imprimir el informe desde un explorador, el portal web de Reporting Services o cualquier aplicación que use para ver un informe exportado. Antes de guardar un informe, puede imprimirlo desde su vista previa.  

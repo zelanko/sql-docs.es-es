@@ -31,6 +31,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "33035532"
 ---
 # <a name="disable-or-pause-report-and-subscription-processing"></a>Deshabilitar o pausar el procesamiento de informes y suscripciones
   Existen varios enfoques que puede usar para deshabilitar o pausar el procesamiento de informes y suscripciones de [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] . Los enfoques de este tema comprenden desde deshabilitar una suscripción a interrumpir la conexión del origen de datos. No todos los enfoques son posibles con ambos modos de servidor de [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] . En las tablas siguientes se resumen los métodos y los modos de servidor de [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] admitidos:  

@@ -26,6 +26,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "33022902"
 ---
 # <a name="pin-reporting-services-items-to-power-bi-dashboards"></a>Pin Reporting Services items to Power BI Dashboards (Anclar elementos de Reporting Services en paneles de Power BI)
   [!INCLUDE[ssRSCurrent](../includes/ssrscurrent-md.md)] permite a los usuarios anclar elementos de informe de [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] de la barra de herramientas del Visor de informes en un panel de [!INCLUDE[sspowerbi](../includes/sspowerbi-md.md)] como un nuevo icono.   Para anclarlos, el administrador tendrá que integrar primero el servidor de informes con Azure Active Directory y [!INCLUDE[sspowerbi](../includes/sspowerbi-md.md)].  

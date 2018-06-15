@@ -20,6 +20,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "33028082"
 ---
 # <a name="modify-a-reporting-services-configuration-file-rsreportserverconfig"></a>Modificar un archivo de configuración de Reporting Services (RSreportserver.config)
   [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] almacena la configuración de la aplicación en un conjunto de archivos de configuración. La instalación crea los archivos de configuración para cada instancia del servidor de informes que instala. Dentro de cada archivo, los valores se establecen durante la instalación o al usar herramientas y aplicaciones para configurar un servidor para la operación. En algunos casos, debe modificar directamente un archivo para agregar o configurar la configuración avanzada. Los parámetros de configuración se especifican como atributos o elementos XML. Si comprende XML y los archivos de configuración, puede utilizar un editor de texto o de código para modificar las opciones de configuración definibles por el usuario.  

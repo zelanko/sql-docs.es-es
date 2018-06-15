@@ -22,6 +22,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "33015292"
 ---
 # <a name="lesson-7-add-drillthrough-action-on-parent-report"></a>Lección 7: Agregar una acción de obtención de detalles en el informe primario
 Después de agregar un control ReportViewer a la aplicación de sitio Web, el paso siguiente consiste en agregar una acción de obtención de detalles en el informe primario.  

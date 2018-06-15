@@ -20,6 +20,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "33022272"
 ---
 # <a name="built-in-collections---datasources-and-datasets-references-report-builder"></a>Colecciones integradas: referencias a DataSources y DataSets (Generador de informes)
   La colección **DataSources** representa todos los orígenes de datos usados en un informe. De igual forma, la colección **DataSets** representa todos los conjuntos de datos de todos los orígenes de datos existentes en un informe. Use el panel **Datos de informe** para obtener acceso a una vista jerárquica en la que aparezcan los conjuntos de datos de informe organizados debajo del origen de datos al que hacen referencia. Si incluye referencias a estas colecciones, no verá los valores cuando obtenga acceso a una vista previa del informe. Estas colecciones solo están disponibles una vez publicado el informe en un servidor de informes.  

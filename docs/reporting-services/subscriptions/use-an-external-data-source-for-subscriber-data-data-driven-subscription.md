@@ -27,6 +27,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "33032272"
 ---
 # <a name="use-an-external-data-source-for-subscriber-data-data-driven-subscription"></a>Usar un origen de datos externo para obtener información de los suscriptores (suscripción controlada por datos)
   En una suscripción controlada por datos, los datos de suscripción dinámica se proporcionan mediante una consulta o un comando que recupera los datos desde un origen de datos externo. Los datos de suscripción se pueden recuperar desde cualquier origen de datos compatible que satisfaga los requisitos del procesamiento de suscripciones controladas por datos. La sintaxis de la consulta o el comando debe ser válida para una extensión de procesamiento de datos instalada en el servidor de informes.  

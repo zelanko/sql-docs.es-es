@@ -22,6 +22,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "33029272"
 ---
 # <a name="report-designer-f1-help"></a>Diseñador de informes (Ayuda F1)
   En esta sección se ofrece Ayuda de F1 para los asistentes, vistas y cuadros de diálogo del Diseñador de informes de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] en [!INCLUDE[ssBIDevStudioFull_md](../../includes/ssbidevstudiofull-md.md)]. También puede abrir la Ayuda F1 mientras trabaja en un cuadro de diálogo; para ello, presione F1 o haga clic en el botón Ayuda que se muestra en el cuadro de diálogo.  

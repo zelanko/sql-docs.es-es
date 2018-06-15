@@ -20,6 +20,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "33020882"
 ---
 # <a name="add-an-expand-or-collapse-action-to-an-item-report-builder-and-ssrs"></a>Agregar una acción de expandir y contraer a un elemento (Generador de informes y SSRS)
   Podrá permitir a los usuarios expandir o contraer interactivamente elementos de informe o expandir o contraer las filas y columnas asociadas a un grupo para una tabla o una matriz. Para permitir a los usuarios expandir o contraer un elemento, debe establecer las propiedades de visibilidad del elemento. El establecimiento de la visibilidad funciona en un visor de informes HTML y en ocasiones se denomina acción *de obtención de detalles* .  

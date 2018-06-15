@@ -26,6 +26,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "33016372"
 ---
 # <a name="deploying-a-delivery-extension"></a>Implementar una extensión de entrega
   Las extensiones de entrega proporcionan su información de configuración en forma de archivo de configuración XML. El archivo XML cumple el esquema XML definido para las extensiones de entrega. Las extensiones de entrega proporcionan la infraestructura para establecer y modificar el archivo de configuración.  

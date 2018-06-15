@@ -20,6 +20,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "33020072"
 ---
 # <a name="allow-a-text-box-to-grow-or-shrink-report-builder-and-ssrs"></a>Permitir que un cuadro de texto aumente o se reduzca (Generador de informes y SSRS)
   En un informe paginado de [!INCLUDE[ssRSnoversion_md](../../includes/ssrsnoversion-md.md)] , los cuadros de texto no son simplemente los cuadros independientes de la superficie de diseño del informe. Cada celda de una tabla o una matriz (una región de datos de Tablix) contienen un cuadro de texto, al que se puede dar formato de la misma manera que a los cuadros de texto independientes. De manera predeterminada, los cuadros de texto son de tamaño fijo. Puede establecer las opciones que permiten que el cuadro de texto se expanda o se reduzca según su contenido. Estas opciones corresponden a las propiedades **CanGrow** o **CanShrink** del panel de propiedades.  

@@ -20,6 +20,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "33023412"
 ---
 # <a name="keep-headers-visible-when-scrolling-through-a-report-report-builder-and-ssrs"></a>Mantener visibles los encabezados al desplazarse a través de un informe (Generador de informes y SSRS)
   Para evitar que las etiquetas de fila y de columna se desplacen fuera de la vista después de representar un informe, puede inmovilizar los encabezados de fila o de columna.  

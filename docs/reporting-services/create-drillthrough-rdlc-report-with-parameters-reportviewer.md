@@ -22,6 +22,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "33014602"
 ---
 # <a name="create-drillthrough-rdlc-report-with-parameters---reportviewer"></a>Crear un informe detallado (RDLC) con parámetros mediante - ReportViewer
 Un informe [detallado](http://technet.microsoft.com/library/ff519554.aspx) es un informe que los usuarios abren al hacer clic en un vínculo de otro informe. Este tipo de informes suele incluir información detallada acerca de los elementos del informe de resumen original. Este tutorial le guía a través de las lecciones siguientes para crear un informe detallado con parámetros y una consulta, en [informes en modo local](http://msdn.microsoft.com/library/ff487969.aspx).  

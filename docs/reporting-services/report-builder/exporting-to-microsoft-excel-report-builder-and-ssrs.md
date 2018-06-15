@@ -20,6 +20,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "33022392"
 ---
 # <a name="exporting-to-microsoft-excel-report-builder-and-ssrs"></a>Exportar a Microsoft Excel (Generador de informes y SSRS)
   La extensión de representación de Excel [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] representa un informe paginado de [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] en el formato de [!INCLUDE[ofprexcel](../../includes/ofprexcel-md.md)] (.xlsx). Con la extensión de representación de Excel, el ancho de las columnas de Excel refleja más exactamente el ancho de las columnas de los informes.  

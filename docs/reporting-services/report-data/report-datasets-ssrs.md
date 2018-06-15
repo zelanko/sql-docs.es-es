@@ -20,6 +20,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "33021862"
 ---
 # <a name="report-datasets-ssrs"></a>Conjuntos de datos de informe (SSRS)
   Para agregar datos a un informe, cree conjuntos de datos. Cada conjunto de datos representa el conjunto de resultados obtenidos al ejecutar un comando de consulta en un origen de datos. Las columnas del conjunto de resultados son la colección de campos y las filas, los datos. Un conjunto de resultados no contiene los datos reales, sino la información necesaria para recuperar un conjunto de datos específico a partir de un origen de datos.  

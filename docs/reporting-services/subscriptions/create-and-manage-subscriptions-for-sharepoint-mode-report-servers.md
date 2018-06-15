@@ -24,6 +24,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "33035972"
 ---
 # <a name="create-and-manage-subscriptions-for-sharepoint-mode-report-servers"></a>Crear y administrar suscripciones para servidores de informes en modo de SharePoint
   Puede crear suscripciones de [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] para entregar informes desde una aplicación web de SharePoint que esté integrada con un servidor de informes en el modo de SharePoint. Las suscripciones pueden entregar informes a una biblioteca de documentos, a una carpeta de archivos o como un correo electrónico. En este tema se resumen los requisitos y los pasos para crear una suscripción de [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] .  

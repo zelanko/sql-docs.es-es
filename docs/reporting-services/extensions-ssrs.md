@@ -20,6 +20,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "33017527"
 ---
 # <a name="extensions-ssrs"></a>Extensiones (SSRS)
   El servidor de informes de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)][!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] usa extensiones para modular los tipos de entrada y salida que acepta para la autenticación, el proceso de datos, la representación de informes y la entrega de informes. Esto hace que sea más fácil que las instalaciones existentes de [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] utilicen los nuevos estándares de software del sector, como un esquema de autenticación o un tipo de origen de datos personalizado. El servidor de informes admite extensiones de autenticación personalizadas, extensiones de procesamiento de datos, extensiones de procesamiento de informes, extensiones de representación y extensiones de entrega, y las extensiones disponibles para los usuarios se pueden configurar en el archivo de configuración RSReportServer.config. Por ejemplo, puede limitar los formatos de exportación que el visor de informes puede usar. Un servidor de informes requiere al menos una extensión de autenticación, una extensión de procesamiento de datos y una extensión de representación. Las extensiones de procesamiento de informes y de entrega son opcionales, pero necesarias si desea admitir controles personalizados o de distribución de informes.  

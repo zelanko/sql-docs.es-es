@@ -16,9 +16,10 @@ ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 76d103ceecf643d7a7039317a18a7d3cb151538b
 ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
-ms.translationtype: MTE
+ms.translationtype: MTE75
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "33067152"
 ---
 # <a name="report-server-properties-log-on-tab"></a>Propiedades de Servidor de informes (pestaña Iniciar sesión)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]

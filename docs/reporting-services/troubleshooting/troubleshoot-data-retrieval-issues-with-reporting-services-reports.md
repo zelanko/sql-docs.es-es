@@ -20,6 +20,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "33032332"
 ---
 # <a name="troubleshoot-data-retrieval-issues-with-reporting-services-reports"></a>Solución de problemas de recuperación de datos de informes de Reporting Services
 El primer paso durante el procesamiento de informes es recuperar los datos del informe para cada conjunto de datos ejecutando la consulta del conjunto de datos. Al obtener una vista previa de un informe localmente, las conexiones a un origen de datos y las credenciales deben utilizar los permisos suficientes para recuperar los datos en el equipo. Al ejecutar un informe en el servidor de informes, las conexiones a un origen de datos y las credenciales deben utilizar los permisos suficientes para recuperar los datos en el servidor de informes. Utilice este tema como ayuda para solucionar los problemas de la recuperación de datos del informe.   

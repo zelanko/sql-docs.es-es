@@ -20,6 +20,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "33028892"
 ---
 # <a name="set-and-configure-measurement-units-report-builder-and-ssrs"></a>Establecer y configurar unidades de medida (Generador de informes y SSRS)
   En un informe paginado de [!INCLUDE[ssRSnoversion_md](../../includes/ssrsnoversion-md.md)] , los indicadores usan una de dos unidades de medida: porcentaje o valor numérico.   

@@ -22,6 +22,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "33016092"
 ---
 # <a name="lesson-4-adding-a-table-to-the-report-reporting-services"></a>Lección 4: Agregar una tabla al informe (Reporting Services)
 Después de definir un conjunto de datos, puede comenzar a diseñar el diseño. El diseño del informe se crea arrastrando y colocando en la superficie de diseño regiones de datos, cuadros de texto, imágenes y otros elementos que se desean incluir en el informe.  

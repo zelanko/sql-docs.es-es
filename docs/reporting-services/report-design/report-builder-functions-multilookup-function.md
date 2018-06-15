@@ -20,6 +20,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "33027192"
 ---
 # <a name="report-builder-functions---multilookup-function"></a>Funciones del Generador de informes: función Multilookup
   Devuelve el conjunto de valores de primera coincidencia para el conjunto especificado de nombres a partir de un conjunto de datos que contiene pares nombre/valor.  

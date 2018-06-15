@@ -20,6 +20,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "33015982"
 ---
 # <a name="device-information-settings-for-rendering-extensions-reporting-services"></a>Configuración de información de dispositivos para las extensiones de representación (Reporting Services)
   En [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)], la configuración de información de dispositivos se utiliza para pasar los parámetros de representación a una extensión de representación. Cada extensión de representación acepta un conjunto de valores específico.  

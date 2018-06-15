@@ -23,6 +23,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "33027962"
 ---
 # <a name="application-domains-for-report-server-applications"></a>Dominios de aplicación para las aplicaciones del servidor de informes
   En [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)], el servidor de informes se implementa como un servicio único que contiene el servicio web del servidor de informes, el Administrador de informes y una aplicación de procesamiento de fondo. Cada aplicación se ejecuta en su propio dominio de aplicación dentro del proceso del servidor de informes único. En su mayor parte, los dominios de aplicación se crean, configuran y administran internamente. Sin embargo, saber cómo se producen las operaciones de reciclaje para los dominios de aplicación del servidor de informes puede resultar útil si está investigando problemas de rendimiento o memoria, o resolviendo los problemas de las interrupciones del servicio.  

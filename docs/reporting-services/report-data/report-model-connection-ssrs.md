@@ -20,6 +20,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "33022972"
 ---
 # <a name="report-model-connection-ssrs"></a>Conexión de modelo de informe (SSRS)
   Para incluir datos de un modelo de informe, debe tener como origen de datos un conjunto de datos basado en un modelo de informe. A diferencia de otros orígenes de datos de informe, no hay ninguna extensión de datos para un modelo de informe. En el Generador de informes, busque y seleccione el modelo directamente desde el servidor de informes. En el Diseñador de informes, especifique la dirección URL del modelo de informe.  

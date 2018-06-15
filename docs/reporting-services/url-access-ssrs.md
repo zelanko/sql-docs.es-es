@@ -27,6 +27,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "33033702"
 ---
 # <a name="url-access-ssrs"></a>Acceso URL (SSRS)
   El acceso URL del servidor de informes de SQL Server Reporting Services (SSRS) permite enviar comandos a un servidor de informes a través de una solicitud URL. Por ejemplo, puede personalizar la representación de un informe en una biblioteca de SharePoint o un servidor de informes en modo nativo. Es posible que haya visto el informe usando un conjunto específico de valores de parámetro de informe o tal vez haya consultado una determina página de su interés. Puede encapsular esta información en la dirección URL usando los parámetros de acceso URL predefinidos. Puede personalizar más el modo en el que el servidor de informes procesa el informe incorporando parámetros sobre los formatos de representación o sobre la apariencia del visor de informes. Puede pegar esta dirección URL directamente en un mensaje de correo electrónico o una página web para permitir que otras personas tengan acceso al informe del mismo modo en el explorador.  

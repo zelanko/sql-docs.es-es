@@ -22,6 +22,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "33023802"
 ---
 # <a name="formulas-in-report-model-queries-report-builder-and-ssrs"></a>Utilizar fórmulas en consultas de modelo de informe (Generador de informes y SSRS)
   Las fórmulas son los cálculos que se realizan en los valores de un informe que utiliza un modelo de informe como origen de datos. Al definir fórmulas en el cuadro de diálogo **Definir fórmula** en el diseñador de consultas de modelo de informe, se define una consulta para el origen de datos del modelo de informe. Una fórmula puede contener funciones, operadores, constantes y referencias a campos o entidades. Las fórmulas permiten combinar, agregar, filtrar y evaluar datos numéricos y de texto. Puede crear fórmulas y guardarlas como campos nuevos, o puede modificar las fórmulas de campos existentes.  

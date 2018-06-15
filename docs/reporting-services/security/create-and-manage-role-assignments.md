@@ -26,6 +26,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "33027032"
 ---
 # <a name="create-and-manage-role-assignments"></a>Crear y administrar asignaciones de roles
   Una *asignación de roles* es una directiva de seguridad que determina si un usuario o un grupo pueden tener acceso a un elemento de servidor de informes específico o realizar una operación. Una asignación de roles consiste en un nombre de cuenta de usuario o de grupo y una o más definiciones de roles.  

@@ -20,6 +20,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "33021562"
 ---
 # <a name="add-cascading-parameters-to-a-report-report-builder-and-ssrs"></a>Agregar parámetros en cascada a un informe (Generador de informes y SSRS)
   Los parámetros en cascada permiten administrar grandes cantidades de datos de informe. Es posible definir un conjunto de parámetros relacionados de manera que la lista de valores de uno de ellos dependa del valor seleccionado en otro parámetro. Por ejemplo, el primer parámetro es independiente y podría presentar una lista de categorías de productos. Cuando el usuario selecciona una categoría, el segundo parámetro depende del valor del primer parámetro. Sus valores se actualizan con una lista de subcategorías para la categoría elegida. Cuando el usuario ve el informe, los valores de los parámetros de categoría y subcategoría se usan para filtrar los datos del informe.  

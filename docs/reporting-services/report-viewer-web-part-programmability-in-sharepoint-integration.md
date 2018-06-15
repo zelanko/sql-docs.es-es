@@ -22,6 +22,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "33026122"
 ---
 # <a name="report-viewer-web-part-programmability-in-sharepoint-integration"></a>Capacidad de programación del elemento web Visor de informes en la integración de SharePoint
   El elemento web Visor de informes es un control de servidor que contiene un conjunto de interfaces de programación de aplicaciones (API) públicas que permite a los desarrolladores crear aplicaciones de SharePoint personalizadas. Puede crear elementos web personalizados que proporcionan la ruta de acceso del informe y los parámetros al elemento web Visor de informes usando conexiones de elementos web. También puede incrustar el elemento web en una página personalizada de elemento web de SharePoint y personalizarlo usando la API pública.  

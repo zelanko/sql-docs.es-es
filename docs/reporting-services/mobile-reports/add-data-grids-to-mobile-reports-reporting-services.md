@@ -20,6 +20,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "33018982"
 ---
 # <a name="add-data-grids-to-mobile-reports--reporting-services"></a>Agregar cuadrículas de datos a informes para dispositivos móviles | Reporting Services
 A veces, la mejor forma de visualizar los datos es, simplemente, verlos. Obtenga más información sobre las tres *cuadrículas de datos*, o tablas, que existen para mostrar datos en el [!INCLUDE[SS_MobileReptPub_Long](../../includes/ss-mobilereptpub-long.md)]:

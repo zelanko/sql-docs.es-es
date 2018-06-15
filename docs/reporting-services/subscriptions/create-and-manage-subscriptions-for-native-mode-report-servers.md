@@ -23,6 +23,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "33035212"
 ---
 # <a name="create-and-manage-subscriptions-for-native-mode-report-servers"></a>Crear y administrar suscripciones para servidores de informes en modo nativo
   Una suscripción estándar es la que crean usuarios individuales que desean recibir un informe por correo electrónico o en una carpeta compartida. Este tema proporciona información sobre las suscripciones estándar que los usuarios individuales crean y administran. Las suscripciones controladas por datos tienen diferentes requisitos y pasos, y se tratan en otro tema. Para obtener más información, vea [Cómo crear, modificar y eliminar suscripciones controladas por datos](../../reporting-services/subscriptions/create-modify-and-delete-data-driven-subscriptions.md).  

@@ -23,6 +23,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "33039582"
 ---
 # <a name="proxy-account-properties---new-proxy-account-principals-tab"></a>Propiedades de cuenta de proxy - Nueva cuenta de proxy (pestaña Entidades de seguridad)
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]

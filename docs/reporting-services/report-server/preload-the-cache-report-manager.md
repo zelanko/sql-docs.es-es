@@ -23,6 +23,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "33027732"
 ---
 # <a name="preload-the-cache-report-manager"></a>Cargar previamente la memoria caché (Administrador de informes)
   Puede cargar previamente la memoria caché para un conjunto de datos compartido creando un plan de actualización de caché para él.  

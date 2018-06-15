@@ -22,6 +22,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "33027722"
 ---
 # <a name="performance-counters---reportserver-service--performance-objects"></a>Contadores de rendimiento - Servicio ReportServer, objetos de rendimiento
   En este tema se describen los contadores de rendimiento de los objetos de rendimiento **ReportServer:Service** y **ReportServerSharePoint:Service** que forman parte de una implementación de [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] .  

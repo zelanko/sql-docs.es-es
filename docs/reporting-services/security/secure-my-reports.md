@@ -26,6 +26,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "33029142"
 ---
 # <a name="secure-my-reports"></a>Proteger Mis informes
   La característica Mis informes proporciona un área de trabajo administrada por el usuario para trabajar con informes. A fin de cumplir su propósito, la carpeta Mis informes precisa permisos menos restrictivos que otras carpetas disponibles para uso general. Los usuarios que solo tienen permisos para ver y ejecutar informes en otras carpetas pueden necesitar un conjunto expandido de permisos para administrar sus carpetas Mis informes y el contenido que poseen. [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] proporciona una asignación de roles especializada y una definición de roles para este fin.  

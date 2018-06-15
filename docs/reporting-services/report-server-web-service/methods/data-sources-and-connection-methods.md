@@ -26,6 +26,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "33025742"
 ---
 # <a name="data-sources-and-connection-methods"></a>Orígenes de datos y métodos de conexión
   Puede utilizar estos métodos para establecer y administrar las credenciales y las conexiones a un origen de datos.  

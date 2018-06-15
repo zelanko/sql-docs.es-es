@@ -20,6 +20,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "33022622"
 ---
 # <a name="add-dataset-filters-data-region-filters-and-group-filters"></a>Agregar filtros de conjunto de datos, filtros de región de datos y filtros de grupo
   En un informe, un filtro es una parte de un conjunto de datos, una región de datos o un grupo de regiones de datos que se crea para restringir los datos que se usan en el informe. Los filtros pueden ayudarle a controlar los datos de informe si no puede cambiar la consulta de conjunto de datos, por ejemplo si usa un conjunto de datos compartido.  

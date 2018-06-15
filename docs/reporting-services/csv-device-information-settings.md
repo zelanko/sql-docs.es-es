@@ -23,6 +23,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "33015682"
 ---
 # <a name="csv-device-information-settings"></a>Configuración de la información del dispositivo CSV
   La configuración de la información de dispositivo para la extensión de representación CSV permite cambiar los delimitadores y certificadores, y controlar el salto de línea que se va a especificar. También se puede enviar la extensión del archivo, así como la codificación e inclusión de filas de encabezado en la salida. Dado que es probable que los delimitadores sean caracteres especiales, debería codificarlos en una sección CDATA, si la configuración se escribe como XML.  

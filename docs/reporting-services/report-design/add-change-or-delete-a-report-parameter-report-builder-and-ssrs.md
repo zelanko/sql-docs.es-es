@@ -20,6 +20,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "33020372"
 ---
 # <a name="add-change-or-delete-a-report-parameter-report-builder-and-ssrs"></a>Agregar, cambiar o eliminar parámetros de informe (Generador de informes y SSRS)
   Los parámetros de informe permiten elegir datos de informe, conectar informes relacionados y cambiar la presentación de los informes. Puede proporcionar un valor predeterminado y una lista de valores disponibles, y el usuario puede cambiar la selección.  

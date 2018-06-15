@@ -22,6 +22,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "33036392"
 ---
 # <a name="tutorial-adding-a-kpi-to-your-report-report-builder"></a>Tutorial: Agregar un KPI a un informe (Generador de informes y SSRS)
 En este tutorial de [!INCLUDE[ssRBnoversion_md](../includes/ssrbnoversion-md.md)] , agregue un indicador de rendimiento clave (KPI) a un informe paginado de [!INCLUDE[ssRSnoversion_md](../includes/ssrsnoversion-md.md)] .  

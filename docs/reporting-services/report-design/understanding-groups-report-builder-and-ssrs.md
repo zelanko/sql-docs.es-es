@@ -23,6 +23,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "33028872"
 ---
 # <a name="understanding-groups-report-builder-and-ssrs"></a>Descripción de los grupos (Generador de informes y SSRS)
   En un informe paginado de [!INCLUDE[ssRSnoversion_md](../../includes/ssrsnoversion-md.md)] , un grupo es un conjunto de datos con nombre del conjunto de datos de informe que está enlazado a una región de datos. Básicamente, un grupo organiza una vista de un conjunto de datos de informe. Todos los grupos de una región de datos especifican vistas diferentes del mismo conjunto de datos de informe.  

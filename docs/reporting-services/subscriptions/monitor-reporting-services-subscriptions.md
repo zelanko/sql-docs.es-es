@@ -26,6 +26,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "33035742"
 ---
 # <a name="monitor-reporting-services-subscriptions"></a>Supervisar suscripciones de Reporting Services
   Puede supervisar las suscripciones de [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] desde la interfaz de usuario, Windows PowerShell o los archivos de registro. Las opciones disponibles para la supervisión dependen del modo de servidor de informes que esté ejecutando.  

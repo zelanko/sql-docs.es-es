@@ -20,6 +20,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "33020772"
 ---
 # <a name="build-a-query-in-the-relational-query-designer-report-builder-and-ssrs"></a>Crear una consulta en el Diseñador de consultas relacionales (Generador de informes y SSRS)
   Los diseñadores de consultas le ayudan a especificar los datos que se deben recuperar de un origen de datos externo para un conjunto de datos de informe. Puede utilizar un diseñador de consultas cuando genere una consulta en un asistente o cree una consulta de conjunto de datos.  

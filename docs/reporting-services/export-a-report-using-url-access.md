@@ -23,6 +23,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "33015072"
 ---
 # <a name="export-a-report-using-url-access"></a>Exportar un informe mediante el acceso URL
   Opcionalmente, puede especificar el formato en el que se representará un informe mediante el parámetro de dirección URL *rs:Format* .  Los formatos HTML4.0 y HTM5 (extensión de representación) se representarán en el explorador y en otros formatos; el explorador le solicitará que guarde la salida del informe en un archivo local.  

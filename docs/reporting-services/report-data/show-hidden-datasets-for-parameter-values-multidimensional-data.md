@@ -20,6 +20,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "33019152"
 ---
 # <a name="show-hidden-datasets-for-parameter-values---multidimensional-data"></a>Mostrar conjuntos de datos ocultos para los valores de parámetro de datos multidimensionales
   Su informe podría incluir conjuntos de datos generados automáticamente (también conocidos como conjuntos de datos ocultos) que no aparecen de forma predeterminada en el panel Datos de informe. Estos conjuntos de datos se crean de las formas siguientes:  

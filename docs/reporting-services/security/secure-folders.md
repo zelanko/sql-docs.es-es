@@ -25,6 +25,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "33029152"
 ---
 # <a name="secure-folders"></a>Proteger carpetas
   La seguridad de las carpetas es fundamental para proteger todo el contenido de un servidor de informes. Puesto que la seguridad se hereda en toda la estructura de carpetas, puede designar secciones grandes o pequeñas de la jerarquía de carpetas para permitir ciertos tipos de acceso.  

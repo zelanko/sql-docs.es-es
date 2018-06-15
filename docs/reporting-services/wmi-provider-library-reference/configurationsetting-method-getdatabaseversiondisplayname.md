@@ -22,6 +22,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "33030842"
 ---
 # <a name="configurationsetting-method---getdatabaseversiondisplayname"></a>Método de ConfigurationSetting: GetDatabaseVersionDisplayName
   Obtiene el nombre para mostrar para una cadena de versión de base de datos del servidor de informes determinada.  

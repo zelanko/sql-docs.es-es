@@ -25,6 +25,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "33023392"
 ---
 # <a name="group-expression-examples-report-builder-and-ssrs"></a>Ejemplos de expresión de grupo (Generador de informes y SSRS)
   En una región de datos, puede agrupar los datos por un solo campo o crear expresiones más complejas que identifiquen los datos por los que se debe realizar la agrupación. Las expresiones complejas incluyen referencias a varios campos o parámetros, instrucciones condicionales o código personalizado. Al definir un grupo para una región de datos, debe agregar estas expresiones a las propiedades del **Grupo** . Para más información, vea [Agregar o eliminar un grupo en una región de datos &#40;Generador de informes y SSRS&#41;](../../reporting-services/report-design/add-or-delete-a-group-in-a-data-region-report-builder-and-ssrs.md).  

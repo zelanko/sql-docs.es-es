@@ -29,6 +29,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "33022370"
 ---
 # <a name="custom-code-and-assembly-references-in-expressions-in-report-designer-ssrs"></a>Referencias a ensamblados y código personalizado en expresiones en el Diseñador de informes (SSRS)
   Puede agregar referencias al código personalizado incrustado en un informe o a los ensamblados personalizados que haya generado y guardado en el equipo e implementado en el servidor de informes. El código incrustado se utiliza en constantes, funciones complejas o funciones personalizadas que se usan varias veces en un único informe. Use ensamblados de código personalizados para mantener el código en un único lugar y compartirlo con el fin de utilizarlos en múltiples informes. El código personalizado puede incluir nuevas constantes, variables, funciones o subrutinas personalizadas. Puede incluir referencias de solo lectura en las colecciones integradas, como la colección Parameters. Sin embargo, no puede pasar conjuntos de valores de datos de informe a las funciones personalizadas; concretamente, no se admiten agregados personalizados.  

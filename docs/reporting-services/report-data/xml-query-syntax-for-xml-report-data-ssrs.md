@@ -25,6 +25,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "33021492"
 ---
 # <a name="xml-query-syntax-for-xml-report-data-ssrs"></a>Sintaxis de consulta XML para los datos de informe XML (SSRS)
   En [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)], se pueden crear conjuntos de datos para orígenes de datos XML. Después de definir un origen de datos, se crea una consulta para el conjunto de datos. En función del tipo de datos XML a los que señala el origen de datos, la consulta del conjunto de datos se crea incluyendo un elemento XML **Query** o una ruta de acceso de elemento. Un elemento XML **Query** empieza con una etiqueta **\<Consulta>** e incluye espacios de nombres y elementos XML que varían en función del origen de datos. Una ruta de acceso de elemento es independiente del espacio de nombres y especifica qué nodos y atributos de nodo se utilizan de los datos XML subyacentes con una sintaxis del tipo de XPath. Para más información sobre las rutas de acceso de elemento, vea [Sintaxis de ruta de acceso de elemento para datos de informe XML &#40;SSRS&#41;](../../reporting-services/report-data/element-path-syntax-for-xml-report-data-ssrs.md).  

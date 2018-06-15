@@ -23,6 +23,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "33020092"
 ---
 # <a name="add-a-subreport-and-parameters-report-builder-and-ssrs"></a>Agregar un subinforme y parámetros (Generador de informes y SSRS)
   Agregue subinformes a un informe cuando desee crear un informe principal que actúe como contenedor para varios informes relacionados. Un subinforme es una referencia a otro informe. Para relacionar informes mediante valores de datos (por ejemplo, para que varios informes muestren datos del mismo cliente), debe diseñar un informe con parámetros (por ejemplo, un informe que muestre los detalles de un cliente concreto) como el subinforme. Al agregar un subinforme al informe principal, puede especificar los parámetros que se deben pasar al subinforme.  

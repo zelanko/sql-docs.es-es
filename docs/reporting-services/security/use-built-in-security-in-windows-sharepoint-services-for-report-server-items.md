@@ -24,6 +24,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "33033232"
 ---
 # <a name="use-built-in-security-in-windows-sharepoint-services-for-report-server-items"></a>Usar la seguridad integrada de Windows SharePoint Services para los elementos del servidor de informes
   SharePoint proporciona características de seguridad integradas que se pueden usar para tener acceso a elementos del servidor de informes desde bibliotecas y sitios de SharePoint. Si ya asignó permisos de sitio y lista a los usuarios, dichos usuarios tendrán acceso a los elementos y las operaciones del servidor de informes inmediatamente después de configurar la integración entre SharePoint y un servidor de informes.  

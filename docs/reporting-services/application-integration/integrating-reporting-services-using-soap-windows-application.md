@@ -27,6 +27,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "33015572"
 ---
 # <a name="integrating-reporting-services-using-soap---windows-application"></a>Integrar Reporting Services con SOAP: aplicación Windows
   Puede tener acceso a la funcionalidad completa del servidor de informes a través de la API SOAP de Reporting Services. Se trata de un servicio web y, como tal, se puede tener acceso con facilidad al mismo con el fin de proporcionar características de informes de empresa para aplicaciones empresariales personalizadas. Puede tener acceso al servicio web en una aplicación Windows simplemente escribiendo código que realice llamadas al servicio. Con [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)], puede generar una clase de proxy que exponga las propiedades y los métodos del servicio web y le permita usar una infraestructura y herramientas conocidas para compilar aplicaciones empresariales integradas en la tecnología [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)].  

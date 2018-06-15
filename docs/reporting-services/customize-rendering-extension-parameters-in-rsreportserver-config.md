@@ -27,6 +27,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "33016762"
 ---
 # <a name="customize-rendering-extension-parameters-in-rsreportserverconfig"></a>Personalizar los parámetros de extensión de representación en RSReportServer.Config
   Es posible especificar parámetros de extensión de representación en el archivo de configuración RSReportServer para invalidar el comportamiento predeterminado de la representación de los informes que se ejecutan en un servidor de informes de [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] . Los parámetros de extensión de representación se pueden modificar para lograr los siguientes objetivos:  

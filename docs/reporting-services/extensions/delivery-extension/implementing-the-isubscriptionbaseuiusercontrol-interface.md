@@ -26,6 +26,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "33016874"
 ---
 # <a name="implementing-the-isubscriptionbaseuiusercontrol-interface"></a>Implementar la interfaz ISubscriptionBaseUIUserControl
   Las extensiones de entrega de [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] pueden contener la implementación de una interfaz de usuario (UI) de suscripción para recopilar información específica de la extensión en el Administrador de informes. La UI se invoca cuando un usuario crea una nueva suscripción o modifica una existente. Cuando se crea una suscripción nueva, la UI muestra los valores predeterminados adecuados y permite a los usuarios interactuar con el proveedor de entrega. Cuando se modifica una suscripción, la UI se rellena de antemano con la información en la suscripción actual.  

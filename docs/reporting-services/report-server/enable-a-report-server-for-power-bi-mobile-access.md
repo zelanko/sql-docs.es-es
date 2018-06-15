@@ -20,6 +20,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "33025362"
 ---
 # <a name="enable-a-report-server-for-power-bi-mobile-access"></a>Habilitar un servidor de informes para el acceso mediante móvil a Power BI
 Puede usar la aplicación móvil de Power BI para emplear informes móviles. Hay algunos valores que debe configurar para permitir que la aplicación móvil de Power BI se conecte a Reporting Services.  

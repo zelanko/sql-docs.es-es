@@ -37,6 +37,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "33033962"
 ---
 # <a name="manage-a-running-process"></a>Administrar un proceso en ejecución
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] supervisa el estado de los trabajos que se ejecutan en el servidor de informes. Periódicamente, el servidor de informes realiza un recorrido de los trabajos en curso y escribe la información sobre su estado en su propia base de datos o en las bases de datos de aplicación de servicio para el modo de SharePoint. Un trabajo está en curso si se está llevando a cabo alguno de los siguientes procesos: ejecución de consultas en un servidor de bases de datos remoto o local, procesamiento de informes o representación de informes.  

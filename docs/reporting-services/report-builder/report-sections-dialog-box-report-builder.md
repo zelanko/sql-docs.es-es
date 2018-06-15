@@ -22,6 +22,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "33018702"
 ---
 # <a name="report-sections-dialog-box-report-builder"></a>Cuadro de diálogo Secciones del informe (Generador de informes)
   Al abrir un informe, el Generador de informes comprueba que el informe contenga solo un elemento **\<Section>** del lenguaje RDL (Report Definition Language). No se permite abrir un informe con varios elementos **\<Section>**.  

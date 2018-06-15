@@ -20,6 +20,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "33022792"
 ---
 # <a name="sql-azure-connection-type-ssrs"></a>Tipo de conexión SQL Azure (SSRS)
   [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssSDSFull](../../includes/sssdsfull-md.md)] es una base de datos relacional hospedada y basada en la nube, que se integra en las tecnologías de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Para incluir en el informe los datos de [!INCLUDE[ssSDS](../../includes/sssds-md.md)] , debe tener un conjunto de datos que se base en un origen de datos de informe de tipo [!INCLUDE[ssSDS](../../includes/sssds-md.md)]. Este tipo de origen de datos integrado se basa en la extensión de datos de [!INCLUDE[ssSDS](../../includes/sssds-md.md)] . Utilice este tipo de origen de datos para conectarse y recuperar datos de [!INCLUDE[ssSDS](../../includes/sssds-md.md)].  

@@ -20,6 +20,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "33027709"
 ---
 # <a name="nested-data-regions-report-builder-and-ssrs"></a>Anidar regiones de datos (Generador de informes y SSRS)
   Normalmente, una región de datos, como un gráfico, se anida dentro de otra, como una matriz, para mostrar resúmenes de los datos de una manera concisa o para mostrar los datos de forma gráfica, además de hacerlo en una tabla o una matriz.  

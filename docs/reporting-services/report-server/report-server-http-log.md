@@ -22,6 +22,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "33028122"
 ---
 # <a name="report-server-http-log"></a>Registro HTTP del servidor de informes
   El archivo de registro HTTP del servidor de informes guarda un registro de cada solicitud y respuesta HTTP administradas por el servidor de informes. Dado que los errores de desbordamiento y de tiempo de espera de la solicitud no alcanzan el servidor de informes, no se graban en el archivo de registro.  

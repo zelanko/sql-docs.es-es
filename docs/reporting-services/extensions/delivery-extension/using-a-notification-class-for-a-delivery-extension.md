@@ -27,6 +27,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "33015322"
 ---
 # <a name="using-a-notification-class-for-a-delivery-extension"></a>Usar una clase Notification para una extensión de entrega
   La clase <xref:Microsoft.ReportingServices.Interfaces.Notification> se encuentra en el espacio de nombres <xref:Microsoft.ReportingServices.Interfaces> y representa información de suscripción que las extensiones de entrega utilizan para entregar los informes. La clase <xref:Microsoft.ReportingServices.Interfaces.Notification> proporciona varias propiedades que se pueden utilizar para representar los informes para la entrega, determinar el estado de la notificación y establecer los datos de usuario.  

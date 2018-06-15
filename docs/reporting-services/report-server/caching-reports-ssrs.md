@@ -32,6 +32,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "33027642"
 ---
 # <a name="caching-reports-ssrs"></a>Informes almacenados en caché (SSRS)
   Un servidor de informes puede almacenar en memoria caché una copia de un informe procesado y devolverla cuando el usuario abra el informe. Para un usuario, la única prueba visible que indica que el informe es una copia en caché es la fecha y la hora de ejecución. Si la fecha o la hora no son actuales y el informe no es una instantánea, significa que éste se ha obtenido de la caché.  

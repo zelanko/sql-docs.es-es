@@ -20,6 +20,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "33023882"
 ---
 # <a name="images-report-builder-and-ssrs"></a>Imágenes (Generador de informes y SSRS)
   Una imagen es un elemento de informe que contiene una referencia a una imagen incrustada en el informe, o almacenada en una base de datos, en el servidor de informes o en cualquier lugar de Internet. Una imagen puede ser una imagen que se repite con filas de datos. También se puede utilizar una imagen como fondo para determinados elementos del informe.  

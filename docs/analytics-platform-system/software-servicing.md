@@ -14,6 +14,7 @@ ms.sourcegitcommit: 056ce753c2d6b85cd78be4fc6a29c2b4daaaf26c
 ms.translationtype: MT
 ms.contentlocale: es-ES
 ms.lasthandoff: 04/19/2018
+ms.locfileid: "31538755"
 ---
 # <a name="software-servicing-in-analytics-platform-system"></a>Mantenimiento de software en el sistema de la plataforma de análisis
 En esta sección resume lo requisitos para dispositivos de sistema de la plataforma de análisis, incluidas las revisiones de WSUS y de sistema de la plataforma de análisis de mantenimiento de software.  

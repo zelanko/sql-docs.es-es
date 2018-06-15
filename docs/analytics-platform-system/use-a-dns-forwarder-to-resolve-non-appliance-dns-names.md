@@ -14,6 +14,7 @@ ms.sourcegitcommit: 056ce753c2d6b85cd78be4fc6a29c2b4daaaf26c
 ms.translationtype: MT
 ms.contentlocale: es-ES
 ms.lasthandoff: 04/19/2018
+ms.locfileid: "31544947"
 ---
 # <a name="use-a-dns-forwarder-to-resolve-non-appliance-dns-names-in-analytics-platform-system"></a>Usar un reenviador DNS para resolver nombres DNS no sea de dispositivo en el sistema de la plataforma de análisis
 Un reenviador DNS se puede configurar en los nodos de los servicios de dominio de Active Directory (***appliance_domain *-AD01** y ***appliance_domain *-AD02**) de su dispositivo de sistema de la plataforma de análisis para permitir las secuencias de comandos y las aplicaciones de software para tener acceso a servidores externos.  

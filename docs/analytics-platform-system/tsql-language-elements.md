@@ -14,6 +14,7 @@ ms.sourcegitcommit: 056ce753c2d6b85cd78be4fc6a29c2b4daaaf26c
 ms.translationtype: MT
 ms.contentlocale: es-ES
 ms.lasthandoff: 04/19/2018
+ms.locfileid: "31539575"
 ---
 # <a name="t-sql-language-elements-for-parallel-data-warehouse"></a>Elementos del lenguaje T-SQL para almacenamiento de datos paralelos
 Elementos del lenguaje T-SQL para analítica Platform System (APS) SQL Server Parallel almacenamiento de datos (PDW).

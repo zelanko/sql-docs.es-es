@@ -14,6 +14,7 @@ ms.sourcegitcommit: 056ce753c2d6b85cd78be4fc6a29c2b4daaaf26c
 ms.translationtype: MT
 ms.contentlocale: es-ES
 ms.lasthandoff: 04/19/2018
+ms.locfileid: "31545121"
 ---
 # <a name="create-an-aps-domain-administrator"></a>Crear un administrador de dominio APS
 Algunas operaciones requieren privilegios de administrador de dominio de sistema de la plataforma de análisis. Explica cómo crear administradores de dominio de aplicación adicionales.  

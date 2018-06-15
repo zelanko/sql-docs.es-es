@@ -14,6 +14,7 @@ ms.sourcegitcommit: 056ce753c2d6b85cd78be4fc6a29c2b4daaaf26c
 ms.translationtype: MT
 ms.contentlocale: es-ES
 ms.lasthandoff: 04/19/2018
+ms.locfileid: "31539275"
 ---
 # <a name="track-appliance-alerts-in-analytics-platform-system"></a>Realizar un seguimiento de las alertas de dispositivo en el sistema de la plataforma de análisis
 Este tema explica cómo usar la consola de administración y las vistas del sistema para realizar un seguimiento de las alertas en un dispositivo PDW de SQL Server.  

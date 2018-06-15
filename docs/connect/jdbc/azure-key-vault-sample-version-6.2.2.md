@@ -19,6 +19,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32832370"
 ---
 # <a name="azure-key-vault-sample-version-622"></a>Versión de ejemplo de almacén de claves de Azure 6.2.2
 [!INCLUDE[Driver_JDBC_Download](../../includes/driver_jdbc_download.md)]

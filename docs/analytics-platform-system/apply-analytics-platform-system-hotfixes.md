@@ -14,6 +14,7 @@ ms.sourcegitcommit: 056ce753c2d6b85cd78be4fc6a29c2b4daaaf26c
 ms.translationtype: MT
 ms.contentlocale: es-ES
 ms.lasthandoff: 04/19/2018
+ms.locfileid: "31544877"
 ---
 # <a name="apply-analytics-platform-system-hotfixes"></a>Aplicar las revisiones del sistema de la plataforma de análisis
 En este artículo se describe cómo aplicar las revisiones para el software del sistema de la plataforma de análisis.  

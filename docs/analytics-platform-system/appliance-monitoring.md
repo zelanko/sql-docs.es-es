@@ -14,6 +14,7 @@ ms.sourcegitcommit: 056ce753c2d6b85cd78be4fc6a29c2b4daaaf26c
 ms.translationtype: MT
 ms.contentlocale: es-ES
 ms.lasthandoff: 04/19/2018
+ms.locfileid: "31538675"
 ---
 # <a name="appliance-monitoring-for-analytics-platform-system"></a>Supervisión de dispositivo de sistema de la plataforma de análisis
 Esta guía de supervisión de dispositivo describe las herramientas y tareas para supervisar el dispositivo de sistema de la plataforma de análisis.  

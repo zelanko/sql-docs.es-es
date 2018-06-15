@@ -14,6 +14,7 @@ ms.sourcegitcommit: 056ce753c2d6b85cd78be4fc6a29c2b4daaaf26c
 ms.translationtype: MT
 ms.contentlocale: es-ES
 ms.lasthandoff: 04/19/2018
+ms.locfileid: "31538975"
 ---
 # <a name="create-a-script-task-that-uses-ssis-parallel-data-warehouse-destination-adapter"></a>Crear una tarea de secuencia de comandos que usa el adaptador de destino de almacenamiento de datos paralelos de SSIS
 Este código de script de paquete SSIS es un ejemplo de código para usar el adaptador de destino de SSIS PDW.  La tarea de secuencia de comandos de Integration Services permite realizar prácticamente cualquier operación que se pueden realizar en una aplicación de .net en el contexto de un flujo de control SSIS. 

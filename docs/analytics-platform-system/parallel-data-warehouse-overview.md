@@ -14,6 +14,7 @@ ms.sourcegitcommit: 056ce753c2d6b85cd78be4fc6a29c2b4daaaf26c
 ms.translationtype: MT
 ms.contentlocale: es-ES
 ms.lasthandoff: 04/19/2018
+ms.locfileid: "31544927"
 ---
 # <a name="parallel-data-warehouse-components---analytics-platform-system"></a>Componentes de almacenamiento de datos: Analytics Platform System en paralelo
 En este artículo se explica el software del dispositivo y los componentes de software de dispositivo no es de sistema de la plataforma de análisis.  

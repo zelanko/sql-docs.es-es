@@ -14,6 +14,7 @@ ms.sourcegitcommit: 056ce753c2d6b85cd78be4fc6a29c2b4daaaf26c
 ms.translationtype: MT
 ms.contentlocale: es-ES
 ms.lasthandoff: 04/19/2018
+ms.locfileid: "31539005"
 ---
 # <a name="parallel-data-warehouse-services-status-for-analytics-platform-system"></a>Estado de los servicios de almacenamiento de datos paralelo de sistema de la plataforma de análisis
 El almacenamiento de datos paralelos **estado de los servicios** página en Microsoft Analytics Platform System Configuration Manager muestra el estado actual de todos los servicios de SQL Server PDW y proporciona la capacidad para detener e iniciar los servicios PDW. Este es el único método admitido para iniciar y detener los servicios PDW. Tenga en cuenta que los componentes individuales o los servicios no puede iniciarse por separado.  

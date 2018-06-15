@@ -14,6 +14,7 @@ ms.sourcegitcommit: 056ce753c2d6b85cd78be4fc6a29c2b4daaaf26c
 ms.translationtype: MT
 ms.contentlocale: es-ES
 ms.lasthandoff: 04/19/2018
+ms.locfileid: "31544787"
 ---
 # <a name="launch-the-configuration-manager-in-analytics-platform-system"></a>Iniciar el Administrador de configuración en el sistema de la plataforma de análisis
 Este tema proporciona instrucciones para iniciar el **Configuration Manager** para el dispositivo de sistema de la plataforma de análisis.  

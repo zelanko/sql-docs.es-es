@@ -14,6 +14,7 @@ ms.sourcegitcommit: 056ce753c2d6b85cd78be4fc6a29c2b4daaaf26c
 ms.translationtype: MT
 ms.contentlocale: es-ES
 ms.lasthandoff: 04/19/2018
+ms.locfileid: "31538765"
 ---
 # <a name="power-the-appliance-on-or-off-for-analytics-platform-system"></a>Alimentación del dispositivo o desactivar para Analytics Platform System
 En este tema se describe cómo encender o apagar el Systemappliance de plataforma de análisis que se ejecuta el almacenamiento de datos paralelos y, opcionalmente, ejecuta una región de HDInsight. Utilice este tema cuando se mueve un dispositivo de sistema de la plataforma de análisis, o a la potencia en un dispositivo después de un error de alimentación grave.  

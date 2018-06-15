@@ -14,6 +14,7 @@ ms.sourcegitcommit: 056ce753c2d6b85cd78be4fc6a29c2b4daaaf26c
 ms.translationtype: MT
 ms.contentlocale: es-ES
 ms.lasthandoff: 04/19/2018
+ms.locfileid: "31538905"
 ---
 # <a name="information-to-obtain-from-your-ihv"></a>Información para obtener de su IHV
 Cuando el proveedor de hardware independientes (IHV) proporciona el nuevo dispositivo PDW de SQL Server al usuario, también ofrecerá información sobre el hardware del equipo y la configuración que han llevado a cabo en el dispositivo. Necesitará esta información para administrar el dispositivo.  

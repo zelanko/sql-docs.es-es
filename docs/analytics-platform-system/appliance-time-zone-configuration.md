@@ -14,6 +14,7 @@ ms.sourcegitcommit: 056ce753c2d6b85cd78be4fc6a29c2b4daaaf26c
 ms.translationtype: MT
 ms.contentlocale: es-ES
 ms.lasthandoff: 04/19/2018
+ms.locfileid: "31544667"
 ---
 # <a name="appliance-time-zone-configuration---analytics-platform-system"></a>Configuración de zona horaria del dispositivo - Analytics Platform System
 El **zona horaria** página le permite establecer la zona horaria para todos los nodos en el dispositivo Analytics Platform System (APS).  

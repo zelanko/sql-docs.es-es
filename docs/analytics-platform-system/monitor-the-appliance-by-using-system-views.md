@@ -14,6 +14,7 @@ ms.sourcegitcommit: 056ce753c2d6b85cd78be4fc6a29c2b4daaaf26c
 ms.translationtype: MT
 ms.contentlocale: es-ES
 ms.lasthandoff: 04/19/2018
+ms.locfileid: "31539065"
 ---
 # <a name="monitor-the-appliance-with-system-views---analytics-platform-system"></a>Supervisar el dispositivo con vistas del sistema - Analytics Platform System
 Este artículo enumeran las vistas del sistema que se pueden utilizar para supervisar SQL Server PDW.  

@@ -14,6 +14,7 @@ ms.sourcegitcommit: 056ce753c2d6b85cd78be4fc6a29c2b4daaaf26c
 ms.translationtype: MT
 ms.contentlocale: es-ES
 ms.lasthandoff: 04/19/2018
+ms.locfileid: "31538595"
 ---
 # <a name="import-the-scom-management-pack---analytics-platform-system"></a>Importar el módulo de administración de SCOM - sistema de la plataforma de análisis
 Siga estos pasos para importar los módulos de administración de System Center Operations Manager (SCOM) para Analytics Platform System (APS). Los módulos de administración necesarias para supervisar el almacenamiento de datos paralelos de SCOM. 

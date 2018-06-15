@@ -14,6 +14,7 @@ ms.sourcegitcommit: 056ce753c2d6b85cd78be4fc6a29c2b4daaaf26c
 ms.translationtype: MT
 ms.contentlocale: es-ES
 ms.lasthandoff: 04/19/2018
+ms.locfileid: "31538555"
 ---
 # <a name="uninstall-microsoft-updates-in-analytics-platform-system"></a>Desinstalar actualizaciones de Microsoft en el sistema de la plataforma de análisis
 En este artículo se describe cómo desinstalar una actualización de Microsoft instalada previamente en el dispositivo de sistema de la plataforma de análisis.  

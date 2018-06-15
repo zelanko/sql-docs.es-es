@@ -14,6 +14,7 @@ ms.sourcegitcommit: 056ce753c2d6b85cd78be4fc6a29c2b4daaaf26c
 ms.translationtype: MT
 ms.contentlocale: es-ES
 ms.lasthandoff: 04/19/2018
+ms.locfileid: "31539475"
 ---
 # <a name="grant-t-sql-permissions-for-parallel-data-warehouse"></a>Permisos GRANT T-SQL para almacenamiento de datos paralelos
 Permisos GRANT T-SQL para las operaciones de base de datos de almacenamiento de datos paralelos.

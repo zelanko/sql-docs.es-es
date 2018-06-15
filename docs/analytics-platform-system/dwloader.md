@@ -14,6 +14,7 @@ ms.sourcegitcommit: 056ce753c2d6b85cd78be4fc6a29c2b4daaaf26c
 ms.translationtype: MT
 ms.contentlocale: es-ES
 ms.lasthandoff: 04/19/2018
+ms.locfileid: "31539755"
 ---
 # <a name="dwloader-command-line-loader-for-parallel-data-warehouse"></a>Cargador de la línea de comandos para el almacenamiento de datos paralelo de dwloader
 **dwloader** es una herramienta de línea de comandos de almacenamiento de datos paralelo (PDW) que carga filas de la tabla de forma masiva en una tabla existente. Cuando se cargan filas, puede agregar todas las filas al final de la tabla (*modo append* o *fastappend modo*), anexar filas nuevas y actualizar filas existentes (*upsert modo*), o todos los elimine existente filas antes de la carga y, a continuación, insertar todas las filas en una tabla vacía (*recargar modo*).  

@@ -14,6 +14,7 @@ ms.sourcegitcommit: 056ce753c2d6b85cd78be4fc6a29c2b4daaaf26c
 ms.translationtype: MT
 ms.contentlocale: es-ES
 ms.lasthandoff: 04/19/2018
+ms.locfileid: "31539445"
 ---
 # <a name="loading-server-capacity-planning-worksheet-for-analytics-platform-system"></a>Cargar hoja de planificación de capacidad de servidor de sistema de la plataforma de análisis
 Esta hoja de cálculo de planeación de capacidad le ayudará a determinar los requisitos para un servidor de carga para cargar datos en SQL Server PDW. Utilícelo para crear un plan para adquirir o aprovisionamiento existente cargar servidores.  

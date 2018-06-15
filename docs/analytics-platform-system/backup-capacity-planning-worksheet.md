@@ -14,6 +14,7 @@ ms.sourcegitcommit: 056ce753c2d6b85cd78be4fc6a29c2b4daaaf26c
 ms.translationtype: MT
 ms.contentlocale: es-ES
 ms.lasthandoff: 04/19/2018
+ms.locfileid: "31539145"
 ---
 # <a name="backup-server-capacity-planning-worksheet---parallel-data-warehouse"></a>Hoja de cálculo de planeación de capacidad de copia de seguridad server - almacenamiento de datos paralelos
 Esta hoja de cálculo de planeación de capacidad le ayuda a determinar los requisitos para un servidor de copia de seguridad para realizar la copia de seguridad de base de datos de SQL Server PDW y las operaciones de restauración. Utilícelo para crear un plan de compras nuevos o aprovisionamiento copia de seguridad servidores existentes.  

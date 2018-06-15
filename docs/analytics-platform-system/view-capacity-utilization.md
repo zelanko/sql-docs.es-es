@@ -14,6 +14,7 @@ ms.sourcegitcommit: 056ce753c2d6b85cd78be4fc6a29c2b4daaaf26c
 ms.translationtype: MT
 ms.contentlocale: es-ES
 ms.lasthandoff: 04/19/2018
+ms.locfileid: "31539225"
 ---
 # <a name="view-capacity-utilization-in-analytics-platform-system"></a>Ver el uso de capacidad en el sistema de la plataforma de análisis
 Este tema explica cómo ver la utilización de la capacidad en el dispositivo PDW de SQL Server.  

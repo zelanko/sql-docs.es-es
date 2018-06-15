@@ -14,6 +14,7 @@ ms.sourcegitcommit: 056ce753c2d6b85cd78be4fc6a29c2b4daaaf26c
 ms.translationtype: MT
 ms.contentlocale: es-ES
 ms.lasthandoff: 04/19/2018
+ms.locfileid: "31544817"
 ---
 # <a name="backup-and-restore"></a>Copias de seguridad y restauración
 Describe cómo los datos de copia de seguridad y restauración funciona para el almacenamiento de datos paralelo (PDW). Operaciones de copia de seguridad y restauración se utilizan para la recuperación ante desastres. También se pueden utilizar copia de seguridad y restauración para copiar una base de datos de un dispositivo a otro dispositivo.  

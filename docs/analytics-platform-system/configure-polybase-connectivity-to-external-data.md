@@ -14,6 +14,7 @@ ms.sourcegitcommit: 056ce753c2d6b85cd78be4fc6a29c2b4daaaf26c
 ms.translationtype: MT
 ms.contentlocale: es-ES
 ms.lasthandoff: 04/19/2018
+ms.locfileid: "31539685"
 ---
 # <a name="configure-polybase-connectivity-to-external-data"></a>Configurar la conectividad de PolyBase para datos externos
 Explica cómo configurar PolyBase en almacenamiento de datos paralelos para conectarse a Microsoft Azure o Hadoop almacenamiento blob orígenes de datos externos. Use PolyBase para ejecutar consultas que integran datos procedentes de varios orígenes, como Hadoop, almacenamiento de blobs de Azure y almacenamiento de datos paralelos.  

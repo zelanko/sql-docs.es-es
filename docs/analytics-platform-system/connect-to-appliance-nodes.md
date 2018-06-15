@@ -14,6 +14,7 @@ ms.sourcegitcommit: 056ce753c2d6b85cd78be4fc6a29c2b4daaaf26c
 ms.translationtype: MT
 ms.contentlocale: es-ES
 ms.lasthandoff: 04/19/2018
+ms.locfileid: "31539545"
 ---
 # <a name="connect-to-appliance-nodes-in-analytics-platform-system"></a>Conectarse a los nodos de dispositivo de sistema de la plataforma de análisis
 En este artículo se explica las diversas formas para conectarse a cada nodo en el dispositivo de sistema de la plataforma de análisis.  

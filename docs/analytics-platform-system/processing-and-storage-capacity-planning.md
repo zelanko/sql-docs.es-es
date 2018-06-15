@@ -14,6 +14,7 @@ ms.sourcegitcommit: 056ce753c2d6b85cd78be4fc6a29c2b4daaaf26c
 ms.translationtype: MT
 ms.contentlocale: es-ES
 ms.lasthandoff: 04/19/2018
+ms.locfileid: "31539605"
 ---
 # <a name="processing-and-storage-capacity-in-analytics-platform-system"></a>Capacidad de procesamiento y el almacenamiento en el sistema de la plataforma de análisis
 Los requisitos empresariales determinan el número de unidades de escala de datos y el tamaño de los discos de nodo de proceso que necesite en su dispositivo Analytics Platform System (APS). Utilice estos cálculos de procesamiento y almacenamiento para guiar la capacidad de compra y decisiones de planeación.  

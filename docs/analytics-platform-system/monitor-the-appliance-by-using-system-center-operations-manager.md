@@ -14,6 +14,7 @@ ms.sourcegitcommit: 056ce753c2d6b85cd78be4fc6a29c2b4daaaf26c
 ms.translationtype: MT
 ms.contentlocale: es-ES
 ms.lasthandoff: 04/19/2018
+ms.locfileid: "31538985"
 ---
 # <a name="monitor-with-system-center-operations-manager---analytics-platform-system"></a>Monitor con System Center Operations Manager - sistema de la plataforma de análisis
 Use System Center Operations Manager (SCOM) para supervisar el dispositivo Analytics Platform System (APS).

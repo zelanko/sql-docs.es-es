@@ -14,6 +14,7 @@ ms.sourcegitcommit: 056ce753c2d6b85cd78be4fc6a29c2b4daaaf26c
 ms.translationtype: MT
 ms.contentlocale: es-ES
 ms.lasthandoff: 04/19/2018
+ms.locfileid: "31539055"
 ---
 # <a name="monitor-appliance-health-state"></a>Monitor de estado de dispositivo
 En este artículo se explica cómo supervisar el estado de un dispositivo de sistema de la plataforma de análisis mediante la consola de administración, o consultando directamente las vistas de administración dinámica de almacenamiento de datos paralelos. 

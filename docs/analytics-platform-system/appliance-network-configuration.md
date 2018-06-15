@@ -14,6 +14,7 @@ ms.sourcegitcommit: 056ce753c2d6b85cd78be4fc6a29c2b4daaaf26c
 ms.translationtype: MT
 ms.contentlocale: es-ES
 ms.lasthandoff: 04/19/2018
+ms.locfileid: "31539315"
 ---
 # <a name="appliance-network-configuration-for-analytics-platform-system"></a>Configuración de red de dispositivo de sistema de la plataforma de análisis
 El dispositivo Analytics Platform System (APS) está creado y configurado con un conjunto de corrección de direcciones IP a lo largo de todos los servidores y dispositivos aplicables de fábrica del IHV. Con la entrega del dispositivo, la dirección de IP externas (Ethernet) debe configurarse para que coincida con los requisitos de centro de datos del cliente específico.  

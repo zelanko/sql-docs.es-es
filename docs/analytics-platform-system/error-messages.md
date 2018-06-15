@@ -14,6 +14,7 @@ ms.sourcegitcommit: 056ce753c2d6b85cd78be4fc6a29c2b4daaaf26c
 ms.translationtype: MT
 ms.contentlocale: es-ES
 ms.lasthandoff: 04/19/2018
+ms.locfileid: "31539075"
 ---
 # <a name="error-messages-in-parallel-data-warehouse"></a>Mensajes de error en el almacenamiento de datos paralelos
 

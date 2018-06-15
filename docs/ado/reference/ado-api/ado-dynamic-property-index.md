@@ -20,6 +20,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32796518"
 ---
 # <a name="ado-dynamic-property-index"></a>Índice de propiedades dinámicas de ADO
 Proveedores de datos, los proveedores de servicios y componentes de servicio pueden agregar propiedades dinámicas a la **propiedades** colecciones de los objetos [conexión](../../../ado/reference/ado-api/connection-object-ado.md) y [conjunto de registros](../../../ado/reference/ado-api/recordset-object-ado.md) objetos. Un proveedor determinado también puede insertar propiedades adicionales cuando se abren estos objetos. Algunas de estas propiedades se enumeran en la [propiedades dinámicas de ADO](../../../ado/reference/ado-api/ado-dynamic-properties.md) sección. Aparecen más bajo los proveedores concretos en la [Apéndice A: proveedores](../../../ado/guide/appendixes/appendix-a-providers.md) sección.  

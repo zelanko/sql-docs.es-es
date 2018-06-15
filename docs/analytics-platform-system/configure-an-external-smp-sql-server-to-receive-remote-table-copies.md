@@ -14,6 +14,7 @@ ms.sourcegitcommit: 056ce753c2d6b85cd78be4fc6a29c2b4daaaf26c
 ms.translationtype: MT
 ms.contentlocale: es-ES
 ms.lasthandoff: 04/19/2018
+ms.locfileid: "31538955"
 ---
 # <a name="configure-an-external-smp-sql-server-to-receive-remote-table-copies---parallel-data-warehouse"></a>Configurar un servidor de SQL SMP externo para recibir copias de la tabla remota - almacenamiento de datos paralelos
 Describe cómo configurar una instancia externa de SQL Server para recibir copias de la tabla remota de almacenamiento de datos paralelos.  

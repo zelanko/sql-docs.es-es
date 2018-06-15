@@ -14,6 +14,7 @@ ms.sourcegitcommit: 056ce753c2d6b85cd78be4fc6a29c2b4daaaf26c
 ms.translationtype: MT
 ms.contentlocale: es-ES
 ms.lasthandoff: 04/19/2018
+ms.locfileid: "31538795"
 ---
 # <a name="workload-management-tasks-in-analytics-platform-system"></a>Tareas de administración de cargas de trabajo en el sistema de la plataforma de análisis
 Tareas de administración de cargas de trabajo en el sistema de la plataforma de análisis.

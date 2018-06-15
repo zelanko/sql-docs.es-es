@@ -14,6 +14,7 @@ ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
 ms.translationtype: MT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/10/2018
+ms.locfileid: "34021172"
 ---
 # <a name="retrieving-metadata-from-an-analytical-data-source"></a>Recuperar metadatos de un origen de datos analíticos
   Los metadatos son importantes para las aplicaciones que recuperan y trabajan con datos analíticos. Al recuperar datos de un origen de datos relacional, la dimensionalidad de tales datos es predecible, incluso con conjuntos de datos anidados. Los conjuntos de resultados de una base de datos relacional suelen ser bidimensionales o escalares en estructura. Sin embargo, los datos que se recuperan de los orígenes de datos analíticos pueden ser de dimensionalidad variable, organizados a lo largo de jerarquías potencialmente profundas.  

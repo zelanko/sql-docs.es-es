@@ -14,6 +14,7 @@ ms.sourcegitcommit: 056ce753c2d6b85cd78be4fc6a29c2b4daaaf26c
 ms.translationtype: MT
 ms.contentlocale: es-ES
 ms.lasthandoff: 04/19/2018
+ms.locfileid: "31538785"
 ---
 # <a name="uninstall-analytics-platform-system-hotfixes"></a>Desinstalar las revisiones del sistema de la plataforma de análisis 
 Los pasos siguientes describen cómo desinstalar una revisión Analytics Platform System instalada previamente.  

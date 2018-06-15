@@ -14,6 +14,7 @@ ms.sourcegitcommit: 056ce753c2d6b85cd78be4fc6a29c2b4daaaf26c
 ms.translationtype: MT
 ms.contentlocale: es-ES
 ms.lasthandoff: 04/19/2018
+ms.locfileid: "31539765"
 ---
 # <a name="understanding-admin-console-alerts-in-analytics-platform-system"></a>Descripción de las alertas de la consola de administración de sistema de la plataforma de análisis
 Las alertas aparecen en el dispositivo **consola de administración de** y en **System Center Operations Manager** (SCOM). Use esta lista de alertas para ayudar a identificar las alertas que requieren una investigación adicional.  

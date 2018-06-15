@@ -14,6 +14,7 @@ ms.sourcegitcommit: 056ce753c2d6b85cd78be4fc6a29c2b4daaaf26c
 ms.translationtype: MT
 ms.contentlocale: es-ES
 ms.lasthandoff: 04/19/2018
+ms.locfileid: "31538705"
 ---
 # <a name="monitoring-active-queries---parallel-data-warehouse"></a>Supervisión de consultas activas - almacenamiento de datos paralelos
 Este artículo muestra cómo utilizar la consola de administración y las vistas del sistema PDW de SQL Server para supervisar consultas activas. Vea [supervisar el dispositivo mediante la consola de administración](monitor-the-appliance-by-using-the-admin-console.md) y [vistas del sistema](tsql-system-views.md) para obtener información sobre estas herramientas.  

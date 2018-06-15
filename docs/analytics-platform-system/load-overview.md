@@ -14,6 +14,7 @@ ms.sourcegitcommit: 056ce753c2d6b85cd78be4fc6a29c2b4daaaf26c
 ms.translationtype: MT
 ms.contentlocale: es-ES
 ms.lasthandoff: 04/19/2018
+ms.locfileid: "31539085"
 ---
 # <a name="loading-data-into-parallel-data-warehouse"></a>Para cargar datos en almacenamiento de datos paralelos
 Puede cargar o insertar datos en almacenamiento de datos paralelos de SQL Server (PDW) mediante el uso de servicios de integración, [bcp (utilidad)](../tools/bcp-utility.md), **dwloader** cargador de línea de comandos o la instrucción SQL INSERT.  

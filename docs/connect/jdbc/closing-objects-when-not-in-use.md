@@ -19,6 +19,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32826700"
 ---
 # <a name="closing-objects-when-not-in-use"></a>Cerrar los objetos cuando no se usan
 [!INCLUDE[Driver_JDBC_Download](../../includes/driver_jdbc_download.md)]

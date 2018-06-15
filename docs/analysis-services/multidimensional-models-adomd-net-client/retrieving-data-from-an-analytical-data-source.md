@@ -14,6 +14,7 @@ ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
 ms.translationtype: MT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/10/2018
+ms.locfileid: "34021112"
 ---
 # <a name="retrieving-data-from-an-analytical-data-source"></a>Recuperar datos de un origen de datos analíticos
   Una vez que realiza una conexión y crea la consulta, puede recuperar cualquier dato. En ADOMD.NET, también puede recuperar los datos mediante tres objetos distintos (<xref:Microsoft.AnalysisServices.AdomdClient.CellSet>, <xref:Microsoft.AnalysisServices.AdomdClient.AdomdDataReader>, y <xref:System.Xml.XmlReader>) llamando a uno de los **Execute** métodos de la <xref:Microsoft.AnalysisServices.AdomdClient.AdomdCommand> objeto.  

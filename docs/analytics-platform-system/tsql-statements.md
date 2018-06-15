@@ -14,6 +14,7 @@ ms.sourcegitcommit: 056ce753c2d6b85cd78be4fc6a29c2b4daaaf26c
 ms.translationtype: MT
 ms.contentlocale: es-ES
 ms.lasthandoff: 04/19/2018
+ms.locfileid: "31538895"
 ---
 # <a name="t-sql-statements-for-parallel-data-warehouse"></a>Instrucciones de T-SQL para almacenamiento de datos paralelos
 Instrucciones de Transact-SQL (T-SQL) para análisis Platform System (APS) SQL Server paralelo almacenamiento de datos (PDW).

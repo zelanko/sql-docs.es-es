@@ -2,7 +2,6 @@
 title: Propiedades de ADO | Documentos de Microsoft
 ms.prod: sql
 ms.prod_service: connectivity
-ms.component: ado
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
@@ -18,11 +17,12 @@ caps.latest.revision: 13
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: faf6f2c0bee80ae3f8b59a9b8241226facc89edb
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 1d8df3fdea1c8e5666593dfa63666ed2c051c3b4
+ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/11/2018
+ms.locfileid: "35275584"
 ---
 # <a name="ado-properties"></a>Propiedades de ADO
 |||  
@@ -44,7 +44,7 @@ ms.lasthandoff: 05/03/2018
 |[CommandType](../../../ado/reference/ado-api/commandtype-property-ado.md)|Indica el tipo de un **comando** objeto.|  
 |[Propiedad ConnectionString](../../../ado/reference/ado-api/connectionstring-property-ado.md)|Indica la información utilizada para establecer una conexión con un origen de datos.|  
 |[ConnectionTimeout](../../../ado/reference/ado-api/connectiontimeout-property-ado.md)|Indica cuánto tiempo debe para esperar al establecer una conexión antes de terminar el intento y generar un error.|  
-|[Count](../../../ado/reference/ado-api/count-property-ado.md)|Indica el número de objetos de una colección.|  
+|[Recuento](../../../ado/reference/ado-api/count-property-ado.md)|Indica el número de objetos de una colección.|  
 |[CursorLocation](../../../ado/reference/ado-api/cursorlocation-property-ado.md)|Indica la ubicación del servicio de cursor.|  
 |[CursorType](../../../ado/reference/ado-api/cursortype-property-ado.md)|Indica el tipo de cursor que se utiliza en una **Recordset** objeto.|  
 |[DataMember](../../../ado/reference/ado-api/datamember-property.md)|Indica el nombre del miembro de datos que se recuperan desde el objeto al que hace referencia el **DataSource** propiedad.|  
@@ -96,7 +96,7 @@ ms.lasthandoff: 05/03/2018
 |[Tipo](../../../ado/reference/ado-api/type-property-ado.md)|Indica el tipo de datos o tipo operativo de un **parámetro**, **campo**, o **propiedad** objeto.|  
 |[Type (secuencia ADO)](../../../ado/reference/ado-api/type-property-ado-stream.md)|Indica el tipo de datos que se encuentran en la **flujo** (binario o texto).|  
 |[UnderlyingValue](../../../ado/reference/ado-api/underlyingvalue-property.md)|Indica el valor actual de la base de datos para un **campo** objeto.|  
-|[Valor](../../../ado/reference/ado-api/value-property-ado.md)|Indica el valor asignado a un **campo**, **parámetro**, o **propiedad** objeto.|  
+|[Value](../../../ado/reference/ado-api/value-property-ado.md)|Indica el valor asignado a un **campo**, **parámetro**, o **propiedad** objeto.|  
 |[Versión](../../../ado/reference/ado-api/version-property-ado.md)|Indica el número de versión de ADO.|  
   
 ## <a name="see-also"></a>Vea también  

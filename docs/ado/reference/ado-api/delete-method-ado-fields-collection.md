@@ -2,7 +2,6 @@
 title: El método Delete (colección Fields de ADO) | Documentos de Microsoft
 ms.prod: sql
 ms.prod_service: connectivity
-ms.component: ado
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
@@ -21,11 +20,12 @@ caps.latest.revision: 12
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 07256948e8b83c6ddac5000bfb12cf590325fd5f
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 296364d3fafc4a67767699d55631209658657de1
+ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/11/2018
+ms.locfileid: "35277554"
 ---
 # <a name="delete-method-ado-fields-collection"></a>El método Delete (colección Fields de ADO)
 Elimina un objeto de la [campos](../../../ado/reference/ado-api/fields-collection-ado.md) colección.  
@@ -41,7 +41,7 @@ Fields.Delete Field
  *Campo*  
  A **Variant** que designa el [campo](../../../ado/reference/ado-api/field-object.md) objeto que se va a eliminar. Este parámetro puede ser el nombre de la **campo** objeto o la posición ordinal de la **campo** propio objeto.  
   
-## <a name="remarks"></a>Comentarios  
+## <a name="remarks"></a>Notas  
  Llamar a la **Fields.Delete** método en un formato de archivo [Recordset](../../../ado/reference/ado-api/recordset-object-ado.md) provoca un error de tiempo de ejecución.  
   
 ## <a name="applies-to"></a>Se aplica a  

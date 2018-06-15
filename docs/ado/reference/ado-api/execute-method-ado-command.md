@@ -2,7 +2,6 @@
 title: Método Execute (Command ADO) | Documentos de Microsoft
 ms.prod: sql
 ms.prod_service: connectivity
-ms.component: ado
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
@@ -21,11 +20,12 @@ caps.latest.revision: 13
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 8936219aa3d8e75a43efcc51936ac23916c51d96
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 09ce33d4fa2f6ac63fc19ce711fe88fcf717d049
+ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/11/2018
+ms.locfileid: "35278124"
 ---
 # <a name="execute-method-ado-command"></a>Método Execute (Command ADO)
 Ejecuta la consulta, la instrucción SQL o el procedimiento almacenado especificado en el [CommandText](../../../ado/reference/ado-api/commandtext-property-ado.md) o [CommandStream](../../../ado/reference/ado-api/commandstream-property-ado.md) propiedad de la [objeto de comando](../../../ado/reference/ado-api/command-object-ado.md).  
@@ -53,7 +53,7 @@ Set recordset = command.Execute( RecordsAffected, Parameters, Options )
 > [!NOTE]
 >  Use la **ExecuteOptionEnum** valor **adExecuteNoRecords** para mejorar el rendimiento al minimizar el procesamiento interno. Si **adExecuteStream** se especifica, las opciones de **adAsyncFetch** y **adAsynchFetchNonBlocking** se omiten. No utilice la **CommandTypeEnum** valores de **adCmdFile** o **adCmdTableDirect** con **Execute**. Estos valores sólo pueden utilizarse como opciones con el [abiertos](../../../ado/reference/ado-api/open-method-ado-recordset.md) y [Requery](../../../ado/reference/ado-api/requery-method.md) métodos de un **conjunto de registros**.  
   
-## <a name="remarks"></a>Comentarios  
+## <a name="remarks"></a>Notas  
  Mediante el **Execute** método en un **comando** objeto ejecuta la consulta especificada en el **CommandText** propiedad o **CommandStream** propiedad del objeto.  
   
  Se devuelven resultados en un **Recordset** (de forma predeterminada) o como una secuencia de información binaria. Para obtener una secuencia binaria, especifique **adExecuteStream** en *opciones*, a continuación, proporcionar un flujo estableciendo **Command.Properties ("flujo de salida")**. ADO **flujo** objeto puede especificarse para recibir los resultados, o se puede especificar otro objeto de secuencia, como el objeto de respuesta de IIS. Si no hay ninguna secuencia se ha especificado antes de llamar a **Execute** con **adExecuteStream**, se produce un error. La posición de la secuencia en la devolución de **Execute** es proveedor específico.  

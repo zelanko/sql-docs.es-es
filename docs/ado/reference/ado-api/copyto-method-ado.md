@@ -2,7 +2,6 @@
 title: CopyTo (método) (ADO) | Documentos de Microsoft
 ms.prod: sql
 ms.prod_service: connectivity
-ms.component: ado
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
@@ -21,11 +20,12 @@ caps.latest.revision: 12
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 32e889ea84c02a544ccad53cd9c274c360994bfe
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 15537df53441d0204a62d19ae38b9105c456cddb
+ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/11/2018
+ms.locfileid: "35277174"
 ---
 # <a name="copyto-method-ado"></a>CopyTo (método) (ADO)
 Copia el número especificado de caracteres o bytes (en función de [tipo](../../../ado/reference/ado-api/type-property-ado-stream.md)) en el [flujo](../../../ado/reference/ado-api/stream-object-ado.md) a otro **flujo** objeto.  
@@ -47,7 +47,7 @@ Stream.CopyTo DestStream, NumChars
  *NumChars*  
  Opcional. Un **entero** valor que especifica el número de bytes o caracteres que se copian desde la posición actual en el origen de **flujo** al destino **flujo**. El valor predeterminado es -1, que especifica que todos los caracteres o bytes que se copian desde la posición actual hasta [sobrecargas eléctricas](../../../ado/reference/ado-api/eos-property.md).  
   
-## <a name="remarks"></a>Comentarios  
+## <a name="remarks"></a>Notas  
  Este método copia el número especificado de caracteres o bytes, a partir de la actual posición especificada por el [posición](../../../ado/reference/ado-api/position-property-ado.md) propiedad. Si el número especificado es mayor que el número de bytes hasta disponibles **sobrecargas eléctricas**, a continuación, solo caracteres o bytes desde la posición actual hasta **sobrecargas eléctricas** se copian. Si el valor de *NumChars* es – 1 o se omite, se copian todos los caracteres o bytes a partir de la posición actual.  
   
  Si existen caracteres o bytes en la secuencia de destino, todo el contenido más allá del punto donde finaliza la copia permanecen y no se trunca. **Posición** será el byte inmediatamente después del último byte copiado. Si desea truncar estos bytes, llame a [SetEOS](../../../ado/reference/ado-api/seteos-method.md).  

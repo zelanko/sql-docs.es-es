@@ -2,7 +2,6 @@
 title: Propiedad de conjunto de caracteres (ADO) | Documentos de Microsoft
 ms.prod: sql
 ms.prod_service: connectivity
-ms.component: ado
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
@@ -20,11 +19,12 @@ caps.latest.revision: 16
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 972f090d648c94c3fab20f013eaa185fe3849f00
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 9de51b96b78a7eccac34805ccc511754db3e393b
+ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/11/2018
+ms.locfileid: "35276304"
 ---
 # <a name="charset-property-ado"></a>Propiedad de conjunto de caracteres (ADO)
 Indica el juego de caracteres al que el contenido de un texto [flujo](../../../ado/reference/ado-api/stream-object-ado.md) deben traducir para el almacenamiento en el búfer interno de la **flujo** objeto.  
@@ -32,7 +32,7 @@ Indica el juego de caracteres al que el contenido de un texto [flujo](../../../a
 ## <a name="settings-and-return-values"></a>Configuración y valores devueltos  
  Establece o devuelve un **cadena** establece el valor que especifica el carácter en el que el contenido de la **flujo** se va a traducir. El valor predeterminado es **Unicode**. Los valores permitidos son cadenas típicas que se pasan a través de la interfaz como nombres de conjunto de caracteres de Internet (por ejemplo, "iso-8859-1", "Windows-1252" y así sucesivamente). Para obtener una lista de los nombres de conjunto de caracteres que se conocen por un sistema, vea las subclaves de HKEY_CLASSES_ROOT\MIME\Database\Charset en el registro de Windows.  
   
-## <a name="remarks"></a>Comentarios  
+## <a name="remarks"></a>Notas  
  En el texto **flujo** de objetos, datos de texto se almacenan en el juego de caracteres especificado por el **Charset** propiedad. El valor predeterminado es Unicode. El **Charset** propiedad se utiliza para convertir datos en el **flujo** o próximos fuera de la **flujo**. Por ejemplo, si la **flujo** contiene datos ISO-8859-1 y que los datos se copian en una cadena BSTR, el **flujo** objeto convertirá los datos a Unicode. Lo contrario también es cierto.  
   
  Un circuito abierto **flujo**, actual [posición](../../../ado/reference/ado-api/position-property-ado.md) debe estar al principio de la **flujo** (0) para poder establecer **Charset**.  

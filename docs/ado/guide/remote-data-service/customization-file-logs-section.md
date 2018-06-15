@@ -2,7 +2,6 @@
 title: Sección Logs del archivo de personalización | Documentos de Microsoft
 ms.prod: sql
 ms.prod_service: connectivity
-ms.component: ado
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
@@ -18,11 +17,12 @@ caps.latest.revision: 14
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 37bcfdea2c98295d2869cd4bc5766e89758e2773
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 8b80034b1d2668960aa918b1c66df878eb75ca86
+ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/11/2018
+ms.locfileid: "35274014"
 ---
 # <a name="customization-file-logs-section"></a>Sección de registros del archivo de personalización
 El **registros** sección contiene una entrada de archivo de registro, que especifica el nombre del archivo que registra los errores durante la operación de la **DataFactory**.  
@@ -40,9 +40,9 @@ FileName
   
 ```  
   
-## <a name="remarks"></a>Comentarios  
+## <a name="remarks"></a>Notas  
   
-|Parte|Description|  
+|Parte|Descripción|  
 |----------|-----------------|  
 |**Err**|Una cadena literal que indica que esta es una entrada de archivo de registro.|  
 |*FileName*|Un nombre completo de ruta de acceso y el archivo. El nombre de archivo típico es **c:\msdfmap.log**.|  

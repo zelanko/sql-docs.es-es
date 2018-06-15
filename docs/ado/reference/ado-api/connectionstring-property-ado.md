@@ -2,7 +2,6 @@
 title: Propiedad ConnectionString (ADO) | Documentos de Microsoft
 ms.prod: sql
 ms.prod_service: connectivity
-ms.component: ado
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
@@ -20,11 +19,12 @@ caps.latest.revision: 18
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 7b34a524380439dba07d12aa74ef24a870ab8ccc
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 9a7804257f705e05b1ac5cfdcdb034de4fd20cec
+ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/11/2018
+ms.locfileid: "35277044"
 ---
 # <a name="connectionstring-property-ado"></a>Propiedad ConnectionString (ADO)
 Indica la información utilizada para establecer una conexión con un origen de datos.  
@@ -32,12 +32,12 @@ Indica la información utilizada para establecer una conexión con un origen de 
 ## <a name="settings-and-return-values"></a>Configuración y valores devueltos  
  Establece o devuelve un **cadena** valor.  
   
-## <a name="remarks"></a>Comentarios  
+## <a name="remarks"></a>Notas  
  Use la **ConnectionString** propiedad para especificar un origen de datos pasando una cadena de conexión detallada que contiene una serie de *argumento* *= valor* instrucciones separan por punto y coma.  
   
  ADO admite cinco argumentos para la **ConnectionString** propiedad; cualquier otro paso de argumentos directamente al proveedor sin ningún procesamiento mediante ADO. Los argumentos admitidos por ADO son los siguientes.  
   
-|Argumento|Description|  
+|Argumento|Descripción|  
 |--------------|-----------------|  
 |*Proveedor =*|Especifica el nombre de un proveedor que se usará para la conexión.|  
 |*Nombre de archivo =*|Especifica el nombre de un archivo específico del proveedor (por ejemplo, un objeto de origen de datos almacenados) que contiene información de conexión predefinida.|  

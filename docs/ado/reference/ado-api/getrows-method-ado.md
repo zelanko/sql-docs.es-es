@@ -2,7 +2,6 @@
 title: Método GetRows (ADO) | Documentos de Microsoft
 ms.prod: sql
 ms.prod_service: connectivity
-ms.component: ado
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
@@ -21,11 +20,12 @@ caps.latest.revision: 12
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: efe7a21a26e99d089c64fcd3a627c693c5f7de09
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 4df52f5ebc2fee80017f284c78cb49e4cb36667b
+ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/11/2018
+ms.locfileid: "35278804"
 ---
 # <a name="getrows-method-ado"></a>Método GetRows (ADO)
 Recupera varios registros de un [Recordset](../../../ado/reference/ado-api/recordset-object-ado.md) objeto en una matriz.  
@@ -44,13 +44,13 @@ array = recordset.GetRows(Rows, Start, Fields )
  *Filas*  
  Opcional. A [GetRowsOptionEnum](../../../ado/reference/ado-api/getrowsoptionenum.md) valor que indica el número de registros que se va a recuperar. El valor predeterminado es **adGetRowsRest**.  
   
- *Iniciar*  
+ *Inicio*  
  Opcional. A **cadena** valor o **Variant** que se evalúa como el marcador para el registro desde el que el **GetRows** debe comenzar la operación. También puede usar un [BookmarkEnum](../../../ado/reference/ado-api/bookmarkenum.md) valor.  
   
  *Fields*  
  Opcional. A **Variant** que representa un nombre de campo único o la posición ordinal o una matriz de nombres de campo o números de posición ordinal. ADO devuelve sólo los datos de estos campos.  
   
-## <a name="remarks"></a>Comentarios  
+## <a name="remarks"></a>Notas  
  Use la **GetRows** método para copiar registros de un **Recordset** en una matriz bidimensional. El primer subíndice identifica el campo y el segundo el número de registro. El *matriz* variable se ajusta automáticamente para el valor correcto de tamaño cuando el **GetRows** método devuelve los datos.  
   
  Si no especifica un valor para el *filas* argumento, el **GetRows** método recupera automáticamente todos los registros en la **Recordset** objeto. Si se solicita más registros que están disponibles, **GetRows** devuelve solo el número de registros disponibles.  

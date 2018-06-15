@@ -2,7 +2,6 @@
 title: RowPosition (propiedad, ADO) | Documentos de Microsoft
 ms.prod: sql
 ms.prod_service: connectivity
-ms.component: ado
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
@@ -24,11 +23,12 @@ caps.latest.revision: 11
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 2566a5965b0170fddf5dfd08744db1bb141a0d14
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 0b852ff5fab54e11f3fd39c2ca92266c95587987
+ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/11/2018
+ms.locfileid: "35281344"
 ---
 # <a name="rowposition-property-ado"></a>RowPosition (propiedad, ADO)
 Obtiene o establece OLE DB **RowPosition** objeto de/en un **ADORecordsetConstruction** objeto. Cuando se usa **put_RowPosition** para establecer el **RowPosition** objeto resultante **Recordset** de objeto usa la **RowPosition** objeto determinar la fila actual.  
@@ -52,7 +52,7 @@ HRESULT put_RowPosition([in] IUnknown* pRowPos);
 ## <a name="return-values"></a>Valores devueltos  
  Este método de propiedad devuelve los valores HRESULT estándar, incluidos S_OK y E_FAIL.  
   
-## <a name="remarks"></a>Comentarios  
+## <a name="remarks"></a>Notas  
  Cuando se establece esta propiedad, si el **conjunto de filas** objeto en el **RowPosition** objeto es diferente de la **conjunto de filas** objeto en el **delconjuntoderegistros**objeto, el primero sobrescribe al segundo. El mismo comportamiento se aplica a la corriente **capítulo** de la **RowPosition** así.  
   
 ## <a name="applies-to"></a>Se aplica a  

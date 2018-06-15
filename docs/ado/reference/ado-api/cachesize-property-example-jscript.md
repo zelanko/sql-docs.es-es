@@ -2,7 +2,6 @@
 title: Ejemplo de la propiedad CacheSize (JScript) | Documentos de Microsoft
 ms.prod: sql
 ms.prod_service: connectivity
-ms.component: ado
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
@@ -19,11 +18,12 @@ caps.latest.revision: 10
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 4ef3d68e6d398a841b3b799e208b7fe6fa2d14af
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: d9d0267aec726c6213d36d9224b457fcff3caf97
+ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/11/2018
+ms.locfileid: "35276124"
 ---
 # <a name="cachesize-property-example-jscript"></a>Ejemplo de la propiedad CacheSize (JScript)
 Este ejemplo se utiliza la [CacheSize](../../../ado/reference/ado-api/cachesize-property-ado.md) propiedad que se va a mostrar la diferencia de rendimiento para una operación se realiza con y sin una caché del registro de 30. Corte y pegue el código siguiente en el Bloc de notas u otro editor de texto y guárdelo como **CacheSizeJS.asp**.  

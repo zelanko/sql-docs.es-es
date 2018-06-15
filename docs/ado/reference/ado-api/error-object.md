@@ -2,7 +2,6 @@
 title: Objeto de error | Documentos de Microsoft
 ms.prod: sql
 ms.prod_service: connectivity
-ms.component: ado
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
@@ -20,16 +19,17 @@ caps.latest.revision: 9
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 6911493ab691b2c5e40ff4fa7331261070d981be
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 77851eaeabd460db12938f6386708057e7faee0c
+ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/11/2018
+ms.locfileid: "35278424"
 ---
 # <a name="error-object"></a>Objeto de error
 Contiene detalles sobre los errores de acceso de datos que pertenecen a una única operación que implique al proveedor.  
   
-## <a name="remarks"></a>Comentarios  
+## <a name="remarks"></a>Notas  
  Cualquier operación que implique objetos ADO puede generar uno o más errores del proveedor. Cuando se produce cada error, uno o varios **Error** objetos se colocan en la [errores](../../../ado/reference/ado-api/errors-collection-ado.md) colección de la [conexión](../../../ado/reference/ado-api/connection-object-ado.md) objeto. Cuando otra operación ADO genera un error, el **errores** se borra la colección y el nuevo conjunto de **Error** objetos se coloca en el **errores** colección.  
   
 > [!NOTE]

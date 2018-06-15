@@ -2,7 +2,6 @@
 title: Objeto Property (ADO) | Documentos de Microsoft
 ms.prod: sql
 ms.prod_service: connectivity
-ms.component: ado
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
@@ -20,16 +19,17 @@ caps.latest.revision: 6
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: b646b698f8d14e6440368dbffb6e472360c2832d
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 4256e213e6ce9d6c96b55bda013fbf79f1a49cda
+ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/11/2018
+ms.locfileid: "35280764"
 ---
 # <a name="property-object-ado"></a>Objeto Property (ADO)
 Representa una característica dinámica de un objeto ADO definido por el proveedor.  
   
-## <a name="remarks"></a>Comentarios  
+## <a name="remarks"></a>Notas  
  Objetos ADO tienen dos tipos de propiedades: integradas y dinámicas.  
   
  Las propiedades integradas son aquellas propiedades implementadas en ADO y disponibles inmediatamente para cualquier objeto nuevo, utilizando el `MyObject.Property` sintaxis. No aparecen como **propiedad** objetos en un objeto [propiedades](../../../ado/reference/ado-api/properties-collection-ado.md) colección, por lo que aunque se pueden cambiar sus valores, no se puede modificar sus características.  

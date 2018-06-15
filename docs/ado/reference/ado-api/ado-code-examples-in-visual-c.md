@@ -2,7 +2,6 @@
 title: Ejemplos de código ADO en Visual C++ | Documentos de Microsoft
 ms.prod: sql
 ms.prod_service: connectivity
-ms.component: ado
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
@@ -19,11 +18,12 @@ caps.latest.revision: 9
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 6c016f4d882baa22c4721c89c74b566eee6e5001
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 9085d135e0a96ea78de3a6bf75827c8a6149907a
+ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/11/2018
+ms.locfileid: "35275410"
 ---
 # <a name="ado-code-examples-in-visual-c"></a>Ejemplos de código ADO en Visual C++
 Utilice los siguientes ejemplos de código para obtener información sobre cómo utilizar los métodos, propiedades y eventos al escribir en Microsoft Visual C++ de ADO.  
@@ -145,7 +145,7 @@ Utilice los siguientes ejemplos de código para obtener información sobre cómo
   
 -   [Ejemplo de la propiedad de versión](../../../ado/reference/ado-api/version-property-example-vc.md)  
   
-## <a name="other"></a>Otro  
+## <a name="other"></a>Otros  
   
 -   [Ejemplo de modelo de eventos de ADO](../../../ado/reference/ado-api/ado-events-model-example-vc.md)  
   

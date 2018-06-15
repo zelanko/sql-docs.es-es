@@ -2,7 +2,6 @@
 title: Execute (método) (conexión de ADO) | Documentos de Microsoft
 ms.prod: sql
 ms.prod_service: connectivity
-ms.component: ado
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
@@ -21,11 +20,12 @@ caps.latest.revision: 13
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 27f99015571bd7abdad402dc0f779c04fd546a79
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 27d3f5318d093d18312dd531421f5c32755aeaf1
+ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/11/2018
+ms.locfileid: "35278144"
 ---
 # <a name="execute-method-ado-connection"></a>Execute (método) (conexión de ADO)
 Ejecuta la consulta especificada, la instrucción SQL, el procedimiento almacenado o la texto específico del proveedor.  
@@ -57,7 +57,7 @@ Set recordset = connection.Execute (CommandText, RecordsAffected, Options)
   
  No utilice los valores adCmdFile ni adCmdTableDirect con Execute. Estos valores sólo pueden utilizarse como opciones con el [Open (método) (conjunto de registros ADO)](../../../ado/reference/ado-api/open-method-ado-recordset.md) y [método Requery](../../../ado/reference/ado-api/requery-method.md) métodos de un **conjunto de registros**.  
   
-## <a name="remarks"></a>Comentarios  
+## <a name="remarks"></a>Notas  
  Mediante el **Execute** método en un [conexión ADO (objetos)](../../../ado/reference/ado-api/connection-object-ado.md) objeto ejecuta cualquier consulta que se pasan al método en el argumento CommandText en la conexión especificada. Si el argumento CommandText especifica una consulta que devuelva filas, los resultados que genera la ejecución se almacenan en un nuevo **Recordset** objeto. Si el comando no está diseñado para devolver resultados (por ejemplo, una consulta UPDATE de SQL) el proveedor devuelve **nada** siempre que la opción **adExecuteNoRecords** especificado; en caso contrario, Execute devuelve un cerrado **conjunto de registros**.  
   
  El valor devuelto **Recordset** objeto siempre es un cursor de solo lectura, solo hacia delante. Si necesita un **conjunto de registros** objetos con mayor funcionalidad, cree primero un **Recordset** objeto con la configuración de la propiedad deseada, utilice el **Recordset** delobjeto[ Open (método) (conjunto de registros ADO)](../../../ado/reference/ado-api/open-method-ado-recordset.md) método para ejecutar la consulta y devolver el tipo de cursor deseado.  

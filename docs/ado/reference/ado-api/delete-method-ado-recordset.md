@@ -2,7 +2,6 @@
 title: Delete (método) (conjunto de registros ADO) | Documentos de Microsoft
 ms.prod: sql
 ms.prod_service: connectivity
-ms.component: ado
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
@@ -21,11 +20,12 @@ caps.latest.revision: 14
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: afb1071d48cb6c4c1652cc5caab96de97beefae4
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 46ffdefd753d10067c2c120690fd900ddd114abd
+ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/11/2018
+ms.locfileid: "35277574"
 ---
 # <a name="delete-method-ado-recordset"></a>Delete (método) (conjunto de registros ADO)
 Elimina el registro actual o un grupo de registros.  
@@ -44,7 +44,7 @@ recordset.Delete AffectRecords
 > [!NOTE]
 >  **adAffectAll** y **adAffectAllChapters** no son argumentos válidos para **eliminar**.  
   
-## <a name="remarks"></a>Comentarios  
+## <a name="remarks"></a>Notas  
  Mediante el **eliminar** método marca el registro actual o un grupo de registros en un [Recordset](../../../ado/reference/ado-api/recordset-object-ado.md) objeto para su eliminación. Si el **Recordset** objeto no admite la eliminación de registros, se produce un error. Si está en modo de actualización inmediata, las eliminaciones se producen en la base de datos inmediatamente. Si un registro no puede eliminarse correctamente (debido a infracciones de la integridad de la base de datos, por ejemplo), el registro permanecerá en modo de edición después de llamar a [actualización](../../../ado/reference/ado-api/update-method.md). Esto significa que se debe cancelar la actualización con [CancelUpdate](../../../ado/reference/ado-api/cancelupdate-method-ado.md) antes de trasladarse fuera del registro actual (por ejemplo, con [cerrar](../../../ado/reference/ado-api/close-method-ado.md), [mover](../../../ado/reference/ado-api/move-method-ado.md), o [ NextRecordset](../../../ado/reference/ado-api/nextrecordset-method-ado.md)).  
   
  Si está en modo de actualización por lotes, los registros se marcan para su eliminación de la memoria caché y la eliminación real se produce cuando se llama a la [UpdateBatch](../../../ado/reference/ado-api/updatebatch-method.md) método. Use la [filtro](../../../ado/reference/ado-api/filter-property.md) propiedad para ver los registros eliminados.  

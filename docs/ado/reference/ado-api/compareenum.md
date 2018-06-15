@@ -2,7 +2,6 @@
 title: CompareEnum | Documentos de Microsoft
 ms.prod: sql
 ms.prod_service: connectivity
-ms.component: ado
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
@@ -20,16 +19,17 @@ caps.latest.revision: 11
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 16bc257e151fc68eddd9268c10cf9d093d9c8491
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: c458b18e4270acecb4abd573a5996442f3f9ef4d
+ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/11/2018
+ms.locfileid: "35276834"
 ---
 # <a name="compareenum"></a>CompareEnum
 Especifica la posición relativa de dos registros representados por sus marcadores.  
   
-|Constante|Value|Description|  
+|Constante|Valor|Descripción|  
 |--------------|-----------|-----------------|  
 |**adCompareEqual**|1|Indica que los marcadores son iguales.|  
 |**adCompareGreaterThan**|2|Indica que el primer marcador está después de la segunda.|  

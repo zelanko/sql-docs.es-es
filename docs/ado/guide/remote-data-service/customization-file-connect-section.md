@@ -2,7 +2,6 @@
 title: Sección Connect del archivo de personalización | Documentos de Microsoft
 ms.prod: sql
 ms.prod_service: connectivity
-ms.component: ado
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
@@ -18,11 +17,12 @@ caps.latest.revision: 15
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 12d1560220a9c281425a1d75c43f0ef95845d611
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: f6774d32587a2c6d5c969be4d56640d137972ddc
+ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/11/2018
+ms.locfileid: "35273854"
 ---
 # <a name="customization-file-connect-section"></a>Sección Connect del archivo de personalización
 El comportamiento predeterminado del controlador es Denegar todas las conexiones. El **conectar** sección especifica las excepciones de ese comportamiento. Por ejemplo, si todos los **conectar** secciones están ausentes o vacías, a continuación, de forma predeterminada no se pudo establecer ninguna conexión.  
@@ -55,9 +55,9 @@ connectionString
   
 ```  
   
-## <a name="remarks"></a>Comentarios  
+## <a name="remarks"></a>Notas  
   
-|Parte|Description|  
+|Parte|Descripción|  
 |----------|-----------------|  
 |**Conectar**|Una cadena literal que indica que esta es una entrada de cadena de conexión.|  
 |***connectionString***|Cadena que reemplaza la cadena de conexión de cliente completa.|  

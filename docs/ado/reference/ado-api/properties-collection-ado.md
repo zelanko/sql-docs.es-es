@@ -2,7 +2,6 @@
 title: Colección de propiedades (ADO) | Documentos de Microsoft
 ms.prod: sql
 ms.prod_service: connectivity
-ms.component: ado
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
@@ -22,16 +21,17 @@ caps.latest.revision: 10
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: aec8c65a08d43accf92131e3e013ecb9727c7c73
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 557f24dcc7695efadb9a3db5c18f81ae6a26b59d
+ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/11/2018
+ms.locfileid: "35280683"
 ---
 # <a name="properties-collection-ado"></a>Colección de propiedades (ADO)
 Contiene todos los [propiedad](../../../ado/reference/ado-api/property-object-ado.md) objetos de una instancia concreta de un objeto.  
   
-## <a name="remarks"></a>Comentarios  
+## <a name="remarks"></a>Notas  
  Algunos objetos ADO tienen una **propiedades** colección formada por **propiedad** objetos. Cada **propiedad** objeto corresponde a una característica del objeto ADO específico del proveedor.  
   
 > [!NOTE]

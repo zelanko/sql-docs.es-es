@@ -2,7 +2,6 @@
 title: Colección de parámetros (ADO) | Documentos de Microsoft
 ms.prod: sql
 ms.prod_service: connectivity
-ms.component: ado
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
@@ -22,16 +21,17 @@ caps.latest.revision: 20
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 3b9976679454881af9279dc74ff86eacdb01d2a2
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: b7c59411e1aeeaa32e2b1904e2503b26a92c829b
+ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/11/2018
+ms.locfileid: "35280673"
 ---
 # <a name="parameters-collection-ado"></a>Colección de parámetros (ADO)
 Contiene todos los [parámetro](../../../ado/reference/ado-api/parameter-object.md) objetos de un [comando](../../../ado/reference/ado-api/command-object-ado.md) objeto.  
   
-## <a name="remarks"></a>Comentarios  
+## <a name="remarks"></a>Notas  
  A **comando** objeto tiene una **parámetros** colección formada por **parámetro** objetos.  
   
  Mediante el [actualizar](../../../ado/reference/ado-api/refresh-method-ado.md) método en un **comando** del objeto **parámetros** colección recupera información de parámetros de proveedor para el procedimiento almacenado o la consulta parametrizada se especifica en el **comando** objeto. Algunos proveedores no admiten llamadas a procedimientos almacenados o consultas parametrizadas; llamar a la **actualizar** método en el **parámetros** colección cuando se usa este tipo de proveedor, devolverá un error.  

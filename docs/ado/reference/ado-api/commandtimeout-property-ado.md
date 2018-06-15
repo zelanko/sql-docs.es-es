@@ -2,7 +2,6 @@
 title: Propiedad CommandTimeout (ADO) | Documentos de Microsoft
 ms.prod: sql
 ms.prod_service: connectivity
-ms.component: ado
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
@@ -20,11 +19,12 @@ caps.latest.revision: 11
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 5bbd07b516902db0dc952761e7cc1e38fa6958ab
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 1addc5de70e53087cdcbaa77fea87211958cbcdc
+ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/11/2018
+ms.locfileid: "35276874"
 ---
 # <a name="commandtimeout-property-ado"></a>CommandTimeout (propiedad, ADO)
 Indica cuánto tiempo de espera mientras se ejecuta un comando antes de terminar el intento y generar un error.  
@@ -32,7 +32,7 @@ Indica cuánto tiempo de espera mientras se ejecuta un comando antes de terminar
 ## <a name="settings-and-return-values"></a>Configuración y valores devueltos  
  Establece o devuelve un **largo** valor que indica, en segundos, cuánto tiempo debe para esperar para que se ejecute un comando. Valor predeterminado es 30.  
   
-## <a name="remarks"></a>Comentarios  
+## <a name="remarks"></a>Notas  
  Use la **CommandTimeout** propiedad en un [conexión](../../../ado/reference/ado-api/connection-object-ado.md) objeto o [comando](../../../ado/reference/ado-api/command-object-ado.md) objeto para permitir la cancelación de un [Execute](../../../ado/reference/ado-api/execute-method-ado-command.md) (método) llamar a, debido a los retrasos del uso del servidor de tráfico o a la sobrecarga de red. Si el intervalo establecido el **CommandTimeout** propiedad transcurre antes de que el comando completa la ejecución, se produce un error y ADO cancela el comando. Si establece la propiedad en cero, ADO esperará indefinidamente hasta que la ejecución se complete. Asegúrese de que el proveedor y origen de datos a la que está escribiendo código admiten la **CommandTimeout** funcionalidad.  
   
  El **CommandTimeout** en un **conexión** objeto no tiene ningún efecto el **CommandTimeout** en un **comando** objeto en el mismo **conexión**; es decir, el **comando** del objeto **CommandTimeout** propiedad no hereda el valor de la **conexión** del objeto **CommandTimeout** valor.  

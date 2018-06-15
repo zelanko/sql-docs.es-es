@@ -2,7 +2,6 @@
 title: Propiedad Count (ADO) | Documentos de Microsoft
 ms.prod: sql
 ms.prod_service: connectivity
-ms.component: ado
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
@@ -20,11 +19,12 @@ caps.latest.revision: 12
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: edda8415ad83ee3aa874ec1e3e6dd6f8e20b41b7
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: bccb2760b124040973baa7ba889d2110ec5efe95
+ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/11/2018
+ms.locfileid: "35277234"
 ---
 # <a name="count-property-ado"></a>Count (propiedad, ADO)
 Indica el número de objetos de una colección.  
@@ -32,7 +32,7 @@ Indica el número de objetos de una colección.
 ## <a name="return-value"></a>Valor devuelto  
  Devuelve un **largo** valor.  
   
-## <a name="remarks"></a>Comentarios  
+## <a name="remarks"></a>Notas  
  Use la **recuento** propiedad para determinar cuántos objetos se encuentran en una recopilación determinada.  
   
  Dado que la numeración de los miembros de una colección empieza por cero, siempre debe codificar los bucles empezando con el miembro cero y terminando con el valor de la **recuento** propiedad menos 1. Si está utilizando Microsoft Visual Basic y desea recorrer los miembros de una colección sin comprobar la **recuento** propiedad, utilice la **For Each... Siguiente** comando.  

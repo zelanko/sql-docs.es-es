@@ -2,7 +2,6 @@
 title: Método AppendChunk (ADO) | Documentos de Microsoft
 ms.prod: sql
 ms.prod_service: connectivity
-ms.component: ado
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
@@ -21,11 +20,12 @@ caps.latest.revision: 14
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 3ba8020b9bf2666ba3b2ab0ffe9156c771360c95
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: b3446061f98047d6af28725095ede2a30208969a
+ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/11/2018
+ms.locfileid: "35275914"
 ---
 # <a name="appendchunk-method-ado"></a>Método AppendChunk (ADO)
 Anexa datos a un texto de gran tamaño o datos binarios [campo](../../../ado/reference/ado-api/field-object.md), o a un [parámetro](../../../ado/reference/ado-api/parameter-object.md) objeto.  
@@ -38,13 +38,13 @@ object.AppendChunk Data
 ```  
   
 #### <a name="parameters"></a>Parámetros  
- *objeto*  
+ *object*  
  A **campo** o **parámetro** objeto.  
   
  *Datos*  
  A **Variant** que contiene los datos que se va a anexar al objeto.  
   
-## <a name="remarks"></a>Comentarios  
+## <a name="remarks"></a>Notas  
  Use la **AppendChunk** método en un **campo** o **parámetro** objeto que se va a rellenar con datos binarios largos o de caracteres. En situaciones donde la memoria del sistema es limitada, puede usar el **AppendChunk** método para manipular los valores largos en partes en lugar de en su totalidad.  
   
 ## <a name="field"></a>Campo  

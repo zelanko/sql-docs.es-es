@@ -2,7 +2,6 @@
 title: Bookmark (propiedad) (ADO) | Documentos de Microsoft
 ms.prod: sql
 ms.prod_service: connectivity
-ms.component: ado
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 03/20/2018
@@ -20,11 +19,12 @@ caps.latest.revision: 12
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: e8b73c3d31886877702cadfca0194fd628bf6172
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 9e645300f604e1880f98fd8d99cea8599062f72f
+ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/11/2018
+ms.locfileid: "35276204"
 ---
 # <a name="bookmark-property-ado"></a>Bookmark (propiedad) (ADO)
 Indica un marcador que identifica de forma única el registro actual en un [Recordset](../../../ado/reference/ado-api/recordset-object-ado.md) de un objeto o establece el registro actual un **Recordset** objeto en el registro identificado por un marcador válido.  
@@ -32,7 +32,7 @@ Indica un marcador que identifica de forma única el registro actual en un [Reco
 ## <a name="settings-and-return-values"></a>Configuración y valores devueltos  
  Establece o devuelve un **Variant** expresión que se evalúe como un marcador válido.  
   
-## <a name="remarks"></a>Comentarios  
+## <a name="remarks"></a>Notas  
  Use la **marcador** propiedad para guardar la posición del registro actual y volver a ese registro en cualquier momento. Marcadores solo están disponibles en **Recordset** objetos que admiten la funcionalidad de los marcadores.  
   
  Cuando se abre un **Recordset** de objetos, cada uno de sus registros tiene un marcador único. Para guardar el marcador para el registro actual, asigne el valor de la **marcador** propiedad a una variable. Para volver rápidamente a ese registro en cualquier momento después de moverse a un registro diferente, establezca la **Recordset** del objeto **marcador** en el valor de esa variable.  

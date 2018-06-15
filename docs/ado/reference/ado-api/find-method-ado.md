@@ -2,7 +2,6 @@
 title: Find (método) (ADO) | Documentos de Microsoft
 ms.prod: sql
 ms.prod_service: connectivity
-ms.component: ado
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
@@ -21,11 +20,12 @@ caps.latest.revision: 12
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 953398f5ed01cc3e0f7c0da1fee769d5e64209af
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 6569d6c65698738025267de0d97001eb041573e8
+ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/11/2018
+ms.locfileid: "35278724"
 ---
 # <a name="find-method-ado"></a>Find (método) (ADO)
 Busca un [conjunto de registros](../../../ado/reference/ado-api/recordset-object-ado.md) para la fila que cumple los criterios especificados. Si lo desea, se puede especificar la dirección de la búsqueda, la fila inicial y el desplazamiento desde la fila inicial. Si se cumplen los criterios, la posición de fila actual se establece en el registro encontrado; en caso contrario, se establece la posición al final (o inicio) de la **conjunto de registros**.  
@@ -47,10 +47,10 @@ Find (Criteria, SkipRows, SearchDirection, Start)
  *SearchDirection*  
  Opcional *.* A [SearchDirectionEnum](../../../ado/reference/ado-api/searchdirectionenum.md) valor que especifica si la búsqueda debe iniciar en la fila actual o la siguiente fila disponible en la dirección de la búsqueda. Detiene una búsqueda al final de la **Recordset** si el valor es **adSearchForward**. Se detiene una búsqueda en el inicio de la **Recordset** si el valor es **adSearchBackward**.  
   
- *Iniciar*  
+ *Inicio*  
  Opcional. A **Variant** marcador que funciona como la posición inicial de la búsqueda.  
   
-## <a name="remarks"></a>Comentarios  
+## <a name="remarks"></a>Notas  
  Se puede especificar sólo un nombre de columna única en *criterios*. Este método no admite búsquedas en varias columnas.  
   
  El operador de comparación *criterios* puede ser "**>**"(mayor que),"**\<**" (menor que), "=" (igual), "> =" (mayor o igual que), "< =" (menor o igual que), "<>" (no es igual a) o "like" (coincidencia de modelos).  

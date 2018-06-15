@@ -2,7 +2,6 @@
 title: Evento FetchProgress (ADO) | Documentos de Microsoft
 ms.prod: sql
 ms.prod_service: connectivity
-ms.component: ado
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
@@ -21,11 +20,12 @@ caps.latest.revision: 11
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 7fea26975fc162f92527f63123eddb95fade8a8e
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 88f5fafb3bc6f4a244d642c0ca18204977a79161
+ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/11/2018
+ms.locfileid: "35278504"
 ---
 # <a name="fetchprogress-event-ado"></a>Evento FetchProgress (ADO)
 El **FetchProgress**eventos se llama periódicamente durante una operación asincrónica prolongada para informar de cuántas filas se han recuperado actualmente en el [conjunto de registros](../../../ado/reference/ado-api/recordset-object-ado.md).  
@@ -50,7 +50,7 @@ FetchProgress Progress, MaxProgress, adStatus, pRecordset
  *pRecordset*  
  A **Recordset** objeto que es el objeto para el que se recuperan los registros.  
   
-## <a name="remarks"></a>Comentarios  
+## <a name="remarks"></a>Notas  
  Cuando se usa **FetchProgress** con un elemento secundario **Recordset**, tenga en cuenta que la *progreso* y *MaxProgress* se derivan los valores de parámetro desde subyacente [servicio Cursor](../../../ado/guide/appendixes/microsoft-cursor-service-for-ole-db-ado-service-component.md) conjunto de filas. Los valores devueltos representan el número total de registros en el conjunto de filas subyacente, no solo el número de registros en el capítulo actual.  
   
 > [!NOTE]

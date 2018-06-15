@@ -2,7 +2,6 @@
 title: Cambiar la forma de nombre de propiedad dinámica (ADO) | Documentos de Microsoft
 ms.prod: sql
 ms.prod_service: connectivity
-ms.component: ado
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
@@ -18,11 +17,12 @@ caps.latest.revision: 13
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 4901e09d0df933c6aa35e8c1ebed3e62ef2012f8
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 4752609469ecad3a3a6631584e120de8cc4a7575
+ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/11/2018
+ms.locfileid: "35281414"
 ---
 # <a name="reshape-name-property-dynamic-ado"></a>Cambiar la forma de nombre de propiedad dinámica (ADO)
 Especifica un nombre para el [Recordset](../../../ado/reference/ado-api/recordset-object-ado.md) objeto.  
@@ -30,7 +30,7 @@ Especifica un nombre para el [Recordset](../../../ado/reference/ado-api/recordse
 ## <a name="return-values"></a>Valores devueltos  
  Devuelve un **cadena** valor que es el nombre de la **conjunto de registros**.  
   
-## <a name="remarks"></a>Comentarios  
+## <a name="remarks"></a>Notas  
  Los nombres se conservan para la duración de la conexión o hasta que el **Recordset** está cerrado.  
   
  El **cambiar la forma de nombre** propiedad sirve principalmente para su uso con la característica de volver a catalogar el [servicio de forma de datos de Microsoft para OLE DB](../../../ado/guide/appendixes/microsoft-data-shaping-service-for-ole-db-ado-service-provider.md) proveedor de servicios. Nombres deben ser únicos para participar en volver a dar forma.  

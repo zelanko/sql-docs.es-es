@@ -2,7 +2,6 @@
 title: Save (método) | Documentos de Microsoft
 ms.prod: sql
 ms.prod_service: connectivity
-ms.component: ado
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
@@ -21,11 +20,12 @@ caps.latest.revision: 13
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: a24e0be39417235e86a86e239b8f6918fadda5dc
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: a92e053443dbb32aae83756a98facdc53fa74725
+ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/11/2018
+ms.locfileid: "35281444"
 ---
 # <a name="save-method"></a>Save (método)
 Guarda el [Recordset](../../../ado/reference/ado-api/recordset-object-ado.md) en un archivo o [flujo](../../../ado/reference/ado-api/stream-object-ado.md) objeto.  
@@ -44,7 +44,7 @@ recordset.Save Destination, PersistFormat
  *PersistFormat*  
  Opcional. A [más](../../../ado/reference/ado-api/persistformatenum.md) valor que especifica el formato en el que el **Recordset** consiste en Guardar (XML o ADTG). El valor predeterminado es **adPersistADTG**.  
   
-## <a name="remarks"></a>Comentarios  
+## <a name="remarks"></a>Notas  
  El [método Save](../../../ado/reference/ado-api/save-method.md) sólo se puede invocar el método en un formato de archivo **conjunto de registros**. Use la [Open (método) (conjunto de registros ADO)](../../../ado/reference/ado-api/open-method-ado-recordset.md) método de restauración más adelante el **Recordset** de *destino*.  
   
  Si el [propiedad Filter](../../../ado/reference/ado-api/filter-property.md) propiedad está en vigor para el **Recordset**, a continuación, se guardan únicamente las filas accesibles con el filtro. Si el **conjunto de registros** es jerárquico, a continuación, el elemento secundario actual **Recordset** y sus elementos secundarios se guardan, incluido el elemento primario **conjunto de registros**. Si el método Save de un elemento secundario **Recordset** es llama, el elemento secundario y todos sus elementos secundarios se guardan, pero el elemento primario no lo es.  

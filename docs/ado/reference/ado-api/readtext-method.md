@@ -2,7 +2,6 @@
 title: Método ReadText | Documentos de Microsoft
 ms.prod: sql
 ms.prod_service: connectivity
-ms.component: ado
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
@@ -21,11 +20,12 @@ caps.latest.revision: 16
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 26221c32339aab70311a6ca9254bb5d514724070
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: b7c3e2dcf695e9c6748881656d87e02404209dbf
+ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/11/2018
+ms.locfileid: "35280784"
 ---
 # <a name="readtext-method"></a>Método ReadText
 Lee un número de caracteres del texto especificado [flujo](../../../ado/reference/ado-api/stream-object-ado.md) objeto.  
@@ -44,7 +44,7 @@ String = Stream.ReadText ( NumChars)
 ## <a name="return-value"></a>Valor devuelto  
  El **ReadText** método lee un número especificado de caracteres, una línea completa o la totalidad de la secuencia de un **flujo** de objetos y devuelve la cadena resultante.  
   
-## <a name="remarks"></a>Comentarios  
+## <a name="remarks"></a>Notas  
  Si *NumChar* es mayor que el número de caracteres quedan en la secuencia, se devuelven sólo los caracteres restantes. La cadena leída no se rellena para que coincida con la longitud especificada por *NumChar*. Si no hay ningún carácter restante para leer, se devuelve un valor de tipo variant cuyo valor es null. **ReadText** no se puede usar para leer hacia atrás.  
   
 > [!NOTE]

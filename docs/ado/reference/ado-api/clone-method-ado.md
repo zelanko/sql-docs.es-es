@@ -2,7 +2,6 @@
 title: Clone (método) (ADO) | Documentos de Microsoft
 ms.prod: sql
 ms.prod_service: connectivity
-ms.component: ado
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
@@ -21,11 +20,12 @@ caps.latest.revision: 13
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 33fee6bf55b3175d75879e06949744d0730f6af0
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: f993cee93bce398020fdb5ae2b43a7911114a270
+ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/11/2018
+ms.locfileid: "35276434"
 ---
 # <a name="clone-method-ado"></a>Clone (método) (ADO)
 Crea un duplicado [Recordset](../../../ado/reference/ado-api/recordset-object-ado.md) objeto a partir de una existente **Recordset** objeto. Opcionalmente, especifica que la clonación sea de solo lectura.  
@@ -50,7 +50,7 @@ Set rstDuplicate = rstOriginal.Clone (LockType)
  *LockType*  
  Opcional. A [LockTypeEnum](../../../ado/reference/ado-api/locktypeenum.md) valor que especifica el tipo de bloqueo de la versión original **Recordset**, o de solo lectura **conjunto de registros**. Los valores válidos son **adLockUnspecified** o **adLockReadOnly**.  
   
-## <a name="remarks"></a>Comentarios  
+## <a name="remarks"></a>Notas  
  Use la **clon** duplicados de método para crear varios **Recordset** objetos, especialmente si desea mantener más de un registro actual en un determinado conjunto de registros. Mediante el **clon** método es más eficaz que crear y abrir un nuevo **Recordset** objeto que usa la misma definición que el original.  
   
  El [filtro](../../../ado/reference/ado-api/filter-property.md) propiedad del original **Recordset**, si existe, no se aplicará al clon. Establecer el **filtro** propiedad del nuevo **Recordset** para filtrar los resultados. La manera más sencilla de copiar cualquier existente **filtro** valor es asignarlo directamente, como se indica a continuación.  

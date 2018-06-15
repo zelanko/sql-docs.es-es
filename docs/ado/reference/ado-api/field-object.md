@@ -2,7 +2,6 @@
 title: Objeto Field | Documentos de Microsoft
 ms.prod: sql
 ms.prod_service: connectivity
-ms.component: ado
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
@@ -20,16 +19,17 @@ caps.latest.revision: 9
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 49960f2763b402a291531a2ab010ef6a0682107f
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 4b815da825f777b51a43a90af26eba955050b785
+ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/11/2018
+ms.locfileid: "35278475"
 ---
 # <a name="field-object"></a>Objeto Field
 Representa una columna de datos con un tipo de datos común.  
   
-## <a name="remarks"></a>Comentarios  
+## <a name="remarks"></a>Notas  
  Cada **campo** objeto corresponde a una columna de la [conjunto de registros](../../../ado/reference/ado-api/recordset-object-ado.md). Usa el [valor](../../../ado/reference/ado-api/value-property-ado.md) propiedad de **campo** objetos para establecer o devolver datos para el registro actual. Dependiendo de la funcionalidad expone el proveedor, algunas colecciones, métodos o propiedades de un **campo** objeto no estén disponible.  
   
  Con las colecciones, métodos y propiedades de un **campo** del objeto, puede hacer lo siguiente:  

@@ -2,7 +2,6 @@
 title: AddNew (método) (ADO) | Documentos de Microsoft
 ms.prod: sql
 ms.prod_service: connectivity
-ms.component: ado
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
@@ -21,11 +20,12 @@ caps.latest.revision: 14
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 315eec5a4cddccb55be1ad9b8bd9d8bc4ded99cf
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: d21161d5755fc31be78aced4a7f4350dbf901fd4
+ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/11/2018
+ms.locfileid: "35275214"
 ---
 # <a name="addnew-method-ado"></a>AddNew (método) (ADO)
 Crea un nuevo registro para un actualizables [Recordset](../../../ado/reference/ado-api/recordset-object-ado.md) objeto.  
@@ -47,7 +47,7 @@ recordset.AddNew FieldList, Values
  *Valores*  
  Opcional. Un valor único, o una matriz de valores de los campos en el nuevo registro. Si *Fieldlist* es una matriz, *valores* también debe ser una matriz con el mismo número de miembros; de lo contrario, se produce un error. El orden de los nombres de campo debe coincidir con el orden de los valores de campo en cada matriz.  
   
-## <a name="remarks"></a>Comentarios  
+## <a name="remarks"></a>Notas  
  Use la **AddNew** método para crear e inicializar un nuevo registro. Use la [admite](../../../ado/reference/ado-api/supports-method.md) método con **adAddNew** (un [CursorOptionEnum](../../../ado/reference/ado-api/cursoroptionenum.md) valor) para comprobar si puede agregar registros al actual **Recordset**objeto.  
   
  Después de llamar a la **AddNew** método, el nuevo registro se convierte en el registro actual y permanece actual después de llamar a la [actualización](../../../ado/reference/ado-api/update-method.md) método. Dado que el nuevo registro se anexa a la **conjunto de registros**, una llamada a **MoveNext** después de la actualización moverá más allá del final de la **Recordset**, lo que permite **EOF**  Es true. Si el **Recordset** objeto no admite marcadores, es posible no que pueda obtener acceso al registro nuevo cuando se mueva a otro registro. Dependiendo del tipo de cursor, puede que necesite llamar a la [Requery](../../../ado/reference/ado-api/requery-method.md) método para hacer que el nuevo registro sea accesible.  

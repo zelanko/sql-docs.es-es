@@ -2,7 +2,6 @@
 title: Método DeleteRecord (ADO) | Documentos de Microsoft
 ms.prod: sql
 ms.prod_service: connectivity
-ms.component: ado
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
@@ -21,11 +20,12 @@ caps.latest.revision: 12
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: ca7b2a425e24a115b8572f26ec7b2efb103ba9ec
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 168b53d0ad68f55656e005f7523a0c09ba599004
+ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/11/2018
+ms.locfileid: "35277644"
 ---
 # <a name="deleterecord-method-ado"></a>DeleteRecord (método, ADO)
 Elimina una entidad representada por un [registro](../../../ado/reference/ado-api/record-object-ado.md).  
@@ -44,7 +44,7 @@ Record.DeleteRecord Source, Async
  *Async*  
  Opcional. A **booleano** valor que, cuando **True**, especifica que la operación de eliminación es asincrónico.  
   
-## <a name="remarks"></a>Comentarios  
+## <a name="remarks"></a>Notas  
  Operaciones en el objeto representado por este **registro** puede producir un error cuando este método finalice. Después de llamar a **DeleteRecord**, el **registro** debe estar cerrado porque el comportamiento de la **registro** quede imprevisible según cuando se actualiza el proveedor de la **Registro** con el origen de datos.  
   
  Si este **registro** se obtuvo de un [Recordset](../../../ado/reference/ado-api/recordset-object-ado.md), a continuación, los resultados de esta operación no se reflejarán inmediatamente en el **conjunto de registros**. Actualizar el **Recordset** al cerrar y volver a abrirlo, o mediante la ejecución de la **Recordset** [Requery](../../../ado/reference/ado-api/requery-method.md) método, el [actualización](../../../ado/reference/ado-api/update-method.md) método, o el [Resync](../../../ado/reference/ado-api/resync-method.md) método.  

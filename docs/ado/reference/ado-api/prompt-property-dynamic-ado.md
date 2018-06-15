@@ -2,7 +2,6 @@
 title: Solicitar propiedad dinámicos (ADO) | Documentos de Microsoft
 ms.prod: sql
 ms.prod_service: connectivity
-ms.component: ado
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
@@ -18,11 +17,12 @@ caps.latest.revision: 11
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: dc7285d03db3edf52ddb89a91b2b73c5d3ae74c1
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: a7b5c0637f7befb1419f5cb96bbcd421d59cc7b8
+ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/11/2018
+ms.locfileid: "35280637"
 ---
 # <a name="prompt-property-dynamic-ado"></a>Propiedad-dinámica Prompt (ADO)
 Especifica si el proveedor OLE DB debe solicitar al usuario información de inicialización.  
@@ -30,7 +30,7 @@ Especifica si el proveedor OLE DB debe solicitar al usuario información de inic
 ## <a name="settings-and-return-values"></a>Configuración y valores devueltos  
  Establece y devuelve un [ConnectPromptEnum](../../../ado/reference/ado-api/connectpromptenum.md) valor.  
   
-## <a name="remarks"></a>Comentarios  
+## <a name="remarks"></a>Notas  
  **Símbolo del sistema** es una propiedad dinámica, que puede ser anexada a la [conexión](../../../ado/reference/ado-api/connection-object-ado.md) del objeto [propiedades](../../../ado/reference/ado-api/properties-collection-ado.md) colección por el proveedor OLE DB. Para solicitar información de inicialización, los proveedores OLE DB normalmente mostrará un cuadro de diálogo al usuario.  
   
  Propiedades dinámicas de un [conexión](../../../ado/reference/ado-api/connection-object-ado.md) objeto se pierden cuando el **conexión** está cerrado. El **Prompt** propiedad se debe restablecer antes de volver a abrir la **conexión** para utilizar un valor distinto del predeterminado.  

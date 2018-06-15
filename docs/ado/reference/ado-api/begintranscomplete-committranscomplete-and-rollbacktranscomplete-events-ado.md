@@ -2,7 +2,6 @@
 title: Eventos de BeginTrans, CommitTrans y RollbackTrans (ADO) | Documentos de Microsoft
 ms.prod: sql
 ms.prod_service: connectivity
-ms.component: ado
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
@@ -27,11 +26,12 @@ caps.latest.revision: 11
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: f9754baa574a21916e981c91aad56385adfb16e0
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 3c440f6bd1a978a820797414ff81e6b9b15da467
+ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/11/2018
+ms.locfileid: "35276064"
 ---
 # <a name="begintranscomplete-committranscomplete-and-rollbacktranscomplete-events-ado"></a>Eventos BeginTransComplete, CommitTransComplete y RollbackTransComplete eventos (ADO)
 Estos eventos se les llama después de la operación asociada en el [conexión](../../../ado/reference/ado-api/connection-object-ado.md) objeto termina de ejecutarse.  
@@ -66,7 +66,7 @@ RollbackTransComplete pError, adStatus, pConnection
  *pConnection*  
  El **conexión** el objeto para el que se produjo este evento.  
   
-## <a name="remarks"></a>Comentarios  
+## <a name="remarks"></a>Notas  
  En Visual C++, varios **conexiones** pueden compartir el mismo método de control de eventos. El método usa el valor devuelto **conexión** para determinar qué objeto causó el evento.  
   
  Si el [atributos](../../../ado/reference/ado-api/attributes-property-ado.md) propiedad está establecida en **adXactCommitRetaining** o **adXactAbortRetaining**, inicia una nueva transacción después de confirmar o revertir una transacción. Use la **BeginTransComplete** evento para pasar por alto todas, pero el primer evento de inicio de la transacción.  

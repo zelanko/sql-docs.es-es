@@ -2,7 +2,6 @@
 title: Objeto Parameter | Documentos de Microsoft
 ms.prod: sql
 ms.prod_service: connectivity
-ms.component: ado
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
@@ -20,16 +19,17 @@ caps.latest.revision: 11
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 59474a000d3def675caf66085380c6a3791805c3
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: eb2eda53603a06ed73dce0962bea4ca18035714f
+ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/11/2018
+ms.locfileid: "35280714"
 ---
 # <a name="parameter-object"></a>Objeto Parameter
 Representa un parámetro o un argumento asociado con un [comando](../../../ado/reference/ado-api/command-object-ado.md) objeto basado en una consulta con parámetros o un procedimiento almacenado.  
   
-## <a name="remarks"></a>Comentarios  
+## <a name="remarks"></a>Notas  
  Muchos proveedores admiten comandos parametrizados. Estos son los comandos en el que la acción deseada se define una vez, pero se utilizan variables (o parámetros) para modificar algunos detalles del comando. Por ejemplo, una instrucción SELECT de SQL podría usar un parámetro para definir los criterios de coincidencia de una cláusula WHERE y otro para definir el nombre de una cláusula Ordenar por columna.  
   
  **Parámetro** objetos representan parámetros asociados a consultas parametrizadas, o los argumentos de entrada/salida y los valores devueltos de los procedimientos almacenan. Dependiendo de la funcionalidad del proveedor, algunas colecciones, métodos o propiedades de un **parámetro** objeto no estén disponible.  

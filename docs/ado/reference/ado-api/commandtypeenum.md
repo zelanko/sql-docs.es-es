@@ -2,7 +2,6 @@
 title: CommandTypeEnum | Documentos de Microsoft
 ms.prod: sql
 ms.prod_service: connectivity
-ms.component: ado
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
@@ -20,18 +19,19 @@ caps.latest.revision: 13
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 5d15cf7ce3c4af4d6bb4072dd3070298a846e825
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 2120e4e593b0465d7f2412b3e938a8aea6cc2674
+ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/11/2018
+ms.locfileid: "35276924"
 ---
 # <a name="commandtypeenum"></a>CommandTypeEnum
 Especifica cómo se debe interpretar un argumento de comando.  
   
  Es importante validar proporcionados por el usuario *CommandString* valores para evitar proporciona a los usuarios de la aplicación la posibilidad de inyectar comandos potencialmente peligrosos de ADO ejecutar.  
   
-|Constante|Value|Description|  
+|Constante|Valor|Descripción|  
 |--------------|-----------|-----------------|  
 |**adCmdUnspecified**|-1|No especifica el argumento de tipo de comando.|  
 |**adCmdText**|1|Se evalúa como [CommandText](../../../ado/reference/ado-api/commandtext-property-ado.md) como una definición textual de un comando o procedimiento almacenado llamar.|  

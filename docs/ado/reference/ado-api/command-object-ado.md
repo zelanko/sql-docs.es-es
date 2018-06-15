@@ -2,7 +2,6 @@
 title: Comando (objeto) (ADO) | Documentos de Microsoft
 ms.prod: sql
 ms.prod_service: connectivity
-ms.component: ado
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
@@ -20,16 +19,17 @@ caps.latest.revision: 7
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: bf4a875b8ffbae9442f415fcf56d72809900da81
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 42d1e3e442de94bd9cc062fc903a694c20a9a547
+ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/11/2018
+ms.locfileid: "35276644"
 ---
 # <a name="command-object-ado"></a>Objeto de comando (ADO)
 Define un comando específico que se va a ejecutar en un origen de datos.  
   
-## <a name="remarks"></a>Comentarios  
+## <a name="remarks"></a>Notas  
  Use un **comando** objeto para consultar una base de datos y devolver registros en un [Recordset](../../../ado/reference/ado-api/recordset-object-ado.md) objeto, para ejecutar una operación masiva, o para manipular la estructura de una base de datos. Dependiendo de la funcionalidad del proveedor, algunas **comando** colecciones, métodos o propiedades pueden generar un error al que se hace referencia.  
   
  Con las colecciones, métodos y propiedades de un **comando** de objeto, puede hacer lo siguiente:  

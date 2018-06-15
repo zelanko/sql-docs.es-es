@@ -2,7 +2,6 @@
 title: Index (propiedad) | Documentos de Microsoft
 ms.prod: sql
 ms.prod_service: connectivity
-ms.component: ado
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
@@ -20,11 +19,12 @@ caps.latest.revision: 11
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 01e7883719900e85fdb7227f50c90ed265f73c30
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: fe083fa971ad3ce6566d51326ce35163f446838a
+ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/11/2018
+ms.locfileid: "35279184"
 ---
 # <a name="index-property"></a>Propiedad Index
 Indica el nombre del índice actualmente en vigor para un [Recordset](../../../ado/reference/ado-api/recordset-object-ado.md) objeto.  
@@ -32,7 +32,7 @@ Indica el nombre del índice actualmente en vigor para un [Recordset](../../../a
 ## <a name="settings-and-return-values"></a>Configuración y valores devueltos  
  Establece o devuelve un **cadena** valor, que es el nombre del índice.  
   
-## <a name="remarks"></a>Comentarios  
+## <a name="remarks"></a>Notas  
  El índice denominado por la **índice** propiedad debe haber sido declarada previamente en la tabla base subyacente la **Recordset** objeto. Es decir, el índice debe haber sido declarado mediante programación como un ADOX [índice](../../../ado/reference/adox-api/index-object-adox.md) objeto, o cuando se creó la tabla base.  
   
  Si no se puede establecer el índice, se producirá un error de tiempo de ejecución. El **índice** no se puede establecer la propiedad en las siguientes condiciones:  

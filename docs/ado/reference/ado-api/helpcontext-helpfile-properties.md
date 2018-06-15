@@ -2,7 +2,6 @@
 title: HelpContext, HelpFile propiedades | Documentos de Microsoft
 ms.prod: sql
 ms.prod_service: connectivity
-ms.component: ado
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
@@ -26,11 +25,12 @@ caps.latest.revision: 11
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 0fdd4316a0d1ca1e75b074590755a65267e93ca0
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 708ce57e129ed84dcbafa837916c299a76739e0d
+ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/11/2018
+ms.locfileid: "35278914"
 ---
 # <a name="helpcontext-helpfile-properties"></a>HelpContext, HelpFile propiedades
 Indica el archivo de ayuda y el tema asociados con un [Error](../../../ado/reference/ado-api/error-object.md) objeto.  
@@ -41,7 +41,7 @@ Indica el archivo de ayuda y el tema asociados con un [Error](../../../ado/refer
   
 -   **HelpFile** devuelve un **cadena** valor que se evalúa como una ruta de acceso totalmente resuelta a un archivo de ayuda.  
   
-## <a name="remarks"></a>Comentarios  
+## <a name="remarks"></a>Notas  
  Si se especifica un archivo de ayuda en la **HelpFile** propiedad, el **HelpContext** propiedad se utiliza para mostrar automáticamente el tema de ayuda que identifica. Si no hay ningún tema de ayuda relevante disponible, la **HelpContext** propiedad devuelve cero y la **HelpFile** propiedad devuelve una cadena de longitud cero ("").  
   
 ## <a name="applies-to"></a>Se aplica a  

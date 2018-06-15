@@ -2,7 +2,6 @@
 title: Propiedad AbsolutePosition (ADO) | Documentos de Microsoft
 ms.prod: sql
 ms.prod_service: connectivity
-ms.component: ado
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
@@ -20,11 +19,12 @@ caps.latest.revision: 14
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: cc46a659ea191e6bb1437cb16b0e7704cf8e5ba0
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 615bbf4f771d6d3b12edfec3184ef0ee091fbe08
+ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/11/2018
+ms.locfileid: "35274994"
 ---
 # <a name="absoluteposition-property-ado"></a>Propiedad AbsolutePosition (ADO)
 Indica la posición ordinal de un [Recordset](../../../ado/reference/ado-api/recordset-object-ado.md) registro actual del objeto.  
@@ -34,7 +34,7 @@ Indica la posición ordinal de un [Recordset](../../../ado/reference/ado-api/rec
   
  Para código de 64 bits, use un tipo de datos que proporciona para el almacenamiento de un valor de 64 bits. Por ejemplo, podría utilizar larga u otro valor que es la longitud de 64 bits como DBORDINAL. No utilice **PositionEnum** valores desde que se limitan a la longitud de 32 bits.  
   
-## <a name="remarks"></a>Comentarios  
+## <a name="remarks"></a>Notas  
  Para establecer el **AbsolutePosition** propiedad, ADO requiere que implementen el proveedor OLE DB que usa el [IRowsetLocate:IRowset](https://msdn.microsoft.com/library/windows/desktop/ms721190.aspx) interfaz.  
   
  Obtener acceso a la **AbsolutePosition** propiedad de un **Recordset** que se abrió con cualquiera de solo avance o cursor dinámico genera el error **adErrFeatureNotAvailable**. Con otros tipos de cursor, se devolverá la posición correcta siempre que el proveedor OLE DB admite la **IRowsetScroll:IRowsetLocate** interfaz. Si el proveedor no admite la **IRowsetScroll** interfaz, la propiedad se establece en **adPosUnknown**. Consulte la documentación de su proveedor para determinar si éste admite **IRowsetScroll**.  

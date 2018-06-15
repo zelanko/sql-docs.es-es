@@ -2,7 +2,6 @@
 title: Append (método) (ADO) | Documentos de Microsoft
 ms.prod: sql
 ms.prod_service: connectivity
-ms.component: ado
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
@@ -20,11 +19,12 @@ caps.latest.revision: 18
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 22e33175e9a52891f8e9fbd3eb2e6b637a0788bb
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: b887ece3551b2ef88bc9b61037c0f2ddebd75f5e
+ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/11/2018
+ms.locfileid: "35275904"
 ---
 # <a name="append-method-ado"></a>Append (método) (ADO)
 Anexa un objeto a una colección. Si la colección es [campos](../../../ado/reference/ado-api/fields-collection-ado.md), un nuevo [campo](../../../ado/reference/ado-api/field-object.md) se puede crear el objeto antes de que se anexa a la colección.  
@@ -44,7 +44,7 @@ fields.Append Name, Type, DefinedSize, Attrib, FieldValue
  *Campos*  
  A **campos** colección.  
   
- *objeto*  
+ *object*  
  Una variable de objeto que representa el objeto que se va a anexar.  
   
  *Nombre*  
@@ -62,7 +62,7 @@ fields.Append Name, Type, DefinedSize, Attrib, FieldValue
  *FieldValue*  
  Opcional. A **Variant** que representa el valor para el nuevo campo. Si no se especifica, el campo se anexa con un valor null.  
   
-## <a name="remarks"></a>Comentarios  
+## <a name="remarks"></a>Notas  
   
 ## <a name="parameters-collection"></a>Colección Parameters  
  Debe establecer el [tipo](../../../ado/reference/ado-api/type-property-ado.md) propiedad de un [parámetro](../../../ado/reference/ado-api/parameter-object.md) objeto antes de anexarlo a la [parámetros](../../../ado/reference/ado-api/parameters-collection-ado.md) colección. Si selecciona un tipo de datos de longitud variable, debe establecer también la [tamaño](../../../ado/reference/ado-api/size-property-ado-parameter.md) propiedad en un valor mayor que cero.  

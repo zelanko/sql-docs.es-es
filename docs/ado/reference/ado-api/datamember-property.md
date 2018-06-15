@@ -2,7 +2,6 @@
 title: Propiedad DataMember | Documentos de Microsoft
 ms.prod: sql
 ms.prod_service: connectivity
-ms.component: ado
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
@@ -20,11 +19,12 @@ caps.latest.revision: 12
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 2c96975a53637c3b5ddcf97008f17d714ff6eaca
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: d194cea2dd1a7bbabf8acd2e9d89945772eddd31
+ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/11/2018
+ms.locfileid: "35277414"
 ---
 # <a name="datamember-property"></a>Propiedad DataMember
 Indica el nombre del miembro de datos que se recuperará de la [Recordset](../../../ado/reference/ado-api/recordset-object-ado.md) referenciado por la [DataSource](../../../ado/reference/ado-api/datasource-property-ado.md) propiedad.  
@@ -32,7 +32,7 @@ Indica el nombre del miembro de datos que se recuperará de la [Recordset](../..
 ## <a name="settings-and-return-values"></a>Configuración y valores devueltos  
  Establece o devuelve un **cadena** valor. El nombre no distingue mayúsculas de minúsculas.  
   
-## <a name="remarks"></a>Comentarios  
+## <a name="remarks"></a>Notas  
  Esta propiedad se utiliza para crear controles enlazados a datos con el entorno de datos. El entorno de datos mantiene colecciones de datos (orígenes de datos) que contiene objetos con nombre (miembros de datos) que se representarán como un [Recordset](../../../ado/reference/ado-api/recordset-object-ado.md) objeto.  
   
  El **DataMember** y **DataSource** propiedades se deben usar conjuntamente.  

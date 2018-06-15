@@ -2,7 +2,6 @@
 title: Conexión (ADO para la sintaxis Visual C++) | Documentos de Microsoft
 ms.prod: sql
 ms.prod_service: connectivity
-ms.component: ado
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
@@ -20,11 +19,12 @@ caps.latest.revision: 10
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 702f48e057a7b67ac0db628baa791bcfec96ab60
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 661fc6283829948ac8c7186df5653d7ca35fd289
+ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/11/2018
+ms.locfileid: "35276934"
 ---
 # <a name="connection-ado-for-visual-c-syntax"></a>Conexión (ADO para la sintaxis Visual C++)
 ## <a name="methods"></a>Métodos  

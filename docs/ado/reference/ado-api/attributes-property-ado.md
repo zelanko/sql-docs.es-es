@@ -2,7 +2,6 @@
 title: Attributes (propiedad) (ADO) | Documentos de Microsoft
 ms.prod: sql
 ms.prod_service: connectivity
-ms.component: ado
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
@@ -22,11 +21,12 @@ caps.latest.revision: 14
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: fe7d17ab86f7ed60c863d0d3d0f2b32afd9972f3
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: f440f94b5e3814a45f5ec5871f5073e19c9a5b4d
+ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/11/2018
+ms.locfileid: "35276014"
 ---
 # <a name="attributes-property-ado"></a>Propiedad Attributes (ADO)
 Indica una o varias características de un objeto.  
@@ -42,7 +42,7 @@ Indica una o varias características de un objeto.
   
  Para una [propiedad](../../../ado/reference/ado-api/property-object-ado.md) objeto, el **atributos** propiedad es de sólo lectura y su valor puede ser la suma de uno o más [PropertyAttributesEnum](../../../ado/reference/ado-api/propertyattributesenum.md) valores.  
   
-## <a name="remarks"></a>Comentarios  
+## <a name="remarks"></a>Notas  
  Use la **atributos** propiedad para establecer o devolver las características de **conexión** objetos, **parámetro** objetos, **campo** objetos, o **Propiedad** objetos.  
   
  Cuando establece varios atributos, puede sumar las constantes apropiadas. Si establece el valor de propiedad en una suma que incluye constantes incompatibles, se produce un error.  

@@ -2,7 +2,6 @@
 title: Item (propiedad, ADO) | Documentos de Microsoft
 ms.prod: sql
 ms.prod_service: connectivity
-ms.component: ado
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
@@ -50,11 +49,12 @@ caps.latest.revision: 10
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 94826364231c295986d762361d6b946cba7e0b8e
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 81c6ebc6b7dc0346a2d703c2969f1b114dd72039
+ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/11/2018
+ms.locfileid: "35279254"
 ---
 # <a name="item-property-ado"></a>Propiedad Item (ADO)
 Indica a un miembro específico de una colección, por nombre o número ordinal.  
@@ -72,7 +72,7 @@ Set object = collection.Item ( Index )
  *Index*  
  A **Variant** expresión que se evalúa como el nombre o el número ordinal de un objeto en una colección.  
   
-## <a name="remarks"></a>Comentarios  
+## <a name="remarks"></a>Notas  
  Use la **elemento** propiedad para devolver un objeto específico de una colección. Si **elemento** no se puede encontrar un objeto en la colección correspondiente a la *índice* argumento, que se produce un error. Además, algunas colecciones no admiten objetos con nombre; para estas colecciones, debe utilizar referencias de número ordinal.  
   
  El **elemento** es la propiedad predeterminada para todas las colecciones; por lo tanto, las siguientes formas de sintaxis son intercambiables:  

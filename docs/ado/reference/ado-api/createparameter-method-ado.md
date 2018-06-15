@@ -2,7 +2,6 @@
 title: Método CreateParameter (ADO) | Documentos de Microsoft
 ms.prod: sql
 ms.prod_service: connectivity
-ms.component: ado
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
@@ -21,11 +20,12 @@ caps.latest.revision: 12
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 878ebc66b72724eea326683634cde7f122a815f8
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 865b2b0b8009b03e33e24f72ab4f336910a17ace
+ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/11/2018
+ms.locfileid: "35277254"
 ---
 # <a name="createparameter-method-ado"></a>Método CreateParameter (ADO)
 Crea un nuevo [parámetro](../../../ado/reference/ado-api/parameter-object.md) objeto con las propiedades especificadas.  
@@ -53,10 +53,10 @@ Set parameter = command.CreateParameter (Name, Type, Direction, Size, Value)
  *Tamaño*  
  Opcional. A **largo** valor que especifica la longitud máxima para el valor del parámetro en caracteres o bytes.  
   
- *Valor*  
+ *Value*  
  Opcional. A **Variant** que especifica el valor de la **parámetro** objeto.  
   
-## <a name="remarks"></a>Comentarios  
+## <a name="remarks"></a>Notas  
  Use la **CreateParameter** método para crear un nuevo **parámetro** objeto con un nombre especificado, el tipo, la dirección, el tamaño y el valor. Cualquier valor que pase los argumentos de entrada se escribe en la correspondiente **parámetro** propiedades.  
   
  Este método no anexa automáticamente el **parámetro** el objeto a la **parámetros** colección de un [comando](../../../ado/reference/ado-api/command-object-ado.md) objeto. Esto le permite establecer propiedades adicionales cuyos valores ADO validará cuando anexe el **parámetro** objeto a la colección.  

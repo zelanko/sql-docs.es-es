@@ -2,7 +2,6 @@
 title: Método CancelBatch (ADO) | Documentos de Microsoft
 ms.prod: sql
 ms.prod_service: connectivity
-ms.component: ado
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
@@ -21,11 +20,12 @@ caps.latest.revision: 13
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 241bf36ab3ee4babf8d4e306b9d27a350985cb20
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 7c2db735e51ec0c71f35e211db50b952f942cc3a
+ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/11/2018
+ms.locfileid: "35276254"
 ---
 # <a name="cancelbatch-method-ado"></a>Método CancelBatch (ADO)
 Cancela una actualización por lotes pendientes.  
@@ -41,7 +41,7 @@ recordset.CancelBatchAffectRecords
  *AffectRecords*  
  Opcional. Un [AffectEnum](../../../ado/reference/ado-api/affectenum.md) valor que indica cuántos registros la **CancelBatch** afectará a método.  
   
-## <a name="remarks"></a>Comentarios  
+## <a name="remarks"></a>Notas  
  Use la **CancelBatch** método para cancelar cualquier actualización pendiente en un [Recordset](../../../ado/reference/ado-api/recordset-object-ado.md) en modo de actualización por lotes. Si el **Recordset** está en modo de actualización inmediata, una llamada a **CancelBatch** sin **adAffectCurrent** genera un error.  
   
  Si está modificando el registro actual o agregando un nuevo registro cuando se llama a **CancelBatch**, ADO primero llama el [CancelUpdate](../../../ado/reference/ado-api/cancelupdate-method-ado.md) método para cancelarlos cambios almacenados en caché. Después de eso, todos los cambios pendientes en el **Recordset** se cancelan.  

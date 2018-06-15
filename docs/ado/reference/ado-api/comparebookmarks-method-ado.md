@@ -2,7 +2,6 @@
 title: Método CompareBookmarks (ADO) | Documentos de Microsoft
 ms.prod: sql
 ms.prod_service: connectivity
-ms.component: ado
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
@@ -22,11 +21,12 @@ caps.latest.revision: 14
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: f17b1bbb0793e06a5ecbbec393fd87ebcdbc311e
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 592a1e06580aca5990bf5ec6b7d28a6a1ecc5abc
+ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/11/2018
+ms.locfileid: "35276804"
 ---
 # <a name="comparebookmarks-method-ado"></a>Método CompareBookmarks (ADO)
 Compara dos marcadores y devuelve una indicación de sus valores relativos.  
@@ -48,7 +48,7 @@ result = recordset.CompareBookmarks(Bookmark1, Bookmark2)
  *Bookmark2*  
  El marcador de la segunda fila.  
   
-## <a name="remarks"></a>Comentarios  
+## <a name="remarks"></a>Notas  
  Los marcadores deben aplicarse al mismo [Recordset](../../../ado/reference/ado-api/recordset-object-ado.md) objeto, o un **Recordset** objeto y su [clon](../../../ado/reference/ado-api/clone-method-ado.md). No se puede comparar de manera confiable marcadores de diferentes **Recordset** objetos, incluso si se crearon a partir del mismo origen o comando. Tampoco se pueden comparar los marcadores para un **Recordset** objeto cuyo proveedor subyacente no admite comparaciones.  
   
  Un marcador identifica de forma única una fila en un **Recordset** objeto. Use la [marcador](../../../ado/reference/ado-api/bookmark-property-ado.md) propiedad de la fila actual para obtener su marcador.  

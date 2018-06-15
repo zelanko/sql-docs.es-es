@@ -2,7 +2,6 @@
 title: Propiedad CursorType (ADO) | Documentos de Microsoft
 ms.prod: sql
 ms.prod_service: connectivity
-ms.component: ado
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
@@ -20,11 +19,12 @@ caps.latest.revision: 12
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 83302f195c18aee51f0f7fb4c5bfe2d59ae4e882
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: e516d185e1d143033003cd82d11273f2908ad12c
+ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/11/2018
+ms.locfileid: "35277364"
 ---
 # <a name="cursortype-property-ado"></a>Propiedad CursorType (ADO)
 Indica el tipo de cursor que se utiliza en una [Recordset](../../../ado/reference/ado-api/recordset-object-ado.md) objeto.  
@@ -32,7 +32,7 @@ Indica el tipo de cursor que se utiliza en una [Recordset](../../../ado/referenc
 ## <a name="settings-and-return-values"></a>Configuración y valores devueltos  
  Establece o devuelve un [CursorTypeEnum](../../../ado/reference/ado-api/cursortypeenum.md) valor. El valor predeterminado es **adOpenForwardOnly**.  
   
-## <a name="remarks"></a>Comentarios  
+## <a name="remarks"></a>Notas  
  Use la **CursorType** propiedad para especificar el tipo de cursor que se debe usar al abrir el **Recordset** objeto.  
   
  Solo un valor de **adOpenStatic** se admite si el [CursorLocation](../../../ado/reference/ado-api/cursorlocation-property-ado.md) propiedad está establecida en **adUseClient**. Si se establece un valor no admitido, no se producirá ningún error; admite la más parecida **CursorType** se utilizará en su lugar.  

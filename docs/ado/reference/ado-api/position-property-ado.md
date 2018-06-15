@@ -2,7 +2,6 @@
 title: Posición (propiedad, ADO) | Documentos de Microsoft
 ms.prod: sql
 ms.prod_service: connectivity
-ms.component: ado
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
@@ -20,11 +19,12 @@ caps.latest.revision: 13
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: c931d220a9418a790ff79d6b61c89004800a0061
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 407ef25ebc55685436f61acaa42cbdf964619b09
+ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/11/2018
+ms.locfileid: "35280694"
 ---
 # <a name="position-property-ado"></a>Propiedad Position (ADO)
 Indica la posición actual dentro de un [flujo](../../../ado/reference/ado-api/stream-object-ado.md) objeto.  
@@ -32,7 +32,7 @@ Indica la posición actual dentro de un [flujo](../../../ado/reference/ado-api/s
 ## <a name="settings-and-return-values"></a>Configuración y valores devueltos  
  Establece o devuelve un **largo** valor que especifica el desplazamiento, en número de bytes, de la posición actual desde el principio de la secuencia. El valor predeterminado es 0, que representa el primer byte de la secuencia.  
   
-## <a name="remarks"></a>Comentarios  
+## <a name="remarks"></a>Notas  
  La posición actual puede aplicarse a un punto después del final de la secuencia. Si especifica la posición actual más allá del final de la secuencia, el [tamaño](../../../ado/reference/ado-api/size-property-ado-stream.md) de la **flujo** objeto aumentará en consecuencia. Cualquier byte nuevo agregado de esta forma será null.  
   
 > [!NOTE]

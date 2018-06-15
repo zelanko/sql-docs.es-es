@@ -2,7 +2,6 @@
 title: Control de cambios en la tabla de Base de conjunto de registros (ADO) | Documentos de Microsoft
 ms.prod: sql
 ms.prod_service: connectivity
-ms.component: ado
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
@@ -20,11 +19,12 @@ caps.latest.revision: 12
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 76bf7ee2916e6fa4277154d7261f40b9b5959ea9
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 8351eb10101219b09450055526f0cb6a47a95b5f
+ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/11/2018
+ms.locfileid: "35282704"
 ---
 # <a name="unique-table-unique-schema-unique-catalog-properties-dynamic-ado"></a>Tabla única, un esquema únicos, único catálogo dinámicos propiedades (ADO)
 Le permite controlar las modificaciones realizadas en una tabla base concreta en un [Recordset](../../../ado/reference/ado-api/recordset-object-ado.md) que estaba formada por una operación JOIN en varias tablas base.  
@@ -38,7 +38,7 @@ Le permite controlar las modificaciones realizadas en una tabla base concreta en
 ## <a name="settings-and-return-values"></a>Configuración y valores devueltos  
  Establece o devuelve un **cadena** valor que es el nombre de tabla, esquema o catálogo.  
   
-## <a name="remarks"></a>Comentarios  
+## <a name="remarks"></a>Notas  
  La tabla base deseada se identifica por su catálogo, esquema y los nombres de tabla. Cuando el **tabla única** propiedad está establecida, los valores de la **único esquema** o **Unique Catalog** propiedades se utilizan para buscar la tabla base. Se recomienda, aunque no es necesario, que uno o ambos el **único esquema** y **Unique Catalog** propiedades establecerse antes de la **tabla única** se establece la propiedad.  
   
  La clave principal de la **tabla única** se trata como la clave principal de todo el **conjunto de registros**. Se trata de la clave que se usa para cualquier método que requiere una clave principal.  

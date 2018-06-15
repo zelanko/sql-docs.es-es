@@ -2,7 +2,6 @@
 title: Nivel de objeto (ADO MD) | Documentos de Microsoft
 ms.prod: sql
 ms.prod_service: connectivity
-ms.component: ado
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
@@ -20,16 +19,17 @@ caps.latest.revision: 10
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: d3f515c5bc8eaac8e674bcf82bd3a5e47eeefc0f
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 35263c640b1446397776a4365349afdd522d78f4
+ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/11/2018
+ms.locfileid: "35283994"
 ---
 # <a name="level-object-ado-md"></a>Objeto Level (ADO MD)
 Contiene un conjunto de miembros, cada uno de los cuales tiene el mismo rango dentro de una jerarquía.  
   
-## <a name="remarks"></a>Comentarios  
+## <a name="remarks"></a>Notas  
  Con las colecciones y las propiedades de un **nivel** de objeto, puede hacer lo siguiente:  
   
 -   Identificar la **nivel** con el [nombre](../../../ado/reference/ado-md-api/name-property-ado-md.md) y [UniqueName](../../../ado/reference/ado-md-api/uniquename-property-ado-md.md) propiedades.  
@@ -46,11 +46,11 @@ Contiene un conjunto de miembros, cada uno de los cuales tiene el mismo rango de
   
  El **propiedades** colección contiene propiedades proporcionadas por el proveedor. En la tabla siguiente se enumera propiedades que estén disponibles. La lista de propiedades reales puede variar en función de la implementación del proveedor. Consulte la documentación del proveedor para obtener una lista completa de propiedades disponibles.  
   
-|Nombre|Description|  
+|Nombre|Descripción|  
 |----------|-----------------|  
 |CatalogName|El nombre del catálogo al que pertenece este cubo.|  
 |CubeName|Nombre del cubo.|  
-|Description|Una descripción significativa del nivel.|  
+|Descripción|Una descripción significativa del nivel.|  
 |DimensionUniqueName|El nombre no ambiguo de la [dimensión](../../../ado/reference/ado-md-api/dimension-object-ado-md.md).|  
 |HierarchyUniqueName|El nombre no ambiguo de la jerarquía.|  
 |LevelCaption|Etiqueta o título asociado al nivel.|  

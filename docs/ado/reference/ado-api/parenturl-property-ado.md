@@ -2,7 +2,6 @@
 title: Propiedad ParentURL (ADO) | Documentos de Microsoft
 ms.prod: sql
 ms.prod_service: connectivity
-ms.component: ado
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
@@ -20,11 +19,12 @@ caps.latest.revision: 12
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 51a7a476352519f4756e4e8f19166aac3c84d7da
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: c4a0217d4f2e79dc5876af9518a06d73d2ac924d
+ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/11/2018
+ms.locfileid: "35280687"
 ---
 # <a name="parenturl-property-ado"></a>Propiedad ParentURL (ADO)
 Indica una cadena de dirección URL absoluta que apunta al elemento primario [registro](../../../ado/reference/ado-api/record-object-ado.md) del elemento actual **registro** objeto.  
@@ -32,7 +32,7 @@ Indica una cadena de dirección URL absoluta que apunta al elemento primario [re
 ## <a name="return-value"></a>Valor devuelto  
  Devuelve un **cadena** valor que indica la dirección URL del elemento primario **registro**.  
   
-## <a name="remarks"></a>Comentarios  
+## <a name="remarks"></a>Notas  
  El **ParentURL** propiedad depende del origen utilizado para abrir el **registro** objeto. Por ejemplo, el **registro** se puede abrir con un origen que contiene un nombre de ruta de acceso relativa de un directorio al que hace referencia el [ActiveConnection](../../../ado/reference/ado-api/activeconnection-property-ado.md) propiedad.  
   
  Imagine que "second" es una carpeta incluida en "first". Abra la **registro** objeto mediante la sintaxis siguiente:  

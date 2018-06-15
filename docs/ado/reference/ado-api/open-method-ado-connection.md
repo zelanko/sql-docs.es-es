@@ -2,7 +2,6 @@
 title: Open (método) (conexión de ADO) | Documentos de Microsoft
 ms.prod: sql
 ms.prod_service: connectivity
-ms.component: ado
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
@@ -22,11 +21,12 @@ caps.latest.revision: 13
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 252afc6de9b6cf405fba7ae21a191beef2c198e7
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 8035a40949e269fd8d8b039eb1931e8ed17c73c7
+ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/11/2018
+ms.locfileid: "35280014"
 ---
 # <a name="open-method-ado-connection"></a>Open (método) (conexión de ADO)
 Abre una conexión a un origen de datos.  
@@ -51,7 +51,7 @@ connection.Open ConnectionString, UserID, Password, Options
  *Opciones*  
  Opcional. A [ConnectOptionEnum](../../../ado/reference/ado-api/connectoptionenum.md) valor que determina si este método debe devolver después (sincrónicamente) o antes (asincrónicamente) se establece la conexión.  
   
-## <a name="remarks"></a>Comentarios  
+## <a name="remarks"></a>Notas  
  Mediante el **abiertos** método en un [conexión](../../../ado/reference/ado-api/connection-object-ado.md) objeto establece la conexión física a un origen de datos. Cuando este método finaliza correctamente, la conexión está activa y puede emitir comandos y procesar los resultados.  
   
  Usar opcional *ConnectionString* argumento para especificar una cadena de conexión que contiene una serie de *argumento* *= valor* instrucciones separadas por punto y coma, o un recurso de archivo o directorio identificado con una dirección URL. El **ConnectionString** propiedad hereda automáticamente el valor utilizado para la *ConnectionString* argumento. Por lo tanto, puede establecer la **ConnectionString** propiedad de la **conexión** objeto antes de abrirlo o usar el *ConnectionString* argumento para establecer o reemplazar los parámetros de conexión actual durante la **abiertos** llamada al método.  

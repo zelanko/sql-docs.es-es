@@ -2,7 +2,6 @@
 title: Constantes enumeradas de ADO MD | Documentos de Microsoft
 ms.prod: sql
 ms.prod_service: connectivity
-ms.component: ado
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
@@ -17,11 +16,12 @@ caps.latest.revision: 9
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: ac4ff7099a1c762317429317ad6e6be29dc9e1ce
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 4110e2cfa88cca08981fbbb851161649b6331c70
+ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/11/2018
+ms.locfileid: "35283184"
 ---
 # <a name="ado-md-enumerated-constants"></a>Constantes enumeradas de ADO MD
 Para facilitar la depuración, las constantes enumeradas de ADO MD muestran un valor para cada constante. Sin embargo, este valor es puramente informativo y puede cambiar de una versión de ADO MD a otra. El código sólo debería depender del nombre, no el valor real, de constantes enumeradas.  

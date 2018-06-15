@@ -2,7 +2,6 @@
 title: Objeto de conjunto de celdas (ADO MD) | Documentos de Microsoft
 ms.prod: sql
 ms.prod_service: connectivity
-ms.component: ado
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
@@ -20,23 +19,24 @@ caps.latest.revision: 10
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: f32af1f621f3470dc0a9175708719965eef5fc71
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 6437c17c80c85e535f6b1807f68c2755e1362d3c
+ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/11/2018
+ms.locfileid: "35283394"
 ---
 # <a name="cellset-object-ado-md"></a>Objeto de conjunto de celdas (ADO MD)
 Representa los resultados de una consulta multidimensional. Es una colección de celdas seleccionadas de cubos u otros conjuntos de celdas.  
   
-## <a name="remarks"></a>Comentarios  
+## <a name="remarks"></a>Notas  
  Datos dentro de un **Cellset** se recupera mediante acceso directo en forma de matriz. Puede desglosar un miembro específico para obtener datos sobre ese miembro. Por ejemplo, el código siguiente devuelve el título del primer miembro de la primera posición en el primer eje de un conjunto de celdas con nombre `cst`:  
   
 ```  
 cst.Axes(0).Positions(0).Members(0).Caption  
 ```  
   
-## <a name="remarks"></a>Comentarios  
+## <a name="remarks"></a>Notas  
  No hay ninguna noción de una celda actual dentro de un conjunto de celdas. En su lugar, el [elemento](../../../ado/reference/ado-md-api/item-property-ado-md-cellset.md) propiedad recupera un determinado [celda](../../../ado/reference/ado-md-api/cell-object-ado-md.md) objeto desde el conjunto de celdas. Los argumentos de la **elemento** propiedad determinan la celda que se recupera. Puede especificar el valor ordinal único de una celda. También puede recuperar celdas mediante sus números de posición a lo largo de cada eje del conjunto de celdas. Para obtener más información sobre cómo recuperar celdas, vea el [elemento](../../../ado/reference/ado-md-api/item-property-ado-md-cellset.md) propiedad.  
   
  Con las colecciones, métodos y propiedades de un **Cellset** objeto, puede hacer lo siguiente:  

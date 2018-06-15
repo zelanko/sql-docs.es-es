@@ -2,7 +2,6 @@
 title: Open (método) (conjunto de registros ADO) | Documentos de Microsoft
 ms.prod: sql
 ms.prod_service: connectivity
-ms.component: ado
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
@@ -21,11 +20,12 @@ caps.latest.revision: 15
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: e562f329f6f95a36777fc4db9131091003be37e0
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: b9689d9068af961c5935c9447acb07bea4dc38b0
+ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/11/2018
+ms.locfileid: "35280624"
 ---
 # <a name="open-method-ado-recordset"></a>Open (método) (conjunto de registros ADO)
 Abre un cursor en una [Recordset](../../../ado/reference/ado-api/recordset-object-ado.md) objeto.  
@@ -59,7 +59,7 @@ recordset.Open Source, ActiveConnection, CursorType, LockType, Options
 > [!NOTE]
 >  El **ExecuteOpenEnum** valores de **adExecuteNoRecords** o **adExecuteStream** no debe usarse con **abiertos**.  
   
-## <a name="remarks"></a>Comentarios  
+## <a name="remarks"></a>Notas  
  El cursor predeterminado para ADO **Recordset** es un cursor de solo avance y solo lectura ubicado en el servidor.  
   
  Mediante el **abiertos** método en un **Recordset** objeto abre un cursor que representa los registros de una tabla base, los resultados de una consulta o guardado anteriormente **conjunto de registros**.  

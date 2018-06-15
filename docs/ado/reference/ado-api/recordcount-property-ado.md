@@ -2,7 +2,6 @@
 title: Propiedad RecordCount (ADO) | Documentos de Microsoft
 ms.prod: sql
 ms.prod_service: connectivity
-ms.component: ado
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 03/20/2018
@@ -22,11 +21,12 @@ caps.latest.revision: 11
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 67416b2282f913e04867b9d4ac23ee0ea0f0c41a
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 0320cf9128c5b9f4b6bbe86f800c83e8eb779df4
+ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/11/2018
+ms.locfileid: "35280894"
 ---
 # <a name="recordcount-property-ado"></a>Propiedad RecordCount (ADO)
 
@@ -36,7 +36,7 @@ Indica el número de registros en un [Recordset](../../../ado/reference/ado-api/
 
 Devuelve un **largo** valor que indica el número de registros en la **conjunto de registros**.
   
-## <a name="remarks"></a>Comentarios
+## <a name="remarks"></a>Notas
 
 Use la **RecordCount** propiedad para averiguar cuántos registros se encuentran en un **Recordset** objeto. La propiedad devuelve -1 cuando ADO no puede determinar el número de registros o si el tipo de proveedor o el cursor no admite **RecordCount**. Leer la **RecordCount** propiedad en un cerrado **Recordset** produce un error.
 

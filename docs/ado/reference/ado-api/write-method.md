@@ -2,7 +2,6 @@
 title: Método Write | Documentos de Microsoft
 ms.prod: sql
 ms.prod_service: connectivity
-ms.component: ado
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
@@ -21,11 +20,12 @@ caps.latest.revision: 12
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 77b4da5ba900cdd3456bbfe611ea0fe1021e23d3
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 62ab48632de559f56f034ca0db10a968a43be32a
+ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/11/2018
+ms.locfileid: "35283234"
 ---
 # <a name="write-method"></a>Método Write
 Escribe datos binarios en un [flujo](../../../ado/reference/ado-api/stream-object-ado.md) objeto.  
@@ -41,7 +41,7 @@ Stream.Write Buffer
  *Búfer*  
  A **Variant** que contiene una matriz de bytes que se escribirán.  
   
-## <a name="remarks"></a>Comentarios  
+## <a name="remarks"></a>Notas  
  Los bytes especificados se escriben en el **flujo** objeto sin ningún espacio intermedio entre cada byte.  
   
  Actual [posición](../../../ado/reference/ado-api/position-property-ado.md) está establecido en el byte situado después de los datos escritos. El **escribir** método no trunca el resto de los datos en una secuencia. Si desea truncar estos bytes, llame a [SetEOS](../../../ado/reference/ado-api/seteos-method.md).  

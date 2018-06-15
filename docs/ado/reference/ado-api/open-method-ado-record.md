@@ -2,7 +2,6 @@
 title: Open (método) (registro de ADO) | Documentos de Microsoft
 ms.prod: sql
 ms.prod_service: connectivity
-ms.component: ado
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
@@ -21,11 +20,12 @@ caps.latest.revision: 15
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 432f2a821bd276efd46f61497f4ef7ae95502bf7
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: fa486265426f52dfd5986c6d173bcd1ffdb45210
+ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/11/2018
+ms.locfileid: "35280514"
 ---
 # <a name="open-method-ado-record"></a>Open (método) (registro de ADO)
 Se abre una existente [registro](../../../ado/reference/ado-api/record-object-ado.md) objeto o crea un nuevo elemento representado por la **registro**, por ejemplo, un archivo o directorio.  
@@ -59,7 +59,7 @@ Open Source, ActiveConnection, Mode, CreateOptions, Options, UserName, Password
  *Contraseña*  
  Opcional. A **cadena** valor que contiene la contraseña que comprueba si es necesario, *nombre de usuario*.  
   
-## <a name="remarks"></a>Comentarios  
+## <a name="remarks"></a>Notas  
  *Origen* puede ser:  
   
 -   UNA DIRECCIÓN URL. Si el protocolo para la dirección URL es http, se invocará el proveedor de Internet de forma predeterminada. Si la dirección URL señala a un nodo que contiene una secuencia de comandos ejecutable (como un. Página ASP), un **registro** que contiene el origen en lugar de ejecutado contenido se abre de forma predeterminada. Use la *opciones* argumento para modificar este comportamiento.  

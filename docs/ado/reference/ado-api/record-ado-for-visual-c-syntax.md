@@ -2,7 +2,6 @@
 title: Registro (ADO para la sintaxis Visual C++) | Documentos de Microsoft
 ms.prod: sql
 ms.prod_service: connectivity
-ms.component: ado
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
@@ -20,11 +19,12 @@ caps.latest.revision: 10
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 5d3cb65319b069d0a26fcacdeb5a0244ff6ae854
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 00ffd40446eea864a3f33995cf8d5c8ed26941ec
+ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/11/2018
+ms.locfileid: "35280840"
 ---
 # <a name="record-ado-for-visual-c-syntax"></a>Registro (ADO para la sintaxis Visual C++)
 ## <a name="methods"></a>Métodos  

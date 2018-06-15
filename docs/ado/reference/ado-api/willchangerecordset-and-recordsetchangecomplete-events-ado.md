@@ -2,7 +2,6 @@
 title: Eventos WillChangeRecordset y RecordsetChangeComplete (ADO) | Documentos de Microsoft
 ms.prod: sql
 ms.prod_service: connectivity
-ms.component: ado
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
@@ -24,11 +23,12 @@ caps.latest.revision: 12
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 56c6c85597af2724d3f00e2bb5096508f52471d4
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 63962d0ce3c8c4a5bf5aa0274a4084a9f8d84a5f
+ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/11/2018
+ms.locfileid: "35282804"
 ---
 # <a name="willchangerecordset-and-recordsetchangecomplete-events-ado"></a>Eventos WillChangeRecordset y RecordsetChangeComplete (ADO)
 El **WillChangeRecordset** evento se le llama antes de que una operación pendiente cambie el [conjunto de registros](../../../ado/reference/ado-api/recordset-object-ado.md). El **RecordsetChangeComplete** eventos se llama después de la **Recordset** ha cambiado.  
@@ -62,7 +62,7 @@ RecordsetChangeComplete adReason, pError, adStatus, pRecordset
  *pRecordset*  
  A **Recordset** objeto. El **conjunto de registros** para la que se produjo este evento.  
   
-## <a name="remarks"></a>Comentarios  
+## <a name="remarks"></a>Notas  
  A **WillChangeRecordset** o **RecordsetChangeComplete** evento puede producirse porque el **Recordset** [Requery](../../../ado/reference/ado-api/requery-method.md) o [Abiertos](../../../ado/reference/ado-api/open-method-ado-recordset.md) métodos.  
   
  Si el proveedor no admite marcadores, un **RecordsetChange** notificación de eventos se produce cada vez que se recuperan filas nuevas del proveedor. La frecuencia de este evento depende del **RecordsetCacheSize** propiedad.  

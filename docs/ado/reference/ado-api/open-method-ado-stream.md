@@ -2,7 +2,6 @@
 title: Open (método) (Stream de ADO) | Documentos de Microsoft
 ms.prod: sql
 ms.prod_service: connectivity
-ms.component: ado
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
@@ -21,11 +20,12 @@ caps.latest.revision: 15
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 44493854720564e241817c1b482339f9c5cbbd32
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 4a2014c35383f1bc8dc30505cb26c602f7a22161
+ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/11/2018
+ms.locfileid: "35280554"
 ---
 # <a name="open-method-ado-stream"></a>Open (método) (Stream de ADO)
 Se abre un [flujo](../../../ado/reference/ado-api/stream-object-ado.md) objeto para manipular secuencias de datos binarios o de texto.  
@@ -53,7 +53,7 @@ Stream.Open Source, Mode , OpenOptions, UserName, Password
  *Contraseña*  
  Opcional. A **cadena** valor que contiene la contraseña que, si es necesario, obtenga acceso a la **flujo** objeto.  
   
-## <a name="remarks"></a>Comentarios  
+## <a name="remarks"></a>Notas  
  Cuando un **registro** objeto se pasa como el parámetro de origen, el *UserID* y *contraseña* no se utilizan parámetros porque el acceso a la **registro** objeto ya está disponible. De forma similar, el [modo](../../../ado/reference/ado-api/mode-property-ado.md) de la **registro** objeto se transfiere a la **flujo** objeto. Cuando *origen* no se especifica, el **flujo** abierto no contiene datos y tiene un [tamaño](../../../ado/reference/ado-api/size-property-ado-stream.md) de cero (0). Para evitar la pérdida de datos que se escriben en este **flujo** cuando el **flujo** es cerrado, guardar la **flujo** con el [CopyTo](../../../ado/reference/ado-api/copyto-method-ado.md) o [ SaveToFile](../../../ado/reference/ado-api/savetofile-method.md) métodos, o guardarlo en otra ubicación de memoria.  
   
  Un *adOpenStreamFromRecord* valo **OpenOptions** identifica el contenido de la *origen* parámetro que ya estaba abierto **registro**objeto. El comportamiento predeterminado consiste en tratar *origen* como una dirección URL que apunta directamente a un nodo en una estructura de árbol, como un archivo. Se abre la secuencia predeterminada asociada a ese nodo.  

@@ -2,7 +2,6 @@
 title: Celda (objeto) (ADO MD) | Documentos de Microsoft
 ms.prod: sql
 ms.prod_service: connectivity
-ms.component: ado
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
@@ -20,16 +19,17 @@ caps.latest.revision: 10
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 22227f22f42e5848b0826028a855b31b4b82443a
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: f82bfdf0e1b61d3b6fdab096af77f8b843178384
+ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/11/2018
+ms.locfileid: "35283434"
 ---
 # <a name="cell-object-ado-md"></a>Objeto Cell (ADO MD)
 Representa los datos en la intersección de las coordenadas de eje contenidos en un conjunto de celdas.  
   
-## <a name="remarks"></a>Comentarios  
+## <a name="remarks"></a>Notas  
  A **celda** objeto devuelto por la [elemento](../../../ado/reference/ado-md-api/item-property-ado-md-cellset.md) propiedad de un [Cellset](../../../ado/reference/ado-md-api/cellset-object-ado-md.md) objeto.  
   
  Con las colecciones y las propiedades de un **celda** objeto, puede hacer lo siguiente:  
@@ -46,7 +46,7 @@ Representa los datos en la intersección de las coordenadas de eje contenidos en
   
  El **propiedades** colección contiene propiedades proporcionadas por el proveedor. En la tabla siguiente se enumera propiedades que estén disponibles. La lista de propiedades reales puede variar en función de la implementación del proveedor. Consulte la documentación del proveedor para obtener una lista completa de propiedades disponibles.  
   
-|Nombre|Description|  
+|Nombre|Descripción|  
 |----------|-----------------|  
 |BackColor|Color de fondo usado para mostrar la celda.|  
 |FontFlags|Máscara de bits que detalla los efectos de la fuente.|  

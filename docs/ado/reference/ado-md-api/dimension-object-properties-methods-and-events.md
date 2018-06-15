@@ -2,7 +2,6 @@
 title: Propiedades de objetos, métodos y eventos de la dimensión | Documentos de Microsoft
 ms.prod: sql
 ms.prod_service: connectivity
-ms.component: ado
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
@@ -17,11 +16,12 @@ caps.latest.revision: 11
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: adeab5eebf02af1a836feabcf8be58b861342652
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 814dc793c1819edd41a5689f09a618505c9ed608
+ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/11/2018
+ms.locfileid: "35283894"
 ---
 # <a name="dimension-object-properties-methods-and-events"></a>Propiedades del objeto de dimensión, métodos y eventos
 ## <a name="propertiescollections"></a>Propiedades y colecciones  

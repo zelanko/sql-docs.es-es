@@ -2,7 +2,6 @@
 title: Evento WillExecute (ADO) | Documentos de Microsoft
 ms.prod: sql
 ms.prod_service: connectivity
-ms.component: ado
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
@@ -21,11 +20,12 @@ caps.latest.revision: 11
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 28d9fee251d53f5966f83fb1a49d3ecd75fe0813
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: d0fd9c97018c5c15710067298a88b4996c5a699f
+ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/11/2018
+ms.locfileid: "35282884"
 ---
 # <a name="willexecute-event-ado"></a>Evento WillExecute (ADO)
 El **WillExecute** eventos se llama justo antes de que se ejecuta un comando pendiente en una conexión.  
@@ -62,7 +62,7 @@ WillExecute Source, CursorType, LockType, Options, adStatus, pCommand, pRecordse
  *pConnection*  
  El [conexión ADO (objetos)](../../../ado/reference/ado-api/connection-object-ado.md) el objeto para el que se aplica esta notificación de eventos.  
   
-## <a name="remarks"></a>Comentarios  
+## <a name="remarks"></a>Notas  
  A **WillExecute** evento puede producirse debido a una conexión.  [Execute (método) (conexión de ADO)](../../../ado/reference/ado-api/execute-method-ado-connection.md), [método Execute (comando ADO)](../../../ado/reference/ado-api/execute-method-ado-command.md), o [Open (método) (conjunto de registros ADO)](../../../ado/reference/ado-api/open-method-ado-recordset.md) método la *pConnection* parámetro debe siempre contienen una referencia válida a un **conexión** objeto. Si el evento es debido a **Connection.Execute**, *Connection* y *pCommand* parámetros están establecidos en **nada**. Si el evento es debido a **Recordset.Open**, *Connection* parámetro hará referencia el **Recordset** objeto y el *pCommand* parámetro se establece en **nada**. Si el evento es debido a **Command.Execute**, *pCommand* parámetro hará referencia el **comando** objeto y el *Connection* parámetro se establece en **nada**.  
   
  **WillExecute** le permite examinar y modificar los parámetros de ejecución pendiente. Este evento puede devolver una solicitud de cancelación del comando pendiente.  

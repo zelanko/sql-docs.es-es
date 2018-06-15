@@ -2,7 +2,6 @@
 title: Método UpdateBatch | Documentos de Microsoft
 ms.prod: sql
 ms.prod_service: connectivity
-ms.component: ado
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
@@ -21,11 +20,12 @@ caps.latest.revision: 12
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 75fa802b85b1bdb9f2dcd97af8c244a41f7ec37b
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 3c7b25df0679596485586393993ba718f08542bf
+ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/11/2018
+ms.locfileid: "35282814"
 ---
 # <a name="updatebatch-method"></a>Método UpdateBatch
 Escribe todas las actualizaciones por lotes pendientes en el disco.  
@@ -44,7 +44,7 @@ recordset.UpdateBatch AffectRecords, PreserveStatus
  *PreserveStatus*  
  Opcional. A **booleano** valor que especifica si se permite o no los cambios realizados localmente, tal y como indica la [estado](../../../ado/reference/ado-api/status-property-ado-recordset.md) propiedad, se debería confirmar. Si este valor se establece en **True**, **estado** no cambie la propiedad de cada registro una vez completada la actualización.  
   
-## <a name="remarks"></a>Comentarios  
+## <a name="remarks"></a>Notas  
  Use la **UpdateBatch** método cuando se modifica un **Recordset** objeto en modo de actualización por lotes para transmitir todos los cambios realizados en un **Recordset** objeto a la base de datos subyacente.  
   
  Si el **Recordset** objeto admite la actualización por lotes, puede almacenar en caché cualquier cambio múltiple en uno o más registros localmente hasta que llame a la **UpdateBatch** método. Si está modificando el registro actual o agregando un nuevo registro cuando se llama a la **UpdateBatch** método, ADO llamará automáticamente el [actualización](../../../ado/reference/ado-api/update-method.md) método para guardar los cambios pendientes en el registro actual antes de transmitir los cambios por lotes al proveedor. Debe usar la actualización por lotes con un conjunto de claves o un cursor estático solo.  

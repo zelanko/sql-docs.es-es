@@ -2,7 +2,6 @@
 title: Propiedades de ADO MD | Documentos de Microsoft
 ms.prod: sql
 ms.prod_service: connectivity
-ms.component: ado
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
@@ -18,20 +17,21 @@ caps.latest.revision: 12
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 38c342d5f4b44c855ec729dfbb41341f337e14a7
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 40916a54d3279b2a4afaee83fe56b4ef9c4d4199
+ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/11/2018
+ms.locfileid: "35283354"
 ---
 # <a name="ado-md-properties"></a>Propiedades de ADO MD
 |||  
 |-|-|  
 |[ActiveConnection](../../../ado/reference/ado-md-api/activeconnection-property-ado-md.md)|Indica a qué ADO **conexión** el conjunto de celdas actual de un objeto o catálogo al que pertenece actualmente.|  
-|[Caption](../../../ado/reference/ado-md-api/caption-property-ado-md.md)|Indica el título de texto que se va a usar al mostrar una **nivel** o **miembro** objeto.|  
+|[Título](../../../ado/reference/ado-md-api/caption-property-ado-md.md)|Indica el título de texto que se va a usar al mostrar una **nivel** o **miembro** objeto.|  
 |[ChildCount](../../../ado/reference/ado-md-api/childcount-property-ado-md.md)|Indica el número de miembros para los que el actual **miembro** objeto es el elemento primario en una jerarquía.|  
 |[Children](../../../ado/reference/ado-md-api/children-property-ado-md.md)|Devuelve una colección de **miembros** para que el actual **miembro** es el elemento primario en la jerarquía.|  
-|[Count](../../../ado/reference/ado-api/count-property-ado.md)|Indica el número de objetos de una colección.|  
+|[Recuento](../../../ado/reference/ado-api/count-property-ado.md)|Indica el número de objetos de una colección.|  
 |[Profundidad](../../../ado/reference/ado-md-api/depth-property-ado-md.md)|Indica el número de niveles entre el **nivel** y la raíz del nivel jerárquico.|  
 |[Description](../../../ado/reference/ado-md-api/description-property-ado-md.md)|Devuelve un texto de explicación del objeto actual.|  
 |[DimensionCount](../../../ado/reference/ado-md-api/dimensioncount-property-ado-md.md)|Indica el número de dimensiones en un eje.|  
@@ -51,7 +51,7 @@ ms.lasthandoff: 05/03/2018
 |[State](../../../ado/reference/ado-md-api/state-property-ado-md.md)|Indica el estado actual del conjunto de celdas.|  
 |[Tipo](../../../ado/reference/ado-md-api/type-property-ado-md.md)|Indica el tipo del miembro actual.|  
 |[UniqueName](../../../ado/reference/ado-md-api/uniquename-property-ado-md.md)|Indica un nombre único para el objeto actual.|  
-|[Valor](../../../ado/reference/ado-md-api/value-property-ado-md.md)|Indica el valor de la celda actual.|  
+|[Value](../../../ado/reference/ado-md-api/value-property-ado-md.md)|Indica el valor de la celda actual.|  
   
 ## <a name="see-also"></a>Vea también  
  [Referencia de la API de ADO MD](../../../ado/reference/ado-md-api/ado-md-api-reference.md)   

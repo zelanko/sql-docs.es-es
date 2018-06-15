@@ -1,7 +1,7 @@
 ---
 title: Preguntas más frecuentes (P+F para el controlador JDBC) | Documentos de Microsoft
 ms.custom: ''
-ms.date: 01/19/2018
+ms.date: 06/12/2018
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
@@ -14,16 +14,17 @@ caps.latest.revision: 8
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 282f71f49eba5ccece8bc9d50ef690fd0af3cb8c
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 2ebe12966a73d5944c2cfb6eb1a2328e27a5385e
+ms.sourcegitcommit: 73ca0313b185e730579f09f9bc32a852c9dd2ef4
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/13/2018
+ms.locfileid: "35452165"
 ---
 # <a name="frequently-asked-questions-faq-for-jdbc-driver"></a>Preguntas más frecuentes (P+F para el controlador JDBC)
 [!INCLUDE[Driver_JDBC_Download](../../includes/driver_jdbc_download.md)]
 
-  En este artículo se ofrecen respuestas a las preguntas más frecuentes sobre Microsoft JDBC Driver for SQL Server.  
+  Esta página proporciona respuestas a las preguntas más frecuentes sobre Microsoft JDBC Driver para SQL Server.  
   
 ## <a name="frequently-asked-questions"></a>Preguntas más frecuentes  
 **¿Cómo puedo ayudar a mejorar el controlador JDBC?**  
@@ -32,6 +33,9 @@ El controlador JDBC es código abierto y el código fuente se puede encontrar en
 **¿Compatible con las versiones de SQL Server y no de Java el controlador?**  
  Consulte la [Microsoft JDBC Driver para SQL Server Support Matrix](../../connect/jdbc/microsoft-jdbc-driver-for-sql-server-support-matrix.md) página para obtener más información.  
   
+**¿Cuál es la diferencia entre los paquetes de controladores JDBC disponibles en Microsoft Download Center y el controlador JDBC disponible en GitHub?**  
+ JDBC driver y los archivos disponibles en el repositorio de GitHub para el controlador JDBC de Microsoft son la esencia del controlador JDBC bajo la licencia de código abierto que aparecen en el repositorio. Los paquetes de controladores en Microsoft Download Center incluyen bibliotecas adicionales para la autenticación integrada de Windows y habilitar transacciones XA con el controlador JDBC. Dichas bibliotecas adicionales están bajo la licencia incluida con el paquete descargable.
+
  **¿Qué debo saber al actualizar el controlador?**  
  El admite Microsoft JDBC Driver 6.4 JDBC 4.1, 4.2 y 4.3 especificaciones de (parcial) e incluye tres bibliotecas de clases JAR en el paquete de instalación como se indica a continuación:  
   
@@ -69,12 +73,12 @@ El controlador JDBC es código abierto y el código fuente se puede encontrar en
   
  **¿Se puede redistribuir el controlador?** Los controladores JDBC 4.1, 4.2, 6.0, 6.2 y 6.4 son redistribuibles. Revise la cláusula "Código distribuible" en los contratos de licencia. 
    
- **¿Puedo usar el controlador para tener acceso a Microsoft SQL Server desde un equipo Linux?** Sí. Puede utilizar el controlador para acceder a SQL Server desde otras plataformas distintas de Windows, Unix y Linux. Vea [Microsoft JDBC Driver para SQL Server Support Matrix](../../connect/jdbc/microsoft-jdbc-driver-for-sql-server-support-matrix.md) para obtener más detalles.  
+ **¿Puedo usar el controlador para tener acceso a Microsoft SQL Server desde un equipo Linux?** Sí. Puede utilizar el controlador para acceder a SQL Server desde otras plataformas distintas de Windows, Unix y Linux. Para obtener más información, consulte [Microsoft JDBC Driver para SQL Server Support Matrix](../../connect/jdbc/microsoft-jdbc-driver-for-sql-server-support-matrix.md).
   
  **¿El controlador admite el cifrado de capa de Sockets seguros (SSL)?** A partir de la versión 1.2, el controlador admite el cifrado de capa de sockets seguros (SSL). Para obtener más información, consulte [utilizando cifrado SSL](../../connect/jdbc/using-ssl-encryption.md).  
   
  **¿Qué tipos de autenticación son compatibles con el controlador JDBC de Microsoft para SQL Server?**  
- En la tabla siguiente se muestran las opciones de autenticación disponibles. Tenga en cuenta que la autenticación Kerberos pura de Java está disponible a partir de la versión 4.0 del controlador.  
+ En la tabla siguiente se muestran las opciones de autenticación disponibles. Si la autenticación Kerberos de Java pura está disponible a partir de la versión 4.0 del controlador.  
   
 |||  
 |-|-|  
@@ -89,10 +93,10 @@ El controlador JDBC es código abierto y el código fuente se puede encontrar en
 |Windows|Autenticación de Azure Active Directory|  
   
 **¿El controlador es compatible con protocolo de Internet versión 6 (IPv6) direcciones?**  
- Sí. El controlador admite el uso de direcciones IPv6 con la colección de propiedades de conexión y la propiedad de cadena de conexión serverName. Para obtener más información, consulte [generar URL de conexión](../../connect/jdbc/building-the-connection-url.md).  
+ Sí. El controlador admite el uso de direcciones IPv6. Utilice la colección de propiedades de conexión y la propiedad de cadena de conexión serverName. Para obtener más información, consulte [generar URL de conexión](../../connect/jdbc/building-the-connection-url.md).  
   
 **¿Qué es el almacenamiento en búfer adaptable?**  
- El almacenamiento en búfer adaptable se introdujo a partir de Microsoft JDBC Driver 1.2 para SQL Server 2005 y está diseñado para recuperar cualquier tipo de datos de valor grande sin la sobrecarga de cursores del servidor. La característica de almacenamiento en búfer adaptable de Microsoft SQL Server JDBC Driver proporciona una propiedad de cadena de conexión, responseBuffering, cuyos valores puede establecerse en "adaptive" o "full". A partir de Microsoft JDBC Driver 2.0, el comportamiento predeterminado del controlador es "adaptive". Dicho de otro modo, para obtener el comportamiento de almacenamiento en búfer adaptable, su aplicación no tiene que solicitar explícitamente el comportamiento adaptable. No obstante, en la versión 1.2, el modo del almacenamiento en búfer era "full" de manera predeterminada y la aplicación tenía que solicitar el modo de almacenamiento en búfer adaptable explícitamente. Para obtener más información, consulte [usar almacenamiento en búfer adaptable](../../connect/jdbc/using-adaptive-buffering.md) tema y el blog. [¿Qué es Adaptive almacenamiento en búfer y por qué debo usarlo?](http://go.microsoft.com/fwlink/?LinkId=111575)  
+ Almacenamiento en búfer adaptable se introdujo a partir de controlador de JDBC de Microsoft SQL Server 2005 versión 1.2. Está diseñado para recuperar cualquier tipo de datos de valores grandes sin la sobrecarga de cursores de servidor. La característica de almacenamiento en búfer adaptable de Microsoft SQL Server JDBC Driver proporciona una propiedad de cadena de conexión, responseBuffering, cuyos valores puede establecerse en "adaptive" o "full". En la versión 1.2, el modo de almacenamiento en búfer es "completa" de forma predeterminada y la aplicación debe establecer el modo de almacenamiento en búfer adaptable explícitamente. A partir de Microsoft JDBC Driver 2.0, el comportamiento predeterminado del controlador es "adaptive". Por lo tanto, la aplicación no es necesario que solicitar el comportamiento adaptable explícitamente para obtener el comportamiento de almacenamiento en búfer adaptable. Para obtener más información, consulte [usar almacenamiento en búfer adaptable](../../connect/jdbc/using-adaptive-buffering.md) y el blog de [qué Adaptive almacena en búfer y por qué debo usarlo?](http://go.microsoft.com/fwlink/?LinkId=111575).
   
 **¿Es la agrupación de conexiones de compatibilidad de controlador?**  
  El controlador proporciona compatibilidad con la agrupación de conexiones de Java Platform, Enterprise Edition 5 (Java EE 5). El controlador implementa las interfaces necesarias de JDBC 3.0 para que pueda participar en la implementación de la agrupación de conexiones de los proveedores de servidores de aplicaciones de software intermedio. El controlador participa en las conexiones agrupadas en estos entornos. Para obtener más información, consulte [Using Connection Pooling](../../connect/jdbc/using-connection-pooling.md). El controlador no proporciona su propia implementación de agrupación, sino que se basa en servidores de aplicaciones Java de terceros.  

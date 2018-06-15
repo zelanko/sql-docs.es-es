@@ -2,10 +2,10 @@
 title: Tipos definidos por el usuario CLR grandes (OLE DB) | Documentos de Microsoft
 description: Tipos definidos por el usuario de CLR grandes (OLE DB)
 ms.custom: ''
-ms.date: 03/26/2018
+ms.date: 06/12/2018
 ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
-ms.component: ole-db
+ms.component: oledb|ole-db
 ms.reviewer: ''
 ms.suite: sql
 ms.technology: connectivity
@@ -16,14 +16,17 @@ helpviewer_keywords:
 author: pmasl
 ms.author: Pedro.Lopes
 manager: craigg
-ms.openlocfilehash: a2b62d0206fc36b69394975f93b7369465edebe1
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: ac07bf034e65d654a2b8577bdad8d5f3fb8ff48d
+ms.sourcegitcommit: 354ed9c8fac7014adb0d752518a91d8c86cdce81
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/14/2018
+ms.locfileid: "35611990"
 ---
 # <a name="large-clr-user-defined-types-ole-db"></a>Tipos definidos por el usuario de CLR grandes (OLE DB)
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
+[!INCLUDE[appliesto-ss-asdb-asdw-pdw-asdbmi-md](../../../includes/appliesto-ss-asdb-asdw-pdw-asdbmi-md.md)]
+
+[!INCLUDE[Driver_OLEDB_Download](../../../includes/driver_oledb_download.md)]
 
   Este tema describen los cambios realizados en OLE DB en el controlador OLE DB para SQL Server para admitir grandes tipos common language runtime (CLR) definido por el usuario (UDT).  
   
@@ -34,7 +37,7 @@ ms.lasthandoff: 05/03/2018
   
  En la tabla siguiente se muestra la asignación de tipos de datos en parámetros y conjuntos de filas:  
   
-|Tipo de datos de SQL Server|Tipo de datos de OLE DB|Diseño de memoria|Value|  
+|Tipo de datos de SQL Server|Tipo de datos de OLE DB|Diseño de memoria|Valor|  
 |--------------------------|----------------------|-------------------|-----------|  
 |UDT CLR|DBTYPE_UDT|BYTE [] (matriz de bytes\)|132 (oledb.h)|  
   
@@ -82,7 +85,7 @@ ms.lasthandoff: 05/03/2018
   
  También se definen las columnas siguientes para los UDT:  
   
-|Identificador de columna|Tipo|Description|  
+|Identificador de columna|Tipo|Descripción|  
 |-----------------------|----------|-----------------|  
 |DBCOLUMN_UDT_CATALOGNAME|DBTYPE_WSTR|Para las columnas UDT, nombre del catálogo donde se define el UDT.|  
 |DBCOLUMN_UDT_SCHEMANAME|DBTYPE_WSTR|Para las columnas UDT, nombre del esquema donde se define el UDT.|  
@@ -107,7 +110,7 @@ ms.lasthandoff: 05/03/2018
   
  También se definen las siguientes columnas adicionales para los UDT:  
   
-|Identificador de la columna|Tipo|Description|  
+|Identificador de la columna|Tipo|Descripción|  
 |-----------------------|----------|-----------------|  
 |SS_UDT_CATALOGNAME|DBTYPE_WSTR|Para las columnas UDT, nombre del catálogo donde se define el UDT.|  
 |SS_UDT_SCHEMANAME|DBTYPE_WSTR|Para las columnas UDT, nombre del esquema donde se define el UDT.|  
@@ -128,7 +131,7 @@ ms.lasthandoff: 05/03/2018
 |DBTYPE_BSTR|Compatible (2), (5)|N/D|Compatible (3), (5)|N/D|  
 |DBTYPE_STR|Compatible (2), (5)|N/D|Compatible (3), (5)|N/D|  
 |DBTYPE_IUNKNOWN|Compatible (6)|N/D|Compatible (6)|N/D|  
-|DBTYPE_VARIANT (VT_UI1 &#124; VT_ARRAY)|Compatible (5)|N/D|Compatible (3), (5)|N/D|  
+|DBTYPE_VARIANT (VT_UI1 &AMP;#124; VT_ARRAY)|Compatible (5)|N/D|Compatible (3), (5)|N/D|  
 |DBTYPE_VARIANT (VT_BSTR)|Compatible (2), (5)|N/D|N/D|N/D|  
   
 ### <a name="key-to-symbols"></a>Clave de los símbolos  

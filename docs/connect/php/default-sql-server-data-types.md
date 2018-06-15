@@ -4,7 +4,6 @@ ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
 ms.prod_service: connectivity
-ms.component: php
 ms.reviewer: ''
 ms.suite: sql
 ms.technology: connectivity
@@ -18,11 +17,12 @@ caps.latest.revision: 20
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: c3aea23b8a3fcf3632b164846a3addaba7a501e6
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: e1d49ff27e0698f0c475f8150654b01bbaf1d283
+ms.sourcegitcommit: f16003fd1ca28b5e06d5700e730f681720006816
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/11/2018
+ms.locfileid: "35307234"
 ---
 # <a name="default-sql-server-data-types"></a>Tipos de datos de SQL Server predeterminados
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]
@@ -33,16 +33,16 @@ Al enviar datos al servidor, los [!INCLUDE[ssDriverPHP](../../includes/ssdriverp
 |-----------------|------------------------------------------------|-----------------------------------------------------|  
 |NULL|varchar(1)|No compatible|  
 |Boolean|bit|bit|  
-|Integer|int|int|  
-|Float|float(24)|No compatible|  
+|Integer|INT|INT|  
+|float|float(24)|No compatible|  
 |String (longitud inferior a 8000 bytes)|varchar (<string length>)|varchar (<string length>)|  
 |String (longitud superior a 8000 bytes)|ntext|ntext|  
 |Recurso|No compatible.|No compatible.|  
 |Stream (codificación: no binaria)|ntext|ntext|  
 |Stream (codificación: binaria)|varbinary|varbinary|  
 |Array|No compatible.|No compatible.|  
-|Object|No compatible.|No compatible.|  
-|DateTime (1)|datetime|No compatible.|  
+|Objeto|No compatible.|No compatible.|  
+|DateTime (1)|DATETIME|No compatible.|  
   
 ## <a name="see-also"></a>Vea también  
 [Constantes &#40;controladores de Microsoft para PHP para SQL Server&#41;](../../connect/php/constants-microsoft-drivers-for-php-for-sql-server.md)

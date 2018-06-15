@@ -2,7 +2,7 @@
 title: Creación de aplicaciones con el controlador OLE DB para SQL Server | Documentos de Microsoft
 description: Generar aplicaciones con el controlador OLE DB para SQL Server
 ms.custom: ''
-ms.date: 03/26/2018
+ms.date: 06/12/2018
 ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
 ms.component: oledb|applications
@@ -19,14 +19,15 @@ helpviewer_keywords:
 author: pmasl
 ms.author: Pedro.Lopes
 manager: craigg
-ms.openlocfilehash: 48d5ea2a58b2a9466b5a32387143a4540c321355
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: b768ec6810767e920650bc83e10f9ddece464a56
+ms.sourcegitcommit: 354ed9c8fac7014adb0d752518a91d8c86cdce81
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/14/2018
+ms.locfileid: "35612120"
 ---
 # <a name="building-applications-with-ole-db-driver-for-sql-server"></a>Generar aplicaciones con el controlador OLE DB para SQL Server
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
+[!INCLUDE[appliesto-ss-asdb-asdw-pdw-asdbmi-md](../../../includes/appliesto-ss-asdb-asdw-pdw-asdbmi-md.md)]
 
 [!INCLUDE[Driver_OLEDB_Download](../../../includes/driver_oledb_download.md)]
 
@@ -48,7 +49,7 @@ ms.lasthandoff: 05/03/2018
  [Actualizar una aplicación al controlador OLE DB para SQL Server de MDAC](../../oledb/applications/updating-an-application-to-oledb-driver-for-sql-server-from-mdac.md)  
  Describe las diferencias entre el controlador OLE DB para SQL Server y MDAC y problemas que deben tenerse en cuenta al actualizar de MDAC a controlador de OLE DB para SQL Server.  
 
- [Actualizar una aplicación de SQL Server 2005 Native Client](../../oledb/applications/updating-an-application-from-sql-server-2005-native-client.md)  
+ [Actualizar una aplicación desde SQL Server 2005 Native Client](../../oledb/applications/updating-an-application-from-sql-server-2005-native-client.md)  
  Se describen los problemas que deben tenerse en cuenta al actualizar desde [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)] controlador OLE DB para SQL Server Native Client.  
 
  [Uso de ADO con el controlador OLE DB para SQL Server](../../oledb/applications/using-ado-with-oledb-driver-for-sql-server.md)  
@@ -59,4 +60,4 @@ ms.lasthandoff: 05/03/2018
 
 ## <a name="see-also"></a>Vea también  
  [Controlador OLE DB para SQL Server](../../oledb/oledb-driver-for-sql-server.md)     
- [Temas "Cómo..." de OLE DB](../../oledb/ole-db-how-to/ole-db-how-to-topics.md)  
+ [Temas de procedimientos de OLE DB](../../oledb/ole-db-how-to/ole-db-how-to-topics.md)  

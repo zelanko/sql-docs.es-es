@@ -2,7 +2,7 @@
 title: Usar tipos de datos XML | Documentos de Microsoft
 description: Uso de tipos de datos XML con controlador OLE DB para SQL Server
 ms.custom: ''
-ms.date: 03/26/2018
+ms.date: 06/12/2018
 ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
 ms.component: oledb|features
@@ -34,16 +34,19 @@ helpviewer_keywords:
 author: pmasl
 ms.author: Pedro.Lopes
 manager: craigg
-ms.openlocfilehash: f36165da3be9c540166486059cdc0ee150532657
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: d6ec0009a986e2abd56ac00c1e01826f3ed001f7
+ms.sourcegitcommit: 354ed9c8fac7014adb0d752518a91d8c86cdce81
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/14/2018
+ms.locfileid: "35612180"
 ---
 # <a name="using-xml-data-types"></a>Usar tipos de datos XML
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
+[!INCLUDE[appliesto-ss-asdb-asdw-pdw-asdbmi-md](../../../includes/appliesto-ss-asdb-asdw-pdw-asdbmi-md.md)]
 
-  [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)]introdujo un **xml** tipo de datos que le permite almacenar documentos XML y fragmentos en un [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] base de datos. El **xml** tipo de datos es un tipo de datos integrado en [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]y es en cierta forma es similar a otros tipos integrados, como **int** y **varchar**. Como con otros tipos integrados, puede usar el **xml** tipo de datos como un tipo de columna al crear una tabla, como un tipo de variable, un tipo de parámetro o un tipo de valor devuelto de función; o en funciones CAST y CONVERT.  
+[!INCLUDE[Driver_OLEDB_Download](../../../includes/driver_oledb_download.md)]
+
+  [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)] introdujo un **xml** tipo de datos que le permite almacenar documentos XML y fragmentos en un [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] base de datos. El **xml** tipo de datos es un tipo de datos integrado en [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]y es en cierta forma es similar a otros tipos integrados, como **int** y **varchar**. Como con otros tipos integrados, puede usar el **xml** tipo de datos como un tipo de columna al crear una tabla, como un tipo de variable, un tipo de parámetro o un tipo de valor devuelto de función; o en funciones CAST y CONVERT.  
   
 ## <a name="programming-considerations"></a>Consideraciones de programación  
  El XML puede ser autodescriptivo ya que puede incluir un encabezado XML que especifique la codificación del documento como, por ejemplo:  
@@ -87,13 +90,13 @@ ms.lasthandoff: 05/03/2018
 |Tipo de datos|A datos XML<br /><br /> **XML**|A datos XML<br /><br /> **No XML**|Desde datos XML<br /><br /> **XML**|Desde datos XML<br /><br /> **No XML**|  
 |---------------|---------------------------|--------------------------------|-----------------------------|----------------------------------|  
 |DBTYPE_XML|Pasar a través de<sup>6,7</sup>|Error<sup>1</sup>|ACEPTAR<sup>11, 6</sup>|Error<sup>8</sup>|  
-|DBTYPE_BYTES|Pasar a través de<sup>6,7</sup>|N/A<sup>2</sup>|ACEPTAR <sup>11, 6</sup>|N/A <sup>2</sup>|  
-|DBTYPE_WSTR|Pasar a través de<sup>6,10</sup>|N/A <sup>2</sup>|ACEPTAR<sup>4, 6, 12</sup>|N/A <sup>2</sup>|  
-|DBTYPE_BSTR|Pasar a través de<sup>6,10</sup>|N/A <sup>2</sup>|OK <sup>3</sup>|N/A <sup>2</sup>|  
-|DBTYPE_STR|ACEPTAR<sup>6, 9, 10</sup>|N/A <sup>2</sup>|ACEPTAR<sup>5, 6, 12</sup>|N/A <sup>2</sup>|  
-|DBTYPE_IUNKNOWN|Secuencia de bytes a través de **ISequentialStream**<sup>7</sup>|N/A <sup>2</sup>|Secuencia de bytes a través de **ISequentialStream**<sup>11</sup>|N/A <sup>2</sup>|  
-|DBTYPE_VARIANT (VT_UI1 &#124; VT_ARRAY)|Pasar a través de<sup>6,7</sup>|N/A <sup>2</sup>|N/D|N/A <sup>2</sup>|  
-|DBTYPE_VARIANT (VT_BSTR)|Pasar a través de<sup>6,10</sup>|N/A <sup>2</sup>|OK<sup>3</sup>|N/A <sup>2</sup>|  
+|DBTYPE_BYTES|Pasar a través de<sup>6,7</sup>|N /<sup>2</sup>|ACEPTAR <sup>11, 6</sup>|N / <sup>2</sup>|  
+|DBTYPE_WSTR|Pasar a través de<sup>6,10</sup>|N / <sup>2</sup>|ACEPTAR<sup>4, 6, 12</sup>|N / <sup>2</sup>|  
+|DBTYPE_BSTR|Pasar a través de<sup>6,10</sup>|N / <sup>2</sup>|ACEPTAR <sup>3</sup>|N / <sup>2</sup>|  
+|DBTYPE_STR|ACEPTAR<sup>6, 9, 10</sup>|N / <sup>2</sup>|ACEPTAR<sup>5, 6, 12</sup>|N / <sup>2</sup>|  
+|DBTYPE_IUNKNOWN|Secuencia de bytes a través de **ISequentialStream**<sup>7</sup>|N / <sup>2</sup>|Secuencia de bytes a través de **ISequentialStream**<sup>11</sup>|N / <sup>2</sup>|  
+|DBTYPE_VARIANT (VT_UI1 &AMP;#124; VT_ARRAY)|Pasar a través de<sup>6,7</sup>|N / <sup>2</sup>|N/D|N / <sup>2</sup>|  
+|DBTYPE_VARIANT (VT_BSTR)|Pasar a través de<sup>6,10</sup>|N / <sup>2</sup>|ACEPTAR<sup>3</sup>|N / <sup>2</sup>|  
   
  <sup>1</sup>si un servidor de tipo distinto de DBTYPE_XML se especifica con **ICommandWithParameters:: SetParameterInfo** y el tipo de descriptor de acceso es DBTYPE_XML, se produce un error cuando se ejecuta la instrucción (DB_E_ERRORSOCCURRED, el estado del parámetro es DBSTATUS_E_BADACCESSOR); en caso contrario, los datos se envían al servidor, pero el servidor devuelve un error que indica que no hay ninguna conversión implícita de XML al tipo de datos del parámetro.  
   
@@ -140,7 +143,7 @@ ms.lasthandoff: 05/03/2018
 #### <a name="the-columns-and-procedureparameters-schema-rowsets"></a>Los conjuntos de filas de esquema COLUMNS y PROCEDURE_PARAMETERS  
  Las adiciones a los conjuntos de filas de esquema COLUMNS y PROCEDURE_PARAMETERS incluyen las siguientes columnas:  
   
-|Nombre de columna|Tipo|Description|  
+|Nombre de columna|Tipo|Descripción|  
 |-----------------|----------|-----------------|  
 |SS_XML_SCHEMACOLLECTION_CATALOGNAME|DBTYPE_WSTR|Nombre del catálogo donde se define una colección de esquemas XML. NULL para una columna no XML o una columna XML sin tipo.|  
 |SS_XML_SCHEMACOLLECTION_SCHEMANAME|DBTYPE_WSTR|Nombre de un esquema donde se define una colección de esquemas XML. NULL para una columna no XML o una columna XML sin tipo.|  
@@ -152,7 +155,7 @@ ms.lasthandoff: 05/03/2018
 #### <a name="the-ssxmlschema-schema-rowset"></a>El conjunto de filas de esquema SS_XMLSCHEMA  
  Se ha introducido un nuevo conjunto de filas de esquema SS_XMLSCHEMA para que los clientes recuperen información del esquema XML. El conjunto de filas SS_XMLSCHEMA contiene las columnas siguientes:  
   
-|Nombre de columna|Tipo|Description|  
+|Nombre de columna|Tipo|Descripción|  
 |-----------------|----------|-----------------|  
 |SCHEMACOLLECTION_CATALOGNAME|DBTYPE_WSTR|Catálogo al que pertenece una colección XML.|  
 |SCHEMACOLLECTION_SCHEMANAME|DBTYPE_WSTR|Esquema al que pertenece una colección XML.|  
@@ -172,7 +175,7 @@ ms.lasthandoff: 05/03/2018
 #### <a name="the-dbpropsetsqlserverparameter-property-set"></a>El conjunto de propiedades DBPROPSET_SQLSERVERPARAMETER  
  Para admitir la **xml** de tipo de datos a través de OLE DB, el controlador OLE DB para SQL Server implementa el nuevo conjunto de propiedades DBPROPSET_SQLSERVERPARAMETER, que contiene los valores siguientes.  
   
-|Nombre|Tipo|Description|  
+|Nombre|Tipo|Descripción|  
 |----------|----------|-----------------|  
 |SSPROP_PARAM_XML_SCHEMACOLLECTION_CATALOGNAME|DBTYPE_WSTR|Nombre del catálogo (base de datos) donde se define una colección de esquemas XML. Una parte del identificador de nombre de tres partes SQL.|  
 |SSPROP_PARAM_XML_SCHEMACOLLECTION_SCHEMANAME|DBTYPE_WSTR|Nombre de un esquema XML de la colección de esquemas. Una de las partes del identificador de nombre de tres partes de SQL.|  
@@ -181,7 +184,7 @@ ms.lasthandoff: 05/03/2018
 #### <a name="the-dbpropsetsqlservercolumn-property-set"></a>El conjunto de propiedades DBPROPSET_SQLSERVERCOLUMN  
  Para admitir la creación de tablas en el **ITableDefinition** interfaz, controlador de OLE DB para SQL Server agrega tres nuevas columnas al conjunto de propiedades DBPROPSET_SQLSERVERCOLUMN.  
   
-|Nombre|Tipo|Description|  
+|Nombre|Tipo|Descripción|  
 |----------|----------|-----------------|  
 |SSPROP_COL_XML_SCHEMACOLLECTION_CATALOGNAME|VT_BSTR|Para las columnas XML con tipo, esta propiedad es una cadena que especifica el nombre del catálogo donde se almacena el esquema XML. Para otros tipos de columna, esta propiedad devuelve una cadena vacía.|  
 |SSPROP_COL_XML_SCHEMACOLLECTION_SCHEMANAME|VT_BSTR|Para las columnas XML con tipo, esta propiedad es una cadena que especifica el nombre del esquema XML que define esta columna.|  
@@ -201,7 +204,7 @@ ms.lasthandoff: 05/03/2018
 #### <a name="the-icolumnsrowset-interface"></a>La interfaz IColumnsRowset  
  Controlador de OLE DB para SQL Server agrega las siguientes [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]-columnas específicas para el conjunto de filas devuelto por la **IColumnRowset:: GetColumnsRowset** método. Estas columnas contienen el nombre de tres partes de una colección de esquemas XML. Para las columnas que no son XML o las columnas XML sin tipo, las tres columnas toman el valor predeterminado NULL.  
   
-|Nombre de columna|Tipo|Description|  
+|Nombre de columna|Tipo|Descripción|  
 |-----------------|----------|-----------------|  
 |DBCOLUMN_SS_XML_SCHEMACOLLECTION_CATALOGNAME|DBTYPE_WSTR|Catálogo al que pertenece una colección de esquemas XML.<br /><br /> De lo contrario, NULL.|  
 |DBCOLUMN_SS_XML_SCHEMACOLLECTION_SCHEMANAME|DBTYPE_WSTR|Esquema al que pertenece una colección de esquemas XML. De lo contrario, NULL.|  
@@ -232,6 +235,6 @@ ms.lasthandoff: 05/03/2018
   
 ## <a name="see-also"></a>Vea también  
  [Controlador OLE DB para características de SQL Server](../../oledb/features/oledb-driver-for-sql-server-features.md)    
- [ISSCommandWithParameters & #40; OLE DB & #41;](../../oledb/ole-db-interfaces/isscommandwithparameters-ole-db.md)  
+ [ISSCommandWithParameters &#40;OLE DB&#41;](../../oledb/ole-db-interfaces/isscommandwithparameters-ole-db.md)  
   
   

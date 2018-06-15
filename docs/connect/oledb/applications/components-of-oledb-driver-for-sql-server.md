@@ -2,7 +2,7 @@
 title: Componentes de controlador OLE DB para SQL Server | Documentos de Microsoft
 description: Componentes de controlador OLE DB para SQL Server
 ms.custom: ''
-ms.date: 03/26/2018
+ms.date: 06/12/2018
 ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
 ms.component: oledb|applications
@@ -18,20 +18,21 @@ helpviewer_keywords:
 author: pmasl
 ms.author: Pedro.Lopes
 manager: craigg
-ms.openlocfilehash: 2548d1c3830611f9b9fddb556d8711ca7039b9ed
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 78b72796de5aa4ac2fb9bc0793f98365b7d8281e
+ms.sourcegitcommit: 354ed9c8fac7014adb0d752518a91d8c86cdce81
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/14/2018
+ms.locfileid: "35611690"
 ---
 # <a name="components-of-ole-db-driver-for-sql-server"></a>Componentes de controlador OLE DB para SQL Server
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
+[!INCLUDE[appliesto-ss-asdb-asdw-pdw-asdbmi-md](../../../includes/appliesto-ss-asdb-asdw-pdw-asdbmi-md.md)]
 
 [!INCLUDE[Driver_OLEDB_Download](../../../includes/driver_oledb_download.md)]
 
   Controlador de OLE DB para SQL Server contiene los siguientes componentes:  
 
-|Componente|Description|  
+|Componente|Descripción|  
 |---------------|-----------------|  
 |msoledbsql.dll|El archivo de biblioteca de vínculos dinámicos (DLL) que contiene todo el controlador OLE DB para la funcionalidad de SQL Server.|  
 |msoledbsqlr.rll|El archivo de recursos asociado para el controlador OLE DB para la biblioteca de SQL Server.|   

@@ -12,11 +12,12 @@ ms.suite: sql
 ms.custom: sql-linux
 ms.technology: linux
 ms.assetid: 1314744f-fcaf-46db-800e-2918fa7e1b6c
-ms.openlocfilehash: 07782a5b8290b41a5a11557c503fcbfd0736790b
-ms.sourcegitcommit: a9da0abd3e17fbcd6339980d7331d0418cdada53
+ms.openlocfilehash: f853cb623bee0fcd27d5cc7e6203610ed1603335
+ms.sourcegitcommit: 354ed9c8fac7014adb0d752518a91d8c86cdce81
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/24/2018
+ms.lasthandoff: 06/14/2018
+ms.locfileid: "35611980"
 ---
 # <a name="release-notes-for-sql-server-2017-on-linux"></a>Notas de la versión de SQL Server 2017 en Linux
 
@@ -215,12 +216,13 @@ Las siguientes características y servicios no están disponibles en Linux en el
 | &nbsp; | Stretch DB |
 | &nbsp; | Polybase |
 | &nbsp; | Consulta distribuida con conexiones 3ª parte |
+| &nbsp; | Servidores vinculados a orígenes de datos distintos de SQL Server |
 | &nbsp; | (XP_CMDSHELL, etcetera) los procedimientos almacenados extendidos del sistema |
 | &nbsp; | Filetable, FILESTREAM |
 | &nbsp; | Conjunto de ensamblados CLR con EXTERNAL_ACCESS o UNSAFE permiso |
-| &nbsp; | Extensión del grupo de búferes |
+| &nbsp; | Buffer Pool Extension |
 | **Agente SQL Server** |  Subsistemas: CmdExec, PowerShell, lector de cola, SSIS, SSAS, SSRS |
-| &nbsp; | Alertas |
+| &nbsp; | Trabajos |
 | &nbsp; | Agente de registro del LOG |
 | &nbsp; | Captura de datos modificados |
 | &nbsp; | Copia de seguridad administrada |

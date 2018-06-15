@@ -2,7 +2,7 @@
 title: Con el controlador OLE DB para SQL Server encabezado y archivos de biblioteca | Documentos de Microsoft
 description: Utilizando el controlador OLE DB para los archivos de encabezado y biblioteca de SQL Server
 ms.custom: ''
-ms.date: 03/26/2018
+ms.date: 06/12/2018
 ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
 ms.component: oledb|applications
@@ -24,14 +24,15 @@ helpviewer_keywords:
 author: pmasl
 ms.author: Pedro.Lopes
 manager: craigg
-ms.openlocfilehash: d958d4b1f12f5a109c5727832eb764fd2b497d70
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: f228442c31d754265769645a640b1eb1285c5897
+ms.sourcegitcommit: 354ed9c8fac7014adb0d752518a91d8c86cdce81
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/14/2018
+ms.locfileid: "35612150"
 ---
 # <a name="using-the-ole-db-driver-for-sql-server-header-and-library-files"></a>Usar el controlador OLE DB para SQL Server encabezado y archivos de biblioteca
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
+[!INCLUDE[appliesto-ss-asdb-asdw-pdw-asdbmi-md](../../../includes/appliesto-ss-asdb-asdw-pdw-asdbmi-md.md)]
 
 [!INCLUDE[Driver_OLEDB_Download](../../../includes/driver_oledb_download.md)]
 
@@ -70,7 +71,7 @@ include "msoledbsql.h";
   
 ## <a name="component-names-and-properties-by-version"></a>Nombres de componente y propiedades por versión  
 
-|Propiedad|Controlador OLE DB para SQL Server|MDAC|  
+|Property|Controlador OLE DB para SQL Server|MDAC|  
 |--------|----------------------------|----|   
 |PROGID de OLE DB|MSOLEDBSQL|SQLOLEDB|  
 |Nombre de archivo de encabezado de OLE DB|msoledbsql.h|Sqloledb.h|  

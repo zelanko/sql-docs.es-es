@@ -2,10 +2,10 @@
 title: Estructura SSVARIANT | Documentos de Microsoft
 description: Estructura SSVARIANT en el controlador OLE DB para SQL Server
 ms.custom: ''
-ms.date: 03/26/2018
+ms.date: 06/14/2018
 ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
-ms.component: ole-db-data-types
+ms.component: oledb|ole-db-data-types
 ms.reviewer: ''
 ms.suite: sql
 ms.technology:
@@ -19,20 +19,23 @@ helpviewer_keywords:
 author: pmasl
 ms.author: Pedro.Lopes
 manager: craigg
-ms.openlocfilehash: eb977dbe9ef7bed4e6c98ef612bd6e2bb67bf159
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 9afd7d6ce87ac49c060347287d4b7a081ea5bb41
+ms.sourcegitcommit: e1bc8c486680e6d6929c0f5885d97d013a537149
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/15/2018
+ms.locfileid: "35666385"
 ---
 # <a name="ssvariant-structure"></a>Estructura SSVARIANT
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
+[!INCLUDE[appliesto-ss-asdb-asdw-pdw-asdbmi-md](../../../includes/appliesto-ss-asdb-asdw-pdw-asdbmi-md.md)]
+
+[!INCLUDE[Driver_OLEDB_Download](../../../includes/driver_oledb_download.md)]
 
   El **SSVARIANT** estructura, que se define en msoledbsql.h, corresponde a un valor DBTYPE_SQLVARIANT en el controlador OLE DB para SQL Server.  
   
  **SSVARIANT** es una unión de discriminación. Dependiendo del valor del miembro vt, el consumidor puede determinar qué miembro para leer. valores de VT se corresponden con [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] tipos de datos. Por lo tanto, la **SSVARIANT** estructura puede contener cualquier tipo de SQL Server. Para obtener más información acerca de la estructura de datos para los tipos de OLE DB estándares, consulte [indicadores de tipo](http://go.microsoft.com/fwlink/?LinkId=122171).  
   
-## <a name="remarks"></a>Comentarios  
+## <a name="remarks"></a>Notas  
  Cuando DataTypeCompat == 80, varios **SSVARIANT** subtipos se convierten en cadenas. Por ejemplo, los siguientes valores de vt aparecerá en **SSVARIANT** como VT_SS_WVARSTRING:  
   
 -   VT_SS_DATETIMEOFFSET  
@@ -83,6 +86,6 @@ V_SS_DATETIMEOFFSET(pssVar).bScale = bScale;
 |BLOBType|No se usa|No se usa|No se usa|No se usa|  
   
 ## <a name="see-also"></a>Vea también  
- [Tipos de datos & #40; OLE DB & #41;](../../oledb/ole-db-data-types/data-types-ole-db.md)  
+ [Tipos de datos &#40;OLE DB&#41;](../../oledb/ole-db-data-types/data-types-ole-db.md)  
   
   

@@ -4,7 +4,6 @@ ms.custom: ''
 ms.date: 03/26/2018
 ms.prod: sql
 ms.prod_service: connectivity
-ms.component: php
 ms.reviewer: ''
 ms.suite: sql
 ms.technology: connectivity
@@ -15,11 +14,12 @@ caps.latest.revision: 29
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: f374b1b0c67c151d7ae7d2da7e5dce9a8b09222d
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 44d58351f0a120268983500166aeafdbfa773ee0
+ms.sourcegitcommit: f16003fd1ca28b5e06d5700e730f681720006816
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/11/2018
+ms.locfileid: "35306854"
 ---
 # <a name="converting-data-types"></a>Convertir tipos de datos
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]
@@ -28,7 +28,7 @@ Los [!INCLUDE[ssDriverPHP](../../includes/ssdriverphp_md.md)] permiten especific
   
 ## <a name="in-this-section"></a>En esta sección  
   
-|Tema|Description|  
+|Tema|Descripción|  
 |---------|---------------|  
 |[Tipos de datos de SQL Server predeterminados](../../connect/php/default-sql-server-data-types.md)|Proporciona información sobre los tipos de datos de [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] predeterminados al enviar datos al servidor.|  
 |[Tipos de datos PHP predeterminados](../../connect/php/default-php-data-types.md)|Proporciona información sobre los tipos de datos PHP predeterminados al recuperar datos del servidor.|  

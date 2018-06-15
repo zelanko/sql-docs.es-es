@@ -5,7 +5,6 @@ ms.custom: ''
 ms.date: 03/26/2018
 ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
-ms.component: ole-db-tables-indexes
 ms.reviewer: ''
 ms.suite: sql
 ms.technology: connectivity
@@ -20,11 +19,12 @@ helpviewer_keywords:
 author: pmasl
 ms.author: Pedro.Lopes
 manager: craigg
-ms.openlocfilehash: 5497a74c256282fd14f7c5301f7eea4cfa9aa596
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 6b26077abc7d714ffebdf36068a2f3d5fc081d7e
+ms.sourcegitcommit: f16003fd1ca28b5e06d5700e730f681720006816
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/11/2018
+ms.locfileid: "35306784"
 ---
 # <a name="creating-sql-server-tables"></a>Crear tablas de SQL Server
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -55,7 +55,7 @@ ms.lasthandoff: 05/03/2018
   
  Las propiedades de columna de un DBCOLUMNDESC se interpretan como sigue.  
   
-|Id. de propiedad|Description|  
+|Id. de propiedad|Descripción|  
 |-----------------|-----------------|  
 |DBPROP_COL_AUTOINCREMENT|L/E lectura/escritura<br /><br /> Valor predeterminado: VARIANT_FALSE. Descripción: establece la propiedad de identidad en la columna creada. Para [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)], la propiedad de identidad es válida para una columna única dentro de una tabla. Establecer la propiedad en VARIANT_TRUE para más de una sola columna genera un error cuando el controlador OLE DB para SQL Server intenta crear la tabla en el servidor.<br /><br /> El [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] propiedad identity solo es válida para el **entero**, **numérico**, y **decimal** tipos cuando la escala es 0. Establecer la propiedad en VARIANT_TRUE en una columna de cualquier otro tipo de datos, genera un error cuando el controlador OLE DB para SQL Server intenta crear la tabla en el servidor.<br /><br /> El controlador OLE DB para SQL Server devuelve DB_S_ERRORSOCCURRED cuando DBPROP_COL_AUTOINCREMENT y DBPROP_COL_NULLABLE son VARIANT_TRUE y *dwOption* de DBPROP_COL_NULLABLE no es DBPROPOPTIONS_REQUIRED. Se devuelve DB_E_ERRORSOCCURRED cuando DBPROP_COL_AUTOINCREMENT y DBPROP_COL_NULLABLE son VARIANT_TRUE y *dwOption* de DBPROP_COL_NULLABLE es igual a DBPROPOPTIONS_REQUIRED. La columna se define con el [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] propiedad de identidad y el DBPROP_COL_NULLABLE *dwStatus* miembro se establece en DBPROPSTATUS_CONFLICTING.|  
 |DBPROP_COL_DEFAULT|L/E lectura/escritura<br /><br /> Valor predeterminado: ninguno<br /><br /> Descripción: crea la restricción DEFAULT de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] para la columna.<br /><br /> El *vValue* miembro DBPROP puede ser cualquiera de varios tipos. El *vValue.vt* miembro debe especificar un tipo compatible con el tipo de datos de la columna. Por ejemplo, la definición de BSTR N/A como el valor predeterminado para una columna definida como DBTYPE_WSTR es una coincidencia compatible. Definir el mismo valor predeterminado en una columna definida como DBTYPE_R8 genera un error cuando el controlador OLE DB para SQL Server intenta crear la tabla en el servidor.|  
@@ -67,7 +67,7 @@ ms.lasthandoff: 05/03/2018
   
  Cuando el consumidor llama **ITableDefinition:: CreateTable**, el controlador OLE DB para SQL Server interpreta las propiedades de la tabla como sigue.  
   
-|Id. de propiedad|Description|  
+|Id. de propiedad|Descripción|  
 |-----------------|-----------------|  
 |DBPROP_TBL_TEMPTABLE|L/E lectura/escritura<br /><br /> Valor predeterminado: VARIANT_FALSE. Descripción: de forma predeterminada, el controlador OLE DB para SQL Server crea tablas denominadas por el consumidor. Cuando VARIANT_TRUE, el controlador OLE DB para SQL Server genera un nombre de tabla temporal para el consumidor. El consumidor establece el *pTableID* parámetro de **CreateTable** en NULL. El *ppTableID* parámetro debe contener un puntero válido.|  
   

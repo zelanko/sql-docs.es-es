@@ -4,7 +4,6 @@ ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
 ms.prod_service: connectivity
-ms.component: php
 ms.reviewer: ''
 ms.suite: sql
 ms.technology: connectivity
@@ -17,11 +16,12 @@ caps.latest.revision: 72
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: a09ba7744f03fca15bb60db7979d31bb141f75c2
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 57c52b218406b658ef3f467ee122d51ed32158ad
+ms.sourcegitcommit: f16003fd1ca28b5e06d5700e730f681720006816
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/11/2018
+ms.locfileid: "35307014"
 ---
 # <a name="constants-microsoft-drivers-for-php-for-sql-server"></a>Constantes (controladores de Microsoft para PHP para SQL Server)
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]
@@ -53,7 +53,7 @@ El atributo PDO:: sqlsrv_attr_encoding puede pasarse a [pdostatement:: setAttrib
   
 Los valores disponibles para transmitir a PDO::SQLSRV_ATTR_ENCODING son los siguientes:  
   
-|Constante del controlador PDO_SQLSRV|Description|  
+|Constante del controlador PDO_SQLSRV|Descripción|  
 |-------------------------------|---------------|  
 |PDO::SQLSRV_ENCODING_BINARY|Los datos son una secuencia de bytes sin procesar procedentes del servidor, sin que se realicen procesos de codificación o traducción.<br /><br />No válida para PDO::setAttribute.|  
 |PDO::SQLSRV_ENCODING_SYSTEM|Los datos son caracteres de 8 bits tal y como se especifica en la página de códigos de la configuración regional de Windows establecida en el sistema. Los caracteres de varios bytes o caracteres que no se asignen en esta página de códigos se sustituirán por un carácter de un solo byte de signo de interrogación (?).|  
@@ -78,19 +78,19 @@ En las siguientes secciones se incluyen las constantes que utiliza el controlado
 ### <a name="err-constants"></a>Constantes de ERR  
 En la tabla siguiente se enumera las constantes que se usan para especificar si [sqlsrv_errors](../../connect/php/sqlsrv-errors.md) devuelve errores, advertencias o ambos.  
   
-|Value|Description|  
+|Valor|Descripción|  
 |---------|---------------|  
-|SQLSRV_ERR_ALL|Se devuelven los errores y las advertencias generados en la última llamada a una función de **sqlsrv** . Es el valor predeterminado.|  
+|SQLSRV_ERR_ALL|Se devuelven los errores y las advertencias generados en la última llamada a una función de **sqlsrv** . Este es el valor predeterminado.|  
 |SQLSRV_ERR_ERRORS|Se devuelven los errores generados en la última llamada a una función de **sqlsrv** .|  
 |SQLSRV_ERR_WARNINGS|Se devuelven las advertencias generadas en la última llamada a una función de **sqlsrv** .|  
   
 ### <a name="fetch-constants"></a>Constantes de FETCH  
 En la siguiente tabla se incluyen las constantes que se utilizan para especificar el tipo de la matriz devuelta por [sqlsrv_fetch_array](../../connect/php/sqlsrv-fetch-array.md).  
   
-|Constante de SQLSRV|Description|  
+|Constante de SQLSRV|Descripción|  
 |-------------------|---------------|  
 |SQLSRV_FETCH_ASSOC|**sqlsrv_fetch_array** devuelve la siguiente fila de datos como una matriz asociativa.|  
-|SQLSRV_FETCH_BOTH|**sqlsrv_fetch_array** devuelve la siguiente fila de datos como una matriz con claves tanto numéricas como asociativas. Es el valor predeterminado.|  
+|SQLSRV_FETCH_BOTH|**sqlsrv_fetch_array** devuelve la siguiente fila de datos como una matriz con claves tanto numéricas como asociativas. Este es el valor predeterminado.|  
 |SQLSRV_FETCH_NUMERIC|**sqlsrv_fetch_array** devuelve la siguiente fila de datos como una matriz indexada numéricamente.|  
   
 ### <a name="logging-constants"></a>Constantes de registro  
@@ -98,7 +98,7 @@ En esta sección se incluyen las constantes que se usan para cambiar la configur
   
 En la siguiente tabla se incluyen las constantes que se pueden utilizar como el valor de la configuración **LogSubsystems** :  
   
-|Constante de SQLSRV (equivalente entero entre paréntesis)|Description|  
+|Constante de SQLSRV (equivalente entero entre paréntesis)|Descripción|  
 |----------------------------------------------------------|---------------|  
 |SQLSRV_LOG_SYSTEM_ALL (-1)|Activa el registro de todos los subsistemas.|  
 |SQLSRV_LOG_SYSTEM_CONN (2)|Activa el registro de la actividad de conexión.|  
@@ -109,7 +109,7 @@ En la siguiente tabla se incluyen las constantes que se pueden utilizar como el 
   
 En la tabla siguiente se incluyen las constantes que se pueden utilizar como el valor de la configuración **LogSeverity** :  
   
-|Constante de SQLSRV (equivalente entero entre paréntesis)|Description|  
+|Constante de SQLSRV (equivalente entero entre paréntesis)|Descripción|  
 |----------------------------------------------------------|---------------|  
 |SQLSRV_LOG_SEVERITY_ALL (-1)|Especifica que se registrarán errores, advertencias y avisos.|  
 |SQLSRV_LOG_SEVERITY_ERROR (1)|Especifica que se registrarán los errores.|  
@@ -119,7 +119,7 @@ En la tabla siguiente se incluyen las constantes que se pueden utilizar como el 
 ### <a name="nullable-constants"></a>Constantes que admiten valores NULL  
 En la siguiente tabla se muestran las constantes que puede usar para determinar si una columna admite valores NULL o no, o si esta información no está disponible. Puede comparar el valor de la clave **Nullable** que devuelve [sqlsrv_field_metadata](../../connect/php/sqlsrv-field-metadata.md) para determinar el estado de admisión de valores NULL de la columna.  
   
-|Constante de SQLSRV (equivalente entero entre paréntesis)|Description|  
+|Constante de SQLSRV (equivalente entero entre paréntesis)|Descripción|  
 |----------------------------------------------------------|---------------|  
 |SQLSRV_NULLABLE_YES (0)|La columna admite valores NULL.|  
 |SQLSRV_NULLABLE_NO (1)|La columna no admite valores NULL.|  
@@ -128,7 +128,7 @@ En la siguiente tabla se muestran las constantes que puede usar para determinar 
 ### <a name="param-constants"></a>Constantes de PARAM  
 En la siguiente lista se enumeran las constantes para especificar la dirección del parámetro al llamar a [sqlsrv_query](../../connect/php/sqlsrv-query.md) o [sqlsrv_prepare](../../connect/php/sqlsrv-prepare.md).  
   
-|Constante de SQLSRV|Description|  
+|Constante de SQLSRV|Descripción|  
 |-------------------|---------------|  
 |SQLSRV_PARAM_IN|Indica un parámetro de entrada.|  
 |SQLSRV_PARAM_INOUT|Indica un parámetro bidireccional.|  
@@ -140,14 +140,14 @@ En la siguiente tabla se muestran las constantes que se utilizan para describir 
 |Constante de SQLSRV|Tipo de datos PHP|  
 |-------------------|-----------------|  
 |SQLSRV_PHPTYPE_INT|Integer|  
-|SQLSRV_PHPTYPE_DATETIME|Fecha y hora|  
-|SQLSRV_PHPTYPE_FLOAT|Float|  
+|SQLSRV_PHPTYPE_DATETIME|DATETIME|  
+|SQLSRV_PHPTYPE_FLOAT|float|  
 |SQLSRV_PHPTYPE_STREAM (codificación de $<sup>1</sup>)|STREAM|  
 |SQLSRV_PHPTYPE_STRING (codificación de $<sup>1</sup>)|String|  
   
 1. **SQLSRV_PHPTYPE_STREAM** y **SQLSRV_PHPTYPE_STRING** aceptan un parámetro que especifica la codificación de la secuencia. En la siguiente tabla se indican las constantes de SQLSRV que constituyen parámetros aceptables y una descripción de la codificación correspondiente.  
   
-|Constante de SQLSRV|Description|  
+|Constante de SQLSRV|Descripción|  
 |-------------------|---------------|  
 |SQLSRV_ENC_BINARY|Los datos se devuelven del servidor como una secuencia de bytes sin procesar, sin que se realicen procesos de codificación o traducción.|  
 |SQLSRV_ENC_CHAR|Los datos se devuelven en caracteres de 8 bits tal y como se especifica en la página de códigos de la configuración regional de Windows establecida en el sistema. Los caracteres de varios bytes o caracteres que no se asignen en esta página de códigos se sustituirán por un carácter de un solo byte de signo de interrogación (?).<br /><br />Esta es la codificación predeterminada.|  
@@ -163,38 +163,38 @@ En la siguiente tabla se muestran las constantes que se utilizan para describir 
   
 |Constante de SQLSRV|Tipo de datos de SQL Server|  
 |-------------------|------------------------|  
-|SQLSRV_SQLTYPE_BIGINT|bigint|  
+|SQLSRV_SQLTYPE_BIGINT|BIGINT|  
 |SQLSRV_SQLTYPE_BINARY|binary|  
 |SQLSRV_SQLTYPE_BIT|bit|  
 |SQLSRV_SQLTYPE_CHAR|char<sup>5</sup>|  
 |SQLSRV_SQLTYPE_CHAR($charCount)|char|  
 |SQLSRV_SQLTYPE_DATE|date<sup>4</sup>|  
-|SQLSRV_SQLTYPE_DATETIME|datetime|  
+|SQLSRV_SQLTYPE_DATETIME|DATETIME|  
 |SQLSRV_SQLTYPE_DATETIME2|datetime2<sup>4</sup>|  
 |SQLSRV_SQLTYPE_DATETIMEOFFSET|datetimeoffset<sup>4</sup>|  
 |SQLSRV_SQLTYPE_DECIMAL|decimal<sup>5</sup>|
-|SQLSRV_SQLTYPE_DECIMAL($precision, $scale)|decimal|  
-|SQLSRV_SQLTYPE_FLOAT|float|  
+|SQLSRV_SQLTYPE_DECIMAL($precision, $scale)|Decimal|  
+|SQLSRV_SQLTYPE_FLOAT|FLOAT|  
 |SQLSRV_SQLTYPE_IMAGE|image<sup>1</sup>|  
-|SQLSRV_SQLTYPE_INT|int|  
+|SQLSRV_SQLTYPE_INT|INT|  
 |SQLSRV_SQLTYPE_MONEY|money| 
 |SQLSRV_SQLTYPE_NCHAR|nchar<sup>5</sup>|   
 |SQLSRV_SQLTYPE_NCHAR($charCount)|NCHAR|  
 |SQLSRV_SQLTYPE_NUMERIC|numérico<sup>5</sup>|
-|SQLSRV_SQLTYPE_NUMERIC($precision, $scale)|numeric|  
+|SQLSRV_SQLTYPE_NUMERIC($precision, $scale)|NUMERIC|  
 |SQLSRV_SQLTYPE_NVARCHAR|nvarchar<sup>5</sup>|  
-|SQLSRV_SQLTYPE_NVARCHAR($charCount)|nvarchar|  
+|SQLSRV_SQLTYPE_NVARCHAR($charCount)|NVARCHAR|  
 |SQLSRV_SQLTYPE_NVARCHAR('max')|nvarchar(MAX)|  
 |SQLSRV_SQLTYPE_NTEXT|ntext<sup>2</sup>|  
-|SQLSRV_SQLTYPE_REAL|real|  
+|SQLSRV_SQLTYPE_REAL|REAL|  
 |SQLSRV_SQLTYPE_SMALLDATETIME|smalldatetime|  
-|SQLSRV_SQLTYPE_SMALLINT|smallint|  
-|SQLSRV_SQLTYPE_SMALLMONEY|smallmoney|  
+|SQLSRV_SQLTYPE_SMALLINT|SMALLINT|  
+|SQLSRV_SQLTYPE_SMALLMONEY|SMALLMONEY|  
 |SQLSRV_SQLTYPE_TEXT|text<sup>3</sup>|  
 |SQLSRV_SQLTYPE_TIME|time<sup>4</sup>|  
 |SQLSRV_SQLTYPE_TIMESTAMP|TIMESTAMP|  
-|SQLSRV_SQLTYPE_TINYINT|tinyint|  
-|SQLSRV_SQLTYPE_UNIQUEIDENTIFIER|uniqueidentifier|  
+|SQLSRV_SQLTYPE_TINYINT|TINYINT|  
+|SQLSRV_SQLTYPE_UNIQUEIDENTIFIER|UNIQUEIDENTIFIER|  
 |SQLSRV_SQLTYPE_UDT|UDT|  
 |SQLSRV_SQLTYPE_VARBINARY|varbinary<sup>5</sup>|  
 |SQLSRV_SQLTYPE_VARBINARY($byteCount)|varbinary|  

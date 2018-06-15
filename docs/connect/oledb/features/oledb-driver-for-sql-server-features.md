@@ -2,7 +2,7 @@
 title: Controlador OLE DB para características de SQL Server | Documentos de Microsoft
 description: Controlador de OLE DB para características de SQL Server
 ms.custom: ''
-ms.date: 03/26/2018
+ms.date: 06/12/2018
 ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
 ms.component: oledb|features
@@ -18,14 +18,15 @@ helpviewer_keywords:
 author: pmasl
 ms.author: Pedro.Lopes
 manager: craigg
-ms.openlocfilehash: 3f1cc26981dae02bd76133c204c5eff142db76c5
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 5cbc52f29aa0bfc6c60d9f8b7cb47b138c11b561
+ms.sourcegitcommit: 354ed9c8fac7014adb0d752518a91d8c86cdce81
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/14/2018
+ms.locfileid: "35612360"
 ---
 # <a name="ole-db-driver-for-sql-server-features"></a>Controlador OLE DB para características de SQL Server
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
+[!INCLUDE[appliesto-ss-asdb-asdw-pdw-asdbmi-md](../../../includes/appliesto-ss-asdb-asdw-pdw-asdbmi-md.md)]
 
 [!INCLUDE[Driver_OLEDB_Download](../../../includes/driver_oledb_download.md)]
 
@@ -47,7 +48,7 @@ ms.lasthandoff: 05/03/2018
  [Usar tipos definidos por el usuario](../../oledb/features/using-user-defined-types.md)  
  Describe cómo el controlador OLE DB para SQL Server es compatible con definidos por el usuario tipos (UDT), que amplía el sistema de tipos SQL al permitirle almacenar objetos y estructuras de datos personalizadas en un [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] base de datos.  
   
- [Uso de tipos de valores grandes](../../oledb/features/using-large-value-types.md)  
+ [Usar tipos de valor grande](../../oledb/features/using-large-value-types.md)  
  Describe cómo el controlador OLE DB para SQL Server es compatible con los tipos de datos de valor grande, que son tipos de datos de objetos grandes (LOB).  
   
  [Cambiar las contraseñas mediante programación](../../oledb/features/changing-passwords-programmatically.md)  

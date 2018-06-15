@@ -2,7 +2,7 @@
 title: Obtener acceso a información de diagnóstico en el registro de eventos extendidos | Documentos de Microsoft
 description: Seguimiento de controlador de OLE DB para SQL Server y obtener acceso a información de diagnóstico en el registro de eventos extendidos
 ms.custom: ''
-ms.date: 03/26/2018
+ms.date: 06/12/2018
 ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
 ms.component: oledb|features
@@ -14,14 +14,17 @@ ms.topic: reference
 author: pmasl
 ms.author: Pedro.Lopes
 manager: craigg
-ms.openlocfilehash: 255daa268cb3b8aeaee0e371052ae8af01241f72
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 57103074c0dd9453678e115bafcdfabf2270d1ba
+ms.sourcegitcommit: 354ed9c8fac7014adb0d752518a91d8c86cdce81
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/14/2018
+ms.locfileid: "35611660"
 ---
 # <a name="accessing-diagnostic-information-in-the-extended-events-log"></a>Obtener acceso a información de diagnóstico en el registro de eventos extendidos
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
+[!INCLUDE[appliesto-ss-asdb-asdw-pdw-asdbmi-md](../../../includes/appliesto-ss-asdb-asdw-pdw-asdbmi-md.md)]
+
+[!INCLUDE[Driver_OLEDB_Download](../../../includes/driver_oledb_download.md)]
 
   A partir de [!INCLUDE[ssSQL11](../../../includes/sssql11-md.md)], controlador de OLE DB para SQL Server y datos de seguimiento de acceso ([seguimiento de acceso a datos](http://go.microsoft.com/fwlink/?LinkId=125805)) se han actualizado para que sea más fácil obtener información de diagnóstico sobre errores de conexión desde el búfer de anillo de conectividad y la información de rendimiento de aplicación desde el registro de eventos extendidos.  
   
@@ -31,7 +34,7 @@ ms.lasthandoff: 05/03/2018
 > [!NOTE]  
 >  Esta función está dirigida únicamente a la solución de problemas y al diagnóstico, además es posible que no sea adecuada para fines de auditoría o seguridad.  
   
-## <a name="remarks"></a>Comentarios  
+## <a name="remarks"></a>Notas  
  Para las operaciones de conexión, el controlador OLE DB para SQL Server enviará un cliente de identificador de conexión. Si se produce un error en la conexión, puede tener acceso al búfer de anillo de conectividad ([solucionar problemas de conectividad en SQL Server 2008 con el búfer de anillo de conectividad](http://go.microsoft.com/fwlink/?LinkId=207752)) y busque la **ClientConnectionID** campo y obtener información de diagnóstico sobre el error de conexión. Los identificadores de conexión del cliente se registran en el búfer de anillo únicamente si se produce un error. (Si se produce un error en una conexión antes de enviar el paquete de inicio de sesión previo, no se generará un identificador de conexión del cliente.) El identificador de conexión del cliente es un GUID de 16 bytes. También puede encontrar el cliente de destino, de la salida de identificador de conexión en los eventos extendidos si la **client_connection_id** acción se agrega a los eventos en una sesión de eventos extendidos. Puede habilitar el seguimiento de acceso de datos y vuelva a ejecutar el comando de conexión y observar la **ClientConnectionID** campo en el seguimiento de acceso de datos para una operación con errores, si necesita más ayuda de diagnóstico.  
    
   

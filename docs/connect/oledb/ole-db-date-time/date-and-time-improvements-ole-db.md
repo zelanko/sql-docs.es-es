@@ -2,10 +2,10 @@
 title: Fecha y hora mejoras (OLE DB) | Documentos de Microsoft
 description: Mejoras de fecha y hora (OLE DB)
 ms.custom: ''
-ms.date: 03/26/2018
+ms.date: 06/14/2018
 ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
-ms.component: ole-db-date-time
+ms.component: oledb|ole-db-date-time
 ms.reviewer: ''
 ms.suite: sql
 ms.technology: connectivity
@@ -17,14 +17,17 @@ helpviewer_keywords:
 author: pmasl
 ms.author: Pedro.Lopes
 manager: craigg
-ms.openlocfilehash: e68372886ee77daaafb0fdeced0d030f8973d812
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 2edfdd322ca0400d3e811cb7960dfbc6cb73c1bf
+ms.sourcegitcommit: e1bc8c486680e6d6929c0f5885d97d013a537149
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/15/2018
+ms.locfileid: "35665725"
 ---
 # <a name="date-and-time-improvements-ole-db"></a>Fecha y hora mejoras (OLE DB)
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
+[!INCLUDE[appliesto-ss-asdb-asdw-pdw-asdbmi-md](../../../includes/appliesto-ss-asdb-asdw-pdw-asdbmi-md.md)]
+
+[!INCLUDE[Driver_OLEDB_Download](../../../includes/driver_oledb_download.md)]
 
   [!INCLUDE[ssKatmai](../../../includes/sskatmai-md.md)] introduce nuevos tipos de datos de fecha y hora. Esta sección describe cómo se exponen estos nuevos tipos como extensiones de controlador de OLE DB para SQL Server. Para obtener información general del controlador OLE DB para la compatibilidad con SQL Server para el nuevo valor de fecha y tipos de datos de hora, vea [fecha y hora mejoras](../../oledb/features/date-and-time-improvements.md). Para obtener un ejemplo, vea [características uso mejorado de fecha y hora &#40;OLE DB&#41;](../../oledb/ole-db-how-to/use-enhanced-date-and-time-features-ole-db.md).  
   

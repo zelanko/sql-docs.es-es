@@ -4,7 +4,6 @@ ms.custom: ''
 ms.date: 01/11/2018
 ms.prod: sql
 ms.prod_service: connectivity
-ms.component: php
 ms.reviewer: ''
 ms.suite: sql
 ms.technology: connectivity
@@ -15,11 +14,12 @@ caps.latest.revision: 9
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 8a84db386be38765d27565f461fadc39badc3ca2
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: a04c7db3b146f3b4ee936ff2b98947222f5e471b
+ms.sourcegitcommit: f16003fd1ca28b5e06d5700e730f681720006816
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/11/2018
+ms.locfileid: "35308554"
 ---
 # <a name="pdolastinsertid"></a>PDO::lastInsertId
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]
@@ -41,7 +41,7 @@ Si no se proporciona ningún nombre de secuencia, una cadena del identificador d
 Si no se proporciona un nombre de secuencia, una cadena del identificador de la secuencia de agregado más recientemente.
 Si se produce un error en la llamada al método, se devuelve una cadena vacía.
   
-## <a name="remarks"></a>Comentarios  
+## <a name="remarks"></a>Notas  
 En la versión 2.0 de los [!INCLUDE[ssDriverPHP](../../includes/ssdriverphp_md.md)], se agregó compatibilidad con PDO.  
 Entre las versiones 2.0 y 4.3, el parámetro opcional es un nombre de tabla y el valor devuelto es el identificador de la fila agregado más recientemente a la tabla proporcionada.
 A partir de 5.0, el parámetro opcional se considera como un nombre de la secuencia y el valor devuelto es la secuencia que se haya agregado más recientemente para el nombre de la secuencia proporcionada.

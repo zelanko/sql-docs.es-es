@@ -2,7 +2,7 @@
 title: Uso de tipos de valor grande | Documentos de Microsoft
 description: Utilizar tipos de valor grande con controlador OLE DB para SQL Server
 ms.custom: ''
-ms.date: 03/26/2018
+ms.date: 06/12/2018
 ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
 ms.component: oledb|features
@@ -20,14 +20,17 @@ helpviewer_keywords:
 author: pmasl
 ms.author: Pedro.Lopes
 manager: craigg
-ms.openlocfilehash: 6c610ff761a2b1af3ee4f0feda402346efc1dcd6
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: e41b35c8ea552708aa53f3cb8810bbaae06ca680
+ms.sourcegitcommit: 354ed9c8fac7014adb0d752518a91d8c86cdce81
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/14/2018
+ms.locfileid: "35612100"
 ---
 # <a name="using-large-value-types"></a>Usar tipos de valor grande
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
+[!INCLUDE[appliesto-ss-asdb-asdw-pdw-asdbmi-md](../../../includes/appliesto-ss-asdb-asdw-pdw-asdbmi-md.md)]
+
+[!INCLUDE[Driver_OLEDB_Download](../../../includes/driver_oledb_download.md)]
 
   Antes de [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)], trabajar con tipos de datos de valores grandes requería un tratamiento especial. Tipos de datos de valores grandes son los tipos que superan el tamaño máximo de fila de 8 KB. [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)] introdujo un **max** especificador para **varchar**, **nvarchar**, y **varbinary** tipos de datos para permitir el almacenamiento de valores tan grandes como 2 ^ 31 -1 bytes. Columnas de la tabla y [!INCLUDE[tsql](../../../includes/tsql-md.md)] pueden especificar variables **varchar (max)**, **nvarchar (max)**, o **varbinary (max)** tipos de datos.  
   

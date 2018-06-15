@@ -2,7 +2,7 @@
 title: Usar palabras clave de cadena de conexión con el controlador OLE DB para SQL Server | Documentos de Microsoft
 description: Usar palabras clave de cadena de conexión con el controlador OLE DB para SQL Server
 ms.custom: ''
-ms.date: 03/26/2018
+ms.date: 06/12/2018
 ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
 ms.component: oledb|applications
@@ -21,14 +21,15 @@ helpviewer_keywords:
 author: pmasl
 ms.author: Pedro.Lopes
 manager: craigg
-ms.openlocfilehash: a88e1ba37c1c5ddab0af1bbba411a08429fd2a05
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 40aeb07deacbc5e1341f3d38abf5595986cedd48
+ms.sourcegitcommit: 354ed9c8fac7014adb0d752518a91d8c86cdce81
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/14/2018
+ms.locfileid: "35612250"
 ---
 # <a name="using-connection-string-keywords-with-ole-db-driver-for-sql-server"></a>Usar palabras clave de cadena de conexión con el controlador OLE DB para SQL Server
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
+[!INCLUDE[appliesto-ss-asdb-asdw-pdw-asdbmi-md](../../../includes/appliesto-ss-asdb-asdw-pdw-asdbmi-md.md)]
 
 [!INCLUDE[Driver_OLEDB_Download](../../../includes/driver_oledb_download.md)]
 
@@ -77,7 +78,7 @@ ms.lasthandoff: 05/03/2018
   
  En la tabla siguiente se describen las palabras clave que pueden utilizarse con DBPROP_INIT_PROVIDERSTRING.  
   
-|Palabra clave|Propiedad de inicialización|Description|  
+|Palabra clave|Propiedad de inicialización|Descripción|  
 |-------------|-----------------------------|-----------------|  
 |**Addr**|SSPROP_INIT_NETWORKADDRESS|Sinónimo de "Address".|  
 |**Dirección**|SSPROP_INIT_NETWORKADDRESS|Dirección de red del servidor en el que se ejecuta una instancia de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]. **Dirección** suele ser el nombre de red del servidor, pero puede ser otros nombres como una canalización, una dirección IP o una dirección de puerto y el socket de TCP/IP.<br /><br /> Si especifica una dirección IP, asegúrese de que los protocolos TCP/IP o de canalizaciones con nombre estén habilitados en el Administrador de configuración de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)].<br /><br /> El valor de **dirección** tiene prioridad sobre el valor pasado a **Server** en cadenas de conexión cuando se utiliza el controlador OLE DB para SQL Server. Tenga en cuenta también que `Address=;` se conectará al servidor especificado en el **Server** (palabra clave), mientras que `Address= ;, Address=.;`, `Address=localhost;`, y `Address=(local);` establecerán una conexión al servidor local.<br /><br /> La sintaxis completa de la **dirección** palabra clave es como sigue:<br /><br /> [*protocolo ***:**]* dirección *[**, *** puerto &#124;\pipe\pipename*]<br /><br /> *protocolo* puede ser **tcp** (TCP/IP), **lpc** (memoria compartida) o **np** (canalizaciones con nombre). Para obtener más información acerca de los protocolos, consulte [configurar protocolos de cliente](../../../database-engine/configure-windows/configure-client-protocols.md).<br /><br /> Si no *protocolo* ni **red** se especifica la palabra clave, el controlador OLE DB para SQL Server utilizará el orden de protocolo especificado en [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Configuration Manager.<br /><br /> *puerto* es el puerto para conectarse a, en el servidor especificado. De forma predeterminada, [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] usa el puerto 1433.|   
@@ -133,7 +134,7 @@ ms.lasthandoff: 05/03/2018
   
  La tabla siguiente describen las palabras clave que pueden utilizarse con **IDataInitialize:: GetDatasource**:  
   
-|Palabra clave|Propiedad de inicialización|Description|  
+|Palabra clave|Propiedad de inicialización|Descripción|  
 |-------------|-----------------------------|-----------------|  
 |**Application Name**|SSPROP_INIT_APPNAME|Cadena que identifica la aplicación.|  
 |**Intento de aplicación**|SSPROP_INIT_APPLICATIONINTENT|Declara el tipo de carga de trabajo de la aplicación al conectarse a un servidor. Los valores posibles son **ReadOnly** y **ReadWrite**.<br /><br /> El valor predeterminado es **ReadWrite**. Para obtener más información sobre el controlador OLE DB para la compatibilidad de SQL Server de [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)], consulte [controlador OLE DB para SQL Server admite alta disponibilidad, recuperación ante desastres](../../oledb/features/oledb-driver-for-sql-server-support-for-high-availability-disaster-recovery.md).|  
@@ -185,7 +186,7 @@ ms.lasthandoff: 05/03/2018
   
  En la tabla siguiente se describen las palabras clave que pueden utilizarse con una cadena de conexión ADO.  
   
-|Palabra clave|Propiedad de inicialización|Description|  
+|Palabra clave|Propiedad de inicialización|Descripción|  
 |-------------|-----------------------------|-----------------|  
 |**Intento de aplicación**|SSPROP_INIT_APPLICATIONINTENT|Declara el tipo de carga de trabajo de la aplicación al conectarse a un servidor. Los valores posibles son **ReadOnly** y **ReadWrite**.<br /><br /> El valor predeterminado es **ReadWrite**. Para obtener más información sobre el controlador OLE DB para la compatibilidad de SQL Server de [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)], consulte [controlador OLE DB para SQL Server admite alta disponibilidad, recuperación ante desastres](../../oledb/features/oledb-driver-for-sql-server-support-for-high-availability-disaster-recovery.md).|  
 |**Application Name**|SSPROP_INIT_APPNAME|Cadena que identifica la aplicación.|  

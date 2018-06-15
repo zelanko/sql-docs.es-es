@@ -2,7 +2,6 @@
 title: Objeto DataControl (RDS) | Documentos de Microsoft
 ms.prod: sql
 ms.prod_service: connectivity
-ms.component: ado
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
@@ -21,11 +20,12 @@ caps.latest.revision: 15
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: f8784dcbaa65a755a6469edaceb58288ab1e9c25
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 587557a35fc80966151602eb965ab0a756596415
+ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/11/2018
+ms.locfileid: "35287594"
 ---
 # <a name="datacontrol-object-rds"></a>Objeto DataControl (RDS)
 Enlaza una consulta de datos [Recordset](../../../ado/reference/ado-api/recordset-object-ado.md) a uno o varios controles (por ejemplo, un cuadro de texto, el control de cuadrícula o cuadro combinado) para mostrar el **Recordset** datos en una página Web.  
@@ -44,7 +44,7 @@ Enlaza una consulta de datos [Recordset](../../../ado/reference/ado-api/recordse
 </OBJECT>  
 ```  
   
-## <a name="remarks"></a>Comentarios  
+## <a name="remarks"></a>Notas  
  El identificador de clase para el **RDS. DataControl** objeto es BD96C556-65A3 - 11 D 0-983A-00C04FC29E33.  
   
 > [!NOTE]

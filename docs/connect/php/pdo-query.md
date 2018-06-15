@@ -4,7 +4,6 @@ ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
 ms.prod_service: connectivity
-ms.component: php
 ms.reviewer: ''
 ms.suite: sql
 ms.technology: connectivity
@@ -15,11 +14,12 @@ caps.latest.revision: 19
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: fb23a63d77461cb13784c515bd0638af277e63b6
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: c945bb5ab0a14b1c93b0c7f4fb16a72cd258bb14
+ms.sourcegitcommit: f16003fd1ca28b5e06d5700e730f681720006816
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/11/2018
+ms.locfileid: "35308274"
 ---
 # <a name="pdoquery"></a>PDO::query
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]
@@ -44,14 +44,14 @@ Si la llamada se realiza correctamente, PDO::query devuelve un objeto PDOStateme
 ## <a name="exceptions"></a>Excepciones  
 PDOException.  
   
-## <a name="remarks"></a>Comentarios  
+## <a name="remarks"></a>Notas  
 Una consulta ejecutada con PDO:: Query puede ejecutar una instrucción preparada o directa, en función del valor de PDO:: sqlsrv_attr_direct_query. Para obtener más información, vea [Direct Statement Execution and Prepared Statement Execution in the PDO_SQLSRV Driver (Ejecución de la instrucción preparada o directa en el controlador PDO_SQLSRV)](../../connect/php/direct-statement-execution-prepared-statement-execution-pdo-sqlsrv-driver.md).  
   
 PDO:: sqlsrv_attr_query_timeout también afecta al comportamiento de PDO:: exec; Para obtener más información, consulte [PDO:: setAttribute](../../connect/php/pdo-setattribute.md).  
   
 Puede especificar las siguientes opciones para $*fetch_style*.  
   
-|style|Description|  
+|style|Descripción|  
 |---------|---------------|  
 |PDO:: fetch_column, *num*|Consultas de datos de la columna especificada. La primera columna de la tabla es 0.|  
 |Fetch_class, '*classname*', matriz ( *arglist* )|Crea una instancia de una clase y asigna nombres de columna a las propiedades de la clase. Si el constructor de clase toma uno o varios parámetros, también se puede transmitir un objeto *arglist*.|  

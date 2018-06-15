@@ -2,9 +2,10 @@
 title: Resultados del mensaje de SQL Server | Documentos de Microsoft
 description: resultados de los mensajes de SQL Server
 ms.custom: ''
-ms.date: 03/26/2018
+ms.date: 06/14/2018
 ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
+ms.component: oledb|ole-db-errors
 ms.reviewer: ''
 ms.suite: sql
 ms.technology: connectivity
@@ -17,15 +18,17 @@ helpviewer_keywords:
 author: pmasl
 ms.author: Pedro.Lopes
 manager: craigg
-ms.openlocfilehash: 1962b1fa4b3f384988239901a4521fff41e9479e
-ms.sourcegitcommit: f16003fd1ca28b5e06d5700e730f681720006816
-ms.translationtype: HT
+ms.openlocfilehash: 87dbfd1740223f6d3d2116ada8d8c0c109aba15f
+ms.sourcegitcommit: e1bc8c486680e6d6929c0f5885d97d013a537149
+ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/11/2018
-ms.locfileid: "35305454"
+ms.lasthandoff: 06/15/2018
+ms.locfileid: "35665521"
 ---
 # <a name="sql-server-message-results"></a>Resultados de los mensajes de SQL Server
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
+[!INCLUDE[appliesto-ss-asdb-asdw-pdw-asdbmi-md](../../../includes/appliesto-ss-asdb-asdw-pdw-asdbmi-md.md)]
+
+[!INCLUDE[Driver_OLEDB_Download](../../../includes/driver_oledb_download.md)]
 
   El siguiente [!INCLUDE[tsql](../../../includes/tsql-md.md)] instrucciones no generan controlador OLE DB para conjuntos de filas de SQL Server o un recuento de filas afectadas cuando se ejecuta:  
   

@@ -4,7 +4,6 @@ ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
 ms.prod_service: connectivity
-ms.component: php
 ms.reviewer: ''
 ms.suite: sql
 ms.technology: connectivity
@@ -22,11 +21,12 @@ caps.latest.revision: 31
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: b753000c255d6c07777c94e8fb61c847ab10d0c5
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: f603c0357ad356dbf15278fe503e52ccdd8424ab
+ms.sourcegitcommit: f16003fd1ca28b5e06d5700e730f681720006816
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/11/2018
+ms.locfileid: "35309154"
 ---
 # <a name="sqlsrvfetchobject"></a>sqlsrv_fetch_object
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]
@@ -70,7 +70,7 @@ Un objeto PHP con propiedades que se corresponden con los nombres de campo del c
   
 El tipo de datos de un valor en el objeto devuelto será el tipo de datos PHP predeterminado. Para obtener información sobre los tipos de datos PHP predeterminados, consulte [Default PHP Data Types](../../connect/php/default-php-data-types.md).  
   
-## <a name="remarks"></a>Comentarios  
+## <a name="remarks"></a>Notas  
 Si se especifica un nombre de clase con el parámetro opcional *$className* , se crea una instancia en un objeto de este tipo de clase. Si la clase tiene propiedades cuyos nombres coinciden con los nombres de campo del conjunto de resultados, los valores correspondientes del conjunto de resultados se aplican a las propiedades. Si un nombre de campo del conjunto de resultados no coincide con una propiedad de clase, se agrega una propiedad con el nombre de campo del conjunto de resultados al objeto y el valor del conjunto de resultados se aplica a la propiedad.  
   
 Las reglas siguientes se aplican cuando se especifica una clase con el parámetro *$className* :  

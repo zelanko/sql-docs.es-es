@@ -13,11 +13,12 @@ ms.custom: sql-linux
 ms.technology: linux
 helpviewer_keywords:
 - Linux, AAD authentication
-ms.openlocfilehash: df3cea6d47d50464fe0b8a7f2573c230585b9cb1
-ms.sourcegitcommit: ee661730fb695774b9c483c3dd0a6c314e17ddf8
+ms.openlocfilehash: 31c8d15941956e4476156718404159deabac9776
+ms.sourcegitcommit: 354ed9c8fac7014adb0d752518a91d8c86cdce81
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/19/2018
+ms.lasthandoff: 06/14/2018
+ms.locfileid: "35611440"
 ---
 # <a name="tutorial-use-active-directory-authentication-with-sql-server-on-linux"></a>Tutorial: Autenticación uso de Active Directory con SQL Server en Linux
 
@@ -75,7 +76,7 @@ Siga estos pasos para unir un [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.
       ```/etc/network/interfaces
       <...>
       # The primary network interface
-      auth eth0
+      auto eth0
       iface eth0 inet dhcp
       dns-nameservers **<AD domain controller IP address>**
       dns-search **<AD domain name>**

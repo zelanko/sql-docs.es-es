@@ -2,7 +2,6 @@
 title: Bibliotecas de conexiones de bases de datos de SQL de Microsoft | Documentos de Microsoft
 description: Proporciona vínculos de descarga para los módulos que permiten la conexión a Microsoft SQL Server y base de datos de SQL Azure, desde una variedad de lenguajes de programación de cliente.
 author: MightyPen
-ms.component: connect
 ms.suite: sql
 ms.prod: sql
 ms.prod_service: connectivity
@@ -11,11 +10,12 @@ ms.custom: ''
 ms.topic: article
 ms.date: 04/10/2018
 ms.author: genemi
-ms.openlocfilehash: 212558cc1a9715e971e19fd4e637dcd6c089e1bc
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 2bb62d323ce3675a49dbd8abd11a19df2c82dcf9
+ms.sourcegitcommit: f16003fd1ca28b5e06d5700e730f681720006816
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/11/2018
+ms.locfileid: "35310104"
 ---
 # <a name="connection-modules-for-microsoft-sql-databases"></a>Módulos de conexión para bases de datos SQL de Microsoft
 
@@ -49,7 +49,7 @@ PHP driver in Github.com also uses this FWLink:  http://go.microsoft.com/fwlink/
 although the FWLink is less precise than is http://github.com/Microsoft/msphpsql/tree/dev#install-unix .
 -->
 
-| Lenguaje | Descargue el controlador SQL |
+| Idioma | Descargue el controlador SQL |
 | :------- | :---------------------- |
 | C# | [ADO.NET](http://www.microsoft.com/net/download/)<br /><br />[Núcleo de. NET, para Ubuntu Linux](https://www.microsoft.com/net/core#Ubuntu)<br />[Núcleo de. NET, para MacOS](https://www.microsoft.com/net/core#macos)<br />[Núcleo de. NET, para Windows](https://www.microsoft.com/net/core) |
 | C++ | [ODBC](./odbc/download-odbc-driver-for-sql-server.md)<br /><br />[OLE DB](https://go.microsoft.com/fwlink/?linkid=871294) |
@@ -68,7 +68,7 @@ although the FWLink is less precise than is http://github.com/Microsoft/msphpsql
 En la tabla siguiente se muestra ejemplos de marcos de trabajo de asignación relacional de objetos (ORM) que las aplicaciones cliente utilizan para conectarse a bases de datos SQL de Microsoft.
 
 
-| Lenguaje | Descarga del controlador ORM |
+| Idioma | Descarga del controlador ORM |
 | :------- | :------------------ |
 | C# | [Entity Framework Core](http://docs.microsoft.com/ef/core/)<br />[Entity Framework (6.x o posterior)](http://docs.microsoft.com/ef/) |
 | Java | [Hibernación ORM](http://hibernate.org/orm)|

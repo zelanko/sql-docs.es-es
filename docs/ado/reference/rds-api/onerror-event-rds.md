@@ -2,7 +2,6 @@
 title: onError (evento, RDS) | Documentos de Microsoft
 ms.prod: sql
 ms.prod_service: connectivity
-ms.component: ado
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
@@ -18,11 +17,12 @@ caps.latest.revision: 16
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: e7b14f2008446bbe6f49a8c8ae0887f84782f1a6
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 470ed14f132233eb4bec6d58ac17c4d3c492b94e
+ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/11/2018
+ms.locfileid: "35288446"
 ---
 # <a name="onerror-event-rds"></a>onError (evento, RDS)
 El **onError** eventos se llama cada vez que se produce un error durante una operación.  

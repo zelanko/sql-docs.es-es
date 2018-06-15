@@ -6,8 +6,7 @@ ms.date: 01/19/2017
 ms.reviewer: ''
 ms.suite: sql
 ms.prod: sql
-ms.prod_service: drivers
-ms.component: reference
+ms.prod_service: connectivity
 ms.tgt_pltfrm: ''
 ms.topic: conceptual
 apitype: COM
@@ -18,11 +17,12 @@ caps.latest.revision: 15
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 1afc0e84acaf044a7271f0d46d599f4422c650b1
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 37ac91100876f9519e7f7ec2de1c9a375567d392
+ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/11/2018
+ms.locfileid: "35288544"
 ---
 # <a name="readystate-property-rds"></a>Propiedad ReadyState (RDS)
 Indica el progreso de un [DataControl](../../../ado/reference/rds-api/datacontrol-object-rds.md) objeto tal y como recupera datos en su [Recordset](../../../ado/reference/ado-api/recordset-object-ado.md) objeto.  
@@ -33,7 +33,7 @@ Indica el progreso de un [DataControl](../../../ado/reference/rds-api/datacontro
 ## <a name="settings-and-return-values"></a>Configuración y valores devueltos  
  Establece o devuelve uno de los valores siguientes.  
   
-|Value|Description|  
+|Valor|Descripción|  
 |-----------|-----------------|  
 |**adcReadyStateLoaded**|Todavía se está ejecutando la consulta actual y no se han capturado ninguna fila. El **DataControl** del objeto **Recordset** no está disponible para su uso.|  
 |**adcReadyStateInteractive**|Un conjunto inicial de filas recuperadas por la consulta actual se ha almacenado en el **DataControl** del objeto **Recordset** y están disponibles para su uso. Las filas restantes están siendo recuperadas.|  
@@ -42,7 +42,7 @@ Indica el progreso de un [DataControl](../../../ado/reference/rds-api/datacontro
 > [!NOTE]
 >  Cada archivo ejecutable del cliente que utiliza estas constantes debe proporcionar declaraciones para ellos. Puede cortar y pegar las declaraciones de constante que desee desde el archivo Adcvbs.Inc que se encuentra en la carpeta de instalación predeterminada para la biblioteca RDS.  
   
-## <a name="remarks"></a>Comentarios  
+## <a name="remarks"></a>Notas  
  Use la [onReadyStateChange](../../../ado/reference/rds-api/onreadystatechange-event-rds.md) eventos para supervisar los cambios en el **ReadyState** propiedad durante una operación de consulta asincrónica. Esto es más eficiente que comprobar periódicamente el valor de la propiedad.  
   
  Si se produce un error durante una operación asincrónica, la **ReadyState** propiedad cambia a **adcReadyStateComplete**, [estado](../../../ado/reference/ado-api/state-property-ado.md) cambios en las propiedades de **adStateExecuting** a **adStateClosed**y el **Recordset** objeto [valor](../../../ado/reference/ado-api/value-property-ado.md) propiedad permanece *nada* .  

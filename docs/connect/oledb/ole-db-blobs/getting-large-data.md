@@ -2,10 +2,10 @@
 title: Obtener datos de gran tamaño | Documentos de Microsoft
 description: Obtener datos de gran tamaño mediante el controlador OLE DB para SQL Server
 ms.custom: ''
-ms.date: 03/26/2018
+ms.date: 06/14/2018
 ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
-ms.component: ole-db-blobs
+ms.component: oledb|ole-db-blobs
 ms.reviewer: ''
 ms.suite: sql
 ms.technology: connectivity
@@ -19,14 +19,17 @@ helpviewer_keywords:
 author: pmasl
 ms.author: Pedro.Lopes
 manager: craigg
-ms.openlocfilehash: 0e71eb252a447491205f9a8ed803e8c385612430
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 7da19bac472558efadd3671e5dbfe09b5962f30f
+ms.sourcegitcommit: e1bc8c486680e6d6929c0f5885d97d013a537149
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/15/2018
+ms.locfileid: "35666205"
 ---
 # <a name="getting-large-data"></a>Obtener datos grandes
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
+[!INCLUDE[appliesto-ss-asdb-asdw-pdw-asdbmi-md](../../../includes/appliesto-ss-asdb-asdw-pdw-asdbmi-md.md)]
+
+[!INCLUDE[Driver_OLEDB_Download](../../../includes/driver_oledb_download.md)]
 
   En general, los consumidores deben aislar el código que crea un controlador de OLE DB para el objeto de almacenamiento de SQL Server desde otro código que administra los datos que no se hace referencia a través de un **ISequentialStream** puntero de interfaz.  
   
@@ -152,6 +155,6 @@ HRESULT GetUnboundData
   
 ## <a name="see-also"></a>Vea también  
  [BLOB y objetos OLE](../../oledb/ole-db-blobs/blobs-and-ole-objects.md)   
- [Uso de tipos de valores grandes](../../oledb/features/using-large-value-types.md)  
+ [Usar tipos de valor grande](../../oledb/features/using-large-value-types.md)  
   
   

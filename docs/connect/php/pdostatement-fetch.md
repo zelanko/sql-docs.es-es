@@ -4,7 +4,6 @@ ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
 ms.prod_service: connectivity
-ms.component: php
 ms.reviewer: ''
 ms.suite: sql
 ms.technology: connectivity
@@ -15,11 +14,12 @@ caps.latest.revision: 19
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 6fefb85430b6bf3b98d15a884130e1db1d2cdfa8
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 499175b3e75c27b82df93ef84f8b17a049265356
+ms.sourcegitcommit: f16003fd1ca28b5e06d5700e730f681720006816
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/11/2018
+ms.locfileid: "35308424"
 ---
 # <a name="pdostatementfetch"></a>PDOStatement::fetch
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]
@@ -43,10 +43,10 @@ $*cursor_offset*: un símbolo opcional (valor entero) sirve para especificar la 
 ## <a name="return-value"></a>Valor devuelto  
 Un valor mixto que devuelve una fila o False.  
   
-## <a name="remarks"></a>Comentarios  
+## <a name="remarks"></a>Notas  
 Cuando se llama al método de captura, el cursor avanza automáticamente. En la tabla siguiente contiene la lista de posibles $*fetch_style* valores.  
   
-|$*fetch_style*|Description|  
+|$*fetch_style*|Descripción|  
 |-------------------|---------------|  
 |PDO::FETCH_ASSOC|Especifica una matriz indizada por el nombre de columna.|  
 |PDO::FETCH_BOTH|Especifica una matriz indizada por el nombre de columna y el orden basado en 0. Ésta es la opción predeterminada.|  
@@ -61,7 +61,7 @@ Si el cursor se encuentra al final del conjunto de resultados (se ha recuperado 
   
 Si el cursor es desplazable (PDO::ATTR_CURSOR = PDO::CURSOR_SCROLL), el método de captura moverá el cursor dentro del límite del conjunto de resultados. En la tabla siguiente contiene la lista de posibles $*cursor_orientation* valores.  
   
-|$*cursor_orientation*|Description|  
+|$*cursor_orientation*|Descripción|  
 |--------------------------|---------------|  
 |PDO::FETCH_ORI_NEXT|Recupera la fila siguiente. Ésta es la opción predeterminada.|  
 |PDO::FETCH_ORI_PRIOR|Recupera la fila anterior.|  

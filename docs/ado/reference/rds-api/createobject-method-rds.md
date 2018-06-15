@@ -2,7 +2,6 @@
 title: CreateObject (método) (RDS) | Documentos de Microsoft
 ms.prod: sql
 ms.prod_service: connectivity
-ms.component: ado
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
@@ -18,11 +17,12 @@ caps.latest.revision: 16
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: f5759c1b1b9faaaa9262879a614913a5fcf16c42
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 0307edbf2e9b5a6495dd84c45c8dc647fe5bdefd
+ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/11/2018
+ms.locfileid: "35287574"
 ---
 # <a name="createobject-method-rds"></a>CreateObject (método) (RDS)
 Crea al proxy para el objeto de comercial de destino y devuelve un puntero a ella. El proxy empaqueta y ordena datos para el código auxiliar de servidor para las comunicaciones con el objeto de negocios enviar solicitudes y datos a través de Internet. Para los objetos de componente en proceso, se utiliza ningún proxy, se proporciona solo un puntero al objeto.  
@@ -53,7 +53,7 @@ Crea al proxy para el objeto de comercial de destino y devuelve un puntero a ell
  *awebsrvr* o *NombreDeEquipo*  
  A **cadena** valor que representa una dirección URL de identificación del servidor Web de Internet Information Services (IIS) donde se crea una instancia del objeto de negocio de servidor.  
   
-## <a name="remarks"></a>Comentarios  
+## <a name="remarks"></a>Notas  
  El *protocolo HTTP* es el protocolo Web estándar; *HTTPS* es un protocolo Web seguro. Use la *protocolo DCOM* cuando ejecute una red de área local sin HTTP. El *en curso* protocolo es una biblioteca de vínculos dinámicos (DLL) local; no usa una red.  
   
 ## <a name="applies-to"></a>Se aplica a  

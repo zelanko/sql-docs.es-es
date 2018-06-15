@@ -3,7 +3,6 @@ title: Azure Active Directory | Documentos de Microsoft
 ms.date: 07/13/2017
 ms.prod: sql
 ms.prod_service: connectivity
-ms.component: php
 ms.suite: sql
 ms.custom: ''
 ms.technology: connectivity
@@ -11,11 +10,12 @@ ms.topic: conceptual
 author: david-puglielli
 ms.author: v-dapugl
 manager: v-hakaka
-ms.openlocfilehash: bfb4c78f7a32c1205256f7a0d44bd9526fabdc27
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 224fa4f0746c45f9651b4714593e28f719b4d1ab
+ms.sourcegitcommit: f16003fd1ca28b5e06d5700e730f681720006816
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/11/2018
+ms.locfileid: "35307004"
 ---
 # <a name="connect-using-azure-active-directory-authentication"></a>Conectarse mediante la autenticación de Azure Active Directory
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]
@@ -24,7 +24,7 @@ ms.lasthandoff: 05/03/2018
 
 Para usar Azure AD, use la **autenticación** palabra clave. Los valores que **autenticación** puede tardar en se explican en la tabla siguiente.
 
-|Palabra clave|Valores|Description|
+|Palabra clave|Valores|Descripción|
 |-|-|-|
 |**Autenticación**|No se establece (valor predeterminado)|Modo de autenticación determinado por otras palabras clave. Para obtener más información, consulte [Connection Options](../../connect/php/connection-options.md). |
 ||`SqlPassword`|Autenticarse directamente en una instancia de SQL Server (que puede ser una instancia de Azure) utilizando un nombre de usuario y contraseña. El nombre de usuario y la contraseña se deben pasar a la cadena de conexión mediante el **UID** y **PWD** palabras clave. |

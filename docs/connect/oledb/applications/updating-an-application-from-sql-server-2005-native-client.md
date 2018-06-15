@@ -2,7 +2,7 @@
 title: Actualizar una aplicación de SQL Server 2005 Native Client | Documentos de Microsoft
 description: Actualizar una aplicación de SQL Server 2005 Native Client
 ms.custom: ''
-ms.date: 03/26/2018
+ms.date: 06/12/2018
 ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
 ms.component: oledb|applications
@@ -16,14 +16,15 @@ helpviewer_keywords:
 author: pmasl
 ms.author: Pedro.Lopes
 manager: craigg
-ms.openlocfilehash: faea11704538aea426d5c1c6fdbe8018893dcdc4
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 60a03e3ec34c29821a6b29d3174b11c5376511e6
+ms.sourcegitcommit: 354ed9c8fac7014adb0d752518a91d8c86cdce81
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/14/2018
+ms.locfileid: "35612070"
 ---
 # <a name="updating-an-application-from-sql-server-2005-native-client"></a>Actualizar una aplicación desde SQL Server 2005 Native Client
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
+[!INCLUDE[appliesto-ss-asdb-asdw-pdw-asdbmi-md](../../../includes/appliesto-ss-asdb-asdw-pdw-asdbmi-md.md)]
 
 [!INCLUDE[Driver_OLEDB_Download](../../../includes/driver_oledb_download.md)]
 
@@ -33,7 +34,7 @@ ms.lasthandoff: 05/03/2018
 
  [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client 9.0 incluidos con [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)]. [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client 10.0 incluidos con [!INCLUDE[ssKatmai](../../../includes/sskatmai-md.md)].  [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client 10.5 se incluyó en [!INCLUDE[ssKilimanjaro](../../../includes/sskilimanjaro-md.md)]. [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client 11.0 se incluyó en [!INCLUDE[ssSQL11](../../../includes/sssql11-md.md)] y [!INCLUDE[ssSQL14](../../../includes/sssql14-md.md)].  
 
-|Cambió el comportamiento en el controlador de OLE DB para SQL Server en comparación con [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)] Native Client|Description|  
+|Cambió el comportamiento en el controlador de OLE DB para SQL Server en comparación con [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)] Native Client|Descripción|  
 |------------------------------------------------------------------------------------|-----------------|  
 |OLE DB solamente rellena los datos hasta la escala definida.|Para las conversiones donde los datos convertidos se envían al servidor, el controlador OLE DB para SQL Server rellena los ceros finales en datos solo hasta la longitud máxima de **datetime** valores. En SQL Server Native Client 9.0 los datos se rellenaban hasta 9 dígitos.|  
 |Validación de DBTYPE_DBTIMESTAMP para ICommandWithParameter::SetParameterInfo.|Controlador de OLE DB para SQL Server implementa el requisito de OLE DB para *bScale* en ICommandWithParameter::SetParameterInfo que se establecerá con precisión de fracciones de segundo para DBTYPE_DBTIMESTAMP.|  

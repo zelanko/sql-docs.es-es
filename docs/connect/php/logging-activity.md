@@ -4,7 +4,6 @@ ms.custom: ''
 ms.date: 03/26/2018
 ms.prod: sql
 ms.prod_service: connectivity
-ms.component: php
 ms.reviewer: ''
 ms.suite: sql
 ms.technology: connectivity
@@ -17,11 +16,12 @@ caps.latest.revision: 32
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 0a36683429987afff72c3ee9aa98124c4ee0f613
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 146365e4a4a0a287992bb1873a104f62cc79fc0b
+ms.sourcegitcommit: f16003fd1ca28b5e06d5700e730f681720006816
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/11/2018
+ms.locfileid: "35307894"
 ---
 # <a name="logging-activity"></a>Actividad de registro
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]
@@ -40,7 +40,7 @@ pdo_sqlsrv.log_severity = <number>
   
 **log_severity** puede ser uno de los siguientes valores:  
   
-|Value|Descripción|  
+|Valor|Descripción|  
 |---------|---------------|  
 |0|El registro está deshabilitado (se trata del valor predeterminado si no se define ninguno).|  
 |-1|Especifica que se registran errores, advertencias y avisos.|  
@@ -65,7 +65,7 @@ Puede activar el registro mediante el uso de la [sqlsrv_configure](../../connect
   
 En la siguiente tabla se describen las constantes que se pueden utilizar como el valor de la configuración **LogSubsystems** :  
   
-|Valor (equivalente entero entre paréntesis)|Description|  
+|Valor (equivalente entero entre paréntesis)|Descripción|  
 |-----------------------------------------------|---------------|  
 |SQLSRV_LOG_SYSTEM_ALL (-1)|Activa el registro de todos los subsistemas.|  
 |SQLSRV_LOG_SYSTEM_OFF (0)|Desactiva el registro. Ésta es la opción predeterminada.|  
@@ -96,7 +96,7 @@ Tras activar el registro, debe especificar qué desea registrar. Puede registrar
   
 En la tabla siguiente se describen las constantes que se pueden utilizar como el valor de la configuración **LogSeverity** :  
   
-|Valor (equivalente entero entre paréntesis)|Description|  
+|Valor (equivalente entero entre paréntesis)|Descripción|  
 |-----------------------------------------------|---------------|  
 |SQLSRV_LOG_SEVERITY_ALL (-1)|Especifica que se registran errores, advertencias y avisos.|  
 |SQLSRV_LOG_SEVERITY_ERROR (1)|Especifica que los errores se registran. Ésta es la opción predeterminada.|  

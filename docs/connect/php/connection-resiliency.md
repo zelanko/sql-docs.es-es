@@ -3,7 +3,6 @@ title: Resistencia de conexión inactiva
 ms.date: 07/13/2017
 ms.prod: sql
 ms.prod_service: connectivity
-ms.component: php
 ms.suite: sql
 ms.custom: ''
 ms.technology: connectivity
@@ -11,11 +10,12 @@ ms.topic: conceptual
 author: david-puglielli
 ms.author: v-dapugl
 manager: v-hakaka
-ms.openlocfilehash: b2ffbf3ef57db31fcfd3a714fe9e2f6e0565237f
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 250e4e6334a31d760c8fcb3e1e571ec1a726d020
+ms.sourcegitcommit: f16003fd1ca28b5e06d5700e730f681720006816
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/11/2018
+ms.locfileid: "35307264"
 ---
 # <a name="idle-connection-resiliency"></a>Resistencia de conexión inactiva
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]
@@ -24,14 +24,14 @@ ms.lasthandoff: 05/03/2018
 
 Resistencia de conexión se implementa con dos palabras clave de conexión que se pueden agregar a cadenas de conexión: **ConnectRetryCount** y **ConnectRetryInterval**.
 
-|Palabra clave|Valores|Predeterminado|Description|
+|Palabra clave|Valores|Valor predeterminado|Descripción|
 |-|-|-|-|
 |**ConnectRetryCount**| Número entero comprendido entre 0 y 255 (ambos inclusive)|1|El número máximo de intentos para restablecer una conexión interrumpida antes de desistir. De forma predeterminada, se realiza un intento único para volver a establecer una conexión cuando se divide. Un valor de 0 significa que no se intentará ninguna reconexión.|
 |**ConnectRetryInterval**| Número entero comprendido entre 1 y 60 (inclusive)|1| El tiempo, en segundos, entre los intentos para restablecer una conexión. La aplicación intentará volver a conectarse inmediatamente cuando detecta una conexión interrumpida y, a continuación, esperará **ConnectRetryInterval** segundos antes de volver a intentarlo. Esta palabra clave se omite si **ConnectRetryCount** es igual a 0.
 
 Si el producto de **ConnectRetryCount** multiplicado por **ConnectRetryInterval** es mayor que **LoginTimeout**, a continuación, el cliente dejará de intentar conectarse una vez  **LoginTimeout** se alcanza; en caso contrario, continuará intentar volver a conectarse hasta que **ConnectRetryCount** se alcanza.
 
-#### <a name="remarks"></a>Comentarios
+#### <a name="remarks"></a>Notas
 
 Resistencia de conexión se aplica cuando la conexión está inactiva. Errores que se producen al ejecutar una transacción, por ejemplo, no se desencadenarán intentos de reconexión: se producirá un error tal y como se esperaría en caso contrario. Las situaciones siguientes, conocidas como estados de sesión no podrán recuperarse, no desencadenarán intentos de reconexión:
 

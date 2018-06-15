@@ -6,8 +6,7 @@ ms.date: 01/19/2017
 ms.reviewer: ''
 ms.suite: sql
 ms.prod: sql
-ms.prod_service: drivers
-ms.component: reference
+ms.prod_service: connectivity
 ms.tgt_pltfrm: ''
 ms.topic: conceptual
 apitype: COM
@@ -20,11 +19,12 @@ caps.latest.revision: 18
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 6015f19a003148dbe12d6489b23a33848aa0ca29
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: efe8323ac57dda7d1405777e3be0dc997f955556
+ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/11/2018
+ms.locfileid: "35288464"
 ---
 # <a name="server-property-rds"></a>Propiedad del servidor (RDS)
 Indica el protocolo de nombre y la comunicación de Internet Information Services (IIS).  
@@ -120,7 +120,7 @@ DataControl.Server=""
  *DataControl*  
  Una variable de objeto que representa un **RDS. DataControl** objeto.  
   
-## <a name="remarks"></a>Comentarios  
+## <a name="remarks"></a>Notas  
  El servidor es la ubicación donde el **RDS. DataControl** se procesa la solicitud (es decir, una consulta o actualización). De forma predeterminada, todas las solicitudes se procesan por el [RDSServer.DataFactory](../../../ado/reference/rds-api/datafactory-object-rdsserver.md) objeto, [MSDFMAP. Controlador](../../../ado/guide/remote-data-service/datafactory-customization.md) componente, y [MSDFMAP. INI](../../../ado/guide/remote-data-service/understanding-the-customization-file.md) archivo en el servidor especificado. Recuerde que al cambiar de servidores para reconciliar la configuración de los antiguos y nuevos **MSDFMAP. INI** archivos. Las incompatibilidades pueden hacer solicitudes que se realizan correctamente en un servidor genere un error en otro. Si se establece la propiedad del servidor en la cadena vacía "", estos objetos se usará en el equipo local.  
   
 ## <a name="applies-to"></a>Se aplica a  

@@ -2,10 +2,10 @@
 title: Establecer una conexión con un origen de datos | Documentos de Microsoft
 description: Establecer una conexión con un origen de datos mediante el controlador OLE DB para SQL Server
 ms.custom: ''
-ms.date: 03/26/2018
+ms.date: 06/14/2018
 ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
-ms.component: oledb-driver-for-sql-server
+ms.component: oledb|oledb-driver-for-sql-server
 ms.reviewer: ''
 ms.suite: sql
 ms.technology: connectivity
@@ -20,14 +20,17 @@ helpviewer_keywords:
 author: pmasl
 ms.author: Pedro.Lopes
 manager: craigg
-ms.openlocfilehash: 41a5890e7c7e3638267fc85723911c7f6c861276
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 7b4a864d10b109f32e552ed82d9d89868011496d
+ms.sourcegitcommit: e1bc8c486680e6d6929c0f5885d97d013a537149
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/15/2018
+ms.locfileid: "35666105"
 ---
 # <a name="establishing-a-connection-to-a-data-source"></a>Establecer una conexión con un origen de datos
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
+[!INCLUDE[appliesto-ss-asdb-asdw-pdw-asdbmi-md](../../../includes/appliesto-ss-asdb-asdw-pdw-asdbmi-md.md)]
+
+[!INCLUDE[Driver_OLEDB_Download](../../../includes/driver_oledb_download.md)]
 
   Para obtener acceso al controlador de OLE DB para SQL Server, el consumidor debe crear primero una instancia de un objeto de origen de datos mediante una llamada a la **CoCreateInstance** método. Un identificador de clase único (CLSID) identifica cada proveedor OLE DB. Para el controlador OLE DB para SQL Server, el identificador de clase es CLSID_MSOLEDBSQL. También puede utilizar el símbolo MSOLEDBSQL_CLSID que se resolverá como el controlador OLE DB para SQL Server que se utiliza en el msoledbsql.h que se hace referencia.  
   
@@ -37,74 +40,140 @@ ms.lasthandoff: 05/03/2018
   
  El objeto de origen de datos también expone la **IDBInitialize** interfaz. Después se establecen las propiedades, se establece la conexión al origen de datos mediante una llamada a la **IDBInitialize:: Initialize** método. Por ejemplo:  
   
-```  
+```cpp
 CoCreateInstance(CLSID_MSOLEDBSQL,   
                  NULL,   
                  CLSCTX_INPROC_SERVER,  
                  IID_IDBInitialize,   
                  (void **) &pIDBInitialize)  
-```  
+```
   
  Esta llamada a **CoCreateInstance** crea un único objeto de la clase asociada CLSID_MSOLEDBSQL (CSLID asociado con los datos y el código que se usará para crear el objeto). IID_IDBInitialize es una referencia al valor del identificador de la interfaz (**IDBInitialize**) que se usará para comunicarse con el objeto.  
   
- La siguiente es una función de ejemplo que inicializa y establece una conexión al origen de datos.  
+ El ejemplo siguiente muestra cómo inicializar y establezca una conexión al origen de datos.
   
-```  
-void InitializeAndEstablishConnection() {  
-   // Initialize the COM library.  
-   CoInitialize(NULL);  
-  
-   // Obtain access to the OLE DB Driver for SQL Server.  
-   hr = CoCreateInstance(CLSID_MSOLEDBSQL,   
-                         NULL,   
-                         CLSCTX_INPROC_SERVER,  
-                         IID_IDBInitialize,   
-                         (void **) &pIDBInitialize);  
-   // Initialize property values needed to establish connection.  
-   for (i = 0 ; i < 4 ; i++)   
-      VariantInit(&InitProperties[i].vValue);  
-  
-   // Server name.  
-   // See DBPROP structure for more information on InitProperties  
-   InitProperties[0].dwPropertyID  = DBPROP_INIT_DATASOURCE;  
-   InitProperties[0].vValue.vt    = VT_BSTR;  
-   InitProperties[0].vValue.bstrVal=   
-                     SysAllocString(L"Server");  
-   InitProperties[0].dwOptions    = DBPROPOPTIONS_REQUIRED;  
-   InitProperties[0].colid       = DB_NULLID;  
-  
-   // Database.  
-   InitProperties[1].dwPropertyID  = DBPROP_INIT_CATALOG;  
-   InitProperties[1].vValue.vt    = VT_BSTR;  
-   InitProperties[1].vValue.bstrVal= SysAllocString(L"database");  
-   InitProperties[1].dwOptions    = DBPROPOPTIONS_REQUIRED;  
-   InitProperties[1].colid       = DB_NULLID;  
-  
-   // Username (login).  
-   InitProperties[2].dwPropertyID  = DBPROP_AUTH_INTEGRATED;  
-   InitProperties[2].vValue.vt    = VT_BSTR;  
-   InitProperties[2].vValue.bstrVal= SysAllocString(L"SSPI");  
-   InitProperties[2].dwOptions    = DBPROPOPTIONS_REQUIRED;  
-   InitProperties[2].colid       = DB_NULLID;  
-   InitProperties[3].dwOptions    = DBPROPOPTIONS_REQUIRED;  
-   InitProperties[3].colid       = DB_NULLID;  
-  
-   // Construct the DBPROPSET structure(rgInitPropSet). The   
-   // DBPROPSET structure is used to pass an array of DBPROP   
-   // structures (InitProperties) to the SetProperties method.  
-   rgInitPropSet[0].guidPropertySet = DBPROPSET_DBINIT;  
-   rgInitPropSet[0].cProperties   = 4;  
-   rgInitPropSet[0].rgProperties   = InitProperties;  
-  
-   // Set initialization properties.  
-   hr = pIDBInitialize->QueryInterface(IID_IDBProperties,   
-                           (void **)&pIDBProperties);  
-   hr = pIDBProperties->SetProperties(1, rgInitPropSet);   
-   pIDBProperties->Release();  
-  
-   // Now establish the connection to the data source.  
-   pIDBInitialize->Initialize();  
-}  
+```cpp
+#include "msoledbsql.h"
+#include <stdio.h>
+
+HRESULT InitializeAndEstablishConnection(IDBInitialize *&pIDBInitialize);
+
+void main() {
+    IDBInitialize       *pIDBInitialize = nullptr;
+    HRESULT             hr = S_OK;
+
+    // Initialize The Component Object Module Library
+    CoInitialize(nullptr);
+
+    hr = InitializeAndEstablishConnection(pIDBInitialize);
+    if (FAILED(hr)) {
+        printf("Failed to establish connection.\r\n");
+        goto _ExitMain;
+    }
+
+    // Insert code that uses the established connection
+
+_ExitMain:
+    // Free Up All Allocated Memory
+    if (pIDBInitialize)
+    {
+        pIDBInitialize->Uninitialize();
+        pIDBInitialize->Release();
+        pIDBInitialize = nullptr;
+    }
+
+    // Release The Component Object Module Library
+    CoUninitialize();
+}
+
+HRESULT InitializeAndEstablishConnection(IDBInitialize *&pIDBInitialize) {
+    IDBProperties   *pIDBProperties = nullptr;
+    DBPROP          InitProperties[3] = { 0 };
+    DBPROPSET       rgInitPropSet[1] = { 0 };
+    HRESULT         hr = S_OK;
+
+    // Obtain access to the OLE DB Driver for SQL Server.  
+    hr = CoCreateInstance(CLSID_MSOLEDBSQL,
+                          NULL,
+                          CLSCTX_INPROC_SERVER,
+                          IID_IDBInitialize,
+                          (void **)&pIDBInitialize);
+    if (FAILED(hr)) {
+        printf("Failed to obtain access to the OLE DB Driver.\r\n");
+        goto _ExitInitialize;
+    }
+    // Initialize property values needed to establish connection.  
+    for (int i = 0; i < 3; i++) {
+        VariantInit(&InitProperties[i].vValue);
+    }
+
+    // Server name.  
+    // See DBPROP structure for more information on InitProperties  
+    InitProperties[0].dwPropertyID = DBPROP_INIT_DATASOURCE;
+    InitProperties[0].vValue.vt = VT_BSTR;
+    InitProperties[0].vValue.bstrVal = SysAllocString(L"Server");
+    InitProperties[0].dwOptions = DBPROPOPTIONS_REQUIRED;
+    InitProperties[0].colid = DB_NULLID;
+
+    // Database.  
+    InitProperties[1].dwPropertyID = DBPROP_INIT_CATALOG;
+    InitProperties[1].vValue.vt = VT_BSTR;
+    InitProperties[1].vValue.bstrVal = SysAllocString(L"database");
+    InitProperties[1].dwOptions = DBPROPOPTIONS_REQUIRED;
+    InitProperties[1].colid = DB_NULLID;
+
+    // Username (login).  
+    InitProperties[2].dwPropertyID = DBPROP_AUTH_INTEGRATED;
+    InitProperties[2].vValue.vt = VT_BSTR;
+    InitProperties[2].vValue.bstrVal = SysAllocString(L"SSPI");
+    InitProperties[2].dwOptions = DBPROPOPTIONS_REQUIRED;
+    InitProperties[2].colid = DB_NULLID;
+
+    // Construct the DBPROPSET structure(rgInitPropSet). The   
+    // DBPROPSET structure is used to pass an array of DBPROP   
+    // structures (InitProperties) to the SetProperties method.  
+    rgInitPropSet[0].guidPropertySet = DBPROPSET_DBINIT;
+    rgInitPropSet[0].cProperties = 3;
+    rgInitPropSet[0].rgProperties = InitProperties;
+
+    // Set initialization properties.  
+    hr = pIDBInitialize->QueryInterface(IID_IDBProperties,
+                                        (void **)&pIDBProperties);
+    if (FAILED(hr)) {
+        printf("Failed to obtain an IDBProperties interface.\r\n");
+        goto _ExitInitialize;
+    }
+    hr = pIDBProperties->SetProperties(1, rgInitPropSet);
+    if (FAILED(hr)) {
+        printf("Failed to set initialization properties.\r\n");
+        goto _ExitInitialize;
+    }
+
+    // Now establish the connection to the data source.  
+    hr = pIDBInitialize->Initialize();
+    if (FAILED(hr)) {
+        printf("Failed to establish connection with the server.\r\n");
+        goto _ExitInitialize;
+    }
+
+_ExitInitialize:
+    if (pIDBProperties)
+    {
+        pIDBProperties->Release();
+        pIDBProperties = nullptr;
+    }
+
+    if (FAILED(hr))
+    {
+        if (pIDBInitialize)
+        {
+            pIDBInitialize->Release();
+            pIDBInitialize = nullptr;
+        }
+    }
+
+    return hr;
+}
 ```  
   
 ## <a name="see-also"></a>Vea también  

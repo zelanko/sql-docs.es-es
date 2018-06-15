@@ -4,7 +4,6 @@ ms.custom: ''
 ms.date: 07/10/2017
 ms.prod: sql
 ms.prod_service: connectivity
-ms.component: php
 ms.reviewer: ''
 ms.suite: sql
 ms.technology: connectivity
@@ -15,11 +14,12 @@ caps.latest.revision: 28
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 70bc35baf6121a7a9339064f68d8252b48db22e6
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 717657cabc469488565985e3e37d111bb9d592b8
+ms.sourcegitcommit: f16003fd1ca28b5e06d5700e730f681720006816
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/11/2018
+ms.locfileid: "35308164"
 ---
 # <a name="pdoprepare"></a>PDO::prepare
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]
@@ -41,12 +41,12 @@ $*statement*: una cadena que contiene la instrucción SQL.
 ## <a name="return-value"></a>Valor devuelto  
 Devuelve un objeto PDOStatement si se ejecuta correctamente. En caso de error, devuelve un objeto PDOException o False, según el valor de PDO::ATTR_ERRMODE.  
   
-## <a name="remarks"></a>Comentarios  
+## <a name="remarks"></a>Notas  
 Los [!INCLUDE[ssDriverPHP](../../includes/ssdriverphp_md.md)] no evalúan instrucciones preparadas hasta la ejecución.  
   
 En la tabla siguiente se enumera los posibles *key_pair* valores.  
   
-|Key|Description|  
+|Key|Descripción|  
 |-------|---------------|  
 |PDO::ATTR_CURSOR|Especifica el comportamiento del cursor. El valor predeterminado es PDO::CURSOR_FWDONLY. PDO::CURSOR_SCROLL es un cursor estático.<br /><br />Por ejemplo, `array( PDO::ATTR_CURSOR => PDO::CURSOR_FWDONLY )`.<br /><br />Si utiliza PDO::CURSOR_SCROLL, puede utilizar PDO::SQLSRV_ATTR_CURSOR_SCROLL_TYPE, que se describe a continuación.<br /><br />Vea [tipos de Cursor &#40;controlador PDO_SQLSRV&#41; ](../../connect/php/cursor-types-pdo-sqlsrv-driver.md) para obtener más información sobre los conjuntos de resultados y los cursores en el controlador PDO_SQLSRV.|  
 |PDO::ATTR_EMULATE_PREPARES|Cuando PDO:: attr_emulate_prepares está activada, los marcadores de posición en una instrucción preparada se sustituye por parámetros enlazados. Una instrucción SQL completa con ningún marcador de posición, a continuación, se envía a la base de datos en ejecución. <br /><br />PDO:: attr_emulate_prepares puede utilizarse para omitir algunas restricciones en SQL Server. Por ejemplo, SQL Server no admite parámetros con nombre o posicionales en algunas cláusulas de Transact-SQL. Además, SQL Server tiene un límite de 2100 parámetros de enlace.<br /><br />Puede establecer el atributo PDO:: attr_emulate_prepares como true. Por ejemplo:<br /><br />`PDO::ATTR_EMULATE_PREPARES => true`<br /><br />De manera predeterminada, este atributo está establecido como False.<br /><br />**Nota:** La seguridad de las consultas con parámetros no está activada cuando se usa `PDO::ATTR_EMULATE_PREPARES => true`. La aplicación debe asegurarse de que los datos que se enlaza a los parámetros no contienen código malintencionado de Transact-SQL.<br /><br />**Limitaciones:**: dado que los parámetros no se enlazan mediante la característica de consulta con parámetros de la base de datos, no se admiten parámetros input_output y de salida.|  
@@ -62,7 +62,7 @@ array(PDO::ATTR_CURSOR => PDO::CURSOR_SCROLL, PDO::SQLSRV_ATTR_CURSOR_SCROLL_TYP
   
 En la siguiente tabla se muestran los posibles valores para PDO::SQLSRV_ATTR_CURSOR_SCROLL_TYPE.  
   
-|Value|Description|  
+|Valor|Descripción|  
 |---------|---------------|  
 |PDO::SQLSRV_CURSOR_BUFFERED|Crea un cursor estático de cliente (en búfer). Para obtener más información acerca de los cursores de cliente, consulte [tipos de Cursor &#40;controlador PDO_SQLSRV&#41;](../../connect/php/cursor-types-pdo-sqlsrv-driver.md).|  
 |PDO::SQLSRV_CURSOR_DYNAMIC|Crea un cursor dinámico de servidor (no almacenado en búfer), que le permite acceder a las filas en cualquier orden y reflejará los cambios de la base de datos.|  

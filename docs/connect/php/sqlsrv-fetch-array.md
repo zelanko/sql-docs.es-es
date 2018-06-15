@@ -4,7 +4,6 @@ ms.custom: ''
 ms.date: 03/26/2018
 ms.prod: sql
 ms.prod_service: connectivity
-ms.component: php
 ms.reviewer: ''
 ms.suite: sql
 ms.technology: connectivity
@@ -22,11 +21,12 @@ caps.latest.revision: 52
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 3a6df21ff42d0394b153aa97a0b5639fe47beec9
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: aab41821d2f4eb1eb3f92ce998fe440593567d0a
+ms.sourcegitcommit: f16003fd1ca28b5e06d5700e730f681720006816
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/11/2018
+ms.locfileid: "35308974"
 ---
 # <a name="sqlsrvfetcharray"></a>sqlsrv_fetch_array
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]
@@ -45,11 +45,11 @@ sqlsrv_fetch_array( resource $stmt[, int $fetchType [, row[, ]offset]])
   
 *$fetchType* [opcional]: una constante predefinida. Este parámetro puede tomar uno de los valores que se muestran en la siguiente tabla:  
   
-|Value|Description|  
+|Valor|Descripción|  
 |---------|---------------|  
 |SQLSRV_FETCH_NUMERIC|La siguiente fila de datos se devuelve como una matriz numérica.|  
 |SQLSRV_FETCH_ASSOC|La siguiente fila de datos se devuelve como una matriz asociativa. Las claves de matriz son los nombres de columna del conjunto de resultados.|  
-|SQLSRV_FETCH_BOTH|La siguiente fila de datos se devuelve como una matriz numérica y una matriz asociativa. Es el valor predeterminado.|  
+|SQLSRV_FETCH_BOTH|La siguiente fila de datos se devuelve como una matriz numérica y una matriz asociativa. Este es el valor predeterminado.|  
   
 *fila* [opcional]: agregado en la versión 1.1. Uno de los siguientes valores; sirve para especificar la fila a la que se accederá en un conjunto de resultados que utilice un cursor desplazable (Cuando *fila* se especifica, *fetchtype* debe especificarse explícitamente, incluso si se especifica el valor predeterminado.)  
   
@@ -69,7 +69,7 @@ Si se recupera una fila de datos, se devuelve una **matriz** . Si no hay más fi
   
 En función del valor del parámetro *$fetchType* , la **matriz** que se devuelve puede ser una **matriz**indizada numéricamente, una **matriz**asociativa o ambas. De forma predeterminada, se devuelve una **matriz** con claves numérica y asociativas. El tipo de datos de un valor de la matriz devuelta será el tipo de datos PHP predeterminados. Para obtener información sobre los tipos de datos PHP predeterminados, consulte [Default PHP Data Types](../../connect/php/default-php-data-types.md).  
   
-## <a name="remarks"></a>Comentarios  
+## <a name="remarks"></a>Notas  
 Si se devuelve una columna sin nombre, la clave del elemento de la matriz asociativa será una cadena vacía (""). Por ejemplo, observe esta instrucción de Transact-SQL que inserta un valor en una tabla de base de datos y recupera la clave principal generada por el servidor:  
   
 ```

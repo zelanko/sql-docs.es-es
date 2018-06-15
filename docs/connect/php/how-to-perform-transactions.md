@@ -4,7 +4,6 @@ ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
 ms.prod_service: connectivity
-ms.component: php
 ms.reviewer: ''
 ms.suite: sql
 ms.technology: connectivity
@@ -17,11 +16,12 @@ caps.latest.revision: 32
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: fe11037ad2b7a5ae0f927a0880537adf67594899
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 4a2a2d041ba99ded7a8d611620ce288593b341a6
+ms.sourcegitcommit: f16003fd1ca28b5e06d5700e730f681720006816
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/11/2018
+ms.locfileid: "35307664"
 ---
 # <a name="how-to-perform-transactions"></a>Cómo realizar transacciones
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]
@@ -46,7 +46,7 @@ Para ver un ejemplo, consulte [PDO::beginTransaction](../../connect/php/pdo-begi
   
 En el resto del contenido de este tema se explica y muestra cómo usar el controlador SQLSRV para realizar transacciones.  
   
-## <a name="remarks"></a>Comentarios  
+## <a name="remarks"></a>Notas  
 Los pasos para ejecutar una transacción se pueden resumir del siguiente modo:  
   
 1.  Inicie la transacción con **sqlsrv_begin_transaction**.  
@@ -65,7 +65,7 @@ Los pasos para ejecutar una transacción se pueden resumir del siguiente modo:
   
 ## <a name="example"></a>Ejemplo  
   
-### <a name="description"></a>Description  
+### <a name="description"></a>Descripción  
 En el ejemplo siguiente se ejecutan varias consultas como parte de una transacción. Si todas las consultas se realizan correctamente, la transacción se confirma. Si se produce un error en cualquiera de las consultas, se revierte la transacción.  
   
 En el ejemplo se trata de eliminar un pedido de ventas de la tabla *Sales.SalesOrderDetail* y ajustar los niveles de inventario de productos en la tabla *Product.ProductInventory* de cada producto del pedido de ventas. Estas consultas se incluyen en una transacción, ya que todas las consultas deben realizarse correctamente con el fin de que la base de datos refleje con precisión el estado de los pedidos y la disponibilidad de los productos.  

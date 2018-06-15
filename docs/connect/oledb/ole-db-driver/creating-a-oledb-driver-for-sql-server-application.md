@@ -2,10 +2,10 @@
 title: Crear un controlador OLE DB para la aplicación de SQL Server | Documentos de Microsoft
 description: Crear un controlador de OLE DB para la aplicación de SQL Server
 ms.custom: ''
-ms.date: 03/26/2018
+ms.date: 06/14/2018
 ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
-ms.component: oledb-driver-for-sql-server
+ms.component: oledb|oledb-driver-for-sql-server
 ms.reviewer: ''
 ms.suite: sql
 ms.technology: connectivity
@@ -18,14 +18,17 @@ helpviewer_keywords:
 author: pmasl
 ms.author: Pedro.Lopes
 manager: craigg
-ms.openlocfilehash: d9990a169beca3f676a19d3f12aadd5d7cf6a671
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 09cd1243859ef11dccf4a86084aa919a3cc5624a
+ms.sourcegitcommit: e1bc8c486680e6d6929c0f5885d97d013a537149
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/15/2018
+ms.locfileid: "35665315"
 ---
 # <a name="creating-an-ole-db-driver-for-sql-server-application"></a>Crear un controlador OLE DB para la aplicación de SQL Server
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
+[!INCLUDE[appliesto-ss-asdb-asdw-pdw-asdbmi-md](../../../includes/appliesto-ss-asdb-asdw-pdw-asdbmi-md.md)]
+
+[!INCLUDE[Driver_OLEDB_Download](../../../includes/driver_oledb_download.md)]
 
   Crear un controlador de OLE DB para la aplicación de SQL Server incluye los siguientes pasos:  
   
@@ -46,7 +49,7 @@ ms.lasthandoff: 05/03/2018
   
 -   [Procesar resultados](../../oledb/ole-db-driver/processing-results.md)  
   
--   [Acerca de las propiedades OLE DB](../../oledb/ole-db-driver/about-ole-db-properties.md)  
+-   [Acerca de las propiedades de OLE DB](../../oledb/ole-db-driver/about-ole-db-properties.md)  
   
 -   [Uso de la cláusula OUTPUT con OLE DB en el controlador de OLE DB para SQL Server](../../oledb/ole-db-driver/using-the-output-clause-with-ole-db-in-oledb-driver-for-sql-server.md)  
   

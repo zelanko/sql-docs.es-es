@@ -4,7 +4,6 @@ ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
 ms.prod_service: connectivity
-ms.component: php
 ms.reviewer: ''
 ms.suite: sql
 ms.technology: connectivity
@@ -15,11 +14,12 @@ caps.latest.revision: 18
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 32164c9beb05293249eafef76de29dcf3c356182
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: be1e84c923dad3ed92c4c2b983a1e5592741eead
+ms.sourcegitcommit: f16003fd1ca28b5e06d5700e730f681720006816
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/11/2018
+ms.locfileid: "35309254"
 ---
 # <a name="retrieving-data-as-a-stream-using-the-sqlsrv-driver"></a>Recuperación de datos como una secuencia con el controlador SQLSRV
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]
@@ -36,7 +36,7 @@ En los pasos siguientes se resume cómo recuperar datos como una secuencia:
   
 3.  Use [sqlsrv_get_field](../../connect/php/sqlsrv-get-field.md) para recuperar un campo de la fila. Especifique que los datos se recuperen como una secuencia mediante el uso de **SQLSRV_PHPTYPE_STREAM (<encoding>)** como tercer parámetro en la llamada de función. En esta tabla se muestran las constantes que se utilizan para especificar las codificaciones y sus descripciones:  
   
-    |Constante de SQLSRV|Description|  
+    |Constante de SQLSRV|Descripción|  
     |-------------------|---------------|  
     |SQLSRV_ENC_BINARY|Los datos se devuelven del servidor como una secuencia de bytes sin procesar, sin que se realicen procesos de codificación o traducción.|  
     |SQLSRV_ENC_CHAR|Los datos se devuelven en caracteres de 8 bits tal y como se especifica en la página de códigos de la configuración regional de Windows del sistema. Los caracteres multibyte, o aquellos que no tengan una correspondencia con esta página de códigos, se sustituirán por un carácter de signo de interrogación de cierre (?) de un solo byte.|  
@@ -46,7 +46,7 @@ En los pasos siguientes se resume cómo recuperar datos como una secuencia:
   
 ## <a name="in-this-section"></a>En esta sección  
   
-|Tema|Description|  
+|Tema|Descripción|  
 |---------|---------------|  
 |[Tipos de datos con compatibilidad con secuencias con el controlador SQLSRV](../../connect/php/data-types-with-stream-support-using-the-sqlsrv-driver.md)|Muestra los tipos de datos de SQL Server que se pueden recuperar como secuencias.|  
 |[Cómo recuperar datos de caracteres como una secuencia utilizando el controlador SQLSRV](../../connect/php/how-to-retrieve-character-data-as-a-stream-using-the-sqlsrv-driver.md)|Muestra cómo recuperar datos de caracteres como una secuencia.|  

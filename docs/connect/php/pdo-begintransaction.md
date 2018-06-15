@@ -4,7 +4,6 @@ ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
 ms.prod_service: connectivity
-ms.component: php
 ms.reviewer: ''
 ms.suite: sql
 ms.technology: connectivity
@@ -15,11 +14,12 @@ caps.latest.revision: 10
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 3e4ad9df1db56719e683a3047f19a9f1842df9f3
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 48b5d1343a941904280c33f5a983be944c751f2f
+ms.sourcegitcommit: f16003fd1ca28b5e06d5700e730f681720006816
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/11/2018
+ms.locfileid: "35307974"
 ---
 # <a name="pdobegintransaction"></a>PDO::beginTransaction
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]
@@ -36,7 +36,7 @@ bool PDO::beginTransaction();
 ## <a name="return-value"></a>Valor devuelto  
 Se devuelve el valor True si la llamada al método se realizó correctamente; en caso contrario, se devuelve False.  
   
-## <a name="remarks"></a>Comentarios  
+## <a name="remarks"></a>Notas  
 Finaliza la transacción iniciada con PDO:: BeginTransaction cuando [PDO:: Commit](../../connect/php/pdo-commit.md) o [PDO:: Rollback](../../connect/php/pdo-rollback.md) se llama.  
   
 El valor de PDO::ATTR_AUTOCOMMIT no afecta a PDO::beginTransaction.  

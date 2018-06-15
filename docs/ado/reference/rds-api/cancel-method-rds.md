@@ -2,7 +2,6 @@
 title: Cancel (método) (RDS) | Documentos de Microsoft
 ms.prod: sql
 ms.prod_service: connectivity
-ms.component: ado
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
@@ -18,11 +17,12 @@ caps.latest.revision: 16
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 66d237b7d191ae55ec3fa6fe319f4eeba0f3bdec
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 80949ad39f2b4befb6f050d7a664f4c4f9dcbd4e
+ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/11/2018
+ms.locfileid: "35287307"
 ---
 # <a name="cancel-method-rds"></a>Cancel (método) (RDS)
 Cancela la ejecución de una pendiente, llamada de método asincrónico.  
@@ -37,7 +37,7 @@ Cancela la ejecución de una pendiente, llamada de método asincrónico.
 RDS.DataControl.Cancel  
 ```  
   
-## <a name="remarks"></a>Comentarios  
+## <a name="remarks"></a>Notas  
  Cuando se llama a **cancelar**, [ReadyState](../../../ado/reference/rds-api/readystate-property-rds.md) se establece automáticamente en **adcReadyStateLoaded**y el [Recordset](../../../ado/reference/ado-api/recordset-object-ado.md) estará vacío.  
   
 ## <a name="applies-to"></a>Se aplica a  

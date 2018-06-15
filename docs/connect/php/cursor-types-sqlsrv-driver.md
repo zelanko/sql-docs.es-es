@@ -4,7 +4,6 @@ ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
 ms.prod_service: connectivity
-ms.component: php
 ms.reviewer: ''
 ms.suite: sql
 ms.technology: connectivity
@@ -15,11 +14,12 @@ caps.latest.revision: 13
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: ed6b502b0d8b2034624518344c78ed0195dce6b4
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: deffdb98790baa64eaa1983fee6839a65289d0d4
+ms.sourcegitcommit: f16003fd1ca28b5e06d5700e730f681720006816
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/11/2018
+ms.locfileid: "35307294"
 ---
 # <a name="cursor-types-sqlsrv-driver"></a>Tipos de cursor (controlador SQLSRV)
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]
@@ -31,7 +31,7 @@ Cuando se crea un conjunto de resultados con [sqlsrv_query](../../connect/php/sq
   
 Puede crear un conjunto de resultados con un cursor desplazable, que permite obtener acceso a cualquier fila del conjunto de resultados, en cualquier orden. En la tabla siguiente enumera los valores que pueden pasarse a la **Scrollable** opción en sqlsrv_query o sqlsrv_prepare.  
   
-|Opción|Description|  
+|Opción|Descripción|  
 |----------|---------------|  
 |SQLSRV_CURSOR_FORWARD|Permite mover una fila en un momento a partir de la primera fila del conjunto de resultados hasta alcanzar el final del conjunto de resultados.<br /><br />Este es el tipo de cursor predeterminado.<br /><br />[sqlsrv_num_rows](../../connect/php/sqlsrv-num-rows.md) devuelve un error para conjuntos de resultados creados con este tipo de cursor.<br /><br />**reenviar** es la forma abreviada de SQLSRV_CURSOR_FORWARD.|  
 |SQLSRV_CURSOR_STATIC|Permite acceder a las filas en cualquier orden, pero no reflejará los cambios en la base de datos.<br /><br />**estática** es la forma abreviada de SQLSRV_CURSOR_STATIC.|  
@@ -46,7 +46,7 @@ Después de crear un conjunto de resultados, puede usar [sqlsrv_fetch](../../con
   
 En la tabla siguiente se describe los valores que se puede especificar en el *fila* parámetro.  
   
-|Parámetro|Description|  
+|Parámetro|Descripción|  
 |-------------|---------------|  
 |SQLSRV_SCROLL_NEXT|Especifica la fila siguiente. Este es el valor predeterminado, si no se especifica la *fila* parámetro para un conjunto de resultados desplazables.|  
 |SQLSRV_SCROLL_PRIOR|Especifica la fila antes de la fila actual.|  

@@ -2,7 +2,6 @@
 title: Método ConvertToString (RDS) | Documentos de Microsoft
 ms.prod: sql
 ms.prod_service: connectivity
-ms.component: ado
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
@@ -18,11 +17,12 @@ caps.latest.revision: 16
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: da21cb2208e11ffa502b3788e36a1bc034ae1c33
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 495ff412b2865cfbda4576f3b4631b850e2d37e3
+ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/11/2018
+ms.locfileid: "35287584"
 ---
 # <a name="converttostring-method-rds"></a>Método ConvertToString (RDS)
 Convierte un [Recordset](../../../ado/reference/ado-api/recordset-object-ado.md) en una cadena MIME que representa los datos del conjunto de registros.  
@@ -44,7 +44,7 @@ DataFactory.ConvertToString(Recordset)
  *Conjunto de registros*  
  Una variable de objeto que representa un **Recordset** objeto.  
   
-## <a name="remarks"></a>Comentarios  
+## <a name="remarks"></a>Notas  
  Con archivos .asp, utilice **ConvertToString** para incrustar el **Recordset** en una página HTML generada en el servidor para su transmisión a un equipo cliente.  
   
  **ConvertToString** carga por primera vez el **Recordset** en el servicio de cursores de las tablas y, a continuación, genera una secuencia en formato MIME.  

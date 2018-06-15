@@ -2,7 +2,6 @@
 title: SortOrderEnum | Documentos de Microsoft
 ms.prod: sql
 ms.prod_service: connectivity
-ms.component: ado
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
@@ -20,16 +19,17 @@ caps.latest.revision: 11
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 20d0c42a5e6a45951bf95b60f6a1825b228e273e
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 19b231a0d9450fc1c1a92b80f2acfcf39d3b5d2d
+ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/11/2018
+ms.locfileid: "35286837"
 ---
 # <a name="sortorderenum"></a>SortOrderEnum
 Especifica la secuencia de ordenación para una columna indizada.  
   
-|Constante|Value|Description|  
+|Constante|Valor|Descripción|  
 |--------------|-----------|-----------------|  
 |**adSortAscending**|1|Predeterminado: La secuencia de ordenación para la columna es ascendente.|  
 |**adSortDescending**|2|La secuencia de ordenación para la columna es descendente.|  

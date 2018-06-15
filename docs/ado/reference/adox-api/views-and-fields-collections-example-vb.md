@@ -2,7 +2,6 @@
 title: Vistas y campos de ejemplo de colecciones (VB) | Documentos de Microsoft
 ms.prod: sql
 ms.prod_service: connectivity
-ms.component: ado
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
@@ -20,11 +19,12 @@ caps.latest.revision: 9
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: b227a5deb4442e2b5f358f59d6d89db50e21a42a
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: c7f9e8223c51cbd1a15e1e2e1dd2070a316c879b
+ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/11/2018
+ms.locfileid: "35287326"
 ---
 # <a name="views-and-fields-collections-example-vb"></a>Vistas y ejemplo de colecciones de campos (VB)
 El código siguiente muestra cómo utilizar el [comando](../../../ado/reference/adox-api/command-property-adox.md) propiedad y el [Recordset](../../../ado/reference/ado-api/recordset-object-ado.md) objeto que se va a recuperar la información de campo de la vista.  

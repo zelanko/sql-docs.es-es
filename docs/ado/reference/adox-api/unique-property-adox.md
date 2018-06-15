@@ -2,7 +2,6 @@
 title: La propiedad Unique (ADOX) | Documentos de Microsoft
 ms.prod: sql
 ms.prod_service: connectivity
-ms.component: ado
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
@@ -22,11 +21,12 @@ caps.latest.revision: 11
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 2f73e9547e9f0b5d95d4f1666ea4fd5dcfa1fb09
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 66647c71f1491bbf7f85d839d64c3e40f93bfccf
+ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/11/2018
+ms.locfileid: "35287394"
 ---
 # <a name="unique-property-adox"></a>Propiedad Unique (ADOX)
 Indica si las claves de índice deben ser únicas.  
@@ -34,7 +34,7 @@ Indica si las claves de índice deben ser únicas.
 ## <a name="settings-and-return-values"></a>Configuración y valores devueltos  
  Establece y devuelve un **booleano** valor.  
   
-## <a name="remarks"></a>Comentarios  
+## <a name="remarks"></a>Notas  
  El valor predeterminado es **False**.  
   
  Esta propiedad es de solo lectura en [índice](../../../ado/reference/adox-api/index-object-adox.md) ya anexados a una colección de objetos.  

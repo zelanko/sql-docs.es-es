@@ -2,7 +2,6 @@
 title: Tabla (objeto) (ADOX) | Documentos de Microsoft
 ms.prod: sql
 ms.prod_service: connectivity
-ms.component: ado
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
@@ -20,16 +19,17 @@ caps.latest.revision: 10
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 33f2838b292817ca788fbd23d2da53752bdb4ce8
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 17a34c8e53bba7cdb67024b83a8758900d8f6183
+ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/11/2018
+ms.locfileid: "35286840"
 ---
 # <a name="table-object-adox"></a>Objeto de tabla (ADOX)
 Representa una tabla de base de datos que incluye columnas, índices y claves.  
   
-## <a name="remarks"></a>Comentarios  
+## <a name="remarks"></a>Notas  
  El siguiente código crea un nuevo **tabla**:  
   
 ```  

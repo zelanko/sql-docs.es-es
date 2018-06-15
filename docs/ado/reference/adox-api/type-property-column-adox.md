@@ -2,7 +2,6 @@
 title: Type (propiedad) (columna) (ADOX) | Documentos de Microsoft
 ms.prod: sql
 ms.prod_service: connectivity
-ms.component: ado
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
@@ -24,11 +23,12 @@ caps.latest.revision: 11
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 250185c7ea52e560f7a5888e0eae748fdc2b7ec3
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: d826a41564313816fe0c23b00d10eaa2e83efddb
+ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/11/2018
+ms.locfileid: "35287244"
 ---
 # <a name="type-property-column-adox"></a>Tipo de propiedad (columna) (ADOX)
 Indica el tipo de datos de una columna.  
@@ -36,7 +36,7 @@ Indica el tipo de datos de una columna.
 ## <a name="settings-and-return-values"></a>Configuración y valores devueltos  
  Establece o devuelve un **largo** valor que puede ser uno de los [DataTypeEnum](../../../ado/reference/ado-api/datatypeenum.md) constantes. El valor predeterminado es **adVarWChar**.  
   
-## <a name="remarks"></a>Comentarios  
+## <a name="remarks"></a>Notas  
  Esta propiedad es de lectura/escritura hasta que el [columna](../../../ado/reference/adox-api/column-object-adox.md) objeto se anexa a una colección o a otro objeto, después del cual es de solo lectura.  
   
 ## <a name="applies-to"></a>Se aplica a  

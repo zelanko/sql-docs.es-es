@@ -2,7 +2,6 @@
 title: MoveFirst, MoveLast, MoveNext y MovePrevious métodos (RDS) | Documentos de Microsoft
 ms.prod: sql
 ms.prod_service: connectivity
-ms.component: ado
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
@@ -21,11 +20,12 @@ caps.latest.revision: 16
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 315ebd2a4de1a98634a5077096c0909550d979e6
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 7b57fef531fd66e9e649cba77b88d666281b273f
+ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/11/2018
+ms.locfileid: "35288324"
 ---
 # <a name="movefirst-movelast-movenext-and-moveprevious-methods-rds"></a>MoveFirst, MoveLast, MoveNext y MovePrevious métodos (RDS)
 Se mueve a la primera, última, siguiente o anterior registro en un determinado [Recordset](../../../ado/reference/ado-api/recordset-object-ado.md) objeto.  
@@ -44,7 +44,7 @@ DataControl.Recordset.{MoveFirst | MoveLast | MoveNext | MovePrevious}
  *DataControl*  
  Una variable de objeto que representa un [RDS. DataControl](../../../ado/reference/rds-api/datacontrol-object-rds.md) objeto.  
   
-## <a name="remarks"></a>Comentarios  
+## <a name="remarks"></a>Notas  
  Puede usar el **mover** métodos con el **RDS. DataControl** objeto para navegar por los registros de datos en los controles enlazados a datos en una página Web. Por ejemplo, supongamos que muestra un **Recordset** en una cuadrícula enlazando a un **RDS. DataControl** objeto. A continuación, podrá incluir los botones primero, último, siguiente y anterior que los usuarios pueden hacer clic para moverse a la primera, última, siguiente o del registro anterior en la muestra **conjunto de registros**. Para ello, al llamar a la **MoveFirst**, **MoveLast**, **MoveNext**, y **MovePrevious** métodos de la **RDS. DataControl** objeto en los procedimientos onClick de los botones primero, último, siguiente y anterior, respectivamente. El [ejemplo de libreta de direcciones](../../../ado/guide/remote-data-service/address-book-navigation-buttons.md) muestra cómo hacerlo.  
   
 ## <a name="applies-to"></a>Se aplica a  

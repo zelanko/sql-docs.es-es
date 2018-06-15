@@ -5,7 +5,6 @@ ms.custom: ''
 ms.date: 03/26/2018
 ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
-ms.component: ole-db-tables-indexes
 ms.reviewer: ''
 ms.suite: sql
 ms.technology: connectivity
@@ -20,11 +19,12 @@ helpviewer_keywords:
 author: pmasl
 ms.author: Pedro.Lopes
 manager: craigg
-ms.openlocfilehash: 4f1169ac498362d8716f532b08f8928cac507287
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 9648462e65ed85b5a9652e193dc63d30059c0753
+ms.sourcegitcommit: f16003fd1ca28b5e06d5700e730f681720006816
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/11/2018
+ms.locfileid: "35306874"
 ---
 # <a name="creating-sql-server-indexes"></a>Crear índices de SQL Server
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -45,7 +45,7 @@ ms.lasthandoff: 05/03/2018
   
  **CreateIndex** interpreta las propiedades del índice como sigue.  
   
-|Id. de propiedad|Description|  
+|Id. de propiedad|Descripción|  
 |-----------------|-----------------|  
 |DBPROP_INDEX_AUTOUPDATE|L/E lectura/escritura<br /><br /> Valor predeterminado: ninguno<br /><br /> Descripción: El controlador OLE DB para SQL Server no admite esta propiedad. Intenta establecer la propiedad **CreateIndex** hacer que un valor devuelto de DB_S_ERRORSOCCURRED. El *dwStatus* miembro de la estructura de la propiedad indica DBPROPSTATUS_BADVALUE.|  
 |DBPROP_INDEX_CLUSTERED|L/E lectura/escritura<br /><br /> Valor predeterminado: VARIANT_FALSE<br /><br /> Descripción: controla la agrupación en clústeres de índices.<br /><br /> VARIANT_TRUE: El controlador OLE DB para SQL Server intenta crear un índice agrupado en la [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] tabla. [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] admite a lo sumo un índice clúster en cualquier tabla.<br /><br /> VARIANT_FALSE: El controlador OLE DB para SQL Server intenta crear un índice no agrupado en el [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] tabla.|  
@@ -61,7 +61,7 @@ ms.lasthandoff: 05/03/2018
   
  En el conjunto de propiedades específicas del proveedor DBPROPSET_SQLSERVERINDEX, el controlador OLE DB para SQL Server define la siguiente propiedad de información de origen de datos.  
   
-|Id. de propiedad|Description|  
+|Id. de propiedad|Descripción|  
 |-----------------|-----------------|  
 |SSPROP_INDEX_XML|Tipo: VT_BOOL (L/E)<br /><br /> Valor predeterminado: VARIANT_FALSE<br /><br /> Descripción: cuando esta propiedad se especifica con un valor de VARIANT_TRUE con IIndexDefinition::CreateIndex, da como resultado la creación de un índice xml primario correspondiente a la columna que se está indizando. Si esta propiedad es VARIANT_TRUE, cIndexColumnDescs debe ser 1, de lo contrario es un error.|  
   

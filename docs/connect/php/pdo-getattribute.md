@@ -4,7 +4,6 @@ ms.custom: ''
 ms.date: 07/13/2017
 ms.prod: sql
 ms.prod_service: connectivity
-ms.component: php
 ms.reviewer: ''
 ms.suite: sql
 ms.technology: connectivity
@@ -15,11 +14,12 @@ caps.latest.revision: 20
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 56e0fc4e6cf98af6b688fe3752b7b57eda134341
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 775596cb3978254401c27f7584a7694fc65a7a64
+ms.sourcegitcommit: f16003fd1ca28b5e06d5700e730f681720006816
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/11/2018
+ms.locfileid: "35308154"
 ---
 # <a name="pdogetattribute"></a>PDO::getAttribute
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]
@@ -39,10 +39,10 @@ mixed PDO::getAttribute ( $attribute )
 ## <a name="return-value"></a>Valor devuelto  
 Si se ejecuta correctamente, devuelve el valor de una opción de conexión, el atributo PDO predefinido o el atributo de controlador personalizado. En caso de error, se devuelve el valor Null.  
   
-## <a name="remarks"></a>Comentarios  
+## <a name="remarks"></a>Notas  
 En la tabla siguiente se incluye la lista de atributos admitidos.  
   
-|Atributo|Procesado mediante|Valores admitidos:|Description|  
+|Attribute|Procesado mediante|Valores admitidos:|Descripción|  
 |-------------|----------------|--------------------|---------------|  
 |PDO::ATTR_CASE|PDO|PDO::CASE_LOWER<br /><br />PDO::CASE_NATURAL<br /><br />PDO::CASE_UPPER|Especifica el uso de mayúsculas y minúsculas en los nombres de columna. PDO::CASE_LOWER obliga a que los nombres de columna usen minúsculas, PDO::CASE_NATURAL deja el nombre de columna que devuelve la base de datos y PDO::CASE_UPPER fuerza que los nombres de columna estén en mayúsculas.<br /><br />El valor predeterminado es PDO::CASE_NATURAL.<br /><br />Este atributo también puede establecerse utilizando PDO::setAttribute.|  
 |PDO::ATTR_CLIENT_VERSION|[!INCLUDE[ssDriverPHP](../../includes/ssdriverphp_md.md)]|Matriz de cadenas|Describe las versiones del controlador y las bibliotecas relacionadas. Devuelve una matriz con los siguientes elementos: versión de ODBC (*MajorVer*. *MinorVer*), [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] nombre de DLL de Native Client y la versión, [!INCLUDE[ssDriverPHP](../../includes/ssdriverphp_md.md)] versión (*MajorVer*. *MinorVer*. *BuildNumber*. *Revisión*)|  

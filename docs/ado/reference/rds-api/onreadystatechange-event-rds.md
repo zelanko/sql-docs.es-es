@@ -2,7 +2,6 @@
 title: onReadyStateChange eventos (RDS) | Documentos de Microsoft
 ms.prod: sql
 ms.prod_service: connectivity
-ms.component: ado
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
@@ -18,11 +17,12 @@ caps.latest.revision: 16
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 152acad43fbecebc5ee7808284a1d1fba90e1380
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 66de98fbc8c78b194ce41f0f26bb5f1ed6c351c2
+ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/11/2018
+ms.locfileid: "35288129"
 ---
 # <a name="onreadystatechange-event-rds"></a>onReadyStateChange (evento, RDS)
 El **onReadyStateChange** eventos se llama cada vez que el valor de la [ReadyState](../../../ado/reference/rds-api/readystate-property-rds.md) cambios de propiedad.  
@@ -40,7 +40,7 @@ onReadyStateChange
 #### <a name="parameters"></a>Parámetros  
  Ninguno.  
   
-## <a name="remarks"></a>Comentarios  
+## <a name="remarks"></a>Notas  
  El **ReadyState** propiedad refleja el progreso de un [RDS. DataControl](../../../ado/reference/rds-api/datacontrol-object-rds.md) objeto tal y como recupera de forma asincrónica datos en su [Recordset](../../../ado/reference/ado-api/recordset-object-ado.md) objeto. Use la **onReadyStateChange** eventos para supervisar los cambios en el **ReadyState** propiedad cada vez que se producen. Esto es más eficiente que comprobar periódicamente el valor de propiedad.  
   
 ## <a name="applies-to"></a>Se aplica a  

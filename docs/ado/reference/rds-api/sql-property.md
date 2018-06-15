@@ -6,8 +6,7 @@ ms.date: 01/19/2017
 ms.reviewer: ''
 ms.suite: sql
 ms.prod: sql
-ms.prod_service: drivers
-ms.component: reference
+ms.prod_service: connectivity
 ms.tgt_pltfrm: ''
 ms.topic: conceptual
 apitype: COM
@@ -18,11 +17,12 @@ caps.latest.revision: 16
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: a5ddbfa6b69f4859f61130e8ec1c9b758c40cf64
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: c14edf35af65a9e9a64bbc89bb0cc9eb14a1d6a0
+ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/11/2018
+ms.locfileid: "35288934"
 ---
 # <a name="sql-property"></a>Propiedad SQL
 Indica la cadena de consulta utilizada para recuperar la [conjunto de registros](../../../ado/reference/ado-api/recordset-object-ado.md).  
@@ -47,7 +47,7 @@ Run time: DataControl.SQL = "QueryString"
  *DataControl*  
  Una variable de objeto que representa un **RDS. DataControl** objeto.  
   
-## <a name="remarks"></a>Comentarios  
+## <a name="remarks"></a>Notas  
  En general, esto es una instrucción SQL (mediante el dialecto del servidor de base de datos), como `"Select * from NewTitles"`. Para asegurarse de que los registros son coincidentes y actualizados con precisión, una consulta actualizable debe contener un campo que no sea un campo binario largo o un campo calculado.  
   
  El **SQL** propiedad es opcional si un objeto comercial personalizado de servidor recupera los datos para el cliente.  

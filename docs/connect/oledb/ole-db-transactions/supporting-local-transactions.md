@@ -5,7 +5,6 @@ ms.custom: ''
 ms.date: 03/26/2018
 ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
-ms.component: ole-db-transactions
 ms.reviewer: ''
 ms.suite: sql
 ms.technology: connectivity
@@ -21,11 +20,12 @@ helpviewer_keywords:
 author: pmasl
 ms.author: Pedro.Lopes
 manager: craigg
-ms.openlocfilehash: de00c4aac3125209bb56a1867f07b1f395804cc8
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 2c3d85ce4a26c5840b393336e878bda4fa20b142
+ms.sourcegitcommit: f16003fd1ca28b5e06d5700e730f681720006816
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/11/2018
+ms.locfileid: "35308004"
 ---
 # <a name="supporting-local-transactions"></a>Compatibilidad con transacciones locales
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -38,7 +38,7 @@ ms.lasthandoff: 05/03/2018
   
  El controlador OLE DB para SQL Server admite **ITransactionLocal:: StartTransaction** parámetros tal y como se indica a continuación.  
   
-|Parámetro|Description|  
+|Parámetro|Descripción|  
 |---------------|-----------------|  
 |*isoLevel*[in]|Nivel de aislamiento que se va a utilizar con esta transacción. En las transacciones locales, el controlador OLE DB para SQL Server admite lo siguiente:<br /><br /> **ISOLATIONLEVEL_UNSPECIFIED**<br /><br /> **ISOLATIONLEVEL_CHAOS**<br /><br /> **ISOLATIONLEVEL_READUNCOMMITTED**<br /><br /> **ISOLATIONLEVEL_READCOMMITTED**<br /><br /> **ISOLATIONLEVEL_REPEATABLEREAD**<br /><br /> **ISOLATIONLEVEL_CURSORSTABILITY**<br /><br /> **ISOLATIONLEVEL_REPEATABLEREAD**<br /><br /> **ISOLATIONLEVEL_SERIALIZABLE**<br /><br /> **ISOLATIONLEVEL_ISOLATED**<br /><br /> **ISOLATIONLEVEL_SNAPSHOT**<br /><br /> <br /><br /> Nota: A partir [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)], ISOLATIONLEVEL_SNAPSHOT es válido para la *isoLevel* argumento o no está habilitado el control de versiones para la base de datos. Sin embargo, se producirá un error si el usuario intenta ejecutar una instrucción y no está habilitado el control de versiones, o si la base de datos no es de solo lectura. Además, se producirá el error XACT_E_ISOLATIONLEVEL si se especifica ISOLATIONLEVEL_SNAPSHOT como el *isoLevel* cuando se conecta a una versión de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] anteriores a [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)].|  
 |*isoFlags*[in]|El controlador OLE DB para SQL Server devuelve un error para cualquier valor distinto de cero.|  
@@ -47,7 +47,7 @@ ms.lasthandoff: 05/03/2018
   
  Para realizar transacciones locales, implementa el controlador OLE DB para SQL Server **ITransaction:: Abort** parámetros tal y como se indica a continuación.  
   
-|Parámetro|Description|  
+|Parámetro|Descripción|  
 |---------------|-----------------|  
 |*pboidReason*[in]|Se omite si está establecido. Puede ser sin ningún riesgo NULL.|  
 |*fRetaining*[in]|Si es TRUE, se inicia una nueva transacción de forma implícita para la sesión. La transacción debe ser confirmada o finalizada por el consumidor. Cuando sea FALSE, el controlador OLE DB para SQL Server vuelve al modo de confirmación automática para la sesión.|  
@@ -55,7 +55,7 @@ ms.lasthandoff: 05/03/2018
   
  Para realizar transacciones locales, implementa el controlador OLE DB para SQL Server **ITransaction:: Commit** parámetros tal y como se indica a continuación.  
   
-|Parámetro|Description|  
+|Parámetro|Descripción|  
 |---------------|-----------------|  
 |*fRetaining*[in]|Si es TRUE, se inicia una nueva transacción de forma implícita para la sesión. La transacción debe ser confirmada o finalizada por el consumidor. Cuando sea FALSE, el controlador OLE DB para SQL Server vuelve al modo de confirmación automática para la sesión.|  
 |*grfTC*[in]|Asincrónicos ni fase uno devuelve no se admiten por el controlador OLE DB para SQL Server. El controlador OLE DB para SQL Server devuelve XACT_E_NOTSUPPORTED para cualquier valor distinto de XACTTC_SYNC.|  
@@ -131,7 +131,7 @@ if (FAILED(hr))
 ```  
   
 ## <a name="see-also"></a>Vea también  
- [Transacciones](../../oledb/ole-db-transactions/transactions.md)   
+ [Transactions](../../oledb/ole-db-transactions/transactions.md)   
  [Trabajar con aislamiento de instantánea](../../oledb/features/working-with-snapshot-isolation.md)  
   
   

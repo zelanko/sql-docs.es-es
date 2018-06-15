@@ -30,6 +30,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32908140"
 ---
 # <a name="default-data-source"></a>Origen de datos predeterminado
 El controlador puede seleccionar un origen de datos, denominado el origen de datos de forma predeterminada, en ciertos casos donde la aplicación no especifica explícitamente uno:  

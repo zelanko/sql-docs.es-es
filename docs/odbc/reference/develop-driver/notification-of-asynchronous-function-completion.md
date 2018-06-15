@@ -19,6 +19,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32915850"
 ---
 # <a name="notification-of-asynchronous-function-completion"></a>Notificación de finalización asincrónica (función)
 En el SDK de Windows 8, ODBC agrega un mecanismo para notificar a las aplicaciones cuando se completa una operación asincrónica, lo que nos referiremos a como "notificación de finalización". (Consulte [ejecución asincrónica (método de notificación)](../../../odbc/reference/develop-app/asynchronous-execution-notification-method.md) para obtener más información.) En este tema se trata algunos de los problemas para los desarrolladores de controladores.  

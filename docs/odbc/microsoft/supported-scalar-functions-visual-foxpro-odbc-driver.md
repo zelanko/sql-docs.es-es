@@ -23,6 +23,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32908080"
 ---
 # <a name="supported-scalar-functions-visual-foxpro-odbc-driver"></a>Admite las funciones escalares (controlador ODBC de Visual FoxPro)
 El controlador ODBC de Visual FoxPro admite tres tipos de funciones escalares, como se define en la gramática de SQL de ODBC: cadena, numéricos y las funciones de fecha y hora.  

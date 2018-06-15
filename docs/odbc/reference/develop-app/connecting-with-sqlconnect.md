@@ -29,6 +29,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32909610"
 ---
 # <a name="connecting-with-sqlconnect"></a>Conexión con SQLConnect
 **SQLConnect** es la función de conexión más sencilla. Se requiere un nombre de origen de datos y acepta un Id. de usuario opcionales y una contraseña. Funciona bien para las aplicaciones que codifica un origen de datos nombre y no requieren un Id. de usuario o una contraseña. También funciona bien para las aplicaciones que desean controlan su propias "apariencia" o que no tienen ninguna interfaz de usuario. Estas aplicaciones pueden generar una lista de orígenes de datos mediante **SQLDataSources**, pedir al usuario para el origen de datos, el Id. de usuario y la contraseña y, a continuación, llame a **SQLConnect**.  

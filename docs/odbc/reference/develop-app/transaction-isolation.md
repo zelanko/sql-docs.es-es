@@ -22,6 +22,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32914780"
 ---
 # <a name="transaction-isolation"></a>Aislamiento de transacción
 *Aislamiento de transacción* hace referencia al grado de interacción entre varias transacciones simultáneas. Para ver por qué esto es importante, debe buscar primero en la idea de la posibilidad de serializar.  

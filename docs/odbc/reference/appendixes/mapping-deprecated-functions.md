@@ -26,6 +26,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32914110"
 ---
 # <a name="mapping-deprecated-functions"></a>Asignación de funciones en desuso.
 Esta sección describen las funciones en desuso cómo se asignan por ODBC 3 *.x* el Administrador de controladores para garantizar la compatibilidad con versiones anteriores de ODBC 3 *.x* controladores que se usan con ODBC 2. *x* aplicaciones. El Administrador de controladores se realiza esta asignación independientemente de la versión de la aplicación. Dado que cada una de la 2 de ODBC. *x* funciones en la lista siguiente se asigna a la correspondiente ODBC 3 *.x* funcionar cuando se llama en una aplicación ODBC 3 *.x* controlador ODBC 3 *.x*controlador no tiene que implementar la API ODBC 2. *x* funciones.  

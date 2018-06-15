@@ -27,6 +27,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32909650"
 ---
 # <a name="binding-columns-for-use-with-block-cursors"></a>Enlazar columnas para su uso con cursores de bloque
 Dado que los cursores de bloque devuelven varias filas, las aplicaciones que usan deben enlazar una matriz de variables a cada columna en lugar de una única variable. Estas matrices se conocen colectivamente como la *búferes de conjunto de filas*. Estos son los dos estilos de enlace:  

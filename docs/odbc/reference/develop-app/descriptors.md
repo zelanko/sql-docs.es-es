@@ -24,6 +24,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32908820"
 ---
 # <a name="descriptors"></a>Descriptores de
 Un identificador de descriptor hace referencia a una estructura de datos que contiene información sobre las columnas o parámetros dinámicos.  

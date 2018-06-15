@@ -24,6 +24,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32914680"
 ---
 # <a name="type-identifiers"></a>Identificadores de tipo
 Para describir tipos de datos SQL y C, ODBC define dos conjuntos de *escriba identificadores*. Un identificador de tipo describe el tipo de un búfer de C o una columna SQL. Es un **#define** valor y se pasa como un argumento de función o devuelto en metadatos generalmente.  

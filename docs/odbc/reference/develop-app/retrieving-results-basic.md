@@ -23,6 +23,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32913010"
 ---
 # <a name="retrieving-results-basic"></a>Al recuperar los resultados (Basic)
 A *conjunto de resultados* es un conjunto de filas en el origen de datos que cumple determinados criterios. Es una tabla conceptual que da como resultado de una consulta y que está disponible para una aplicación en un formato tabular. **Seleccione** instrucciones, funciones de catálogo y algunos procedimientos para crear conjuntos de resultados. En el ejemplo siguiente, la primera instrucción SQL crea un conjunto que contiene todas las filas y todas las columnas de la tabla Orders de resultados y la segunda instrucción SQL crea un conjunto que contiene las columnas OrderID, vendedor y el estado de las filas de la tabla Orders de resultados en el que el estado es pendiente:  

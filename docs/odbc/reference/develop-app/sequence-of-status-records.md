@@ -23,6 +23,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32911100"
 ---
 # <a name="sequence-of-status-records"></a>Secuencia de registros de estado
 Si se devuelven dos o más registros de estado, el Administrador de controladores y el controlador clasifican según las reglas siguientes. El registro con la clasificación más alta es el primer registro. El origen de un registro (Administrador de controladores, controladores, puerta de enlace etc.) no se considera cuando los registros de categoría.  

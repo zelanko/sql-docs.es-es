@@ -23,6 +23,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32909913"
 ---
 # <a name="connecting-with-sqlbrowseconnect"></a>Conectar con SQLBrowseConnect
 **SQLBrowseConnect**, como **SQLDriverConnect**, usa una cadena de conexión. Sin embargo, mediante el uso de **SQLBrowseConnect**, una aplicación puede construir una cadena de conexión completa en tiempo de ejecución. Esto permite a la aplicación hacer dos cosas:  

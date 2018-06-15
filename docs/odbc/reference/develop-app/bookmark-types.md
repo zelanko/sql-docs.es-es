@@ -24,6 +24,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32909306"
 ---
 # <a name="bookmark-types"></a>Tipos de marcador
 Todos los marcadores en ODBC 3 *.x* son marcadores de longitud variable. Esto permite que una clave principal o un índice único asociado a una tabla que se usará como un marcador. El marcador también puede ser un valor de 32 bits, que se utilizaba en ODBC 2. *x*. Para especificar que se utiliza un marcador con un cursor, una aplicación ODBC 3 *.x* aplicación establece el atributo de instrucción de SQL_ATTR_USE_BOOKMARK en SQL_UB_VARIABLE. Automáticamente se utiliza un marcador de longitud variable.  

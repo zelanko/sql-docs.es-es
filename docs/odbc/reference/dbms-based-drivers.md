@@ -23,6 +23,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32908530"
 ---
 # <a name="dbms-based-drivers"></a>Controladores basados en DBMS
 Se utilizan controladores basados en DBMS con orígenes de datos como Oracle o SQL Server que proporcionan un motor de base de datos independiente para el controlador que se utilizará. Estos controladores de tener acceso a los datos físicos a través del motor independiente; es decir, que enviar instrucciones SQL y recuperar los resultados del motor de.  

@@ -24,6 +24,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32913630"
 ---
 # <a name="serializability"></a>La posibilidad de serializar
 Idealmente, deberían ser las transacciones *serializable*. Se dice que las transacciones que sean serializables si los resultados de ejecutar al mismo tiempo las transacciones son los mismos que los resultados de su ejecución en serie, es decir, una detrás de otra. No es importante qué transacción se ejecuta en primer lugar, solo que el resultado no refleja cualquier combinación de las transacciones.  

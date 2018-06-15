@@ -21,6 +21,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32909920"
 ---
 # <a name="sqlgetdata-cursor-library"></a>SQLGetData (biblioteca de cursores)
 > [!IMPORTANT]  

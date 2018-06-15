@@ -25,6 +25,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32916110"
 ---
 # <a name="standard-programming-interface"></a>Interfaz de programación estándar
 La interfaz de programación es quizás la más obvio candidato para la estandarización. De hecho, cuando se estaba desarrollando ODBC, ANSI e ISO ya proporcionan estándares para embedded SQL y SQL módulos. Aunque no estándares existían para una base de datos CLI, el grupo de acceso de SQL: un consorcio de la industria de proveedores de base de datos, se considere la posibilidad de crear uno; partes de ODBC más adelante se convirtió en la base de su trabajo.  

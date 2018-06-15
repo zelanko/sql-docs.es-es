@@ -21,6 +21,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32917330"
 ---
 # <a name="odbc-driver-architecture"></a>Arquitectura de controladores ODBC
 Escritores de controladores deben tener en cuenta que puede afectar la arquitectura de controlador si una aplicación puede utilizar SQL específicos de DBMS.  

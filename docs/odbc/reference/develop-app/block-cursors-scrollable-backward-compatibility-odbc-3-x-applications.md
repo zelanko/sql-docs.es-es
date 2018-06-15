@@ -25,6 +25,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32914000"
 ---
 # <a name="block-cursors-scrollable-cursors-and-backward-compatibility-for-odbc-3x-applications"></a>Cursores de bloque y los cursores desplazables, compatibilidad con versiones anteriores de las aplicaciones ODBC 3.x
 La existencia de ambos **SQLFetchScroll** y **SQLExtendedFetch** representa el primer clear divide en ODBC entre la aplicación de interfaz de programación (API), que es el conjunto de funciones de la las llamadas de la aplicación y la interfaz de proveedor de servicio (SPI), que es el conjunto de funciones el controlador implementa. Esta división es necesario para equilibrar el requisito en ODBC 3. *x*, que usa **SQLFetchScroll**, para alinear con los estándares y ser compatible con ODBC 2. *x*, que usa **SQLExtendedFetch**.  

@@ -23,6 +23,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32912990"
 ---
 # <a name="pattern-value-arguments"></a>Argumentos de valor de patrón
 Algunos argumentos en el catálogo de funciones, como la *TableName* argumento en **SQLTables**, acepta patrones de búsqueda. Estos argumentos aceptan patrones de búsqueda si se establece el atributo de instrucción de SQL_ATTR_METADATA_ID en SQL_FALSE; son los argumentos de identificador que no aceptan un patrón de búsqueda si este atributo está establecido en SQL_TRUE.  

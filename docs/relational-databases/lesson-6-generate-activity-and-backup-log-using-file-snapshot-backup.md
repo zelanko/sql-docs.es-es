@@ -22,6 +22,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32942510"
 ---
 # <a name="lesson-6-generate-activity-and-backup-log-using-file-snapshot-backup"></a>Lección 6: Generar el registro de actividades y copias de seguridad mediante la copia de seguridad de instantáneas de archivos
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]

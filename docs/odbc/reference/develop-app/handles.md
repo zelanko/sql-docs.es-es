@@ -24,6 +24,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32912900"
 ---
 # <a name="handles"></a>Asas
 Los identificadores son valores opacos y de 32 bits que identifican un elemento determinado; en ODBC, este elemento puede ser un entorno, la conexión, la instrucción o el descriptor. Cuando la aplicación llama **SQLAllocHandle**, el Administrador de controladores o controlador crea un nuevo elemento del tipo especificado y devuelve su identificador de la aplicación. La aplicación más tarde, usa el identificador para identificar dicho elemento al llamar a funciones ODBC. El Administrador de controladores y el controlador utilizan el identificador para buscar información sobre el elemento.  

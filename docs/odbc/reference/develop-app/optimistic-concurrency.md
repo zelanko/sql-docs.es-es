@@ -23,6 +23,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32914350"
 ---
 # <a name="optimistic-concurrency"></a>Simultaneidad optimista
 *Simultaneidad optimista* deriva su nombre de la suposición optimista que no se suele producir colisiones entre transacciones; una colisión han producido durante la otra transacción actualiza o elimina una fila de datos entre el momento en se leyó por la transacción actual y la hora se actualiza o elimina. Es lo contrario de *simultaneidad pesimista,* o bloqueo, en que el programador de aplicaciones cree que tales conflictos son comunes.  

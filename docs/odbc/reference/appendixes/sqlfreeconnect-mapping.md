@@ -22,6 +22,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32906290"
 ---
 # <a name="sqlfreeconnect-mapping"></a>Asignación de SQLFreeConnect
 Cuando una aplicación llama **SQLFreeConnect** a través de una aplicación ODBC 3 *.x* controlador, la llamada a  

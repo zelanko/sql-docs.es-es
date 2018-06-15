@@ -23,6 +23,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32913090"
 ---
 # <a name="level-1-interface-conformance"></a>Cumplimiento de la interfaz de nivel 1
 El nivel de conformidad de interfaz de nivel 1 incluye la funcionalidad de nivel de conformidad de interfaz de núcleo más características adicionales, como las transacciones, que suelen estar disponibles en un DBMS relacional OLTP. Un controlador compatible con interfaz de nivel 1 permite que la aplicación haga lo siguiente, además de las características en el nivel de conformidad de interfaz principales:  

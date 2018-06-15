@@ -25,6 +25,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32914100"
 ---
 # <a name="what-the-driver-does"></a>Lo que hace el controlador
 En la tabla siguiente se resume las funciones y los atributos de instrucción una aplicación ODBC 3 *.x* controlador debe implementar para bloqueo y los cursores desplazables.  

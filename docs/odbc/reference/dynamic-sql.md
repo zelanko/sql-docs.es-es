@@ -26,6 +26,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32916900"
 ---
 # <a name="dynamic-sql"></a>SQL dinámico
 Aunque SQL estático funciona bien en muchas situaciones, hay una clase de aplicaciones en el que el acceso a datos no se puede determinar de antemano. Por ejemplo, suponga que una hoja de cálculo permite al usuario especificar una consulta, que la hoja de cálculo, a continuación, se envía al DBMS para recuperar los datos. El contenido de esta consulta obviamente no puede conocerse al programador cuando se escribe el programa de hoja de cálculo.  

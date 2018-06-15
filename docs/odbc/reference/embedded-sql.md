@@ -25,6 +25,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32915968"
 ---
 # <a name="embedded-sql"></a>SQL incrustado
 La primera técnica para enviar instrucciones SQL en el DBMS se incrusta SQL. Dado que SQL no usa las variables y las instrucciones de control de flujo, se usa a menudo como una variante de idioma de la base de datos que se puede agregar a un programa escrito en un lenguaje de programación convencional, como C o COBOL. Se trata de una idea central de SQL incrustado: colocar instrucciones SQL en un programa escrito en un host del lenguaje de programación. En pocas palabras, las técnicas siguientes se utilizan para incrustar instrucciones SQL en un lenguaje host:  

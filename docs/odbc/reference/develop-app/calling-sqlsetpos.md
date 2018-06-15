@@ -25,6 +25,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32911820"
 ---
 # <a name="calling-sqlsetpos"></a>Llamar a SQLSetPos
 En ODBC 2. *x*, el puntero a la matriz de estado de fila se encontraba argumento pasado a **SQLExtendedFetch**. La matriz de Estados de fila se actualizó más adelante mediante una llamada a **SQLSetPos**. Algunos controladores se basaban en el hecho de que esta matriz no cambia entre **SQLExtendedFetch** y **SQLSetPos**. En ODBC 3. *x*, el puntero a la matriz de estado es un campo de descriptor y, por tanto, la aplicación puede cambiar fácilmente para que apunte a una matriz distinta. Esto puede ser un problema cuando una aplicación ODBC 3. *x* aplicación está trabajando con una API ODBC 2. *x* controlador pero está llamando a **SQLSetStmtAttr** para establecer el puntero de estado de la matriz y llama a **SQLFetchScroll** para capturar los datos. El Administrador de controladores se asigna como una secuencia de llamadas a **SQLExtendedFetch**. En el código siguiente, producirá un error haría normalmente cuando el Administrador de controladores se asigna el segundo **SQLSetStmtAttr** llamar cuando se trabaja con una API ODBC 2 *.x* controlador:  

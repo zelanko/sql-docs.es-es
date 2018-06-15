@@ -23,6 +23,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32906420"
 ---
 # <a name="default-c-data-types"></a>Tipos de datos C predeterminado
 Si una aplicación especifica SQL_C_DEFAULT en **SQLBindCol**, **SQLGetData**, o **SQLBindParameter**, el controlador da por hecho que los datos de C de tipo del búfer de entrada o salida se corresponde con el tipo de datos SQL de la columna o parámetro al que está enlazado el búfer.  

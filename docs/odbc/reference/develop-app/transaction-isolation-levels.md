@@ -30,6 +30,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32919050"
 ---
 # <a name="transaction-isolation-levels"></a>Niveles de aislamiento de transacción
 *Niveles de aislamiento de transacción* son una medida de la extensión para las transacciones aislamiento se realizó correctamente. En concreto, los niveles de aislamiento de transacción se definen por la presencia o ausencia fenómenos siguientes:  

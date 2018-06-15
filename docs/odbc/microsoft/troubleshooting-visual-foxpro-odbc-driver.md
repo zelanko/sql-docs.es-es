@@ -28,6 +28,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32905380"
 ---
 # <a name="troubleshooting-visual-foxpro-odbc-driver"></a>Solución de problemas (controlador ODBC de Visual FoxPro)
 Las secciones siguientes describen cómo mejorar el rendimiento y resolver los problemas que podrían surgir al usar el controlador ODBC de Visual FoxPro.  

@@ -22,6 +22,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32906600"
 ---
 # <a name="update-statement-limitations"></a>Limitaciones de la instrucción de actualización
 Para que el controlador de Paradox actualizar una tabla, la tabla debe tener un índice único (clave principal Paradox). Cuando se usa el controlador de Paradox sin necesidad de implementar el motor de base de datos de Borland, no es posible actualizar una tabla de Paradox.  

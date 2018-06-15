@@ -24,6 +24,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32906450"
 ---
 # <a name="numeric-literals"></a>Literales numéricos
 Literales numéricos se utilizan cuando se almacenan valores de datos numéricos en cadenas de caracteres. Para la conversión de datos numéricos de SQL en una cadena SQL_C_CHAR o de conversión de datos numéricos de C en una cadena SQL_CHAR o SQL_VARCHAR, sintaxis de literal numérico se usan para especificar lo que se almacena en el destino. Para la conversión de un valor numérico almacenado como una cadena SQL_C_CHAR a datos numéricos de SQL o numérico almacenado como una cadena SQL_CHAR a datos numéricos de C, esta sintaxis se utiliza para validar el contenido almacenado en el origen.  

@@ -23,6 +23,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32912490"
 ---
 # <a name="sqlgetinfo-support"></a>Compatibilidad con SQLGetInfo
 Cuando un ODBC 2. *x* aplicación llama **SQLGetInfo** a una aplicación ODBC 3 *.x* controlador, el *tipo de información* argumentos en la tabla siguiente deben ser compatibles.  

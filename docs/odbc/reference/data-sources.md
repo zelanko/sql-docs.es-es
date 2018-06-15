@@ -22,6 +22,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32911830"
 ---
 # <a name="data-sources"></a>Orígenes de datos
 A *origen de datos* es simplemente el origen de los datos. Puede ser un archivo, una base de datos determinada en un DBMS, o incluso una fuente de datos en directo. Los datos podrían ser ubicados en el mismo equipo que el programa o en otro equipo en algún punto de una red. Por ejemplo, un origen de datos podría ser un DBMS de Oracle que se ejecuta en un sistema de operativo OS/2®, acceso Novell® Netware; un DBMS de DB2 de IBM que tiene acceso a través de una puerta de enlace; una colección de archivos de Xbase en un directorio del servidor; o un archivo de base de datos local de Microsoft® Access.  

@@ -23,6 +23,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32913990"
 ---
 # <a name="core-interface-conformance"></a>Conformidad de interfaz de núcleo
 Todos los controladores ODBC deben exhibir el mínimo nivel de núcleo conformidad de interfaz. Dado que las características en el nivel de principales son las que necesitan aplicaciones interoperables más genéricas, el controlador puede trabajar con dichas aplicaciones. Las características en el nivel de núcleo también corresponden a las características que se define en la especificación ISO CLI y a las características no opcionales definidas en la especificación de CLI de grupo abierto. Un controlador ODBC de nivel de núcleo compatible con interfaz permite que la aplicación realizar todo lo siguiente:  

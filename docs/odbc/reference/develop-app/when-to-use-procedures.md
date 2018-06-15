@@ -22,6 +22,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32917380"
 ---
 # <a name="when-to-use-procedures"></a>Cuándo se debe utilizar procedimientos
 Hay una serie de ventajas de utilizar procedimientos, todos basada en el hecho de que con los procedimientos mueve instrucciones SQL desde la aplicación al origen de datos. Lo que queda en la aplicación es una llamada a procedimiento interoperable. Estas ventajas incluyen:  

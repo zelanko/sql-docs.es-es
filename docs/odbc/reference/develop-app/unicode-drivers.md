@@ -23,6 +23,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32914890"
 ---
 # <a name="unicode-drivers"></a>Controladores de Unicode
 Si un controlador debe ser un controlador de Unicode o ANSI depende por completo la naturaleza del origen de datos. Si el origen de datos es compatible con datos Unicode, el controlador debe ser un controlador de Unicode. Si el origen de datos solo admite datos ANSI, el controlador debe permanecer un controlador de ANSI.  

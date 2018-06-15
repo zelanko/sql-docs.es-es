@@ -19,6 +19,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32905800"
 ---
 # <a name="guidelines-for-interval-and-numeric-data-types"></a>Directrices para el intervalo y tipos de datos numéricos
 Las secciones siguientes tratan intervalo y tipos de datos numéricos.  

@@ -25,6 +25,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32916880"
 ---
 # <a name="other-driver-architectures"></a>Otras arquitecturas de controlador
 Algunos controladores ODBC no cumplir estrictamente la arquitectura que se ha descrito anteriormente. Esto podría deberse a que los controladores de llevar a cabo tareas distintas de las de un controlador ODBC tradicional o no son controladores en el sentido normal.  

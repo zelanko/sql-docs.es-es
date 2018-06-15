@@ -23,6 +23,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32912160"
 ---
 # <a name="block-cursors"></a>Cursores de bloque
 Muchas aplicaciones dedican una cantidad considerable de tiempo que lleva los datos a través de la red. Parte de este tiempo se invierte realmente volver a poner los datos a través de la red, y parte de ella se dedica a la sobrecarga, de la red, como la llamada realizada por el controlador para solicitar una fila de datos. Si la aplicación realiza un uso eficaz de la última vez que se puede reducir *bloque,* o *fat,* *cursores,* que puede devolver más de una fila a la vez.  

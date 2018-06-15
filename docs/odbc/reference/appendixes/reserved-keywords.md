@@ -22,6 +22,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32912830"
 ---
 # <a name="reserved-keywords"></a>Palabras clave reservadas
 Las siguientes palabras están reservadas para su uso en llamadas a funciones de ODBC. Estas palabras no limitan la gramática mínima de SQL; Sin embargo, para garantizar la compatibilidad con controladores que admiten la gramática principal de SQL, las aplicaciones deben evitar mediante cualquiera de estas palabras clave. El signo #**definir** valor SQL_ODBC_KEYWORDS contiene una lista separada por comas de estas palabras clave.  

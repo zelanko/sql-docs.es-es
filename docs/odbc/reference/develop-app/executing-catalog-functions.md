@@ -22,6 +22,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32909831"
 ---
 # <a name="executing-catalog-functions"></a>Ejecutar funciones de catálogo
 Dado que una función de catálogo, crea un conjunto de resultados, equivale a ejecutar cualquier instrucción de SQL: Generar conjunto de resultados. De hecho, las funciones de catálogo se implementan a menudo ejecutando instrucciones SQL predefinidas o llamar a procedimientos predefinidos que se suministran con el controlador o el DBMS. Casi todo lo que se aplica a instrucciones SQL que crean conjuntos de resultados también se aplica a funciones de catálogo. Por ejemplo, el atributo de instrucción SQL_ATTR_MAX_ROWS limita el número de filas devueltas por la función de catálogo, tal y como limita el número de filas devueltas por una **seleccione** instrucción.  

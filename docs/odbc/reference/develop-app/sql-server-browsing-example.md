@@ -23,6 +23,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32913080"
 ---
 # <a name="sql-server-browsing-example"></a>Ejemplo de exploración de SQL Server
 El siguiente ejemplo se muestra cómo **SQLBrowseConnect** podría utilizarse para examinar las conexiones disponibles con un controlador de SQL Server. En primer lugar, la aplicación solicita un identificador de conexión:  

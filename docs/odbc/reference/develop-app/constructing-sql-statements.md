@@ -19,6 +19,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32908750"
 ---
 # <a name="constructing-sql-statements"></a>Crear instrucciones SQL
 Se pueden construir instrucciones SQL en una de estas tres maneras: codificado de forma rígida durante el desarrollo, creadas en tiempo de ejecución o escritos directamente por el usuario.  

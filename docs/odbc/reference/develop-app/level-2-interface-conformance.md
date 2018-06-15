@@ -23,6 +23,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32912640"
 ---
 # <a name="level-2-interface-conformance"></a>Cumplimiento de la interfaz de nivel 2
 El nivel de conformidad de interfaz de nivel 2 incluye la funcionalidad de conformidad: nivel de interfaz de nivel 1 y las características siguientes:  

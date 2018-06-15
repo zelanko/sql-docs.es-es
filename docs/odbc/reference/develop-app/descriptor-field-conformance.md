@@ -24,6 +24,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32911850"
 ---
 # <a name="descriptor-field-conformance"></a>Conformidad de campo de descriptor
 En la tabla siguiente indica el nivel de conformidad de cada campo de encabezado de descriptor ODBC, donde esto está bien definido.  

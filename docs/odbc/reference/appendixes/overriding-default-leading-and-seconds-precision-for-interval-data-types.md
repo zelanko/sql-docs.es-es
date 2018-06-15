@@ -26,6 +26,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32907850"
 ---
 # <a name="overriding-default-leading-and-seconds-precision-for-interval-data-types"></a>Reemplazar predeterminado inicial y la precisión de segundos para los tipos de datos Interval
 Cuando se establece el campo SQL_DESC_TYPE de una descartar a un tipo C de intervalo o datetime, llamar a **SQLBindCol** o **SQLSetDescField**, el campo SQL_DESC_PRECISION (que contiene el intervalo (segundos) precisión) se establece en los valores predeterminados siguientes:  

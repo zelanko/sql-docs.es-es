@@ -23,6 +23,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32904980"
 ---
 # <a name="desktop-database-drivers-architecture"></a>Arquitectura de controladores de escritorio de la base de datos
 Estos controladores están diseñados para uso en Microsoft Windows 95 o una versión posterior, o Windows NT 4.0 y Windows 2000. Solo las aplicaciones de 32 bits se admiten en Windows 95 o versiones posteriores; se admiten las aplicaciones de 16 bits y 32 bits en Windows NT 4.0 y Windows 2000.  

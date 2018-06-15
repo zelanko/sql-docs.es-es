@@ -23,6 +23,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32911520"
 ---
 # <a name="identifier-arguments"></a>Argumentos de identificador
 Si se definen una cadena dentro de un argumento de identificador, el controlador quita iniciales y finales de los espacios en blanco y literalmente trata la cadena entre comillas. Si la cadena no está entre comillas, el controlador quita subconjuntos y espacios en blanco finales a la cadena a mayúsculas. Si se establece un argumento de identificador a un puntero null devuelve SQL_ERROR y SQLSTATE HY009 (uso no válido del puntero null), a menos que el argumento es un nombre de catálogo y no se admiten los catálogos.  

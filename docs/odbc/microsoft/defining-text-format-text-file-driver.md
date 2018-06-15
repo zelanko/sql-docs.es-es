@@ -22,6 +22,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32904880"
 ---
 # <a name="defining-text-format-text-file-driver"></a>Definir el formato de texto (controlador de archivo de texto)
 Cuando se utiliza el controlador de texto, puede usar el **Definir formato de texto** cuadro de diálogo para definir el formato de columnas en un archivo seleccionado. Este cuadro de diálogo permite especificar el esquema para cada tabla de datos. Esta información se escribe en un archivo Schema.ini en el directorio de origen de datos. Se crea un archivo Schema.ini independiente para cada directorio de origen de datos de texto.  

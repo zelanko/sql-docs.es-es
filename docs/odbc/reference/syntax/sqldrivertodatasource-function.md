@@ -28,6 +28,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32918490"
 ---
 # <a name="sqldrivertodatasource-function"></a>SQLDriverToDataSource (función)
 **SQLDriverToDataSource** admite traducciones para los controladores ODBC. No se llama a esta función mediante aplicaciones habilitadas para ODBC; las aplicaciones solicitan traducción a través de **SQLSetConnectAttr**. El controlador asociado a la *IdentificadorConexión* especificado en **SQLSetConnectAttr** llama a la DLL especificada para llevar a cabo las traducciones de todos los datos fluyen desde el controlador al origen de datos. Un archivo DLL de traducción predeterminado puede especificarse en el archivo de inicialización de ODBC.  

@@ -23,6 +23,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32915010"
 ---
 # <a name="step-6-disconnect-from-the-data-source"></a>Paso 6: Desconectar del origen de datos
 El paso final es desconectarse del origen de datos, como se muestra en la siguiente ilustración. En primer lugar, la aplicación libera todos los identificadores de instrucción mediante una llamada a **SQLFreeHandle**. Para obtener más información, consulte [liberar un identificador de instrucciones](../../../odbc/reference/develop-app/freeing-a-statement-handle-odbc.md).  

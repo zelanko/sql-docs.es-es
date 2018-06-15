@@ -23,6 +23,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32915910"
 ---
 # <a name="data-source-specification-subkeys"></a>Subclaves de especificación del origen de datos
 Cada origen de datos aparece en la subclave de orígenes de datos ODBC tiene una subclave de su propio. Esta subclave tiene el mismo nombre que el valor correspondiente en la subclave de orígenes de datos ODBC. Los valores bajo esta subclave deben la DLL del controlador en la lista y pueden mostrar una descripción del origen de datos. Si el controlador admite traductores, los valores pueden enumerar el nombre de un traductor de manera predeterminada, el archivo DLL de traducción predeterminado y la opción de traducción predeterminado. Los valores también pueden mostrar otra información requerida por el controlador para conectarse al origen de datos. Por ejemplo, el controlador podría requerir un nombre de servidor, el nombre de base de datos o el nombre del esquema.  

@@ -25,6 +25,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32907010"
 ---
 # <a name="overriding-default-precision-and-scale-for-numeric-data-types"></a>Invalidar la precisión y escala predeterminadas de tipos de datos numéricos
 Cuando se establece el campo SQL_DESC_TYPE en un Descartar para SQL_C_NUMERIC, llamando **SQLBindCol** o **SQLSetDescField**, el campo SQL_DESC_SCALE en la descartar se establece en 0 y se establece el campo SQL_DESC_PRECISION con una precisión predeterminada definida por el controlador. Esto también es cierto cuando el campo SQL_DESC_TYPE en un APD se establece en SQL_C_NUMERIC, llamando **SQLBindParameter** o **SQLSetDescField**. Esto es cierto para la entrada, entrada/salida o parámetros de salida.  

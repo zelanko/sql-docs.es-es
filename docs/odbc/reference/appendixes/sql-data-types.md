@@ -23,6 +23,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32914190"
 ---
 # <a name="sql-data-types"></a>Tipos de datos SQL
 Cada DBMS define sus propios tipos SQL. Cada controlador ODBC expone solo esos tipos de datos SQL que define el DBMS asociado. Obtener información acerca de cómo se asigna un controlador de DBMS SQL tipos a los identificadores de tipo SQL definidas por ODBC y cómo asigna un controlador de tipos de DBMS SQL a sus propios identificadores de tipo específicos del controlador SQL se devuelve a través de una llamada a **SQLGetTypeInfo**. Un controlador también devuelve los tipos de datos SQL para describir los tipos de datos de columnas y parámetros a través de llamadas a **SQLColAttribute**, **SQLColumns**, **SQLDescribeCol**, **SQLDescribeParam**, **SQLProcedureColumns**, y **SQLSpecialColumns**.  

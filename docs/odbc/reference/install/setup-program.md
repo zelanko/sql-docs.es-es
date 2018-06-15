@@ -21,6 +21,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32916590"
 ---
 # <a name="setup-program"></a>Programa de instalación
 > **Nota:** a partir de Windows XP y Windows Server 2003, **ODBC se incluye en el sistema operativo Windows**. Solo explícitamente debe instalar ODBC en versiones anteriores de Windows.  

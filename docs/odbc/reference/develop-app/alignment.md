@@ -21,6 +21,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32909420"
 ---
 # <a name="alignment"></a>Alignment
 Los problemas de alineación en una aplicación ODBC generalmente no son diferentes de están en cualquier otra aplicación. Es decir, la mayoría de las aplicaciones de ODBC tiene problemas de pocos o ningún con alineación. Las penalizaciones por no alinear direcciones varían según el hardware y el sistema operativo y podrían ser como secundaria como una ligera disminución del rendimiento o tan grave como un error irrecuperable de tiempo de ejecución. Por lo tanto, las aplicaciones ODBC y las aplicaciones ODBC portables en concreto, deberían tener precaución alinear los datos correctamente.  

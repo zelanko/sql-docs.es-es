@@ -21,6 +21,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32907170"
 ---
 # <a name="cstring-class"></a>Clase CString
 Porque los objetos de la **CString** clase en Microsoft® Visual C++® están firmados y argumentos de cadena de las funciones ODBC no están firmados, aplicaciones que pasan **CString** objetos a funciones ODBC sin conversión de ellos recibirá advertencias del compilador.

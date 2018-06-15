@@ -25,6 +25,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32907690"
 ---
 # <a name="text-file-data-types"></a>Tipos de datos de archivo de texto
 En la tabla siguiente se muestra cómo se asignan los tipos de datos de texto a tipos de datos SQL de ODBC. Tenga en cuenta que no todos los tipos de datos SQL de ODBC son compatibles con el controlador de ODBC texto.  

@@ -24,6 +24,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32911080"
 ---
 # <a name="text-file-format-text-file-driver"></a>Formato de archivo de texto (controlador de archivo de texto)
 El controlador de texto de ODBC admite tanto archivos de texto de ancho fijo y delimitado. Un archivo de texto está formada por una línea de encabezado opcional y cero o más líneas de texto.  

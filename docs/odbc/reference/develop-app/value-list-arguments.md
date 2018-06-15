@@ -23,6 +23,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32914800"
 ---
 # <a name="value-list-arguments"></a>Argumentos de la lista de valores
 Un argumento de valor de la lista está formada por una lista de valores separados por comas que se usarán para la coincidencia. Hay un argumento de la lista de un solo valor en las funciones de catálogo ODBC: la *TableType* argumento en **SQLTables**. Establecer *TableType* a un puntero null es el mismo que si se establece en SQL_ALL_TABLE_TYPES, que enumera todos los miembros posibles de la lista de valores. Este argumento no se ve afectado por el atributo de instrucción SQL_ATTR_METADATA_ID. Para obtener más información, consulte el [SQLTables](../../../odbc/reference/syntax/sqltables-function.md) descripción de la función.

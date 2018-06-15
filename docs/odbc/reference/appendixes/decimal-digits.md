@@ -24,6 +24,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32907790"
 ---
 # <a name="decimal-digits"></a>Dígitos decimales
 El *dígitos decimales* de datos decimal y numeric tipos se define como el número máximo de dígitos a la derecha del separador decimal o la escala de los datos. Para columnas de número de punto flotante aproximadas o los parámetros, la escala no está definida porque el número de dígitos a la derecha del separador decimal no es fijo. Para los datos de fecha y hora o intervalo que contiene un componente de segundos, los dígitos decimales se define como el número de dígitos a la derecha del separador decimal en el componente de segundos de los datos.  

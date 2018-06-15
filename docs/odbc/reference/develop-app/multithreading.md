@@ -23,6 +23,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32912300"
 ---
 # <a name="multithreading"></a>Subprocesamiento múltiple
 En sistemas operativos multiproceso, controladores deben ser seguro para subprocesos. Es decir, debe ser posible que las aplicaciones utilizar el mismo identificador en más de un subproceso. Cómo lograrlo es específico del controlador, y es probable que los controladores serializará cualquier intento de utilizar el mismo identificador simultáneamente en dos subprocesos diferentes.  

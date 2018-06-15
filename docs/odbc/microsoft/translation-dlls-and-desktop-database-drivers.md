@@ -24,6 +24,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32906380"
 ---
 # <a name="translation-dlls-and-desktop-database-drivers"></a>Archivos DLL de traducción y controladores de escritorio de la base de datos
 No compatible.

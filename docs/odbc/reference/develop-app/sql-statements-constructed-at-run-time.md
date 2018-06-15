@@ -23,6 +23,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32914300"
 ---
 # <a name="sql-statements-constructed-at-run-time"></a>Instrucciones SQL creadas en tiempo de ejecución
 Las aplicaciones que realizan análisis ad hoc suele generación instrucciones SQL en tiempo de ejecución. Por ejemplo, una hoja de cálculo puede permitir al usuario seleccionar columnas de la que se va a recuperar los datos:  

@@ -19,6 +19,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32911280"
 ---
 # <a name="odbc-in-windows"></a>ODBC en Windows
 Los elementos siguientes se aplican solo a ODBC que se ejecutan en sistemas operativos Microsoft® Windows NT o Windows 2000 y Microsoft Windows® 95 ó 98.  

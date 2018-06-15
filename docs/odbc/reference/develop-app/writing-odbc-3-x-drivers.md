@@ -24,6 +24,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32921160"
 ---
 # <a name="writing-odbc-3x-drivers"></a>Controladores ODBC 3.x de escritura
 En la siguiente tabla muestra la compatibilidad de la función en una aplicación ODBC 3. *x* controlador y una aplicación ODBC y la asignación que se realiza mediante el Administrador de controladores cuando se llaman a las funciones en una aplicación ODBC 3. *x* controlador.  

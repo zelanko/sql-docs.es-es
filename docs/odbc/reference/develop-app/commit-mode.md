@@ -23,6 +23,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32908420"
 ---
 # <a name="commit-mode"></a>Modo de confirmación
 Las transacciones en ODBC pueden estar en uno de los dos modos: modo de confirmación automática o modo de confirmación manual.  

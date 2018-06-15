@@ -22,6 +22,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32907576"
 ---
 # <a name="bound-descriptor-records"></a>Registros de Descriptor de enlace
 Cuando la aplicación establece el campo SQL_DESC_DATA_PTR de un registro de descriptor para que ya no contiene un valor null, se dice que el registro sea *enlazados*.  

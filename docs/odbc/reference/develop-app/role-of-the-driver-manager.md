@@ -27,6 +27,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32913200"
 ---
 # <a name="role-of-the-driver-manager"></a>Rol del Administrador de controladores
 El Administrador de controladores determina el orden final en el que se va a devolver registros de estado que genera. En concreto, determina qué registro tiene la clasificación más alta y se devuelve en primer lugar. El controlador es responsable de ordenar los registros de estado que genera. Si los registros de estado se envían mediante el Administrador de controladores y el controlador, el Administrador de controladores es responsable de ordenarlas. Para obtener más información, consulte [secuencia de registros de estado](../../../odbc/reference/develop-app/sequence-of-status-records.md).  

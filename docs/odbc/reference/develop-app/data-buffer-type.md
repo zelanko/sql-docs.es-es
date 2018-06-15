@@ -24,6 +24,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32910482"
 ---
 # <a name="data-buffer-type"></a>Tipo de búfer de datos
 El tipo de datos C de un búfer especificado por la aplicación. Con una variable simple, esto se produce cuando la aplicación asigna la variable. Con genéricos de memoria, es decir, memoria indicada por un puntero de tipo void, esto se produce cuando la aplicación convierte la memoria a un tipo determinado. El controlador detecta este tipo de dos maneras:  

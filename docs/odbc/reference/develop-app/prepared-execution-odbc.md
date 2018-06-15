@@ -23,6 +23,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32913180"
 ---
 # <a name="prepared-execution-odbc"></a>Ejecución preparada ODBC
 Ejecución preparada es una manera eficaz para ejecutar una instrucción varias veces. En primer lugar se compila la instrucción, o *preparado,* en un plan de acceso. El plan de acceso es, a continuación, ejecutan una o más veces en un momento posterior. Para obtener más información acerca de los planes de acceso, consulte [procesar una instrucción SQL](../../../odbc/reference/processing-a-sql-statement.md).  

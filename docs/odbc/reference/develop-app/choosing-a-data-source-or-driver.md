@@ -24,6 +24,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32913160"
 ---
 # <a name="choosing-a-data-source-or-driver"></a>Elegir datos de un origen o el controlador
 El origen de datos o el controlador utilizado por una aplicación a veces es codificado de forma rígida en la aplicación. Por ejemplo, una aplicación personalizada creada por el departamento de un MIS para transferir datos de un origen de datos a otro contendría los nombres de los orígenes de datos, la aplicación simplemente no funciona con cualquier otro origen de datos. Otro ejemplo es una aplicación vertical, como uno utilizado para la entrada de pedido. Este tipo de aplicación siempre utiliza el mismo origen de datos, que tiene un esquema predefinido conocido por la aplicación.  

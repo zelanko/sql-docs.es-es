@@ -23,6 +23,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32906200"
 ---
 # <a name="behavioral-changes-and-odbc-3x-drivers"></a>Cambios de comportamiento y los controladores ODBC 3.x
 El atributo de entorno SQL_ATTR_ODBC_VERSION indica al controlador si necesita exhiba ODBC 2. *x* comportamiento u ODBC 3 *.x* comportamiento. ¿Cómo se establece el atributo de entorno SQL_ATTR_ODBC_VERSION depende de la aplicación. ODBC 3 *.x* las aplicaciones deben llamar a **SQLSetEnvAttr** para establecer este atributo después de que llame a **SQLAllocHandle** para asignar un identificador de entorno y antes de llamar a  **SQLAllocHandle** para asignar un identificador de conexión. Si no pueden hacer esto, el Administrador de controladores devuelve SQLSTATE HY010 (error de secuencia de función) en la última llamada a **SQLAllocHandle**.  

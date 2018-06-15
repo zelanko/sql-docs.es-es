@@ -23,6 +23,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32916340"
 ---
 # <a name="updating-rows-in-the-rowset-with-sqlsetpos"></a>Actualizar las filas del conjunto de filas con SQLSetPos
 La operación de actualización de **SQLSetPos** hace que el origen de datos actualizar uno o más filas seleccionadas de una tabla, utilizando los datos en los búferes de la aplicación para cada columna enlazada (a menos que el valor en el búfer de longitud/indicador es SQL_COLUMN_IGNORE). Las columnas que no están enlazadas no se actualizará.  

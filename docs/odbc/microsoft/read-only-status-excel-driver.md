@@ -22,6 +22,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32900530"
 ---
 # <a name="read-only-status-excel-driver"></a>Estado de solo lectura (controlador de Excel)
 Cuando se utiliza el controlador de Microsoft Excel, tablas de origen de datos se abren como de solo lectura de forma predeterminada y se pueden abrir haciendo solo un usuario a la vez. Aunque las tablas que el estado de solo lectura, sin embargo, las aplicaciones pueden realizar inserciones y actualizaciones para las tablas de Microsoft Excel.  

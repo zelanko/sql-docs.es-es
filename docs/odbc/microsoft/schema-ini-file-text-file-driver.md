@@ -22,6 +22,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32904590"
 ---
 # <a name="schemaini-file-text-file-driver"></a>Archivo Schema.ini (controlador de archivo de texto)
 Cuando se utiliza el controlador de texto, el formato del archivo de texto se determina mediante un archivo de información de esquema. El archivo de información de esquema es siempre denominado Schema.ini y se mantiene siempre en el mismo directorio que el origen de datos de texto. El archivo de información de esquema proporciona el IISAM con información sobre el formato general del archivo, el nombre de columna y la información de tipo de datos y varias otras características de datos. Un archivo Schema.ini siempre es necesario para tener acceso a datos de longitud fija. Debe utilizar un archivo Schema.ini cuando la tabla de texto contiene la fecha y hora, moneda, o datos Decimal o siempre que desee más control sobre el tratamiento de los datos de la tabla.  

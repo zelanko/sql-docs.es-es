@@ -14,6 +14,7 @@ ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
 ms.translationtype: MT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/10/2018
+ms.locfileid: "34024722"
 ---
 # <a name="amo-other-classes-and-methods"></a>Otras clases y métodos de AMO
   Esta sección contiene clases comunes que no son específicas de OLAP o de minería de datos, y que son útiles cuando se administran objetos en [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)]. Estas clases incluyen características como procedimientos almacenados, seguimientos, excepciones y copias de seguridad y restauración.  

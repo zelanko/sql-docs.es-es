@@ -29,6 +29,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32912510"
 ---
 # <a name="converting-data-from-c-to-sql-data-types"></a>Convertir datos de C a tipos de datos SQL
 Cuando una aplicación llama **SQLExecute** o **SQLExecDirect**, el controlador JDBC recupera los datos para los parámetros enlazados con **SQLBindParameter** desde ubicaciones de almacenamiento en la aplicación. Cuando una aplicación llama **SQLSetPos**, el controlador recupera los datos de una actualización o agregar operación de columnas enlazadas con **SQLBindCol**. Para los parámetros de datos en ejecución, la aplicación envía los datos del parámetro con **SQLPutData**. Si es necesario, el controlador convierte los datos del tipo de datos especificado por la *ValueType* argumento en **SQLBindParameter** al tipo de datos especificado por el *ParameterType*argumento en **SQLBindParameter**y, a continuación, envía los datos al origen de datos.  

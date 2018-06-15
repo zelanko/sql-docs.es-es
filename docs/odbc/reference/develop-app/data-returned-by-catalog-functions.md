@@ -22,6 +22,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32910580"
 ---
 # <a name="data-returned-by-catalog-functions"></a>Datos devueltos por las funciones de catálogo
 Cada función de catálogo devuelve datos como un conjunto de resultados. Este conjunto de resultados no es diferente de cualquier otro conjunto de resultados. Se genera normalmente por predefinido, con parámetros **seleccione** que esté almacenado en un procedimiento en el origen de datos o codificado de forma rígida en el controlador. Para obtener información acerca de cómo recuperar datos de un conjunto de resultados, vea [era un resultado se establece crean?](../../../odbc/reference/develop-app/was-a-result-set-created.md).  

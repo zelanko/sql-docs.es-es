@@ -30,6 +30,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32908210"
 ---
 # <a name="datetime-data-types"></a>Tipos de datos de fecha y hora
 En ODBC 3 *.x*, los identificadores de fecha, hora y tipos de datos SQL de marca de tiempo han cambiado desde SQL_DATE, SQL_TIME y SQL_TIMESTAMP (con instancias de **#define** en el archivo de encabezado de 9, 10 y 11) a SQL_ TYPE_DATE, SQL_TYPE_TIME y SQL_TYPE_TIMESTAMP (con instancias de **#define** en el archivo de encabezado de 91, 92 y 93), respectivamente. El tipo C correspondiente identificadores han cambiado respecto a SQL_C_DATE, SQL_C_TIME y SQL_C_TIMESTAMP SQL_C_TYPE_DATE, SQL_C_TYPE_TIME y SQL_C_TYPE_TIMESTAMP, respectivamente y las instancias de **#define** han cambiado en consecuencia.  

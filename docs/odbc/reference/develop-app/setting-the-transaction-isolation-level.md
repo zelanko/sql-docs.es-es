@@ -23,6 +23,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32912500"
 ---
 # <a name="setting-the-transaction-isolation-level"></a>Establecer el nivel de aislamiento de la transacción
 Para establecer el nivel de aislamiento de transacción, una aplicación usa el atributo de conexión SQL_ATTR_TXN_ISOLATION. Si el origen de datos no admite el nivel de aislamiento solicitado, el controlador o el origen de datos puede establecer un nivel más alto. Para determinar qué aislamiento de transacción de los niveles de un origen de datos admite y cuál es el nivel de aislamiento predeterminado es, llama a una aplicación **SQLGetInfo** con las opciones SQL_TXN_ISOLATION_OPTION y SQL_DEFAULT_TXN_ISOLATION, respectivamente.  

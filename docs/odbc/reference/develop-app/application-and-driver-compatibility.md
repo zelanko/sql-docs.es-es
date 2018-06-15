@@ -24,6 +24,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32906860"
 ---
 # <a name="application-and-driver-compatibility"></a>Compatibilidad de controladores y aplicaciones
 Controladores y las aplicaciones ODBC pertenecen a un número de categorías además de su versión. Algunas de estas aplicaciones no son compatibles con algunos controladores; en otros casos, el tipo de la aplicación o el controlador puede afectar a los problemas de compatibilidad con versiones anteriores entre ellos.  

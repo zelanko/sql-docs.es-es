@@ -21,6 +21,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32916050"
 ---
 # <a name="was-a-result-set-created"></a>¿Era un conjunto creado de resultados?
 En la mayoría de los casos, los programadores de aplicaciones conocer si las instrucciones que se ejecuta la aplicación creará un conjunto de resultados. Esto sucede si la aplicación utiliza las instrucciones SQL codificadas de forma rígida escritas por el programador. Normalmente es el caso cuando la aplicación cree instrucciones SQL en tiempo de ejecución: el programador fácilmente puede incluir código que identifica si una **seleccione** instrucción o un **insertar** instrucción se va a construir. En algunos casos poco frecuentes, el programador no puede saber si una instrucción creará un conjunto de resultados. Esto es cierto si la aplicación proporciona una manera para que el usuario escriba y ejecute una instrucción SQL. También es cierto cuando la aplicación crea una instrucción en tiempo de ejecución para ejecutar un procedimiento.  

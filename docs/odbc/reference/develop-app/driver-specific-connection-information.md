@@ -27,6 +27,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32912280"
 ---
 # <a name="driver-specific-connection-information"></a>Información de conexión específicos del controlador
 **SQLConnect** se da por supuesto que un nombre de origen de datos, el Id. de usuario y la contraseña son suficientes para conectarse a un origen de datos y que todos los demás información de conexión se puede almacenar en el sistema. Esto sucede con frecuencia no. Por ejemplo, un controlador que tenga un identificador de usuario y contraseña para iniciar sesión en un servidor y un identificador de usuario diferente y una contraseña para iniciar sesión en un DBMS. Dado que **SQLConnect** acepta un Id. de usuario único y una contraseña, esto significa que el otro Id. de usuario y la contraseña deben almacenarse con la información de origen de datos en el sistema si **SQLConnect** va a usar. Esto es una posible infracción de seguridad y debe evitarse, a menos que la contraseña se cifra.  

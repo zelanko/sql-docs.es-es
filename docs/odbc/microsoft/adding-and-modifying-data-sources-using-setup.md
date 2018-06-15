@@ -26,6 +26,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32901440"
 ---
 # <a name="adding-and-modifying-data-sources-using-setup"></a>Agregar y modificar orígenes de datos mediante el programa de instalación
 > [!IMPORTANT]  

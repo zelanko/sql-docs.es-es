@@ -24,6 +24,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32913320"
 ---
 # <a name="fetching-a-row-of-data"></a>Capturar una fila de datos
 Para capturar una fila de datos, una aplicación llama **SQLFetch**. **SQLFetch** se puede llamar con cualquier tipo de cursor, pero solo mueve el cursor de conjunto de filas en una dirección de solo avance. **SQLFetch** avanza el cursor a la siguiente fila y devuelve los datos de todas las columnas que se enlazaron con llamadas a **SQLBindCol**. Cuando el cursor llega al final del resultado se establece, **SQLFetch** devuelve SQL_NO_DATA. Para obtener ejemplos de llamar al método **SQLFetch**, consulte [utilizando SQLBindCol](../../../odbc/reference/develop-app/using-sqlbindcol.md).  

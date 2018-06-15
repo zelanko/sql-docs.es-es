@@ -80,7 +80,7 @@ Una expresión que se puede resolver en uno de los valores siguientes:
 + **smalldatetime**
 + **time**
 
-Para *date*, `DATEDIFF_BIG` aceptará una expresión de columna, expresión, literal de cadena o variable definida por el usuario. Un valor de literal de cadena se debe resolver en un argumento **datetime**. Para evitar problemas de ambigüedad, use años de cuatro dígitos. `DATEDIFF_BIG` resta *enddate* de *startdate*. Para evitar ambigüedades, use años de cuatro dígitos. Vea [Establecer la opción de configuración del servidor Fecha límite de año de dos dígitos](../../database-engine/configure-windows/configure-the-two-digit-year-cutoff-server-configuration-option.md) para obtener información sobre los años de dos dígitos.
+Para *date*, `DATEDIFF_BIG` aceptará una expresión de columna, una expresión, un literal de cadena o una variable definida por el usuario. Un valor de literal de cadena se debe resolver en un argumento **datetime**. Para evitar problemas de ambigüedad, use años de cuatro dígitos. `DATEDIFF_BIG` resta *enddate* de *startdate*. Para evitar ambigüedades, use años de cuatro dígitos. Vea [Establecer la opción de configuración del servidor Fecha límite de año de dos dígitos](../../database-engine/configure-windows/configure-the-two-digit-year-cutoff-server-configuration-option.md) para obtener información sobre los años de dos dígitos.
   
 *enddate*  
 Vea *startdate*.

@@ -26,6 +26,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32914270"
 ---
 # <a name="time-date-and-interval-functions"></a>Funciones de hora, fecha e intervalo
 En la tabla siguiente se enumera las funciones de fecha y hora en que se incluyen en el conjunto de funciones escalares de ODBC. Una aplicación puede determinar qué funciones de fecha y hora son compatibles con un controlador mediante una llamada a **SQLGetInfo** con una *tipo de información* de SQL_TIMEDATE_FUNCTIONS.  

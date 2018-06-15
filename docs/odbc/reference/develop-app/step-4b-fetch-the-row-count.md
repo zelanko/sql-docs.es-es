@@ -23,6 +23,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32915260"
 ---
 # <a name="step-4b-fetch-the-row-count"></a>Paso 4b: capturar el recuento de filas
 El paso siguiente es capturar el recuento de filas, como se muestra en la siguiente ilustración.  

@@ -21,6 +21,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32899890"
 ---
 # <a name="odbc-errors"></a>Errores de ODBC
 Cuando se produce un error, los controladores de base de datos de escritorio de Microsoft ODBC devuelve el número de error nativo, el valor de SQLSTATE (un código de error ODBC) y un mensaje de error.  

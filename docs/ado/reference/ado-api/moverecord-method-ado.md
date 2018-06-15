@@ -2,7 +2,6 @@
 title: Método MoveRecord (ADO) | Documentos de Microsoft
 ms.prod: sql
 ms.prod_service: connectivity
-ms.component: ado
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
@@ -21,11 +20,12 @@ caps.latest.revision: 12
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 103206f4f4fe731da23a194cf89a54a404545f0d
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: c5171b0399614e266ff5ecfa974921f7bdef7646
+ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/11/2018
+ms.locfileid: "35279624"
 ---
 # <a name="moverecord-method-ado"></a>Método MoveRecord (ADO)
 Mueve la entidad representada por un [registro](../../../ado/reference/ado-api/record-object-ado.md) a otra ubicación.  
@@ -59,7 +59,7 @@ Record.MoveRecord (Source, Destination, UserName, Password, Options, Async)
 ## <a name="return-value"></a>Valor devuelto  
  A **cadena** valor. Normalmente, el valor de *destino* se devuelve. Sin embargo, el valor devuelto exacto depende del proveedor.  
   
-## <a name="remarks"></a>Comentarios  
+## <a name="remarks"></a>Notas  
  Los valores de *origen* y *destino* no debe ser idéntico; en caso contrario, se produce un error de tiempo de ejecución. Al menos los nombres de servidor, la ruta de acceso y el recurso deben ser diferente.  
   
  Para los archivos transferidos mediante el proveedor de publicación en Internet, este método actualiza todos los vínculos de hipertexto de archivos que se mueven a menos que se especifique lo contrario en *opciones*. Este método produce un error si *destino* identifica un objeto existente (por ejemplo, un archivo o directorio), a menos que **adMoveOverWrite** se especifica.  

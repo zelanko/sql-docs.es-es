@@ -2,7 +2,6 @@
 title: Source (propiedad) (conjunto de registros ADO) | Documentos de Microsoft
 ms.prod: sql
 ms.prod_service: connectivity
-ms.component: ado
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
@@ -26,11 +25,12 @@ caps.latest.revision: 11
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: fff874c34b527adc976b608e6b1594427245de24
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 2ee46e4f0af37fd28a6e45f48e31bab7e868821f
+ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/11/2018
+ms.locfileid: "35281882"
 ---
 # <a name="source-property-ado-recordset"></a>Propiedad Source (ADO Recordset)
 Indica que el origen de datos para un [Recordset](../../../ado/reference/ado-api/recordset-object-ado.md) objeto.  
@@ -38,7 +38,7 @@ Indica que el origen de datos para un [Recordset](../../../ado/reference/ado-api
 ## <a name="settings-and-return-values"></a>Configuración y valores devueltos  
  Conjuntos de un **cadena** valor o [comando](../../../ado/reference/ado-api/command-object-ado.md) objeto referencia; sólo devuelve un **cadena** valor que indica el origen de la **conjunto de registros**.  
   
-## <a name="remarks"></a>Comentarios  
+## <a name="remarks"></a>Notas  
  Use la **origen** propiedad para especificar un origen de datos para un **Recordset** objeto mediante uno de los siguientes: una **comando** objeto variable, una instrucción SQL, un procedimiento almacenado, o un nombre de tabla.  
   
  Si establece la **origen** propiedad a una **comando** objeto, el [ActiveConnection](../../../ado/reference/ado-api/activeconnection-property-ado.md) propiedad de la **Recordset** objeto heredará la valor de la **ActiveConnection** propiedad para el elemento especificado **comando** objeto. Sin embargo, leer el **origen** propiedad no devuelve un **comando** objeto; en su lugar, devuelve el [CommandText](../../../ado/reference/ado-api/commandtext-property-ado.md) propiedad de la **comando** el objeto a la que se establecen los **origen** propiedad.  

@@ -2,7 +2,6 @@
 title: Admite el método | Documentos de Microsoft
 ms.prod: sql
 ms.prod_service: connectivity
-ms.component: ado
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
@@ -21,11 +20,12 @@ caps.latest.revision: 12
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: f1a24ac211293847ffbb068055826abca3514abb
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 5788431361aa73999b819a09f76a0c4bef268c83
+ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/11/2018
+ms.locfileid: "35282584"
 ---
 # <a name="supports-method"></a>Método Supports
 Determina si un determinado [Recordset](../../../ado/reference/ado-api/recordset-object-ado.md) objeto admite un tipo determinado de funcionalidad.  
@@ -44,7 +44,7 @@ boolean = recordset.Supports(CursorOptions )
  *CursorOptions*  
  A **largo** expresión formada por uno o varios [CursorOptionEnum](../../../ado/reference/ado-api/cursoroptionenum.md) valores.  
   
-## <a name="remarks"></a>Comentarios  
+## <a name="remarks"></a>Notas  
  Use la **admite** método para determinar qué tipos de funcionalidad de un **Recordset** objeto admite. Si el **Recordset** objeto admite las funcionalidades cuyas constantes correspondientes están en *CursorOptions*, el **admite** método **True**. De lo contrario, devuelve **False**.  
   
 > [!NOTE]

@@ -2,7 +2,6 @@
 title: Método SaveToFile | Documentos de Microsoft
 ms.prod: sql
 ms.prod_service: connectivity
-ms.component: ado
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
@@ -21,11 +20,12 @@ caps.latest.revision: 12
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: e9beb8a1e2bfcc307c93b293a35dcac26cf0847a
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 0dda2aaf0d73889ac74e171c48ed3bb3d320ddc4
+ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/11/2018
+ms.locfileid: "35281604"
 ---
 # <a name="savetofile-method"></a>Método SaveToFile
 Guarda el contenido binario de un [flujo](../../../ado/reference/ado-api/stream-object-ado.md) a un archivo.  
@@ -47,7 +47,7 @@ Stream.SaveToFile FileName, SaveOptions
 > [!NOTE]
 >  Si se sobrescribe un archivo existente (cuando **adSaveCreateOverwrite** está establecido), **SaveToFile** truncará los bytes del archivo existente original que siguen a la nueva [sobrecargas eléctricas](../../../ado/reference/ado-api/eos-property.md).  
   
-## <a name="remarks"></a>Comentarios  
+## <a name="remarks"></a>Notas  
  **SaveToFile** puede utilizarse para copiar el contenido de un **flujo** objeto en un archivo local. No hay ningún cambio en el contenido o las propiedades de la **flujo** objeto. El **flujo** objeto debe estar abierto antes de llamar a **SaveToFile**.  
   
  Este método no cambia la asociación de la **flujo** objeto a su origen subyacente. El **flujo** objeto seguirá estando asociado a la dirección URL original o **registro** que era su origen al abrirse.  

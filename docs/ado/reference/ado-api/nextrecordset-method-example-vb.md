@@ -2,7 +2,6 @@
 title: Ejemplo del método NextRecordset (VB) | Documentos de Microsoft
 ms.prod: sql
 ms.prod_service: connectivity
-ms.component: ado
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
@@ -19,11 +18,12 @@ caps.latest.revision: 11
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: bed23dcb6254c6c3abd083a4cff037ff0501c005
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 28c553c49a658be1882b48cc0b18a39a21b607ad
+ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/11/2018
+ms.locfileid: "35279894"
 ---
 # <a name="nextrecordset-method-example-vb"></a>Ejemplo del método NextRecordset (VB)
 Este ejemplo se utiliza la [NextRecordset](../../../ado/reference/ado-api/nextrecordset-method-ado.md) método para ver los datos en un conjunto de registros que utiliza una instrucción compuesta formada por tres independiente **seleccione** instrucciones.  

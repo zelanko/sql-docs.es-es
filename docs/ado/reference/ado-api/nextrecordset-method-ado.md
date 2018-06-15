@@ -2,7 +2,6 @@
 title: Método NextRecordset (ADO) | Documentos de Microsoft
 ms.prod: sql
 ms.prod_service: connectivity
-ms.component: ado
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 03/20/2018
@@ -22,11 +21,12 @@ caps.latest.revision: 12
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 1773c2bd8709a429a2e388b8a38a192107f2e7f3
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: a1df02b14168a15f9bccc476b62583334b2f0c3f
+ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/11/2018
+ms.locfileid: "35279644"
 ---
 # <a name="nextrecordset-method-ado"></a>Método NextRecordset (ADO)
 Borra actual [Recordset](../../../ado/reference/ado-api/recordset-object-ado.md) de objetos y devuelve el siguiente **Recordset** al avanzar a través de una serie de comandos.  
@@ -48,7 +48,7 @@ Set recordset2 = recordset1.NextRecordset(RecordsAffected )
 > [!NOTE]
 >  Este parámetro sólo devuelve el número de registros afectados por una operación; no devuelve un recuento de registros de una instrucción select utilizada para generar el **conjunto de registros**.  
   
-## <a name="remarks"></a>Comentarios  
+## <a name="remarks"></a>Notas  
  Use la **NextRecordset** método para devolver los resultados del siguiente comando en una instrucción de comando compuesta o de un procedimiento almacenado que devuelve varios resultados. Si abre un **Recordset** objeto basado en una instrucción de comando compuesta (por ejemplo, "seleccione \* FROM Tabla1; Seleccione \* de table2 ") mediante el [Execute](../../../ado/reference/ado-api/execute-method-ado-command.md) método en un [comando](../../../ado/reference/ado-api/command-object-ado.md) o la [abiertos](../../../ado/reference/ado-api/open-method-ado-recordset.md) método en un **conjunto de registros**, ADO ejecuta sólo el primer comando y devuelve los resultados a *conjunto de registros*. Para obtener acceso a los resultados de los comandos subsiguientes de la instrucción, llame a la **NextRecordset** método.  
   
  Siempre que hay resultados adicionales y el **Recordset** que contiene las instrucciones compuestas se desconecte o calcular las referencias en los límites de proceso, no el **NextRecordset** continuará (método) devolver **Recordset** objetos. Si un comando que devuelve filas se ejecuta correctamente pero no devuelve ningún registro, el valor devuelto **Recordset** objeto estará abierto pero vacío. Prueba en este caso, compruebe que la [BOF](../../../ado/reference/ado-api/bof-eof-properties-ado.md) y [EOF](../../../ado/reference/ado-api/bof-eof-properties-ado.md) ambas propiedades están **True**. Si un comando no devuelve filas ejecuta correctamente, el valor devuelto **Recordset** objeto estará cerrado, lo que puede comprobarse mediante la [estado](../../../ado/reference/ado-api/state-property-ado.md) propiedad en el **Recordset**. Cuando ya no queden más resultados, *recordset* se establecerá en *nada*.  

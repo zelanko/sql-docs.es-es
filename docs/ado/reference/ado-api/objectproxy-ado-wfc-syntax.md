@@ -2,7 +2,6 @@
 title: ObjectProxy (ADO - sintaxis WFC) | Documentos de Microsoft
 ms.prod: sql
 ms.prod_service: connectivity
-ms.component: ado
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
@@ -18,11 +17,12 @@ caps.latest.revision: 9
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: dd42478c8da0cc0eba4471ac46a66ec4a08d5bd5
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 0ce52d661b5fffe6f0263baa81808dc7d1e9fd3b
+ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/11/2018
+ms.locfileid: "35279664"
 ---
 # <a name="objectproxy-ado---wfc-syntax"></a>ObjectProxy (ADO - sintaxis WFC)
 Un **ObjectProxy** objeto representa un servidor y se devuelve por la **createObject** método de la [DataSpace](../../../ado/reference/rds-api/dataspace-object-rds.md) objeto. La clase ObjectProxy tiene un método, **llamar a**, que puede invocar un método en el servidor y devolver un objeto resultante de esa llamada.  
@@ -42,7 +42,7 @@ public Object ObjectProxy.( String method, Object[] args)
 ```  
   
 #### <a name="returns"></a>Devuelve  
- Object  
+ Objeto  
  Objeto resultante de la llamada al método.  
   
 #### <a name="parameters"></a>Parámetros  

@@ -2,7 +2,6 @@
 title: Move (método) (ADO) | Documentos de Microsoft
 ms.prod: sql
 ms.prod_service: connectivity
-ms.component: ado
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
@@ -21,11 +20,12 @@ caps.latest.revision: 12
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: a596576b742eed097d0f7f89f5c13b70adb99477
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: d4cd82d1e3e18c408afb1771a5f0f3fa1557b8ae
+ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/11/2018
+ms.locfileid: "35279374"
 ---
 # <a name="move-method-ado"></a>Move (método) (ADO)
 Mueve la posición del registro actual en un [Recordset](../../../ado/reference/ado-api/recordset-object-ado.md) objeto.  
@@ -41,10 +41,10 @@ recordset.Move NumRecords, Start
  *NumRecords*  
  Iniciado **largo** expresión que especifica el número de registros que se mueve la posición del registro actual.  
   
- *Iniciar*  
+ *Inicio*  
  Opcional. A **cadena** valor o **Variant** que se evalúa como un marcador. También puede usar un [BookmarkEnum](../../../ado/reference/ado-api/bookmarkenum.md) valor.  
   
-## <a name="remarks"></a>Comentarios  
+## <a name="remarks"></a>Notas  
  El **mover** método se admite en todos los **Recordset** objetos.  
   
  Si el *NumRecords* argumento es mayor que cero, la posición actual del registro se mueve hacia delante (hacia el final de la **Recordset**). Si *NumRecords* es menor que cero, la posición actual del registro se mueve hacia atrás (hacia el principio de la **Recordset**).  

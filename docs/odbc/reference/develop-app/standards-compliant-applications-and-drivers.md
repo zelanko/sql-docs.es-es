@@ -23,6 +23,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32913790"
 ---
 # <a name="standards-compliant-applications-and-drivers"></a>Controladores y aplicaciones compatibles con estándares
 Una aplicación compatible con los estándares o el controlador es aquella que se ajusta a las especificaciones de CAE grupo Open "datos de administración: SQL nivel de llamada Interface (CLI)" y la norma ISO/IEC 9075-3:1995 interfaz de nivel de llamada (E) (SQL/CLI).  

@@ -19,6 +19,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32908570"
 ---
 # <a name="connecting-to-a-data-source-or-driver"></a>Conectarse a datos de un origen o el controlador
 Una aplicación puede estar conectada a cualquier número de controladores y orígenes de datos. Puede tratarse de una variedad de orígenes de datos y los controladores, el mismo controlador y una variedad de orígenes de datos o incluso varias conexiones con el mismo controlador y el origen de datos.  

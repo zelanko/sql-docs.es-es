@@ -22,6 +22,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32909960"
 ---
 # <a name="constructing-interoperable-sql-statements"></a>Crear instrucciones SQL Interoperable
 Como se mencionó en las secciones anteriores, aplicaciones interoperables deben usar la gramática de SQL de ODBC. Sin embargo, aparte de emplear esta gramática, una serie de problemas adicionales se enfrenta por aplicaciones interoperables. Por ejemplo, ¿qué hace una aplicación si desea usar una característica, como las combinaciones externas, que no es compatible con todos los orígenes de datos?  

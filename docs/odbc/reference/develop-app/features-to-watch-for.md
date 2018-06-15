@@ -21,6 +21,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32911370"
 ---
 # <a name="features-to-watch-for"></a>Características para vigilar
 Esta sección describe una serie de características que los desarrolladores de aplicaciones a menudo dan por sentado. De hecho, estas características varían ampliamente en soporte técnico y el modo de compatibilidad entre DBMS; errores al código para ellos es podría causar problemas en aplicaciones interoperables.  

@@ -22,6 +22,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32909900"
 ---
 # <a name="executing-batches"></a>Ejecución de lotes
 Antes de que una aplicación ejecuta un lote de instrucciones, debe comprobar primero si son compatibles. Para ello, la aplicación llama **SQLGetInfo** con las opciones de SQL_BATCH_SUPPORT, SQL_PARAM_ARRAY_ROW_COUNTS y SQL_PARAM_ARRAY_SELECTS. La primera opción devuelve si generación de recuento de filas y el resultado de conjunto: generar instrucciones son compatibles con lotes explícitos y procedimientos, mientras las dos últimas opciones devuelven información acerca de la disponibilidad de recuentos de filas y el resultado se establece en parámetros ejecución.  

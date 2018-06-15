@@ -21,6 +21,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32911390"
 ---
 # <a name="retrieving-the-values-in-descriptor-fields"></a>Recuperar los valores de campos de Descriptor
 Una aplicación puede llamar a **SQLGetDescField** para obtener un único campo de un registro del descriptor. **SQLGetDescField** da acceso a la aplicación a todos los campos de descriptor que se definen en ODBC y a los campos definidos por el controlador.  

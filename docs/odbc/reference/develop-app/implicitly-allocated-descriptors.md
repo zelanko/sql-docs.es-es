@@ -23,6 +23,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32913880"
 ---
 # <a name="implicitly-allocated-descriptors"></a>Descriptores implícitamente asignados
 Cuando se asigna un identificador de instrucción, la aplicación asigna implícitamente un conjunto de descriptores de cuatro. La aplicación puede obtener los identificadores de estos asigna implícitamente descriptores como atributos de identificador de instrucción. Cuando la aplicación libera el identificador de instrucción, el controlador libera todos los descriptores de implícitamente asignados en ese identificador.

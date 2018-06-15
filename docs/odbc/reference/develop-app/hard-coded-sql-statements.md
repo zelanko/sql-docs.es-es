@@ -23,6 +23,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32911510"
 ---
 # <a name="hard-coded-sql-statements"></a>Instrucciones SQL codificadas de forma rígida
 Las aplicaciones que realizan una tarea fija normalmente contienen instrucciones de SQL codificadas de forma rígida. Por ejemplo, un sistema de entrada de pedidos puede usar la siguiente llamada a pedidos de ventas abiertos de lista:  

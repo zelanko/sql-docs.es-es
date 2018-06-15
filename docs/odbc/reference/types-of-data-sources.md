@@ -21,6 +21,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32917231"
 ---
 # <a name="types-of-data-sources"></a>Tipos de orígenes de datos
 Hay dos tipos de orígenes de datos: orígenes de datos y orígenes de datos de archivo del equipo. Aunque ambos contienen información similar sobre el origen de los datos, se diferencian en la manera en que se almacena esta información. Debido a estas diferencias, se utilizan en algo distintas maneras.  

@@ -23,6 +23,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32914740"
 ---
 # <a name="step-5-commit-the-transaction"></a>Paso 5: Confirmar la transacción
 El siguiente paso es confirmar la transacción, tal como se muestra en la siguiente ilustración.  

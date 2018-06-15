@@ -25,6 +25,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32912340"
 ---
 # <a name="rowset-size"></a>Tamaño del conjunto de filas
 En función de qué tamaño de conjunto de filas que se usará en la aplicación. Normalmente, las aplicaciones basadas en pantalla siguen uno de dos estrategias. La primera consiste en establecer el tamaño del conjunto de filas en el número de filas que se muestran en la pantalla; Si el usuario cambia el tamaño de la pantalla, la aplicación también cambia el tamaño del conjunto de filas. La segunda es establecer el tamaño del conjunto de filas en un número mayor, como 100, lo que reduce el número de llamadas al origen de datos. La aplicación se desplaza localmente en el conjunto de filas siempre que sea posible y captura filas nuevas solo cuando desplaza fuera del conjunto de filas.  

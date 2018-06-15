@@ -24,6 +24,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32910860"
 ---
 # <a name="sqlgetdata-and-block-cursors"></a>SQLGetData y cursores de bloque
 **SQLGetData** funciona en una sola columna de una sola fila y no se puede encontrar una matriz que contiene los datos de varias filas. Esto es porque el uso principal de **SQLGetData** consiste en capturar datos largos en partes, y hay poca o ninguna razón para hacerlo para más de una fila a la vez.  

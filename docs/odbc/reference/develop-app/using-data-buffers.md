@@ -23,6 +23,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32914870"
 ---
 # <a name="using-data-buffers"></a>Utilizar los búferes de datos
 Se describen los búferes de datos por tres partes de información: su longitud en bytes, la dirección y el tipo. Cada vez que una función necesita uno de estos fragmentos de información y aún no la conoce, tiene un argumento con el que la aplicación pasa.  

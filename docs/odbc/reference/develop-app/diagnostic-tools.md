@@ -21,6 +21,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32909720"
 ---
 # <a name="diagnostic-tools"></a>Herramientas de diagnóstico
 Dos funciones pueden ayudar a diagnosticar problemas en las aplicaciones de ODBC. Ambos están disponibles desde el Administrador de ODBC e implementadas por el Administrador de controladores. *Seguimiento* proporciona un medio para registrar en un archivo de registro de la secuencia de llamadas de función. Visual Studio Analyzer permite el análisis de información sobre la interacción de componentes en un entorno distribuido.  

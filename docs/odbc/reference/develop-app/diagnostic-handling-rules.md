@@ -24,6 +24,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32911640"
 ---
 # <a name="diagnostic-handling-rules"></a>Reglas de control de diagnóstico
 Las reglas siguientes rigen el control de diagnóstico en **SQLGetDiagRec** y **SQLGetDiagField**.  

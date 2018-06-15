@@ -23,6 +23,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32911121"
 ---
 # <a name="inserting-rows-with-sqlbulkoperations"></a>Insertar filas con SQLBulkOperations
 Insertar datos con **SQLBulkOperations** es similar a la actualización de datos con **SQLBulkOperations** porque utiliza datos de los búferes de aplicación enlazadas.  

@@ -26,6 +26,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32911050"
 ---
 # <a name="mixed-cursors"></a>Cursores mixtos
 Un cursor mixto es una combinación de un cursor controlado por conjunto de claves y un cursor dinámico. Se utiliza cuando el conjunto de resultados es demasiado grande para guardar razonablemente claves para el conjunto de resultados completo. Cursores mixtos se implementan mediante la creación de un conjunto de claves que es menor que el conjunto de resultados completo pero mayor que el conjunto de filas.  

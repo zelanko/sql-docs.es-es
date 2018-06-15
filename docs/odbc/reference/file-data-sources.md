@@ -22,6 +22,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32915590"
 ---
 # <a name="file-data-sources"></a>Orígenes de datos de archivo
 *Orígenes de datos de archivos* se almacenan en un archivo y permitir que la información de conexión para utilizarse varias veces por un único usuario o compartir entre varios usuarios. Cuando se utiliza un origen de datos de archivo, el Administrador de controladores realiza la conexión al origen de datos con la información de un archivo de DSN. Este archivo se puede manipular como cualquier otro archivo. Un origen de datos de archivo no tiene un nombre de origen de datos, tal y como hace un origen de datos de la máquina y no está registrado en cualquier máquina o un usuario.  

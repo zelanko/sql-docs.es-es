@@ -21,6 +21,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32912310"
 ---
 # <a name="executing-a-statement"></a>Ejecutar una instrucción
 Hay cuatro maneras de ejecutar una instrucción, dependiendo de si se compilan (preparado) por el motor de base de datos y que define:  

@@ -23,6 +23,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32911530"
 ---
 # <a name="quoted-identifiers"></a>Identificadores entre comillas
 En una instrucción SQL, los identificadores que contienen caracteres especiales o palabras clave de la coincidencia deben incluirse entre *caracteres de comillas de identificador*; identificadores dentro de estos caracteres se denominan *identificadoresentrecomillados*(también conocido como *identificadores delimitados* en SQL-92). Por ejemplo, el identificador de cuentas por pagar se definen en la siguiente **seleccione** instrucción:  

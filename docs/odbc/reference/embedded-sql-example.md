@@ -23,6 +23,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32916360"
 ---
 # <a name="embedded-sql-example"></a>Ejemplo SQL incrustado
 El código siguiente es un programa SQL incrustado simple, escrito en C. El programa muestra muchos, pero no todos, de los datos incrustados técnicas SQL. El programa solicita al usuario un número de pedido, recupera el número de cliente, el vendedor y el estado del pedido y muestra la información recuperada en la pantalla.  

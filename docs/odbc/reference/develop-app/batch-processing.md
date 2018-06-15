@@ -22,6 +22,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32910410"
 ---
 # <a name="batch-processing"></a>Procesamiento por lotes
 Compatibilidad con lotes de instrucciones SQL no es generalizada, para que aplicaciones interoperables deben usarlas condicionalmente o no en absoluto. Para obtener más información, consulte [ejecutar lotes](../../../odbc/reference/develop-app/executing-batches.md).

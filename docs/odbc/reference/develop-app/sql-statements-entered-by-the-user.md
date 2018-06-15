@@ -23,6 +23,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32911400"
 ---
 # <a name="sql-statements-entered-by-the-user"></a>Instrucciones SQL escritas por el usuario
 Las aplicaciones que realizan análisis ad hoc suelen permiten al usuario escribir instrucciones SQL directamente. Por ejemplo:  

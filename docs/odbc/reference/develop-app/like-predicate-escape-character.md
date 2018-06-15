@@ -22,6 +22,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32911870"
 ---
 # <a name="like-predicate-escape-character"></a>COMO carácter de Escape de predicado
 En un **como** predicado, el signo de porcentaje (%) de coincidencias con cero o más de un carácter y el carácter de subrayado (_) coincide con cualquier carácter. Para hacer coincidir un signo de porcentaje real o carácter de subrayado en un **como** predicado, un carácter de escape debe aparecer antes del signo de porcentaje o un carácter de subrayado. La secuencia de escape que define la **como** carácter de escape de predicado es:  

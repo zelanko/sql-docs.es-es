@@ -23,6 +23,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32910170"
 ---
 # <a name="diagnostics"></a>Diagnósticos
 Las funciones de ODBC devuelven información de diagnóstico de dos maneras. El código de retorno indica el éxito o fracaso de la función global mientras que los registros de diagnóstico proporcionan información detallada acerca de la función. Al menos un registro de diagnóstico, el registro de encabezado, se devuelve aunque la función se realiza correctamente.  

@@ -23,6 +23,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32907970"
 ---
 # <a name="allocating-and-freeing-buffers"></a>Asignar y liberar búferes
 Todos los búferes se asigna y libera la aplicación. Si no se aplaza un búfer, sólo debe existir para la duración de la llamada a una función. Por ejemplo, **SQLGetInfo** devuelve el valor asociado a una opción concreta en el búfer señalado por el *InfoValuePtr* argumento. Este búfer se puede liberar inmediatamente después de llamar a **SQLGetInfo**, tal y como se muestra en el ejemplo de código siguiente:  

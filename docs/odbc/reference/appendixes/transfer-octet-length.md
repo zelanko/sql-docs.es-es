@@ -24,6 +24,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32909765"
 ---
 # <a name="transfer-octet-length"></a>Longitud de bytes de transferencia
 La longitud de bytes de transferencia de una columna es el número máximo de bytes que se devuelven a la aplicación cuando se transfieren datos a su tipo de datos C predeterminado. Para datos de caracteres, la longitud de bytes de transferencia no incluye espacio para el carácter de terminación null. La longitud de octeto de transferencia de una columna puede ser diferente del número de bytes necesarios para almacenar los datos en el origen de datos.  

@@ -22,6 +22,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32910830"
 ---
 # <a name="binding-result-set-columns"></a>Columnas del conjunto de resultados de enlace
 Las aplicaciones pueden enlazar como muchos o pocos como columnas del conjunto de resultados como que elijan, incluidos no enlace ninguna columna en absoluto. Cuando se captura una fila de datos, el controlador devuelve los datos de las columnas enlazadas a la aplicación. Si la aplicación enlaza todas las columnas del conjunto de resultados depende de la aplicación. Por ejemplo, las aplicaciones que generan informes suelen tengan un formato fijo; dichas aplicaciones crear un conjunto de resultados que contiene todas las columnas utilizadas en el informe y, a continuación, enlazar y recuperarán los datos de todas estas columnas. Aplicaciones que se muestran a veces pantallas llena de datos permiten al usuario decidir qué columnas desea mostrar; dichas aplicaciones crean un conjunto que contiene todas las columnas, el usuario podría desee, pero enlazar y recuperar los datos solo para las columnas seleccionadas por el usuario de resultados.  

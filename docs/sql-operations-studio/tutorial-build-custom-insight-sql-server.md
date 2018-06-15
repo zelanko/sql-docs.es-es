@@ -18,6 +18,7 @@ ms.sourcegitcommit: 6fd8a193728abc0a00075f3e4766a7e2e2859139
 ms.translationtype: MT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/17/2018
+ms.locfileid: "34235759"
 ---
 # <a name="tutorial-build-a-custom-insight-widget"></a>Tutorial: Crear un widget de información personalizada
 

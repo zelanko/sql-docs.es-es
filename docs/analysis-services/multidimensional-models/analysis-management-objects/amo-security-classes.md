@@ -14,6 +14,7 @@ ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
 ms.translationtype: MT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/10/2018
+ms.locfileid: "34023352"
 ---
 # <a name="amo-security-classes"></a>Clases Security de AMO
   Este tema contiene las siguientes secciones:  

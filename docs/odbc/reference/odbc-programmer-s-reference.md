@@ -21,6 +21,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32921690"
 ---
 # <a name="odbc-programmer39s-reference"></a>Programador de ODBC&#39;referencia s
 El *referencia del programador de ODBC* contiene las siguientes secciones.  

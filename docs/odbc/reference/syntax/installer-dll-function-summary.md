@@ -22,6 +22,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32917393"
 ---
 # <a name="installer-dll-function-summary"></a>Resumen de funciones DLL de instalador
 En la tabla siguiente describe las funciones en el archivo DLL del instalador. Para obtener más información sobre la sintaxis y semántica para cada función, consulte [referencia API DLL del instalador](../../../odbc/reference/syntax/installer-dll-api-reference-function.md).  

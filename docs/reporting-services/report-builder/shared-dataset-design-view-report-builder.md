@@ -20,6 +20,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "33021372"
 ---
 # <a name="shared-dataset-design-view-report-builder"></a>Vista de diseño de conjunto de datos compartidos (Generador de informes)
   En un informe, un conjunto de datos representa los datos del informe que se devuelven como resultado de ejecutar una consulta en un origen de datos externo. Los conjuntos de datos compartidos se publican en un servidor de informes y se pueden usar en varios informes. Puede crear conjuntos de datos para compartirlos con otros usuarios. En la ventana de diseño de conjunto de datos compartido, puede seleccionar un origen de datos compartido, especificar las propiedades del conjunto de datos compartido y crear una consulta en el diseñador de consultas.  

@@ -33,6 +33,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "33022292"
 ---
 # <a name="customize-the-data-and-display-of-a-map-or-map-layer-report-builder-and-ssrs"></a>Personalizar los datos y la presentación de un mapa o una capa de mapa (Generador de informes y SSRS)
   Después de agregar un mapa o una capa de mapa a un informe paginado de [!INCLUDE[ssRSnoversion_md](../../includes/ssrsnoversion-md.md)] con un asistente, puede que quiera cambiar el aspecto del mapa en el informe. Puede realizar mejoras considerando las ideas siguientes:  

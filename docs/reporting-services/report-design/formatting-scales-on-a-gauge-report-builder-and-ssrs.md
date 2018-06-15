@@ -20,6 +20,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "33023992"
 ---
 # <a name="formatting-scales-on-a-gauge-report-builder-and-ssrs"></a>Aplicar formato a las escalas de un medidor (Generador de informes y SSRS)
   En un informe paginado de [!INCLUDE[ssRSnoversion_md](../../includes/ssrsnoversion-md.md)] , la escala del medidor es el intervalo de números, comprendidos entre un mínimo y un máximo, que se muestran en un medidor. Normalmente, una escala del medidor contiene las etiquetas del medidor y las marcas de graduación que proporcionan una lectura precisa de lo que representa el puntero del medidor. Una escala del medidor generalmente está asociada a uno o más punteros del medidor. Puede haber más de una escala en el mismo medidor.  

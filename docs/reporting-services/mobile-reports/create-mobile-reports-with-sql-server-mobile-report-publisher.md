@@ -21,6 +21,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "33018642"
 ---
 # <a name="create-mobile-reports-with-sql-server-mobile-report-publisher"></a>Creación y publicación de informes móviles con el Publicador de informes móviles de SQL Server
 Obtenga información sobre los informes móviles de [!INCLUDE[ssRSnoversion_md](../../includes/ssrsnoversion-md.md)] , que están optimizados para dispositivos móviles y conectados a datos locales y disponen de una gran variedad de visualizaciones de datos. 

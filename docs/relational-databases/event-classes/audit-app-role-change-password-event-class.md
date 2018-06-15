@@ -21,6 +21,7 @@ ms.sourcegitcommit: ee661730fb695774b9c483c3dd0a6c314e17ddf8
 ms.translationtype: HT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/19/2018
+ms.locfileid: "34329467"
 ---
 # <a name="audit-app-role-change-password-event-class"></a>Audit App Role Change Password, clase de eventos
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]

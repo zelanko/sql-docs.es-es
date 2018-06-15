@@ -22,6 +22,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "33016879"
 ---
 # <a name="lesson-3-defining-a-data-driven-subscription"></a>Lesson 3: Defining a Data-Driven Subscription
 En esta lección del tutorial [!INCLUDE[ssRSnoversion_md](../includes/ssrsnoversion-md.md)] , usará las páginas de suscripción controlada por datos de los portales web de [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] para conectarse a un origen de datos de suscripción, crear una consulta que recupere datos de suscripción y asignar el conjunto de resultados a las opciones de informe y entrega.  

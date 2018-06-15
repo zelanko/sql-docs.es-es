@@ -17,6 +17,7 @@ ms.sourcegitcommit: ee661730fb695774b9c483c3dd0a6c314e17ddf8
 ms.translationtype: MT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/19/2018
+ms.locfileid: "34321284"
 ---
 # <a name="schedule-sql-server-integration-services-package-execution-on-linux-with-cron"></a>Ejecución en Linux con cron del paquete de programación de SQL Server Integration Services
 

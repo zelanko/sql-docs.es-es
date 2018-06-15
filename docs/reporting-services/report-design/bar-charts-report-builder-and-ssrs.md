@@ -20,6 +20,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "33021832"
 ---
 # <a name="bar-charts-report-builder-and-ssrs"></a>Gráficos de barras (Generador de informes y SSRS)
   Un gráfico de barras muestra las series como conjuntos de barras horizontales. El gráfico de barras sencillo está estrechamente relacionado con el gráfico de columnas, que muestra las series como conjuntos de barras verticales, y con el gráfico de intervalos de barras, que muestra las series como conjuntos de barras horizontales con puntos iniciales y finales que varían.  

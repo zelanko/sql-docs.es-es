@@ -29,6 +29,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "33014892"
 ---
 # <a name="integrating-reporting-services-using-url-access---web-application"></a>Integración de Reporting Services con el acceso URL: aplicación web
   El acceso URL en [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] está diseñado específicamente para habilitar el acceso a informes individuales a través de una red. Este tipo de acceso es mejor para integrar la visualización y navegación por los informes en una aplicación web personalizada. Para utilizar el acceso URL en las aplicaciones web, puede:  

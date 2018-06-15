@@ -20,6 +20,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "33018272"
 ---
 # <a name="data-for-reporting-services-mobile-reports"></a>Datos de informes de Reporting Services móviles
 El modelo de datos del [!INCLUDE[PRODUCT_NAME](../../includes/ss-mobilereptpub-long.md)] es sencillo. Los datos se importan en el [!INCLUDE[PRODUCT_NAME](../../includes/ss-mobilereptpub-short.md)] como una colección de conjuntos de datos. No son necesarias relaciones formales entre conjuntos de datos. Las búsquedas de un conjunto de datos a otro funcionarán siempre que coincidan los valores de clave. Las agregaciones de fecha y hora las controla el tiempo de ejecución de informe móvil y coincidirán entre diferentes conjuntos de datos, incluso si la granularidad de datos de fecha y hora es distinta entre los conjuntos de datos.   

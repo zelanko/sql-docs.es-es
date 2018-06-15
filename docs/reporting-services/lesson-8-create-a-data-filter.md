@@ -22,6 +22,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "33016992"
 ---
 # <a name="lesson-8-create-a-data-filter"></a>Lección 8: Crear un filtro de datos
 Después de agregar una acción de obtención de detalles en el informe primario, el paso siguiente consiste en crear un filtro de los datos de la tabla de datos que definió para el informe secundario.  

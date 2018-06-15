@@ -22,6 +22,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "33018732"
 ---
 # <a name="set-default-options-for-report-builder"></a>Establecimiento de opciones predeterminadas para el Generador de informes
   En Generador de informes, puede establecer un número de valores predeterminados útiles para que la creación de informes resulte más sencilla y más rápida.  Por ejemplo, si puede establecer o cambiar el servidor de informes predeterminado, Generador de informes guarda los informes en el mismo servidor de informes automáticamente, a menos que se especifique lo contrario.  

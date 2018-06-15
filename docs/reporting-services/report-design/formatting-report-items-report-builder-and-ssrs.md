@@ -22,6 +22,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "33023452"
 ---
 # <a name="formatting-report-items-report-builder-and-ssrs"></a>Aplicar formato a los elementos de informe (Generador de informes y SSRS)
   Aplicar formato a los elementos del informe hace que este tenga una apariencia más atractiva y mejora su legibilidad. En el modo de diseño de informe se puede aplicar formato a los cuadros de texto y a los elementos incluidos en ellos, a las imágenes, a las expresiones y a los datos.  

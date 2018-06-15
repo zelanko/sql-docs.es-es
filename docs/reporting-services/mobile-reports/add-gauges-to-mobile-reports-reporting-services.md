@@ -20,6 +20,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "33019422"
 ---
 # <a name="add-gauges-to-mobile-reports--reporting-services"></a>Agregar medidores a informes para dispositivos móviles | Reporting Services
 Los medidores son los elementos visuales más básicos y más ampliamente usados en los informes para dispositivos móviles. Muestran un valor único de un conjunto de datos: solo el valor, o bien el valor comparado con un objetivo.

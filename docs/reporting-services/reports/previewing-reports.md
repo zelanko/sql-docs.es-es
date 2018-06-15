@@ -25,6 +25,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "33028732"
 ---
 # <a name="previewing-reports"></a>Obtener la vista previa de informes
   Después de diseñar un informe de     [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] , puede que quiera verlo antes de publicarlo en un entorno de producción. Existen varias maneras de verlo: cambiar al modo de vista previa del Diseñador de informes, usar la ventana de vista previa del Diseñador de informes y publicar el informe en un servidor de informes en un entorno de prueba.  

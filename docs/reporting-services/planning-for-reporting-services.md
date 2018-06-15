@@ -20,6 +20,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "33018542"
 ---
 # <a name="planning-for-reporting-services"></a>Planeamiento para Reporting Services
   En estos temas obtendrá más información sobre [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)]. Aprenda a instalar y configurar el entorno de [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] para adaptarlo a sus necesidades.  

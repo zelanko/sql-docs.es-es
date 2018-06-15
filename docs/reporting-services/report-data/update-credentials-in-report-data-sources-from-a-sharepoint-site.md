@@ -20,6 +20,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "33021752"
 ---
 # <a name="update-credentials-in-report-data-sources-from-a-sharepoint-site"></a>Actualizar credenciales en orígenes de datos de informe desde un sitio de SharePoint
   En este tema se describe cómo actualizar los orígenes de datos incrustados en informes y los orígenes de datos compartidos en una biblioteca de documentos de SharePoint.  

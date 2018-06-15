@@ -20,6 +20,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "33018752"
 ---
 # <a name="print-reports-from-other-applications-report-builder-and-ssrs"></a>Imprimir informes desde otras aplicaciones (Generador de informes y SSRS)
   El Generador de informes incluye una opción de exportación que le permite ver fácilmente un informe en otras aplicaciones. El comando **Export** está disponible en la barra de herramientas de informe que aparece en la parte superior de un informe cuando abre dicho informe en un explorador o una aplicación basada en web. Si exporta un informe, este se muestra en una aplicación diferente (por ejemplo, si se exporta un informe a Excel, se abre en [!INCLUDE[ofprexcel](../../includes/ofprexcel-md.md)]). Para la impresión, solo se recomienda exportar un informe si la aplicación dispone de unas características de impresión concretas que desea utilizar.  

@@ -23,6 +23,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "33018682"
 ---
 # <a name="enter-data-source-credentials-dialog-box-report-builder"></a>Escribir credenciales de origen de datos (cuadro de diálogo del Generador de informes)
   Use el cuadro de diálogo **Escribir credenciales de origen de datos** para proporcionar las credenciales necesarias para poder recuperar datos del origen de datos.  

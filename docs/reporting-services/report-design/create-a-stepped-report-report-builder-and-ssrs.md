@@ -20,6 +20,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "33021822"
 ---
 # <a name="create-a-stepped-report-report-builder-and-ssrs"></a>Crear un informe escalonado (Generador de informes y SSRS)
 Un informe escalonado es un tipo de informe paginado de  [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] donde se muestran filas de detalles o grupos secundarios con una sangría debajo de un grupo primario en la misma columna, como se muestra en el ejemplo siguiente:  

@@ -20,6 +20,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "33027772"
 ---
 # <a name="plan-a-map-report-report-builder-and-ssrs"></a>Planear un informe de mapa (Generador de informes y SSRS)
 Los buenos informes presentan información que motiva acciones o conocimientos. Para presentar datos analíticos como totales de ventas o datos demográficos en un contexto geográfico, puede agregar un mapa al informe paginado de [!INCLUDE[ssRSnoversion_md](../../includes/ssrsnoversion-md.md)] . Un mapa puede contener varias capas, y en cada una se muestran elementos de mapa definidos por un tipo concreto de datos espaciales: puntos que representan ubicaciones, líneas que representan rutas o polígonos que representan áreas. Puede asociar los datos analíticos a elementos de mapa en cada capa.  

@@ -23,6 +23,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "33028022"
 ---
 # <a name="configure-basic-authentication-on-the-report-server"></a>Configurar la autenticación básica en el servidor de informes
   De forma predeterminada, Reporting Services acepta solicitudes que especifican la autenticación NTLM o Negotiate. Si su implementación incluye aplicaciones cliente o exploradores que utilizan la autenticación básica, debe agregar esta autenticación a la lista de tipos admitidos. Además, si desea utilizar el Generador de informes, debe permitir el acceso anónimo a los archivos del Generador de informes.  

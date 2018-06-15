@@ -24,6 +24,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "33017502"
 ---
 # <a name="using-the-webforms-reportviewer-control"></a>Usar el control ReportViewer de WebForms
   Para ver los informes implementados en un servidor de informes o los informes que existen en el sistema de archivos local, puede utilizar el control ReportViewer de WebForms para representarlos en una aplicación web.  

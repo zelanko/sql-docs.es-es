@@ -168,6 +168,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "33027542"
 ---
 # <a name="gauges-report-builder-and-ssrs"></a>Medidores (Generador de informes y SSRS)
   En los informes paginados de [!INCLUDE[ssRSnoversion_md](../../includes/ssrsnoversion-md.md)] , una región de datos de medidor muestra un solo valor del conjunto de datos. Los medidores siempre se sitúan dentro de un panel de medidores, en el que pueden agregarse medidores secundarios o adyacentes. En un mismo panel de medidores, puede crear varios medidores que comparten funciones comunes como el filtrado, la agrupación o la ordenación.  

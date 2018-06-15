@@ -20,6 +20,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "33023902"
 ---
 # <a name="report-builder-functions---inscope-function"></a>Funciones del Generador de informes: función InScope
   Indica si la instancia actual de un elemento se encuentra en el ámbito especificado.  

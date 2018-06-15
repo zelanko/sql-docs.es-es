@@ -20,6 +20,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "33020742"
 ---
 # <a name="teradata-connection-type-ssrs"></a>Tipo de conexión de Teradata (SSRS)
   Para incluir en un informe datos de una base de datos relacional de Teradata, debe tener un conjunto de datos basado en un origen de datos de informe de tipo Teradata. Este tipo de origen de datos integrado está basado en la extensión de procesamiento de datos del proveedor administrado de .NET para Teradata.  

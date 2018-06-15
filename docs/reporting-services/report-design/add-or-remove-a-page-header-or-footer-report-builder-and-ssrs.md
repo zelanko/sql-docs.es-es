@@ -20,6 +20,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "33019112"
 ---
 # <a name="add-or-remove-a-page-header-or-footer-report-builder-and-ssrs"></a>Agregar o quitar un encabezado o un pie de página (Generador de informes y SSRS)
   Puede agregar texto estático, imágenes, líneas, rectángulos y bordes a encabezados y pies de página. Puede colocar expresiones e imágenes enlazadas a datos en un cuadro de texto si desea incluir datos variables o calculados en un encabezado o pie de página.  

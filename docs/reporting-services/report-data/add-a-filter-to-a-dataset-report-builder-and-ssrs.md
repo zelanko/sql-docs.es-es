@@ -20,6 +20,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "33020513"
 ---
 # <a name="add-a-filter-to-a-dataset-report-builder-and-ssrs"></a>Agregar un filtro a un conjunto de datos (Generador de informes y SSRS)
   Agregue un filtro a un conjunto de datos para limitar los datos en un informe una vez recuperados de un origen de datos externo. Al agregar un filtro a un conjunto de datos, todos los elementos de informe o regiones de datos usan solo los datos que cumplen las condiciones del filtro.  

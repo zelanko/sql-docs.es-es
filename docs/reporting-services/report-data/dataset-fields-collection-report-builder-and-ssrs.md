@@ -20,6 +20,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "33023012"
 ---
 # <a name="dataset-fields-collection-report-builder-and-ssrs"></a>Colección Campos del conjunto de datos (Generador de informes y SSRS)
   Los campos de conjunto de datos representan los datos de una conexión de datos. Un campo puede representar datos numéricos o no numéricos. En los ejemplos se incluyen cantidades de ventas, ventas totales, nombres de cliente, identificadores de base de datos, direcciones URL, imágenes, datos espaciales y direcciones de correo electrónico. En la superficie de diseño, los campos aparecen como expresiones en los elementos de informe como los cuadros de texto, tablas y gráficos.  

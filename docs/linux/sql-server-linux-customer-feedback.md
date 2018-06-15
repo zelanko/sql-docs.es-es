@@ -15,6 +15,7 @@ ms.sourcegitcommit: df382099ef1562b5f2d1cd506c1170d1db64de41
 ms.translationtype: MT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/12/2018
+ms.locfileid: "34074298"
 ---
 # <a name="customer-feedback-for-sql-server-on-linux"></a>Comentarios de los clientes de SQL Server en Linux
 

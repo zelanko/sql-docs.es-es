@@ -20,6 +20,7 @@ ms.sourcegitcommit: ee661730fb695774b9c483c3dd0a6c314e17ddf8
 ms.translationtype: HT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/19/2018
+ms.locfileid: "34327516"
 ---
 # <a name="sql-server-in-memory-oltp-internals-for-sql-server-2016"></a>Parámetros internos de OLTP en memoria de SQL Server para SQL Server 2016
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]

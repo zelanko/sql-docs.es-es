@@ -30,6 +30,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "33027462"
 ---
 # <a name="vary-polygon-line-and-point-display-by-rules-and-analytical-data"></a>Variar la presentación de polígonos, líneas y puntos usando reglas y datos analíticos
   Las opciones de presentación de polígonos, líneas y puntos en una capa de mapa se controlan estableciendo las opciones de la capa y las reglas para los elementos de mapa de la capa, o invalidando las opciones de elementos de mapa insertados concretos de una capa.  

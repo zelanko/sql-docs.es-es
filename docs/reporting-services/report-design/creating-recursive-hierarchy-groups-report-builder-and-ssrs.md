@@ -20,6 +20,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "33020602"
 ---
 # <a name="creating-recursive-hierarchy-groups-report-builder-and-ssrs"></a>Crear grupos de jerarquía recursiva (Generador de informes y SSRS)
 Para mostrar datos recursivos en informes paginados de [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] (donde la relación entre el elemento primario y el elemento secundario se representa con campos del conjunto de datos), establezca la expresión de grupo de región de datos según el campo secundario y establezca la propiedad Parent según el campo primario.  

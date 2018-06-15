@@ -29,6 +29,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "33026652"
 ---
 # <a name="report-server-web-service-methods"></a>Métodos de servicio web del servidor de informes
   Los servicios web del servidor de informes incluyen varias categorías de métodos que están basados en las características de componente. Estos métodos se proporcionan a través de varios extremos de servicios web (tres para la administración de informes y uno para la ejecución de informes) que se exponen como miembros de las clases <xref:ReportService2010.ReportingService2010> y <xref:ReportExecution2005.ReportExecutionService>. Estas clases se pueden generar a través de una herramienta de clase de proxy como wsdl.exe, que está incluida con el SDK de [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)]. Para más información sobre los servicios web del servidor de informes y [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)], vea [Generar aplicaciones mediante el servicio web y .NET Framework](../../../reporting-services/report-server-web-service/net-framework/building-applications-using-the-web-service-and-the-net-framework.md).  

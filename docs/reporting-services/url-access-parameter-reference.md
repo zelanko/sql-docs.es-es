@@ -23,6 +23,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "33036472"
 ---
 # <a name="url-access-parameter-reference"></a>Referencia de parámetros de acceso URL
   Puede usar los siguientes parámetros como parte de una dirección URL para configurar la apariencia de los informes de [!INCLUDE[ssRSCurrent](../includes/ssrscurrent-md.md)]. Los parámetros más comunes se muestran en esta sección. Los parámetros distinguen entre mayúsculas y minúsculas y empiezan con el prefijo de parámetro *rs:* si se dirige al servidor de informes y *rc:* si se dirige a un Visor HTML. También puede especificar parámetros que son específicos de dispositivos o extensiones de representación. Para obtener más información sobre parámetros específicos del dispositivo, vea [Especificar la configuración de la información del dispositivo en una dirección URL](../reporting-services/specify-device-information-settings-in-a-url.md).  

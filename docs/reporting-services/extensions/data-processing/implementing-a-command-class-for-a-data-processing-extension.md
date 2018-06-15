@@ -26,6 +26,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "33014982"
 ---
 # <a name="implementing-a-command-class-for-a-data-processing-extension"></a>Implementar una clase Command para una extensión de procesamiento de datos
   El objeto **Command** formula una solicitud y la pasa al origen de datos. El texto del comando puede adoptar muchos formatos sintácticos diferentes, como son texto y XML. Si se devuelven resultados, el objeto **Command** los devuelve como un objeto **DataReader**.  

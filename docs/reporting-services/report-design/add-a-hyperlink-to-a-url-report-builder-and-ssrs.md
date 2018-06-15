@@ -20,6 +20,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "33023032"
 ---
 # <a name="add-a-hyperlink-to-a-url-report-builder-and-ssrs"></a>Agregar un hipervínculo a una dirección URL (Generador de informes y SSRS)
 Aprenda a agregar acciones de hipervínculo a cuadros de texto, imágenes, gráficos y medidores en informes paginados de [!INCLUDE[ssRSnoversion_md](../../includes/ssrsnoversion-md.md)]  . Los vínculos pueden ir a otros informes, a los marcadores de un informe o a direcciones URL estáticas o dinámicas. 

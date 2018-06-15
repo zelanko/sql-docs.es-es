@@ -20,6 +20,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "33018372"
 ---
 # <a name="create-a-reporting-services-mobile-report"></a>Creación de un informe móvil de Reporting Services
 Con el Publicador de informes móviles de Microsoft SQL Server, puede crear informes móviles de SQL Server 2016 Reporting Services con un escalado adecuado hasta cualquier tamaño de pantalla en una superficie de diseño con cuadrícula ajustable de filas y columnas y elementos flexibles de informes móviles.  

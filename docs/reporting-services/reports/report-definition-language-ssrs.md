@@ -29,6 +29,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "33028572"
 ---
 # <a name="report-definition-language-ssrs"></a>Report Definition Language (SSRS)
   El lenguaje RDL (Report Definition Language) es una representación XML de una definición de informe de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] . Una definición de informe contiene información acerca de la recuperación y el diseño de los datos de un informe. RDL está formado por elementos XML que cumplen la sintaxis XML creada para [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]. Puede agregar sus propias funciones personalizadas para controlar los valores de elemento de informe, los estilos y el formato si obtiene acceso a los ensamblados de código en los archivos de definición de informe.  

@@ -29,6 +29,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "33017192"
 ---
 # <a name="browser-support-for-reporting-services-and-power-view"></a>Compatibilidad del explorador de Reporting Services y Power View
 

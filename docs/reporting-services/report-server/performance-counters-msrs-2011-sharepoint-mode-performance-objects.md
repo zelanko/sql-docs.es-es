@@ -27,6 +27,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "33028422"
 ---
 # <a name="performance-counters-msrs-2011-sharepoint-mode-performance-objects"></a>Contadores de rendimiento de objetos de rendimiento de modo de SharePoint MSRS 2011
   En este tema se describen los contadores de rendimiento para los objetos de rendimiento **Modo de SharePoint del servicio web de MSRS 2011** y **Modo de SharePoint del servicio Windows de MSRS 2011** que forman parte de una implementación en modo de SharePoint de [!INCLUDE[ssRSCurrent](../../includes/ssrscurrent-md.md)] .  

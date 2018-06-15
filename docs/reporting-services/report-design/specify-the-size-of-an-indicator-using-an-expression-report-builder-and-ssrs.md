@@ -20,6 +20,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "33023952"
 ---
 # <a name="specify-the-size-of-an-indicator-using-an-expression-report-builder-and-ssrs"></a>Especificar el tamaño de un indicador utilizando una expresión (Generador de informes y SSRS)
   Además del color, dirección y forma, puede usar el tamaño para maximizar el impacto visual de los indicadores.  

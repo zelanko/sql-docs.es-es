@@ -20,6 +20,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "33023732"
 ---
 # <a name="show-tooltips-on-a-series-report-builder-and-ssrs"></a>Mostrar la información sobre herramientas en una serie (Generador de informes y SSRS)
   Puede agregar una información sobre herramientas a cada uno de los puntos de datos de la serie de un gráfico para mostrar información relacionada con el punto de datos, como el nombre del grupo, el valor del punto de datos o el porcentaje del punto de datos en relación con el total de la serie. Cuando los usuarios mantengan el mouse sobre el punto de datos en un informe paginado representado, verán esta información.  

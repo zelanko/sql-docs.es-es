@@ -20,6 +20,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "33020542"
 ---
 # <a name="column-charts-report-builder-and-ssrs"></a>Gráficos de columnas (Generador de informes y SSRS)
   Un gráfico de columnas muestra una serie como un conjunto de barras verticales agrupadas por categorías. Los gráficos de columnas resultan de gran utilidad para mostrar los cambios que se producen en los datos a lo largo del tiempo o para ilustrar comparaciones entre elementos. El gráfico de columnas sencillo está estrechamente relacionado con el gráfico de barras, que muestra las series como conjuntos de barras horizontales, y con el gráfico de intervalos de columnas, que muestra las series como conjuntos de barras verticales con puntos iniciales y finales que varían. Para más información, vea [Gráficos de barras &#40;Generador de informes y SSRS&#41;](../../reporting-services/report-design/bar-charts-report-builder-and-ssrs.md) y [Rangos de intervalos &#40;Generador de informes y SSRS&#41;](../../reporting-services/report-design/range-charts-report-builder-and-ssrs.md).  

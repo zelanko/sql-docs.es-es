@@ -20,6 +20,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "33021612"
 ---
 # <a name="manage-shared-datasets"></a>Administrar conjuntos de datos compartidos
   En [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)], los conjuntos de datos compartidos recuperan los datos de los orígenes de datos compartidos que se conectan a los orígenes de datos externos. Un conjunto de datos compartido proporciona una manera de compartir una consulta para ayudar a proporcionar un conjunto coherente de datos para varios informes. La consulta del conjunto de datos puede incluir parámetros de conjunto de datos. Puede configurar un conjunto de datos compartido para almacenar en memoria caché los resultados de la consulta para combinaciones de parámetros concretas al usarse por primera vez o especificando una programación. Puede utilizar el almacenamiento en caché del conjunto de datos compartido en combinación con el almacenamiento en caché de los informes y las fuentes de datos de informe para ayudar a administrar el acceso a un origen de datos.  

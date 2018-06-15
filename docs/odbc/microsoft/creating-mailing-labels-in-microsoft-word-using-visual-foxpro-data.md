@@ -25,6 +25,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32899560"
 ---
 # <a name="creating-mailing-labels-in-microsoft-word-using-visual-foxpro-data"></a>Crear etiquetas postales en Microsoft Word usando datos de Visual FoxPro
 Puede usar datos de Visual FoxPro en Microsoft Word para documentos de Windows 95 o Windows 98. Por ejemplo, puede crear etiquetas postales a partir de la información de cliente almacenada en una tabla de Visual FoxPro.  

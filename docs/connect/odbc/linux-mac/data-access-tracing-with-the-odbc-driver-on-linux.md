@@ -22,6 +22,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32851780"
 ---
 # <a name="data-access-tracing-with-the-odbc-driver-on-linux-and-macos"></a>Seguimiento de acceso de datos con el controlador ODBC en Linux y Mac OS
 [!INCLUDE[Driver_ODBC_Download](../../../includes/driver_odbc_download.md)]

@@ -22,6 +22,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32897770"
 ---
 # <a name="viewing-drivers"></a>Visualización de controladores
 Para configurar orígenes de datos, debe instalar a al menos un controlador en el sistema. El **controladores** pestaña en el **Administrador de orígenes de datos ODBC** cuadro de diálogo muestra todos los controladores instalados en el equipo, incluidos el nombre, la versión, la empresa, el nombre de archivo y la fecha de creación de archivo de cada controlador. Debe usar el programa de instalación del controlador para agregar o eliminar un controlador del sistema. Para obtener más información acerca de cómo modificar los controladores, consulte [administrar orígenes de datos](../../odbc/admin/managing-data-sources.md).

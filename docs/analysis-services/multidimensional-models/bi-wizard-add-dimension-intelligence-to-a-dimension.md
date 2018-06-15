@@ -14,6 +14,7 @@ ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
 ms.translationtype: MT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/10/2018
+ms.locfileid: "34027212"
 ---
 # <a name="bi-wizard---add-dimension-intelligence-to-a-dimension"></a>Asistente de BI - agregar inteligencia de dimensiones a una dimensión
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]

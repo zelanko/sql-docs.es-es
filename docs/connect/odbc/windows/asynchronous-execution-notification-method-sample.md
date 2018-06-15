@@ -19,6 +19,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32852190"
 ---
 # <a name="asynchronous-execution-notification-method-sample"></a>Ejemplo de ejecución asincrónica (método de notificación)
 [!INCLUDE[Driver_ODBC_Download](../../../includes/driver_odbc_download.md)]

@@ -26,6 +26,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32901470"
 ---
 # <a name="microsoft-excel-data-types"></a>Tipos de datos de Microsoft Excel
 En la tabla siguiente se muestra cómo se asignan los tipos de datos del controlador de Microsoft Excel a los tipos de datos SQL de ODBC. El controlador de Microsoft Excel asigna a estos tipos de datos a columnas de tablas de Microsoft Excel basadas en los datos de la columna.  

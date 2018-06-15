@@ -22,6 +22,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32899110"
 ---
 # <a name="create-table-statement-limitations"></a>Crear tabla instrucción limitaciones
 Cuando se usa el Microsoft Access, Microsoft Excel o Paradoxdriver y la longitud de una columna de texto o binarios no se ha especificado (o se especifica como 0), la longitud de la columna se establecerá en 255.  

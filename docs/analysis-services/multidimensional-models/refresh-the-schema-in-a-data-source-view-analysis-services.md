@@ -14,6 +14,7 @@ ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
 ms.translationtype: MT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/10/2018
+ms.locfileid: "34022882"
 ---
 # <a name="refresh-the-schema-in-a-data-source-view-analysis-services"></a>Actualizar el esquema de una vista del origen de datos (Analysis Services)
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]

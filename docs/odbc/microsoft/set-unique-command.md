@@ -21,6 +21,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32900959"
 ---
 # <a name="set-unique-command"></a>CONJUNTO único comando
 Especifica si los registros con valores de clave de índice duplicados se mantienen en un archivo de índice.  

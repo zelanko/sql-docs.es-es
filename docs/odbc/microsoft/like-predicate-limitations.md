@@ -22,6 +22,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32899271"
 ---
 # <a name="like-predicate-limitations"></a>Al igual que las limitaciones de predicado
 Si los datos de una columna tiene más de 255 caracteres, la comparación LIKE se basará en los primeros 255 caracteres.  

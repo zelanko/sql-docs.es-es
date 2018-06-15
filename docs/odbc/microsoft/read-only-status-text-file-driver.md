@@ -22,6 +22,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32898990"
 ---
 # <a name="read-only-status-text-file-driver"></a>Estado de solo lectura (controlador de archivo de texto)
 Cuando se utiliza el controlador de texto, tablas de origen de datos son de solo lectura. Sin embargo, las aplicaciones pueden realizar inserciones para las tablas de texto.

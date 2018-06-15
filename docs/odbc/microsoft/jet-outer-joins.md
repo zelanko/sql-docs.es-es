@@ -22,6 +22,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32898910"
 ---
 # <a name="jet-outer-joins"></a>Jet: Combinaciones externas
 Una instrucción SELECT puede contener una lista de cláusulas OUTER JOIN. Se admiten combinaciones externas anidadas. Para obtener más información sobre combinaciones externas, vea el *Guía del programador del motor de base de datos Jet de Microsoft*.

@@ -22,6 +22,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32869650"
 ---
 # <a name="consolidate-assessment-reports-data-migration-assistant"></a>Consolidar los informes de evaluación (Asistente de migración de datos)
 

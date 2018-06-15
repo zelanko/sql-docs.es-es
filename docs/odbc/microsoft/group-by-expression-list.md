@@ -22,6 +22,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32898500"
 ---
 # <a name="group-by-expression-list"></a>GROUP BY-lista de expresiones
 GROUP BY es compatible con una lista de expresiones, así como un nombre de columna. La lista de selección de una instrucción SELECT que contiene una cláusula GROUP BY solo puede incluir expresiones de la cláusula GROUP BY o funciones de conjunto.

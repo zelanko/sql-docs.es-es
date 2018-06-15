@@ -22,6 +22,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32901310"
 ---
 # <a name="index-name-limitations"></a>Limitaciones del nombre de índice
 Cuando se utiliza el controlador de Paradox, un índice principal debe tener el mismo nombre que la tabla en la que está definido. Otro índice no único o debe tener el mismo nombre que la tabla en la que se define.

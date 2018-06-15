@@ -24,6 +24,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32897060"
 ---
 # <a name="base-address-of-drivers"></a>Dirección base de controladores
 Cada uno de los controladores de base de datos de escritorio ODBC se ha vinculado con una dirección base del 0x04c0000.

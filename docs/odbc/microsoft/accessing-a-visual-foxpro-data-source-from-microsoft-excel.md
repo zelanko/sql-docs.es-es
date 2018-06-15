@@ -24,6 +24,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32899450"
 ---
 # <a name="accessing-a-visual-foxpro-data-source-from-microsoft-excel"></a>Obtiene acceso a un origen de datos de Visual FoxPro desde Microsoft Excel
 Si tiene Microsoft Query instalado, puede crear un origen de datos en Microsoft Excel que se conecta a datos de Visual FoxPro.  

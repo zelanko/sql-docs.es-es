@@ -22,6 +22,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32899052"
 ---
 # <a name="adding-a-visual-foxpro-data-source"></a>Agregar un origen de datos de Visual FoxPro
 Para obtener acceso a datos de Visual FoxPro desde su aplicación, debe tener un origen de datos. Puede crear un origen de datos como sigue:  

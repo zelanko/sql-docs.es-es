@@ -24,6 +24,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32898811"
 ---
 # <a name="order-by-with-group-by"></a>ORDER BY con GROUP BY
 ORDER BY puede realizarse en cualquier expresión GROUP BY *expression-list* o cualquier conjunto de columnas en el resultado.

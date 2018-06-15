@@ -22,6 +22,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32866530"
 ---
 # <a name="run-data-migration-assistant-from-the-command-line"></a>Ejecutar el Asistente de migración de datos desde la línea de comandos
 Con la versión 2.1 y versiones posteriores, cuando instale el Asistente de migración de datos, también se instalará dmacmd.exe en *% ProgramFiles %\\el Asistente para la migración de datos de Microsoft\\*. Use dmacmd.exe para evaluar las bases de datos en modo desatendido y generar el resultado al archivo JSON o CSV. Esto es especialmente útil al evaluar varias bases de datos o bases de datos muy grandes. 

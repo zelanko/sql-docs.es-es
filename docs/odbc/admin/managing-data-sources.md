@@ -25,6 +25,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32901720"
 ---
 # <a name="managing-data-sources"></a>Administrar orígenes de datos
 Después de instalar a un controlador ODBC de programa de instalación del controlador, puede definir uno o varios orígenes de datos para él. El nombre de origen de datos (DSN) debe proporcionar una descripción única de los datos; Por ejemplo, *nómina* o *cuentas por pagar*. Se muestran los orígenes de datos de usuario y del sistema que se definen para todos los controladores instalados actualmente en el **DSN de usuario** o **DSN de sistema** pestañas de la **Administrador de orígenes de datos ODBC**cuadro de diálogo. Los orígenes de datos de archivo en un directorio determinado se muestran en la **DSN de archivo** pestaña; se especifica el directorio que se mostrará en el **buscar en** cuadro el **DSN de archivo** ficha.  

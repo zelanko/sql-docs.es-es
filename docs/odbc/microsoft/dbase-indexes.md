@@ -22,6 +22,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32900110"
 ---
 # <a name="dbase-indexes"></a>Índices de dBASE
 El controlador ODBC dBASE automáticamente abre y actualiza los archivos de índice de dBASE IV. Debe utilizar el **Seleccionar índices** cuadro de diálogo mediante el Administrador de orígenes de datos de ODBC para asociar archivos dBASE III .ndx con archivos dBASE.  

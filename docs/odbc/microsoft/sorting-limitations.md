@@ -22,6 +22,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32901280"
 ---
 # <a name="sorting-limitations"></a>Limitaciones de ordenación
 La longitud máxima de un criterio de ordenación en una cláusula GROUP BY, la cláusula ORDER BY, la instrucción SELECT DISTINCT o la combinación externa es 255 bytes; la longitud máxima de todas las claves de ordenación en una fila de ordenación es 65.500 bytes.

@@ -21,6 +21,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32902020"
 ---
 # <a name="sqlgetcursorname-desktop-database-drivers"></a>SQLGetCursorName (controladores de escritorio de la base de datos)
 **SQLGetCursorName** se admite, pero solo puede usarse cuando se utiliza la biblioteca de cursores, porque no se admiten operaciones por posición en el controlador.

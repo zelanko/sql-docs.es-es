@@ -25,6 +25,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32900460"
 ---
 # <a name="functions-accepting-string-parameters"></a>Aceptar parámetros de cadena de funciones
 Todas las funciones que toman parámetros de cadena se convertirán a Unicode. (Se exportará la forma "W" de la función.) Recuento de bytes se convierte al recuento de caracteres para las API de ODBC es aplicable. Esto se aplica a las funciones siguientes:  

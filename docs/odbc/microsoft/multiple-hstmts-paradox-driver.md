@@ -22,6 +22,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32899538"
 ---
 # <a name="multiple-hstmts-paradox-driver"></a>Varios hstmts (controlador de Paradox)
 Cuando se utiliza el controlador ODBC Paradox, si desea usar más de una *hstmt* para ejecutar consultas en una tabla, la tabla debe tener un índice único (clave principal Paradox).

@@ -22,6 +22,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32899546"
 ---
 # <a name="order-by-clause-limitations"></a>ORDEN por cláusula limitaciones
 Si una instrucción SELECT contiene una cláusula GROUP BY y una cláusula ORDER BY, la cláusula ORDER BY puede contener solo una columna del conjunto de resultados o una expresión en la cláusula GROUP BY.

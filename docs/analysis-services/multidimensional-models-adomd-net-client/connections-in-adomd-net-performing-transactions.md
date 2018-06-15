@@ -14,6 +14,7 @@ ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
 ms.translationtype: MT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/10/2018
+ms.locfileid: "34025002"
 ---
 # <a name="connections-in-adomdnet---performing-transactions"></a>Conexiones en ADOMD.NET: realizar transacciones
   En ADOMD.NET, usa el objeto <xref:Microsoft.AnalysisServices.AdomdClient.AdomdTransaction> para administrar el contexto de transacción para un objeto <xref:Microsoft.AnalysisServices.AdomdClient.AdomdConnection> determinado. Esta funcionalidad le permite ejecutar varios comandos dentro del mismo contexto. Cada comando leerá los mismos datos sin los datos de la lectura que cambian entre cada ejecución de comandos.  

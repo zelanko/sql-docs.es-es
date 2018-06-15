@@ -22,6 +22,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32898040"
 ---
 # <a name="drop-index-statement-limitations"></a>QUITAR las limitaciones de la instrucción de índice
 La instrucción DROP INDEX no se admite para el controlador de Microsoft Excel o texto.

@@ -21,6 +21,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32903590"
 ---
 # <a name="set-reprocess-command"></a>CONJUNTO de comandos de volver a procesar
 Especifica cuántas horas o durante largos para bloquear un archivo o un registro después de un intento fallido de bloqueo.  

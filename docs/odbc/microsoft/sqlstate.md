@@ -21,6 +21,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32900546"
 ---
 # <a name="sqlstate"></a>SQLSTATE
 Para los errores que se producen en el origen de datos, el controlador ODBC asigna el error nativo devuelto al SQLSTATE correspondiente. Para los errores que se detectan mediante el controlador o el Administrador de controladores, el controlador ODBC o el Administrador de controladores genera el SQLSTATE correspondiente.

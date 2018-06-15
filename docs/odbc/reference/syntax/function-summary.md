@@ -22,6 +22,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32917040"
 ---
 # <a name="function-summary"></a>Resumen de funciones
 Las siguientes secciones resumen las funciones utilizadas por aplicaciones habilitadas para ODBC y el software relacionado.  

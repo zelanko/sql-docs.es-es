@@ -19,6 +19,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32852710"
 ---
 # <a name="using-kerberos-integrated-authentication-to-connect-to-sql-server"></a>Mediante la autenticación integrada de Kerberos para conectarse a SQL Server
 [!INCLUDE[Driver_JDBC_Download](../../includes/driver_jdbc_download.md)]

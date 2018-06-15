@@ -14,6 +14,7 @@ ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
 ms.translationtype: MT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/10/2018
+ms.locfileid: "34025962"
 ---
 # <a name="mdx-data-manipulation---understanding-pass-order-and-solve-order"></a>Manipulación de datos MDX - descripción paso ordenar y el orden de resolución
 [!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]

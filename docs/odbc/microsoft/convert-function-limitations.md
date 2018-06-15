@@ -22,6 +22,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32898460"
 ---
 # <a name="convert-function-limitations"></a>CONVERTIR las limitaciones de la función
 Dar lugar a errores de conversión de tipo en la columna afectada se establece en NULL.  

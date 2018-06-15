@@ -24,6 +24,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32898920"
 ---
 # <a name="accessing-visual-foxpro-data-from-microsoft-office"></a>Acceso a datos de Visual FoxPro desde Microsoft Office
 Puede utilizar el controlador ODBC de Microsoft Visual FoxPro para tener acceso a datos de Visual FoxPro desde el Microsoft Office para las aplicaciones de Windows 95 o Windows 98.  

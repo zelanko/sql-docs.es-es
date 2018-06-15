@@ -14,6 +14,7 @@ ms.sourcegitcommit: 056ce753c2d6b85cd78be4fc6a29c2b4daaaf26c
 ms.translationtype: MT
 ms.contentlocale: es-ES
 ms.lasthandoff: 04/19/2018
+ms.locfileid: "31538385"
 ---
 # <a name="set-admin-password-for-logging-on-to-ad-nodes-in-directory-services-restore-mode-dsrm---analytics-platform-system"></a>Establecer contraseña de administrador para iniciar sesión en nodos de AD en servicios de directorio restaurar el modo (DSRM) - sistema de la plataforma de análisis
 Modo de restauración de servicios de directorio (DSRM) es un modo de arranque para reparar o recuperar los servicios de dominio de Active Directory (AD DS). Se utiliza para iniciar sesión en los nodos de dispositivo AD cuando se produzca error AD DS o cuando AD DS debe restaurarse. La contraseña de DSRM se inicializó durante la instalación del dispositivo en el sitio del proveedor de hardware y debe ser cambiada por el administrador del equipo. Sistema de la plataforma de análisis tiene dos AD DS (controladores de dominio); ***appliance_domain *-AD01** y ***appliance_domain *-AD02**. Para cada nodo de dispositivo AD, cambie la contraseña DSRM con los siguientes pasos.  

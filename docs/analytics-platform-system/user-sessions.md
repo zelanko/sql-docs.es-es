@@ -14,6 +14,7 @@ ms.sourcegitcommit: 056ce753c2d6b85cd78be4fc6a29c2b4daaaf26c
 ms.translationtype: MT
 ms.contentlocale: es-ES
 ms.lasthandoff: 04/19/2018
+ms.locfileid: "31544717"
 ---
 # <a name="user-sessions-in-analytics-platform-system"></a>Sesiones de usuario en el sistema de la plataforma de análisis
 Un inicio de sesión con los permisos adecuados puede administrar las sesiones de todos los inicios de sesión en un equipo de SQL Server PDW, incluidos realizar estas acciones:  

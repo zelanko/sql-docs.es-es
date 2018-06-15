@@ -27,6 +27,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32919151"
 ---
 # <a name="writing-odbc-3x-applications"></a>Escribir ODBC 3.x aplicaciones
 Cuando un ODBC 2. *x* aplicación se actualiza a ODBC 3. *x*, deben escribirse tal que funciona con ODBC 2. *x* y 3. *x* controladores. La aplicación debe incorporar código condicional para aprovechar al máximo de ODBC 3. *x* características.  

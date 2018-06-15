@@ -14,6 +14,7 @@ ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
 ms.translationtype: MT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/10/2018
+ms.locfileid: "34022872"
 ---
 # <a name="database-dimensions---browse-dimension-data-in-dimension-designer"></a>Dimensiones de base de datos - examinar datos de dimensión en el Diseñador de dimensiones
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]

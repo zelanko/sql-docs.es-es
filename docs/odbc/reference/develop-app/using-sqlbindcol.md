@@ -23,6 +23,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32917480"
 ---
 # <a name="using-sqlbindcol"></a>Uso de SQLBindCol
 La aplicación enlaza las columnas mediante una llamada a **SQLBindCol**. Esta función enlaza una columna a la vez. Con él, la aplicación especifica lo siguiente:  

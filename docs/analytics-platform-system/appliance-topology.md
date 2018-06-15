@@ -14,6 +14,7 @@ ms.sourcegitcommit: 056ce753c2d6b85cd78be4fc6a29c2b4daaaf26c
 ms.translationtype: MT
 ms.contentlocale: es-ES
 ms.lasthandoff: 04/19/2018
+ms.locfileid: "31538605"
 ---
 # <a name="appliance-topology---analytics-platform-system"></a>Topología de dispositivos - Analytics Platform System
 Muestra información resumida de todo el sistema de plataforma de análisis.  

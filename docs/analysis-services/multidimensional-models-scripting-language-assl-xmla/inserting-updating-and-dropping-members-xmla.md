@@ -14,6 +14,7 @@ ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
 ms.translationtype: MT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/10/2018
+ms.locfileid: "34024402"
 ---
 # <a name="inserting-updating-and-dropping-members-xmla"></a>Insertar, actualizar y quitar miembros (XMLA)
   Puede usar el [insertar](../../analysis-services/xmla/xml-elements-commands/insert-element-xmla.md), [actualizar](../../analysis-services/xmla/xml-elements-commands/update-element-xmla.md), y [Drop](../../analysis-services/xmla/xml-elements-commands/drop-element-xmla.md) comandos de XML for Analysis (XMLA) para respectivamente Insertar, actualizar o eliminar los miembros de una dimensión habilitada para escritura. Para obtener más información acerca de las dimensiones habilitadas para escritura, consulte [dimensiones habilitadas para escritura](../../analysis-services/multidimensional-models-olap-logical-dimension-objects/write-enabled-dimensions.md).  

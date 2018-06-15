@@ -21,6 +21,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32917340"
 ---
 # <a name="translation-dll-api-reference"></a>Referencia de API de archivo DLL de traducción
 Esta sección describe la sintaxis de la API de archivo DLL, que consta de dos funciones de conversión: **SQLDriverToDataSource** y **SQLDataSourceToDriver**. Estas funciones deben incluirse en el archivo DLL que realiza la traducción para el controlador.  

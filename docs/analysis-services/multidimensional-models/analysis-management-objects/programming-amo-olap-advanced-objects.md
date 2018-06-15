@@ -14,6 +14,7 @@ ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
 ms.translationtype: MT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/10/2018
+ms.locfileid: "34024362"
 ---
 # <a name="programming-amo-olap-advanced-objects"></a>Programar objetos avanzados OLAP en AMO
   En este tema se explican los detalles de la programación de objetos avanzados OLAP en Objetos de administración de análisis (AMO). Este tema contiene las siguientes secciones:  

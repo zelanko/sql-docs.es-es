@@ -23,6 +23,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32917520"
 ---
 # <a name="default-subkey"></a>Subclave predeterminado
 El registro puede especificar un origen de datos de forma predeterminada con la subclave de forma predeterminada. Esta subclave es un caso especial de una subclave de especificación del origen de datos y tiene los mismos valores que cualquier otro subclave de especificación de origen de datos. La única diferencia es que no aparece como un valor bajo la subclave de orígenes de datos ODBC.

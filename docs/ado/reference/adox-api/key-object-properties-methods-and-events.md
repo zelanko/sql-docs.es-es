@@ -2,7 +2,6 @@
 title: Propiedades de objetos, métodos y eventos de clave | Documentos de Microsoft
 ms.prod: sql
 ms.prod_service: connectivity
-ms.component: ado
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
@@ -17,11 +16,12 @@ caps.latest.revision: 11
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 0e5f4ce005cc2e0df1e7ed64743609e29006121b
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 248302463ab934fbe8b4df189d3f3f286b05a913
+ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/11/2018
+ms.locfileid: "35286524"
 ---
 # <a name="key-object-properties-methods-and-events"></a>Eventos, métodos y propiedades del objeto de clave
 ## <a name="propertiescollections"></a>Propiedades y colecciones  

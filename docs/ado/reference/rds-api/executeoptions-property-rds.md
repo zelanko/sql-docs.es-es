@@ -2,7 +2,6 @@
 title: Propiedad ExecuteOptions (RDS) | Documentos de Microsoft
 ms.prod: sql
 ms.prod_service: connectivity
-ms.component: ado
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
@@ -18,11 +17,12 @@ caps.latest.revision: 15
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: e44be9cb2b46b91d536d5a90cbb589365ad7d2c7
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: e054a4ea0ad6a485f0b1d1dedfd53cdf9b07d944
+ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/11/2018
+ms.locfileid: "35288164"
 ---
 # <a name="executeoptions-property-rds"></a>Propiedad ExecuteOptions (RDS)
 Indica si está habilitada la ejecución asincrónica.  
@@ -33,7 +33,7 @@ Indica si está habilitada la ejecución asincrónica.
 ## <a name="settings-and-return-values"></a>Configuración y valores devueltos  
  Establece o devuelve uno de los valores siguientes.  
   
-|Constante|Description|  
+|Constante|Descripción|  
 |--------------|-----------------|  
 |**adcExecSync**|Ejecuta la siguiente actualización de la [Recordset](../../../ado/reference/ado-api/recordset-object-ado.md) sincrónicamente.|  
 |**adcExecAsync**|Predeterminado: Ejecuta la siguiente actualización de la **Recordset** asincrónicamente.|  
@@ -41,7 +41,7 @@ Indica si está habilitada la ejecución asincrónica.
 > [!NOTE]
 >  Cada archivo ejecutable que utiliza estas constantes debe proporcionar declaraciones para ellos. Puede cortar y pegar las declaraciones de constante que desee desde el archivo Adcvbs.Inc que se encuentra en la carpeta de instalación predeterminada para la biblioteca RDS.  
   
-## <a name="remarks"></a>Comentarios  
+## <a name="remarks"></a>Notas  
  Si **ExecuteOptions** está establecido en **adcExecAsync**, a continuación, ejecuta de forma asincrónica la siguiente **actualizar** llamar a en el [RDS. DataControl](../../../ado/reference/rds-api/datacontrol-object-rds.md) del objeto **conjunto de registros**.  
   
  Si intenta llamar a [restablecer](../../../ado/reference/rds-api/reset-method-rds.md), [actualizar](../../../ado/reference/rds-api/refresh-method-rds.md), [SubmitChanges](../../../ado/reference/rds-api/submitchanges-method-rds.md), [CancelUpdate](../../../ado/reference/ado-api/cancelupdate-method-ado.md), o [conjunto de registros](../../../ado/reference/rds-api/recordset-sourcerecordset-properties-rds.md) mientras que otra operación asincrónica que podría cambiar el [RDS. DataControl](../../../ado/reference/rds-api/datacontrol-object-rds.md) del objeto **Recordset** se está ejecutando, se produce un error.  

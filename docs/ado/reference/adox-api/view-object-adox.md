@@ -2,7 +2,6 @@
 title: Ver (objeto) (ADOX) | Documentos de Microsoft
 ms.prod: sql
 ms.prod_service: connectivity
-ms.component: ado
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
@@ -20,16 +19,17 @@ caps.latest.revision: 9
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: a55d77b7bb7f79ee5871445d5169a4dfd2de5f5d
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 2980c92b7980fe2fa6ec16f82bc4d8f7d3aff585
+ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/11/2018
+ms.locfileid: "35287444"
 ---
 # <a name="view-object-adox"></a>Objeto de vista (ADOX)
 Representa un conjunto filtrado de registros o una tabla virtual. Cuando se utiliza junto con la propiedad ADO [comando](../../../ado/reference/ado-api/command-object-ado.md) objeto, el **vista** objeto se puede usar para agregar, eliminar o modificar vistas.  
   
-## <a name="remarks"></a>Comentarios  
+## <a name="remarks"></a>Notas  
  Una vista es una tabla virtual, creada a partir de otras tablas de base de datos o vistas. El **vista** objeto le permite crear una vista sin tener que conocer ni utilizar la sintaxis del proveedor "CREATE VIEW".  
   
  Con las propiedades de un **vista** de objeto, puede:  

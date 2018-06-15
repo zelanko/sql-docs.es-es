@@ -5,7 +5,6 @@ ms.custom: ''
 ms.date: 03/26/2018
 ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
-ms.component: ole-db-interfaces
 ms.reviewer: ''
 ms.suite: sql
 ms.technology:
@@ -20,11 +19,12 @@ helpviewer_keywords:
 author: pmasl
 ms.author: Pedro.Lopes
 manager: craigg
-ms.openlocfilehash: 9995acd8fb7259738f5d1985bf24583237ea3526
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 23c7ff83fa1f75e5cf309daaa45b34663cef42a7
+ms.sourcegitcommit: f16003fd1ca28b5e06d5700e730f681720006816
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/11/2018
+ms.locfileid: "35305894"
 ---
 # <a name="irowsetfastloadinsertrow-ole-db"></a>IRowsetFastLoad::InsertRow (OLE DB)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -69,7 +69,7 @@ HRESULT InsertRow(
  DB_E_BADACCESSORTYPE  
  El descriptor de acceso especificado no era un descriptor de acceso de fila o no especificaba la memoria propia del consumidor.  
   
-## <a name="remarks"></a>Comentarios  
+## <a name="remarks"></a>Notas  
  Error al convertir datos del consumidor a la [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] tipo de datos para una columna provoca una devolución E_FAIL desde el controlador OLE DB para SQL Server. Se pueden transmitir datos a [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] en cualquier **InsertRow** método o solo en **confirmar** método. La aplicación de consumidor puede llamar al método **InsertRow** muchas veces con datos erróneos antes de recibir el aviso de que existe un error de conversión de tipo de datos. Dado que el método **Commit** asegura que el consumidor especifica correctamente todos los datos, este último puede utilizar el método **Commit** adecuadamente para validar los datos según sea necesario.  
   
  El controlador OLE DB para conjuntos de filas de copia de forma masiva de SQL Server son de solo escritura. El controlador OLE DB para SQL Server no expone ningún método que permita al consumidor consultar del conjunto de filas. Para finalizar el procesamiento, el consumidor puede liberar su referencia en la [IRowsetFastLoad](../../oledb/ole-db-interfaces/irowsetfastload-ole-db.md) interfaz sin llamar a la **confirmar** método. No hay recursos para obtener acceso a una fila insertada por el consumidor en el conjunto de filas y cambiar sus valores o quitarla individualmente del conjunto de filas.  

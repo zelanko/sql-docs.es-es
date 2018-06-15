@@ -2,7 +2,6 @@
 title: Open (método) (ADO MD) | Documentos de Microsoft
 ms.prod: sql
 ms.prod_service: connectivity
-ms.component: ado
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
@@ -21,11 +20,12 @@ caps.latest.revision: 14
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: c6fb508318c54e4b82a4efd301b889baadad6edc
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 69f746be975d56c4cb6ff6bcb4fd85905acd71bb
+ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/11/2018
+ms.locfileid: "35284544"
 ---
 # <a name="open-method-ado-md"></a>Open (método) (ADO MD)
 Recupera los resultados de una consulta multidimensional y devuelve los resultados a un [Cellset](../../../ado/reference/ado-md-api/cellset-object-ado-md.md).  
@@ -44,7 +44,7 @@ Cellset.Open Source, ActiveConnection
  *ActiveConnection*  
  Opcional. A **Variant** que se evalúa como una cadena que especifica un ADO válido [conexión](../../../ado/reference/ado-api/connection-object-ado.md) objeto nombre de variable o una definición para una conexión. El *ActiveConnection* argumento especifica la conexión en la que se va a abrir el [Cellset](../../../ado/reference/ado-md-api/cellset-object-ado-md.md) objeto. Si se pasa una definición de conexión para este argumento, ADO abre una nueva conexión mediante los parámetros especificados. El *ActiveConnection* argumento corresponde a la [ActiveConnection](../../../ado/reference/ado-md-api/activeconnection-property-ado-md.md) propiedad.  
   
-## <a name="remarks"></a>Comentarios  
+## <a name="remarks"></a>Notas  
  El **abrir** método genera un error si se omite cualquiera de sus parámetros y no se estableció el valor de propiedad correspondiente antes de volver a abrir la **Cellset**.  
   
 ## <a name="applies-to"></a>Se aplica a  

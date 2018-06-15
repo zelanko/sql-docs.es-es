@@ -2,7 +2,6 @@
 title: InvokeService (RDS) | Documentos de Microsoft
 ms.prod: sql
 ms.prod_service: connectivity
-ms.component: ado
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
@@ -18,11 +17,12 @@ caps.latest.revision: 11
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: a78c815f75b5e30713e0b7f9e5b7ec83c4c3eb6d
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 92927a240c0501196c1b9bf0c1643f6cb0f708d4
+ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/11/2018
+ms.locfileid: "35288295"
 ---
 # <a name="invokeservice-rds"></a>InvokeService (RDS)
 Devuelve un puntero a la interfaz solicitada en una versión mayor capacidad del objeto.  
@@ -53,7 +53,7 @@ object.InvokeService(REFID riid, IUknown* punkNotSoFunctionalInterface, IUknown*
 ## <a name="return-value"></a>Valor devuelto  
  Un valor HRESULT que indica si la llamada a la **InvokeService** método tuvo éxito.  
   
-## <a name="remarks"></a>Comentarios  
+## <a name="remarks"></a>Notas  
  La implementación del motor de cursor RDS de **InvokeService** toma el conjunto de filas de entrada (o un objeto de resultados múltiples), rellena el motor de cursor del conjunto de filas de entrada y, a continuación, devuelve un puntero en sí mismo.  
   
 ## <a name="applies-to"></a>Se aplica a  

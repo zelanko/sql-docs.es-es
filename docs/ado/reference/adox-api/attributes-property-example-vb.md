@@ -2,7 +2,6 @@
 title: Atributos de ejemplo de la propiedad (VB) | Documentos de Microsoft
 ms.prod: sql
 ms.prod_service: connectivity
-ms.component: ado
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
@@ -19,11 +18,12 @@ caps.latest.revision: 9
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: a275c6f39d2e16afcf53b753380e9f1ad20684a1
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: aa6c125a1d3e720647d06e7a33689e0c5e883946
+ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/11/2018
+ms.locfileid: "35285384"
 ---
 # <a name="attributes-property-example-vb"></a>Ejemplo de propiedad Attributes (VB)
 Este ejemplo se muestra la [atributos](../../../ado/reference/adox-api/attributes-property-adox.md) propiedad de un [columna](../../../ado/reference/adox-api/column-object-adox.md). Si se establece en **adColNullable** permite al usuario establecer el valor de un [Recordset](../../../ado/reference/ado-api/recordset-object-ado.md) [campo](../../../ado/reference/ado-api/field-object.md) en una cadena vacía. En esta situación, el usuario puede distinguir entre un registro que no se conozcan los datos y un registro donde los datos que no se aplican.  

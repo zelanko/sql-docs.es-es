@@ -2,7 +2,6 @@
 title: DefinedSize (propiedad, ADOX) | Documentos de Microsoft
 ms.prod: sql
 ms.prod_service: connectivity
-ms.component: ado
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
@@ -24,11 +23,12 @@ caps.latest.revision: 11
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 522f1124f2c6f943b88a8c28b776707b2431122b
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 291065218fc76fa60875a408714f789747983ac2
+ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/11/2018
+ms.locfileid: "35285544"
 ---
 # <a name="definedsize-property-adox"></a>DefinedSize (propiedad, ADOX)
 Indica el tamaño máximo indicado de la columna.  
@@ -36,7 +36,7 @@ Indica el tamaño máximo indicado de la columna.
 ## <a name="settings-and-return-values"></a>Configuración y valores devueltos  
  Establece y devuelve un **largo** valor que es la longitud máxima en caracteres de valores de datos.  
   
-## <a name="remarks"></a>Comentarios  
+## <a name="remarks"></a>Notas  
  El valor predeterminado es cero (0).  
   
  Esta propiedad es de solo lectura para [columna](../../../ado/reference/adox-api/column-object-adox.md) ya anexados a una colección de objetos.  

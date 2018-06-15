@@ -2,7 +2,6 @@
 title: Append (método) (procedimientos ADOX) | Documentos de Microsoft
 ms.prod: sql
 ms.prod_service: connectivity
-ms.component: ado
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
@@ -21,11 +20,12 @@ caps.latest.revision: 12
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 83e3973bccfd0466ed7d912b4fc4d1c63b6da7a7
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: bc5721f8806481de872d0c3e1de7d47a3720dfa9
+ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/11/2018
+ms.locfileid: "35284864"
 ---
 # <a name="append-method-adox-procedures"></a>Append (método) (ADOX procedimientos)
 Agrega un nuevo [procedimiento](../../../ado/reference/adox-api/procedure-object-adox.md) el objeto a la [procedimientos](../../../ado/reference/adox-api/procedures-collection-adox.md) colección.  
@@ -44,7 +44,7 @@ Procedures.Append Name, Command
  *Command*  
  ADO [comando](../../../ado/reference/ado-api/command-object-ado.md) objeto que representa el procedimiento para crear y anexar.  
   
-## <a name="remarks"></a>Comentarios  
+## <a name="remarks"></a>Notas  
  Crea un nuevo procedimiento en el origen de datos con el nombre y los atributos especificados en el **comando** objeto.  
   
  Si el texto del comando que especifica el usuario representa una vista en lugar de un procedimiento, el comportamiento depende del proveedor que se está usando. **Anexar** se producirá un error si el proveedor no admite comandos persistentes.  

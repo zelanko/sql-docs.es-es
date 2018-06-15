@@ -2,7 +2,6 @@
 title: Propiedades ADOX | Documentos de Microsoft
 ms.prod: sql
 ms.prod_service: connectivity
-ms.component: ado
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
@@ -18,20 +17,21 @@ caps.latest.revision: 10
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 2e9ea6ff9f515a0dee79d464dda4bf44b8b6ab6e
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: ae4cdd06fa7881685aa3eefc499274c0e76b044a
+ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/11/2018
+ms.locfileid: "35284602"
 ---
 # <a name="adox-properties"></a>Propiedades ADOX
 |||  
 |-|-|  
 |[ActiveConnection](../../../ado/reference/adox-api/activeconnection-property-adox.md)|Indica la propiedad ADO **conexión** del objeto al que pertenece el catálogo.|  
 |[Atributos](../../../ado/reference/adox-api/attributes-property-adox.md)|Describe las características de la columna.|  
-|[Agrupado](../../../ado/reference/adox-api/clustered-property-adox.md)|Indica si el índice está agrupado.|  
+|[En clúster](../../../ado/reference/adox-api/clustered-property-adox.md)|Indica si el índice está agrupado.|  
 |[Command](../../../ado/reference/adox-api/command-property-adox.md)|Especifica un ADO **comando** objeto que puede utilizarse para crear o ejecutar el procedimiento.|  
-|[Count](../../../ado/reference/ado-api/count-property-ado.md)|Indica el número de objetos de una colección.|  
+|[Recuento](../../../ado/reference/ado-api/count-property-ado.md)|Indica el número de objetos de una colección.|  
 |[DateCreated](../../../ado/reference/adox-api/datecreated-property-adox.md)|Indica la fecha en que se creó el objeto.|  
 |[DateModified](../../../ado/reference/adox-api/datemodified-property-adox.md)|Indica la fecha en que se modificó por última vez el objeto.|  
 |[DefinedSize](../../../ado/reference/adox-api/definedsize-property-adox.md)|Indica el tamaño máximo indicado de la columna.|  

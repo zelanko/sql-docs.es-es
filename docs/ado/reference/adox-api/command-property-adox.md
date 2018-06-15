@@ -2,7 +2,6 @@
 title: Comando (propiedad, ADOX) | Documentos de Microsoft
 ms.prod: sql
 ms.prod_service: connectivity
-ms.component: ado
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
@@ -21,11 +20,12 @@ caps.latest.revision: 11
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: b5fe40ecb26c6b8f7b98ccc4cad0b1fea6363aae
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 0e2f63ee837e8a5f3632e2aaaeeafdc0c0de8549
+ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/11/2018
+ms.locfileid: "35285444"
 ---
 # <a name="command-property-adox"></a>Comando (propiedad, ADOX)
 Especifica un ADO [comando](../../../ado/reference/ado-api/command-object-ado.md) objeto que puede utilizarse para crear o ejecutar el procedimiento.  
@@ -33,7 +33,7 @@ Especifica un ADO [comando](../../../ado/reference/ado-api/command-object-ado.md
 ## <a name="settings-and-return-values"></a>Configuración y valores devueltos  
  Establece o devuelve un ADO válido **comando** objeto.  
   
-## <a name="remarks"></a>Comentarios  
+## <a name="remarks"></a>Notas  
  Se producirá un error al obtener y establecer esta propiedad si el proveedor no admite comandos persistentes.  
   
 ## <a name="applies-to"></a>Se aplica a  

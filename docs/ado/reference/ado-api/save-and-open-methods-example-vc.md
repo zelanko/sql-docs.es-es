@@ -2,7 +2,6 @@
 title: Guardar y abrir un ejemplo de los métodos (VC ++) | Documentos de Microsoft
 ms.prod: sql
 ms.prod_service: connectivity
-ms.component: ado
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
@@ -20,11 +19,12 @@ caps.latest.revision: 12
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 661dbe97eebfbe317f8258019e0fbf66704a5d28
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 870ae7f5776b601b312d799b643c09bd589dc26b
+ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/11/2018
+ms.locfileid: "35281334"
 ---
 # <a name="save-and-open-methods-example-vc"></a>Guardar y abrir un ejemplo de los métodos (VC ++)
 Estos tres ejemplos se muestra cómo el [guardar](../../../ado/reference/ado-api/save-method.md) y **abiertos** métodos se pueden usar conjuntamente.  

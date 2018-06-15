@@ -2,7 +2,6 @@
 title: Objeto CubeDef (ADO MD) | Documentos de Microsoft
 ms.prod: sql
 ms.prod_service: connectivity
-ms.component: ado
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
@@ -20,16 +19,17 @@ caps.latest.revision: 10
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 31e2bf587c19ab8088b0ab702be60fde54247aec
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: fc529ed3ab408d70e6bcc0881a9a62d86029e35e
+ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/11/2018
+ms.locfileid: "35283604"
 ---
 # <a name="cubedef-object-ado-md"></a>Objeto CubeDef (ADO MD)
 Representa un cubo de un esquema multidimensional, que contiene un conjunto de dimensiones relacionadas.  
   
-## <a name="remarks"></a>Comentarios  
+## <a name="remarks"></a>Notas  
  Con las colecciones y las propiedades de un **CubeDef** objeto, puede hacer lo siguiente:  
   
 -   Identificar un **CubeDef** con el [nombre](../../../ado/reference/ado-md-api/name-property-ado-md.md) propiedad.  
@@ -42,7 +42,7 @@ Representa un cubo de un esquema multidimensional, que contiene un conjunto de d
   
  El **propiedades** colección contiene propiedades proporcionadas por el proveedor. En la tabla siguiente se enumera propiedades que estén disponibles. La lista de propiedades reales puede variar en función de la implementación del proveedor. Consulte la documentación del proveedor para obtener una lista completa de propiedades disponibles.  
   
-|Nombre|Description|  
+|Nombre|Descripción|  
 |----------|-----------------|  
 |CatalogName|El nombre del catálogo al que pertenece este cubo.|  
 |CreatedOn|Fecha y hora de creación del cubo.|  
@@ -50,7 +50,7 @@ Representa un cubo de un esquema multidimensional, que contiene un conjunto de d
 |CubeName|Nombre del cubo.|  
 |CubeType|El tipo de cubo.|  
 |DataUpdatedBy|Id. de usuario de la persona que realiza la última actualización de datos.|  
-|Description|Una descripción significativa del cubo.|  
+|Descripción|Una descripción significativa del cubo.|  
 |LastSchemaUpdate|Fecha y hora de última actualización del esquema.|  
 |SchemaName|El nombre del esquema al que pertenece este cubo.|  
 |SchemaUpdatedBy|Id. de usuario de la persona que realiza la última actualización del esquema.|  

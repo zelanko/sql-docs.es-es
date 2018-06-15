@@ -2,7 +2,6 @@
 title: Ejemplo de Members (VBScript) | Documentos de Microsoft
 ms.prod: sql
 ms.prod_service: connectivity
-ms.component: ado
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
@@ -19,11 +18,12 @@ caps.latest.revision: 9
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 575ecde16c4779c099d9b7565fe3ac5bba859b84
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: d6b4a539ec7a7edeb7085fbad9828cc7229de75c
+ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/11/2018
+ms.locfileid: "35284794"
 ---
 # <a name="members-example-vbscript"></a>Ejemplo de Members (VBScript)
 Este ejemplo utiliza una cadena de consulta MDX para recuperar los datos OLAP y escribe el conjunto de celdas resultante en una estructura de tabla HTML con características de expansión de columna para conjuntos de celdas de varias dimensiones.  

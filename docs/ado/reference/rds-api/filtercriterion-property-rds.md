@@ -2,7 +2,6 @@
 title: Propiedad FilterCriterion (RDS) | Documentos de Microsoft
 ms.prod: sql
 ms.prod_service: connectivity
-ms.component: ado
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
@@ -18,11 +17,12 @@ caps.latest.revision: 17
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: adc1d9d22b94ab3b6e03bddf37fa6058f4ccaca3
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 015cf292a4b9cd0720e379b83d5fcf254c841c8f
+ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/11/2018
+ms.locfileid: "35288261"
 ---
 # <a name="filtercriterion-property-rds"></a>Propiedad FilterCriterion (RDS)
 Indica que el operador de evaluación para usar en el valor de filtro.  
@@ -44,7 +44,7 @@ DataControl.FilterCriterion = String
  *String*  
  A **cadena** valor que especifica el operador de evaluación de la [FilterValue](../../../ado/reference/rds-api/filtervalue-property-rds.md) a los registros. Puede ser cualquiera de las acciones siguientes: <, \<=, >, > =, =, o <>.  
   
-## <a name="remarks"></a>Comentarios  
+## <a name="remarks"></a>Notas  
  El [SortColumn](../../../ado/reference/rds-api/sortcolumn-property-rds.md), [SortDirection](../../../ado/reference/rds-api/sortdirection-property-rds.md), [FilterValue](../../../ado/reference/rds-api/filtervalue-property-rds.md), **FilterCriterion**, y [FilterColumn](../../../ado/reference/rds-api/filtercolumn-property-rds.md)propiedades proporcionan ordenar y filtrar la funcionalidad en la caché del cliente. La funcionalidad de ordenación ordena los registros por valores de una columna. La funcionalidad de filtrado muestra un subconjunto de registros basándose en criterios de búsqueda, mientras el completo [Recordset](../../../ado/reference/ado-api/recordset-object-ado.md) se mantiene en la memoria caché. El [restablecer](../../../ado/reference/rds-api/reset-method-rds.md) método ejecutará los criterios y reemplazará la actual **Recordset** con un actualizables **conjunto de registros**.  
   
  El "! =" operador no es válido para **FilterCriterion**; en su lugar, use "<>".  

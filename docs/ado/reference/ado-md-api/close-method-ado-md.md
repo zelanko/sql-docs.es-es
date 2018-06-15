@@ -2,7 +2,6 @@
 title: Close (método) (ADO MD) | Documentos de Microsoft
 ms.prod: sql
 ms.prod_service: connectivity
-ms.component: ado
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
@@ -21,11 +20,12 @@ caps.latest.revision: 13
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 918cd96221d4d4e4c185bd1e09039069f9ce1128
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 91741cba272afddfae3f27c64bcfabb4233ef997
+ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/11/2018
+ms.locfileid: "35283614"
 ---
 # <a name="close-method-ado-md"></a>Close (método) (ADO MD)
 Cierra un conjunto de celdas abierto.  
@@ -37,7 +37,7 @@ Cierra un conjunto de celdas abierto.
 Cellset.Close  
 ```  
   
-## <a name="remarks"></a>Comentarios  
+## <a name="remarks"></a>Notas  
  Mediante el **cerrar** método para cerrar un [Cellset](../../../ado/reference/ado-md-api/cellset-object-ado-md.md) objeto liberará los datos asociados, incluidos los datos en cualquier relacionados con [celda](../../../ado/reference/ado-md-api/cell-object-ado-md.md), [eje](../../../ado/reference/ado-md-api/axis-object-ado-md.md), [Posición](../../../ado/reference/ado-md-api/position-object-ado-md.md), o [miembro](../../../ado/reference/ado-md-api/member-object-ado-md.md) objetos. Cerrar un **Cellset** no lo quita de la memoria; puede cambiar sus valores de propiedad y abrirlo de nuevo más tarde. Para eliminar completamente un objeto de la memoria, establezca la variable de objeto **nada**.  
   
  Posteriormente, podrá llamar el [abiertos](../../../ado/reference/ado-md-api/open-method-ado-md.md) método para volver a abrir la **Cellset** utilizando la misma u otra cadena de origen. Mientras el **Cellset** objeto está cerrado, recuperar las propiedades o llamar a cualquier método que hacen referencia a los datos subyacentes o metadatos genera un error.  

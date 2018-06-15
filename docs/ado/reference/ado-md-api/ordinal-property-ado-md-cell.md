@@ -2,7 +2,6 @@
 title: Propiedad ordinal (celda de ADO MD) | Documentos de Microsoft
 ms.prod: sql
 ms.prod_service: connectivity
-ms.component: ado
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
@@ -21,11 +20,12 @@ caps.latest.revision: 12
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 26d56708b4b38dd47dd77889c03497f4574e4e42
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: cbcbfce4a4d4fe8b5603cada49a224d7ea0b8992
+ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/11/2018
+ms.locfileid: "35284734"
 ---
 # <a name="ordinal-property-ado-md-cell"></a>Propiedad ordinal (celda de ADO MD)
 Identifica de forma única un [celda](../../../ado/reference/ado-md-api/cell-object-ado-md.md) por su posición dentro de un conjunto de celdas.  
@@ -33,7 +33,7 @@ Identifica de forma única un [celda](../../../ado/reference/ado-md-api/cell-obj
 ## <a name="return-values"></a>Valores devueltos  
  Devuelve un **largo** entero y es de solo lectura.  
   
-## <a name="remarks"></a>Comentarios  
+## <a name="remarks"></a>Notas  
  Valor ordinal de la celda identifica de forma única la celda dentro de un conjunto de celdas. Conceptualmente, las celdas se numeran en un conjunto de celdas como si el conjunto de celdas fuera una *p*-matriz unidimensional, donde *p* es el número de [ejes](../../../ado/reference/ado-md-api/axes-collection-ado-md.md). Las celdas se numeran a partir de cero en orden de importancia de filas. Ésta es la fórmula para calcular el número ordinal de una celda:  
   
  Valor ordinal de la celda puede utilizarse con el [elemento](../../../ado/reference/ado-md-api/item-property-ado-md-cellset.md) propiedad de la [Cellset](../../../ado/reference/ado-md-api/cellset-object-ado-md.md) objeto que se va a recuperar rápidamente el [celda](../../../ado/reference/ado-md-api/cell-object-ado-md.md).  

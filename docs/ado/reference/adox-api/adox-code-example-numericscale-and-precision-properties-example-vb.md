@@ -2,7 +2,6 @@
 title: NumericScale y ejemplo de las propiedades Precision (VB) | Documentos de Microsoft
 ms.prod: sql
 ms.prod_service: connectivity
-ms.component: ado
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
@@ -20,11 +19,12 @@ caps.latest.revision: 9
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: f1ad5c520771d13760d3592060150c38b48bae38
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 0776d768a8cbfa8d1ac252cdc90a07bc9fae8f07
+ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/11/2018
+ms.locfileid: "35284894"
 ---
 # <a name="adox-code-example-numericscale-and-precision-properties-example-vb"></a>Ejemplo de código ADOX: NumericScale y ejemplo de las propiedades Precision (VB)
 Este ejemplo se muestra la [NumericScale](../../../ado/reference/adox-api/numericscale-property-adox.md) y [precisión](../../../ado/reference/adox-api/precision-property-adox.md) propiedades de la [columna](../../../ado/reference/adox-api/column-object-adox.md) objeto. Este código muestra su valor para el **Order Details** tabla de la *Northwind* base de datos.  

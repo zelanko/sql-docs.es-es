@@ -2,7 +2,6 @@
 title: Propiedades de la colección CubeDefs, métodos y eventos | Documentos de Microsoft
 ms.prod: sql
 ms.prod_service: connectivity
-ms.component: ado
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
@@ -17,11 +16,12 @@ caps.latest.revision: 11
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: b19cbcfa3e3a027b1a8df5027dfb0a2223ecadb6
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: b4af0560f8c8d6640981f31e9901a04f17176b4b
+ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/11/2018
+ms.locfileid: "35283574"
 ---
 # <a name="cubedefs-collection-properties-methods-and-events"></a>Eventos, métodos y propiedades de la colección CubeDefs
 ## <a name="properties"></a>Propiedades  

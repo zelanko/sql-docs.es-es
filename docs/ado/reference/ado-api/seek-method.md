@@ -2,7 +2,6 @@
 title: Método Seek | Documentos de Microsoft
 ms.prod: sql
 ms.prod_service: connectivity
-ms.component: ado
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
@@ -21,11 +20,12 @@ caps.latest.revision: 12
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 59dcdd3426c39449b3d2348218aa7794a75c0474
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: fcac398a9c45a43fd59dd29c7a41aeeb9545214c
+ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/11/2018
+ms.locfileid: "35281624"
 ---
 # <a name="seek-method"></a>El método de búsqueda
 Busca el índice de un [Recordset](../../../ado/reference/ado-api/recordset-object-ado.md) a encontrar rápidamente la fila que coincide con los valores especificados y cambia la posición de fila actual a dicha fila.  
@@ -44,7 +44,7 @@ recordset.Seek KeyValues, SeekOption
  *SeekOption*  
  A [SeekEnum](../../../ado/reference/ado-api/seekenum.md) valor que especifica el tipo de comparación que se va a realizarse entre las columnas del índice y el correspondiente *KeyValue*.  
   
-## <a name="remarks"></a>Comentarios  
+## <a name="remarks"></a>Notas  
  Use la **Seek** método junto con el [índice](../../../ado/reference/ado-api/index-property.md) propiedad si el proveedor subyacente admite índices en el **Recordset** objeto. Use la [admite](../../../ado/reference/ado-api/supports-method.md)**(adSeek)** método para determinar si el proveedor subyacente admite **Seek**y el **Supports** método para determinar si el proveedor admite índices. (Por ejemplo, el [proveedor OLE DB para Microsoft Jet](../../../ado/guide/appendixes/microsoft-ole-db-provider-for-microsoft-jet.md) admite **Seek** y **índice**.)  
   
  Si **Seek** hace que no se encontró la fila deseada, ningún error se produce y la fila se coloca al final de la **conjunto de registros**. Establecer el **índice** propiedad en el índice deseado antes de ejecutar este método.  

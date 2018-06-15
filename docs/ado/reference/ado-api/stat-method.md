@@ -2,7 +2,6 @@
 title: Método Stat | Documentos de Microsoft
 ms.prod: sql
 ms.prod_service: connectivity
-ms.component: ado
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
@@ -20,11 +19,12 @@ caps.latest.revision: 11
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 26dd4f3fa7de49f51c32fd97e184ee356cb16f35
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 1b900386c1890d54ec61d3bfd2328f3d173c9300
+ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/11/2018
+ms.locfileid: "35282024"
 ---
 # <a name="stat-method"></a>Stat (método)
 Recupera información sobre un [flujo](../../../ado/reference/ado-api/stream-object-ado.md) objeto.  
@@ -46,12 +46,12 @@ Long stream.Stat(StatStg, StatFlag)
  *StatFlag*  
  Especifica que este método no devuelve algunos de los miembros de la estructura STATSTG, evitando así una operación de asignación de memoria. Valores se toman de la enumeración STATFLAG. La enumeración STATFLAG tiene dos valores  
   
-|Constante|Value|  
+|Constante|Valor|  
 |--------------|-----------|  
 |STATFLAG_DEFAULT|0|  
 |STATFLAG_NONAME|1|  
   
-## <a name="remarks"></a>Comentarios  
+## <a name="remarks"></a>Notas  
  La versión del método Stat implementada para el objeto Stream de ADO rellena los campos siguientes de la estructura STATSTG:  
   
  *pwcsName*  

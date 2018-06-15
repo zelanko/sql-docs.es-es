@@ -2,7 +2,6 @@
 title: Colecciones de ADO MD | Documentos de Microsoft
 ms.prod: sql
 ms.prod_service: connectivity
-ms.component: ado
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
@@ -18,18 +17,19 @@ caps.latest.revision: 12
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 57892d73a5c3dc3e410d267a1237fa91d0d60c8a
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: f2419977d062292dc87c2c0096b825fa2b5a0f89
+ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/11/2018
+ms.locfileid: "35283254"
 ---
 # <a name="ado-md-collections"></a>Colecciones de ADO MD
 |||  
 |-|-|  
 |[Ejes](../../../ado/reference/ado-md-api/axes-collection-ado-md.md)|Contiene el **eje** objetos que definen un conjunto de celdas.|  
 |[CubeDefs](../../../ado/reference/ado-md-api/cubedef-object-ado-md.md)|Contiene el **CubeDef** objetos que representan un cubo de un catálogo multidimensional.|  
-|[Dimensiones](../../../ado/reference/ado-md-api/dimension-object-ado-md.md)|Contiene el **dimensión** objetos que componen un cubo.|  
+|[Dimensions](../../../ado/reference/ado-md-api/dimension-object-ado-md.md)|Contiene el **dimensión** objetos que componen un cubo.|  
 |[Jerarquías](../../../ado/reference/ado-md-api/hierarchy-object-ado-md.md)|Contiene el conjunto **jerarquía** objetos de una dimensión.|  
 |[Levels](../../../ado/reference/ado-md-api/level-object-ado-md.md)|Contiene el **nivel** objetos que componen una jerarquía.|  
 |[Miembros](../../../ado/reference/ado-md-api/members-collection-ado-md.md)|Contiene el **miembro** objetos de un nivel o una posición a lo largo de un eje.|  

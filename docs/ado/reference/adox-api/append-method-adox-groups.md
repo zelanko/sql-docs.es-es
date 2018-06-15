@@ -2,7 +2,6 @@
 title: Append (método) (grupos ADOX) | Documentos de Microsoft
 ms.prod: sql
 ms.prod_service: connectivity
-ms.component: ado
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
@@ -21,11 +20,12 @@ caps.latest.revision: 12
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 2dc48bab9fa037ab4844bf3e1ab247365bf41070
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: ecd80b3c2affcbbed7bbd50f7e130fa84d1e86ea
+ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/11/2018
+ms.locfileid: "35284904"
 ---
 # <a name="append-method-adox-groups"></a>Append (método) (grupos ADOX)
 Agrega un nuevo [grupo](../../../ado/reference/adox-api/group-object-adox.md) el objeto a la [grupos](../../../ado/reference/adox-api/groups-collection-adox.md) colección.  
@@ -41,7 +41,7 @@ Groups.Append Group
  *Grupo*  
  El **grupo** objeto que se anexará o el nombre del grupo para crear y anexar.  
   
-## <a name="remarks"></a>Comentarios  
+## <a name="remarks"></a>Notas  
  El **grupos** colección de un [catálogo](../../../ado/reference/adox-api/catalog-object-adox.md) todas las cuentas de grupo del catálogo representa. El **grupos** colección para un [usuario](../../../ado/reference/adox-api/user-object-adox.md) representa sólo el grupo al que pertenece el usuario.  
   
  Si el proveedor no admite la creación de grupos, se producirá un error.  

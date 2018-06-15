@@ -5,7 +5,6 @@ ms.custom: ''
 ms.date: 03/26/2018
 ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
-ms.component: ole-db-rowsets
 ms.reviewer: ''
 ms.suite: sql
 ms.technology: connectivity
@@ -19,18 +18,19 @@ helpviewer_keywords:
 author: pmasl
 ms.author: Pedro.Lopes
 manager: craigg
-ms.openlocfilehash: 35a330703d6664422bf4de80a6ac13e309a83549
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 2526d6279d9ef4c38249b5fd841a0336e418b6df
+ms.sourcegitcommit: f16003fd1ca28b5e06d5700e730f681720006816
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/11/2018
+ms.locfileid: "35306404"
 ---
 # <a name="rowset-properties-and-behaviors"></a>Propiedades y comportamientos de conjuntos de filas
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
 
   Se trata el controlador OLE DB para las propiedades del conjunto de filas de SQL Server.  
   
-|Id. de propiedad|Description|  
+|Id. de propiedad|Descripción|  
 |-----------------|-----------------|  
 |DBPROP_ABORTPRESERVE|L/E lectura/escritura<br /><br /> Valor predeterminado: VARIANT_FALSE<br /><br /> Descripción: esta propiedad determina el comportamiento de un conjunto de filas tras una operación de anulación.<br /><br /> VARIANT_FALSE: El controlador OLE DB para SQL Server invalida los conjuntos de filas después de una operación de anulación. Prácticamente se pierde la funcionalidad del objeto de conjunto de filas. Solo admite **IUnknown** las operaciones y la versión de identificadores de fila y de descriptor de acceso pendientes.<br /><br /> VARIANT_TRUE: El controlador OLE DB para SQL Server mantiene un conjunto de filas válido.|  
 |DBPROP_ACCESSORDER|L/E lectura/escritura<br /><br /> Valor predeterminado: DBPROPVAL_AO_RANDOM<br /><br /> Descripción: orden de acceso; orden en que debe obtenerse acceso a las columnas en el conjunto de filas.<br /><br /> DBPROPVAL_AO_RANDOM: puede obtenerse acceso a las columnas en cualquier orden.<br /><br /> DBPROPVAL_AO_SEQUENTIALSTORAGEOBJECTS: solamente puede obtenerse acceso a las columnas enlazadas como objetos de almacenamiento en el orden secuencial determinado por el ordinal de columna.<br /><br /> DBPROPVAL_AO_SEQUENTIAL: debe obtenerse acceso a todas las columnas en el orden secuencial determinado por el ordinal de columna.|  
@@ -92,7 +92,7 @@ ms.lasthandoff: 05/03/2018
   
  El controlador OLE DB para SQL Server define el conjunto de propiedades específicas del proveedor DBPROPSET_SQLSERVERROWSET tal y como se muestra en esta tabla.  
   
-|Id. de propiedad|Description|  
+|Id. de propiedad|Descripción|  
 |-----------------|-----------------|  
 |SSPROP_COLUMN_ID|Columna: ColumnID<br /><br /> L/E: sólo lectura<br /><br /> Tipo: VT_U12 &#124; VT_ARRAY<br /><br /> Valor predeterminado: VT_EMPTY<br /><br /> Descripción: matriz de valores enteros que representan la posición ordinal (en base 1) de una columna de resultados de la cláusula COMPUTE en la instrucción SELECT de [!INCLUDE[tsql](../../../includes/tsql-md.md)] actual. Este es el controlador OLE DB para el atributo ODBC SQL_CA_SS_COLUMN_ID equivalente a SQL Server.|  
 |SSPROP_DEFERPREPARE|Columna: no<br /><br /> L/E lectura/escritura<br /><br /> Tipo: VT_BOOL<br /><br /> Valor predeterminado: VARIANT_TRUE<br /><br /> Descripción: VARIANT_TRUE: en ejecución preparada, la preparación del comando se difiere hasta que **ICommand:: Execute** se llama o se realiza una operación de metapropiedad. Si la propiedad está establecida en<br /><br /> VARIANT_FALSE: La instrucción se prepara cuando **ICommandPrepare:: Prepare** se ejecuta.|  

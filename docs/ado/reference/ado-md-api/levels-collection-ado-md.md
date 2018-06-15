@@ -2,7 +2,6 @@
 title: Los niveles de colección (ADO MD) | Documentos de Microsoft
 ms.prod: sql
 ms.prod_service: connectivity
-ms.component: ado
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
@@ -21,16 +20,17 @@ caps.latest.revision: 10
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 6756b6faecca40f7d284a4bbf9425ba7affcc3fb
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 4cf86fc546dfa1bb6af1e121b2f539a5785643ce
+ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/11/2018
+ms.locfileid: "35284054"
 ---
 # <a name="levels-collection-ado-md"></a>Colección de niveles (ADO MD)
 Contiene el [nivel](../../../ado/reference/ado-md-api/level-object-ado-md.md) objetos que componen una jerarquía.  
   
-## <a name="remarks"></a>Comentarios  
+## <a name="remarks"></a>Notas  
  **Niveles de** es una colección de ADO estándar. Mediante el uso de las propiedades y métodos de una colección, puede hacer lo siguiente:  
   
 -   Obtener el número de objetos de la colección con el [recuento](../../../ado/reference/ado-api/count-property-ado.md) propiedad.  

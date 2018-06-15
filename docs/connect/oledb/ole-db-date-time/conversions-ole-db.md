@@ -5,7 +5,6 @@ ms.custom: ''
 ms.date: 03/26/2018
 ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
-ms.component: ole-db-date-time
 ms.reviewer: ''
 ms.suite: sql
 ms.technology: connectivity
@@ -18,11 +17,12 @@ helpviewer_keywords:
 author: pmasl
 ms.author: Pedro.Lopes
 manager: craigg
-ms.openlocfilehash: 79887c62b3cd26c194bf140b29b836bf9140eb85
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
-ms.translationtype: MT
+ms.openlocfilehash: 90c5a3086523b2cadce84678f2056cf265294648
+ms.sourcegitcommit: f16003fd1ca28b5e06d5700e730f681720006816
+ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/11/2018
+ms.locfileid: "35304464"
 ---
 # <a name="conversions-ole-db"></a>Conversiones (OLE DB)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -74,6 +74,6 @@ ms.lasthandoff: 05/03/2018
  Describe las conversiones de fecha y hora realizadas entre [!INCLUDE[ssKatmai](../../../includes/sskatmai-md.md)] (o posterior) y una aplicación cliente escrita con el controlador OLE DB para SQL Server.  
   
 ## <a name="see-also"></a>Vea también  
- [Fecha y hora mejoras & #40; OLE DB & #41;](../../oledb/ole-db-date-time/date-and-time-improvements-ole-db.md)  
+ [Fecha y hora mejoras &#40;OLE DB&#41;](../../oledb/ole-db-date-time/date-and-time-improvements-ole-db.md)  
   
   

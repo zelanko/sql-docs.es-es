@@ -2,7 +2,6 @@
 title: Propiedades de colección, métodos y eventos se coloca | Documentos de Microsoft
 ms.prod: sql
 ms.prod_service: connectivity
-ms.component: ado
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
@@ -17,11 +16,12 @@ caps.latest.revision: 11
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 90e92627f68ab40cc2ad907c01e51440e9ff1d3a
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: f5c9f5db7676793a53a06ded38a9be3f3274eee2
+ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/11/2018
+ms.locfileid: "35284504"
 ---
 # <a name="positions-collection-properties-methods-and-events"></a>Propiedades de la colección de posiciones, métodos y eventos
 ## <a name="properties"></a>Propiedades  

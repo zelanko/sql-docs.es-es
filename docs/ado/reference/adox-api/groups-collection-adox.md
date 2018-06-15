@@ -2,7 +2,6 @@
 title: Grupos de colección (ADOX) | Documentos de Microsoft
 ms.prod: sql
 ms.prod_service: connectivity
-ms.component: ado
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
@@ -22,16 +21,17 @@ caps.latest.revision: 10
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: c98bb6f455878df0605d1e7f7c9fc1d9554a1cb8
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 253cf76adf8f32734b4bd878cb2f623e79489ccb
+ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/11/2018
+ms.locfileid: "35285974"
 ---
 # <a name="groups-collection-adox"></a>Colección de grupos (ADOX)
 Todos los contiene almacenados [grupo](../../../ado/reference/adox-api/group-object-adox.md) objetos de un catálogo o un usuario.  
   
-## <a name="remarks"></a>Comentarios  
+## <a name="remarks"></a>Notas  
  El **grupos** colección de un [catálogo](../../../ado/reference/adox-api/catalog-object-adox.md) todas las cuentas de grupo del catálogo representa. El **grupos** colección para un [usuario](../../../ado/reference/adox-api/user-object-adox.md) representa sólo el grupo al que pertenece el usuario.  
   
  El [anexado](../../../ado/reference/adox-api/append-method-adox-groups.md) método para un **grupos** colección es única para ADOX. Puede hacer lo siguiente:  

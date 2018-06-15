@@ -2,7 +2,6 @@
 title: Evento WillConnect (ADO) | Documentos de Microsoft
 ms.prod: sql
 ms.prod_service: connectivity
-ms.component: ado
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
@@ -21,11 +20,12 @@ caps.latest.revision: 11
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: cbb3a5b97ede8abe7e028e6d46d52a1c5ad7581f
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 6a2ddca516e9c5141e0e874074660579e8144ba7
+ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/11/2018
+ms.locfileid: "35282874"
 ---
 # <a name="willconnect-event-ado"></a>Evento WillConnect (ADO)
 El **WillConnect** eventos se llama antes de iniciar una conexión.  
@@ -62,7 +62,7 @@ WillConnect ConnectionString, UserID, Password, Options, adStatus, pConnection
  *pConnection*  
  El [conexión](../../../ado/reference/ado-api/connection-object-ado.md) el objeto para el que se aplica esta notificación de eventos. Cambios en los parámetros de la **conexión** por el **WillConnect** controlador de eventos no tiene ningún efecto el **conexión**.  
   
-## <a name="remarks"></a>Comentarios  
+## <a name="remarks"></a>Notas  
  Cuando **WillConnect** se llama, el *ConnectionString*, *UserID*, *contraseña*, y *opciones* parámetros se establecen en los valores establecidos por la operación que produjo este evento (la conexión pendiente) y se puede cambiar antes de que el evento vuelva. **WillConnect** puede devolver una solicitud de cancelación de la conexión pendiente.  
   
  Cuando se cancela este evento, **ConnectComplete** se llamará con su *adStatus* parámetro establecido en **adStatusErrorsOccurred**.  

@@ -2,7 +2,6 @@
 title: Método SetObjectOwner | Documentos de Microsoft
 ms.prod: sql
 ms.prod_service: connectivity
-ms.component: ado
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
@@ -21,11 +20,12 @@ caps.latest.revision: 12
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 09dd25fde3840a34d8ae3771a6a2eb066296fc5a
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 1a31ac477e2d0d316f1ddda7ebc60b81b6309f15
+ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/11/2018
+ms.locfileid: "35286894"
 ---
 # <a name="setobjectowner-method"></a>SetObjectOwner (método)
 Especifica el propietario de un objeto en un [catálogo](../../../ado/reference/adox-api/catalog-object-adox.md).  
@@ -50,7 +50,7 @@ Catalog.SetObjectOwner ObjectName, ObjectType, OwnerName [,ObjectTypeId]
  *Valor de ObjectTypeId*  
  Opcional. A **Variant** valor que especifica el GUID de un tipo de objeto de proveedor que no está definido por la especificación de OLE DB. Este parámetro es obligatorio si *ObjectType* está establecido en **adPermObjProviderSpecific**; en caso contrario, no se utiliza.  
   
-## <a name="remarks"></a>Comentarios  
+## <a name="remarks"></a>Notas  
  Si el proveedor no admite la especificación de los propietarios de objetos, se producirá un error.  
   
 ## <a name="applies-to"></a>Se aplica a  

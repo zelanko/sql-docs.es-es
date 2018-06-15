@@ -2,7 +2,6 @@
 title: Propiedades del objeto de columna, métodos y eventos | Documentos de Microsoft
 ms.prod: sql
 ms.prod_service: connectivity
-ms.component: ado
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
@@ -17,11 +16,12 @@ caps.latest.revision: 11
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 5d2ab814887735fb128c91b1682a169dcf7837d4
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: c5f7b0bac59cb82e61dc65a96d142a32865e0a33
+ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/11/2018
+ms.locfileid: "35285364"
 ---
 # <a name="column-object-properties-methods-and-events"></a>Eventos, métodos y propiedades del objeto de columna
 ## <a name="propertiescollections"></a>Propiedades y colecciones  

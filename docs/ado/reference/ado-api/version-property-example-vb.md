@@ -2,7 +2,6 @@
 title: Ejemplo de la propiedad de versión (VB) | Documentos de Microsoft
 ms.prod: sql
 ms.prod_service: connectivity
-ms.component: ado
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
@@ -19,11 +18,12 @@ caps.latest.revision: 11
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 3c48b12324b24a03452e7520afe04579c2989252
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 686168abddee50063db7f1150120302dea76c08e
+ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/11/2018
+ms.locfileid: "35282904"
 ---
 # <a name="version-property-example-vb"></a>Ejemplo de la propiedad de versión (VB)
 Este ejemplo se utiliza la [versión](../../../ado/reference/ado-api/version-property-ado.md) propiedad de un [conexión](../../../ado/reference/ado-api/connection-object-ado.md) objeto que se mostrará la versión actual de ADO. También se utilizan varias propiedades dinámicas para mostrar:  

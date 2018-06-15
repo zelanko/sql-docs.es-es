@@ -2,7 +2,6 @@
 title: Vistas de ejemplo de método Append (VB) | Documentos de Microsoft
 ms.prod: sql
 ms.prod_service: connectivity
-ms.component: ado
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
@@ -19,11 +18,12 @@ caps.latest.revision: 10
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 7ebc01d7267771811a191e056eb576c1b843fe7d
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 72a8c9518ce11a8c4180e6661944df6983e01167
+ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/11/2018
+ms.locfileid: "35287344"
 ---
 # <a name="views-append-method-example-vb"></a>Vistas de ejemplo de método Append (VB)
 El código siguiente muestra cómo utilizar un [comando](../../../ado/reference/ado-api/command-object-ado.md) objeto y el [vistas](../../../ado/reference/adox-api/views-collection-adox.md) colección [anexado](../../../ado/reference/adox-api/append-method-adox-views.md) método para crear una nueva vista en el origen de datos subyacente.  

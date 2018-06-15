@@ -2,7 +2,6 @@
 title: Ejemplos de código ADOX en Microsoft Visual Basic | Documentos de Microsoft
 ms.prod: sql
 ms.prod_service: connectivity
-ms.component: ado
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
@@ -19,11 +18,12 @@ caps.latest.revision: 9
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: f62008a47dad96ff2322e2f2bfd71dbddd8b3476
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 8f8ca2fab56a9fef224040dd0dcfa56163d8877b
+ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/11/2018
+ms.locfileid: "35284670"
 ---
 # <a name="adox-code-examples-in-microsoft-visual-basic"></a>Ejemplos de código ADOX en Microsoft Visual Basic
 Estos temas proporciona código de ejemplo para ayudarle a entender cómo usar ADOX. Todos los ejemplos de código se escriben mediante Microsoft Visual Basic.  

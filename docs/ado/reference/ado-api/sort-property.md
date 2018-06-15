@@ -2,7 +2,6 @@
 title: Ordenar propiedad | Documentos de Microsoft
 ms.prod: sql
 ms.prod_service: connectivity
-ms.component: ado
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
@@ -26,11 +25,12 @@ caps.latest.revision: 11
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 692a6a3e9ca2e65b031aebd8ed99c2719f0f0a69
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: a42a5160c1e9e86f25c4547aef0e0ead5babe250
+ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/11/2018
+ms.locfileid: "35281914"
 ---
 # <a name="sort-property"></a>Propiedad de ordenación
 Indica uno o más nombres de campo en el que el [Recordset](../../../ado/reference/ado-api/recordset-object-ado.md) está ordenada, y si cada campo se ordena en orden ascendente o descendente.  
@@ -38,7 +38,7 @@ Indica uno o más nombres de campo en el que el [Recordset](../../../ado/referen
 ## <a name="settings-and-return-values"></a>Configuración y valores devueltos  
  Establece o devuelve un **cadena** los nombres de valor que indica el campo de la **Recordset** en el que se va a ordenar. Cada nombre está separado por una coma y, seguido opcionalmente de un espacio en blanco y la palabra clave, **ASC**, que ordena el campo en orden ascendente, o **DESC**, que ordena el campo en orden descendente. De forma predeterminada, si no se especifica ninguna palabra clave, el campo se ordena en orden ascendente.  
   
-## <a name="remarks"></a>Comentarios  
+## <a name="remarks"></a>Notas  
  Esta propiedad requiere la [CursorLocation](../../../ado/reference/ado-api/cursorlocation-property-ado.md) propiedad se establezca en **adUseClient**. Se creará un índice temporal para cada campo especificado en el **ordenación** propiedad si todavía no existe un índice.  
   
  La operación de ordenación es eficaz porque los datos no se reorganizan físicamente, sino que simplemente se obtiene acceso en el orden especificado por el índice.  

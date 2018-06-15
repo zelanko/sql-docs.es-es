@@ -2,7 +2,6 @@
 title: Colección Members (ADO MD) | Documentos de Microsoft
 ms.prod: sql
 ms.prod_service: connectivity
-ms.component: ado
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
@@ -22,16 +21,17 @@ caps.latest.revision: 10
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 18a3fac9cff0a41c9d1e7dc820d68ae77c294d4a
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: d6b4a6902ebf9efae5b02eccb14f1d06e9279cc6
+ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/11/2018
+ms.locfileid: "35284659"
 ---
 # <a name="members-collection-ado-md"></a>Colección Members (ADO MD)
 Contiene el [miembro](../../../ado/reference/ado-md-api/member-object-ado-md.md) objetos de un nivel o una posición a lo largo de un eje.  
   
-## <a name="remarks"></a>Comentarios  
+## <a name="remarks"></a>Notas  
  A **miembros** colección se utiliza para contener los siguientes tipos de miembros:  
   
 -   Los miembros que componen un nivel en un cubo. Estos miembros se incluyen en el **miembros** colección de un [nivel](../../../ado/reference/ado-md-api/level-object-ado-md.md) objeto. Por ejemplo, mediante el ejemplo de [información general de esquemas y datos multidimensionales](../../../ado/guide/multidimensional/overview-of-multidimensional-schemas-and-data.md), los cuatro miembros del nivel Countries son Canadá, Estados Unidos, Reino Unido y Alemania.  

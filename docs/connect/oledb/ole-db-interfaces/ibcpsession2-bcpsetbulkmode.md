@@ -5,7 +5,6 @@ ms.custom: ''
 ms.date: 03/26/2018
 ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
-ms.component: ole-db-interfaces
 ms.reviewer: ''
 ms.suite: sql
 ms.technology:
@@ -17,16 +16,17 @@ helpviewer_keywords:
 author: pmasl
 ms.author: Pedro.Lopes
 manager: craigg
-ms.openlocfilehash: edc24c92138ebfa8e1bb72e64a50ed0dc7a2c234
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: c41f484dbbe2877e2d358b3d19ee2b7d33107a56
+ms.sourcegitcommit: f16003fd1ca28b5e06d5700e730f681720006816
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/11/2018
+ms.locfileid: "35304904"
 ---
 # <a name="ibcpsession2bcpsetbulkmode"></a>IBCPSession2::BCPSetBulkMode
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
 
-  Ibcpsession2:: Bcpsetbulkmode proporciona una alternativa a [ibcpsession:: BCPColFmt & #40; OLE DB & #41;](../../oledb/ole-db-interfaces/ibcpsession-bcpcolfmt-ole-db.md) para especificar el formato de columna. A diferencia de ibcpsession:: BCPColFmt, que establece los atributos de formato de columna individuales, ibcpsession2:: Bcpsetbulkmode establece todos los atributos.  
+  Ibcpsession2:: Bcpsetbulkmode proporciona una alternativa a [ibcpsession:: BCPColFmt &#40;OLE DB&#41; ](../../oledb/ole-db-interfaces/ibcpsession-bcpcolfmt-ole-db.md) para especificar el formato de columna. A diferencia de ibcpsession:: BCPColFmt, que establece los atributos de formato de columna individuales, ibcpsession2:: Bcpsetbulkmode establece todos los atributos.  
   
 ## <a name="syntax"></a>Sintaxis  
   
@@ -42,7 +42,7 @@ HRESULT BCPSetBulkMode (
 ```  
   
 ## <a name="arguments"></a>Argumentos  
- *propiedad*  
+ *property*  
  Constante de tipo BYTE. Vea la tabla en la sección Comentarios para obtener una lista de las constantes.  
   
  *Years*  
@@ -68,7 +68,7 @@ HRESULT BCPSetBulkMode (
 |**E_INVALIDARG**|El argumento no era válido.|  
 |**E_OUTOFMEMORY**|Error de memoria insuficiente.|  
   
-## <a name="remarks"></a>Comentarios  
+## <a name="remarks"></a>Notas  
  Ibcpsession2:: Bcpsetbulkmode puede utilizarse para la copia masiva de una consulta o una tabla. Cuando ibcpsession2:: Bcpsetbulkmode se utiliza para la copia masiva de una instrucción de consulta, debe llamarse antes de llamar a `IBCPSession::BCPControl(BCP_OPTIONS_HINTS, …)` para especificar la instrucción de consulta.  
   
  Debe evitarse combinar la sintaxis de llamada RPC con la sintaxis de consulta por lotes (`{rpc func};SELECT * from Tbl`, por ejemplo) en el texto del mismo comando,  Esto hará que ICommandPrepare:: Prepare devolver un error y le impediría recuperar metadatos. Utilice la sintaxis de ODBC CALL (`{call func}; SELECT * from Tbl`, por ejemplo) si necesita combinar la ejecución del procedimiento almacenado y la consulta por lotes en el texto del mismo comando.  
@@ -365,6 +365,6 @@ int main() {
 ```  
   
 ## <a name="see-also"></a>Vea también  
- [IBCPSession2 & #40; OLE DB & #41;](../../oledb/ole-db-interfaces/ibcpsession2-ole-db.md)  
+ [IBCPSession2 &#40;OLE DB&#41;](../../oledb/ole-db-interfaces/ibcpsession2-ole-db.md)  
   
   

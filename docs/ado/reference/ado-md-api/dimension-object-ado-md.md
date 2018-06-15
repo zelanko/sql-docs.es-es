@@ -2,7 +2,6 @@
 title: Dimensión (objeto) (ADO MD) | Documentos de Microsoft
 ms.prod: sql
 ms.prod_service: connectivity
-ms.component: ado
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
@@ -20,16 +19,17 @@ caps.latest.revision: 10
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 95fa6ce43c85ae474a9482e9fb76277960fe1a74
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 10378c62ec05008529e1d271208f3e5657d6a140
+ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/11/2018
+ms.locfileid: "35283914"
 ---
 # <a name="dimension-object-ado-md"></a>Objeto de dimensión (ADO MD)
 Representa una de las dimensiones de un cubo multidimensional, que contiene una o más jerarquías de miembros.  
   
-## <a name="remarks"></a>Comentarios  
+## <a name="remarks"></a>Notas  
  Con las colecciones y las propiedades de un **dimensión** objeto, puede hacer lo siguiente:  
   
 -   Identificar la **dimensión** con el [nombre](../../../ado/reference/ado-md-api/name-property-ado-md.md) y [UniqueName](../../../ado/reference/ado-md-api/uniquename-property-ado-md.md) propiedades.  
@@ -42,12 +42,12 @@ Representa una de las dimensiones de un cubo multidimensional, que contiene una 
   
  El **propiedades** colección contiene propiedades proporcionadas por el proveedor. En la tabla siguiente se enumera propiedades que estén disponibles. La lista de propiedades reales puede variar en función de la implementación del proveedor. Consulte la documentación del proveedor para obtener una lista completa de propiedades disponibles.  
   
-|Nombre|Description|  
+|Nombre|Descripción|  
 |----------|-----------------|  
 |CatalogName|El nombre del catálogo al que pertenece este cubo.|  
 |CubeName|Nombre del cubo.|  
 |Valor de DefaultHierarchy|El nombre único de la jerarquía predeterminada.|  
-|Description|Una descripción significativa del cubo.|  
+|Descripción|Una descripción significativa del cubo.|  
 |DimensionCaption|Etiqueta o título asociado a la dimensión.|  
 |DimensionCardinality|El número de miembros de la dimensión.|  
 |DimensionGUID|El GUID de la dimensión.|  

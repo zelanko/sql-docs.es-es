@@ -2,7 +2,6 @@
 title: Eventos WillChangeField y FieldChangeComplete (ADO) | Documentos de Microsoft
 ms.prod: sql
 ms.prod_service: connectivity
-ms.component: ado
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
@@ -24,11 +23,12 @@ caps.latest.revision: 11
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: e7e141b989d671e37818f09cf4dbf173e9fd23d6
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 108aea1a4f8106c3a84b411591d4866235726efc
+ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/11/2018
+ms.locfileid: "35282859"
 ---
 # <a name="willchangefield-and-fieldchangecomplete-events-ado"></a>Eventos WillChangeField y FieldChangeComplete (ADO)
 El **WillChangeField** evento se le llama antes de que una operación pendiente cambie el valor de uno o varios [campo](../../../ado/reference/ado-api/field-object.md) objetos en el [conjunto de registros](../../../ado/reference/ado-api/recordset-object-ado.md). El **FieldChangeComplete** eventos se llama después del valor de uno o varios **campo** objetos ha cambiado.  
@@ -65,7 +65,7 @@ FieldChangeComplete cFields, Fields, pError, adStatus, pRecordset
  *pRecordset*  
  A **Recordset** objeto. El **conjunto de registros** para la que se produjo este evento.  
   
-## <a name="remarks"></a>Comentarios  
+## <a name="remarks"></a>Notas  
  A **WillChangeField** o **FieldChangeComplete** evento puede ocurrir cuando se establece la [valor](../../../ado/reference/ado-api/value-property-ado.md) propiedad y llamar a la [actualización](../../../ado/reference/ado-api/update-method.md) (método) con parámetros de matriz de campo y valor.  
   
 ## <a name="see-also"></a>Vea también  

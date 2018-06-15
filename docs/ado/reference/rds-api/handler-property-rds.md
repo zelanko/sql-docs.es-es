@@ -2,7 +2,6 @@
 title: Propiedad de controlador (RDS) | Documentos de Microsoft
 ms.prod: sql
 ms.prod_service: connectivity
-ms.component: ado
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
@@ -18,11 +17,12 @@ caps.latest.revision: 16
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: b5cba5a709933f89cb7bb19666140053cd6cfc94
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: ab8e1c2fdfe518a7ab1f331e6961ed6b84b1b33e
+ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/11/2018
+ms.locfileid: "35288363"
 ---
 # <a name="handler-property-rds"></a>Propiedad de controlador (RDS)
 Indica el nombre de un programa de personalización de servidor (controlador) que amplía la funcionalidad de la [RDSServer.DataFactory](../../../ado/reference/rds-api/datafactory-object-rdsserver.md)y todos los parámetros utilizados por la *controlador*.  
@@ -46,7 +46,7 @@ DataControl.Handler = String
  *String*  
  A **cadena** valor que contiene el nombre del controlador y los parámetros, todas separadas por comas (por ejemplo, `"handlerName,parm1,parm2,...,parm` *N*`"`).  
   
-## <a name="remarks"></a>Comentarios  
+## <a name="remarks"></a>Notas  
  Esta propiedad es compatible con [personalización](../../../ado/guide/remote-data-service/datafactory-customization.md), una funcionalidad que requiera una configuración de la [CursorLocation](../../../ado/reference/ado-api/cursorlocation-property-ado.md) propiedad **adUseClient**.  
   
  El nombre del controlador y sus parámetros, si los hay, están separados por comas (","). Se producirá un comportamiento imprevisible si un punto y coma (";") aparece en cualquier lugar dentro de *cadena*. Puede escribir su propio controlador siempre que admita la **IDataFactoryHandler** interfaz.  

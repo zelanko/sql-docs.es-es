@@ -2,7 +2,6 @@
 title: Propiedad ordinal (posición de ADO MD) | Documentos de Microsoft
 ms.prod: sql
 ms.prod_service: connectivity
-ms.component: ado
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
@@ -21,11 +20,12 @@ caps.latest.revision: 13
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 31ad0a0c6fa263aa33d53afb8537f673d1df4d0d
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 2b800c41c5d3dfb306b503d013c042477778929f
+ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/11/2018
+ms.locfileid: "35284674"
 ---
 # <a name="ordinal-property-ado-md-position"></a>Propiedad ordinal (posición de ADO MD)
 Identifica de forma única un [posición](../../../ado/reference/ado-md-api/position-object-ado-md.md) a lo largo de un eje.  
@@ -33,7 +33,7 @@ Identifica de forma única un [posición](../../../ado/reference/ado-md-api/posi
 ## <a name="return-values"></a>Valores devueltos  
  Devuelve un **largo** entero y es de solo lectura.  
   
-## <a name="remarks"></a>Comentarios  
+## <a name="remarks"></a>Notas  
  El **Ordinal** propiedad de un [posición](../../../ado/reference/ado-md-api/position-object-ado-md.md) objeto corresponde al índice de la **posición** dentro de la [posiciones](../../../ado/reference/ado-md-api/positions-collection-ado-md.md) colección.  
   
  Una celda se puede recuperar rápidamente mediante el **Ordinal** de la **posición** a lo largo de cada eje con la [elemento](../../../ado/reference/ado-md-api/item-property-ado-md-cellset.md) propiedad de la [Cellset](../../../ado/reference/ado-md-api/cellset-object-ado-md.md) objeto .  

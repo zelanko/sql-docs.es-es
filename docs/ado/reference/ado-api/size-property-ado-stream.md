@@ -2,7 +2,6 @@
 title: Cambiar el tamaño de propiedad (Stream de ADO) | Documentos de Microsoft
 ms.prod: sql
 ms.prod_service: connectivity
-ms.component: ado
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
@@ -20,11 +19,12 @@ caps.latest.revision: 11
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 3d60b4fbc39ebe5db98b2185b4d52d7c5c797133
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: d6d39bb563acfde83a08f08c00fee66cc9b81967
+ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/11/2018
+ms.locfileid: "35281890"
 ---
 # <a name="size-property-ado-stream"></a>Propiedad Size (Stream de ADO)
 Indica el tamaño de la secuencia en número de bytes.  
@@ -32,7 +32,7 @@ Indica el tamaño de la secuencia en número de bytes.
 ## <a name="return-values"></a>Valores devueltos  
  Devuelve un **largo** valor que especifica el tamaño de la secuencia en número de bytes. El valor predeterminado es el tamaño de la secuencia, o -1 si no se conoce el tamaño de la secuencia.  
   
-## <a name="remarks"></a>Comentarios  
+## <a name="remarks"></a>Notas  
  **Tamaño** puede utilizarse solo con abierta [flujo](../../../ado/reference/ado-api/stream-object-ado.md) objetos.  
   
 > [!NOTE]

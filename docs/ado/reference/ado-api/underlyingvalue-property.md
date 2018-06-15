@@ -2,7 +2,6 @@
 title: Propiedad UnderlyingValue | Documentos de Microsoft
 ms.prod: sql
 ms.prod_service: connectivity
-ms.component: ado
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
@@ -22,11 +21,12 @@ caps.latest.revision: 11
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 72962e5ba9b99f93c21547370e110706bdf0ee0e
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 4f0548dd9c42e18b988cc848ebd214dd191f8489
+ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/11/2018
+ms.locfileid: "35282794"
 ---
 # <a name="underlyingvalue-property"></a>Propiedad UnderlyingValue
 Indica el valor actual de un [campo](../../../ado/reference/ado-api/field-object.md) objeto en la base de datos.  
@@ -34,7 +34,7 @@ Indica el valor actual de un [campo](../../../ado/reference/ado-api/field-object
 ## <a name="return-value"></a>Valor devuelto  
  Devuelve un **Variant** valor que indica el valor de la **campo**.  
   
-## <a name="remarks"></a>Comentarios  
+## <a name="remarks"></a>Notas  
  Use la **UnderlyingValue** propiedad para devolver el valor del campo actual de la base de datos. El valor del campo en el **UnderlyingValue** propiedad es el valor que es visible en la transacción y puede ser el resultado de una actualización reciente por otra transacción. Ésta puede ser diferente de la [OriginalValue](../../../ado/reference/ado-api/originalvalue-property-ado.md) propiedad, que refleja el valor devuelto originalmente para la [conjunto de registros](../../../ado/reference/ado-api/recordset-object-ado.md).  
   
  Esto es similar al uso de la [Resync](../../../ado/reference/ado-api/resync-method.md) método, pero la **UnderlyingValue** propiedad devuelve solo el valor de un campo específico del registro actual. Este es el mismo valor que el [Resync](../../../ado/reference/ado-api/resync-method.md) método se usa para reemplazar la [valor](../../../ado/reference/ado-api/value-property-ado.md) propiedad.  

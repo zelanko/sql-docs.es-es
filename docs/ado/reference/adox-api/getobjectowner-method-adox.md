@@ -2,7 +2,6 @@
 title: GetObjectOwner (método, ADOX) | Documentos de Microsoft
 ms.prod: sql
 ms.prod_service: connectivity
-ms.component: ado
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
@@ -21,11 +20,12 @@ caps.latest.revision: 12
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 49c25e4171602d760a54c70ed9bba80d5d6eac96
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 06f3cb14603c7799e7084af407df437b12be4769
+ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/11/2018
+ms.locfileid: "35285924"
 ---
 # <a name="getobjectowner-method-adox"></a>GetObjectOwner (método, ADOX)
 Devuelve el propietario de un objeto en un [catálogo](../../../ado/reference/adox-api/catalog-object-adox.md).  
@@ -50,7 +50,7 @@ Owner = Catalog.GetObjectOwner(ObjectName, ObjectType [,ObjectTypeId])
  *Valor de ObjectTypeId*  
  Opcional. A **Variant** valor que especifica el GUID de un tipo de objeto de proveedor no definido por la especificación de OLE DB. Este parámetro es obligatorio si *ObjectType* está establecido en **adPermObjProviderSpecific**; en caso contrario, no se utiliza.  
   
-## <a name="remarks"></a>Comentarios  
+## <a name="remarks"></a>Notas  
  Si el proveedor no admite devolver los propietarios de objetos, se producirá un error.  
   
 ## <a name="applies-to"></a>Se aplica a  

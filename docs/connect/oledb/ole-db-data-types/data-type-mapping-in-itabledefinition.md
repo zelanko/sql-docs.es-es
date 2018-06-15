@@ -5,7 +5,6 @@ ms.custom: ''
 ms.date: 03/26/2018
 ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
-ms.component: ole-db-data-types
 ms.reviewer: ''
 ms.suite: sql
 ms.technology: connectivity
@@ -22,11 +21,12 @@ helpviewer_keywords:
 author: pmasl
 ms.author: Pedro.Lopes
 manager: craigg
-ms.openlocfilehash: ade365add5b89069e86f67d82dfa84638bcb71f5
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
-ms.translationtype: MT
+ms.openlocfilehash: 31917fb7724ac9009db2d789ad08db8200944b1b
+ms.sourcegitcommit: f16003fd1ca28b5e06d5700e730f681720006816
+ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/11/2018
+ms.locfileid: "35305984"
 ---
 # <a name="data-type-mapping-in-itabledefinition"></a>Asignación de tipos de datos en ITableDefinition
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -59,6 +59,6 @@ ms.lasthandoff: 05/03/2018
 >  Al crear una nueva tabla, el controlador OLE DB para SQL Server asigna solo los valores OLE DB datos tipo enumeración especificados en la tabla anterior. Al intentar crear una tabla con una columna de cualquier otro tipo de datos de OLE DB, se genera un error.  
 
 ## <a name="see-also"></a>Vea también  
- [Tipos de datos & #40; OLE DB & #41;](../../oledb/ole-db-data-types/data-types-ole-db.md)  
+ [Tipos de datos &#40;OLE DB&#41;](../../oledb/ole-db-data-types/data-types-ole-db.md)  
   
   

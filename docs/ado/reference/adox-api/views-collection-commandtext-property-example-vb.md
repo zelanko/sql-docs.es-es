@@ -2,7 +2,6 @@
 title: Vistas de colección, ejemplo de la propiedad CommandText (VB) | Documentos de Microsoft
 ms.prod: sql
 ms.prod_service: connectivity
-ms.component: ado
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
@@ -20,11 +19,12 @@ caps.latest.revision: 11
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 5ff3d72e3dc206185c96b333e5e64d6cf724dba5
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 7785eb796690dc0f22dc2a41f714c3b6bb3843dd
+ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/11/2018
+ms.locfileid: "35287284"
 ---
 # <a name="views-collection-commandtext-property-example-vb"></a>Colección de vistas, ejemplo de la propiedad CommandText (VB)
 El código siguiente muestra cómo utilizar el [comando](../../../ado/reference/adox-api/command-property-adox.md) propiedad que se va a actualizar el texto de una vista.  

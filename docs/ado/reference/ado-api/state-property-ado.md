@@ -2,7 +2,6 @@
 title: Estado de la propiedad (ADO) | Documentos de Microsoft
 ms.prod: sql
 ms.prod_service: connectivity
-ms.component: ado
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
@@ -20,11 +19,12 @@ caps.latest.revision: 8
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: b4e254a4d13f4a210c174e3ef5b8181dd24cefd7
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: c7224efc2976873ff0326aa23a18df1cccbce230
+ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/11/2018
+ms.locfileid: "35282034"
 ---
 # <a name="state-property-ado"></a>Propiedad State (ADO)
 Todos los objetos aplicables indica si el estado del objeto está abierta o cerrada. Si el objeto ejecuta un método asincrónico, indica si el estado actual del objeto es conectando, ejecutando o recuperar.  
@@ -32,7 +32,7 @@ Todos los objetos aplicables indica si el estado del objeto está abierta o cerr
 ## <a name="return-value"></a>Valor devuelto  
  Devuelve un **largo** valor que puede ser un [ObjectStateEnum](../../../ado/reference/ado-api/objectstateenum.md) valor. El valor predeterminado es **adStateClosed**.  
   
-## <a name="remarks"></a>Comentarios  
+## <a name="remarks"></a>Notas  
  Puede usar el **estado** propiedad para determinar el estado actual de un objeto determinado en cualquier momento.  
   
  El objeto **estado** propiedad puede tener una combinación de valores. Por ejemplo, si se ejecuta una instrucción, esta propiedad tendrá un valor combinado de **adStateOpen** y **adStateExecuting**.  

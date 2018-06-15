@@ -2,7 +2,6 @@
 title: Append (método) (tablas ADOX) | Documentos de Microsoft
 ms.prod: sql
 ms.prod_service: connectivity
-ms.component: ado
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
@@ -21,11 +20,12 @@ caps.latest.revision: 12
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 81715fa9955f9fbd9bef2f74880f53f7764974fc
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 58c1636b77e8ddc618c18ba7e3c667a43533dbe9
+ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/11/2018
+ms.locfileid: "35285224"
 ---
 # <a name="append-method-adox-tables"></a>Append (método) (tablas ADOX)
 Agrega un nuevo [tabla](../../../ado/reference/adox-api/table-object-adox.md) el objeto a la [tablas](../../../ado/reference/adox-api/tables-collection-adox.md) colección.  
@@ -41,7 +41,7 @@ Tables.Append Table
  *Table*  
  A **Variant** valor que contiene una referencia a la **tabla** anexar o el nombre de la tabla para crear y anexar.  
   
-## <a name="remarks"></a>Comentarios  
+## <a name="remarks"></a>Notas  
  Si el proveedor no admite la creación de tablas, se producirá un error.  
   
 ## <a name="applies-to"></a>Se aplica a  

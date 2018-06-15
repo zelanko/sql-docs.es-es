@@ -2,7 +2,6 @@
 title: Crear un nuevo ejemplo de clave externo (VC ++) | Documentos de Microsoft
 ms.prod: sql
 ms.prod_service: connectivity
-ms.component: ado
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
@@ -24,11 +23,12 @@ caps.latest.revision: 10
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: c473c5f282bfb71a86391c78e45c9658b506f1d2
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 30b5590d1abecfb36869179aa1212dafa4d59527
+ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/11/2018
+ms.locfileid: "35286514"
 ---
 # <a name="keys-append-method-key-type-relatedcolumn-relatedtable-and-updaterule-properties-example-vc"></a>Anexar de teclas de método, tipo de clave, RelatedColumn, RelatedTable y UpdateRule propiedades ejemplo (VC ++)
 El código siguiente muestra cómo crear una nueva clave externa. Supone que existen dos tablas (clientes y pedidos).  

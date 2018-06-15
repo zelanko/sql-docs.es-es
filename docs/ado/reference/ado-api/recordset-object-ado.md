@@ -2,7 +2,6 @@
 title: Objeto de conjunto de registros (ADO) | Documentos de Microsoft
 ms.prod: sql
 ms.prod_service: connectivity
-ms.component: ado
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
@@ -20,16 +19,17 @@ caps.latest.revision: 6
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 4667e510edb12f0c916c6b2da7afd6cc73204c8b
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 1b150dc9d60620cc50a5560415e72f0197ae78d5
+ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/11/2018
+ms.locfileid: "35281250"
 ---
 # <a name="recordset-object-ado"></a>Objeto de conjunto de registros (ADO)
 Representa todo el conjunto de registros de una tabla base o los resultados de un comando ejecutado. En cualquier momento, el **Recordset** objeto hace referencia a solo un único registro dentro del conjunto como el registro actual.  
   
-## <a name="remarks"></a>Comentarios  
+## <a name="remarks"></a>Notas  
  Usa **Recordset** objetos para manipular los datos de un proveedor. Cuando se utiliza ADO, manipular datos casi por completo mediante **Recordset** objetos. Todos los **Recordset** objetos constan de registros (filas) y campos (columnas). Según la funcionalidad admitida por el proveedor, algunas **Recordset** métodos o propiedades no estén disponibles.  
   
  ADODB. Conjunto de registros es el ProgID que debe usarse para crear un **Recordset** objeto. Aplicaciones existentes que hacen referencia a la ADOR no actualizada. ProgID del conjunto de registros seguirá funcionando sin tener que recompilar, pero el nuevo desarrollo debe hacer referencia a ADODB. Conjunto de registros.  

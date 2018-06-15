@@ -2,7 +2,6 @@
 title: Objeto de miembro (ADO MD) | Documentos de Microsoft
 ms.prod: sql
 ms.prod_service: connectivity
-ms.component: ado
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
@@ -20,16 +19,17 @@ caps.latest.revision: 10
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 6629f860fb8043387526019ec17c0e1775915a66
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: ee79dc5a17ebbce35a8543a0ed2351ca65f03374
+ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/11/2018
+ms.locfileid: "35284044"
 ---
 # <a name="member-object-ado-md"></a>Objeto de miembro (ADO MD)
 Representa a un miembro de un nivel en un cubo, los elementos secundarios de un miembro de un nivel o un miembro de una posición a lo largo de un eje de un conjunto de celdas.  
   
-## <a name="remarks"></a>Comentarios  
+## <a name="remarks"></a>Notas  
  Las propiedades de un **miembro** varían según el contexto en el que se usa. A **miembro** de un [nivel](../../../ado/reference/ado-md-api/level-object-ado-md.md) en un [CubeDef](../../../ado/reference/ado-md-api/cubedef-object-ado-md.md) tiene un [elementos secundarios](../../../ado/reference/ado-md-api/children-property-ado-md.md) propiedad que devuelve el **miembros** en el siguiente nivel inferior de la jerarquía actual **miembro**. Para una **miembro** de un [posición](../../../ado/reference/ado-md-api/position-object-ado-md.md), **elementos secundarios** colección siempre está vacía. Además, el [tipo](../../../ado/reference/ado-md-api/type-property-ado-md.md) propiedad se aplica únicamente a **miembros** de un **nivel**.  
   
  A **miembro** de **posición** tiene dos propiedades que son útiles cuando se muestra la [Cellset](../../../ado/reference/ado-md-api/cellset-object-ado-md.md): [DrilledDown](../../../ado/reference/ado-md-api/drilleddown-property-ado-md.md) y [ ParentSameAsPrev](../../../ado/reference/ado-md-api/parentsameasprev-property-ado-md.md). Se producirá un error si se tiene acceso a estas propiedades en un **miembro** de un **nivel**.  
@@ -72,12 +72,12 @@ Representa a un miembro de un nivel en un cubo, los elementos secundarios de un 
   
  El **propiedades** colección contiene propiedades proporcionadas por el proveedor. En la tabla siguiente se enumera propiedades que estén disponibles. La lista de propiedades reales puede variar en función de la implementación del proveedor. Consulte la documentación del proveedor para obtener una lista completa de propiedades disponibles.  
   
-|Nombre|Description|  
+|Nombre|Descripción|  
 |----------|-----------------|  
 |CatalogName|El nombre del catálogo al que pertenece este cubo.|  
 |ChildrenCardinality|Número de elementos secundarios que tiene este miembro.|  
 |CubeName|Nombre del cubo.|  
-|Description|Una descripción significativa del miembro.|  
+|Descripción|Una descripción significativa del miembro.|  
 |DimensionUniqueName|El nombre no ambiguo de la [dimensión](../../../ado/reference/ado-md-api/dimension-object-ado-md.md).|  
 |HierarchyUniqueName|El nombre no ambiguo de la jerarquía.|  
 |LevelNumber|La distancia entre el nivel y la raíz de la jerarquía.|  

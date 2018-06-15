@@ -2,7 +2,6 @@
 title: ParentSameAsPrev (propiedad, ADO MD) | Documentos de Microsoft
 ms.prod: sql
 ms.prod_service: connectivity
-ms.component: ado
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
@@ -21,11 +20,12 @@ caps.latest.revision: 12
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 3827d8caf756113406af0bb7ec26613252fde5ec
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: d1b4934a36522c6b7c8a444e2e3b88eb9ee89845
+ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/11/2018
+ms.locfileid: "35284814"
 ---
 # <a name="parentsameasprev-property-ado-md"></a>ParentSameAsPrev (propiedad, ADO MD)
 Indica si el elemento primario de esta posición [miembro](../../../ado/reference/ado-md-api/member-object-ado-md.md) es el mismo que el elemento primario del miembro inmediatamente anterior.  
@@ -33,7 +33,7 @@ Indica si el elemento primario de esta posición [miembro](../../../ado/referenc
 ## <a name="return-values"></a>Valores devueltos  
  Devuelve un **booleano** valor y es de solo lectura.  
   
-## <a name="remarks"></a>Comentarios  
+## <a name="remarks"></a>Notas  
  Esta propiedad solo se admite en [miembro](../../../ado/reference/ado-md-api/member-object-ado-md.md) objetos que pertenecen a un [posición](../../../ado/reference/ado-md-api/position-object-ado-md.md) objeto. Se produce un error cuando se hace referencia a esta propiedad desde **miembro** objetos que pertenecen a un [nivel](../../../ado/reference/ado-md-api/level-object-ado-md.md) objeto.  
   
 ## <a name="applies-to"></a>Se aplica a  

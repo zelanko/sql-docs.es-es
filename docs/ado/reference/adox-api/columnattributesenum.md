@@ -2,7 +2,6 @@
 title: ColumnAttributesEnum | Documentos de Microsoft
 ms.prod: sql
 ms.prod_service: connectivity
-ms.component: ado
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
@@ -20,16 +19,17 @@ caps.latest.revision: 12
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 01b9df78b58f1969f57cc6d001a83881451d78bc
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: f51e9dcea7b8babad933a63f003ee51f12490ca2
+ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/11/2018
+ms.locfileid: "35285274"
 ---
 # <a name="columnattributesenum"></a>ColumnAttributesEnum
 Especifica las características de un [columna](../../../ado/reference/adox-api/column-object-adox.md).  
   
-|Constante|Value|Description|  
+|Constante|Valor|Descripción|  
 |--------------|-----------|-----------------|  
 |**adColFixed**|1|La columna es una longitud fija.|  
 |**adColNullable**|2|La columna puede contener valores null.|  

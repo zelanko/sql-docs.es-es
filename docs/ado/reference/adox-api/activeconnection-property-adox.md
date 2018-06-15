@@ -2,7 +2,6 @@
 title: ActiveConnection (propiedad, ADOX) | Documentos de Microsoft
 ms.prod: sql
 ms.prod_service: connectivity
-ms.component: ado
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
@@ -26,11 +25,12 @@ caps.latest.revision: 11
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 420b6b26c38582c20bbc224ebcc53551967f1c4c
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: d5afb815a3e4701dc769f600d3a8d014d5a5cd25
+ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/11/2018
+ms.locfileid: "35284584"
 ---
 # <a name="activeconnection-property-adox"></a>ActiveConnection (propiedad, ADOX)
 Indica la propiedad ADO [conexión](../../../ado/reference/ado-api/connection-object-ado.md) objeto al que la [catálogo](../../../ado/reference/adox-api/catalog-object-adox.md) pertenece.  
@@ -38,7 +38,7 @@ Indica la propiedad ADO [conexión](../../../ado/reference/ado-api/connection-ob
 ## <a name="settings-and-return-values"></a>Configuración y valores devueltos  
  Establece un **conexión** objeto o un **cadena** que contiene la definición para una conexión. Devuelve el activo **conexión** objeto.  
   
-## <a name="remarks"></a>Comentarios  
+## <a name="remarks"></a>Notas  
  El valor predeterminado es una referencia de objeto null.  
   
 ## <a name="applies-to"></a>Se aplica a  

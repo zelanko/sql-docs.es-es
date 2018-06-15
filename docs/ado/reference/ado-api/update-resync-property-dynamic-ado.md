@@ -2,7 +2,6 @@
 title: Actualizar resincronización propiedad dinámicos (ADO) | Documentos de Microsoft
 ms.prod: sql
 ms.prod_service: connectivity
-ms.component: ado
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
@@ -18,11 +17,12 @@ caps.latest.revision: 11
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 71c18ad1db976c24ecb7a7e2ec09e04a8b5955d3
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: ae21cd46a181a3541dedb663dafef845ec162930
+ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/11/2018
+ms.locfileid: "35282692"
 ---
 # <a name="update-resync-property-dynamic-ado"></a>Propiedad dinámica Update Resync (ADO)
 Especifica si el [UpdateBatch](../../../ado/reference/ado-api/updatebatch-method.md) método va seguido de un modo implícito [Resync](../../../ado/reference/ado-api/resync-method.md) operación del método y si es así, el ámbito de esa operación.  
@@ -30,7 +30,7 @@ Especifica si el [UpdateBatch](../../../ado/reference/ado-api/updatebatch-method
 ## <a name="settings-and-return-values"></a>Configuración y valores devueltos  
  Establece o devuelve uno o varios de los [ADCPROP_UPDATERESYNC_ENUM](../../../ado/reference/ado-api/adcprop-updateresync-enum.md) valores.  
   
-## <a name="remarks"></a>Comentarios  
+## <a name="remarks"></a>Notas  
  Los valores de ADCPROP_UPDATERESYNC_ENUM se pueden combinar, excepto adResyncAll, que ya representa la combinación del resto de los valores.  
   
  La constante **adResyncConflicts** almacena los valores de resincronización como valores subyacentes, pero no reemplaza los cambios pendientes.  

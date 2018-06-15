@@ -6,8 +6,7 @@ ms.date: 01/19/2017
 ms.reviewer: ''
 ms.suite: sql
 ms.prod: sql
-ms.prod_service: drivers
-ms.component: reference
+ms.prod_service: connectivity
 ms.tgt_pltfrm: ''
 ms.topic: conceptual
 apitype: COM
@@ -18,11 +17,12 @@ caps.latest.revision: 16
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 6c4f2b3a0cf70d068e1f6a7124e7152c8329ebd1
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 784103c416947b57ebea358f911dfee4996a515e
+ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/11/2018
+ms.locfileid: "35288524"
 ---
 # <a name="submitchanges-method-rds"></a>Método SubmitChanges (RDS)
 Envía los cambios pendientes del localmente en caché y actualizables [Recordset](../../../ado/reference/ado-api/recordset-object-ado.md) al origen de datos especificado en el [conectar](../../../ado/reference/rds-api/connect-property-rds.md) propiedad o el [URL](../../../ado/reference/rds-api/url-property-rds.md) propiedad.  
@@ -50,7 +50,7 @@ DataControl.SubmitChanges DataFactory.SubmitChanges Connection, Recordset
  *Conjunto de registros*  
  Una variable de objeto que representa un **Recordset** objeto.  
   
-## <a name="remarks"></a>Comentarios  
+## <a name="remarks"></a>Notas  
  El [conectar](../../../ado/reference/rds-api/connect-property-rds.md), [Server](../../../ado/reference/rds-api/server-property-rds.md), y [SQL](../../../ado/reference/rds-api/sql-property.md) propiedades deben establecerse antes de poder usar la **SubmitChanges** método con el  **RDS. DataControl** objeto.  
   
  Si se llama a la [CancelUpdate](../../../ado/reference/rds-api/cancelupdate-method-rds.md) método después de haber llamado **SubmitChanges** para el mismo **Recordset** objeto, el **CancelUpdate** se produce un error en la llamada porque ya se han confirmado los cambios.  

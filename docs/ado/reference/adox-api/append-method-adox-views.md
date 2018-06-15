@@ -2,7 +2,6 @@
 title: Append (método) (vistas ADOX) | Documentos de Microsoft
 ms.prod: sql
 ms.prod_service: connectivity
-ms.component: ado
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
@@ -21,11 +20,12 @@ caps.latest.revision: 12
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 6d8d713be4cf193ba7cacf1957bdf51937b9ed4a
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: a524be12a721d86e0e5afd1029f486ca7c8ecaa9
+ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/11/2018
+ms.locfileid: "35285214"
 ---
 # <a name="append-method-adox-views"></a>Append (método) (vistas ADOX)
 Crea un nuevo [vista](../../../ado/reference/adox-api/view-object-adox.md) objeto y lo anexa a la [vistas](../../../ado/reference/adox-api/views-collection-adox.md) colección.  
@@ -44,7 +44,7 @@ Views.Append Name, Command
  *Command*  
  ADO [comando](../../../ado/reference/ado-api/command-object-ado.md) objeto que representa la vista para crear.  
   
-## <a name="remarks"></a>Comentarios  
+## <a name="remarks"></a>Notas  
  Crea una nueva vista del origen de datos con el nombre y los atributos especificados en el **comando** objeto.  
   
  Si el texto del comando que especifica el usuario representa un procedimiento en lugar de una vista, el comportamiento es dependerá del proveedor. **Anexar** se producirá un error si el proveedor no admite comandos persistentes.  

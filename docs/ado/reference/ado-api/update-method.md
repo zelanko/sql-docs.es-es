@@ -2,7 +2,6 @@
 title: El método Update | Documentos de Microsoft
 ms.prod: sql
 ms.prod_service: connectivity
-ms.component: ado
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
@@ -20,11 +19,12 @@ caps.latest.revision: 12
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 2c0a5cd4e12848ecdec7c3c5168b6106dd95215c
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 3ae65fa263d672c80fb886c5e1f212a8a189bf38
+ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/11/2018
+ms.locfileid: "35282764"
 ---
 # <a name="update-method"></a>Update (método)
 Guarda los cambios realizados en la fila actual de un [Recordset](../../../ado/reference/ado-api/recordset-object-ado.md) objeto, o el [campos](../../../ado/reference/ado-api/fields-collection-ado.md) colección de un [registro](../../../ado/reference/ado-api/record-object-ado.md) objeto.  
@@ -44,7 +44,7 @@ record.Fields.Update
  *Valores*  
  Opcional. A **Variant** que representa un valor único, o un **Variant** matriz que representa los valores para el campo o campos en el nuevo registro.  
   
-## <a name="remarks"></a>Comentarios  
+## <a name="remarks"></a>Notas  
   
 ## <a name="recordset"></a>Conjunto de registros  
  Use la **actualización** método para guardar los cambios que realice en el registro actual de un **conjunto de registros** objeto desde el que realiza la llamada la [AddNew](../../../ado/reference/ado-api/addnew-method-ado.md) método o cambiando los valores de campo en un registro existente. El **Recordset** objeto debe admitir las actualizaciones.  

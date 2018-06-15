@@ -7,7 +7,6 @@ ms.suite: sql
 ms.tgt_pltfrm: ''
 ms.prod: sql
 ms.prod_service: connectivity
-ms.component: ado
 ms.technology: connectivity
 ms.topic: conceptual
 helpviewer_keywords:
@@ -17,16 +16,17 @@ caps.latest.revision: 15
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: bdb021c9d036a3daab6b0e5c3f4912c0da4059eb
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 1d38ec14d124bcf45c4eb22188f86849d95f0275
+ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/11/2018
+ms.locfileid: "35283414"
 ---
 # <a name="ado-glossary"></a>Glosario de ADO
 En este tema define los términos relacionados con ADO.  
   
-## <a name="a"></a>A  
+## <a name="a"></a>Un  
  dirección URL absoluta  
  Una dirección URL completa que especifica la ubicación de un recurso que reside en Internet o una intranet. Vea también *URL* y *dirección URL relativa*.  
   
@@ -253,7 +253,7 @@ En este tema define los términos relacionados con ADO.
  Proxy  
  Un objeto específico de la interfaz que proporciona la serialización de parámetros y la comunicación requerida para que un cliente llamar a un objeto de aplicación que se ejecuta en un entorno de ejecución diferente, como en un subproceso diferente o en otro proceso. El proxy se encuentra en el cliente y se comunica con un código auxiliar correspondiente que se encuentra en el objeto de aplicación que se está llamando. Vea también código auxiliar.  
   
-## <a name="r"></a>L  
+## <a name="r"></a>R  
  dirección URL relativa  
  Dirección URL parcialmente cualificada que especifica un recurso en Internet o en una intranet cuya ubicación es relativa a un punto de partida especificado por una dirección URL absoluta o el objeto de conexión ADO equivalente. De hecho, la constituyen de direcciones URL concatenado de absolutas y relativa una dirección URL completa. Vea también URL y URL absoluta.  
   

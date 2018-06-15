@@ -2,7 +2,6 @@
 title: Propiedad FilterAxis (ADO MD) | Documentos de Microsoft
 ms.prod: sql
 ms.prod_service: connectivity
-ms.component: ado
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
@@ -21,11 +20,12 @@ caps.latest.revision: 13
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: c7ba6b397879039064943fcb6264ef3dd76aa8fc
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: f59eeff4dc01e2f881712ca2309a83e80d785b27
+ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/11/2018
+ms.locfileid: "35283934"
 ---
 # <a name="filteraxis-property-ado-md"></a>Propiedad FilterAxis (ADO MD)
 Indica información de filtro sobre actual [cellset](../../../ado/reference/ado-md-api/cellset-object-ado-md.md).  
@@ -33,7 +33,7 @@ Indica información de filtro sobre actual [cellset](../../../ado/reference/ado-
 ## <a name="return-values"></a>Valores devueltos  
  Devuelve un [eje](../../../ado/reference/ado-md-api/axis-object-ado-md.md) de objetos y es de solo lectura.  
   
-## <a name="remarks"></a>Comentarios  
+## <a name="remarks"></a>Notas  
  Use la **PivotView** propiedad para devolver información acerca de las dimensiones que se utilizaron para segmentar los datos. El [DimensionCount](../../../ado/reference/ado-md-api/dimensioncount-property-ado-md.md) propiedad de la **eje** devuelve el número de dimensiones de segmentación de datos. Este eje normalmente tiene una sola fila.  
   
  El **eje** devuelto por **PivotView** no se encuentra en la [ejes](../../../ado/reference/ado-md-api/axes-collection-ado-md.md) colección para un [Cellset](../../../ado/reference/ado-md-api/cellset-object-ado-md.md) objeto.  

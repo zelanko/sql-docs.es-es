@@ -5,7 +5,6 @@ ms.custom: ''
 ms.date: 03/26/2018
 ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
-ms.component: ole-db-errors
 ms.reviewer: ''
 ms.suite: sql
 ms.technology: connectivity
@@ -21,11 +20,12 @@ helpviewer_keywords:
 author: pmasl
 ms.author: Pedro.Lopes
 manager: craigg
-ms.openlocfilehash: f9f6573916c890e7ae904f8a4b5dabed5ece62db
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
-ms.translationtype: MT
+ms.openlocfilehash: 36a8e0885e7da31ff32e380f9a4d5fc08ab93bbd
+ms.sourcegitcommit: f16003fd1ca28b5e06d5700e730f681720006816
+ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/11/2018
+ms.locfileid: "35305974"
 ---
 # <a name="information-in-error-interfaces"></a>Información en interfaces de error
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -34,7 +34,7 @@ ms.lasthandoff: 05/03/2018
   
  El controlador OLE DB para SQL Server admite **IErrorInfo** funciones miembro como se indica a continuación.  
   
-|Función de miembro|Description|  
+|Función de miembro|Descripción|  
 |---------------------|-----------------|  
 |**GetDescription**|Cadena de mensaje de error descriptiva.|  
 |**GetGUID**|GUID de la interfaz que definió el error.|  
@@ -44,7 +44,7 @@ ms.lasthandoff: 05/03/2018
   
  El controlador OLE DB para SQL Server admite disponibles para el consumidor **IErrorRecords** funciones miembro como se indica a continuación.  
   
-|Función de miembro|Description|  
+|Función de miembro|Descripción|  
 |---------------------|-----------------|  
 |**GetBasicErrorInfo**|Llena una estructura ERRORINFO con información básica acerca de un error. Una estructura ERRORINFO contiene miembros que identifican el valor devuelto HRESULT del error así como el proveedor y la interfaz a los que se aplica el error.|  
 |**GetCustomErrorObject**|Devuelve una referencia en interfaces **ISQLErrorInfo,** y [ISQLServerErrorInfo](http://msdn.microsoft.com/library/a8323b5c-686a-4235-a8d2-bda43617b3a1).|  
@@ -54,7 +54,7 @@ ms.lasthandoff: 05/03/2018
   
  El controlador OLE DB para SQL Server admite **ISQLErrorInfo:: GetSQLInfo** parámetros tal y como se indica a continuación.  
   
-|Parámetro|Description|  
+|Parámetro|Descripción|  
 |---------------|-----------------|  
 |*pbstrSQLState*|Devuelve un valor SQLSTATE para el error. Los valores SQLSTATE se definen en las especificaciones SQL 92, ODBC e ISO SQL y API. Ni [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] ni el controlador OLE DB para SQL Server definido por los valores de SQLSTATE específico de la implementación.|  
 |*plNativeError*|Devuelve el [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] número de error de **master.dbo.sysmessages** cuando esté disponible. Errores nativos están disponibles después de un intento correcto de inicializar un controlador OLE DB para el origen de datos de SQL Server. Antes del intento, el controlador OLE DB para SQL Server siempre devuelve cero.|  

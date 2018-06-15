@@ -2,7 +2,6 @@
 title: Método Delete (colecciones de ADOX) | Documentos de Microsoft
 ms.prod: sql
 ms.prod_service: connectivity
-ms.component: ado
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
@@ -35,11 +34,12 @@ caps.latest.revision: 12
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: c059ef4390f504363c9cfaa7f42bb99c6799a2da
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 8704e69c777c9426af158b9866ca89e70de054b5
+ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/11/2018
+ms.locfileid: "35285884"
 ---
 # <a name="delete-method-adox-collections"></a>Método Delete (colecciones ADOX)
 Quita un objeto de una colección.  
@@ -55,7 +55,7 @@ Collection.Delete Name
  *Nombre*  
  A **Variant** que especifica el nombre o la posición ordinal (índice) del objeto que se va a eliminar.  
   
-## <a name="remarks"></a>Comentarios  
+## <a name="remarks"></a>Notas  
  Se producirá un error si la *nombre* no existe en la colección.  
   
  Para [tablas](../../../ado/reference/adox-api/tables-collection-adox.md) y [usuarios](../../../ado/reference/adox-api/users-collection-adox.md) colecciones, se producirá un error si el proveedor no admite la eliminación de tablas o de los usuarios, respectivamente. Para [procedimientos](../../../ado/reference/adox-api/procedures-collection-adox.md) y [vistas](../../../ado/reference/adox-api/views-collection-adox.md) colecciones, **eliminar** se producirá un error si el proveedor no admite comandos persistentes.  

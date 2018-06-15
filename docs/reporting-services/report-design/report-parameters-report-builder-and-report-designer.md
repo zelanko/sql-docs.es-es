@@ -27,6 +27,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "33028292"
 ---
 # <a name="report-parameters-report-builder-and-report-designer"></a>Parámetros de informe (Generador de informes y Diseñador de informes)
   En este tema se describen los usos habituales de los parámetros de informe de [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] , las propiedades que puede establecer y otros muchos aspectos. Los parámetros de informe le permiten controlar datos de informe, conectar informes relacionados y cambiar la presentación de los informes. Puede utilizar parámetros de informe en informes paginados creados en el [!INCLUDE[ssRBnoversion](../../includes/ssrbnoversion-md.md)] y en el Diseñador de informes y también en informes móviles creados en el [!INCLUDE[SS_MobileReptPub_Long](../../includes/ss-mobilereptpub-long-md.md)]. Obtenga más información sobre [Conceptos de parámetros de informe](../../reporting-services/report-design/report-parameters-concepts-report-builder-and-ssrs.md).  

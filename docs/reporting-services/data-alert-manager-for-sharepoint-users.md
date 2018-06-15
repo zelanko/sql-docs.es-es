@@ -23,6 +23,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "33016902"
 ---
 # <a name="data-alert-manager-for-sharepoint-users"></a>Administrador de alertas de datos para los usuarios de SharePoint
 

@@ -23,6 +23,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "33026152"
 ---
 # <a name="reporting-services-features-and-tasks-ssrs"></a>Características y tareas de Reporting Services (SSRS)
   [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] se organiza mediante los informes y las características de informes, las características del servidor de informes y las características del producto [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] .  

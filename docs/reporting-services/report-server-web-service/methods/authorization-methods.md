@@ -28,6 +28,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "33025202"
 ---
 # <a name="authorization-methods"></a>Métodos de autorización
   Puede utilizar estos métodos para administrar tareas, roles y directivas en el servidor de informes.  

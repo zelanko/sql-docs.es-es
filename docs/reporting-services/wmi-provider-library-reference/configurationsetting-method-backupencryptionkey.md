@@ -27,6 +27,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "33029872"
 ---
 # <a name="configurationsetting-method---backupencryptionkey"></a>Método ConfigurationSetting - BackupEncryptionKey
   Realiza una copia de seguridad de la clave de cifrado de la instancia del servidor de informes especificada. La clave de cifrado se almacena cifrada con una contraseña.  

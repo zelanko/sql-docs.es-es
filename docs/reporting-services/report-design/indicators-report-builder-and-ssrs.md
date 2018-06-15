@@ -27,6 +27,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "33027472"
 ---
 # <a name="indicators-report-builder-and-ssrs"></a>Indicadores (Generador de informes y SSRS)
   En los informes paginados de [!INCLUDE[ssRSnoversion_md](../../includes/ssrsnoversion-md.md)] , los indicadores son medidores mínimos que comunican el estado del valor de un dato de un vistazo. Los iconos que representan a los indicadores y sus estados son simples y visualmente efectivos incluso cuando su tamaño es pequeño.  

@@ -20,6 +20,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "33022962"
 ---
 # <a name="exporting-to-a-pdf-file-report-builder-and-ssrs"></a>Exportar a un archivo PDF (Generador de informes y SSRS)
   La extensión de representación en PDF representa informes paginados de [!INCLUDE[ssRSnoversion_md](../../includes/ssrsnoversion-md.md)] en archivos que se pueden abrir en Adobe Acrobat y en visores de PDF de terceros compatibles con PDF 1.3. Aunque PDF 1.3 es compatible con Adobe Acrobat 4.0 y versiones posteriores, [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] admite Adobe Acrobat 11.0 o versiones posteriores. La extensión de representación no requiere el software Adobe para representar el informe. Sin embargo, se necesitan visores de PDF, como Adobe Acrobat, para ver o imprimir un informe en formato PDF.  

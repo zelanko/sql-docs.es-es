@@ -33,6 +33,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "33027042"
 ---
 # <a name="page-headers-and-footers-report-builder-and-ssrs"></a>Encabezados y pies de página (Generador de informes y SSRS)
   Un informe puede contener un encabezado y un pie de página que aparecen en la parte superior e inferior de cada página, respectivamente. Los encabezados y pies de página pueden contener texto estático, imágenes, líneas, rectángulos, bordes, color de fondo, imágenes de fondo y expresiones. Las expresiones incluyen referencias a campos de conjunto de datos para informes que tienen un conjunto de datos y llamadas a funciones de agregado que incluyen el conjunto de datos como ámbito.  

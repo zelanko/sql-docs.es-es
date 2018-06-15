@@ -20,6 +20,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "33023442"
 ---
 # <a name="images-text-boxes-rectangles-and-lines-report-builder-and-ssrs"></a>Imágenes, cuadros de texto rectángulos y líneas (Generador de informes y SSRS)
   Además de regiones de datos como tablas, matrices y gráficos, los informes paginados de [!INCLUDE[ssRSnoversion_md](../../includes/ssrsnoversion-md.md)] usan otros elementos de informe, como imágenes, cuadros de texto y rectángulos, para agregar interés visual, resaltar información clave o proporcionar información relacionada. Puede cambiar el formato de un elemento de informe. Por ejemplo, puede agregar un borde o un relleno, cambiar la visibilidad o la dirección inicial, o especificar una ubicación y un tamaño determinados para el elemento.  

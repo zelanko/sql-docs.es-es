@@ -26,6 +26,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "33029430"
 ---
 # <a name="script-with-the-rsexe-utility-and-the-web-service"></a>Script con la utilidad rs.exe y el servicio Web
   Los desarrolladores y administradores del servidor de informes pueden realizar operaciones en un servidor de informes con la utilidad **rs** (RS.exe). Con esta utilidad, puede administrar un servidor de informes mediante programación usando los scripts escritos con [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[vbprvb](../../includes/vbprvb-md.md)].  

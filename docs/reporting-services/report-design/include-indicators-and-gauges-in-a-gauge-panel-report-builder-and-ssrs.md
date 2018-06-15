@@ -20,6 +20,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "33024002"
 ---
 # <a name="include-indicators-and-gauges-in-a-gauge-panel-report-builder-and-ssrs"></a>Incluir indicadores y medidores en un panel de medidores (Generador de informes y SSRS)
   El panel de medidores es el contenedor de nivel superior que contiene uno o más medidores e indicadores. Los indicadores se pueden incrustar en los medidores o colocar a su lado en el panel de medidores.  

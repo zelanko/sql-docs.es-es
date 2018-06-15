@@ -20,6 +20,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "33024152"
 ---
 # <a name="report-builder-functions---level-function"></a>Funciones del Generador de informes: función Level
   Devuelve el nivel actual de profundidad de una jerarquía recursiva.  

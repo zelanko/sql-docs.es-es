@@ -22,6 +22,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "33030472"
 ---
 # <a name="configurationsetting-method---listreservedurls"></a>Método ConfigurationSetting - ListReservedURLs
   Enumera las direcciones URL reservadas para todas las aplicaciones en el servidor de informes.  

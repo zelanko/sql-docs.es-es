@@ -2,7 +2,6 @@
 title: Forma comandos en General | Documentos de Microsoft
 ms.prod: sql
 ms.prod_service: connectivity
-ms.component: ado
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
@@ -18,18 +17,19 @@ caps.latest.revision: 16
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 6af36fbf7a3b60067c94f0d21aa6e7514df1a098
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: c56148f0c94455ac96b926de050518d412098bab
+ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/11/2018
+ms.locfileid: "35272594"
 ---
 # <a name="shape-commands-in-general"></a>Comandos Shape en General
 Dar forma a datos define las columnas de una forma **Recordset**, las relaciones entre las entidades representadas por las columnas y la forma en que la **Recordset** se rellena con datos.  
   
  Una forma **Recordset** puede constar de los siguientes tipos de columnas.  
   
-|Tipo de columna|Description|  
+|Tipo de columna|Descripción|  
 |-----------------|-----------------|  
 |datos|Campos de un **Recordset** devuelto por un comando de consulta a un proveedor de datos, tabla o en forma de anteriormente **conjunto de registros**.|  
 |capítulo|Una referencia a otro **Recordset**, denominado un *capítulo*. Columnas de capítulo permiten definir una *elementos primarios y secundarios* relación donde la *primario* es el **Recordset** que contiene la columna de capítulo y el *secundarios* es el **Recordset** representado por el capítulo.|  

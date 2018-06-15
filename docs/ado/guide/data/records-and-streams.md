@@ -2,7 +2,6 @@
 title: Registros y secuencias | Documentos de Microsoft
 ms.prod: sql
 ms.prod_service: connectivity
-ms.component: ado
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
@@ -19,11 +18,12 @@ caps.latest.revision: 12
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 3d083594f9dd54cee0f1c9c70f6fdfe14d32e49a
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 62066ab92b6acaa393036a7b4be01499fa830dd3
+ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/11/2018
+ms.locfileid: "35272424"
 ---
 # <a name="records-and-streams"></a>Registros y secuencias
 ADO proporciona actualmente el [Recordset](../../../ado/reference/ado-api/recordset-object-ado.md) objeto como medio principal para acceder a información en orígenes de datos, como bases de datos relacionales. Sin embargo, algunos proveedores admiten la [registro](../../../ado/reference/ado-api/record-object-ado.md) y [flujo](../../../ado/reference/ado-api/stream-object-ado.md) objetos como objetos alternativos o complementarios con el que se pueden manipular los datos de proveedores. Para obtener información específica sobre **registro** comportamiento, consulte la documentación del proveedor.  

@@ -2,7 +2,6 @@
 title: Recuperar conjuntos de resultados en secuencias | Documentos de Microsoft
 ms.prod: sql
 ms.prod_service: connectivity
-ms.component: ado
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
@@ -19,11 +18,12 @@ caps.latest.revision: 12
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: cc99c234d810aef48f4c01bdc83229e55d9c5886
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: eff683085882bd56b60ed7eee2a14cd2efbc8b86
+ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/11/2018
+ms.locfileid: "35272554"
 ---
 # <a name="retrieving-resultsets-into-streams"></a>Recuperar conjuntos de resultados en secuencias
 En lugar de recibir los resultados en tradicional **Recordset** objeto ADO en su lugar, puede recuperar los resultados de la consulta en una secuencia. La propiedad ADO **flujo** objeto (u otros objetos que admiten el COM **IStream** interfaz, como ASP **solicitar** y **respuesta** objetos ) puede usarse para contener estos resultados. Un uso de esta característica es para recuperar los resultados en formato XML. Con SQL Server, por ejemplo, los resultados XML pueden devolverse de varias maneras, por ejemplo, mediante la cláusula FOR XML con una consulta SELECT de SQL o utilizando una consulta XPath.  
@@ -182,5 +182,5 @@ adoCmd.Execute , , adExecuteStream
 Response.write "</XML>"  
 ```  
   
-### <a name="remarks"></a>Comentarios  
+### <a name="remarks"></a>Notas  
  En este momento, se han transmitido por secuencias XML en el explorador del cliente y está listo para mostrarse. Esto se realiza mediante VBScript del lado cliente para enlazar el documento XML a una instancia de DOM y crear bucles en cada nodo secundario para generar una lista de productos en HTML.

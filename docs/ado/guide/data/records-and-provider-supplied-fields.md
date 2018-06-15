@@ -2,7 +2,6 @@
 title: Registros y campos proporcionados por el proveedor | Documentos de Microsoft
 ms.prod: sql
 ms.prod_service: connectivity
-ms.component: ado
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
@@ -18,11 +17,12 @@ caps.latest.revision: 10
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: d929238274b5b92e9bdf7b89a369e7988c06b3fc
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: c8b27e7f5ed6f4bc658c590ab8ea05bcd4c46d7a
+ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/11/2018
+ms.locfileid: "35272574"
 ---
 # <a name="records-and-provider-supplied-fields"></a>Registros y campos proporcionados por el proveedor
 Cuando un [registro](../../../ado/reference/ado-api/record-object-ado.md) objeto está abierto, su origen puede ser la fila actual de un formato de archivo [Recordset](../../../ado/reference/ado-api/recordset-object-ado.md), una dirección URL absoluta o una dirección URL relativa junto con un formato de archivo [conexión](../../../ado/reference/ado-api/connection-object-ado.md) objeto .  
@@ -59,7 +59,7 @@ Cuando un [registro](../../../ado/reference/ado-api/record-object-ado.md) objeto
 ## <a name="resource-recordset-columns"></a>Columnas de conjunto de registros de recursos  
  A *el conjunto de registros de recursos* consta de las siguientes columnas.  
   
-|Nombre de columna|Tipo|Description|  
+|Nombre de columna|Tipo|Descripción|  
 |-----------------|----------|-----------------|  
 |RESOURCE_PARSENAME|AdVarWChar|Solo lectura. Indica la dirección URL del recurso.|  
 |RESOURCE_PARENTNAME|AdVarWChar|Solo lectura. Indica la dirección URL absoluta del registro primario.|  

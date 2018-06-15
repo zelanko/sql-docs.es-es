@@ -2,7 +2,6 @@
 title: Espacios de nombres | Documentos de Microsoft
 ms.prod: sql
 ms.prod_service: connectivity
-ms.component: ado
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
@@ -17,19 +16,20 @@ caps.latest.revision: 5
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 93a3aca2aee11ed1f78fb33ca286b171a28f62d3
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 419d11660d88f102cfa92628f4ee16fb89d8c422
+ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/11/2018
+ms.locfileid: "35272094"
 ---
 # <a name="namespaces"></a>Espacios de nombres
 El formato de persistencia de XML en ADO utiliza los siguientes espacios de nombres de cuatro.  
   
-## <a name="remarks"></a>Comentarios  
+## <a name="remarks"></a>Notas  
  El formato de persistencia de XML en ADO utiliza los siguientes espacios de nombres de cuatro.  
   
-|Prefijo|Description|  
+|Prefijo|Descripción|  
 |------------|-----------------|  
 |s|Hace referencia al espacio de nombres "XML-Data" que contiene los elementos y atributos que definen el esquema del conjunto de registros actual.|  
 |DT|Hace referencia a la especificación de las definiciones de tipo de datos.|  

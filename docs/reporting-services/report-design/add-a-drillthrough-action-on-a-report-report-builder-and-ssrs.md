@@ -20,6 +20,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "33020022"
 ---
 # <a name="add-a-drillthrough-action-on-a-report-report-builder-and-ssrs"></a>Agregar una acción de obtención de detalles en un informe (Generador de informes y SSRS)
   El informe que se abre al hacer clic en el vínculo del informe principal se denomina *informe detallado*. Este vínculo de obtención de detalles habilita una acción de obtención de detalles.  

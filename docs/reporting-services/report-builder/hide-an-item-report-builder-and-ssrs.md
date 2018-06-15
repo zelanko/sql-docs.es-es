@@ -23,6 +23,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "33019142"
 ---
 # <a name="hide-an-item-report-builder-and-ssrs"></a>Ocultar un elemento (Generador de informes y SSRS)
   Establezca la visibilidad de un elemento de informe cuando desee ocultar condicionalmente un elemento basándose en un parámetro de informe o en alguna otra expresión que especifique.  

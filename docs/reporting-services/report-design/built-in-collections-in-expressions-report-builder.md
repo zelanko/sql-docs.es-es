@@ -20,6 +20,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "33021222"
 ---
 # <a name="built-in-collections-in-expressions-report-builder"></a>Colecciones integradas en expresiones (Generador de informes)
   En una expresión de un informe, puede incluir referencias a las siguientes colecciones integradas: ReportItems, Parameters, Fields, DataSets, DataSources, Variables y a campos integrados para información global, como el nombre del informe. No todas las colecciones aparecen en el cuadro de diálogo **Expresión** . Las colecciones DataSets y DataSources solo están disponibles en tiempo de ejecución para los informes publicados en un servidor de informes. ReportItems es un conjunto de cuadros de texto situados en una región del informe; por ejemplo, los cuadros de texto de una página o de un encabezado de página.  

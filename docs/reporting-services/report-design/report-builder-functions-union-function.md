@@ -20,6 +20,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "33025992"
 ---
 # <a name="report-builder-functions---union-function"></a>Funciones del Generador de informes: función Union
   Devuelve la unión de todos los valores numéricos no NULL especificados por la expresión, que se evalúa en el ámbito especificado.  

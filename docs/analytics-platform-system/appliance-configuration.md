@@ -14,6 +14,7 @@ ms.sourcegitcommit: fc3cd23685c6b9b6972d6a7bab2cc2fc5ebab5f2
 ms.translationtype: MT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/25/2018
+ms.locfileid: "34550726"
 ---
 # <a name="appliance-configuration-checklists-for-analytics-platform-system"></a>Listas de comprobación de configuración de dispositivo de sistema de la plataforma de análisis
 Proporciona listas de comprobación para las tareas necesarias para configurar el sistema de la plataforma de análisis para su propio entorno. Estas tareas de configuración son necesarias para poder usar el dispositivo.  

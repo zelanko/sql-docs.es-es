@@ -27,6 +27,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "33030762"
 ---
 # <a name="msreportserverinstance-properties---instancename"></a>Propiedades de MSReportServer_Instance: InstanceName
   Devuelve el nombre de una instancia del servidor de informes en un equipo específico. Solo lectura.  

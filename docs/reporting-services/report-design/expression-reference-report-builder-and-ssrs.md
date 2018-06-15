@@ -20,6 +20,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "33020792"
 ---
 # <a name="expression-reference-report-builder-and-ssrs"></a>Referencia de expresiones (Generador de informes y SSRS)
   Las expresiones de informe admiten diversas referencias a funciones integradas y colecciones integradas. Las expresiones deben tener una sintaxis válida de [!INCLUDE[vbprvb](../../includes/vbprvb-md.md)] para que un informe se pueda publicar o procesar.  

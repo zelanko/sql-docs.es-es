@@ -27,6 +27,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "33030342"
 ---
 # <a name="configurationsetting-property---smtpserver"></a>Propiedad ConfigurationSetting - SMTPServer
   Obtiene la propiedad de servidor SMTP del archivo de configuración del servidor de informes. Solo lectura.  

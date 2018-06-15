@@ -24,6 +24,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "33026300"
 ---
 # <a name="publishing-data-sources-and-reports"></a>Publicar orígenes de datos e informes
   Antes de publicar el informe, conviene que muestre una vista previa del mismo para comprobar el aspecto que tendrá cuando se ejecute. Puede continuar perfeccionando el diseño hasta que esté satisfecho con los resultados.  

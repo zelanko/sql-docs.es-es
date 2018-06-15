@@ -20,6 +20,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "33022512"
 ---
 # <a name="displaying-a-series-with-multiple-data-ranges-on-a-chart"></a>Mostrar una serie con varios intervalos de datos en un gráfico
 

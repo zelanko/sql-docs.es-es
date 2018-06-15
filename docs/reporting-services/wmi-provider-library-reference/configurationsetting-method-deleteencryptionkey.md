@@ -27,6 +27,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "33030522"
 ---
 # <a name="configurationsetting-method---deleteencryptionkey"></a>Método ConfigurationSetting - DeleteEncryptionKey
   Elimina las claves de cifrado de la base de datos del servidor de informes.  

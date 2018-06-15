@@ -14,6 +14,7 @@ ms.sourcegitcommit: fc3cd23685c6b9b6972d6a7bab2cc2fc5ebab5f2
 ms.translationtype: MT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/25/2018
+ms.locfileid: "34550646"
 ---
 # <a name="whats-new-in-analytics-platform-system-a-scale-out-mpp-data-warehouse"></a>Novedades de sistema de la plataforma de análisis, un almacén de datos MPP de escalabilidad horizontal
 Vea cuáles son las novedades en las últimas actualizaciones de dispositivo para Microsoft® Analytics Platform System (APS). Puntos de acceso es un dispositivo de escalado horizontal local que hospeda el almacenamiento de datos paralelos de MPP de SQL Server. 

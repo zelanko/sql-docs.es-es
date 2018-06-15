@@ -22,6 +22,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "33037002"
 ---
 # <a name="tutorial-map-report-report-builder"></a>Tutorial: Informe de asignaciones (Generador de informes)
 En este tutorial de [!INCLUDE[ssRBnoversion_md](../includes/ssrbnoversion-md.md)] , obtendrá información sobre las características de mapa que puede usar para mostrar datos en un fondo geográfico de un informe paginado de [!INCLUDE[ssRSnoversion_md](../includes/ssrsnoversion-md.md)] . 

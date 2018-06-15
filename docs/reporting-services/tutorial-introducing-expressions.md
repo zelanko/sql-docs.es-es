@@ -22,6 +22,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "33036962"
 ---
 # <a name="tutorial-introducing-expressions"></a>Tutorial: Introducción a las expresiones
 En este tutorial de [!INCLUDE[ssRBnoversion_md](../includes/ssrbnoversion-md.md)] , se usan expresiones con operadores y funciones comunes para crear informes paginados eficaces y flexibles de [!INCLUDE[ssRSnoversion_md](../includes/ssrsnoversion-md.md)] . 

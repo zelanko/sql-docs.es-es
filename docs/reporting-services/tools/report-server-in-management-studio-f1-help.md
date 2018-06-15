@@ -22,6 +22,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "33029462"
 ---
 # <a name="report-server-in-management-studio-f1-help"></a>Servidor de informes en Management Studio ayuda F1
   En esta sección se incluyen temas acerca de los cuadros de diálogo de [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] que pueden usarse para administrar servidores de informes.  

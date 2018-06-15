@@ -34,6 +34,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "33026422"
 ---
 # <a name="reporting-services-delivery-extension-settings"></a>Configuración de la extensión de entrega de Reporting Services
   [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] contiene una extensión de entrega por correo electrónico y una extensión de entrega a recursos compartidos de archivos. La entrega por correo electrónico proporciona una manera de enviar un informe a usuarios individuales o grupos a través del correo electrónico. La entrega a recursos compartidos de archivos permite enviar los informes representados automáticamente a un recurso compartido de la red. Puede utilizar cualquiera de las dos extensiones de entrega admitidas con las suscripciones estándar o las suscripciones controladas por datos. La configuración de entrega específica del tipo de extensión de entrega se pasa siempre que se llama a los métodos <xref:ReportService2010.ReportingService2010.CreateSubscription%2A>,<xref:ReportService2010.ReportingService2010.CreateDataDrivenSubscription%2A>,<xref:ReportService2010.ReportingService2010.SetSubscriptionProperties%2A> y <xref:ReportService2010.ReportingService2010.SetDataDrivenSubscriptionProperties%2A>. Para recuperar mediante programación una lista de configuración de entrega, utilice el método <xref:ReportService2010.ReportingService2010.GetExtensionSettings%2A>.  

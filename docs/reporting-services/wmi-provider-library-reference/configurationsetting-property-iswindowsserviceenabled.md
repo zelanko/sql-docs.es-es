@@ -27,6 +27,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "33030662"
 ---
 # <a name="configurationsetting-property---iswindowsserviceenabled"></a>Propiedad de ConfigurationSetting: IsWindowsServiceEnabled
   Indica si el servicio Servidor de informes de Windows está habilitado. Solo lectura.  

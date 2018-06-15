@@ -22,6 +22,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "33037192"
 ---
 # <a name="tutorial-creating-a-free-form-report-report-builder"></a>Tutorial: Crear un informe de forma libre (Generador de informes)
 En este tutorial, creará un informe paginado que actúa como un boletín. Cada página muestra texto estático, objetos visuales de resumen y datos de ventas de ejemplo detallados.

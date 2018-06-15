@@ -20,6 +20,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "33027422"
 ---
 # <a name="report-design-tips-report-builder-and-ssrs"></a>Sugerencias para el diseño de informes (Generador de informes y SSRS)
   Use las siguientes sugerencias para diseñar sus informes paginados de [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] .  

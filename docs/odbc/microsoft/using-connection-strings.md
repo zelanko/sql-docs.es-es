@@ -23,6 +23,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32905696"
 ---
 # <a name="using-connection-strings"></a>Utilizar cadenas de conexión
 Puede utilizar una cadena de conexión para conectarse a un origen de datos de Visual FoxPro.  

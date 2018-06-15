@@ -23,6 +23,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "33018802"
 ---
 # <a name="define-query-parameters-dialog-box"></a>Cuadro de diálogo Definir parámetros de consulta
   Use el cuadro de diálogo **Definir parámetros de consulta** cuando desee especificar valores de parámetros mientras ejecuta una consulta en un diseñador de consultas en tiempo de diseño a fin de ver datos de ejemplo. Los parámetros de consulta filtran los datos del origen de datos y ayudan a limitar la cantidad de datos que un informe procesa. Estos valores no se guardan en la definición de informe.  

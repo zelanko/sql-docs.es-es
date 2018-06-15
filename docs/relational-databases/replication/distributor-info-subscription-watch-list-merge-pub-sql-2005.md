@@ -23,6 +23,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32954840"
 ---
 # <a name="distributor-info-subscription-watch-list-merge-pub-sql-2005"></a>Información del distribuidor, Lista de supervisión de suscripciones (Publicación de mezcla, SQL 2005+)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]

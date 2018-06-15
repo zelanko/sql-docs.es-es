@@ -24,6 +24,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32911160"
 ---
 # <a name="catalog-functions"></a>Funciones de catálogo
 Todas las bases de datos tienen una estructura que describe cómo se almacenarán los datos en la base de datos. Por ejemplo, una base de datos de pedidos de ventas simple podría tener la estructura que se muestra en la ilustración siguiente, en el que se utilizan las columnas de identificador para vincular las tablas.  

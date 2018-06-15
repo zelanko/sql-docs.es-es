@@ -25,6 +25,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32908360"
 ---
 # <a name="automatic-population-of-the-ipd"></a>Rellenado automático de la IPD
 Algunos controladores son capaces de establecer los campos de la IPD después de que se ha preparado una consulta parametrizada. Los campos del descriptor se rellenan automáticamente con la información sobre el parámetro, incluidos el tipo de datos, precisión, escala y otras características. Esto es equivalente a admitir **SQLDescribeParam**. Esta información puede ser especialmente útil para una aplicación cuando no tiene ninguna otra manera de detectar, por ejemplo, cuando se realiza una consulta ad hoc con parámetros que la aplicación no conozca.  

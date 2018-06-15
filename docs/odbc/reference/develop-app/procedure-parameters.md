@@ -21,6 +21,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32913480"
 ---
 # <a name="procedure-parameters"></a>Parámetros de procedimiento
 Los parámetros en las llamadas a procedimiento pueden usar como entrados, entrada/salida o parámetros de salida. Esto es diferente de parámetros en las demás instrucciones SQL, que siempre son parámetros de entrada.  

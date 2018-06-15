@@ -2,7 +2,6 @@
 title: Propiedad ActiveCommand (ADO) | Documentos de Microsoft
 ms.prod: sql
 ms.prod_service: connectivity
-ms.component: ado
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
@@ -20,11 +19,12 @@ caps.latest.revision: 11
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 8aa86180edc4117e89863bb232a2faa95d010272
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: e85286a885ab8edcfb08b029f7a1fd77c8d3f4a0
+ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/11/2018
+ms.locfileid: "35274970"
 ---
 # <a name="activecommand-property-ado"></a>Propiedad ActiveCommand (ADO)
 Indica el [comando](../../../ado/reference/ado-api/command-object-ado.md) objeto creado asociado [Recordset](../../../ado/reference/ado-api/recordset-object-ado.md) objeto.  
@@ -32,7 +32,7 @@ Indica el [comando](../../../ado/reference/ado-api/command-object-ado.md) objeto
 ## <a name="return-value"></a>Valor devuelto  
  Devuelve un **Variant** que contiene un **comando** objeto. Valor predeterminado es una referencia de objeto null.  
   
-## <a name="remarks"></a>Comentarios  
+## <a name="remarks"></a>Notas  
  El **ActiveCommand** propiedad es de solo lectura.  
   
  Si un **comando** no se utilizó para crear el actual objeto **Recordset**, un **Null** se devuelve la referencia de objeto.  

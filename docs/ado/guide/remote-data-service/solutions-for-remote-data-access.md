@@ -2,7 +2,6 @@
 title: Soluciones de acceso a datos remotos | Documentos de Microsoft
 ms.prod: sql
 ms.prod_service: connectivity
-ms.component: ado
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
@@ -17,11 +16,12 @@ caps.latest.revision: 14
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 44b68255004047c9008fa8e79fccc4f047419e46
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: df366a09a146f54bca5f6fec056fe8c7865a0808
+ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/11/2018
+ms.locfileid: "35274524"
 ---
 # <a name="solutions-for-remote-data-access"></a>Soluciones de acceso a datos remotos
 ## <a name="the-issue"></a>El problema  

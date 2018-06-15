@@ -2,7 +2,6 @@
 title: Establecer el formato de serialización de secuencias de DCOM | Documentos de Microsoft
 ms.prod: sql
 ms.prod_service: connectivity
-ms.component: ado
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
@@ -17,11 +16,12 @@ caps.latest.revision: 14
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: eed72f16fa58e4dc47486967e615de746e27a2a1
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: c63b304e6ee2c2060be1b0233e10197adc955427
+ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/11/2018
+ms.locfileid: "35274444"
 ---
 # <a name="setting-dcom-stream-marshaling-format"></a>Establecer el formato de serialización de secuencias de DCOM
 Un equipo cliente mediante componentes de RDS 1.5 o versiones anteriores no es compatible con un servidor mediante componentes de RDS 2.0 o posterior. Cuando se utiliza DCOM como protocolo subyacente, la compatibilidad con RDS 2.0 o posterior es más eficaz en el transporte [Recordset](../../../ado/reference/ado-api/recordset-object-ado.md) objetos. Si el cliente está ejecutando componentes de RDS 1.5 o versiones anteriores, puede configurar el servidor para que funcione con la compatibilidad RDS anterior (denominada RDS 1.0) o la nueva compatibilidad RDS (denominada RDS 2.0 o posterior). Establezca cualquiera de las entradas del registro siguientes:  

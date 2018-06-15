@@ -2,7 +2,6 @@
 title: Requisitos del sistema para la dirección de la libreta aplicación | Documentos de Microsoft
 ms.prod: sql
 ms.prod_service: connectivity
-ms.component: ado
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
@@ -18,11 +17,12 @@ caps.latest.revision: 14
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 170ffd05b3dd40be067d4793f9c8f79600f96776
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 063a8d6dd6001c612bb52efa2773deafa546fd86
+ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/11/2018
+ms.locfileid: "35274544"
 ---
 # <a name="system-requirements-for-the-address-book-application"></a>Requisitos del sistema para la aplicación de la libreta de direcciones
 Para configurar la aplicación de ejemplo de libreta de direcciones, debe cumplir los siguientes requisitos de software y la base de datos:  

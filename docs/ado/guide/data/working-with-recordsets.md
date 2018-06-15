@@ -2,7 +2,6 @@
 title: Trabajar con conjuntos de registros | Documentos de Microsoft
 ms.prod: sql
 ms.prod_service: connectivity
-ms.component: ado
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
@@ -17,11 +16,12 @@ caps.latest.revision: 13
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: b83fb8d5ad4e2e063ca840b7e8fb31bbf15fde14
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: a6bcc69980dfc4e3be72221964d339bd37754207
+ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/11/2018
+ms.locfileid: "35273494"
 ---
 # <a name="working-with-recordsets"></a>Trabajar con conjuntos de registros
 El **Recordset** objeto tiene características integradas que permiten reorganizar el orden de los datos en el conjunto de resultados, para buscar un registro específico en función de criterios que suministre e incluso a optimizar las operaciones de búsqueda con índices. Si estas características están disponibles para su uso depende del proveedor y en algunos casos, como el de la [índice](../../../ado/reference/ado-api/index-property.md) propiedad: la estructura del propio origen de datos.  
@@ -115,7 +115,7 @@ El **Recordset** objeto tiene características integradas que permiten reorganiz
 ### <a name="filtering-with-a-constant"></a>Filtrar por una constante  
  Las constantes siguientes están disponibles para filtrar **conjuntos de registros**.  
   
-|Constante|Description|  
+|Constante|Descripción|  
 |--------------|-----------------|  
 |**adFilterAffectedRecords**|Filtros para ver solo los registros afectados por la última **eliminar**, **Resync**, **UpdateBatch**, o **CancelBatch** llamar.|  
 |**adFilterConflictingRecords**|Filtros para ver los registros que no se pudo la última actualización por lotes.|  

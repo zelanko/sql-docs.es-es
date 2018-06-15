@@ -2,7 +2,6 @@
 title: 'Paso 2: Llamar al programa de servidor (Tutorial RDS) | Documentos de Microsoft'
 ms.prod: sql
 ms.prod_service: connectivity
-ms.component: ado
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
@@ -17,11 +16,12 @@ caps.latest.revision: 14
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 5e093828f0f1591800a7f8cc7e2b6958e8807c81
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 1b736bb5e6cdb7f35d9cdcc5f39f060cbcf1b64b
+ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/11/2018
+ms.locfileid: "35274594"
 ---
 # <a name="step-2-invoke-the-server-program-rds-tutorial"></a>Paso 2: Llamar al programa de servidor (Tutorial RDS)
 Cuando se invoca un método en el cliente *proxy*, el programa real en el servidor ejecuta el método. En este paso, deberá ejecutar una consulta en el servidor.  

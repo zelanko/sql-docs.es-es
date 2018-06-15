@@ -2,7 +2,6 @@
 title: Propiedad AbsolutePage (ADO) | Documentos de Microsoft
 ms.prod: sql
 ms.prod_service: connectivity
-ms.component: ado
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
@@ -20,11 +19,12 @@ caps.latest.revision: 11
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: dd1b4230423661a51102293ae04ff1b773b92c47
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 4bd0696e18e7719038a1b87448477b1b7f4d5bdf
+ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/11/2018
+ms.locfileid: "35274854"
 ---
 # <a name="absolutepage-property-ado"></a>Propiedad AbsolutePage (ADO)
 Indica en qué página reside el registro actual.  
@@ -34,7 +34,7 @@ Indica en qué página reside el registro actual.
   
  Para código de 64 bits, use un tipo de datos que proporciona para el almacenamiento de un valor de 64 bits. Por ejemplo, puede utilizar cualquiera **largo** o cualquier otro valor que puede ser de longitud de 64 bits como DBORDINAL. No utilice **PositionEnum** valores porque se limitan a la longitud de 32 bits.  
   
-## <a name="remarks"></a>Comentarios  
+## <a name="remarks"></a>Notas  
  Esta propiedad puede utilizarse para identificar el número de página en el que se encuentra el registro actual. Usa el [PageSize](../../../ado/reference/ado-api/pagesize-property-ado.md) propiedad que se va a dividir lógicamente el número total de filas de la **Recordset** objeto en una serie de páginas, cada uno de los cuales tiene el número de registros equivalente a **PageSize** (excepto la última página, que puede tener menos registros). El proveedor debe admitir la funcionalidad adecuada para que esta propiedad esté disponible.  
   
 -   Al obtener o establecer el **AbsolutePage** propiedad, ADO utiliza la [AbsolutePosition](../../../ado/reference/ado-api/absoluteposition-property-ado.md) propiedad y el [PageSize](../../../ado/reference/ado-api/pagesize-property-ado.md) propiedad juntos, como se indica a continuación:  

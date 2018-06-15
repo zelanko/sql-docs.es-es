@@ -22,6 +22,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32846200"
 ---
 # <a name="sqlserverexception-constructor-javalangstring-sqlstate-drivererror-javalangthrowable"></a>Constructor SQLServerException (java.lang.String, java.lang.Throwable SQLState, DriverError)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]

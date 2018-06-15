@@ -22,6 +22,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32897970"
 ---
 # <a name="fixed-width-text-file"></a>Archivo de texto de ancho fijo
 Cuando se utiliza el controlador de texto, la última columna de un archivo de texto de ancho fijo puede ser de longitud variable.

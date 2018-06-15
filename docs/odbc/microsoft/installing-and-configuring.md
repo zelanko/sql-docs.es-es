@@ -26,6 +26,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32899610"
 ---
 # <a name="installing-and-configuring"></a>Instalación y configuración
 Para descargar el controlador ODBC de Visual FoxPro, consulte [el sitio de descarga de Visual FoxPro ODBC Driver](http://go.microsoft.com/fwlink/?LinkId=121318).  

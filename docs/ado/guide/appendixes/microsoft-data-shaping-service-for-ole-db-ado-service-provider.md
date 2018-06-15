@@ -2,7 +2,6 @@
 title: Datos de Microsoft para dar forma al servicio para OLE DB (proveedor de servicios de ADO) | Documentos de Microsoft
 ms.prod: sql
 ms.prod_service: connectivity
-ms.component: ado
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
@@ -18,11 +17,12 @@ caps.latest.revision: 17
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: a3020789835820519e07ac3e465899c3ac93b0ae
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 6b661ac56f26ffa1a467c65f332ec4b506b2e09e
+ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/11/2018
+ms.locfileid: "35271354"
 ---
 # <a name="microsoft-data-shaping-service-for-ole-db-overview"></a>Datos de Microsoft para dar forma al servicio para información general acerca OLE DB
 > [!IMPORTANT]
@@ -40,7 +40,7 @@ ms.lasthandoff: 05/03/2018
 ## <a name="dynamic-properties"></a>Propiedades dinámicas
  Cuando se invoca este proveedor de servicios, se agregan las siguientes propiedades dinámicas a la [propiedades](../../../ado/reference/ado-api/properties-collection-ado.md) colección de la[conexión](../../../ado/reference/ado-api/connection-object-ado.md) objeto.
 
-|Nombre de la propiedad dinámica|Description|
+|Nombre de la propiedad dinámica|Descripción|
 |---------------------------|-----------------|
 |**Nombres de cambio de forma única**|Indica si **Recordset** objetos con valores duplicados para sus **cambiar la forma de nombre** propiedades están permitidas. Si esta propiedad dinámica es **True** y una nueva **Recordset** se crea con el mismo nombre de cambio de forma especificado por el usuario que existente **conjunto de registros**, a continuación, el nuevo  **Conjunto de registros** nombre para modificar la forma del objeto se modifica para que sea único. Si esta propiedad es **False** y una nueva **Recordset** se crea con el mismo nombre de cambio de forma especificado por el usuario que existente **Recordset**, ambos **conjunto de registros**  objetos tendrán el mismo nombre de cambio de forma. Por lo tanto, ninguna de ellas **Recordset** puede cambiarse siempre que existan dos conjuntos de registros.<br /><br /> El valor predeterminado de la propiedad es **False**.|
 |**Proveedor de datos**|Indica el nombre del proveedor que suministrará las filas para dar forma. Este valor puede ser Ninguno si no se utilizará un proveedor para suministrar filas.|

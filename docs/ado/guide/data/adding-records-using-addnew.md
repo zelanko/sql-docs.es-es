@@ -2,7 +2,6 @@
 title: Agregar registros mediante AddNew | Documentos de Microsoft
 ms.prod: sql
 ms.prod_service: connectivity
-ms.component: ado
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
@@ -19,11 +18,12 @@ caps.latest.revision: 13
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 6ba15d68b5fbaa749e00987b1fbfef73887dc377
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 36827d102d7e6ef0850c557eb6555135343fbec0
+ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/11/2018
+ms.locfileid: "35270094"
 ---
 # <a name="adding-records-using-addnew-method"></a>Agregar registros mediante AddNew (método)
 Ésta es la sintaxis básica de la **AddNew** método:
@@ -51,5 +51,5 @@ End If
 'EndAddNew1.1
 ```
 
-## <a name="remarks"></a>Comentarios
+## <a name="remarks"></a>Notas
  Dado que este código utiliza un desconectada **conjunto de registros** con un cursor de cliente en modo por lotes, debe volver a conectar el **Recordset** al origen de datos con un nuevo **conexión** objeto para poder invocar la **UpdateBatch** método para registrar los cambios en la base de datos. Esto se hace fácilmente mediante la nueva función **GetNewConnection**.

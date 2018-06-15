@@ -2,7 +2,6 @@
 title: Proveedor Microsoft OLE DB para ODBC | Documentos de Microsoft
 ms.prod: sql
 ms.prod_service: connectivity
-ms.component: ado
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
@@ -18,11 +17,12 @@ caps.latest.revision: 16
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 612ca78e6af181aaf3e2d3b1eb16ae5fea7eec3c
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: f539df9c19bacbe449479f45d5e7fd4fe59613d5
+ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/11/2018
+ms.locfileid: "35271634"
 ---
 # <a name="microsoft-ole-db-provider-for-odbc-overview"></a>Proveedor Microsoft OLE DB para ODBC Introducción
 Para un programador de ADO o RDS, un mundo ideal sería aquel en los datos que cada origen expone una interfaz OLE DB, por lo que podría llamar ADO directamente en el origen de datos. Aunque cada vez más proveedores de base de datos están implementando interfaces OLE DB, algunos orígenes de datos aún no están expuestos de esta forma. Sin embargo, la mayoría de los sistemas DBMS en la actualidad son accesibles a través de ODBC.
@@ -53,7 +53,7 @@ MSDASQL
 
  La cadena consta de estas palabras clave:
 
-|Palabra clave|Description|
+|Palabra clave|Descripción|
 |-------------|-----------------|
 |**Proveedor**|Especifica el proveedor OLE DB para ODBC.|
 |**DSN**|Especifica el nombre de origen de datos.|
@@ -84,7 +84,7 @@ MSDASQL
 DATABASE=database; UID=MyUserID; PWD=MyPassword"
 ```
 
-## <a name="remarks"></a>Comentarios
+## <a name="remarks"></a>Notas
  Si utiliza un **DSN** o **FileDSN**, debe definirse mediante el Administrador de orígenes de datos de ODBC en el Panel de Control de Windows. En Microsoft Windows 2000, el Administrador de ODBC se encuentra en Herramientas administrativas. En versiones anteriores de Windows, el icono Administrador ODBC se denomina **ODBC de 32 bits** o simplemente **ODBC**.
 
  Como alternativa a la configuración de un **DSN**, puede especificar el controlador ODBC (**controlador =**), como "SQL Server;" el nombre del servidor (**SERVER =**); y el nombre de la base de datos (**Base de datos =**).
@@ -96,7 +96,7 @@ DATABASE=database; UID=MyUserID; PWD=MyPassword"
 ## <a name="provider-specific-connection-properties"></a>Propiedades de conexión específica del proveedor
  El proveedor OLE DB para ODBC agrega varias propiedades para la [propiedades](../../../ado/reference/ado-api/properties-collection-ado.md) colección de la **conexión** objeto. En la tabla siguiente se enumera estas propiedades con el nombre de propiedad de OLE DB correspondiente entre paréntesis.
 
-|Nombre de propiedad|Description|
+|Nombre de propiedad|Descripción|
 |-------------------|-----------------|
 |Procedimientos accesibles (KAGPROP_ACCESSIBLEPROCEDURES)|Indica si el usuario tiene acceso a los procedimientos almacenados.|
 |Tablas accesibles (KAGPROP_ACCESSIBLETABLES)|Indica si el usuario tiene permiso para ejecutar instrucciones SELECT en las tablas de base de datos.|
@@ -123,7 +123,7 @@ DATABASE=database; UID=MyUserID; PWD=MyPassword"
 ## <a name="provider-specific-recordset-and-command-properties"></a>Conjunto de registros específico del proveedor y las propiedades de comando
  El proveedor OLE DB para ODBC agrega varias propiedades para la **propiedades** colección de la **Recordset** y **comando** objetos. En la tabla siguiente se enumera estas propiedades con el nombre de propiedad de OLE DB correspondiente entre paréntesis.
 
-|Nombre de propiedad|Description|
+|Nombre de propiedad|Descripción|
 |-------------------|-----------------|
 |Las actualizaciones, eliminaciones o inserciones (KAGPROP_QUERYBASEDUPDATES) basados en consultas|Indica si se pueden realizar actualizaciones, eliminaciones e inserciones mediante consultas SQL.|
 |Tipo de simultaneidad ODBC (KAGPROP_CONCURRENCY)|Indica el método usado para reducir los posibles problemas causados por dos usuarios intentan tener acceso a los mismos datos desde el origen de datos al mismo tiempo.|
@@ -176,7 +176,7 @@ DATABASE=database; UID=MyUserID; PWD=MyPassword"
 
  Disponibilidad de ADO estándar **conjunto de registros** propiedades:
 
-|Propiedad|ForwardOnly|Dinámica|Keyset|Estático|
+|Property|ForwardOnly|Dinámica|Keyset|Estático|
 |--------------|-----------------|-------------|------------|------------|
 |[AbsolutePage](../../../ado/reference/ado-api/absolutepage-property-ado.md)|no disponible|no disponible|lectura/escritura|lectura/escritura|
 |[AbsolutePosition](../../../ado/reference/ado-api/absoluteposition-property-ado.md)|no disponible|no disponible|lectura/escritura|lectura/escritura|
@@ -208,7 +208,7 @@ DATABASE=database; UID=MyUserID; PWD=MyPassword"
 |[Cancelar](../../../ado/reference/ado-api/cancel-method-ado.md)|Sí|Sí|Sí|Sí|
 |[CancelBatch](../../../ado/reference/ado-api/cancelbatch-method-ado.md)|Sí|Sí|Sí|Sí|
 |[CancelUpdate](../../../ado/reference/ado-api/cancelupdate-method-ado.md)|Sí|Sí|Sí|Sí|
-|[clon](../../../ado/reference/ado-api/clone-method-ado.md)|no|No|Sí|Sí|
+|[clon](../../../ado/reference/ado-api/clone-method-ado.md)|no|no|Sí|Sí|
 |[Cerrar](../../../ado/reference/ado-api/close-method-ado.md)|Sí|Sí|Sí|Sí|
 |[Eliminar](../../../ado/reference/ado-api/delete-method-ado-recordset.md)|Sí|Sí|Sí|Sí|
 |[GetRows](../../../ado/reference/ado-api/getrows-method-ado.md)|Sí|Sí|Sí|Sí|
@@ -220,7 +220,7 @@ DATABASE=database; UID=MyUserID; PWD=MyPassword"
 |[NextRecordset](../../../ado/reference/ado-api/nextrecordset-method-ado.md)*|Sí|Sí|Sí|Sí|
 |[Abrir](../../../ado/reference/ado-api/open-method-ado-recordset.md)|Sí|Sí|Sí|Sí|
 |[Requery](../../../ado/reference/ado-api/requery-method.md)|Sí|Sí|Sí|Sí|
-|[Resincronización](../../../ado/reference/ado-api/resync-method.md)|no|No|Sí|Sí|
+|[Resincronización](../../../ado/reference/ado-api/resync-method.md)|no|no|Sí|Sí|
 |[Es compatible con](../../../ado/reference/ado-api/supports-method.md)|Sí|Sí|Sí|Sí|
 |[Update](../../../ado/reference/ado-api/update-method.md)|Sí|Sí|Sí|Sí|
 |[UpdateBatch](../../../ado/reference/ado-api/updatebatch-method.md)|Sí|Sí|Sí|Sí|
@@ -264,7 +264,7 @@ DATABASE=database; UID=MyUserID; PWD=MyPassword"
 |Tamaño máximo de fila|DBPROP_MAXROWSIZE|
 |Tamaño máximo de fila incluye BLOB|DBPROP_MAXROWSIZEINCLUDESBLOB|
 |Número máximo de tablas en SELECT|DBPROP_MAXTABLESINSELECT|
-|Modo|DBPROP_INIT_MODE|
+|Mode|DBPROP_INIT_MODE|
 |Varios conjuntos de parámetros|DBPROP_MULTIPLEPARAMSETS|
 |Varios resultados|DBPROP_MULTIPLERESULTS|
 |Varios objetos de almacenamiento|DBPROP_MULTIPLESTORAGEOBJECTS|

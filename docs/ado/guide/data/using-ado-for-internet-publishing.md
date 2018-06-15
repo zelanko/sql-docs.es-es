@@ -2,7 +2,6 @@
 title: Utilizar ADO para publicación en Internet | Documentos de Microsoft
 ms.prod: sql
 ms.prod_service: connectivity
-ms.component: ado
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
@@ -20,11 +19,12 @@ caps.latest.revision: 10
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 4adf31cd66246cd078bb31dc99ac5e8025f04636
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 3261fc8eb910fb0b7b627b11a3bc89bb682f01bb
+ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/11/2018
+ms.locfileid: "35273214"
 ---
 # <a name="using-ado-for-internet-publishing"></a>Utilizar ADO para publicación en Internet
 [El proveedor OLE DB para Internet Publishing](../../../ado/guide/data/the-ole-db-provider-for-internet-publishing.md) muestra un ejemplo concreto de obtener acceso a datos heterogéneos con ADO. Aunque los ejemplos de esta sección va a ser específicos para utilizar el proveedor de publicación en Internet, los principios que muestran deberían ser similares al usar ADO con otros proveedores de datos heterogéneos, tales como un proveedor a un almacén de correo electrónico.  

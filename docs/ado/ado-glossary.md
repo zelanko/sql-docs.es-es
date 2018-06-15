@@ -2,7 +2,6 @@
 title: Glosario de ADO | Documentos de Microsoft
 ms.prod: sql
 ms.prod_service: connectivity
-ms.component: ado
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
@@ -17,16 +16,17 @@ caps.latest.revision: 15
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: a6ba068234cbede37eeb97f77da6305ae950b673
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 1c5a423a72b173020a4e711cd2f6d1d2a7ba62fc
+ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/11/2018
+ms.locfileid: "35271604"
 ---
 # <a name="ado-glossary-terms"></a>Glosario de términos de ADO
 En este tema define los términos relacionados con ADO.
 
-## <a name="a"></a>A
+## <a name="a"></a>Un
  dirección URL A completo dirección URL absoluta que especifica la ubicación de un recurso que reside en Internet o una intranet. Vea también *URL* y *dirección URL relativa*.
 
  Componente de COM de registro automático, en curso que a menudo tiene un elemento visual en tiempo de diseño o tiempo de ejecución del control ActiveX. Los controles ActiveX también tienen la capacidad de comunicarse con un contenedor de documentos activos, como Microsoft Internet Explorer.
@@ -188,7 +188,7 @@ En este tema define los términos relacionados con ADO.
 
  Un objeto específico de la interfaz que proporciona la serialización de parámetros de proxy y la comunicación requerida para que un cliente llamar a un objeto de aplicación que se ejecuta en un entorno de ejecución diferente, como en un subproceso diferente o en otro proceso. El proxy se encuentra en el cliente y se comunica con un código auxiliar correspondiente que se encuentra en el objeto de aplicación que se está llamando. Vea también código auxiliar.
 
-## <a name="r"></a>L
+## <a name="r"></a>R
  dirección URL relativa A parcialmente completo de dirección URL que especifica un recurso en Internet o en una intranet cuya ubicación es relativa a un punto de partida especificado por una dirección URL absoluta o el objeto de conexión ADO equivalente. De hecho, la constituyen de direcciones URL concatenado de absolutas y relativa una dirección URL completa. Vea también URL y URL absoluta.
 
  Un origen de datos que existe en otro equipo, en lugar de en el sistema local (donde se ejecuta la aplicación cliente) del origen de datos remotos.

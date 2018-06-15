@@ -2,7 +2,6 @@
 title: Proveedor Microsoft OLE DB para Microsoft Jet | Documentos de Microsoft
 ms.prod: sql
 ms.prod_service: connectivity
-ms.component: ado
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
@@ -19,11 +18,12 @@ caps.latest.revision: 16
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: c0046abe221607ff85b237c1b15ad331ba09c4e3
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: bd81c1c5efcb2ca8ebedac756d569ca947aac051
+ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/11/2018
+ms.locfileid: "35271624"
 ---
 # <a name="microsoft-ole-db-provider-for-microsoft-jet-overview"></a>Proveedor Microsoft OLE DB para Microsoft Jet Introducción
 El proveedor OLE DB para Microsoft Jet permite que ADO tener acceso a las bases de datos de Microsoft Jet.
@@ -46,7 +46,7 @@ Microsoft.Jet.OLEDB.4.0
 
  La cadena consta de estas palabras clave:
 
-|Palabra clave|Description|
+|Palabra clave|Descripción|
 |-------------|-----------------|
 |**Proveedor**|Especifica el proveedor OLE DB para Microsoft Jet.|
 |**Origen de datos**|Especifica el nombre de ruta de acceso y el archivo de base de datos (por ejemplo, `c:\Northwind.mdb`).|
@@ -61,7 +61,7 @@ Microsoft.Jet.OLEDB.4.0
 
  En la tabla siguiente se enumera estas propiedades junto con el nombre de propiedad de OLE DB correspondiente entre paréntesis.
 
-|Parámetro|Description|
+|Parámetro|Descripción|
 |---------------|-----------------|
 |Cantidad de espacio reclamado de Jet OLEDB:Compact (DBPROP_JETOLEDB_COMPACTFREESPACESIZE)|Indica una estimación de la cantidad de espacio, en bytes, que se puede reclamar al compactar la base de datos. Este valor solo es válido una vez establecida una conexión de base de datos.|
 |Control de Jet OLEDB: Connection (DBPROP_JETOLEDB_CONNECTIONCONTROL)|Indica si los usuarios pueden conectarse a la base de datos.|
@@ -95,7 +95,7 @@ Microsoft.Jet.OLEDB.4.0
 ## <a name="provider-specific-recordset-and-command-properties"></a>Conjunto de registros específico del proveedor y las propiedades de comando
  El proveedor de Jet también admite varias específica del proveedor **Recordset** y **comando** propiedades. Se tiene acceso a estas propiedades y se establece a través del **propiedades** colección de la **Recordset** o **comando** objeto. La tabla muestra el nombre de la propiedad ADO y su nombre de propiedad de OLE DB correspondiente entre paréntesis.
 
-|Nombre de propiedad|Description|
+|Nombre de propiedad|Descripción|
 |-------------------|-----------------|
 |Jet OLEDB:Bulk transacciones (DBPROP_JETOLEDB_BULKNOTRANSACTIONS)|Indica si se negocian operaciones masivas de SQL. Las operaciones masivas de gran tamaño pueden producir un error cuando la transacción debido a retrasos de recursos.|
 |Jet OLEDB: Enable Fat Cursors (DBPROP_JETOLEDB_ENABLEFATCURSOR)|Indica si Jet debe almacenar en caché varias filas al rellenar un conjunto de registros para orígenes de filas remotos.|
@@ -150,7 +150,7 @@ Microsoft.Jet.OLEDB.4.0
 |Tamaño máximo de fila|DBPROP_MAXROWSIZE|
 |Tamaño máximo de fila incluye BLOB|DBPROP_MAXROWSIZEINCLUDESBLOB|
 |Número máximo de tablas en SELECT|DBPROP_MAXTABLESINSELECT|
-|Modo|DBPROP_INIT_MODE|
+|Mode|DBPROP_INIT_MODE|
 |Varios conjuntos de parámetros|DBPROP_MULTIPLEPARAMSETS|
 |Varios resultados|DBPROP_MULTIPLERESULTS|
 |Varios objetos de almacenamiento|DBPROP_MULTIPLESTORAGEOBJECTS|

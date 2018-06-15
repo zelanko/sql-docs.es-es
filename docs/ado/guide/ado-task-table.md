@@ -7,7 +7,6 @@ ms.suite: sql
 ms.tgt_pltfrm: ''
 ms.prod: sql
 ms.prod_service: connectivity
-ms.component: ado
 ms.technology: connectivity
 ms.topic: conceptual
 helpviewer_keywords:
@@ -18,16 +17,17 @@ caps.latest.revision: 9
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: aa4791a78f2ec2aa8accb0f85897d24ffe5e5c76
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 7e712ed9938037909f589243bf4d7f7ddd2a638e
+ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/11/2018
+ms.locfileid: "35270894"
 ---
 # <a name="ado-programming-task-table"></a>Tabla de tareas de programación de ADO
 En la tabla siguiente se enumera las tareas de programación contenidas en el *Guía del programador de ADO* y proporciona referencias para cada tarea. Estas referencias pueden ser descripciones textuales o ejemplos de código en el que puede encontrar información sobre la característica de ADO que realiza la tarea.
 
-|Tarea de ADO|Referencias|
+|Tarea de ADO|References|
 |--------------|----------------|
 |Conectarse a un proveedor de datos|[Conectarse a orígenes de datos](../../ado/guide/data/connecting-to-data-sources.md)|
 |Ejecutar comandos o llamar a procedimientos almacenados|[Preparar y ejecutar comandos](../../ado/guide/data/preparing-and-executing-commands.md)|

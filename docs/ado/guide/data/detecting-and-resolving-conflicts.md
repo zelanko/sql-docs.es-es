@@ -2,7 +2,6 @@
 title: Detectar y solucionar conflictos | Documentos de Microsoft
 ms.prod: sql
 ms.prod_service: connectivity
-ms.component: ado
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
@@ -18,18 +17,19 @@ caps.latest.revision: 5
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 05e79fec4c5ddf9d33c9cfaa17581b6d50e0e42b
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: bca0eb3d528c1f7572745e1b6f8d8e59e9749f36
+ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/11/2018
+ms.locfileid: "35270614"
 ---
 # <a name="detecting-and-resolving-conflicts"></a>Detectar y resolver conflictos
 Si está trabajando con el conjunto de registros en el modo inmediato, hay mucho menos posibilidades de problemas de simultaneidad que se produzca. Por otro lado, si la aplicación utiliza la actualización de modo por lotes, puede haber una buena oportunidad de que un usuario cambie un registro antes de guardar los cambios realizados por otro usuario que edita el mismo registro. En tal caso, le interesará la aplicación para controlar correctamente el conflicto. Es posible que prefiera que sea la última persona que enviar una actualización al servidor "gana". O bien, puede que desee permitir que el usuario más reciente para decidir qué actualización debe tener prioridad, permitiéndole elegir entre los dos valores en conflicto.  
   
  En cualquier caso, ADO proporciona las propiedades UnderlyingValue y OriginalValue del objeto Field para controlar estos tipos de conflictos. Utilice estas propiedades en combinación con el método Resync y la propiedad de filtro del conjunto de registros.  
   
-## <a name="remarks"></a>Comentarios  
+## <a name="remarks"></a>Notas  
  Cuando ADO detecta un conflicto durante una actualización por lotes, se agregará una advertencia a la colección de errores. Por lo tanto, siempre debe comprobar si hay errores inmediatamente después de llamar a BatchUpdate y, si se observan, empiece a probar la suposición de que se ha producido un conflicto. El primer paso es establecer la propiedad de filtro en el conjunto de registros como igual a adFilterConflictingRecords. Esto limita la vista en el conjunto de registros a solo aquellos registros que están en conflicto. Si la propiedad RecordCount es igual a cero después de este paso, sabrá que se produjo el error por algo distinto de un conflicto.  
   
  Cuando se llama a BatchUpdate, ADO y el proveedor generan instrucciones SQL para realizar actualizaciones en el origen de datos. Recuerde que algunos orígenes de datos tienen limitaciones en el que se pueden usar tipos de columnas en una cláusula WHERE.  

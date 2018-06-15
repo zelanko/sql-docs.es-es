@@ -2,7 +2,6 @@
 title: Formato de persistencia XML | Documentos de Microsoft
 ms.prod: sql
 ms.prod_service: connectivity
-ms.component: ado
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
@@ -17,18 +16,19 @@ caps.latest.revision: 6
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 449353a8a7d8e5109d65e6f4f06ac646946e54a1
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: cd0085f4fb632d4e5be4c4e64e1934b154108488
+ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/11/2018
+ms.locfileid: "35273304"
 ---
 # <a name="xml-persistence-format"></a>Formato de persistencia de XML
 ADO utiliza la codificación UTF-8 para la secuencia XML que se conserva.  
   
  El formato XML de ADO se divide en dos secciones, una sección de esquema seguida de la sección de datos. El siguiente es un archivo XML de ejemplo para la tabla Shippers de la base de datos Northwind. Distintas partes del código XML se analizan el ejemplo siguiente.  
   
-## <a name="remarks"></a>Comentarios  
+## <a name="remarks"></a>Notas  
   
 ```  
 <xml xmlns:s="uuid:BDC6E3F0-6DA3-11d1-A2A3-00AA00C14882"   

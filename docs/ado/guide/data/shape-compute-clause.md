@@ -2,7 +2,6 @@
 title: Dar forma a cláusula COMPUTE | Documentos de Microsoft
 ms.prod: sql
 ms.prod_service: connectivity
-ms.component: ado
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
@@ -19,11 +18,12 @@ caps.latest.revision: 11
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 25d89db4052234482846dc752e5c0431bb517164
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 183d6536d5202c9795837a4e35f740753b77703f
+ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/11/2018
+ms.locfileid: "35272834"
 ---
 # <a name="shape-compute-clause"></a>Cláusula COMPUTE de forma
 Una cláusula COMPUTE de forma genera un elemento primario **Recordset**, cuyas columnas se componen de una referencia al formulario secundario **Recordset**; opcional columnas cuyo contenido se capítulo, nuevas o las columnas calculadas, o resultado de ejecutar funciones de agregado en el elemento secundario **Recordset** o una forma anteriormente **Recordset**; y las columnas en el elemento secundario **Recordset** enumerados en la cláusula opcional.  
@@ -36,7 +36,7 @@ SHAPE child-command [AS] child-alias
    [BY grp-field-list]  
 ```  
   
-## <a name="description"></a>Description  
+## <a name="description"></a>Descripción  
  Los elementos de esta cláusula son los siguientes:  
   
  *comando secundario*  

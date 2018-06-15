@@ -2,7 +2,6 @@
 title: Colecciones y los objetos ADO | Documentos de Microsoft
 ms.prod: sql
 ms.prod_service: connectivity
-ms.component: ado
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
@@ -17,16 +16,17 @@ caps.latest.revision: 10
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 03671824ef02a7316398f1d9b8d51d57845be736
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 3d8b1967071b5dc420577ecbee3f1b124d917057
+ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/11/2018
+ms.locfileid: "35271384"
 ---
 # <a name="ado-objects-and-collections"></a>Colecciones y los objetos ADO
 ADO consta de los siguientes objetos de nueve y cuatro colecciones.  
   
-|Objeto o colección|Description|  
+|Objeto o colección|Descripción|  
 |--------------------------|-----------------|  
 |**Conexión** objeto|Representa una sesión única con un origen de datos. En el caso de un sistema de base de datos cliente/servidor, puede ser equivalente a una conexión de red real con el servidor. Dependiendo de la funcionalidad admitida por el proveedor, algunas colecciones, métodos o propiedades de un **conexión** objeto no estén disponible.|  
 |Objeto**Command** |Se utiliza para definir un comando específico, como una consulta SQL, que se van a ejecutar en un origen de datos.|  

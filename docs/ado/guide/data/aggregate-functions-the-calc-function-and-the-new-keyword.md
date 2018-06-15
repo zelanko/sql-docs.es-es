@@ -2,7 +2,6 @@
 title: Agregar funciones, la función CALC y la palabra clave NEW | Documentos de Microsoft
 ms.prod: sql
 ms.prod_service: connectivity
-ms.component: ado
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
@@ -20,18 +19,19 @@ caps.latest.revision: 11
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 1e3af3e37caacae09f4ee57bc251f7ebcabfb04e
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: ba6aae19a559dd1e475809339281c8b65c282517
+ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/11/2018
+ms.locfileid: "35271554"
 ---
 # <a name="aggregate-functions-the-calc-function-and-the-new-keyword"></a>Las funciones de agregado, la función CALC y la palabra clave NEW
 La forma de datos admite las funciones siguientes: Es el nombre asignado al capítulo que contiene la columna que se trabajará en el *alias de capítulo*.  
   
  Un alias de capítulo puede ser completo, que consta de cada nombre de la columna de capítulo a la izquierda en el capítulo que contiene el *nombre de columna,* todas separadas por puntos. Por ejemplo, si el capítulo principal, Cap1, contiene un capítulo secundario, Cap2, tiene una columna de cantidad, amt, entonces el nombre completo sería chap1.chap2.amt.  
   
-|Funciones de agregado|Description|  
+|Funciones de agregado|Descripción|  
 |-------------------------|-----------------|  
 |SUM (*alias de capítulo*. *nombre de la columna*)|Calcula la suma de todos los valores de la columna especificada.|  
 |AVG (*alias de capítulo*. *nombre de la columna*)|Calcula el promedio de todos los valores de la columna especificada.|  
@@ -41,11 +41,11 @@ La forma de datos admite las funciones siguientes: Es el nombre asignado al cap�
 |STDEV (*alias de capítulo*. *nombre de la columna*)|Calcula la desviación estándar de la columna especificada.|  
 |CUALQUIER (*alias de capítulo*. *nombre de la columna*)|Un valor de la columna especificada. ALGUNA tiene un valor de predicción sólo cuando el valor de la columna es el mismo para todas las filas del capítulo.<br /><br /> **Tenga en cuenta** si la columna no contiene el mismo valor para todas las filas en el capítulo, el comando SHAPE devuelve arbitrariamente uno de los valores con el valor de la función ANY.|  
   
-|expresión calculada|Description|  
+|expresión calculada|Descripción|  
 |---------------------------|-----------------|  
 |CALC (*expresión*)|Calcula una expresión arbitraria, pero sólo en la fila de la **Recordset** que contiene la función CALC. Cualquier expresión mediante estos [de Visual Basic para aplicaciones (VBA) funciones](../../../ado/guide/data/visual-basic-for-applications-functions.md) está permitido.|  
   
-|NUEVA palabra clave|Description|  
+|NUEVA palabra clave|Descripción|  
 |-----------------|-----------------|  
 |NUEVA *tipo de campo* [(*ancho* &#124; *escala* &#124; *precisión* &#124; *error*[, *escala* &#124; *error*])]|Agrega una columna vacía del tipo especificado a la **conjunto de registros**.|  
   

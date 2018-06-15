@@ -2,7 +2,6 @@
 title: Los cursores KEYSET | Documentos de Microsoft
 ms.prod: sql
 ms.prod_service: connectivity
-ms.component: ado
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
@@ -18,11 +17,12 @@ caps.latest.revision: 5
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 6abebe52390c8c3423cd3c41f212236e051e1972
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 94df9cb54dcdb98b6f0932e63d0935b0350eb868
+ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/11/2018
+ms.locfileid: "35271934"
 ---
 # <a name="keyset-cursors"></a>Cursores KEYSET
 El cursor de conjunto de claves proporciona funcionalidad entre una variable static y un cursor dinámico en su capacidad para detectar los cambios. Al igual que un cursor estático, no siempre detecta cambios en la pertenencia y el orden del conjunto de resultados. Al igual que un cursor dinámico, detecta cambios en los valores de filas del conjunto de resultados.  

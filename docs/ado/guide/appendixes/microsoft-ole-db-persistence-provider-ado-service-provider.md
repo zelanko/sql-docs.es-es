@@ -2,7 +2,6 @@
 title: Proveedor de persistencia de Microsoft OLE DB (proveedor de servicios de ADO) | Documentos de Microsoft
 ms.prod: sql
 ms.prod_service: connectivity
-ms.component: ado
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
@@ -19,11 +18,12 @@ caps.latest.revision: 11
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 9c47487547153426b2826792c5af0ad3bbeb7371
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 37144f19abfb60d13a24818d8b47a3531affcc08
+ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/11/2018
+ms.locfileid: "35270394"
 ---
 # <a name="microsoft-ole-db-persistence-provider-overview"></a>Información general sobre el proveedor de persistencia de Microsoft OLE DB
 El proveedor de persistencia de Microsoft OLE DB permite guardar un [Recordset](../../../ado/reference/ado-api/recordset-object-ado.md) objeto en un archivo y posteriormente restaurar que **Recordset** objeto desde el archivo. Información de esquema, datos y se conservan los cambios pendientes.
@@ -40,12 +40,12 @@ El proveedor de persistencia de Microsoft OLE DB permite guardar un [Recordset](
 ## <a name="errors"></a>Errores
  Los errores siguientes emitidos por este proveedor se pueden detectar en la aplicación.
 
-|Constante|Description|
+|Constante|Descripción|
 |--------------|-----------------|
 |E_BADSTREAM|El archivo abierto no tiene un formato válido (es decir, el formato no es ADTG o XML).|
 |E_CANTPERSISTROWSET|El **Recordset** objeto guardado tiene características que impiden que se va a almacenar.|
 
-## <a name="remarks"></a>Comentarios
+## <a name="remarks"></a>Notas
  El proveedor de persistencia de Microsoft OLE DB no expone ninguna propiedad dinámica.
 
  Actualmente, sólo parametrizar jerárquica **Recordset** no se pueden guardar los objetos.

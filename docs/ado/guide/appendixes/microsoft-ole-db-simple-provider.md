@@ -2,7 +2,6 @@
 title: Un proveedor sencillo de Microsoft OLE DB | Documentos de Microsoft
 ms.prod: sql
 ms.prod_service: connectivity
-ms.component: ado
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
@@ -19,11 +18,12 @@ caps.latest.revision: 15
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 5e757ad77f0312d682027d2363944db552217eba
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 8d3abb4d2d34220800a1d8c71b6227cc8de0fd88
+ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/11/2018
+ms.locfileid: "35271524"
 ---
 # <a name="microsoft-ole-db-simple-provider-overview"></a>Información general de un proveedor sencillo de OLE DB de Microsoft
 El Microsoft OLE DB sencillo proveedor (OSP) permite que ADO tener acceso a los datos para el que un proveedor se ha escrito utilizando la [Kit de herramientas de OLE DB Simple proveedor (OSP)](http://msdn.microsoft.com/en-us/6e7b7931-9e4a-4151-ae51-672abd3f84a6). Simples proveedores están diseñados para tener acceso a orígenes de datos que requieren un soporte OLE DB solo fundamental, como matrices en memoria o documentos XML.
@@ -48,7 +48,7 @@ MSDAOSP
 
  La cadena consta de estas palabras clave:
 
-|Palabra clave|Description|
+|Palabra clave|Descripción|
 |-------------|-----------------|
 |**Proveedor**|Especifica el proveedor OLE DB para SQL Server.|
 |**Origen de datos**|Especifica el nombre de un servidor.|

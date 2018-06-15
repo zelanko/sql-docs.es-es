@@ -2,7 +2,6 @@
 title: Conjuntos de registros jerárquicos en XML | Documentos de Microsoft
 ms.prod: sql
 ms.prod_service: connectivity
-ms.component: ado
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
@@ -17,16 +16,17 @@ caps.latest.revision: 4
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 64be59db3e65386eaaa267e954f63d0cf063e146
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 697305c34e1906c95b20a2f33866bc57c1a1d019
+ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/11/2018
+ms.locfileid: "35272064"
 ---
 # <a name="hierarchical-recordsets-in-xml"></a>Conjuntos de registros jerárquicos en XML
 ADO permite la persistencia de los objetos de conjunto de registros jerárquicos en XML. Con objetos de conjunto de registros jerárquicos, el valor de un campo en el conjunto de registros principal es otro conjunto de registros. Estos campos se representan como elementos secundarios en la secuencia XML en lugar de un atributo.  
   
-## <a name="remarks"></a>Comentarios  
+## <a name="remarks"></a>Notas  
  En el ejemplo siguiente se muestra este caso:  
   
 ```  

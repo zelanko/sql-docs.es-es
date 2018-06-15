@@ -2,7 +2,6 @@
 title: Usar ADO con lenguajes de Scripting | Documentos de Microsoft
 ms.prod: sql
 ms.prod_service: connectivity
-ms.component: ado
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
@@ -18,18 +17,19 @@ caps.latest.revision: 12
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 070cfacfad680fbf0664ad5dc6bc3a01aed99520
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: fa90243680a59676f64f00cc4fd2b0c182c3d674
+ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/11/2018
+ms.locfileid: "35271214"
 ---
 # <a name="using-ado-with-scripting-languages"></a>Usar ADO con lenguajes de Scripting
 Dentro de un entorno de scripting, ADO permite exponer datos mediante secuencias de comandos de servidor. En este escenario, ADO, el proveedor OLE DB subyacente que utiliza y cualquier otro componente necesario para hacer referencia a un almacén de datos determinado está instalado en un servidor que ejecuta Internet Information Services (IIS). Utilizando páginas Active Server (ASP), ADO es un componente al que hace referencia en una secuencia de comandos que puede generar código HTML, por ejemplo. Este contenido HTML se puede pasar a través de HTTP en un explorador Web del cliente. Mediante el uso de secuencias de comandos, la página Web puede enviar acciones a la secuencia de comandos de servidor, lo que le permite actualizar, recorrer o ver datos específicos.  
   
  Antes de usar un objeto de ActiveX en una página Web, es importante saber si el objeto es seguro para scripting. Cuando un objeto se considera seguro para scripting, significa que el control no puede realizar ninguna acción perjudicial en el equipo del usuario y por lo tanto, se puede ejecutar sin solicitar la aprobación del usuario. En la tabla siguiente se enumera los objetos ADO e indica si son seguros para scripting.  
   
-|Object|¿Es seguro para Scripting?|  
+|Objeto|¿Es seguro para Scripting?|  
 |------------|-------------------------|  
 |Conexión ADO|Sí|  
 |Comando de ADO|no|  

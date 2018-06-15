@@ -2,7 +2,6 @@
 title: Crear una cadena de conexión | Documentos de Microsoft
 ms.prod: sql
 ms.prod_service: connectivity
-ms.component: ado
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
@@ -18,11 +17,12 @@ caps.latest.revision: 12
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: cc700bdc0006a4591e61e15f2796b73c194dc5a1
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 106aacb0fbdda6e00d32b42a8bae49564ee1adbc
+ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/11/2018
+ms.locfileid: "35270564"
 ---
 # <a name="creating-a-connection-string"></a>Creación de una cadena de conexión
 Una cadena de conexión consta de una lista de pares de valor del argumento (es decir, los parámetros), separada por punto y coma. Por ejemplo:  
@@ -35,7 +35,7 @@ Una cadena de conexión consta de una lista de pares de valor del argumento (es 
   
  ADO reconoce los siguientes cinco argumentos en una cadena de conexión.  
   
-|Argumento|Description|  
+|Argumento|Descripción|  
 |--------------|-----------------|  
 |*Proveedor*|Especifica el nombre de un proveedor que se usará para la conexión.|  
 |*Nombre de archivo*|Especifica el nombre de un archivo específico del proveedor (por ejemplo, un objeto de origen de datos almacenados) que contiene información de conexión predefinida.|  

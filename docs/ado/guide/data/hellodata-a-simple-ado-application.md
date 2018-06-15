@@ -2,7 +2,6 @@
 title: 'HelloData: Una aplicación ADO Simple | Documentos de Microsoft'
 ms.prod: sql
 ms.prod_service: connectivity
-ms.component: ado
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
@@ -18,11 +17,12 @@ caps.latest.revision: 16
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 3fbc270a27350160933019c16c3b354270beb64f
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: fe8a5f0cd56c50441a44ab59da234791438876a7
+ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/11/2018
+ms.locfileid: "35271704"
 ---
 # <a name="hellodata-a-simple-ado-application"></a>HelloData: Una aplicación ADO Simple
 Esta aplicación simple recorre paso a paso cada una de las cuatro operaciones principales de ADO: obtener, examinar, editar y actualizar datos. Estas operaciones se realizan en la base de datos de ejemplo Northwind incluida con Microsoft® SQL Server. Para centrarse en los aspectos básicos de ADO y evitar la acumulación de elementos de código, control de errores en el ejemplo es mínimo.  
@@ -46,7 +46,7 @@ Esta aplicación simple recorre paso a paso cada una de las cuatro operaciones p
   
  ![Muestra Form1 para la aplicación HelloData de VB](../../../ado/guide/data/media/hellodata.gif "HelloData")  
   
-|Tipo de control|Propiedad|Value|  
+|Tipo de control|Property|Valor|  
 |------------------|--------------|-----------|  
 |Form|Nombre|Form1|  
 ||Alto|6500|  
@@ -55,10 +55,10 @@ Esta aplicación simple recorre paso a paso cada una de las cuatro operaciones p
 |TextBox|Nombre|txtDisplay1|  
 ||Varias líneas|true|  
 |Botón de comando|Nombre|cmdGetData|  
-||Caption|Get Data|  
+||Título|Get Data|  
 |Botón de comando|Nombre|cmdExamineData|  
-||Caption|Examinar datos|  
+||Título|Examinar datos|  
 |Botón de comando|Nombre|cmdEditData|  
-||Caption|Editar datos|  
+||Título|Editar datos|  
 |Botón de comando|Nombre|cmdUpdateData|  
-||Caption|Datos actualizados|
+||Título|Datos actualizados|

@@ -2,7 +2,6 @@
 title: El objeto Field | Documentos de Microsoft
 ms.prod: sql
 ms.prod_service: connectivity
-ms.component: ado
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
@@ -17,11 +16,12 @@ caps.latest.revision: 11
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 872bb5e1ccede336f85b7bbcbdc7e91c89dd1688
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 8df319455802bb16d5e828d1d79c6253643e7ead
+ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/11/2018
+ms.locfileid: "35273014"
 ---
 # <a name="the-field-object"></a>El objeto de campo
 Cada **campo** objeto suele corresponder a una columna de una tabla de base de datos. Sin embargo, un **campo** también se puede representar un puntero a otro **Recordset**, que se denomina capítulo. Excepciones, como columnas de capítulo, se explicará más adelante en esta guía.  

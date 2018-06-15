@@ -2,7 +2,6 @@
 title: Proveedor Microsoft OLE DB para Oracle | Documentos de Microsoft
 ms.prod: sql
 ms.prod_service: connectivity
-ms.component: ado
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
@@ -19,11 +18,12 @@ caps.latest.revision: 16
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: de312ff17a7d66bf58a5b8f1fb7a6c33aa27acec
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 241a3ac024ef2a15bfe403e49ea9778939d22bc8
+ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/11/2018
+ms.locfileid: "35271104"
 ---
 # <a name="microsoft-ole-db-provider-for-oracle-overview"></a>Proveedor Microsoft OLE DB para Oracle Introducción
 > [!IMPORTANT]
@@ -51,7 +51,7 @@ MSDAORA
 
  La cadena consta de estas palabras clave:
 
-|Palabra clave|Description|
+|Palabra clave|Descripción|
 |-------------|-----------------|
 |**Proveedor**|Especifica el proveedor OLE DB para Oracle.|
 |**Origen de datos**|Especifica el nombre de un servidor.|
@@ -66,7 +66,7 @@ MSDAORA
 
  Estos parámetros se describen detalladamente en la [referencia del programador de OLE DB](http://msdn.microsoft.com/en-us/3c5e2dd5-35e5-4a93-ac3a-3818bb43bbf8). El [índice de propiedades dinámicas de ADO](../../../ado/reference/ado-api/ado-dynamic-property-index.md) proporciona una referencia cruzada entre estos nombres de parámetro y las propiedades de OLE DB correspondientes.
 
-|Parámetro|Description|
+|Parámetro|Descripción|
 |---------------|-----------------|
 |**Identificador de ventana**|Indica el identificador de ventana que se usará para solicitar información adicional.|
 |**Identificador de configuración regional**|Indica un único número de 32 bits (por ejemplo, 1033) que especifica las preferencias relacionadas con el idioma del usuario. Estas preferencias indican cómo se da formato a fechas y horas, los elementos se ordenan alfabéticamente, se comparan las cadenas y así sucesivamente.|

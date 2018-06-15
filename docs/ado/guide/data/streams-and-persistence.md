@@ -2,7 +2,6 @@
 title: Secuencias y persistencia | Documentos de Microsoft
 ms.prod: sql
 ms.prod_service: connectivity
-ms.component: ado
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
@@ -18,11 +17,12 @@ caps.latest.revision: 9
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: eb0302de0cc9ac87c55ae0e6c8d44557b517d79d
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: fd1ab20fbd539a0e944060837d1e32c8655b5e1f
+ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/11/2018
+ms.locfileid: "35272954"
 ---
 # <a name="streams-and-persistence"></a>Secuencias y persistencia
 El [Recordset](../../../ado/reference/ado-api/recordset-object-ado.md) objeto [guardar](../../../ado/reference/ado-api/save-method.md) método almacenes, o *continúa*, un **conjunto de registros** en un archivo y el [abrir](../../../ado/reference/ado-api/open-method-ado-recordset.md)método restaura el **Recordset** desde ese archivo.  

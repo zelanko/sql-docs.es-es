@@ -2,7 +2,6 @@
 title: Proveedor Microsoft OLE DB para el servicio de Microsoft Active Directory | Documentos de Microsoft
 ms.prod: sql
 ms.prod_service: connectivity
-ms.component: ado
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
@@ -20,11 +19,12 @@ caps.latest.revision: 13
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 7c38caaead8d2eb1fa24a4b7a38aebfdc19cbcec
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 5f26d8a9aa58c45ddb5ac58a6415776a60ed5b80
+ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/11/2018
+ms.locfileid: "35270654"
 ---
 # <a name="microsoft-ole-db-provider-for-microsoft-active-directory-service"></a>Proveedor Microsoft OLE DB para el servicio de Microsoft Active Directory
 El proveedor de Interfaces de servicio de Active Directory (ADSI) permite ADO para conectarse a servicios de directorio heterogéneos mediante ADSI. Esto proporciona a las aplicaciones ADO acceso de solo lectura a los servicios de directorio de Microsoft Windows NT 4.0 y Microsoft Windows 2000, además de cualquier servicio de directorio compatible con LDAP y servicios de directorio Novell. ADSI se basa en un modelo de proveedor, por lo que si hay un nuevo acceso determinado de proveedor a otro directorio, la aplicación ADO podrá obtener acceso a él sin problemas. El proveedor ADSI es de subprocesamiento libre y está habilitado para Unicode.  
@@ -47,7 +47,7 @@ ADSDSOObject
   
  La cadena consta de las siguientes palabras clave.  
   
-|Palabra clave|Description|  
+|Palabra clave|Descripción|  
 |-------------|-----------------|  
 |**Proveedor**|Especifica el proveedor OLE DB para servicios de Active Directory.|  
 |**Id. de usuario**|Especifica el nombre de usuario. Si se omite esta palabra clave, se utiliza el inicio de sesión actual.|  
@@ -63,7 +63,7 @@ ADSDSOObject
 "Root; Filter; Attributes[; Scope]"  
 ```  
   
-|Value|Description|  
+|Valor|Descripción|  
 |-----------|-----------------|  
 |*Root*|Indica el **ADsPath** objeto desde el que se va a iniciar la búsqueda (es decir, la raíz de la búsqueda).|  
 |*Filtro*|Indica que el filtro de búsqueda en el formato RFC 1960.|  
@@ -83,7 +83,7 @@ ADSDSOObject
 objectClass='user' AND objectCategory='Person'"  
 ```  
   
-## <a name="remarks"></a>Comentarios  
+## <a name="remarks"></a>Notas  
  El proveedor no acepta llamadas a procedimientos almacenados o nombres de tabla simples (por ejemplo, el [CommandType](../../../ado/reference/ado-api/commandtype-property-ado.md) propiedad siempre será **adCmdText**). Consulte la documentación de Active Directory Service Interfaces para obtener una descripción más detallada de los elementos de texto de comando.  
   
 ## <a name="recordset-behavior"></a>Comportamiento del conjunto de registros  
@@ -93,7 +93,7 @@ objectClass='user' AND objectCategory='Person'"
   
  **Disponibilidad de las propiedades de conjunto de registros ADO estándares:**  
   
-|Propiedad|Disponibilidad|  
+|Property|Disponibilidad|  
 |--------------|------------------|  
 |[AbsolutePage](../../../ado/reference/ado-api/absolutepage-property-ado.md)|lectura/escritura|  
 |[AbsolutePosition](../../../ado/reference/ado-api/absoluteposition-property-ado.md)|lectura/escritura|  

@@ -2,7 +2,6 @@
 title: Proveedor Microsoft OLE DB para servicios de Index Server de Microsoft | Documentos de Microsoft
 ms.prod: sql
 ms.prod_service: connectivity
-ms.component: ado
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
@@ -19,11 +18,12 @@ caps.latest.revision: 15
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 8dc341794d419559b3683c06d51766d2e7b6287a
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: b789802f6a8d565119450183889d238d2e3f498e
+ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/11/2018
+ms.locfileid: "35271314"
 ---
 # <a name="microsoft-ole-db-provider-for-microsoft-indexing-service-overview"></a>Proveedor Microsoft OLE DB para Microsoft Introducción al servicio de indización
 El proveedor Microsoft OLE DB para servicios de Index Server de Microsoft proporciona acceso mediante programación de solo lectura para el sistema de archivos y datos Web indizados por servicios de Index Server de Microsoft. Las aplicaciones ADO pueden emitir consultas SQL para recuperar información de la propiedad de contenido y de archivos.
@@ -48,7 +48,7 @@ MSIDXS
 
  La cadena consta de estas palabras clave:
 
-|Palabra clave|Description|
+|Palabra clave|Descripción|
 |-------------|-----------------|
 |**Proveedor**|Especifica el proveedor OLE DB para servicios de Index Server de Microsoft. Suele ser la única palabra clave especificada en la cadena de conexión.|
 |**Origen de datos**|Especifica el nombre del catálogo de servicios de Index Server. Si no se especifica esta palabra clave, se utiliza el catálogo del sistema de forma predeterminada.|
@@ -70,7 +70,7 @@ MSIDXS
 
  **Disponibilidad de las propiedades de conjunto de registros ADO estándares:**
 
-|Propiedad|Disponibilidad|
+|Property|Disponibilidad|
 |--------------|------------------|
 |[AbsolutePage](../../../ado/reference/ado-api/absolutepage-property-ado.md)|lectura/escritura|
 |[AbsolutePosition](../../../ado/reference/ado-api/absoluteposition-property-ado.md)|lectura/escritura|

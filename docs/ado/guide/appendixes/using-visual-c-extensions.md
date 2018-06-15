@@ -2,7 +2,6 @@
 title: Utilizar extensiones de Visual C++ | Documentos de Microsoft
 ms.prod: sql
 ms.prod_service: connectivity
-ms.component: ado
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
@@ -20,11 +19,12 @@ caps.latest.revision: 15
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: a1c832cff45ad5998918c6f5f67927e49bc9d4e9
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 06e2d13c589d4dc88f3a148122322f483c49d2fb
+ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/11/2018
+ms.locfileid: "35271594"
 ---
 # <a name="visual-c-extensions"></a>Extensiones de Visual C++
 ## <a name="the-iadorecordbinding-interface"></a>La interfaz IADORecordBinding
@@ -114,11 +114,11 @@ Update(CADORecordBinding *binding)
 ### <a name="end-binding-entries"></a>Final de entradas de enlace
  **END ADO BINDING**)
 
-|Parámetro|Description|
+|Parámetro|Descripción|
 |---------------|-----------------|
 |*Clase*|Clase en que se definen las entradas de enlace y las variables de C o C++.|
 |*Ordinal*|Número ordinal, a partir de 1, de la **Recordset** campo correspondiente a la variable de C o C++.|
-|*DataType*|Tipo de datos de ADO equivalente de la variable de C o C++ (vea [DataTypeEnum](../../../ado/reference/ado-api/datatypeenum.md) para obtener una lista de tipos de datos válidos). El valor de la **Recordset** campo se convertirá en este tipo de datos si es necesario.|
+|*Tipo de datos*|Tipo de datos de ADO equivalente de la variable de C o C++ (vea [DataTypeEnum](../../../ado/reference/ado-api/datatypeenum.md) para obtener una lista de tipos de datos válidos). El valor de la **Recordset** campo se convertirá en este tipo de datos si es necesario.|
 |*Búfer*|Nombre de la variable de C o C++ donde la **Recordset** se almacenará el campo.|
 |*Tamaño*|Tamaño máximo en bytes de *búfer*. Si *búfer* contendrá una cadena de longitud variable, deje espacio para un cero de terminación.|
 |*Estado*|Nombre de una variable que indicará si el contenido de *búfer* son válidos y si la conversión del campo a *DataType* fue correcta.<br /><br /> Los dos valores más importantes de esta variable son **adFldOK**, lo que significa que la conversión fue correcta; y **adFldNull**, lo que significa que el valor del campo sería una variante de tipo VT_NULL y no simplemente vacía.<br /><br /> Valores posibles de *estado* se muestran en la tabla siguiente, "Valores de Status".|
@@ -132,7 +132,7 @@ Update(CADORecordBinding *binding)
 
  Al establecer los datos, *estado* se puede establecer en **adFldNull** para indicar el **Recordset** campo debe establecerse en null.
 
-|Constante|Value|Description|
+|Constante|Valor|Descripción|
 |--------------|-----------|-----------------|
 |**adFldOK**|0|Se devolvió un valor de campo distinto de null.|
 |**adFldBadAccessor**|1|Enlace no era válido.|

@@ -2,7 +2,6 @@
 title: Información general sobre la forma de datos | Documentos de Microsoft
 ms.prod: sql
 ms.prod_service: connectivity
-ms.component: ado
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
@@ -17,11 +16,12 @@ caps.latest.revision: 10
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: ba1b8acd52c86c0bffa19ec22658008a3b8f5601
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 68044aa5ef5eb6364157aa3251b8cc39da73ac78
+ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/11/2018
+ms.locfileid: "35271544"
 ---
 # <a name="data-shaping-overview"></a>Información general sobre la forma de datos
 *Dar forma a datos* significa crear relaciones jerárquicas entre dos o más entidades lógicas en una consulta. La jerarquía puede verse en las relaciones de elementos primarios y secundarios entre un registro de una [Recordset](../../../ado/reference/ado-api/recordset-object-ado.md)y uno o más registros (también conocido como un capítulo) de otro **conjunto de registros**. En una relación de elementos primarios y secundarios, el elemento primario **Recordset** contiene el elemento secundario **conjunto de registros**. Un ejemplo de este tipo de relación jerárquica es customers y orders. Para cada cliente en una base de datos, puede haber cero o más pedidos. La relación jerárquica puede ser recursivas, lo que significa que los registros secundarios se pueden anidar en un registro secundario. En principio, un registro jerárquico se puede anidar hasta cualquier profundidad. En la práctica, ADO limita la recursividad hasta un máximo de 512 **Recordset**s.  

@@ -2,7 +2,6 @@
 title: Proveedor de servicios remotos de Microsoft OLE DB (proveedor de servicios de ADO) | Documentos de Microsoft
 ms.prod: sql
 ms.prod_service: connectivity
-ms.component: ado
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
@@ -19,11 +18,12 @@ caps.latest.revision: 16
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: b69c6f64de019aadf71476958c26f99a46dabac2
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: c68d168716351a8c3adda7b5ff10e6ef825e19cf
+ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/11/2018
+ms.locfileid: "35271294"
 ---
 # <a name="microsoft-ole-db-remoting-provider-overview"></a>Introducción al proveedor Microsoft OLE DB comunicación remota
 El proveedor de servicios remotos de Microsoft OLE DB permite a un usuario local en un equipo cliente invocar proveedores de datos en un equipo remoto. Especifique los parámetros de proveedor de datos para el equipo remoto tal y como lo haría si fuese un usuario local en el equipo remoto. A continuación, especifique los parámetros utilizados por el proveedor de servicios remotos para tener acceso a la máquina remota. A continuación, puede tener acceso a la máquina remota como si fuera un usuario local.
@@ -41,14 +41,14 @@ El proveedor de servicios remotos de Microsoft OLE DB permite a un usuario local
 ## <a name="additional-keywords"></a>Palabras clave adicionales
  Cuando se invoca este proveedor de servicios, las siguientes palabras clave adicionales son relevantes.
 
-|Palabra clave|Description|
+|Palabra clave|Descripción|
 |-------------|-----------------|
 |**Origen de datos**|Especifica el nombre del origen de datos remoto. Se pasa al proveedor de servicios remotos de OLE DB para su procesamiento.<br /><br /> Esta palabra clave es equivalente a la [RDS. DataControl](../../../ado/reference/rds-api/datacontrol-object-rds.md) del objeto [conectar](../../../ado/reference/rds-api/connect-property-rds.md) propiedad.|
 
 ## <a name="dynamic-properties"></a>Propiedades dinámicas
  Cuando se invoca este proveedor de servicios, se agregan las siguientes propiedades dinámicas a la [conexión](../../../ado/reference/ado-api/connection-object-ado.md)del objeto [propiedades](../../../ado/reference/ado-api/properties-collection-ado.md) colección.
 
-|Nombre de la propiedad dinámica|Description|
+|Nombre de la propiedad dinámica|Descripción|
 |---------------------------|-----------------|
 |**DFMode**|Indica el modo DataFactory. Una cadena que especifica la versión deseada de la [DataFactory](../../../ado/reference/rds-api/datafactory-object-rdsserver.md) objeto en el servidor. Establezca esta propiedad antes de abrir una conexión para solicitar una versión concreta de la **DataFactory**. Si la versión solicitada no está disponible, se realizará un intento para usar la versión anterior. Si no hay ninguna versión anterior, se producirá un error. Si **DFMode** es menor que la versión disponible, se producirá un error. Esta propiedad es de solo lectura una vez realizada una conexión.<br /><br /> Puede ser uno de los siguientes valores de cadena válida:<br /><br /> -"25" — versión 2.5 (valor predeterminado)<br />-"21", versión 2.1<br />-"20", versión 2.0<br />-"15", versión 1.5|
 |**Propiedades de comando**|Indica los valores que se agregarán a la cadena de propiedades de comando (conjunto de filas) enviados al servidor por el proveedor MS Remote. El valor predeterminado de esta cadena es vt_empty.|
@@ -73,7 +73,7 @@ Debug.Print cn.Properties("Internet Timeout")
 cn.Properties("Internet Timeout") = 5000
 ```
 
-## <a name="remarks"></a>Comentarios
+## <a name="remarks"></a>Notas
  En ADO 2.0, solo se podía especificar el proveedor de servicios remotos de OLE DB en el *ActiveConnection* parámetro de la [Recordset](../../../ado/reference/ado-api/recordset-object-ado.md) objeto **abiertos** método. A partir de ADO 2.1, el proveedor también se puede especificar en el *ConnectionString* parámetro de la [conexión](../../../ado/reference/ado-api/connection-object-ado.md) objeto **abiertos** método.
 
  El equivalente de la **RDS. DataControl** objeto [SQL](../../../ado/reference/rds-api/sql-property.md) propiedad no está disponible. El [Recordset](../../../ado/reference/ado-api/recordset-object-ado.md) objeto **abiertos** método *origen* argumento se utiliza en su lugar.

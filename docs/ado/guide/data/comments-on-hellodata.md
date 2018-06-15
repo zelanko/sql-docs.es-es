@@ -2,7 +2,6 @@
 title: Comentarios en HelloData | Documentos de Microsoft
 ms.prod: sql
 ms.prod_service: connectivity
-ms.component: ado
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
@@ -17,11 +16,12 @@ caps.latest.revision: 12
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 1e50dae422b42c365d6f72a9ee1b694c4ac9a4cc
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 5156c6faacb9714faa40073d2a0f78102663b4b0
+ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/11/2018
+ms.locfileid: "35271444"
 ---
 # <a name="comments-on-hellodata"></a>Comentarios en HelloData
 La aplicación HelloData recorre paso a paso las operaciones básicas de una aplicación ADO típica: obtener, examinar, editar y actualizar datos. Cuando se inicia la aplicación, haga clic en el primer botón, **obtener datos**. Esto ejecutará la **GetData** subrutina.  

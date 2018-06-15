@@ -20,6 +20,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "33031572"
 ---
 # <a name="rswindowsextendedprotectionscenario-property"></a>Propiedad RSWindowsExtendedProtectionScenario
   Devuelve un valor de cadena que indica el escenario de protección extendida que permite la configuración del servidor de informes.  

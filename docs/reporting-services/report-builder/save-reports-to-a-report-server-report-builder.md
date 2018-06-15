@@ -20,6 +20,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "33019382"
 ---
 # <a name="save-reports-to-a-report-server-report-builder"></a>Guardar informes en un servidor de informes (Generador de informes)
   En el Generador de informes, puede guardar una definición de informe en un servidor de informes (a lo que también se hace referencia como publicar un informe). Cuando el informe está guardado en un servidor de informes, otros usuarios pueden verlo. Cada vez que ejecute el informe publicado, recuperará los datos más actuales. Para guardar una copia estática de un informe representado, exporte el informe a un formato de archivo diferente y guárdelo o utilice la característica de historial de informes para guardar las versiones de los informes representados.  

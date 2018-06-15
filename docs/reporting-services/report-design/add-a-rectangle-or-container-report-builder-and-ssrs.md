@@ -23,6 +23,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "33018992"
 ---
 # <a name="add-a-rectangle-or-container-report-builder-and-ssrs"></a>Agregar un rectángulo o un contenedor (Generador de informes y SSRS)
   Agregue un rectángulo a un informe paginado de [!INCLUDE[ssRSnoversion_md](../../includes/ssrsnoversion-md.md)] si quiere incluir en él un elemento gráfico para separar distintas áreas, resaltarlas o proporcionar un fondo para uno o más elementos de informe. Los rectángulos también se usan como contenedores para ayudar a controlar la manera en la que se representan las regiones de datos en un informe. Puede personalizar la apariencia de un rectángulo editando sus propiedades, como los colores del borde y de segundo plano. Para más información sobre el uso de un rectángulo como contenedor, vea [Rectángulos y líneas &#40;Generador de informes y SSRS&#41;](../../reporting-services/report-design/rectangles-and-lines-report-builder-and-ssrs.md) y [Mostrar los mismos datos en una matriz y en un gráfico &#40;Generador de informes&#41;](../../reporting-services/report-design/display-the-same-data-on-a-matrix-and-a-chart-report-builder.md).    

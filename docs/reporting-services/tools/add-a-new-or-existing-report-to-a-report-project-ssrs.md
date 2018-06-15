@@ -22,6 +22,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "33029682"
 ---
 # <a name="add-a-new-or-existing-report-to-a-report-project-ssrs"></a>Agregar un informe nuevo o existente a un proyecto de informe (SSRS)
   En [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)], puede agregar un nuevo informe paginado de [!INCLUDE[ssRSnoversion_md](../../includes/ssrsnoversion-md.md)] usando el Asistente para informes o agregando un nuevo informe en blanco al proyecto. También puede agregar un informe existente. Después de agregar un informe, puede ver el nombre de informe en la lista que se muestra bajo la carpeta **Informes** del proyecto.  

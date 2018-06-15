@@ -27,6 +27,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "33021292"
 ---
 # <a name="report-model-query-designer-user-interface"></a>Interfaz de usuario del Diseñador de consultas de modelo de informe
   El Diseñador de informes proporciona dos diseñadores de consultas; éstos le ayudan a especificar los datos de un origen de datos del modelo de servidor de informes que desea usar en un informe. Utilice el diseñador gráfico de consultas para explorar y elegir las entidades de modelo y los campos de entidad. Use el diseñador de consultas basado en texto para trabajar directamente con una especificación del Lenguaje de definición de modelos semánticos (SMDL) en formato XML.  

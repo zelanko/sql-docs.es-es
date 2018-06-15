@@ -20,6 +20,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "33031432"
 ---
 # <a name="troubleshoot-processing-of-reporting-services-reports"></a>Solución de problemas de procesamiento de informes de Reporting Services
 Una vez recuperados los datos del informe, el procesador de informes combina los datos y la información de diseño. Cada propiedad de elemento de informe que tiene una expresión se evalúa en el contexto de los datos y el diseño combinados. Utilice este tema como ayuda para solucionar estos problemas.   

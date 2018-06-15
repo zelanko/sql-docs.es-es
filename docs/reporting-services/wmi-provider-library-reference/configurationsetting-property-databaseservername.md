@@ -27,6 +27,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "33030582"
 ---
 # <a name="configurationsetting-property---databaseservername"></a>Propiedad ConfigurationSetting - DatabaseServerName
   Especifica el nombre del servidor en el que está instalada la base de datos del servidor de informes. Lectura/escritura  

@@ -24,6 +24,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "33021062"
 ---
 # <a name="add-change-or-delete-default-values-for-a-report-parameter"></a>Agregar, cambiar o eliminar valores predeterminados para un parámetro de informe
   Después de crear un parámetro de informe, puede proporcionar una lista de valores predeterminados. Si todos los parámetros tienen un valor predeterminado válido, el informe se ejecuta automáticamente al verlo u obtener su previa por primera vez.  

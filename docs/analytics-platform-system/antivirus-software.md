@@ -14,6 +14,7 @@ ms.sourcegitcommit: fc3cd23685c6b9b6972d6a7bab2cc2fc5ebab5f2
 ms.translationtype: MT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/25/2018
+ms.locfileid: "34550052"
 ---
 # <a name="antivirus-software-for-analytics-platform-system"></a>Software antivirus para Analytics Platform System
 Si su centro de datos requiere el software antivirus, siga estas instrucciones para instalar el software antivirus en el sistema de la plataforma de análisis. Se recomienda no instalar el software antivirus a menos que sea un requisito estricto de su centro de datos.  

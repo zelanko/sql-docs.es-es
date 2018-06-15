@@ -27,6 +27,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "33027012"
 ---
 # <a name="reporting-services-properties---report-server-item-properties"></a>Propiedades de Reporting Services: propiedades de los elementos del servidor de informes
   Las propiedades de los elementos son específicas de los elementos de la base de datos del servidor de informes. Tales elementos incluyen informes, informes vinculados, carpetas, recursos, modelos y orígenes de datos.  

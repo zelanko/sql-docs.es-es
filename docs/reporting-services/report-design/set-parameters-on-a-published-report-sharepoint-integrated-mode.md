@@ -23,6 +23,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "33026302"
 ---
 # <a name="set-parameters-on-a-published-report---sharepoint-integrated-mode"></a>Establecer parámetros en un informe publicado - Modo integrado de SharePoint
   Un informe con parámetros es un informe que acepta valores de entrada usados para filtrar datos al ejecutar el informe. Los parámetros se definen al crear el informe. En función de cómo se defina un parámetro del informe en la definición del informe, puede aceptar un solo valor, varios valores o valores dinámicos, que cambian en respuesta a una selección previa (por ejemplo, si selecciona una categoría del producto, la siguiente selección podría ser un producto concreto de esa categoría). Un parámetro puede tener un valor predeterminado, que se puede usar para ejecutar una versión filtrada del informe de manera automática o posiblemente sustituirlo por otro valor.  

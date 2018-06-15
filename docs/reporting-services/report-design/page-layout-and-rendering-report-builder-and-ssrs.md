@@ -20,6 +20,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "33028682"
 ---
 # <a name="page-layout-and-rendering-report-builder-and-ssrs"></a>Representación y diseño de páginas (Generador de informes y SSRS)
 Obtenga información sobre las extensiones de representación de [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] para los informes paginados, de forma que esté seguro de que su informe tiene el aspecto que quiere, incluidos el diseño y los saltos de página, y el tamaño del papel. 

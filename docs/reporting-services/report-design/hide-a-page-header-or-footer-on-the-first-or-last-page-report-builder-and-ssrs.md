@@ -20,6 +20,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "33023352"
 ---
 # <a name="hide-a-page-header-or-footer-on-the-first-or-last-page-report-builder-and-ssrs"></a>Ocultar un encabezado o un pie de página en la primera o en la última página (Generador de informes y SSRS)
   Un informe puede contener un encabezado de página y un pie de página que aparecen en la parte superior e inferior de cada página, respectivamente. Después de agregar un encabezado o un pie de página, puede ocultarlo selectivamente en la primera y en la última página de un informe.  

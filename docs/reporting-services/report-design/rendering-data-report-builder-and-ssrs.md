@@ -20,6 +20,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "33026512"
 ---
 # <a name="rendering-data-report-builder-and-ssrs"></a>Representar datos (Generador de informes y SSRS)
   Cuando se usan representadores de diseño, como HTML, MHTML, Word, Excel, PDF o Image, los datos y su organización permanecen invariables. Cuando se exporta usando un formato de representador de datos, como Separado por comas (CSV) o XML, no se representa ningún elemento de diseño visual. Al representar el informe, CSV y XML aplican ciertas reglas al cuerpo del informe y a su contenido. Estas reglas determinan el modo en que se representan los datos en estos formatos.  

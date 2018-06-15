@@ -27,6 +27,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "33030682"
 ---
 # <a name="configurationsetting-property---databasequerytimeout"></a>Propiedad de ConfigurationSetting: DatabaseQueryTimeout
   Especifica el número de segundos que deben transcurrir antes de que el servidor de informes asuma un error del comando o que necesita demasiado tiempo para ejecutarse. El servidor de informes ajusta el tiempo de la consulta con respecto al catálogo de SQL, no a un origen de datos para el informe. Lectura/escritura  

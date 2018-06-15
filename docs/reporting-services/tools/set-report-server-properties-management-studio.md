@@ -22,6 +22,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "33029722"
 ---
 # <a name="set-report-server-properties-management-studio"></a>Establecer las propiedades del servidor de informes (Management Studio)
   Puede establecer las propiedades del sistema del servidor de informes en [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] para habilitar características o establecer valores predeterminados de servidor.  

@@ -20,6 +20,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "33020932"
 ---
 # <a name="exporting-to-a-csv-file-report-builder-and-ssrs"></a>Exportar a un archivo CSV (Generador de informes y SSRS)
   La extensión de representación de valores separados por comas (CSV) representa los informes paginados como una representación sin estructura jerárquica de los datos a partir de un informe estándar de texto sin formato para que resulten fáciles de leer e intercambiar con muchas aplicaciones.  

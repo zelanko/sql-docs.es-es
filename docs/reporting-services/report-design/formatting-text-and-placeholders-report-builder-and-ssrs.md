@@ -27,6 +27,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "33025502"
 ---
 # <a name="formatting-text-and-placeholders-report-builder-and-ssrs"></a>Aplicar formato a texto y a marcadores de posición (Generador de informes y SSRS)
   Un cuadro de texto puede ser un elemento de informe o una celda individual de una región de datos que contiene texto, un campo calculado, un puntero a un campo de una base de datos, o una combinación de los tres elementos. Puede mezclar fuentes y colores, agregar los estilos negrita y cursiva, y usar estilos de párrafo como la alineación y las sangrías francesas. Puede dar formato a un cuadro de texto completo o a determinados números, expresiones, campos o cadenas de texto del cuadro de texto.  

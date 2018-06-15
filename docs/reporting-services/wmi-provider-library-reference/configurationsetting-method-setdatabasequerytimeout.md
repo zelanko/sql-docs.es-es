@@ -27,6 +27,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "33029932"
 ---
 # <a name="configurationsetting-method---setdatabasequerytimeout"></a>Método ConfigurationSetting - SetDatabaseQueryTimeout
   Especifica el valor de tiempo de espera predeterminado para las consultas de la base de datos del servidor de informes.  

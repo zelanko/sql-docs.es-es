@@ -24,6 +24,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "33021683"
 ---
 # <a name="add-change-or-delete-available-values-for-a-report-parameter"></a>Agregar, cambiar o eliminar los valores disponibles para un parámetro de informe
   Después de crear un parámetro de informe, puede especificar la lista de valores disponibles que verá el usuario. La existencia de una lista de valores disponibles limita las opciones del usuario a únicamente los valores válidos para el parámetro.  

@@ -5,18 +5,18 @@ author: MightyPen
 ms.date: 04/16/2018
 ms.prod: sql
 ms.prod_service: connectivity
-ms.component: connect
 ms.suite: sql
 ms.custom: ''
 ms.technology: connectivity
 ms.topic: conceptual
 ms.reviewer: meetb
 ms.author: genemi
-ms.openlocfilehash: f281fff6085048bb5918901a9e12af702b71b3e1
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: cfb1ac82894ef8fed001077d54665c9f89239787
+ms.sourcegitcommit: f16003fd1ca28b5e06d5700e730f681720006816
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/11/2018
+ms.locfileid: "35306224"
 ---
 # <a name="homepage-for-client-programming-to-microsoft-sql-server"></a>Página principal de programación para Microsoft SQL Server del cliente
 
@@ -29,7 +29,7 @@ Bienvenido a la página principal sobre programación para interactuar con Micro
 - Muestra las áreas y subáreas de la documentación jerárquica para determinados idiomas, si procede.
 
 
-#### <a name="azure-sql-database"></a>Azure SQL Database
+#### <a name="azure-sql-database"></a>Se aplica a: Base de datos SQL de Azure
 
 En cualquier lenguaje determinado, el código que se conecta a SQL Server es casi idéntico al código para conectarse a la base de datos de SQL Azure.
 
@@ -199,7 +199,7 @@ Algunos controladores de conectividad usan ODBC internamente.
 El contenido ODBC en esta sección se centra en obtener acceso a SQL Server o base de datos de SQL Azure, desde C++. La tabla siguiente muestra un esquema aproximado de la documentación principal para ODBC.
 
 
-| Área | Subárea | Description |
+| Área | Subárea | Descripción |
 | :--- | :------ | :---------- |
 | [ODBC para C++](./odbc/index.md) | Raíz de la documentación. |
 | [Linux y Mac](./odbc/linux-mac/index.md) | &nbsp; | Información sobre el uso de ODBC en los sistemas operativos Linux o Mac OS. |
@@ -252,7 +252,7 @@ Puede utilizar Python para interactuar con SQL Server.
 
 #### <a name="documentation"></a>Documentación
 
-| Área | Description |
+| Área | Descripción |
 | :--- | :---------- |
 | [Python a SQL Server](./python/index.md) | Raíz de la documentación. |
 | [controlador pymssql](./python/pymssql/index.md) | Microsoft no pueda mantener o probar el controlador pymssql.<br /><br />El controlador de conexión de pymssql es una interfaz sencilla para bases de datos SQL, para su uso en programas de Python. Pymssql se basa en uso para proporcionar una interfaz de la API de DB Python (PEP 249) a Microsoft SQL Server. |

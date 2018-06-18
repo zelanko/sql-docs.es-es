@@ -2,8 +2,6 @@
 title: Cómo colaborar en la documentación de SQL Server | Microsoft Docs
 ms.date: 04/12/2018
 ms.prod: sql
-ms.prod_service: sql
-ms.component: sql-non-specified
 ms.reviewer: ''
 ms.suite: sql
 ms.custom: ''
@@ -14,11 +12,12 @@ author: rothja
 ms.author: jroth
 manager: craigg
 monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
-ms.openlocfilehash: 41bdbc55a67865e195ea06a10610af8224edf06b
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 508dd4a658810bb6c62c1b4cf7eb067d9ccc563d
+ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/11/2018
+ms.locfileid: "35288764"
 ---
 # <a name="how-to-contribute-to-sql-server-documentation"></a>Cómo colaborar en la documentación de SQL Server
 
@@ -75,7 +74,7 @@ Para colaborar con este método, consulte los siguientes artículos:
 - [Creación de una cuenta de GitHub](https://docs.microsoft.com/contribute/get-started-setup-github)
 - [Instalación de herramientas de creación de contenido](https://docs.microsoft.com/contribute/get-started-setup-tools)
 - [Configuración local de un repositorio de Git](https://docs.microsoft.com/contribute/get-started-setup-local)
-- [Uso de herramientas para la colaboración](https://docs.microsoft.com/contribute/full-workflow)
+- [Uso de herramientas para la colaboración](https://docs.microsoft.com/contribute/how-to-write-workflows-majo)
 
 Si envía una solicitud de incorporación de cambios con cambios importantes en la documentación, recibirá un comentario en GitHub en el que se le pedirá que envíe un **contrato de licencia de colaboración (CLA)** en línea. Debe cumplimentar el formulario en línea para que se pueda aceptar la solicitud de incorporación de cambios.
 
@@ -94,7 +93,7 @@ En esta sección se muestran instrucciones adicionales sobre cómo trabajar en e
 
 El repositorio [sql-docs](https://github.com/MicrosoftDocs/sql-docs) usa muchas carpetas estándares para organizar el contenido.
 
-| Carpeta | Description |
+| Carpeta | Descripción |
 |---|---|
 | [docs](https://github.com/MicrosoftDocs/sql-docs/tree/live/docs) | Contiene todo el contenido publicado de SQL Server. Las subcarpetas organizan de forma lógica distintas áreas del contenido. |
 | [docs/includes](https://github.com/MicrosoftDocs/sql-docs/tree/live/docs/includes) | Contiene archivos de inclusión. Estos archivos son bloques de contenido que se pueden incluir en uno o más temas. |
@@ -138,5 +137,3 @@ Explore el [repositorio sql-docs](https://github.com/MicrosoftDocs/sql-docs) en 
 Busque un artículo, envíe un cambio y ayude a la comunidad de SQL Server. 
 
 ¡Gracias!
-
-

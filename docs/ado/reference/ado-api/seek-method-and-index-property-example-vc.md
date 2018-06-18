@@ -2,7 +2,6 @@
 title: Método Seek y ejemplo de la propiedad de índice (VC ++) | Documentos de Microsoft
 ms.prod: sql
 ms.prod_service: connectivity
-ms.component: ado
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
@@ -20,11 +19,12 @@ caps.latest.revision: 11
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 4f2561dfb1d7c934f909f894f4227b538232a8e3
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 95bb888ad6bc57ec6fb29e94237953d86f6b0582
+ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/11/2018
+ms.locfileid: "35281584"
 ---
 # <a name="seek-method-and-index-property-example-vc"></a>Método Seek y ejemplo de la propiedad de índice (VC ++)
 Este ejemplo se utiliza la [Recordset](../../../ado/reference/ado-api/recordset-object-ado.md) del objeto [Seek](../../../ado/reference/ado-api/seek-method.md) método y [índice](../../../ado/reference/ado-api/index-property.md) propiedad junto con un determinado ***Id. de empleado***, para buscar el nombre del empleado en el ***empleados*** tabla de la base de datos Neptuno.  

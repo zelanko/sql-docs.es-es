@@ -69,13 +69,13 @@
 #### [Analizar datos en el contexto del proceso local](tutorials/deepdive-analyze-data-in-local-compute-context.md)
 #### [Mover datos entre SQL Server y el archivo XDF](tutorials/deepdive-move-data-between-sql-server-and-xdf-file.md)
 #### [Crear una simulación sencilla](tutorials/deepdive-create-a-simple-simulation.md)
-### [R incrustado en procedimientos almacenados y funciones](tutorials/sqldev-in-database-r-for-sql-developers.md)
-#### [1: obtener datos y las secuencias de comandos](tutorials/sqldev-download-the-sample-data.md)
-#### [2: configurar el entorno](r/sqldev-import-data-to-sql-server-using-powershell.md)
-#### [3 - visualizar datos mediante R en los procedimientos almacenados](tutorials/sqldev-explore-and-visualize-the-data.md)
-#### [4 - crear características de datos con R en funciones de T-SQL](tutorials/sqldev-create-data-features-using-t-sql.md)
-#### [5 - entrenar y guardar en SQL](r/sqldev-train-and-save-a-model-using-t-sql.md)
-#### [6 - predecir los resultados](tutorials/sqldev-operationalize-the-model.md)
+### [R insertado en procedimientos y funciones almacenados](tutorials/sqldev-in-database-r-for-sql-developers.md)
+#### [1. Obtener datos y scripts](tutorials/sqldev-download-the-sample-data.md)
+#### [2. Configurar el entorno](r/sqldev-import-data-to-sql-server-using-powershell.md)
+#### [3. Visualizar datos mediante R en los procedimientos almacenados](tutorials/sqldev-explore-and-visualize-the-data.md)
+#### [4. Crear características de datos con R en funciones de T-SQL](tutorials/sqldev-create-data-features-using-t-sql.md)
+#### [5.-Entrenar y guardar en SQL](r/sqldev-train-and-save-a-model-using-t-sql.md)
+#### [6. Predecir los resultados](tutorials/sqldev-operationalize-the-model.md)
 
 ## [Python](tutorials/sql-server-python-tutorials.md)
 ### [Python: Ejecutar Python mediante T-SQL](tutorials/run-python-using-t-sql.md)
@@ -104,7 +104,7 @@
 #### [Uso de RevoScaleR](r/use-revoscaler-to-manage-r-packages.md)
 ##### [Habilitación de la administración de paquetes de R remota](r/r-package-how-to-enable-or-disable.md)
 ##### [Sincronización de paquetes de R](r/package-install-uninstall-and-sync.md)
-#### [Crear un repositorio de miniCRAN](r/create-a-local-package-repository-using-minicran.md)
+#### [Creación de un repositorio de miniCRAN](r/create-a-local-package-repository-using-minicran.md)
 #### [Sugerencias para usar paquetes de R](r/packages-installed-in-user-libraries.md)
 
 ## Modelado y exploración de datos
@@ -134,7 +134,7 @@
 ### [Modificar el grupo de cuentas de usuario de SQL Server Machine Learning Services](r/modify-the-user-account-pool-for-sql-server-r-services.md)
 ### [Agregar SQLRUserGroup como usuario de base de datos](r/add-sqlrusergroup-to-database.md)
 ### [Implementar y usar modelos mediante servicios web](operationalization-with-mrsdeploy.md)
-### [Administrar y supervisar soluciones](r/managing-and-monitoring-r-solutions.md
+### [Administración y supervisión de soluciones](r/managing-and-monitoring-r-solutions.md)
 ### [Regulación de recursos para Machine Learning Services](r/resource-governance-for-r-services.md)
 ### [Creación de grupos de recursos para el aprendizaje automático](r/how-to-create-a-resource-pool-for-r.md)
 ### [Eventos extendidos de Machine Learning Services](r/extended-events-for-sql-server-r-services.md)
@@ -159,8 +159,8 @@
 ## [Configurar una máquina virtual](r/installing-sql-server-r-services-on-an-azure-virtual-machine.md)
 ## [Solucionar problemas](machine-learning-troubleshooting-faq.md)
 ### [Recopilación de datos](data-collection-ml-troubleshooting-process.md)
-### [Instalación y actualización de errores](r/upgrade-and-installation-faq-sql-server-r-services.md)
-### [LaunchPad y errores de ejecución de script externo](common-issues-external-script-execution.md)
+### [Errores de instalación y actualización](r/upgrade-and-installation-faq-sql-server-r-services.md)
+### [LaunchPad y errores de ejecución de script externos](common-issues-external-script-execution.md)
 ### [Errores de scripting de R](r-script-execution-errors.md)
 
 ## Blogs
@@ -170,4 +170,4 @@
 
 ## Foros
 ### [SQL Server](https://social.msdn.microsoft.com/Forums/sqlserver/home?category=sqlserver)
-### [Servidor de aprendizaje automático](https://social.msdn.microsoft.com/Forums/home?forum=MicrosoftR)
+### [Machine Learning Server](https://social.msdn.microsoft.com/Forums/home?forum=MicrosoftR)

@@ -1,17 +1,18 @@
 ---
-title: Forzar la conmutación por error para el grupo de disponibilidad de SQL Server
-description: Forzar la conmutación por error para el grupo de disponibilidad con el tipo de clúster NONE
+title: Forzar la conmutación por error para grupos de disponibilidad de SQL Server
+description: Forzar la conmutación por error para grupos de disponibilidad con el tipo de clúster NONE
 services: ''
 author: MikeRayMSFT
 ms.topic: include
 ms.date: 02/05/2018
 ms.author: mikeray
 ms.custom: include file
-ms.openlocfilehash: f5655e73481d830c848aea34c4a4f49613be0913
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 19bf9ad54bee8b14796144d002e97c6eead541aa
+ms.sourcegitcommit: 9e83f308008c9e0da505a6064f652c638b8dfe76
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/13/2018
+ms.locfileid: "35513069"
 ---
 Cada grupo de disponibilidad tiene solo una réplica principal. La réplica principal permite lecturas y escrituras. Para cambiar la réplica principal, puede efectuar una conmutación por error. En un grupo de disponibilidad de alta disponibilidad, el administrador de clústeres automatiza el proceso de conmutación por error. En un grupo de disponibilidad con el tipo de clúster NONE, el proceso de conmutación por error es manual. 
 
@@ -24,7 +25,7 @@ Hay dos maneras de efectuar una conmutación por error de la réplica principal 
 
 Use este método si la réplica principal no está disponible y no se puede recuperar. 
 
-Para forzar una conmutación por error con pérdida de datos, conéctese a la instancia de SQL Server que hospeda la réplica secundaria de destino y ejecute lo siguiente:
+Para forzar una conmutación por error con pérdida de datos, conéctese a la instancia de SQL Server que hospeda la réplica secundaria de destino y ejecute el comando siguiente:
 
 ```SQL
 ALTER AVAILABILITY GROUP [ag1] FORCE_FAILOVER_ALLOW_DATA_LOSS;
@@ -70,7 +71,7 @@ Para realizar la conmutación por error manual sin pérdida de datos:
 
    Este valor garantiza que todas las transacciones activas se confirman en la réplica principal y en, al menos, una réplica secundaria sincrónica. 
 
-4. Degrade la réplica principal a una réplica secundaria. Una vez degradada la réplica principal, esta será de solo lectura. Ejecute este comando en la instancia de SQL Server que hospeda la réplica principal para actualizar el rol a `SECONDARY`:
+4. Degrade la réplica principal a una réplica secundaria. Una vez degradada la réplica principal, esta será de solo lectura. Ejecute el comando siguiente en la instancia de SQL Server que hospeda la réplica principal para actualizar el rol a `SECONDARY`:
 
    ```SQL
    ALTER AVAILABILITY GROUP [ag1] 
@@ -84,4 +85,4 @@ Para realizar la conmutación por error manual sin pérdida de datos:
    ```  
 
    > [!NOTE] 
-   > Para eliminar un grupo de disponibilidad, use [DROP AVAILABILITY GROUP](https://docs.microsoft.com/en-us/sql/t-sql/statements/drop-availability-group-transact-sql). Para un grupo de disponibilidad creado con el clúster de tipo NONE o EXTERNAL, el comando debe ejecutarse en todas las réplicas que forman parte del grupo de disponibilidad.
+   > Para eliminar un grupo de disponibilidad, use [DROP AVAILABILITY GROUP](https://docs.microsoft.com/en-us/sql/t-sql/statements/drop-availability-group-transact-sql). Para un grupo de disponibilidad creado con el tipo de clúster NONE o EXTERNAL, ejecute el comando en todas las réplicas que forman parte del grupo de disponibilidad.

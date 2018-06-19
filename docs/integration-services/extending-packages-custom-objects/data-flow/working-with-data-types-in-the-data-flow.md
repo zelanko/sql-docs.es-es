@@ -4,10 +4,9 @@ ms.custom: ''
 ms.date: 03/15/2017
 ms.prod: sql
 ms.prod_service: integration-services
-ms.component: extending-packages-custom-objects
 ms.reviewer: ''
 ms.suite: sql
-ms.technology: ''
+ms.technology: integration-services
 ms.tgt_pltfrm: ''
 ms.topic: reference
 applies_to:
@@ -21,11 +20,12 @@ caps.latest.revision: 52
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: ca2120e054527dceaa7470e9afcebfc2f1cf34ec
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 06cc4eed1d3662cbcd7daca749dfda0e5416e19e
+ms.sourcegitcommit: de5e726db2f287bb32b7910831a0c4649ccf3c4c
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/12/2018
+ms.locfileid: "35328829"
 ---
 # <a name="working-with-data-types-in-the-data-flow"></a>Trabajar con tipos de datos del flujo de datos
   Al desarrollar un componente de flujo de datos personalizado en Integration Services, trabaja constantemente con tipos de datos, copiando datos en y fuera de búferes de flujo de datos y transformando valores. La información de este tema le ayuda a elegir los tipos de datos de [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] correctos y a utilizar los métodos correctos al trabajar con ellos.  

@@ -4,11 +4,9 @@ ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: integration-services
-ms.component: control-flow
 ms.reviewer: ''
 ms.suite: sql
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
@@ -22,11 +20,12 @@ caps.latest.revision: 48
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 20ce53ebc4de2694039019857264b5821f3c6f2d
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 1d27f27154fe4faa1f028c53aafd7db40f20e938
+ms.sourcegitcommit: de5e726db2f287bb32b7910831a0c4649ccf3c4c
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/12/2018
+ms.locfileid: "35333279"
 ---
 # <a name="integration-services-containers"></a>Contenedores de Integration Services
   Los contenedores son objetos de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] que proporcionan estructura a los paquetes y servicios a las tareas. Permiten repetir flujos de control en paquetes y agrupan tareas y contenedores en unidades de trabajo significativas. Los contenedores pueden incluir otros contenedores, además de tareas.  
@@ -42,7 +41,7 @@ ms.lasthandoff: 05/03/2018
 ## <a name="container-types"></a>Tipos de contenedor  
  [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] proporciona cuatro tipos de contenedores para generar paquetes. En la tabla siguiente se muestran los tipos de contenedor.  
   
-|Contenedor|Description|  
+|Contenedor|Descripción|  
 |---------------|-----------------|  
 |[Contenedor Foreach Loop](../../integration-services/control-flow/foreach-loop-container.md)|Ejecuta un flujo de control repetidamente mediante un enumerador.|  
 |[Contenedor de bucles For](../../integration-services/control-flow/for-loop-container.md)|Ejecuta un flujo de control repetidamente probando una condición.|  
@@ -54,7 +53,7 @@ ms.lasthandoff: 05/03/2018
 ### <a name="summary-of-container-properties"></a>Resumen de propiedades de contenedor  
  Todos los tipos de contenedor tienen un conjunto de propiedades comunes. Si se crean paquetes con las herramientas gráficas de [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] , en la ventana Propiedades se enumeran las siguientes propiedades de los contenedores de bucles Foreach, bucles For y secuencias. Las propiedades del contenedor del host de la tarea se configuran como parte de la configuración de la tarea que el host de la tarea encapsula. Las propiedades del host de la tarea se establecen al configurar la tarea.  
   
-|Propiedad|Description|  
+|Propiedad|Descripción|  
 |--------------|-----------------|  
 |**DelayValidation**|Valor booleano que indica si la validación del contenedor se retrasa hasta el tiempo de ejecución. El valor predeterminado de esta propiedad es **False**.<br /><br /> Para obtener más información, vea <xref:Microsoft.SqlServer.Dts.Runtime.DtsContainer.DelayValidation%2A>.|  
 |**Descripción**|Descripción del contenedor. La propiedad contiene una cadena, pero puede estar en blanco.<br /><br /> Para obtener más información, vea <xref:Microsoft.SqlServer.Dts.Runtime.DtsContainer.Description%2A>.|  

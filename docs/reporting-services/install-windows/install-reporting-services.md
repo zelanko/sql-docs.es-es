@@ -3,7 +3,6 @@ title: Instalación de SQL Server Reporting Services (2017 y posterior) | Micros
 ms.date: 12/20/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
-ms.component: install-windows
 ms.reviewer: ''
 ms.suite: pro-bi
 ms.custom: ''
@@ -13,11 +12,12 @@ ms.topic: get-started-article
 author: markingmyname
 ms.author: maghan
 manager: kfile
-ms.openlocfilehash: 3504d97184804512f70c35c36c5c1c0e528c30ab
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 868c812a854c39b1c75a3bc89d792eabe04483f8
+ms.sourcegitcommit: f16003fd1ca28b5e06d5700e730f681720006816
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/11/2018
+ms.locfileid: "35322574"
 ---
 # <a name="install-sql-server-reporting-services-2017-and-later"></a>Instalación de SQL Server Reporting Services (2017 y posterior)
 
@@ -100,7 +100,7 @@ Se crea un servicio de Windows como parte de la instalación. Aparece como **SQL
 
 Las reservas de direcciones URL están compuestas de un prefijo, un nombre de host, un puerto y un directorio virtual:
 
-|Parte|Description|
+|Parte|Descripción|
 |----------|-----------------|
 |Prefijo|El prefijo predeterminado es HTTP. Si ha instalado anteriormente un certificado de Capa de sockets seguros (SSL), el programa de instalación intenta crear reservas de direcciones URL que usen el prefijo HTTPS.|
 |Nombre de host|El nombre de host predeterminado es un carácter comodín (+) seguro. Especifica que el servidor de informes acepta cualquier solicitud HTTP en el puerto designado para cualquier nombre de host que se resuelva en el equipo, incluidos `http://<computername>/reportserver`, `http://localhost/reportserver` o `http://<IPAddress>/reportserver.`.|

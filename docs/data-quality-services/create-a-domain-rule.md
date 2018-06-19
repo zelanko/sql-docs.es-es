@@ -4,7 +4,6 @@ ms.custom: ''
 ms.date: 11/08/2011
 ms.prod: sql
 ms.prod_service: data-quality-services
-ms.component: data-quality-services
 ms.reviewer: ''
 ms.suite: sql
 ms.technology:
@@ -19,11 +18,12 @@ caps.latest.revision: 28
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 3b1103a3528674c8541aa04569e0d63a17ddcefc
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 2a90d530044eb24193f899f0926b392bec8dfe92
+ms.sourcegitcommit: f16003fd1ca28b5e06d5700e730f681720006816
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/11/2018
+ms.locfileid: "35310134"
 ---
 # <a name="create-a-domain-rule"></a>Cree una regla de dominio
 
@@ -117,7 +117,7 @@ ms.lasthandoff: 05/03/2018
   
  Puede elegir entre distintas alternativas al crear una regla de dominio. Por ejemplo, para validar si los valores comienzan por la letra A, B o C, podría crear una regla simple con una condición compleja (como una expresión regular con caracteres de barra vertical), o una regla compleja que contenga varias condiciones simples. Un ejemplo de la primera regla sería “El valor coincide con la expresión regular (^A|^B|^C)”. Un ejemplo de la segunda regla sería “’El valor comienza por A’ OR ‘El valor comienza por B’ OR ‘El valor comienza por C’”.  
   
-|Condición|Description|Ejemplo|  
+|Condición|Descripción|Ejemplo|  
 |---------------|-----------------|-------------|  
 |La longitud es igual a|Solo serán válidos los valores que constan del número de caracteres designado por el operando.|Operando de ejemplo: 3<br /><br /> Valor válido: BB1<br /><br /> Valor no válido: AA|  
 |La longitud es mayor o igual que|Solo serán válidos los valores que constan al menos del número de caracteres designado por el operando.|Operando de ejemplo: 3<br /><br /> Valores válidos: BB1, BBAA<br /><br /> Valor no válido: AA|  

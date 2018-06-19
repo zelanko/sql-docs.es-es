@@ -4,11 +4,9 @@ ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: integration-services
-ms.component: data-flow
 ms.reviewer: ''
 ms.suite: sql
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.tgt_pltfrm: ''
 ms.topic: conceptual
 f1_keywords:
@@ -26,11 +24,12 @@ caps.latest.revision: 40
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 5dbd9dc8fe274818305954c2bc1df137472db8ee
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 1404eb940dc99453b4a991b10c2a0be8651b1ef8
+ms.sourcegitcommit: de5e726db2f287bb32b7910831a0c4649ccf3c4c
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/12/2018
+ms.locfileid: "35333149"
 ---
 # <a name="dimension-processing-destination"></a>procesamiento de dimensiones, destino
   El destino de Procesamiento de dimensiones carga y procesa una dimensión de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] . Para más información sobre las dimensiones, vea [Dimensiones &#40;Analysis Services - Datos multidimensionales&#41;](../../analysis-services/multidimensional-models-olap-logical-dimension-objects/dimensions-analysis-services-multidimensional-data.md).  
@@ -74,7 +73,7 @@ ms.lasthandoff: 05/03/2018
  **Método de procesamiento**  
  En la lista, seleccione el método de procesamiento a aplicar a la dimensión seleccionada. El valor predeterminado de esta opción es **Completa**.  
   
-|Valor|Description|  
+|Valor|Descripción|  
 |-----------|-----------------|  
 |**Agregar (incremental)**|Realiza un procesamiento incremental de la dimensión.|  
 |**Completa**|Realiza un procesamiento completo de la dimensión.|  
@@ -106,7 +105,7 @@ ms.lasthandoff: 05/03/2018
  **Acción del error de clave**  
  Permite especificar la forma de controlar registros que tienen valores de clave no aceptables.  
   
-|Valor|Description|  
+|Valor|Descripción|  
 |-----------|-----------------|  
 |**ConvertToUnknown**|Convierte el valor de clave no aceptable en el valor **UnknownMember** .|  
 |**DiscardRecord**|Descarta el registro.|  
@@ -123,7 +122,7 @@ ms.lasthandoff: 05/03/2018
  **Acción ante el error**  
  Especifica la acción que se realizará cuando se alcance el umbral de error (si ha seleccionado **Detenerse ante errores**).  
   
-|Valor|Description|  
+|Valor|Descripción|  
 |-----------|-----------------|  
 |**StopProcessing**|Detiene el procesamiento.|  
 |**StopLogging**|Detiene el registro de errores.|  
@@ -131,7 +130,7 @@ ms.lasthandoff: 05/03/2018
  **Clave no encontrada**  
  Especifica la acción que debe llevarse a cabo en caso de que se produzca un error de clave no encontrada. Este valor es **ReportAndContinue**de forma predeterminada.  
   
-|Valor|Description|  
+|Valor|Descripción|  
 |-----------|-----------------|  
 |**IgnoreError**|Omite el error y reanuda el procesamiento.|  
 |**ReportAndContinue**|Informa del error y reanuda el procesamiento.|  
@@ -140,7 +139,7 @@ ms.lasthandoff: 05/03/2018
  **Clave duplicada**  
  Especifica la acción que debe llevarse a cabo en caso de que se produzca un error de clave duplicada. Este valor es **IgnoreError**de forma predeterminada.  
   
-|Valor|Description|  
+|Valor|Descripción|  
 |-----------|-----------------|  
 |**IgnoreError**|Omite el error y reanuda el procesamiento.|  
 |**ReportAndContinue**|Informa del error y reanuda el procesamiento.|  
@@ -149,7 +148,7 @@ ms.lasthandoff: 05/03/2018
  **Clave NULL convertida en desconocida**  
  Especifica la acción que se realizará cuando una clave NULL se convierta al valor **UnknownMember** . Este valor es **IgnoreError**de forma predeterminada.  
   
-|Valor|Description|  
+|Valor|Descripción|  
 |-----------|-----------------|  
 |**IgnoreError**|Omite el error y reanuda el procesamiento.|  
 |**ReportAndContinue**|Informa del error y reanuda el procesamiento.|  
@@ -158,7 +157,7 @@ ms.lasthandoff: 05/03/2018
  **Clave NULL no permitida**  
  Especifica la acción que debe llevarse a cabo cuando no se permiten claves NULL y se encuentra una clave NULL. Este valor es **ReportAndContinue**de forma predeterminada.  
   
-|Valor|Description|  
+|Valor|Descripción|  
 |-----------|-----------------|  
 |**IgnoreError**|Omite el error y reanuda el procesamiento.|  
 |**ReportAndContinue**|Informa del error y reanuda el procesamiento.|  

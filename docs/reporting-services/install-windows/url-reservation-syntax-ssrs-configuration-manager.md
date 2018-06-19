@@ -4,7 +4,6 @@ ms.custom: ''
 ms.date: 05/18/2016
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
-ms.component: install-windows
 ms.reviewer: ''
 ms.suite: pro-bi
 ms.technology: ''
@@ -17,11 +16,12 @@ caps.latest.revision: 7
 author: markingmyname
 ms.author: maghan
 manager: kfile
-ms.openlocfilehash: 969c505870bf0354f9b183d940643c641453946f
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 39057237b4b62248cb3af260d0b4bb2cee1dff15
+ms.sourcegitcommit: f16003fd1ca28b5e06d5700e730f681720006816
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/11/2018
+ms.locfileid: "35322714"
 ---
 # <a name="url-reservation-syntax--ssrs-configuration-manager"></a>Sintaxis de reserva de direcciones URL (Administrador de configuración de SSRS)
   En este tema se describen los componentes de las cadenas de direcciones URL para el servicio web del servidor de informes y el Administrador de informes. La cadena de las direcciones URL que se almacena internamente tiene una estructura diferente de una dirección URL que se escribe en la barra de direcciones de una ventana del explorador. La cadena de reserva de direcciones URL aparece en la ventana Resultados de la herramienta Configuración de Reporting Services al configurar una dirección URL y en el archivo RSReportServer.config. Saber cómo se define la cadena de dirección URL puede ser útil al solucionar problemas de la reserva de direcciones URL o al consultar HTTP.SYS para ver las reservas de direcciones URL internas que se definen en el servidor.  
@@ -35,7 +35,7 @@ ms.lasthandoff: 05/03/2018
   
  En la tabla siguiente se describe cada propiedad y qué valores son válidos para cada una.  
   
-|Propiedad|Valores válidos|Description|  
+|Propiedad|Valores válidos|Descripción|  
 |--------------|------------------|-----------------|  
 |Scheme|http o https|Prefijos para conexiones SSL y de otro tipo.|  
 |Hostname|El comodín seguro (+) es igual al valor **(Todas asignadas)** de la dirección IP.<br /><br /> El comodín (\*) poco seguro es igual a una dirección IP de **(Todas sin asignar)**.<br /><br /> Nombre de dominio completo<br /><br /> Nombre de equipo<br /><br /> Dirección IP (IPV4)<br /><br /> Dirección IP (IPV6)|Identifica el servidor en la red.<br /><br /> El carácter comodín seguro (+) es el valor predeterminado. HTTP.SYS aceptará todas las solicitudes en todos los adaptadores de red de una combinación de puerto y directorio virtual determinados. El servidor de informes aceptará cualquier solicitud en el puerto.<br /><br /> Comodín poco seguro (\*). HTTP.SYS acepta todas las solicitudes no administradas por otras reservas de direcciones URL en todos los adaptadores de red para una combinación de puerto y directorio virtual determinados.<br /><br /> El nombre de equipo es el nombre NETBIOS del equipo en la red.<br /><br /> El nombre de dominio completo incluye la dirección de dominio y el nombre del servidor, como se registre con un controlador de dominio o servidor de nombres del dominio público.<br /><br /> La dirección IP (IPV4) es la de un adaptador de red del equipo en formato IPV4: *nnn.nnn.nnn.nnn*.<br /><br /> La dirección IP (IPV6) es la de un adaptador de red del equipo en formato IPV6: \<encabezado>:\<encabezado>:*nnn.nnn.nnn.nnn*.|  

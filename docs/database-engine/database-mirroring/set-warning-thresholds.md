@@ -4,7 +4,6 @@ ms.custom: ''
 ms.date: 03/07/2017
 ms.prod: sql
 ms.prod_service: high-availability
-ms.component: database-mirroring
 ms.reviewer: ''
 ms.suite: sql
 ms.technology: high-availability
@@ -17,11 +16,12 @@ caps.latest.revision: 28
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 51f4f099935d92f95be67b0964e9ed3a52bc764f
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 631f734e2ade09264c62bfb6392f2f7b3edd8fcd
+ms.sourcegitcommit: f16003fd1ca28b5e06d5700e730f681720006816
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/11/2018
+ms.locfileid: "35312324"
 ---
 # <a name="set-warning-thresholds"></a>Establecer umbrales de advertencia
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -70,7 +70,7 @@ ms.lasthandoff: 05/03/2018
  **Advertencias**  
  Muestra las advertencias admitidas:  
   
-|Advertencia|Description|  
+|Advertencia|Descripción|  
 |-------------|-----------------|  
 |**Advertir si el registro sin enviar sobrepasa el umbral**|El umbral indica el número de kilobytes (KB) del registro sin enviar en la cola de envío del servidor principal.|  
 |**Advertir si el registro sin restaurar sobrepasa el umbral**|El umbral indica el número de KB de la cola rehecha en la instancia del servidor reflejado.|  

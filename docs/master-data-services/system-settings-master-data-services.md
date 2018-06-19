@@ -4,7 +4,6 @@ ms.custom: ''
 ms.date: 03/01/2017
 ms.prod: sql
 ms.prod_service: mds
-ms.component: non-specific
 ms.reviewer: ''
 ms.suite: sql
 ms.technology:
@@ -19,11 +18,12 @@ caps.latest.revision: 17
 author: leolimsft
 ms.author: lle
 manager: craigg
-ms.openlocfilehash: 19f244d7febe15f03b5510ba484b985044ad3548
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 9f4162789cf09c326b3b5d016e22bafed9fe790b
+ms.sourcegitcommit: de5e726db2f287bb32b7910831a0c4649ccf3c4c
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/12/2018
+ms.locfileid: "35330139"
 ---
 # <a name="system-settings-master-data-services"></a>Configuración del sistema (Master Data Services)
 
@@ -55,7 +55,7 @@ ms.lasthandoff: 05/03/2018
   
 ##  <a name="General"></a> Configuración general  
   
-|Configuración del Administrador de configuración|Configuración del sistema|Description|  
+|Configuración del Administrador de configuración|Configuración del sistema|Descripción|  
 |-----------------------------------|--------------------|-----------------|  
 |**Tiempo de espera de conexión de la base de datos**|**DatabaseConnectionTimeOut**|El número de segundos que la base de datos de [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] espera para que una conexión se complete. Si la conexión no se completa en este tiempo, la conexión se cancela y se devuelve un error. El valor predeterminado es **60** segundos (1 minuto).|  
 |**Tiempo de espera de conexión de un comando de base de datos**|**DatabaseCommandTimeOut**|El número de segundos que la base de datos de [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] espera para que un comando se complete. Si el comando no se completa dentro de este tiempo, se cancela y se devuelve un error. El valor predeterminado es **3600** segundos (60 minutos).|  
@@ -68,7 +68,7 @@ ms.lasthandoff: 05/03/2018
   
 ##  <a name="Versions"></a> Configuración de la administración de versiones  
   
-|Configuración del Administrador de configuración|Configuración del sistema|Description|  
+|Configuración del Administrador de configuración|Configuración del sistema|Descripción|  
 |-----------------------------------|--------------------|-----------------|  
 |**Copiar solo las versiones confirmadas**|**CopyOnlyCommittedVersion**|En [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)], determina si los usuarios pueden copiar versiones de modelos con el estado **Confirmado**o las versiones con cualquier tipo de estado. El valor predeterminado es **Sí** o **1**, que indica que los usuarios solo pueden copiar las versiones **Confirmadas** . Cambie a **No** o **2** , para permitir que los usuarios copien todas las versiones.|  
   
@@ -76,7 +76,7 @@ ms.lasthandoff: 05/03/2018
   
 ##  <a name="Staging"></a> Configuración del almacenamiento provisional  
   
-|Configuración del Administrador de configuración|Configuración del sistema|Description|  
+|Configuración del Administrador de configuración|Configuración del sistema|Descripción|  
 |-----------------------------------|--------------------|-----------------|  
 |**Registrar todas las transacciones de almacenamiento provisional**|**StagingTransactionLogging**|Solo se aplica a SQL Server 2008 R2. Determina si se van a registrar o no todas las transacciones cuando se cargan los registros de almacenamiento provisional en la base de datos de [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] . El valor predeterminado es **Off** o **2**. Cambie a **On** o **1** para activar el registro.|  
 |**Intervalo del lote de almacenamiento provisional**|**StagingBatchInterval**|En el área funcional de [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)] **de** , número de segundos después de seleccionar **Iniciar lotes** en que se procesa un lote. El valor predeterminado es **60** segundos (1 minuto).|  
@@ -85,7 +85,7 @@ ms.lasthandoff: 05/03/2018
   
 ##  <a name="Explorer"></a> Configuración del Explorador  
   
-|Configuración del Administrador de configuración|Configuración del sistema|Description|  
+|Configuración del Administrador de configuración|Configuración del sistema|Descripción|  
 |-----------------------------------|--------------------|-----------------|  
 |**Número predeterminado de miembros en la jerarquía**|**HierarchyChildNodeLimit**|En el área funcional de [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)] **de** , número máximo de miembros que se muestran en cada nodo de la jerarquía antes de que se muestre **...más...** . Puede hacer clic en **...más...** para mostrar el grupo siguiente de miembros. El valor predeterminado es **50**.|  
 |**Mostrar nombres en jerarquía de manera predeterminada**|**ShowNamesInHierarchy**|En el área funcional del [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)] **de** , determina la configuración predeterminada que se selecciona al ver jerarquías.<br /><br /> El valor predeterminado es **Sí** o **1**, que indica que se muestran el nombre y el código de cada miembro. Cambie a **No** o **2** para mostrar solo el código.|  
@@ -94,14 +94,14 @@ ms.lasthandoff: 05/03/2018
   
 ##  <a name="xls"></a> Configuración del complemento para Excel  
   
-|Configuración del Administrador de configuración|Configuración del sistema|Description|  
+|Configuración del Administrador de configuración|Configuración del sistema|Descripción|  
 |-----------------------------------|--------------------|-----------------|  
 |Mostrar el complemento del texto de Excel en la página principal del sitio web|ShowAddInText|En la página principal de [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)] , muestra un vínculo para que los usuarios puedan descargar [!INCLUDE[ssMDSXLS](../includes/ssmdsxls-md.md)].|  
 |Ruta de instalación del complemento de Excel en la página principal del sitio web|AddInURL|En la página principal de [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)] , si se muestra el vínculo a [!INCLUDE[ssMDSXLS](../includes/ssmdsxls-md.md)] , la ubicación a la que se dirigen los usuarios al hacer clic en el vínculo.|  
   
 ##  <a name="BusinessRules"></a> Configuración de las reglas de negocios  
   
-|Configuración del Administrador de configuración|Configuración del sistema|Description|  
+|Configuración del Administrador de configuración|Configuración del sistema|Descripción|  
 |-----------------------------------|--------------------|-----------------|  
 |**Incrementar nuevas reglas de negocios en**|**BusinessRuleDefaultPriorityIncrement**|En el área funcional de [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)] **de** , número en que se incrementa la prioridad de cada nueva regla de negocio. El valor predeterminado es **10**.|  
 |**Número de miembros a los que aplicar las reglas de negocios**|**BusinessRuleRealtimeMemberCount**|En el área funcional [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)] **de** , número máximo de miembros en la cuadrícula al que se van a aplicar las reglas de negocios. En [!INCLUDE[ssMDSXLS](../includes/ssmdsxls-md.md)], número máximo de miembros en la hoja de cálculo activa a los que se van a aplicar reglas de negocios. El valor predeterminado es **10000**.|  
@@ -110,7 +110,7 @@ ms.lasthandoff: 05/03/2018
   
 ##  <a name="Notifications"></a> Configuración de notificaciones  
   
-|Configuración del Administrador de configuración|Configuración del sistema|Description|  
+|Configuración del Administrador de configuración|Configuración del sistema|Descripción|  
 |-----------------------------------|--------------------|-----------------|  
 |**Dirección URL de Master Data Manager para notificaciones**|**MDMRootURL**|La dirección URL de la aplicación web de [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)], que se usa en el vínculo en las notificaciones por correo electrónico; por ejemplo, `http://constoso/mds`.|  
 |**Intervalo de las notificaciones de correo electrónico**|**NotificationInterval**|La frecuencia, en segundos, con la que se envían las notificaciones de correo electrónico. El valor predeterminado es **120** segundos (2 minutos).|  
@@ -128,7 +128,7 @@ ms.lasthandoff: 05/03/2018
   
 ##  <a name="Security"></a> Configuración de seguridad  
   
-|Configuración del Administrador de configuración|Configuración del sistema|Description|  
+|Configuración del Administrador de configuración|Configuración del sistema|Descripción|  
 |-----------------------------------|--------------------|-----------------|  
 ||**SecurityMemberProcessInterval**|En el área funcional de [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)] **de** , frecuencia, en segundos, con que se aplican los permisos de usuario y de grupo establecidos en la pestaña **Miembros de la jerarquía** . El valor predeterminado es **3600** segundos (60 minutos).|  
   

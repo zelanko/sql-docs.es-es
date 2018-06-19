@@ -4,7 +4,6 @@ ms.custom: ''
 ms.date: 03/07/2017
 ms.prod: sql
 ms.prod_service: high-availability
-ms.component: database-mirroring
 ms.reviewer: ''
 ms.suite: sql
 ms.technology: high-availability
@@ -19,11 +18,12 @@ caps.latest.revision: 40
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 613c588ff3807aa767b9702a56edabeb1001fa42
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 5a8219948f4d1673d5e7b7b45882c89db0580609
+ms.sourcegitcommit: f16003fd1ca28b5e06d5700e730f681720006816
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/11/2018
+ms.locfileid: "35311954"
 ---
 # <a name="database-mirroring-monitor-overview"></a>Información general del Monitor de creación de reflejo de la base de datos
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -58,7 +58,7 @@ ms.lasthandoff: 05/03/2018
  *\<Status>*  
  Los estados posibles y sus iconos asociados son los siguientes:  
   
-|Icono|Estado|Description|  
+|Icono|Estado|Descripción|  
 |----------|------------|-----------------|  
 |Icono de advertencia|**Unknown**|El monitor no está conectado a ningún asociado. La única información disponible es lo que el monitor almacena en caché.|  
 |Icono de advertencia|**Sincronizando**|El contenido de la base de datos reflejada va por detrás del contenido de la base de datos principal. La instancia de servidor principal envía las entradas de registro a la instancia del servidor reflejado, que aplica los cambios en la base de datos reflejada para confirmarla.<br /><br /> Al inicio de una sesión de creación de reflejo de la base de datos, las bases de datos principal y reflejada se encuentran en este estado.|  
@@ -91,14 +91,14 @@ ms.lasthandoff: 05/03/2018
 ## <a name="action-menu"></a>Menú Acción  
  El menú **Acción** siempre contiene los siguientes comandos:  
   
-|Comando|Description|  
+|Comando|Descripción|  
 |-------------|-----------------|  
 |**Registrar base de datos reflejada...**|Abre el cuadro de diálogo **Registrar base de datos reflejada** . Utilice este cuadro de diálogo para registrar una o varias bases de datos reflejadas en una instancia del servidor determinada, mediante la adición de las bases de datos al Monitor de creación de reflejo de la base de datos. Cuando se agrega una base de datos, el Monitor de creación de reflejo de la base de datos almacena localmente en caché información acerca de la base de datos, sus asociados y el método de conexión a éstos.|  
 |**Administrar conexiones de instancia del servidor...**|Si selecciona este comando, se abre el cuadro de diálogo **Administrar conexiones de instancia del servidor** . En dicho diálogo, puede elegir una instancia del servidor para la que desee especificar credenciales del monitor, que usará al conectarse a un asociado determinado.<br /><br /> Para editar credenciales para un asociado, localice su entrada en la cuadrícula **Instancias del servidor** y haga clic en **Editar** en la fila. Se abrirá el cuadro de diálogo **Conectar al servidor** para ese nombre de instancia del servidor, con los controles de credencial inicializados en el valor actual almacenado en caché. Cambie la información de autenticación según corresponda y haga clic en **Conectar**. Si las credenciales tienen privilegios suficientes, la columna **Conectar utilizando** se actualizará con las nuevas credenciales.|  
   
  Si selecciona una base de datos, el menú **Acción** también contiene los siguientes comandos.  
   
-|Comando|Description|  
+|Comando|Descripción|  
 |-------------|-----------------|  
 |**Eliminar esta base de datos del Registro**|Quita la base de datos seleccionada del Monitor de creación de reflejo de la base de datos.|  
 |**Establecer umbrales de advertencia...**|Abre el cuadro de diálogo **Establecer umbrales de advertencia** . En dicho diálogo, un administrador del sistema puede habilitar o deshabilitar las advertencias para la base de datos en cada uno de los asociados y cambiar el umbral de las advertencias. Es recomendable establecer un umbral para una advertencia específica en los dos asociados, con lo que se puede garantizar que la advertencia persiste si se produce una conmutación por error en la base de datos. El umbral adecuado para cada asociado depende de la capacidad de rendimiento del sistema de dicho asociado.<br /><br /> Un evento solo se escribe en el registro de eventos para un rendimiento si su valor se encuentra en el umbral, o por encima de éste, cuando se actualiza la tabla de estado. Si un valor máximo alcanza el umbral momentáneamente entre las actualizaciones de estado, se pierde dicho máximo.|  

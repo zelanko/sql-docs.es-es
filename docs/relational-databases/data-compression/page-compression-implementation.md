@@ -17,12 +17,12 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 monikerRange: = azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: a66084e2020225bc54a2b5b4419d6221db9c5814
-ms.sourcegitcommit: ee661730fb695774b9c483c3dd0a6c314e17ddf8
+ms.openlocfilehash: 2e66e391c5d30097f714962d1f114fa2b324a5c0
+ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/19/2018
-ms.locfileid: "34323146"
+ms.lasthandoff: 06/19/2018
+ms.locfileid: "35999901"
 ---
 # <a name="page-compression-implementation"></a>Implementación de la compresión de página
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -52,18 +52,18 @@ ms.locfileid: "34323146"
   
  En la siguiente ilustración se muestra un ejemplo de página de una tabla antes de la compresión de prefijo.  
   
- ![Página antes de la compresión del prefijo](../../relational-databases/data-compression/media/skt-tblcompression1c.gif "Página antes de la compresión del prefijo")  
+ ![Página antes de la compresión del prefijo](media/skt-tblcompression1c.gif "Página antes de la compresión del prefijo")  
   
  En la ilustración siguiente se muestra la misma página después de la compresión de prefijo. El prefijo se mueva al encabezado y los valores de columna se cambian a referencias al prefijo.  
   
- ![Página después de la compresión del prefijo](../../relational-databases/data-compression/media/tblcompression2.gif "Página después de la compresión del prefijo")  
+ ![Página después de la compresión del prefijo](media/tblcompression2.gif "Página después de la compresión del prefijo")  
   
  En la primera columna de la primera fila, el valor 4b indica que los primeros cuatro caracteres del prefijo (aaab) están presentes para esa fila, así como el carácter b. De esta forma, el valor resultante será aaabb, que es el valor original.  
   
 ## <a name="dictionary-compression"></a>Compresión de diccionario  
  Una vez completada la compresión de prefijo, se aplica la compresión de diccionario. La compresión de diccionario busca valores repetidos en cualquier lugar de la página y los almacena en el área de CI. A diferencia de la compresión de prefijo, la compresión de diccionario no está restringida a una columna. La compresión de diccionario puede sustituir a los valores repetidos que se producen en cualquier lugar de una página. En la ilustración siguiente se muestra la misma página después de la compresión de diccionario.  
   
- ![Página después de la compresión del diccionario](../../relational-databases/data-compression/media/tblcompression3.gif "Página después de la compresión del diccionario")  
+ ![Página después de la compresión del diccionario](media/tblcompression3.gif "Página después de la compresión del diccionario")  
   
  Tenga en cuenta que se ha hecho referencia al valor 4b desde distintas columnas de la página.  
   

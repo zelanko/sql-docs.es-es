@@ -4,11 +4,9 @@ ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: integration-services
-ms.component: non-specific
 ms.reviewer: ''
 ms.suite: sql
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
@@ -31,11 +29,12 @@ caps.latest.revision: 114
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: a3978535dd221b4df0534b1e559d688d14741168
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 6c795635de7aad15099cb490bf621329a23fcd26
+ms.sourcegitcommit: de5e726db2f287bb32b7910831a0c4649ccf3c4c
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/12/2018
+ms.locfileid: "35331229"
 ---
 # <a name="dtutil-utility"></a>dtutil, utilidad
   La utilidad del símbolo del sistema **dtutil** se usa para administrar paquetes de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] . La utilidad puede copiar, mover, eliminar o comprobar la existencia de un paquete. Estas acciones se pueden realizar en cualquier paquete [!INCLUDE[ssIS](../includes/ssis-md.md)] almacenado en una de estas tres ubicaciones: una base de datos de [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] , el almacén de paquetes [!INCLUDE[ssIS](../includes/ssis-md.md)] y el sistema de archivos. Si la utilidad tiene acceso a un paquete almacenado en **msdb**, el símbolo del sistema puede requerir un nombre de usuario y una contraseña. Si la instancia de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] utiliza Autenticación de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] , el símbolo del sistema requiere un nombre de usuario y una contraseña. Si falta el nombre de usuario, **dtutil** intenta iniciar una sesión en [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] con la Autenticación de Windows. El tipo de almacenamiento del paquete se identifica mediante las opciones **/SQL**, **/FILE**y **/DTS** .  
@@ -88,7 +87,7 @@ dtutil /option [value] [/option [value]]...
   
 #### <a name="parameters"></a>Parámetros  
   
-|Opción|Description|  
+|Opción|Descripción|  
 |------------|-----------------|  
 |/?|Muestra las opciones del símbolo del sistema.|  
 |/C[opy] *location;destinationPathandPackageName*|Especifica una acción para copiar en un paquete [!INCLUDE[ssIS](../includes/ssis-md.md)] . El uso de este parámetro requiere que especifique primero la ubicación del paquete con la opción **/FI**, **/SQ**o **/DT** . A continuación, deberá especificar la ubicación de destino y el nombre del paquete de destino. El argumento *destinationPathandPackageName* especifica en dónde se copia el paquete [!INCLUDE[ssIS](../includes/ssis-md.md)] . Si *location* de destino es **SQL**, también se deben especificar los argumentos *DestUser*, *DestPassword* y *DestServer* en el comando.<br /><br /> Cuando la acción **Copy** encuentra un paquete que ya existe en el destino, **dtutil** pide al usuario que confirme la eliminación del paquete. La respuesta **Y** sobrescribe el paquete y la respuesta **N** finaliza el programa. Cuando el comando incluye el argumento *Quiet* , no aparece ningún mensaje y los paquetes existentes se sobrescriben.|  
@@ -121,7 +120,7 @@ dtutil /option [value] [/option [value]]...
 ## <a name="dtutil-exit-codes"></a>Códigos de salida de dtutil  
  **dtutil** establece un código de salida que le avisa cuando se detectan errores de sintaxis, se usan argumentos incorrectos o se especifican combinaciones no válidas de opciones. En caso contrario, la utilidad presenta el mensaje "La operación se ha realizado correctamente". En la tabla siguiente se muestran los valores que la utilidad **dtutil** puede establecer al salir.  
   
-|Valor|Description|  
+|Valor|Descripción|  
 |-----------|-----------------|  
 |0|La utilidad se ha ejecutado correctamente.|  
 |1|Error de la utilidad.|  

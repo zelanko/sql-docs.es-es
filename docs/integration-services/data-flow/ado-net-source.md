@@ -4,11 +4,9 @@ ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: integration-services
-ms.component: data-flow
 ms.reviewer: ''
 ms.suite: sql
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.tgt_pltfrm: ''
 ms.topic: conceptual
 f1_keywords:
@@ -27,11 +25,12 @@ caps.latest.revision: 101
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 81566c11122cd67e37e1304f1d56760fcae1ce29
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 2f63cd49b5a78a42bdff0ef25f69ca9f55217c48
+ms.sourcegitcommit: de5e726db2f287bb32b7910831a0c4649ccf3c4c
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/12/2018
+ms.locfileid: "35328339"
 ---
 # <a name="ado-net-source"></a>Origen de ADO NET
   El origen de ADO NET consume datos de un proveedor .NET y hace que los datos estén disponibles para el flujo de datos.  
@@ -116,7 +115,7 @@ ms.lasthandoff: 05/03/2018
  **Modo de acceso a datos**  
  Especifique el método para seleccionar datos del origen.  
   
-|Opción|Description|  
+|Opción|Descripción|  
 |------------|-----------------|  
 |Tabla o vista|Recupera datos de una tabla o vista del origen de datos [!INCLUDE[vstecado](../../includes/vstecado-md.md)] .|  
 |Comando SQL|Recupera datos del origen de datos [!INCLUDE[vstecado](../../includes/vstecado-md.md)] mediante una consulta SQL.|  

@@ -4,7 +4,6 @@ ms.custom: ''
 ms.date: 03/01/2017
 ms.prod: sql
 ms.prod_service: data-quality-services
-ms.component: data-quality-services
 ms.reviewer: ''
 ms.suite: sql
 ms.technology:
@@ -21,11 +20,12 @@ caps.latest.revision: 16
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: de49a676fe066941b9575a45cedc4ab6de04a825
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 0fbdc64df58381f91e7729d2a8213b111e944d0b
+ms.sourcegitcommit: f16003fd1ca28b5e06d5700e730f681720006816
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/11/2018
+ms.locfileid: "35311464"
 ---
 # <a name="monitor-dqs-activities"></a>Supervisar las actividades de DQS
 
@@ -141,7 +141,7 @@ ms.lasthandoff: 05/03/2018
   
 3.  Se le pedirá que especifique un nombre y una ubicación para el archivo de Excel que se va a guardar. El archivo de Excel exportado contiene las hojas siguientes:  
   
-    |Nombre de la hoja|Description|  
+    |Nombre de la hoja|Descripción|  
     |----------------|-----------------|  
     |Actividad|Contiene información (columnas) sobre la actividad, como en la cuadrícula de actividades.|  
     |Procesos|Contiene información (columnas) sobre los procesos de la actividad, como en la pestaña **Pasos de la actividad** .|  

@@ -4,7 +4,6 @@ ms.custom: ''
 ms.date: 03/01/2017
 ms.prod: sql
 ms.prod_service: mds
-ms.component: non-specific
 ms.reviewer: ''
 ms.suite: sql
 ms.technology:
@@ -18,11 +17,12 @@ caps.latest.revision: 6
 author: leolimsft
 ms.author: lle
 manager: craigg
-ms.openlocfilehash: 0debbd16d8f250d5ee59ef0120a19485d2d5e289
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: cdc430e3e74043896df8b25993dc78cf8d8ed70e
+ms.sourcegitcommit: de5e726db2f287bb32b7910831a0c4649ccf3c4c
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/12/2018
+ms.locfileid: "35330099"
 ---
 # <a name="web-configuration-reference-master-data-services"></a>Referencia de la configuración web (Master Data Services)
 
@@ -33,7 +33,7 @@ ms.lasthandoff: 05/03/2018
 ## <a name="webconfig-elements"></a>Elementos de Web.Config  
  El archivo Web.config contiene un elemento personalizado de [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)], **\<masterDataServices>**, además de elementos de configuración de Windows Communication Foundation (WCF), IIS estándar, .NET Framework y ASP.NET. En la siguiente tabla se describen los elementos incluidos en el archivo Web.config.  
   
-|Elemento de configuración|Description|  
+|Elemento de configuración|Descripción|  
 |---------------------------|-----------------|  
 |**masterDataServices**|Elemento personalizado. Conecta el servicio web de [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] a una base de datos de [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] .|  
 |**connectionStrings**|Elemento de ASP.NET. Para obtener más información, consulte [Elemento connetionStrings (Esquema de configuración de ASP.NET)](http://go.microsoft.com/fwlink/?LinkId=178347) en MSDN Library.|  
@@ -60,7 +60,7 @@ ms.lasthandoff: 05/03/2018
   
 ### <a name="elements-and-attributes"></a>Atributos y elementos  
   
-|Elemento|Description|  
+|Elemento|Descripción|  
 |----------|-----------------|  
 |**instancia**|Elemento secundario. Contiene atributos que especifican información para el servicio web y la cadena de conexión a bases de datos.|  
 |**virtualPath**|Atributo. Especifica la ruta de acceso virtual de la aplicación web y servicio de [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)] . Este valor corresponde al atributo **path** del elemento **\<application>** en el elemento **\<site>** del archivo ApplicationHost.config de IIS.|  

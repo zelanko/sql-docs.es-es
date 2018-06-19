@@ -4,11 +4,9 @@ ms.custom: ''
 ms.date: 02/15/2017
 ms.prod: sql
 ms.prod_service: integration-services
-ms.component: import-export-data
 ms.reviewer: ''
 ms.suite: sql
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: fd726506-54b7-433b-bf70-3642235b7b31
@@ -16,11 +14,12 @@ caps.latest.revision: 15
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: d6c78f12a3babbe3894b9fc00051817582bccc7c
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: abbc9354d0df37f122aae398b45a35c4b40fee7c
+ms.sourcegitcommit: de5e726db2f287bb32b7910831a0c4649ccf3c4c
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/12/2018
+ms.locfileid: "35329999"
 ---
 # <a name="connect-to-data-sources-with-the-sql-server-import-and-export-wizard"></a>Conectarse a orígenes de datos con el asistente para importación y exportación de SQL Server
 Los temas de esta sección muestran cómo conectarse a varios orígenes de datos de uso frecuente al ejecutar el asistente para importación y exportación de SQL Server. Tendrá que proporcionar la información de conexión de los orígenes de datos en las páginas **Elegir un origen de datos** y **Elegir un destino** del asistente.

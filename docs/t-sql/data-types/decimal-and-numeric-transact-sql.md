@@ -28,11 +28,12 @@ author: edmacauley
 ms.author: edmaca
 manager: craigg
 monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
-ms.openlocfilehash: 2c86af3c5e32a92b3210327881cdc140f6fe7d20
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: db844700627b7eb1cbc9266a667d1dadad47d3e2
+ms.sourcegitcommit: b52b5d972b1a180e575dccfc4abce49af1a6b230
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/08/2018
+ms.locfileid: "35249568"
 ---
 # <a name="decimal-and-numeric-transact-sql"></a>decimal y numeric (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -50,7 +51,7 @@ El número total máximo de dígitos decimales que almacenará, tanto a la izqui
 >  Informatica solo admite 16 dígitos significativos, sin tener en cuenta la precisión y la escala especificada.  
   
 *s* (escala)  
-El número de dígitos decimales que se almacenará a la derecha del separador decimal. Este número se extrae de *p* para determinar el número máximo de dígitos a la izquierda del separador decimal. El número máximo de dígitos decimales que se puede almacenar a la derecha del separador decimal. La escala debe ser un valor comprendido entre 0 y *p*. Solo es posible especificar la escala si se ha especificado la precisión. La escala predeterminada es 0; por tanto, 0 <= *s* \<= *p*. Los tamaños de almacenamiento máximo varían según la precisión.
+El número de dígitos decimales que se almacenará a la derecha del separador decimal. Este número se extrae de *p* para determinar el número máximo de dígitos a la izquierda del separador decimal. La escala debe ser un valor comprendido entre 0 y *p*. Solo es posible especificar la escala si se ha especificado la precisión. La escala predeterminada es 0; por tanto, 0 <= *s* \<= *p*. Los tamaños de almacenamiento máximo varían según la precisión.
   
 |Precisión|Bytes de almacenamiento|  
 |---|---|

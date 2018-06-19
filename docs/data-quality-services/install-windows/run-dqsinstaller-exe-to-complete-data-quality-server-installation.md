@@ -4,7 +4,6 @@ ms.custom: ''
 ms.date: 03/01/2017
 ms.prod: sql
 ms.prod_service: data-quality-services
-ms.component: install-windows
 ms.reviewer: ''
 ms.suite: sql
 ms.technology:
@@ -16,11 +15,12 @@ caps.latest.revision: 33
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 789dca5f79bfcd3f00a67e17da2a613c936cd639
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 275d8a790ab95d6ffd3bfb02f7427d8e2e3cecdf
+ms.sourcegitcommit: f16003fd1ca28b5e06d5700e730f681720006816
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/11/2018
+ms.locfileid: "35311274"
 ---
 # <a name="run-dqsinstallerexe-to-complete-data-quality-server-installation"></a>Ejecutar DQSInstaller.exe para completar la instalación del servidor de calidad de datos
 
@@ -74,7 +74,7 @@ ms.lasthandoff: 05/03/2018
 ##  <a name="CommandPrompt"></a> Ejecutar DQSInstaller.exe desde el símbolo del sistema  
  Puede ejecutar DQSInstaller.exe desde el símbolo del sistema mediante los siguientes parámetros de línea de comandos:  
   
-|Parámetro DQSInstaller.exe|Description|Sintaxis de ejemplo|  
+|Parámetro DQSInstaller.exe|Descripción|Sintaxis de ejemplo|  
 |--------------------------------|-----------------|-------------------|  
 |-collation|La intercalación de servidor que se usará para instalar el [!INCLUDE[ssDQSServer](../../includes/ssdqsserver-md.md)].<br /><br /> DQS solo admite la intercalación sin distinción entre mayúsculas y minúsculas. Si especifica una intercalación con distinción entre mayúsculas y minúsculas, el instalador intenta utilizar la versión de la intercalación especificada sin distinción entre mayúsculas y minúsculas. Si no hay ninguna versión sin distinción entre mayúsculas y minúsculas, o si la intercalación no es compatible con SQL, la instalación del [!INCLUDE[ssDQSServer](../../includes/ssdqsserver-md.md)] producirá un error.<br /><br /> Si no se especifica una intercalación de servidor, se utiliza la intercalación predeterminada, SQL_Latin1_General_CP1_CI_AS.|`dqsinstaller.exe –collation <collation_name>`|  
 |-upgradedlls|Omite la reconstrucción de las bases de datos DQS (DQS_MAIN, DQS_PROJECTS y DQS_STAGING_DATA) y solo actualiza los ensamblados de Common Language Runtime de SQL (SQLCLR) utilizados por DQS en la base de datos de [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] .<br /><br /> Para obtener más información, vea [Actualizar ensamblados de SQLCLR después de actualizar .NET Framework](../../data-quality-services/install-windows/upgrade-sqlclr-assemblies-after-net-framework-update.md).|`dqsinstaller.exe -upgradedlls`|  

@@ -4,11 +4,9 @@ ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: integration-services
-ms.component: data-flow
 ms.reviewer: ''
 ms.suite: sql
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.tgt_pltfrm: ''
 ms.topic: conceptual
 f1_keywords:
@@ -25,11 +23,12 @@ caps.latest.revision: 59
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 0a8e1f5981bdaf8cec7b263a9894ce3d1c4c7b04
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: b2328032345bfac2575afacc8764ba1265cb94ac
+ms.sourcegitcommit: de5e726db2f287bb32b7910831a0c4649ccf3c4c
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/12/2018
+ms.locfileid: "35331199"
 ---
 # <a name="aggregate-transformation"></a>Transformación Agregado
   La transformación Agregado aplica funciones de agregado, como Average, a los valores de columnas y copia los resultados en la salida de transformación. Además de las funciones de agregado, la transformación proporciona la cláusula GROUP BY, que se puede usar para especificar los grupos en los que se debe realizar el agregado.  
@@ -37,7 +36,7 @@ ms.lasthandoff: 05/03/2018
 ## <a name="operations"></a>Operaciones  
  La transformación Agregado admite las siguientes operaciones.  
   
-|Operación|Description|  
+|Operación|Descripción|  
 |---------------|-----------------|  
 |GROUP BY|Divide los conjuntos de datos en grupos. Se pueden usar columnas de cualquier tipo de datos para la agrupación. Para más información, vea [GROUP BY &#40;Transact-SQL&#41;](../../../t-sql/queries/select-group-by-transact-sql.md).|  
 |SUM|Suma los valores de una columna. Solo podrán sumarse las columnas con tipos de datos numéricos. Para más información, vea [SUM &#40;Transact-SQL&#41;](../../../t-sql/functions/sum-transact-sql.md).|  
@@ -155,7 +154,7 @@ ms.lasthandoff: 05/03/2018
  **Escala de claves**  
  En la pantalla Avanzadas, especifique opcionalmente el número aproximado de claves que podrá escribir la agregación. De forma predeterminada, el valor de esta opción es **No especificado**. Si se seleccionan las propiedades **Escala de claves** y **Claves** , tendrá prioridad el valor de **Claves** .  
   
-|Valor|Description|  
+|Valor|Descripción|  
 |-----------|-----------------|  
 |No especificado|No se utiliza la propiedad Escala de claves.|  
 |Baja|La agregación podrá escribir aproximadamente 500 000 claves.|  
@@ -177,7 +176,7 @@ ms.lasthandoff: 05/03/2018
  **Operación**  
  Elija una operación de la lista de operaciones disponibles con la siguiente tabla como guía.  
   
-|Operación|Description|  
+|Operación|Descripción|  
 |---------------|-----------------|  
 |**GROUP BY**|Divide los conjuntos de datos en grupos. Podrán agruparse columnas con cualquier tipo de datos. Para obtener más información, vea GROUP BY.|  
 |**Sum**|Suma los valores de una columna. Solo podrán sumarse las columnas con tipos de datos numéricos. Para obtener más información, vea SUM.|  
@@ -193,7 +192,7 @@ ms.lasthandoff: 05/03/2018
  **Count Distinct Scale**  
  Opcionalmente, puede especificar el número aproximado de valores DISTINCT que podrá escribir la agregación. De forma predeterminada, el valor de esta opción es **No especificado**. Si se especifican **CountDistinctScale** y **CountDistinctKeys** , tendrá prioridad **CountDistinctKeys** .  
   
-|Valor|Description|  
+|Valor|Descripción|  
 |-----------|-----------------|  
 |No especificado|No se utiliza la propiedad **CountDistinctScale** .|  
 |Baja|La agregación podrá escribir aproximadamente 500.000 valores DISTINCT.|  
@@ -215,7 +214,7 @@ ms.lasthandoff: 05/03/2018
  **Escala de claves**  
  Si lo desea, especifique el número aproximado de claves que espera la agregación. La transformación utiliza esta información para optimizar el tamaño de caché inicial. De forma predeterminada, el valor de esta opción es **No especificado**. Si se especifica tanto **Escala de claves** como **Número de claves** , prevalece la opción **Número de claves** .  
   
-|Valor|Description|  
+|Valor|Descripción|  
 |-----------|-----------------|  
 |No especificado|No se utiliza la propiedad **Escala de claves** .|  
 |Baja|La agregación podrá escribir aproximadamente 500 000 claves.|  
@@ -228,7 +227,7 @@ ms.lasthandoff: 05/03/2018
  **Escala Count Distinct**  
  Opcionalmente, puede especificar el número aproximado de valores DISTINCT que podrá escribir la agregación. De forma predeterminada, el valor de esta opción es **No especificado**. Si se especifica tanto **Escala Count Distinct** como **Claves Count Distinct** , prevalece la opción **Claves Count Distinct** .  
   
-|Valor|Description|  
+|Valor|Descripción|  
 |-----------|-----------------|  
 |No especificado|No se utiliza la propiedad CountDistinctScale.|  
 |Baja|La agregación podrá escribir aproximadamente 500.000 valores DISTINCT.|  

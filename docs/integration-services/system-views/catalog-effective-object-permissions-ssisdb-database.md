@@ -4,11 +4,9 @@ ms.custom: ''
 ms.date: 03/03/2017
 ms.prod: sql
 ms.prod_service: integration-services
-ms.component: system-views
 ms.reviewer: ''
 ms.suite: sql
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.tgt_pltfrm: ''
 ms.topic: language-reference
 helpviewer_keywords:
@@ -19,18 +17,19 @@ caps.latest.revision: 26
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: ce6bf74984a5591f62ab4ef2f321afe673821684
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: c4e9162cdcaca28f3f5d410a423fc1fb4dc3945b
+ms.sourcegitcommit: de5e726db2f287bb32b7910831a0c4649ccf3c4c
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/12/2018
+ms.locfileid: "35331609"
 ---
 # <a name="catalogeffectiveobjectpermissions-ssisdb-database"></a>catalog.effective_object_permissions (base de datos de SSISDB)
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
 
   Muestra los permisos efectivos de la entidad de seguridad actual para todos los objetos del catálogo [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)].  
   
-|Nombre de columna|Tipo de datos|Description|  
+|Nombre de columna|Tipo de datos|Descripción|  
 |-----------------|---------------|-----------------|  
 |object_type|**smallint**|Tipo del objeto protegible. Entre los tipos de objetos protegibles se incluyen carpeta (`1`), proyecto (`2`), entorno (`3`) y operación (`4`).|  
 |object_id|**bigint**|Identificador único (Id.) o clave principal del objeto protegido.|  

@@ -1,14 +1,12 @@
 ---
 title: Contadores de rendimiento | Microsoft Docs
-ms.custom: ''
+ms.custom: supportability
 ms.date: 08/27/2016
 ms.prod: sql
 ms.prod_service: integration-services
-ms.component: performance
 ms.reviewer: ''
 ms.suite: sql
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
@@ -22,11 +20,12 @@ caps.latest.revision: 63
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 9b04d580014de1b5c248d299c2da1fce385326ec
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: db10ccfd3a7487db61a03752111aa14702448d23
+ms.sourcegitcommit: cc46afa12e890edbc1733febeec87438d6051bf9
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/12/2018
+ms.locfileid: "35411177"
 ---
 # <a name="performance-counters"></a>Performance Counters
   [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] instala un conjunto de contadores de rendimiento que pueden usarse para supervisar el rendimiento del motor de flujo de datos. Por ejemplo, puede observar el contador "Búferes puestos en cola" para determinar si se están escribiendo búferes de datos en el disco temporalmente mientras se ejecuta un paquete. Este intercambio reduce el rendimiento e indica que el equipo no tiene memoria suficiente.  
@@ -35,7 +34,7 @@ ms.lasthandoff: 05/03/2018
   
  En la tabla siguiente se describen los contadores de rendimiento.  
   
-|Contador de rendimiento|Description|  
+|Contador de rendimiento|Descripción|  
 |-------------------------|-----------------|  
 |Bytes BLOB leídos|Número de bytes de datos de objetos binarios grandes (BLOB) que ha leído el motor de flujo de datos de todos los orígenes.|  
 |Bytes BLOB escritos|Número de bytes de datos BLOB que ha escrito el motor de flujo de datos en todos los destinos.|  

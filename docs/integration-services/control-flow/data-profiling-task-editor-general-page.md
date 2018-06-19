@@ -4,11 +4,9 @@ ms.custom: ''
 ms.date: 03/01/2017
 ms.prod: sql
 ms.prod_service: integration-services
-ms.component: control-flow
 ms.reviewer: ''
 ms.suite: sql
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.tgt_pltfrm: ''
 ms.topic: conceptual
 f1_keywords:
@@ -20,11 +18,12 @@ caps.latest.revision: 19
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 75d3d5b746da8d880152dec8b6bcfcf2c4ef8dbf
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 82ff13c0dfdea2563ec1bf8227d942f956813de9
+ms.sourcegitcommit: cc46afa12e890edbc1733febeec87438d6051bf9
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/12/2018
+ms.locfileid: "35404777"
 ---
 # <a name="data-profiling-task-editor-general-page"></a>Editor de tareas de generación de perfiles de datos (página General)
   Utilice la página **General** del **Editor de tareas de generación de perfiles de datos** para configurar las opciones siguientes:  
@@ -55,7 +54,7 @@ ms.lasthandoff: 05/03/2018
  **DestinationType**  
  Especifique si guardar el perfil de los datos generado en un archivo o una variable:  
   
-|Valor|Description|  
+|Valor|Descripción|  
 |-----------|-----------------|  
 |**FileConnection**|Guarde el perfil generado en un archivo de la ubicación que se especifica en un administrador de conexiones de archivos.<br /><br /> Nota: Para especificar qué administrador de conexiones de archivos utilizar, use la opción **Destino** .|  
 |**Variable**|Guarde el perfil generado en una variable de paquete.<br /><br /> Para especificar qué variable de paquete utilizar, use la opción **Destino** .|  

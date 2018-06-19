@@ -4,11 +4,9 @@ ms.custom: ''
 ms.date: 03/13/2017
 ms.prod: sql
 ms.prod_service: integration-services
-ms.component: control-flow
 ms.reviewer: ''
 ms.suite: sql
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.tgt_pltfrm: ''
 ms.topic: conceptual
 f1_keywords:
@@ -26,11 +24,12 @@ caps.latest.revision: 115
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 48c90af75a51d0b849f1ce7b0a714bd403e9018d
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 35cfefdbc23ef269579476c098d31825b319a41e
+ms.sourcegitcommit: cc46afa12e890edbc1733febeec87438d6051bf9
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/12/2018
+ms.locfileid: "35404757"
 ---
 # <a name="execute-sql-task"></a>Tarea Ejecutar SQL
   La tarea Ejecutar SQL ejecuta instrucciones SQL o procedimientos almacenados de un paquete. La tarea puede contener una sola instrucción SQL o múltiples instrucciones SQL que se ejecutarán de forma secuencial. Puede usar la tarea Ejecutar SQL para los siguientes fines:  
@@ -158,7 +157,7 @@ Para más información sobre el lenguaje de consultas Transact-SQL y su sintaxis
   
  Esta propiedad presenta las opciones indicadas en la siguiente tabla.  
   
-|Valor|Description|  
+|Valor|Descripción|  
 |-----------|-----------------|  
 |**Entrada directa**|Establezca el origen para una instrucción Transact-SQL. Si selecciona este valor, se mostrará la opción dinámica **SQLStatement**.|  
 |**Conexión de archivos**|Seleccione un archivo que contenga una instrucción Transact-SQL. Si selecciona esta opción, se mostrará la opción dinámica **FileConnection**.|  
@@ -578,7 +577,7 @@ En esta sección se describe cómo crear una asignación entre un conjunto de re
 ### <a name="custom-log-entries"></a>Entradas del registro personalizadas  
  La siguiente tabla contiene la entrada del registro personalizada para la tarea Ejecutar SQL. Para obtener más información, vea [Registro de Integration Services &#40;SSIS&#41;](../../integration-services/performance/integration-services-ssis-logging.md).  
   
-|Entrada del registro|Description|  
+|Entrada del registro|Descripción|  
 |---------------|-----------------|  
 |**ExecuteSQLExecutingQuery**|Proporciona información sobre las fases de ejecución de la instrucción SQL. Las entradas de registro se escriben cuando la tarea adquiere una conexión con la base de datos, cuando la tarea comienza a preparar la instrucción SQL y una vez que se completa la ejecución de la instrucción SQL. La entrada del registro para la fase de preparación incluye la instrucción SQL que utiliza la tarea.|  
 

@@ -4,7 +4,6 @@ ms.custom: ''
 ms.date: 03/15/2017
 ms.prod: sql
 ms.prod_service: mds
-ms.component: non-specific
 ms.reviewer: ''
 ms.suite: sql
 ms.technology:
@@ -19,11 +18,12 @@ caps.latest.revision: 9
 author: leolimsft
 ms.author: lle
 manager: craigg
-ms.openlocfilehash: b1f5f9b13c93193dc0981d3e555c7346dad2c01a
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: e9f47747ebac983d43e7bd736218520f9cb6c0be
+ms.sourcegitcommit: cc46afa12e890edbc1733febeec87438d6051bf9
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/12/2018
+ms.locfileid: "35410867"
 ---
 # <a name="create-a-link-attribute-master-data-services"></a>Crear un atributo de vínculo (Master Data Services)
 
@@ -46,12 +46,12 @@ ms.lasthandoff: 05/03/2018
 ## <a name="attribute-information"></a>Información de atributo  
  Por cada atributo creado, se agrega una fila con siete columnas a la cuadrícula. En la siguiente tabla se describen las columnas.  
   
-|columna|Description|  
+|columna|Descripción|  
 |------------|-----------------|  
 |Estado|Estado del atributo.<br /><br /> Al hacer clic en Guardar, aparece la imagen ![Icono de estado de actualización](../master-data-services/media/mds-statusicon-updating.png "Icono de estado de actualización"), que indica que se está actualizando el atributo.<br /><br /> Si hay errores al crear o editar un atributo, aparecerá la imagen ![Icono de estado de error](../master-data-services/media/mds-statusicon-error.png "Icono de estado de error").<br /><br /> En caso contrario, el estado será correcto y aparecerá la imagen ![Icono de estado correcto](../master-data-services/media/mds-statusicon-ok.png "Icono de estado correcto").|  
 |Nombre|El nombre del atributo.|  
 |Nombre para mostrar|Nombre para mostrar del atributo.|  
-|Description|Descripción del atributo.|  
+|Descripción|Descripción del atributo.|  
 |Ancho de píxel de la pantalla|Ancho del atributo.|  
 |Tipo y propiedades|Tipo e información sobre el tipo de datos del atributo.|  
 |Habilitar seguimiento de cambios|Especifica si el atributo está habilitado para el seguimiento de cambios y muestra el número de grupo entre paréntesis.|  

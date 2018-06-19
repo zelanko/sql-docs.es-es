@@ -4,7 +4,6 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql
 ms.prod_service: mds
-ms.component: non-specific
 ms.reviewer: ''
 ms.suite: sql
 ms.technology:
@@ -16,11 +15,12 @@ caps.latest.revision: 11
 author: leolimsft
 ms.author: lle
 manager: craigg
-ms.openlocfilehash: f4d3785155a0027f374b25f22b9586a215fd4ae9
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: e14ee29906ca9773aa88e9d400f17416ee8cd0a1
+ms.sourcegitcommit: cc46afa12e890edbc1733febeec87438d6051bf9
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/12/2018
+ms.locfileid: "35402617"
 ---
 # <a name="filter-operators-master-data-services"></a>Operadores de filtro (Master Data Services)
 
@@ -33,7 +33,7 @@ ms.lasthandoff: 05/03/2018
   
 ## <a name="filter-operators"></a>Operadores de filtro  
   
-|Nombre del control|Description|  
+|Nombre del control|Descripción|  
 |------------------|-----------------|  
 |**Es igual que**|Devuelve valores de atributo que son exactamente iguales que los criterios especificados. Por ejemplo, para filtrar según **Mountain-100**, debe escribir **Mountain-100**.|  
 |**No es igual que**|Devuelve valores de atributo que no son exactamente iguales a los criterios especificados. Los criterios de filtro deben ser exactamente iguales que el valor de atributo que desea omitir en los resultados. Por ejemplo, para omitir resultados que coincidan con **Mountain-100**, debe escribir **Mountain-100**.<br /><br /> <br /><br /> Nota: Al aplicar una condición de filtro con una cláusula "no es igual" en un atributo, un miembro para el que el atributo es NULL pasará la condición de filtro y se devolverá si SET ANSI_NULLS está establecido en ON en la configuración de la base de datos. Para detener este comportamiento, establezca SET ANSI_NULLS en OFF en la configuración de la base de datos. Cuando SET ANSI_NULLS se establece en OFF, las comparaciones de todos los datos con un valor NULL se evalúan en TRUE si el valor de los datos es NULL, con el resultado de que el miembro no pasaría la cláusula “no es igual”. Para obtener más información, vea [SET ANSI_NULLS &#40;Transact-SQL&#41;](../t-sql/statements/set-ansi-nulls-transact-sql.md).|  

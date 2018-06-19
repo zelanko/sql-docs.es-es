@@ -4,11 +4,9 @@ ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: integration-services
-ms.component: data-flow
 ms.reviewer: ''
 ms.suite: sql
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.tgt_pltfrm: ''
 ms.topic: conceptual
 f1_keywords:
@@ -34,11 +32,12 @@ caps.latest.revision: 58
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 94fd84ce9a46537fb90caa47e869f96167493bdc
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 0772e8230673a23412d880aef729d0a278c448bb
+ms.sourcegitcommit: cc46afa12e890edbc1733febeec87438d6051bf9
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/12/2018
+ms.locfileid: "35401627"
 ---
 # <a name="fuzzy-grouping-transformation"></a>Agrupación aproximada, transformación
   La transformación Agrupación aproximada realiza tareas de limpieza de datos, identificando filas de datos que probablemente se van a duplicar y seleccionando una fila de datos canónica para utilizarla en la normalización de los datos.  
@@ -149,7 +148,7 @@ ms.lasthandoff: 05/03/2018
  **Números**  
  Especifique la importancia de los números iniciales y finales en la comparación de los datos de la columna. Por ejemplo, si los números iniciales son significativos, "123 Main Street" no se agrupará con "456 Main Street."  
   
-|Valor|Description|  
+|Valor|Descripción|  
 |-----------|-----------------|  
 |**Neither**|Los números iniciales y finales no son significativos.|  
 |**Leading**|Solo son significativos los números iniciales.|  

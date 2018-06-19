@@ -4,11 +4,9 @@ ms.custom: ''
 ms.date: 11/16/2016
 ms.prod: sql
 ms.prod_service: integration-services
-ms.component: expressions
 ms.reviewer: ''
 ms.suite: sql
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
@@ -23,11 +21,12 @@ caps.latest.revision: 35
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 34382ce333db1d7dda8e72b4a7eeb6a2b8196e74
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 9c70f744427da1b6e7d10ce061bcd3640ca86cfa
+ms.sourcegitcommit: cc46afa12e890edbc1733febeec87438d6051bf9
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/12/2018
+ms.locfileid: "35408917"
 ---
 # <a name="numeric-string-and-boolean-literals"></a>Literales numéricos, de cadena y booleanos
  Las expresiones pueden incluir literales numéricos, de cadena y booleanos. El evaluador de expresiones admite diversos literales numéricos tales como constantes enteras, decimales y de punto flotante. El evaluador de expresiones también admite sufijos que indican valor largo o de tipo flotante, con los que se especifica cómo controla el evaluador de expresiones los valores, y notación científica en literales numéricos.  
@@ -39,7 +38,7 @@ ms.lasthandoff: 05/03/2018
   
  En la tabla siguiente se muestran los sufijos para literales numéricos.  
   
-|Sufijo|Description|  
+|Sufijo|Descripción|  
 |------------|-----------------|  
 |L o l|Literal numérico largo.|  
 |U o u|Literal numérico sin signo.|  
@@ -47,7 +46,7 @@ ms.lasthandoff: 05/03/2018
   
  En la tabla siguiente se muestran elementos de expresiones numéricas y sus expresiones regulares.  
   
-|Elemento de expresión|Expresión regular|Description|  
+|Elemento de expresión|Expresión regular|Descripción|  
 |------------------------|------------------------|-----------------|  
 |Dígitos expresados como D.|[0-9]|Cualquier dígito.|  
 |Notación científica expresada como E.|[Ee][+-]?{D}+|Mayúsculas o minúsculas y, opcionalmente, + o -, y uno o más dígitos tal como se define en D.|  
@@ -57,7 +56,7 @@ ms.lasthandoff: 05/03/2018
   
  En la tabla siguiente se describen literales numéricos válidos mediante el lenguaje de expresiones regulares.  
   
-|Expresión regular|Description|  
+|Expresión regular|Descripción|  
 |------------------------|-----------------|  
 |{D}+{IS}|Literal numérico entero con al menos un dígito (D) y, opcionalmente, el sufijo de valor largo o sin signo (IS).  Ejemplos: 457, 785u, 986L y 7945ul.|  
 |{D}+{E}{FS}|Literal numérico no entero con al menos un dígito (D), notación científica y el sufijo de valor largo o de tipo flotante.  Ejemplos: 4E8l, 13e-2f y 5E+L.|  
@@ -101,7 +100,7 @@ ms.lasthandoff: 05/03/2018
   
  Las cadenas pueden incluir otros caracteres que requieran una secuencia de escape. En la tabla siguiente se muestran secuencias de escape para literales de cadena.  
   
-|Secuencia de escape|Description|  
+|Secuencia de escape|Descripción|  
 |---------------------|-----------------|  
 |\a|Alerta|  
 |\b|Retroceso|  

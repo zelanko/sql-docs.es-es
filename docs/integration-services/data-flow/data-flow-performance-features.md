@@ -4,11 +4,9 @@ ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: integration-services
-ms.component: data-flow
 ms.reviewer: ''
 ms.suite: sql
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
@@ -29,11 +27,12 @@ caps.latest.revision: 69
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: facd7d61e5be292ce3205092ee366997c73ee9af
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 0c3018886db19bb51d5dbbfe4f0c3f5a871e88f4
+ms.sourcegitcommit: cc46afa12e890edbc1733febeec87438d6051bf9
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/12/2018
+ms.locfileid: "35402797"
 ---
 # <a name="data-flow-performance-features"></a>Características de rendimiento del flujo de datos
   En este tema se proporcionan sugerencias sobre cómo diseñar los paquetes de [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] para evitar problemas de rendimiento comunes. También proporciona información sobre las características y las herramientas que puede utilizar para solucionar problemas relacionados con el rendimiento de los paquetes.  

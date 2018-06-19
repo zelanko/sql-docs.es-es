@@ -3,12 +3,9 @@ title: Movimiento de una base de datos protegida por TDE a otra instancia de SQL
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
-ms.prod_service: database-engine
-ms.component: security
 ms.reviewer: ''
 ms.suite: sql
-ms.technology:
-- database-engine
+ms.technology: security
 ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
@@ -16,15 +13,15 @@ helpviewer_keywords:
 - TDE, moving a database
 ms.assetid: fb420903-df54-4016-bab6-49e6dfbdedc7
 caps.latest.revision: 18
-author: edmacauley
-ms.author: edmaca
+author: aliceku
+ms.author: aliceku
 manager: craigg
-ms.openlocfilehash: 34f7225842dd6dcc789cbd6d09fa6cfee70b60f9
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 5a8b05786cf5a1584513c248d539b7d059b7d2bf
+ms.sourcegitcommit: a78fa85609a82e905de9db8b75d2e83257831ad9
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32973850"
+ms.lasthandoff: 06/18/2018
+ms.locfileid: "35701346"
 ---
 # <a name="move-a-tde-protected-database-to-another-sql-server"></a>Mover una base de datos protegida por TDE a otra instancia de SQL Server
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -221,7 +218,7 @@ En los siguientes procedimientos se muestra cómo debe mover una base de datos p
      **Estado**  
      Muestra el estado de la base de datos de acuerdo con la tabla siguiente.  
   
-    |Icono|Texto de estado|Description|  
+    |Icono|Texto de estado|Descripción|  
     |----------|-----------------|-----------------|  
     |(Sin icono)|(Sin texto)|La operación de adjuntar no se ha iniciado o puede estar pendiente para este objeto. Es la opción predeterminada al abrir el diálogo.|  
     |Triángulo verde hacia la derecha|En curso|La operación de adjuntar se ha iniciado, pero no ha finalizado.|  

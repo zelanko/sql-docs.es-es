@@ -4,11 +4,9 @@ ms.custom: ''
 ms.date: 03/01/2017
 ms.prod: sql
 ms.prod_service: integration-services
-ms.component: data-flow
 ms.reviewer: ''
 ms.suite: sql
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
@@ -18,11 +16,12 @@ caps.latest.revision: 11
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 508deeca800867cfb24afc636d035f34f00ee98e
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 9f7d21248c998d4d2d1be7470c77d2c7e18c05d1
+ms.sourcegitcommit: cc46afa12e890edbc1733febeec87438d6051bf9
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/12/2018
+ms.locfileid: "35410607"
 ---
 # <a name="use-a-recordset-destination"></a>Usar un destino de conjunto de registros
   El destino de conjunto de registros no guarda los datos en un origen de datos externo. En su lugar, el destino de conjunto de registros guarda los datos en memoria, en un conjunto de registros que se almacena en una variable de paquete [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] del tipo de datos **Objeto** . Una vez que el destino de conjunto de registros guarda los datos, normalmente se utiliza un contenedor de bucles Foreach con el enumerador de ADO para Foreach para procesar una fila del conjunto de registros cada vez. El enumerador de ADO para Foreach guarda el valor de cada columna de la fila actual en una variable de paquete independiente. A continuación, las tareas que se configuran en el contenedor de bucles Foreach leen esos valores de las variables y realizan alguna acción con ellos.  

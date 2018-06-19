@@ -4,11 +4,9 @@ ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: integration-services
-ms.component: control-flow
 ms.reviewer: ''
 ms.suite: sql
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.tgt_pltfrm: ''
 ms.topic: conceptual
 f1_keywords:
@@ -22,11 +20,12 @@ caps.latest.revision: 25
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 87639875b3ae15a514cb44ac5fd8d5fe8997188c
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: c537b18e067dc52e3c764a8f79ae4c77db5639ee
+ms.sourcegitcommit: de5e726db2f287bb32b7910831a0c4649ccf3c4c
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/12/2018
+ms.locfileid: "35333449"
 ---
 # <a name="transfer-master-stored-procedures-task"></a>Tarea Transferir procedimientos almacenados principales
   La tarea Transferir procedimientos almacenados principales transfiere uno o más procedimientos almacenados definidos por el usuario entre las bases de datos **master** en instancias de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Para transferir un procedimiento almacenado de la base de datos **master** , el propietario del procedimiento debe ser dbo.  
@@ -118,7 +117,7 @@ ms.lasthandoff: 05/03/2018
   
  Esta propiedad presenta las opciones indicadas en la siguiente tabla:  
   
-|Valor|Description|  
+|Valor|Descripción|  
 |-----------|-----------------|  
 |**FailTask**|La tarea genera un error si ya existen procedimientos almacenados con el mismo nombre en la base de datos **maestra** del servidor de destino.|  
 |**Sobrescribir**|La tarea sobrescribe los procedimientos almacenados con el mismo nombre en la base de datos **maestra** del servidor de destino.|  
@@ -127,7 +126,7 @@ ms.lasthandoff: 05/03/2018
  **TransferAllStoredProcedures**  
  Seleccione esta opción si todos los procedimientos almacenados definidos por el usuario de la base de datos **maestra** del servidor de origen deben copiarse al servidor de destino.  
   
-|Valor|Description|  
+|Valor|Descripción|  
 |-----------|-----------------|  
 |**True**|Copie todos los procedimientos almacenados definidos por el usuario de la base de datos **maestra** .|  
 |**False**|Copie solamente los procedimientos almacenados especificados.|  

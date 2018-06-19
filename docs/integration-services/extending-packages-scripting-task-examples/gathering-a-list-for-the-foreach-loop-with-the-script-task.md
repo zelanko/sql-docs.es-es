@@ -7,7 +7,7 @@ ms.prod_service: integration-services
 ms.component: extending-packages-scripting-task-examples
 ms.reviewer: ''
 ms.suite: sql
-ms.technology: ''
+ms.technology: integration-services
 ms.tgt_pltfrm: ''
 ms.topic: reference
 applies_to:
@@ -22,11 +22,12 @@ caps.latest.revision: 34
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 946701968facce4f76a53a2ad5a72c96b03dd026
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: e1fa5494f175315ece0f497a6afe69b98a6df026
+ms.sourcegitcommit: cc46afa12e890edbc1733febeec87438d6051bf9
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/12/2018
+ms.locfileid: "35400937"
 ---
 # <a name="gathering-a-list-for-the-foreach-loop-with-the-script-task"></a>Recopilar una lista para el bucle Foreach con la tarea Script
   El enumerador de variable para Foreach enumera los elementos de una lista que le se pasa en una variable y realiza las mismas tareas en cada elemento. Puede utilizar código personalizado en una tarea Script para rellenar una lista con este fin. Para obtener más información sobre el enumerador, vea [Contenedor de bucles Para cada uno](../../integration-services/control-flow/foreach-loop-container.md).  
@@ -34,7 +35,7 @@ ms.lasthandoff: 05/03/2018
 > [!NOTE]  
 >  Si desea crear una tarea que pueda reutilizar más fácilmente en varios paquetes, considere la posibilidad de utilizar el código de este ejemplo de tarea Script como punto inicial de una tarea personalizada. Para más información, vea [Desarrollar una tarea personalizada](../../integration-services/extending-packages-custom-objects/task/developing-a-custom-task.md).  
   
-## <a name="description"></a>Description  
+## <a name="description"></a>Descripción  
  En el ejemplo siguiente se utilizan métodos del espacio de nombres **System.IO** para recopilar una lista de libros de Excel del equipo que son posteriores o anteriores a un número de días especificado por el usuario en una variable. Busca de forma recursiva en los directorios de la unidad C los archivos que tienen la extensión .xls y examina la fecha en la que cada archivo se modificó por última vez para determinar si el archivo pertenece a la lista. Agrega los archivos correspondientes a un objeto **ArrayList** y guarda **ArrayList** en una variable para el uso posterior en un contenedor de bucles Para cada uno. El contenedor de bucles Foreach se configura para utilizar el enumerador de variable para Foreach.  
   
 > [!NOTE]  

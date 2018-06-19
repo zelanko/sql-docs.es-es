@@ -4,13 +4,11 @@ ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: integration-services
-ms.component: tutorial
 ms.reviewer: ''
 ms.suite: sql
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.tgt_pltfrm: ''
-ms.topic: get-started-article
+ms.topic: tutorial
 applies_to:
 - SQL Server 2016
 ms.assetid: 01f2ed61-1e5a-4ec6-b6a6-2bd070c64077
@@ -18,11 +16,12 @@ caps.latest.revision: 32
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: a17dbabd2998f4578da9faca1d217fdee00b559d
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: ba491a3ca7cec145f8b891c1b08d7d491b2c768d
+ms.sourcegitcommit: cc46afa12e890edbc1733febeec87438d6051bf9
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/12/2018
+ms.locfileid: "35403067"
 ---
 # <a name="lesson-2-adding-looping-with-ssis"></a>Lección 2: Agregar bucles con SSIS
 En la [Lección 1: Crear el proyecto y el paquete básico](../integration-services/lesson-1-create-a-project-and-basic-package-with-ssis.md), creó un paquete que extraía datos de un solo origen de archivo plano, transformó los datos mediante transformaciones de búsqueda y, por último, cargó los datos en la tabla de hechos **FactCurrency** de la base de datos de ejemplo **AdventureWorksDW2012** .  

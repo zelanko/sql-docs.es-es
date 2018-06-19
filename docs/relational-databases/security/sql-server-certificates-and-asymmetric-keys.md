@@ -4,11 +4,9 @@ ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
-ms.component: security
 ms.reviewer: ''
 ms.suite: sql
-ms.technology:
-- database-engine
+ms.technology: security
 ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
@@ -19,12 +17,12 @@ author: edmacauley
 ms.author: edmaca
 manager: craigg
 monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
-ms.openlocfilehash: 2875295c5978f54dcff3ee2b5a5129db36757f7a
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: e2cce77f67f8a38344e7c1d27346618bf8716186
+ms.sourcegitcommit: a78fa85609a82e905de9db8b75d2e83257831ad9
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32970600"
+ms.lasthandoff: 06/18/2018
+ms.locfileid: "35700556"
 ---
 # <a name="sql-server-certificates-and-asymmetric-keys"></a>Certificados y claves asimétricas de SQL Server
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -50,7 +48,7 @@ ms.locfileid: "32970600"
 ### <a name="using-a-certificate-in-sql-server"></a>Utilizar un certificado en SQL Server  
  Los certificados se pueden utilizar para proteger las conexiones, en la creación de reflejo de la base de datos, para firmar paquetes y otros objetos, o para cifrar datos o conexiones. En la tabla siguiente se muestran recursos adicionales para los certificados en [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
-|Tema|Description|  
+|Tema|Descripción|  
 |-----------|-----------------|  
 |[CREATE CERTIFICATE &#40;Transact-SQL&#41;](../../t-sql/statements/create-certificate-transact-sql.md)|Explica el comando para crear certificados.|  
 |[Identificar el origen de paquetes con firmas digitales](../../integration-services/security/identify-the-source-of-packages-with-digital-signatures.md)|Muestra información sobre cómo utilizar los certificados para firmar paquetes de software.|  
@@ -64,7 +62,7 @@ ms.locfileid: "32970600"
 ### <a name="using-an-asymmetric-key-in-sql-server"></a>Utilizar una clave asimétrica en SQL Server  
  Las claves asimétricas se pueden utilizar para proteger datos o para firmar texto simple. En la tabla siguiente se muestran recursos adicionales para las claves asimétricas en [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
-|Tema|Description|  
+|Tema|Descripción|  
 |-----------|-----------------|  
 |[CREATE ASYMMETRIC KEY &#40;Transact-SQL&#41;](../../t-sql/statements/create-asymmetric-key-transact-sql.md)|Explica el comando para crear claves asimétricas.|  
 |[SIGNBYASYMKEY &#40;Transact-SQL&#41;](../../t-sql/functions/signbyasymkey-transact-sql.md)|Muestra las opciones para firmar objetos.|  

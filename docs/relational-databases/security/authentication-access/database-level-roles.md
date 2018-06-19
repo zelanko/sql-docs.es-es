@@ -4,11 +4,9 @@ ms.custom: ''
 ms.date: 06/29/2017
 ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
-ms.component: security
 ms.reviewer: ''
 ms.suite: sql
-ms.technology:
-- database-engine
+ms.technology: security
 ms.tgt_pltfrm: ''
 ms.topic: conceptual
 f1_keywords:
@@ -44,12 +42,12 @@ author: edmacauley
 ms.author: edmaca
 manager: craigg
 monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
-ms.openlocfilehash: b1a99af7b5758f77883da3f2a755aaa4bdfdd1a9
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: e2a6b17efe0fd6cc836af208f3d53d4252d3c1ce
+ms.sourcegitcommit: a78fa85609a82e905de9db8b75d2e83257831ad9
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32973380"
+ms.lasthandoff: 06/18/2018
+ms.locfileid: "35700987"
 ---
 # <a name="database-level-roles"></a>Roles de nivel de base de datos
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -75,7 +73,7 @@ Para una lista de todos los permisos, consulte el póster [Permisos del motor de
   
  En la tabla siguiente se muestran los roles fijos de base de datos y sus funcionalidades. Estos roles existen en todas las bases de datos. A excepción del rol de base de datos **public**, no se pueden cambiar los permisos asignados a los roles fijos de base de datos.   
   
-|Nombre del rol fijo de base de datos|Description|  
+|Nombre del rol fijo de base de datos|Descripción|  
 |-------------------------------|-----------------|  
 |**db_owner**|Los miembros del rol fijo de base de datos **db_owner** pueden realizar todas las actividades de configuración y mantenimiento en la base de datos y también pueden quitar la base de datos en [!INCLUDE[ssNoVersion_md](../../../includes/ssnoversion-md.md)]. (En [!INCLUDE[ssSDS_md](../../../includes/sssds-md.md)] y [!INCLUDE[ssSDW_md](../../../includes/sssdw-md.md)], algunas actividades de mantenimiento requieren permisos a nivel de servidor y los roles **db_owners**no las pueden realizar).|  
 |**db_securityadmin**|Los miembros del rol fijo de base de datos **db_securityadmin** pueden modificar la pertenencia a roles y administrar permisos. Si se agregan entidades de seguridad a este rol, podría habilitarse un aumento de privilegios no deseado.|  
@@ -95,7 +93,7 @@ No se pueden cambiar los permisos asignados a los roles fijos de base de datos. 
 
 Estos roles de base de datos solo existen en la base de datos maestra virtual. Sus permisos están restringidos a las acciones realizadas en la base de datos maestra. Solo los usuarios de base de datos en la base de datos maestra se pueden agregar a estos roles. Los inicios de sesión no se pueden agregar a estos roles, pero los usuarios se pueden crear basados en inicios de sesión y, luego, esos usuarios se pueden agregar a los roles. Los usuarios de bases de datos independientes en la base de datos maestra también se pueden agregar a estos roles.
 
-|Nombre de rol|Description|  
+|Nombre de rol|Descripción|  
 |--------------------|-----------------|
 **dbmanager** | Puede crear y eliminar bases de datos. Un miembro del rol dbmanager que crea una base de datos se convierte en el propietario de dicha base de datos, lo que permite que el usuario se conecte a ella como el usuario dbo. El usuario dbo tiene todos los permisos de base de datos en la base de datos. Los miembros del rol dbmanager no necesariamente tienen permiso para obtener acceso a las bases de datos que no son de su propiedad.
 **loginmanager** | Puede crear y eliminar inicios de sesión en la base de datos maestra virtual.  
@@ -106,7 +104,7 @@ Estos roles de base de datos solo existen en la base de datos maestra virtual. S
 ## <a name="msdb-roles"></a>Roles de msdb  
  La base de datos msdb contiene los roles con fines especiales que se muestran en la tabla siguiente.  
   
-|Nombre de rol de msdb|Description|  
+|Nombre de rol de msdb|Descripción|  
 |--------------------|-----------------|  
 |**db_ssisadmin**<br /><br /> **db_ssisoperator**<br /><br /> **db_ssisltduser**|Los miembros de estos roles de base de datos pueden administrar y utilizar [!INCLUDE[ssIS](../../../includes/ssis-md.md)]. Las instancias de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] que se actualizan desde una versión anterior podrían contener una versión anterior del rol cuya denominación se realizaba al usar Servicios de transformación de datos (DTS) en lugar de [!INCLUDE[ssIS](../../../includes/ssis-md.md)]. Para obtener más información, vea [Roles de Integration Services &#40;servicio SSIS&#41;](../../../integration-services/security/integration-services-roles-ssis-service.md).|  
 |**dc_admin**<br /><br /> **dc_operator**<br /><br /> **dc_proxy**|Los miembros de estos roles de base de datos pueden administrar y utilizar el recopilador de datos. Para obtener más información, consulte [Data Collection](../../../relational-databases/data-collection/data-collection.md).|  
@@ -123,7 +121,7 @@ Estos roles de base de datos solo existen en la base de datos maestra virtual. S
 
 Si R Services está instalado, hay roles de base de datos adicionales disponibles para administrar paquetes. Para más información, vea [R Package management for SQL Server (Administración de paquetes de R para SQL Server)](../../../advanced-analytics/r-services/r-package-management-for-sql-server-r-services.md).
 
-|Nombre de rol |Description|  
+|Nombre de rol |Descripción|  
 |-------------|-----------------|
 |**rpkgs-users** |Permite a los usuarios usar cualquier paquete compartido que los miembros del rol rpkgs-shared hayan instalado.|
 |**rpkgs-private** |Proporciona acceso a los paquetes compartidos con los mismos permisos que el rol rpkgs-users. Los miembros de este rol también pueden instalar, quitar y usar paquetes de ámbito privado.|
@@ -132,7 +130,7 @@ Si R Services está instalado, hay roles de base de datos adicionales disponible
 ## <a name="working-with-database-level-roles"></a>Trabajar con roles de nivel de base de datos  
  En la tabla siguiente se explican los comandos, las vistas y las funciones que se usan para trabajar con los roles de nivel de base de datos.  
   
-|Característica|Tipo|Description|  
+|Característica|Tipo|Descripción|  
 |-------------|----------|-----------------|  
 |[sp_helpdbfixedrole &#40;Transact-SQL&#41;](../../../relational-databases/system-stored-procedures/sp-helpdbfixedrole-transact-sql.md)|Metadatos|Devuelve la lista de los roles fijos de base de datos.|  
 |[sp_dbfixedrolepermission &#40;Transact-SQL&#41;](../../../relational-databases/system-stored-procedures/sp-dbfixedrolepermission-transact-sql.md)|Metadatos|Muestra los permisos de un rol fijo de base de datos.|  

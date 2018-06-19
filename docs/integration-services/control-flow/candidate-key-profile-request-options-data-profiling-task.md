@@ -4,11 +4,9 @@ ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: integration-services
-ms.component: control-flow
 ms.reviewer: ''
 ms.suite: sql
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
@@ -18,11 +16,12 @@ caps.latest.revision: 26
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 2cff19de2067c9a0822784439d952622387bdea0
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 2d43d1c2dcded1a862a240c19ed00304bbc97276
+ms.sourcegitcommit: cc46afa12e890edbc1733febeec87438d6051bf9
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/12/2018
+ms.locfileid: "35402687"
 ---
 # <a name="candidate-key-profile-request-options-data-profiling-task"></a>Opciones de Solicitud de perfil de claves candidatas (tarea de generación de perfiles de datos)
   Utilice el panel **Propiedades de la solicitud** de la página **Solicitudes de perfil** para establecer las opciones de **Solicitud de perfil de claves candidatas** seleccionadas en el panel de solicitudes. Un perfil de claves candidatas notifica si una columna o conjunto de columnas es una clave, o una clave aproximada, para la tabla seleccionada. Este perfil también puede ayudarle a identificar problemas de los datos, por ejemplo valores duplicados en una posible columna de clave.  
@@ -97,7 +96,7 @@ ms.lasthandoff: 05/03/2018
 > [!NOTE]  
 >  Al usar un carácter comodín **(\*)** para **ColumnName**, **CompareOptions** es de solo lectura y se establece en el valor **Default**.  
   
-|Valor|Description|  
+|Valor|Descripción|  
 |-----------|-----------------|  
 |**Default**|Ordena y compara datos basados en la intercalación de la columna en la tabla de origen.|  
 |**BinarySort**|Ordena y compara los datos según los patrones de bits definidos para cada carácter. El orden binario utiliza la distinción de mayúsculas y minúsculas, y de acentos. El orden binario es también el más rápido.|  
@@ -105,7 +104,7 @@ ms.lasthandoff: 05/03/2018
   
  Si selecciona **DictionarySort**, también puede seleccionar cualquier combinación de las opciones enumeradas en la tabla siguiente. De forma predeterminada, no se selecciona ninguna de estas opciones adicionales.  
   
-|Valor|Description|  
+|Valor|Descripción|  
 |-----------|-----------------|  
 |**IgnoreCase**|Especifica si la comparación distingue entre mayúsculas y minúsculas. Si se establece esta opción, la comparación de las cadenas omite la distinción entre mayúsculas y minúsculas. Por ejemplo, "ABC" se interpreta igual que "abc".|  
 |**IgnoreNonSpace**|Especifica si la comparación distingue entre caracteres con espacio y signos diacríticos. Si se establece esta opción, la comparación omite los signos diacríticos. Por ejemplo, "å" se considera igual que "a".|  
@@ -120,7 +119,7 @@ ms.lasthandoff: 05/03/2018
  **ThresholdSetting**  
  Esta propiedad presenta las opciones indicadas en la siguiente tabla. El valor predeterminado de esta propiedad es **Specified**.  
   
-|Valor|Description|  
+|Valor|Descripción|  
 |-----------|-----------------|  
 |**Ninguno**|No se especificó un umbral. El nivel de la clave se notifica independientemente de su valor.|  
 |**Specified**|Un umbral se especifica en **KeyStrengthThreshold**. Solo se notifica el nivel de clave si es mayor que el umbral.|  

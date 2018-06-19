@@ -4,11 +4,9 @@ ms.custom: ''
 ms.date: 07/26/2017
 ms.prod: sql
 ms.prod_service: integration-services
-ms.component: non-specific
 ms.reviewer: ''
 ms.suite: sql
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: e5018225-68bb-4f34-ae4a-ead79d8ad13a
@@ -16,11 +14,12 @@ caps.latest.revision: 15
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: aa387b2a7e53e104604545ed7f35dde6105701b3
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 0c7865910ffb00b654c8be47f87bef752df1368a
+ms.sourcegitcommit: cc46afa12e890edbc1733febeec87438d6051bf9
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/12/2018
+ms.locfileid: "35411407"
 ---
 # <a name="integration-services-features-supported-by-the-editions-of-sql-server"></a>Características de Integration Services compatibles con las ediciones de SQL Server
  En este tema, encontrará información detallada sobre las características de SQL Server Integration Services (SSIS) admitidas por las diversas ediciones de [!INCLUDE[ssNoVersion_md](../includes/ssnoversion-md.md)].  
@@ -40,7 +39,7 @@ La edición de evaluación de SQL Server está disponible durante un período de
     
 ## <a name="ISNew"></a> Nuevas características de Integration Services en SQL Server 2017
   
-|Característica|Enterprise|Standard|Web|Express con Advanced Services|Express|  
+|Característica|Enterprise|Estándar|Web|Express con Advanced Services|Express|  
 |-------------|----------------|--------------|---------|------------------------------------|------------------------|  
 |Patrón de escalabilidad horizontal|Sí|||||
 |Trabajo de escalabilidad horizontal|Sí|Sí <sup>1</sup>|TBD|TBD|TBD|
@@ -52,13 +51,13 @@ La edición de evaluación de SQL Server está disponible durante un período de
 
 ## <a name="IEWiz"></a> Asistente para importación y exportación de SQL Server
 
-|Característica|Enterprise|Standard|Web|Express con Advanced Services|Express|  
+|Característica|Enterprise|Estándar|Web|Express con Advanced Services|Express|  
 |-------------|----------------|--------------|---------|------------------------------------|------------------------|  
 |Asistente para importación y exportación de SQL Server|Sí|Sí|Sí|Sí|Sí|  
 
 ## <a name="IS"></a> Integration Services  
   
-|Característica|Enterprise|Standard|Web|Express con Advanced Services|Express|  
+|Característica|Enterprise|Estándar|Web|Express con Advanced Services|Express|  
 |-------------|----------------|--------------|---------|------------------------------------|------------------------|  
 |Conectores de origen de datos integrados|Sí|Sí|||| 
 |Tareas y transformaciones integradas|Sí|Sí||||  
@@ -69,7 +68,7 @@ La edición de evaluación de SQL Server está disponible durante un período de
 
 ## <a name="ISAA"></a> Integration Services: orígenes y destinos avanzados  
   
-|Característica|Enterprise|Standard|Web|Express con Advanced Services|Express|  
+|Característica|Enterprise|Estándar|Web|Express con Advanced Services|Express|  
 |-------------|----------------|--------------|---------|------------------------------------|------------------------|  
 |Origen y de destino de Oracle de alto rendimiento de Attunity|Sí|||||  
 |Origen y de destino de Teradata de alto rendimiento de Attunity|Sí|||||  
@@ -80,7 +79,7 @@ La edición de evaluación de SQL Server está disponible durante un período de
   
 ## <a name="ISAT"></a> Integration Services: transformaciones y tareas avanzadas  
   
-|Característica|Enterprise|Standard|Web|Express con Advanced Services|Express|  
+|Característica|Enterprise|Estándar|Web|Express con Advanced Services|Express|  
 |-------------|----------------|--------------|---------|------------------------------------|------------------------|  
 |Componentes de Change Data Capture de Attunity <sup>1</sup>|Sí|||||  
 |Transformación de consulta de minería de datos|Sí|||||  

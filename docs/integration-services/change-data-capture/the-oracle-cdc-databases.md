@@ -4,11 +4,9 @@ ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: integration-services
-ms.component: change-data-capture
 ms.reviewer: ''
 ms.suite: sql
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: a96486e9-f79b-4b24-bfaf-56203dd0e435
@@ -16,11 +14,12 @@ caps.latest.revision: 17
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: bf36c117d636579d0f2048b67cd903eca224cc3d
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 7095024d2b7636b600fe1e905b335b866b1f30ba
+ms.sourcegitcommit: cc46afa12e890edbc1733febeec87438d6051bf9
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/12/2018
+ms.locfileid: "35411547"
 ---
 # <a name="the-oracle-cdc-databases"></a>Las bases de datos CDC de Oracle
   Una instancia CDC de Oracle está asociada a una base de datos de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] con el mismo nombre en la instancia de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] de destino. Esta base de datos se denomina la base de datos CDC de Oracle (o la base de datos CDC).  
@@ -99,7 +98,7 @@ ms.lasthandoff: 05/03/2018
   
  En la tabla siguiente se describen las columnas de la tabla **cdc.xdbcdc_config** .  
   
-|Elemento|Description|  
+|Elemento|Descripción|  
 |----------|-----------------|  
 |version|Hace un seguimiento de la versión de la configuración de la instancia CDC. Se actualiza cada vez que se actualiza la tabla y cada vez que se agrega una nueva instancia de captura o cuando se quita una instancia de captura existente.|  
 |connect_string|Cadena de conexión de Oracle. Un ejemplo básico es:<br /><br /> `<server>:<port>/<instance>` (por ejemplo, `erp.contoso.com:1521/orcl`).<br /><br /> La cadena de conexión también puede especificar un descriptor de conexión de Oracle Net, por ejemplo `(DESCRIPTION=(ADDRESS=(PROTOCOL=tcp) (HOST=erp.contoso.com) (PORT=1521)) (CONNECT_DATA=(SERVICE_NAME=orcl)))`.<br /><br /> Si se usa un servidor de directorio o tnsnames, la cadena de conexión puede ser el nombre de la conexión.<br /><br /> Para obtener más información sobre las cadenas de conexión de Oracle, vea [http://go.microsoft.com/fwlink/?LinkId=231153](http://go.microsoft.com/fwlink/?LinkId=231153) para obtener información detallada sobre las cadenas de conexión a bases de datos de Oracle para el cliente Oracle Instant usado por el servicio CDC de Oracle.|  
@@ -112,7 +111,7 @@ ms.lasthandoff: 05/03/2018
   
  En la tabla siguiente se describen las opciones disponibles.  
   
-|Nombre|Valor predeterminado|Min|Max|Estático|Description|  
+|Nombre|Valor predeterminado|Min|Max|Estático|Descripción|  
 |----------|-------------|---------|---------|------------|-----------------|  
 |seguimiento|False|-|-|False|Los valores disponibles son:<br /><br /> True<br /><br /> False<br /><br /> on<br /><br /> off|  
 |cdc_update_state_interval|10|1|120|False|Tamaño (en kilobytes) de los fragmentos de memoria asignados para una transacción (una transacción puede asignar más de un fragmento). Vea la columna memory_limit en la tabla [cdc.xdbcdc_config](../../integration-services/change-data-capture/the-oracle-cdc-databases.md#BKMK_cdcxdbcdc_config) .|  
@@ -142,7 +141,7 @@ ms.lasthandoff: 05/03/2018
   
  En la tabla siguiente se describen las columnas de la tabla **cdc.xdbcdc_state** .  
   
-|Elemento|Description|  
+|Elemento|Descripción|  
 |----------|-----------------|  
 |status|Código de estado actual para la instancia CDC de Oracle actual. El estado describe el estado actual de CDC.|  
 |sub_status|Estado de segundo nivel que proporciona información adicional sobre el estado actual.|  
@@ -167,7 +166,7 @@ ms.lasthandoff: 05/03/2018
   
  En la tabla siguiente se describen las columnas de la tabla cdc.xdbcdc_trace.  
   
-|Elemento|Description|  
+|Elemento|Descripción|  
 |----------|-----------------|  
 |TIMESTAMP|Marca de tiempo UTC exacta en que se escribió el registro de seguimiento.|  
 |tipo|Contiene uno de los valores siguientes.<br /><br /> error<br /><br /> INFO<br /><br /> seguimiento|  
@@ -182,7 +181,7 @@ ms.lasthandoff: 05/03/2018
   
  En la tabla siguiente se describen las columnas de la tabla **cdc.xdbcdc_staged_transactions** .  
   
-|Elemento|Description|  
+|Elemento|Descripción|  
 |----------|-----------------|  
 |transaction_id|Identificador único de la transacción que se está almacenando provisionalmente.|  
 |seq_num|Número de fila de la tabla **xcbcdc_staged_transactions** para la transacción actual (empezando en 0).|  

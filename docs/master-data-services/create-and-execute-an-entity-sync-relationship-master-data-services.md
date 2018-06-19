@@ -4,7 +4,6 @@ ms.custom: ''
 ms.date: 03/01/2017
 ms.prod: sql
 ms.prod_service: mds
-ms.component: non-specific
 ms.reviewer: ''
 ms.suite: sql
 ms.technology:
@@ -16,11 +15,12 @@ caps.latest.revision: 6
 author: leolimsft
 ms.author: lle
 manager: craigg
-ms.openlocfilehash: d6fc15b14633191d1a7307a5b0fbf510ad3ecebc
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: dfa543da84e0dcfb454e089379e709075f302104
+ms.sourcegitcommit: cc46afa12e890edbc1733febeec87438d6051bf9
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/12/2018
+ms.locfileid: "35402227"
 ---
 # <a name="create-and-execute-an-entity-sync-relationship-master-data-services"></a>Crear y ejecutar una relación de sincronización de entidades (Master Data Services)
 
@@ -100,7 +100,7 @@ ms.lasthandoff: 05/03/2018
 ## <a name="sync-relationship-information"></a>Información de las relaciones de sincronización  
  Por cada relación de sincronización creada, se agrega a la cuadrícula una fila con diez columnas. En la siguiente tabla se describen las columnas.  
   
-|columna|Description|  
+|columna|Descripción|  
 |------------|-----------------|  
 |Estado|Estado de la relación de sincronización.<br /><br /> Al hacer clic en **Guardar** o ejecutar una relación de sincronización, aparece la imagen ![Icono de estado de actualización](../master-data-services/media/mds-statusicon-updating.png "Icono de estado de actualización"), que indica que la relación de sincronización se está actualizando.<br /><br /> Si hay errores al crear, editar o ejecutar una relación de sincronización, aparecerá la imagen ![Icono de estado de error](../master-data-services/media/mds-statusicon-error.png "Icono de estado de error").<br /><br /> En caso contrario, el estado será correcto y aparecerá la imagen ![Icono de estado correcto](../master-data-services/media/mds-statusicon-ok.png "Icono de estado correcto").|  
 |Modelo de origen|Nombre del modelo de origen.|  

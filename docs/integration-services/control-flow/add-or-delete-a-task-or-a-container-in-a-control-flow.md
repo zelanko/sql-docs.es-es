@@ -4,11 +4,9 @@ ms.custom: ''
 ms.date: 03/01/2017
 ms.prod: sql
 ms.prod_service: integration-services
-ms.component: control-flow
 ms.reviewer: ''
 ms.suite: sql
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
@@ -21,11 +19,12 @@ caps.latest.revision: 46
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 8209b848bb2434fd157c83f1e5aaa32783fb8402
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: d010e7c37b8bd297fce1ec06288f77904700031e
+ms.sourcegitcommit: de5e726db2f287bb32b7910831a0c4649ccf3c4c
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/12/2018
+ms.locfileid: "35333399"
 ---
 # <a name="add-or-delete-a-task-or-a-container-in-a-control-flow"></a>Agregar o eliminar tareas o contenedores en un flujo de control
   Cuando se trabaja en el diseñador de flujo de control, el cuadro de herramientas del Diseñador [!INCLUDE[ssIS](../../includes/ssis-md.md)] enumera las tareas que proporciona [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] para generar flujo de control en un paquete. Para obtener más información sobre el cuadro de herramientas, vea [SSIS Toolbox](../../integration-services/ssis-toolbox.md).  
@@ -52,7 +51,7 @@ ms.lasthandoff: 05/03/2018
   
 7.  Conecte una tarea o contenedor dentro del flujo de control de paquete arrastrando su conector a otro componente en el flujo de control.  
   
-8.  Para guardar el paquete actualizado, haga clic en **Guardar los elementos seleccionados** , en el menú **Archivo** .  
+8.  Para guardar el paquete actualizado, haga clic en **Guardar los elementos seleccionados**, en el menú **Archivo**.  
   
 ## <a name="delete-a-task-or-a-container-from-a-control-flow"></a>Eliminar una tarea o un contenedor de un flujo de control  
   
@@ -64,7 +63,7 @@ ms.lasthandoff: 05/03/2018
   
     -   Abra el **Explorador de paquetes**. En la carpeta **Ejecutables** , haga clic con el botón derecho en la tarea o contenedor que quiera eliminar y, después, haga clic en **Eliminar**.  
   
-3.  Para guardar el paquete actualizado, haga clic en **Guardar los elementos seleccionados** , en el menú **Archivo** .  
+3.  Para guardar el paquete actualizado, haga clic en **Guardar los elementos seleccionados**, en el menú **Archivo**.  
 
 ## <a name="set-the-properties-of-a-task-or-container"></a>Establecer las propiedades de una tarea o un contenedor
 Puede establecer la mayoría de las propiedades de tareas y contenedores utilizando la ventana **Propiedades** . Las excepciones son propiedades de colecciones de tareas y propiedades que son demasiado complejas como para establecerse mediante la ventana **Propiedades** . Por ejemplo, no puede configurar el enumerador que usa el contenedor de bucles Foreach en la ventana **Propiedades** . Debe usar un editor de tareas o contenedores para establecer estas propiedades complejas. La mayoría de los editores de tareas y contenedores tienen varios nodos y cada nodo contiene propiedades relacionadas. El nombre del nodo indica el sujeto de las propiedades que contiene el nodo.  
@@ -88,7 +87,7 @@ Puede establecer la mayoría de las propiedades de tareas y contenedores utiliza
   
 6.  Opcionalmente, puede crear expresiones de propiedades para actualizar dinámicamente las propiedades de la tarea o del contenedor. Para más información, vea [Agregar o cambiar una expresión de propiedad](../../integration-services/expressions/add-or-change-a-property-expression.md).  
   
-7.  Para guardar el paquete actualizado, haga clic en **Guardar los elementos seleccionados** , en el menú **Archivo** .  
+7.  Para guardar el paquete actualizado, haga clic en **Guardar los elementos seleccionados**, en el menú **Archivo**.  
   
 ### <a name="set-the-properties-of-a-task-or-container-with-the-task-or-container-editor"></a>Establecer las propiedades de una tarea o un contenedor con un editor de tareas o contenedores  
   
@@ -113,7 +112,7 @@ Puede establecer la mayoría de las propiedades de tareas y contenedores utiliza
   
 7.  Actualice el valor de las propiedades.  
   
-8.  Para guardar el paquete actualizado, haga clic en **Guardar los elementos seleccionados** , en el menú **Archivo** .  
+8.  Para guardar el paquete actualizado, haga clic en **Guardar los elementos seleccionados**, en el menú **Archivo**.  
   
 ## <a name="see-also"></a>Ver también  
  [Tareas de Integration Services](../../integration-services/control-flow/integration-services-tasks.md)   

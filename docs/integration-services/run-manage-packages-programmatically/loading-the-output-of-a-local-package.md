@@ -4,10 +4,9 @@ ms.custom: ''
 ms.date: 03/17/2017
 ms.prod: sql
 ms.prod_service: integration-services
-ms.component: run-manage-packages-programmatically
 ms.reviewer: ''
 ms.suite: sql
-ms.technology: ''
+ms.technology: integration-services
 ms.tgt_pltfrm: ''
 ms.topic: reference
 applies_to:
@@ -23,11 +22,12 @@ caps.latest.revision: 66
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: ebf3f8cb5102df9db80e45bc148ae0a799d5319a
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 1940d38858bd1a658abe33fe987dc148834362f1
+ms.sourcegitcommit: cc46afa12e890edbc1733febeec87438d6051bf9
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/12/2018
+ms.locfileid: "35402337"
 ---
 # <a name="loading-the-output-of-a-local-package"></a>Cargar la salida de un paquete local
   Las aplicaciones cliente pueden leer la salida de los paquetes de [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] cuando se guarda la salida en destinos de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] mediante [!INCLUDE[vstecado](../../includes/vstecado-md.md)] o cuando se guarda en un destino de archivo plano usando las clases del espacio de nombres **System.IO**. Sin embargo, una aplicación cliente también puede leer la salida de un paquete directamente de la memoria, sin tener que efectuar un paso intermedio para conservar los datos. La clave para esta solución es el espacio de nombres **Microsoft.SqlServer.Dts.DtsClient**, que contiene implementaciones especializadas de las interfaces **IDbConnection**, **IDbCommand** e **IDbDataParameter** del espacio de nombres **System.Data**. El ensamblado Microsoft.SqlServer.Dts.DtsClient.dll se instala de forma predeterminada en la carpeta **%Archivos de programa%\Microsoft SQL Server\100\DTS\Binn**.  
@@ -35,7 +35,7 @@ ms.lasthandoff: 05/03/2018
 > [!NOTE]  
 >  El procedimiento descrito en este tema necesita que la propiedad DelayValidation de la tarea Flujo de datos y de los objetos primarios esté establecida en el valor predeterminado de **False**.  
   
-## <a name="description"></a>Description  
+## <a name="description"></a>Descripción  
  Este procedimiento muestra cómo desarrollar una aplicación cliente en código administrado que carga la salida de un paquete con un destino DataReader directamente de la memoria. Los pasos resumidos aquí se muestran en el ejemplo de código que figura a continuación.  
   
 #### <a name="to-load-data-package-output-into-a-client-application"></a>Para cargar la salida del paquete de datos en una aplicación cliente  

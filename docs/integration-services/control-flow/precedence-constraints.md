@@ -4,11 +4,9 @@ ms.custom: ''
 ms.date: 03/01/2017
 ms.prod: sql
 ms.prod_service: integration-services
-ms.component: control-flow
 ms.reviewer: ''
 ms.suite: sql
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.tgt_pltfrm: ''
 ms.topic: conceptual
 f1_keywords:
@@ -25,11 +23,12 @@ caps.latest.revision: 51
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 02790fb579d3b899444834eee526da8fc852d569
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: ca90530dbce46d98f3fbaa9faeaa744426e4843f
+ms.sourcegitcommit: de5e726db2f287bb32b7910831a0c4649ccf3c4c
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/12/2018
+ms.locfileid: "35333439"
 ---
 # <a name="precedence-constraints"></a>Restricciones de precedencia
   Las restricciones de precedencia vinculan ejecutables, contenedores y tareas de paquetes en un flujo de control, y especifican condiciones que determinan si se ejecutan los ejecutables. Un ejecutable puede ser un contenedor de bucles For, de bucles Foreach o de secuencia, o bien una tarea o un controlador de eventos. Los controladores de eventos usan las restricciones de precedencia para vincular sus ejecutables en un flujo de control.  
@@ -108,7 +107,7 @@ ms.lasthandoff: 05/03/2018
   
 9. Haga clic en **Aceptar** para cerrar el **Editor de restricciones de precedencia**.  
   
-10. Para guardar el paquete actualizado, haga clic en **Guardar los elementos seleccionados** , en el menú **Archivo** .  
+10. Para guardar el paquete actualizado, haga clic en **Guardar los elementos seleccionados**, en el menú **Archivo**.  
 
 ## <a name="precedence-constraint-editor"></a>Editor de restricciones de precedencia
 Utilice el cuadro de diálogo **Editor de restricciones de precedencia** para configurar restricciones de precedencia.  
@@ -153,7 +152,7 @@ Utilice el cuadro de diálogo **Editor de restricciones de precedencia** para co
   
     |Propiedad de lectura/escritura|Acción de configuración|  
     |--------------------------|--------------------------|  
-    |Description|Escribir una descripción.|  
+    |Descripción|Escribir una descripción.|  
     |EvalOp|Seleccionar una operación de evaluación. Si seleccionan las operaciones **Expression**, **ExpressionAndConstant**o **ExpressionOrConstant** , se puede especificar una expresión.|  
     |Expresión|Si la operación de evaluación contiene una expresión, se debe proporcionar una expresión. La expresión debe evaluarse como un valor booleano. Para más información sobre el lenguaje de expresiones, vea [Expresiones de Integration Services &#40;SSIS&#41;](../../integration-services/expressions/integration-services-ssis-expressions.md).|  
     |AND lógico|Configure **AND lógico** para especificar si la restricción de precedencia se evalúa en conjunto con otras restricciones de precedencia, cuando preceden varios ejecutables y están vinculados al ejecutable restringido.|  
@@ -163,7 +162,7 @@ Utilice el cuadro de diálogo **Editor de restricciones de precedencia** para co
   
 5.  Cierre la ventana Propiedades.  
   
-6.  Para guardar el paquete actualizado, haga clic en **Guardar los elementos seleccionados** , en el menú **Archivo** .  
+6.  Para guardar el paquete actualizado, haga clic en **Guardar los elementos seleccionados**, en el menú **Archivo**.  
 
 ## <a name="set-the-value-of-a-precedence-constraint-with-the-shortcut-menu"></a>Establecer el valor de una restricción de precedencia con el menú contextual  
   
@@ -210,7 +209,7 @@ Utilice el cuadro de diálogo **Editor de restricciones de precedencia** para co
   
 7.  Para validar la sintaxis de expresión, haga clic en **Probar**.  
   
-8.  Para guardar el paquete actualizado, haga clic en **Guardar los elementos seleccionados** , en el menú **Archivo** .  
+8.  Para guardar el paquete actualizado, haga clic en **Guardar los elementos seleccionados**, en el menú **Archivo**.  
  
 ### <a name="combine-execution-values-and-expressions"></a>Combinar valores de ejecución y expresiones  
  La siguiente tabla describe los efectos de combinar una restricción de valor de ejecución y una expresión en una restricción de precedencia.  
@@ -268,4 +267,4 @@ Cuando se usa por primera vez el Diseñador [!INCLUDE[ssIS](../../includes/ssis-
   
 4.  En la superficie de diseño de la pestaña **Flujo de control** , haga clic en la tarea o contenedor y arrastre su conector al ejecutable al que desea aplicar la restricción de precedencia.  
   
-5.  Para guardar el paquete actualizado, haga clic en **Guardar los elementos seleccionados** , en el menú **Archivo** .  
+5.  Para guardar el paquete actualizado, haga clic en **Guardar los elementos seleccionados**, en el menú **Archivo**.  

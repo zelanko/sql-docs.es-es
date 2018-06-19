@@ -4,11 +4,9 @@ ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: integration-services
-ms.component: control-flow
 ms.reviewer: ''
 ms.suite: sql
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.tgt_pltfrm: ''
 ms.topic: conceptual
 f1_keywords:
@@ -22,11 +20,12 @@ caps.latest.revision: 32
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: a59e91ef39974021474d90bb65885b80831307da
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: f3bd2f1d9050d0b83a918914246ecc2d51cbd997
+ms.sourcegitcommit: cc46afa12e890edbc1733febeec87438d6051bf9
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/12/2018
+ms.locfileid: "35409167"
 ---
 # <a name="data-profiling-task"></a>Tarea de generación de perfiles de datos
   La tarea de generación de perfiles de datos calcula diversos perfiles que le ayudan a familiarizarse con un origen de datos y a identificar en los datos problemas que deban corregirse.  
@@ -54,7 +53,7 @@ ms.lasthandoff: 05/03/2018
   
  Los cinco perfiles siguientes analizan columnas individuales.  
   
-|Perfiles que analizan columnas individuales|Description|  
+|Perfiles que analizan columnas individuales|Descripción|  
 |----------------------------------------------|-----------------|  
 |Perfil de distribución de longitud de columnas|Notifica las diferentes longitudes de valores de cadena existentes en la columna seleccionada y el porcentaje de filas de la tabla que representa cada longitud.<br /><br /> Este perfil le ayuda a identificar problemas en los datos, como los valores no válidos. Por ejemplo, genera un perfil de una columna de códigos de estados de Estados Unidos que deberían ser de dos caracteres y detecta valores con más de dos caracteres.|  
 |Perfil de proporción de columnas nulas|Notifica el porcentaje de valores nulos en la columna seleccionada.<br /><br /> Este perfil permite identificar problemas con los datos, como una proporción inesperadamente alta de valores nulos en una columna. Por ejemplo, genera un perfil de una columna de códigos postales y detecta un porcentaje inaceptablemente alto de códigos que faltan.|  
@@ -64,7 +63,7 @@ ms.lasthandoff: 05/03/2018
   
  Los tres perfiles siguientes analizan varias columnas o relaciones entre columnas y tablas.  
   
-|Perfiles que analizan varias columnas|Description|  
+|Perfiles que analizan varias columnas|Descripción|  
 |--------------------------------------------|-----------------|  
 |Perfil de claves candidatas|Notifica si una columna o un conjunto de columnas es una clave, o una clave aproximada, para la tabla seleccionada.<br /><br /> Este perfil le ayuda a identificar problemas con los datos, como por ejemplo, valores duplicados en una posible columna de clave.|  
 |Perfil de dependencia funcional|Notifica hasta qué punto los valores de una columna (la columna dependiente) dependen de los valores de otra columna o de un conjunto de columnas (la columna determinante).<br /><br /> Este perfil le ayuda a identificar problemas con los datos, como valores no válidos. Por ejemplo, al generar un perfil de la dependencia entre una columna que contiene códigos postales de Estados Unidos y una columna que contiene estados de Estados Unidos. El mismo código postal debería tener siempre el mismo estado, pero el perfil detecta infracciones de esta dependencia.|  
@@ -116,7 +115,7 @@ ms.lasthandoff: 05/03/2018
 ## <a name="custom-logging-messages-available-on-the-data-profililng-task"></a>Mensajes de registro personalizados disponibles en la tarea de generación de perfiles de datos  
  La siguiente tabla contiene las entradas del registro personalizadas para la tarea de generación de perfiles de datos. Para obtener más información, vea [Registro de Integration Services &#40;SSIS&#41;](../../integration-services/performance/integration-services-ssis-logging.md).  
   
-|Entrada del registro|Description|  
+|Entrada del registro|Descripción|  
 |---------------|-----------------|  
 |**DataProfilingTaskTrace**|Proporciona información descriptiva sobre el estado de la tarea. Los mensajes incluyen la información siguiente:<br /><br /> Inicio de las solicitudes de procesamiento<br /><br /> Inicio de la consulta<br /><br /> Query End<br /><br /> Finalización de la solicitud de cálculo|  
   

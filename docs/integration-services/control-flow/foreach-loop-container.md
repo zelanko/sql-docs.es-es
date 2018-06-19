@@ -4,11 +4,9 @@ ms.custom: ''
 ms.date: 08/22/2017
 ms.prod: sql
 ms.prod_service: integration-services
-ms.component: control-flow
 ms.reviewer: ''
 ms.suite: sql
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.tgt_pltfrm: ''
 ms.topic: conceptual
 f1_keywords:
@@ -36,11 +34,12 @@ caps.latest.revision: 73
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 3e7a04bc86317e2ceb04a4b2ae1e7fcff40470e0
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: aebf427b093a860122ace5c21f1a887dac331525
+ms.sourcegitcommit: de5e726db2f287bb32b7910831a0c4649ccf3c4c
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/12/2018
+ms.locfileid: "35331459"
 ---
 # <a name="foreach-loop-container"></a>Contenedor Foreach Loop
   El contenedor de bucles Foreach define un flujo de control que se repite en un paquete. La implementación del bucle es similar a la estructura de bucle **Foreach** de los lenguajes de programación. En un paquete, los bucles se habilitan mediante un enumerador Foreach.  El contenedor de bucles Foreach repite el flujo de control para cada miembro de un enumerador especificado.  
@@ -203,7 +202,7 @@ Utilice la página **General** del cuadro de diálogo **Editor de bucles Foreach
  **Enumerador**  
  Seleccione el tipo de enumerador de la lista. Esta propiedad presenta las opciones indicadas en la siguiente tabla:  
   
-|Valor|Description|  
+|Valor|Descripción|  
 |-----------|-----------------|  
 |**Enumerador de archivos para Para cada uno**|Enumera archivos. Si selecciona este valor se muestran las opciones dinámicas en la sección **Enumerador de archivos para Foreach**.|  
 |**Enumerador de elementos para Para cada uno**|Enumera los valores de un elemento. Si selecciona este valor se muestran las opciones dinámicas en la sección **Enumerador de elementos para Foreach**.|  
@@ -344,7 +343,7 @@ Utilice la página **General** del cuadro de diálogo **Editor de bucles Foreach
  **DocumentSourceType**  
  Seleccione el tipo de origen del documento XML. Esta propiedad presenta las opciones indicadas en la siguiente tabla:  
   
-|Valor|Description|  
+|Valor|Descripción|  
 |-----------|-----------------|  
 |**Entrada directa**|Establezca el origen para un documento XML.|  
 |**Conexión de archivos**|Seleccione el archivo que contiene el documento XML.|  
@@ -364,7 +363,7 @@ Utilice la página **General** del cuadro de diálogo **Editor de bucles Foreach
  **EnumerationType**  
  Seleccione un tipo de enumeración de la lista. Esta propiedad presenta las opciones indicadas en la siguiente tabla:  
   
-|Valor|Description|  
+|Valor|Descripción|  
 |-----------|-----------------|  
 |**Navigator**|Se enumera mediante un objeto XPathNavigator.|  
 |**Node**|Se enumeran los nodos devueltos por una operación XPath.|  
@@ -374,7 +373,7 @@ Utilice la página **General** del cuadro de diálogo **Editor de bucles Foreach
  **OuterXPathStringSourceType**  
  Seleccione el tipo de origen de la cadena XPath. Esta propiedad presenta las opciones indicadas en la siguiente tabla: 
   
-|Valor|Description|  
+|Valor|Descripción|  
 |-----------|-----------------|  
 |**Entrada directa**|Establezca el origen para un documento XML.|  
 |**Conexión de archivos**|Seleccione el archivo que contiene el documento XML.|  
@@ -397,7 +396,7 @@ Utilice la página **General** del cuadro de diálogo **Editor de bucles Foreach
  **InnerXPathStringSourceType**  
  Seleccione el tipo de origen de la cadena XPath interna. Esta propiedad presenta las opciones indicadas en la siguiente tabla:  
   
-|Valor|Description|  
+|Valor|Descripción|  
 |-----------|-----------------|  
 |**Entrada directa**|Establezca el origen para un documento XML.|  
 |**Conexión de archivos**|Seleccione el archivo que contiene el documento XML.|  

@@ -4,11 +4,9 @@ ms.custom: ''
 ms.date: 03/02/2017
 ms.prod: sql
 ms.prod_service: integration-services
-ms.component: control-flow
 ms.reviewer: ''
 ms.suite: sql
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.tgt_pltfrm: ''
 ms.topic: conceptual
 f1_keywords:
@@ -23,11 +21,12 @@ caps.latest.revision: 57
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: c82398a98bcd3233586d0effbc369fe6827321f2
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 2ce926659bd322dfc24c105a1c684ff087944352
+ms.sourcegitcommit: cc46afa12e890edbc1733febeec87438d6051bf9
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/12/2018
+ms.locfileid: "35411047"
 ---
 # <a name="web-service-task"></a>Tarea Servicio web
   La tarea Servicio web ejecuta un método de servicio web. Puede usar la tarea Servicio web para los siguientes objetivos:  
@@ -61,7 +60,7 @@ ms.lasthandoff: 05/03/2018
 ## <a name="custom-logging-messages-available-on-the-web-service-task"></a>Mensajes de registro personalizados disponibles en la tarea Servicio web  
  La siguiente tabla contiene las entradas del registro personalizadas que puede habilitar para la tarea Servicio web. Para obtener más información, vea [Registro de Integration Services &#40;SSIS&#41;](../../integration-services/performance/integration-services-ssis-logging.md).  
   
-|Entrada del registro|Description|  
+|Entrada del registro|Descripción|  
 |---------------|-----------------|  
 |**WSTaskBegin**|La tarea inició el acceso a un servicio web.|  
 |**WSTaskEnd**|La tarea completó un método de servicio web.|  
@@ -165,7 +164,7 @@ ms.lasthandoff: 05/03/2018
  **OutputType**  
  Seleccione el tipo de almacenamiento que desea usar para almacenar los resultados. Esta propiedad presenta las opciones indicadas en la siguiente tabla.  
   
-|Valor|Description|  
+|Valor|Descripción|  
 |-----------|-----------------|  
 |**Conexión de archivos**|Almacene los resultados en un archivo. Si selecciona este valor, se mostrará la opción dinámica **Archivo**.|  
 |**Variable**|Almacene los resultados en una variable. Si selecciona este valor, se mostrará la opción dinámica **Variable**.|  

@@ -4,7 +4,6 @@ ms.custom: ''
 ms.date: 03/01/2017
 ms.prod: sql
 ms.prod_service: mds
-ms.component: non-specific
 ms.reviewer: ''
 ms.suite: sql
 ms.technology:
@@ -16,11 +15,12 @@ caps.latest.revision: 10
 author: leolimsft
 ms.author: lle
 manager: craigg
-ms.openlocfilehash: 961a4d045bc2ff82271ae6793069dc81f64575b1
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 3e097e0ad00b0ee10799fb8194051ce51ec55935
+ms.sourcegitcommit: cc46afa12e890edbc1733febeec87438d6051bf9
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/12/2018
+ms.locfileid: "35411837"
 ---
 # <a name="business-rule-actions-master-data-services"></a>Acciones de reglas de negocios (Master Data Services)
 
@@ -34,7 +34,7 @@ ms.lasthandoff: 05/03/2018
 ## <a name="default-value-actions"></a>Acciones de valor predeterminado  
  Las acciones de**valor predeterminado** establecen el valor predeterminado de un atributo especificado. Los usuarios con permiso pueden cambiar estos valores predeterminados.  
   
-|Nombre del valor|Description|  
+|Nombre del valor|Descripción|  
 |----------------|-----------------|  
 |**tiene como valor predeterminado**|El atributo seleccionado **se establece de manera predeterminada** en un atributo específico, un valor de atributo determinado o está vacío.<br /><br /> Esta acción es válida para los valores de texto, número, fecha y vínculo.|  
 |**tiene como valor predeterminado un valor generado**|El atributo seleccionado **tiene como valor predeterminado un valor generado** que se determina especificando un valor de inicio y un valor incremental.<br /><br /> Esta acción es válida para los valores de texto y de número.|  
@@ -43,7 +43,7 @@ ms.lasthandoff: 05/03/2018
 ## <a name="change-value-actions"></a>Acciones de cambiar valor  
  Las acciones de**cambiar valor** actualizan el valor de un atributo o valor especificado. Los usuarios solo pueden cambiar estos valores si el valor nuevo hace que la acción se establezca en TRUE.  
   
-|Nombre del valor|Description|  
+|Nombre del valor|Descripción|  
 |----------------|-----------------|  
 |**Es igual a**|El atributo seleccionado se cambia a un valor de atributo definido, a otro atributo o el valor se queda vacío.<br /><br /> Esta acción es válida para los valores de texto, número, fecha y vínculo.|  
 |**es igual a un valor concatenado**|El atributo seleccionado se cambia a un valor concatenado, que se determina especificando varios atributos.<br /><br /> Esta acción es válida para los valores de texto y vínculo.|  
@@ -53,7 +53,7 @@ ms.lasthandoff: 05/03/2018
   
  Las únicas excepciones son las acciones **es obligatorio** y **no es válido** . Estas acciones se deben combinar con una acción para cambiar valores, de forma que los datos se puedan validar correctamente y se pueda confirmar la versión.  
   
-|Nombre de la validación|Description|  
+|Nombre de la validación|Descripción|  
 |---------------------|-----------------|  
 |**es obligatorio**|El atributo seleccionado **es obligatorio**, lo cual indica que no puede ser NULL ni estar vacío.<br /><br /> Esta acción es válida para los valores de texto, número, fecha y vínculo.|  
 |**no es válido**|El atributo seleccionado **no es válido**.<br /><br /> Esta acción es válida para los valores de texto, número, fecha y vínculo.|  
@@ -72,7 +72,7 @@ ms.lasthandoff: 05/03/2018
 ## <a name="external-action"></a>Acción externa  
  Las acciones de tipo**Externa** interactúan con aplicaciones fuera de [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)].  
   
-|Nombre de la acción|Description|  
+|Nombre de la acción|Descripción|  
 |-----------------|-----------------|  
 |**iniciar flujo de trabajo**|Inicia un flujo de trabajo externo. Los datos que provocaron esta acción se pasan al flujo de trabajo. Para obtener más información, vea el artículo sobre [Integración del flujo de trabajo de SharePoint Master Data Services](http://msdn.microsoft.com/library/gg690195.aspx).<br /><br /> Esta acción es válida para los valores de texto, número, fecha y vínculo.|  
   

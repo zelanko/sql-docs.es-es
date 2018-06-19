@@ -4,11 +4,9 @@ ms.custom: ''
 ms.date: 06/04/2018
 ms.prod: sql
 ms.prod_service: integration-services
-ms.component: packages
 ms.reviewer: ''
 ms.suite: sql
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.tgt_pltfrm: ''
 ms.topic: conceptual
 f1_keywords:
@@ -24,12 +22,12 @@ caps.latest.revision: 21
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 9cdefcfcec0c273cfb662966895fc49b09c4460e
-ms.sourcegitcommit: 8aa151e3280eb6372bf95fab63ecbab9dd3f2e5e
+ms.openlocfilehash: 5efe57352b1c3ddbbdc1a4db0eb64ba8a27af65f
+ms.sourcegitcommit: 9e83f308008c9e0da505a6064f652c638b8dfe76
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/05/2018
-ms.locfileid: "34772149"
+ms.lasthandoff: 06/13/2018
+ms.locfileid: "35513020"
 ---
 # <a name="deploy-integration-services-ssis-projects-and-packages"></a>Implementación de proyectos y paquetes de Integration Services (SSIS)
   [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] admite dos modelos de implementación, el modelo de implementación del proyecto y el modelo de implementación de paquetes heredados. El modelo de implementación del proyecto le permite implementar sus proyectos en el servidor de [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] .  
@@ -152,7 +150,7 @@ Para obtener más información sobre el error descrito en esta sección y los pe
   
      -O bien-  
   
-     En el símbolo del sistema, ejecute **isdeploymentwizard.exe** desde **%Archivos de programa%\Microsoft SQL Server\110\DTS\Binn**. En equipos de 64 bits, también hay una versión de 32 bits de la herramienta en **%Archivos de programa (x86)%\Microsoft SQL Server\100\DTS\Binn**.  
+     En el símbolo del sistema, ejecute **isdeploymentwizard.exe** de **%Archivos de programa%\Microsoft SQL Server\130\DTS\Binn**. En equipos de 64 bits, también hay una versión de 32 bits de la herramienta en **%Archivos de programa (x86)%\Microsoft SQL Server\130\DTS\Binn**.  
   
 2.  En la página **Seleccionar origen** , haga clic en **Archivo de implementación de proyecto** para seleccionar el archivo de implementación del proyecto.  
   

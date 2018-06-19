@@ -4,11 +4,9 @@ ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: integration-services
-ms.component: data-flow
 ms.reviewer: ''
 ms.suite: sql
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.tgt_pltfrm: ''
 ms.topic: conceptual
 f1_keywords:
@@ -25,11 +23,12 @@ caps.latest.revision: 47
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 132690629b3dd9aea99b460952bd17e449ee7e68
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: aa529b30c25b4a21edd8d34a74c7fdfb5f8bdd64
+ms.sourcegitcommit: cc46afa12e890edbc1733febeec87438d6051bf9
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/12/2018
+ms.locfileid: "35409577"
 ---
 # <a name="xml-source"></a>Origen XML
   El origen XML lee un archivo de datos XML y rellena las columnas de la salida de origen con los datos.  
@@ -98,7 +97,7 @@ ms.lasthandoff: 05/03/2018
  **Modo de acceso a datos**  
  Especifique el método para seleccionar datos del origen.  
   
-|Valor|Description|  
+|Valor|Descripción|  
 |-----------|-----------------|  
 |Ubicación del archivo XML|Recupera datos de un archivo XML.|  
 |Archivo XML de variable|Especifica el nombre de archivo XML en una variable.<br /><br /> **Información relacionada**: [Usar variables en paquetes](http://msdn.microsoft.com/library/7742e92d-46c5-4cc4-b9a3-45b688ddb787)|  

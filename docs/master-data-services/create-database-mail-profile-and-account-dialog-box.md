@@ -4,7 +4,6 @@ ms.custom: ''
 ms.date: 03/20/2017
 ms.prod: sql
 ms.prod_service: mds
-ms.component: non-specific
 ms.reviewer: ''
 ms.suite: sql
 ms.technology:
@@ -18,11 +17,12 @@ caps.latest.revision: 7
 author: leolimsft
 ms.author: lle
 manager: craigg
-ms.openlocfilehash: c26a495f590d7543401edceee6438bc7c84da384
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: cd7665da936022d4e9dc184b7b5ff5fbfa5b3665
+ms.sourcegitcommit: de5e726db2f287bb32b7910831a0c4649ccf3c4c
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/12/2018
+ms.locfileid: "35335529"
 ---
 # <a name="create-database-mail-profile-and-account-dialog-box"></a>Cuadro de diálogo Crear un perfil y una cuenta de Correo electrónico de base datos
 
@@ -36,14 +36,14 @@ ms.lasthandoff: 05/03/2018
 > [!NOTE]  
 >  No puede utilizar [!INCLUDE[ssMDScfgmgr](../includes/ssmdscfgmgr-md.md)] para actualizar los perfiles o cuentas de Correo electrónico de base de datos existentes ni puede configurar más de una cuenta para un perfil. Para realizar más tareas avanzadas con el Correo electrónico de base de datos, puede usar [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] o scripts Transact-SQL. Para obtener más información, vea la sección [Database Mail Configuration Objects](../relational-databases/database-mail/database-mail-configuration-objects.md) en los Libros en pantalla de SQL Server.  
   
-|Nombre del control|Description|  
+|Nombre del control|Descripción|  
 |------------------|-----------------|  
 |**Nombre del perfil**|Especifique un nombre para el nuevo perfil de Correo electrónico de base de datos. Este nombre debe ser único en los perfiles del Correo electrónico de base de datos configurados para la base de datos de [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] .<br /><br /> Después de crear este perfil, estará disponible y seleccionado en la página **Base de datos** en [!INCLUDE[ssMDScfgmgr](../includes/ssmdscfgmgr-md.md)].|  
 |**Nombre de cuenta**|Escriba un nombre para la nueva cuenta de Correo electrónico de base de datos que se utilizará cuando se asocie a este perfil. Este nombre debe ser único en las cuentas de Correo electrónico de base de datos configurados para la base de datos de [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] . Esta cuenta no se corresponde con una cuenta de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] ni con una cuenta de usuario de Windows.|  
   
 ## <a name="outgoing-smtp-mail-server"></a>Servidor de correo saliente (SMTP)  
   
-|Nombre del control|Description|  
+|Nombre del control|Descripción|  
 |------------------|-----------------|  
 |**Dirección de correo electrónico**|Escriba el nombre de la dirección de correo electrónico de la cuenta. Es la dirección de correo electrónico desde la que se envían los correos electrónicos y debe tener el formato *nombre_correo*@*nombre_dominio*. Un ejemplo de dirección de correo electrónico sería sales@contoso.com.|  
 |**Nombre para mostrar**|Valor opcional. Escriba el nombre para mostrar en los mensajes de correo electrónico enviados desde esta cuenta. Un ejemplo de nombre para mostrar es Grupo de ventas Contoso.|  
@@ -55,7 +55,7 @@ ms.lasthandoff: 05/03/2018
 ## <a name="smtp-authentication"></a>Autenticación SMTP  
  El Correo electrónico de base de datos se puede enviar mediante las credenciales de [!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)], mediante otras credenciales que suministre o de forma anónima. Si su servidor de correo electrónico requiere autenticación, se recomienda crear una cuenta de usuario para su uso con Correo electrónico de base de datos. Esta cuenta de usuario debe tener permisos mínimos y no debe usarse para otros fines.  
   
-|Nombre del control|Description|  
+|Nombre del control|Descripción|  
 |------------------|-----------------|  
 |**Autenticación de Windows con credenciales del servicio Motor de base de datos**|Especifique que Correo electrónico de base de datos debería utilizar las credenciales de la cuenta del servicio de Windows de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)] para la autenticación en el servidor SMTP.|  
 |**Autenticación básica**|Especifique que Correo electrónico de base de datos debería utilizar un nombre de usuario y contraseña concretos para la autenticación en el servidor SMTP. Esta información solo se utiliza para la autenticación con el servidor de correo electrónico y no es necesario que la cuenta se corresponda con un usuario de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] o con un usuario del equipo que ejecuta [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)].|  

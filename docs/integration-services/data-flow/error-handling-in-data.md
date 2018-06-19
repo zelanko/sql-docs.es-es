@@ -4,11 +4,9 @@ ms.custom: ''
 ms.date: 03/04/2017
 ms.prod: sql
 ms.prod_service: integration-services
-ms.component: data-flow
 ms.reviewer: ''
 ms.suite: sql
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.tgt_pltfrm: ''
 ms.topic: conceptual
 f1_keywords:
@@ -28,11 +26,12 @@ caps.latest.revision: 63
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: eec0f2ffa0a36940cf00e54c3ccdb0a4c1194d68
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 805cb6c613375f0aee126a264f8894b9c09d92a6
+ms.sourcegitcommit: cc46afa12e890edbc1733febeec87438d6051bf9
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/12/2018
+ms.locfileid: "35401417"
 ---
 # <a name="error-handling-in-data"></a>Control de errores en los datos
   Cuando un componente de flujo de datos aplica una transformación a los datos de columna, extrae datos de orígenes o carga datos en destinos, pueden producirse errores. Los errores con frecuencia se producen debido a valores de datos inesperados. Por ejemplo, una conversión de datos genera un error porque una columna contiene una cadena en lugar de un número, una inserción en una base de datos genera un error porque los datos corresponden a una fecha y la columna tiene un tipo de datos numéricos, o una expresión genera un error al evaluarse porque el valor de la columna es cero, lo que da como resultado una operación matemática no válida.  
@@ -99,7 +98,7 @@ Use el cuadro de diálogo **Configurar la salida de errores** para configurar la
 ## <a name="select-an-error-handling-option"></a>Selección de una opción de control de errores  
  Puede configurar la manera en que los orígenes, transformaciones y destinos controlan errores y truncamientos. Las opciones se describen en la siguiente tabla.  
   
-|Opción|Description|  
+|Opción|Descripción|  
 |------------|-----------------|  
 |Error de componente|La tarea Flujo de datos genera un error cuando se produce un error o truncamiento. El error es la opción predeterminada para un error o truncamiento.|  
 |Omitir error|El error o truncamiento se omite y la fila de datos se dirige a la salida de transformación u origen.|  

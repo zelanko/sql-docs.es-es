@@ -4,11 +4,9 @@ ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: integration-services
-ms.component: control-flow
 ms.reviewer: ''
 ms.suite: sql
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.tgt_pltfrm: ''
 ms.topic: conceptual
 f1_keywords:
@@ -24,11 +22,12 @@ caps.latest.revision: 75
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: a0877a6de516ccc95b6b2ad403525437592f4d82
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: b241a695b63bd7de59e490bb67686d7e53e3f625
+ms.sourcegitcommit: cc46afa12e890edbc1733febeec87438d6051bf9
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/12/2018
+ms.locfileid: "35403087"
 ---
 # <a name="data-flow-task"></a>tarea Flujo de datos
   La tarea Flujo de datos encapsula el motor de flujo de datos que mueve datos entre orígenes y destinos, y permite al usuario transformar, limpiar y modificar datos a medida que se mueven. Agregar una tarea Flujo de datos a un flujo de control de paquetes permite que el paquete extraiga, transforme y cargue datos.  
@@ -51,7 +50,7 @@ ms.lasthandoff: 05/03/2018
 ## <a name="log-entries"></a>Entradas del registro  
  [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] proporciona un conjunto de eventos de registro que están disponibles para todas las tareas. [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] también proporciona entradas del registro personalizadas para numerosas tareas. Para obtener más información, vea [Registro de Integration Services &#40;SSIS&#41;](../../integration-services/performance/integration-services-ssis-logging.md). La tarea Flujo de datos incluye las siguientes entradas de registro personalizadas:  
   
-|Entrada del registro|Description|  
+|Entrada del registro|Descripción|  
 |---------------|-----------------|  
 |**BufferSizeTuning**|Indica que la tarea Flujo de datos cambió el tamaño del búfer. En la entrada del registro se describen las razones del cambio de tamaño y se indica el nuevo tamaño temporal del búfer.|  
 |**OnPipelinePostEndOfRowset**|Indica que se ha dado la señal de fin del conjunto de filas a un componente, la cual se establece a través de la última llamada del método **ProcessInput** . Se escribe una entrada por cada componente del flujo de datos que procesa la entrada de datos. La entrada incluye el nombre del componente.|  
@@ -93,7 +92,7 @@ ms.lasthandoff: 05/03/2018
   
  Por ejemplo, la tabla siguiente contiene el mensaje "Se proporcionaron filas como entrada de un componente de flujo de datos. :  : 1185 : Salida de origen de OLE DB : 1180 : Ordenar : 1181 : Entrada de ordenación : 76", analizado en columnas. El evento **OnPipelineRowsSent** escribió el mensaje cuando se enviaron filas del origen de OLE DB a la transformación Ordenar.  
   
-|columna|Description|Valor|  
+|columna|Descripción|Valor|  
 |------------|-----------------|-----------|  
 |**PathID**|Valor de la propiedad **ID** de la ruta entre el origen de OLE DB y la transformación Ordenar.|1185|  
 |**PathName**|Valor de la propiedad **Name** de la ruta.|Salida de origen de OLE DB|  

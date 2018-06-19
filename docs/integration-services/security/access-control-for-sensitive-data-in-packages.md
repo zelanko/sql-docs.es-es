@@ -1,14 +1,12 @@
 ---
 title: Control del acceso a la información confidencial en paquetes | Microsoft Docs
-ms.custom: ''
+ms.custom: security
 ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: integration-services
-ms.component: security
 ms.reviewer: ''
 ms.suite: sql
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.tgt_pltfrm: ''
 ms.topic: conceptual
 f1_keywords:
@@ -29,11 +27,12 @@ caps.latest.revision: 44
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 329a9cbc48f2576160c53701dc199fb689ad9674
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 6deb510f0f8f358a67963ac36cb149afe836e6bf
+ms.sourcegitcommit: cc46afa12e890edbc1733febeec87438d6051bf9
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/12/2018
+ms.locfileid: "35401497"
 ---
 # <a name="access-control-for-sensitive-data-in-packages"></a>Control del acceso a la información confidencial en paquetes
   Para proteger los datos de un paquete [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] , puede establecer un nivel de protección que ayude a proteger los datos confidenciales únicamente o todos los datos del paquete. Asimismo, puede cifrar estos datos con una contraseña o una clave de usuario, o confiar en que la base de datos cifre los datos. Además, el nivel de protección que utiliza para un paquete no es necesariamente estático, sino que cambia a lo largo de su ciclo de vida. A menudo se establece un nivel de protección durante el desarrollo y otro cuando el paquete se implementa.  
@@ -62,7 +61,7 @@ ms.lasthandoff: 05/03/2018
 ## <a name="protection-levels"></a>Niveles de protección  
  En la tabla siguiente se describen los niveles de protección que proporciona [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] . Los valores entre paréntesis son valores de la enumeración <xref:Microsoft.SqlServer.Dts.Runtime.DTSProtectionLevel> . Estos valores aparecen en la ventana Propiedades que se utiliza para configurar las propiedades del paquete al trabajar con paquetes en [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)].  
   
-|Nivel de protección|Description|  
+|Nivel de protección|Descripción|  
 |----------------------|-----------------|  
 |No guardar la información confidencial (**DontSaveSensitive**)|Suprime los valores de las propiedades confidenciales del paquete al guardarlo. Este nivel de protección no cifra, sino que impide que se guarden con el paquete las propiedades marcadas como confidenciales y, en consecuencia, impide que los datos confidenciales estén disponibles para otros usuarios. Si un usuario distinto abre el paquete, aparecerán espacios en blanco en el lugar de la información confidencial y usuario deberá suministrar la información confidencial.<br /><br /> Cuando se usa con la utilidad **dtutil** (dtutil.exe), este nivel de protección se corresponde con el valor de 0.|  
 |Cifrar todo con contraseña (**EncryptAllWithPassword**)|Usa una contraseña para cifrar todo el paquete. El paquete se cifra con una contraseña suministrada por el usuario al crear o exportar el paquete. Para abrir el paquete en el Diseñador [!INCLUDE[ssIS](../../includes/ssis-md.md)] o ejecutarlo con la utilidad del símbolo del sistema **dtexec** , el usuario debe proporcionar la contraseña del paquete. Sin la contraseña, el usuario no tiene acceso al paquete ni lo puede ejecutar.<br /><br /> Cuando se usa con la utilidad **dtutil** , este nivel de protección corresponde al valor 3.|  

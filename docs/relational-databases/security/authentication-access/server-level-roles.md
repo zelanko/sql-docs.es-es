@@ -4,11 +4,9 @@ ms.custom: ''
 ms.date: 05/24/2017
 ms.prod: sql
 ms.prod_service: database-engine, pdw
-ms.component: security
 ms.reviewer: ''
 ms.suite: sql
-ms.technology:
-- database-engine
+ms.technology: security
 ms.tgt_pltfrm: ''
 ms.topic: conceptual
 f1_keywords:
@@ -29,12 +27,12 @@ author: edmacauley
 ms.author: edmaca
 manager: craigg
 monikerRange: '>= aps-pdw-2016 || >= sql-server-2016 || = sqlallproducts-allversions'
-ms.openlocfilehash: 1f7cf3212ac6e046e41f46d1d3d6232250182c1c
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 453d0e7158f19fd958eca3bd611a2670279fe946
+ms.sourcegitcommit: a78fa85609a82e905de9db8b75d2e83257831ad9
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32972080"
+ms.lasthandoff: 06/18/2018
+ms.locfileid: "35696386"
 ---
 # <a name="server-level-roles"></a>Roles de nivel de servidor
 [!INCLUDE[appliesto-ss-xxxx-xxxx-pdw-md](../../../includes/appliesto-ss-xxxx-xxxx-pdw-md.md)]
@@ -52,7 +50,7 @@ ms.locfileid: "32972080"
 ## <a name="fixed-server-level-roles"></a>Roles fijos de nivel de servidor  
  En la tabla siguiente se muestran los roles fijos de nivel de servidor y sus capacidades.  
   
-|Rol fijo de nivel de servidor|Description|  
+|Rol fijo de nivel de servidor|Descripción|  
 |------------------------------|-----------------|  
 |**sysadmin**|Los miembros del rol fijo de servidor **sysadmin** pueden realizar cualquier actividad en el servidor.|  
 |**serveradmin**|Los miembros del rol fijo de servidor **serveradmin** pueden cambiar opciones de configuración en el servidor y cerrar el servidor.|  
@@ -83,7 +81,7 @@ SELECT * FROM sys.fn_builtin_permissions('SERVER') ORDER BY permission_name;
 ## <a name="working-with-server-level-roles"></a>Trabajar con roles de nivel de servidor  
  En la tabla siguiente se explican los comandos, las vistas y las funciones que se pueden utilizar para trabajar con roles de nivel de servidor.  
   
-|Característica|Tipo|Description|  
+|Característica|Tipo|Descripción|  
 |-------------|----------|-----------------|  
 |[sp_helpsrvrole &#40;Transact-SQL&#41;](../../../relational-databases/system-stored-procedures/sp-helpsrvrole-transact-sql.md)|Metadatos|Devuelve una lista de roles de nivel de servidor.|  
 |[sp_helpsrvrolemember &#40;Transact-SQL&#41;](../../../relational-databases/system-stored-procedures/sp-helpsrvrolemember-transact-sql.md)|Metadatos|Devuelve información acerca de los miembros de un rol de nivel de servidor.|  

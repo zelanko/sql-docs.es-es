@@ -4,11 +4,9 @@ ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: integration-services
-ms.component: data-flow
 ms.reviewer: ''
 ms.suite: sql
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.tgt_pltfrm: ''
 ms.topic: conceptual
 f1_keywords:
@@ -22,11 +20,12 @@ caps.latest.revision: 46
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: a7479bfd0d246bf3e70f7dc65a089844362f9b6e
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: be17c584af2fc584be7d95ebcc4069fc9f545b97
+ms.sourcegitcommit: de5e726db2f287bb32b7910831a0c4649ccf3c4c
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/12/2018
+ms.locfileid: "35331079"
 ---
 # <a name="audit-transformation"></a>Auditar, transformación
   La transformación Auditar habilita el flujo de datos en un paquete para incluir datos sobre el entorno en el que se ejecuta el paquete. Por ejemplo, el nombre del paquete, el equipo y el operador se pueden agregar al flujo de datos. [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] incluye variables del sistema que proporcionan esta información.  
@@ -34,7 +33,7 @@ ms.lasthandoff: 05/03/2018
 ## <a name="system-variables"></a>Variables del sistema  
  En la tabla siguiente se describen las variables del sistema que la transformación Auditar puede usar.  
   
-|Variable del sistema|Índice|Description|  
+|Variable del sistema|Índice|Descripción|  
 |---------------------|-----------|-----------------|  
 |**ExecutionInstanceGUID**|0|El GUID que identifica la instancia de ejecución del paquete.|  
 |**PackageID**|1|Identificador único del paquete.|  
@@ -71,7 +70,7 @@ ms.lasthandoff: 05/03/2018
  **Tipo de auditoría**  
  Seleccione una variable del sistema disponible para suministrar la información de auditoría.  
   
-|Valor|Description|  
+|Valor|Descripción|  
 |-----------|-----------------|  
 |**GUID de instancia de ejecución**|Inserte el GUID que identifica exclusivamente la instancia de ejecución del paquete.|  
 |**Id. de paquete**|Inserte el GUID que identifica exclusivamente el paquete.|  

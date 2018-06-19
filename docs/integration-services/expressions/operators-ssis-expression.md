@@ -4,11 +4,9 @@ ms.custom: ''
 ms.date: 03/01/2017
 ms.prod: sql
 ms.prod_service: integration-services
-ms.component: expressions
 ms.reviewer: ''
 ms.suite: sql
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
@@ -21,18 +19,19 @@ caps.latest.revision: 35
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 6d5d676ed2b32827c16b70dab4c447d7029ed806
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 6e9360b346ed267fcaad61ef6c06b9408c837b8d
+ms.sourcegitcommit: cc46afa12e890edbc1733febeec87438d6051bf9
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/12/2018
+ms.locfileid: "35402987"
 ---
 # <a name="operators-ssis-expression"></a>Operadores (expresión de SSIS)
   En esta sección se describen los operadores que proporciona el lenguaje de expresiones, así como la precedencia y la capacidad de asociación de los operadores que el evaluador de expresiones utiliza.  
   
  En la tabla siguiente se muestran temas relacionados con los operadores de esta sección.  
   
-|Operador|Description|  
+|Operador|Descripción|  
 |--------------|-----------------|  
 |[Conversión &#40;expresión de SSIS&#41;](../../integration-services/expressions/cast-ssis-expression.md)|Convierte una expresión de un tipo de datos a otro.|  
 |[&#40;&#41; &#40;Paréntesis&#41; &#40;expresión de SSIS&#41;](../../integration-services/expressions/parentheses-ssis-expression.md)|Identifica el orden de evaluación de las expresiones.|  

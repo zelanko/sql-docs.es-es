@@ -4,11 +4,9 @@ ms.custom: ''
 ms.date: 03/03/2017
 ms.prod: sql
 ms.prod_service: integration-services
-ms.component: system-views
 ms.reviewer: ''
 ms.suite: sql
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.tgt_pltfrm: ''
 ms.topic: language-reference
 helpviewer_keywords:
@@ -19,18 +17,19 @@ caps.latest.revision: 27
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 920d2b8ab5eb2d0635fbdac7170fbe5d2ecfe8ea
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 8de728484d1c0e00eb4ad1bc4dd7ad4137b618c8
+ms.sourcegitcommit: cc46afa12e890edbc1733febeec87438d6051bf9
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/12/2018
+ms.locfileid: "35401957"
 ---
 # <a name="catalogoperationmessages-ssisdb-database"></a>catalog.operation_messages (base de datos de SSISDB)
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
 
   Muestra los mensajes registrados durante las operaciones del catálogo de [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)].  
   
-|Nombre de columna|Tipo de datos|Description|  
+|Nombre de columna|Tipo de datos|Descripción|  
 |-----------------|---------------|-----------------|  
 |operation_message_id|**bigint**|El identificador único (ID) del mensaje.|  
 |operation_id|**bigint**|El identificador único de la operación.|  
@@ -45,7 +44,7 @@ ms.lasthandoff: 05/03/2018
   
  Esta vista muestra los siguientes tipos de mensaje:  
   
-|Valor de **message_type**|Description|  
+|Valor de **message_type**|Descripción|  
 |-----------------------------|-----------------|  
 |-1|Desconocido|  
 |120|Error|  
@@ -67,7 +66,7 @@ ms.lasthandoff: 05/03/2018
   
  Esta vista muestra los siguientes tipos de origen de mensaje:  
   
-|**message_source_type**|Description|  
+|**message_source_type**|Descripción|  
 |-------------------------------|-----------------|  
 |10|API de entrada, como procedimientos almacenados de T-SQL y CLR|  
 |20|Proceso externo para ejecutar paquetes (ISServerExec.exe)|  

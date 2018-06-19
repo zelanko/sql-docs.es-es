@@ -1,23 +1,21 @@
 ---
 title: Ejecutar un proyecto de SSIS con código .NET (C#) | Microsoft Docs
 ms.date: 05/21/2018
-ms.topic: conceptual
+ms.topic: quickstart
 ms.prod: sql
 ms.prod_service: integration-services
-ms.component: quick-start
 ms.suite: sql
 ms.custom: ''
-ms.technology:
-- integration-services
+ms.technology: integration-services
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 78ab97bd62ffcc564fbc1ef707f4ad5d1f7b2033
-ms.sourcegitcommit: b5ab9f3a55800b0ccd7e16997f4cd6184b4995f9
+ms.openlocfilehash: 256e8b022406a589bc31d595e4cc3b3fb052570d
+ms.sourcegitcommit: cc46afa12e890edbc1733febeec87438d6051bf9
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/23/2018
-ms.locfileid: "34455249"
+ms.lasthandoff: 06/12/2018
+ms.locfileid: "35410487"
 ---
 # <a name="run-an-ssis-package-with-c-code-in-a-net-app"></a>Ejecutar un paquete SSIS con código C# en una aplicación .NET
 En este inicio rápido se muestra cómo escribir código C# para conectarse a un servidor de bases de datos y ejecutar un paquete SSIS.

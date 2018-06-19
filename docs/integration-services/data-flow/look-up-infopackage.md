@@ -4,11 +4,9 @@ ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: integration-services
-ms.component: data-flow
 ms.reviewer: ''
 ms.suite: sql
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: 7c0cb7a4-cd07-44cc-85cb-eb1ad91f85fd
@@ -16,11 +14,12 @@ caps.latest.revision: 10
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: acb054b3955831f19f99e32d45572d1e43434660
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 9b60326e7f2b0d3f484fb40091d7eb32a2eaff0e
+ms.sourcegitcommit: cc46afa12e890edbc1733febeec87438d6051bf9
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/12/2018
+ms.locfileid: "35411637"
 ---
 # <a name="look-up-infopackage"></a>Buscar InfoPackage
   Use el cuadro de diálogo **Buscar InfoPackage** para buscar un InfoPackage que se haya definido en el sistema de SAP Netweaver BW. Cuando aparezca la lista de InfoPackages, seleccione el InfoPackage que desee y el destino rellenará las opciones asociadas a los valores necesarios.  
@@ -64,7 +63,7 @@ ms.lasthandoff: 05/03/2018
  **Tipo**  
  Permite mostrar el tipo de InfoPackage. En la siguiente tabla se muestran los posibles valores para el tipo.  
   
-|Valor|Description|  
+|Valor|Descripción|  
 |-----------|-----------------|  
 |de transacciones|Datos de transacción.|  
 |Atr.|Datos de atributo.|  

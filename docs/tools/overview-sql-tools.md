@@ -18,10 +18,11 @@ ms.author: sstein
 manager: craigg
 monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
 ms.openlocfilehash: be35a6b708e2f8a5430a796b466705f222d9748d
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
-ms.translationtype: MTE
+ms.sourcegitcommit: 808d23a654ef03ea16db1aa23edab496b73e5072
+ms.translationtype: MTE75
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/04/2018
+ms.locfileid: "34709033"
 ---
 # <a name="sql-tools-and-utilities-for-sql-server-azure-sql-database-and-azure-sql-data-warehouse"></a>Herramientas SQL y las utilidades de SQL Server, base de datos SQL Azure y almacenamiento de datos SQL Azure
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -33,7 +34,7 @@ Este artículo proporciona información acerca de las herramientas disponibles p
 
 ## <a name="tools-to-run-queries-and-manage-databases"></a>Herramientas para ejecutar consultas y administrar las bases de datos  
 
-| Herramienta | Description |
+| Herramienta | Descripción |
 |:--|:--|
 | [[!INCLUDE[name-sos](../includes/name-sos.md)]](../sql-operations-studio/download.md) | [!INCLUDE[name-sos](../includes/name-sos-short.md)] es una herramienta gratuita y ligera, para administrar las bases de datos donde se está ejecutando. Esta versión preliminar proporciona características de administración de base de datos, incluido un editor de Transact-SQL extendido y personalizable información sobre el estado operativo de las bases de datos. **[!INCLUDE[name-sos](../includes/name-sos-short.md)] se ejecuta en Windows, Mac OS y Linux**.|
 | [SQL Server Management Studio (SSMS)](../ssms/download-sql-server-management-studio-ssms.md) | Usar SQL Server Management Studio (SSMS) para consultar, diseñar y administrar el almacenamiento de datos de SQL Azure, SQL Server y base de datos de SQL Azure. **SSMS se ejecuta en Windows**.|
@@ -51,7 +52,7 @@ Este artículo proporciona información acerca de las herramientas disponibles p
 
 ## <a name="additional-tools"></a>Herramientas adicionales
 
-| Herramienta | Description |
+| Herramienta | Descripción |
 |:--|:--|
 | [Administrador de configuración](../tools/configuration-manager/sql-server-configuration-manager-help.md) | Utilice el Administrador de configuración de SQL Server para configurar servicios de SQL Server y configurar la conectividad de red. Configuration Manager se ejecuta en Windows|
 |[MSSQL-conf](../linux/sql-server-linux-configure-mssql-conf.md)|Utilice mssql-conf para configurar SQL Server que se ejecutan en Linux.|

@@ -33,11 +33,12 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
-ms.openlocfilehash: 96ade458ea294f3f2cfe051449578acd97ff2fe5
-ms.sourcegitcommit: ee661730fb695774b9c483c3dd0a6c314e17ddf8
-ms.translationtype: MTE
+ms.openlocfilehash: 4f9ee992655b127b1ad3b25a7cf89aa9da80b4fd
+ms.sourcegitcommit: 808d23a654ef03ea16db1aa23edab496b73e5072
+ms.translationtype: MTE75
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/19/2018
+ms.lasthandoff: 06/04/2018
+ms.locfileid: "34582137"
 ---
 # <a name="sqlcmd-utility"></a>sqlcmd Utility
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -185,7 +186,7 @@ Establece el valor de cifrado de columnas en `Enabled`. Para obtener más inform
  Declara el tipo de carga de trabajo de la aplicación al conectarse a un servidor. El único valor actualmente admitido es **de solo lectura**. Si no se especifica **-K** , la utilidad sqlcmd no admitirá la conectividad con una réplica secundaria en el grupo de disponibilidad AlwaysOn. Para obtener más información, vea [Secundarias activas: réplicas secundarias legibles (grupos de disponibilidad AlwaysOn)](../database-engine/availability-groups/windows/active-secondaries-readable-secondary-replicas-always-on-availability-groups.md).  
   
  **-M** *conmutación_por_error_de_múltiples_subredes*  
- Especifique siempre **-M** al conectarse a una escucha de un grupo de disponibilidad de SQL Server o a una instancia de clúster de conmutación por error de SQL Server. **-M** proporciona una detección más rápida del servidor activo actualmente y de la conexión a este. Si **-M** no se especifica, el valor de **-M** será OFF. Para obtener más información sobre [! INCLUIR[ssHADR](../database-engine/availability-groups/windows/listeners-client-connectivity-application-failover.md), [creación y configuración de los grupos de disponibilidad &#40;SQL Server&#41;](../database-engine/availability-groups/windows/creation-and-configuration-of-availability-groups-sql-server.md), [clústeres de conmutación por error y grupos de disponibilidad AlwaysOn (SQL Server)] (https://msdn.microsoft.comlibrary/ff929171.aspxy [ Secundarias activas: réplicas secundarias legibles (grupos de disponibilidad AlwaysOn)] (https://msdn.microsoft.com/library/ff878253.aspx.  
+ Especifique siempre **-M** al conectarse a una escucha de un grupo de disponibilidad de SQL Server o a una instancia de clúster de conmutación por error de SQL Server. **-M** proporciona una detección más rápida del servidor activo actualmente y de la conexión a este. Si **-M** no se especifica, el valor de **-M** será OFF. Para obtener más información sobre [! INCLUIR[ssHADR](../database-engine/availability-groups/windows/listeners-client-connectivity-application-failover.md), [creación y configuración de los grupos de disponibilidad &#40;SQL Server&#41;](../database-engine/availability-groups/windows/creation-and-configuration-of-availability-groups-sql-server.md), [agrupación en clústeres de conmutación por error y grupos de disponibilidad AlwaysOn (SQL Server)](https://msdn.microsoft.com/library/ff929171.aspx), y [secundarias activas: réplicas secundarias legibles (grupos de disponibilidad AlwaysOn)](https://msdn.microsoft.com/library/ff878253.aspx).  
   
  **-N**  
  Este modificador lo usa el cliente para solicitar una conexión cifrada.  

@@ -4,11 +4,9 @@ ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: integration-services
-ms.component: data-flow
 ms.reviewer: ''
 ms.suite: sql
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
@@ -23,11 +21,12 @@ caps.latest.revision: 70
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 035775f1d8fdb146e1334ff73de38800de3c1d6f
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 02785d03d4ca31881b76af7badd97b693dcd2b48
+ms.sourcegitcommit: de5e726db2f287bb32b7910831a0c4649ccf3c4c
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/12/2018
+ms.locfileid: "35334609"
 ---
 # <a name="data-flow"></a>Flujo de datos
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] proporciona tres tipos de componentes de flujo de datos: orígenes, transformaciones y destinos. Los orígenes extraen datos de almacenes de datos tales como tablas y vistas en bases de datos relacionales, archivos y bases de datos de [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] . Las transformaciones modifican, resumen y limpian datos. Los destinos cargan datos en almacenes de datos o crean conjuntos de datos almacenados en la memoria.  
@@ -102,7 +101,7 @@ ms.lasthandoff: 05/03/2018
 ### <a name="sources-available-for-download"></a>Orígenes disponibles para la descarga  
  En la tabla siguiente se indican otros orígenes que puede descargar del sitio web de [!INCLUDE[msCoName](../../includes/msconame-md.md)] .  
   
-|Source|Description|  
+|Source|Descripción|  
 |------------|-----------------|  
 |Origen de Oracle|El origen de Oracle es el componente de origen de [!INCLUDE[msCoName](../../includes/msconame-md.md)] Connector para Oracle de Attunity. El Conector de [!INCLUDE[msCoName](../../includes/msconame-md.md)] para Oracle por Attunity incluye también un administrador de conexiones y un destino. Para obtener más información, vea la página de descarga, [Conectores de Microsoft para Oracle y Teradata de Attunity](http://go.microsoft.com/fwlink/?LinkId=789384).|  
 |Origen de SAP BI|El origen de SAP BI es el componente de origen de [!INCLUDE[msCoName](../../includes/msconame-md.md)] Connector for SAP BI. [!INCLUDE[msCoName](../../includes/msconame-md.md)] Connector for SAP BI incluye también un administrador de conexiones y un destino. Para obtener más información, consulte la página de descarga, [Microsoft SQL Server Feature Pack](http://go.microsoft.com/fwlink/?LinkID=746297).|  
@@ -163,7 +162,7 @@ ms.lasthandoff: 05/03/2018
 ### <a name="destinations-available-for-download"></a>Destinos disponibles para descarga  
  En la tabla siguiente se indican otros destinos que puede descargar del sitio web de [!INCLUDE[msCoName](../../includes/msconame-md.md)] .  
   
-|Source|Description|  
+|Source|Descripción|  
 |------------|-----------------|  
 |Destino de Oracle|El destino de Oracle es el componente de destino de [!INCLUDE[msCoName](../../includes/msconame-md.md)] Connector para Oracle de Attunity. [!INCLUDE[msCoName](../../includes/msconame-md.md)] Connector para Oracle de Attunity incluye también un administrador de conexiones y un origen. Para obtener más información, vea la página de descarga, [Conectores de Microsoft para Oracle y Teradata de Attunity](http://go.microsoft.com/fwlink/?LinkId=789384).|  
 |Destino de SAP BI|El destino de SAP BI es el componente de destino de [!INCLUDE[msCoName](../../includes/msconame-md.md)] Connector para SAP BI. [!INCLUDE[msCoName](../../includes/msconame-md.md)] Connector para SAP BI incluye también un administrador de conexiones y un origen. Para obtener más información, consulte la página de descarga, [Microsoft SQL Server Feature Pack](http://go.microsoft.com/fwlink/?LinkID=746297).|  

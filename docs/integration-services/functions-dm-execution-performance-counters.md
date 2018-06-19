@@ -4,11 +4,9 @@ ms.custom: ''
 ms.date: 03/04/2017
 ms.prod: sql
 ms.prod_service: integration-services
-ms.component: non-specific
 ms.reviewer: ''
 ms.suite: sql
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.tgt_pltfrm: ''
 ms.topic: language-reference
 ms.assetid: 1b38e8e3-c560-4b6e-b60e-bfd7cfcd4fdf
@@ -16,11 +14,12 @@ caps.latest.revision: 6
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 026b01925fbcf0ec615da77793dff7f84221322f
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: f60130ee43309e89ccc39fa2f4c3be42e928ca5a
+ms.sourcegitcommit: de5e726db2f287bb32b7910831a0c4649ccf3c4c
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/12/2018
+ms.locfileid: "35332189"
 ---
 # <a name="functions---dmexecutionperformancecounters"></a>Funciones - dm_execution_performance_counters
 [!INCLUDE[tsql-appliesto-ss2014-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2014-xxxx-xxxx-xxx-md.md)]
@@ -43,7 +42,7 @@ dm_execution_performance_counters [ @execution_id = ] execution_id
 ## <a name="remarks"></a>Notas  
  En la tabla siguiente se muestran los valores de nombre de contador devueltos por la función dm_execution_performance_counter.  
   
-|Nombre de contador|Description|  
+|Nombre de contador|Descripción|  
 |------------------|-----------------|  
 |Bytes BLOB leídos|Número de bytes de datos de objetos binarios grandes (BLOB) que el motor de flujo de datos lee de todos los orígenes.|  
 |Bytes BLOB escritos|Número de bytes de datos BLOB que el motor de flujo de datos escribe en todos los destinos.|  
@@ -61,7 +60,7 @@ dm_execution_performance_counters [ @execution_id = ] execution_id
 ## <a name="return"></a>Devolución  
  La función dm_execution_performance_counters devuelve una tabla con las columnas siguientes para una ejecución en curso. La información devuelta corresponde a todos los paquetes contenidos en la ejecución. Si no hay ninguna ejecución en curso, se devuelve una tabla vacía.  
   
-|Nombre de la columna|Tipo de columna|Description|Notas|  
+|Nombre de la columna|Tipo de columna|Descripción|Notas|  
 |-----------------|-----------------|-----------------|-------------|  
 |execution_id|**BigInt**<br /><br /> **NULL** no es un valor válido.|Identificador único para la ejecución que contiene el paquete.||  
 |counter_name|**nvarchar(128)**|Nombre del contador.|Vea la sección **Comentarios** de los valores.|  

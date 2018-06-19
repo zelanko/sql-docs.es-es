@@ -4,11 +4,9 @@ ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: integration-services
-ms.component: non-specific
 ms.reviewer: ''
 ms.suite: sql
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
@@ -22,11 +20,12 @@ caps.latest.revision: 54
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: a154155683bff4521a088552e299d34f72c3632e
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 11df6b02f0c90516727c86d687897ff1a04c0118
+ms.sourcegitcommit: de5e726db2f287bb32b7910831a0c4649ccf3c4c
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/12/2018
+ms.locfileid: "35331639"
 ---
 # <a name="system-variables"></a>Variables del sistema
   [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] proporciona un conjunto de variables del sistema que almacenan información sobre el paquete en ejecución y sus objetos. Estas variables se pueden usar en expresiones y expresiones de propiedad para personalizar paquetes, contenedores, tareas y controladores de eventos.  
@@ -36,7 +35,7 @@ ms.lasthandoff: 05/03/2018
 ## <a name="system-variables-for-packages"></a>Variables del sistema para paquetes  
  La siguiente tabla describe las variables del sistema que proporciona [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] para paquetes.  
   
-|Variable del sistema|Tipo de datos|Description|  
+|Variable del sistema|Tipo de datos|Descripción|  
 |---------------------|---------------|-----------------|  
 |**CancelEvent**|Int32|Identificador de un objeto de evento de Windows que la tarea puede señalar para indicar que la tarea debe dejar de ejecutarse.|  
 |**ContainerStartTime**|DateTime|Hora de inicio del contenedor.|  
@@ -64,14 +63,14 @@ ms.lasthandoff: 05/03/2018
 ## <a name="system-variables-for-containers"></a>Variables del sistema para contenedores  
  La siguiente tabla describe las variables del sistema que proporciona [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] para los contenedores de bucles For, Foreach y de secuencia.  
   
-|Variable del sistema|Tipo de datos|Description|Contenedor|  
+|Variable del sistema|Tipo de datos|Descripción|Contenedor|  
 |---------------------|---------------|-----------------|---------------|  
 |**LocaleId**|Int32|Configuración regional que usa el contenedor.|Contenedor de bucles For<br /><br /> Contenedor de bucles Foreach<br /><br /> contenedor de secuencias|  
   
 ## <a name="system-variables-for-tasks"></a>Variables del sistema para tareas  
  La siguiente tabla describe las variables del sistema que proporciona [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] para tareas.  
   
-|Variable del sistema|Tipo de datos|Description|  
+|Variable del sistema|Tipo de datos|Descripción|  
 |---------------------|---------------|-----------------|  
 |**CreationName**|String|El nombre de la tarea.|  
 |**LocaleId**|Int32|Configuración regional que usa la tarea.|  
@@ -82,7 +81,7 @@ ms.lasthandoff: 05/03/2018
 ## <a name="system-variables-for-event-handlers"></a>Variables del sistema para los controladores de eventos  
  La siguiente tabla describe las variables del sistema que proporciona [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] para los controladores de eventos. No todas las variables están disponibles para todos los controladores de eventos.  
   
-|Variable del sistema|Tipo de datos|Description|Controlador de eventos|  
+|Variable del sistema|Tipo de datos|Descripción|Controlador de eventos|  
 |---------------------|---------------|-----------------|-------------------|  
 |**Cancelar**|Boolean|Indica si el controlador de eventos deja de ejecutarse cuando se produce un error, advertencia o cancelación de consulta.|Controlador de eventos OnError<br /><br /> Controlador de eventos OnWarning<br /><br /> Controlador de eventos OnQueryCancel|  
 |**ErrorCode**|Int32|Identificador del error.|Controlador de eventos OnError<br /><br /> Controlador de eventos OnInformation<br /><br /> Controlador de eventos OnWarning|  

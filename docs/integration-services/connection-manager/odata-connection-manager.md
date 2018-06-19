@@ -3,12 +3,10 @@ title: Administrador de conexiones OData | Microsoft Docs
 ms.date: 03/01/2017
 ms.prod: sql
 ms.prod_service: integration-services
-ms.component: connection-manager
 ms.reviewer: ''
 ms.suite: sql
 ms.custom: ''
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: 3caa4372-aff3-4c0f-9ecd-97870948b8d0
@@ -19,11 +17,12 @@ f1_keywords:
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 124877025d9e01c7d00f8693093a4227680c145d
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 0a6a3fbd4cc0f1865559f4f4b64987aa906b2839
+ms.sourcegitcommit: de5e726db2f287bb32b7910831a0c4649ccf3c4c
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/12/2018
+ms.locfileid: "35333509"
 ---
 # <a name="odata-connection-manager"></a>Administrador de conexiones OData
  Conéctese a un origen de datos OData con un administrador de conexiones OData. Un componente de origen OData usa un administrador de conexiones OData para conectarse a un origen de datos OData y consumir datos del servicio. Para obtener más información, vea [OData Source](../../integration-services/data-flow/odata-source.md).  
@@ -64,7 +63,7 @@ Para conectarse a Microsoft Dynamics AX Online o Microsoft Dynamics CRM Online, 
   
 |||  
 |-|-|  
-|Propiedad|Description|  
+|Propiedad|Descripción|  
 |Url|Dirección URL al documento de servicio.|  
 |UserName|Nombre de usuario que se usará para la autenticación, si es necesario.|  
 |Contraseña|Contraseña que se usará para la autenticación, si es necesario.|  

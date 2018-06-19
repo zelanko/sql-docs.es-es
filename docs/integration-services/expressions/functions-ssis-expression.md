@@ -4,11 +4,9 @@ ms.custom: ''
 ms.date: 03/01/2017
 ms.prod: sql
 ms.prod_service: integration-services
-ms.component: expressions
 ms.reviewer: ''
 ms.suite: sql
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
@@ -22,11 +20,12 @@ caps.latest.revision: 36
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 2135360e8289cd48e9a77dea289325791287db4f
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 1cd8bd35a642d72a0d3b1b934dbdc1587bd96996
+ms.sourcegitcommit: cc46afa12e890edbc1733febeec87438d6051bf9
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/12/2018
+ms.locfileid: "35409657"
 ---
 # <a name="functions-ssis-expression"></a>Funciones (expresión de SSIS)
   El lenguaje de expresiones incluye un conjunto de funciones que pueden usarse en las expresiones. Las expresiones pueden usar una sola función, pero generalmente utilizan varias funciones, combinándolas con operadores.  
@@ -43,7 +42,7 @@ ms.lasthandoff: 05/03/2018
   
  El lenguaje de expresiones proporciona las siguientes funciones matemáticas.  
   
-|Función|Description|  
+|Función|Descripción|  
 |--------------|-----------------|  
 |[ABS &#40;expresión de SSIS&#41;](../../integration-services/expressions/abs-ssis-expression.md)|Devuelve el valor absoluto (positivo) de una expresión numérica.|  
 |[EXP &#40;expresión de SSIS&#41;](../../integration-services/expressions/exp-ssis-expression.md)|Devuelve el exponente de la base e de la expresión especificada.|  
@@ -59,7 +58,7 @@ ms.lasthandoff: 05/03/2018
   
  El evaluador de expresiones proporciona las siguientes funciones para cadenas.  
   
-|Función|Description|  
+|Función|Descripción|  
 |--------------|-----------------|  
 |[CODEPOINT &#40;expresión de SSIS&#41;](../../integration-services/expressions/codepoint-ssis-expression.md)|Devuelve el valor de código Unicode del carácter más a la izquierda de una expresión de caracteres.|  
 |[FINDSTRING &#40;expresión de SSIS&#41;](../../integration-services/expressions/findstring-ssis-expression.md)|Devuelve el índice (de base 1) de la repetición especificada de una cadena de caracteres dentro de una expresión.|  
@@ -79,7 +78,7 @@ ms.lasthandoff: 05/03/2018
   
  El evaluador de expresiones proporciona las siguientes funciones de fecha y hora.  
   
-|Función|Description|  
+|Función|Descripción|  
 |--------------|-----------------|  
 |[DATEADD &#40;expresión de SSIS&#41;](../../integration-services/expressions/dateadd-ssis-expression.md)|Devuelve un nuevo valor de tipo DT_DBTIMESTAMP agregando una fecha o un intervalo de tiempo a una fecha indicada.|  
 |[DATEDIFF &#40;expresión de SSIS&#41;](../../integration-services/expressions/datediff-ssis-expression.md)|Devuelve el número de límites de fecha y hora entre dos fechas especificadas.|  
@@ -92,7 +91,7 @@ ms.lasthandoff: 05/03/2018
   
  El evaluador de expresiones proporciona las siguientes funciones para valores NULL.  
   
-|Función|Description|  
+|Función|Descripción|  
 |--------------|-----------------|  
 |[ISNULL &#40;expresión de SSIS&#41;](../../integration-services/expressions/isnull-ssis-expression.md)|Devuelve un resultado booleano en función de si una expresión es NULL.|  
 |[NULL &#40;expresión de SSIS&#41;](../../integration-services/expressions/null-ssis-expression.md)|Devuelve un valor NULL asociado al tipo de datos solicitado.|  

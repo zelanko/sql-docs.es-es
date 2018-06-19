@@ -4,11 +4,9 @@ ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: integration-services
-ms.component: connection-manager
 ms.reviewer: ''
 ms.suite: sql
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.tgt_pltfrm: ''
 ms.topic: conceptual
 f1_keywords:
@@ -29,11 +27,12 @@ caps.latest.revision: 92
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: c6ece524c8ee7565b692902b5f8d1e7dbcbd5db6
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 7e9a42da365556c0936fdfe59d9c24851dafbedb
+ms.sourcegitcommit: de5e726db2f287bb32b7910831a0c4649ccf3c4c
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/12/2018
+ms.locfileid: "35333549"
 ---
 # <a name="integration-services-ssis-connections"></a>Conexiones de Integration Services (SSIS)
   [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] utilizan conexiones para realizar diferentes tareas y para implementar características de [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] .  
@@ -84,7 +83,7 @@ Se puede crear un administrador de conexiones en el nivel de paquete o en el niv
 ### <a name="built-in-connection-managers"></a>Administradores de conexión integrados  
  En la tabla siguiente se indican los tipos de administradores de conexión proporcionados por [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] .  
   
-|Tipo|Description|Tema|  
+|Tipo|Descripción|Tema|  
 |----------|-----------------|-----------|  
 |ADO|Se conecta a los objetos de Objetos de datos ActiveX (ADO).|[Administrador de conexiones ADO](../../integration-services/connection-manager/ado-connection-manager.md)|  
 |ADO.NET|Se conecta a un origen de datos mediante un proveedor .NET.|[Administrador de conexiones ADO.NET](../../integration-services/connection-manager/ado-net-connection-manager.md)|  
@@ -112,7 +111,7 @@ Se puede crear un administrador de conexiones en el nivel de paquete o en el niv
 > [!IMPORTANT]  
 >  Los administradores de conexiones incluidos en la tabla siguiente solamente funcionan con [!INCLUDE[ssEnterpriseEd11](../../includes/ssenterpriseed11-md.md)] y [!INCLUDE[ssDeveloperEd11](../../includes/ssdevelopered11-md.md)].  
   
-|Tipo|Description|Tema|  
+|Tipo|Descripción|Tema|  
 |----------|-----------------|-----------|  
 |ORACLE|Se conecta a un servidor de Oracle \<información de versión\>.|El administrador de conexiones de Oracle es el componente de administrador de conexiones de [!INCLUDE[msCoName](../../includes/msconame-md.md)] Connector para Oracle de Attunity. [!INCLUDE[msCoName](../../includes/msconame-md.md)] Connector para Oracle de Attunity incluye también un origen y un destino. Para obtener más información, vea la página de descarga de [Conectores de Microsoft para Oracle y Teradata de Attunity](http://go.microsoft.com/fwlink/?LinkId=251526).|  
 |SAPBI|Se conecta a un sistema SAP NetWeaver BI versión 7.|El administrador de conexiones de SAP BI es el componente de administrador de conexiones de [!INCLUDE[msCoName](../../includes/msconame-md.md)] Connector para SAP BI. [!INCLUDE[msCoName](../../includes/msconame-md.md)] Connector para SAP BI incluye también un origen y un destino. Para obtener más información, vea la página de descarga, [Feature Pack de Microsoft SQL Server 2008](http://go.microsoft.com/fwlink/?LinkId=262016).|  
@@ -269,7 +268,7 @@ Utilice el cuadro de diálogo **Agregar administrador de conexiones SSIS** para 
   
     -   El paquete no se puede ejecutar.  
   
-5.  Para guardar el paquete actualizado, haga clic en **Guardar los elementos seleccionados** , en el menú **Archivo** .  
+5.  Para guardar el paquete actualizado, haga clic en **Guardar los elementos seleccionados**, en el menú **Archivo**.  
   
 ###  <a name="DeleteProjectLevel"></a> Eliminar un administrador de conexiones compartido (administrador de conexiones de nivel de proyecto)  
   
@@ -302,7 +301,7 @@ Todos los administradores de conexión se pueden configurar en la ventana **Prop
   
 6.  Haga clic en **Aceptar**.  
   
-7.  Para guardar el paquete actualizado, haga clic en **Guardar los elementos seleccionados** , en el menú **Archivo** .  
+7.  Para guardar el paquete actualizado, haga clic en **Guardar los elementos seleccionados**, en el menú **Archivo**.  
   
 ### <a name="modify-a-connection-manager-using-a-connection-manager-dialog-box"></a>Modificar un administrador de conexiones mediante el cuadro de diálogo Administrador de conexiones  
   
@@ -334,7 +333,7 @@ Todos los administradores de conexión se pueden configurar en la ventana **Prop
     |[Administrador de conexiones con SQL Server Compact Edition](../../integration-services/connection-manager/sql-server-compact-edition-connection-manager.md)|[Editor del administrador de conexiones con SQL Server Compact Edition &#40;página Conexión&#41;](../../integration-services/connection-manager/sql-server-compact-edition-connection-manager-editor-connection-page.md)<br /><br /> [Editor del administrador de conexiones con SQL Server Compact Edition &#40;página Todo&#41;](../../integration-services/connection-manager/sql-server-compact-edition-connection-manager-editor-all-page.md)|  
     |[Administrador de conexiones WMI](../../integration-services/connection-manager/wmi-connection-manager.md)|[Editor del administrador de conexiones WMI](../../integration-services/connection-manager/wmi-connection-manager-editor.md)|  
   
-5.  Para guardar el paquete actualizado, haga clic en **Guardar los elementos seleccionados** , en el menú **Archivo** .  
+5.  Para guardar el paquete actualizado, haga clic en **Guardar los elementos seleccionados**, en el menú **Archivo**.  
 
 ## <a name="related-content"></a>Contenido relacionado  
   

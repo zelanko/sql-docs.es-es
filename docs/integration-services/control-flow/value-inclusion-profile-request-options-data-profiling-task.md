@@ -4,11 +4,9 @@ ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: integration-services
-ms.component: control-flow
 ms.reviewer: ''
 ms.suite: sql
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
@@ -18,11 +16,12 @@ caps.latest.revision: 21
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 27c0aa5259be671931cbbe9766302123ad5282d7
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: ce52ec0c887d20e195d5cdc5e9d0995a33f4be5a
+ms.sourcegitcommit: de5e726db2f287bb32b7910831a0c4649ccf3c4c
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/12/2018
+ms.locfileid: "35333189"
 ---
 # <a name="value-inclusion-profile-request-options-data-profiling-task"></a>Opciones de Solicitud de perfil de inclusión de valores (tarea de generación de perfiles de datos)
   Utilice el panel **Propiedades de la solicitud** de la página **Solicitudes de perfil** para establecer las opciones de **Solicitud de perfil de inclusión de valores** seleccionadas en el panel de solicitudes. Un perfil de inclusión de valores calcula la superposición en los valores entre dos columnas o conjuntos de columnas. Por lo tanto, también puede determinar si una columna o un conjunto de columnas es adecuado para actuar como una clave externa entre las tablas seleccionadas. Este perfil también puede ayudarle a identificar problemas de los datos, por ejemplo valores que no sean válidos. Por ejemplo, suponga que utiliza un perfil de inclusión de valores para generar el perfil de la columna de identificadores de producto de una tabla de ventas. El perfil detecta que la columna contiene valores que no están en la columna IdProducto de la tabla Productos.  
@@ -107,7 +106,7 @@ ms.lasthandoff: 05/03/2018
 > [!NOTE]  
 >  Cuando use el carácter comodín **(\*)** para **ColumnName**, **CompareOptions** es de solo lectura y se establece en el valor **Default**.  
   
-|Valor|Description|  
+|Valor|Descripción|  
 |-----------|-----------------|  
 |**Default**|Ordena y compara datos basados en la intercalación de la columna en la tabla de origen.|  
 |**BinarySort**|Ordena y compara los datos según los patrones de bits definidos para cada carácter. El orden binario utiliza la distinción de mayúsculas y minúsculas, y de acentos. El orden binario es también el más rápido.|  
@@ -115,7 +114,7 @@ ms.lasthandoff: 05/03/2018
   
  Si selecciona **DictionarySort**, también puede seleccionar cualquier combinación de las opciones enumeradas en la tabla siguiente. De forma predeterminada, no se selecciona ninguna de estas opciones adicionales.  
   
-|Valor|Description|  
+|Valor|Descripción|  
 |-----------|-----------------|  
 |**IgnoreCase**|Especifica si la comparación distingue entre mayúsculas y minúsculas. Si se establece esta opción, la comparación de las cadenas omite la distinción entre mayúsculas y minúsculas. Por ejemplo, "ABC" se interpreta igual que "abc".|  
 |**IgnoreNonSpace**|Especifica si la comparación distingue entre caracteres con espacio y signos diacríticos. Si se establece esta opción, la comparación omite los signos diacríticos. Por ejemplo, "å" se considera igual que "a".|  
@@ -130,7 +129,7 @@ ms.lasthandoff: 05/03/2018
  **InclusionThresholdSetting**  
  Seleccione el valor de umbral para precisar la salida del perfil. El valor predeterminado de esta propiedad es **Specified**. Para obtener más información, vea la sección "Descripción de los valores del umbral" anteriormente en este tema.  
   
-|Valor|Description|  
+|Valor|Descripción|  
 |-----------|-----------------|  
 |**Ninguno**|No especifica un umbral. El nivel de la clave se notifica independientemente de su valor.|  
 |**Specified**|Utilice el umbral que se especifica en **InclusionStrengthThreshold**. Solo se notifica el nivel de inclusión si es mayor que el umbral.|  
@@ -144,7 +143,7 @@ ms.lasthandoff: 05/03/2018
  **SupersetColumnsKeyThresholdSetting**  
  Especifique el umbral del superconjunto. El valor predeterminado de esta propiedad es **Specified**. Para obtener más información, vea la sección "Descripción de los valores del umbral" anteriormente en este tema.  
   
-|Valor|Description|  
+|Valor|Descripción|  
 |-----------|-----------------|  
 |**Ninguno**|No especifica un umbral. El nivel de inclusión se notifica sin tener en cuenta el nivel de clave de la columna de superconjunto.|  
 |**Specified**|Utilice el umbral que se especifica en **SupersetColumnsKeyThreshold**. Solo se notifica el nivel de inclusión si el nivel de clave de la columna de superconjunto es mayor que el umbral.|  

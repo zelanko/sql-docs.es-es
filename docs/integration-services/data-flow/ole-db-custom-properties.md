@@ -4,11 +4,9 @@ ms.custom: ''
 ms.date: 03/04/2017
 ms.prod: sql
 ms.prod_service: integration-services
-ms.component: data-flow
 ms.reviewer: ''
 ms.suite: sql
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: 13a82d41-dd7a-4708-bc84-4407a536c877
@@ -16,11 +14,12 @@ caps.latest.revision: 8
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: a9060dfbc8a5dfd7732bdd29c6bec37c5a877069
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 3b8600b4edf5c9d81467d9ea9b8dfedfdce99466
+ms.sourcegitcommit: cc46afa12e890edbc1733febeec87438d6051bf9
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/12/2018
+ms.locfileid: "35401507"
 ---
 # <a name="ole-db-custom-properties"></a>Propiedades personalizadas de OLE DB
   **Propiedades personalizadas de origen**  
@@ -29,7 +28,7 @@ ms.lasthandoff: 05/03/2018
   
  En la tabla siguiente se describen las propiedades personalizadas del origen de OLE DB. Todas las propiedades son de lectura y escritura.  
   
-|Nombre de propiedad|Tipo de datos|Description|  
+|Nombre de propiedad|Tipo de datos|Descripción|  
 |-------------------|---------------|-----------------|  
 |AccessMode|Integer|Modo que se usa para tener acceso a la base de datos. Los valores posibles son **Open Rowset**, **Open Rowset from Variable**, **SQL Command**y **SQL Command from Variable**. El valor predeterminado es **Open Rowset**.|  
 |AlwaysUseDefaultCodePage|Boolean|Valor que indica si usar el valor de la propiedad **DefaultCodePage** para cada columna, o intentar derivar la página de códigos de la configuración regional de cada columna. El valor predeterminado de esta propiedad es **False**.|  
@@ -54,7 +53,7 @@ ms.lasthandoff: 05/03/2018
 > [!NOTE]  
 >  Las opciones de carga rápida enumeradas aquí (FastLoadKeepIdentity, FastLoadKeepNulls y FastLoadOptions) corresponden a las propiedades con nombre similar que expone la interfaz **IRowsetFastLoad** implementada por el proveedor Microsoft OLE DB para SQL Server (SQLOLEDB). Para obtener más información, busque IRowsetFastLoad en la MSDN Library.  
   
-|Nombre de propiedad|Tipo de datos|Description|  
+|Nombre de propiedad|Tipo de datos|Descripción|  
 |-------------------|---------------|-----------------|  
 |AccessMode|Integer (enumeración)|Valor que especifica cómo tiene acceso el destino a su base de datos de destino.<br /><br /> Esta propiedad admite cualquiera de los siguientes valores:<br /><br /> <br /><br /> **OpenRowset** (0): se proporciona el nombre de una tabla o vista.<br /><br /> **OpenRowset desde variable** (1): se proporciona el nombre de una variable que contiene el nombre de una tabla o vista.<br /><br /> **OpenRowset con FastLoad** (3): se proporciona el nombre de una tabla o vista.<br /><br /> **OpenRowset con FastLoad desde variable** (4): se proporciona el nombre de una variable que contiene el nombre de una tabla o vista.<br /><br /> **Comando SQL** (2): se proporciona una instrucción SQL.|  
 |AlwaysUseDefaultCodePage|Boolean|Valor que indica si usar el valor de la propiedad **DefaultCodePage** para cada columna, o intentar derivar la página de códigos de la configuración regional de cada columna. El valor predeterminado de esta propiedad es **False**.|  

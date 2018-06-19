@@ -3,12 +3,10 @@ title: Grupos de acciones y acciones de SQL Server Audit | Microsoft Docs
 ms.custom: ''
 ms.date: 10/19/2016
 ms.prod: sql
-ms.prod_service: database-engine
-ms.component: security
+ms.prod_service: security
 ms.reviewer: ''
 ms.suite: sql
-ms.technology:
-- database-engine
+ms.technology: security
 ms.tgt_pltfrm: ''
 ms.topic: conceptual
 f1_keywords:
@@ -27,12 +25,12 @@ caps.latest.revision: 46
 author: edmacauley
 ms.author: edmaca
 manager: craigg
-ms.openlocfilehash: deef1b6db596acc7462fbd67eaae827fec759640
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 11b8b1a668c5e071dbec3291337b9ef9174010f8
+ms.sourcegitcommit: a78fa85609a82e905de9db8b75d2e83257831ad9
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32973680"
+ms.lasthandoff: 06/18/2018
+ms.locfileid: "35698816"
 ---
 # <a name="sql-server-audit-action-groups-and-actions"></a>Grupos de acciones y acciones de SQL Server Audit
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -78,7 +76,7 @@ ms.locfileid: "32973680"
   
  En la tabla siguiente se describen los grupos de acciones de auditoría de nivel de servidor y se proporciona la clase de eventos de SQL Server equivalente cuando corresponda.  
   
-|Nombre del grupo de acciones|Description|  
+|Nombre del grupo de acciones|Descripción|  
 |-----------------------|-----------------|  
 |APPLICATION_ROLE_CHANGE_PASSWORD_GROUP|Este evento se desencadena cuando se cambia una contraseña para un rol de aplicación. Equivalente a [Audit App Role Change Password Event Class](../../../relational-databases/event-classes/audit-app-role-change-password-event-class.md).|  
 |AUDIT_CHANGE_GROUP|Este evento se desencadena al crear, modificar o eliminar una auditoría. Este evento se desencadena al crear, modificar o eliminar una especificación de auditoría. Todos los cambios realizados en una auditoría se auditan en ella. Equivalente a [Audit Change Audit Event Class](../../../relational-databases/event-classes/audit-change-audit-event-class.md).|  
@@ -133,7 +131,7 @@ ms.locfileid: "32973680"
   
  En la tabla siguiente se describen los grupos de acciones de auditoría de nivel de base de datos y se proporciona la clase de eventos de SQL Server equivalente cuando corresponda.  
   
-|Nombre del grupo de acciones|Description|  
+|Nombre del grupo de acciones|Descripción|  
 |-----------------------|-----------------|  
 |APPLICATION_ROLE_CHANGE_PASSWORD_GROUP|Este evento se desencadena cuando se cambia una contraseña para un rol de aplicación. Equivalente a [Audit App Role Change Password Event Class](../../../relational-databases/event-classes/audit-app-role-change-password-event-class.md).|  
 |AUDIT_CHANGE_GROUP|Este evento se desencadena al crear, modificar o eliminar una auditoría. Este evento se desencadena al crear, modificar o eliminar una especificación de auditoría. Todos los cambios realizados en una auditoría se auditan en ella. Equivalente a [Audit Change Audit Event Class](../../../relational-databases/event-classes/audit-change-audit-event-class.md).|  
@@ -163,7 +161,7 @@ ms.locfileid: "32973680"
 ## <a name="database-level-audit-actions"></a>Acciones de auditoría de nivel de base de datos  
  Las acciones de nivel de base de datos admiten la auditoría de acciones específicas directamente en objetos de esquema y de esquema de la base de datos, como por ejemplo tablas, vistas, procedimientos almacenados, funciones, procedimientos almacenados extendidos, colas o sinónimos. No se auditan los tipos, colección de esquemas XML, base de datos y esquema. La auditoría de objetos de esquema se puede configurar en esquema y base de datos, que indica que se auditarán los eventos en todos los objetos de esquema que contiene el esquema especificado o la base de datos. En la tabla siguiente se describen las acciones de auditoría de nivel de base de datos.  
   
-|Acción|Description|  
+|Acción|Descripción|  
 |------------|-----------------|  
 |SELECT|Este evento se desencadena al emitir una instrucción SELECT.|  
 |UPDATE|Este evento se desencadena al emitir una instrucción UPDATE.|  
@@ -183,7 +181,7 @@ ms.locfileid: "32973680"
 ## <a name="audit-level-audit-action-groups"></a>Grupos de acciones de auditoría de nivel de auditoría  
  También es posible auditar las acciones del proceso de auditoría. Esto puede realizarse en el ámbito del servidor o en el ámbito de la base de datos. En el ámbito de la base de datos, solo se produce para las especificaciones de auditoría de base de datos. En la tabla siguiente se describen los grupos de acciones de auditoría de nivel de auditoría.  
   
-|Nombre del grupo de acciones|Description|  
+|Nombre del grupo de acciones|Descripción|  
 |-----------------------|-----------------|  
 |AUDIT_ CHANGE_GROUP|Este evento se desencadena al emitir uno de los comandos siguientes:<br /><br /> CREATE SERVER AUDIT<br /><br /> ALTER SERVER AUDIT<br /><br /> DROP SERVER AUDIT<br /><br /> CREATE SERVER AUDIT SPECIFICATION<br /><br /> ALTER SERVER AUDIT SPECIFICATION<br /><br /> DROP SERVER AUDIT SPECIFICATION<br /><br /> CREATE DATABASE AUDIT SPECIFICATION<br /><br /> ALTER DATABASE AUDIT SPECIFICATION<br /><br /> DROP DATABASE AUDIT SPECIFICATION|  
   

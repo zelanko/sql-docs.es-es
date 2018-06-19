@@ -4,10 +4,9 @@ ms.custom: ''
 ms.date: 03/04/2017
 ms.prod: sql
 ms.prod_service: integration-services
-ms.component: extending-packages-custom-objects
 ms.reviewer: ''
 ms.suite: sql
-ms.technology: ''
+ms.technology: integration-services
 ms.tgt_pltfrm: ''
 ms.topic: reference
 applies_to:
@@ -19,11 +18,12 @@ caps.latest.revision: 21
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: e84f4b9b9e5fe6edf7cabe8ed09b79bfe30c29da
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 0569586ce25071c5910253ace654d3190f7f716c
+ms.sourcegitcommit: de5e726db2f287bb32b7910831a0c4649ccf3c4c
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/12/2018
+ms.locfileid: "35333029"
 ---
 # <a name="persisting-custom-objects"></a>Conservar objetos personalizados
   No tiene que implementar la persistencia personalizada para los objetos personalizados que crea, siempre que sus propiedades utilicen solo tipos de datos simples como **integer** y **string**. La implementación predeterminada de persistencia guarda los metadatos del objeto junto con los valores de todas sus propiedades.  

@@ -1,8 +1,5 @@
 # [Información general](integration-services-ssis-connections.md)  
 # [Orígenes de datos](data-sources.md)  
-# [Conectarse a una base de datos de Access](connect-to-an-access-database.md)  
-# [Conectarse a un archivo dBASE u otro archivo DBF](connect-to-a-dbase-or-other-dbf-file.md)  
-# [Conectarse a un libro de Excel](connect-to-an-excel-workbook.md)  
 # [Administrador de conexiones ADO](ado-connection-manager.md)  
 # [Administrador de conexiones ADO.NET](ado-net-connection-manager.md)  
 # [Administrador de conexiones de Analysis Services](analysis-services-connection-manager.md)  

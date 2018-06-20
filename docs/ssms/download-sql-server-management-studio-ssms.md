@@ -1,7 +1,7 @@
 ---
 title: Descargar SQL Server Management Studio (SSMS) | Microsoft Docs
 ms.custom: ''
-ms.date: 05/14/2018
+ms.date: 06/13/2018
 ms.prod: sql
 ms.prod_service: sql-tools
 ms.component: ssms
@@ -28,11 +28,12 @@ caps.latest.revision: 145
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 8075a2ac4eaeb7b37d828eeee255f2a4e141968e
-ms.sourcegitcommit: ee661730fb695774b9c483c3dd0a6c314e17ddf8
+ms.openlocfilehash: 20ede2e4e67c7d3d5e3925e041d0baceda5446e5
+ms.sourcegitcommit: 354ed9c8fac7014adb0d752518a91d8c86cdce81
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/19/2018
+ms.lasthandoff: 06/14/2018
+ms.locfileid: "35612230"
 ---
 # <a name="download-sql-server-management-studio-ssms"></a>Descarga de SQL Server Management Studio (SSMS)
 [!INCLUDE[appliesto-ss-asdb-asdw-xxx-md](../includes/appliesto-ss-asdb-asdw-xxx-md.md)]
@@ -77,6 +78,7 @@ Paquete de actualización de SQL Server Management Studio 17.7 (actualización d
 
 > [!NOTE]
 > El módulo SQL Server PowerShell se instala ahora de forma independiente a través de la Galería de PowerShell. Para más información, vea [Descarga del módulo de PowerShell de SQL Server](download-sql-server-ps-module.md).
+
 ## <a name="sql-server-management-studio"></a>SQL Server Management Studio
 
 
@@ -137,7 +139,8 @@ Esta versión de SSMS admite las siguientes plataformas de 64 bits cuando se usa
 
 A continuación se indican problemas y limitaciones relativos a la versión 17.7:
 
-Algunos cuadros de diálogo muestran un error de edición no válida cuando se trabaja con nuevas ediciones de Azure SQL Database *de uso general* o *crítico para la empresa*.
+- Algunos cuadros de diálogo muestran un error de edición no válida cuando se trabaja con nuevas ediciones de Azure SQL Database *de uso general* o *crítico para la empresa*.
+- Se puede observar alguna latencia en el visor de XEvents. Es un [problema conocido de .Net Framework](https://github.com/Microsoft/dotnet/blob/master/releases/net472/dotnet472-changes.md#sql). Considere la actualización a NetFx 4.7.2.
 
 
 ## <a name="uninstall-and-reinstall-ssms"></a>Desinstalar y volver a instalar SSMS

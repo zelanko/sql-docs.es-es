@@ -7,12 +7,12 @@ ms.topic: conceptual
 author: HeidiSteen
 ms.author: heidist
 manager: cgronlun
-ms.openlocfilehash: 20a3742c9dfc956accd902539524724cac3f9b8c
-ms.sourcegitcommit: 808d23a654ef03ea16db1aa23edab496b73e5072
+ms.openlocfilehash: c334671fb9afaa4596688658e6beadbf8c9e6cc8
+ms.sourcegitcommit: 7d2b34c64f97206861ec9ad8d6a6201ac20a4af1
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/04/2018
-ms.locfileid: "34563863"
+ms.lasthandoff: 06/20/2018
+ms.locfileid: "36297441"
 ---
 # <a name="known-issues-in-machine-learning-services"></a>Problemas conocidos en servicios de aprendizaje de máquina
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
@@ -35,6 +35,36 @@ SQL Server 2017
 ## <a name="setup-and-configuration-issues"></a>Problemas de instalación y configuración
 
 Para obtener una descripción de los procesos y preguntas comunes relacionadas con la instalación inicial y la configuración, consulte [preguntas más frecuentes de actualización e instalación](r/upgrade-and-installation-faq-sql-server-r-services.md). Contiene información acerca de las actualizaciones, en paralelo e instalación de nuevos componentes de R o Python.
+
+### <a name="r-script-runtime-error-sql-server-2017-cu5-cu7-regression"></a>Error de tiempo de ejecución de Script de R (SQL Server 2017 CU5 CU7 regresión)
+
+Para SQL Server de 2017 en las actualizaciones acumulativas 5 a 7, hay una regresión en el **rlauncher.config** donde la ruta de acceso de archivo del directorio temporal incluye un espacio de archivo. Se corrige esta regresión en CU8.
+
+El error que se verá cuando se ejecuta el script de R incluye los siguientes mensajes:
+
+> *No se puede comunicar con el tiempo de ejecución de script de 'R'. Compruebe los requisitos de tiempo de ejecución 'R'.*
+>
+> Mensajes STDERR desde un script externo: 
+>
+> *Error irrecuperable: no se puede crear 'R_TempDir'*
+
+**Solución alternativa**
+
+Aplicar CU8 cuando esté disponible. Como alternativa, puede volver a crear **rlauncher.config** ejecutando **registerrext** con la desinstalación o instalación en un símbolo del sistema con privilegios elevados. 
+
+```text
+<SQLInstancePath>\R_SERVICES\library\RevoScaleR\rxLibs\x64\RegisterRExt.exe /uninstall /sqlbinnpath:<SQLInstanceBinnPath> /userpoolsize:0 /instance:<SQLInstanceName>
+
+<SQLInstancePath>\R_SERVICES\library\RevoScaleR\rxLibs\x64\RegisterRExt.exe /install /sqlbinnpath:<SQLInstanceBinnPath> /userpoolsize:0 /instance:<SQLInstanceName>
+```
+
+El ejemplo siguiente muestra los comandos con la instancia predeterminada "MSSQL14. Instala MSSQLSERVER"en" C:\Program Files\Microsoft SQL Server\":
+
+```text
+"C:\Program Files\Microsoft SQL Server\MSSQL14.MSSQLSERVER\R_SERVICES\library\RevoScaleR\rxLibs\x64\RegisterRext.exe" /uninstall /sqlbinnpath:"C:\Program Files\Microsoft SQL Server\MSSQL14.MSSQLSERVER\MSSQL\Binn" /userpoolsize:0 /instance:MSSQLSERVER
+
+"C:\Program Files\Microsoft SQL Server\MSSQL14.MSSQLSERVER\R_SERVICES\library\RevoScaleR\rxLibs\x64\RegisterRext.exe" /install /sqlbinnpath:"C:\Program Files\Microsoft SQL Server\MSSQL14.MSSQLSERVER\MSSQL\Binn" /userpoolsize:0 /instance:MSSQLSERVER
+```
 
 ### <a name="unable-to-install-sql-server-machine-learning-features-on-a-domain-controller"></a>No se puede instalar características de aprendizaje de máquina de SQL Server en un controlador de dominio
 
@@ -167,7 +197,7 @@ Si se producen las limitaciones de recursos, compruebe el valor predeterminado a
 
 **Se aplica a:** R Services SQL Server 2016, Enterprise Edition
 
-## <a name="r-issues"></a>Problemas de R
+## <a name="r-script-execution-issues"></a>Problemas de ejecución de script de R
 
 Esta sección contiene los problemas conocidos que son específicos para ejecutar código R en SQL Server, así como algunos problemas que están relacionados con las bibliotecas de R y herramientas publicados por Microsoft, incluidos los RevoScaleR.
 
@@ -371,7 +401,7 @@ La función `rxDTree` no admite actualmente transformaciones en la fórmula. En 
 
 Los factores ordenados se tratan igual que los factores de todas las funciones de análisis RevoScaleR, excepto `rxDTree`.
 
-## <a name="python-code-execution-or-python-package-issues"></a>La ejecución de código Python o problemas de paquete de Python
+## <a name="python-script-execution-issues"></a>Problemas de ejecución de script de Python
 
 Esta sección contiene los problemas conocidos que son específicos a la ejecución de Python a SQL Server, así como problemas relacionados con los paquetes de Python publicados por Microsoft, incluidos los [revoscalepy](https://docs.microsoft.com/r-server/python-reference/revoscalepy/revoscalepy-package) y [microsoftml](https://docs.microsoft.com/r-server/python-reference/microsoftml/microsoftml-package).
 

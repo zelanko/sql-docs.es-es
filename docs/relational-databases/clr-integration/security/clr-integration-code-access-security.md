@@ -4,11 +4,9 @@ ms.custom: ''
 ms.date: 03/17/2017
 ms.prod: sql
 ms.prod_service: database-engine
-ms.component: clr
 ms.reviewer: ''
 ms.suite: sql
-ms.technology: ''
-ms.tgt_pltfrm: ''
+ms.technology: reference
 ms.topic: reference
 helpviewer_keywords:
 - UNSAFE assemblies
@@ -22,11 +20,12 @@ caps.latest.revision: 28
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.openlocfilehash: 8b71c017161b2f696872c6d2dd2ba7843a474bdc
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: cc9d9c90e260fe3da8640189a8a16af15b984769
+ms.sourcegitcommit: a78fa85609a82e905de9db8b75d2e83257831ad9
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/18/2018
+ms.locfileid: "35702936"
 ---
 # <a name="clr-integration-code-access-security"></a>Seguridad de acceso del código de integración CLR
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -115,7 +114,7 @@ ms.lasthandoff: 05/03/2018
 |**Restricciones del modelo de programación**|Sí|Sí|Sin restricciones|  
 |**Requisito de capacidad**|Sí|Sí|no|  
 |**Acceso a datos locales**|Sí|Sí|Sí|  
-|**Capacidad de llamar a código nativo**|no|No|Sí|  
+|**Capacidad de llamar a código nativo**|no|no|Sí|  
   
 ## <a name="see-also"></a>Vea también  
  [Seguridad de la integración de CLR](../../../relational-databases/clr-integration/security/clr-integration-security.md)   

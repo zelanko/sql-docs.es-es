@@ -2,9 +2,10 @@
 title: Compatibilidad con transacciones locales | Documentos de Microsoft
 description: Transacciones locales en el controlador de OLE DB para SQL Server
 ms.custom: ''
-ms.date: 03/26/2018
+ms.date: 06/14/2018
 ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
+ms.component: oledb|ole-db-transactions
 ms.reviewer: ''
 ms.suite: sql
 ms.technology: connectivity
@@ -20,15 +21,17 @@ helpviewer_keywords:
 author: pmasl
 ms.author: Pedro.Lopes
 manager: craigg
-ms.openlocfilehash: 2c3d85ce4a26c5840b393336e878bda4fa20b142
-ms.sourcegitcommit: f16003fd1ca28b5e06d5700e730f681720006816
+ms.openlocfilehash: 25d6c98c17c139a1658d0711bcff0c1c8f3f1d18
+ms.sourcegitcommit: 03ba89937daeab08aa410eb03a52f1e0d212b44f
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/11/2018
-ms.locfileid: "35308004"
+ms.lasthandoff: 06/16/2018
+ms.locfileid: "35689368"
 ---
 # <a name="supporting-local-transactions"></a>Compatibilidad con transacciones locales
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
+[!INCLUDE[appliesto-ss-asdb-asdw-pdw-asdbmi-md](../../../includes/appliesto-ss-asdb-asdw-pdw-asdbmi-md.md)]
+
+[!INCLUDE[Driver_OLEDB_Download](../../../includes/driver_oledb_download.md)]
 
   Una sesión delimita el ámbito de la transacción para un controlador de OLE DB para la transacción local de SQL Server. Cuando, en la dirección de un consumidor, el controlador OLE DB para SQL Server envía una solicitud a una instancia conectada de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)], la solicitud constituye una unidad de trabajo para el controlador OLE DB para SQL Server. Las transacciones locales ajustan siempre una o varias unidades de trabajo en un único controlador de OLE DB para la sesión de SQL Server.  
   

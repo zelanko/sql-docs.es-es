@@ -4,27 +4,25 @@ ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
-ms.component: native-client-ole-db-data-source-objects
 ms.reviewer: ''
 ms.suite: sql
-ms.technology: ''
+ms.technology: connectivity
 ms.tgt_pltfrm: ''
 ms.topic: reference
 helpviewer_keywords:
 - sessions [OLE DB]
 - SQL Server Native Client OLE DB provider, sessions
 ms.assetid: 3a980816-675c-4fba-acc9-429297d85bbd
-caps.latest.revision: 31
 author: MightyPen
 ms.author: genemi
 manager: craigg
 monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
-ms.openlocfilehash: 6de9aa78a6cbdd26900eb4565f3edc7783acdeb9
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 6dd1fbcb2a8d1eee4ad76decb2b81972b8cc2dd2
+ms.sourcegitcommit: a78fa85609a82e905de9db8b75d2e83257831ad9
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32946290"
+ms.lasthandoff: 06/18/2018
+ms.locfileid: "35701476"
 ---
 # <a name="sessions"></a>Sesiones
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -187,14 +185,14 @@ EXIT:
 }  
 ```  
   
- Conexión [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] objetos de sesión de proveedor OLE DB de Native Client a una instancia de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] puede generar una sobrecarga significativa para las aplicaciones que continuamente crear y liberar objetos de sesión. Puede minimizar la sobrecarga al administrar [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] objetos de sesión del proveedor OLE DB de Native Client eficazmente. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]Pueden mantener las aplicaciones de proveedor OLE DB de cliente nativo el [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] conexión de un objeto de sesión activo si mantienen una referencia en al menos una interfaz del objeto.  
+ Conexión [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] objetos de sesión de proveedor OLE DB de Native Client a una instancia de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] puede generar una sobrecarga significativa para las aplicaciones que continuamente crear y liberar objetos de sesión. Puede minimizar la sobrecarga al administrar [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] objetos de sesión del proveedor OLE DB de Native Client eficazmente. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Pueden mantener las aplicaciones de proveedor OLE DB de cliente nativo el [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] conexión de un objeto de sesión activo si mantienen una referencia en al menos una interfaz del objeto.  
   
  Si se mantiene un grupo de referencias a objeto de creación de comando, por ejemplo, se mantienen conexiones activas para estos objetos de sesión en el grupo. Como los objetos de sesión son necesarios, el código de mantenimiento de grupo pasa válido **IDBCreateCommand** puntero de interfaz para el método de aplicación que requiere la sesión. Cuando el método de aplicación ya no requiere la sesión, devuelve el puntero de interfaz al código de mantenimiento de grupo en lugar de liberar la referencia de la aplicación al objeto de creación de comando.  
   
 > [!NOTE]  
->  En el ejemplo anterior, el **IDBCreateCommand** interfaz se usa porque el **ICommand** implementa la interfaz la **GetDBSession**  /método siguiente, el único método en el ámbito de comando o conjunto de filas que permite que un objeto determinar la sesión en el que se creó. Por tanto, un objeto de comando, y solo un objeto de comando, permite a una aplicación recuperar un puntero de objeto de origen de datos a partir del cual se pueden crear sesiones adicionales.  
+>  En el ejemplo anterior, el **IDBCreateCommand** interfaz se usa porque el **ICommand** implementa la interfaz la **GetDBSession**  /método siguiente, el único método de comando o en el ámbito de conjunto de filas que permite que un objeto determinar la sesión en el que se creó. Por tanto, un objeto de comando, y solo un objeto de comando, permite a una aplicación recuperar un puntero de objeto de origen de datos a partir del cual se pueden crear sesiones adicionales.  
   
 ## <a name="see-also"></a>Vea también  
- [Objetos de origen de datos & #40; OLE DB & #41;](../../relational-databases/native-client-ole-db-data-source-objects/data-source-objects-ole-db.md)  
+ [Objetos de origen de datos &#40;OLE DB&#41;](../../relational-databases/native-client-ole-db-data-source-objects/data-source-objects-ole-db.md)  
   
   

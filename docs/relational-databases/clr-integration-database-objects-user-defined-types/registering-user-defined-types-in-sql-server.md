@@ -3,11 +3,9 @@ title: Registrar tipos definidos por el usuario en SQL Server | Documentos de Mi
 ms.custom: ''
 ms.date: 03/16/2017
 ms.prod: sql
-ms.prod_service: database-engine
-ms.component: clr
 ms.reviewer: ''
 ms.suite: sql
-ms.technology: ''
+ms.technology: reference
 ms.tgt_pltfrm: ''
 ms.topic: reference
 dev_langs:
@@ -38,12 +36,12 @@ caps.latest.revision: 25
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.openlocfilehash: c008844b49d907eb03e2358327f0f71959495675
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 942f6c1fa0b6888aa936bfd4b557c570529e9894
+ms.sourcegitcommit: a78fa85609a82e905de9db8b75d2e83257831ad9
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32922850"
+ms.lasthandoff: 06/18/2018
+ms.locfileid: "35697826"
 ---
 # <a name="registering-user-defined-types-in-sql-server"></a>Registrar tipos definidos por el usuario en SQL Server
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -65,14 +63,14 @@ ms.locfileid: "32922850"
 5.  Desde el **generar** menú, seleccione **implementar**. De este modo, se registrará el ensamblado y se creará el tipo en la base de datos de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
 ## <a name="using-transact-sql-to-deploy-udts"></a>Usar Transact-SQL para implementar tipos UDT  
- La sintaxis de la instrucción CREATE ASSEMBLY de [!INCLUDE[tsql](../../includes/tsql-md.md)] se usa para registrar el ensamblado en la base de datos en la que se desea usar el UDT. Se almacena internamente en las tablas del sistema de la base de datos, no externamente en el sistema de archivos. Si el UDT depende de ensamblados externos, éstos también deben cargarse en la base de datos. La instrucción CREATE TYPE se usa para crear el UDT en la base de datos en la que va a utilizarse. Para obtener más información, vea [CREATE ASSEMBLY & #40; Transact-SQL & #41; ](../../t-sql/statements/create-assembly-transact-sql.md) y [crear tipo de & #40; Transact-SQL & #41; ](../../t-sql/statements/create-type-transact-sql.md).  
+ La sintaxis de la instrucción CREATE ASSEMBLY de [!INCLUDE[tsql](../../includes/tsql-md.md)] se usa para registrar el ensamblado en la base de datos en la que se desea usar el UDT. Se almacena internamente en las tablas del sistema de la base de datos, no externamente en el sistema de archivos. Si el UDT depende de ensamblados externos, éstos también deben cargarse en la base de datos. La instrucción CREATE TYPE se usa para crear el UDT en la base de datos en la que va a utilizarse. Para obtener más información, consulte [CREATE ASSEMBLY &#40;Transact-SQL&#41; ](../../t-sql/statements/create-assembly-transact-sql.md) y [CREATE TYPE &#40;Transact-SQL&#41;](../../t-sql/statements/create-type-transact-sql.md).  
   
 ### <a name="using-create-assembly"></a>Usar CREATE ASSEMBLY  
  La sintaxis de la instrucción CREATE ASSEMBLY registra el ensamblado en la base de datos en la que se desea usar el UDT. Cuando se registra el ensamblado, no tiene ninguna dependencia.  
   
  No está permitido crear varias versiones del mismo ensamblado en una base de datos determinada. Sin embargo, es posible crear varias versiones del mismo ensamblado basadas en la referencia cultural en una base de datos determinada. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] distingue varias versiones de referencia cultural de un ensamblado mediante los distintos nombres registrados en la instancia de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Para obtener más información, vea el tema sobre la forma de crear y utilizar ensamblados con nombres seguros en .NET Framework SDK.  
   
- Al ejecutar CREATE ASSEMBLY con los conjuntos de permisos SAFE o EXTERNAL_ACCESS, se comprueba el ensamblado para garantizar que sea comprobable y presente seguridad de tipos. Si no se especifica ningún conjunto de permisos, se usa el conjunto de permisos SAFE. El código con el conjunto de permisos UNSAFE no se comprueba. Para obtener más información acerca de los conjuntos de permisos de ensamblado, consulte [diseñar ensamblados](../../relational-databases/clr-integration/assemblies-designing.md).  
+ Al ejecutar CREATE ASSEMBLY con los conjuntos de permisos SAFE o EXTERNAL_ACCESS, se comprueba el ensamblado para garantizar que sea comprobable y presente seguridad de tipos. Si no se especifica ningún conjunto de permisos, se usa el conjunto de permisos SAFE. El código con el conjunto de permisos UNSAFE no se comprueba. Para obtener más información sobre los conjuntos de permisos de ensamblado, vea [Diseño de ensamblados](../../relational-databases/clr-integration/assemblies-designing.md).  
   
 #### <a name="example"></a>Ejemplo  
  El siguiente [!INCLUDE[tsql](../../includes/tsql-md.md)] instrucción registra el ensamblado Point de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] en el **AdventureWorks** base de datos, con el conjunto de permisos SAFE. Si se omite la cláusula PERMISSION_SET, el ensamblado se registra con el conjunto de permisos SAFE.  
@@ -98,7 +96,7 @@ FROM 0xfeac4 … 21ac78
 > [!NOTE]  
 >  La sintaxis CREATE TYPE también se utiliza para crear nativo [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] datos de alias tipos y está diseñado para reemplazar **sp_addtype** como un medio para crear tipos de datos de alias. Algunos de los argumentos opcionales de la sintaxis de CREATE TYPE hacen referencia a la creación de UDTs y no sirven para crear tipos de datos de alias (como el tipo base).  
   
- Para obtener más información, vea [CREATE TYPE & #40; Transact-SQL & #41; ](../../t-sql/statements/create-type-transact-sql.md).  
+ Para obtener más información, consulte [CREATE TYPE &#40;Transact-SQL&#41;](../../t-sql/statements/create-type-transact-sql.md).  
   
 #### <a name="example"></a>Ejemplo  
  El siguiente [!INCLUDE[tsql](../../includes/tsql-md.md)] instrucción crea el **punto** tipo. EXTERNAL NAME se especifica mediante la sintaxis de nomenclatura de dos partes de *AssemblyName*. *Nombreudt*.  
@@ -153,7 +151,7 @@ SELECT o.name AS major_name, o.type_desc AS major_type_desc
  No es posible modificar un UDT una vez creado en una base de datos de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], pero puede modificar el ensamblado en el que se basa el tipo. En la mayoría de los casos, tendrá que quitar el UDT de la base de datos con la instrucción DROP TYPE de [!INCLUDE[tsql](../../includes/tsql-md.md)], efectuar cambios en el ensamblado subyacente y volver a cargarlo mediante la instrucción ALTER ASSEMBLY. A continuación, tendrá que volver a crear el UDT y todos los objetos dependientes.  
   
 ### <a name="example"></a>Ejemplo  
- La instrucción ALTER ASSEMBLY se usa después de haber realizado cambios en el código fuente del ensamblado UDT y después de haberlo compilado de nuevo. Esta instrucción copia el archivo .dll en el servidor y lo enlaza al nuevo ensamblado. Para obtener la sintaxis completa, consulte [ALTER ASSEMBLY & #40; Transact-SQL & #41; ](../../t-sql/statements/alter-assembly-transact-sql.md).  
+ La instrucción ALTER ASSEMBLY se usa después de haber realizado cambios en el código fuente del ensamblado UDT y después de haberlo compilado de nuevo. Esta instrucción copia el archivo .dll en el servidor y lo enlaza al nuevo ensamblado. Para obtener la sintaxis completa, consulte [ALTER ASSEMBLY &#40;Transact-SQL&#41;](../../t-sql/statements/alter-assembly-transact-sql.md).  
   
  La siguiente instrucción ALTER ASSEMBLY de [!INCLUDE[tsql](../../includes/tsql-md.md)] vuelve a cargar el ensamblado Point.dll desde la ubicación del disco especificada.  
   
@@ -183,7 +181,7 @@ ADD FILE FROM '\\Projects\Point\Point.cs' AS PointSource;
  **file_id**  
  Número que identifica cada objeto, con el primer objeto asociado a una determinada **assembly_id** se le asigna el valor de 1. Si hay varios objetos asociados al mismo **assembly_id**, a continuación, cada **file_id** valor se incrementa en 1.  
   
- **Contenido**  
+ **contenido**  
  Representación hexadecimal del ensamblado o archivo.  
   
  Puede usar la función CAST o CONVERT para convertir el contenido de la **contenido** columna en texto legible. La consulta siguiente convierte el contenido del archivo Point.cs en texto legible, utilizando el nombre de la cláusula WHERE para restringir el conjunto de resultados a una única fila.  
@@ -222,6 +220,6 @@ SELECT CAST(content AS varchar(8000))
  Tenga en cuenta que no es necesario realizar ninguna acción para utilizar los UDT cuando [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] crea tablas de trabajo en el **tempdb** base de datos del sistema. Esto incluye la administración de los cursores, variables de tabla, y funciones definidas por el usuario de con valores de tabla que incluyen de forma transparente los UDT y que el uso de **tempdb**. Sin embargo, si crea explícitamente una tabla temporal en **tempdb** que define una columna UDT, a continuación, el UDT debe estar registrado en **tempdb** igual que con una base de datos de usuario.  
   
 ## <a name="see-also"></a>Vea también  
- [Tipos definidos por el usuario CLR](../../relational-databases/clr-integration-database-objects-user-defined-types/clr-user-defined-types.md)  
+ [Tipos definidos por el usuario de CLR](../../relational-databases/clr-integration-database-objects-user-defined-types/clr-user-defined-types.md)  
   
   

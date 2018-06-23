@@ -1,0 +1,191 @@
+---
+title: Configuración de errores de cubos, particiones y procesamiento de dimensiones (SSAS - Multidimensional) | Documentos de Microsoft
+ms.custom: ''
+ms.date: 06/13/2017
+ms.prod: sql-server-2014
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- analysis-services
+ms.tgt_pltfrm: ''
+ms.topic: article
+f1_keywords:
+- sql12.asvs.sqlserverstudio.cubeproperties.errorconfiguration.f1
+- sql12.asvs.sqlserverstudio.dimensionproperties.errorconfiguration.f1
+- sql12.asvs.sqlserverstudio.partitionproperties.errorconfiguration.f1
+ms.assetid: 3f442645-790d-4dc8-b60a-709c98022aae
+caps.latest.revision: 18
+author: Minewiskan
+ms.author: owend
+manager: mblythe
+ms.openlocfilehash: 79c0d187bf2da7d44c257cd9d6087b27086f4779
+ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+ms.translationtype: MT
+ms.contentlocale: es-ES
+ms.lasthandoff: 06/19/2018
+ms.locfileid: "36108768"
+---
+# <a name="error-configuration-for-cube-partition-and-dimension-processing-ssas---multidimensional"></a>Configuración de errores para el procesamiento de cubos, particiones y dimensiones (SSAS - multidimensional)
+  Las propiedades de configuración de errores de objetos de cubo, partición o dimensión determinan cómo responde el servidor cuando se producen errores de integridad de datos durante el procesamiento. Claves duplicadas, claves que faltan y valores NULL en una columna de clave suelen desencadenar esos errores, y mientras el registro que produce el error no se agregue a la base de datos, puede establecer las propiedades que determinan qué ocurre después. De forma predeterminada, el procesamiento se detiene. Sin embargo, durante el desarrollo de un cubo, puede ser conveniente que el procesamiento continúe cuando se produzcan errores para que pueda probar los comportamientos del cubo con datos importados, aunque sean incompletos.  
+  
+ En este tema se incluyen las secciones siguientes:  
+  
+-   [Orden de ejecución](#bkmk_exec)  
+  
+-   [Comportamientos predeterminados](#bkmk_default)  
+  
+-   [Propiedades de configuración de errores](#bkmk_props)  
+  
+-   [Dónde establecer propiedades de configuración de errores](#bkmk_tools)  
+  
+-   [Claves que faltan (KeyNotFound)](#bkmk_missing)  
+  
+-   [Claves externas NULL en una tabla de hechos (KeyNotFound)](#bkmk_nullfact)  
+  
+-   [Claves NULL en una dimensión](#bkmk_nulldim)  
+  
+-   [Claves duplicadas que producen relaciones incoherentes (KeyDuplicate)](#bkmk_dupe)  
+  
+-   [Cambiar el límite de errores o la acción del límite de errores](#bkmk_limit)  
+  
+-   [Establecer la ruta de acceso del registro de errores](#bkmk_log)  
+  
+-   [Paso siguiente](#bkmk_next)  
+  
+##  <a name="bkmk_exec"></a> Orden de ejecución  
+ El servidor ejecuta siempre `NullProcessing` reglas antes de `ErrorConfiguration` reglas para cada registro. Es importante entenderlo porque las propiedades de procesamiento de valores NULL que convierten valores NULL en ceros pueden insertar posteriormente errores de clave duplicada cuando dos o más registros de error tienen cero en una columna de clave.  
+  
+##  <a name="bkmk_default"></a> Comportamientos predeterminados  
+ De forma predeterminada, el procesamiento se detiene en el primer error que afecta a una columna de clave. Este comportamiento se controla mediante un límite de errores que especifica cero como el número de errores permitidos y la directiva Detener el procesamiento que indica al servidor que detenga el procesamiento cuando se alcanza el límite de errores.  
+  
+ Los registros que desencadenan un error, debido a valores NULL, que faltan o están duplicados, se convierten al miembro desconocido o se descartan. [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] no importará datos que infrinjan las restricciones de integridad de datos.  
+  
+-   Conversión al miembro desconocido se realiza de forma predeterminada, debido a la `ConvertToUnknown` para `KeyErrorAction`. Los registros asignados al miembro desconocido se ponen en cuarentena en la base de datos como prueba de un problema que puede ser conveniente investigar después de que finalice el procesamiento.  
+  
+     Los miembros desconocidos se excluyen de las cargas de trabajo de la consulta, pero serán visibles en algunas aplicaciones cliente si el `UnknownMember` está establecido en **Visible**.  
+  
+     Si desea hacer un seguimiento de cuántos valores NULL se convirtieron al miembro desconocido, puede modificar la propiedad `NullKeyConvertedToUnknown` para notificar estos errores en el registro o en la ventana Procesamiento.  
+  
+-   Descartar se produce cuando se establece manualmente la `KeyErrorAction` propiedad `DiscardRecord`.  
+  
+ Con las propiedades de configuración de errores, puede determinar cómo responde el servidor cuando se produce un error. Entre las opciones se incluyen detener el procesamiento inmediatamente, continuar con el procesamiento pero detener el registro o continuar con el procesamiento y el registro de errores. Los valores predeterminados varían en función de la gravedad del error.  
+  
+ El número de errores hace un seguimiento de cuántos errores se producen. Cuando se establece un límite superior, la respuesta del servidor cambia cuando se alcanza ese límite. De forma predeterminada, el servidor detiene el procesamiento cuando se llega al límite. El límite predeterminado es 0, lo que hace que el procesamiento se detenga en el primer error que se cuenta.  
+  
+ Los errores de mucho impacto, como una clave que falta o un valor NULL en un campo de clave, se deben resolver rápidamente. De forma predeterminada, estos errores cumplen `ReportAndContinue` comportamientos del servidor, donde el servidor detecta el error, lo agrega al recuento de errores y, a continuación, continúa el procesamiento (excepto el límite de errores es cero, por lo que detiene el procesamiento inmediatamente).  
+  
+ Hay otros errores que se generan pero no se cuentan ni se registran de forma predeterminada (es el valor `IgnoreError`) porque el error no plantea necesariamente un problema de integridad de datos.  
+  
+ Los recuentos de errores se ven afectados por las opciones de procesamiento de valores NULL. Para los atributos de dimensión, las opciones de procesamiento de valores NULL determinan cómo responde el servidor cuando se encuentran valores NULL. De forma predeterminada, los valores NULL de una columna numérica se convierten en ceros, mientras que los valores NULL de una columna de cadenas se procesan como cadenas en blanco. Puede invalidar las propiedades `NullProcessing` para detectar los valores NULL antes de que se conviertan en errores `KeyNotFound` o `KeyDuplicate`. Para obtener información detallada, vea [Claves NULL en una dimensión](#bkmk_nulldim) .  
+  
+ Los errores se registran en el cuadro de diálogo Procesar, pero no se guardan. Puede especificar un nombre de archivo de registro de errores de clave para recopilar los errores en un archivo de texto.  
+  
+##  <a name="bkmk_props"></a> Propiedades de configuración de errores  
+ Hay nueve propiedades de configuración de errores. Cinco de ellas se emplean para determinar la respuesta del servidor cuando se produce un error específico. Las otras cuatro quedan fuera del ámbito de las cargas de trabajo de configuración de errores, como el número de errores que se van a permitir, qué hacer cuando se alcance ese límite y si se van a recopilar los errores en un archivo de registro.  
+  
+ **Respuesta del servidor a errores concretos**  
+  
+|Property|Valor predeterminado|Otros valores|  
+|--------------|-------------|------------------|  
+|`CalculationError`<br /><br /> Se produce al inicializar la configuración de errores.|`IgnoreError` no registra ni cuenta el error; el procesamiento continúa siempre que sea el recuento de errores en el límite máximo.|`ReportAndContinue` registra y cuenta el error.<br /><br /> `ReportAndStop` informa del error y detiene el procesamiento inmediatamente, sin tener en cuenta el límite de errores.|  
+|`KeyNotFound`<br /><br /> Se produce cuando una clave externa de una tabla de hechos no tiene una clave principal coincidente en una tabla de dimensiones relacionada (por ejemplo, una tabla de hechos Ventas tiene un registro con un identificador de producto que no existe en la tabla de dimensión Producto). Este error puede producirse durante el procesamiento de particiones o durante el procesamiento de dimensiones de copo de nieve.|`ReportAndContinue` registra y cuenta el error.|`ReportAndStop` informa del error y detiene el procesamiento inmediatamente, sin tener en cuenta el límite de errores.<br /><br /> `IgnoreError` no registra ni cuenta el error; el procesamiento continúa siempre que sea el recuento de errores en el límite máximo. Los registros que desencadenan este error se convierten al miembro desconocido de forma predeterminada, pero puede cambiar la propiedad `KeyErrorAction` para que se descarten en su lugar.|  
+|`KeyDuplicate`<br /><br /> Se produce cuando se encuentran claves de atributo duplicadas en una dimensión. En la mayoría de los casos, es aceptable tener claves de atributos duplicadas, pero este error le informa de los duplicados para que pueda comprobar posibles errores de diseño de la dimensión que puedan provocar relaciones incoherentes entre atributos.|`IgnoreError` no registra ni cuenta el error; el procesamiento continúa siempre que sea el recuento de errores en el límite máximo.|`ReportAndContinue` registra y cuenta el error.<br /><br /> `ReportAndStop` informa del error y detiene el procesamiento inmediatamente, sin tener en cuenta el límite de errores.|  
+|`NullKeyNotAllowed`<br /><br /> Se produce cuando `NullProcessing`  =  `Error` se establece en un atributo de dimensión o cuando existen valores null en una columna de clave de atributo usada para identificar un miembro.|`ReportAndContinue` registra y cuenta el error.|`ReportAndStop` informa del error y detiene el procesamiento inmediatamente, sin tener en cuenta el límite de errores.<br /><br /> `IgnoreError` no registra ni cuenta el error; el procesamiento continúa siempre que sea el recuento de errores en el límite máximo. Registros que desencadenan este error se convierten al miembro desconocido de forma predeterminada, pero puede establecer el `KeyErrorAction` propiedad para que se descarten en su lugar.|  
+|`NullKeyConvertedToUnknown`<br /><br /> Se produce cuando los valores NULL se convierten posteriormente al miembro desconocido. Establecer `NullProcessing`  =  `ConvertToUnknown` en una dimensión de atributo desencadenará este error.|`IgnoreError` no registra ni cuenta el error; el procesamiento continúa siempre que sea el recuento de errores en el límite máximo.|Si considera que este error es informativo, mantenga el valor predeterminado. De lo contrario, puede elegir `ReportAndContinue` para notificar el error a la ventana Procesamiento y contar el error de cara al límite de errores.<br /><br /> `ReportAndStop` informa del error y detiene el procesamiento inmediatamente, sin tener en cuenta el límite de errores.|  
+  
+ **Propiedades generales**  
+  
+|**Propiedad**|**Valores**|  
+|------------------|----------------|  
+|`KeyErrorAction`|Ésta es la acción realizada por el servidor cuando una `KeyNotFound` se produce el error. Las respuestas válidas a este error incluyen `ConvertToUnknown` o `DiscardRecord`.|  
+|`KeyErrorLogFile`|Es un nombre de archivo definido por el usuario que debe tener una extensión de archivo .log, situado en una carpeta para la que la cuenta de servicio tiene permisos de lectura y escritura. Este archivo de registro solo contendrá errores generados durante el procesamiento. Use la Caja negra si necesita información más detallada.|  
+|`KeyErrorLimit`|Es el número máximo de errores de integridad de datos que el servidor permitirá antes de que se produzca un error de procesamiento. Un valor de -1 indica que no hay ningún límite. El valor predeterminado es 0, lo que significa que el procesamiento se detiene después de producirse el primer error. También puede establecerlo en un número entero.|  
+|`KeyErrorLimitAction`|Es la acción que realiza el servidor cuando el número de errores de clave alcanza el límite superior. Con **Detener el procesamiento**, el procesamiento finaliza inmediatamente. Con **Detener el registro**, el procesamiento continúa pero ya no se notifican o se cuentan los errores.|  
+  
+##  <a name="bkmk_tools"></a> Dónde establecer propiedades de configuración de errores  
+ Use las páginas de propiedades de [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] una vez implementada la base de datos o del proyecto de modelo de [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)]. Las mismas propiedades se encuentran en ambas herramientas. También puede establecer propiedades de configuración de error en el archivo msmdrsrv.ini para cambiar la configuración predeterminada del servidor para la configuración de error y, en `Batch` y `Process` comandos si el procesamiento se ejecuta como una operación de script.  
+  
+ Puede establecer la configuración de errores en cualquier objeto que se pueda procesar como una operación independiente.  
+  
+#### <a name="sql-server-management-studio"></a>SQL Server Management Studio  
+  
+1.  En el Explorador de objetos, haga clic con el botón derecho en **Propiedades** en uno de estos objetos: dimensión, cubo o partición.  
+  
+2.  En Propiedades, haga clic en **Configuración de errores**.  
+  
+#### <a name="sql-server-data-tools"></a>Herramientas de datos de SQL Server  
+  
+1.  En el Explorador de soluciones, haga doble clic en una dimensión o en un cubo. `ErrorConfiguration` aparece en las propiedades en el panel inferior.  
+  
+2.  O bien, para una sola dimensión, haga clic en la dimensión en el Explorador de soluciones, elija `Process`y, a continuación, elija **cambiar la configuración de** en el cuadro de diálogo Procesar dimensión. Las opciones de configuración de errores aparecen en la pestaña Errores de clave de dimensión.  
+  
+##  <a name="bkmk_missing"></a> Claves que faltan (KeyNotFound)  
+ Los registros en los que falta un valor de clave no se pueden agregar a la base de datos, ni siquiera cuando se pasan por alto los errores o cuando el límite de errores es ilimitado.  
+  
+ El servidor genera el `KeyNotFound` error durante el procesamiento de particiones, cuando un registro de hecho de la tabla contiene un valor de clave externa, pero la clave externa no tiene ningún registro correspondiente en una tabla de dimensiones relacionadas. Este error también se produce al procesar tablas de dimensiones relacionadas o de copo de nieve, donde un registro de una dimensión especifica una clave externa que no existe en la dimensión relacionada.  
+  
+ Si se produce un error `KeyNotFound`, el registro incorrecto se asigna al miembro desconocido. Este comportamiento se controla a través de la **clave acción**en `ConvertToUnknown`, por lo que puede ver los registros asignados para investigarlos más adelante.  
+  
+##  <a name="bkmk_nullfact"></a> Claves externas NULL en una tabla de hechos (KeyNotFound)  
+ De forma predeterminada, un valor NULL en una columna de clave externa de una tabla de hechos se convierte en cero. Suponiendo que cero no sea un valor de clave externa válido, el error `KeyNotFound` se registrará y contará de cara al límite de errores, que es cero de forma predeterminada.  
+  
+ Para permitir que el procesamiento continúe, puede administrar el valor NULL antes de que se convierta y se compruebe la existencia de errores. Para ello, establezca `NullProcessing` a `Error`.  
+  
+#### <a name="set-nullprocessing-property-on-a-measure"></a>Establecer la propiedad NullProcessing en una medida  
+  
+1.  En SQL Server Data Tools, en el Explorador de soluciones, haga doble clic en el cubo para abrirlo en el Diseñador de cubos.  
+  
+2.  Haga clic con el botón derecho en una medida del panel Medidas y elija **Propiedades**.  
+  
+3.  En Propiedades, expanda **origen** ver `NullProcessing` propiedad. Está establecida en **Automático** de forma predeterminada, que para los elementos OLAP, convierte los valores NULL en ceros para los campos que contienen datos numéricos.  
+  
+4.  Cambie el valor a `Error` para excluir los registros que contienen un valor null, impidiendo la conversión de null a un número (cero). Esta modificación permite evitar errores de clave duplicada relacionados con varios registros que tienen cero en la columna de clave y también evita `KeyNotFound` errores cuando una clave externa con valor cero no tiene ninguna clave principal equivalente en una tabla de dimensiones relacionadas.  
+  
+##  <a name="bkmk_nulldim"></a> Claves NULL en una dimensión  
+ Para continuar con el procesamiento cuando se encuentran valores null en claves externas en una dimensión de copo de nieve, controle los valores null primero estableciendo `NullProcessing` en el `KeyColumn` del atributo de dimensión. Esto descarta o convierte el registro, antes de que pueda producirse el error `KeyNotFound`.  
+  
+ Tiene dos opciones para administrar los valores NULL en un atributo de dimensión:  
+  
+-   Establecer `NullProcessing` = `UnknownMember` para asignar los registros con valores null al miembro desconocido. Esto genera el error `NullKeyConvertedToUnknown`, que se pasa por alto de forma predeterminada.  
+  
+-   Establecer `NullProcessing` = `Error` para excluir los registros con valores null. Esto produce el `NullKeyNotAllowed` error, que se registra y recuentos para el límite de errores de clave. Puede establecer la propiedad de configuración de error en **clave Null no permitida** a `IgnoreError` para permitir que continúe el procesamiento.  
+  
+ Los valores NULL pueden ser un problema en los campos que no son de clave, en los que las consultas MDX devuelven resultados diferentes en función de si NULL se interpreta como cero o como un valor vacío. Por esta razón, [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] proporciona opciones de procesamiento de valores NULL que le permiten predefinir el comportamiento de conversión que desea. Vea [definir el miembro desconocido y Null Processing Properties](../lesson-4-7-defining-the-unknown-member-and-null-processing-properties.md) y <xref:Microsoft.AnalysisServices.NullProcessing> para obtener más información.  
+  
+#### <a name="set-nullprocessing-property-on-a-dimension-attribute"></a>Establecer la propiedad NullProcessing en un atributo de dimensión  
+  
+1.  En SQL Server Data Tools, en el Explorador de soluciones, haga doble clic en la dimensión para abrirla en el Diseñador de dimensiones.  
+  
+2.  Haga clic con el botón derecho en un atributo en el panel Atributos y elija **Propiedades**.  
+  
+3.  En Propiedades, expanda **KeyColumns** ver `NullProcessing` propiedad. Está establecida en **Automático** de forma predeterminada, lo que convierte los valores NULL en ceros para los campos que contienen datos numéricos. Cambie el valor a `Error` o `UnknownMember`.  
+  
+     Esta modificación quita las condiciones subyacentes que desencadenan `KeyNotFound` descartando o convirtiendo el registro antes de que se compruebe si hay errores.  
+  
+     En función de la configuración de errores, cualquiera de estas acciones puede producir un error que se notifica y se cuenta. Tendrá que ajustar las propiedades adicionales, como la configuración de `KeyNotFound` a `ReportAndContinue` o `KeyErrorLimit` en un valor distinto de cero, para permitir que el procesamiento continúe cuando se notifica estos errores y se cuenta.  
+  
+##  <a name="bkmk_dupe"></a> Claves duplicadas que producen relaciones incoherentes (KeyDuplicate)  
+ De forma predeterminada, la presencia de una clave duplicada no detiene el procesamiento, pero el error se omite y el registro duplicado se excluye de la base de datos.  
+  
+ Para cambiar este comportamiento, establezca `KeyDuplicate` a `ReportAndContinue` o `ReportAndStop` para notificar el error. Puede examinar después el error para determinar si hay posibles errores en el diseño de la dimensión.  
+  
+##  <a name="bkmk_limit"></a> Cambiar el límite de errores o la acción del límite de errores  
+ Puede aumentar el límite de errores para permitir más errores durante el procesamiento. No hay ninguna instrucción en cuanto a cómo elevar el límite de errores; el valor adecuado variará según el escenario. Límites de errores se especifican como `KeyErrorLimit` en `ErrorConfiguration` propiedades en [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)], o como **número de errores** en la pestaña Configuración de errores para las propiedades de dimensiones, cubos o grupos de medida en [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)].  
+  
+ Una vez alcanzado el límite de errores, puede especificar que el procesamiento se detenga o que el registro se detenga. Por ejemplo, imagine que establece la acción en `StopLogging` en un límite de errores de 100. En el error número 101, el procesamiento continúa pero ya no se registran o se cuentan los errores. Las acciones de límite de error se especifican como `KeyErrorLimitAction` en `ErrorConfiguration` propiedades en [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)], o como **acción ante el error** en la pestaña Configuración de errores para las propiedades de dimensiones, cubos o grupos de medida en [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] .  
+  
+##  <a name="bkmk_log"></a> Establecer la ruta de acceso del registro de errores  
+ Puede especificar un archivo para almacenar los mensajes de error relacionados con la clave que se notifican durante el procesamiento. De forma predeterminada, los errores son visibles durante el procesamiento interactivo en la ventana Procesar y se descartan cuando se cierra la ventana o la sesión. El registro solo contendrá información de error relacionada con las claves, igual que los errores que se notifican en los cuadros de diálogo de procesamiento.  
+  
+ Los errores se registran en un archivo de texto que tener la extensión de archivo .log. El archivo estará vacío salvo que se produzcan errores. De forma predeterminada, el archivo se crea en la carpeta DATA. Puede especificar otra carpeta siempre y cuando la cuenta de servicio de Analysis Services pueda escribir en esa ubicación.  
+  
+##  <a name="bkmk_next"></a> Paso siguiente  
+ Decida si los errores detendrán el procesamiento o se omitirán. Recuerde que solo se omite el error. El registro que produjo el error no se pasa por alto; se descarta o se convierte al miembro desconocido. Los registros que infringen las reglas de integridad de datos nunca se agregan a la base de datos. De forma predeterminada, el procesamiento se detiene cuando se produce el primer error, pero puede cambiar este comportamiento si aumenta el límite de errores. En el desarrollo de un cubo, puede ser útil relajar las reglas de configuración de errores, permitiendo que el procesamiento continúe, de modo que haya datos para probar.  
+  
+ Decida si desea cambiar los comportamientos predeterminados de procesamiento de valores NULL. De forma predeterminada, los valores NULL de una columna de cadenas se procesan como valores vacíos, mientras que los valores NULL de una columna numérica se procesan como ceros. Vea [Defining the Unknown Member and Null Processing Properties](../lesson-4-7-defining-the-unknown-member-and-null-processing-properties.md) para obtener instrucciones sobre cómo establecer el procesamiento de valores NULL en un atributo.  
+  
+## <a name="see-also"></a>Vea también  
+ [Propiedades de registro](../server-properties/log-properties.md)   
+ [Definir el miembro desconocido y propiedades de procesamiento de valores Null](../lesson-4-7-defining-the-unknown-member-and-null-processing-properties.md)  
+  
+  

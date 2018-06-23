@@ -2,7 +2,7 @@
 title: Notas de la versión de SQL Operations Studio (versión preliminar) | Documentos de Microsoft
 description: Notas de la versión de SQL Operations Studio (versión preliminar)
 ms.custom: tools|sos
-ms.date: 05/08/2018
+ms.date: 06/20/2018
 ms.prod: sql
 ms.reviewer: alayu; sstein
 ms.suite: sql
@@ -13,16 +13,43 @@ ms.topic: conceptual
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 3f461b78c3d76f7e6b848b83d8a2333dffe5de3c
-ms.sourcegitcommit: a9da0abd3e17fbcd6339980d7331d0418cdada53
+ms.openlocfilehash: 29ae09022c18e5c96ffe4db25f59e6bfd619f432
+ms.sourcegitcommit: d3432a37b23b61c37092daf7519b30fc42fc0538
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/24/2018
-ms.locfileid: "34473829"
+ms.lasthandoff: 06/20/2018
+ms.locfileid: "36271016"
 ---
 # <a name="sql-operations-studio-preview-release-notes"></a>Notas de la versión de SQL Operations Studio (versión preliminar)
 
-**[Descargue la versión preliminar pública de mayo](download.md)**
+**[Descargue la versión preliminar pública de junio](download.md)**
+
+
+## <a name="june-2018-june-public-preview"></a>Junio de 2018 (versión preliminar pública de junio)
+
+fecha de lanzamiento: 20 de junio de 2018  
+versión: 0.30.6
+
+El *junio Public Preview* contiene destacan los siguientes aspectos:  
+
+- **SQL Server Profiler para las operaciones de SQL Studio *vista previa***  versión inicial de extensión.
+- El nuevo **almacenamiento de datos SQL** extensión incluye widgets de panel personalizable enriquecido así como la exposición visión para el almacenamiento de datos. Esto desbloquea escenarios clave alrededor de administrar y optimizar el almacenamiento de datos para asegurarse de que está optimizado para un rendimiento coherente.
+- **Editar datos "Filtrado y ordenación"** admite.
+- **Agente SQL Server para las operaciones de SQL Studio *vista previa***  mejoras de extensión para los trabajos y el historial de trabajos vistas.
+- Mejorado **Asistente & el marco de trabajo de cuadro de diálogo IU generador** API de extensibilidad.
+- Actualizar la integración de código de origen de VS código plataforma [marzo de 2018 (1.22)](https://code.visualstudio.com/updates/v1_22) y [abril de 2018 (1,23)](https://code.visualstudio.com/updates/v1_23) libera.
+- Solucionar problemas de GitHub:
+  - Solicitud de característica ([emitir 1204](https://github.com/Microsoft/sqlopsstudio/issues/1204)): por favor, que los resultados de ancho de columna de ajuste automático de cuadrícula a los datos o recordar cambios manuales si se vuelve a ejecutar la misma consulta.
+  - Corregir [emitir 1398](https://github.com/Microsoft/sqlopsstudio/issues/1398): mostrar debe agregar el mensaje y botón Agregar cuenta cuentas cuando cuenta vinculada está vacío.
+  - Corregir [emitir 1399](https://github.com/Microsoft/sqlopsstudio/issues/1399): ficha cuenta vinculada se interrumpe cuando se contrae la vista.
+  - Corregir [emitir 1374](https://github.com/Microsoft/sqlopsstudio/issues/1374): servicio de herramientas de SQL se bloquea al abrir el archivo .sql desde el disco.
+  - Corregir [emitir 1372](https://github.com/Microsoft/sqlopsstudio/issues/1372): palabra clave de SQL que faltan "BETWEEN".
+  - Corregir [emitir 1395](https://github.com/Microsoft/sqlopsstudio/issues/1395): palabra clave 'MATCH' bloquea el servicio de herramientas de SQL.
+  - Corregir [emitir 1496](https://github.com/Microsoft/sqlopsstudio/issues/1496): opción de menú contextual de "Nuevo generador de perfiles" en el Explorador de objetos no hace nada.
+  - Corregir [emitir 1495](https://github.com/Microsoft/sqlopsstudio/issues/1495): plan de consulta de "Explicación" editor de consultas se interrumpe.
+
+
+Para obtener más información, consulte el [registro de cambios](https://github.com/Microsoft/sqlopsstudio/blob/master/CHANGELOG.md), y [versiones](https://github.com/Microsoft/sqlopsstudio/releases).
 
 
 ## <a name="may-2018-may-public-preview"></a>De 2018 de mayo (mayo de vista previa pública)
@@ -47,8 +74,6 @@ El *puede Public Preview* se centra en la estabilización y correcciones de erro
    - Corregir [emitir 1215](https://github.com/Microsoft/sqlopsstudio/issues/1215): extensión del Agente SQL y la barra de estado
    - Corregir [emitir 1316](https://github.com/Microsoft/sqlopsstudio/issues/1316): cambiar el tamaño no de agente SQL después de cambiar el tamaño de windows
 
-
-Para obtener más información, consulte el [registro de cambios](https://github.com/Microsoft/sqlopsstudio/blob/master/CHANGELOG.md), y [versiones](https://github.com/Microsoft/sqlopsstudio/releases).
 
 
 

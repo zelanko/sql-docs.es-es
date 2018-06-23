@@ -4,7 +4,7 @@ description: Este artículo describe cómo usar la herramienta mssql-conf para c
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.date: 02/20/2018
+ms.date: 06/22/2018
 ms.topic: article
 ms.prod: sql
 ms.component: ''
@@ -12,12 +12,12 @@ ms.suite: sql
 ms.custom: sql-linux
 ms.technology: linux
 ms.assetid: 06798dff-65c7-43e0-9ab3-ffb23374b322
-ms.openlocfilehash: 6369c3144a9ce641765358621027729ce235f69d
-ms.sourcegitcommit: ee661730fb695774b9c483c3dd0a6c314e17ddf8
+ms.openlocfilehash: 9506096746c0f93b147f8040bbd7066e99d69bad
+ms.sourcegitcommit: 23e71a8afba194e0893f31532db0aaa29288acb2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/19/2018
-ms.locfileid: "34324056"
+ms.lasthandoff: 06/23/2018
+ms.locfileid: "36329490"
 ---
 # <a name="configure-sql-server-on-linux-with-the-mssql-conf-tool"></a>Configurar SQL Server en Linux con la herramienta mssql-conf
 
@@ -98,7 +98,10 @@ Para obtener una lista de intercalaciones admitidas, ejecute el [sys.fn_helpcoll
 
 ## <a id="customerfeedback"></a> Configurar los comentarios de clientes
 
-El **telemetry.customerfeedback** cambios en la configuración si SQL Server envía comentarios a Microsoft o no. De forma predeterminada, este valor se establece en **true**. Para cambiar el valor, ejecute los siguientes comandos:
+El **telemetry.customerfeedback** cambios en la configuración si SQL Server envía comentarios a Microsoft o no. De forma predeterminada, este valor se establece en **true** para todas las ediciones. Para cambiar el valor, ejecute los siguientes comandos:
+
+> [!IMPORTANT]
+> Puede no desactivar los comentarios del cliente de forma gratuita ediciones de SQL Server, Express y Developer.
 
 1. Ejecute el script mssql-conf como raíz con el **establecer** comando para **telemetry.customerfeedback**. En el ejemplo siguiente se desactiva los comentarios de clientes mediante la especificación de **false**.
 
@@ -112,7 +115,7 @@ El **telemetry.customerfeedback** cambios en la configuración si SQL Server env
    sudo systemctl restart mssql-server
    ```
 
-Para obtener más información, consulte [comentarios de los clientes de SQL Server en Linux](sql-server-linux-customer-feedback.md).
+Para obtener más información, consulte [comentarios de los clientes de SQL Server en Linux](sql-server-linux-customer-feedback.md) y [declaración de privacidad de SQL Server](http://go.microsoft.com/fwlink/?LinkID=868444).
 
 ## <a id="datadir"></a> Cambiar la ubicación del directorio de datos o de registro de forma predeterminada
 
@@ -353,7 +356,7 @@ La primera captura fase se controla mediante la **coredump.coredumptype** config
 
     En la tabla siguiente se enumera los posibles **coredump.coredumptype** valores.
 
-    | Tipo | Description |
+    | Tipo | Descripción |
     |-----|-----|
     | **Mini** | Mini es el tipo de archivo de volcado de memoria más pequeño. Usa la información del sistema Linux para determinar los subprocesos y módulos en el proceso. El volcado de memoria contiene únicamente las pilas de subprocesos del entorno de host y los módulos. No contiene las referencias de memoria indirecta o variables globales. |
     | **miniplus** | MiniPlus es similar a mini, pero incluye memoria adicional. Entienda el funcionamiento interno de SQLPAL y el entorno de host, agregar las siguientes regiones de memoria para el volcado de memoria:</br></br> -Varias variables globales</br> -Toda la memoria por encima de 64TB</br> -Denominado se encontraron regiones en **$ / proc / pid/asignaciones**</br> -Memoria indirecta de subprocesos y las pilas</br> : Información del subproceso</br> -Asociado del Teb y del Peb</br> : Información del módulo</br> -Árbol VMM y VAD |
@@ -470,7 +473,7 @@ El **network.tcpport** cambios en la configuración del puerto TCP donde SQL Ser
 
 Las siguientes opciones configura TLS para una instancia de SQL Server que se ejecutan en Linux.
 
-|Opción |Description |
+|Opción |Descripción |
 |--- |--- |
 |**Network.forceencryption** |Si es 1, a continuación, [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] obliga a todas las conexiones que se cifren. De forma predeterminada, esta opción es 0. |
 |**network.tlscert** |Archivo de la ruta de acceso absoluta para el certificado que [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] utiliza para TLS. Ejemplo: `/etc/ssl/certs/mssql.pem` el archivo de certificado debe ser accesible para la cuenta de mssql. Microsoft recomienda restringir el acceso al archivo mediante `chown mssql:mssql <file>; chmod 400 <file>`. |

@@ -1,0 +1,108 @@
+---
+title: Editar cuadro de diálogo de propiedades de tabla (SSAS) | Documentos de Microsoft
+ms.custom: ''
+ms.date: 06/13/2017
+ms.prod: sql-server-2014
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- analysis-services
+ms.tgt_pltfrm: ''
+ms.topic: article
+f1_keywords:
+- sql12.asvs.bidtoolset.edittablepropdb.f1
+ms.assetid: 8d913e83-7246-44cc-8fc7-31729023c0d8
+caps.latest.revision: 12
+author: Minewiskan
+ms.author: owend
+manager: mblythe
+ms.openlocfilehash: 36cabf1186738420e3dbd35504a81ea0318b966b
+ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+ms.translationtype: MT
+ms.contentlocale: es-ES
+ms.lasthandoff: 06/19/2018
+ms.locfileid: "36196796"
+---
+# <a name="edit-table-properties-dialog-box-ssas"></a>Editar propiedades de tabla, cuadro de diálogo (SSAS)
+  El cuadro de diálogo **Editar propiedades de tabla** le permite ver y modificar las propiedades de las tablas importadas en el diseñador de modelos mediante el Asistente para la importación de tablas. Para obtener acceso a este cuadro de diálogo, en el diseñador de modelos, seleccione una tabla, haga clic en el menú **Tabla** y, a continuación, haga clic en **Propiedades de tabla**.  
+  
+## <a name="uielement-list"></a>Lista de UIElement  
+ Las opciones de este cuadro de diálogo varían dependiendo de si importó los datos originalmente seleccionando las tablas en una lista o usando una consulta SQL.  
+  
+## <a name="table-preview-mode"></a>Modo de vista previa de tabla  
+ **Nombre de la tabla**  
+ Muestra el nombre de la tabla de datos en el modelo.  
+  
+> [!NOTE]  
+>  No puede modificar el nombre aquí. Sin embargo, puede cambiar el nombre de la tabla haciendo clic con el botón secundario en la pestaña de la tabla en la parte inferior del diseñador de modelos.  
+  
+ **Nombre de conexión**  
+ Muestra el nombre de la conexión que se usa actualmente.  
+  
+ **Nombre de origen**  
+ Se usa para mostrar o cambiar la tabla de la que se obtienen los datos.  
+  
+ Si se cambia el origen a una tabla que tiene columnas distintas que la tabla actual, aparece un mensaje que advierte que las columnas son distintas. En ese caso, debe seleccionar las columnas que desea poner en la tabla actual y hacer clic en **Guardar**. Puede reemplazar toda la tabla activando la casilla de la izquierda de la tabla.  
+  
+> [!NOTE]  
+>  Al cambiar el origen de datos de una tabla, lo que se hace es reemplazar el contenido de la tabla actual con el contenido de la nueva tabla de origen.  
+  
+ **Nombres de columna de**  
+ |||  
+|-|-|  
+|**Source**|Seleccione esta opción para reemplazar los nombres de columna actuales por los nombres de columna de la tabla de origen seleccionada.|  
+|**Modelo**|Seleccione esta opción para usar los nombres de columna actual tal como aparecen en el modelo.|  
+  
+ **Actualizar vista previa**  
+ Haga clic en esta opción para ver las columnas de datos de la tabla de origen actualmente seleccionada.  
+  
+ **Cambiar a**  
+ |||  
+|-|-|  
+|**Vista previa de tabla**|Seleccione esta opción de la lista para obtener una vista previa de la tabla seleccionada y un número limitado de filas de datos.|  
+|**Editor de consultas**|Seleccione esta opción para ver la consulta en el origen de datos seleccionado. Esta opción no está disponible para todos los orígenes de datos.|  
+  
+ **Casilla de verificación en el encabezado de columna**  
+ Active la casilla para incluir la columna en la importación de datos. Desactive la casilla para quitar la columna de la importación de datos.  
+  
+ **Botón de flecha abajo en el encabezado de columna**  
+ Filtre los datos de la columna.  
+  
+ **Borrar filtros de fila**  
+ Haga clic en esta opción para quitar los filtros que se hayan aplicado.  
+  
+ **Aceptar**  
+ Haga clic en esta opción para aplicar todos los cambios, incluso el reemplazo de columnas.  
+  
+## <a name="query-design-mode"></a>Modo de diseño de consulta  
+ **Nombre de la tabla**  
+ Muestra el nombre de la tabla de datos en el modelo.  
+  
+> [!NOTE]  
+>  Aquí no se puede modificar el nombre. El nombre de la tabla se puede cambiar haciendo clic con el botón secundario en la pestaña de la tabla de la parte inferior del diseñador.  
+  
+ **Nombre de conexión**  
+ Muestra el nombre de la conexión que se usa actualmente.  
+  
+ **Cambiar a**  
+ |||  
+|-|-|  
+|**Vista previa de tabla**|Seleccione esta opción para obtener una vista previa de la tabla seleccionada y algunas filas de datos.|  
+|**Editor de consultas**|Seleccione esta opción para ver la consulta que se emitirá para el origen de datos seleccionado.|  
+  
+ **Instrucción SQL**  
+ Muestra la instrucción SQL que se emite al origen de datos actual para recuperar filas. De forma predeterminada, se recuperan todas las filas, pero se puede recuperar un subconjunto de filas diseñando un filtro o editando la instrucción SQL manualmente.  
+  
+ **Validar**  
+ Haga clic en esta opción para comprobar si la instrucción es sintácticamente correcta para el origen de datos y el proveedor seleccionados.  
+  
+ **Design**  
+ Haga clic en esta opción para abrir un diseñador de consultas visual y generar una instrucción de consulta. Para obtener información acerca de cómo utilizar el diseñador, presione F1 desde el diseñador.  
+  
+ **Aceptar**  
+ Haga clic en esta opción para aplicar todos los cambios, incluso el reemplazo de columnas.  
+  
+## <a name="see-also"></a>Vea también  
+ [Tablas y columnas &#40;SSAS Tabular&#41;](tabular-models/tables-and-columns-ssas-tabular.md)  
+  
+  

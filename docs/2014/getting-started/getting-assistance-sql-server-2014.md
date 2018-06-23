@@ -1,0 +1,49 @@
+---
+title: Obtener ayuda (SQL Server 2014) | Documentos de Microsoft
+ms.custom: ''
+ms.date: 05/24/2017
+ms.prod: sql-server-2014
+ms.reviewer: ''
+ms.suite: ''
+ms.tgt_pltfrm: ''
+ms.topic: article
+helpviewer_keywords:
+- finding Help topics [SQL Server]
+ms.assetid: 2d43a79f-8f4e-4c98-b921-16035129a15b
+caps.latest.revision: 19
+author: JennieHubbard
+ms.author: jhubbard
+manager: jhubbard
+ms.openlocfilehash: 5697ee9de8311c591bd71a87e8f3361a28b2de04
+ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+ms.translationtype: MT
+ms.contentlocale: es-ES
+ms.lasthandoff: 06/19/2018
+ms.locfileid: "36196717"
+---
+# <a name="getting-assistance-sql-server-2014"></a>Obtener ayuda (SQL Server 2014)
+  Hay tres fuentes principales de información de [!INCLUDE[msCoName](../includes/msconame-md.md)] acerca de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]:  
+  
+-   La documentación y los tutoriales instalados con [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)].  
+  
+-   Los sitios de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] en [!INCLUDE[msCoName](../includes/msconame-md.md)] Developer Network (MSDN) y TechNet.  
+  
+-   Información de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] en otros sitios web de [!INCLUDE[msCoName](../includes/msconame-md.md)].  
+  
+ Si no encuentra la información que está buscando en estas fuentes, puede publicar preguntas en los grupos de noticias y foros de la comunidad de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] o abrir un caso de soporte con el servicio de soporte técnico de [!INCLUDE[msCoName](../includes/msconame-md.md)].  
+  
+## <a name="in-this-section"></a>En esta sección  
+ [Obtener ayuda acerca de SQL Server](../../2014/getting-started/getting-sql-server-assistance.md)  
+ Contiene vínculos a las principales fuentes de información acerca de [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)]. El tema también contiene vínculos a sitios de soporte técnico.  
+  
+ [Accesibilidad para personas con discapacidades](../../2014/getting-started/accessibility-for-people-with-disabilities.md)  
+ Describe los productos, las características y los servicios que hacen a [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] más accesible para personas con discapacidades.  
+  
+ [Comentarios sobre SQL Server 2014](../../2014/getting-started/providing-feedback-for-sql-server-2014.md)  
+ Describe cómo puede transmitirnos sus sugerencias e informes de errores sobre las características e interfaz de usuario del producto, presentarnos sus comentarios acerca de la documentación y, si lo desea, enviarnos de manera automática sus informes de errores y datos de uso a [!INCLUDE[msCoName](../includes/msconame-md.md)] para su estudio.  
+  
+## <a name="see-also"></a>Vea también  
+ [Novedades en SQL Server 2014](../sql-server/what-s-new-in-sql-server-2016.md)   
+ [Instalación de SQL Server 2014](../database-engine/install-windows/installation-for-sql-server.md)  
+  
+  

@@ -4,10 +4,9 @@ ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
-ms.component: native-client-ole-db-rowsets
 ms.reviewer: ''
 ms.suite: sql
-ms.technology: ''
+ms.technology: connectivity
 ms.tgt_pltfrm: ''
 ms.topic: reference
 helpviewer_keywords:
@@ -21,11 +20,12 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
-ms.openlocfilehash: 279ea0c6232ebe1b81c67dedbde78d7614e1dbc1
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: fe11a4e7d9819a102023c68921b8ffc5cf2b64a2
+ms.sourcegitcommit: a78fa85609a82e905de9db8b75d2e83257831ad9
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/18/2018
+ms.locfileid: "35697546"
 ---
 # <a name="rowset-properties-and-behaviors"></a>Propiedades y comportamientos de conjuntos de filas
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -33,7 +33,7 @@ ms.lasthandoff: 05/03/2018
 
   Estos son los [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] propiedades de conjunto de filas del proveedor OLE DB de Native Client.  
   
-|Id. de propiedad|Description|  
+|Id. de propiedad|Descripción|  
 |-----------------|-----------------|  
 |DBPROP_ABORTPRESERVE|L/E lectura/escritura<br /><br /> Valor predeterminado: VARIANT_FALSE<br /><br /> Descripción: esta propiedad determina el comportamiento de un conjunto de filas tras una operación de anulación.<br /><br /> VARIANT_FALSE: La [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] proveedor OLE DB de Native Client invalida los conjuntos de filas después de una operación de anulación. Prácticamente se pierde la funcionalidad del objeto de conjunto de filas. Solo admite **IUnknown** las operaciones y la versión de identificadores de fila y de descriptor de acceso pendientes.<br /><br /> VARIANT_TRUE: El [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] proveedor OLE DB de Native Client mantiene un conjunto de filas válido.|  
 |DBPROP_ACCESSORDER|L/E lectura/escritura<br /><br /> Valor predeterminado: DBPROPVAL_AO_RANDOM<br /><br /> Descripción: orden de acceso; orden en que debe obtenerse acceso a las columnas en el conjunto de filas.<br /><br /> DBPROPVAL_AO_RANDOM: puede obtenerse acceso a las columnas en cualquier orden.<br /><br /> DBPROPVAL_AO_SEQUENTIALSTORAGEOBJECTS: solamente puede obtenerse acceso a las columnas enlazadas como objetos de almacenamiento en el orden secuencial determinado por el ordinal de columna.<br /><br /> DBPROPVAL_AO_SEQUENTIAL: debe obtenerse acceso a todas las columnas en el orden secuencial determinado por el ordinal de columna.|  
@@ -95,7 +95,7 @@ ms.lasthandoff: 05/03/2018
   
  El [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] proveedor Native Client OLE DB define el conjunto de propiedades específicas del proveedor DBPROPSET_SQLSERVERROWSET tal y como se muestra en esta tabla.  
   
-|Id. de propiedad|Description|  
+|Id. de propiedad|Descripción|  
 |-----------------|-----------------|  
 |SSPROP_COLUMN_ID|Columna: ColumnID<br /><br /> L/E: sólo lectura<br /><br /> Tipo: VT_U12 &#124; VT_ARRAY<br /><br /> Valor predeterminado: VT_EMPTY<br /><br /> Descripción: matriz de valores enteros que representan la posición ordinal (en base 1) de una columna de resultados de la cláusula COMPUTE en la instrucción SELECT de [!INCLUDE[tsql](../../includes/tsql-md.md)] actual. Se trata de la [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] equivalente en el proveedor OLE DB de Native Client del atributo ODBC SQL_CA_SS_COLUMN_ID.|  
 |SSPROP_DEFERPREPARE|Columna: no<br /><br /> L/E lectura/escritura<br /><br /> Tipo: VT_BOOL<br /><br /> Valor predeterminado: VARIANT_TRUE<br /><br /> Descripción: VARIANT_TRUE: en ejecución preparada, la preparación del comando se difiere hasta que **ICommand:: Execute** se llama o se realiza una operación de metapropiedad. Si la propiedad está establecida en<br /><br /> VARIANT_FALSE: La instrucción se prepara cuando **ICommandPrepare:: Prepare** se ejecuta.|  

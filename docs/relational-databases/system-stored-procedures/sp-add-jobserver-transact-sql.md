@@ -22,12 +22,12 @@ caps.latest.revision: 24
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: e89ba03a88db9dd5977ace92cc498726da6b3e45
-ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
+ms.openlocfilehash: 0ee7344ebe282a5cbf8baa61cfeb88175f6f235d
+ms.sourcegitcommit: 70882926439a63ab9d812809429c63040eb9a41b
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33237883"
+ms.lasthandoff: 06/19/2018
+ms.locfileid: "36262319"
 ---
 # <a name="spaddjobserver-transact-sql"></a>sp_add_jobserver (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -55,7 +55,7 @@ sp_add_jobserver [ @job_id = ] job_id | [ @job_name = ] 'job_name'
 >  Cualquier *job_id* o *job_name* debe especificarse, pero no pueden especificarse ambos.  
   
  [ **@server_name =** ] **'***server***'**  
- Nombre del servidor al que se va a destinar el trabajo. *servidor* es **nvarchar (30)**, su valor predeterminado es n '. *servidor*puede ser **(LOCAL)** para un servidor local o el nombre de un servidor de destino existente.  
+ Nombre del servidor al que se va a destinar el trabajo. *servidor* es **nvarchar (30)**, su valor predeterminado es n '. *servidor* puede ser **(LOCAL)** para un servidor local o el nombre de un servidor de destino existente.  
   
 ## <a name="return-code-values"></a>Valores de código de retorno  
  **0** (correcto) o **1** (error)  
@@ -63,12 +63,12 @@ sp_add_jobserver [ @job_id = ] job_id | [ @job_name = ] 'job_name'
 ## <a name="result-sets"></a>Conjuntos de resultados  
  None  
   
-## <a name="remarks"></a>Comentarios  
+## <a name="remarks"></a>Notas  
  **@automatic_post** existe en **sp_add_jobserver**, pero no aparece en argumentos. **@automatic_post** está reservado para uso interno.  
   
  [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] ofrece un método gráfico sencillo para administrar trabajos y es el método recomendado para crear y administrar la infraestructura de trabajo.  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>Permisos  
  De forma predeterminada, los miembros del rol fijo de servidor **sysadmin** pueden ejecutar este procedimiento almacenado. Al resto de usuarios se les debe conceder uno de los siguientes roles fijos de base de datos del Agente [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] en la base de datos **msdb** :  
   
 -   **SQLAgentUserRole**  

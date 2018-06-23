@@ -4,10 +4,9 @@ ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
-ms.component: native-client-ole-db-tables-indexes
 ms.reviewer: ''
 ms.suite: sql
-ms.technology: ''
+ms.technology: connectivity
 ms.tgt_pltfrm: ''
 ms.topic: reference
 helpviewer_keywords:
@@ -17,16 +16,16 @@ helpviewer_keywords:
 - indexes [OLE DB]
 - adding indexes
 ms.assetid: 6239d440-2818-4b98-bb79-732dced41952
-caps.latest.revision: 32
 author: MightyPen
 ms.author: genemi
 manager: craigg
 monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
-ms.openlocfilehash: 1ea7f6620e44f6ce0caba411f9f03e33bf6dfb51
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 5fddd0f4c14f21c0589590fc40fe5432d114b91b
+ms.sourcegitcommit: a78fa85609a82e905de9db8b75d2e83257831ad9
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/18/2018
+ms.locfileid: "35699906"
 ---
 # <a name="creating-sql-server-indexes"></a>Crear índices de SQL Server
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -48,7 +47,7 @@ ms.lasthandoff: 05/03/2018
   
  **CreateIndex** interpreta las propiedades del índice como sigue.  
   
-|Id. de propiedad|Description|  
+|Id. de propiedad|Descripción|  
 |-----------------|-----------------|  
 |DBPROP_INDEX_AUTOUPDATE|L/E lectura/escritura<br /><br /> Valor predeterminado: ninguno<br /><br /> Descripción: El [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] proveedor OLE DB de Native Client no admite esta propiedad. Intenta establecer la propiedad **CreateIndex** hacer que un valor devuelto de DB_S_ERRORSOCCURRED. El *dwStatus* miembro de la estructura de la propiedad indica DBPROPSTATUS_BADVALUE.|  
 |DBPROP_INDEX_CLUSTERED|L/E lectura/escritura<br /><br /> Valor predeterminado: VARIANT_FALSE<br /><br /> Descripción: controla la agrupación en clústeres de índices.<br /><br /> VARIANT_TRUE: El [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] proveedor OLE DB de Native Client intenta crear un índice agrupado en la [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] tabla. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] admite a lo sumo un índice clúster en cualquier tabla.<br /><br /> VARIANT_FALSE: La [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] proveedor OLE DB de Native Client intenta crear un índice no agrupado en el [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] tabla.|  
@@ -64,7 +63,7 @@ ms.lasthandoff: 05/03/2018
   
  En la propiedad específica del proveedor establezca DBPROPSET_SQLSERVERINDEX, el [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] proveedor OLE DB de Native Client define la siguiente propiedad de información de origen de datos.  
   
-|Id. de propiedad|Description|  
+|Id. de propiedad|Descripción|  
 |-----------------|-----------------|  
 |SSPROP_INDEX_XML|Tipo: VT_BOOL (L/E)<br /><br /> Valor predeterminado: VARIANT_FALSE<br /><br /> Descripción: cuando esta propiedad se especifica con un valor de VARIANT_TRUE con IIndexDefinition::CreateIndex, da como resultado la creación de un índice xml primario correspondiente a la columna que se está indizando. Si esta propiedad es VARIANT_TRUE, cIndexColumnDescs debe ser 1, de lo contrario es un error.|  
   

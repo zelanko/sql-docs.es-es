@@ -4,26 +4,24 @@ ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
-ms.component: native-client-odbc-table-valued-parameters
 ms.reviewer: ''
 ms.suite: sql
-ms.technology: ''
+ms.technology: connectivity
 ms.tgt_pltfrm: ''
 ms.topic: reference
 helpviewer_keywords:
 - table-valued parameters (ODBC), descriptor fields
 ms.assetid: 4e009eff-c156-4d63-abcf-082ddd304de2
-caps.latest.revision: 31
 author: MightyPen
 ms.author: genemi
 manager: craigg
 monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
-ms.openlocfilehash: 6205ed15e0771cc1900a458343defbbcb0e1384f
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: a63908b5a63ebf8501e0c0887d841c8e2619dff9
+ms.sourcegitcommit: a78fa85609a82e905de9db8b75d2e83257831ad9
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32946520"
+ms.lasthandoff: 06/18/2018
+ms.locfileid: "35698236"
 ---
 # <a name="table-valued-parameter-descriptor-fields"></a>Campos de descriptor de parámetros con valores de tabla
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -31,9 +29,9 @@ ms.locfileid: "32946520"
 
   La compatibilidad con los parámetros con valores de tabla incluye nuevos campos específicos de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] en descriptores de parámetros de aplicación ODBC (APD) y descriptores de parámetros de implementación (IPD).  
   
-## <a name="remarks"></a>Comentarios  
+## <a name="remarks"></a>Notas  
   
-|Nombre|Ubicación|Tipo|Description|  
+|Nombre|Ubicación|Tipo|Descripción|  
 |----------|--------------|----------|-----------------|  
 |SQL_CA_SS_TYPE_NAME|IPD|SQLTCHAR*|Nombre del tipo de servidor del parámetro con valores de tabla.<br /><br /> Cuando se especifica un nombre de tipo de parámetro con valores de tabla en una llamada a SQLBindParameter, siempre debe especificarse como un valor Unicode, incluso en aplicaciones generadas como aplicaciones ANSI. El valor utilizado para el parámetro *StrLen_or_IndPtr* debería ser SQL_NTS o la longitud de cadena del nombre multiplicada por sizeof (WCHAR).<br /><br /> Se genera cuando se especifica un nombre de tipo de parámetro con valores de tabla a través de SQLSetDescField, se puede especificar mediante el uso de un valor literal que se ajusta a la forma en que la aplicación. El administrador de controladores ODBC realizará cualquier conversión Unicode que sea necesaria.|  
 |SQL_CA_SS_TYPE_CATALOG_NAME (solo lectura)|IPD|SQLTCHAR*|Catálogo donde se define el tipo.|  
@@ -43,7 +41,7 @@ ms.locfileid: "32946520"
   
  Cuando el enfoque del parámetro se establece en un parámetro con valores de tabla, se aplican los siguientes campos de encabezado de descriptor y atributos de instrucción a los parámetros con valores de tabla:  
   
-|Nombre|Ubicación|Tipo|Description|  
+|Nombre|Ubicación|Tipo|Descripción|  
 |----------|--------------|----------|-----------------|  
 |SQL_ATTR_PARAMSET_SIZE<br /><br /> (Equivalente a SQL_DESC_ARRAY_SIZE en el APD.)|APD|SQLUINTEGER|Tamaño de matriz de las matrices de búfer de un parámetro con valores de tabla. Éste es el número máximo de filas que los búferes pueden incluir o el tamaño de los búferes en filas; el propio valor de parámetro con valores de tabla puede tener más o menos filas de las que pueden incluir los búferes. Valor predeterminado es 1.<br /><br /> Nota: Si SQL_SOPT_SS_PARAM_FOCUS se establece en su valor predeterminado de 0, SQL_ATTR_PARAMSET_SIZE hace referencia a la instrucción y especifica el número de conjuntos de parámetros. Si SQL_SOPT_SS_PARAM_FOCUS se establece en el ordinal de un parámetro con valores de tabla, hace referencia al parámetro con valores de tabla y especifica el número de filas por conjunto de parámetros del parámetro con valores de tabla.|  
 |SQL_ATTR_PARAM _BIND_TYPE|APD|SQLINTEGER|El valor predeterminado es SQL_PARAM_BIND_BY_COLUMN.<br /><br /> Para seleccionar el enlace de modo de fila, este campo se establece en la longitud de la estructura o en una instancia de un búfer que se enlazará a un conjunto de filas de parámetro con valores de tabla. Esta longitud debe incluir el espacio para todas las columnas enlazadas y cualquier relleno de la estructura o búfer. De esta forma se garantiza que, cuando la dirección de una columna enlazada se incrementa con la longitud especificada, el resultado señalará al principio de la misma columna en la fila siguiente. Cuando se usa el **sizeof** operador en ANSI C, se garantiza que este comportamiento.|  

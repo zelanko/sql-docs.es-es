@@ -1,0 +1,139 @@
+---
+title: Sintaxis de Transact-SQL compatible con IntelliSense | Microsoft Docs
+ms.custom: ''
+ms.date: 03/06/2017
+ms.prod: sql-server-2014
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- database-engine
+ms.tgt_pltfrm: ''
+ms.topic: article
+dev_langs:
+- TSQL
+helpviewer_keywords:
+- Transact-SQL IntelliSense
+- IntelliSense [SQL Server], Transact-SQL syntax
+ms.assetid: 194e8f4f-fd7e-4f32-a169-f23531128004
+caps.latest.revision: 28
+author: craigg-msft
+ms.author: craigg
+manager: jhubbard
+ms.openlocfilehash: 99baa45fd332621bd4abe1d5240c7a9c64423d12
+ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+ms.translationtype: MT
+ms.contentlocale: es-ES
+ms.lasthandoff: 06/19/2018
+ms.locfileid: "36109436"
+---
+# <a name="transact-sql-syntax-supported-by-intellisense"></a>Sintaxis de Transact-SQL compatible con IntelliSense
+  En este tema se describen las instrucciones y los elementos de sintaxis de [!INCLUDE[tsql](../../includes/tsql-md.md)] que IntelliSense admite en [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].  
+  
+## <a name="statements-supported-by-intellisense"></a>Instrucciones admitidas por IntelliSense  
+ En [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)], IntelliSense solamente admite las instrucciones [!INCLUDE[tsql](../../includes/tsql-md.md)] de uso más frecuente. Algunas condiciones generales del Editor de consultas de [!INCLUDE[ssDE](../../includes/ssde-md.md)] pueden impedir el funcionamiento de IntelliSense. Para obtener más información, vea [Solución de problemas IntelliSense &#40;SQL Server Management Studio&#41;](troubleshooting-intellisense.md).  
+  
+> [!NOTE]  
+>  IntelliSense no está disponible para objetos de base de datos cifrados, como funciones definidas por el usuario o procedimientos almacenados cifrados. La ayuda sobre parámetros y la información rápida no están disponibles para los parámetros de los procedimientos almacenados extendidos y los tipos definidos por el usuario de la integración con CLR.  
+  
+### <a name="select-statement"></a>Instrucción SELECT  
+ El Editor de consultas del [!INCLUDE[ssDE](../../includes/ssde-md.md)] proporciona compatibilidad con IntelliSense para los elementos de sintaxis siguientes de la instrucción SELECT:  
+  
+|||  
+|-|-|  
+|SELECT|WHERE|  
+|FROM|ORDER BY|  
+|HAVING|UNION|  
+|FOR|GROUP BY|  
+|ARRIBA|OPTION (sugerencia)|  
+  
+### <a name="additional-transact-sql-statements-that-are-supported"></a>Instrucciones Transact-SQL adicionales compatibles  
+ El Editor de consultas de [!INCLUDE[ssDE](../../includes/ssde-md.md)] también proporciona compatibilidad con IntelliSense para las instrucciones [!INCLUDE[tsql](../../includes/tsql-md.md)] que se muestran en la tabla siguiente.  
+  
+|Instrucción Transact-SQL|Sintaxis compatible|  
+|-----------------------------|----------------------|  
+|[INSERT](/sql/t-sql/statements/insert-transact-sql)|Toda la sintaxis, excepto la cláusula *execute_statement* .|  
+|[UPDATE](/sql/t-sql/queries/update-transact-sql)|Toda la sintaxis.|  
+|[DELETE](/sql/t-sql/statements/delete-transact-sql)|Toda la sintaxis.|  
+|[DECLARE @local_variable](/sql/t-sql/language-elements/declare-local-variable-transact-sql)|Toda la sintaxis.|  
+|[SET @local_variable](/sql/t-sql/language-elements/set-local-variable-transact-sql)|Toda la sintaxis.|  
+|[EXECUTE](/sql/t-sql/language-elements/execute-transact-sql)|Ejecución de procedimientos almacenados definidos por el usuario, procedimientos almacenados del sistema, funciones definidas por el usuario y funciones del sistema.|  
+|[CREATE TABLE](/sql/t-sql/statements/create-table-transact-sql)|Toda la sintaxis.|  
+|[CREATE VIEW](/sql/t-sql/statements/create-view-transact-sql)|Toda la sintaxis.|  
+|[CREATE PROCEDURE](/sql/t-sql/statements/create-procedure-transact-sql)|Toda la sintaxis, con las excepciones siguientes:<br /><br /> No hay compatibilidad con IntelliSense para la cláusula EXTERNAL NAME.<br /><br /> En la cláusula AS, IntelliSense solamente es compatible con las instrucciones y la sintaxis que se mencionan en este tema.|  
+|[ALTER PROCEDURE](/sql/t-sql/statements/alter-procedure-transact-sql)|Toda la sintaxis, con las excepciones siguientes:<br /><br /> No hay compatibilidad con IntelliSense para la cláusula EXTERNAL NAME.<br /><br /> En la cláusula AS, IntelliSense solamente es compatible con las instrucciones y la sintaxis que se mencionan en este tema.|  
+|[USE](/sql/t-sql/language-elements/use-transact-sql)|Toda la sintaxis.|  
+  
+## <a name="intellisense-in-supported-statements"></a>IntelliSense en las instrucciones compatibles  
+ La característica IntelliSense del Editor de consultas de [!INCLUDE[ssDE](../../includes/ssde-md.md)] es compatible con los elementos de sintaxis siguientes cuando se utilizan en una de las instrucciones [!INCLUDE[tsql](../../includes/tsql-md.md)] compatibles:  
+  
+-   Todos los tipos de combinación, incluso APPLY  
+  
+-   PIVOT y UNPIVOT  
+  
+-   Referencias a los objetos de base de datos siguientes:  
+  
+    -   Bases de datos y esquemas  
+  
+    -   Tablas, vistas, funciones con valores de tabla y expresiones de tabla  
+  
+    -   Columnas  
+  
+    -   Procedimientos y parámetros de procedimientos  
+  
+    -   Funciones escalares y expresiones escalares  
+  
+    -   Variables locales  
+  
+    -   Expresiones de tabla común (CTE)  
+  
+-   Objetos de base de datos a los que solo se hace referencia en instrucciones CREATE o ALTER del script o del proceso por lotes, pero que no existen en la base de datos porque el script o el proceso por lotes no se han ejecutado todavía. Estos objetos son los siguientes:  
+  
+    -   Tablas y procedimientos especificados en una instrucción CREATE TABLE o CREATE PROCEDURE del script o del proceso por lotes.  
+  
+    -   Cambios en las tablas y los procedimientos especificados en una instrucción ALTER TABLE o ALTER PROCEDURE del script o del proceso por lotes.  
+  
+    > [!NOTE]  
+    >  La característica IntelliSense no estará disponible para las columnas de una instrucción CREATE VIEW hasta que se haya ejecutado la instrucción CREATE VIEW.  
+  
+ La característica IntelliSense no se proporciona para los elementos enumerados anteriormente cuando se utilizan en otras instrucciones [!INCLUDE[tsql](../../includes/tsql-md.md)] . Por ejemplo, los nombres de columna que se utilizan en una instrucción SELECT son compatibles con IntelliSense, pero no los de columnas que se utilizan en la instrucción CREATE FUNCTION.  
+  
+## <a name="examples"></a>Ejemplos  
+ Dentro de un script o un proceso por lotes de [!INCLUDE[tsql](../../includes/tsql-md.md)] , la característica IntelliSense del Editor de consultas de [!INCLUDE[ssDE](../../includes/ssde-md.md)] solamente es compatible con las instrucciones y la sintaxis mencionadas en este tema. En los ejemplos de código de [!INCLUDE[tsql](../../includes/tsql-md.md)] siguientes se muestran las instrucciones y los elementos de sintaxis admitidos por IntelliSense. Por ejemplo, en el proceso por lotes siguiente, la característica IntelliSense está disponible para la instrucción `SELECT` cuando se codifica por sí misma, pero no cuando la instrucción `SELECT` está contenida en una instrucción `CREATE FUNCTION` .  
+  
+```  
+USE AdventureWorks2012;  
+GO  
+SELECT Name  
+FROM Production.Product  
+WHERE Name LIKE N'Road-250%' and Color = N'Red';  
+GO  
+CREATE FUNCTION Production.ufn_Red250 ()  
+RETURNS TABLE  
+AS  
+RETURN   
+(  
+    SELECT Name  
+    FROM AdventureWorks2012.Production.Product  
+    WHERE Name LIKE N'Road-250%'  
+      AND Color = N'Red'  
+);GO  
+```  
+  
+ Esta funcionalidad también se aplica a los conjuntos de instrucciones [!INCLUDE[tsql](../../includes/tsql-md.md)] de la cláusula AS de una instrucción CREATE PROCEDURE o ALTER PROCEDURE.  
+  
+ Dentro de un script o un proceso por lotes de [!INCLUDE[tsql](../../includes/tsql-md.md)] , la característica IntelliSense es compatible con los objetos que se han especificado en una instrucción CREATE o ALTER; sin embargo, estos objetos no existen en la base de datos porque no se han ejecutado las instrucciones. Por ejemplo, puede escribir el código siguiente en el Editor de consultas:  
+  
+```  
+USE MyTestDB;  
+GO  
+CREATE TABLE MyTable  
+    (PrimaryKeyCol   INT PRIMARY KEY,  
+    FirstNameCol      NVARCHAR(50),  
+   LastNameCol       NVARCHAR(50));  
+GO  
+SELECT   
+```  
+  
+ Después de escribir `SELECT`, IntelliSense enumera **PrimaryKeyCol**, **FirstNameCol**y **LastNameCol** como posibles elementos en la lista de selección, aunque no se haya ejecutado el script y `MyTable` no exista todavía en `MyTestDB`.  
+  
+  

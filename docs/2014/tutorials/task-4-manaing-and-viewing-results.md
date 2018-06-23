@@ -1,0 +1,98 @@
+---
+title: 'Tarea 4: Administrar y ver los resultados | Documentos de Microsoft'
+ms.custom: ''
+ms.date: 03/09/2017
+ms.prod: sql-server-2014
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- data-quality-services
+- integration-services
+- master-data-services
+ms.tgt_pltfrm: ''
+ms.topic: article
+ms.assetid: ecc3ba7e-fecf-478f-8825-6e4764b00e99
+caps.latest.revision: 6
+author: douglaslMS
+ms.author: douglasl
+manager: jhubbard
+ms.openlocfilehash: 0e045d9722d380af19147746944c842f97ac9843
+ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+ms.translationtype: MT
+ms.contentlocale: es-ES
+ms.lasthandoff: 06/19/2018
+ms.locfileid: "36203770"
+---
+# <a name="task-4-manaing-and-viewing-results"></a>Tarea 4: administrar y ver los resultados
+  En esta tarea, revisará los resultados de la limpieza asistida por PC y realizará la limpieza interactiva de los datos de proveedor. Vea [fase de limpieza interactiva](http://msdn.microsoft.com/library/hh213061.aspx#Interactive) para obtener más detalles.  
+  
+1.  Seleccione **correo electrónico de contacto** dominio en la lista de dominios.  
+  
+2.  Cambie a la **válido** en el panel derecho. Observe que en dos direcciones de correo electrónico faltaba el carácter 's' al final. Estos dos correos electrónicos que se han encontrado no es válida por la regla de dominio que requiere que todas las direcciones de correo electrónico terminen con **@adventure-works.com** (del '). DQS emplea la regla de dominio durante la limpieza para determinar si una dirección de correo electrónico es válida o no. Esta pestaña muestra los valores de dominio que se marcaron como no válidos en la base de conocimiento o que no cumplieron una regla de dominio. En este caso, estos valores no cumplieron en la regla de dominio (Validación de correo electrónico).  
+  
+3.  En el **corregir a** columna, escriba el correo electrónico adecuado de direcciones que finalizan con **@adventure-works.com** (del ').  
+  
+     ![Correcciones de regla de validación de correo electrónico](../../2014/tutorials/media/et-managingandviewingresults-01.jpg "correcciones de regla de validación de correo electrónico")  
+  
+4.  Haga clic en **aprobar** para ambos registros a aprobar ambos cambios. Cuando los aprueba, los registros pasan a la **corregido** ficha. En lugar de aprobar cada elemento por separado, puede aprobar todos los cambios a la vez mediante la **aprobar todos los términos** botón de barra de herramientas.  
+  
+5.  Cambie a la **New** en el panel derecho. Los valores de esta pestaña son aquellos para los que DQS no tiene todavía suficiente información en la base de conocimiento para determinar si son correctos o no. Por tanto, no puede cambiar ni sugerir cambios a los valores de dominio.  
+  
+6.  Revise los valores para confirmar que todos los correos electrónicos terminan con **@adventure-works.com** y haga clic en **aprobar todos los términos** en la barra de herramientas. Los valores aprobados de esta pestaña se mueven a la **correcto** ficha.  
+  
+7.  Seleccione el **país** dominio en la lista de dominios.  
+  
+8.  Cambie a la **corregido** ficha en el panel derecho y observe que **United State** valor se ha corregido automáticamente a la **Estados Unidos** del ' al final. Esta regla no es una regla definida para el **país** dominio, pero DQS es **83%** seguro de que el valor correcto es **Estados Unidos**. El **aprobar** botón se selecciona automáticamente para todos los **corregido** elementos. Puede invalidar este comportamiento y rechazar un cambio.  
+  
+9. Tenga en cuenta que **Estados Unidos** se ha corregido a **spain** porque son sinónimos y **Estados Unidos** es el valor inicial (preferido).  
+  
+     ![Correcciones basadas en sinónimos](../../2014/tutorials/media/et-managingandviewingresults-02.jpg "correcciones basadas en sinónimos")  
+  
+10. Tenga en cuenta que la **aprobar** botón ya está seleccionado para estos valores corregidos. Este comportamiento es el predeterminado para los valores corregidos. Puede rechazar un cambio y cuando lo hace, el valor se desplaza a la **válido** ficha.  
+  
+11. Seleccione **nombre de proveedor** en la lista de dominios.  
+  
+12. Cambie a la **corregido** en el panel derecho.  
+  
+     ![Nombres de proveedores corregidos](../../2014/tutorials/media/et-managingandviewingresults-03.jpg "nombres de proveedores corregidos")  
+  
+    1.  Tenga en cuenta que **A. Datum Corp.** se ha corregido a **A. Datum Corporation** y **motivo** está establecido en **relación basada en términos. A. datum Corporation** es un valor de dominio conocido para DQS porque se detectó durante el proceso de detección de conocimiento. Por lo tanto, DQS es **100% seguro** sobre esta corrección.  
+  
+    2.  Tenga en cuenta que **Lazy Country Storex** se ha corregido a **Lazy Country Store**, **un nivel de confianza** está establecido en **100%** y el  **Motivo** está establecido en **valor de dominio**. Durante el proceso de detección de conocimiento, establecer **Lazy Country Storex** como un error con **Lazy Country Store** como el **corrección**, por lo que DQS **100% seguro** acerca de cómo realizar esta corrección.  
+  
+    3.  DQS no está familiarizado con los otros valores en la lista, pero encontró correcciones para estos valores con el **corrector ortográfico** y propone las correcciones correspondientes. DQS es **100%** está seguro de estas correcciones, pero el nivel de confianza superior al 80%, que es el nivel de umbral para hacer correcciones, por lo que DQS propone las correcciones.  
+  
+13. Tenga en cuenta que la **aprobar** se habilita automáticamente para todos los valores. Puede invalidar el valor corregido o rechazar el cambio según corresponda. De forma predeterminada el **aprobar** botón está seleccionado para todos los valores en el **corregido** ficha.  
+  
+14. Cambie a la **New** ficha.  
+  
+15. Tenga en cuenta que **Corp.** se ha corregido a **Corporation**, **Co.** se ha corregido a **empresa**, y **Inc.** se ha corregido a **Incorporated**. Por ejemplo, **Consolidate Inc.** se ha corregido a **Consolidate Incorporated** y **Consolidated Co.** se ha corregido a **Consolidated Company**, y **Frabrikam Corp.** se ha corregido a **Fabrikam Corporation**.  Puede ver que **relación basada en términos** se menciona como el motivo. Para proponer estos cambios se usan las relaciones basadas en términos que definió durante la actividad de administración de dominios. Puede cambiar la **corregir a** manualmente aquí.  
+  
+16. Desplácese por la lista para ver **Hunxgry Coyote Store** con una línea ondulada roja. Haga doble clic en él y haga clic en **Hungy Coyote Store** (con ninguna ' x'). El **corregir a** columna se debe rellenar automáticamente con **Hungry Coyote Store**. También puede escribir manualmente un valor en la columna Corregir a.  
+  
+17. Haga clic en **aprobar todos los términos** desde la barra de herramientas. Los valores de dominio con el **corregir a** mover el valor especificado para la **corregido** ficha y los nuevos valores y no tienen ninguna asociados **corregir a** valores mover a la  **Correcto** ficha.  
+  
+18. Seleccione el **validación de direcciones** dominio compuesto en la lista de dominios.  
+  
+19. En el panel derecho, cambie a la **correcto** ficha. Debería ver las direcciones que se encuentran correctas el **Melissa Data – Address Check** DQS de servicio en la **Azure Marketplace**.  
+  
+20. Cambie a la **corregido** ficha.  
+  
+21. Tenga en cuenta que **estado** el registro que tiene **City** como **Los Ángeles** está establecido en **CA** ahora. Observe que, en la **motivo** campo es que **corregido por la regla 'Regla ciudad-estado'**.  
+  
+     ![Corrección a la regla ciudad-estado](../../2014/tutorials/media/et-managingandviewingresults-04.jpg "corrección a la regla Ciudad-Estado")  
+  
+22. Tenga en cuenta que la **aprobar** ya está seleccionado el botón de radio para este elemento de la lista. Éste es el comportamiento predeterminado para los elementos en el **corregido** ficha.  
+  
+23. Cambie a la **sugerido** ficha. Revisar los cambios sugeridos por el **Melissa Data – Address Check** servicio.  
+  
+24. **Haga clic en aprobar todos los términos** en el botón de barra de herramientas y haga clic en **Aceptar** en el **confirmación** cuadro de mensaje.  
+  
+     ![Aprobar el botón de barra de herramientas de todos los términos](../../2014/tutorials/media/et-managingandviewingresults-05.jpg "aprobar el botón de barra de herramientas de todos los términos")  
+  
+25. Haga clic en **siguiente** para cambiar a la **exportar** página.  
+  
+## <a name="next-step"></a>Paso siguiente  
+ [Tarea 5: Exportar los resultados a un archivo de Excel de la limpieza](../../2014/tutorials/task-5-exporting-cleansing-results-to-an-excel-file.md)  
+  
+  

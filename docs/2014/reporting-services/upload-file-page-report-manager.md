@@ -1,0 +1,68 @@
+---
+title: Página Cargar archivo (Administrador de informes) | Documentos de Microsoft
+ms.custom: ''
+ms.date: 06/13/2017
+ms.prod: sql-server-2014
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- reporting-services-native
+ms.tgt_pltfrm: ''
+ms.topic: article
+ms.assetid: 7bb3166f-9374-4449-b66a-ffb77298507d
+caps.latest.revision: 27
+author: markingmyname
+ms.author: maghan
+manager: mblythe
+ms.openlocfilehash: 5cdc35c029b40489e43e8e8b5715846cdab1fa6a
+ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+ms.translationtype: MT
+ms.contentlocale: es-ES
+ms.lasthandoff: 06/19/2018
+ms.locfileid: "36200849"
+---
+# <a name="upload-file-page-report-manager"></a>Cargar archivo (página del Administrador de informes)
+  Use la página Cargar archivo para publicar un archivo del sistema de archivos en la base de datos del servidor de informes. Los archivos cargados se representan como elementos en la jerarquía de carpetas del servidor de informes.  
+  
+-   Los archivos .rdl cargados se publican como informes en el servidor de informes.  
+  
+-   Los archivos .smdl cargados se publican como modelos de informe si contienen información de la vista del origen de datos. Si les falta una referencia de vista del origen de datos, se produce un error durante la carga. Podría faltar información de vista del origen de datos si se carga un archivo .smdl desde un proyecto de modelos de informe de [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] . En los proyectos de modelo de informe, la información de la vista del origen de datos se almacena en un archivo independiente en lugar de hacerlo en el mismo archivo .smdl.  
+  
+     Los archivos de modelo que no contienen información de vista del origen de datos (y que por tanto se cargan correctamente) son aquellos que se han publicado previamente en un servidor de informes y se han guardado posteriormente del servidor a un archivo del sistema de archivos. Si abre la página Propiedades generales de un modelo y hace clic en **Editar** para abrirlo, puede guardarlo en un archivo y, a continuación, cargarlo como un nuevo modelo en el servidor de informes. El archivo .SMDL que cargue posteriormente dispondrá de toda la información necesaria para la publicación de modelos.  
+  
+-   Todos los demás tipos de archivo que se cargan se almacenan como recursos. Esto incluye archivos .rds que contienen información de conexión del origen de datos de informe. Al cargar un archivo .rds no se genera un elemento de origen de datos compartidos en el servidor de informes.  
+  
+ Al cargar un elemento, se coloca en la carpeta actual. Una vez finalizada la carga, el elemento se puede mover a una ubicación diferente.  
+  
+> [!NOTE]  
+>  Esta característica no está disponible en todas las ediciones de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]. Para obtener una lista de las características admitidas por las ediciones de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)], vea [Features Supported by the Editions of SQL Server 2014](../../2014/getting-started/features-supported-by-the-editions-of-sql-server-2014.md).  
+  
+## <a name="navigation"></a>Navegación  
+ Utilice el procedimiento siguiente para navegar hasta esta ubicación en la interfaz de usuario (IU).  
+  
+### <a name="to-open-the-upload-file-page"></a>Para abrir la página Cargar archivo  
+  
+1.  Abra el Administrador de informes y desplácese hasta la carpeta en la que desea cargar un archivo.  
+  
+2.  En la barra de herramientas, haga clic en **Cargar archivo**.  
+  
+## <a name="options"></a>Opciones  
+ **Archivo para cargar**  
+ Muestra la ruta de acceso completa del archivo que se va a copiar desde el sistema de archivos.  
+  
+ **Examinar**  
+ Haga clic para elegir un archivo del sistema de archivos.  
+  
+ **Nombre**  
+ Escriba el nombre del archivo tal como desea que aparezca en el espacio de nombres del servidor de informes. El nombre debe incluir al menos un carácter alfanumérico. También puede incluir espacios en blanco y algunos símbolos. No use los caracteres ; ? : @ & = +, $ * \< > | "o / para especificar un nombre de elemento.  
+  
+ **Sobrescribir elemento si existe**  
+ Active esta casilla si desea reemplazar un elemento por una versión más reciente. Para que se sobrescriba una versión existente, deben coincidir exactamente el nombre del elemento nuevo y el nombre del elemento existente.  
+  
+## <a name="see-also"></a>Vea también  
+ [El Administrador de informes &#40;modo nativo de SSRS&#41;](../../2014/reporting-services/report-manager-ssrs-native-mode.md)   
+ [El contenido de página &#40;el Administrador de informes&#41;](../../2014/reporting-services/contents-page-report-manager.md)   
+ [El Administrador de informes (Ayuda F1)](../../2014/reporting-services/report-manager-f1-help.md)   
+ [Carga de archivos a una carpeta](report-server/upload-files-to-a-folder.md)  
+  
+  

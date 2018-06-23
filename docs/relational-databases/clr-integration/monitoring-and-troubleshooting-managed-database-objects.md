@@ -4,11 +4,9 @@ ms.custom: ''
 ms.date: 03/17/2017
 ms.prod: sql
 ms.prod_service: database-engine
-ms.component: clr
 ms.reviewer: ''
 ms.suite: sql
-ms.technology: ''
-ms.tgt_pltfrm: ''
+ms.technology: reference
 ms.topic: reference
 helpviewer_keywords:
 - common language runtime [SQL Server], performance
@@ -19,12 +17,12 @@ caps.latest.revision: 18
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.openlocfilehash: e5797bbbf25138658fd5db595a2cc1203046dd32
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 741a863617109c6193fe45e0fe9da94136890e96
+ms.sourcegitcommit: a78fa85609a82e905de9db8b75d2e83257831ad9
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32930610"
+ms.lasthandoff: 06/18/2018
+ms.locfileid: "35702766"
 ---
 # <a name="monitoring-and-troubleshooting-managed-database-objects"></a>Supervisar y solucionar problemas de objetos de base de datos administrados
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -33,24 +31,24 @@ ms.locfileid: "32930610"
 ## <a name="profiler-trace-events"></a>Eventos de seguimiento del Analizador  
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] incluye Seguimiento de SQL y notificaciones de evento para supervisar los eventos que se generan en el motor de base de datos. Al registrar los eventos especificados, Seguimiento de SQL ayuda a solucionar los problemas de rendimiento, auditar la actividad de la base de datos, obtener datos de muestra para un entorno de prueba, depurar instrucciones y procedimientos almacenados de [!INCLUDE[tsql](../../includes/tsql-md.md)] y recopilar datos para las herramientas de análisis del rendimiento. Para obtener más información, consulte [SQL Trace](../../relational-databases/sql-trace/sql-trace.md) y [Extended Events](../../relational-databases/extended-events/extended-events.md).  
   
-|Evento|Description|  
+|Evento|Descripción|  
 |-----------|-----------------|  
 |[Assembly Load (clase de eventos)](http://msdn.microsoft.com/library/cfb0b69d-4ce0-4067-a3df-d82775e57886)|Se utiliza para supervisar las solicitudes de carga de ensamblados (correctas y no realizadas).|  
 |[Clase de eventos SQL: BatchStarting](../../relational-databases/event-classes/sql-batchstarting-event-class.md), [clase de eventos SQL: BatchCompleted](../../relational-databases/event-classes/sql-batchcompleted-event-class.md)|Proporciona información sobre los lotes de [!INCLUDE[tsql](../../includes/tsql-md.md)] que se han iniciado o completado.|  
 |[SP: Starting, clase de evento](../../relational-databases/event-classes/sp-starting-event-class.md), [SP: Completed, clase de evento](../../relational-databases/event-classes/sp-completed-event-class.md)|Se utiliza para supervisar la ejecución de procedimientos almacenados de [!INCLUDE[tsql](../../includes/tsql-md.md)].|  
 |[Clase de eventos SQL: StmtStarting](../../relational-databases/event-classes/sql-stmtstarting-event-class.md), [clase de eventos SQL: StmtCompleted](../../relational-databases/event-classes/sql-stmtcompleted-event-class.md)|Se utiliza para supervisar la ejecución de rutinas de CLR y [!INCLUDE[tsql](../../includes/tsql-md.md)].|  
   
-## <a name="performance-counters"></a>Contadores de rendimiento  
+## <a name="performance-counters"></a>Performance Counters  
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] incluye objetos y contadores que puede utilizar el Monitor de sistema para supervisar la actividad de los equipos en los que se ejecute una instancia de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Un objeto es cualquier recurso de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], como un bloqueo de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] o un proceso de Windows. Cada objeto contiene uno o más contadores que determinan diversos aspectos de los objetos que se van a supervisar. Para obtener más información, vea [Usar objetos de SQL Server](../../relational-databases/performance-monitor/use-sql-server-objects.md).  
   
-|Object|Description|  
+|Objeto|Descripción|  
 |------------|-----------------|  
 |[CLR (objeto de SQL Server)](../../relational-databases/performance-monitor/sql-server-clr-object.md)|Tiempo total de la ejecución en CLR.|  
   
 ## <a name="windows-system-monitor-perfmonexe-counters"></a>Contadores de Monitor de sistema (PERFMON.EXE) de Windows  
  La herramienta Monitor de sistema (PERFMON.EXE) de Windows tiene varios contadores de rendimiento que se pueden utilizar para supervisar las aplicaciones de integración CLR. El nombre de proceso "sqlservr" puede filtrar los contadores de rendimiento de .NET CLR para realizar el seguimiento de las aplicaciones de integración CLR que se están ejecutando actualmente.  
   
-|Objeto de rendimiento|Description|  
+|Objeto de rendimiento|Descripción|  
 |------------------------|-----------------|  
 |SqlServer:CLR|Proporciona las estadísticas de CPU del servidor.|  
 |Excepciones de .NET CLR|Realiza el seguimiento del número de excepciones por segundo.|  
@@ -61,7 +59,7 @@ ms.locfileid: "32930610"
 ## <a name="catalog-views"></a>Vistas de catálogo  
  Las vistas de catálogo devuelven información que utiliza el motor de base de datos de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Se recomienda utilizar las vistas de catálogo porque son la interfaz más general para los metadatos del catálogo y proporcionan el método más eficaz para obtener, transformar y presentar formas personalizadas de esta información. Todos los metadatos del catálogo disponibles para el usuario se exponen mediante las vistas de catálogo. Para obtener más información, vea [Vistas de catálogo &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/catalog-views-transact-sql.md).  
   
-|Vista de catálogo|Description|  
+|Vista de catálogo|Descripción|  
 |------------------|-----------------|  
 |[Sys.Assemblies &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-assemblies-transact-sql.md)|Devuelve información sobre los ensamblados registrados en una base de datos.|  
 |[Sys.assembly_references &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-assembly-references-transact-sql.md)|Identifica ensamblados que hacen referencia a otros ensamblados.|  
@@ -78,7 +76,7 @@ ms.locfileid: "32930610"
 ## <a name="dynamic-management-views"></a>Vistas de administración dinámica  
  Las funciones y vistas de administración dinámica devuelven información sobre el estado del servidor que se puede utilizar para controlar el estado de una instancia del servidor, para diagnosticar problemas y para optimizar el rendimiento. Para obtener más información, consulte [funciones y vistas de administración dinámica &#40;Transact-SQL&#41;](~/relational-databases/system-dynamic-management-views/system-dynamic-management-views.md).  
   
-|DMV|Description|  
+|DMV|Descripción|  
 |---------|-----------------|  
 |[sys.dm_clr_appdomains &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-clr-appdomains-transact-sql.md)|Proporciona información sobre cada dominio de aplicación del servidor.|  
 |[sys.dm_clr_loaded_assemblies &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-clr-loaded-assemblies-transact-sql.md)|Identifica cada ensamblado administrado registrado en el servidor.|  

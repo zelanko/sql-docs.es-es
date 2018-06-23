@@ -1,1 +1,1 @@
-![Descargar](../ssdt/media/download.png)[descargar el controlador OLE DB](https://go.microsoft.com/fwlink/?linkid=871294)
+![Descargar](../ssdt/media/download.png)[descargar el controlador OLE DB](../connect/oledb/download-oledb-driver-for-sql-server.md)

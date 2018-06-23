@@ -4,11 +4,9 @@ ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: database-engine
-ms.component: clr
 ms.reviewer: ''
 ms.suite: sql
-ms.technology: ''
-ms.tgt_pltfrm: ''
+ms.technology: reference
 ms.topic: reference
 helpviewer_keywords:
 - common language runtime [SQL Server], performance
@@ -19,12 +17,12 @@ caps.latest.revision: 43
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.openlocfilehash: ad749572b54e76c751002db3516fdf46ce31f729
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 937a8ad81b3c2b03291c8032ece6af71cb82f360
+ms.sourcegitcommit: a78fa85609a82e905de9db8b75d2e83257831ad9
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32921970"
+ms.lasthandoff: 06/18/2018
+ms.locfileid: "35703006"
 ---
 # <a name="clr-integration-architecture----performance"></a>Arquitectura de integración de CLR: rendimiento
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -84,6 +82,6 @@ ms.locfileid: "32921970"
  Para que la recolección de elementos no utilizados administrada se ejecute y escale correctamente en [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], evite grandes asignaciones únicas. Las asignaciones con un tamaño superior a 88 kilobytes (KB) se colocarán en el montón de objeto grande, lo que hará que la recolección de elementos no utilizados se ejecute y escale mucho peor que muchas asignaciones más pequeñas. Por ejemplo, si necesita asignar una matriz multidimensional grande, es preferible asignar una matriz escalonada (dispersa).  
   
 ## <a name="see-also"></a>Vea también  
- [Tipos definidos por el usuario CLR](../../relational-databases/clr-integration-database-objects-user-defined-types/clr-user-defined-types.md)  
+ [Tipos definidos por el usuario de CLR](../../relational-databases/clr-integration-database-objects-user-defined-types/clr-user-defined-types.md)  
   
   

@@ -4,7 +4,6 @@ ms.custom: ''
 ms.date: 03/16/2017
 ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
-ms.component: native-client-odbc-api
 ms.reviewer: ''
 ms.suite: sql
 ms.technology: ''
@@ -19,11 +18,12 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
-ms.openlocfilehash: ee119689f7bf66cde7f2276372185cb42907274e
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 43afb9ba50d67d35eb9dabb5542a20f0b847ae88
+ms.sourcegitcommit: a78fa85609a82e905de9db8b75d2e83257831ad9
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/18/2018
+ms.locfileid: "35703806"
 ---
 # <a name="sqlgetdiagfield"></a>SQLGetDiagField
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -31,7 +31,7 @@ ms.lasthandoff: 05/03/2018
 
   El [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] controlador ODBC Native Client especifica los campos de diagnóstico adicionales siguientes para **SQLGetDiagField**. Estos campos admiten el informe de errores enriquecido para aplicaciones de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] y están disponible en todos los registros de diagnóstica que se generan en los identificadores de conexión de ODBC e identificadores de instrucciones de ODBC conectados. Los campos se definen en sqlncli.h.  
   
-|Campo del registro de diagnóstico|Description|  
+|Campo del registro de diagnóstico|Descripción|  
 |------------------------------|-----------------|  
 |SQL_DIAG_SS_LINE|Indica el número de línea de un procedimiento almacenado que genera un error. El valor de SQL_DIAG_SS_LINE solamente es significativo si SQL_DIAG_SS_PROCNAME devuelve un valor. El valor se devuelve como un entero sin signo de 16 bits.|  
 |SQL_DIAG_SS_MSGSTATE|El estado de un mensaje de error. Para obtener información sobre el estado del mensaje de error, consulte [RAISERROR](../../t-sql/language-elements/raiserror-transact-sql.md). El valor se devuelve como un entero con signo de 32 bits.|  
@@ -43,7 +43,7 @@ ms.lasthandoff: 05/03/2018
   
  El controlador ODBC de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client notifica los siguientes códigos de función dinámica adicionales que identifican la última instrucción [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] intentada. El código de función dinámica se devuelve en el encabezado (registro 0) del conjunto de registros de diagnóstico y está por tanto disponible en cada ejecución (correcta o no).  
   
-|Código de función dinámica|Origen|  
+|Código de función dinámica|Source|  
 |---------------------------|------------|  
 |SQL_DIAG_DFC_SS_ALTER_DATABASE|instrucción ALTER DATABASE|  
 |SQL_DIAG_DFC_SS_CHECKPOINT|Instrucción CHECKPOINT|  
@@ -104,10 +104,10 @@ ms.lasthandoff: 05/03/2018
 ## <a name="sqlgetdiagfield-and-table-valued-parameters"></a>SQLGetDiagField y parámetros con valores de tabla  
  SQLGetDiagField puede usarse para recuperar dos campos de diagnóstico: SQL_DIAG_SS_TABLE_COLUMN_NUMBER y SQL_DIAG_SS_TABLE_ROW_NUMBER. Estos campos ayudan a determinar qué valor produjo el error o la advertencia asociados al registro de diagnóstico.  
   
- Para obtener más información acerca de los parámetros con valores de tabla, vea [parámetros con valores de tabla & #40; ODBC & #41;](../../relational-databases/native-client-odbc-table-valued-parameters/table-valued-parameters-odbc.md).  
+ Para obtener más información acerca de los parámetros con valores de tabla, vea [parámetros con valores de tabla &#40;ODBC&#41;](../../relational-databases/native-client-odbc-table-valued-parameters/table-valued-parameters-odbc.md).  
   
 ## <a name="see-also"></a>Vea también  
  [SQLGetDiagField, función](http://go.microsoft.com/fwlink/?LinkId=59352)   
- [Detalles de implementación de API de ODBC](../../relational-databases/native-client-odbc-api/odbc-api-implementation-details.md)  
+ [Detalles de implementación de la API de ODBC](../../relational-databases/native-client-odbc-api/odbc-api-implementation-details.md)  
   
   

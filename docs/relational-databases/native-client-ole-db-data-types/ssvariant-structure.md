@@ -4,11 +4,9 @@ ms.custom: ''
 ms.date: 03/16/2017
 ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
-ms.component: native-client-ole-db-data-types
 ms.reviewer: ''
 ms.suite: sql
-ms.technology:
-- database-engine
+ms.technology: connectivity
 ms.tgt_pltfrm: ''
 ms.topic: reference
 f1_keywords:
@@ -21,11 +19,12 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
-ms.openlocfilehash: feb71f4bd7cb6c2a18bfebad46eac4d50db34bcb
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: aca0528c2b829a1dc13030bf9a7add9c8be7e797
+ms.sourcegitcommit: a78fa85609a82e905de9db8b75d2e83257831ad9
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/18/2018
+ms.locfileid: "35702806"
 ---
 # <a name="ssvariant-structure"></a>Estructura SSVARIANT
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -35,7 +34,7 @@ ms.lasthandoff: 05/03/2018
   
  **SSVARIANT** es una unión de discriminación. Dependiendo del valor del miembro vt, el consumidor puede determinar qué miembro para leer. valores de VT se corresponden con [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] tipos de datos. Por lo tanto, la **SSVARIANT** estructura puede contener cualquier tipo de SQL Server. Para obtener más información acerca de la estructura de datos para los tipos de OLE DB estándares, consulte [indicadores de tipo](http://go.microsoft.com/fwlink/?LinkId=122171).  
   
-## <a name="remarks"></a>Comentarios  
+## <a name="remarks"></a>Notas  
  Cuando DataTypeCompat == 80, varios **SSVARIANT** subtipos se convierten en cadenas. Por ejemplo, los siguientes valores de vt aparecerá en **SSVARIANT** como VT_SS_WVARSTRING:  
   
 -   VT_SS_DATETIMEOFFSET  
@@ -86,6 +85,6 @@ V_SS_DATETIMEOFFSET(pssVar).bScale = bScale;
 |BLOBType|No se usa|No se usa|No se usa|No se usa|  
   
 ## <a name="see-also"></a>Vea también  
- [Tipos de datos & #40; OLE DB & #41;](../../relational-databases/native-client-ole-db-data-types/data-types-ole-db.md)  
+ [Tipos de datos &#40;OLE DB&#41;](../../relational-databases/native-client-ole-db-data-types/data-types-ole-db.md)  
   
   

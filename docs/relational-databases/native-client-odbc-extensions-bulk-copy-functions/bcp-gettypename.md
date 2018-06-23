@@ -4,11 +4,9 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
-ms.component: native-client-odbc-extensions-bulk-copy-functions
 ms.reviewer: ''
 ms.suite: sql
-ms.technology:
-- database-engine
+ms.technology: connectivity
 ms.tgt_pltfrm: ''
 ms.topic: reference
 apiname:
@@ -24,12 +22,12 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
-ms.openlocfilehash: 3a7f4e8a8b6813eecf74fbc4e932296d3eff4631
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 0faf40639991005ad7161af9f144af49fb384ba3
+ms.sourcegitcommit: a78fa85609a82e905de9db8b75d2e83257831ad9
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32947510"
+ms.lasthandoff: 06/18/2018
+ms.locfileid: "35703496"
 ---
 # <a name="bcpgettypename"></a>bcp_gettypename
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -47,7 +45,7 @@ RETCODE bcp_gettypename (
 ```  
   
 ## <a name="arguments"></a>Argumentos  
- *Símbolo (token)*  
+ *símbolo (token)*  
  Valor que indica un token de tipo BCP.  
   
  *field*  
@@ -56,7 +54,7 @@ RETCODE bcp_gettypename (
 ## <a name="returns"></a>Devuelve  
  Una cadena que contiene el nombre del tipo SQL que corresponde al tipo BCP. Si se especifica un tipo BCP no válido, se devuelve una cadena vacía.  
   
-## <a name="remarks"></a>Comentarios  
+## <a name="remarks"></a>Notas  
  Los tokens de tipo BCP se definen en el archivo de encabezado sqlncli.h y en la biblioteca sqlncli11.lib.  
   
  La tabla siguiente especifica los posibles tipos BCP, tanto si son o no tipos max, y la salida esperada.  
@@ -80,8 +78,8 @@ RETCODE bcp_gettypename (
 |**SQLTEXT**|Antes o después|**texto**|  
 |**SQLBIGBINARY**|no|**binario**|  
 |**SQLBINARY**|no|**Binario**|  
-|**SQLBIGVARBINARY**|no|**varbinary**|  
-|**SQLVARBINARY**|no|**varbinary**|  
+|**SQLBIGVARBINARY**|no|**Varbinary**|  
+|**SQLVARBINARY**|no|**Varbinary**|  
 |**SQLIMAGE**|Antes o después|**Imagen**|  
 |**SQLINTN**|Antes o después|**int null**|  
 |**SQLDATETIMN**|Antes o después|**datetime-null**|  
@@ -94,11 +92,11 @@ RETCODE bcp_gettypename (
 |**SQLAOPMAX**|Antes o después|**Max**|  
 |**SQLDATETIM4**|Antes o después|**smalldatetime**|  
 |**SQLMONEY4**|Antes o después|**smallmoney**|  
-|**SQLFLT4**|Antes o después|**Real**|  
+|**SQLFLT4**|Antes o después|**real**|  
 |**SQLUNIQUEID**|Antes o después|**uniqueidentifier**|  
 |**SQLNCHAR**|no|**nchar**|  
 |**SQLNVARCHAR**|no|**Nvarchar**|  
-|**SQLNTEXT**|Antes o después|**ntext**|  
+|**SQLNTEXT**|Antes o después|**Ntext**|  
 |**SQLVARIANT**|Antes o después|**sql_variant**|  
 |**SQLINT8**|Antes o después|**Bigint**|  
 |**SQLCHARACTER**|Sí|**ntext**|  
@@ -117,7 +115,7 @@ RETCODE bcp_gettypename (
 ## <a name="bcpgettypename-support-for-enhanced-date-and-time-features"></a>bcp_gettypename admite las características mejoradas de fecha y hora  
  Se describen los valores de parámetro de token para los tipos de fecha y hora en la columna "Tipo en sqlncli.h" de la tabla en [cambios en la copia masiva para tipos mejorada de fecha y hora &#40;OLE DB y ODBC&#41;](../../relational-databases/native-client-odbc-date-time/bulk-copy-changes-for-enhanced-date-and-time-types-ole-db-and-odbc.md). El valor devuelto está en la fila correspondiente de la columna " Tipo de almacenamiento de archivo".  
   
- Para obtener más información, consulte [fecha y hora mejoras & #40; ODBC & #41;](../../relational-databases/native-client-odbc-date-time/date-and-time-improvements-odbc.md).  
+ Para obtener más información, consulte [fecha y hora mejoras &#40;ODBC&#41;](../../relational-databases/native-client-odbc-date-time/date-and-time-improvements-odbc.md).  
   
 ## <a name="see-also"></a>Vea también  
  [Funciones de copia masiva](../../relational-databases/native-client-odbc-extensions-bulk-copy-functions/sql-server-driver-extensions-bulk-copy-functions.md)  

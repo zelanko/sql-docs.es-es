@@ -4,7 +4,6 @@ ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
-ms.component: native-client-odbc-api
 ms.reviewer: ''
 ms.suite: sql
 ms.technology: ''
@@ -19,12 +18,12 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
-ms.openlocfilehash: 7074fcf6c6616c878b0cd4021aabb4359c2a40dc
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 3bf9b7e907bbc00febe4ef86b17bf266408b131e
+ms.sourcegitcommit: a78fa85609a82e905de9db8b75d2e83257831ad9
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32947450"
+ms.lasthandoff: 06/18/2018
+ms.locfileid: "35702816"
 ---
 # <a name="sqlsetstmtattr"></a>SQLSetStmtAttr
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -45,7 +44,7 @@ ms.locfileid: "32947450"
   
  Para obtener más información, consulte [metadatos del parámetro con valores de tabla para instrucciones preparadas](../../relational-databases/native-client-odbc-table-valued-parameters/table-valued-parameter-metadata-for-prepared-statements.md).  
   
- Para obtener más información acerca de los parámetros con valores de tabla, vea [parámetros con valores de tabla & #40; ODBC & #41;](../../relational-databases/native-client-odbc-table-valued-parameters/table-valued-parameters-odbc.md).  
+ Para obtener más información acerca de los parámetros con valores de tabla, vea [parámetros con valores de tabla &#40;ODBC&#41;](../../relational-databases/native-client-odbc-table-valued-parameters/table-valued-parameters-odbc.md).  
   
 ## <a name="sqlsetstmtattr-support-for-sparse-columns"></a>Compatibilidad de SQLSetStmtAttr con columnas dispersas  
  SQLSetStmtAttr puede usarse para establecer SQL_SOPT_SS_NAME_SCOPE. Para obtener más información, vea la sección SQL_SOPT_SS_NAME_SCOPE, más adelante en este tema. Para obtener más información sobre las columnas dispersas, vea [Sparse Columns Support &#40;ODBC&#41;](../../relational-databases/native-client/odbc/sparse-columns-support-odbc.md).  
@@ -56,7 +55,7 @@ ms.locfileid: "32947450"
 ### <a name="sqlsoptsscursoroptions"></a>SQL_SOPT_SS_CURSOR_OPTIONS  
  El atributo SQL_SOPT_SS_CURSOR especifica si el controlador utilizará las opciones de rendimiento específicas del controlador en cursores. [SQLGetData](../../relational-databases/native-client-odbc-api/sqlgetdata.md) no se permite cuando se establecen estas opciones. El valor predeterminado es SQL_CO_OFF. El valor de *ValuePtr* es de tipo SQLLEN.  
   
-|*ValuePtr* valor|Description|  
+|*ValuePtr* valor|Descripción|  
 |----------------------|-----------------|  
 |SQL_CO_OFF|Predeterminado: Deshabilita los cursores de solo avance rápido, solo lectura y captura automática, se habilita **SQLGetData** en cursores de solo avance y solo lectura. Si SQL_SOPT_SS_CURSOR_OPTIONS está establecido en SQL_CO_OFF, el tipo de cursor no cambiará. Es decir, el cursor de solo avance rápido seguirá siendo un cursor de solo avance rápido. Para cambiar el tipo de cursor, la aplicación debe establecer ahora un tipo de cursor diferente mediante **SQLSetStmtAttr**/SQL_ATTR_CURSOR_TYPE.|  
 |SQL_CO_FFO|Habilita los cursores de solo avance rápido, solo lectura, deshabilita **SQLGetData** en cursores de solo avance y solo lectura.|  
@@ -70,7 +69,7 @@ ms.locfileid: "32947450"
 ### <a name="sqlsoptssdeferprepare"></a>SQL_SOPT_SS_DEFER_PREPARE  
  El atributo SQL_SOPT_SS_DEFER_PREPARE determina si la instrucción se prepara inmediatamente o se aplazará hasta el **SQLExecute**, [SQLDescribeCol](../../relational-databases/native-client-odbc-api/sqldescribecol.md) o [SQLDescribeParam](../../relational-databases/native-client-odbc-api/sqldescribeparam.md) se ejecuta. En [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 7.0 y versiones anteriores, esta propiedad se omite (no hay preparación diferida). El valor de *ValuePtr* es de tipo SQLLEN.  
   
-|*ValuePtr* valor|Description|  
+|*ValuePtr* valor|Descripción|  
 |----------------------|-----------------|  
 |SQL_DP_ON|Predeterminado: Después de llamar a [SQLPrepare Function](http://go.microsoft.com/fwlink/?LinkId=59360), la preparación de instrucciones se difiere hasta que **SQLExecute** se llama o la operación de metapropiedad (**SQLDescribeCol** o **SQLDescribeParam**) se ejecuta.|  
 |SQL_DP_OFF|La instrucción se prepara en cuanto **SQLPrepare** se ejecuta.|  
@@ -80,7 +79,7 @@ ms.locfileid: "32947450"
   
  El valor de *ValuePtr* es de tipo SQLLEN.  
   
-|*ValuePtr* valor|Description|  
+|*ValuePtr* valor|Descripción|  
 |----------------------|-----------------|  
 |SQL_RE_OFF|Predeterminado: El controlador no convierte los datos de fecha, hora y moneda a datos de cadenas de caracteres utilizando la configuración regional del cliente.|  
 |SQL_RE_ON|El controlador utiliza la configuración regional del cliente al convertir los datos de fecha, hora y moneda en datos de cadenas de caracteres.|  
@@ -95,7 +94,7 @@ ms.locfileid: "32947450"
 ### <a name="sqlsoptsstextptrlogging"></a>SQL_SOPT_SS_TEXTPTR_LOGGING  
  El atributo SQL_SOPT_SS_TEXTPTR_LOGGING alterna el registro de operaciones en las columnas que contienen **texto** o **imagen** datos. El valor de *ValuePtr* es de tipo SQLLEN.  
   
-|*ValuePtr* valor|Description|  
+|*ValuePtr* valor|Descripción|  
 |----------------------|-----------------|  
 |SQL_TL_OFF|Deshabilita el registro de operaciones realizadas en **texto** y **imagen** datos.|  
 |SQL_TL_ON|Predeterminado: Habilita el registro de las operaciones realizadas en **texto** y **imagen** datos.|  
@@ -103,7 +102,7 @@ ms.locfileid: "32947450"
 ### <a name="sqlsoptsshiddencolumns"></a>SQL_SOPT_SS_HIDDEN_COLUMNS  
  El atributo SQL_SOPT_SS_HIDDEN_COLUMNS expone, en el conjunto de resultados, las columnas ocultas en una instrucción SELECT FOR BROWSE de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. El controlador no expone estas columnas de forma predeterminada. El valor de *ValuePtr* es de tipo SQLLEN.  
   
-|*ValuePtr* valor|Description|  
+|*ValuePtr* valor|Descripción|  
 |----------------------|-----------------|  
 |SQL_HC_OFF|Predeterminado: Las columnas FOR BROWSE se ocultan del conjunto de resultados.|  
 |SQL_HC_ON|Expone las columnas FOR BROWSE.|  
@@ -137,7 +136,7 @@ ms.locfileid: "32947450"
   
  El tipo para SQL_SOPT_SS_NAME_SCOPE es SQLULEN.  
   
-|*ValuePtr* valor|Description|  
+|*ValuePtr* valor|Descripción|  
 |----------------------|-----------------|  
 |SQL_SS_NAME_SCOPE_TABLE|Predeterminado:<br /><br /> Cuando se utilizan parámetros con valores de tabla, indica que se deben devolver metadatos para las tablas reales.<br /><br /> Al utilizar la característica de columnas dispersas, SQLColumns devolverá únicamente las columnas que no son miembros de disperso **column_set**.|  
 |SQL_SS_NAME_SCOPE_TABLE_TYPE|Indica que la aplicación requiere metadatos para un tipo de tabla, en lugar de una tabla real (las funciones de catálogo deben devolver metadatos para los tipos de tabla). A continuación, la aplicación pasa el TYPE_NAME del parámetro con valores de tabla como el *TableName* parámetro.|  
@@ -155,6 +154,6 @@ ms.locfileid: "32947450"
   
 ## <a name="see-also"></a>Vea también  
  [SQLGetStmtAttr, función](http://go.microsoft.com/fwlink/?LinkId=59355)   
- [Detalles de implementación de API de ODBC](../../relational-databases/native-client-odbc-api/odbc-api-implementation-details.md)  
+ [Detalles de implementación de la API de ODBC](../../relational-databases/native-client-odbc-api/odbc-api-implementation-details.md)  
   
   

@@ -4,7 +4,6 @@ ms.custom: ''
 ms.date: 03/17/2017
 ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
-ms.component: native-client-odbc-api
 ms.reviewer: ''
 ms.suite: sql
 ms.technology: ''
@@ -19,11 +18,12 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
-ms.openlocfilehash: 33504794f4f79db4e5f59aea6746753351be3d60
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 30a665ee8db2b7de1e0469b7af8d17ec92c2cde8
+ms.sourcegitcommit: a78fa85609a82e905de9db8b75d2e83257831ad9
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/18/2018
+ms.locfileid: "35698166"
 ---
 # <a name="sqlgetdescfield"></a>SQLGetDescField
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -36,17 +36,17 @@ ms.lasthandoff: 05/03/2018
  Al igual que los atributos se recuperan con SQLColAttribute, campos de descriptor que se notifican los atributos de nivel de fila de informe (como SQL_CA_SS_COMPUTE_ID) para todas las columnas del conjunto de resultados.  
   
 ## <a name="sqlgetdescfield-and-table-valued-parameters"></a>SQLGetDescField y parámetros con valores de tabla  
- SQLGetDescField puede utilizarse para obtener valores de atributos extendidos de parámetros con valores de tabla y las columnas de parámetros con valores de tabla. Para obtener más información acerca de los parámetros con valores de tabla, vea [parámetros con valores de tabla & #40; ODBC & #41;](../../relational-databases/native-client-odbc-table-valued-parameters/table-valued-parameters-odbc.md).  
+ SQLGetDescField puede utilizarse para obtener valores de atributos extendidos de parámetros con valores de tabla y las columnas de parámetros con valores de tabla. Para obtener más información acerca de los parámetros con valores de tabla, vea [parámetros con valores de tabla &#40;ODBC&#41;](../../relational-databases/native-client-odbc-table-valued-parameters/table-valued-parameters-odbc.md).  
   
 ## <a name="sqlgetdescfield-support-for-enhanced-date-and-time-features"></a>SQLGetDescField admite las características mejoradas de fecha y hora  
  Para obtener información acerca de los campos de descriptor disponibles con los tipos de fecha y hora nueva, vea [parámetros y metadatos de resultados](../../relational-databases/native-client-odbc-date-time/metadata-parameter-and-result.md).  
   
- Para obtener más información, consulte [fecha y hora mejoras & #40; ODBC & #41;](../../relational-databases/native-client-odbc-date-time/date-and-time-improvements-odbc.md).  
+ Para obtener más información, consulte [fecha y hora mejoras &#40;ODBC&#41;](../../relational-databases/native-client-odbc-date-time/date-and-time-improvements-odbc.md).  
   
  A partir de [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)], puede devolver SQLGetDescField **SQL_C_SS_TIME2** (para **tiempo** tipos) o **SQL_C_SS_TIMESTAMPOFFSET** (para  **DateTimeOffset**) en lugar de **SQL_C_BINARY**, si su aplicación utiliza ODBC 3.8.  
   
 ## <a name="sqlgetdescfield-support-for-large-clr-udts"></a>SQLGetDescField admite UDT CLR grandes  
- **SQLGetDescField** admite los tipos definidos por el usuario CLR grandes (UDT). Para obtener más información, consulte [Large CLR User-Defined tipos & #40; ODBC & #41;](../../relational-databases/native-client/odbc/large-clr-user-defined-types-odbc.md).  
+ **SQLGetDescField** admite los tipos definidos por el usuario CLR grandes (UDT). Para obtener más información, consulte [Large CLR User-Defined tipos &#40;ODBC&#41;](../../relational-databases/native-client/odbc/large-clr-user-defined-types-odbc.md).  
   
 ## <a name="sqlgetdescfield-support-for-sparse-columns"></a>SQLGetDescField admite columnas dispersas  
  SQLGetDescField puede utilizarse para consultar el nuevo campo IRD sql_ca_ss_is_column_set y determinar si una columna es una **column_set** columna.  
@@ -160,6 +160,6 @@ if (SQLMoreResults(g_hStmt) == SQL_SUCCESS)
   
 ## <a name="see-also"></a>Vea también  
  [Sqlgetdescfield, función](http://go.microsoft.com/fwlink/?LinkId=59351)   
- [Detalles de implementación de API de ODBC](../../relational-databases/native-client-odbc-api/odbc-api-implementation-details.md)  
+ [Detalles de implementación de la API de ODBC](../../relational-databases/native-client-odbc-api/odbc-api-implementation-details.md)  
   
   

@@ -3,11 +3,9 @@ title: Funciones definidas por el usuario CLR | Documentos de Microsoft
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
-ms.prod_service: database-engine
-ms.component: clr
 ms.reviewer: ''
 ms.suite: sql
-ms.technology: ''
+ms.technology: reference
 ms.tgt_pltfrm: ''
 ms.topic: reference
 helpviewer_keywords:
@@ -21,12 +19,12 @@ caps.latest.revision: 46
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.openlocfilehash: 78f95d7da1a879c2ef33bed15709541cb399660b
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 3696f621801e493cbcaacfd10fd6d60445fd1a06
+ms.sourcegitcommit: a78fa85609a82e905de9db8b75d2e83257831ad9
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32917760"
+ms.lasthandoff: 06/18/2018
+ms.locfileid: "35702086"
 ---
 # <a name="clr-user-defined-functions"></a>Funciones CLR definidas por el usuario
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -36,13 +34,13 @@ ms.locfileid: "32917760"
   
  En la siguiente tabla se muestran los temas de esta sección.  
   
- [Funciones con valores escalares CLR](../../relational-databases/clr-integration-database-objects-user-defined-functions/clr-scalar-valued-functions.md)  
+ [Funciones escalares de CLR](../../relational-databases/clr-integration-database-objects-user-defined-functions/clr-scalar-valued-functions.md)  
  Trata los requisitos de implementación y muestra ejemplos de funciones escalares.  
   
- [Funciones con valores de tabla CLR](../../relational-databases/clr-integration-database-objects-user-defined-functions/clr-table-valued-functions.md)  
+ [Funciones con valores de tabla en CLR](../../relational-databases/clr-integration-database-objects-user-defined-functions/clr-table-valued-functions.md)  
  Explica cómo implementar y utilizar las funciones con valores de tabla (TVF), así como las diferencias entre las TVF de [!INCLUDE[tsql](../../includes/tsql-md.md)] y de Common Language Runtime (CLR).  
   
- [Agregados definidos por el usuario CLR](../../relational-databases/clr-integration-database-objects-user-defined-functions/clr-user-defined-aggregates.md)  
+ [Agregados definidos por el usuario de CLR](../../relational-databases/clr-integration-database-objects-user-defined-functions/clr-user-defined-aggregates.md)  
  Describe cómo implementar y utilizar los agregados definidos por el usuario.  
   
 ## <a name="see-also"></a>Vea también  

@@ -4,10 +4,9 @@ ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
-ms.component: native-client-ole-db-blobs
 ms.reviewer: ''
 ms.suite: sql
-ms.technology: ''
+ms.technology: connectivity
 ms.tgt_pltfrm: ''
 ms.topic: reference
 helpviewer_keywords:
@@ -17,16 +16,16 @@ helpviewer_keywords:
 - SQL Server Native Client OLE DB provider, BLOBs
 - large data, OLE objects
 ms.assetid: 9d0c524b-22b0-475a-9ff5-5a69a6393b46
-caps.latest.revision: 40
 author: MightyPen
 ms.author: genemi
 manager: craigg
 monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
-ms.openlocfilehash: e23fa666cda37c573d55071739ecfe3df7c7c6d1
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: ac496025b9131e026d29920450d9ad2b45cc52be
+ms.sourcegitcommit: a78fa85609a82e905de9db8b75d2e83257831ad9
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/18/2018
+ms.locfileid: "35701466"
 ---
 # <a name="setting-large-data"></a>Definir datos grandes
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -59,7 +58,7 @@ ms.lasthandoff: 05/03/2018
   
 5.  Llame a **GetNextRows** para capturar las filas siguientes en el conjunto de filas. Llame a **GetData** para leer los datos del conjunto de filas.  
   
-6.  Crear un objeto de almacenamiento que contiene los datos (y también el indicador de longitud) y, a continuación, llame a **IRowsetChange:: SetData** (o **IRowsetChange:: insertRow**) con el descriptor de acceso que enlaza la columna BLOB para establecer los datos.  
+6.  Crear un objeto de almacenamiento que contiene los datos (y también el indicador de longitud) y, a continuación, llame a **IRowsetChange:: SetData** (o **IRowsetChange:: insertRow**) con el descriptor de acceso que enlaza la columna BLOB que se va a establecer los datos.  
   
 ## <a name="example"></a>Ejemplo  
  En este ejemplo se muestra cómo establecer datos BLOB. El ejemplo crea una tabla, agrega un registro de ejemplo, captura este registro en el conjunto de filas y, después, establece el valor del campo BLOB:  
@@ -727,6 +726,6 @@ Exit:
   
 ## <a name="see-also"></a>Vea también  
  [BLOB y objetos OLE](../../relational-databases/native-client-ole-db-blobs/blobs-and-ole-objects.md)   
- [Uso de tipos de valores grandes](../../relational-databases/native-client/features/using-large-value-types.md)  
+ [Usar tipos de valor grande](../../relational-databases/native-client/features/using-large-value-types.md)  
   
   

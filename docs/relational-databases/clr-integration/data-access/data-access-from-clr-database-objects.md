@@ -4,11 +4,9 @@ ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: database-engine
-ms.component: clr
 ms.reviewer: ''
 ms.suite: sql
-ms.technology: ''
-ms.tgt_pltfrm: ''
+ms.technology: reference
 ms.topic: reference
 helpviewer_keywords:
 - common language runtime [SQL Server], data access
@@ -28,12 +26,12 @@ caps.latest.revision: 41
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.openlocfilehash: 85229a6a5475e2b3e1b033cd070a13a008825951
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 1ff4b57fc7557fd2fd339e08b1529605d505cd44
+ms.sourcegitcommit: a78fa85609a82e905de9db8b75d2e83257831ad9
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32921770"
+ms.lasthandoff: 06/18/2018
+ms.locfileid: "35701846"
 ---
 # <a name="data-access-from-clr-database-objects"></a>Acceso a datos de objetos de base de datos de CLR
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -55,7 +53,7 @@ ms.locfileid: "32921770"
  [Extensiones específicas en proceso de SQL Server a ADO.NET](../../../relational-databases/clr-integration-data-access-in-process-ado-net/sql-server-in-process-specific-extensions-to-ado-net.md)  
  Describe la concretos en proceso **SqlPipe**, **SqlContext**, **SqlTriggerContext**, y **SqlDataRecord** objetos.  
   
- [Las transacciones y la integración CLR](../../../relational-databases/clr-integration-data-access-transactions/clr-integration-and-transactions.md)  
+ [Integración CLR y transacciones](../../../relational-databases/clr-integration-data-access-transactions/clr-integration-and-transactions.md)  
  Describe cómo se integra el nuevo marco de transacciones que se proporciona en el espacio de nombres System.Transactions con ADO.NET y con la integración CLR de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)].  
   
  [Serialización XML de objetos de base de datos CLR](http://msdn.microsoft.com/library/ac84339b-9384-4710-bebc-01607864a344)  

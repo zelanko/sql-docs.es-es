@@ -4,26 +4,25 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
-ms.component: native-client-odbc-how-to
 ms.reviewer: ''
 ms.suite: sql
-ms.technology: ''
+ms.technology: connectivity
 ms.tgt_pltfrm: ''
 ms.topic: reference
 helpviewer_keywords:
 - statement execution
 - statement preparation
 ms.assetid: 0adecc63-4da5-486c-bc48-09a004a2fae6
-caps.latest.revision: 21
 author: MightyPen
 ms.author: genemi
 manager: craigg
 monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
-ms.openlocfilehash: cfd8780e6d4fe804a6a124870c06e43bec752463
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: a6d78ab8bbd48035795f8860cb02a20e83780289
+ms.sourcegitcommit: a78fa85609a82e905de9db8b75d2e83257831ad9
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/18/2018
+ms.locfileid: "35701426"
 ---
 # <a name="prepare-and-execute-a-statement-odbc"></a>Preparar y ejecutar una instrucción (ODBC)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -38,7 +37,7 @@ ms.lasthandoff: 05/03/2018
   
 3.  Para cada uno de los parámetros de la instrucción preparada, puede hacer lo siguiente:  
   
-    -   Llamar a [SQLDescribeParam](../../../relational-databases/native-client-odbc-api/sqldescribeparam.md) para obtener información sobre los parámetros.  
+    -   Llame a [SQLDescribeParam](../../../relational-databases/native-client-odbc-api/sqldescribeparam.md) para obtener información sobre los parámetros.  
   
     -   Enlazar cada parámetro a una variable de programa utilizando [SQLBindParameter](../../../relational-databases/native-client-odbc-api/sqlbindparameter.md). Configurar cualquier parámetro de datos en ejecución.  
   
@@ -48,7 +47,7 @@ ms.lasthandoff: 05/03/2018
   
     -   Llame a [SQLExecute](http://go.microsoft.com/fwlink/?LinkId=58400) para ejecutar la instrucción preparada.  
   
-    -   Si se usan parámetros de entrada de datos en ejecución, [SQLExecute](http://go.microsoft.com/fwlink/?LinkId=58400) devuelve SQL_NEED_DATA. Envíe los datos en fragmentos utilizando [SQLParamData](http://go.microsoft.com/fwlink/?LinkId=58405) y [SQLPutData](../../../relational-databases/native-client-odbc-api/sqlputdata.md).  
+    -   Si se usan parámetros de entrada de datos en ejecución, [SQLExecute](http://go.microsoft.com/fwlink/?LinkId=58400) devuelve SQL_NEED_DATA. Envíe los datos en fragmentos utilizyo [SQLParamData](http://go.microsoft.com/fwlink/?LinkId=58405) y [SQLPutData](../../../relational-databases/native-client-odbc-api/sqlputdata.md).  
   
 ### <a name="to-prepare-a-statement-with-column-wise-parameter-binding"></a>Para preparar una instrucción con enlace de parámetros de modo de columna  
   
@@ -119,6 +118,6 @@ ms.lasthandoff: 05/03/2018
     -   Si se utilizan parámetros de entrada de datos en ejecución, SQLExecute devuelve SQL_NEED_DATA. Enviar los datos en fragmentos mediante SQLParamData y SQLPutData.  
   
 ## <a name="see-also"></a>Vea también  
- [Ejecutar temas de procedimientos de consultas & #40; ODBC & #41;](../../../relational-databases/native-client-odbc-how-to/execute-queries/executing-queries-how-to-topics-odbc.md)  
+ [Ejecutar consultas temas "Cómo..." &#40;ODBC&#41;](../../../relational-databases/native-client-odbc-how-to/execute-queries/executing-queries-how-to-topics-odbc.md)  
   
   

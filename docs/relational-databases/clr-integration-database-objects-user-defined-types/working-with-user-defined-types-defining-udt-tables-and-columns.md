@@ -3,11 +3,9 @@ title: Definir columnas y tablas UDT | Documentos de Microsoft
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
-ms.prod_service: database-engine
-ms.component: clr
 ms.reviewer: ''
 ms.suite: sql
-ms.technology: ''
+ms.technology: reference
 ms.tgt_pltfrm: ''
 ms.topic: reference
 dev_langs:
@@ -27,12 +25,12 @@ caps.latest.revision: 11
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.openlocfilehash: 7fb463a9cf7cde943357ae7b1f3da8ed1dbfb253
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 6f6952ca421734b02b410a006b13304d144f0d6e
+ms.sourcegitcommit: a78fa85609a82e905de9db8b75d2e83257831ad9
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32919230"
+ms.lasthandoff: 06/18/2018
+ms.locfileid: "35700006"
 ---
 # <a name="working-with-user-defined-types---defining-udt-tables-and-columns"></a>Trabajar con tipos definidos por el usuario: definir columnas y tablas UDT
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -53,7 +51,7 @@ CREATE TABLE dbo.Points
   
 -   Indizar las expresiones UDT. Puede crear los índices en las columnas calculadas mantenidas en las expresiones UDT. La expresión UDT puede ser un campo, método o propiedad de un UDT. La expresión debe ser determinista y no realizar el acceso a los datos.  
   
- Para obtener más información, consulte [tipos definidos](../../relational-databases/clr-integration-database-objects-user-defined-types/clr-user-defined-types.md) y [CREATE INDEX & #40; Transact-SQL & #41; ](../../t-sql/statements/create-index-transact-sql.md).  
+ Para obtener más información, consulte [tipos definidos](../../relational-databases/clr-integration-database-objects-user-defined-types/clr-user-defined-types.md) y [CREATE INDEX &#40;Transact-SQL&#41;](../../t-sql/statements/create-index-transact-sql.md).  
   
 ## <a name="see-also"></a>Vea también  
  [Trabajar con tipos definidos por el usuario en SQL Server](../../relational-databases/clr-integration-database-objects-user-defined-types/working-with-user-defined-types-in-sql-server.md)  

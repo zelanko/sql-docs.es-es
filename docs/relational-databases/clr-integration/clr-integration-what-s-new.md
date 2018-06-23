@@ -3,24 +3,22 @@ title: ¿Qué&#39;s de integración CLR | Documentos de Microsoft
 ms.date: 03/03/2017
 ms.prod: sql
 ms.prod_service: database-engine
-ms.component: clr
 ms.reviewer: ''
 ms.suite: sql
 ms.custom: ''
-ms.technology: ''
-ms.tgt_pltfrm: ''
+ms.technology: reference
 ms.topic: conceptual
 ms.assetid: 871fcccd-b726-4b13-9f95-d02b4b39d8ab
 caps.latest.revision: 7
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.openlocfilehash: 040f31cc5cfd3cc06cb20e298a275188fc616185
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 88796ef0cf870764b50d691b5eacc0205afba390
+ms.sourcegitcommit: a78fa85609a82e905de9db8b75d2e83257831ad9
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32920070"
+ms.lasthandoff: 06/18/2018
+ms.locfileid: "35697106"
 ---
 # <a name="clr-integration---what39s-new"></a>Integración de CLR: ¿qué&#39;s nuevos
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]

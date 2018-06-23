@@ -2,9 +2,10 @@
 title: Captura de filas | Documentos de Microsoft
 description: Capturar filas mediante la interfaz IRowset
 ms.custom: ''
-ms.date: 03/26/2018
+ms.date: 06/14/2018
 ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
+ms.component: oledb|ole-db-rowsets
 ms.reviewer: ''
 ms.suite: sql
 ms.technology: connectivity
@@ -19,15 +20,17 @@ helpviewer_keywords:
 author: pmasl
 ms.author: Pedro.Lopes
 manager: craigg
-ms.openlocfilehash: 0f57b4e44fd548a82c441f7882bf3ac22fa51410
-ms.sourcegitcommit: f16003fd1ca28b5e06d5700e730f681720006816
+ms.openlocfilehash: 9f003e6c6b0257556ac6b561d25b5987e29eaf40
+ms.sourcegitcommit: 03ba89937daeab08aa410eb03a52f1e0d212b44f
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/11/2018
-ms.locfileid: "35307324"
+ms.lasthandoff: 06/16/2018
+ms.locfileid: "35690288"
 ---
 # <a name="fetching-rows"></a>Capturar filas
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
+[!INCLUDE[appliesto-ss-asdb-asdw-pdw-asdbmi-md](../../../includes/appliesto-ss-asdb-asdw-pdw-asdbmi-md.md)]
+
+[!INCLUDE[Driver_OLEDB_Download](../../../includes/driver_oledb_download.md)]
 
   El **IRowset** es la interfaz de conjunto de filas base. El **IRowset** interfaz proporciona métodos para capturar filas secuencialmente, obtener los datos de las filas y administra las filas. Los consumidores utilizan los métodos de **IRowset** para todas las operaciones básicas de conjunto de filas. Esto incluye la captura y liberación de filas y la obtención de los valores de columna.  
   

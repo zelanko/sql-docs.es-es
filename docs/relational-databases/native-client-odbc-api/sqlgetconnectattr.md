@@ -4,7 +4,6 @@ ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
-ms.component: native-client-odbc-api
 ms.reviewer: ''
 ms.suite: sql
 ms.technology: ''
@@ -19,12 +18,12 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
-ms.openlocfilehash: 36e0a367dfbdacb16dbd37ddbae68789f82b8781
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: a4d71d73a5abe3b36764df7e973add335a42978a
+ms.sourcegitcommit: a78fa85609a82e905de9db8b75d2e83257831ad9
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32948570"
+ms.lasthandoff: 06/18/2018
+ms.locfileid: "35698986"
 ---
 # <a name="sqlgetconnectattr"></a>SQLGetConnectAttr
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -40,7 +39,7 @@ ms.locfileid: "32948570"
 > [!NOTE]  
 >  El atributo de conexión ODBC estándar SQL_ATTR_CONNECTION_DEAD devuelve el estado más reciente de la conexión. Éste podría no ser el estado de la conexión actual.  
   
-|Value|Description|  
+|Valor|Descripción|  
 |-----------|-----------------|  
 |SQL_CD_TRUE|Se ha perdido la conexión al servidor.|  
 |SQL_CD_FALSE|La conexión está abierta y disponible para procesar una instrucción.|  
@@ -56,7 +55,7 @@ ms.locfileid: "32948570"
   
  Para obtener más información, consulte [acceso a información de diagnóstico en el registro de eventos extendidos](../../relational-databases/native-client/features/accessing-diagnostic-information-in-the-extended-events-log.md).  
   
-|Value|Description|  
+|Valor|Descripción|  
 |-----------|-----------------|  
 |SQL_ERROR|Error en la conexión.|  
 |SQL_SUCCESS|La conexión se realizó correctamente. El identificador de conexión del cliente se encuentra en el búfer de salida.|  
@@ -64,7 +63,7 @@ ms.locfileid: "32948570"
 ## <a name="sqlcoptssperfdata"></a>SQL_COPT_SS_PERF_DATA  
  El atributo SQL_COPT_SS_PERF_DATA devuelve un puntero a una estructura SQLPERF que contiene las estadísticas de rendimiento del controlador actual. **SQLGetConnectAttr** devolverá NULL si el registro de rendimiento no está habilitado. El controlador no actualiza de manera dinámica las estadísticas en la estructura SQLPERF. Llama a **SQLGetConnectAttr** cada vez que se actualicen las estadísticas de rendimiento.  
   
-|Value|Description|  
+|Valor|Descripción|  
 |-----------|-----------------|  
 |NULL|El registro de rendimiento no está habilitado.|  
 |Cualquier otro valor|Un puntero a una estructura SQLPERF.|  
@@ -75,7 +74,7 @@ ms.locfileid: "32948570"
 ## <a name="sqlcoptssuserdata"></a>SQL_COPT_SS_USER_DATA  
  El atributo SQL_COPT_SS_USER_DATA recupera el puntero de datos de usuario. Los datos de usuario se almacenan en la memoria propiedad del cliente y se registran por conexión. Si el puntero de datos de usuario no se ha establecido, SQL_UD_NOTSET, se devuelve un puntero NULL.  
   
-|Value|Description|  
+|Valor|Descripción|  
 |-----------|-----------------|  
 |SQL_UD_NOTSET|No se establece ningún puntero de datos de usuario.|  
 |Cualquier otro valor|Un puntero a los datos de usuario.|  
@@ -87,12 +86,12 @@ ms.locfileid: "32948570"
   
  Si no se ha establecido SQL_COPT_SS_SERVER_SPN o SQL_COPT_SS_FAILOVER_PARTNER, se devuelve el valor predeterminado (una cadena vacía).  
   
- Para obtener más información acerca de los SPN, vea [nombres principales de servicio & #40; SPN & #41; en las conexiones de cliente & #40; ODBC & #41; ](../../relational-databases/native-client/odbc/service-principal-names-spns-in-client-connections-odbc.md).  
+ Para obtener más información acerca de los SPN, vea [nombres principales de servicio &#40;SPN&#41; en las conexiones de cliente &#40;ODBC&#41;](../../relational-databases/native-client/odbc/service-principal-names-spns-in-client-connections-odbc.md).  
   
 ## <a name="see-also"></a>Vea también  
  [Función SQLGetConnectAttr](http://go.microsoft.com/fwlink/?LinkId=59347)   
  [Detalles de implementación de API de ODBC](../../relational-databases/native-client-odbc-api/odbc-api-implementation-details.md)   
- [SET QUOTED_IDENTIFIER & #40; Transact-SQL & #41;](../../t-sql/statements/set-quoted-identifier-transact-sql.md)   
+ [SET QUOTED_IDENTIFIER &#40;Transact-SQL&#41;](../../t-sql/statements/set-quoted-identifier-transact-sql.md)   
  [SET ANSI_NULLS &#40;Transact-SQL&#41;](../../t-sql/statements/set-ansi-nulls-transact-sql.md)   
  [SET ANSI_PADDING &#40;Transact-SQL&#41;](../../t-sql/statements/set-ansi-padding-transact-sql.md)   
  [SET ANSI_WARNINGS &#40;Transact-SQL&#41;](../../t-sql/statements/set-ansi-warnings-transact-sql.md)  

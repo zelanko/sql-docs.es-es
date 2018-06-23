@@ -4,11 +4,9 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
-ms.component: native-client-odbc-extensions-bulk-copy-functions
 ms.reviewer: ''
 ms.suite: sql
-ms.technology:
-- database-engine
+ms.technology: connectivity
 ms.tgt_pltfrm: ''
 ms.topic: reference
 helpviewer_keywords:
@@ -19,12 +17,12 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
-ms.openlocfilehash: 1e0b8bdab13a6a937c6e97cec3ece700a685deb1
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: cc5e54ef357214a3121c1a7ed964c9ee9bf5955b
+ms.sourcegitcommit: a78fa85609a82e905de9db8b75d2e83257831ad9
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32946070"
+ms.lasthandoff: 06/18/2018
+ms.locfileid: "35703586"
 ---
 # <a name="bcpsetbulkmode"></a>bcp_setbulkmode
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -50,7 +48,7 @@ RETCODE bcp_setbulkmode (
  *HDBC*  
  Identificador de la conexión ODBC habilitado para la copia masiva.  
   
- *propiedad*  
+ *property*  
  Constante de tipo BYTE. Vea la tabla en la sección Comentarios para obtener una lista de las constantes.  
   
  *Years*  
@@ -68,7 +66,7 @@ RETCODE bcp_setbulkmode (
 ## <a name="returns"></a>Devuelve  
  SUCCEED o FAIL  
   
-## <a name="remarks"></a>Comentarios  
+## <a name="remarks"></a>Notas  
  bcp_setbulkmode puede utilizarse para la copia masiva de una consulta o una tabla. Cuando bcp_setbulkmode se utiliza para realizar la copia una instrucción de consulta masiva, debe llamarse antes de llamar a bcp_control con BCP_HINT.  
   
  bcp_setbulkmode es una alternativa al uso de [bcp_setcolfmt](../../relational-databases/native-client-odbc-extensions-bulk-copy-functions/bcp-setcolfmt.md) y [bcp_columns](../../relational-databases/native-client-odbc-extensions-bulk-copy-functions/bcp-columns.md), que solo le permite especificar el formato de una columna por llamada de función.  

@@ -1,0 +1,143 @@
+---
+title: Configuración de los votos y modos de cuórum WSFC (SQL Server) | Microsoft Docs
+ms.custom: ''
+ms.date: 06/13/2017
+ms.prod: sql-server-2014
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- dbe-high-availability
+ms.tgt_pltfrm: ''
+ms.topic: article
+helpviewer_keywords:
+- Availability Groups [SQL Server], WSFC clusters
+- quorum [SQL Server], AlwaysOn and WSFC quorum
+- failover clustering [SQL Server], AlwaysOn Availability Groups
+ms.assetid: ca0d59ef-25f0-4047-9130-e2282d058283
+caps.latest.revision: 12
+author: JennieHubbard
+ms.author: jhubbard
+manager: jhubbard
+ms.openlocfilehash: 821f418856162e1533e4ec42a2a1b5a7276a796c
+ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+ms.translationtype: MT
+ms.contentlocale: es-ES
+ms.lasthandoff: 06/19/2018
+ms.locfileid: "36103252"
+---
+# <a name="wsfc-quorum-modes-and-voting-configuration-sql-server"></a>Configuración de los votos y modos de quórum WSFC (SQL Server)
+  Ambos [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] e instancias de clúster de conmutación por error (FCI) AlwaysOn aprovechar las ventajas de Windows Server Failover Clustering (WSFC) como tecnología de plataforma.  WSFC usa un método basado en quórum para supervisar el estado general del clúster y maximizar la tolerancia a errores en el nivel de nodo. Entender los modos de quórum WSFC y la configuración de las votaciones en los nodos es muy importante para el diseño, el funcionamiento y la solución de problemas de una solución de recuperación de desastres AlwaysOn de alta disponibilidad.  
+  
+ **En este tema:**  
+  
+-   [Detección del estado de clúster por quórum](#ClusterHealthDetectionbyQuorum)  
+  
+-   [Modos de quórum](#QuorumModes)  
+  
+-   [Nodos que votan y nodos que no votan](#VotingandNonVotingNodes)  
+  
+-   [Ajustes recomendados para la votación de quórum](#RecommendedAdjustmentstoQuorumVoting)  
+  
+-   [Tareas relacionadas](#RelatedTasks)  
+  
+-   [Contenido relacionado](#RelatedContent)  
+  
+##  <a name="ClusterHealthDetectionbyQuorum"></a> Detección del estado de clúster por quórum  
+ Cada nodo de un clúster WSFC participa en la comunicación periódica de latido para compartir el estado de mantenimiento del nodo con los demás nodos. Los nodos que no responden se consideran que se encuentran en estado de error.  
+  
+ Un conjunto de nodos de *quórum* es una mayoría de los nodos con derecho a voto y testigos en el clúster WSFC. Un *voto de quórum*periódico determina el estado general de un clúster WSFC.  La presencia de un quórum significa que el clúster es correcto y puede proporcionar tolerancia a errores de nivel de nodo.  
+  
+ La ausencia de un quórum indica que el clúster no es correcto.  El estado general del clúster WSFC debe mantenerse para asegurarse de que los nodos secundarios sanos correctos disponibles para que los nodos primarios puedan conmutar por error.  Si el voto de quórum da error, el clúster WSFC se pondrá sin conexión como medida preventiva.  También hará que todas las instancias de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] registradas con el clúster se detengan.  
+  
+> [!IMPORTANT]  
+>  Si un clúster WSFC se pone sin conexión debido a un error del quórum, se requiere una intervención manual para volver a ponerlo en conexión.  
+>   
+>  Para obtener más información, vea [Recuperación ante desastres del clúster WSFC mediante cuórum forzado &#40;SQL Server&#41;](wsfc-disaster-recovery-through-forced-quorum-sql-server.md)periódico determina el estado general de un clúster WSFC.  
+  
+##  <a name="QuorumModes"></a> Modos de quórum  
+ Un *modo de quórum* se configura en el nivel de clúster WSFC que dicta la metodología que se usa para los votos de quórum.  La utilidad Administrador de clústeres de conmutación por error recomendará un modo de quórum basándose en el número de nodos del clúster.  
+  
+ Los siguientes modos de quórum se pueden usar para determinar qué constituye un quórum de votos:  
+  
+-   **Mayoría de nodos.** Más de la mitad de los nodos que votan en el clúster deben votar afirmativamente para que el clúster sea correcto.  
+  
+-   **Nodo y mayoría de recurso compartido de archivos.** Similar al modo de quórum Mayoría de nodos, excepto en que un recurso compartido de archivos remoto también se configura como testigo de la votación y la conectividad de cualquier nodo para ese recurso compartido también se cuenta como voto afirmativo.  Más de la mitad de los votos posibles debe ser afirmativa para que el clúster sea correcto.  
+  
+     Como práctica recomendada, el recurso compartido de archivos testigo no debe residir en ningún nodo del clúster y debe ser visible para todos los nodos del clúster.  
+  
+-   **Nodo y mayoría de disco.** Similar al modo de quórum Mayoría de nodos, excepto en que un recurso de clúster de disco compartido también se designa como testigo de la votación y la conectividad de cualquier nodo con ese disco compartido también se considera voto afirmativo.  Más de la mitad de los votos posibles debe ser afirmativa para que el clúster sea correcto.  
+  
+-   **Solo disco.** Un recurso de clúster de disco compartido se designa como testigo y la conectividad de cualquier nodo a ese disco compartido se considera voto afirmativo.  
+  
+> [!TIP]  
+>  Al utilizar una configuración asimétrica de almacenamiento para [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)], normalmente debe usar el modo de quórum Mayoría de nodos cuando tenga un número impar de nodos que votan o el modo de quórum Mayoría de recurso compartido de archivo y nodo cuando tiene un número par de nodos que votan.  
+  
+##  <a name="VotingandNonVotingNodes"></a> Nodos que votan y nodos que no votan  
+ De forma predeterminada, cada nodo del clúster WSFC se incluye como miembro del quórum del clúster; cada nodo tiene un único voto para determinar el estado general del clúster y cada nodo intentará continuamente establecer un quórum.  La discusión del quórum hasta este punto ha calificado cuidadosamente el conjunto de nodos de clúster WSFC que votan sobre el estado del clúster como *nodos que votan*.  
+  
+ Ningún nodo individual en un clúster WSFC puede determinar definitivamente que el clúster como conjunto sea correcto o incorrecto.  En un momento dado, desde la perspectiva de cada nodo, puede parecer que alguno de los otros nodos están sin conexión, en el proceso de conmutar por error o que no responden debido a un error de comunicación de red.  Una función clave del voto de quórum es determinar si el estado aparente de cada uno de los nodos del clúster WSFC es de hecho ese estado real de los nodos.  
+  
+ Para todos los modelos de quórum excepto “Solo disco”, la eficacia de un voto de quórum depende de que las comunicaciones entre todos los nodos que votan del clúster sean confiables. Las comunicaciones de red entre los nodos de la misma subred física se deben considerar predecibles; el voto de quórum debe ser de confianza.  
+  
+ Sin embargo, si un nodo de otra subred se considera que no responde en un voto de quórum, pero realmente está en conexión y es correcta, es más probable que se deba a un error de comunicaciones de red entre las subredes.  Según la topología de clúster, el modo de quórum y la configuración de directivas de migración tras error, ese error de comunicaciones de red puede crear en efecto más de un conjunto (o subconjunto) de nodos que votan.  
+  
+ Cuando más de un subconjunto de nodos que votan puede establecer un cuórum por sí solo, lo que se conoce como *escenario de división de cerebro*.  En este escenario, los nodos de los quórums independientes pueden comportarse de forma diferente y en conflicto entre sí.  
+  
+> [!NOTE]  
+>  El escenario de división de cerebro solo es posible si un administrador del sistema realiza manualmente una operación forzada de quórum o, en circunstancias muy poco habituales, una conmutación por error forzada; subdividiendo explícitamente el conjunto de nodos de quórum.  
+  
+ Para simplificar la configuración del cuórum y aumentar el tiempo de actividad, puede ser aconsejable ajustar el valor de *NodeWeight* de cada nodo para que el voto del nodo no se cuente en el cuórum.  
+  
+> [!IMPORTANT]  
+>  Para usar la configuración de NodeWeight, se debe aplicar la siguiente revisión a todos los servidores del clúster de WSFC:  
+>   
+>  [KB2494036](http://support.microsoft.com/kb/2494036): hay disponible una revisión para permitir configurar un nodo de clúster que no tiene votos de quórum en [!INCLUDE[firstref_longhorn](../../../includes/firstref-longhorn-md.md)] y en [!INCLUDE[winserver2008r2](../../../includes/winserver2008r2-md.md)]  
+  
+##  <a name="RecommendedAdjustmentstoQuorumVoting"></a> Ajustes recomendados para la votación de quórum  
+ Al habilitar o deshabilitar el voto de un nodo determinado de WSFC, siga estas instrucciones:  
+  
+-   **Sin voto de forma predeterminada.** Suponga que cada nodo no debe votar sin una justificación explícita.  
+  
+-   **Incluya todas las réplicas principales.** Cada nodo WSFC que hospeda una réplica principal de grupo de disponibilidad o es el propietario preferido de una FCI debe tener un voto.  
+  
+-   **Incluya los posibles propietarios de la conmutación automática por error.** Cada nodo que puede hospedar una réplica principal, como resultado de una conmutación automática por error de la FCI o del grupo de disponibilidad, debe tener un voto. Si solo hay un grupo de disponibilidad en el clúster de WSFC y las réplicas de disponibilidad están hospedadas en instancias independientes, esta regla incluye solo la réplica secundaria que es el destino de la conmutación por error automática.  
+  
+-   **Excluya los nodos secundarios del sitio.** En general, no proporcione votos a los nodos de WSFC que residen en un sitio secundario de recuperación de desastres.  No desea que los nodos del sitio secundario contribuyan a la decisión de poner el clúster fuera de conexión cuando no hay ningún problema con el sitio principal.  
+  
+-   **Número impar de votos.** Si es necesario, agregue un recurso compartido de archivos testigo, un nodo testigo o un disco testigo al clúster y ajuste el modo de quórum para evitar posibles empates en el voto de quórum.  
+  
+-   **Vuelva a valorar las asignaciones de votos después de la conmutación por error.** No es conveniente realizar la conmutación por error en una configuración de clúster que no admita un quórum correcto.  
+  
+> [!IMPORTANT]  
+>  Al validar el voto de quórum de WSFC, el Asistente para grupo de disponibilidad de AlwaysOn muestra una advertencia si se cumple cualquiera de las siguientes condiciones:  
+>   
+>  -   El nodo de clúster que hospeda la réplica principal no tiene un voto  
+> -   Una réplica secundaria está configurada para la conmutación automática por error y su nodo de clúster no tiene un voto.  
+> -   [KB2494036](http://support.microsoft.com/kb/2494036) no está instalado en todos los nodos de clúster que hospedan las réplicas de disponibilidad. Esta revisión es necesaria para agregar o quitar los votos de nodos de clúster en las implementaciones de varios sitios. Sin embargo, no suele ser necesaria en las implementaciones de un solo sitio y la advertencia puede omitirse de forma segura.  
+  
+> [!TIP]  
+>  [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] expone varias vistas de administración dinámica (DMV) del sistema que pueden ayudarle a administrar la configuración de clúster WSFC relacionada y la votación del cuórum de los nodos.  
+>   
+>  Para obtener más información, consulte:  [sys.dm_hadr_cluster](/sql/relational-databases/system-dynamic-management-views/sys-dm-hadr-cluster-transact-sql), [sys.dm_hadr_cluster_members](/sql/relational-databases/system-dynamic-management-views/sys-dm-hadr-cluster-members-transact-sql), [sys.dm_os_cluster_nodes](/sql/relational-databases/system-dynamic-management-views/sys-dm-os-nodes-transact-sql)y [sys.dm_hadr_cluster_networks](/sql/relational-databases/system-dynamic-management-views/sys-dm-hadr-cluster-networks-transact-sql)  
+  
+##  <a name="RelatedTasks"></a> Tareas relacionadas  
+  
+-   [Ver la configuración de NodeWeight de quórum de clúster](view-cluster-quorum-nodeweight-settings.md)  
+  
+-   [Configurar los valores de NodeWeight de cuórum de clúster](configure-cluster-quorum-nodeweight-settings.md)  
+  
+##  <a name="RelatedContent"></a> Contenido relacionado  
+  
+-   [Guía de soluciones de Microsoft SQL Server AlwaysOn para alta disponibilidad y recuperación ante desastres](http://go.microsoft.com/fwlink/?LinkId=227600)  
+  
+-   [Comprobación de configuración de voto de quórum en asistentes para grupos de disponibilidad AlwaysOn](http://blogs.msdn.com/b/sqlalwayson/archive/2012/03/13/quorum-vote-configuration-check-in-alwayson-availability-group-wizards-andy-jing.aspx)  
+  
+-   [Tecnologías de Windows Server: clústeres de conmutación por error](http://technet.microsoft.com/library/cc732488\(v=WS.10\).aspx)  
+  
+-   [Guía paso a paso para configurar el quórum en un clúster de conmutación por error](http://technet.microsoft.com/library/cc770620\(WS.10\).aspx)  
+  
+## <a name="see-also"></a>Vea también  
+ [Recuperación ante desastres del clúster WSFC mediante cuórum forzado &#40;SQL Server&#41;](wsfc-disaster-recovery-through-forced-quorum-sql-server.md)   
+ [Clústeres de conmutación por error de Windows Server &#40;WSFC&#41; con SQL Server](windows-server-failover-clustering-wsfc-with-sql-server.md)  
+  
+  

@@ -9,12 +9,12 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: 33270141fc67581adaeaeca9df8411c68fe0ac50
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.openlocfilehash: ece05b0bb8c21c628632e2efca8e54e317f38fab
+ms.sourcegitcommit: a78fa85609a82e905de9db8b75d2e83257831ad9
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/10/2018
-ms.locfileid: "34018002"
+ms.lasthandoff: 06/18/2018
+ms.locfileid: "35700906"
 ---
 # <a name="high-availability-and-scalability-in-analysis-services"></a>Alta disponibilidad y escalabilidad en Analysis Services
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
@@ -85,7 +85,7 @@ ms.locfileid: "34018002"
 |Modelos multidimensionales que usan almacenamiento MOLAP|Elija una configuración equilibrada que dé cabida a E/S de disco para cargar datos rápidamente y a suficiente RAM para almacenar datos en caché.|  
 |Modelos multidimensionales que usan almacenamiento ROLAP|Maximice la E/S de disco y minimice la latencia de red.|  
   
-## <a name="highly-availability-and-redundancy-through-wsfc"></a>Alta disponibilidad y redundancia a través de WSFC  
+## <a name="high-availability-and-redundancy-through-wsfc"></a>Alta disponibilidad y redundancia a través de WSFC  
  Analysis Services se puede instalar en un clúster de conmutación por error de Windows (WSFC) existente para lograr una disponibilidad elevada que permita restaurar el servicio en el menor tiempo posible.  
   
  Los clústeres de conmutación por error proporcionan pleno acceso (de lectura y de escritura diferida) a la base de datos, pero solo de nodo a nodo. Las bases de datos secundarias se ejecutan en otros nodos del clúster a modo de servidores de reemplazo si el primer nodo deja de funcionar.  

@@ -1,0 +1,105 @@
+---
+title: Adaptador de SQL Server para la nube | Documentos de Microsoft
+ms.custom: ''
+ms.date: 03/09/2017
+ms.prod: sql-server-2014
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- database-engine
+ms.tgt_pltfrm: ''
+ms.topic: article
+helpviewer_keywords:
+- Cloud adapter
+- Deploy to Windows Azure
+ms.assetid: 82ed0d0f-952d-4d49-aa36-3855a3ca9877
+caps.latest.revision: 12
+author: JennieHubbard
+ms.author: jhubbard
+manager: jhubbard
+ms.openlocfilehash: 74a991f9dc8c20e1cf4342312ecd66f95e1b240d
+ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+ms.translationtype: MT
+ms.contentlocale: es-ES
+ms.lasthandoff: 06/19/2018
+ms.locfileid: "36107032"
+---
+# <a name="cloud-adapter-for-sql-server"></a>Adaptador para la nube de SQL Server
+  El servicio del adaptador para la nube se crea como parte del aprovisionamiento de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] en una máquina virtual de Windows Azure. El servicio Adaptador para la nube genera un certificado SSL autofirmado la primera vez que se ejecuta y, después, se ejecuta como una cuenta de **sistema local** . Genera un archivo de configuración que utiliza para configurarse a sí mismo. El adaptador para la nube también crea una regla de Firewall de Windows para permitir conexiones entrantes de TCP en el puerto predeterminado 11435.  
+  
+ El adaptador para la nube es un servicio sincrónico sin estado que recibe mensajes de la instancia local de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]. Cuando se detiene el servicio del adaptador para la nube, detiene el adaptador para la nube de acceso remoto, desenlaza el certificado SSL y deshabilita la regla de Firewall de Windows.  
+  
+## <a name="cloud-adapter-requirements"></a>Requisitos del adaptador para la nube  
+ Tenga en cuenta los siguientes requisitos a la hora de instalar, habilitar y ejecutar el adaptador para la nube de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]:  
+  
+-   Adaptador para la nube es compatible con [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 2012 y versiones posteriores. En [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 2012, el adaptador para la nube de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] requiere Objetos de administración de SQL para [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 2012.  
+  
+-   El servicio web del adaptador para la nube se ejecuta como una cuenta **Sistema local** y comprueba las credenciales del cliente antes de ejecutar cualquier tarea. Las credenciales proporcionadas por el cliente deben pertenecer a la cuenta de usuario que sea miembro de la variable local **administradores** grupo en el equipo remoto.  
+  
+-   El adaptador para la nube solo admite la autenticación de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)].  
+  
+-   El adaptador para la nube utiliza la cuenta de administrador local de VM para ejecutar comandos en el equipo local, no una cuenta sa.  
+  
+-   El adaptador para la nube escucha en TCP/IP. El puerto predeterminado es 11435.  
+  
+-   El adaptador para la nube debe tener permisos para crear y modificar reglas de Firewall de Windows.  
+  
+## <a name="cloud-adapter-configuration-settings"></a>Valores de configuración del adaptador para la nube  
+ Utilice los detalles de configuración siguientes para modificar la configuración de un adaptador para la nube.  
+  
+-   **Ruta de acceso predeterminada del archivo de configuración** : C:\Program Files\Microsoft SQL Server\120\Tools\CloudAdapter\  
+  
+-   **Parámetros de archivo de configuración** -  
+  
+    -   \<Configuración >  
+  
+        -   \<appSettings >  
+  
+            -   \<Agregar clave = "WebServicePort" value = "" / >  
+  
+            -   \<Agregar clave = "WebServiceCertificate" value = "GUID" / >  
+  
+            -   \<Agregar clave = "ExposeExceptionDetails" value = "true" / >  
+  
+        -   \</appSettings >  
+  
+    -   \</Configuration >  
+  
+-   **Detalles del certificado** : el certificado tiene los valores siguientes:  
+  
+    -   Subject: "CN = CloudAdapter\<VMName >, DC = SQL Server, DC = Microsoft"  
+  
+    -   El certificado solo debe tener un EKU de autenticación de servidor habilitado.  
+  
+    -   La longitud de la clave del certificado es 2048.  
+  
+ **Valores del archivo de configuración**:  
+  
+|Configuración|Valores|Valor predeterminado|Comentarios|  
+|-------------|------------|-------------|--------------|  
+|WebServicePort|1-65535|11435|Cuando no se especifique, se utilizará 11435.|  
+|WebServiceCertificate|Thumbprint|Vacía|Si está vacío, se genera un nuevo certificado autofirmado.|  
+|ExposeExceptionDetails|True/False|False||  
+  
+## <a name="cloud-adapter-troubleshooting"></a>Solución de problemas del adaptador para la nube  
+ Use la información siguiente para solucionar problemas del adaptador para la nube de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]:  
+  
+-   **Control de errores y registro** : los errores y los mensajes de estado se escriben en el registro de eventos de aplicación.  
+  
+-   **Seguimiento, eventos** : todos los eventos se escriben en el registro de eventos de aplicación.  
+  
+-   **Control, configuración** : usar el archivo de configuración que se encuentra en: C:\Program Files\Microsoft SQL Server\120\Tools\CloudAdapter\\.  
+  
+|Error|Id. de error|Causa|Solución|  
+|-----------|--------------|-----------|----------------|  
+|Excepción al agregar el certificado al almacén de certificados. {Texto de la excepción}.|45560|Permisos del almacén de certificados de equipo|Asegúrese de que el servicio del adaptador para la nube tenga permisos para agregar certificados al almacén de certificados del equipo.|  
+|Excepción al intentar configurar el enlace SSL para el puerto {número de puerto} y el certificado {huella digital}. {Excepción}.|45561|Otra aplicación ya ha utilizado el puerto o enlazó un certificado a él.|Quite los enlaces existentes o cambie el puerto del adaptador para la nube en el archivo de configuración.|  
+|No se encontró el certificado SSL [{huella digital}] en el almacén de certificados.|45564|La huella digital del certificado está en el archivo de configuración, pero el almacén de certificados personal para el servicio no contiene el certificado.<br /><br /> Permisos insuficientes.|Asegúrese de que el certificado está en el almacén de certificados personal para el servicio.<br /><br /> Asegúrese de que el servicio tiene los permisos correctos para el almacén.|  
+|No se pudo iniciar el servicio web. {Texto de la excepción}.|45570|Descrito en la excepción.|Habilite ExposeExceptionDetails y utilice la información ampliada de la excepción.|  
+|El certificado [{huella digital}] ha expirado.|45565|El archivo de configuración hace referencia a un certificado expirado.|Agregue un certificado válido y actualice el archivo de configuración con su huella digital.|  
+|Error del servicio Web: {0}.|45571|Descrito en la excepción.|Habilite ExposeExceptionDetails y utilice la información ampliada de la excepción.|  
+  
+## <a name="see-also"></a>Vea también  
+ [Implementar una base de datos de SQL Server en una máquina virtual de Microsoft Azure](../relational-databases/databases/deploy-a-sql-server-database-to-a-microsoft-azure-virtual-machine.md)  
+  
+  

@@ -1,0 +1,47 @@
+---
+title: Cuadro de diálogo de nivel de protección de proyecto y paquete | Documentos de Microsoft
+ms.custom: ''
+ms.date: 06/13/2017
+ms.prod: sql-server-2014
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- integration-services
+ms.tgt_pltfrm: ''
+ms.topic: article
+f1_keywords:
+- sql12.dts.packageprotectionlevel.f1
+- sql12.ssis.bids.projectprotectionlevel.f1
+helpviewer_keywords:
+- Package Protection Level dialog box
+ms.assetid: 023af8d3-aea0-45a9-ac32-554634bf4b9a
+caps.latest.revision: 23
+author: douglaslMS
+ms.author: douglasl
+manager: jhubbard
+ms.openlocfilehash: b6e1f6bea2a13e223aa1466e43c600a83e32544f
+ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+ms.translationtype: MT
+ms.contentlocale: es-ES
+ms.lasthandoff: 06/19/2018
+ms.locfileid: "36107903"
+---
+# <a name="package-and-project-protection-level-dialog-box"></a>Nivel de protección de paquetes y del proyecto, cuadro de diálogo
+  Utilice el cuadro de diálogo **Nivel de protección de paquetes** para actualizar el nivel de protección de un paquete. El nivel de protección determina el método de protección, la contraseña o la clave de usuario, así como el ámbito de protección de paquetes. La protección puede incluir todos los datos o solo los datos confidenciales.  
+  
+ Para comprender los requisitos y las opciones de seguridad de paquetes, quizá le resulte útil ver [Control de acceso a la información confidencial en paquetes](security/access-control-for-sensitive-data-in-packages.md) e [Información general sobre seguridad &#40;Integration Services&#41;](security/security-overview-integration-services.md).  
+  
+## <a name="options"></a>Opciones  
+ **Package protection level**  
+ Seleccione un nivel de protección de la lista.  
+  
+ **Contraseña**  
+ Si usa el nivel de protección **Cifrar la información confidencial con una contraseña** o **Cifrar todos los datos con una contraseña** , escriba una contraseña.  
+  
+ **Vuelva a escribir la contraseña**  
+ Escriba la contraseña nuevamente.  
+  
+## <a name="see-also"></a>Vea también  
+ [Paquetes de Integration Services &#40;SSIS&#41;](../../2014/integration-services/integration-services-ssis-packages.md)  
+  
+  

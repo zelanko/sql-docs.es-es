@@ -4,11 +4,9 @@ ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
-ms.component: native-client-ole-db-interfaces
 ms.reviewer: ''
 ms.suite: sql
-ms.technology:
-- database-engine
+ms.technology: connectivity
 ms.tgt_pltfrm: ''
 ms.topic: reference
 apiname:
@@ -22,11 +20,12 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
-ms.openlocfilehash: 74efcf16e4844b5ee70f6d3ed8226682057969ff
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: da9cd1408c12e055a10a208021de1e16dac9d9eb
+ms.sourcegitcommit: a78fa85609a82e905de9db8b75d2e83257831ad9
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/18/2018
+ms.locfileid: "35694556"
 ---
 # <a name="ibcpsessionbcpdone-ole-db"></a>IBCPSession::BCPDone (OLE DB)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -41,7 +40,7 @@ ms.lasthandoff: 05/03/2018
 HRESULT BCPDone(void);  
 ```  
   
-## <a name="remarks"></a>Comentarios  
+## <a name="remarks"></a>Notas  
  Ninguna otra operación puede llamarse en el [IBCPSession](../../relational-databases/native-client-ole-db-interfaces/ibcpsession-ole-db.md) interfaz después de llamar a la **BCPDone** método. La única posibilidad es llamar a la [ibcpsession:: BCPInit](../../relational-databases/native-client-ole-db-interfaces/ibcpsession-bcpinit-ole-db.md) método para iniciar una nueva operación de copia masiva. Esto es similar a llamar a la [IRowsetFastLoad:: Commit](../../relational-databases/native-client-ole-db-interfaces/irowsetfastload-commit-ole-db.md) método.  
   
 ## <a name="return-code-values"></a>Valores de código de retorno  

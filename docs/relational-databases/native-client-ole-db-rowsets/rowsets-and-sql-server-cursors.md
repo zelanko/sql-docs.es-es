@@ -4,10 +4,9 @@ ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
-ms.component: native-client-ole-db-rowsets
 ms.reviewer: ''
 ms.suite: sql
-ms.technology: ''
+ms.technology: connectivity
 ms.tgt_pltfrm: ''
 ms.topic: reference
 helpviewer_keywords:
@@ -22,11 +21,12 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
-ms.openlocfilehash: 75e51224ca4921b45a3606dbd6bbab49cb6824d1
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 64ac951a3df348910f368c5944196d45c11c95c4
+ms.sourcegitcommit: a78fa85609a82e905de9db8b75d2e83257831ad9
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/18/2018
+ms.locfileid: "35703316"
 ---
 # <a name="rowsets-and-sql-server-cursors"></a>Conjuntos de filas y cursores de servidor de SQL Server
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -68,7 +68,7 @@ ms.lasthandoff: 05/03/2018
   
  Las siguientes propiedades de conjunto de filas indican al proveedor OLE DB de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client que use cursores de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Algunas propiedades pueden combinarse con otras sin ningún riesgo. Por ejemplo, un conjunto de filas que exhibe las propiedades DBPROP_IRowsetChange y DBPROP_IRowsetScroll será un conjunto de filas de marcador que exhibe un comportamiento de actualización inmediato. Otras propiedades se excluyen mutuamente. Por ejemplo, un conjunto de filas que exhibe DBPROP_OTHERINSERT no puede contener marcadores.  
   
-|Id. de propiedad|Value|Comportamiento del conjunto de filas|  
+|Id. de propiedad|Valor|Comportamiento del conjunto de filas|  
 |-----------------|-----------|---------------------|  
 |DBPROP_SERVERCURSOR|VARIANT_TRUE|No puede actualizar los datos de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] a través del conjunto de filas. El conjunto de filas es secuencial y solamente admite desplazamiento y captura hacia delante. Se admite la posición de fila relativa. El texto de comando puede incluir una cláusula ORDER BY.|  
 |DBPROP_CANSCROLLBACKWARDS o DBPROP_CANFETCHBACKWARDS|VARIANT_TRUE|No puede actualizar los datos de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] a través del conjunto de filas. El conjunto de filas admite desplazamiento y captura en cualquier dirección. Se admite la posición de fila relativa. El texto de comando puede incluir una cláusula ORDER BY.|  
@@ -97,7 +97,7 @@ ms.lasthandoff: 05/03/2018
   
  Para usar un tipo de modelo de cursor determinado, busque la columna correspondiente al modelo de cursor y busque todas las propiedades de conjunto de filas que tengan el valor 'T' en la columna. Establezca estas propiedades de conjunto de filas en VARIANT_TRUE para usar ese modelo de cursor específico. Las propiedades del conjunto de filas que contienen '-' como valor pueden establecerse en VARIANT_TRUE o VARIANT_FALSE.  
   
-|Modelos de cursor/propiedades de conjunto de filas|Predeterminado<br /><br /> result<br /><br /> conjunto<br /><br /> (SL)|Rápido<br /><br /> solo <br /><br /> avance<br /><br /> (SL)|Estático<br /><br /> (SL)|Keyset<br /><br /> conjuntos de claves<br /><br /> (SL)|  
+|Modelos de cursor/propiedades de conjunto de filas|Valor predeterminado<br /><br /> result<br /><br /> conjunto<br /><br /> (SL)|Rápido<br /><br /> solo <br /><br /> avance<br /><br /> (SL)|Estático<br /><br /> (SL)|Keyset<br /><br /> conjuntos de claves<br /><br /> (SL)|  
 |--------------------------------------|-------------------------------------------|--------------------------------------------|-----------------------|----------------------------------|  
 |DBPROP_SERVERCURSOR|F|T|T|T|  
 |DBPROP_DEFERRED|F|F|-|-|  

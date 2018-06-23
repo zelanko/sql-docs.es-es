@@ -2,9 +2,10 @@
 title: Compatibilidad con transacciones distribuidas | Documentos de Microsoft
 description: Transacciones distribuidas en el controlador de OLE DB para SQL Server
 ms.custom: ''
-ms.date: 03/26/2018
+ms.date: 06/14/2018
 ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
+ms.component: oledb|ole-db-transactions
 ms.reviewer: ''
 ms.suite: sql
 ms.technology: connectivity
@@ -21,15 +22,17 @@ helpviewer_keywords:
 author: pmasl
 ms.author: Pedro.Lopes
 manager: craigg
-ms.openlocfilehash: 82930dcd5562fb2663ba63a8701dc146b65bc1ba
-ms.sourcegitcommit: f16003fd1ca28b5e06d5700e730f681720006816
+ms.openlocfilehash: 469f72b416e1e262d2a775b1b49e14723a44b171
+ms.sourcegitcommit: 03ba89937daeab08aa410eb03a52f1e0d212b44f
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/11/2018
-ms.locfileid: "35307144"
+ms.lasthandoff: 06/16/2018
+ms.locfileid: "35690308"
 ---
 # <a name="supporting-distributed-transactions"></a>Compatibilidad con transacciones distribuidas
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
+[!INCLUDE[appliesto-ss-asdb-asdw-pdw-asdbmi-md](../../../includes/appliesto-ss-asdb-asdw-pdw-asdbmi-md.md)]
+
+[!INCLUDE[Driver_OLEDB_Download](../../../includes/driver_oledb_download.md)]
 
   Puede usar el controlador OLE DB para los consumidores de SQL Server la **ITransactionJoin:: JoinTransaction** método para participar en una transacción distribuida coordinada por el Coordinador de transacciones distribuidas de Microsoft (MS DTC).  
   

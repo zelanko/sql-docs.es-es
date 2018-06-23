@@ -4,10 +4,9 @@ ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
-ms.component: native-client-ole-db-tables-indexes
 ms.reviewer: ''
 ms.suite: sql
-ms.technology: ''
+ms.technology: connectivity
 ms.tgt_pltfrm: ''
 ms.topic: reference
 helpviewer_keywords:
@@ -17,16 +16,16 @@ helpviewer_keywords:
 - adding tables
 - CreateTable function
 ms.assetid: a7b8d142-d76a-44d9-a583-86ac5109fbe8
-caps.latest.revision: 32
 author: MightyPen
 ms.author: genemi
 manager: craigg
 monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
-ms.openlocfilehash: aaa1f66f1f860752056c44617046ae00eff6167a
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 955444b94d4d30ef247c40a21fe8cb017f84f400
+ms.sourcegitcommit: a78fa85609a82e905de9db8b75d2e83257831ad9
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/18/2018
+ms.locfileid: "35695986"
 ---
 # <a name="creating-sql-server-tables"></a>Crear tablas de SQL Server
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -36,9 +35,9 @@ ms.lasthandoff: 05/03/2018
   
  Cuando el consumidor llama **ITableDefinition:: CreateTable**, si el valor de la propiedad DBPROP_TBL_TEMPTABLE es VARIANT_TRUE, la [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] proveedor OLE DB de Native Client genera un nombre de tabla temporal para el consumidor. El consumidor establece el *pTableID* parámetro de la **CreateTable** método en NULL. Las tablas temporales con nombres generados por el [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] proveedor OLE DB de Native Client no aparecen en la **tablas** conjunto de filas, pero son accesibles a través de la **IOpenRowset** interfaz.  
   
- Cuando los consumidores especifican el nombre de tabla en la *pwszName* miembro de la *uName* union en la *pTableID* parámetro, el [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] proveedor OLE DB de Native Client crea un [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] tabla con ese nombre. Se aplican las restricciones de denominación de tabla de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] y el nombre de tabla puede indicar una tabla permanente o una tabla temporal local o global. Para obtener más información, consulte [CREATE TABLE](../../t-sql/statements/create-table-transact-sql.md). El *ppTableID* parámetro puede ser NULL.  
+ Cuando los consumidores especifican el nombre de tabla en la *pwszName* miembro de la *uName* union en la *pTableID* parámetro, el [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] proveedor Native Client OLE DB crea un [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] tabla con ese nombre. Se aplican las restricciones de denominación de tabla de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] y el nombre de tabla puede indicar una tabla permanente o una tabla temporal local o global. Para obtener más información, consulte [CREATE TABLE](../../t-sql/statements/create-table-transact-sql.md). El *ppTableID* parámetro puede ser NULL.  
   
- El [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] proveedor OLE DB de Native Client puede generar los nombres de tablas permanentes o temporales. Cuando el consumidor establece el *pTableID* parámetro en NULL y conjuntos de *ppTableID* para que apunte a un DBID válido\*, el [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] proveedor OLE DB de Native Client devuelve el nombre generado de la tabla en la *pwszName* miembro de la *uName* unión de DBID señalado por el valor de *ppTableID*. Para crear un archivo temporal, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] tabla denominadas por el proveedor OLE DB de Native Client, el consumidor incluye la propiedad de tabla DBPROP_TBL_TEMPTABLE de OLE DB en una propiedad de tabla establecido que se hace referencia en el *rgPropertySets* parámetro. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]Native Client OLE DB denominado proveedor tablas temporales son locales.  
+ El [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] proveedor OLE DB de Native Client puede generar los nombres de tablas permanentes o temporales. Cuando el consumidor establece el *pTableID* parámetro en NULL y conjuntos de *ppTableID* para que apunte a un DBID válido\*, el [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] proveedor OLE DB de Native Client devuelve el nombre generado de la tabla en la *pwszName* miembro de la *uName* unión de DBID señalado por el valor de *ppTableID*. Para crear un archivo temporal, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] tabla denominadas por el proveedor OLE DB de Native Client, el consumidor incluye la propiedad de tabla DBPROP_TBL_TEMPTABLE de OLE DB en una propiedad de tabla establecido que se hace referencia en el *rgPropertySets* parámetro. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client OLE DB denominado proveedor tablas temporales son locales.  
   
  **CreateTable** devuelve DB_E_BADTABLEID si el *eKind* miembro de la *pTableID* parámetro no indica DBKIND_NAME.  
   
@@ -58,9 +57,9 @@ ms.lasthandoff: 05/03/2018
   
  Las propiedades de columna de un DBCOLUMNDESC se interpretan como sigue.  
   
-|Id. de propiedad|Description|  
+|Id. de propiedad|Descripción|  
 |-----------------|-----------------|  
-|DBPROP_COL_AUTOINCREMENT|L/E lectura/escritura<br /><br /> Valor predeterminado: VARIANT_FALSE. Descripción: establece la propiedad de identidad en la columna creada. Para [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], la propiedad de identidad es válida para una columna única dentro de una tabla. Establecer la propiedad en VARIANT_TRUE para más de una sola columna genera un error cuando la [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] proveedor OLE DB de Native Client intenta crear la tabla en el servidor.<br /><br /> El [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] propiedad identity solo es válida para el **entero**, **numérico**, y **decimal** tipos cuando la escala es 0. Establecer la propiedad en VARIANT_TRUE en una columna de cualquier otro tipo de datos genera un error cuando la [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] proveedor OLE DB de Native Client intenta crear la tabla en el servidor.<br /><br /> El [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] proveedor OLE DB de Native Client devuelve DB_S_ERRORSOCCURRED cuando DBPROP_COL_AUTOINCREMENT y DBPROP_COL_NULLABLE son VARIANT_TRUE y *dwOption* de DBPROP_COL_NULLABLE no es DBPROPOPTIONS_REQUIRED. Se devuelve DB_E_ERRORSOCCURRED cuando DBPROP_COL_AUTOINCREMENT y DBPROP_COL_NULLABLE son VARIANT_TRUE y *dwOption* de DBPROP_COL_NULLABLE es igual a DBPROPOPTIONS_REQUIRED. La columna se define con el [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] propiedad de identidad y el DBPROP_COL_NULLABLE *dwStatus* miembro se establece en DBPROPSTATUS_CONFLICTING.|  
+|DBPROP_COL_AUTOINCREMENT|L/E lectura/escritura<br /><br /> Valor predeterminado: VARIANT_FALSE. Descripción: establece la propiedad de identidad en la columna creada. Para [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], la propiedad de identidad es válida para una columna única dentro de una tabla. Establecer la propiedad en VARIANT_TRUE para más de una sola columna genera un error cuando la [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] proveedor OLE DB de Native Client intenta crear la tabla en el servidor.<br /><br /> El [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] propiedad identity solo es válida para el **entero**, **numérico**, y **decimal** tipos cuando la escala es 0. Establecer la propiedad en VARIANT_TRUE en una columna de cualquier otro tipo de datos genera un error cuando la [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] proveedor OLE DB de Native Client intenta crear la tabla en el servidor.<br /><br /> El [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] proveedor OLE DB de Native Client devuelve DB_S_ERRORSOCCURRED cuando DBPROP_COL_AUTOINCREMENT y DBPROP_COL_NULLABLE son VARIANT_TRUE y *dwOption* de DBPROP_COL_NULLABLE no es DBPROPOPTIONS_ Obligatorio. Se devuelve DB_E_ERRORSOCCURRED cuando DBPROP_COL_AUTOINCREMENT y DBPROP_COL_NULLABLE son VARIANT_TRUE y *dwOption* de DBPROP_COL_NULLABLE es igual a DBPROPOPTIONS_REQUIRED. La columna se define con el [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] propiedad de identidad y el DBPROP_COL_NULLABLE *dwStatus* miembro se establece en DBPROPSTATUS_CONFLICTING.|  
 |DBPROP_COL_DEFAULT|L/E lectura/escritura<br /><br /> Valor predeterminado: ninguno<br /><br /> Descripción: crea la restricción DEFAULT de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] para la columna.<br /><br /> El *vValue* miembro DBPROP puede ser cualquiera de varios tipos. El *vValue.vt* miembro debe especificar un tipo compatible con el tipo de datos de la columna. Por ejemplo, la definición de BSTR N/A como el valor predeterminado para una columna definida como DBTYPE_WSTR es una coincidencia compatible. Definir el mismo valor predeterminado en una columna definida como DBTYPE_R8 genera un error cuando la [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] proveedor OLE DB de Native Client intenta crear la tabla en el servidor.|  
 |DBPROP_COL_DESCRIPTION|L/E lectura/escritura<br /><br /> Valor predeterminado: ninguno<br /><br /> Descripción: La propiedad de columna DBPROP_COL_DESCRIPTION no implementa la [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] proveedor Native Client OLE DB.<br /><br /> El *dwStatus* miembro de la estructura DBPROP devuelve DBPROPSTATUS_NOTSUPPORTED cuando el consumidor intenta escribir el valor de propiedad.<br /><br /> Establecer la propiedad no constituye un error grave para el [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] proveedor Native Client OLE DB. Si todos los demás valores de parámetro son válidos, se crea la tabla de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].|  
 |DBPROP_COL_FIXEDLENGTH|L/E lectura/escritura<br /><br /> Valor predeterminado: VARIANT_FALSE<br /><br /> Descripción: El [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] proveedor OLE DB de Native Client utiliza DBPROP_COL_FIXEDLENGTH para determinar la asignación de tipos de datos cuando el consumidor define el tipo de datos de una columna mediante el uso de la *wType* miembro de DBCOLUMNDESC. Para obtener más información, consulte [Data Type Mapping en ITableDefinition](../../relational-databases/native-client-ole-db-data-types/data-type-mapping-in-itabledefinition.md).|  
@@ -70,7 +69,7 @@ ms.lasthandoff: 05/03/2018
   
  Cuando el consumidor llama **ITableDefinition:: CreateTable**, el [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] proveedor OLE DB de Native Client interpreta las propiedades de la tabla como sigue.  
   
-|Id. de propiedad|Description|  
+|Id. de propiedad|Descripción|  
 |-----------------|-----------------|  
 |DBPROP_TBL_TEMPTABLE|L/E lectura/escritura<br /><br /> Valor predeterminado: VARIANT_FALSE. Descripción: de forma predeterminada, la [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] proveedor OLE DB de Native Client crea tablas denominadas por el consumidor. Cuando VARIANT_TRUE, la [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] proveedor OLE DB de Native Client genera un nombre de tabla temporal para el consumidor. El consumidor establece el *pTableID* parámetro de **CreateTable** en NULL. El *ppTableID* parámetro debe contener un puntero válido.|  
   

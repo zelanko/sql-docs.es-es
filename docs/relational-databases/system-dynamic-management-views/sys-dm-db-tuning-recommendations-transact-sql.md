@@ -26,12 +26,12 @@ author: jovanpop-msft
 ms.author: jovanpop
 manager: craigg
 monikerRange: = azuresqldb-current || >= sql-server-2017 || = sqlallproducts-allversions
-ms.openlocfilehash: 148c1d6573b0731b0b3dc4361dfafb8d98de7048
-ms.sourcegitcommit: 7019ac41524bdf783ea2c129c17b54581951b515
+ms.openlocfilehash: ff9639268b4b7db33cd36f0cb6dc9d0407379ade
+ms.sourcegitcommit: a78fa85609a82e905de9db8b75d2e83257831ad9
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/23/2018
-ms.locfileid: "34466591"
+ms.lasthandoff: 06/18/2018
+ms.locfileid: "35702236"
 ---
 # <a name="sysdmdbtuningrecommendations-transact-sql"></a>Sys.DM\_db\_para la optimización\_recomendaciones (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2017-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2017-asdb-xxxx-xxx-md.md)]
@@ -40,11 +40,11 @@ ms.locfileid: "34466591"
   
  En [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)], las vistas de administración dinámica no pueden exponer información que impactaría a la contención de la base de datos ni acerca de otras bases de datos a las que el usuario tenga acceso. Para evitar exponer esta información, cada fila que contiene datos que no pertenecen al inquilino conectado se filtra.
 
-| **Nombre de columna** | **Tipo de datos** | **Description** |
+| **Nombre de columna** | **Data type** | **Descripción** |
 | --- | --- | --- |
 | **Nombre** | **nvarchar(4000)** | Nombre único de la recomendación. |
 | **Tipo** | **nvarchar(4000)** | El nombre de la opción de optimización automática que genera la recomendación, por ejemplo, `FORCE_LAST_GOOD_PLAN` |
-| **Motivo** | **nvarchar(4000)** | Motivo por qué se proporcionó esta recomendación. |
+| **motivo** | **nvarchar(4000)** | Motivo por qué se proporcionó esta recomendación. |
 | **válido\_desde** | **datetime2** | La primera vez que se generó esta recomendación. |
 | **última\_actualizar** | **datetime2** | La última vez que se generó esta recomendación. |
 | **state** | **nvarchar(4000)** | Documento JSON que describe el estado de la recomendación. Están disponibles los campos siguientes:<br />-   `currentValue` -estado actual de la recomendación.<br />-   `reason` – constante que describe por qué es la recomendación en el estado actual.|
@@ -61,11 +61,11 @@ ms.locfileid: "34466591"
 | **Puntuación** | **int** | Calcula el valor e impacto de esta recomendación en 0 y 100 escala (cuanto mayor sea la mejor) |
 | **Detalles** | **nvarchar(max)** | Documento JSON que contiene información más detallada acerca de la recomendación. Están disponibles los campos siguientes:<br /><br />`planForceDetails`<br />-    `queryId` -consulta\_identificador de la consulta devuelta.<br />-    `regressedPlanId` -plan_id del plan devuelta.<br />-   `regressedPlanExecutionCount` -Se detectó número de ejecuciones de la consulta devueltas plan antes de la regresión.<br />-    `regressedPlanAbortedCount` -Número de errores detectados durante la ejecución del plan devuelta.<br />-    `regressedPlanCpuTimeAverage` -Tiempo de CPU medio utilizado por la consulta devuelta antes de que se detecte la regresión.<br />-    `regressedPlanCpuTimeStddev` -Se detectó la desviación estándar de de tiempo de CPU utilizado por la consulta devuelta antes de la regresión.<br />-    `recommendedPlanId` -plan_id del plan al que se debería forzar.<br />-   `recommendedPlanExecutionCount`-Número de ejecuciones de la consulta con el plan que se debería forzar antes de que se detecte la regresión.<br />-    `recommendedPlanAbortedCount` -Número de errores detectados durante la ejecución del plan al que se debería forzar.<br />-    `recommendedPlanCpuTimeAverage` -Promedio tiempo de CPU utilizado por la consulta ejecutada con el plan que se debería forzar (calculado antes de que se detecta la regresión).<br />-    `recommendedPlanCpuTimeStddev` Se detectó la desviación estándar de tiempo de CPU utilizado por la consulta devuelta antes de la regresión.<br /><br />`implementationDetails`<br />-  `method` -El método que se debe usar para corregir la regresión. Valor es siempre `TSql`.<br />-    `script` - [!INCLUDE[tsql_md](../../includes/tsql_md.md)] secuencia de comandos que se debe ejecutar para forzar el plan recomendado. |
   
-## <a name="remarks"></a>Comentarios  
+## <a name="remarks"></a>Notas  
  Información devuelta por `sys.dm_db_tuning_recommendations` se actualiza cuando el motor de base de datos identifica posibles regresión del rendimiento de consultas y no se conserva. Las recomendaciones se mantienen solo hasta [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] se reinicia. Los administradores de base de datos deben realizar periódicamente copias de seguridad de la recomendación de optimización si desean conservarla después de reciclar el servidor. 
 
  `currentValue` campo en la `state` columna puede tener los valores siguientes:
- | Estado | Description |
+ | Estado | Descripción |
  |--------|-------------|
  | `Active` | Recomendación está activa y no ha aplicado. Usuario puede tomar el script de recomendación y ejecutarlo manualmente. |
  | `Verifying` | Recomendación se aplica por [!INCLUDE[ssde_md](../../includes/ssde_md.md)] y proceso de comprobación internos compara el rendimiento del plan forzado con el plan devuelta. |
@@ -75,7 +75,7 @@ ms.locfileid: "34466591"
 
 Documento JSON en `state` columna contiene la razón que describe por qué es la recomendación en el estado actual. Los valores en el campo motivo podrían ser: 
 
-| Reason | Description |
+| Reason | Descripción |
 |--------|-------------|
 | `SchemaChanged` | Recomendación ha caducado porque se cambia el esquema de una tabla que se hace referencia. |
 | `StatisticsChanged`| Recomendación expirado debido al cambio de estadísticas en una tabla que se hace referencia. |
@@ -92,9 +92,9 @@ Documento JSON en `state` columna contiene la razón que describe por qué es la
  Estadística en la columna de detalles no se muestran las estadísticas del plan de runtime (por ejemplo, tiempo de CPU actual). Los detalles de recomendación se realizan en el momento de la detección de regresión y describir por qué [!INCLUDE[ssde_md](../../includes/ssde_md.md)] identificado regresión del rendimiento. Use `regressedPlanId` y `recommendedPlanId` a consulta [vistas de catálogo del almacén de consultas](../../relational-databases/performance/how-query-store-collects-data.md) para buscar las estadísticas del plan de exacto en tiempo de ejecución.
 
 ## <a name="using-tuning-recommendations-information"></a>Uso de información de las recomendaciones de optimización  
- Puede utilizar la siguiente consulta para obtener el script T-SQL que se solucionará el problema:  
+Puede usar la siguiente consulta para obtener la [!INCLUDE[tsql](../../includes/tsql-md.md)] secuencia de comandos que se solucionará el problema:  
  
-```
+```sql
 SELECT name, reason, score,
         JSON_VALUE(details, '$.implementationDetails.script') as script,
         details.* 
@@ -108,7 +108,7 @@ WHERE JSON_VALUE(state, '$.currentValue') = 'Active'
   
  Para obtener más información acerca de las funciones JSON que puede usarse para consultar los valores en la vista de recomendación, consulte [compatibilidad de JSON](../../relational-databases/json/index.md) en [!INCLUDE[ssde_md](../../includes/ssde_md.md)].
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>Permisos  
 
 En [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)], requiere `VIEW SERVER STATE` permiso.   
 En [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)], requiere el `VIEW DATABASE STATE` permiso en la base de datos.   

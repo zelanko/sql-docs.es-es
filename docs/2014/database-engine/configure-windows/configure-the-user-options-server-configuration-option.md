@@ -1,0 +1,121 @@
+---
+title: Establecer la opción de configuración del servidor Opciones de usuario | Microsoft Docs
+ms.custom: ''
+ms.date: 06/13/2017
+ms.prod: sql-server-2014
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- database-engine
+ms.tgt_pltfrm: ''
+ms.topic: article
+helpviewer_keywords:
+- global default for all users [SQL Server]
+- users [SQL Server], global defaults
+- user options option [SQL Server]
+ms.assetid: cfed8f86-6bcf-4b90-88eb-9656e22d5dc5
+caps.latest.revision: 24
+author: craigg-msft
+ms.author: craigg
+manager: jhubbard
+ms.openlocfilehash: 88edb881309b66cd84f953d8166a47b9e4eeb472
+ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+ms.translationtype: MT
+ms.contentlocale: es-ES
+ms.lasthandoff: 06/19/2018
+ms.locfileid: "36110788"
+---
+# <a name="configure-the-user-options-server-configuration-option"></a>Establecer la opción de configuración del servidor Opciones de usuario
+  En este tema se describe cómo establecer la opción de configuración de servidor para **opciones de usuario** en [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] mediante [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] o [!INCLUDE[tsql](../../includes/tsql-md.md)]. La opción para **opciones de usuario** especifica valores predeterminados globales para todos los usuarios. Hay establecida una lista de opciones de procesamiento de consultas predeterminadas para la duración de la sesión de trabajo de un usuario. La opción **opciones de usuario** permite cambiar los valores predeterminados de las opciones SET si no resultan adecuados los valores predeterminados del servidor.  
+  
+ El usuario puede suplantar estos valores predeterminados con la instrucción SET. Puede configurar la opción **user options** de manera dinámica para nuevos inicios de sesión. Después de cambiar el valor de la opción para **opciones de usuario**, los nuevos inicios de sesión utilizarán el nuevo valor, pero el cambio no afectará a los inicios de sesión actuales.  
+  
+ **En este tema**  
+  
+-   **Antes de empezar:**  
+  
+     [Recomendaciones](#Recommendations)  
+  
+     [Seguridad](#Security)  
+  
+-   **Para configurar la opción de configuración para opciones de usuario, utilizando:**  
+  
+     [SQL Server Management Studio](#SSMSProcedure)  
+  
+     [Transact-SQL](#TsqlProcedure)  
+  
+-   **Seguimiento:**  [después de configurar la opción de configuración para opciones de usuario](#FollowUp)  
+  
+##  <a name="BeforeYouBegin"></a> Antes de empezar  
+  
+###  <a name="Recommendations"></a> Recomendaciones  
+  
+-   En la tabla siguiente se muestran y describen los valores de configuración para **opciones de usuario**. No todos los valores de configuración son compatibles entre sí. Por ejemplo, ANSI_NULL_DFLT_ON y ANSI_NULL_DFLT_OFF no se pueden establecer al mismo tiempo.  
+  
+    |Valor|Configuración|Descripción|  
+    |-----------|-------------------|-----------------|  
+    |1|DISABLE_DEF_CNST_CHK|Controla la comprobación de restricciones provisionales o diferidas.|  
+    |2|IMPLICIT_TRANSACTIONS|Para las conexiones de biblioteca de red dblib, controla si una transacción se inicia de manera implícita al ejecutar una instrucción. El valor IMPLICIT_TRANSACTIONS no tiene ningún efecto en las conexiones ODBC u OLEDB.|  
+    |4|CURSOR_CLOSE_ON_COMMIT|Controla el comportamiento de los cursores después de realizarse una operación de confirmación.|  
+    |8|ANSI_WARNINGS|Controla el truncamiento y los valores NULL en las advertencias de agregados.|  
+    |16|ANSI_PADDING|Controla los valores de relleno de las variables de longitud fija.|  
+    |32|ANSI_NULLS|Controla el tratamiento de los valores NULL cuando se utilizan operadores de igualdad.|  
+    |64|ARITHABORT|Cancela una consulta cuando se produce un error de desbordamiento o división por cero durante su ejecución.|  
+    |128|ARITHIGNORE|Devuelve un valor NULL cuando se produce un error de desbordamiento o de división por cero durante una consulta.|  
+    |256|QUOTED_IDENTIFIER|Diferencia entre las comillas simples o dobles al evaluar una expresión.|  
+    |512|NOCOUNT|Desactiva el mensaje que se devuelve al final de cada instrucción, que indica el número de filas afectadas.|  
+    |1024|ANSI_NULL_DFLT_ON|Altera el comportamiento de la sesión para que utilice la compatibilidad con ANSI para la nulabilidad. Se permite la nulabilidad para las nuevas columnas definidas sin la aceptación explícita de estos valores.|  
+    |2048|ANSI_NULL_DFLT_OFF|Altera el comportamiento de la sesión para que no utilice la compatibilidad con ANSI para la nulabilidad. Las nuevas columnas definidas sin la nulabilidad no aceptan estos valores.|  
+    |4096|CONCAT_NULL_YIELDS_NULL|Devuelve un valor NULL al concatenar un valor NULL con una cadena.|  
+    |8192|NUMERIC_ROUNDABORT|Genera un error cuando se produce una pérdida de precisión en una expresión.|  
+    |16384|XACT_ABORT|Revierte una transacción si una instrucción Transact- SQL produce un error en tiempo de ejecución.|  
+  
+-   Las posiciones de bits de **opciones de usuario** son las mismas que las de la función @@OPTIONS. Cada conexión tiene su propia función @@OPTIONS, que representa el entorno de configuración. Cuando se inicia una sesión en una instancia de \ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], el usuario recibe un entorno de configuración predeterminado que asigna el valor actual para **opciones de usuario** a la función @@OPTIONS. La ejecución de instrucciones SET para **user options** afecta al valor correspondiente de la función @@OPTIONS de la sesión. Todas las conexiones que se crean después de modificar esta opción recibirán el nuevo valor.  
+  
+###  <a name="Security"></a> Seguridad  
+  
+####  <a name="Permissions"></a> Permissions  
+ De forma predeterminada, todos los usuarios tienen permisos de ejecución en **sp_configure** sin ningún parámetro o solo con el primero. Para ejecutar **sp_configure** con ambos parámetros y cambiar una opción de configuración, o para ejecutar la instrucción RECONFIGURE, un usuario debe tener el permiso ALTER SETTINGS en el servidor. Los roles fijos de servidor **sysadmin** y **serveradmin** tienen el permiso ALTER SETTINGS de forma implícita.  
+  
+##  <a name="SSMSProcedure"></a> Usar SQL Server Management Studio  
+  
+#### <a name="to-configure-the-user-options-configuration-option"></a>Para configurar la opción de configuración para opciones de usuario  
+  
+1.  En el Explorador de objetos, haga clic con el botón derecho en un servidor y seleccione **Propiedades**.  
+  
+2.  Haga clic en el nodo **Conexiones** .  
+  
+3.  En el cuadro **Opciones predeterminadas de conexión** , seleccione uno o más atributos para configurar las opciones predeterminadas del procesamiento de consultas para todos los usuarios conectados.  
+  
+     De manera predeterminada, no hay ninguna opción de usuario configurada.  
+  
+##  <a name="TsqlProcedure"></a> Usar Transact-SQL  
+  
+#### <a name="to-configure-the-user-options-configuration-option"></a>Para configurar la opción de configuración para opciones de usuario  
+  
+1.  Conéctese con el [!INCLUDE[ssDE](../../includes/ssde-md.md)].  
+  
+2.  En la barra Estándar, haga clic en **Nueva consulta**.  
+  
+3.  Copie y pegue el siguiente ejemplo en la ventana de consulta y haga clic en **Ejecutar**. En este ejemplo se muestra cómo usar [sp_configure](/sql/relational-databases/system-stored-procedures/sp-configure-transact-sql) para configurar `user options` para cambiar el valor de la opción de servidor ANSI_WARNINGS.  
+  
+```tsql  
+USE AdventureWorks2012 ;  
+GO  
+EXEC sp_configure 'user options', 8 ;  
+GO  
+RECONFIGURE ;  
+GO  
+  
+```  
+  
+##  <a name="FollowUp"></a> Seguimiento: después de configurar la opción de configuración para opciones de usuario  
+ La configuración surte efecto inmediatamente, sin necesidad de reiniciar el servidor.  
+  
+## <a name="see-also"></a>Vea también  
+ [RECONFIGURE &#40;Transact-SQL&#41;](/sql/t-sql/language-elements/reconfigure-transact-sql)   
+ [Opciones de configuración de servidor &#40;SQL Server&#41;](server-configuration-options-sql-server.md)   
+ [sp_configure &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-configure-transact-sql)   
+ [Instrucciones SET &#40;Transact-SQL&#41;](/sql/t-sql/statements/set-statements-transact-sql)  
+  
+  

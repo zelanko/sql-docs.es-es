@@ -1,0 +1,71 @@
+---
+title: Seleccione los atributos de dimensión (Asistente para dimensiones) | Documentos de Microsoft
+ms.custom: ''
+ms.date: 06/13/2017
+ms.prod: sql-server-2014
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- analysis-services
+ms.tgt_pltfrm: ''
+ms.topic: article
+f1_keywords:
+- sql12.asvs.dimensionwizard.dimensionattributes.f1
+ms.assetid: f58a3e14-ab27-44d3-8c26-f5c9ee7583b0
+caps.latest.revision: 30
+author: Minewiskan
+ms.author: owend
+manager: mblythe
+ms.openlocfilehash: 6af0f81a3b356427d4279bfcdcb88f1c7b14ba57
+ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+ms.translationtype: MT
+ms.contentlocale: es-ES
+ms.lasthandoff: 06/19/2018
+ms.locfileid: "36111436"
+---
+# <a name="select-dimension-attributes-dimension-wizard"></a>Seleccionar los atributos de la dimensión (Asistente para dimensiones)
+  Utilice la página **Seleccionar los atributos de la dimensión** para seleccionar y modificar los atributos para la dimensión que debe crearse.  
+  
+> [!NOTE]  
+>  Si no puede leer los valores de cualquier columna, maximice la ventana del asistente y cambie el ancho de cada encabezado de columna hasta que lea los valores.  
+  
+ **Para abrir al Asistente para dimensiones**  
+  
+-   En [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)], en el **Explorador de soluciones**, haga clic con el botón derecho en la carpeta **Dimensiones** para un proyecto de [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] y, luego, haga clic en **Nueva dimensión**.  
+  
+## <a name="options"></a>Opciones  
+ (Columna con casillas)  
+ Active las casillas para incluir atributos en la dimensión.  
+  
+ Para incluir un atributo específico, active la casilla de dicho atributo.  
+  
+ Para incluir todos los atributos, active la casilla del encabezado de la columna.  
+  
+> [!NOTE]  
+>  No se puede desactivar la casilla para el atributo clave.  
+  
+ **Nombre del atributo**  
+ Enumera los atributos disponibles.  
+  
+ Para cambiar el nombre de un atributo, haga clic en el nombre del atributo y escriba otro nombre.  
+  
+ **Habilitar la exploración**  
+ Seleccione esta opción para que el atributo esté disponible para que el usuario final pueda examinar y filtrar. La opción**Habilitar exploración** debe estar seleccionada para el atributo clave. Para los atributos no clave, el valor predeterminado es no tener la opción **Habilitar exploración** seleccionada, lo que hace que se muestren los atributos no clave solo como propiedades de miembro.  
+  
+ En la mayoría de los casos, el atributo se convierte en disponible o no está disponible para examinar estableciendo la `AttributeHierarchyEnabled` propiedad `True` o `False`, respectivamente. Sin embargo, en los tres casos siguientes, el asistente usa valores diferentes.  
+  
+|Caso|Configuración|  
+|----------|--------------|  
+|Una dimensión contiene una jerarquía de elementos primarios y secundarios, y la opción **Habilitar exploración** no está seleccionada|El asistente deja la `AttributeHierarchyEnabled` propiedad establecida en `True`y establece la `AttributeHierarchyVisible` atribuir a `False` para el atributo clave.|  
+|Una tabla de una dimensión contiene una clave externa a una tabla que no se encuentra en la dimensión.|El asistente selecciona la clave externa como un atributo que se va a incluir pero no seleccionará **Habilitar exploración**. Si mantiene esta configuración, la propiedad `AttributeHiearchyEnabled` del atributo se establecerá en `True`y la propiedad `AttributeHieararchyVisible` se establecerá en `False`.|  
+|Una dimensión contiene tablas de copo de nieve a las que se tiene acceso a través de columnas de clave externa que admiten valores NULL<br /><br /> y<br /><br /> la opción Habilitar exploración para el atributo que está basado en la clave de la tabla de copo de nieve no está seleccionada.|El asistente creará el nuevo atributo que tiene el `AttributeHiearchyEnabled` propiedad establecida en `True`y el `AttributeHieararchyVisible` propiedad establecida en `False`.|  
+  
+ **Tipo de atributo**  
+ (Opcional) Establezca el tipo para el atributo. El valor predeterminado es **Regular**. El tipo de atributo proporciona orientación a las aplicaciones cliente sobre qué información podría contener el atributo.  
+  
+## <a name="see-also"></a>Vea también  
+ [Asistente de dimensiones (Ayuda F1)](dimension-wizard-f1-help.md)   
+ [Dimensiones &#40;Analysis Services - datos multidimensionales&#41;](multidimensional-models-olap-logical-dimension-objects/dimensions-analysis-services-multidimensional-data.md)   
+ [Dimensiones en modelos multidimensionales](multidimensional-models/dimensions-in-multidimensional-models.md)  
+  
+  

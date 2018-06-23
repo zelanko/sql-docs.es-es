@@ -1,0 +1,64 @@
+---
+title: Creación de un inicio de sesión | Microsoft Docs
+ms.custom: ''
+ms.date: 06/13/2017
+ms.prod: sql-server-2014
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- database-engine
+ms.tgt_pltfrm: ''
+ms.topic: article
+helpviewer_keywords:
+- creating a login
+ms.assetid: a2512310-bdb6-41dc-858a-e866b2b58afc
+caps.latest.revision: 15
+author: craigg-msft
+ms.author: craigg
+manager: jhubbard
+ms.openlocfilehash: 33e3b3bcccfc88a3071a053de7154bf16d50265d
+ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+ms.translationtype: MT
+ms.contentlocale: es-ES
+ms.lasthandoff: 06/19/2018
+ms.locfileid: "36108237"
+---
+# <a name="creating-a-login"></a>Crear un inicio de sesión
+  Para tener acceso a [!INCLUDE[ssDE](../includes/ssde-md.md)], los usuarios necesitan un inicio de sesión. El inicio de sesión puede representar la identidad del usuario como una cuenta de Windows o como un miembro de un grupo de Windows, o el inicio de sesión puede ser un inicio de sesión de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] que solo exista en [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]. Siempre que sea posible, use la autenticación de Windows.  
+  
+ De forma predeterminada, los administradores del equipo tienen acceso total a [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]. Para esta lección, deseamos tener un usuario con menos privilegios; por tanto, creará una nueva cuenta de autenticación de Windows local en el equipo. Para hacerlo, debe ser un administrador del equipo. A continuación, concederá al nuevo usuario acceso a [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)].  
+  
+### <a name="to-create-a-new-windows-account"></a>Para crear una cuenta de Windows nueva  
+  
+1.  Haga clic en **iniciar**, haga clic en **ejecutar**, en la **abrir** , escriba `%SystemRoot%\system32\compmgmt.msc /s`y, a continuación, haga clic en **Aceptar** para abrir el programa de administración de equipos.  
+  
+2.  En **Herramientas del sistema**, expanda **Usuarios y grupos locales**, haga clic con el botón derecho en **Usuarios**y luego haga clic en **Nuevo usuario**.  
+  
+3.  En el cuadro **Nombre de usuario** , escriba **Mary**.  
+  
+4.  En los cuadros **Contraseña** y **Confirmar contraseña** , escriba una contraseña segura y, a continuación, haga clic en **Crear** para crear un nuevo usuario de Windows local.  
+  
+### <a name="to-create-a-login"></a>Para crear un inicio de sesión  
+  
+1.  En una ventana del Editor de consultas de [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)], escriba y ejecute el siguiente código reemplazando `computer_name` con el nombre del equipo. `FROM WINDOWS` indica que Windows autenticará al usuario. El argumento opcional `DEFAULT_DATABASE` conecta `Mary` con la base de datos `TestData` , a menos que la cadena de conexión indique otra base de datos. Esta instrucción introduce el punto y coma como una terminación opcional de una instrucción [!INCLUDE[tsql](../includes/tsql-md.md)] .  
+  
+    ```  
+    CREATE LOGIN [computer_name\Mary]  
+        FROM WINDOWS  
+        WITH DEFAULT_DATABASE = [TestData];  
+    GO  
+    ```  
+  
+     Esto autoriza al nombre de usuario `Mary`, autenticado por el equipo, a tener acceso a esta instancia de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]. Si existe más de una instancia de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] en el equipo, debe crear el inicio de sesión en cada instancia a la que `Mary` deba tener acceso.  
+  
+    > [!NOTE]  
+    >  Puesto que `Mary` no es una cuenta de dominio, este nombre de usuario solo puede autenticarse en este equipo.  
+  
+## <a name="next-task-in-lesson"></a>Siguiente tarea de la lección  
+ [Conceder acceso a una base de datos](lesson-2-2-granting-access-to-a-database.md)  
+  
+## <a name="see-also"></a>Vea también  
+ [CREATE LOGIN &#40;Transact-SQL&#41;](/sql/t-sql/statements/create-login-transact-sql)   
+ [Elegir un modo de autenticación](../relational-databases/security/choose-an-authentication-mode.md)  
+  
+  

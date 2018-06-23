@@ -4,10 +4,9 @@ ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
-ms.component: native-client-ole-db-how-to
 ms.reviewer: ''
 ms.suite: sql
-ms.technology: ''
+ms.technology: connectivity
 ms.tgt_pltfrm: ''
 ms.topic: reference
 ms.assetid: cb022814-a86b-425d-9b24-eaac20ab664e
@@ -16,12 +15,12 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
-ms.openlocfilehash: 76b1b344212a464e47ce49396aa517ec01b32aa7
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: f4d5da9341be7e34b9aed38ed2de5fdbf7e1b7e0
+ms.sourcegitcommit: a78fa85609a82e905de9db8b75d2e83257831ad9
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32947490"
+ms.lasthandoff: 06/18/2018
+ms.locfileid: "35697966"
 ---
 # <a name="send-blob-data-to-sql-server-using-irowsetfastload-and-isequentialstream-ole-db"></a>Enviar datos de blob a SQL SERVER mediante IROWSETFASTLOAD e ISEQUENTIALSTREAM (OLE DB)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -47,7 +46,7 @@ ms.locfileid: "32947490"
 ## <a name="example"></a>Ejemplo  
  Ejecute la primera lista de código ([!INCLUDE[tsql](../../includes/tsql-md.md)]) para crear la tabla utilizada por la aplicación.  
   
- Compile con ole32.lib oleaut32.lib y ejecute la siguiente lista de código C++. Esta aplicación se conecta a la instancia predeterminada de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] del equipo. En algunos sistemas operativos Windows, deberá cambiar (localhost) o (local) al nombre de la instancia de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Para conectarse a una instancia con nombre, cambie la cadena de conexión de L"(local)" a L"(local)\\\name", donde el nombre es la instancia con nombre. De forma predeterminada, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Express se instala en una instancia con nombre. Asegúrese de que la variable de entorno INCLUDE incluye el directorio que contiene sqlncli.h.  
+ Compile con ole32.lib oleaut32.lib y ejecute la siguiente lista de código C++. Esta aplicación se conecta a la instancia predeterminada de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] del equipo. En algunos sistemas operativos Windows, deberá cambiar (localhost) o (local) al nombre de la instancia de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Para conectarse a una instancia con nombre, cambie la cadena de conexión de L"(local)" a L"(local)\\\name", donde el nombre es la instancia con nombre. De forma predeterminada, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Express se instala en una instancia con nombre. Asegúrese de que la variable de entorno INCLUDE incluye el directorio que contiene sqlncli.h.  
   
  Ejecute la tercera lista de código ([!INCLUDE[tsql](../../includes/tsql-md.md)]) para eliminar la tabla utilizada por la aplicación.  
   

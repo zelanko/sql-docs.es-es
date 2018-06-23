@@ -4,7 +4,6 @@ ms.custom: ''
 ms.date: 03/16/2017
 ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
-ms.component: native-client|features
 ms.reviewer: ''
 ms.suite: sql
 ms.technology: ''
@@ -24,11 +23,12 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
-ms.openlocfilehash: 17367de4b2594834c6758213f54be06023b1381b
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 0148570aa44220b4229f83bad45b67ffc9812d2d
+ms.sourcegitcommit: a78fa85609a82e905de9db8b75d2e83257831ad9
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/18/2018
+ms.locfileid: "35699506"
 ---
 # <a name="using-database-mirroring"></a>Usar la creación de reflejo de bases de datos
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -36,7 +36,7 @@ ms.lasthandoff: 05/03/2018
 
     
 > [!NOTE]  
->  [!INCLUDE[ssNoteDepFutureAvoid](../../../includes/ssnotedepfutureavoid-md.md)]Use [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] en su lugar.  
+>  [!INCLUDE[ssNoteDepFutureAvoid](../../../includes/ssnotedepfutureavoid-md.md)] Use [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] en su lugar.  
   
  La creación de reflejo de la base de datos, introducida en [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)], es una solución de software para aumentar la disponibilidad de la base de datos y la redundancia de datos. [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client proporciona compatibilidad implícita con creación de reflejo de base de datos, por lo que el desarrollador no necesita escribir ningún código ni realizar ninguna otra acción una vez que se ha configurado para la base de datos.  
   
@@ -81,7 +81,7 @@ ms.lasthandoff: 05/03/2018
 >  El Administrador de controladores ODBC se ha mejorado para admitir la especificación del nombre del servidor de conmutación por error.  
   
 ## <a name="see-also"></a>Vea también  
- [Características SQL Server Native Client](../../../relational-databases/native-client/features/sql-server-native-client-features.md)   
+ [Características de SQL Server Native Client](../../../relational-databases/native-client/features/sql-server-native-client-features.md)   
  [Conectar clientes a una sesión de creación de reflejo de la base de datos &#40;SQL Server&#41;](../../../database-engine/database-mirroring/connect-clients-to-a-database-mirroring-session-sql-server.md)   
  [Creación de reflejo de la base de datos &#40;SQL Server&#41;](../../../database-engine/database-mirroring/database-mirroring-sql-server.md)  
   

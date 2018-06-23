@@ -4,26 +4,24 @@ ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
-ms.component: native-client-odbc-date-time
 ms.reviewer: ''
 ms.suite: sql
-ms.technology: ''
+ms.technology: connectivity
 ms.tgt_pltfrm: ''
 ms.topic: reference
 helpviewer_keywords:
 - ODBC, bulk copy operations
 ms.assetid: c29e0f5e-9b3c-42b3-9856-755f4510832f
-caps.latest.revision: 27
 author: MightyPen
 ms.author: genemi
 manager: craigg
 monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
-ms.openlocfilehash: de93dee05a09da895073a12a30d36d8d26e5d764
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 5b0fdf58fb937c0e841b2663865cc73faaaba0b5
+ms.sourcegitcommit: a78fa85609a82e905de9db8b75d2e83257831ad9
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32947680"
+ms.lasthandoff: 06/18/2018
+ms.locfileid: "35695956"
 ---
 # <a name="bulk-copy-changes-for-enhanced-date-and-time-types-ole-db-and-odbc"></a>Cambios en la copia masiva para mejorada tipos de fecha y hora (OLE DB y ODBC)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -36,9 +34,9 @@ ms.locfileid: "32947680"
   
 |tipo de almacenamiento en archivo|Tipo de datos del archivo host|Respuesta a la pregunta: "Especifique el tipo de almacenamiento de archivo del campo < Nombre_de_campo > [\<predeterminado >]:"|  
 |-----------------------|-------------------------|-----------------------------------------------------------------------------------------------------|  
-|Fecha y hora|SQLDATETIME|d|  
+|DATETIME|SQLDATETIME|d|  
 |Smalldatetime|SQLDATETIM4|D|  
-|Date|SQLDATE|de|  
+|date|SQLDATE|de|  
 |Time|SQLTIME|te|  
 |Datetime2|SQLDATETIME2|d2|  
 |Datetimeoffset|SQLDATETIMEOFFSET|do|  
@@ -77,9 +75,9 @@ ms.locfileid: "32947680"
   
 |tipo de almacenamiento en archivo|Tamaño de almacenamiento en bytes|  
 |-----------------------|---------------------------|  
-|datetime|8|  
+|DATETIME|8|  
 |smalldatetime|4|  
-|date|3|  
+|Date|3|  
 |time|6|  
 |datetime2|9|  
 |datetimeoffset|11|  
@@ -98,11 +96,11 @@ ms.locfileid: "32947680"
 ## <a name="bcp-types-in-sqlnclih"></a>Tipos BCP en sqlncli.h  
  Los tipos siguientes se definen en sqlncli.h para usarse con las extensiones API de BCP en ODBC. Estos tipos se pasan con el *eUserDataType* parámetro de ibcpsession:: BCPColFmt en OLE DB.  
   
-|tipo de almacenamiento en archivo|Tipo de datos del archivo host|Tipo de sqlncli.h para su uso con ibcpsession:: BCPColFmt|Value|  
+|tipo de almacenamiento en archivo|Tipo de datos del archivo host|Tipo de sqlncli.h para su uso con ibcpsession:: BCPColFmt|Valor|  
 |-----------------------|-------------------------|-----------------------------------------------------------|-----------|  
-|Fecha y hora|SQLDATETIME|BCP_TYPE_SQLDATETIME|0x3d|  
+|DATETIME|SQLDATETIME|BCP_TYPE_SQLDATETIME|0x3d|  
 |Smalldatetime|SQLDATETIM4|BCP_TYPE_SQLDATETIME4|0x3a|  
-|Date|SQLDATE|BCP_TYPE_SQLDATE|0x28|  
+|date|SQLDATE|BCP_TYPE_SQLDATE|0x28|  
 |Time|SQLTIME|BCP_TYPE_SQLTIME|0x29|  
 |Datetime2|SQLDATETIME2|BCP_TYPE_SQLDATETIME2|0x2a|  
 |Datetimeoffset|SQLDATETIMEOFFSET|BCP_TYPE_SQLDATETIMEOFFSET|0x2b|  
@@ -112,12 +110,12 @@ ms.locfileid: "32947680"
   
  **Nota de OLE DB** IBCPSession realiza las conversiones siguientes. IRowsetFastLoad usa conversiones OLE DB como se define en [conversiones realizadas de cliente a servidor](../../relational-databases/native-client-ole-db-date-time/conversions-performed-from-client-to-server.md). Tenga en cuenta que los valores datetime se redondean a la fracción 1/300 de segundo y los valores smalldatetime tienen los segundos establecidos en cero después de que se hayan realizado las conversiones de cliente que se describen a continuación. El redondeo de datetime se propaga a las horas y minutos, pero no a la fecha.  
   
-|A --><br /><br /> De|date|time|smalldatetime|datetime|datetime2|datetimeoffset|char|wchar|  
+|A --><br /><br /> De|Date|time|smalldatetime|DATETIME|datetime2|datetimeoffset|char|wchar|  
 |------------------------|----------|----------|-------------------|--------------|---------------|--------------------|----------|-----------|  
-|Date|1|-|1,6|1,6|1,6|1,5,6|1,3|1,3|  
+|date|1|-|1,6|1,6|1,6|1,5,6|1,3|1,3|  
 |Time|N/D|1,10|1,7,10|1,7,10|1,7,10|1,5,7,10|1,3|1,3|  
 |Smalldatetime|1,2|1,4,10|1|1|1,10|1,5,10|1,11|1,11|  
-|Fecha y hora|1,2|1,4,10|1,12|1|1,10|1,5,10|1,11|1,11|  
+|DATETIME|1,2|1,4,10|1,12|1|1,10|1,5,10|1,11|1,11|  
 |Datetime2|1,2|1,4,10|1,10 (ODBC)1,12 (OLE DB)|1,10|1,10|1,5,10|1,3|1,3|  
 |Datetimeoffset|1,2,8|1,4,8,10|1,8,10|1,8,10|1,8,10|1,10|1,3|1,3|  
 |Char/wchar (date)|9|-|9,6 (ODBC)9,6,12 (OLE DB)|9,6 (ODBC)9,6,12 (OLE DB)|9,6|9,5,6|N/D|N/D|  
@@ -146,6 +144,6 @@ ms.locfileid: "32947680"
   
 ## <a name="see-also"></a>Vea también  
  [Fecha y hora mejoras &#40;ODBC&#41;](../../relational-databases/native-client-odbc-date-time/date-and-time-improvements-odbc.md)   
- [Fecha y hora mejoras & #40; OLE DB & #41;](../../relational-databases/native-client-ole-db-date-time/date-and-time-improvements-ole-db.md)  
+ [Fecha y hora mejoras &#40;OLE DB&#41;](../../relational-databases/native-client-ole-db-date-time/date-and-time-improvements-ole-db.md)  
   
   

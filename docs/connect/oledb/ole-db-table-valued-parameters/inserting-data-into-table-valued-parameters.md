@@ -2,9 +2,10 @@
 title: Insertar datos en parámetros con valores de tabla | Documentos de Microsoft
 description: Usar el controlador OLE DB para SQL Server para insertar datos en parámetros con valores de tabla
 ms.custom: ''
-ms.date: 03/26/2018
+ms.date: 06/14/2018
 ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
+ms.component: oledb|ole-db-table-valued-parameters
 ms.reviewer: ''
 ms.suite: sql
 ms.technology: connectivity
@@ -15,15 +16,17 @@ helpviewer_keywords:
 author: pmasl
 ms.author: Pedro.Lopes
 manager: craigg
-ms.openlocfilehash: 8806d301eeaa25f00b8e3a3fe3553fb08e7005a5
-ms.sourcegitcommit: f16003fd1ca28b5e06d5700e730f681720006816
+ms.openlocfilehash: e3d0e0fedb2c64c4c5ac9e5e9515016f256e44a1
+ms.sourcegitcommit: 03ba89937daeab08aa410eb03a52f1e0d212b44f
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/11/2018
-ms.locfileid: "35306464"
+ms.lasthandoff: 06/16/2018
+ms.locfileid: "35689328"
 ---
 # <a name="inserting-data-into-table-valued-parameters"></a>Insertar datos en parámetros con valores de tabla
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
+[!INCLUDE[appliesto-ss-asdb-asdw-pdw-asdbmi-md](../../../includes/appliesto-ss-asdb-asdw-pdw-asdbmi-md.md)]
+
+[!INCLUDE[Driver_OLEDB_Download](../../../includes/driver_oledb_download.md)]
 
   El controlador OLE DB para SQL Server admite dos modelos para el consumidor especifique datos para filas de parámetros con valores de tabla: un modelo de inserción y un modelo de extracción. Un ejemplo que muestra el modelo de extracción está disponible; vea [ejemplos de programación de datos de SQL Server](http://msftdpprodsamples.codeplex.com/).  
   

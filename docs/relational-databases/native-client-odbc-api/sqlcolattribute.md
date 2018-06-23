@@ -4,7 +4,6 @@ ms.custom: ''
 ms.date: 03/17/2017
 ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
-ms.component: native-client-odbc-api
 ms.reviewer: ''
 ms.suite: sql
 ms.technology: ''
@@ -19,11 +18,12 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
-ms.openlocfilehash: 6a846851ac4558c3b39bd821f32f32c20a0993f2
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 1228481d34256568947f9bc85ea2251f31f07db8
+ms.sourcegitcommit: a78fa85609a82e905de9db8b75d2e83257831ad9
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/18/2018
+ms.locfileid: "35696796"
 ---
 # <a name="sqlcolattribute"></a>SQLColAttribute
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -34,7 +34,7 @@ ms.lasthandoff: 05/03/2018
 > [!NOTE]  
 >  Los atributos de identificador de columna de ODBC no están disponibles en todos los conjuntos de resultados de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
-|Identificador de campo|Description|  
+|Identificador de campo|Descripción|  
 |----------------------|-----------------|  
 |SQL_COLUMN_TABLE_NAME|Disponible en conjuntos de resultados recuperados de instrucciones que generan cursores de servidor o en instrucciones SELECT ejecutadas que contienen una cláusula FOR BROWSE.|  
 |SQL_DESC_BASE_COLUMN_NAME|Disponible en conjuntos de resultados recuperados de instrucciones que generan cursores de servidor o en instrucciones SELECT ejecutadas que contienen una cláusula FOR BROWSE.|  
@@ -83,7 +83,7 @@ ms.lasthandoff: 05/03/2018
   
  [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] introdujo campos descriptores específicos del controlador para proporcionar información adicional para indicar el nombre de colección de esquemas XML, el nombre de esquema y el nombre del catálogo, respectivamente. Estas propiedades no requieren comillas ni un carácter de escape si contienen caracteres no alfanuméricos. En la tabla siguiente se enumeran estos nuevos campos descriptores:  
   
-|Nombre de columna|Tipo|Description|  
+|Nombre de columna|Tipo|Descripción|  
 |-----------------|----------|-----------------|  
 |SQL_CA_SS_XML_SCHEMACOLLECTION_CATALOG_NAME|CharacterAttributePtr|Nombre del catálogo donde se define el nombre de una colección de esquemas XML. Si no se encuentra el nombre de catálogo, esta variable contiene una cadena vacía.<br /><br /> Esta información se devuelve del campo de registro SQL_DESC_SS_XML_SCHEMACOLLECTION_CATALOG_NAME de IRD, que es un campo de lectura y escritura.|  
 |SQL_CA_SS_XML_SCHEMACOLLECTION_SCHEMA_NAME|CharacterAttributePtr|Nombre del esquema donde se define el nombre de una colección de esquemas XML. Si no se encuentra el nombre de esquema, esta variable contiene una cadena vacía.<br /><br /> Esta información se devuelve del campo de registro SQL_DESC_SS_XML_SCHEMACOLLECTION_SCHEMA_NAME de IRD, que es un campo de lectura y escritura.|  
@@ -91,7 +91,7 @@ ms.lasthandoff: 05/03/2018
   
  Asimismo, en [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] se introdujeron nuevos campos descriptores específicos del controlador para proporcionar información adicional para una columna de tipo definido por el usuario (UDT) de un conjunto de resultados o un parámetro UDT de un procedimiento almacenado o una consulta con parámetros. Estas propiedades no requieren comillas ni un carácter de escape si contienen caracteres no alfanuméricos. En la tabla siguiente se enumeran estos nuevos campos descriptores:  
   
-|Nombre de la columna|Tipo|Description|  
+|Nombre de la columna|Tipo|Descripción|  
 |-----------------|----------|-----------------|  
 |SQL_CA_SS_UDT_CATALOG_NAME|CharacterAttributePtr|Nombre del catálogo que contiene el UDT.|  
 |SQL_CA_SS_UDT_SCHEMA_NAME|CharacterAttributePtr|Nombre del esquema que contiene el UDT.|  
@@ -103,10 +103,10 @@ ms.lasthandoff: 05/03/2018
 ## <a name="sqlcolattribute-support-for-enhanced-date-and-time-features"></a>Compatibilidad de SQLColAttribute con las características mejoradas de fecha y hora  
  Para los valores devueltos para los tipos de fecha y hora, vea la sección "Información devuelta en los campos IRD" en [parámetros y metadatos de resultados](../../relational-databases/native-client-odbc-date-time/metadata-parameter-and-result.md).  
   
- Para obtener más información, consulte [fecha y hora mejoras & #40; ODBC & #41;](../../relational-databases/native-client-odbc-date-time/date-and-time-improvements-odbc.md).  
+ Para obtener más información, consulte [fecha y hora mejoras &#40;ODBC&#41;](../../relational-databases/native-client-odbc-date-time/date-and-time-improvements-odbc.md).  
   
 ## <a name="sqlcolattribute-support-for-large-clr-udts"></a>Compatibilidad de SQLColAttribute con UDT CLR grandes  
- **SQLColAttribute** admite tipos definidos por el usuario (UDT) CLR grandes. Para obtener más información, consulte [Large CLR User-Defined tipos & #40; ODBC & #41;](../../relational-databases/native-client/odbc/large-clr-user-defined-types-odbc.md).  
+ **SQLColAttribute** admite tipos definidos por el usuario (UDT) CLR grandes. Para obtener más información, consulte [Large CLR User-Defined tipos &#40;ODBC&#41;](../../relational-databases/native-client/odbc/large-clr-user-defined-types-odbc.md).  
   
 ## <a name="sqlcolattribute-support-for-sparse-columns"></a>Compatibilidad de SQLColAttribute con columnas dispersas  
  SQLColAttribute consulta el nuevo campo implementación fila descriptor (IRD), SQL_CA_SS_IS_COLUMN_SET, para determinar si una columna es una **column_set** columna.  

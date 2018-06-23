@@ -4,7 +4,6 @@ ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
-ms.component: native-client|features
 ms.reviewer: ''
 ms.suite: sql
 ms.technology: ''
@@ -27,12 +26,12 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
-ms.openlocfilehash: b7b40840f1258dfaaf1900aae4e4b891d1bf7322
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: dedf0f7ff3e8f89700e35544c94232a9c49656cf
+ms.sourcegitcommit: a78fa85609a82e905de9db8b75d2e83257831ad9
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32954490"
+ms.lasthandoff: 06/18/2018
+ms.locfileid: "35698576"
 ---
 # <a name="working-with-query-notifications"></a>Trabajar con notificaciones de consulta
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -82,7 +81,7 @@ CREATE SERVICE myService ON QUEUE myQueue
 ### <a name="the-dbpropsetsqlserverrowset-property-set"></a>Conjunto de propiedades DBPROPSET_SQLSERVERROWSET  
  Para admitir las notificaciones de consulta a través de OLE DB, [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client agrega las siguientes propiedades nuevas al conjunto de propiedades DBPROPSET_SQLSERVERROWSET.  
   
-|Nombre|Tipo|Description|  
+|Nombre|Tipo|Descripción|  
 |----------|----------|-----------------|  
 |SSPROP_QP_NOTIFICATION_TIMEOUT|VT_UI4|Número de segundos que la notificación de consulta va a permanecer activa.<br /><br /> El valor predeterminado es 432000 segundos (5 días). El valor mínimo es 1 segundo y el valor máximo es 2^31-1 segundos.|  
 |SSPROP_QP_NOTIFICATION_MSGTEXT|VT_BSTR|Texto del mensaje de la notificación. Lo define el usuario y no tiene ningún formato predefinido.<br /><br /> De forma predeterminada, la cadena está vacía. Puede especificarse un mensaje usando de 1 a 2000 caracteres.|  

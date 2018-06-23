@@ -4,10 +4,9 @@ ms.custom: ''
 ms.date: 03/16/2017
 ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
-ms.component: native-client-ole-db-blobs
 ms.reviewer: ''
 ms.suite: sql
-ms.technology: ''
+ms.technology: connectivity
 ms.tgt_pltfrm: ''
 ms.topic: reference
 helpviewer_keywords:
@@ -16,17 +15,16 @@ helpviewer_keywords:
 - SQL Server Native Client OLE DB provider, BLOBs
 - large data, OLE objects
 ms.assetid: a31c5632-96aa-483f-a307-004c5149fbc0
-caps.latest.revision: 32
 author: MightyPen
 ms.author: genemi
 manager: craigg
 monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
-ms.openlocfilehash: 313fdc999b80c8c1797f6be376836b41adc710e2
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: f04fb06f29ed9a9e46f749804d92cb4c2fc931eb
+ms.sourcegitcommit: a78fa85609a82e905de9db8b75d2e83257831ad9
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32946370"
+ms.lasthandoff: 06/18/2018
+ms.locfileid: "35699516"
 ---
 # <a name="getting-large-data"></a>Obtener datos grandes
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -42,7 +40,7 @@ ms.locfileid: "32946370"
   
 -   ICommand::Execute  
   
- Si la propiedad DBPROP_ACCESSORDER (en el grupo de propiedades de conjunto de filas) se establece en cualquiera de los valores DBPROPVAL_AO_SEQUENTIAL o DBPROPVAL_AO_SEQUENTIALSTORAGEOBJECTS, el consumidor debe capturar una única fila de datos en una llamada a la **GetNextRows** método porque no se almacena en búfer de los datos de BLOB. Si se establece el valor de DBPROP_ACCESSORDER en DBPROPVAL_AO_RANDOM, el consumidor puede capturar varias filas de datos en **GetNextRows**.  
+ Si la propiedad DBPROP_ACCESSORDER (en el grupo de propiedades de conjunto de filas) se establece en cualquiera de los valores DBPROPVAL_AO_SEQUENTIAL o DBPROPVAL_AO_SEQUENTIALSTORAGEOBJECTS, el consumidor debe capturar una única fila de datos en una llamada a la **GetNextRows**  método porque no se almacena en búfer de los datos de BLOB. Si se establece el valor de DBPROP_ACCESSORDER en DBPROPVAL_AO_RANDOM, el consumidor puede capturar varias filas de datos en **GetNextRows**.  
   
  El [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] proveedor OLE DB de Native Client no recupera datos de gran tamaño desde [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] hasta que lo solicita el consumidor. El consumidor debe enlazar todos los datos cortos en un descriptor de acceso y, a continuación, utilizar uno o más descriptores de acceso temporales para recuperar los valores de datos grandes según se precise.  
   
@@ -156,6 +154,6 @@ HRESULT GetUnboundData
   
 ## <a name="see-also"></a>Vea también  
  [BLOB y objetos OLE](../../relational-databases/native-client-ole-db-blobs/blobs-and-ole-objects.md)   
- [Uso de tipos de valores grandes](../../relational-databases/native-client/features/using-large-value-types.md)  
+ [Usar tipos de valor grande](../../relational-databases/native-client/features/using-large-value-types.md)  
   
   

@@ -3,11 +3,9 @@ title: Codificar tipos definidos por el usuario | Documentos de Microsoft
 ms.custom: ''
 ms.date: 03/16/2017
 ms.prod: sql
-ms.prod_service: database-engine
-ms.component: clr
 ms.reviewer: ''
 ms.suite: sql
-ms.technology: ''
+ms.technology: reference
 ms.tgt_pltfrm: ''
 ms.topic: reference
 dev_langs:
@@ -36,12 +34,12 @@ caps.latest.revision: 37
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.openlocfilehash: 69a07f7537b1b5e35e1ff576ba47993ada7a4ce7
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: b3a698c63fa5fc7e5a0802716b3112df31cf241f
+ms.sourcegitcommit: a78fa85609a82e905de9db8b75d2e83257831ad9
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32923370"
+ms.lasthandoff: 06/18/2018
+ms.locfileid: "35697906"
 ---
 # <a name="creating-user-defined-types---coding"></a>Crear tipos definidos por el usuario - codificación
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]

@@ -4,11 +4,9 @@ ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: database-engine
-ms.component: clr
 ms.reviewer: ''
 ms.suite: sql
-ms.technology: ''
-ms.tgt_pltfrm: ''
+ms.technology: reference
 ms.topic: reference
 dev_langs:
 - TSQL
@@ -21,12 +19,12 @@ caps.latest.revision: 56
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.openlocfilehash: 9c4883867e93c1f8a9e782f1e0a70d8ca6f53160
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 83dbc743bc6c11e0ab6e197426f5012573b8badf
+ms.sourcegitcommit: a78fa85609a82e905de9db8b75d2e83257831ad9
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32918800"
+ms.lasthandoff: 06/18/2018
+ms.locfileid: "35694196"
 ---
 # <a name="managing-clr-integration-assemblies"></a>Administrar ensamblados de integración CLR
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -34,15 +32,15 @@ ms.locfileid: "32918800"
   
  Información de ensamblado se almacena en la **sys.assembly_files** tabla en la base de datos que se ha instalado el ensamblado. El **sys.assembly_files** tabla contiene las columnas siguientes.  
   
-|Columna|Description|  
+|columna|Descripción|  
 |------------|-----------------|  
 |assembly_id|Identificador definido para el ensamblado. Este número se asigna a todos los objetos relacionados con el mismo ensamblado.|  
-|name|Nombre del objeto.|  
+|NAME|Nombre del objeto.|  
 |file_id|Número que identifica cada objeto, con el primer objeto asociado a una determinada **assembly_id** se le asigna el valor de 1. Si varios objetos están asociados con el mismo **assembly_id**, a continuación, cada **file_id** valor se incrementa en 1.|  
 |content|Representación hexadecimal del ensamblado o archivo.|  
   
 ## <a name="in-this-section"></a>En esta sección  
- [Creación de un ensamblado](../../../relational-databases/clr-integration/assemblies/creating-an-assembly.md)  
+ [Crear un ensamblado](../../../relational-databases/clr-integration/assemblies/creating-an-assembly.md)  
  Describe la creación de los ensamblados SAFE, EXTERNAL_ACCESS y UNSAFE CLR en [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)].  
   
  [Modificar un ensamblado](../../../relational-databases/clr-integration/assemblies/altering-an-assembly.md)  

@@ -4,11 +4,9 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
-ms.component: native-client-ole-db-interfaces
 ms.reviewer: ''
 ms.suite: sql
-ms.technology:
-- database-engine
+ms.technology: connectivity
 ms.tgt_pltfrm: ''
 ms.topic: reference
 apiname:
@@ -22,12 +20,12 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
-ms.openlocfilehash: 455707070a8ee20fd767a510a255db2bfc87d502
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: ccb9d40572b24322264ffc826e79d18faade8d8a
+ms.sourcegitcommit: a78fa85609a82e905de9db8b75d2e83257831ad9
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32951470"
+ms.lasthandoff: 06/18/2018
+ms.locfileid: "35695906"
 ---
 # <a name="issasynchstatusgetstatus-ole-db"></a>ISSAsynchStatus::GetStatus (OLE DB)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -115,7 +113,7 @@ HRESULT GetStatus(
  E_FAIL  
  Se produjo un error específico del proveedor.  
   
-## <a name="remarks"></a>Comentarios  
+## <a name="remarks"></a>Notas  
  El **issasynchstatus:: GetStatus** método se comporta exactamente igual que el **idbasynchstatus:: GetStatus** método salvo que si el objeto de origen de la inicialización de los datos se anula, se devuelve E_UNEXPECTED en su lugar de DB_E_CANCELED (aunque [issasynchstatus:: Waitforasynchcompletion](../../relational-databases/native-client-ole-db-interfaces/issasynchstatus-waitforasynchcompletion-ole-db.md) devolverá DB_E_CANCELED). Esto se debe a que el objeto de origen de datos no queda en el estado inerte habitual que sigue a una interrupción para que puedan intentarse otras operaciones de inicialización.  
   
  Si el conjunto de filas se inicializa o rellena de forma asincrónica, debe admitir este método.  
@@ -132,6 +130,6 @@ HRESULT GetStatus(
   
 ## <a name="see-also"></a>Vea también  
  [Realizar las operaciones asincrónicas](../../relational-databases/native-client/features/performing-asynchronous-operations.md)   
- [ISSAsynchStatus & #40; OLE DB & #41;](../../relational-databases/native-client-ole-db-interfaces/issasynchstatus-ole-db.md)  
+ [ISSAsynchStatus &#40;OLE DB&#41;](../../relational-databases/native-client-ole-db-interfaces/issasynchstatus-ole-db.md)  
   
   

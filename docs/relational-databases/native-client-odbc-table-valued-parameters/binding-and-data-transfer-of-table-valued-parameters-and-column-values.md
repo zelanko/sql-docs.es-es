@@ -4,25 +4,24 @@ ms.custom: ''
 ms.date: 04/04/2017
 ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
-ms.component: native-client-odbc-table-valued-parameters
 ms.reviewer: ''
 ms.suite: sql
-ms.technology: ''
+ms.technology: connectivity
 ms.tgt_pltfrm: ''
 ms.topic: reference
 helpviewer_keywords:
 - table-valued parameters (ODBC), binding and data transfer
 ms.assetid: 0a2ea462-d613-42b6-870f-c7fa086a6b42
-caps.latest.revision: 28
 author: MightyPen
 ms.author: genemi
 manager: craigg
 monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
-ms.openlocfilehash: 7a5d0aac8e3d45f67ca83950ee139e3cb7377a96
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 815c5cc7b94979a96c984292d58aa1e9ce83407e
+ms.sourcegitcommit: a78fa85609a82e905de9db8b75d2e83257831ad9
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/18/2018
+ms.locfileid: "35699746"
 ---
 # <a name="binding-and-data-transfer-of-table-valued-parameters-and-column-values"></a>Enlace y transferencia de datos de valores de columnas y parámetros con valores de tabla
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]

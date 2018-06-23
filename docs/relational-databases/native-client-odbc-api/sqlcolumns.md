@@ -4,7 +4,6 @@ ms.custom: ''
 ms.date: 03/17/2017
 ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
-ms.component: native-client-odbc-api
 ms.reviewer: ''
 ms.suite: sql
 ms.technology: ''
@@ -19,12 +18,12 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
-ms.openlocfilehash: e735efbd7aa155d8f4618afffc203cf4558fe9ee
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: ca8fab6d42ab562caa4fd0da380094ed42409d0d
+ms.sourcegitcommit: a78fa85609a82e905de9db8b75d2e83257831ad9
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32947330"
+ms.lasthandoff: 06/18/2018
+ms.locfileid: "35695686"
 ---
 # <a name="sqlcolumns"></a>SQLColumns
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -43,7 +42,7 @@ ms.locfileid: "32947330"
   
  La tabla siguiente muestra las columnas devueltas por el conjunto de resultados:  
   
-|Nombre de columna|Description|  
+|Nombre de columna|Descripción|  
 |-----------------|-----------------|  
 |DATA_TYPE|Devuelve SQL_VARCHAR, SQL_VARBINARY o SQL_WVARCHAR para los **varchar (max)** tipos de datos.|  
 |TYPE_NAME|Devuelve "varchar", "varbinary" o "nvarchar" para el **varchar (max)**, **varbinary (max)**, y **nvarchar (max)** tipos de datos.|  
@@ -72,23 +71,23 @@ ms.locfileid: "32947330"
 |SS_IS_COMPUTED|Smallint|Para una columna de TABLE_TYPE, este es SQL_TRUE si se trata de una columna calculada; de lo contrario, SQL_FALSE.|  
 |SS_IS_IDENTITY|Smallint|SQL_TRUE si se trata de una columna de identidad; de lo contrario, SQL_FALSE.|  
   
- Para obtener más información acerca de los parámetros con valores de tabla, vea [parámetros con valores de tabla & #40; ODBC & #41;](../../relational-databases/native-client-odbc-table-valued-parameters/table-valued-parameters-odbc.md).  
+ Para obtener más información acerca de los parámetros con valores de tabla, vea [parámetros con valores de tabla &#40;ODBC&#41;](../../relational-databases/native-client-odbc-table-valued-parameters/table-valued-parameters-odbc.md).  
   
 ## <a name="sqlcolumns-support-for-enhanced-date-and-time-features"></a>Compatibilidad de SQLColumns con las características mejoradas de fecha y hora  
  Para obtener información acerca de los valores devueltos para los tipos de fecha y hora, vea [metadatos de catálogo](../../relational-databases/native-client-odbc-date-time/metadata-catalog.md).  
   
- Para obtener más información, consulte [fecha y hora mejoras & #40; ODBC & #41;](../../relational-databases/native-client-odbc-date-time/date-and-time-improvements-odbc.md).  
+ Para obtener más información, consulte [fecha y hora mejoras &#40;ODBC&#41;](../../relational-databases/native-client-odbc-date-time/date-and-time-improvements-odbc.md).  
   
 ## <a name="sqlcolumns-support-for-large-clr-udts"></a>Compatibilidad de SQLColumns con UDT CLR grandes  
- **SQLColumns** admite tipos de definidos por el usuario CLR (UDT) grandes. Para obtener más información, consulte [Large CLR User-Defined tipos & #40; ODBC & #41;](../../relational-databases/native-client/odbc/large-clr-user-defined-types-odbc.md).  
+ **SQLColumns** admite tipos de definidos por el usuario CLR (UDT) grandes. Para obtener más información, consulte [Large CLR User-Defined tipos &#40;ODBC&#41;](../../relational-databases/native-client/odbc/large-clr-user-defined-types-odbc.md).  
   
 ## <a name="sqlcolumns-support-for-sparse-columns"></a>Compatibilidad de SQLColumns con columnas dispersas  
  Dos [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] columnas específicas se han agregado al conjunto de SQLColumns de resultados:  
   
-|Nombre de columna|Tipo de datos|Description|  
+|Nombre de columna|Tipo de datos|Descripción|  
 |-----------------|---------------|-----------------|  
-|SS_IS_SPARSE|**smallint**|Si la columna es una columna dispersa, tiene el valor SQL_TRUE; de lo contrario, SQL_FALSE.|  
-|SS_IS_COLUMN_SET|**smallint**|Si la columna es el **column_set** columna, tiene el valor SQL_TRUE; de lo contrario, SQL_FALSE.|  
+|SS_IS_SPARSE|**Smallint**|Si la columna es una columna dispersa, tiene el valor SQL_TRUE; de lo contrario, SQL_FALSE.|  
+|SS_IS_COLUMN_SET|**Smallint**|Si la columna es el **column_set** columna, tiene el valor SQL_TRUE; de lo contrario, SQL_FALSE.|  
   
  De acuerdo con la especificación ODBC, SS_IS_SPARSE y SS_IS_COLUMN_SET aparecen antes de todas las columnas específicas del controlador que se agregaron a [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] versiones anteriores a [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)]y después de todas las columnas asignadas por el propio ODBC.  
   
@@ -98,6 +97,6 @@ ms.locfileid: "32947330"
   
 ## <a name="see-also"></a>Vea también  
  [SQLColumns, función](http://go.microsoft.com/fwlink/?LinkId=59336)   
- [Detalles de implementación de API de ODBC](../../relational-databases/native-client-odbc-api/odbc-api-implementation-details.md)  
+ [Detalles de implementación de la API de ODBC](../../relational-databases/native-client-odbc-api/odbc-api-implementation-details.md)  
   
   

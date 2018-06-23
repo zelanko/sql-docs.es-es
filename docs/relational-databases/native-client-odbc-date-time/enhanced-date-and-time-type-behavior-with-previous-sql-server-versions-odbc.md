@@ -4,25 +4,24 @@ ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
-ms.component: native-client-odbc-date-time
 ms.reviewer: ''
 ms.suite: sql
-ms.technology: ''
+ms.technology: connectivity
 ms.tgt_pltfrm: ''
 ms.topic: reference
 helpviewer_keywords:
 - date/time [ODBC], enhanced behavior with earlier SQL Server versions
 ms.assetid: cd4e137f-dc5e-4df7-bc95-51fe18c587e0
-caps.latest.revision: 21
 author: MightyPen
 ms.author: genemi
 manager: craigg
 monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
-ms.openlocfilehash: e63cefdf59a3198ff1f71b96ce36ebc11dae592b
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: f65388880319ade0eb7bbfead37224afce98c134
+ms.sourcegitcommit: a78fa85609a82e905de9db8b75d2e83257831ad9
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/18/2018
+ms.locfileid: "35699776"
 ---
 # <a name="enhanced-date-and-time-type-behavior-with-previous-sql-server-versions-odbc"></a>Comportamiento mejorado de tipos de fecha y hora con versiones anteriores de SQL Server (ODBC)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -41,7 +40,7 @@ ms.lasthandoff: 05/03/2018
   
 |Tipo de SQL Server 2005|[!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] (o posterior) Tipo de|Tipo de cliente ODBC|Conversión del resultado (SQL a C)|Conversión de parámetros (C a SQL)|  
 |--------------------------|----------------------------------------------|----------------------|------------------------------------|---------------------------------------|  
-|Fecha y hora|Date|SQL_C_TYPE_DATE|Aceptar|ACEPTAR (1)|  
+|DATETIME|date|SQL_C_TYPE_DATE|Aceptar|ACEPTAR (1)|  
 |||SQL_C_TYPE_TIMESTAMP|Los campos de hora se establecen en cero.|OK (2)<br /><br /> Se produce un error si el campo de hora es distinto de cero. Funciona con [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)].|  
 ||Time(0)|SQL_C_TYPE_TIME|Aceptar|ACEPTAR (1)|  
 |||SQL_C_TYPE_TIMESTAMP|Los campos de fecha se establecen en la fecha actual.|OK (2)<br /><br /> Fecha omitida. Se produce un error si las fracciones de segundo son distintas de cero. Funciona con [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)].|  
@@ -49,7 +48,7 @@ ms.lasthandoff: 05/03/2018
 |||SQL_C_TYPE_TIMESTAMP|Se produce un error: literal de hora no válido.|ACEPTAR (1)|  
 ||Datetime2(3)|SQL_C_TYPE_TIMESTAMP|Aceptar|ACEPTAR (1)|  
 ||Datetime2(7)|SQL_C_TYPE_TIMESTAMP|Aceptar|El valor se redondeará a la fracción 1/300 de segundo por conversión del cliente.|  
-|Smalldatetime|Date|SQL_C_TYPE_DATE|Aceptar|Aceptar|  
+|Smalldatetime|date|SQL_C_TYPE_DATE|Aceptar|Aceptar|  
 |||SQL_C_TYPE_TIMESTAMP|Los campos de hora se establecen en cero.|OK (2)<br /><br /> Se produce un error si el campo de hora es distinto de cero. Funciona con [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)].|  
 ||Time(0)|SQL_C_TYPE_TIME|Aceptar|Aceptar|  
 |||SQL_C_TYPE_TIMESTAMP|Los campos de fecha se establecen en la fecha actual.|OK (2)<br /><br /> Fecha omitida. Se produce un error si las fracciones de segundo son distintas de cero.<br /><br /> Funciona con [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)].|  
@@ -73,10 +72,10 @@ ms.lasthandoff: 05/03/2018
 ### <a name="column-metadata-returned-by-sqlcolumns-sqlprocedurecolumns-and-sqlspecialcolumns"></a>Metadatos de columna devueltos por SQLColumns, SQLProcedureColumns y SQLSpecialColumns  
  Para los tipos de fecha y hora se devuelven los siguientes valores de columna:  
   
-|Tipo de columna|date|time|smalldatetime|datetime|datetime2|datetimeoffset|  
+|Tipo de columna|Date|time|smalldatetime|DATETIME|datetime2|datetimeoffset|  
 |-----------------|----------|----------|-------------------|--------------|---------------|--------------------|  
 |DATA_TYPE|SQL_WVARCHAR|SQL_WVARCHAR|SQL_TYPE_TIMESTAMP|SQL_TYPE_TIMESTAMP|SQL_WVARCHAR|SQL_WVARCHAR|  
-|TYPE_NAME|date|time|smalldatetime|datetime|datetime2|datetimeoffset|  
+|TYPE_NAME|Date|time|smalldatetime|DATETIME|datetime2|datetimeoffset|  
 |COLUMN_SIZE|10|8,10..16|16|23|19, 21..27|26, 28..34|  
 |BUFFER_LENGTH|20|16, 20..32|16|16|38, 42..54|52, 56..68|  
 |DECIMAL_DIGITS|NULL|NULL|0|3|NULL|NULL|  
@@ -90,9 +89,9 @@ ms.lasthandoff: 05/03/2018
 ### <a name="data-type-metadata-returned-by-sqlgettypeinfo"></a>Metadatos de tipo de dato devueltos por SQLGetTypeInfo  
  Para los tipos de fecha y hora se devuelven los siguientes valores de columna:  
   
-|Tipo de columna|date|time|smalldatetime|datetime|datetime2|datetimeoffset|  
+|Tipo de columna|Date|time|smalldatetime|DATETIME|datetime2|datetimeoffset|  
 |-----------------|----------|----------|-------------------|--------------|---------------|--------------------|  
-|TYPE_NAME|date|time|smalldatetime|datetime|datetime2|datetimeoffset|  
+|TYPE_NAME|Date|time|smalldatetime|DATETIME|datetime2|datetimeoffset|  
 |DATA_TYPE|SQL_WVARCHAR|SQL_WVARCHAR|SQL_TYPE_TIMESTAMP|SQL_TYPE_TIMESTAMP|SQL_WVARCHAR|SQL_WVARCHAR|  
 |COLUMN_SIZE|10|16|16|23|27|34|  
 |LITERAL_PREFIX|‘|‘|‘|‘|‘|‘|  
@@ -104,7 +103,7 @@ ms.lasthandoff: 05/03/2018
 |UNSIGNED_ATTRIBUTE|NULL|NULL|NULL|NULL|NULL|NULL|  
 |FXED_PREC_SCALE|SQL_FALSE|SQL_FALSE|SQL_FALSE|SQL_FALSE|SQL_FALSE|SQL_FALSE|  
 |AUTO_UNIQUE_VALUE|NULL|NULL|NULL|NULL|NULL|NULL|  
-|LOCAL_TYPE_NAME|date|time|smalldatetime|datetime|datetime2|datetimeoffset|  
+|LOCAL_TYPE_NAME|Date|time|smalldatetime|DATETIME|datetime2|datetimeoffset|  
 |MINIMUM_SCALE|NULL|NULL|0|3|NULL|NULL|  
 |MAXIMUM_SCALE|NULL|NULL|0|3|NULL|NULL|  
 |SQL_DATA_TYPE|SQL_WVARCHAR|SQL_WVARCHAR|SQL_DATETIME|SQL_DATETIME|SQL_WVARCHAR|SQL_WVARCHAR|  
@@ -117,6 +116,6 @@ ms.lasthandoff: 05/03/2018
  Cuando se conecta a una instancia de servidor de una versión anterior a [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)], cualquier intento de usar los nuevos tipos de servidor o códigos de metadatos asociados y campos de descriptor hará que se devuelva un SQL_ERROR. Se generará un registro de diagnóstico con SQLSTATE HY004 y un mensaje que indica que el tipo de datos SQL para la versión del servidor en la conexión no es válido o con 07006 y "Infracción del atributo de tipo de datos restringido".  
   
 ## <a name="see-also"></a>Vea también  
- [Fecha y hora mejoras & #40; ODBC & #41;](../../relational-databases/native-client-odbc-date-time/date-and-time-improvements-odbc.md)  
+ [Fecha y hora mejoras &#40;ODBC&#41;](../../relational-databases/native-client-odbc-date-time/date-and-time-improvements-odbc.md)  
   
   

@@ -69,7 +69,8 @@
 ## [Guía de programación para objetos de administración de SQL Server (SMO) +](server-management-objects-smo/sql-server-management-objects-smo-programming-guide.md)
 ## [Instrumental de administración de Windows](../database-engine/dev-guide/windows-management-instrumentation.md)
 ## [Conceptos del proveedor WMI de administración de configuración +](wmi-provider-configuration/wmi-provider-for-configuration-management.md)
-
+## [SqlToolsVSNativeHelpers](sqltoolsvsnativehelpers.md)
+### [FrameWindowVisible](sqltoolsvsnativehelpers-framewindowvisible.md)
 # [Tutoriales del motor de base de datos](database-engine-tutorials.md)
 ## [Tutorial: Introducción al motor de base de datos](tutorial-getting-started-with-the-database-engine.md)
 ### [Lección 1: conectarse al motor de base de datos](lesson-1-connecting-to-the-database-engine.md)

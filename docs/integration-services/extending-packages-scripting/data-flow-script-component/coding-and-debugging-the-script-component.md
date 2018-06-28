@@ -7,7 +7,7 @@ ms.prod_service: integration-services
 ms.component: extending-packages-scripting
 ms.reviewer: ''
 ms.suite: sql
-ms.technology: ''
+ms.technology: integration-services
 ms.tgt_pltfrm: ''
 ms.topic: reference
 applies_to:
@@ -28,11 +28,12 @@ caps.latest.revision: 66
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 0d45c217f4a7f6ed93f6688f931362339859d058
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: afda6527d2ef2f0903347bb92001166037ddf4f7
+ms.sourcegitcommit: cc46afa12e890edbc1733febeec87438d6051bf9
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/12/2018
+ms.locfileid: "35408027"
 ---
 # <a name="coding-and-debugging-the-script-component"></a>Codificar y depurar el componente de script
   En el Diseñador [!INCLUDE[ssIS](../../../includes/ssis-md.md)], el componente Script tiene dos modos: modo de diseño de metadatos y modo de diseño de código. Al abrir el **Editor de transformación Script**, el componente escribe en modo de diseño de metadatos, en el que se configuran metadatos y se establecen las propiedades de componentes. Después de haber establecido las propiedades del componente de script y configurar la entrada y las salidas en modo de diseño de metadatos, se puede cambiar al modo de diseño de código para escribir un script personalizado. Para obtener más información acerca del modo de diseño de metadatos y el modo de diseño de código, vea [Configuring the Script Component in the Script Component Editor](../../../integration-services/extending-packages-scripting/data-flow-script-component/configuring-the-script-component-in-the-script-component-editor.md) (Configurar el componente de script en el editor de componentes de script).  

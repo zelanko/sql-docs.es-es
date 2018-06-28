@@ -22,12 +22,12 @@ caps.latest.revision: 23
 author: edmacauley
 ms.author: edmaca
 manager: craigg
-ms.openlocfilehash: 05ab6a324d1193c301539780b55bdbd5494c3524
-ms.sourcegitcommit: 8aa151e3280eb6372bf95fab63ecbab9dd3f2e5e
+ms.openlocfilehash: 6c42d3aea3b73f5afae90e5f7612e9c3d65bfc22
+ms.sourcegitcommit: 6e55a0a7b7eb6d455006916bc63f93ed2218eae1
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/05/2018
-ms.locfileid: "34779551"
+ms.lasthandoff: 06/08/2018
+ms.locfileid: "35238965"
 ---
 # <a name="decryptbykeyautoasymkey-transact-sql"></a>DECRYPTBYKEYAUTOASYMKEY (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -53,8 +53,7 @@ Es el identificador de la clave asimétrica que se usa para cifrar la clave sim�
  *akey_password*  
 La contraseña que protege la clave asimétrica. *akey_password* puede tener un valor NULL si la clave maestra de la base de datos protege la clave privada asimétrica. *akey_password* tiene un tipo de datos **nvarchar**.  
   
- '*ciphertext*'  
-Los datos que se cifraron con la clave. *ciphertext* tiene un tipo de datos **varbinary**.  
+ *ciphertext* Los datos que se cifraron con la clave. *ciphertext* tiene un tipo de datos **varbinary**.  
   
  @ciphertext  
 Una variable de tipo **varbinary** que contiene los datos cifrados con la clave simétrica.  
@@ -71,18 +70,27 @@ Los datos que se usaron como base para la generación del autenticador. Debe coi
  @authenticator  
 Una variable que contiene datos a partir de los que se genera un autenticador. Debe coincidir con el valor que se proporcionó a [ENCRYPTBYKEY (Transact-SQL)](./encryptbykey-transact-sql.md). *@authenticator* tiene un tipo de datos **sysname**.  
   
+@add_authenticator  
+Una variable que indica si el proceso de cifrado original incluía, y cifraba, un autenticador junto con el texto sin formato. Debe coincidir con el valor que se pasa a [ENCRYPTBYKEY (Transact-SQL)](./encryptbykey-transact-sql.md) durante el proceso de cifrado de datos. *@add_authenticator* tiene un tipo de datos **int**.  
+
+*authenticator*  
+Los datos que se usaron como base para la generación del autenticador. Debe coincidir con el valor que se proporcionó a [ENCRYPTBYKEY (Transact-SQL)](./encryptbykey-transact-sql.md). *autenticador* tiene un tipo de datos **sysname**.
+
+@authenticator  
+Una variable que contiene datos a partir de los que se genera un autenticador. Debe coincidir con el valor que se proporcionó a [ENCRYPTBYKEY (Transact-SQL)](./encryptbykey-transact-sql.md). *@authenticator* tiene un tipo de datos **sysname**.  
+
 ## <a name="return-types"></a>Tipos devueltos  
 **varbinary**, con un tamaño máximo de 8 000 bytes.  
   
 ## <a name="remarks"></a>Notas  
-`DECRYPTBYKEYAUTOASYMKEY` combina la funcionalidad de OPEN SYMMETRIC KEY con la de DecryptByKey. En una sola operación, descifra una clave simétrica y después la usa para descifrar el texto cifrado.  
+`DECRYPTBYKEYAUTOASYMKEY` combina las funciones de `OPEN SYMMETRIC KEY` y `DECRYPTBYKEY`. En una sola operación, primero descifra una clave simétrica y después la usa para descifrar el texto cifrado.  
   
 ## <a name="permissions"></a>Permisos  
 Se requiere el permiso `VIEW DEFINITION` en la clave simétrica y el permiso `CONTROL` en la clave asimétrica.  
   
-## <a name="examples"></a>Ejemplos  
-En este ejemplo se muestra el uso de `DECRYPTBYKEYAUTOASYMKEY` para simplificar el código de descifrado. Este código se debería ejecutar en una base de datos [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] que aún no tenga una clave maestra de base de datos.  
-  
+## <a name="examples"></a>Ejemplos
+En este ejemplo se muestra cómo `DECRYPTBYKEYAUTOASYMKEY` puede simplificar el código de descifrado. Este código se debería ejecutar en una base de datos [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] que aún no tenga una clave maestra de base de datos.  
+
 ```  
 --Create the keys and certificate.  
 USE AdventureWorks2012;  

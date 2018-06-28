@@ -4,11 +4,9 @@ ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: integration-services
-ms.component: control-flow
 ms.reviewer: ''
 ms.suite: sql
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.tgt_pltfrm: ''
 ms.topic: conceptual
 f1_keywords:
@@ -20,11 +18,12 @@ caps.latest.revision: 20
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 5c4314afd154ff063d960f77ba282b7cf3f28b08
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: b5f634370b7e8b2c21de17c70b1c98a21e20f3c7
+ms.sourcegitcommit: cc46afa12e890edbc1733febeec87438d6051bf9
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/12/2018
+ms.locfileid: "35405697"
 ---
 # <a name="single-table-quick-profile-form-data-profiling-task"></a>Formulario de perfil rápido de tabla única (tarea de generación de perfiles de datos)
   Utilice el **Formulario de perfil rápido de tabla única** para configurar rápidamente la tarea de generación de perfiles de datos de una sola tabla o vista utilizando la configuración predeterminada.  
@@ -41,7 +40,7 @@ ms.lasthandoff: 05/03/2018
  **Ejecución**  
  Seleccione qué perfiles hay que calcular.  
   
-|Valor|Description|  
+|Valor|Descripción|  
 |-----------|-----------------|  
 |**Perfil de proporción de columnas nulas**|Calcule un perfil de proporción de columnas nulas con la configuración predeterminada para todas las columnas aplicables en la tabla o vista seleccionadas.<br /><br /> Este perfil notifica el porcentaje de valores nulos en la columna seleccionada. Este perfil puede ayudarle a identificar problemas en los datos, por ejemplo una proporción inesperadamente alta de valores nulos en una columna. Para más información sobre la configuración de este perfil, vea [Opciones de Solicitud de perfil de proporción de columnas nulas &#40;tarea de generación de perfiles de datos&#41;](../../integration-services/control-flow/column-null-ratio-profile-request-options-data-profiling-task.md).|  
 |**Perfil de estadísticas de columnas**|Calcule un perfil de estadísticas de columnas con la configuración predeterminada para todas las columnas aplicables en la tabla o vista seleccionadas.<br /><br /> Este perfil notifica estadísticas, como los valores mínimo, máximo y promedio, y la desviación estándar para las columnas numéricas, y los valores mínimo y máximo para las columnas **datetime** . Este perfil puede ayudarle a identificar problemas de los datos, por ejemplo fechas que no sean válidas. Para más información sobre la configuración de este perfil, vea [Opciones de Solicitud de perfil de estadísticas de columnas &#40;tarea de generación de perfiles de datos&#41;](../../integration-services/control-flow/column-statistics-profile-request-options-data-profiling-task.md).|  

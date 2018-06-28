@@ -4,10 +4,9 @@ ms.custom: ''
 ms.date: 03/17/2017
 ms.prod: sql
 ms.prod_service: integration-services
-ms.component: extending-packages-scripting-data-flow-script-component-examples
 ms.reviewer: ''
 ms.suite: sql
-ms.technology: ''
+ms.technology: integration-services
 ms.tgt_pltfrm: ''
 ms.topic: reference
 applies_to:
@@ -22,11 +21,12 @@ caps.latest.revision: 36
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 641e51b8700a8b20ecd2edf0e3099f2f4c850f9a
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 190eed1e1c9770fb4a2ad08de6c17d5746b03d88
+ms.sourcegitcommit: cc46afa12e890edbc1733febeec87438d6051bf9
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/12/2018
+ms.locfileid: "35405567"
 ---
 # <a name="parsing-non-standard-text-file-formats-with-the-script-component"></a>Analizar formatos de archivo de texto no estándar con el componente de script
   Cuando los datos de origen están organizados en un formato no estándar, puede resultar más cómodo consolidar toda la lógica de análisis en un único script que encadenar varias transformaciones de [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] para lograr el mismo resultado.  

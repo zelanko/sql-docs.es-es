@@ -26,18 +26,19 @@ author: edmacauley
 ms.author: edmaca
 manager: craigg
 monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
-ms.openlocfilehash: 54121ef549fb76639ec526b3128ffa8abfd7a849
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 9f63145f4a828507660b4401c3c52e79f9e49153
+ms.sourcegitcommit: 6e55a0a7b7eb6d455006916bc63f93ed2218eae1
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/08/2018
+ms.locfileid: "35239285"
 ---
 # <a name="denserank-transact-sql"></a>DENSE_RANK (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
 
-  Devuelve el rango de filas dentro de la partición de un conjunto de resultados, sin separaciones en la clasificación. El rango de una fila es uno más el número de rangos distintos anteriores a la fila en cuestión.  
+Esta función devuelve el rango de cada fila dentro de una partición del conjunto de resultados, sin espacios en los valores de clasificación. El rango de una fila específica es uno más el número de valores de rango distintos anteriores a esa fila específica.  
   
- ![Icono de vínculo de tema](../../database-engine/configure-windows/media/topic-link.gif "Icono de vínculo de tema") [Convenciones de sintaxis de Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+![Icono de vínculo de tema](../../database-engine/configure-windows/media/topic-link.gif "Icono de vínculo de tema") [Convenciones de sintaxis de Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>Sintaxis  
   
@@ -47,25 +48,25 @@ DENSE_RANK ( ) OVER ( [ <partition_by_clause> ] < order_by_clause > )
   
 ## <a name="arguments"></a>Argumentos  
  \<partition_by_clause>  
- Divide el conjunto de resultados generado por la cláusula [FROM](../../t-sql/queries/from-transact-sql.md) en particiones a las que se aplica la función DENSE_RANK. Para ver la sintaxis de PARTITION BY, vea [Cláusula OVER &#40;Transact-SQL&#41;](../../t-sql/queries/select-over-clause-transact-sql.md).  
+Primero divide el conjunto de resultados generado por la cláusula [FROM](../../t-sql/queries/from-transact-sql.md) en particiones y después se aplica la función `DENSE_RANK` a cada partición. Vea [Cláusula OVER &#40;Transact-SQL&#41;](../../t-sql/queries/select-over-clause-transact-sql.md) para obtener la sintaxis de `PARTITION BY`.  
   
  \<order_by_clause>  
- Determina el orden en el que se aplica la función DENSE_RANK a las filas de una partición.  
+Determina el orden en el que se aplica la función `DENSE_RANK` a las filas de una partición.  
   
 ## <a name="return-types"></a>Tipos devueltos  
  **bigint**  
   
 ## <a name="remarks"></a>Notas  
- Si dos o más filas se enlazan en un rango en la misma partición, cada fila enlazada recibe el mismo rango. Por ejemplo, si los dos mejores vendedores tienen el mismo valor de SalesYTD, los dos tienen el rango uno. El siguiente vendedor con mayor valor en SalesYTD tiene el rango número dos. Es uno más que el número de filas distintas anteriores a esta fila. Por tanto, los números devueltos por la función DENSE_RANK no tienen espacios y siempre tienen rangos consecutivos.  
+Si dos o más filas tienen el mismo valor de rango en la misma partición, cada una de esas filas recibirá el mismo rango. Por ejemplo, si los dos mejores vendedores tienen el mismo valor de SalesYTD, los dos tendrán un valor de rango de uno. El siguiente vendedor con mayor valor en SalesYTD tendrá un valor de rango de dos. Esto supera en uno el número de rangos distintos anteriores a la fila en cuestión. Por tanto, los números devueltos por la función `DENSE_RANK` no tienen espacios y siempre tienen valores de rango consecutivos.  
   
- El criterio de ordenación utilizado por la consulta global determina el orden en que aparecen las filas en el resultado. Esto implica que una fila que tiene el rango uno no tiene que ser la primera fila de la partición.  
+El criterio de ordenación que usa la consulta global determina el orden de las filas en el conjunto de resultados. Esto implica que una fila que tiene el rango uno no tiene que ser la primera fila de la partición.  
   
- DENSE_RANK es no determinista. Para obtener más información, consulte [Deterministic and Nondeterministic Functions](../../relational-databases/user-defined-functions/deterministic-and-nondeterministic-functions.md).  
+`DENSE_RANK` sea no determinista. Para más información, consulte [Funciones deterministas y no deterministas](../../relational-databases/user-defined-functions/deterministic-and-nondeterministic-functions.md).  
   
 ## <a name="examples"></a>Ejemplos  
   
 ### <a name="a-ranking-rows-within-a-partition"></a>A. Clasificar filas dentro de una partición  
- En el ejemplo siguiente se otorga un rango a los productos de inventario de las ubicaciones de inventario especificadas según sus cantidades. `LocationID` divide en particiones el conjunto de resultados y `Quantity` lo ordena lógicamente. Observe que los productos 494 y 495 tienen la misma cantidad. Como están enlazados, ambos tienen rango uno.  
+En este ejemplo se clasifican los productos de inventario, por las ubicaciones de inventario especificadas, según sus cantidades. `DENSE_RANK` divide el conjunto de resultados por `LocationID` y ordena lógicamente el conjunto de resultados por `Quantity`. Observe que los productos 494 y 495 tienen la misma cantidad. Como los dos tienen el mismo valor de cantidad, los dos tienen un valor de rango de uno.  
   
 ```  
 USE AdventureWorks2012;  
@@ -102,7 +103,7 @@ ProductID   Name                               LocationID Quantity Rank
 ```  
   
 ### <a name="b-ranking-all-rows-in-a-result-set"></a>B. Clasificar todas las filas de un conjunto de resultados  
- En el ejemplo siguiente se devuelven los diez primeros empleados clasificados por su salario. Como no se especifica ninguna cláusula PARTITION BY, la función DENSE_RANK se aplica a todas las filas del conjunto de resultados.  
+En este ejemplo se devuelven los diez primeros empleados clasificados por su salario. Como la instrucción `SELECT` no especificó una cláusula `PARTITION BY`, la función `DENSE_RANK` se aplica a todas las filas del conjunto de resultados.  
   
 ```  
 USE AdventureWorks2012;  
@@ -130,7 +131,14 @@ BusinessEntityID Rate                  RankBySalary
 ```  
   
 ## <a name="c-four-ranking-functions-used-in-the-same-query"></a>C. Cuatro funciones de categoría usadas en la misma consulta  
- A continuación se muestran las cuatro funciones de categoría usadas en la misma consulta. Consulte cada función de categoría para ver ejemplos específicos de las funciones.  
+En este ejemplo se muestran las cuatro funciones de categoría
+
++ [DENSE_RANK()](./dense-rank-transact-sql.md)
++ [NTILE()](./ntile-transact-sql.md)
++ [RANK()](./rank-transact-sql.md)
++ [ROW_NUMBER()](./row-number-transact-sql.md)
+
+que se usaron en la misma consulta. Vea cada función de categoría para obtener ejemplos específicos de la función.  
   
 ```  
 USE AdventureWorks2012;  
@@ -172,7 +180,7 @@ WHERE TerritoryID IS NOT NULL AND SalesYTD <> 0;
 ## <a name="examples-includesssdwfullincludessssdwfull-mdmd-and-includesspdwincludessspdw-mdmd"></a>Ejemplos: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] y [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
   
 ### <a name="d-ranking-rows-within-a-partition"></a>D. Clasificar filas dentro de una partición  
- En el siguiente ejemplo se clasifican los representantes de ventas de cada territorio de ventas según sus ventas totales. Se crean particiones del conjunto de filas por `SalesTerritoryGroup` y se ordenan por `SalesAmountQuota`.  
+En este ejemplo se clasifican los representantes de ventas de cada territorio de ventas en función de sus ventas totales. `DENSE_RANK` divide el conjunto de filas por `SalesTerritoryGroup` y ordena el conjunto de resultados por `SalesAmountQuota`.  
   
 ```  
 -- Uses AdventureWorks  
@@ -183,7 +191,7 @@ FROM dbo.DimEmployee AS e
 INNER JOIN dbo.FactSalesQuota AS sq ON e.EmployeeKey = sq.EmployeeKey  
 INNER JOIN dbo.DimSalesTerritory AS st ON e.SalesTerritoryKey = st.SalesTerritoryKey  
 WHERE SalesPersonFlag = 1 AND SalesTerritoryGroup != N'NA'  
-GROUP BY LastName,SalesTerritoryGroup;  
+GROUP BY LastName, SalesTerritoryGroup;  
 ```  
   
  [!INCLUDE[ssResult](../../includes/ssresult-md.md)]  

@@ -21,18 +21,30 @@ caps.latest.revision: 54
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 4d3b40219a412b498e891d0550a10a99e23b7adf
-ms.sourcegitcommit: 8aa151e3280eb6372bf95fab63ecbab9dd3f2e5e
+ms.openlocfilehash: c25b54f30a9e8c0ce66c1a833aef4c5daf35e6b8
+ms.sourcegitcommit: 354ed9c8fac7014adb0d752518a91d8c86cdce81
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/05/2018
-ms.locfileid: "34771461"
+ms.lasthandoff: 06/14/2018
+ms.locfileid: "35612260"
 ---
 # <a name="view-and-read-sql-server-setup-log-files"></a>Ver y leer los archivos de registro de instalación de SQL Server
 
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
 
-De forma predeterminada, el programa de instalación de SQL Server crea archivos de registro en una carpeta de registro con marca de tiempo en %programfiles%\Microsoft SQL Server\\*nnn*\Setup Bootstrap\Log. El formato del nombre de la carpeta de registro con marca de tiempo es AAAAMMDD_hhmmss. Cuando el programa de instalación se ejecuta en modo desatendido, los registros se crean en %temp%\sqlsetup*.log. Todos los archivos de la carpeta de registro se almacenan en el archivo Log\*.cab en su carpeta respectiva.  
+El programa de instalación de SQL Server crea archivos de registro en una carpeta con fecha y marca de tiempo en **\%programfiles%\Microsoft SQL Server\\*nnn*\Setup Bootstrap\Log** de forma predeterminada, donde *nnn* son los números que se corresponden a la versión de SQL que se va a instalar. El formato del nombre de la carpeta de registro con marca de tiempo es AAAAMMDD_hhmmss. Cuando el programa de instalación se ejecuta en modo desatendido, los registros se crean en %temp%\sqlsetup*.log. Todos los archivos de la carpeta de registro se almacenan en el archivo Log\*.cab en su carpeta de registro correspondiente.  
+
+   | Archivo           | Ruta de acceso |
+   | :------        | :----------------------------- |
+   | **Summary.txt**    | \%programfiles%\Microsoft SQL Server\\*nnn*\Setup Bootstrap\Log |
+   | **Summary_\<NombreDelEquipo>\_Date.txt**  | \%programfiles%\Microsoft SQL Server\\*nnn*\Setup Bootstrap\Log\YYYYMMDD_hhmmss |
+   | **Detail.txt** | \%programfiles%\Microsoft SQL Server\\*nnn*\Setup Bootstrap\Log\YYYYMMDD_hhmmss|
+   | **Datastore** | \%programfiles%\Microsoft SQL Server\\*nnn*\Setup Bootstrap\Log\YYYYMMDD_hhmmss\Datastore
+   | **Archivos de registro de MSI** | \%programfiles%\Microsoft SQL Server\\*nnn*\Setup Bootstrap\Log\YYYYMMDD_hhmmss\\\<Nombre>.log|
+   | **ConfigurationFile.ini** | \%programfiles%\Microsoft SQL Server\\*nnn*\Setup Bootstrap\Log\YYYYMMDD_hhmmss |
+   | **SystemConfigurationCheck_Report.htm** | \%programfiles%\Microsoft SQL Server\\*nnn*\Setup Bootstrap\Log\YYYYMMDD_hhmmss |
+   | **Para las instalaciones desatendidas** | %temp%\sqlsetup*.log |
+
 
  ![setup-bootstrap-example.png](media/view-and-read-sql-server-setup-log-files/setup-bootstrap-example.png)
 
@@ -46,9 +58,9 @@ De forma predeterminada, el programa de instalación de SQL Server crea archivos
 3.  Acción solicitada por el usuario: permite al usuario seleccionar y personalizar características
   
 
-Este flujo de trabajo genera un único registro de resumen, así como un único registro de detalles para una instalación de RTM o dos registros de detalles para cuando los medios se instalan de manera integrada.
+Este flujo de trabajo genera un único registro de resumen y un registro de detalle único para una instalación básica de SQL Server, o bien dos registros de detalle para cuando se instala una actualización, por ejemplo, un Service Pack, junto con la instalación básica. 
   
-Los archivos de almacén de datos contienen una instantánea del estado de todos los objetos de configuración sometidos a seguimiento por el proceso de instalación y son útiles para solucionar errores de configuración. Para cada fase de ejecución se crean archivos de volcado XML, que se guardan en la subcarpeta de registro del almacén de datos de la carpeta de registro con marca de tiempo. 
+Además, hay archivos de almacén de datos que contienen una instantánea del estado de todos los objetos de configuración sometidos a seguimiento por el proceso de instalación y son útiles para solucionar errores de configuración. Para cada fase de ejecución se crean archivos de volcado XML, que se guardan en la subcarpeta de registro del almacén de datos de la carpeta de registro con marca de tiempo. 
 
 En las secciones siguientes se describen los archivos de registro de instalación de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
   
@@ -130,6 +142,8 @@ En las secciones siguientes se describen los archivos de registro de instalació
   
 ### <a name="location"></a>Ubicación  
 El archivo SystemConfigurationCheck_Report.htm se encuentra en %programfiles%\\[!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]\\*nnn*\Setup Bootstrap\Log\\<AAAAMMDD_HHMM>\\.
+
+[!INCLUDE[get-help-options](../../includes/paragraph-content/get-help-options.md)]
   
 ## <a name="see-also"></a>Vea también  
  [Instalar SQL Server 2017](../../database-engine/install-windows/install-sql-server.md)

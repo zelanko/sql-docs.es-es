@@ -4,11 +4,9 @@ ms.custom: ''
 ms.date: 03/04/2017
 ms.prod: sql
 ms.prod_service: integration-services
-ms.component: system-views
 ms.reviewer: ''
 ms.suite: sql
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.tgt_pltfrm: ''
 ms.topic: language-reference
 ms.assetid: 273a54f8-b107-4f36-9461-2b475644760d
@@ -16,18 +14,19 @@ caps.latest.revision: 6
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 02ce48e0c4e39ac9729dd29ac8b17d32793d348a
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 8ec738406c400f8db058360835a3dece093f9449
+ms.sourcegitcommit: cc46afa12e890edbc1733febeec87438d6051bf9
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/12/2018
+ms.locfileid: "35407557"
 ---
 # <a name="catalogeventmessagecontext"></a>catalog.event_message_context
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
 
   Muestra información sobre las condiciones asociadas a los mensajes de eventos de ejecución, para las ejecuciones en el servidor [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)].  
   
-|Nombre de columna|Tipo de datos|Description|  
+|Nombre de columna|Tipo de datos|Descripción|  
 |-----------------|---------------|-----------------|  
 |Context_id|BIGINT|Identificador único del contexto del error.|  
 |Event_message_id|BIGINT|Identificador único del mensaje con el que el contexto se relaciona.|  
@@ -44,7 +43,7 @@ ms.lasthandoff: 05/03/2018
   
 ||||  
 |-|-|-|  
-|Valor de tipo de contexto|Nombre del tipo|Description|  
+|Valor de tipo de contexto|Nombre del tipo|Descripción|  
 |10|Tarea|Estado de una tarea cuando se produjo un error.|  
 |20|Canalización|Error de un componente de canalización: componente de origen, de destino o de transformación.|  
 |30|Secuencia|Estado de una secuencia.|  

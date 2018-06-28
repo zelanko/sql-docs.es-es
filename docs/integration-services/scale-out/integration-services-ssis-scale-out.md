@@ -1,15 +1,13 @@
 ---
 title: Escalabilidad horizontal de SQL Server Integration Services (SSIS) | Microsoft Docs
-ms.description: This article provides an overview of the SQL Server Integration Services (SSIS) Scale Out feature, which provides high-performance execution of SSIS packages
-ms.custom: ''
+description: En este artículo se proporciona información general sobre la característica Escalabilidad horizontal de SQL Server Integration Services (SSIS), que permite la ejecución de alto rendimiento de paquetes SSIS.
+ms.custom: performance
 ms.date: 12/13/2017
 ms.prod: sql
 ms.prod_service: integration-services
-ms.component: scale-out
 ms.reviewer: ''
 ms.suite: sql
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: dcfbd1c5-c001-4fb7-b9ae-916e49ab6a96
@@ -17,11 +15,12 @@ caps.latest.revision: 6
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 14f02912f300cfa6b45d38aa95c0d66235aea324
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 7fc57db9bc8a305450aa2619d9b7c222fda91763
+ms.sourcegitcommit: de5e726db2f287bb32b7910831a0c4649ccf3c4c
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/12/2018
+ms.locfileid: "35334089"
 ---
 # <a name="integration-services-ssis-scale-out"></a>Escalado horizontal de Integration Services (SSIS)
 La escalabilidad horizontal de SQL Server [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] (SSIS) proporciona una ejecución de alto rendimiento de paquetes de SSIS mediante la distribución de ejecuciones de paquetes en varios equipos. Tras configurar la escalabilidad horizontal, puede ejecutar múltiples ejecuciones de paquetes en paralelo (en el modo de escalabilidad horizontal) desde SQL Server Management Studio (SSMS).

@@ -4,7 +4,6 @@ ms.custom: ''
 ms.date: 03/04/2017
 ms.prod: sql
 ms.prod_service: mds
-ms.component: non-specific
 ms.reviewer: ''
 ms.suite: sql
 ms.technology:
@@ -23,11 +22,12 @@ caps.latest.revision: 9
 author: leolimsft
 ms.author: lle
 manager: craigg
-ms.openlocfilehash: 8c240d0338f9f9063ff51c9bd969c54bd8c61b76
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 7fe91c605f019688bd250af578d9457aee4a96b0
+ms.sourcegitcommit: cc46afa12e890edbc1733febeec87438d6051bf9
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/12/2018
+ms.locfileid: "35406847"
 ---
 # <a name="database-logins-users-and-roles-master-data-services"></a>Inicios de sesión, usuarios y roles en bases de datos (Master Data Services)
 
@@ -37,21 +37,21 @@ ms.lasthandoff: 05/03/2018
   
 ## <a name="logins"></a>Inicios de sesión  
   
-|Login|Description|  
+|Login|Descripción|  
 |-----------|-----------------|  
 |**mds_dlp_login**|Permite la creación de ensamblados de UNSAFE. Para más información, consulte [Creating an Assembly](../relational-databases/clr-integration/assemblies/creating-an-assembly.md).<br /><br /> -Inicio de sesión deshabilitado con contraseña generada de forma aleatoria.<br /><br /> -Asigna dbo para la base de datos [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] .<br /><br /> -Para msdb, mds_clr_user asigna este inicio de sesión.|  
 |**mds_email_login**|Inicio de sesión habilitado usado para las notificaciones.<br /><br /> Para msdb y la base de datos [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] , mds_email_user asigna este inicio de sesión.|  
   
 ## <a name="msdb-users"></a>Usuarios de msdb  
   
-|Usuario|Description|  
+|Usuario|Descripción|  
 |----------|-----------------|  
 |**mds_clr_user**|No se usa. Asigna mds_dlp_login.|  
 |**mds_email_user**|Se usa para notificaciones.<br /><br /> -Asigna mds_email_login.<br /><br /> -Es un miembro del rol: DatabaseMailUserRole.|  
   
 ## <a name="master-data-services-database-users"></a>Usuarios de la base de datos de Master Data Services  
   
-|Usuario|Description|  
+|Usuario|Descripción|  
 |----------|-----------------|  
 |**mds_email_user**|Se usa para notificaciones.<br /><br /> -Tiene el permiso SELECT para el esquema de mdm.<br /><br /> -Tiene el permiso EXECUTE para el tipo de tabla definida por el usuario mdm.MemberGetCriteria.<br /><br /> -Tiene el permiso EXECUTE para el procedimiento almacenado mdm.udpNotificationQueueActivate.|  
 |**mds_schema_user**|Posee los esquemas de mdq y mdm. El esquema predeterminado es mdm.<br /><br /> No tiene un inicio de sesión asignado a él.|  
@@ -59,13 +59,13 @@ ms.lasthandoff: 05/03/2018
   
 ## <a name="master-data-services-database-role"></a>Rol de la base de datos Master Data Services  
   
-|Rol|Description|Permisos|  
+|Rol|Descripción|Permisos|  
 |----------|-----------------|-----------------|  
 |**mds_exec**|Este rol contiene la cuenta que se ha designado en [!INCLUDE[ssMDScfgmgr](../includes/ssmdscfgmgr-md.md)] al crear una aplicación web de [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)] y designa una cuenta para el grupo de aplicaciones.|Permiso EXECUTE en todos los esquemas.<br /><br /> <br /><br /> Permiso ALTERT, INSERT y SELECT en estas tablas:<br /><br /> mdm.tblStgMember<br /><br /> mdm.tblStgMemberAttribute<br /><br /> mdm.tbleStgRelationship<br /><br /> <br /><br /> Permiso SELECT en estas tablas:<br /><br /> mdm.tblUser<br /><br /> mdm.tblUserGroup<br /><br /> mdm.tblUserPreference<br /><br /> <br /><br /> Permiso SELECT en estas vistas:<br /><br /> mdm.viw_SYSTEM_SECURITY_NAVIGATION<br /><br /> mdm.viw_SYSTEM_SECURITY_ROLE_ACCCESSCONTROL<br /><br /> mdm.viw_SYSTEM_SECURITY_ROLE_ACCCESSCONTROL_MEMBER<br /><br /> mdm.viw_SYSTEM_SECURITY_USER_MODEL|  
   
 ## <a name="schemas"></a>Esquemas  
   
-|Rol|Description|  
+|Rol|Descripción|  
 |----------|-----------------|  
 |**mdm**|Contiene todos los objetos de Service Broker y bases de datos de [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] que no sean las funciones contenidas en el esquema mdq.|  
 |**mdq**|Contiene funciones de base de datos de [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] relacionadas con el filtrado de los resultados de miembros basados en expresiones regulares o de similitud, y el formato de los correos electrónicos de notificación.|  

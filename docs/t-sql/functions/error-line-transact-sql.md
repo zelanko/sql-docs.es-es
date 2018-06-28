@@ -27,49 +27,47 @@ caps.latest.revision: 39
 author: edmacauley
 ms.author: edmaca
 manager: craigg
-ms.openlocfilehash: 44745c0f27527872abd1b63c3fa5b3954328c1be
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 347233585a00c73d006fa0115fb703d57fc16ca2
+ms.sourcegitcommit: b52b5d972b1a180e575dccfc4abce49af1a6b230
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/08/2018
+ms.locfileid: "35249668"
 ---
 # <a name="errorline-transact-sql"></a>ERROR_LINE (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
-  Devuelve el número de línea en que se produjo un error que provocó la ejecución del bloque CATCH de una construcción TRY…CATCH.  
+Esta función devuelve el número de línea de la repetición de un error que provocó la ejecución del bloque CATCH de una construcción TRY…CATCH.  
   
  ![Icono de vínculo de tema](../../database-engine/configure-windows/media/topic-link.gif "Icono de vínculo de tema") [Convenciones de sintaxis de Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>Sintaxis  
   
 ```  
-  
 ERROR_LINE ( )  
 ```  
   
 ## <a name="return-type"></a>Tipo devuelto  
- **int**  
+**int**  
   
 ## <a name="return-value"></a>Valor devuelto  
- Cuando se llama en un bloque CATCH:  
+Cuando se llama en un bloque CATCH, `ERROR_LINE` devuelve  
   
--   Devuelve el número de línea en que se produjo el error.  
-  
--   Devuelve el número de línea de una rutina si el error se produjo en un procedimiento almacenado o desencadenador.  
-  
- Devuelve NULL si se le llama desde fuera del ámbito del bloque CATCH.  
+-   el número de línea donde se produjo el error.    
+-   el número de línea de una rutina, si el error se produjo en un procedimiento almacenado o desencadenador.  
+-   NULL, si se llamó desde fuera del ámbito del bloque CATCH.  
   
 ## <a name="remarks"></a>Notas  
- Esta función se puede llamar desde cualquier lugar dentro del ámbito de un bloque CATCH.  
+Una llamada a `ERROR_LINE` se puede producir en cualquier lugar del ámbito de un bloque CATCH.  
   
- ERROR_LINE devuelve el número de línea en que se produjo el error, independientemente de las veces que se llame o desde dónde se llame en el ámbito del bloque CATCH. En cambio, las funciones como @@ERROR solo devuelven el número de error en la instrucción inmediatamente posterior a la que produjo el error o en la primera instrucción de un bloque CATCH.  
+`ERROR_LINE` devuelve el número de línea en que se produjo el error. Esto ocurre independientemente de la ubicación de la llamada a `ERROR_LINE` dentro del ámbito del bloque CATCH y del número de llamadas a `ERROR_LINE`. Esto contrasta con las funciones, como @@ERROR. @@ERROR devuelve el número de error en la instrucción inmediatamente posterior a la que produjo el error o en la primera instrucción de un bloque CATCH.  
   
- En los bloques CATCH anidados, ERROR_LINE devuelve el número de línea del error específico del ámbito del bloque CATCH en el que se hace referencia al mismo. Por ejemplo, el bloque CATCH de una construcción TRY...CATCH podría contener una construcción TRY...CATCH anidada. Dentro del bloque CATCH anidado, ERROR_LINE devuelve el número de línea del error que invocó el bloque CATCH anidado. Si ERROR_LINE se ejecuta en el bloque CATCH externo, devuelve el número de línea del error que invocó ese bloque CATCH.  
+En los bloques CATCH anidados, `ERROR_LINE` devuelve el número de línea del error específico del ámbito del bloque CATCH en el que se hace referencia al mismo. Por ejemplo, el bloque CATCH de una construcción TRY...CATCH podría contener una construcción TRY...CATCH anidada. Dentro del bloque CATCH anidado, `ERROR_LINE` devuelve el número de línea del error que invocó el bloque CATCH anidado. Si `ERROR_LINE` se ejecuta en el bloque CATCH externo, devuelve el número de línea del error que invocó ese bloque CATCH específico.  
   
 ## <a name="examples"></a>Ejemplos  
   
 ### <a name="a-using-errorline-in-a-catch-block"></a>A. Utilizar ERROR_LINE en un bloque CATCH  
- El siguiente ejemplo de código muestra una instrucción `SELECT` que genera un error de división por cero. Se devuelve el número de línea en que se produjo el error.  
+En este ejemplo de código se muestra una instrucción `SELECT` que genera un error de división por cero. `ERROR_LINE` devuelve el número de línea donde se produjo el error.  
   
 ```  
 BEGIN TRY  
@@ -81,9 +79,23 @@ BEGIN CATCH
 END CATCH;  
 GO  
 ```  
+ [!INCLUDE[ssResult](../../includes/ssresult-md.md)]  
+   
+```  
+Result 
+-----------
+
+(0 row(s) affected)
+
+ErrorLine
+-----------
+4
+
+(1 row(s) affected)
+```  
   
 ### <a name="b-using-errorline-in-a-catch-block-with-a-stored-procedure"></a>B. Utilizar ERROR_LINE en un bloque CATCH con un procedimiento almacenado  
- En el siguiente ejemplo de código se muestra un procedimiento almacenado que generará un error de división por cero. `ERROR_LINE` devuelve el número de línea del procedimiento almacenado en el que se produce el error.  
+En este ejemplo se muestra un procedimiento almacenado que genera un error de división por cero. `ERROR_LINE` devuelve el número de línea donde se produjo el error.  
   
 ```  
 -- Verify that the stored procedure does not already exist.  
@@ -91,7 +103,7 @@ IF OBJECT_ID ( 'usp_ExampleProc', 'P' ) IS NOT NULL
     DROP PROCEDURE usp_ExampleProc;  
 GO  
   
--- Create a stored procedure that   
+-- Create a stored procedure that  
 -- generates a divide-by-zero error.  
 CREATE PROCEDURE usp_ExampleProc  
 AS  
@@ -106,10 +118,24 @@ BEGIN CATCH
     SELECT ERROR_LINE() AS ErrorLine;  
 END CATCH;  
 GO  
+``` 
+ [!INCLUDE[ssResult](../../includes/ssresult-md.md)]  
+   
 ```  
-  
+-----------
+
+(0 row(s) affected)
+
+ErrorLine
+-----------
+7
+
+(1 row(s) affected)  
+   
+```
+
 ### <a name="c-using-errorline-in-a-catch-block-with-other-error-handling-tools"></a>C. Utilizar ERROR_LINE en un bloque CATCH con otras herramientas de control de errores  
- El siguiente ejemplo de código muestra una instrucción `SELECT` que genera un error de división por cero. Además del número de línea en que se produjo el error, se devuelve información relacionada con el mismo.  
+En este ejemplo de código se muestra una instrucción `SELECT` que genera un error de división por cero. `ERROR_LINE` devuelve el número de línea donde se produjo el error y la información relacionada con el error propiamente dicho.  
   
 ```  
 BEGIN TRY  
@@ -126,7 +152,21 @@ BEGIN CATCH
         ERROR_MESSAGE() AS ErrorMessage;  
 END CATCH;  
 GO  
+``` 
+ [!INCLUDE[ssResult](../../includes/ssresult-md.md)]  
+   
 ```  
+-----------
+
+(0 row(s) affected)
+
+ErrorNumber ErrorSeverity ErrorState ErrorProcedure ErrorLine ErrorMessage
+----------- ------------- ---------- -------------- --------- ---------------------------------
+8134        16            1          NULL           3         Divide by zero error encountered.
+
+(1 row(s) affected)
+  
+```
   
 ## <a name="see-also"></a>Ver también  
  [TRY...CATCH &#40;Transact-SQL&#41;](../../t-sql/language-elements/try-catch-transact-sql.md)   

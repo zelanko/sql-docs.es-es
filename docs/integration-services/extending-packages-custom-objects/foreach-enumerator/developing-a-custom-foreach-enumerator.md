@@ -4,10 +4,9 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql
 ms.prod_service: integration-services
-ms.component: extending-packages-custom-objects
 ms.reviewer: ''
 ms.suite: sql
-ms.technology: ''
+ms.technology: integration-services
 ms.tgt_pltfrm: ''
 ms.topic: reference
 applies_to:
@@ -21,11 +20,12 @@ caps.latest.revision: 20
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 7a3d4e36ae369c0af72defc0784b6573a80e7451
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 2f72d1c6d5f97f85e86bed30a380ea0c8fc0b62f
+ms.sourcegitcommit: cc46afa12e890edbc1733febeec87438d6051bf9
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/12/2018
+ms.locfileid: "35405777"
 ---
 # <a name="developing-a-custom-foreach-enumerator"></a>Desarrollar un enumerador foreach personalizado
   [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] usa enumeradores de foreach para iterar por los elementos de una colección y realizar las mismas tareas para cada elemento. [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] incluye varios enumeradores de foreach que admiten las colecciones de uso más frecuente, como todos los archivos de una carpeta, todas las tablas de una base de datos o todos los elementos de una lista almacenados en una variable de paquete. Si las colecciones y enumeradores foreach que se proporcionan no cumplen completamente sus requisitos, puede crear un enumerador foreach personalizado.  

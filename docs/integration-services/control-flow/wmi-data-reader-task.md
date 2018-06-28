@@ -4,11 +4,9 @@ ms.custom: ''
 ms.date: 03/01/2017
 ms.prod: sql
 ms.prod_service: integration-services
-ms.component: control-flow
 ms.reviewer: ''
 ms.suite: sql
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.tgt_pltfrm: ''
 ms.topic: conceptual
 f1_keywords:
@@ -23,11 +21,12 @@ caps.latest.revision: 49
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 443aeb132cc4a201a276d1d76b1849e0e8bf92e7
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 881118c9747dca1a328bd091bf1bfee017e2bbb5
+ms.sourcegitcommit: cc46afa12e890edbc1733febeec87438d6051bf9
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/12/2018
+ms.locfileid: "35405867"
 ---
 # <a name="wmi-data-reader-task"></a>Tarea Lector de datos WMI
   La tarea Lector de datos WMI ejecuta consultas mediante el Lenguaje de consulta del Instrumental de administración de Windows (WMI), que devuelve información de WMI sobre un sistema informático. Puede usar la tarea Lector de datos WMI para los siguientes fines:  
@@ -81,7 +80,7 @@ Select * FROM Win32_QuickFixEngineering
 ## <a name="custom-logging-messages-available-on-the-wmi-data-reader-task"></a>Mensajes de registro personalizados disponibles en la tarea Lector de datos WMI  
  La siguiente tabla contiene las entradas del registro personalizadas para la tarea Lector de datos WMI. Para obtener más información, vea [Registro de Integration Services &#40;SSIS&#41;](../../integration-services/performance/integration-services-ssis-logging.md).  
   
-|Entrada del registro|Description|  
+|Entrada del registro|Descripción|  
 |---------------|-----------------|  
 |**WMIDataReaderGettingWMIData**|Indica que la tarea inició la lectura de datos WMI.|  
 |**WMIDataReaderOperation**|Informa de la consulta WQL que ejecutó la tarea.|  
@@ -131,7 +130,7 @@ Select * FROM Win32_QuickFixEngineering
  **WQLQuerySourceType**  
  Seleccione el tipo de origen de la consulta WQL que ejecuta la tarea. Esta propiedad presenta las opciones indicadas en la siguiente tabla.  
   
-|Valor|Description|  
+|Valor|Descripción|  
 |-----------|-----------------|  
 |**Entrada directa**|Establezca el origen en una consulta WQL. Al seleccionar este valor se muestra la opción dinámica **WQLQuerySourceType**.|  
 |**Conexión de archivos**|Seleccione el archivo que contiene la consulta WQL. Al seleccionar este valor se muestra la opción dinámica **WQLQuerySourceType**.|  
@@ -146,7 +145,7 @@ Select * FROM Win32_QuickFixEngineering
  **DestinationType**  
  Seleccione el tipo de destino de la consulta WQL que ejecuta la tarea. Esta propiedad presenta las opciones indicadas en la siguiente tabla.  
   
-|Valor|Description|  
+|Valor|Descripción|  
 |-----------|-----------------|  
 |**Conexión de archivos**|Seleccione un archivo donde guardar los resultados de la consulta WQL. Al seleccionar este valor se muestra la opción dinámica **DestinationType**.|  
 |**Variable**|Establezca la variable donde almacenar los resultados de la consulta WQL. Al seleccionar este valor se muestra la opción dinámica **DestinationType**.|  

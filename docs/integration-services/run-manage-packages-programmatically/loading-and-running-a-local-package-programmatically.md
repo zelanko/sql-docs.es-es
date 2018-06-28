@@ -4,10 +4,9 @@ ms.custom: ''
 ms.date: 03/17/2017
 ms.prod: sql
 ms.prod_service: integration-services
-ms.component: run-manage-packages-programmatically
 ms.reviewer: ''
 ms.suite: sql
-ms.technology: ''
+ms.technology: integration-services
 ms.tgt_pltfrm: ''
 ms.topic: reference
 applies_to:
@@ -27,11 +26,12 @@ caps.latest.revision: 60
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: cc12741e0cbd00439a4c83ecb0cf683f7198738d
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: d80d99520035244f8181b678d800e85d385ec41b
+ms.sourcegitcommit: cc46afa12e890edbc1733febeec87438d6051bf9
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/12/2018
+ms.locfileid: "35409157"
 ---
 # <a name="loading-and-running-a-local-package-programmatically"></a>Cargar y ejecutar un paquete local mediante programación
   Puede ejecutar paquetes de [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] según sea necesario o en momentos predeterminados mediante los métodos descritos en [Ejecución de paquetes](https://msdn.microsoft.com/library/ms141708(v=sql.110).aspx). Sin embargo, con solo unas líneas de código, también puede ejecutar un paquete desde una aplicación personalizada como una aplicación Windows Forms, una aplicación de consola, un formulario Web Forms o servicio web ASP.NET o un servicio de Windows.  

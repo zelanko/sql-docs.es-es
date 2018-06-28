@@ -1,14 +1,12 @@
 ---
 title: Cuadro de diálogo Filtrar (Complemento MDS para Excel) | Microsoft Docs
-ms.custom: ''
+ms.custom: microsoft-excel-add-in
 ms.date: 03/15/2017
 ms.prod: sql
 ms.prod_service: mds
-ms.component: microsoft-excel-add-in
 ms.reviewer: ''
 ms.suite: sql
-ms.technology:
-- master-data-services
+ms.technology: master-data-services
 ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: b987b141-5abf-4161-a073-4cfc3e7f5aae
@@ -16,11 +14,12 @@ caps.latest.revision: 8
 author: leolimsft
 ms.author: lle
 manager: craigg
-ms.openlocfilehash: e775f606b81fd849f7089f15116d4bd0f4c514d4
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 1a9914b45153ccd8912d8009bc0baf7971eacce2
+ms.sourcegitcommit: cc46afa12e890edbc1733febeec87438d6051bf9
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/12/2018
+ms.locfileid: "35408567"
 ---
 # <a name="filter-dialog-box-mds-add-in-for-excel"></a>Cuadro de diálogo Filtrar (Complemento MDS para Excel)
 
@@ -33,7 +32,7 @@ ms.lasthandoff: 05/03/2018
 ## <a name="columns"></a>Columnas  
  Use la sección **Columnas** para determinar los atributos (columnas) que quiere mostrar en Excel.  
   
-|Nombre del control|Description|  
+|Nombre del control|Descripción|  
 |------------------|-----------------|  
 |Tipo de atributo|Un tipo de atributo describe el tipo de miembros con los que desea trabajar. En la mayoría de los casos, es **Hoja**. Para obtener más información sobre los tipos de miembros, consulte [Miembros &#40;Master Data Services&#41;](../../master-data-services/members-master-data-services.md).|  
 |Jerarquía explícita|Si elige el tipo de atributo **Consolidado** , elija la jerarquía a la que pertenecen los miembros consolidados. Para obtener más información, consulte [Jerarquías explícitas &#40;Master Data Services&#41;](../../master-data-services/explicit-hierarchies-master-data-services.md).|  
@@ -45,7 +44,7 @@ ms.lasthandoff: 05/03/2018
 ## <a name="rows"></a>Filas  
  Use la sección **Filas** para determinar los miembros (filas) que quiere mostrar en Excel. Para ello, defina criterios para filtrar las filas que se muestran.  
   
-|Nombre del control|Description|  
+|Nombre del control|Descripción|  
 |------------------|-----------------|  
 |Attribute|Muestra un atributo por el que desea filtrar. Si no aparece ningún atributo, se debe a que no se han agregado.<br /><br /> Nota: Puede filtrar los atributos que no tiene previsto mostrar en la hoja de cálculo.|  
 |Operador|Muestra los operadores correspondientes al tipo de atributo que estaba seleccionado. Para obtener más información, consulte [Operadores de filtro &#40;Master Data Services&#41;](../../master-data-services/filter-operators-master-data-services.md).|  
@@ -58,7 +57,7 @@ ms.lasthandoff: 05/03/2018
 ## <a name="summary"></a>Resumen  
  Use la sección **Resumen** para ver los detalles de la cantidad de datos que se cargarán, antes de cargarlos.  
   
-|Nombre del control|Description|  
+|Nombre del control|Descripción|  
 |------------------|-----------------|  
 |Modelo|Nombre del modelo.|  
 |Versión|El nombre de la versión.|  

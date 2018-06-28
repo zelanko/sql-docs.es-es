@@ -4,11 +4,9 @@ ms.custom: ''
 ms.date: 03/01/2017
 ms.prod: sql
 ms.prod_service: integration-services
-ms.component: data-flow
 ms.reviewer: ''
 ms.suite: sql
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.tgt_pltfrm: ''
 ms.topic: conceptual
 f1_keywords:
@@ -21,11 +19,12 @@ caps.latest.revision: 12
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: aeaf5354106c548a8c0b107a99a9b0778be8006d
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 4f9255f356347e0bcfb7a35bbe17b9c8ec6468b4
+ms.sourcegitcommit: cc46afa12e890edbc1733febeec87438d6051bf9
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/12/2018
+ms.locfileid: "35409987"
 ---
 # <a name="odbc-destination"></a>Destino ODBC
   El destino ODBC carga de forma masiva los datos en tablas de base de datos que admiten ODBC. El destino ODBC usa un administrador de conexiones ODBC para conectarse al origen de datos.  
@@ -111,7 +110,7 @@ ms.lasthandoff: 05/03/2018
 #### <a name="data-access-mode"></a>Modo de acceso a datos  
  Seleccione el método para cargar datos en el destino. Las opciones se muestran en la tabla siguiente:  
   
-|Opción|Description|  
+|Opción|Descripción|  
 |------------|-----------------|  
 |Nombre de la tabla - Lote|Seleccione esta opción para configurar el destino de ODBC de manera que funcione en modo por lotes. Cuando seleccione esta opción, aparecerán las opciones siguientes:|  
 ||**Nombre de la tabla o la vista**: seleccione una tabla o vista disponible en la lista.<br /><br /> Esta lista contiene solo las 1000 primeras tablas. Si la base de datos contiene más de 1000 tablas, puede escribir el principio de un nombre de tabla o usar el carácter comodín (\*) para escribir cualquier parte del nombre con el fin de mostrar las tablas que quiere usar.<br /><br /> **Tamaño del lote**: escriba el tamaño del lote para la carga masiva. Es el número de filas cargadas como un lote.|  
@@ -165,7 +164,7 @@ ms.lasthandoff: 05/03/2018
 #### <a name="truncation"></a>Truncamiento  
  Seleccione la forma en la que el destino de ODBC debe controlar los truncamientos en un flujo: omitir el error, redirigir la fila o hacer que el componente no funcione.  
   
-#### <a name="description"></a>Description  
+#### <a name="description"></a>Descripción  
  Muestra una descripción del error.  
   
 #### <a name="set-this-value-to-selected-cells"></a>Establecer este valor en las celdas seleccionadas  

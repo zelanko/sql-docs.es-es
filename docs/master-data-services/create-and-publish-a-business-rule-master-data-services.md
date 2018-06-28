@@ -4,7 +4,6 @@ ms.custom: ''
 ms.date: 03/01/2017
 ms.prod: sql
 ms.prod_service: mds
-ms.component: non-specific
 ms.reviewer: ''
 ms.suite: sql
 ms.technology:
@@ -19,11 +18,12 @@ caps.latest.revision: 14
 author: leolimsft
 ms.author: lle
 manager: craigg
-ms.openlocfilehash: e42860278fc478cb6d139ee8e94ab24668e67a26
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 2c2c75fbe8251d66bc094f0e59681bcc160dba7a
+ms.sourcegitcommit: cc46afa12e890edbc1733febeec87438d6051bf9
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/12/2018
+ms.locfileid: "35400827"
 ---
 # <a name="create-and-publish-a-business-rule-master-data-services"></a>Crear y publicar una regla de negocios (Master Data Services)
 
@@ -107,11 +107,11 @@ ms.lasthandoff: 05/03/2018
 ## <a name="grid-columns"></a>Columnas de la cuadrícula  
  Por cada regla de negocio creada, se agrega una fila con seis columnas a la cuadrícula. Las columnas son las siguientes.  
   
-|Nombre|Description|  
+|Nombre|Descripción|  
 |----------|-----------------|  
 |Estado|Al hacer clic en **Guardar** , aparece la imagen siguiente, que indica que la regla de negocio se está actualizando.<br /><br /> ![mds_BR_refresh](../master-data-services/media/mds-br-refresh.png "mds_BR_refresh")<br /><br /> Si aparecen errores al crear o editar una regla de negocio, se muestra la imagen siguiente.<br /><br /> ![mds_br_error](../master-data-services/media/mds-br-error.png "mds_br_error")<br /><br /> Si el estado es correcto, se muestra la siguiente imagen.<br /><br /> ![mds_BR_success](../master-data-services/media/mds-br-success.png "mds_BR_success")|  
 |Nombre|El nombre de la regla de negocio.|  
-|Description|La descripción de la regla de negocio.|  
+|Descripción|La descripción de la regla de negocio.|  
 |Business Rule State|Uno de los siguientes estados de la regla de negocio: Regla no definida, Activa, Excluida, Cambios pendientes, Exclusión pendiente y Eliminación pendiente.|  
 |Excluido|Especifica si la regla de negocios está excluida.|  
 |Notification|Especifica el usuario o grupo seleccionado al que enviar la notificación por correo electrónico.|  

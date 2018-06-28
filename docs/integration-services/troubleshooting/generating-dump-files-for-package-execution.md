@@ -4,11 +4,9 @@ ms.custom: ''
 ms.date: 08/24/2016
 ms.prod: sql
 ms.prod_service: integration-services
-ms.component: troubleshooting
 ms.reviewer: ''
 ms.suite: sql
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: 61ef1731-cb3a-4afb-b4a4-059b04aeade0
@@ -16,11 +14,12 @@ caps.latest.revision: 15
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 1053f9e1714ac5003f02ac66ff19e148660d918b
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 19f452f12c609f238d477258021590d5c7248619
+ms.sourcegitcommit: cc46afa12e890edbc1733febeec87438d6051bf9
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/12/2018
+ms.locfileid: "35408077"
 ---
 # <a name="generating-dump-files-for-package-execution"></a>Generar archivos de volcado para la ejecución de paquetes
   En [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)], puede crear archivos de volcado de depuración que proporcionen información sobre la ejecución de un paquete. La información de estos archivos puede ayudarle a solucionar los problemas de ejecución del paquete.  
@@ -50,7 +49,7 @@ ms.lasthandoff: 05/03/2018
   
  En la tabla siguiente solo se describen determinadas secciones del archivo .tmp. El archivo .tmp incluye datos adicionales que no se incluyen en la tabla.  
   
-|Tipo de información|Description|Ejemplo|  
+|Tipo de información|Descripción|Ejemplo|  
 |-------------------------|-----------------|-------------|  
 |Entorno|Versión del sistema operativo, datos de uso de la memoria, identificador de proceso y nombre de imagen de proceso. La información del entorno se encuentra al principio del archivo .tmp.|# SSIS Textual Dump taken at 9/13/2007 1:50:34 PM<br /><br /> #PID 4120<br /><br /> #Image Name [C:\Program Files\Microsoft SQL Server\110\DTS\Binn\DTExec.exe]<br /><br /> # OS major=6 minor=0 build=6000<br /><br /> # Running on 2 amd64 processors under WOW64<br /><br /> # Memory: 58% in use. Physical: 845M/2044M  Paging: 2404M/4095M (avail/total)|  
 |Ruta de acceso y versión de la biblioteca de vínculos dinámicos (DLL)|Ruta de acceso y número de versión de cada DLL que el sistema carga durante el procesamiento de un paquete.|# Loaded Module: c:\bb\Sql\DTS\src\bin\debug\i386\DTExec.exe (10.0.1069.5)<br /><br /> # Loaded Module: C:\Windows\SysWOW64\ntdll.dll (6.0.6000.16386)<br /><br /> # Loaded Module: C:\Windows\syswow64\kernel32.dll (6.0.6000.16386)|  

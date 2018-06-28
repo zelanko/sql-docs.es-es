@@ -28,11 +28,12 @@ author: rothja
 ms.author: jroth
 manager: craigg
 monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
-ms.openlocfilehash: 911e983816453ede6a40375aad7e09bf399567b0
-ms.sourcegitcommit: b5ab9f3a55800b0ccd7e16997f4cd6184b4995f9
+ms.openlocfilehash: a934f7311096e9f97463fc9c7e826aab1fe063f6
+ms.sourcegitcommit: 155f053fc17ce0c2a8e18694d9dd257ef18ac77d
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/23/2018
+ms.lasthandoff: 06/06/2018
+ms.locfileid: "34812169"
 ---
 # <a name="sql-server-index-architecture-and-design-guide"></a>Guía de diseño y de arquitectura de índices de SQL Server
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -642,37 +643,33 @@ Al tratar los índices de almacén de columnas, se usan los términos *almacén 
 
 - Un **almacén de columnas** son datos organizados lógicamente como una tabla con filas y columnas, y almacenados físicamente en un formato de columnas.
   
-Un índice de almacén almacena físicamente la mayoría de los datos en formato de almacén de columnas. Con este formato, los datos se comprimen y descomprimen como columnas. No hace falta descomprimir otros valores que no haya solicitado la consulta en cada una de las filas. De este modo, se puede examinar rápida una columna entera de una tabla grande. 
+  Un índice de almacén almacena físicamente la mayoría de los datos en formato de almacén de columnas. Con este formato, los datos se comprimen y descomprimen como columnas. No hace falta descomprimir otros valores que no haya solicitado la consulta en cada una de las filas. De este modo, se puede examinar rápida una columna entera de una tabla grande. 
 
 - Un **almacén de filas** son datos organizados lógicamente como una tabla con filas y columnas, y almacenados físicamente después en un formato de filas. Esta ha sido la forma tradicional de almacenar datos de tablas relacionales, como un índice de montón o de árbol B agrupado.
 
-Un índice de almacén de columnas también guarda físicamente algunas filas en un formato de almacén de filas denominado "almacén delta" (también llamado "grupos de filas delta"). Se trata de un lugar donde se colocan las filas que son insuficientes para poder comprimirse en el almacén de columnas. Cada grupo de filas delta se implementa como un índice de árbol B agrupado. 
+  Un índice de almacén de columnas también guarda físicamente algunas filas en un formato de almacén de filas denominado "almacén delta" (también llamado "grupos de filas delta"). Se trata de un lugar donde se colocan las filas que son insuficientes para poder comprimirse en el almacén de columnas. Cada grupo de filas delta se implementa como un índice de árbol B agrupado. 
 
 - El **almacén delta** es un lugar donde se colocan las filas que son insuficientes para poder comprimirse en el almacén de columnas. En el almacén delta se almacenan las filas en formato de almacén de filas. 
   
 #### <a name="operations-are-performed-on-rowgroups-and-column-segments"></a>Las operaciones se realizan en segmentos de columna y grupos de filas
 
-El índice de almacén de columnas agrupa las filas en unidades administrables. Cada una de estas unidades se denomina "grupo de filas". Para obtener el mejor rendimiento, el número de filas del grupo de filas debe ser suficientemente grande como para mejorar las tasas de compresión, y suficientemente pequeño como para beneficiarse de las operaciones en memoria.
-
-* Un **grupo de filas** es un elemento en el que el índice de almacén de columnas realiza operaciones de administración y compresión. 
+El índice de almacén de columnas agrupa las filas en unidades administrables. Cada una de estas unidades se denomina **grupo de filas**. Para obtener el mejor rendimiento, el número de filas del grupo de filas debe ser suficientemente grande como para mejorar las tasas de compresión, y suficientemente pequeño como para beneficiarse de las operaciones en memoria.
 
 Por ejemplo, el índice de almacén de columnas realiza estas operaciones en grupos de filas:
 
 * Comprime los grupos de filas en el almacén de columnas. La compresión se realiza en cada segmento de columna de un grupo de filas.
-* Combina grupos de filas durante una operación ALTER INDEX REORGANIZE.
-* Crea nuevos grupos de filas durante una operación ALTER INDEX REBUILD.
+* Combina los grupos de filas durante una operación `ALTER INDEX ... REORGANIZE`.
+* Crea grupos de filas durante una operación `ALTER INDEX ... REBUILD`.
 * Informa de la fragmentación y el estado de los grupos de filas en las vistas de administración dinámica (DMV).
 
-El almacén delta se compone de uno o varios grupos de filas denominados "grupos de filas delta". Cada grupo de filas delta es un índice de árbol B agrupado que almacena filas cuando son insuficientes para poder comprimirse en el almacén de columnas.  
+El almacén delta se compone de uno o varios grupos de filas denominados **grupos de filas delta**. Cada grupo de filas delta es un índice de árbol B agrupado que almacena operaciones de carga e inserción masivas pequeñas hasta que el grupo de filas contiene 1 048 576 filas, o bien hasta que se vuelve a generar el índice.  Cuando un grupo de filas delta tiene 1 048 576 filas, se marca como cerrado y espera a que un proceso llamado "motor de tupla" lo comprima en el almacén de columnas. 
 
-* Un **grupo de filas delta** es un índice de árbol B agrupado que almacena cargas masivas pequeñas y las inserta hasta que el grupo de filas contiene 1 048 576 filas o hasta que vuelve a generar el índice.  Cuando un grupo de filas delta tenga 1 048 576 filas, se marca como cerrado y espera a que un proceso llamado "motor de tupla" lo comprima en el almacén de columnas. 
+Cada columna tiene algunos de sus valores en cada grupo de filas. Estos valores se denominan **segmentos de columna**. Cada grupo de filas contiene un segmento de cada columna de la tabla. Cada columna tiene un segmento de columna en cada grupo de filas.
 
-Cada columna tiene algunos de sus valores en cada grupo de filas. Estos valores se denominan "segmentos de columna". Cuando el índice de almacén de columnas comprime un grupo de filas, lo hace con cada segmento de columna de manera independiente. Para descomprimir una columna entera, el índice de almacén de columnas solo debe descomprimir un segmento de columna de cada grupo de filas.
-
-* Un **segmento de columna** es la parte de los valores de columna de un grupo de filas. Cada grupo de filas contiene un segmento de cada columna de la tabla. Cada columna tiene un segmento de columna en cada grupo de filas.| 
-  
- ![Column segment](../relational-databases/indexes/media/sql-server-pdw-columnstore-columnsegment.gif "Column segment")  
+![Column segment](../relational-databases/indexes/media/sql-server-pdw-columnstore-columnsegment.gif "Column segment") 
  
+Cuando el índice de almacén de columnas comprime un grupo de filas, lo hace con cada segmento de columna de manera independiente. Para descomprimir una columna entera, el índice de almacén de columnas solo debe descomprimir un segmento de columna de cada grupo de filas.   
+
 #### <a name="small-loads-and-inserts-go-to-the-deltastore"></a>Las inserciones y las cargas pequeñas pasan al almacén delta
 Un índice de almacén de columnas mejora el rendimiento y la compresión del almacén de columnas comprimiendo, al menos, 102 400 filas a la vez en el índice de almacén de columnas. Para comprimir las filas de forma masiva, el índice de almacén de columnas acumula inserciones y cargas pequeñas en el almacén delta. Las operaciones del almacén delta se administran en segundo plano. Para devolver los resultados correctos de la consulta, el índice clúster de almacén de columnas combina los resultados de la consulta tanto del almacén de columnas como del almacén delta. 
 

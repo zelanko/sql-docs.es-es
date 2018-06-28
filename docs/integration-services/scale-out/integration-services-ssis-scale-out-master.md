@@ -1,26 +1,25 @@
 ---
 title: Patrón de escalabilidad horizontal de SQL Server Integration Services (SSIS) | Microsoft Docs
-ms.description: This article describes the Scale Out Master component of SSIS Scale Out
-ms.custom: ''
+description: En este artículo se describe el componente Patrón de escalabilidad horizontal de Escalabilidad horizontal de SSIS.
+ms.custom: performance
 ms.date: 12/19/2017
 ms.prod: sql
 ms.prod_service: integration-services
-ms.component: scale-out
 ms.reviewer: ''
 ms.suite: sql
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.tgt_pltfrm: ''
 ms.topic: conceptual
 caps.latest.revision: 1
 author: haoqian
 ms.author: haoqian
 manager: craigg
-ms.openlocfilehash: 2f0e604ff66388d351cbb4cf7092c0b6fe5edfea
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 25d404552fe71cf79cda57a7d204a5c2263f8e2e
+ms.sourcegitcommit: cc46afa12e890edbc1733febeec87438d6051bf9
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/12/2018
+ms.locfileid: "35405557"
 ---
 # <a name="integration-services-ssis-scale-out-master"></a>Patrón de escalado horizontal de Integration Services (SSIS)
 El Servicio principal de escalabilidad horizontal administra el sistema de escalabilidad horizontal mediante el catálogo SSISDB y el propio servicio. 
@@ -50,7 +49,7 @@ El Servicio principal de escalabilidad horizontal es un servicio de Windows que 
 Configure el Servicio principal de escalabilidad horizontal con el archivo `\<drive\>:\Program Files\Microsoft SQL Server\140\DTS\Binn\MasterSettings.config`. Deberá reiniciar el servicio después de actualizar el archivo de configuración.
 
 
-Configuración  |Description  |Valor predeterminado  
+Configuración  |Descripción  |Valor predeterminado  
 ---------|---------|---------
 PortNumber|Número de puerto de red usado para comunicarse con un trabajador de escalado horizontal.|8391         
 SSLCertThumbprint|Huella digital del certificado SSL usado para proteger la comunicación con un trabajador de escalado horizontal.|Huella digital del certificado SSL especificado durante la instalación del patrón de escalado horizontal         

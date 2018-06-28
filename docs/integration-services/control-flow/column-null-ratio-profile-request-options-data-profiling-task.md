@@ -4,11 +4,9 @@ ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: integration-services
-ms.component: control-flow
 ms.reviewer: ''
 ms.suite: sql
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
@@ -18,11 +16,12 @@ caps.latest.revision: 19
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: cf045c6fd461ed8dfda86dd611cbedd1d424cd4f
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 680021d90ba3cb5a1622d3c37dd4a15553112b78
+ms.sourcegitcommit: cc46afa12e890edbc1733febeec87438d6051bf9
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/12/2018
+ms.locfileid: "35406877"
 ---
 # <a name="column-null-ratio-profile-request-options-data-profiling-task"></a>Opciones de Solicitud de perfil de proporción de columnas nulas (tarea de generación de perfiles de datos)
   Utilice el panel **Propiedades de la solicitud** de la página **Solicitudes de perfil** para establecer las opciones de **Solicitud de perfil de proporción de columnas nulas** seleccionadas en el panel de solicitudes. Un perfil de proporción de columnas nulas indica el porcentaje de valores nulos de la columna seleccionada. Este perfil puede ayudarle a identificar problemas en los datos, por ejemplo una proporción inesperadamente alta de valores nulos en una columna. Por ejemplo, un perfil de proporción de columnas nulas puede generar un perfil de una columna de códigos postales y detectar que falta un porcentaje inaceptablemente alto de códigos postales.  

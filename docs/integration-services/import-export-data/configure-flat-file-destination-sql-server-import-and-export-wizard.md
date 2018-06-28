@@ -4,11 +4,9 @@ ms.custom: ''
 ms.date: 03/16/2017
 ms.prod: sql
 ms.prod_service: integration-services
-ms.component: import-export-data
 ms.reviewer: ''
 ms.suite: sql
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.tgt_pltfrm: ''
 ms.topic: conceptual
 f1_keywords:
@@ -18,11 +16,12 @@ caps.latest.revision: 53
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: cee1fcffe26a8f17d5a8c0fd4e547e98b95d30c1
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 10d89181165d76e0b48dd7b09f0508d3d9f77419
+ms.sourcegitcommit: cc46afa12e890edbc1733febeec87438d6051bf9
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/12/2018
+ms.locfileid: "35408527"
 ---
 # <a name="configure-flat-file-destination-sql-server-import-and-export-wizard"></a>Configurar el destino del archivo plano (Asistente para importación y exportación de SQL Server)
   Si ha seleccionado un destino de archivo plano, el Asistente para importación y exportación de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] muestra **Configurar el destino del archivo plano** después de especificar que quiere copiar una tabla o después de proporcionar una consulta. En esta página, especifique las opciones de formato del archivo de destino plano. Opcionalmente, revise la asignación de columnas individuales y obtenga una vista previa de los datos de ejemplo.  
@@ -45,7 +44,7 @@ ms.lasthandoff: 05/03/2018
  **Delimitador de filas**  
  Seleccione de la lista de delimitadores para separar las filas en la salida. No hay ninguna opción para especificar un delimitador de fila *personalizado*.  
   
-|Valor|Description|  
+|Valor|Descripción|  
 |-----------|-----------------|  
 |**{CR}{LF}**|Las filas se delimitan mediante una combinación de retorno de carro y avance de línea.|  
 |**{CR}**|Las filas se delimitan mediante un retorno de carro.|  
@@ -59,7 +58,7 @@ ms.lasthandoff: 05/03/2018
  **Delimitador de columna**  
  Seleccione de la lista de delimitadores para separar las columnas en la salida. No hay ninguna opción para especificar un delimitador de columna *personalizado*.  
   
-|Valor|Description|  
+|Valor|Descripción|  
 |-----------|-----------------|  
 |**{CR}{LF}**|Las columnas se delimitan mediante una combinación de retorno de carro y avance de línea.|  
 |**{CR}**|Las columnas se delimitan mediante un retorno de carro.|  

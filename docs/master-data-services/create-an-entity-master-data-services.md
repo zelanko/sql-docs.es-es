@@ -4,7 +4,6 @@ ms.custom: ''
 ms.date: 03/01/2017
 ms.prod: sql
 ms.prod_service: mds
-ms.component: non-specific
 ms.reviewer: ''
 ms.suite: sql
 ms.technology:
@@ -19,11 +18,12 @@ caps.latest.revision: 9
 author: leolimsft
 ms.author: lle
 manager: craigg
-ms.openlocfilehash: e2e9851921d808339681080d5df0c9439212a3db
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 26ecc54177da5a224e1c26c5dcac58d4e4d4cf3e
+ms.sourcegitcommit: cc46afa12e890edbc1733febeec87438d6051bf9
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/12/2018
+ms.locfileid: "35410467"
 ---
 # <a name="create-an-entity-master-data-services"></a>Crear una entidad (Master Data Services)
 
@@ -72,11 +72,11 @@ ms.lasthandoff: 05/03/2018
 ## <a name="grid-columns"></a>Columnas de la cuadrícula  
  Por cada entidad creada, se agrega una fila con trece columnas a la cuadrícula. Las columnas son las siguientes.  
   
-|Nombre|Description|  
+|Nombre|Descripción|  
 |----------|-----------------|  
 |Estado|El estado de la entidad. Al hacer clic en **Guardar** , aparece la imagen siguiente, que indica que la entidad se está actualizando.<br /><br /> ![Icono de estado de actualización](../master-data-services/media/mds-statusicon-updating.png "Icono de estado de actualización")<br /><br /> Si se producen errores al crear o editar una entidad, se muestra la imagen siguiente.<br /><br /> ![Icono de estado de error](../master-data-services/media/mds-statusicon-error.png "Icono de estado de error")<br /><br /> Si el estado es correcto, se muestra la siguiente imagen.<br /><br /> ![Icono de estado correcto](../master-data-services/media/mds-statusicon-ok.png "Icono de estado correcto")|  
 |Nombre|El nombre de la entidad.|  
-|Description|La descripción de la entidad.|  
+|Descripción|La descripción de la entidad.|  
 |Tabla de ensayo|El nombre de prefijo de la tabla que se usa para almacenar datos.|  
 |Tipo de registro de transacciones|El tipo de registro de transacciones de la entidad.|  
 |Creación automática de código|Especifica si está habilitada la creación automática de código.|  

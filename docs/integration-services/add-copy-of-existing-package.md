@@ -4,11 +4,9 @@ ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: integration-services
-ms.component: non-specific
 ms.reviewer: ''
 ms.suite: sql
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.tgt_pltfrm: ''
 ms.topic: conceptual
 f1_keywords:
@@ -20,11 +18,12 @@ caps.latest.revision: 13
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 9d717a87c0b031fa072bf6a0060c80e93a9b3239
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 3dfb7cb10382ac7d9ee8c63f14ef924a24229955
+ms.sourcegitcommit: cc46afa12e890edbc1733febeec87438d6051bf9
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/12/2018
+ms.locfileid: "35409697"
 ---
 # <a name="add-copy-of-existing-package"></a>Agregar copia de paquete existente
   Utilice el cuadro de diálogo **Agregar copia de paquete existente** para agregar una copia de un paquete almacenado en [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)], el sistema de archivos o el Almacén de paquetes SSIS en un proyecto de [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] .  

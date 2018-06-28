@@ -4,10 +4,9 @@ ms.custom: ''
 ms.date: 03/16/2017
 ms.prod: sql
 ms.prod_service: integration-services
-ms.component: extending-packages-custom-objects-data-flow-types
 ms.reviewer: ''
 ms.suite: sql
-ms.technology: ''
+ms.technology: integration-services
 ms.tgt_pltfrm: ''
 ms.topic: reference
 applies_to:
@@ -30,11 +29,12 @@ caps.latest.revision: 57
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 6d9d226dc4018ea517a477be3b3103120dc5b371
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 4c1c8abe94f55ceedc97632ed5ece8d61b5034f7
+ms.sourcegitcommit: cc46afa12e890edbc1733febeec87438d6051bf9
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/12/2018
+ms.locfileid: "35402507"
 ---
 # <a name="developing-a-custom-transformation-component-with-asynchronous-outputs"></a>Desarrollar un componente de transformación personalizado con salidas asincrónicas
   Cuando una transformación no puede generar filas hasta que un componente ha recibido todas sus filas de entrada o no genera exactamente una fila de salida por cada fila recibida como entrada, se utiliza un componente con salidas asincrónicas. Por ejemplo, la transformación Agregado no puede calcular una suma de las filas hasta que las ha leído todas. En cambio, puede utilizar un componente con salidas sincrónicas en cualquier momento al modificar cada fila de datos a medida que las atraviesa. Puede modificar los datos para cada fila en su lugar o bien crear una o más columnas nuevas, cada una de las cuales tiene un valor para cada una de las filas de entrada. Para obtener más información acerca de la diferencia entre los componentes sincrónicos y asincrónicos, vea [Descripción de las transformaciones sincrónicas y asincrónicas](../../integration-services/understanding-synchronous-and-asynchronous-transformations.md).  

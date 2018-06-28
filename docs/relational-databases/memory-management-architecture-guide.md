@@ -1,7 +1,7 @@
 ---
 title: Guía de arquitectura de administración de memoria | Microsoft Docs
 ms.custom: ''
-ms.date: 11/23/2017
+ms.date: 06/08/2018
 ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
 ms.component: relational-databases-misc
@@ -20,11 +20,12 @@ author: rothja
 ms.author: jroth
 manager: craigg
 monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
-ms.openlocfilehash: 8d01610b3ac4d87b747398bd71bdd63f1842a3ee
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 048a6b5a2a704a353fddce56a9d565e8f3792b92
+ms.sourcegitcommit: 6e55a0a7b7eb6d455006916bc63f93ed2218eae1
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/08/2018
+ms.locfileid: "35239375"
 ---
 # <a name="memory-management-architecture-guide"></a>guía de arquitectura de administración de memoria
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -75,8 +76,7 @@ Mediante AWE y el privilegio Bloquear páginas en memoria, puede proporcionar la
 > Las versiones anteriores de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] pueden ejecutarse en un sistema operativo de 32 bits. Para acceder a más de 4 gigabytes (GB) de memoria en un sistema operativo de 32 bits, se requieren las extensiones de ventana de dirección (AWE) para administrar la memoria. Esto no es necesario cuando [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] se ejecuta en sistemas operativos de 64 bits. Para más información acerca de AWE, consulte [Espacio de dirección del proceso](http://msdn.microsoft.com/library/ms189334.aspx) y [Administrar la memoria para bases de datos de gran tamaño](http://msdn.microsoft.com/library/ms191481.aspx) en la documentación de [!INCLUDE[ssKatmai](../includes/ssKatmai-md.md)].   
 
 ## <a name="changes-to-memory-management-starting-with-includesssql11includessssql11-mdmd"></a>Cambios en la administración de memoria a partir de [!INCLUDE[ssSQL11](../includes/sssql11-md.md)]
-
-En versiones anteriores de SQL Server ([!INCLUDE[ssVersion2005](../includes/ssversion2005-md.md)], [!INCLUDE[ssKatmai](../includes/ssKatmai-md.md)] y [!INCLUDE[ssKilimanjaro](../includes/ssKilimanjaro-md.md)]), la asignación de memoria se realizaba mediante cinco mecanismos diferentes:
+En versiones anteriores de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] ([!INCLUDE[ssVersion2005](../includes/ssversion2005-md.md)], [!INCLUDE[ssKatmai](../includes/ssKatmai-md.md)] y [!INCLUDE[ssKilimanjaro](../includes/ssKilimanjaro-md.md)]), la asignación de memoria se realizaba mediante cinco mecanismos diferentes:
 -  **Asignador de página única (SPA)**, que incluye solo las asignaciones de memoria menores o iguales a 8 KB en el proceso [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]. Las opciones de configuración *memoria de servidor máxima (MB)* y *memoria de servidor mínima (MB)* determinaban los límites de la memoria física que podía consumir el SPA. El grupo de búferes era el mecanismo para SPA y el mayor consumidor de asignaciones de página única.
 -  **Asignador de varias páginas (MPA)**, para las asignaciones de memoria que solicitan más de 8 KB.
 -  **Asignador de CLR**, que incluye las pilas CLR de SQL y las asignaciones globales creadas durante la inicialización de CLR.
@@ -109,7 +109,6 @@ Este comportamiento se observa normalmente durante las siguientes operaciones:
 -  Operaciones de seguimiento que tienen que almacenar parámetros de entrada grandes.
 
 ## <a name="changes-to-memorytoreserve-starting-with-includesssql11includessssql11-mdmd"></a>Cambios en "memory_to_reserve" a partir de [!INCLUDE[ssSQL11](../includes/sssql11-md.md)]
-
 En versiones anteriores de SQL Server ([!INCLUDE[ssVersion2005](../includes/ssversion2005-md.md)], [!INCLUDE[ssKatmai](../includes/ssKatmai-md.md)] y [!INCLUDE[ssKilimanjaro](../includes/ssKilimanjaro-md.md)]), el administrador de memoria de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] reservaba una parte del espacio de direcciones virtuales (VAS) del proceso para que la usasen el **asignador de varias páginas (MPA)**, el **asignador de CLR**, las asignaciones de memoria para **pilas de subprocesos** en el proceso de SQL Server, y las **asignaciones de Windows directas (DWA)**. Esta parte del espacio de direcciones virtuales también se conoce como región "Mem-To-Leave" o "grupo sin búferes".
 
 El espacio de direcciones virtuales que está reservado para las asignaciones viene determinado por la opción de configuración ***memory_to_reserve***. El valor predeterminado que usa [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] es 256 MB. Para invalidar el valor predeterminado, use el parámetro de inicio *-g* de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]. Consulte la página de documentación sobre [Opciones de inicio del servicio de motor de base de datos](../database-engine/configure-windows/database-engine-service-startup-options.md) para obtener información sobre el parámetro de inicio *-g*.
@@ -127,12 +126,11 @@ En la tabla siguiente se indica si un tipo específico de la asignación de memo
 |Asignaciones directas de Windows|Sí|Sí|
 
 ## <a name="dynamic-memory-management"></a> Administración dinámica de memoria
-
-El comportamiento predeterminado de administración de memoria del [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)] es adquirir toda la memoria que necesita sin provocar una escasez de memoria en el sistema. El [!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)] lo consigue mediante las API de notificación de memoria de Microsoft Windows.
+El comportamiento predeterminado de administración de memoria del [!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)] es adquirir toda la memoria que necesita sin provocar una escasez de memoria en el sistema. El [!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)] lo consigue mediante las API de notificación de memoria de Microsoft Windows.
 
 Cuando [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] utiliza la memoria de manera dinámica, realiza una consulta periódica en el sistema para determinar la cantidad de memoria libre. El mantenimiento de esta memoria libre evita la paginación en el sistema operativo (SO). Si hay menos memoria libre, [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] libera memoria para el sistema operativo. Si hay más memoria libre, [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] puede asignar más memoria. [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] agrega memoria solo cuando su carga de trabajo así lo requiere; un servidor inactivo no aumenta el tamaño de su espacio de direcciones virtual.  
   
-La **[Memoria de servidor máxima](../database-engine/configure-windows/server-memory-server-configuration-options.md)** controla la asignación de memoria de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)], todas las cachés (incluido el grupo de búferes), las concesiones de memoria de ejecución de consultas, la memoria del administrador de bloqueos y la memoria de CLR<sup>1</sup> (básicamente, cualquier distribuidor de memoria que se encuentre en **[sys.dm_os_memory_clerks](../relational-databases/system-dynamic-management-views/sys-dm-os-memory-clerks-transact-sql.md)**). 
+La **[Memoria de servidor máxima](../database-engine/configure-windows/server-memory-server-configuration-options.md)** controla la asignación de memoria de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)], todas las cachés (incluido el grupo de búferes), las [concesiones de memoria de ejecución de consultas](#effects-of-min-memory-per-query), [la memoria del administrador de bloqueos](#memory-used-by-sql-server-objects-specifications) y la memoria de CLR<sup>1</sup> (básicamente, cualquier distribuidor de memoria que se encuentre en **[sys.dm_os_memory_clerks](../relational-databases/system-dynamic-management-views/sys-dm-os-memory-clerks-transact-sql.md)**). 
 
 <sup>1</sup> La memoria CLR se administra en asignaciones de max_server_memory a partir de [!INCLUDE[ssSQL11](../includes/sssql11-md.md)].
 
@@ -170,13 +168,12 @@ La <a name="stacksizes"></a>memoria para pilas de subprocesos<sup>1</sup>, CLR<s
 
 Cuando [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] se inicia, calcula el tamaño del espacio de direcciones virtuales del grupo de búferes basándose en un número de parámetros, como  la cantidad de memoria física en el sistema, el número de subprocesos de servidor y varios parámetros de inicio. [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] reserva la cantidad calculada de su espacio de direcciones virtuales del proceso para el grupo de búferes, pero solo adquiere (confirma) la cantidad necesaria de memoria física para la carga actual.
 
-A continuación, la instancia sigue adquiriendo la memoria que necesita para la carga de trabajo. A medida que se conectan más usuarios y se ejecutan consultas, [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] adquiere la memoria física adicional según la demanda. Una instancia de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] sigue adquiriendo memoria física hasta que alcanza su asignación de max server memory o hasta que Windows indica que ya no existe más memoria libre; libera memoria cuando se supera el valor de min server memory y Windows indica que hay escasez de memoria libre.
+A continuación, la instancia sigue adquiriendo la memoria que necesita para la carga de trabajo. A medida que se conectan más usuarios y se ejecutan consultas, [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] adquiere la memoria física adicional según la demanda. Una instancia de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] sigue adquiriendo memoria física hasta que alcanza su asignación de memoria de servidor máxima o hasta que el sistema operativo indica que ya no existe más memoria libre; libera memoria cuando se supera el valor de memoria de servidor mínima y el sistema operativo indica que hay escasez de memoria libre. 
 
 Cuando se inician otras aplicaciones en un equipo que ejecuta una instancia de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)], consumen memoria y la cantidad de memoria física disponible cae por debajo del destino de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] . La instancia de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] ajusta su consumo de memoria. Si se detiene otra aplicación y aumenta la cantidad de memoria disponible, la instancia de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] aumenta el tamaño de su asignación de memoria. [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] puede liberar y adquirir varios megabytes de memoria cada segundo, lo que le permite ajustarse rápidamente a los cambios de asignación de memoria.
 
 ## <a name="effects-of-min-and-max-server-memory"></a>Efectos de las opciones min y max server memory
-
-Las opciones de configuración memoria de servidor mínima y memoria de servidor máxima establecen los límites superior e inferior de la cantidad de memoria que usa el grupo de búferes y otras memorias caché del motor de base de datos de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]. El grupo de búferes no adquiere inmediatamente la cantidad de memoria especificada en Memoria de servidor mínima. El grupo de búferes comienza con la memoria precisa para el inicio. Según aumenta la carga de trabajo del [!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)], se sigue adquiriendo la memoria necesaria para permitir la carga de trabajo. El grupo de búferes no libera nada de la memoria adquirida hasta que alcanza la cantidad especificada en Memoria de servidor mínima. Una vez alcanzado el valor de Memoria de servidor mínima, el grupo de búferes utiliza el algoritmo estándar para adquirir y liberar memoria según sea preciso. La única diferencia es que el grupo de búferes nunca deja que su asignación de memoria baje del nivel especificado en Memoria de servidor mínima y adquiera más memoria del nivel especificado en Memoria de servidor máxima.
+Las opciones de configuración *min server memory* y *max server memory* establecen los límites superior e inferior de la cantidad de memoria que usa el grupo de búferes y otras memorias caché del motor de base de datos de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]. El grupo de búferes no adquiere inmediatamente la cantidad de memoria especificada en Memoria de servidor mínima. El grupo de búferes comienza con la memoria precisa para el inicio. Según aumenta la carga de trabajo del [!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)], se sigue adquiriendo la memoria necesaria para permitir la carga de trabajo. El grupo de búferes no libera nada de la memoria adquirida hasta que alcanza la cantidad especificada en Memoria de servidor mínima. Una vez alcanzado el valor de Memoria de servidor mínima, el grupo de búferes utiliza el algoritmo estándar para adquirir y liberar memoria según sea preciso. La única diferencia es que el grupo de búferes nunca deja que su asignación de memoria baje del nivel especificado en Memoria de servidor mínima y adquiera más memoria del nivel especificado en Memoria de servidor máxima.
 
 > [!NOTE]
 > [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] adquiere, como un proceso, más memoria de la especificada en la opción max server memory. Los componentes tanto internos como externos pueden asignar memoria fuera del grupo de búferes, lo cual consume memoria adicional, pero la memoria asignada en el grupo de búferes todavía representa normalmente la cantidad más grande de memoria que consume [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)].
@@ -187,8 +184,7 @@ Si se especifica el mismo valor para memoria de servidor mínima y memoria de se
 
 Si una instancia de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] se está ejecutando en un equipo donde se inician o detienen otras aplicaciones con frecuencia, la asignación y cancelación de asignación de memoria por parte de la instancia de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] puede ralentizar el inicio de otras aplicaciones. Además, si [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] es una de las diversas aplicaciones de servidor que se ejecutan en un único equipo, los administradores del sistema pueden necesitar controlar la cantidad de memoria asignada a [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]. En estos casos, puede utilizar las opciones Memoria de servidor mínima y Memoria de servidor máxima para controlar cuánta memoria puede usar [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] . Las opciones **memoria de servidor mínima** y **memoria de servidor máxima** se expresan en megabytes. Para obtener más información, vea [Opciones de configuración de memoria del servidor](../database-engine/configure-windows/server-memory-server-configuration-options.md).
 
-## <a name="memory-used-by-includessnoversionincludesssnoversion-mdmd-objects-specifications"></a>Memoria que usan las especificaciones de objetos de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]
-
+## <a name="memory-used-by-sql-server-objects-specifications"></a>Memoria que usan las especificaciones de objetos de SQL Server
 La siguiente lista muestra la cantidad de memoria aproximada que usan diferentes objetos en [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]. Las cantidades mostradas son estimaciones y pueden variar según el entorno y cómo se crean los objetos:
 
 * Bloqueo (tal y como se mantiene el Administrador de bloqueos): 64 bytes + 32 bytes por propietario   
@@ -198,12 +194,33 @@ El **tamaño del paquete de red** es el tamaño de los paquetes del esquema de d
 
 Cuando los conjuntos de resultados activos múltiples están habilitados, la conexión de usuario es aproximadamente (3 + 3 \* num_logical_connections) \* network_packet_size + 94 KB
 
-## <a name="buffer-management"></a>Administración de búfer
+## <a name="effects-of-min-memory-per-query"></a>Efectos de memoria mínima por consulta
+La opción *min memory per query* establece la cantidad mínima de memoria (en kilobytes) que se va a asignar para la ejecución de una consulta. Esto también se conoce como concesión de memoria mínima. Todas las consultas deben esperar hasta que se pueda proteger la memoria mínima solicitada, antes de que se pueda iniciar la ejecución, o bien hasta que se supera el valor especificado en la opción de configuración del servidor Espera de consulta. El tipo de espera que se acumula en este escenario es RESOURCE_SEMAPHORE.
 
+> [!IMPORTANT]
+> No establezca la opción de configuración del servidor Memoria mínima por consulta en un valor demasiado alto, especialmente en sistemas muy ocupados, ya que si lo hace, podría provocar:         
+> - El aumento de la competición por los recursos de memoria.         
+> - La reducción de la simultaneidad al aumentar la cantidad de memoria para cada consulta única, incluso si la memoria necesaria en tiempo de ejecución es menor que esta configuración.    
+>    
+> Para obtener recomendaciones sobre el uso de esta configuración, vea [Configurar la opción de configuración del servidor Memoria mínima por consulta](../database-engine/configure-windows/configure-the-min-memory-per-query-server-configuration-option.md#Recommendations).
+
+### <a name="memory-grant-considerations"></a>Consideraciones de concesión de memoria
+Para la **ejecución del modo de fila**, no se puede superar la concesión de memoria inicial bajo ninguna condición. Si se necesita más memoria que la concesión inicial para ejecutar operaciones de **hash** u **orden**, estas se desbordarán al disco. Una operación de hash que se desborda es compatible con un archivo de trabajo en TempDB, mientras que una operación de orden que se desborda es compatible con una [tabla de trabajo](../relational-databases/query-processing-architecture-guide.md#worktables).   
+
+Un desbordamiento que se produzca durante una operación de orden se conoce como una [advertencia antes de ordenar](../relational-databases/event-classes/sort-warnings-event-class.md). Las advertencias antes de ordenar indican que las operaciones de orden no caben en la memoria. Esto no incluye las operaciones de orden que implican la creación de índices, solo las operaciones de orden dentro de una consulta (como las de una cláusula `ORDER BY` en una instrucción `SELECT`).
+
+Un desbordamiento que se produzca durante una operación de hash se conoce como una [advertencia hash](../relational-databases/event-classes/hash-warning-event-class.md). Tienen lugar cuándo se ha producido una recursividad hash o un cese de hash (salida hash) durante una operación de hash.
+-  La recursividad hash se produce cuando no hay suficiente memoria para la entrada generada, lo que causa que ésta se divida en varias particiones que se procesan por separado. Si alguna de estas particiones sigue sin caber en la memoria disponible, se vuelve a dividir en subparticiones, que también se procesan por separado. Este proceso de división continúa hasta que cada partición quepa en la memoria disponible o hasta que se alcance el nivel máximo de recursividad.
+-  La salida hash se produce cuando una operación de hash alcanza el nivel máximo de repetición y vuelve a un plan alternativo para procesar el resto de datos con particiones. Estos eventos pueden producir un rendimiento reducido en el servidor.
+
+Para la **ejecución del modo por lotes**, la concesión de memoria inicial puede aumentar de forma dinámica hasta un umbral interno concreto de forma predeterminada. Este mecanismo de concesión de memoria dinámico está diseñado para permitir la ejecución residente de memoria de las operaciones de **hash** u **orden** que se ejecutan en el modo por lotes. Si estas operaciones siguen sin caber en la memoria, se desbordarán al disco.
+
+Para obtener más información sobre los modos de ejecución, vea [Guía de arquitectura de procesamiento de consultas](../relational-databases/query-processing-architecture-guide.md#execution-modes).
+
+## <a name="buffer-management"></a>Administración de búfer
 El propósito principal de una base de datos de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] es almacenar y recuperar datos, por lo que una E/S de disco intensiva es una de las características principales del Motor de base de datos. Debido a que las operaciones de E/S de disco pueden consumir muchos recursos y tardar bastante tiempo en completarse, [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] se centra en hacer la E/S muy eficaz. La administración de búfer es un componente clave para lograr esta eficacia. El componente de administración de búfer consta de dos mecanismos: el **administrador de búfer** para obtener acceso a las páginas de bases de datos y actualizarlas y la **memoria caché del búfer** (también conocida como **grupo de búferes**) para reducir la E/S de archivos de base de datos. 
 
 ### <a name="how-buffer-management-works"></a>Cómo funciona la administración de búfer
-
 Un búfer es una página de 8 KB en memoria (el mismo tamaño que una página de índice o de datos). Por tanto, la memoria caché del búfer está dividida en páginas de 8 KB. El administrador de búfer administra las funciones para la lectura de páginas de índice o de datos de los archivos de disco de base de datos en la caché del búfer y para la escritura de páginas modificadas nuevamente en el disco. Una página permanece en la memoria caché del búfer hasta que el administrador de búfer necesita el área del búfer para leer en ella más datos. Los datos solo vuelven a escribirse en el disco si se han modificado. Los datos de la memoria caché del búfer se pueden modificar varias veces antes de que se vuelvan a escribir en el disco. Para más información, consulte [Leer páginas](../relational-databases/reading-pages.md) y [Escribir páginas](../relational-databases/writing-pages.md).
 
 Cuando [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] se inicia, calcula el tamaño del espacio de direcciones virtuales de la caché de búferes basándose en un número de parámetros, como la cantidad de memoria física en el sistema, el número configurado de subprocesos máximos de servidor y varios parámetros de inicio. [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] reserva la cantidad calculada de su espacio de direcciones virtuales del proceso (llamado destino de memoria) para la caché de búferes, pero solo adquiere (confirma) la cantidad necesaria de memoria física para la carga actual. Puede realizar una consulta en las columnas **bpool_commit_target** y **bpool_committed** en la vista de catálogo [sys.dm_os_sys_info](../relational-databases/system-dynamic-management-views/sys-dm-os-sys-info-transact-sql.md) para devolver el número de páginas reservadas como memoria objetivo y el número de páginas actualmente confirmadas en la caché del búfer, respectivamente.
@@ -217,7 +234,6 @@ Debido a que el administrador de búfer utiliza la mayor parte de la memoria en 
 * Administrador de registros, para registros de escritura anticipada.  
 
 ### <a name="supported-features"></a>Características admitidas
-
 El administrador de búfer admite las características siguientes:
 
 * El administrador de búfer está preparado para el **acceso no uniforme a memoria (NUMA, Non-Uniform Memory Access)**. Las páginas de la caché del búfer se distribuyen por los nodos NUMA de hardware, que permiten que un subproceso tenga acceso a una página de búfer que esté asignada en el nodo NUMA local y no desde una memoria externa. 
@@ -257,6 +273,30 @@ Otra posible causa de las E/S largas es que un componente de la ruta de acceso d
 
 Las E/S largas aisladas que no están relacionadas con ninguna de las situaciones anteriores pueden estar causadas por un problema con el hardware o el controlador. El registro de eventos del sistema puede contener un evento relacionado que ayude a diagnosticar el problema.
 
+### <a name="memory-pressure-detection"></a>Detección de la presión de memoria
+La presión de memoria es una condición resultante de la escasez de memoria y puede dar lugar a:
+- Operaciones de E/S adicionales (por ejemplo, un subproceso en segundo plano de escritura diferida muy activo).
+- Mayor proporción de recompilación.
+- Consultas en ejecución más prolongadas (si existen esperas de concesión de memoria).
+- Ciclos de CPU adicionales.
+
+Esta situación se puede desencadenar debido a causas externas o internas. Las causas externas incluyen:
+- La memoria física (RAM) disponible es baja. Esto hace que el sistema recorte los espacios de trabajo de los procesos actualmente en ejecución, lo que puede provocar una ralentización general. [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] puede reducir el destino de confirmación del grupo de búferes e iniciar el recorte de las memorias caché internas con más frecuencia. 
+- La memoria del sistema disponible general (que incluye el archivo de paginación del sistema) es baja. Esto puede provocar un error del sistema en las asignaciones de memoria, ya que no puede paginar la memoria asignada actualmente.
+Las causas internas incluyen:
+- Responder a la presión de memoria externa, cuando el [!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)] establece límites de uso de memoria más bajos.
+- La configuración de memoria se redujo manualmente reduciendo la configuración *memoria de servidor máxima*. 
+- Cambios en la distribución de memoria de los componentes internos entre varias cachés.
+
+El [!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)] implementa un marco de trabajo dedicado para detectar y controlar la presión de memoria, como parte de su administración de memoria dinámica. Este marco de trabajo incluye la tarea en segundo plano denominada **Monitor de recursos**. La tarea Monitor de recursos supervisa el estado de los indicadores de memoria externa e interna. Cuando uno de estos indicadores cambia de estado, calcula la notificación correspondiente y la difunde. Estas notificaciones son mensajes internos desde cada uno de los componentes del motor y se almacenan en búferes en anillo. 
+
+Dos búferes en anillo contienen información relevante para la administración dinámica de memoria: 
+- El búfer en anillo Monitor de recursos, que realiza el seguimiento de la actividad del Monitor de recursos, como si la presión de memoria se ha señalado o no. Este búfer en anillo tiene información de estado en función de la condición actual de *RESOURCE_MEMPHYSICAL_HIGH*, *RESOURCE_MEMPHYSICAL_LOW*, *RESOURCE_MEMPHYSICAL_STEADY* o *RESOURCE_MEMVIRTUAL_LOW*.
+- El búfer en anillo Agente de memoria, que contiene los registros de las notificaciones de memoria para cada grupo de recursos de Resource Governor. Cuando se detecta la presión de memoria interna, se activa la notificación de memoria insuficiente para los componentes que asignan memoria, para desencadenar acciones diseñadas para equilibrar la memoria entre las cachés. 
+
+Los agentes de memoria supervisan la demanda de consumo de memoria de cada componente y, después, en función de la información recopilada, calculan el valor óptimo de memoria para cada uno de estos componentes. Hay un conjunto de agentes para cada grupo de recursos de Resource Governor. Después, esta información se difunde a cada uno de los componentes, que aumentan o reducen su uso según sea necesario.
+Para obtener más información sobre los agentes de memoria, vea [sys.dm_os_memory_brokers](../relational-databases/system-dynamic-management-views/sys-dm-os-memory-brokers-transact-sql.md). 
+
 ### <a name="error-detection"></a>Detección de errores  
 Las páginas de bases de datos pueden utilizar uno de los dos mecanismos opcionales que ayudan a garantizar la integridad de la página desde el momento en que se escribe en el disco hasta que se vuelve a leer: protección contra página rasgada y protección de suma de comprobación. Estos mecanismos permiten emplear un método independiente para comprobar la corrección, no solo del almacenamiento de datos, sino también de los componentes de hardware, como controladores, cables e incluso el sistema operativo. La protección se agrega a la página justo antes de escribirla en el disco y se comprueba después de que se lee desde el disco.
 
@@ -278,7 +318,6 @@ La protección de suma de comprobación, característica implementada en [!INCLU
 > Es posible que TORN_PAGE_DETECTION utilice menos recursos, pero proporciona en cambio un subconjunto mínimo de la protección de CHECKSUM.
 
 ## <a name="understanding-non-uniform-memory-access"></a>Descripción del acceso no uniforme a memoria
-
 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]  está preparado para el acceso no uniforme a memoria (NUMA) y realiza un buen rendimiento en hardware NUMA sin necesidad de establecer ninguna configuración especial. A medida que aumentan la velocidad del reloj y el número de procesadores, resulta cada vez más difícil reducir la latencia de la memoria necesaria para utilizar esta potencia de procesamiento adicional. Para evitarlo, los proveedores de hardware proporcionan cachés L3 grandes, pero esto es solo una solución limitada. La arquitectura NUMA proporciona una solución escalable para este problema. [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] se ha diseñado para aprovechar los equipos basados en NUMA sin necesidad de realizar cambios en las aplicaciones. Para obtener más información, vea [Cómo configurar SQL Server para que use NUMA de software](../database-engine/configure-windows/soft-numa-sql-server.md).
 
 ## <a name="see-also"></a>Ver también

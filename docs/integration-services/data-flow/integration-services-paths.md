@@ -4,11 +4,9 @@ ms.custom: ''
 ms.date: 03/04/2017
 ms.prod: sql
 ms.prod_service: integration-services
-ms.component: data-flow
 ms.reviewer: ''
 ms.suite: sql
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.tgt_pltfrm: ''
 ms.topic: conceptual
 f1_keywords:
@@ -26,11 +24,12 @@ caps.latest.revision: 41
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: f825acb27b39a78a7997d34505e99704f0f14b27
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: efe52410b491848001fc7e0861e27732d36bc173
+ms.sourcegitcommit: cc46afa12e890edbc1733febeec87438d6051bf9
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/12/2018
+ms.locfileid: "35410637"
 ---
 # <a name="integration-services-paths"></a>Rutas de Integration Services
   Una ruta conecta dos componentes en un flujo de datos conectando la salida de un componente de flujo de datos con la entrada de otro componente. Una ruta tiene un origen y un destino. Por ejemplo, si una ruta conecta un origen de OLE DB y una transformación Ordenar, el origen de OLE DB es el origen de la ruta y la transformación Ordenar es el destino de la ruta. El origen es el componente donde se inicia la ruta y el destino es el componente donde finaliza la ruta.  
@@ -59,7 +58,7 @@ Las rutas conectan dos componentes de flujo de datos. Para poder establecer prop
   
 5.  Haga clic en **Aceptar**.  
   
-6.  Para guardar el paquete actualizado, haga clic en **Guardar los elementos seleccionados** , en el menú **Archivo** .  
+6.  Para guardar el paquete actualizado, haga clic en **Guardar los elementos seleccionados**, en el menú **Archivo**.  
 
 ## <a name="general-page---data-flow-path-editor"></a>Página General, Editor de rutas de flujo de datos
 Utilice el cuadro de diálogo **Editor de rutas de flujo de datos** para establecer propiedades de ruta, ver metadatos de columna y administrar los visores de datos adjuntados a la ruta.  
@@ -157,7 +156,7 @@ Los objetos de flujo de datos del modelo de objetos de [!INCLUDE[msCoName](../..
   
  La tabla siguiente describe las propiedades configurables de las rutas de acceso en un flujo de datos. El motor de flujo de datos también asigna valores a propiedades de solo lectura adicionales no enumeradas aquí.  
   
-|Nombre de propiedad|Tipo de datos|Description|  
+|Nombre de propiedad|Tipo de datos|Descripción|  
 |-------------------|---------------|-----------------|  
 |PathAnnotation|Integer (enumeración)|Un valor que indica si una anotación se debería mostrar con la ruta de acceso en el área del diseñador. Los valores posibles son **AsNeeded**, **SourceName**, **PathName**y **Never**. El valor predeterminado es **AsNeeded**.|  
 |DestinationName|<xref:Microsoft.SqlServer.Dts.Pipeline.Wrapper.IDTSInput100>|La entrada asociada a la ruta de acceso.|  

@@ -1,25 +1,26 @@
 ---
 title: Validación de paquetes de SSIS implementados en Azure | Microsoft Docs
+description: Obtenga información sobre cómo el Asistente para la implementación de paquetes SSIS busca en los paquetes problemas conocidos que puedan impedir que se ejecuten según lo previsto en Azure.
 ms.date: 11/27/2017
 ms.topic: conceptual
 ms.prod: sql
 ms.prod_service: integration-services
-ms.component: lift-shift
 ms.suite: sql
 ms.custom: ''
-ms.technology:
-- integration-services
+ms.technology: integration-services
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 09086d0f4ff9c5a3f69a922e0c17c046c84001fb
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 0e19b7fe45acfdea692d1334719e9dc8721124df
+ms.sourcegitcommit: de5e726db2f287bb32b7910831a0c4649ccf3c4c
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/12/2018
+ms.locfileid: "35328629"
 ---
-# <a name="validate-ssis-packages-deployed-to-azure"></a>Validación de paquetes de SSIS implementados en Azure
-Al implementar un proyecto de SQL Server Integration Services (SSIS) en la base de datos Catálogo de SSIS (SSISDB) de un servidor de Azure, el asistente para la implementación de paquetes agrega un paso de validación adicional después de la página **Revisión**. Durante este paso de validación se comprueba si hay errores conocidos en los paquetes del proyecto que puedan evitar que se ejecuten según lo esperado en Azure SSIS Integration Runtime. A continuación, se muestran las advertencias aplicables en la página **Validate** del asistente.
+# <a name="validate-sql-server-integration-services-ssis-packages-deployed-to-azure"></a>Validación de paquetes de SQL Server Integration Services (SSIS) implementados en Azure
+
+Al implementar un proyecto de SQL Server Integration Services (SSIS) en el Catálogo de SSIS (SSISDB) de un servidor de Azure, el asistente para la implementación de paquetes agrega un paso de validación adicional después de la página **Revisión**. Durante este paso de validación se comprueba si hay errores conocidos en los paquetes del proyecto que puedan evitar que se ejecuten según lo esperado en Azure SSIS Integration Runtime. A continuación, se muestran las advertencias aplicables en la página **Validate** del asistente.
 
 > [!IMPORTANT]
 > La validación que de describe en este artículo se produce al implementar un proyecto con SQL Server Data Tools (SSDT) versión 17.4 o una posterior. Para obtener la versión más reciente de SSDT, consulte [Descargar SQL Server Data Tools (SSDT)](../../ssdt/download-sql-server-data-tools-ssdt.md).
@@ -29,7 +30,7 @@ Para obtener más información sobre el asistente para implementación de paquet
 ## <a name="validate-connection-managers"></a>Validación de administradores de conexión
 
 El asistente comprobará si determinados administradores de conexión tienen los siguientes problemas, que pueden hacer que no se produzca la conexión:
-- **Autenticación de Windows**. Si se usa la autenticación de Windows en una cadena de conexión, se generará una advertencia durante la validación. La autenticación de Windows requiere pasos de configuración adicionales. Para obtener más información, consulte [Connect to on-premises data sources with Windows Authentication](ssis-azure-connect-with-windows-auth.md) (Conexión a orígenes de datos locales con autenticación de Windows).
+- **Autenticación de Windows**. Si se usa la autenticación de Windows en una cadena de conexión, se generará una advertencia durante la validación. La autenticación de Windows requiere pasos de configuración adicionales. Para obtener más información, vea [Conexión a datos y a recursos compartidos de archivos con la autenticación de Windows](ssis-azure-connect-with-windows-auth.md).
 - **Ruta de acceso a archivos**. Si dentro de una cadena de conexión hay una ruta de acceso a archivo local codificada de forma rígida, como `C:\\...`, se generará una advertencia durante la validación. Es posible que se produzcan errores en paquetes que contengan una ruta de acceso absoluta.
 - **Ruta de acceso UNC**. Si dentro de una cadena de conexión hay una ruta de acceso UNC, se generará una advertencia durante la validación. Es posible que se produzcan errores en paquetes con una ruta de acceso UNC, normalmente debido a que la ruta de acceso UNC requiere autenticación de Windows para el acceso.
 - **Nombre de host**. Si dentro de una propiedad del servidor hay un nombre de host, en vez de una dirección IP, se generará una advertencia durante la validación. Es posible que se produzcan errores en paquetes con un nombre de host, normalmente debido a que la red virtual de Azure requiere una configuración de DNS correcta para admitir la resolución de nombres DNS.
@@ -80,4 +81,4 @@ Se generará una advertencia durante la validación si un paquete contiene una t
 El formato Orc no se admite en el destino de HDFS ni en el destino de Azure Data Lake Store.
 
 ## <a name="next-steps"></a>Pasos siguientes
-Para obtener información sobre la programación de ejecución de paquetes en Azure, consulte [Schedule the execution of an SSIS package on Azure](ssis-azure-schedule-packages.md) (Programación de la ejecución de un paquete de SSIS en Azure).
+Para obtener información sobre cómo programar la ejecución de paquetes en Azure, vea [Programar paquetes de SSIS en Azure](ssis-azure-schedule-packages.md).

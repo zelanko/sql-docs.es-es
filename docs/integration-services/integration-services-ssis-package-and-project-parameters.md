@@ -4,11 +4,9 @@ ms.custom: ''
 ms.date: 03/03/2017
 ms.prod: sql
 ms.prod_service: integration-services
-ms.component: non-specific
 ms.reviewer: ''
 ms.suite: sql
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.tgt_pltfrm: ''
 ms.topic: conceptual
 f1_keywords:
@@ -19,11 +17,12 @@ caps.latest.revision: 23
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 44b3ace5dca858f1216d1e1d5298be8c26a444b7
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 7063c3b5aabc396fc35f05b5a1d271d0a12d7204
+ms.sourcegitcommit: cc46afa12e890edbc1733febeec87438d6051bf9
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/12/2018
+ms.locfileid: "35404377"
 ---
 # <a name="integration-services-ssis-package-and-project-parameters"></a>Paquete de Integration Services (SSIS) y parámetros del proyecto
   Los parámetros de[!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] (SSIS) permiten asignar valores a las propiedades de los paquetes en el momento de la ejecución de los mismos. Puede crear *parámetros de proyecto* en el nivel de proyecto y *parámetros de paquete* en el nivel de paquete. Los parámetros de proyecto se usan para proporcionar cualquier entrada externa que el proyecto recibe a uno o más paquetes del proyecto. Los parámetros de paquete permiten modificar la ejecución del paquete sin tener que modificarlo ni volver a implementarlo.  
@@ -51,7 +50,7 @@ ms.lasthandoff: 05/03/2018
   
  La tabla siguiente enumera los tipos de valores.  
   
-|Nombre del valor|Description|Tipo del valor|  
+|Nombre del valor|Descripción|Tipo del valor|  
 |----------------|-----------------|-------------------|  
 |Valor de ejecución|El valor asignado a una instancia específica de la ejecución del paquete. Esta asignación invalida todos los demás valores, pero solo se aplica a una única instancia de ejecución del paquete.|Literal|  
 |Valor de servidor|El valor asignado al parámetro dentro del ámbito del proyecto, una vez que el proyecto se implementa en el servidor de Integration Services. Este valor invalida el valor predeterminado de diseño.|Literal o referencia de variable de entorno|  
@@ -121,14 +120,14 @@ Puede usar [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)] pa
   
 3.  Escriba valores para las propiedades **Nombre**, **Tipo de datos**, **Valor**, **Con distinción**y **Obligatorio** en la propia lista o en la ventana **Propiedades** . Estas propiedades se describen en la tabla siguiente.  
   
-    |Propiedad|Description|  
+    |Propiedad|Descripción|  
     |--------------|-----------------|  
     |Nombre|Nombre del parámetro.|  
     |Tipo de datos|El tipo de datos del parámetro.|  
     |Valor predeterminado|Valor predeterminado para el parámetro asignado en tiempo de diseño. También se conoce como valor predeterminado de diseño.|  
     |Con distinción|Los valores de parámetros con distinción se cifran en el catálogo y aparecen como valor NULL cuando se ven con Transact-SQL o SQL Server Management Studio.|  
     |Obligatorio|Requiere que un valor, distinto del valor predeterminado de diseño, se especifique antes de que el paquete se ejecute.|  
-    |Description|Descripción del parámetro en cuanto a capacidad de mantenimiento. En [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)], establezca la descripción del parámetro en la ventana Propiedades de Visual Studio cuando el parámetro esté seleccionado en la ventana de parámetros aplicable.|  
+    |Descripción|Descripción del parámetro en cuanto a capacidad de mantenimiento. En [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)], establezca la descripción del parámetro en la ventana Propiedades de Visual Studio cuando el parámetro esté seleccionado en la ventana de parámetros aplicable.|  
   
     > **NOTA:** Cuando se implementa un proyecto en el catálogo, algunas propiedades más se asocian al proyecto. Para ver todas las propiedades de todos los parámetros del catálogo, use la vista [catalog.object_parameters &#40;base de datos de SSISDB&#41;](../integration-services/system-views/catalog-object-parameters-ssisdb-database.md).  
   
@@ -152,14 +151,14 @@ Puede usar [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)] pa
   
 4.  Escriba valores para las propiedades **Nombre**, **Tipo de datos**, **Valor**, **Con distinción**y **Obligatorio** .  
   
-    |Propiedad|Description|  
+    |Propiedad|Descripción|  
     |--------------|-----------------|  
     |Nombre|Nombre del parámetro.|  
     |Tipo de datos|El tipo de datos del parámetro.|  
     |Valor predeterminado|Valor predeterminado para el parámetro asignado en tiempo de diseño. También se conoce como valor predeterminado de diseño.|  
     |Con distinción|Los valores de parámetros con distinción se cifran en el catálogo y aparecen como valor NULL cuando se ven con Transact-SQL o SQL Server Management Studio.|  
     |Obligatorio|Requiere que un valor, distinto del valor predeterminado de diseño, se especifique antes de que el paquete se ejecute.|  
-    |Description|Descripción del parámetro en cuanto a capacidad de mantenimiento. En [!INCLUDE[ssBIDevStudio](../includes/ssbidevstudio-md.md)], establezca la descripción del parámetro en la ventana Propiedades de Visual Studio cuando el parámetro esté seleccionado en la ventana de parámetros aplicable.|  
+    |Descripción|Descripción del parámetro en cuanto a capacidad de mantenimiento. En [!INCLUDE[ssBIDevStudio](../includes/ssbidevstudio-md.md)], establezca la descripción del parámetro en la ventana Propiedades de Visual Studio cuando el parámetro esté seleccionado en la ventana de parámetros aplicable.|  
   
 5.  Guarde el proyecto para guardar los cambios realizados en los parámetros. Los valores de parámetro se almacenan en configuraciones en el archivo de proyecto. Guarde el archivo de proyecto para confirmar en el disco los cambios en los valores de parámetro.  
   

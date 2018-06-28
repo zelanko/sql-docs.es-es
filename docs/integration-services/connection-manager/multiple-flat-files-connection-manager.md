@@ -4,11 +4,9 @@ ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: integration-services
-ms.component: connection-manager
 ms.reviewer: ''
 ms.suite: sql
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.tgt_pltfrm: ''
 ms.topic: conceptual
 f1_keywords:
@@ -28,11 +26,12 @@ caps.latest.revision: 41
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: ba43dd74558a2e4506adb516183bc004aee718d3
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: bb6e84a6ad213cbce4d2ec98c7401d0e9d2699f4
+ms.sourcegitcommit: cc46afa12e890edbc1733febeec87438d6051bf9
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/12/2018
+ms.locfileid: "35405167"
 ---
 # <a name="multiple-flat-files-connection-manager"></a>administrador de conexiones de varios archivos planos
   Un administrador de conexiones de varios archivos planos permite a un paquete obtener acceso a datos de varios archivos planos. Por ejemplo, un origen de archivos planos puede utilizar un administrador de conexiones para varios archivos planos cuando la tarea Flujo de datos se encuentra en un contenedor de bucles, como el contenedor de bucles For. En cada bucle del contenedor, el origen de archivos planos carga los datos del siguiente nombre de archivo que proporciona el administrador de conexiones de varios archivos planos.  
@@ -102,7 +101,7 @@ ms.lasthandoff: 05/03/2018
  **Formato**  
  Indique si se utiliza formato delimitado, de ancho fijo o derecho irregular. Todos los archivos deben tener el mismo formato de datos.  
   
-|Valor|Description|  
+|Valor|Descripción|  
 |-----------|-----------------|  
 |Delimitado|Las columnas se separan mediante delimitadores, que se especifican en la página **Columnas** .|  
 |Ancho fijo|Las columnas tienen un ancho fijo, que se especifica arrastrando líneas de marcador en la página **Columnas** .|  
@@ -114,7 +113,7 @@ ms.lasthandoff: 05/03/2018
  **Delimitador de filas de encabezados**  
  Seleccione uno de los delimitadores de filas de encabezados de la lista o escriba el texto delimitador.  
   
-|Valor|Description|  
+|Valor|Descripción|  
 |-----------|-----------------|  
 |**{CR}{LF}**|La fila de encabezado está delimitada por una combinación de retorno de carro y avance de línea.|  
 |**{CR}**|La fila de encabezado está delimitada por un retorno de carro.|  
@@ -149,7 +148,7 @@ ms.lasthandoff: 05/03/2018
  **Delimitador de filas**  
  Selecciónelo de la lista de delimitadores de filas disponibles o escriba el texto delimitador.  
   
-|Valor|Description|  
+|Valor|Descripción|  
 |-----------|-----------------|  
 |**{CR}{LF}**|Las filas se delimitan mediante una combinación de retorno de carro y avance de línea.|  
 |**{CR}**|Las filas se delimitan mediante un retorno de carro.|  
@@ -163,7 +162,7 @@ ms.lasthandoff: 05/03/2018
  **Delimitador de columna**  
  Selecciónelo de la lista de delimitadores de columna disponibles o escriba el texto delimitador.  
   
-|Valor|Description|  
+|Valor|Descripción|  
 |-----------|-----------------|  
 |**{CR}{LF}**|Las columnas se delimitan mediante una combinación de retorno de carro y avance de línea.|  
 |**{CR}**|Las columnas se delimitan mediante un retorno de carro.|  
@@ -204,7 +203,7 @@ ms.lasthandoff: 05/03/2018
  **Delimitador de filas**  
  Selecciónelo de la lista de delimitadores de filas disponibles o escriba el texto delimitador.  
   
-|Valor|Description|  
+|Valor|Descripción|  
 |-----------|-----------------|  
 |**{CR}{LF}**|Las filas se delimitan mediante una combinación de retorno de carro y avance de línea.|  
 |**{CR}**|Las filas se delimitan mediante un retorno de carro.|  
@@ -235,7 +234,7 @@ ms.lasthandoff: 05/03/2018
  **Configure las propiedades de cada columna**  
  Seleccione una columna del panel izquierdo para ver sus propiedades en el panel derecho. Consulte la siguiente tabla para obtener una descripción de las propiedades de los tipos de datos. Algunas de las propiedades que aparecen en la lista solo son configurables en algunos formatos de archivos planos.  
   
-|Propiedad|Description|  
+|Propiedad|Descripción|  
 |--------------|-----------------|  
 |**ColumnType**|Denota si la columna es delimitada, de ancho fijo o derecho irregular. Esta propiedad es de solo lectura. Los archivos de derecho irregular son archivos en los que todas las columnas tienen un ancho fijo, a excepción de la última, que se termina con el delimitador de filas.|  
 |**OutputColumnWidth**|Especifique un valor que se almacenará como recuento de bytes; en los archivos Unicode, aparecerá como recuento de caracteres. En la tarea Flujo de datos este valor se utiliza para establecer el ancho de la columna de salida para el origen del archivo plano.<br /><br /> Nota: en el modelo de objetos, el nombre de esta propiedad es MaximumWidth.|  
@@ -250,7 +249,7 @@ ms.lasthandoff: 05/03/2018
  **Nueva**  
  Para agregar una columna, haga clic en **Nuevo**. De manera predeterminada, el botón **Nueva** agrega una columna nueva al final de la lista. El botón también tiene las siguientes opciones, disponibles en la lista desplegable.  
   
-|Valor|Description|  
+|Valor|Descripción|  
 |-----------|-----------------|  
 |**Agregar columna**|Agrega una nueva columna al final de la lista.|  
 |**Insertar delante**|Inserta una nueva columna antes de la columna seleccionada.|  

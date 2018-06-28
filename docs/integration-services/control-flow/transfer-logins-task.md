@@ -4,11 +4,9 @@ ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: integration-services
-ms.component: control-flow
 ms.reviewer: ''
 ms.suite: sql
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.tgt_pltfrm: ''
 ms.topic: conceptual
 f1_keywords:
@@ -22,11 +20,12 @@ caps.latest.revision: 25
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 748eecc0759365057c1dbb2c2610e6307faf6a68
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 0846c8135c4b9095ab9c5a1f5549fc0884dd6703
+ms.sourcegitcommit: cc46afa12e890edbc1733febeec87438d6051bf9
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/12/2018
+ms.locfileid: "35405247"
 ---
 # <a name="transfer-logins-task"></a>Tarea Transferir inicios de sesión
   La tarea Transferir inicios de sesión transfiere uno o varios inicios de sesión entre instancias de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
@@ -115,7 +114,7 @@ ms.lasthandoff: 05/03/2018
  **LoginsToTransfer**  
  Seleccione los inicios de sesión de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] que va a copiar del servidor de origen al de destino. Esta propiedad presenta las opciones indicadas en la siguiente tabla:  
   
-|Valor|Description|  
+|Valor|Descripción|  
 |-----------|-----------------|  
 |**AllLogins**|Todos los inicios de sesión de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] en el servidor de origen se copiarán al de destino.|  
 |**SelectedLogins**|Solo los inicios de sesión especificados con **LoginsList** se copiarán al servidor de destino.|  
@@ -132,7 +131,7 @@ ms.lasthandoff: 05/03/2018
   
  Esta propiedad presenta las opciones indicadas en la siguiente tabla:  
   
-|Valor|Description|  
+|Valor|Descripción|  
 |-----------|-----------------|  
 |**FailTask**|La tarea genera un error si existen ya inicios de sesión con el mismo nombre en el servidor de destino.|  
 |**Sobrescribir**|La tarea sobrescribe los inicios de sesión con el mismo nombre en el servidor de destino.|  

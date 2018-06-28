@@ -1,32 +1,32 @@
 ---
-title: Conectarse a la base de datos del catálogo de SSIS (SSISDB) en Azure | Microsoft Docs
+title: Conectarse al catálogo de SSIS (SSISDB) en Azure | Microsoft Docs
+description: Obtenga la información de conexión necesaria para conectarse al catálogo de SSIS (SSISDB) hospedado en un servidor de Azure SQL Database.
 ms.date: 09/25/2017
 ms.topic: conceptual
 ms.prod: sql
 ms.prod_service: integration-services
-ms.component: lift-shift
 ms.suite: sql
 ms.custom: ''
-ms.technology:
-- integration-services
+ms.technology: integration-services
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 639f02809a003bc5418ecb5ec33930f89205701f
-ms.sourcegitcommit: 0cc2cb281e467a13a76174e0d9afbdcf4ccddc29
+ms.openlocfilehash: 00e2c2e9ce845a6775ea4baee458253ba5e1162c
+ms.sourcegitcommit: cc46afa12e890edbc1733febeec87438d6051bf9
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/15/2018
+ms.lasthandoff: 06/12/2018
+ms.locfileid: "35405677"
 ---
-# <a name="connect-to-the-ssis-catalog-database-ssisdb-in-azure"></a>Conectarse a la base de datos del catálogo de SSIS (SSISDB) en Azure
+# <a name="connect-to-the-ssis-catalog-ssisdb-in-azure"></a>Conectarse al catálogo de SSIS (SSISDB) en Azure
 
-Obtenga la información de conexión necesaria para conectarse a la base de datos del catálogo de SSISDB hospedada en un servidor de Azure SQL Database. Necesita los siguientes elementos para poder conectarse:
+Obtenga la información de conexión necesaria para conectarse al catálogo de SSIS (SSISDB) hospedado en un servidor de Azure SQL Database. Necesita los elementos siguientes para poder conectarse:
 - Un nombre completo de servidor
 - El nombre de la base de datos
 - La información de inicio de sesión 
 
 > [!IMPORTANT]
-> En la versión 2 de Azure Data Factory, en estos momentos no se puede crear la base de datos del catálogo SSISDB en Azure SQL Database, independientemente de la creación del entorno de ejecución de integración de Azure-SSIS. El entorno de ejecución de Azure-SSIS es el que ejecuta los paquetes SSIS en Azure. Para obtener más información, vea [Implementación de paquetes SSIS en Azure](https://docs.microsoft.com/azure/data-factory/tutorial-create-azure-ssis-runtime-portal). 
+> En la versión 2 de Azure Data Factory, en estos momentos no se puede crear la base de datos del catálogo SSISDB en Azure SQL Database, independientemente de la creación del entorno de ejecución de integración de Azure-SSIS. Azure SSIS IR es el entorno de ejecución que ejecuta los paquetes SSIS en Azure. Para obtener un tutorial del proceso, vea [Implementar y ejecutar un paquete SSIS en Azure](https://docs.microsoft.com/azure/data-factory/tutorial-create-azure-ssis-runtime-portal). 
 
 ## <a name="prerequisites"></a>Prerequisites
 Antes de comenzar, asegúrese de que tiene instalada la versión 17.2 (o posterior) de SQL Server Management Studio (SSMS). Si la base de datos del catálogo de SSISDB se hospeda en Instancia administrada de SQL Database (versión preliminar), asegúrese de tener la versión 17.6 o una versión posterior de SSMS. Para descargar la versión más reciente de SSMS, consulte [Download SQL Server Management Studio (SSMS)](https://docs.microsoft.com/sql/ssms/download-sql-server-management-studio-ssms) [Descargar SQL Server Management Studio (SSMS)].
@@ -49,7 +49,7 @@ Antes de comenzar, asegúrese de que tiene instalada la versión 17.2 (o posteri
    | ------------ | ------------------ | ------------------------------------------------- | 
    | **Tipo de servidor** | Motor de base de datos | Este valor es necesario. |
    | **Nombre del servidor** | Nombre completo del servidor | El nombre debe tener este formato: **mysqldbserver.database.windows.net**. |
-   | **Autenticación** | Autenticación de SQL Server | Esta guía de inicio rápido usa la autenticación SQL. |
+   | **Autenticación** | Autenticación de SQL Server | |
    | **Inicio de sesión** | Cuenta de administrador del servidor | Se trata de la cuenta que especificó cuando creó el servidor. |
    | **Contraseña** | Contraseña de la cuenta de administrador del servidor | Se trata de la contraseña que especificó cuando creó el servidor. |
 
@@ -71,4 +71,4 @@ Antes de comenzar, asegúrese de que tiene instalada la versión 17.2 (o posteri
 ## <a name="next-steps"></a>Pasos siguientes
 - Implementar un paquete. Para obtener más información, consulte [Deploy an SSIS project with SQL Server Management Studio (SSMS) (Implementar un proyecto de SSIS con SQL Server Management Studio [SSMS])](../ssis-quickstart-deploy-ssms.md).
 - Ejecutar un paquete. Para obtener más información, consulte [Run an SSIS package with SQL Server Management Studio (SSMS) (Ejecutar un paquete de SSIS con SQL Server Management Studio [SSMS])](../ssis-quickstart-run-ssms.md).
-- Programar un paquete. Para obtener más información, consulte [Schedule SSIS package execution on Azure (Programar la ejecución de paquetes de SSIS en Azure)](ssis-azure-schedule-packages.md).
+- Programar un paquete. Para obtener más información, vea [Programar paquetes SSIS en Azure](ssis-azure-schedule-packages.md).

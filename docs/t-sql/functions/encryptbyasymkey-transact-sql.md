@@ -24,46 +24,76 @@ caps.latest.revision: 35
 author: edmacauley
 ms.author: edmaca
 manager: craigg
-ms.openlocfilehash: 212ce15f0d28b16b81a9c07d785c129b039cdc6d
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 61fef12748ce57eee1008fee29c864246774831b
+ms.sourcegitcommit: 6e55a0a7b7eb6d455006916bc63f93ed2218eae1
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/08/2018
+ms.locfileid: "35239156"
 ---
 # <a name="encryptbyasymkey-transact-sql"></a>ENCRYPTBYASYMKEY (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
-  Cifra datos con una clave asimétrica.  
+Esta función cifra los datos con una clave asimétrica.  
   
  ![Icono de vínculo de tema](../../database-engine/configure-windows/media/topic-link.gif "Icono de vínculo de tema") [Convenciones de sintaxis de Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>Sintaxis  
   
 ```  
-  
 EncryptByAsymKey ( Asym_Key_ID , { 'plaintext' | @plaintext } )  
 ```  
   
 ## <a name="arguments"></a>Argumentos  
- *Asym_Key_ID*  
- Id. de una clave asimétrica en la base de datos. **int**.  
+*asym_key_ID*  
+Id. de una clave asimétrica en la base de datos. *asym_key_ID* tiene un tipo de datos **int**.  
   
- *cleartext*  
- Cadena de datos que se cifrará con la clave asimétrica.  
+*cleartext*  
+Cadena de datos que `ENCRYPTBYASYMKEY` cifrará con la clave asimétrica. *cleartext* puede tener un tipo de
+ 
++ **binario**
++ **char**
++ **nchar**
++ **nvarchar**
++ **varbinary**
   
- **@plaintext**  
- Variable de tipo **nvarchar**, **char**, **varchar**, **binary**, **varbinary** o **nchar** que contiene datos que se van a cifrar con la clave asimétrica.  
+o Administrador de configuración de
+  
++ **varchar**
+ 
+datos.  
+  
+**@plaintext**  
+Una variable que contiene un valor que `ENCRYPTBYASYMKEY` cifrará con la clave asimétrica. **@plaintext** puede tener un tipo de
+  
++ **binario**
++ **char**
++ **nchar**
++ **nvarchar**
++ **varbinary**
+  
+o Administrador de configuración de
+  
++ **varchar**
+ 
+datos.  
   
 ## <a name="return-types"></a>Tipos devueltos  
- **varbinary** con un tamaño máximo de 8000 bytes.  
+**varbinary**, con un tamaño máximo de 8 000 bytes.  
   
 ## <a name="remarks"></a>Notas  
- El cifrado/descifrado con una clave asimétrica es muy costoso si lo comparamos con el cifrado/descifrado con una clave simétrica. No es recomendable cifrar con una clave asimétrica grandes conjuntos de datos, como los datos de usuarios almacenados en tablas. En lugar de ello, se deben cifrar los datos con una clave simétrica segura y cifrar la clave simétrica con una clave asimétrica.  
+Las operaciones de cifrado y descifrado en las que se usan claves asimétricas consumen muchos recursos y, por tanto, son muy costosas, en comparación con el descifrado y cifrado de claves simétricas. Se recomienda que los desarrolladores eviten el cifrado y descifrado de claves asimétricas en grandes conjuntos de datos (por ejemplo, conjuntos de datos de usuario almacenados en tablas de base de datos). En su lugar, se recomienda que los desarrolladores cifren primero los datos con una clave simétrica segura y, después, cifren esa clave simétrica con una clave asimétrica.  
   
- **EncryptByAsymKey** devuelve **NULL** si la entrada supera un número determinado de bytes, según el algoritmo. Los límites son: una clave RSA de 512 bits puede cifrar hasta 53 bytes, una clave de 1024 bits puede cifrar hasta 117 bytes y una clave de 2048 bits puede cifrar hasta 245 bytes. (Tenga en cuenta que en [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], tanto los certificados como las claves asimétricas son contenedores de claves RSA).  
+En función del algoritmo, `ENCRYPTBYASYMKEY` devuelve **NULL** si la entrada supera un número determinado de bytes. Los límites específicos:
+
++ una clave RSA de 512 bits puede cifrar hasta 53 bytes
++ una clave de 1024 bits puede cifrar hasta 117 bytes
++ una clave de 2048 bits puede cifrar hasta 245 bytes
+
+Tenga en cuenta que en [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], tanto los certificados como las claves asimétricas sirven de contenedores de claves RSA.  
   
 ## <a name="examples"></a>Ejemplos  
- En el ejemplo siguiente se cifra el texto almacenado en `@cleartext` con la clave asimétrica `JanainaAsymKey02`. Los datos cifrados se insertan en la tabla `ProtectedData04`.  
+En este ejemplo se cifra el texto almacenado en `@cleartext` con la clave asimétrica `JanainaAsymKey02`. La instrucción inserta los datos cifrados en la tabla `ProtectedData04`.  
   
 ```  
 INSERT INTO AdventureWorks2012.Sales.ProtectedData04   

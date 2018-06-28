@@ -4,11 +4,9 @@ ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: integration-services
-ms.component: packages
 ms.reviewer: ''
 ms.suite: sql
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.tgt_pltfrm: ''
 ms.topic: conceptual
 f1_keywords:
@@ -37,11 +35,12 @@ caps.latest.revision: 46
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 778901dae6c0504d84eb7cb93667d0ac4024e9ac
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 1e9296e97e882aa752287197469cf479c7cf29fd
+ms.sourcegitcommit: cc46afa12e890edbc1733febeec87438d6051bf9
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/12/2018
+ms.locfileid: "35408507"
 ---
 # <a name="legacy-package-deployment-ssis"></a>Implementación de paquetes heredada (SSIS)
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] incluye herramientas y asistentes para facilitar la implementación de paquetes del equipo de desarrollo en el servidor de producción o en otros equipos.  
@@ -111,7 +110,7 @@ ms.lasthandoff: 05/03/2018
 ### <a name="package-configuration-types"></a>Tipos de configuraciones de paquetes  
  En la tabla siguiente se describen los tipos de configuraciones de paquetes.  
   
-|Tipo|Description|  
+|Tipo|Descripción|  
 |----------|-----------------|  
 |Archivo de configuración XML|Un archivo XML contiene las configuraciones. El archivo XML puede incluir varias configuraciones.|  
 |Variable de entorno|Una variable de entorno contiene la configuración.|  
@@ -220,7 +219,7 @@ ConfiguredValueType NVARCHAR(20) NOT NULL
   
  En la tabla siguiente se describen las columnas de la lista de configuraciones del cuadro de diálogo **Organizador de configuraciones de paquetes** .  
   
-|columna|Description|  
+|columna|Descripción|  
 |------------|-----------------|  
 |**Nombre de la configuración**|Nombre de la configuración.|  
 |**Tipo de configuración**|Tipo de configuración.|  
@@ -322,7 +321,7 @@ ConfiguredValueType NVARCHAR(20) NOT NULL
  **Tipo de configuración**  
  Seleccione el tipo de origen en el que se almacenará la configuración, utilizando las siguientes opciones:  
   
-|Valor|Description|  
+|Valor|Descripción|  
 |-----------|-----------------|  
 |**Archivo de configuración XML**|Almacenar la configuración como un archivo XML. Al seleccionar este valor se muestran las opciones dinámicas de la sección **Tipo de configuración**.|  
 |**Variable de entorno**|Almacenar la configuración en una de las variables de entorno. Al seleccionar este valor se muestran las opciones dinámicas de la sección **Tipo de configuración**.|  
@@ -339,7 +338,7 @@ ConfiguredValueType NVARCHAR(20) NOT NULL
  **Especificar valores de configuración directamente**  
  Se utiliza para especificar la configuración directamente.  
   
-|Valor|Description|  
+|Valor|Descripción|  
 |-----------|-----------------|  
 |**Nombre del archivo de configuración**|Escriba la ruta de acceso del archivo de configuración que genera el asistente.|  
 |**Examinar**|Use el cuadro de diálogo **Seleccionar ubicación del archivo de configuración** para especificar la ruta de acceso del archivo de configuración que genera el asistente. Si el archivo no existe, el asistente lo crea.|  
@@ -347,7 +346,7 @@ ConfiguredValueType NVARCHAR(20) NOT NULL
  **La ubicación de configuración se almacena en una variable de entorno**  
  Se usa para especificar la variable de entorno donde se almacena la configuración.  
   
-|Valor|Description|  
+|Valor|Descripción|  
 |-----------|-----------------|  
 |**Variable de entorno**|Seleccione una variable de entorno de la lista.|  
   
@@ -359,14 +358,14 @@ ConfiguredValueType NVARCHAR(20) NOT NULL
  **Especificar valores de configuración directamente**  
  Se utiliza para especificar la configuración directamente.  
   
-|Valor|Description|  
+|Valor|Descripción|  
 |-----------|-----------------|  
 |**Entrada del Registro**|Escriba la clave del Registro que contiene la información de configuración. El formato es \<clave del Registro>.<br /><br /> La clave del Registro ya debe existir en HKEY_CURRENT_USER y tener un valor con el nombre Value. El valor puede ser un valor de tipo DWORD o una cadena.<br /><br /> Si quiere usar una clave del Registro que no esté en la raíz de HKEY_CURRENT_USER, use el formato \<clave del Registro\clave del Registro\\…> para identificarla.|  
   
  **La ubicación de configuración se almacena en una variable de entorno**  
  Se utiliza para especificar la variable de entorno donde debe almacenarse la configuración.  
   
-|Valor|Description|  
+|Valor|Descripción|  
 |-----------|-----------------|  
 |**Variable de entorno**|Seleccione una variable de entorno de la lista.|  
   
@@ -374,14 +373,14 @@ ConfiguredValueType NVARCHAR(20) NOT NULL
  **Especificar valores de configuración directamente**  
  Se utiliza para especificar la configuración directamente.  
   
-|Valor|Description|  
+|Valor|Descripción|  
 |-----------|-----------------|  
 |**Variable primaria**|Especifique la variable del paquete primario que contiene la información de configuración.|  
   
  **La ubicación de configuración se almacena en una variable de entorno**  
  Se usa para especificar la variable de entorno donde se almacena la configuración.  
   
-|Valor|Description|  
+|Valor|Descripción|  
 |-----------|-----------------|  
 |**Variable de entorno**|Seleccione una variable de entorno de la lista.|  
   
@@ -389,7 +388,7 @@ ConfiguredValueType NVARCHAR(20) NOT NULL
  **Especificar valores de configuración directamente**  
  Se utiliza para especificar la configuración directamente.  
   
-|Valor|Description|  
+|Valor|Descripción|  
 |-----------|-----------------|  
 |**Conexión**|Seleccione una conexión de la lista o haga clic en **Nueva** para crear una nueva conexión.|  
 |**Tabla de configuración**|Seleccione una tabla existente o haga clic en **Nueva** para escribir una instrucción SQL que cree la nueva tabla.|  
@@ -398,7 +397,7 @@ ConfiguredValueType NVARCHAR(20) NOT NULL
  **La ubicación de configuración se almacena en una variable de entorno**  
  Se utiliza para especificar la variable de entorno donde se almacena la configuración.  
   
-|Valor|Description|  
+|Valor|Descripción|  
 |-----------|-----------------|  
 |**Variable de entorno**|Seleccione una variable de entorno de la lista.|  
   
@@ -457,7 +456,7 @@ ConfiguredValueType NVARCHAR(20) NOT NULL
     > [!NOTE]  
     >  Seleccione un tipo de datos que sea compatible con los datos que almacenará la variable.  
   
-5.  Para guardar el paquete actualizado, haga clic en **Guardar los elementos seleccionados** , en el menú **Archivo** .  
+5.  Para guardar el paquete actualizado, haga clic en **Guardar los elementos seleccionados**, en el menú **Archivo**.  
   
 ### <a name="to-add-a-variable-to-a-child-package"></a>Para agregar una variable a un paquete secundario  
   
@@ -472,7 +471,7 @@ ConfiguredValueType NVARCHAR(20) NOT NULL
     > [!NOTE]  
     >  Seleccione un tipo de datos que sea compatible con los datos que almacenará la variable.  
   
-5.  Para guardar el paquete actualizado, haga clic en **Guardar los elementos seleccionados** , en el menú **Archivo** .  
+5.  Para guardar el paquete actualizado, haga clic en **Guardar los elementos seleccionados**, en el menú **Archivo**.  
 
 ## <a name="create-a-deployment-utility"></a>Create a Deployment Utility
   El primer paso para implementar paquetes es crear una utilidad de implementación para un proyecto de [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] . La utilidad de implementación es una carpeta que contiene los archivos necesarios para implementar los paquetes de un proyecto de [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] en un servidor distinto. La utilidad de implementación se crea en el equipo en el que se almacena el proyecto de [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] .  
@@ -483,7 +482,7 @@ ConfiguredValueType NVARCHAR(20) NOT NULL
   
  En la tabla siguiente se muestran las propiedades de la utilidad de implementación.  
   
-|Propiedad|Description|  
+|Propiedad|Descripción|  
 |--------------|-----------------|  
 |AllowConfigurationChange|Valor que especifica si se actualizarán las configuraciones durante la implementación.|  
 |CreateDeploymentUtility|Valor que especifica si se creará una utilidad de implementación de paquetes al generar el proyecto. Esta propiedad debe estar establecida en **True** para crear una utilidad de implementación.|  

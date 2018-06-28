@@ -1,26 +1,25 @@
 ---
 title: Implementar y ejecutar un paquete SSIS en Azure | Microsoft Docs
+description: Obtenga información sobre cómo implementar un proyecto de SQL Server Integration Services (SSIS) en el catálogo de SSIS en Azure SQL Database, ejecutar un paquete
 ms.date: 5/22/2018
 ms.topic: conceptual
 ms.prod: sql
 ms.prod_service: integration-services
-ms.component: lift-shift
 ms.suite: sql
 ms.custom: ''
-ms.technology:
-- integration-services
+ms.technology: integration-services
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: d482a7e8c3cf75be0cb87b35323c5fbc472a3f7b
-ms.sourcegitcommit: 808d23a654ef03ea16db1aa23edab496b73e5072
+ms.openlocfilehash: ac3ee68b47e3ae70c3b6d149d75b68d50b093309
+ms.sourcegitcommit: de5e726db2f287bb32b7910831a0c4649ccf3c4c
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/04/2018
-ms.locfileid: "34585637"
+ms.lasthandoff: 06/12/2018
+ms.locfileid: "35335839"
 ---
-# <a name="deploy-and-run-an-ssis-package-in-azure"></a>Implementar y ejecutar un paquete SSIS en Azure
-Este tutorial muestra cómo implementar un proyecto de SQL Server Integration Services para la base de datos del catálogo de SSISDB en Azure SQL Database, ejecutar un paquete en Azure-SSIS Integration Runtime y supervisar el paquete en ejecución.
+# <a name="tutorial-deploy-and-run-a-sql-server-integration-services-ssis-package-in-azure"></a>Tutorial: Implementar y ejecutar un paquete de SQL Server Integration Services (SSIS) en Azure
+En este tutorial se muestra cómo implementar un proyecto de SQL Server Integration Services (SSIS) en el catálogo de SSIS en Azure SQL Database, ejecutar un paquete en Azure SSIS Integration Runtime y supervisar el paquete en ejecución.
 
 ## <a name="prerequisites"></a>Prerequisites
 

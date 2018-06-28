@@ -4,11 +4,9 @@ ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: integration-services
-ms.component: troubleshooting
 ms.reviewer: ''
 ms.suite: sql
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.tgt_pltfrm: ''
 ms.topic: conceptual
 f1_keywords:
@@ -25,11 +23,12 @@ caps.latest.revision: 54
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 3e156eea066ba43e6debc63be47b45fd18dcd9a7
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: b117289c9877835d6c74d48497152021b47dc5ad
+ms.sourcegitcommit: cc46afa12e890edbc1733febeec87438d6051bf9
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/12/2018
+ms.locfileid: "35405307"
 ---
 # <a name="debugging-control-flow"></a>Depurar el flujo de control
   [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] y [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] include features y tools that you can use to troubleshoot the control flow in an [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] .  
@@ -47,7 +46,7 @@ ms.lasthandoff: 05/03/2018
   
  [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] proporciona diez condiciones de interrupción que puede habilitar en todas las tareas y contenedores. En el cuadro de diálogo **Establecer puntos de interrupción** , puede habilitar puntos de interrupción en las siguientes condiciones:  
   
-|Condición de interrupción|Description|  
+|Condición de interrupción|Descripción|  
 |---------------------|-----------------|  
 |Cuando la tarea o contenedor recibe el evento **OnPreExecute** .|Se llama cuando una tarea está a punto de ejecutarse. Este evento es provocado por una tarea o contenedor inmediatamente antes de ejecutarse.|  
 |Cuando la tarea o contenedor recibe el evento **OnPostExecute** .|Se llama inmediatamente después de que finaliza la lógica de ejecución de la tarea. Este evento es provocado por una tarea o contenedor inmediatamente después de ejecutarse.|  
@@ -72,7 +71,7 @@ ms.lasthandoff: 05/03/2018
   
  La siguiente tabla describe los tipos de número de llamadas.  
   
-|Tipo de número de llamadas|Description|  
+|Tipo de número de llamadas|Descripción|  
 |--------------------|-----------------|  
 |Always|La ejecución se suspende siempre cuando se alcanza el punto de interrupción.|  
 |Número de llamadas igual a|La ejecución se suspende cuando el número de veces que ha ocurrido el punto de interrupción es igual al número de llamadas.|  
@@ -113,7 +112,7 @@ ms.lasthandoff: 05/03/2018
   
  Las ventanas se describen en la siguiente tabla.  
   
-|Ventana|Description|  
+|Ventana|Descripción|  
 |------------|-----------------|  
 |Puntos de interrupción|Enumera los puntos de interrupción de un paquete y proporciona opciones para habilitar y eliminar puntos de interrupción.|  
 |Salida|Muestra mensajes de estado para las características en [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)].|  
@@ -155,7 +154,7 @@ ms.lasthandoff: 05/03/2018
  **Tipo de número de llamadas**  
  Especifique el momento en el que el punto de interrupción surte efecto.  
   
-|Valor|Description|  
+|Valor|Descripción|  
 |-----------|-----------------|  
 |**Always**|La ejecución se suspende siempre cuando se alcanza el punto de interrupción.|  
 |**Número de llamadas igual a**|La ejecución se suspende cuando el número de veces que ha ocurrido el punto de interrupción es igual al número de llamadas.|  

@@ -4,11 +4,9 @@ ms.custom: ''
 ms.date: 03/01/2017
 ms.prod: sql
 ms.prod_service: integration-services
-ms.component: data-flow
 ms.reviewer: ''
 ms.suite: sql
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
@@ -19,11 +17,12 @@ caps.latest.revision: 39
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 00a315fb09417886c13e1f102673851ca961ab16
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: bd4bc0bfa30ee2df9b66de66f7002233426fa8f6
+ms.sourcegitcommit: cc46afa12e890edbc1733febeec87438d6051bf9
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/12/2018
+ms.locfileid: "35407427"
 ---
 # <a name="parsing-data"></a>Analizar datos
   Los flujos de datos de paquetes extraen y cargan datos entre almacenes de datos heterogéneos, que pueden usar diversos tipos de datos estándar y personalizados. En un flujo de datos, los orígenes de [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] realizan el trabajo de extraer datos, analizar datos de cadenas y convertir datos en un tipo de datos de [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] . Las transformaciones posteriores pueden analizar datos para convertirlos en un tipo de datos diferentes, o bien crear copias de columnas con diferentes tipos de datos. Las expresiones usadas en los componentes también pueden convertir argumentos y operandos en diferentes tipos de datos. Finalmente, cuando se cargan los datos en un almacén de datos, el destino puede analizar los datos para convertirlos en un tipo de datos que usa el destino. Para más información, consulte [Integration Services Data Types](../../integration-services/data-flow/integration-services-data-types.md).  
@@ -91,7 +90,7 @@ El análisis rápido ofrece un conjunto rápido y simple de rutinas para analiza
   
 -   Formatos ISO 8601, que se muestran en la tabla siguiente:  
   
-    |Formato|Description|  
+    |Formato|Descripción|  
     |------------|-----------------|  
     |YYYYMMDD<br /><br /> YYYY-MM-DD|Los formatos básico y extendido para un año de cuatro dígitos, un mes de dos dígitos y un día de dos dígitos. En el formato extendido, las partes de la fecha se encuentran separadas por guiones (-).|  
     |YYYY-MM|Formatos básico y extendido de precisión reducida para un año de cuatro dígitos y un mes de dos dígitos. En el formato extendido, las partes de la fecha se encuentran separadas por guiones (-).|  
@@ -122,7 +121,7 @@ El análisis rápido ofrece un conjunto rápido y simple de rutinas para analiza
   
 -   Formatos de hora ISO 8601, que se muestran en la tabla siguiente:  
   
-    |Formato|Description|  
+    |Formato|Descripción|  
     |------------|-----------------|  
     |HHMISS<br /><br /> HH:MI:SS|Los formatos básico y extendido para una hora de dos dígitos, minutos de dos dígitos y segundos de dos dígitos. En el formato extendido, las partes de la hora se encuentran separadas por dos puntos (:).|  
     |HHMI<br /><br /> HH:MI|Formatos truncados básico y extendido para una hora de dos dígitos y minutos de dos dígitos. En el formato extendido, las partes de la hora se encuentran separadas por dos puntos (:).|  
@@ -131,7 +130,7 @@ El análisis rápido ofrece un conjunto rápido y simple de rutinas para analiza
   
 -   Formatos de hora que especifican una zona horaria, como se muestra en la tabla siguiente:  
   
-    |Formato|Description|  
+    |Formato|Descripción|  
     |------------|-----------------|  
     |+HH:MI<br /><br /> +HHMI|Formatos básicos y extendidos que indican el número de horas y minutos que se agregan a la hora universal coordinada (UTC) para obtener la hora local.|  
     |-HH:MI<br /><br /> -HHMI|Formatos básicos y extendidos que indican el número de horas y minutos que se restan a la UTC para obtener la hora local.|  
@@ -149,7 +148,7 @@ El análisis rápido ofrece un conjunto rápido y simple de rutinas para analiza
   
 -   Formatos de hora que incluyen una fracción decimal, como se muestra en la tabla siguiente:  
   
-    |Formato|Description|  
+    |Formato|Descripción|  
     |------------|-----------------|  
     |HH[.nnnnnnn]|n es un valor entre 0 y 9999999 que representa una fracción de horas. Los corchetes indican que este valor es opcional.<br /><br /> Por ejemplo, el valor 12.750 indica 12:45.|  
     |HHMI[.nnnnnnn]<br /><br /> HH:MI[.nnnnnnn]|n es un valor entre 0 y 9999999 que representa una fracción de minutos. Los corchetes indican que este valor es opcional.<br /><br /> Por ejemplo, el valor 1220.500 indica 12:20:30.|  

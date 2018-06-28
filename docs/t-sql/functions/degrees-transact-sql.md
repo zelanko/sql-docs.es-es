@@ -24,16 +24,17 @@ author: edmacauley
 ms.author: edmaca
 manager: craigg
 monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
-ms.openlocfilehash: da5dd2d0e7e3135097fd7993e9ebf75c64c15739
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 3cc037faa43eefed7af80e0e5a9fb51a917471b6
+ms.sourcegitcommit: 6e55a0a7b7eb6d455006916bc63f93ed2218eae1
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/08/2018
+ms.locfileid: "35239162"
 ---
 # <a name="degrees-transact-sql"></a>DEGREES (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
 
-  Devuelve el ángulo correspondiente en grados para un ángulo especificado en radianes.  
+Esta función devuelve el ángulo correspondiente, en grados, para un ángulo especificado en radianes.  
   
  ![Icono de vínculo de tema](../../database-engine/configure-windows/media/topic-link.gif "Icono de vínculo de tema") [Convenciones de sintaxis de Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -45,13 +46,13 @@ DEGREES ( numeric_expression )
   
 ## <a name="arguments"></a>Argumentos  
  *numeric_expression*  
- Es una [expresión](../../t-sql/language-elements/expressions-transact-sql.md) de la categoría de tipos de datos numérico exacto o numérico aproximado, excepto para el tipo de datos **bit**.  
+Una [expresión](../../t-sql/language-elements/expressions-transact-sql.md) de la categoría de tipos de datos numérico exacto o numérico aproximado, excepto para el tipo de datos **bit**.  
   
 ## <a name="return-code-values"></a>Valores de código de retorno  
- Devuelve el mismo tipo que *numeric_expression*.  
+Devuelve un valor cuyo tipo de datos coincide con el tipo de datos de *expresión_numérica*.  
   
 ## <a name="examples"></a>Ejemplos  
- En el ejemplo siguiente se devuelve el número de grados en un ángulo de PI/2 radianes.  
+En este ejemplo se devuelve el número de grados en un ángulo de PI/2 radianes.  
   
 ```  
 SELECT 'The number of degrees in PI/2 radians is: ' +   
@@ -70,5 +71,3 @@ The number of degrees in PI/2 radians is 90
 ## <a name="see-also"></a>Ver también  
  [Funciones matemáticas &#40;Transact-SQL&#41;](../../t-sql/functions/mathematical-functions-transact-sql.md)  
   
-  
-

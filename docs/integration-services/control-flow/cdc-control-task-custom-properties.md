@@ -4,11 +4,9 @@ ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: integration-services
-ms.component: control-flow
 ms.reviewer: ''
 ms.suite: sql
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: 2a073699-79a2-4ea1-a68e-fc17a80b74ba
@@ -16,16 +14,17 @@ caps.latest.revision: 9
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 76b11c452724a324118e07a7b494d1ff0a2ab1c6
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 18c212529f41739f1e2562b9d21e078a7915d8ef
+ms.sourcegitcommit: cc46afa12e890edbc1733febeec87438d6051bf9
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/12/2018
+ms.locfileid: "35404387"
 ---
 # <a name="cdc-control-task-custom-properties"></a>Propiedades personalizadas de la tarea de control CDC
   En la tabla siguiente se describen las propiedades personalizadas de la tarea de control CDC. Todas las propiedades son de lectura y escritura.  
   
-|Nombre de propiedad|Tipo de datos|Description|  
+|Nombre de propiedad|Tipo de datos|Descripción|  
 |-------------------|---------------|-----------------|  
 |Conexión|Conexión ADO.NET|Una conexión ADO.NET en la base de datos CDC de [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] para acceder a las tablas de cambios y al estado CDC si se almacenan en la misma base de datos.<br /><br /> Es preciso realizar la conexión a una base de datos de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] habilitada para CDC y donde se encuentre la tabla de cambios seleccionada.|  
 |TaskOperation|Integer (enumeración)|Operación seleccionada para la tarea de control CDC. Los valores posibles son **Mark Initial Load Start**, **Mark Initial Load End**, **Mark CDC Start**, **Get Processing Range**, **Mark Processed Range**y **Reset CDC State**.<br /><br /> Si selecciona **MarkCdcStart**, **MarkInitialLoadStart**o **MarkInitialLoadEnd** al trabajar en [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] CDC (es decir, no en Oracle), el usuario especificado en el administrador de conexiones tiene que ser  **db_owner** o **sysadmin**.<br /><br /> Para obtener más información acerca de estas operaciones, vea [CDC Control Task Editor](../../integration-services/control-flow/cdc-control-task-editor.md) y [CDC Control Task](../../integration-services/control-flow/cdc-control-task.md).|  

@@ -4,10 +4,9 @@ ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: integration-services
-ms.component: extending-packages-scripting
 ms.reviewer: ''
 ms.suite: sql
-ms.technology: xml
+ms.technology: integration-services
 ms.tgt_pltfrm: ''
 ms.topic: reference
 applies_to:
@@ -28,11 +27,12 @@ caps.latest.revision: 81
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 29e850b8c1323503f9f9f13bcf00834c2b4ac753
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 06a3a4411b2b347a0f0825a52cfdf6dbc1aed7df
+ms.sourcegitcommit: cc46afa12e890edbc1733febeec87438d6051bf9
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/12/2018
+ms.locfileid: "35408227"
 ---
 # <a name="coding-and-debugging-the-script-task"></a>Codificar y depurar la tarea Script
   Después de configurar la tarea Script en el **Editor de la tarea Script**, puede escribir el código personalizado en el entorno de desarrollo de la tarea Script.  
@@ -228,7 +228,7 @@ To open Help, press F1.
   
  La clase <xref:Microsoft.SqlServer.Dts.Tasks.ScriptTask.ScriptObjectModel> contiene también algunos miembros públicos que probablemente no utilizará.  
   
-|Miembro|Description|  
+|Miembro|Descripción|  
 |------------|-----------------|  
 |<xref:Microsoft.SqlServer.Dts.Tasks.ScriptTask.ScriptObjectModel.VariableDispenser%2A>|La propiedad <xref:Microsoft.SqlServer.Dts.Tasks.ScriptTask.ScriptObjectModel.Variables%2A> proporciona un acceso más cómodo a las variables. Aunque puede utilizar <xref:Microsoft.SqlServer.Dts.Tasks.ScriptTask.ScriptObjectModel.VariableDispenser%2A>, debe llamar explícitamente a los métodos para bloquear y desbloquear las variables para leer y escribir. La tarea Script controla la semántica de bloqueo automáticamente cuando usa la propiedad <xref:Microsoft.SqlServer.Dts.Tasks.ScriptTask.ScriptObjectModel.Variables%2A>.|  
   

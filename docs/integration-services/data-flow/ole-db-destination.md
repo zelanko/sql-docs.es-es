@@ -4,11 +4,9 @@ ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: integration-services
-ms.component: data-flow
 ms.reviewer: ''
 ms.suite: sql
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.tgt_pltfrm: ''
 ms.topic: conceptual
 f1_keywords:
@@ -29,11 +27,12 @@ caps.latest.revision: 79
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 6dfed499dd91ae4113671bf88f23e5ac1b0d8792
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 91ef4d0595ea468f9b6fdd2bfb43bbd9dacad6ed
+ms.sourcegitcommit: cc46afa12e890edbc1733febeec87438d6051bf9
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/12/2018
+ms.locfileid: "35406917"
 ---
 # <a name="ole-db-destination"></a>Destino de OLE DB
   El destino de OLE DB carga datos en una serie de bases de datos compatibles con OLE DB que usan una tabla o vista de base de datos o un comando SQL. Por ejemplo, un origen de OLE DB puede cargar datos en tablas en bases de datos de [!INCLUDE[msCoName](../../includes/msconame-md.md)] Office Access y [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
@@ -94,7 +93,7 @@ ms.lasthandoff: 05/03/2018
   
  Además de las opciones de carga rápida que se muestran en el cuadro de diálogo **Editor de destino de OLE DB** , puede configurar el destino de OLE DB para usar las siguientes opciones de carga masiva al escribir las opciones en la propiedad FastLoadOptions del cuadro de diálogo **Editor avanzado** .  
   
-|Opción de carga rápida|Description|  
+|Opción de carga rápida|Descripción|  
 |----------------------|-----------------|  
 |KILOBYTES_PER_BATCH|Especifica el tamaño en kilobytes para insertar. La opción tiene el formato **KILOBYTES_PER_BATCH** = \<valor de entero positivo**>**.|  
 |FIRE_TRIGGERS|Especifica si se activan los desencadenadores en la tabla de inserción. La opción tiene la forma **FIRE_TRIGGERS**. La presencia de la opción indica que se activan los desencadenadores.|  
@@ -141,7 +140,7 @@ ms.lasthandoff: 05/03/2018
  **Modo de acceso a datos**  
  Especifique el método para cargar los datos en el destino. Para cargar datos del juego de caracteres de doble byte (DBCS), es necesario que utilice una de las opciones de carga rápida. Para obtener más información acerca de los modos de acceso a datos de carga rápida, optimizados para inserciones masivas, vea [OLE DB Destination](../../integration-services/data-flow/ole-db-destination.md).  
   
-|Opción|Description|  
+|Opción|Descripción|  
 |------------|-----------------|  
 |Tabla o vista|Carga los datos en una tabla o vista del destino OLE DB.|  
 |Carga rápida de tabla o vista|Carga los datos en una tabla o vista del destino OLE DB y utiliza la opción de carga rápida. Para obtener más información acerca de los modos de acceso a datos de carga rápida, optimizados para inserciones masivas, vea [OLE DB Destination](../../integration-services/data-flow/ole-db-destination.md).|  

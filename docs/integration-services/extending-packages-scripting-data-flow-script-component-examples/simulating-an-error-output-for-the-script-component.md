@@ -4,10 +4,9 @@ ms.custom: ''
 ms.date: 03/17/2017
 ms.prod: sql
 ms.prod_service: integration-services
-ms.component: extending-packages-scripting-data-flow-script-component-examples
 ms.reviewer: ''
 ms.suite: sql
-ms.technology: ''
+ms.technology: integration-services
 ms.tgt_pltfrm: ''
 ms.topic: reference
 applies_to:
@@ -22,11 +21,12 @@ caps.latest.revision: 28
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: a7e62f7b3eec3fcbde054785a546bce54edec776
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 305904031b2a2820e145fe952e3dfa0b68f2b95c
+ms.sourcegitcommit: cc46afa12e890edbc1733febeec87438d6051bf9
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/12/2018
+ms.locfileid: "35407317"
 ---
 # <a name="simulating-an-error-output-for-the-script-component"></a>Simular una salida de error para el componente de script
   Aunque no puede configurar directamente una salida como una salida de error en el componente de script para el control automático de filas del error, puede reproducir la funcionalidad de una salida de error integrada mediante la creación de una salida adicional y la utilización de una lógica condicional en su script para dirigir las filas a esta salida cuando corresponda. Puede que desee imitar el comportamiento de una salida de error integrada agregando dos columnas de salida adicionales para recibir el número de error y el identificador de la columna en la que se produjo un error.  

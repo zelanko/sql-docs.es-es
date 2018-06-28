@@ -4,11 +4,9 @@ ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: integration-services
-ms.component: control-flow
 ms.reviewer: ''
 ms.suite: sql
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.tgt_pltfrm: ''
 ms.topic: conceptual
 f1_keywords:
@@ -22,11 +20,12 @@ caps.latest.revision: 28
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: d86f9b5ddd0456faa92348f6bce99edc37bb029b
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 0c06201f3c1512fb45f249983b24a275aaff4377
+ms.sourcegitcommit: cc46afa12e890edbc1733febeec87438d6051bf9
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/12/2018
+ms.locfileid: "35409607"
 ---
 # <a name="transfer-jobs-task"></a>Tarea Transferir trabajos
   La tarea Transferir trabajos transfiere uno o varios trabajos del Agente [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] entre instancias de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
@@ -114,7 +113,7 @@ ms.lasthandoff: 05/03/2018
   
  Esta propiedad presenta las opciones indicadas en la siguiente tabla:  
   
-|Valor|Description|  
+|Valor|Descripción|  
 |-----------|-----------------|  
 |**True**|Copia todos los trabajos.|  
 |**False**|Copia solo los trabajos especificados.|  
@@ -132,7 +131,7 @@ ms.lasthandoff: 05/03/2018
   
  Esta propiedad presenta las opciones indicadas en la siguiente tabla:  
   
-|Valor|Description|  
+|Valor|Descripción|  
 |-----------|-----------------|  
 |**FailTask**|La tarea falla si ya existen trabajos con el mismo nombre en el servidor de destino.|  
 |**Sobrescribir**|La tarea sobrescribe los trabajos con el mismo nombre en el servidor de destino.|  
@@ -143,7 +142,7 @@ ms.lasthandoff: 05/03/2018
   
  Esta propiedad presenta las opciones indicadas en la siguiente tabla:  
   
-|Valor|Description|  
+|Valor|Descripción|  
 |-----------|-----------------|  
 |**True**|Habilita los trabajos en el servidor de destino.|  
 |**False**|Deshabilita los trabajos en el servidor de destino.|  

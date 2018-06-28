@@ -23,16 +23,17 @@ author: edmacauley
 ms.author: edmaca
 manager: craigg
 monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
-ms.openlocfilehash: 1a6cee0f40ba7cd92024fd11b82a32c3de99d0e7
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 6e6f5d64408bc74b069ba4fbd7f39b98ed2f278d
+ms.sourcegitcommit: 6e55a0a7b7eb6d455006916bc63f93ed2218eae1
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/08/2018
+ms.locfileid: "35239235"
 ---
 # <a name="datetime2fromparts-transact-sql"></a>DATETIME2FROMPARTS (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2012-all-md](../../includes/tsql-appliesto-ss2012-all-md.md)]
 
-Devuelve un valor **datetime2** para la fecha y la hora especificadas, y con la precisión indicada.
+Esta función devuelve un valor **datetime2** para los argumentos de fecha y hora especificados. El valor devuelto tiene una precisión especificada por el argumento de precisión.
   
 ![Icono de vínculo de tema](../../database-engine/configure-windows/media/topic-link.gif "Icono de vínculo de tema") [Convenciones de sintaxis de Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)
   
@@ -52,33 +53,34 @@ Expresión entera que especifica un mes.
 *day*  
 Expresión entera que especifica un día.
   
- *hour*  
-Expresión entera que especifica horas.
+*hour*  
+Expresión entera que especifica las horas.
   
-*minute* Expresión entera que especifica minutos.
+*minute*  
+Expresión entera que especifica los minutos.
   
 *segundos*  
-Expresión entera que especifica segundos.
+Expresión entera que especifica los segundos.
   
 *fractions*  
-Expresión entera que especifica fracciones.
+Expresión entera que especifica un valor de fracciones de segundo.
   
 *precisión*  
-Literal entero que especifica la precisión del valor **datetime2** que se va a devolver.
+Expresión entera que especifica la precisión del valor **datetime2** que `DATETIME2FROMPARTS` va a devolver.
   
-## <a name="return-types"></a>Tipos de valor devueltos
+## <a name="return-types"></a>Tipos de valores devueltos
 **datetime2(** *precision* **)**
   
 ## <a name="remarks"></a>Notas  
-**DATETIME2FROMPARTS** devuelve un valor de **datetime2** totalmente inicializado. Si los argumentos no son válidos, se generará un error. Si los argumentos necesarios son NULL, se devuelve un valor NULL. Pero si el argumento *precision* es NULL, se generará un error.
+`DATETIME2FROMPARTS` devuelve un valor **datetime2** totalmente inicializado. `DATETIME2FROMPARTS` producirá un error si al menos uno de los argumentos obligatorios tiene un valor no válido. `DATETIME2FROMPARTS` devuelve NULL si al menos uno de los argumentos obligatorios tiene un valor NULL. Pero si el argumento *precision* tiene un valor NULL, `DATETIME2FROMPARTS` producirá un error.
+
+El argumento *fractions* depende del argumento *precision*. Por ejemplo, para un valor *precision* de 7, cada fracción representa 100 nanosegundos; si *precision* es 3, cada fracción representa un milisegundo. Para un valor de *precision* de cero, el valor de *fractions* también debe ser cero; de lo contrario, `DATETIME2FROMPARTS` generará un error.
   
-El argumento *fractions* depende del argumento *precision*. Por ejemplo, si *precision* es 7, cada fracción representa 100 nanosegundos; si *precision* es 3, cada fracción representa un milisegundo. Si el valor de *precision* es cero, el valor de *fractions* también debe ser cero; de lo contrario, se generará un error.
-  
-Esta función se puede enviar de forma remota a servidores de [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] y superiores. No se puede enviar de forma remota a servidores que tengan una versión inferior a [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].
+Esta función admite la conexión remota a servidores de [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] y versiones posteriores. No admitirá la conexión remota a servidores que tengan una versión inferior a [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].
   
 ## <a name="examples"></a>Ejemplos  
   
-### <a name="a-simple-example-without-fractions-of-a-second"></a>A. Ejemplo simple sin fracciones de segundo  
+### <a name="a-an-example-without-fractions-of-a-second"></a>A. Ejemplo sin fracciones de segundo  
   
 ```sql
 SELECT DATETIME2FROMPARTS ( 2010, 12, 31, 23, 59, 59, 0, 0 ) AS Result;  
@@ -97,11 +99,11 @@ Result
 ### <a name="b-example-with-fractions-of-a-second"></a>B. Ejemplo con fracciones de segundo  
 En este ejemplo se muestra el uso de los parámetros *fractions* y *precision*:
   
-1.  Cuando *fractions* tiene el valor 5 y *precision*, el valor 1, el valor de *fractions* representa 5/10 de un segundo.  
+1.  Cuando *fractions* tiene el valor 5 y *precision* el valor 1, el valor de *fractions* representa 5/10 de un segundo.  
   
-2.  Cuando *fractions* tiene el valor 50 y *precision*, el valor 2, el valor de *fractions* representa 50/100 de un segundo.  
+2.  Cuando *fractions* tiene el valor 50 y *precision* el valor 2, el valor de *fractions* representa 50/100 de un segundo.  
   
-3.  Cuando *fractions* tiene el valor 500 y *precision*, el valor 3, el valor de *fractions* representa 500/1000 de un segundo.  
+3.  Cuando *fractions* tiene el valor 500 y *precision* tiene el valor 3, el valor de *fractions* representa 500/1000 de un segundo.  
   
 ```sql
 SELECT DATETIME2FROMPARTS ( 2011, 8, 15, 14, 23, 44, 5, 1 );  

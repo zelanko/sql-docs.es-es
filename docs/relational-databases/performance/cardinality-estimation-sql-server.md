@@ -19,11 +19,12 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 monikerRange: = azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: 197e68e1aaaacbcb99410698551bc94352ad6df0
-ms.sourcegitcommit: ee661730fb695774b9c483c3dd0a6c314e17ddf8
+ms.openlocfilehash: d3cbbe30e7ed4ec6f273a68b6e7af67b9a768c80
+ms.sourcegitcommit: 155f053fc17ce0c2a8e18694d9dd257ef18ac77d
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/19/2018
+ms.lasthandoff: 06/06/2018
+ms.locfileid: "34812039"
 ---
 # <a name="cardinality-estimation-sql-server"></a>Estimación de cardinalidad (SQL Server)
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -273,6 +274,7 @@ WHERE s.ticket = r.ticket AND
 ## <a name="see-also"></a>Ver también  
  [Supervisión y optimización del rendimiento](../../relational-databases/performance/monitor-and-tune-for-performance.md)   
  [Optimizar los planes de consulta con el estimador de cardinalidad de SQL Server 2014](http://msdn.microsoft.com/library/dn673537.aspx)  
- [Sugerencias de consulta](../../t-sql/queries/hints-transact-sql-query.md) [Sugerencias de consulta USE HINT](../../t-sql/queries/hints-transact-sql-query.md#use_hint)     
+ [Sugerencias de consulta](../../t-sql/queries/hints-transact-sql-query.md)     
+ [Sugerencias de consulta USE HINT](../../t-sql/queries/hints-transact-sql-query.md#use_hint)       
  [Monitoring Performance By Using the Query Store](../../relational-databases/performance/monitoring-performance-by-using-the-query-store.md)    
  [Guía de arquitectura de procesamiento de consultas](../../relational-databases/query-processing-architecture-guide.md)   

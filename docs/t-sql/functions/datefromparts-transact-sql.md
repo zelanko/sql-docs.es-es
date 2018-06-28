@@ -23,16 +23,17 @@ author: edmacauley
 ms.author: edmaca
 manager: craigg
 monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
-ms.openlocfilehash: d74e96029a7f28e6547c74c34bc5de9e0b656d8d
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 45446ffcf04092574737640fd338a35f04497181
+ms.sourcegitcommit: 6e55a0a7b7eb6d455006916bc63f93ed2218eae1
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/08/2018
+ms.locfileid: "35239035"
 ---
 # <a name="datefromparts-transact-sql"></a>DATEFROMPARTS (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2012-all-md](../../includes/tsql-appliesto-ss2012-all-md.md)]
 
-Devuelve un valor de tipo **date** para el año, mes y día especificados.
+Esta función devuelve un valor **date** que se asigna a los valores de año, mes y día especificados.
   
 ![Icono de vínculo de tema](../../database-engine/configure-windows/media/topic-link.gif "Icono de vínculo de tema") [Convenciones de sintaxis de Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)
   
@@ -56,12 +57,12 @@ Expresión entera que especifica un día.
 **date**
   
 ## <a name="remarks"></a>Notas  
-**DATEFROMPARTS** devuelve un valor de tipo **date** con la parte de fecha establecida en el año, el mes y el día especificados y la parte de hora, en el valor predeterminado. Si los argumentos no son válidos, se generará un error. Si los argumentos necesarios son NULL, se devuelve un valor NULL.
+`DATEFROMPARTS` devuelve un valor **date**, con la parte de fecha establecida en el año, el mes y el día especificados, y la parte de hora establecida en el valor predeterminado. Para los argumentos no válidos, `DATEFROMPARTS` producirá un error. `DATEFROMPARTS` devuelve NULL si al menos uno de los argumentos obligatorios tiene un valor NULL.
   
-Esta función se puede enviar de forma remota a servidores de [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] y superiores. No se puede enviar de forma remota a servidores con una versión inferior a [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)].
+Esta función puede controlar la conexión remota a servidores de [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] y versiones posteriores. No puede controlar la comunicación remota a servidores con una versión inferior a [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)].
   
 ## <a name="examples"></a>Ejemplos  
-En el siguiente ejemplo se muestra el uso de la función **DATEFROMPARTS**.
+En este ejemplo se muestra la función `DATEFROMPARTS` en acción.
   
 ```sql
 SELECT DATEFROMPARTS ( 2010, 12, 31 ) AS Result;  

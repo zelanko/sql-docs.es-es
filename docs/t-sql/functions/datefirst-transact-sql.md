@@ -37,18 +37,19 @@ author: edmacauley
 ms.author: edmaca
 manager: craigg
 monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
-ms.openlocfilehash: 8c1af3730ecd3484728266ed7aecdfd975286461
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 119b41488f7a357d3c59e78ce7c197c0825f3238
+ms.sourcegitcommit: 6e55a0a7b7eb6d455006916bc63f93ed2218eae1
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/08/2018
+ms.locfileid: "35239335"
 ---
 # <a name="x40x40datefirst-transact-sql"></a>&#x40;&#x40;DATEFIRST (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
 
-Devuelve el valor actual, de una sesión, de [SET DATEFIRST](../../t-sql/statements/set-datefirst-transact-sql.md).
+Esta función devuelve el valor actual de [SET DATEFIRST](../../t-sql/statements/set-datefirst-transact-sql.md) para una sesión específica.
   
-Para ver información general sobre todos los tipos de datos y funciones de fecha y hora de [!INCLUDE[tsql](../../includes/tsql-md.md)], vea [Tipos de datos y funciones de fecha y hora &#40;Transact-SQL&#41;](../../t-sql/functions/date-and-time-data-types-and-functions-transact-sql.md).
+Vea [Tipos de datos y funciones de fecha y hora &#40;Transact-SQL&#41;](../../t-sql/functions/date-and-time-data-types-and-functions-transact-sql.md) para obtener información general sobre todos los tipos de datos y las funciones de fecha y hora de [!INCLUDE[tsql](../../includes/tsql-md.md)].
   
 ![Icono de vínculo de tema](../../database-engine/configure-windows/media/topic-link.gif "Icono de vínculo de tema") [Convenciones de sintaxis de Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)
   
@@ -62,9 +63,20 @@ Para ver información general sobre todos los tipos de datos y funciones de fech
 **tinyint**
   
 ## <a name="remarks"></a>Notas  
-SET DATEFIRST especifica el primer día de la semana. El valor predeterminado para inglés inglés de EE.UU. es 7, domingo.
+SET DATEFIRST *n* especifica el primer día (DOMINGO, LUNES, MARTES, etc.) de la semana. El valor *n* puede oscilar entre 1 y 7.
+
+```sql
+SET DATEFIRST 3;
+GO  
+SELECT @@DATEFIRST; -- 3 (Wednesday)
+GO
+```  
+
+Para un entorno de Inglés (EE.UU.), el valor predeterminado de @@DATEFIRST es 7 (domingo).
   
-Esta configuración de idioma afecta a la interpretación de cadenas de caracteres cuando se convierten en valores de fecha para el almacenamiento en la base de datos y la presentación de los valores de fecha que se almacenan en la base de datos. Esta configuración no afecta al formato de almacenamiento de datos de fecha. En el siguiente ejemplo, el idioma se establece primero en `Italian`. La instrucción `SELECT @@DATEFIRST;` devuelve `1`. A continuación, el idioma se establece en `us_english`. La instrucción `SELECT @@DATEFIRST;` devuelve `7`.
+Esta configuración de idioma afecta a la interpretación de cadena de caracteres, ya que SQL Server convierte esas cadenas en valores de fecha para el almacenamiento de base de datos. Esta configuración también afecta a la presentación de los valores de fecha que se almacenan en la base de datos. Esta configuración no afecta al formato de almacenamiento de datos de fecha.
+
+En este ejemplo, primero se establece el idioma en `Italian`. La instrucción `SELECT @@DATEFIRST;` devuelve `1`. La instrucción siguiente establece el idioma en `us_english`. La instrucción final `SELECT @@DATEFIRST;` devuelve `7`.
   
 ```sql
 SET LANGUAGE Italian;  
@@ -77,7 +89,7 @@ SELECT @@DATEFIRST;
 ```  
   
 ## <a name="examples"></a>Ejemplos  
-En el siguiente ejemplo se establece como primer día de la semana el `5` (viernes) y se supone que el día actual, `Today`, es sábado. La instrucción `SELECT` devuelve el valor de `DATEFIRST` y el número del día actual de la semana.
+En este ejemplo se establece como primer día de la semana `5` (viernes) y se supone que el día actual, `Today`, cae en sábado. La instrucción `SELECT` devuelve el valor de `DATEFIRST` y el número del día actual de la semana.
   
 ```sql
 SET DATEFIRST 5;  

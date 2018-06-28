@@ -27,17 +27,18 @@ author: edmacauley
 ms.author: edmaca
 manager: craigg
 monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
-ms.openlocfilehash: 45ad8be1da81b29b446ed18dd0c4688013a18875
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 9ae22c38ef34ad8db35c625de80d47f08a0e6073
+ms.sourcegitcommit: b52b5d972b1a180e575dccfc4abce49af1a6b230
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/08/2018
+ms.locfileid: "35250018"
 ---
 # <a name="errornumber-transact-sql"></a>ERROR_NUMBER (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
 
-  Devuelve el número de error del error que ha provocado la ejecución del bloque CATCH de una construcción TRY…CATCH.  
-  
+Esta función devuelve el número del error que ha provocado la ejecución del bloque CATCH de una construcción TRY…CATCH.  
+
  ![Icono de vínculo de tema](../../database-engine/configure-windows/media/topic-link.gif "Icono de vínculo de tema") [Convenciones de sintaxis de Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>Sintaxis  
@@ -50,21 +51,21 @@ ERROR_NUMBER ( )
  **int**  
   
 ## <a name="return-value"></a>Valor devuelto  
- Si se llama en un bloque CATCH, se devuelve el número de error del mensaje de error que ha provocado la ejecución del bloque CATCH.  
-  
- Devuelve NULL si se le llama desde fuera del ámbito del bloque CATCH.  
+Si se llama en un bloque CATCH, `ERROR_NUMBER` devuelve el número del error que ha provocado la ejecución del bloque CATCH.  
+
+`ERROR_NUMBER` devuelve NULL si se llama desde fuera del ámbito de un bloque CATCH.  
   
 ## <a name="remarks"></a>Notas  
- Esta función se puede llamar desde cualquier lugar dentro del ámbito de un bloque CATCH.  
+`ERROR_NUMBER` admite llamadas en cualquier lugar del ámbito de un bloque CATCH.  
   
- ERROR_NUMBER devuelve el número de error con independencia de las veces que se ejecuta o de la parte donde se ejecuta en el ámbito del bloque CATCH. No ocurre lo mismo con @@ERROR, que solo devuelve el número de error en la instrucción inmediatamente posterior a la que provoca un error o la primera instrucción de un bloque CATCH.  
-  
- En los bloques CATCH anidados, ERROR_NUMBER devuelve el número de error específico para el ámbito del bloque CATCH donde se hace referencia a él. Por ejemplo, el bloque CATCH de una construcción TRY...CATCH externa podría tener una construcción TRY...CATCH anidada. En el bloque CATCH anidado, ERROR_NUMBER devuelve el número del error que ha invocado el bloque CATCH anidado. Si ERROR_NUMBER se ejecuta en el bloque CATCH externo, devuelve el número del error que ha invocado el bloque CATCH.  
+`ERROR_NUMBER` devuelve un número de error relevante, con independencia de cuántas veces se ejecute o de dónde se ejecute dentro del ámbito del bloque `CATCH`. Esto contrasta con funciones como @@ERROR, que solo devuelve un número de error en la instrucción inmediatamente posterior a la que produjo el error.  
+
+En un bloque `CATCH` anidado, `ERROR_NUMBER` devuelve el número de error específico del ámbito del bloque `CATCH` al que hace referencia ese bloque `CATCH`. Por ejemplo, el bloque `CATCH` de una construcción TRY...CATCH externa podría tener una construcción `TRY...CATCH` interna. Dentro de ese bloque interno `CATCH`, `ERROR_NUMBER` devuelve el número del error que invocó el bloque `CATCH` interno. Si `ERROR_NUMBER` se ejecuta en el bloque `CATCH` externo, devuelve el número del error que invocó ese bloque `CATCH` externo.  
   
 ## <a name="examples"></a>Ejemplos  
   
 ### <a name="a-using-errornumber-in-a-catch-block"></a>A. Usar ERROR_NUMBER en un bloque CATCH  
- El siguiente ejemplo de código muestra una instrucción `SELECT` que genera un error de división por cero. Se devuelve el número de error.  
+En este ejemplo se muestra una instrucción `SELECT` que genera un error de división por cero. El bloque `CATCH` devuelve el número de error.  
   
 ```  
 BEGIN TRY  
@@ -75,11 +76,22 @@ BEGIN CATCH
     SELECT ERROR_NUMBER() AS ErrorNumber;  
 END CATCH;  
 GO  
+
+-----------
+
+(0 row(s) affected)
+
+ErrorNumber
+-----------
+8134
+
+(1 row(s) affected)
+
 ```  
   
 ### <a name="b-using-errornumber-in-a-catch-block-with-other-error-handling-tools"></a>B. Usar ERROR_NUMBER en un bloque CATCH con otras herramientas de control de errores  
- El siguiente ejemplo de código muestra una instrucción `SELECT` que genera un error de división por cero. Además del número de error, se devuelve información relacionada con el error.  
-  
+En este ejemplo se muestra una instrucción `SELECT` que genera un error de división por cero. Junto con el número de error, el bloque `CATCH` devuelve información sobre ese error.  
+
 ```  
   
 BEGIN TRY  
@@ -96,28 +108,17 @@ BEGIN CATCH
         ERROR_MESSAGE() AS ErrorMessage;  
 END CATCH;  
 GO  
-```  
-  
-## <a name="examples-includesssdwfullincludessssdwfull-mdmd-and-includesspdwincludessspdw-mdmd"></a>Ejemplos: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] y [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
-  
-### <a name="c-using-errornumber-in-a-catch-block-with-other-error-handling-tools"></a>C. Usar ERROR_NUMBER en un bloque CATCH con otras herramientas de control de errores  
- El siguiente ejemplo de código muestra una instrucción `SELECT` que genera un error de división por cero. Además del número de error, se devuelve información relacionada con el error.  
-  
-```  
-  
-BEGIN TRY  
-    -- Generate a divide-by-zero error.  
-    SELECT 1/0;  
-END TRY  
-BEGIN CATCH  
-    SELECT  
-        ERROR_NUMBER() AS ErrorNumber,  
-        ERROR_SEVERITY() AS ErrorSeverity,  
-        ERROR_STATE() AS ErrorState,  
-        ERROR_PROCEDURE() AS ErrorProcedure,  
-        ERROR_MESSAGE() AS ErrorMessage;  
-END CATCH;  
-GO  
+
+-----------
+
+(0 row(s) affected)
+
+ErrorNumber ErrorSeverity ErrorState  ErrorProcedure   ErrorLine  ErrorMessage
+----------- ------------- ----------- ---------------  ---------- ----------------------------------
+8134        16            1           NULL             4          Divide by zero error encountered.
+
+(1 row(s) affected)
+
 ```  
   
 ## <a name="see-also"></a>Ver también  

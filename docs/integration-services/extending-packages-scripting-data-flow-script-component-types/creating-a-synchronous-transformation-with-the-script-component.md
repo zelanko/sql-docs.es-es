@@ -4,10 +4,9 @@ ms.custom: ''
 ms.date: 03/17/2017
 ms.prod: sql
 ms.prod_service: integration-services
-ms.component: extending-packages-scripting-data-flow-script-component-types
 ms.reviewer: ''
 ms.suite: sql
-ms.technology: ''
+ms.technology: integration-services
 ms.tgt_pltfrm: ''
 ms.topic: reference
 applies_to:
@@ -23,11 +22,12 @@ caps.latest.revision: 64
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 37b3c7dad05280b86d29e34be338d1929561fc05
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 4b60892548f532385ff12a011b3cb89d631dabbf
+ms.sourcegitcommit: cc46afa12e890edbc1733febeec87438d6051bf9
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/12/2018
+ms.locfileid: "35404707"
 ---
 # <a name="creating-a-synchronous-transformation-with-the-script-component"></a>Crear una transformación sincrónica con el componente de script
   Un componente de transformación se utiliza en el flujo de datos de un paquete de [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] para modificar y analizar los datos cuando pasan del origen al destino. Una transformación con salidas sincrónicas procesa cada fila de entrada a medida que pasa por el componente. Una transformación con salidas asincrónicas espera hasta que haya recibido todas las filas de entrada para completar su procesamiento. En este tema se describe una transformación sincrónica. Para obtener información sobre transformaciones asincrónicas, vea [Crear una transformación asincrónica con el componente de script](../../integration-services/extending-packages-scripting-data-flow-script-component-types/creating-an-asynchronous-transformation-with-the-script-component.md). Para obtener más información acerca de la diferencia entre los componentes sincrónicos y asincrónicos, consulte [Understanding Synchronous and Asynchronous Transformations](../../integration-services/understanding-synchronous-and-asynchronous-transformations.md) (Descripción de las transformaciones sincrónicas y asincrónicas).  

@@ -4,11 +4,9 @@ ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: integration-services
-ms.component: data-flow
 ms.reviewer: ''
 ms.suite: sql
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.tgt_pltfrm: ''
 ms.topic: conceptual
 f1_keywords:
@@ -18,11 +16,12 @@ caps.latest.revision: 10
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 8fc3eb789b9f69196b2bb963ec714d5b94ec4f20
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 28267ea6dddecd2becf6bb656a6da2b51bba54ff
+ms.sourcegitcommit: cc46afa12e890edbc1733febeec87438d6051bf9
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/12/2018
+ms.locfileid: "35402447"
 ---
 # <a name="sap-bw-destination-editor-connection-manager-page"></a>Editor de destino de SAP BW (página Administrador de conexiones)
   Use la página **Administrador de conexiones** del cuadro de diálogo **Editor de destino de SAP BW** para seleccionar un administrador de conexiones de SAP BW que va a usar el destino SAP BW. En esta página, puede seleccionar los parámetros para cargar los datos en el sistema SAP Netweaver BW.  
@@ -66,7 +65,7 @@ ms.lasthandoff: 05/03/2018
  **Tipo**  
  Escriba el carácter único que identifique el tipo del InfoSource. La tabla siguiente enumera los valores aceptables de un solo carácter.  
   
-|Value|Description|  
+|Value|Descripción|  
 |-----------|-----------------|  
 |**D**|Datos de transacción|  
 |**M**|Datos maestros|  

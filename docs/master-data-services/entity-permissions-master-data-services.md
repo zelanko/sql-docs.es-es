@@ -4,7 +4,6 @@ ms.custom: ''
 ms.date: 03/01/2017
 ms.prod: sql
 ms.prod_service: mds
-ms.component: non-specific
 ms.reviewer: ''
 ms.suite: sql
 ms.technology:
@@ -19,11 +18,12 @@ caps.latest.revision: 6
 author: leolimsft
 ms.author: lle
 manager: craigg
-ms.openlocfilehash: 69ec91fb58dc323d264e167593f4117cba81eebf
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 343231fd0aea8a9c2ed61c640b6252e8a6a29b58
+ms.sourcegitcommit: cc46afa12e890edbc1733febeec87438d6051bf9
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/12/2018
+ms.locfileid: "35406987"
 ---
 # <a name="entity-permissions-master-data-services"></a>Permisos de entidad (Master Data Services)
 
@@ -42,7 +42,7 @@ ms.lasthandoff: 05/03/2018
 > [!NOTE]  
 >  Estos permisos solo se aplican al área funcional del **Explorador** de la interfaz de usuario.  
   
-|Permiso|Description|  
+|Permiso|Descripción|  
 |----------------|-----------------|  
 |**Lectura**|El usuario puede leer miembros, atributos, pertenencias a la jerarquía o pertenencias a la colección.|  
 |**Crear**|El usuario puede crear miembros hoja y asignar valores de atributo durante la creación.|  

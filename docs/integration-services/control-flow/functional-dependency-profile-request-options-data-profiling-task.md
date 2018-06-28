@@ -4,11 +4,9 @@ ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: integration-services
-ms.component: control-flow
 ms.reviewer: ''
 ms.suite: sql
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
@@ -18,11 +16,12 @@ caps.latest.revision: 24
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: a1117cc82dee86fa845dc817a7c98eaefe7e4548
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 1490e786bd2799d6ea2abb1c821b155777f1356f
+ms.sourcegitcommit: cc46afa12e890edbc1733febeec87438d6051bf9
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/12/2018
+ms.locfileid: "35403897"
 ---
 # <a name="functional-dependency-profile-request-options-data-profiling-task"></a>Opciones de Solicitud de perfil de dependencia funcional (tarea de generación de perfiles de datos)
   Utilice el panel **Propiedades de la solicitud** de la página **Solicitudes de perfil** para establecer las opciones de **Solicitud de perfil de dependencia funcional** seleccionadas en el panel de solicitudes. Un perfil de dependencia funcional informa de hasta qué punto los valores de una columna (la columna dependiente) dependen de los valores de otra columna o de un conjunto de columnas (la columna determinante). Este perfil también puede ayudarle a identificar problemas de los datos, por ejemplo valores que no sean válidos. Por ejemplo, imagine que genera un perfil de la dependencia entre una columna de código postal y una columna de estados de Estados Unidos. En este perfil, el mismo código postal debería tener siempre el mismo estado, pero el perfil detecta infracciones de la dependencia.  
@@ -89,7 +88,7 @@ ms.lasthandoff: 05/03/2018
 > [!NOTE]  
 >  Cuando use el carácter comodín **(\*)** para **ColumnName**, **CompareOptions** es de solo lectura y se establece en el valor **Default**.  
   
-|Valor|Description|  
+|Valor|Descripción|  
 |-----------|-----------------|  
 |**Default**|Ordena y compara datos basados en la intercalación de la columna en la tabla de origen.|  
 |**BinarySort**|Ordena y compara los datos según los patrones de bits definidos para cada carácter. El orden binario utiliza la distinción de mayúsculas y minúsculas, y de acentos. El orden binario es también el más rápido.|  
@@ -97,7 +96,7 @@ ms.lasthandoff: 05/03/2018
   
  Si selecciona **DictionarySort**, también puede seleccionar cualquier combinación de las opciones enumeradas en la tabla siguiente. De forma predeterminada, no se selecciona ninguna de estas opciones adicionales.  
   
-|Valor|Description|  
+|Valor|Descripción|  
 |-----------|-----------------|  
 |**IgnoreCase**|Especifica si la comparación distingue entre mayúsculas y minúsculas. Si se establece esta opción, la comparación de las cadenas omite la distinción entre mayúsculas y minúsculas. Por ejemplo, "ABC" se interpreta igual que "abc".|  
 |**IgnoreNonSpace**|Especifica si la comparación distingue entre caracteres con espacio y signos diacríticos. Si se establece esta opción, la comparación omite los signos diacríticos. Por ejemplo, "å" se considera igual que "a".|  
@@ -112,7 +111,7 @@ ms.lasthandoff: 05/03/2018
  **ThresholdSetting**  
  Especifique el valor de umbral. El valor predeterminado de esta propiedad es **Specified**.  
   
-|Valor|Description|  
+|Valor|Descripción|  
 |-----------|-----------------|  
 |**Ninguno**|No especifica un umbral. El nivel de dependencia funcional se indica independientemente de su valor.|  
 |**Specified**|Utilice el umbral que se especifica en **FDStrengthThreshold**. Solo se indica el nivel de dependencia funcional si es mayor que el umbral.|  

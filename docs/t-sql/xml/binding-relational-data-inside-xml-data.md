@@ -24,11 +24,12 @@ caps.latest.revision: 36
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: db924e662687ab79d207fe3e1e33ccc75aecd059
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: d99bf84a2b27f9d7042b28a7c8c1c99fd54f99bd
+ms.sourcegitcommit: fd9c33b93c886dcb00a48967b6c245631fd559bf
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/14/2018
+ms.locfileid: "35619472"
 ---
 # <a name="binding-relational-data-inside-xml-data"></a>Enlazar datos relacionales dentro de datos XML
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -45,7 +46,7 @@ ms.lasthandoff: 05/03/2018
   
  Estas funciones no se pueden usar para hacer referencia a datos en columnas o variables de tipo **xml**, de tipos definidos por el usuario CLR, datetime, smalldatetime, **text**, **ntext**, **sql_variant** e **image**.  
   
- Asimismo, este enlace es de solo lectura. En otras palabras, no se pueden escribir datos en las columnas que utilicen estas funciones. Por ejemplo, sql:variable("@x")="*cualquier expresión"* no está permitido.  
+ Asimismo, este enlace es de solo lectura. En otras palabras, no se pueden escribir datos en las columnas que utilicen estas funciones. Por ejemplo, no se permite sql:variable("\@x")="*una expresión"*.  
   
 ## <a name="example-cross-domain-query-using-sqlvariable"></a>Ejemplo: consulta entre dominios mediante sql:variable()  
  Este ejemplo muestra cómo **sql:variable()** puede permitir a una aplicación parametrizar una consulta. El ISBN se pasa mediante una variable SQL @isbn. Sustituyendo la constante por **sql:variable()**, la consulta sirve para buscar cualquier ISBN y no solo el que corresponde a 0-7356-1588-2.  

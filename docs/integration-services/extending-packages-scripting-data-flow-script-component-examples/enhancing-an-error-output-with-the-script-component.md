@@ -4,10 +4,9 @@ ms.custom: ''
 ms.date: 03/17/2017
 ms.prod: sql
 ms.prod_service: integration-services
-ms.component: extending-packages-scripting-data-flow-script-component-examples
 ms.reviewer: ''
 ms.suite: sql
-ms.technology: ''
+ms.technology: integration-services
 ms.tgt_pltfrm: ''
 ms.topic: reference
 applies_to:
@@ -22,11 +21,12 @@ caps.latest.revision: 41
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: fc5ac39f91c317795c8da12dac4ba6c29c330ca0
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: f7f310cc4260bfc621436778d6363dc8cb8276b3
+ms.sourcegitcommit: cc46afa12e890edbc1733febeec87438d6051bf9
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/12/2018
+ms.locfileid: "35406377"
 ---
 # <a name="enhancing-an-error-output-with-the-script-component"></a>Mejorar una salida de errores con el componente de script
   De forma predeterminada, las dos columnas adicionales en una salida de errores de [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)], ErrorCode y ErrorColumn, solo contienen códigos numéricos que representan un número de error y el id. de la columna en la que se produjo el error. Estos valores numéricos pueden tener un uso limitado sin la descripción del error y el nombre de columna correspondientes.  

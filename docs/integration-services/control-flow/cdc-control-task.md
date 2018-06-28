@@ -4,11 +4,9 @@ ms.custom: ''
 ms.date: 03/01/2017
 ms.prod: sql
 ms.prod_service: integration-services
-ms.component: control-flow
 ms.reviewer: ''
 ms.suite: sql
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.tgt_pltfrm: ''
 ms.topic: conceptual
 f1_keywords:
@@ -19,11 +17,12 @@ caps.latest.revision: 12
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: e43fdab0290f413abf8a33a1da8664f3ae70e45e
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: f620c9fbf9ad7f1233236f9da193ecf730144f06
+ms.sourcegitcommit: cc46afa12e890edbc1733febeec87438d6051bf9
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/12/2018
+ms.locfileid: "35407497"
 ---
 # <a name="cdc-control-task"></a>Tarea Control CDC
   La tarea Control CDC se usa para controlar el ciclo de vida de los paquetes de captura de datos modificados (CDC). Controla la sincronización de paquetes CDC con el paquete de carga inicial, la administración de los intervalos de número de secuencia de registro (LSN) que se procesan en una ejecución de un paquete CDC. Además, la tarea Control CDC se ocupa de los escenarios de error y de la recuperación.  
@@ -34,7 +33,7 @@ ms.lasthandoff: 05/03/2018
   
  Las siguientes operaciones controlan la sincronización de la carga inicial y el procesamiento de cambios:  
   
-|Operación|Description|  
+|Operación|Descripción|  
 |---------------|-----------------|  
 |ResetCdcState|Esta operación se usa para restablecer el estado CDC persistente asociado al contexto CDC actual. Después de ejecutar esta operación, el LSN máximo actual de la tabla de `sys.fn_cdc_get_max_lsn` de la marca de tiempo de LSN se convierte en el inicio del intervalo para el siguiente intervalo de procesamiento. Esta operación requiere una conexión a la base de datos de origen.|  
 |MarkInitialLoadStart|Esta operación se usa al comienzo de un paquete de carga inicial para registrar el LSN actual en la base de datos de origen antes de que el paquete de carga inicial comience a leer las tablas de origen. Esto requiere una conexión a la base de datos de origen para llamar a `sys.fn_cdc_get_max_lsn`.<br /><br /> Si selecciona MarkInitialLoadStart cuando trabaja en CDC de [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] (es decir, no en Oracle), el usuario especificado en el administrador de conexiones debe ser db_owner o sysadmin.|  
@@ -43,7 +42,7 @@ ms.lasthandoff: 05/03/2018
   
  Las operaciones siguientes se usan para administrar el intervalo de procesamiento:  
   
-|Operación|Description|  
+|Operación|Descripción|  
 |---------------|-----------------|  
 |GetProcessingRange|Esta operación se usa antes de invocar el flujo de datos que usa el flujo de datos origen de CDC. Establece un intervalo de LSN que lee el flujo de datos de origen de CDC cuando se invoca. El intervalo se almacena en una variable de paquete SSIS que usa el origen de CDC durante el procesamiento del flujo de datos.<br /><br /> Para obtener más información sobre los estados que se almacenan, vea [Definir una variable de estado](../../integration-services/data-flow/define-a-state-variable.md).|  
 |MarkProcessedRange|: esta operación se ejecuta después de cada ejecución de CDC (después de que el flujo de datos de CDC se completa correctamente) para registrar el último LSN que se ha procesado totalmente en la ejecución de CDC. La próxima vez que se ejecute GetProcessingRange, esta posición será el inicio del intervalo de procesamiento.|  

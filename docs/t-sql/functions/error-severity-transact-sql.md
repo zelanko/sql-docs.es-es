@@ -27,17 +27,18 @@ author: edmacauley
 ms.author: edmaca
 manager: craigg
 monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
-ms.openlocfilehash: d17356f6730db14e85b9ab3c8186f4b474525608
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 87e80452c46d74c819affb9e9dd2695ec2789115
+ms.sourcegitcommit: b52b5d972b1a180e575dccfc4abce49af1a6b230
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/08/2018
+ms.locfileid: "35249528"
 ---
 # <a name="errorseverity-transact-sql"></a>ERROR_SEVERITY (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
 
-  Devuelve la gravedad del error que provocó la ejecución del bloque CATCH de una construcción TRY…CATCH.  
-  
+Esta función devuelve el valor de gravedad del error cuando se produce un error, si provoca la ejecución del bloque CATCH de una construcción TRY…CATCH.  
+
  ![Icono de vínculo de tema](../../database-engine/configure-windows/media/topic-link.gif "Icono de vínculo de tema") [Convenciones de sintaxis de Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>Sintaxis  
@@ -50,22 +51,21 @@ ERROR_SEVERITY ( )
  **int**  
   
 ## <a name="return-value"></a>Valor devuelto  
- Cuando se llama en un bloque CATCH, devuelve la gravedad del mensaje de error que provocó la ejecución del bloque CATCH.  
-  
- Devuelve NULL si se le llama desde fuera del ámbito del bloque CATCH.  
+Cuando se llama en un bloque CATCH donde se produce un error, `ERROR_SEVERITY` devuelve la gravedad del error que provocó la ejecución del bloque `CATCH`.  
+
+`ERROR_SEVERITY` NULL si se llamó desde fuera del ámbito de un bloque CATCH.  
   
 ## <a name="remarks"></a>Notas  
- ERROR_SEVERITY se puede llamar desde cualquier lugar dentro del ámbito de un bloque CATCH.  
+`ERROR_SEVERITY` admite llamadas en cualquier lugar del ámbito de un bloque CATCH.  
   
- ERROR_SEVERITY devuelve la gravedad del error independientemente de cuántas veces se ejecute o de si se ejecuta dentro del ámbito del bloque CATCH. Esto contrasta con funciones como @@ERROR, que solo devuelve el número de error en la instrucción inmediatamente posterior a la que causa un error, o en la primera instrucción de un bloque CATCH.  
+`ERROR_SEVERITY` devuelve el valor de gravedad de un error, con independencia de cuántas veces se ejecute o de dónde se ejecute dentro del ámbito del bloque `CATCH`. Esto contrasta con funciones como @@ERROR, que solo devuelve un número de error en la instrucción inmediatamente posterior a la que produjo el error.  
   
- En los bloques CATCH anidados, ERROR_SEVERITY devuelve la gravedad del error específica del ámbito del bloque CATCH en el que se hace referencia al mismo. Por ejemplo, el bloque CATCH de una construcción TRY...CATCH externa podría tener una construcción TRY...CATCH anidada. Dentro del bloque CATCH anidado, ERROR_SEVERITY devuelve la gravedad del error que invocó el bloque CATCH anidado. Si ERROR_SEVERITY se ejecuta en el bloque CATCH externo, devuelve la gravedad del error que invocó ese bloque CATCH.  
+`ERROR_SEVERITY` normalmente funciona en un bloque `CATCH` anidado. `ERROR_SEVERITY` devuelve el valor de gravedad del error específico del ámbito del bloque `CATCH` al que hace referencia ese bloque `CATCH`. Por ejemplo, el bloque `CATCH` de una construcción TRY...CATCH externa podría tener una construcción `TRY...CATCH` interna. Dentro de ese bloque interno `CATCH`, `ERROR_SEVERITY` devuelve el valor de gravedad del error que invocó el bloque `CATCH` interno. Si `ERROR_SEVERITY` se ejecuta en el bloque `CATCH` externo, devuelve el valor de gravedad del error que invocó ese bloque `CATCH` externo.  
   
-## <a name="examples"></a>Ejemplos  
+## <a name="examples-includesssdwfullincludessssdwfull-mdmd-and-includesspdwincludessspdw-mdmd"></a>Ejemplos: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] y [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
   
 ### <a name="a-using-errorseverity-in-a-catch-block"></a>A. Utilizar ERROR_SEVERITY en un bloque CATCH  
- En este ejemplo de código se muestra una instrucción `SELECT` que genera un error de división por cero. Se devuelve la gravedad del error.  
-  
+En este ejemplo se muestra un procedimiento almacenado que genera un error de división por cero. `ERROR_SEVERITY` devuelve el valor de gravedad de ese error.  
 ```  
   
 BEGIN TRY  
@@ -76,11 +76,22 @@ BEGIN CATCH
     SELECT ERROR_SEVERITY() AS ErrorSeverity;  
 END CATCH;  
 GO  
+
+-----------
+
+(0 row(s) affected)
+
+ErrorSeverity
+-------------
+16
+
+(1 row(s) affected)
+
 ```  
   
 ### <a name="b-using-errorseverity-in-a-catch-block-with-other-error-handling-tools"></a>B. Utilizar ERROR_SEVERITY en un bloque CATCH con otras herramientas de control de errores  
- El siguiente ejemplo muestra una instrucción `SELECT` que genera un error de división por cero. Además de la gravedad, se devuelve otra información relacionada con el error.  
-  
+En este ejemplo se muestra una instrucción `SELECT` que genera un error de división por cero. El procedimiento almacenado devuelve información sobre el error.  
+
 ```  
   
 BEGIN TRY  
@@ -97,28 +108,17 @@ BEGIN CATCH
         ERROR_MESSAGE() AS ErrorMessage;  
 END CATCH;  
 GO  
-```  
-  
-## <a name="examples-includesssdwfullincludessssdwfull-mdmd-and-includesspdwincludessspdw-mdmd"></a>Ejemplos: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] y [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
-  
-### <a name="c-using-errorseverity-in-a-catch-block-with-other-error-handling-tools"></a>C. Utilizar ERROR_SEVERITY en un bloque CATCH con otras herramientas de control de errores  
- El siguiente ejemplo muestra una instrucción `SELECT` que genera un error de división por cero. Además de la gravedad, se devuelve otra información relacionada con el error.  
-  
-```  
-  
-BEGIN TRY  
-    -- Generate a divide-by-zero error.  
-    SELECT 1/0;  
-END TRY  
-BEGIN CATCH  
-    SELECT  
-        ERROR_NUMBER() AS ErrorNumber,  
-        ERROR_SEVERITY() AS ErrorSeverity,  
-        ERROR_STATE() AS ErrorState,  
-        ERROR_PROCEDURE() AS ErrorProcedure,  
-        ERROR_MESSAGE() AS ErrorMessage;  
-END CATCH;  
-GO  
+
+-----------
+
+(0 row(s) affected)
+
+ErrorNumber ErrorSeverity ErrorState  ErrorProcedure  ErrorLine   ErrorMessage
+----------- ------------- ----------- --------------- ----------- ----------------------------------
+8134        16            1           NULL            4           Divide by zero error encountered.
+
+(1 row(s) affected)
+
 ```  
   
 ## <a name="see-also"></a>Ver también  

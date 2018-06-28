@@ -4,11 +4,9 @@ ms.custom: ''
 ms.date: 03/04/2017
 ms.prod: sql
 ms.prod_service: integration-services
-ms.component: data-flow
 ms.reviewer: ''
 ms.suite: sql
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.tgt_pltfrm: ''
 ms.topic: conceptual
 f1_keywords:
@@ -26,11 +24,12 @@ caps.latest.revision: 50
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: a20feb9d15a24ea417a715816e3b437e13d0ca2c
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: b012acc9fd4183c8255875d4df8dbcbc3b681ffa
+ms.sourcegitcommit: cc46afa12e890edbc1733febeec87438d6051bf9
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/12/2018
+ms.locfileid: "35405327"
 ---
 # <a name="sort-transformation"></a>Ordenar, transformación
   La transformación Ordenar ordena los datos de entrada en sentido ascendente o descendente, y copia los datos ordenados a la salida de transformación. Puede aplicar varias ordenaciones a una entrada; cada ordenación se identifica mediante un numeral que determina el criterio de ordenación. La columna con el número más bajo se ordenará primero, la columna con el segundo número más bajo se ordena a continuación, etc. Por ejemplo, si una columna denominada **CountryRegion** tiene un criterio de ordenación 1 y una columna denominada **Ciudad** tiene un criterio de ordenación 2, la salida se ordena por país o región y después por ciudad. Un número positivo indica que la ordenación es ascendente y un número negativo indica que la ordenación es descendente. Las columnas que no se están ordenadas tienen un criterio de ordenación de 0. Las columnas que no están seleccionadas para ordenar se copian automáticamente a la salida de transformación junto con las columnas ordenadas.  

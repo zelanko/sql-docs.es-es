@@ -4,7 +4,6 @@ ms.custom: ''
 ms.date: 04/01/2016
 ms.prod: sql
 ms.prod_service: mds
-ms.component: non-specific
 ms.reviewer: ''
 ms.suite: sql
 ms.technology:
@@ -19,11 +18,12 @@ caps.latest.revision: 14
 author: leolimsft
 ms.author: lle
 manager: craigg
-ms.openlocfilehash: 99434b57d96c317c857ab41217d044b1f18623e3
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 5bcb004e029680069959d6cbefc5481c6488dd74
+ms.sourcegitcommit: cc46afa12e890edbc1733febeec87438d6051bf9
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/12/2018
+ms.locfileid: "35410847"
 ---
 # <a name="leaf-member-staging-table-master-data-services"></a>Tabla de ensayo de miembros hoja (Master Data Services)
 
@@ -34,7 +34,7 @@ ms.lasthandoff: 05/03/2018
 ##  <a name="TableColumns"></a> Columnas de la tabla  
  En la tabla siguiente se explica para qué se usa cada uno de los campos de la tabla de ensayo Leaf.  
   
-|Nombre de la columna|Description|Valores|  
+|Nombre de la columna|Descripción|Valores|  
 |-----------------|-----------------|------------|  
 |**ID**|Identificador asignado automáticamente.|No especifique ningún valor en este campo. Si no se ha procesado el lote, este campo está en blanco.|  
 |**ImportType**<br /><br /> Obligatorio|Determina qué se debe hacer si los datos almacenados provisionalmente coinciden con datos que ya existen en la base de datos de [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] .|**0**: crear nuevos miembros. Reemplazar datos de MDS existentes con datos almacenados provisionalmente, pero solo si los datos almacenados provisionalmente no son NULL. Los valores NULL se pasan por alto. Para cambiar un valor de atributo de cadena a NULL, establézcalo en **~NULL~**. Para cambiar un valor de atributo de número a NULL, establézcalo en **-98765432101234567890**. Para cambiar un valor de atributo datetime a NULL, establézcalo en **5555-11-22T12:34:56**.<br /><br /> **1**: crear miembros nuevos únicamente. Todas las actualizaciones de datos MDS existentes producen un error.<br /><br /> **2**: crear nuevos miembros. Reemplazar los datos de MDS con datos almacenados provisionalmente. Si importa valores NULL, sobrescribirán los valores de MDS existentes.<br /><br /> **3**: desactivar el miembro, según el valor de Code. Se conservan todos los atributos, pertenencias a jerarquías y colecciones, y transacciones pero ya no están disponibles en la interfaz de usuario. Si se utiliza el miembro como valor de atributo basado en dominio de otro miembro, la desactivación producirá un error. Vea **ImportType5** para conocer una alternativa.<br /><br /> **4**: eliminar definitivamente el miembro, según el valor de Code. Todos los atributos, pertenencias a jerarquías y colecciones, y transacciones se eliminan de forma permanente. Si se utiliza el miembro como valor de atributo basado en dominio de otro miembro, la eliminación producirá un error. Vea **ImportType6** para conocer una alternativa.<br /><br /> **5**: desactivar el miembro, según el valor de **Code** . Se conservan todos los atributos, pertenencias a jerarquías y colecciones, y transacciones pero ya no están disponibles en la interfaz de usuario. Si se utiliza el miembro como valor de atributo basado en dominio de otros miembros, los valores relacionados se establecerán en NULL. ImportType 5 es para uso exclusivo en los miembros hoja.<br /><br /> **6**: eliminar definitivamente el miembro, según el valor de **Code** . Todos los atributos, pertenencias a jerarquías y colecciones, y transacciones se eliminan de forma permanente. Si se utiliza el miembro como valor de atributo basado en dominio de otros miembros, los valores relacionados se establecerán en NULL. ImportType 6 es para uso exclusivo en los miembros hoja.|  

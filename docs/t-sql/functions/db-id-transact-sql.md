@@ -28,16 +28,17 @@ author: edmacauley
 ms.author: edmaca
 manager: craigg
 monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
-ms.openlocfilehash: cb7e49f0ebd4746ccad1a9647ac2f35d61efcdc9
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 24b4ecf201ad5b805cd55693cfe8e4aa2d9dd619
+ms.sourcegitcommit: 6e55a0a7b7eb6d455006916bc63f93ed2218eae1
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/08/2018
+ms.locfileid: "35239315"
 ---
 # <a name="dbid-transact-sql"></a>DB_ID (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
 
-Devuelve el número de identificación (identificador) de la base de datos.
+Esta función devuelve el número de identificación de base de datos de una base de datos especificada.
   
 ![Icono de vínculo de tema](../../database-engine/configure-windows/media/topic-link.gif "Icono de vínculo de tema") [Convenciones de sintaxis de Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)
   
@@ -49,21 +50,21 @@ DB_ID ( [ 'database_name' ] )
   
 ## <a name="arguments"></a>Argumentos  
 '*database_name*'  
-Es el nombre de base de datos que se utiliza para devolver el Id. de base de datos correspondiente. *database_name* es **sysname**. Si el parámetro *database_name* se omite, se devuelve el identificador de base de datos actual.
+El nombre de la base de datos cuyo número de identificación de base de datos devolverá `DB_ID`. Si la llamada a `DB_ID` omite *database_name*, `DB_ID` devuelve el identificador de la base de datos actual.
   
 ## <a name="return-types"></a>Tipos de valores devueltos
 **int**
   
 ## <a name="permissions"></a>Permisos  
-Si el autor de la llamada de **DB_ID** no es el propietario de la base de datos y la base de datos no es **maestra** o **tempdb**, los permisos mínimos necesarios para ver la fila correspondiente son el permiso ALTER ANY DATABASE o VIEW ANY DATABASE de nivel de servidor, o el permiso CREATE DATABASE en la base de datos **maestra**. La base de datos a la que está conectado el autor de la llamada siempre se puede ver en **sys.databases**.
+Si el autor de la llamada de `DB_ID` no posee una base de datos **master** o distinta de **tempdb** determinada, como mínimo se requieren los permisos `ALTER ANY DATABASE` o `VIEW ANY DATABASE` de nivel de servidor para ver la fila `DB_ID` correspondiente. Para la base de datos **master**, `DB_ID` necesita el permiso `CREATE DATABASE` como mínimo. La base de datos a la que se conecta el autor de la llamada siempre aparece en **sys.databases**.
   
 > [!IMPORTANT]  
->  El rol público tiene el permiso VIEW ANY DATABASE de forma predeterminada, lo que permite a todos los inicios de sesión ver información de la base de datos. Para impedir que un inicio de sesión tenga capacidad para detectar una base de datos, revoque el permiso VIEW ANY DATABASE del rol público o deniegue el permiso VIEW ANY DATABASE a inicios de sesión individuales.  
+>  El rol público tiene el permiso `VIEW ANY DATABASE` de forma predeterminada, lo que permite a todos los inicios de sesión ver información de la base de datos. Para evitar que un inicio de sesión detecte una base de datos, use `REVOKE` para revocar el permiso `VIEW ANY DATABASE` del público, o bien use `DENY` para denegar el permiso `VIEW ANY DATABASE` para inicios de sesión individuales.  
   
 ## <a name="examples"></a>Ejemplos  
   
 ### <a name="a-returning-the-database-id-of-the-current-database"></a>A. Devolver el Id. de base de datos de la base de datos actual  
-El siguiente ejemplo devuelve el Id. de base de datos de la base de datos actual.
+En este ejemplo se devuelve el identificador de base de datos de la base de datos actual.
   
 ```sql
 SELECT DB_ID() AS [Database ID];  
@@ -71,7 +72,7 @@ GO
 ```  
   
 ### <a name="b-returning-the-database-id-of-a-specified-database"></a>B. Devolver el Id. de base de datos de una base de datos específica  
-En el siguiente ejemplo se devuelve el identificador de base de datos de la base de datos [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)].
+En este ejemplo se devuelve el identificador de base de datos de la base de datos [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)].
   
 ```sql
 SELECT DB_ID(N'AdventureWorks2008R2') AS [Database ID];  
@@ -79,7 +80,7 @@ GO
 ```  
   
 ### <a name="c-using-dbid-to-specify-the-value-of-a-system-function-parameter"></a>C. Usar DB_ID para especificar el valor de un parámetro de una función del sistema  
-En el siguiente ejemplo se usa `DB_ID` para devolver el identificador de base de datos de la base de datos [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] en la función del sistema `sys.dm_db_index_operational_stats`. La función toma un Id. de base de datos como primer parámetro.
+En este ejemplo se usa `DB_ID` para devolver el identificador de base de datos de la base de datos [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] en la función del sistema `sys.dm_db_index_operational_stats`. La función toma un Id. de base de datos como primer parámetro.
   
 ```sql
 DECLARE @db_id int;  
@@ -104,14 +105,14 @@ GO
 ## <a name="examples-includesssdwfullincludessssdwfull-mdmd-and-includesspdwincludessspdw-mdmd"></a>Ejemplos: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] y [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
   
 ### <a name="d-return-the-id-of-the-current-database"></a>D. Devolver el identificador de la base de datos actual  
-El siguiente ejemplo devuelve el Id. de base de datos de la base de datos actual.
+En este ejemplo se devuelve el identificador de base de datos de la base de datos actual.
   
 ```sql
 SELECT DB_ID();  
 ```  
   
 ### <a name="e-return-the-id-of-a-named-database"></a>E. Devolver el identificador de la base de datos con nombre  
-En el siguiente ejemplo se devuelve el identificador de base de datos de la base de datos AdventureWorksDW2012.
+En este ejemplo se devuelve el identificador de base de datos de la base de datos AdventureWorksDW2012.
   
 ```sql
 SELECT DB_ID('AdventureWorksPDW2012');  

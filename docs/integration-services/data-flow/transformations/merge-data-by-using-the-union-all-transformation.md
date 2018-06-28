@@ -4,11 +4,9 @@ ms.custom: ''
 ms.date: 03/01/2017
 ms.prod: sql
 ms.prod_service: integration-services
-ms.component: data-flow
 ms.reviewer: ''
 ms.suite: sql
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
@@ -22,11 +20,12 @@ caps.latest.revision: 22
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 1ad0be65f44395673110aacb4b6ba36f95ca9ba8
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 3e043a3cd606d1a218760f7f6dd971a0de7c96d5
+ms.sourcegitcommit: cc46afa12e890edbc1733febeec87438d6051bf9
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/12/2018
+ms.locfileid: "35407777"
 ---
 # <a name="merge-data-by-using-the-union-all-transformation"></a>Combinar datos mediante la transformación Unión de todo
   Para agregar y configurar una transformación Unión de todo, el paquete ya debe incluir al menos una tarea Flujo de datos y dos orígenes de datos.  
@@ -57,7 +56,7 @@ ms.lasthandoff: 05/03/2018
   
 8.  Haga clic en **Aceptar**.  
   
-9. Para guardar el paquete actualizado, haga clic en **Guardar los elementos seleccionados** , en el menú **Archivo** .  
+9. Para guardar el paquete actualizado, haga clic en **Guardar los elementos seleccionados**, en el menú **Archivo**.  
   
 ## <a name="see-also"></a>Ver también  
  [Union All Transformation](../../../integration-services/data-flow/transformations/union-all-transformation.md)   

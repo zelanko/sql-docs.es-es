@@ -4,11 +4,9 @@ ms.custom: ''
 ms.date: 03/04/2017
 ms.prod: sql
 ms.prod_service: integration-services
-ms.component: system-stored-procedures
 ms.reviewer: ''
 ms.suite: sql
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.tgt_pltfrm: ''
 ms.topic: language-reference
 ms.assetid: 5b1aeaf7-c938-4aef-bafc-e4d7a82eb578
@@ -16,11 +14,12 @@ caps.latest.revision: 13
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 44dce43cf4a73f77dcf0d5a4184f9db06d3885c9
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 7ea0a911e5c583580cbc41fc2cc1f51071f6d57b
+ms.sourcegitcommit: cc46afa12e890edbc1733febeec87438d6051bf9
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/12/2018
+ms.locfileid: "35406327"
 ---
 # <a name="cataloggetparametervalues-ssisdb-database"></a>catalog.get_parameter_values (base de datos de SSISDB)
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
@@ -56,7 +55,7 @@ catalog.get_parameter_values [ @folder_name = ] folder_name
 ## <a name="result-sets"></a>Conjuntos de resultados  
  Devuelve una tabla que tiene el siguiente formato:  
   
-|Nombre de columna|Tipo de datos|Description|  
+|Nombre de columna|Tipo de datos|Descripción|  
 |-----------------|---------------|-----------------|  
 |object_type|**smallint**|Tipo de parámetro. El valor es `20` para un parámetro de proyecto y `30` para un parámetro de paquete.|  
 |parameter_data_type|**nvarchar(128)**|El tipo de datos del parámetro.|  

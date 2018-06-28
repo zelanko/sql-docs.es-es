@@ -4,11 +4,9 @@ ms.custom: ''
 ms.date: 03/16/2017
 ms.prod: sql
 ms.prod_service: integration-services
-ms.component: data-flow
 ms.reviewer: ''
 ms.suite: sql
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
@@ -24,11 +22,12 @@ caps.latest.revision: 98
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: fce885002fc8dd2870480327ed575b77332ed0d3
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: abf3340badf3e1914bce13951625308ac10a3c65
+ms.sourcegitcommit: cc46afa12e890edbc1733febeec87438d6051bf9
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/12/2018
+ms.locfileid: "35407737"
 ---
 # <a name="integration-services-data-types"></a>Tipos de datos de Integration Services
   Cuando los datos entran en un flujo de datos en un paquete, el origen que extrae los datos convierte los datos en un tipo de datos de [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] . A los datos numéricos se les asigna un tipo de dato numérico, a los datos de cadena se les asigna un tipo de datos de caracteres y se asignan fechas a un tipo de datos de fecha. A otros datos, tales como GUID y bloques de objetos binarios grandes (BLOB), también se les asignan los tipos de datos de [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] correspondientes. Si los datos son de un tipo que no se puede convertir en un tipo de datos de [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] se produce un error.  
@@ -37,7 +36,7 @@ ms.lasthandoff: 05/03/2018
   
  La siguiente tabla enumera los tipos de datos de [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] . Algunos de los tipos de datos de la tabla tienen la información de precisión y escala que les corresponde. Para obtener más información sobre la precisión y la escala, consulte [Precisión, escala y longitud &#40;Transact-SQL&#41;](../../t-sql/data-types/precision-scale-and-length-transact-sql.md).  
   
-|Tipo de datos|Description|  
+|Tipo de datos|Descripción|  
 |---------------|-----------------|  
 |DT_BOOL|Valor booleano.|  
 |DT_BYTES|Valor de datos binarios. La longitud es variable y la longitud máxima es de 8000 bytes.|  

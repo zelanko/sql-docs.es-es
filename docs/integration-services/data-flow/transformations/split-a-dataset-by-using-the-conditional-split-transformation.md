@@ -4,11 +4,9 @@ ms.custom: ''
 ms.date: 03/01/2017
 ms.prod: sql
 ms.prod_service: integration-services
-ms.component: data-flow
 ms.reviewer: ''
 ms.suite: sql
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
@@ -20,11 +18,12 @@ caps.latest.revision: 40
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 098b88a0953799454063e09b0983811936864716
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 3ccc00c5c0565584557b167cc38622e802005a98
+ms.sourcegitcommit: cc46afa12e890edbc1733febeec87438d6051bf9
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/12/2018
+ms.locfileid: "35407327"
 ---
 # <a name="split-a-dataset-by-using-the-conditional-split-transformation"></a>Dividir un conjunto de datos usando la transformación División condicional
   Para agregar y configurar una transformación División condicional, el paquete ya debe incluir por lo menos una tarea Flujo de datos y un origen.  
@@ -62,7 +61,7 @@ ms.lasthandoff: 05/03/2018
   
 11. Haga clic en **Aceptar**.  
   
-12. Para guardar el paquete actualizado, haga clic en **Guardar los elementos seleccionados** , en el menú **Archivo** .  
+12. Para guardar el paquete actualizado, haga clic en **Guardar los elementos seleccionados**, en el menú **Archivo**.  
   
 ## <a name="see-also"></a>Ver también  
  [Conditional Split Transformation](../../../integration-services/data-flow/transformations/conditional-split-transformation.md)   

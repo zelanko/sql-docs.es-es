@@ -34,11 +34,12 @@ caps.latest.revision: 43
 author: edmacauley
 ms.author: edmaca
 manager: craigg
-ms.openlocfilehash: c495cabda9c94fb5b0e32b7df0474501d2307353
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: e22d324c4b5bc0c0f315ccf553e0b4bcd2991eea
+ms.sourcegitcommit: fd9c33b93c886dcb00a48967b6c245631fd559bf
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/14/2018
+ms.locfileid: "35619492"
 ---
 # <a name="create-rule-transact-sql"></a>CREATE RULE (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -79,7 +80,7 @@ AS condition_expression
 ## <a name="remarks"></a>Notas  
  CREATE RULE no se puede combinar con otras instrucciones [!INCLUDE[tsql](../../includes/tsql-md.md)] en un único lote. Las reglas no se aplican a los datos ya existentes en la base de datos en el momento en que se crean las reglas y no se pueden enlazar a los tipos de datos del sistema.  
   
- Una regla solo se puede crear en la base de datos actual. Una vez creada la regla, ejecute **sp_bindrule** para enlazarla a una columna o a un tipo de datos de alias. Una regla debe ser compatible con el tipo de datos de la columna. Por ejemplo, "@value LIKE A%" no se puede usar como regla para una columna numérica. Una regla no se puede enlazar a una columna **text**, **ntext**, **image**, **varchar(max)**, **nvarchar(max)**, **varbinary(max)**, **xml**, de tipo definido por el usuario CLR o **timestamp**. Una regla no se puede enlazar a una columna calculada.  
+ Una regla solo se puede crear en la base de datos actual. Una vez creada la regla, ejecute **sp_bindrule** para enlazarla a una columna o a un tipo de datos de alias. Una regla debe ser compatible con el tipo de datos de la columna. Por ejemplo, no se puede usar "\@value LIKE A%" como regla para una columna numérica. Una regla no se puede enlazar a una columna **text**, **ntext**, **image**, **varchar(max)**, **nvarchar(max)**, **varbinary(max)**, **xml**, de tipo definido por el usuario CLR o **timestamp**. Una regla no se puede enlazar a una columna calculada.  
   
  Incluya las constantes de fecha y de caracteres entre comillas simples (') y preceda las constantes binarias de 0x. Si la regla no es compatible con la columna a la que se ha enlazado, el [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] devuelve un mensaje de error cuando se inserta un valor, pero no cuando se enlaza la regla.  
   

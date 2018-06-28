@@ -4,11 +4,9 @@ ms.custom: ''
 ms.date: 03/01/2017
 ms.prod: sql
 ms.prod_service: integration-services
-ms.component: packages
 ms.reviewer: ''
 ms.suite: sql
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
@@ -20,11 +18,12 @@ caps.latest.revision: 54
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: daae51399d0366cf11f751c7abc17601c8d5e2c3
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: d2694e985acff1f3d520647f1db171c3b61471b2
+ms.sourcegitcommit: cc46afa12e890edbc1733febeec87438d6051bf9
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/12/2018
+ms.locfileid: "35409297"
 ---
 # <a name="restart-packages-by-using-checkpoints"></a>Reiniciar paquetes de usando puntos de comprobación
   [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] puede reiniciar los paquetes con errores desde el punto del error, en lugar de volver a ejecutar todo el paquete. Si se configura un paquete para que utilice puntos de comprobación, la información relacionada con la ejecución del paquete se escribirá en un archivo de punto de comprobación. Cuando se vuelve a ejecutar el paquete con error, se utiliza el archivo de punto de comprobación para reiniciar el paquete desde el punto del error. Si el paquete se ejecuta correctamente, el archivo de punto de comprobación se elimina y se vuelve a crear la siguiente vez que se ejecuta el paquete.  
@@ -58,7 +57,7 @@ ms.lasthandoff: 05/03/2018
   
  En la tabla siguiente se muestran las propiedades del paquete establecidas para implementar puntos de comprobación.  
   
-|Propiedad|Description|  
+|Propiedad|Descripción|  
 |--------------|-----------------|  
 |CheckpointFileName|Especifica el nombre del archivo de punto de comprobación.|  
 |CheckpointUsage|Especifica si se utilizarán puntos de comprobación.|  
@@ -71,7 +70,7 @@ ms.lasthandoff: 05/03/2018
 ### <a name="checkpoint-usage"></a>Usar puntos de comprobación  
  La propiedad CheckpointUsage se puede establecer en los siguientes valores:  
   
-|Valor|Description|  
+|Valor|Descripción|  
 |-----------|-----------------|  
 |**Never**|Especifica que no se utilizará el archivo de punto de comprobación y que el paquete se ejecutará desde el inicio del flujo de trabajo del paquete.|  
 |**Always**|Especifica que el archivo de punto de comprobación se utilizará siempre y que el paquete se reinicia desde el punto del error de ejecución anterior. Si no se encuentra el archivo de punto de comprobación, el paquete generará un error.|  

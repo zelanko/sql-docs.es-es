@@ -4,11 +4,9 @@ ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: integration-services
-ms.component: control-flow
 ms.reviewer: ''
 ms.suite: sql
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.tgt_pltfrm: ''
 ms.topic: conceptual
 f1_keywords:
@@ -24,11 +22,12 @@ caps.latest.revision: 61
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 4f98d9b778c31a409a103cb13fccdefe1372b2d1
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: c96d6c75ebf58b0e51e7a83402c99b37c8210d2e
+ms.sourcegitcommit: cc46afa12e890edbc1733febeec87438d6051bf9
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/12/2018
+ms.locfileid: "35402717"
 ---
 # <a name="bulk-insert-task"></a>Inserción masiva, tarea
   La tarea Inserción masiva proporciona una forma muy eficaz de copiar grandes cantidades de datos a una tabla o vista de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Por ejemplo, suponga que su empresa almacena una lista de productos de un millón de filas en un sistema central, pero el sistema de comercio electrónico de la empresa usa [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] para rellenar páginas web. Debe actualizar la tabla de productos de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] todas las noches con la lista maestra de productos del gran sistema. Para ello, debe guardar la lista de productos con un formato delimitado por tabuladores y utilizar la tarea Inserción masiva para copiar los datos directamente a la tabla de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
@@ -72,7 +71,7 @@ ms.lasthandoff: 05/03/2018
 ## <a name="custom-log-entries-available-on-the-bulk-insert-task"></a>Entradas del registro personalizadas disponibles en la tarea Inserción masiva  
  La siguiente tabla contiene las entradas del registro personalizadas para la tarea Inserción masiva. Para obtener más información, vea [Registro de Integration Services &#40;SSIS&#41;](../../integration-services/performance/integration-services-ssis-logging.md).  
   
-|Entrada del registro|Description|  
+|Entrada del registro|Descripción|  
 |---------------|-----------------|  
 |**BulkInsertTaskBegin**|Indica que se inició la inserción masiva.|  
 |**BulkInsertTaskEnd**|Indica que finalizó la inserción masiva.|  
@@ -136,7 +135,7 @@ ms.lasthandoff: 05/03/2018
  **Formato**  
  Seleccione el origen del formato de la inserción masiva. Esta propiedad presenta las opciones indicadas en la siguiente tabla.  
   
-|Valor|Description|  
+|Valor|Descripción|  
 |-----------|-----------------|  
 |**Utilizar archivo**|Seleccione un archivo que contenga la especificación de formato. Si se selecciona esta opción, se muestra la opción dinámica **FormatFile**.|  
 |**Especificar**|Especifique el formato. Si se selecciona esta opción, se muestran las opciones dinámicas **RowDelimiter** y **ColumnDelimiter**.|  

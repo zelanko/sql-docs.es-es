@@ -25,16 +25,17 @@ author: edmacauley
 ms.author: edmaca
 manager: craigg
 monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
-ms.openlocfilehash: e4a96e71ae1222951914743ad88d229d5a1ee9b8
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 9c3504238274c2aac2e9fd043068b822150f91ca
+ms.sourcegitcommit: 6e55a0a7b7eb6d455006916bc63f93ed2218eae1
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/08/2018
+ms.locfileid: "35239325"
 ---
 # <a name="collation-functions---tertiaryweights-transact-sql"></a>Funciones de intercalación: TERTIARY_WEIGHTS (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
 
-Devuelve una cadena binaria de pesos para cada carácter en una expresión de cadena no Unicode definida con una intercalación terciaria de SQL.
+Para cada carácter en una expresión de cadena no Unicode definida con una intercalación terciaria de SQL, esta función devuelve una cadena binaria de pesos.
   
 ![Icono de vínculo de tema](../../database-engine/configure-windows/media/topic-link.gif "Icono de vínculo de tema") [Convenciones de sintaxis de Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)
   
@@ -46,13 +47,13 @@ TERTIARY_WEIGHTS( non_Unicode_character_string_expression )
   
 ## <a name="arguments"></a>Argumentos  
 *non_Unicode_character_string_expression*  
-Es una [expresión](../../t-sql/language-elements/expressions-transact-sql.md) de cadena de tipo **char**, **varchar** o **varchar(max)** definida en una intercalación SQL terciaria. Para obtener una lista de estas intercalaciones, vea la sección Notas.
+Una [expresión](../../t-sql/language-elements/expressions-transact-sql.md) de cadena de tipo **char**, **varchar** o **varchar(max)** definida en una intercalación SQL terciaria. Para obtener una lista de estas intercalaciones, vea la sección Notas.
   
 ## <a name="return-types"></a>Tipos de valores devueltos
-TERTIARY_WEIGHTS devuelve **varbinary** cuando *non_Unicode_character_string_expression* es **char** o **varchar**, y devuelve **varbinary(max)** cuando *non_Unicode_character_string_expression* es **varchar(max)**.
+`TERTIARY_WEIGHTS` devuelve **varbinary** cuando *non_Unicode_character_string_expression* es **char** o **varchar**, y devuelve **varbinary(max)** cuando *non_Unicode_character_string_expression* tiene un tipo de datos **varchar(max)**.
   
 ## <a name="remarks"></a>Notas  
-TERTIARY_WEIGHTS devuelve NULL cuando el parámetro *non_Unicode_character_string_expression* no está definido con una intercalación terciaria de SQL. En la tabla siguiente se muestran las intercalaciones terciarias de SQL.
+`TERTIARY_WEIGHTS` devuelve NULL cuando una colección terciaria de SQL no define *non_Unicode_character_string_expression*. En esta tabla se muestran las intercalaciones terciarias de SQL:
   
 |Id. de orden|Intercalación de SQL|  
 |---|---|
@@ -89,10 +90,10 @@ TERTIARY_WEIGHTS devuelve NULL cuando el parámetro *non_Unicode_character_strin
 |185|SQL_SwedishStd_Pref_CP1_CI_AS|  
 |186|SQL_Icelandic_Pref_CP1_CI_AS|  
   
-La función TERTIARY_WEIGHTS está pensada para su uso en la definición de una columna calculada que se define en los valores de una columna **char**, **varchar** o **varchar(max)**. Definir un índice tanto en la columna calculada como en la columna **char**, **varchar** o **varchar(max)** puede mejorar el rendimiento cuando se especifica la columna **char**, **varchar** o **varchar(max)** en la cláusula ORDER BY de una consulta.
+Use `TERTIARY_WEIGHTS` para la definición de una columna calculada que se define en los valores de una columna **char**, **varchar** o **varchar(max)**. Definir un índice tanto en la columna calculada como en la columna **char**, **varchar** o **varchar(max)** puede mejorar el rendimiento cuando se especifica esa columna **char**, **varchar** o **varchar(max)** en la cláusula ORDER BY de una consulta.
   
 ## <a name="examples"></a>Ejemplos  
-El siguiente ejemplo crea una columna calculada en una tabla que aplica la función `TERTIARY_WEIGHTS` a los valores de una columna `char`.
+En este ejemplo se crea una columna calculada en una tabla que aplica la función `TERTIARY_WEIGHTS` a los valores de una columna `char`:
   
 ```sql
 CREATE TABLE TertColTable  

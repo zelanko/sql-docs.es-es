@@ -4,7 +4,6 @@ ms.custom: ''
 ms.date: 03/20/2017
 ms.prod: sql
 ms.prod_service: mds
-ms.component: non-specific
 ms.reviewer: ''
 ms.suite: sql
 ms.technology:
@@ -18,11 +17,12 @@ caps.latest.revision: 10
 author: leolimsft
 ms.author: lle
 manager: craigg
-ms.openlocfilehash: 940d6c966eb92ab9070f654298e7471fad2af791
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 6a18d54250582490506bfe5222f8b4fab17563c5
+ms.sourcegitcommit: cc46afa12e890edbc1733febeec87438d6051bf9
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/12/2018
+ms.locfileid: "35410037"
 ---
 # <a name="create-website-dialog-box-master-data-services-configuration-manager"></a>Cuadro de diálogo Crear sitio web (Administrador de configuración de Master Data Services)
 
@@ -32,7 +32,7 @@ ms.lasthandoff: 05/03/2018
   
 ## <a name="web-site"></a>Sitio web  
   
-|Nombre del control|Description|  
+|Nombre del control|Descripción|  
 |------------------|-----------------|  
 |**Nombre del sitio Web**|Especifique un nombre para el sitio web o utilice el nombre predeterminado. Este nombre es descriptivo y se utiliza solamente para identificar al sitio en IIS. No se utiliza para tener acceso al sitio desde un explorador web.<br /><br /> El nombre debe ser único con respecto a todos los sitios en IIS del equipo local.|  
 |**Protocolo**|Muestra **http**. Seleccione el protocolo de transferencia de hipertexto (HTTP) cuando no sea precisa la comunicación a través de un canal cifrado entre cliente y servidor.<br /><br /> **Nota**: No puede crear un sitio HTTPS en [!INCLUDE[ssMDScfgmgr](../includes/ssmdscfgmgr-md.md)]. HTTPS es el protocolo HTTP mediante capa de sockets seguros (SSL), el cual resulta útil cuando se intercambia información confidencial o personal o cuando quiera que los usuarios confirmen la identidad del servidor antes de transmitir datos personales. Si necesita transferir información entre el servidor y un cliente a través de un canal cifrado, debe utilizar una herramienta de IIS, como Administrador de IIS, para configurar el sitio con un enlace HTTPS y asociar el enlace de sitio web a un certificado de servidor. Debe hacerlo para poder abrir correctamente el sitio web en un explorador web. Para obtener más información sobre los certificados de servidor, vea [Configurar certificados de servidor en IIS 7](http://go.microsoft.com/fwlink/?LinkId=163220) en [!INCLUDE[msCoName](../includes/msconame-md.md)] TechNet.|  
@@ -42,7 +42,7 @@ ms.lasthandoff: 05/03/2018
   
 ## <a name="application-pool"></a>Grupo de aplicaciones  
   
-|Nombre del control|Description|  
+|Nombre del control|Descripción|  
 |------------------|-----------------|  
 |**Nombre**|Especifique un único nombre descriptivo para el nuevo grupo de aplicaciones o utilice el nombre predeterminado que se proporciona. La aplicación web raíz para este sitio web se ejecuta en este grupo de aplicaciones.<br /><br /> Los grupos de aplicaciones proporcionan límites que evitan que las aplicaciones en un grupo de aplicaciones afecten a las aplicaciones en otro grupo de aplicaciones.|  
 |**User name**|Especifique un dominio y nombre de usuario en Active Directory. Esta cuenta es la identidad del grupo de aplicaciones donde se ejecuta la aplicación web.<br /><br /> Esta cuenta se agrega al rol de base de datos mds_exec de la base de datos de [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] para el acceso a la base de datos. Para obtener más información, vea [Inicios de sesión, usuarios y roles en bases de datos &#40;Master Data Services&#41;](../master-data-services/database-logins-users-and-roles-master-data-services.md). También se agrega a un grupo de Windows de [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)], **MDS_ServiceAccounts**, al que se le concede permiso al directorio de compilación temporal, **MDSTempDir**, en el sistema de archivos. Para obtener más información, vea [Permisos de carpetas y archivos&#40;Master Data Services&#41;](../master-data-services/folder-and-file-permissions-master-data-services.md).|  

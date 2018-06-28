@@ -4,10 +4,9 @@ ms.custom: ''
 ms.date: 03/17/2017
 ms.prod: sql
 ms.prod_service: integration-services
-ms.component: extending-packages-scripting
 ms.reviewer: ''
 ms.suite: sql
-ms.technology: xml
+ms.technology: integration-services
 ms.tgt_pltfrm: ''
 ms.topic: reference
 applies_to:
@@ -22,11 +21,12 @@ caps.latest.revision: 39
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 194f4ded206617e7cb97e3cffb85f02019b5bb3d
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: f88d4e3527330c57b3053a80b4885bbd919a6905
+ms.sourcegitcommit: cc46afa12e890edbc1733febeec87438d6051bf9
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/12/2018
+ms.locfileid: "35407207"
 ---
 # <a name="comparing-the-script-task-and-the-script-component"></a>Comparar la tarea Script y el componente de script
   La tarea Script, que está disponible en la ventana Flujo de control del diseñador de [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)], y el componente de script, que está disponible en la ventana Flujo de datos, tienen fines muy diferentes en un paquete de [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]. La tarea es una herramienta de flujo de control de uso general, en tanto que el componente actúa como un origen, transformación o destino en el flujo de datos. A pesar de sus fines diferentes, sin embargo, la tarea Script y el componente de script tienen algunas similitudes en las herramientas de codificación que utilizan y los objetos del paquete que ponen a disposición del desarrollador de software. Comprender sus similitudes y diferencias puede ayudarle a utilizar la tarea y el componente de manera más eficaz.  
@@ -34,7 +34,7 @@ ms.lasthandoff: 05/03/2018
 ## <a name="similarities-between-the-script-task-and-the-script-component"></a>Similitudes entre la tarea Script y el componente de script  
  La tarea Script y el componente de script comparten las siguientes características comunes.  
   
-|Característica|Description|  
+|Característica|Descripción|  
 |-------------|-----------------|  
 |Dos modos en tiempo de diseño|Tanto en la tarea como en el componente, se comienza especificando las propiedades en el editor y, a continuación, se cambia al entorno de desarrollo para escribir código.|  
 |[!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)] Tools for Applications (VSTA)|Tanto la tarea como el componente usan el mismo IDE de VSTA y admiten código escrito en [!INCLUDE[msCoName](../../includes/msconame-md.md)] Visual Basic o [!INCLUDE[msCoName](../../includes/msconame-md.md)] Visual C#.|  

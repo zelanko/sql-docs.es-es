@@ -4,25 +4,23 @@ ms.custom: ''
 ms.date: 03/01/2017
 ms.prod: sql
 ms.prod_service: integration-services
-ms.component: tutorial
 ms.reviewer: ''
 ms.suite: sql
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.tgt_pltfrm: ''
-ms.topic: get-started-article
+ms.topic: tutorial
 applies_to:
 - SQL Server 2016
 ms.assetid: 9216f18c-1762-4f2d-8c22-bd0ab7107555
-caps.latest.revision: 5
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 84c96d55cc2aead955b637f5246ead7bff610c97
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 3f2e40970de7923b9dd5565fb26d07610a9e5222
+ms.sourcegitcommit: cc46afa12e890edbc1733febeec87438d6051bf9
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/12/2018
+ms.locfileid: "35405047"
 ---
 # <a name="lesson-6-using-parameters-with-the-project-deployment-model-in-ssis"></a>Lección 6: Uso de parámetros con el modelo de implementación de proyectos en SSIS
 SQL Server 2012 presenta un nuevo modelo de implementación en el que puede implementar sus proyectos en el servidor de Integration Services. El servidor de Integration Services permite administrar y ejecutar paquetes, así como configurar valores en tiempo de ejecución para los paquetes.  

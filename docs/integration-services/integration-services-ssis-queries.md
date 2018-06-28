@@ -4,11 +4,9 @@ ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: integration-services
-ms.component: non-specific
 ms.reviewer: ''
 ms.suite: sql
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.tgt_pltfrm: ''
 ms.topic: conceptual
 f1_keywords:
@@ -23,11 +21,12 @@ caps.latest.revision: 58
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 4e38b45781566ac04acdfb7584f8f10ed249d44c
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 7e3603e4eb3f446518562eec82cf33d02d0ff1fa
+ms.sourcegitcommit: cc46afa12e890edbc1733febeec87438d6051bf9
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/12/2018
+ms.locfileid: "35411667"
 ---
 # <a name="integration-services-ssis-queries"></a>Consultas de Integration Services (SSIS)
   La tarea Ejecutar SQL, el origen de OLE DB, el destino de OLE DB y la transformación Búsqueda pueden utilizar consultas de SQL. En la tarea Ejecutar SQL, las instrucciones SQL pueden crear, actualizar y eliminar datos y objetos de bases de datos, ejecutar procedimientos almacenados y ejecutar instrucciones SELECT. En el origen de OLE DB y la transformación Búsqueda, las instrucciones SQL son normalmente instrucciones SELECT o EXEC. Normalmente, éstas últimas ejecutan procedimientos almacenados que devuelven conjuntos de resultados.  
@@ -95,7 +94,7 @@ Utilice el cuadro de diálogo **Generador de consultas** para crear una consulta
  **Barra de herramientas**  
  Use la barra de herramientas para administrar conjuntos de datos, seleccionar los paneles que desea mostrar y controlar funciones de consulta.  
   
-|Valor|Description|  
+|Valor|Descripción|  
 |-----------|-----------------|  
 |**Mostrar u ocultar panel de diagrama**|Muestra u oculta el panel **Diagrama** .|  
 |**Mostrar u ocultar panel de cuadrícula**|Muestra u oculta el panel **Cuadrícula** .|  
@@ -112,7 +111,7 @@ Utilice el cuadro de diálogo **Generador de consultas** para crear una consulta
  **Definición de la consulta**  
  La definición de la consulta proporciona una barra de herramientas y paneles en los que se define y prueba la consulta.  
   
-|Panel|Description|  
+|Panel|Descripción|  
 |----------|-----------------|  
 |Panel**Diagrama** |Muestra la consulta en un diagrama. El diagrama muestra las tablas incluidas en la consulta y cómo se combinan. Active o desactive la casilla situada junto a una columna de la tabla para agregarla a (o quitarla de) la salida de la consulta.<br /><br /> Cuando agrega tablas a la consulta, el Generador de consultas crea combinaciones entre las tablas basadas en tablas, según las claves de la tabla. Para agregar una combinación, arrastre un campo de una de las tablas a un campo de otra tabla. Para administrar una combinación, haga clic con el botón secundario en la combinación y, a continuación, seleccione una opción de menú.<br /><br /> Haga clic con el botón derecho en el panel **Diagrama** para agregar o quitar tablas, seleccionar todas las tablas y mostrar u ocultar paneles.|  
 |Panel**Cuadrícula** |Muestra la consulta en una cuadrícula. Puede utilizar este panel para agregar y quitar columnas de una consulta y cambiar la configuración de cada columna.|  

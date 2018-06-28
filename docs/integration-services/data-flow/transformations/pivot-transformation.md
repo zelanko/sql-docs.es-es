@@ -4,11 +4,9 @@ ms.custom: ''
 ms.date: 03/01/2017
 ms.prod: sql
 ms.prod_service: integration-services
-ms.component: data-flow
 ms.reviewer: ''
 ms.suite: sql
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.tgt_pltfrm: ''
 ms.topic: conceptual
 f1_keywords:
@@ -24,11 +22,12 @@ caps.latest.revision: 55
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: f67b7eca9e4d3c5adbe20021784dfb82a6b96e69
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 7ab9786458e0f3f4c3ca1cac3b5263acc417a2ae
+ms.sourcegitcommit: cc46afa12e890edbc1733febeec87438d6051bf9
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/12/2018
+ms.locfileid: "35410167"
 ---
 # <a name="pivot-transformation"></a>Dinámica, transformación
   La transformación dinámica transforma un conjunto de datos normalizado en una versión menos normalizada pero más compacta dinamizando los datos de entrada en un valor de columna. Por ejemplo, un conjunto de datos **Orders** normalizado que enumera el nombre del cliente, el producto y la cantidad comprada normalmente tiene varias filas para cualquier cliente que compró varios productos, donde cada fila para ese cliente muestra los detalles de pedido de un producto diferente. Al dinamizar el conjunto de datos en la columna de producto, la transformación dinámica puede obtener un conjunto de datos con una sola fila por cliente. Esa única fila enumera todas las compras realizadas por el cliente, con los nombres de los productos representados como nombres de columnas, y la cantidad indicada como un valor en la columna de producto. Dado que no todos los clientes compran todos los productos, muchas columnas pueden contener valores NULL.  

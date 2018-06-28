@@ -28,18 +28,19 @@ author: edmacauley
 ms.author: edmaca
 manager: craigg
 monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
-ms.openlocfilehash: 8c248e735b25dbdbc2f7bd263698007acfc8600e
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 50e6d900b90d777514859601c4b211e4e0e3b5d0
+ms.sourcegitcommit: 6e55a0a7b7eb6d455006916bc63f93ed2218eae1
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/08/2018
+ms.locfileid: "35238985"
 ---
 # <a name="day-transact-sql"></a>DAY (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
 
-Devuelve un entero que representa el día (día del mes) de la *date* especificada.
+Esta función devuelve un entero que representa el día (del mes) del argumento *date* especificado.
   
-Para ver información general sobre todos los tipos de datos y funciones de fecha y hora de [!INCLUDE[tsql](../../includes/tsql-md.md)], vea [Tipos de datos y funciones de fecha y hora &#40;Transact-SQL&#41;](../../t-sql/functions/date-and-time-data-types-and-functions-transact-sql.md).
+Vea [Tipos de datos y funciones de fecha y hora &#40;Transact-SQL&#41;](../../t-sql/functions/date-and-time-data-types-and-functions-transact-sql.md) para obtener información general sobre todos los tipos de datos y las funciones de fecha y hora de [!INCLUDE[tsql](../../includes/tsql-md.md)].
   
 ![Icono de vínculo de tema](../../database-engine/configure-windows/media/topic-link.gif "Icono de vínculo de tema") [Convenciones de sintaxis de Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)
   
@@ -51,7 +52,16 @@ DAY ( date )
   
 ## <a name="arguments"></a>Argumentos  
 *date*  
-Es una expresión que se puede resolver en un valor **time**, **date**, **smalldatetime**, **datetime**, **datetime2** o **datetimeoffset**. El argumento *date* puede ser una expresión, expresión de columna, variable definida por el usuario o literal de cadena.
+Una expresión que se resuelve en uno de los tipos de datos siguientes:
+
++ **date**
++ **datetime**
++ **datetimeoffset**
++ **datetime2** 
++ **smalldatetime**
++ **time**
+
+Para *date*, `DAY` aceptará una expresión de columna, una expresión, un literal de cadena o una variable definida por el usuario.
   
 ## <a name="return-type"></a>Tipo devuelto  
 **int**
@@ -59,16 +69,16 @@ Es una expresión que se puede resolver en un valor **time**, **date**, **smalld
 ## <a name="return-value"></a>Valor devuelto  
 DAY devuelve el mismo valor que [DATEPART](../../t-sql/functions/datepart-transact-sql.md) (**day**, *date*).
   
-Si *date* contiene solo una parte horaria, el valor devuelto es 1, el día base.
+Si *date* contiene solo una parte horaria, `DAY` devolverá 1, el día base.
   
 ## <a name="examples"></a>Ejemplos  
-La siguiente instrucción devuelve `30`. Este número corresponde al día.
+Esta instrucción devuelve `30`, el número del propio día.
   
 ```sql
 SELECT DAY('2015-04-30 01:01:01.1234567');  
 ```  
   
-La siguiente instrucción devuelve `1900, 1, 1`. El argumento para *date* es el número `0`. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] interpreta `0` como 1 de enero de 1900.
+Esta instrucción devuelve `1900, 1, 1`. El argumento *date* tiene un valor numérico de `0`. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] interpreta `0` como 1 de enero de 1900.
   
 ```sql
 SELECT YEAR(0), MONTH(0), DAY(0);  

@@ -4,11 +4,9 @@ ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: integration-services
-ms.component: data-flow
 ms.reviewer: ''
 ms.suite: sql
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
@@ -27,11 +25,12 @@ caps.latest.revision: 56
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 10f340ee0cc9d8184c612e80de7b872356b0e962
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 2b5c14308dfe28c103e60d136a1aa7c137bf73cd
+ms.sourcegitcommit: cc46afa12e890edbc1733febeec87438d6051bf9
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/12/2018
+ms.locfileid: "35404277"
 ---
 # <a name="integration-services-transformations"></a>Transformaciones de Integration Services
   [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] son los componentes en el flujo de datos de un paquete que agregan, combinan, distribuyen y modifican datos. Las transformaciones también pueden realizar operaciones de búsqueda y generar conjuntos de datos de ejemplo. Esta sección describe las transformaciones que incluye [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] y explica cómo funcionan.  
@@ -39,7 +38,7 @@ ms.lasthandoff: 05/03/2018
 ## <a name="business-intelligence-transformations"></a>Transformaciones de inteligencia empresarial  
  Las siguientes transformaciones realizan operaciones de inteligencia empresarial tales como limpiar datos, realizar minería de texto y ejecutar consultas de predicción de minería de datos.  
   
-|Transformación|Description|  
+|Transformación|Descripción|  
 |--------------------|-----------------|  
 |[Transformación Dimensión de variación lenta](../../../integration-services/data-flow/transformations/slowly-changing-dimension-transformation.md)|Transformación que configura la actualización de una dimensión de variación lenta.|  
 |[Transformación Agrupación aproximada](../../../integration-services/data-flow/transformations/fuzzy-grouping-transformation.md)|Transformación que normaliza los valores de los datos de una columna.|  
@@ -52,7 +51,7 @@ ms.lasthandoff: 05/03/2018
 ## <a name="row-transformations"></a>Transformaciones de fila  
  Las siguientes transformaciones actualizan los valores de columna y crean columnas nuevas. La transformación se aplica a cada fila en la entrada de transformación.  
   
-|Transformación|Description|  
+|Transformación|Descripción|  
 |--------------------|-----------------|  
 |[Transformación Mapa de caracteres](../../../integration-services/data-flow/transformations/character-map-transformation.md)|Transformación que aplica funciones de cadena a caracteres.|  
 |[Transformación Copiar columna](../../../integration-services/data-flow/transformations/copy-column-transformation.md)|Transformación que agrega copias de columnas de entrada a la salida de transformación.|  
@@ -66,7 +65,7 @@ ms.lasthandoff: 05/03/2018
 ## <a name="rowset-transformations"></a>Transformaciones de conjunto de filas  
  Las siguientes transformaciones crean nuevos conjuntos de filas. El conjunto de filas puede incluir valores agregados y ordenados, conjuntos de filas de ejemplo y conjuntos de filas dinamizados y de anulación de dinamización.  
   
-|Transformación|Description|  
+|Transformación|Descripción|  
 |--------------------|-----------------|  
 |[Transformación Agregado](../../../integration-services/data-flow/transformations/aggregate-transformation.md)|Transformación que realiza agregaciones tales como AVERAGE, SUM y COUNT.|  
 |[Transformación Ordenar](../../../integration-services/data-flow/transformations/sort-transformation.md)|Transformación que ordena datos.|  
@@ -78,7 +77,7 @@ ms.lasthandoff: 05/03/2018
 ## <a name="split-and-join-transformations"></a>Transformaciones de división y combinación  
  Las siguientes transformaciones distribuyen filas a diferentes salidas, crean copias de las entradas de transformación, combinan varias entradas en una salida y realizan operaciones de búsqueda.  
   
-|Transformación|Description|  
+|Transformación|Descripción|  
 |--------------------|-----------------|  
 |[Transformación División condicional](../../../integration-services/data-flow/transformations/conditional-split-transformation.md)|Transformación que enruta las filas de datos a diferentes salidas.|  
 |[Transformación Multidifusión](../../../integration-services/data-flow/transformations/multicast-transformation.md)|Transformación que distribuye conjuntos de datos a varias salidas.|  
@@ -92,7 +91,7 @@ ms.lasthandoff: 05/03/2018
 ## <a name="auditing-transformations"></a>Auditar transformaciones  
  [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] incluye las transformaciones siguientes para agregar filas de recuento e información.  
   
-|Transformación|Description|  
+|Transformación|Descripción|  
 |--------------------|-----------------|  
 |[Transformación Auditar](../../../integration-services/data-flow/transformations/audit-transformation.md)|Transformación que hace que la información sobre el entorno esté a disposición del flujo de datos en un paquete.|  
 |[Transformación Recuento de filas](../../../integration-services/data-flow/transformations/row-count-transformation.md)|Transformación que cuenta las filas a medida que se mueven por ella y almacena el recuento final en una variable.|  

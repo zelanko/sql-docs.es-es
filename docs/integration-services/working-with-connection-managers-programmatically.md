@@ -4,10 +4,9 @@ ms.custom: ''
 ms.date: 03/03/2017
 ms.prod: sql
 ms.prod_service: integration-services
-ms.component: non-specific
 ms.reviewer: ''
 ms.suite: sql
-ms.technology: ''
+ms.technology: integration-services
 ms.tgt_pltfrm: ''
 ms.topic: reference
 applies_to:
@@ -19,11 +18,12 @@ caps.latest.revision: 15
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: ab2f56402a7b6a257a464af9093d5f2fb2c84360
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: e8fe4f943a8477da6274bb52f00372e2908985e8
+ms.sourcegitcommit: cc46afa12e890edbc1733febeec87438d6051bf9
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/12/2018
+ms.locfileid: "35408457"
 ---
 # <a name="working-with-connection-managers-programmatically"></a>Trabajar con administradores de conexiones mediante programación
   En [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)], el método AcquireConnection de la clase de administradores de conexiones asociada es el método al que se llama con mayor frecuencia cuando se está trabajando con administradores de conexiones en código administrado. Al escribir código administrado, tiene que llamar al método AcquireConnection para utilizar la funcionalidad de un administrador de conexiones. Debe llamar a este método independientemente de si escribe el código administrado en una tarea Script, un componente de script, un objeto personalizado o una aplicación personalizada.  

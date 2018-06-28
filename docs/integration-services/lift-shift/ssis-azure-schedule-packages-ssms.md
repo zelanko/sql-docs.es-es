@@ -5,25 +5,24 @@ ms.date: 05/09/2018
 ms.topic: conceptual
 ms.prod: sql
 ms.prod_service: integration-services
-ms.component: lift-shift
 ms.suite: sql
 ms.custom: ''
-ms.technology:
-- integration-services
+ms.technology: integration-services
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 72b20d4d42517555449f639cee398db4363d5735
-ms.sourcegitcommit: 0cc2cb281e467a13a76174e0d9afbdcf4ccddc29
+ms.openlocfilehash: 89874258c7c8dd12e08ea9a37c6375257ef52c61
+ms.sourcegitcommit: de5e726db2f287bb32b7910831a0c4649ccf3c4c
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/15/2018
+ms.lasthandoff: 06/12/2018
+ms.locfileid: "35335829"
 ---
-# <a name="schedule-the-execution-of-an-ssis-package-in-azure-with-sql-server-management-studio-ssms"></a>Programar la ejecución de un paquete SSIS en Azure con SQL Server Management Studio (SSMS)
+# <a name="schedule-the-execution-of-ssis-packages-deployed-in-azure-with-sql-server-management-studio-ssms"></a>Programar la ejecución de paquetes SSIS implementados en Azure con SQL Server Management Studio (SSMS)
 
-SQL Server Management Studio (SSMS) proporciona una característica de programación para los paquetes SSIS implementados en Azure SQL Database. SQL Server local e Instancia administrada de Azure SQL Database (versión preliminar) tienen el Agente SQL Server y el Agente de Instancia administrada respectivamente como programador de trabajos SSIS de primera clase. Por otro lado, SQL Database no tiene ningún programador de trabajos SSIS de primera clase integrado. La característica de SSMS descrita en este artículo proporciona una interfaz de usuario conocida que se parece al Agente SQL Server para programar paquetes implementados en SQL Database.
+Puede usar SQL Server Management Studio (SSMS) para programar paquetes SSIS implementados en Azure SQL Database. SQL Server local e Instancia administrada de Azure SQL Database (versión preliminar) tienen el Agente SQL Server y el Agente de Instancia administrada respectivamente como programador de trabajos SSIS de primera clase. Por otro lado, SQL Database no tiene ningún programador de trabajos SSIS de primera clase integrado. La característica de SSMS descrita en este artículo proporciona una interfaz de usuario conocida que se parece al Agente SQL Server para programar paquetes implementados en SQL Database.
 
-Si usa SQL Database para hospedar la base de datos del catálogo SSIS, `SSISDB`, puede usar esta característica de SSMS para generar las canalizaciones, las actividades y los desencadenadores de Data Factory necesarios para programar los paquetes SSIS. Luego puede editar y extender estos objetos en Data Factory.
+Si usa SQL Database para hospedar el catálogo de SSIS, `SSISDB`, puede usar esta característica de SSMS para generar las canalizaciones, las actividades y los desencadenadores de Data Factory necesarios para programar los paquetes SSIS. Después, tiene la opción de editar y extender estos objetos en Data Factory.
 
 Si usa SSMS para programar un paquete, SSIS crea automáticamente tres objetos de Data Factory, con nombres que se basan en el nombre del paquete seleccionado y en la marca de tiempo. Por ejemplo, si el nombre del paquete SSIS es **MyPackage**, SSMS crea objetos de Data Factory parecidos a los siguientes:
 

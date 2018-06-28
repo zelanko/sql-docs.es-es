@@ -4,11 +4,9 @@ ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: integration-services
-ms.component: data-flow
 ms.reviewer: ''
 ms.suite: sql
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.tgt_pltfrm: ''
 ms.topic: conceptual
 f1_keywords:
@@ -39,11 +37,12 @@ caps.latest.revision: 75
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: d4d43876a38188ce181c80bd625c50128bbc608c
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 7584d87a0080b10cf5e0ab4d20172a20ea778fa0
+ms.sourcegitcommit: cc46afa12e890edbc1733febeec87438d6051bf9
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/12/2018
+ms.locfileid: "35406067"
 ---
 # <a name="fuzzy-lookup-transformation"></a>Búsqueda aproximada, transformación
   La Transformación Búsqueda aproximada realiza tareas de limpieza de datos como normalizar datos, corregir datos y proporcionar valores que faltan.  
@@ -97,7 +96,7 @@ ms.lasthandoff: 05/03/2018
   
  Las opciones del índice de coincidencias se describen en la siguiente tabla.  
   
-|Opción|Description|  
+|Opción|Descripción|  
 |------------|-----------------|  
 |**GenerateAndMaintainNewIndex**|Crea un índice, lo guarda y lo mantiene. La transformación instala desencadenadores en la tabla de referencia para mantener la tabla de referencia sincronizada con la tabla del índice.|  
 |**GenerateAndPersistNewIndex**|Crea un índice y lo guarda, pero no lo mantiene.|  

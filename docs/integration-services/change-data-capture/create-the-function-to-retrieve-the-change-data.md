@@ -4,11 +4,9 @@ ms.custom: ''
 ms.date: 03/16/2017
 ms.prod: sql
 ms.prod_service: integration-services
-ms.component: change-data-capture
 ms.reviewer: ''
 ms.suite: sql
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
@@ -18,11 +16,12 @@ caps.latest.revision: 29
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 0c2305d2224147d463ef70fcb1b1055cf5751856
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 288d57ef9d9c02698d0f402a97356c18f0b7fd87
+ms.sourcegitcommit: cc46afa12e890edbc1733febeec87438d6051bf9
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/12/2018
+ms.locfileid: "35408377"
 ---
 # <a name="create-the-function-to-retrieve-the-change-data"></a>Crear la función para recuperar los datos modificados
   Después de completar el flujo de control para un paquete de [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] que realiza una carga incremental de datos modificados, la tarea siguiente es crear una función con valores de tabla que recupere los datos modificados. Solo tiene que crear esta función una vez antes de la primera carga incremental.  
@@ -211,7 +210,7 @@ go
 ### <a name="retrieving-additional-metadata-with-the-change-data"></a>Recuperar metadatos adicionales con los datos modificados  
  Aunque la función con valores de tabla creada por el usuario y mostrada anteriormente solo usa la columna **__$operation**, la función **cdc.fn_cdc_get_net_changes_<capture_instance>** devuelve cuatro columnas de metadatos por cada fila de datos modificados. Si desea utilizar estos valores en el flujo de datos, puede devolverlos como columnas adicionales desde la función contenedora con valores de tabla.  
   
-|Nombre de columna|Tipo de datos|Description|  
+|Nombre de columna|Tipo de datos|Descripción|  
 |-----------------|---------------|-----------------|  
 |**__$start_lsn**|**binary(10)**|Número de secuencia de registro (LSN) asociado con la transacción de confirmación para el cambio.<br /><br /> Todos los cambios confirmados en la misma transacción comparten el mismo LSN de confirmación. Por ejemplo, si una operación de actualización en la tabla de origen modifica dos filas diferentes, la tabla de cambios contendrá cuatro filas (dos con los valores anteriores y dos con los valores nuevos), cada una con el mismo valor **__$start_lsn** .|  
 |**__$seqval**|**binary(10)**|Valor de secuencia que se usa para ordenar los cambios de fila en una transacción.|  

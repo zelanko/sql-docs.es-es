@@ -4,11 +4,9 @@ ms.custom: ''
 ms.date: 06/04/2018
 ms.prod: sql
 ms.prod_service: integration-services
-ms.component: service
 ms.reviewer: ''
 ms.suite: sql
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.tgt_pltfrm: ''
 ms.topic: conceptual
 f1_keywords:
@@ -20,12 +18,12 @@ caps.latest.revision: 28
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 711bc7d70060cc3e5b1ac9f6fa38187bc82a48de
-ms.sourcegitcommit: 8aa151e3280eb6372bf95fab63ecbab9dd3f2e5e
+ms.openlocfilehash: 249a604407c1a11b5046ab3e9484c684ed80a2c2
+ms.sourcegitcommit: cc46afa12e890edbc1733febeec87438d6051bf9
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/05/2018
-ms.locfileid: "34772671"
+ms.lasthandoff: 06/12/2018
+ms.locfileid: "35404977"
 ---
 # <a name="ssis-catalog"></a>Catálogo de SSIS
   El catálogo de **SSISDB** es el eje central cuando se trabaja con proyectos de [!INCLUDE[ssISnoversion_md](../../includes/ssisnoversion-md.md)] (SSIS) que ha implementado en el servidor [!INCLUDE[ssISnoversion_md](../../includes/ssisnoversion-md.md)]. Por ejemplo, establece los parámetros del proyecto y del paquete, configura entornos para especificar los valores en tiempo de ejecución para los paquetes, ejecuta paquetes y soluciona los problemas de los mismos, y administra las operaciones del servidor de [!INCLUDE[ssISnoversion_md](../../includes/ssisnoversion-md.md)] .  

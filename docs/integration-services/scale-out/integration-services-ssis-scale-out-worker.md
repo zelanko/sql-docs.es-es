@@ -1,26 +1,25 @@
 ---
 title: Trabajador de escalabilidad horizontal de SQL Server Integration Services (SSIS) | Microsoft Docs
-ms.description: This article describes the Scale Out Master component of SSIS Scale Out
-ms.custom: ''
+description: En este artículo se describe el componente Patrón de escalabilidad horizontal de Escalabilidad horizontal de SSIS.
+ms.custom: performance
 ms.date: 12/19/2017
 ms.prod: sql
 ms.prod_service: integration-services
-ms.component: scale-out
 ms.reviewer: ''
 ms.suite: sql
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.tgt_pltfrm: ''
 ms.topic: conceptual
 caps.latest.revision: 1
 author: haoqian
 ms.author: haoqian
 manager: craigg
-ms.openlocfilehash: 5b19aee11489551b3f06fb58cb0242b495929213
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 2949f0aabaf4f59d6d2fc6635991f8eb0a921ca6
+ms.sourcegitcommit: cc46afa12e890edbc1733febeec87438d6051bf9
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/12/2018
+ms.locfileid: "35408127"
 ---
 # <a name="integration-services-ssis-scale-out-worker"></a>Trabajador de escalado horizontal de Integration Services (SSIS)
 
@@ -29,10 +28,10 @@ El trabajador de escalabilidad horizontal ejecuta el servicio de trabajador de e
 ## <a name="configure-the-scale-out-worker-service"></a>Configuración del servicio de escalabilidad horizontal
 Puede configurar el servicio de trabajador de escalabilidad horizontal mediante el archivo ` \<drive\>:\Program Files\Microsoft SQL Server\140\DTS\Binn\WorkerSettings.config`. Deberá reiniciar el servicio después de actualizar el archivo de configuración.
 
-Configuración  |Description  |Valor predeterminado  
+Configuración  |Descripción  |Valor predeterminado  
 ---------|---------|---------
 DisplayName|Nombre para mostrar del trabajador de escalado horizontal. **No está en uso en [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)] 2017.**|Nombre de equipo         
-Description|Descripción del trabajador de escalado horizontal. **No está en uso en [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)] 2017.**|Vacía         
+Descripción|Descripción del trabajador de escalado horizontal. **No está en uso en [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)] 2017.**|Vacía         
 MasterEndpoint|Punto de conexión para conectarse al patrón de escalado horizontal.|Punto de conexión establecido durante la instalación del trabajador de escalado horizontal         
 MasterHttpsCertThumbprint|Huella digital del certificado SSL de cliente usado para autenticar el patrón de escalado horizontal|Huella digital del certificado de cliente especificado durante la instalación del trabajador de escalado horizontal.          
 WorkerHttpsCertThumbprint|Huella digital del certificado del patrón de escalado horizontal usado para autenticar el trabajador de escalado horizontal.|Huella digital de un certificado creado e instalado automáticamente durante la instalación del trabajador de escalado horizontal          

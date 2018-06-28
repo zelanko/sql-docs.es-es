@@ -23,16 +23,17 @@ author: edmacauley
 ms.author: edmaca
 manager: craigg
 monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
-ms.openlocfilehash: d8afd19d73538ca459d14c9964a4067619c52b84
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 70b225db949dec01343c56a24299d882d553e44e
+ms.sourcegitcommit: 6e55a0a7b7eb6d455006916bc63f93ed2218eae1
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/08/2018
+ms.locfileid: "35239055"
 ---
 # <a name="datetimefromparts-transact-sql"></a>DATETIMEFROMPARTS (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2012-all-md](../../includes/tsql-appliesto-ss2012-all-md.md)]
 
-Devuelve un valor **datetime** para la fecha y la hora especificadas.
+Esta función devuelve un valor **datetime** para los argumentos de fecha y hora especificados.
   
 ![Icono de vínculo de tema](../../database-engine/configure-windows/media/topic-link.gif "Icono de vínculo de tema") [Convenciones de sintaxis de Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)
   
@@ -53,24 +54,24 @@ Expresión entera que especifica un mes.
 Expresión entera que especifica un día.
   
 *hour*  
-Expresión entera que especifica horas.
+Expresión entera que especifica las horas.
   
 *minute*  
-Expresión entera que especifica minutos.
+Expresión entera que especifica los minutos.
   
 *segundos*  
-Expresión entera que especifica segundos.
+Expresión entera que especifica los segundos.
   
 *milliseconds*  
-Expresión entera que especifica milisegundos.
+Expresión entera que especifica los milisegundos.
   
 ## <a name="return-types"></a>Tipos de valores devueltos
 **datetime**
   
 ## <a name="remarks"></a>Notas  
-**DATETIMEFROMPARTS** devuelve un valor de **datetime2** totalmente inicializado. Si los argumentos no son válidos, se generará un error. Si los argumentos necesarios son NULL, se devuelve un valor NULL.
+`DATETIMEFROMPARTS` devuelve un valor **datetime** totalmente inicializado. `DATETIMEFROMPARTS` producirá un error si al menos uno de los argumentos obligatorios tiene un valor no válido. `DATETIMEFROMPARTS` devuelve NULL si al menos uno de los argumentos obligatorios tiene un valor NULL.
   
-Esta función se puede enviar de forma remota a servidores de [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] y superiores. No se puede enviar de forma remota a servidores que tengan una versión inferior a [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].
+Esta función admite la conexión remota a servidores de [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] y versiones posteriores. No admitirá la conexión remota a servidores que tengan una versión inferior a [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].
   
 ## <a name="examples"></a>Ejemplos  
   

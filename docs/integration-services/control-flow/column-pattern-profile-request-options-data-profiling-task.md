@@ -4,11 +4,9 @@ ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: integration-services
-ms.component: control-flow
 ms.reviewer: ''
 ms.suite: sql
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
@@ -18,11 +16,12 @@ caps.latest.revision: 24
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 97ebf10bb9ae1a30a7f66ba5b984e0c08ee5ac24
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: aaddf1fab037c2bccec6f3bfc5411ba6156ee75b
+ms.sourcegitcommit: fd9c33b93c886dcb00a48967b6c245631fd559bf
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/14/2018
+ms.locfileid: "35619482"
 ---
 # <a name="column-pattern-profile-request-options-data-profiling-task"></a>Opciones de Solicitud de perfil de patrón de columnas (tarea de generación de perfiles de datos)
   Utilice el panel **Propiedades de la solicitud** de la página **Solicitudes de perfil** para establecer las opciones de **Solicitud de perfil de patrón de columnas** seleccionadas en el panel de solicitudes. Un perfil de patrón de columnas notifica un conjunto de expresiones regulares que cubren el porcentaje especificado de valores en una columna de cadenas. Este perfil puede ayudarle a identificar problemas en los datos, como cadenas no válidas, y puede sugerir expresiones regulares que se pueden utilizar en el futuro para validar los valores nuevos. Por ejemplo, un perfil de patrón de una columna de códigos postales de Estados Unidos podría generar las expresiones regulares: \d{5}-\d{4}, \d{5} y \d{9}. Si ve otras expresiones regulares, es posible que los datos contengan valores no válidos o tengan un formato incorrecto.  
@@ -133,7 +132,7 @@ ms.lasthandoff: 05/03/2018
  Para obtener más información al respecto, vea "Uso de delimitadores y símbolos" anteriormente en este tema.  
   
  **Symbols**  
- Muestra los símbolos que se deberían conservar como parte de los patrones. Algunos ejemplos podrían incluir "/" para las fechas, ":" para las horas  y "@" para las direcciones de correo electrónico. De forma predeterminada, la lista **Symbols** contiene los caracteres siguientes: `,.;:-"'~=&/@!?()<>[]{}|#*^%`.  
+ Muestra los símbolos que se deberían conservar como parte de los patrones. Algunos ejemplos podrían incluir "/" para las fechas, ":" para las horas y "\@" para las direcciones de correo electrónico. De forma predeterminada, la lista **Symbols** contiene los caracteres siguientes: `,.;:-"'~=&/@!?()<>[]{}|#*^%`.  
   
  Para obtener más información al respecto, vea "Uso de delimitadores y símbolos" anteriormente en este tema.  
   

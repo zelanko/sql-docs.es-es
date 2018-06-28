@@ -4,11 +4,9 @@ ms.custom: ''
 ms.date: 03/01/2017
 ms.prod: sql
 ms.prod_service: integration-services
-ms.component: data-flow
 ms.reviewer: ''
 ms.suite: sql
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.tgt_pltfrm: ''
 ms.topic: conceptual
 f1_keywords:
@@ -24,11 +22,12 @@ caps.latest.revision: 42
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 688dd10c3aa1ad8b985aa3b140bc81115310cb5a
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: a6d60fcbff7a6878b757997b2ddec8ae16066b92
+ms.sourcegitcommit: cc46afa12e890edbc1733febeec87438d6051bf9
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/12/2018
+ms.locfileid: "35403237"
 ---
 # <a name="character-map-transformation"></a>Transformación Mapa de caracteres
   La transformación Mapa de caracteres se aplica a funciones de cadena que operan sobre datos de caracteres, como la conversión de minúsculas a mayúsculas. Esta transformación solo opera en datos de columnas con un tipo de datos de cadena.  
@@ -42,7 +41,7 @@ ms.lasthandoff: 05/03/2018
 ## <a name="mapping-operations"></a>Operaciones de asignación  
  En la siguiente tabla se describen las operaciones de asignación admitidas por la transformación Mapa de caracteres.  
   
-|Operación|Description|  
+|Operación|Descripción|  
 |---------------|-----------------|  
 |Inversión de byte|Invierte el orden de los bytes.|  
 |Formato completo|Asigna caracteres de formato medio a caracteres de formato completo.|  
@@ -101,7 +100,7 @@ ms.lasthandoff: 05/03/2018
  **Destino**  
  Especifique si se guardan los resultados de las operaciones de cadena en contexto, utilizando la columna existente, o se guardan los datos modificados como una columna nueva.  
   
-|Valor|Description|  
+|Valor|Descripción|  
 |-----------|-----------------|  
 |Nueva columna|Guardar los datos en una columna nueva. Asigne el nombre de columna en **Alias de salida**.|  
 |Modificación en contexto|Guardar los datos modificados en la columna existente.|  
@@ -109,7 +108,7 @@ ms.lasthandoff: 05/03/2018
  **Operación**  
  Seleccione de la lista las funciones de cadena que se aplicarán a los datos de la columna.  
   
-|Valor|Description|  
+|Valor|Descripción|  
 |-----------|-----------------|  
 |Minúsculas|Convertir en minúsculas.|  
 |Mayúsculas|Convertir en mayúsculas.|  

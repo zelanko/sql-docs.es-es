@@ -66,7 +66,7 @@ En este tema se enumera las opciones que se permiten en la matriz asociativa (al
 
 4. El nombre de la instancia de *UID* y *PWD* al realizar la conexión con la autenticación de [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] .  
 
-Muchas de las claves admitidas son atributos de cadena de conexión ODBC. Para obtener información sobre las cadenas de conexión ODBC, vea [Using Connection String Keywords with SQL Native Client](../../relational-databases/native-client/applications/using-connection-string-keywords-with-sql-server-native-client.md).  
+Muchas de las claves admitidas son atributos de cadena de conexión ODBC. Para obtener información sobre las cadenas de conexión ODBC, consulte [Usar palabras clave de cadena de conexión con SQL Server Native Client](../../relational-databases/native-client/applications/using-connection-string-keywords-with-sql-server-native-client.md).  
 
 ## <a name="see-also"></a>Vea también  
 [Conexión al servidor](../../connect/php/connecting-to-the-server.md)  

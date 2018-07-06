@@ -25,7 +25,7 @@ ms.author: jhubbard
 manager: jhubbard
 ms.openlocfilehash: bd9a050bd3c424c832f765d02182136a5bcdef4f
 ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: es-ES
 ms.lasthandoff: 06/19/2018
 ms.locfileid: "36107644"
@@ -38,7 +38,7 @@ ms.locfileid: "36107644"
 -   Utilizando un marcador de parámetro (?) para especificar parámetros, enlazar una variable de programa al marcador de parámetro y, a continuación, colocar el valor de datos en la variable de programa.  
   
 > [!NOTE]  
->  Cuando se llama a procedimientos almacenados de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] utilizando parámetros con nombre con OLE DB, los nombres de parámetro deben empezar con el carácter '@'. Se trata de una restricción específica de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]. El proveedor OLE DB de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client aplica esta restricción de forma más estricta que MDAC.  
+>  Cuando se llama a procedimientos almacenados de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] utilizando parámetros con nombre con OLE DB, los nombres de parámetro deben empezar con el carácter '\@'. Se trata de una restricción específica de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]. El proveedor OLE DB de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client aplica esta restricción de forma más estricta que MDAC.  
   
  Para admitir los parámetros, el **ICommandWithParameters** interfaz se expone en el objeto de comando. Para utilizar parámetros, el consumidor describe primero los parámetros al proveedor mediante una llamada a la **ICommandWithParameters:: SetParameterInfo** método (u opcionalmente prepara una instrucción de llamada que llama el  **GetParameterInfo** método). A continuación, el consumidor crea un descriptor de acceso que especifica la estructura de un búfer y coloca los valores de parámetro en este búfer. Por último, pasa el identificador de descriptor de acceso y un puntero al búfer para **Execute**. En las llamadas posteriores a **Execute**, el consumidor coloca nuevos valores de parámetro en el búfer y llama **Execute** con el puntero de búfer y de identificador de descriptor de acceso.  
   

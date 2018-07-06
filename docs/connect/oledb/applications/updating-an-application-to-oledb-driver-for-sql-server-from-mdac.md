@@ -22,7 +22,7 @@ ms.author: Pedro.Lopes
 manager: craigg
 ms.openlocfilehash: 11597ed3b7cd80cae8604291bd8b662bf6a9ed80
 ms.sourcegitcommit: 354ed9c8fac7014adb0d752518a91d8c86cdce81
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: es-ES
 ms.lasthandoff: 06/14/2018
 ms.locfileid: "35612110"
@@ -62,7 +62,7 @@ ms.locfileid: "35612110"
 
 -   Se han realizado pequeños cambios en los errores y advertencias. Las advertencias y errores devueltos por el servidor ahora conservan la misma gravedad cuando se pasa al controlador de OLE DB para SQL Server. Debe asegurarse de que ha probado de forma exhaustiva la aplicación si depende de la interceptación de determinados errores y advertencias.  
 
--   Controlador de OLE DB para SQL Server tiene más estricta error al comprobar que MDAC, lo que significa que algunas aplicaciones que no se ajustan estrictamente a las especificaciones de OLE DB pueden comportarse de manera diferente. Por ejemplo, el proveedor SQLOLEDB no forzó la regla que los nombres de parámetro deben comenzar con ' @' para resultados de parámetros, pero el controlador OLE DB para SQL Server lleva a cabo.  
+-   Controlador de OLE DB para SQL Server tiene más estricta error al comprobar que MDAC, lo que significa que algunas aplicaciones que no se ajustan estrictamente a las especificaciones de OLE DB pueden comportarse de manera diferente. Por ejemplo, el proveedor SQLOLEDB no forzó la regla que los nombres de parámetro deben comenzar con '\@' para resultados de parámetros, pero el controlador OLE DB para SQL Server lleva a cabo.  
 
 -   Controlador OLE DB para SQL Server se comportan de forma diferente a MDAC con respecto a los errores de conexión. Por ejemplo, MDAC devuelve valores de propiedad almacenados en caché para una conexión que ha dado error, mientras que el controlador OLE DB para SQL Server informa de un error a la aplicación que realiza la llamada.  
 

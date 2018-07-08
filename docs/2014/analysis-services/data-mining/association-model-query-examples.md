@@ -1,5 +1,5 @@
 ---
-title: Ejemplos de consultas de modelo de asociación | Documentos de Microsoft
+title: Ejemplos de consultas de modelo de asociación | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - itemsets [Analysis Services]
 - association algorithms [Analysis Services]
@@ -17,15 +17,15 @@ helpviewer_keywords:
 - content queries [DMX]
 ms.assetid: 68b39f5c-c439-44ac-8046-6f2d36649059
 caps.latest.revision: 25
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: e1b0c7f81123188af9b929dcdcc33f6cf44ed4aa
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: ccd88cf081949cfad9c3d032598af9b96707fd0f
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36103683"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37173616"
 ---
 # <a name="association-model-query-examples"></a>Ejemplos de consultas del modelo de asociación
   Cuando se crea una consulta en un modelo de minería de datos, puede tratarse de una consulta de contenido, que proporciona detalles sobre las reglas y los conjuntos de elementos detectados durante el análisis, o una consulta de predicción, que utiliza las asociaciones detectadas en los datos para realizar predicciones. En un modelo de asociación, las predicciones se basan normalmente en reglas y se pueden utilizar para realizar recomendaciones, mientras que las consultas de contenido normalmente exploran la relación entre los conjuntos de elementos. También se puede recuperar metadatos sobre el modelo.  
@@ -242,6 +242,6 @@ ORDER BY NODE_SUPPORT DESC
 ## <a name="see-also"></a>Vea también  
  [Algoritmo de asociación de Microsoft](microsoft-association-algorithm.md)   
  [Referencia técnica del algoritmo de asociación de Microsoft](microsoft-association-algorithm-technical-reference.md)   
- [Contenido del modelo para los modelos de asociación de minería de datos &#40;Analysis Services: minería de datos&#41;](mining-model-content-for-association-models-analysis-services-data-mining.md)  
+ [Contenido para los modelos de asociación del modelo de minería de datos &#40;Analysis Services - minería de datos&#41;](mining-model-content-for-association-models-analysis-services-data-mining.md)  
   
   

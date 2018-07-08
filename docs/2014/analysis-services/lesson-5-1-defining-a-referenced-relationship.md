@@ -1,5 +1,5 @@
 ---
-title: Definir una relación referenciada | Documentos de Microsoft
+title: Definir una relación referenciada | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 4a34ba52-e3b3-4e8a-8e55-73e0cd5a97bd
 caps.latest.revision: 17
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: jhubbard
-ms.openlocfilehash: 50be0ad05e579d21095e6446b8e84d39cbef1f20
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: f49d90e05c7d76129b5c2385ed1af05fc6e3731a
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36103661"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37200385"
 ---
 # <a name="defining-a-referenced-relationship"></a>Definir una relación referenciada
   Hasta este punto del tutorial, cada dimensión de cubo que definió se basaba en una tabla que estaba directamente vinculada a la tabla de hechos para un grupo de medida a través de una relación de clave principal a clave externa. En las tareas de este tema, debe vincular la dimensión **Geography** a la tabla de hechos de ventas por distribuidor a través de la dimensión **Reseller** , denominada *dimensión de referencia*. Esto permite a los usuarios dimensionar las ventas de distribuidor por geografía. Para obtener más información, consulte [Definir relaciones referenciadas y propiedades de las relaciones referenciadas](multidimensional-models/define-a-referenced-relationship-and-referenced-relationship-properties.md).  
@@ -34,7 +34,7 @@ ms.locfileid: "36103661"
   
      Observe que la medida **Reseller Sales-Sales Amount** no está bien dimensionada por los miembros del atributo **Country-Region** de la jerarquía **Regions** . El valor de **Reseller Sales-Sales Amount** se repite para cada miembro de atributo **Country-Region** .  
   
-     ![Con la medida Reseller Sales-Sales Amount](../../2014/tutorials/media/l5-referencedrelationship-1.gif "medida con dimensión Reseller Sales-Sales Amount")  
+     ![Dimensionada medida Reseller Sales-Sales Amount](../../2014/tutorials/media/l5-referencedrelationship-1.gif "medida con dimensión Reseller Sales-Sales Amount")  
   
 4.  Abra el Diseñador de vistas del origen de datos para la vista del origen de datos **Adventure Works DW 2012** .  
   
@@ -118,7 +118,7 @@ ms.locfileid: "36103661"
   
 2.  Cuando la implementación se haya completado correctamente, haga clic en la pestaña **Explorador** del Diseñador de cubos para el cubo Tutorial de [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] y, a continuación, haga clic en el botón **Volver a conectar** .  
   
-3.  En el panel metadatos, expanda `Reseller Geography`, haga clic en **regiones geográficas**y, a continuación, haga clic en **agregar a área de fila**.  
+3.  En el panel metadatos, expanda `Reseller Geography`, haga clic en **ubicaciones geográficas**y, a continuación, haga clic en **agregar a área de fila**.  
   
      Observe que la medida **Reseller Sales-Sales Amount** no aparece bien dimensionada por el atributo **Country-Region** de la jerarquía definida por el usuario **Geographies** , como se muestra en la imagen siguiente.  
   

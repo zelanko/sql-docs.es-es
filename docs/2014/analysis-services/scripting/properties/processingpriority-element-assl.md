@@ -1,5 +1,5 @@
 ---
-title: Elemento ProcessingPriority (ASSL) | Documentos de Microsoft
+title: Elemento ProcessingPriority (ASSL) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -20,15 +20,15 @@ helpviewer_keywords:
 - ProcessingPriority element
 ms.assetid: 95d07f1c-ef8d-4e38-9682-ebb7719dbe52
 caps.latest.revision: 14
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 0718c0b85502a7277572a9e9ce42d8c94a244b1a
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 5dcbf28ff2dd0fbcbbc64aba7785e41caab3905c
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36103935"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37169666"
 ---
 # <a name="processingpriority-element-assl"></a>Elemento ProcessingPriority (ASSL)
   Determina la prioridad de procesamiento del objeto primario durante las operaciones en segundo plano, como por ejemplo, la agregación diferida, la indización o la agrupación en clústeres.  

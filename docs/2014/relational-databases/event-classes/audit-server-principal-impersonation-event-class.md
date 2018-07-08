@@ -8,22 +8,22 @@ ms.suite: ''
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 topic_type:
 - apiref
 helpviewer_keywords:
 - Audit Server Principal Impersonation event class
 ms.assetid: 6fee1a15-325a-4f09-a95d-deecf8af1b9f
 caps.latest.revision: 21
-author: craigg-msft
-ms.author: craigg
-manager: jhubbard
-ms.openlocfilehash: 11cb82e528d8de34997b5c380ea6dfefdfa53946
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: stevestein
+ms.author: sstein
+manager: craigg
+ms.openlocfilehash: 701dc9373b534173729262eb28d02fd241f47e6f
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36103317"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37180114"
 ---
 # <a name="audit-server-principal-impersonation-event-class"></a>Audit Server Principal Impersonation, clase de eventos
   La clase de eventos **Audit Server Principal Impersonation** se produce cuando hay una suplantación en el ámbito del servidor, como EXECUTE AS \<*login*>.  

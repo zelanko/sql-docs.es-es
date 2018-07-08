@@ -1,5 +1,5 @@
 ---
-title: Asignación de SQL-DMO a SMO | Documentos de Microsoft
+title: Asignación de SQL-DMO a SMO | Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -12,15 +12,15 @@ ms.tgt_pltfrm: ''
 ms.topic: reference
 ms.assetid: 590f5396-98d5-485e-9b41-728c6ed7cb9d
 caps.latest.revision: 36
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: d99a665366fc9b5df9ff975d47cfa60dccaf4b4e
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: mashamsft
+ms.author: mathoma
+manager: craigg
+ms.openlocfilehash: 54c66973a1cc0ca7f024a696902f694b45778a9a
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36103616"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37182822"
 ---
 # <a name="sql-dmo-mapping-to-smo"></a>Asignación de SQL-DMO a SMO
   SQL Distributed Management Objects (SQL-DMO) ya no se incluyen en [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)], las aplicaciones SQL-DMO se deberían convertir para utilizar [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Management Objects (SMO). El modelo de objetos de SMO es similar a SQL-DMO, de modo que la mayor parte de los objetos de SQL-DMO se asignan a un objeto con el mismo nombre en SMO. Sin embargo, algunos objetos de SQL-DMO se cambiaron o se quitaron en la transición a SMO. En esta tabla se enumera la acción recomendada para los objetos de SQL-DMO que no se convirtieron directamente en SMO.  

@@ -1,5 +1,5 @@
 ---
-title: Bike Buyer DMX Tutorial | Documentos de Microsoft
+title: Bike Buyer DMX Tutorial | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - DMX [Analysis Services], tutorials
 - data mining [Analysis Services], tutorials
@@ -19,13 +19,13 @@ ms.assetid: 4b634cc1-86dc-42ec-9804-a19292fe8448
 caps.latest.revision: 33
 author: minewiskan
 ms.author: owend
-manager: kfile
-ms.openlocfilehash: fc1676f55d2d920c90d56f552973cf7e2a1d3942
-ms.sourcegitcommit: 8c040e5b4e8c7d37ca295679410770a1af4d2e1f
+manager: craigg
+ms.openlocfilehash: 788cdb0ccd3f8093972c45db1463412c5f41a765
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/21/2018
-ms.locfileid: "36312963"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37187672"
 ---
 # <a name="bike-buyer-dmx-tutorial"></a>Tutorial DMX de Bike Buyer
   En este tutorial aprenderá a crear, entrenar y explorar modelos de minería de datos utilizando el lenguaje de consulta Extensiones de minería de datos (DMX). A continuación, estos modelos de minería de datos se utilizarán para crear predicciones que determinan si un cliente adquirirá una bicicleta.  
@@ -78,7 +78,7 @@ ms.locfileid: "36312963"
   
  **Para obtener más información**  
   
- [Extensiones de minería de datos &#40;DMX&#41; referencia](/sql/dmx/data-mining-extensions-dmx-reference), [descripción DMX Select (instrucción)](/sql/dmx/understanding-the-dmx-select-statement), [estructura y el uso de consultas de predicción DMX](/sql/dmx/structure-and-usage-of-dmx-prediction-queries)  
+ [Extensiones de minería de datos &#40;DMX&#41; referencia](/sql/dmx/data-mining-extensions-dmx-reference), [descripción DMX instrucción Select](/sql/dmx/understanding-the-dmx-select-statement), [estructura y el uso de consultas de predicción DMX](/sql/dmx/structure-and-usage-of-dmx-prediction-queries)  
   
 ## <a name="what-you-will-learn"></a>Aprendizaje  
  El tutorial está compuesto por las lecciones siguientes:  
@@ -92,7 +92,7 @@ ms.locfileid: "36312963"
  [Lección 3: Procesar la estructura de minería de datos de Bike Buyer](../../2014/tutorials/lesson-3-processing-the-bike-buyer-mining-structure.md)  
  En esta lección aprenderá a usar la instrucción `INSERT INTO` para procesar estructuras de minería de datos y sus modelos de minería de datos asociados.  
   
- [Lección 4: Examinar los modelos de minería de datos Bike Buyer](../../2014/tutorials/lesson-4-browsing-the-bike-buyer-mining-models.md)  
+ [Lección 4: Examinar los modelos de minería de datos de Bike Buyer](../../2014/tutorials/lesson-4-browsing-the-bike-buyer-mining-models.md)  
  En esta lección aprenderá a utilizar la instrucción `SELECT` para explorar el contenido de los modelos de minería de datos.  
   
  [Lección 5: Ejecutar consultas de predicción](../../2014/tutorials/lesson-5-executing-prediction-queries.md)  
@@ -105,13 +105,13 @@ ms.locfileid: "36312963"
   
 -   [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssASversion2005](../includes/ssasversion2005-md.md)], [!INCLUDE[ssASversion10](../includes/ssasversion10-md.md)], [!INCLUDE[ssASCurrent](../includes/ssascurrent-md.md)], o [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]  
   
--   Las base de datos [!INCLUDE[ssSampleDBDWobject](../includes/sssampledbdwobject-md.md)]. Con el fin de mejorar la seguridad, las bases de datos de ejemplo no se instalan de forma predeterminada. Para instalar las bases de datos de ejemplo oficiales para [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)], visite la [bases de datos de ejemplo de Microsoft SQL](http://go.microsoft.com/fwlink/?LinkId=88417) página y seleccione las bases de datos que va a instalar...  
+-   Las base de datos [!INCLUDE[ssSampleDBDWobject](../includes/sssampledbdwobject-md.md)]. Con el fin de mejorar la seguridad, las bases de datos de ejemplo no se instalan de forma predeterminada. Para instalar las bases de datos de ejemplo oficiales para [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)], visite la [bases de datos de ejemplo de Microsoft SQL](http://go.microsoft.com/fwlink/?LinkId=88417) página y seleccione las bases de datos que desea instalar...  
   
 > [!NOTE]  
 >  Para consultar los tutoriales, se recomienda agregar los botones **Siguiente** y **Anterior** a la barra de herramientas del visor de documentos.  
   
 ## <a name="see-also"></a>Vea también  
  [Tutorial DMX de Market Basket](../../2014/tutorials/market-basket-dmx-tutorial.md)   
- [Tutorial de minería de datos básicos](../../2014/tutorials/basic-data-mining-tutorial.md)  
+ [Tutorial básico de minería de datos](../../2014/tutorials/basic-data-mining-tutorial.md)  
   
   

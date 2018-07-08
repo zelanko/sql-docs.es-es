@@ -1,12 +1,12 @@
 ---
-title: Origen de datos de objetos (OLE DB) | Documentos de Microsoft
+title: Objetos (OLE DB) del origen de datos | Microsoft Docs
 ms.custom: ''
 ms.date: 03/16/2017
 ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
 ms.reviewer: ''
 ms.suite: sql
-ms.technology: connectivity
+ms.technology: native-client
 ms.tgt_pltfrm: ''
 ms.topic: reference
 helpviewer_keywords:
@@ -22,22 +22,22 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
-ms.openlocfilehash: 520d1e31a7a93d937e4c9cfcce9e8cba190aa547
-ms.sourcegitcommit: a78fa85609a82e905de9db8b75d2e83257831ad9
+ms.openlocfilehash: 1d0ba930c37d5e2c83093a9aeb6aad835439a8b4
+ms.sourcegitcommit: f8ce92a2f935616339965d140e00298b1f8355d7
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/18/2018
-ms.locfileid: "35698526"
+ms.lasthandoff: 07/03/2018
+ms.locfileid: "37410264"
 ---
 # <a name="data-source-objects-ole-db"></a>Objetos de origen de datos (OLE DB)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
 [!INCLUDE[SNAC_Deprecated](../../includes/snac-deprecated.md)]
 
-  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client usa el término origen de datos para el conjunto de interfaces de OLE DB que se utiliza para establecer un vínculo a un almacén de datos, como [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Crear una instancia del objeto de origen de datos del proveedor es la primera tarea de un [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] consumidor Native Client.  
+  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client usa el término origen de datos para el conjunto de interfaces OLE DB usado para establecer un vínculo a un almacén de datos, como [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Crear una instancia del objeto de origen de datos del proveedor es la primera tarea de un [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] consumidor Native Client.  
   
- Todos los proveedores OLE DB declaran un identificador de clase (CLSID) para sí mismo. ¡El CLSID de la [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] proveedor Native Client OLE DB es el GUID de C C/C ++ CLSID_SQLNCLI10 (el símbolo SQLNCLI_CLSID se resolverá como el valor correcto progid en el archivo sqlncli.h que se hace referencia). Con el CLSID, el consumidor utiliza OLE **CoCreateInstance** función para fabricar una instancia del objeto de origen de datos.  
+ Todos los proveedores OLE DB declaran un identificador de clase (CLSID) para sí mismo. El CLSID para el [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] proveedor Native Client OLE DB es la CLSID_SQLNCLI10 de GUID de C o C++ (el símbolo SQLNCLI_CLSID se resolverá en el valor correcto progid en el archivo sqlncli.h al que se hace referencia). Con el CLSID, el consumidor utiliza OLE **CoCreateInstance** función para fabricar una instancia del objeto de origen de datos.  
   
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client es un servidor en proceso. Instancias de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] objetos de proveedor de OLE DB de Native Client se crean con la macro CLSCTX_INPROC_SERVER para indicar el contexto ejecutable.  
+ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client es un servidor en proceso. Las instancias de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] objetos del proveedor OLE DB de Native Client se crean mediante la macro CLSCTX_INPROC_SERVER para indicar el contexto ejecutable.  
   
  El [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] objeto de origen de datos de proveedor OLE DB de Native Client expone las interfaces de inicialización de OLE DB que permiten al consumidor para conectarse a uno existente [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] bases de datos.  
   
@@ -55,7 +55,7 @@ ms.locfileid: "35698526"
   
 -   SET CONCAT_OF_NULL_YIELDS_NULL ON  
   
- Este ejemplo utiliza la macro de identificador de clase para crear un [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] objeto de origen de datos del proveedor OLE DB de Native Client y obtener una referencia a su **IDBInitialize** interfaz.  
+ Este ejemplo usa la macro del identificador de clase para crear un [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] objeto de origen de datos del proveedor OLE DB de Native Client y obtener una referencia a su **IDBInitialize** interfaz.  
   
 ```  
 IDBInitialize*   pIDBInitialize;  
@@ -76,9 +76,9 @@ else
 }  
 ```  
   
- Con la creación correcta de una instancia de un [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] objeto de origen de datos de proveedor OLE DB de Native Client, la aplicación de consumidor puede continuar Inicializando el origen de datos y crear sesiones. Las sesiones OLE DB presentan las interfaces que permiten manipulación y acceso a datos.  
+ Con la creación correcta de una instancia de un [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] objeto de origen de datos del proveedor OLE DB de Native Client, la aplicación de consumidor puede continuar Inicializando el origen de datos y creando sesiones. Las sesiones OLE DB presentan las interfaces que permiten manipulación y acceso a datos.  
   
- El [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] proveedor OLE DB de Native Client realiza su primera conexión a una instancia especificada de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] como parte de una inicialización de origen de datos se realice correctamente. La conexión se mantiene mientras se mantiene una referencia en cualquier interfaz de inicialización de origen de datos, o hasta que el **IDBInitialize:: UnInitialize** se llama al método.  
+ El [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] proveedor OLE DB de Native Client realiza su primera conexión a una instancia especificada de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] como parte de una inicialización de origen de datos correcta. La conexión se mantiene mientras se mantiene una referencia en cualquier interfaz de inicialización de origen de datos, o hasta que el **IDBInitialize:: UnInitialize** se llama al método.  
   
 ## <a name="in-this-section"></a>En esta sección  
   

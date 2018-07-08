@@ -1,5 +1,5 @@
 ---
-title: Compatibilidad SQLXML 4.0 con .NET Framework | Documentos de Microsoft
+title: Compatibilidad de SQLXML 4.0 con .NET Framework | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -16,15 +16,15 @@ helpviewer_keywords:
 - .NET Framework [SQLXML]
 ms.assetid: c18cf801-f893-4fbc-8e2b-c563f6108acf
 caps.latest.revision: 20
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: f760815c90aadd048553223b121b59ace4c8a722
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: mashamsft
+ms.author: mathoma
+manager: craigg
+ms.openlocfilehash: aff4606952d56a95194dd5b6076ecb877fa1253f
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36103381"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37229655"
 ---
 # <a name="sqlxml-40-net-framework-support"></a>Compatibilidad de SQLXML 4.0 con .NET Framework
   [!INCLUDE[msCoName](../../includes/msconame-md.md)] SQLXML 4.0 admite características que le permiten escribir aplicaciones para tener acceso a los datos XML desde una instancia de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], introducir los datos en el entorno de [!INCLUDE[msCoName](../../includes/msconame-md.md)] .NET Framework, procesar los datos y devolver las actualizaciones a [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. En esta sección se describen las características de soporte técnico de .NET Framework y proporciona ejemplos de su uso.  
@@ -36,7 +36,7 @@ ms.locfileid: "36103381"
  [Usar DiffGrams para modificar datos en SQLXML 4.0](../../relational-databases/sqlxml-annotated-xsd-schemas-xpath-queries/diffgram/sqlxml-4-0-net-framework-support-using-diffgrams-to-modify-data.md)  
  Describe Diffgrams y proporciona ejemplos de su uso.  
   
- [Uso de la carga masiva SQLXML en el entorno .NET](../../relational-databases/sqlxml-annotated-xsd-schemas-xpath-queries/sqlxml-4-0-net-framework-support-using-bulk-load.md)  
+ [Usar la carga masiva SQLXML en el entorno .NET](../../relational-databases/sqlxml-annotated-xsd-schemas-xpath-queries/sqlxml-4-0-net-framework-support-using-bulk-load.md)  
  Describe cómo utilizar la carga masiva SQLXML con .NET Framework.  
   
 ## <a name="see-also"></a>Vea también  

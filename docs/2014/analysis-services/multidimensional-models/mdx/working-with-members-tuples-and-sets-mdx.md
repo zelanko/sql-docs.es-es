@@ -1,5 +1,5 @@
 ---
-title: Trabajar con miembros, tuplas y conjuntos (MDX) | Documentos de Microsoft
+title: Trabajar con miembros, tuplas y conjuntos (MDX) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - MDX [Analysis Services], tuples
 - member keys [MDX]
@@ -28,15 +28,15 @@ helpviewer_keywords:
 - set functions [MDX]
 ms.assetid: b6ec2439-caef-46d3-9fd7-5f4526cee334
 caps.latest.revision: 41
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 59e01b56cee5d9e35b066514c2d24129b38b2fd6
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: fbd4fa53eb870bc8422dcb80fe019083e773e638
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36104580"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37153266"
 ---
 # <a name="working-with-members-tuples-and-sets-mdx"></a>Trabajar con miembros, tuplas y conjuntos (MDX)
   MDX proporciona varias funciones que devuelven uno o más miembros, tuplas o conjuntos; o que actúan sobre un miembro, tupla o conjunto.  
@@ -52,7 +52,7 @@ FROM [Adventure Works]
   
 ```  
   
- También puede usar el `FirstChild` función para devolver el mismo miembro, como en el ejemplo siguiente.  
+ También puede usar el `FirstChild` función para devolver el mismo miembro, como se muestra en el ejemplo siguiente.  
   
 ```  
 SELECT [Date].[Calendar Year].FirstChild on 0  
@@ -131,7 +131,7 @@ FROM [Adventure Works]
   
 ## <a name="see-also"></a>Vea también  
  [Conceptos clave para MDX &#40;Analysis Services&#41;](../key-concepts-in-mdx-analysis-services.md)   
- [Aspectos básicos de consulta MDX &#40;Analysis Services&#41;](mdx-query-fundamentals-analysis-services.md)   
+ [Aspectos básicos de consultas MDX &#40;Analysis Services&#41;](mdx-query-fundamentals-analysis-services.md)   
  [Referencia de funciones MDX &#40;MDX&#41;](/sql/mdx/mdx-function-reference-mdx)  
   
   

@@ -1,5 +1,5 @@
 ---
-title: Elemento Password (ASSL) | Documentos de Microsoft
+title: Elemento Password (ASSL) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -20,18 +20,18 @@ helpviewer_keywords:
 - Password element
 ms.assetid: ee756b01-fb08-4a9a-8c2a-7c04af0f8658
 caps.latest.revision: 13
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: e702e7307e11c506652e91ca4cdc8f02ca06318d
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 99d7eabdd66e6c7f036389b4825c5926873367b2
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36103631"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37197745"
 ---
 # <a name="password-element-assl"></a>Elemento Password (ASSL)
-  Contiene la contraseña de la cuenta de usuario para la [ImpersonationInfo](../data-type/impersonationinfo-data-type-assl.md) elemento.  
+  Contiene la contraseña de la cuenta de usuario para el [ImpersonationInfo](../data-type/impersonationinfo-data-type-assl.md) elemento.  
   
 ## <a name="syntax"></a>Sintaxis  
   
@@ -60,7 +60,7 @@ ms.locfileid: "36103631"
 |Elementos secundarios|None|  
   
 ## <a name="remarks"></a>Notas  
- El valor de la `Password` elemento, así como el valor de la [cuenta](account-element-impersonationinfo-assl.md) , se utiliza por motivos de suplantación si el valor de la [ImpersonationMode](impersonationmode-element-assl.md) (elemento) para cualquier elemento derivado de la `ImpersonationInfo` tipo de datos está establecido en *ImpersonateAccount*.  
+ El valor de la `Password` elemento, así como el valor de la [cuenta](account-element-impersonationinfo-assl.md) elemento, se usa para la suplantación si el valor de la [ImpersonationMode](impersonationmode-element-assl.md) para cualquier elemento derivado de la `ImpersonationInfo` tipo de datos está establecido en *ImpersonateAccount*.  
   
  Solo los miembros del rol de administrador del servidor para la instancia [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] pueden proporcionar un valor en blanco para el elemento `Password`  
   

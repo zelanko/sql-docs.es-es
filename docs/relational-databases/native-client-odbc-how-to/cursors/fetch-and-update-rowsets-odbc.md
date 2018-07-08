@@ -1,12 +1,12 @@
 ---
-title: Capturar y actualizar conjuntos de filas (ODBC) | Documentos de Microsoft
+title: Capturar y actualizar conjuntos de filas (ODBC) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
 ms.reviewer: ''
 ms.suite: sql
-ms.technology: connectivity
+ms.technology: native-client
 ms.tgt_pltfrm: ''
 ms.topic: reference
 helpviewer_keywords:
@@ -16,12 +16,12 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
-ms.openlocfilehash: 21332634d99b44ba974f5f70fa77d0fafb1ab68e
-ms.sourcegitcommit: a78fa85609a82e905de9db8b75d2e83257831ad9
+ms.openlocfilehash: 364647bdd5fe1d5c28a2dce9d1a105d908470d76
+ms.sourcegitcommit: f8ce92a2f935616339965d140e00298b1f8355d7
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/18/2018
-ms.locfileid: "35697186"
+ms.lasthandoff: 07/03/2018
+ms.locfileid: "37413104"
 ---
 # <a name="fetch-and-update-rowsets-odbc"></a>Capturar y actualizar conjuntos de filas (ODBC)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -38,7 +38,7 @@ ms.locfileid: "35697186"
   
      Si se usan columnas desenlazadas, para cada fila llame a [SQLSetPos](http://go.microsoft.com/fwlink/?LinkId=58407) con SQL_POSITION establecer la posición del cursor; a continuación, para cada columna desenlazada:  
   
-    -   Llame a [SQLGetData](../../../relational-databases/native-client-odbc-api/sqlgetdata.md) uno o más veces para obtener los datos sin enlazar columnas después de la última columna del conjunto de filas enlazada. Las llamadas a [SQLGetData](../../../relational-databases/native-client-odbc-api/sqlgetdata.md) debe estar en orden creciente de número de columna.  
+    -   Llame a [SQLGetData](../../../relational-databases/native-client-odbc-api/sqlgetdata.md) uno o más veces para obtener los datos de las columnas desenlazadas, después de la última columna del conjunto de filas enlazada. Las llamadas a [SQLGetData](../../../relational-databases/native-client-odbc-api/sqlgetdata.md) deben estar en orden creciente de número de columna.  
   
     -   Llame a [SQLGetData](../../../relational-databases/native-client-odbc-api/sqlgetdata.md) varias veces para obtener datos de una columna de texto o de imagen.  
   
@@ -48,9 +48,9 @@ ms.locfileid: "35697186"
   
      Si se usan columnas de imagen o texto de datos en ejecución para una operación de actualización o adición, contrólelas.  
   
-6.  Opcionalmente, ejecute una instrucción de las UPDATE o DELETE posicionada, especificando el nombre del cursor (disponible en [SQLGetCursorName](../../../relational-databases/native-client-odbc-api/sqlgetcursorname.md)) y el uso de un identificador de instrucción diferente en la misma conexión.  
+6.  Opcionalmente, ejecute una instrucción de las UPDATE o DELETE colocada, especificando el nombre del cursor (disponible en [SQLGetCursorName](../../../relational-databases/native-client-odbc-api/sqlgetcursorname.md)) y el uso de un identificador de instrucción diferente en la misma conexión.  
   
 ## <a name="see-also"></a>Vea también  
- [Con los temas de procedimientos de los cursores &#40;ODBC&#41;](../../../relational-databases/native-client-odbc-how-to/cursors/using-cursors-how-to-topics-odbc.md)  
+ [Uso de temas de procedimientos de los cursores &#40;ODBC&#41;](../../../relational-databases/native-client-odbc-how-to/cursors/using-cursors-how-to-topics-odbc.md)  
   
   

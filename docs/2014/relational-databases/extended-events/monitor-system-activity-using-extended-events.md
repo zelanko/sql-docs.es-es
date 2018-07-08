@@ -8,21 +8,21 @@ ms.suite: ''
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - xe
 - extended events [SQL Server], monitoring system activity
 ms.assetid: d83ad88f-818c-49fe-a9a9-299f704fca53
 caps.latest.revision: 18
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: 276a67c12ed47393962d3f9f12d091641c2d0e93
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: MightyPen
+ms.author: genemi
+manager: craigg
+ms.openlocfilehash: a7c593fde585b5247d9a3c07ad8214c690c98b21
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36103557"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37164866"
 ---
 # <a name="monitor-system-activity-using-extended-events"></a>Supervisar la actividad del sistema mediante eventos extendidos
   En el siguiente procedimiento se muestra el uso de Extended Events con el Seguimiento de eventos para Windows (ETW) para supervisar la actividad del sistema. El procedimiento también muestra el uso de las instrucciones CREATE EVENT SESSION, ALTER EVENT SESSION y DROP EVENT SESSION.  
@@ -123,7 +123,7 @@ ms.locfileid: "36103557"
  [CREATE EVENT SESSION &#40;Transact-SQL&#41;](/sql/t-sql/statements/create-event-session-transact-sql)   
  [ALTER EVENT SESSION &#40;Transact-SQL&#41;](/sql/t-sql/statements/alter-event-session-transact-sql)   
  [DROP EVENT SESSION &#40;Transact-SQL&#41;](/sql/t-sql/statements/drop-event-session-transact-sql)   
- [Extendidos vistas de catálogo de eventos &#40;Transact-SQL&#41;] (~/relational-databases/system-catalog-views/extended-events-catalog-views-transact-sql   
+ [Vistas de catálogo de eventos de extended &#40;Transact-SQL&#41;] (~/relational-databases/system-catalog-views/extended-events-catalog-views-transact-sql   
  [Vistas de administración dinámica de eventos extendidos](../views/views.md)   
  [SQL Server Extended Events Targets](../../database-engine/sql-server-extended-events-targets.md)  
   

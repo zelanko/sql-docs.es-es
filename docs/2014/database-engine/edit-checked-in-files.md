@@ -1,5 +1,5 @@
 ---
-title: Editar archivos protegidos | Documentos de Microsoft
+title: Editar archivos protegidos | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,21 +8,21 @@ ms.suite: ''
 ms.technology:
 - dbe-cross-instance
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - modifying checked-in files
 - checking in files
 ms.assetid: 560cd19f-ab22-4273-b00c-149993a630e6
 caps.latest.revision: 24
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: fd91efe4bd802a64ced4e6f93ac65f16ed4e5a71
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: mashamsft
+ms.author: mathoma
+manager: craigg
+ms.openlocfilehash: 3e705b2b62631e0d6747c5112c0efc66f3bfddf6
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36103897"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37165296"
 ---
 # <a name="edit-checked-in-files"></a>Modificar archivos protegidos
   Normalmente, es necesario desproteger los archivos controlados por código fuente antes de poder modificarlos. Sin embargo, se puede configurar [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] para que sea posible modificar archivos que no se hayan desprotegido. Al hacer esto, los cambios se conservan en la memoria hasta que se guardan los archivos. En ese momento se le pedirá que desproteja el archivo del control de código fuente.  

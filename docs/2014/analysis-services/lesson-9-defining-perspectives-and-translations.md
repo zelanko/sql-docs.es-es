@@ -1,5 +1,5 @@
 ---
-title: 'Lección 9: Definir perspectivas y traducciones | Documentos de Microsoft'
+title: 'Lección 9: Definir perspectivas y traducciones | Microsoft Docs'
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: a040fa65-d5d6-4156-9f2c-307a4d18e1a6
 caps.latest.revision: 11
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: jhubbard
-ms.openlocfilehash: 8cfd54ff0c3b5e7c105ccc35b58cd18707b4a485
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: d5b9b8889bca7713453e1ce1734ce0a7ea5d3615
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36103928"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37159616"
 ---
 # <a name="lesson-9-defining-perspectives-and-translations"></a>Lección 9: Definir perspectivas y traducciones
   En esta lección, aprenderá a definir perspectivas y traducciones. Puede definir perspectivas para reducir la complejidad aparente de un cubo y definir traducciones que permitan a los usuarios ver los metadatos del cubo en el idioma que desee.  
@@ -36,7 +36,7 @@ ms.locfileid: "36103928"
  En esta tarea, se definen y examinan traducciones de metadatos específicos en determinados idiomas.  
   
 ## <a name="next-lesson"></a>Lección siguiente  
- [Lección 10: Definir Roles administrativos](lesson-10-defining-administrative-roles.md)  
+ [Lección 10: Definir roles administrativos](lesson-10-defining-administrative-roles.md)  
   
 ## <a name="see-also"></a>Vea también  
  [Escenario de Tutorial de Analysis Services](../analysis-services/analysis-services-tutorial-scenario.md)   
@@ -44,7 +44,7 @@ ms.locfileid: "36103928"
  [Perspectivas](../analysis-services/multidimensional-models-olap-logical-cube-objects/perspectives.md)   
  [Perspectivas de modelos multidimensionales](multidimensional-models/perspectives-in-multidimensional-models.md)   
  [Traducciones de dimensiones](multidimensional-models-olap-logical-dimension-objects/dimension-translations.md)   
- [Traducciones de cubos](multidimensional-models-olap-logical-cube-objects/cube-translations.md)   
+ [Traducciones de cubo](multidimensional-models-olap-logical-cube-objects/cube-translations.md)   
  [Traducciones &#40;Analysis Services&#41;](translations-analysis-services.md)  
   
   

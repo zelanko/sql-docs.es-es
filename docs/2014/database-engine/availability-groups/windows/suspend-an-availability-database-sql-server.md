@@ -5,10 +5,9 @@ ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.suite: ''
-ms.technology:
-- dbe-high-availability
+ms.technology: high-availability
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.swb.availabilitygroup.suspenddatamove.f1
 helpviewer_keywords:
@@ -18,15 +17,15 @@ helpviewer_keywords:
 - Availability Groups [SQL Server], databases
 ms.assetid: 86858982-6af1-4e80-9a93-87451f0d7ee9
 caps.latest.revision: 48
-author: rothja
-ms.author: jroth
-manager: jhubbard
-ms.openlocfilehash: 56cb86d8d749848b3e10a2bbfbca2765be77cd78
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: MashaMSFT
+ms.author: mathoma
+manager: craigg
+ms.openlocfilehash: 5f84be22ffdfe9375edd632c34e832d18488fea1
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36103618"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37173376"
 ---
 # <a name="suspend-an-availability-database-sql-server"></a>Suspender una base de datos de disponibilidad (SQL Server)
   Puede suspender una base de datos de disponibilidad en [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] mediante [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)], [!INCLUDE[tsql](../../../includes/tsql-md.md)]o PowerShell en [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)]. Observe que un comando de suspender tiene que emitirse en la instancia de servidor que hospeda la base de datos que se va a suspender o a reanudar.  
@@ -113,7 +112,7 @@ ms.locfileid: "36103618"
   
 1.  Cambie el directorio (`cd`) a la instancia del servidor que hospeda la réplica cuya base de datos que desea suspender. Para obtener más información, vea [Requisitos previos](#Prerequisites), anteriormente en este tema.  
   
-2.  Use la `Suspend-SqlAvailabilityDatabase` para suspender el grupo de disponibilidad.  
+2.  Use el `Suspend-SqlAvailabilityDatabase` para suspender el grupo de disponibilidad.  
   
      Por ejemplo, el siguiente comando suspende la sincronización de datos para la base de datos de disponibilidad `MyDb3` en el grupo de disponibilidad `MyAg` en la instancia del servidor denominada `Computer\Instance`.  
   
@@ -123,7 +122,7 @@ ms.locfileid: "36103618"
     ```  
   
     > [!NOTE]  
-    >  Para ver la sintaxis de un cmdlet, use la `Get-Help` cmdlet en el [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] entorno de PowerShell. Para más información, consulte [Get Help SQL Server PowerShell](../../../powershell/sql-server-powershell.md).  
+    >  Para ver la sintaxis de un cmdlet, use el `Get-Help` cmdlet en el [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] entorno de PowerShell. Para más información, consulte [Get Help SQL Server PowerShell](../../../powershell/sql-server-powershell.md).  
   
  **Para configurar y usar el proveedor de SQL Server PowerShell**  
   
@@ -149,7 +148,7 @@ ms.locfileid: "36103618"
 -   [Reanudar una base de datos de disponibilidad &#40;SQL Server&#41;](resume-an-availability-database-sql-server.md)  
   
 ## <a name="see-also"></a>Vea también  
- [Información general de los grupos de disponibilidad AlwaysOn &#40;SQL Server&#41;](overview-of-always-on-availability-groups-sql-server.md)   
+ [Información general de grupos de disponibilidad AlwaysOn &#40;SQL Server&#41;](overview-of-always-on-availability-groups-sql-server.md)   
  [Reanudar una base de datos de disponibilidad &#40;SQL Server&#41;](resume-an-availability-database-sql-server.md)  
   
   

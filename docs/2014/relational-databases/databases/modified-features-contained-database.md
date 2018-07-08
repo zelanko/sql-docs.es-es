@@ -8,20 +8,20 @@ ms.suite: ''
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - contained database, modifications to DBs
 ms.assetid: a2942509-39a2-4903-b504-ae80a300a9de
 caps.latest.revision: 26
-author: craigg-msft
-ms.author: craigg
-manager: jhubbard
-ms.openlocfilehash: 9577ef03aafe17a7590812a49212ff1e5263ed46
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: stevestein
+ms.author: sstein
+manager: craigg
+ms.openlocfilehash: ded072c2ec320ecc85fed183313a361dbdf6bca0
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36104051"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37152326"
 ---
 # <a name="modified-features-contained-database"></a>Características modificadas (base de datos contenida)
   Las siguientes características se han modificado de forma que las bases de datos parcialmente independientes las admitan. Normalmente, las características se modifican de modo que no crucen el límite de la base de datos.  

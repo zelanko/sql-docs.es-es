@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - dbe-data-tier-apps
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.swb.deploydacwizard.updateconfiguration.f1
 - sql12.swb.deploydacwizard.selectdac.f1
@@ -23,15 +23,15 @@ helpviewer_keywords:
 - wizard [DAC], deploy
 ms.assetid: c117af35-aa53-44a5-8034-fa8715dc735f
 caps.latest.revision: 31
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: 4ede9c252977dbd5044fe4c8a7c154d425341490
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: stevestein
+ms.author: sstein
+manager: craigg
+ms.openlocfilehash: 7041a4e15314f7efa8ea626e41ed705b69faa18c
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36104069"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37154536"
 ---
 # <a name="deploy-a-data-tier-application"></a>Implementar una aplicación de capa de datos
   Puede implementar una aplicación de capa de datos (DAC) desde un paquete DAC en una instancia existente del [!INCLUDE[ssDE](../../includes/ssde-md.md)] o de [!INCLUDE[ssSDS](../../includes/sssds-md.md)] mediante un asistente o un script de PowerShell. El proceso de implementación registra una instancia de DAC almacenando la definición de la DAC en la base de datos del sistema **msdb** (**maestra** en [!INCLUDE[ssSDS](../../includes/sssds-md.md)]), crea una base de datos y, después, rellena la base de datos con todos los objetos de base de datos definidos en la DAC.  
@@ -67,7 +67,7 @@ ms.locfileid: "36104069"
 ####  <a name="Permissions"></a> Permissions  
  Una DAC solo la pueden implementar miembros de los roles fijos de servidor **sysadmin** o **serveradmin** , o los inicios de sesión que pertenezcan al rol fijo de servidor **dbcreator** y dispongan de permisos ALTER ANY LOGIN. La cuenta de administrador del sistema de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] integrada denominada **sa** también puede implementar una DAC. Al implementar una DAC con inicios de sesión en [!INCLUDE[ssSDS](../../includes/sssds-md.md)] , se requiere la pertenencia a los roles loginmanager o serveradmin. La implementación de una DAC sin inicios de sesión en [!INCLUDE[ssSDS](../../includes/sssds-md.md)] necesita la pertenencia a los roles dbmanager o serveradmin.  
   
-##  <a name="UsingDeployDACWizard"></a> Mediante el Asistente para aplicaciones de capa de datos de implementar  
+##  <a name="UsingDeployDACWizard"></a> Mediante el Asistente para aplicaciones de capa de datos de implementación  
  **Para implementar una DAC mediante un asistente**  
   
 1.  En el **Explorador de objetos**, expanda el nodo de la instancia en la que desee implementar la DAC.  
@@ -173,7 +173,7 @@ ms.locfileid: "36104069"
   
  **La siguiente configuración se utilizará en la implementación de su DAC.** - Compruebe la información que se muestra para asegurarse de que las acciones emprenda serán las correctas. La ventana muestra el paquete DAC y el nombre que seleccionó para la instancia de DAC implementada. La ventana también muestra los valores de configuración que se utilizarán al crear la base de datos asociada con la DAC.  
   
- **\< Anterior** -vuelve a la **actualizar la configuración** página para cambiar las selecciones realizadas.  
+ **\< Anterior** -vuelve a la **actualizar la configuración** página para cambiar sus selecciones.  
   
  **Siguiente >**: implementa la DAC y muestra los resultados en la página **Implementar DAC**.  
   

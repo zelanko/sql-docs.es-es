@@ -5,25 +5,24 @@ ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.suite: ''
-ms.technology:
-- dbe-blob
+ms.technology: filestream
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - FileTables [SQL Server], migrating files
 - FileTables [SQL Server], bulk loading
 - FileTables [SQL Server], loading files
 ms.assetid: dc842a10-0586-4b0f-9775-5ca0ecc761d9
 caps.latest.revision: 22
-author: craigg-msft
-ms.author: craigg
-manager: jhubbard
-ms.openlocfilehash: f04207a9f61228b48318afbc321dcc5f10358ad7
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: douglaslMS
+ms.author: douglasl
+manager: craigg
+ms.openlocfilehash: 1fe047d365e3ce7b8df00307499eca50553a2c76
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36104059"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37169106"
 ---
 # <a name="load-files-into-filetables"></a>Cargar archivos en FileTables
   Describe cómo se cargan o migran archivos en las FileTables.  
@@ -48,15 +47,15 @@ ms.locfileid: "36104059"
 ###  <a name="HowToMigrateFiles"></a> Migrar archivos desde el sistema de archivos a una FileTable  
  En este escenario, los archivos se almacenan en el sistema de archivos y dispone de una tabla de metadatos en [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] que contiene punteros a los archivos. Puede mover los archivos a una FileTable y reemplazar después la ruta de acceso UNC original de cada archivo de los metadatos por la ruta de acceso UNC de la FileTable. La función [GetPathLocator &#40;Transact-SQL&#41;](/sql/relational-databases/system-functions/getpathlocator-transact-sql) sirve para lograr este propósito.  
   
- En este ejemplo, suponga que hay una tabla de base de datos existente, `PhotoMetadata`, que contiene datos sobre fotografías. Esta tabla tiene una columna `UNCPath` de tipo `varchar`(512) que contiene la ruta de acceso UNC real en un archivo .jpg.  
+ Este ejemplo, suponga que hay una tabla de base de datos existente, `PhotoMetadata`, que contiene datos sobre fotografías. Esta tabla tiene una columna `UNCPath` de tipo `varchar`(512) que contiene la ruta de acceso UNC real en un archivo .jpg.  
   
  Debe emprender las siguientes acciones para migrar los archivos de imagen desde el sistema de archivos a una FileTable:  
   
-1.  Cree una nueva FileTable para almacenar los archivos. Este ejemplo utiliza el nombre de tabla `dbo.PhotoTable`, pero no se muestra el código para crear la tabla.  
+1.  Cree una nueva FileTable para almacenar los archivos. Este ejemplo usa el nombre de tabla `dbo.PhotoTable`, pero no se muestra el código para crear la tabla.  
   
 2.  Usar xcopy o una herramienta similar para copiar los archivos .jpg, con su estructura de directorio, en el directorio raíz de la FileTable.  
   
-3.  Corregir los metadatos de la `PhotoMetadata` tabla, mediante código similar al siguiente:  
+3.  Corregir los metadatos de la `PhotoMetadata` tabla mediante código similar al siguiente:  
   
 ```tsql  
 --  Add a path locator column to the PhotoMetadata table.  

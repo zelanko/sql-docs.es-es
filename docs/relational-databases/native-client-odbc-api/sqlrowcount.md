@@ -1,12 +1,12 @@
 ---
-title: SQLRowCount | Documentos de Microsoft
+title: SQLRowCount | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
 ms.reviewer: ''
 ms.suite: sql
-ms.technology: ''
+ms.technology: native-client
 ms.tgt_pltfrm: ''
 ms.topic: reference
 apitype: DLLExport
@@ -18,12 +18,12 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
-ms.openlocfilehash: eac28aa439dd698c4bc3229d65ad77c0ea35de14
-ms.sourcegitcommit: a78fa85609a82e905de9db8b75d2e83257831ad9
+ms.openlocfilehash: a89873aa2464c75e51c338aae019dc3fcdbac122
+ms.sourcegitcommit: f8ce92a2f935616339965d140e00298b1f8355d7
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/18/2018
-ms.locfileid: "35698946"
+ms.lasthandoff: 07/03/2018
+ms.locfileid: "37419350"
 ---
 # <a name="sqlrowcount"></a>SQLRowCount
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -35,10 +35,10 @@ ms.locfileid: "35698946"
   
  Además, la aplicación puede usar una matriz de valores de estado, enlazada mediante el atributo de instrucciones SQL_ATTR_PARAM_STATUS_PTR, para capturar los desplazamientos de la matriz de filas de parámetros incorrectos. La aplicación puede recorrer la matriz de estado para determinar el número real de filas procesadas.  
   
- Cuando un [!INCLUDE[tsql](../../includes/tsql-md.md)] se ejecuta una instrucción INSERT, UPDATE, DELETE o MERGE con una cláusula OUTPUT, SQLRowCount no devolverá el número de filas afectadas hasta que se hayan consumido todas las filas del conjunto de resultados generado por la cláusula OUTPUT. Para consumir estas filas, llame a SQLFetch o SQLFetchScroll. SQLResultCols devolverá -1 hasta que se hayan consumido todas las filas de resultados. Después de que SQLFetch o SQLFetchScroll devuelva SQL_NO_DATA, la aplicación debe llamar a SQLRowCount para determinar el número de filas afectadas antes de llamar a SQLMoreResults para desplazarse al siguiente resultado.  
+ Cuando un [!INCLUDE[tsql](../../includes/tsql-md.md)] se ejecuta una instrucción INSERT, UPDATE, DELETE o MERGE con una cláusula OUTPUT, SQLRowCount no devolverá el recuento de filas afectadas hasta que se hayan consumido todas las filas del conjunto de resultados generado por la cláusula OUTPUT. Para consumir estas filas, llamar a SQLFetch o SQLFetchScroll. SQLResultCols devolverá -1 hasta que se hayan consumido todas las filas del resultado. Una vez SQLFetch o SQLFetchScroll devuelve SQL_NO_DATA, la aplicación debe llamar a SQLRowCount para determinar el número de filas afectadas antes de llamar a SQLMoreResults para desplazarse al siguiente resultado.  
   
 ## <a name="see-also"></a>Vea también  
- [SQLRowCount, función](http://go.microsoft.com/fwlink/?LinkId=59367)   
+ [Función SQLRowCount](http://go.microsoft.com/fwlink/?LinkId=59367)   
  [Detalles de implementación de la API de ODBC](../../relational-databases/native-client-odbc-api/odbc-api-implementation-details.md)  
   
   

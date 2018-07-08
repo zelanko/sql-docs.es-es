@@ -1,5 +1,5 @@
 ---
-title: La consulta MDX básica (MDX) | Documentos de Microsoft
+title: Consulta de MDX básica (MDX) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - queries [MDX], SELECT statement
 - queries [MDX], about queries
@@ -17,15 +17,15 @@ helpviewer_keywords:
 - cubes [Analysis Services], SELECT statement
 ms.assetid: 4fa5a95a-fec9-4584-875c-dbf030c53e82
 caps.latest.revision: 30
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 9ff060a0f570626052cf8577be60850e689566fc
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: a4bf03ddd4bfbc75a24f68bd4c046ea3eb9d58dd
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36104346"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37155196"
 ---
 # <a name="the-basic-mdx-query-mdx"></a>Consulta de MDX básica (MDX)
   La consulta de MDX (Expresiones multidimensionales) básica es la instrucción SELECT: la consulta utilizada con más frecuencia en MDX. Si comprende cómo una instrucción MDX SELECT debe especificar un conjunto de resultados, en qué consiste la sintaxis de la instrucción SELECT y cómo crear una consulta simple mediante la instrucción SELECT, tendrá un conocimiento sólido de cómo utilizar MDX para realizar consultas de datos multidimensionales.  

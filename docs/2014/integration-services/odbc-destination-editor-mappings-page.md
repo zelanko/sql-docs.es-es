@@ -1,5 +1,5 @@
 ---
-title: Editor de destino de ODBC (página asignaciones) | Documentos de Microsoft
+title: Editor de destino de ODBC (página asignaciones) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,20 +8,20 @@ ms.suite: ''
 ms.technology:
 - integration-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.ssis.designer.odbcdest.columns.f1
 ms.assetid: 8fa05dd4-316c-44ed-8383-e6e9ea1d3994
 caps.latest.revision: 5
-author: douglaslMS
+author: douglaslms
 ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: 643839367680f6c967610277f8abfb251513c2e0
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 7e97a2a74fdd0b764410340f87c5d10e02f06b20
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36104073"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37156556"
 ---
 # <a name="odbc-destination-editor-mappings-page"></a>Editor de destino de ODBC (página Asignaciones)
   Use la página **Asignaciones** del cuadro de diálogo **Editor de destino de ODBC** para asignar columnas de entrada a columnas de destino.  

@@ -1,5 +1,5 @@
 ---
-title: (Servidor de informes de modo nativo) de la implementación escalada | Documentos de Microsoft
+title: (Servidor de informes de modo nativo) de la implementación escalada | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,23 +8,23 @@ ms.suite: ''
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - SQL12.rsconfigtool.scaleoutdeployment.F1
 ms.assetid: 4df38294-6f9d-4b40-9f03-1f01c1f0700c
 caps.latest.revision: 8
 author: markingmyname
 ms.author: maghan
-manager: jhubbard
-ms.openlocfilehash: d995052fe279fcc354a3293d881714bb3ec4bcb4
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 8038c9cbbce2eeb68b6e23b91fba1d7b0a2e708e
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36102671"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37151806"
 ---
 # <a name="scale-out-deployment-native-mode-report-server"></a>Implementación escalada horizontalmente (servidor de informes en modo nativo)
-  Use la **implementación escalada** página [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] Configuration Manager para ver el estado de inicialización de una implementación escalada o para unir un servidor de informes a una implementación escalada. *Implementación escalada* se refiere a dos o más instancias de un servidor de informes que comparten una sola base de datos de servidor de informes.  
+  Use la **implementación escalada** página [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] Configuration Manager para ver el estado de inicialización para una implementación escalada o para unir un servidor de informes a una implementación escalada. *Implementación escalada* se refiere a dos o más instancias de un servidor de informes que comparten una sola base de datos de servidor de informes.  
   
  [!INCLUDE[applies](../../includes/applies-md.md)] [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] .  
   
@@ -38,7 +38,7 @@ ms.locfileid: "36102671"
   
  Para configurar una implementación escalada, comience conectando una o más instancias del servidor de informes a la misma base de datos. Una vez instaladas todas las instancias, conéctese al primer servidor de informes y, a continuación, use la página Implementación escalada para unir cada instancia adicional. Solo un servidor de informes que ya se haya inicializado para utilizar una base de datos puede inicializar nodos adicionales.  
   
- Para abrir esta página, inicie la [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] Configuration Manager y seleccione **implementación escalada** en el panel de navegación. Para obtener más información, vea [Administrador de configuración de Reporting Services &#40;modo nativo&#41;](../../../2014/sql-server/install/reporting-services-configuration-manager-native-mode.md).  
+ Para abrir esta página, inicie el [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] Configuration Manager y seleccione **implementación escalada** en el panel de navegación. Para obtener más información, vea [Administrador de configuración de Reporting Services &#40;modo nativo&#41;](../../../2014/sql-server/install/reporting-services-configuration-manager-native-mode.md).  
   
 ## <a name="options"></a>Opciones  
  **Nombre de SQL Server**  

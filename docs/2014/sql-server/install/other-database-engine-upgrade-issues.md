@@ -1,5 +1,5 @@
 ---
-title: Otros problemas de actualización de motor de base de datos | Documentos de Microsoft
+title: Otros problemas de actualización de motor de base de datos | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,20 +8,20 @@ ms.suite: ''
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - Database Engine [SQL Server], upgrading
 ms.assetid: 78a1d8e8-fa97-476f-8777-84617d145340
 caps.latest.revision: 42
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: b1c74bf4ffd8cf0eba5cb853cccda80cc0b5d662
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: mashamsft
+ms.author: mathoma
+manager: craigg
+ms.openlocfilehash: 1fda230ed04ddcac6d4c7c8bb52b73762c23b90f
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36103475"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37150006"
 ---
 # <a name="other-database-engine-upgrade-issues"></a>Otros problemas de actualización del motor de base de datos
   La versión actual del Asesor de actualizaciones no podrá detectar los siguientes problemas de actualización. Examine los problemas enumerados a continuación para evaluar su posible impacto en los sistemas.  
@@ -76,7 +76,7 @@ ms.locfileid: "36103475"
  MERGE es ahora una palabra clave totalmente reservada. Las aplicaciones ya no pueden tener objetos (tablas, columnas, etc.) denominados MERGE.  
   
 ## <a name="rename-cdc-schema"></a>Cambiar el nombre del esquema CDC  
- Hay un nombre de esquema denominado CDC. Este nombre de esquema no se puede utilizar si **captura de datos modificados** está habilitada para la base de datos.  
+ Hay un nombre de esquema denominado CDC. Este nombre de esquema no puede estar en utilizado si **captura de datos modificados** está habilitada para la base de datos.  
   
  Debe quitar el esquema CDC antes de habilitar **captura de datos modificados** para la base de datos. Este paso se puede hacer antes o después de la actualización. Para eliminar el esquema, siga los pasos que se detallan a continuación:  
   
@@ -89,6 +89,6 @@ ms.locfileid: "36103475"
 4.  Elimine el esquema CDC utilizando DROP SCHEMA.  
   
 ## <a name="see-also"></a>Vea también  
- [Problemas de actualización de motor de base de datos](../../../2014/sql-server/install/database-engine-upgrade-issues.md)  
+ [Problemas de actualización del motor de la base de datos](../../../2014/sql-server/install/database-engine-upgrade-issues.md)  
   
   

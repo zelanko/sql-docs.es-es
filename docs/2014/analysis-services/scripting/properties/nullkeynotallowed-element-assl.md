@@ -1,5 +1,5 @@
 ---
-title: Elemento NullKeyNotAllowed (ASSL) | Documentos de Microsoft
+title: Elemento NullKeyNotAllowed (ASSL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -22,15 +22,15 @@ helpviewer_keywords:
 - NullKeyNotAllowed element
 ms.assetid: 4ece99eb-954b-4da1-add4-dd9efd5fff0a
 caps.latest.revision: 35
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 235c76fb2b8cad1682fab97f36cb1867d7c82c38
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 6e514e1258fc8a73be70195641525f400021a002
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36104121"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37165276"
 ---
 # <a name="nullkeynotallowed-element-assl"></a>Elemento NullKeyNotAllowed (ASSL)
   Determina cómo el [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] motor de procesamiento controla un error de clave null detectado durante el procesamiento.  
@@ -62,7 +62,7 @@ ms.locfileid: "36104121"
 |Elementos secundarios|None|  
   
 ## <a name="remarks"></a>Notas  
- Los errores de clave NULL se producen cuando se encuentra un valor NULL en una columna de clave en la que no se permiten valores NULL, lo que provoca que se descarte el registro durante el procesamiento. Sin embargo, este error se produce solo si la [NullProcessing](nullprocessing-element-assl.md) (elemento) para la `DataItem` antecesor de la `ErrorConfiguration` elemento primario se establece en *Error*.  
+ Los errores de clave NULL se producen cuando se encuentra un valor NULL en una columna de clave en la que no se permiten valores NULL, lo que provoca que se descarte el registro durante el procesamiento. Sin embargo, este error se produce solo si el [NullProcessing](nullprocessing-element-assl.md) (elemento) para el `DataItem` antecesor de la `ErrorConfiguration` elemento primario se establece en *Error*.  
   
  El valor de este elemento se limita a una de las cadenas enumeradas en la tabla siguiente.  
   

@@ -1,5 +1,5 @@
 ---
-title: Columnas de datos de eventos de comandos | Documentos de Microsoft
+title: Columnas de datos de eventos de comandos | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,20 +8,20 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - Command Events event category
 ms.assetid: 7169f1e2-c6be-4d8c-b147-25719b84bc2c
 caps.latest.revision: 35
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 290c9ca23a71c43d16f29e0bd0e6d1f595b6df14
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 2e38ee67b5d8e4f0926ff93c45985b6246d8693f
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36103159"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37169536"
 ---
 # <a name="command-events-data-columns"></a>Columnas de datos de eventos de comandos
   En la tabla siguiente se enumeran las columnas de datos para cada clase de eventos de la categoría de eventos **Eventos de comandos** .  

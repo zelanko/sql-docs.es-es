@@ -1,5 +1,5 @@
 ---
-title: Activar el servidor de informes y Power View Integration Features in SharePoint | Documentos de Microsoft
+title: Activar el servidor de informes y Power View Integration Features in SharePoint | Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -8,29 +8,29 @@ ms.suite: ''
 ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: c7f64a54-c555-4d31-bf99-3abe57dc8626
 caps.latest.revision: 5
 author: markingmyname
 ms.author: maghan
-manager: mblythe
-ms.openlocfilehash: 3f9d0adde23d8340bd5e10ed2a9c22c8aa425b52
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 45266427e7946e62a758ce994531126324dca39d
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36103507"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37155856"
 ---
 # <a name="activate-the-report-server-and-power-view-integration-features-in-sharepoint"></a>Activar las características de integración del servidor de informes y Power View en SharePoint
   Las características de colección de sitios de [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] se generan normalmente de forma predeterminada una vez se ha instalado el complemento de [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssRSCurrent](../includes/ssrscurrent-md.md)] para productos de SharePoint. En algunas situaciones, tendrá que activar las características de forma manual.  
   
- Si instala el complemento de [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] para productos de SharePoint 2010 después de instalar el producto de SharePoint, la característica de integración del servidor de informes y la característica de integración de la vista avanzada se activarán únicamente para colecciones de sitios raíz. Para las demás colecciones de sitios, deberá activar manualmente las características. Por ejemplo, si tiene una colección de sitios **http://[my nombre de servidor] / Sites / [nombre de colección de sitios]** deberá activar manualmente la [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] características de colección de sitios.  
+ Si instala el complemento de [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] para productos de SharePoint 2010 después de instalar el producto de SharePoint, la característica de integración del servidor de informes y la característica de integración de la vista avanzada se activarán únicamente para colecciones de sitios raíz. Para las demás colecciones de sitios, deberá activar manualmente las características. Por ejemplo, si tiene una colección de sitios **http://[my nombre de servidor] / Sites / [nombre de la colección de sitios]** deberá activar manualmente la [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] características de colección de sitios.  
   
- Cuando no hay ninguna colección de sitios raíz, la [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] complemento registrará un mensaje similar al siguiente.  
+ Cuando no hay ninguna colección de sitios raíz, el [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] complemento registrará un mensaje similar al siguiente.  
   
  “La aplicación web 80 de Sharepoint no tiene colección de sitios raíz”  
   
- El mensaje se encuentra en el registro de instalación del complemento, “RS_SP_#.log”, donde # es un número que se incrementa. El archivo de registro se encuentra en la carpeta Temp de los usuarios actuales, por ejemplo: C:\Usuarios\\[nombre del usuario]\AppData\Local\Temp. Para obtener más información sobre las opciones de registro con el complemento, vea [instalar o desinstalar el complemento de Reporting Services para SharePoint &#40;SharePoint 2010 y SharePoint 2013&#41;](install-windows/install-or-uninstall-the-reporting-services-add-in-for-sharepoint.md).  
+ El mensaje se encuentra en el registro de instalación del complemento, “RS_SP_#.log”, donde # es un número que se incrementa. El archivo de registro se encuentra en la carpeta Temp de los usuarios actuales, por ejemplo: C:\Usuarios\\[nombre del usuario]\AppData\Local\Temp. Para obtener más información sobre las opciones de registro con el complemento, vea [instalar o desinstalar el complemento Reporting Services para SharePoint &#40;SharePoint 2010 y SharePoint 2013&#41;](install-windows/install-or-uninstall-the-reporting-services-add-in-for-sharepoint.md).  
   
  En este tema:  
   

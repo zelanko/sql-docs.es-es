@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: a15a96c3-7d2c-433e-a440-4ea051e967a9
 caps.latest.revision: 6
-author: douglaslM
-ms.author: douglasl
-manager: mblythe
-ms.openlocfilehash: b20cdba15d9b7b98e6fe3592fce350edece600be
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: maggiesMSFT
+ms.author: maggies
+manager: craigg
+ms.openlocfilehash: 9105abf7bc25b4327d1c3d75a214cb667850a7eb
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36102668"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37179232"
 ---
 # <a name="set-and-configure-measurement-units-report-builder-and-ssrs"></a>Establecer y configurar unidades de medida (Generador de informes y SSRS)
   Los indicadores proporcionan dos unidades de medida: porcentaje y numérico. De forma predeterminada, los indicadores se configuran para usar porcentajes como unidad de medida. Esto significa que un intervalo de porcentajes determina los valores de indicador asignados a cada icono del indicador. Los intervalos de porcentajes están divididos uniformemente entre los iconos del conjunto de indicadores. Cada icono representa un estado del indicador. Puede cambiar los porcentajes para cada icono en el conjunto de indicadores especificando porcentajes inicial y final diferentes. Los indicadores también detectan automáticamente los valores máximo y mínimo de los datos.  

@@ -1,5 +1,5 @@
 ---
-title: Seleccionar la dimensión de cubo de origen (Asistente para minería de datos) | Documentos de Microsoft
+title: Seleccione la dimensión de cubo de origen (Asistente para minería de datos) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,20 +8,20 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.dm.dmwizard.selectsourcecube.f1
 ms.assetid: 556e216b-5e21-4160-967d-4c57591fbab4
 caps.latest.revision: 26
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: ddd4affa954cf080cec3ad1ca37df82d494221e6
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 613847dca4d6113a8acfc8079ebc1e7a97ef3311
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36102931"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37192487"
 ---
 # <a name="select-the-source-cube-dimension-data-mining-wizard"></a>Seleccionar la dimensión de cubo de origen (Asistente para minería de datos)
   Utilice la página **Seleccionar la dimensión de cubo de origen** para seleccionar la dimensión desde el cubo que contiene los casos que desea analizar. Por ejemplo, si crea un modelo que analiza el comportamiento adquisitivo de los clientes basándose en los datos demográficos, seleccionaría la dimensión de cliente, que suele contener un registro único para cada cliente y diferentes atributos que representan datos demográficos, como el género, la ubicación o los ingresos. Más adelante en el asistente tendrá la oportunidad de agregar una tabla relacionada con esta tabla de casos: por ejemplo, puede agregar una tabla anidada que muestre los productos que ha comprado el cliente.  
@@ -43,7 +43,7 @@ ms.locfileid: "36102931"
  Si la dimensión que elige no contiene todos los atributos relacionados que necesita para crear el modelo de minería de datos, es posible que deba modificarla. Para más información, vea [Definir dimensiones de base de datos](multidimensional-models/define-database-dimensions.md).  
   
 ## <a name="see-also"></a>Vea también  
- [Ayuda F1 del Asistente para minería de datos &#40;Analysis Services: minería de datos&#41;](data-mining-wizard-f1-help-analysis-services-data-mining.md)   
+ [Asistente para la Ayuda de F1 de minería de datos &#40;Analysis Services - minería de datos&#41;](data-mining-wizard-f1-help-analysis-services-data-mining.md)   
  [Crear la estructura de minería de datos &#40;Asistente para minería de datos&#41;](create-the-data-mining-structure-data-mining-wizard.md)   
  [Seleccione la clave de caso &#40;Asistente para minería de datos&#41;](select-the-case-key-data-mining-wizard.md)  
   

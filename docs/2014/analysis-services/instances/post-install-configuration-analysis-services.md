@@ -1,5 +1,5 @@
 ---
-title: Posterior a la instalación de configuración (Analysis Services) | Documentos de Microsoft
+title: Posterior a la instalación de configuración (Analysis Services) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/14/2017
 ms.prod: sql-server-2014
@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 7f4417b2-0efb-4361-a79e-fa56e43ee054
 caps.latest.revision: 7
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: df6b8362ed63e5b3ec2b339478b9398fd8a65db8
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 1c4f7dea428950957d267c929e36627f40e0b7d9
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36104600"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37151656"
 ---
 # <a name="post-install-configuration-analysis-services"></a>Configuración posterior a la instalación (Analysis Services)
   Después de instalar Analysis Services, se necesita cierta configuración adicional para que el servidor sea totalmente operativo y esté disponible para su uso general. En esta sección se presentan las tareas adicionales que completan la instalación. Según los requisitos de conexión, puede ser necesario configurar también la autenticación (vea [Conectar a Analysis Services](connect-to-analysis-services.md)).  
@@ -47,6 +47,6 @@ ms.locfileid: "36104600"
  [Instalación de SQL Server 2014](../../../2014/database-engine/install-windows/installation-for-sql-server.md)   
  [Instalar Analysis Services en el modo de minería de datos y multidimensional](../../sql-server/install/install-analysis-services-in-multidimensional-and-data-mining-mode.md)   
  [Instalar Analysis Services en modo Tabular](install-windows/install-analysis-services.md)   
- [PowerPivot para SharePoint 2013](install-windows/install-analysis-services-in-power-pivot-mode.md)  
+ [Instalación de PowerPivot para SharePoint 2013](install-windows/install-analysis-services-in-power-pivot-mode.md)  
   
   

@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - permissions [Reporting Services], SharePoint integrated mode
 - SharePoint integration [Reporting Services], permissions
@@ -18,13 +18,13 @@ ms.assetid: 0eb2f34a-3643-4b03-81c2-5741ba7ebefd
 caps.latest.revision: 12
 author: markingmyname
 ms.author: maghan
-manager: mblythe
-ms.openlocfilehash: 5142c52b2a6a698e379957113d9540537282d80f
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 2c106d3d086366146c0ed32dca78533238e81ed2
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36103728"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37183852"
 ---
 # <a name="granting-permissions-on-report-server-items-on-a-sharepoint-site"></a>Conceder permisos sobre elementos del servidor de informes en un sitio de SharePoint
   [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[SPF2010](../../includes/spf2010-md.md)] ofrece características de seguridad integradas que puede usar para conceder acceso a los elementos del servidor de informes a los que accede desde sitios y bibliotecas de SharePoint. Si ya asignó permisos a los usuarios, dichos usuarios tendrán acceso a los elementos y las operaciones del servidor de informes inmediatamente después de configurarse la integración entre [!INCLUDE[SPF2010](../../includes/spf2010-md.md)] y un servidor de informes. Puede usar los permisos existentes para cargar definiciones de informe y otros documentos, ver informes, crear suscripciones y administrar elementos.  
@@ -33,7 +33,7 @@ ms.locfileid: "36103728"
   
 1.  En la documentación del producto para [!INCLUDE[SPF2010](../../includes/spf2010-md.md)], lea la sección acerca de la configuración de seguridad predeterminada de los grupos estándar de SharePoint para obtener información acerca de cómo administrar los permisos y el acceso de usuario.  
   
-2.  Revise la lista de permisos que afectan de forma específica a los elementos y las operaciones del servidor de informes. Para obtener más información, consulte [usar seguridad integrada de Windows SharePoint Services para los elementos del servidor de informes](use-built-in-security-in-windows-sharepoint-services-for-report-server-items.md).  
+2.  Revise la lista de permisos que afectan de forma específica a los elementos y las operaciones del servidor de informes. Para obtener más información, consulte [usar la seguridad integrada de Windows SharePoint Services para los elementos del servidor de informes](use-built-in-security-in-windows-sharepoint-services-for-report-server-items.md).  
   
 3.  Asigne cuentas de usuario y de grupo a los grupos de SharePoint predefinidos.  
   
@@ -74,7 +74,7 @@ ms.locfileid: "36103728"
   
  Los grupos de SharePoint tienen niveles de permiso que proporcionan un acceso inmediato a diversas operaciones del servidor de informes. Si la configuración de seguridad integrada no proporciona el nivel de acceso necesario, puede crear grupos o niveles de permiso personalizados.  
   
- Para obtener más información acerca de qué informes se admiten las operaciones del servidor a través de las características de seguridad predeterminadas, vea [usar seguridad integrada de Windows SharePoint Services para los elementos del servidor de informes](use-built-in-security-in-windows-sharepoint-services-for-report-server-items.md).  
+ Para obtener más información sobre qué informes se admiten las operaciones del servidor a través de las características de seguridad predeterminadas, vea [usar la seguridad integrada de Windows SharePoint Services para los elementos del servidor de informes](use-built-in-security-in-windows-sharepoint-services-for-report-server-items.md).  
   
  Para usar las características de seguridad integradas, debe asignar cuentas de usuario o de grupo de Windows a los grupos de SharePoint. Excepto en el caso del administrador del servidor y el propietario del sitio del portal, con acceso automático a [!INCLUDE[SPF2010](../../includes/spf2010-md.md)] una vez instalado el software, se deben conceder permisos a los demás usuarios para que tengan acceso al servidor.  
   

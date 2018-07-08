@@ -1,12 +1,12 @@
 ---
-title: Procesar resultados del procedimiento almacenado | Documentos de Microsoft
+title: Procesar resultados del procedimiento almacenado | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
 ms.reviewer: ''
 ms.suite: sql
-ms.technology: connectivity
+ms.technology: native-client
 ms.tgt_pltfrm: ''
 ms.topic: reference
 helpviewer_keywords:
@@ -18,12 +18,12 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
-ms.openlocfilehash: 5de453789bd4d3659f085dfce7c1160a7e5688d4
-ms.sourcegitcommit: a78fa85609a82e905de9db8b75d2e83257831ad9
+ms.openlocfilehash: 61d079bbc9bb7537ac50430a2659223c51cab87f
+ms.sourcegitcommit: f8ce92a2f935616339965d140e00298b1f8355d7
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/18/2018
-ms.locfileid: "35695186"
+ms.lasthandoff: 07/03/2018
+ms.locfileid: "37429864"
 ---
 # <a name="processing-stored-procedure-results"></a>Procesar resultados de procedimientos almacenados
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -39,7 +39,7 @@ ms.locfileid: "35695186"
   
 -   El procedimiento puede tener un código de retorno de tipo entero.  
   
- Las aplicaciones deben ser capaces de administrar todos estos resultados de los procedimientos almacenados. La instrucción CALL o EXECUTE debería incluir los marcadores de parámetros para el código de retorno y los parámetros de salida. Use [SQLBindParameter](../../relational-databases/native-client-odbc-api/sqlbindparameter.md) para enlazarlos todos como parámetros de salida y el [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] controlador ODBC Native Client transferirá los valores de salida a las variables enlazadas. Parámetros de salida y códigos de retorno son los últimos elementos que se devuelve al cliente por [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]; no se devuelven a la aplicación hasta que [SQLMoreResults](../../relational-databases/native-client-odbc-api/sqlmoreresults.md) devuelve SQL_NO_DATA.  
+ Las aplicaciones deben ser capaces de administrar todos estos resultados de los procedimientos almacenados. La instrucción CALL o EXECUTE debería incluir los marcadores de parámetros para el código de retorno y los parámetros de salida. Use [SQLBindParameter](../../relational-databases/native-client-odbc-api/sqlbindparameter.md) para enlazarlos todos como parámetros de salida y el [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] controlador ODBC de Native Client transferirá los valores de salida a las variables enlazadas. Parámetros de salida y devolver los códigos son los últimos elementos que se devuelve al cliente por [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]; no se devuelven a la aplicación hasta que [SQLMoreResults](../../relational-databases/native-client-odbc-api/sqlmoreresults.md) devuelve SQL_NO_DATA.  
   
  ODBC no permite enlazar parámetros de cursor [!INCLUDE[tsql](../../includes/tsql-md.md)]. Puesto que todos los parámetros de salida se deben enlazar antes de ejecutar un procedimiento, las aplicaciones ODBC no pueden llamar a ningún procedimiento almacenado [!INCLUDE[tsql](../../includes/tsql-md.md)] que contenga un parámetro de cursor de salida.  
   

@@ -1,5 +1,5 @@
 ---
-title: Distribuciones de columnas (minería de datos) | Documentos de Microsoft
+title: Distribuciones de columnas (minería de datos) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - normal distribution type [data mining]
 - uniform distribution type [data mining]
@@ -18,15 +18,15 @@ helpviewer_keywords:
 - distributions [data mining]
 ms.assetid: 87e700de-32be-4bc8-b01d-ba4ee1ab48de
 caps.latest.revision: 32
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 5170f490f6e6940b2d5bf4d8f7de7880f88d2e7e
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 6ee97f2b92aa1d98317ac9f420d6065340a60dba
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36103932"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37189432"
 ---
 # <a name="column-distributions-data-mining"></a>Distribuciones de columnas (minería de datos)
   En [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]puede definir distribuciones de columnas en una estructura de minería de datos para modificar la forma en que los algoritmos procesan los datos de estas columnas cuando se crean modelos de minería de datos. Para algunos algoritmos, resulta útil definir la distribución de las columnas continuas antes de procesar el modelo, si se sabe que las columnas contienen distribuciones de valores comunes. Si no define las distribuciones, los modelos de minería de datos resultantes podrían generar predicciones menos precisas que si se definieran las distribuciones porque los algoritmos disponen de menos información con la que interpretar los datos.  
@@ -41,7 +41,7 @@ ms.locfileid: "36103932"
  `Log Normal`  
  Los valores de la columna continua forman un histograma, donde la curva se alarga en el extremo superior y se desvía hacia el extremo inferior.  
   
- ![Histograma con distribución normal del registro](../media/log-normal-distribution.gif "histograma con distribución normal del registro")  
+ ![Histograma con distribución log-normal](../media/log-normal-distribution.gif "histograma con distribución log-normal")  
   
  `Uniform`  
  Los valores de la columna continua forman una curva plana, en la que todos los valores tienen la misma probabilidad.  
@@ -52,7 +52,7 @@ ms.locfileid: "36103932"
   
 ## <a name="see-also"></a>Vea también  
  [Tipos de contenido &#40;minería de datos&#41;](content-types-data-mining.md)   
- [Estructuras de minería de datos &#40;Analysis Services: minería de datos&#41;](mining-structures-analysis-services-data-mining.md)   
+ [Estructuras de minería de datos &#40;Analysis Services - minería de datos&#41;](mining-structures-analysis-services-data-mining.md)   
  [Métodos de discretización &#40;minería de datos&#41;](discretization-methods-data-mining.md)   
  [Distribuciones &#40;DMX&#41;](/sql/dmx/distributions-dmx)   
  [Columnas de la estructura de minería de datos](mining-structure-columns.md)  

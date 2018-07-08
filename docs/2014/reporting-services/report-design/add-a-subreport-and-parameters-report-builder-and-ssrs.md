@@ -8,28 +8,28 @@ ms.suite: ''
 ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - "10093"
 - sql12.rtp.rptdesigner.subreportproperties.general.f1
 ms.assetid: 94f960f8-a629-4f1e-8277-c3b8f0680d98
 caps.latest.revision: 8
-author: douglaslM
-ms.author: douglasl
-manager: mblythe
-ms.openlocfilehash: f99f7baef82824a4af4c9520825043523bb8255d
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: maggiesMSFT
+ms.author: maggies
+manager: craigg
+ms.openlocfilehash: 05784b220a590166b00605ff921508979e633f64
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36102665"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37179542"
 ---
 # <a name="add-a-subreport-and-parameters-report-builder-and-ssrs"></a>Agregar un subinforme y parámetros (Generador de informes y SSRS)
   Agregue subinformes a un informe cuando desee crear un informe principal que actúe como contenedor para varios informes relacionados. Un subinforme es una referencia a otro informe. Para relacionar informes mediante valores de datos (por ejemplo, para que varios informes muestren datos del mismo cliente), debe diseñar un informe con parámetros (por ejemplo, un informe que muestre los detalles de un cliente concreto) como el subinforme. Al agregar un subinforme al informe principal, puede especificar los parámetros que se deben pasar al subinforme.  
   
  También puede agregar subinformes a filas o columnas dinámicas de una tabla o matriz. Cuando se procesa el informe principal, se procesa el subinforme para cada fila. En este caso, considere la posibilidad de lograr el efecto deseado usando regiones de datos o regiones de datos anidadas.  
   
- Para agregar un subinforme a un informe, primero debe crear el informe que actuará como el subinforme. Para obtener más información acerca de cómo crear el subinforme, vea [subinformes &#40;el generador de informes y SSRS&#41;](subreports-report-builder-and-ssrs.md).  
+ Para agregar un subinforme a un informe, primero debe crear el informe que actuará como el subinforme. Para obtener más información sobre la creación del subinforme, vea [subinformes &#40;generador de informes y SSRS&#41;](subreports-report-builder-and-ssrs.md).  
   
 > [!NOTE]  
 >  [!INCLUDE[ssRBRDDup](../../includes/ssrbrddup-md.md)]  
@@ -76,7 +76,7 @@ ms.locfileid: "36102665"
      Cambiar el orden de un parámetro de subinforme no afecta al procesamiento del subinforme.  
   
 ## <a name="see-also"></a>Vea también  
- [Subinformes &#40;el generador de informes SSRS&#41;](subreports-report-builder-and-ssrs.md)   
+ [Los subinformes &#40;generador de informes y SSRS&#41;](subreports-report-builder-and-ssrs.md)   
  [Comportamientos de la representación &#40;Generador de informes y SSRS&#41;](rendering-behaviors-report-builder-and-ssrs.md)  
   
   

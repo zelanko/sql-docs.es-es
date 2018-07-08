@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - replication
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - replication [SQL Server], schema changes
 - snapshot replication [SQL Server], replicating schema changes
@@ -18,15 +18,15 @@ helpviewer_keywords:
 - publishing [SQL Server replication], schema changes
 ms.assetid: 926c88d7-a844-402f-bcb9-db49e5013b69
 caps.latest.revision: 71
-author: craigg-msft
-ms.author: craigg
-manager: jhubbard
-ms.openlocfilehash: c5fdf15e3038f865bb123f3dd79321d036813281
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: MashaMSFT
+ms.author: mathoma
+manager: craigg
+ms.openlocfilehash: 4c84487775fb5eb3839910fd800489927edcc77f
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36102861"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37172736"
 ---
 # <a name="make-schema-changes-on-publication-databases"></a>Realizar cambios de esquema en bases de datos de publicaciones
   La replicación admite una gran variedad de cambios en el esquema de objetos publicados. Cuando se realiza cualquiera de los siguientes cambios de esquema en el objeto publicado apropiado en un publicador de [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] , dicho cambio se propaga de manera predeterminada a todos los suscriptores de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] :  
@@ -61,7 +61,7 @@ ms.locfileid: "36102861"
   
 -   Los cambios de esquema están sujetos a las restricciones impuestas por [!INCLUDE[tsql](../../../includes/tsql-md.md)]. Por ejemplo, ALTER TABLE no permite aplicar ALTER a las columnas de clave principal.  
   
--   La asignación de tipo de datos solo se realiza para la instantánea inicial. Los cambios de esquema no se asignan a versiones anteriores de tipos de datos. Por ejemplo, si la instrucción `ALTER TABLE ADD datetime2 column` se utiliza en [!INCLUDE[ssSQL11](../../../includes/sssql11-md.md)], el tipo de datos no se traduce a `nvarchar` para [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)] los suscriptores. En algunos casos, los cambios de esquema se bloquean en el publicador.  
+-   La asignación de tipo de datos solo se realiza para la instantánea inicial. Los cambios de esquema no se asignan a versiones anteriores de tipos de datos. Por ejemplo, si la instrucción `ALTER TABLE ADD datetime2 column` se usa en [!INCLUDE[ssSQL11](../../../includes/sssql11-md.md)], el tipo de datos no se traduce a `nvarchar` para [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)] los suscriptores. En algunos casos, los cambios de esquema se bloquean en el publicador.  
   
 -   Si una publicación está configurada para permitir la propagación de los cambios de esquema, éstos se propagarán independientemente de cómo esté establecida la opción de esquema relacionada para un artículo de la publicación. Por ejemplo, si elige no replicar las restricciones de clave externa para un artículo de la tabla y después emite un comando ALTER TABLE que agrega una clave externa a la tabla en el publicador, la clave externa se agregará a la tabla en el suscriptor. Para evitarlo, deshabilite la propagación de los cambios de esquema antes de emitir el comando ALTER TABLE.  
   

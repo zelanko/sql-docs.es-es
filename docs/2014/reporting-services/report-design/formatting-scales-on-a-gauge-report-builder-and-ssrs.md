@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 0dd65945-3b74-46a6-a794-b33585d565d2
 caps.latest.revision: 7
-author: douglaslM
-ms.author: douglasl
-manager: mblythe
-ms.openlocfilehash: 8b269484be4445888a662b2da2745ecb7a4e1002
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: maggiesMSFT
+ms.author: maggies
+manager: craigg
+ms.openlocfilehash: 43a6d53dd099589db67765ecd7ae6027d0b532bf
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36103255"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37159986"
 ---
 # <a name="formatting-scales-on-a-gauge-report-builder-and-ssrs"></a>Aplicar formato a las escalas de un medidor (Generador de informes y SSRS)
   Una escala del medidor es el intervalo de números, comprendidos entre un mínimo y un máximo, que se muestran en un medidor. Normalmente, una escala del medidor contiene las etiquetas del medidor y las marcas de graduación que proporcionan una lectura precisa de lo que representa el puntero del medidor. Una escala del medidor generalmente está asociada a uno o más punteros del medidor. Puede haber más de una escala en el mismo medidor.  
@@ -89,7 +89,7 @@ ms.locfileid: "36103255"
 -   1% del alto o del ancho del medidor, el que sea más pequeño, en un medidor lineal.  
   
 ## <a name="see-also"></a>Vea también  
- [Dar formato a intervalos en un medidor &#40;el generador de informes SSRS&#41;](formatting-ranges-on-a-gauge-report-builder-and-ssrs.md)   
+ [Aplicar formato a los intervalos de un medidor &#40;generador de informes y SSRS&#41;](formatting-ranges-on-a-gauge-report-builder-and-ssrs.md)   
  [Aplicar formato a los punteros de un medidor &#40;Generador de informes y SSRS&#41;](formatting-pointers-on-a-gauge-report-builder-and-ssrs.md)   
  [Aplicar formato de fecha o de moneda a las etiquetas de los ejes &#40;Generador de informes y SSRS&#41;](format-axis-labels-as-dates-or-currencies-report-builder-and-ssrs.md)   
  [Aplicar formato a las etiquetas de los ejes de un gráfico &#40;Generador de informes y SSRS&#41;](formatting-axis-labels-on-a-chart-report-builder-and-ssrs.md)   

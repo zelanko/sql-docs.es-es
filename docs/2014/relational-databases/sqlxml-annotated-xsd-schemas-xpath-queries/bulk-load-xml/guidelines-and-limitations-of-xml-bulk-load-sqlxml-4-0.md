@@ -1,5 +1,5 @@
 ---
-title: Instrucciones y limitaciones de XML realizar la carga masiva (SQLXML 4.0) | Documentos de Microsoft
+title: Instrucciones y limitaciones de XML de realizar la carga masiva (SQLXML 4.0) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -15,15 +15,15 @@ helpviewer_keywords:
 - bulk load [SQLXML], about bulk load
 ms.assetid: c5885d14-c7c1-47b3-a389-455e99a7ece1
 caps.latest.revision: 25
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: 7499332a73117dc75137915f9023f08eb79a9d8d
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: douglaslMS
+ms.author: douglasl
+manager: craigg
+ms.openlocfilehash: 22ef1e64e2c8cf3dc1af65fde51c7b12107f1916
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36103477"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37149366"
 ---
 # <a name="guidelines-and-limitations-of-xml-bulk-load-sqlxml-40"></a>Instrucciones y limitaciones de la carga masiva XML (SQLXML 4.0)
   Antes de usar la carga masiva XML, debe familiarizarse con las siguientes limitaciones e instrucciones:  
@@ -40,9 +40,9 @@ ms.locfileid: "36103477"
   
 -   Se omite cualquier información de prólogo XML.  
   
-     Carga masiva XML omite toda la información antes y después de la \<raíz > elemento en el documento XML. Por ejemplo, la carga masiva XML omite todas las declaraciones XML, definiciones DTD internas, referencias DTD externas, todos los comentarios, etc.  
+     Carga masiva XML omite toda la información antes y después el \<raíz > elemento en el documento XML. Por ejemplo, la carga masiva XML omite todas las declaraciones XML, definiciones DTD internas, referencias DTD externas, todos los comentarios, etc.  
   
--   Si tiene un esquema de asignación que define una relación de clave principal y clave externa entre dos tablas (como Customer y CustOrder), la tabla con la clave principal debe describirse en primer lugar en el esquema. La tabla con la columna de clave externa debe aparecer posteriormente en el esquema. La razón de ello es que el orden en que se identifican las tablas en el esquema es el orden en que se usa para cargarlos en la base de datos. Por ejemplo, el esquema XDR siguiente generará un error cuando se utiliza en la carga masiva XML porque el  **\<orden >** descrito elemento antes de la  **\<cliente >** elemento. La columna CustomerID de CustOrder es una columna de clave externa que hace referencia a la columna de clave principal CustomerID de la tabla Cust.  
+-   Si tiene un esquema de asignación que define una relación de clave principal y clave externa entre dos tablas (como Customer y CustOrder), la tabla con la clave principal debe describirse en primer lugar en el esquema. La tabla con la columna de clave externa debe aparecer posteriormente en el esquema. La razón de esto es que el orden en que se identifican las tablas en el esquema es el orden en que se usa para cargarlos en la base de datos. Por ejemplo, el esquema XDR siguiente generará un error cuando se usa en la carga masiva XML porque el  **\<orden >** se describe el elemento antes de la  **\<cliente >** elemento. La columna CustomerID de CustOrder es una columna de clave externa que hace referencia a la columna de clave principal CustomerID de la tabla Cust.  
   
     ```  
     <?xml version="1.0" ?>  
@@ -82,7 +82,7 @@ ms.locfileid: "36103477"
   
 -   Si el esquema no especifica las columnas de desbordamiento mediante la anotación `sql:overflow-field`, la carga masiva XML omite todos los datos presentes en el documento XML que no se describen en el esquema de asignación.  
   
-     La carga masiva XML aplica el esquema de asignación especificado cada vez que encuentra etiquetas conocidas en el flujo de datos XML. Omite los datos presentes en el documento XML que no se describen en el esquema. Por ejemplo, suponga que tiene un esquema de asignación que describe un  **\<cliente >** elemento. El archivo de datos XML tiene un  **\<AllCustomers >** raíz etiqueta (que no se describe en el esquema) que incluye todos los  **\<cliente >** elementos:  
+     La carga masiva XML aplica el esquema de asignación especificado cada vez que encuentra etiquetas conocidas en el flujo de datos XML. Omite los datos presentes en el documento XML que no se describen en el esquema. Por ejemplo, suponga que tiene un esquema de asignación que describe un  **\<cliente >** elemento. El archivo de datos XML tiene una  **\<AllCustomers >** raíz de etiqueta (que no se describe en el esquema) que abarque todos los  **\<cliente >** elementos:  
   
     ```  
     <AllCustomers>  
@@ -92,7 +92,7 @@ ms.locfileid: "36103477"
     </AllCustomers>  
     ```  
   
-     En este caso, carga masiva XML omite el  **\<AllCustomers >** elemento y comienza la asignación en el  **\<cliente >** elemento. La carga masiva XML omite los elementos que no se describen en el esquema pero que están presentes en el documento XML.  
+     En este caso, la carga masiva XML omite el  **\<AllCustomers >** elemento y comienza la asignación en el  **\<cliente >** elemento. La carga masiva XML omite los elementos que no se describen en el esquema pero que están presentes en el documento XML.  
   
      Considere la posibilidad de otro archivo de datos de origen XML que contiene  **\<orden >** elementos. Estos elementos no se describen en el esquema de asignación:  
   
@@ -110,7 +110,7 @@ ms.locfileid: "36103477"
     </AllCustomers>  
     ```  
   
-     Carga masiva XML omite estos  **\<orden >** elementos. Sin embargo, si usas el `sql:overflow-field`anotación en el esquema para identificar una columna como una columna de desbordamiento, carga masiva XML almacena todos los datos no consumidos en esta columna.  
+     Carga masiva XML omite estos  **\<orden >** elementos. Pero si usa el `sql:overflow-field`anotación en el esquema para identificar una columna como una columna de desbordamiento, carga masiva XML almacena todos los datos no consumidos en esta columna.  
   
 -   Las secciones CDATA y las referencias a entidades se traducen a sus cadenas equivalentes antes de almacenarse en la base de datos.  
   
@@ -124,7 +124,7 @@ ms.locfileid: "36103477"
   
 -   Si el esquema de asignación especifica el valor predeterminado de un atributo y los datos de origen XML no contienen dicho atributo, la carga masiva XML usa el valor predeterminado.  
   
-     El siguiente esquema XDR de ejemplo asigna un valor predeterminado para la **HireDate** atributo:  
+     El esquema XDR de ejemplo siguiente asigna un valor predeterminado para el **HireDate** atributo:  
   
     ```  
     <?xml version="1.0" ?>  
@@ -147,7 +147,7 @@ ms.locfileid: "36103477"
     </Schema>  
     ```  
   
-     En estos datos XML, la **HireDate** atributo no está presente en el segundo  **\<clientes >** elemento. Cuando la carga masiva XML inserta el segundo  **\<clientes >** elemento en la base de datos, utiliza el valor predeterminado que se especifica en el esquema.  
+     En estos datos XML, el **HireDate** falta el atributo de la segunda  **\<clientes >** elemento. Cuando la carga masiva XML inserta el segundo  **\<clientes >** elemento en la base de datos, utiliza el valor predeterminado que se especifica en el esquema.  
   
     ```  
     <ROOT>  
@@ -160,17 +160,17 @@ ms.locfileid: "36103477"
   
      No puede especificar una dirección URL en la entrada de datos XML y esperar que la carga masiva lea los datos de dicha ubicación.  
   
-     Se crean las tablas que se identifican en el esquema de asignación (la base de datos debe existir). Si ya existen una o varias de las tablas en la base de datos, sgdroptables, propiedad determina si estas tablas preexistentes se quitará y volver a crear.  
+     Se crean las tablas que se identifican en el esquema de asignación (la base de datos debe existir). Si ya existen una o varias de las tablas en la base de datos, el sgdroptables, propiedad determina si estas tablas preexistentes se elimina y vuelve a crear.  
   
--   Si especifica schemagen, propiedad (por ejemplo, SchemaGen = true), se crean las tablas que se identifican en el esquema de asignación. Pero SchemaGen no crea ninguna restricción (por ejemplo, las restricciones PRIMARY KEY/FOREIGN KEY) en estas tablas con una excepción: si los nodos XML que constituyen la clave principal de una relación se definen como si tuvieran un tipo de XML del identificador (es decir, `type="xsd:ID"` para XSD) y sguseid, propiedad se establece en True para SchemaGen, a continuación, no solo se crean claves principales en el Id. de escribir nodos, aunque las relaciones de clave principales/clave externa se crean a partir de las relaciones de esquema de asignación.  
+-   Si especifica la propiedad SchemaGen (por ejemplo, SchemaGen = true), se crean las tablas que se identifican en el esquema de asignación. Pero SchemaGen crea ninguna restricción (por ejemplo, las restricciones PRIMARY KEY/FOREIGN KEY) en estas tablas con una excepción: si los nodos XML que constituyen la clave principal en una relación se definen como si tuviera un tipo de Id. de XML (es decir, `type="xsd:ID"` para XSD) y el sguseid, propiedad se establece en True para SchemaGen, no solo se crean claves principales en el identificador escrito nodos, pero se crean relaciones de clave principal/clave externa de las relaciones del esquema de asignación.  
   
 -   SchemaGen no usa extensiones ni facetas del esquema XSD para generar el relacional [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] esquema.  
   
--   Si especifica schemagen, propiedad (por ejemplo, SchemaGen = true) en la carga masiva, solo las tablas (y no las vistas de nombre de recurso compartido) que se especifican se actualizan.  
+-   Si especifica la propiedad SchemaGen (por ejemplo, SchemaGen = true) en la carga masiva, solo las tablas (y no las vistas de nombre compartido) que se especifican se actualizan.  
   
 -   SchemaGen solamente proporciona funcionalidad básica para generar el esquema relacional de XSD anotado. El usuario debe modificar las tablas generadas manualmente si es preciso.  
   
--   En los casos más de una relación entre tablas, SchemaGen intenta crear una relación única que incluye todas las claves implicadas entre las dos tablas. Esta limitación podría dar lugar a un error [!INCLUDE[tsql](../../../includes/tsql-md.md)].  
+-   Cuando más de una relación existe entre las tablas, SchemaGen intenta crear una relación única que incluye todas las claves implicadas entre las dos tablas. Esta limitación podría dar lugar a un error [!INCLUDE[tsql](../../../includes/tsql-md.md)].  
   
 -   Al realizar cargas masivas de datos XML en una base de datos, debe haber al menos un atributo o elemento secundario en el esquema de asignación que esté asignado a una columna de base de datos.  
   

@@ -1,5 +1,5 @@
 ---
-title: Propiedad WindowsServiceIdentityConfigured (MSReportServer_ConfigurationSetting WMI) | Documentos de Microsoft
+title: Propiedad WindowsServiceIdentityConfigured (MSReportServer_ConfigurationSetting de WMI) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 api_name:
 - WindowsServiceIdentityConfigured
 api_location:
@@ -19,15 +19,15 @@ helpviewer_keywords:
 - WindowsServiceIdentityConfigured property
 ms.assetid: ebf8e559-7fe4-4a01-9810-85f18fc04596
 caps.latest.revision: 17
-author: douglaslM
-ms.author: douglasl
-manager: mblythe
-ms.openlocfilehash: 61fc31ce8505b815369f84ed97ed99f07ea4d819
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: markingmyname
+ms.author: maghan
+manager: craigg
+ms.openlocfilehash: 8411e99eed9eb5d26d7d74122b71fcd03d572a27
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36102658"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37202455"
 ---
 # <a name="windowsserviceidentityconfigured-property-wmi-msreportserverconfigurationsetting"></a>Propiedad WindowsServiceIdentityConfigured (MSReportServer_ConfigurationSetting de WMI)
   Devuelve la última identidad en la que se configuró el servicio Servidor de informes de Windows para ejecutarse. Solo lectura.  

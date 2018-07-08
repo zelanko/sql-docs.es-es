@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 2cbb1fa3-959e-4df6-9887-ebc93cc1b686
 caps.latest.revision: 6
 author: markingmyname
 ms.author: maghan
-manager: mblythe
-ms.openlocfilehash: 3bcc71c63896289bc924a540ad14b1b9cb591dc1
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: af52516dccd163380cc6c36be9d0a862f3de94e7
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36103260"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37168306"
 ---
 # <a name="manage-shared-datasets"></a>Administrar conjuntos de datos compartidos
   En [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)], los conjuntos de datos compartidos recuperan los datos de los orígenes de datos compartidos que se conectan a los orígenes de datos externos. Un conjunto de datos compartido proporciona una manera de compartir una consulta para ayudar a proporcionar un conjunto coherente de datos para varios informes. La consulta del conjunto de datos puede incluir parámetros de conjunto de datos. Puede configurar un conjunto de datos compartido para almacenar en memoria caché los resultados de la consulta para combinaciones de parámetros concretas al usarse por primera vez o especificando una programación. Puede utilizar el almacenamiento en caché del conjunto de datos compartido en combinación con el almacenamiento en caché de los informes y las fuentes de datos de informe para ayudar a administrar el acceso a un origen de datos.  
@@ -83,7 +83,7 @@ http://localhost/reportserver/?/DataSet1&rs:command=GetShareddatasetDefinition
   
 -   **Establecer la seguridad de elementos individuales** . Permite ver y modificar la configuración de seguridad de los conjuntos de datos compartidos.  
   
- Para obtener más información sobre qué tareas y permisos controlan el acceso a las propiedades de origen de datos en un servidor de informes de modo nativo, vea [proteger elementos de conjunto de datos compartido](../security/secure-shared-dataset-items.md).  
+ Para obtener más información sobre qué tareas y permisos controlan el acceso a las propiedades de origen de datos en un servidor de informes de modo nativo, vea [proteger de los elementos del conjunto de datos compartido](../security/secure-shared-dataset-items.md).  
   
  El administrador del sitio determina los permisos para ver y modificar las propiedades de los elementos de una biblioteca de SharePoint. Para obtener más información, vea [Referencia de permisos de sitio y lista de SharePoint para los elementos del servidor de informes](../security/sharepoint-site-and-list-permission-reference-for-report-server-items.md).  
   
@@ -95,9 +95,9 @@ http://localhost/reportserver/?/DataSet1&rs:command=GetShareddatasetDefinition
 |Agregue un conjunto de datos compartido o cambie las propiedades de definición del conjunto de datos compartido.|Guardar en el Generador de informes.<br /><br /> Implementar en el Diseñador de informes.<br /><br /> Cargar un archivo .rsd en el Administrador de informes.|[Conjuntos de datos incrustados y compartidos de informe &#40;Generador de informes y SSRS&#41;](report-embedded-datasets-and-shared-datasets-report-builder-and-ssrs.md) en la [documentación del Generador de informes](http://go.microsoft.com/fwlink/?LinkId=154494) en msdn.microsoft.com<br /><br /> [Página Cargar archivo &#40;el Administrador de informes&#41;](../upload-file-page-report-manager.md)<br /><br /> Si carga un conjunto de datos compartido antes de que se publique el origen de datos compartido del que depende, debe enlazar manualmente el conjunto de datos compartido al origen de datos compartido. Para obtener más información, consulte [página Propiedades generales, conjuntos de datos compartidos &#40;el Administrador de informes&#41;](../general-properties-page-shared-datasets-report-manager.md).|  
 |Cambiar las propiedades de elemento del conjunto de datos compartido.|Administrador de informes|[Página Propiedades generales, conjuntos de datos compartidos &#40;el Administrador de informes&#41;](../general-properties-page-shared-datasets-report-manager.md)|  
 |Especificar propiedades de conjunto de datos compartido adicionales para una instancia del conjunto de datos compartido en un informe.|Diseñador de informes del Generador de informes|[Propiedades del conjunto de datos (cuadro de diálogo), Consulta](../dataset-properties-dialog-box-query.md)|  
-|Enlazar a un origen de datos compartido diferente para un conjunto de datos compartido.|Administrador de informes|[Página Selección de origen de datos &#40;el Administrador de informes&#41;](../data-source-selection-page-report-manager.md)|  
+|Enlazar a un origen de datos compartido diferente para un conjunto de datos compartido.|Administrador de informes|[Página de selección del origen de datos &#40;el Administrador de informes&#41;](../data-source-selection-page-report-manager.md)|  
 |Comprobar los valores predeterminados para los parámetros de conjunto de datos.|Abrir en el Generador de informes o usar la sintaxis de acceso de URL.|Por ejemplo:<br /><br /> `http://localhost/reportserver/?/DataSet1&rs:command=GetShareddatasetDefinition`|  
-|Habilitar el almacenamiento en caché|Administrador de informes|[Caché de conjuntos de datos compartidos &#40;SSRS&#41;](../report-server/cache-shared-datasets-ssrs.md)<br /><br /> [Página de almacenamiento en caché, conjuntos de datos compartidos &#40;el Administrador de informes&#41;](../caching-page-shared-datasets-report-manager.md)|  
+|Habilitar el almacenamiento en caché|Administrador de informes|[Caché de conjuntos de datos compartidos &#40;SSRS&#41;](../report-server/cache-shared-datasets-ssrs.md)<br /><br /> [Página almacenamiento en caché, conjuntos de datos compartidos &#40;el Administrador de informes&#41;](../caching-page-shared-datasets-report-manager.md)|  
 |Crear o modificar un plan de actualización de la memoria caché|Administrador de informes|[Opciones de actualización de memoria caché &#40;Administrador de informes&#41;](../cache-refresh-options-report-manager.md)|  
 |Ver el esquema de la definición del conjunto de datos compartido.|Administrador de informes|`http://<reportserver>/shareddatasetdefinition.xsd`|  
 |En modo integrado de SharePoint, sincronizar la definición del conjunto de datos compartido entre el servidor de informes y el sitio de SharePoint|Páginas de aplicación de SharePoint|Cambiar las propiedades de elemento del conjunto de datos compartido<br /><br /> Cambiar las opciones de memoria caché<br /><br /> Cambiar el origen de datos compartido|  

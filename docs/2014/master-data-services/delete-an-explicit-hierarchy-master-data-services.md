@@ -8,21 +8,21 @@ ms.suite: ''
 ms.technology:
 - master-data-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - explicit hierarchies, deleting
 - deleting explicit hierarchies [Master Data Services]
 ms.assetid: 4ce177b0-9884-47a2-9cea-212e845dd762
 caps.latest.revision: 4
-author: douglaslMS
-ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: 08770818215b1055f2f5a015a696979bcea74f69
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: leolimsft
+ms.author: lle
+manager: craigg
+ms.openlocfilehash: f2080fedb589f5155dd6885949b5980c04b7c288
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36103101"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37155126"
 ---
 # <a name="delete-an-explicit-hierarchy-master-data-services"></a>Eliminar una jerarquía explícita (Master Data Services)
   En [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)], elimine una jerarquía explícita cuando ya no la necesite.  
@@ -49,7 +49,7 @@ ms.locfileid: "36103101"
   
 5.  Haga clic en **Editar entidad seleccionada**.  
   
-6.  En el **editar entidad** página, en la **jerarquías explícitas** panel, haga clic en la jerarquía explícita que desea eliminar.  
+6.  En el **editar entidad** página, en el **jerarquías explícitas** panel, haga clic en la jerarquía explícita que desea eliminar.  
   
 7.  Haga clic en **eliminar jerarquía seleccionada**.  
   

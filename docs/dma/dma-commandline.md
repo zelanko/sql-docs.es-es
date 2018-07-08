@@ -1,5 +1,6 @@
 ---
-title: Ejecutar desde la línea de comandos (SQL Server datos Migration Assistant) | Documentos de Microsoft
+title: Ejecutar Data Migration Assistant desde la línea de comandos (SQL Server) | Microsoft Docs
+description: Obtenga información sobre cómo ejecutar Data Migration Assistant desde la línea de comandos para evaluar las bases de datos de SQL Server para la migración
 ms.custom: ''
 ms.date: 09/01/2017
 ms.prod: sql
@@ -17,18 +18,18 @@ caps.latest.revision: ''
 author: HJToland3
 ms.author: jtoland
 manager: craigg
-ms.openlocfilehash: df58c273c67868e894b7cba38344dc43628962ac
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 6b364dc03d48cbc1c0487362712e10f7ab0b782e
+ms.sourcegitcommit: 05e18a1e80e61d9ffe28b14fb070728b67b98c7d
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32866530"
+ms.lasthandoff: 07/04/2018
+ms.locfileid: "37785466"
 ---
-# <a name="run-data-migration-assistant-from-the-command-line"></a>Ejecutar el Asistente de migración de datos desde la línea de comandos
-Con la versión 2.1 y versiones posteriores, cuando instale el Asistente de migración de datos, también se instalará dmacmd.exe en *% ProgramFiles %\\el Asistente para la migración de datos de Microsoft\\*. Use dmacmd.exe para evaluar las bases de datos en modo desatendido y generar el resultado al archivo JSON o CSV. Esto es especialmente útil al evaluar varias bases de datos o bases de datos muy grandes. 
+# <a name="run-data-migration-assistant-from-the-command-line"></a>Ejecutar Data Migration Assistant desde la línea de comandos
+Con la versión 2.1 y anteriores, cuando instale Data Migration Assistant, también instalará dmacmd.exe en *% ProgramFiles %\\Microsoft Data Migration Assistant\\*. Usar dmacmd.exe para evaluar las bases de datos en modo desatendido y generar el resultado al archivo JSON o CSV. Este método es especialmente útil al evaluar varias bases de datos o bases de datos enormes. 
 
 > [!NOTE]
-> Dmacmd.exe admite solo las evaluaciones de ejecución. No se admiten migraciones en este momento.
+> Dmacmd.exe admite solo las evaluaciones de ejecución. No se admiten las migraciones en este momento.
 
 
 ## <a name="command-line-arguments"></a>Argumentos de línea de comandos
@@ -43,18 +44,18 @@ DmaCmd.exe /AssessmentName="string"
 ```
 
 
-|Argumento  |Description  | Necesaria (Y/N)
+|Argumento  |Descripción  | Necesario (S/N)
 |---------|---------|---------------|
 | `/help or /?`     | Cómo usar el texto de ayuda dmacmd.exe        | N
 |`/AssessmentName`     |   Nombre del proyecto de evaluación   | S
-|`/AssessmentDatabases`     | Lista delimitada por espacios de cadenas de conexión. Nombre de base de datos (catálogo inicial) distingue mayúsculas de minúsculas. | S
-|`/AssessmentTargetPlatform`     | Plataforma de destino para la evaluación, con los valores admitidos: SqlServer2012, SqlServer2014, SqlServer2016 y AzureSqlDatabaseV12. Valor predeterminado es SqlServer2016   | N
+|`/AssessmentDatabases`     | Lista delimitada por espacios de las cadenas de conexión. Nombre de base de datos (catálogo inicial) distingue mayúsculas de minúsculas. | S
+|`/AssessmentTargetPlatform`     | Plataforma de destino para la evaluación, los valores admitidos: SqlServer2012, SqlServer2014, SqlServer2016 y AzureSqlDatabaseV12. El valor predeterminado es SqlServer2016   | N
 |`/AssessmentEvaluateFeatureParity`  | Ejecutar reglas de paridad de características  | N
 |`/AssessmentEvaluateCompatibilityIssues`     | Ejecutar las reglas de compatibilidad  | S <br> (AssessmentEvaluateCompatibilityIssues o AssessmentEvaluateRecommendations es necesario).
-|`/AssessmentEvaluateRecommendations`     | Ejecutar las recomendaciones de característica        | S <br> (AssessmentEvaluateCompatibilityIssues o AssessmentEvaluateRecommendationsis necesario)
+|`/AssessmentEvaluateRecommendations`     | Ejecute la recomendación de característica        | S <br> (AssessmentEvaluateCompatibilityIssues o AssessmentEvaluateRecommendationsis necesarios)
 |`/AssessmentOverwriteResult`     | Sobrescribir el archivo de resultados    | N
 |`/AssessmentResultJson`     | Ruta de acceso completa al archivo de resultados JSON     | S <br> (AssessmentResultJson o AssessmentResultCsv es necesario)
-|`/AssessmentResultCsv`    | Ruta de acceso completa al archivo de resultados CSV   | S <br>(AssessmentResultJson o AssessmentResultCsv es necesario)
+|`/AssessmentResultCsv`    | Ruta de acceso completa al archivo de resultado CSV   | S <br>(AssessmentResultJson o AssessmentResultCsv es necesario)
 
 
 
@@ -65,7 +66,7 @@ DmaCmd.exe /AssessmentName="string"
 
   `Dmacmd.exe /? or DmaCmd.exe /help`
 
-**Evaluación de base de datos único mediante reglas de compatibilidad de ejecución y autenticación de Windows**
+**Evaluación de bases de datos única mediante reglas de compatibilidad de ejecución y autenticación de Windows**
 
 ```
 DmaCmd.exe /AssessmentName="TestAssessment"
@@ -77,7 +78,7 @@ Catalog=DatabaseName;***Integrated Security=true*"**
 
 
 
-**Evaluación de base de datos único mediante la recomendación de característica de autenticación y la ejecución de SQL Server**
+**Evaluación de bases de datos única con la recomendación de característica de autenticación y la ejecución de SQL Server**
 
 ```
 DmaCmd.exe /AssessmentName="TestAssessment"
@@ -88,7 +89,7 @@ Catalog=DatabaseName;***User Id=myUsername;Password=myPassword;***"
 ```
 
 
-**Evaluación de base de datos único para la plataforma de destino SQL Server 2012 y guardar los resultados en el archivo .json y .csv**
+**Evaluación de bases de datos único para la plataforma de destino de SQL Server 2012, guardar los resultados en el archivo .json y. csv**
 
 ```
 DmaCmd.exe /AssessmentName="TestAssessment"
@@ -101,7 +102,7 @@ Catalog=DatabaseName;Integrated Security=true"
 ```
 
 
-**Evaluación de base de datos único para la plataforma de destino base de datos de SQL Azure guardar los resultados en el archivo .json y .csv**
+**Evaluación de bases de datos único para la plataforma de destino base de datos de SQL Azure, guardar los resultados en el archivo .json y. csv**
 
 ```
 DmaCmd.exe /AssessmentName="TestAssessment" 
@@ -134,4 +135,4 @@ Catalog=DatabaseName3;Integrated Security=true"***
 
 ## <a name="see-also"></a>Vea también
 
-[Descarga de Asistente de migración de datos](https://www.microsoft.com/download/details.aspx?id=53595)
+[Descarga de Ayudante de migración de datos](https://www.microsoft.com/download/details.aspx?id=53595)

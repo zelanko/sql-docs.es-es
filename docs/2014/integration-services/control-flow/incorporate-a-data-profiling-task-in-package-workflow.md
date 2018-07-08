@@ -8,20 +8,20 @@ ms.suite: ''
 ms.technology:
 - integration-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - Data Profiling task [Integration Services], using output in workflow
 ms.assetid: 39a51586-6977-4c45-b80b-0157a54ad510
 caps.latest.revision: 23
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: 31c3d3bdcfc2a986fc62ba32e2df443d74d7a8fd
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: c35cc475af0b083ce8f4a0f6afcb0c654b9bc266
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36104094"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37165006"
 ---
 # <a name="incorporate-a-data-profiling-task-in-package-workflow"></a>Incorporar una tarea de generación de perfiles de datos en un flujo de trabajo de paquetes
   La generación de perfiles de datos y la limpieza no son aptos para la aplicación de un proceso automatizado en sus primeras etapas. En [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)], el resultado de la tarea de generación de perfiles de datos normalmente requiere un análisis visual y un criterio humano para determinar si las infracciones detectadas son significativas o excesivas. Incluso después de reconocer la existencia de problemas relacionados con la calidad de los datos, sigue siendo necesario disponer de un plan minuciosamente diseñado que indique el mejor método para la limpieza.  
@@ -272,9 +272,9 @@ ms.locfileid: "36104094"
   
 -   Llame a la `LoadXml` método de la `XmlDocument` clase en lugar de la `Load` método.  
   
--   En el Editor de la tarea de secuencia de comandos, agregue el nombre de la variable de paquete que contiene los resultados del perfil para la tarea `ReadOnlyVariables` lista.  
+-   En el Editor de la tarea Script, agregue el nombre de la variable de paquete que contiene los resultados del perfil para la tarea `ReadOnlyVariables` lista.  
   
--   Pase el valor de cadena de la variable a la `LoadXML` método, tal como se muestra en el ejemplo de código siguiente. (en este ejemplo se usa "ProfileOutput" como nombre de la variable de paquete que contiene los resultados del perfil).  
+-   Pase el valor de cadena de la variable a la `LoadXML` método, como se muestra en el ejemplo de código siguiente. (en este ejemplo se usa "ProfileOutput" como nombre de la variable de paquete que contiene los resultados del perfil).  
   
     ```vb  
     Dim outputString As String  

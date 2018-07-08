@@ -5,24 +5,23 @@ ms.date: 06/14/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.suite: ''
-ms.technology:
-- dbe-high-availability
+ms.technology: high-availability
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - Availability Groups [SQL Server], WSFC clusters
 - Availability replicas [SQL Server], change WSFC cluster context
 ms.assetid: ecd99f91-b9a2-4737-994e-507065a12f80
 caps.latest.revision: 31
-author: rothja
-ms.author: jroth
-manager: jhubbard
-ms.openlocfilehash: 6e052096fc8f87275a40c04ff76f52c802fbab0b
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: MashaMSFT
+ms.author: mathoma
+manager: craigg
+ms.openlocfilehash: 0f8ab0198debcbb5ec9d09146737ca507357e654
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36102907"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37151556"
 ---
 # <a name="change-the-hadr-cluster-context-of-server-instance-sql-server"></a>Cambiar el contexto de clúster de HADR de la instancia de servidor (SQL Server)
   En este tema se describe cómo cambiar el contexto de clúster de HADR de una instancia de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] mediante [!INCLUDE[tsql](../../../includes/tsql-md.md)] en [!INCLUDE[ssSQL11SP1](../../../includes/sssql11sp1-md.md)] y versiones posteriores. El *contexto de clúster de HADR* determina qué clúster de Clústeres de conmutación por error de Windows Server (WSFC) administra los metadatos para las réplicas de disponibilidad hospedadas por la instancia de servidor.  
@@ -160,12 +159,12 @@ SELECT cluster_name FROM sys.dm_hadr_cluster
   
 -   [Artículos técnicos de SQL Server 2012](http://msdn.microsoft.com/library/bb418445\(SQL.10\).aspx)  
   
--   [Blog del equipo de AlwaysOn SQL Server: El Blog oficial del SQL Server AlwaysOn equipo](http://blogs.msdn.com/b/sqlalwayson/)  
+-   [Blog del equipo de AlwaysOn SQL Server: Oficial AlwaysOn Team Blog de SQL Server](http://blogs.msdn.com/b/sqlalwayson/)  
   
   
   
 ## <a name="see-also"></a>Vea también  
- [Grupos de disponibilidad AlwaysOn (SQL Server)](always-on-availability-groups-sql-server.md) [de agrupación en clústeres de conmutación por error de Windows Server &#40;WSFC&#41; con SQL Server](../../../sql-server/failover-clusters/windows/windows-server-failover-clustering-wsfc-with-sql-server.md)   
+ [Grupos de disponibilidad AlwaysOn (SQL Server)](always-on-availability-groups-sql-server.md) [agrupación en clústeres de conmutación por error de Windows Server &#40;WSFC&#41; con SQL Server](../../../sql-server/failover-clusters/windows/windows-server-failover-clustering-wsfc-with-sql-server.md)   
  [ALTER SERVER CONFIGURATION &#40;Transact-SQL&#41;](/sql/t-sql/statements/alter-server-configuration-transact-sql)  
   
   

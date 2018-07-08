@@ -1,12 +1,12 @@
 ---
-title: Cursores de solo avance rápido (ODBC) | Documentos de Microsoft
+title: Los cursores de solo avance rápido (ODBC) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
 ms.reviewer: ''
 ms.suite: sql
-ms.technology: ''
+ms.technology: native-client
 ms.tgt_pltfrm: ''
 ms.topic: reference
 helpviewer_keywords:
@@ -20,18 +20,18 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
-ms.openlocfilehash: 20b721adca163021f87c490cc7c8bc8b42e53da0
-ms.sourcegitcommit: a78fa85609a82e905de9db8b75d2e83257831ad9
+ms.openlocfilehash: e0770356739a1f6c4587f7ce77dccfe3a7bc4d1a
+ms.sourcegitcommit: f8ce92a2f935616339965d140e00298b1f8355d7
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/18/2018
-ms.locfileid: "35703726"
+ms.lasthandoff: 07/03/2018
+ms.locfileid: "37412095"
 ---
 # <a name="fast-forward-only-cursors-odbc"></a>Cursores de solo avance rápido (ODBC)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
 [!INCLUDE[SNAC_Deprecated](../../../includes/snac-deprecated.md)]
 
-  Cuando se conecta a una instancia de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)], el [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] controlador ODBC Native Client admite optimizaciones de rendimiento para los cursores de solo avance y solo lectura. Los cursores de solo avance rápido se implementan internamente mediante el controlador y el servidor de un modo muy similar a los conjuntos de resultados predeterminados. Además de presentar un alto rendimiento, los cursores de solo avance rápido también presentan estas características:  
+  Cuando se conecta a una instancia de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)], el [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] controlador ODBC de Native Client admite optimizaciones de rendimiento para los cursores de solo avance y solo lectura. Los cursores de solo avance rápido se implementan internamente mediante el controlador y el servidor de un modo muy similar a los conjuntos de resultados predeterminados. Además de presentar un alto rendimiento, los cursores de solo avance rápido también presentan estas características:  
   
 -   [SQLGetData](../../../relational-databases/native-client-odbc-api/sqlgetdata.md) no se admite. Las columnas del conjunto de resultados deben estar enlazadas a variables de programa.  
   
@@ -39,19 +39,19 @@ ms.locfileid: "35703726"
   
  La aplicación solicita cursores de solo avance rápido mediante el atributo de instrucciones específico del controlador SQL_SOPT_SS_CURSOR_OPTIONS. Cuando se establece en SQL_CO_FFO, los cursores de solo avance rápido se habilitan sin captura automática. Cuando se establece en SQL_CO_FFO_AF, también se habilita la opción de captura automática. Para obtener más información acerca de la captura automática, consulte [utilizar la captura automática con cursores ODBC](../../../relational-databases/native-client-odbc-cursors/programming/using-autofetch-with-odbc-cursors.md).  
   
- Los cursores de solo avance rápido con captura automática pueden usarse para recuperar un pequeño conjunto de resultados con solo un viaje de ida y vuelta (round trip) al servidor. En estos pasos, *n* es el número de filas que se devuelven:  
+ Los cursores de solo avance rápido con captura automática pueden usarse para recuperar un pequeño conjunto de resultados con solo un viaje de ida y vuelta (round trip) al servidor. En estos pasos, *n* es el número de filas que devolverá:  
   
 1.  Establezca SQL_SOPT_SS_CURSOR_OPTIONS en SQL_CO_FFO_AF.  
   
 2.  Establezca SQL_ATTR_ROW_ARRAY_SIZE en *n* + 1.  
   
-3.  Enlazar las columnas de resultados a las matrices de *n* + 1 elementos (que es seguro si *n* + realmente se recopila la fila 1).  
+3.  Enlazar las columnas de resultados a matrices de *n* + 1 elementos (que es seguro si *n* + 1 filas se capturaron realmente).  
   
-4.  Abra el cursor con cualquiera **SQLExecDirect** o **SQLExecute**.  
+4.  Abra el cursor con **SQLExecDirect** o **SQLExecute**.  
   
 5.  Si el estado de retorno es SQL_SUCCESS, a continuación, llame a **SQLFreeStmt** o **SQLCloseCursor** para cerrar el cursor. Todos los datos de las filas estarán en las variables de programa enlazadas.  
   
- Con estos pasos, el **SQLExecDirect** o **SQLExecute** envía una solicitud de apertura del cursor con la opción de recopilación automática habilitada. En esa única solicitud del cliente, el servidor:  
+ Con estos pasos, el **SQLExecDirect** o **SQLExecute** envía una solicitud de apertura del cursor con la opción de captura automática habilitada. En esa única solicitud del cliente, el servidor:  
   
 -   Abre el cursor.  
   
@@ -60,6 +60,6 @@ ms.locfileid: "35703726"
 -   Dado que el tamaño del conjunto de filas se estableció en 1 más el número de filas del conjunto de resultados, el servidor detecta el final del cursor y cierra el cursor.  
   
 ## <a name="see-also"></a>Vea también  
- [Detalles de la programación de cursor &#40;ODBC&#41;](../../../relational-databases/native-client-odbc-cursors/programming/cursor-programming-details-odbc.md)  
+ [Detalles de programación de cursores &#40;ODBC&#41;](../../../relational-databases/native-client-odbc-cursors/programming/cursor-programming-details-odbc.md)  
   
   

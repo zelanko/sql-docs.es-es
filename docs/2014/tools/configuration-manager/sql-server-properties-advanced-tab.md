@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - configmgr-client
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 2ffd10fd-bac1-478f-9cff-96ed6c8b787f
 caps.latest.revision: 18
-author: craigg-msft
-ms.author: craigg
-manager: jhubbard
-ms.openlocfilehash: e74c60145c768c83070213b7e42054b98bac8327
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: stevestein
+ms.author: sstein
+manager: craigg
+ms.openlocfilehash: e81e3c821c6d166c42c830604fd25a037e56cd04
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36103453"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37168072"
 ---
 # <a name="sql-server-properties-advanced-tab"></a>Propiedades de SQL Server (pestaña Avanzadas)
   Las siguientes propiedades aparecen de forma predeterminada en la pestaña **Avanzadas** . Si se han definido propiedades personalizadas, aparecen también en esta pestaña junto con los valores correspondientes.  

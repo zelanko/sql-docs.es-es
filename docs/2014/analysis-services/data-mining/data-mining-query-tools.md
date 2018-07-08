@@ -1,5 +1,5 @@
 ---
-title: Interfaces de consultas de minería de datos | Documentos de Microsoft
+title: Interfaces de consultas de minería de datos | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - predictions [Analysis Services], DMX prediction queries
 - predictions [DMX]
@@ -19,15 +19,15 @@ helpviewer_keywords:
 - mining models [Analysis Services], DMX
 ms.assetid: a8952427-fd8c-4300-8f62-25f57ac1be0c
 caps.latest.revision: 49
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 3ee9db3934e1f9f89a4bbbb292a4dcea4bc7b7bb
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 07641be25c1e7828238ea4a6dd897240651735ce
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36103446"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37159656"
 ---
 # <a name="data-mining-query-interfaces"></a>Interfaces de consultas de minería de datos
   Las consultas de minería de datos se basan en el lenguaje DMX (Extensiones de minería de datos). DMX se usa para todas las tareas de predicción y modelado, incluida la clasificación, el análisis de riesgos, la generación de recomendaciones y la regresión lineal. También puede recuperar los patrones y estadísticas que se generaron al procesar el modelo.  

@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 api_name:
 - DatabaseLogonType
 api_location:
@@ -19,15 +19,15 @@ helpviewer_keywords:
 - DatabaseLogonType property
 ms.assetid: 6b592582-4c35-4029-ab86-982fff47d8d6
 caps.latest.revision: 24
-author: douglaslM
-ms.author: douglasl
-manager: mblythe
-ms.openlocfilehash: 30c6961f915789c358ba8d38ad0d18e164e072cf
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: markingmyname
+ms.author: maghan
+manager: craigg
+ms.openlocfilehash: 001eee372f6c35a6938f3e5c99b9e82524285d25
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36103245"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37166136"
 ---
 # <a name="databaselogontype-property-wmi-msreportserverconfigurationsetting"></a>Propiedad DatabaseLogonType (WMI MSReportServer_ConfigurationSetting)
   Especifica si el servidor de informes usa una cuenta de servicio de [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows, una cuenta de usuario de Windows o un inicio de sesión de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] para tener acceso a la base de datos del servidor de informes. Solo lectura.  
@@ -57,9 +57,9 @@ public int DatabaseLogonType;
   
 -   2 para el inicio de sesión como un servicio  
   
- Si especifica 0 (Windows), debe establecer el valor el [DatabaseLogonAccount](configurationsetting-property-databaselogonaccount.md) propiedad a una cuenta de usuario de Windows válida correspondiente.  
+ Si especifica 0 (Windows), debe establecer el valor el [DatabaseLogonAccount](configurationsetting-property-databaselogonaccount.md) propiedad en una cuenta de usuario de Windows válida correspondiente.  
   
- Si especifica 1 (SQL Server), asegúrese de que el valor de la [DatabaseLogonAccount](configurationsetting-property-databaselogonaccount.md) corresponde a válido [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] inicio de sesión.  
+ Si especifica 1 (SQL Server), asegúrese de que el valor de la [DatabaseLogonAccount](configurationsetting-property-databaselogonaccount.md) corresponde a una [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] inicio de sesión.  
   
  Si especifica 2 (servicio de Windows), el servidor de informes usará una cuenta de [!INCLUDE[vstecasp](../../includes/vstecasp-md.md)] y la cuenta de servicio de Windows para tener acceso a la base de datos del servidor de informes. Se omite la propiedad DatabaseLogonAccount.  
   

@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - integration-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - Script task [Integration Services], debugging
 - debugging [Integration Services], scripts
@@ -17,13 +17,13 @@ ms.assetid: fddf57d8-8607-4f88-85a0-1b683087b491
 caps.latest.revision: 56
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: 55e6df8e55d0805f6ac33accc427ed7734d4eb97
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: a740ab9db830f87d3883684db4c282f922fe75c2
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36105886"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37148916"
 ---
 # <a name="debugging-script"></a>Depurar script
   Escribe los scripts que la tarea Script y el componente Script usan, en [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)] Tools para aplicaciones (VSTA).  

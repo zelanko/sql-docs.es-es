@@ -17,15 +17,15 @@ helpviewer_keywords:
 - methods [Reporting Services]
 ms.assetid: 2aa43ce9-f51e-408a-8ce0-b40d3dd62561
 caps.latest.revision: 37
-author: douglaslM
-ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: 7b88c3693de9a0d2318094cd01d3e27044a697eb
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: markingmyname
+ms.author: maghan
+manager: craigg
+ms.openlocfilehash: 982dabf5a880459e785033411ead754f81dbce4b
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36103729"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37155626"
 ---
 # <a name="report-server-namespace-management-methods"></a>Métodos de administración de los espacios de nombres del servidor de informes
   El servicio web de administración del servidor de informes contiene métodos que puede utilizar para administrar los informes, carpetas y recursos en la base de datos del servidor de informes.  
@@ -34,7 +34,7 @@ ms.locfileid: "36103729"
 |------------|------------|  
 |<xref:ReportService2010.ReportingService2010.CancelJob%2A>|Cancela la ejecución de un trabajo.|  
 |<xref:ReportService2010.ReportingService2010.CreateFolder%2A>|Agrega una carpeta a la base de datos del servidor de informes o a la biblioteca de SharePoint.|  
-|<xref:ReportService2010.ReportingService2010.CreateCatalogItem%2A>|Agrega un nuevo elemento a una base de datos del servidor de informes o a la biblioteca de SharePoint. Este método se aplica a la `Report`, `Model`, `Dataset`, `Component`, `Resource`, y `DataSource` los tipos de elemento.|  
+|<xref:ReportService2010.ReportingService2010.CreateCatalogItem%2A>|Agrega un nuevo elemento a una base de datos del servidor de informes o a la biblioteca de SharePoint. Este método se aplica a la `Report`, `Model`, `Dataset`, `Component`, `Resource`, y `DataSource` tipos de elemento.|  
 |M:ReportService2010.ReportingService2010.CreateReportEditSession(System.String,System.String,System.Byte[],ReportService2010.Warning[]@)|Crea una nueva sesión de edición de informes.|  
 |<xref:ReportService2010.ReportingService2010.DeleteItem%2A>|Quita un elemento de la base de datos del servidor de informes o biblioteca de SharePoint.|  
 |<xref:ReportService2010.ReportingService2010.FindItems%2A>|Devuelve los elementos de la base de datos del servidor de informes o biblioteca de SharePoint que coinciden con el criterio de búsqueda especificado.|  
@@ -42,7 +42,7 @@ ms.locfileid: "36103729"
 |<xref:ReportService2010.ReportingService2010.GetExtensionSettings%2A>|Devuelve una lista de valores para una extensión determinada.|  
 |<xref:ReportService2010.ReportingService2010.GetItemType%2A>|Recupera el tipo de un elemento de la base de datos del servidor de informes o biblioteca de SharePoint, si el elemento existe.|  
 |<xref:ReportService2010.ReportingService2010.GetProperties%2A>|Devuelve los valores de una o más propiedades en un elemento de la base de datos del servidor de informes o biblioteca de SharePoint.|  
-|<xref:ReportService2010.ReportingService2010.GetItemDefinition%2A>|Recupera la definición o contenido para un elemento. Este método se aplica a la `Report`, `Model`, `Dataset`, `Component`, `Resource`, y `DataSource` los tipos de elemento.|  
+|<xref:ReportService2010.ReportingService2010.GetItemDefinition%2A>|Recupera la definición o contenido para un elemento. Este método se aplica a la `Report`, `Model`, `Dataset`, `Component`, `Resource`, y `DataSource` tipos de elemento.|  
 |<xref:ReportService2010.ReportingService2010.GetItemReferences%2A>|Devuelve una lista de referencias de elemento de catálogo asociadas a un elemento.|  
 |<xref:ReportService2010.ReportingService2010.GetReportServerConfigInfo%2A>|Devuelve información de la instancia del servidor de informes conectada o de todas las instancias del servidor de informes de una implementación escalada.|  
 |<xref:ReportService2010.ReportingService2010.GetSystemProperties%2A>|Devuelve una o más propiedades del sistema.|  
@@ -63,7 +63,7 @@ ms.locfileid: "36103729"
 |<xref:ReportService2010.ReportingService2010.SetItemReferences%2A>|Establece los elementos de catálogo asociados a un elemento.|  
 |<xref:ReportService2010.ReportingService2010.MoveItem%2A>|Mueve y/o cambia el nombre de un elemento.|  
 |<xref:ReportService2010.ReportingService2010.SetProperties%2A>|Establece una o más propiedades de un elemento.|  
-|<xref:ReportService2010.ReportingService2010.SetItemDefinition%2A>|Establece la definición o el contenido para un elemento especificado. Este método se aplica a la `Report`, `Model`, `Dataset`, `Component`, `Resource`, y `DataSource` los tipos de elemento.|  
+|<xref:ReportService2010.ReportingService2010.SetItemDefinition%2A>|Establece la definición o el contenido para un elemento especificado. Este método se aplica a la `Report`, `Model`, `Dataset`, `Component`, `Resource`, y `DataSource` tipos de elemento.|  
 |<xref:ReportService2010.ReportingService2010.SetSystemProperties%2A>|Establece una o varias propiedades del sistema en el servidor de informes o la granja de SharePoint.|  
 |<xref:ReportService2010.ReportingService2010.ValidateExtensionSettings%2A>|Valida la configuración de la extensión de [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)].|  
   

@@ -1,5 +1,5 @@
 ---
-title: Referencia de la API de instancia de SQL Server Express LocalDB | Documentos de Microsoft
+title: Referencia de API de instancia de SQL Server Express LocalDB | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -12,15 +12,15 @@ ms.tgt_pltfrm: ''
 ms.topic: reference
 ms.assetid: faec46da-0536-4de3-96f3-83e607c8a8b6
 caps.latest.revision: 11
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: ebafb4bf20d84d2a570af7225e26c09e9089825e
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: CarlRabeler
+ms.author: carlrab
+manager: craigg
+ms.openlocfilehash: 211e7a076cae09b3fef7ef40a23cca9c60910e47
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36105666"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37154316"
 ---
 # <a name="sql-server-express-localdb-instance-api-reference"></a>Referencia de la API de instancia de SQL Server Express LocalDB
   En el mundo tradicional de SQL Server basado en servicios, las instancias de SQL Server individuales que están instaladas en un equipo único se encuentran físicamente separadas; es decir, cada instancia debe instalarse y quitarse de forma individual, tener un conjunto independiente de archivos binarios y ejecutarse en un proceso individual del servicio. El nombre de la instancia de SQL Server se utiliza para especificar a qué instancia de SQL Server se desea conectar el usuario.  
@@ -29,7 +29,7 @@ ms.locfileid: "36105666"
   
  Las instancias de LocalDB son siempre propiedad de un solo usuario y se hacen visibles y accesibles únicamente desde el contexto de este usuario, salvo que se haya habilitado el uso compartido de la instancia.  
   
- Aunque técnicamente las instancias de LocalDB no son las mismas que las instancias tradicionales de SQL Server, el uso al que están dirigidas es similar. Estos se denominan *instancias* para resaltar esta similitud y para que resulten más intuitivas para los usuarios de SQL Server.  
+ Aunque técnicamente las instancias de LocalDB no son las mismas que las instancias tradicionales de SQL Server, el uso al que están dirigidas es similar. Se denominan *instancias* para resaltar esta similitud y para que resulten más intuitivas para los usuarios de SQL Server.  
   
  LocalDB admite dos tipos de instancias: instancias automáticas (AI) e instancias con nombre (NI). El identificador para una instancia de LocalDB es el nombre de instancia.  
   
@@ -69,14 +69,14 @@ ms.locfileid: "36105666"
 ### <a name="named-instance-naming-rules"></a>Normas de nomenclatura para instancias con nombre  
  Los nombres de instancia de LocalDB pueden tener un total de hasta 128 caracteres (el límite queda establecido según el tipo de datos de `sysname`). Se trata de una importante diferencia si se compara con los nombres tradicionales de instancia de SQL Server, las cuales están limitadas a los nombres de NetBIOS de 16 caracteres ASCII. Esta diferencia existe porque LocalDB trata a las bases de datos como archivos y, por tanto, se utiliza una semántica basada en archivos, de forma que resulta más intuitivo para los usuarios, que dispondrán de más libertad a la hora de elegir nombres de instancia.  
   
- Los nombres de instancia de LocalDB pueden contener cualquier tipo de caracteres Unicode que sean válidos en el componente de nombre de archivo. Caracteres no válidos en un componente de nombre de archivo, generalmente, incluyen los siguientes caracteres: caracteres ASCII/Unicode 31 a 1, así como comillas ("), menor que (\<), mayor que (>), barra vertical (|), retroceso (\b), tabulación (\t), dos puntos (:), asterisco (*) signo de interrogación (?), barra diagonal inversa (\\) y la barra diagonal (/). Tenga en cuenta que el carácter NULL (\0) está permitido porque se utiliza para la terminación de cadenas; se ignorará todo aquello que esté tras el carácter NULL.  
+ Los nombres de instancia de LocalDB pueden contener cualquier tipo de caracteres Unicode que sean válidos en el componente de nombre de archivo. Caracteres no válidos en un componente de nombre de archivo, generalmente, incluyen los siguientes caracteres: caracteres ASCII/Unicode 1 31 a través, así como comillas dobles ("), menor que (\<), mayor que (>), barra vertical (|), retroceso (\b), tabulación (\t), dos puntos (:), asterisco (*) signo de interrogación (?), barra diagonal inversa (\\) y la barra diagonal (/). Tenga en cuenta que el carácter NULL (\0) está permitido porque se utiliza para la terminación de cadenas; se ignorará todo aquello que esté tras el carácter NULL.  
   
 > [!NOTE]  
 >  La lista de caracteres no válidos puede depender del sistema operativo y podría cambiar en versiones futuras.  
   
  Los espacios en blanco iniciales y finales en los nombres de instancia se omiten y se recortarán.  
   
- Para evitar conflictos de nomenclatura, denominadas LocalDB instancias no pueden tener un nombre que sigue el patrón de nomenclatura para instancias automáticas, tal y como se describió anteriormente en "Reglas de nomenclatura de instancia automática". Un intento de crear una instancia con nombre con un nombre que sigue el patrón de nomenclatura de instancia automática de forma eficaz, crea una instancia predeterminada.  
+ Para evitar conflictos de nomenclatura, denominados LocalDB instancias no pueden tener un nombre que sigue el patrón de nomenclatura para instancias automáticas, como se describió anteriormente en "Reglas de nomenclatura de instancia automática". Un intento de crear una instancia con nombre con un nombre que sigue el patrón de nomenclatura de la instancia automática de forma eficaz, crea una instancia predeterminada.  
   
 ## <a name="sql-server-express-localdb-reference-topics"></a>Temas de referencia de SQL Server Express LocalDB  
  [Información de encabezado y versión de SQL Server Express LocalDB](sql-server-express-localdb-header-and-version-information.md)  

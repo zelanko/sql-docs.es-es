@@ -8,34 +8,34 @@ ms.suite: ''
 ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 3925fd3d-2aa1-4768-96ad-cfc2c0ba9283
 caps.latest.revision: 10
-author: douglaslM
-ms.author: douglasl
-manager: mblythe
-ms.openlocfilehash: 7a8ce540cb3ecf555e5abc22a1927482409bc582
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: markingmyname
+ms.author: maghan
+manager: craigg
+ms.openlocfilehash: 6b1b12938e2043ee126c81313fc955454742bcde
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36106281"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37149416"
 ---
 # <a name="sql-server-parallel-data-warehouse-connection-type-ssrs"></a>Tipo de conexión Almacenamiento de datos paralelo de SQL Server (SSRS)
   [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssDWCurrentFull](../../../includes/ssdwcurrentfull-md.md)] es un dispositivo de almacenamiento de datos escalable que ofrece rendimiento y escalabilidad mediante un procesamiento paralelo masivo. [!INCLUDE[ssDW](../../../includes/ssdw-md.md)] usa [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] bases de datos de almacenamiento de datos y procesamiento distribuido.  
   
  El dispositivo particiona tablas de base de datos grandes en varios nodos físicos, cada uno de los cuales ejecuta su propia instancia de [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)]. Cuando un informe se conecta a [!INCLUDE[ssDW](../../../includes/ssdw-md.md)] para recuperar datos de informes, se conecta al nodo de control que administra el procesamiento de consultas, en la [!INCLUDE[ssDW](../../../includes/ssdw-md.md)] dispositivo. Una vez realizada la conexión, no existirá ninguna diferencia entre trabajar con una instancia de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] que esté o no dentro de un entorno de [!INCLUDE[ssDW](../../../includes/ssdw-md.md)].  
   
- Para incluir los datos de [!INCLUDE[ssDW](../../../includes/ssdw-md.md)] en el informe, debe tener un conjunto de datos que se basa en un origen de datos de informe de tipo [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] almacenamiento de datos paralelos. Este tipo de origen de datos integrado se basa en el [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] extensión de datos de almacenamiento de datos paralelos. Utilice este tipo de origen de datos para conectarse y recuperar datos de [!INCLUDE[ssDW](../../../includes/ssdw-md.md)].  
+ Para incluir datos de [!INCLUDE[ssDW](../../../includes/ssdw-md.md)] en el informe, debe tener un conjunto de datos que se basa en un origen de datos de informe de tipo [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Parallel Data Warehouse. Este tipo de origen de datos integrado se basa en el [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] extensión de datos de almacenamiento de datos paralelos. Use este tipo de origen de datos para conectarse y recuperar datos de [!INCLUDE[ssDW](../../../includes/ssdw-md.md)].  
   
  Esta extensión de datos admite parámetros de varios valores, agregados del servidor y credenciales administrados con independencia de la cadena de conexión.  
   
  Para obtener más información, vea el sitio web relativo al [Almacenamiento de datos paralelo de SQL Server 2008 R2](http://go.microsoft.com/fwlink/?LinkId=150895).  
   
- Utilice la información de este tema para crear un origen de datos. Para obtener instrucciones detalladas, consulte [agregar y comprobar una conexión de datos o un origen de datos &#40;el generador de informes y SSRS&#41;](add-and-verify-a-data-connection-report-builder-and-ssrs.md).  
+ Utilice la información de este tema para crear un origen de datos. Para obtener instrucciones detalladas, consulte [agregar y comprobar una conexión de datos o un origen de datos &#40;generador de informes y SSRS&#41;](add-and-verify-a-data-connection-report-builder-and-ssrs.md).  
   
 ##  <a name="Connection"></a> Cadena de conexión  
- Al conectarse a [!INCLUDE[ssDW](../../../includes/ssdw-md.md)], lo hace a un objeto de base de datos dentro de un dispositivo [!INCLUDE[ssDW](../../../includes/ssdw-md.md)] . Especifique el objeto de base de datos que se va a usar en el diseñador de consultas. Si no especifica una base de datos en la cadena de conexión, puede conectar con la base de datos predeterminada que le asignó el administrador. Póngase en contacto con el administrador de bases de datos y solicite la información de conexión y las credenciales que debe usar para conectar con el origen de datos. El siguiente ejemplo de cadena de conexión especifica la base de datos de ejemplo, **CustomerSales**, en la [!INCLUDE[ssDW](../../../includes/ssdw-md.md)] dispositivo:  
+ Al conectarse a [!INCLUDE[ssDW](../../../includes/ssdw-md.md)], lo hace a un objeto de base de datos dentro de un dispositivo [!INCLUDE[ssDW](../../../includes/ssdw-md.md)] . Especifique el objeto de base de datos que se va a usar en el diseñador de consultas. Si no especifica una base de datos en la cadena de conexión, puede conectar con la base de datos predeterminada que le asignó el administrador. Póngase en contacto con el administrador de bases de datos y solicite la información de conexión y las credenciales que debe usar para conectar con el origen de datos. El siguiente ejemplo de cadena de conexión especifica la base de datos de ejemplo, **CustomerSales**, en el [!INCLUDE[ssDW](../../../includes/ssdw-md.md)] dispositivo:  
   
 ```  
 HOST=<IP address>; database= CustomerSales; port=<port>  
@@ -56,7 +56,7 @@ HOST=<IP address>; database= CustomerSales; port=<port>
   
 -   No se necesitan credenciales. Para usar esta opción, debe tener la cuenta de ejecución desatendida configurada en el servidor de informes. Para más información, vea [Configurar la cuenta de ejecución desatendida &#40;Administrador de configuración de SSRS&#41;](../install-windows/configure-the-unattended-execution-account-ssrs-configuration-manager.md) en la [documentación de Reporting Services](http://go.microsoft.com/fwlink/?linkid=121312) en msdn.microsoft.com.  
   
- Para obtener más información, consulte [las conexiones de datos, orígenes de datos y cadenas de conexión en Reporting Services](../data-connections-data-sources-and-connection-strings-in-reporting-services.md) o [especificar credenciales en el generador de informes](../specify-credentials-in-report-builder.md).  
+ Para obtener más información, consulte [conexiones de datos, orígenes de datos y cadenas de conexión en Reporting Services](../data-connections-data-sources-and-connection-strings-in-reporting-services.md) o [especificar credenciales en Generador de informes](../specify-credentials-in-report-builder.md).  
   
  ![Icono de flecha usado con el vínculo Volver al principio](../../2014-toc/media/uparrow16x16.gif "Icono de flecha usado con el vínculo Volver al principio")[Volver al principio](#BackToTop)  
   
@@ -67,7 +67,7 @@ HOST=<IP address>; database= CustomerSales; port=<port>
   
 -   Generar una consulta interactivamente. Utilice el diseñador de consultas relacionales que muestra una vista jerárquica de las tablas, las vistas y otros elementos de base de datos, organizada por esquema de la base de datos. Seleccione columnas de las tablas o de las vistas. Limite el número de filas de datos que se recuperarán especificando criterios de filtro, agrupación y agregados. Personalice el filtro al ejecutarse el informe estableciendo la opción de parámetro.  
   
--   Escriba o pegue una consulta. Use el Diseñador de consultas basado en texto para especificar [!INCLUDE[DWsql](../../../includes/dwsql-md.md)] texto directamente, para pegar texto de consulta de otro origen, para especificar consultas complejas que no se puede crear mediante el Diseñador de consultas relacionales, o para escribir expresiones basadas en consultas.  
+-   Escriba o pegue una consulta. Use el Diseñador de consultas basado en texto para especificar [!INCLUDE[DWsql](../../../includes/dwsql-md.md)] texto directamente, para pegar texto de consulta de otro origen, para especificar consultas complejas que no pueden crearse mediante el Diseñador de consultas relacionales o para escribir expresiones basadas en consultas.  
   
 -   Importe una consulta existente de un archivo o informe. Utilice el botón de consulta **Importar** desde cualquier diseñador de consultas para buscar un archivo .sql o .rdl e importar una consulta.  
   
@@ -83,12 +83,12 @@ HOST=<IP address>; database= CustomerSales; port=<port>
   
  [!INCLUDE[DWsql](../../../includes/dwsql-md.md)] admite la cláusula, palabra clave y agregados que el Diseñador de consultas proporciona para resumir los datos.  
   
- El diseñador gráfico de consultas usado por [!INCLUDE[ssDW](../../../includes/ssdw-md.md)] proporciona compatibilidad integrada con las agrupaciones y agregados para ayudar a los usuarios a escribir consultas que solo recuperen datos de resumen. El [!INCLUDE[DWsql](../../../includes/dwsql-md.md)] son características del lenguaje: el grupo por cláusulas, palabra clave DISTINCT y agregados, como SUM y COUNT. El Diseñador de consultas basado en texto proporciona compatibilidad completa para el [!INCLUDE[DWsql](../../../includes/dwsql-md.md)] lenguaje, incluida la agrupación y agregados.  
+ El diseñador gráfico de consultas usado por [!INCLUDE[ssDW](../../../includes/ssdw-md.md)] proporciona compatibilidad integrada con las agrupaciones y agregados para ayudar a los usuarios a escribir consultas que solo recuperen datos de resumen. El [!INCLUDE[DWsql](../../../includes/dwsql-md.md)] son características del lenguaje: el grupo por cláusulas, palabra clave DISTINCT y agregados como SUM y COUNT. El Diseñador de consultas basado en texto proporciona compatibilidad total con el [!INCLUDE[DWsql](../../../includes/dwsql-md.md)] lenguaje, incluidas las agrupaciones y agregados.  
   
  Para más información sobre [!INCLUDE[tsql](../../../includes/tsql-md.md)], vea [Referencia de Transact-SQL &#40;motor de base de datos&#41;](/sql/t-sql/language-reference) en los [Libros en pantalla](http://go.microsoft.com/fwlink/?LinkId=141687) de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] en msdn.microsoft.com.  
   
 ###  <a name="QueryText"></a> Usar consultas de tipo Texto  
- En el diseñador de consultas basado en texto, escriba comandos de [!INCLUDE[DWsql](../../../includes/dwsql-md.md)] para definir los datos de un conjunto de datos. Las consultas que utilizan para recuperar datos de [!INCLUDE[ssDW](../../../includes/ssdw-md.md)] son las mismas que las que se utilizan para recuperar datos de instancias de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] que no se ejecuta dentro de un [!INCLUDE[ssDW](../../../includes/ssdw-md.md)] aplicación. Por ejemplo, la siguiente [!INCLUDE[DWsql](../../../includes/dwsql-md.md)] consulta selecciona todos los nombres de todos los empleados que son asistentes de marketing:  
+ En el diseñador de consultas basado en texto, escriba comandos de [!INCLUDE[DWsql](../../../includes/dwsql-md.md)] para definir los datos de un conjunto de datos. Las consultas que utilizan para recuperar datos de [!INCLUDE[ssDW](../../../includes/ssdw-md.md)] son las mismas que las que se utilizan para recuperar datos de las instancias de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] que no se ejecuta dentro de un [!INCLUDE[ssDW](../../../includes/ssdw-md.md)] aplicación. Por ejemplo, la siguiente [!INCLUDE[DWsql](../../../includes/dwsql-md.md)] consulta selecciona todos los nombres de todos los empleados que son asistentes de marketing:  
   
 ```  
 SELECT  
@@ -138,7 +138,7 @@ WHERE EmployeeID = (@EmpID)
 ##  <a name="HowTo"></a> Temas de procedimientos  
  Esta sección contiene instrucciones paso a paso para trabajar con conexiones de datos, orígenes de datos y conjuntos de datos.  
   
- [Agregar y comprobar una conexión de datos o un origen de datos &#40;el generador de informes SSRS&#41;](add-and-verify-a-data-connection-report-builder-and-ssrs.md)  
+ [Agregar y comprobar una conexión de datos o un origen de datos &#40;generador de informes y SSRS&#41;](add-and-verify-a-data-connection-report-builder-and-ssrs.md)  
   
  [Crear un conjunto de datos compartido o un conjunto de datos incrustado &#40;Generador de informes y SSRS&#41;](create-a-shared-dataset-or-embedded-dataset-report-builder-and-ssrs.md)  
   
@@ -149,7 +149,7 @@ WHERE EmployeeID = (@EmpID)
 ##  <a name="Related"></a> Secciones relacionadas  
  Estas secciones de la documentación proporcionan información conceptual detallada sobre los datos de informe, así como información de procedimientos acerca de cómo definir, personalizar y usar elementos de informe relacionados con datos.  
   
- [Agregar datos a un informe &#40;el generador de informes SSRS&#41;](report-datasets-ssrs.md)  
+ [Agregar datos a un informe &#40;generador de informes y SSRS&#41;](report-datasets-ssrs.md)  
  Proporciona información general sobre cómo obtener acceso a los datos del informe.  
   
  [Conexiones de datos, orígenes de datos y cadenas de conexión en el Generador de informes](../data-connections-data-sources-and-connection-strings-in-report-builder.md)  

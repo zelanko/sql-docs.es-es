@@ -1,5 +1,5 @@
 ---
-title: Elemento RelationshipEndTranslation (ASSL) | Documentos de Microsoft
+title: Elemento RelationshipEndTranslation (ASSL) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -12,15 +12,15 @@ ms.tgt_pltfrm: ''
 ms.topic: reference
 ms.assetid: 04e09370-fdfe-4051-9998-4a6859ce8c54
 caps.latest.revision: 4
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: bb93b3cdaf3eda1b8be15679b0736e626a802cf3
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 62c779e29ce721289b364599063e1a1de747eb1c
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36106444"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37153026"
 ---
 # <a name="relationshipendtranslation-element-assl"></a>Elemento RelationshipEndTranslation (ASSL)
   Define un tipo de datos primitivo que representa una traducción adaptada para un elemento [RelationshipEnd](relationshipend-data-type-assl.md) .  

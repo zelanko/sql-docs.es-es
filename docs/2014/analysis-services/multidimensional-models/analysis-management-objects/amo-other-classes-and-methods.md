@@ -1,5 +1,5 @@
 ---
-title: AMO otras clases y métodos | Documentos de Microsoft
+title: AMO otras clases y métodos | Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -21,18 +21,18 @@ helpviewer_keywords:
 - backups [AMO]
 ms.assetid: 60ed5cfa-3a03-4161-8271-0a71a3ae363b
 caps.latest.revision: 28
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 15c90d9b5c11f22af27332467d3501030a9ce7d0
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 6ff888c133491bfca9569daf08dc76e54e14d6d1
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36105973"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37180882"
 ---
 # <a name="amo-other-classes-and-methods"></a>Otras clases y métodos de AMO
-  Esta sección contiene clases comunes que no son específicas de OLAP o de minería de datos, y que son útiles cuando se administran objetos en [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)]. Estas clases incluyen características como procedimientos almacenados, seguimientos, excepciones y copias de seguridad y restauración.  
+  Esta sección contiene clases comunes que no son específicas de OLAP o de minería de datos, y que son útiles cuando se administran los objetos de [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)]. Estas clases incluyen características como procedimientos almacenados, seguimientos, excepciones y copias de seguridad y restauración.  
   
  Este tema contiene las siguientes secciones:  
   
@@ -55,7 +55,7 @@ ms.locfileid: "36105973"
   
  Para quitar un objeto <xref:Microsoft.AnalysisServices.Assembly>, éste se tiene que quitar mediante el método Drop del objeto <xref:Microsoft.AnalysisServices.Assembly>. Al quitar un objeto <xref:Microsoft.AnalysisServices.Assembly> de la colección de ensamblados de la base de datos, no se quita el ensamblado, únicamente le impide verlo en su aplicación hasta que vuelva a ejecutarla.  
   
- Para obtener más información sobre los métodos y propiedades disponibles, vea <xref:Microsoft.AnalysisServices.Assembly> en <xref:Microsoft.AnalysisServices> .  
+ Para obtener más información sobre los métodos y propiedades disponibles, consulte <xref:Microsoft.AnalysisServices.Assembly> en <xref:Microsoft.AnalysisServices> .  
   
 > [!IMPORTANT]  
 >  Los ensamblados COM pueden suponer un riesgo para la seguridad. Debido a esto y a otras consideraciones, los ensamblados COM están en desuso en [!INCLUDE[ssASversion10](../../../includes/ssasversion10-md.md)]. Es posible que este tipo de ensamblados no esté disponible en versiones futuras.  
@@ -157,7 +157,7 @@ ms.locfileid: "36105973"
   
  Para iniciar la captura de XML, la propiedad del objeto de servidor CaptureXML necesita estar establecida en `true`. A continuación, todas las acciones que se enviarán al servidor se comenzarán a capturar en la clase CaptureLog, sin las acciones que se envían al servidor. CaptureLog se considera una clase porque tiene un método, Clear, que se usa para borrar el registro de captura.  
   
- Para leer el registro, consiga la colección de cadenas e inicie la iteración sobre las cadenas. Asimismo, puede concatenar todos los registros en una cadena mediante el método ConcatenateCaptureLog del objeto de servidor. ConcatenateCaptureLog debe tener tres parámetros, dos de los cuales son necesarios. Los parámetros necesarios son *transaccional*, de tipo booleano, y *paralelo*, de tipo booleano. Si *transaccional* se establece en `true`, indica que se creará el archivo por lotes XML como una sola transacción en lugar de cada comando que se va a trata como una transacción independiente. Si *paralelo* se establece en `true`, indica que se va a grabar todos los comandos del archivo por lotes para la ejecución simultánea en lugar de secuencialmente como se registraron.  
+ Para leer el registro, consiga la colección de cadenas e inicie la iteración sobre las cadenas. Asimismo, puede concatenar todos los registros en una cadena mediante el método ConcatenateCaptureLog del objeto de servidor. ConcatenateCaptureLog debe tener tres parámetros, dos de los cuales son necesarios. Los parámetros necesarios son *transaccional*, de tipo booleano, y *paralelo*, de tipo booleano. Si *transaccional* está establecido en `true`, indica que se creará el archivo por lotes XML como una sola transacción en lugar de cada comando que se va a trata como una transacción independiente. Si *paralelo* está establecido en `true`, indica que se registrarán todos los comandos en el archivo por lotes para la ejecución simultánea, en lugar de secuencialmente como se registraron.  
   
 ##  <a name="AMO"></a> Clase de excepción AMOException  
  Use la clase de excepción AMOException para detectar con facilidad las excepciones que produce AMO en su aplicación.  

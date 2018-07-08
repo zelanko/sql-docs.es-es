@@ -1,5 +1,5 @@
 ---
-title: Elemento FontSize (ASSL) | Documentos de Microsoft
+title: Elemento FontSize (ASSL) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -22,15 +22,15 @@ helpviewer_keywords:
 - FontSize element
 ms.assetid: 49f66a73-946a-4fbd-9749-a3ca1b717ff3
 caps.latest.revision: 37
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 1eaf29caf869de81e397b92f9953d9b673d17019
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 8f6b5ba39d52cb96061fe4d19208e6e343bab5f6
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36105460"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37167536"
 ---
 # <a name="fontsize-element-assl"></a>Elemento FontSize (ASSL)
   Describe las características de presentación relacionadas con la fuente de la [CalculationProperty](../objects/calculationproperty-element-assl.md) o [medida](../objects/measure-element-assl.md) elemento primario.  
@@ -62,7 +62,7 @@ ms.locfileid: "36105460"
 |Elementos secundarios|None|  
   
 ## <a name="remarks"></a>Notas  
- El `FontSize` propiedad contiene una expresión de expresiones multidimensionales (MDX) y se aplica a `CalculationProperty` elementos que tienen un [CalculationType](calculationtype-element-assl.md) de *miembro* o *celdas* .  
+ El `FontSize` propiedad contiene una expresión MDX (expresiones multidimensionales) y se aplica a `CalculationProperty` los elementos que tienen un [CalculationType](calculationtype-element-assl.md) de *miembro* o *celdas* .  
   
  Los elementos que corresponden a los elementos primarios de `FontSize` en el modelo de objetos de Analysis Management Objects (AMO) son <xref:Microsoft.AnalysisServices.CalculationProperty> y <xref:Microsoft.AnalysisServices.Measure>.  
   

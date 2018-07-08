@@ -1,5 +1,5 @@
 ---
-title: Elemento DatabaseID (ASSL) | Documentos de Microsoft
+title: Elemento DatabaseID (ASSL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -20,18 +20,18 @@ helpviewer_keywords:
 - DatabaseID element
 ms.assetid: 6bcf2bd5-b037-4964-bc72-42e0c89f9716
 caps.latest.revision: 8
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: c74e39a1a5696576b77ff9a2eb74e062cb2f3475
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: ec07be8832ef048ac6ddc2b6cc92a945ba9e2c2e
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36103409"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37161136"
 ---
 # <a name="databaseid-element-assl"></a>Elemento DatabaseID (ASSL)
-  Identifica la [base de datos](../objects/database-element-assl.md) elemento asociado a un fuera de línea [enlace](../data-type/binding-data-type-assl.md) elemento.  
+  Identifica el [base de datos](../objects/database-element-assl.md) elemento asociado con un fuera de línea [enlace](../data-type/binding-data-type-assl.md) elemento.  
   
 ## <a name="syntax"></a>Sintaxis  
   
@@ -60,7 +60,7 @@ ms.locfileid: "36103409"
 |Elementos secundarios|None|  
   
 ## <a name="remarks"></a>Notas  
- Para obtener más información acerca de los enlaces fuera de línea, consulte [orígenes de datos y enlaces &#40;SSAS multidimensionales&#41;](../../multidimensional-models/data-sources-and-bindings-ssas-multidimensional.md).  
+ Para obtener más información sobre los enlaces fuera de línea, consulte [orígenes de datos y enlaces &#40;Multidimensional de SSAS&#41;](../../multidimensional-models/data-sources-and-bindings-ssas-multidimensional.md).  
   
 ## <a name="see-also"></a>Vea también  
  [Propiedades &#40;ASSL&#41;](properties-assl.md)  

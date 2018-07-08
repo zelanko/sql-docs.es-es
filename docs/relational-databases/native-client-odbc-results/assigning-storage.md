@@ -1,12 +1,12 @@
 ---
-title: Asignación de almacenamiento | Documentos de Microsoft
+title: Asignar almacenamiento | Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
 ms.reviewer: ''
 ms.suite: sql
-ms.technology: connectivity
+ms.technology: native-client
 ms.tgt_pltfrm: ''
 ms.topic: reference
 helpviewer_keywords:
@@ -25,12 +25,12 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
-ms.openlocfilehash: a1c9a317e57367b43a59219b830acfd8f0276e8a
-ms.sourcegitcommit: a78fa85609a82e905de9db8b75d2e83257831ad9
+ms.openlocfilehash: da602e1613a6fafa86f1f6a701731c232aadfceb
+ms.sourcegitcommit: f8ce92a2f935616339965d140e00298b1f8355d7
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/18/2018
-ms.locfileid: "35695786"
+ms.lasthandoff: 07/03/2018
+ms.locfileid: "37417844"
 ---
 # <a name="assigning-storage"></a>Asignar almacenamiento
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -38,7 +38,7 @@ ms.locfileid: "35695786"
 
   Una aplicación puede asignar almacenamiento para los resultados antes o después de ejecutar una instrucción SQL. Si una aplicación prepara o ejecuta primero la instrucción SQL, puede realizar consultas sobre el conjunto de resultados antes de asignar almacenamiento para los resultados. Por ejemplo, si no se conoce el conjunto de resultados, la aplicación debe recuperar el número de columnas para poder asignar almacenamiento al mismo.  
   
- Para asociar almacenamiento para una columna de datos, una aplicación llama [SQLBindCol](../../relational-databases/native-client-odbc-api/sqlbindcol.md)y le pasa:  
+ Para asociar el almacenamiento para una columna de datos, una aplicación llama a [SQLBindCol](../../relational-databases/native-client-odbc-api/sqlbindcol.md)y lo pasa:  
   
 -   El tipo al que deben convertirse los datos.  
   
@@ -60,7 +60,7 @@ ms.locfileid: "35695786"
   
 -   El enlace de modo de fila finaliza cuando todos los parámetros de la instrucción SQL se enlazan como una unidad a una matriz de estructuras que contienen variables individuales para los parámetros.  
   
-     El enlace se especifica mediante una llamada a **SQLSetStmtAttr** con *atributo* establecido en SQL_ATTR_ROW_BIND_TYPE y *ValuePtr* establecido en el tamaño de la explotación de estructura el columnas del conjunto de variables que va a recibir el resultado.  
+     El enlace se especifica mediante una llamada a **SQLSetStmtAttr** con *atributo* establecido en SQL_ATTR_ROW_BIND_TYPE y *ValuePtr* establecido en el tamaño de la explotación de estructura el columnas del conjunto de variables que van a recibir el resultado.  
   
  La aplicación también establece SQL_ATTR_ROW_ARRAY_SIZE en el número de elementos de las matrices de columnas o filas y establece SQL_ATTR_ROW_STATUS_PTR y SQL_ATTR_ROWS_FETCHED_PTR.  
   

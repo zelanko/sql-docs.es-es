@@ -1,12 +1,12 @@
 ---
-title: Agregar un origen de datos (ODBC) | Documentos de Microsoft
+title: Agregar un origen de datos (ODBC) | Microsoft Docs
 ms.custom: ''
 ms.date: 08/01/2016
 ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
 ms.reviewer: ''
 ms.suite: sql
-ms.technology: connectivity
+ms.technology: native-client
 ms.tgt_pltfrm: ''
 ms.topic: reference
 helpviewer_keywords:
@@ -16,26 +16,26 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
-ms.openlocfilehash: 4bfc1030cba65196858d05e3c57230b4930b2b21
-ms.sourcegitcommit: a78fa85609a82e905de9db8b75d2e83257831ad9
+ms.openlocfilehash: be2aceb1f0b4d868e45219e4705eb12d7aee37c1
+ms.sourcegitcommit: f8ce92a2f935616339965d140e00298b1f8355d7
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/18/2018
-ms.locfileid: "35694476"
+ms.lasthandoff: 07/03/2018
+ms.locfileid: "37421514"
 ---
-# <a name="configuring-the-sql-server-odbc-driver---add-a-data-source"></a>Configurar el controlador ODBC de SQL Server - agregar un origen de datos
+# <a name="configuring-the-sql-server-odbc-driver---add-a-data-source"></a>Configurar el controlador ODBC de SQL Server: agregar un origen de datos
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
 [!INCLUDE[SNAC_Deprecated](../../includes/snac-deprecated.md)]
 
   Antes de utilizar las aplicaciones ODBC con [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] o una versión posterior, debe saber cómo actualizar la versión de los procedimientos almacenados del catálogo en versiones anteriores de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] y agregar, eliminar y probar los orígenes de datos.  
   
-  Puede agregar un origen de datos mediante el Administrador de ODBC, mediante programación (utilizando [SQLConfigDataSource](../../relational-databases/native-client-odbc-api/sqlconfigdatasource.md)), o mediante la creación de un archivo.  
+  Puede agregar un origen de datos con el Administrador de ODBC, mediante programación (utilizando [SQLConfigDataSource](../../relational-databases/native-client-odbc-api/sqlconfigdatasource.md)), o mediante la creación de un archivo.  
   
 ### <a name="to-add-a-data-source-by-using-odbc-administrator"></a>Para agregar un origen de datos mediante el Administrador ODBC  
   
-1.  Desde el **el Panel de Control**, acceso **herramientas administrativas** y, a continuación, o bien **orígenes de datos ODBC (64 bits)** o **orígenes de datos ODBC (32 bits)**. De modo alternativo, puede invocar odbcad32.exe.  
+1.  Desde el **Panel de Control**, acceso **herramientas administrativas** y, después, **orígenes de datos ODBC (64 bits)** o **orígenes de datos ODBC (32-bit)**. De modo alternativo, puede invocar odbcad32.exe.  
   
-2.  Haga clic en el **DSN de usuario**, **DSN de sistema**, o **DSN de archivo** ficha y, a continuación, haga clic en **agregar**.  
+2.  Haga clic en el **DSN de usuario**, **DSN de sistema**, o **DSN de archivo** pestaña y, a continuación, haga clic en **agregar**.  
   
 3.  Haga clic en **SQL Server**y, a continuación, haga clic en **finalizar**.  
   

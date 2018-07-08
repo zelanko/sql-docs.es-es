@@ -1,5 +1,5 @@
 ---
-title: Trabajar con el proveedor WMI para la administración de configuración | Documentos de Microsoft
+title: Trabajar con el proveedor WMI para la administración de configuración | Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -21,15 +21,15 @@ helpviewer_keywords:
 - binding [WMI]
 ms.assetid: 34daa922-7074-41d0-9077-042bb18c222a
 caps.latest.revision: 22
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: 757c5bf468ff1c9fb2b5d493121a9e4b7daab144
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: CarlRabeler
+ms.author: carlrab
+manager: craigg
+ms.openlocfilehash: e10e77b15dc7641f03f3579db1ef28880ae7ec09
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36103053"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37175392"
 ---
 # <a name="working-with-the-wmi-provider-for-configuration-management"></a>Trabajar con el proveedor WMI para la administración de configuración
   Tenga en cuenta la siguiente información antes de programar con el proveedor WMI para la Administración de equipos:  
@@ -37,7 +37,7 @@ ms.locfileid: "36103053"
 ## <a name="binding"></a>Enlace  
  El proveedor WMI para la administración de configuración es un modelo de objetos COM y admite el enlace en tiempo de diseño y en tiempo de ejecución. Con el enlace en tiempo de ejecución puede utilizar lenguajes de script, como VBScript, para manipular mediante programación los servicios de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], la configuración de red y los alias.  
   
- Para obtener más información sobre la programación de las implementaciones del proveedor de WMI mediante lenguajes de scripting, consulte el [!INCLUDE[msCoName](../../includes/msconame-md.md)] MSDN [sitio Web](http://go.microsoft.com/fwlink/?linkid=15426).  
+ Para obtener más información sobre cómo programar implementaciones del proveedor de WMI mediante lenguajes de scripting, consulte el [!INCLUDE[msCoName](../../includes/msconame-md.md)] MSDN [sitio Web](http://go.microsoft.com/fwlink/?linkid=15426).  
   
 ## <a name="specifying-a-connection-string"></a>Especificar una cadena de conexión  
  Las aplicaciones dirigen el proveedor WMI para la administración de configuración a una instancia de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] mediante la conexión a un espacio de nombres WMI definido por el proveedor. El servicio WMI de Windows asigna este espacio de nombres a la DLL del proveedor DLL y lo carga en memoria. Todas las instancias de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] se representan con un único espacio de nombres WMI. El valor predeterminado del espacio de nombres es  
@@ -48,7 +48,7 @@ ms.locfileid: "36103053"
   
  donde `instance_name` tiene como valor predeterminado `MSSQLSERVER` en una instalación predeterminada de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
- **Nota:** si se está conectando a través de Firewall de Windows, debe asegurarse de que los equipos están configurados correctamente. Consulte el artículo "Connecting Through Windows Firewall" en la documentación de Instrumental de administración de Windows en [!INCLUDE[msCoName](../../includes/msconame-md.md)] MSDN [sitio Web](http://go.microsoft.com/fwlink/?linkid=15426).  
+ **Nota:** si se conecta a través de Firewall de Windows, deberá asegurarse de que los equipos están configurados correctamente. Consulte el artículo "Connecting Through Windows Firewall" en la documentación de Instrumental de administración de Windows en [!INCLUDE[msCoName](../../includes/msconame-md.md)] MSDN [sitio Web](http://go.microsoft.com/fwlink/?linkid=15426).  
   
 ## <a name="permissions-and-server-authentication"></a>Permisos y autenticación del servidor  
  Para tener acceso al proveedor WMI para la administración de configuración, el script de administración de WMI de cliente se debe ejecutar en el contexto de un administrador en el equipo de destino. Necesita ser miembro del grupo administradores de Windows local en el equipo que desea administrar.  

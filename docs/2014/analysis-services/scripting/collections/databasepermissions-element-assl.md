@@ -1,5 +1,5 @@
 ---
-title: Elemento DatabasePermissions (ASSL) | Documentos de Microsoft
+title: Elemento DatabasePermissions (ASSL) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -22,18 +22,18 @@ helpviewer_keywords:
 - DatabasePermissions element
 ms.assetid: c4ce0da3-f7ba-4f11-8cd8-236c32992aaf
 caps.latest.revision: 35
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 4a9c77244d652aa80b74f9dc007d2b44bba9174e
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: ad3ab49b481a7411d2dd818e5acfa019e7ea9382
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36103633"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37157296"
 ---
 # <a name="databasepermissions-element-assl"></a>Elemento DatabasePermissions (ASSL)
-  Contiene la colección de [DatabasePermission](../objects/databasepermission-element-assl.md) elementos asociados a un [base de datos](../objects/database-element-assl.md) elemento.  
+  Contiene la colección de [DatabasePermission](../objects/databasepermission-element-assl.md) elementos asociados con un [base de datos](../objects/database-element-assl.md) elemento.  
   
 ## <a name="syntax"></a>Sintaxis  
   
@@ -61,7 +61,7 @@ ms.locfileid: "36103633"
 |Relación|Elemento|  
 |------------------|-------------|  
 |Elementos primarios|[Base de datos](../objects/database-element-assl.md)|  
-|Elementos secundarios|[DatabasePermission](../objects/databasepermission-element-assl.md)|  
+|Elementos secundarios|[Elemento DatabasePermission](../objects/databasepermission-element-assl.md)|  
   
 ## <a name="remarks"></a>Notas  
  El elemento correspondiente en el modelo de objetos de Analysis Management Objects (AMO) es <xref:Microsoft.AnalysisServices.DatabasePermissionCollection>.  

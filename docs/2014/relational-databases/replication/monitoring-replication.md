@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - replication
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - monitoring performance [SQL Server replication], about monitoring replication
 - transactional replication, monitoring
@@ -21,13 +21,13 @@ ms.assetid: f182f43a-6af8-45bc-a708-08d5f7a6984a
 caps.latest.revision: 38
 author: craigg-msft
 ms.author: craigg
-manager: jhubbard
-ms.openlocfilehash: 7434a211de780ab5a363aeec97b8914bb587f5a4
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: c1276429c773656e04a3ce15f277d08c3b3e52f5
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36105127"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37162306"
 ---
 # <a name="monitoring-replication"></a>Supervisar (replicación)
   Supervisar una topología de replicación es un aspecto importante en la implementación de la replicación. Debido a que la actividad de replicación se distribuye, es fundamental realizar un seguimiento de la actividad y el estado de todos los equipos que participan en la replicación. Para supervisar la replicación se pueden utilizar las siguientes herramientas:  
@@ -55,6 +55,6 @@ ms.locfileid: "36105127"
 ## <a name="see-also"></a>Vea también  
  [Administración &#40;replicación&#41;](administration/administration-replication.md)   
  [Best Practices for Replication Administration](administration/best-practices-for-replication-administration.md)   
- [Replicación de Monitor](monitor/monitoring-replication-overview.md)  
+ [Monitor de replicación](monitor/monitoring-replication-overview.md)  
   
   

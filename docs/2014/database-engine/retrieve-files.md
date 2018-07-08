@@ -1,5 +1,5 @@
 ---
-title: Recuperar archivos | Documentos de Microsoft
+title: Recuperar archivos | Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -8,22 +8,22 @@ ms.suite: ''
 ms.technology:
 - dbe-cross-instance
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - version control services [SQL Server], file retrieval
 - file retrieval [SQL Server]
 - retrieving files
 ms.assetid: 37b74426-e262-43b2-a81f-79b1fd1a36ec
 caps.latest.revision: 23
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: f1b53eb99abc77e809bd7aaac30f8f218cd4ee03
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: mashamsft
+ms.author: mathoma
+manager: craigg
+ms.openlocfilehash: 648b7833ddb8a1dd74f98ad15cdb1c5072d91165
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36105909"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37171386"
 ---
 # <a name="retrieve-files"></a>Recuperar archivos
   Después de haber abierto un proyecto controlado por código fuente, puede utilizar [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] para recuperar copias locales de los archivos del proyecto desde el almacén de control de código fuente en el directorio local en el que reside el proyecto.  

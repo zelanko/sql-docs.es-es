@@ -1,5 +1,6 @@
 ---
-title: Información general del Asistente de migración de datos (SQL Server) | Documentos de Microsoft
+title: Información general del Asistente de migración de datos (SQL Server) | Microsoft Docs
+description: Aprenda a usar Data Migration Assistant para migrar bases de datos de SQL Server a otro servidor de SQL o bases de datos de Azure
 ms.custom: ''
 ms.date: 03/15/2018
 ms.prod: sql
@@ -17,52 +18,52 @@ caps.latest.revision: ''
 author: HJToland3
 ms.author: jtoland
 manager: craigg
-ms.openlocfilehash: dd681a6445c6759b0ec17e06dc0b4dbf24b3b72f
-ms.sourcegitcommit: 808d23a654ef03ea16db1aa23edab496b73e5072
+ms.openlocfilehash: 3480f529b5f560f50518fa3af4a810ea0acc0bbb
+ms.sourcegitcommit: 05e18a1e80e61d9ffe28b14fb070728b67b98c7d
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/04/2018
-ms.locfileid: "34707973"
+ms.lasthandoff: 07/04/2018
+ms.locfileid: "37781526"
 ---
-# <a name="overview-of-data-migration-assistant"></a>Información general del Asistente de migración de datos
+# <a name="overview-of-data-migration-assistant"></a>Información general de Data Migration Assistant
 
-El Asistente para la migración de datos (DMA) le permite actualizar a una plataforma de datos modernas al detectar problemas de compatibilidad que pueden afectar a la funcionalidad de la base de datos en la nueva versión de SQL Server y base de datos de SQL Azure. DMA recomienda rendimiento y las mejoras de confiabilidad de su entorno de destino y permite mover el esquema, datos y objetos dependientes desde el servidor de origen al servidor de destino.
+Data Migration Assistant (DMA) le ayuda a actualizar a una plataforma de datos moderna detectando problemas de compatibilidad que pueden afectar a la funcionalidad de base de datos en la nueva versión de SQL Server o de base de datos de SQL Azure. DMA recomienda mejoras de rendimiento y confiabilidad para su entorno de destino y le permite mover el esquema, datos y objetos dependientes del servidor de origen al servidor de destino.
 
 > [!NOTE] 
-> Para grandes (en términos de número y tamaño de las bases de datos) de las migraciones, se recomienda utilizar la [servicio de migración de base de datos de Azure](https://docs.microsoft.com/azure/dms/dms-overview), que puede migrar las bases de datos a escala.
+> Para las migraciones de gran tamaño (en términos de número y tamaño de las bases de datos), se recomienda que use el [Azure Database Migration Service](https://docs.microsoft.com/azure/dms/dms-overview), que puede migrar las bases de datos a escala.
   
 ## <a name="capabilities"></a>Capabilities
 
-- Evalúe las instancias de SQL Server local migrar a las bases de datos de SQL Azure. El flujo de trabajo de evaluación le ayuda a detectar los siguientes problemas que pueden afectar a la migración de base de datos de SQL Azure y proporcionan instrucciones detalladas sobre cómo resolverlos.
+- Evalúe las instancias de SQL Server local migrar a las bases de datos SQL de Azure. El flujo de trabajo de evaluación le ayuda a detectar los siguientes problemas que pueden afectar a la migración de bases de datos SQL de Azure y proporcionan instrucciones detalladas sobre cómo resolverlos.
 
-  - Problemas de bloqueo de migración: detecta bases de datos de los problemas de compatibilidad que migrar de bloque en SQL Server local s para bases de datos de SQL Azure. DMA proporciona recomendaciones para ayudarle a resolver esos problemas.
+  - Problemas de bloqueo de migración: detecta s a las bases de datos SQL de Azure de bases de datos de los problemas de compatibilidad que migrar de bloque en SQL Server local. DMA proporciona recomendaciones para ayudarle a resolver esos problemas.
 
-  - Parcialmente compatible o características no admitidas: detecta características no admitidas o admitidas parcialmente que están actualmente en uso en la instancia de SQL Server de origen. DMA proporciona que un amplio conjunto de recomendaciones, alternativas disponibles en Azure y pasos para que se pueden incorporar en los proyectos de migración.
+  - Características no admitidas o parcialmente compatibles: detecta las características no admitidas o parcialmente compatibles que están actualmente en uso en la instancia de SQL Server de origen. DMA proporciona que un completo conjunto de recomendaciones, alternativas disponibles en Azure y pasos de mitigación, por lo que puede incorporar en los proyectos de migración.
 
-- Detectar problemas que pueden afectar a una actualización a un servidor local de SQL. Estos se describen como problemas de compatibilidad y se organizan en las siguientes categorías:
+- Detectar problemas que pueden afectar a una actualización a un servidor de SQL en el entorno local. Estas se describen como problemas de compatibilidad y se organizan en las siguientes categorías:
 
   - Cambios importantes
   - Cambios de comportamiento
-  - Características desusadas
+  - Características en desuso
 
-- Descubra nuevas características de la plataforma de SQL Server de destino que la base de datos puede beneficiarse de tras la actualización. Estos se describen como recomendaciones de la característica y se organizan en las siguientes categorías:
+- Descubra las nuevas características de la plataforma de SQL Server de destino que puede beneficiarse de la base de datos tras una actualización. Estas se describen como recomendación de característica y se organizan en las siguientes categorías:
 
   - Rendimiento
   - Seguridad
   - Storage
 
-- Migrar una instancia de SQL Server local a una instancia de SQL Server moderna, hospedada de forma local o en una máquina virtual Azure (VM) que sea accesible desde la red local. La máquina virtual de Azure puede tener acceso mediante VPN u otras tecnologías. El flujo de trabajo de migración le ayuda a migrar los siguientes componentes:
+- Migrar una instancia de SQL Server local a una instancia de SQL Server moderna, hospedada localmente o en una máquina virtual Azure (VM) que sea accesible desde la red local. Puede tener acceso a la máquina virtual de Azure mediante VPN u otras tecnologías. El flujo de trabajo de migración le ayuda a migrar los siguientes componentes:
 
   - Esquema de bases de datos
   - Datos y usuarios
   - Roles del servidor
   - Inicios de sesión de SQL Server y Windows
 
-- Después de la migración correcta, las aplicaciones pueden conectarse a las bases de datos de destino SQL server sin problemas.
+- Después de la migración correcta, las aplicaciones pueden conectarse sin problemas a las bases de datos de destino SQL server.
 
-## <a name="supported-source-and-target-versions"></a>Versiones admitidas de origen y de destino
+## <a name="supported-source-and-target-versions"></a>Versiones compatibles de origen y destino
 
-DMA reemplaza todas las versiones anteriores del Asesor de actualizaciones de SQL Server y se debe usar para las actualizaciones para la mayoría de las versiones de SQL Server. Siguen las versiones admitidas de origen y de destino.
+DMA reemplaza todas las versiones anteriores del Asesor de actualizaciones de SQL Server y se debe usar para las actualizaciones para la mayoría de las versiones de SQL Server. Siguen las versiones compatibles de origen y de destino.
 
 **Orígenes**
 - SQL Server 2005
@@ -71,17 +72,17 @@ DMA reemplaza todas las versiones anteriores del Asesor de actualizaciones de SQ
 - SQL Server 2012 
 - SQL Server 2014
 - SQL Server 2016
-- SQL Server de 2017 en Windows
+- SQL Server 2017 en Windows
 
 **Destinos**
 - SQL Server 2012
 - SQL Server 2014
 - SQL Server 2016
-- SQL Server de 2017 en Windows y Linux
+- SQL Server 2017 en Windows y Linux
 - Se aplica a: Base de datos SQL de Azure
 
 > [!NOTE] 
-> DMA no admite actualmente la instancia de base de datos administrada de SQL de Azure como destino.
+> DMA no admite actualmente la instancia administrada de Azure SQL Database como destino.
 
 ## <a name="installation"></a>Installation
 
@@ -93,9 +94,9 @@ Para instalar DMA, descargue la versión más reciente de la herramienta desde e
 
 [Asistente para la migración de datos: Opciones de configuración](../dma/dma-configurationsettings.md)
 
-[Migrar local SQL Server mediante el Asistente de migración de datos](../dma/dma-migrateonpremsql.md)
+[Migrate On-Premises SQL Server mediante Data Migration Assistant](../dma/dma-migrateonpremsql.md)
 
-[Asistente de migración de datos: Prácticas recomendadas](../dma/dma-bestpractices.md)
+[Asistente para la migración de datos: Procedimientos recomendados](../dma/dma-bestpractices.md)
 
 
 

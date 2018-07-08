@@ -1,5 +1,5 @@
 ---
-title: 'Lección 1: Crear objetos de almacenamiento de Azure de Windows | Documentos de Microsoft'
+title: 'Lección 1: Crear objetos de Azure Storage | Microsoft Docs'
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 74edd1fd-ab00-46f7-9e29-7ba3f1a446c5
 caps.latest.revision: 7
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: 916139aa9f5e30581abc29421cafb2bb5eb06ee7
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: craigg-msft
+ms.author: craigg
+manager: craigg
+ms.openlocfilehash: dca19f18df157756625b2335b2e38439c34d4f5f
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36106673"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37157396"
 ---
 # <a name="lesson-1-create-windows-azure-storage-objects"></a>Lección 1: Crear objetos de Azure Storage
   Para poder crear copias de seguridad de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] en el almacenamiento en la nube, debe crear primero una cuenta de almacenamiento y después un contenedor de blobs. La lección 1 le guía por los pasos necesarios para iniciar sesión en el portal de administración de Windows Azure, y para crear una cuenta de almacenamiento y un contenedor de blobs.  
@@ -27,7 +27,7 @@ ms.locfileid: "36106673"
 ## <a name="create-a-storage-account"></a>Crear una cuenta de almacenamiento  
  Para crear una cuenta de almacenamiento desde el portal de administración de Windows Azure, siga estos pasos:  
   
-1.  Inicie sesión en el portal de administración de Windows Azure con su cuenta. Si no tiene una cuenta de Windows Azure, [visite prueba gratuita de 3 meses de Windows Azure](http://go.microsoft.com/fwlink/?LinkId=271927).  
+1.  Inicie sesión en el portal de administración de Windows Azure con su cuenta. Si no tienes una cuenta de Windows Azure, [visite evaluación gratuita de 3 meses de Windows Azure](http://go.microsoft.com/fwlink/?LinkId=271927).  
   
      ![Pantalla de inicio de sesión de Azure Windows](../../2014/tutorials/media/windowazurelogin-backuptocloud.gif "pantalla de inicio de sesión de Azure de Windows")  
   
@@ -45,7 +45,7 @@ ms.locfileid: "36106673"
   
  Para crear un contenedor, siga estos pasos:  
   
-1.  Seleccione la cuenta de almacenamiento, haga clic en el **contenedores** ficha y haga clic en **agregar contenedor** en la parte inferior de la pantalla que abre un cuadro de diálogo nuevo.  
+1.  Seleccione la cuenta de almacenamiento, haga clic en el **contenedores** ficha y haga clic en **agregar contenedor** en la parte inferior de la pantalla que abre un cuadro de diálogo.  
   
      ![Crear un contenedor en el Portal de administración](../../2014/tutorials/media/backuptocloud.gif "crear un contenedor en el Portal de administración")  
   

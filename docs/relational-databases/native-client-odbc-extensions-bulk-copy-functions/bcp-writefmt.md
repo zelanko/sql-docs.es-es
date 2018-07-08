@@ -1,12 +1,12 @@
 ---
-title: bcp_writefmt | Documentos de Microsoft
+title: bcp_writefmt | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
 ms.reviewer: ''
 ms.suite: sql
-ms.technology: connectivity
+ms.technology: native-client
 ms.tgt_pltfrm: ''
 ms.topic: reference
 apiname:
@@ -22,12 +22,12 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
-ms.openlocfilehash: 6486dcf5d77ae1543c85947e2f62efed625979fc
-ms.sourcegitcommit: a78fa85609a82e905de9db8b75d2e83257831ad9
+ms.openlocfilehash: 79061d9b12fa21e015c74fd35804efbf097f4db3
+ms.sourcegitcommit: f8ce92a2f935616339965d140e00298b1f8355d7
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/18/2018
-ms.locfileid: "35697766"
+ms.lasthandoff: 07/03/2018
+ms.locfileid: "37412124"
 ---
 # <a name="bcpwritefmt"></a>bcp_writefmt
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -62,7 +62,7 @@ RETCODE bcp_writefmt (
  Para cargar un archivo de formato guardado, utilice [bcp_readfmt](../../relational-databases/native-client-odbc-extensions-bulk-copy-functions/bcp-readfmt.md).  
   
 > [!NOTE]  
->  El archivo de formato generado por **bcp_writefmt** solo es compatible con las versiones de la **bcp** utilidad se distribuye con [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] versión 7.0 y versiones posterior.  
+>  El archivo de formato producido por **bcp_writefmt** solo es compatible con las versiones de la **bcp** utilidad se distribuye con [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] versión 7.0 y versiones posterior.  
   
 ## <a name="example"></a>Ejemplo  
   

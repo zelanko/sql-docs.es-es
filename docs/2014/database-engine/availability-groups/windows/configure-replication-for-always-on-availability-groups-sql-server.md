@@ -5,24 +5,23 @@ ms.date: 06/14/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.suite: ''
-ms.technology:
-- dbe-high-availability
+ms.technology: high-availability
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - Availability Groups [SQL Server], interoperability
 - replication [SQL Server], AlwaysOn Availability Groups
 ms.assetid: 4e001426-5ae0-4876-85ef-088d6e3fb61c
 caps.latest.revision: 14
-author: craigg-msft
-ms.author: craigg
-manager: jhubbard
-ms.openlocfilehash: 80edfc2a5a5d480b6d7acbc88d030881fb0e2e82
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: MashaMSFT
+ms.author: mathoma
+manager: craigg
+ms.openlocfilehash: a57ba4393c23920b98a407176de51034715a54c6
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36105678"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37229605"
 ---
 # <a name="configure-replication-for-always-on-availability-groups-sql-server"></a>Configurar la replicación para grupos de disponibilidad AlwaysOn (SQL Server)
   La configuración de la replicación y los grupos de disponibilidad AlwaysOn de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] requiere siete pasos. Cada paso se describe con más detalle en las secciones siguientes.  
@@ -74,7 +73,7 @@ ms.locfileid: "36105678"
   
  **Configurar el publicador en el publicador original**  
   
-1.  Configure el distribuidor remoto. Si se utilizan procedimientos almacenados para configurar el publicador, ejecute `sp_adddistributor`. Especifique el mismo valor para *@password* que utilizó cuando `sp_adddistrbutor` se ejecutó en el distribuidor para configurar la distribución.  
+1.  Configure el distribuidor remoto. Si se emplean procedimientos almacenados para configurar el publicador, ejecute `sp_adddistributor`. Especifique el mismo valor para *@password* que utilizó cuando `sp_adddistrbutor` se ejecutó en el distribuidor para configurar la distribución.  
   
     ```  
     exec sys.sp_adddistributor  
@@ -82,7 +81,7 @@ ms.locfileid: "36105678"
         @password = 'MyDistPass'  
     ```  
   
-2.  Habilite la base de datos para replicación. Si se utilizan procedimientos almacenados para configurar el publicador, ejecute `sp_replicationdboption`. Si la replicación transaccional y de mezcla se configuran para la base de datos, cada una debe estar habilitada.  
+2.  Habilite la base de datos para replicación. Si se emplean procedimientos almacenados para configurar el publicador, ejecute `sp_replicationdboption`. Si la replicación transaccional y de mezcla se configuran para la base de datos, cada una debe estar habilitada.  
   
     ```  
     USE master;  
@@ -137,7 +136,7 @@ EXEC sys.sp_adddistpublisher
     @password = '**Strong password for publisher**';  
 ```  
   
- En cada host de réplica secundaria, configure la distribución. Identifique el distribuidor del publicador original como distribuidor remoto. Usar la misma contraseña que utilizó cuando `sp_adddistributor` se ejecutó originalmente en el distribuidor. Si se utilizan procedimientos almacenados para configurar la distribución, el *@password* parámetro de `sp_adddistributor` se utiliza para especificar la contraseña.  
+ En cada host de réplica secundaria, configure la distribución. Identifique el distribuidor del publicador original como distribuidor remoto. Usar la misma contraseña que utilizó cuando `sp_adddistributor` se ejecutó originalmente en el distribuidor. Si se utilizan procedimientos almacenados para configurar la distribución, el *@password* parámetro de `sp_adddistributor` se usa para especificar la contraseña.  
   
 ```  
 EXEC sp_adddistributor   
@@ -145,7 +144,7 @@ EXEC sp_adddistributor
     @password = '**Strong password for distributor**';  
 ```  
   
- En cada host de réplica secundaria, asegúrese de que los suscriptores de inserción de publicaciones de la base de datos aparezcan como servidores vinculados. Si se utilizan procedimientos almacenados para configurar los publicadores remotos, use `sp_addlinkedserver` para agregar a los suscriptores (si no están presentes) como servidores vinculados a los publicadores.  
+ En cada host de réplica secundaria, asegúrese de que los suscriptores de inserción de publicaciones de la base de datos aparezcan como servidores vinculados. Si se emplean procedimientos almacenados para configurar los publicadores remotos, use `sp_addlinkedserver` para agregar a los suscriptores (si no están presentes) como servidores vinculados a los publicadores.  
   
 ```  
 EXEC sys.sp_addlinkedserver   
@@ -180,7 +179,7 @@ EXEC sys.sp_validate_replica_hosts_as_publishers
  El procedimiento almacenado `sp_validate_replica_hosts_as_publishers` se debe ejecutar desde un inicio de sesión con autorización suficiente en cada host de réplica del grupo de disponibilidad para consultar información acerca del grupo de disponibilidad. A diferencia de `sp_validate_redirected_publisher`, usa las credenciales del llamador y no utiliza el inicio de sesión que se conservan en msdb.dbo.MSdistpublishers para conectarse a las réplicas del grupo de disponibilidad.  
   
 > [!NOTE]  
->  `sp_validate_replica_hosts_as_publishers` se producirá un error con el siguiente error al validar los hosts de réplica secundaria que no permiten el acceso de lectura o requieren que se especifique la intención de lectura.  
+>  `sp_validate_replica_hosts_as_publishers` se producirá un error con el siguiente error al validar los hosts de réplica secundaria que no permiten el acceso de lectura o requieren especificar la intención de lectura.  
 >   
 >  Mensaje 21899, nivel 11, estado 1, procedimiento `sp_hadr_verify_subscribers_at_publisher`, línea 109  
 >   
@@ -226,7 +225,7 @@ EXEC sys.sp_validate_replica_hosts_as_publishers
   
 ## <a name="see-also"></a>Vea también  
  [Requisitos previos, restricciones y recomendaciones para grupos de disponibilidad AlwaysOn &#40;SQL Server&#41;](prereqs-restrictions-recommendations-always-on-availability.md)   
- [Información general de los grupos de disponibilidad AlwaysOn &#40;SQL Server&#41;](overview-of-always-on-availability-groups-sql-server.md)   
+ [Información general de grupos de disponibilidad AlwaysOn &#40;SQL Server&#41;](overview-of-always-on-availability-groups-sql-server.md)   
  [Grupos de disponibilidad AlwaysOn: Interoperabilidad (SQL Server)](always-on-availability-groups-interoperability-sql-server.md)   
  [Replicación de SQL Server](../../../relational-databases/replication/sql-server-replication.md)  
   

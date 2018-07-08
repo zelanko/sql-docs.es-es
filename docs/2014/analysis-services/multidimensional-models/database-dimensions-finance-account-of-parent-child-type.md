@@ -1,5 +1,5 @@
 ---
-title: Crear una cuenta financiera de dimensión de tipo de elementos primarios y secundarios | Documentos de Microsoft
+title: Crear una cuenta financiera de dimensión de tipo de elementos primarios y secundarios | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - dimensions [Analysis Services], account
 - account dimensions [Analysis Services]
@@ -16,22 +16,22 @@ helpviewer_keywords:
 - account intelligence [Analysis Services]
 ms.assetid: 2ba74e81-5b4b-407e-acdf-deb2f6accf0a
 caps.latest.revision: 15
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 209184ce52888c65dc24c044517ccaf95d1a1a24
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 39c5c676cd0a07c76a06fd559b7f40f8cee4cfcb
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36102933"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37259601"
 ---
 # <a name="create-a-finance-account-of-parent-child-type-dimension"></a>Crear una cuenta financiera de una dimensión de tipo primario-secundario
   En [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)], una dimensión de tipo cuenta es aquella cuyos atributos representan un gráfico de cuentas para la elaboración de informes financieros.  
   
  Una dimensión de cuenta le permite administrar de forma selectiva el comportamiento de las agregaciones dentro de las cuentas a lo largo del tiempo. Una dimensión de cuenta también permite utilizar un mecanismo estándar para resolver la mayoría de los problemas de agregación no estándar que suelen detectarse en las soluciones de Business Intelligence que procesan datos financieros. Si no se dispone de un mecanismo estándar parecido, para solucionar los problemas de agregación no estándar se necesitan fórmulas de resumen personalizadas, miembros calculados o scripts MDX (Expresiones multidimensionales).  
   
- Para identificar una dimensión como una dimensión de cuenta, establezca el `Type` propiedad de la dimensión en `Accounts`.  
+ Para identificar una dimensión como una dimensión de cuenta, establezca el `Type` propiedad de la dimensión a `Accounts`.  
   
 ## <a name="dimension-structure"></a>Estructura de dimensión  
  Una dimensión de cuenta contiene, como mínimo, dos atributos:  
@@ -50,7 +50,7 @@ ms.locfileid: "36102933"
   
 -   Un atributo de nombre de cuenta: atributo que se utiliza para elaborar informes. Para identificar un atributo de nombre de cuenta, establezca la propiedad `Type` del atributo en `AccountName`.  
   
--   Un atributo de número de cuenta: atributo que se utiliza para elaborar informes. Para identificar un atributo de número de cuenta, establezca el `Type` propiedad del atributo en `AccountNumber`.  
+-   Un atributo de número de cuenta: atributo que se utiliza para elaborar informes. Identificar un atributo de número de cuenta, establezca el `Type` propiedad del atributo en `AccountNumber`.  
   
  Para más información sobre tipos de atributo, vea [Configurar tipos de atributos](attribute-properties-configure-attribute-types.md).  
   
@@ -59,7 +59,7 @@ ms.locfileid: "36102933"
   
 ## <a name="see-also"></a>Vea también  
  [Atributos y jerarquías de atributo](../multidimensional-models-olap-logical-dimension-objects/attributes-and-attribute-hierarchies.md)   
- [Ayuda de F1 de Asistente de Business Intelligence](../business-intelligence-wizard-f1-help.md)   
- [Tipos de dimensión](../multidimensional-models-olap-logical-dimension-objects/database-dimension-properties-types.md)  
+ [Asistente de Business Intelligence F1 Ayuda](../business-intelligence-wizard-f1-help.md)   
+ [Tipos de dimensiones](../multidimensional-models-olap-logical-dimension-objects/database-dimension-properties-types.md)  
   
   

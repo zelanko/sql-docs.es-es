@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - dbe-cross-instance
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - Query Designer [SQL Server], Criteria pane
 - View Designer, Criteria pane
@@ -19,15 +19,15 @@ helpviewer_keywords:
 - adding query options into grid
 ms.assetid: 6291affe-580e-482f-a7ff-45ce3837956a
 caps.latest.revision: 16
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: b690cc4fd041673e0d46ecfc4afe123063305c45
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: stevestein
+ms.author: sstein
+manager: craigg
+ms.openlocfilehash: d14127f643e1e5bf496fd012ca58290e7671e2cd
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36105516"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37177112"
 ---
 # <a name="criteria-pane-visual-database-tools"></a>Panel Criterios (Visual Database Tools)
   El panel Criterios permite definir las opciones de consulta (como qué columnas de datos se van a mostrar, cómo se van a ordenar los resultados y qué filas se van a seleccionar); para ello, deben especificarse las opciones en una cuadrícula con forma de hoja de cálculo. En el panel Criterios, puede especificar:  
@@ -76,7 +76,7 @@ ms.locfileid: "36105516"
 ## <a name="see-also"></a>Vea también  
  [Diseñar temas de procedimientos de consultas y vistas &#40;Visual Database Tools&#41;](visual-database-tools.md)   
  [Panel de diagrama &#40;Visual Database Tools&#41;](diagram-pane-visual-database-tools.md)   
- [Reglas para especificar valores de búsqueda &#40;Visual Database Tools&#41;](rules-for-entering-search-values-visual-database-tools.md)   
+ [Reglas para especificar los valores de búsqueda &#40;Visual Database Tools&#41;](rules-for-entering-search-values-visual-database-tools.md)   
  [Ordenar y agrupar los resultados de consulta &#40;Visual Database Tools&#41;](sort-and-group-query-results-visual-database-tools.md)   
  [Panel de resultados &#40;Visual Database Tools&#41;](results-pane-visual-database-tools.md)   
  [Panel SQL &#40;Visual Database Tools&#41;](sql-pane-visual-database-tools.md)  

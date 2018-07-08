@@ -1,5 +1,5 @@
 ---
-title: Crear una dimensión de tiempo generando una tabla de tiempos | Documentos de Microsoft
+title: Crear una dimensión de tiempo generando una tabla de tiempos | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - time dimensions [Analysis Services]
 - dimensions [Analysis Services], time
@@ -19,15 +19,15 @@ helpviewer_keywords:
 - table-based time dimensions [Analysis Services]
 ms.assetid: 58303326-1361-4c0e-9f3d-642ce69c4f6a
 caps.latest.revision: 41
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 184d2d276abeb835b578d7c1f3ef26ea36ab60e1
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 9cb6230863b9e898f50ab30c6fc4288998024e5c
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36105962"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37180942"
 ---
 # <a name="create-a-time-dimension-by-generating-a-time-table"></a>Crear una dimensión de tiempo generando una tabla de tiempos
   En [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)], puede utilizar el Asistente para dimensiones de [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] para crear una dimensión de tiempo cuando ninguna tabla de tiempos está disponible en la base de datos de origen. Para ello, seleccione una de las opciones siguientes en la página **Seleccionar método de creación** :  
@@ -39,13 +39,13 @@ ms.locfileid: "36105962"
  Cuando cree una dimensión de tiempo, debe especificar los períodos de tiempo y las fechas de inicio y de finalización de la dimensión. El asistente utiliza los períodos de tiempo especificados para crear los atributos de tiempo. Al procesar la dimensión, [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] genera y almacena los datos necesarios para admitir las fechas y períodos de tiempo especificados. El asistente usa los atributos creados para una dimensión de tiempo para recomendar las jerarquías de la dimensión. Las jerarquías reflejan las relaciones entre distintos períodos de tiempo y tienen en cuenta distintos calendarios. Por ejemplo, en una jerarquía de calendario estándar, se muestra el nivel Weeks bajo el nivel Years, pero no bajo el nivel Months, ya que las semanas se dividen de forma regular en años pero no en meses. En cambio, en una jerarquía de calendario de informes o de fabricación, las semanas se dividen de forma regular en meses, por lo que el nivel Weeks se muestra bajo el nivel Months.  
   
 ## <a name="define-time-periods"></a>Definir períodos de tiempo  
- Use la página **Definir períodos de tiempo** del asistente para especificar el intervalo de fechas que desea incluir en la dimensión. Por ejemplo, puede elegir un intervalo que comience el primero de enero del primer año de los datos y que finalice uno o dos años después del año actual (para permitir transacciones futuras). Las transacciones que están fuera del intervalo no aparecen o aparecerán como miembros desconocidos de la dimensión, dependiendo de la `UnknownMemberVisible` valor de propiedad para la dimensión. También puede cambiar el primer día de la semana que se usará en los datos (el valor predeterminado es Domingo).  
+ Use la página **Definir períodos de tiempo** del asistente para especificar el intervalo de fechas que desea incluir en la dimensión. Por ejemplo, puede elegir un intervalo que comience el primero de enero del primer año de los datos y que finalice uno o dos años después del año actual (para permitir transacciones futuras). Las transacciones que están fuera del intervalo no aparecen o aparecerán como miembros desconocidos en la dimensión, según la `UnknownMemberVisible` configuración de la propiedad de la dimensión. También puede cambiar el primer día de la semana que se usará en los datos (el valor predeterminado es Domingo).  
   
  Seleccione los períodos de tiempo que se utilizarán cuando el asistente crea jerarquías que se apliquen a datos como Años, Semestres, Trimestres, Cuatrimestres, Meses, Diez días, Semanas o Fecha. Deberá seleccionar siempre al menos el período de tiempo Fecha. El atributo Date es el atributo clave de la dimensión, por lo que la dimensión no puede funcionar sin él.  
   
  Seleccione junto a **Idioma de los nombres de miembros de tiempo**el idioma que desea utilizar para etiquetar los miembros de la dimensión.  
   
- Una vez creada la dimensión de tiempo basada en un intervalo de fechas, puede utilizar el Diseñador de dimensiones para agregar o quitar atributos de tiempo. Dado que el atributo Date es el atributo clave de la dimensión, no podrá quitarse de la dimensión. Para ocultar el atributo fecha a los usuarios, puede cambiar la `AttributeHierarchyVisible` propiedad en el atributo `False`.  
+ Una vez creada la dimensión de tiempo basada en un intervalo de fechas, puede utilizar el Diseñador de dimensiones para agregar o quitar atributos de tiempo. Dado que el atributo Date es el atributo clave de la dimensión, no podrá quitarse de la dimensión. Para ocultar el atributo Date a los usuarios, puede cambiar el `AttributeHierarchyVisible` propiedad del atributo en `False`.  
   
 ## <a name="select-calendars"></a>Seleccionar calendarios  
  El calendario estándar de 12 meses (gregoriano), que comienza el primero de enero y finaliza el 31 de diciembre, se incluye siempre al crear una dimensión de tiempo. En la página **Seleccionar calendarios** del asistente, puede especificar calendarios adicionales en los que se basan las jerarquías de la dimensión. Para obtener descripciones de los tipos de calendarios, vea [Crear una dimensión de tipo Date](database-dimensions-create-a-date-type-dimension.md).  
@@ -59,7 +59,7 @@ ms.locfileid: "36105962"
   
 ## <a name="see-also"></a>Vea también  
  [Vistas del origen de datos en modelos multidimensionales](data-source-views-in-multidimensional-models.md)   
- [Crear una dimensión de tipo de fecha](database-dimensions-create-a-date-type-dimension.md)   
+ [Crear una dimensión de tipo Date](database-dimensions-create-a-date-type-dimension.md)   
  [Propiedades de la dimensión de base de datos](../multidimensional-models-olap-logical-dimension-objects/database-dimension-properties.md)   
  [Relaciones de dimensión](../multidimensional-models-olap-logical-cube-objects/dimension-relationships.md)   
  [Crear una dimensión mediante el uso de una tabla existente](create-a-dimension-by-using-an-existing-table.md)   

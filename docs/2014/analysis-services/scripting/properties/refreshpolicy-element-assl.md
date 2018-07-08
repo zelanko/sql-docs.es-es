@@ -1,5 +1,5 @@
 ---
-title: Elemento RefreshPolicy (ASSL) | Documentos de Microsoft
+title: Elemento RefreshPolicy (ASSL) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -22,18 +22,18 @@ helpviewer_keywords:
 - RefreshPolicy element
 ms.assetid: f4c36280-1a39-4f1c-a3ab-fbeb81742d6d
 caps.latest.revision: 34
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 6d2dc0549eb8151f93c817e9e59bc1a8990fac87
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: cf0aa9478a44e7479b20357ae56317b90801f77f
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36102915"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37277621"
 ---
 # <a name="refreshpolicy-element-assl"></a>Elemento RefreshPolicy (ASSL)
-  Determina la frecuencia con la parte dinámica del grupo de medida o dimensión (según lo especificado por el [persistencia](persistence-element-assl.md) elemento) está activada para los cambios.  
+  Determina la frecuencia con la parte dinámica de la dimensión o grupo de medida (según lo especificado por el [persistencia](persistence-element-assl.md) elemento) está activada para los cambios.  
   
 ## <a name="syntax"></a>Sintaxis  
   

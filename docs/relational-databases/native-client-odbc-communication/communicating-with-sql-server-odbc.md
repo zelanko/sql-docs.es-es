@@ -1,12 +1,12 @@
 ---
-title: Comunicar con SQL Server (ODBC) | Documentos de Microsoft
+title: Comunicar con SQL Server (ODBC) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/16/2017
 ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
 ms.reviewer: ''
 ms.suite: sql
-ms.technology: ''
+ms.technology: native-client
 ms.tgt_pltfrm: ''
 ms.topic: reference
 helpviewer_keywords:
@@ -19,12 +19,12 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
-ms.openlocfilehash: 12bc416141e877170d9dfb06c9504a913ffb4c4e
-ms.sourcegitcommit: a78fa85609a82e905de9db8b75d2e83257831ad9
+ms.openlocfilehash: 5f4aeecbbbdeef4bb3124cd71c4baf4bd200f85c
+ms.sourcegitcommit: f8ce92a2f935616339965d140e00298b1f8355d7
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/18/2018
-ms.locfileid: "35698956"
+ms.lasthandoff: 07/03/2018
+ms.locfileid: "37416154"
 ---
 # <a name="communicating-with-sql-server-odbc"></a>Comunicar con SQL Server (ODBC)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -34,7 +34,7 @@ ms.locfileid: "35698956"
   
  Una aplicación puede conectarse a cualquier número de orígenes de datos. La aplicación puede usar una combinación de controladores y orígenes de datos, el mismo controlador y una combinación de orígenes de datos o incluso el mismo controlador y varias conexiones al mismo origen de datos.  
   
- Puede descargar [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ejemplos de ODBC de Native Client desde el [descargas de SQL Server](http://go.microsoft.com/fwlink/?LinkId=62796) página en MSDN.  
+ Puede descargar [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] muestras de ODBC de Native Client desde el [descargas de SQL Server](http://go.microsoft.com/fwlink/?LinkId=62796) página en MSDN.  
   
 ## <a name="in-this-section"></a>En esta sección  
   

@@ -1,12 +1,12 @@
 ---
-title: SQLGetDiagField | Documentos de Microsoft
+title: SQLGetDiagField | Microsoft Docs
 ms.custom: ''
 ms.date: 03/16/2017
 ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
 ms.reviewer: ''
 ms.suite: sql
-ms.technology: ''
+ms.technology: native-client
 ms.tgt_pltfrm: ''
 ms.topic: reference
 apitype: DLLExport
@@ -18,23 +18,23 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
-ms.openlocfilehash: 43afb9ba50d67d35eb9dabb5542a20f0b847ae88
-ms.sourcegitcommit: a78fa85609a82e905de9db8b75d2e83257831ad9
+ms.openlocfilehash: 1064c0142ddb3162ed58b228308c702360c099d8
+ms.sourcegitcommit: f8ce92a2f935616339965d140e00298b1f8355d7
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/18/2018
-ms.locfileid: "35703806"
+ms.lasthandoff: 07/03/2018
+ms.locfileid: "37432754"
 ---
 # <a name="sqlgetdiagfield"></a>SQLGetDiagField
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
 [!INCLUDE[SNAC_Deprecated](../../includes/snac-deprecated.md)]
 
-  El [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] controlador ODBC Native Client especifica los campos de diagnóstico adicionales siguientes para **SQLGetDiagField**. Estos campos admiten el informe de errores enriquecido para aplicaciones de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] y están disponible en todos los registros de diagnóstica que se generan en los identificadores de conexión de ODBC e identificadores de instrucciones de ODBC conectados. Los campos se definen en sqlncli.h.  
+  El [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] controlador ODBC de Native Client especifica los siguientes campos de diagnóstico adicionales para **SQLGetDiagField**. Estos campos admiten el informe de errores enriquecido para aplicaciones de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] y están disponible en todos los registros de diagnóstica que se generan en los identificadores de conexión de ODBC e identificadores de instrucciones de ODBC conectados. Los campos se definen en sqlncli.h.  
   
 |Campo del registro de diagnóstico|Descripción|  
 |------------------------------|-----------------|  
 |SQL_DIAG_SS_LINE|Indica el número de línea de un procedimiento almacenado que genera un error. El valor de SQL_DIAG_SS_LINE solamente es significativo si SQL_DIAG_SS_PROCNAME devuelve un valor. El valor se devuelve como un entero sin signo de 16 bits.|  
-|SQL_DIAG_SS_MSGSTATE|El estado de un mensaje de error. Para obtener información sobre el estado del mensaje de error, consulte [RAISERROR](../../t-sql/language-elements/raiserror-transact-sql.md). El valor se devuelve como un entero con signo de 32 bits.|  
+|SQL_DIAG_SS_MSGSTATE|El estado de un mensaje de error. Para obtener información sobre el estado del mensaje de error, vea [RAISERROR](../../t-sql/language-elements/raiserror-transact-sql.md). El valor se devuelve como un entero con signo de 32 bits.|  
 |SQL_DIAG_SS_PROCNAME|Nombre del procedimiento almacenado que genera un error, si procede. El valor se devuelve como una cadena de caracteres. La longitud de la cadena (en caracteres) depende de la versión de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Se puede determinar mediante una llamada a [SQLGetInfo](../../relational-databases/native-client-odbc-api/sqlgetinfo.md) que solicita el valor de SQL_MAX_PROCEDURE_NAME_LEN.|  
 |SQL_DIAG_SS_SEVERITY|El nivel de gravedad del mensaje de error asociado. El valor se devuelve como un entero con signo de 32 bits.|  
 |SQL_DIAG_SS_SRVNAME|El nombre del servidor donde se ha producido el error. El valor se devuelve como una cadena de caracteres. La longitud de la cadena (en caracteres) se define en la macro SQL_MAX_SQLSERVERNAME de sqlncli.h.|  
@@ -67,7 +67,7 @@ ms.locfileid: "35703806"
 |SQL_DIAG_DFC_SS_DROP_TRIGGER|Instrucción DROP TRIGGER|  
 |SQL_DIAG_DFC_SS_DUMP_DATABASE|Instrucción BACKUP o DUMP DATABASE|  
 |SQL_DIAG_DFC_SS_DUMP_TABLE|Instrucción DUMP TABLE|  
-|SQL_DIAG_DFC_SS_DUMP_TRANSACTION|Instrucción BACKUP o DUMP TRANSACTION. También se devuelve en una instrucción CHECKPOINT si la **trunc. inicio de sesión chkpt.** opción de base de datos está activada.|  
+|SQL_DIAG_DFC_SS_DUMP_TRANSACTION|Instrucción BACKUP o DUMP TRANSACTION. También se devuelve en una instrucción CHECKPOINT si la **trunc. log en chkpt.** opción de base de datos está activada.|  
 |SQL_DIAG_DFC_SS_GOTO|Instrucción GOTO de control de flujo|  
 |SQL_DIAG_DFC_SS_INSERT_BULK|Instrucción INSERT BULK|  
 |SQL_DIAG_DFC_SS_KILL|Instrucción KILL|  
@@ -107,7 +107,7 @@ ms.locfileid: "35703806"
  Para obtener más información acerca de los parámetros con valores de tabla, vea [parámetros con valores de tabla &#40;ODBC&#41;](../../relational-databases/native-client-odbc-table-valued-parameters/table-valued-parameters-odbc.md).  
   
 ## <a name="see-also"></a>Vea también  
- [SQLGetDiagField, función](http://go.microsoft.com/fwlink/?LinkId=59352)   
+ [Función SQLGetDiagField](http://go.microsoft.com/fwlink/?LinkId=59352)   
  [Detalles de implementación de la API de ODBC](../../relational-databases/native-client-odbc-api/odbc-api-implementation-details.md)  
   
   

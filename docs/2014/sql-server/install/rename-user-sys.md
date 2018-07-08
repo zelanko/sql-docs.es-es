@@ -1,5 +1,5 @@
 ---
-title: Cambiar el nombre de usuario sys | Documentos de Microsoft
+title: Cambiar el nombre de usuario sys | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,20 +8,20 @@ ms.suite: ''
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - sys user names [SQL Server]
 ms.assetid: d622d646-83e4-4b6f-9a21-77b301af04b5
 caps.latest.revision: 25
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: 959eb9877fa4b73ff9bd307019976a05514b8f8f
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: mashamsft
+ms.author: mathoma
+manager: craigg
+ms.openlocfilehash: 8cfb55c4199935d7d859cdc9144f5a29dc34eff9
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36106034"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37202565"
 ---
 # <a name="rename-user-sys"></a>Cambiar el nombre de usuario del sistema
   El Asesor de actualizaciones ha detectado el nombre de usuario **sys** en una base de datos. Este nombre está reservado. Cambie el nombre del usuario antes de actualizar. Si no se cambia el nombre del usuario, la base de datos quedará en estado sospechoso y no estará disponible hasta que se ponga en línea.  

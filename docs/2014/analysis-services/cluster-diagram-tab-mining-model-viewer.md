@@ -1,5 +1,5 @@
 ---
-title: Pestaña diagrama (Visor de modelos de minería de datos) del clúster | Documentos de Microsoft
+title: Pestaña diagrama (Visor de modelos de minería de datos) del clúster | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,20 +8,20 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.dm.miningmodeleditor.clustering.diagram.f1
 ms.assetid: 180e6f48-5c4d-4160-b84d-608b98f7b840
 caps.latest.revision: 22
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 1080183439eac579bbbbd6ec8a716d0fbe12dca2
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: abab1915e4a17ddd4e9c3ea3a6f524dcb5493150
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36105724"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37173596"
 ---
 # <a name="cluster-diagram-tab-mining-model-viewer"></a>Pestaña Diagrama del clúster (Visor de modelos de minería de datos)
   La pestaña **Diagrama del clúster** proporciona una vista gráfica de todos los clústeres que contiene el modelo de agrupación en clústeres.  
@@ -74,7 +74,7 @@ ms.locfileid: "36105724"
  Ajuste cuántos vínculos se muestran entre los clústeres, moviendo el control deslizante arriba o abajo. Si baja el control deslizante solo quedarán las asociaciones más fuertes entre los clústeres.  
   
 ## <a name="see-also"></a>Vea también  
- [Algoritmos de minería de datos &#40;Analysis Services: minería de datos&#41;](data-mining/data-mining-algorithms-analysis-services-data-mining.md)   
+ [Algoritmos de minería de datos &#40;Analysis Services - minería de datos&#41;](data-mining/data-mining-algorithms-analysis-services-data-mining.md)   
  [Visores de modelos de minería de datos &#40;Diseñador de modelos de minería de datos&#41;](mining-model-viewers-data-mining-model-designer.md)   
  [Visores de modelos de minería de datos](data-mining/data-mining-model-viewers.md)  
   

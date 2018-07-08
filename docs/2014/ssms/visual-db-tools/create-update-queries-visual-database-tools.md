@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - dbe-cross-instance
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - tables [SQL Server], updating
 - queries [SQL Server], types
@@ -16,15 +16,15 @@ helpviewer_keywords:
 - updating tables
 ms.assetid: 178b7b75-8078-4e61-b2a8-4719b9d8033d
 caps.latest.revision: 10
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: 666c467a44692db34e5996435efd7eb61b8b62bd
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: stevestein
+ms.author: sstein
+manager: craigg
+ms.openlocfilehash: 34948672400c119a4ebaee4b39308e186bfbb1f7
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36105732"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37179162"
 ---
 # <a name="create-update-queries-visual-database-tools"></a>Crear consultas de actualización (Visual Database Tools)
   Puede cambiar el contenido de varias filas en una sola operación mediante una consulta Update. Por ejemplo, en una tabla `titles` puede utilizar una consulta Update para sumar un 10% al precio de todos los libros de una editorial determinada.  
@@ -76,7 +76,7 @@ WHERE (pub_id = '0766')
  Cuando se ejecuta una consulta Update, los resultados no se muestran en el [panel Resultados](results-pane-visual-database-tools.md). En su lugar, aparece un mensaje que indica el número de filas que se han modificado.  
   
 ## <a name="see-also"></a>Vea también  
- [Tipos de consulta admitidos &#40;Visual Database Tools&#41;](supported-query-types-visual-database-tools.md)   
+ [Tipos de consultas compatibles &#40;Visual Database Tools&#41;](supported-query-types-visual-database-tools.md)   
  [Diseñar temas de procedimientos de consultas y vistas &#40;Visual Database Tools&#41;](design-queries-and-views-how-to-topics-visual-database-tools.md)   
  [Realizar operaciones básicas con consultas (Visual Database Tools)](perform-basic-operations-with-queries-visual-database-tools.md)  
   

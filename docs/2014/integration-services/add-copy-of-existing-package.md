@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - integration-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.dts.designer.addcopyexistingpackage.f1
 helpviewer_keywords:
@@ -17,13 +17,13 @@ ms.assetid: ed530b0d-438d-4c93-8e91-13f2b2b6a8b2
 caps.latest.revision: 12
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: 89e8479e2bb1036f4a42cec80e12912a79c61a87
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 22aad56f944bc0b9c605436d8d0ab5deba0a803d
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36103915"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37156686"
 ---
 # <a name="add-copy-of-existing-package"></a>Agregar copia de paquete existente
   Utilice el cuadro de diálogo **Agregar copia de paquete existente** para agregar una copia de un paquete almacenado en [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)], el sistema de archivos o el Almacén de paquetes SSIS en un proyecto de [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] .  
@@ -49,7 +49,7 @@ ms.locfileid: "36103915"
   
 ## <a name="see-also"></a>Vea también  
  [Guardar copia del paquete](../../2014/integration-services/save-copy-of-package.md)   
- [Referencia de interfaz de usuario del cuadro de diálogo de importar paquete](../../2014/integration-services/import-package-dialog-box-ui-reference.md)   
+ [Referencia de interfaz de usuario de cuadro de diálogo de importar paquete](../../2014/integration-services/import-package-dialog-box-ui-reference.md)   
  [Referencia de interfaz de usuario del cuadro de diálogo de paquete de exportación](../../2014/integration-services/export-package-dialog-box-ui-reference.md)   
  [Guardar paquetes](save-packages.md)   
  [Importar y exportar paquetes &#40;servicio SSIS&#41;](../../2014/integration-services/import-and-export-packages-ssis-service.md)  

@@ -1,5 +1,5 @@
 ---
-title: Tipo de datos CubeDimensionPermission (ASSL) | Documentos de Microsoft
+title: Tipo de datos CubeDimensionPermission (ASSL) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -22,15 +22,15 @@ helpviewer_keywords:
 - CubeDimensionPermission data type
 ms.assetid: d9d39859-5f33-48bc-a402-0071755918de
 caps.latest.revision: 38
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: d215ed3dde22c3d0e16df4cc4d937c9ee3cb0a34
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 17bd5df3cd2dad116384d28e1f427d14a86b6b72
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36102913"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37180832"
 ---
 # <a name="cubedimensionpermission-data-type-assl"></a>Tipo de datos CubeDimensionPermission (ASSL)
   Define un tipo de datos primitivo que representa los permisos para un único rol en una dimensión concreta de un cubo.  
@@ -61,7 +61,7 @@ ms.locfileid: "36102913"
 |Relación|Elemento|  
 |------------------|-------------|  
 |Elementos primarios|None|  
-|Elementos secundarios|[Anotaciones](../collections/annotations-element-assl.md), [AttributePermissions](../collections/attributepermissions-element-assl.md), [CubeDimensionID](../properties/id-element-assl.md), [descripción](../properties/description-element-assl.md), [lectura](../properties/read-element-assl.md), [ Escribir](../properties/write-element-assl.md)|  
+|Elementos secundarios|[Las anotaciones](../collections/annotations-element-assl.md), [AttributePermissions](../collections/attributepermissions-element-assl.md), [CubeDimensionID](../properties/id-element-assl.md), [descripción](../properties/description-element-assl.md), [lectura](../properties/read-element-assl.md), [ Escritura](../properties/write-element-assl.md)|  
 |Elementos derivados|[DimensionPermission](../objects/dimensionpermission-element-assl.md) ([DimensionPermissions](../collections/dimensionpermissions-element-assl.md) colección de [dimensión](../objects/dimension-element-assl.md) o [CubePermission](../objects/cubepermission-element-assl.md))|  
   
 ## <a name="remarks"></a>Notas  

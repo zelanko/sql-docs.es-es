@@ -1,12 +1,12 @@
 ---
-title: Recuperar información del conjunto de resultados (ODBC) | Documentos de Microsoft
+title: Recuperar información del conjunto de resultados (ODBC) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/03/2017
 ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
 ms.reviewer: ''
 ms.suite: sql
-ms.technology: connectivity
+ms.technology: native-client
 ms.tgt_pltfrm: ''
 ms.topic: reference
 helpviewer_keywords:
@@ -17,14 +17,14 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
-ms.openlocfilehash: a87f490742bc3dad279d0aeed99bf61e7b14dcef
-ms.sourcegitcommit: a78fa85609a82e905de9db8b75d2e83257831ad9
+ms.openlocfilehash: 2211e77ed927c9c2bb5fd9cc3e5df89bc20a5245
+ms.sourcegitcommit: f8ce92a2f935616339965d140e00298b1f8355d7
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/18/2018
-ms.locfileid: "35700536"
+ms.lasthandoff: 07/03/2018
+ms.locfileid: "37430254"
 ---
-# <a name="processing-results---retrieve-result-set-information"></a>Procesar resultados - recuperar información del conjunto de resultados
+# <a name="processing-results---retrieve-result-set-information"></a>Procesar resultados: recuperar información del conjunto de resultados
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
 [!INCLUDE[SNAC_Deprecated](../../includes/snac-deprecated.md)]
 
@@ -39,7 +39,7 @@ ms.locfileid: "35700536"
   
      o bien  
   
-    -   Llame a [SQLColAttribute](../../relational-databases/native-client-odbc-api/sqlcolattribute.md) para obtener información específica del descriptor acerca de la columna de resultados.  
+    -   Llame a [SQLColAttribute](../../relational-databases/native-client-odbc-api/sqlcolattribute.md) para obtener información específica de descriptor acerca de la columna de resultados.  
   
 ## <a name="see-also"></a>Vea también  
 [Procesar resultados &#40;ODBC&#41;](../../relational-databases/native-client-odbc-how-to/processing-results-process-results.md)

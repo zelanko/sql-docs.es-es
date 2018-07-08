@@ -1,5 +1,5 @@
 ---
-title: Agregar una acción estándar | Documentos de Microsoft
+title: Agregar una acción estándar | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: ccb2928a-f75d-4acb-8ff8-fa80bb0935b2
 caps.latest.revision: 6
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 5d0540fc8cee3dff44cd7e2baf9115cf817e3ad5
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 47b13520762bd1ffc23f9bc466b82090fa60d8ee
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36105728"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37165536"
 ---
 # <a name="add-a-standard-action"></a>Agregar una acción estándar
   Para agregar una acción a una base de datos, use la vista de acciones del Diseñador de cubos. Se puede tener acceso a esta vista desde [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]. Una vez creada la acción, estará disponible para los usuarios después de volver a procesar el cubo correspondiente. Para más información, consulte [Processing Analysis Services Objects](processing-analysis-services-objects.md).  
@@ -76,7 +76,7 @@ ms.locfileid: "36105728"
         > [!NOTE]  
         >  Las acciones de propietario no se devuelven al servidor a menos que la aplicación cliente limite explícitamente el conjunto de filas de esquema para que devuelva únicamente las acciones que coinciden con el nombre especificado en **Aplicación**.  
   
-    -   En **contenido de la acción**, si está usando el tipo de dirección URL, incluya la dirección de Internet entre comillas, por ejemplo, "http://www.adventure-works.com".  
+    -   En **contenido de la acción**, si está utilizando el tipo de dirección URL, incluya la dirección de Internet comillas; por ejemplo, "http://www.adventure-works.com".  
   
     -   En **Descripción**, escriba una descripción de la acción.  
   

@@ -8,21 +8,21 @@ ms.suite: ''
 ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.rtp.rptdesigner.sparklines.f1
 - "10544"
 ms.assetid: b287436b-fa48-4970-a1a7-1dbcb86e7411
 caps.latest.revision: 9
-author: douglaslM
-ms.author: douglasl
-manager: mblythe
-ms.openlocfilehash: 0fdbe801bc58296f0cbfa116056615c341ec3e1a
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: maggiesMSFT
+ms.author: maggies
+manager: craigg
+ms.openlocfilehash: beeecbb80ff375bdb13f2a91bff84dbb34a9a4f5
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36105556"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37181646"
 ---
 # <a name="sparklines-and-data-bars-report-builder-and-ssrs"></a>Minigráficos y barras de datos (Generador de informes y SSRS)
   Los minigráficos y las barras de datos son gráficos simples y pequeños que contienen mucha información en poco espacio, a menudo conjuntamente con texto. Los minigráficos y las barras de datos se utilizan a menudo en las tablas y matrices. Su importancia radica en que permiten ver muchos datos juntos y compararlos rápidamente uno encima de otro, en lugar de verlos de forma individual. Facilitan la visualización de los valores atípicos, las filas que no se muestran como las demás. Aunque son pequeños, cada minigráfico suele representar varios puntos de datos, con frecuencia, a lo largo del tiempo. Las barras de datos representan varios puntos de datos, pero normalmente solo muestran uno. Cada minigráfico suele presentar una única serie. No puede agregar un minigráfico a un grupo de detalles en una tabla. Dado que los minigráficos presentan los datos agregados, deben estar en una celda que esté asociada a un grupo. Los minigráficos y las barras de datos tienen los mismos elementos de gráfico básicos de las categorías, series y valores, pero carecen de leyendas, líneas de eje, etiquetas o marcas de graduación.  
@@ -88,28 +88,28 @@ ms.locfileid: "36105556"
  ![Icono de flecha usado con el vínculo Volver al principio](../../2014-toc/media/uparrow16x16.gif "Icono de flecha usado con el vínculo Volver al principio")[Volver al principio](#BackToTop)  
   
 ##  <a name="HowTo"></a> Temas de procedimientos  
- [Agregar minigráficos y barras de datos &#40;el generador de informes SSRS&#41;](sparklines-and-data-bars-report-builder-and-ssrs.md)  
+ [Agregar minigráficos y barras de datos &#40;generador de informes y SSRS&#41;](sparklines-and-data-bars-report-builder-and-ssrs.md)  
   
- [Alinear los datos en un gráfico en una tabla o matriz &#40;el generador de informes SSRS&#41;](align-the-data-in-a-chart-in-a-table-or-matrix-report-builder-and-ssrs.md)  
+ [Alinear los datos en un gráfico en una tabla o matriz &#40;generador de informes y SSRS&#41;](align-the-data-in-a-chart-in-a-table-or-matrix-report-builder-and-ssrs.md)  
   
 ### <a name="other-how-to-topics-for-charts"></a>Otros temas de procedimientos para los gráficos  
  Puesto que los minigráficos y las barras de datos son un tipo de gráfico, los siguientes temas de procedimientos para gráficos también podrían resultarle útiles:  
   
- [Agregar un gráfico a un informe &#40;el generador de informes SSRS&#41;](add-a-chart-to-a-report-report-builder-and-ssrs.md)  
+ [Agregar un gráfico a un informe &#40;generador de informes y SSRS&#41;](add-a-chart-to-a-report-report-builder-and-ssrs.md)  
   
- [Agregar puntos vacíos al gráfico &#40;el generador de informes SSRS&#41;](add-empty-points-to-a-chart-report-builder-and-ssrs.md)  
+ [Agregar puntos vacíos al gráfico &#40;generador de informes y SSRS&#41;](add-empty-points-to-a-chart-report-builder-and-ssrs.md)  
   
- [Agregar o quitar márgenes de un gráfico de &#40;el generador de informes SSRS&#41;](add-or-remove-margins-from-a-chart-report-builder-and-ssrs.md)  
+ [Agregar o quitar márgenes de un gráfico &#40;generador de informes y SSRS&#41;](add-or-remove-margins-from-a-chart-report-builder-and-ssrs.md)  
   
- [Cambiar un tipo de gráfico &#40;el generador de informes SSRS&#41;](change-a-chart-type-report-builder-and-ssrs.md)  
+ [Cambiar un tipo de gráfico &#40;generador de informes y SSRS&#41;](change-a-chart-type-report-builder-and-ssrs.md)  
   
- [Definir los colores de un gráfico con una paleta &#40;el generador de informes SSRS&#41;](define-colors-on-a-chart-using-a-palette-report-builder-and-ssrs.md)  
+ [Definir los colores de un gráfico mediante una paleta &#40;generador de informes y SSRS&#41;](define-colors-on-a-chart-using-a-palette-report-builder-and-ssrs.md)  
   
  [Mostrar la información sobre herramientas en una serie &#40;Generador de informes y SSRS&#41;](show-tooltips-on-a-series-report-builder-and-ssrs.md)  
   
- [Especificar una escala logarítmica &#40;el generador de informes SSRS&#41;](specify-a-logarithmic-scale-report-builder-and-ssrs.md)  
+ [Especificar una escala logarítmica &#40;generador de informes y SSRS&#41;](specify-a-logarithmic-scale-report-builder-and-ssrs.md)  
   
- [Especifique un intervalo de eje &#40;el generador de informes SSRS&#41;](specify-an-axis-interval-report-builder-and-ssrs.md)  
+ [Especifique un intervalo de eje &#40;generador de informes y SSRS&#41;](specify-an-axis-interval-report-builder-and-ssrs.md)  
   
  [Especificar colores coherentes en varios gráficos de formas &#40;Generador de informes y SSRS&#41;](shape-charts-report-builder-and-ssrs.md)  
   

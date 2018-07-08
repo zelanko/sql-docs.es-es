@@ -8,25 +8,25 @@ ms.suite: ''
 ms.technology:
 - dbe-xml
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - FOR XML clause, generating XML from rowsets
 ms.assetid: d061c0f1-3de9-4ad1-bbca-ce45d064b6c8
 caps.latest.revision: 10
-author: craigg-msft
-ms.author: craigg
-manager: jhubbard
-ms.openlocfilehash: 163b33618f6d303d3ab08e078ee2b06096dc2ad8
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: douglaslMS
+ms.author: douglasl
+manager: craigg
+ms.openlocfilehash: 75446ba8c61f03c46c4000793d7ca75f1dc8cb85
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36105323"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37201115"
 ---
 # <a name="generate-xml-from-rowsets-with-for-xml"></a>Generar XML a partir de conjuntos de filas con FOR XML
   Puede generar un `xml` instancia de tipo de datos de un conjunto de filas mediante FOR XML con el nuevo **tipo** directiva.  
   
- El resultado puede asignarse a un `xml` columna, variable o parámetro de tipo de datos. Además, FOR XML se puede anidar para generar una estructura jerárquica. Por ello, FOR XML anidado resulta mucho más cómodo de escribir que FOR XML EXPLICIT, aunque tal vez no funcione tan bien para jerarquías con muchos niveles. FOR XML también incorpora un nuevo modo PATH. Este nuevo modo especifica la ruta de acceso en el árbol XML donde aparece un valor de columna.  
+ El resultado se puede asignar a un `xml` columna, variable o parámetro de tipo de datos. Además, FOR XML se puede anidar para generar una estructura jerárquica. Por ello, FOR XML anidado resulta mucho más cómodo de escribir que FOR XML EXPLICIT, aunque tal vez no funcione tan bien para jerarquías con muchos niveles. FOR XML también incorpora un nuevo modo PATH. Este nuevo modo especifica la ruta de acceso en el árbol XML donde aparece un valor de columna.  
   
  La nueva directiva **FOR XML TYPE** puede emplearse para definir vistas XML de solo lectura en datos relacionales con sintaxis SQL. Es posible realizar consultas en la vista con instrucciones SQL y XQuery incrustado, como se indica en el ejemplo siguiente. También se puede hacer referencia a estas vistas SQL en procedimientos almacenados.  
   
@@ -40,7 +40,7 @@ FROM   T
 FOR XML AUTO, TYPE  
 ```  
   
- La vista V contiene una sola fila y una sola columna Xmlval de tipo XML`.` se puede consultar como normal `xml` instancia de tipo de datos. Por ejemplo, la siguiente consulta devuelve el autor cuyo nombre es "David":  
+ La vista V contiene una sola fila con una sola columna Xmlval de tipo XML`.` se puede consultar como normal `xml` instancia del tipo de datos. Por ejemplo, la siguiente consulta devuelve el autor cuyo nombre es "David":  
   
 ```  
 SELECT xmlVal.query('//author[first-name = "David"]')  

@@ -5,24 +5,23 @@ ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.suite: ''
-ms.technology:
-- dbe-blob
+ms.technology: filestream
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - FILESTREAM [SQL Server], other SQL Server features and
 - FILESTREAM [SQL Server], limitations
 ms.assetid: d2c145dc-d49a-4f5b-91e6-89a2b0adb4f3
 caps.latest.revision: 41
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: be0912f1da8e17d5fbd1723595e845393e94cf41
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: douglaslMS
+ms.author: douglasl
+manager: craigg
+ms.openlocfilehash: 1fce4632ddcee1ed29ce8a06ee5efc631f8ce1f2
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36105670"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37175788"
 ---
 # <a name="filestream-compatibility-with-other-sql-server-features"></a>Compatibilidad de FILESTREAM con otras características de SQL Server
   Dado que los datos FILESTREAM están en el sistema de archivos, este tema proporciona algunas consideraciones, directrices y limitaciones para usar FILESTREAM con las siguientes características de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]:  
@@ -55,7 +54,7 @@ ms.locfileid: "36105670"
  Puede utilizar la transformación Importar columna para cargar archivos del sistema de archivos en una columna FILESTREAM. También puede usar la transformación Exportar columna para extraer archivos de una columna FILESTREAM a otra ubicación en el sistema de archivos.  
   
 ##  <a name="distqueries"></a> Consultas distribuidas y servidores vinculados  
- Puede trabajar con datos FILESTREAM a través de consultas distribuidas y servidores vinculados si los trata como `varbinary(max)` datos. La función FILESTREAM **PathName()** no puede usar en consultas distribuidas en las que se usa un nombre de cuatro partes, aunque el nombre haga referencia al servidor local. Pero puede usar **PathName()** en una consulta interna de una consulta de paso a través que use **OPENQUERY()**.  
+ Puede trabajar con datos FILESTREAM a través de las consultas distribuidas y servidores vinculados si los trata como `varbinary(max)` datos. La función FILESTREAM **PathName()** no puede usar en consultas distribuidas en las que se usa un nombre de cuatro partes, aunque el nombre haga referencia al servidor local. Pero puede usar **PathName()** en una consulta interna de una consulta de paso a través que use **OPENQUERY()**.  
   
 ##  <a name="encryption"></a> Cifrado  
  Los datos FILESTREAM no se cifran ni siquiera cuando está habilitado el cifrado de datos transparente.  
@@ -70,7 +69,7 @@ ms.locfileid: "36105670"
  `Could not continue scan with NOLOCK due to data movement.`  
   
 ##  <a name="Replication"></a> Replication  
- Una columna `varbinary(max)` que tiene el atributo FILESTREAM habilitado en el publicador puede replicarse en un suscriptor con o sin el atributo FILESTREAM. Para especificar cómo se replica la columna, utilice el cuadro de diálogo **Propiedades del artículo - \<Artículo>** o el parámetro @schema_option de [sp_addarticle](/sql/relational-databases/system-stored-procedures/sp-addarticle-transact-sql) o [sp_addmergearticle](/sql/relational-databases/system-stored-procedures/sp-addmergearticle-transact-sql). Los datos que se replican en una columna `varbinary(max)` que no tiene el atributo FILESTREAM no deben superar el límite de 2 GB para ese tipo de datos; de lo contrario, se genera un error en tiempo de ejecución. Se recomienda que replique el atributo FILESTREAM, a menos que esté replicando datos a [!INCLUDE[ssVersion2005](../../includes/ssversion2000-md.md)] no se admiten los suscriptores, independientemente de la opción de esquema que se especifica.  
+ Una columna `varbinary(max)` que tiene el atributo FILESTREAM habilitado en el publicador puede replicarse en un suscriptor con o sin el atributo FILESTREAM. Para especificar cómo se replica la columna, utilice el cuadro de diálogo **Propiedades del artículo - \<Artículo>** o el parámetro @schema_option de [sp_addarticle](/sql/relational-databases/system-stored-procedures/sp-addarticle-transact-sql) o [sp_addmergearticle](/sql/relational-databases/system-stored-procedures/sp-addmergearticle-transact-sql). Los datos que se replican en una columna `varbinary(max)` que no tiene el atributo FILESTREAM no deben superar el límite de 2 GB para ese tipo de datos; de lo contrario, se genera un error en tiempo de ejecución. Se recomienda que replique el atributo FILESTREAM, a menos que se va a replicar datos a [!INCLUDE[ssVersion2005](../../includes/ssversion2000-md.md)] no es compatible con suscriptores, independientemente de la opción de esquema que se ha especificado.  
   
 > [!NOTE]  
 >  La replicación de valores de datos de gran tamaño de [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] a suscriptores de [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)] está limitada a un máximo de 256 MB de valores de datos. Para obtener más información, vea [Especificaciones de capacidad máxima](http://go.microsoft.com/fwlink/?LinkId=103810).  
@@ -93,7 +92,7 @@ ms.locfileid: "36105670"
   
          Si agrega manualmente una restricción UNIQUE tal como se ha descrito y desea quitar la replicación de mezcla, primero debe quitar la restricción UNIQUE; de lo contrario, se producirá un error en la eliminación de la replicación.  
   
-    -   De forma predeterminada, la replicación de mezcla utiliza NEWSEQUENTIALID() porque puede proporcionar un mejor rendimiento que NEWID(). Si agrega un `uniqueidentifier` columna a una tabla que se va a publicar para la replicación de mezcla, especifique NEWSEQUENTIALID() como valor predeterminado.  
+    -   De forma predeterminada, la replicación de mezcla utiliza NEWSEQUENTIALID() porque puede proporcionar un mejor rendimiento que NEWID(). Si agrega un `uniqueidentifier` columna a una tabla que se va a publicar para replicación de mezcla, especifique NEWSEQUENTIALID() como valor predeterminado.  
   
 -   La replicación de mezcla incluye una optimización para replicar tipos de objetos grandes. Esta optimización la controla el parámetro @stream_blob_columns de [sp_addmergearticle](/sql/relational-databases/system-stored-procedures/sp-addmergearticle-transact-sql). Si establece la opción de esquema para replicar el atributo FILESTREAM, el valor del parámetro @stream_blob_columns se establece en `true`. Esta optimización se puede invalidar con [sp_changemergearticle](/sql/relational-databases/system-stored-procedures/sp-changemergearticle-transact-sql). Este procedimiento almacenado le permite establecer @stream_blob_columns en `false`. Si agrega una columna FILESTREAM a una tabla que ya está publicada para la replicación de mezcla, se recomienda establecer la opción en `true` mediante el uso de sp_changemergearticle.  
   

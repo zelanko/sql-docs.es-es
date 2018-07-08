@@ -1,5 +1,5 @@
 ---
-title: Configurar las propiedades de implementación (SSAS Tabular) y predeterminadas de modelado de datos | Documentos de Microsoft
+title: Configurar las propiedades de implementación (SSAS Tabular) y predeterminadas de modelado de datos | Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.asvs.bidtoolset.deployment.f1
 - VS.TOOLSOPTIONSPAGES.ANALYSIS_SERVICES.DATA_MODELING
@@ -16,15 +16,15 @@ f1_keywords:
 - VS.TOOLSOPTIONSPAGES.ANALYSIS_SERVICES.DEPLOYMENT
 ms.assetid: 140d0c4e-943c-4387-a8d2-6e066c7e4e75
 caps.latest.revision: 14
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 8a38556f1c6b9d93f844441327a5ea8fe5f9ae9f
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 13c674a47f074adaad3e4dbeff41797018bb0dbd
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36105700"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37171476"
 ---
 # <a name="configure-default-data-modeling-and-deployment-properties-ssas-tabular"></a>Configurar las propiedades predeterminadas de modelado de datos y de implementación (SSAS tabular)
   En este tema se describe cómo configurar los valores predeterminados de propiedad de nivel de compatibilidad, implementación y base de datos del área de trabajo, que se pueden predefinir para cada proyecto nuevo de modelos tabulares que cree en [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]. Después de crear un proyecto nuevo, estas propiedades se pueden cambiar en función de sus necesidades específicas.  
@@ -39,7 +39,7 @@ ms.locfileid: "36105700"
   
     |Property|Valor predeterminado|Descripción|  
     |--------------|---------------------|-----------------|  
-    |**Nivel de compatibilidad predeterminado para los nuevos proyectos**|SQL Server 2012 (1100)|Este valor especifica el nivel de compatibilidad predeterminado que se usará al crear un nuevo proyecto de modelo tabular. Puede elegir SQL Server 2012 RTM (1100) si va a realizar la implementación en una instancia de Analysis Services sin SP1 aplicado, SQL Server 2012 SP1 si la instancia de implementación tiene aplicado SP1 o SQL Server 2014. Para obtener más información, consulte [nivel de compatibilidad &#40;SSAS Tabular SP1&#41;](compatibility-level-for-tabular-models-in-analysis-services.md).|  
+    |**Nivel de compatibilidad predeterminado para los nuevos proyectos**|SQL Server 2012 (1100)|Este valor especifica el nivel de compatibilidad predeterminado que se usará al crear un nuevo proyecto de modelo tabular. Puede elegir SQL Server 2012 RTM (1100) si va a realizar la implementación en una instancia de Analysis Services sin SP1 aplicado, SQL Server 2012 SP1 si la instancia de implementación tiene aplicado SP1 o SQL Server 2014. Para obtener más información, consulte [ivel &#40;SSAS Tabular SP1&#41;](compatibility-level-for-tabular-models-in-analysis-services.md).|  
     |**Opciones de nivel compatibilidad**|Todas activadas|Especifica opciones de nivel de compatibilidad para los nuevos proyectos de modelos tabulares y al implementar en otra instancia de Analysis Services.|  
   
 #### <a name="to-configure-the-default-deployment-server-property-setting-for-new-model-projects"></a>Para configurar el valor de propiedad de servidor de implementación predeterminado para los nuevos proyectos de modelos  
@@ -75,8 +75,8 @@ ms.locfileid: "36105700"
 >  Los cambios en las propiedades predeterminadas del modelo no afectarán a las propiedades de los modelos existentes creados antes de los cambios.  
   
 ## <a name="see-also"></a>Vea también  
- [Propiedades del proyecto &#40;SSAS Tabular&#41;](properties-ssas-tabular.md)   
- [Propiedades de los modelos &#40;SSAS Tabular&#41;](model-properties-ssas-tabular.md)   
+ [Las propiedades del proyecto &#40;Tabular de SSAS&#41;](properties-ssas-tabular.md)   
+ [Propiedades de los modelos &#40;Tabular de SSAS&#41;](model-properties-ssas-tabular.md)   
  [Nivel de compatibilidad &#40;SSAS Tabular SP1&#41;](compatibility-level-for-tabular-models-in-analysis-services.md)  
   
   

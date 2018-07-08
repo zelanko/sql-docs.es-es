@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - integration-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.dts.designer.selectapackage.f1
 helpviewer_keywords:
@@ -17,13 +17,13 @@ ms.assetid: 92b47a2b-21b5-460a-885d-6cc4bb567249
 caps.latest.revision: 15
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: 931a122e188f157a2fbcf32adbf9c6dc420d11f4
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 17a751ce55edfb2c43054648e56e6fc18e208dcd
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36105175"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37189072"
 ---
 # <a name="select-a-package"></a>Seleccionar un paquete
   Utilice el cuadro de diálogo **Seleccionar un paquete** para especificar el paquete desde el que la tarea Cola de mensajes puede recibir mensajes.  

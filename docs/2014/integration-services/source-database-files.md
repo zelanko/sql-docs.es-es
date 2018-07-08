@@ -1,5 +1,5 @@
 ---
-title: Los archivos de base de datos de origen | Documentos de Microsoft
+title: Los archivos de base de datos de origen | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,20 +8,20 @@ ms.suite: ''
 ms.technology:
 - integration-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.dts.designer.transferdatabasetask.sourcedbfiles.f1
 ms.assetid: 7dc6bfeb-37c1-45e8-a705-a87564922265
 caps.latest.revision: 16
-author: douglaslMS
+author: douglaslms
 ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: 9f8914470f3e4ceb25cef90d1ea4eb3116bb7cb7
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 9bad26723ccb553144359e77154804cf2ab11982
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36105393"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37160686"
 ---
 # <a name="source-database-files"></a>Archivos de base de datos de origen
   Utilice el cuadro de diálogo **Archivos de base de datos de origen** para ver los nombres y las ubicaciones de los archivos de la base de datos en el servidor de origen o para especificar una ubicación del recurso compartido de archivos de red para la tarea Transferir bases de datos. Para más información sobre esta tarea, vea [Tarea Transferir bases de datos](control-flow/transfer-database-task.md).  
@@ -44,7 +44,7 @@ ms.locfileid: "36105393"
   
 ## <a name="see-also"></a>Vea también  
  [Referencia de mensajes y Error de Integration Services](../../2014/integration-services/integration-services-error-and-message-reference.md)   
- [Editor de la tarea de base de datos de transferencia &#40;página General&#41;](general-page-of-integration-services-designers-options.md)   
- [Editor de la tarea de base de datos de transferencia &#40;bases de datos de página&#41;](../../2014/integration-services/transfer-database-task-editor-databases-page.md)  
+ [Editor de la base de datos de tarea de transferencia &#40;página General&#41;](general-page-of-integration-services-designers-options.md)   
+ [Editor de la base de datos de tarea de transferencia &#40;bases de datos de página&#41;](../../2014/integration-services/transfer-database-task-editor-databases-page.md)  
   
   

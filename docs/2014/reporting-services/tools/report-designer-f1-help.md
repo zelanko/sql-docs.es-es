@@ -8,20 +8,20 @@ ms.suite: ''
 ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - Report Designer [Reporting Services], dialog boxes
 ms.assetid: 7c1bc931-d1ec-47fc-8f82-55560ddaf776
 caps.latest.revision: 59
 author: markingmyname
 ms.author: maghan
-manager: mblythe
-ms.openlocfilehash: 5c5965ec47bb0b20e1cc28770be7a209e833cf18
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: db7f112105d5583c1ddbabddb594e096bacf2a91
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36103469"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37163846"
 ---
 # <a name="report-designer-f1-help"></a>Diseñador de informes (Ayuda F1)
   Esta sección proporciona ayuda F1 para el [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] asistentes, vistas y cuadros de diálogo de diseñador de informes. También puede abrir la Ayuda F1 mientras trabaja en un cuadro de diálogo; para ello, presione F1 o haga clic en el botón Ayuda que se muestra en el cuadro de diálogo.  

@@ -1,5 +1,5 @@
 ---
-title: Cuadro de diálogo de propiedades de conjunto de datos, filtros (generador de informes) | Documentos de Microsoft
+title: Cuadro de diálogo de propiedades de conjunto de datos, filtros (generador de informes) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,20 +8,20 @@ ms.suite: ''
 ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - "10025"
 ms.assetid: 933a6f44-4eb7-4e73-9c40-ac0fd17b23d3
 caps.latest.revision: 14
-author: douglaslM
+author: maggiesmsft
 ms.author: douglasl
-manager: mblythe
-ms.openlocfilehash: beb0703212eb639483bbaa015b6fa89bba3a3068
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: dbe6bee60f4cee2ce99f5aadd1dc3cea14e85b1b
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36102841"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37258171"
 ---
 # <a name="dataset-properties-dialog-box-filters-report-builder"></a>Propiedades del conjunto de datos (cuadro de diálogo), Filtros (Generador de informes)
   Seleccione **Filtros** en el cuadro de diálogo **Propiedades del conjunto de datos** para crear filtros para el conjunto de datos.  
@@ -64,7 +64,7 @@ ms.locfileid: "36102841"
 ## <a name="see-also"></a>Vea también  
  [Conjuntos de datos incrustados y compartidos de informe &#40;Generador de informes y SSRS&#41;](report-data/report-embedded-datasets-and-shared-datasets-report-builder-and-ssrs.md)   
  [Parámetros de informe &#40;Generador de informes y Diseñador de informes&#41;](report-design/report-parameters-report-builder-and-report-designer.md)   
- [Agregar un filtro a un conjunto de datos &#40;el generador de informes SSRS&#41;](report-data/add-a-filter-to-a-dataset-report-builder-and-ssrs.md)   
- [Expresión que se utiliza en los informes &#40;el generador de informes SSRS&#41;](report-design/expression-uses-in-reports-report-builder-and-ssrs.md)  
+ [Agregar un filtro a un conjunto de datos &#40;generador de informes y SSRS&#41;](report-data/add-a-filter-to-a-dataset-report-builder-and-ssrs.md)   
+ [Usar expresiones en informes &#40;generador de informes y SSRS&#41;](report-design/expression-uses-in-reports-report-builder-and-ssrs.md)  
   
   

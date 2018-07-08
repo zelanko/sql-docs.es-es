@@ -1,12 +1,11 @@
 ---
-title: Trabajar con aislamiento de instantánea | Documentos de Microsoft
+title: Trabajar con aislamiento de instantánea | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
-ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
 ms.reviewer: ''
 ms.suite: sql
-ms.technology: ''
+ms.technology: native-client
 ms.tgt_pltfrm: ''
 ms.topic: reference
 helpviewer_keywords:
@@ -23,17 +22,16 @@ helpviewer_keywords:
 - concurrency [SQL Server Native Client]
 - SQLSetConnectAttr function
 ms.assetid: 39e87eb1-677e-45dd-bc61-83a4025a7756
-caps.latest.revision: 29
 author: MightyPen
 ms.author: genemi
 manager: craigg
 monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
-ms.openlocfilehash: 97280da27703892a916827bdcd6f31a327fbc360
-ms.sourcegitcommit: a78fa85609a82e905de9db8b75d2e83257831ad9
+ms.openlocfilehash: 9f84292d2d64645ad9001bc8e1e7a4e720a5b42d
+ms.sourcegitcommit: f8ce92a2f935616339965d140e00298b1f8355d7
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/18/2018
-ms.locfileid: "35698516"
+ms.lasthandoff: 07/03/2018
+ms.locfileid: "37410194"
 ---
 # <a name="working-with-snapshot-isolation"></a>Trabajar con aislamiento de instantánea
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -66,13 +64,13 @@ ms.locfileid: "35698516"
  Para obtener información acerca de cómo se admite el aislamiento de instantánea en transacciones, vea [compatibilidad con transacciones locales](../../../relational-databases/native-client-ole-db-transactions/supporting-local-transactions.md).  
   
 ## <a name="sql-server-native-client-odbc-driver"></a>Controlador ODBC de SQL Server Native Client  
- El [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] controlador ODBC Native Client proporciona compatibilidad para el aislamiento de instantánea aunque las mejoras realizadas en el [SQLSetConnectAttr](../../../relational-databases/native-client-odbc-api/sqlsetconnectattr.md) y [SQLGetInfo](../../../relational-databases/native-client-odbc-api/sqlgetinfo.md) funciones.  
+ El [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] controlador ODBC de Native Client proporciona compatibilidad con aislamiento de instantánea aunque las mejoras realizadas en el [SQLSetConnectAttr](../../../relational-databases/native-client-odbc-api/sqlsetconnectattr.md) y [SQLGetInfo](../../../relational-databases/native-client-odbc-api/sqlgetinfo.md) funciones.  
   
 ### <a name="sqlsetconnectattr"></a>SQLSetConnectAttr  
  El **SQLSetConnectAttr** función ahora admite el uso del atributo SQL_COPT_SS_TXN_ISOLATION. Si SQL_COPT_SS_TXN_ISOLATION se establece en SQL_TXN_SS_SNAPSHOT, significa que la transacción tendrá lugar en el nivel de aislamiento de instantáneas.  
   
 ### <a name="sqlgetinfo"></a>SQLGetInfo  
- El [SQLGetInfo](../../../relational-databases/native-client-odbc-api/sqlgetinfo.md) función ahora es compatible con el valor SQL_TXN_SS_SNAPSHOT que se ha agregado para el tipo de información SQL_TXN_ISOLATION_OPTION.  
+ El [SQLGetInfo](../../../relational-databases/native-client-odbc-api/sqlgetinfo.md) función ahora es compatible con el valor SQL_TXN_SS_SNAPSHOT que se ha agregado al tipo de información SQL_TXN_ISOLATION_OPTION.  
   
  Para obtener información acerca de cómo se admite el aislamiento de instantánea en transacciones, vea [Cursor Transaction Isolation Level](../../../relational-databases/native-client-odbc-cursors/properties/cursor-transaction-isolation-level.md).  
   

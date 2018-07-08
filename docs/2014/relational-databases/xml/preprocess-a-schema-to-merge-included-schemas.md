@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - dbe-xml
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - testing preprocessor tool
 - xsd:include
@@ -20,15 +20,15 @@ helpviewer_keywords:
 - XML schemas [SQL Server]
 ms.assetid: cde1de5f-077a-4a6d-8a81-1ecb6e10d549
 caps.latest.revision: 25
-author: craigg-msft
-ms.author: craigg
-manager: jhubbard
-ms.openlocfilehash: 89a439385332e3b5445bad36d33e1bc0f9606f4a
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: douglaslMS
+ms.author: douglasl
+manager: craigg
+ms.openlocfilehash: 3f5a572c5c486ccf03edbb5442f5de2cb723bae4
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36103975"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37157756"
 ---
 # <a name="preprocess-a-schema-to-merge-included-schemas"></a>Preprocesar un esquema para combinar esquemas incluidos
   El elemento **include** de W3C XSD proporciona compatibilidad con la modularidad de esquemas en la que un esquema XML se puede dividir en más de un archivo físico. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] no admite este elemento. El servidor rechazará los esquemas XML que incluyan este elemento.  

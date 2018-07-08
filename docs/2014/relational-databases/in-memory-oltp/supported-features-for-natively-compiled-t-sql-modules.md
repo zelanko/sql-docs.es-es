@@ -1,5 +1,5 @@
 ---
-title: Procedimientos almacenados compilados de forma nativa admiten construcciones | Documentos de Microsoft
+title: Procedimientos almacenados compilados de forma nativa admiten construcciones | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,21 +8,21 @@ ms.suite: ''
 ms.technology:
 - database-engine-imoltp
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 05515013-28b5-4ccf-9a54-ae861448945b
 caps.latest.revision: 34
-author: stevestein
-ms.author: sstein
-manager: jhubbard
-ms.openlocfilehash: ab0ce49a3f135d59dba89abc756bf9ee4d7fa198
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: MightyPen
+ms.author: genemi
+manager: craigg
+ms.openlocfilehash: 91434af003bdf783ee4f2bd2c946e4a871eac44d
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36102874"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37240857"
 ---
 # <a name="supported-constructs-in-natively-compiled-stored-procedures"></a>Construcciones admitidas en procedimientos almacenados compilados de forma nativa
-  Este tema contiene una lista de las características admitidas para los procedimientos almacenados compilados de forma nativa ([CREATE PROCEDURE &#40;Transact-SQL&#41;](/sql/t-sql/statements/create-procedure-transact-sql)):  
+  En este tema contiene una lista de características admitidas en procedimientos almacenados compilados de forma nativa ([CREATE PROCEDURE &#40;Transact-SQL&#41;](/sql/t-sql/statements/create-procedure-transact-sql)):  
   
 -   [Programación en procedimientos almacenados compilados de forma nativa](#pncsp)  
   
@@ -34,11 +34,11 @@ ms.locfileid: "36102874"
   
 -   [Auditoría](#auditing)  
   
--   [Tablas, consultas y sugerencias de combinación](#tqh)  
+-   [Tabla, consulta y las sugerencias de combinación](#tqh)  
   
 -   [Limitaciones de ordenación](#los)  
   
- Para obtener información sobre tipos de datos admitidos de forma nativa en los procedimientos almacenados compilados, consulte [Supported Data Types](supported-data-types-for-in-memory-oltp.md).  
+ Para obtener información sobre los tipos de datos admitidos de forma nativa en los procedimientos almacenados compilados, consulte [Supported Data Types](supported-data-types-for-in-memory-oltp.md).  
   
  Para obtener información completa sobre las construcciones no admitidas y para obtener información acerca de cómo evitar algunas de las características no admitidas en procedimientos almacenados compilados de forma nativa, vea [Migration Issues for Natively Compiled Stored Procedures](migration-issues-for-natively-compiled-stored-procedures.md). Para obtener más información sobre las características no compatibles, vea [Construcciones Transact-SQL no admitidas por OLTP en memoria](transact-sql-constructs-not-supported-by-in-memory-oltp.md).  
   
@@ -112,7 +112,7 @@ ms.locfileid: "36102874"
   
 -   CROSS JOIN y INNER JOIN, solo se admiten con consultas SELECT.  
   
--   Se admiten expresiones en la lista de selección y [donde &#40;Transact-SQL&#41; ](/sql/t-sql/queries/where-transact-sql) cláusula si usan un operador compatible. Consulte [Operadores admitidos](#so) para ver la lista de los operadores que se admiten actualmente.  
+-   Se admiten las expresiones en la lista de selección y [donde &#40;Transact-SQL&#41; ](/sql/t-sql/queries/where-transact-sql) cláusula si usan un operador admitido. Consulte [Operadores admitidos](#so) para ver la lista de los operadores que se admiten actualmente.  
   
 -   Predicado de filtro IS [NOT] NULL  
   
@@ -124,25 +124,25 @@ ms.locfileid: "36102874"
   
 -   INSERT VALUES (una fila por instrucción) e INSERT SELECT  
   
--   SE ORDENA POR <sup>1</sup>  
+-   ORDENAR POR <sup>1</sup>  
   
 -   Predicados que no hacen referencia a una columna.  
   
 -   SELECT, UPDATE y DELETE  
   
--   PARTE SUPERIOR <sup>1</sup>  
+-   TOP <sup>1</sup>  
   
 -   Asignación de variable de la lista de selección.  
   
 -   WHERE … y  
   
- <sup>1</sup> ORDER BY y TOP se admiten en los procedimientos almacenados compilados de forma nativa, con algunas restricciones:  
+ <sup>1</sup> ORDER BY y TOP se admiten en procedimientos almacenados compilados de forma nativa, con algunas restricciones:  
   
 -   No hay compatibilidad para `DISTINCT` en el `SELECT` o `ORDER BY` cláusula.  
   
 -   No hay compatibilidad con `WITH TIES` ni `PERCENT` en la cláusula `TOP`.  
   
--   `TOP` combinar con `ORDER BY` no admite más de 8.192 elementos cuando se utiliza una constante en el `TOP` cláusula. Este límite puede reducirse en caso de que la consulta contenga combinaciones o funciones de agregado. (Por ejemplo, con una combinación (dos tablas), el límite es de 4.096 filas. Con dos combinaciones (tres tablas), el límite es de 2.730 filas).  
+-   `TOP` combinado con `ORDER BY` no admite más de 8.192 elementos cuando se utiliza una constante en el `TOP` cláusula. Este límite puede reducirse en caso de que la consulta contenga combinaciones o funciones de agregado. (Por ejemplo, con una combinación (dos tablas), el límite es de 4.096 filas. Con dos combinaciones (tres tablas), el límite es de 2.730 filas).  
   
      Puede obtener más de 8.192 resultados si almacena el número de filas en una variable:  
   
@@ -153,14 +153,14 @@ ms.locfileid: "36102874"
   
  Sin embargo, una constante en la cláusula `TOP` produce un rendimiento mejor en comparación con el uso de una variable.  
   
- Estas restricciones no se aplican a interpretado [!INCLUDE[tsql](../../includes/tsql-md.md)] acceso a las tablas optimizadas en memoria.  
+ Estas restricciones no se aplican a interpretado [!INCLUDE[tsql](../../includes/tsql-md.md)] acceso a las tablas optimizadas para memoria.  
   
 ##  <a name="auditing"></a> Auditoría  
  Se admite la auditoría a nivel de procedimiento en los procedimientos almacenados compilados de forma nativa. La auditoría de nivel de instrucción no se admite.  
   
  Para obtener más información sobre la auditoría, vea [Create a Server Audit and Database Audit Specification](../security/auditing/create-a-server-audit-and-database-audit-specification.md).  
   
-##  <a name="tqh"></a> Tablas, consultas y sugerencias de combinación  
+##  <a name="tqh"></a> Tabla, consulta y las sugerencias de combinación  
  Se admite lo siguiente:  
   
 -   Las sugerencias INDEX, FORCESCAN y FORCESEEK, ya sea en la sintaxis de sugerencias de tabla o en la [cláusula OPTION &#40;Transact-SQL&#41;](/sql/t-sql/queries/option-clause-transact-sql) de la consulta.  

@@ -1,5 +1,5 @@
 ---
-title: Medir el elemento (ASSL) | Documentos de Microsoft
+title: Medir el elemento (ASSL) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -22,15 +22,15 @@ helpviewer_keywords:
 - Measure element
 ms.assetid: 4c2c2ed1-7f78-4564-982a-132f13bea36f
 caps.latest.revision: 38
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: da78700e32c81dab11d6609ca4aa12efd2204bcb
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 80d59a5356bf1c0b5712e729f230fff9383603cc
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36103412"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37159336"
 ---
 # <a name="measure-element-assl"></a>Elemento Measure (ASSL)
   Define una medida.  
@@ -77,7 +77,7 @@ ms.locfileid: "36103412"
   
 |Antecesor o elemento primario|Tipo de datos|  
 |------------------------|---------------|  
-|[AggregationInstance](../data-type/binding-data-type-assl.md)|  
+|[Elemento AggregationInstance](../data-type/binding-data-type-assl.md)|  
 |[MeasureGroup](group-element-assl.md)|None|  
 |[MeasureGroupBinding (fuera de línea)](../data-type/measurebinding-data-type-assl.md)|  
 |[PerspectiveMeasureGroup](../data-type/perspectivemeasure-data-type-assl.md)|  
@@ -90,7 +90,7 @@ ms.locfileid: "36103412"
   
 |Antecesor o elemento primario|Elementos secundarios|  
 |------------------------|--------------------|  
-|[MeasureGroup](../properties/aggregatefunction-element-assl.md), [Annotations](../collections/annotations-element-assl.md), [BackColor](../properties/backcolor-element-assl.md), [DataType](../properties/datatype-element-assl.md), [Description](../properties/description-element-assl.md), [DisplayFolder](../properties/displayfolder-element-assl.md), [FontFlags](../properties/fontflags-element-assl.md), [FontName](../properties/name-element-assl.md), [FontSize](../properties/fontsize-element-assl.md), [ForeColor](../properties/forecolor-element-assl.md), [FormatString](../properties/formatstring-element-assl.md), [ID](../properties/id-element-assl.md), [MeasureExpression](../properties/expression-element-assl.md), [Name](../properties/name-element-assl.md), [Source](../properties/source-element-measure-assl.md), [Translations](../collections/translations-element-assl.md), [Visible](../properties/visible-element-assl.md)|  
+|[MeasureGroup](../properties/aggregatefunction-element-assl.md), [anotaciones](../collections/annotations-element-assl.md), [BackColor](../properties/backcolor-element-assl.md), [DataType](../properties/datatype-element-assl.md), [descripción](../properties/description-element-assl.md), [DisplayFolder ](../properties/displayfolder-element-assl.md), [FontFlags](../properties/fontflags-element-assl.md), [FontName](../properties/name-element-assl.md), [FontSize](../properties/fontsize-element-assl.md), [ForeColor](../properties/forecolor-element-assl.md), [FormatString ](../properties/formatstring-element-assl.md), [ID](../properties/id-element-assl.md), [MeasureExpression](../properties/expression-element-assl.md), [nombre](../properties/name-element-assl.md), [origen](../properties/source-element-measure-assl.md), [traducciones](../collections/translations-element-assl.md), [Visible](../properties/visible-element-assl.md)|  
 |Todos las demás|None|  
   
 ## <a name="remarks"></a>Notas  
@@ -102,7 +102,7 @@ ms.locfileid: "36103412"
   
 -   Puede contener un único nombre de carpeta, lo que indica que la medida debería representarse como perteneciente a una carpeta con el mismo nombre.  
   
--   Contienen varios nombres de carpeta separados por una barra diagonal inversa (\\), lo que indica una jerarquía de carpetas incrustada.  
+-   Contener varios nombres de carpetas separados por una barra diagonal inversa (\\), que indica una jerarquía de carpetas incrustada.  
   
  La propiedad `DisplayFolder` se aplica también a medidas y jerarquías calculadas.  
   
